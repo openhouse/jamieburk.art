@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Photo rights review
 
-**Source fingerprint:** `dfb21ed4e33720a5ecb314d22bb9b855e77a7f60b6cf7867e9ba32a2de1aa9cd`
+**Source fingerprint:** `6b540857ec8941a7b98e8af94a9d65132de5597bbbc50e3712667b8e5e03054b`
 
 ## DCLA DIY-spaces meeting, Layout A
 

@@ -80,6 +80,12 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
       row.failedRequests.length === 0 &&
       row.h1Count === 1 &&
       row.mainPresent === true &&
+      row.skipLinkPresent === true &&
+      row.skipTargetPresent === true &&
+      row.skipLinkWasFirst === true &&
+      row.keyboardDistinctTargets >= 3 &&
+      row.keyboardInvisibleTargets === 0 &&
+      row.keyboardTrapDetected === false &&
       /^4\./.test(row.axeVersion)
   );
   const summaryPasses =
@@ -92,6 +98,8 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
     report.summary.failedRequests === 0 &&
     report.summary.nonSuccessResponses === 0 &&
     report.summary.invalidHeadingOrLandmarkRows === 0 &&
+    report.summary.keyboardRowsChecked === expectedRows &&
+    report.summary.keyboardRowsPassed === expectedRows &&
     report.summary.lazyImagesObserved > 0 &&
     report.summary.unloadedImagesBeforeScroll > 0 &&
     report.summary.lazyImageFollowUpPerformed === true &&

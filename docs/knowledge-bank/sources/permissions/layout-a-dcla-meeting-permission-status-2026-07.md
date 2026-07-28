@@ -41,4 +41,3 @@ The current derivative is available only for the already authorized
 branch-review context. Creator identity, permission scope, represented-person
 review, final caption, credit, crop, staging, production, and indexing remain
 open. Production use fails closed until those questions receive human review.
-

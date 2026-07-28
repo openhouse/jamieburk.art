@@ -38,4 +38,3 @@ Cluster membership lets an editor compare frames without treating one oral
 history as automatic evidence for every image. Best-frame selection, factual
 maturity, creator rights, represented-person review, captioning, and
 publication are separate decisions.
-

@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Technical Operations
 
-**Source commit:** `f0dec3a060c62eb96c05075940d233ef6ea88f7e`
-**Generation time:** 2026-07-26T20:43:26-04:00
-**Source fingerprint:** `3c2dfb9437f0e280f23e7f8b814ab378b32e087a04f89ef716c1c479f5dcc994`
+**Source commit:** `cd146a7753b4ef79a9de9757fa2455a1c0cb6274`
+**Generation time:** 2026-07-28T07:14:37-04:00
+**Source fingerprint:** `34fd85b78759747c1b28032355659a1ae5c1ae98c97db8a6187720a4b7bf029c`
 
 - [NYC Artist Coalition application brief](../../applications/nycac-civic-product-operations.md) - `related_to` (frontmatter)
 - [Implementation, Adoption, and Handoff](../../capabilities/implementation-adoption-and-handoff.md) - `supports` (frontmatter)
@@ -26,3 +26,6 @@
 - [CallNYC](../../projects/callnyc.md) - `supports` (frontmatter)
 - [Harry J. Epstein Company digital operations](../../projects/harry-j-epstein.md) - `supports` (frontmatter)
 - [KC Spaces Fund](../../projects/kc-spaces-fund-orientation.md) - `supports` (frontmatter)
+- [Action Lab storefront-report prepublication review, July 2026](../../sources/action-lab-prepublication-review-2026-07.md) - `supports` (frontmatter)
+- [Pre-launch peer conversation, July 2026](../../sources/pre-launch-peer-review-2026-07.md) - `related_to` (frontmatter)
+- [Jamie Burkart testimony on small-business open data, March 18, 2019](../../sources/testimony/jamie-small-business-open-data-2019-03-18.md) - `supports` (frontmatter)

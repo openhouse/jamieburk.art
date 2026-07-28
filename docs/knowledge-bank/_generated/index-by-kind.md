@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `f0dec3a060c62eb96c05075940d233ef6ea88f7e`
-**Generation time:** 2026-07-26T20:43:26-04:00
-**Source fingerprint:** `3c2dfb9437f0e280f23e7f8b814ab378b32e087a04f89ef716c1c479f5dcc994`
+**Source commit:** `cd146a7753b4ef79a9de9757fa2455a1c0cb6274`
+**Generation time:** 2026-07-28T07:14:37-04:00
+**Source fingerprint:** `34fd85b78759747c1b28032355659a1ae5c1ae98c97db8a6187720a4b7bf029c`
 
 ## application
 
@@ -70,6 +70,7 @@
 - [Knowledge Wiki pilot map](../indexes/pilot.md) - `index.knowledge-wiki.pilot`
 - [What the work was up against](../indexes/what-the-work-was-up-against.md) - `index.knowledge-wiki.pressures`
 - [Project lineages](../indexes/project-lineages.md) - `index.knowledge-wiki.project-lineages`
+- [Public Testimony](../indexes/public-testimony.md) - `index.knowledge-wiki.public-testimony`
 - [Relational Infrastructure Atlas](../indexes/relational-infrastructure-atlas.md) - `index.knowledge-wiki.relational-infrastructure-atlas`
 - [Research Agenda and Held Claims](../indexes/research-agenda-and-held-claims.md) - `index.knowledge-wiki.research-agenda-and-held-claims`
 - [Role, Collective Authorship, and Protected Absence](../indexes/role-collective-authorship-and-protected-absence.md) - `index.knowledge-wiki.role-authorship-protected-absence`
@@ -91,6 +92,7 @@
 - [Invitation, container, emergence](../photography/editorial-grammar.md) - `method.photography.invitation-container-emergence`
 - [Photography notebook entry template](../photography/notebook-entry-template.md) - `method.photography.notebook-entry`
 - [Photographic oral-history return](../methods/photographic-oral-history-return.md) - `method.photography.oral-history-return`
+- [Transcript-linked photographic source return](../methods/transcript-linked-photographic-source-return.md) - `method.photography.transcript-linked-source-return`
 - [Situated source rereading](../methods/situated-source-rereading.md) - `method.situated-source-rereading`
 - [Source-Backed Team Memory](../methods/source-backed-team-memory.md) - `method.source-backed-team-memory`
 - [Structure grows from the material](../methods/structure-grows-from-the-material.md) - `method.structure-grows-from-material`
@@ -155,6 +157,8 @@
 
 ## research-run
 
+- [Campaign-site photography census](../research-runs/campaign-site-photography-census-2026-07-28.md) - `research.campaign-sites.photography-census.2026-07-28`
+- [Pre-launch current-work source return, July 28, 2026](../research-runs/pre-launch-current-work-source-return-2026-07-28.md) - `research.current-work.pre-launch-source-return.2026-07-28`
 - [Foundational Wiki page source return, July 19, 2026](../research-runs/foundational-source-return-2026-07-19.md) - `research.foundational-source-return.2026-07-19`
 - [Interpretive layer source return, July 19, 2026](../research-runs/interpretive-layer-source-return-2026-07-19.md) - `research.interpretive-layer-source-return.2026-07-19`
 - [Knowledge Wiki branch-family closure review](../research-runs/knowledge-wiki-family-closure-2026-07-19.md) - `research.knowledge-wiki-family-closure.2026-07-19`
@@ -162,12 +166,18 @@
 - [Field Set 001 completion](../photography/field-set-001-completion.md) - `research.photography.field-set-001-completion.2026-07-22`
 - [KC Town Hall and DCLA photographic source-return pass](../research-runs/photographic-source-return-kcth-dcla-2026-07-26.md) - `research.photography.kcth-dcla-source-return.2026-07-26`
 - [Proof of Life](../photography/proof-of-life.md) - `research.photography.proof-of-life.2026-07-22`
+- [Commercial Rent Stabilization testimony corpus queue](../research-runs/commercial-rent-stabilization-testimony-corpus-queue-2026-07-28.md) - `research.public-testimony.commercial-rent-stabilization-queue.2026-07-28`
+- [Public testimony source return, July 28, 2026](../research-runs/public-testimony-source-return-2026-07-28.md) - `research.public-testimony.source-return.2026-07-28`
+- [Supportive public testimony corpus, 2017-2019](../research-runs/supportive-public-testimony-corpus-2026-07-28.md) - `research.public-testimony.supportive-voices.2026-07-28`
 
 ## source
 
 - [CallNYC public source repository](../sources/callnyc-source-repository.md) - `source.callnyc.source-repository`
 - [Civic Hall hackathon announcement](../sources/civichall-hackathon-announcement-2016.md) - `source.civichall.hackathon-announcement.2016`
 - [New York City Council Constituent Services Data release](../sources/nycc-constituent-services-data-2016-05-27.md) - `source.councilstat.fuller-release.2016`
+- [Action Lab storefront-report prepublication review, July 2026](../sources/action-lab-prepublication-review-2026-07.md) - `source.current-work.action-lab-prepublication-review.2026-07`
+- [Commercial Rent Stabilization speech rehearsal, July 2026](../sources/crs-speech-rehearsal-2026-07.md) - `source.current-work.crs-speech-rehearsal.2026-07`
+- [Pre-launch peer conversation, July 2026](../sources/pre-launch-peer-review-2026-07.md) - `source.current-work.pre-launch-peer-review.2026-07`
 - [Open House at UC Santa Cruz](../sources/good-times-open-house-2006-06-28.md) - `source.good-times.open-house.2006-06-28`
 - [Harry J. Epstein Company archival research brief, July 2026](../sources/hje-research-brief-2026-07.md) - `source.hje.research-brief.2026-07`
 - [Jamie Burkart writer's voice synthesis, July 2026](../sources/writers-voice-synthesis-2026-07.md) - `source.jamie.writers-voice-synthesis.2026-07`
@@ -201,6 +211,13 @@
 - [Jamie recollection on the formative DCLA meeting and close-listening work](../sources/recollections/nycac-dcla-meeting-source-return-2026-07.md) - `source.recollection.nycac-dcla-meeting.2026-07`
 - [Jamie Burkart resume, June 11, 2026](../sources/jamie-resume-2026-06-11.md) - `source.resume.jamie-burkart.2026-06-11`
 - [Teju Cole's Zurich residency and Far Away From Here](../sources/teju-cole-far-away-from-here-2015.md) - `source.teju-cole.far-away-from-here.2015`
+- [Jamie Burkart testimony on the Cabaret Law, June 19, 2017](../sources/testimony/jamie-cabaret-law-2017-06-19.md) - `source.testimony.jamie-cabaret-law.2017-06-19`
+- [Jamie Burkart testimony on Cabaret Law repeal, September 14, 2017](../sources/testimony/jamie-cabaret-law-2017-09-14.md) - `source.testimony.jamie-cabaret-law.2017-09-14`
+- [Jamie Burkart testimony on M.A.R.C.H. operations, February 11, 2019](../sources/testimony/jamie-march-2019-02-11.md) - `source.testimony.jamie-march.2019-02-11`
+- [Jamie Burkart testimony on commercial lease protections, October 22, 2018](../sources/testimony/jamie-sbjsa-2018-10-22.md) - `source.testimony.jamie-sbjsa.2018-10-22`
+- [Jamie Burkart testimony on small-business open data, March 18, 2019](../sources/testimony/jamie-small-business-open-data-2019-03-18.md) - `source.testimony.jamie-small-business-open-data.2019-03-18`
+- [photo-filter Apple Photos export](../sources/tooling/photo-filter-apple-photos-export.md) - `source.tooling.photo-filter.apple-photos-export`
+- [photo-select curatorial cascade](../sources/tooling/photo-select-curatorial-cascade.md) - `source.tooling.photo-select.curatorial-cascade`
 - [UCSC narrative evaluations, 2004-2006](../sources/ucsc-narrative-evaluations-2004-2006.md) - `source.ucsc.narrative-evaluations.2004-2006`
 - [Apple Photos archive - public-safe metadata boundary](../sources/apple-photos-archive-metadata.md) - `source.vault.apple-photos.metadata`
 - [Protected communication history - public-safe metadata boundary](../sources/protected-communication-vault-metadata.md) - `source.vault.communication-history.metadata`

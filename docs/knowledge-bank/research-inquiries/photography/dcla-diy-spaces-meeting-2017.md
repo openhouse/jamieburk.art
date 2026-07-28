@@ -53,4 +53,3 @@ does not exist.
 The next pass should confirm private image bindings, seek creator and
 represented-person review, recover the audio if possible, and preserve raw
 participant speech outside public Git.
-

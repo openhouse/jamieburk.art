@@ -119,4 +119,3 @@ DCLA meeting context. They do not resolve every participant's identity or role.
 - creator identity and permission;
 - represented-person and visible-artwork review;
 - final caption, credit, crop, staging, production, and indexing approval.
-

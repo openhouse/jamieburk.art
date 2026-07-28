@@ -1,12 +1,12 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Photo-knowledge health
 
-**Source fingerprint:** `dfb21ed4e33720a5ecb314d22bb9b855e77a7f60b6cf7867e9ba32a2de1aa9cd`
+**Source fingerprint:** `6b540857ec8941a7b98e8af94a9d65132de5597bbbc50e3712667b8e5e03054b`
 
 
 **Result:** PASS (10/10)
 
-- PASS `PHOTO-KNOWLEDGE-001`: RFC 0003, RFC validation, and 147 Wiki records compile without hard errors.
+- PASS `PHOTO-KNOWLEDGE-001`: RFC 0003, RFC validation, and 164 Wiki records compile without hard errors.
 - PASS `PHOTO-KNOWLEDGE-002`: The application manifest resolves through the asset and derivative to one exact occurrence and edition.
 - PASS `PHOTO-KNOWLEDGE-003`: The public binding exposes only a public ID and fail-closed state; permission research remains open.
 - PASS `PHOTO-KNOWLEDGE-004`: Derivative derivative.photo.jamie-council-chamber.layout-a.v1 matches checksum 9ed636cbeefeb3812825081601f8e5bce4771b4fb1b536ef4351f2f214de14a3.

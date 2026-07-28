@@ -50,4 +50,3 @@ Phase One scope, co-founder/project-manager attribution, and a neighborhood
 survey process. It does not independently establish the remembered
 photographers, exact image dates, the title `general contractor`, daily
 coordination details, or final completion.
-

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-26T20:43:26-04:00",
-  "sourceCommit": "f0dec3a060c62eb96c05075940d233ef6ea88f7e",
-  "sourceFingerprint": "3c2dfb9437f0e280f23e7f8b814ab378b32e087a04f89ef716c1c479f5dcc994",
+  "generatedAt": "2026-07-28T07:14:37-04:00",
+  "sourceCommit": "cd146a7753b4ef79a9de9757fa2455a1c0cb6274",
+  "sourceFingerprint": "34fd85b78759747c1b28032355659a1ae5c1ae98c97db8a6187720a4b7bf029c",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -521,6 +521,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "index.knowledge-wiki.public-testimony",
+      "path": "docs/knowledge-bank/indexes/public-testimony.md",
+      "title": "Public Testimony",
+      "kind": "index",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Governed reading copies of Jamie Burkart's recovered New York City Council testimony, kept distinct from collective statements, drafts, and later interpretation.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-10-28"
+    },
+    {
       "id": "index.knowledge-wiki.relational-infrastructure-atlas",
       "path": "docs/knowledge-bank/indexes/relational-infrastructure-atlas.md",
       "title": "Relational Infrastructure Atlas",
@@ -755,6 +768,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "method.photography.transcript-linked-source-return",
+      "path": "docs/knowledge-bank/methods/transcript-linked-photographic-source-return.md",
+      "title": "Transcript-linked photographic source return",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "A governed method for returning from a public-event transcript or recording to the associated photographic field without collapsing retrieval metadata, speaker attribution, identity, rights, or editorial selection.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2027-01-28"
     },
     {
       "id": "method.situated-source-rereading",
@@ -1300,6 +1326,32 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "research.campaign-sites.photography-census.2026-07-28",
+      "path": "docs/knowledge-bank/research-runs/campaign-site-photography-census-2026-07-28.md",
+      "title": "Campaign-site photography census",
+      "kind": "research-run",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Reproducible census of photographs and other raster assets published through NYC Artist Coalition, Fair Rent NYC, Talks Not Raids, Let NYC Dance, and Save NYC Spaces campaign surfaces.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-10-28"
+    },
+    {
+      "id": "research.current-work.pre-launch-source-return.2026-07-28",
+      "path": "docs/knowledge-bank/research-runs/pre-launch-current-work-source-return-2026-07-28.md",
+      "title": "Pre-launch current-work source return, July 28, 2026",
+      "kind": "research-run",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public-safe return to the July 27 current-work folder without publishing private conversations, prepublication material, or an undelivered speech.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-08-28"
+    },
+    {
       "id": "research.foundational-source-return.2026-07-19",
       "path": "docs/knowledge-bank/research-runs/foundational-source-return-2026-07-19.md",
       "title": "Foundational Wiki page source return, July 19, 2026",
@@ -1395,6 +1447,45 @@
       "reviewBy": "2026-10-22"
     },
     {
+      "id": "research.public-testimony.commercial-rent-stabilization-queue.2026-07-28",
+      "path": "docs/knowledge-bank/research-runs/commercial-rent-stabilization-testimony-corpus-queue-2026-07-28.md",
+      "title": "Commercial Rent Stabilization testimony corpus queue",
+      "kind": "research-run",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Declared source-return queue for full supportive City, State, and public-event statements, including prime sponsors and every other supportive public official, concerning Commercial Rent Stabilization.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-08-04"
+    },
+    {
+      "id": "research.public-testimony.source-return.2026-07-28",
+      "path": "docs/knowledge-bank/research-runs/public-testimony-source-return-2026-07-28.md",
+      "title": "Public testimony source return, July 28, 2026",
+      "kind": "research-run",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Bounded search and close reading of official New York City Council transcripts for Jamie Burkart's personal testimony.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-10-28"
+    },
+    {
+      "id": "research.public-testimony.supportive-voices.2026-07-28",
+      "path": "docs/knowledge-bank/research-runs/supportive-public-testimony-corpus-2026-07-28.md",
+      "title": "Supportive public testimony corpus, 2017-2019",
+      "kind": "research-run",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Bounded source return of the full attributed contributions of 135 speakers supporting issues Jamie championed across five official Council transcripts.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-10-28"
+    },
+    {
       "id": "source.callnyc.source-repository",
       "path": "docs/knowledge-bank/sources/callnyc-source-repository.md",
       "title": "CallNYC public source repository",
@@ -1432,6 +1523,45 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2027-01-19"
+    },
+    {
+      "id": "source.current-work.action-lab-prepublication-review.2026-07",
+      "path": "docs/knowledge-bank/sources/action-lab-prepublication-review-2026-07.md",
+      "title": "Action Lab storefront-report prepublication review, July 2026",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe metadata for Jamie's invited factual, source, methods, and claim-scope review of a storefront-vacancy report before release.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-08-28"
+    },
+    {
+      "id": "source.current-work.crs-speech-rehearsal.2026-07",
+      "path": "docs/knowledge-bank/sources/crs-speech-rehearsal-2026-07.md",
+      "title": "Commercial Rent Stabilization speech rehearsal, July 2026",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Metadata-only record for a long-form rehearsal preceding Jamie's invited two-minute cultural-space remarks.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-08-04"
+    },
+    {
+      "id": "source.current-work.pre-launch-peer-review.2026-07",
+      "path": "docs/knowledge-bank/sources/pre-launch-peer-review-2026-07.md",
+      "title": "Pre-launch peer conversation, July 2026",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Metadata-only boundary for a private conversation that stress-tested portfolio legibility, current civic work, and the Knowledge Wiki model.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-10-28"
     },
     {
       "id": "source.good-times.open-house.2006-06-28",
@@ -1864,6 +1994,97 @@
       ],
       "lastReviewed": "2026-07-22",
       "reviewBy": "2027-01-22"
+    },
+    {
+      "id": "source.testimony.jamie-cabaret-law.2017-06-19",
+      "path": "docs/knowledge-bank/sources/testimony/jamie-cabaret-law-2017-06-19.md",
+      "title": "Jamie Burkart testimony on the Cabaret Law, June 19, 2017",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Official Council transcription of Jamie's personal testimony asking the Council to repeal the Cabaret Law.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-10-28"
+    },
+    {
+      "id": "source.testimony.jamie-cabaret-law.2017-09-14",
+      "path": "docs/knowledge-bank/sources/testimony/jamie-cabaret-law-2017-09-14.md",
+      "title": "Jamie Burkart testimony on Cabaret Law repeal, September 14, 2017",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Official Council transcription of Jamie's personal testimony supporting Int. 1652 and legal social dancing.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-10-28"
+    },
+    {
+      "id": "source.testimony.jamie-march.2019-02-11",
+      "path": "docs/knowledge-bank/sources/testimony/jamie-march-2019-02-11.md",
+      "title": "Jamie Burkart testimony on M.A.R.C.H. operations, February 11, 2019",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Official Council transcription of Jamie's personal testimony seeking transparency and proportionality in multi-agency enforcement.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-10-28"
+    },
+    {
+      "id": "source.testimony.jamie-sbjsa.2018-10-22",
+      "path": "docs/knowledge-bank/sources/testimony/jamie-sbjsa-2018-10-22.md",
+      "title": "Jamie Burkart testimony on commercial lease protections, October 22, 2018",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Official Council transcription of Jamie's personal testimony supporting the Small Business Jobs Survival Act.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-10-28"
+    },
+    {
+      "id": "source.testimony.jamie-small-business-open-data.2019-03-18",
+      "path": "docs/knowledge-bank/sources/testimony/jamie-small-business-open-data-2019-03-18.md",
+      "title": "Jamie Burkart testimony on small-business open data, March 18, 2019",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Official Council transcription of Jamie's personal testimony proposing open data for navigating business legality, safety, and compliance.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-10-28"
+    },
+    {
+      "id": "source.tooling.photo-filter.apple-photos-export",
+      "path": "docs/knowledge-bank/sources/tooling/photo-filter-apple-photos-export.md",
+      "title": "photo-filter Apple Photos export",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Public source repository for Jamie's Apple Photos browsing, person-filtering, timestamped export, and exported-filename metadata lookup workflow.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2027-01-28"
+    },
+    {
+      "id": "source.tooling.photo-select.curatorial-cascade",
+      "path": "docs/knowledge-bank/sources/tooling/photo-select-curatorial-cascade.md",
+      "title": "photo-select curatorial cascade",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Public source repository for Jamie's recursive photographic selection tool, including its nested keep/aside tree, level snapshots, decision notes, and resumable curation records.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2027-01-28"
     },
     {
       "id": "source.ucsc.narrative-evaluations.2004-2006",
@@ -2743,10 +2964,26 @@
     {
       "from": "index.knowledge-wiki",
       "type": "related_to",
+      "to": "index.knowledge-wiki.public-testimony",
+      "source": "frontmatter",
+      "href": "indexes/public-testimony.md",
+      "context": "Complete bounded corpus of recovered personal New York City Council testimony."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "related_to",
       "to": "project.nyc-artist-coalition",
       "source": "frontmatter",
       "href": "projects/nyc-artist-coalition-2017.md",
       "context": "Governed civic-systems record strengthened by complete shared-folder accounting."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "related_to",
+      "to": "research.current-work.pre-launch-source-return.2026-07-28",
+      "source": "frontmatter",
+      "href": "research-runs/pre-launch-current-work-source-return-2026-07-28.md",
+      "context": "Public-safe return to current review, speech-preparation, and peer-context records."
     },
     {
       "from": "index.knowledge-wiki.canonical-story-bank",
@@ -3495,6 +3732,14 @@
     {
       "from": "index.knowledge-wiki.photography",
       "type": "related_to",
+      "to": "method.photography.transcript-linked-source-return",
+      "source": "frontmatter",
+      "href": "../methods/transcript-linked-photographic-source-return.md",
+      "context": "Returns from public-event speech and recordings to candidate scene clusters without collapsing identity or rights."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
       "to": "projection.edition.layout-a.branch-review.2026-07",
       "source": "frontmatter",
       "href": "../projections/photography/layout-a-branch-review-edition-2026-07.md",
@@ -3515,6 +3760,14 @@
       "source": "frontmatter",
       "href": "../research-inquiries/photography/layout-a-council-chamber.md",
       "context": "Photographer, permission, exact-event, and source-binding questions."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "research.campaign-sites.photography-census.2026-07-28",
+      "source": "frontmatter",
+      "href": "../research-runs/campaign-site-photography-census-2026-07-28.md",
+      "context": "Complete declared-snapshot census of campaign photographs, occurrences, and non-photo visual assets."
     },
     {
       "from": "index.knowledge-wiki.photography",
@@ -3706,6 +3959,62 @@
       "to": "timeline.jamie-practice.2004-present",
       "source": "frontmatter",
       "href": "../timelines/practice-2004-present.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.public-testimony",
+      "type": "informed_by",
+      "to": "research.public-testimony.source-return.2026-07-28",
+      "source": "frontmatter",
+      "href": "../research-runs/public-testimony-source-return-2026-07-28.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.public-testimony",
+      "type": "informed_by",
+      "to": "research.public-testimony.supportive-voices.2026-07-28",
+      "source": "frontmatter",
+      "href": "../research-runs/supportive-public-testimony-corpus-2026-07-28.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.public-testimony",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.canonical-story-bank",
+      "source": "frontmatter",
+      "href": "canonical-story-bank.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.public-testimony",
+      "type": "related_to",
+      "to": "method.photography.transcript-linked-source-return",
+      "source": "frontmatter",
+      "href": "../methods/transcript-linked-photographic-source-return.md",
+      "context": "Uses governed transcripts to return to candidate event photographs without automating speaker identity."
+    },
+    {
+      "from": "index.knowledge-wiki.public-testimony",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.public-testimony",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.public-testimony",
+      "type": "related_to",
+      "to": "research.public-testimony.commercial-rent-stabilization-queue.2026-07-28",
+      "source": "frontmatter",
+      "href": "../research-runs/commercial-rent-stabilization-testimony-corpus-queue-2026-07-28.md",
       "context": null
     },
     {
@@ -4381,6 +4690,46 @@
       "context": "The homepage canary is the first governed use of this method."
     },
     {
+      "from": "method.photography.transcript-linked-source-return",
+      "type": "informed_by",
+      "to": "source.tooling.photo-filter.apple-photos-export",
+      "source": "frontmatter",
+      "href": "../sources/tooling/photo-filter-apple-photos-export.md",
+      "context": "Album, time, and People-label retrieval plus exported-filename lookup."
+    },
+    {
+      "from": "method.photography.transcript-linked-source-return",
+      "type": "informed_by",
+      "to": "source.tooling.photo-select.curatorial-cascade",
+      "source": "frontmatter",
+      "href": "../sources/tooling/photo-select-curatorial-cascade.md",
+      "context": "Recoverable nested selection trees and their historical decision context."
+    },
+    {
+      "from": "method.photography.transcript-linked-source-return",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.public-testimony",
+      "source": "frontmatter",
+      "href": "../indexes/public-testimony.md",
+      "context": "Governed transcripts can identify candidate events, turns, and speakers."
+    },
+    {
+      "from": "method.photography.transcript-linked-source-return",
+      "type": "related_to",
+      "to": "method.photography.oral-history-return",
+      "source": "frontmatter",
+      "href": "photographic-oral-history-return.md",
+      "context": "A recovered event cluster can be returned for situated first-person memory."
+    },
+    {
+      "from": "method.photography.transcript-linked-source-return",
+      "type": "related_to",
+      "to": "source.vault.apple-photos.metadata",
+      "source": "frontmatter",
+      "href": "../sources/apple-photos-archive-metadata.md",
+      "context": "Private archive and People-label boundary for candidate retrieval."
+    },
+    {
       "from": "method.situated-source-rereading",
       "type": "informed_by",
       "to": "research.foundational-source-return.2026-07-19",
@@ -5051,9 +5400,41 @@
     {
       "from": "project.fair-rent-nyc",
       "type": "related_to",
+      "to": "index.knowledge-wiki.public-testimony",
+      "source": "frontmatter",
+      "href": "../indexes/public-testimony.md",
+      "context": null
+    },
+    {
+      "from": "project.fair-rent-nyc",
+      "type": "related_to",
       "to": "project.save-nyc-spaces",
       "source": "frontmatter",
       "href": "save-nyc-spaces.md",
+      "context": null
+    },
+    {
+      "from": "project.fair-rent-nyc",
+      "type": "related_to",
+      "to": "research.current-work.pre-launch-source-return.2026-07-28",
+      "source": "frontmatter",
+      "href": "../research-runs/pre-launch-current-work-source-return-2026-07-28.md",
+      "context": null
+    },
+    {
+      "from": "project.fair-rent-nyc",
+      "type": "uses_source",
+      "to": "source.current-work.action-lab-prepublication-review.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/action-lab-prepublication-review-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "project.fair-rent-nyc",
+      "type": "uses_source",
+      "to": "source.current-work.crs-speech-rehearsal.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/crs-speech-rehearsal-2026-07.md",
       "context": null
     },
     {
@@ -5737,6 +6118,78 @@
       "context": null
     },
     {
+      "from": "research.campaign-sites.photography-census.2026-07-28",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.photography",
+      "source": "frontmatter",
+      "href": "../indexes/photography.md",
+      "context": null
+    },
+    {
+      "from": "research.campaign-sites.photography-census.2026-07-28",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "research.campaign-sites.photography-census.2026-07-28",
+      "type": "related_to",
+      "to": "project.let-nyc-dance",
+      "source": "frontmatter",
+      "href": "../projects/let-nyc-dance.md",
+      "context": null
+    },
+    {
+      "from": "research.campaign-sites.photography-census.2026-07-28",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "research.campaign-sites.photography-census.2026-07-28",
+      "type": "related_to",
+      "to": "project.save-nyc-spaces",
+      "source": "frontmatter",
+      "href": "../projects/save-nyc-spaces.md",
+      "context": null
+    },
+    {
+      "from": "research.campaign-sites.photography-census.2026-07-28",
+      "type": "related_to",
+      "to": "project.talks-not-raids",
+      "source": "frontmatter",
+      "href": "../projects/talks-not-raids-orientation.md",
+      "context": null
+    },
+    {
+      "from": "research.current-work.pre-launch-source-return.2026-07-28",
+      "type": "uses_source",
+      "to": "source.current-work.action-lab-prepublication-review.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/action-lab-prepublication-review-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "research.current-work.pre-launch-source-return.2026-07-28",
+      "type": "uses_source",
+      "to": "source.current-work.crs-speech-rehearsal.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/crs-speech-rehearsal-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "research.current-work.pre-launch-source-return.2026-07-28",
+      "type": "uses_source",
+      "to": "source.current-work.pre-launch-peer-review.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/pre-launch-peer-review-2026-07.md",
+      "context": null
+    },
+    {
       "from": "research.foundational-source-return.2026-07-19",
       "type": "documents",
       "to": "method.situated-source-rereading",
@@ -6153,6 +6606,54 @@
       "context": "Governed public-safe boundary for the private source archive."
     },
     {
+      "from": "research.public-testimony.commercial-rent-stabilization-queue.2026-07-28",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.public-testimony",
+      "source": "frontmatter",
+      "href": "../indexes/public-testimony.md",
+      "context": null
+    },
+    {
+      "from": "research.public-testimony.commercial-rent-stabilization-queue.2026-07-28",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "research.public-testimony.source-return.2026-07-28",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.public-testimony",
+      "source": "frontmatter",
+      "href": "../indexes/public-testimony.md",
+      "context": null
+    },
+    {
+      "from": "research.public-testimony.supportive-voices.2026-07-28",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.public-testimony",
+      "source": "frontmatter",
+      "href": "../indexes/public-testimony.md",
+      "context": null
+    },
+    {
+      "from": "research.public-testimony.supportive-voices.2026-07-28",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "research.public-testimony.supportive-voices.2026-07-28",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
       "from": "source.callnyc.source-repository",
       "type": "documents",
       "to": "project.callnyc",
@@ -6190,6 +6691,46 @@
       "to": "decision.callnyc.issue-pathways",
       "source": "frontmatter",
       "href": "../decisions/callnyc-issue-pathways.md",
+      "context": null
+    },
+    {
+      "from": "source.current-work.action-lab-prepublication-review.2026-07",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "source.current-work.action-lab-prepublication-review.2026-07",
+      "type": "supports",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "source.current-work.crs-speech-rehearsal.2026-07",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.public-testimony",
+      "source": "frontmatter",
+      "href": "../indexes/public-testimony.md",
+      "context": null
+    },
+    {
+      "from": "source.current-work.crs-speech-rehearsal.2026-07",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "source.current-work.pre-launch-peer-review.2026-07",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
       "context": null
     },
     {
@@ -6545,6 +7086,118 @@
       "context": "Provides the source-honest precedent for allowing a residency's material to redirect its proposed form."
     },
     {
+      "from": "source.testimony.jamie-cabaret-law.2017-06-19",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.testimony.jamie-cabaret-law.2017-06-19",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.public-testimony",
+      "source": "frontmatter",
+      "href": "../../indexes/public-testimony.md",
+      "context": null
+    },
+    {
+      "from": "source.testimony.jamie-cabaret-law.2017-09-14",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.testimony.jamie-cabaret-law.2017-09-14",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.public-testimony",
+      "source": "frontmatter",
+      "href": "../../indexes/public-testimony.md",
+      "context": null
+    },
+    {
+      "from": "source.testimony.jamie-march.2019-02-11",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.testimony.jamie-march.2019-02-11",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.public-testimony",
+      "source": "frontmatter",
+      "href": "../../indexes/public-testimony.md",
+      "context": null
+    },
+    {
+      "from": "source.testimony.jamie-sbjsa.2018-10-22",
+      "type": "documents",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "source.testimony.jamie-sbjsa.2018-10-22",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.public-testimony",
+      "source": "frontmatter",
+      "href": "../../indexes/public-testimony.md",
+      "context": null
+    },
+    {
+      "from": "source.testimony.jamie-small-business-open-data.2019-03-18",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.public-testimony",
+      "source": "frontmatter",
+      "href": "../../indexes/public-testimony.md",
+      "context": null
+    },
+    {
+      "from": "source.testimony.jamie-small-business-open-data.2019-03-18",
+      "type": "supports",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "source.tooling.photo-filter.apple-photos-export",
+      "type": "documents",
+      "to": "method.photography.transcript-linked-source-return",
+      "source": "frontmatter",
+      "href": "../../methods/transcript-linked-photographic-source-return.md",
+      "context": "Exported filenames and private People labels can retrieve candidate event clusters."
+    },
+    {
+      "from": "source.tooling.photo-filter.apple-photos-export",
+      "type": "related_to",
+      "to": "source.vault.apple-photos.metadata",
+      "source": "frontmatter",
+      "href": "../apple-photos-archive-metadata.md",
+      "context": "The tool operates against the private archive governed by this public-safe boundary."
+    },
+    {
+      "from": "source.tooling.photo-select.curatorial-cascade",
+      "type": "documents",
+      "to": "method.photography.transcript-linked-source-return",
+      "source": "frontmatter",
+      "href": "../../methods/transcript-linked-photographic-source-return.md",
+      "context": "The recursive tree can help recover Jamie's earlier editorial attention."
+    },
+    {
+      "from": "source.tooling.photo-select.curatorial-cascade",
+      "type": "related_to",
+      "to": "method.photography.artist-led-curatorial-loop",
+      "source": "frontmatter",
+      "href": "../../methods/artist-led-photographic-curation.md",
+      "context": "One historical implementation of iterative photographic selection."
+    },
+    {
       "from": "source.vault.apple-photos.metadata",
       "type": "related_to",
       "to": "index.knowledge-wiki.photography-notebook",
@@ -6648,7 +7301,7 @@
       "toPath": "docs/knowledge-bank/citational-care.md",
       "to": null,
       "fragment": null,
-      "line": 121,
+      "line": 127,
       "kind": "link"
     },
     {
@@ -6657,7 +7310,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc.md",
       "to": "project.callnyc",
       "fragment": null,
-      "line": 122,
+      "line": 128,
       "kind": "link"
     },
     {
@@ -6666,7 +7319,7 @@
       "toPath": "docs/knowledge-bank/intake-and-maturation.md",
       "to": null,
       "fragment": null,
-      "line": 125,
+      "line": 131,
       "kind": "link"
     },
     {
@@ -6675,7 +7328,7 @@
       "toPath": "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md",
       "to": null,
       "fragment": null,
-      "line": 129,
+      "line": 135,
       "kind": "link"
     },
     {
@@ -6684,7 +7337,7 @@
       "toPath": "docs/knowledge-bank/agency-and-collective-credit.md",
       "to": null,
       "fragment": null,
-      "line": 136,
+      "line": 142,
       "kind": "link"
     },
     {
@@ -6693,7 +7346,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-finkelpearl-council-hearing-review.md",
       "to": null,
       "fragment": null,
-      "line": 141,
+      "line": 147,
       "kind": "link"
     },
     {
@@ -6702,7 +7355,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-campaign-press-archive.md",
       "to": null,
       "fragment": null,
-      "line": 147,
+      "line": 153,
       "kind": "link"
     },
     {
@@ -6711,7 +7364,7 @@
       "toPath": "docs/knowledge-bank/projects/talks-not-raids.md",
       "to": null,
       "fragment": null,
-      "line": 152,
+      "line": 158,
       "kind": "link"
     },
     {
@@ -6720,7 +7373,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 158,
+      "line": 164,
       "kind": "link"
     },
     {
@@ -6729,7 +7382,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/kcspacesfund-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 160,
+      "line": 166,
       "kind": "link"
     },
     {
@@ -6738,7 +7391,7 @@
       "toPath": "docs/knowledge-bank/projects/jamie-personal-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 166,
+      "line": 172,
       "kind": "link"
     },
     {
@@ -6747,7 +7400,7 @@
       "toPath": "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
       "to": null,
       "fragment": null,
-      "line": 168,
+      "line": 174,
       "kind": "link"
     },
     {
@@ -6756,7 +7409,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-town-hall.md",
       "to": null,
       "fragment": null,
-      "line": 176,
+      "line": 182,
       "kind": "link"
     },
     {
@@ -6765,7 +7418,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
       "to": null,
       "fragment": null,
-      "line": 182,
+      "line": 188,
       "kind": "link"
     },
     {
@@ -6774,7 +7427,7 @@
       "toPath": "docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
       "to": null,
       "fragment": null,
-      "line": 184,
+      "line": 190,
       "kind": "link"
     },
     {
@@ -6783,7 +7436,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
       "to": null,
       "fragment": null,
-      "line": 190,
+      "line": 196,
       "kind": "link"
     },
     {
@@ -6792,7 +7445,7 @@
       "toPath": "docs/knowledge-bank/projects/archive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 196,
+      "line": 202,
       "kind": "link"
     },
     {
@@ -6801,7 +7454,7 @@
       "toPath": "docs/knowledge-bank/projects/icloud-teams-archive-delta-2026-07-15.md",
       "to": null,
       "fragment": null,
-      "line": 202,
+      "line": 208,
       "kind": "link"
     },
     {
@@ -6810,7 +7463,7 @@
       "toPath": "docs/knowledge-bank/projects/google-drive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 208,
+      "line": 214,
       "kind": "link"
     },
     {
@@ -6819,7 +7472,7 @@
       "toPath": "docs/knowledge-bank/projects/social-media-archive-production.md",
       "to": null,
       "fragment": null,
-      "line": 214,
+      "line": 220,
       "kind": "link"
     },
     {
@@ -6828,7 +7481,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 220,
+      "line": 226,
       "kind": "link"
     },
     {
@@ -6837,7 +7490,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
       "to": null,
       "fragment": null,
-      "line": 222,
+      "line": 228,
       "kind": "link"
     },
     {
@@ -6846,7 +7499,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-retrievable-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 228,
+      "line": 234,
       "kind": "link"
     },
     {
@@ -6855,7 +7508,7 @@
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md",
       "to": null,
       "fragment": null,
-      "line": 233,
+      "line": 239,
       "kind": "link"
     },
     {
@@ -6864,7 +7517,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 235,
+      "line": 241,
       "kind": "link"
     },
     {
@@ -6873,7 +7526,7 @@
       "toPath": "docs/knowledge-bank/projects/urbanhermit-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 242,
+      "line": 248,
       "kind": "link"
     },
     {
@@ -6882,7 +7535,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 244,
+      "line": 250,
       "kind": "link"
     },
     {
@@ -6891,7 +7544,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 250,
+      "line": 256,
       "kind": "link"
     },
     {
@@ -6900,25 +7553,7 @@
       "toPath": "docs/knowledge-bank/data/callnyc-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 252,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
-      "to": null,
-      "fragment": null,
-      "line": 257,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
-      "to": null,
-      "fragment": null,
-      "line": 259,
+      "line": 258,
       "kind": "link"
     },
     {
@@ -6933,7 +7568,16 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
+      "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
+      "to": null,
+      "fragment": null,
+      "line": 263,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
       "line": 265,
@@ -6942,28 +7586,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
+      "to": null,
+      "fragment": null,
+      "line": 271,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 267,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
-      "to": null,
-      "fragment": null,
-      "line": 274,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/data/wowlist-sunday-dinner-callscript-controls.json",
-      "to": null,
-      "fragment": null,
-      "line": 276,
+      "line": 273,
       "kind": "link"
     },
     {
@@ -6978,7 +7613,16 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
-      "toPath": "evals/knowledge-bank/runs/2026-07-15-wowlist-sunday-dinner-callscript-continuity.md",
+      "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
+      "to": null,
+      "fragment": null,
+      "line": 280,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/data/wowlist-sunday-dinner-callscript-controls.json",
       "to": null,
       "fragment": null,
       "line": 282,
@@ -6987,10 +7631,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "evals/knowledge-bank/runs/2026-07-15-wowlist-sunday-dinner-callscript-continuity.md",
+      "to": null,
+      "fragment": null,
+      "line": 288,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 285,
+      "line": 291,
       "kind": "link"
     },
     {
@@ -6999,7 +7652,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 290,
+      "line": 296,
       "kind": "link"
     },
     {
@@ -7008,7 +7661,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 291,
+      "line": 297,
       "kind": "link"
     },
     {
@@ -7077,10 +7730,28 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/indexes/public-testimony.md",
+      "to": "index.knowledge-wiki.public-testimony",
+      "fragment": null,
+      "line": 48,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/research-runs/pre-launch-current-work-source-return-2026-07-28.md",
+      "to": "research.current-work.pre-launch-source-return.2026-07-28",
+      "fragment": null,
+      "line": 51,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/indexes/project-lineages.md",
       "to": "index.knowledge-wiki.project-lineages",
       "fragment": null,
-      "line": 48,
+      "line": 54,
       "kind": "link"
     },
     {
@@ -7089,7 +7760,7 @@
       "toPath": "docs/knowledge-bank/indexes/decision-records.md",
       "to": "index.knowledge-wiki.decision-records",
       "fragment": null,
-      "line": 50,
+      "line": 56,
       "kind": "link"
     },
     {
@@ -7098,7 +7769,7 @@
       "toPath": "docs/knowledge-bank/indexes/family-closure.md",
       "to": "index.knowledge-wiki.family-closure",
       "fragment": null,
-      "line": 52,
+      "line": 58,
       "kind": "link"
     },
     {
@@ -7107,7 +7778,7 @@
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
       "to": "project.nyc-artist-coalition",
       "fragment": null,
-      "line": 55,
+      "line": 61,
       "kind": "link"
     },
     {
@@ -7116,7 +7787,7 @@
       "toPath": "docs/knowledge-bank/_generated/wanted-pages.md",
       "to": null,
       "fragment": null,
-      "line": 58,
+      "line": 64,
       "kind": "link"
     },
     {
@@ -7125,7 +7796,7 @@
       "toPath": "docs/knowledge-bank/workflow.md",
       "to": null,
       "fragment": null,
-      "line": 64,
+      "line": 70,
       "kind": "link"
     },
     {
@@ -7288,6 +7959,15 @@
       "to": "portfolio.work.callnyc",
       "fragment": null,
       "line": 6,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/data/supportive-public-testimony-corpus-2026-07.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/data/supportive-testimony-scope-2026-07.json",
+      "to": null,
+      "fragment": null,
+      "line": 3321,
       "kind": "link"
     },
     {
@@ -8085,10 +8765,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/photography.md",
       "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/methods/transcript-linked-photographic-source-return.md",
+      "to": "method.photography.transcript-linked-source-return",
+      "fragment": null,
+      "line": 34,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
       "toPath": "docs/knowledge-bank/evaluations/curatorial/layout-a-home-council-chamber-v1.md",
       "to": "evaluation.curatorial.layout-a.home-council-chamber.v1",
       "fragment": null,
-      "line": 34,
+      "line": 35,
       "kind": "link"
     },
     {
@@ -8097,7 +8786,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/layout-a-home-council-chamber-v1.md",
       "to": "decision.photography.layout-a.home-council-chamber.v1",
       "fragment": null,
-      "line": 35,
+      "line": 36,
       "kind": "link"
     },
     {
@@ -8106,7 +8795,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-a-home-hero-council-chamber.md",
       "to": "projection.photo.layout-a.home.hero.council-chamber",
       "fragment": null,
-      "line": 36,
+      "line": 37,
       "kind": "link"
     },
     {
@@ -8115,7 +8804,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-a-branch-review-edition-2026-07.md",
       "to": "projection.edition.layout-a.branch-review.2026-07",
       "fragment": null,
-      "line": 37,
+      "line": 38,
       "kind": "link"
     },
     {
@@ -8124,7 +8813,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/dcla-diy-spaces-meeting-2017.md",
       "to": "index.photo-set.nycac.dcla-meeting.2017",
       "fragment": null,
-      "line": 41,
+      "line": 42,
       "kind": "link"
     },
     {
@@ -8133,7 +8822,7 @@
       "toPath": "docs/knowledge-bank/sources/nycac-dcla-formation-materials-2017.md",
       "to": "source.nycac.dcla-formation-materials.2017",
       "fragment": null,
-      "line": 42,
+      "line": 43,
       "kind": "link"
     },
     {
@@ -8142,7 +8831,7 @@
       "toPath": "docs/knowledge-bank/sources/recollections/nycac-dcla-meeting-source-return-2026-07.md",
       "to": "source.recollection.nycac-dcla-meeting.2026-07",
       "fragment": null,
-      "line": 43,
+      "line": 44,
       "kind": "link"
     },
     {
@@ -8151,7 +8840,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-a-technical-operations-dcla-meeting.md",
       "to": "projection.photo.layout-a.technical-operations.dcla-meeting",
       "fragment": null,
-      "line": 44,
+      "line": 45,
       "kind": "link"
     },
     {
@@ -8160,7 +8849,7 @@
       "toPath": "docs/knowledge-bank/research-inquiries/photography/dcla-diy-spaces-meeting-2017.md",
       "to": "research-inquiry.photography.dcla-diy-spaces-meeting.2017",
       "fragment": null,
-      "line": 45,
+      "line": 46,
       "kind": "link"
     },
     {
@@ -8169,7 +8858,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/kc-town-hall-phase-one-source-return.md",
       "to": "index.photo-set.kc-town-hall.phase-one-source-return",
       "fragment": null,
-      "line": 47,
+      "line": 48,
       "kind": "link"
     },
     {
@@ -8178,7 +8867,16 @@
       "toPath": "docs/knowledge-bank/research-runs/photographic-source-return-kcth-dcla-2026-07-26.md",
       "to": "research.photography.kcth-dcla-source-return.2026-07-26",
       "fragment": null,
-      "line": 51,
+      "line": 52,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/research-runs/campaign-site-photography-census-2026-07-28.md",
+      "to": "research.campaign-sites.photography-census.2026-07-28",
+      "fragment": null,
+      "line": 57,
       "kind": "link"
     },
     {
@@ -8485,6 +9183,114 @@
       "to": "project.kc-town-hall",
       "fragment": null,
       "line": 57,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/public-testimony.md",
+      "from": "index.knowledge-wiki.public-testimony",
+      "toPath": "docs/knowledge-bank/sources/testimony/jamie-cabaret-law-2017-06-19.md",
+      "to": "source.testimony.jamie-cabaret-law.2017-06-19",
+      "fragment": null,
+      "line": 13,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/public-testimony.md",
+      "from": "index.knowledge-wiki.public-testimony",
+      "toPath": "docs/knowledge-bank/sources/testimony/jamie-cabaret-law-2017-09-14.md",
+      "to": "source.testimony.jamie-cabaret-law.2017-09-14",
+      "fragment": null,
+      "line": 14,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/public-testimony.md",
+      "from": "index.knowledge-wiki.public-testimony",
+      "toPath": "docs/knowledge-bank/sources/testimony/jamie-sbjsa-2018-10-22.md",
+      "to": "source.testimony.jamie-sbjsa.2018-10-22",
+      "fragment": null,
+      "line": 15,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/public-testimony.md",
+      "from": "index.knowledge-wiki.public-testimony",
+      "toPath": "docs/knowledge-bank/sources/testimony/jamie-march-2019-02-11.md",
+      "to": "source.testimony.jamie-march.2019-02-11",
+      "fragment": null,
+      "line": 16,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/public-testimony.md",
+      "from": "index.knowledge-wiki.public-testimony",
+      "toPath": "docs/knowledge-bank/sources/testimony/jamie-small-business-open-data-2019-03-18.md",
+      "to": "source.testimony.jamie-small-business-open-data.2019-03-18",
+      "fragment": null,
+      "line": 17,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/public-testimony.md",
+      "from": "index.knowledge-wiki.public-testimony",
+      "toPath": "docs/knowledge-bank/research-runs/public-testimony-source-return-2026-07-28.md",
+      "to": "research.public-testimony.source-return.2026-07-28",
+      "fragment": null,
+      "line": 24,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/public-testimony.md",
+      "from": "index.knowledge-wiki.public-testimony",
+      "toPath": "docs/knowledge-bank/data/supportive-public-testimony-corpus-2026-07.md",
+      "to": null,
+      "fragment": null,
+      "line": 30,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/public-testimony.md",
+      "from": "index.knowledge-wiki.public-testimony",
+      "toPath": "docs/knowledge-bank/data/supportive-public-testimony-corpus-2026-07.json",
+      "to": null,
+      "fragment": null,
+      "line": 31,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/public-testimony.md",
+      "from": "index.knowledge-wiki.public-testimony",
+      "toPath": "docs/knowledge-bank/data/supportive-testimony-scope-2026-07.json",
+      "to": null,
+      "fragment": null,
+      "line": 36,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/public-testimony.md",
+      "from": "index.knowledge-wiki.public-testimony",
+      "toPath": "docs/knowledge-bank/research-runs/supportive-public-testimony-corpus-2026-07-28.md",
+      "to": "research.public-testimony.supportive-voices.2026-07-28",
+      "fragment": null,
+      "line": 40,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/public-testimony.md",
+      "from": "index.knowledge-wiki.public-testimony",
+      "toPath": "docs/knowledge-bank/research-runs/commercial-rent-stabilization-testimony-corpus-queue-2026-07-28.md",
+      "to": "research.public-testimony.commercial-rent-stabilization-queue.2026-07-28",
+      "fragment": null,
+      "line": 70,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/public-testimony.md",
+      "from": "index.knowledge-wiki.public-testimony",
+      "toPath": "docs/knowledge-bank/methods/transcript-linked-photographic-source-return.md",
+      "to": "method.photography.transcript-linked-source-return",
+      "fragment": null,
+      "line": 75,
       "kind": "link"
     },
     {
@@ -9442,6 +10248,15 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/research-runs/campaign-site-photography-census-2026-07-28.md",
+      "from": "research.campaign-sites.photography-census.2026-07-28",
+      "toPath": "docs/knowledge-bank/data/campaign-site-image-census-2026-07.json",
+      "to": null,
+      "fragment": null,
+      "line": 10,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/research-runs/foundational-source-return-2026-07-19.md",
       "from": "research.foundational-source-return.2026-07-19",
       "toPath": "docs/knowledge-bank/sources/jamie-resume-2026-06-11.md",
@@ -9694,6 +10509,42 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/research-runs/supportive-public-testimony-corpus-2026-07-28.md",
+      "from": "research.public-testimony.supportive-voices.2026-07-28",
+      "toPath": "docs/knowledge-bank/data/supportive-public-testimony-corpus-2026-07.md",
+      "to": null,
+      "fragment": null,
+      "line": 15,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/research-runs/supportive-public-testimony-corpus-2026-07-28.md",
+      "from": "research.public-testimony.supportive-voices.2026-07-28",
+      "toPath": "docs/knowledge-bank/data/supportive-public-testimony-corpus-2026-07.json",
+      "to": null,
+      "fragment": null,
+      "line": 16,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/research-runs/supportive-public-testimony-corpus-2026-07-28.md",
+      "from": "research.public-testimony.supportive-voices.2026-07-28",
+      "toPath": "docs/knowledge-bank/data/supportive-testimony-scope-2026-07.json",
+      "to": null,
+      "fragment": null,
+      "line": 18,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/research-runs/supportive-public-testimony-corpus-2026-07-28.md",
+      "from": "research.public-testimony.supportive-voices.2026-07-28",
+      "toPath": "docs/knowledge-bank/research-runs/commercial-rent-stabilization-testimony-corpus-queue-2026-07-28.md",
+      "to": "research.public-testimony.commercial-rent-stabilization-queue.2026-07-28",
+      "fragment": null,
+      "line": 78,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/sources.md",
       "from": null,
       "toPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
@@ -9754,6 +10605,15 @@
       "to": null,
       "fragment": null,
       "line": 19,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/pre-launch-peer-review-2026-07.md",
+      "from": "source.current-work.pre-launch-peer-review.2026-07",
+      "toPath": "docs/chad-lens.md",
+      "to": null,
+      "fragment": null,
+      "line": 14,
       "kind": "link"
     },
     {

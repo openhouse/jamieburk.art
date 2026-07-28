@@ -361,7 +361,7 @@ export function SundayDinnerEvidenceMap() {
     >
       <header className="border-b border-jb-ink/25 px-5 py-4 sm:px-6">
         <p className="text-xs font-semibold uppercase text-jb-blue">
-          Inspectable proof map
+          Public evidence and bounded operating model
         </p>
         <h3
           className="mt-2 text-xl font-semibold text-jb-ink"
@@ -370,15 +370,16 @@ export function SundayDinnerEvidenceMap() {
           Recurrence, operating form, and handoff
         </h3>
         <p className="mt-2 max-w-3xl text-sm leading-6 text-jb-ink/76">
-          Three bounded records let a reader reconstruct how a living social
-          practice became repeatable without exposing the people who inhabited it.
+          Public milestone records make recurrence inspectable. Two protected
+          working records inform the bounded operating summaries that follow;
+          they are not presented as public corroboration or participant testimony.
         </p>
       </header>
 
       <ol className="grid list-none gap-px bg-jb-ink/20 p-0 lg:grid-cols-3">
         <li className="bg-jb-paper p-5 sm:p-6">
           <p className="text-xs font-semibold uppercase text-jb-blue">
-            01 / Recurring public use
+            01 / Public proof of recurring use
           </p>
           <h4 className="mt-3 text-lg font-semibold text-jb-ink">
             100th and 200th milestone records
@@ -400,16 +401,15 @@ export function SundayDinnerEvidenceMap() {
 
         <li className="bg-jb-paper p-5 sm:p-6">
           <p className="text-xs font-semibold uppercase text-jb-blue">
-            02 / Residency handoff
+            02 / Bounded operating summary
           </p>
           <h4 className="mt-3 text-lg font-semibold text-jb-ink">
             Governed 2023 workflow
           </h4>
           <p className="mt-3 text-sm leading-6 text-jb-ink/76">
-            A protected acceptance record supports a public-safe sequence:
-            proposal review, video-call onboarding, configuring the space around
-            an artist&apos;s needs, and independent access for the resident and a
-            collaborator.
+            A public-safe abstraction, informed by a protected working record,
+            describes proposal review, onboarding, configuring the space around
+            an artist&apos;s needs, and an access handoff.
           </p>
           <ol className="mt-4 border-y border-jb-ink/15 text-sm">
             {[
@@ -430,22 +430,24 @@ export function SundayDinnerEvidenceMap() {
           </ol>
           <p className="mt-4 text-xs leading-5 text-jb-ink/68">
             The person, correspondence, dates, location, and access details stay
-            private. The record proves a documented handoff, not an artistic
-            outcome or a universal residency procedure.
+            private. This summary explains the operating model; it is not public
+            proof of individual participation, consent, endorsement, artistic
+            outcome, or a universal residency procedure.
           </p>
         </li>
 
         <li className="bg-jb-paper p-5 sm:p-6">
           <p className="text-xs font-semibold uppercase text-jb-blue">
-            03 / Recurring operations
+            03 / Bounded operating summary
           </p>
           <h4 className="mt-3 text-lg font-semibold text-jb-ink">
             Governed 2025 operating schema
           </h4>
           <p className="mt-3 text-sm leading-6 text-jb-ink/76">
-            A later working sheet organizes dates and themes, invitations,
-            response status, attendance, and follow-up across recurring
-            gatherings. Only the field structure informs this public account.
+            A public-safe abstraction, informed by a protected working sheet,
+            shows how dates and themes, invitations, response status,
+            attendance, and follow-up can be organized across recurring
+            gatherings.
           </p>
           <dl className="mt-4 grid grid-cols-2 gap-px border border-jb-ink/15 bg-jb-ink/15 text-sm">
             {[
@@ -466,16 +468,19 @@ export function SundayDinnerEvidenceMap() {
           </dl>
           <p className="mt-4 text-xs leading-5 text-jb-ink/68">
             No participant row, contact detail, private response, or attendance
-            value enters the site. The schema shows an operating interface, not
-            consent, endorsement, or a causal revision history.
+            value enters the site. The schema explains an operating interface;
+            it is not public evidence, consent, endorsement, or a causal
+            revision history.
           </p>
         </li>
       </ol>
 
       <footer className="border-t border-jb-ink/25 bg-jb-mist px-5 py-4 text-sm leading-6 text-jb-ink/74 sm:px-6">
-        Together these records make recurring social use, interface design, and
-        handoff inspectable. The blank specimen below shows the review questions
-        that keep the method revisable; it is a derivative, not a private record.
+        Only the public milestone sources function here as public proof. The
+        two bounded summaries explain Jamie&apos;s operating model without claiming
+        independent corroboration. The blank specimen below shows the review
+        questions that keep the method revisable; it is a derivative, not a
+        private record.
       </footer>
     </section>
   );

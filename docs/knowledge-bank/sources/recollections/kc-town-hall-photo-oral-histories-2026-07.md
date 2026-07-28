@@ -59,4 +59,3 @@ not independently verify the title `general contractor`, final completion,
 exact dates, creator rights, represented-person consent, or component-level
 authorship. The two photographs remain out of the public site while those
 questions are open.
-

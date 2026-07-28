@@ -35,6 +35,14 @@ relations:
     href: indexes/photography.md
     context: Governed asset, occurrence, rights, curatorial, recollection, and portfolio-edition loop.
   - type: related_to
+    target: index.knowledge-wiki.public-testimony
+    href: indexes/public-testimony.md
+    context: Complete bounded corpus of recovered personal New York City Council testimony.
+  - type: related_to
+    target: research.current-work.pre-launch-source-return.2026-07-28
+    href: research-runs/pre-launch-current-work-source-return-2026-07-28.md
+    context: Public-safe return to current review, speech-preparation, and peer-context records.
+  - type: related_to
     target: index.knowledge-wiki.project-lineages
     href: indexes/project-lineages.md
     context: Bounded inheritance, adaptation, and divergence across projects.
@@ -98,6 +106,12 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Living photographic knowledge](indexes/photography.md): the RFC 0003 asset,
   derivative, occurrence, curatorial, rights, recollection, correction, and
   portfolio-edition system.
+- [Public testimony](indexes/public-testimony.md): governed reading copies of
+  recovered personal testimony and the bounded event-wide supportive-voices
+  corpus, separate from collective statements and undelivered drafts.
+- [Pre-launch current-work source return](research-runs/pre-launch-current-work-source-return-2026-07-28.md):
+  public-safe record of present review, speech-preparation, and peer-context
+  work with protected source boundaries.
 - [Project lineages](indexes/project-lineages.md): inheritance, adaptation, and
   divergence without retrospective inevitability.
 - [Decision records](indexes/decision-records.md): bounded reconstructions that

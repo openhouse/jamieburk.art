@@ -45,4 +45,3 @@ publication, and press reuse of the visualization. The audio recording has not
 yet been recovered. The recollection remains valuable for directing research,
 but it does not replace the missing recording or allocate every participant's
 contribution.
-

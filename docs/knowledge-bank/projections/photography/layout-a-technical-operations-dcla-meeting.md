@@ -74,4 +74,3 @@ outcomes to one person.
 
 The archive label states custody, not creator credit. Every downstream
 publication dimension remains open.
-

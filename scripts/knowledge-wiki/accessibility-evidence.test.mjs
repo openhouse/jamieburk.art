@@ -46,6 +46,19 @@ test("an unverified lazy-image follow-up fails closed", () => {
   assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).passed, false);
 });
 
+test("a broken skip-link target fails closed", () => {
+  const report = structuredClone(current.report);
+  report.rows[0].skipTargetPresent = false;
+  report.summary.keyboardRowsPassed -= 1;
+  assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).passed, false);
+});
+
+test("keyboard coverage cannot be reported but unenforced", () => {
+  const report = structuredClone(current.report);
+  report.rows[0].keyboardInvisibleTargets = 1;
+  assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).passed, false);
+});
+
 test("a coordinated canonical-route substitution fails closed", () => {
   const report = structuredClone(current.report);
   report.routes[0] = "/noncanonical-replacement";

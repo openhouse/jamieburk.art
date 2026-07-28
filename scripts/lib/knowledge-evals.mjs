@@ -101,12 +101,12 @@ const NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   proofSnippetSha256: "39b5ddec3ec83e6e552c33da836551f854a6dc809ea4beaa35e688036a982d9c",
   proofContentSha256: "d59ed44552e96a73477489cdd91363d9f1e764f39720dddafe21b01e10de79ca"
 });
-// Re-reviewed 2026-07-26 after adding the public-safe Sunday Dinner evidence map,
-// workflow specimens, exact operating sequence, and Greene Hill source projection.
-// The source projection keeps Jamie and Julia's hosting credit shared and does not
-// establish attendance, full duration, 300-plus scale, solo hosting, or sole WOW
-// List ownership. Protected records remain private-support only, with every
-// participant, consent, outcome, universal-process, and causal-revision boundary.
+// Re-reviewed 2026-07-28 after tightening the public-safe Sunday Dinner evidence
+// map. The source projection keeps Jamie and Julia's hosting credit shared and
+// does not establish attendance, full duration, 300-plus scale, solo hosting, or
+// sole WOW List ownership. Protected records may support bounded operating
+// abstractions, but remain excluded as public corroboration, testimony, consent,
+// endorsement, and participant-level evidence.
 const PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "23c7d57699dc30d84d6738f7ece4b47f3497550fa2dd8690ca7c4a86719d70ef",
   manifestContentSha256: "62f09e7e53d5e28397ca25e948a77f7e1ec7e9e8a504b37c8e9343eae1faa090",
@@ -116,7 +116,7 @@ const PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   governanceBindingsSha256: "ec54eedff5001209fb27e524e2ea0acdffd372393c4ef51c0bfd8bae47eb5a4d",
   publicReportSha256: "0e8dc37b79624e2ac86a026fca40741ee578aeb22bc5002e795775c1df5e650e",
   wowListMdxSha256: "920a67545ba6bbe346309c79247a12e1e0a3028c09cb5c36e1a85e35f8013df8",
-  sundayDinnerMdxSha256: "fc2726f0c6b1cb0a0ec997293217458ed33cd4b9515fdd9565219244a0fcfce6",
+  sundayDinnerMdxSha256: "f05e5cb9a8ff76345fef558bf4e36f06c436fad480b66a2f455d52094ee306c3",
   proofContentSha256: "04bda7a50e53a7c78d4f49b7f139a424514e03d83994c3fbb63cd6fbd25be685"
 });
 const WOWLIST_FACEBOOK_POST_REVIEW_LOCKS = Object.freeze({

@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "suite_id": "transcript-linked-photographic-source-return-2026-07-28",
+  "execution": "deterministic-local",
+  "criteria": [
+    {
+      "id": "TRANSCRIPT-PHOTO-001",
+      "lens": "Margaret Morse",
+      "criterion": "The method treats transcript, recording, metadata, People label, select tree, and visible frame as related but non-interchangeable traces.",
+      "weight": 20
+    },
+    {
+      "id": "TRANSCRIPT-PHOTO-002",
+      "lens": "Shreya Shankar",
+      "criterion": "People and speaker labels remain retrieval candidates until exact-frame identity and speaking associations receive independent corroboration and human review.",
+      "weight": 20
+    },
+    {
+      "id": "TRANSCRIPT-PHOTO-003",
+      "lens": "Deborah Treisman",
+      "criterion": "Nested keep depth preserves historical curatorial attention without becoming an objective score, final ranking, or mandate for current publication.",
+      "weight": 20
+    },
+    {
+      "id": "TRANSCRIPT-PHOTO-004",
+      "lens": "Zora Neale Hurston",
+      "criterion": "Scene families and earlier asides remain available so a single hero frame cannot erase collective agency, sequence, or quieter forms of work.",
+      "weight": 20
+    },
+    {
+      "id": "TRANSCRIPT-PHOTO-005",
+      "lens": "Mimi Onuoha",
+      "criterion": "Private locators and identity metadata stay outside public Git, while rights, consent, credit, crop, caption, destination, Jamie approval, production, and indexing remain separate human gates.",
+      "weight": 20
+    }
+  ],
+  "hard_gates": [
+    "No People label becomes a public identity assertion without exact-frame human review.",
+    "No transcript turn is assigned to a visible person through temporal proximity alone.",
+    "No nested keep path becomes an objective quality score or final editorial decision.",
+    "No raw label, filename, timestamp, coordinate, album name, source identifier, local path, recording, transcript, contact sheet, or unapproved pixel enters public Git.",
+    "No automated or historical selection clears rights, consent, credit, crop, caption, destination, Jamie approval, production, or indexing."
+  ]
+}

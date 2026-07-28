@@ -29,4 +29,3 @@ and a projection screen are visible.
 The image alone does not establish the event, date, speaker identity, organizer,
 photographer, institutional relationship, or outcome. It does not establish
 rights or represented-person consent.
-

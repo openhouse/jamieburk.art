@@ -15,9 +15,9 @@ const historicalKnowledgePath = path.join(
   "apps/www/src/data/knowledge-bank/historical-knowledge.ts"
 );
 
-const candidateRelativePaths = [
+export const professorCandidateRelativePaths = [
   ".agents/evals/portfolio-production-readiness.json",
-  "apps/www/src/data/knowledge-bank/historical-knowledge.ts",
+  "DESIGN.md",
   "apps/www/src/app/about/page.tsx",
   "apps/www/src/app/page.tsx",
   "apps/www/src/app/work/technical-operations/page.tsx",
@@ -41,27 +41,9 @@ const candidateRelativePaths = [
   "apps/www/src/components/CaseStudyBlocks.tsx",
   "apps/www/mdx-components.tsx",
   "apps/www/src/data/photography.ts",
-  "apps/www/src/lib/site-url.ts",
-  "apps/www/next.config.ts",
-  "scripts/check-public-safety.mjs",
   ".agents/evals/layout-photography-integration.json",
   "docs/qa/layout-A/photo-review-register.json",
-  "docs/qa/layout-A/browser-qa.json",
-  "docs/qa/evals-H/responsive-route-matrix.json",
   "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
-  "apps/www/public/photos/cabaret-law-hearing-steps.jpg",
-  "apps/www/public/photos/council-hearing-room.jpg",
-  "apps/www/public/photos/dcla-diy-spaces-meeting.jpg",
-  "apps/www/public/photos/fair-rent-handbills.jpg",
-  "apps/www/public/photos/fair-rent-nyc-group.jpg",
-  "apps/www/public/photos/jamie-city-portrait.jpg",
-  "apps/www/public/photos/jamie-council-chamber.jpg",
-  "apps/www/public/photos/jamie-mirror-camera.jpg",
-  "apps/www/public/photos/jamie-waterfront-portrait.jpg",
-  "apps/www/public/photos/legalize-dance-parade.jpg",
-  "apps/www/public/photos/raft-and-delta-queen.jpg",
-  "apps/www/public/photos/raft-arrival.jpg",
-  "apps/www/public/photos/raft-in-fog.jpg",
 ];
 
 const finalScorecardRelativePaths = [
@@ -73,7 +55,7 @@ const finalScorecardRelativePaths = [
   "docs/qa/evals-H/warren-sack-final-c.json"
 ];
 
-const approvedCandidateSha256 = "88e224b8af896b004897445dd3f237e725a5a35067abdc0819d44dade0d89e3e";
+const approvedCandidateSha256 = "2fca0c5bdfc62ccb5ce556515691c7b9847253369520e4ce936915076f12d136";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },
@@ -91,15 +73,15 @@ function joined(entry) {
 }
 
 function loadCandidateFiles() {
-  return Object.fromEntries(candidateRelativePaths.map((relativePath) => [
+  return Object.fromEntries(professorCandidateRelativePaths.map((relativePath) => [
     relativePath,
     readFileSync(path.join(repoRoot, relativePath))
   ]));
 }
 
-function fingerprintCandidate(candidateFiles) {
+export function fingerprintProfessorCandidate(candidateFiles) {
   const hash = createHash("sha256");
-  for (const relativePath of candidateRelativePaths) {
+  for (const relativePath of professorCandidateRelativePaths) {
     hash.update(relativePath).update("\0").update(candidateFiles[relativePath] ?? "").update("\0");
   }
   return hash.digest("hex");
@@ -121,7 +103,7 @@ export function evaluateProfessorLenses({
   const sackText = joined(sack);
   const combinedPublicText = `${aboutText}\n${sourceNoteText}\n${historicalKnowledgeText}`;
   const totalWeight = suite.evals.reduce((sum, entry) => sum + entry.weight, 0);
-  const candidateSha256 = fingerprintCandidate(candidateFiles);
+  const candidateSha256 = fingerprintProfessorCandidate(candidateFiles);
   const observedRows = Math.max(
     aboutText.match(/Observed:<\/strong>/g)?.length ?? 0,
     aboutText.match(/observed:\s*[\n\r]+\s*"/g)?.length ?? 0

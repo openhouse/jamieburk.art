@@ -45,6 +45,10 @@ relations:
     href: ../methods/photographic-oral-history-return.md
     context: Governed return from one exact photograph to situated first-person memory.
   - type: related_to
+    target: method.photography.transcript-linked-source-return
+    href: ../methods/transcript-linked-photographic-source-return.md
+    context: Returns from public-event speech and recordings to candidate scene clusters without collapsing identity or rights.
+  - type: related_to
     target: research-inquiry.photography.layout-a.council-chamber
     href: ../research-inquiries/photography/layout-a-council-chamber.md
     context: Photographer, permission, exact-event, and source-binding questions.
@@ -60,6 +64,10 @@ relations:
     target: research.photography.kcth-dcla-source-return.2026-07-26
     href: ../research-runs/photographic-source-return-kcth-dcla-2026-07-26.md
     context: Dated return to contemporary documents, images, accounts, and proposal artifacts.
+  - type: related_to
+    target: research.campaign-sites.photography-census.2026-07-28
+    href: ../research-runs/campaign-site-photography-census-2026-07-28.md
+    context: Complete declared-snapshot census of campaign photographs, occurrences, and non-photo visual assets.
 ---
 
 # Living photographic knowledge
@@ -94,6 +102,7 @@ The governed loop includes:
 - the [source-return inquiry](../research-inquiries/photography/layout-a-council-chamber.md);
 - the [artist-led curatorial method](../methods/artist-led-photographic-curation.md);
 - the [photographic oral-history return](../methods/photographic-oral-history-return.md);
+- the [transcript-linked photographic source return](../methods/transcript-linked-photographic-source-return.md);
 - the [simulated-lens proposal](../evaluations/curatorial/layout-a-home-council-chamber-v1.md);
 - the [branch-review decision](../decisions/photography/layout-a-home-council-chamber-v1.md);
 - the [exact homepage occurrence](../projections/photography/layout-a-home-hero-council-chamber.md);
@@ -115,6 +124,13 @@ The complete [July 26 source-return research
 run](../research-runs/photographic-source-return-kcth-dcla-2026-07-26.md)
 records the source classes reviewed, changed interpretations, contradictions,
 limitations, and librarian requests.
+
+The [campaign-site photography
+census](../research-runs/campaign-site-photography-census-2026-07-28.md)
+returns to the visual systems Jamie and collaborators already published. It
+separates photographs from graphics, maps, press reproductions, official
+reference portraits, and unresolved raster material while preserving page
+occurrences and surrounding public context.
 
 The RFC's original East River example belonged to Layout C. Because Jamie
 selected Layout A as this branch's exact donor, the implementation uses Layout

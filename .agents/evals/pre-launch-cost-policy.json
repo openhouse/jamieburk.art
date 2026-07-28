@@ -1,0 +1,136 @@
+{
+  "version": 1,
+  "title": "Pre-launch evaluation cost and evidence policy",
+  "principles": [
+    "Run the cheapest discriminating evidence first.",
+    "A skipped evaluation must have an inspectable scope reason.",
+    "Cached evidence is valid only for the same candidate fingerprint, rubric digest, evaluator version, and environment contract.",
+    "Any candidate-affecting change invalidates candidate-bound browser, accessibility, screenshot, and independent-judge evidence.",
+    "Human rights, consent, collective-credit, usefulness, Jamie approval, deployment, and indexing gates are never replaced by automation."
+  ],
+  "tiers": [
+    {
+      "id": "tier-0",
+      "name": "deterministic-source",
+      "cost": "low",
+      "required": "on every relevant change",
+      "checks": [
+        "git-diff-check",
+        "typecheck",
+        "lint",
+        "public-safety",
+        "knowledge-wiki-schema",
+        "unit-and-mutation-tests"
+      ]
+    },
+    {
+      "id": "tier-1",
+      "name": "derived-and-rendered",
+      "cost": "moderate",
+      "required": "when generated knowledge, routes, styles, components, or public assets change",
+      "checks": [
+        "generated-currentness",
+        "build",
+        "route-check",
+        "browser-matrix",
+        "accessibility-evidence",
+        "screenshot-review"
+      ]
+    },
+    {
+      "id": "tier-2",
+      "name": "independent-semantic-review",
+      "cost": "high",
+      "required": "when public claims, role framing, editorial composition, evaluator rubric, or release-candidate bytes change",
+      "checks": [
+        "professor-lens-holdouts",
+        "composite-independent-judges",
+        "chad-lens-holdout"
+      ],
+      "preconditions": [
+        "tier-0 passes",
+        "required tier-1 checks pass",
+        "candidate is frozen",
+        "sanitized dossier is candidate-bound"
+      ]
+    },
+    {
+      "id": "tier-3",
+      "name": "human-authority",
+      "cost": "human",
+      "required": "at the named decision point",
+      "checks": [
+        "rights-and-consent",
+        "collective-credit",
+        "editorial-usefulness",
+        "Jamie-approval",
+        "deployment-observation",
+        "indexing-approval"
+      ]
+    }
+  ],
+  "impactRules": [
+    {
+      "id": "documentation-only",
+      "patterns": [
+        "docs/**"
+      ],
+      "requires": [
+        "tier-0"
+      ]
+    },
+    {
+      "id": "knowledge-semantic",
+      "patterns": [
+        "docs/knowledge-bank/**",
+        "apps/www/src/data/knowledge-bank/**",
+        "apps/www/src/data/proofs.ts"
+      ],
+      "requires": [
+        "tier-0",
+        "tier-2"
+      ]
+    },
+    {
+      "id": "public-surface",
+      "patterns": [
+        "apps/www/src/app/**",
+        "apps/www/src/components/**",
+        "apps/www/src/data/photography.ts",
+        "apps/www/src/styles/**",
+        "apps/www/public/**"
+      ],
+      "requires": [
+        "tier-0",
+        "tier-1",
+        "tier-2"
+      ]
+    },
+    {
+      "id": "evaluator-contract",
+      "patterns": [
+        ".agents/evals/**",
+        "scripts/**eval**",
+        "scripts/tests/**"
+      ],
+      "requires": [
+        "tier-0",
+        "tier-2"
+      ]
+    },
+    {
+      "id": "build-and-deploy",
+      "patterns": [
+        "Dockerfile",
+        "apps/www/next.config.*",
+        "apps/www/package.json",
+        "package.json",
+        "package-lock.json"
+      ],
+      "requires": [
+        "tier-0",
+        "tier-1"
+      ]
+    }
+  ]
+}
