@@ -59,10 +59,26 @@ statements:
     confidence: high
     references:
       - source.layout-a.photo-review-register.2026-07
+  - id: statement.photo.jamie-council-chamber.event-context.v1
+    property: event_context
+    value: NYC Open Data Week session with the New York City Council Data Team, March 26, 2026
+    rank: preferred
+    confidence: high
+    references:
+      - source.nycc.open-data-week-event-records.2026-03
+      - source.recollection.jamie-council-chamber-photo.2026-07
+      - source.visual-review.layout-a.council-chamber.2026-07
+  - id: statement.photo.jamie-council-chamber.working-materials.v1
+    property: working_materials
+    value: coalition participation materials and public-data research
+    rank: normal
+    confidence: moderate
+    references:
+      - source.recollection.jamie-council-chamber-photo.2026-07
 visible_observations:
-  - Jamie Burkart is smiling in a Council chamber.
+  - Jamie Burkart is smiling at a New York City Council setting.
   - Jamie wears a blue work jacket and carries a clipboard and papers.
-  - Desks, chairs, microphones, architectural details, and chamber seating are visible.
+  - United States and New York City flags and Council signage are visible.
 interpretation_boundary: >
   The photograph supports personal presence and a visible civic-work setting.
   It does not by itself establish the event, photographer, date, professional
@@ -89,6 +105,14 @@ relations:
     target: source.recollection.jamie-public-facing-civic-work.2026-07
     href: ../../sources/recollections/jamie-public-facing-civic-work-2026-07.md
     context: Broader first-person practice context, not event evidence.
+  - type: related_to
+    target: source.recollection.jamie-council-chamber-photo.2026-07
+    href: ../../sources/recollections/jamie-council-chamber-photo-2026-07.md
+    context: Exact-photo oral-history return, source manifestation, and working-material recollection.
+  - type: related_to
+    target: source.nycc.open-data-week-event-records.2026-03
+    href: ../../sources/nycc-open-data-week-event-records-2026.md
+    context: Contemporary event metadata and proposal trail.
 ---
 
 # Jamie Burkart in a Council chamber, Layout A
@@ -111,14 +135,28 @@ operating practice.
 
 Archive custody is not creator attribution.
 
+## Returned source manifestation
+
+Jamie returned a second 1280 x 854 JPEG manifestation on July 26, 2026. It is
+visually the same frame but has a different checksum and retains a limited EXIF
+envelope. The file is recorded in the oral-history source record and remains
+outside public Git. The existing metadata-stripped derivative remains
+canonical for branch review.
+
 ## What remains open
 
 - photographer identity and permission scope;
-- exact date and event;
 - exact private source binding;
+- exact packet version, recipients, conversations, and follow-up;
 - visible-artwork and represented-person review;
 - final caption, credit, and crop;
 - staging, production, and indexing approval.
+
+Contemporary event records now corroborate the official session, date, venue,
+and organizer. Jamie's oral history describes the participation materials and
+proposal he carried. The combined record supports the bounded branch-review
+caption without establishing delivery, institutional response, outcome,
+creator identity, or production permission.
 
 ## Curatorial boundary
 

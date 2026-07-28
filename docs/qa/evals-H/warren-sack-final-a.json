@@ -1,35 +1,37 @@
 {
   "evaluator": "Codex independent sanitized-dossier holdout evaluator",
-  "reviewerId": "sack-a-photo-knowledge-hiring-readiness-2026-07-26",
+  "reviewerId": "sack-a-source-return-hiring-readiness-2026-07-26",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "192c2ccb93042196901e3b4f42a5ae407f0468625d554da34d3be13f45ef3e3d",
+  "candidateSha256": "88e224b8af896b004897445dd3f237e725a5a35067abdc0819d44dade0d89e3e",
   "score": 4,
   "pass": true,
   "evidence": [
-    "`candidate-manifest.json` validated: recomputing SHA-256 over all 46 ordered candidate paths produced `192c2ccb93042196901e3b4f42a5ae407f0468625d554da34d3be13f45ef3e3d`, matching the identity contract; no candidate path or declared screenshot was missing.",
-    "The rendered homepage `/` states the complete method in plain language: observe relationships, model the system, prototype an interface, test through social or collective use, then document revision and handoff.",
-    "Current HJE proof traces customer language and operating habits to a connected requirements model, the public storefront and team routines, customer/team feedback with bounded analytics, and reusable release patterns and handoffs.",
-    "Current NYC Artist Coalition / FairRentNYC proof traces lived experience, meetings, public sources, and institutional relationships into source maps, question logs, provenance and decision records; these support campaign sites, town halls, hearings, public action pathways, feedback, running minutes, and collaborator continuity.",
-    "Current Sunday Dinner / 196 proof traces hosting and artist needs into a participation model, invitations, onboarding, access handoffs, and a blank public-safe interface; recurring public milestones and governed operating records support social use, revision, and continuity.",
-    "The rendered `/about` surface makes the three current project sequences comparable and explicitly connects social structure and information architecture to interfaces, participation, feedback, learning, revision, and handoff.",
-    "Dated Social Information Spaces coursework remains protected and held from public projection. Its boundaries reject invention of structural equivalence, peer-reviewed research, production deployment, sole authorship, and current Max/Jitter proficiency."
+    "Identity contract verified: hashing every ordered path and raw byte sequence specified by `candidate-manifest.json` produced `88e224b8af896b004897445dd3f237e725a5a35067abdc0819d44dade0d89e3e`, matching the supplied candidate SHA-256.",
+    "The rendered homepage `/` states the complete method directly: “Observe / Model / Prototype / Test / Revise / Hand off,” followed by plain language covering observation of relationships, system modeling, interface prototyping, social or collective testing, revision documentation, and handoff. This is immediately visible without a click in `runtime-evidence/rendered-surface-evidence.json` and `runtime-evidence/holdout-home.png`.",
+    "The one-click `/about` surface makes the sequence comparative and links to project evidence. `apps/www/src/app/about/page.tsx` and the rendered `/about` record in `runtime-evidence/rendered-surface-evidence.json` explicitly map observed relationships, modeled structures, interfaces, use and feedback, revision, handoff, and evidence boundaries across named projects.",
+    "Current project 1 — Harry J. Epstein Company: rendered route `/work/harry-j-epstein`, `apps/www/src/content/work/harry-j-epstein.mdx`, and `runtime-evidence/holdout-work-harry-j-epstein.png` show the full operating loop. Customer language and team habits are observed; product information, ordering, marketing, analytics, and follow-up are modeled together; the storefront and internal routines form the interface; customer/team questions and bounded analytics test it in continuing use; incremental releases become reusable patterns and team-maintainable workflows. Inspectable proof includes the current storefront screenshot, public website, analytics summary, content-and-voice template, scope boundaries, and team credit.",
+    "Current project 2 — NYC Artist Coalition / FairRentNYC: `/about` reconstructs the sequence from lived experience, meetings, sources, questions, and institutional actors through source maps, provenance records, decision memory, campaign sites, town halls, hearings, public action pathways, feedback, running minutes, and reviewable decision trails. The rendered `/work/fair-rent-nyc` case study, `apps/www/src/content/work/fair-rent-nyc.mdx`, and `runtime-evidence/holdout-work-fair-rent-nyc.png` supply inspectable proof: collective-work photographs, public campaign screenshot, campaign-memory spine, source map, policy-question log, handbills, public reporting and testimony, and explicit Known/Open/Protected boundaries. Social structure, information architecture, participation, public interfaces, learning, and continuity are visibly connected.",
+    "Current project 3 — 196 Artists Residency / Sunday Dinner: rendered route `/work/196-sunday-dinner`, `apps/www/src/content/work/196-sunday-dinner.mdx`, and `runtime-evidence/holdout-work-196-sunday-dinner.png` explicitly state the full loop. Artist and gathering needs are observed; invitation-through-follow-up is modeled as a participation sequence; invitations, onboarding, hosting rhythms, access handoffs, and a blank specimen form the interface; 100th/200th milestone records and governed later records demonstrate recurring social use; a 2023 residency handoff, 2025 operating schema, review questions, and blank handoff template document revision and continuity without exposing participant records.",
+    "The Sunday Dinner proof is inspectable rather than merely descriptive: its rendered evidence map distinguishes recurring public use, a governed 2023 workflow, and a governed 2025 operating schema, while the public-safe specimen exposes Observe, Model, Interface, Use and Notice, Revise, and Hand Off fields. It explicitly disclaims a complete causal revision history and participant-level reproduction.",
+    "The HJE and Sunday Dinner rendered operating loops confirm that the comparative method is not confined to abstract homepage capability language. FairRentNYC supplies the third current, public-safe project with independently inspectable interfaces, participation settings, artifacts, and continuity records.",
+    "Bounded coursework lineage is correctly separated from current proof. `docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md` states that protected UCSC evaluations informed rubric questions but are withheld; the Social Information Spaces claim remains held pending public corroboration. `apps/www/src/data/knowledge-bank/historical-knowledge.ts` classifies the 2006 work as protected coursework and explicitly rejects structural-equivalence invention, peer-reviewed research, production deployment, sole authorship of the collective final project, and current Max/Jitter proficiency.",
+    "The public `/about` page uses the independently public 2006 Open House record only as bounded lineage, credits collective governance and many-perspective documentation, and traces present practice through current work. It does not publish or quote the protected Warren Sack evaluation.",
+    "The `/lab/source-backed-team-memory` rendered route further preserves claim discipline: it is labeled early research/method/consulting practice, not finished production SaaS, automated trust, surveillance, or a replacement for judgment. Its Maven coursework is separately framed as professional development rather than instructor affiliation or production proof."
   ],
   "gaps": [],
   "safety_findings": [
-    "Every integrated photograph remains `branch-review`, with exact crop and caption, photographer and rights, represented-person consent and dignity, collective credit, final usefulness, and Jamie approval still open.",
-    "The candidate preserves protected participant, coalition, legal-review, stakeholder, correspondence, and access-detail boundaries.",
-    "Deployment and indexing remain human gates; this content pass is not publication clearance."
+    "Human publication approval remains open. `docs/qa/layout-A/photo-review-register.json` authorizes the photographs only for branch design review and records production status as `pending-exact-image-human-review`.",
+    "Before publication, each exact image and crop still requires review of photographer/rights, represented-person consent and dignity, collective credit, caption and crop, public usefulness, and Jamie’s approval of the unchanged candidate.",
+    "The candidate handles this safely at the content stage: photographs remain marked `branch-review`; protected participant records, coalition strategy, legal-review material, private correspondence, stakeholder data, attendance records, access details, customer data, dashboards, and credentials are explicitly withheld.",
+    "Deployment and indexing remain human-gated and are not established by this dossier. No publication clearance, production deployment, or indexing approval should be inferred from this passing content score."
   ],
-  "recommendation": "Pass PR-016 at score 4. Preserve the candidate-bound sequence and project evidence, then complete image rights, consent, credit and crop review, Jamie's exact-candidate approval, deployment approval, and indexing approval before publication.",
+  "recommendation": "Pass PR-016 at score 4. Preserve the current method statement, three-project proof trace, collective-credit language, coursework boundaries, and Known/Open/Protected controls; proceed toward publication only after the outstanding exact-image, consent, credit, crop, deployment, and indexing approvals are completed.",
   "provenance": {
-    "provider": "codex-native-subagent",
-    "processSessionId": "019fa0e7-ecac-7812-9e71-295690f55c66",
-    "agentNickname": "Boole",
-    "model": "inherited-current-model",
-    "reasoningEffort": "inherited",
+    "provider": "openai-codex-model-service",
+    "model": "gpt-5.6-sol",
     "sandbox": "read-only",
     "ephemeral": true,
-    "operatorAttestation": "Installed from the fresh separate Codex process result. The process received only the sanitized public-repository candidate dossier, generated screenshots, frozen lens prompt, and output schema. This simulated lens is not professor participation, quotation, endorsement, or judgment."
+    "operatorAttestation": "Produced by a fresh separate Codex process that received only the explicitly approved sanitized public-repository candidate dossier, generated screenshots, frozen lens prompt, and output schema. This simulated lens is not professor participation, quotation, endorsement, or judgment."
   }
 }

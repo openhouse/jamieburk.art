@@ -1,12 +1,12 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Photo-knowledge health
 
-**Source fingerprint:** `d381b50adf25f838e2742cd28b7b3d246ea550b4dceb93cf25537035e0adb9c9`
+**Source fingerprint:** `dfb21ed4e33720a5ecb314d22bb9b855e77a7f60b6cf7867e9ba32a2de1aa9cd`
 
 
 **Result:** PASS (10/10)
 
-- PASS `PHOTO-KNOWLEDGE-001`: RFC 0003, RFC validation, and 131 Wiki records compile without hard errors.
+- PASS `PHOTO-KNOWLEDGE-001`: RFC 0003, RFC validation, and 147 Wiki records compile without hard errors.
 - PASS `PHOTO-KNOWLEDGE-002`: The application manifest resolves through the asset and derivative to one exact occurrence and edition.
 - PASS `PHOTO-KNOWLEDGE-003`: The public binding exposes only a public ID and fail-closed state; permission research remains open.
 - PASS `PHOTO-KNOWLEDGE-004`: Derivative derivative.photo.jamie-council-chamber.layout-a.v1 matches checksum 9ed636cbeefeb3812825081601f8e5bce4771b4fb1b536ef4351f2f214de14a3.
@@ -15,7 +15,7 @@
 - PASS `PHOTO-KNOWLEDGE-007`: Caption and custody credit resolve to statements while creator attribution remains explicitly unknown.
 - PASS `PHOTO-KNOWLEDGE-008`: Nine approval dimensions remain independent; public Git is approved while downstream rights and release gates stay open.
 - PASS `PHOTO-KNOWLEDGE-009`: Generated-output freshness is deferred during report construction.
-- PASS `PHOTO-KNOWLEDGE-010`: The pilot reports 1 governed canary and 12 migration items across 13 branch-review photographs.
+- PASS `PHOTO-KNOWLEDGE-010`: The pilot reports 2 governed assets, 2 exact occurrences, and 11 migration items across 13 branch-review photographs.
 
 ## Human gates
 

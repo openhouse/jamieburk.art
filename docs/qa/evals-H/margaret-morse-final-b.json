@@ -1,36 +1,34 @@
 {
   "evaluator": "Codex independent sanitized-dossier holdout evaluator",
-  "reviewerId": "morse-b-photo-knowledge-hiring-readiness-2026-07-26",
+  "reviewerId": "morse-b-source-return-hiring-readiness-2026-07-26",
   "phase": "holdout",
   "lensId": "PR-015",
-  "candidateSha256": "192c2ccb93042196901e3b4f42a5ae407f0468625d554da34d3be13f45ef3e3d",
+  "candidateSha256": "88e224b8af896b004897445dd3f237e725a5a35067abdc0819d44dade0d89e3e",
   "score": 4,
   "pass": true,
   "evidence": [
-    "`candidate-manifest.json` independently recomputes to SHA-256 `192c2ccb93042196901e3b4f42a5ae407f0468625d554da34d3be13f45ef3e3d` across all 46 ordered candidate paths; no candidate files or declared screenshots are missing.",
-    "The two-click threshold is satisfied in one click: `/` visibly links to About in `runtime-evidence/holdout-home.png`, and `/about` in `runtime-evidence/holdout-about.png` explicitly connects Open House, WOWList, Sunday Dinner and 196, NYC Artist Coalition, and source-backed team memory as artistic, civic, technical, and social practice.",
-    "The target role remains unmistakable. `/` leads with technical project management, product operations, and implementation, while `apps/www/src/app/page.tsx` places `/work/technical-operations` first in the hiring-reader path and frames inhabited systems as an operating method rather than an artist biography.",
-    "Harry J. Epstein Company is a current continuity in `apps/www/src/app/about/page.tsx` and `/work/harry-j-epstein`: customer language and team questions shape requirements, the storefront and internal routines form an interface, and incremental releases become reusable handoffs.",
-    "NYC Artist Coalition / FairRentNYC is a current continuity in `apps/www/src/app/about/page.tsx`, `apps/www/src/content/work/fair-rent-nyc.mdx`, and `/work/fair-rent-nyc`: meetings and public use change language and next actions, while source maps, decision memory, campaign interfaces, hearings, and handoffs let collaborators influence and continue the system.",
-    "Sunday Dinner and 196 is a current continuity in `apps/www/src/content/work/196-sunday-dinner.mdx` and `/work/196-sunday-dinner`: hospitality, artist support, arrival, access, onboarding, recurring social use, revision, and handoff are inspectable through bounded milestone evidence, a governed workflow summary, and a blank public-safe operating specimen.",
-    "A hiring reader can explain the difference from conventional administration: the three current project loops show feedback and use changing the systems rather than people merely complying with them.",
-    "Protected-source exclusion holds on rendered surfaces. The protected coursework projection remains on hold while `/lab/source-backed-team-memory` uses a synthetic Known/Open/Protected example rather than private records."
+    "Identity contract confirmed: `candidate-manifest.json` records candidate SHA-256 `88e224b8af896b004897445dd3f237e725a5a35067abdc0819d44dade0d89e3e`.",
+    "The visible threshold is one click from `/`: the global About link leads to `/about`, whose rendered “Systems people can inhabit” section explicitly connects artistic, civic, technical, and social practice. `runtime-evidence/holdout-home.png` and `runtime-evidence/holdout-about.png` show this path and preserve the Technical Project Manager / Product Operations / Implementation positioning.",
+    "Current continuity 1 — Harry J. Epstein Company: `/about` and `/work/harry-j-epstein` trace attention to customer language and institutional knowledge through requirements, storefront interfaces, feedback, incremental releases, reusable patterns, and handoffs. The public storefront is inspectable while customer data, analytics, and internal workflows remain protected.",
+    "Current continuity 2 — NYC Artist Coalition / FairRentNYC: `/about` and `/work/fair-rent-nyc` connect lived cultural-space experience, meetings, participation, public interfaces, source maps, decision memory, testimony, documentation, and collective continuation. `runtime-evidence/holdout-work-fair-rent-nyc.png` visibly situates the work in inhabited civic settings and repeatedly limits campaign outcomes to collective credit.",
+    "Current continuity 3 — Sunday Dinner / 196: `/about` and `/work/196-sunday-dinner` show hospitality, artist support, onboarding, access handoffs, recurring social use, care, documentation, and revision. The rendered proof map and blank hosting-handoff specimen make the operating practice inspectable without revealing participant records.",
+    "The homepage itself reinforces the lens: `/` states that requirements, interfaces, operating rhythms, documentation, and handoffs must be forms “people can inhabit,” and presents current technical, civic, and community projects alongside the role-first heading. This clarifies rather than obscures the target professional role.",
+    "A hiring reader can distinguish Jamie’s systems from conventional administration: `/about` says structures help people recognize relationships, participate, remember, and continue; `/` adds agency and continuity; the three project routes demonstrate feedback, collective influence, revisable interfaces, and durable handoffs rather than static recordkeeping or top-down control.",
+    "Collective-credit and privacy boundaries hold: `/work/fair-rent-nyc` credits NYC Artist Coalition collaborators and Commercial Rent Stabilization advocates, disclaims solo policy causality, and withholds private strategy and legal-review material; `/work/196-sunday-dinner` credits the community and Julia Fredenburg where supported while withholding names, attendance, correspondence, addresses, and access details.",
+    "Protected-source exclusion holds: `docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md` confines protected educational records to rubric design, and the rendered site contains no Margaret Morse quotation, testimonial, endorsement, educational-record projection, or claim of public authority. The Open House lineage on `/about` is presented as a bounded project account rather than faculty praise."
   ],
   "gaps": [],
   "safety_findings": [
-    "Every image in `apps/www/src/data/photography.ts` is `branch-review`, and all 13 files match the hashes in `docs/qa/layout-A/photo-review-register.json`; exact crop, caption, photographer credit, rights, represented-person consent, dignity, collective credit, final usefulness, and Jamie approval remain human gates.",
-    "Deployment and indexing clearance are not established by the dossier or rendered evidence. The supplied 200-status captures establish branch-review inspectability, not authorization to deploy or index.",
-    "Private participant material and protected educational records remain excluded from the public routes."
+    "`docs/qa/layout-A/photo-review-register.json` keeps every integrated photograph at `branch-review` and correctly leaves exact crop/caption, photographer and rights, represented-person consent and dignity, collective credit, public usefulness, and Jamie’s approval of the unchanged candidate as human publication gates.",
+    "Production deployment and indexing remain open human gates. Nothing in the dossier establishes authorization to publish or index this exact candidate; this does not lower the content score.",
+    "Additional collaborator materials, participant media, private coalition context, legal-review material, stakeholder information, source-record reproductions, and exact participant records remain explicitly withheld pending specific approval."
   ],
-  "recommendation": "Pass PR-015 at score 4 for the exact validated candidate. Preserve the current one-click inhabited-systems threshold and project-specific boundaries, while keeping publication, image rights and consent, final credit and crop, Jamie approval, deployment, and indexing as unresolved human gates.",
+  "recommendation": "Advance the candidate through the remaining human image-rights, consent, credit/crop, deployment, and indexing gates without weakening its current collective-credit or protected-source boundaries.",
   "provenance": {
-    "provider": "codex-native-subagent",
-    "processSessionId": "019fa0e7-a9df-7ee2-9354-9a1589ff0e05",
-    "agentNickname": "Goodall",
-    "model": "inherited-current-model",
-    "reasoningEffort": "inherited",
+    "provider": "openai-codex-model-service",
+    "model": "gpt-5.6-sol",
     "sandbox": "read-only",
     "ephemeral": true,
-    "operatorAttestation": "Installed from the fresh separate Codex process result. The process received only the sanitized public-repository candidate dossier, generated screenshots, frozen lens prompt, and output schema. This simulated lens is not professor participation, quotation, endorsement, or judgment."
+    "operatorAttestation": "Produced by a fresh separate Codex process that received only the explicitly approved sanitized public-repository candidate dossier, generated screenshots, frozen lens prompt, and output schema. This simulated lens is not professor participation, quotation, endorsement, or judgment."
   }
 }

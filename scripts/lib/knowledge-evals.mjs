@@ -59,13 +59,15 @@ export const blindSpotControls = JSON.parse(readFileSync(blindSpotControlsPath, 
 const KCTH_FIELD_PRACTICE_REVIEW_LOCKS = Object.freeze({
   corpusSha256: "7344b91556feaffebbcf4394b0b6cca9ac005c8d94d3b325dce97c557fc1cdc1",
   canonicalRecordsSha256: "00d2c80af90f0584311a5557e2ad02a8b67d63e7b1c5719a2418d82f692d4865",
-  governedKnowledgeSha256: "1b01cfff6bbffaf40430c3a1870ce8a1b0b5e8a6cffed47bddc3aec3f089de21",
+  governedKnowledgeSha256: "46dff05efb7143e27569d2fd218d779868061d2fceb6fd45741ee9c69885d0c9",
   proofProjectionSha256: "f8af10efe6b6c073197cc8f0f53189b04933dc66a4059807d727454724e9a07d",
-  caseStudyMdxSha256: "859205fe5cd3d7aa538a4706d52ff2476657565336a8157b1bffc8a4fb502bce",
-  // Re-reviewed 2026-07-22 for layout-A. Technical Operations changed its
-  // visual structure and photographs; the KC Town Hall wording stayed fixed,
-  // and every held field-practice assertion remains outside public projection.
-  sharedPublicSurfacesSha256: "f9d289998c09693eede1889575cacd0c16069e717937a47565ed3dcedf6969a7",
+  caseStudyMdxSha256: "345bca5a41ffff8841c0f09cd12e6df158b4bdeb83420c9528ec5091df965bc1",
+  // Re-reviewed 2026-07-26 after the photographic source return. The public
+  // case study now names proposal-supported co-founder/project-manager
+  // attribution, the multi-trade scope, and two bounded proposal excerpts.
+  // General-contractor title, final completion, and component authorship remain
+  // held, and mutation checks still reject their projection.
+  sharedPublicSurfacesSha256: "098908662ab748751800ac1e9316cc2198083084a6a6740287bfb0e12a7f9cc4",
   publicReviewReportSha256: "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696"
 });
 // Re-reviewed 2026-07-22 after the 196 / Sunday Dinner context paragraph was
@@ -5599,7 +5601,22 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         approvedSha256: fieldPractice.approvedContentSha256,
         matches: fieldPracticeContentSha256 === fieldPractice.approvedContentSha256,
         reviewLocksMatch: fieldPracticeReviewLocksMatch,
+        reviewLockActuals: {
+          corpusSha256: fieldPracticeContentSha256,
+          canonicalRecordsSha256: fieldPracticeCanonicalRecordsSha256,
+          governedKnowledgeSha256: kcTownHallContentSha256,
+          proofProjectionSha256: fieldPracticeProofProjectionSha256,
+          caseStudyMdxSha256: kcTownHallMdxSha256,
+          sharedPublicSurfacesSha256: fieldPracticeSharedPublicSurfacesSha256,
+          publicReviewReportSha256: fieldPracticePublicReviewReportSha256
+        },
         checks: fieldPracticeDiagnosticChecks
+      },
+      agencyGraph: {
+        actualSha256: agencyGraphSha256,
+        approvedSha256: agency.approvedGraphSha256,
+        matches: agencyGraphApproved,
+        complete: agencyGraphComplete
       },
       archiveProduction: {
         actualSha256: archiveContentSha256,

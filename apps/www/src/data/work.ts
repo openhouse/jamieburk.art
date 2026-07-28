@@ -66,7 +66,8 @@ const workMetaSchema = z.object({
           alt: z.string(),
           caption: z.string(),
           href: z.string(),
-          sourceLabel: z.string()
+          sourceLabel: z.string(),
+          fit: z.enum(["cover", "contain"]).optional()
         })
         .optional()
     })
@@ -521,10 +522,10 @@ const workItemsInput = [
     title: "KC Town Hall LLC",
     slug: "kc-town-hall",
     series: "Built Environment",
-    subtitle: "Adaptive reuse planning and public-benefit documentation",
+    subtitle: "Adaptive reuse, field coordination, and neighborhood participation",
     summary:
       "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. After the CCED Board recommended $490,539, the Council accepted the recommendation, authorized funding-agreement negotiations, and separately appropriated the amount. The City later reported no disbursement; the project withdrew, and the full unused appropriation returned to the fund.",
-    role: "Project Planning & Documentation Support",
+    role: "Co-Founder & Project Manager",
     years: "2019-2024 public record",
     status: "Short proof page",
     featured: false,
@@ -537,18 +538,54 @@ const workItemsInput = [
     whatWasUnclear:
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
     whatBecameUsable:
-      "Planning materials, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    artifactTypes: ["guide", "source map", "template"],
+      "A documented adaptive-reuse plan, multi-trade Phase One scope, neighborhood survey, visual proposal, stakeholder context, and municipal-review support.",
+    artifactTypes: ["public handout", "diagram", "guide"],
     artifacts: [
+      {
+        title: "Neighborhood survey",
+        description:
+          "A compact Pick Three prompt made proposed uses answerable in ordinary neighborhood conversations.",
+        type: "public handout",
+        media: {
+          src: "/artifacts/kc-town-hall/neighborhood-survey.png",
+          alt: "Blank KC Town Hall survey asking what respondents would like at 36th and Indiana and inviting them to pick three options.",
+          caption:
+            "Public-safe excerpt from the 2019 proposal prepared by Jamie Burkart and Julia Fredenburg. It shows the blank participation prompt, not resident responses or a consensus result.",
+          href: "/artifacts/kc-town-hall/neighborhood-survey.png",
+          sourceLabel: "public-safe proposal excerpt",
+          fit: "contain"
+        }
+      },
+      {
+        title: "Engine of Opportunity",
+        description:
+          "A street-facing rendering gave collaborators and reviewers a concrete visual proposition for adaptive reuse.",
+        type: "diagram",
+        media: {
+          src: "/artifacts/kc-town-hall/engine-of-opportunity.png",
+          alt: "Engine of Opportunity rendering showing a colorful adaptive-reuse street frontage for KC Town Hall.",
+          caption:
+            "Public-safe excerpt from the 2019 proposal prepared by Jamie Burkart and Julia Fredenburg. The rendering communicates intent; it is not evidence of constructed work.",
+          href: "/artifacts/kc-town-hall/engine-of-opportunity.png",
+          sourceLabel: "public-safe proposal excerpt",
+          fit: "contain"
+        }
+      },
       {
         title: "Public-benefit documentation set",
         description:
-          "Representative materials for describing intended public value, funding context, and stakeholder needs.",
+          "Planning materials connected intended public value, a broad Phase One scope, funding context, and stakeholder needs.",
         type: "guide"
       }
     ],
     tags: ["Implementation", "Documentation", "Knowledge Systems", "Public-Facing Tools"],
-    capabilities: ["Stakeholder Documentation", "Funding Support", "Historic Preservation Context"],
+    capabilities: [
+      "Project Management",
+      "Field Coordination",
+      "Participatory Research",
+      "Stakeholder Documentation",
+      "Historic Preservation Context"
+    ],
     careNote:
       "Council appropriation did not become disbursement: the City reported no funds disbursed in 2022 and returned the full unused amount after project withdrawal in 2024. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
@@ -557,10 +594,12 @@ const workItemsInput = [
     currentStatus: "The project later withdrew; the full unused appropriation returned to the fund in 2024.",
     group: "Operating systems for teams",
     roleFit:
-      "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
+      "Long-horizon project management, field coordination, participatory research, public-benefit documentation, and implementation support.",
     evidence: [
-      "Redevelopment planning",
-      "Public-benefit documentation",
+      "Co-founder and project-manager attribution",
+      "Multi-trade Phase One scope and progress",
+      "Neighborhood survey represented in the proposal",
+      "Public-benefit documentation and visual proposal",
       "Recurring public intake, service coordination, and result reporting",
       "CCED Board recommendation",
       "$490,539 Council appropriation",

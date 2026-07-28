@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Source-channel coverage
 
-**Wiki fingerprint:** `250ea71b038286cf5949ab9deccc5a472330051e21034b806b12b8a1cfd5ce7b`
+**Wiki fingerprint:** `3c2dfb9437f0e280f23e7f8b814ab378b32e087a04f89ef716c1c479f5dcc994`
 
 | Channel | Coverage | Access | Normalization | Identity | Public-use boundary | Known gaps |
 |---|---|---|---|---|---|---|

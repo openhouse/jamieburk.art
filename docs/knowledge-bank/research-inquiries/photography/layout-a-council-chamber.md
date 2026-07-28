@@ -9,19 +9,17 @@ last_reviewed: 2026-07-26
 review_by: 2026-08-26
 canonical_path: docs/knowledge-bank/research-inquiries/photography/layout-a-council-chamber.md
 summary: >
-  Bounded source-return work for photographer identity, permission, exact event,
-  private binding verification, and final occurrence review.
+  Bounded source-return work for photographer identity, permission, private
+  binding, exact packet and conversation evidence, and final occurrence review.
 unknowns:
   - Who made the photograph?
-  - What date and event precision can be supported?
   - Which private archive record is the exact source or edited parent?
   - What permission scope applies to repository, staging, production, and indexing?
   - Do any visible people, artworks, or institutional marks require additional review?
   - What exact caption, credit, and crop does Jamie approve?
+  - Which exact proposal version was on the clipboard, and who received or discussed it?
+  - Can the remembered pocket audio or follow-up correspondence be recovered?
 wanted:
-  - id: wanted.photography.layout-a.council-chamber.oral-history
-    proposed_title: Jamie's bounded first-person account of the photographed scene
-    reason: Recover event, work, collective context, and uncertainty without treating memory as rights clearance.
   - id: wanted.photography.layout-a.council-chamber.private-binding
     proposed_title: Verified private source binding
     reason: Bind the public ID to the exact private source without publishing a locator.
@@ -41,6 +39,14 @@ relations:
     target: method.photography.oral-history-return
     href: ../../methods/photographic-oral-history-return.md
     context: Governs how the exact image is returned and how recollection matures.
+  - type: related_to
+    target: source.recollection.jamie-council-chamber-photo.2026-07
+    href: ../../sources/recollections/jamie-council-chamber-photo-2026-07.md
+    context: Completed exact-photo return; creator, rights, packet, conversation, and outcome verification remain open.
+  - type: related_to
+    target: source.nycc.open-data-week-event-records.2026-03
+    href: ../../sources/nycc-open-data-week-event-records-2026.md
+    context: Resolves official event precision while preserving anti-claims.
 ---
 
 # Complete the Layout A Council chamber source and rights record
@@ -49,19 +55,28 @@ relations:
 
 1. Resolve the public ID against the private photo-fieldwork registry without
    placing source locators or fingerprints in Git.
-2. Return the exact governed public derivative to Jamie using the
-   [photographic oral-history method](../../methods/photographic-oral-history-return.md).
-3. Seek creator confirmation and destination-bounded permission when needed.
-4. Review the exact derivative, crop, caption, credit, and represented-person
+2. Preserve the completed
+   [exact-photo recollection](../../sources/recollections/jamie-council-chamber-photo-2026-07.md)
+   beside the contemporary event record without collapsing their evidence classes.
+3. Locate the exact packet version, pocket audio, and any sent or draft
+   follow-up; record negative searches only as search limits.
+4. Seek creator confirmation and destination-bounded permission when needed.
+5. Review the exact derivative, crop, caption, credit, and represented-person
    context.
-5. Update the asset and occurrence through a reviewed pull request.
+6. Update the asset and occurrence through a reviewed pull request.
 
 The inquiry closes only when evidence is actually available. A machine pass
 cannot answer these questions.
 
-## Current oral-history prompt
+## Completed source-return state
 
-What was happening just before and after this photograph? Who made it, what
-brought you into the chamber, what were the clipboard and papers for, who else
-shaped the work, and what should a stranger understand that the image cannot
-show? Please name uncertainty and anything that should remain protected.
+Jamie has answered the oral-history prompt. Contemporary registration and
+logistics records establish the event as **From Data to Policy: How the NYC
+Council Turns City Data Into Action**, held March 26, 2026 at 250 Broadway by
+the New York City Council Data Team within NYC Open Data Week. A proposal
+record modified the next day corroborates the nearby commercial-rent and
+vacancy research trail.
+
+These sources resolve event precision. They do not establish attendance by
+registration alone, the exact packet version, delivery, recipients,
+conversations, outcome, creator, or permission.

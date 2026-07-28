@@ -1,36 +1,33 @@
 {
   "evaluator": "Codex independent sanitized-dossier holdout evaluator",
-  "reviewerId": "sack-c-photo-knowledge-hiring-readiness-2026-07-26",
+  "reviewerId": "sack-c-source-return-hiring-readiness-2026-07-26",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "192c2ccb93042196901e3b4f42a5ae407f0468625d554da34d3be13f45ef3e3d",
+  "candidateSha256": "88e224b8af896b004897445dd3f237e725a5a35067abdc0819d44dade0d89e3e",
   "score": 4,
   "pass": true,
   "evidence": [
-    "Identity contract validated independently: hashing every ordered candidateRelativePaths entry using path + NUL + raw bytes + NUL reproduced candidate-manifest.json SHA-256 192c2ccb93042196901e3b4f42a5ae407f0468625d554da34d3be13f45ef3e3d, with no missing candidate files.",
-    "The rendered homepage `/` states the complete method in plain language and links directly to project evidence.",
-    "The rendered `/about` route makes the method recursive and distinguishes current HJE, NYC Artist Coalition / FairRentNYC, and Sunday Dinner / 196 from historical WOWList.",
-    "The HJE trace runs from customer language and operating habits through requirements, storefront and routines, feedback, revision, and team-maintainable handoff.",
-    "The Sunday Dinner / 196 trace runs from artist and participation needs through invitations, onboarding, access handoffs, recurring social use, a governed handoff, and an operating schema.",
-    "The NYC Artist Coalition / FairRentNYC trace runs from lived experience, meetings, sources, and institutional actors through source maps, public interfaces, collective use, running minutes, and reviewable decision trails.",
-    "Across those projects, information architecture is visibly tied to social structure, participation, learning, and continuity rather than presented as a tool list.",
-    "Bounded coursework is not substituted for current proof and rejects disciplinary invention, peer-reviewed or production deployment, sole authorship, and present Max/Jitter proficiency."
+    "Identity contract verified: recomputing the manifest algorithm over `candidate-manifest.json` produced SHA-256 `88e224b8af896b004897445dd3f237e725a5a35067abdc0819d44dade0d89e3e`, matching the supplied candidate.",
+    "The rendered homepage `/` states the complete method in plain language under “HOW I WORK”: observe relationships, model the emerging system, prototype an interface, test through social or collective use, then document revision and handoff. This is immediately visible without exceeding the two-click requirement (`runtime-evidence/rendered-surface-evidence.json`; `apps/www/src/app/page.tsx`).",
+    "The rendered `/about` route makes the sequence comparative and inspectable across projects under “Practice across settings.” It explicitly connects observed relationships, system models, interfaces, use and feedback, revision, handoff, and evidence boundaries for HJE, NYC Artist Coalition/FairRentNYC, WOWList, and Sunday Dinner/196 (`apps/www/src/app/about/page.tsx`; `runtime-evidence/holdout-about.png`).",
+    "Current project 1 — `/work/harry-j-epstein`: the rendered “Current operating loop” traces customer language and operating habits → connected product/content/order/marketing requirements → storefront and internal routines → customer/team questions and bounded analytics → reusable patterns and workflows. Its artifact gallery includes the inspectable public storefront screenshot, analytics summary, and content/voice system, with protected operational material clearly bounded (`apps/www/src/content/work/harry-j-epstein.mdx`; `runtime-evidence/holdout-work-harry-j-epstein.png`; `runtime-evidence/rendered-surface-evidence.json`).",
+    "Current project 2 — `/work/fair-rent-nyc`: the `/about` sequence traces lived experience, meetings, public sources, and institutional actors → source maps, question logs, provenance and decision memory → campaign sites, town halls, hearings, and action pathways → learning from meetings and public use → running minutes and reviewable decision trails. The rendered case study supplies inspectable campaign photography, a public campaign-site capture, and artifact entries for meeting memory, source map, decision record, and public handout while retaining collective credit (`apps/www/src/app/about/page.tsx`; `apps/www/src/content/work/fair-rent-nyc.mdx`; `runtime-evidence/holdout-work-fair-rent-nyc.png`).",
+    "Current project 3 — `/work/196-sunday-dinner`: the rendered operating loop explicitly traces artist and participation needs → a connected participation model → invitations, onboarding, access handoffs, hosting rhythms, and a blank interface specimen → recurring social use evidenced by public 100th/200th milestones and governed operating records → documented revision and handoff through the 2023 residency workflow and 2025 operating schema (`apps/www/src/content/work/196-sunday-dinner.mdx`; `runtime-evidence/holdout-work-196-sunday-dinner.png`; `runtime-evidence/rendered-surface-evidence.json`).",
+    "Across the three current projects, social structure and information architecture visibly become interfaces for customers, coalition collaborators, residents, artists, and hosts; feedback or collective use informs revision; documentation enables continuity. These are project-specific proof chains rather than a disconnected tool or capability list.",
+    "Coursework is correctly separated from current public proof. `/about` uses the public 2006 Open House record only as dated lineage. Protected UCSC evaluations and the historical Social Information Spaces prototype remain withheld; the dossier expressly prohibits inferring disciplinary invention, peer-reviewed research, production deployment, sole authorship, or current Max/Jitter proficiency (`docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md`; `apps/www/src/data/knowledge-bank/historical-knowledge.ts`). The Maven coursework on `/lab/source-backed-team-memory` is separately bounded as professional development and the lab is explicitly described as an early method, not production SaaS (`apps/www/src/content/lab/source-backed-team-memory.mdx`; `runtime-evidence/rendered-surface-evidence.json`)."
   ],
   "gaps": [],
   "safety_findings": [
-    "Production image clearance remains open; every integrated photograph is branch-review and every exact-image human gate remains pending.",
-    "Machine evaluation is not publication clearance and does not complete rights, consent, dignity, credit, crop, caption, usefulness, or Jamie approval.",
-    "The sanitized dossier demonstrates rendered review, not production deployment or indexing authorization."
+    "All supplied photographs remain authorized only for branch review. Production publication requires human approval of each exact image and crop, caption, photographer credit and rights, represented-person consent and dignity, collective credit, final public usefulness, and the unchanged candidate (`docs/qa/layout-A/photo-review-register.json`; `.agents/evals/layout-photography-integration.json`).",
+    "The candidate keeps sensitive records outside the public surface: customer data and internal analytics, coalition notes and legal-review material, participant records and access details, and protected UCSC educational records are explicitly withheld.",
+    "Deployment and indexing remain open human publication gates. No production deployment or indexing clearance should be inferred from this content evaluation."
   ],
-  "recommendation": "Pass PR-016 at score 4 under this simulated lens. Preserve the exact candidate identity and coursework boundaries, and do not publish or index until all human gates are explicitly completed.",
+  "recommendation": "PR-016 passes at score 4. Preserve the current method statement, three-project proof chains, collective-credit boundaries, and coursework limitations; proceed only to human image-rights, consent, crop/credit, deployment, and indexing approval gates.",
   "provenance": {
-    "provider": "codex-native-subagent",
-    "processSessionId": "019fa0e8-28e0-7922-8763-50a381bce5ce",
-    "agentNickname": "Erdos",
-    "model": "inherited-current-model",
-    "reasoningEffort": "inherited",
+    "provider": "openai-codex-model-service",
+    "model": "gpt-5.6-sol",
     "sandbox": "read-only",
     "ephemeral": true,
-    "operatorAttestation": "Installed from the fresh separate Codex process result. The process received only the sanitized public-repository candidate dossier, generated screenshots, frozen lens prompt, and output schema. This simulated lens is not professor participation, quotation, endorsement, or judgment."
+    "operatorAttestation": "Produced by a fresh separate Codex process that received only the explicitly approved sanitized public-repository candidate dossier, generated screenshots, frozen lens prompt, and output schema. This simulated lens is not professor participation, quotation, endorsement, or judgment."
   }
 }

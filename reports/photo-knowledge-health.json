@@ -2,12 +2,12 @@
   "pass": true,
   "passed": 10,
   "total": 10,
-  "sourceFingerprint": "d381b50adf25f838e2742cd28b7b3d246ea550b4dceb93cf25537035e0adb9c9",
+  "sourceFingerprint": "dfb21ed4e33720a5ecb314d22bb9b855e77a7f60b6cf7867e9ba32a2de1aa9cd",
   "criteria": [
     {
       "id": "PHOTO-KNOWLEDGE-001",
       "pass": true,
-      "detail": "RFC 0003, RFC validation, and 131 Wiki records compile without hard errors."
+      "detail": "RFC 0003, RFC validation, and 147 Wiki records compile without hard errors."
     },
     {
       "id": "PHOTO-KNOWLEDGE-002",
@@ -52,7 +52,7 @@
     {
       "id": "PHOTO-KNOWLEDGE-010",
       "pass": true,
-      "detail": "The pilot reports 1 governed canary and 12 migration items across 13 branch-review photographs."
+      "detail": "The pilot reports 2 governed assets, 2 exact occurrences, and 11 migration items across 13 branch-review photographs."
     }
   ],
   "humanGates": [
@@ -99,8 +99,8 @@
   ],
   "migration": {
     "manifestPhotos": 13,
-    "governedAssets": 1,
-    "governedOccurrences": 1,
-    "remaining": 12
+    "governedAssets": 2,
+    "governedOccurrences": 2,
+    "remaining": 11
   }
 }

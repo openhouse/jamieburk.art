@@ -39,19 +39,19 @@ npm run preflight:staging
 npm run preflight:production
 ```
 
-## Knowledge Bank
+## Knowledge Wiki
 
-This repo includes a public-safe knowledge bank for professional claims:
+This repo includes a public-safe Knowledge Wiki for professional claims:
 
 - `docs/knowledge-bank/`
 - `apps/www/src/data/proofs.ts`
 - `apps/www/src/data/knowledge-bank/records.ts`
 
-The website is a projection of this bank. Pages select, sequence, and phrase
+The website is a projection of this Wiki. Pages select, sequence, and phrase
 claims for specific readers. Do not add stronger claims to app copy without
 first adding a public-safe proof record.
 
-The knowledge bank is not a private archive. Do not commit raw transcripts,
+The Knowledge Wiki is not a private archive. Do not commit raw transcripts,
 private coalition notes, legal-review materials, private correspondence,
 client-private material, internal analytics, raw community records, unapproved
 photos, unapproved screenshots, or unapproved quotes.
@@ -59,12 +59,16 @@ photos, unapproved screenshots, or unapproved quotes.
 There is intentionally no public `/proofs` route. The site should remain a
 composed portfolio, not a claims database.
 
-`npm run knowledge-bank` checks the proof schema, projection rules, and work
+`npm run knowledge-wiki` checks the proof schema, projection rules, and work
 metadata. `npm run check:routes` checks canonical routes and legacy redirects.
 `npm run check:citations` validates the source-to-projection graph and redacted
 public registry; `npm run test:citations` runs citation regressions; and
 `npm run report:citations` writes an ignored review report to
 `reports/generated/citations.md`.
+
+`npm run knowledge-bank` remains a compatibility alias while the historical
+`docs/knowledge-bank/` and application module paths stay in place under the
+accepted naming ADR.
 
 ## Repository Requests for Comments
 

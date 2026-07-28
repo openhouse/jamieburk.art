@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "suite_id": "photographic-source-return-2026-07-26",
+  "criteria": [
+    {
+      "id": "SOURCE-RETURN-001",
+      "lens": "Abby Covert",
+      "criterion": "Knowledge Wiki is the primary operator language while historical paths and the legacy command remain explicit compatibility surfaces.",
+      "weight": 10
+    },
+    {
+      "id": "SOURCE-RETURN-002",
+      "lens": "Shreya Shankar",
+      "criterion": "The dated source encounter records access state, evidence class, contradictions, limitations, librarian requests, and separate publication authority.",
+      "weight": 10
+    },
+    {
+      "id": "SOURCE-RETURN-003",
+      "lens": "Deborah Treisman",
+      "criterion": "The DCLA formation chronology distinguishes contemporaneous records, later recollection, press corroboration, and anti-claims.",
+      "weight": 10
+    },
+    {
+      "id": "SOURCE-RETURN-004",
+      "lens": "Margaret Morse",
+      "criterion": "The DCLA photograph is governed as both one exact occurrence and one member of a multi-frame scene cluster.",
+      "weight": 10
+    },
+    {
+      "id": "SOURCE-RETURN-005",
+      "lens": "Vivian Gornick",
+      "criterion": "The Council source return distinguishes visible scene, later oral history, contemporary event corroboration, and unresolved outcomes while using the stronger bounded caption.",
+      "weight": 10
+    },
+    {
+      "id": "SOURCE-RETURN-006",
+      "lens": "Zora Neale Hurston",
+      "criterion": "The KC Town Hall oral histories preserve people, craft, field practice, and collective credit while keeping two photographs held for human review.",
+      "weight": 10
+    },
+    {
+      "id": "SOURCE-RETURN-007",
+      "lens": "Jennifer Pahlka",
+      "criterion": "Two public-safe proposal excerpts are checksum-bound and projected as useful artifacts with implementation and privacy boundaries intact.",
+      "weight": 10
+    },
+    {
+      "id": "SOURCE-RETURN-008",
+      "lens": "Mimi Onuoha",
+      "criterion": "No private locator, account address, phone number, person tag, raw transcript, or sensitive proposal field enters the public repository.",
+      "weight": 10
+    },
+    {
+      "id": "SOURCE-RETURN-009",
+      "lens": "Chad",
+      "criterion": "The KC Town Hall page names Jamie's independently supported role and concrete artifacts without understating him or claiming uncorroborated titles and outcomes.",
+      "weight": 10
+    },
+    {
+      "id": "SOURCE-RETURN-010",
+      "lens": "Ingeborg Gerdes",
+      "criterion": "Missing audio, rights, consent, exact credit, production, and indexing remain active questions rather than erased absences or machine-cleared gates.",
+      "weight": 10
+    }
+  ],
+  "hard_gates": [
+    "Research authorization does not confer publication permission.",
+    "No raw correspondence, transcript, private path, private account address, phone number, source-system identifier, or participant list enters public Git.",
+    "No remembered photographer attribution becomes a public credit before confirmation.",
+    "No held construction portrait becomes a public asset before creator and represented-person review.",
+    "No proposal excerpt includes financial, banking, signature, applicant, contact, or resident-response material.",
+    "Machine pass does not approve staging, production, or indexing."
+  ]
+}

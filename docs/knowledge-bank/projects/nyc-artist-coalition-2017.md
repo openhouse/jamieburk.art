@@ -5,7 +5,7 @@ kind: project
 status: maintained
 visibility: public-safe
 sensitivity: moderate
-last_reviewed: 2026-07-19
+last_reviewed: 2026-07-26
 review_by: 2026-10-19
 canonical_path: docs/knowledge-bank/projects/nyc-artist-coalition-2017.md
 summary: A collectively credited civic participation and campaign system connecting cultural-space listening, public action, technical implementation, and government-facing advocacy.
@@ -30,6 +30,18 @@ relations:
     target: evaluation.nycac.shared-folder-production.2026-07-19
     href: ../evaluations/nycac-shared-folder-production-2026-07-19.md
     context: Deterministic coverage, leakage, credit, and projection criteria.
+  - type: related_to
+    target: source.nycac.dcla-formation-materials.2017
+    href: ../sources/nycac-dcla-formation-materials-2017.md
+    context: Contemporary mobilization, naming, website, visualization, and press sequence.
+  - type: has_asset
+    target: asset.photo.dcla-diy-spaces-meeting.layout-a
+    href: ../assets/photographs/dcla-diy-spaces-meeting-layout-a.md
+    context: Governed branch-review image from the formative meeting.
+  - type: related_to
+    target: research.photography.kcth-dcla-source-return.2026-07-26
+    href: ../research-runs/photographic-source-return-kcth-dcla-2026-07-26.md
+    context: Dated photographic and formation-source return.
 human_review: governed-open
 ---
 
@@ -40,6 +52,32 @@ human_review: governed-open
 **Public projection:** Six bounded claims selected for
 `/work/fair-rent-nyc`; additional mature claims remain held for future
 composition.
+
+## Formation source return
+
+A July 2026 return to the DCLA meeting photographs recovered a bounded
+contemporaneous sequence. On January 26, 2017, Jamie wrote from a WOW List
+address that he had found the DCLA event, wanted DIY projects represented, and
+had made a public event to invite participation. A dated January 27 sheet
+records Jamie and Julia ranking six possible coalition names. Preserved
+public-site records show contact and document surfaces created that day, a
+February 3 interactive `Path to Being Legal` visualization, and a February 4
+follow-up linking the public letter, notes, and visualization while inviting a
+general meeting.
+
+Bedford + Bowery later reproduced a detail from the visualization, credited it
+to NYC Artist Coalition, and identified Jamie as a coalition organizer. The
+sequence supports Jamie's connective, identity, web, and close-listening
+infrastructure. It does not establish sole founding, sole artifact authorship,
+or that Jamie hosted DCLA's official event.
+
+Jamie remembers recording the meeting, listening back over several days,
+researching the speakers, and building the visualization from that work.
+Contemporaneous website and press records corroborate the visualization's
+existence and reuse; the remembered audio has not yet been recovered. See the
+[source capsule](../sources/nycac-dcla-formation-materials-2017.md),
+[photographic cluster](../indexes/photo-sets/dcla-diy-spaces-meeting-2017.md),
+and [research inquiry](../research-inquiries/photography/dcla-diy-spaces-meeting-2017.md).
 
 ## Shared-folder archival production
 

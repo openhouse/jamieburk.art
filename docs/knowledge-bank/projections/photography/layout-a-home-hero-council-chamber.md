@@ -30,10 +30,11 @@ alt_text: >
   Jamie Burkart smiling in New York City Council chambers, wearing a blue work
   jacket and carrying a clipboard and papers.
 caption:
-  text: Jamie in New York City Council chambers with the working materials of public-facing civic work.
+  text: Jamie at the New York City Council during Open Data Week 2026, carrying coalition participation materials and public-data research.
   assertions:
-    - statement.photo.jamie-council-chamber.setting.v1
     - statement.photo.jamie-council-chamber.subject.v1
+    - statement.photo.jamie-council-chamber.event-context.v1
+    - statement.photo.jamie-council-chamber.working-materials.v1
 credit:
   text: Jamie Burkart photo archive
   assertions:
@@ -70,6 +71,10 @@ relations:
     target: source.permission-status.layout-a.council-chamber.2026-07
     href: ../../sources/permissions/layout-a-council-chamber-permission-status-2026-07.md
     context: Fail-closed photographer and permission status.
+  - type: related_to
+    target: source.nycc.open-data-week-event-records.2026-03
+    href: ../../sources/nycc-open-data-week-event-records-2026.md
+    context: Contemporary event metadata supporting bounded caption precision.
 ---
 
 # Layout A homepage Council chamber occurrence

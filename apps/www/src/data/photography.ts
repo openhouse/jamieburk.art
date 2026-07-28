@@ -41,7 +41,7 @@ export const photos = {
     height: 854,
     alt: "Jamie Burkart smiling in New York City Council chambers, wearing a blue work jacket and carrying a clipboard and papers.",
     caption:
-      "Jamie in New York City Council chambers with the working materials of public-facing civic work.",
+      "Jamie at the New York City Council during Open Data Week 2026, carrying coalition participation materials and public-data research.",
     archiveLabel: "Jamie Burkart photo archive",
     objectPosition: "54% 40%",
     wikiId: "asset.photo.jamie-council-chamber.layout-a",
@@ -82,11 +82,16 @@ export const photos = {
     src: "/photos/dcla-diy-spaces-meeting.jpg",
     width: 1280,
     height: 854,
-    alt: "A facilitator addresses a crowded meeting of cultural-space participants seated in a large room.",
+    alt: "A participant addresses a crowded meeting of cultural-space participants seated and standing in a large room.",
     caption:
-      "A 2017 Department of Cultural Affairs and DIY-spaces meeting: an operating container built for listening across a crowded room.",
+      "A 2017 Department of Cultural Affairs and DIY-spaces meeting, held as a container for listening across a crowded room.",
     archiveLabel: "NYC Artist Coalition archive",
     objectPosition: "50% 44%",
+    wikiId: "asset.photo.dcla-diy-spaces-meeting.layout-a",
+    derivativeId: "derivative.photo.dcla-diy-spaces-meeting.layout-a.v1",
+    placementIds: [
+      "projection.photo.layout-a.technical-operations.dcla-meeting"
+    ],
     publicationBoundary,
     publicationStatus
   },

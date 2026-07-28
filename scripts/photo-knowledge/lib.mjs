@@ -372,14 +372,16 @@ export function evaluatePhotoKnowledge(options = {}) {
     ),
     criteriaResult(
       "PHOTO-KNOWLEDGE-010",
-      candidateIds.length === 13 &&
-        new Set(candidateIds).size === 13 &&
-        governedPhotoAssets.length === 1 &&
-        photoOccurrences.length === 1 &&
-        edition?.occurrences?.length === 1 &&
-        /one of thirteen/i.test(editionSource) &&
-        /remaining twelve/i.test(editionSource),
-      `The pilot reports ${governedPhotoAssets.length} governed canary and ${candidateIds.length - governedPhotoAssets.length} migration items across ${candidateIds.length} branch-review photographs.`
+      candidateIds.length === suite.migration.manifestCount &&
+        new Set(candidateIds).size === suite.migration.manifestCount &&
+        governedPhotoAssets.length === suite.migration.governedAssetCount &&
+        photoOccurrences.length === suite.migration.governedOccurrenceCount &&
+        edition?.occurrences?.length === suite.migration.governedOccurrenceCount &&
+        candidateIds.length - governedPhotoAssets.length ===
+          suite.migration.remainingCount &&
+        /two of thirteen/i.test(editionSource) &&
+        /remaining eleven/i.test(editionSource),
+      `The pilot reports ${governedPhotoAssets.length} governed assets, ${photoOccurrences.length} exact occurrences, and ${candidateIds.length - governedPhotoAssets.length} migration items across ${candidateIds.length} branch-review photographs.`
     )
   ];
 
@@ -406,6 +408,13 @@ export function evaluatePhotoKnowledge(options = {}) {
     permission,
     recollection,
     inquiry,
+    governedPhotoAssets,
+    photoOccurrences,
+    photoInquiries: records.filter(
+      (record) =>
+        record.kind === "research-inquiry" &&
+        record.id.startsWith("research-inquiry.photography.")
+    ),
     migration: {
       manifestPhotos: candidateIds.length,
       governedAssets: governedPhotoAssets.length,
@@ -448,55 +457,89 @@ function photographyIndexMarkdown(result) {
     `- Governed RFC 0003 assets: ${result.migration.governedAssets}\n` +
     `- Governed exact occurrences: ${result.migration.governedOccurrences}\n` +
     `- Remaining migration items: ${result.migration.remaining}\n\n` +
-    `## Canary\n\n` +
-    `- Asset: [${result.asset.title}](../assets/photographs/jamie-council-chamber-layout-a.md)\n` +
-    `- Occurrence: [${result.occurrence.title}](../projections/photography/layout-a-home-hero-council-chamber.md)\n` +
+    `## Governed occurrences\n\n` +
+    result.photoOccurrences
+      .map(
+        (occurrence) =>
+          `- \`${occurrence.id}\`: route \`${occurrence.route}\`, component \`${occurrence.component}\`, state \`${occurrence.projection_status}\``
+      )
+      .join("\n") +
+    `\n\n` +
     `- Edition: [${result.edition.title}](../projections/photography/layout-a-branch-review-edition-2026-07.md)\n\n` +
-    `This is a Phase 1 canary, not full migration or publication clearance.\n`;
+    `This is a partial migration, not full publication clearance.\n`;
 }
 
 function rightsMarkdown(result) {
-  const approval = result.occurrence.approval;
-  return generatedHeader("Photo rights review", result) +
-    `## ${result.asset.title}\n\n` +
-    `- Asset rights: ${result.asset.rights_state}\n` +
-    `- Asset consent: ${result.asset.consent_state}\n` +
-    `- Public display: ${result.asset.public_display_status}\n` +
-    Object.entries(approval)
-      .map(([name, state]) => `- ${name.replaceAll("_", " ")}: ${state}`)
-      .join("\n") +
-    `\n\nProduction and indexing remain open. Branch review is not unrestricted reuse.\n`;
+  const sections = result.governedPhotoAssets.map((asset) => {
+    const occurrences = result.photoOccurrences.filter(
+      (occurrence) => occurrence.asset === asset.id
+    );
+    return (
+      `## ${asset.title}\n\n` +
+      `- Asset rights: ${asset.rights_state}\n` +
+      `- Asset consent: ${asset.consent_state}\n` +
+      `- Public display: ${asset.public_display_status}\n` +
+      occurrences
+        .flatMap((occurrence) =>
+          Object.entries(occurrence.approval).map(
+            ([name, state]) =>
+              `- ${occurrence.id} / ${name.replaceAll("_", " ")}: ${state}`
+          )
+        )
+        .join("\n")
+    );
+  });
+  return (
+    generatedHeader("Photo rights review", result) +
+    sections.join("\n\n") +
+    `\n\nProduction and indexing remain open. Branch review is not unrestricted reuse.\n`
+  );
 }
 
 function placementsMarkdown(result) {
   return generatedHeader("Public photo placements", result) +
     `| Occurrence | Route | Component | Derivative | State |\n` +
     `|---|---|---|---|---|\n` +
-    `| \`${result.occurrence.id}\` | \`${result.occurrence.route}\` | ` +
-    `\`${result.occurrence.component}\` | \`${result.occurrence.derivative}\` | ` +
-    `\`${result.occurrence.projection_status}\` |\n\n` +
-    `Only the RFC 0003 canary is represented here. Twelve Layout A photographs remain in the migration queue.\n`;
+    result.photoOccurrences
+      .map(
+        (occurrence) =>
+          `| \`${occurrence.id}\` | \`${occurrence.route}\` | ` +
+          `\`${occurrence.component}\` | \`${occurrence.derivative}\` | ` +
+          `\`${occurrence.projection_status}\` |`
+      )
+      .join("\n") +
+    `\n\nEleven Layout A photographs remain in the migration queue.\n`;
 }
 
 function backlinksMarkdown(result) {
+  const chains = result.photoOccurrences
+    .map(
+      (occurrence) =>
+        `\`${occurrence.asset}\`\n` +
+        `-> \`${occurrence.id}\`\n` +
+        `-> \`${result.edition.id}\`\n` +
+        `-> route \`${occurrence.route}\` / component \`${occurrence.component}\``
+    )
+    .join("\n\n");
   return generatedHeader("Photography backlinks and impact", result) +
-    `\`${result.asset.id}\`\n` +
-    `-> \`${result.occurrence.id}\`\n` +
-    `-> \`${result.edition.id}\`\n` +
-    `-> route \`${result.occurrence.route}\` / component \`${result.occurrence.component}\`\n\n` +
-    `Sources and review state:\n\n` +
-    `- \`source.visual-review.layout-a.council-chamber.2026-07\`\n` +
-    `- \`${result.permission.id}\`\n` +
-    `- \`${result.recollection.id}\`\n` +
-    `- \`${result.inquiry.id}\`\n\n` +
+    chains +
+    `\n\n` +
     `A creator, permission, caption assertion, derivative, or dignity change must revisit every node above.\n`;
 }
 
 function sourceReturnMarkdown(result) {
-  return generatedHeader("Photo source-return queue", result) +
-    `## ${result.inquiry.title}\n\n` +
-    result.inquiry.unknowns.map((unknown) => `- ${unknown}`).join("\n") +
-    `\n\nDo not close these questions from visual inference or model confidence.\n`;
+  const inquiries = result.photoInquiries
+    .map(
+      (inquiry) =>
+        `## ${inquiry.title}\n\n` +
+        inquiry.unknowns.map((unknown) => `- ${unknown}`).join("\n")
+    )
+    .join("\n\n");
+  return (
+    generatedHeader("Photo source-return queue", result) +
+    inquiries +
+    `\n\nDo not close these questions from visual inference or model confidence.\n`
+  );
 }
 
 export function buildPhotoKnowledgeOutputs(result) {
@@ -511,15 +554,18 @@ export function buildPhotoKnowledgeOutputs(result) {
   };
   const usage = {
     sourceFingerprint: result.sourceFingerprint,
-    assets: [
-      {
-        id: result.asset.id,
-        derivative: result.occurrence.derivative,
-        occurrences: [result.occurrence.id],
-        editions: [result.edition.id],
-        routes: [result.occurrence.route]
-      }
-    ],
+    assets: result.governedPhotoAssets.map((asset) => {
+      const occurrences = result.photoOccurrences.filter(
+        (occurrence) => occurrence.asset === asset.id
+      );
+      return {
+        id: asset.id,
+        derivatives: occurrences.map((occurrence) => occurrence.derivative),
+        occurrences: occurrences.map((occurrence) => occurrence.id),
+        editions: [...new Set(occurrences.map((occurrence) => occurrence.portfolio_edition))],
+        routes: occurrences.map((occurrence) => occurrence.route)
+      };
+    }),
     migration: result.migration
   };
   return {

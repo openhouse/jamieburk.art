@@ -25,7 +25,16 @@ export const canonicalAccessibilityViewports = Object.freeze([360, 375, 768, 128
 export function computePublicSurfaceFingerprint(repoRoot) {
   const files = execFileSync(
     "git",
-    ["ls-files", "apps/www", "package.json", "package-lock.json"],
+    [
+      "ls-files",
+      "--cached",
+      "--others",
+      "--exclude-standard",
+      "--",
+      "apps/www",
+      "package.json",
+      "package-lock.json"
+    ],
     { cwd: repoRoot, encoding: "utf8" }
   )
     .trim()

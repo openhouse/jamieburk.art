@@ -24,7 +24,7 @@ workspaces, Dockerfile, Dokku.
 - `npm run lint`
 - `npm run build`
 - `npm run check`
-- `npm run knowledge-bank`
+- `npm run knowledge-wiki`
 - `npm run public-safety`
 - `npm run check:routes`
 - `npm run check:citations`
@@ -46,7 +46,7 @@ artifacts, and careful collective-work language.
 
 When uncertain, write: `TODO: Jamie approval required.`
 
-## Knowledge Bank
+## Knowledge Wiki
 
 Use `docs/knowledge-bank/` and `apps/www/src/data/proofs.ts` as the
 public-safe claim layer.
@@ -73,11 +73,11 @@ Do not expose private source paths, private assets, protected locators, signed
 URLs, or raw research artifacts. Regenerate the redacted public registry after
 changing canonical records.
 
-Website copy should project from the knowledge bank and stay optimized for
+Website copy should project from the Knowledge Wiki and stay optimized for
 clarity, audience, and purpose.
 
 Do not strengthen a claim in a public page unless the stronger claim exists in
-the bank with source basis, status, guardrail, and public-use boundary.
+the Wiki with source basis, status, guardrail, and public-use boundary.
 
 Every structured claim needs status, support level, evidence class, public
 wording, guardrail, protected boundaries, and last-reviewed date.
@@ -103,8 +103,12 @@ exact-commit release discipline.
 
 Use `evals/knowledge-bank/evals.json` for recursive intake and claim maturation.
 Run its deterministic checks before promoting a claim or source into a public
-page. The bank should become deeper with each pass while the public site remains
+page. The Wiki should become deeper with each pass while the public site remains
 selective.
+
+The historical `docs/knowledge-bank/` and application module paths remain
+compatibility paths under `docs/architecture/ADR-knowledge-wiki-canonicality.md`.
+Use `npm run knowledge-bank` only as a legacy command alias.
 
 ## Repository Requests for Comments
 

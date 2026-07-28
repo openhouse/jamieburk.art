@@ -92,6 +92,28 @@ See the
 for the proposition ledger, source boundaries, privacy decisions, and research
 queue.
 
+## Photographic Source Return
+
+Two 2026 oral histories return to construction-era photographs: a hard-hat
+field portrait of Jamie beside scaffolding and an interior portrait with
+Harold Mason. The memories add detailed field coordination, craft lineage,
+mapping, and neighborhood-listening leads. The images remain held while exact
+dates, source bindings, remembered photographer attributions, rights,
+represented-person review, and component-level corroboration remain open.
+
+The [source summary](../sources/recollections/kc-town-hall-photo-oral-histories-2026-07.md),
+[cluster record](../indexes/photo-sets/kc-town-hall-phase-one-source-return.md),
+and [research inquiry](../research-inquiries/photography/kc-town-hall-phase-one-source-return.md)
+keep those questions usable without publishing the photographs.
+
+## Public-Safe Proposal Excerpts
+
+The case-study branch now includes the proposal's blank neighborhood survey and
+Engine of Opportunity rendering. These excerpts show an invitation to
+participate and a visual proposition for adaptive reuse. They do not establish
+response totals, community consensus, implementation, funding receipt, or
+individual authorship of every proposal element.
+
 ## Stewardship Transition Lead
 
 Jamie has supplied a first-party memory that he transitioned project

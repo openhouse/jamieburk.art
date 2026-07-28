@@ -9,9 +9,10 @@ last_reviewed: 2026-07-26
 review_by: 2027-01-26
 canonical_path: docs/knowledge-bank/methods/photographic-oral-history-return.md
 summary: >
-  A governed method for returning one exact photograph to Jamie, receiving
-  first-person memory without treating it as settled fact, and maturing that
-  memory through source, rights, collective-credit, and publication review.
+  A governed method for returning an exact photograph and its related scene
+  cluster to Jamie, receiving first-person memory without treating it as
+  settled fact, and maturing that memory through source, rights,
+  collective-credit, and publication review.
 relations:
   - type: related_to
     target: method.photography.artist-led-curatorial-loop
@@ -47,6 +48,21 @@ private original or an untracked export. It should ask:
 6. What should a stranger understand that the image cannot show?
 7. Which parts remain uncertain, collective, protected, or unsuitable for publication?
 
+## Fan out to the scene cluster
+
+Jamie often photographs as a stop-motion documentary animator: a scene, person,
+space, or idea may exist across many adjacent frames. After the exact return,
+search for a bounded cluster using time, place, visible material, people,
+sequence, and project context. Preserve the relationship among frames without
+publishing private album names, asset identifiers, person tags, timestamps,
+coordinates, or source paths.
+
+Oral history may orient the cluster, but each factual statement still belongs
+to the asset or source that supports it. One vivid account does not
+automatically describe every frame. Choosing the best image is also separate
+from evidence maturity, creator rights, represented-person review, captioning,
+and publication.
+
 ## Receive without collapsing
 
 The response enters the Wiki first as a dated first-person recollection or
@@ -69,6 +85,11 @@ the exact image record, contemporary documents, public records, collaborator
 memory, and creator confirmation when appropriate. Contradictions remain
 visible. A vivid memory is valuable evidence, but it cannot clear rights or
 speak for another person.
+
+The return should leave behind a source capsule, scene-cluster record, research
+inquiry, and explicit disposition for every supplied image. A held image is not
+discarded; it is available for later research without being mistaken for
+approved public media.
 
 ## Promote through review
 

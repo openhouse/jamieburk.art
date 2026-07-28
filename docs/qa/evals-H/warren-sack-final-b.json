@@ -1,35 +1,34 @@
 {
   "evaluator": "Codex independent sanitized-dossier holdout evaluator",
-  "reviewerId": "sack-b-photo-knowledge-hiring-readiness-2026-07-26",
+  "reviewerId": "sack-b-source-return-hiring-readiness-2026-07-26",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "192c2ccb93042196901e3b4f42a5ae407f0468625d554da34d3be13f45ef3e3d",
+  "candidateSha256": "88e224b8af896b004897445dd3f237e725a5a35067abdc0819d44dade0d89e3e",
   "score": 4,
   "pass": true,
   "evidence": [
-    "`candidate-manifest.json` independently validates: all 46 candidate paths exist, and the specified path-NUL-bytes-NUL SHA-256 calculation produces `192c2ccb93042196901e3b4f42a5ae407f0468625d554da34d3be13f45ef3e3d`, matching the identity contract.",
-    "The rendered homepage `/` states the complete method in plain language on the page itself and directly links to current project evidence.",
-    "The rendered `/about` route makes the method recursive and reconstructable across HJE, NYC Artist Coalition / FairRentNYC, and Sunday Dinner / 196.",
-    "The current `/work/harry-j-epstein` operating loop connects customer and team relationships to an operating model spanning product information, ordering, content, marketing, analytics, and follow-up.",
-    "The current `/work/196-sunday-dinner` operating loop is inspectable through public recurring-use records, a governed 2023 workflow, a 2025 operating schema, and the public-safe hosting specimen.",
-    "The current `/work/fair-rent-nyc` proof connects lived cultural-space relationships, meetings, sources, questions, and institutional actors to source maps, provenance records, decision memory, public interfaces, collective use, and handoff.",
-    "Coursework lineage is correctly bounded from current public proof; the 2006 record remains protected and historical tools are not presented as current proficiency."
+    "Identity contract verified: `candidate-manifest.json` identifies candidate SHA-256 `88e224b8af896b004897445dd3f237e725a5a35067abdc0819d44dade0d89e3e`.",
+    "Two-click method surface: the homepage route `/` visibly links to `/about`; rendered `/about` states, “observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue,” then maps that sequence across four projects. See `runtime-evidence/rendered-surface-evidence.json` and `runtime-evidence/holdout-about.png`.",
+    "Current project 1 — Harry J. Epstein Company: rendered `/work/harry-j-epstein` explicitly traces observation of customer language and operating habits; a requirements model connecting product information, ordering, marketing, analytics, and follow-up; the storefront and internal routines as interfaces; recurring customer/team questions and bounded analytics as use-based testing; and reusable content patterns and workflows as revision and handoff. Inspectable proof includes the current public storefront screenshot and bounded analytics summary. See `apps/www/src/content/work/harry-j-epstein.mdx`, `runtime-evidence/rendered-surface-evidence.json`, and `runtime-evidence/holdout-work-harry-j-epstein.png`.",
+    "Current project 2 — NYC Artist Coalition / FairRentNYC: `/about` reconstructs observation through lived experience, meetings, public sources, questions, and institutional actors; models those relationships through source maps, question logs, provenance records, decision memory, and action tracking; identifies campaign sites, town halls, hearings, sessions, and action pathways as interfaces; uses meetings and public participation to reveal missing context and changing needs; and preserves running minutes and reviewable decision trails for continuity. Rendered `/work/fair-rent-nyc` supplies inspectable campaign photography, a public campaign-site screenshot, a campaign-memory spine, source map, policy-question log, handbills, and source notes while preserving collective credit. See `runtime-evidence/rendered-surface-evidence.json` and `runtime-evidence/holdout-work-fair-rent-nyc.png`.",
+    "Current project 3 — 196 Artists Residency / Sunday Dinner: rendered `/work/196-sunday-dinner` contains an explicit current operating loop from observing artist and gathering needs, through modeling a participation sequence, prototyping invitations/onboarding/access handoffs, testing through recurring social use, and documenting revision and handoff. Its proof map includes public 100th/200th gathering records, a governed 2023 residency workflow, a 2025 operating schema, and a public-safe blank hosting-handoff specimen with Observe, Model, Interface, Use and Notice, Revise, and Hand Off stages. See `apps/www/src/content/work/196-sunday-dinner.mdx`, `runtime-evidence/rendered-surface-evidence.json`, and `runtime-evidence/holdout-work-196-sunday-dinner.png`.",
+    "Social structure and information architecture are visibly connected to participation and continuity: FairRentNYC links coalition relationships to source maps, decision trails, public interfaces, and collaborator handoff; Sunday Dinner links hospitality and trust to onboarding interfaces, recurring use, review, and next-host continuity; HJE links customer/team relationships to storefront and operational learning.",
+    "The Source-Backed Team Memory route `/lab/source-backed-team-memory` reinforces the same continuity model through source-linked records, Known/Open/Protected states, human review, correction, onboarding context, and accepted team memory, while explicitly disclaiming finished SaaS, automated trust, surveillance, and replacement of judgment. See `apps/www/src/content/lab/source-backed-team-memory.mdx`, `runtime-evidence/rendered-surface-evidence.json`, and `runtime-evidence/holdout-lab-source-backed-team-memory.png`.",
+    "Coursework is correctly separated from current public proof. `/about` presents the dated 2006 Open House project as bounded lineage and explicitly describes its governance as collective. Protected Social Information Spaces coursework remains held in `apps/www/src/data/knowledge-bank/historical-knowledge.ts`, whose boundaries reject claims of structural-equivalence invention, peer-reviewed research, production deployment, sole authorship, or current Max/Jitter proficiency. The public lab mentions separate Maven coursework only as professional development, not faculty affiliation or production proof."
   ],
   "gaps": [],
   "safety_findings": [
-    "All included photographs remain `branch-review`; exact image rights, consent, dignity, crop, caption, credit, usefulness, and Jamie approval remain mandatory human gates.",
-    "Deployment and indexing remain unapproved human gates; this evaluation is not production authorization.",
-    "Participant and private coalition materials remain excluded while collective credit is preserved."
+    "Photographs remain authorized only for branch/design review. `docs/qa/layout-A/photo-review-register.json` records production publication as `pending-exact-image-human-review`; exact crop and caption, photographer and rights, represented-person consent and dignity, collective credit, public usefulness, and Jamie’s approval of the unchanged candidate remain open human gates.",
+    "Deployment and indexing remain human publication gates and are not established by this dossier. Production publication requires approval of the exact candidate.",
+    "Protected participant records, attendance data, correspondence, access details, private coalition notes, legal-review material, stakeholder lists, customer data, dashboards, and credentials remain withheld. The rendered pages state these boundaries and do not claim that withholding equals publication clearance.",
+    "Collective projects retain collective credit and avoid sole-causality claims; additional collaborator naming, quotations, images, or source-record reproductions still require specific approval."
   ],
-  "recommendation": "Pass PR-016 at score 4 for this exact validated candidate. Preserve the method statement, project operating loops, and coursework boundaries unchanged; advance only after the human image, approval, deployment, and indexing gates are completed.",
+  "recommendation": "Pass PR-016 at score 4. Preserve the current two-click method statement, the explicit HJE and Sunday Dinner loops, the FairRentNYC proof trail, and the strict separation between dated coursework lineage and current public evidence; proceed only through the outstanding human publication gates.",
   "provenance": {
-    "provider": "codex-native-subagent",
-    "processSessionId": "019fa0e8-05de-7161-a92e-2d1fce03167f",
-    "agentNickname": "Turing",
-    "model": "inherited-current-model",
-    "reasoningEffort": "inherited",
+    "provider": "openai-codex-model-service",
+    "model": "gpt-5.6-sol",
     "sandbox": "read-only",
     "ephemeral": true,
-    "operatorAttestation": "Installed from the fresh separate Codex process result. The process received only the sanitized public-repository candidate dossier, generated screenshots, frozen lens prompt, and output schema. This simulated lens is not professor participation, quotation, endorsement, or judgment."
+    "operatorAttestation": "Produced by a fresh separate Codex process that received only the explicitly approved sanitized public-repository candidate dossier, generated screenshots, frozen lens prompt, and output schema. This simulated lens is not professor participation, quotation, endorsement, or judgment."
   }
 }

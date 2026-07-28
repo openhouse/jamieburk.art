@@ -48,6 +48,18 @@ relations:
     target: research-inquiry.photography.layout-a.council-chamber
     href: ../research-inquiries/photography/layout-a-council-chamber.md
     context: Photographer, permission, exact-event, and source-binding questions.
+  - type: related_to
+    target: asset.photo.dcla-diy-spaces-meeting.layout-a
+    href: ../assets/photographs/dcla-diy-spaces-meeting-layout-a.md
+    context: Second governed branch-review photograph and first scene-cluster return.
+  - type: related_to
+    target: index.photo-set.kc-town-hall.phase-one-source-return
+    href: photo-sets/kc-town-hall-phase-one-source-return.md
+    context: Held KC Town Hall image cluster with oral histories and open rights review.
+  - type: related_to
+    target: research.photography.kcth-dcla-source-return.2026-07-26
+    href: ../research-runs/photographic-source-return-kcth-dcla-2026-07-26.md
+    context: Dated return to contemporary documents, images, accounts, and proposal artifacts.
 ---
 
 # Living photographic knowledge
@@ -62,12 +74,15 @@ derivative, proposal, selection, exact occurrence, partial portfolio edition,
 recollection, and open research state without treating branch review as
 production clearance.
 
-## Current canary
+## Current governed occurrences
 
 [Jamie in a Council chamber](../assets/photographs/jamie-council-chamber-layout-a.md)
-is the first governed Layout A photograph. It is already present in the frozen
-donor as the homepage hero. The implementation adds identity and provenance
-bindings without changing the visible composition.
+is the homepage canary. The
+[DCLA DIY-spaces meeting](../assets/photographs/dcla-diy-spaces-meeting-layout-a.md)
+is the first multi-frame source-return cluster and appears on the Technical
+Operations page. Both photographs were already present in the frozen donor;
+the implementation adds identity, provenance, and occurrence bindings without
+asserting production clearance.
 
 The governed loop includes:
 
@@ -83,6 +98,23 @@ The governed loop includes:
 - the [branch-review decision](../decisions/photography/layout-a-home-council-chamber-v1.md);
 - the [exact homepage occurrence](../projections/photography/layout-a-home-hero-council-chamber.md);
 - the [partial portfolio edition](../projections/photography/layout-a-branch-review-edition-2026-07.md).
+
+The DCLA loop adds:
+
+- the [scene cluster](photo-sets/dcla-diy-spaces-meeting-2017.md);
+- the [formation-material source capsule](../sources/nycac-dcla-formation-materials-2017.md);
+- the [first-person source return](../sources/recollections/nycac-dcla-meeting-source-return-2026-07.md);
+- the [exact Technical Operations occurrence](../projections/photography/layout-a-technical-operations-dcla-meeting.md);
+- the [open audio, creator, and participant inquiry](../research-inquiries/photography/dcla-diy-spaces-meeting-2017.md).
+
+The [KC Town Hall source-return cluster](photo-sets/kc-town-hall-phase-one-source-return.md)
+keeps two additional portraits available for research without promoting them
+into public assets before rights and represented-person review.
+
+The complete [July 26 source-return research
+run](../research-runs/photographic-source-return-kcth-dcla-2026-07-26.md)
+records the source classes reviewed, changed interpretations, contradictions,
+limitations, and librarian requests.
 
 The RFC's original East River example belonged to Layout C. Because Jamie
 selected Layout A as this branch's exact donor, the implementation uses Layout

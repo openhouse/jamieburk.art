@@ -3,7 +3,7 @@
 
 **Source commit:** `f0dec3a060c62eb96c05075940d233ef6ea88f7e`
 **Generation time:** 2026-07-26T20:43:26-04:00
-**Source fingerprint:** `250ea71b038286cf5949ab9deccc5a472330051e21034b806b12b8a1cfd5ce7b`
+**Source fingerprint:** `3c2dfb9437f0e280f23e7f8b814ab378b32e087a04f89ef716c1c479f5dcc994`
 
 ## application
 
@@ -11,6 +11,8 @@
 
 ## asset
 
+- [KC Town Hall proposal public-safe visual excerpts](../assets/kc-town-hall-proposal-excerpts-2019.md) - `asset.kc-town-hall.proposal-excerpts.2019`
+- [DCLA DIY-spaces meeting, Layout A](../assets/photographs/dcla-diy-spaces-meeting-layout-a.md) - `asset.photo.dcla-diy-spaces-meeting.layout-a`
 - [Digital District participant photograph metadata](../assets/digital-district-photo.md) - `asset.photo.digital-district.001`
 - [Jamie Burkart in a Council chamber, Layout A](../assets/photographs/jamie-council-chamber-layout-a.md) - `asset.photo.jamie-council-chamber.layout-a`
 
@@ -73,7 +75,9 @@
 - [Role, Collective Authorship, and Protected Absence](../indexes/role-collective-authorship-and-protected-absence.md) - `index.knowledge-wiki.role-authorship-protected-absence`
 - [Scenes and Places of Work](../indexes/scenes-and-places-of-work.md) - `index.knowledge-wiki.scenes-and-places-of-work`
 - [Visual evidence index](../indexes/visual-evidence.md) - `index.knowledge-wiki.visual-evidence`
+- [KC Town Hall Phase One photographic source-return cluster](../indexes/photo-sets/kc-town-hall-phase-one-source-return.md) - `index.photo-set.kc-town-hall.phase-one-source-return`
 - [Layout A Council chamber photo set](../indexes/photo-sets/layout-a-council-chamber.md) - `index.photo-set.layout-a.council-chamber`
+- [DCLA DIY-spaces meeting photographic cluster](../indexes/photo-sets/dcla-diy-spaces-meeting-2017.md) - `index.photo-set.nycac.dcla-meeting.2017`
 
 ## method
 
@@ -137,11 +141,15 @@
 - [CallNYC portfolio projection](../projections/work-callnyc.md) - `portfolio.work.callnyc`
 - [Technical Operations portfolio projection](../projections/work-technical-operations.md) - `portfolio.work.technical-operations`
 - [Layout A photographic branch-review edition](../projections/photography/layout-a-branch-review-edition-2026-07.md) - `projection.edition.layout-a.branch-review.2026-07`
+- [KC Town Hall proposal artifacts on the case-study page](../projections/kc-town-hall-proposal-artifacts.md) - `projection.kc-town-hall.proposal-artifacts`
 - [Layout A homepage Council chamber occurrence](../projections/photography/layout-a-home-hero-council-chamber.md) - `projection.photo.layout-a.home.hero.council-chamber`
+- [Layout A Technical Operations DCLA meeting occurrence](../projections/photography/layout-a-technical-operations-dcla-meeting.md) - `projection.photo.layout-a.technical-operations.dcla-meeting`
 
 ## research-inquiry
 
+- [Complete the DCLA meeting photographic and audio source record](../research-inquiries/photography/dcla-diy-spaces-meeting-2017.md) - `research-inquiry.photography.dcla-diy-spaces-meeting.2017`
 - [Field Set 001](../photography/field-set-001.md) - `research-inquiry.photography.field-set-001`
+- [Complete the KC Town Hall Phase One photographic source record](../research-inquiries/photography/kc-town-hall-phase-one-source-return.md) - `research-inquiry.photography.kc-town-hall.phase-one`
 - [Complete the Layout A Council chamber source and rights record](../research-inquiries/photography/layout-a-council-chamber.md) - `research-inquiry.photography.layout-a.council-chamber`
 - [Resolve the 2006 New York installation title](../research-inquiries/ucsc-installation-title.md) - `research-inquiry.ucsc-installation-title`
 
@@ -152,6 +160,7 @@
 - [Knowledge Wiki branch-family closure review](../research-runs/knowledge-wiki-family-closure-2026-07-19.md) - `research.knowledge-wiki-family-closure.2026-07-19`
 - [NYC Artist Coalition shared-folder archival production](../research-runs/nycac-shared-folder-2026-07-19.md) - `research.nycac.shared-folder.2026-07-19`
 - [Field Set 001 completion](../photography/field-set-001-completion.md) - `research.photography.field-set-001-completion.2026-07-22`
+- [KC Town Hall and DCLA photographic source-return pass](../research-runs/photographic-source-return-kcth-dcla-2026-07-26.md) - `research.photography.kcth-dcla-source-return.2026-07-26`
 - [Proof of Life](../photography/proof-of-life.md) - `research.photography.proof-of-life.2026-07-22`
 
 ## source
@@ -177,19 +186,26 @@
 - [Frozen Knowledge Wiki branch E](../sources/knowledge-wiki-branch-e-2026-07-19.md) - `source.knowledge-wiki.branch-e.2026-07-19`
 - [Layout A public-safe photo review register](../sources/photo-metadata/layout-a-photo-review-register-2026-07.md) - `source.layout-a.photo-review-register.2026-07`
 - [Archived NTER CHNG project homepage](../sources/nter-chng-archived-homepage-2011.md) - `source.nter-chng.archived-homepage.2011`
+- [NYC Artist Coalition DCLA formation materials, January-February 2017](../sources/nycac-dcla-formation-materials-2017.md) - `source.nycac.dcla-formation-materials.2017`
 - [NYC nightlife forum corrected working transcript, 2026](../sources/nycac-nightlife-forum-transcript-2026.md) - `source.nycac.nightlife-forum-transcript.2026`
 - [Commercial Rent Stabilization collaboration running minutes, 2026](../sources/nycac-running-minutes-2026.md) - `source.nycac.running-minutes.2026`
 - [Protected NYC Artist Coalition shared-folder census](../sources/nycac-protected-shared-folder-census-2026.md) - `source.nycac.shared-folder-census.2026`
 - [New York City Council event-day CouncilStat post](../sources/nycc-councilstat-hackathon-post-2016.md) - `source.nycc.councilstat-hackathon-post.2016`
+- [NYC Council Open Data Week event and proposal-trail records, March 2026](../sources/nycc-open-data-week-event-records-2026.md) - `source.nycc.open-data-week-event-records.2026-03`
 - [Layout A Council chamber permission research status](../sources/permissions/layout-a-council-chamber-permission-status-2026-07.md) - `source.permission-status.layout-a.council-chamber.2026-07`
+- [Layout A DCLA meeting permission research status](../sources/permissions/layout-a-dcla-meeting-permission-status-2026-07.md) - `source.permission-status.layout-a.dcla-meeting.2026-07`
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`
+- [Jamie recollection on the Layout A Council chamber photograph](../sources/recollections/jamie-council-chamber-photo-2026-07.md) - `source.recollection.jamie-council-chamber-photo.2026-07`
 - [Jamie recollection on tending public-facing civic work](../sources/recollections/jamie-public-facing-civic-work-2026-07.md) - `source.recollection.jamie-public-facing-civic-work.2026-07`
+- [Jamie recollections on two KC Town Hall Phase One photographs](../sources/recollections/kc-town-hall-photo-oral-histories-2026-07.md) - `source.recollection.kc-town-hall-photos.2026-07`
+- [Jamie recollection on the formative DCLA meeting and close-listening work](../sources/recollections/nycac-dcla-meeting-source-return-2026-07.md) - `source.recollection.nycac-dcla-meeting.2026-07`
 - [Jamie Burkart resume, June 11, 2026](../sources/jamie-resume-2026-06-11.md) - `source.resume.jamie-burkart.2026-06-11`
 - [Teju Cole's Zurich residency and Far Away From Here](../sources/teju-cole-far-away-from-here-2015.md) - `source.teju-cole.far-away-from-here.2015`
 - [UCSC narrative evaluations, 2004-2006](../sources/ucsc-narrative-evaluations-2004-2006.md) - `source.ucsc.narrative-evaluations.2004-2006`
 - [Apple Photos archive - public-safe metadata boundary](../sources/apple-photos-archive-metadata.md) - `source.vault.apple-photos.metadata`
 - [Protected communication history - public-safe metadata boundary](../sources/protected-communication-vault-metadata.md) - `source.vault.communication-history.metadata`
 - [Layout A Council chamber public-derivative visual review](../sources/photo-metadata/layout-a-council-chamber-visual-review-2026-07.md) - `source.visual-review.layout-a.council-chamber.2026-07`
+- [Layout A DCLA meeting public-derivative visual review](../sources/photo-metadata/layout-a-dcla-meeting-visual-review-2026-07.md) - `source.visual-review.layout-a.dcla-meeting.2026-07`
 - [What is WOW List repaired transcript](../sources/wowlist-repaired-transcript-2026.md) - `source.wowlist.repaired-transcript.2026`
 
 ## timeline

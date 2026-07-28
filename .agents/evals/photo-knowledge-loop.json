@@ -16,6 +16,12 @@
     "component": "Hero",
     "placementKey": "home.hero"
   },
+  "migration": {
+    "manifestCount": 13,
+    "governedAssetCount": 2,
+    "governedOccurrenceCount": 2,
+    "remainingCount": 11
+  },
   "criteria": [
     {
       "id": "PHOTO-KNOWLEDGE-001",
@@ -74,7 +80,7 @@
     {
       "id": "PHOTO-KNOWLEDGE-010",
       "lens": "Amanda Clayman",
-      "criterion": "The pilot reports one completed canary and twelve migration items without treating incompleteness as shame or false completion.",
+      "criterion": "The pilot reports two governed occurrences and eleven migration items without treating incompleteness as shame or false completion.",
       "weight": 10
     }
   ],

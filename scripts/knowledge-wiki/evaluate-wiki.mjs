@@ -134,12 +134,22 @@ const layoutABoundedPublicUiPaths = [
   "apps/www/src/components/WorkCard.tsx",
   "apps/www/src/data/work.ts"
 ].sort();
+const sourceReturnBoundedPublicUiPaths = [
+  ...layoutABoundedPublicUiPaths,
+  "apps/www/public/artifacts/kc-town-hall/engine-of-opportunity.png",
+  "apps/www/public/artifacts/kc-town-hall/neighborhood-survey.png"
+].sort();
 const sortedChangedPublicUiPaths = [...changedPublicUiPaths].sort();
 const legacyBoundedPublicUiChange = JSON.stringify(sortedChangedPublicUiPaths) ===
   JSON.stringify(legacyBoundedPublicUiPaths);
 const layoutABoundedPublicUiChange = JSON.stringify(sortedChangedPublicUiPaths) ===
   JSON.stringify(layoutABoundedPublicUiPaths) && layoutPhotography.pass;
-const boundedPublicUiChange = legacyBoundedPublicUiChange || layoutABoundedPublicUiChange;
+const sourceReturnBoundedPublicUiChange = JSON.stringify(sortedChangedPublicUiPaths) ===
+  JSON.stringify(sourceReturnBoundedPublicUiPaths) && layoutPhotography.pass;
+const boundedPublicUiChange =
+  legacyBoundedPublicUiChange ||
+  layoutABoundedPublicUiChange ||
+  sourceReturnBoundedPublicUiChange;
 const caseStudyBlocksSource = readFileSync(
   path.join(defaultRepoRoot, "apps/www/src/components/CaseStudyBlocks.tsx"),
   "utf8"
@@ -150,6 +160,10 @@ const tagListSource = readFileSync(
 );
 const labSource = readFileSync(
   path.join(defaultRepoRoot, "apps/www/src/app/lab/source-backed-team-memory/page.tsx"),
+  "utf8"
+);
+const workDataSource = readFileSync(
+  path.join(defaultRepoRoot, "apps/www/src/data/work.ts"),
   "utf8"
 );
 const employmentOutputsCurrent = Object.entries(employmentOutputs).every(
@@ -180,7 +194,7 @@ const checks = {
       !caseStudyBlocksSource.includes("text-jb-ink/64") &&
       tagListSource.includes("border-jb-paper/45 bg-jb-paper text-jb-blue") &&
       !labSource.includes("text-jb-ink/68")) ||
-      (layoutABoundedPublicUiChange &&
+      ((layoutABoundedPublicUiChange || sourceReturnBoundedPublicUiChange) &&
         opengraphImageSource.includes(
           "I create operating structure for complex public-facing teams."
         ) &&
@@ -188,7 +202,16 @@ const checks = {
         opengraphImageSource.includes('color: "#1a232b"') &&
         !opengraphImageSource.includes(
           "I turn ambiguous work into usable systems."
-        ))),
+        ) &&
+        (!sourceReturnBoundedPublicUiChange ||
+          (caseStudyBlocksSource.includes('artifact.media.fit === "contain"') &&
+            workDataSource.includes(
+              'src: "/artifacts/kc-town-hall/neighborhood-survey.png"'
+            ) &&
+            workDataSource.includes(
+              'src: "/artifacts/kc-town-hall/engine-of-opportunity.png"'
+            ) &&
+            workDataSource.match(/fit: "contain"/g)?.length === 2)))),
   branch_donor_synthesis:
     adr.includes("## Branch donor synthesis") &&
     ["**A:**", "**B:**", "**C:**", "**D:**", "**E:**"].every((marker) => adr.includes(marker)),

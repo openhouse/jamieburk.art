@@ -25,12 +25,13 @@ function mutatedRecords(mutate) {
   });
 }
 
-test("the RFC 0003 canary passes while human gates remain open", () => {
+test("the RFC 0003 governed occurrences pass while human gates remain open", () => {
   const result = baseline();
   assert.equal(result.pass, true);
   assert.equal(result.passed, result.total);
-  assert.equal(result.migration.governedAssets, 1);
-  assert.equal(result.migration.remaining, 12);
+  assert.equal(result.migration.governedAssets, 2);
+  assert.equal(result.migration.governedOccurrences, 2);
+  assert.equal(result.migration.remaining, 11);
   assert.ok(result.humanGates.every((gate) => gate.state === "open"));
 });
 
@@ -119,6 +120,48 @@ test("caption assertions must resolve to statements on the asset", () => {
   });
   const criterion = result.criteria.find(
     (item) => item.id === "PHOTO-KNOWLEDGE-007"
+  );
+  assert.equal(criterion.pass, false);
+});
+
+test("the DCLA manifest binding and occurrence remain in the governed edition", () => {
+  const photographyPath = "apps/www/src/data/photography.ts";
+  const original = readFileSync(path.join(repoRoot, photographyPath), "utf8");
+  const mutated = original.replace(
+    '    wikiId: "asset.photo.dcla-diy-spaces-meeting.layout-a",\n',
+    ""
+  );
+  const result = evaluatePhotoKnowledge({
+    repoRoot,
+    overrides: { [photographyPath]: mutated },
+    skipGenerated: true
+  });
+  assert.equal(result.migration.governedAssets, 2);
+  const dclaOccurrence = result.photoOccurrences.find(
+    (item) =>
+      item.id === "projection.photo.layout-a.technical-operations.dcla-meeting"
+  );
+  assert.ok(dclaOccurrence);
+  assert.equal(
+    result.edition.occurrences.includes(dclaOccurrence.id),
+    true
+  );
+  assert.equal(
+    mutated.includes('wikiId: "asset.photo.dcla-diy-spaces-meeting.layout-a"'),
+    false
+  );
+});
+
+test("the migration criterion fails if the second occurrence disappears", () => {
+  const result = mutatedRecords((records) => {
+    const index = records.findIndex(
+      (record) =>
+        record.id === "projection.photo.layout-a.technical-operations.dcla-meeting"
+    );
+    records.splice(index, 1);
+  });
+  const criterion = result.criteria.find(
+    (item) => item.id === "PHOTO-KNOWLEDGE-010"
   );
   assert.equal(criterion.pass, false);
 });

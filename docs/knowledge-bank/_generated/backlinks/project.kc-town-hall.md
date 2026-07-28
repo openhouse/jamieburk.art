@@ -3,7 +3,7 @@
 
 **Source commit:** `f0dec3a060c62eb96c05075940d233ef6ea88f7e`
 **Generation time:** 2026-07-26T20:43:26-04:00
-**Source fingerprint:** `250ea71b038286cf5949ab9deccc5a472330051e21034b806b12b8a1cfd5ce7b`
+**Source fingerprint:** `3c2dfb9437f0e280f23e7f8b814ab378b32e087a04f89ef716c1c479f5dcc994`
 
 - [Civic, cultural, and technical translation](../../capabilities/civic-cultural-and-technical-translation.md) - `prose_link` (markdown)
 - [Implementation, Adoption, and Handoff](../../capabilities/implementation-adoption-and-handoff.md) - `related_to` (frontmatter)
@@ -23,4 +23,7 @@
 - [Maintenance, handoff, and stewardship](../../methods/maintenance-handoff-and-stewardship.md) - `prose_link` (markdown)
 - [Participation and Relational Infrastructure](../../methods/participation-and-relational-infrastructure.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
+- [KC Town Hall proposal artifacts on the case-study page](../../projections/kc-town-hall-proposal-artifacts.md) - `related_to` (frontmatter)
+- [KC Town Hall and DCLA photographic source-return pass](../../research-runs/photographic-source-return-kcth-dcla-2026-07-26.md) - `related_to` (frontmatter)
 - [KC Town Hall CCED proposal bundle, 2019](../../sources/kc-town-hall-cced-proposal-2019.md) - `documents` (frontmatter)
+- [Jamie recollections on two KC Town Hall Phase One photographs](../../sources/recollections/kc-town-hall-photo-oral-histories-2026-07.md) - `documents` (frontmatter)

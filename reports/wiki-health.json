@@ -2,63 +2,63 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-26T20:43:26-04:00",
   "sourceCommit": "f0dec3a060c62eb96c05075940d233ef6ea88f7e",
-  "sourceFingerprint": "250ea71b038286cf5949ab9deccc5a472330051e21034b806b12b8a1cfd5ce7b",
+  "sourceFingerprint": "3c2dfb9437f0e280f23e7f8b814ab378b32e087a04f89ef716c1c479f5dcc994",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
     "errors": []
   },
   "diagnostics": {
-    "records": 131,
+    "records": 147,
     "byKind": {
       "project": 15,
       "person": 1,
       "organization": 1,
       "event": 1,
       "place": 1,
-      "source": 35,
-      "asset": 2,
+      "source": 42,
+      "asset": 4,
       "claim": 2,
-      "research-run": 6,
-      "research-inquiry": 3,
+      "research-run": 7,
+      "research-inquiry": 5,
       "decision": 7,
       "correction": 1,
       "method": 14,
       "timeline": 1,
       "application": 1,
       "evaluation": 4,
-      "index": 20,
+      "index": 22,
       "capability": 5,
       "opportunity": 6,
-      "projection": 5
+      "projection": 7
     },
-    "typedRelations": 520,
+    "typedRelations": 575,
     "evidenceRelations": 8,
     "relationTypeCounts": {
       "collaborated_with": 1,
-      "documents": 19,
+      "documents": 21,
       "evidence:context": 1,
       "evidence:direct-support": 6,
       "evidence:private-support": 1,
-      "has_asset": 2,
+      "has_asset": 4,
       "informed_by": 45,
       "part_of": 13,
-      "projected_to": 7,
-      "related_to": 317,
+      "projected_to": 9,
+      "related_to": 363,
       "resulted_in": 6,
       "supersedes": 1,
       "supports": 19,
-      "uses_method": 28,
-      "uses_source": 62
+      "uses_method": 29,
+      "uses_source": 64
     },
-    "proseLinks": 329,
-    "rootReachable": 130,
+    "proseLinks": 349,
+    "rootReachable": 142,
     "orphanCount": 0,
     "deadEndCount": 0,
-    "wantedPageCount": 9,
+    "wantedPageCount": 14,
     "stalePageCount": 0,
     "correctionCount": 1,
-    "rightsReviewCount": 2,
+    "rightsReviewCount": 4,
     "opportunityCount": 6,
     "liveOpportunityCount": 6,
     "criticalRequirementCount": 22,
@@ -137,11 +137,46 @@
       "path": "docs/knowledge-bank/indexes/visual-evidence.md"
     },
     {
-      "id": "wanted.photography.layout-a.council-chamber.oral-history",
-      "proposed_title": "Jamie's bounded first-person account of the photographed scene",
-      "reason": "Recover event, work, collective context, and uncertainty without treating memory as rights clearance.",
-      "requestedBy": "research-inquiry.photography.layout-a.council-chamber",
-      "path": "docs/knowledge-bank/research-inquiries/photography/layout-a-council-chamber.md"
+      "id": "wanted.photography.dcla-meeting.private-bindings",
+      "proposed_title": "Verified private bindings for the DCLA meeting cluster",
+      "reason": "Bind public derivatives to exact sources without publishing locators.",
+      "requestedBy": "research-inquiry.photography.dcla-diy-spaces-meeting.2017",
+      "path": "docs/knowledge-bank/research-inquiries/photography/dcla-diy-spaces-meeting-2017.md"
+    },
+    {
+      "id": "wanted.photography.dcla-meeting.audio",
+      "proposed_title": "Governed DCLA meeting audio and transcript capsule",
+      "reason": "Recover close-listening evidence without placing raw participant speech in public Git.",
+      "requestedBy": "research-inquiry.photography.dcla-diy-spaces-meeting.2017",
+      "path": "docs/knowledge-bank/research-inquiries/photography/dcla-diy-spaces-meeting-2017.md"
+    },
+    {
+      "id": "wanted.photography.dcla-meeting.permission",
+      "proposed_title": "Creator and represented-person review",
+      "reason": "Separate archive custody from permission, dignity, credit, and consent.",
+      "requestedBy": "research-inquiry.photography.dcla-diy-spaces-meeting.2017",
+      "path": "docs/knowledge-bank/research-inquiries/photography/dcla-diy-spaces-meeting-2017.md"
+    },
+    {
+      "id": "wanted.photography.kc-town-hall.private-bindings",
+      "proposed_title": "Verified private bindings for the Phase One cluster",
+      "reason": "Bind the candidates without publishing source-system identifiers.",
+      "requestedBy": "research-inquiry.photography.kc-town-hall.phase-one",
+      "path": "docs/knowledge-bank/research-inquiries/photography/kc-town-hall-phase-one-source-return.md"
+    },
+    {
+      "id": "wanted.photography.kc-town-hall.creator-review",
+      "proposed_title": "Creator and represented-person permission capsules",
+      "reason": "Confirm remembered attributions and destination scope.",
+      "requestedBy": "research-inquiry.photography.kc-town-hall.phase-one",
+      "path": "docs/knowledge-bank/research-inquiries/photography/kc-town-hall-phase-one-source-return.md"
+    },
+    {
+      "id": "wanted.photography.kc-town-hall.field-corroboration",
+      "proposed_title": "Phase One field-record capsule",
+      "reason": "Test detailed participant memory against contemporaneous work records.",
+      "requestedBy": "research-inquiry.photography.kc-town-hall.phase-one",
+      "path": "docs/knowledge-bank/research-inquiries/photography/kc-town-hall-phase-one-source-return.md"
     },
     {
       "id": "wanted.photography.layout-a.council-chamber.private-binding",
@@ -181,6 +216,20 @@
       "rightsState": "permission-needed",
       "consentState": "review-needed",
       "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.kc-town-hall.proposal-excerpts.2019",
+      "path": "docs/knowledge-bank/assets/kc-town-hall-proposal-excerpts-2019.md",
+      "rightsState": "permission-needed",
+      "consentState": "not-applicable",
+      "publicDisplayStatus": "branch-review"
+    },
+    {
+      "id": "asset.photo.dcla-diy-spaces-meeting.layout-a",
+      "path": "docs/knowledge-bank/assets/photographs/dcla-diy-spaces-meeting-layout-a.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "branch-review"
     },
     {
       "id": "asset.photo.jamie-council-chamber.layout-a",

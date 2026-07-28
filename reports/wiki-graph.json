@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-26T20:43:26-04:00",
   "sourceCommit": "f0dec3a060c62eb96c05075940d233ef6ea88f7e",
-  "sourceFingerprint": "250ea71b038286cf5949ab9deccc5a472330051e21034b806b12b8a1cfd5ce7b",
+  "sourceFingerprint": "3c2dfb9437f0e280f23e7f8b814ab378b32e087a04f89ef716c1c479f5dcc994",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -17,6 +17,32 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-08-19"
+    },
+    {
+      "id": "asset.kc-town-hall.proposal-excerpts.2019",
+      "path": "docs/knowledge-bank/assets/kc-town-hall-proposal-excerpts-2019.md",
+      "title": "KC Town Hall proposal public-safe visual excerpts",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Two metadata-stripped visual excerpts from the 2019 CCED proposal: the blank neighborhood survey card and the Engine of Opportunity rendering.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
+      "id": "asset.photo.dcla-diy-spaces-meeting.layout-a",
+      "path": "docs/knowledge-bank/assets/photographs/dcla-diy-spaces-meeting-layout-a.md",
+      "title": "DCLA DIY-spaces meeting, Layout A",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public-safe record for the crowded DCLA meeting photograph used on the Technical Operations page during branch review.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
     },
     {
       "id": "asset.photo.digital-district.001",
@@ -320,7 +346,7 @@
       "aliases": [
         "Knowledge Bank"
       ],
-      "lastReviewed": "2026-07-18",
+      "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-18"
     },
     {
@@ -560,6 +586,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "index.photo-set.kc-town-hall.phase-one-source-return",
+      "path": "docs/knowledge-bank/indexes/photo-sets/kc-town-hall-phase-one-source-return.md",
+      "title": "KC Town Hall Phase One photographic source-return cluster",
+      "kind": "index",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Held cluster record for two KC Town Hall photographs returned for oral history: a hard-hat field portrait and an interior portrait with Harold Mason.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
       "id": "index.photo-set.layout-a.council-chamber",
       "path": "docs/knowledge-bank/indexes/photo-sets/layout-a-council-chamber.md",
       "title": "Layout A Council chamber photo set",
@@ -568,6 +607,19 @@
       "visibility": "public-safe",
       "sensitivity": "low",
       "summary": "Public-safe set record for the one Council chamber derivative promoted into the RFC 0003 pilot and the related private population that remains withheld.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
+      "id": "index.photo-set.nycac.dcla-meeting.2017",
+      "path": "docs/knowledge-bank/indexes/photo-sets/dcla-diy-spaces-meeting-2017.md",
+      "title": "DCLA DIY-spaces meeting photographic cluster",
+      "kind": "index",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public-safe cluster record for multiple frames of the January 2017 DCLA meeting and the one derivative currently used during branch review.\n",
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-10-26"
@@ -699,7 +751,7 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "A governed method for returning one exact photograph to Jamie, receiving first-person memory without treating it as settled fact, and maturing that memory through source, rights, collective-credit, and publication review.\n",
+      "summary": "A governed method for returning an exact photograph and its related scene cluster to Jamie, receiving first-person memory without treating it as settled fact, and maturing that memory through source, rights, collective-credit, and publication review.\n",
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-26"
@@ -984,7 +1036,7 @@
       "sensitivity": "moderate",
       "summary": "Adaptive-reuse, neighborhood fieldwork, resident-service, and public-benefit documentation project with municipal funding history kept distinct from disbursement and completion.",
       "aliases": [],
-      "lastReviewed": "2026-07-19",
+      "lastReviewed": "2026-07-26",
       "reviewBy": "2026-10-19"
     },
     {
@@ -1025,7 +1077,7 @@
       "sensitivity": "moderate",
       "summary": "A collectively credited civic participation and campaign system connecting cultural-space listening, public action, technical implementation, and government-facing advocacy.",
       "aliases": [],
-      "lastReviewed": "2026-07-19",
+      "lastReviewed": "2026-07-26",
       "reviewBy": "2026-10-19"
     },
     {
@@ -1136,7 +1188,20 @@
       "status": "governed-open",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Partial RFC 0003 edition record for the exact frozen Layout A donor, with one fully governed canary and the remaining photo manifest queued for migration.\n",
+      "summary": "Partial RFC 0003 edition record for the exact frozen Layout A donor, with two governed occurrences and the remaining photo manifest queued for migration.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
+      "id": "projection.kc-town-hall.proposal-artifacts",
+      "path": "docs/knowledge-bank/projections/kc-town-hall-proposal-artifacts.md",
+      "title": "KC Town Hall proposal artifacts on the case-study page",
+      "kind": "projection",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Branch-review projection of two public-safe 2019 proposal excerpts onto the KC Town Hall case-study artifact gallery.\n",
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-08-26"
@@ -1155,6 +1220,32 @@
       "reviewBy": "2026-08-26"
     },
     {
+      "id": "projection.photo.layout-a.technical-operations.dcla-meeting",
+      "path": "docs/knowledge-bank/projections/photography/layout-a-technical-operations-dcla-meeting.md",
+      "title": "Layout A Technical Operations DCLA meeting occurrence",
+      "kind": "projection",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Exact branch-review occurrence binding the governed DCLA meeting derivative to the Technical Operations introduction.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
+      "id": "research-inquiry.photography.dcla-diy-spaces-meeting.2017",
+      "path": "docs/knowledge-bank/research-inquiries/photography/dcla-diy-spaces-meeting-2017.md",
+      "title": "Complete the DCLA meeting photographic and audio source record",
+      "kind": "research-inquiry",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Source-return queue for exact image binding, creator and participant review, the missing meeting audio, speaker mapping, and visualization provenance.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-09-26"
+    },
+    {
       "id": "research-inquiry.photography.field-set-001",
       "path": "docs/knowledge-bank/photography/field-set-001.md",
       "title": "Field Set 001",
@@ -1170,6 +1261,19 @@
       "reviewBy": "2026-10-22"
     },
     {
+      "id": "research-inquiry.photography.kc-town-hall.phase-one",
+      "path": "docs/knowledge-bank/research-inquiries/photography/kc-town-hall-phase-one-source-return.md",
+      "title": "Complete the KC Town Hall Phase One photographic source record",
+      "kind": "research-inquiry",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Source-return queue for exact dates, creator confirmation, rights, consent, field records, mapping artifacts, and bounded Phase One role corroboration.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-09-26"
+    },
+    {
       "id": "research-inquiry.photography.layout-a.council-chamber",
       "path": "docs/knowledge-bank/research-inquiries/photography/layout-a-council-chamber.md",
       "title": "Complete the Layout A Council chamber source and rights record",
@@ -1177,7 +1281,7 @@
       "status": "governed-open",
       "visibility": "public-safe",
       "sensitivity": "moderate",
-      "summary": "Bounded source-return work for photographer identity, permission, exact event, private binding verification, and final occurrence review.\n",
+      "summary": "Bounded source-return work for photographer identity, permission, private binding, exact packet and conversation evidence, and final occurrence review.\n",
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-08-26"
@@ -1261,6 +1365,19 @@
       ],
       "lastReviewed": "2026-07-22",
       "reviewBy": "2026-10-22"
+    },
+    {
+      "id": "research.photography.kcth-dcla-source-return.2026-07-26",
+      "path": "docs/knowledge-bank/research-runs/photographic-source-return-kcth-dcla-2026-07-26.md",
+      "title": "KC Town Hall and DCLA photographic source-return pass",
+      "kind": "research-run",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Dated return from five supplied photograph files and four oral histories into contemporary proposal, email, website, spreadsheet, press, and archive sources while keeping private locators and raw records out of Git.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
     },
     {
       "id": "research.photography.proof-of-life.2026-07-22",
@@ -1551,6 +1668,19 @@
       "reviewBy": "2027-01-19"
     },
     {
+      "id": "source.nycac.dcla-formation-materials.2017",
+      "path": "docs/knowledge-bank/sources/nycac-dcla-formation-materials-2017.md",
+      "title": "NYC Artist Coalition DCLA formation materials, January-February 2017",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe source capsule for dated email, naming, website, visualization, and press records connecting WOW List, the January 2017 DCLA meeting, and early NYC Artist Coalition infrastructure.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
       "id": "source.nycac.nightlife-forum-transcript.2026",
       "path": "docs/knowledge-bank/sources/nycac-nightlife-forum-transcript-2026.md",
       "title": "NYC nightlife forum corrected working transcript, 2026",
@@ -1603,6 +1733,19 @@
       "reviewBy": "2027-01-18"
     },
     {
+      "id": "source.nycc.open-data-week-event-records.2026-03",
+      "path": "docs/knowledge-bank/sources/nycc-open-data-week-event-records-2026.md",
+      "title": "NYC Council Open Data Week event and proposal-trail records, March 2026",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe metadata summary of contemporary event registration, logistics, and proposal-trail records used to test Jamie's later oral history of the Council photograph.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
       "id": "source.permission-status.layout-a.council-chamber.2026-07",
       "path": "docs/knowledge-bank/sources/permissions/layout-a-council-chamber-permission-status-2026-07.md",
       "title": "Layout A Council chamber permission research status",
@@ -1611,6 +1754,19 @@
       "visibility": "summary-only",
       "sensitivity": "moderate",
       "summary": "Public-safe statement that no verified photographer identity or bounded permission capsule is yet attached to the Layout A Council chamber occurrence.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-08-26"
+    },
+    {
+      "id": "source.permission-status.layout-a.dcla-meeting.2026-07",
+      "path": "docs/knowledge-bank/sources/permissions/layout-a-dcla-meeting-permission-status-2026-07.md",
+      "title": "Layout A DCLA meeting permission research status",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe statement that creator identity, destination-bounded permission, and represented-person review remain open for the DCLA meeting occurrence.\n",
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-08-26"
@@ -1629,6 +1785,19 @@
       "reviewBy": "2027-01-18"
     },
     {
+      "id": "source.recollection.jamie-council-chamber-photo.2026-07",
+      "path": "docs/knowledge-bank/sources/recollections/jamie-council-chamber-photo-2026-07.md",
+      "title": "Jamie recollection on the Layout A Council chamber photograph",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe oral-history return to the exact Council photograph, preserving visible observations, Jamie's recollection, contemporary corroboration, and unresolved rights as separate evidence layers.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
       "id": "source.recollection.jamie-public-facing-civic-work.2026-07",
       "path": "docs/knowledge-bank/sources/recollections/jamie-public-facing-civic-work-2026-07.md",
       "title": "Jamie recollection on tending public-facing civic work",
@@ -1637,6 +1806,32 @@
       "visibility": "summary-only",
       "sensitivity": "moderate",
       "summary": "Public-safe, dated paraphrase of Jamie's account of operational stewardship, public identity systems, listening, and collective agency in civic work.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
+      "id": "source.recollection.kc-town-hall-photos.2026-07",
+      "path": "docs/knowledge-bank/sources/recollections/kc-town-hall-photo-oral-histories-2026-07.md",
+      "title": "Jamie recollections on two KC Town Hall Phase One photographs",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe summaries of Jamie's oral-history returns to a hard-hat field portrait and an interior portrait with Harold Mason during KC Town Hall work.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
+      "id": "source.recollection.nycac-dcla-meeting.2026-07",
+      "path": "docs/knowledge-bank/sources/recollections/nycac-dcla-meeting-source-return-2026-07.md",
+      "title": "Jamie recollection on the formative DCLA meeting and close-listening work",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe paraphrase of Jamie's oral-history return to a DCLA meeting photograph, including the audio, speaker mapping, research, and interactive visualization he remembers making after the gathering.\n",
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-10-26"
@@ -1723,6 +1918,19 @@
       "reviewBy": "2026-10-26"
     },
     {
+      "id": "source.visual-review.layout-a.dcla-meeting.2026-07",
+      "path": "docs/knowledge-bank/sources/photo-metadata/layout-a-dcla-meeting-visual-review-2026-07.md",
+      "title": "Layout A DCLA meeting public-derivative visual review",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Dated visual review of the metadata-stripped DCLA meeting derivative, limited to visible observations and derivative integrity.\n",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
+    },
+    {
       "id": "source.wowlist.repaired-transcript.2026",
       "path": "docs/knowledge-bank/sources/wowlist-repaired-transcript-2026.md",
       "title": "What is WOW List repaired transcript",
@@ -1775,6 +1983,70 @@
       "context": null
     },
     {
+      "from": "asset.kc-town-hall.proposal-excerpts.2019",
+      "type": "projected_to",
+      "to": "projection.kc-town-hall.proposal-artifacts",
+      "source": "frontmatter",
+      "href": "../projections/kc-town-hall-proposal-artifacts.md",
+      "context": "Branch-review case-study artifact gallery occurrence."
+    },
+    {
+      "from": "asset.kc-town-hall.proposal-excerpts.2019",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.cced-proposal.2019",
+      "source": "frontmatter",
+      "href": "../sources/kc-town-hall-cced-proposal-2019.md",
+      "context": "Public-safe crops from a protected proposal bundle."
+    },
+    {
+      "from": "asset.photo.dcla-diy-spaces-meeting.layout-a",
+      "type": "projected_to",
+      "to": "projection.photo.layout-a.technical-operations.dcla-meeting",
+      "source": "frontmatter",
+      "href": "../../projections/photography/layout-a-technical-operations-dcla-meeting.md",
+      "context": "Exact Technical Operations branch-review occurrence."
+    },
+    {
+      "from": "asset.photo.dcla-diy-spaces-meeting.layout-a",
+      "type": "related_to",
+      "to": "index.photo-set.nycac.dcla-meeting.2017",
+      "source": "frontmatter",
+      "href": "../../indexes/photo-sets/dcla-diy-spaces-meeting-2017.md",
+      "context": "One governed public member of a multi-frame scene cluster."
+    },
+    {
+      "from": "asset.photo.dcla-diy-spaces-meeting.layout-a",
+      "type": "related_to",
+      "to": "source.nycac.dcla-formation-materials.2017",
+      "source": "frontmatter",
+      "href": "../../sources/nycac-dcla-formation-materials-2017.md",
+      "context": "Contemporary source capsule for event and early coalition context."
+    },
+    {
+      "from": "asset.photo.dcla-diy-spaces-meeting.layout-a",
+      "type": "related_to",
+      "to": "source.permission-status.layout-a.dcla-meeting.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/layout-a-dcla-meeting-permission-status-2026-07.md",
+      "context": "Current fail-closed permission and consent state."
+    },
+    {
+      "from": "asset.photo.dcla-diy-spaces-meeting.layout-a",
+      "type": "related_to",
+      "to": "source.recollection.nycac-dcla-meeting.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/nycac-dcla-meeting-source-return-2026-07.md",
+      "context": "First-person close-listening and visualization context."
+    },
+    {
+      "from": "asset.photo.dcla-diy-spaces-meeting.layout-a",
+      "type": "related_to",
+      "to": "source.visual-review.layout-a.dcla-meeting.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/photo-metadata/layout-a-dcla-meeting-visual-review-2026-07.md",
+      "context": "Public-derivative visual review."
+    },
+    {
       "from": "asset.photo.digital-district.001",
       "type": "part_of",
       "to": "project.callnyc",
@@ -1801,10 +2073,26 @@
     {
       "from": "asset.photo.jamie-council-chamber.layout-a",
       "type": "related_to",
+      "to": "source.nycc.open-data-week-event-records.2026-03",
+      "source": "frontmatter",
+      "href": "../../sources/nycc-open-data-week-event-records-2026.md",
+      "context": "Contemporary event metadata and proposal trail."
+    },
+    {
+      "from": "asset.photo.jamie-council-chamber.layout-a",
+      "type": "related_to",
       "to": "source.permission-status.layout-a.council-chamber.2026-07",
       "source": "frontmatter",
       "href": "../../sources/permissions/layout-a-council-chamber-permission-status-2026-07.md",
       "context": "Current public-safe permission research status."
+    },
+    {
+      "from": "asset.photo.jamie-council-chamber.layout-a",
+      "type": "related_to",
+      "to": "source.recollection.jamie-council-chamber-photo.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/jamie-council-chamber-photo-2026-07.md",
+      "context": "Exact-photo oral-history return, source manifestation, and working-material recollection."
     },
     {
       "from": "asset.photo.jamie-council-chamber.layout-a",
@@ -3143,6 +3431,14 @@
     {
       "from": "index.knowledge-wiki.photography",
       "type": "related_to",
+      "to": "asset.photo.dcla-diy-spaces-meeting.layout-a",
+      "source": "frontmatter",
+      "href": "../assets/photographs/dcla-diy-spaces-meeting-layout-a.md",
+      "context": "Second governed branch-review photograph and first scene-cluster return."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
       "to": "asset.photo.jamie-council-chamber.layout-a",
       "source": "frontmatter",
       "href": "../assets/photographs/jamie-council-chamber-layout-a.md",
@@ -3163,6 +3459,14 @@
       "source": "frontmatter",
       "href": "../evaluations/curatorial/layout-a-home-council-chamber-v1.md",
       "context": "Simulated-lens curatorial proposal with human authority preserved."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "index.photo-set.kc-town-hall.phase-one-source-return",
+      "source": "frontmatter",
+      "href": "photo-sets/kc-town-hall-phase-one-source-return.md",
+      "context": "Held KC Town Hall image cluster with oral histories and open rights review."
     },
     {
       "from": "index.knowledge-wiki.photography",
@@ -3211,6 +3515,14 @@
       "source": "frontmatter",
       "href": "../research-inquiries/photography/layout-a-council-chamber.md",
       "context": "Photographer, permission, exact-event, and source-binding questions."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "research.photography.kcth-dcla-source-return.2026-07-26",
+      "source": "frontmatter",
+      "href": "../research-runs/photographic-source-return-kcth-dcla-2026-07-26.md",
+      "context": "Dated return to contemporary documents, images, accounts, and proposal artifacts."
     },
     {
       "from": "index.knowledge-wiki.photography-notebook",
@@ -3669,12 +3981,44 @@
       "context": "First private working-album encounter, recorded without exposing or approving the photograph."
     },
     {
+      "from": "index.photo-set.kc-town-hall.phase-one-source-return",
+      "type": "related_to",
+      "to": "research-inquiry.photography.kc-town-hall.phase-one",
+      "source": "frontmatter",
+      "href": "../../research-inquiries/photography/kc-town-hall-phase-one-source-return.md",
+      "context": "Exact dates, creator confirmation, rights, consent, and corroboration remain open."
+    },
+    {
+      "from": "index.photo-set.kc-town-hall.phase-one-source-return",
+      "type": "related_to",
+      "to": "source.recollection.kc-town-hall-photos.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/kc-town-hall-photo-oral-histories-2026-07.md",
+      "context": "Public-safe oral-history summary for the held candidates."
+    },
+    {
       "from": "index.photo-set.layout-a.council-chamber",
       "type": "related_to",
       "to": "asset.photo.jamie-council-chamber.layout-a",
       "source": "frontmatter",
       "href": "../../assets/photographs/jamie-council-chamber-layout-a.md",
       "context": "Only the governed public derivative is named here."
+    },
+    {
+      "from": "index.photo-set.nycac.dcla-meeting.2017",
+      "type": "related_to",
+      "to": "asset.photo.dcla-diy-spaces-meeting.layout-a",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/dcla-diy-spaces-meeting-layout-a.md",
+      "context": "Only the current governed derivative is named as a public member."
+    },
+    {
+      "from": "index.photo-set.nycac.dcla-meeting.2017",
+      "type": "related_to",
+      "to": "source.recollection.nycac-dcla-meeting.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/nycac-dcla-meeting-source-return-2026-07.md",
+      "context": "Oral-history return applies to the scene while asset-level facts remain distinct."
     },
     {
       "from": "method.collective-credit-protected-absence",
@@ -4778,11 +5122,35 @@
     },
     {
       "from": "project.kc-town-hall",
+      "type": "has_asset",
+      "to": "asset.kc-town-hall.proposal-excerpts.2019",
+      "source": "frontmatter",
+      "href": "../assets/kc-town-hall-proposal-excerpts-2019.md",
+      "context": "Blank neighborhood survey and Engine of Opportunity rendering prepared for branch review."
+    },
+    {
+      "from": "project.kc-town-hall",
+      "type": "related_to",
+      "to": "index.photo-set.kc-town-hall.phase-one-source-return",
+      "source": "frontmatter",
+      "href": "../indexes/photo-sets/kc-town-hall-phase-one-source-return.md",
+      "context": "Two held construction-era photographs with bounded oral histories."
+    },
+    {
+      "from": "project.kc-town-hall",
       "type": "related_to",
       "to": "person.jamie-burkart",
       "source": "frontmatter",
       "href": "../people/jamie-burkart.md",
       "context": null
+    },
+    {
+      "from": "project.kc-town-hall",
+      "type": "related_to",
+      "to": "research.photography.kcth-dcla-source-return.2026-07-26",
+      "source": "frontmatter",
+      "href": "../research-runs/photographic-source-return-kcth-dcla-2026-07-26.md",
+      "context": "Dated return to photographs, oral histories, and proposal artifacts."
     },
     {
       "from": "project.kc-town-hall",
@@ -4850,6 +5218,14 @@
     },
     {
       "from": "project.nyc-artist-coalition",
+      "type": "has_asset",
+      "to": "asset.photo.dcla-diy-spaces-meeting.layout-a",
+      "source": "frontmatter",
+      "href": "../assets/photographs/dcla-diy-spaces-meeting-layout-a.md",
+      "context": "Governed branch-review image from the formative meeting."
+    },
+    {
+      "from": "project.nyc-artist-coalition",
       "type": "informed_by",
       "to": "research.nycac.shared-folder.2026-07-19",
       "source": "frontmatter",
@@ -4879,6 +5255,22 @@
       "source": "frontmatter",
       "href": "../evaluations/nycac-shared-folder-production-2026-07-19.md",
       "context": "Deterministic coverage, leakage, credit, and projection criteria."
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "related_to",
+      "to": "research.photography.kcth-dcla-source-return.2026-07-26",
+      "source": "frontmatter",
+      "href": "../research-runs/photographic-source-return-kcth-dcla-2026-07-26.md",
+      "context": "Dated photographic and formation-source return."
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "related_to",
+      "to": "source.nycac.dcla-formation-materials.2017",
+      "source": "frontmatter",
+      "href": "../sources/nycac-dcla-formation-materials-2017.md",
+      "context": "Contemporary mobilization, naming, website, visualization, and press sequence."
     },
     {
       "from": "project.nyc-artist-coalition",
@@ -5097,6 +5489,30 @@
       "context": "First governed occurrence in this partial edition."
     },
     {
+      "from": "projection.edition.layout-a.branch-review.2026-07",
+      "type": "related_to",
+      "to": "projection.photo.layout-a.technical-operations.dcla-meeting",
+      "source": "frontmatter",
+      "href": "layout-a-technical-operations-dcla-meeting.md",
+      "context": "Second governed occurrence and first multi-frame source-return cluster."
+    },
+    {
+      "from": "projection.kc-town-hall.proposal-artifacts",
+      "type": "related_to",
+      "to": "asset.kc-town-hall.proposal-excerpts.2019",
+      "source": "frontmatter",
+      "href": "../assets/kc-town-hall-proposal-excerpts-2019.md",
+      "context": "Exact public derivatives."
+    },
+    {
+      "from": "projection.kc-town-hall.proposal-artifacts",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../projects/kc-town-hall-orientation.md",
+      "context": "Artifact gallery on the public case-study route."
+    },
+    {
       "from": "projection.photo.layout-a.home.hero.council-chamber",
       "type": "related_to",
       "to": "asset.photo.jamie-council-chamber.layout-a",
@@ -5131,10 +5547,66 @@
     {
       "from": "projection.photo.layout-a.home.hero.council-chamber",
       "type": "related_to",
+      "to": "source.nycc.open-data-week-event-records.2026-03",
+      "source": "frontmatter",
+      "href": "../../sources/nycc-open-data-week-event-records-2026.md",
+      "context": "Contemporary event metadata supporting bounded caption precision."
+    },
+    {
+      "from": "projection.photo.layout-a.home.hero.council-chamber",
+      "type": "related_to",
       "to": "source.permission-status.layout-a.council-chamber.2026-07",
       "source": "frontmatter",
       "href": "../../sources/permissions/layout-a-council-chamber-permission-status-2026-07.md",
       "context": "Fail-closed photographer and permission status."
+    },
+    {
+      "from": "projection.photo.layout-a.technical-operations.dcla-meeting",
+      "type": "related_to",
+      "to": "asset.photo.dcla-diy-spaces-meeting.layout-a",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/dcla-diy-spaces-meeting-layout-a.md",
+      "context": "Exact source asset and derivative record."
+    },
+    {
+      "from": "projection.photo.layout-a.technical-operations.dcla-meeting",
+      "type": "related_to",
+      "to": "projection.edition.layout-a.branch-review.2026-07",
+      "source": "frontmatter",
+      "href": "layout-a-branch-review-edition-2026-07.md",
+      "context": "Partial branch-review portfolio edition."
+    },
+    {
+      "from": "projection.photo.layout-a.technical-operations.dcla-meeting",
+      "type": "related_to",
+      "to": "source.permission-status.layout-a.dcla-meeting.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/layout-a-dcla-meeting-permission-status-2026-07.md",
+      "context": "Fail-closed creator, consent, and destination status."
+    },
+    {
+      "from": "research-inquiry.photography.dcla-diy-spaces-meeting.2017",
+      "type": "related_to",
+      "to": "asset.photo.dcla-diy-spaces-meeting.layout-a",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/dcla-diy-spaces-meeting-layout-a.md",
+      "context": "Current public derivative and occurrence."
+    },
+    {
+      "from": "research-inquiry.photography.dcla-diy-spaces-meeting.2017",
+      "type": "related_to",
+      "to": "index.photo-set.nycac.dcla-meeting.2017",
+      "source": "frontmatter",
+      "href": "../../indexes/photo-sets/dcla-diy-spaces-meeting-2017.md",
+      "context": "Multi-frame scene cluster."
+    },
+    {
+      "from": "research-inquiry.photography.dcla-diy-spaces-meeting.2017",
+      "type": "related_to",
+      "to": "source.nycac.dcla-formation-materials.2017",
+      "source": "frontmatter",
+      "href": "../../sources/nycac-dcla-formation-materials-2017.md",
+      "context": "Contemporary chronology and visualization publication record."
     },
     {
       "from": "research-inquiry.photography.field-set-001",
@@ -5193,6 +5665,30 @@
       "context": null
     },
     {
+      "from": "research-inquiry.photography.kc-town-hall.phase-one",
+      "type": "related_to",
+      "to": "index.photo-set.kc-town-hall.phase-one-source-return",
+      "source": "frontmatter",
+      "href": "../../indexes/photo-sets/kc-town-hall-phase-one-source-return.md",
+      "context": "Held image candidates."
+    },
+    {
+      "from": "research-inquiry.photography.kc-town-hall.phase-one",
+      "type": "related_to",
+      "to": "source.recollection.kc-town-hall-photos.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/kc-town-hall-photo-oral-histories-2026-07.md",
+      "context": "First-person source return."
+    },
+    {
+      "from": "research-inquiry.photography.kc-town-hall.phase-one",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.cced-proposal.2019",
+      "source": "frontmatter",
+      "href": "../../sources/kc-town-hall-cced-proposal-2019.md",
+      "context": "Contemporary scope, project-manager, and neighborhood-listening evidence."
+    },
+    {
       "from": "research-inquiry.photography.layout-a.council-chamber",
       "type": "related_to",
       "to": "asset.photo.jamie-council-chamber.layout-a",
@@ -5211,10 +5707,26 @@
     {
       "from": "research-inquiry.photography.layout-a.council-chamber",
       "type": "related_to",
+      "to": "source.nycc.open-data-week-event-records.2026-03",
+      "source": "frontmatter",
+      "href": "../../sources/nycc-open-data-week-event-records-2026.md",
+      "context": "Resolves official event precision while preserving anti-claims."
+    },
+    {
+      "from": "research-inquiry.photography.layout-a.council-chamber",
+      "type": "related_to",
       "to": "source.permission-status.layout-a.council-chamber.2026-07",
       "source": "frontmatter",
       "href": "../../sources/permissions/layout-a-council-chamber-permission-status-2026-07.md",
       "context": "Current fail-closed permission state."
+    },
+    {
+      "from": "research-inquiry.photography.layout-a.council-chamber",
+      "type": "related_to",
+      "to": "source.recollection.jamie-council-chamber-photo.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/recollections/jamie-council-chamber-photo-2026-07.md",
+      "context": "Completed exact-photo return; creator, rights, packet, conversation, and outcome verification remain open."
     },
     {
       "from": "research-inquiry.ucsc-installation-title",
@@ -5561,6 +6073,30 @@
       "context": null
     },
     {
+      "from": "research.photography.kcth-dcla-source-return.2026-07-26",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../projects/kc-town-hall-orientation.md",
+      "context": "Oral histories, proposal excerpts, and held photographic cluster."
+    },
+    {
+      "from": "research.photography.kcth-dcla-source-return.2026-07-26",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": "Formation, visualization, and DCLA photographic cluster."
+    },
+    {
+      "from": "research.photography.kcth-dcla-source-return.2026-07-26",
+      "type": "uses_method",
+      "to": "method.photography.oral-history-return",
+      "source": "frontmatter",
+      "href": "../methods/photographic-oral-history-return.md",
+      "context": "Source-return and promotion boundaries."
+    },
+    {
       "from": "research.photography.proof-of-life.2026-07-22",
       "type": "part_of",
       "to": "project.photography.field-set-001-residency",
@@ -5817,6 +6353,14 @@
       "context": null
     },
     {
+      "from": "source.nycac.dcla-formation-materials.2017",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": "Supports a bounded chronology of early connective and public-facing infrastructure."
+    },
+    {
       "from": "source.nycac.nightlife-forum-transcript.2026",
       "type": "documents",
       "to": "project.office-of-nightlife-town-halls",
@@ -5857,6 +6401,30 @@
       "context": null
     },
     {
+      "from": "source.nycc.open-data-week-event-records.2026-03",
+      "type": "related_to",
+      "to": "asset.photo.jamie-council-chamber.layout-a",
+      "source": "frontmatter",
+      "href": "../assets/photographs/jamie-council-chamber-layout-a.md",
+      "context": "Contemporary event metadata tested against the photograph and oral history."
+    },
+    {
+      "from": "source.nycc.open-data-week-event-records.2026-03",
+      "type": "related_to",
+      "to": "research-inquiry.photography.layout-a.council-chamber",
+      "source": "frontmatter",
+      "href": "../research-inquiries/photography/layout-a-council-chamber.md",
+      "context": "Resolves event precision while leaving attendance, delivery, creator, and rights questions bounded."
+    },
+    {
+      "from": "source.nycc.open-data-week-event-records.2026-03",
+      "type": "related_to",
+      "to": "source.recollection.jamie-council-chamber-photo.2026-07",
+      "source": "frontmatter",
+      "href": "recollections/jamie-council-chamber-photo-2026-07.md",
+      "context": "Independent temporal record for a later first-person recollection."
+    },
+    {
       "from": "source.permission-status.layout-a.council-chamber.2026-07",
       "type": "related_to",
       "to": "asset.photo.jamie-council-chamber.layout-a",
@@ -5871,6 +6439,22 @@
       "source": "frontmatter",
       "href": "../../research-inquiries/photography/layout-a-council-chamber.md",
       "context": "Defines the next rights and attribution research work."
+    },
+    {
+      "from": "source.permission-status.layout-a.dcla-meeting.2026-07",
+      "type": "related_to",
+      "to": "asset.photo.dcla-diy-spaces-meeting.layout-a",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/dcla-diy-spaces-meeting-layout-a.md",
+      "context": "Keeps the occurrence fail-closed beyond branch review."
+    },
+    {
+      "from": "source.permission-status.layout-a.dcla-meeting.2026-07",
+      "type": "related_to",
+      "to": "research-inquiry.photography.dcla-diy-spaces-meeting.2017",
+      "source": "frontmatter",
+      "href": "../../research-inquiries/photography/dcla-diy-spaces-meeting-2017.md",
+      "context": "Defines the next creator, participant, and destination review."
     },
     {
       "from": "source.politico.callnyc.2016-03-14",
@@ -5889,12 +6473,68 @@
       "context": null
     },
     {
+      "from": "source.recollection.jamie-council-chamber-photo.2026-07",
+      "type": "related_to",
+      "to": "asset.photo.jamie-council-chamber.layout-a",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/jamie-council-chamber-layout-a.md",
+      "context": "The exact public derivative returned for oral history."
+    },
+    {
+      "from": "source.recollection.jamie-council-chamber-photo.2026-07",
+      "type": "related_to",
+      "to": "research-inquiry.photography.layout-a.council-chamber",
+      "source": "frontmatter",
+      "href": "../../research-inquiries/photography/layout-a-council-chamber.md",
+      "context": "Narrows the inquiry while leaving creator, rights, packet, conversation, and outcome verification open."
+    },
+    {
+      "from": "source.recollection.jamie-council-chamber-photo.2026-07",
+      "type": "related_to",
+      "to": "source.nycc.open-data-week-event-records.2026-03",
+      "source": "frontmatter",
+      "href": "../nycc-open-data-week-event-records-2026.md",
+      "context": "Contemporary event and proposal-trail metadata used to test the later recollection."
+    },
+    {
       "from": "source.recollection.jamie-public-facing-civic-work.2026-07",
       "type": "related_to",
       "to": "asset.photo.jamie-council-chamber.layout-a",
       "source": "frontmatter",
       "href": "../../assets/photographs/jamie-council-chamber-layout-a.md",
       "context": "The composed image prompted source return, not event identification."
+    },
+    {
+      "from": "source.recollection.kc-town-hall-photos.2026-07",
+      "type": "documents",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../../projects/kc-town-hall-orientation.md",
+      "context": "Adds first-person field and craft context while retaining corroboration holds."
+    },
+    {
+      "from": "source.recollection.kc-town-hall-photos.2026-07",
+      "type": "related_to",
+      "to": "index.photo-set.kc-town-hall.phase-one-source-return",
+      "source": "frontmatter",
+      "href": "../../indexes/photo-sets/kc-town-hall-phase-one-source-return.md",
+      "context": "Oral-history source for the two held photographic candidates."
+    },
+    {
+      "from": "source.recollection.nycac-dcla-meeting.2026-07",
+      "type": "related_to",
+      "to": "index.photo-set.nycac.dcla-meeting.2017",
+      "source": "frontmatter",
+      "href": "../../indexes/photo-sets/dcla-diy-spaces-meeting-2017.md",
+      "context": "The returned photograph opened a cluster-level source inquiry."
+    },
+    {
+      "from": "source.recollection.nycac-dcla-meeting.2026-07",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../../projects/nyc-artist-coalition-2017.md",
+      "context": "First-person account of formative listening and infrastructure work."
     },
     {
       "from": "source.teju-cole.far-away-from-here.2015",
@@ -5935,6 +6575,14 @@
       "source": "frontmatter",
       "href": "../../assets/photographs/jamie-council-chamber-layout-a.md",
       "context": "Supports visible-observation statements, not event or impact claims."
+    },
+    {
+      "from": "source.visual-review.layout-a.dcla-meeting.2026-07",
+      "type": "related_to",
+      "to": "asset.photo.dcla-diy-spaces-meeting.layout-a",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/dcla-diy-spaces-meeting-layout-a.md",
+      "context": "Supports visible-observation statements, not role or outcome claims."
     },
     {
       "from": "source.wowlist.repaired-transcript.2026",
@@ -6479,6 +7127,42 @@
       "fragment": null,
       "line": 64,
       "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/assets/kc-town-hall-proposal-excerpts-2019.md",
+      "from": "asset.kc-town-hall.proposal-excerpts.2019",
+      "toPath": "docs/knowledge-bank/projections/kc-town-hall-proposal-artifacts.md",
+      "to": "projection.kc-town-hall.proposal-artifacts",
+      "fragment": null,
+      "line": 14,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/assets/kc-town-hall-proposal-excerpts-2019.md",
+      "from": "asset.kc-town-hall.proposal-excerpts.2019",
+      "toPath": "apps/www/public/artifacts/kc-town-hall/neighborhood-survey.png",
+      "to": null,
+      "fragment": null,
+      "line": 4,
+      "kind": "image"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/assets/kc-town-hall-proposal-excerpts-2019.md",
+      "from": "asset.kc-town-hall.proposal-excerpts.2019",
+      "toPath": "apps/www/public/artifacts/kc-town-hall/engine-of-opportunity.png",
+      "to": null,
+      "fragment": null,
+      "line": 6,
+      "kind": "image"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/assets/photographs/dcla-diy-spaces-meeting-layout-a.md",
+      "from": "asset.photo.dcla-diy-spaces-meeting.layout-a",
+      "toPath": "apps/www/public/photos/dcla-diy-spaces-meeting.jpg",
+      "to": null,
+      "fragment": null,
+      "line": 4,
+      "kind": "image"
     },
     {
       "fromPath": "docs/knowledge-bank/assets/photographs/jamie-council-chamber-layout-a.md",
@@ -7300,6 +7984,15 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/indexes/photo-sets/kc-town-hall-phase-one-source-return.md",
+      "from": "index.photo-set.kc-town-hall.phase-one-source-return",
+      "toPath": "docs/knowledge-bank/research-inquiries/photography/kc-town-hall-phase-one-source-return.md",
+      "to": "research-inquiry.photography.kc-town-hall.phase-one",
+      "fragment": null,
+      "line": 14,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/indexes/photography.md",
       "from": "index.knowledge-wiki.photography",
       "toPath": "docs/knowledge-bank/assets/photographs/jamie-council-chamber-layout-a.md",
@@ -7311,10 +8004,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/photography.md",
       "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/photographs/dcla-diy-spaces-meeting-layout-a.md",
+      "to": "asset.photo.dcla-diy-spaces-meeting.layout-a",
+      "fragment": null,
+      "line": 18,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
       "toPath": "docs/knowledge-bank/indexes/photo-sets/layout-a-council-chamber.md",
       "to": "index.photo-set.layout-a.council-chamber",
       "fragment": null,
-      "line": 23,
+      "line": 26,
       "kind": "link"
     },
     {
@@ -7323,7 +8025,7 @@
       "toPath": "docs/knowledge-bank/sources/photo-metadata/layout-a-council-chamber-visual-review-2026-07.md",
       "to": "source.visual-review.layout-a.council-chamber.2026-07",
       "fragment": null,
-      "line": 24,
+      "line": 27,
       "kind": "link"
     },
     {
@@ -7332,7 +8034,7 @@
       "toPath": "docs/knowledge-bank/sources/photo-metadata/layout-a-photo-review-register-2026-07.md",
       "to": "source.layout-a.photo-review-register.2026-07",
       "fragment": null,
-      "line": 25,
+      "line": 28,
       "kind": "link"
     },
     {
@@ -7341,7 +8043,7 @@
       "toPath": "docs/knowledge-bank/sources/permissions/layout-a-council-chamber-permission-status-2026-07.md",
       "to": "source.permission-status.layout-a.council-chamber.2026-07",
       "fragment": null,
-      "line": 26,
+      "line": 29,
       "kind": "link"
     },
     {
@@ -7350,7 +8052,7 @@
       "toPath": "docs/knowledge-bank/sources/recollections/jamie-public-facing-civic-work-2026-07.md",
       "to": "source.recollection.jamie-public-facing-civic-work.2026-07",
       "fragment": null,
-      "line": 27,
+      "line": 30,
       "kind": "link"
     },
     {
@@ -7359,7 +8061,7 @@
       "toPath": "docs/knowledge-bank/research-inquiries/photography/layout-a-council-chamber.md",
       "to": "research-inquiry.photography.layout-a.council-chamber",
       "fragment": null,
-      "line": 28,
+      "line": 31,
       "kind": "link"
     },
     {
@@ -7368,7 +8070,7 @@
       "toPath": "docs/knowledge-bank/methods/artist-led-photographic-curation.md",
       "to": "method.photography.artist-led-curatorial-loop",
       "fragment": null,
-      "line": 29,
+      "line": 32,
       "kind": "link"
     },
     {
@@ -7377,7 +8079,7 @@
       "toPath": "docs/knowledge-bank/methods/photographic-oral-history-return.md",
       "to": "method.photography.oral-history-return",
       "fragment": null,
-      "line": 30,
+      "line": 33,
       "kind": "link"
     },
     {
@@ -7386,7 +8088,7 @@
       "toPath": "docs/knowledge-bank/evaluations/curatorial/layout-a-home-council-chamber-v1.md",
       "to": "evaluation.curatorial.layout-a.home-council-chamber.v1",
       "fragment": null,
-      "line": 31,
+      "line": 34,
       "kind": "link"
     },
     {
@@ -7395,7 +8097,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/layout-a-home-council-chamber-v1.md",
       "to": "decision.photography.layout-a.home-council-chamber.v1",
       "fragment": null,
-      "line": 32,
+      "line": 35,
       "kind": "link"
     },
     {
@@ -7404,7 +8106,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-a-home-hero-council-chamber.md",
       "to": "projection.photo.layout-a.home.hero.council-chamber",
       "fragment": null,
-      "line": 33,
+      "line": 36,
       "kind": "link"
     },
     {
@@ -7413,7 +8115,70 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-a-branch-review-edition-2026-07.md",
       "to": "projection.edition.layout-a.branch-review.2026-07",
       "fragment": null,
-      "line": 34,
+      "line": 37,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/indexes/photo-sets/dcla-diy-spaces-meeting-2017.md",
+      "to": "index.photo-set.nycac.dcla-meeting.2017",
+      "fragment": null,
+      "line": 41,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/sources/nycac-dcla-formation-materials-2017.md",
+      "to": "source.nycac.dcla-formation-materials.2017",
+      "fragment": null,
+      "line": 42,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/sources/recollections/nycac-dcla-meeting-source-return-2026-07.md",
+      "to": "source.recollection.nycac-dcla-meeting.2026-07",
+      "fragment": null,
+      "line": 43,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-a-technical-operations-dcla-meeting.md",
+      "to": "projection.photo.layout-a.technical-operations.dcla-meeting",
+      "fragment": null,
+      "line": 44,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/research-inquiries/photography/dcla-diy-spaces-meeting-2017.md",
+      "to": "research-inquiry.photography.dcla-diy-spaces-meeting.2017",
+      "fragment": null,
+      "line": 45,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/indexes/photo-sets/kc-town-hall-phase-one-source-return.md",
+      "to": "index.photo-set.kc-town-hall.phase-one-source-return",
+      "fragment": null,
+      "line": 47,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/research-runs/photographic-source-return-kcth-dcla-2026-07-26.md",
+      "to": "research.photography.kcth-dcla-source-return.2026-07-26",
+      "fragment": null,
+      "line": 51,
       "kind": "link"
     },
     {
@@ -8371,6 +9136,42 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/projects/kc-town-hall-orientation.md",
+      "from": "project.kc-town-hall",
+      "toPath": "docs/knowledge-bank/assets/kc-town-hall-proposal-excerpts-2019.md",
+      "to": "asset.kc-town-hall.proposal-excerpts.2019",
+      "fragment": null,
+      "line": 20,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/kc-town-hall.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/sources/recollections/kc-town-hall-photo-oral-histories-2026-07.md",
+      "to": "source.recollection.kc-town-hall-photos.2026-07",
+      "fragment": null,
+      "line": 104,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/kc-town-hall.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/indexes/photo-sets/kc-town-hall-phase-one-source-return.md",
+      "to": "index.photo-set.kc-town-hall.phase-one-source-return",
+      "fragment": null,
+      "line": 105,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/kc-town-hall.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/research-inquiries/photography/kc-town-hall-phase-one-source-return.md",
+      "to": "research-inquiry.photography.kc-town-hall.phase-one",
+      "fragment": null,
+      "line": 106,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/projects/kc-town-hall.md",
       "from": null,
       "toPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
@@ -8394,7 +9195,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-campaign-press-archive.md",
       "to": null,
       "fragment": null,
-      "line": 109,
+      "line": 135,
       "kind": "link"
     },
     {
@@ -8403,7 +9204,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-campaign-press-readings.md",
       "to": null,
       "fragment": null,
-      "line": 110,
+      "line": 136,
       "kind": "link"
     },
     {
@@ -8412,7 +9213,34 @@
       "toPath": "docs/knowledge-bank/projects/nycac-finkelpearl-council-hearing-review.md",
       "to": null,
       "fragment": null,
-      "line": 191,
+      "line": 217,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+      "from": "project.nyc-artist-coalition",
+      "toPath": "docs/knowledge-bank/sources/nycac-dcla-formation-materials-2017.md",
+      "to": "source.nycac.dcla-formation-materials.2017",
+      "fragment": null,
+      "line": 32,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+      "from": "project.nyc-artist-coalition",
+      "toPath": "docs/knowledge-bank/indexes/photo-sets/dcla-diy-spaces-meeting-2017.md",
+      "to": "index.photo-set.nycac.dcla-meeting.2017",
+      "fragment": null,
+      "line": 33,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+      "from": "project.nyc-artist-coalition",
+      "toPath": "docs/knowledge-bank/research-inquiries/photography/dcla-diy-spaces-meeting-2017.md",
+      "to": "research-inquiry.photography.dcla-diy-spaces-meeting.2017",
+      "fragment": null,
+      "line": 34,
       "kind": "link"
     },
     {
@@ -8421,7 +9249,7 @@
       "toPath": "docs/knowledge-bank/research-runs/nycac-shared-folder-2026-07-19.md",
       "to": "research.nycac.shared-folder.2026-07-19",
       "fragment": null,
-      "line": 40,
+      "line": 66,
       "kind": "link"
     },
     {
@@ -8430,7 +9258,7 @@
       "toPath": "docs/knowledge-bank/sources/nycac-protected-shared-folder-census-2026.md",
       "to": "source.nycac.shared-folder-census.2026",
       "fragment": null,
-      "line": 41,
+      "line": 67,
       "kind": "link"
     },
     {
@@ -8439,7 +9267,7 @@
       "toPath": "docs/knowledge-bank/claims/nycac-advocacy-operating-playbook.md",
       "to": "claim.nycac.advocacy-operating-playbook",
       "fragment": null,
-      "line": 42,
+      "line": 68,
       "kind": "link"
     },
     {
@@ -8448,7 +9276,7 @@
       "toPath": "docs/knowledge-bank/applications/nycac-civic-product-operations.md",
       "to": "application.nycac.civic-product-operations",
       "fragment": null,
-      "line": 43,
+      "line": 69,
       "kind": "link"
     },
     {
@@ -8457,7 +9285,7 @@
       "toPath": "docs/knowledge-bank/evaluations/nycac-shared-folder-production-2026-07-19.md",
       "to": "evaluation.nycac.shared-folder-production.2026-07-19",
       "fragment": null,
-      "line": 44,
+      "line": 70,
       "kind": "link"
     },
     {
@@ -8607,8 +9435,8 @@
     {
       "fromPath": "docs/knowledge-bank/research-inquiries/photography/layout-a-council-chamber.md",
       "from": "research-inquiry.photography.layout-a.council-chamber",
-      "toPath": "docs/knowledge-bank/methods/photographic-oral-history-return.md",
-      "to": "method.photography.oral-history-return",
+      "toPath": "docs/knowledge-bank/sources/recollections/jamie-council-chamber-photo-2026-07.md",
+      "to": "source.recollection.jamie-council-chamber-photo.2026-07",
       "fragment": null,
       "line": 9,
       "kind": "link"
