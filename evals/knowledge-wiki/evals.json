@@ -1,6 +1,6 @@
 {
   "suite": "knowledge-wiki-foundation-E",
-  "version": 4,
+  "version": 5,
   "authority": "knowledge-wiki-employment-context-and-hiring-acceptance-team-handoff-2026-07-18.md, with M as the implementation spine",
   "principle": "Markdown is the record. The graph is compiled from the record. The portfolio is a selective projection from the governed system.",
   "scoring": "Every deterministic criterion blocks independently. Human authority gates must remain explicitly open until observed; they are not averaged into a synthetic score.",
@@ -222,6 +222,8 @@
         "photo_recollection_nonpublishing",
         "photo_inquiry_avoids_photo_counting",
         "photo_callnyc_oral_history_default_closed",
+        "photo_nyc_council_open_data_oral_history_bounded",
+        "photo_event_transcript_select_tree_bounded",
         "photo_first_field_close_reading_bounded",
         "photo_curatorial_authority_advisory",
         "photo_protected_absence_first_class",
@@ -232,6 +234,36 @@
         "photo_authority_registry_bounded",
         "photo_commands_wired",
         "photo_human_gates_open"
+      ]
+    },
+    {
+      "id": "pre-launch-archive-production",
+      "criteria": [
+        "campaign_photo_population_closed",
+        "campaign_photo_assets_metadata_only",
+        "campaign_photo_human_gates_open",
+        "hearing_corpus_complete",
+        "hearing_transcript_integrity",
+        "hearing_attribution_closed",
+        "hearing_positions_bounded",
+        "commercial_rent_corpus_complete",
+        "commercial_rent_transcript_integrity",
+        "commercial_rent_support_turns_preserved",
+        "commercial_rent_public_officials_included",
+        "commercial_rent_public_official_projection_clean",
+        "commercial_rent_prime_sponsor_absences_bounded",
+        "commercial_rent_written_testimony_preserved",
+        "commercial_rent_public_event_corpus_complete",
+        "commercial_rent_public_event_officials_complete",
+        "commercial_rent_public_event_roles_bounded",
+        "commercial_rent_public_event_absences_bounded",
+        "commercial_rent_state_sources_bounded",
+        "commercial_rent_public_event_projection_clean",
+        "archival_public_boundary_clean",
+        "current_work_protected",
+        "current_work_claim_held",
+        "cost_aware_eval_ladder_wired",
+        "full_release_gate_preserved"
       ]
     },
     {

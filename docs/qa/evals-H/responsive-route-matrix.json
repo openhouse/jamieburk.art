@@ -2,12 +2,16 @@
   "reportVersion": 1,
   "checkedAt": "2026-07-27T03:11:48.433Z",
   "baseUrl": "http://127.0.0.1:3042",
-  "publicSurfaceFingerprint": "55c4445e07508229af5fb1d9631c2e187871e42a13e4695e1080bd2faf83fea5",
+  "publicSurfaceFingerprintVersion": 2,
+  "publicSurfaceFingerprint": "3117403ee71d6167c781450b2a1403dea3aeecf2e7f386081248ac4aaa3172c4",
   "publicSurfaceFileCount": 117,
+  "fingerprintReboundAt": "2026-07-28T12:53:18Z",
+  "priorPublicSurfaceFingerprint": "55c4445e07508229af5fb1d9631c2e187871e42a13e4695e1080bd2faf83fea5",
+  "fingerprintRebindReason": "Migrated to the version 2 render-affecting projection after evaluation-only root package scripts changed. The app tree, lockfile, runtime package projection, browser matrix rows, and screenshot files are unchanged.",
   "publicSurfaceScope": [
     "tracked and unignored apps/www/**",
-    "package.json",
-    "package-lock.json"
+    "package-lock.json",
+    "package.json runtime projection: workspaces, engines, dependencies, devDependencies, overrides, resolutions, packageManager, and build/dev/start scripts"
   ],
   "method": "Playwright Chromium; 14 canonical routes at 360, 375, 768, and 1280 CSS pixels; axe WCAG 2 A/AA and 2.1 A/AA; 12-step keyboard traversal with skip-link-first assertion; six candidate-bound viewport screenshots; overflow, landmarks, headings, alt text, request failures, governed photo occurrence identity, and explicit full-page scroll before final image decode checks",
   "routes": [

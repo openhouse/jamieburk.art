@@ -1,22 +1,176 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `6692a8238750b7bea14278f4524289f3ba5f36b0`
-**Generation time:** 2026-07-26T23:54:01-04:00
-**Source fingerprint:** `54ce9251a18c8897301f040586c1b056cd89122d6594fcd8cc897a296415854f`
+**Source commit:** `a6d601f45ea0f6d3b36598329aa97cece168b27e`
+**Generation time:** 2026-07-28T12:18:12-04:00
+**Source fingerprint:** `e087290217d1d579a55950e360f6a347b9bc0e4e8f332a71354aca8aa4d4d496`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 33
+- Nodes added: 231
 - Nodes removed: 0
-- Edges added: 103
+- Edges added: 349
 - Edges removed: 0
 - New type-aware orphans: 0
-- Current rights-review records: 7
+- Current rights-review records: 160
 
 ## Added nodes
 
+- `asset.campaign-photo.0199f32c9a0c143e`
+- `asset.campaign-photo.02dc1dddd22ceda9`
+- `asset.campaign-photo.032ec6d6e3048a7d`
+- `asset.campaign-photo.03c6553fb5dc3a7a`
+- `asset.campaign-photo.040c9b11e379ce22`
+- `asset.campaign-photo.043132bd95e041b1`
+- `asset.campaign-photo.08f58226971d2b1b`
+- `asset.campaign-photo.0b24a44db6bd6460`
+- `asset.campaign-photo.0e9258c38519704e`
+- `asset.campaign-photo.10623906d99d6963`
+- `asset.campaign-photo.1188ac64a27a8fad`
+- `asset.campaign-photo.12676f2b13634fd0`
+- `asset.campaign-photo.1365d82a9008da3e`
+- `asset.campaign-photo.13aed8bb2a40c874`
+- `asset.campaign-photo.179cb3088570dcdd`
+- `asset.campaign-photo.1a6204833c9faf56`
+- `asset.campaign-photo.1adb7f1f4df5b612`
+- `asset.campaign-photo.1b2cc1de480a9b3a`
+- `asset.campaign-photo.1c2694bf83d90c5a`
+- `asset.campaign-photo.1ccc243d68c4159d`
+- `asset.campaign-photo.1d514a5a8497b0c1`
+- `asset.campaign-photo.1e3fe75336367cd0`
+- `asset.campaign-photo.1e61dc5ea7cd6882`
+- `asset.campaign-photo.2050167a9fb58b06`
+- `asset.campaign-photo.205e07c0f1278c92`
+- `asset.campaign-photo.22b7c768b5779c6a`
+- `asset.campaign-photo.230e5833c25fc753`
+- `asset.campaign-photo.2310f99697760883`
+- `asset.campaign-photo.23f6df27ef95b09e`
+- `asset.campaign-photo.2466fad3b8e97e04`
+- `asset.campaign-photo.2472f21172337ea0`
+- `asset.campaign-photo.2647fbdc3f6ead60`
+- `asset.campaign-photo.26622661f62d0841`
+- `asset.campaign-photo.2bbc3cfc676c049d`
+- `asset.campaign-photo.2e7104dea66883c4`
+- `asset.campaign-photo.303c2be82fa8b53c`
+- `asset.campaign-photo.3409a79b25edfdef`
+- `asset.campaign-photo.35b4bd2ab4c5dccc`
+- `asset.campaign-photo.368e549e2c3a1ebc`
+- `asset.campaign-photo.376b5b0343db0563`
+- `asset.campaign-photo.38ee87289f685dd3`
+- `asset.campaign-photo.3a1498c89d29ca58`
+- `asset.campaign-photo.3a9922504da5b481`
+- `asset.campaign-photo.3bbceada5aa9eb33`
+- `asset.campaign-photo.3bf2bcb3eb6fb426`
+- `asset.campaign-photo.3d42fb2268d2d883`
+- `asset.campaign-photo.40f5901ba30a81f3`
+- `asset.campaign-photo.4146f81bb29a8169`
+- `asset.campaign-photo.430243a1131e740b`
+- `asset.campaign-photo.43a6e2d010a517b0`
+- `asset.campaign-photo.440cc9e0e48dfe63`
+- `asset.campaign-photo.48f3ae91eb83155f`
+- `asset.campaign-photo.4977535e1dbd13e6`
+- `asset.campaign-photo.4f7d6d63c170d7aa`
+- `asset.campaign-photo.52137e18c0e6764a`
+- `asset.campaign-photo.52338ab8549f8c0a`
+- `asset.campaign-photo.524ab875619d516b`
+- `asset.campaign-photo.53de3f449eca4725`
+- `asset.campaign-photo.549ed762ffd84bec`
+- `asset.campaign-photo.559ff95ea993e6d8`
+- `asset.campaign-photo.55b8d6f6325f0374`
+- `asset.campaign-photo.5ab67b6200ae033f`
+- `asset.campaign-photo.5c74959c37102c5d`
+- `asset.campaign-photo.5fd25631fbcbbd10`
+- `asset.campaign-photo.61b2f644d6474abc`
+- `asset.campaign-photo.67f08df7f8349297`
+- `asset.campaign-photo.68503f9d3213b306`
+- `asset.campaign-photo.69a375cfd963cad6`
+- `asset.campaign-photo.6d8b1a678828001b`
+- `asset.campaign-photo.6e36cffcc78a1719`
+- `asset.campaign-photo.704398f326cc3b6e`
+- `asset.campaign-photo.70651174d791c056`
+- `asset.campaign-photo.70d58f6828f58ef0`
+- `asset.campaign-photo.72bf7b3e2348cfd7`
+- `asset.campaign-photo.7387524543000647`
+- `asset.campaign-photo.74238d6086e1c66d`
+- `asset.campaign-photo.77b3556c58d2a566`
+- `asset.campaign-photo.7a1ed9c6da128b03`
+- `asset.campaign-photo.7ab609530b7dcbce`
+- `asset.campaign-photo.7cc0840520ccde58`
+- `asset.campaign-photo.7d774f11d41a4478`
+- `asset.campaign-photo.82a3050f68e011ea`
+- `asset.campaign-photo.83bcd5a46f36a1fa`
+- `asset.campaign-photo.8d8a2837ac321373`
+- `asset.campaign-photo.8defae563bb5fa13`
+- `asset.campaign-photo.8f7baefa346d323f`
+- `asset.campaign-photo.90c2249f0fb6fb63`
+- `asset.campaign-photo.95af7828b74359ad`
+- `asset.campaign-photo.96084256693129a2`
+- `asset.campaign-photo.96aefabc5198ee9a`
+- `asset.campaign-photo.98b28d2cf82c8adb`
+- `asset.campaign-photo.9b5fdbf2e476ac91`
+- `asset.campaign-photo.9d4e387580584f7b`
+- `asset.campaign-photo.9fb0a52cf4354ebb`
+- `asset.campaign-photo.a1f165c537611731`
+- `asset.campaign-photo.a32c49a90c6aaee0`
+- `asset.campaign-photo.a66a61649250a637`
+- `asset.campaign-photo.a80473a59026e985`
+- `asset.campaign-photo.a932403c3cf55bce`
+- `asset.campaign-photo.a9cc95d2d0a6df66`
+- `asset.campaign-photo.ab364b6b20b2e869`
+- `asset.campaign-photo.acade2e06824b011`
+- `asset.campaign-photo.ae24503501714c45`
+- `asset.campaign-photo.b109907f73e376eb`
+- `asset.campaign-photo.b1977fb8aae9903d`
+- `asset.campaign-photo.b37ee9efa9e88b96`
+- `asset.campaign-photo.b422c1410783d751`
+- `asset.campaign-photo.b4ab7bc5e961c2dc`
+- `asset.campaign-photo.b53a4f90360eef85`
+- `asset.campaign-photo.b55dabc9ee0cc204`
+- `asset.campaign-photo.b631cf023417a2c9`
+- `asset.campaign-photo.b830bcafefdaf941`
+- `asset.campaign-photo.bb94acf9ba572191`
+- `asset.campaign-photo.bba58f6f000d074d`
+- `asset.campaign-photo.bf98e8ec4f04ee92`
+- `asset.campaign-photo.c134ee6de9ed1aa2`
+- `asset.campaign-photo.c18079c47a53f516`
+- `asset.campaign-photo.c5559b8f19992f00`
+- `asset.campaign-photo.c75b77fcaac4cdd6`
+- `asset.campaign-photo.c8fcb51bdce13ccd`
+- `asset.campaign-photo.c97c7279993d23ca`
+- `asset.campaign-photo.ce1e301a40d12a25`
+- `asset.campaign-photo.ce9d97e710a07a12`
+- `asset.campaign-photo.cff20ada0152dfee`
+- `asset.campaign-photo.d1ef2cddd1d6303b`
+- `asset.campaign-photo.d5c81af1b9dc7826`
+- `asset.campaign-photo.d6c74aa644f54305`
+- `asset.campaign-photo.d79fe2484411037a`
+- `asset.campaign-photo.d8b1baf45de887fa`
+- `asset.campaign-photo.d9f60ee648ed9c86`
+- `asset.campaign-photo.daa4c1fa2736f53e`
+- `asset.campaign-photo.dcc5b6d009a31e29`
+- `asset.campaign-photo.e11a5a25308fe34d`
+- `asset.campaign-photo.e17600b7017c8e0c`
+- `asset.campaign-photo.e5c4640800e21f89`
+- `asset.campaign-photo.e60f7651f53a2a7f`
+- `asset.campaign-photo.e65b8069e3a13d8e`
+- `asset.campaign-photo.e688532ae7edd03b`
+- `asset.campaign-photo.e724ad96c9dc4a3e`
+- `asset.campaign-photo.e7672115458bad1b`
+- `asset.campaign-photo.ed7c0eb752b189d8`
+- `asset.campaign-photo.ee9c67e6ef652e72`
+- `asset.campaign-photo.f135b3f4c4a52995`
+- `asset.campaign-photo.f27ae45858366fcc`
+- `asset.campaign-photo.f329a1eb0f7771f5`
+- `asset.campaign-photo.f367adc261e6821c`
+- `asset.campaign-photo.f4b6e494e0783c0a`
+- `asset.campaign-photo.f56da3b304cc31ac`
+- `asset.campaign-photo.f82cbba6d060d9b2`
+- `asset.campaign-photo.fba848a936a19dc1`
+- `asset.campaign-photo.fc3e18910fda022f`
+- `asset.campaign-photo.fd4a5b864fbc0d0a`
+- `asset.campaign-photo.feeab43811ffe7b2`
 - `asset.photo.nyc-council-open-data-portrait.2026`
+- `claim.action-lab.prepublication-review.2026`
 - `decision.photo.home-east-river.layout-b`
 - `decision.photo.protected-absence.layout-b`
 - `edition.portfolio.layout-b.2026-07`
@@ -24,8 +178,26 @@ Compared with the graph artifact on `origin/develop`.
 - `evaluation.photography-notebook.2026-07-22`
 - `evaluation.photography-residency-proposal.2026-07-22`
 - `evaluation.photography-studio-connection.2026-07-22`
+- `event.crs.public-gathering.friends-and-lovers.2026-02-17`
+- `event.crs.public-gathering.greenpoint.2025-11-10`
+- `event.crs.public-gathering.the-commissioner.2025-11-13`
+- `event.crs.public-rally.jimmys-corner.2026-04-10`
+- `event.nycc.commercial-rent.hearing-2021-09-17`
+- `event.nycc.commercial-rent.introduction-2019-11-14`
+- `event.nycc.commercial-rent.reintroduction-2022-03-24`
+- `event.nycc.commercial-rent.resolution-introduction-2026-06-11`
+- `event.nycc.consumer-affairs.cabaret-law-2017-06-19`
+- `event.nycc.consumer-affairs.cabaret-law-2017-09-14`
+- `event.nycc.cultural-affairs.preliminary-budget-2018-03-16`
+- `event.nycc.public-safety.march-2019-02-11`
+- `event.nycc.small-business.open-data-2019-03-18`
+- `event.nycc.small-business.sbjsa-2018-10-22`
+- `index.crs.public-support-speeches`
+- `index.knowledge-wiki.campaign-site-photographs`
+- `index.knowledge-wiki.commercial-rent-stabilization-testimony`
 - `index.knowledge-wiki.photographic-knowledge-loop`
 - `index.knowledge-wiki.photography-notebook`
+- `index.knowledge-wiki.public-testimony-and-hearing-voices`
 - `index.photo-set.east-river-canoe.2022`
 - `method.photographic-archive-fieldwork`
 - `photo.east-river-manhattan-bridge.2022`
@@ -38,14 +210,40 @@ Compared with the graph artifact on `origin/develop`.
 - `research-inquiry.callnyc-interface-photo-oral-history`
 - `research-inquiry.canoe-bike-journeys`
 - `research-inquiry.nyc-council-open-data-photo.2026`
+- `research.current-workstream-source-return.2026-07-27`
 - `research.photography-first-field-close-reading.2026-07-26`
 - `research.photography-first-pass-residency-proposal.2026-07-22`
 - `research.photography-notebook-opening.2026-07-22`
 - `research.photography-studio-connection.2026-07-22`
+- `source.action-lab.prepublication-review-summary.2026-07`
+- `source.campaign-site-photo-census.fairrent-2019.2026-07`
+- `source.campaign-site-photo-census.fairrent-current.2026-07`
+- `source.campaign-site-photo-census.letnycdance.2026-07`
+- `source.campaign-site-photo-census.nycartc.2026-07`
+- `source.campaign-site-photo-census.savenycspaces.2026-07`
+- `source.campaign-site-photo-census.talksnotraids.2026-07`
+- `source.crs.public-event.crs-friends-and-lovers-2026-02-17`
+- `source.crs.public-event.crs-greenpoint-2025-11-10`
+- `source.crs.public-event.crs-jimmys-corner-rally-2026-04-10`
+- `source.crs.public-event.crs-the-commissioner-2025-11-13`
+- `source.jamie.commercial-rent-speech-rehearsal.2026-07`
+- `source.nycc.commercial-rent.hearing-2021-09-17.official-record`
+- `source.nycc.commercial-rent.introduction-2019-11-14.official-record`
+- `source.nycc.commercial-rent.reintroduction-2022-03-24.official-record`
+- `source.nycc.commercial-rent.resolution-introduction-2026-06-11.official-record`
+- `source.nycc.consumer-affairs.cabaret-law-2017-06-19.official-transcript`
+- `source.nycc.consumer-affairs.cabaret-law-2017-09-14.official-transcript`
+- `source.nycc.cultural-affairs.preliminary-budget-2018-03-16.official-transcript`
+- `source.nycc.public-safety.march-2019-02-11.official-transcript`
+- `source.nycc.small-business.open-data-2019-03-18.official-transcript`
+- `source.nycc.small-business.sbjsa-2018-10-22.official-transcript`
+- `source.nys.small-business-rent-stabilization.2025-2026`
 - `source.open-library.known-and-strange-things-contents.2016`
 - `source.openhouse.photo-fieldwork.2026-07-22`
 - `source.permission.elana-gordon.east-river-portfolio`
 - `source.photo-metadata.east-river.2022`
+- `source.private-coaching.chad-berkowitz.2026-07`
 - `source.recollection.jamie.canoe-commuting.2026-07`
+- `source.recollection.jamie.event-photo-select-workflow.2026-07`
 - `source.recollection.jamie.nyc-council-open-data-photo.2026-07`
 - `source.teju-cole.far-away-from-here-process.2016`

@@ -5,7 +5,7 @@ kind: project
 status: maintained
 visibility: public-safe
 sensitivity: moderate
-last_reviewed: 2026-07-19
+last_reviewed: 2026-07-28
 review_by: 2026-09-19
 canonical_path: docs/knowledge-bank/projects/fair-rent-nyc.md
 summary: Collective commercial-rent-stabilization campaign connecting cultural-space and small-business experience with legislative, legal, public-data, and organizing work.
@@ -20,6 +20,12 @@ relations:
   - type: related_to
     target: project.save-nyc-spaces
     href: save-nyc-spaces.md
+  - type: related_to
+    target: index.knowledge-wiki.commercial-rent-stabilization-testimony
+    href: ../indexes/commercial-rent-stabilization-testimony.md
+  - type: related_to
+    target: index.crs.public-support-speeches
+    href: ../indexes/commercial-rent-public-support-speeches.md
 ---
 
 # Fair Rent NYC
@@ -41,6 +47,26 @@ The 2026 record documents work to preserve earlier Fair Rent NYC campaign
 history while coordinating with current small-business and policy partners. It
 keeps city and state lanes distinct, identifies legal and policy questions,
 and treats data, contacts, stories, and publication as governed resources.
+
+## Council record
+
+The [Commercial Rent Stabilization testimony
+index](../indexes/commercial-rent-stabilization-testimony.md) preserves the
+complete recovered Council record from the 2019 bill introduction through the
+2021 hearing, 2022 reintroduction, and 2026 state-legislation resolution. It
+keeps Jamie's and the coalition's work inside a larger civic record of
+supportive, qualified, contextual, skeptical, and opposing voices.
+
+Supportive public officials are included at statement level. Sponsorship,
+co-sponsorship, favorable questions, and explicit speech remain separate
+evidence classes.
+
+The [public support speech finding
+aid](../indexes/commercial-rent-public-support-speeches.md) adds 23
+speaker-specific working reading copies from four recovered 2025-2026 public
+events. It includes speeches by public officials, candidates, organizers,
+business owners, and advocates while preserving their event-time roles and
+requiring audio review before quotation.
 
 ## Boundary
 

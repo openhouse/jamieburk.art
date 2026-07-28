@@ -447,7 +447,7 @@ test("RFC 0003 photographic knowledge baseline passes", () => {
   assert.equal(result.passed, true, result.failures.join(", "));
   assert.equal(result.counts.photos, 6);
   assert.equal(result.counts.placements, 11);
-  assert.equal(result.counts.blockingCriteria, 26);
+  assert.equal(result.counts.blockingCriteria, 27);
 });
 
 test("a derivative checksum drift fails closed", () => {
@@ -617,6 +617,37 @@ test("introduced branch history leakage fails the public boundary", () => {
   });
   assert.equal(
     result.checks.photo_introduced_history_boundary_clean,
+    false
+  );
+});
+
+test("official public-source UUIDs do not masquerade as private photo identifiers", () => {
+  const publicGuid = "41F1062B-FC32-4A12-846E-65CEB3BB052C";
+  const officialUrl =
+    `https://legistar.council.nyc.gov/View.ashx?GUID=${publicGuid}&ID=5316935&M=F`;
+  const allowed = evaluatePhotoKnowledge({
+    introducedHistorySources: [
+      {
+        relativePath: "docs/knowledge-bank/sources/official-hearing.md",
+        text: `Official source: ${officialUrl}`
+      }
+    ]
+  });
+  assert.equal(
+    allowed.checks.photo_introduced_history_boundary_clean,
+    true
+  );
+
+  const rejected = evaluatePhotoKnowledge({
+    introducedHistorySources: [
+      {
+        relativePath: "docs/knowledge-bank/assets/private-photo.md",
+        text: `Private photo identifier: ${publicGuid}`
+      }
+    ]
+  });
+  assert.equal(
+    rejected.checks.photo_introduced_history_boundary_clean,
     false
   );
 });

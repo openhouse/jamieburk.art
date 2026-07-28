@@ -178,6 +178,7 @@
       "photo_inquiry_avoids_photo_counting": true,
       "photo_callnyc_oral_history_default_closed": true,
       "photo_nyc_council_open_data_oral_history_bounded": true,
+      "photo_event_transcript_select_tree_bounded": true,
       "photo_first_field_close_reading_bounded": true,
       "photo_curatorial_authority_advisory": true,
       "photo_protected_absence_first_class": true,
@@ -194,7 +195,7 @@
       "photos": 6,
       "placements": 11,
       "requiredRecords": 22,
-      "blockingCriteria": 26,
+      "blockingCriteria": 27,
       "historicalRevocationConflicts": 0,
       "restorationDecisionConflicts": 0,
       "productionOpen": 6

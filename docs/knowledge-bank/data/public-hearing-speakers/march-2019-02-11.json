@@ -1,0 +1,2045 @@
+{
+  "schemaVersion": 1,
+  "corpusId": "corpus.nyc-council.public-hearing-voices.2026-07",
+  "event": {
+    "id": "event.nycc.public-safety.march-2019-02-11",
+    "title": "Committee on Public Safety hearing on M.A.R.C.H. operations",
+    "date": "2019-02-11",
+    "committee": "Committee on Public Safety",
+    "championedIssues": [
+      "transparency and accountability for M.A.R.C.H. operations",
+      "an end to destabilizing multi-agency raids",
+      "Talks Not Raids",
+      "trust-based compliance assistance"
+    ]
+  },
+  "source": {
+    "organization": "New York City Council",
+    "officialUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=2582E680-452D-46B1-8DE1-C5C5168F5D63&ID=7080592&M=F",
+    "transcriptFile": "march-2019-02-11.txt",
+    "extraction": "pdftotext -layout",
+    "transcriptSha256": "6947a24562a221cd2bc25cdcc303ba42915aa0ca6d18339214dcc3476b11b506"
+  },
+  "method": {
+    "population": "Every attributed speaker turn parsed from the complete official transcript text.",
+    "attribution": "Speaker labels are preserved from the official transcript. A small alias map normalizes obvious recorded variants while retaining every original label.",
+    "position": "High-precision phrase matching identifies explicit positions. Context and review-needed records remain in the ledger and complete transcript.",
+    "warning": "Position fields are research aids, not quotations, endorsements, or substitutes for human close reading."
+  },
+  "closure": {
+    "pageCount": 105,
+    "turnCount": 277,
+    "speakerCount": 23,
+    "explicitSupportSpeakerCount": 2,
+    "alignmentReviewNeededCount": 14,
+    "jamieTranscriptRecovered": true,
+    "allParsedTurnsAssignedToSpeaker": true
+  },
+  "explicitSupportSpeakers": [
+    {
+      "speaker": "Alan Sugarman",
+      "position": "explicit-support-with-caveat",
+      "transcriptPages": [
+        100,
+        102
+      ],
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "abolish m.a.r.c.h.",
+        "central reporting"
+      ]
+    },
+    {
+      "speaker": "Jamie Burkart",
+      "position": "explicit-support",
+      "transcriptPages": [
+        90
+      ],
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "talks not raids",
+        "need transparency"
+      ]
+    }
+  ],
+  "speakers": [
+    {
+      "speaker": "Alan Sugarman",
+      "transcriptLabels": [
+        "ALAN SUGARMAN"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        100,
+        102
+      ],
+      "wordCount": 449,
+      "position": "explicit-support-with-caveat",
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "abolish m.a.r.c.h.",
+        "central reporting"
+      ],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but ",
+        "amend"
+      ],
+      "turns": [
+        {
+          "speaker": "Alan Sugarman",
+          "transcriptPage": 100,
+          "text": "Hello my name is Alan Sugarman. I’m an attorney here in the city. I would like the opportunity to file a written statement in the next week or so, and leave it in the record."
+        },
+        {
+          "speaker": "Alan Sugarman",
+          "transcriptPage": 100,
+          "text": "[interposing] Okay."
+        },
+        {
+          "speaker": "Alan Sugarman",
+          "transcriptPage": 100,
+          "text": "[interposing] Okay. So, quickly—I’ll use my couple of minutes. My first thought was to abolish M.A.R.C.H., but that—I ran into a problem there. I couldn’t find any official document showing that it had actually been established. You’re proposed legislation talks about (A) The Office shall submit, and it refers to the multi-agency response to community hotspots. After diligent search of the city’s website and Google publicly, it’s—there’s no document that shows if it was ever established. There are no guidelines. There are no policies. There’s nothing. Mayor Giuliani probably the most authoritarian mayor we have ever had. His efforts should not be the model of what we do here in 2019, and I think it should be abolished and if the Mayor wishes to reestablish it or the City Council, let’s reestablish it with the proper declaration and a proper amendment of the—of the city laws and the City Rules and Regulations. This is really absurd. Quickly, first I’d like to thank Mr. Muchmore who’s here today for his efforts that led to the ending of the Cabaret Law, but the Cabaret Law is really in effect today in another way through the Zoning Regulation, and I assume because unless you’re in Use Group 12—I’m over-simplifying— you can’t have dancing and if you can’t have dancing and it doesn’t show up on your Certificate of—of Public Assembly, you could be cited by M.A.R.C.H. So M.A.R.C.H. is still fully enabled to do a lot other stuff elsewhere in the city. So, just a couple of specific suggestions. There should be central reporting [bell] of what--the M.A.R.C.H. records. There should be either sent—they shouldn’t be on a precinct-by-precinct. All the records should go centrally. They should be required to videotape all the raids and their body cams should be kept. The— the record report should include the name of every single participant in the raid, the name, agency, and serial number, et cetera, and some people should create a standard form. But I think it should be abolished, then recreated and it should—they should report to the Nightlife Commission and there should be no raids unless approved by the Nightlife Commission. Thank you."
+        },
+        {
+          "speaker": "Alan Sugarman",
+          "transcriptPage": 102,
+          "text": "I did not submit a FOIL. I just did a search on NYC.gov, but this was created in 1998. That appears in the records, and it was created by Mayor Giuliani. There’s no document showing the establishment of this agency. In fact, it was once called the Multiple."
+        },
+        {
+          "speaker": "Alan Sugarman",
+          "transcriptPage": 102,
+          "text": "If I FOIL?"
+        }
+      ]
+    },
+    {
+      "speaker": "Andrew Muchmore",
+      "transcriptLabels": [
+        "ANDREW MUCHMORE"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        92
+      ],
+      "wordCount": 483,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but "
+      ],
+      "turns": [
+        {
+          "speaker": "Andrew Muchmore",
+          "transcriptPage": 92,
+          "text": "My name is Andrew Muchmore. I operate a small bar and music venue in Williamsburg, and I also operate law firm in Williamsburg that caters in part to hospitality clients. I believe the purpose of M.A.R.C.H. is worthwhile, but there’s a serious problem with proportionality and oversight. They’re effectively is no oversight because it’s a multi-agency body and having scores of uniformed officers swarm on a small establishment is extremely disproportionate. The Council should understand that the cost of such raid for simply smaller establishments, especially ones that are run by artists or non-profit organizations could be catastrophic. The Administrative Code is so complex if you send a dozen enforcement officers in from different agencies they’ll be able to write enough summons for almost any establishment to put it out of business. The Health Code is inordinately complex. I’ve always had a A on my own establishment yet every year we have to pay more than $1,000 in fines. The Zoning Resolution is particularly problematic. The, you know, dancing was previously prohibited in most of the city, and the description of any place on certificate of occupancy will never fully describe everything that takes place in it. For instance, there is no zoning category or use group or legislative chamber. So, if—if you’re in a room, first of all there are no rooms that have only a single purpose. Every room is used for lots of purposes, but if you do not exactly comply with your certificate of occupancy, that can be a basis for fines that are catastrophically expense to correct because you also have to hire an architect and go through the Department of Buildings. You have accessory uses, but the Department of Buildings keeps changing its interpretation of what it considers an accessory use. I had a client that recently was forced to close their nightlife establishment in Williamsburg for a number of reasons, but one issue that they had experienced was the Department of Buildings decided that it as no longer an accessory use to allow the consumption of food and alcohol outdoors if the—in an area that is—can legally be occupied in conjunction with the bar and restaurant business. They decided it was now a primary use, and what was previously permitted under the certificate of occupancy was no longer permitted. If you look at the index of uses in the Zoning Resolution [bell] they’re simply too complex for people to realistically comply with, and common sense is required and the enforcement is—the Mayor—Governor Cuomo recently cited the example of a lemonade stand that was shut down by the Department of Health, and a 7-year-old boy trying to sell lemonade for a quarter. Some—some logic has to be used in enforcing these laws, and I think coordination with the Office Nightlife would be very helpful in ensuring that M.A.R.C.H. does not exceed rational bounds of—of necessary enforcement. [pause]"
+        }
+      ]
+    },
+    {
+      "speaker": "B E F O R E",
+      "transcriptLabels": [
+        "B E F O R E"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        1
+      ],
+      "wordCount": 4,
+      "position": "procedural-or-unattributed",
+      "basis": "The transcript label is procedural or does not identify a person.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "turns": [
+        {
+          "speaker": "B E F O R E",
+          "transcriptPage": 1,
+          "text": "RORY I. LANCMAN Chairperson"
+        }
+      ]
+    },
+    {
+      "speaker": "Chairperson Eugene",
+      "transcriptLabels": [
+        "CHAIRPERSON EUGENE"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        19
+      ],
+      "wordCount": 5,
+      "position": "context",
+      "basis": "No explicit position on the bounded championed issues was detected.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "turns": [
+        {
+          "speaker": "Chairperson Eugene",
+          "transcriptPage": 19,
+          "text": "I would agree with that."
+        }
+      ]
+    },
+    {
+      "speaker": "Chairperson Lancman",
+      "transcriptLabels": [
+        "CHAIRPERSON LANCMAN"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        3,
+        5,
+        13,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        24,
+        26,
+        27,
+        28,
+        48,
+        52,
+        57,
+        60,
+        61,
+        62,
+        63,
+        67,
+        72,
+        77,
+        81,
+        84,
+        85,
+        88,
+        89,
+        92,
+        98,
+        99,
+        100,
+        102,
+        103,
+        104
+      ],
+      "wordCount": 2427,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but ",
+        "concern",
+        "question"
+      ],
+      "turns": [
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 3,
+          "text": "Good morning. I am d Council Member Rory Lancman, Chair of the Committee on the Justice System, and today we are here to discuss the Multi-Agency Response to Community Hotspots or M.A.R.C.H. operations led by the NYPD and Council Member Levin’s reporting bill Intro 1156. M.A.R.C.H. operations were originally established by former Mayor Rudy Giuliani. They are multi-agency raids where agencies such as the FDNY, Department of Health and Mental Hygiene, State Liquor Authority, Department of Environmental Protection, and Department of Buildings [coughs] enter a Nightlife establishment, ask patrons to leave and proceed to inspect venues. During the inspection, each agency can issue citations, fines and summonses. M.A.R.C.H. raids were originally designed during the Giuliani Administration as a way to enforce the Cabaret Laws during the height of Broken Windows policing. Since the Council repealed the Cabaret Laws, and established the Office of Nightlife in 2017 to more effectively and fairly regulate these business, M.A.R.C.H. raids deserve more scrutiny. There are serious and reasonable safety concerns for the patrons of Nightlife venues particularly those that occupy a previously industrial space or exist only for night. These operations place a tremendous burden on small businesses already struggling to survive. Raids regularly shutter a business during peak weekend hours without notice often without leading to any citations at all. In theory, these raids are driven by 311 complaints about quality of life issues such as noise, incidents that occurred in the venue or the surrounding area, and cooperation with authorities. The data shows that M.A.R.C.H. raid occur more regularly in minority communities or venues frequented by minority patrons without regard to complaints or crime, and even when business owners have gone out of their way to cooperate. Certainly, the number of M.A.R.C.H. raids in a community is not related to the number of establishments or the number of liquor licenses. Otherwise, the Upper East Side would have more raids than Washington Heights rather than a third as many. The city has a responsibility to determine whether a business is violating building, fire or health codes or violating the law, but from 2012 to 2017, 48% of raids resulted in no enforcement action by any agency. Council Member Levin’s bill will help us evaluate the efficacy of these raids by giving us more detailed information about the triggers for M.A.R.C.H. raids, how they are conducted, and how often they result in citations or fines. I look forward to hearing today from the Administration, advocates and business owners about March operations. With that, our first panel of witnesses are from the Administration. If you all would raise your right hand to be sworn in. Do you wear or affirm the testimony you’re about to give is the truth, the whole truth and nothing but the truth?"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 5,
+          "text": "Good. Have you decided amongst yourselves who would like to go first? [pause]"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 13,
+          "text": "Thank you. Is anyone else testifying or just being available to respond to questions? Okay, good. So, let’s talk about how establishments are identified for a M.A.R.C.H. operation. It—from your testimony and—and from the operations order, it seems like there’s a detailed vetting although a very high reliance on 311 and 911 complaints. But as a Council Member representing a district where I get complaints about bars or other establishments that might be causing problems in neighborhood whether it’s noise or—or patrons congregating outside, I’m not—I’m—I’m sympathetic to the—the need to identify establishments that are either unsafe for the patrons or causing community issues. The New York City Artist Coalition did a Freedom of Information Law request, and compiled data I think from 2012 to 2017 that mapped out where these raids are—are taking place, and their results. So, I want to ask you about their first finding, which is that, and I think it’s in 48% of—of these raids no enforcement action is taken. Do you dispute that data, and what can you tell us about how often it is that these raids result in—in enforcement action."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 16,
+          "text": "[interposing] Just to-just—just to clarify. So, a M.A.R.C.H. Operation is—is-is broader than just we’re going to one place? A M.A.R.C.H.—one of—one M.A.R.C.H. operation could be 10, 20, 30--"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 17,
+          "text": "So, with that understanding, just go back to you were comparing for example the Rockaways with--"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 17,
+          "text": "--the coalition put together from the documents that they FOIL’d. I mean they—this wasn’t my understanding. They’re going to testify later. This wasn’t them just going out and anecdotally finding out what happened, but what do you understand the difference between your data is and their data just so we’re on the same page."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 18,
+          "text": "Right. Well, they— just—they used the term raids. So, I don’t know, and we’ll have the opportunity to hear from them whether they’ve—they describe a raid as being a raid of an individual establishment or a M.A.R.C.H. Operation what might be three or four, but let’s just for the sake of the data that—that you agree with and that you are presenting to use. Of—of the establishments that were the subject of these M.A.R.C.H. raids you say about—about 30 or so?"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 18,
+          "text": "Yes."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 18,
+          "text": "Uh-hm."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 19,
+          "text": "I think that it’s— the Coalition will testify for themselves, but from my own mind the operation and—and the word operation or raid are interchangeable. What I mean is that the law enforcement agencies are visiting an establishment to determine their compliance with various and sundry laws."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 19,
+          "text": "That’s what we talked about."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 19,
+          "text": "Okay. [DEPUTY COMMISSIONER MESSNER: We would come that an operation. I mean a raid what I envision as a raid is guns drawn, bulletproof vests and-and barreling down the door, which clearly I think we both agree is not the case during the M.A.R.C.H. Operations. 25"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 20,
+          "text": "Alright, well, I’m— I’m not suggesting that it is, but I’m not prepared to say that isn’t. So, let’s just use the word operation, and we’ll all be happy."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 20,
+          "text": "So, in the—the operations, how many—how many operations have there been just your example the Rockaways in—in the time period that you were talking about?"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 20,
+          "text": "[interposing] Of— sorry, of individual businesses?"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 20,
+          "text": "Okay, of those 30 or since you’re estimating let’s look at it this way. How many M.A.R.C.H. Operations of individual businesses you all did no enforcement action?"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 20,
+          "text": "Well, see that’s- that’s big question."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 21,
+          "text": "Okay."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 21,
+          "text": "Would you agree that—that operating produces no enforcement actions suggests that maybe that operation should not have been conducted especially in light of the fact, which I think we’re going to have testimony of—testimony about later that these operations do put a tremendous strain on those businesses."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 22,
+          "text": "[interposing] I think a better—I think a better analogy would be if a police officer is stopping and frisking someone and nothing is produced from that, it begs the question well why did that stop and frisk occur? And-but if— and in particular if there’s a lot of that, you walked into it. It’s not my fault. [laughter] If there’s—if—if—of there’s a lot of that, then it really questions their policy."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 24,
+          "text": "Well, I think our friends from the Coalition and maybe the—the businesses themselves will—will talk about what seems to be a very high rate of operations that don’t product enforcement actions, and that does raise questions about the selection process, and it does raise questions about the—the worth of these operations. Not ever but in the scale that the department or that—that they’re being conducted. And then in the context of the other aspect that you referred to as the Heat Map, [coughs] which seems to— to-to indicate a much greater activity in communities of color. Now, we’re—we’re—we’re looking at other, you know, analogies where law enforcement in the city is spending a lot of time on enforcement activity in communities of color that—that are hard to justify. So, do you—do you disagree or dispute not just the specific data points that—that—that the Coalition has produced from the FOIL request, but—but the essence of it, right that there is much more enforcement in minority communities. Just--just enforcement activity. There’s much more operation activity minority communities than there are in white communities."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 26,
+          "text": "I want to turn it over to my colleagues, in particular Council Member Levin because it’s his bill, but if we wanted to—to— to arrange a meeting, you, the coalition, the Council Members who are interested, our staff and—and you can see their data and talk with them directly. Have you done that already?"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 27,
+          "text": "[interposing] I understand, I mean but the folks who—who—who got this data and produced this report, have you met with them?"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 27,
+          "text": "[interposing] But you’d be willing to—to meet them. You said you said you wanted to see them."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 27,
+          "text": "Alright. I have a lot more questions, but the—the—the bill’s sponsor is here, and there are other members here. So, Council Member Levin. Let me just also say we’ve also been joined by Council Member Alan Maisel from Brooklyn and Council Member Andy King from the Bronx."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 28,
+          "text": "Andy Cohen. I do it all the time. Sorry."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 48,
+          "text": "Council Member Cohen."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 52,
+          "text": "Council Member Levin, did you want to go back to anything or--? I just—I just thought you might have yielded because Council Member Cohen had to—had to go."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 52,
+          "text": "not required."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 57,
+          "text": "Okay, we’ve heard some reports that that may not be case. So, if we hear that in the testimony or in written testimony we’ll certainly communicate that with you."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 60,
+          "text": "This might have been asked, but what—what is the role of the New Night Mayor in—in all of this and are there times where the—that office has ben invited to try to mediate or address problems or concerns that—that might be presented to-to the various agencies before the M.A.R.C.H. Operation is conducted."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 60,
+          "text": "[interposing] Right, but do you know—do you know if the department has ever take the complaints and concerns and issues that it has an prior to doing a M.A.R.C.H. Operation at a given establishment said let’s call the Office of the Night Mayor and see if they can work it out."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 61,
+          "text": "And the—in the Patrol Guide order that—that gives the—the-the guidelines for conducting these operations maybe it would be a good idea to add a paragraph about and prior to an operation consultation with the Night Mayor. Just looking for ways to try to solve problems. I’m a Council Member again. In my district we’ve got problems with some locations. We want the problem solved in the fastest way possible. It would be good for everybody. Well, that’s all the questions that I have for you all. I want to thank you very much."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 62,
+          "text": "I know that it would be appreciated by the other witnesses if you would maybe hang around and hear what they’ve got to say, and I would appreciate it also. So, if you have the time."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 62,
+          "text": "Thank you. Our next panel Rob Bookman from the New York Hospitality Alliance; Olympia Kazi from the New York City Artists Coalition; Maria Bachi. Sorry if I’m spelling that— saying that wrong, a proprietor of an establishment; Deana Morra from Friends and Lovers; and Rachel Nelson, a small business owner or representative. [pause]"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 62,
+          "text": "[off mic] I’m sorry. I didn’t say correctly."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 62,
+          "text": "[off mic] Alright. [background comments/pause] Do you want us to start? 25"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 63,
+          "text": "[off mic] Yes, you’re welcome. [pause] So, just do we have written testimony from everyone? I have written testimony from the New York City Artist Coalition. Does anyone else have written testimony?"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 63,
+          "text": "Oh, okay, they’re— they’re gathering it up. [pause] Alright. Let’s get you sworn in get started. So could you raise your right hand. Do you swear or affirm the testimony you’re about to give is the truth, the whole truth and nothing but the truth?"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 63,
+          "text": "Thank you. Is there any particular order that you’d like to go in? You seem—you seem ready to go."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 63,
+          "text": "We are going to put the lock on five minutes."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 63,
+          "text": "No requirement that you use the whole five [laughter] and just identify yourself and get started."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 67,
+          "text": "[interposing] Can you just move the--"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 67,
+          "text": "Is the red light on?"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 67,
+          "text": "Okay."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 72,
+          "text": "Thank you."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 77,
+          "text": "Thank you. Well, I—I am glad that I thought of that idea."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 77,
+          "text": "Next. 25"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 81,
+          "text": "Okay. Thank you very much. I know that Council Member Levin has questions for--"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 84,
+          "text": "[off mic] Yes."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 85,
+          "text": "[off mic] Okay."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 85,
+          "text": "Alright. If you all will raise your right hand and get sworn in, we’re going to get started. Do you swear or affirm the testimony you’re about to give is the truth, the whole truth and nothing but the truth?"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 85,
+          "text": "Good. We’re going to put two minutes on the clock. Unless anyone objects, we’ll just start from my right, and work our way around the table. How’s that? Great. So, sir, you’re up. We’ll start with this end."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 88,
+          "text": "So we have the written testimony, right?"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 88,
+          "text": "That’s good."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 88,
+          "text": "Next."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 89,
+          "text": "[off mic] Thank you."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 92,
+          "text": "Thank you."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 98,
+          "text": "[interposing] Sorry, sorry, sorry, sorry. If this is an article you can--"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 98,
+          "text": "Okay."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 98,
+          "text": "Thank you. Who is next?"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 99,
+          "text": "Thank you. 25"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 100,
+          "text": "Absolutely. We check that and--"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 100,
+          "text": "-and have it--"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 102,
+          "text": "Thank you very much. So, you know, we have from the FOIL request, the FOIL response, the NYPD Operations Order No. 27 issued on July 11, 2014, which, you know, is now a public document. It’s—it’s out there, and it doesn’t establish an—an office. It just describes criteria for selecting a location for inclusion into the Multi-Agency Response to Community Hotspots M.A.R.C.H. Operation. So, just this is--"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 102,
+          "text": "Well, my—my—I’m—my point is this is available now."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 102,
+          "text": "Well, this-this is FOIL from the New York Artist Coalition, right?"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 103,
+          "text": "From you?"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 103,
+          "text": "Okay, so—"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 103,
+          "text": "[interposing] You’ve got this?"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 103,
+          "text": "Then share it with him, and we’re going to make it part of our record, and when it goes online, it will be visible in that way. I’m just curious. For the—the—the idea that these M.A.R.C.H. operations should be or officers should have their body cams on. Just—just how do the—the owners of establishments feel about because then your—your patrons are going to be on the video. Do you think that’s a good idea or a bad idea? Any thoughts on that? Okay. Go ahead."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 103,
+          "text": "Yes sir. 25"
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 104,
+          "text": "Okay . Anyone who would have any objections to that to it being video taped? No. Okay. Alright, thank you all very much."
+        },
+        {
+          "speaker": "Chairperson Lancman",
+          "transcriptPage": 104,
+          "text": "Ladies and gentlemen, that concludes our hearing. [gavel] 12 13 14 15 16 17 18 19 20 21 22 23 24 25 C E R T I F I C A T E foregoing transcript is a true and accurate record of the proceedings. We further certify that there is no relation to any of the parties to this action by blood or marriage, and that there is interest in the outcome of this matter. Date ____March 8, 2019_______________"
+        }
+      ]
+    },
+    {
+      "speaker": "Council Member Cohen",
+      "transcriptLabels": [
+        "COUNCIL MEMBER COHEN"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        28,
+        48,
+        49,
+        50,
+        51,
+        52,
+        54
+      ],
+      "wordCount": 263,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but "
+      ],
+      "turns": [
+        {
+          "speaker": "Council Member Cohen",
+          "transcriptPage": 28,
+          "text": "[off mic] Cohen. You know."
+        },
+        {
+          "speaker": "Council Member Cohen",
+          "transcriptPage": 48,
+          "text": "Thank you, Chair. I just want to be clear that I—I understand what we’re talking about. How many raids or operations did you say there were in 2017?"
+        },
+        {
+          "speaker": "Council Member Cohen",
+          "transcriptPage": 48,
+          "text": "In ’17 or ’18? I don’t—I don’t know. I—I heard you testify I think to one year. I wasn’t sure which year."
+        },
+        {
+          "speaker": "Council Member Cohen",
+          "transcriptPage": 49,
+          "text": "And 57 raids—I ran for office because I though there’d be no math, but that’s—you—the—you conduct these operations on half a percent of all facilities that have a liquor license?"
+        },
+        {
+          "speaker": "Council Member Cohen",
+          "transcriptPage": 49,
+          "text": "[laughs]"
+        },
+        {
+          "speaker": "Council Member Cohen",
+          "transcriptPage": 50,
+          "text": "[interposing] I’m sorry, we’ll conduct multiple operations in a single night."
+        },
+        {
+          "speaker": "Council Member Cohen",
+          "transcriptPage": 50,
+          "text": "Okay."
+        },
+        {
+          "speaker": "Council Member Cohen",
+          "transcriptPage": 50,
+          "text": "Can you tell me how many in 2018 how many locations were subject of an operation, how many bars, restaurants or night clubs."
+        },
+        {
+          "speaker": "Council Member Cohen",
+          "transcriptPage": 51,
+          "text": "[interposing] I—I understand. Can you tell me, though in 2018 how many locations you actually did operate? You approved 203, you didn’t get the whole 203."
+        },
+        {
+          "speaker": "Council Member Cohen",
+          "transcriptPage": 52,
+          "text": "No, I—I can’t see any reason to oppose the bill. I’m not seeing—I haven’t heard from any of the business owners who have been subject to one of these operations, but I—I can’t see an object to reporting. I can think of a facility in my district that may be could be—could use one of these honestly. But it’s ultimately I guess the answer is even that, you know, 120 is one percent. It’s a very small percentage of—Thank you, Chair."
+        },
+        {
+          "speaker": "Council Member Cohen",
+          "transcriptPage": 54,
+          "text": "Okay, and you— you’ve-you’ve—have you ever heard a complaint that has happened or I mean has anyone ever said, you know that they-they feel like they’re targeted for the type of music that they--? 25"
+        }
+      ]
+    },
+    {
+      "speaker": "Council Member Levin",
+      "transcriptLabels": [
+        "COUNCIL MEMBER LEVIN"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        42,
+        44,
+        45,
+        46,
+        47,
+        48,
+        52,
+        54,
+        55,
+        57,
+        58,
+        59,
+        60,
+        81,
+        83,
+        84,
+        85
+      ],
+      "wordCount": 1953,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but ",
+        "question"
+      ],
+      "turns": [
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 28,
+          "text": "Thank you very much, Chair. Thank you all for your—for your testimony and for being here today. I guess going off of your testimony, I just want to make this—so what exactly is the criteria? So, if—if there have been 57—there were 57 M.A.R.C.H. Operations last year. Certainly everybody—I don’t know--how many SLA licenses are there?"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 28,
+          "text": "12,000."
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 28,
+          "text": "So, of those 12,000 I’m assuming that more than 57 had some 311 complaints about noise of about people standing outside. I mean I could think of I represent Community Board 1 in Brooklyn. You know, people are smoking outside and get 311 complaints. Music is too loud get 311 complaints. You know that’s—that’s pretty much across the board I think. I think it would actually be hard to find a Nightlife that does have a 311 complaint. So then, what criteria of all the universe of—of Nightlife establishments that have a variety of 311 complaints do we—did we use to—to—to choose these 57?"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 29,
+          "text": "[interposing] And what kind of problems?"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 30,
+          "text": "Uh-hm."
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 30,
+          "text": "[interposing] And the NCO Program is a newer program."
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 30,
+          "text": "It’s only been around for a couple of years. So, obviously the M.A.R.C.H. Task Force is-predates the NCO program."
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 31,
+          "text": "Okay. I just want to be clear. So is it related to crime or is it related to-to quality of life?"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 31,
+          "text": "But we’ve heard from a lot of establishments that have had a M.A.R.C.H. Operation that didn’t include a—they didn’t have a history of violence. I mean I, you know, I had an establishment in my district, I had a M.A.R.C.H. Operations and it was, you know, it was kind of an unrelated Department of Buildings issue."
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 31,
+          "text": "[interposing] You know that—so--"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 31,
+          "text": "[interposing] Well, I can actually, in this instance this is how I found out what M.A.R.C.H. was because the person told me I got visited by the cops, FDNY, SLA, DOB, you know, maybe another agency all at the same time, and I said that’s a—that’s—that’s strange. I didn’t know that that happened, and that how I found out about what M.A.R.C.H. was. So, in fact, it was a M.A.R.C.H. Operation. I was able to confirm that. I’m just—I’m just trying to figure out the criteria because that wasn’t a violent. There was no violence in that instance. It was—literally, it was a DOB. They didn’t correct their DOB problem. They had a DOB problem, but I don’t understand why that’s a—why that-that involves, you know, a multi-agency response."
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 32,
+          "text": "[interposing] I’m not—I’m not asking that--"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 33,
+          "text": "Uh-hm."
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 34,
+          "text": "Okay. Let me ask why—what is a M.A.R.C.H. Operation accomplishing that a visit from an inspector from these individual agencies wouldn’t accomplish? There’s—why, you know, if there is an issue of people getting into fights at a bar outside, is it—is it better for—for there to be a, you know, a—a—you can call it a raid or you can call it an operation, but it involves 15 or more people, you know it’s something. Why—why is this the right way to do this as opposed to being much more targeted in terms of addressing the issue. So, say there’s a, you know, one business has a—something that kind of falls under the purview of FDNY, why doesn’t FDNY just go out? Why does it involve a multi-agency response where sometimes people are wearing, you know, some type of gear?"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 35,
+          "text": "But why wouldn’t— but the Health Code is something that like the Health Inspectors go out all the time to bars and restaurants on their own, and that doesn’t take a— that doesn’t take a—a—a multi-agency operation to figure out whether there’s a health violation."
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 36,
+          "text": "[interposing] I mean I was--"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 36,
+          "text": "[interposing] Can I say I think actually --"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 36,
+          "text": "Sure."
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 37,
+          "text": "So, is every— because you said—you mentioned three examples. You said violence, under age drinking, and noise. Does every M.A.R.C.H. Operation involve violence?"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 37,
+          "text": "No, right. So—so, you know, how many—I mean how many bars have—have examples of underage drinking? I mean people-that’s— to say that--"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 37,
+          "text": "--to say that—to say that under age drinking is a criteria or noise, I mean noise is a very, again underage drinking and noise are two things that I think are much more prevalent than any of us would like in New York City, but to say that there’s a-a noise complaint—or persistent noise complaints is a reason for a M.A.R.C.H. or multiple instances of—of—of underage drinking, but again, those things that-that NYPD does without a full scale, you know, without a—without a multi-agency operation to-to bust somebody for under age drinking is I think part, you know that’s something that NYPD does—PD had done for a long time in a way that is—doesn’t involve like a multi-agency raid--"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 38,
+          "text": "-- or whatever."
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 38,
+          "text": "Uh-hm."
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 39,
+          "text": "What is the—what is the—you mentioned a little bit in your testimony, but what is the exact procedure then for—for conducting one of these? It is—who-who—the final approval comes from your office, is that right?"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 42,
+          "text": "MOCJ has a Task Force the Task Force on Special Enforcement that targets problematic or legal bars and gambling rooms and such. Shy is this—why is that not a sufficient tool to address issues that you’re—that-that the M.A.R.C.H. Task Force is looking to address."
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 42,
+          "text": "[interposing] Are you familiar with that Task Force?"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 42,
+          "text": "Are you familiar with that Task Force?"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 42,
+          "text": "I’m still a little unclear as to why this is necessary. I—I—I-I don’t understand why individual agencies who have inspectors that FDNY has inspectors. They can visit any establishment at any time. DOHMH has inspectors. They can go there and they do. You know, many more than 57 times in a year. Why—I don’t understand why is that protocol, which businesses are aware of that there’s some level of normal course of—of action. You know, it’s—it’s—it’s within the kind of normal realm of—of businesses’ interaction with the city agencies. Why is that not sufficient, and--and what has been demonstrated in say the 57 cases last year to show why that—why normal individual agency visits by inspectors would be insufficient. I mean it’s not and just keep in mind DOHMH has inspectors that could go out at 10 o’clock on a Saturday, too. It’s not as if that’s impossible."
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 44,
+          "text": "But my understanding, sir is that—is that they do have—both agencies or all the agencies they all have inspectors that will go at night, and I can ask them. Does FDNY- -"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 44,
+          "text": "--have inspectors that go out at night?"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 45,
+          "text": "Well, that’s something that we could—I mean it’s one thing comparing, you know a bar or restaurant some of whom I’m—I’m familiar with, but I know that I’ve had M.A.R.C.H. Operations to the K2 epidemic. I—I agree, the K2 epidemic does deserve a multi-agency response. I mean--"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 46,
+          "text": "[interposing] This is—this is—I mean it’s not even apples and oranges. That’s—this is, you know, this--"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 46,
+          "text": "[interposing] But again that’s a--"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 46,
+          "text": "[interposing] I just—I don’t-[laughter] 25"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 47,
+          "text": "No, no, no, why I think—I think—I think what you’re seeing is an reaction because it’s—to say that—to say that we’re that the-the city is doing M.A.R.C.H. Operations to protect—to protect, that all these are to protect these establishments from potential shooting incidents. I don’t—I don’t know if that’s really accurate."
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 48,
+          "text": "Thank you. I’ll turn it back over to the Chair. Thank you, Chair."
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 52,
+          "text": "Um--"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 52,
+          "text": "Well, just I—I—in terms of—of the follow-up to a M.A.R.C.H. Operation, so we’ve heard that you know, an example of one establishment got 18 summonses during an operation. They were all dismissed when the owner went to court but, you know, there’s—owners sometimes will feel, you know that they—can you speak a little bit to that—to—to the follow-up and what happens subsequent to this operation. Is it—is there any kind of ongoing communication with these agencies. I mean we’ve also heard frankly that some businesses are being told, you know, if—if you cooperate with us we’ll take it easy on you or, you know, there’s— there’s—it’s a little—little bit unclear. I think sometimes owners get the perception or get the feeling that—that the purpose of this is to kind of intimidate businesses or, you know, try to put down a marker, if you, you know, if you—if—if you’re not—if you don’t work with us, there’s going to be, you know, ongoing problems."
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 54,
+          "text": "Do—does—does the M.A.R.C.H. Task Force or NYPD factor in what kind of music an establishment plays."
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 55,
+          "text": "Okay, I just—I want—I’m still very skeptical that there’s a need for this type of enforcement and particularly when there’s no—when there’s no report or instance of—of violence taking place. You know, I don’t—I don’t understand why the vast majority of these operations could not be addressed through the normal channels of enforcement, which again businesses, you know are aware of. I mean pat of this is that that this comes, you know, if this-if—if—if you have a multi- agency response showing at—at 10:30 on a Friday, that’s a very unnerving rattling interaction with, you know, with—with the city if you don’t have any instances, you just have, you know, if it’s based on noise complaints or somebody, you know reported you or reported underage drinking or something like that, which, you know, frankly I image this is much more prevalent, you know, than any of us would want to acknowledge. I mean I think that—that that’s the kind of thing that it probably happens—if that was the case, you know, then there would probably be a lot more. If it was for every underage drinking instance, I imagine that like a lot of bars in Manhattan would—would—you’d have a lot more marked trades in Manhattan than you do if that were the criteria. So--"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 57,
+          "text": "and so my last question is for FDNY actually. Is there—is there a difference between the types of violations the amount of violations the FDNY gives our during a M.A.R.C.H. Operations than what they would normally give out during a normal inspection. I think that question would go for DOHMH as well"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 58,
+          "text": "I’m sorry, Mr. Chair, one last question, does each operation is just very—is one—is—I mean I’ll just use raid as a—as a— the specific instance. I s the operation a specific instance or is an operation—like in other words is a- can M.A.R.C.H. Operation include multiple establishments on the same might."
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 58,
+          "text": "I see."
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 59,
+          "text": "I see, I see. Okay."
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 59,
+          "text": "Okay, okay so there’s there’s some—so 57 is the number of operations but the number of establishments visited by the M.A.R.C.H. Task Force may be higher than that."
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 59,
+          "text": "So that’s 2%, the 2, a little less that 2%?"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 59,
+          "text": "1.8% like that."
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 60,
+          "text": "Okay. Alright, I’ll turn it back over to the chair. Thank very much for your time."
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 81,
+          "text": "This is for the two business owners that have experienced—I don’t know if—I don’t know if Rachel you’ve also experienced M.A.R.C.H. but—"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 81,
+          "text": "Okay, do you—do you have any sense of—of what other than just neighbors that with 311 complaints about noise or 311 complaints about people outside, do you have any sense of why—why your establishments landed on this list or, you know, if--?"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 83,
+          "text": "Which is fairly, you know, normal--"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 83,
+          "text": "--course of business for an establishment--"
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 84,
+          "text": "--that’s open at night. I mean the—the—it—it—I’m sorry that this is happening to your businesses. I—I hope that your businesses, you know, are able to move, you know, get by and move past this, and—and continue to thrive, and certainly consider my office a resource, and I’ll coordinate with the Office of Nightlife but, you know, we--we greatly appreciate you being here and telling your stories because you’re putting yourself out there, and—and so that—that—that takes courage, and so I want to thank you for doing that, and-and we look forward to continuing to work with you guys on— on not only getting this bill passed, but—but hopefully more efforts in that regard."
+        },
+        {
+          "speaker": "Council Member Levin",
+          "transcriptPage": 85,
+          "text": "Thank you. so much. [background comments/pause]"
+        }
+      ]
+    },
+    {
+      "speaker": "Council Members",
+      "transcriptLabels": [
+        "COUNCIL MEMBERS"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        1
+      ],
+      "wordCount": 113,
+      "position": "procedural-or-unattributed",
+      "basis": "The transcript label is procedural or does not identify a person.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "turns": [
+        {
+          "speaker": "Council Members",
+          "transcriptPage": 1,
+          "text": "Andrew Cohen Alan N. Maisel Deborah L. Rose Eric A. Ulrich Robert Messner, Assistant Deputy Commissioner and Commanding Officer of the Department’s Civil Enforcement Unit, New York City Police Department Olympia Kazi, New York City Artist Coalition Member Deana Morra, Friends and Lovers, Crown Heights Rachel Nelson, Brooklyn Bar Owner Robert Bookman, Counsel to New York City Hospitality Alliance Marva Babel Tucker, Owner of Ode to Babel, Brooklyn Patrick Weaver, Appearing for Brian Abelson Tara McMannis, Artist and Nightclub worker Jamie Burkhart, NYC Artist Coalition Member Liz Pelly, Journalist John Barclay, Brooklyn Bar owner/Operator and Co-founder of Dance Liberation Network Alan Sugarman, Attorney, Law Offices of Alan D. Sugarman [sound check] [pause] [gavel]"
+        }
+      ]
+    },
+    {
+      "speaker": "Deanna Morra",
+      "transcriptLabels": [
+        "DEANNA MORRA"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        67
+      ],
+      "wordCount": 433,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but "
+      ],
+      "turns": [
+        {
+          "speaker": "Deanna Morra",
+          "transcriptPage": 67,
+          "text": "I did write a testimony but then I kind of changed it based on the information I hear earlier. So, apparently I’m the 20 percentile."
+        },
+        {
+          "speaker": "Deanna Morra",
+          "transcriptPage": 67,
+          "text": "Oh, thank you."
+        },
+        {
+          "speaker": "Deanna Morra",
+          "transcriptPage": 67,
+          "text": "I’m Deanna Morra from Friend and Lovers--"
+        },
+        {
+          "speaker": "Deanna Morra",
+          "transcriptPage": 67,
+          "text": "--in Crown Heights. So clearly I’m in the 20th percentile of these march— marches, which I don’t understand. I have—I’m in great standing with the Community Board. He NCOs come weekly. I send them an email on a weekly basis with any issues that we may or may not have had. I also update them on security protocols. We now do pat-downs. I paid $3,000 to get AC cameras. Whatever they asked I did. Yet, I still get marched. I’ve been marched on twice. I know I was told I was on the list before and they crossed my name off. I don’t really understand how that’s possible. The first time it happened, 25 men walked in in bullet- proof sweat jackets at 2:45 in the morning. Not only was it intimidating, but it was—I thought I was going to be arrested, and someone with severe anxiety it really can send you over the edge. So, not only did it affect my mental state, but it just affected the clientele and their perception of me and my staff did not feel like they were in a safe environment. I had to have meetings to reassure them that we were okay. $30,000 later we still got raided last December. It was such a drastic difference in how I was treated. The NCO shook my hand, said, Don’t worry. You’re good. We’ll be in and out in 15 minutes. Why was I still raided if I was good. They just raided the place at the corner so we know that they were bound to come to us. Why? Because why would they walk by us. It’s my—that’s how I perceived that. They were done in less than 10 minutes. We were not issued more than a small citation for—I don’t really know actually because I just received it in the mail and I didn’t open it yet because I wasn’t ready to stomach it this weekend. Nonetheless, the point is transparency and the escalation plan. It’s not apples to apples here. I’m not here. I did not hear a proper protocol that made sense to what my experience has been. So, transparency would definitely help in facilitating the conversation with whoever is actually in charge because my NCO constantly just says, It’s above my pay grade. I don’t know what that means. So, I’m must—I’m here to help. Thank you."
+        }
+      ]
+    },
+    {
+      "speaker": "Deputy Commissioner Messner",
+      "transcriptLabels": [
+        "DEPUTY COMMISSIONER MESSNER"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        5,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        25,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "wordCount": 6329,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "however",
+        "but ",
+        "concern",
+        "recommend",
+        "question"
+      ],
+      "turns": [
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 5,
+          "text": "Good morning Chair Lancman and members of the Council. I’m Assistant Deputy Commissioner Robert Messner, the Commanding Officer of the Department’s Civil Enforcement Unit. On behalf of Police Commissioner James P. O’Neill, I am pleased to testify about the bill being heard today, and the department’s role in the multi-agency response to community hotspots or M.A.R.C.H. program. New York City is the largest most diverse, most vibrant and most exciting city in the nation. New York has always been the trend setter in hospitality, entertainment, music, dance and fashion, and this energy draws individuals of all ages from around the country and the world to enjoy and take part in our unparalleled Nightlife. Such a vibrant and neglected Nightlife does, however, present unique challenges in a densely populated city where Nightlife venues often exist side by side with residential properties. This often requires new and innovative approaches to meet these challenges by ensuring that a night out remains fun and safe while respecting the right of others to enjoy the peace and tranquility of their homes. The M.A.R.C.H. program was introduced to address Nightlife locations where chronic safety and crime conditions had been allowed to fester and other efforts had failed to address these conditions. The program is a collaborative effort with the NYPD providing security for agencies such as Health, Buildings, Fire, the Department of Environmental Protection, and the State Liquor Authority while they perform inspections and take enforcement if needed. Let me take a moment to take you through how a typical M.A.R.C.H. operation is coordinated and executed. The Special Operation Lieutenant of each precinct is tasked with maintaining a list of SLA licensed establishments in the confines of their precinct and keeps track of 311 complaints so long as they are related to the department, 911 calls, criminal complaints and arrests stemming from the locations. In addition, Neighborhood Coordination Officers or NCOs, may become aware of a previously unreported issue while talking to community members and during conferrals with both the community boards and the precinct community counsels. After the department confirms that we have received complaints from multiple complainants that conditions are tied to a specific establishment, we make the establishment aware of these conditions. This is done with the hope that the establishment will take necessary steps to address the issues, and there will, therefore, be no need to include it in a M.A.R.C.H. operation. If, however, the location refuses to address conditions stemming from their establishment, the location is rightfully considered for inclusion in such an operation. Prior to recommending a location for a M.A.R.C.H. operation, both the precinct NCO and crime prevention officer consider methods of mediating the situation without the need for enforcement. In fact, crime prevention officers are mandated to visit all licensed premises in the precinct to ensure that they are provided with relevant crime prevention information and materials. This reflects the Mayor’s and Police Commissioner’s commitment to Neighborhood Policing and an emphasis on collaboration and problem solving rather than simply increased enforcement. Indeed, the number of M.A.R.C.H. operations has steadily declined from 117 in 2013 to 57 last year. If mediation and collaborative problem solving is successful, then a M.A.R.C.H. operation will not be conducted. However, there are instances where the establishment will not work with the precinct to remediate the condition or take steps on their own. In these situations, personnel in the precinct including the NCO, the Field Intelligence Officer or the Crime Prevention Officer may determine that an establishment is a candidate for a M.A.R.C.H. operation. This recommendation is forwarded to the precinct’s Commanding Officer. If the Commanding Officer agrees that the location warrants inclusion in a M.A.R.C.H. operation, the Commanding Officer includes the location on a list of such locations in a written request for approval to the Chief of Patrol. These recommendations are made based upon many factors including, but not limited to 311 and 911 calls complaining about the conduct of the establishment, conferrals with both the Community Boards and the precinct community councils, meetings held with operators of the location and crimes which have occurred in or around the location. It is significant to note that Commanding Officers are directed to consider only verified 311, 911 and community complaints relating to noise, underage drinking, quality of life violations, and drug sales or other violations when making this decision. Additionally, Commanding Officer s are directed not to consider complaints of grand or petit larceny or identity theft within the establishment if the establishment cooperated with the department in preventing future crime and plays no active role in the criminal activity. Once a list of recommended establishments was forwarded to the Chief of Patrol’s Office, they make the final determination of which locations will be included in the M.A.R.C.H. operation after ensuring sufficient steps were previously taken to address problematic conditions without success. Once each location is approved for inclusion in a M.A.R.C.H. operation, my unit, the Civil Enforcement Unit will then will then schedule the operation. We ensure the availability of the other agencies, and that they have the information that they need to effectively participate in the operation. Operations are usually scheduled for either Friday or Saturday evening as some locations only operate on these nights, and these are the times when the agency’s inspectors can get a realist view of how a location operates during the times that give rise to most complaints and dangerous conditions. One benefit of the program is that it enables some of these agencies to conduct needed inspections when they would not otherwise be able to because the location may only operate at night or the inspector’s safety could not otherwise be ensured. On the evening of the M.A.R.C.H. operation, the agencies taking part meet at the relevant precinct to coordinate. The participating agencies and the precinct personnel then travel together to each location. Upon arrival, inspectors from each agency enter the location and begin their work. Barring a significant safety concern such as severe overcrowding, noise levels that make communication impossible or blocked fire exists, a location is allowed to operate without interference while the inspectors are being conducted. It has been our experience that most patrons struggle with the operation while a few ask questions of the city personnel involved. All then return to enjoying their night out, continuing on with their conversations and social activities. Patrons are not asked to leave the location or stop any activities during the inspections. As the Commissioner has said, each day we strive to do better, and the same is true for M.A.R.C.H. operations. We continuingly— continually review this this program to ensure it is conducted in a manner that meets the needs of the city. For years the department has held quarterly Nightlife meetings with Nightlife business owners and operators. These meeting are designed to keep the lines of communication open between these businesses and the department. Nightlife business owners and operators are encourage to attend these meetings and voice their concerns to senior patrol borough police commanders. The department has also worked closely with the New York City Hospitality Alliance for over 10 years. This ongoing partnership has resulted in a robust and productive working relationship and has resulted in the cooperative publication of three additions of a booklet entitled Best Practices for Nightlife Establishments which was written collaboratively by New York City Hospitality Alliance Nightlife experts and Police Department law enforcement experts. The goal of this booklet is to help Nightlife business operators to provide a safe and enjoyable experience for their customers and the surrounding community. This Hospitality Alliance NYPD partnership also produced an active shooter video, which specifically dealt with Nightlife venues. Recent tragedies such as that Pulse Night Club shooting mandate that we address the fact Nightlife establishments attract large numbers of people and have historically been the targets of individuals seeking to carry out sensational terrorist attacks. Last year the Mayor appointed city’s first Nightlife Mayor to head up the newly oper—newly created Office of Nightlife, which is tasked with coordinating Nightlife venues, city agencies, and the community to help the industry prosper safely in a way that benefits all New Yorkers. In fact, beginning last year the Office of Nightlife conducted a citywide listening tour, which involved the department and representatives from other agencies to gather input and suggestions from businesses and the community to further this goal. The department looks forward to continuing our collaborative efforts with the Office of Nightlife, the New York City Hospitality Alliance, our sister agencies, and the community at large so that we can maintain a thriving and above all safe Nightlife environment. I will now turn my attention to Intro 1155. The department has partnered with the Council on dozens of pieces of legislation aimed at increasing transparency in the past, and this is no exception. Some of the criticism of these operations is driven by a lack of information, and we will work with the Council to ensure more data is made public. Thank you for the opportunity to provide insight on these important operations, and I look forward to answering any questions you may have."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 14,
+          "text": "Well, I do dispute that, and I believe that it’s a much lower percentage. I think that the—one of the problems in trying to assess what’s gone on before is that M.A.R.C.H. Operations the term M.A.R.C.H. Operation, is thrown around very loosely. It’s like Scotch tape. People refer to Scotch tape, but Scotch tape is really on a product made by the Scotch Corporation, but there are other cellophane tapes. It seems that every time a couple of city inspectors get together and visit a Nightlife business, people call that a M.A.R.C.H. Operation and it’s not. M.A.R.C.H. Operations are a very discrete thing. It’s a collaboration--[background comments] I’m a—it’s a collaboration between multiple city agencies that is approved, and I’m sure we’ll end up talking about the approval process and only 58 of them occurred last year. Now, I—I’m familiar to some extent with the study, and I know that they—apart of the study they produced a hat map, and the Heat Mp purports to show the M.A.R.C.H. where the M.A.R.C.H. operations occurred. Well, on their Heat Map they—they say that between 68 and 104 operations occurred in the Rockaways, but I know that between 2013 to 2018 only seven M.A.R.C.H. Operations occurred in the Rockaways, and that of those—in those seven M.A.R.C.H. operations, there were only 30 establishments that were approved for inclusion. And I also know that we never reach all of the businesses that are approved for inclusion because of time constraints in the evening. So, less than 30 places were visited. So, while I’m--"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 16,
+          "text": "[interposing] No. On a M.A.R.C.H.—well, it’s multiple. M.A.R.C.H. Operations--and I’m sure we’ll get into this—involve an approved list of places. The lists are typically 4 to 6 Nightlife businesses in a single precinct. However, because of the time constraints of the agency inspectors, we rarely if ever visit all 4 to 6 during the course of an evening. So, typically, I would say the average number is 3 to 4 are visited during the course of an evening. They’re typically in the same precinct although sometimes will cross precinct boundaries. 24 25"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 17,
+          "text": "[interposing] Right, well the reason--"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 17,
+          "text": "Well, the heat--[background comments]. Yea, I’ve never reviewed that data. I’ve looked at the Heat Map. The Heat Map shows there are two zones in the Rockaways. One of the zones appears to show 44 to 58 M.A.R.C.H. Operations, and because they’re banding their data, and the other appears to show 24 to 44 operations. I know based on the records of the department that there were only seven M.A.R.C.H. Operations conducted in the Rockaways in ’13 to ’18 and that there were 30—of those seven operations 25 there were 30 locations approved, but I know that all 30 weren’t reached."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 18,
+          "text": "Council Member--"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 18,
+          "text": "--if I could just—I—I find that I should say this at the outset because we’re—I noticed even in your testimony we’re calling them M.A.R.C.H. Operations and then we’re going and calling them raids."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 18,
+          "text": "We would not categorize a M.A.R.C.H. Operations as a raid. I mean I—I’d be curious to know what—what’s envisioned, you know, when we use the term raid or when you used the term raid, what do you envision happening at one of these operations?"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 19,
+          "text": "So, I—I would—I would--interposing]"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 20,
+          "text": "Thank you."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 20,
+          "text": "Since--"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 20,
+          "text": "Well, the most there could—the most individual businesses that could have been visited in that period 2013 to end of 2018 . The most that could have been visited are 30."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 20,
+          "text": "I don’t know."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 21,
+          "text": "I—I think and to your—to the—to the point of the bill by Council Member Levin, we’re not objecting to the bill. I mean that’s certainly data that we can capture moving forward with greater accuracy so we could determine the answer to—to these question, but what we can say is without giving you precise data that of the location that we visited wherever they are whether it’s the Rockaways or somewhere else, it is frequent that there are locations that there is no enforcement, and then there are locations when there is enforcement."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 21,
+          "text": "But moving forward I think that’s data that we’re going to be tracking pursuant to this bill, and we have no objection to providing it."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 22,
+          "text": "I—I don’t feel that an operation that produces no results should not have been conducted any more than I think that if a Police Officer doesn’t make an arrest during the course of a day that that somehow was a waste of his time. I think it--"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 22,
+          "text": "[interposing] Well, I think—I think the—I think the analogy is is that if an officer fails to issue a summons that doesn’t mean that there were no traffic laws broken that day, and I think that that’s—that’s the point we’re making here that yes, given the protocols for including the location in the M.A.R.C.H. Operation, the balance—the multiple layers of approval involved, what—the Chief of Department has in front of him when he approves a location for the M.A.R.C.H. Operations is that (1) there have been complaints or conditions identified whether it be 311, 911 at Build A Block meetings, Community Council meetings, wherever that residents of that neighborhoods are bringing this location to our attention. The Chief of Patrol also sees that we have sent officers whether it’s Neighborhood Coordinating Officers, Community Affairs Officer or any officers are visiting that location and trying to collaborate and resolve the conditions being raised, and when we’re failing to do that, where the location doesn’t want to address the complaints, and we’re seeing these complaints materialize over and over again. That’s when the location gets—get-gets included in the M.A.R.C.H. Operation. Now, the fact that we may show up on the day of the M.A.R.C.H. Operation, and the location that has a propensity to serve underage individuals alcohol doesn’t seem to happen—doesn’t seem to have an underage person there that night, doesn’t mean that they haven’t served underage alcohol. So, I—I think I wouldn’t get to the conclusion that you’re getting to, but there is a possibility that on the night of a M.A.R.C.H. when we go there the conditions that residents have complained about over and over again, conditions that we’ve attempted to remedidate with the establishment owners may not be present that day. That doesn’t mean that those conditions are not present."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 25,
+          "text": "So, a couple of points. Yes, I would dispute that to start off with, but I—I think the numbers it’s worth putting them in context. There are approximately 12,000 licensed establishments for on premise alcohol consumption in the city. I think it’s 40 short of—of 12,000 or thereabouts. There have been 57 M.A.R.C.H. Operations last year. I mean so the numbers aren’t—I mean they’re nominal compared. So I think what—what the numbers basically show is that the vast, vast, vast majority of night of Nightlife establishments are actually good actors abiding the law. They’re addressing their community’s concerns. They’re address our concerns when we bring those community concerns to their attention. So, I think it says a lot that the number of operations are 57 and I think I should also highlight that that number is about half of what it was when the Mayor took office. So, we were looking at approximately 109 or so operations in 2014. It was reduced to 57 operations last year. So, they’ve steadily decreased over time. In terms of the concentration of operations, we’re not seeing what—what you—what you’re highlighting in this report and I’m not sure where the data came from. I would like to see the data rather than the conclusions that were printed. I would like to see the actual data that was—that was gained by this group, but what I can tell you is taking a look at 2018, the M.A.R.C.H. Operations were pretty evenly spread out. So, Manhattan South for example, Patrol Borough in Manhattan South, which is 59th Street and below had nine M.A.R.C.H. Operations. Manhattan North, which is above 59th Street had seven M.A.R.C.H. Operations. Patrol Borough Bronx, which is all of the Bronx had seven operations. Patrol Borough Brooklyn South had nine. Patrol Borough Brooklyn North had eight. So, I mean we’re looking at—the numbers are essentially even as you go across the city. I’m—I’m really not seeing the conclusions that that report has come to."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 27,
+          "text": "Yes. So, I think, and the Commissioner can go into it, but we have regular meetings with—with the Hospitality Alliance. It’s been going on for years. They’re regular quarterly meetings. We took part in a their listening tour as part of the creation of--"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 27,
+          "text": "I’m not sure who the folks are. I mean I—so I can’t really--"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 27,
+          "text": "Sure. I would like to see the data first, and make it more—a more productive meeting, but I have no problem doing that."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 28,
+          "text": "About 12,000."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 28,
+          "text": "On premise."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 29,
+          "text": "Well, it’s much more than 311 complaints. The—the process is a process that tries to identify places that pose a variety of problems to the—to the surrounding community, but also and probably more importantly making sure that these are problems that the business is responsible for that the business has not addressed and that the business has been informed and of the problems, and asked to address and not."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 29,
+          "text": "These are enforcement resistant or—or places that have not taken appropriate steps to address. So, you have 311 complaints, 911 complaints. You have issues brought to the Neighborhood Coordinating Officers, the NCOs by local residents. You have community councils and you have community boards, and a variety of other places. Complaints can come in in many ways, and they can be for many different things."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 30,
+          "text": "The—the Neighborhood Coordinating Officers are—are tasked with meeting with the owners and operators of local establishments, and the community—and the Crime Prevention Officers in each precinct are required--"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 30,
+          "text": "Yes."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 30,
+          "text": "Well, but the Crime Prevention Officers have for many, many years been required to keep a list of every licensed premise in the—that particular precinct and to meet with the owners and operators of that premise to talk to them about crime conditions, to provide them with crime prevention information."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 31,
+          "text": "Well, it’s— it’s both. Many, many places that get visited, that— that get included in M.A.R.C.H. Operation have violence problems. That’s one of the most common."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 31,
+          "text": "Well, can--"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 31,
+          "text": "Can I just say that very often people will say that they’ve had a M.A.R.C.H. Operation that they—a M.A.R.C.H. Operation was conducted in the premises when it isn’t a M.A.R.C.H. Operation."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 32,
+          "text": "But I—I mean I think it’s very hard for us to comment on a specific locations."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 32,
+          "text": "[interposing] I mean without a specific location, we can certainly look it up. We’re highlighting it as a DOB issue. We need to see more. I think under the— under the—the system that’s in place, I think what we can tell you broadly across all locations is that whatever the complaint are, whatever the conditions are, crime conditions or what have you--"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 33,
+          "text": "--we make attempts for—for the exception of an unlicensed premise, which I think you would—you would agree with us that we shouldn’t be making an attempt to have an unlicensed premise correct their behavior and continue operation unlicensed. But for a licensed premise, we make attempts to try to resolve this. So, I think part of your earlier question about M.A.R.C.H. predating Neighborhood Policing, I think you’re right, M.A.R.C.H. does predate Neighborhood Policing, but important to see is Neighborhood Policing is about collaborative problem solving, rather than enforcement, and what you’re able to see with—with Neighborhood Policing being implemented, the number of M.A.R.C.H. Operations has been roughly cut in half. So that means we’re reaching out to these business owners. We’re trying to figure out a solution to whatever that condition is, whatever that complaint is without resorting to a M.A.R.C.H. Operation."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 34,
+          "text": "If the—a couple answers. The—a—a location is not going to get included in a M.A.R.C.H. Operation because they have an FDNY problem. The complaints that come in are indicative usually of a range of problems especially things like violence or under age or noise and the important thing to remember is no one—no establishment gets included in a M.A.R.C.H. Operation unless they haven’t made—they’ve been informed of this problem and haven’t made the effort to address it. So, once you have a location that has already demonstrated that they’re not willing to address their problems, it—it’s important for the city to try to determine what else are they doing. Everyone of these locations is subject to rules and regulations of multiple agencies. Well, if they’re not willing to address their violence, are they also going to be not keeping up their health code? Are they are all going to have blocked fire exits?"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 35,
+          "text": "I—I think— I—I—would disagree because I think a lot—a lot of complaints are intertwined between. Then they cut across from multiple agencies. So if you have a location that has a propensity to have violence or fights break out, right, doesn’t it make sense to see 25 if there are underage people there and are being served alcohol contributing to the fight."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 36,
+          "text": "[interposing] Doesn’t it make sense, but I’d like to— I’d just like to say--"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 36,
+          "text": "[interposing] I would just like to say—I’d just like to finish."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 36,
+          "text": "Doesn’t it make sense to see if a location that invites large numbers of people, right that has fights breaking out and a propensity for that, that they actually have their building code and fire exits free. What if there’s a surge of people? Does it make sense to make sure that they have a means of egress and ingress or a means to escape a potentially violent incident? I mean again, and we keep harping on this because it’s important to harp on this: A location that has one fight is not going to get a M.A.R.C.H. Operation. A location that that has multiple fights and are refusing to take any action to stop that activity from happening, is going to have a M.A.R.C.H. Operation and all of the agencies that come to the M.A.R.C.H. Operation are relevant to the M.A.R.C.H. Operation."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 37,
+          "text": "No."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 37,
+          "text": "[interposing] But I—I--"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 38,
+          "text": "[interposing] but I think--"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 38,
+          "text": "Council Member I think you’re coming to—you’re coming to a conclusion that just because theses agencies are present that all of them are taking enforcement, and that’s just not the case. So, it—it could very well be the case. Everybody is going out on the operation. A location that has a noise issue for argument’s sake--"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 38,
+          "text": "The Fire Department may not issue a single summons. The Building Department may not issue a single summons. They Police, the SLA may not issue a single summons but DEP may very well issue a summons at that location. The idea is is that all of the stakeholders are present, and we could address whatever conditions we see, and often times a lot of these establishments aren’t open during the week. They’re open on the weekends at night. So, the-a lot of the stakeholders here don’t have the opportunity to visit them and here is the opportunity that’s targeted precisely at locations are refusing to collaborate or address the conditions that the communities are highlighting in any way. And all of the stakeholders are going to be present and to the extent that they’re needed, they’re going to—they’re going to participate. To the extent that they’re not needed, they’re not going to issue, they’re not going to take on the enforcement action."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 39,
+          "text": "No. Final approval comes from the Chief of Patrol’s Office. The operation starts with the NCO or the Crime Prevention Officer becoming aware of a problem or some other officer in the precinct becoming aware of a problem and they start to talk among each other, and if they realize that there seems to be an ongoing issues, they’re tasked with telling the location. The NCOs that’s part of the their job description and the Crime Prevention Officers as I said, they’re required to keep a list of all businesses, visit them and make sure they have all relevant information. If those officers feel that there’s no opportunity there’s no—been no action on the part of the establishment to try to remediate, then they can go to the Special Operations Lieutenant, the Field Intelligence Officer, and ask for more information about this place. If all agree that or any of them feel that this place should be included on a M.A.R.C.H. Operation, they can go to their Commanding Officer . They recommend to the Commanding Officer inclusion of this location on a M.A.R.C.H. because they’ve been informed of the issues and they haven’t addressed them. The Commanding Officer reviews that. If he or she feels that the place does belong in a march because they have a type or problem or problems, that are appropriate for inclusion in the Command, and that they’ve been informed and haven’t done anything, the Commanding Officer is going to include them, that location on a list of 4 to 6 locaions in the precinct and sent that to the Chief of Patrol’s Officer. The Chief of Patrol’s Office is then going to review those locations, and the Chief of Patrol’s Office is going to look first is this the-are these the type of problems that should be included in a M.A.R.C.H. Operation, and second has the business been given the opportunity to address these. Chief of Patrol approved some locations, and denies other locations. There’s—either it’s not the type—right type of problems or you haven’t done enough to remediate with the operators. The ones that are approved the approve the operation, then it comes to my unit the Civil Enforcement Unit. We schedule with the other agencies. Many of the other agencies need to know the businesses, the identities of the place we’re going to visit beforehand so that they can do their internal research. They need to know the building plans. They need to know what type of—of liquor license they have. So, we tell them the locations before hand so they can do their research. 25 The night of the operation we gather at the precinct and then we go out together."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 42,
+          "text": "I—I wouldn’t’ try to answer for MOCJC. I’m really not sure, but that’s how it is."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 42,
+          "text": "Excuse me?"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 42,
+          "text": "Not really. I—I know that, you know, MOCJ has enforcement effort efforts, but I’m not familiar with what they’re doing specifically on this."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 43,
+          "text": "Well, several things. DOH—individual agencies many of the individual agencies often do not work at night routinely whereas in most of these establishments that get visited more of the operations-the problems tend to be at night. So, if inspectors are going out and inspecting Nightlife businesses when they’re not open for business, that doesn’t give them a true understanding of the conditions that actually exist in the business."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 44,
+          "text": "[interposing] I’m not going to speak to--"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 44,
+          "text": "The collaborative methodology of agencies collaborating to address complex problems is one that’s really been used very successfully in this administration. You can look at the Opioid Task Force, you can look at the efforts that my office led against K2. I know that you very involved in that, and what we needed because of the the—the shortfalls of the State Legislature—legislation, which didn’t make K2 illegal for many years when people in the city were becoming victimized and sickened by it, what we needed then was a multi-agency approach, and that’s what we used. The Multi-agency approach, the collaborative approach is a sound one because it is an appropriate use of city resources. For many years prior to this Administration, city agencies we used-were very often properly criticized for wasting resources by working in silos. We’re trying not to work in silos. We’re trying to find places that aren’t responding to our telling them that they have issues that they have to address, and are refusing to address them. Those are places that deserve to be inspected. If they’re not willing to address the problems that we’re specifically telling them exist, then what else aren’t they willing to address."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 45,
+          "text": "[interposing] Well, the K2 epidemic that-- 24 25"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 46,
+          "text": "[interposing] I disagree and I’ll tell you why. The K2 Epidemic was a law shortfall. Okay, that’s different than this. There weren’t laws, but what’s similar to this is, you know, we all remember Happy Land and we—Happy Land where multiple people died because a club on had one method of entrance and egress, and when a fire was started that blocked it, all those people died."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 46,
+          "text": "[interposing] We also know about the Pulse Nightclub shooting where again if we—if they had had, if they had been up to code, if they had had the Active Shooter Plans that we encourage businesses to make, then those people might not have died. [background comments] I mean I don’t—I--"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 47,
+          "text": "--don’t find that funny."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 47,
+          "text": "I—I mean Council member the department is collaborating with a the Nightlife industry in general. We-we—with the Hospitality Alliance specifically we develop active shooter scenarios, but that’s not the issue here. What the issue here is—is what are the proper tools to use to address community complains, crime conditions, that we’re seeing that we’re unable to address on a collaborative basis with the actual establishment itself after trying to do so. And what you’re—what you see to have an issue with is is a tool that the department uses to do that. I mean you may not agree with that tool. I would argue that there are constituents that actually do agree with that tool because they expect us to do something, and when collaborating, and when working with the establishment fails to work, we escalate to the next tool. We look at all of the available tools. This is one of those available tools."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 48,
+          "text": "In—in ’17 or ’18?"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 48,
+          "text": "Yeah, we were saying 18 there were 57. If you—in ’17 if you want to look at that one, there were 68 operations. So, we were down 11 operations from ’17 to ’18 and in 2016 there were 77 operations. So, if you take a look at it they’re decreasing. If you look at it from the beginning of the Administration in 2014, there were 109. So, if you look at 2018 where we have 57, we’re roughly—we roughly cut the number of these operations in half, and I would—I would say in large part due to the protocols that were instituted that we’re actually trying to engage with the business to resolve what the basis of the complaint is."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 49,
+          "text": "No, no, no. Well, I do—well--"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 49,
+          "text": "--well, the—so, it’s-it’s not 57 establishments. It’s 57 operations. So, as the Commissioner testified each operation has somewhere between 4 to 6 establishments, and that’s not saying that we’re actually going to go to each of those because inevitably what happens at the end of—at the end of the—inevitably what happens at the end of the night or during the course of the night we--"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 50,
+          "text": "No, no, no. It’s one operation."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 50,
+          "text": "Each operation that’s approved has somewhere as the commissioner said in the neighborhoods of 4 to 6 establishments. That’s the operation. Today, we’re going to visit 4 to 6 establishments and that counts as one operation. Now, we generally don’t get to the 4 to 6 as he testified because of time constraints during the course of the night. There may be issues in one. Another one may be closed."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 50,
+          "text": "Well, 20."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 50,
+          "text": "In 2018, there were 203 locations that were approved. Now, I want to, but I need to explain this because it’s important 203 locations that were approved by the Chief of Patrol to be part of a M.A.R.C.H. Operation. Now that does not mean that 203 locations were actually visited, and then there’s another qualifier to this. As we said, during the course of the night we run short on time and we may not visit a location or two locations that are on the list. That location may be re-included in some subsequent. So there’s— it’s assigned by Council Member. (sic)"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 51,
+          "text": "No, no, I mean, I—I can’t—I can’t with accuracy. I can’t. I can tell you that the maximum we could have done in 2018 was 203 out 12,000 licensed establishments. We’re talking about 203 that were approved. We know that we didn’t get to all 203, and we certainly know some of that 203 are double counts because whatever we couldn’t get to they were included in the subsequent list. So, the universe we’re looking at is 203 approved and the number wo actually visited is somewhere less that that, but I think again to—to my point earlier I think Council Member Levin’s bill is going to get us to—to get to that data with some level of specificity, which is why we’re not opposing providing that data moving forward."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 53,
+          "text": "So, the—I—I would certainly not characterize it that way because the reality of it is if a condition is—is resolved, there is no need for a M.A.R.C.H. Operations and—and I’ll kind of take it a step further. So, let’s—let’s assume we have complaints or conditions that are brought to the department’s attention. We’re going to send officers of the neighborhood coordinating officer over to try to work collaboratively to resolve the problem. Let’s assume the establishment says you know what? I don’t want to work with you, but then they go on and resolve the problem on their own. That place will now be recommended for a M.A.R.C.H. Operations. They don’t need to cooperate with us. What they actually need to do is address the conditions that are being raised, address the complaints that are being raised. It could be with us. It can be without us, but the end result is it’s about the end not the means of getting there. So, I think that’s the best way to answer that."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 54,
+          "text": "Absolutely, absolutely not. Absolutely not."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 55,
+          "text": "No, and—and realistically if—if that’s the complaint that a club is playing a particular kind of music and, you know, that’s bothering us, if that’s the complaint that’s coming in, not only would it not be approved, by the Chief of Patrol, it wouldn’t be recommended by the lowest level, you know, in the process which is the NCO or the FIO or any of them. That’s just not a basis for a march."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 56,
+          "text": "Well, I think—I think—I think that’s why what we’re saying is this is a tool of—of last resort. It’s not the primary go-to tool. It doesn’t prohibit any one agency or multiple agencies from visiting the location on their own in the normal course of their functions that one thing doesn’t have anything to do with another. I think—I think at the end of the day as we’ve mentioned, it’s—it’s a system that’s been— the use of which has been greatly reduced over the years. 57 operations over the course of the year is— is very low. I would argue if you look at the number of locations visited compared to the number of licenses issued, 12,000 licenses issued under 200 locations visited I think you would agree that that’s a very low number that we—I—I would argue that it is not abused. It’s actually used as a precision tool to address complaints, conditions that where other means that addressed it, it failed."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 57,
+          "text": "No, there is a difference between the type of violation that we issue during the M.A.R.C.H. Operations or any type that we with inspections."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 58,
+          "text": "I does. It does. So, one operation the Commissioner testified is 4 to 6 establishments."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 58,
+          "text": "Up to 4 to 6, roughly on average 4 to 6 establishments and that we don’t actually get to visit all 4 to 6 because of time constraints-- 25"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 59,
+          "text": "--during the course of it."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 59,
+          "text": "Well, that’s—that’s why the numbers I’m-I’m giving you is and to put it into context is out of 12,000 roughly licensed establishments, we visited less than 200 in 2018. COUNCIL MEMBER Levin: Okay."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 59,
+          "text": "So that’s- the 57 operation equates to less than 200 establishments issued."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 60,
+          "text": "I mean I can’t speak in great detail about the-about the functions of—of the Nightlife Mayor, but what I can tell you is that when the office came—came to be, the Police Department as well as other agencies participated in the listening tour across the boroughs with Nightlife—with Nightlife establishments, and my understanding is that, you know the role involves a regularly liaison with establishments that operate throughout the city. Any concerns that they may raise not only relative to M.A.R.C.H. Operations but--"
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 61,
+          "text": "I mean I can’t—I really can’t say either way. I can’t say that we haven’t but I can say that we have, but I can look into it. Like I know the person that was part of the listening tour that went around that that has a regular means of communication. So, after the hearing, I’ll reach out to that individual and ask."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 61,
+          "text": "Thank you."
+        },
+        {
+          "speaker": "Deputy Commissioner Messner",
+          "transcriptPage": 62,
+          "text": "Sure. We’ll leave a representative from the department behind. Thank you."
+        }
+      ]
+    },
+    {
+      "speaker": "Held At",
+      "transcriptLabels": [
+        "HELD AT"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        1
+      ],
+      "wordCount": 5,
+      "position": "procedural-or-unattributed",
+      "basis": "The transcript label is procedural or does not identify a person.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "turns": [
+        {
+          "speaker": "Held At",
+          "transcriptPage": 1,
+          "text": "Committee Room – City Hall"
+        }
+      ]
+    },
+    {
+      "speaker": "Jamie Burkart",
+      "transcriptLabels": [
+        "JAMIE BURKHART"
+      ],
+      "attributionStatus": "normalized-from-transcript-label",
+      "transcriptPages": [
+        90
+      ],
+      "wordCount": 397,
+      "position": "explicit-support",
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "talks not raids",
+        "need transparency"
+      ],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "turns": [
+        {
+          "speaker": "Jamie Burkart",
+          "transcriptPage": 90,
+          "text": "My name is Jamie Burkhart. I’m a member of the New York City Artist Coalition. I’m on—I’m here on behalf of the city’s cultural communities to ask for talks not raids. We need transparency on the multiagency response to community hotspots. M.A.R.C.H. raids and NYC that share beloved, diverse neighborhood cultural spaces. We are the city that gave birth to the Velvet Underground, Nobel Laureate, Bob Dylan, Mombo and Hip hop. My life as advocate began with the—began with the loss of another, my friend Nick Gomez-Hall was one of the 36 people killed in Oakland’s Ghost Ship tragedy. From the minute I heard he was gone, I know that they were all gone. I was filled with shock and then grief. Our response was safety. We facilitated fire safety walk-throughs and workshops. Our study groups for the Fire Department’s FD—Fire—Fireguard Certification had a 100% exam pass rate. We advocated and created the New York City Office of Nightlife to support small diverse cultural spaces. M.A.R.C.H. raids in New York City are a legacy of Mayor Rudy Giuliani and are not relevant today. Giuliana M.A.R.C.H. raids were used in tandem with the discriminatory 1926 No Dancing Cabaret Law to shut down diverse culture. When you shut down small cultural spaces, working to operate safely and in compliance, you force New Yorkers underground into ill-fitting environments. Prevent this and save lives. A single—in a single M.A.R.C.H. raid as many as 40 armed agents representing six New York City agencies and the State Liquor Authority’s storming small businesses in SWAT like gear at peak operating hours to traumatize customers, maximize fines and force diverse neighborhood spaces out. The fallout is loss of jobs, dreams, more empty storefronts and a painful signal to New York’s emerging and newly arrived cultural communities that you are not welcome here. The shutdown of every space is a grave and egregious loss. NYPD Operations Order No. 27 from 2014 about M.A.R.C.H. raids states: Do not alert patrons affiliated with the establishment, its patrons or community members of the ongoing investigation operation. If you see something, say something. Provide support. Don’t keep it secret. We need civil discourse not night raids. Will the Office of Nightlife testify today? Use the Office of Nightlife [bell] with the New York City Artist 25 Coalition’s liaisons and cultural establishments. Inform spaces with problems so we can solve them."
+        }
+      ]
+    },
+    {
+      "speaker": "John Barclay",
+      "transcriptLabels": [
+        "JOHN BARCLAY"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        98
+      ],
+      "wordCount": 276,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but "
+      ],
+      "turns": [
+        {
+          "speaker": "John Barclay",
+          "transcriptPage": 98,
+          "text": "Hi. My name is John Barclay. I operate a bar in Brooklyn. I’m also a co-founder of the Dance Liberation Network, an organization that helped repeal the New York City Cabaret Law. I want to use my time right now to address some of the things that the gentleman from the NYPD some of the claims he made, but first is regards to the style of these visits or as most of us call them, raids. It’s super intense. It looks like a—like a—like a counter—like a federal counterterrorism raid. There’s, you know, dozens of people come in. They come in quick. They shine flashlights in everyone’s faces. The music is off, lights are up all the way. It’s—it’s very confusing and it’s also terrifying. It looks like a Steven Seagal movie or something. Something else I’d like to bring up as he characterized it as a tool of last resort, and said that, you know, businesses are given a change ahead of time to correct whatever perceived problem there is. I—I’ve been visited by—I’ve been raided by M.A.R.C.H. and, of course, I was not informed of any wrongdoing before this happened, and in my experience, everyone I’ve talked to has a similar story. Another thing is if you just—I just don’t think this is how law enforcement is supposed to work. If you take the logic of the M.A.R.C.H. Task Force, and you apply it to an entity that’s non- nightlife or just, you know, and a private individual, it really sort of highlights the absurdity because we’re all breaking laws [bell] to— oh, well, that was quick. Alright, I’m submitting. Thank you very much."
+        }
+      ]
+    },
+    {
+      "speaker": "Legal Counsel",
+      "transcriptLabels": [
+        "LEGAL COUNSEL"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        85
+      ],
+      "wordCount": 32,
+      "position": "procedural-or-unattributed",
+      "basis": "The transcript label is procedural or does not identify a person.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "turns": [
+        {
+          "speaker": "Legal Counsel",
+          "transcriptPage": 85,
+          "text": "Folks, we’re just going to take a 2-minute pause. Next panel Mr. Weaver from the Artist Coalition, Mr. Muchmore; Mr. Barclay, Ms. Pelly, Jamie Burkhart-Sugarman and Tara McMannis. Thank you. [background comments/pause]"
+        }
+      ]
+    },
+    {
+      "speaker": "Liz Pelly",
+      "transcriptLabels": [
+        "LIZ PELLY"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        94,
+        98,
+        103
+      ],
+      "wordCount": 751,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but "
+      ],
+      "turns": [
+        {
+          "speaker": "Liz Pelly",
+          "transcriptPage": 94,
+          "text": "It’s like death [coughs]. It’s the Grim Reaper. It’s a gotcha kind of thing. It’s the end for any venue that it happens to. It’s an economic hit. It doesn’t make sense. It’s unpredictable. It’s felt like—it makes people feel afraid. It’s censorship. These are just some of the ways that the M.A.R.C.H. Task Force and its operations have be described to me by New York City musicians, venue’s staff and other local business owners. My name is Liz Pelly. I’m a journalist and for the past decade I’ve been writing about music and culture. I also participate in New York City’s— participate in New York City’s communities. From 2014 to 2018, I was a collective member of the Silent Barn, the long running artisan venue that shuttered this past May. While I was involved in the Silent Barn I became familiar with the concept of the M.A.R.C.H. program. The Barn existed in two different locations over the years, and the original building was, in fact, shut down by a M.A.R.C.H. raid in 2011. Many individual involved in running independent venues in New York City are familiar with M.A.R.C.H. to some extent. It’s part of the vocabulary of running your venue here, but its inner workers are obscure even to many of the venues the task force threatens. It’s mystified style of enforcement keeps venues and business owners living in perpetual fear, and most know information about the M.A.R.C.H. Operations is anecdotal or pieced together from first hand experience. In 2017, I decided I’d like to learn more about this opaque secretive task force and write an article about it. I spoke with members of communities and also filed Freedom of Information Law requests receiving back a 2014 operations order that shed the smallest beam of light on these complicated raids. I was struck by the extent to which these raids prioritized secrecy over productive conversation. Quote: “Do not alert persons affiliated with the establishment, patrons or community members to ongoing investigations and operations, the procedure urges Community Affairs Officers visiting venues. I learned as I listened to conversation of communities of the continued pattern when it comes to these operations. The secret nature of the Task Force means that venues may not know whether they’re being raided by M.A.R.C.H. nor neighbors aware of the gravity. [bell] of their 311 complaints. I just have a little bit more. One Brooklyn venue-music venue employees are causing multi-agency visits. The cops claim to be doing a business investigation. A plain clothes cop made his way behind the bar. Uniformed officer checked the IDs of everyone there looking for underage drinker— drinkers. Someone from the FDNY investigated the whole place. Quote: “We were pretty much up to code and yet all their customers were leaving one by one.” As it turns out, a new neighbor had been calling 311 to make noise complaints. Noise complaints are listed in an official Music in New York City Report from 2017, which cites them as a growing reason for the shuttering of venues. In the past 15 years more than 20% of New York City’s smaller venues have closed, the report states. When we asked why they were there, they didn’t even seem to know the rhetoric they were supposed to use, the music venue staffer told me. [bell] They were very much trying to not give us information about what they were doing, and I’ll skip to the end. A lot of this is from an article that I wrote that was published last year that is online if anyone wants to read it. In today’s increasing isolated—increasingly isolated culture and music is rare median that still has the power to get individuals into rooms together to share ideas, collaborate, sing, dance and be in space with better human. Protecting the power of music from commodification and exploitation it means securing the ability for strong local communities to form from the ground up in creating resources for longstanding NYC artists. Here on the ground in New York that starts with protecting the independent cultural spaces and local businesses. Instead, the M.A.R.C.H. program has historically treated artists and local business owners like criminals instead of encouraging safety."
+        },
+        {
+          "speaker": "Liz Pelly",
+          "transcriptPage": 98,
+          "text": "This is—it’s the last sentence."
+        },
+        {
+          "speaker": "Liz Pelly",
+          "transcriptPage": 98,
+          "text": "Transparency is a step in the right direction, but let’s also consider something more: Getting rid of M.A.R.C.H. raids altogether and replacing it with programs that would promote safety, conversation, community and culture. Thank you."
+        },
+        {
+          "speaker": "Liz Pelly",
+          "transcriptPage": 103,
+          "text": "No, that’s from my article."
+        },
+        {
+          "speaker": "Liz Pelly",
+          "transcriptPage": 103,
+          "text": "Uh-hm."
+        },
+        {
+          "speaker": "Liz Pelly",
+          "transcriptPage": 103,
+          "text": "It’s on my--"
+        },
+        {
+          "speaker": "Liz Pelly",
+          "transcriptPage": 103,
+          "text": "Yes."
+        }
+      ]
+    },
+    {
+      "speaker": "Male Speaker",
+      "transcriptLabels": [
+        "MALE SPEAKER"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        44,
+        50,
+        57,
+        59,
+        63,
+        103,
+        104
+      ],
+      "wordCount": 161,
+      "position": "procedural-or-unattributed",
+      "basis": "The transcript label is procedural or does not identify a person.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "turns": [
+        {
+          "speaker": "Male Speaker",
+          "transcriptPage": 44,
+          "text": "Yes, we do."
+        },
+        {
+          "speaker": "Male Speaker",
+          "transcriptPage": 44,
+          "text": "I can also confirm for the Health Department that we haven’t either so--"
+        },
+        {
+          "speaker": "Male Speaker",
+          "transcriptPage": 50,
+          "text": "Well, that’s the number that was approved that I visited."
+        },
+        {
+          "speaker": "Male Speaker",
+          "transcriptPage": 57,
+          "text": "Okay."
+        },
+        {
+          "speaker": "Male Speaker",
+          "transcriptPage": 57,
+          "text": "Similar with the Health Department. We don’t track quantitatively statistics on M.A.R.C.H. Operations and the inspection results from that, but we do ask—we’re asked to participate to ensure that establishments are properly permitted the meet the food establishments sanitary requirements, and uphold provisions for the Smoke- free Air Act, and these inspections we don’t—I don’t believe that we see a different in the violations that we issue."
+        },
+        {
+          "speaker": "Male Speaker",
+          "transcriptPage": 59,
+          "text": "Less than 2%"
+        },
+        {
+          "speaker": "Male Speaker",
+          "transcriptPage": 59,
+          "text": "Yeah. 24 25"
+        },
+        {
+          "speaker": "Male Speaker",
+          "transcriptPage": 63,
+          "text": "He does."
+        },
+        {
+          "speaker": "Male Speaker",
+          "transcriptPage": 103,
+          "text": "I think it’s a good idea. I think that people tend to behave better when they’re being watched, and I would feel more comfortable with officers having their cameras on."
+        },
+        {
+          "speaker": "Male Speaker",
+          "transcriptPage": 104,
+          "text": "I also feel it would be a good idea. I think if anyone saw how intense and absurd this was that you guys would abolish it immediately."
+        },
+        {
+          "speaker": "Male Speaker",
+          "transcriptPage": 104,
+          "text": "Thank you."
+        }
+      ]
+    },
+    {
+      "speaker": "Marva Babel",
+      "transcriptLabels": [
+        "MARBA BARBEL",
+        "MARVA BABEL"
+      ],
+      "attributionStatus": "normalized-from-transcript-label",
+      "transcriptPages": [
+        62,
+        78,
+        83,
+        85
+      ],
+      "wordCount": 872,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but "
+      ],
+      "turns": [
+        {
+          "speaker": "Marva Babel",
+          "transcriptPage": 62,
+          "text": "(sp?) Did you say Batchi?"
+        },
+        {
+          "speaker": "Marva Babel",
+          "transcriptPage": 62,
+          "text": "Maybe Barbel."
+        },
+        {
+          "speaker": "Marva Babel",
+          "transcriptPage": 78,
+          "text": "Good afternoon. My name is Marva Babel Tucker and I’m the owner of Ode to Babel in Brooklyn, New York in Prospect Heights. I’d like bring Ode to Babel the forefront of the damage raid M.A.R.C.H.s can do to a small business. I opened Ode to Babel three years ago with my twin sister Miriam. We launched with very little savings, and literally some of our 401(k) with the idea of opening a communal space in our neighborhood. As a native Brooklynite, we lived in Crown Heights/Prospect Heights for over 30 years. We saw our friends and neighbors leave the community because of the effects of gentrification. With those changes, the Brook—the Brooklyn that we’d known all our lives were also changing. The neighborhoods spots were closing and being replaced with owners and patrons that did not reflect the neighborhoods I grew up in. Miriam and I started to bring back our Brooklyn by opening a safe space to enjoy and literally live out loud. We opened Ode to Babel. Our space has grown organically over the three years, and we have garnered lots of regulars and new patrons daily. We enjoy music, dancing and a culmination of people of people including our LGBTPOC community converging in good spirits, beautiful and peacefully. Our popularity has translated into distain by some of our neighbors, neighbors that are new to the community and frankly would prefer to see us silent literally and figuratively. The congregating—the congregating of black and brown bodies in the energy of LGBT community does not fit well with the image they literally bought into. They want us to be quiet, closed and unseen into other neighborhoods that they don’t really care about. The fight and their weapon of choice is 311 and 911 calls to bombard, to bombard the board with complaints and pressure. As a person of color, I don’t need to go into the dangers of using police presence as a weapon against other people of color, but this is exactly what is being done. On October 20th, our venue was M.A.R.C.H.’d. Our cozy 750 square foot lounge/bar full of wonderful patrons dancing on a Friday evening became interrupted with 50 officers in full, right, gear, and various agencies ranging from NYPD, the DOH and the SLA and every agency in between M.A.R.C.H.’d through our 750 square foot bar. 30 agents inside and an other 20 agents and officers standing outside in front of our—of our venue. We were a spectacle, a visual that could tarnish the reputation of a small business because of assumptions that could be made by a passerby both walking, driving or looking out of their window, patrons that will never step foot in into our small establishment as we try to continue to grow. A spect—a spectacle that has been interpreted and could be concluded to be some insidious illegal activity but, of course, it was not. It was a standard harmless raid. As our loyal patrons stood in disbelief as officers ask the music to stop, our patrons continued to dance in silence but with defiance and support of Ode to Babel. As agents scurried throughout our venue drafting up tickets, which are financial things that hurt my small business, but was necessary to validate their visit, I wanted for the M.A.R.C.H. to end and finally when it did, I finally—I received a multitude of fines that I fought and were dismissed. The raid had come and gone, but the financial burden, the mental stress and the distress for me as a small owner and a mother with small children that literally lived directly above my bar has remained. The M.A.R.C.H. must end and to continue on just to answer a point you made earlier today, I am kind of—kind of appalled that out of 57 M.A.R.C.H.s that my small 5—750 square foot space sas literally M.A.R.C.H.d. It’s kind of personal. (sic) There is 12,000 establishments and they choose my bar, and I know a lot of others, including the people here are predominantly people of color bar patrons, and how come we are the ones sitting here in front, and these are the type of bars that are targeting. We don’t have to act like that’s not true. It’s completely true and accurate, and I know other bar owners who are experienced with M.A.R.C.H. and raided—raids. So, it’s not a coincidence."
+        },
+        {
+          "speaker": "Marva Babel",
+          "transcriptPage": 83,
+          "text": "For us, I can—I honestly know for a fact that was one particular neighbor that is another business that has said to us we do not like your business and we don’t want you here. So, I know that they are the ones who are using 311 because we’ve been here for three yeas and the complaints since they’ve opened this past summer has come out of, right have just multi—been multitude and just— It’s just I know for a fact it’s specific, but it’s- they know that they can close us down by what they’re doing. So, that’s one and people wait for Uber. I really can’t tell people to not wait for Uber in front of the space, and that’s—I’m not a--"
+        },
+        {
+          "speaker": "Marva Babel",
+          "transcriptPage": 83,
+          "text": "[interposing] It is very normal"
+        },
+        {
+          "speaker": "Marva Babel",
+          "transcriptPage": 83,
+          "text": "[interposing] Yes."
+        },
+        {
+          "speaker": "Marva Babel",
+          "transcriptPage": 85,
+          "text": "Thank you."
+        }
+      ]
+    },
+    {
+      "speaker": "Olympia Kazi",
+      "transcriptLabels": [
+        "OLYMPIA KAZI"
+      ],
+      "attributionStatus": "normalized-from-transcript-label",
+      "transcriptPages": [
+        63,
+        64,
+        84
+      ],
+      "wordCount": 824,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but ",
+        "question"
+      ],
+      "turns": [
+        {
+          "speaker": "Olympia Kazi",
+          "transcriptPage": 63,
+          "text": "I can start. Yes. [laughter]"
+        },
+        {
+          "speaker": "Olympia Kazi",
+          "transcriptPage": 63,
+          "text": "Thank you."
+        },
+        {
+          "speaker": "Olympia Kazi",
+          "transcriptPage": 64,
+          "text": "Okay. So, thank you for the opportunity to testify today. My name is Olympia Kazi. I’m a member of the New York City Artist Coalition. This first time I heard about these multi-agency rights in the middle of the night and how they target vendors of avalanche of times even for things that—that the agents themselves have said hey wouldn’t hold in court, was in the founding meeting of the coalition. We were coming together in the aftermath of the Gosa Project where lives were lost in the pursuit of experiencing community and creative expansion. Since then, our small group of volunteers is working to ensure the safety and the very existence of the formal artist and community driven back to its cultural spaces in New York City. Into 1156 is the result our advocacy. We hope that this is bills is the first and this big raids are proven as problematic and barbaric (sic) as reports from our members have indicated that the city of New York will act. They will put an end to these raids once and for all. NYPD has said that these raids happen only at venues that have been flagged for process of seeing an activity. They also claim that the raid is a last resort after they’re reached out to to the owners and staff. Unfortunately the testimonies you will hear today show otherwise. Raids happen to vendors without having had any thoughts for that matter, without having had any problems with the local precincts or city agency inspectors. Raids, which we get with as little as a 311 noise complaint or stolen phone. Nothing that really warrants a raid. There is an informal consensus that some precincts use such a raid to target businesses owned and/or frequented by LGBTQ and people of color. We’ve heard reports of businesses being graded after refusing to consent to ask by enforcement agents that they were in the gray area of civil rights. Through a Freedom of Information Request, we got some data for 2012 and 17—2017 and another testimony later will talk more in detail, and I can answer also to some questions, and they like—sort of like some of the questions we asked earlier. Artist cultural space that’s in our city are already under threat by the lack of affordability and philanthropic and governmental support. All the work that we do to address those challenges by joining the Small Business Advocacy Platform and by collaborating with the Office of Nightlife and the Department of Cultural Affairs will be all for naught if we do not address this persistent threat of criminalization. What good will it be if we get this big sale? Even if we have then commercial rent stabilization if operators have to live under the threat of constant, you know, disruptive raids that calls the laws of wage, jobs, and exorbitant costs and fines even to close sometimes. Those mystery mock agency raids some call them nightlife task force and others march and NYPD from what I understand today they may call it something else as a whole, but basically there are many agencies sewing up and they cause disruptions. Palisades a venue in Brooklyn that was featured in in the New Yorker cover would still exist today if it hadn’t marched. (sic) For all the venues that survived, they’re right and you’ll hear from some here today. They see how it impacts and they were stigmatized. Neighbors were awakened, patrons were forced to leave, landlords were alerted. People presume that something is seriously wrong if you are raided. So, the criminalization sat down and lots of grassroots cultural spaces pushes our community father underground and into unsafe environments. So, really want to end that. So, I have some lines maybe that I will submit in writing only and in conclusion I want to thank you, Chair Lancman. I want to thank all our co-sponsors Council Members Reynoso, Ampry-Samuel, Rivera and Rose and especially, of course the Council staff and Council Member Levin and Espinal for their leadership. We believe that the enforcements must be fair, proportional and responsive and we need strokes not raids. Thank you. Under five minutes. [laughs] [background comments]"
+        },
+        {
+          "speaker": "Olympia Kazi",
+          "transcriptPage": 84,
+          "text": "May we add—may we add one thing for the record?"
+        },
+        {
+          "speaker": "Olympia Kazi",
+          "transcriptPage": 84,
+          "text": "So, NYPD asked particularly the—the, you know, the data that we had the NY—the New York City Artist Coalition. Now our data is there is their data. [laughs] They gave us that data. It is scrambled, but we made it available right away so there is we have already shared with Council and we’re happy to share with anybody else, and we’re going to give you more details late, but if they’re disputing that they’re-that they’re disputing themselves upon it, they don’t know what they’re doing. They weren’t able to answer many of their specific questions. So, let’s do these bill and let’s move forward. [laughs]"
+        }
+      ]
+    },
+    {
+      "speaker": "Panel Members",
+      "transcriptLabels": [
+        "PANEL MEMBERS"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        5,
+        63,
+        85
+      ],
+      "wordCount": 8,
+      "position": "procedural-or-unattributed",
+      "basis": "The transcript label is procedural or does not identify a person.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "turns": [
+        {
+          "speaker": "Panel Members",
+          "transcriptPage": 5,
+          "text": "[interposing] Yes."
+        },
+        {
+          "speaker": "Panel Members",
+          "transcriptPage": 63,
+          "text": "We do."
+        },
+        {
+          "speaker": "Panel Members",
+          "transcriptPage": 85,
+          "text": "[in unison] I do."
+        }
+      ]
+    },
+    {
+      "speaker": "Patrick Weaver",
+      "transcriptLabels": [
+        "PATRICK WEAVER"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        86,
+        88
+      ],
+      "wordCount": 376,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but "
+      ],
+      "turns": [
+        {
+          "speaker": "Patrick Weaver",
+          "transcriptPage": 86,
+          "text": "My name is Patrick Weaver, but I am reading testimony written by Brian Abelson. It’s pretty long. So, I’m going to try to get through important parts of it, but I’ve submitted written testimony. My name is Brian Abelson and I live in City Council District 34. On June 6, 2017 I filed a series of Freedom of Information requests seeking data on M.A.R.C.H. raids. The text of these inquires are publicly available online via MuckRock-- there’s the URL there--a service I use for managing these requests. Unsure which agency to solicit information from, I sent the same letter to NYPD, FDNY, Department of Housing, Department of Buildings and SLA, FDNY. DOH rejected my request each stating that the documents I requested were NYPD’s possession. Similarly, SLA responded saying that they were not in possession of relevant documents or that they would be able—unable to access them. DOB has acknowledged my request and indicate on January 8, 2018 that there were—that they were working on it, but have not produced any documents despite reminders I’ve sent every two weeks since then. On March 3, 2018, the NYPD responded to my letter with two documents. The first was a PDF entitled Criteria for Selecting a Location into the Multiagency Response to Community Hotspots Operation. The document has previously been reported by the journalist Liz Pelly of the Bachelor (sic) who published the story on March—February 12, 2018. The second is a spreadsheet entitled Copy of March Program 3. My testimony will focus primarily on the data contained in this spreadsheet and the knowledge I gleaned from it. The spreadsheet contains 2,300 rows with the columns for the addresses of inspection—inspection date, Environmental Control Board and DOB violation numbers, and a column name Access 1, which seems to indicate the outcome of the inspection though I can’t be sure since the NYPD did not respond to my follow- up request for additional details on its meaning. Importantly, the spreadsheet does not represent a list of inspections, but a list of violations that resulted from inspections that they said in the case that no violations resulted from an inspection, there is a single row containing just [bell] the address of the inspection, the inspection date. 25"
+        },
+        {
+          "speaker": "Patrick Weaver",
+          "transcriptPage": 88,
+          "text": "Yep."
+        },
+        {
+          "speaker": "Patrick Weaver",
+          "transcriptPage": 88,
+          "text": "Thank you."
+        }
+      ]
+    },
+    {
+      "speaker": "Rachel Nelson",
+      "transcriptLabels": [
+        "RACHEL NELSON"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        69,
+        81,
+        82
+      ],
+      "wordCount": 908,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but "
+      ],
+      "turns": [
+        {
+          "speaker": "Rachel Nelson",
+          "transcriptPage": 69,
+          "text": "[background comments/ pause] Hi. My name is Rachel Nelson. I own three bars in Brooklyn. I’ve been doing this for 15 years. I made a mistake recently of renting a place that was on the Naughty List. The Naughty List means that you’re open to more scrutiny than other places. A M.A.R.C.H. raid comes arbitrarily, enforces laws that happen. The Fire Department was there once. They didn’t enforce it. A M.A.R.C.H. comes. They do enforce it. So, the fact they are saying the sort of fairy tale depiction of the city’s representation is really a fairy tale of what happens. They come in SWAT gear. They chase away your customers whether by actual chasing them out or by the fact that they’re there I SWAT gear. They basically intimidate you and the—the goal I believe is actually to intimidate you out of business. This isn’t a small thing. This isn’t—this isn’t a thing that should happen in a democracy. There are agencies. There’s a Fire Department, there’s the Department of Health. As Council Member Levin said all of these people come and they come regularly. You’re open to so much scrutiny. Having a liquor license opens you up to scrutiny from things you didn’t even know existed before you had a liquor license. So, I’m in good condition. I’m on good terms with my NCO as well and again, I actually have a decent relationship with the precinct, but because the location I was at had gunfights 15 years ago, we continued to get more scrutiny as place that now has white walls and art openings. We’re a not-for-profit that runs a bar to try to support ourselves in the ever expanding expensive realm of New York City rents, compliance and protocol. But there’s no way for us to get out from under the reputation of the former tenants. Now in a democracy where is the room? Who do I call and that’s my biggest issue: Who do I call for M.A.R.C.H.? What-if you Google M.A.R.C.H., there’s no—there’s no way to Google M.A.R.C.H. There’s no directory in the city list of directories of oh here’s M.A.R.C.H. Even when you call the Fire Department there is—when you say, Hey, can I speak to the office in charge of M.A.R.C.H. they can’t tell you where that office is. They can’t direct you. So, my problem is once you’re on the Naughty List, how do you get off? Once you’re—once you’ve—it’s been decided you’re bad, how do you become un-bad? Even when you’ve decided—even when you’ve done everything you can. Now, here’s the thing: Everything is about compliance now. We’ve gotten rid of the Cabaret Law, thank God, but now everything is about, Is that exit large enough? Is this that? Is this that? These are things that are thousand and thousands and thousands of dollars putting small businesses out of business. You guys don’t want our tax money or our sales tax money that’s fine because you’re M.A.R.C.H.ing us out of business. Now, the—the city was talking about the fact that this actually only happened to a small percentage of things, and I don’t know if it’s a Task Force, a M.A.R.C.H. raid, a Nightlife Task Force, but there’s something going on that nobody knows how to get in contact with and nobody knows how to stop, and that shouldn’t happen in a democracy. I’m under the impression that this doesn’t happen to places that are chains, to places that are wealthy, to places in gentrified neighborhoods as often or to people who have power. This seems to happen to artist run spaces, places of color. I have a neighbor who doesn’t like queer people. We happen to be a queer bar. She calls 311 all the time. Apparently that makes us bad people. So, in a democracy, what do you do? Who do you call? I’m happy this is happening because really like I think a lot of us of are at our wits end as to who we can even contact to get off the M.A.R.C.H. list. Thank you."
+        },
+        {
+          "speaker": "Rachel Nelson",
+          "transcriptPage": 81,
+          "text": "[off mic] I guess it’s not officially M.A.R.C.H."
+        },
+        {
+          "speaker": "Rachel Nelson",
+          "transcriptPage": 82,
+          "text": "Yes, I do. So, the first time actually pulled the 311 records because they said you have 311 calls, we had zero. We had increased 311 calls in the area, but there was another bar that opened that was not complying with it—they’re not—they don’t care about the community, but that’s their issue. So, there was nothing that said Friends and Lovers is making too much noise. The place is completely soundproof. Like the DEP came in and said, Holy cow, I can’t hear anything from the street. So, I know that—I called BS on it. The second time we had an increase amount of theft. Again, another bar is bringing a different type of clientele. So, we had four wallets stolen in the course of-of three months. The last time you said that we had one more report last week. S o, I couldn’t ignore this. That’s why we’re here, but don’t worry. We’ll be fast, and I said I don’t know what you’re talking about. I don’t have that report. He said it happened Wednesday. Sorry, that was my birthday party. I don’t know. Any of my friends did not lose their wallet. I’d like to see this report. Fast forward two weeks late no report. Wait. Yes. increased amount of theft was the trigger for the second time."
+        }
+      ]
+    },
+    {
+      "speaker": "Robert Bookman",
+      "transcriptLabels": [
+        "ROBERT BOOKMAN"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        72,
+        77
+      ],
+      "wordCount": 987,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "however",
+        "but ",
+        "question"
+      ],
+      "turns": [
+        {
+          "speaker": "Robert Bookman",
+          "transcriptPage": 72,
+          "text": "Good morning. My name is Robert Bookman. I am Counsel to the New York City Hospitality Alliance, the largest not-for-profit association representing thousand of restaurants and nightlife establishments throughout the five boroughs. Prior to that, I was counsel for 20 years to the predecessor New Yorker Nightlife Association. We are the organization that first started to work with the NYPD 12, 13 years ago, and in addition to my law practice for over 30 years, I have represented thousands of nightlife establishments before state an city agencies, this Council and the courts. I have been intricately involved with this marked issue for decades. Hospitality Alliance wholeheartedly supports this common sense legislation. It will provide the needed transparency we have called for for over 20 years. Transparency to the a process that remains controversial after all these years and needs data and facts we can all share. We were very pleased to hear that the NYPD also supports this legislation. We value our ongoing communication and working relationship with the NYPD. Since 2006 when we began meeting with them regularly at the encouragement of this Council and former Speaker Quinn, we have made considerable progress on may fronts. We joint—we wrote and published Best Practices for Nightlife Establishments in 2007 and two subsequent updated editions in 2011 and 2018. Best Practices has become a model used allover the country and the world. We together created the first of its kind Active Training Video geared to bars an clubs. We have jointly held numerous training sessions for nightlife security, managers and owners. The NYPD Crime Prevention Unit has included working with nightlife establishments for the first time with free daytime visits to help reduce crime in and around nightlife establishments with practical help with security cameras, customer awareness signage, hooks for pocketbooks, things like that. This has resulted in over an 80% reduction in the number of summonses being issued to the industry today compared to before our meetings 13 years ago. But one area we still need to work on is M.A.R.C.H. and this legislation provides the statistical basis for that work. And by the way, while we are talking about M.A.R.C.H., there are really multiple ways that businesses can get multiple task forces, you know, attacking them or coming at them. M.A.R.C.H. is of a many. I think there’s a lot of data about that today, and we more—I want to make sure your legislation covers. There’s a Mayor’s Office unit that could also order, you know, and you don’t know who it is that’s coming. So, I want to make sure this legislation covers all inspections by multiple agencies to a nightlife business so that we all can have the real data shared, and we can then come to the right conclusions about whether this is really necessary any more. We think it’s a troubling vestige from a leftover prior era. It actually began right after the Happy Land fire in 1990 where 87 people died in an illegal and unsafe club. That tragedy resulted in was called the Social Club Task Force, which looked—which ultimately did locate and close down these unlicensed establishments. But as government does after completing its work rather than disbanding the task force, which was successful Mayor Giuliana morphed it into M.A.R.C.H., which now however was tasked with going after licensed establishments not the illegal underground no liquor social clubs. These are two very different types of businesses, however. One of was illegal and underground, the other that you’re hearing from owners today are open to the public. They’re licensed. They’re easy to contact the owners. Methodology may have made sense for the former illegal social clubs, but it does—it did not and does not for the latter. As an enforcement tool, I do not think it’s effective in advancing the underlying problems that agencies might have with a particular establishment. Yet, and—and I’ll explain, you know, it—it—a lot. In my experience when—when a location is M.A.R.C.H.’d, whatever the underlying reasons are, they are not addressed by coming in at 12:00 at night with all these other agencies. They’re finding sales to minors. They’re going to happen to walk upon a fight, you know, you know, coincidentally. It has been historically, in my opinion, a waste of resources. I think the agencies that go to these— with them believe it’s a waste of resources the Health Department was taken out of the M.A.R.C.H. as a result of our—our meetings with NYPD over the years saying they’re coming during the day. They certainly don’t need to be at M.A.R.C.H. and we haven’t seen them for the most part in M.A.R.C.H. It is not my experience that as a result of a M.A.R.C.H. you get zero summonses. Quite the opposite. It is my experience that you get a—a package of summonses, you know, as the result of a M.A.R.C.H. most of which can be accomplished [bell] during the daytime. I’ll—I’ll wrap up. There have been improvements, however, even in M.A.R.C.H. I do want to put historical perspective here. When we started actually back in 2002, over 700 establishments were visited in the a year. We’re talking about 200 or so establishments today, and I don’t know if all those processes are being used, but if they are if, you know, it is a good—it is a good start. And just in concluding, Mr. Chairman, I like your idea in your last question that you asked, and now that we have a Mayor’s Office Nightlife and a Nightlife Mayor, this seems an ideal position to add to that protocol that if they’re not getting anywhere with a particular location they bring in the Mayor’s Office of Nightlife, sit the parties down, mediate to find out what the real problem is. Let’s address the real problem so we don’t have to waste a bunch of resources at night. Thank you."
+        },
+        {
+          "speaker": "Robert Bookman",
+          "transcriptPage": 77,
+          "text": "I’m glad you did, too."
+        }
+      ]
+    },
+    {
+      "speaker": "Tara Mcmannis",
+      "transcriptLabels": [
+        "TARA MCMANNIS"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        88
+      ],
+      "wordCount": 341,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but "
+      ],
+      "turns": [
+        {
+          "speaker": "Tara Mcmannis",
+          "transcriptPage": 88,
+          "text": "Hi. My name is Tara McMannis. I’ve been living in Brooklyn and making art for 18 years. I’ve lived in lofts, I’ve partied in warehouses, and I work in nightclubs that are all gone because of raids. I don’t know which ones are M.A.R.C.H. raids, but in all the cases it was at least the Fire Department and the Police Department storming in. Some were illegal licensed bars. Some have been artist housing where they throw parties. The one thing they have in common is the element of surprise. When your at a club on a Saturday night you don’t expect firefighters and police officers barging in with flashlights, illegal—illegally searching my purse. It incites panic. You would think that there’s a fire, violent crime. I’ve seen bars emptied so fast when they see uniforms. I’ve seen bartenders, door people, food vendors all arrested. I’ve seen vend—patrons arrested for standing too close to the bar. Where is the fire? Where is the emergency? Storming a venue on a busy night and making hasty arrests is as dangerous as yelling fire in a crowded theater. Is it worth creating a stampeded to arrest the bartender working? I’ve helped dozens of artists deal with evictions. They wake up to firefighters brandishing axes, making threats to use it at their doorstep. I’ve helped them pack their entire lives into storage units. They have three days during business hours to get out of their artist lofts. You know, authorities come completely prepared but we’re not. They’re ready to make arrests. They have their fines. They’ve done their research through our social media. They know the violations already. Some pay to get in, pay for drinks, and the break out their badges. Some come in through the fire exists using vital fire and life safety procedures to come in through the back door. While we’re coming together to share our—with people and continue to live our lives and to work jobs, we have no idea. Why not let spaces that have violations [bell] let them numb."
+        }
+      ]
+    }
+  ]
+}

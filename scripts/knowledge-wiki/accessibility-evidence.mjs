@@ -4,6 +4,7 @@ import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 
 export const accessibilityEvidencePath = "docs/qa/evals-H/responsive-route-matrix.json";
+export const publicSurfaceFingerprintVersion = 2;
 export const canonicalAccessibilityRoutes = Object.freeze([
   "/",
   "/work",
@@ -21,6 +22,37 @@ export const canonicalAccessibilityRoutes = Object.freeze([
   "/work/kc-town-hall"
 ]);
 export const canonicalAccessibilityViewports = Object.freeze([360, 375, 768, 1280]);
+
+function canonicalJson(value) {
+  if (Array.isArray(value)) return value.map(canonicalJson);
+  if (value && typeof value === "object") {
+    return Object.fromEntries(
+      Object.entries(value)
+        .sort(([left], [right]) => left.localeCompare(right))
+        .map(([key, item]) => [key, canonicalJson(item)])
+    );
+  }
+  return value;
+}
+
+function runtimePackageProjection(sourceText) {
+  const packageJson = JSON.parse(sourceText);
+  const runtimeScripts = Object.fromEntries(
+    ["build", "dev", "start"]
+      .filter((name) => typeof packageJson.scripts?.[name] === "string")
+      .map((name) => [name, packageJson.scripts[name]])
+  );
+  return canonicalJson({
+    dependencies: packageJson.dependencies ?? {},
+    devDependencies: packageJson.devDependencies ?? {},
+    engines: packageJson.engines ?? {},
+    overrides: packageJson.overrides ?? {},
+    packageManager: packageJson.packageManager ?? null,
+    resolutions: packageJson.resolutions ?? {},
+    scripts: runtimeScripts,
+    workspaces: packageJson.workspaces ?? []
+  });
+}
 
 export function computePublicSurfaceFingerprint(repoRoot) {
   const files = execFileSync(
@@ -41,13 +73,24 @@ export function computePublicSurfaceFingerprint(repoRoot) {
     .filter(Boolean)
     .sort();
   const hash = createHash("sha256");
+  hash.update(`public-surface-fingerprint-v${publicSurfaceFingerprintVersion}`);
+  hash.update("\0");
   for (const relativePath of files) {
     hash.update(relativePath);
     hash.update("\0");
-    hash.update(readFileSync(path.join(repoRoot, relativePath)));
+    const source = readFileSync(path.join(repoRoot, relativePath));
+    if (relativePath === "package.json") {
+      hash.update(JSON.stringify(runtimePackageProjection(source.toString("utf8"))));
+    } else {
+      hash.update(source);
+    }
     hash.update("\0");
   }
-  return { fingerprint: hash.digest("hex"), fileCount: files.length };
+  return {
+    version: publicSurfaceFingerprintVersion,
+    fingerprint: hash.digest("hex"),
+    fileCount: files.length
+  };
 }
 
 function hashFile(repoRoot, relativePath) {
@@ -147,6 +190,7 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
   return {
     passed:
       report.reportVersion === 1 &&
+      report.publicSurfaceFingerprintVersion === current.version &&
       report.rows.length === expectedRows &&
       expectedRows === 56 &&
       canonicalCoverage &&

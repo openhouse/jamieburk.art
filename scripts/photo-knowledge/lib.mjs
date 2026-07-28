@@ -154,6 +154,30 @@ function compareText(a, b) {
   return a < b ? -1 : a > b ? 1 : 0;
 }
 
+function isPhotoBoundaryPath(relativePath) {
+  return (
+    relativePath === "AGENTS.md" ||
+    relativePath === "README.md" ||
+    relativePath === "package.json" ||
+    relativePath.startsWith("apps/www/src/") ||
+    relativePath.startsWith("docs/knowledge-bank/") ||
+    relativePath.startsWith("reports/photo-knowledge") ||
+    relativePath.startsWith("rfcs/") ||
+    (
+      relativePath.startsWith("scripts/photo-knowledge/") &&
+      relativePath !== "scripts/photo-knowledge/lib.mjs" &&
+      !relativePath.endsWith(".test.mjs")
+    )
+  );
+}
+
+function removeApprovedPublicSourceUrls(text) {
+  return text.replace(
+    /https:\/\/(?:legistar\.council\.nyc\.gov|fairrentnyc\.nycartc\.com)\/[^\s<>"'`\])]+/gi,
+    ""
+  );
+}
+
 function heldResearchRecordIsDefaultClosed(record, sourceText) {
   if (!record) return false;
   const exactKeys =
@@ -274,7 +298,7 @@ function readIntroducedHistorySources(repoRoot = defaultRepoRoot) {
         { cwd: repoRoot, encoding: "utf8" }
       )
         .split("\0")
-        .filter(Boolean);
+        .filter((relativePath) => relativePath && isPhotoBoundaryPath(relativePath));
       for (const relativePath of changedPaths) {
         try {
           const bytes = execFileSync(
@@ -994,6 +1018,7 @@ export function validateBrowserPhotoOccurrences({
   );
   return {
     passed:
+      evidence?.publicSurfaceFingerprintVersion === current.version &&
       evidence?.publicSurfaceFingerprint === current.fingerprint &&
       evidence?.publicSurfaceFileCount === current.fileCount &&
       rowsBound &&
@@ -1181,6 +1206,9 @@ export function evaluatePhotoKnowledge(options = {}) {
   );
   const councilOpenDataInquiry = byId.get(
     "research-inquiry.nyc-council-open-data-photo.2026"
+  );
+  const eventPhotoSelectWorkflow = byId.get(
+    "source.recollection.jamie.event-photo-select-workflow.2026-07"
   );
   const firstFieldCloseReading = byId.get(
     "research.photography-first-field-close-reading.2026-07-26"
@@ -1460,10 +1488,14 @@ export function evaluatePhotoKnowledge(options = {}) {
     /(?:\b[0-9A-F]{8}(?:-[0-9A-F]{4}){3}-[0-9A-F]{12}\b|IMG_[0-9]{4}|_L0_001)/i;
   const currentBoundaryClean = surfaceFiles.every((file) => {
     const source = readFileSync(file, "utf8");
-    return !protectedPathPattern.test(source) && !protectedAssetPattern.test(source);
+    return (
+      !protectedPathPattern.test(source) &&
+      !protectedAssetPattern.test(removeApprovedPublicSourceUrls(source))
+    );
   }) && (options.publicBoundaryExtraSources ?? []).every(
     (text) =>
-      !protectedPathPattern.test(text) && !protectedAssetPattern.test(text)
+      !protectedPathPattern.test(text) &&
+      !protectedAssetPattern.test(removeApprovedPublicSourceUrls(text))
   );
   const introducedHistory =
     options.introducedHistorySources ?? readIntroducedHistorySources(repoRoot);
@@ -1473,24 +1505,13 @@ export function evaluatePhotoKnowledge(options = {}) {
       const relativePath =
         typeof entry === "string" ? "injected-public-surface" : entry.relativePath;
       const text = typeof entry === "string" ? entry : entry.text;
-      const isPhotoBoundarySurface =
-        relativePath === "AGENTS.md" ||
-        relativePath === "README.md" ||
-        relativePath === "package.json" ||
-        relativePath.startsWith("apps/www/src/") ||
-        relativePath.startsWith("docs/knowledge-bank/") ||
-        relativePath.startsWith("reports/photo-knowledge") ||
-        relativePath.startsWith("rfcs/") ||
-        (
-          relativePath.startsWith("scripts/photo-knowledge/") &&
-          relativePath !== "scripts/photo-knowledge/lib.mjs" &&
-          !relativePath.endsWith(".test.mjs")
-        );
+      const isPhotoBoundarySurface = isPhotoBoundaryPath(relativePath);
+      const assetScanText = removeApprovedPublicSourceUrls(text);
       return (
         !isPhotoBoundarySurface ||
         (
           !protectedPathPattern.test(text) &&
-          !protectedAssetPattern.test(text)
+          !protectedAssetPattern.test(assetScanText)
         )
       );
     });
@@ -1891,6 +1912,26 @@ export function evaluatePhotoKnowledge(options = {}) {
       source(firstFieldCloseReading?.id)
     );
 
+  const eventTranscriptSelectTreeBounded =
+    eventPhotoSelectWorkflow?.kind === "source" &&
+    eventPhotoSelectWorkflow?.status === "maintained" &&
+    eventPhotoSelectWorkflow?.visibility === "public-safe" &&
+    eventPhotoSelectWorkflow?.projection_status === "hold" &&
+    JSON.stringify(eventPhotoSelectWorkflow?.projection) ===
+      JSON.stringify({ status: "hold", surfaces: [] }) &&
+    /Photo Filter/i.test(source(eventPhotoSelectWorkflow?.id)) &&
+    /Photo Select/i.test(source(eventPhotoSelectWorkflow?.id)) &&
+    /recursive `_keep` depth/i.test(source(eventPhotoSelectWorkflow?.id)) &&
+    /private navigation metadata, not public\s+attribution, consent, or permission/i.test(
+      source(eventPhotoSelectWorkflow?.id)
+    ) &&
+    /does not clear any photograph/i.test(
+      source(eventPhotoSelectWorkflow?.id)
+    ) &&
+    !/(?:\/Users\/|\/Volumes\/|Photos\.sqlite|Library\/Photos)/i.test(
+      source(eventPhotoSelectWorkflow?.id)
+    );
+
   const checks = {
     photo_rfc_0003_implementing_and_indexed: rfcImplementing,
     photo_records_materialized: recordsMaterialized,
@@ -1911,6 +1952,8 @@ export function evaluatePhotoKnowledge(options = {}) {
       callnycOralHistoryDefaultClosed,
     photo_nyc_council_open_data_oral_history_bounded:
       councilOpenDataOralHistoryBounded,
+    photo_event_transcript_select_tree_bounded:
+      eventTranscriptSelectTreeBounded,
     photo_first_field_close_reading_bounded: firstFieldCloseReadingBounded,
     photo_curatorial_authority_advisory: curatorialAuthorityAdvisory,
     photo_protected_absence_first_class: protectedAbsenceFirstClass,

@@ -1,6 +1,11 @@
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
-import { mkdtempSync, mkdirSync, writeFileSync } from "node:fs";
+import {
+  mkdtempSync,
+  mkdirSync,
+  readFileSync,
+  writeFileSync
+} from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { test } from "node:test";
@@ -55,6 +60,44 @@ test("untracked public files are included while ignored files stay excluded", ()
   assert.equal(withUntracked.fileCount, 3);
   assert.notEqual(withUntracked.fingerprint, tracked.fingerprint);
   assert.deepEqual(withIgnored, withUntracked);
+});
+
+test("evaluation-only root scripts do not invalidate browser evidence", () => {
+  const root = mkdtempSync(path.join(tmpdir(), "jb-accessibility-package-"));
+  execFileSync("git", ["init", "-q"], { cwd: root });
+  mkdirSync(path.join(root, "apps/www/src"), { recursive: true });
+  writeFileSync(
+    path.join(root, "package.json"),
+    JSON.stringify({
+      scripts: {
+        build: "next build",
+        check: "node check.mjs"
+      },
+      dependencies: { next: "1.0.0" }
+    })
+  );
+  writeFileSync(
+    path.join(root, "apps/www/src/page.ts"),
+    "export const page = true;\n"
+  );
+  execFileSync("git", ["add", "package.json", "apps/www/src/page.ts"], {
+    cwd: root
+  });
+
+  const before = computePublicSurfaceFingerprint(root);
+  const packageJson = JSON.parse(
+    readFileSync(path.join(root, "package.json"), "utf8")
+  );
+  packageJson.scripts.check = "node check-v2.mjs";
+  packageJson.scripts["archive:research"] = "node archive.mjs";
+  writeFileSync(path.join(root, "package.json"), JSON.stringify(packageJson));
+  const afterEvaluationChange = computePublicSurfaceFingerprint(root);
+  packageJson.scripts.build = "next build --debug";
+  writeFileSync(path.join(root, "package.json"), JSON.stringify(packageJson));
+  const afterBuildChange = computePublicSurfaceFingerprint(root);
+
+  assert.deepEqual(afterEvaluationChange, before);
+  assert.notEqual(afterBuildChange.fingerprint, before.fingerprint);
 });
 
 test("a coordinated canonical-route substitution fails closed", () => {

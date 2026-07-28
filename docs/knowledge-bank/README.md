@@ -5,7 +5,7 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
+last_reviewed: 2026-07-28
 review_by: 2027-01-18
 aliases:
   - Knowledge Bank
@@ -42,6 +42,30 @@ relations:
     target: index.knowledge-wiki.photographic-knowledge-loop
     href: indexes/photographic-knowledge-loop.md
     context: Governed path from private source binding through curation, placement, recollection, correction, and portfolio editions.
+  - type: related_to
+    target: index.knowledge-wiki.campaign-site-photographs
+    href: indexes/campaign-site-photographs.md
+    context: Complete bounded occurrence inventory for photographs across six campaign publication surfaces.
+  - type: related_to
+    target: index.knowledge-wiki.public-testimony-and-hearing-voices
+    href: indexes/public-testimony-and-hearing-voices.md
+    context: Complete official transcript text and attributed speaker ledgers for the currently recovered Council-hearing corpus.
+  - type: related_to
+    target: index.knowledge-wiki.commercial-rent-stabilization-testimony
+    href: indexes/commercial-rent-stabilization-testimony.md
+    context: Complete recovered Council records and bounded supportive oral, written, and public-official statements for Commercial Rent Stabilization.
+  - type: related_to
+    target: index.crs.public-support-speeches
+    href: indexes/commercial-rent-public-support-speeches.md
+    context: Speaker-specific reading copies from four recovered public events, including ten public-official speech occurrences and explicit source-return boundaries.
+  - type: related_to
+    target: research.current-workstream-source-return.2026-07-27
+    href: research-runs/current-workstream-source-return-2026-07-27.md
+    context: Present-tense source return with prepublication, coaching, and speech-draft boundaries.
+  - type: related_to
+    target: claim.action-lab.prepublication-review.2026
+    href: claims/action-lab-prepublication-review-2026.md
+    context: Held candidate claim for a bounded prepublication report review.
   - type: related_to
     target: project.nyc-artist-coalition
     href: projects/nyc-artist-coalition-2017.md
@@ -98,6 +122,22 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Photographic knowledge loop](indexes/photographic-knowledge-loop.md):
   governed file pages, permissions, curation, placements, recollections,
   protected absences, and dated portfolio editions.
+- [Campaign-site photographic index](indexes/campaign-site-photographs.md):
+  all declared photograph occurrences across six NYC Artist Coalition and
+  campaign publication surfaces, held as metadata until image-specific human
+  gates are cleared.
+- [Public testimony and hearing voices](indexes/public-testimony-and-hearing-voices.md):
+  complete official transcript text and attributed speaker-turn ledgers for
+  the currently recovered Council-hearing corpus.
+- [Commercial Rent Stabilization testimony](indexes/commercial-rent-stabilization-testimony.md):
+  complete recovered Council records, supportive oral and written testimony,
+  supportive public-official statements, and explicit prime-sponsor absences.
+- [Commercial Rent Stabilization public support speeches](indexes/commercial-rent-public-support-speeches.md):
+  23 speaker-specific working reading copies from four recovered public events,
+  including ten public-official speech occurrences and historically bounded
+  candidate roles.
+- [Current workstream source return](research-runs/current-workstream-source-return-2026-07-27.md):
+  bounded present-tense records kept distinct from publication-ready proof.
 - [NYC Artist Coalition](projects/nyc-artist-coalition-2017.md): public-source
   claims, collective-credit boundaries, and the governed shared-folder research
   pass.

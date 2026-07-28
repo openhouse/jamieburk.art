@@ -1,0 +1,52 @@
+---
+id: asset.campaign-photo.c8fcb51bdce13ccd
+title: "NYC Artist Coalition photograph: save-nyc-spaces-nyc-artist-coalition"
+kind: asset
+status: governed-open
+visibility: public-safe
+sensitivity: moderate
+last_reviewed: 2026-07-28
+review_by: 2026-08-28
+canonical_path: docs/knowledge-bank/assets/campaign-sites/c8fcb51bdce13ccd.md
+summary: "Metadata-only campaign-site photograph entry with 2 recovered publication occurrences."
+authority: archival-intake
+media_type: photograph
+rights_state: cleared
+consent_state: review-needed
+public_display_status: metadata-only
+permission_scope: Jamie authorized research and portfolio use for the campaign-site image population; no broader license, syndication, or third-party reuse is inferred.
+projection:
+  status: hold
+  surfaces: []
+relations:
+  - type: uses_source
+    target: source.campaign-site-photo-census.nycartc.2026-07
+    href: ../../sources/campaign-photo-sites/nycartc.md
+---
+
+# NYC Artist Coalition photograph: save-nyc-spaces-nyc-artist-coalition
+
+The public pixels were not recovered into the local source census; this entry is bound to its normalized public reference and occurrence pages.
+
+## Recovered publication occurrences
+
+- [nycartc: /fairrentnyc/](https://nycartc.com/fairrentnyc/) — `media-kit`
+- [nycartc: /march/](https://nycartc.com/march/) — `media-kit`
+
+## Public image references
+
+- https://nycartc.com/img/press/photos/save-nyc-spaces-nyc-artist-coalition.jpg
+
+## What this entry establishes
+
+The photograph appeared in the declared campaign-site population at the
+routes above. Page context is a research lead, not a verified caption.
+
+## Human gates
+
+Jamie has authorized portfolio use of this historical campaign-site image
+population. Before this photograph receives a new public occurrence, record
+the exact creator credit, represented-person consent or applicable public-
+event boundary, checked caption, intentional crop, editorial selection,
+deployment approval, and indexing approval. Metadata-only indexing is not
+publication clearance.

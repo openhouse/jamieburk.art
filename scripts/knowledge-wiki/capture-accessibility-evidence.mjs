@@ -299,12 +299,13 @@ const report = {
   reportVersion: 1,
   checkedAt: new Date().toISOString(),
   baseUrl,
+  publicSurfaceFingerprintVersion: current.version,
   publicSurfaceFingerprint: current.fingerprint,
   publicSurfaceFileCount: current.fileCount,
   publicSurfaceScope: [
     "tracked and unignored apps/www/**",
-    "package.json",
-    "package-lock.json"
+    "package-lock.json",
+    "package.json runtime projection: workspaces, engines, dependencies, devDependencies, overrides, resolutions, packageManager, and build/dev/start scripts"
   ],
   method:
     "Playwright Chromium; 14 canonical routes at 360, 375, 768, and 1280 CSS pixels; axe WCAG 2 A/AA and 2.1 A/AA; 12-step keyboard traversal with skip-link-first assertion; six candidate-bound viewport screenshots; overflow, landmarks, headings, alt text, request failures, governed photo occurrence identity, and explicit full-page scroll before final image decode checks",

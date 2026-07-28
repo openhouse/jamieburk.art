@@ -1,0 +1,387 @@
+{
+  "schemaVersion": 1,
+  "id": "corpus.commercial-rent.public-support-speeches.2025-2026",
+  "reviewedAt": "2026-07-28",
+  "scope": {
+    "description": "Speaker-specific public-safe working transcripts of recovered public statements supporting Commercial Rent Stabilization and the Small Business Rent Stabilization Act.",
+    "populationBoundary": "Formal supportive speakers recovered from four Jamie-recorded public events, plus explicit absence records. Private setup conversation is excluded. The corpus does not claim every supportive statement ever made.",
+    "quotationBoundary": "These are complete recovered selected-speaker turns, not quotation-ready certified transcripts. Check source audio before publication.",
+    "publicOfficialBoundary": "Role labels describe the speaker at the event. Sponsorship, attendance, mention by another speaker, and an attributable spoken statement remain distinct."
+  },
+  "legislation": {
+    "assembly": {
+      "bill": "A5568A",
+      "sponsor": "Emily Gallagher",
+      "officialUrl": "https://nyassembly.gov/leg/?Memo=Y&Summary=Y&Text=Y&bn=A5568&term=2025"
+    },
+    "senate": {
+      "bill": "S8319",
+      "sponsor": "Julia Salazar",
+      "officialUrl": "https://www.nysenate.gov/legislation/bills/2025/S8319"
+    },
+    "officialAnnouncement": {
+      "date": "2026-02-17",
+      "url": "https://www.nysenate.gov/newsroom/press-releases/2026/julia-salazar/senator-salazar-and-assembly-member-gallagher-introduce",
+      "coverage": "Official written statements from Julia Salazar, Emily Gallagher, Olympia Kazi, and Small Business United are linked and characterized; the Wiki does not mislabel them as chamber-floor speeches."
+    },
+    "nomenclatureNote": "Official bill records identify the New York city small business rent stabilization act; the February 2026 announcement uses Small Business Survival Act. The Wiki preserves both source wordings rather than silently collapsing them."
+  },
+  "currentContext": {
+    "eonHuntley": {
+      "reviewedAt": "2026-07-28",
+      "status": "published unofficial result shows Democratic primary win for Assembly District 56",
+      "officialUrl": "https://nyenr.elections.ny.gov/HomeNoJS.aspx",
+      "boundary": "At the February 17 event he spoke as a candidate, not as an elected official."
+    }
+  },
+  "events": [
+    {
+      "id": "event.crs.public-gathering.the-commissioner.2025-11-13",
+      "slug": "crs-the-commissioner-2025-11-13",
+      "title": "Commercial Rent Stabilization gathering at The Commissioner",
+      "date": "2025-11-13",
+      "venue": "The Commissioner, Park Slope, Brooklyn",
+      "sourceClass": "user-owned public-event recording plus working transcript",
+      "sourceLocator": "protected",
+      "speakers": [
+        {
+          "slug": "2025-11-13-emily-gallagher",
+          "speaker": "Emily Gallagher",
+          "role": "New York State Assembly Member",
+          "labels": [
+            "AM Emily Gallagher"
+          ],
+          "min": "0:40:49",
+          "classification": "explicit support and bill presentation",
+          "publicOfficial": true,
+          "transcriptFile": "2025-11-13-emily-gallagher.md",
+          "turnCount": 9,
+          "transcriptSha256": "08e50f6bb31621142a02cb154eeb4cddf0617904e8f2014a641d7741711895d5",
+          "transcriptCharacters": 25986
+        },
+        {
+          "slug": "2025-11-13-olympia-kazi",
+          "speaker": "Olympia Kazi",
+          "role": "NYC Artist Coalition cofounder and advocate",
+          "labels": [
+            "Olympia Kazi"
+          ],
+          "min": "0:42:20",
+          "classification": "explicit support and movement history",
+          "transcriptFile": "2025-11-13-olympia-kazi.md",
+          "turnCount": 2,
+          "transcriptSha256": "d5369934f1bf196529e49215675e12640906edc230bf9930b0ac46245faebdff",
+          "transcriptCharacters": 6881
+        },
+        {
+          "slug": "2025-11-13-shahana-hanif",
+          "speaker": "Shahana Hanif",
+          "role": "New York City Council Member",
+          "classification": "explicit support",
+          "publicOfficial": true,
+          "transcriptFile": "2025-11-13-shahana-hanif.md",
+          "turnCount": 2,
+          "attributionMethod": "self-introduction and contiguous named transition",
+          "transcriptSha256": "9aa1767b65de1ca2b2027b6fff21778734be33fd98506a65723071064c8db630",
+          "transcriptCharacters": 4058
+        },
+        {
+          "slug": "2025-11-13-brad-lander",
+          "speaker": "Brad Lander",
+          "role": "New York City Comptroller",
+          "labels": [
+            "Comptroller Brad Lander"
+          ],
+          "min": "0:53:59",
+          "classification": "explicit support",
+          "publicOfficial": true,
+          "transcriptFile": "2025-11-13-brad-lander.md",
+          "turnCount": 3,
+          "transcriptSha256": "5663925b09ebafd2b6789be91d7d2c5ce41a91156aeee1f7820bb0c6b3e52ab5",
+          "transcriptCharacters": 8761
+        },
+        {
+          "slug": "2025-11-13-jen-snyder",
+          "speaker": "Jen Snyder",
+          "role": "campaign and event organizer",
+          "labels": [
+            "Jen Snyder"
+          ],
+          "min": "1:34:00",
+          "classification": "explicit support and organizing appeal",
+          "transcriptFile": "2025-11-13-jen-snyder.md",
+          "turnCount": 1,
+          "transcriptSha256": "54fdbb9b0d4567ef46a1bc71ff8f0170cd5b5cbbca03dddb7ffb85da22429d86",
+          "transcriptCharacters": 2666
+        }
+      ],
+      "publicSnapshotSha256": "5bfcb77560426d1a006681e7f8a2dbb76304cb747275343b1007a99c929a8ee4"
+    },
+    {
+      "id": "event.crs.public-gathering.greenpoint.2025-11-10",
+      "slug": "crs-greenpoint-2025-11-10",
+      "title": "Commercial Rent Stabilization public gathering at 47 Greenpoint Avenue",
+      "date": "2025-11-10",
+      "venue": "47 Greenpoint Avenue, Brooklyn",
+      "sourceClass": "user-owned public-event recording plus working transcript",
+      "sourceLocator": "protected",
+      "speakers": [
+        {
+          "slug": "2025-11-10-emily-gallagher",
+          "speaker": "Emily Gallagher",
+          "role": "New York State Assembly Member",
+          "label": "AM Emily Gallagher",
+          "classification": "explicit support and bill presentation",
+          "publicOfficial": true,
+          "transcriptFile": "2025-11-10-emily-gallagher.md",
+          "turnCount": 19,
+          "transcriptSha256": "1d0a4a661e1635fb77315bb977cd86f9cb373ab2e90d77bd9d3076ed7b5cca76",
+          "transcriptCharacters": 14372
+        },
+        {
+          "slug": "2025-11-10-julia-salazar",
+          "speaker": "Julia Salazar",
+          "role": "New York State Senator",
+          "label": "NY State Senator Julia Salazar",
+          "classification": "explicit support and bill presentation",
+          "publicOfficial": true,
+          "transcriptFile": "2025-11-10-julia-salazar.md",
+          "turnCount": 10,
+          "transcriptSha256": "c40028eaadd8d7e17698a829b3904f84fe53f756f2ba8a7543c2144d7f6ea354",
+          "transcriptCharacters": 6233
+        },
+        {
+          "slug": "2025-11-10-olympia-kazi",
+          "speaker": "Olympia Kazi",
+          "role": "NYC Artist Coalition cofounder and advocate",
+          "label": "Olympia Kazi",
+          "classification": "explicit support and movement history",
+          "transcriptFile": "2025-11-10-olympia-kazi.md",
+          "turnCount": 22,
+          "transcriptSha256": "6c1164266afd19b1bd80a01c41197228a5bc4df6bd9df5bec7e27d99eab46845",
+          "transcriptCharacters": 13377
+        },
+        {
+          "slug": "2025-11-10-jamie-burkart",
+          "speaker": "Jamie Burkart",
+          "role": "NYC Artist Coalition cofounder and public-event participant",
+          "label": "Jamie Burkart",
+          "classification": "explicit support and facilitation",
+          "transcriptFile": "2025-11-10-jamie-burkart.md",
+          "turnCount": 25,
+          "transcriptSha256": "b7c718e669e56db2aba8d15d382859a872988570d51c99580db0cb1f22cfd09d",
+          "transcriptCharacters": 5523
+        }
+      ],
+      "publicSnapshotSha256": "eab07f0bacebd94c7e2ad0b31c2006fcbe8312b7d163968e74f14ae2b25fda4e"
+    },
+    {
+      "id": "event.crs.public-gathering.friends-and-lovers.2026-02-17",
+      "slug": "crs-friends-and-lovers-2026-02-17",
+      "title": "Commercial Rent Stabilization gathering at Friends and Lovers",
+      "date": "2026-02-17",
+      "venue": "Friends and Lovers, 641 Classon Avenue, Brooklyn",
+      "publicEventUrl": "https://actionnetwork.org/events/fundraiser-join-emily-eon-and-chi-to-pass-commercial-rent-stabilization",
+      "sourceClass": "user-owned public-event recording plus working transcript",
+      "sourceLocator": "protected",
+      "expectedSpeakerAbsences": [
+        {
+          "displayName": "Chi Ossé",
+          "basis": "Named on the public event listing; no attributable Commercial Rent Stabilization speech was recovered in the reviewed recording."
+        }
+      ],
+      "speakers": [
+        {
+          "slug": "2026-02-17-olympia-kazi",
+          "speaker": "Olympia Kazi",
+          "role": "NYC Artist Coalition cofounder and advocate",
+          "label": "Olympia Kazi",
+          "classification": "explicit support and movement history",
+          "min": "32:48",
+          "transcriptFile": "2026-02-17-olympia-kazi.md",
+          "turnCount": 6,
+          "transcriptSha256": "938676e6da0e4758e3cef9585f78b6e333a68d861a71731147bdbe5fedb085dd",
+          "transcriptCharacters": 8033
+        },
+        {
+          "slug": "2026-02-17-eon-huntley",
+          "speaker": "Eon Huntley",
+          "role": "candidate for New York State Assembly District 56",
+          "label": "Eon Huntley (eonforassembly.com)",
+          "classification": "explicit support",
+          "min": "36:53",
+          "currentContext": "The New York State Board of Elections' published unofficial results report Eon Huntley first in the June 2026 Democratic primary for Assembly District 56 with 57.12% and 8,438 votes; this transcript retains his role at the February event.",
+          "currentContextSource": "https://nyenr.elections.ny.gov/HomeNoJS.aspx",
+          "transcriptFile": "2026-02-17-eon-huntley.md",
+          "turnCount": 5,
+          "transcriptSha256": "84e22421f46743a3fdbcc97c2c5cb12e9b7c02f4074dd7e393c3c5c17bdcbe27",
+          "transcriptCharacters": 5888
+        },
+        {
+          "slug": "2026-02-17-emily-gallagher",
+          "speaker": "Emily Gallagher",
+          "role": "New York State Assembly Member",
+          "label": "AM Emily Gallagher",
+          "classification": "explicit support and bill presentation",
+          "min": "41:55",
+          "publicOfficial": true,
+          "transcriptFile": "2026-02-17-emily-gallagher.md",
+          "turnCount": 18,
+          "transcriptSha256": "41d2717e73c1d34e6194779219c62c2e0281649f720172dda0286010654c843c",
+          "transcriptCharacters": 24626
+        }
+      ],
+      "publicSnapshotSha256": "2b4db3bfb4868446158d0af0566330a35b47493a3801a6314e4d0b77defbfaa1"
+    },
+    {
+      "id": "event.crs.public-rally.jimmys-corner.2026-04-10",
+      "slug": "crs-jimmys-corner-rally-2026-04-10",
+      "title": "Jimmy's Corner and Small Business Rent Stabilization rally",
+      "date": "2026-04-10",
+      "venue": "44th Street and Sixth Avenue, Manhattan",
+      "officialPressReleaseUrl": "https://www.nysenate.gov/newsroom/press-releases/2026/julia-salazar/senator-salazar-rallies-jimmys-corner-and-small-business",
+      "sourceClass": "user-owned public-event recording plus hand-corrected transcript",
+      "sourceLocator": "protected",
+      "nonSpokenSupport": [
+        {
+          "displayName": "Linda B. Rosenthal",
+          "role": "New York State Assembly Member",
+          "basis": "Official Senate press release preserves a written statement of support; no speech by her was recovered in Jamie's event recording."
+        },
+        {
+          "displayName": "Alex Bores",
+          "role": "New York State Assembly Member",
+          "basis": "Emily Gallagher publicly identified him as supporting the bill; no speech by him was recovered in Jamie's event recording."
+        }
+      ],
+      "speakers": [
+        {
+          "slug": "2026-04-10-adam-glenn",
+          "speaker": "Adam Glenn",
+          "role": "Jimmy's Corner owner",
+          "match": "Adam Glenn (Jimmy's Corner)",
+          "classification": "explicit support and small-business testimony",
+          "transcriptFile": "2026-04-10-adam-glenn.md",
+          "turnCount": 3,
+          "transcriptSha256": "fddfc9f32a0d0a82a6f57ed97f2b69a81d0b90e87185973d8f5ca0b614891d22",
+          "transcriptCharacters": 6727
+        },
+        {
+          "slug": "2026-04-10-emily-gallagher",
+          "speaker": "Emily Gallagher",
+          "role": "New York State Assembly Member and prime sponsor",
+          "match": "Assembly Member Emily Gallagher",
+          "classification": "explicit support and bill presentation",
+          "publicOfficial": true,
+          "transcriptFile": "2026-04-10-emily-gallagher.md",
+          "turnCount": 10,
+          "transcriptSha256": "17ca475f10ff8d80fd41a317ee368d5e978067d3ca8617045a92a603560087ce",
+          "transcriptCharacters": 9993
+        },
+        {
+          "slug": "2026-04-10-alison-hirsh",
+          "speaker": "Alison Hirsh",
+          "role": "Action Lab and Small Business United organizer",
+          "match": "Alison Hirsh",
+          "classification": "explicit support and coalition framing",
+          "transcriptFile": "2026-04-10-alison-hirsh.md",
+          "turnCount": 1,
+          "transcriptSha256": "901e6977887c744678ed1e1c08c70e9f4eb4f235f15653beb19ac90d4bdfd102",
+          "transcriptCharacters": 2416
+        },
+        {
+          "slug": "2026-04-10-julia-salazar",
+          "speaker": "Julia Salazar",
+          "role": "New York State Senator and Senate sponsor",
+          "match": "State Senator Julia Salazar",
+          "classification": "explicit support and bill presentation",
+          "publicOfficial": true,
+          "transcriptFile": "2026-04-10-julia-salazar.md",
+          "turnCount": 1,
+          "transcriptSha256": "6d51fbb101c16f8b513900c380ccd6c7f66aae6940ca5da088ede58d47bbf5cc",
+          "transcriptCharacters": 3683
+        },
+        {
+          "slug": "2026-04-10-emelyn-stuart",
+          "speaker": "Emelyn Stuart",
+          "role": "Stuart Cinema founder",
+          "match": "Emelyn Stuart",
+          "classification": "explicit support and small-business testimony",
+          "transcriptFile": "2026-04-10-emelyn-stuart.md",
+          "turnCount": 1,
+          "transcriptSha256": "9e8f833e6ecaa04f37d97a6f181a6862c93426c633cdb712e7903eb702d77574",
+          "transcriptCharacters": 2304
+        },
+        {
+          "slug": "2026-04-10-tony-simone",
+          "speaker": "Tony Simone",
+          "role": "New York State Assembly Member",
+          "match": "Assembly Member Tony Simone",
+          "classification": "explicit support",
+          "publicOfficial": true,
+          "transcriptFile": "2026-04-10-tony-simone.md",
+          "turnCount": 1,
+          "transcriptSha256": "002254664ace7f12964cd34e673a18c1835ffb0786e940e96ddd370a5e76122e",
+          "transcriptCharacters": 2939
+        },
+        {
+          "slug": "2026-04-10-freddy-castiblanco",
+          "speaker": "Freddy Castiblanco",
+          "role": "Terraza 7 founder and curator",
+          "match": "Freddy Castiblanco (Founder & Curator at Terraza 7)",
+          "classification": "explicit support and small-business testimony",
+          "transcriptFile": "2026-04-10-freddy-castiblanco.md",
+          "turnCount": 1,
+          "transcriptSha256": "a8614b3d76c051e79950189480610d9b9cbdaa921700f9b96b47eeb6844df7b5",
+          "transcriptCharacters": 4780
+        },
+        {
+          "slug": "2026-04-10-jo-anne-simon",
+          "speaker": "Jo Anne Simon",
+          "role": "New York State Assembly Member",
+          "match": "Assembly Member Jo Anne Simon",
+          "classification": "explicit support",
+          "publicOfficial": true,
+          "transcriptFile": "2026-04-10-jo-anne-simon.md",
+          "turnCount": 1,
+          "transcriptSha256": "459f7af63b1469d6b84b03da649e79ff483c160b3a5ed10f5e3daa36ae70f03d",
+          "transcriptCharacters": 3246
+        },
+        {
+          "slug": "2026-04-10-jamell-henderson",
+          "speaker": "Jamell N.A. Henderson",
+          "role": "public-event speaker",
+          "match": "Jamell N.A. Henderson, M.P.A., M.P.P.",
+          "classification": "explicit support",
+          "transcriptFile": "2026-04-10-jamell-henderson.md",
+          "turnCount": 1,
+          "transcriptSha256": "3f6879e4dc8cf1bffd381bc046bd39b05674e53fdba0f4862a3fffd1ecd38b57",
+          "transcriptCharacters": 3423
+        },
+        {
+          "slug": "2026-04-10-lindsey-boylan",
+          "speaker": "Lindsey Boylan",
+          "role": "candidate for New York City Council District 3",
+          "match": "Lindsey Boylan (for City Council District 3)",
+          "classification": "explicit support",
+          "transcriptFile": "2026-04-10-lindsey-boylan.md",
+          "turnCount": 1,
+          "transcriptSha256": "f35a3cb4ea04b74e2f68482ee61ee13cd8514414cf1293ee3de9614eef75cf1c",
+          "transcriptCharacters": 2925
+        },
+        {
+          "slug": "2026-04-10-olympia-kazi",
+          "speaker": "Olympia Kazi",
+          "role": "NYC Artist Coalition cofounder and advocate",
+          "match": "Olympia Kazi",
+          "classification": "explicit support and movement history",
+          "transcriptFile": "2026-04-10-olympia-kazi.md",
+          "turnCount": 1,
+          "transcriptSha256": "7a8bfc68ee15d28e46d587b36b24b271794c9793d1ceff6c4bb3f6b727918d6a",
+          "transcriptCharacters": 4632
+        }
+      ],
+      "publicSnapshotSha256": "65e2f9f434b76744f4e1b0ac99381212e2140e22cb4238914098df6fce4bea9a"
+    }
+  ]
+}

@@ -1,0 +1,604 @@
+{
+  "schemaVersion": 1,
+  "corpusId": "corpus.nycc.commercial-rent-stabilization.2019-2026",
+  "eventId": "event.nycc.commercial-rent.hearing-2021-09-17",
+  "source": {
+    "organization": "New York City Council",
+    "officialUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=9845228&GUID=15401C6A-BE04-4ACB-83B0-15CD9C3F3C0A",
+    "transcriptFile": "hearing-testimony-2021.txt",
+    "extraction": "pdftotext -layout",
+    "transcriptSha256": "418ed212f3d8e88952ef1a8f394553522bc642a7bbdaecb9c7ed1133fab0c82e"
+  },
+  "method": {
+    "population": "Every attributed submission identified by human close reading as explicit support, qualified support, or directly supportive alignment within the recovered official written-testimony attachment.",
+    "boundary": "The complete official attachment is retained separately. Selected page ranges preserve full submission text, including qualifications and recommendations.",
+    "warning": "A supportive-alignment record supports the policy problem or intervention direction without necessarily endorsing every provision of Int. 1796."
+  },
+  "closure": {
+    "officialAttachmentPageCount": 236,
+    "reviewedSupportSubmissionCount": 42,
+    "explicitSupportCount": 31,
+    "qualifiedSupportCount": 4,
+    "supportiveAlignmentCount": 7,
+    "allRangesWithinAttachment": true,
+    "allSelectedTextNonempty": true
+  },
+  "submissions": [
+    {
+      "slug": "nelson-eusebio-national-supermarket-association",
+      "displayName": "Nelson Eusebio",
+      "organization": "National Supermarket Association",
+      "pages": [
+        31,
+        32
+      ],
+      "position": "explicit-support",
+      "outputFile": "nelson-eusebio-national-supermarket-association.txt",
+      "pageCount": 2,
+      "wordCount": 488,
+      "sha256": "2008283be33ab0b481b508ab29f20bba95d3ed4d6bb970e8ba7e78a20ba8de48"
+    },
+    {
+      "slug": "anhd",
+      "displayName": "Association for Neighborhood and Housing Development",
+      "organization": "ANHD",
+      "pages": [
+        39,
+        40
+      ],
+      "position": "qualified-support",
+      "outputFile": "anhd.txt",
+      "pageCount": 2,
+      "wordCount": 711,
+      "sha256": "a4f77add8c3ad7f95f6e833e3874f0cdd55e1da26646ab51d174cea24b1b5ec5"
+    },
+    {
+      "slug": "alham-usman-brooklyn-legal-services",
+      "displayName": "Alham Usman",
+      "organization": "Brooklyn Legal Services Corp. A",
+      "pages": [
+        51,
+        51
+      ],
+      "position": "explicit-support",
+      "outputFile": "alham-usman-brooklyn-legal-services.txt",
+      "pageCount": 1,
+      "wordCount": 365,
+      "sha256": "bacef98ef5aa9ee2161cdeb3df00f3301ddfc4f19fbb09e3dcf1a6c3b2bc0014"
+    },
+    {
+      "slug": "christina-perry-chain-theatre",
+      "displayName": "Christina Perry",
+      "organization": "Chain Theatre",
+      "pages": [
+        53,
+        53
+      ],
+      "position": "explicit-support",
+      "outputFile": "christina-perry-chain-theatre.txt",
+      "pageCount": 1,
+      "wordCount": 474,
+      "sha256": "193a31ed5f2ccf08ab4d1a6952bc577d6b5c514583da07f5eb70dfe21a0bf439"
+    },
+    {
+      "slug": "gregory-youdan-dance-nyc",
+      "displayName": "Gregory Youdan Jr.",
+      "organization": "Dance/NYC",
+      "pages": [
+        54,
+        58
+      ],
+      "position": "explicit-support",
+      "outputFile": "gregory-youdan-dance-nyc.txt",
+      "pageCount": 5,
+      "wordCount": 1478,
+      "sha256": "6e11edda78f16af9d2619469eb118e16b34f5c5a3c28bcb7a94f784bcf6c4747"
+    },
+    {
+      "slug": "tom-lagatta",
+      "displayName": "Tom LaGatta",
+      "pages": [
+        59,
+        59
+      ],
+      "position": "qualified-support",
+      "outputFile": "tom-lagatta.txt",
+      "pageCount": 1,
+      "wordCount": 156,
+      "sha256": "d9cd2fc19dbe050c59845245abc2ec012e5020803ef7796f60829e579e468fa6"
+    },
+    {
+      "slug": "christian-gonzalez-rivera-brookdale",
+      "displayName": "Christian Gonzalez-Rivera",
+      "organization": "Brookdale Center for Healthy Aging",
+      "pages": [
+        66,
+        67
+      ],
+      "position": "explicit-support",
+      "outputFile": "christian-gonzalez-rivera-brookdale.txt",
+      "pageCount": 2,
+      "wordCount": 663,
+      "sha256": "7209a744918d52c452466b810881964fbdc9398d1d50a3b5a685db3f12274a78"
+    },
+    {
+      "slug": "khari-white",
+      "displayName": "Khari White",
+      "pages": [
+        72,
+        76
+      ],
+      "position": "explicit-support",
+      "outputFile": "khari-white.txt",
+      "pageCount": 5,
+      "wordCount": 433,
+      "sha256": "78f6ea1de9dfd446f05bff913fc47ca9c857f63cb105450d8591d942c1cbbe8c"
+    },
+    {
+      "slug": "guy-yedwab-league-independent-theater",
+      "displayName": "Guy Yedwab",
+      "organization": "League of Independent Theater",
+      "pages": [
+        77,
+        83
+      ],
+      "position": "explicit-support",
+      "outputFile": "guy-yedwab-league-independent-theater.txt",
+      "pageCount": 7,
+      "wordCount": 2090,
+      "sha256": "c82aa72b627a706b7e1372a585a92b8b578c65da2f11dbf96ba4df2e8dc7cedd"
+    },
+    {
+      "slug": "yara-flinn-nomia",
+      "displayName": "Yara Flinn",
+      "organization": "NOMIA",
+      "pages": [
+        88,
+        88
+      ],
+      "position": "explicit-support",
+      "outputFile": "yara-flinn-nomia.txt",
+      "pageCount": 1,
+      "wordCount": 370,
+      "sha256": "9985aa5fff2c1c7243e07d408dd3b4fe41b5dd6970e481226ebb2e2987bfaf6d"
+    },
+    {
+      "slug": "nyc-artist-coalition",
+      "displayName": "NYC Artist Coalition",
+      "organization": "NYC Artist Coalition",
+      "pages": [
+        89,
+        91
+      ],
+      "position": "explicit-support",
+      "outputFile": "nyc-artist-coalition.txt",
+      "pageCount": 3,
+      "wordCount": 964,
+      "sha256": "d1f2e167d285bb596690fb0496103b25bfe2b1f8043bf60eeb883f36b76194a6"
+    },
+    {
+      "slug": "andrea-bowen-nyc-nowc",
+      "displayName": "Andrea Bowen",
+      "organization": "NYC Network of Worker Cooperatives",
+      "pages": [
+        94,
+        97
+      ],
+      "position": "explicit-support",
+      "outputFile": "andrea-bowen-nyc-nowc.txt",
+      "pageCount": 4,
+      "wordCount": 90,
+      "sha256": "61f618ad5ae69ad1ddaf295fd46af82581cf721148a5e60c8e1266e6280b8fd1"
+    },
+    {
+      "slug": "ruth-lopez-martinez-palante",
+      "displayName": "Ruth Lopez Martinez",
+      "organization": "Pa'lante Forward Green Cleaning",
+      "pages": [
+        98,
+        100
+      ],
+      "position": "explicit-support",
+      "outputFile": "ruth-lopez-martinez-palante.txt",
+      "pageCount": 3,
+      "wordCount": 809,
+      "sha256": "d84359686fce8fa46e9bab8c43d8a4165502144e20108eef291d0b610f0d022f"
+    },
+    {
+      "slug": "paula-segal-takeroot-justice",
+      "displayName": "Paula Z. Segal",
+      "organization": "TakeRoot Justice",
+      "pages": [
+        114,
+        126
+      ],
+      "position": "explicit-support",
+      "outputFile": "paula-segal-takeroot-justice.txt",
+      "pageCount": 13,
+      "wordCount": 5336,
+      "sha256": "31a72b1e09dc6c93e6084f8a4404be9ba03b154f20c7bc266b21922537280986"
+    },
+    {
+      "slug": "taylor-james-legal-aid",
+      "displayName": "Taylor James",
+      "organization": "The Legal Aid Society",
+      "pages": [
+        127,
+        128
+      ],
+      "position": "explicit-support",
+      "outputFile": "taylor-james-legal-aid.txt",
+      "pageCount": 2,
+      "wordCount": 646,
+      "sha256": "8972e462219f5816c4bfc61f23fe6061b04b27c6a3e94055056caba20b2e5059"
+    },
+    {
+      "slug": "sarah-timberlake",
+      "displayName": "Sarah Timberlake",
+      "organization": "Timberlake Studios",
+      "pages": [
+        129,
+        129
+      ],
+      "position": "explicit-support",
+      "outputFile": "sarah-timberlake.txt",
+      "pageCount": 1,
+      "wordCount": 372,
+      "sha256": "7b7e77a3ed85ee831f60b9a63f9f13b3d2806900899eaefbe0fef1a163c3e20b"
+    },
+    {
+      "slug": "united-for-small-business-nyc",
+      "displayName": "United for Small Business NYC",
+      "organization": "USBnyc",
+      "pages": [
+        130,
+        135
+      ],
+      "position": "explicit-support",
+      "outputFile": "united-for-small-business-nyc.txt",
+      "pageCount": 6,
+      "wordCount": 2071,
+      "sha256": "926e0eeb920f593a87517f475a7942d6f844e41574bbe0600fa4e78235c35ba2"
+    },
+    {
+      "slug": "vanna-valdez-bronx-clay",
+      "displayName": "Vanna Valdez",
+      "organization": "Bronx Clay",
+      "pages": [
+        136,
+        140
+      ],
+      "position": "explicit-support",
+      "outputFile": "vanna-valdez-bronx-clay.txt",
+      "pageCount": 5,
+      "wordCount": 1499,
+      "sha256": "8e172d025a7c439cd01276c7edb258f92f170045d1ca28a151aabf5f8ebf48f5"
+    },
+    {
+      "slug": "kerry-mclean-whedco",
+      "displayName": "Kerry McLean",
+      "organization": "WHEDco",
+      "pages": [
+        141,
+        142
+      ],
+      "position": "explicit-support",
+      "outputFile": "kerry-mclean-whedco.txt",
+      "pageCount": 2,
+      "wordCount": 635,
+      "sha256": "f251882d00fb9c255a3bacbd5998006e94adff45709ffb54beab79d1c1d749f1"
+    },
+    {
+      "slug": "yemeni-american-merchants-association",
+      "displayName": "Yemeni American Merchants Association",
+      "organization": "YAMA",
+      "pages": [
+        145,
+        147
+      ],
+      "position": "explicit-support",
+      "outputFile": "yemeni-american-merchants-association.txt",
+      "pageCount": 3,
+      "wordCount": 913,
+      "sha256": "3851235bb29e530fb95e5ccaf5d74bd64ff9d700ff310dddd963d592e03ce371"
+    },
+    {
+      "slug": "catherine-murcek-samamkaya",
+      "displayName": "Catherine Murcek",
+      "organization": "Samamkaya Yoga Back Care and Scoliosis Collective",
+      "pages": [
+        148,
+        152
+      ],
+      "position": "explicit-support",
+      "outputFile": "catherine-murcek-samamkaya.txt",
+      "pageCount": 5,
+      "wordCount": 1644,
+      "sha256": "a437ffc3fdaf0640fa6c1505a1ec613d6504465f4f01a4de6246da39ea08efd7"
+    },
+    {
+      "slug": "alex-carpenter",
+      "displayName": "Alex Carpenter",
+      "pages": [
+        154,
+        158
+      ],
+      "position": "explicit-support",
+      "outputFile": "alex-carpenter.txt",
+      "pageCount": 5,
+      "wordCount": 1539,
+      "sha256": "7e63425d575675305eed9b19edecf3eb1089dcedb4b2a54339a393c9af6ead07"
+    },
+    {
+      "slug": "chelsea-barbers",
+      "displayName": "Chelsea Barbers",
+      "pages": [
+        160,
+        160
+      ],
+      "position": "supportive-alignment",
+      "outputFile": "chelsea-barbers.txt",
+      "pageCount": 1,
+      "wordCount": 216,
+      "sha256": "ab8556b5ed9f6dde26f61476bf526f234244fe5856f5fadda1c5878147e9d8f7"
+    },
+    {
+      "slug": "bonnie-slotnick",
+      "displayName": "Bonnie Slotnick",
+      "organization": "Bonnie Slotnick Cookbooks",
+      "pages": [
+        164,
+        164
+      ],
+      "position": "explicit-support",
+      "outputFile": "bonnie-slotnick.txt",
+      "pageCount": 1,
+      "wordCount": 448,
+      "sha256": "f2b940e30e58c77284a1e3897ded38b72f6bac774ee2b22445a1651aeadd1a41"
+    },
+    {
+      "slug": "boss-studio",
+      "displayName": "Boss Studio",
+      "organization": "Boss Studio",
+      "pages": [
+        165,
+        166
+      ],
+      "position": "supportive-alignment",
+      "outputFile": "boss-studio.txt",
+      "pageCount": 2,
+      "wordCount": 270,
+      "sha256": "442754b29f155af344cae743ff470762fc3980e98e88b862199559ba622f6028"
+    },
+    {
+      "slug": "charlotta-janssen-chez-oskar",
+      "displayName": "Charlotta Janssen",
+      "organization": "Chez Oskar",
+      "pages": [
+        167,
+        168
+      ],
+      "position": "explicit-support",
+      "outputFile": "charlotta-janssen-chez-oskar.txt",
+      "pageCount": 2,
+      "wordCount": 599,
+      "sha256": "3e36273199a841875fd6894599873aeccff6c54ab39125aa1bdedd0f2b9fc3e3"
+    },
+    {
+      "slug": "dana-davis-mara-hoffman",
+      "displayName": "Dana Davis",
+      "organization": "Mara Hoffman and New York Fashion Workforce Development Coalition",
+      "pages": [
+        169,
+        169
+      ],
+      "position": "explicit-support",
+      "outputFile": "dana-davis-mara-hoffman.txt",
+      "pageCount": 1,
+      "wordCount": 230,
+      "sha256": "2bca0fb78c7c31a0d1f0db595ea91f3b96b3b065ef6d1eb3d48abb777ac0d452"
+    },
+    {
+      "slug": "dana-may-schwister",
+      "displayName": "Dana May Schwister",
+      "pages": [
+        170,
+        170
+      ],
+      "position": "supportive-alignment",
+      "outputFile": "dana-may-schwister.txt",
+      "pageCount": 1,
+      "wordCount": 101,
+      "sha256": "ca1285a2562118277154b1db6e3887fa5fd5ac15c53e3d8c05dcb2dd0a6d368b"
+    },
+    {
+      "slug": "gabrielle-giattino-bureau",
+      "displayName": "Gabrielle Giattino",
+      "organization": "Bureau",
+      "pages": [
+        171,
+        171
+      ],
+      "position": "explicit-support",
+      "outputFile": "gabrielle-giattino-bureau.txt",
+      "pageCount": 1,
+      "wordCount": 373,
+      "sha256": "fc90fb9ddb39ef6088ffbf81632a792e2c3d8871c3d311a9c6900e3c5116aebf"
+    },
+    {
+      "slug": "jennifer-prescott",
+      "displayName": "Jennifer Prescott",
+      "organization": "green design GOODS",
+      "pages": [
+        205,
+        205
+      ],
+      "position": "supportive-alignment",
+      "outputFile": "jennifer-prescott.txt",
+      "pageCount": 1,
+      "wordCount": 245,
+      "sha256": "c01811fc32cfdfb7209c679d6c24b19cf62e770aeefd205866aa12801536eaa6"
+    },
+    {
+      "slug": "jenny-dubnau-asap",
+      "displayName": "Jenny Dubnau",
+      "organization": "Artist Studio Affordability Project",
+      "pages": [
+        206,
+        206
+      ],
+      "position": "explicit-support",
+      "outputFile": "jenny-dubnau-asap.txt",
+      "pageCount": 1,
+      "wordCount": 513,
+      "sha256": "03ca1e63fd367217670a8c75fbf6ec82dddfb64cd33b8801e116cf9570799593"
+    },
+    {
+      "slug": "laura-lupton",
+      "displayName": "Laura Lupton",
+      "pages": [
+        209,
+        209
+      ],
+      "position": "supportive-alignment",
+      "outputFile": "laura-lupton.txt",
+      "pageCount": 1,
+      "wordCount": 76,
+      "sha256": "bc9fd4ec37295ced452c8c6c1df1470f55ea014a5c330a309f0e0b768605e490"
+    },
+    {
+      "slug": "maegan-hayward-east-village-vintage",
+      "displayName": "Maegan Hayward",
+      "organization": "East Village Vintage Collective",
+      "pages": [
+        211,
+        214
+      ],
+      "position": "explicit-support",
+      "outputFile": "maegan-hayward-east-village-vintage.txt",
+      "pageCount": 4,
+      "wordCount": 1514,
+      "sha256": "03ca8881f5313bb32acbabb78383b4c946c2bde3efcc05dfa085d281c1998e54"
+    },
+    {
+      "slug": "natasha-amott-whisk",
+      "displayName": "Natasha Amott",
+      "organization": "Whisk",
+      "pages": [
+        217,
+        218
+      ],
+      "position": "explicit-support",
+      "outputFile": "natasha-amott-whisk.txt",
+      "pageCount": 2,
+      "wordCount": 519,
+      "sha256": "d5b23642e1b106fd591eae572abe9f0dc8d605224d02cfd048f6b110bb47e47e"
+    },
+    {
+      "slug": "nicolas-heller",
+      "displayName": "Nicolas Heller",
+      "pages": [
+        219,
+        219
+      ],
+      "position": "supportive-alignment",
+      "outputFile": "nicolas-heller.txt",
+      "pageCount": 1,
+      "wordCount": 89,
+      "sha256": "66c7745bd6548357204686c9daca3cf29734f05168c22637540e0bd58a644f5f"
+    },
+    {
+      "slug": "rachel-nicolazzo-omar-hakim",
+      "displayName": "Rachel Nicolazzo and Omar Hakim",
+      "pages": [
+        220,
+        221
+      ],
+      "position": "qualified-support",
+      "outputFile": "rachel-nicolazzo-omar-hakim.txt",
+      "pageCount": 2,
+      "wordCount": 625,
+      "sha256": "c80634f2797ca7b88856acd944ce0184f6dbffb90e193869f129047733f8ceaf"
+    },
+    {
+      "slug": "peter-sullivan",
+      "displayName": "Peter Sullivan",
+      "pages": [
+        222,
+        224
+      ],
+      "position": "supportive-alignment",
+      "outputFile": "peter-sullivan.txt",
+      "pageCount": 3,
+      "wordCount": 1048,
+      "sha256": "5d5e5a8d76a847e28fd164141d91e22e68a322c6b2724be094b1d8a12f09114f"
+    },
+    {
+      "slug": "shabad-simon-alexander",
+      "displayName": "Shabad Simon-Alexander",
+      "pages": [
+        227,
+        227
+      ],
+      "position": "explicit-support",
+      "outputFile": "shabad-simon-alexander.txt",
+      "pageCount": 1,
+      "wordCount": 479,
+      "sha256": "8626b35a6f69a09dcd1a65d0096170a330456f3547eee8c2bd730021a5de02b3"
+    },
+    {
+      "slug": "tabitha-st-bernard-jacobs",
+      "displayName": "Tabitha St. Bernard-Jacobs",
+      "organization": "Tabii Just Clothing",
+      "pages": [
+        228,
+        228
+      ],
+      "position": "explicit-support",
+      "outputFile": "tabitha-st-bernard-jacobs.txt",
+      "pageCount": 1,
+      "wordCount": 194,
+      "sha256": "8b408ebc597103c8628206d3b23b5a5047140fad0b9181acbcc378f0c276fcc0"
+    },
+    {
+      "slug": "vanessa-thill",
+      "displayName": "Vanessa Thill",
+      "pages": [
+        229,
+        230
+      ],
+      "position": "qualified-support",
+      "outputFile": "vanessa-thill.txt",
+      "pageCount": 2,
+      "wordCount": 670,
+      "sha256": "6f478d94942d14751c1e0fa3f01ed13a3769c0cfe4124e2c73a783e3b5378683"
+    },
+    {
+      "slug": "laura-wolf-powers",
+      "displayName": "Laura Wolf-Powers",
+      "pages": [
+        231,
+        232
+      ],
+      "position": "explicit-support",
+      "outputFile": "laura-wolf-powers.txt",
+      "pageCount": 2,
+      "wordCount": 544,
+      "sha256": "6d2e2e9dab777cb2c6a77e9c547eafb5af341cfb8ec29537243d6b9d44bab849"
+    },
+    {
+      "slug": "charlotta-janssen-chez-oskar-supplement",
+      "displayName": "Charlotta Janssen",
+      "organization": "Chez Oskar",
+      "pages": [
+        233,
+        236
+      ],
+      "position": "explicit-support",
+      "outputFile": "charlotta-janssen-chez-oskar-supplement.txt",
+      "pageCount": 4,
+      "wordCount": 547,
+      "sha256": "b3ed152c5b04d5232593e3067c7222c8944154be4c1af9fd2bcd210f9d20a726"
+    }
+  ]
+}

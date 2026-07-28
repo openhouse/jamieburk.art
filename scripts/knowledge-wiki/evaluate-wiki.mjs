@@ -26,6 +26,7 @@ import { evaluatePhotographyNotebook } from "./photography-notebook-eval.mjs";
 import { evaluatePhotographyResidencyProposal } from "./photography-residency-proposal-eval.mjs";
 import { evaluatePhotographyStudioConnection } from "./photography-studio-connection-eval.mjs";
 import { allLayoutBPhotoApprovalsOpen } from "./layout-b-projection-eval.mjs";
+import { evaluatePrelaunchArchive } from "./prelaunch-archive-eval.mjs";
 import { evaluatePhotoKnowledge } from "../photo-knowledge/lib.mjs";
 import { publicPhotoManifest } from "../../apps/www/src/data/photography.ts";
 
@@ -64,6 +65,7 @@ const photographyNotebook = evaluatePhotographyNotebook({ result });
 const photographyResidencyProposal = evaluatePhotographyResidencyProposal({ result });
 const photographyStudioConnection = evaluatePhotographyStudioConnection({ result });
 const photographicKnowledgeLoop = evaluatePhotoKnowledge({ wiki: result });
+const prelaunchArchive = evaluatePrelaunchArchive({ result });
 
 const adrPath = path.join(defaultRepoRoot, "docs/architecture/ADR-knowledge-wiki-canonicality.md");
 const adr = existsSync(adrPath) ? readFileSync(adrPath, "utf8") : "";
@@ -168,6 +170,7 @@ const employmentOutputsCurrent = Object.entries(employmentOutputs).every(
 );
 
 const checks = {
+  ...prelaunchArchive.checks,
   canonical_product_name: root?.title === "Knowledge Wiki" && rootSource.includes("# Knowledge Wiki"),
   compatibility_alias: root?.aliases.includes("Knowledge Bank") && rootSource.includes("Former and compatibility name"),
   single_physical_root: !existsSync(path.join(defaultRepoRoot, "docs/knowledge-wiki")),

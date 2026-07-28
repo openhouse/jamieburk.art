@@ -26,6 +26,9 @@ relations:
   - type: informed_by
     target: research.photography-studio-connection.2026-07-22
     href: ../research-runs/photography-studio-connection-2026-07-22.md
+  - type: informed_by
+    target: source.recollection.jamie.event-photo-select-workflow.2026-07
+    href: ../sources/jamie-event-photo-select-workflow-recollection-2026-07.md
 ---
 
 # Photographic archive fieldwork
@@ -64,6 +67,22 @@ remain in a protected local layer.
    context as separate questions.
 9. Bind any approval to an exact asset version and a specific public use.
 10. Return new factual leads to the Knowledge Bank intake and review lifecycle.
+
+## Event transcript and prior-select retrieval
+
+Public-event recordings and documentary photo sequences can be researched
+together. Use the [event transcript and photo-select workflow
+record](../sources/jamie-event-photo-select-workflow-recollection-2026-07.md)
+to create a protected local candidate cohort from event time, place, speakers,
+existing Apple Photos People associations, album context, and prior export
+lineage.
+
+Recursive `_keep` depth is a useful prior-curation signal because Jamie's Photo
+Select tool re-runs selection inside each retained set. It is not a score,
+publication approval, or substitute for looking. A People association is a
+private retrieval aid and must never be treated as represented-person consent.
+Every event-photo association needs visual review and a recorded basis; ambiguous
+matches stay hypotheses.
 
 ## Private catalog mutation boundary
 

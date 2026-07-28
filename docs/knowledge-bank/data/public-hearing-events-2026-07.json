@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "id": "corpus.nyc-council.public-hearing-voices.2026-07",
+  "reviewedAt": "2026-07-28",
+  "scope": "Six recovered official New York City Council hearing transcripts containing Jamie Burkart testimony in the present archival pass.",
+  "selectionPolicy": "Preserve the full official transcript and every parsed attributed speaker turn. High-precision phrase matching may identify explicit support, opposition, or support with caveats; all other alignment remains context or review-needed. No speaker is omitted because of position.",
+  "events": [
+    {
+      "id": "event.nycc.consumer-affairs.cabaret-law-2017-06-19",
+      "slug": "cabaret-law-hearing-2017-06-19",
+      "title": "Committee on Consumer Affairs Cabaret Law hearing",
+      "date": "2017-06-19",
+      "committee": "Committee on Consumer Affairs",
+      "championedIssues": [
+        "Cabaret Law repeal",
+        "legal dance",
+        "an Office of Nightlife",
+        "safer relationships between cultural spaces and city agencies"
+      ],
+      "officialUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=41F1062B-FC32-4A12-846E-65CEB3BB052C&ID=5316935&M=F",
+      "transcriptFile": "cabaret-2017-06-19.txt",
+      "ledgerFile": "cabaret-2017-06-19.json",
+      "jamieTranscriptLabels": [
+        "JAMIE BURKHART",
+        "JAMIE BURKART"
+      ],
+      "supportSignals": [
+        "repeal the cabaret law",
+        "legalize dance",
+        "law should be repealed",
+        "make dancing mandatory"
+      ],
+      "oppositionSignals": [
+        "do not repeal",
+        "oppose repeal",
+        "keep the cabaret law"
+      ]
+    },
+    {
+      "id": "event.nycc.consumer-affairs.cabaret-law-2017-09-14",
+      "slug": "cabaret-law-repeal-hearing-2017-09-14",
+      "title": "Committee on Consumer Affairs Cabaret Law repeal hearing",
+      "date": "2017-09-14",
+      "committee": "Committee on Consumer Affairs",
+      "championedIssues": [
+        "Cabaret Law repeal",
+        "legal dance",
+        "trust-based cultural-space safety"
+      ],
+      "officialUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=817A7573-F329-49C4-849A-347B6D00CBC5&ID=5444683&M=F",
+      "transcriptFile": "cabaret-2017-09-14.txt",
+      "ledgerFile": "cabaret-2017-09-14.json",
+      "jamieTranscriptLabels": [
+        "JAIME BURKHART",
+        "JAMIE BURKHART",
+        "JAMIE BURKART"
+      ],
+      "supportSignals": [
+        "repeal the cabaret law",
+        "legalize dance",
+        "law should be repealed",
+        "make dancing mandatory",
+        "need to be dancing"
+      ],
+      "oppositionSignals": [
+        "do not repeal",
+        "oppose repeal",
+        "keep the cabaret law"
+      ]
+    },
+    {
+      "id": "event.nycc.cultural-affairs.preliminary-budget-2018-03-16",
+      "slug": "cultural-affairs-budget-hearing-2018-03-16",
+      "title": "Committee on Cultural Affairs preliminary budget hearing",
+      "date": "2018-03-16",
+      "committee": "Committee on Cultural Affairs, Libraries and International Intergroup Relations",
+      "championedIssues": [
+        "increased Department of Cultural Affairs funding",
+        "equitable access to cultural resources",
+        "support for small cultural spaces",
+        "implementation of CreateNYC commitments"
+      ],
+      "officialUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6195706&GUID=7514BB5D-51E7-4B77-92D8-A3919828DBEB",
+      "transcriptFile": "dcla-2018-03-16.txt",
+      "ledgerFile": "dcla-2018-03-16.json",
+      "jamieTranscriptLabels": [
+        "JAMIE BURKHART",
+        "JAMIE BURKART"
+      ],
+      "supportSignals": [
+        "increase funding",
+        "increased funding",
+        "more funding",
+        "funding for cultural",
+        "support small cultural",
+        "fully fund"
+      ],
+      "oppositionSignals": [
+        "reduce funding",
+        "cut funding",
+        "oppose increased funding"
+      ]
+    },
+    {
+      "id": "event.nycc.small-business.sbjsa-2018-10-22",
+      "slug": "small-business-job-survival-hearing-2018-10-22",
+      "title": "Committee on Small Business hearing on the Small Business Jobs Survival Act",
+      "date": "2018-10-22",
+      "committee": "Committee on Small Business",
+      "championedIssues": [
+        "commercial-tenant protections",
+        "fair lease negotiation",
+        "affordability and continuity for small cultural spaces",
+        "the Small Business Jobs Survival Act"
+      ],
+      "officialUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=3BAD981A-69D8-4D99-A882-52442F36F5A2&ID=6792384&M=F",
+      "transcriptFile": "sbjsa-2018-10-22.txt",
+      "ledgerFile": "sbjsa-2018-10-22.json",
+      "jamieTranscriptLabels": [
+        "JAMIE BURKHART",
+        "JAMIE BURKART"
+      ],
+      "supportSignals": [
+        "support the small business job survival",
+        "support this act",
+        "support the bill",
+        "pass the bill",
+        "pass this bill",
+        "pass the small business job survival act"
+      ],
+      "oppositionSignals": [
+        "oppose the small business job survival",
+        "oppose this act",
+        "do not support the act",
+        "would not accomplish its stated goals"
+      ]
+    },
+    {
+      "id": "event.nycc.public-safety.march-2019-02-11",
+      "slug": "march-operations-hearing-2019-02-11",
+      "title": "Committee on Public Safety hearing on M.A.R.C.H. operations",
+      "date": "2019-02-11",
+      "committee": "Committee on Public Safety",
+      "championedIssues": [
+        "transparency and accountability for M.A.R.C.H. operations",
+        "an end to destabilizing multi-agency raids",
+        "Talks Not Raids",
+        "trust-based compliance assistance"
+      ],
+      "officialUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=2582E680-452D-46B1-8DE1-C5C5168F5D63&ID=7080592&M=F",
+      "transcriptFile": "march-2019-02-11.txt",
+      "ledgerFile": "march-2019-02-11.json",
+      "jamieTranscriptLabels": [
+        "JAMIE BURKHART",
+        "JAMIE BURKART"
+      ],
+      "supportSignals": [
+        "talks not raids",
+        "abolish m.a.r.c.h.",
+        "abolish march",
+        "end m.a.r.c.h.",
+        "end march",
+        "need transparency",
+        "should be transparent",
+        "central reporting"
+      ],
+      "oppositionSignals": [
+        "support m.a.r.c.h. raids",
+        "support march raids",
+        "oppose transparency"
+      ]
+    },
+    {
+      "id": "event.nycc.small-business.open-data-2019-03-18",
+      "slug": "small-business-open-data-hearing-2019-03-18",
+      "title": "Committee on Small Business hearing on small-business legislation",
+      "date": "2019-03-18",
+      "committee": "Committee on Small Business",
+      "championedIssues": [
+        "open data for small-business requirements and processes",
+        "a discoverable path to legality, safety, and compliance",
+        "commercial-vacancy transparency",
+        "small cultural-space preservation"
+      ],
+      "officialUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=DD691B23-C14C-47C9-95C7-80052D6CD9AA&ID=7230198&M=F",
+      "transcriptFile": "small-business-2019-03-18.txt",
+      "ledgerFile": "small-business-2019-03-18.json",
+      "jamieTranscriptLabels": [
+        "MR. JAMIE BURKHART",
+        "JAMIE BURKHART",
+        "JAMIE BURKART"
+      ],
+      "supportSignals": [
+        "support the introductions",
+        "strongly support",
+        "support these bills",
+        "create data sets on the city’s open data portal",
+        "create data sets on the city's open data portal",
+        "path to legality"
+      ],
+      "oppositionSignals": [
+        "oppose these bills",
+        "do not support the introductions",
+        "oppose open data"
+      ]
+    }
+  ]
+}

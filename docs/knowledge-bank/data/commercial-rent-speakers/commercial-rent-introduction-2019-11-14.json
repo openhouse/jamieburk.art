@@ -1,0 +1,3212 @@
+{
+  "schemaVersion": 1,
+  "corpusId": "corpus.nycc.commercial-rent-stabilization.2019-2026",
+  "event": {
+    "id": "event.nycc.commercial-rent.introduction-2019-11-14",
+    "title": "Introduction of Int. 1796-2019",
+    "date": "2019-11-14",
+    "legislation": "Int. 1796-2019",
+    "primeSponsor": "Stephen T. Levin"
+  },
+  "source": {
+    "organization": "New York City Council",
+    "officialUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=7B14A16A-CBC9-4709-9E56-B57DA651503B&ID=7950220&M=F",
+    "transcriptFile": "stated-2019.txt",
+    "extraction": "pdftotext -layout",
+    "transcriptSha256": "7707010d46d1d09dc03b40e3af1e81dadf5d8992eb78054971f442444d52cf2d"
+  },
+  "method": {
+    "population": "Every attributed speaker turn parsed from the complete recovered official transcript text.",
+    "supportReview": "The support roster is a human-reviewed finding aid. Explicit support, qualified support, and supportive alignment remain distinct.",
+    "publicOfficials": "Sponsorship, supportive questioning, and an explicit supporting statement are recorded separately. Sponsorship is never substituted for speech.",
+    "warning": "The ledger is a research aid, not an endorsement claim. Read complete turns and surrounding transcript pages before quotation or public characterization."
+  },
+  "closure": {
+    "pageCount": 109,
+    "turnCount": 430,
+    "speakerCount": 59,
+    "reviewedSupportSpeakerCount": 0,
+    "supportivePublicOfficialCount": 0,
+    "contextualPublicOfficialCount": 0,
+    "allParsedTurnsAssigned": true,
+    "allReviewedSupportSpeakersRecovered": true,
+    "allContextualPublicOfficialsRecovered": true,
+    "missingSupportSpeakers": [],
+    "missingContextOfficials": []
+  },
+  "reviewedSupportSpeakers": [],
+  "supportivePublicOfficials": [],
+  "contextualPublicOfficials": [],
+  "speakers": [
+    {
+      "speakerKey": "B E F O R E",
+      "displayName": "B E F O R E",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "procedural-or-unattributed",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        1
+      ],
+      "wordCount": 3,
+      "turns": [
+        {
+          "speakerKey": "B E F O R E",
+          "transcriptPage": 1,
+          "text": "Corey Johnson Speaker"
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL CLERK",
+      "displayName": "Council Clerk",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        5,
+        13,
+        14,
+        15,
+        16,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        72,
+        74,
+        75,
+        77,
+        78,
+        79,
+        80,
+        82,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        94,
+        95,
+        98,
+        99
+      ],
+      "wordCount": 965,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 5,
+          "text": "Council City of New York Proclamation. The New York City Council is proud to honor Thrive Collective for its exceptional work creating hope and opportunity through arts and mentoring in New York City public schools. And STATED MEETING 6 whereas research has prove that art and music programs help keep young people in school, make them more committed, enhance collaboration, strengthen ties to their peers and to their community, and improve motor, spatial, and language skills. At-risk students involved in art are significantly more likely to stay in school and ultimately to get college degrees. Yet more than 400 public schools in New York City's lowest-income areas have no arts program at al. Thrive Collective, the nonprofit organization formerly known as 20/20 Vision for Schools, has garnered support from numerous City Council members to restore arts programs in many schools citywide. And whereas Thrive Collective offers programs in instrumental and vocal music, mural painting, and filmmaking through the expertise of teaching artists, mentors, volunteers, and interns, as well as a mentorship program. These programs connect artists and youth workers with local schools as teaching artists, art directors, and mentors, project-based learning, and accredited curriculum integrate life and art skills for in- school electives, after-school clubs, seasonal intensives, and weekend warriors. And whereas since STATED MEETING 7 2014 18 New York City Council members have helped Thrive Collective bring the arts back to underserved students and neighborhoods by sponsoring Thrive's murals, music, and media programs at 42 schools and community spaces in all five boroughs. To date the council has directly invested in students and seniors completing 46 murals, 45 student films, seven film festivals, 10 concerts and recitals, and over 60 ribbon-cutting events in school assemblies and the annual Queens Heartburn Festival. And whereas in fiscal year 20 a dozen council members have provided 18 awards that are collectively funding two art festivals, 18 murals, two media programs, and two music programs in 18 schools, one senior center, and one business district. Thrive Collective has leveraged City Council investments to directly serve 3000 students in nearly 1000 schools and 36 council districts, mobilize 2500 volunteers from 120 partner organizations and businesses, complete 145 murals totaling 60,000 square feet of public art, produce over 150 festivals, assemblies, and events. And whereas for Thrive Collective, however, art education is less about murals, music, and media than the offering a creative process to help students find STATED MEETING 8 their voice, cultivate their vision, and develop the art and life skills to bring that vision to life in collaboration with others. Thrive Collective has truly excelled in this important mission and we wish it continued success in the years ahead. Now therefore be it known that the New York City Council gratefully honors Thrive Collective for its outstanding commitment and contributions to arts education in New York City public schools. Corey Johnson, speaker for the entire council, Laurie A. Cumbo, council, I'm sorry, Majority Leader, New York City Council, Fernando Cabrera, Council Member 14th District, the Bronx."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 13,
+          "text": "Would everyone please stand for the Pledge of Allegiance."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 13,
+          "text": "Adams."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 13,
+          "text": "Ampry-Samuel. Ayala."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 13,
+          "text": "Barron."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 13,
+          "text": "Borelli. Brannan."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 13,
+          "text": "Cabrera."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 13,
+          "text": "Chin."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 13,
+          "text": "Cohen."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 13,
+          "text": "Constantinides."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 14,
+          "text": "Cornegy."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 14,
+          "text": "Deutsch."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 14,
+          "text": "Diaz. Dromm."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 14,
+          "text": "Espinal."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 14,
+          "text": "Eugene."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 14,
+          "text": "Gibson."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 14,
+          "text": "Gjonaj."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 14,
+          "text": "Grodenchik."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 14,
+          "text": "Holden."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 14,
+          "text": "Kallos."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 14,
+          "text": "Koo."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 14,
+          "text": "Koslowitz."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 15,
+          "text": "Lancman. Lander."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 15,
+          "text": "Levin."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 15,
+          "text": "Levine."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 15,
+          "text": "Louis."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 15,
+          "text": "Maisel."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 15,
+          "text": "Menchaca."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 15,
+          "text": "Miller."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 15,
+          "text": "Moya."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 15,
+          "text": "Perkins."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 15,
+          "text": "Powers."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 15,
+          "text": "Reynoso. Richards."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 15,
+          "text": "Rivera. STATED MEETING 16"
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 16,
+          "text": "Rodriguez. Rose."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 16,
+          "text": "Rosenthal."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 16,
+          "text": "Salamanca."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 16,
+          "text": "Torres. Treyger."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 16,
+          "text": "Ulrich. Vallone."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 16,
+          "text": "Van Bramer."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 16,
+          "text": "Yeger."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 16,
+          "text": "Matteo."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 16,
+          "text": "Speaker Johnson."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 20,
+          "text": "None. 25 STATED MEETING 21"
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 21,
+          "text": "None."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 21,
+          "text": "None."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 21,
+          "text": "None."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 21,
+          "text": "M194. Excuse me."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 21,
+          "text": "Adams."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 21,
+          "text": "Ampry-Samuel."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 21,
+          "text": "Ayala."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 21,
+          "text": "Barron."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 22,
+          "text": "Borelli. Brannan."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 22,
+          "text": "Cabrera."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 22,
+          "text": "Chin."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 22,
+          "text": "Cohen. Constantinides."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 22,
+          "text": "Cornegy."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 22,
+          "text": "Deutsch."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 22,
+          "text": "Diaz. Dromm."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 22,
+          "text": "Espinal."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 22,
+          "text": "Eugene. STATED MEETING 23"
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 23,
+          "text": "Gibson."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 23,
+          "text": "Gjonaj. Oh, thank you. Grodenchik."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 23,
+          "text": "Holden."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 23,
+          "text": "Kallos."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 23,
+          "text": "Koo."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 23,
+          "text": "Koslowitz."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 23,
+          "text": "Lancman."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 23,
+          "text": "Lander. Levin."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 23,
+          "text": "Levine."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 23,
+          "text": "Louis."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 23,
+          "text": "Maisel. 25 STATED MEETING 24"
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 24,
+          "text": "Menchaca."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 24,
+          "text": "Miller."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 24,
+          "text": "Moya."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 24,
+          "text": "Perkins."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 24,
+          "text": "Powers."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 24,
+          "text": "Reynoso."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 24,
+          "text": "Richards."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 25,
+          "text": "Rivera."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 25,
+          "text": "Rodriguez."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 25,
+          "text": "Rose."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 25,
+          "text": "Rosenthal."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 25,
+          "text": "Salamanca."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 25,
+          "text": "Cohen."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 25,
+          "text": "Torres. STATED MEETING 26"
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 26,
+          "text": "Treyger."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 26,
+          "text": "Ulrich. Vallone."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 26,
+          "text": "Van Bramer."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 26,
+          "text": "Yeger."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 26,
+          "text": "Matteo. Cumbo."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 26,
+          "text": "Speaker Johnson."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 64,
+          "text": "None."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 64,
+          "text": "Report of the Committee on Civil Service and Labor. Intro 1321-C, prevailing wage law."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 64,
+          "text": "Report of the Committee on Education, Intro 1547-A through Intro 1554-B, on the same page, diversity in public schools."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 64,
+          "text": "Report of the Committee on Finance, Intro 1780, hotel taxes."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 64,
+          "text": "Preconsidered Reso 1152 through preconsidered Reso 1154, on page 3, property taxes. STATED MEETING 65"
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 65,
+          "text": "Preconsidered Reso 1155, organization of funding."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 65,
+          "text": "Preconsidered LU 577 and Reso 1157, tax exemption."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 65,
+          "text": "Report of the Committee on Health, Intro 1361-B, diabetes reporting."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 65,
+          "text": "Intro 1496-A, companion animals."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 65,
+          "text": "Intro 1559-A through Intro 1598-A, on page 4, public burial and related issues."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 66,
+          "text": "Report of the Committee on Housing and Buildings, Intro 550-A and 564-A, housing lottery system."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 66,
+          "text": "Intro 716-A, Mitchell- Lama developments."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 66,
+          "text": "Intro 720-C, site safety training."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 66,
+          "text": "Report of the Committee on Justice System, Intro 1156-A, community hotspots."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 66,
+          "text": "Report of the Committee on Land Use, LU 548 through LU 554, on page 7, various applications."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 67,
+          "text": "Excuse me. LU 558 and Reso 1158, 25 Central Park West."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 67,
+          "text": "LU 559 and 560, Northern Boulevard rezoning."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 67,
+          "text": "LU 563 and Reso 1159, Hunter's Point South."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 67,
+          "text": "LU 571 and Reso 1160, 4797 Third Avenue."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 67,
+          "text": "Preconsidered LU 578 and Reso 1161, and preconsidered LU 579 and Reso 1162, Bronx special districts. 25 STATED MEETING 68"
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 68,
+          "text": "Report of the Committee on Parks and Recreation, Intro 906-A, Hart Island."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 68,
+          "text": "Report of the Committee on Transportation, Intro 909-B, Hart Island travel plan."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 68,
+          "text": "On the general order calendar, LU 548 and Reso 1163 through LU 560 and Reso 1171, on page 12, various applications, returned from City Planning."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 68,
+          "text": "Resolution appointing various persons, Commissioner of Deeds."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 68,
+          "text": "Levin. STATED MEETING 69"
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 69,
+          "text": "Adams."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 69,
+          "text": "Ampry-Samuel."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 69,
+          "text": "Ayala."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 69,
+          "text": "Barron."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 69,
+          "text": "Brannan."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 69,
+          "text": "Cabrera. STATED MEETING 70"
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 70,
+          "text": "Matteo."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 70,
+          "text": "Chin."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 70,
+          "text": "Cohen."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 70,
+          "text": "Cornegy."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 72,
+          "text": "Deutsch."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 72,
+          "text": "Dromm."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 72,
+          "text": "Espinal."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 74,
+          "text": "Eugene."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 75,
+          "text": "Gibson."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 77,
+          "text": "Gjonaj."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 78,
+          "text": "Grodenchik."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 79,
+          "text": "Holden."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 79,
+          "text": "Kallos."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 80,
+          "text": "Koo."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 80,
+          "text": "Koslowitz. Koslowitz."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 80,
+          "text": "Lancman."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 80,
+          "text": "Lander."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 82,
+          "text": "Levine."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 84,
+          "text": "Louis."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 85,
+          "text": "Menchaca."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 86,
+          "text": "Miller."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 87,
+          "text": "Moya."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 88,
+          "text": "Perkins."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 88,
+          "text": "Powers."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 89,
+          "text": "Reynoso."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 90,
+          "text": "Richards. 25 STATED MEETING 91"
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 91,
+          "text": "Rivera."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 94,
+          "text": "Rodriguez."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 95,
+          "text": "Rose."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 95,
+          "text": "Rosenthal."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 95,
+          "text": "Torres. STATED MEETING 96"
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 98,
+          "text": "Ulrich."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 99,
+          "text": "Vallone."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 99,
+          "text": "Van Bramer."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 99,
+          "text": "Yeger."
+        },
+        {
+          "speakerKey": "COUNCIL CLERK",
+          "transcriptPage": 99,
+          "text": "Cumbo."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER ADAMS",
+      "displayName": "Council Member Adams",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        13,
+        20,
+        21,
+        69
+      ],
+      "wordCount": 87,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER ADAMS",
+          "transcriptPage": 13,
+          "text": "Present."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER ADAMS",
+          "transcriptPage": 20,
+          "text": "Thank you very much, Mr. Majority Leader. I had to add on to the invocation, which was so graciously done by my colleague, Council Member Moya, because Reverend Detheridge happens to be the pastor of my home church, St. Mark African Methodist Episcopal Church in Jackson Heights, where my dad, Irvin Edy Still, is a member for 40 years or so. So, Reverend Kim, we're so blessed to have you today. A beautiful invocation. God bless you and thank you."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER ADAMS",
+          "transcriptPage": 21,
+          "text": "I vote aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER ADAMS",
+          "transcriptPage": 69,
+          "text": "Aye on all."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER AMPRY-SAMUEL",
+      "displayName": "Council Member Ampry-Samuel",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        21,
+        69
+      ],
+      "wordCount": 4,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER AMPRY-SAMUEL",
+          "transcriptPage": 21,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER AMPRY-SAMUEL",
+          "transcriptPage": 69,
+          "text": "Aye on all."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER AYALA",
+      "displayName": "Council Member Ayala",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        13,
+        21,
+        69
+      ],
+      "wordCount": 5,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER AYALA",
+          "transcriptPage": 13,
+          "text": "Present."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER AYALA",
+          "transcriptPage": 21,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER AYALA",
+          "transcriptPage": 69,
+          "text": "Aye on all."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER BARRON",
+      "displayName": "Council Member Barron",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        13,
+        21,
+        69
+      ],
+      "wordCount": 32,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER BARRON",
+          "transcriptPage": 13,
+          "text": "Present."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER BARRON",
+          "transcriptPage": 21,
+          "text": "I vote aye. STATED MEETING 22"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER BARRON",
+          "transcriptPage": 69,
+          "text": "Aye on all, with the exception of 563, on which I'm voting no. And I am abstaining on 548 and 549 and the accompanying resolutions."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER BRANNAN",
+      "displayName": "Council Member Brannan",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        13,
+        22,
+        69
+      ],
+      "wordCount": 16,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER BRANNAN",
+          "transcriptPage": 13,
+          "text": "Here."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER BRANNAN",
+          "transcriptPage": 22,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER BRANNAN",
+          "transcriptPage": 69,
+          "text": "I vote aye on all with the exception of 1780, 1152, 53, and 54."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER CABRERA",
+      "displayName": "Council Member Cabrera",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        10,
+        13,
+        22,
+        70
+      ],
+      "wordCount": 102,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER CABRERA",
+          "transcriptPage": 10,
+          "text": "Thank you so much, and thank you for being such a champion for the arts. I know prior to you coming to the council you worked in the arts, and thank you for your leadership, again. With that, I'll turn it over to Jeremy Del Rio, the founder and the brain, I want to say brainchild, you're not a child, but you understand what I'm saying that you, you've done an amazing job and just to see it grow to the way it is today, from the early days when we sat down together, it's been amazing."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER CABRERA",
+          "transcriptPage": 13,
+          "text": "Here."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER CABRERA",
+          "transcriptPage": 22,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER CABRERA",
+          "transcriptPage": 70,
+          "text": "Aye on all."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER CHIN",
+      "displayName": "Council Member Chin",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        13,
+        22,
+        52,
+        70
+      ],
+      "wordCount": 312,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER CHIN",
+          "transcriptPage": 13,
+          "text": "Here."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER CHIN",
+          "transcriptPage": 22,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER CHIN",
+          "transcriptPage": 52,
+          "text": "Right, thank you, Public Advocate. The serious threat that so many fear about climate change is a painful reality already felt by our waterfront community, especially STATED MEETING 53 after Hurricane Sandy. Seven years later we're still bouncing back. Our East Side community, especially NYCHA resident, cannot afford to wait another seven years for coastal protection and resiliency improvement that they should have received long ago. Today's vote on the East Side Coastal Resiliency Agreement will deliver on the promise we made to act so that their lives will not be uprooted when the next storm hits. The road leading to today's vote was not easy by any mean and we thank our constituent for pushing us to fight for further open space improvement, parks mitigation and NYCHA protection. And I'm thankful to the leadership of our speaker and especially my colleague, Council Member Rivera, and our partner, Council Member Powers, and our wonderful land use staff for persisting on greater transparency, more engagement, and strong community investment. This vote is a long time coming and I'm grateful for the work that brought us here to this point. This is win for resiliency for climate action and for ensuring that our most vulnerable waterfront community are given the attention that they deserve and I urge all my colleagues to vote yes on this. And I also wanted to take this time to thank the STATED MEETING 54 administration for partnering and working with us, the commissioner of DDC, Lorraine Grillo, Jamie Torres Springer, Deputy Commissioner Parker, Commissioner Silver, Alisa Cobb Colon, Alda Chan, the Mayor's Office of Legislative Affair, Joe Toronto, Gavy Denayal, Sean Fitzpatrick, and our community board, Community Board 3, Trevor Holland, Susan Stetser, and Jane, and Jim Shelton. Thank you."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER CHIN",
+          "transcriptPage": 70,
+          "text": "Congratulations to all my colleagues on passing their great legislations and I proudly vote aye on all."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER COHEN",
+      "displayName": "Council Member Cohen",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        13,
+        25,
+        70
+      ],
+      "wordCount": 4,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER COHEN",
+          "transcriptPage": 13,
+          "text": "I'm here."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER COHEN",
+          "transcriptPage": 25,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER COHEN",
+          "transcriptPage": 70,
+          "text": "Aye."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER CONSTANTINIDES",
+      "displayName": "Council Member Constantinides",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        13,
+        22
+      ],
+      "wordCount": 39,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER CONSTANTINIDES",
+          "transcriptPage": 13,
+          "text": "Present. STATED MEETING 14"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER CONSTANTINIDES",
+          "transcriptPage": 22,
+          "text": "I'd like to vote yes on all land use call-ups and with your permission I'd like to also vote yes on all coupled on general orders and resolutions."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER CONSTANTINIDES",
+          "transcriptPage": 22,
+          "text": "I'd like to vote aye. Thank you."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER CORNEGY",
+      "displayName": "Council Member Cornegy",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        14,
+        22,
+        70,
+        71
+      ],
+      "wordCount": 281,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER CORNEGY",
+          "transcriptPage": 14,
+          "text": "Here."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER CORNEGY",
+          "transcriptPage": 22,
+          "text": "Yes."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER CORNEGY",
+          "transcriptPage": 70,
+          "text": "Permission to explain my vote?"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER CORNEGY",
+          "transcriptPage": 71,
+          "text": "So whether you're a homeowner in Bedford Stuyvesant, Bay Ridge, or Baychester, the burden of property taxes are too much for all New Yorkers to bear, particularly for lower- and middle-income individuals who are already, who aren't well served by the outdated tax system. Today we have the opportunity to support tax relief for property owners in New York City, but it's not enough. A state formula dictates the tax rates for property owners in the city and New York City has very little leverage to change the effective rates. We requested that the state change one component in the formula, which the governor has done. And this will take the tax burden for tax Class 2 properties to the lowest they’ve been since fiscal year 2009. Additionally, Class 1 properties will see a slight reduction in their tax burden, but it's still be a higher rate than last year. I'm glad that we can do this little bit today, but the real fix is in the long term. The speaker and the mayor have called for a reform commission and we expect a report from that group at the end of this year. I look forward to reading their findings and getting to work with my colleagues to provide tax reliefs to all New Yorkers' STATED MEETING 72 property and property owners. I must highlight that this is an important issue in every part of the city regardless of race and heritage. Meaningful change for all New Yorkers means holistic change and I look forward to getting that done one day. With that being said, aye on everything except 1152, 53, and 54."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER DEUTSCH",
+      "displayName": "Council Member Deutsch",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        14,
+        22,
+        72
+      ],
+      "wordCount": 19,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER DEUTSCH",
+          "transcriptPage": 14,
+          "text": "Yes."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER DEUTSCH",
+          "transcriptPage": 22,
+          "text": "Yes."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER DEUTSCH",
+          "transcriptPage": 72,
+          "text": "Aye on all, with the exception of 1580, 906, 909, 1780, and Resos 1152, 1153, and 1154."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER DROMM",
+      "displayName": "Council Member Dromm",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        14,
+        22,
+        72
+      ],
+      "wordCount": 3,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER DROMM",
+          "transcriptPage": 14,
+          "text": "Here."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER DROMM",
+          "transcriptPage": 22,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER DROMM",
+          "transcriptPage": 72,
+          "text": "Aye."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER ESPINAL",
+      "displayName": "Council Member Espinal",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        14,
+        22,
+        72
+      ],
+      "wordCount": 305,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER ESPINAL",
+          "transcriptPage": 14,
+          "text": "Here."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER ESPINAL",
+          "transcriptPage": 22,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER ESPINAL",
+          "transcriptPage": 72,
+          "text": "Permission to explain my vote?"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER ESPINAL",
+          "transcriptPage": 72,
+          "text": "It's no secret that the cost of living in this city has dramatically gone up while people's wages have stayed stagnant, and because of that we are, one of the reasons is that, one of those reasons, because of that we are in affordable housing crisis. And we have been working STATED MEETING 73 to build affordable housing across the city but, ah, a lot of that affordable housing has workers that are making minimum wage and what we're passing a bill [inaudible] 21-B that would require affordable housing to have workers being paid a prevailing wage. We worked diligently to get this bill passed. We've worked with all stakeholders from hearing stories from the workers, worked with affordable housing groups to figure out, to find the right balance that we're building real affordable housing while also making sure that people are getting paid a prevailing wage to continue to be able to put food on their table and pay their rent. So I am proud of this bill. I want to 32BJ. I want to thank the Speaker. I want to thank his staff. I want to Rob Newman. We've put in a lot of hours to get this done. And I want to thank my colleagues, who have all signed on to get this passed. So with that said I vote aye on all. Also, sorry, I want to congratulate Steve Levin on passing the march bill. It's a bill that I was super supportive of and it's going to be able to support a lot of the marginalized communities that continues to be over-policed upon in the nightlife community. So I'm very proud of that bill being STATED MEETING 74 passed, and a lot of congratulations to the New York City Artists Coalition. Thank you."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER EUGENE",
+      "displayName": "Council Member Eugene",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        14,
+        23,
+        74
+      ],
+      "wordCount": 264,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER EUGENE",
+          "transcriptPage": 14,
+          "text": "Present."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER EUGENE",
+          "transcriptPage": 23,
+          "text": "I vote aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER EUGENE",
+          "transcriptPage": 74,
+          "text": "Permission to explain my vote?"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER EUGENE",
+          "transcriptPage": 74,
+          "text": "Thank you, Mr. Public Advocate. I just want to thank and commend Chair Levin, the chair of the Health Committee, for this very important bill on diabetes, and, you know, diabetes is a very serious disease affecting many people in New York City and throughout the world. And I think that we have to moral mandate to do everything that we can do to ensure that we can keep people healthy and to contribute the well-being, of the well-being of the people. This is a wonderful bill because we know that this disease affects all the systems in the human body and can create other disease, cardiovascular disease, neurology disease, and affect the kidney, and I think this is a very, very important step in trying to provide the best quality of life to people that we are serving. And I want to thank the speaker for his support of this STATED MEETING 75 bill. And to conclude, let me thank also Rob Newman for his excellent service to the New York City Council. I had the privilege to go to him also for assistance and I thank him for his service and to me and to the City Council. So he was a great servant of the City Council, but I'm proud to say that he is a humble servant, because he is my constituent. He, we will miss him, but I will see him in the district. Rob, thank you very much for your outstanding service. With this, I vote aye on all."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER GIBSON",
+      "displayName": "Council Member Gibson",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        14,
+        23,
+        75
+      ],
+      "wordCount": 365,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER GIBSON",
+          "transcriptPage": 14,
+          "text": "I'm here."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER GIBSON",
+          "transcriptPage": 23,
+          "text": "I vote aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER GIBSON",
+          "transcriptPage": 75,
+          "text": "Permission to explain?"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER GIBSON",
+          "transcriptPage": 75,
+          "text": "Thank you, Mr. Public Advocate. And good afternoon, colleagues. Congratulations to everyone for passing incredibly important legislation today. I just want to shout- out a couple of our colleagues and recognizing their incredible efforts in getting legislation passed today. I want to thank our former colleague, Elizabeth Crowley, for starting the conversation, and Council Member Ydanis Rodriguez for making sure that STATED MEETING 76 the legislation on today's agenda related to Hart's Island is passed understanding the population of residents and New Yorkers that are buried on Hart's Island. I also want to recognize in addition to those that have died of AIDS. We also have a significant number of veterans who are buried on Hart's Island. And many of the veteran organizations have been advocating for this legislation. So I look forward to working with our colleagues in the Parks Department on the implementation to make sure we not only preserve the island, restore dignity, but provide enhanced transportation and access to the island. I want to congratulate all of the healthcare advocates from Health People and Chris Norwood and her team. As someone who's been affected in my family by diabetes, I am prediabetic myself. Certainly this legislation is going to have a profound impact on raising awareness around diabetes as well as offering more education and awareness and promotion in many of our communities, so I applaud that, and also want to recognize Council Member Rafael Espinal and the legislation related to prevailing wage for building service employees at certain development projects. Thank you for your leadership and to all the 32BJ STATED MEETING 77 family, our president, Kyle Bragg, and many others who really made sure that we continue to lift up our working New Yorkers and we provide the dignity they all deserve as well as the services that they provide every single day in our communities. And also want to congratulate Rob Newman on his incredible service here at the City Council. May God bless you in your new journey and new chapter of service. We will miss you. And with that I vote aye on all. And congratulations, Public Advocate."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER GJONAJ",
+      "displayName": "Council Member Gjonaj",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        14,
+        48,
+        49,
+        77
+      ],
+      "wordCount": 541,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER GJONAJ",
+          "transcriptPage": 14,
+          "text": "Present."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER GJONAJ",
+          "transcriptPage": 48,
+          "text": "Thank you, Mr. Public Advocate. First of all, on Veterans Day I just want to reiterate that we can never do enough for our veterans and we should strive to do more. To my dear friend, Rob Newman, congratulations in your endeavors. Mr. Public Advocate, Thank you for allowing me to speak up on Hart Island. Hart Island falls solely within my district and I want to reiterate the concerns of Hart Island. The priority should have been and should be focused on preserving that island, preventing remains and bones from washing out into the Long Island Sound, which have been going on for decades. With that being said, those that are buried there should be treated with the utmost respect and dignity. The families that have family members and loved ones buried there should be treated with dignity and respect. Three of the four bills being introduced leave too much uncertainty. Hart Island means a great deal to many people, not only the family members that have loved ones buried there, but including the surrounding neighborhoods and the community that is impacted. I have heard from hundreds of residents with concerns that have expressed strong desires to be a part of STATED MEETING 49 and included in the decision-making process with respect and possibly changing to visitation rights, hours, burial alternatives, record-keeping, and transportation, ah, transportation options. Originally these bills created a task force, which have been replaced instead and amended with a public hearing. I have no faith that this administration and its city agencies will rightfully listen to the concerns of those who have loved ones buried on Hart Island or that this administration will listen and respect the concerns of the local community. Or that resources that are needed..."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER GJONAJ",
+          "transcriptPage": 49,
+          "text": "I will wrap it up."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER GJONAJ",
+          "transcriptPage": 49,
+          "text": "Or that the resources that are needed will be committed to the future of the island. Simply, these bills in their current form put the future of Hart Island on the administration, the department, and the agencies it STATED MEETING 50 controls. I'm not OK with that and nor should the members in this room."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER GJONAJ",
+          "transcriptPage": 77,
+          "text": "Permission to explain my vote?"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER GJONAJ",
+          "transcriptPage": 77,
+          "text": "I vote aye on all except 1780, I will not be supporting the renewal of the hotel tax. Resolutions 1152, 53, and 54, our real estate tax system is broken. No matter how you put it this is a real estate tax increase, which will make it harder for renters, homeowners, and businesses to survive and remain as residents in our city. Outer borough residents already face the STATED MEETING 78 higher effective rate and the 13th Council District has the highest effective tax rate in the entire city. So I vote no on those three resolutions and no 1580, 909, 906 pertaining to Hart Island, Potter's Field, for the uncertainty and the future of Hart Island because the bills do not go far enough to ensure that those that are buried there and the families that have loved ones buried there will be treated with dignity and respect and assuring that the money that's needed and resources that's needed to maintain that cemetery, to maintain Hart Island hasn’t been streamlined and fully dedicated to the necessity of its requirements. Thank you."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER GRODENCHIK",
+      "displayName": "Council Member Grodenchik",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        14,
+        23,
+        78
+      ],
+      "wordCount": 146,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER GRODENCHIK",
+          "transcriptPage": 14,
+          "text": "Here."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER GRODENCHIK",
+          "transcriptPage": 23,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER GRODENCHIK",
+          "transcriptPage": 78,
+          "text": "Mr. Public Advocate, permission to briefly explain my vote."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER GRODENCHIK",
+          "transcriptPage": 78,
+          "text": "Thank you. Congratulations to you. I want to congratulate my seat mate, Donovan Richards, on the Edgemere redevelopment. This is something that literally has been kicking around since before he was born. So congratulations to you, Donovan. I want to echo my STATED MEETING 79 colleague Rob Cornegy's remarks. I'm going to vote yes on that property tax package because it does represent a decline in the rate. But we really need to do real property tax reform. The property tax owners, mostly single-family homeowners in the city, are getting clobbered, and the rates continue to go up by about 6% a year. The revenue does, anyway, and it has to stop because it's just unsustainable. With that, I vote aye on all with the exception of Intro 906, from which I abstain. Thank you."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER HOLDEN",
+      "displayName": "Council Member Holden",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        14,
+        23,
+        79
+      ],
+      "wordCount": 29,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER HOLDEN",
+          "transcriptPage": 14,
+          "text": "Here."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER HOLDEN",
+          "transcriptPage": 23,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER HOLDEN",
+          "transcriptPage": 79,
+          "text": "I vote aye on all with the exception of 1547-A, 1550-A, 1552-B, 1554-B, 1556-A, 1780, and preconsidered Resos 1152, 1153, and 1154. I vote no. Thank you."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER KALLOS",
+      "displayName": "Council Member Kallos",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        14,
+        23,
+        79
+      ],
+      "wordCount": 89,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER KALLOS",
+          "transcriptPage": 14,
+          "text": "Here."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER KALLOS",
+          "transcriptPage": 23,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER KALLOS",
+          "transcriptPage": 79,
+          "text": "Permission to explain my vote briefly?"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER KALLOS",
+          "transcriptPage": 79,
+          "text": "I just want to speak in favor of Introduction 1321-C and making sure that is the city subsidizes projects. We're not actually making the affordable housing crisis worse STATED MEETING 80 by paying people poverty wages. This legislation will make sure that the people who are caring for our buildings in our city that are receiving subsidies will hopefully be able to afford to live in that subsidized housing, if not market-rate housing. That being said, I vote aye on all."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER KOO",
+      "displayName": "Council Member Koo",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        14,
+        23,
+        80
+      ],
+      "wordCount": 37,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER KOO",
+          "transcriptPage": 14,
+          "text": "Present."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER KOO",
+          "transcriptPage": 23,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER KOO",
+          "transcriptPage": 80,
+          "text": "I want to congratulate Rob Newman, our legislative director for all the time, and I want to thank him for his wonderful service to our City Council. And with that I vote aye on all."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER KOSLOWITZ",
+      "displayName": "Council Member Koslowitz",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        14,
+        23
+      ],
+      "wordCount": 5,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER KOSLOWITZ",
+          "transcriptPage": 14,
+          "text": "Here. STATED MEETING 15"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER KOSLOWITZ",
+          "transcriptPage": 23,
+          "text": "Aye."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER LANCMAN",
+      "displayName": "Council Member Lancman",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        23,
+        80
+      ],
+      "wordCount": 2,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER LANCMAN",
+          "transcriptPage": 23,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER LANCMAN",
+          "transcriptPage": 80,
+          "text": "Aye."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER LANDER",
+      "displayName": "Council Member Lander",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        15,
+        80
+      ],
+      "wordCount": 343,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER LANDER",
+          "transcriptPage": 15,
+          "text": "Here."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER LANDER",
+          "transcriptPage": 80,
+          "text": "Request permission to explain?"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER LANDER",
+          "transcriptPage": 80,
+          "text": "Thank you. I want to thank my colleagues for your support on Intro STATED MEETING 81 1547-A, which strengthens the School Diversity Accountability Act. As James Baldwin taught, not everything that is faced can be changed, but nothing can be changed until it is faced. The work to look honestly on segregation in our schools began in many ways in this council five years ago when we had a 10- hour hearing and out of that passed the School Diversity Accountability Act that has provided us with a lot of data. That data has not been easy to look at, but it has been a platform for organizing. We used it aggressively in district 15 to make dramatic changes to our middle schools and where last year three of the 11 middle schools were in any way integrated and diverse because of those changes eight of the 11 are now genuinely integrated and we're going to get the other three next year, and that is mostly because of organizing and courage, but it would not have happened without the data that was provided by that act. So I am very glad today that we are strengthening that act, providing some additional data, comparing schools to their school attendance zones and their districts, looking at special programs within schools so we can tell if a school is internally segregated, even if everybody STATED MEETING 82 going in the door is more diverse, and I'm pleased that it's part of the broader package that includes the set of bills from the chair and the public advocate and other members that I believe can give us the data and the courage to move boldly forward so that someday we will not have one of the most segregated school systems in the country. Also proud to be a cosponsor of 1321-C and very glad we're moving forward to make sure there's a living wage for that set of workers who are working in our subsidized affordable housing. I vote aye on all."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER LEVIN",
+      "displayName": "Council Member Levin",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        15,
+        23,
+        69
+      ],
+      "wordCount": 67,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER LEVIN",
+          "transcriptPage": 15,
+          "text": "Here."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER LEVIN",
+          "transcriptPage": 23,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER LEVIN",
+          "transcriptPage": 69,
+          "text": "I vote aye on all, and I wanted just to thank on the march bill, the Black Institute, New York City Artists Coalition, Olympia Casse, Julia Friedenberg, Jamie Burkhardt, Otah Babble, Marva Babble, um, staff, Maxwell Camphor Williams, Keshorn Denny, my colleague Rafael Espinal, and Sarah Conklin, and everyone else that worked on that bill. And with that I vote aye on all. Thank you."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER LEVINE",
+      "displayName": "Council Member Levine",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        15,
+        23,
+        82
+      ],
+      "wordCount": 349,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER LEVINE",
+          "transcriptPage": 15,
+          "text": "Here."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER LEVINE",
+          "transcriptPage": 23,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER LEVINE",
+          "transcriptPage": 82,
+          "text": "Ah, permission to my vote, Mr. Public Advocate?"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER LEVINE",
+          "transcriptPage": 82,
+          "text": "OK. I want to thank my colleagues for supporting Intro 1361. Today as we seek to force this city to confront the public health crisis of diabetes, a fight in which we have stalled a disease which has severely disparate impacts on people of color in this city and we need to force the city to confront this crisis. The bill does that by requiring regular release of data on all STATED MEETING 83 aspects of this disease, including the number of amputations and by requiring that a robust plan be developed for us to win this fight. I do want to acknowledge the incredible leaders of Health People for helping make this legislation possible. I'm also pleased that today we'll be passing, and thank my colleagues for support, of Intro 550, which would bring fairness and transparency, consistency, to the HPD lottery system, where the stakes couldn't be higher. On average we had 70,000 people applying to major affordable housing projects in this city and we have got to give them a lottery process which is absolutely beyond reproach. To do that our billion would require that HPD regularly disclose all policies related to how people qualify for lotteries, how lotteries are conducted, how waiting lists are populated and managed, how the transition to a fully online system will be carried out, and much more. And lastly I want to thank everyone who made it possible for us today to make history in the way that we treat the most marginalized in society in their moment of death. For generations we have shamefully, shamefully kept the poor, the indigent, the sick, on an island that has been ignored and neglected and we STATED MEETING 84 owe better to these one million New Yorkers and those who every year are continued to be buried on Hart Island. Thank you to the billion sponsors. Thank you to Melinda Hunt, and thank you to Speaker Corey Johnson for making this history possible. And I am pleased to vote aye on all."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER LOUIS",
+      "displayName": "Council Member Louis",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        15,
+        23,
+        84
+      ],
+      "wordCount": 143,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER LOUIS",
+          "transcriptPage": 15,
+          "text": "Here."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER LOUIS",
+          "transcriptPage": 23,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER LOUIS",
+          "transcriptPage": 84,
+          "text": "Permission to explain my vote?"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER LOUIS",
+          "transcriptPage": 84,
+          "text": "Thank you so much. Congratulations, Public Advocate, on your success, and Rob Newman, you will be dearly missed. I'm voting aye on all except 1152, 1153, and 1154. A large portion of my district and the ones that surround Council District 45 encompass homeowners and small businesses who feel overwhelmed and overburdened and overtaxed. When we're seeking to increase property taxes we need to implement better measures to inform our homeowners and our small businesses in a timely matter that enables them to financially prepare for their anticipated changes we're requesting while protecting us as this helps STATED MEETING 85 and protects us as members to be transparent who seek to support these recommendations and this helps us to identify resources to ensure that the city can continue to function and provide necessary services. Thank you."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER MAISEL",
+      "displayName": "Council Member Maisel",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        15,
+        24
+      ],
+      "wordCount": 33,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER MAISEL",
+          "transcriptPage": 15,
+          "text": "Here."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER MAISEL",
+          "transcriptPage": 24,
+          "text": "I would like to vote yes on all land use call-ups and with your permission I would like to also vote yes on all coupled on general orders and resolutions."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER MAISEL",
+          "transcriptPage": 24,
+          "text": "Thank you."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER MENCHACA",
+      "displayName": "Council Member Menchaca",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        15,
+        24,
+        58,
+        60,
+        85
+      ],
+      "wordCount": 567,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER MENCHACA",
+          "transcriptPage": 15,
+          "text": "Presente."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER MENCHACA",
+          "transcriptPage": 24,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER MENCHACA",
+          "transcriptPage": 58,
+          "text": "Thank you. I would like to speak on Intro 720-C and really ask everyone to support this bill. You know, in 19, ah, sorry, in 2017 we passed what is now Local Law 196. This really was a kind of first big move that brought union workers and non-union workers together to address something that's been happening and continues to happen to this day, the deaths on construction sites. Many of the workers that work on construction sites are immigrant workers, those who are dying. Many of them are Spanish-speaking. But they're immigrants. The construction that we are seeing continues to suffer from an insufficient safety training and exploitation that happens by developers STATED MEETING 59 in the construction industry. But we have a solution. 720-C will allow for a new opportunity for M/WBEs and day laborer organizations that we work with every day in our neighborhoods to be able to be on the ground training the men and women who are on our construction sites. This law allows for that access to happen in multiple languages, to include Spanish and other languages in, in our communities, specifically in immigrant communities. And M/WBE opportunities. Intro 720-C would close that loop and allow groups who serve the city's most vulnerable construction workers to get the safety training needed. I want to Jason Goldman and Speaker Johnson for their support, but also the Progressive Caucus and the BLEC, who came in, ah, this week and really ensured that there was broad support across the council. Thank you so much, and I look forward to passing this. Finally, though, actually, in my 13 seconds, Jumaane, our public advocate, we were doing this work last session and we needed to close this loop and we did it, and I just want to say thank you. You've been leading this from the beginning and I'm just happy to call you my brother. 25 STATED MEETING 60"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER MENCHACA",
+          "transcriptPage": 60,
+          "text": "OK, can I [laughter]"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER MENCHACA",
+          "transcriptPage": 85,
+          "text": "Permission to explain my vote?"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER MENCHACA",
+          "transcriptPage": 85,
+          "text": "I want to finish the thank-yous for 720, Megan Chen and Jeff Baker. Thank you so much for being in the room every time we sat down and reviewed. This is why you have 720-C. C is the third version of this bill, and thank you so much for that work. I also want to thank the three members who negotiated the work around the protection, the flood protection, Rivera, Chin, and Powers. I look to them with a lot of envy. I think about Red Hook and the work that we have to do in Red Hook to do some integrated flood protection there and so I can't wait to learn a little bit more about how we can do that in other parts of the city. And I also want to say thank you to 32BJ for their STATED MEETING 86 hard work on the ground, thinking through a very complicated piece of legislation, but also I think it's going to be a very comprehensive impact to, um, to many New Yorkers. And again a shout-out to my brother, Jumaane Williams, our public advocate now, and the work that we have to do to ensure that no more people die on our construction sites. We do that every day when we think about them. But this bill is going to help ensure that everyone gets trained. Thank you. I vote aye on all."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER MILLER",
+      "displayName": "Council Member Miller",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        15,
+        24,
+        86
+      ],
+      "wordCount": 148,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER MILLER",
+          "transcriptPage": 15,
+          "text": "Present."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER MILLER",
+          "transcriptPage": 24,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER MILLER",
+          "transcriptPage": 86,
+          "text": "Permission to explain my vote, please?"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER MILLER",
+          "transcriptPage": 86,
+          "text": "Thank you, sir. I'd first like to echo the sentiments of the speaker and condolences to the family of Firefight Cecelia Cox, and Traffic Enforcement Linda Mercer. These young women were tireless public advocates, superheroes that, that the work that they have done will not be forgotten. I'd also like to congratulate Council Member Espinal for his legislation being passed here on prevailing wage. I think that we have STATED MEETING 87 demonstrated here today that our mission to create affordable housing and to value, respect, and bring dignity and proper compensation to workers are not mutually exclusive and by what we are doing here today we demonstrate that. And I will be, I will vote aye on all except for 563. I'll be abstaining on that and its accompanying resolution, 1159. I'll be voting no on 1152 and 1153."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER MOYA",
+      "displayName": "Council Member Moya",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        15,
+        19,
+        24,
+        87
+      ],
+      "wordCount": 334,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER MOYA",
+          "transcriptPage": 15,
+          "text": "Present."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER MOYA",
+          "transcriptPage": 19,
+          "text": "Thank you, Mr. Public Advocate. I'd like to make a motion to spread the invocation in full upon the record. It's also a great honor to have and introduce Reverend Kimberly Detheridge, Esq. of the St. Mark's African Methodist Episcopal Church that has a rich and storied history. Its leadership in faith and community and its dedication to the Civil Rights Movement so that justice and human rights issues are something I can think humbles us all. So it's no feat to make history in the AME Church, but it's exactly what Reverend Detheridge has done. In 2010 she became the church's first female pastor in its 184-year history and has been a shining example of faith, love, and service every day since. Among her many titles and accolades, Reverend Detheridge is the president of the Corona East Elmhurst Clergy Association and the former chaplain of the NYPD Grandmothers' Love Program, which helps grandmothers raising their children. Reverend Detheridge is also the first black female supervisor in the Legal Aid Society STATED MEETING 20 Criminal Defense Division in the Brooklyn office. There, she continues to work fighting for civil rights and workers' rights. She is a spiritual beacon, and I am so proud to have her here with us today to make the invocation. Thank you and God bless you, Reverend Detheridge."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER MOYA",
+          "transcriptPage": 24,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER MOYA",
+          "transcriptPage": 87,
+          "text": "Permission to explain my vote?"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER MOYA",
+          "transcriptPage": 87,
+          "text": "I want to take this opportunity to thank our esteemed colleague, Council Member Espinal, for his leadership, to 32BJ members, and to the president, Kyle Bragg, all the rank and file members that have come out to support this Intro 1321-C. I'm a firm believer that taxpayer dollars should not be creating poverty-wage jobs. We desperately need affordable housing, but by paying workers who maintain these properties less than prevailing wage we're actually exacerbating the problem. So I thank them for their leadership as this fight continues. I will be vote aye on all, with the exceptions of Intro 1780 and 720-C. STATED MEETING 88"
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER PERKINS",
+      "displayName": "Council Member Perkins",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        15,
+        24,
+        88
+      ],
+      "wordCount": 64,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER PERKINS",
+          "transcriptPage": 15,
+          "text": "Present."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER PERKINS",
+          "transcriptPage": 24,
+          "text": "Aye on all."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER PERKINS",
+          "transcriptPage": 88,
+          "text": "I'm gonna vote aye on all. I want to applaud the changes in organizing of our schools and look forward to more of reforms of the lingering segregated schools that have yet to come to an end, in other words I vote aye on all with [inaudible] concerns and hopefully taking the forefront in terms of what we do next."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER POWERS",
+      "displayName": "Council Member Powers",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        15,
+        24,
+        54,
+        88
+      ],
+      "wordCount": 634,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER POWERS",
+          "transcriptPage": 15,
+          "text": "Here."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER POWERS",
+          "transcriptPage": 24,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER POWERS",
+          "transcriptPage": 54,
+          "text": "Thank you. I will join Council Member Chin and Rivera to speak on the East Side Coastal Resiliency Project, which to me is a critical step in New York City's fight against climate change. As any of us who live near the water during Superstorm Sandy, including myself, can attest, protecting our communities from flooding in the next storm is absolutely vital. Seven years ago as the river flooded and the water overtook all of our waterfront parks, we lost power, the buildings were flooded, services that residents rely on were disrupted, and this is only our part of it. We have a citywide impact on it when it comes to flooding. STATED MEETING 55 Since we began discussing the new plan last fall my colleagues and I have worked tirelessly to make sure to maintain the balance between preparing for a future where climate crisis is an everyday reality, while also guaranteeing that our parks and our communities would be restored and improved. To reject this plan today, to vote no, would be putting us on an uncertain path towards resiliency. It would be jeopardizing hundreds of millions of dollars in federal funding allocated for this specific project, and set a precedent of throwing away a well- developed, well-thought, and hard-fought plan out the window for every community that's going to have to go through this in the future. As I've sat here today, I've talked to my colleagues about their needs and their desires to have their communities in the outer boroughs and other places that were affected also be protected against a new super storm because we all are in a new reality where climate change is the reality and all of our communities still remain unprotected against the next storm, which could happen any day or any year in the future. It is our responsibility as council members, in my view, is to find that balance between protecting our communities STATED MEETING 56 and doing what is right for the hundred and thousand people who will be protected under this plan. Many of you here represent other parts of the city that were hit just as hard as my district and others here today by Superstorm Sandy and it's my hope that we have a plan today that was acknowledge the needs of the community, has found the right balance between resiliency and the community needs, and has made very significant investments that will be both short-, medium-, and long-term investments in our community. I do support it. I hope you'll join us in the vote to support it today. Thank you."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER POWERS",
+          "transcriptPage": 88,
+          "text": "Permission to explain my vote?"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER POWERS",
+          "transcriptPage": 88,
+          "text": "Thank you. I, in my last comments didn't have an opportunity to say some thank-yous to everybody who worked on the ESCR land use application alongside of myself and the other two members. I want to Chelsea Kelly and those folks on the council land use staff. I want to thank, we had worked very hard pushing this administration into times where they were very difficult conversations to have about getting this plan to a better place. But I do want to thank the Commissioner Grillo, Jimmy Torres Springer, the Parks STATED MEETING 89 Department, the borough, Manhattan DOT, and others. I also want to thank my staff, Ben Jacobs, Emily Walsh, and Liz Peters for their work on this as well. And I just want to say a thank you to Rob Newman. I don't know if he's still here, but Rob has served this institution in a very great way for years, and I've had the opportunity to work alongside of him with some unfinished legislation that we will as well get to. With that being said, I'm vote aye on all with the exception of 1780. Thank you."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER REYNOSO",
+      "displayName": "Council Member Reynoso",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        24,
+        89
+      ],
+      "wordCount": 304,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER REYNOSO",
+          "transcriptPage": 24,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER REYNOSO",
+          "transcriptPage": 89,
+          "text": "Permission to explain my vote?"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER REYNOSO",
+          "transcriptPage": 89,
+          "text": "Thank you, Public Advocate. Congratulations to the public advocate, Jumaane Williams, for the great work. It wasn't a surprise, but we are grateful that you are the public advocate. If there was any position that was better suited for you or the other way around, it would be public advocate. I'm really excited that you'll be doing that without having to run three times in less than, what it is, six months? So STATED MEETING 90 congratulations to you. I do want to say to my colleagues in Manhattan, congratulations to that work. I want to be very clear. That Brooklyn would kill for that type of work to be done in our borough, and we're actually very envious of the great work that you guys were able to do and put together to make that happen. In the Brooklyn delegation we will be doing our part to try to match that and try to be as successful as you are. You set the ground game for it. So I just want to say thank you for being bold, for being strong, and doing something that I think for a long time we're gonna, you're gonna be very happy about. So congratulations to you and to my neighbor in the borough of Brooklyn, Council Member Rafael Espinal, for the work that he did on 1321-C. For too long we had building service workers in the City of New York that can't afford to live in the buildings where they work and we, I think we got this a little closer now, where that reality can be true. So I want to thank him for the work that he did there, congratulate him for the work that he did there. And I would vote aye on all. Thank you."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER RICHARDS",
+      "displayName": "Council Member Richards",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        15,
+        24,
+        25,
+        60,
+        91
+      ],
+      "wordCount": 620,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER RICHARDS",
+          "transcriptPage": 15,
+          "text": "Aye, I mean here."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER RICHARDS",
+          "transcriptPage": 24,
+          "text": "Permission to explain my vote? 25 STATED MEETING 25"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER RICHARDS",
+          "transcriptPage": 25,
+          "text": "Thank you. Oh, oh, all these are call-ups, oh, forget it, oh, sorry. I vote aye. I'm having a fun day today. [laughter]"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER RICHARDS",
+          "transcriptPage": 60,
+          "text": "Thank you. I want to talk about the Peninsula Hospital rezoning. What a great day for the people of the Rockaways. But in particular, for the people who reside in both Edgemere and [inaudible] and a neighborhood I actually lived in right across the street from the site. Ah, this neighborhood has always had the potential to not only serve as a retail destination for local residents, but a tourist attraction as well. However, like many neighborhoods on the eastern portion of the Rockaways, sorely needed infrastructure, affordable housing, quality jobs, and a lack of space for our young people to congregate have been nonexistent. This vacuum created immense challenges, such as the highest unemployed rate in Queens, high rates of obesity due to a lack of access to a supermarket in close proximity to thousands of STATED MEETING 61 public housing residents and homeowners. But today I'm happy to announce the Edgemere Commons Project seeks to address these systematic issues. This project will serve as a template for what a resilient mixed use development should look like in the 21st century. During a time when our city is facing one of the largest housing crisis we have ever witnessed, this project will produce over 2000 units of true affordable housing, serving a healthy mix of incomes as low as 30% AMI. The addition of much-needed senior housing units are also a big win for those who wish to age in place gracefully in the Rockaways. I want my community to know we heard you loud and clear on the need to ensure we just aren't building housing, but addressing the needs of our community as well. This is why I'm happy to announce the creation of a new community center, healthcare facility, supermarket, open space, and much-needed local and destination retail as well. The combination of these will enable us to stimulate the economy in Edgemere and ensure our youth and their families will have a safe space for activities. Lastly, I'm happy to announce we've reached an agreement with the Arka Companies and 32BJ and I want to thank Kyle Bragg for STATED MEETING 62 all of his hard work to crossing, to getting us over the line. This will ensure we aren't subsidizing low-paying jobs. We also have an agreement with the developer to, ah, for 35% local hiring and 30% M/WBE, and also a fund to ensure youth and community development and work force could be tracked properly. I just want to close by thanking the amazing land use staff, led by Raju Mann, John Douglas, Amy Levitton, and Julie Luban, and both of our chairs, both Salamanca and Moya, for their hard work on this application as well. I urge my colleagues to vote aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER RICHARDS",
+          "transcriptPage": 91,
+          "text": "I just wanted to thank the speaker for acknowledging the life of Cecelia Cox. You know, sometimes we have heroes amongst us and we don't even known it. But I'm a young man whose parents were best friends with her and her husband, and you know, I have some fond memories of playing in her house and watching a Tyson fight even one time, and picked up the Daily News this week and did not even know how much history she made in the city. So with that I dedicate my vote to her. I just had spoke to her about a month ago, but didn't realize how sick she was. So with that I dedicate my vote to her and I vote aye."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER RIVERA",
+      "displayName": "Council Member Rivera",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        16,
+        25,
+        50,
+        52,
+        91,
+        92
+      ],
+      "wordCount": 811,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER RIVERA",
+          "transcriptPage": 16,
+          "text": "Present."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER RIVERA",
+          "transcriptPage": 25,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER RIVERA",
+          "transcriptPage": 50,
+          "text": "Thank you for letting me speak briefly about the historic vote we are taking today for climate change protections as we deal with this very real and present danger, undoubtedly one of the greatest threats of our lifetimes and certainly this century. For the last seven years I've watched my community's slow and painful recovery from the physical and emotional damage Superstorm Sandy has wreaked on all of us. We are lucky that we haven't seen a storm as bad as Sandy since, but it's inevitable, and we cannot let our good fortune distract us from moving forward as we face more intense storms, flooding, and destruction. Today we have a chance with the East Side Coastal Resiliency Project to not only approve real protections, but also address decades of environmental ignorance on the lower east side. I move forward with negotiations thinking of injustices we have faced as a community, the FDR Drive, built by STATED MEETING 51 Robert Moses with no concept of its environmental impact, lead line departments in our NYCHA campuses that have still not been repaired, and of course the mold that was exacerbated after Hurricane Sandy's waters flooded our homes and our businesses. That is why this agreement we reached this week for ESCR goes beyond protections for the next one hundred years, brings in a phased project design, a new amphitheater of ball fields, tennis courts, and bridges, all of what we fought for in this plan since 2012. With this vote we are also bringing a long list of community improvements to over 17 parks, six NYCHA campuses, partnerships with community gardens, extended hours at school recreation sites, and new barbecue areas. We're voting to expand pedestrian- focused infrastructure with commitments for new protected bike lanes in Alphabet City and the expansion of closed street programming that includes pocket parks. And we're planning for the future with a new disaster preparedness campaign for our front- line residents and a commitment to study the future of the FDR Drive that must include reduced vehicle use and emissions. If I could just have a minute, I've been working on this for a long time. STATED MEETING 52"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER RIVERA",
+          "transcriptPage": 52,
+          "text": "All right, I know, OK. But as this project spanning three council districts moves forward it's clear that the communities trust with the city surrounding this project must continue to be prepared, ah, repaired. I certainly understand the mistrust after decades of neglect certain neighborhoods have experienced at the hands of all levels of government, especially the recovery process that NYCHA endorsed to this day. I will say all of my thank yous when we vote, and this is a really important personal project for me. I was a principal organizer after Hurricane Sandy and to finally bring protections to my community, I am really, really proud of us all today. Thank you."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER RIVERA",
+          "transcriptPage": 91,
+          "text": "Permission to explain my vote?"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER RIVERA",
+          "transcriptPage": 91,
+          "text": "So while ESCR is just the first project of many the city must complete quickly [loud outburst in background]"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER RIVERA",
+          "transcriptPage": 92,
+          "text": "Thank you."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER RIVERA",
+          "transcriptPage": 92,
+          "text": "So this is the first project of many and my colleagues, Council Member Mark Treyger, and as you heard from Council Member Menchaca, Reynoso, and of course Donovan STATED MEETING 93 Richards, we are always talking about how we can bring resiliency projects and more sustainable community development across the five boroughs, and I do hope that we can learn from this project, and it can be a model in many ways. I have to thank a lot of people very, very quickly, including Manhattan borough president, Gail Brewer, Congresswoman Caroline Maloney, Nidia Velasquez, Assembly Members Harvey Epstein and Yuh-Line Niou, State Senators Brad Hoyleman and Brian Kavanaugh, and all of our district. I have to thank the community organizations that guided our negotiations. A special, special thanks to my community boards, Community Boards 3 and 6, and Susan Setser, the district manager, and Megan Joy are here. Park users such as Solar One, our local sports teams, especially our Little League coaches, Tony, Danny, and Seth, the Lower East Side Ecology Center, our Stye Town tenants, and all the NYCHA residents at Baruch, Reese, Wald, Vladik, Compost Two, LES2, LES3, and Gompers Houses, all of the advocates and the community organizations that have provided needed expertise to this process, including Rebuild by Design, Regional Plan Association, New York League of STATED MEETING 94 Conversation Voters, New Yorkers for Parks, the Lower East Side Center and Fab NYC. And I have to thank the council land use division, Chelsea Kelly, Arthur Ho, Raju Mann, Julie Lubin, Amy Levitton, and of course Jason Goldman. And I have to thank my entire staff, but particularly my chief of staff, Pedro Carillo for shepherding this project through from day one. Thank you for allowing me the opportunity to speak. And I proudly vote aye on these historic land use items."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER RODRIGUEZ",
+      "displayName": "Council Member Rodriguez",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        25,
+        56,
+        94
+      ],
+      "wordCount": 602,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER RODRIGUEZ",
+          "transcriptPage": 25,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER RODRIGUEZ",
+          "transcriptPage": 56,
+          "text": "Thank you, Public Advocate. First of all, thank you Speaker Johnson. As I said at the previous Stated Meeting what I have experienced in your leadership is that we've been able to pass a number of bill that I was told that city didn't have the authority to do it, or that we couldn't do it. So this was one of those type of bill that my previous colleague, Elizabeth Crowley, she tried [inaudible] and unfortunately she STATED MEETING 57 was told that the city couldn't do it. Same thing happened for me with the transfer, ah, closing Riker's Island and [inaudible] I was told the city couldn't do it. Fair Fare, I was told that the city couldn't do it. Establish UPK, I was told that the city couldn't do it. And what we have seen is that when we have a progressive body and we have a leadership like you, like your, we are moving bills, and I know that there are many other to come. When I met with members of the Latino communities, Dominican, Puerto Ricans, Garifuna, when I met and talk to the African community from Nigeria and other places, when I talk to anyone who has been an immigrant like myself, what I had heard is one thing. We have failed to one million family. One million body has been buried in the largest public cemetery in the whole United States of America. Who are those people? Those people are black. They was buried after the Civil War because some white people they didn't want to be buried together with black people. So they was brought to that location. They are immigrants. They are the generation that we lost during the HIV. They are hard-working individual. But unfortunately we closed this, that place where we STATED MEETING 58 want to be united. Giving the respect to them. Being able to visit them. Before 2014 no one was able to visit Riker's Island. Now we still have restriction. But we transferred the island. What we are saying is that we live progressive. That from now on the largest public cemetery will be open to everyone. [speaking in Spanish] Thank you."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER RODRIGUEZ",
+          "transcriptPage": 94,
+          "text": "Permission to explain my vote?"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER RODRIGUEZ",
+          "transcriptPage": 94,
+          "text": "So, yes, following up what I was explaining about Hart Island, I would like to add that, you know, as we were talking about the historical part of Hart Island when the city purchased the island for $75,000 in 1968 from the Hunter family, then today 150 years after Hart Island is continuing bury the immigrants and the poorest and the homeless. No wealthy families ever in that location. Just the poorest one. Those STATED MEETING 95 people who live in communities such as northern Manhattan, they can live in the South Bronx, they can live in Brooklyn and Queens and other places where New Yorkers make close to 40%, New Yorkers living in poverty. Those New Yorker that apply for financial support to bury their loved one, however, the City of New York only provide $1200 of financial assistant to help to cover the cost of a cemetery and the funeral. So I believe that as we are making this transition on transferring the control of Hart Island from correctional to park we also need to call the City of New York to lobby at Albany so that we can increase the financial support that we provide to family from $1200 that we do today, amount of dollar that everyone know is not enough to cover for the cemetery and the funeral. [speaking in Spanish] With that I vote aye."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER ROSE",
+      "displayName": "Council Member Rose",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        16,
+        95
+      ],
+      "wordCount": 12,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER ROSE",
+          "transcriptPage": 16,
+          "text": "Here."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER ROSE",
+          "transcriptPage": 95,
+          "text": "I vote aye on all except for 1152, 1153, and 1154."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER ROSENTHAL",
+      "displayName": "Council Member Rosenthal",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        16,
+        25,
+        95
+      ],
+      "wordCount": 13,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER ROSENTHAL",
+          "transcriptPage": 16,
+          "text": "Here."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER ROSENTHAL",
+          "transcriptPage": 25,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER ROSENTHAL",
+          "transcriptPage": 25,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER ROSENTHAL",
+          "transcriptPage": 95,
+          "text": "With congratulations to my colleagues, I vote aye on all."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER SALAMANCA",
+      "displayName": "Council Member Salamanca",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        16,
+        25
+      ],
+      "wordCount": 31,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER SALAMANCA",
+          "transcriptPage": 16,
+          "text": "Present."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER SALAMANCA",
+          "transcriptPage": 25,
+          "text": "I vote aye on all land use call-ups and with permission I would like to vote aye on all items on the general order calendar and all resolutions."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER SALAMANCA",
+          "transcriptPage": 25,
+          "text": "Thank you."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER TORRES",
+      "displayName": "Council Member Torres",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        26,
+        96
+      ],
+      "wordCount": 4,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER TORRES",
+          "transcriptPage": 26,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER TORRES",
+          "transcriptPage": 96,
+          "text": "Aye on all."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER TREYGER",
+      "displayName": "Council Member Treyger",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        16,
+        26,
+        96,
+        98
+      ],
+      "wordCount": 478,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER TREYGER",
+          "transcriptPage": 16,
+          "text": "Here."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER TREYGER",
+          "transcriptPage": 26,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER TREYGER",
+          "transcriptPage": 96,
+          "text": "Permission to explain my vote?"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER TREYGER",
+          "transcriptPage": 96,
+          "text": "Yes, thank you Public Advocate and congratulations to you again on your well-deserved victory. I just want to definitely commend my colleagues, Council Members Rivera, Powers, Chin, and others who I do think deserve a lot of credit for what they've been able to negotiate. But I just want to point out the mayor's score card on this issue when it comes to city capital spending on resiliency in the five boroughs. I represent Coney Island, one of the hardest hit areas from Superstorm Sandy, certainly lower AMI levels than parts of the east side of Manhattan. Here's the score card. City capital spending - east side of Manhattan 1.4 billion dollars, southern Brooklyn - 32 million. This is with knowledge that the Army Corps of Engineers said that Brooklyn and Queens are the most vulnerable boroughs to climate change and storms. So one billion, over a billion, to 32 million. We have an inequality problem here STATED MEETING 97 and so Mr. Mayor you need to align your resources and your actions with your words and your pledges. Let me just speak about my bills that we're voting on today as well. With the passage of Introduction 564- A we will finally know exactly who qualifies for affordable housing and who does not and why. This bill will help shed light on the demand for affordable housing units in New York City and create transparency for residents who apply to the affordable housing lottery and the number of applicants who sign leases for affordable housing units in the city. My colleagues and I heard from many who are being rejected for unclear reasons than those who are winning the lottery. We'd like to know what is working, what's not working, and to finally answer the question, affordable for who. Additionally, Intro 1554-B will require the DOE to report on the demographics of all school staff in all city schools. This will include teachers, leadership staff, paras, counselors, psychologists. We need a culture-responsive curricula in our school system, and I just, I want to thank all the staff that helped me on the bill, and Public Advocate, just a few more seconds. Speaking of schools, we had another school STATED MEETING 98 shooting in America today in Santa Clarita, California. I believe at least two students have been shot killed, five seriously wounded. We have a crisis in this country. This government must pass gun reform legislation immediately. But I also want to note we desperately need to hire more social workers and counselors in our schools."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER TREYGER",
+          "transcriptPage": 98,
+          "text": "That to me is something we must address in the city and across this country and our prayers and thoughts are there, but not sufficient in terms of addressing this crisis that we're facing in America. And with that I vote aye on all."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER ULRICH",
+      "displayName": "Council Member Ulrich",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        98
+      ],
+      "wordCount": 41,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER ULRICH",
+          "transcriptPage": 98,
+          "text": "I vote aye on all with the exception of preconsidered Reso 1152, 1153, 1154, and I'm also voting against 1547-A, 1550-A, 1552-B, 1554-B, 1156-A, and 1780. And congratulations to our newly reelected public advocate, Jumaane Williams. Congratulations, sir. STATED MEETING 99"
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER VALLONE",
+      "displayName": "Council Member Vallone",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        16,
+        26,
+        99
+      ],
+      "wordCount": 87,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER VALLONE",
+          "transcriptPage": 16,
+          "text": "Here."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER VALLONE",
+          "transcriptPage": 26,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER VALLONE",
+          "transcriptPage": 99,
+          "text": "Mr. Public Advocate, I'd like to officially amend my name to add my middle initial to my last name, so I will henceforth be Avallone to be at the front of the list for voting. What do you think? Can we do that, is it possible?"
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER VALLONE",
+          "transcriptPage": 99,
+          "text": "[laughs] I was just thinking it might be a way to go. I would like to vote aye on all with the exception of 1780, Resos 1152, 1153, 1154. With that, congratulations and Godspeed to Rob. Thank you, everyone."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER VAN BRAMER",
+      "displayName": "Council Member Van Bramer",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        16,
+        26,
+        99
+      ],
+      "wordCount": 5,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER VAN BRAMER",
+          "transcriptPage": 16,
+          "text": "Here."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER VAN BRAMER",
+          "transcriptPage": 26,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER VAN BRAMER",
+          "transcriptPage": 99,
+          "text": "Aye on all."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBER YEGER",
+      "displayName": "Council Member Yeger",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        16,
+        26,
+        99
+      ],
+      "wordCount": 30,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBER YEGER",
+          "transcriptPage": 16,
+          "text": "Here."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER YEGER",
+          "transcriptPage": 26,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "COUNCIL MEMBER YEGER",
+          "transcriptPage": 99,
+          "text": "I vote aye on all with the exception of Resolution 1152, 1153, 1154, Intro 1780, 1156. I abstain on Intros 1547, 1150, 1552, 1554, and 909. Thank you."
+        }
+      ]
+    },
+    {
+      "speakerKey": "COUNCIL MEMBERS",
+      "displayName": "Council Members",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "procedural-or-unattributed",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        1
+      ],
+      "wordCount": 160,
+      "turns": [
+        {
+          "speakerKey": "COUNCIL MEMBERS",
+          "transcriptPage": 1,
+          "text": "Adrienne E. Adams Alicka Ampry-Samuel Diana Ayala Inez D. Barron Joseph C. Borelli Justin Brannan Fernando Cabrera Margaret S. Chin Costa Constantinides Robert E. Cornegy, Jr. Laurie A. Cumbo Chaim M. Deutsch Ruben Diaz, Sr. Daniel Dromm Rafael L. Espinal, Jr. Mathieu Eugene Vanessa L. Gibson Mark Gjonaj Barry Grodenchik Robert Holden World Wide Dictation 545 Saw Mill River Road – Suite 2C, Ardsley, NY 10502 Phone: 914-964-8500 * 800-442-5993 * Fax: 914-964-8470 www.WorldWideDictation.com 2 Ben Kallos Andy King Peter Koo Karen Koslowitz Rory I. Lancman Brad Lander Stephen T. Levin Mark Levine Farah Louis Alan N. Maisel Steven Matteo Carlos Menchaca I. Daneek Miller Francisco Moya Bill Perkins Keith Powers Antonio Reynoso Donovan J. Richards Carlina Rivera Ydanis Rodriguez Deborah Rose Helen K. Rosenthal Rafael Salamanca, Jr. Ritchie J. Torres Mark Treyger Eric A. Ulrich Paul Vallone Jimmy Van Bramer Kalman Yeger 3 A P P E A R A N C E S (CONTINUED) STATED MEETING 4 1"
+        }
+      ]
+    },
+    {
+      "speakerKey": "FERNANDO CABRERA",
+      "displayName": "Fernando Cabrera",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        4,
+        8
+      ],
+      "wordCount": 338,
+      "turns": [
+        {
+          "speakerKey": "FERNANDO CABRERA",
+          "transcriptPage": 4,
+          "text": "Well, ladies and gentleman, what a joy to introduce to you alongside with our Majority Leader I the house, Council Member Cumbo. Thrive Collective research has proven that art and music programs help keep young people in school, make them more committed, enhanced collaboration, strengthen ties to their peers and to their community, and improve motor, spatial, and language skills. At-risk students involved in art are significantly more likely to stay in school and ultimately get college degrees. Yet more than 400 public schools in New York City's lowest income areas have no art program at all. Thrive Collective, the nonprofit organization, formerly known as 20/20 Vision for School, has garnered support from numerous City Council members to restore art programs in many public schools city. Thrive Collective offers programs in instrumental, vocal music, mural painting, and filmmaking through the expertise of teaching artists, mentors, volunteers, and interns, as well as mentorship programs. In fiscal year 20 a STATED MEETING 5 dozen council members have provided 18 awards that are collectively funding two art festivals, 18 murals, two media programs, and two music programs at 18 schools, one senior center, and one business district. Thrive has leveraged City Council investment to directly serve 13,000 students in nearly 100 schools in 36 council districts, and I believe mine was the first one, right? The very first one. Mobilize 2500 volunteers from 120 partner organizations and businesses completed 145 murals, totaling 60,000 square feet of public art produced over 150 festivals, assemblies, and events and Jeremy Del Rio, you've been a true champion, you've been a leader. I remember when you first got started. You started with a dream and literally with 20/20 vision and just to see it grow to the level it is today is simply amazing. And with that I want to turn it over now to the City Clerk for the reading of the proclamation."
+        },
+        {
+          "speakerKey": "FERNANDO CABRERA",
+          "transcriptPage": 8,
+          "text": "Thank you so much to our clerk. With that, I want to invite also our Majority Leader to say some words."
+        }
+      ]
+    },
+    {
+      "speakerKey": "HELD AT",
+      "displayName": "Held At",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "procedural-or-unattributed",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        1
+      ],
+      "wordCount": 5,
+      "turns": [
+        {
+          "speakerKey": "HELD AT",
+          "transcriptPage": 1,
+          "text": "Council Chambers - City Hall"
+        }
+      ]
+    },
+    {
+      "speakerKey": "HERONE DOLTE",
+      "displayName": "Herone Dolte",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        4
+      ],
+      "wordCount": 22,
+      "turns": [
+        {
+          "speakerKey": "HERONE DOLTE",
+          "transcriptPage": 4,
+          "text": "Test, test. This is the Stated Meeting. Today's date is November 14, 2019. d This recording is being recorded by Herone Dolte."
+        }
+      ]
+    },
+    {
+      "speakerKey": "JEREMY DEL RIO",
+      "displayName": "Jeremy Del Rio",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        10
+      ],
+      "wordCount": 353,
+      "turns": [
+        {
+          "speakerKey": "JEREMY DEL RIO",
+          "transcriptPage": 10,
+          "text": "Thank you so much. On behalf of all of us at Thrive Collective, I want to thank Speaker Johnson, Majority Leader Cumbo, you, of course, Council Member Cabrera, and all the other STATED MEETING 11 council members that have seen the power of art to awake creative imagination in our young people. We know that the very people that most require the skills to see beyond our current circumstances to creative lives that don't exist yet are those who live in low-income situations, right, who need that imagination to envision a world that doesn't yet exist to make it so. It is the arts and those creative experiences that awaken that imagination, and yet there are over 400 schools in the lowest- income school districts of our five boroughs that lack these experiences. And so it's our passion to bring art back to those kids and it's your visionary leadership that has propelled us to the point. Fernando Cabrera, it has been such a joy and a delight to have your trust. You're one of the first, along with my own personal Congressman, ah, council member where I live that saw the potential and invested in 2014 the 13,000 students, the 65,000 square feet of public art, is a consequence of that investment. And to you, Council Member Cumbo, Art a Catalyst for Change helped to propel us beyond a few discretionary grants. It was the first initiative and since then it's been such a delight to work with STATED MEETING 12 your office and your team as well, and to all of you. Thank you. Let's bring art back to schools. It's one of the injustices that is totally inexcusable in the art capital of the world. We can fix this problem overnight with the will and your leadership, so thank you so much. And thank you to the team that's with us. We have some of our students, some of our teaching artists, some of our partners that have joined us as well and our team, and so thank you for being here to celebrate with us. God bless. [applause] Alrighty."
+        }
+      ]
+    },
+    {
+      "speakerKey": "MAJORITY LEADER CUMBO",
+      "displayName": "Majority Leader Cumbo",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        8,
+        16,
+        26,
+        91,
+        92,
+        99,
+        101,
+        102
+      ],
+      "wordCount": 887,
+      "turns": [
+        {
+          "speakerKey": "MAJORITY LEADER CUMBO",
+          "transcriptPage": 8,
+          "text": "Thank you, Council Member Cabrera, for always sharing the spotlight with me, you're so generous. Thank you so much for bringing Thrive Collective here today. You all are an extraordinary organization and to hear about all the work you're doing is just inspirational. And part of the reason why we do ceremonials, particularly for our young people, is STATED MEETING 9 because for so many of us, I had not come to City Hall until I was maybe in my late thirties. So we want to get you all in the door as quickly so that you will know that this is your City Hall and that each of you have the opportunity one day to be elected and to sit in these seats, and with a cultural background behind you and all of this artistic programming you can create legislation and ideas that we have never thought of before. So we are so happy to welcome you here today. But I also just want to instill upon you how important it is for all of the young people that are part of the Thrive Collective to really go on and do extraordinary things so that we can continue to make a stronger case and argument for why this programming is so important and why every single child needs to have cultural and artistic programming, because essentially it saves lives. So I want to thank all of you. I want to thank all of you for bringing this important programming to the City of New York. You're doing extraordinary work. I know it's for the love of the youth and not for the money. So we really appreciate you. Although the money is nice and we're going to continue to do our best. But I STATED MEETING 10 thank you for your leadership and for believing in our youth and giving them the energy and the creativity and the environment to be all that they can be, because that's our role, to make sure that we allow our young people to find their passions that God has given us. And when we're not allowed to follow those passions or those ideas, there's often a path that is not as favorable. So we really appreciate the work that you're doing. Thank you."
+        },
+        {
+          "speakerKey": "MAJORITY LEADER CUMBO",
+          "transcriptPage": 16,
+          "text": "Present."
+        },
+        {
+          "speakerKey": "MAJORITY LEADER CUMBO",
+          "transcriptPage": 26,
+          "text": "Aye."
+        },
+        {
+          "speakerKey": "MAJORITY LEADER CUMBO",
+          "transcriptPage": 91,
+          "text": "We are going to have clear out the chamber at this time. We are going to clear the chamber at this time. We STATED MEETING 92 apologize for all those that are going to have to leave. But for the safety of this body we are not going to compromise our members. If you do not sit down at this time we are going to have to clear out the entire chamber. We cannot comprise the safety of this body and outbursts of that kind do exactly that. Additional outbursts and we will clear the chamber. We must respect the entire body."
+        },
+        {
+          "speakerKey": "MAJORITY LEADER CUMBO",
+          "transcriptPage": 92,
+          "text": "Thank you. Quiet in the chamber. We'll turn it back over to Public Advocate Jumaane Williams and we will continue with Council Member Carlina Rivera."
+        },
+        {
+          "speakerKey": "MAJORITY LEADER CUMBO",
+          "transcriptPage": 99,
+          "text": "I vote aye on all. STATED MEETING 100"
+        },
+        {
+          "speakerKey": "MAJORITY LEADER CUMBO",
+          "transcriptPage": 101,
+          "text": "All bills have been referred to committee as indicated on the agenda."
+        },
+        {
+          "speakerKey": "MAJORITY LEADER CUMBO",
+          "transcriptPage": 101,
+          "text": "Seeing none."
+        },
+        {
+          "speakerKey": "MAJORITY LEADER CUMBO",
+          "transcriptPage": 102,
+          "text": "Thank you. The Stated Meeting of November 14, 2019, is hereby adjourned. Thank you. [gavel] 18 19 20 [Transcriber's Note: Revised Vote: 23 Land-Use Call-Up vote was 48-0. All items on the General Order Calendar were STATED MEETING 103 adopted by a vote of 47-0-0, except for the following items that were adopted by votes of: 5 Int 720-C 46 affirmative 1 negative 0 abstentions 10 Int 906-A 44 affirmative 2 negative 1 abstention 15 Int 909-B 44 affirmative 2 negative 1 abstention 20 Int 1156-A 43 affirmative 4 negative 0 abstentions 25 STATED MEETING 104 Int 1321-C 46 affirmative 1 negative 0 abstentions 6 Int 1547-A 43 affirmative 3 negative 1 abstention 11 Int 1550-A 43 affirmative 3 negative 1 abstention 16 Int 1552-B 43 affirmative 3 negative 1 abstention 21 Int 1554-B 43 affirmative 3 negative 1 abstention STATED MEETING 105 2 Int 1580-A 45 affirmative 2 negative 0 abstentions 7 Int 1780 37 affirmative 10 negative 0 abstentions 12 Preconsidered Res 1152 35 affirmative 12 negative 0 abstentions 17 Preconsidered Res 1153 35 affirmative 12 negative 0 abstentions 22 Preconsidered Res 1154 36 affirmative 11 negative STATED MEETING 106 0 abstentions 3 L.U. 548 & Res 1163 46 affirmative 0 negative 1 abstention 8 L.U. 549 & Res 1164 46 affirmative 0 negative 1 abstentions 13 L.U. 563 & Res 1159 45 affirmative 1 negative 1 abstention] 18 19 20 21 22 23 24 25 STATED MEETING 107 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 STATED MEETING 108 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 C E R T I F I C A T E World Wide Dictation certifies that the foregoing transcript is a true and accurate record of the proceedings. We further certify that there is no relation to any of the parties to this action by blood or marriage, and that there is interest in the outcome of this matter. Date ____December 3, 2019____________"
+        }
+      ]
+    },
+    {
+      "speakerKey": "MINORITY LEADER MATTEO",
+      "displayName": "Minority Leader Matteo",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        16,
+        70
+      ],
+      "wordCount": 95,
+      "turns": [
+        {
+          "speakerKey": "MINORITY LEADER MATTEO",
+          "transcriptPage": 16,
+          "text": "Here. Cumbo."
+        },
+        {
+          "speakerKey": "MINORITY LEADER MATTEO",
+          "transcriptPage": 70,
+          "text": "I don't know if he's still here, but I just want to wish Rob Newman the best in his future endeavors and congratulations. I thank you for your friendship. I thank you for the work you did on our AED bills and how personal it was for you and your son. I'm glad we can see those AED bills through. And we're going to miss you here at the council. With that, I'm voting no on 1152, 1153, 1154, 1156, 1321, 1547, 1550, 1552, 1552, 1554, and 1780, and aye on what's left."
+        }
+      ]
+    },
+    {
+      "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+      "displayName": "Public Advocate Williams",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        12,
+        13,
+        16,
+        18,
+        19,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        47,
+        49,
+        50,
+        52,
+        54,
+        56,
+        58,
+        60,
+        62,
+        64,
+        70,
+        72,
+        74,
+        75,
+        77,
+        78,
+        79,
+        80,
+        82,
+        84,
+        85,
+        86,
+        88,
+        89,
+        91,
+        92,
+        94,
+        96,
+        98,
+        99,
+        100,
+        101
+      ],
+      "wordCount": 1456,
+      "turns": [
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 12,
+          "text": "[gavel] Good afternoon. Welcome to the Stated Meeting of November 14, 2019. I am Public Advocate Jumaane Williams. STATED MEETING 13"
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 13,
+          "text": "We will now have today's invocation, which will be delivered by Reverend Kimberly L. Detheridge, the pastor of St. Mark AME Church, located at 90, I am mistaken. We will first have roll call."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 16,
+          "text": "Thank you. And now we'll have today's invocation, which will be delivered by Reverend Kimberly L. Detheridge, the 25 STATED MEETING 17 pastor of St. Mark AME Church, located at 9518 Northern Boulevard in Jackson Heights, Queens."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 18,
+          "text": "Thank you, Pastor. We will now ask Council Member..."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 19,
+          "text": "We will now ask Council Member to spread the invocation on the record."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 20,
+          "text": "Thank you, and I know Council Member Adams wants to say something."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 20,
+          "text": "Thank you so much. I just want to make sure that we understand we have an awesome majority leader. That's Laurie Cumbo. So we'll have now the adoption of minutes."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 21,
+          "text": "Messages and papers from the mayor."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 21,
+          "text": "Communication from city, county, and borough offices."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 21,
+          "text": "Petitions and communications."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 21,
+          "text": "Land use call- ups."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 22,
+          "text": "Permission granted."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 24,
+          "text": "Permission granted."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 25,
+          "text": "Permission granted."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 25,
+          "text": "Permission granted."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 26,
+          "text": "Today's, thank you, and peace and blessings to Council Member Maisel. Today's land use call-ups are adopted by a vote of 46 in the affirmative and zero in the STATED MEETING 27 negative. We will now have communication from Speaker Corey Johnson. Before that, I just want to say Mr. Speaker, as of a few weeks ago, this is my first time back since the general election and I want to tell the body and the city unfortunately is stuck with me at least for the next two years."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 47,
+          "text": "Thank you."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 47,
+          "text": "Thank you so much for that apt description as well. I am, I'm happy to speak on it, which I will. I want to give my colleagues an opportunity first as we move into discussion of general orders. First we have Council Members Gjonaj, followed by Rivera, and Chin. 25 STATED MEETING 48"
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 49,
+          "text": "Council Member..."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 49,
+          "text": "Given the amount of bills I'm going to just ask if you can wrap up, please. Thanks."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 50,
+          "text": "Thank you. Thank you, Council Member. Council Member Rivera, followed by Council Members Chin and Powers."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 52,
+          "text": "There will be, there's another opportunity when they vote, we just have a lot, so if you can wrap up."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 52,
+          "text": "Thank you, Council Member. Ah, Council Member Chin, Powers, followed by Rodriguez, and Menchaca."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 54,
+          "text": "Thank you, Council Member. Council Members Powers, Rodriguez, and Menchaca."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 56,
+          "text": "Thank you, Council Member. Council Members Rodriguez, Menchaca, and Richards."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 58,
+          "text": "Thank you, Council Member. Council Members Menchaca and Richards."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 60,
+          "text": "Thank you. If you want to keep talking me I might give you more. [laughter]"
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 60,
+          "text": "Ah, thank you, Council Member. Council Member Richards."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 62,
+          "text": "Thank you very much, Council Member. Truly briefly, I'd like to encourage my colleagues to vote on three bills before you today, first one 1550, School Diversity Advocacy Group. I want to the staff, the speaker, and Council Member Treyger to codify into the law the committee that just finished their work in dealing with school diversity. This will make sure that there is a mixture of voices, from students to parents and teachers, and of course wanted to make sure that the council had some people appointed as well to provide some balance, and the public advocate's office STATED MEETING 63 because of course public advocates got to get some as well. And I want to thank the speaker and a big shout-out to Council Member Menchaca and Zirona Soft from the Progressive Caucus, Brandon Clark from the Black, Latino and Asian Caucus, of course Jason Goldman around 720, and the rest of the staff. As Council Member Menchaca mentioned, we've been working on this for a very long time and it will make a lot of groups happy who we assured them that when we passed this bill a few years ago they would have access to be able to provide this kind of training and now they will. We'll be opening up the people who can provide the training, which will be opening up the people who can get the training so that we can get to the deadline that everyone agreed to. Lastly, 716-A is the Mitchell-Lama bill. I'm very excited about this. I've been working for a very long time. People may have heard of, ah, the kind of things that have been going on around Mitchell-Lama waiting lists. In fact, early this year three people were arrested for bribery. It was one of the hearings that this council had where the administration actually had nothing. They provided nothing. So this will make these lists be transparent and public STATED MEETING 64 so everyone could see, and I thank the Speaker, I thank the Chair, Cornegy, for this, and I thank this body for allowing me to get these bills passed. Thank you so much. And report of special committees?"
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 64,
+          "text": "Reports of standing committees?"
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 70,
+          "text": "Permission granted. 25 STATED MEETING 71"
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 72,
+          "text": "Permission granted."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 74,
+          "text": "Permission granted."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 75,
+          "text": "Permission granted."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 77,
+          "text": "Thank you."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 77,
+          "text": "Permission granted."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 78,
+          "text": "Permission granted."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 79,
+          "text": "Permission granted."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 80,
+          "text": "Council Member Koslowitz?"
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 80,
+          "text": "Permission granted."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 82,
+          "text": "Permission granted."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 84,
+          "text": "Permission granted."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 85,
+          "text": "Permission granted."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 86,
+          "text": "Permission granted."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 88,
+          "text": "Permission granted."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 89,
+          "text": "Permission granted."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 91,
+          "text": "Permission granted."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 92,
+          "text": "Thank you, Majority Leader. You actually stuck to the coffee, that was pretty cool actually, that was pretty new. Thank you, Council Member Rivera, for your patience. Up until now we're not bad. Yeah, that was the most respectful protest I ever seen [laughs]."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 92,
+          "text": "Up until now."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 94,
+          "text": "Permission granted."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 96,
+          "text": "Permission granted."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 98,
+          "text": "Thank you, Council Member."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 98,
+          "text": "Thank you, Council Member."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 99,
+          "text": "I'm not sure. [laughter] You have to speak to the Majority Leader."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 100,
+          "text": "Thank you very much for your patience. All items on today's general order calendar are adopted by a vote of 40 in the affirmative, zero in the negative, and zero in the abstentions, with the exception of Land Use 548 and 549 with accompany Resos, which was adopted by a vote of 47 in the affirmative, 0 in the negative, and 1 abstention, and Land Use 563 and Reso 1159, which was adopted by a vote of 46 in the affirmative, 1 in the negative, 1 in the abstention, and Intro 906-A which was adopted by a vote of 45 in the affirmative, 2 in the negative, and 1 abstentions, and Intro 909-B, which was adopted by a vote of 45 in the affirmative, 2 in the negative, and 1 abstention, and Intro 1156-A which was adopted by a vote of 44 in the affirmative, 4 in the negative and 0 abstentions, and Intro 1321-C which was adopted by a vote of 47 in the affirmative, 1 in the negative, and 0 abstentions, and Intro 1547- A, which was adopted by a vote of 44 in the affirmative, 3 in the negative, and 1 abstention, and Intro 1550-A which was adopted by a vote of 44 in the affirmative, 3 in the negative, and 1 abstention, and Intro 1552-A which was adopted by a vote of 44 in the affirmative, 3 in the negative, and 1 abstention, and STATED MEETING 101 Intro 1554-B, which was adopted by a vote of 44 in the affirmative, 3 in the negative, and 1 abstention, and Intro 1580-A, which was adopted by a vote of 46 in the affirmative, 2 in the negative, and 0 abstentions, and Intro 1780-A which was adopted by a vote of 30 in the affirmative, 10 in the negative, 0 abstentions, and Resolutions 1152 and 1153, which was adopted by a vote of 36 in the affirmative, 12 in the negative, and 0 abstentions, and Resolution 1154, which was adopted by a vote of 37 in the affirmative, 11 in the negative, and 0 abstentions, and Intro 720- C which was adopted by a vote of 47 in the affirmative, 1 in the negative, and 0 abstentions. The revised land use call-ups now are 40 in the affirmative and 0 in the negative. Introduction and reading of the bills."
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 101,
+          "text": "Resolutions?"
+        },
+        {
+          "speakerKey": "PUBLIC ADVOCATE WILLIAMS",
+          "transcriptPage": 101,
+          "text": "All right. We will now move to general discussions. So far we have no council members signed up to speak. I did want to STATED MEETING 102 thank the body again for passing my piece of legislation. I did want to thank the body again for passing my piece of legislation. I did want to say congratulations to Rob Newman on his excellent career. He has helped pass a number of bills, including the Community Safety Act, which was a landmark legislation this body has passed, and just lastly, she thought she was going to get away, but my press secretary, Leticia Taylor Green's birthday is today and I want to wish her a very happy birthday. She's here today. Thank you very much. And I'll now call on Majority Leader Cumbo to close the meeting today."
+        }
+      ]
+    },
+    {
+      "speakerKey": "REVEREND DETHERIDGE",
+      "displayName": "Reverend Detheridge",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        17
+      ],
+      "wordCount": 350,
+      "turns": [
+        {
+          "speakerKey": "REVEREND DETHERIDGE",
+          "transcriptPage": 17,
+          "text": "Let us pray. Dear most gracious and everlasting God, creator and sustainer of the university, giver of life, we come this afternoon to invoke your presence and to say thank you. First of all, Lord, thank you for your goodness, your grace, and your mercy. Thank you for the members of the City Council. Thank you for their servant leadership, their commitment and dedication to the work that you have called them to do, and the good work that they have already accomplished. Thank you for the wonderful mosaic of people that live, work, play, and visit this great city called New York, whom they serve. Bless the speaker of the council, the Honorable Corey Johnson, as he presides over this Stated Meeting. Bless all the members of the City Council and bless my own Council Member, the Honorable Francisco Moya of the 21st Council District. Lord, you have entrusted this city into their hands. Give them wisdom, understanding, and patience in determining what is best for all New Yorkers. In these troubled times where powers and STATED MEETING 18 principalities seek to divide and oppress, continue to help them to understand and provide for the needs of our city, the vulnerable, the lost, the poor, the oppressed, and the issues that they deal with of affordable housing and criminal justice and educational reform and safety and security of our people, sex trafficking, mental health, and what it means to be neighbor. We are reminded in your word, Lord, to love our neighborhoods as we love ourselves. We are all each other's neighborhoods. And may they listen and hear the concerns of this city. May their decisions be tempered with justice and mercy as they serve all the constituents of New York City. Thank you for their vision. Thank you for their staff. Continue to give them the moral fortitude of what is right. Unify, encourage, uplift, strengthen, and restore them. Watch over them and their families. Bless them in all that they do to make New York a better city for us all. In your name we pray. Amen."
+        }
+      ]
+    },
+    {
+      "speakerKey": "SERGEANT AT ARMS",
+      "displayName": "Sergeant At Arms",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        12,
+        13,
+        17,
+        18
+      ],
+      "wordCount": 89,
+      "turns": [
+        {
+          "speakerKey": "SERGEANT AT ARMS",
+          "transcriptPage": 12,
+          "text": "Ladies and gentlemen, quiet on the floor please, quiet on the floor please. Council members, please take your seats so we can get an accurate count. At this time please place all electronic devices, all electronic devices to vibrate. Will all non-council employees, all non- council employees please leave the main floor of the chambers. If you are seated upstairs in the balcony there is no photography upstairs in the balcony. Thank you. Mr. Public Advocate."
+        },
+        {
+          "speakerKey": "SERGEANT AT ARMS",
+          "transcriptPage": 13,
+          "text": "All rise."
+        },
+        {
+          "speakerKey": "SERGEANT AT ARMS",
+          "transcriptPage": 17,
+          "text": "All rise."
+        },
+        {
+          "speakerKey": "SERGEANT AT ARMS",
+          "transcriptPage": 18,
+          "text": "Quiet on the floor, please. 25 STATED MEETING 19"
+        }
+      ]
+    },
+    {
+      "speakerKey": "SPEAKER JOHNSON",
+      "displayName": "Speaker Johnson",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "unclassified-complete-record",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        16,
+        21,
+        26,
+        27,
+        47,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "wordCount": 4508,
+      "turns": [
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 16,
+          "text": "I'm here."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 21,
+          "text": "I want to thank you, and at this time I'm asking for a roll call vote on today's land use call-up calendar. We're just voting on the land use call-ups right now."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 26,
+          "text": "I vote aye. But I'd also like to say something before Council Member Maisel leaves, which is I am very, very, very, very happy that he's back. He is a good friend. He is a great member of this body. [applause] And he has been out, so I want to welcome back Alan Maisel. [applause] And with that I vote aye on the land use call-up calendar."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 27,
+          "text": "Boy, do we know it. Ah, thank you, Mr. Public Advocate. I am glad you're back. I'm glad you're here. Congratulations. Good afternoon. I want to thank everyone for being here today on this important Stated Meeting. This morning we had very tragic news coming out of southern California. There was net another mass shooting, a high school shooting. One person was killed, more injured, two of them in critical condition, and it was a shooting at Saugus High School in Santa Clarita, California. This of course is horrific and this senseless violence has to stop. How many more tragedies do we have to endure to pass serious gun control reform laws in this country? And I also want to thank our veterans for their selfless service to our country. Although Veterans Day was on Monday, our gratitude for their service is endless and I really want to thank all the veterans of New York STATED MEETING 28 City, those who are currently serving, those who are no longer serving but still proudly wear the uniform and have dedicated their lives to supporting and defending our country. As I do at each stated, want to recognize some of the important vents that have happened recently. Last week, as you mentioned, Mr. Public Advocate, was Election Day and for the very first time early voting was an option. I personally took advantage of this to cast my vote early and I know many New Yorkers who did the same. We need more bold moves to strengthen our democracy. New Yorkers voted on major changes to our city's constitution thanks to the Charter Revision Commission. The commission was created by the City Council with now Attorney General Leticia James, who was then public advocate, and Manhattan Borough President Gil Brewer. And I want to all the members of the Charter Revision Commission who worked for over a year as volunteers to get this right. I'm grateful for their service and how hard they listened to the public. I also want to congratulate the winners in that election last week and a few of them are our public advocate, Jumaane Williams, our council member and colleague, Farah Louis, and future district attorney Melinda STATED MEETING 29 Katz as well. [applause] I want to congratulate them. Congratulations, Farah. I feel like we've congratulated you like nine times since you've joined the body, so we are really, really grateful that you're here. As I do at every Stated, I want to recognize some of the major losses that our city has faced recently. Last week, shhh, last week retired FDNY firefighter Cecelia Cox died at the age of 68. Cecelia was a true trailblazer and one of the first women to join the department. She joined in 1982 after suing for discrimination and she served for over 20 years in the FDNY. We are deeply, deeply, grateful for her courage, for her trailblazing, and for her service. The NYPD also suffered a loss. Linda Mercer was a 9/11 first responder and traffic enforcement agent who died, yet again, another victim of 9/11-related cancer. She passed away on November 6th. She fought tirelessly for other first responders, particularly non-uniform personnel who suffered from 9/11-related diseases. All of New York will be forever grateful for Linda's courage that never took a day off. My condolences are with the families of Cecelia Cox and Linda Mercer, and both the FDNY and the NYPD. And I would ask us to all STATED MEETING 30 stand for a moment of silence to honor Cecelia and Linda. [moment of silence] Thank you. This month we're also celebrating National American Indian Heritage Month and this month is a reminder to our nation's first people to honor the land that we are standing on. We are also celebrating Puerto Rican Heritage money and the many, many contributions of Puerto Rican New Yorkers. We had a great ceremony here last night in the chambers and I am really grateful for the work that everyone has been doing, and I especially want to say, I think I can speak for all of us when I say that Puerto Rico is a special place. Many of us were just there last weekend, especially for our city which have so many ties to the island. New York wouldn't be what it is today without the contributions of both Puerto Ricans and Native Americans and I'm happy to be honoring them this month. This week also kicked off Transgender Awareness Week, a week dedicated to raising the visibility of trans people while also working to address issues that members of the community face. The LGBT Caucus, led by Chair Dromm, has been hosting a trans day of awareness exhibit in the City Hall rotunda. It's happening today in partnership with STATED MEETING 31 the Laguardia and Wagner archives. And I want to Danny for making this exhibit extra special by sharing his collection of photos featuring many trans leaders from Jackson Heights who are members of Make the Road New York and are great New Yorkers. We must continue to stand with the trans community and on Trans Day of Remembrance, November 20th, we will remember those who we have lost to violence. So please, before you leave the building today check out the exhibition in the rotunda. Last but not least, it saddens me to announce that the council is losing a legendary figure and a good friend to me. I don't even want to read it. Rob Newman is retiring from the council after almost 21 years of service to this legislative body. He started on the General Welfare Committee, where he exposed the city's failed approach to poverty. Rob has served in so, so, so many invaluable roles, helping all of us navigate the laws that govern the city and the best ways to improve or change them. He's overseen the drafting and introduction of literally thousands of bills that have become law in the city and shepherded so many of them in working with all of us. His work has helped expand opportunities for minority- and women-owned STATED MEETING 32 businesses, created some of the most rigorous campaign finance laws in the entire country, and he proudly has limited local cooperation with immigration and customs enforcement. He has truly made New York greater and more equal, and on a personal note I am so proud that Rob has been my counsel for the last almost two years, someone who I have talked to almost every single day, someone who I have relied upon for wisdom and counsel, someone who is always balancing 30 different things for me at a time, and always gets the job done. The master plans bill that we just passed, the master streets plan bill that we just passed a couple of weeks ago, which will revolutionize the way we move around and make our city safer, would not have been possible without Rob Newman's input and guidance. The State of the City I gave earlier this year calling for municipal control and the 104-page report that accompanied it was led by Rob and his team and it is true of so much of the work that we have done together has been done in the spirit of service and the spirit of Rob's love of New York City, but also his love of this body. I will miss him terribly, but he has created a top- notch legislative team. I'm really grateful for STATED MEETING 33 Kelly Taylor and their entire team. He's created a top-notch, so his legacy will live on. Rob, you will be missed. [applause] [pause] Thanks, Rob. Now let's dive into our legislative agenda. We will be voting on the following land use items. Two applications in Council Member Jimmy Van Bramer's district - Hunter's Point South parcels F and G, which will facilitate two mixed use buildings, including 850 affordable housing units, and 4401 Northern Boulevard rezoning, a zoning to facilitate the construction of a new mixed use building. The application will be modified to include MIH option 1. The Peninsula Hospital site redevelopment will facilitate the development of over 2 million square feet, including almost 2000 affordable units, 200 senior units, and new community facilities. I want to congratulate Council Member Richards for his hard work on this application. Finally, 4797 Third Avenue is a technical change in Council Member Ritchie Torres's district, and then there is the East Side Coastal Resiliency Project. This is a critical project about coastal resiliency and climate resiliency for the east side of Manhattan. Council Members Rivera, Powers, and Chin were tireless STATED MEETING 34 advocates for their communities, but also have been mindful about the project's central goal, which was to realize much-needed infrastructure improvement to reduce flood risk and improve access to the waterfront, and I want to them for their hard work on this. Out of the Finance Committee the council will vote on the following pieces of legislation. Introduction number 1780, sponsored by Chair Danny Dromm and supported by the administration, will extend the current rate of the additional tax on the occupancy of hotel rooms at 5.78% through November 30, 2023. There are three preconsidered resolutions, all sponsored by our finance chair, which together will readopt the fiscal 2020 property tax rates to provide tax relief to Class 1 and Class 2 homeowners. Because of the council's action today Class 1 rates will rise by only 1.2% over the 2019 rates instead of 6.3%, thereby saving typical homeowners about $321 per year, and Class 2 rates will be the lowest they've been since the fiscal 2009 budget. There is J2, which is in Council Member Daneek Miller's district in Queens, and it will receive a full 40- year Article 11 property tax exemption to construct 543 units of affordable rental housing. Moving on, STATED MEETING 35 the council will be voting on the follow pieces of legislation. Our first piece of legislation is related to the criminal justice work that the council has been doing. Introduction number 1156-A, sponsored by Council Member Steve Levin, would require the Office of Night Life to report on the frequency and effects of multiagency response to community hotspot march operations across the city. The NYPD would be required to provide written notifications to establishment owners at least 30 days before their inclusion in a potential march operation, which must outline the conditions that need to be remedied. I want to thank from the staff Maxwell Kamfer for his work on that bill. Now a few health bills. Today we're celebrating World Diabetes Day and what a timely way to raise awareness and fight against this illness than through policy. Introduction number 1361-B, sponsored by our health committee chair, Mark Levine, would require the Department of Health and Mental Hygiene to report twice a year on the rate of diabetes-related health problems in New York City and to compile a comprehensive report and recommendations by 2021. I want to Council Member Levine for his work on STATED MEETING 36 spearheading this important piece of legislation, and I want to acknowledge the tireless work of Chris Norwood, the founder and executive director of Health People and the entire Health People team, especially their peer educators. This legislation would not have been possible without her work and their work to raise awareness of diabetes. When I was health committee chair Chris Norwood would not leave me alone about getting this done and I'm glad that her advocacy, is she here today, is she up there, Health People is here in the house. Where's Chris? There's Chris. Chris, I want to thank you for your really, really important work. Next is Introduction 1598-A, sponsored by Council Member Robert Holden, which would require the Department of Health and Mental Hygiene to provide information regarding city services available for the proper disposal of deceased animals and to post information online. And Introduction number 1496-A, sponsored by Council Member Justin Brannan, would require an animal shelter directed by a sheriff or a city marshall executing a warrant of eviction or any order of judgment granting legal possession to retrieve a companion animal from such premises as expeditiously STATED MEETING 37 as possible after receiving such direction. And I want to thank the staff from the health committee who worked on this, Zemanuel Halu, Sarah Liss, and Emily Balking. Next, we'll be voting on a package of legislation aimed at increasing diversity in New York City public schools and ensuring that all children throughout each borough have access to equal education opportunities. New York City prides itself on its diversity but sadly our schools are the most segregated in the United States of America. Equity takes work. Desegregation takes work. Real diversity in our schools takes work. It doesn't happen by magic. And these bills I believe are a major step I into right direction. We still have a tremendous amount of work to do, but I am very proud of this package and what it means for our students and families. And I want to single out the chair of our Education Committee, Chair Treyger, who has been working so hard on this issue, shepherd these bills through the committee, and he has a bill that I'll speak about in a moment. But the first bill is Introduction number 1547-A, sponsored by Council Member Brad Lander, who has been a tireless champion and advocate on these issues, which would require the STATED MEETING 38 New York City Department of Education to expand its current student demographic data reporting and to provide data by grade level. DOE is already required to report on the diversity of students in public schools and its efforts to encourage diversity within schools from grades kindergarten through 12th. The bill also requires DOE to report on a side-by-side comparison of the racial and ethnic demographics of each school or special program with the racial and ethnic demographics of the larger attendant zone and community school district. This will make the existing reporting requirement more robust and allow the City Council, advocates, and others to drill down deeper into the segregation that exists in our schools and the department's efforts to remedy that. Introduction number 1554-B, sponsored by our education chair, Mark Treyger, would mandate the New York City Department of Education to report on the demographics of school staff, including leadership, teaching staff, and other professional and paraprofessional staff. Introduction number 1552-B, sponsored by Council Member Carlina Rivera and myself, would mandate the establishment of district diversity working groups in each community school STATED MEETING 39 district. These working groups would work to facilitate the creation and publishing of public input integration plans in every school district. The working groups would be made up of Department of Education staff, students, parents, teachers, principals, administrators, and community advocates, and each group may also choose to partner with a community-based organization. We also have an education bill and two pieces of housing legislation sponsored by Public Advocate Jumaane Williams that the council will be voting on today. Congratulations, Jumaane. Introduction number 1550- A, sponsored by the Public Advocate, would codify the School Diversity Advisory Group. The SDAG was established in 2017 by the mayor and by the New York City Department of Education as part of their Diversity in New York City Public Schools plan and it was designed to make formal policy recommendations to the mayor and chancellor relating to increasing diversity in our schools. This bill would ensure that the works continues in the future and the membership of the advocacy group will now include appointments from the speaker of the council and a public advocate appointment in addition to the STATED MEETING 40 mayoral appointments that already existed. And I want to thank the staff that worked on this bill with the public advocate, Malcolm Buttehorn, Jane Atwell, and Kalima Johnson. Public Advocate Williams is also sponsoring Introduction number 1716-A, which would require the Department of Housing Preservation and Development to annually report certain information regarding the waiting lists of Mitchell-Lama Housing developments, including the number who were skipped and the number of complaints received about Mitchell- Lama waiting lists, and I want to Audrey Sahn from the staff for working on this bill. And finally the public advocate is sponsoring Introduction number 720-C, which would allow not-for-profit organizations with at least three years of construction-related work force development or training experience to apply to the Department of Buildings for approval as a site safety training provider, and I want to Megan Chen and Austin Brandford from the staff. And I congratulate the public advocate on these three bills that we're voting on today. Next, the council will vote on two additional pieces of legislation related to housing lotteries introduced by council members. Introduction number 564-A, sponsored by Council STATED MEETING 41 Member Mark Treyger, would require HPD to report on housing lottery outcomes, including applicant race or ethnicity and applicant preference category at the citywide and borough-wide levels and on applicant household size and applicant household income at the citywide, borough, and community district levels. And I want to thank from the staff Janon Zilka for working on this, and she worked on the next bill as well, which is Introduction number 550-A, sponsored by Council Member Mark Levine, which would require HPD to report on the housing lottery process, including complaints about housing lotteries, planned improvements to housing lotteries, and housing lottery methodologies. The council will also be voting on a very important piece of legislation aimed at ensuring fair wages for workers. Introduction number 1321-C, sponsored by Council Member Rafael Espinal, would remove the current exemption in the existing prevailing wage law, Local Law 27 of 2012, for affordable housing projects and nonprofit developers at residential projects. Local Law 27 of 2012 requires building service workers to be paid the prevailing wage in buildings where the developer receives at least a million dollars in discrepancy STATED MEETING 42 financial assistance from the city or a city economic development entity. Accordingly, building service workers in most residential projects receiving financial assistance of more than a million dollars for new construction or preservation would be required to pay the prevailing wage. This bill exempts smaller residential projects with fewer than 120 units , certain supportive housing projects, deeply affordable preservation projects, and NYCHA projects financed through the Federal Rental Assistance Demonstration Program. I really, really want to thank 32BJ president Kyle Bragg and also Candace Toliver from 32BJ. Kyle I believe is here with us, where is he, there he is. I want to Kyle and I see David from his team here as well. Because this bill was very complicated. This bill was a bill of us trying to do two things, which is to raise the wages of workers through New York City because we believe everyone should have a pathway to the middle class while at the same time being thoughtful and balanced on exempting projects that were providing supportive housing or deeply affordable housing. And I know that Council Member Espinal worked with 32BJ and the staff here to strike that balance to ensure STATED MEETING 43 that we are not having to make a trade-off or subsidizing potential projects across New York City that are not paying their workers a living wage, a prevailing wage, which allows them to move into the middle class. So I want to him for his work and dedication in getting this legislation passed responsibly and for continuing to fight for fair wages and better working conditions for all New Yorkers and from the staff I want to thank Michelle Lee, Malcolm Buttehorn, and from my team Rob Newman for his work on this, his swan song was this bill. Finally, today the council is voting on a revolutionary package of legislation that will make what some may know as Hart Island and others know as the city's potter's field a more respectful resting place for those who are buried there. Since 1869 Hart Island has been used as New York City's public burial ground. Located off the coast of City Island in the Bronx, many estimations report that there are over one million people buried there. In 2018 alone 1213 people were buried on Hart Island. I believe that how we remember those who came before us says a lot about our moral compass and about who we are as people. The people who have been buried at Hart STATED MEETING 44 Island were in many cases the folks who were most marginalized in life. Many were immigrants with no family here to claim them. Many could not afford funerals. Many were AIDS victims, people who died at the height of the AIDS epidemic, shunned by society and often by their own families. I am happy to say that there has been improved access to Hart Island thanks to the work of advocates who lobbied for those changes. And I specifically want to thank Melinda Hunt, who is with us today, for her tireless advocacy on this. But even with those changes, those visiting Hart Island still feel as though they're visiting a prison when they are going to the island. I visited there December of last year, a little less than a year ago. I went with Council Member Rodriguez, who is sponsoring this bill, and it is a very moving place. There is a section on the southern part of the island separate from all the other plots where people are buried just for people who died of AIDS, and they were buried separate from everyone else, even though once you die you can't give someone HIV and AIDS. But it showed the level of hysteria that was happening at the time. And they are buried in a section with not many markers even showing where they STATED MEETING 45 are. It's the largest, we believe, cemetery in the world for people who have died from HIV and AIDS. So today we are finally taking Hart Island back. A resting place should not be a place that is run by the Department of Corrections. We are transferring the property to the Department of Parks and Recreation. And that is what Introduction number 906-A, sponsored by Council Member Ydanis Rodriguez, who has been a tireless advocate on this, would do, it would transfer jurisdiction of the island from DOC to the Department of Parks and Recreation. Burials would be allowed to continue pursuant to rules and regulations established by the Department of Social Services and by the Department of Parks and Recreation or any other agency designated by the mayor in the case of a disagreement between DSS and DPR. We have another bill from Council Member Rodriguez on this issue, Introduction number 909-B, which would require the Department of Transportation or another agency designated by the mayor to develop a transportation plan for public travel, including ferry service to and from Hart Island. This bill requires consideration of multiple departure locations and factors such as changing conditions and STATED MEETING 46 future uses of Hart Island. The agency would also have to submit a report on its plan and post the report on its website within one year of the bill's effective date. Next, we have Introduction 1580-A, sponsored by Council Member Debbie Rose, which would require a public hearing on public burials to allow the public the opportunity to discuss our public burial laws, rules, regulations, policies, and procedures relating to public burials. Though this hearing the public would be able to, at this hearing the public would be able to recommend changes to these programs and consider the feasibility of alternative programs. This bill would require the Department of Social Services to submit a report summarizing and responding to comments received at a hearing by 2020. And lastly Introduction number 1559-A, sponsored by Council Member Diana Ayala, would require the Department of Social Services to establish an office to provide support and assistance to individuals who have lost a loved one and need information about how, about how, about and helping access public burials, a burial allowance, or a similar program. This office would provide services, including explaining the option of public burials and STATED MEETING 47 assistance in applying for a public burial allowance, and I want to thank the staff who has worked so passionately on this package of bills. I really, really want to thank them and the great job they've done on this. I want to thank Zemanuel Halu, Sarah Liss, Emily Balkin, Chris Santori, ah, Chris Artori, Patrick Mulvihill, and James Digiovanni. And Mr. Public Advocate, that is our very brief short agenda for today, and I want to all the council members for their work in getting these bills to the place where we can vote on them."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 47,
+          "text": "Congratulations to you, and I also, before we move on from speaker time I want to give you as much opportunity as you need to discuss the three exciting bills that you're passing today."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 64,
+          "text": "Amended and coupled on general orders."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 64,
+          "text": "Amended and coupled on general orders."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 64,
+          "text": "Coupled on general orders."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 65,
+          "text": "Coupled on general orders."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 65,
+          "text": "Coupled on general orders."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 65,
+          "text": "Coupled on general orders."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 65,
+          "text": "Amended and coupled on general orders."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 65,
+          "text": "Amended and coupled on general orders."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 65,
+          "text": "I want to give a special shout-out to Emily Balkin from the staff, who 25 STATED MEETING 66 has worked tirelessly on this issue, and amended and coupled on general orders."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 66,
+          "text": "Amended and coupled on general orders."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 66,
+          "text": "Amended and coupled on general orders."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 66,
+          "text": "Amended and coupled on general orders."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 66,
+          "text": "Amended and coupled on general orders."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 66,
+          "text": "Approved with modifications and referred to the City Planning STATED MEETING 67 Commission pursuant to Section 197-D of the New York City Charter."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 67,
+          "text": "Coupled to be filed pursuant to a letter of withdrawal."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 67,
+          "text": "Approved with modifications and referred to the City Planning Commission pursuant to Section 197-D of the New York City Charter."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 67,
+          "text": "Coupled on general orders."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 67,
+          "text": "Coupled on general orders."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 68,
+          "text": "Coupled to be filed pursuant to letter of withdrawal."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 68,
+          "text": "Amended and coupled on general orders."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 68,
+          "text": "Another shout-out to Melinda Hunt. Amended and coupled on general orders."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 68,
+          "text": "Coupled on general orders."
+        },
+        {
+          "speakerKey": "SPEAKER JOHNSON",
+          "transcriptPage": 68,
+          "text": "Coupled on general orders. And at this time I'm asking for a roll call vote on all of the items on today's general order calendar."
+        }
+      ]
+    },
+    {
+      "speakerKey": "UNIDENTIFIED",
+      "displayName": "Unidentified",
+      "role": null,
+      "publicOfficial": false,
+      "classification": "procedural-or-unattributed",
+      "classificationBasis": "No support classification is asserted; the complete attributed turn remains preserved.",
+      "transcriptPages": [
+        24
+      ],
+      "wordCount": 1,
+      "turns": [
+        {
+          "speakerKey": "UNIDENTIFIED",
+          "transcriptPage": 24,
+          "text": "Yes."
+        }
+      ]
+    }
+  ]
+}
