@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-07-26",
-  "source_commit": "2acca50f7acbf2cd0e23708248de09c558d3c5e1",
-  "candidate_fingerprint": "b74dbcaaa33193a06911677f209e3eb55d70f96afe361b1454646ab308cdb011",
+  "source_commit": "27b69086a6c4f4ee0b025dfe8fef04c8b8f9dee4",
+  "candidate_fingerprint": "e02ef866ab95d2eb064a89a37e6abc6ed0d20fc316ceb51d9a69fcb38aebe23a",
   "candidate_file_count": 933,
   "exclusions": [
     "^docs\\/knowledge-bank\\/_generated\\/",

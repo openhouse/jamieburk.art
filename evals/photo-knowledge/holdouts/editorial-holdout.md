@@ -1,96 +1,120 @@
 ---
-candidate_fingerprint: "b74dbcaaa33193a06911677f209e3eb55d70f96afe361b1454646ab308cdb011"
-source_commit: "2acca50f7acbf2cd0e23708248de09c558d3c5e1"
-reviewer: "Independent editorial, accessibility, and hiring-reader photo holdout"
-reviewed_at: "2026-07-28T14:55:57Z"
+candidate_fingerprint: e02ef866ab95d2eb064a89a37e6abc6ed0d20fc316ceb51d9a69fcb38aebe23a
+source_commit: 27b69086a6c4f4ee0b025dfe8fef04c8b8f9dee4
+reviewer: "Independent editorial, accessibility, hiring-reader, privacy, and photo-governance holdout"
+reviewed_at: 2026-07-28T15:31:24Z
 verdict: pass
 independent_read_only: true
 ---
 
-# Independent Editorial, Accessibility, and Hiring-Reader Photo Holdout
+# Independent Photo Holdout
 
 ## Evidence
 
-This is an independent AI evaluation, not a named person's review,
-endorsement, rights determination, consent, or publication authorization. The
-reviewer did not author or modify the candidate and did not inspect an existing
-photo or composite holdout.
+### Exact candidate binding
 
-The reviewer independently reproduced the candidate algorithm declared in
-`scripts/photography/photo-knowledge.mjs`. The result was exactly **933 files**
-with SHA-256
-`b74dbcaaa33193a06911677f209e3eb55d70f96afe361b1454646ab308cdb011`.
-The fingerprint remained unchanged throughout the read-only review.
+I independently reproduced the algorithm in `scripts/photography/photo-knowledge.mjs`: enumerate cached and untracked non-ignored files, apply the declared exclusions, sort paths, and hash each path, NUL separator, file bytes, and final NUL separator.
 
-Read-only deterministic evidence passed:
+- Candidate files: **933**
+- Candidate SHA-256: **e02ef866ab95d2eb064a89a37e6abc6ed0d20fc316ceb51d9a69fcb38aebe23a**
+- Source commit: **27b69086a6c4f4ee0b025dfe8fef04c8b8f9dee4**
+- The independent result matched the stored candidate receipt.
+- The exact fingerprint remained unchanged at the end of review.
 
-- Photo-knowledge canary: 26/26.
-- Layout photography evaluation: 10/10.
-- Layout photography tests: 3/3.
-- Candidate-bound accessibility tests: 8/8.
-- Campaign census tests: 3/3.
-- Generated campaign-photo comparison: 181/181 current records.
+### Branch-history scanner repair
 
-The eight active derivatives form an editorial sequence rather than a
-decorative gallery. The raft hero gives a hiring reader immediate project
-scale while preserving the role-fit headline, selected-work route, resume
-route, and following-content cue. The meeting, production, self-portrait,
-campaign, parade, and material-fieldwork images extend that sequence.
+The repaired branch-history scanner removes UUID-shaped public image basenames only when followed by a recognized image extension, while retaining the standalone UUID check.
 
-Every active entry has distinct alt text, a situated caption, credit, context
-category, and explicit crop position. The shared component uses semantic
-`figure` and `figcaption` markup with stable aspect ratios. Manual visual review
-found no misleading crop, materially inaccurate description, gratuitous
-identification, or caption that converts proximity into sole authorship. The
-eight JPEG derivatives contain no EXIF, XMP, IPTC, or GPS payload.
+An independent in-memory probe confirmed:
 
-Candidate-bound accessibility evidence covers 14 canonical routes at seven
-viewports, producing 98 rows. It reports zero axe violations, overflow,
-clipped or collapsed captions, broken or unlabeled images, failed requests,
-non-success responses, or heading and landmark failures. Lazy-image follow-up
-confirmed that every image loaded after scrolling.
+- A UUID-shaped basename ending in `.jpeg` produced no privacy finding.
+- The same UUID-shaped token used as a standalone identifier produced the expected blocking finding.
+- The complete branch-history public-safety check passed.
 
-Active captions retain collective campaign and outcome credit. The Fair Rent
-sequence explicitly rejects sole-authorship inference, while project copy
-distinguishes Jamie's bounded implementation and organizing contributions from
-coalition work and institutional enactment.
+This is appropriately narrow for the declared repair: an image extension may identify a public web filename, but an unqualified UUID-shaped token remains prohibited.
 
-The campaign census reproduced 82 pages, 529 occurrences, 413 unique public
-image URLs, 181 photo records, 29 matched entries, and 57 local retrieval
-candidates. Every record remains permission-needed, consent-review-needed, and
-on display hold. Public data contains no exact Apple Photos time, People label,
-private path, coordinate, private identifier, or uploaded pixel.
+### Active photography and hiring-reader judgment
 
-The transcript-linked workflow keeps transcript time, Apple capture time,
-timezone uncertainty, private People labels, and `_keep` depth distinct. It
-requires local visual confirmation and treats each only as retrieval or
-prior-curation evidence.
+I inspected all eight active derivatives, their manifest entries, crop positions, and the available desktop and mobile browser evidence.
 
-The intimate-gathering class remains a protected absence, and the child-visible
-Talks Not Raids derivative remains outside the tree and active composition.
-No blocking editorial, accessibility, privacy, or governance flaw was found.
+- The raft hero establishes project scale without presenting Jamie as captain or sole author.
+- Role, product-operations, implementation, selected-work, and resume paths remain immediately legible.
+- The meeting-room and production images support participation and operational labor without replacing evidence with atmosphere.
+- The self-portrait humanizes the About page while retaining a work-focused hierarchy.
+- The Fair Rent sequence moves coherently through listening, production, public action, and field materials.
+- The campaign sequence explicitly rejects sole-authorship implications and preserves collective agency.
+
+The alt text accurately describes visible content without merely repeating captions. Captions supply context and boundaries rather than unsupported identity or outcome claims. Credits are visible and do not contradict the records. I found no materially misleading crop, obscured subject, dignity failure, or hiring-path obstruction.
+
+All eight JPEGs returned no EXIF, XMP, IPTC, or GPS payloads.
+
+### Accessibility and browser evidence
+
+The candidate-bound accessibility receipt matches the current **119-file** public surface. It covers **14 canonical routes** at seven widths, producing **98 complete route/viewport rows**.
+
+The receipt and fail-closed tests report:
+
+- zero axe violations;
+- zero overflow elements;
+- zero clipped or collapsed photo captions;
+- zero broken or unlabeled images;
+- zero failed requests or non-success responses;
+- zero invalid heading or landmark rows; and
+- successful lazy-image follow-up with all images loaded after scrolling.
+
+Manual review of the homepage desktop/mobile, About, and Fair Rent browser captures found readable hierarchy, intact captions, usable calls to action, and no incoherent overlap.
+
+### Deterministic checks
+
+| Check | Result |
+|---|---:|
+| Photo-governance canary | 26/26 pass |
+| Layout photography evaluation | 10/10 pass |
+| Layout tests | 3/3 pass |
+| Accessibility receipt tests | 8/8 pass |
+| Campaign census tests | 3/3 pass |
+| Campaign generated-record comparison | 181/181 exact |
+
+No writer, report generator, or evidence-refresh command was run.
+
+### Campaign census holds
+
+The census reproducibly contains **82 pages, 529 image occurrences, 413 unique public image URLs, 181 photo records, 29 matched entries, and 57 local retrieval candidates**.
+
+All 181 generated records retain:
+
+- `rights_state: permission-needed`;
+- `consent_state: review-needed`;
+- `public_display_status: hold`;
+- `projection.status: hold`;
+- no projection surfaces; and
+- `network_upload: false`.
+
+The public index excludes private identifiers and capture-time fields. Its local-match objects contain only match state and count. Public occurrence, filename matching, or archive custody remains retrieval evidence rather than creator, identity, consent, quality, or publication proof.
+
+### Protected absences and transcript research
+
+The intimate-gathering class remains absent by default. Aesthetic strength and project relevance cannot advance its consent gate.
+
+The child-visible campaign derivative is absent from both the active tree and manifest. Any future occurrence remains subject to creator, rights-holder, represented-person or guardian, dignity, caption, crop, destination, history, and cache review.
+
+The transcript-linked workflow correctly requires a named, hash-bound public event; distinguishes recording and capture uncertainty; requires local pixel confirmation; preserves earlier selection decisions and alternatives; and treats temporal proximity, private face-association metadata, and nested selection depth only as retrieval or prior-curation evidence.
 
 ## Open Human Gates
 
-- Jamie's approval of the exact final edit, occurrence, destination,
-  production candidate, deployment, and indexing.
-- Exact creator and rights-holder confirmation for each active derivative,
-  including credit wording and permitted delivery surface.
+- Jamie's approval of the exact final candidate, editorial composition, and occurrence.
+- Creator and rights-holder confirmation for each exact derivative and use.
+- Accurate creator, project, and collective credit.
 - Represented-person dignity, safety, context, and consent review.
-- Guardian or appropriate represented-person authority for any future
-  child-visible occurrence.
-- Exact caption, credit, crop, mobile crop, route, and destination review.
-- Collective and collaborator review wherever placement could reallocate
-  shared authorship or campaign outcomes.
-- Production configuration, deployment, domain, TLS, smoke, rollback, and
-  explicit indexing approval.
+- Guardian or appropriate represented-person authority for any child-visible use.
+- Exact caption, crop, responsive crop, route, and destination approval.
+- Production configuration and final production approval.
+- Deployment, domain, TLS, smoke-test, and rollback verification.
+- Explicit indexing approval.
+- Fresh fingerprint, receipts, and independent review after any candidate-affecting change.
 
 ## Recommendation
 
-Pass this exact candidate as a pre-launch editorial, accessibility,
-hiring-reader, privacy, and governance holdout.
+**Pass this exact candidate as a pre-launch independent holdout.** The required commit, 933-file population, and SHA-256 match exactly, and I found no blocking editorial, accessibility, hiring-reader, privacy, or photo-governance flaw.
 
-This pass is not rights, consent, dignity, publication, production,
-deployment, or indexing clearance. Any candidate-affecting change requires a
-newly bound fingerprint, accessibility receipt, deterministic evidence, and
-independent review.
+This verdict does not grant rights, consent, dignity clearance, publication authority, production approval, deployment approval, or indexing approval. Those human gates remain open and controlling.
