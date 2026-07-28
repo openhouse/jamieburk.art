@@ -58,14 +58,6 @@
       "component": "WorkCard"
     },
     {
-      "context": "home.work-card",
-      "occurrenceId": "projection.photo.layout-d.home-work-card.sunday-dinner-preparation",
-      "assetId": "asset.photo.sunday-dinner.preparation",
-      "derivativeId": "derivative.photo.sunday-dinner-preparation.layout-d.v1",
-      "route": "/",
-      "component": "WorkCard"
-    },
-    {
       "context": "about.method",
       "occurrenceId": "projection.photo.layout-d.about.sunday-dinner-preparation",
       "assetId": "asset.photo.sunday-dinner.preparation",

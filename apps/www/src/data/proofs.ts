@@ -108,7 +108,7 @@ export const proofClaims: ProofClaim[] = [
     publicWording:
       "Contributed to a period of 2x revenue growth for a legacy e-commerce business.",
     shortWording:
-      "Jamie's e-commerce and operations improvements contributed to 2x revenue growth",
+      "At Harry J. Epstein Company, Jamie's e-commerce and operations improvements contributed to 2x revenue growth",
     detailedPublicWording:
       "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
     sourceBasis: "Approved resume language and public-safe firsthand operational context.",

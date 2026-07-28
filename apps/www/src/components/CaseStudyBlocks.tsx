@@ -43,7 +43,7 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
 
 export function ArtifactList({ item }: { item: WorkMeta }) {
   return (
-    <section aria-labelledby="artifact-list">
+    <section aria-labelledby="artifact-list" id="artifacts">
       <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-list">
         Primary artifacts
       </h2>
@@ -84,6 +84,7 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
                         : "aspect-[3/2] w-full object-cover object-top"
                     }
                     height={artifact.media.height ?? 800}
+                    loading="eager"
                     sizes="(min-width: 768px) 66vw, 100vw"
                     src={artifact.media.src}
                     width={artifact.media.width ?? 1200}
@@ -158,7 +159,7 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
         </p>
       ) : null}
       {item.careNote || item.publicSafety?.note ? (
-        <details className="mt-4 max-w-4xl border-l-4 border-jb-ochre bg-jb-lemon/20 px-4 py-3 text-sm text-jb-ink/76">
+        <details className="mt-4 max-w-4xl rounded-lg border border-jb-ochre/50 bg-jb-lemon/20 px-4 py-3 text-sm text-jb-ink/76">
           <summary className="cursor-pointer font-semibold text-jb-blue">
             Claim and care limits
           </summary>
@@ -237,7 +238,7 @@ export function SourceLayer({ item }: { item: WorkMeta }) {
 export function CreditsList({ item }: { item: WorkMeta }) {
   if (!item.credits?.length) return null;
   return (
-    <section aria-labelledby="credits-list">
+    <section aria-labelledby="credits-list" id="credits">
       <h2 className="text-2xl font-semibold text-jb-ink" id="credits-list">
         Credits
       </h2>

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-28T09:49:38-04:00",
   "sourceCommit": "13b39285ea8011bec67720dab1ddf5dffc5a8120",
-  "sourceFingerprint": "bf4e0f2465b562890cb0a7028281df6e1835008f05e040fac156070130090a5f",
+  "sourceFingerprint": "8ba9415aa9e920024d6ddf3ff3ca316f9be574504d1077b2662eaaada7acd978",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -1358,12 +1358,12 @@
       "path": "docs/knowledge-bank/projections/photography/layout-d-home-work-card-sunday-dinner-preparation.md",
       "title": "Layout D homepage Sunday Dinner work-card occurrence",
       "kind": "projection",
-      "status": "maintained",
+      "status": "retired",
       "visibility": "public-safe",
       "sensitivity": "moderate",
-      "summary": "Homepage WorkCard occurrence for the Sunday Dinner preparation photograph.",
+      "summary": "Retired homepage WorkCard occurrence preserved after the pre-launch edition reduced the homepage to three lead projects.",
       "aliases": [],
-      "lastReviewed": "2026-07-26",
+      "lastReviewed": "2026-07-28",
       "reviewBy": "2026-08-26"
     },
     {
@@ -3206,14 +3206,6 @@
       "to": "projection.photo.layout-d.home-work-card.fair-rent-rally",
       "source": "frontmatter",
       "href": "layout-d-home-work-card-fair-rent-rally.md",
-      "context": null
-    },
-    {
-      "from": "edition.layout-d.photo-knowledge.2026-07",
-      "type": "related_to",
-      "to": "projection.photo.layout-d.home-work-card.sunday-dinner-preparation",
-      "source": "frontmatter",
-      "href": "layout-d-home-work-card-sunday-dinner-preparation.md",
       "context": null
     },
     {
@@ -10188,19 +10180,10 @@
     {
       "fromPath": "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
       "from": "edition.layout-d.photo-knowledge.2026-07",
-      "toPath": "docs/knowledge-bank/projections/photography/layout-d-home-work-card-sunday-dinner-preparation.md",
-      "to": "projection.photo.layout-d.home-work-card.sunday-dinner-preparation",
-      "fragment": null,
-      "line": 22,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/projections/photography/layout-d-portfolio-edition.md",
-      "from": "edition.layout-d.photo-knowledge.2026-07",
       "toPath": "docs/knowledge-bank/projections/photography/layout-d-about-sunday-dinner-preparation.md",
       "to": "projection.photo.layout-d.about.sunday-dinner-preparation",
       "fragment": null,
-      "line": 23,
+      "line": 22,
       "kind": "link"
     },
     {
@@ -10209,7 +10192,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-d-work-index-nightlife-town-hall.md",
       "to": "projection.photo.layout-d.work-index.nightlife-town-hall",
       "fragment": null,
-      "line": 24,
+      "line": 23,
       "kind": "link"
     },
     {
@@ -10218,7 +10201,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-d-work-index-fair-rent-rally.md",
       "to": "projection.photo.layout-d.work-index.fair-rent-rally",
       "fragment": null,
-      "line": 25,
+      "line": 24,
       "kind": "link"
     },
     {
@@ -10227,7 +10210,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-d-work-fair-rent-rally.md",
       "to": "projection.photo.layout-d.work.fair-rent-rally",
       "fragment": null,
-      "line": 26,
+      "line": 25,
       "kind": "link"
     },
     {
@@ -10236,7 +10219,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-d-work-index-sunday-dinner-preparation.md",
       "to": "projection.photo.layout-d.work-index.sunday-dinner-preparation",
       "fragment": null,
-      "line": 27,
+      "line": 26,
       "kind": "link"
     },
     {
@@ -10245,7 +10228,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-d-work-index-kc-town-hall-collaborator.md",
       "to": "projection.photo.layout-d.work-index.kc-town-hall-collaborator",
       "fragment": null,
-      "line": 28,
+      "line": 27,
       "kind": "link"
     },
     {
@@ -10254,7 +10237,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-d-work-sunday-dinner-preparation.md",
       "to": "projection.photo.layout-d.work.sunday-dinner-preparation",
       "fragment": null,
-      "line": 29,
+      "line": 28,
       "kind": "link"
     },
     {
@@ -10263,7 +10246,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-d-work-kc-town-hall-collaborator.md",
       "to": "projection.photo.layout-d.work.kc-town-hall-collaborator",
       "fragment": null,
-      "line": 30,
+      "line": 29,
       "kind": "link"
     },
     {
@@ -10272,7 +10255,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-d-resume-protected-absence.md",
       "to": "projection.photo.layout-d.resume.protected-absence",
       "fragment": null,
-      "line": 31,
+      "line": 30,
       "kind": "link"
     },
     {

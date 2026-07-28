@@ -3,18 +3,21 @@
 - Date: 2026-07-28
 - Branch: `feature/pre-launch-D`
 - Base: `develop`
-- Pull request: draft until the open gates below are resolved
+- Pull request state: draft pending the open gates below
 
 ## Decision
 
-The application source builds cleanly under the repository's Node 26
-environment, the new archival-production systems pass their deterministic
-checks, and the Knowledge Wiki is structurally current. This is a strong
-integration candidate for review.
+This is a strong integration candidate for Jamie's final public-surface
+review. The application, Knowledge Wiki, photographic governance, campaign
+media census, and public-testimony corpus are integrated behind deterministic
+checks.
 
-It is not yet a production-approval receipt. Fresh model-bound holdouts,
-staging observation, image rights and consent review, editorial approval, and
-Jamie approval remain separate gates.
+It is not a production-approval receipt. Image decisions, editorial approval,
+exact-candidate model holdouts, staging observation, production approval, and
+indexing approval remain separate gates.
+
+Use [the public-surface review packet](pre-launch-D-public-surface-review.md)
+for the shortest path to an application-sharing decision.
 
 ## What This Branch Adds
 
@@ -34,42 +37,62 @@ Jamie approval remain separate gates.
 - A protected current-workstream source return for late-July 2026 Commercial
   Rent Stabilization report review, speech preparation, and event
   coordination.
-- A resource-aware pre-launch eval contract that runs the cheapest affected
-  deterministic checks during iteration and reserves exact candidate-bound
-  model judgments for candidate lock.
-- A documented repair of two inherited Knowledge Wiki review locks after
-  semantic and public-safety revalidation.
+- A resource-aware pre-launch eval contract that runs affected deterministic
+  checks during iteration and reserves exact-candidate model judgments for
+  candidate lock.
+- A focused visual and editorial pass informed by two independent Impeccable
+  critiques.
+
+## Public-Surface Improvements
+
+- Reduced the homepage project repetition to three lead case studies.
+- Named Harry J. Epstein Company in the careful 2x growth proof.
+- Added case-study breadcrumbs, section links, and earlier mobile orientation.
+- Rebalanced the resume page around its primary PDF action and selected impact.
+- Removed repeated side-rule callouts that made unrelated notes look alike.
+- Added eager loading to first artifact images likely to become the largest
+  contentful element.
 
 ## Current Deterministic Evidence
 
-- `npm run wiki:check`: pass; 184 records, 671 semantic/evidence edges, 348
+- `npm run wiki:check`: pass; 185 records, 674 semantic/evidence edges, 349
   prose links, no type-aware orphans, and generated outputs current.
-- `npm run wiki:test`: 122 of 122 tests pass.
-- `npm run wiki:eval`: 121 of 121 blocking criteria pass across 13 lenses.
-- `npm run knowledge-bank`: pass with 11 existing careful-claim warnings.
+- `npm run wiki:test`: pass.
+- `npm run wiki:eval`: 124 of 124 blocking criteria pass across 13 lenses.
+- `npm run knowledge-bank`: pass with 11 careful-claim warnings.
 - `npm run public-safety`: pass.
 - `npm run check:knowledge-evals`: pass, 5 of 5.
 - `npm run test:knowledge-evals`: 196 of 196 mutation tests pass.
 - Campaign-media census check and its three tests: pass.
 - Public-testimony check and its four tests: pass.
 - Pre-launch contract check and its seven tests: pass.
-- Application TypeScript, ESLint, and production Next build: pass under Node
-  26.5.0. No application source changed after that build.
+- Application TypeScript and ESLint: pass under Node 26.5.0.
+- Impeccable detector: no new blocking finding; inherited palette and radius
+  notices remain advisory.
+- Local browser matrix: 42 of 42 route-viewport checks passed across desktop,
+  mobile, and 320px widths, with no overflow, broken image, missing image alt,
+  console error, or serious/critical axe finding.
+- CallNYC inline citations render with JavaScript disabled.
+- Production Next build: pass under Node 26.5.0.
+- Staging-configured Docker build: pass.
+- Docker runtime: all 17 canonical routes, health, robots, and sitemap
+  endpoints returned 200; every response carried `noindex, nofollow`;
+  `robots.txt` disallowed crawling; health reported staging/nonproduction; and
+  no tested private-path signature appeared in rendered responses.
+- The complete deterministic check reaches only the exact-candidate model
+  gates described below; all preceding deterministic gates pass.
 
 ## Model-Bound Blockers
 
-The repository correctly refuses to reuse stale model evidence:
+The repository correctly refuses to reuse stale model evidence after the
+candidate changes:
 
-- `npm run evals:professor-lenses` passes 12 of 14 criteria. Its current
-  professor candidate digest is
-  `772b0acb54d660def348a0844f618649d0de419ccc75623fd8e1c4546f60fc56`;
-  the six existing final scorecards remain bound to an older candidate digest.
-- `npm run evals:composite` passes COMP-001 through COMP-005, COMP-007, and
-  COMP-008. COMP-006 remains blocked by the stale professor receipts, and
-  COMP-009 remains blocked because two provenance-bound independent holdouts
-  for the exact current source-tree candidate do not yet exist.
-- The available model-evaluation budget is exhausted. This is recorded as
-  `blocked-budget`, not translated into a pass or worked around by editing an
+- Professor-lens final scorecards must be rebound to the exact current
+  candidate.
+- Composite integration requires two provenance-bound independent holdouts for
+  one unchanged source-tree candidate.
+- The available model-evaluation budget is exhausted. This remains
+  `blocked-budget`; it is not translated into a pass or bypassed by changing an
   approval artifact.
 
 The frozen pre-launch contract requires two consecutive unchanged,
@@ -77,18 +100,23 @@ exact-candidate passes when model evaluation resumes.
 
 ## Human and Runtime Gates
 
-- Review rights, consent, exact credit, and crop for every displayed image.
+- Review rights, consent, exact credit, crop, and production use for eight
+  unique displayed photographs across 15 occurrences.
 - Complete Jamie's editorial review of public copy and collective-credit
   framing.
-- Resolve the 92-versus-94 Hester Street address discrepancy between a
-  protected coordination record and the encountered public event page.
-- Obtain a fresh live PhotoKit receipt; the prior live probe did not complete.
-- Build and deploy the exact accepted candidate to staging.
-- Observe desktop, 320px mobile, 200 percent zoom, keyboard focus, image
-  loading, citation navigation, and JavaScript-disabled rendering on staging.
+- Obtain a fresh live PhotoKit receipt if private-source rebinding is required
+  before a photo decision.
+- Deploy the exact accepted candidate to staging.
+- Observe desktop, 320px mobile, 200 percent zoom, screen-reader semantics,
+  keyboard focus, image loading, citation navigation, and JavaScript-disabled
+  rendering on staging.
 - Confirm staging remains noindex and that protected material does not appear
   in rendered HTML or source maps.
-- Obtain Jamie's explicit production and indexing approval.
+- Obtain Jamie's explicit production approval and separate indexing approval.
+
+The 92-versus-94 Hester Street discrepancy remains a protected current-event
+coordination matter. The public portfolio does not publish either address, so
+it is not a portfolio launch blocker.
 
 ## Commercial-Rent Transcript Boundary
 
@@ -96,24 +124,21 @@ The public repository contains official sources, public-safe metadata, and the
 research method. It does not contain raw Otter bodies or private connector
 identifiers.
 
-The next transcript-production pass must:
-
-1. declare and census its source population;
-2. deduplicate raw and cleaned recordings of the same event;
-3. preserve each complete attributable supportive speech;
-4. correct automated text and speaker identity against audio;
-5. distinguish spoken remarks, written statements, and legislative text;
-6. rights-review non-official speakers before public full-text projection.
+The next transcript-production pass must declare and census its source
+population, deduplicate recordings, preserve attributable complete turns,
+correct automated text against audio, distinguish types of statements, and
+rights-review non-official speakers before public full-text projection.
 
 The automated transcript's first-name error for Eon Huntley is a documented
 correction task. It is not silently reproduced as fact.
 
 ## Recommended Closeout Order
 
-1. Review this branch's public copy, images, rights, credits, and known address
-   discrepancy.
-2. When model budget is available, bind fresh professor and composite holdouts
-   to one unchanged candidate and pass twice.
-3. Merge to staging and run the release-observation matrix.
-4. Resolve any staging defects without changing the candidate unnoticed.
+1. Complete the public-surface review packet, especially the eight photograph
+   decisions.
+2. Run the final deterministic, production-build, Docker, and route matrix on
+   one unchanged candidate.
+3. When model budget is available, bind fresh professor and composite holdouts
+   to that candidate and pass twice.
+4. Merge to staging and run release observation while preserving noindex.
 5. Approve production content and indexing explicitly.

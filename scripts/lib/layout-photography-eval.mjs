@@ -112,8 +112,12 @@ export function evaluateLayoutPhotography(options = {}) {
   const home = source("apps/www/src/app/page.tsx");
   const work = source("apps/www/src/app/work/page.tsx");
   const about = source("apps/www/src/app/about/page.tsx");
+  const resume = source("apps/www/src/app/resume/page.tsx");
   const globals = source("apps/www/src/app/globals.css");
   const tokens = source("apps/www/src/styles/tokens.css");
+  const resumeAbsence = source(
+    "docs/knowledge-bank/decisions/photography/layout-d-resume-protected-absence.md"
+  );
   const layoutStudy = source(
     "docs/knowledge-bank/notebooks/photography/layout-study-d.md"
   );
@@ -247,6 +251,15 @@ export function evaluateLayoutPhotography(options = {}) {
     /image-by-image rights and credit review/i.test(layoutStudy) &&
     /production observation after deployment/i.test(layoutStudy);
 
+  const resumeProtectedAbsenceIsPreserved =
+    !resume.includes('from "next/image"') &&
+    !resume.includes("<Image") &&
+    resume.includes("site.resumePath") &&
+    resume.includes("Download resume PDF") &&
+    resumeAbsence.includes("Keep the Layout D resume route photograph-free") &&
+    resumeAbsence.includes("leave the current interface image-free") &&
+    resumeAbsence.includes("projection:\n  status: hold\n  surfaces: []");
+
   const privateArchiveCoordinatesAreAbsent =
     suite.source_files.every((file) => !privatePattern.test(source(file))) &&
     !privatePattern.test(JSON.stringify(suite));
@@ -275,6 +288,8 @@ export function evaluateLayoutPhotography(options = {}) {
       projectCardsRemainScannable,
     photo_evidence_boundary_is_visible:
       photoEvidenceBoundaryIsVisible,
+    resume_protected_absence_is_preserved:
+      resumeProtectedAbsenceIsPreserved,
     layout_study_is_governed:
       layoutStudyIsGoverned,
     private_archive_coordinates_are_absent:

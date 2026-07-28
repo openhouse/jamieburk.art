@@ -65,7 +65,7 @@ export default function AboutPage() {
         </figure>
       </div>
       <div className="jb-reading">
-        <p className="mt-8 border-l-4 border-jb-ochre bg-jb-warm px-4 py-3 text-sm leading-6 text-jb-ink/72">
+        <p className="mt-8 rounded-lg border border-jb-ochre/50 bg-jb-warm px-4 py-3 text-sm leading-6 text-jb-ink/72">
           <strong className="text-jb-ink">Image boundary:</strong>{" "}
           {photoDisplayBoundary}
         </p>
@@ -252,7 +252,7 @@ export default function AboutPage() {
             </article>
           </div>
         </section>
-        <div className="mt-10 border-l-4 border-jb-blue bg-jb-sky/25 p-5">
+        <div className="mt-10 rounded-lg border border-jb-blue/30 bg-jb-sky/25 p-5">
           <p className="leading-8 text-jb-ink/78">
             I value public benefit, accessibility, source-backed memory, careful
             claims, collective credit, consent, privacy, repair, and

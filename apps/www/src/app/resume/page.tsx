@@ -15,7 +15,7 @@ export const metadata: Metadata = createMetadata({
 export default function ResumePage() {
   return (
     <div className="jb-frame py-12">
-      <div className="grid gap-10 lg:grid-cols-[0.68fr_0.32fr]">
+      <div className="max-w-5xl">
         <div className="jb-reading">
           <h1 className="text-5xl font-bold text-jb-ink">Resume</h1>
           <p className="mt-4 text-2xl font-semibold text-jb-green">
@@ -40,9 +40,9 @@ export default function ResumePage() {
             artifact; email is available on the contact page.
           </p>
         </div>
-        <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
+        <section className="mt-12 border-y border-jb-ink/12 py-8">
           <h2 className="text-2xl font-semibold text-jb-ink">Selected impact</h2>
-          <ul className="mt-5 space-y-4 text-jb-ink/76">
+          <ul className="mt-6 grid gap-x-10 gap-y-5 text-jb-ink/76 md:grid-cols-2">
             {resumeProofHighlights.map((proof) => (
               <li className="flex gap-3" key={proof.id}>
                 <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
@@ -60,7 +60,7 @@ export default function ResumePage() {
               </li>
             ))}
           </ul>
-        </aside>
+        </section>
       </div>
     </div>
   );

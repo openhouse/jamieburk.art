@@ -77,7 +77,7 @@ export default function WorkPage() {
             return (
               <section key={group}>
                 <h2 className="text-3xl font-semibold text-jb-ink">{group}</h2>
-                <div className="mt-5 border-l-4 border-jb-green bg-jb-warm p-6">
+                <div className="mt-5 rounded-lg border border-jb-green/30 bg-jb-warm p-6">
                   <h3 className="text-2xl font-semibold text-jb-ink">
                     Source-Backed Team Memory / Noting.us
                   </h3>

@@ -68,9 +68,11 @@
     "apps/www/src/app/page.tsx",
     "apps/www/src/app/work/page.tsx",
     "apps/www/src/app/about/page.tsx",
+    "apps/www/src/app/resume/page.tsx",
     "apps/www/src/app/globals.css",
     "apps/www/src/styles/tokens.css",
     "docs/knowledge-bank/notebooks/photography/layout-study-d.md",
+    "docs/knowledge-bank/decisions/photography/layout-d-resume-protected-absence.md",
     "docs/knowledge-bank/projections/photography/layout-d-home-east-river.md"
   ],
   "public_projection_files": [
@@ -90,6 +92,7 @@
     "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
     "apps/www/src/app/layout.tsx",
     "apps/www/src/app/page.tsx",
+    "apps/www/src/app/resume/page.tsx",
     "apps/www/src/app/work/page.tsx",
     "apps/www/src/app/work/technical-operations/page.tsx",
     "apps/www/src/components/CapabilityGrid.tsx",
@@ -116,6 +119,7 @@
     "photography_is_responsive_and_non_decorative",
     "project_cards_remain_scannable",
     "photo_evidence_boundary_is_visible",
+    "resume_protected_absence_is_preserved",
     "layout_study_is_governed",
     "private_archive_coordinates_are_absent",
     "manual_publication_gates_remain_open"

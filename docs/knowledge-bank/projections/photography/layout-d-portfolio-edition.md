@@ -25,7 +25,6 @@ occurrences:
   - projection.photo.layout-d.home.kc-town-hall-collaborator
   - projection.photo.layout-d.home.sunday-dinner-preparation
   - projection.photo.layout-d.home-work-card.fair-rent-rally
-  - projection.photo.layout-d.home-work-card.sunday-dinner-preparation
   - projection.photo.layout-d.about.sunday-dinner-preparation
   - projection.photo.layout-d.work-index.nightlife-town-hall
   - projection.photo.layout-d.work-index.fair-rent-rally
@@ -76,9 +75,6 @@ relations:
     target: projection.photo.layout-d.home-work-card.fair-rent-rally
     href: layout-d-home-work-card-fair-rent-rally.md
   - type: related_to
-    target: projection.photo.layout-d.home-work-card.sunday-dinner-preparation
-    href: layout-d-home-work-card-sunday-dinner-preparation.md
-  - type: related_to
     target: projection.photo.layout-d.about.sunday-dinner-preparation
     href: layout-d-about-sunday-dinner-preparation.md
   - type: related_to
@@ -121,7 +117,6 @@ commit hash.
 - [Homepage KC Town Hall collaborator occurrence](layout-d-home-kc-town-hall-collaborator.md)
 - [Homepage Sunday Dinner preparation occurrence](layout-d-home-sunday-dinner-preparation.md)
 - [Homepage Fair Rent work-card occurrence](layout-d-home-work-card-fair-rent-rally.md)
-- [Homepage Sunday Dinner work-card occurrence](layout-d-home-work-card-sunday-dinner-preparation.md)
 - [About-page Sunday Dinner preparation occurrence](layout-d-about-sunday-dinner-preparation.md)
 - [Work-index Night Mayor town hall occurrence](layout-d-work-index-nightlife-town-hall.md)
 - [Work-index Fair Rent rally occurrence](layout-d-work-index-fair-rent-rally.md)

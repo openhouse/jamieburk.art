@@ -3,14 +3,14 @@ id: projection.photo.layout-d.home-work-card.sunday-dinner-preparation
 title: Layout D homepage Sunday Dinner work-card occurrence
 kind: projection
 projection_type: photo-occurrence
-status: maintained
+status: retired
 visibility: public-safe
 sensitivity: moderate
-last_reviewed: 2026-07-26
+last_reviewed: 2026-07-28
 review_by: 2026-08-26
 canonical_path: docs/knowledge-bank/projections/photography/layout-d-home-work-card-sunday-dinner-preparation.md
-summary: Homepage WorkCard occurrence for the Sunday Dinner preparation photograph.
-projection_status: pending
+summary: Retired homepage WorkCard occurrence preserved after the pre-launch edition reduced the homepage to three lead projects.
+projection_status: deprecated
 portfolio_edition: edition.layout-d.photo-knowledge.2026-07
 asset: asset.photo.sunday-dinner.preparation
 derivative: derivative.photo.sunday-dinner-preparation.layout-d.v1
@@ -41,5 +41,13 @@ relations:
 
 # Layout D Homepage Sunday Dinner Work-Card Occurrence
 
-This occurrence makes hospitality visible as work without turning one domestic
+This occurrence made hospitality visible as work without turning one domestic
 frame into evidence of attendance, consent, or participant outcomes.
+
+## Retirement
+
+The pre-launch edition reduced the homepage to three lead projects. The Sunday
+Dinner work card remains available on the complete work index, and the
+photograph remains governed on the homepage scene, About page, work index, and
+case study. Retiring this occurrence changes composition only; it does not
+rewrite the asset record, its rights state, or its other occurrences.

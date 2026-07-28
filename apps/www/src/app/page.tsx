@@ -13,6 +13,8 @@ import {
 } from "@/data/photography";
 import { featuredWork } from "@/data/work";
 
+const leadWork = featuredWork.slice(0, 3);
+
 const startHereLinks = [
   {
     href: "/work/technical-operations",
@@ -77,20 +79,20 @@ export default function HomePage() {
           <div className="jb-reading">
             <p className="jb-label text-sm text-jb-blue">Selected systems</p>
             <h2 className="mt-3 text-3xl font-bold text-jb-ink">
-              Proof across operating, civic, and community systems
+              Three lead projects
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: ambiguous, high-context
-              situations becoming usable systems, public-facing tools,
-              documentation, decision trails, and durable handoffs.
+              Begin with business operations, coalition infrastructure, and
+              resident-facing civic technology. The full work index carries the
+              broader record.
             </p>
           </div>
           <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
             View all work
           </Link>
         </div>
-        <div className="mt-8 grid gap-5 lg:grid-cols-2">
-          {featuredWork.map((item) => (
+        <div className="mt-8 grid gap-5 lg:grid-cols-3">
+          {leadWork.map((item) => (
             <WorkCard
               item={item}
               key={item.slug}

@@ -141,6 +141,19 @@ test("project cards cannot return to miniature case studies", () => {
   assert.equal(evaluation.checks.project_cards_remain_scannable, false);
 });
 
+test("the resume route preserves its governed photographic absence", () => {
+  const file = "apps/www/src/app/resume/page.tsx";
+  const evaluation = evaluateLayoutPhotography({
+    sourceOverrides: {
+      [file]: `${source(file)}\n{/* <Image alt="Decorative portrait" /> */}\n`
+    }
+  });
+  assert.equal(
+    evaluation.checks.resume_protected_absence_is_preserved,
+    false
+  );
+});
+
 test("rights and consent review remain human gates", () => {
   const mutated = suite();
   mutated.manual_gates.image_by_image_rights_review = "passed";

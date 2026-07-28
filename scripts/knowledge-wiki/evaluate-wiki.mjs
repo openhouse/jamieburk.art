@@ -165,7 +165,12 @@ const checks = {
   ),
   pilot_reachable:
     result.graph.nodes.length >= 14 &&
-    result.graph.nodes.every((node) => result.reachable.has(node.id) || ["source", "asset", "correction"].includes(node.kind)),
+    result.graph.nodes.every(
+      (node) =>
+        result.reachable.has(node.id) ||
+        ["source", "asset", "correction"].includes(node.kind) ||
+        ["archived", "retired"].includes(node.status)
+    ),
   type_aware_orphans:
     result.health.diagnostics.orphanCount === 0 &&
     !result.health.orphans.some((item) => ["source", "asset", "correction"].includes(item.kind)),
