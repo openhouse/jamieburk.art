@@ -46,10 +46,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     (match) => match[1]
   );
   const expectedSources = [
-    "/images/field-notes/jamie-east-river.webp",
-    "/images/field-notes/raft-riverboat.webp",
-    "/images/field-notes/paper-trimming.webp",
-    "/images/field-notes/printed-editions.webp"
+    "/images/field-notes/jamie-east-river.webp"
   ];
   if (JSON.stringify(sources.sort()) !== JSON.stringify(expectedSources.sort())) {
     fail("minimal-authorized-field", "The public field must contain exactly the four reviewed derivatives.");
@@ -57,18 +54,18 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
 
   for (const field of ["id", "width", "height", "alt", "caption", "credit", "placements", "publicationStatus", "publicUseBoundary"]) {
     const count = [...manifest.matchAll(new RegExp(`\\b${field}:`, "g"))].length;
-    if (count !== 5) {
+    if (count !== 2) {
       fail("manifest-bound-publication", `Manifest field ${field} is missing from one or more photos.`);
     }
   }
-  if ([...manifest.matchAll(/publicationStatus: "jamie-authorized"/g)].length < 4) {
+  if ([...manifest.matchAll(/publicationStatus: "jamie-authorized"/g)].length !== 2) {
     fail("manifest-bound-publication", "Every photo must retain the Jamie-authorized publication status.");
   }
 
   const publicImageRoot = path.join(root, "apps/www/public/images/field-notes");
   const publicImages = walkFiles(publicImageRoot).sort();
-  if (publicImages.length !== 4 || publicImages.some((file) => !file.endsWith(".webp"))) {
-    fail("minimal-authorized-field", "The field-notes directory must contain only four WebP derivatives.");
+  if (publicImages.length !== 1 || publicImages.some((file) => !file.endsWith(".webp"))) {
+    fail("minimal-authorized-field", "The field-notes directory must contain only the fully bound East River WebP derivative.");
   }
   for (const relativeImagePath of publicImages) {
     const bytes = readFileSync(path.join(publicImageRoot, relativeImagePath));
@@ -102,11 +99,9 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   if (!hero.includes("portfolioPhotos.eastRiver") || !hero.includes("fill") || /rounded|shadow/.test(hero)) {
     fail("editorial-not-decorative", "The home photograph must remain full-bleed, unframed, and manifest-bound.");
   }
-  if (!about.includes("portfolioPhotos.raftRiverboat")) {
-    fail("editorial-not-decorative", "About must retain the long-practice raft photograph.");
-  }
-  if (!colophon.includes("portfolioPhotos.paperTrimming") || !colophon.includes("portfolioPhotos.printedEditions")) {
-    fail("editorial-not-decorative", "Colophon must retain the two-image material-practice sequence.");
+  if (/FieldPhoto|portfolioPhotos|\/images\/field-notes\//.test(about) ||
+      /FieldPhoto|portfolioPhotos|\/images\/field-notes\//.test(colophon)) {
+    fail("editorial-not-decorative", "About and Colophon must remain text-led until additional images complete exact rights and credit review.");
   }
 
   for (const route of [
@@ -130,8 +125,8 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   if (!fieldPhoto.includes('from "next/image"') || !fieldPhoto.includes("sizes={sizes}") || !fieldPhoto.includes("photo.alt")) {
     fail("responsive-image-contract", "Field photos must retain Next Image, responsive sizes, and manifest alt text.");
   }
-  if (!globalCss.includes("100svh") || !about.includes("aspect-[16/9]") || !colophon.includes("aspect-[4/5]")) {
-    fail("responsive-image-contract", "The stable hero and editorial image aspect-ratio contracts are incomplete.");
+  if (!globalCss.includes("100svh")) {
+    fail("responsive-image-contract", "The stable viewport-bounded hero contract is incomplete.");
   }
 
   const design = readText("DESIGN.md");

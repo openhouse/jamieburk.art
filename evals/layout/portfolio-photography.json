@@ -11,7 +11,7 @@
     {
       "id": "minimal-authorized-field",
       "blocking": true,
-      "criterion": "The first layout uses only the four Jamie-authorized, low-exposure derivatives selected for home, about, and colophon."
+      "criterion": "The pre-launch layout uses only the fully bound, credited, Jamie-authorized East River derivative; unresolved archival images remain outside the public bundle."
     },
     {
       "id": "metadata-and-locator-safety",
@@ -21,7 +21,7 @@
     {
       "id": "editorial-not-decorative",
       "blocking": true,
-      "criterion": "The home photograph is full-bleed and unframed; About and Colophon images have factual visible captions and intentional page roles."
+      "criterion": "The home photograph is full-bleed, unframed, credited, and editorially specific; About and Colophon remain text-led until additional images complete creator, credit, rights, caption, crop, and destination review."
     },
     {
       "id": "deliberate-absence",

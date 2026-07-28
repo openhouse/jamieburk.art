@@ -1,8 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { Claim } from "@/components/citations/Claim";
 import { ContactCTA } from "@/components/ContactCTA";
-import { FieldPhoto } from "@/components/FieldPhoto";
-import { portfolioPhotos } from "@/data/photography";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -46,14 +45,6 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <FieldPhoto
-        className="mt-14"
-        imageClassName="aspect-[16/9] object-cover"
-        photo={portfolioPhotos.raftRiverboat}
-        priority
-        sizes="(max-width: 1280px) 100vw, 1240px"
-      />
-
       <div className="max-w-4xl">
         <section className="mt-16 border-t border-jb-blue/25 pt-8">
           <p className="jb-section-label">The through line</p>
@@ -61,18 +52,14 @@ export default function AboutPage() {
             Systems people can inhabit
           </h2>
           <div className="mt-5 space-y-5 text-lg leading-8 text-jb-ink/78">
-            <p>
-              This practice began before I called it technical operations. In{" "}
-              <Link
-                className="font-semibold text-jb-blue hover:text-jb-green"
-                href="https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html"
-              >
-                Open House
-              </Link>
-              , a ten-day UCSC gallery experiment I initiated in 2006,
-              participants collectively governed a space for making, living,
-              negotiation, and many-perspective documentation.
-            </p>
+            <Claim
+              as="p"
+              claimId="CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY"
+              projection="archive-note"
+              surface="/about"
+              pageId="about"
+              occurrenceId="open-house-participatory-gallery"
+            />
             <p>
               The same question continues through{" "}
               <Link
@@ -205,46 +192,46 @@ export default function AboutPage() {
                 <h3 className="text-xl font-semibold text-jb-ink">
                   <Link
                     className="text-jb-blue hover:text-jb-green"
-                    href="/lab/source-backed-team-memory"
+                    href="/work/196-sunday-dinner"
                   >
-                    Source-backed team memory
+                    Sunday Dinner and 196
                   </Link>
                 </h3>
-                <span className="jb-section-label">Current lab</span>
+                <span className="jb-section-label">Current</span>
               </div>
               <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
                 <p>
                   <strong className="text-jb-ink">Relationships:</strong>{" "}
-                  sources, claims, decisions, contributors, open questions,
-                  corrections, and the audiences who need to trust the record.
+                  hospitality, trust, artist support, shared space, recurring
+                  participants, and the rhythms of returning.
                 </p>
                 <p>
                   <strong className="text-jb-ink">Model:</strong>{" "}
-                  structured records keep evidence, agency, confidence,
-                  public-use boundaries, and projection status distinct.
+                  invitations, hosting, onboarding, access handoffs,
+                  documentation, and follow-up treated as one participation
+                  system.
                 </p>
                 <p>
                   <strong className="text-jb-ink">Interface and use:</strong>{" "}
-                  this portfolio, its agent-readable checks, and its review
-                  reports form a working prototype tested through iterative
-                  research and human review.
+                  recurring gatherings and artist-residency workflows used with
+                  participants and resident artists over time.
                 </p>
                 <p>
                   <strong className="text-jb-ink">
                     Learning and continuity:
                   </strong>{" "}
-                  citations, decision records, correction paths, evaluation
-                  receipts, and explicit human gates let another collaborator
-                  inspect what is known and safely continue the work.
+                  repeatable invitation, response, attendance, follow-up, and
+                  residency handoff patterns helped the practice continue while
+                  private participant records remained private.
                 </p>
               </div>
             </article>
           </div>
           <div className="mt-8 border-y border-jb-ink/12 py-4">
-            <p className="jb-section-label">Earlier continuities</p>
+            <p className="jb-section-label">Additional continuities</p>
             <p className="mt-2 max-w-3xl leading-7 text-jb-ink/72">
-              These earlier projects remain part of the method&apos;s lineage. They
-              are not presented as current deployments.
+              Historical systems and current research remain part of the method
+              without being presented as current production deployments.
             </p>
           </div>
           <div className="divide-y divide-jb-ink/12 border-b border-jb-ink/12">
@@ -281,29 +268,30 @@ export default function AboutPage() {
               <h3 className="text-xl font-semibold text-jb-ink">
                 <Link
                   className="text-jb-blue hover:text-jb-green"
-                  href="/work/196-sunday-dinner"
+                  href="/lab/source-backed-team-memory"
                 >
-                  Sunday Dinner and 196
+                  Source-backed team memory
                 </Link>
               </h3>
               <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
                 <p>
                   <strong className="text-jb-ink">Relationships:</strong>{" "}
-                  hospitality, trust, artist support, shared space, and the
-                  rhythms of returning.
+                  sources, claims, decisions, contributors, open questions,
+                  corrections, and the audiences who need to trust the record.
                 </p>
                 <p>
                   <strong className="text-jb-ink">Interface and use:</strong>{" "}
-                  invitations, hosting, onboarding, access handoffs, and
-                  facilitation that let people enter and shape a living practice.
+                  this portfolio, its checks, and its review reports form an
+                  early working method tested through iterative research and
+                  human review, not a completed client pilot.
                 </p>
                 <p>
                   <strong className="text-jb-ink">
                     Learning and continuity:
                   </strong>{" "}
-                  repeatable rhythms supported continuation while consent kept
-                  guest histories, private correspondence, and unapproved images
-                  outside the public record.
+                  citations, decision records, correction paths, evaluation
+                  receipts, and explicit human gates let another collaborator
+                  inspect what is known and safely continue the work.
                 </p>
               </div>
             </article>

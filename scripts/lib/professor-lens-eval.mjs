@@ -11,6 +11,10 @@ const sourceNotePath = path.join(
   repoRoot,
   "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md"
 );
+const publicRegistryPath = path.join(
+  repoRoot,
+  "apps/www/src/data/knowledge-bank/public-registry.json"
+);
 
 const professorRubricRelativePaths = [
   ".agents/evals/portfolio-production-readiness.json",
@@ -39,7 +43,7 @@ const finalScorecardRelativePaths = [
   "docs/qa/evals-H/warren-sack-final-c.json"
 ];
 
-const approvedCandidateSha256 = "f67dfb357367da9e5e33f58230e934f80da09deeb45bf7745d0210b5c7831f54";
+const approvedCandidateSha256 = "add0c2de156ae4bc9e1b3ca7d96dd2bf219692f3abbf0dabea6d9a7bd1abd723";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },
@@ -76,6 +80,7 @@ export function evaluateProfessorLenses({
   suite = JSON.parse(readFileSync(suitePath, "utf8")),
   aboutText = readFileSync(aboutPath, "utf8"),
   sourceNoteText = readFileSync(sourceNotePath, "utf8"),
+  publicRegistryText = readFileSync(publicRegistryPath, "utf8"),
   candidateFiles = loadCandidateFiles(),
   finalScorecards = finalScorecardRelativePaths.map((relativePath) =>
     JSON.parse(readFileSync(path.join(repoRoot, relativePath), "utf8"))
@@ -85,7 +90,7 @@ export function evaluateProfessorLenses({
   const sack = suite.evals.find((entry) => entry.id === "PR-016");
   const morseText = joined(morse);
   const sackText = joined(sack);
-  const combinedPublicText = `${aboutText}\n${sourceNoteText}`;
+  const combinedPublicText = `${aboutText}\n${sourceNoteText}\n${publicRegistryText}`;
   const totalWeight = suite.evals.reduce((sum, entry) => sum + entry.weight, 0);
   const candidateSha256 = fingerprintProfessorCandidate(candidateFiles);
   const relationshipRows = aboutText.match(/Relationships:<\/strong>/g)?.length ?? 0;
@@ -167,9 +172,12 @@ export function evaluateProfessorLenses({
     criterion(
       "open-house-boundary",
       "The public Open House lineage states initiation, ten-day form, and collective governance without solo-production language.",
-      aboutText.includes("Open House") &&
-        aboutText.includes("ten-day UCSC gallery experiment I initiated") &&
-        aboutText.includes("participants collectively governed") &&
+      aboutText.includes("CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY") &&
+        aboutText.includes('occurrenceId="open-house-participatory-gallery"') &&
+        publicRegistryText.includes("I initiated Open House, a ten-day UCSC gallery experiment") &&
+        publicRegistryText.includes("participants used communal decision-making") &&
+        publicRegistryText.includes("many-perspective documentation") &&
+        sourceNoteText.includes("became collectively governed") &&
         sourceNoteText.includes("CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY"),
       "Public article and governed claim linkage checked."
     ),

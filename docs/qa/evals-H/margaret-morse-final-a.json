@@ -1,41 +1,38 @@
 {
-  "evaluator": "Codex bounded holdout reader A applying the imagined Prof. Margaret Morse lens, not an endorsement",
-  "reviewerId": "morse-a-photo-knowledge-c-2026-07-26-f67dfb",
+  "evaluator": "Imagined Prof. Margaret Morse lens; independent reader A, not the named professor or an endorsement",
+  "reviewerId": "morse-reader-a-2026-07-28-add0c2de",
   "phase": "holdout",
   "lensId": "PR-015",
-  "candidateSha256": "f67dfb357367da9e5e33f58230e934f80da09deeb45bf7745d0210b5c7831f54",
+  "candidateSha256": "add0c2de156ae4bc9e1b3ca7d96dd2bf219692f3abbf0dabea6d9a7bd1abd723",
   "score": 4,
   "pass": true,
   "evidence": [
-    "Independently recomputed the ordered, binary-safe fingerprint over all 117 professorCandidateRelativePaths and obtained the assigned SHA-256 exactly.",
-    "The About page is one navigation click from the homepage and explicitly connects artistic, civic, technical, and social practice without displacing Jamie's role as a technical project manager and implementation lead.",
-    "Five public-safe continuities are traceable through Open House, WOWList, Sunday Dinner and 196, NYC Artist Coalition and FairRentNYC, and Source-Backed Team Memory.",
-    "Experimentation, hospitality, participation, attention, documentation, care, place, and shared governance appear as operating principles rather than decorative artistic biography.",
-    "The East River hero contributes embodiment, weather, public landscape, equipment, movement, and material readiness while the adjacent copy retains the literal role, operating proposition, Work action, and Resume action.",
-    "The visible East River credit correctly distinguishes creator from custodian: 'Photograph by Elana Gordon. From Jamie Burkart's photo archive.' Caption and credit are rendered as separate elements.",
-    "The current candidate-bound responsive matrix covers 56 combinations of 14 routes and four widths with no reported accessibility, overflow, image, request, heading, or landmark failures.",
-    "Focused visual review verifies the East River caption and credit at 360, 375, 768, and 1280 pixels, contained within the viewport and without overlap with primary copy.",
-    "RFC 0003's selective materialization strengthens the Morse threshold: one East River canary receives deep attribution, permission, placement, correction, rollback, and knowledge-loop governance while three staging photographs remain phase-2-reconciliation-pending.",
-    "Collective credit and protected-source exclusions remain intact."
+    "Independently recomputed the exact SHA-256 over all 115 ordered candidate paths.",
+    "The one-click About page explicitly connects artistic, civic, technical, and social practice under Systems people can inhabit.",
+    "Open House, WOWList, Sunday Dinner and 196, NYC Artist Coalition, and source-backed team memory preserve experimentation, hospitality, attention, documentation, and care with collective-credit boundaries.",
+    "The East River occurrence restores embodiment and place while retaining factual captioning and visible Elana Gordon credit at all four reviewed viewports.",
+    "All 56 responsive rows and the bounded keyboard, reflow, and semantic-order checks passed without reported accessibility, overflow, request, or image failures."
   ],
-  "gaps": [],
+  "gaps": [
+    "Human screen-reader and browser-zoom review remain open.",
+    "Rights, consent, exact credit and crop, Jamie production approval, deployment, and indexing remain human gates."
+  ],
   "safety_findings": [
-    "The three phase-two photographs still require creator, credit, depicted-work, permission, and broader-rights reconciliation before production consideration.",
-    "The East River photograph is not evidence by itself of Jamie's profession, leadership, journey frequency, or project outcomes.",
-    "Public Git and staging approval do not confer production publication, deployment, indexing, future crops, new destinations, or unrestricted use.",
-    "This passing holdout is not rights clearance, production authorization, deployment approval, or indexing approval."
+    "Protected educational records and private participant materials remain outside public projection.",
+    "Collective projects remain collectively framed; no faculty endorsement, sole-causation claim, or private-source authority was found.",
+    "This score is evaluation evidence only and does not clear a human publication gate."
   ],
-  "recommendation": "Pass PR-015 at score 4 for this exact stacked-draft candidate. Preserve the deeply governed East River canary and the explicit phase-two holds rather than forcing premature completeness.",
+  "recommendation": "Pass PR-015 at 4 for this exact candidate while preserving every stated human and release gate.",
   "provenance": {
-    "provider": "OpenAI Codex",
+    "provider": "codex-native-subagent",
+    "reviewReceiptDigest": "6e730366afe03a6cf910a95ae5e4ecd9ad1110af9dd2dd04662b3bcd0bd2468a",
     "reviewMode": "bounded independent holdout",
     "reviewerRole": "reader A",
-    "reviewedAt": "2026-07-26",
-    "candidatePathCount": 117,
+    "reviewedAt": "2026-07-28",
+    "candidatePathCount": 115,
     "candidateFingerprintRecomputed": true,
     "responsiveMatrixRowsReviewed": 56,
     "focusedVisualOccurrencesReviewed": 4,
-    "photoManifestEntriesReviewed": 4,
     "filesEdited": false
   }
 }

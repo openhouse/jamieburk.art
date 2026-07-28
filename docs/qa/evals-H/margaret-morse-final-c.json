@@ -1,44 +1,38 @@
 {
-  "evaluator": "Imagined Prof. Margaret Morse lens, fresh skeptical bounded holdout reader C, not an endorsement",
-  "reviewerId": "morse-c-photo-knowledge-c-2026-07-26",
+  "evaluator": "Imagined Prof. Margaret Morse lens; independent reader C, not the named professor or an endorsement",
+  "reviewerId": "morse-reader-c-2026-07-28-add0c2de",
   "phase": "holdout",
   "lensId": "PR-015",
-  "candidateSha256": "f67dfb357367da9e5e33f58230e934f80da09deeb45bf7745d0210b5c7831f54",
+  "candidateSha256": "add0c2de156ae4bc9e1b3ca7d96dd2bf219692f3abbf0dabea6d9a7bd1abd723",
   "score": 4,
   "pass": true,
   "evidence": [
-    "Independently recomputed the binary-safe SHA-256 fingerprint over all 117 ordered professorCandidateRelativePaths and reproduced the assigned fingerprint exactly in a clean worktree.",
-    "The About page is one click from the homepage and explicitly joins artistic, civic, technical, and social practice while clearly positioning Jamie as a technical project manager and implementation lead.",
-    "Open House, WOWList, Sunday Dinner and 196, NYC Artist Coalition and FairRentNYC, Harry J. Epstein Company, and Source-Backed Team Memory establish public-safe continuities through experimentation, participation, hospitality, attention, documentation, care, place, and collective use.",
-    "The portfolio explains why Jamie's systems differ from conventional administration: people must be able to inhabit, influence, remember, revise, and continue them.",
-    "The East River photograph contributes embodiment, weather, infrastructure, and place without being treated as evidence of professional authority, project outcomes, leadership, or journey frequency.",
-    "Rendered review at 360 and 1280 pixels found Jamie's identity, role, proposition, actions, caption, and maker credit visible without incoherent overlap.",
-    "Elana Gordon's maker credit appears separately from Jamie's archive custody.",
-    "The exact-candidate responsive report covers 56 combinations of 14 routes and four viewports with no reported accessibility, overflow, image, request, heading, or landmark failures.",
-    "The focused visual review confirms a two-part caption and credit, minimum font size, viewport containment, and no overlap with primary copy at all four widths.",
-    "The raft photograph leads into the inhabitable-systems argument, while the colophon photographs preserve material attention and making rather than functioning merely as documentary proof.",
-    "Collective work remains collectively credited, and protected sources are not projected.",
-    "The photo-knowledge system passes 15 hard checks and six criteria."
+    "Independently recomputed the exact SHA-256 over all 115 ordered candidate paths.",
+    "The About page connects artistic, civic, technical, and social work through participation, memory, and continuation.",
+    "Sunday Dinner and 196 operationalize hospitality; NYC Artist Coalition translates attentive listening into collective civic interfaces; WOWList joins community language to a co-built product.",
+    "Source-backed team memory extends care into inspectable citations, correction paths, protected boundaries, and handoffs.",
+    "The current visual and responsive evidence reports no material accessibility, overlap, request, or image failures."
   ],
-  "gaps": [],
+  "gaps": [
+    "Human screen-reader and browser-zoom review remain open.",
+    "Exact image rights, dignity and consent, credit, crop, destination, production, deployment, and indexing remain human gates."
+  ],
   "safety_findings": [
-    "The raft, paper-trimming, and printed-editions photographs remain phase-2-reconciliation-pending.",
-    "Those photographs retain open production and indexing states, empty canonical placement and assertion bindings, and fail-closed protections against automated advancement.",
-    "The East River occurrence is approved only for public Git and staging review.",
-    "This individual passing judgment does not itself confer rights or publication authority."
+    "Collective agency is retained and institutional action is not converted into Jamie's sole causation.",
+    "Protected educational and participant records remain held.",
+    "The score is not an endorsement or publication authorization."
   ],
-  "recommendation": "Accept PR-015 at score 4 for this exact candidate and preserve the three phase-two reconciliation holds until their maker, depicted-work, permission, caption, and credit questions receive human review.",
+  "recommendation": "Pass PR-015 at 4 for this exact candidate while retaining all human authority gates.",
   "provenance": {
-    "provider": "OpenAI Codex",
-    "reviewMode": "fresh bounded read-only holdout",
+    "provider": "codex-native-subagent",
+    "reviewReceiptDigest": "3411f095f81403d6a84c74b971ccc93c991d65f42cf1f6e811718c0be1ea879e",
+    "reviewMode": "bounded independent holdout",
     "reviewerRole": "reader C",
-    "reviewedAt": "2026-07-26",
-    "candidatePathCount": 117,
-    "publicSurfaceFileCount": 115,
-    "responsiveMatrixRowsReviewed": 56,
-    "renderedViewportsIndependentlyInspected": [360, 1280],
-    "additionalRenderedRoutesInspected": ["/about", "/colophon"],
+    "reviewedAt": "2026-07-28",
+    "candidatePathCount": 115,
     "candidateFingerprintRecomputed": true,
+    "responsiveMatrixRowsReviewed": 56,
+    "focusedVisualOccurrencesReviewed": 4,
     "filesEdited": false
   }
 }

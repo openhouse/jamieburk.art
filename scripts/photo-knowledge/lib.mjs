@@ -24,6 +24,19 @@ function sha256(value) {
   return createHash("sha256").update(value).digest("hex");
 }
 
+function stableStringify(value) {
+  if (Array.isArray(value)) {
+    return `[${value.map((item) => stableStringify(item)).join(",")}]`;
+  }
+  if (value && typeof value === "object") {
+    return `{${Object.keys(value)
+      .sort()
+      .map((key) => `${JSON.stringify(key)}:${stableStringify(value[key])}`)
+      .join(",")}}`;
+  }
+  return JSON.stringify(value);
+}
+
 function readJson(file) {
   return JSON.parse(readFileSync(file, "utf8"));
 }
@@ -166,6 +179,61 @@ export function computePhotoCandidateFingerprint(repoRoot = defaultRepoRoot) {
   return { fingerprint: hash.digest("hex"), fileCount: files.length, files };
 }
 
+function bindingRelevantRecordIds(canary) {
+  return [
+    canary.assetId,
+    canary.setId,
+    canary.metadataSourceId,
+    canary.permissionSourceId,
+    canary.curatorialEvaluationId,
+    canary.selectionDecisionId,
+    canary.placementId,
+    canary.editionId,
+    canary.correctionId,
+    canary.photographerId
+  ];
+}
+
+export function computePhotoBindingFingerprintFromModel(model) {
+  const entries = [
+    ["canary", stableStringify(model.canary)],
+    ["curatorial-config", stableStringify(model.curatorialConfig)],
+    ["derivative-sha256", model.derivativeSha],
+    ["derivative-webp", stableStringify(model.webp)],
+    ["manifest-east-river", stableStringify(model.portfolioPhotos?.eastRiver ?? null)],
+    [
+      "public-manifest-east-river",
+      stableStringify(
+        model.publicPhotoManifest?.find((item) => item.id === "east-river") ?? null
+      )
+    ],
+    [
+      "hero-source",
+      model.sourceTexts["apps/www/src/components/Hero.tsx"] ?? ""
+    ],
+    [
+      "hero-styles",
+      model.sourceTexts["apps/www/src/app/globals.css"] ?? ""
+    ],
+    ...bindingRelevantRecordIds(model.canary).map((id) => [
+      `record:${id}`,
+      model.sourceById[id] ?? ""
+    ])
+  ];
+  const hash = createHash("sha256");
+  for (const [key, value] of entries) {
+    hash.update(key);
+    hash.update("\0");
+    hash.update(value);
+    hash.update("\0");
+  }
+  return {
+    fingerprint: hash.digest("hex"),
+    itemCount: entries.length,
+    items: entries.map(([key]) => key)
+  };
+}
+
 function loadPrivateBinding(file, expectedOpaqueId, expectedDerivativeSha) {
   if (!file) return { attempted: false, passed: false, status: "not-run" };
   try {
@@ -216,7 +284,7 @@ export async function loadPhotoKnowledgeModel(repoRoot = defaultRepoRoot, option
     canary.derivative.sha256
   );
 
-  return {
+  const model = {
     repoRoot,
     canary,
     evalConfig,
@@ -233,6 +301,8 @@ export async function loadPhotoKnowledgeModel(repoRoot = defaultRepoRoot, option
     sourceTexts,
     privateBinding
   };
+  model.bindingRelevant = computePhotoBindingFingerprintFromModel(model);
+  return model;
 }
 
 function hasStatement(asset, id) {
@@ -241,6 +311,32 @@ function hasStatement(asset, id) {
 
 function allTrue(object, keys) {
   return keys.every((key) => object[key] === true);
+}
+
+function candidateReceiptState(model, bindingRelevant) {
+  const receipt = model.candidateReceipt;
+  const exactCandidate =
+    receipt?.candidateFingerprint === model.candidate.fingerprint &&
+    receipt?.candidateFileCount === model.candidate.fileCount &&
+    receipt?.baseCommit === "fea303e54c6b5fae36caee872a2a7450501f9e11" &&
+    receipt?.derivativeSha256 === model.canary.derivative.sha256 &&
+    receipt?.automatedApproval === false &&
+    receipt?.production === "open" &&
+    receipt?.indexing === "open";
+  const fresh = exactCandidate && receipt?.privateBindingVerification === "verified";
+  const carriedForward =
+    exactCandidate &&
+    receipt?.privateBindingVerification === "verified-carried-forward" &&
+    receipt?.carryForwardPolicyVersion === 1 &&
+    receipt?.bindingRelevantFingerprint === bindingRelevant.fingerprint &&
+    receipt?.bindingRelevantItemCount === bindingRelevant.itemCount &&
+    receipt?.carriedForwardFromPrivateBindingVerification === "verified" &&
+    /^[a-f0-9]{64}$/.test(receipt?.carriedForwardFromCandidateFingerprint ?? "") &&
+    Number.isInteger(receipt?.carriedForwardFromCandidateFileCount) &&
+    receipt.carriedForwardFromCandidateFileCount > 0 &&
+    /^[a-f0-9]{40}$/.test(receipt?.carriedForwardFromSourceCommit ?? "") &&
+    /^[a-f0-9]{64}$/.test(receipt?.carriedForwardFromReceiptSha256 ?? "");
+  return { exactCandidate, fresh, carriedForward, valid: fresh || carriedForward };
 }
 
 export function evaluatePhotoKnowledgeModel(model) {
@@ -269,13 +365,22 @@ export function evaluatePhotoKnowledgeModel(model) {
   const photographer = record(canary.photographerId);
   const east = portfolioPhotos?.eastRiver;
   const statementIds = new Set(asset?.statements?.map((item) => item.id) ?? []);
+  const bindingRelevant = computePhotoBindingFingerprintFromModel(model);
+  const receiptState = candidateReceiptState(model, bindingRelevant);
   const forbiddenMetadataChunks = model.webp.chunks.filter((item) => ["EXIF", "XMP ", "ICCP"].includes(item));
   const privateLeakPattern = /(?:\/(?:Users|Volumes)\/|Mobile Documents|supporting-materials|\bIMG_\d+\b|\b[0-9A-F]{8}(?:-[0-9A-F]{4}){3}-[0-9A-F]{12}\b|\bpfp-[a-f0-9]+\b|sourceAssetId|privatePreview)/i;
+  const publicCensusLeakPattern = /(?:\/(?:Users|Volumes)\/|Mobile Documents|supporting-materials|\bIMG_\d+\b|\bpfp-[a-f0-9]+\b|sourceAssetId|privatePreview)/i;
+  const projectSiteCensusPrefix = "docs/knowledge-bank/assets/photographs/project-sites/";
   const governanceTexts = Object.entries(model.sourceTexts)
     .filter(([file]) => !file.startsWith("scripts/"));
   const leakage = governanceTexts
     .filter(([file]) => !file.startsWith("scripts/"))
-    .filter(([, source]) => privateLeakPattern.test(source))
+    .filter(([file, source]) =>
+      (file.startsWith(projectSiteCensusPrefix)
+        ? publicCensusLeakPattern
+        : privateLeakPattern
+      ).test(source)
+    )
     .map(([file]) => file);
   const requiredRecords = [
     canary.assetId,
@@ -317,7 +422,7 @@ export function evaluatePhotoKnowledgeModel(model) {
     asset?.private_source_binding?.opaque_id === canary.privateBinding.opaqueId &&
     /^pfwpub_[A-Za-z0-9_-]{8,}$/.test(asset?.private_source_binding?.opaque_id ?? "") &&
     asset?.private_source_binding?.resolution_state === "verified-private-2026-07-26";
-  const receiptBindsPrivateVerification = model.candidateReceipt?.privateBindingVerification === "verified";
+  const receiptBindsPrivateVerification = receiptState.valid;
 
   const checks = {
     records_materialized: requiredRecords.every((id) => Boolean(record(id))),
@@ -407,12 +512,7 @@ export function evaluatePhotoKnowledgeModel(model) {
         model.sourceTexts[canary.rfcPath] ?? ""
       ) &&
       !/\bRFP\b|\brfps\b/i.test(governanceTexts.map(([, source]) => source).join("\n")),
-    exact_candidate_receipt_current:
-      model.candidateReceipt?.candidateFingerprint === model.candidate.fingerprint &&
-      model.candidateReceipt?.candidateFileCount === model.candidate.fileCount &&
-      model.candidateReceipt?.baseCommit === "fea303e54c6b5fae36caee872a2a7450501f9e11" &&
-      model.candidateReceipt?.privateBindingVerification === "verified" &&
-      model.candidateReceipt?.automatedApproval === false
+    exact_candidate_receipt_current: receiptState.valid
   };
 
   const scripts = packageManifest.scripts ?? {};
@@ -488,6 +588,8 @@ export function evaluatePhotoKnowledgeModel(model) {
       leakage,
       forbiddenMetadataChunks,
       privateBinding: model.privateBinding,
+      bindingRelevant,
+      receiptState,
       pendingReconciliation: publicPhotoManifest
         ?.filter((item) => item.knowledgeStatus === "phase-2-reconciliation-pending")
         .map((item) => item.id),
@@ -564,13 +666,13 @@ export function writePhotoReports(model, evaluation) {
 }
 
 export function candidateReceipt(model, options = {}) {
-  return {
-    schemaVersion: 1,
+  const receipt = {
+    schemaVersion: options.privateBindingVerification === "verified-carried-forward" ? 2 : 1,
     runId: "2026-07-26-east-river-canary",
-    recordedAt: "2026-07-26",
+    recordedAt: options.recordedAt ?? "2026-07-26",
     baseBranch: "features/layout-C",
     baseCommit: "fea303e54c6b5fae36caee872a2a7450501f9e11",
-    implementationBranch: "feature/photo-knowledge-C",
+    implementationBranch: options.implementationBranch ?? "feature/photo-knowledge-C",
     sourceCommit: options.sourceCommit ?? null,
     candidateFingerprint: model.candidate.fingerprint,
     candidateFileCount: model.candidate.fileCount,
@@ -588,6 +690,8 @@ export function candidateReceipt(model, options = {}) {
       "new crop, destination, context, or permission review"
     ]
   };
+  if (options.carryForward) Object.assign(receipt, options.carryForward);
+  return receipt;
 }
 
 export function writeCandidateReceipt(model, options = {}) {
@@ -596,4 +700,52 @@ export function writeCandidateReceipt(model, options = {}) {
   mkdirSync(path.dirname(file), { recursive: true });
   writeFileSync(file, `${JSON.stringify(receipt, null, 2)}\n`);
   return receipt;
+}
+
+export function writeCarriedForwardCandidateReceipt(model, priorModel, options = {}) {
+  const priorReceipt = priorModel.candidateReceipt;
+  const priorReceiptValid =
+    priorReceipt?.candidateFingerprint === priorModel.candidate.fingerprint &&
+    priorReceipt?.candidateFileCount === priorModel.candidate.fileCount &&
+    priorReceipt?.baseCommit === "fea303e54c6b5fae36caee872a2a7450501f9e11" &&
+    priorReceipt?.derivativeSha256 === priorModel.canary.derivative.sha256 &&
+    priorReceipt?.privateBindingVerification === "verified" &&
+    priorReceipt?.automatedApproval === false;
+  if (!priorReceiptValid) {
+    throw new Error("The prior candidate does not have an exact verified private-binding receipt.");
+  }
+
+  const currentBinding = computePhotoBindingFingerprintFromModel(model);
+  const priorBinding = computePhotoBindingFingerprintFromModel(priorModel);
+  if (
+    currentBinding.fingerprint !== priorBinding.fingerprint ||
+    currentBinding.itemCount !== priorBinding.itemCount
+  ) {
+    throw new Error(
+      `Binding-relevant material changed (${priorBinding.fingerprint} -> ${currentBinding.fingerprint}); private re-verification is required.`
+    );
+  }
+
+  const priorReceiptPath = path.join(
+    priorModel.repoRoot,
+    priorModel.canary.candidateReceiptPath
+  );
+  const priorReceiptSha256 = sha256(readFileSync(priorReceiptPath));
+  return writeCandidateReceipt(model, {
+    sourceCommit: options.sourceCommit ?? null,
+    recordedAt: options.recordedAt ?? "2026-07-28",
+    implementationBranch: options.implementationBranch ?? "feature/pre-launch-C",
+    privateBindingVerification: "verified-carried-forward",
+    carryForward: {
+      carryForwardPolicyVersion: 1,
+      bindingRelevantFingerprint: currentBinding.fingerprint,
+      bindingRelevantItemCount: currentBinding.itemCount,
+      carriedForwardFromCandidateFingerprint: priorReceipt.candidateFingerprint,
+      carriedForwardFromCandidateFileCount: priorReceipt.candidateFileCount,
+      carriedForwardFromSourceCommit: priorReceipt.sourceCommit,
+      carriedForwardFromReceiptSha256: priorReceiptSha256,
+      carriedForwardFromPrivateBindingVerification:
+        priorReceipt.privateBindingVerification
+    }
+  });
 }

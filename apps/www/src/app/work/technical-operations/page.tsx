@@ -40,7 +40,7 @@ const proofMap = [
     project: "WOWList",
     href: "/work/wowlist",
     proof:
-      "Jamie co-built a community-calendar platform that helped local arts and music organizers distribute events across roughly 35 city ecosystems."
+      "Jamie co-built and operated a community-calendar platform for local arts and music organizers; a July 2017 snapshot records activity in 35 city-region keys with at least 50 posts."
   },
   {
     project: "196 / Sunday Dinner",

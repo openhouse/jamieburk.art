@@ -27,6 +27,10 @@ relations:
     target: decision.photo.layout-c.resume-no-photo.v1
     href: ../decisions/photography/layout-c-resume-no-photo-v1.md
   - type: related_to
+    target: decision.photo.pre-launch.rights-narrowing.2026-07-28
+    href: ../decisions/photography/pre-launch-rights-narrowing-2026-07-28.md
+    context: Pre-launch withdrawal of three incompletely credited derivatives from the public bundle.
+  - type: related_to
     target: projection.photo.layout-c.home.east-river
     href: ../projections/photography/layout-c-home-east-river.md
   - type: related_to
@@ -49,6 +53,10 @@ relations:
     target: index.photo-set.kc-town-hall-fieldwork
     href: photo-sets/kc-town-hall-fieldwork.md
     context: Held worksite photographs, protected oral histories, local records, proposal, and one cleared map derivative.
+  - type: related_to
+    target: index.photo-set.nycac-project-sites.2017-2026
+    href: photo-sets/nycac-project-sites-2017-2026.md
+    context: Full-population image disposition and held photograph families recovered from five NYC Artist Coalition project sites.
   - type: has_asset
     target: asset.photo.nyc-council.field-kit.2026.001
     href: ../assets/photographs/nyc-council-field-kit-2026.md
@@ -92,6 +100,7 @@ homepage.
 - [Blind and contextual curatorial proposal](../evaluations/curatorial/layout-c-home-east-river-v1.md)
 - [Homepage selection decision](../decisions/photography/layout-c-home-east-river-v1.md)
 - [Resume protected-absence decision](../decisions/photography/layout-c-resume-no-photo-v1.md)
+- [Pre-launch rights-narrowing decision](../decisions/photography/pre-launch-rights-narrowing-2026-07-28.md)
 - [Exact homepage occurrence](../projections/photography/layout-c-home-east-river.md)
 - [Dated portfolio edition](../projections/photography/edition-layout-c-2026-07.md)
 - [Creator-credit correction](../corrections/east-river-credit-2026-07.md)
@@ -120,3 +129,15 @@ Four new photograph records remain held. One public-safe
 is cleared for staging-candidate use. See the
 [source-return record](../research-runs/photographic-source-return-2026-07-26.md)
 for the research, privacy, and Apple Photos capability boundaries.
+
+## Project-site photograph census
+
+The [NYC Artist Coalition project-site census](photo-sets/nycac-project-sites-2017-2026.md)
+accounts for the complete archived image-URL population recovered from five
+campaign and coalition sites. It distinguishes photographs from logos,
+interface assets, maps, data graphics, and campaign graphics; preserves exact
+archived payload families; records the page context that could be recovered;
+and holds every photograph for creator, rights, dignity, caption, crop, and
+destination review. Census membership supports research and retrieval. It does
+not confer publication clearance or prove the depicted event, person, date, or
+claim.

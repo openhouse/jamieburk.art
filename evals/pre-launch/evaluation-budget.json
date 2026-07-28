@@ -1,0 +1,134 @@
+{
+  "version": 1,
+  "purpose": "Reduce recursive evaluation cost without weakening hard gates, public safety, human authority, or exact-candidate discipline.",
+  "policy": {
+    "innerLoop": "Run deterministic checks selected from changed paths. Do not spend semantic-review calls while the candidate is still changing.",
+    "finalCandidate": "After every deterministic hard gate passes, bind the candidate fingerprint and run the required fresh semantic panels once against that unchanged candidate.",
+    "invalidation": "Any candidate-affecting change invalidates semantic receipts, browser evidence, accessibility matrices, and release fingerprints.",
+    "humanGates": [
+      "Jamie editorial approval",
+      "photo creator and rights review",
+      "represented-person dignity and consent review",
+      "exact caption, credit, crop, and destination approval",
+      "production deployment approval",
+      "production indexing approval"
+    ]
+  },
+  "domains": [
+    {
+      "id": "knowledge-wiki",
+      "patterns": [
+        "docs/knowledge-bank/**",
+        "apps/www/src/data/knowledge-bank/**",
+        "evals/knowledge-wiki/**",
+        "scripts/knowledge-wiki/**",
+        "scripts/archive/**",
+        "scripts/tests/public-hearing-corpus.test.mjs",
+        "scripts/tests/commercial-rent-testimony.test.mjs",
+        "scripts/tests/commercial-rent-public-support.test.mjs"
+      ],
+      "commands": [
+        "npm run wiki:graph",
+        "npm run wiki:report",
+        "npm run wiki:check",
+        "npm run wiki:test",
+        "npm run wiki:eval",
+        "npm run test:public-hearings",
+        "npm run test:commercial-rent-testimony",
+        "npm run test:commercial-rent-public-support",
+        "npm run knowledge-wiki",
+        "npm run public-safety"
+      ]
+    },
+    {
+      "id": "photography",
+      "patterns": [
+        "apps/www/public/images/**",
+        "apps/www/public/photos/**",
+        "apps/www/src/data/photography.ts",
+        "apps/www/src/data/photo-placement-registry.json",
+        "docs/knowledge-bank/assets/photographs/**",
+        "docs/knowledge-bank/notebooks/photography/**",
+        "docs/knowledge-bank/projections/photography/**",
+        "docs/knowledge-bank/decisions/photography/**",
+        "scripts/photo-knowledge/**",
+        "evals/layout/**"
+      ],
+      "commands": [
+        "npm run photos:check",
+        "npm run photos:test",
+        "npm run photos:report",
+        "npm run test:transcript-photo-constellations",
+        "npm run public-safety"
+      ]
+    },
+    {
+      "id": "public-frontend",
+      "patterns": [
+        "apps/www/src/app/**",
+        "apps/www/src/components/**",
+        "apps/www/src/content/**",
+        "apps/www/src/styles/**",
+        "apps/www/public/resume/**",
+        "DESIGN.md"
+      ],
+      "commands": [
+        "npm run typecheck",
+        "npm run lint",
+        "npm run build",
+        "npm run evals:layout",
+        "npm run test:layout",
+        "npm run test:accessibility-contrast",
+        "npm run test:accessibility-evidence",
+        "npm run public-safety",
+        "npm run check:routes"
+      ]
+    },
+    {
+      "id": "citation-contract",
+      "patterns": [
+        "apps/www/src/data/knowledge-bank/records.ts",
+        "apps/www/src/components/citations/**",
+        "apps/www/src/content/**",
+        "scripts/generate-public-citations.mjs",
+        "scripts/check-citations.mjs"
+      ],
+      "commands": [
+        "npm run generate:citations",
+        "npm run check:citations",
+        "npm run test:citations",
+        "npm run public-safety"
+      ]
+    },
+    {
+      "id": "evaluation-contract",
+      "patterns": [
+        ".agents/evals/**",
+        "evals/**",
+        "scripts/lib/*eval*",
+        "scripts/check-*eval*",
+        "scripts/evals-*",
+        "scripts/tests/*eval*"
+      ],
+      "commands": [
+        "npm run evals:portfolio",
+        "npm run evals:layout",
+        "npm run test:layout",
+        "npm run check:knowledge-evals",
+        "npm run test:knowledge-evals",
+        "npm run test:pre-launch"
+      ]
+    }
+  ],
+  "finalSemanticPanels": {
+    "runOnlyAfterDeterministicPass": true,
+    "maximumRunsPerCandidate": 1,
+    "requiredFreshness": "exact candidate fingerprint",
+    "commands": [
+      "npm run evals:professor-lenses",
+      "npm run test:professor-lenses",
+      "npm run evals:composite",
+      "npm run test:composite"
+    ]
+  }
+}

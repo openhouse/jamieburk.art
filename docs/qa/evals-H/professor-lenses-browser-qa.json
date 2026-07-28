@@ -1,35 +1,78 @@
 {
-  "baseUrl": "http://127.0.0.1:3045",
-  "route": "/about",
-  "homepageAboutLink": {
-    "visible": true,
-    "href": "/about"
-  },
-  "contentAssertions": {
-    "throughLineHeading": "Systems people can inhabit",
-    "relationshipRows": 4,
-    "interfaceAndUseRows": 4,
-    "learningAndContinuityRows": 4,
-    "publicOpenHouseSourceLinks": 1
-  },
-  "viewports": [
+  "reportVersion": 3,
+  "checkedAt": "2026-07-28T15:31:27.601Z",
+  "baseUrl": "http://127.0.0.1:3055",
+  "publicSurfaceFingerprint": "43164a9b4f108e2d3ea4dc919aa11cd42f119e67c68e84917af61a6469af73be",
+  "publicSurfaceFileCount": 113,
+  "captureMethod": "Playwright Chromium screenshots of the current built local candidate; About captures are deliberately framed on the through-line and current systems loops; no deployment or indexing action.",
+  "routes": [
     {
-      "name": "desktop",
-      "width": 1440,
-      "height": 1000,
-      "documentScrollWidth": 1440,
-      "bodyScrollWidth": 1440,
-      "consoleErrors": 0,
-      "screenshot": "professor-lenses-about-desktop.png"
+      "path": "/",
+      "title": "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
+      "h1Count": 1,
+      "screenshots": [
+        {
+          "name": "desktop",
+          "requestedViewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "pixelWidth": 1280,
+          "pixelHeight": 900,
+          "sha256": "849581d18e1b4a00c1f34beb657ae8a2d2d0d02dbd1b20444bd500450fec20da",
+          "file": "candidate-home-desktop.png"
+        },
+        {
+          "name": "mobile",
+          "requestedViewport": {
+            "width": 375,
+            "height": 812
+          },
+          "pixelWidth": 375,
+          "pixelHeight": 812,
+          "sha256": "ab2d8881abce07978e515bf123b4f4f26e959e8acb9940877da4a8e014bec3e1",
+          "file": "candidate-home-viewport.png"
+        }
+      ]
     },
     {
-      "name": "mobile",
-      "width": 375,
-      "height": 812,
-      "documentScrollWidth": 375,
-      "bodyScrollWidth": 375,
-      "consoleErrors": 0,
-      "screenshot": "professor-lenses-about-mobile.png"
+      "path": "/about",
+      "title": "About - Jamie Burkart",
+      "h1Count": 1,
+      "screenshots": [
+        {
+          "name": "desktop-through-line",
+          "requestedViewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "pixelWidth": 1280,
+          "pixelHeight": 900,
+          "sha256": "4cb33be5668d035b9dded6b3d38d4d6dd07386360716e362010e40af60e0b98c",
+          "file": "professor-lenses-about-desktop.png",
+          "framedContent": {
+            "throughLineHeadingPresent": true,
+            "currentSystemsLabelPresent": true,
+            "currentPracticeDocumented": true
+          }
+        },
+        {
+          "name": "mobile-through-line",
+          "requestedViewport": {
+            "width": 375,
+            "height": 1200
+          },
+          "pixelWidth": 375,
+          "pixelHeight": 1200,
+          "sha256": "2009515f869df0b43351edf182d12987b71ecbf006f53df3e0d521d2be09ce18",
+          "file": "professor-lenses-about-mobile.png",
+          "framedContent": {
+            "throughLineHeadingPresent": true,
+            "currentSystemsLabelPresent": true,
+            "currentPracticeDocumented": true
+          }
+        }
+      ]
     }
   ],
   "passed": true

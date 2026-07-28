@@ -62,7 +62,10 @@ const KCTH_FIELD_PRACTICE_REVIEW_LOCKS = Object.freeze({
   governedKnowledgeSha256: "ecfe86b9804ebd2310012a8fbb0b0017ee2ce4b2b4de7d67ede1e5f156a63b5d",
   proofProjectionSha256: "89e737e2b4620a430933669aabbafcd0924534a2ac55acce8a82a102131aeef3",
   caseStudyMdxSha256: "21d241eae57f230f4863ded3afeacca25715e5c3335c83c4314764d141d33178",
-  sharedPublicSurfacesSha256: "0ad22452a4b62381ba12ad9b65918c3396debbf8d8f6a57fd038203c965903ba",
+  // Re-reviewed 2026-07-28 after narrowing the shared public photo field and
+  // adding the current-practice systems loop on About. Field-practice claims,
+  // evidence, holds, and the KC Town Hall case-study wording did not change.
+  sharedPublicSurfacesSha256: "c2cfb2a258fee63f4b6b83e9424c06851eaaf21cb64c8be7a17483ae3bd5ce18",
   publicReviewReportSha256: "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696"
 });
 // Re-reviewed 2026-07-21 after removing trailing Markdown line-break spaces for
@@ -106,7 +109,10 @@ const PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   publicReportSha256: "0e8dc37b79624e2ac86a026fca40741ee578aeb22bc5002e795775c1df5e650e",
   wowListMdxSha256: "920a67545ba6bbe346309c79247a12e1e0a3028c09cb5c36e1a85e35f8013df8",
   sundayDinnerMdxSha256: "2c9e22237d23a1b99262634f75cb24f7eeca300c0ed59e0dec26b6c3a54dd6be",
-  proofContentSha256: "04bda7a50e53a7c78d4f49b7f139a424514e03d83994c3fbb63cd6fbd25be685"
+  // Re-reviewed 2026-07-28 after replacing the WOWList adoption estimate with
+  // the exact July 2017 city-region-key threshold. The governed event corpus,
+  // projections, and collective-credit limits did not change.
+  proofContentSha256: "ece31ff79a8dc4bd542469ffb8a8edae8da249627a62ca152a8c5bee7b9a0be7"
 });
 const WOWLIST_FACEBOOK_POST_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "5755dfbbb6388ca369b90337e210502dd264bb22d554cf8f0294027de08ffc72",
@@ -2293,8 +2299,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         archiveLabPage?.occurrences.map((occurrence) => occurrence.id),
         archive.labOccurrenceIds
       ) &&
-      archiveLabPage?.sourceOrder.length === 1 &&
-      archiveLabPage.sourceOrder[0] === archive.certificateSourceId &&
+      sameOrderedValues(archiveLabPage?.sourceOrder, archive.labSourceIds) &&
       fairRentMdx.includes('claimId="CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026"') &&
       fairRentMdx.includes('claimId="CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026"') &&
       archiveLabSource.includes('claimId="CLM-SOURCE-BACKED-MEMORY-METHOD-2026"') &&

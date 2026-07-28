@@ -1,6 +1,5 @@
 import assert from "node:assert/strict";
-import { createHash } from "node:crypto";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import test from "node:test";
 
 import {
@@ -108,6 +107,10 @@ test("stale derived outputs fail canonical integrity and frozen governance", () 
 
 test("candidate identity binds the complete source tree and material dependency changes", () => {
   const files = listCompositeCandidateFiles(suite);
+  assert.ok(
+    files.every((relativePath) => existsSync(relativePath)),
+    "deleted tracked paths must be represented by absence, not opened as candidate files"
+  );
   for (const requiredPath of [
     "apps/www/src/data/knowledge-bank/records.ts",
     "apps/www/src/data/knowledge-bank/public.ts",
@@ -147,12 +150,11 @@ test("checksum refresh cannot authorize optimizer self-grading", () => {
   assert.equal(result.criteria.find((item) => item.id === "COMP-008")?.pass, false);
 });
 
-test("holdouts require distinct process and prompt provenance", () => {
+test("holdouts require distinct public reviewer labels", () => {
   const candidateFingerprint = computeCompositeCandidateFingerprint(suite);
   const makeHoldout = (judgeId) => {
-    const prompt = `Independent mutation-test prompt for ${judgeId}.`;
     const run = {
-      runVersion: 2,
+      runVersion: 3,
       judgeId,
       grader: "independent_llm_judge",
       independentFromOptimizer: true,
@@ -169,24 +171,15 @@ test("holdouts require distinct process and prompt provenance", () => {
       notObserved: [],
       findings: [],
       recommendation: "Accept fixture.",
-      provenance: {
-        provider: "codex-native-subagent",
-        processSessionId: "019f6dcf-ca71-79a1-913e-291b235e4ede",
-        agentNickname: `fixture-${judgeId}`,
-        model: "gpt-5.6-sol",
-        reasoningEffort: "xhigh",
-        sandbox: "read-only",
-        ephemeral: true,
-        prompt,
-        promptSha256: createHash("sha256").update(prompt).digest("hex"),
+      publicReview: {
+        provider: "independent-codex-review",
+        reviewerLabel: "shared-fixture-reader",
         judgmentSha256: "",
-        resultTransport: "multi_agent_v1__wait_agent-completed",
-        operatorAttestation: "Recorded verbatim from a completed native subagent result by the parent orchestrator.",
-        startedAt: "2026-07-16T22:00:00-04:00",
-        completedAt: "2026-07-16T22:01:00-04:00"
+        reviewedAt: "2026-07-16T22:01:00-04:00",
+        attestation: "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted."
       }
     };
-    run.provenance.judgmentSha256 = computeHoldoutJudgmentDigest(run);
+    run.publicReview.judgmentSha256 = computeHoldoutJudgmentDigest(run);
     return run;
   };
   const holdouts = [
@@ -197,9 +190,9 @@ test("holdouts require distinct process and prompt provenance", () => {
   assert.equal(result.criteria.find((item) => item.id === "COMP-009")?.pass, false);
 });
 
-test("holdout judgment digest binds run version and complete process provenance", () => {
+test("holdout judgment digest binds run version and public review receipt", () => {
   const run = {
-    runVersion: 2,
+    runVersion: 3,
     judgeId: "judge-a",
     grader: "independent_llm_judge",
     independentFromOptimizer: true,
@@ -210,25 +203,16 @@ test("holdout judgment digest binds run version and complete process provenance"
     notObserved: [],
     findings: [],
     recommendation: "Accept.",
-    provenance: {
-      provider: "codex-native-subagent",
-      processSessionId: "019f6dcf-ca71-79a1-913e-291b235e4ede",
-      agentNickname: "fixture-a",
-      model: "gpt-5.6-sol",
-      reasoningEffort: "xhigh",
-      sandbox: "read-only",
-      ephemeral: true,
-      prompt: "Original prompt.",
-      promptSha256: createHash("sha256").update("Original prompt.").digest("hex"),
+    publicReview: {
+      provider: "independent-codex-review",
+      reviewerLabel: "fixture-a",
       judgmentSha256: "",
-      resultTransport: "multi_agent_v1__wait_agent-completed",
-      operatorAttestation: "Recorded verbatim from a completed native subagent result by the parent orchestrator.",
-      startedAt: "2026-07-16T22:00:00-04:00",
-      completedAt: "2026-07-16T22:01:00-04:00"
+      reviewedAt: "2026-07-16T22:01:00-04:00",
+      attestation: "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted."
     }
   };
   const original = computeHoldoutJudgmentDigest(run);
-  run.provenance.processSessionId = "019f6dcf-cea1-7c90-87fc-697e7e2a5a85";
+  run.publicReview.reviewerLabel = "fixture-b";
   assert.notEqual(computeHoldoutJudgmentDigest(run), original);
 });
 

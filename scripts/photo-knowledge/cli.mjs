@@ -1,11 +1,14 @@
 #!/usr/bin/env node
 
 import { execFileSync } from "node:child_process";
+import path from "node:path";
 
 import {
   defaultRepoRoot,
   evaluatePhotoKnowledge,
+  loadPhotoKnowledgeModel,
   renderPhotoReport,
+  writeCarriedForwardCandidateReceipt,
   writeCandidateReceipt,
   writePhotoReports
 } from "./lib.mjs";
@@ -67,6 +70,33 @@ if (command === "write-receipt") {
   });
   console.log(`Wrote redacted candidate receipt for ${receipt.candidateFileCount} candidate files.`);
   process.exit(0);
+}
+
+if (command === "carry-forward-receipt") {
+  const priorRootArgument = process.argv[3];
+  if (!priorRootArgument) {
+    console.error(
+      "Usage: node scripts/photo-knowledge/cli.mjs carry-forward-receipt <frozen-prior-candidate-root>"
+    );
+    process.exit(2);
+  }
+  const priorModel = await loadPhotoKnowledgeModel(path.resolve(priorRootArgument));
+  const sourceCommit = execFileSync("git", ["rev-parse", "HEAD"], {
+    cwd: defaultRepoRoot,
+    encoding: "utf8"
+  }).trim();
+  try {
+    const receipt = writeCarriedForwardCandidateReceipt(model, priorModel, {
+      sourceCommit
+    });
+    console.log(
+      `Carried forward the verified private binding to ${receipt.candidateFileCount} candidate files.`
+    );
+    process.exit(0);
+  } catch (error) {
+    console.error(error instanceof Error ? error.message : String(error));
+    process.exit(1);
+  }
 }
 
 console.error(`Unknown photo knowledge command: ${command}`);

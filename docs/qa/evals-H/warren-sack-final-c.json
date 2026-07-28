@@ -1,43 +1,38 @@
 {
-  "evaluator": "Fresh skeptical bounded holdout reader C applying the imagined Prof. Warren Sack lens, not an endorsement",
-  "reviewerId": "sack-c-photo-knowledge-c-2026-07-26",
+  "evaluator": "Imagined Prof. Warren Sack lens; independent reader C, not the named professor or an endorsement",
+  "reviewerId": "sack-reader-c-2026-07-28-add0c2de",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "f67dfb357367da9e5e33f58230e934f80da09deeb45bf7745d0210b5c7831f54",
+  "candidateSha256": "add0c2de156ae4bc9e1b3ca7d96dd2bf219692f3abbf0dabea6d9a7bd1abd723",
   "score": 4,
   "pass": true,
   "evidence": [
-    "Independently recomputed the ordered, binary-safe SHA-256 fingerprint across all 117 current professorCandidateRelativePaths and exactly reproduced the assigned candidate.",
-    "The About page states the complete recursive method in plain language and is directly reachable from the homepage.",
-    "Harry J. Epstein Company traces customer language and operating habits into an integrated commerce and operations model, a maintained storefront refined through customer and team use, releases, reusable content patterns, and clearer workflows.",
-    "NYC Artist Coalition and FairRentNYC trace lived experience, meetings, public sources, unresolved questions, and civic actors into a recoverable record, campaign interfaces used with collaborators, and durable continuation artifacts.",
-    "Source-Backed Team Memory traces sources, claims, decisions, contributors, corrections, and audiences into structured records, a review prototype exercised through iterative research and human review, and correction paths and explicit continuation gates.",
-    "The systems loops are explicitly identified as Current, Current, and Current lab, with earlier continuities separately labeled.",
-    "The lab repeatedly states that it is early research and consulting practice rather than production SaaS, automated trust, surveillance, or a private archive browser.",
-    "Protected coursework remains bounded lineage without claims of disciplinary invention, production deployment, sole authorship, or current Max/Jitter proficiency.",
-    "Collective credit remains intact across Open House, WOWList, Sunday Dinner, NYC Artist Coalition, FairRentNYC, and policy outcomes.",
-    "The responsive evidence validates successfully against the exact 115-file public-surface fingerprint across 56 route-and-viewport rows.",
-    "Focused homepage review verifies a separate East River caption and Elana Gordon credit without overlap at all four widths.",
-    "The three phase-two photographs remain phase-2-reconciliation-pending, have null canonical bindings, and keep production and indexing open."
+    "Independently recomputed the exact SHA-256 over all 115 ordered candidate paths.",
+    "The About page names and links the complete recursive method.",
+    "Harry J. Epstein, NYC Artist Coalition and FairRentNYC, and Sunday Dinner and 196 each show relationship modeling, interface use with people, revision, documentation, and continuation.",
+    "WOWList, CallNYC, and source-backed team memory add bounded prototype, public-use, correction, and handoff evidence.",
+    "Historical coursework is not converted into present proficiency, invention, deployment, research, or sole-authorship claims."
   ],
-  "gaps": [],
+  "gaps": [
+    "Sunday Dinner remains intentionally summary-only and the lab remains an early method without a completed client pilot.",
+    "Human accessibility, rights, consent, production, deployment, and indexing gates remain open."
+  ],
   "safety_findings": [
-    "The East River occurrence distinguishes Elana Gordon's authorship from Jamie's archive custody and limits use to the approved occurrence.",
-    "The remaining phase-two photographs require creator, depicted-work, permission, caption, credit, and broader-rights reconciliation before production.",
-    "Private records, correspondence, archive locators, stakeholder data, analytics, and unapproved testimonials remain outside the public projection.",
-    "This passing holdout is not rights clearance, production authorization, deployment approval, or indexing approval."
+    "Collective credit and institutional causation remain explicit.",
+    "Private records, legal-review context, customer data, and unapproved media remain withheld.",
+    "The East River photograph is occurrence-bounded and its production and indexing states remain open."
   ],
-  "recommendation": "Pass PR-016 at score 4 for this exact candidate. Preserve separate human gates for photographic reconciliation, rights and consent, production release, deployment, and indexing.",
+  "recommendation": "Pass PR-016 at 4 for this exact candidate while preserving the present bounded language and all human gates.",
   "provenance": {
-    "provider": "OpenAI Codex",
-    "reviewMode": "bounded read-only holdout",
+    "provider": "codex-native-subagent",
+    "reviewReceiptDigest": "4c61753f4ef13c876b1b9c562c69e81e0d13fa91590e573d1f1ad57e8db9c7a5",
+    "reviewMode": "bounded independent holdout",
     "reviewerRole": "reader C",
-    "reviewedAt": "2026-07-26",
-    "candidatePathCount": 117,
+    "reviewedAt": "2026-07-28",
+    "candidatePathCount": 115,
     "candidateFingerprintRecomputed": true,
-    "publicSurfaceFileCount": 115,
     "responsiveMatrixRowsReviewed": 56,
-    "focusedVisualReviewViewports": [360, 375, 768, 1280],
+    "focusedVisualOccurrencesReviewed": 4,
     "filesEdited": false
   }
 }

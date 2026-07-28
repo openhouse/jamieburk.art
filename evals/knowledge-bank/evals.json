@@ -292,7 +292,7 @@
       "expectedSourceCount": 17,
       "expectedClaimCount": 8,
       "expectedInquiryCount": 4,
-      "approvedContentSha256": "f8061855fc0d467ccbe6862b9b8272ff2405fc9f8ee8cd72691628d6a69a16fd",
+      "approvedContentSha256": "82af297d1efcb88bf291c59486dbe63630bb54a8d56736747cd71a6400a87e38",
       "intakeIds": [
         "INTAKE-HORSE-LORDS-TRUTHERS-NPR-2016",
         "INTAKE-CLAUDETTE-ARORA-2022",
@@ -415,7 +415,14 @@
       "labPageId": "source-backed-team-memory",
       "labOccurrenceIds": [
         "source-backed-memory-method",
-        "ai-evals-course-completion"
+        "ai-evals-course-completion",
+        "callnyc-correction-trace"
+      ],
+      "labSourceIds": [
+        "SRC-AI-EVALS-CERTIFICATE-2026",
+        "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
+        "SRC-CALLNYC-POLITICO-2016-03-14",
+        "SRC-CALLNYC-GITHUB-REPOSITORY"
       ],
       "nterInquiryId": "INQ-NTER-CHNG-JAMIE-AUTHORSHIP",
       "nterClaimId": "CLM-NTER-CHNG-COLLABORATIVE-INSTALLATION-2010-2011",

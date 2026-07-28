@@ -47,6 +47,22 @@ relations:
     href: indexes/family-closure.md
     context: Selective integration record for the frozen Knowledge Wiki A-E branch family.
   - type: related_to
+    target: index.public-testimony
+    href: indexes/public-testimony.md
+    context: Recovered full-text public statements, explicit transcript gaps, and prepared-not-delivered boundaries.
+  - type: related_to
+    target: index.knowledge-wiki.public-testimony-and-hearing-voices
+    href: indexes/public-testimony-and-hearing-voices.md
+    context: Complete official-hearing populations, speaker ledgers, positions, and attribution boundaries.
+  - type: related_to
+    target: index.knowledge-wiki.commercial-rent-testimony
+    href: indexes/commercial-rent-testimony.md
+    context: Commercial Rent Stabilization bill introductions, prime-sponsor findings, hearing voices, and written-testimony queue.
+  - type: related_to
+    target: index.knowledge-wiki.commercial-rent-public-support
+    href: indexes/commercial-rent-public-support.md
+    context: Active state bills, public-safe event speaker indexes, official state sources, and explicit source gaps.
+  - type: related_to
     target: project.nyc-artist-coalition
     href: projects/nyc-artist-coalition-2017.md
     context: Governed civic-systems record strengthened by complete shared-folder accounting.
@@ -105,6 +121,18 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Branch-family closure](indexes/family-closure.md): exact frozen donors,
   selected strengths, consolidated pages, deliberate deferrals, and the human
   gates still required before public projection.
+- [Public testimony](indexes/public-testimony.md): recovered full-text
+  statements, prepared-but-not-delivered material, and an explicit queue for
+  public appearances whose verbatim records have not yet been recovered.
+- [Public testimony and hearing voices](indexes/public-testimony-and-hearing-voices.md):
+  complete official-hearing populations, attribution ledgers, explicit position
+  signals, and the distinction between source record and editorial view.
+- [Commercial Rent Stabilization testimony](indexes/commercial-rent-testimony.md):
+  the 2019 introduction, 2021 hearing, 2022 reintroduction, prime-sponsor
+  findings, supportive-speaker index, and written-submission review queue.
+- [Commercial Rent Stabilization public support](indexes/commercial-rent-public-support.md):
+  the active state bills, complete bounded public-event remarks, official state
+  statement populations, and time-aware speaker roles.
 - [NYC Artist Coalition](projects/nyc-artist-coalition-2017.md): public-source
   claims, collective-credit boundaries, and the governed shared-folder research
   pass.

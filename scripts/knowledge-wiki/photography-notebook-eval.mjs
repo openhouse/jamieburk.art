@@ -93,19 +93,22 @@ export function evaluatePhotographyNotebook(options = {}) {
   const field = record(manifest.fieldId);
   const proposal = record(manifest.proposalId);
   const oralHistory = record(manifest.oralHistoryId);
+  const constellation = record(manifest.constellationId);
   const visualIndex = record(manifest.visualIndexId);
   const notebookSource = source(manifest.notebookId);
   const fieldSource = source(manifest.fieldId);
   const proposalSource = source(manifest.proposalId);
   const oralHistorySource = source(manifest.oralHistoryId);
-  const combinedSource = `${notebookSource}\n${fieldSource}\n${proposalSource}\n${oralHistorySource}`;
+  const constellationSource = source(manifest.constellationId);
+  const combinedSource = `${notebookSource}\n${fieldSource}\n${proposalSource}\n${oralHistorySource}\n${constellationSource}`;
   const rfcSource = readFileSync(path.join(repoRoot, manifest.rfcPath), "utf8");
 
   const contentBindingsCurrent =
     sha256(notebookSource) === manifest.contentBindings.notebook &&
     sha256(fieldSource) === manifest.contentBindings.field &&
     sha256(proposalSource) === manifest.contentBindings.proposal &&
-    sha256(oralHistorySource) === manifest.contentBindings.oralHistory;
+    sha256(oralHistorySource) === manifest.contentBindings.oralHistory &&
+    sha256(constellationSource) === manifest.contentBindings.constellation;
 
   const machineClosesHumanGate = passageMatchesGroups(combinedSource, [
     /\b(?:machine|model|AI|algorithm|automation|automated|classifier|confidence|score|agent)\b/i,
@@ -138,18 +141,23 @@ export function evaluatePhotographyNotebook(options = {}) {
     proposal?.canonical_path === manifest.proposalPath &&
     oralHistory?.kind === "research-inquiry" &&
     oralHistory?.status === "governed-open" &&
-    oralHistory?.canonical_path === manifest.oralHistoryPath
+    oralHistory?.canonical_path === manifest.oralHistoryPath &&
+    constellation?.kind === "research-inquiry" &&
+    constellation?.status === "governed-open" &&
+    constellation?.canonical_path === manifest.constellationPath
   );
 
   const notebookReachable = Boolean(
     Boolean(notebook) &&
     Boolean(field) &&
     Boolean(proposal) &&
+    Boolean(constellation) &&
     root?.relations?.some((relation) => relation.target === manifest.notebookId) &&
     visualIndex?.relations?.some((relation) => relation.target === manifest.notebookId) &&
     notebook?.relations?.some((relation) => relation.target === manifest.fieldId) &&
     notebook?.relations?.some((relation) => relation.target === manifest.proposalId) &&
     notebook?.relations?.some((relation) => relation.target === manifest.oralHistoryId) &&
+    notebook?.relations?.some((relation) => relation.target === manifest.constellationId) &&
     proposal?.relations?.some((relation) => relation.target === manifest.fieldId) &&
     proposal?.relations?.some((relation) => relation.target === "project.sunday-dinner-196") &&
     field?.relations?.some((relation) => relation.target === manifest.oralHistoryId) &&
@@ -158,7 +166,8 @@ export function evaluatePhotographyNotebook(options = {}) {
     result.reachable.has(manifest.notebookId) &&
     result.reachable.has(manifest.fieldId) &&
     result.reachable.has(manifest.proposalId) &&
-    result.reachable.has(manifest.oralHistoryId)
+    result.reachable.has(manifest.oralHistoryId) &&
+    result.reachable.has(manifest.constellationId)
   );
 
   const fieldCorpusStateTruthful =
@@ -266,6 +275,8 @@ export function evaluatePhotographyNotebook(options = {}) {
     field?.projection?.surfaces?.length === 0 &&
     oralHistory?.projection?.status === "hold" &&
     oralHistory?.projection?.surfaces?.length === 0 &&
+    constellation?.projection?.status === "hold" &&
+    constellation?.projection?.surfaces?.length === 0 &&
     manifest.humanGates.every((gate) =>
       fieldSource.toLowerCase().includes(gate.toLowerCase())
     ) &&
@@ -279,7 +290,8 @@ export function evaluatePhotographyNotebook(options = {}) {
     !existsSync(path.join(repoRoot, "apps/www/src/app/photography")) &&
     notebook?.projection?.status !== "active" &&
     field?.projection?.status !== "active" &&
-    oralHistory?.projection?.status !== "active";
+    oralHistory?.projection?.status !== "active" &&
+    constellation?.projection?.status !== "active";
 
   const rfcBoundaryPreserved =
     /^stage: proposed$/m.test(rfcSource) &&

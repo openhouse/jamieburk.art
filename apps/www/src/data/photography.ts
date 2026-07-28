@@ -1,5 +1,5 @@
 export type PortfolioPhoto = {
-  id: "east-river" | "raft-riverboat" | "paper-trimming" | "printed-editions";
+  id: "east-river";
   src: string;
   width: number;
   height: number;
@@ -11,8 +11,8 @@ export type PortfolioPhoto = {
   placementIds: readonly string[];
   captionAssertionIds: readonly string[];
   creditAssertionIds: readonly string[];
-  knowledgeStatus: "bound" | "phase-2-reconciliation-pending";
-  placements: readonly ("home" | "about" | "colophon")[];
+  knowledgeStatus: "bound";
+  placements: readonly "home"[];
   publicationStatus: "jamie-authorized";
   releaseState: {
     publicGit: "approved";
@@ -54,81 +54,6 @@ export const portfolioPhotos = {
     },
     publicUseBoundary:
       "Elana Gordon is credited as photographer. Use is bounded to this approved portfolio occurrence; no broader rights are asserted."
-  },
-  raftRiverboat: {
-    id: "raft-riverboat",
-    src: "/images/field-notes/raft-riverboat.webp",
-    width: 1280,
-    height: 844,
-    alt: "A small handmade raft on a wide river beside the Delta Queen riverboat.",
-    caption: "A handmade raft and the Delta Queen on the river.",
-    credit: "Jamie Burkart photo archive; originally filed in Jamie's Flickr corpus.",
-    wikiId: null,
-    derivativeId: "derivative.photo.raft-riverboat.layout-c.v1",
-    placementIds: [],
-    captionAssertionIds: [],
-    creditAssertionIds: [],
-    knowledgeStatus: "phase-2-reconciliation-pending",
-    placements: ["about"],
-    publicationStatus: "jamie-authorized",
-    releaseState: {
-      publicGit: "approved",
-      staging: "approved",
-      production: "open",
-      indexing: "open"
-    },
-    publicUseBoundary:
-      "Jamie authorized this exact staging portfolio occurrence; creator, credit, and broader-rights reconciliation remain open."
-  },
-  paperTrimming: {
-    id: "paper-trimming",
-    src: "/images/field-notes/paper-trimming.webp",
-    width: 1276,
-    height: 956,
-    alt: "Hands align a stack of paper against the guide of a tabletop paper trimmer.",
-    caption: "Paper aligned at the trimming table.",
-    credit: "From Jamie Burkart's photo archive.",
-    wikiId: null,
-    derivativeId: "derivative.photo.paper-trimming.layout-c.v1",
-    placementIds: [],
-    captionAssertionIds: [],
-    creditAssertionIds: [],
-    knowledgeStatus: "phase-2-reconciliation-pending",
-    placements: ["colophon"],
-    publicationStatus: "jamie-authorized",
-    releaseState: {
-      publicGit: "approved",
-      staging: "approved",
-      production: "open",
-      indexing: "open"
-    },
-    publicUseBoundary:
-      "Jamie authorized this exact staging portfolio occurrence; creator, depicted-work, credit, and broader-rights reconciliation remain open."
-  },
-  printedEditions: {
-    id: "printed-editions",
-    src: "/images/field-notes/printed-editions.webp",
-    width: 1276,
-    height: 956,
-    alt: "Small folded printed editions stand among tools on a worktable.",
-    caption: "Small printed editions in progress.",
-    credit: "From Jamie Burkart's photo archive.",
-    wikiId: null,
-    derivativeId: "derivative.photo.printed-editions.layout-c.v1",
-    placementIds: [],
-    captionAssertionIds: [],
-    creditAssertionIds: [],
-    knowledgeStatus: "phase-2-reconciliation-pending",
-    placements: ["colophon"],
-    publicationStatus: "jamie-authorized",
-    releaseState: {
-      publicGit: "approved",
-      staging: "approved",
-      production: "open",
-      indexing: "open"
-    },
-    publicUseBoundary:
-      "Jamie authorized this exact staging portfolio occurrence; creator, depicted-work, credit, and broader-rights reconciliation remain open."
   }
 } as const satisfies Record<string, PortfolioPhoto>;
 

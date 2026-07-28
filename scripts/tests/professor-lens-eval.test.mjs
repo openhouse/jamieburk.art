@@ -15,6 +15,10 @@ const sourceNoteText = readFileSync(
   path.join(repoRoot, "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md"),
   "utf8"
 );
+const publicRegistryText = readFileSync(
+  path.join(repoRoot, "apps/www/src/data/knowledge-bank/public-registry.json"),
+  "utf8"
+);
 const suite = JSON.parse(
   readFileSync(path.join(repoRoot, ".agents/evals/portfolio-production-readiness.json"), "utf8")
 );
@@ -28,8 +32,12 @@ test("professor lenses pass every bounded criterion", () => {
 test("guard rejects erasing collective Open House governance", () => {
   const result = evaluateProfessorLenses({
     suite,
-    aboutText: aboutText.replace("participants collectively governed", "Jamie governed"),
-    sourceNoteText
+    aboutText,
+    sourceNoteText,
+    publicRegistryText: publicRegistryText.replace(
+      "participants used communal decision-making",
+      "Jamie governed"
+    )
   });
   assert.equal(result.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "open-house-boundary")?.pass, false);

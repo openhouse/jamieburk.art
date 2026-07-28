@@ -302,6 +302,29 @@ const knowledgeBankInput = {
       antiClaims: [], researchInquiryIds: [], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     {
+      id: "CLM-CALLNYC-CHRONOLOGY-CORRECTION-2016",
+      project: "callnyc",
+      internalClaim: "The recovered event, data-release, press, and implementation chronology places CallNYC in 2016 rather than 2014-2015.",
+      status: "confirmed-with-boundary",
+      projections: [{
+        key: "case-study",
+        text: "The recovered public chronology places CallNYC in 2016.",
+        status: "active",
+        citationRequired: true,
+        surfaces: ["/lab/source-backed-team-memory"]
+      }],
+      evidence: [
+        { sourceId: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", relationship: "direct-support", supports: ["January 2016 Council hackathon date and time"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-CALLNYC-POLITICO-2016-03-14", relationship: "direct-support", supports: ["March 2016 public coverage and data-release sequence"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-CALLNYC-GITHUB-REPOSITORY", relationship: "corroborating", supports: ["surviving 2016 implementation history"], confidence: "high", renderCitation: true }
+      ],
+      boundaries: ["This corrects the project year; it does not make CallNYC an official Council product or a documented hackathon submission."],
+      antiClaims: ["CallNYC existed in 2014-2015", "CallNYC was commissioned by the Council"],
+      researchInquiryIds: [],
+      reviewedAt: "2026-07-28",
+      reviewedBy: ["Jamie Burkart", "Codex archival review"]
+    },
+    {
       id: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
       project: "callnyc",
       internalClaim: "After the fuller CouncilStat dataset was released, Jamie independently built CallNYC as a public-facing interpretation of those constituent-services records.",
@@ -442,12 +465,26 @@ const knowledgeBankInput = {
   ],
   proofCoverageTargets: [...proofCoverageTargets],
   corrections: [
-    { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
+    { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-CHRONOLOGY-CORRECTION-2016", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" },
     { id: "COR-NYCAC-CABARET-HEARING-DATE-2026", claimId: "CLM-NYCAC-CABARET-TESTIMONY-2017", previousText: "June 19, 2017", replacementText: "September 14, 2017", reason: "The official transcript title page identifies the Committee on Consumer Affairs hearing date as September 14, 2017.", decidedAt: "2026-07-14", affectedSurfaces: ["/work/fair-rent-nyc", "knowledge-bank", "public-citation-registry"], status: "active" }
   ],
   pages: [{
+    id: "about",
+    surface: "/about",
+    sourceOrder: [
+      "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28"
+    ],
+    occurrences: [
+      {
+        id: "open-house-participatory-gallery",
+        claimId: "CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY",
+        projection: "archive-note",
+        sourceIds: ["SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28"]
+      }
+    ]
+  }, {
     id: "callnyc",
     surface: "/work/callnyc",
     sourceOrder: [
@@ -612,10 +649,25 @@ const knowledgeBankInput = {
   }, {
     id: "source-backed-team-memory",
     surface: "/lab/source-backed-team-memory",
-    sourceOrder: ["SRC-AI-EVALS-CERTIFICATE-2026"],
+    sourceOrder: [
+      "SRC-AI-EVALS-CERTIFICATE-2026",
+      "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
+      "SRC-CALLNYC-POLITICO-2016-03-14",
+      "SRC-CALLNYC-GITHUB-REPOSITORY"
+    ],
     occurrences: [
       { id: "source-backed-memory-method", claimId: "CLM-SOURCE-BACKED-MEMORY-METHOD-2026", projection: "case-study" },
-      { id: "ai-evals-course-completion", claimId: "CLM-AI-EVALS-COURSE-COMPLETION-2026", projection: "case-study", sourceIds: ["SRC-AI-EVALS-CERTIFICATE-2026"] }
+      { id: "ai-evals-course-completion", claimId: "CLM-AI-EVALS-COURSE-COMPLETION-2026", projection: "case-study", sourceIds: ["SRC-AI-EVALS-CERTIFICATE-2026"] },
+      {
+        id: "callnyc-correction-trace",
+        claimId: "CLM-CALLNYC-CHRONOLOGY-CORRECTION-2016",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
+          "SRC-CALLNYC-POLITICO-2016-03-14",
+          "SRC-CALLNYC-GITHUB-REPOSITORY"
+        ]
+      }
     ]
   }]
 };

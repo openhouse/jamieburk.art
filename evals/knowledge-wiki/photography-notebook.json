@@ -1,6 +1,6 @@
 {
   "suite": "knowledge-wiki-photography-field-notebook",
-  "version": 7,
+  "version": 8,
   "notebookId": "index.knowledge-wiki.photography-notebook",
   "notebookPath": "docs/knowledge-bank/notebooks/photography/README.md",
   "fieldId": "research-inquiry.photography.field-corpus-001",
@@ -9,13 +9,16 @@
   "proposalPath": "docs/knowledge-bank/notebooks/photography/196-first-pass-proposal.md",
   "oralHistoryId": "research-inquiry.photography.oral-history-stewardship-afterlife-001",
   "oralHistoryPath": "docs/knowledge-bank/notebooks/photography/oral-history-stewardship-afterlife-001.md",
+  "constellationId": "research-inquiry.photography.event-transcript-constellations",
+  "constellationPath": "docs/knowledge-bank/notebooks/photography/event-transcript-photo-constellations.md",
   "visualIndexId": "index.knowledge-wiki.visual-evidence",
   "rfcPath": "rfcs/0002-lifetime-photo-archive-fieldwork.md",
   "contentBindings": {
-    "notebook": "5e764f018a12eea13da59b508bdc2c90f0d9ec7ac0ef726fc0189d6687d2aa43",
+    "notebook": "25375266b5f4b8b3d45435dc4d0625ff53ccf303d2be43e4f43c350bbb592d30",
     "field": "a4d9f27c23c484726d4f7672798832cc4be5dd119128d442604f0b4e159e5a1b",
     "proposal": "68a4cdc3b33aae711186572e35fd16d95076289b807ec285355e866d50053120",
-    "oralHistory": "b141a08f2f9d1b45c7b6dca1c9bcbe81560074f45cb0a65bbed501b25ee7aedc"
+    "oralHistory": "b141a08f2f9d1b45c7b6dca1c9bcbe81560074f45cb0a65bbed501b25ee7aedc",
+    "constellation": "a725bd55300c7b591ef36bcf9424469bde217ca019c4a11996969e09a04e46ff"
   },
   "residencyAcceptance": {
     "acceptedBy": "Jamie Burkart",

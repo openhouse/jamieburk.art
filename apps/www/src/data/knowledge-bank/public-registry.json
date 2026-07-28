@@ -140,6 +140,27 @@
       ]
     },
     {
+      "id": "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28",
+      "title": "Open House: How Jamie Burkart turned a UCSC gallery into a 10-day experiment in communal living",
+      "organization": "Good Times",
+      "author": "Laura Mattingly",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2006-06-28",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Laura Mattingly, 'Open House,' Good Times, June 28, 2006.",
+      "publicNote": "Contemporaneous profile of Open House, earlier Shop Shows, communal governance, public participation, and collaborative documentation.",
+      "doesNotEstablish": [
+        "Jamie as sole author of collective activity",
+        "consent to republish participant details or images",
+        "complete attendance",
+        "long-term participant outcomes"
+      ]
+    },
+    {
       "id": "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
       "title": "DIY Venues Demand Repeal Of Widely Reviled Cabaret Law",
       "organization": "Gothamist",
@@ -1215,6 +1236,53 @@
       ]
     },
     {
+      "id": "CLM-CALLNYC-CHRONOLOGY-CORRECTION-2016",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The recovered public chronology places CallNYC in 2016.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/lab/source-backed-team-memory"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
+          "relationship": "direct-support",
+          "supports": [
+            "January 2016 Council hackathon date and time"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-POLITICO-2016-03-14",
+          "relationship": "direct-support",
+          "supports": [
+            "March 2016 public coverage and data-release sequence"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-GITHUB-REPOSITORY",
+          "relationship": "corroborating",
+          "supports": [
+            "surviving 2016 implementation history"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "This corrects the project year; it does not make CallNYC an official Council product or a documented hackathon submission."
+      ]
+    },
+    {
       "id": "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -1448,6 +1516,40 @@
         "Only the workflow schema supports the public projection; participant-level values stay private.",
         "The claim does not establish gathering count, resident-artist count, attendance scale, or community impact.",
         "Private recordkeeping is not participant consent, endorsement, or permission to publish."
+      ]
+    },
+    {
+      "id": "CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "archive-note",
+          "text": "I initiated Open House, a ten-day UCSC gallery experiment in communal living and participatory art whose participants used communal decision-making and many-perspective documentation.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/about"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's initiation of Open House",
+            "ten-day form",
+            "communal decision-making",
+            "public participation",
+            "multi-perspective documentation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Treat the activity and governance as collective.",
+        "Do not republish participant identities, family circumstances, or photographs without a separate editorial and consent review."
       ]
     },
     {
@@ -2609,6 +2711,23 @@
   ],
   "pages": [
     {
+      "id": "about",
+      "surface": "/about",
+      "sourceOrder": [
+        "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28"
+      ],
+      "occurrences": [
+        {
+          "id": "open-house-participatory-gallery",
+          "claimId": "CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY",
+          "projection": "archive-note",
+          "sourceIds": [
+            "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28"
+          ]
+        }
+      ]
+    },
+    {
       "id": "callnyc",
       "surface": "/work/callnyc",
       "sourceOrder": [
@@ -2994,7 +3113,10 @@
       "id": "source-backed-team-memory",
       "surface": "/lab/source-backed-team-memory",
       "sourceOrder": [
-        "SRC-AI-EVALS-CERTIFICATE-2026"
+        "SRC-AI-EVALS-CERTIFICATE-2026",
+        "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
+        "SRC-CALLNYC-POLITICO-2016-03-14",
+        "SRC-CALLNYC-GITHUB-REPOSITORY"
       ],
       "occurrences": [
         {
@@ -3008,6 +3130,16 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-AI-EVALS-CERTIFICATE-2026"
+          ]
+        },
+        {
+          "id": "callnyc-correction-trace",
+          "claimId": "CLM-CALLNYC-CHRONOLOGY-CORRECTION-2016",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
+            "SRC-CALLNYC-POLITICO-2016-03-14",
+            "SRC-CALLNYC-GITHUB-REPOSITORY"
           ]
         }
       ]

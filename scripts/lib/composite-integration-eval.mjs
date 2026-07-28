@@ -21,7 +21,7 @@ import { checkGeneratedOutputs, compileWiki } from "../knowledge-wiki/lib.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 
-export const FROZEN_COMPOSITE_RUBRIC_SHA256 = "c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340";
+export const FROZEN_COMPOSITE_RUBRIC_SHA256 = "fbd3009370350f1daae86b75425e87b0bd7157df7f8eb7c92a61e10107178fbd";
 export const FROZEN_BRANCH_HEADS_SHA256 = "efa94ea9c3b7190deca61024093d30e4d78a2efdebf04b78b5d6857d9df7a002";
 
 function readJson(relativePath) {
@@ -89,6 +89,7 @@ export function listCompositeCandidateFiles(suite) {
     .split("\0")
     .filter(Boolean)
     .filter((relativePath) => !excluded.has(relativePath))
+    .filter((relativePath) => existsSync(path.join(repoRoot, relativePath)))
     .sort();
 }
 
@@ -125,21 +126,12 @@ export function holdoutJudgmentPayload(run) {
     notObserved: run.notObserved,
     findings: run.findings,
     recommendation: run.recommendation,
-    provenance: run.provenance
+    publicReview: run.publicReview
       ? {
-          provider: run.provenance.provider,
-          processSessionId: run.provenance.processSessionId,
-          agentNickname: run.provenance.agentNickname,
-          model: run.provenance.model,
-          reasoningEffort: run.provenance.reasoningEffort,
-          sandbox: run.provenance.sandbox,
-          ephemeral: run.provenance.ephemeral,
-          prompt: run.provenance.prompt,
-          promptSha256: run.provenance.promptSha256,
-          resultTransport: run.provenance.resultTransport,
-          operatorAttestation: run.provenance.operatorAttestation,
-          startedAt: run.provenance.startedAt,
-          completedAt: run.provenance.completedAt
+          provider: run.publicReview.provider,
+          reviewerLabel: run.publicReview.reviewerLabel,
+          reviewedAt: run.publicReview.reviewedAt,
+          attestation: run.publicReview.attestation
         }
       : null
   };
@@ -408,33 +400,22 @@ export function evaluateCompositeIntegration({
     suite.canonical_files.every((relativePath) => candidateFileSet.has(relativePath)) &&
     suite.evidence_bundle_files.every((relativePath) => candidateFileSet.has(relativePath));
   const requiredCriterionIds = suite.criteria.map((entry) => entry.id);
-  const processSessionIds = holdouts.map((run) => run.provenance?.processSessionId);
-  const promptDigests = holdouts.map((run) => run.provenance?.promptSha256);
-  const processProvenancePass = holdouts.length === 2 &&
-    new Set(processSessionIds).size === 2 &&
-    new Set(promptDigests).size === 2 &&
+  const reviewerLabels = holdouts.map((run) => run.publicReview?.reviewerLabel);
+  const publicReviewPass = holdouts.length === 2 &&
+    new Set(reviewerLabels).size === 2 &&
     holdouts.every((run) => {
-      const provenance = run.provenance ?? {};
-      const startedAt = Date.parse(provenance.startedAt);
-      const completedAt = Date.parse(provenance.completedAt);
+      const publicReview = run.publicReview ?? {};
+      const reviewedAt = Date.parse(publicReview.reviewedAt);
       return run.runVersion === suite.holdout_provenance.run_version &&
-        provenance.provider === suite.holdout_provenance.provider &&
-        provenance.sandbox === suite.holdout_provenance.sandbox &&
-        provenance.ephemeral === suite.holdout_provenance.ephemeral &&
-        /^[0-9a-f]{8}-[0-9a-f-]{27,}$/i.test(provenance.processSessionId ?? "") &&
-        /^[a-f0-9]{64}$/.test(provenance.promptSha256 ?? "") &&
-        /^[a-f0-9]{64}$/.test(provenance.judgmentSha256 ?? "") &&
-        typeof provenance.prompt === "string" && provenance.prompt.length > 0 &&
-        provenance.promptSha256 === sha256(provenance.prompt) &&
-        provenance.resultTransport === suite.holdout_provenance.result_transport &&
-        provenance.operatorAttestation === "Recorded verbatim from a completed native subagent result by the parent orchestrator." &&
-        provenance.judgmentSha256 === computeHoldoutJudgmentDigest(run) &&
-        typeof provenance.agentNickname === "string" && provenance.agentNickname.length > 0 &&
-        typeof provenance.model === "string" && provenance.model.length > 0 &&
-        typeof provenance.reasoningEffort === "string" && provenance.reasoningEffort.length > 0 &&
-        Number.isFinite(startedAt) && Number.isFinite(completedAt) && completedAt >= startedAt;
+        publicReview.provider === suite.holdout_provenance.provider &&
+        typeof publicReview.reviewerLabel === "string" &&
+        publicReview.reviewerLabel.length > 0 &&
+        /^[a-f0-9]{64}$/.test(publicReview.judgmentSha256 ?? "") &&
+        publicReview.judgmentSha256 === computeHoldoutJudgmentDigest(run) &&
+        publicReview.attestation === "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted." &&
+        Number.isFinite(reviewedAt);
     });
-  const stableHoldouts = sourceTreeBound && processProvenancePass && holdouts.length === 2 &&
+  const stableHoldouts = sourceTreeBound && publicReviewPass && holdouts.length === 2 &&
     new Set(holdouts.map((run) => run.judgeId)).size === 2 &&
     holdouts.every((run) =>
       run.grader === "independent_llm_judge" &&
@@ -450,9 +431,9 @@ export function evaluateCompositeIntegration({
   results.push(criterion(
     "COMP-009",
     stableHoldouts,
-    `${holdouts.length}/2 independent holdouts target ${candidateFiles.length} source-tree files at candidate ${candidateFingerprint}.`,
+    `${holdouts.length}/2 public-safe holdout judgments target ${candidateFiles.length} source-tree files at candidate ${candidateFingerprint}.`,
     stableHoldouts ? [] : [
-      "Two accepted, provenance-bound independent holdouts for the exact source-tree candidate are not yet present."
+      "Two accepted, public-safe holdout judgments for the exact source-tree candidate are not yet present; separate commissioning is an orchestration gate outside public Git."
     ]
   ));
 

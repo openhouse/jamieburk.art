@@ -5,7 +5,7 @@ kind: method
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-26
+last_reviewed: 2026-07-28
 review_by: 2027-01-26
 canonical_path: docs/knowledge-bank/workflows/photography-east-river-canary.md
 summary: Teammate tutorial for tracing, validating, correcting, revoking, and safely extending the first complete photo knowledge occurrence without access to private archive details.
@@ -82,6 +82,31 @@ The checks cover derivative integrity, metadata stripping, source-binding
 opacity, caption assertions, creator credit, permission scope, placement,
 revocation, protected absence, recollection holds, and exact-candidate binding.
 
+### Carry forward a verified binding only when its relevant material is unchanged
+
+The broad photo candidate includes research records and held decisions that may
+not affect this occurrence. A frozen, exact verified receipt may be carried
+forward after a bounded comparison:
+
+```bash
+node scripts/photo-knowledge/cli.mjs \
+  carry-forward-receipt \
+  /path/to/frozen-prior-candidate
+```
+
+The command refuses the carry-forward when the derivative, canary contract,
+East River manifest entry, Hero source or styles, asset, metadata, permission,
+credit, curatorial decision, placement, edition, or photographer record changed.
+It records the prior receipt digest and both candidate identities without
+writing the private source identifier. Changes outside that binding-relevant
+set still produce a new exact candidate receipt, but do not require repeating
+the private asset match.
+
+This is a verification-cost rule, not a publication shortcut. A changed crop,
+destination, context, permission, credit, or visible frame requires a fresh
+private verification. Production and indexing remain open human gates either
+way.
+
 ## 5. Inspect the living return
 
 The homepage encounter prompted a [dated recollection](../sources/recollections/jamie-canoe-commuting-2026-07.md)
@@ -114,7 +139,9 @@ For each promoted asset:
 4. Record a curatorial proposal before a selection decision.
 5. Bind an exact derivative to an exact occurrence and portfolio edition.
 6. Preserve production and indexing as human gates.
-7. Recompute the candidate receipt and rerun every affected test.
+7. Write an exact candidate receipt and rerun every affected test. Use the
+   bounded carry-forward only when its comparison passes; otherwise perform a
+   fresh private verification.
 
 ## Human authority
 

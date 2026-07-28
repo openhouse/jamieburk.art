@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { FieldPhoto } from "@/components/FieldPhoto";
-import { portfolioPhotos } from "@/data/photography";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -39,18 +37,6 @@ export default function ColophonPage() {
           indexable, and production should only become indexable after content,
           rights, and metadata review.
         </p>
-      </div>
-      <div className="mt-14 grid gap-4 md:grid-cols-[0.42fr_0.58fr]">
-        <FieldPhoto
-          imageClassName="aspect-[4/5] object-cover"
-          photo={portfolioPhotos.paperTrimming}
-          sizes="(max-width: 768px) 100vw, 42vw"
-        />
-        <FieldPhoto
-          imageClassName="aspect-[4/5] object-cover"
-          photo={portfolioPhotos.printedEditions}
-          sizes="(max-width: 768px) 100vw, 58vw"
-        />
       </div>
       <div className="mt-14 grid gap-8 lg:grid-cols-[0.32fr_0.68fr]">
         <div>

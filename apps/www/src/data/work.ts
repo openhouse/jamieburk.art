@@ -410,7 +410,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Django / PostgreSQL / PostGIS and Ember community-calendar platform organized around followable keyword communities, adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+      "Co-built and operated a community-calendar platform for DIY arts and music organizers. A July 2017 production snapshot records 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -433,9 +433,9 @@ const workItemsInput = [
     ],
     tags: ["Community Systems", "Web Systems", "Product Operations", "Public-Facing Tools"],
     capabilities: [
-      "Django",
-      "PostgreSQL / PostGIS",
-      "Ember.js",
+      "Community Platform Delivery",
+      "Organizer Workflow Design",
+      "Product Operations",
       "Community Platform Design",
       "Event Workflows"
     ],
@@ -453,13 +453,13 @@ const workItemsInput = [
       "Followable keyword communities",
       "Organizer-facing distribution workflows",
       "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
-      "Roughly 35 city ecosystems reached"
+      "35 city-region keys with at least 50 posts in the July 2017 snapshot"
     ],
     knownOpenProtected: {
       known:
         "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
       open:
-        "Screenshots, archive links, and precise adoption wording need approval.",
+        "Screenshots, archive links, and individual technical-contribution allocation need further review.",
       protected:
         "Private user data, organizer contact lists, and unapproved community records are not published."
     }
@@ -472,7 +472,7 @@ const workItemsInput = [
     summary:
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
     role: "Host, Organizer & Systems Steward",
-    years: "2010s",
+    years: "2010s-present",
     status: "Short proof page",
     featured: true,
     priority: 5,
@@ -498,7 +498,7 @@ const workItemsInput = [
     sourceLayer:
       "Public-safe summary, approved public materials pending, and private records intentionally omitted.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
-    currentStatus: "Public-safe summary only.",
+    currentStatus: "Active practice; public-safe summary only.",
     group: "Community and cultural infrastructure",
     roleFit:
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",

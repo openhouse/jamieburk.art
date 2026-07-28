@@ -5,7 +5,7 @@ kind: index
 status: governed-open
 visibility: public-safe
 sensitivity: moderate
-last_reviewed: 2026-07-26
+last_reviewed: 2026-07-28
 review_by: 2026-08-22
 canonical_path: docs/knowledge-bank/notebooks/photography/README.md
 summary: >
@@ -32,6 +32,10 @@ relations:
     target: research-inquiry.photography.oral-history-stewardship-afterlife-001
     href: oral-history-stewardship-afterlife-001.md
     context: First governed photo-to-oral-history prompt, held outside claim and publication states.
+  - type: related_to
+    target: research-inquiry.photography.event-transcript-constellations
+    href: event-transcript-photo-constellations.md
+    context: Private-first method for reconnecting simultaneous event recordings and photographs.
   - type: related_to
     target: method.structure-grows-from-material
     href: ../../methods/structure-grows-from-the-material.md
@@ -126,6 +130,10 @@ observations merely to make the notebook look complete.
   privately held photograph selected to invite Jamie's recollection about
   stewardship, relationship, and project afterlife. The prompt is not a claim,
   caption, or publication decision.
+- [Event transcript and photograph constellations](event-transcript-photo-constellations.md):
+  a private-first protocol for reconnecting event recordings, simultaneous
+  documentary photographs, existing People associations, and prior nested
+  selects without converting retrieval signals into public claims.
 
 The notebook will grow through dated encounters. New structure should answer
 what the photographs make newly perceptible, not impose a complete taxonomy in

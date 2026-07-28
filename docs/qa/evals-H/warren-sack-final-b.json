@@ -1,51 +1,38 @@
 {
-  "evaluator": "Bounded holdout reader B applying the imagined Prof. Warren Sack lens, not an endorsement",
-  "reviewerId": "sack-b-photo-knowledge-c-f67dfb-2026-07-26-revised",
+  "evaluator": "Imagined Prof. Warren Sack lens; independent reader B, not the named professor or an endorsement",
+  "reviewerId": "sack-reader-b-2026-07-28-add0c2de",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "f67dfb357367da9e5e33f58230e934f80da09deeb45bf7745d0210b5c7831f54",
+  "candidateSha256": "add0c2de156ae4bc9e1b3ca7d96dd2bf219692f3abbf0dabea6d9a7bd1abd723",
   "score": 4,
   "pass": true,
   "evidence": [
-    "An ordered, binary-safe SHA-256 calculation over all 117 professorCandidateRelativePaths reproduced the assigned fingerprint exactly in a clean worktree.",
-    "The About page states the complete recursive method within one click of the homepage.",
-    "Harry J. Epstein Company makes the sequence reconstructable through customer language and operating habits, an integrated commerce and operations model, a maintained public storefront refined through customer and team use, incremental releases, reusable content patterns, and clearer workflows.",
-    "NYC Artist Coalition and FairRentNYC make the sequence reconstructable through lived experience, meetings, sources, questions, civic actors, recoverable records, participatory interfaces, and continuity artifacts.",
-    "Source-Backed Team Memory makes the sequence reconstructable at its declared lab maturity through structured evidence and agency records, a working review interface, iterative human review, and human continuation gates.",
-    "The lab distinguishes a tested method from external adoption, production SaaS, market validation, automated trust, surveillance, or a private archive browser.",
-    "Across the three current systems loops, readers can connect social structure and information architecture to interfaces, bounded human use, learning, correction, and continuation.",
-    "Dated UCSC coursework remains protected contextual lineage without claims of disciplinary invention, production deployment, sole authorship, or current tool proficiency.",
-    "Collective credit remains intact across Open House, WOWList, NYC Artist Coalition, FairRentNYC, Sunday Dinner, and policy outcomes.",
-    "The East River canary binds the exact derivative, creator, archive custody, caption assertions, permission, placement, correction, rollback, and release states.",
-    "The other three photographs remain phase-2-reconciliation-pending and retain open production and indexing states.",
-    "The 56 responsive rows pass the reported accessibility, overflow, image, request, heading, landmark, and focused caption and credit checks.",
-    "The photo-knowledge evaluation passes 15 checks and six criteria while preserving human authority over rights, consent, publication, production, and indexing."
+    "Independently recomputed the exact SHA-256 over all 115 ordered candidate paths.",
+    "The recurring sequence is plainly named and evidenced through HJE, NYC Artist Coalition and FairRentNYC, and Sunday Dinner and 196.",
+    "WOWList supplies historical collective-use evidence, CallNYC supplies a source-to-interface trace, and the Knowledge Wiki supplies correction and continuation mechanics.",
+    "Current systems are separated from historical prototypes and unfinished research.",
+    "All 56 responsive rows passed their declared route, accessibility, image, overflow, request, heading, and landmark checks."
   ],
   "gaps": [
-    "HJE's public handoff evidence is summarized through reusable patterns and clearer workflows rather than exposed as a specific public-safe handoff artifact.",
-    "Source-Backed Team Memory demonstrates a working method at lab maturity, not completed external adoption, production deployment, or market validation.",
-    "The three phase-two photographs require creator, depicted-work, permission, credit, and occurrence reconciliation before production."
+    "Some HJE and Sunday Dinner operational evidence remains properly protected.",
+    "Independent corroboration of the resident-artist aggregate and human screen-reader and browser-zoom review remain open."
   ],
   "safety_findings": [
-    "Collective work, implementation, advocacy, institutional adoption, and legislative outcomes are not collapsed into sole causality.",
-    "Launch, use, adoption, and production maturity remain distinct.",
-    "Protected records and private correspondence remain outside the public projection.",
-    "Phase-two photo records cannot authorize production or indexing.",
-    "This passing judgment is not rights clearance, production authorization, deployment approval, or indexing approval."
+    "Collective advocacy and participant work are not absorbed into individual causation.",
+    "Protected records and private locators remain outside public projection.",
+    "Exact photographic rights, credit, consent, crop, and release decisions remain human gates."
   ],
-  "recommendation": "Pass PR-016 at score 4 for the exact candidate. Preserve the distinctions among use, lab testing, adoption, and production maturity, and keep phase-two photographs held for human review.",
+  "recommendation": "Pass PR-016 at 4 for this exact candidate; treat the result as evaluation evidence, not production clearance.",
   "provenance": {
-    "provider": "OpenAI Codex",
-    "reviewMode": "bounded independent read-only holdout",
+    "provider": "codex-native-subagent",
+    "reviewReceiptDigest": "bed2afb7deaec4a86fd53f07cd99cd25ea069a888873ad50c4d5b5deb31d9fa8",
+    "reviewMode": "bounded independent holdout",
     "reviewerRole": "reader B",
-    "reviewedAt": "2026-07-26",
-    "candidatePathCount": 117,
+    "reviewedAt": "2026-07-28",
+    "candidatePathCount": 115,
     "candidateFingerprintRecomputed": true,
-    "worktreeClean": true,
-    "responsivePublicSurfaceFileCount": 115,
-    "responsiveRowsReviewed": 56,
-    "responsiveEvidenceValidated": true,
-    "deterministicPhotoCheck": "15 checks and 6 criteria passed",
+    "responsiveMatrixRowsReviewed": 56,
+    "focusedVisualOccurrencesReviewed": 4,
     "filesEdited": false
   }
 }
