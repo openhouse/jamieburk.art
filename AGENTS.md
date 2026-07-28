@@ -106,6 +106,37 @@ Run its deterministic checks before promoting a claim or source into a public
 page. The bank should become deeper with each pass while the public site remains
 selective.
 
+Use `evals/pre-launch/suite.json` and
+`node scripts/pre-launch-evals/check.mjs` for dependency-aware iteration.
+Unknown paths, governance changes, and deployment changes fail closed to the
+full suite. `npm run wiki:check` and `npm run wiki:test` include the pre-launch
+contract, campaign-media census, and public-testimony corpus in the standard
+repository check. After candidate lock, run the unchanged `npm run check` and
+build gates, then bind browser evidence and model judgment to the exact
+candidate, contract, and evidence packet. Budget exhaustion, missing judgment,
+and stale receipts remain blocked states rather than passes. Rights, consent,
+editorial approval, deployment observation, and production indexing remain
+human gates.
+
+## Public Testimony
+
+- Build full-text corpora only from official public transcripts bound to source
+  and normalized-text hashes.
+- Keep every detected speaker in the census. Include transcript bodies only for
+  speakers whose attributable turns support the scoped issue or support it in
+  part.
+- Apply the same rule to public officials and members of the public. Sponsorship,
+  presence, a favorable vote, or official title does not substitute for a
+  supportive statement.
+- Preserve attribution, source order, page locators, reporter uncertainty, and
+  the distinction between oral testimony, written testimony, legislative text,
+  and editorial classification.
+- Testimony records what a speaker said. It does not independently verify every
+  assertion, prove consensus, establish causation, or transfer collective work
+  to Jamie.
+- Do not publish direct private contact information. Return to the official
+  representation before consequential quotation or public projection.
+
 ## Photography Notebook
 
 - Use `docs/knowledge-bank/notebooks/photography/` for public-safe field notes,

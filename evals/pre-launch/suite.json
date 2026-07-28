@@ -1,0 +1,172 @@
+{
+  "suiteId": "resource-aware-pre-launch",
+  "version": 1,
+  "baseRef": "origin/develop",
+  "principles": [
+    "Run cheap deterministic checks while the candidate is changing.",
+    "Invalidate every affected domain when a changed path crosses a governed boundary.",
+    "Treat an unknown path as full-suite work rather than guessing.",
+    "Run the unchanged full release suite only after candidate lock.",
+    "Bind model judgment to the exact candidate, contract, and evidence packet.",
+    "Budget exhaustion, stale evidence, and missing judgment are blocked states, never passes.",
+    "Human rights, consent, editorial, deployment, and indexing gates cannot be automated away."
+  ],
+  "domains": [
+    {
+      "id": "testimony",
+      "pathPatterns": [
+        "^scripts/public-testimony/",
+        "^docs/knowledge-bank/data/public-testimony/",
+        "^docs/knowledge-bank/(indexes/public-testimony|sources/nycc-|research-runs/public-testimony)"
+      ],
+      "iterationCommands": [
+        "node scripts/public-testimony/check.mjs",
+        "node --test scripts/public-testimony/public-testimony.test.mjs",
+        "npm run wiki:check",
+        "npm run public-safety"
+      ]
+    },
+    {
+      "id": "campaign-media",
+      "pathPatterns": [
+        "^scripts/campaign-media-census/",
+        "^docs/knowledge-bank/data/campaign-site-media-census-",
+        "^docs/knowledge-bank/(indexes/campaign-site-photography|sources/campaign-site-media|research-runs/campaign-site-photography)"
+      ],
+      "iterationCommands": [
+        "node scripts/campaign-media-census/check.mjs",
+        "node --test scripts/campaign-media-census/campaign-media-census.test.mjs",
+        "npm run wiki:check",
+        "npm run public-safety"
+      ]
+    },
+    {
+      "id": "knowledge-wiki",
+      "pathPatterns": [
+        "^docs/knowledge-bank/",
+        "^scripts/knowledge-wiki/",
+        "^evals/knowledge-(bank|wiki)/"
+      ],
+      "iterationCommands": [
+        "npm run wiki:check",
+        "npm run wiki:test",
+        "npm run wiki:eval",
+        "npm run knowledge-bank",
+        "npm run public-safety"
+      ]
+    },
+    {
+      "id": "photography",
+      "pathPatterns": [
+        "^docs/photography/",
+        "^scripts/photo-knowledge/",
+        "^evals/photo-knowledge/",
+        "^apps/www/public/images/",
+        "^docs/knowledge-bank/(assets/photographs|projections/photography|decisions/photography|evaluations/curatorial)"
+      ],
+      "iterationCommands": [
+        "npm run photos:check",
+        "npm run photos:test",
+        "npm run evals:layout",
+        "npm run test:layout",
+        "npm run public-safety"
+      ]
+    },
+    {
+      "id": "application-ui",
+      "pathPatterns": [
+        "^apps/www/src/",
+        "^apps/www/next\\.config\\.",
+        "^apps/www/package\\.json$"
+      ],
+      "iterationCommands": [
+        "npm run typecheck",
+        "npm run lint",
+        "npm run check:routes",
+        "npm run test:accessibility-contrast",
+        "npm run evals:layout"
+      ]
+    },
+    {
+      "id": "citations-and-claims",
+      "pathPatterns": [
+        "^apps/www/src/data/",
+        "^scripts/(check-citations|generate-public-citations|report-citations|check-knowledge-bank)",
+        "^docs/knowledge-bank/(claims|sources|corrections)/"
+      ],
+      "iterationCommands": [
+        "npm run check:citations",
+        "npm run test:citations",
+        "npm run knowledge-bank",
+        "npm run public-safety"
+      ]
+    },
+    {
+      "id": "repository-governance",
+      "pathPatterns": [
+        "^AGENTS\\.md$",
+        "^package(-lock)?\\.json$",
+        "^evals/",
+        "^scripts/.*eval",
+        "^scripts/tests/"
+      ],
+      "iterationCommands": [
+        "npm run check:rfcs",
+        "npm run public-safety"
+      ],
+      "forcesFullSuite": true
+    },
+    {
+      "id": "deployment",
+      "pathPatterns": [
+        "(^|/)Dockerfile$",
+        "^dokku/",
+        "^\\.github/workflows/",
+        "^apps/www/src/app/(robots|sitemap)",
+        "^apps/www/src/app/api/health"
+      ],
+      "iterationCommands": [
+        "npm run preflight:staging"
+      ],
+      "forcesFullSuite": true
+    }
+  ],
+  "candidateLock": {
+    "requiredCommands": [
+      "npm run check",
+      "npm run build"
+    ],
+    "cleanWorktreeRequiredForReceipt": true,
+    "candidateAffectingChangeInvalidatesReceipt": true
+  },
+  "modelHoldouts": {
+    "allowedStates": [
+      "pass",
+      "fail",
+      "blocked-budget",
+      "blocked-access",
+      "missing",
+      "stale"
+    ],
+    "passRequiresExactCandidateBinding": true,
+    "passRequiresExactContractBinding": true,
+    "passRequiresExactEvidenceBinding": true,
+    "consecutiveUnchangedPasses": 2,
+    "blockedStatesCannotPass": [
+      "blocked-budget",
+      "blocked-access",
+      "missing",
+      "stale"
+    ]
+  },
+  "releaseObservation": {
+    "required": [
+      "Docker staging build succeeds.",
+      "Staging routes render at desktop, mobile, and 200 percent zoom.",
+      "Keyboard focus, accessibility, image loading, and citation navigation are observed.",
+      "Staging remains noindex.",
+      "No protected source, private coordinate, or unapproved image appears in output.",
+      "Jamie approves final copy, crops, credits, rights, and production indexing."
+    ]
+  }
+}

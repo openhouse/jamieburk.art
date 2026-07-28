@@ -3,7 +3,7 @@
 
 **Source commit:** `d0e7f368fec2179b97644125346528e5614d24cc`
 **Generation time:** 2026-07-27T00:19:34-04:00
-**Source fingerprint:** `3a1f14c08d0ee0a0644417b1cd43ca0c1ec46033d0f3d4c925e490f5d07309b5`
+**Source fingerprint:** `0c78a475599e86e4fc9c0cc83728bb2d0d29ec674bff9354a531b35a12f8bd47`
 
 ## application
 
@@ -66,6 +66,7 @@
 
 ## index
 
+- [Campaign-site photography](../indexes/campaign-site-photography.md) - `index.campaign-site-photography`
 - [Knowledge Wiki](../README.md) - `index.knowledge-wiki`
 - [Canonical Story Bank](../indexes/canonical-story-bank.md) - `index.knowledge-wiki.canonical-story-bank`
 - [Decision records](../indexes/decision-records.md) - `index.knowledge-wiki.decision-records`
@@ -84,6 +85,7 @@
 - [Scenes and Places of Work](../indexes/scenes-and-places-of-work.md) - `index.knowledge-wiki.scenes-and-places-of-work`
 - [Visual evidence index](../indexes/visual-evidence.md) - `index.knowledge-wiki.visual-evidence`
 - [East River canoe outing, 2022](../indexes/photo-sets/east-river-canoe-2022.md) - `index.photo-set.east-river-canoe.2022`
+- [Public testimony and heteroglossia](../indexes/public-testimony-and-heteroglossia.md) - `index.public-testimony-and-heteroglossia`
 
 ## method
 
@@ -172,6 +174,7 @@
 
 ## research-inquiry
 
+- [State and public-event commercial-rent testimony corpus](../research-inquiries/commercial-rent-state-and-public-event-testimony.md) - `research-inquiry.commercial-rent.state-and-public-event-testimony`
 - [DCLA audio, speaker spreadsheet, and discourse-map inquiry](../research-inquiries/nycac-dcla-audio-speaker-map.md) - `research-inquiry.nycac.dcla-audio-speaker-map`
 - [Documented bicycle-canoe journeys](../research-inquiries/documented-canoe-bike-journeys.md) - `research-inquiry.photo.documented-canoe-bike-journeys`
 - [Hardhat worksite photograph oral-history inquiry](../research-inquiries/hardhat-worksite-oral-history.md) - `research-inquiry.photo.hardhat-worksite-oral-history`
@@ -180,19 +183,28 @@
 
 ## research-run
 
+- [Campaign-site photography census, July 28, 2026](../research-runs/campaign-site-photography-census-2026-07-28.md) - `research.campaign-site-photography-census.2026-07-28`
+- [Commercial-rent current-workstream source return, July 28, 2026](../research-runs/commercial-rent-current-workstream-source-return-2026-07-28.md) - `research.commercial-rent-current-workstream-source-return.2026-07-28`
+- [Commercial-rent state and public-event source return, July 28, 2026](../research-runs/commercial-rent-state-public-event-source-return-2026-07-28.md) - `research.commercial-rent-state-public-event-source-return.2026-07-28`
 - [Foundational Wiki page source return, July 19, 2026](../research-runs/foundational-source-return-2026-07-19.md) - `research.foundational-source-return.2026-07-19`
 - [Interpretive layer source return, July 19, 2026](../research-runs/interpretive-layer-source-return-2026-07-19.md) - `research.interpretive-layer-source-return.2026-07-19`
 - [Knowledge Wiki branch-family closure review](../research-runs/knowledge-wiki-family-closure-2026-07-19.md) - `research.knowledge-wiki-family-closure.2026-07-19`
 - [NYC Artist Coalition DCLA photograph source return](../research-runs/nycac-dcla-photograph-source-return-2026-07.md) - `research.nycac.dcla-photograph-source-return.2026-07`
 - [NYC Artist Coalition shared-folder archival production](../research-runs/nycac-shared-folder-2026-07-19.md) - `research.nycac.shared-folder.2026-07-19`
+- [Public testimony source return, July 28, 2026](../research-runs/public-testimony-source-return-2026-07-28.md) - `research.public-testimony-source-return.2026-07-28`
 
 ## source
 
+- [Small Business United report-release rally event page](../sources/action-lab-small-business-united-rally-2026-07-29.md) - `source.action-lab.small-business-united-rally.2026-07-29`
 - [CallNYC public source repository](../sources/callnyc-source-repository.md) - `source.callnyc.source-repository`
+- [Campaign-site photographic and media census, July 2026](../sources/campaign-site-media-census-2026-07-28.md) - `source.campaign-site-media-census.2026-07-28`
 - [Civic Hall hackathon announcement](../sources/civichall-hackathon-announcement-2016.md) - `source.civichall.hackathon-announcement.2016`
+- [Protected commercial-rent current-workstream bundle](../sources/commercial-rent-current-workstream-protected-2026-07.md) - `source.commercial-rent.current-workstream.protected.2026-07`
+- [Protected commercial-rent public-event recording family, 2025-2026](../sources/commercial-rent-public-event-recordings-2025-2026.md) - `source.commercial-rent.public-event-recordings.protected.2025-2026`
 - [New York City Council Constituent Services Data release](../sources/nycc-constituent-services-data-2016-05-27.md) - `source.councilstat.fuller-release.2016`
 - [Open House at UC Santa Cruz](../sources/good-times-open-house-2006-06-28.md) - `source.good-times.open-house.2006-06-28`
 - [Harry J. Epstein Company archival research brief, July 2026](../sources/hje-research-brief-2026-07.md) - `source.hje.research-brief.2026-07`
+- [Interview magazine conversation with Eon Huntley](../sources/interview-eon-huntley-commercial-rent-stabilization-2026.md) - `source.interview.eon-huntley-commercial-rent-stabilization.2026`
 - [Jamie Burkart writer's voice synthesis, July 2026](../sources/writers-voice-synthesis-2026-07.md) - `source.jamie.writers-voice-synthesis.2026-07`
 - [ACLU - Product Manager II, Discovery 8482872002](../sources/jobs-aclu-product-discovery-8482872002.md) - `source.jobs.aclu.product-discovery.8482872002`
 - [Asana - AI Implementation Manager, Service Management 8027437](../sources/jobs-asana-ai-implementation-8027437.md) - `source.jobs.asana.ai-implementation.8027437`
@@ -212,6 +224,18 @@
 - [Commercial Rent Stabilization collaboration running minutes, 2026](../sources/nycac-running-minutes-2026.md) - `source.nycac.running-minutes.2026`
 - [Protected NYC Artist Coalition shared-folder census](../sources/nycac-protected-shared-folder-census-2026.md) - `source.nycac.shared-folder-census.2026`
 - [New York City Council event-day CouncilStat post](../sources/nycc-councilstat-hackathon-post-2016.md) - `source.nycc.councilstat-hackathon-post.2016`
+- [NYC Council Resolution 496-2026 legislative record](../sources/nycc-small-business-rent-stabilization-resolution-2026.md) - `source.nycc.resolution.small-business-rent-stabilization.2026`
+- [NYC Council Cabaret Law oversight transcript, June 19, 2017](../sources/nycc-cabaret-oversight-transcript-2017-06-19.md) - `source.nycc.transcript.cabaret-oversight.2017-06-19`
+- [NYC Council Cabaret Law repeal transcript, September 14, 2017](../sources/nycc-cabaret-repeal-transcript-2017-09-14.md) - `source.nycc.transcript.cabaret-repeal.2017-09-14`
+- [NYC Council stated-meeting transcript, November 14, 2019](../sources/nycc-commercial-rent-stated-transcript-2019-11-14.md) - `source.nycc.transcript.commercial-rent-stated.2019-11-14`
+- [NYC Council stated-meeting transcript, March 24, 2022](../sources/nycc-commercial-rent-stated-transcript-2022-03-24.md) - `source.nycc.transcript.commercial-rent-stated.2022-03-24`
+- [NYC Council Commercial Rent Stabilization transcript, September 17, 2021](../sources/nycc-commercial-rent-hearing-transcript-2021-09-17.md) - `source.nycc.transcript.commercial-rent.2021-09-17`
+- [NYC Council Cultural Affairs budget transcript, March 16, 2018](../sources/nycc-cultural-affairs-budget-transcript-2018-03-16.md) - `source.nycc.transcript.cultural-affairs-budget.2018-03-16`
+- [NYC Council M.A.R.C.H. transparency transcript, February 11, 2019](../sources/nycc-march-transparency-transcript-2019-02-11.md) - `source.nycc.transcript.march-transparency.2019-02-11`
+- [NYC Council Small Business Jobs Survival Act transcript, October 22, 2018](../sources/nycc-sbjsa-transcript-2018-10-22.md) - `source.nycc.transcript.sbjsa.2018-10-22`
+- [NYC Council small-business package transcript, March 18, 2019](../sources/nycc-small-business-package-transcript-2019-03-18.md) - `source.nycc.transcript.small-business-package.2019-03-18`
+- [New York Small Business Rent Stabilization Act legislative records](../sources/ny-state-small-business-rent-stabilization-bills-2025-2026.md) - `source.nys.legislation.small-business-rent-stabilization.2025-2026`
+- [Salazar and Gallagher Small Business Rent Stabilization Act announcement](../sources/ny-state-small-business-rent-stabilization-announcement-2026-02-17.md) - `source.nys.senate.small-business-rent-stabilization-announcement.2026-02-17`
 - [Elana Gordon permission for East River portfolio photographs](../sources/permissions/elana-gordon-east-river-portfolio-2026.md) - `source.permission.elana-gordon.east-river.2026-07`
 - [Public-safe East River derivative and metadata review](../sources/photo-metadata/east-river-2022-public-safe.md) - `source.photo-metadata.east-river.2022.public-safe`
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`

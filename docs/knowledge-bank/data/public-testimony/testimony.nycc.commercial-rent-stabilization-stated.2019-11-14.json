@@ -1,0 +1,1162 @@
+{
+  "schemaVersion": 1,
+  "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14",
+  "title": "Commercial Rent Stabilization introduction stated meeting",
+  "hearingDate": "2019-11-14",
+  "committee": "New York City Council stated meeting",
+  "issue": "Introduction 1796-2019, regulation of commercial rent",
+  "source": {
+    "title": "Hearing transcript - Stated Meeting 11-14-19",
+    "officialUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=7950220&GUID=7B14A16A-CBC9-4709-9E56-B57DA651503B",
+    "accessedAt": "2026-07-28",
+    "pageCount": 109,
+    "sourcePdfSha256": "48681f8037a2fbccc6de1afd2a56b4139f896370eaffe9eac2a7e471ecc37a9a",
+    "transcriptSha256": "7707010d46d1d09dc03b40e3af1e81dadf5d8992eb78054971f442444d52cf2d"
+  },
+  "transcriptionPolicy": "Speaker turns are normalized from the official Council transcript by removing line numbers and repeating page furniture, joining line-wrap hyphenation, and otherwise retaining transcript wording, uncertainty markers, and apparent errors.",
+  "classificationPolicy": "The complete stated-meeting speaker census is retained. Only attributable oral statements supporting Introduction 1796 qualify for full-text inclusion.",
+  "scopeBoundary": "The legislative record establishes that Council Member Stephen Levin was prime sponsor and the Council introduced Int. 1796. The stated-meeting transcript does not preserve an attributable oral introduction statement from Levin about that bill.",
+  "reviewedAt": "2026-07-28",
+  "reviewStatus": "complete-with-open-attribution",
+  "antiClaims": [
+    "The stated-meeting transcript contains a recovered Stephen Levin speech introducing Int. 1796.",
+    "Sponsorship metadata is itself an oral statement.",
+    "Introducing Int. 1796 establishes enactment or implementation."
+  ],
+  "speakers": [
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.herone-dolte",
+      "displayName": "HERONE DOLTE",
+      "transcriptLabels": [
+        "HERONE DOLTE"
+      ],
+      "speakerType": "public-witness",
+      "position": "out-of-scope",
+      "classificationBasis": "The attributed turn concerns a different stated-meeting matter.",
+      "fullTextIncluded": false,
+      "turnCount": 1,
+      "wordCount": 22,
+      "pageRanges": [
+        "4"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.fernando-cabrera",
+      "displayName": "FERNANDO CABRERA",
+      "transcriptLabels": [
+        "FERNANDO CABRERA"
+      ],
+      "speakerType": "public-witness",
+      "position": "out-of-scope",
+      "classificationBasis": "The attributed turn concerns a different stated-meeting matter.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 338,
+      "pageRanges": [
+        "4-5",
+        "8"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-clerk",
+      "displayName": "COUNCIL CLERK",
+      "transcriptLabels": [
+        "COUNCIL CLERK"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 159,
+      "wordCount": 963,
+      "pageRanges": [
+        "5-8",
+        "13-16",
+        "20-26",
+        "64-70",
+        "72",
+        "74-75",
+        "77-80",
+        "82",
+        "84-91",
+        "94-96",
+        "98-99"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.majority-leader-cumbo",
+      "displayName": "MAJORITY LEADER CUMBO",
+      "transcriptLabels": [
+        "MAJORITY LEADER CUMBO"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 9,
+      "wordCount": 881,
+      "pageRanges": [
+        "8-10",
+        "16",
+        "26",
+        "91-92",
+        "99-109"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-cabrera",
+      "displayName": "COUNCIL MEMBER CABRERA",
+      "transcriptLabels": [
+        "COUNCIL MEMBER CABRERA"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 4,
+      "wordCount": 102,
+      "pageRanges": [
+        "10",
+        "13",
+        "22",
+        "70"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.jeremy-del-rio",
+      "displayName": "JEREMY DEL RIO",
+      "transcriptLabels": [
+        "JEREMY DEL RIO"
+      ],
+      "speakerType": "public-witness",
+      "position": "out-of-scope",
+      "classificationBasis": "The attributed turn concerns a different stated-meeting matter.",
+      "fullTextIncluded": false,
+      "turnCount": 1,
+      "wordCount": 352,
+      "pageRanges": [
+        "10-12"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.sergeant-at-arms",
+      "displayName": "SERGEANT AT ARMS",
+      "transcriptLabels": [
+        "SERGEANT AT ARMS"
+      ],
+      "speakerType": "hearing-staff",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 4,
+      "wordCount": 88,
+      "pageRanges": [
+        "12-13",
+        "17-19"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.public-advocate-williams",
+      "displayName": "PUBLIC ADVOCATE WILLIAMS",
+      "transcriptLabels": [
+        "PUBLIC ADVOCATE WILLIAMS"
+      ],
+      "speakerType": "public-witness",
+      "position": "out-of-scope",
+      "classificationBasis": "The attributed turn concerns a different stated-meeting matter.",
+      "fullTextIncluded": false,
+      "turnCount": 57,
+      "wordCount": 1453,
+      "pageRanges": [
+        "12-13",
+        "16-22",
+        "24-27",
+        "47-50",
+        "52",
+        "54",
+        "56",
+        "58",
+        "60",
+        "62-64",
+        "70-72",
+        "74-75",
+        "77-80",
+        "82",
+        "84-86",
+        "88-89",
+        "91-92",
+        "94",
+        "96",
+        "98-102"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-adams",
+      "displayName": "COUNCIL MEMBER ADAMS",
+      "transcriptLabels": [
+        "COUNCIL MEMBER ADAMS"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 4,
+      "wordCount": 87,
+      "pageRanges": [
+        "13",
+        "20-21",
+        "69"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-ayala",
+      "displayName": "COUNCIL MEMBER AYALA",
+      "transcriptLabels": [
+        "COUNCIL MEMBER AYALA"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 5,
+      "pageRanges": [
+        "13",
+        "21",
+        "69"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-barron",
+      "displayName": "COUNCIL MEMBER BARRON",
+      "transcriptLabels": [
+        "COUNCIL MEMBER BARRON"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 32,
+      "pageRanges": [
+        "13",
+        "21-22",
+        "69"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-brannan",
+      "displayName": "COUNCIL MEMBER BRANNAN",
+      "transcriptLabels": [
+        "COUNCIL MEMBER BRANNAN"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 16,
+      "pageRanges": [
+        "13",
+        "22",
+        "69"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-chin",
+      "displayName": "COUNCIL MEMBER CHIN",
+      "transcriptLabels": [
+        "COUNCIL MEMBER CHIN"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 4,
+      "wordCount": 312,
+      "pageRanges": [
+        "13",
+        "22",
+        "52-54",
+        "70"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-cohen",
+      "displayName": "COUNCIL MEMBER COHEN",
+      "transcriptLabels": [
+        "COUNCIL MEMBER COHEN"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 4,
+      "pageRanges": [
+        "13",
+        "25",
+        "70"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-constantinides",
+      "displayName": "COUNCIL MEMBER CONSTANTINIDES",
+      "transcriptLabels": [
+        "COUNCIL MEMBER CONSTANTINIDES"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 39,
+      "pageRanges": [
+        "13-14",
+        "22"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-cornegy",
+      "displayName": "COUNCIL MEMBER CORNEGY",
+      "transcriptLabels": [
+        "COUNCIL MEMBER CORNEGY"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 4,
+      "wordCount": 281,
+      "pageRanges": [
+        "14",
+        "22",
+        "70-72"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-deutsch",
+      "displayName": "COUNCIL MEMBER DEUTSCH",
+      "transcriptLabels": [
+        "COUNCIL MEMBER DEUTSCH"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 19,
+      "pageRanges": [
+        "14",
+        "22",
+        "72"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-dromm",
+      "displayName": "COUNCIL MEMBER DROMM",
+      "transcriptLabels": [
+        "COUNCIL MEMBER DROMM"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 3,
+      "pageRanges": [
+        "14",
+        "22",
+        "72"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-espinal",
+      "displayName": "COUNCIL MEMBER ESPINAL",
+      "transcriptLabels": [
+        "COUNCIL MEMBER ESPINAL"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 4,
+      "wordCount": 305,
+      "pageRanges": [
+        "14",
+        "22",
+        "72-74"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-eugene",
+      "displayName": "COUNCIL MEMBER EUGENE",
+      "transcriptLabels": [
+        "COUNCIL MEMBER EUGENE"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 4,
+      "wordCount": 264,
+      "pageRanges": [
+        "14",
+        "23",
+        "74-75"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-gibson",
+      "displayName": "COUNCIL MEMBER GIBSON",
+      "transcriptLabels": [
+        "COUNCIL MEMBER GIBSON"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 4,
+      "wordCount": 364,
+      "pageRanges": [
+        "14",
+        "23",
+        "75-77"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-gjonaj",
+      "displayName": "COUNCIL MEMBER GJONAJ",
+      "transcriptLabels": [
+        "COUNCIL MEMBER GJONAJ"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 6,
+      "wordCount": 541,
+      "pageRanges": [
+        "14",
+        "48-50",
+        "77-78"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-grodenchik",
+      "displayName": "COUNCIL MEMBER GRODENCHIK",
+      "transcriptLabels": [
+        "COUNCIL MEMBER GRODENCHIK"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 4,
+      "wordCount": 146,
+      "pageRanges": [
+        "14",
+        "23",
+        "78-79"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-holden",
+      "displayName": "COUNCIL MEMBER HOLDEN",
+      "transcriptLabels": [
+        "COUNCIL MEMBER HOLDEN"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 29,
+      "pageRanges": [
+        "14",
+        "23",
+        "79"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-kallos",
+      "displayName": "COUNCIL MEMBER KALLOS",
+      "transcriptLabels": [
+        "COUNCIL MEMBER KALLOS"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 4,
+      "wordCount": 89,
+      "pageRanges": [
+        "14",
+        "23",
+        "79-80"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-koo",
+      "displayName": "COUNCIL MEMBER KOO",
+      "transcriptLabels": [
+        "COUNCIL MEMBER KOO"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 37,
+      "pageRanges": [
+        "14",
+        "23",
+        "80"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-koslowitz",
+      "displayName": "COUNCIL MEMBER KOSLOWITZ",
+      "transcriptLabels": [
+        "COUNCIL MEMBER KOSLOWITZ"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 5,
+      "pageRanges": [
+        "14-15",
+        "23"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-lander",
+      "displayName": "COUNCIL MEMBER LANDER",
+      "transcriptLabels": [
+        "COUNCIL MEMBER LANDER"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 342,
+      "pageRanges": [
+        "15",
+        "80-82"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-levin",
+      "displayName": "COUNCIL MEMBER LEVIN",
+      "transcriptLabels": [
+        "COUNCIL MEMBER LEVIN"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "Levin's attributed turns record presence, a vote, and remarks about a different bill; no oral Int. 1796 introduction statement was recovered in this transcript.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 67,
+      "pageRanges": [
+        "15",
+        "23",
+        "69"
+      ],
+      "turns": [],
+      "attributionNotes": [
+        "The official legislative detail page, rather than this transcript body, identifies Levin as prime sponsor of Int. 1796."
+      ]
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-levine",
+      "displayName": "COUNCIL MEMBER LEVINE",
+      "transcriptLabels": [
+        "COUNCIL MEMBER LEVINE"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 4,
+      "wordCount": 349,
+      "pageRanges": [
+        "15",
+        "23",
+        "82-84"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-louis",
+      "displayName": "COUNCIL MEMBER LOUIS",
+      "transcriptLabels": [
+        "COUNCIL MEMBER LOUIS"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 4,
+      "wordCount": 143,
+      "pageRanges": [
+        "15",
+        "23",
+        "84-85"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-maisel",
+      "displayName": "COUNCIL MEMBER MAISEL",
+      "transcriptLabels": [
+        "COUNCIL MEMBER MAISEL"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 33,
+      "pageRanges": [
+        "15",
+        "24"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-menchaca",
+      "displayName": "COUNCIL MEMBER MENCHACA",
+      "transcriptLabels": [
+        "COUNCIL MEMBER MENCHACA"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 6,
+      "wordCount": 567,
+      "pageRanges": [
+        "15",
+        "24",
+        "58-60",
+        "85-86"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-miller",
+      "displayName": "COUNCIL MEMBER MILLER",
+      "transcriptLabels": [
+        "COUNCIL MEMBER MILLER"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 4,
+      "wordCount": 148,
+      "pageRanges": [
+        "15",
+        "24",
+        "86-87"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-moya",
+      "displayName": "COUNCIL MEMBER MOYA",
+      "transcriptLabels": [
+        "COUNCIL MEMBER MOYA"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 5,
+      "wordCount": 334,
+      "pageRanges": [
+        "15",
+        "19-20",
+        "24",
+        "87-88"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-perkins",
+      "displayName": "COUNCIL MEMBER PERKINS",
+      "transcriptLabels": [
+        "COUNCIL MEMBER PERKINS"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 64,
+      "pageRanges": [
+        "15",
+        "24",
+        "88"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-powers",
+      "displayName": "COUNCIL MEMBER POWERS",
+      "transcriptLabels": [
+        "COUNCIL MEMBER POWERS"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 5,
+      "wordCount": 633,
+      "pageRanges": [
+        "15",
+        "24",
+        "54-56",
+        "88-89"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-richards",
+      "displayName": "COUNCIL MEMBER RICHARDS",
+      "transcriptLabels": [
+        "COUNCIL MEMBER RICHARDS"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 5,
+      "wordCount": 620,
+      "pageRanges": [
+        "15",
+        "24-25",
+        "60-62",
+        "91"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-rivera",
+      "displayName": "COUNCIL MEMBER RIVERA",
+      "transcriptLabels": [
+        "COUNCIL MEMBER RIVERA"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 8,
+      "wordCount": 809,
+      "pageRanges": [
+        "16",
+        "25",
+        "50-52",
+        "91-94"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-rose",
+      "displayName": "COUNCIL MEMBER ROSE",
+      "transcriptLabels": [
+        "COUNCIL MEMBER ROSE"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 12,
+      "pageRanges": [
+        "16",
+        "95"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-rosenthal",
+      "displayName": "COUNCIL MEMBER ROSENTHAL",
+      "transcriptLabels": [
+        "COUNCIL MEMBER ROSENTHAL"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 4,
+      "wordCount": 13,
+      "pageRanges": [
+        "16",
+        "25",
+        "95"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-salamanca",
+      "displayName": "COUNCIL MEMBER SALAMANCA",
+      "transcriptLabels": [
+        "COUNCIL MEMBER SALAMANCA"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 31,
+      "pageRanges": [
+        "16",
+        "25"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-treyger",
+      "displayName": "COUNCIL MEMBER TREYGER",
+      "transcriptLabels": [
+        "COUNCIL MEMBER TREYGER"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 5,
+      "wordCount": 477,
+      "pageRanges": [
+        "16",
+        "26",
+        "96-98"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-vallone",
+      "displayName": "COUNCIL MEMBER VALLONE",
+      "transcriptLabels": [
+        "COUNCIL MEMBER VALLONE"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 4,
+      "wordCount": 87,
+      "pageRanges": [
+        "16",
+        "26",
+        "99"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-van-bramer",
+      "displayName": "COUNCIL MEMBER VAN BRAMER",
+      "transcriptLabels": [
+        "COUNCIL MEMBER VAN BRAMER"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 5,
+      "pageRanges": [
+        "16",
+        "26",
+        "99"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-yeger",
+      "displayName": "COUNCIL MEMBER YEGER",
+      "transcriptLabels": [
+        "COUNCIL MEMBER YEGER"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 30,
+      "pageRanges": [
+        "16",
+        "26",
+        "99"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.minority-leader-matteo",
+      "displayName": "MINORITY LEADER MATTEO",
+      "transcriptLabels": [
+        "MINORITY LEADER MATTEO"
+      ],
+      "speakerType": "public-witness",
+      "position": "out-of-scope",
+      "classificationBasis": "The attributed turn concerns a different stated-meeting matter.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 95,
+      "pageRanges": [
+        "16",
+        "70"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.speaker-johnson",
+      "displayName": "SPEAKER JOHNSON",
+      "transcriptLabels": [
+        "SPEAKER JOHNSON"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 28,
+      "wordCount": 4504,
+      "pageRanges": [
+        "16",
+        "21",
+        "26-47",
+        "64-68"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.reverend-detheridge",
+      "displayName": "REVEREND DETHERIDGE",
+      "transcriptLabels": [
+        "REVEREND DETHERIDGE"
+      ],
+      "speakerType": "public-witness",
+      "position": "out-of-scope",
+      "classificationBasis": "The attributed turn concerns a different stated-meeting matter.",
+      "fullTextIncluded": false,
+      "turnCount": 1,
+      "wordCount": 350,
+      "pageRanges": [
+        "17-18"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-ampry-samuel",
+      "displayName": "COUNCIL MEMBER AMPRY-SAMUEL",
+      "transcriptLabels": [
+        "COUNCIL MEMBER AMPRY-SAMUEL"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 4,
+      "pageRanges": [
+        "21",
+        "69"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-lancman",
+      "displayName": "COUNCIL MEMBER LANCMAN",
+      "transcriptLabels": [
+        "COUNCIL MEMBER LANCMAN"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 2,
+      "pageRanges": [
+        "23",
+        "80"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.unidentified",
+      "displayName": "UNIDENTIFIED",
+      "transcriptLabels": [
+        "UNIDENTIFIED"
+      ],
+      "speakerType": "unresolved",
+      "position": "unclear",
+      "classificationBasis": "The unidentified fragment cannot be safely attributed.",
+      "fullTextIncluded": false,
+      "turnCount": 1,
+      "wordCount": 1,
+      "pageRanges": [
+        "24"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-reynoso",
+      "displayName": "COUNCIL MEMBER REYNOSO",
+      "transcriptLabels": [
+        "COUNCIL MEMBER REYNOSO"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 304,
+      "pageRanges": [
+        "24",
+        "89-90"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-rodriguez",
+      "displayName": "COUNCIL MEMBER RODRIGUEZ",
+      "transcriptLabels": [
+        "COUNCIL MEMBER RODRIGUEZ"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 4,
+      "wordCount": 602,
+      "pageRanges": [
+        "25",
+        "56-58",
+        "94-95"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-torres",
+      "displayName": "COUNCIL MEMBER TORRES",
+      "transcriptLabels": [
+        "COUNCIL MEMBER TORRES"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 4,
+      "pageRanges": [
+        "26",
+        "96"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.speaker.council-member-ulrich",
+      "displayName": "COUNCIL MEMBER ULRICH",
+      "transcriptLabels": [
+        "COUNCIL MEMBER ULRICH"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 1,
+      "wordCount": 41,
+      "pageRanges": [
+        "98-99"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    }
+  ]
+}

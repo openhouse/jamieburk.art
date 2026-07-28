@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-28",
+  "boundary": "Each corpus is derived from an official public hearing transcript. Support classification is editorial metadata, not institutional endorsement or causal proof.",
+  "corpora": [
+    {
+      "id": "testimony.nycc.cabaret-oversight.2017-06-19",
+      "file": "testimony.nycc.cabaret-oversight.2017-06-19.json"
+    },
+    {
+      "id": "testimony.nycc.cabaret-repeal.2017-09-14",
+      "file": "testimony.nycc.cabaret-repeal.2017-09-14.json"
+    },
+    {
+      "id": "testimony.nycc.cultural-affairs-budget.2018-03-16",
+      "file": "testimony.nycc.cultural-affairs-budget.2018-03-16.json"
+    },
+    {
+      "id": "testimony.nycc.sbjsa.2018-10-22",
+      "file": "testimony.nycc.sbjsa.2018-10-22.json"
+    },
+    {
+      "id": "testimony.nycc.march-transparency.2019-02-11",
+      "file": "testimony.nycc.march-transparency.2019-02-11.json"
+    },
+    {
+      "id": "testimony.nycc.small-business-package.2019-03-18",
+      "file": "testimony.nycc.small-business-package.2019-03-18.json"
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14",
+      "file": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14.json"
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization.2021-09-17",
+      "file": "testimony.nycc.commercial-rent-stabilization.2021-09-17.json"
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24",
+      "file": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.json"
+    }
+  ]
+}

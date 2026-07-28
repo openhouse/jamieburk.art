@@ -1,0 +1,1074 @@
+{
+  "schemaVersion": 1,
+  "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24",
+  "title": "Commercial Rent Stabilization reintroduction stated meeting",
+  "hearingDate": "2022-03-24",
+  "committee": "New York City Council stated meeting",
+  "issue": "Introduction 93-2022, regulation of commercial rent",
+  "source": {
+    "title": "Hearing Transcript - Stated Meeting 3-24-22",
+    "officialUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=10873894&GUID=72BAA43F-B658-4164-B2F3-E98ADB16C3E2",
+    "accessedAt": "2026-07-28",
+    "pageCount": 68,
+    "sourcePdfSha256": "96ca01515944de43e6e1b0ea7790d7f457d8256c812a48c0a7fc4bde30bab6d3",
+    "transcriptSha256": "ead0800b279fb84a1ff4ce1b37470e171194fb1584571f327b2dca3b245cc794"
+  },
+  "transcriptionPolicy": "Speaker turns are normalized from the official Council transcript by removing line numbers and repeating page furniture, joining line-wrap hyphenation, and otherwise retaining transcript wording, uncertainty markers, and apparent errors.",
+  "classificationPolicy": "The complete stated-meeting speaker census is retained. Full text is included for attributable oral statements affirmatively supporting Int. 93.",
+  "scopeBoundary": "Council Members Crystal Hudson and Carlina Rivera give supportive statements. The transcript records prime sponsor Diana Ayala's presence and vote but does not preserve an attributable oral introduction statement from her about Int. 93.",
+  "reviewedAt": "2026-07-28",
+  "reviewStatus": "complete-with-open-attribution",
+  "antiClaims": [
+    "The stated-meeting transcript contains a recovered Diana Ayala speech introducing Int. 93.",
+    "Every co-sponsor spoke at the stated meeting.",
+    "Reintroduction establishes enactment or implementation."
+  ],
+  "speakers": [
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.unidentified",
+      "displayName": "UNIDENTIFIED",
+      "transcriptLabels": [
+        "UNIDENTIFIED"
+      ],
+      "speakerType": "unresolved",
+      "position": "unclear",
+      "classificationBasis": "The fragment cannot be safely attributed.",
+      "fullTextIncluded": false,
+      "turnCount": 1,
+      "wordCount": 52,
+      "pageRanges": [
+        "4"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-powers",
+      "displayName": "COUNCIL MEMBER POWERS",
+      "transcriptLabels": [
+        "COUNCIL MEMBER POWERS"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 46,
+      "wordCount": 1324,
+      "pageRanges": [
+        "4",
+        "8-11",
+        "23-25",
+        "27",
+        "31",
+        "33-39",
+        "43",
+        "45-46",
+        "48-51",
+        "54",
+        "56",
+        "58",
+        "60",
+        "62",
+        "64",
+        "66"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-clerk",
+      "displayName": "COUNCIL CLERK",
+      "transcriptLabels": [
+        "COUNCIL CLERK"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 116,
+      "wordCount": 314,
+      "pageRanges": [
+        "4-8",
+        "10-11",
+        "23",
+        "25-33",
+        "41"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-abreu",
+      "displayName": "COUNCIL MEMBER ABREU",
+      "transcriptLabels": [
+        "COUNCIL MEMBER ABREU"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 253,
+      "pageRanges": [
+        "4",
+        "27",
+        "49-50"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-ariola",
+      "displayName": "COUNCIL MEMBER ARIOLA",
+      "transcriptLabels": [
+        "COUNCIL MEMBER ARIOLA"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 5,
+      "wordCount": 348,
+      "pageRanges": [
+        "4",
+        "27",
+        "64-66"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-ayala",
+      "displayName": "COUNCIL MEMBER AYALA",
+      "transcriptLabels": [
+        "COUNCIL MEMBER AYALA"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "Ayala's attributed turns record presence and a vote; the transcript does not preserve an oral Int. 93 introduction statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 4,
+      "pageRanges": [
+        "5",
+        "27"
+      ],
+      "turns": [],
+      "attributionNotes": [
+        "The official legislative detail page, rather than this transcript body, identifies Ayala as prime sponsor."
+      ]
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-barron",
+      "displayName": "COUNCIL MEMBER BARRON",
+      "transcriptLabels": [
+        "COUNCIL MEMBER BARRON"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 6,
+      "wordCount": 516,
+      "pageRanges": [
+        "5",
+        "27-28",
+        "56-58"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-bottcher",
+      "displayName": "COUNCIL MEMBER BOTTCHER",
+      "transcriptLabels": [
+        "COUNCIL MEMBER BOTTCHER"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 2,
+      "pageRanges": [
+        "5",
+        "28"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-brannan",
+      "displayName": "COUNCIL MEMBER BRANNAN",
+      "transcriptLabels": [
+        "COUNCIL MEMBER BRANNAN"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 2,
+      "pageRanges": [
+        "5",
+        "28"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-brewer",
+      "displayName": "COUNCIL MEMBER BREWER",
+      "transcriptLabels": [
+        "COUNCIL MEMBER BREWER"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 176,
+      "pageRanges": [
+        "5",
+        "28",
+        "37"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-brooks-powers",
+      "displayName": "COUNCIL MEMBER BROOKS-POWERS",
+      "transcriptLabels": [
+        "COUNCIL MEMBER BROOKS-POWERS"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 4,
+      "pageRanges": [
+        "5",
+        "28"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-carr",
+      "displayName": "COUNCIL MEMBER CARR",
+      "transcriptLabels": [
+        "COUNCIL MEMBER CARR"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 4,
+      "pageRanges": [
+        "5",
+        "28"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-de-la-rosa",
+      "displayName": "COUNCIL MEMBER DE LA ROSA",
+      "transcriptLabels": [
+        "COUNCIL MEMBER DE LA ROSA"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 2,
+      "pageRanges": [
+        "5",
+        "28"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-dinowitz",
+      "displayName": "COUNCIL MEMBER DINOWITZ",
+      "transcriptLabels": [
+        "COUNCIL MEMBER DINOWITZ"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 2,
+      "pageRanges": [
+        "5",
+        "28"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-feliz",
+      "displayName": "COUNCIL MEMBER FELIZ",
+      "transcriptLabels": [
+        "COUNCIL MEMBER FELIZ"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 232,
+      "pageRanges": [
+        "5",
+        "29",
+        "50-51"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-gennaro",
+      "displayName": "COUNCIL MEMBER GENNARO",
+      "transcriptLabels": [
+        "COUNCIL MEMBER GENNARO"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 408,
+      "pageRanges": [
+        "6",
+        "29",
+        "43-45"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-hanif",
+      "displayName": "COUNCIL MEMBER HANIF",
+      "transcriptLabels": [
+        "COUNCIL MEMBER HANIF"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 343,
+      "pageRanges": [
+        "6",
+        "29",
+        "41-43"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-hanks",
+      "displayName": "COUNCIL MEMBER HANKS",
+      "transcriptLabels": [
+        "COUNCIL MEMBER HANKS"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 4,
+      "pageRanges": [
+        "6",
+        "29"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-holden",
+      "displayName": "COUNCIL MEMBER HOLDEN",
+      "transcriptLabels": [
+        "COUNCIL MEMBER HOLDEN"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 2,
+      "pageRanges": [
+        "6",
+        "29"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-hudson",
+      "displayName": "COUNCIL MEMBER HUDSON",
+      "transcriptLabels": [
+        "COUNCIL MEMBER HUDSON"
+      ],
+      "speakerType": "council-member",
+      "position": "supportive",
+      "classificationBasis": "Hudson describes commercial rent as a major small-business cost and supports the bill's registration and regulation system.",
+      "fullTextIncluded": true,
+      "turnCount": 3,
+      "wordCount": 373,
+      "pageRanges": [
+        "6",
+        "29",
+        "54-56"
+      ],
+      "turns": [
+        {
+          "ordinal": 1,
+          "pageStart": 6,
+          "pageEnd": 6,
+          "text": "Here."
+        },
+        {
+          "ordinal": 2,
+          "pageStart": 29,
+          "pageEnd": 29,
+          "text": "Aye."
+        },
+        {
+          "ordinal": 3,
+          "pageStart": 54,
+          "pageEnd": 56,
+          "text": "Thank you, Majority Leader. Today, I’m introducing my first bill as a member of the New York City Council. This bill will raise the minimum required indoor temperatures from 68 degrees to 70 degrees during the day, and 62 degrees to 66 degrees overnight. It builds on the excellent work of my colleague Council Member Brewer and now Public Advocate Jumaane Williams who raised the minimum temperatures a few years back. We’ve since learned that the minim temperatures are still too low, prompting many New Yorkers to use potentially dangerous heat sources like stoves or faulty space heaters to keep warm. This bill keep those folks comfortable in their homes and reduce the risk of deadly fires like the one we saw in January at Twin Parks. This bill is just a first step. We must also work with HPD to ensure robust enforcement of this law and hold predatory landlords accountable who intentionally turn off heat NEW YORK CITY COUNCIL STATED MEETING 55 for tenants to save a few bucks. There must be a stronger mechanism for reporting heat outages and for HPD to address them rapidly. Thank you also to Council Member Powers, Majority Leader Powers, on that bill. Also wanted to mention commercial rent stabilization and commend and thank Council Members Ayala, Rivera, and Cabán. The pandemic showed the financially precarious situation of many of our city’s small businesses. Many are a few weeks away from being forced to close, and one of the main drivers of costs for small businesses is rent. This bill will help create a commercial rent registration and regulation system that ensures landlords can’t evict commercial tenants by pricing them out. As such, landlords won’t be able to price out a local bar so it can bring in a bank or a chain realtor-- retail store, excuse me, that can afford the higher rent. It will also reduce blights as many small businesses cannot afford the rents in various locations, leaving those spots vacant for years. Now, more than ever, we must take every step possible to protect the businesses we rely on and the workers who make a living in our communities. Thank you. 25 NEW YORK CITY COUNCIL STATED MEETING 56"
+        }
+      ],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-joseph",
+      "displayName": "COUNCIL MEMBER JOSEPH",
+      "transcriptLabels": [
+        "COUNCIL MEMBER JOSEPH"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 4,
+      "pageRanges": [
+        "6",
+        "29"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-kagan",
+      "displayName": "COUNCIL MEMBER KAGAN",
+      "transcriptLabels": [
+        "COUNCIL MEMBER KAGAN"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 198,
+      "pageRanges": [
+        "6",
+        "29",
+        "45-46"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-krishnan",
+      "displayName": "COUNCIL MEMBER KRISHNAN",
+      "transcriptLabels": [
+        "COUNCIL MEMBER KRISHNAN"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 4,
+      "pageRanges": [
+        "6",
+        "29"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-lee",
+      "displayName": "COUNCIL MEMBER LEE",
+      "transcriptLabels": [
+        "COUNCIL MEMBER LEE"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 405,
+      "pageRanges": [
+        "6",
+        "29",
+        "46-48"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-louis",
+      "displayName": "COUNCIL MEMBER LOUIS",
+      "transcriptLabels": [
+        "COUNCIL MEMBER LOUIS"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 11,
+      "pageRanges": [
+        "6",
+        "29-30"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-marte",
+      "displayName": "COUNCIL MEMBER MARTE",
+      "transcriptLabels": [
+        "COUNCIL MEMBER MARTE"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 4,
+      "pageRanges": [
+        "6",
+        "30"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-mealy",
+      "displayName": "COUNCIL MEMBER MEALY",
+      "transcriptLabels": [
+        "COUNCIL MEMBER MEALY"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 6,
+      "pageRanges": [
+        "7",
+        "33"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-menin",
+      "displayName": "COUNCIL MEMBER MENIN",
+      "transcriptLabels": [
+        "COUNCIL MEMBER MENIN"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 4,
+      "wordCount": 191,
+      "pageRanges": [
+        "7",
+        "10",
+        "30",
+        "48-49"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.commissioner-molina",
+      "displayName": "COMMISSIONER MOLINA",
+      "transcriptLabels": [
+        "COMMISSIONER MOLINA"
+      ],
+      "speakerType": "administration",
+      "position": "out-of-scope",
+      "classificationBasis": "The attributed turn concerns another stated-meeting matter.",
+      "fullTextIncluded": false,
+      "turnCount": 1,
+      "wordCount": 1,
+      "pageRanges": [
+        "7"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-narcisse",
+      "displayName": "COUNCIL MEMBER NARCISSE",
+      "transcriptLabels": [
+        "COUNCIL MEMBER NARCISSE"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 338,
+      "pageRanges": [
+        "7",
+        "30",
+        "35-36"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-nurse",
+      "displayName": "COUNCIL MEMBER NURSE",
+      "transcriptLabels": [
+        "COUNCIL MEMBER NURSE"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 42,
+      "pageRanges": [
+        "7",
+        "10",
+        "30"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-paladino",
+      "displayName": "COUNCIL MEMBER PALADINO",
+      "transcriptLabels": [
+        "COUNCIL MEMBER PALADINO"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 4,
+      "pageRanges": [
+        "7",
+        "30"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-restler",
+      "displayName": "COUNCIL MEMBER RESTLER",
+      "transcriptLabels": [
+        "COUNCIL MEMBER RESTLER"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 2,
+      "pageRanges": [
+        "7",
+        "30"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-richardson-jordan",
+      "displayName": "COUNCIL MEMBER RICHARDSON JORDAN",
+      "transcriptLabels": [
+        "COUNCIL MEMBER RICHARDSON JORDAN"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 167,
+      "pageRanges": [
+        "7",
+        "24-25",
+        "30"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-riley",
+      "displayName": "COUNCIL MEMBER RILEY",
+      "transcriptLabels": [
+        "COUNCIL MEMBER RILEY"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 4,
+      "pageRanges": [
+        "7",
+        "30"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-rivera",
+      "displayName": "COUNCIL MEMBER RIVERA",
+      "transcriptLabels": [
+        "COUNCIL MEMBER RIVERA"
+      ],
+      "speakerType": "council-member",
+      "position": "supportive",
+      "classificationBasis": "Rivera says she proudly joins the reintroduction and argues for commercial-rent regulation as part of an equitable recovery.",
+      "fullTextIncluded": true,
+      "turnCount": 3,
+      "wordCount": 372,
+      "pageRanges": [
+        "7",
+        "30",
+        "62-64"
+      ],
+      "turns": [
+        {
+          "ordinal": 1,
+          "pageStart": 7,
+          "pageEnd": 7,
+          "text": "Present."
+        },
+        {
+          "ordinal": 2,
+          "pageStart": 30,
+          "pageEnd": 30,
+          "text": "I vote aye."
+        },
+        {
+          "ordinal": 3,
+          "pageStart": 62,
+          "pageEnd": 64,
+          "text": "Thank you so much. Today, I proudly join my colleagues Ayala, Cabán, Hudson to introduce-- well, reintroduce commercial rent stabilization because I know this Council can be the one to finally get it done. In the last few years we have seen so many beloved small NEW YORK CITY COUNCIL STATED MEETING 63 businesses in my district and throughout the City close due in large part to rent from gym spas, to Odessa’s [sic], to so many others still open, but eager for these protections like Gatarella [sic] and Dokam [sp?]. We have had a rent problem since long before the pandemic, leaving so many of our small businesses owners scrambling to keep up. This city has had commercial rent regulations in the past, and its past time we do it again. If not now, in support of a just and equitable pandemic recovery, then when? It is time to get this done to ensure long-term stability for the small business community. I’m also introducing legislation calling on the New York State Legislature to pass and the Governor to sign life-saving maternal health legislation carried by our state colleagues. The first is in support of Assembly Member Dick Gottfried and State Senator Gustavo Rivera’s Beyond the Fourth Trimester Bill which would expand Medicaid coverage for new members from 60 days after giving birth to a full year. The second supports Assembly Member Amy Paulin and State Senator Julia Salazar requiring doctors to provide those who are expecting with comprehensive information on Caesarian sections and potential risks NEW YORK CITY COUNCIL STATED MEETING 64 associated with the procedure. I’m pleased to see the Mayor responding to our advocacy around supporting New York City doulas and midwives, but we must do more and we will. This Council is historic. We’re the most diverse with the most women Council Members in history and with the most mothers. We are in a position to pass a policy agenda furthering gender and reproductive justice in New York City, and that agenda must and will address the maternal mortality and morbidity crisis. I urge my colleagues to join me in the fight for birth justice and to sign on to these resolutions. Thank you."
+        }
+      ],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-salamanca",
+      "displayName": "COUNCIL MEMBER SALAMANCA",
+      "transcriptLabels": [
+        "COUNCIL MEMBER SALAMANCA"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 4,
+      "pageRanges": [
+        "7",
+        "30"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-schulman",
+      "displayName": "COUNCIL MEMBER SCHULMAN",
+      "transcriptLabels": [
+        "COUNCIL MEMBER SCHULMAN"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 4,
+      "pageRanges": [
+        "8",
+        "31"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-sanchez",
+      "displayName": "COUNCIL MEMBER SANCHEZ",
+      "transcriptLabels": [
+        "COUNCIL MEMBER SANCHEZ"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 381,
+      "pageRanges": [
+        "8",
+        "31",
+        "60-62"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-stevens",
+      "displayName": "COUNCIL MEMBER STEVENS",
+      "transcriptLabels": [
+        "COUNCIL MEMBER STEVENS"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 2,
+      "pageRanges": [
+        "8",
+        "31"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-ung",
+      "displayName": "COUNCIL MEMBER UNG",
+      "transcriptLabels": [
+        "COUNCIL MEMBER UNG"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 2,
+      "pageRanges": [
+        "8",
+        "31"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-vernikov",
+      "displayName": "COUNCIL MEMBER VERNIKOV",
+      "transcriptLabels": [
+        "COUNCIL MEMBER VERNIKOV"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 2,
+      "wordCount": 2,
+      "pageRanges": [
+        "8",
+        "31"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-williams",
+      "displayName": "COUNCIL MEMBER WILLIAMS",
+      "transcriptLabels": [
+        "COUNCIL MEMBER WILLIAMS"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 6,
+      "wordCount": 486,
+      "pageRanges": [
+        "8",
+        "23-24",
+        "31",
+        "51-54"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-won",
+      "displayName": "COUNCIL MEMBER WON",
+      "transcriptLabels": [
+        "COUNCIL MEMBER WON"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 7,
+      "wordCount": 467,
+      "pageRanges": [
+        "8",
+        "16",
+        "31",
+        "58-60"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-yeger",
+      "displayName": "COUNCIL MEMBER YEGER",
+      "transcriptLabels": [
+        "COUNCIL MEMBER YEGER"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 277,
+      "pageRanges": [
+        "8",
+        "31-32"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-borelli",
+      "displayName": "COUNCIL MEMBER BORELLI",
+      "transcriptLabels": [
+        "COUNCIL MEMBER BORELLI"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 405,
+      "pageRanges": [
+        "8",
+        "33",
+        "39-41"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.speaker-adams",
+      "displayName": "SPEAKER ADAMS",
+      "transcriptLabels": [
+        "SPEAKER ADAMS"
+      ],
+      "speakerType": "unresolved",
+      "position": "unclear",
+      "classificationBasis": "The record does not support a safely attributed position.",
+      "fullTextIncluded": false,
+      "turnCount": 19,
+      "wordCount": 2442,
+      "pageRanges": [
+        "8-23",
+        "25-27",
+        "33",
+        "66-68"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.reverend-dr-lynn-sexton",
+      "displayName": "REVEREND DR. LYNN SEXTON",
+      "transcriptLabels": [
+        "REVEREND DR. LYNN SEXTON"
+      ],
+      "speakerType": "public-witness",
+      "position": "out-of-scope",
+      "classificationBasis": "The attributed turn concerns another stated-meeting matter.",
+      "fullTextIncluded": false,
+      "turnCount": 1,
+      "wordCount": 170,
+      "pageRanges": [
+        "9-10"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.sergeant-at-arms",
+      "displayName": "SERGEANT AT ARMS",
+      "transcriptLabels": [
+        "SERGEANT AT ARMS"
+      ],
+      "speakerType": "hearing-staff",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 40,
+      "pageRanges": [
+        "16-17",
+        "57",
+        "60"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.council-member-moya",
+      "displayName": "COUNCIL MEMBER MOYA",
+      "transcriptLabels": [
+        "COUNCIL MEMBER MOYA"
+      ],
+      "speakerType": "council-member",
+      "position": "neutral-procedural",
+      "classificationBasis": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "fullTextIncluded": false,
+      "turnCount": 1,
+      "wordCount": 1,
+      "pageRanges": [
+        "27"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    },
+    {
+      "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24.speaker.all-council-members",
+      "displayName": "ALL COUNCIL MEMBERS",
+      "transcriptLabels": [
+        "ALL COUNCIL MEMBERS"
+      ],
+      "speakerType": "public-witness",
+      "position": "out-of-scope",
+      "classificationBasis": "The attributed turn concerns another stated-meeting matter.",
+      "fullTextIncluded": false,
+      "turnCount": 3,
+      "wordCount": 3,
+      "pageRanges": [
+        "38-39"
+      ],
+      "turns": [],
+      "attributionNotes": []
+    }
+  ]
+}

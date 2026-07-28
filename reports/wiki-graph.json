@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-27T00:19:34-04:00",
   "sourceCommit": "d0e7f368fec2179b97644125346528e5614d24cc",
-  "sourceFingerprint": "3a1f14c08d0ee0a0644417b1cd43ca0c1ec46033d0f3d4c925e490f5d07309b5",
+  "sourceFingerprint": "0c78a475599e86e4fc9c0cc83728bb2d0d29ec674bff9354a531b35a12f8bd47",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -476,6 +476,19 @@
       "reviewBy": "2027-01-18"
     },
     {
+      "id": "index.campaign-site-photography",
+      "path": "docs/knowledge-bank/indexes/campaign-site-photography.md",
+      "title": "Campaign-site photography",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Governed entry point to the complete campaign-site media census and its 225 photographic entries.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-10-28"
+    },
+    {
       "id": "index.knowledge-wiki",
       "path": "docs/knowledge-bank/README.md",
       "title": "Knowledge Wiki",
@@ -710,6 +723,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "index.public-testimony-and-heteroglossia",
+      "path": "docs/knowledge-bank/indexes/public-testimony-and-heteroglossia.md",
+      "title": "Public testimony and heteroglossia",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Governed index to official Council transcript corpora preserving complete attributed turns for speakers supporting issues Jamie and his collaborators championed.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-10-28"
     },
     {
       "id": "method.collective-credit-protected-absence",
@@ -1510,6 +1536,19 @@
       "reviewBy": "2026-08-26"
     },
     {
+      "id": "research-inquiry.commercial-rent.state-and-public-event-testimony",
+      "path": "docs/knowledge-bank/research-inquiries/commercial-rent-state-and-public-event-testimony.md",
+      "title": "State and public-event commercial-rent testimony corpus",
+      "kind": "research-inquiry",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "high",
+      "summary": "Bounded plan to preserve full, corrected, attributed supportive statements about S8319 and A5568A from official sources and four recovered public-event recordings.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-08-28"
+    },
+    {
       "id": "research-inquiry.nycac.dcla-audio-speaker-map",
       "path": "docs/knowledge-bank/research-inquiries/nycac-dcla-audio-speaker-map.md",
       "title": "DCLA audio, speaker spreadsheet, and discourse-map inquiry",
@@ -1573,6 +1612,45 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "research.campaign-site-photography-census.2026-07-28",
+      "path": "docs/knowledge-bank/research-runs/campaign-site-photography-census-2026-07-28.md",
+      "title": "Campaign-site photography census, July 28, 2026",
+      "kind": "research-run",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Full-population enumeration and visual classification of five campaign-site media populations, yielding 225 governed photographic entries.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-10-28"
+    },
+    {
+      "id": "research.commercial-rent-current-workstream-source-return.2026-07-28",
+      "path": "docs/knowledge-bank/research-runs/commercial-rent-current-workstream-source-return-2026-07-28.md",
+      "title": "Commercial-rent current-workstream source return, July 28, 2026",
+      "kind": "research-run",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Present-tense return to protected editorial, speech-preparation, and report-review records, with a public event-page check and explicit projection holds.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-08-28"
+    },
+    {
+      "id": "research.commercial-rent-state-public-event-source-return.2026-07-28",
+      "path": "docs/knowledge-bank/research-runs/commercial-rent-state-public-event-source-return-2026-07-28.md",
+      "title": "Commercial-rent state and public-event source return, July 28, 2026",
+      "kind": "research-run",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Present-tense return to official Albany records and protected Otter recordings, establishing a bounded next corpus without publishing raw transcripts.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-08-28"
     },
     {
       "id": "research.foundational-source-return.2026-07-19",
@@ -1640,6 +1718,32 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "research.public-testimony-source-return.2026-07-28",
+      "path": "docs/knowledge-bank/research-runs/public-testimony-source-return-2026-07-28.md",
+      "title": "Public testimony source return, July 28, 2026",
+      "kind": "research-run",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Full-population speaker parsing and position-aware transcription pass across nine official Council transcripts connected to NYC Artist Coalition and Commercial Rent Stabilization work.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-10-28"
+    },
+    {
+      "id": "source.action-lab.small-business-united-rally.2026-07-29",
+      "path": "docs/knowledge-bank/sources/action-lab-small-business-united-rally-2026-07-29.md",
+      "title": "Small Business United report-release rally event page",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public Action Lab event page for a July 29, 2026 report release and rally supporting the Small Business Rent Stabilization Act.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-08-04"
+    },
+    {
       "id": "source.callnyc.source-repository",
       "path": "docs/knowledge-bank/sources/callnyc-source-repository.md",
       "title": "CallNYC public source repository",
@@ -1653,6 +1757,19 @@
       "reviewBy": "2027-01-19"
     },
     {
+      "id": "source.campaign-site-media-census.2026-07-28",
+      "path": "docs/knowledge-bank/sources/campaign-site-media-census-2026-07-28.md",
+      "title": "Campaign-site photographic and media census, July 2026",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public-safe metadata census of 430 distinct works recovered from five NYC Artist Coalition campaign-site source populations, including 225 photographic entries.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-10-28"
+    },
+    {
       "id": "source.civichall.hackathon-announcement.2016",
       "path": "docs/knowledge-bank/sources/civichall-hackathon-announcement-2016.md",
       "title": "Civic Hall hackathon announcement",
@@ -1664,6 +1781,32 @@
       "aliases": [],
       "lastReviewed": "2026-07-18",
       "reviewBy": "2027-01-18"
+    },
+    {
+      "id": "source.commercial-rent.current-workstream.protected.2026-07",
+      "path": "docs/knowledge-bank/sources/commercial-rent-current-workstream-protected-2026-07.md",
+      "title": "Protected commercial-rent current-workstream bundle",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Public-safe metadata for private editorial conversation, speech rehearsal, pre-publication review, and event-coordination records from late July 2026.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-08-28"
+    },
+    {
+      "id": "source.commercial-rent.public-event-recordings.protected.2025-2026",
+      "path": "docs/knowledge-bank/sources/commercial-rent-public-event-recordings-2025-2026.md",
+      "title": "Protected commercial-rent public-event recording family, 2025-2026",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Public-safe metadata for four distinct commercial-rent stabilization event recordings held outside formal Council hearings.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-08-28"
     },
     {
       "id": "source.councilstat.fuller-release.2016",
@@ -1703,6 +1846,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "source.interview.eon-huntley-commercial-rent-stabilization.2026",
+      "path": "docs/knowledge-bank/sources/interview-eon-huntley-commercial-rent-stabilization-2026.md",
+      "title": "Interview magazine conversation with Eon Huntley",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Published interview in which Eon Huntley explicitly supports Gallagher's commercial-rent-stabilization bill.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-08-28"
     },
     {
       "id": "source.jamie.writers-voice-synthesis.2026-07",
@@ -1950,6 +2106,162 @@
       "aliases": [],
       "lastReviewed": "2026-07-18",
       "reviewBy": "2027-01-18"
+    },
+    {
+      "id": "source.nycc.resolution.small-business-rent-stabilization.2026",
+      "path": "docs/knowledge-bank/sources/nycc-small-business-rent-stabilization-resolution-2026.md",
+      "title": "NYC Council Resolution 496-2026 legislative record",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official Council record for Resolution 496-2026 supporting the New York City Small Business Rent Stabilization Act in Albany.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-10-28"
+    },
+    {
+      "id": "source.nycc.transcript.cabaret-oversight.2017-06-19",
+      "path": "docs/knowledge-bank/sources/nycc-cabaret-oversight-transcript-2017-06-19.md",
+      "title": "NYC Council Cabaret Law oversight transcript, June 19, 2017",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official Council transcript of the Cabaret Law oversight and Office of Nightlife hearing.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2027-01-28"
+    },
+    {
+      "id": "source.nycc.transcript.cabaret-repeal.2017-09-14",
+      "path": "docs/knowledge-bank/sources/nycc-cabaret-repeal-transcript-2017-09-14.md",
+      "title": "NYC Council Cabaret Law repeal transcript, September 14, 2017",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official Council transcript of the hearing on Cabaret Law repeal and related nightlife-security provisions.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2027-01-28"
+    },
+    {
+      "id": "source.nycc.transcript.commercial-rent-stated.2019-11-14",
+      "path": "docs/knowledge-bank/sources/nycc-commercial-rent-stated-transcript-2019-11-14.md",
+      "title": "NYC Council stated-meeting transcript, November 14, 2019",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official stated-meeting transcript for the introduction date of Int. 1796-2019.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2027-01-28"
+    },
+    {
+      "id": "source.nycc.transcript.commercial-rent-stated.2022-03-24",
+      "path": "docs/knowledge-bank/sources/nycc-commercial-rent-stated-transcript-2022-03-24.md",
+      "title": "NYC Council stated-meeting transcript, March 24, 2022",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official stated-meeting transcript for the reintroduction of Commercial Rent Stabilization as Int. 93-2022.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2027-01-28"
+    },
+    {
+      "id": "source.nycc.transcript.commercial-rent.2021-09-17",
+      "path": "docs/knowledge-bank/sources/nycc-commercial-rent-hearing-transcript-2021-09-17.md",
+      "title": "NYC Council Commercial Rent Stabilization transcript, September 17, 2021",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official Council transcript of the Int. 1796 Commercial Rent Stabilization hearing.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2027-01-28"
+    },
+    {
+      "id": "source.nycc.transcript.cultural-affairs-budget.2018-03-16",
+      "path": "docs/knowledge-bank/sources/nycc-cultural-affairs-budget-transcript-2018-03-16.md",
+      "title": "NYC Council Cultural Affairs budget transcript, March 16, 2018",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official Council transcript of the Cultural Affairs preliminary budget hearing.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2027-01-28"
+    },
+    {
+      "id": "source.nycc.transcript.march-transparency.2019-02-11",
+      "path": "docs/knowledge-bank/sources/nycc-march-transparency-transcript-2019-02-11.md",
+      "title": "NYC Council M.A.R.C.H. transparency transcript, February 11, 2019",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official Council transcript of the hearing on M.A.R.C.H. transparency, notice, and accountability.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2027-01-28"
+    },
+    {
+      "id": "source.nycc.transcript.sbjsa.2018-10-22",
+      "path": "docs/knowledge-bank/sources/nycc-sbjsa-transcript-2018-10-22.md",
+      "title": "NYC Council Small Business Jobs Survival Act transcript, October 22, 2018",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official Council transcript of the Small Business Jobs Survival Act hearing.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2027-01-28"
+    },
+    {
+      "id": "source.nycc.transcript.small-business-package.2019-03-18",
+      "path": "docs/knowledge-bank/sources/nycc-small-business-package-transcript-2019-03-18.md",
+      "title": "NYC Council small-business package transcript, March 18, 2019",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official Council transcript of a multi-bill small-business hearing covering storefront data, tenant support, harassment protections, and regulatory review.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2027-01-28"
+    },
+    {
+      "id": "source.nys.legislation.small-business-rent-stabilization.2025-2026",
+      "path": "docs/knowledge-bank/sources/ny-state-small-business-rent-stabilization-bills-2025-2026.md",
+      "title": "New York Small Business Rent Stabilization Act legislative records",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official Senate and Assembly records for S8319 and A5568A, the 2025-2026 New York City Small Business Rent Stabilization Act.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-08-28"
+    },
+    {
+      "id": "source.nys.senate.small-business-rent-stabilization-announcement.2026-02-17",
+      "path": "docs/knowledge-bank/sources/ny-state-small-business-rent-stabilization-announcement-2026-02-17.md",
+      "title": "Salazar and Gallagher Small Business Rent Stabilization Act announcement",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official New York Senate announcement of S8319 and A5568A with attributed statements supporting the legislation.",
+      "aliases": [],
+      "lastReviewed": "2026-07-28",
+      "reviewBy": "2026-08-28"
     },
     {
       "id": "source.permission.elana-gordon.east-river.2026-07",
@@ -3116,6 +3428,46 @@
       "context": null
     },
     {
+      "from": "index.campaign-site-photography",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.visual-evidence",
+      "source": "frontmatter",
+      "href": "visual-evidence.md",
+      "context": null
+    },
+    {
+      "from": "index.campaign-site-photography",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "index.campaign-site-photography",
+      "type": "related_to",
+      "to": "research.campaign-site-photography-census.2026-07-28",
+      "source": "frontmatter",
+      "href": "../research-runs/campaign-site-photography-census-2026-07-28.md",
+      "context": null
+    },
+    {
+      "from": "index.campaign-site-photography",
+      "type": "uses_source",
+      "to": "source.campaign-site-media-census.2026-07-28",
+      "source": "frontmatter",
+      "href": "../sources/campaign-site-media-census-2026-07-28.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "related_to",
+      "to": "index.campaign-site-photography",
+      "source": "frontmatter",
+      "href": "indexes/campaign-site-photography.md",
+      "context": "Complete governed census of campaign-site photographic works and placement boundaries."
+    },
+    {
       "from": "index.knowledge-wiki",
       "type": "related_to",
       "to": "index.knowledge-wiki.decision-records",
@@ -3162,6 +3514,14 @@
       "source": "frontmatter",
       "href": "indexes/project-lineages.md",
       "context": "Bounded inheritance, adaptation, and divergence across projects."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "related_to",
+      "to": "index.public-testimony-and-heteroglossia",
+      "source": "frontmatter",
+      "href": "indexes/public-testimony-and-heteroglossia.md",
+      "context": "Attributed official-transcript corpora for supportive public witnesses and officials."
     },
     {
       "from": "index.knowledge-wiki",
@@ -4234,6 +4594,126 @@
       "source": "frontmatter",
       "href": "../../sources/recollections/jamie-canoe-commuting-2026-07.md",
       "context": "Later recollection about a recurring bicycle-canoe practice."
+    },
+    {
+      "from": "index.public-testimony-and-heteroglossia",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "index.public-testimony-and-heteroglossia",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "index.public-testimony-and-heteroglossia",
+      "type": "related_to",
+      "to": "research-inquiry.commercial-rent.state-and-public-event-testimony",
+      "source": "frontmatter",
+      "href": "../research-inquiries/commercial-rent-state-and-public-event-testimony.md",
+      "context": null
+    },
+    {
+      "from": "index.public-testimony-and-heteroglossia",
+      "type": "related_to",
+      "to": "research.commercial-rent-state-public-event-source-return.2026-07-28",
+      "source": "frontmatter",
+      "href": "../research-runs/commercial-rent-state-public-event-source-return-2026-07-28.md",
+      "context": null
+    },
+    {
+      "from": "index.public-testimony-and-heteroglossia",
+      "type": "related_to",
+      "to": "research.public-testimony-source-return.2026-07-28",
+      "source": "frontmatter",
+      "href": "../research-runs/public-testimony-source-return-2026-07-28.md",
+      "context": null
+    },
+    {
+      "from": "index.public-testimony-and-heteroglossia",
+      "type": "uses_source",
+      "to": "source.nycc.resolution.small-business-rent-stabilization.2026",
+      "source": "frontmatter",
+      "href": "../sources/nycc-small-business-rent-stabilization-resolution-2026.md",
+      "context": null
+    },
+    {
+      "from": "index.public-testimony-and-heteroglossia",
+      "type": "uses_source",
+      "to": "source.nycc.transcript.cabaret-oversight.2017-06-19",
+      "source": "frontmatter",
+      "href": "../sources/nycc-cabaret-oversight-transcript-2017-06-19.md",
+      "context": null
+    },
+    {
+      "from": "index.public-testimony-and-heteroglossia",
+      "type": "uses_source",
+      "to": "source.nycc.transcript.cabaret-repeal.2017-09-14",
+      "source": "frontmatter",
+      "href": "../sources/nycc-cabaret-repeal-transcript-2017-09-14.md",
+      "context": null
+    },
+    {
+      "from": "index.public-testimony-and-heteroglossia",
+      "type": "uses_source",
+      "to": "source.nycc.transcript.commercial-rent-stated.2019-11-14",
+      "source": "frontmatter",
+      "href": "../sources/nycc-commercial-rent-stated-transcript-2019-11-14.md",
+      "context": null
+    },
+    {
+      "from": "index.public-testimony-and-heteroglossia",
+      "type": "uses_source",
+      "to": "source.nycc.transcript.commercial-rent-stated.2022-03-24",
+      "source": "frontmatter",
+      "href": "../sources/nycc-commercial-rent-stated-transcript-2022-03-24.md",
+      "context": null
+    },
+    {
+      "from": "index.public-testimony-and-heteroglossia",
+      "type": "uses_source",
+      "to": "source.nycc.transcript.commercial-rent.2021-09-17",
+      "source": "frontmatter",
+      "href": "../sources/nycc-commercial-rent-hearing-transcript-2021-09-17.md",
+      "context": null
+    },
+    {
+      "from": "index.public-testimony-and-heteroglossia",
+      "type": "uses_source",
+      "to": "source.nycc.transcript.cultural-affairs-budget.2018-03-16",
+      "source": "frontmatter",
+      "href": "../sources/nycc-cultural-affairs-budget-transcript-2018-03-16.md",
+      "context": null
+    },
+    {
+      "from": "index.public-testimony-and-heteroglossia",
+      "type": "uses_source",
+      "to": "source.nycc.transcript.march-transparency.2019-02-11",
+      "source": "frontmatter",
+      "href": "../sources/nycc-march-transparency-transcript-2019-02-11.md",
+      "context": null
+    },
+    {
+      "from": "index.public-testimony-and-heteroglossia",
+      "type": "uses_source",
+      "to": "source.nycc.transcript.sbjsa.2018-10-22",
+      "source": "frontmatter",
+      "href": "../sources/nycc-sbjsa-transcript-2018-10-22.md",
+      "context": null
+    },
+    {
+      "from": "index.public-testimony-and-heteroglossia",
+      "type": "uses_source",
+      "to": "source.nycc.transcript.small-business-package.2019-03-18",
+      "source": "frontmatter",
+      "href": "../sources/nycc-small-business-package-transcript-2019-03-18.md",
+      "context": null
     },
     {
       "from": "method.collective-credit-protected-absence",
@@ -5465,6 +5945,30 @@
     },
     {
       "from": "project.fair-rent-nyc",
+      "type": "related_to",
+      "to": "research.commercial-rent-current-workstream-source-return.2026-07-28",
+      "source": "frontmatter",
+      "href": "../research-runs/commercial-rent-current-workstream-source-return-2026-07-28.md",
+      "context": "Dated return to the current workstream with projection holds and librarian requests."
+    },
+    {
+      "from": "project.fair-rent-nyc",
+      "type": "uses_source",
+      "to": "source.action-lab.small-business-united-rally.2026-07-29",
+      "source": "frontmatter",
+      "href": "../sources/action-lab-small-business-united-rally-2026-07-29.md",
+      "context": "Public event-page record for a July 2026 report release and policy call."
+    },
+    {
+      "from": "project.fair-rent-nyc",
+      "type": "uses_source",
+      "to": "source.commercial-rent.current-workstream.protected.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/commercial-rent-current-workstream-protected-2026-07.md",
+      "context": "Summary-only record of protected review, rehearsal, conversation, and coordination materials."
+    },
+    {
+      "from": "project.fair-rent-nyc",
       "type": "uses_source",
       "to": "source.nycac.running-minutes.2026",
       "source": "frontmatter",
@@ -6120,6 +6624,54 @@
       "context": null
     },
     {
+      "from": "research-inquiry.commercial-rent.state-and-public-event-testimony",
+      "type": "related_to",
+      "to": "index.public-testimony-and-heteroglossia",
+      "source": "frontmatter",
+      "href": "../indexes/public-testimony-and-heteroglossia.md",
+      "context": null
+    },
+    {
+      "from": "research-inquiry.commercial-rent.state-and-public-event-testimony",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "research-inquiry.commercial-rent.state-and-public-event-testimony",
+      "type": "uses_source",
+      "to": "source.commercial-rent.public-event-recordings.protected.2025-2026",
+      "source": "frontmatter",
+      "href": "../sources/commercial-rent-public-event-recordings-2025-2026.md",
+      "context": null
+    },
+    {
+      "from": "research-inquiry.commercial-rent.state-and-public-event-testimony",
+      "type": "uses_source",
+      "to": "source.interview.eon-huntley-commercial-rent-stabilization.2026",
+      "source": "frontmatter",
+      "href": "../sources/interview-eon-huntley-commercial-rent-stabilization-2026.md",
+      "context": null
+    },
+    {
+      "from": "research-inquiry.commercial-rent.state-and-public-event-testimony",
+      "type": "uses_source",
+      "to": "source.nys.legislation.small-business-rent-stabilization.2025-2026",
+      "source": "frontmatter",
+      "href": "../sources/ny-state-small-business-rent-stabilization-bills-2025-2026.md",
+      "context": null
+    },
+    {
+      "from": "research-inquiry.commercial-rent.state-and-public-event-testimony",
+      "type": "uses_source",
+      "to": "source.nys.senate.small-business-rent-stabilization-announcement.2026-02-17",
+      "source": "frontmatter",
+      "href": "../sources/ny-state-small-business-rent-stabilization-announcement-2026-02-17.md",
+      "context": null
+    },
+    {
       "from": "research-inquiry.nycac.dcla-audio-speaker-map",
       "type": "related_to",
       "to": "event.nycac.diy-spaces-post-ghost-ship-dcla.2017-01-27",
@@ -6205,6 +6757,102 @@
       "to": "source.ucsc.narrative-evaluations.2004-2006",
       "source": "frontmatter",
       "href": "../sources/ucsc-narrative-evaluations-2004-2006.md",
+      "context": null
+    },
+    {
+      "from": "research.campaign-site-photography-census.2026-07-28",
+      "type": "related_to",
+      "to": "index.campaign-site-photography",
+      "source": "frontmatter",
+      "href": "../indexes/campaign-site-photography.md",
+      "context": null
+    },
+    {
+      "from": "research.campaign-site-photography-census.2026-07-28",
+      "type": "uses_source",
+      "to": "source.campaign-site-media-census.2026-07-28",
+      "source": "frontmatter",
+      "href": "../sources/campaign-site-media-census-2026-07-28.md",
+      "context": null
+    },
+    {
+      "from": "research.commercial-rent-current-workstream-source-return.2026-07-28",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "research.commercial-rent-current-workstream-source-return.2026-07-28",
+      "type": "uses_method",
+      "to": "method.situated-source-rereading",
+      "source": "frontmatter",
+      "href": "../methods/situated-source-rereading.md",
+      "context": null
+    },
+    {
+      "from": "research.commercial-rent-current-workstream-source-return.2026-07-28",
+      "type": "uses_source",
+      "to": "source.action-lab.small-business-united-rally.2026-07-29",
+      "source": "frontmatter",
+      "href": "../sources/action-lab-small-business-united-rally-2026-07-29.md",
+      "context": null
+    },
+    {
+      "from": "research.commercial-rent-current-workstream-source-return.2026-07-28",
+      "type": "uses_source",
+      "to": "source.commercial-rent.current-workstream.protected.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/commercial-rent-current-workstream-protected-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "research.commercial-rent-state-public-event-source-return.2026-07-28",
+      "type": "related_to",
+      "to": "research-inquiry.commercial-rent.state-and-public-event-testimony",
+      "source": "frontmatter",
+      "href": "../research-inquiries/commercial-rent-state-and-public-event-testimony.md",
+      "context": null
+    },
+    {
+      "from": "research.commercial-rent-state-public-event-source-return.2026-07-28",
+      "type": "uses_method",
+      "to": "method.situated-source-rereading",
+      "source": "frontmatter",
+      "href": "../methods/situated-source-rereading.md",
+      "context": null
+    },
+    {
+      "from": "research.commercial-rent-state-public-event-source-return.2026-07-28",
+      "type": "uses_source",
+      "to": "source.commercial-rent.public-event-recordings.protected.2025-2026",
+      "source": "frontmatter",
+      "href": "../sources/commercial-rent-public-event-recordings-2025-2026.md",
+      "context": null
+    },
+    {
+      "from": "research.commercial-rent-state-public-event-source-return.2026-07-28",
+      "type": "uses_source",
+      "to": "source.interview.eon-huntley-commercial-rent-stabilization.2026",
+      "source": "frontmatter",
+      "href": "../sources/interview-eon-huntley-commercial-rent-stabilization-2026.md",
+      "context": null
+    },
+    {
+      "from": "research.commercial-rent-state-public-event-source-return.2026-07-28",
+      "type": "uses_source",
+      "to": "source.nys.legislation.small-business-rent-stabilization.2025-2026",
+      "source": "frontmatter",
+      "href": "../sources/ny-state-small-business-rent-stabilization-bills-2025-2026.md",
+      "context": null
+    },
+    {
+      "from": "research.commercial-rent-state-public-event-source-return.2026-07-28",
+      "type": "uses_source",
+      "to": "source.nys.senate.small-business-rent-stabilization-announcement.2026-02-17",
+      "source": "frontmatter",
+      "href": "../sources/ny-state-small-business-rent-stabilization-announcement-2026-02-17.md",
       "context": null
     },
     {
@@ -6528,6 +7176,38 @@
       "context": null
     },
     {
+      "from": "research.public-testimony-source-return.2026-07-28",
+      "type": "related_to",
+      "to": "index.public-testimony-and-heteroglossia",
+      "source": "frontmatter",
+      "href": "../indexes/public-testimony-and-heteroglossia.md",
+      "context": null
+    },
+    {
+      "from": "research.public-testimony-source-return.2026-07-28",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "research.public-testimony-source-return.2026-07-28",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.action-lab.small-business-united-rally.2026-07-29",
+      "type": "documents",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
       "from": "source.callnyc.source-repository",
       "type": "documents",
       "to": "project.callnyc",
@@ -6544,11 +7224,83 @@
       "context": null
     },
     {
+      "from": "source.campaign-site-media-census.2026-07-28",
+      "type": "documents",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "source.campaign-site-media-census.2026-07-28",
+      "type": "documents",
+      "to": "project.let-nyc-dance",
+      "source": "frontmatter",
+      "href": "../projects/let-nyc-dance.md",
+      "context": null
+    },
+    {
+      "from": "source.campaign-site-media-census.2026-07-28",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.campaign-site-media-census.2026-07-28",
+      "type": "documents",
+      "to": "project.save-nyc-spaces",
+      "source": "frontmatter",
+      "href": "../projects/save-nyc-spaces.md",
+      "context": null
+    },
+    {
+      "from": "source.campaign-site-media-census.2026-07-28",
+      "type": "documents",
+      "to": "project.talks-not-raids",
+      "source": "frontmatter",
+      "href": "../projects/talks-not-raids-orientation.md",
+      "context": null
+    },
+    {
       "from": "source.civichall.hackathon-announcement.2016",
       "type": "documents",
       "to": "event.nycc.constituent-services-hackathon.2016",
       "source": "frontmatter",
       "href": "../events/nycc-constituent-services-hackathon-2016.md",
+      "context": null
+    },
+    {
+      "from": "source.commercial-rent.current-workstream.protected.2026-07",
+      "type": "documents",
+      "to": "method.situated-source-rereading",
+      "source": "frontmatter",
+      "href": "../methods/situated-source-rereading.md",
+      "context": null
+    },
+    {
+      "from": "source.commercial-rent.current-workstream.protected.2026-07",
+      "type": "documents",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "source.commercial-rent.public-event-recordings.protected.2025-2026",
+      "type": "documents",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "source.commercial-rent.public-event-recordings.protected.2025-2026",
+      "type": "related_to",
+      "to": "index.public-testimony-and-heteroglossia",
+      "source": "frontmatter",
+      "href": "../indexes/public-testimony-and-heteroglossia.md",
       "context": null
     },
     {
@@ -6589,6 +7341,14 @@
       "to": "project.harry-j-epstein",
       "source": "frontmatter",
       "href": "../projects/harry-j-epstein.md",
+      "context": null
+    },
+    {
+      "from": "source.interview.eon-huntley-commercial-rent-stabilization.2026",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
       "context": null
     },
     {
@@ -6765,6 +7525,110 @@
       "to": "event.nycc.constituent-services-hackathon.2016",
       "source": "frontmatter",
       "href": "../events/nycc-constituent-services-hackathon-2016.md",
+      "context": null
+    },
+    {
+      "from": "source.nycc.resolution.small-business-rent-stabilization.2026",
+      "type": "documents",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "source.nycc.transcript.cabaret-oversight.2017-06-19",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.nycc.transcript.cabaret-repeal.2017-09-14",
+      "type": "documents",
+      "to": "project.let-nyc-dance",
+      "source": "frontmatter",
+      "href": "../projects/let-nyc-dance.md",
+      "context": null
+    },
+    {
+      "from": "source.nycc.transcript.commercial-rent-stated.2019-11-14",
+      "type": "documents",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "source.nycc.transcript.commercial-rent-stated.2022-03-24",
+      "type": "documents",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "source.nycc.transcript.commercial-rent.2021-09-17",
+      "type": "documents",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "source.nycc.transcript.cultural-affairs-budget.2018-03-16",
+      "type": "documents",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.nycc.transcript.march-transparency.2019-02-11",
+      "type": "documents",
+      "to": "project.talks-not-raids",
+      "source": "frontmatter",
+      "href": "../projects/talks-not-raids-orientation.md",
+      "context": null
+    },
+    {
+      "from": "source.nycc.transcript.sbjsa.2018-10-22",
+      "type": "documents",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "source.nycc.transcript.small-business-package.2019-03-18",
+      "type": "documents",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "source.nys.legislation.small-business-rent-stabilization.2025-2026",
+      "type": "documents",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "source.nys.senate.small-business-rent-stabilization-announcement.2026-02-17",
+      "type": "documents",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "source.nys.senate.small-business-rent-stabilization-announcement.2026-02-17",
+      "type": "related_to",
+      "to": "source.nys.legislation.small-business-rent-stabilization.2025-2026",
+      "source": "frontmatter",
+      "href": "ny-state-small-business-rent-stabilization-bills-2025-2026.md",
       "context": null
     },
     {
@@ -6951,7 +7815,7 @@
       "toPath": "docs/knowledge-bank/citational-care.md",
       "to": null,
       "fragment": null,
-      "line": 117,
+      "line": 123,
       "kind": "link"
     },
     {
@@ -6960,7 +7824,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc.md",
       "to": "project.callnyc",
       "fragment": null,
-      "line": 118,
+      "line": 124,
       "kind": "link"
     },
     {
@@ -6969,7 +7833,7 @@
       "toPath": "docs/knowledge-bank/intake-and-maturation.md",
       "to": null,
       "fragment": null,
-      "line": 121,
+      "line": 127,
       "kind": "link"
     },
     {
@@ -6978,7 +7842,7 @@
       "toPath": "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md",
       "to": null,
       "fragment": null,
-      "line": 125,
+      "line": 131,
       "kind": "link"
     },
     {
@@ -6987,7 +7851,7 @@
       "toPath": "docs/knowledge-bank/agency-and-collective-credit.md",
       "to": null,
       "fragment": null,
-      "line": 132,
+      "line": 138,
       "kind": "link"
     },
     {
@@ -6996,7 +7860,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-finkelpearl-council-hearing-review.md",
       "to": null,
       "fragment": null,
-      "line": 137,
+      "line": 143,
       "kind": "link"
     },
     {
@@ -7005,7 +7869,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-campaign-press-archive.md",
       "to": null,
       "fragment": null,
-      "line": 143,
+      "line": 149,
       "kind": "link"
     },
     {
@@ -7014,7 +7878,7 @@
       "toPath": "docs/knowledge-bank/projects/talks-not-raids.md",
       "to": null,
       "fragment": null,
-      "line": 148,
+      "line": 154,
       "kind": "link"
     },
     {
@@ -7023,7 +7887,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 154,
+      "line": 160,
       "kind": "link"
     },
     {
@@ -7032,7 +7896,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/kcspacesfund-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 156,
+      "line": 162,
       "kind": "link"
     },
     {
@@ -7041,7 +7905,7 @@
       "toPath": "docs/knowledge-bank/projects/jamie-personal-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 162,
+      "line": 168,
       "kind": "link"
     },
     {
@@ -7050,7 +7914,7 @@
       "toPath": "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
       "to": null,
       "fragment": null,
-      "line": 164,
+      "line": 170,
       "kind": "link"
     },
     {
@@ -7059,7 +7923,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-town-hall.md",
       "to": null,
       "fragment": null,
-      "line": 172,
+      "line": 178,
       "kind": "link"
     },
     {
@@ -7068,7 +7932,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
       "to": null,
       "fragment": null,
-      "line": 178,
+      "line": 184,
       "kind": "link"
     },
     {
@@ -7077,7 +7941,7 @@
       "toPath": "docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
       "to": null,
       "fragment": null,
-      "line": 180,
+      "line": 186,
       "kind": "link"
     },
     {
@@ -7086,7 +7950,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
       "to": null,
       "fragment": null,
-      "line": 186,
+      "line": 192,
       "kind": "link"
     },
     {
@@ -7095,7 +7959,7 @@
       "toPath": "docs/knowledge-bank/projects/archive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 192,
+      "line": 198,
       "kind": "link"
     },
     {
@@ -7104,7 +7968,7 @@
       "toPath": "docs/knowledge-bank/projects/icloud-teams-archive-delta-2026-07-15.md",
       "to": null,
       "fragment": null,
-      "line": 198,
+      "line": 204,
       "kind": "link"
     },
     {
@@ -7113,7 +7977,7 @@
       "toPath": "docs/knowledge-bank/projects/google-drive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 204,
+      "line": 210,
       "kind": "link"
     },
     {
@@ -7122,7 +7986,7 @@
       "toPath": "docs/knowledge-bank/projects/social-media-archive-production.md",
       "to": null,
       "fragment": null,
-      "line": 210,
+      "line": 216,
       "kind": "link"
     },
     {
@@ -7131,7 +7995,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 216,
+      "line": 222,
       "kind": "link"
     },
     {
@@ -7140,7 +8004,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
       "to": null,
       "fragment": null,
-      "line": 218,
+      "line": 224,
       "kind": "link"
     },
     {
@@ -7149,7 +8013,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-retrievable-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 224,
+      "line": 230,
       "kind": "link"
     },
     {
@@ -7158,7 +8022,7 @@
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md",
       "to": null,
       "fragment": null,
-      "line": 229,
+      "line": 235,
       "kind": "link"
     },
     {
@@ -7167,7 +8031,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 231,
+      "line": 237,
       "kind": "link"
     },
     {
@@ -7176,7 +8040,7 @@
       "toPath": "docs/knowledge-bank/projects/urbanhermit-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 238,
+      "line": 244,
       "kind": "link"
     },
     {
@@ -7185,7 +8049,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 240,
+      "line": 246,
       "kind": "link"
     },
     {
@@ -7194,7 +8058,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 246,
+      "line": 252,
       "kind": "link"
     },
     {
@@ -7203,7 +8067,7 @@
       "toPath": "docs/knowledge-bank/data/callnyc-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 248,
+      "line": 254,
       "kind": "link"
     },
     {
@@ -7212,16 +8076,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 253,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
-      "to": null,
-      "fragment": null,
-      "line": 255,
+      "line": 259,
       "kind": "link"
     },
     {
@@ -7236,7 +8091,7 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
+      "toPath": "docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
       "line": 261,
@@ -7245,10 +8100,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
+      "to": null,
+      "fragment": null,
+      "line": 267,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 263,
+      "line": 269,
       "kind": "link"
     },
     {
@@ -7257,22 +8121,13 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
       "to": null,
       "fragment": null,
-      "line": 270,
+      "line": 276,
       "kind": "link"
     },
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/data/wowlist-sunday-dinner-callscript-controls.json",
-      "to": null,
-      "fragment": null,
-      "line": 272,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "evals/knowledge-bank/runs/2026-07-15-wowlist-sunday-dinner-callscript-continuity.md",
       "to": null,
       "fragment": null,
       "line": 278,
@@ -7290,10 +8145,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "evals/knowledge-bank/runs/2026-07-15-wowlist-sunday-dinner-callscript-continuity.md",
+      "to": null,
+      "fragment": null,
+      "line": 284,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 281,
+      "line": 287,
       "kind": "link"
     },
     {
@@ -7302,7 +8166,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 286,
+      "line": 292,
       "kind": "link"
     },
     {
@@ -7311,7 +8175,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 287,
+      "line": 293,
       "kind": "link"
     },
     {
@@ -7398,10 +8262,28 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/indexes/campaign-site-photography.md",
+      "to": "index.campaign-site-photography",
+      "fragment": null,
+      "line": 51,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/indexes/public-testimony-and-heteroglossia.md",
+      "to": "index.public-testimony-and-heteroglossia",
+      "fragment": null,
+      "line": 54,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
       "to": "project.nyc-artist-coalition",
       "fragment": null,
-      "line": 51,
+      "line": 57,
       "kind": "link"
     },
     {
@@ -7410,7 +8292,7 @@
       "toPath": "docs/knowledge-bank/_generated/wanted-pages.md",
       "to": null,
       "fragment": null,
-      "line": 54,
+      "line": 60,
       "kind": "link"
     },
     {
@@ -7419,7 +8301,7 @@
       "toPath": "docs/knowledge-bank/workflow.md",
       "to": null,
       "fragment": null,
-      "line": 60,
+      "line": 66,
       "kind": "link"
     },
     {
@@ -7600,6 +8482,15 @@
       "to": "source.nycc.councilstat-hackathon-post.2016",
       "fragment": null,
       "line": 9,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/campaign-site-photography.md",
+      "from": "index.campaign-site-photography",
+      "toPath": "docs/knowledge-bank/research-runs/campaign-site-photography-census-2026-07-28.md",
+      "to": "research.campaign-site-photography-census.2026-07-28",
+      "fragment": null,
+      "line": 18,
       "kind": "link"
     },
     {
@@ -8566,6 +9457,33 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/indexes/public-testimony-and-heteroglossia.md",
+      "from": "index.public-testimony-and-heteroglossia",
+      "toPath": "docs/knowledge-bank/research-inquiries/commercial-rent-state-and-public-event-testimony.md",
+      "to": "research-inquiry.commercial-rent.state-and-public-event-testimony",
+      "fragment": null,
+      "line": 61,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/public-testimony-and-heteroglossia.md",
+      "from": "index.public-testimony-and-heteroglossia",
+      "toPath": "docs/knowledge-bank/research-runs/commercial-rent-state-public-event-source-return-2026-07-28.md",
+      "to": "research.commercial-rent-state-public-event-source-return.2026-07-28",
+      "fragment": null,
+      "line": 63,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/public-testimony-and-heteroglossia.md",
+      "from": "index.public-testimony-and-heteroglossia",
+      "toPath": "docs/knowledge-bank/research-runs/public-testimony-source-return-2026-07-28.md",
+      "to": "research.public-testimony-source-return.2026-07-28",
+      "fragment": null,
+      "line": 83,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/indexes/visual-evidence.md",
       "from": "index.knowledge-wiki.visual-evidence",
       "toPath": "docs/knowledge-bank/assets/digital-district-photo.md",
@@ -9364,6 +10282,15 @@
       "to": "research-inquiry.photo.nyc-council-commercial-rent-fieldwork",
       "fragment": null,
       "line": 22,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/fair-rent-nyc.md",
+      "from": "project.fair-rent-nyc",
+      "toPath": "docs/knowledge-bank/research-runs/commercial-rent-current-workstream-source-return-2026-07-28.md",
+      "to": "research.commercial-rent-current-workstream-source-return.2026-07-28",
+      "fragment": null,
+      "line": 27,
       "kind": "link"
     },
     {

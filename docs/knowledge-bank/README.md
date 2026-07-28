@@ -43,6 +43,14 @@ relations:
     href: indexes/family-closure.md
     context: Selective integration record for the frozen Knowledge Wiki A-E branch family.
   - type: related_to
+    target: index.campaign-site-photography
+    href: indexes/campaign-site-photography.md
+    context: Complete governed census of campaign-site photographic works and placement boundaries.
+  - type: related_to
+    target: index.public-testimony-and-heteroglossia
+    href: indexes/public-testimony-and-heteroglossia.md
+    context: Attributed official-transcript corpora for supportive public witnesses and officials.
+  - type: related_to
     target: project.nyc-artist-coalition
     href: projects/nyc-artist-coalition-2017.md
     context: Governed civic-systems record strengthened by complete shared-folder accounting.
@@ -97,6 +105,12 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Branch-family closure](indexes/family-closure.md): exact frozen donors,
   selected strengths, consolidated pages, deliberate deferrals, and the human
   gates still required before public projection.
+- [Campaign-site photography](indexes/campaign-site-photography.md): a complete
+  media census with visual classifications, occurrence context, and rights,
+  credit, represented-person, and placement boundaries.
+- [Public testimony and heteroglossia](indexes/public-testimony-and-heteroglossia.md):
+  speaker-aware official-transcript corpora preserving supportive public
+  witnesses and officials without converting testimony into verified fact.
 - [NYC Artist Coalition](projects/nyc-artist-coalition-2017.md): public-source
   claims, collective-credit boundaries, and the governed shared-folder research
   pass.

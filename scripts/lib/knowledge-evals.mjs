@@ -66,7 +66,7 @@ const KCTH_FIELD_PRACTICE_REVIEW_LOCKS = Object.freeze({
   governedKnowledgeSha256: "899dc28f9fd9e63034b11ef2f5985b7a49f494ddf365f4d873e6598f3efe98c0",
   proofProjectionSha256: "f8af10efe6b6c073197cc8f0f53189b04933dc66a4059807d727454724e9a07d",
   caseStudyMdxSha256: "859205fe5cd3d7aa538a4706d52ff2476657565336a8157b1bffc8a4fb502bce",
-  sharedPublicSurfacesSha256: "66d49ae7551123c0f548ddf1800d0455c79c9eb19b9c363d10c0e649922e3d87",
+  sharedPublicSurfacesSha256: "edd3c3f3fa5ff179ee58fcc0765e4c185abfb2a52385a3310c485d21e4948f84",
   publicReviewReportSha256: "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696"
 });
 // Re-reviewed 2026-07-21 after removing trailing Markdown line-break spaces for
@@ -112,7 +112,7 @@ const PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   publicReportSha256: "0e8dc37b79624e2ac86a026fca40741ee578aeb22bc5002e795775c1df5e650e",
   wowListMdxSha256: "bcfb73aabc9bd05555388e2601d9d63fdff7eac835bc336c639c3241325bfdb0",
   sundayDinnerMdxSha256: "2c9e22237d23a1b99262634f75cb24f7eeca300c0ed59e0dec26b6c3a54dd6be",
-  proofContentSha256: "04bda7a50e53a7c78d4f49b7f139a424514e03d83994c3fbb63cd6fbd25be685"
+  proofContentSha256: "6883581998d93dc7ca09f38da9d914e384014fa3a745307940af5ceac28e3fc1"
 });
 const WOWLIST_FACEBOOK_POST_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "5755dfbbb6388ca369b90337e210502dd264bb22d554cf8f0294027de08ffc72",
@@ -5595,6 +5595,18 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         actualSha256: fieldPracticeContentSha256,
         approvedSha256: fieldPractice.approvedContentSha256,
         matches: fieldPracticeContentSha256 === fieldPractice.approvedContentSha256,
+        actualCanonicalRecordsSha256: fieldPracticeCanonicalRecordsSha256,
+        approvedCanonicalRecordsSha256: KCTH_FIELD_PRACTICE_REVIEW_LOCKS.canonicalRecordsSha256,
+        actualGovernedKnowledgeSha256: kcTownHallContentSha256,
+        approvedGovernedKnowledgeSha256: KCTH_FIELD_PRACTICE_REVIEW_LOCKS.governedKnowledgeSha256,
+        actualProofProjectionSha256: fieldPracticeProofProjectionSha256,
+        approvedProofProjectionSha256: KCTH_FIELD_PRACTICE_REVIEW_LOCKS.proofProjectionSha256,
+        actualCaseStudyMdxSha256: kcTownHallMdxSha256,
+        approvedCaseStudyMdxSha256: KCTH_FIELD_PRACTICE_REVIEW_LOCKS.caseStudyMdxSha256,
+        actualSharedPublicSurfacesSha256: fieldPracticeSharedPublicSurfacesSha256,
+        approvedSharedPublicSurfacesSha256: KCTH_FIELD_PRACTICE_REVIEW_LOCKS.sharedPublicSurfacesSha256,
+        actualPublicReviewReportSha256: fieldPracticePublicReviewReportSha256,
+        approvedPublicReviewReportSha256: KCTH_FIELD_PRACTICE_REVIEW_LOCKS.publicReviewReportSha256,
         reviewLocksMatch: fieldPracticeReviewLocksMatch,
         checks: fieldPracticeDiagnosticChecks
       },
@@ -5662,6 +5674,16 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         wowListMdxSha256: createHash("sha256").update(personalWowListFacebookWowListMdx).digest("hex"),
         sundayDinnerMdxSha256: createHash("sha256").update(personalWowListFacebookSundayDinnerMdx).digest("hex"),
         proofContentSha256: personalFacebookProofContentSha256,
+        approvedManifestSha256: PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS.manifestSha256,
+        approvedManifestContentSha256: PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS.manifestContentSha256,
+        approvedGovernedModuleSha256: PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS.governedModuleSha256,
+        approvedCanonicalKnowledgeSha256: PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS.canonicalKnowledgeSha256,
+        approvedReviewConfigurationSha256: PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS.reviewConfigurationSha256,
+        approvedGovernanceBindingsSha256: PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS.governanceBindingsSha256,
+        approvedPublicReportSha256: PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS.publicReportSha256,
+        approvedWowListMdxSha256: PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS.wowListMdxSha256,
+        approvedSundayDinnerMdxSha256: PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS.sundayDinnerMdxSha256,
+        approvedProofContentSha256: PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS.proofContentSha256,
         reviewLocksMatch: personalFacebookReviewLocksMatch,
         checks: personalFacebookDiagnosticChecks
       },

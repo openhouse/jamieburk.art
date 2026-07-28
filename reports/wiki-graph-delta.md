@@ -3,13 +3,13 @@
 
 **Source commit:** `d0e7f368fec2179b97644125346528e5614d24cc`
 **Generation time:** 2026-07-27T00:19:34-04:00
-**Source fingerprint:** `3a1f14c08d0ee0a0644417b1cd43ca0c1ec46033d0f3d4c925e490f5d07309b5`
+**Source fingerprint:** `0c78a475599e86e4fc9c0cc83728bb2d0d29ec674bff9354a531b35a12f8bd47`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 53
+- Nodes added: 77
 - Nodes removed: 0
-- Edges added: 167
+- Edges added: 236
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 11
@@ -33,7 +33,9 @@ Compared with the graph artifact on `origin/develop`.
 - `edition.layout-d.photo-knowledge.2026-07`
 - `evaluation.curatorial.layout-d.home-east-river.v1`
 - `event.nycac.diy-spaces-post-ghost-ship-dcla.2017-01-27`
+- `index.campaign-site-photography`
 - `index.photo-set.east-river-canoe.2022`
+- `index.public-testimony-and-heteroglossia`
 - `notebook.photography`
 - `notebook.photography.field.v01`
 - `notebook.photography.layout-study.d`
@@ -58,11 +60,33 @@ Compared with the graph artifact on `origin/develop`.
 - `projection.photo.layout-d.work.fair-rent-rally`
 - `projection.photo.layout-d.work.kc-town-hall-collaborator`
 - `projection.photo.layout-d.work.sunday-dinner-preparation`
+- `research-inquiry.commercial-rent.state-and-public-event-testimony`
 - `research-inquiry.nycac.dcla-audio-speaker-map`
 - `research-inquiry.photo.documented-canoe-bike-journeys`
 - `research-inquiry.photo.hardhat-worksite-oral-history`
 - `research-inquiry.photo.nyc-council-commercial-rent-fieldwork`
+- `research.campaign-site-photography-census.2026-07-28`
+- `research.commercial-rent-current-workstream-source-return.2026-07-28`
+- `research.commercial-rent-state-public-event-source-return.2026-07-28`
 - `research.nycac.dcla-photograph-source-return.2026-07`
+- `research.public-testimony-source-return.2026-07-28`
+- `source.action-lab.small-business-united-rally.2026-07-29`
+- `source.campaign-site-media-census.2026-07-28`
+- `source.commercial-rent.current-workstream.protected.2026-07`
+- `source.commercial-rent.public-event-recordings.protected.2025-2026`
+- `source.interview.eon-huntley-commercial-rent-stabilization.2026`
+- `source.nycc.resolution.small-business-rent-stabilization.2026`
+- `source.nycc.transcript.cabaret-oversight.2017-06-19`
+- `source.nycc.transcript.cabaret-repeal.2017-09-14`
+- `source.nycc.transcript.commercial-rent-stated.2019-11-14`
+- `source.nycc.transcript.commercial-rent-stated.2022-03-24`
+- `source.nycc.transcript.commercial-rent.2021-09-17`
+- `source.nycc.transcript.cultural-affairs-budget.2018-03-16`
+- `source.nycc.transcript.march-transparency.2019-02-11`
+- `source.nycc.transcript.sbjsa.2018-10-22`
+- `source.nycc.transcript.small-business-package.2019-03-18`
+- `source.nys.legislation.small-business-rent-stabilization.2025-2026`
+- `source.nys.senate.small-business-rent-stabilization-announcement.2026-02-17`
 - `source.permission.elana-gordon.east-river.2026-07`
 - `source.photo-metadata.east-river.2022.public-safe`
 - `source.recollection.jamie-canoe-commuting.2026-07`

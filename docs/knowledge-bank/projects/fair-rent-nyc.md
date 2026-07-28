@@ -28,6 +28,18 @@ relations:
     target: asset.photo.nyc-council.commercial-rent-fieldwork.2026
     href: ../assets/photographs/nyc-council-commercial-rent-fieldwork-2026.md
     context: Governed photograph whose institutional setting does not establish endorsement or adoption.
+  - type: uses_source
+    target: source.action-lab.small-business-united-rally.2026-07-29
+    href: ../sources/action-lab-small-business-united-rally-2026-07-29.md
+    context: Public event-page record for a July 2026 report release and policy call.
+  - type: uses_source
+    target: source.commercial-rent.current-workstream.protected.2026-07
+    href: ../sources/commercial-rent-current-workstream-protected-2026-07.md
+    context: Summary-only record of protected review, rehearsal, conversation, and coordination materials.
+  - type: related_to
+    target: research.commercial-rent-current-workstream-source-return.2026-07-28
+    href: ../research-runs/commercial-rent-current-workstream-source-return-2026-07-28.md
+    context: Dated return to the current workstream with projection holds and librarian requests.
 ---
 
 # Fair Rent NYC
@@ -54,6 +66,12 @@ The [250 Broadway photographic source-return inquiry](../research-inquiries/nyc-
 records a present-day research lead connecting a Council setting, field
 materials, and commercial-rent public-data work. The photograph does not
 establish Council endorsement, adoption, or institutional authorship.
+
+The [July 2026 current-workstream source
+return](../research-runs/commercial-rent-current-workstream-source-return-2026-07-28.md)
+records bounded pre-publication quality assurance, speech preparation, and
+event coordination. The private work remains protected, and no portfolio claim
+is promoted until a final public artifact can be reviewed.
 
 ## Boundary
 

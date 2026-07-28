@@ -1,0 +1,751 @@
+[
+  {
+    "id": "testimony.nycc.cabaret-oversight.2017-06-19",
+    "title": "Cabaret Law oversight and Office of Nightlife hearing",
+    "hearingDate": "2017-06-19",
+    "committee": "New York City Council Committee on Consumer Affairs",
+    "issue": "Cabaret Law repeal or reform, an Office of Nightlife, and safer relationships between cultural spaces, communities, and City agencies",
+    "source": {
+      "title": "Hearing transcript: Enforcement of New York City's Cabaret Law",
+      "officialUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=4DB6965B-EC69-4863-B461-DF449A04AE9F&ID=5316934&M=F",
+      "accessedAt": "2026-07-28",
+      "pageCount": 229,
+      "sourcePdfSha256": "a33dc4e954c75af9c2a238c5d583a011cd2b95a2df1791065cba2339c1117e25"
+    },
+    "transcriptionPolicy": "Speaker turns are normalized from the official Council transcript by removing line numbers and repeating page furniture, joining line-wrap hyphenation, and otherwise retaining transcript wording, uncertainty markers, and apparent errors. Display names do not silently amend the official text.",
+    "classificationPolicy": "Every detected public witness received a position disposition after close reading. Supportive and partly supportive speakers include every attributed turn, including answers to questions; unresolved generic labels remain census-only.",
+    "scopeBoundary": "The corpus includes speakers who supported full repeal, legal dancing, the proposed Office of Nightlife, or related safety and mediation reforms. Support for one part does not imply support for every proposal discussed.",
+    "reviewedAt": "2026-07-28",
+    "reviewStatus": "complete-with-open-attribution",
+    "defaultPositions": {
+      "public-witness": "supportive",
+      "council-member": "unclear",
+      "administration": "supports-in-part",
+      "hearing-staff": "neutral-procedural",
+      "unresolved": "unclear"
+    },
+    "defaultClassificationBasis": {
+      "supportive": "Close reading found affirmative support for Cabaret Law repeal, legal dancing, an Office of Nightlife, or related cultural-space safety reform.",
+      "supports-in-part": "Close reading found affirmative support for at least one reform Jamie and the coalition championed, without treating that support as agreement with every proposal.",
+      "neutral-procedural": "The attributed turns perform hearing administration rather than state an issue position.",
+      "unclear": "The record does not support a safely attributed position."
+    },
+    "aliases": {
+      "Elvis Silverio": ["ELVIS SILVERIO", "ELVIS SILVERADO"],
+      "Garrold Dolan": ["GERALD DOLAN", "GARROLD DOLAN"],
+      "Jamie Burkart": ["JAMIE BURKHART"]
+    },
+    "classifications": {
+      "CHAIRPERSON ESPINAL": {
+        "position": "supportive",
+        "speakerType": "council-member",
+        "classificationBasis": "Espinal's opening and questions explicitly support repeal or modernization and the Office of Nightlife."
+      },
+      "COUNCIL MEMBER REYNOSO": {
+        "position": "supports-in-part",
+        "speakerType": "council-member",
+        "classificationBasis": "Reynoso's questions and remarks support the cultural-space and nightlife reform inquiry."
+      },
+      "COUNCIL MEMBER LEVIN": {
+        "position": "supports-in-part",
+        "speakerType": "council-member",
+        "classificationBasis": "Levin's questions press the administration on discriminatory history and reform."
+      },
+      "COUNCIL MEMBER JOHNSON": {
+        "position": "supports-in-part",
+        "speakerType": "council-member",
+        "classificationBasis": "Johnson's questions support nightlife reform while testing implementation and safety details."
+      },
+      "SUSAN STETZER": {
+        "position": "supports-in-part",
+        "speakerType": "public-witness",
+        "classificationBasis": "Stetzer supports a representative, balanced nightlife framework while raising community-process and quality-of-life concerns."
+      },
+      "SHIRA GANS": {
+        "position": "supports-in-part",
+        "speakerType": "administration",
+        "classificationBasis": "Gans states administration support for the intent of an Office of Nightlife while preserving implementation qualifications."
+      },
+      "LINDSAY GREENE": {
+        "position": "supports-in-part",
+        "speakerType": "administration",
+        "classificationBasis": "Greene supports nightlife as cultural and economic infrastructure while declining a repeal position at that hearing."
+      },
+      "TAMALA BOYD": {
+        "position": "neutral-procedural",
+        "speakerType": "administration",
+        "classificationBasis": "Boyd answers legal-definition questions without an affirmative reform position in her attributed turns."
+      },
+      "DEPUTY COMMISSIONER BAGGA": {
+        "position": "supportive",
+        "speakerType": "administration",
+        "classificationBasis": "Bagga explicitly endorses Espinal's Office of Nightlife framework and its safety and mediation goals."
+      }
+    },
+    "antiClaims": [
+      "A speaker's support establishes agreement with every bill, amendment, factual claim, or other witness.",
+      "Public testimony establishes that Jamie or NYC Artist Coalition solely authored or caused the reforms.",
+      "The official transcript is a perfect record of names, spelling, or intended wording."
+    ]
+  },
+  {
+    "id": "testimony.nycc.cabaret-repeal.2017-09-14",
+    "title": "Cabaret Law repeal hearing",
+    "hearingDate": "2017-09-14",
+    "committee": "New York City Council Committee on Consumer Affairs",
+    "issue": "Repeal of the Cabaret Law's dancing-license requirement while preserving separately debated safety provisions",
+    "source": {
+      "title": "Hearing transcript: Cabaret Law repeal and nightlife security",
+      "officialUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=817A7573-F329-49C4-849A-347B6D00CBC5&ID=5444683&M=F",
+      "accessedAt": "2026-07-28",
+      "pageCount": 143,
+      "sourcePdfSha256": "1a2ce9dd74028b671ba053b339b0fda15709311fcac0be583696b5b74dbd98be"
+    },
+    "transcriptionPolicy": "Speaker turns are normalized from the official Council transcript by removing line numbers and repeating page furniture, joining line-wrap hyphenation, and otherwise retaining transcript wording, uncertainty markers, and apparent errors. Display names do not silently amend the official text.",
+    "classificationPolicy": "Every detected public witness received a position disposition after close reading. Supportive witnesses include every attributed turn; generic unresolved labels remain census-only.",
+    "scopeBoundary": "The corpus includes speakers affirmatively supporting repeal or legalization of dancing. It does not convert testimony into independent verification of every historical or policy assertion.",
+    "reviewedAt": "2026-07-28",
+    "reviewStatus": "complete-with-open-attribution",
+    "defaultPositions": {
+      "public-witness": "supportive",
+      "council-member": "neutral-procedural",
+      "administration": "supportive",
+      "hearing-staff": "neutral-procedural",
+      "unresolved": "unclear"
+    },
+    "defaultClassificationBasis": {
+      "supportive": "Close reading found affirmative support for repealing the Cabaret Law's dancing-license requirement.",
+      "neutral-procedural": "The attributed turns administer the hearing or vote without adding a distinct witness statement.",
+      "unclear": "The record does not support a safely attributed position."
+    },
+    "aliases": {
+      "Jamie Burkart": ["JAMIE BURKHART"]
+    },
+    "classifications": {
+      "CHAIRPERSON ESPINAL": {
+        "position": "supportive",
+        "speakerType": "council-member",
+        "classificationBasis": "Espinal explicitly frames and advocates Cabaret Law repeal."
+      },
+      "CHAIRPERSON DROMM": {
+        "position": "supportive",
+        "speakerType": "council-member",
+        "classificationBasis": "Dromm's remarks and questions support repeal."
+      },
+      "COUNCIL MEMBER GENTILE": {
+        "position": "supports-in-part",
+        "speakerType": "council-member",
+        "classificationBasis": "Gentile votes for the hearing items and participates in the reform discussion."
+      },
+      "COUNCIL MEMBER KOSLOWTIZ": {
+        "position": "supports-in-part",
+        "speakerType": "council-member",
+        "classificationBasis": "Koslowitz votes for the hearing items."
+      },
+      "COUNCIL MEMBER LANCMAN": {
+        "position": "supports-in-part",
+        "speakerType": "council-member",
+        "classificationBasis": "Lancman votes for the hearing items."
+      }
+    },
+    "antiClaims": [
+      "A speaker's support establishes agreement with every retained security provision or factual assertion.",
+      "The hearing alone establishes sole coalition causation of repeal.",
+      "The official transcript is a perfect record of names, spelling, or intended wording."
+    ]
+  },
+  {
+    "id": "testimony.nycc.cultural-affairs-budget.2018-03-16",
+    "title": "Cultural Affairs preliminary budget hearing",
+    "hearingDate": "2018-03-16",
+    "committee": "New York City Council Committee on Cultural Affairs, Libraries and International Intergroup Relations",
+    "issue": "Department of Cultural Affairs funding, CreateNYC implementation, artist support, and public cultural infrastructure",
+    "source": {
+      "title": "Preliminary Budget Hearing - Cultural Affairs transcript",
+      "officialUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6195706&GUID=7514BB5D-51E7-4B77-92D8-A3919828DBEB",
+      "accessedAt": "2026-07-28",
+      "pageCount": 169,
+      "sourcePdfSha256": "0acd72ec4c2acec727d33291246b6ce4d82279d944dd5bde2800ce186167f3f5"
+    },
+    "transcriptionPolicy": "Speaker turns are normalized from the official Council transcript by removing line numbers and repeating page furniture, joining line-wrap hyphenation, and otherwise retaining transcript wording, uncertainty markers, and apparent errors. Display names do not silently amend the official text.",
+    "classificationPolicy": "The hearing also covers library budgets. Full-text inclusion is limited to speakers who affirmatively addressed DCLA funding, CreateNYC, artist support, or closely related cultural infrastructure; other speakers remain in the census.",
+    "scopeBoundary": "Library advocacy is indexed in the speaker census but not included merely because it occurred at the same hearing. Support for DCLA funding does not imply agreement with every agency policy.",
+    "reviewedAt": "2026-07-28",
+    "reviewStatus": "complete-with-open-attribution",
+    "defaultPositions": {
+      "public-witness": "neutral-procedural",
+      "council-member": "neutral-procedural",
+      "administration": "neutral-procedural",
+      "hearing-staff": "neutral-procedural",
+      "unresolved": "unclear"
+    },
+    "defaultClassificationBasis": {
+      "supportive": "Close reading found affirmative support for DCLA funding, artist support, CreateNYC implementation, or closely related cultural infrastructure.",
+      "supports-in-part": "Close reading found affirmative support for at least one scoped cultural-affairs issue with qualifications.",
+      "neutral-procedural": "The attributed turns are outside the scoped issue or do not state an affirmative position.",
+      "unclear": "The record does not support a safely attributed position."
+    },
+    "aliases": {
+      "Chairperson Jimmy Van Bramer": ["JIMMY G. VAN BRAMER", "JAMES VAN BRAMER", "JIMMY VAN BRAMER", "CHAIRMAN VAN BRAMER"],
+      "Majority Leader Laurie Cumbo": ["MAJORITY LEADER LAURIE CUMBO", "LAURIE CUMBO"],
+      "Jamie Burkart": ["JAMIE BURKART", "JAMIE BURART"]
+    },
+    "classifications": {
+      "Chairperson Jimmy Van Bramer": {
+        "position": "supportive",
+        "speakerType": "council-member",
+        "classificationBasis": "Van Bramer advocates cultural funding and questions the administration about DCLA implementation."
+      },
+      "Majority Leader Laurie Cumbo": {
+        "position": "supportive",
+        "speakerType": "council-member",
+        "classificationBasis": "Cumbo's questioning supports cultural funding access and implementation accountability."
+      },
+      "COMMISSIONER TOM FINKELPEARL": {
+        "position": "supports-in-part",
+        "speakerType": "administration",
+        "classificationBasis": "Finkelpearl presents and defends DCLA's budget and cultural-plan implementation."
+      },
+      "JOHN CALVELLI": {"position": "supportive"},
+      "CHRISTOPHER CARROLL": {"position": "supportive"},
+      "SHEILA LEWANDOWSKI": {"position": "supportive"},
+      "LUCY SEXTON": {"position": "supportive"},
+      "ELLEN LESZYNSKI": {"position": "supportive"},
+      "MARK ROSSIER": {"position": "supportive"},
+      "JEFFREY OMARA": {"position": "supportive"},
+      "STEPHANIE WILCHFORT": {"position": "supportive"},
+      "TIFFANY BRYANT": {"position": "supportive"},
+      "DAVID JOHNSTON": {"position": "supportive"},
+      "TIFFANY GEIGEL": {"position": "supportive"},
+      "Jamie Burkart": {
+        "position": "supportive",
+        "speakerType": "public-witness",
+        "classificationBasis": "Jamie explicitly supports DCLA funding and CreateNYC implementation."
+      }
+    },
+    "antiClaims": [
+      "Presence at the same hearing makes every library or cultural witness part of Jamie's advocacy coalition.",
+      "Support for funding establishes agreement with every DCLA decision or proves program impact.",
+      "The official transcript is a perfect record of names, spelling, or intended wording."
+    ]
+  },
+  {
+    "id": "testimony.nycc.sbjsa.2018-10-22",
+    "title": "Small Business Job Survival Act hearing",
+    "hearingDate": "2018-10-22",
+    "committee": "New York City Council Committee on Small Business",
+    "issue": "Commercial lease protections and the Small Business Job Survival Act",
+    "source": {
+      "title": "Committee on Small Business hearing transcript",
+      "officialUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=3BAD981A-69D8-4D99-A882-52442F36F5A2&ID=6792384&M=F",
+      "accessedAt": "2026-07-28",
+      "pageCount": 404,
+      "sourcePdfSha256": "11538b2c74bbfce770d5253fa8363a95bbaaa414f10cde13887363ce471c3054"
+    },
+    "transcriptionPolicy": "Speaker turns are normalized from the official Council transcript by removing line numbers and repeating page furniture, joining line-wrap hyphenation, and otherwise retaining transcript wording, uncertainty markers, and apparent errors. Display names do not silently amend the official text.",
+    "classificationPolicy": "Every detected public witness received a position disposition after close reading. Speakers affirmatively supporting SBJSA, including support with proposed amendments, receive full-text inclusion; opponents, alternatives-only witnesses, and unclear turns remain census-only.",
+    "scopeBoundary": "Support for the goals of small-business preservation without support for SBJSA is not classified as support for the bill. Full-text inclusion preserves qualifying or critical passages by otherwise supportive speakers.",
+    "reviewedAt": "2026-07-28",
+    "reviewStatus": "complete-with-open-attribution",
+    "defaultPositions": {
+      "public-witness": "supportive",
+      "council-member": "supports-in-part",
+      "administration": "opposed",
+      "hearing-staff": "neutral-procedural",
+      "unresolved": "unclear"
+    },
+    "defaultClassificationBasis": {
+      "supportive": "Close reading found affirmative support for SBJSA or commercial lease protections enacted through the bill.",
+      "supports-in-part": "Close reading found affirmative support for SBJSA with amendments, or a Council intervention materially supporting the bill's consideration.",
+      "opposed": "The speaker opposes SBJSA as drafted or advances alternatives instead of supporting the bill.",
+      "mixed": "The speaker supports the problem definition or some protections but neither supports nor opposes SBJSA.",
+      "neutral-procedural": "The attributed turns administer the hearing rather than state an issue position.",
+      "unclear": "The record does not support a safely attributed position."
+    },
+    "aliases": {
+      "Ruth Messinger": ["BOROUGH PRESIDENT MESSINGER", "RUTH MESSINGER"],
+      "Senator Brad Hoylman": ["SENATOR HOYLMAN", "SENATOR BRAD HOYLMAN"],
+      "Steve Soutendijk": ["STEVE SOUTENDIJK", "STEVE SUTENDIJK"],
+      "Steve Kirkpatrick": ["STEVE KIRKPATRICK", "STEVEN KIRKPATRICK"],
+      "Lauren Gardner": ["LAUREN GARDNER", "LARUEN GARDNER"],
+      "Jamie Burkart": ["JAMIE BURKART"]
+    },
+    "classifications": {
+      "BOROUGH PRESIDENT BREWER": {"position": "supports-in-part"},
+      "Ruth Messinger": {"position": "supportive"},
+      "ASSEMBLY MEMBER GOTTFRIED": {"position": "supportive"},
+      "Senator Brad Hoylman": {"position": "supports-in-part"},
+      "COMMISSIONER ORTIZ": {"position": "opposed"},
+      "LENA AFRIDI": {"position": "opposed"},
+      "JULIAN HILL": {"position": "mixed"},
+      "JESSICA WALKER": {"position": "opposed"},
+      "JESSICA LAPPIN": {"position": "opposed"},
+      "JOHN BANKS": {"position": "opposed"},
+      "Steve Soutendijk": {"position": "opposed"},
+      "ROBIN ABRAMS": {"position": "opposed"},
+      "JOANNE PODELL": {"position": "opposed"},
+      "JIM WATT": {"position": "opposed"},
+      "BILL MONTANA": {"position": "opposed"},
+      "LORDES COMATCHO": {"position": "mixed"},
+      "MARLENE CINTRON": {"position": "supports-in-part"},
+      "MARY ANN ROTHMAN": {"position": "opposed"},
+      "DARCEY GERSTEIN": {"position": "opposed"},
+      "JOSEPH ROSENBERG": {"position": "opposed"},
+      "ROB BYRNES": {"position": "opposed"},
+      "MICHAEL BRADY": {"position": "opposed"},
+      "DAVID COHEN": {"position": "opposed"},
+      "MARK CASERTA": {"position": "mixed"},
+      "OLYMPIA KAZI": {"position": "supports-in-part"},
+      "JUDY RICHHEIMER": {"position": "supports-in-part"},
+      "ROBERT BENFATTO": {"position": "opposed"},
+      "Jamie Burkart": {
+        "position": "supportive",
+        "classificationBasis": "Jamie explicitly asks the Council to pass SBJSA."
+      },
+      "AREEB KAHN": {"position": "opposed"},
+      "JULIANA MILANDRO": {"position": "opposed"},
+      "Steve Kirkpatrick": {"position": "opposed"}
+    },
+    "antiClaims": [
+      "Support for SBJSA establishes agreement with every provision, amendment, or other witness.",
+      "Testimony proves passage, implementation, or causal effects of the bill.",
+      "The official transcript is a perfect record of names, spelling, or intended wording."
+    ]
+  },
+  {
+    "id": "testimony.nycc.march-transparency.2019-02-11",
+    "title": "M.A.R.C.H. transparency hearing",
+    "hearingDate": "2019-02-11",
+    "committee": "New York City Council Committee on the Justice System",
+    "issue": "Transparency, notice, accountability, and alternatives to M.A.R.C.H. operations",
+    "source": {
+      "title": "Hearing transcript: Int. 1156-2018 and M.A.R.C.H. operations",
+      "officialUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=2582E680-452D-46B1-8DE1-C5C5168F5D63&ID=7080592&M=F",
+      "accessedAt": "2026-07-28",
+      "pageCount": 106,
+      "sourcePdfSha256": "924aae80ae23f1197b8cd1e75ad68dd9084f109b751267647ed98511bbb92a14"
+    },
+    "transcriptionPolicy": "Speaker turns are normalized from the official Council transcript by removing line numbers and repeating page furniture, joining line-wrap hyphenation, and otherwise retaining transcript wording, uncertainty markers, and apparent errors. Display names do not silently amend the official text.",
+    "classificationPolicy": "Every detected public witness received a position disposition after close reading. Speakers supporting transparency, notice, accountability, or less destructive alternatives receive full-text inclusion; the administration's defense of existing operations remains census-only.",
+    "scopeBoundary": "The corpus documents public positions at the hearing. It does not independently validate every witness account or establish that any one advocate caused the later law or operational changes.",
+    "reviewedAt": "2026-07-28",
+    "reviewStatus": "complete-with-open-attribution",
+    "defaultPositions": {
+      "public-witness": "supportive",
+      "council-member": "supports-in-part",
+      "administration": "opposed",
+      "hearing-staff": "neutral-procedural",
+      "unresolved": "unclear"
+    },
+    "defaultClassificationBasis": {
+      "supportive": "Close reading found affirmative support for M.A.R.C.H. transparency, notice, accountability, or a talks-not-raids alternative.",
+      "supports-in-part": "The Council speaker's questions or framing support transparency or reform while preserving institutional qualifications.",
+      "opposed": "The administration speaker defends the existing operation and resists the proposed reporting frame.",
+      "neutral-procedural": "The attributed turns administer the hearing rather than state an issue position.",
+      "unclear": "The record does not support a safely attributed position."
+    },
+    "aliases": {
+      "Council Member Levin": ["COUNCIL MEMBER LEVIN", "COUNCIL MEMBER     LEVIN"],
+      "Marva Babel": ["MARBA BARBEL", "MARVA BABEL"]
+    },
+    "classifications": {
+      "CHAIRPERSON EUGENE": {
+        "position": "neutral-procedural",
+        "speakerType": "council-member",
+        "classificationBasis": "The attributed fragment is too short to establish a distinct position."
+      },
+      "Marva Babel": {
+        "position": "supportive",
+        "speakerType": "public-witness",
+        "classificationBasis": "The alias joins an apparent transcript error with Babel's attributed witness turns; both labels are preserved."
+      }
+    },
+    "antiClaims": [
+      "A witness account independently proves every enforcement action, motive, or impact.",
+      "The hearing establishes that Jamie or NYC Artist Coalition solely authored Intro. 1156 or caused its enactment.",
+      "The official transcript is a perfect record of names, spelling, or intended wording."
+    ]
+  },
+  {
+    "id": "testimony.nycc.small-business-package.2019-03-18",
+    "title": "Small-business legislative package hearing",
+    "hearingDate": "2019-03-18",
+    "committee": "New York City Council Committee on Small Business",
+    "issue": "Storefront data, commercial-tenant legal support, anti-harassment protections, regulatory review, and related small-business measures",
+    "source": {
+      "title": "Committee on Small Business hearing transcript",
+      "officialUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=B6F1CE4A-F4F7-4E05-9FE0-A10F68B34628&ID=7230192&M=F",
+      "accessedAt": "2026-07-28",
+      "pageCount": 149,
+      "sourcePdfSha256": "4eeb8a9593c5decd9075453c220238d2fe2b78f537d1a3eaaeedd2a78d31156c"
+    },
+    "transcriptionPolicy": "Speaker turns are normalized from the official Council transcript by removing line numbers and repeating page furniture, joining line-wrap hyphenation, and otherwise retaining transcript wording, uncertainty markers, and apparent errors. Display names do not silently amend the official text.",
+    "classificationPolicy": "Every detected public witness received a position disposition after close reading. Because the hearing covered a package, full-text inclusion applies when a speaker supported at least one scoped measure, even while criticizing another.",
+    "scopeBoundary": "Support-in-part does not imply endorsement of every bill. Agency testimony and generic unidentified fragments remain census-only unless an affirmative position can be safely attributed.",
+    "reviewedAt": "2026-07-28",
+    "reviewStatus": "complete-with-open-attribution",
+    "defaultPositions": {
+      "public-witness": "supports-in-part",
+      "council-member": "supports-in-part",
+      "administration": "mixed",
+      "hearing-staff": "neutral-procedural",
+      "unresolved": "unclear"
+    },
+    "defaultClassificationBasis": {
+      "supports-in-part": "Close reading found affirmative support for at least one storefront-data, legal-support, anti-harassment, regulatory-review, or related small-business measure.",
+      "mixed": "The speaker supports the problem definition or selected goals while opposing or qualifying parts of the package.",
+      "neutral-procedural": "The attributed turns administer the hearing rather than state an issue position.",
+      "unclear": "The record does not support a safely attributed position."
+    },
+    "aliases": {
+      "Chairperson Mark Gjonaj": ["CHAIRPERSON GJONAJ", "CHAIRMAN GJONAJ", "CHAIR GJONAJ"],
+      "Commissioner Gregg Bishop": ["COMMISSIONER BISHOP", "COMMISONER BISHOP", "COMMISSINER BISHOP", "COMMISS8IONER", "COMISSIONER BISHOP", "COMMMISSIONER", "CHAIR BISHOP"],
+      "Council Member Kalman Yeger": ["COUNCIL MEMBER YEGER", "COUNCIL MEMBEER YEGER"],
+      "Andrew Rigie": ["MR. ANDREW RIGG", "MR. ANDREW RIGGIE", "MR. RIGGIE"],
+      "Rob Bookman": ["MR. ROB BOOKMAN", "MR. BOB BOOKMAN", "SPEAKER LAWYER [MR. BOOKMAN]", "SPEAKER LAWYER"],
+      "Jamie Burkart": ["MR. JAMIE BURKHART"]
+    },
+    "classifications": {
+      "Commissioner Gregg Bishop": {
+        "position": "mixed",
+        "speakerType": "administration",
+        "classificationBasis": "Bishop supports small-business goals and some tools while raising administration objections to parts of the package."
+      },
+      "COUNCIL MEMBER FEINBERG": {
+        "position": "neutral-procedural",
+        "speakerType": "unresolved",
+        "classificationBasis": "The apparent label is not securely attributable as a Council member and the fragment does not establish a position."
+      },
+      "COUNCIL MEMBER MICHAEL": {
+        "position": "mixed",
+        "speakerType": "administration",
+        "classificationBasis": "The speaker supports small-business goals while raising affordable-housing implementation concerns."
+      },
+      "SPEAKER": {"position": "unclear", "speakerType": "unresolved"},
+      "SPEAKER 1": {"position": "unclear", "speakerType": "unresolved"},
+      "SPEAKER 2": {"position": "unclear", "speakerType": "unresolved"},
+      "CHIEF": {
+        "position": "neutral-procedural",
+        "speakerType": "hearing-staff",
+        "classificationBasis": "The attributed turn manages witness order and time."
+      },
+      "MS. MARY ANN ROFFMAN": {
+        "position": "supports-in-part",
+        "classificationBasis": "Roffman supports selected small-business goals and efforts while objecting to particular vacancy and lease provisions."
+      },
+      "MR. MICHAEL BRADY": {
+        "position": "supports-in-part",
+        "classificationBasis": "Brady supports several bills and the package's direction while recommending substantial revisions."
+      }
+    },
+    "antiClaims": [
+      "Support for one bill in the package establishes support for every measure.",
+      "The hearing transcript proves enactment, implementation quality, or the causal effects of any proposal.",
+      "The official transcript is a perfect record of names, spelling, or intended wording."
+    ]
+  },
+  {
+    "id": "testimony.nycc.commercial-rent-stabilization-stated.2019-11-14",
+    "title": "Commercial Rent Stabilization introduction stated meeting",
+    "hearingDate": "2019-11-14",
+    "committee": "New York City Council stated meeting",
+    "issue": "Introduction 1796-2019, regulation of commercial rent",
+    "source": {
+      "title": "Hearing transcript - Stated Meeting 11-14-19",
+      "officialUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=7950220&GUID=7B14A16A-CBC9-4709-9E56-B57DA651503B",
+      "accessedAt": "2026-07-28",
+      "pageCount": 109,
+      "sourcePdfSha256": "48681f8037a2fbccc6de1afd2a56b4139f896370eaffe9eac2a7e471ecc37a9a"
+    },
+    "transcriptionPolicy": "Speaker turns are normalized from the official Council transcript by removing line numbers and repeating page furniture, joining line-wrap hyphenation, and otherwise retaining transcript wording, uncertainty markers, and apparent errors.",
+    "classificationPolicy": "The complete stated-meeting speaker census is retained. Only attributable oral statements supporting Introduction 1796 qualify for full-text inclusion.",
+    "scopeBoundary": "The legislative record establishes that Council Member Stephen Levin was prime sponsor and the Council introduced Int. 1796. The stated-meeting transcript does not preserve an attributable oral introduction statement from Levin about that bill.",
+    "reviewedAt": "2026-07-28",
+    "reviewStatus": "complete-with-open-attribution",
+    "defaultPositions": {
+      "public-witness": "out-of-scope",
+      "council-member": "neutral-procedural",
+      "administration": "out-of-scope",
+      "hearing-staff": "neutral-procedural",
+      "unresolved": "unclear"
+    },
+    "defaultClassificationBasis": {
+      "out-of-scope": "The attributed turn concerns a different stated-meeting matter.",
+      "neutral-procedural": "The attributed turn records attendance, voting, meeting administration, or another procedural act without a Commercial Rent Stabilization statement.",
+      "unclear": "The record does not support a safely attributed Commercial Rent Stabilization position."
+    },
+    "aliases": {},
+    "classifications": {
+      "COUNCIL MEMBER LEVIN": {
+        "position": "neutral-procedural",
+        "speakerType": "council-member",
+        "classificationBasis": "Levin's attributed turns record presence, a vote, and remarks about a different bill; no oral Int. 1796 introduction statement was recovered in this transcript.",
+        "attributionNotes": [
+          "The official legislative detail page, rather than this transcript body, identifies Levin as prime sponsor of Int. 1796."
+        ]
+      },
+      "UNIDENTIFIED": {
+        "position": "unclear",
+        "speakerType": "unresolved",
+        "classificationBasis": "The unidentified fragment cannot be safely attributed."
+      }
+    },
+    "antiClaims": [
+      "The stated-meeting transcript contains a recovered Stephen Levin speech introducing Int. 1796.",
+      "Sponsorship metadata is itself an oral statement.",
+      "Introducing Int. 1796 establishes enactment or implementation."
+    ]
+  },
+  {
+    "id": "testimony.nycc.commercial-rent-stabilization.2021-09-17",
+    "title": "Commercial Rent Stabilization hearing",
+    "hearingDate": "2021-09-17",
+    "committee": "New York City Council Committee on Small Business",
+    "issue": "Introduction 1796-2019, commercial rent registration and stabilization",
+    "source": {
+      "title": "Hearing Transcript 9/17/21",
+      "officialUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=9899049&GUID=A1B80F54-A723-4AD9-94A4-D2E67FFEEFBE",
+      "accessedAt": "2026-07-28",
+      "pageCount": 327,
+      "sourcePdfSha256": "cf916523f5f15161541635da8e107d923185599b4db76206f4a576ec034c23f0"
+    },
+    "transcriptionPolicy": "Speaker turns are normalized from the official Council transcript by removing line numbers and repeating page furniture, joining line-wrap hyphenation, and otherwise retaining transcript wording, uncertainty markers, and apparent errors. The corpus does not silently replace the Council reporter's wording with submitted written testimony.",
+    "classificationPolicy": "Every detected public witness received an explicit disposition after close reading. Supportive and partly supportive speakers include every attributed turn, including questions and answers. Opposition, mixed positions, testimony addressing only another bill, and unresolved labels remain census-only.",
+    "scopeBoundary": "The hearing also covered Intros. 568, 2000, and 2299. Inclusion means the speaker affirmatively supported Int. 1796 or commercial-rent stabilization in substance; it does not imply agreement with every provision or factual assertion.",
+    "reviewedAt": "2026-07-28",
+    "reviewStatus": "complete-with-open-attribution",
+    "defaultPositions": {
+      "public-witness": "unclear",
+      "council-member": "neutral-procedural",
+      "administration": "mixed",
+      "hearing-staff": "neutral-procedural",
+      "unresolved": "unclear"
+    },
+    "defaultClassificationBasis": {
+      "supportive": "Close reading found explicit support for Int. 1796 or commercial-rent stabilization.",
+      "supports-in-part": "Close reading found substantive support for commercial-rent limits or protections while preserving qualifications or without endorsing every provision.",
+      "opposed": "Close reading found opposition to Int. 1796 or commercial-rent regulation.",
+      "mixed": "The speaker supports the problem definition or selected protections while opposing or withholding support from the bill.",
+      "out-of-scope": "The speaker addresses another bill or hearing matter without taking a Commercial Rent Stabilization position.",
+      "neutral-procedural": "The attributed turns administer the hearing rather than state a Commercial Rent Stabilization position.",
+      "unclear": "The record does not support a safely attributed position."
+    },
+    "aliases": {
+      "Ruth Lopez Martinez (through interpreter)": [
+        "RUTH LOPEZ MARTINEZ",
+        "INTERPRETER"
+      ]
+    },
+    "classifications": {
+      "CHAIRPERSON GJONAJ": {
+        "position": "mixed",
+        "speakerType": "council-member",
+        "classificationBasis": "Gjonaj recognizes high rents and the need for action while opposing broad commercial-rent control and preferring incentives and tax relief."
+      },
+      "COUNCIL MEMBER LEVIN": {
+        "position": "supportive",
+        "speakerType": "council-member",
+        "classificationBasis": "Prime sponsor Levin gives a full opening statement advocating Int. 1796 and explains its proposed rent-guidelines system."
+      },
+      "COUNCIL MEMBER TREYGER": {
+        "position": "out-of-scope",
+        "speakerType": "council-member",
+        "classificationBasis": "Treyger's attributed statement concerns Intro. 568."
+      },
+      "COUNCIL MEMBER ROSENTHAL": {
+        "position": "out-of-scope",
+        "speakerType": "council-member",
+        "classificationBasis": "Rosenthal's attributed statement advocates Intro. 2299 without taking a position on Int. 1796."
+      },
+      "COUNCIL MEMBER YEGER": {
+        "position": "opposed",
+        "speakerType": "council-member",
+        "classificationBasis": "Yeger argues against the commercial-rent bills."
+      },
+      "COMMISSIONER DORIS": {
+        "position": "mixed",
+        "speakerType": "administration",
+        "classificationBasis": "Doris acknowledges commercial-rent pressure and offers administration programs while raising legal, fiscal, and implementation objections to Int. 1796."
+      },
+      "DEPUTY COMMISSIONER ANDERSON": {
+        "position": "out-of-scope",
+        "speakerType": "administration",
+        "classificationBasis": "Anderson's attributed testimony concerns the food-donation bill."
+      },
+      "FIRST DEPUTY COMMISSIONER MALLON": {
+        "position": "neutral-procedural",
+        "speakerType": "administration",
+        "classificationBasis": "The attributed response is procedural."
+      },
+      "DEPUTY COMMISSIONER BACKER": {
+        "position": "neutral-procedural",
+        "speakerType": "administration",
+        "classificationBasis": "The attributed response is procedural."
+      },
+      "COUNCIL MEMBER DINOWITZ": {
+        "position": "supports-in-part",
+        "speakerType": "council-member",
+        "classificationBasis": "Dinowitz credits Levin for addressing rent harms and asks implementation questions without endorsing every provision."
+      },
+      "DEPUTY DIRECTOR BAKER": {
+        "position": "neutral-procedural",
+        "speakerType": "administration",
+        "classificationBasis": "Baker provides administrative data answers without taking a bill position."
+      },
+      "BOROUGH PRESIDENT BREWER": {
+        "position": "supports-in-part",
+        "speakerType": "council-member",
+        "classificationBasis": "Brewer identifies rent increases as a central threat and calls for enforceable commercial-lease protections while emphasizing Intro. 2299."
+      },
+      "HUSAM KHALED": {"position": "supportive"},
+      "REGGIE THOMAS": {"position": "opposed"},
+      "Ruth Lopez Martinez (through interpreter)": {
+        "position": "supportive",
+        "speakerType": "public-witness",
+        "classificationBasis": "Martinez's Spanish testimony and the Council interpreter's English rendering ask for accessible rent legislation.",
+        "attributionNotes": [
+          "The corpus joins the named witness's Spanish marker and the immediately attributed interpreter rendering; it does not attribute the witness's experience to the interpreter."
+        ]
+      },
+      "VANNA VALDEZ": {"position": "supportive"},
+      "ANDREW CASTELLI": {"position": "opposed"},
+      "BILL ABRAMSON": {"position": "opposed"},
+      "IMRAN HOSSAIN": {"position": "supportive"},
+      "NICOLA HERYET": {"position": "opposed"},
+      "ERIC OBENZINGER": {"position": "opposed"},
+      "LEE SOLOMON": {"position": "opposed"},
+      "RACHEL NICOLAZZO": {"position": "supports-in-part"},
+      "STEVE KIRKPATRICK": {"position": "opposed"},
+      "RACHEL NELSON": {"position": "supportive"},
+      "RONALD ZECCARDI": {"position": "opposed"},
+      "SHABAD SIMON-ALEXANDER": {"position": "supportive"},
+      "HANI SALAMA": {"position": "opposed"},
+      "OLYMPIA KAZI": {"position": "supportive"},
+      "BADR FUAD": {"position": "supportive"},
+      "RUI LI": {"position": "supportive"},
+      "CHARLOTTA JANSSEN": {"position": "supportive"},
+      "CARINA KAUFMAN-GUTIERREZ": {"position": "supportive"},
+      "BETH KRIEGER": {"position": "out-of-scope"},
+      "ABIGAIL ELMAN": {"position": "supportive"},
+      "ALEXANDER LYCOYANNIS": {"position": "opposed"},
+      "ANNA CHIANG": {"position": "supports-in-part"},
+      "ANN KORCHAK": {"position": "opposed"},
+      "PAULA SEGAL": {"position": "supportive"},
+      "MS. R. SANZ": {"position": "opposed"},
+      "TAYLOR JAMES": {"position": "supportive"},
+      "RYAN MONELL": {"position": "opposed"},
+      "MELISSA GOMEZ": {"position": "opposed"},
+      "JAIME CHIEN": {"position": "opposed"},
+      "DAVID ESTRADA": {"position": "mixed"},
+      "NATASHA AMOTT": {"position": "supportive"},
+      "JOSH NACHOWITZ": {"position": "opposed"},
+      "LAUREN GARDNER": {"position": "supports-in-part"},
+      "JOANNE PODELL": {"position": "opposed"},
+      "BARBARA BLAIR": {"position": "out-of-scope"},
+      "MARY ANN ROTHMAN": {"position": "opposed"},
+      "CATHERINE MURCEK": {"position": "supportive"},
+      "SOPHIA HARRISON": {"position": "supports-in-part"},
+      "JESSE GEE GALVEZ": {"position": "supportive"},
+      "UNIDENTIFIED": {
+        "position": "unclear",
+        "speakerType": "unresolved",
+        "classificationBasis": "The fragment cannot be safely attributed."
+      },
+      "GUY YEDWAB": {"position": "supportive"},
+      "JENNY DUBNAU": {"position": "supportive"},
+      "JOSEPH CONDON": {"position": "opposed"},
+      "BILL MONTANA": {"position": "opposed"},
+      "ERIC GURAL": {"position": "opposed"},
+      "LAURA SEWELL": {"position": "supports-in-part"},
+      "LIONEL GUY BREMOND": {"position": "supports-in-part"},
+      "JAMES WACHT": {"position": "opposed"},
+      "ROBIN ABRAMS": {"position": "opposed"},
+      "MONIQUE WONG": {"position": "supports-in-part"},
+      "YARA FLINN": {"position": "supportive"},
+      "MARC RIBOT": {"position": "supports-in-part"},
+      "TRE MCMANUS": {"position": "supports-in-part"},
+      "DAVID EISENBACH": {"position": "supportive"},
+      "JARED COOPERMAN": {"position": "opposed"},
+      "GREGORY YOUDAN": {"position": "supportive"},
+      "LAURA WEBER": {"position": "supportive"},
+      "KHARI WHITE": {"position": "supportive"},
+      "LAURA WOLF POWERS": {"position": "supportive"},
+      "ERIC DILLENBERGER": {"position": "opposed"},
+      "ERIC": {
+        "position": "unclear",
+        "speakerType": "unresolved",
+        "classificationBasis": "The isolated first-name response cannot be securely attributed."
+      },
+      "ANDREA BOWEN": {"position": "supportive"}
+    },
+    "antiClaims": [
+      "A supportive witness agreed with every provision, statistic, or other speaker.",
+      "The hearing establishes that NYC Artist Coalition, Jamie, or any single advocate authored or caused the bill.",
+      "A hearing appearance, organizational affiliation, or question establishes support without close reading.",
+      "The official transcript is a perfect record of names, spelling, or intended wording."
+    ]
+  },
+  {
+    "id": "testimony.nycc.commercial-rent-stabilization-stated.2022-03-24",
+    "title": "Commercial Rent Stabilization reintroduction stated meeting",
+    "hearingDate": "2022-03-24",
+    "committee": "New York City Council stated meeting",
+    "issue": "Introduction 93-2022, regulation of commercial rent",
+    "source": {
+      "title": "Hearing Transcript - Stated Meeting 3-24-22",
+      "officialUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=10873894&GUID=72BAA43F-B658-4164-B2F3-E98ADB16C3E2",
+      "accessedAt": "2026-07-28",
+      "pageCount": 68,
+      "sourcePdfSha256": "96ca01515944de43e6e1b0ea7790d7f457d8256c812a48c0a7fc4bde30bab6d3"
+    },
+    "transcriptionPolicy": "Speaker turns are normalized from the official Council transcript by removing line numbers and repeating page furniture, joining line-wrap hyphenation, and otherwise retaining transcript wording, uncertainty markers, and apparent errors.",
+    "classificationPolicy": "The complete stated-meeting speaker census is retained. Full text is included for attributable oral statements affirmatively supporting Int. 93.",
+    "scopeBoundary": "Council Members Crystal Hudson and Carlina Rivera give supportive statements. The transcript records prime sponsor Diana Ayala's presence and vote but does not preserve an attributable oral introduction statement from her about Int. 93.",
+    "reviewedAt": "2026-07-28",
+    "reviewStatus": "complete-with-open-attribution",
+    "defaultPositions": {
+      "public-witness": "out-of-scope",
+      "council-member": "neutral-procedural",
+      "administration": "out-of-scope",
+      "hearing-staff": "neutral-procedural",
+      "unresolved": "unclear"
+    },
+    "defaultClassificationBasis": {
+      "supportive": "The speaker affirmatively supports Commercial Rent Stabilization or Int. 93.",
+      "out-of-scope": "The attributed turn concerns another stated-meeting matter.",
+      "neutral-procedural": "The attributed turn records attendance, voting, or meeting administration without a Commercial Rent Stabilization statement.",
+      "unclear": "The record does not support a safely attributed position."
+    },
+    "aliases": {},
+    "classifications": {
+      "COUNCIL MEMBER HUDSON": {
+        "position": "supportive",
+        "speakerType": "council-member",
+        "classificationBasis": "Hudson describes commercial rent as a major small-business cost and supports the bill's registration and regulation system."
+      },
+      "COUNCIL MEMBER RIVERA": {
+        "position": "supportive",
+        "speakerType": "council-member",
+        "classificationBasis": "Rivera says she proudly joins the reintroduction and argues for commercial-rent regulation as part of an equitable recovery."
+      },
+      "COUNCIL MEMBER AYALA": {
+        "position": "neutral-procedural",
+        "speakerType": "council-member",
+        "classificationBasis": "Ayala's attributed turns record presence and a vote; the transcript does not preserve an oral Int. 93 introduction statement.",
+        "attributionNotes": [
+          "The official legislative detail page, rather than this transcript body, identifies Ayala as prime sponsor."
+        ]
+      },
+      "UNIDENTIFIED": {
+        "position": "unclear",
+        "speakerType": "unresolved",
+        "classificationBasis": "The fragment cannot be safely attributed."
+      }
+    },
+    "antiClaims": [
+      "The stated-meeting transcript contains a recovered Diana Ayala speech introducing Int. 93.",
+      "Every co-sponsor spoke at the stated meeting.",
+      "Reintroduction establishes enactment or implementation."
+    ]
+  }
+]
