@@ -191,20 +191,20 @@ bundle.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public source / public-safe archive summary  
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. After the CCED Board recommended $490,539, the Kansas City Council accepted the recommendation, authorized funding-agreement negotiations, and separately appropriated the amount in 2019. The City reported no disbursement in 2022; the project later withdrew, and the full unused appropriation returned to the fund in 2024.
+**Public wording:** Secured a $490,539 public funding award for KC Town Hall by co-developing the successful CCED proposal and serving as the City's named developer/presenter for the exact request, then transitioned the project to a mission-aligned organization.
 
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support. Official records separately establish the Board recommendation, Council acceptance and negotiation authority, Council appropriation, the 2022 no-disbursement and still-negotiating status, and return of the unused amount after withdrawal in 2024.
+**Detailed public-safe wording:** Jamie co-founded KC Town Hall LLC, served as project manager, co-developed its CCED proposal, and was the City's named developer/presenter for the $490,539 request. Official records trace the successful request through unanimous Board recommendation, Council acceptance, and appropriation. City-posted reports also name Jamie as a developer point of contact in 2022 and 2023 and document progress on M/WBE and CREO requirements. Jamie later transitioned the project to a mission-aligned organization.
 
-**Evidence division:** The approved resume supports Jamie's planning and documentation contribution. A protected 2019 proposal bundle separately supports founder/project-manager attribution, multi-trade scope, substantial 2018 work, and the neighborhood-survey process; it does not establish general-contractor title or final 2019 completion. The four municipal records support the institutional funding lifecycle and do not establish Jamie's individual role in those decisions.
+**Evidence division:** The City's June 2019 hearing record names Jamie as developer/presenter for the exact request. The protected proposal supports shared founder/project-manager attribution and the matching Phase Two request. Municipal records establish the successful recommendation, Council actions, later named administrative role, policy deadline, non-disbursement, withdrawal, and return of the unused award. Jamie's authorized first-party professional statement supports the bounded mission-aligned transition claim.
 
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
-**Guardrail:** Say accepted and appropriated, not received, disbursed, spent, or completed. Keep the later non-disbursement, withdrawal, and return with any account of the 2019 Council action. Do not attribute institutional decisions to Jamie.
+**Guardrail:** Jamie may be credited with securing the award through documented proposal-and-presentation work. Keep shared proposal credit and institutional authority explicit. Say award and appropriation, not receipt, disbursement, expenditure, or completion. Preserve the full municipal lifecycle in the Knowledge Wiki rather than forcing it into hiring-facing copy. Treat the transition as an authorized first-party account; do not identify the receiving organization or infer legal mechanics.
 
-**Do not say:** KC Town Hall received or spent $490,539; a funding agreement was executed; the City funded construction or completion; Jamie secured or caused the Board recommendation or Council appropriation; the record establishes why the project withdrew.
-**Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
+**Do not say:** KC Town Hall received or spent $490,539; a funding agreement was executed; the City funded construction or completion; Jamie alone wrote the proposal; Jamie controlled or solely caused the Board recommendation or Council appropriation; the record establishes why the project withdrew.
+**Protected boundaries:** Private personal circumstances, correspondence, financial, legal, property, banking, and stakeholder details stay offline.
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-15
+**Last reviewed:** 2026-07-26
 
 ## kc-town-hall-public-service-interface - Recurring public service interface
 

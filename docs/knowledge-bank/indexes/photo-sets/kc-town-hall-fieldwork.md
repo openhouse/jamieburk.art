@@ -19,6 +19,9 @@ relations:
   - type: has_asset
     target: asset.graphic.kc-town-hall.walkshed.2019.001
     href: ../../assets/graphics/kc-town-hall-walkshed-2019.md
+  - type: has_asset
+    target: asset.photo.kc-town-hall.kc-star-aerial.2021
+    href: ../../assets/photographs/kc-town-hall-kc-star-aerial-2021.md
   - type: uses_source
     target: source.kc-town-hall.photographic-oral-histories.2026-07
     href: ../../sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md
@@ -37,11 +40,11 @@ relations:
 
 ## Retrieval hypothesis
 
-This set connects two held photographs, protected oral histories, local digital
-records, the protected proposal bundle, and one cleared proposal-map
-derivative. It supports research across worksite practice, participation
-systems, project planning, craft learning, stewardship, and visual
-communication.
+This set connects two held archive photographs, one held third-party published
+aerial photograph, protected oral histories, local digital records, the
+protected proposal bundle, and one cleared proposal-map derivative. It supports
+research across worksite practice, participation systems, project planning,
+craft learning, stewardship, independent reporting, and visual communication.
 
 Related frames improve retrieval; they do not multiply evidentiary weight. A
 photograph, oral-history account, proposal page, and retained code artifact each
@@ -50,6 +53,7 @@ have distinct provenance and can support different propositions.
 ## Current release state
 
 Only the cropped ten-minute-walk map is cleared for staging-candidate use. The
-two photographs remain held for creator permission, depicted-person review
-where applicable, exact credit, date, caption, crop, dignity, and Jamie's final
-page-placement decision.
+two archive photographs remain held for creator permission, depicted-person
+review where applicable, exact credit, date, caption, crop, dignity, and
+Jamie's final page-placement decision. The Kansas City Star photograph remains
+held under third-party rights; its published credit does not clear reuse.

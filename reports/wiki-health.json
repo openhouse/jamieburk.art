@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-26T18:29:46-04:00",
-  "sourceCommit": "fe545c97e68ba49276a043f15c2b1dec876cfd33",
-  "sourceFingerprint": "8a23ea6c4ab5118573aa63c128ca2fb39d551f7f76e9f96219017341aea79e2f",
+  "generatedAt": "2026-07-26T22:44:56-04:00",
+  "sourceCommit": "487239f87287f384a08161158d914cda3f74274f",
+  "sourceFingerprint": "f8e058631a2387c091db50f79a488100a84f69e2d5b3f63dd7beef6f57ab6001",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
     "errors": []
   },
   "diagnostics": {
-    "records": 139,
+    "records": 140,
     "byKind": {
       "project": 14,
       "person": 2,
@@ -17,7 +17,7 @@
       "event": 2,
       "place": 1,
       "source": 36,
-      "asset": 7,
+      "asset": 8,
       "claim": 2,
       "research-run": 5,
       "research-inquiry": 5,
@@ -32,7 +32,7 @@
       "opportunity": 6,
       "projection": 5
     },
-    "typedRelations": 548,
+    "typedRelations": 553,
     "evidenceRelations": 8,
     "relationTypeCounts": {
       "collaborated_with": 2,
@@ -40,11 +40,11 @@
       "evidence:context": 1,
       "evidence:direct-support": 6,
       "evidence:private-support": 1,
-      "has_asset": 11,
+      "has_asset": 12,
       "informed_by": 45,
       "part_of": 10,
       "projected_to": 7,
-      "related_to": 318,
+      "related_to": 322,
       "resulted_in": 6,
       "supersedes": 1,
       "supports": 19,
@@ -58,7 +58,7 @@
     "wantedPageCount": 6,
     "stalePageCount": 0,
     "correctionCount": 2,
-    "rightsReviewCount": 5,
+    "rightsReviewCount": 6,
     "opportunityCount": 6,
     "liveOpportunityCount": 6,
     "criticalRequirementCount": 22,
@@ -171,6 +171,13 @@
       "id": "asset.photo.kc-town-hall.hard-hat.001",
       "path": "docs/knowledge-bank/assets/photographs/kc-town-hall-hard-hat-worksite.md",
       "rightsState": "permission-needed",
+      "consentState": "not-applicable",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.kc-town-hall.kc-star-aerial.2021",
+      "path": "docs/knowledge-bank/assets/photographs/kc-town-hall-kc-star-aerial-2021.md",
+      "rightsState": "do-not-publish",
       "consentState": "not-applicable",
       "publicDisplayStatus": "hold"
     },

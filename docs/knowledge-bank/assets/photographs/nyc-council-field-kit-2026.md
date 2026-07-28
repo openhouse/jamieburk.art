@@ -22,10 +22,10 @@ private_source_binding:
   resolution_state: supplied-derivative-reviewed-2026-07-26
 visible_observations:
   - Jamie stands in front of New York City Council signage and flags.
-  - Jamie carries a clipboard, shoulder bag, and visible working materials.
+  - Jamie wears a blue work jacket and carries a clipboard, shoulder bag, and visible working materials.
 first_person_recollections:
   - Jamie associates the photograph with a 2026 civic-data program involving the Council data team.
-  - Jamie identifies the clipboard as a coalition field sign-up kit and recalls distributing a commercial-rent open-data proposal.
+  - Jamie identifies the clipboard as a coalition field sign-up kit and recalls carrying a commercial-rent open-data proposal informed by WOW List, CallNYC, and NYC Artist Coalition work.
 corroboration_state:
   broad_event_context: supported-by-contemporaneous-working-folder
   exact_photographer: open
@@ -38,21 +38,26 @@ relations:
   - type: related_to
     target: capability.participatory-public-systems
     href: ../../capabilities/participatory-public-systems.md
+  - type: related_to
+    target: project.callnyc
+    href: ../../projects/callnyc.md
 ---
 
 # Jamie with a civic field kit at New York City Council
 
 ## Visible observation
 
-Jamie stands outside Council hearing rooms carrying a clipboard, shoulder bag,
-and working materials. The image makes a field practice visible but does not
-explain what any document contains.
+Jamie stands outside Council hearing rooms in a blue work jacket, carrying a
+clipboard, shoulder bag, and working materials. The image makes a field practice
+visible but does not explain what any document contains.
 
 ## First-person recollection
 
-Jamie associates the scene with a 2026 civic-data program and recalls bringing
-a coalition sign-up form and a proposal for privacy-preserving, geographically
-aggregated commercial-rent and vacancy data.
+Jamie associates the scene with a 2026 civic-data program and recalls bringing a
+coalition sign-up form and a proposal for privacy-preserving, geographically
+aggregated commercial-rent and vacancy data. His repaired oral history places
+that field kit in a longer practice connecting WOW List, CallNYC, NYC Artist
+Coalition, and commercial-rent data research.
 
 ## Corroboration
 
@@ -62,6 +67,7 @@ conversation, follow-up, institutional response, or outcome.
 
 ## Hold
 
-The photographer's identity and permission remain open. The raw oral history
-contains protected details and remains outside Git. No public derivative is
+The photographer's identity and permission remain open. A repaired, generalized
+working transcript was reviewed on July 26, 2026; the raw recording and any
+unredacted predecessor remain outside Git. No public image derivative is
 committed.

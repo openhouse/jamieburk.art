@@ -1,11 +1,12 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to CallNYC
 
-**Source commit:** `fe545c97e68ba49276a043f15c2b1dec876cfd33`
-**Generation time:** 2026-07-26T18:29:46-04:00
-**Source fingerprint:** `8a23ea6c4ab5118573aa63c128ca2fb39d551f7f76e9f96219017341aea79e2f`
+**Source commit:** `487239f87287f384a08161158d914cda3f74274f`
+**Generation time:** 2026-07-26T22:44:56-04:00
+**Source fingerprint:** `f8e058631a2387c091db50f79a488100a84f69e2d5b3f63dd7beef6f57ab6001`
 
 - [Digital District participant photograph metadata](../../assets/digital-district-photo.md) - `part_of` (frontmatter)
+- [Jamie with a civic field kit at New York City Council](../../assets/photographs/nyc-council-field-kit-2026.md) - `related_to` (frontmatter)
 - [Civic, cultural, and technical translation](../../capabilities/civic-cultural-and-technical-translation.md) - `prose_link` (markdown)
 - [Civic, cultural, and technical translation](../../capabilities/civic-cultural-and-technical-translation.md) - `related_to` (frontmatter)
 - [Implementation and operational stewardship](../../capabilities/implementation-and-operational-stewardship.md) - `prose_link` (markdown)
@@ -33,4 +34,5 @@
 - [CallNYC portfolio projection](../../projections/work-callnyc.md) - `related_to` (frontmatter)
 - [CallNYC public source repository](../../sources/callnyc-source-repository.md) - `documents` (frontmatter)
 - [New York City Council Constituent Services Data release](../../sources/nycc-constituent-services-data-2016-05-27.md) - `documents` (frontmatter)
+- [NYC Council field-kit photograph oral history, July 2026](../../sources/recollections/nyc-council-field-kit-oral-history-2026-07.md) - `related_to` (frontmatter)
 - [Website provides new information about council members' focus](../../sources/politico-callnyc-2016-03-14.md) - `documents` (frontmatter)

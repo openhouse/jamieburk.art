@@ -515,10 +515,12 @@ const knowledgeBankInput = {
     id: "kc-town-hall",
     surface: "/work/kc-town-hall",
     sourceOrder: [
+      "SRC-KC-TOWN-HALL-CCED-BOARD-MATERIALS-2019",
       "SRC-KC-TOWN-HALL-RESOLUTION-190649",
       "SRC-KC-TOWN-HALL-ORDINANCE-190642",
-      "SRC-KC-TOWN-HALL-CCED-UPDATE-2022-05-17",
-      "SRC-KC-TOWN-HALL-ORDINANCE-240317",
+      "SRC-KCSTAR-CCED-PROJECT-DELAYS-2021",
+      "SRC-KC-TOWN-HALL-CCED-REPORT-2022-12",
+      "SRC-KC-TOWN-HALL-CCED-REPORT-2023",
       "SRC-JAMIE-RESUME-KC-TOWN-HALL-2026",
       "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
       "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29",
@@ -528,14 +530,28 @@ const knowledgeBankInput = {
     ],
     occurrences: [
       {
-        id: "council-appropriation-lifecycle",
-        claimId: "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION",
+        id: "jamie-secured-cced-award",
+        claimId: "CLM-KC-TOWN-HALL-JAMIE-SECURED-CCED-AWARD",
         projection: "case-study",
         sourceIds: [
+          "SRC-KC-TOWN-HALL-CCED-BOARD-MATERIALS-2019",
           "SRC-KC-TOWN-HALL-RESOLUTION-190649",
-          "SRC-KC-TOWN-HALL-ORDINANCE-190642",
-          "SRC-KC-TOWN-HALL-CCED-UPDATE-2022-05-17",
-          "SRC-KC-TOWN-HALL-ORDINANCE-240317"
+          "SRC-KC-TOWN-HALL-ORDINANCE-190642"
+        ]
+      },
+      {
+        id: "mission-aligned-transition",
+        claimId: "CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION",
+        projection: "case-study"
+      },
+      {
+        id: "administrative-stewardship",
+        claimId: "CLM-KC-TOWN-HALL-ADMINISTRATIVE-STEWARDSHIP",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-KCSTAR-CCED-PROJECT-DELAYS-2021",
+          "SRC-KC-TOWN-HALL-CCED-REPORT-2022-12",
+          "SRC-KC-TOWN-HALL-CCED-REPORT-2023"
         ]
       },
       {

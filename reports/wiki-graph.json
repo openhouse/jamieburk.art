@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-26T18:29:46-04:00",
-  "sourceCommit": "fe545c97e68ba49276a043f15c2b1dec876cfd33",
-  "sourceFingerprint": "8a23ea6c4ab5118573aa63c128ca2fb39d551f7f76e9f96219017341aea79e2f",
+  "generatedAt": "2026-07-26T22:44:56-04:00",
+  "sourceCommit": "487239f87287f384a08161158d914cda3f74274f",
+  "sourceFingerprint": "f8e058631a2387c091db50f79a488100a84f69e2d5b3f63dd7beef6f57ab6001",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -69,6 +69,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-09-26"
+    },
+    {
+      "id": "asset.photo.kc-town-hall.kc-star-aerial.2021",
+      "path": "docs/knowledge-bank/assets/photographs/kc-town-hall-kc-star-aerial-2021.md",
+      "title": "Kansas City Star aerial view of KC Town Hall",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Published elevated view of the KC Town Hall building in the Kansas City Star's December 2021 investigation of CCED administrative delays.",
+      "aliases": [],
+      "lastReviewed": "2026-07-26",
+      "reviewBy": "2026-10-26"
     },
     {
       "id": "asset.photo.kc-town-hall.stewardship-interior.001",
@@ -1649,7 +1662,7 @@
       "status": "governed-open",
       "visibility": "summary-only",
       "sensitivity": "high",
-      "summary": "Public-safe capsule for Jamie's first-person account of a 2026 photograph outside New York City Council hearing rooms with coalition field materials and a commercial-rent open-data proposal.",
+      "summary": "Public-safe capsule for Jamie's repaired first-person account of a 2026 photograph outside New York City Council hearing rooms with coalition field materials and a commercial-rent open-data proposal.",
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-09-26"
@@ -1777,14 +1790,14 @@
     {
       "id": "source.resume.jamie-burkart.2026-06-11",
       "path": "docs/knowledge-bank/sources/jamie-resume-2026-06-11.md",
-      "title": "Jamie Burkart resume, June 11, 2026",
+      "title": "Jamie Burkart public resume, maintained 2026",
       "kind": "source",
       "status": "maintained",
       "visibility": "public",
       "sensitivity": "low",
-      "summary": "Public professional resume used as a present-tense statement of role, capabilities, chronology, and selected impact claims.",
+      "summary": "Maintained public professional resume used as a present-tense statement of role, capabilities, chronology, and selected impact claims.",
       "aliases": [],
-      "lastReviewed": "2026-07-19",
+      "lastReviewed": "2026-07-26",
       "reviewBy": "2026-10-19"
     },
     {
@@ -1962,6 +1975,22 @@
       "context": null
     },
     {
+      "from": "asset.photo.kc-town-hall.kc-star-aerial.2021",
+      "type": "related_to",
+      "to": "index.photo-set.kc-town-hall-fieldwork",
+      "source": "frontmatter",
+      "href": "../../indexes/photo-sets/kc-town-hall-fieldwork.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.kc-star-aerial.2021",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
       "from": "asset.photo.kc-town-hall.stewardship-interior.001",
       "type": "related_to",
       "to": "index.photo-set.kc-town-hall-fieldwork",
@@ -1991,6 +2020,14 @@
       "to": "capability.participatory-public-systems",
       "source": "frontmatter",
       "href": "../../capabilities/participatory-public-systems.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nyc-council.field-kit.2026.001",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../../projects/callnyc.md",
       "context": null
     },
     {
@@ -3925,6 +3962,14 @@
       "to": "asset.photo.kc-town-hall.hard-hat.001",
       "source": "frontmatter",
       "href": "../../assets/photographs/kc-town-hall-hard-hat-worksite.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.kc-town-hall-fieldwork",
+      "type": "has_asset",
+      "to": "asset.photo.kc-town-hall.kc-star-aerial.2021",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-kc-star-aerial-2021.md",
       "context": null
     },
     {
@@ -6113,6 +6158,14 @@
       "to": "asset.photo.nyc-council.field-kit.2026.001",
       "source": "frontmatter",
       "href": "../../assets/photographs/nyc-council-field-kit-2026.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc-council.field-kit-oral-history.2026-07",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../../projects/callnyc.md",
       "context": null
     },
     {
@@ -8664,7 +8717,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
       "to": null,
       "fragment": null,
-      "line": 65,
+      "line": 128,
       "kind": "link"
     },
     {
@@ -8673,7 +8726,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
       "to": null,
       "fragment": null,
-      "line": 91,
+      "line": 154,
       "kind": "link"
     },
     {

@@ -1,8 +1,8 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-07-27T02:47:21.652Z",
+  "checkedAt": "2026-07-27T04:13:27.023Z",
   "baseUrl": "http://127.0.0.1:3051",
-  "publicSurfaceFingerprint": "48fb3762cf9bbe9f838288f781c97c5d39b612d4b2fea85ca4be3f0f1953e443",
+  "publicSurfaceFingerprint": "7d8ca6bda3bb559576afce96d8d24f88daa82029196a9cca77c8f61d2c5544c2",
   "publicSurfaceFileCount": 116,
   "publicSurfaceScope": [
     "apps/www/**",
@@ -190,7 +190,7 @@
       "path": "/work/harry-j-epstein",
       "httpStatus": 200,
       "imageCount": 1,
-      "unloadedImages": 1,
+      "unloadedImages": 0,
       "lazyImages": 1,
       "axeVersion": "4.12.1",
       "violations": [],
@@ -1166,7 +1166,7 @@
     "nonSuccessResponses": 0,
     "invalidHeadingOrLandmarkRows": 0,
     "lazyImagesObserved": 28,
-    "unloadedImagesBeforeScroll": 10,
+    "unloadedImagesBeforeScroll": 9,
     "lazyImageFollowUpPerformed": true,
     "allImagesLoadedAfterScroll": true
   }

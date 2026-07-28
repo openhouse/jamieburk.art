@@ -180,7 +180,7 @@ export function evaluatePhotographicSourceReturn(options = {}) {
       map?.projection?.surfaces?.length === 1 &&
       map?.projection?.surfaces?.[0] === "/work/kc-town-hall" &&
       read("apps/www/src/data/work.ts").includes(
-        'role: "Co-founder & Project Manager"'
+        'role: "Co-founder, Project Manager & CCED Developer/Presenter"'
       ) &&
       read("apps/www/src/data/work.ts").includes(
         'src: "/images/artifacts/kc-town-hall-walkshed.webp"'
