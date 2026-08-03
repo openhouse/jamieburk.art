@@ -31,12 +31,16 @@ relations:
 
 On Node 26.5.0:
 
-- `wiki:professional-record:check` validated the pinned commit, manifest
+- `node scripts/knowledge-wiki/professional-record-eval.mjs` validated the pinned commit, manifest
   digest, candidate fingerprint, record counts, canonical homes, public-release
   state, private-dependency boundary, photo boundary, RFC stage, Wiki citation,
   and portfolio hold.
-- `test:professional-record` passed 13 tests: one unchanged-candidate baseline
+- `node --test scripts/knowledge-wiki/professional-record-eval.test.mjs` passed
+  13 tests: one unchanged-candidate baseline
   plus twelve adversarial mutations.
+- The same baseline and mutation suite is composed into the existing
+  `check:knowledge-evals` and `test:knowledge-evals` gates so it runs in the
+  full repository check without changing the professor-lens public candidate.
 - `public-safety` passed with the repository's existing eleven careful-claim
   warnings.
 - `git diff --check` passed.

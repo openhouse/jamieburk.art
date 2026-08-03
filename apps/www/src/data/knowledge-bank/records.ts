@@ -8,7 +8,6 @@ import { kcTownHallFieldPractice } from "./kctownhall-field-practice.ts";
 import { kcTownHallSocialCorpus } from "./kctownhall-social-corpus.ts";
 import { kcSpacesFundFacebookPostKnowledge } from "./kcspacesfund-facebook-posts-2026-07.ts";
 import { jamiePersonalFacebookPostKnowledge } from "./jamie-personal-facebook-posts-2026-07.ts";
-import { jamiePublicRecordEdition } from "./jamie-public-record-edition.ts";
 import { nycacPressArchive } from "./nycac-press-archive.ts";
 import { nycacFacebookEventKnowledge } from "./nycac-facebook-events-2026-07.ts";
 import { nycacFacebookPostKnowledge } from "./nycac-facebook-posts-2026-07.ts";
@@ -60,7 +59,6 @@ const knowledgeBankInput = {
     ...kcTownHallSocialCorpus.intakeItems,
     ...kcSpacesFundFacebookPostKnowledge.intakeItems,
     ...jamiePersonalFacebookPostKnowledge.intakeItems,
-    ...jamiePublicRecordEdition.intakeItems,
     ...nycacImplementationEvidence.intakeItems,
     ...nycacInstitutionalCapacity.intakeItems,
     ...nycacSharedFolderProduction.intakeItems,
@@ -104,7 +102,6 @@ const knowledgeBankInput = {
     ...kcTownHallSocialCorpus.observations,
     ...kcSpacesFundFacebookPostKnowledge.observations,
     ...jamiePersonalFacebookPostKnowledge.observations,
-    ...jamiePublicRecordEdition.observations,
     ...nycacImplementationEvidence.observations,
     ...nycacInstitutionalCapacity.observations,
     ...nycacSharedFolderProduction.observations,
@@ -252,7 +249,6 @@ const knowledgeBankInput = {
     ...kcTownHallSocialCorpus.sources,
     ...kcSpacesFundFacebookPostKnowledge.sources,
     ...jamiePersonalFacebookPostKnowledge.sources,
-    ...jamiePublicRecordEdition.sources,
     ...nycacImplementationEvidence.sources,
     ...nycacInstitutionalCapacity.sources,
     ...nycacSharedFolderProduction.sources,
@@ -393,7 +389,6 @@ const knowledgeBankInput = {
     ...kcTownHallSocialCorpus.claims,
     ...kcSpacesFundFacebookPostKnowledge.claims,
     ...jamiePersonalFacebookPostKnowledge.claims,
-    ...jamiePublicRecordEdition.claims,
     ...nycacImplementationEvidence.claims,
     ...nycacInstitutionalCapacity.claims,
     ...nycacSharedFolderProduction.claims,
@@ -457,7 +452,6 @@ const knowledgeBankInput = {
     ...kcTownHallSocialCorpus.researchInquiries,
     ...kcSpacesFundFacebookPostKnowledge.researchInquiries,
     ...jamiePersonalFacebookPostKnowledge.researchInquiries,
-    ...jamiePublicRecordEdition.researchInquiries,
     ...nycacInstitutionalCapacity.researchInquiries,
     ...nycacSharedFolderProduction.researchInquiries,
     ...nycacFacebookEventKnowledge.researchInquiries,
