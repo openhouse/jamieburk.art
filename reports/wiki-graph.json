@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-07-28T14:28:48-04:00",
   "sourceCommit": "b1d476c810fc6d434b01fdab16c23ad1b961a01f",
-  "sourceFingerprint": "e5177833940ac1e9395c314bcb04693bdef8e3ec600800598ce57a3002d5c65f",
+  "sourceFingerprint": "219613910021b99be123ba56a983dfa3029cf61b39dc3c640a9106e0ffe1db5e",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3052,6 +3052,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "index.knowledge-wiki.jamie-sourcebook",
+      "path": "docs/knowledge-bank/indexes/jamie-sourcebook.md",
+      "title": "Jamie Burkart Sourcebook pilot",
+      "kind": "index",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "A public-safe adapter joining the Knowledge Wiki to a Git-native pilot of Jamie Burkart's already-public, self-authored Council testimony.",
+      "aliases": [],
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2026-11-03"
     },
     {
       "id": "index.knowledge-wiki.living-archive",
@@ -10857,6 +10870,14 @@
     {
       "from": "index.knowledge-wiki",
       "type": "related_to",
+      "to": "index.knowledge-wiki.jamie-sourcebook",
+      "source": "frontmatter",
+      "href": "indexes/jamie-sourcebook.md",
+      "context": "Git-native public Sourcebook pilot with one canonical body per statement and generated browse routes."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "related_to",
       "to": "index.knowledge-wiki.living-archive",
       "source": "frontmatter",
       "href": "indexes/living-archive.md",
@@ -11308,6 +11329,38 @@
       "to": "place.small-cultural-spaces",
       "source": "frontmatter",
       "href": "../places/small-cultural-spaces.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.jamie-sourcebook",
+      "type": "related_to",
+      "to": "index.public-testimony",
+      "source": "frontmatter",
+      "href": "public-testimony.md",
+      "context": "The existing governed corpus supplies the three canonical statement bodies and its explicit recovery boundary."
+    },
+    {
+      "from": "index.knowledge-wiki.jamie-sourcebook",
+      "type": "related_to",
+      "to": "testimony.jamie-burkart.cabaret-law.2017-09-14",
+      "source": "frontmatter",
+      "href": "../testimony/2017-09-14-cabaret-law-repeal.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.jamie-sourcebook",
+      "type": "related_to",
+      "to": "testimony.jamie-burkart.cultural-affairs-budget.2018-03-16",
+      "source": "frontmatter",
+      "href": "../testimony/2018-03-16-cultural-affairs-budget.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.jamie-sourcebook",
+      "type": "related_to",
+      "to": "testimony.jamie-burkart.sbjsa.2018-10-22",
+      "source": "frontmatter",
+      "href": "../testimony/2018-10-22-small-business-job-survival-act.md",
       "context": null
     },
     {
@@ -15010,7 +15063,7 @@
       "toPath": "docs/knowledge-bank/citational-care.md",
       "to": null,
       "fragment": null,
-      "line": 133,
+      "line": 137,
       "kind": "link"
     },
     {
@@ -15019,7 +15072,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc.md",
       "to": "project.callnyc",
       "fragment": null,
-      "line": 134,
+      "line": 138,
       "kind": "link"
     },
     {
@@ -15028,7 +15081,7 @@
       "toPath": "docs/knowledge-bank/intake-and-maturation.md",
       "to": null,
       "fragment": null,
-      "line": 137,
+      "line": 141,
       "kind": "link"
     },
     {
@@ -15037,7 +15090,7 @@
       "toPath": "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md",
       "to": null,
       "fragment": null,
-      "line": 141,
+      "line": 145,
       "kind": "link"
     },
     {
@@ -15046,7 +15099,7 @@
       "toPath": "docs/knowledge-bank/agency-and-collective-credit.md",
       "to": null,
       "fragment": null,
-      "line": 148,
+      "line": 152,
       "kind": "link"
     },
     {
@@ -15055,7 +15108,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-finkelpearl-council-hearing-review.md",
       "to": null,
       "fragment": null,
-      "line": 153,
+      "line": 157,
       "kind": "link"
     },
     {
@@ -15064,7 +15117,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-campaign-press-archive.md",
       "to": null,
       "fragment": null,
-      "line": 159,
+      "line": 163,
       "kind": "link"
     },
     {
@@ -15073,7 +15126,7 @@
       "toPath": "docs/knowledge-bank/projects/talks-not-raids.md",
       "to": null,
       "fragment": null,
-      "line": 164,
+      "line": 168,
       "kind": "link"
     },
     {
@@ -15082,7 +15135,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 170,
+      "line": 174,
       "kind": "link"
     },
     {
@@ -15091,7 +15144,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/kcspacesfund-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 172,
+      "line": 176,
       "kind": "link"
     },
     {
@@ -15100,7 +15153,7 @@
       "toPath": "docs/knowledge-bank/projects/jamie-personal-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 178,
+      "line": 182,
       "kind": "link"
     },
     {
@@ -15109,7 +15162,7 @@
       "toPath": "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
       "to": null,
       "fragment": null,
-      "line": 180,
+      "line": 184,
       "kind": "link"
     },
     {
@@ -15118,7 +15171,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-town-hall.md",
       "to": null,
       "fragment": null,
-      "line": 188,
+      "line": 192,
       "kind": "link"
     },
     {
@@ -15127,7 +15180,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
       "to": null,
       "fragment": null,
-      "line": 194,
+      "line": 198,
       "kind": "link"
     },
     {
@@ -15136,7 +15189,7 @@
       "toPath": "docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
       "to": null,
       "fragment": null,
-      "line": 196,
+      "line": 200,
       "kind": "link"
     },
     {
@@ -15145,7 +15198,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
       "to": null,
       "fragment": null,
-      "line": 202,
+      "line": 206,
       "kind": "link"
     },
     {
@@ -15154,7 +15207,7 @@
       "toPath": "docs/knowledge-bank/projects/archive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 208,
+      "line": 212,
       "kind": "link"
     },
     {
@@ -15163,7 +15216,7 @@
       "toPath": "docs/knowledge-bank/projects/icloud-teams-archive-delta-2026-07-15.md",
       "to": null,
       "fragment": null,
-      "line": 214,
+      "line": 218,
       "kind": "link"
     },
     {
@@ -15172,7 +15225,7 @@
       "toPath": "docs/knowledge-bank/projects/google-drive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 220,
+      "line": 224,
       "kind": "link"
     },
     {
@@ -15181,7 +15234,7 @@
       "toPath": "docs/knowledge-bank/projects/social-media-archive-production.md",
       "to": null,
       "fragment": null,
-      "line": 226,
+      "line": 230,
       "kind": "link"
     },
     {
@@ -15190,7 +15243,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 232,
+      "line": 236,
       "kind": "link"
     },
     {
@@ -15199,7 +15252,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
       "to": null,
       "fragment": null,
-      "line": 234,
+      "line": 238,
       "kind": "link"
     },
     {
@@ -15208,7 +15261,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-retrievable-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 240,
+      "line": 244,
       "kind": "link"
     },
     {
@@ -15217,7 +15270,7 @@
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md",
       "to": null,
       "fragment": null,
-      "line": 245,
+      "line": 249,
       "kind": "link"
     },
     {
@@ -15226,7 +15279,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 247,
+      "line": 251,
       "kind": "link"
     },
     {
@@ -15235,16 +15288,7 @@
       "toPath": "docs/knowledge-bank/projects/urbanhermit-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 254,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
-      "to": null,
-      "fragment": null,
-      "line": 256,
+      "line": 258,
       "kind": "link"
     },
     {
@@ -15259,10 +15303,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
+      "to": null,
+      "fragment": null,
+      "line": 260,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/projects/callnyc-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 262,
+      "line": 266,
       "kind": "link"
     },
     {
@@ -15271,7 +15324,7 @@
       "toPath": "docs/knowledge-bank/data/callnyc-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 264,
+      "line": 268,
       "kind": "link"
     },
     {
@@ -15280,7 +15333,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 269,
+      "line": 273,
       "kind": "link"
     },
     {
@@ -15289,25 +15342,7 @@
       "toPath": "docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 271,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
-      "to": null,
-      "fragment": null,
-      "line": 277,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
-      "to": null,
-      "fragment": null,
-      "line": 279,
+      "line": 275,
       "kind": "link"
     },
     {
@@ -15322,10 +15357,28 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
+      "to": null,
+      "fragment": null,
+      "line": 281,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
+      "to": null,
+      "fragment": null,
+      "line": 283,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
       "to": null,
       "fragment": null,
-      "line": 286,
+      "line": 290,
       "kind": "link"
     },
     {
@@ -15334,7 +15387,7 @@
       "toPath": "docs/knowledge-bank/data/wowlist-sunday-dinner-callscript-controls.json",
       "to": null,
       "fragment": null,
-      "line": 288,
+      "line": 292,
       "kind": "link"
     },
     {
@@ -15343,16 +15396,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-wowlist-sunday-dinner-callscript-continuity.md",
       "to": null,
       "fragment": null,
-      "line": 294,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
-      "to": null,
-      "fragment": null,
-      "line": 297,
+      "line": 298,
       "kind": "link"
     },
     {
@@ -15367,10 +15411,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
+      "to": null,
+      "fragment": null,
+      "line": 301,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 302,
+      "line": 306,
       "kind": "link"
     },
     {
@@ -15379,7 +15432,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 303,
+      "line": 307,
       "kind": "link"
     },
     {
@@ -15475,10 +15528,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/indexes/jamie-sourcebook.md",
+      "to": "index.knowledge-wiki.jamie-sourcebook",
+      "fragment": null,
+      "line": 58,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/indexes/public-testimony-and-hearing-voices.md",
       "to": "index.knowledge-wiki.public-testimony-and-hearing-voices",
       "fragment": null,
-      "line": 58,
+      "line": 62,
       "kind": "link"
     },
     {
@@ -15487,7 +15549,7 @@
       "toPath": "docs/knowledge-bank/indexes/commercial-rent-testimony.md",
       "to": "index.knowledge-wiki.commercial-rent-testimony",
       "fragment": null,
-      "line": 61,
+      "line": 65,
       "kind": "link"
     },
     {
@@ -15496,7 +15558,7 @@
       "toPath": "docs/knowledge-bank/indexes/commercial-rent-public-support.md",
       "to": "index.knowledge-wiki.commercial-rent-public-support",
       "fragment": null,
-      "line": 64,
+      "line": 68,
       "kind": "link"
     },
     {
@@ -15505,7 +15567,7 @@
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
       "to": "project.nyc-artist-coalition",
       "fragment": null,
-      "line": 67,
+      "line": 71,
       "kind": "link"
     },
     {
@@ -15514,7 +15576,7 @@
       "toPath": "docs/knowledge-bank/_generated/wanted-pages.md",
       "to": null,
       "fragment": null,
-      "line": 70,
+      "line": 74,
       "kind": "link"
     },
     {
@@ -15523,7 +15585,7 @@
       "toPath": "docs/knowledge-bank/workflow.md",
       "to": null,
       "fragment": null,
-      "line": 76,
+      "line": 80,
       "kind": "link"
     },
     {
@@ -16298,6 +16360,24 @@
       "to": "research.knowledge-wiki-family-closure.2026-07-19",
       "fragment": null,
       "line": 52,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/jamie-sourcebook.md",
+      "from": "index.knowledge-wiki.jamie-sourcebook",
+      "toPath": "rfcs/0004-jamie-burkart-sourcebook-and-knowledge-ecosystem.md",
+      "to": null,
+      "fragment": null,
+      "line": 5,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/jamie-sourcebook.md",
+      "from": "index.knowledge-wiki.jamie-sourcebook",
+      "toPath": "sourcebook/START-HERE.md",
+      "to": null,
+      "fragment": null,
+      "line": 6,
       "kind": "link"
     },
     {

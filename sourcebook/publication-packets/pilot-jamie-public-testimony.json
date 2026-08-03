@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "publication-packet.jamie-public-testimony.2026-08-03",
+  "purpose": "Index three already-public, self-authored Council statements in the Git-native Sourcebook pilot without duplicating their bodies.",
+  "intendedSurface": "github-sourcebook-pilot",
+  "privateDependencies": false,
+  "records": [
+    {
+      "publicId": "perspective.jamie-burkart.cabaret-law.2017-09-14",
+      "bodySha256": "ab68bc31d8bd8a0a066bad5f4164a6402d04fe5faca1c56d69032c7b5b3821e5"
+    },
+    {
+      "publicId": "perspective.jamie-burkart.cultural-affairs-budget.2018-03-16",
+      "bodySha256": "45ff4c1da56e4b188d943ccecfaaa63a5c4ad3b6b65ce7effa681119e6dfdebe"
+    },
+    {
+      "publicId": "perspective.jamie-burkart.sbjsa.2018-10-22",
+      "bodySha256": "4e20ab1bdc1fe71e2d6e59d641d1f4df56656a65138741b145830f5ed2e1acce"
+    }
+  ],
+  "approvals": {
+    "subject": {
+      "state": "reviewed",
+      "owner": "Jamie Burkart",
+      "reviewedAt": "2026-08-03"
+    },
+    "rights": {
+      "state": "reviewed",
+      "owner": "Jamie Burkart",
+      "reviewedAt": "2026-08-03"
+    },
+    "editorial": {
+      "state": "reviewed",
+      "owner": "Jamie Burkart",
+      "reviewedAt": "2026-08-03"
+    }
+  },
+  "antiClaims": [
+    "Indexing Jamie's testimony does not imply hearing-body or institutional endorsement.",
+    "The statements do not establish Jamie's sole authorship or causation of collective and legislative outcomes.",
+    "This packet does not authorize third-party words, recommendation materials, photographs, website projection, deployment, or production indexing."
+  ]
+}

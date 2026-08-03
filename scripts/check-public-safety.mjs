@@ -124,6 +124,15 @@ try {
   failures.push("scripts/check-knowledge-bank.mjs - knowledge-bank gate failed");
 }
 
+try {
+  execFileSync(process.execPath, [path.join(repoRoot, "scripts/sourcebook/check.mjs")], {
+    cwd: repoRoot,
+    stdio: "inherit"
+  });
+} catch {
+  failures.push("scripts/sourcebook/check.mjs - Sourcebook public-boundary gate failed");
+}
+
 const allFiles = walk(repoRoot);
 const textFiles = allFiles.filter((file) => textExtensions.has(path.extname(file)));
 const shippedTextFiles = textFiles.filter((file) => {

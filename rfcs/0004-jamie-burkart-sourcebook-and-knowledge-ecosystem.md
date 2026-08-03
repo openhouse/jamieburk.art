@@ -1,7 +1,7 @@
 ---
 rfc: 4
 title: Jamie Burkart Sourcebook and Federated Knowledge Ecosystem
-stage: proposed
+stage: implementing
 start_date: 2026-08-03
 authors:
   - Jamie Burkart
@@ -16,7 +16,12 @@ review_areas:
   - developer-experience
   - accessibility
   - editorial
-implementation: null
+implementation:
+  repository: openhouse/jamieburk.art
+  pull_request: 270
+  branch: agent/jamie-knowledge-ecosystem-rfc
+  base_commit: 945cd984b0e2b40c745b95b18d87f9e8768db0bf
+  phase: in-repository-content-pilot
 supersedes: []
 superseded_by: null
 ---
@@ -37,8 +42,32 @@ inquiries. `jamieburk.art` would remain a selective, audience-specific
 projection rather than an archive browser. Protected originals, private
 communications, and confidential research packages would remain outside every
 public repository and could contribute only through reviewed publication
-packets. This RFC plans the system; it does not authorize repository creation,
-content publication, quote use, or website implementation.
+packets. On August 3, 2026, Jamie Burkart explicitly authorized a bounded
+implementation in this pull request: a synthetic contract, a Git-native pilot
+indexing three already-public statements in this repository, Knowledge Wiki
+bindings, and evals. That decision does not authorize third-party quotations,
+names, photographs, recommendation material, a new public repository, website
+projection, deployment, or production indexing.
+
+## Implementation decision
+
+Jamie, the named decision owner, authorized implementation on August 3, 2026.
+The first increment is deliberately narrower than the full architecture:
+
+- it remains in `openhouse/jamieburk.art` as a content-only Git pilot;
+- it begins with the complete governed population of three recovered,
+  already-public statements authored and delivered by Jamie in official New
+  York City Council hearings;
+- it stores each statement body only once at its existing Knowledge Wiki path
+  while the Sourcebook registry becomes the canonical perspective-metadata and
+  browse authority for this pilot;
+- it imports no protected package bytes, private locators, recommendation
+  language, third-party correspondence, or unapproved media;
+- it adds no portfolio route and does not change production publication state.
+
+This is an implementation decision, not a finding that every later source class
+has a publication basis. The unresolved questions below remain open for the
+separate-repository and third-party-perspective phases.
 
 ## Motivation
 
@@ -112,7 +141,8 @@ later migration.
 
 ## Non-goals
 
-- This RFC does not create the Sourcebook repository or choose its final name.
+- This increment does not create a separate Sourcebook repository or choose its
+  final name.
 - It does not import private research packages, raw transcripts, educational
   records, correspondence, direct messages, contact data, private photographs,
   or source locators into this public repository.
@@ -130,8 +160,9 @@ later migration.
   become a dependency of the public website.
 - It does not replace RFC 0001. It specializes that proposal for a public-safe
   source corpus about Jamie and depends on compatible publication boundaries.
-- It does not authorize implementation merely because the RFC or its pull
-  request is merged.
+- It does not authorize implementation beyond the bounded increment Jamie
+  approved on August 3, 2026 merely because the RFC or its pull request is
+  merged.
 
 ## Terminology
 
@@ -723,12 +754,13 @@ editorial approval, deployment approval, or production indexing.
 
 ## Rollout plan
 
-### Phase 0: accept or revise the architecture
+### Phase 0: accept or revise the architecture — authorized for bounded implementation
 
 - Review this RFC alongside RFC 0001 and the current Knowledge Wiki ADR.
 - Choose the Sourcebook product and repository name.
 - Approve the trust topology, record classes, and human decision owners.
-- Keep all implementation fields `null` until Jamie accepts the RFC.
+- Record Jamie's explicit implementation decision and keep later publication
+  surfaces behind their own gates.
 
 ### Phase 1: current-base inventory and donor matrix
 
