@@ -1,35 +1,37 @@
 {
-  "evaluator": "Imagined Prof. Warren Sack lens; independent reader C, not the named professor or an endorsement",
-  "reviewerId": "sack-reader-c-2026-07-28-add0c2de",
+  "evaluator": "Imagined Professor Warren Sack lens; independent reader C, not the named professor and not an endorsement",
+  "reviewerId": "sack-c-2026-08-03-04b71b18",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "add0c2de156ae4bc9e1b3ca7d96dd2bf219692f3abbf0dabea6d9a7bd1abd723",
+  "candidateSha256": "04b71b1844c938dd1ca94927d864284352e1683f19a6087b0c404243b817eebf",
   "score": 4,
   "pass": true,
   "evidence": [
-    "Independently recomputed the exact SHA-256 over all 115 ordered candidate paths.",
-    "The About page names and links the complete recursive method.",
-    "Harry J. Epstein, NYC Artist Coalition and FairRentNYC, and Sunday Dinner and 196 each show relationship modeling, interface use with people, revision, documentation, and continuation.",
-    "WOWList, CallNYC, and source-backed team memory add bounded prototype, public-use, correction, and handoff evidence.",
-    "Historical coursework is not converted into present proficiency, invention, deployment, research, or sole-authorship claims."
+    "Independently recomputed the required SHA-256 over all 116 ordered candidate paths using scripts/lib/professor-lens-eval.mjs.",
+    "The About composition plainly names the recursive sequence: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.",
+    "Harry J. Epstein Company, NYC Artist Coalition and FairRentNYC, and Sunday Dinner and 196 each make a current systems loop reconstructable through distinct relationship, model, interface-and-use, and learning-and-continuity stages.",
+    "WOWList and source-backed team memory provide additional bounded continuity without presenting historical systems or an early working method as current production deployments.",
+    "The public registry binds the Open House lineage to a public article, credits Jamie's initiation without assigning sole authorship, and expressly preserves collective governance and participant privacy.",
+    "The production-build browser matrix dated 2026-08-03 reports 56 successful responsive and automated-accessibility rows, including four clean About-page rows, plus four passing focused visual occurrences."
   ],
   "gaps": [
-    "Sunday Dinner remains intentionally summary-only and the lab remains an early method without a completed client pilot.",
-    "Human accessibility, rights, consent, production, deployment, and indexing gates remain open."
+    "Automated axe results do not replace human screen-reader, keyboard, or browser-zoom review.",
+    "The supplied evidence does not close rights, consent, human production approval, deployment, or indexing gates."
   ],
   "safety_findings": [
-    "Collective credit and institutional causation remain explicit.",
-    "Private records, legal-review context, customer data, and unapproved media remain withheld.",
-    "The East River photograph is occurrence-bounded and its production and indexing states remain open."
+    "Collective work remains described as collective; coalition activity is not converted into sole causation or sole authorship.",
+    "Protected educational records, private correspondence, identifiers, paths, and faculty testimonial language remain withheld.",
+    "Dated coursework is bounded lineage and is not used to claim disciplinary invention, peer-reviewed research, production deployment, or current Max/Jitter proficiency.",
+    "The reviewed composition does not authorize publication of unapproved media or remove accessibility, production, staging, deployment, or indexing controls."
   ],
-  "recommendation": "Pass PR-016 at 4 for this exact candidate while preserving the present bounded language and all human gates.",
+  "recommendation": "Pass PR-016 at 4 for this exact candidate. Preserve all human approval, collective-credit, privacy, rights, accessibility, production, deployment, and indexing gates.",
   "provenance": {
-    "provider": "codex-native-subagent",
-    "reviewReceiptDigest": "4c61753f4ef13c876b1b9c562c69e81e0d13fa91590e573d1f1ad57e8db9c7a5",
+    "provider": "codex-native-independent-review",
+    "reviewReceiptDigest": "37711756003ef77c990b6a4391b18698540208dce580cc7694392b44e08fe33a",
     "reviewMode": "bounded independent holdout",
     "reviewerRole": "reader C",
-    "reviewedAt": "2026-07-28",
-    "candidatePathCount": 115,
+    "reviewedAt": "2026-08-03",
+    "candidatePathCount": 116,
     "candidateFingerprintRecomputed": true,
     "responsiveMatrixRowsReviewed": 56,
     "focusedVisualOccurrencesReviewed": 4,

@@ -1,35 +1,37 @@
 {
-  "evaluator": "Imagined Prof. Warren Sack lens; independent reader B, not the named professor or an endorsement",
-  "reviewerId": "sack-reader-b-2026-07-28-add0c2de",
+  "evaluator": "Imagined Professor Warren Sack lens; independent reader B, not the named professor or an endorsement",
+  "reviewerId": "sack-b-2026-08-03-04b71b18",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "add0c2de156ae4bc9e1b3ca7d96dd2bf219692f3abbf0dabea6d9a7bd1abd723",
+  "candidateSha256": "04b71b1844c938dd1ca94927d864284352e1683f19a6087b0c404243b817eebf",
   "score": 4,
   "pass": true,
   "evidence": [
-    "Independently recomputed the exact SHA-256 over all 115 ordered candidate paths.",
-    "The recurring sequence is plainly named and evidenced through HJE, NYC Artist Coalition and FairRentNYC, and Sunday Dinner and 196.",
-    "WOWList supplies historical collective-use evidence, CallNYC supplies a source-to-interface trace, and the Knowledge Wiki supplies correction and continuation mechanics.",
-    "Current systems are separated from historical prototypes and unfinished research.",
-    "All 56 responsive rows passed their declared route, accessibility, image, overflow, request, heading, and landmark checks."
+    "The candidate fingerprint independently recomputed with scripts/lib/professor-lens-eval.mjs to 04b71b1844c938dd1ca94927d864284352e1683f19a6087b0c404243b817eebf over all 116 ordered paths.",
+    "The About composition plainly names the recursive sequence: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue; linked project evidence is presented within two clicks of the homepage.",
+    "Harry J. Epstein Company, NYC Artist Coalition and FairRentNYC, and Sunday Dinner and 196 each expose relationships, a system model, an interface used with people, and learning or handoff continuity, making three current systems loops reconstructable.",
+    "WOWList and Source-backed team memory add bounded historical and prototype continuity without substituting held coursework for present public proof.",
+    "The public registry supports the Open House lineage with a direct public source and explicit collective-governance and participant-privacy boundaries.",
+    "The 2026-08-03 production-build matrix covers 56 route and viewport rows: all returned 200 with no axe violations, overflow, failed requests, broken or unloaded images after scroll, unlabeled images, heading failures, or missing main landmarks; four focused visual occurrences preserve readable caption and explicit photo credit."
   ],
   "gaps": [
-    "Some HJE and Sunday Dinner operational evidence remains properly protected.",
-    "Independent corroboration of the resident-artist aggregate and human screen-reader and browser-zoom review remain open."
+    "Human screen-reader, browser-zoom, rights, consent, production authorization, deployment, and indexing approvals remain open human gates.",
+    "This bounded holdout assesses the supplied public composition and matrix, not held professional-record material or private source artifacts."
   ],
   "safety_findings": [
-    "Collective advocacy and participant work are not absorbed into individual causation.",
-    "Protected records and private locators remain outside public projection.",
-    "Exact photographic rights, credit, consent, crop, and release decisions remain human gates."
+    "Collective projects remain described as collaborative systems; public-body actions and outcomes are not attributed solely to Jamie.",
+    "Protected educational records remain withheld and do not support claims of structural equivalence, disciplinary invention, peer-reviewed research, production deployment, sole authorship, or current Max/Jitter proficiency.",
+    "The source-backed team-memory lab is framed as an early working method, not a completed client pilot, and historical work is not presented as current production deployment.",
+    "The visual matrix preserves named photographic credit, while separate rights and consent gates remain open."
   ],
-  "recommendation": "Pass PR-016 at 4 for this exact candidate; treat the result as evaluation evidence, not production clearance.",
+  "recommendation": "Pass PR-016 at score 4 for this exact candidate: the public composition fully meets the recursive-social-systems lens, while all human approval and release gates remain preserved.",
   "provenance": {
-    "provider": "codex-native-subagent",
-    "reviewReceiptDigest": "bed2afb7deaec4a86fd53f07cd99cd25ea069a888873ad50c4d5b5deb31d9fa8",
+    "provider": "codex-native-independent-review",
+    "reviewReceiptDigest": "20f0a7615dd8665f5b524efa2eff04be9480b8d133c920d29148825f9aff6547",
     "reviewMode": "bounded independent holdout",
     "reviewerRole": "reader B",
-    "reviewedAt": "2026-07-28",
-    "candidatePathCount": 115,
+    "reviewedAt": "2026-08-03",
+    "candidatePathCount": 116,
     "candidateFingerprintRecomputed": true,
     "responsiveMatrixRowsReviewed": 56,
     "focusedVisualOccurrencesReviewed": 4,

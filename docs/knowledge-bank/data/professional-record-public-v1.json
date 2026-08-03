@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "editionId": "professional-record-public-v1",
+  "status": "pilot",
+  "generatedAt": "2026-08-03",
+  "sourceAuthority": "jamieburk.art Knowledge Wiki",
+  "privateBuildDependency": false,
+  "inputReceipts": [
+    {
+      "label": "candidate-A",
+      "sha256": "422c8f1eac03bee6f05e9fd6bc263ec863c4d5d0c3007277e98bf90df1fcee57",
+      "publicUse": "protected-input-fingerprint-only"
+    },
+    {
+      "label": "candidate-B",
+      "sha256": "aa81e24b1f8bd50b4b926b96a53e30af99d2c7fe2e4f2d8665ac938c0ee4ed36",
+      "publicUse": "protected-input-fingerprint-only"
+    },
+    {
+      "label": "candidate-C",
+      "sha256": "2f34b09fcf8f95c002afd357a64b3862c05bd6b56282e7bca965e730558983db",
+      "publicUse": "protected-input-fingerprint-only"
+    }
+  ],
+  "records": [
+    {
+      "id": "person.warren-sack",
+      "canonicalPath": "docs/knowledge-bank/people/warren-sack.md",
+      "publicUse": "bounded-context",
+      "endorsementState": "not-established"
+    },
+    {
+      "id": "person.diya-vij",
+      "canonicalPath": "docs/knowledge-bank/people/diya-vij.md",
+      "publicUse": "bounded-context",
+      "endorsementState": "not-established"
+    },
+    {
+      "id": "event.mit.interrogative-design-symposium.2024",
+      "canonicalPath": "docs/knowledge-bank/events/interrogative-design-symposium-2024.md",
+      "publicUse": "held-claim-context",
+      "endorsementState": "not-applicable"
+    },
+    {
+      "id": "event.studio3.ai-made-me-do-it.2024",
+      "canonicalPath": "docs/knowledge-bank/events/ai-made-me-do-it-symposium-2024.md",
+      "publicUse": "held-claim-context",
+      "endorsementState": "not-applicable"
+    },
+    {
+      "id": "event.weibel.in-terms-of-media.2024",
+      "canonicalPath": "docs/knowledge-bank/events/in-terms-of-media-symposium-2024.md",
+      "publicUse": "held-claim-context",
+      "endorsementState": "not-applicable"
+    },
+    {
+      "id": "asset.photo-set.mit-interrogative-design.2024",
+      "canonicalPath": "docs/knowledge-bank/assets/photographs/mit-interrogative-design-symposium-2024-held.md",
+      "publicUse": "metadata-only",
+      "rightsState": "permission-needed",
+      "endorsementState": "not-established"
+    }
+  ],
+  "rightsMatrix": {
+    "publicInstitutionalPages": "link-and-context",
+    "protectedEducationalRecords": "paraphrase-only-pending-permission",
+    "privateCommunications": "withhold",
+    "recommendationStrategy": "withhold",
+    "photographs": "metadata-only-pending-exact-review"
+  },
+  "holds": [
+    "raw-correspondence",
+    "private-transcripts",
+    "recommendation-language",
+    "photo-publication",
+    "unverified-speaker-attribution",
+    "current-endorsement"
+  ],
+  "portfolioProjection": {
+    "status": "hold",
+    "surfaces": [],
+    "reason": "The Wiki gained depth; no exact public canary wording or photograph was approved."
+  },
+  "correction": {
+    "route": "Open a reviewed pull request against the canonical record.",
+    "rollback": "Revert the projection independently while preserving valid source metadata and correction history."
+  }
+}

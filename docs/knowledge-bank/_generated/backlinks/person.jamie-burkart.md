@@ -3,12 +3,19 @@
 
 **Source commit:** `b1d476c810fc6d434b01fdab16c23ad1b961a01f`
 **Generation time:** 2026-07-28T14:28:48-04:00
-**Source fingerprint:** `e5177833940ac1e9395c314bcb04693bdef8e3ec600800598ce57a3002d5c65f`
+**Source fingerprint:** `c1184c6b4833f46c7d2f199f0a86047bf92c1d3543ecba6e56936643e49b89d0`
 
+- [Interrogative Design Symposium](../../events/interrogative-design-symposium-2024.md) - `related_to` (frontmatter)
+- [AI Made Me Do It symposium and exhibition](../../events/ai-made-me-do-it-symposium-2024.md) - `related_to` (frontmatter)
+- [In Terms of Media symposium](../../events/in-terms-of-media-symposium-2024.md) - `related_to` (frontmatter)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `prose_link` (markdown)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `related_to` (frontmatter)
+- [Professional record and reception](../../indexes/professional-record-and-reception.md) - `prose_link` (markdown)
+- [Professional record and reception](../../indexes/professional-record-and-reception.md) - `related_to` (frontmatter)
 - [Visual evidence index](../../indexes/visual-evidence.md) - `related_to` (frontmatter)
 - [Structure grows from the material](../../methods/structure-grows-from-the-material.md) - `related_to` (frontmatter)
+- [Diya Vij](../../people/diya-vij.md) - `related_to` (frontmatter)
+- [Warren Sack](../../people/warren-sack.md) - `related_to` (frontmatter)
 - [Role-fit and referral map](../../projections/role-fit-and-referral-map.md) - `related_to` (frontmatter)
 - [Harry J. Epstein Company digital operations](../../projects/harry-j-epstein.md) - `related_to` (frontmatter)
 - [KC Spaces Fund](../../projects/kc-spaces-fund-orientation.md) - `related_to` (frontmatter)

@@ -160,7 +160,7 @@
       "blocking": true,
       "pass_criteria": [
         "All fourteen feature/evals-A through feature/evals-N heads are recorded exactly once.",
-        "Every recorded head resolves through the declared refs/remotes/origin namespace.",
+        "Every recorded head remains available as the exact frozen commit object; later movement of a mutable remote-tracking branch is reported but cannot rewrite the frozen inventory.",
         "The integration branch and develop pull-request base are explicit.",
         "Frozen source branches remain reference-only."
       ]

@@ -3,7 +3,7 @@
 
 **Source commit:** `b1d476c810fc6d434b01fdab16c23ad1b961a01f`
 **Generation time:** 2026-07-28T14:28:48-04:00
-**Source fingerprint:** `e5177833940ac1e9395c314bcb04693bdef8e3ec600800598ce57a3002d5c65f`
+**Source fingerprint:** `c1184c6b4833f46c7d2f199f0a86047bf92c1d3543ecba6e56936643e49b89d0`
 
 ## application
 
@@ -12,6 +12,7 @@
 ## asset
 
 - [KC Town Hall ten-minute-walk proposal map](../assets/graphics/kc-town-hall-walkshed-2019.md) - `asset.graphic.kc-town-hall.walkshed.2019.001`
+- [MIT Interrogative Design Symposium held photo set](../assets/photographs/mit-interrogative-design-symposium-2024-held.md) - `asset.photo-set.mit-interrogative-design.2024`
 - [Digital District participant photograph metadata](../assets/digital-district-photo.md) - `asset.photo.digital-district.001`
 - [East River beneath the Manhattan Bridge, 2022](../assets/photographs/east-river-manhattan-bridge-2022.md) - `asset.photo.east-river-manhattan-bridge.2022.001`
 - [Jamie at the KC Town Hall worksite](../assets/photographs/kc-town-hall-hard-hat-worksite.md) - `asset.photo.kc-town-hall.hard-hat.001`
@@ -237,6 +238,7 @@
 
 ## event
 
+- [Interrogative Design Symposium](../events/interrogative-design-symposium-2024.md) - `event.mit.interrogative-design-symposium.2024`
 - [Commercial Rent Stabilization event at Friends and Lovers](../events/commercial-rent-friends-and-lovers-2026-02-17.md) - `event.nyc.commercial-rent.friends-and-lovers.2026-02-17`
 - [Project X community conversation](../events/commercial-rent-project-x-2026-03-10.md) - `event.nyc.commercial-rent.project-x.2026-03-10`
 - [Commercial Rent Stabilization public event](../events/commercial-rent-public-event-2025-11-13.md) - `event.nyc.commercial-rent.public-event.2025-11-13`
@@ -253,6 +255,8 @@
 - [Int. 93 commercial rent stabilization introduction](../events/commercial-rent-int-93-introduction-2022-03-24.md) - `event.nycc.stated-meeting.commercial-rent-int-93-introduction.2022-03-24`
 - [State sponsors introduce S8319 and A5568A](../events/commercial-rent-state-introduction-2026-02-17.md) - `event.nys.commercial-rent.bill-introduction-release.2026-02-17`
 - [Jimmy's Corner rally for Small Business Rent Stabilization](../events/commercial-rent-jimmys-corner-rally-2026-04-10.md) - `event.nys.commercial-rent.jimmys-corner-rally.2026-04-10`
+- [AI Made Me Do It symposium and exhibition](../events/ai-made-me-do-it-symposium-2024.md) - `event.studio3.ai-made-me-do-it.2024`
+- [In Terms of Media symposium](../events/in-terms-of-media-symposium-2024.md) - `event.weibel.in-terms-of-media.2024`
 
 ## index
 
@@ -271,6 +275,7 @@
 - [Photography field notebook](../notebooks/photography/README.md) - `index.knowledge-wiki.photography-notebook`
 - [Knowledge Wiki pilot map](../indexes/pilot.md) - `index.knowledge-wiki.pilot`
 - [What the work was up against](../indexes/what-the-work-was-up-against.md) - `index.knowledge-wiki.pressures`
+- [Professional record and reception](../indexes/professional-record-and-reception.md) - `index.knowledge-wiki.professional-record`
 - [Project lineages](../indexes/project-lineages.md) - `index.knowledge-wiki.project-lineages`
 - [Public testimony and hearing voices](../indexes/public-testimony-and-hearing-voices.md) - `index.knowledge-wiki.public-testimony-and-hearing-voices`
 - [Relational Infrastructure Atlas](../indexes/relational-infrastructure-atlas.md) - `index.knowledge-wiki.relational-infrastructure-atlas`
@@ -280,6 +285,7 @@
 - [Visual evidence index](../indexes/visual-evidence.md) - `index.knowledge-wiki.visual-evidence`
 - [East River canoe outing, 2022](../indexes/photo-sets/east-river-canoe-2022.md) - `index.photo-set.east-river-canoe.2022`
 - [KC Town Hall fieldwork and proposal visual set](../indexes/photo-sets/kc-town-hall-fieldwork.md) - `index.photo-set.kc-town-hall-fieldwork`
+- [MIT Interrogative Design Symposium photo set](../indexes/photo-sets/mit-interrogative-design-symposium-2024.md) - `index.photo-set.mit-interrogative-design.2024`
 - [NYC Artist Coalition DCLA formation photo set](../indexes/photo-sets/nycac-dcla-formation-2017.md) - `index.photo-set.nycac-dcla-formation.2017`
 - [NYC Artist Coalition project-site photographs, 2017-2026](../indexes/photo-sets/nycac-project-sites-2017-2026.md) - `index.photo-set.nycac-project-sites.2017-2026`
 - [Jamie Burkart public testimony](../indexes/public-testimony.md) - `index.public-testimony`
@@ -313,8 +319,10 @@
 
 ## person
 
+- [Diya Vij](../people/diya-vij.md) - `person.diya-vij`
 - [Elana Gordon](../people/elana-gordon.md) - `person.elana-gordon`
 - [Jamie Burkart](../people/jamie-burkart.md) - `person.jamie-burkart`
+- [Warren Sack](../people/warren-sack.md) - `person.warren-sack`
 
 ## place
 
@@ -361,6 +369,7 @@
 - [Knowledge Wiki branch-family closure review](../research-runs/knowledge-wiki-family-closure-2026-07-19.md) - `research.knowledge-wiki-family-closure.2026-07-19`
 - [NYC Artist Coalition shared-folder archival production](../research-runs/nycac-shared-folder-2026-07-19.md) - `research.nycac.shared-folder.2026-07-19`
 - [Photographic source return for DCLA, KC Town Hall, and Council fieldwork](../research-runs/photographic-source-return-2026-07-26.md) - `research.photographic-source-return.2026-07-26`
+- [Professional record public-safe promotion review, August 3, 2026](../research-runs/professional-record-promotion-2026-08-03.md) - `research.professional-record-promotion.2026-08-03`
 
 ## source
 
@@ -389,8 +398,10 @@
 - [Frozen Knowledge Wiki branch C](../sources/knowledge-wiki-branch-c-2026-07-19.md) - `source.knowledge-wiki.branch-c.2026-07-19`
 - [Frozen Knowledge Wiki branch D](../sources/knowledge-wiki-branch-d-2026-07-19.md) - `source.knowledge-wiki.branch-d.2026-07-19`
 - [Frozen Knowledge Wiki branch E](../sources/knowledge-wiki-branch-e-2026-07-19.md) - `source.knowledge-wiki.branch-e.2026-07-19`
+- [MIT Interrogative Design Symposium event page](../sources/mit-interrogative-design-symposium-2024.md) - `source.mit.interrogative-design-symposium.2024`
 - [Archived NTER CHNG project homepage](../sources/nter-chng-archived-homepage-2011.md) - `source.nter-chng.archived-homepage.2011`
 - [NYC Council field-kit photograph oral history, July 2026](../sources/recollections/nyc-council-field-kit-oral-history-2026-07.md) - `source.nyc-council.field-kit-oral-history.2026-07`
+- [Appointment of Diya Vij as Commissioner of Cultural Affairs](../sources/dcla-diya-vij-appointment-2026.md) - `source.nyc.diya-vij-appointment.2026`
 - [NYC Artist Coalition DCLA formation source return, 2026](../sources/archives/nycac-dcla-formation-source-return-2026-07.md) - `source.nycac.dcla-formation-source-return.2026-07`
 - [NYC nightlife forum corrected working transcript, 2026](../sources/nycac-nightlife-forum-transcript-2026.md) - `source.nycac.nightlife-forum-transcript.2026`
 - [NYC Artist Coalition project-site photograph census](../sources/archives/nycac-project-site-photograph-census-2026-07.md) - `source.nycac.project-site-photograph-census.2026-07-28`
@@ -412,16 +423,21 @@
 - [Elana Gordon East River portfolio permission summary](../sources/permissions/elana-gordon-east-river-portfolio-2026.md) - `source.permission.elana-gordon.east-river.2026-07`
 - [East River photograph public-safe metadata summary](../sources/photo-metadata/east-river-2022-public-safe.md) - `source.photo-metadata.east-river.2022.public-safe`
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`
+- [Professional record governed photo field](../sources/photo-metadata/professional-record-photo-field-2026-08.md) - `source.professional-record.photo-field.2026-08`
+- [Governed professional-record research comparison, August 2026](../sources/archives/professional-record-research-2026-08.md) - `source.professional-record.research.2026-08`
 - [Late-July 2026 current-workstream review](../sources/working/current-workstream-2026-07-27.md) - `source.protected.current-workstream.2026-07-27`
 - [Jamie Burkart recollection of bicycle-canoe journeys](../sources/recollections/jamie-canoe-commuting-2026-07.md) - `source.recollection.jamie-canoe-commuting.2026-07`
 - [Jamie Burkart public resume, maintained 2026](../sources/jamie-resume-2026-06-11.md) - `source.resume.jamie-burkart.2026-06-11`
 - [Jimmy's Corner rally: Small Business Rent Stabilization statements](../testimony/commercial-rent-public-support/2026-04-10-jimmys-corner-rally-statements.md) - `source.statement.commercial-rent.jimmys-corner-rally.2026-04-10`
 - [State sponsors and advocates introduce the Small Business Survival Act](../testimony/commercial-rent-public-support/2026-02-17-state-introduction-statements.md) - `source.statement.commercial-rent.state-introduction.2026-02-17`
+- [Studio3 AI Made Me Do It event page](../sources/studio3-ai-made-me-do-it-2024.md) - `source.studio3.ai-made-me-do-it.2024`
 - [Friends and Lovers Commercial Rent Stabilization event: speaker index](../testimony/commercial-rent-public-support/2026-02-17-friends-and-lovers-supportive-remarks.md) - `source.transcript.commercial-rent.friends-and-lovers.2026-02-17`
 - [Project X community event: Eon Huntley speaker index](../testimony/commercial-rent-public-support/2026-03-10-project-x-eon-huntley.md) - `source.transcript.commercial-rent.project-x.2026-03-10`
 - [Commercial Rent Stabilization public event: speaker index](../testimony/commercial-rent-public-support/2025-11-13-commissioner-supportive-remarks.md) - `source.transcript.commercial-rent.public-event.2025-11-13`
 - [UCSC narrative evaluations, 2004-2006](../sources/ucsc-narrative-evaluations-2004-2006.md) - `source.ucsc.narrative-evaluations.2004-2006`
+- [Warren Sack - Film and Digital Media Department](../sources/ucsc-warren-sack-profile-2026.md) - `source.ucsc.warren-sack-profile.2026`
 - [Protected communication history - public-safe metadata boundary](../sources/protected-communication-vault-metadata.md) - `source.vault.communication-history.metadata`
+- [Weibel Institute In Terms of Media event record](../sources/weibel-in-terms-of-media-2024.md) - `source.weibel.in-terms-of-media.2024`
 - [What is WOW List repaired transcript](../sources/wowlist-repaired-transcript-2026.md) - `source.wowlist.repaired-transcript.2026`
 - [Jamie Burkart testimony for Cabaret Law repeal](../testimony/2017-09-14-cabaret-law-repeal.md) - `testimony.jamie-burkart.cabaret-law.2017-09-14`
 - [Jamie Burkart testimony on CreateNYC and cultural-affairs funding](../testimony/2018-03-16-cultural-affairs-budget.md) - `testimony.jamie-burkart.cultural-affairs-budget.2018-03-16`

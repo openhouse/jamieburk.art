@@ -1,7 +1,7 @@
 ---
 rfc: 4
 title: Jamie Burkart Knowledge Ecosystem and Public Source Editions
-stage: proposed
+stage: implementing
 start_date: 2026-08-03
 authors:
   - Jamie Burkart
@@ -15,7 +15,7 @@ review_areas:
   - research-operations
   - developer-experience
   - editorial
-implementation: null
+implementation: https://github.com/openhouse/jamieburk.art/pull/269
 supersedes: []
 superseded_by: null
 ---
@@ -34,9 +34,11 @@ permission, and public dialogues with collaborators and peers. Preserve
 original words when rights permit, retain context and contrary evidence, and
 link rather than duplicate records already canonical in project-specific
 archives. Move information between trust domains only through reviewed,
-content-addressed promotion packets. This RFC is a proposal for discussion. It
-does not authorize creating a repository, publishing private correspondence,
-changing the portfolio, or implementing the architecture.
+content-addressed promotion packets. Jamie authorized a bounded in-repository
+pilot on August 3, 2026. That decision authorizes public-safe Wiki integration,
+held claim records, source fingerprints, and hard-gate evaluation; it does not
+authorize a sibling repository, private correspondence, unapproved images, or
+an automatic portfolio projection.
 
 ## Motivation
 
@@ -115,7 +117,9 @@ only what its purpose, evidence, rights, credit, and audience justify.
 
 ## Non-goals
 
-- This RFC does not authorize implementation or publication.
+- This implementation does not authorize a sibling repository, a public
+  full-text corpus, or portfolio publication beyond separately approved exact
+  candidates.
 - It does not authorize publishing private emails, direct messages, iMessages,
   WhatsApp messages, private transcripts, contact graphs, account inventories,
   or protected source locators.
@@ -137,7 +141,7 @@ only what its purpose, evidence, rights, credit, and audience justify.
 - It does not make unpublished course work, private evaluations, or private
   recommendation research public by default.
 - It does not add a public archive browser or new portfolio route during the
-  proposal stage.
+  bounded pilot.
 - It does not transfer decision authority from Jamie, quoted people, rights
   holders, collaborators, or project stewards to an automated system.
 
@@ -826,12 +830,15 @@ statistics or imply that a person endorses Jamie.
 
 ## Rollout plan
 
-No rollout begins until Jamie advances this RFC to `accepted`. Merging the RFC
-in `proposed` state preserves the plan for discussion only.
+Jamie authorized a bounded implementation pilot on August 3, 2026. Phases 1
+through 3 and the public-safe Knowledge Wiki portion of Phase 5 may proceed in
+this pull request. A sibling source-edition repository, any full-text
+third-party corpus, and the Phase 6 portfolio canary retain their separate human
+decision gates.
 
-### Phase 0: Preserve and discuss the proposal
+### Phase 0: Preserve and discuss the proposal - completed
 
-- Merge this RFC in `proposed` state.
+- Preserve the original proposal and record Jamie's implementation decision.
 - Review the authority map with maintainers of the named repositories.
 - Decide whether the proposed source edition is useful, fair, and sustainably
   scoped.

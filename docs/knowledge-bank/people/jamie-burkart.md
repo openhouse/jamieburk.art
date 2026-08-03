@@ -5,7 +5,7 @@ kind: person
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-19
+last_reviewed: 2026-08-03
 review_by: 2026-10-19
 aliases:
   - James Burkart
@@ -36,6 +36,21 @@ relations:
   - type: informed_by
     target: research.foundational-source-return.2026-07-19
     href: ../research-runs/foundational-source-return-2026-07-19.md
+  - type: related_to
+    target: index.knowledge-wiki.professional-record
+    href: ../indexes/professional-record-and-reception.md
+  - type: participated_in
+    target: event.mit.interrogative-design-symposium.2024
+    href: ../events/interrogative-design-symposium-2024.md
+    context: Bounded attendance and photography claim; no speaking or institutional role asserted.
+  - type: participated_in
+    target: event.studio3.ai-made-me-do-it.2024
+    href: ../events/ai-made-me-do-it-symposium-2024.md
+    context: Bounded first-person attendance record.
+  - type: participated_in
+    target: event.weibel.in-terms-of-media.2024
+    href: ../events/in-terms-of-media-symposium-2024.md
+    context: Bounded first-person attendance record.
 ---
 
 # Jamie Burkart
@@ -63,6 +78,11 @@ Jamie's present application frame emphasizes:
 
 See the [role-fit and referral map](../projections/role-fit-and-referral-map.md)
 for the evidence boundaries around that present-tense argument.
+
+The [professional record and reception index](../indexes/professional-record-and-reception.md)
+keeps institutional facts, documented encounters, historical evaluations, and
+third-party reception discoverable without turning co-presence or old records
+into current recommendations or endorsements.
 
 ## Project map
 

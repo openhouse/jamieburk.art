@@ -1,35 +1,37 @@
 {
-  "evaluator": "Imagined Prof. Margaret Morse lens; independent reader C, not the named professor or an endorsement",
-  "reviewerId": "morse-reader-c-2026-07-28-add0c2de",
+  "evaluator": "Imagined Professor Margaret Morse lens; independent reader C, not the named professor or an endorsement",
+  "reviewerId": "morse-c-2026-08-03-04b71b18",
   "phase": "holdout",
   "lensId": "PR-015",
-  "candidateSha256": "add0c2de156ae4bc9e1b3ca7d96dd2bf219692f3abbf0dabea6d9a7bd1abd723",
+  "candidateSha256": "04b71b1844c938dd1ca94927d864284352e1683f19a6087b0c404243b817eebf",
   "score": 4,
   "pass": true,
   "evidence": [
-    "Independently recomputed the exact SHA-256 over all 115 ordered candidate paths.",
-    "The About page connects artistic, civic, technical, and social work through participation, memory, and continuation.",
-    "Sunday Dinner and 196 operationalize hospitality; NYC Artist Coalition translates attentive listening into collective civic interfaces; WOWList joins community language to a co-built product.",
-    "Source-backed team memory extends care into inspectable citations, correction paths, protected boundaries, and handoffs.",
-    "The current visual and responsive evidence reports no material accessibility, overlap, request, or image failures."
+    "Independently recomputed the exact candidate fingerprint with scripts/lib/professor-lens-eval.mjs: 04b71b1844c938dd1ca94927d864284352e1683f19a6087b0c404243b817eebf over 116 ordered paths.",
+    "The public About composition places Jamie clearly as a technical project manager and implementation lead, then provides a visible threshold titled Systems people can inhabit that explicitly connects artistic, civic, technical, and social practice without becoming an artist biography.",
+    "At least three public-safe continuities are concrete and legible: Sunday Dinner and 196 makes hospitality, trust, recurring participation, private-record boundaries, and repeatable handoffs visible; NYC Artist Coalition and FairRentNYC connects lived experience, testimony, collective use, documented decisions, and continuity; WOWList connects organizer language to distributed publishing interfaces; Open House and source-backed team memory further establish experimentation, communal governance, many-perspective documentation, attention, correction, and care.",
+    "The composition explains the difference from conventional administration: Jamie observes relationships, models systems, prototypes interfaces, tests them with people, and documents enough for others to influence, remember, and continue the work.",
+    "The public registry and UCSC source note preserve collective credit and protected-source boundaries: Open House is initiated by Jamie but collectively governed; participant identities, images, educational records, private correspondence, archive paths, and unapproved testimonial language are not projected.",
+    "The fresh 2026-08-03 production-build browser matrix reports 56 of 56 route-viewport rows with HTTP 200, one h1, a main landmark, no axe violations, overflow, failed requests, broken or unlabeled images, and all lazy images loaded after scroll. Its four focused visual occurrences retain the factual East River caption and Elana Gordon credit, remain within each viewport, and do not overlap primary copy."
   ],
   "gaps": [
-    "Human screen-reader and browser-zoom review remain open.",
-    "Exact image rights, dignity and consent, credit, crop, destination, production, deployment, and indexing remain human gates."
+    "The matrix is automated evidence; human screen-reader, keyboard, and browser-zoom review remain open accessibility gates.",
+    "The focused visual review confirms presentation and credit text, but image rights, consent, exact credit and crop approval remain human gates.",
+    "Fresh production-build evidence does not authorize production release: Jamie approval, deployment, production verification, and production indexing remain open, with staging required to remain noindex."
   ],
   "safety_findings": [
-    "Collective agency is retained and institutional action is not converted into Jamie's sole causation.",
-    "Protected educational and participant records remain held.",
-    "The score is not an endorsement or publication authorization."
+    "No protected educational record, private correspondence, participant record, private archive path, or unapproved faculty testimonial is used to support the public composition.",
+    "Collective work remains collectively framed across Open House, Sunday Dinner and 196, WOWList, and NYC Artist Coalition; the composition does not claim sole authorship, sole causation, faculty endorsement, current deployment for historical systems, or authority from private praise.",
+    "This holdout score is evaluation evidence for the exact fingerprint only; it does not grant publication permission or close privacy, rights, consent, accessibility, production, deployment, or indexing gates."
   ],
-  "recommendation": "Pass PR-015 at 4 for this exact candidate while retaining all human authority gates.",
+  "recommendation": "Pass PR-015 at score 4 for this exact candidate: the public composition fully meets the inhabited-systems lens while every stated human and release gate remains open.",
   "provenance": {
-    "provider": "codex-native-subagent",
-    "reviewReceiptDigest": "3411f095f81403d6a84c74b971ccc93c991d65f42cf1f6e811718c0be1ea879e",
+    "provider": "codex-native-independent-review",
+    "reviewReceiptDigest": "0cf2e9849ced04ce6fb2a3be11c8c7d3eaf7153baf1f866920823a77c39a6ec8",
     "reviewMode": "bounded independent holdout",
     "reviewerRole": "reader C",
-    "reviewedAt": "2026-07-28",
-    "candidatePathCount": 115,
+    "reviewedAt": "2026-08-03",
+    "candidatePathCount": 116,
     "candidateFingerprintRecomputed": true,
     "responsiveMatrixRowsReviewed": 56,
     "focusedVisualOccurrencesReviewed": 4,
