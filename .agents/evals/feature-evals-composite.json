@@ -7,7 +7,7 @@
   "pull_request_base": "develop",
   "starting_commit": "934c1bdff4a478da56fde3a125d905e7e326b6f2",
   "frozen_at": "2026-07-28",
-  "rubric_sha256": "fbd3009370350f1daae86b75425e87b0bd7157df7f8eb7c92a61e10107178fbd",
+  "rubric_sha256": "3fe95a2b9c1f22cdb7d95c3168af73e8eb659900ffd258cd65ebb6feb06e44c1",
   "base_suite": {
     "path": ".agents/evals/portfolio-production-readiness.json",
     "required_version": 3,
