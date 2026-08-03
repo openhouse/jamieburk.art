@@ -3,7 +3,7 @@
 
 **Source commit:** `4483bb48f0db4c86171849a28bcb3147d3a2dde0`
 **Generation time:** 2026-08-03T14:22:16-04:00
-**Source fingerprint:** `c1184c6b4833f46c7d2f199f0a86047bf92c1d3543ecba6e56936643e49b89d0`
+**Source fingerprint:** `76410defc0e96184eabfd74d0d763bd13d0da102c07ee6ae281d05fa414629c5`
 
 ## application
 
@@ -233,6 +233,7 @@
 
 - [Layout C homepage East River curatorial proposal](../evaluations/curatorial/layout-c-home-east-river-v1.md) - `evaluation.curatorial.layout-c.home-east-river.v1`
 - [Employment context coverage baseline - July 18, 2026](../evaluations/employment-context-coverage-2026-07-18.md) - `evaluation.employment-context.coverage.2026-07-18`
+- [Jamie public-record integration evaluation](../evaluations/jamie-public-record-integration-2026-08-03.md) - `evaluation.jamie-public-record-integration.2026-08-03`
 - [Knowledge Wiki retrieval tasks](../evaluations/retrieval-tasks.md) - `evaluation.knowledge-wiki.retrieval-tasks`
 - [NYC Artist Coalition shared-folder production evals](../evaluations/nycac-shared-folder-production-2026-07-19.md) - `evaluation.nycac.shared-folder-production.2026-07-19`
 
@@ -268,6 +269,7 @@
 - [Decisions, Deliverables, and Operational Outcomes](../indexes/decisions-deliverables-and-operational-outcomes.md) - `index.knowledge-wiki.decisions-deliverables-operational-outcomes`
 - [Employment context and hiring acceptance](../indexes/employment-context.md) - `index.knowledge-wiki.employment-context`
 - [Knowledge Wiki branch-family closure](../indexes/family-closure.md) - `index.knowledge-wiki.family-closure`
+- [Jamie Burkart public-record source edition](../indexes/jamie-public-record-source-edition.md) - `index.knowledge-wiki.jamie-public-record-source-edition`
 - [Living archive and missing-page map](../indexes/living-archive.md) - `index.knowledge-wiki.living-archive`
 - [Outcomes, Adoption, and Afterlives](../indexes/outcomes-adoption-and-afterlives.md) - `index.knowledge-wiki.outcomes-adoption-afterlives`
 - [People, places, and the work between them](../indexes/people-places-and-work-between-them.md) - `index.knowledge-wiki.people-places-work`
@@ -382,6 +384,7 @@
 - [Cultural Affairs preliminary budget hearing: supportive witness testimony](../testimony/heteroglossia/2018-03-16-cultural-affairs-supportive-witnesses.md) - `source.heteroglossia.cultural-affairs-budget.2018-03-16`
 - [Small Business Job Survival Act hearing: supportive witness testimony](../testimony/heteroglossia/2018-10-22-sbjsa-supportive-witnesses.md) - `source.heteroglossia.sbjsa.2018-10-22`
 - [Harry J. Epstein Company archival research brief, July 2026](../sources/hje-research-brief-2026-07.md) - `source.hje.research-brief.2026-07`
+- [Jamie Burkart public-record initial manifest](../sources/jamie-public-record-initial-manifest.md) - `source.jamie-public-record-initial-manifest`
 - [Jamie Burkart writer's voice synthesis, July 2026](../sources/writers-voice-synthesis-2026-07.md) - `source.jamie.writers-voice-synthesis.2026-07`
 - [ACLU - Product Manager II, Discovery 8482872002](../sources/jobs-aclu-product-discovery-8482872002.md) - `source.jobs.aclu.product-discovery.8482872002`
 - [Asana - AI Implementation Manager, Service Management 8027437](../sources/jobs-asana-ai-implementation-8027437.md) - `source.jobs.asana.ai-implementation.8027437`

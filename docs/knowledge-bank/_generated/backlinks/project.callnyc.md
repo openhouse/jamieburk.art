@@ -3,7 +3,7 @@
 
 **Source commit:** `4483bb48f0db4c86171849a28bcb3147d3a2dde0`
 **Generation time:** 2026-08-03T14:22:16-04:00
-**Source fingerprint:** `c1184c6b4833f46c7d2f199f0a86047bf92c1d3543ecba6e56936643e49b89d0`
+**Source fingerprint:** `76410defc0e96184eabfd74d0d763bd13d0da102c07ee6ae281d05fa414629c5`
 
 - [Digital District participant photograph metadata](../../assets/digital-district-photo.md) - `part_of` (frontmatter)
 - [Jamie with a civic field kit at New York City Council](../../assets/photographs/nyc-council-field-kit-2026.md) - `related_to` (frontmatter)

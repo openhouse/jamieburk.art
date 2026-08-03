@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-03T14:22:16-04:00",
   "sourceCommit": "4483bb48f0db4c86171849a28bcb3147d3a2dde0",
-  "sourceFingerprint": "c1184c6b4833f46c7d2f199f0a86047bf92c1d3543ecba6e56936643e49b89d0",
+  "sourceFingerprint": "76410defc0e96184eabfd74d0d763bd13d0da102c07ee6ae281d05fa414629c5",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -2723,6 +2723,19 @@
       "reviewBy": "2026-07-21"
     },
     {
+      "id": "evaluation.jamie-public-record-integration.2026-08-03",
+      "path": "docs/knowledge-bank/evaluations/jamie-public-record-integration-2026-08-03.md",
+      "title": "Jamie public-record integration evaluation",
+      "kind": "evaluation",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Candidate-bound deterministic and adversarial evaluation for the first content-addressed Jamie public-record Knowledge Wiki import.",
+      "aliases": [],
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2026-11-03"
+    },
+    {
       "id": "evaluation.knowledge-wiki.retrieval-tasks",
       "path": "docs/knowledge-bank/evaluations/retrieval-tasks.md",
       "title": "Knowledge Wiki retrieval tasks",
@@ -3104,6 +3117,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "index.knowledge-wiki.jamie-public-record-source-edition",
+      "path": "docs/knowledge-bank/indexes/jamie-public-record-source-edition.md",
+      "title": "Jamie Burkart public-record source edition",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe Knowledge Wiki route into the first Jamie-centered source-edition candidate without importing protected research or duplicating canonical statement bodies.",
+      "aliases": [],
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2026-11-03"
     },
     {
       "id": "index.knowledge-wiki.living-archive",
@@ -4201,6 +4227,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "source.jamie-public-record-initial-manifest",
+      "path": "docs/knowledge-bank/sources/jamie-public-record-initial-manifest.md",
+      "title": "Jamie Burkart public-record initial manifest",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Content-addressed public-safe snapshot of the first Jamie-centered source-edition candidate.",
+      "aliases": [],
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2026-11-03"
     },
     {
       "id": "source.jamie.writers-voice-synthesis.2026-07",
@@ -10743,6 +10782,22 @@
       "context": null
     },
     {
+      "from": "evaluation.jamie-public-record-integration.2026-08-03",
+      "type": "informed_by",
+      "to": "source.jamie-public-record-initial-manifest",
+      "source": "frontmatter",
+      "href": "../sources/jamie-public-record-initial-manifest.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.jamie-public-record-integration.2026-08-03",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.jamie-public-record-source-edition",
+      "source": "frontmatter",
+      "href": "../indexes/jamie-public-record-source-edition.md",
+      "context": null
+    },
+    {
       "from": "evaluation.knowledge-wiki.retrieval-tasks",
       "type": "related_to",
       "to": "index.knowledge-wiki.pilot",
@@ -11604,6 +11659,38 @@
       "to": "place.small-cultural-spaces",
       "source": "frontmatter",
       "href": "../places/small-cultural-spaces.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.jamie-public-record-source-edition",
+      "type": "informed_by",
+      "to": "source.jamie-public-record-initial-manifest",
+      "source": "frontmatter",
+      "href": "../sources/jamie-public-record-initial-manifest.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.jamie-public-record-source-edition",
+      "type": "related_to",
+      "to": "decision.knowledge-wiki.selective-projection",
+      "source": "frontmatter",
+      "href": "../decisions/knowledge-wiki-selective-projection.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.jamie-public-record-source-edition",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "../people/jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.jamie-public-record-source-edition",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md",
       "context": null
     },
     {
@@ -13557,6 +13644,14 @@
     {
       "from": "person.jamie-burkart",
       "type": "related_to",
+      "to": "index.knowledge-wiki.jamie-public-record-source-edition",
+      "source": "frontmatter",
+      "href": "../indexes/jamie-public-record-source-edition.md",
+      "context": null
+    },
+    {
+      "from": "person.jamie-burkart",
+      "type": "related_to",
       "to": "index.knowledge-wiki.professional-record",
       "source": "frontmatter",
       "href": "../indexes/professional-record-and-reception.md",
@@ -14896,6 +14991,14 @@
       "to": "project.harry-j-epstein",
       "source": "frontmatter",
       "href": "../projects/harry-j-epstein.md",
+      "context": null
+    },
+    {
+      "from": "source.jamie-public-record-initial-manifest",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.jamie-public-record-source-edition",
+      "source": "frontmatter",
+      "href": "../indexes/jamie-public-record-source-edition.md",
       "context": null
     },
     {
@@ -16894,6 +16997,24 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/indexes/jamie-public-record-source-edition.md",
+      "from": "index.knowledge-wiki.jamie-public-record-source-edition",
+      "toPath": "docs/knowledge-bank/data/external-source-editions/jamie-burkart-public-record.lock.json",
+      "to": null,
+      "fragment": null,
+      "line": 46,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/jamie-public-record-source-edition.md",
+      "from": "index.knowledge-wiki.jamie-public-record-source-edition",
+      "toPath": "docs/knowledge-bank/evaluations/jamie-public-record-integration-2026-08-03.md",
+      "to": "evaluation.jamie-public-record-integration.2026-08-03",
+      "fragment": null,
+      "line": 48,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/indexes/living-archive.md",
       "from": "index.knowledge-wiki.living-archive",
       "toPath": "docs/knowledge-bank/people/jamie-burkart.md",
@@ -18282,10 +18403,19 @@
     {
       "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
       "from": "person.jamie-burkart",
+      "toPath": "docs/knowledge-bank/indexes/jamie-public-record-source-edition.md",
+      "to": "index.knowledge-wiki.jamie-public-record-source-edition",
+      "fragment": null,
+      "line": 14,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
+      "from": "person.jamie-burkart",
       "toPath": "docs/knowledge-bank/projections/role-fit-and-referral-map.md",
       "to": "portfolio.role-fit-referral-map",
       "fragment": null,
-      "line": 25,
+      "line": 30,
       "kind": "link"
     },
     {
@@ -18294,7 +18424,7 @@
       "toPath": "docs/knowledge-bank/indexes/professional-record-and-reception.md",
       "to": "index.knowledge-wiki.professional-record",
       "fragment": null,
-      "line": 28,
+      "line": 33,
       "kind": "link"
     },
     {
@@ -18303,7 +18433,7 @@
       "toPath": "docs/knowledge-bank/projects/harry-j-epstein.md",
       "to": "project.harry-j-epstein",
       "fragment": null,
-      "line": 37,
+      "line": 42,
       "kind": "link"
     },
     {
@@ -18312,7 +18442,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
       "to": "project.wowlist",
       "fragment": null,
-      "line": 38,
+      "line": 43,
       "kind": "link"
     },
     {
@@ -18321,7 +18451,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc.md",
       "to": "project.callnyc",
       "fragment": null,
-      "line": 39,
+      "line": 44,
       "kind": "link"
     },
     {
@@ -18330,7 +18460,7 @@
       "toPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
       "to": "method.source-backed-team-memory",
       "fragment": null,
-      "line": 40,
+      "line": 45,
       "kind": "link"
     },
     {
@@ -18339,7 +18469,7 @@
       "toPath": "docs/knowledge-bank/organizations/nyc-artist-coalition.md",
       "to": "organization.nyc-artist-coalition",
       "fragment": null,
-      "line": 44,
+      "line": 49,
       "kind": "link"
     },
     {
@@ -18348,7 +18478,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-town-hall-orientation.md",
       "to": "project.kc-town-hall",
       "fragment": null,
-      "line": 45,
+      "line": 50,
       "kind": "link"
     },
     {
@@ -18357,7 +18487,7 @@
       "toPath": "docs/knowledge-bank/projects/talks-not-raids-orientation.md",
       "to": "project.talks-not-raids",
       "fragment": null,
-      "line": 46,
+      "line": 51,
       "kind": "link"
     },
     {
@@ -18366,7 +18496,7 @@
       "toPath": "docs/knowledge-bank/projects/fair-rent-nyc.md",
       "to": "project.fair-rent-nyc",
       "fragment": null,
-      "line": 47,
+      "line": 52,
       "kind": "link"
     },
     {
@@ -18375,7 +18505,7 @@
       "toPath": "docs/knowledge-bank/projects/waterways-participatory-art-orientation.md",
       "to": "project.waterways-participatory-art",
       "fragment": null,
-      "line": 51,
+      "line": 56,
       "kind": "link"
     },
     {
@@ -18384,7 +18514,7 @@
       "toPath": "docs/knowledge-bank/projects/nter-chng.md",
       "to": "project.nter-chng",
       "fragment": null,
-      "line": 52,
+      "line": 57,
       "kind": "link"
     },
     {
@@ -18393,7 +18523,7 @@
       "toPath": "docs/knowledge-bank/projects/sunday-dinner-196-orientation.md",
       "to": "project.sunday-dinner-196",
       "fragment": null,
-      "line": 53,
+      "line": 58,
       "kind": "link"
     },
     {
@@ -18402,7 +18532,7 @@
       "toPath": "docs/knowledge-bank/projects/office-of-nightlife-town-halls.md",
       "to": "project.office-of-nightlife-town-halls",
       "fragment": null,
-      "line": 54,
+      "line": 59,
       "kind": "link"
     },
     {
@@ -18411,7 +18541,7 @@
       "toPath": "docs/knowledge-bank/timelines/practice-2004-present.md",
       "to": "timeline.jamie-practice.2004-present",
       "fragment": null,
-      "line": 66,
+      "line": 71,
       "kind": "link"
     },
     {
@@ -18420,7 +18550,7 @@
       "toPath": "docs/knowledge-bank/methods/collective-credit-and-protected-absence.md",
       "to": "method.collective-credit-protected-absence",
       "fragment": null,
-      "line": 79,
+      "line": 84,
       "kind": "link"
     },
     {
@@ -19060,6 +19190,33 @@
       "to": null,
       "fragment": null,
       "line": 65,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/jamie-public-record-initial-manifest.md",
+      "from": "source.jamie-public-record-initial-manifest",
+      "toPath": "docs/knowledge-bank/data/external-source-editions/jamie-burkart-public-record.lock.json",
+      "to": null,
+      "fragment": null,
+      "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/jamie-public-record-initial-manifest.md",
+      "from": "source.jamie-public-record-initial-manifest",
+      "toPath": "docs/knowledge-bank/evaluations/jamie-public-record-integration-2026-08-03.md",
+      "to": "evaluation.jamie-public-record-integration.2026-08-03",
+      "fragment": null,
+      "line": 11,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/jamie-public-record-initial-manifest.md",
+      "from": "source.jamie-public-record-initial-manifest",
+      "toPath": "docs/knowledge-bank/data/external-source-editions/jamie-burkart-public-record.manifest.json",
+      "to": null,
+      "fragment": null,
+      "line": 9,
       "kind": "link"
     },
     {

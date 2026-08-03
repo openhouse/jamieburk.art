@@ -39,6 +39,9 @@ relations:
   - type: related_to
     target: index.knowledge-wiki.professional-record
     href: ../indexes/professional-record-and-reception.md
+  - type: related_to
+    target: index.knowledge-wiki.jamie-public-record-source-edition
+    href: ../indexes/jamie-public-record-source-edition.md
   - type: participated_in
     target: event.mit.interrogative-design-symposium.2024
     href: ../events/interrogative-design-symposium-2024.md
@@ -64,6 +67,11 @@ participation or implementation, and leave a future reader a durable handoff.
 
 This page is an orientation map. It does not convert every collective project
 into an individual accomplishment or every archival trace into a public claim.
+
+The [Jamie Burkart public-record source edition](../indexes/jamie-public-record-source-edition.md)
+adds a deeper route into public words, public work, and explicitly unresolved
+encounter sources. Its first implementation remains a private public-safe
+candidate and is not a portfolio projection.
 
 ## Current professional practice
 

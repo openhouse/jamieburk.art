@@ -3,13 +3,13 @@
 
 **Source commit:** `4483bb48f0db4c86171849a28bcb3147d3a2dde0`
 **Generation time:** 2026-08-03T14:22:16-04:00
-**Source fingerprint:** `c1184c6b4833f46c7d2f199f0a86047bf92c1d3543ecba6e56936643e49b89d0`
+**Source fingerprint:** `76410defc0e96184eabfd74d0d763bd13d0da102c07ee6ae281d05fa414629c5`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 275
+- Nodes added: 278
 - Nodes removed: 0
-- Edges added: 886
+- Edges added: 894
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 186
@@ -209,6 +209,7 @@ Compared with the graph artifact on `origin/develop`.
 - `decision.photo.pre-launch.rights-narrowing.2026-07-28`
 - `edition.layout-c.2026-07`
 - `evaluation.curatorial.layout-c.home-east-river.v1`
+- `evaluation.jamie-public-record-integration.2026-08-03`
 - `event.mit.interrogative-design-symposium.2024`
 - `event.nyc.commercial-rent.friends-and-lovers.2026-02-17`
 - `event.nyc.commercial-rent.project-x.2026-03-10`
@@ -229,6 +230,7 @@ Compared with the graph artifact on `origin/develop`.
 - `event.weibel.in-terms-of-media.2024`
 - `index.knowledge-wiki.commercial-rent-public-support`
 - `index.knowledge-wiki.commercial-rent-testimony`
+- `index.knowledge-wiki.jamie-public-record-source-edition`
 - `index.knowledge-wiki.photography`
 - `index.knowledge-wiki.photography-notebook`
 - `index.knowledge-wiki.professional-record`
@@ -255,6 +257,7 @@ Compared with the graph artifact on `origin/develop`.
 - `source.heteroglossia.commercial-rent-stabilization.2021-09-17`
 - `source.heteroglossia.cultural-affairs-budget.2018-03-16`
 - `source.heteroglossia.sbjsa.2018-10-22`
+- `source.jamie-public-record-initial-manifest`
 - `source.kc-town-hall.local-digital-archive.2026-07`
 - `source.kc-town-hall.photographic-oral-histories.2026-07`
 - `source.mit.interrogative-design-symposium.2024`

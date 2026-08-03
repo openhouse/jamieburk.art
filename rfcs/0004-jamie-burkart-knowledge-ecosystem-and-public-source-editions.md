@@ -34,11 +34,39 @@ permission, and public dialogues with collaborators and peers. Preserve
 original words when rights permit, retain context and contrary evidence, and
 link rather than duplicate records already canonical in project-specific
 archives. Move information between trust domains only through reviewed,
-content-addressed promotion packets. Jamie authorized a bounded in-repository
-pilot on August 3, 2026. That decision authorizes public-safe Wiki integration,
-held claim records, source fingerprints, and hard-gate evaluation; it does not
-authorize a sibling repository, private correspondence, unapproved images, or
-an automatic portfolio projection.
+content-addressed promotion packets. Jamie accepted bounded implementation on
+2026-08-03. That decision authorizes the bounded private implementation
+candidate and the public-safe in-repository integration described below; it
+does not authorize publishing private
+correspondence, changing repository visibility, quoting permission-gated
+material, releasing photographs, or projecting records onto the portfolio.
+
+## Implementation status
+
+The first implementation slice now exists:
+
+- private repository `openhouse/jamie-burkart-public-record`;
+- implementation branch `feature/initial-public-source-edition` at
+  `f9858d41b28b36c35aece8e6986629ac569aaa84`;
+- twelve public-safe records organized by practice and encounter;
+- seven pinned references to complete Jamie public statements already
+  canonical in the Commercial Rent Stabilization public-support archive;
+- four explicit public-coverage gaps, including Innsbruck, Vienna, MIT, and an
+  unreviewed public-event working transcript;
+- generated relative-link browse indexes, a machine-readable catalog, and a
+  compact public knowledge manifest;
+- deterministic validation plus twelve adversarial mutations;
+- a content-addressed manifest snapshot integrated into the `jamieburk.art`
+  Knowledge Wiki without a live dependency on the private sibling repository.
+
+The source-edition repository remains private. Public release, third-party
+quotation, photo selection, public encounter narration, and portfolio
+projection remain open human gates.
+
+The in-repository pilot additionally preserves official institutional facts,
+held claim records, protected-input fingerprints, and hard-gate evaluations.
+It does not copy private source bodies or infer recommendation, endorsement,
+speaking roles, or publication permission from archival access.
 
 ## Motivation
 
@@ -88,6 +116,17 @@ The opportunity is not to put Jamie's whole life on the portfolio. It is to
 make the deeper record durable and queryable, then let each public surface use
 only what its purpose, evidence, rights, credit, and audience justify.
 
+The completed bounded recommendation-research return sharpens this opportunity
+without authorizing a public import. It shows that the same research pass can
+produce several different evidence classes: public event records, official
+documents, private evaluative correspondence, private working conversations,
+relationship chronologies, public-source leads, and explicit access gaps. Some
+of those classes can mature into public source records; some can support only a
+permission request or a public-safe claim; some should remain protected while
+still enriching Jamie's private understanding of his practice. The ecosystem
+must retain all three outcomes without treating the most publishable material
+as the most important material.
+
 ## Goals
 
 - Define an authority map for private archives, private research, public source
@@ -112,6 +151,10 @@ only what its purpose, evidence, rights, credit, and audience justify.
   cross-repository updates.
 - Improve the Knowledge Wiki's depth while preserving the portfolio as a
   selective, reader-centered composition.
+- Make the public source edition welcoming to GitHub and VS Code readers by
+  giving full-text records a practice-, project-, and encounter-first
+  filesystem home, with relative Markdown links and generated secondary
+  indexes.
 - Provide evaluation criteria that reward retrieval, provenance, context, and
   truthful professional legibility without rewarding disclosure volume.
 
@@ -310,6 +353,33 @@ No repository becomes canonical merely by containing a copy. Canonicality is a
 declared responsibility with a stable ID, content digest, correction path, and
 named steward.
 
+#### 2.1 Baseline and migration rule
+
+The authoritative integration baseline for this RFC is
+`feature/pre-launch-C`. The RFC branch was created from the verified current
+head of that branch. Earlier `feature/evals-*` branches may remain useful as
+historical donors or diagnostic fixtures, but they are not ancestry authority
+for this proposal and must not silently supply current generated state.
+
+This distinction prevents unnecessary research repetition. A governed research
+capsule in `archival-research-projects` remains authoritative for its own
+requests, sources, findings, and gaps regardless of which `jamieburk.art`
+branch later consumes a public-safe result. If an integration was attempted
+from the wrong portfolio branch, the required repair is:
+
+1. retain the source research in its canonical private custody;
+2. create a new integration candidate from the current approved portfolio
+   base;
+3. regenerate any public-safe manifests, claims, indexes, and projections from
+   that base;
+4. rebind checks and human decisions to the new unchanged candidate;
+5. compare the resulting public meaning, not merely the copied files.
+
+Protected research should be repeated only when its source cutoff, query
+coverage, correction state, or research question has materially changed. A
+branch correction alone is not evidence that the underlying research is
+invalid.
+
 ### 3. Proposed Jamie-centered public source edition
 
 The working repository name is:
@@ -334,30 +404,54 @@ The edition should answer questions such as:
   what may be quoted?
 
 It should include both a reader-friendly Markdown collection and a
-machine-readable graph export. A possible structure is:
+machine-readable graph export. Its primary filesystem should follow the same
+lesson learned in the Commercial Rent Stabilization source edition: readers
+should be able to descend through a subject that matters, arrive at a public
+moment, and encounter several situated voices together. Source type is useful
+metadata and a secondary browse route, not the main spatial logic.
+
+A possible structure is:
 
 ```text
 README.md
+START-HERE.md
 CONTRIBUTING.md
 CORRECTIONS.md
-docs/
-  people/
+library/
+  practices/
+    technical-and-operational-stewardship/
+    knowledge-systems-and-documentation/
+    civic-and-cultural-organizing/
+    participatory-art-place-and-mobility/
+    public-speaking-and-intellectual-exchange/
+    learning-teaching-and-mentorship/
+    hospitality-and-relational-infrastructure/
   projects/
-  events/
-  relationships/
+    <project>/
+      <theme-or-question>/
+        <public-moment>/
+          README.md
+          <speaker-or-source>.md
+  encounters/
+    <place-or-series>/
+      <public-moment>/
   reception/
-  statements/
-    by-jamie/
-    about-jamie/
-    public-dialogues/
-  sources/
-  indexes/
-    chronology.md
-    by-person.md
-    by-project.md
-    by-place.md
-    by-practice.md
-    rights-and-coverage.md
+    <practice-or-project>/
+      <public-moment>/
+browse/
+  people/
+  places/
+  years/
+  projects/
+  practices/
+  relationship-kinds/
+  source-types/
+catalog/
+  INDEX.md
+  COVERAGE.md
+  GAPS-AND-NONRECOVERIES.md
+  RIGHTS-AND-PERMISSIONS.md
+  CANONICAL-HOMES.md
 data/
   public-knowledge-manifest.json
   schema-version.json
@@ -366,10 +460,84 @@ scripts/
 evals/
 ```
 
+Each canonical full-text or bounded-text Markdown record should exist once
+under `library/`. Each record should link relatively to its public-moment
+`README.md`, primary practice or project, people, place, year, source, rights
+note, and correction route. Files in `browse/` and `catalog/` should be
+generated or mechanically checked link indexes; they must not duplicate
+statement bodies.
+
+The structure deliberately offers more than one way in:
+
+- a hiring reader can enter through a practice and follow it to projects and
+  exact public words;
+- a collaborator can enter through a project, see collective credit, and find
+  what several participants said in the same public moment;
+- a researcher can enter through a person, place, year, or source type and
+  reach the canonical record;
+- Jamie can begin with an encounter, trace the ideas and relationships that
+  continued from it, and see which links remain private, public, or unresolved;
+- an editor can locate every downstream occurrence affected by a correction or
+  narrower-use request.
+
+Every directory that a human reader is expected to enter should contain a
+short `README.md` explaining the scope, navigation choices, coverage boundary,
+and nearby routes. GitHub and VS Code navigation must remain useful with no
+database, search service, sibling repository, or JavaScript application
+running.
+
 The first edition should remain bounded. It should not begin by importing every
 private finding. A pilot corpus of 10 to 20 public or permission-cleared records
 is large enough to test retrieval, context, rights, correction, and portfolio
 use without making the initial rights review unmanageable.
+
+#### 3.1 Initial research-disposition map
+
+The recommendation-research capsule supplies a useful pilot inventory, but not
+a batch of public testimonials. Its findings should route by evidence class:
+
+| Research class | Private value | Possible public destination | Required gate |
+|---|---|---|---|
+| Official public records and already-public event statements | Establish event, role, wording, and public context | Full-text or reference record in the appropriate issue-specific source edition; Jamie-centered cross-reference | Source version, rights disposition, attribution, and canonical-home review |
+| Public appearances with uncertain machine speaker labels | Preserve a research lead and event chronology | Corrected public-moment record or metadata-only encounter | Audio or video verification and speaker review before attributed quotation |
+| Private academic evaluation and correspondence | Establish firsthand teaching, mentoring, technical review, and intellectual continuity | Normally withheld; possibly a permission-cleared evaluation, interview, or bounded claim | Author review, rights and dignity decision, exact wording, allowed surfaces, and present-context confirmation |
+| Private product, editorial, or knowledge-practice dialogue | Establish a specific firsthand professional perspective | Normally withheld; possibly a consented public dialogue or newly authored statement | Participant correction, distinction between proposed and completed work, confidentiality review, and permission |
+| Private acknowledgements of source review, data work, or civic coordination | Support bounded professional research | Public-safe claim only when independently attributable, or a newly approved statement | Speaker choice, institutional ethics, collective credit, and wording approval |
+| Communication counts and relationship chronologies | Establish coverage and guide source return | No public count; at most a separately supported relationship assertion | Minimum necessity, participant fairness, date-bounded evidence, and public characterization approval |
+| Public-post or publication lead whose original is missing | Preserve a recovery task | Gap record or later source record | Original public source recovery; no quotation from a working compilation |
+| Unavailable account, transcript, or portal | Prevent false completeness | Public-safe coverage boundary when useful | Accurate cutoff without revealing account inventory or protected graph shape |
+
+This map preserves the most important current finding: strong private evidence
+can deepen the private Knowledge Wiki and improve Jamie's application strategy
+without becoming public copy. If a person later wants to contribute publicly,
+the preferred path is often a new, participant-reviewed statement about the
+specific work rather than publication of the private historical exchange.
+
+#### 3.2 Encounter constellations
+
+The Innsbruck Studio 3 symposium, the Weibel Institute symposium in Vienna,
+MIT Media Lab events, and later continuing conversations are useful test cases
+for a form that is richer than a testimonial and more precise than a travel
+chronology. An encounter constellation may connect:
+
+- the official public program and participating institutions;
+- Jamie's established mode of participation;
+- Jamie-authored public notes, questions, photographs, or reflections that are
+  approved for use;
+- public responses and dialogues, with speaker and transcript confidence;
+- the ideas, projects, places, and practices present in the encounter;
+- later public collaborations or continuing exchanges that each participant
+  agrees may be characterized;
+- private research leads that remain visible only in the private system;
+- open questions, absent transcripts, and rights blocks.
+
+The system should not publish a private conversation merely because it was
+meaningful, or characterize a continuing relationship merely because messages
+exist. It should nevertheless retain, in private custody, that an encounter
+may have mattered and that a conversation may have continued. This lets the
+archive honor Jamie's intellectual life without manufacturing public
+endorsement or minimizing the work of travel, attention, return, and sustained
+correspondence.
 
 ### 4. Record model
 
@@ -604,6 +772,27 @@ Possible Knowledge Wiki pages include:
 These pages should summarize and connect. They should not reproduce protected
 research or become collections of decontextualized praise.
 
+The current Wiki already distinguishes projects, capabilities, methods,
+places, testimony, source records, decisions, corrections, research inquiries,
+and projections. The new material should extend those existing kinds rather
+than introduce a second public claim system. In particular:
+
+- source-edition records answer what was publicly said and where;
+- Wiki source and event records connect the canonical public record to the
+  existing graph;
+- person and relationship records state only the public-safe, evidence-bounded
+  relationship kind;
+- reception records preserve attributed professional perspective without
+  converting it into an endorsement class;
+- capability and method records explain the professional meaning Jamie may
+  responsibly draw from several sources;
+- projection records document whether a mature claim is held, used on one
+  surface, or intentionally absent.
+
+These are repository documentation and data responsibilities, not permission
+to add a public Knowledge Wiki browser. The existing restriction against
+`/proofs`, `/knowledge-bank`, and `/public-claims` routes remains in force.
+
 ### 10. Portfolio and application integration
 
 The portfolio may project from mature Knowledge Wiki claims in several forms:
@@ -627,6 +816,21 @@ Every projected use should identify:
 The portfolio should not add a general `/proofs`, `/knowledge-bank`, or raw
 archive route. The citation layer may remain visually quiet while its contract
 remains machine-checkable.
+
+The existing public routes suggest a bounded projection map:
+
+| Surface | Appropriate use | Inappropriate use |
+|---|---|---|
+| Home | One concise practice throughline or selected proof point | A rotating wall of praise or relationship names |
+| About | A small number of sourced moments showing development, learning, and public purpose | A comprehensive intellectual biography |
+| Work and case studies | Project-specific public words, institutional reception, and collective-credit context | Unrelated prestige signals or quotations detached from the project |
+| Technical Operations | Evidence that clarifies operating judgment, documentation, implementation, or handoff | Private recommendation material or claims exceeding the writer's direct observation |
+| Resume | Compact factual claims projected from mature Wiki records | Long quotations, social proof, or archive navigation |
+| Source-backed team-memory lab | A transparent example of the preservation-to-projection method | A browser for protected research or private correspondence |
+
+No route receives material merely because it is public-eligible. Selection
+remains an editorial and hiring-reader decision tied to the problem that page
+must solve.
 
 ### 11. Photo and oral-history integration
 
@@ -734,13 +938,18 @@ Mutation tests should attempt to:
 - turn a private email into a public quotation;
 - infer collaboration from event co-presence;
 - infer endorsement from a favorable sentence;
+- expose private communication counts or correspondence coverage as public
+  social proof;
 - remove the speaker's role-at-time;
 - copy a transcript whose canonical home is another repository;
+- duplicate a full-text record into a second practice or project folder rather
+  than creating a relative link;
 - publish a machine transcript with uncertain speaker labels;
 - drop a contradictory or limiting passage;
 - convert coalition action into Jamie's sole outcome;
 - retain a private path or account identifier in generated output;
 - use a stale promotion approval after content changes;
+- promote a private evaluation without a participant-reviewed public candidate;
 - publish a photo without destination-specific permission;
 - import a live remote manifest during the public build.
 
@@ -830,27 +1039,37 @@ statistics or imply that a person endorses Jamie.
 
 ## Rollout plan
 
-Jamie authorized a bounded implementation pilot on August 3, 2026. Phases 1
-through 3 and the public-safe Knowledge Wiki portion of Phase 5 may proceed in
-this pull request. A sibling source-edition repository, any full-text
-third-party corpus, and the Phase 6 portfolio canary retain their separate human
-decision gates.
+Jamie accepted bounded implementation on 2026-08-03 and advanced the RFC to
+`implementing`. Merging this RFC does not publish the source repository,
+private research, a photograph, or a portfolio surface.
 
-### Phase 0: Preserve and discuss the proposal - completed
+Phases 1 through 3 and the public-safe Knowledge Wiki portion of Phase 5 may
+proceed in this pull request. Any public release of the sibling source edition,
+any full-text third-party corpus, and the Phase 6 portfolio canary retain their
+separate human decision gates.
 
-- Preserve the original proposal and record Jamie's implementation decision.
+### Phase 0: Preserve and discuss the proposal - complete
+
+- Preserve and review this RFC from the verified `feature/pre-launch-C` base.
 - Review the authority map with maintainers of the named repositories.
 - Decide whether the proposed source edition is useful, fair, and sustainably
   scoped.
-- Make no public corpus, repository, or portfolio change.
+- Record Jamie's implementation decision while keeping publication separate.
 
 ### Phase 1: Inventory and contract design
 
+- Record `feature/pre-launch-C` as the portfolio integration baseline and
+  compare every proposed integration diff against that branch.
 - Inventory record models, stable IDs, validators, exports, and correction
   workflows across the three public repositories and private research package.
+- Crosswalk the recommendation-research evidence classes through the initial
+  research-disposition map without copying protected bodies or communication
+  counts.
 - Define the smallest shared public manifest schema.
 - Produce a source-rights matrix and threat model.
 - Identify duplicate records and name their canonical homes.
+- Prototype the practice-, project-, and encounter-first directory tree with
+  synthetic Markdown and relative links.
 - Select representative public, private, cross-repository, transcript, photo,
   and correction fixtures.
 
@@ -868,6 +1087,9 @@ decision gates.
 
 - Select a bounded thread from the recommendation research project.
 - Preserve its protected context in the private research system.
+- Classify each finding as public-source candidate, public-safe claim candidate,
+  permission-gated contribution candidate, private-only knowledge, recovery
+  lead, or explicit gap.
 - Identify which elements are already public, which require permission, which
   can support only a public-safe summary, and which should remain private.
 - Produce candidate promotion packets without publishing them.
@@ -881,6 +1103,12 @@ decision gates.
 - Begin with 10 to 20 rights-clear, public-source records.
 - Prefer Jamie-authored public words, official public records, already licensed
   sources, and cross-repository references.
+- Include at least one project or practice folder whose public moment contains
+  several voices, one encounter constellation, one reference to an
+  issue-specific canonical transcript, and one participant-reviewed new public
+  contribution.
+- Require every human-facing directory to have working relative navigation and
+  a coverage boundary before considering the pilot usable in GitHub or VS Code.
 - Exercise corrections, reference-only links, versioned transcripts, and one
   consented third-party contribution.
 - Publish a content-addressed public manifest.
@@ -929,6 +1157,10 @@ custody and never depend on the public graph for recovery.
   workflows and two failure cases.
 - The working scope distinguishes public record, reception, encounter,
   relationship, recommendation, and endorsement.
+- Jamie confirms that the practice-, project-, and encounter-first navigation
+  reflects how a new reader should explore his work.
+- The recommendation-research disposition map is reviewed without treating
+  private findings as public testimonials.
 - The proposed repository name and public mission receive initial review.
 
 ### To advance to `accepted`
@@ -938,6 +1170,9 @@ custody and never depend on the public graph for recovery.
 - The relationship to RFCs 0001 and 0003 is explicit and non-conflicting.
 - The public manifest schema, canonical-home rule, stable-ID policy, and
   correction propagation contract are specified and tested with synthetic
+  fixtures.
+- The filesystem information architecture, relative-link contract, and
+  generated secondary indexes are specified and tested with synthetic
   fixtures.
 - A rights matrix covers public records, Jamie-authored work, copyrighted
   journalism, event recordings, course evaluations, recommendations,
@@ -1068,6 +1303,11 @@ summaries, and loss of relational context will continue to consume time.
 
 - Should the public source edition be named `jamie-burkart-public-record`,
   `jamie-burkart-public-words-and-reception`, or something less person-centered?
+- Should `library/practices/`, `library/projects/`, or a deliberately small
+  hybrid become the primary canonical path when one record belongs to several
+  intellectual and professional threads?
+- Which practice labels feel true to Jamie's work without freezing a living
+  practice into current job-search language?
 - Should the pilot live inside `jamieburk.art` before becoming a sibling
   repository?
 - Does RFC 0001 need to reach `accepted` before this RFC can be implemented, or
@@ -1089,6 +1329,12 @@ summaries, and loss of relational context will continue to consume time.
 - Which photo and oral-history records can accompany the first edition without
   creating a second rights-review program?
 - What is the smallest useful first corpus for the current job-search timeline?
+- Which public programs, recordings, Jamie-authored reflections, and approved
+  photographs are sufficient to pilot an Innsbruck, Vienna, or MIT encounter
+  constellation without publicizing private correspondence?
+- When an important relationship continues privately after a public encounter,
+  should the public edition remain silent, describe only the public encounter,
+  or invite participants to co-author a present-day public record?
 - Which hiring-reader tests would demonstrate that a portfolio projection is
   helping rather than adding social proof without clarity?
 - Who besides Jamie should review the first public edition for fairness to

@@ -3,13 +3,14 @@
 
 **Source commit:** `4483bb48f0db4c86171849a28bcb3147d3a2dde0`
 **Generation time:** 2026-08-03T14:22:16-04:00
-**Source fingerprint:** `c1184c6b4833f46c7d2f199f0a86047bf92c1d3543ecba6e56936643e49b89d0`
+**Source fingerprint:** `76410defc0e96184eabfd74d0d763bd13d0da102c07ee6ae281d05fa414629c5`
 
 - [Civic, cultural, and technical translation](../../capabilities/civic-cultural-and-technical-translation.md) - `prose_link` (markdown)
 - [Technical Operations](../../capabilities/technical-operations.md) - `prose_link` (markdown)
 - [Technical Operations](../../capabilities/technical-operations.md) - `related_to` (frontmatter)
 - [Knowledge Wiki depth with selective public projection](../../decisions/knowledge-wiki-selective-projection.md) - `uses_method` (frontmatter)
 - [Canonical Story Bank](../../indexes/canonical-story-bank.md) - `related_to` (frontmatter)
+- [Jamie Burkart public-record source edition](../../indexes/jamie-public-record-source-edition.md) - `uses_method` (frontmatter)
 - [Knowledge Wiki pilot map](../../indexes/pilot.md) - `prose_link` (markdown)
 - [Knowledge Wiki pilot map](../../indexes/pilot.md) - `related_to` (frontmatter)
 - [What the work was up against](../../indexes/what-the-work-was-up-against.md) - `prose_link` (markdown)
