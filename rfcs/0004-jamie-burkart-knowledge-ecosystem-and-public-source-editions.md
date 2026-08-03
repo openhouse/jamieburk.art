@@ -1,7 +1,7 @@
 ---
 rfc: 4
 title: Jamie Burkart Knowledge Ecosystem and Public Source Editions
-stage: proposed
+stage: implementing
 start_date: 2026-08-03
 authors:
   - Jamie Burkart
@@ -15,7 +15,7 @@ review_areas:
   - research-operations
   - developer-experience
   - editorial
-implementation: null
+implementation: https://github.com/openhouse/jamieburk.art/pull/269
 supersedes: []
 superseded_by: null
 ---
@@ -34,9 +34,33 @@ permission, and public dialogues with collaborators and peers. Preserve
 original words when rights permit, retain context and contrary evidence, and
 link rather than duplicate records already canonical in project-specific
 archives. Move information between trust domains only through reviewed,
-content-addressed promotion packets. This RFC is a proposal for discussion. It
-does not authorize creating a repository, publishing private correspondence,
-changing the portfolio, or implementing the architecture.
+content-addressed promotion packets. Jamie accepted implementation on
+2026-08-03. That decision authorizes the bounded private implementation
+candidate described below; it does not authorize publishing private
+correspondence, changing repository visibility, quoting permission-gated
+material, releasing photographs, or projecting records onto the portfolio.
+
+## Implementation status
+
+The first implementation slice now exists:
+
+- private repository `openhouse/jamie-burkart-public-record`;
+- implementation branch `feature/initial-public-source-edition` at
+  `f9858d41b28b36c35aece8e6986629ac569aaa84`;
+- twelve public-safe records organized by practice and encounter;
+- seven pinned references to complete Jamie public statements already
+  canonical in the Commercial Rent Stabilization public-support archive;
+- four explicit public-coverage gaps, including Innsbruck, Vienna, MIT, and an
+  unreviewed public-event working transcript;
+- generated relative-link browse indexes, a machine-readable catalog, and a
+  compact public knowledge manifest;
+- deterministic validation plus twelve adversarial mutations;
+- a content-addressed manifest snapshot integrated into the `jamieburk.art`
+  Knowledge Wiki without a live dependency on the private sibling repository.
+
+The source-edition repository remains private. Public release, third-party
+quotation, photo selection, public encounter narration, and portfolio
+projection remain open human gates.
 
 ## Motivation
 
@@ -1007,16 +1031,17 @@ statistics or imply that a person endorses Jamie.
 
 ## Rollout plan
 
-No rollout begins until Jamie advances this RFC to `accepted`. Merging the RFC
-in `proposed` state preserves the plan for discussion only.
+Jamie accepted bounded implementation on 2026-08-03 and advanced the RFC to
+`implementing`. Merging this RFC does not publish the source repository,
+private research, a photograph, or a portfolio surface.
 
-### Phase 0: Preserve and discuss the proposal
+### Phase 0: Preserve and discuss the proposal — complete
 
-- Merge this RFC in `proposed` state.
+- Preserve and review this RFC from the verified `feature/pre-launch-C` base.
 - Review the authority map with maintainers of the named repositories.
 - Decide whether the proposed source edition is useful, fair, and sustainably
   scoped.
-- Make no public corpus, repository, or portfolio change.
+- Record Jamie's implementation decision while keeping publication separate.
 
 ### Phase 1: Inventory and contract design
 

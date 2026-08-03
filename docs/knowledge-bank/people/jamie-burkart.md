@@ -36,6 +36,9 @@ relations:
   - type: informed_by
     target: research.foundational-source-return.2026-07-19
     href: ../research-runs/foundational-source-return-2026-07-19.md
+  - type: related_to
+    target: index.knowledge-wiki.jamie-public-record-source-edition
+    href: ../indexes/jamie-public-record-source-edition.md
 ---
 
 # Jamie Burkart
@@ -49,6 +52,11 @@ participation or implementation, and leave a future reader a durable handoff.
 
 This page is an orientation map. It does not convert every collective project
 into an individual accomplishment or every archival trace into a public claim.
+
+The [Jamie Burkart public-record source edition](../indexes/jamie-public-record-source-edition.md)
+adds a deeper route into public words, public work, and explicitly unresolved
+encounter sources. Its first implementation remains a private public-safe
+candidate and is not a portfolio projection.
 
 ## Current professional practice
 
