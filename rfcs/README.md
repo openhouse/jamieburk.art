@@ -101,6 +101,7 @@ that an agent, test, or informal participant has human decision authority.
 | [0001](./0001-shared-core-public-private-knowledge-wikis.md) | Shared Core for Public and Private Knowledge Wikis | `proposed` | Jamie Burkart |
 | [0002](./0002-lifetime-photo-archive-fieldwork.md) | Lifetime Photo Archive Fieldwork and Selective Publication | `proposed` | Jamie Burkart |
 | [0003](./0003-living-photographic-knowledge-loop.md) | Living Photographic Knowledge Loop and Artist-Led Curatorial System | `implementing` | Jamie Burkart |
+| [0004](./0004-jamie-burkart-sourcebook-and-knowledge-ecosystem.md) | Jamie Burkart Sourcebook and Federated Knowledge Ecosystem | `proposed` | Jamie Burkart |
 
 ## Validation
 
