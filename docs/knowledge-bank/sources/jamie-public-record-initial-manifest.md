@@ -16,7 +16,7 @@ source_manifest_sha256: 23a2a65ce9769a3d7643727bf533857dbc35a26f3c880bd06d57e850
 source_candidate_fingerprint: ff882202174c3f117af4e48a78c21c3d2ff2bea575be2459dcc7b3b9d54f1612
 public_release_authorized: false
 relations:
-  - type: supports
+  - type: related_to
     target: index.knowledge-wiki.jamie-public-record-source-edition
     href: ../indexes/jamie-public-record-source-edition.md
 ---

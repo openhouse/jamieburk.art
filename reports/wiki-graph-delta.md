@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `b1d476c810fc6d434b01fdab16c23ad1b961a01f`
-**Generation time:** 2026-07-28T14:28:48-04:00
-**Source fingerprint:** `e5177833940ac1e9395c314bcb04693bdef8e3ec600800598ce57a3002d5c65f`
+**Source commit:** `32ec109b4f51f8a776bfe1f859016cc321deceba`
+**Generation time:** 2026-08-03T13:52:22-04:00
+**Source fingerprint:** `b274259e5aa29b019ea6153af25d4345f1a92cf1c6fffa0bf215ada3a52e2515`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 259
+- Nodes added: 262
 - Nodes removed: 0
-- Edges added: 839
+- Edges added: 847
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 185
@@ -208,6 +208,7 @@ Compared with the graph artifact on `origin/develop`.
 - `decision.photo.pre-launch.rights-narrowing.2026-07-28`
 - `edition.layout-c.2026-07`
 - `evaluation.curatorial.layout-c.home-east-river.v1`
+- `evaluation.jamie-public-record-integration.2026-08-03`
 - `event.nyc.commercial-rent.friends-and-lovers.2026-02-17`
 - `event.nyc.commercial-rent.project-x.2026-03-10`
 - `event.nyc.commercial-rent.public-event.2025-11-13`
@@ -225,6 +226,7 @@ Compared with the graph artifact on `origin/develop`.
 - `event.nys.commercial-rent.jimmys-corner-rally.2026-04-10`
 - `index.knowledge-wiki.commercial-rent-public-support`
 - `index.knowledge-wiki.commercial-rent-testimony`
+- `index.knowledge-wiki.jamie-public-record-source-edition`
 - `index.knowledge-wiki.photography`
 - `index.knowledge-wiki.photography-notebook`
 - `index.knowledge-wiki.public-testimony-and-hearing-voices`
@@ -246,6 +248,7 @@ Compared with the graph artifact on `origin/develop`.
 - `source.heteroglossia.commercial-rent-stabilization.2021-09-17`
 - `source.heteroglossia.cultural-affairs-budget.2018-03-16`
 - `source.heteroglossia.sbjsa.2018-10-22`
+- `source.jamie-public-record-initial-manifest`
 - `source.kc-town-hall.local-digital-archive.2026-07`
 - `source.kc-town-hall.photographic-oral-histories.2026-07`
 - `source.nyc-council.field-kit-oral-history.2026-07`

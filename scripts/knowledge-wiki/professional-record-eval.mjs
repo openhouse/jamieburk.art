@@ -17,6 +17,10 @@ export const wikiPath = path.join(
   repoRoot,
   "docs/knowledge-bank/indexes/jamie-public-record-source-edition.md"
 );
+export const sourcePagePath = path.join(
+  repoRoot,
+  "docs/knowledge-bank/sources/jamie-public-record-initial-manifest.md"
+);
 export const rfcPath = path.join(
   repoRoot,
   "rfcs/0004-jamie-burkart-knowledge-ecosystem-and-public-source-editions.md"
@@ -33,12 +37,20 @@ export function loadCandidate() {
     manifest: JSON.parse(manifestSource),
     lock: JSON.parse(readFileSync(lockPath, "utf8")),
     wikiSource: readFileSync(wikiPath, "utf8"),
+    sourcePageSource: readFileSync(sourcePagePath, "utf8"),
     rfcSource: readFileSync(rfcPath, "utf8")
   };
 }
 
 export function evaluate(candidate) {
-  const { manifest, manifestSource, lock, wikiSource, rfcSource } = candidate;
+  const {
+    manifest,
+    manifestSource,
+    lock,
+    wikiSource,
+    sourcePageSource,
+    rfcSource
+  } = candidate;
   const failures = [];
   const records = manifest.records ?? [];
   const canonical = records.filter((record) => record.kind === "canonical-reference");
@@ -75,6 +87,10 @@ export function evaluate(candidate) {
   check(/implementation: https:\/\/github\.com\/openhouse\/jamieburk\.art\/pull\/269/.test(rfcSource), "RFC implementation link drifted");
   check(wikiSource.includes(lock.source_commit), "Wiki page does not cite pinned source commit");
   check(wikiSource.includes(lock.source_manifest_sha256), "Wiki page does not cite manifest digest");
+  check(
+    /relations:\s*[\s\S]*?- type: related_to\s+target: index\.knowledge-wiki\.jamie-public-record-source-edition/.test(sourcePageSource),
+    "source-to-index relation uses an invalid graph shape"
+  );
   check(/no runtime dependency|no live dependency|without a live dependency/i.test(`${wikiSource}\n${rfcSource}`), "offline public-build boundary missing");
   check(/not.*portfolio|portfolio.*not|no portfolio projection authorized/i.test(`${wikiSource}\n${rfcSource}`), "portfolio gate missing");
 

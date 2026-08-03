@@ -23,7 +23,13 @@ const mutations = [
   ["added private runtime dependency", (value) => { value.manifest.private_source_dependency = true; }],
   ["authorized portfolio projection", (value) => { value.lock.projection_state = "portfolio-active"; }],
   ["leaked local path", (value) => { value.manifestSource += "\n/Users/example/private\n"; }],
-  ["weakened photo boundary", (value) => { value.manifest.photo_policy = "approved"; }]
+  ["weakened photo boundary", (value) => { value.manifest.photo_policy = "approved"; }],
+  ["invalid source-to-index relation", (value) => {
+    value.sourcePageSource = value.sourcePageSource.replace(
+      "- type: related_to\n    target: index.knowledge-wiki.jamie-public-record-source-edition",
+      "- type: supports\n    target: index.knowledge-wiki.jamie-public-record-source-edition"
+    );
+  }]
 ];
 
 for (const [name, mutate] of mutations) {

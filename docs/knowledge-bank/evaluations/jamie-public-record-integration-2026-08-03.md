@@ -36,8 +36,8 @@ On Node 26.5.0:
   state, private-dependency boundary, photo boundary, RFC stage, Wiki citation,
   and portfolio hold.
 - `node --test scripts/knowledge-wiki/professional-record-eval.test.mjs` passed
-  13 tests: one unchanged-candidate baseline
-  plus twelve adversarial mutations.
+  14 tests: one unchanged-candidate baseline
+  plus thirteen adversarial mutations.
 - The same baseline and mutation suite is composed into the existing
   `check:knowledge-evals` and `test:knowledge-evals` gates so it runs in the
   full repository check without changing the professor-lens public candidate.
@@ -64,3 +64,7 @@ The initial failure analysis prioritized four harms:
 The final evaluator injects each class of failure and rejects it. Any change to
 the source manifest requires a new digest, lock, downstream evaluation, and
 review. Green checks do not close the remaining human gates.
+
+The first full CI pass also exposed an invalid source-to-index relation shape.
+The relation was corrected from `supports` to `related_to`, and a thirteenth
+mutation now prevents that vocabulary error from recurring.
