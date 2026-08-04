@@ -1,10 +1,10 @@
 {
   "runVersion": 3,
-  "judgeId": "composite-holdout-hiring-composition-v6-2026-08-03",
+  "judgeId": "composite-holdout-hiring-composition-v9-2026-08-03",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
   "rubricSha256": "3fe95a2b9c1f22cdb7d95c3168af73e8eb659900ffd258cd65ebb6feb06e44c1",
-  "candidateFingerprint": "a42e7c814e79745ec950c52aa76e917a321cbbead3f0ffd1409e6b3d717bcb32",
+  "candidateFingerprint": "4cb0b6d33b54bd7dbd4fcb0161d5b4abee784c4ef01bb4095ea49755cafa8e85",
   "verdict": "accepted",
   "scores": [
     {
@@ -12,122 +12,123 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "git rev-parse HEAD returned 19cd41b66fd714dbe603c6ae7669d4dabd85be75.",
-        "The frozen rubric records feature/evals-A through feature/evals-N exactly once; all fourteen recorded commit objects were directly verified as present.",
-        "docs/integration/feature-evals-composite.json identifies feature/knowledge-h as the writable integration branch and develop as the pull-request base, while the integration policy keeps frozen branches reference-only."
+        "HEAD is f44a5ab2358984baf7f3e649a8f20e26d6a414c2 on feature/pre-launch-integration-C.",
+        "All 14 frozen A-N branch decisions match the rubric heads, their commit objects are available, and the inspected remote branch references match.",
+        "The integration register confines writes to feature/knowledge-h with develop as the pull-request base."
       ],
-      "rationale": "The complete A-N inventory, immutable commit objects, integration branch, base, and reference-only policy are observed and consistent."
+      "rationale": "The exact frozen branch family and integration boundary are present and internally consistent."
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
       "evidence": [
-        "docs/integration/feature-evals-composite.json contains fourteen branch decisions using allowed dispositions, each with a substantive strength, rationale, existing destination paths, and verification IDs.",
-        "Its canonical JSON digest recomputed to 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d, matching the frozen rubric.",
-        "The register and docs/integration/feature-evals-composite.md explicitly retain the H-derived public composition and reject adding public copy merely to demonstrate integration."
+        "The integration register digest is 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d, matching the frozen rubric.",
+        "All 14 decisions use an allowed disposition and include substantive rationale, destination paths, and criterion-linked verification.",
+        "The website decision explicitly distinguishes selected public projection from material retained only in the Knowledge Wiki."
       ],
-      "rationale": "Every frozen branch has an inspectable integration disposition, and website projection versus non-projection is deliberate."
+      "rationale": "The register makes every branch-level choice inspectable without treating integration as indiscriminate publication."
     },
     {
       "criterionId": "COMP-003",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All eleven canonical knowledge files exist, and none of the three forbidden parallel lifecycle paths exists.",
-        "apps/www/src/data/knowledge-bank/index.ts exports the public projection and schema; public UI citation components resolve through public.ts and the redacted public registry.",
-        "apps/www/src/data/knowledge-bank/public-registry.json exposes only sources, claims, and pages, while no proofs, knowledge-bank, or public-claims application route exists."
+        "All 11 rubric-named canonical files exist and none of the forbidden parallel lifecycle roots exists.",
+        "The public registry exposes only sources, claims, and pages; the application consumes that redacted registry.",
+        "No public /proofs, /knowledge-bank, /public-claims, or professional-record database route is present."
       ],
-      "rationale": "The H-derived model remains the single canonical architecture, and the application consumes bounded public projections rather than protected records."
+      "rationale": "The candidate maintains one governed knowledge architecture while keeping the reader-facing site selective."
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
       "evidence": [
-        "lifecycle-operations.ts returns already-present for byte-equivalent stable-ID replay, preserves repeated artifacts under new IDs as linked duplicates, and throws on changed-content stable-ID collisions.",
-        "queryKnowledgeLifecycle exposes open intake, duplicates, unresolved inquiries, mature held claims, uncited active claims, corrections, projection counts, and orphan sources.",
-        "scripts/tests/lifecycle-operations.test.mjs contains direct cases for idempotence, duplicate preservation, collision rejection, held claims, inquiries, corrections, active projections, and zero orphan sources."
+        "Fresh lifecycle tests passed 4/4.",
+        "Identical intake replay was idempotent, a linked duplicate was preserved, and a changed-content stable-ID collision was rejected.",
+        "Held-claim, unresolved-inquiry, correction, projection, and orphan-source queries behaved as specified."
       ],
-      "rationale": "Append safety and the required lifecycle query surfaces are implemented coherently and covered by focused deterministic cases."
+      "rationale": "Observed operations preserve provenance and fail safely instead of silently overwriting or discarding intake."
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
       "evidence": [
-        "schema.ts and records.ts preserve source doesNotEstablish boundaries, evidence relationships, protected locators, claim projection states, corrections, and public-use limits.",
-        "agency-graph.ts explicitly distinguishes individual, shared, collective, and institutional credit, with source IDs and boundaries on relations.",
-        "Population records retain capture and denominator limitations; the canonical validation code requires bounded population evidence and current generated Wiki and hiring outputs.",
-        "The reviewed case studies preserve those boundaries in composed prose, including collective campaign outcomes, shared project surfaces, institutional authority, and archived-prototype limits."
+        "Fresh citation validation returned zero errors across public files and canonical records.",
+        "The canonical layer validated 294 sources, 105 claims, 34 bounded agency relations, and 4 corrections; the redacted public registry contains 56 sources, 36 claims, and 7 pages.",
+        "The committed Wiki graph delta exactly matched an independent reconstruction from the retained base graph: 386 nodes and 1,334 edges, with 279 nodes and 899 edges added and none removed.",
+        "Professional-record checks passed 12/12 and their mutation tests passed 7/7; private evidence, endorsements, photographs, and held projections remain closed by default."
       ],
-      "rationale": "Observed records and validation contracts preserve referential integrity, evidence roles, agency scope, corrections, and bounded population claims without protected leakage."
+      "rationale": "Claims, population limits, agency, corrections, and generated projections are evidence-bound and current. Although the packet lacked the mutable origin/develop tracking reference, the retained base object allowed an exact reconstruction, leaving no candidate-evidence gap."
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The homepage, resume, and technical-operations page immediately identify Jamie as a technical project manager and implementation lead who turns ambiguous work into requirements, workflows, tools, launch support, documentation, and handoffs.",
-        "HJE, CallNYC, FairRentNYC, WOWList, Sunday Dinner/196, and KC Town Hall distinguish Jamie's actions from team, coalition, community, and institutional outcomes while naming what became usable.",
-        "The About page explicitly preserves artistic, civic, technical, relational, and social continuity through project-specific relationship, model, interface/use, learning, and continuity loops.",
-        "Public-safe workflow specimens reconstruct listening, framing, implementation, verification, onboarding, hosting, documentation, continuation, and ownership without exposing protected operational or participant data.",
-        "Professional-record claims and photographs remain held with no portfolio surfaces, demonstrating that the Wiki can deepen while the public site remains selective."
+        "The homepage immediately identifies Jamie as a Technical Project Manager focused on Product Operations and Implementation and states that the work makes emerging efforts usable.",
+        "About, resume, technical-operations, source-backed team-memory, and representative work pages consistently show Jamie turning goals into requirements, workflows, interfaces, decision records, and handoffs.",
+        "Professor-lens evaluation passed 15/15 criteria and its adversarial tests passed 9/9.",
+        "Responsive evidence covers 14 routes at 360, 375, 768, and 1280 pixels; keyboard, mobile navigation, reflow, semantic-order, workflow-specimen, and focused visual checks pass.",
+        "Collective projects use bounded co-built, co-led, shared, or institutional credit, while artistic, civic, technical, and relational continuity remains visible across the composed portfolio.",
+        "Mature supported claims remain held off public surfaces, so the site reads as a hiring composition rather than a database mirror."
       ],
-      "rationale": "As a hiring composition, the site makes Jamie legible as an actor and implementation lead, shows usable results, preserves collective credit, and maintains the full practice continuity without becoming a database mirror."
+      "rationale": "Jamie is legible as an actor and implementation lead, the outcomes are understandable as usable systems, collective credit remains bounded, and the portfolio retains meaningful continuity without becoming exhaustive."
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The blind-spot control digest recomputed to 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db, matching the frozen rubric.",
-        "Human corroboration, collective review, hiring usability, job-funnel learning, and external validity remain explicitly open rather than inferred from automated evidence.",
-        "Every control records a baseline, evidence requirements, pass conditions, anti-gaming rules, a next action, and a public-projection rule.",
-        "The control semantics explicitly state that instrumented absence is not validation and external human evidence cannot be synthesized."
+        "The blind-spot-control digest is 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db, matching the frozen rubric.",
+        "All 5 required human-evidence controls remain explicitly open and contain required evidence, anti-gaming rules, next actions, and public-projection boundaries.",
+        "The controls state that instrumentation is not validation and that external evidence cannot be synthesized."
       ],
-      "rationale": "The repository governs its blind spots as actionable absences without presenting controls, simulations, or LLM reviews as recovered human evidence."
+      "rationale": "Human corroboration, collective review, hiring usability, funnel evidence, and external validity are honestly represented as unresolved rather than scored away."
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The semantic rubric digest independently recomputed to 3fe95a2b9c1f22cdb7d95c3168af73e8eb659900ffd258cd65ebb6feb06e44c1.",
-        "The canonical base-suite, integration-register, and blind-spot digests independently match their pinned values.",
-        "The rubric forbids optimizer self-grading, forbids not-observed passes, requires every blocking criterion to pass, and preserves human production approval.",
-        "scripts/tests/composite-integration.test.mjs covers omitted branches, fabricated heads, semantic weakening despite checksum refresh, missing destinations, base-suite drift, stale generated outputs, source-tree mutations, provenance collapse, synthesized human evidence, and blocker compensation."
+        "The independently recomputed rubric digest is 3fe95a2b9c1f22cdb7d95c3168af73e8eb659900ffd258cd65ebb6feb06e44c1.",
+        "Frozen branch-head, base-suite, integration-register, and blind-spot-control digests match their contracts.",
+        "The evaluator forbids optimizer self-grading, passing unobserved evidence, synthesized human validation, and compensation of hard gates by aggregate scores.",
+        "Inspected mutation coverage targets rubric drift, candidate changes including binary changes, fabricated heads, self-grading, synthetic human evidence, stale scorecards, candidate mismatch, visual-evidence mismatch, and blocker compensation.",
+        "With independently established derived-output currentness, the repository evaluator reports COMP-001 through COMP-008 passing."
       ],
-      "rationale": "The frozen governance binds the semantic contract and its dependencies, with adversarial controls that prevent checksum refreshes or aggregate strength from weakening hard gates."
+      "rationale": "The stopping rules are candidate-bound, rubric-frozen, adversarially guarded, and preserve hard gates."
     },
     {
       "criterionId": "COMP-009",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The source-tree procedure independently returned 1401 paths and fingerprint a42e7c814e79745ec950c52aa76e917a321cbbead3f0ffd1409e6b3d717bcb32 after excluding only the two declared receipt paths.",
-        "The identity implementation hashes each sorted path, NUL, byte length, NUL, file bytes, and NUL, binding source, UI, assets, validation, runtime, and release files.",
-        "The v3 receipt mechanism binds provider, distinct reviewer label, review time, exact rubric and candidate, complete judgment payload digest, and an attestation that labels do not authenticate process identity.",
-        "This complete judgment accepts the exact candidate and supplies one reviewer-stage acceptance; the unseen second review is correctly reserved for later orchestrator validation and is not missing candidate evidence.",
-        "Repository QA and governance retain Jamie's exact-commit production decision, collaborator-sensitive review, rights and consent review, deployment, smoke/rollback verification, and indexing approval as unresolved human gates."
+        "A fresh independent source-tree computation found exactly 1,401 paths and fingerprint 4cb0b6d33b54bd7dbd4fcb0161d5b4abee784c4ef01bb4095ea49755cafa8e85.",
+        "The candidate identity excludes only the two designated receipt paths while including canonical and evidence-bundle files.",
+        "The judgment mechanism binds run version, distinct judge identity, independent-grader status, rubric digest, candidate fingerprint, complete scores, verdict, findings, recommendation, public-review provenance, timestamp, and attestation into a canonical judgment digest.",
+        "The public receipt omits private process identifiers and machine locators and requires two distinct accepting judgments before the orchestrator may declare the installed stopping check satisfied.",
+        "This complete independent judgment accepts the exact candidate and supplies one reviewer-stage acceptance."
       ],
-      "rationale": "The non-circular identity and public-safe receipt design are sound. At this reviewer stage, my independent complete judgment accepts the exact candidate and supplies one acceptance; installation remains conditional on the orchestrator validating a distinct second accepting receipt for the identical candidate and rubric."
+      "rationale": "The two-stage protocol is sound and non-circular. This review establishes one acceptance; the orchestrator must still validate a distinct second acceptance, replace the placeholder judgment digest mechanically, install both receipts, and rerun the final stopping check."
     }
   ],
   "notObserved": [],
   "findings": [
-    "Exact candidate identity verified: commit 19cd41b66fd714dbe603c6ae7669d4dabd85be75, 1401 included paths, and fingerprint a42e7c814e79745ec950c52aa76e917a321cbbead3f0ffd1409e6b3d717bcb32.",
-    "Jamie is legible as the actor and implementation lead without erasing collaborators or converting advocacy, participation, shared work, or institutional decisions into sole causation.",
-    "The public portfolio is a selective hiring composition; held professional-record claims, unapproved photographs, protected educational material, and private operational evidence remain outside public projection.",
-    "Responsive QA covers fourteen routes at 360, 375, 768, and 1280 pixels with no reported axe violations, overflow, broken images, failed requests, or heading/landmark failures; interaction QA separately preserves explicit human accessibility gates.",
-    "Human collaborator review, fresh-human hiring usability, real job-funnel learning, rights and consent decisions, exact-commit production approval, deployment, rollback checks, and indexing approval remain unresolved and must not be inferred from this acceptance."
+    "Jamie is convincingly presented as an implementation lead who makes complex collective work usable without claiming sole causation.",
+    "The public surface is selective and hiring-oriented; substantially more governed knowledge remains outside the public projection.",
+    "This judgment supplies one reviewer-stage acceptance only and makes no claim about the separate review.",
+    "Jamie approval of the exact production candidate, collaborator-sensitive corroboration and credit review, consent and rights clearance, photograph and crop approval, human screen-reader and browser-zoom review, deployment and rollback verification, and explicit indexing approval remain open human production gates.",
+    "No private orchestration, publication consent, endorsement, accessibility approval, deployment, or indexing approval is inferred."
   ],
-  "recommendation": "Accept this exact candidate at the reviewer stage. This judgment supplies one acceptance. The orchestrator may install it only after validating a distinct second accepting receipt for the identical candidate fingerprint and rubric digest and computing both judgment digests. Production deployment and indexing remain conditional on the explicit human gates.",
+  "recommendation": "Accept this exact candidate for the hiring-composition holdout. Installation remains conditional on the orchestrator validating a distinct second accepting judgment for the identical candidate and rubric, computing both judgment digests, installing both receipts, and passing the final stopping check; all named human production gates remain unresolved.",
   "publicReview": {
     "provider": "independent-codex-review",
-    "reviewerLabel": "hiring-composition-reviewer-b-v6",
-    "reviewedAt": "2026-08-03T22:37:56-04:00",
-    "judgmentSha256": "f6774da759ac4841fa456ffef285d65d4650e8606e70ed45856c7d85c349f849",
+    "reviewerLabel": "hiring-composition-reviewer-b-v9",
+    "reviewedAt": "2026-08-03T23:07:42.314-04:00",
+    "judgmentSha256": "3b5852c05fedee68e5f060f53b36b06e938ecc771b4476a6e71c12fb0cc0880b",
     "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted."
   }
 }
