@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-03T14:01:06-04:00",
   "sourceCommit": "606ebdbc6db61d8dd6f561a2a47f47829cd26481",
-  "sourceFingerprint": "219613910021b99be123ba56a983dfa3029cf61b39dc3c640a9106e0ffe1db5e",
+  "sourceFingerprint": "ca8624425b000ec9d9dc8b7f62527d950de065e69766aabd2f8a30479dd3a3d0",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -30,6 +30,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "asset.photo-set.mit-interrogative-design.2024",
+      "path": "docs/knowledge-bank/assets/photographs/mit-interrogative-design-symposium-2024-held.md",
+      "title": "MIT Interrogative Design Symposium held photo set",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Metadata-only record of a held symposium photo set with no public image payload.",
+      "aliases": [],
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2026-10-03"
     },
     {
       "id": "asset.photo.digital-district.001",
@@ -2710,6 +2723,19 @@
       "reviewBy": "2026-07-21"
     },
     {
+      "id": "evaluation.jamie-public-record-integration.2026-08-03",
+      "path": "docs/knowledge-bank/evaluations/jamie-public-record-integration-2026-08-03.md",
+      "title": "Jamie public-record integration evaluation",
+      "kind": "evaluation",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Candidate-bound deterministic and adversarial evaluation for the first content-addressed Jamie public-record Knowledge Wiki import.",
+      "aliases": [],
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2026-11-03"
+    },
+    {
       "id": "evaluation.knowledge-wiki.retrieval-tasks",
       "path": "docs/knowledge-bank/evaluations/retrieval-tasks.md",
       "title": "Knowledge Wiki retrieval tasks",
@@ -2734,6 +2760,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-08-19"
+    },
+    {
+      "id": "event.mit.interrogative-design-symposium.2024",
+      "path": "docs/knowledge-bank/events/interrogative-design-symposium-2024.md",
+      "title": "Interrogative Design Symposium",
+      "kind": "event",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Official MIT event context linked to a separately governed account of Jamie's attendance and held photographic field.",
+      "aliases": [],
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2026-11-03"
     },
     {
       "id": "event.nyc.commercial-rent.friends-and-lovers.2026-02-17",
@@ -2948,6 +2987,32 @@
       "reviewBy": "2026-10-28"
     },
     {
+      "id": "event.studio3.ai-made-me-do-it.2024",
+      "path": "docs/knowledge-bank/events/ai-made-me-do-it-symposium-2024.md",
+      "title": "AI Made Me Do It symposium and exhibition",
+      "kind": "event",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Official Studio3 event context linked to Jamie's bounded first-person attendance record.",
+      "aliases": [],
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2026-11-03"
+    },
+    {
+      "id": "event.weibel.in-terms-of-media.2024",
+      "path": "docs/knowledge-bank/events/in-terms-of-media-symposium-2024.md",
+      "title": "In Terms of Media symposium",
+      "kind": "event",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Official Weibel Institute event context linked to Jamie's bounded first-person attendance record.",
+      "aliases": [],
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2026-11-03"
+    },
+    {
       "id": "index.knowledge-wiki",
       "path": "docs/knowledge-bank/README.md",
       "title": "Knowledge Wiki",
@@ -3054,6 +3119,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "index.knowledge-wiki.jamie-public-record-source-edition",
+      "path": "docs/knowledge-bank/indexes/jamie-public-record-source-edition.md",
+      "title": "Jamie Burkart public-record source edition",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe Knowledge Wiki route into the first Jamie-centered source-edition candidate without importing protected research or duplicating canonical statement bodies.",
+      "aliases": [],
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2026-11-03"
+    },
+    {
       "id": "index.knowledge-wiki.jamie-sourcebook",
       "path": "docs/knowledge-bank/indexes/jamie-sourcebook.md",
       "title": "Jamie Burkart Sourcebook pilot",
@@ -3156,6 +3234,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "index.knowledge-wiki.professional-record",
+      "path": "docs/knowledge-bank/indexes/professional-record-and-reception.md",
+      "title": "Professional record and reception",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public-safe index of institutional facts, documented encounters, dated evaluations, reception, and unresolved recommendation or publication authority.",
+      "aliases": [],
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2026-11-03"
     },
     {
       "id": "index.knowledge-wiki.project-lineages",
@@ -3273,6 +3364,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-10-26"
+    },
+    {
+      "id": "index.photo-set.mit-interrogative-design.2024",
+      "path": "docs/knowledge-bank/indexes/photo-sets/mit-interrogative-design-symposium-2024.md",
+      "title": "MIT Interrogative Design Symposium photo set",
+      "kind": "index",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Retrieval index connecting the official event record to one metadata-only held photo set.",
+      "aliases": [],
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2026-10-03"
     },
     {
       "id": "index.photo-set.nycac-dcla-formation.2017",
@@ -3551,6 +3655,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "person.diya-vij",
+      "path": "docs/knowledge-bank/people/diya-vij.md",
+      "title": "Diya Vij",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Official-role and institutional-context record that does not infer a Jamie-specific endorsement or recommendation.",
+      "aliases": [],
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2026-11-03"
+    },
+    {
       "id": "person.elana-gordon",
       "path": "docs/knowledge-bank/people/elana-gordon.md",
       "title": "Elana Gordon",
@@ -3575,8 +3692,21 @@
       "aliases": [
         "James Burkart"
       ],
-      "lastReviewed": "2026-07-19",
+      "lastReviewed": "2026-08-03",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "person.warren-sack",
+      "path": "docs/knowledge-bank/people/warren-sack.md",
+      "title": "Warren Sack",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public-role and historical educational-context record with an explicit present-endorsement boundary.",
+      "aliases": [],
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2026-11-03"
     },
     {
       "id": "place.small-cultural-spaces",
@@ -3982,6 +4112,19 @@
       "reviewBy": "2026-09-26"
     },
     {
+      "id": "research.professional-record-promotion.2026-08-03",
+      "path": "docs/knowledge-bank/research-runs/professional-record-promotion-2026-08-03.md",
+      "title": "Professional record public-safe promotion review, August 3, 2026",
+      "kind": "research-run",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Bounded source return that promotes official facts and metadata-only findings while withholding private communications, recommendation strategy, and photographs.",
+      "aliases": [],
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2026-10-03"
+    },
+    {
       "id": "source.callnyc.source-repository",
       "path": "docs/knowledge-bank/sources/callnyc-source-repository.md",
       "title": "CallNYC public source repository",
@@ -4097,6 +4240,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "source.jamie-public-record-initial-manifest",
+      "path": "docs/knowledge-bank/sources/jamie-public-record-initial-manifest.md",
+      "title": "Jamie Burkart public-record initial manifest",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Content-addressed public-safe snapshot of the first Jamie-centered source-edition candidate.",
+      "aliases": [],
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2026-11-03"
     },
     {
       "id": "source.jamie.writers-voice-synthesis.2026-07",
@@ -4307,6 +4463,19 @@
       "reviewBy": "2027-01-19"
     },
     {
+      "id": "source.mit.interrogative-design-symposium.2024",
+      "path": "docs/knowledge-bank/sources/mit-interrogative-design-symposium-2024.md",
+      "title": "MIT Interrogative Design Symposium event page",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official MIT event record establishing the symposium's title, dates, venue, and public program context.",
+      "aliases": [],
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2027-02-03"
+    },
+    {
       "id": "source.nter-chng.archived-homepage.2011",
       "path": "docs/knowledge-bank/sources/nter-chng-archived-homepage-2011.md",
       "title": "Archived NTER CHNG project homepage",
@@ -4331,6 +4500,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-09-26"
+    },
+    {
+      "id": "source.nyc.diya-vij-appointment.2026",
+      "path": "docs/knowledge-bank/sources/dcla-diya-vij-appointment-2026.md",
+      "title": "Appointment of Diya Vij as Commissioner of Cultural Affairs",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official City appointment record supporting Diya Vij's role and published institutional biography.",
+      "aliases": [],
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2027-02-03"
     },
     {
       "id": "source.nycac.dcla-formation-source-return.2026-07",
@@ -4606,6 +4788,32 @@
       "reviewBy": "2027-01-18"
     },
     {
+      "id": "source.professional-record.photo-field.2026-08",
+      "path": "docs/knowledge-bank/sources/photo-metadata/professional-record-photo-field-2026-08.md",
+      "title": "Professional record governed photo field",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Metadata-only source record for held symposium photographs reviewed during the recommendation-research project.",
+      "aliases": [],
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2026-10-03"
+    },
+    {
+      "id": "source.professional-record.research.2026-08",
+      "path": "docs/knowledge-bank/sources/archives/professional-record-research-2026-08.md",
+      "title": "Governed professional-record research comparison, August 2026",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Metadata-only source record for a private comparison of three exact recommendation-research candidates.",
+      "aliases": [],
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2026-10-03"
+    },
+    {
       "id": "source.protected.current-workstream.2026-07-27",
       "path": "docs/knowledge-bank/sources/working/current-workstream-2026-07-27.md",
       "title": "Late-July 2026 current-workstream review",
@@ -4674,6 +4882,19 @@
       "reviewBy": "2026-10-28"
     },
     {
+      "id": "source.studio3.ai-made-me-do-it.2024",
+      "path": "docs/knowledge-bank/sources/studio3-ai-made-me-do-it-2024.md",
+      "title": "Studio3 AI Made Me Do It event page",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official University of Innsbruck event page establishing the symposium and exhibition context.",
+      "aliases": [],
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2027-02-03"
+    },
+    {
       "id": "source.transcript.commercial-rent.friends-and-lovers.2026-02-17",
       "path": "docs/knowledge-bank/testimony/commercial-rent-public-support/2026-02-17-friends-and-lovers-supportive-remarks.md",
       "title": "Friends and Lovers Commercial Rent Stabilization event: speaker index",
@@ -4726,6 +4947,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "source.ucsc.warren-sack-profile.2026",
+      "path": "docs/knowledge-bank/sources/ucsc-warren-sack-profile-2026.md",
+      "title": "Warren Sack - Film and Digital Media Department",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official UCSC profile used only for Warren Sack's public role and subject-matter background.",
+      "aliases": [],
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2027-02-03"
+    },
+    {
       "id": "source.vault.communication-history.metadata",
       "path": "docs/knowledge-bank/sources/protected-communication-vault-metadata.md",
       "title": "Protected communication history - public-safe metadata boundary",
@@ -4737,6 +4971,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-18",
       "reviewBy": "2026-10-18"
+    },
+    {
+      "id": "source.weibel.in-terms-of-media.2024",
+      "path": "docs/knowledge-bank/sources/weibel-in-terms-of-media-2024.md",
+      "title": "Weibel Institute In Terms of Media event record",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official University of Applied Arts Vienna record establishing the symposium and its four-part thematic frame.",
+      "aliases": [],
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2027-02-03"
     },
     {
       "id": "source.wowlist.repaired-transcript.2026",
@@ -4851,6 +5098,30 @@
       "to": "source.kc-town-hall.cced-proposal.2019",
       "source": "frontmatter",
       "href": "../../sources/kc-town-hall-cced-proposal-2019.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo-set.mit-interrogative-design.2024",
+      "type": "documents",
+      "to": "event.mit.interrogative-design-symposium.2024",
+      "source": "frontmatter",
+      "href": "../../events/interrogative-design-symposium-2024.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo-set.mit-interrogative-design.2024",
+      "type": "related_to",
+      "to": "index.photo-set.mit-interrogative-design.2024",
+      "source": "frontmatter",
+      "href": "../../indexes/photo-sets/mit-interrogative-design-symposium-2024.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo-set.mit-interrogative-design.2024",
+      "type": "uses_source",
+      "to": "source.professional-record.photo-field.2026-08",
+      "source": "frontmatter",
+      "href": "../../sources/photo-metadata/professional-record-photo-field-2026-08.md",
       "context": null
     },
     {
@@ -10524,6 +10795,22 @@
       "context": null
     },
     {
+      "from": "evaluation.jamie-public-record-integration.2026-08-03",
+      "type": "informed_by",
+      "to": "source.jamie-public-record-initial-manifest",
+      "source": "frontmatter",
+      "href": "../sources/jamie-public-record-initial-manifest.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.jamie-public-record-integration.2026-08-03",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.jamie-public-record-source-edition",
+      "source": "frontmatter",
+      "href": "../indexes/jamie-public-record-source-edition.md",
+      "context": null
+    },
+    {
       "from": "evaluation.knowledge-wiki.retrieval-tasks",
       "type": "related_to",
       "to": "index.knowledge-wiki.pilot",
@@ -10545,6 +10832,30 @@
       "to": "research.nycac.shared-folder.2026-07-19",
       "source": "frontmatter",
       "href": "../research-runs/nycac-shared-folder-2026-07-19.md",
+      "context": null
+    },
+    {
+      "from": "event.mit.interrogative-design-symposium.2024",
+      "type": "has_asset",
+      "to": "asset.photo-set.mit-interrogative-design.2024",
+      "source": "frontmatter",
+      "href": "../assets/photographs/mit-interrogative-design-symposium-2024-held.md",
+      "context": null
+    },
+    {
+      "from": "event.mit.interrogative-design-symposium.2024",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "../people/jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "event.mit.interrogative-design-symposium.2024",
+      "type": "uses_source",
+      "to": "source.mit.interrogative-design-symposium.2024",
+      "source": "frontmatter",
+      "href": "../sources/mit-interrogative-design-symposium-2024.md",
       "context": null
     },
     {
@@ -10828,6 +11139,38 @@
       "context": null
     },
     {
+      "from": "event.studio3.ai-made-me-do-it.2024",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "../people/jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "event.studio3.ai-made-me-do-it.2024",
+      "type": "uses_source",
+      "to": "source.studio3.ai-made-me-do-it.2024",
+      "source": "frontmatter",
+      "href": "../sources/studio3-ai-made-me-do-it-2024.md",
+      "context": null
+    },
+    {
+      "from": "event.weibel.in-terms-of-media.2024",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "../people/jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "event.weibel.in-terms-of-media.2024",
+      "type": "uses_source",
+      "to": "source.weibel.in-terms-of-media.2024",
+      "source": "frontmatter",
+      "href": "../sources/weibel-in-terms-of-media-2024.md",
+      "context": null
+    },
+    {
       "from": "index.knowledge-wiki",
       "type": "related_to",
       "to": "index.knowledge-wiki.commercial-rent-public-support",
@@ -10906,6 +11249,14 @@
       "source": "frontmatter",
       "href": "indexes/pilot.md",
       "context": "Bounded first implementation of stable identity and typed relations."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.professional-record",
+      "source": "frontmatter",
+      "href": "indexes/professional-record-and-reception.md",
+      "context": "Public-safe institutional facts, documented encounters, dated reception, and explicit recommendation and endorsement boundaries."
     },
     {
       "from": "index.knowledge-wiki",
@@ -11329,6 +11680,38 @@
       "to": "place.small-cultural-spaces",
       "source": "frontmatter",
       "href": "../places/small-cultural-spaces.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.jamie-public-record-source-edition",
+      "type": "informed_by",
+      "to": "source.jamie-public-record-initial-manifest",
+      "source": "frontmatter",
+      "href": "../sources/jamie-public-record-initial-manifest.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.jamie-public-record-source-edition",
+      "type": "related_to",
+      "to": "decision.knowledge-wiki.selective-projection",
+      "source": "frontmatter",
+      "href": "../decisions/knowledge-wiki-selective-projection.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.jamie-public-record-source-edition",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "../people/jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.jamie-public-record-source-edition",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md",
       "context": null
     },
     {
@@ -11948,6 +12331,70 @@
       "context": null
     },
     {
+      "from": "index.knowledge-wiki.professional-record",
+      "type": "related_to",
+      "to": "event.mit.interrogative-design-symposium.2024",
+      "source": "frontmatter",
+      "href": "../events/interrogative-design-symposium-2024.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.professional-record",
+      "type": "related_to",
+      "to": "event.studio3.ai-made-me-do-it.2024",
+      "source": "frontmatter",
+      "href": "../events/ai-made-me-do-it-symposium-2024.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.professional-record",
+      "type": "related_to",
+      "to": "event.weibel.in-terms-of-media.2024",
+      "source": "frontmatter",
+      "href": "../events/in-terms-of-media-symposium-2024.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.professional-record",
+      "type": "related_to",
+      "to": "index.photo-set.mit-interrogative-design.2024",
+      "source": "frontmatter",
+      "href": "photo-sets/mit-interrogative-design-symposium-2024.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.professional-record",
+      "type": "related_to",
+      "to": "person.diya-vij",
+      "source": "frontmatter",
+      "href": "../people/diya-vij.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.professional-record",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "../people/jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.professional-record",
+      "type": "related_to",
+      "to": "person.warren-sack",
+      "source": "frontmatter",
+      "href": "../people/warren-sack.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.professional-record",
+      "type": "related_to",
+      "to": "research.professional-record-promotion.2026-08-03",
+      "source": "frontmatter",
+      "href": "../research-runs/professional-record-promotion-2026-08-03.md",
+      "context": null
+    },
+    {
       "from": "index.knowledge-wiki.project-lineages",
       "type": "informed_by",
       "to": "research.interpretive-layer-source-return.2026-07-19",
@@ -12313,6 +12760,30 @@
       "to": "source.kc-town-hall.photographic-oral-histories.2026-07",
       "source": "frontmatter",
       "href": "../../sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.mit-interrogative-design.2024",
+      "type": "has_asset",
+      "to": "asset.photo-set.mit-interrogative-design.2024",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/mit-interrogative-design-symposium-2024-held.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.mit-interrogative-design.2024",
+      "type": "related_to",
+      "to": "event.mit.interrogative-design-symposium.2024",
+      "source": "frontmatter",
+      "href": "../../events/interrogative-design-symposium-2024.md",
+      "context": null
+    },
+    {
+      "from": "index.photo-set.mit-interrogative-design.2024",
+      "type": "uses_source",
+      "to": "source.mit.interrogative-design-symposium.2024",
+      "source": "frontmatter",
+      "href": "../../sources/mit-interrogative-design-symposium-2024.md",
       "context": null
     },
     {
@@ -13128,6 +13599,30 @@
       "context": null
     },
     {
+      "from": "person.diya-vij",
+      "type": "related_to",
+      "to": "organization.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-artist-coalition.md",
+      "context": null
+    },
+    {
+      "from": "person.diya-vij",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "person.diya-vij",
+      "type": "uses_source",
+      "to": "source.nyc.diya-vij-appointment.2026",
+      "source": "frontmatter",
+      "href": "../sources/dcla-diya-vij-appointment-2026.md",
+      "context": null
+    },
+    {
       "from": "person.elana-gordon",
       "type": "related_to",
       "to": "asset.photo.east-river-manhattan-bridge.2022.001",
@@ -13161,6 +13656,30 @@
     },
     {
       "from": "person.jamie-burkart",
+      "type": "participated_in",
+      "to": "event.mit.interrogative-design-symposium.2024",
+      "source": "frontmatter",
+      "href": "../events/interrogative-design-symposium-2024.md",
+      "context": "Bounded attendance and photography claim; no speaking or institutional role asserted."
+    },
+    {
+      "from": "person.jamie-burkart",
+      "type": "participated_in",
+      "to": "event.studio3.ai-made-me-do-it.2024",
+      "source": "frontmatter",
+      "href": "../events/ai-made-me-do-it-symposium-2024.md",
+      "context": "Bounded first-person attendance record."
+    },
+    {
+      "from": "person.jamie-burkart",
+      "type": "participated_in",
+      "to": "event.weibel.in-terms-of-media.2024",
+      "source": "frontmatter",
+      "href": "../events/in-terms-of-media-symposium-2024.md",
+      "context": "Bounded first-person attendance record."
+    },
+    {
+      "from": "person.jamie-burkart",
       "type": "related_to",
       "to": "capability.participatory-public-systems",
       "source": "frontmatter",
@@ -13173,6 +13692,22 @@
       "to": "capability.technical-operations",
       "source": "frontmatter",
       "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "person.jamie-burkart",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.jamie-public-record-source-edition",
+      "source": "frontmatter",
+      "href": "../indexes/jamie-public-record-source-edition.md",
+      "context": null
+    },
+    {
+      "from": "person.jamie-burkart",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.professional-record",
+      "source": "frontmatter",
+      "href": "../indexes/professional-record-and-reception.md",
       "context": null
     },
     {
@@ -13205,6 +13740,38 @@
       "to": "method.structure-grows-from-material",
       "source": "frontmatter",
       "href": "../methods/structure-grows-from-the-material.md",
+      "context": null
+    },
+    {
+      "from": "person.warren-sack",
+      "type": "related_to",
+      "to": "event.mit.interrogative-design-symposium.2024",
+      "source": "frontmatter",
+      "href": "../events/interrogative-design-symposium-2024.md",
+      "context": null
+    },
+    {
+      "from": "person.warren-sack",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "person.warren-sack",
+      "type": "related_to",
+      "to": "source.ucsc.narrative-evaluations.2004-2006",
+      "source": "frontmatter",
+      "href": "../sources/ucsc-narrative-evaluations-2004-2006.md",
+      "context": null
+    },
+    {
+      "from": "person.warren-sack",
+      "type": "uses_source",
+      "to": "source.ucsc.warren-sack-profile.2026",
+      "source": "frontmatter",
+      "href": "../sources/ucsc-warren-sack-profile-2026.md",
       "context": null
     },
     {
@@ -14328,6 +14895,62 @@
       "context": null
     },
     {
+      "from": "research.professional-record-promotion.2026-08-03",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.professional-record",
+      "source": "frontmatter",
+      "href": "../indexes/professional-record-and-reception.md",
+      "context": null
+    },
+    {
+      "from": "research.professional-record-promotion.2026-08-03",
+      "type": "uses_source",
+      "to": "source.mit.interrogative-design-symposium.2024",
+      "source": "frontmatter",
+      "href": "../sources/mit-interrogative-design-symposium-2024.md",
+      "context": null
+    },
+    {
+      "from": "research.professional-record-promotion.2026-08-03",
+      "type": "uses_source",
+      "to": "source.nyc.diya-vij-appointment.2026",
+      "source": "frontmatter",
+      "href": "../sources/dcla-diya-vij-appointment-2026.md",
+      "context": null
+    },
+    {
+      "from": "research.professional-record-promotion.2026-08-03",
+      "type": "uses_source",
+      "to": "source.professional-record.research.2026-08",
+      "source": "frontmatter",
+      "href": "../sources/archives/professional-record-research-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "research.professional-record-promotion.2026-08-03",
+      "type": "uses_source",
+      "to": "source.studio3.ai-made-me-do-it.2024",
+      "source": "frontmatter",
+      "href": "../sources/studio3-ai-made-me-do-it-2024.md",
+      "context": null
+    },
+    {
+      "from": "research.professional-record-promotion.2026-08-03",
+      "type": "uses_source",
+      "to": "source.ucsc.warren-sack-profile.2026",
+      "source": "frontmatter",
+      "href": "../sources/ucsc-warren-sack-profile-2026.md",
+      "context": null
+    },
+    {
+      "from": "research.professional-record-promotion.2026-08-03",
+      "type": "uses_source",
+      "to": "source.weibel.in-terms-of-media.2024",
+      "source": "frontmatter",
+      "href": "../sources/weibel-in-terms-of-media-2024.md",
+      "context": null
+    },
+    {
       "from": "source.callnyc.source-repository",
       "type": "documents",
       "to": "project.callnyc",
@@ -14421,6 +15044,14 @@
       "to": "project.harry-j-epstein",
       "source": "frontmatter",
       "href": "../projects/harry-j-epstein.md",
+      "context": null
+    },
+    {
+      "from": "source.jamie-public-record-initial-manifest",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.jamie-public-record-source-edition",
+      "source": "frontmatter",
+      "href": "../indexes/jamie-public-record-source-edition.md",
       "context": null
     },
     {
@@ -14592,6 +15223,14 @@
       "context": "Preserves the exact E baseline from which feature/wiki-E begins."
     },
     {
+      "from": "source.mit.interrogative-design-symposium.2024",
+      "type": "documents",
+      "to": "event.mit.interrogative-design-symposium.2024",
+      "source": "frontmatter",
+      "href": "../events/interrogative-design-symposium-2024.md",
+      "context": null
+    },
+    {
       "from": "source.nter-chng.archived-homepage.2011",
       "type": "documents",
       "to": "project.nter-chng",
@@ -14621,6 +15260,14 @@
       "to": "project.nyc-artist-coalition",
       "source": "frontmatter",
       "href": "../../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.diya-vij-appointment.2026",
+      "type": "related_to",
+      "to": "person.diya-vij",
+      "source": "frontmatter",
+      "href": "../people/diya-vij.md",
       "context": null
     },
     {
@@ -14840,6 +15487,22 @@
       "context": null
     },
     {
+      "from": "source.professional-record.photo-field.2026-08",
+      "type": "related_to",
+      "to": "asset.photo-set.mit-interrogative-design.2024",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/mit-interrogative-design-symposium-2024-held.md",
+      "context": null
+    },
+    {
+      "from": "source.professional-record.research.2026-08",
+      "type": "related_to",
+      "to": "research.professional-record-promotion.2026-08-03",
+      "source": "frontmatter",
+      "href": "../../research-runs/professional-record-promotion-2026-08-03.md",
+      "context": null
+    },
+    {
       "from": "source.protected.current-workstream.2026-07-27",
       "type": "related_to",
       "to": "project.fair-rent-nyc",
@@ -14896,6 +15559,14 @@
       "context": null
     },
     {
+      "from": "source.studio3.ai-made-me-do-it.2024",
+      "type": "documents",
+      "to": "event.studio3.ai-made-me-do-it.2024",
+      "source": "frontmatter",
+      "href": "../events/ai-made-me-do-it-symposium-2024.md",
+      "context": null
+    },
+    {
       "from": "source.transcript.commercial-rent.friends-and-lovers.2026-02-17",
       "type": "related_to",
       "to": "index.knowledge-wiki.commercial-rent-public-support",
@@ -14941,6 +15612,14 @@
       "to": "project.fair-rent-nyc",
       "source": "frontmatter",
       "href": "../../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "source.ucsc.warren-sack-profile.2026",
+      "type": "related_to",
+      "to": "person.warren-sack",
+      "source": "frontmatter",
+      "href": "../people/warren-sack.md",
       "context": null
     },
     {
@@ -14949,6 +15628,14 @@
       "to": "evaluation.employment-context.coverage.2026-07-18",
       "source": "frontmatter",
       "href": "../evaluations/employment-context-coverage-2026-07-18.md",
+      "context": null
+    },
+    {
+      "from": "source.weibel.in-terms-of-media.2024",
+      "type": "documents",
+      "to": "event.weibel.in-terms-of-media.2024",
+      "source": "frontmatter",
+      "href": "../events/in-terms-of-media-symposium-2024.md",
       "context": null
     },
     {
@@ -15063,7 +15750,7 @@
       "toPath": "docs/knowledge-bank/citational-care.md",
       "to": null,
       "fragment": null,
-      "line": 137,
+      "line": 141,
       "kind": "link"
     },
     {
@@ -15072,7 +15759,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc.md",
       "to": "project.callnyc",
       "fragment": null,
-      "line": 138,
+      "line": 142,
       "kind": "link"
     },
     {
@@ -15081,7 +15768,7 @@
       "toPath": "docs/knowledge-bank/intake-and-maturation.md",
       "to": null,
       "fragment": null,
-      "line": 141,
+      "line": 145,
       "kind": "link"
     },
     {
@@ -15090,7 +15777,7 @@
       "toPath": "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md",
       "to": null,
       "fragment": null,
-      "line": 145,
+      "line": 149,
       "kind": "link"
     },
     {
@@ -15099,7 +15786,7 @@
       "toPath": "docs/knowledge-bank/agency-and-collective-credit.md",
       "to": null,
       "fragment": null,
-      "line": 152,
+      "line": 156,
       "kind": "link"
     },
     {
@@ -15108,7 +15795,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-finkelpearl-council-hearing-review.md",
       "to": null,
       "fragment": null,
-      "line": 157,
+      "line": 161,
       "kind": "link"
     },
     {
@@ -15117,7 +15804,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-campaign-press-archive.md",
       "to": null,
       "fragment": null,
-      "line": 163,
+      "line": 167,
       "kind": "link"
     },
     {
@@ -15126,7 +15813,7 @@
       "toPath": "docs/knowledge-bank/projects/talks-not-raids.md",
       "to": null,
       "fragment": null,
-      "line": 168,
+      "line": 172,
       "kind": "link"
     },
     {
@@ -15135,7 +15822,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 174,
+      "line": 178,
       "kind": "link"
     },
     {
@@ -15144,7 +15831,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/kcspacesfund-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 176,
+      "line": 180,
       "kind": "link"
     },
     {
@@ -15153,7 +15840,7 @@
       "toPath": "docs/knowledge-bank/projects/jamie-personal-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 182,
+      "line": 186,
       "kind": "link"
     },
     {
@@ -15162,7 +15849,7 @@
       "toPath": "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
       "to": null,
       "fragment": null,
-      "line": 184,
+      "line": 188,
       "kind": "link"
     },
     {
@@ -15171,7 +15858,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-town-hall.md",
       "to": null,
       "fragment": null,
-      "line": 192,
+      "line": 196,
       "kind": "link"
     },
     {
@@ -15180,7 +15867,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
       "to": null,
       "fragment": null,
-      "line": 198,
+      "line": 202,
       "kind": "link"
     },
     {
@@ -15189,7 +15876,7 @@
       "toPath": "docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
       "to": null,
       "fragment": null,
-      "line": 200,
+      "line": 204,
       "kind": "link"
     },
     {
@@ -15198,7 +15885,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
       "to": null,
       "fragment": null,
-      "line": 206,
+      "line": 210,
       "kind": "link"
     },
     {
@@ -15207,7 +15894,7 @@
       "toPath": "docs/knowledge-bank/projects/archive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 212,
+      "line": 216,
       "kind": "link"
     },
     {
@@ -15216,7 +15903,7 @@
       "toPath": "docs/knowledge-bank/projects/icloud-teams-archive-delta-2026-07-15.md",
       "to": null,
       "fragment": null,
-      "line": 218,
+      "line": 222,
       "kind": "link"
     },
     {
@@ -15225,7 +15912,7 @@
       "toPath": "docs/knowledge-bank/projects/google-drive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 224,
+      "line": 228,
       "kind": "link"
     },
     {
@@ -15234,7 +15921,7 @@
       "toPath": "docs/knowledge-bank/projects/social-media-archive-production.md",
       "to": null,
       "fragment": null,
-      "line": 230,
+      "line": 234,
       "kind": "link"
     },
     {
@@ -15243,7 +15930,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 236,
+      "line": 240,
       "kind": "link"
     },
     {
@@ -15252,7 +15939,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
       "to": null,
       "fragment": null,
-      "line": 238,
+      "line": 242,
       "kind": "link"
     },
     {
@@ -15261,7 +15948,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-retrievable-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 244,
+      "line": 248,
       "kind": "link"
     },
     {
@@ -15270,7 +15957,7 @@
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md",
       "to": null,
       "fragment": null,
-      "line": 249,
+      "line": 253,
       "kind": "link"
     },
     {
@@ -15279,16 +15966,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 251,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/projects/urbanhermit-social-population.md",
-      "to": null,
-      "fragment": null,
-      "line": 258,
+      "line": 255,
       "kind": "link"
     },
     {
@@ -15303,10 +15981,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/urbanhermit-social-population.md",
+      "to": null,
+      "fragment": null,
+      "line": 262,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 260,
+      "line": 264,
       "kind": "link"
     },
     {
@@ -15315,7 +16002,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 266,
+      "line": 270,
       "kind": "link"
     },
     {
@@ -15324,7 +16011,7 @@
       "toPath": "docs/knowledge-bank/data/callnyc-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 268,
+      "line": 272,
       "kind": "link"
     },
     {
@@ -15333,7 +16020,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 273,
+      "line": 277,
       "kind": "link"
     },
     {
@@ -15342,7 +16029,7 @@
       "toPath": "docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 275,
+      "line": 279,
       "kind": "link"
     },
     {
@@ -15360,7 +16047,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 281,
+      "line": 285,
       "kind": "link"
     },
     {
@@ -15369,7 +16056,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 283,
+      "line": 287,
       "kind": "link"
     },
     {
@@ -15378,7 +16065,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
       "to": null,
       "fragment": null,
-      "line": 290,
+      "line": 294,
       "kind": "link"
     },
     {
@@ -15387,16 +16074,7 @@
       "toPath": "docs/knowledge-bank/data/wowlist-sunday-dinner-callscript-controls.json",
       "to": null,
       "fragment": null,
-      "line": 292,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "evals/knowledge-bank/runs/2026-07-15-wowlist-sunday-dinner-callscript-continuity.md",
-      "to": null,
-      "fragment": null,
-      "line": 298,
+      "line": 296,
       "kind": "link"
     },
     {
@@ -15411,10 +16089,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "evals/knowledge-bank/runs/2026-07-15-wowlist-sunday-dinner-callscript-continuity.md",
+      "to": null,
+      "fragment": null,
+      "line": 302,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 301,
+      "line": 305,
       "kind": "link"
     },
     {
@@ -15423,7 +16110,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 306,
+      "line": 310,
       "kind": "link"
     },
     {
@@ -15432,7 +16119,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 307,
+      "line": 311,
       "kind": "link"
     },
     {
@@ -15564,10 +16251,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/indexes/professional-record-and-reception.md",
+      "to": "index.knowledge-wiki.professional-record",
+      "fragment": null,
+      "line": 71,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
       "to": "project.nyc-artist-coalition",
       "fragment": null,
-      "line": 71,
+      "line": 75,
       "kind": "link"
     },
     {
@@ -15576,7 +16272,7 @@
       "toPath": "docs/knowledge-bank/_generated/wanted-pages.md",
       "to": null,
       "fragment": null,
-      "line": 74,
+      "line": 78,
       "kind": "link"
     },
     {
@@ -15585,7 +16281,7 @@
       "toPath": "docs/knowledge-bank/workflow.md",
       "to": null,
       "fragment": null,
-      "line": 80,
+      "line": 84,
       "kind": "link"
     },
     {
@@ -16363,6 +17059,24 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/indexes/jamie-public-record-source-edition.md",
+      "from": "index.knowledge-wiki.jamie-public-record-source-edition",
+      "toPath": "docs/knowledge-bank/data/external-source-editions/jamie-burkart-public-record.lock.json",
+      "to": null,
+      "fragment": null,
+      "line": 46,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/jamie-public-record-source-edition.md",
+      "from": "index.knowledge-wiki.jamie-public-record-source-edition",
+      "toPath": "docs/knowledge-bank/evaluations/jamie-public-record-integration-2026-08-03.md",
+      "to": "evaluation.jamie-public-record-integration.2026-08-03",
+      "fragment": null,
+      "line": 48,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/indexes/jamie-sourcebook.md",
       "from": "index.knowledge-wiki.jamie-sourcebook",
       "toPath": "rfcs/0004-jamie-burkart-sourcebook-and-knowledge-ecosystem.md",
@@ -17110,6 +17824,78 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/indexes/professional-record-and-reception.md",
+      "from": "index.knowledge-wiki.professional-record",
+      "toPath": "docs/knowledge-bank/people/jamie-burkart.md",
+      "to": "person.jamie-burkart",
+      "fragment": null,
+      "line": 21,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/professional-record-and-reception.md",
+      "from": "index.knowledge-wiki.professional-record",
+      "toPath": "docs/knowledge-bank/people/warren-sack.md",
+      "to": "person.warren-sack",
+      "fragment": null,
+      "line": 22,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/professional-record-and-reception.md",
+      "from": "index.knowledge-wiki.professional-record",
+      "toPath": "docs/knowledge-bank/people/diya-vij.md",
+      "to": "person.diya-vij",
+      "fragment": null,
+      "line": 25,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/professional-record-and-reception.md",
+      "from": "index.knowledge-wiki.professional-record",
+      "toPath": "docs/knowledge-bank/events/interrogative-design-symposium-2024.md",
+      "to": "event.mit.interrogative-design-symposium.2024",
+      "fragment": null,
+      "line": 28,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/professional-record-and-reception.md",
+      "from": "index.knowledge-wiki.professional-record",
+      "toPath": "docs/knowledge-bank/events/ai-made-me-do-it-symposium-2024.md",
+      "to": "event.studio3.ai-made-me-do-it.2024",
+      "fragment": null,
+      "line": 29,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/professional-record-and-reception.md",
+      "from": "index.knowledge-wiki.professional-record",
+      "toPath": "docs/knowledge-bank/events/in-terms-of-media-symposium-2024.md",
+      "to": "event.weibel.in-terms-of-media.2024",
+      "fragment": null,
+      "line": 30,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/professional-record-and-reception.md",
+      "from": "index.knowledge-wiki.professional-record",
+      "toPath": "docs/knowledge-bank/research-runs/professional-record-promotion-2026-08-03.md",
+      "to": "research.professional-record-promotion.2026-08-03",
+      "fragment": null,
+      "line": 34,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/professional-record-and-reception.md",
+      "from": "index.knowledge-wiki.professional-record",
+      "toPath": "docs/knowledge-bank/indexes/photo-sets/mit-interrogative-design-symposium-2024.md",
+      "to": "index.photo-set.mit-interrogative-design.2024",
+      "fragment": null,
+      "line": 36,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/indexes/project-lineages.md",
       "from": "index.knowledge-wiki.project-lineages",
       "toPath": "docs/knowledge-bank/sources/ucsc-narrative-evaluations-2004-2006.md",
@@ -17697,10 +18483,28 @@
     {
       "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
       "from": "person.jamie-burkart",
+      "toPath": "docs/knowledge-bank/indexes/jamie-public-record-source-edition.md",
+      "to": "index.knowledge-wiki.jamie-public-record-source-edition",
+      "fragment": null,
+      "line": 14,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
+      "from": "person.jamie-burkart",
       "toPath": "docs/knowledge-bank/projections/role-fit-and-referral-map.md",
       "to": "portfolio.role-fit-referral-map",
       "fragment": null,
-      "line": 25,
+      "line": 30,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
+      "from": "person.jamie-burkart",
+      "toPath": "docs/knowledge-bank/indexes/professional-record-and-reception.md",
+      "to": "index.knowledge-wiki.professional-record",
+      "fragment": null,
+      "line": 33,
       "kind": "link"
     },
     {
@@ -17709,7 +18513,7 @@
       "toPath": "docs/knowledge-bank/projects/harry-j-epstein.md",
       "to": "project.harry-j-epstein",
       "fragment": null,
-      "line": 32,
+      "line": 42,
       "kind": "link"
     },
     {
@@ -17718,7 +18522,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
       "to": "project.wowlist",
       "fragment": null,
-      "line": 33,
+      "line": 43,
       "kind": "link"
     },
     {
@@ -17727,7 +18531,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc.md",
       "to": "project.callnyc",
       "fragment": null,
-      "line": 34,
+      "line": 44,
       "kind": "link"
     },
     {
@@ -17736,7 +18540,7 @@
       "toPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
       "to": "method.source-backed-team-memory",
       "fragment": null,
-      "line": 35,
+      "line": 45,
       "kind": "link"
     },
     {
@@ -17745,7 +18549,7 @@
       "toPath": "docs/knowledge-bank/organizations/nyc-artist-coalition.md",
       "to": "organization.nyc-artist-coalition",
       "fragment": null,
-      "line": 39,
+      "line": 49,
       "kind": "link"
     },
     {
@@ -17754,7 +18558,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-town-hall-orientation.md",
       "to": "project.kc-town-hall",
       "fragment": null,
-      "line": 40,
+      "line": 50,
       "kind": "link"
     },
     {
@@ -17763,7 +18567,7 @@
       "toPath": "docs/knowledge-bank/projects/talks-not-raids-orientation.md",
       "to": "project.talks-not-raids",
       "fragment": null,
-      "line": 41,
+      "line": 51,
       "kind": "link"
     },
     {
@@ -17772,7 +18576,7 @@
       "toPath": "docs/knowledge-bank/projects/fair-rent-nyc.md",
       "to": "project.fair-rent-nyc",
       "fragment": null,
-      "line": 42,
+      "line": 52,
       "kind": "link"
     },
     {
@@ -17781,7 +18585,7 @@
       "toPath": "docs/knowledge-bank/projects/waterways-participatory-art-orientation.md",
       "to": "project.waterways-participatory-art",
       "fragment": null,
-      "line": 46,
+      "line": 56,
       "kind": "link"
     },
     {
@@ -17790,7 +18594,7 @@
       "toPath": "docs/knowledge-bank/projects/nter-chng.md",
       "to": "project.nter-chng",
       "fragment": null,
-      "line": 47,
+      "line": 57,
       "kind": "link"
     },
     {
@@ -17799,7 +18603,7 @@
       "toPath": "docs/knowledge-bank/projects/sunday-dinner-196-orientation.md",
       "to": "project.sunday-dinner-196",
       "fragment": null,
-      "line": 48,
+      "line": 58,
       "kind": "link"
     },
     {
@@ -17808,7 +18612,7 @@
       "toPath": "docs/knowledge-bank/projects/office-of-nightlife-town-halls.md",
       "to": "project.office-of-nightlife-town-halls",
       "fragment": null,
-      "line": 49,
+      "line": 59,
       "kind": "link"
     },
     {
@@ -17817,7 +18621,7 @@
       "toPath": "docs/knowledge-bank/timelines/practice-2004-present.md",
       "to": "timeline.jamie-practice.2004-present",
       "fragment": null,
-      "line": 61,
+      "line": 71,
       "kind": "link"
     },
     {
@@ -17826,7 +18630,7 @@
       "toPath": "docs/knowledge-bank/methods/collective-credit-and-protected-absence.md",
       "to": "method.collective-credit-protected-absence",
       "fragment": null,
-      "line": 74,
+      "line": 84,
       "kind": "link"
     },
     {
@@ -18466,6 +19270,33 @@
       "to": null,
       "fragment": null,
       "line": 65,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/jamie-public-record-initial-manifest.md",
+      "from": "source.jamie-public-record-initial-manifest",
+      "toPath": "docs/knowledge-bank/data/external-source-editions/jamie-burkart-public-record.lock.json",
+      "to": null,
+      "fragment": null,
+      "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/jamie-public-record-initial-manifest.md",
+      "from": "source.jamie-public-record-initial-manifest",
+      "toPath": "docs/knowledge-bank/evaluations/jamie-public-record-integration-2026-08-03.md",
+      "to": "evaluation.jamie-public-record-integration.2026-08-03",
+      "fragment": null,
+      "line": 11,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/jamie-public-record-initial-manifest.md",
+      "from": "source.jamie-public-record-initial-manifest",
+      "toPath": "docs/knowledge-bank/data/external-source-editions/jamie-burkart-public-record.manifest.json",
+      "to": null,
+      "fragment": null,
+      "line": 9,
       "kind": "link"
     },
     {

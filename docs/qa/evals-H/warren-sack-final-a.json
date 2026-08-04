@@ -1,35 +1,38 @@
 {
-  "evaluator": "Imagined Prof. Warren Sack lens; independent reader A, not the named professor or an endorsement",
-  "reviewerId": "sack-reader-a-2026-07-28-add0c2de",
+  "evaluator": "Imagined Professor Warren Sack lens; independent reader A, not the named professor or an endorsement",
+  "reviewerId": "sack-a-2026-08-03-04b71b18",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "add0c2de156ae4bc9e1b3ca7d96dd2bf219692f3abbf0dabea6d9a7bd1abd723",
+  "candidateSha256": "04b71b1844c938dd1ca94927d864284352e1683f19a6087b0c404243b817eebf",
   "score": 4,
   "pass": true,
   "evidence": [
-    "Independently recomputed the exact SHA-256 over all 115 ordered candidate paths.",
-    "The About page plainly states the recursive sequence from observing relationships through modeling, prototyping, use, and documented continuation.",
-    "Harry J. Epstein, NYC Artist Coalition and FairRentNYC, and Sunday Dinner and 196 each make the full loop reconstructable through actual interfaces, collective use, revision, and handoff.",
-    "WOWList, CallNYC, and source-backed team memory add bounded historical and present prototype-to-use continuity.",
-    "Protected coursework remains held and is not used to claim invention, peer-reviewed research, production deployment, sole authorship, or current Max/Jitter proficiency."
+    "Independently recomputed the exact candidate SHA-256 over all 116 ordered paths using scripts/lib/professor-lens-eval.mjs; it matches 04b71b1844c938dd1ca94927d864284352e1683f19a6087b0c404243b817eebf.",
+    "The About page names the recursive method plainly: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.",
+    "Three explicitly current loops make the full sequence reconstructable: Harry J. Epstein Company joins customer and team relationships to a maintained storefront and iterative workflows; NYC Artist Coalition and FairRentNYC joins public-source and actor models to campaign and participation interfaces, running records, and handoffs; Sunday Dinner and 196 joins hospitality and access relationships to recurring gatherings, residency workflows, and repeatable private-record-safe handoffs.",
+    "WOWList, archived CallNYC, and source-backed team memory add bounded continuity from social structure and information architecture to organizer use, resident-facing pathways, review, correction, and continuation.",
+    "The source note and public registry keep protected UCSC coursework held, preserve collective credit, and reject invention, peer-reviewed research, production deployment, sole authorship, current Max/Jitter proficiency, or current-service implications from historical evidence.",
+    "The fresh 2026-08-03 production-build matrix covers 56 unique route and viewport rows with no recorded HTTP, axe, overflow, image, request, heading, or landmark failures; all four focused visual occurrences preserve the expected caption and Elana Gordon credit without overlap."
   ],
   "gaps": [
-    "Human screen-reader and browser-zoom review remain open.",
-    "Rights, consent, production, deployment, and indexing remain open."
+    "Human screen-reader, keyboard-only, browser-zoom, and assistive-technology review remain open; the matrix is automated evidence, not full accessibility approval.",
+    "Image caption and credit presence do not clear rights or consent; Jamie approval and any asset-specific publication review remain open.",
+    "This single holdout satisfies the individual scorecard, but the rubric's three-judge median must be computed across all three independent reviews.",
+    "Production-build evidence does not authorize production release, deployment, or indexing; staging, deployment, and Jamie-controlled indexing gates remain open."
   ],
   "safety_findings": [
-    "Coalition outcomes remain collective and institutional actions remain attributed to public bodies.",
-    "Private records and unapproved source media remain withheld.",
-    "The lab is framed as an early method and CallNYC as archived, not current production service."
+    "Coalition, civic, event, and gallery work remains collectively credited; public-body actions and collaborator roles are not converted into sole causation or sole authorship.",
+    "Private participant records, protected educational records, private correspondence, and unapproved media remain withheld; access and documentation are not treated as consent or publication permission.",
+    "CallNYC remains archived, independent, unofficial, and not a current government service; source-backed team memory remains an early bounded method, not a completed client pilot or production SaaS."
   ],
-  "recommendation": "Pass PR-016 at 4 for this exact candidate, with every human approval and release gate preserved.",
+  "recommendation": "Pass this independent PR-016 holdout at 4 for the exact recomputed candidate. The public composition fully meets the Warren Sack lens while every human approval, rights, accessibility, production, deployment, and indexing gate remains separate and open.",
   "provenance": {
-    "provider": "codex-native-subagent",
-    "reviewReceiptDigest": "9029d68320c2f5d1c1e34993acbe0240784f18d348492ca0125579f12e18fd9c",
+    "provider": "codex-native-independent-review",
+    "reviewReceiptDigest": "8b854fc38d8c28e1fbaad5a3201471d39ffa276f6703193b39980e917895fb35",
     "reviewMode": "bounded independent holdout",
     "reviewerRole": "reader A",
-    "reviewedAt": "2026-07-28",
-    "candidatePathCount": 115,
+    "reviewedAt": "2026-08-03",
+    "candidatePathCount": 116,
     "candidateFingerprintRecomputed": true,
     "responsiveMatrixRowsReviewed": 56,
     "focusedVisualOccurrencesReviewed": 4,

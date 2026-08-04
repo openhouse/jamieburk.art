@@ -38,6 +38,15 @@ test("an overlapping photo credit occurrence fails closed", () => {
   assert.equal(result.passed, false);
 });
 
+test("an unobserved homepage-to-About path fails closed", () => {
+  const report = structuredClone(current.report);
+  report.navigationReview.navigationCompleted = false;
+  report.navigationReview.pass = false;
+  const result = validateResponsiveAccessibilityEvidence(defaultRepoRoot, report);
+  assert.equal(result.navigationReviewPasses, false);
+  assert.equal(result.passed, false);
+});
+
 test("a coordinated canonical-route substitution fails closed", () => {
   const report = structuredClone(current.report);
   report.routes[0] = "/noncanonical-replacement";

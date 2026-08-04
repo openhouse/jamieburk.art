@@ -29,8 +29,9 @@ superseded_by: null
 # Jamie Burkart Sourcebook and Federated Knowledge Ecosystem
 
 The [initial proposed architecture](./history/0004-initial-proposal-knowledge-ecosystem-and-public-source-editions.md)
-is preserved as a historical design input. This file is the sole canonical RFC
-0004 and records the later, bounded implementation decision.
+and [professional-record implementation snapshot](./history/0004-professional-record-implementation-snapshot.md)
+are preserved as historical design inputs. This file is the sole canonical RFC
+0004 and records the combined, bounded implementation decision.
 
 ## Summary
 
@@ -72,6 +73,16 @@ The first increment is deliberately narrower than the full architecture:
 This is an implementation decision, not a finding that every later source class
 has a publication basis. The unresolved questions below remain open for the
 separate-repository and third-party-perspective phases.
+
+A concurrent professional-record increment also contributes a content-addressed,
+reference-only import from the governed sibling source edition: twelve
+public-safe records, seven pinned references to Jamie's already-public
+statements, and four explicit public-coverage gaps. The Knowledge Wiki records
+institutional facts, encounters, reception, and held claims without importing
+protected source bodies or inferring recommendation, endorsement, speaking
+roles, or publication permission. This increment remains an in-repository
+research and interpretation layer; it adds no portfolio route or public claim
+projection.
 
 ## Motivation
 

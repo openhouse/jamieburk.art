@@ -1,9 +1,9 @@
 {
   "reportVersion": 3,
-  "checkedAt": "2026-07-28T15:31:27.601Z",
+  "checkedAt": "2026-08-03T18:41:24.976Z",
   "baseUrl": "http://127.0.0.1:3055",
-  "publicSurfaceFingerprint": "43164a9b4f108e2d3ea4dc919aa11cd42f119e67c68e84917af61a6469af73be",
-  "publicSurfaceFileCount": 113,
+  "publicSurfaceFingerprint": "dfcf9144e9eb0bf511c1ea51cc7b90466066698cb64a7c636230192cadfa5daa",
+  "publicSurfaceFileCount": 114,
   "captureMethod": "Playwright Chromium screenshots of the current built local candidate; About captures are deliberately framed on the through-line and current systems loops; no deployment or indexing action.",
   "routes": [
     {
@@ -19,7 +19,7 @@
           },
           "pixelWidth": 1280,
           "pixelHeight": 900,
-          "sha256": "849581d18e1b4a00c1f34beb657ae8a2d2d0d02dbd1b20444bd500450fec20da",
+          "sha256": "7ff02c019578cce0298caf900c7b880e3d9ffc2e0e97dd15c789ad85dbcd8b80",
           "file": "candidate-home-desktop.png"
         },
         {
@@ -30,7 +30,7 @@
           },
           "pixelWidth": 375,
           "pixelHeight": 812,
-          "sha256": "ab2d8881abce07978e515bf123b4f4f26e959e8acb9940877da4a8e014bec3e1",
+          "sha256": "a3233b7565d0417ded117b0b2cfd5d504bbee270ae408026853739b8008a3ef1",
           "file": "candidate-home-viewport.png"
         }
       ]
@@ -48,7 +48,7 @@
           },
           "pixelWidth": 1280,
           "pixelHeight": 900,
-          "sha256": "4cb33be5668d035b9dded6b3d38d4d6dd07386360716e362010e40af60e0b98c",
+          "sha256": "74724ed4278bab16ea13080ce969dc115054c5f0c8863c159b1623d10a246ac1",
           "file": "professor-lenses-about-desktop.png",
           "framedContent": {
             "throughLineHeadingPresent": true,
@@ -64,7 +64,7 @@
           },
           "pixelWidth": 375,
           "pixelHeight": 1200,
-          "sha256": "2009515f869df0b43351edf182d12987b71ecbf006f53df3e0d521d2be09ce18",
+          "sha256": "413e2f7911f5ee140209fb952eaf64061c00a63970556bc5d782e2ec677f4729",
           "file": "professor-lenses-about-mobile.png",
           "framedContent": {
             "throughLineHeadingPresent": true,
@@ -75,5 +75,6 @@
       ]
     }
   ],
-  "passed": true
+  "passed": true,
+  "verification": "Fresh Playwright viewport captures from the exact local production build; screenshots retained and content-addressed in this directory."
 }

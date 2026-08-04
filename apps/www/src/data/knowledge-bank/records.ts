@@ -13,6 +13,7 @@ import { nycacFacebookEventKnowledge } from "./nycac-facebook-events-2026-07.ts"
 import { nycacFacebookPostKnowledge } from "./nycac-facebook-posts-2026-07.ts";
 import { personalWowListFacebookEventKnowledge } from "./personal-wowlist-facebook-events-2026-07.ts";
 import { participationContinuityKnowledge } from "./participation-continuity-2026-07.ts";
+import { professionalRecordAugust2026 } from "./professional-record-2026-08.ts";
 import { nycacImplementationEvidence } from "./nycac-implementation-evidence.ts";
 import { nycacInstitutionalCapacity } from "./nycac-institutional-capacity.ts";
 import { nycacSharedFolderProduction } from "./nycac-shared-folder-production-2026-07.ts";
@@ -66,6 +67,7 @@ const knowledgeBankInput = {
     ...nycacFacebookPostKnowledge.intakeItems,
     ...personalWowListFacebookEventKnowledge.intakeItems,
     ...participationContinuityKnowledge.intakeItems,
+    ...professionalRecordAugust2026.intakeItems,
     ...nycacSocialPopulationJuly2026.intakeItems,
     ...nycacSourceExpansion.intakeItems,
     ...nycacSourceExpansionII.intakeItems,
@@ -109,6 +111,7 @@ const knowledgeBankInput = {
     ...nycacFacebookPostKnowledge.observations,
     ...personalWowListFacebookEventKnowledge.observations,
     ...participationContinuityKnowledge.observations,
+    ...professionalRecordAugust2026.observations,
     ...nycacSocialPopulationJuly2026.observations,
     ...nycacSourceExpansion.observations,
     ...nycacSourceExpansionII.observations,
@@ -256,6 +259,7 @@ const knowledgeBankInput = {
     ...nycacFacebookPostKnowledge.sources,
     ...personalWowListFacebookEventKnowledge.sources,
     ...participationContinuityKnowledge.sources,
+    ...professionalRecordAugust2026.sources,
     ...nycacSocialPopulationJuly2026.sources,
     ...nycacSourceExpansion.sources,
     ...nycacSourceExpansionII.sources,
@@ -396,6 +400,7 @@ const knowledgeBankInput = {
     ...nycacFacebookPostKnowledge.claims,
     ...personalWowListFacebookEventKnowledge.claims,
     ...participationContinuityKnowledge.claims,
+    ...professionalRecordAugust2026.claims,
     ...nycacSocialPopulationJuly2026.claims,
     ...nycacSourceExpansion.claims,
     ...nycacSourceExpansionII.claims,
@@ -458,6 +463,7 @@ const knowledgeBankInput = {
     ...nycacFacebookPostKnowledge.researchInquiries,
     ...personalWowListFacebookEventKnowledge.researchInquiries,
     ...participationContinuityKnowledge.researchInquiries,
+    ...professionalRecordAugust2026.researchInquiries,
     ...nycacSocialPopulationJuly2026.researchInquiries,
     ...nycacSourceExpansion.researchInquiries,
     ...nycacSourceExpansionII.researchInquiries,

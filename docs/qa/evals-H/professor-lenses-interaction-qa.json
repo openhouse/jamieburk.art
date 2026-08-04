@@ -1,60 +1,60 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-07-28T15:31:27.601Z",
+  "checkedAt": "2026-08-03T18:41:24.976Z",
   "baseUrl": "http://127.0.0.1:3055",
-  "publicSurfaceFingerprint": "43164a9b4f108e2d3ea4dc919aa11cd42f119e67c68e84917af61a6469af73be",
-  "publicSurfaceFileCount": 113,
+  "publicSurfaceFingerprint": "dfcf9144e9eb0bf511c1ea51cc7b90466066698cb64a7c636230192cadfa5daa",
+  "publicSurfaceFileCount": 114,
   "method": "Playwright keyboard interaction plus bounded DOM and viewport inspection on the built local candidate. This is not a human screen-reader or assistive-technology session.",
   "keyboard": {
     "desktopTabSequence": [
       {
         "tag": "a",
-        "text": "Skip to content",
+        "text": "Skiptocontent",
         "href": "#main",
-        "id": null,
-        "focusVisible": true
+        "focusVisible": true,
+        "id": null
       },
       {
         "tag": "a",
-        "text": "JBJamie Burkart",
+        "text": "JBJamieBurkart",
         "href": "/",
-        "id": null,
-        "focusVisible": true
+        "focusVisible": true,
+        "id": null
       },
       {
         "tag": "a",
         "text": "Work",
         "href": "/work",
-        "id": null,
-        "focusVisible": true
+        "focusVisible": true,
+        "id": null
       },
       {
         "tag": "a",
-        "text": "Technical Operations",
+        "text": "TechnicalOperations",
         "href": "/work/technical-operations",
-        "id": null,
-        "focusVisible": true
+        "focusVisible": true,
+        "id": null
       },
       {
         "tag": "a",
         "text": "About",
         "href": "/about",
-        "id": null,
-        "focusVisible": true
+        "focusVisible": true,
+        "id": null
       },
       {
         "tag": "a",
         "text": "Resume",
         "href": "/resume",
-        "id": null,
-        "focusVisible": true
+        "focusVisible": true,
+        "id": null
       },
       {
         "tag": "a",
         "text": "Contact",
         "href": "/contact",
-        "id": null,
-        "focusVisible": true
+        "focusVisible": true,
+        "id": null
       }
     ],
     "skipLinkIsFirst": true,
@@ -68,17 +68,17 @@
     "menuFocusBeforeOpen": {
       "tag": "summary",
       "text": "Menu",
+      "focusVisible": true,
       "href": null,
-      "id": null,
-      "focusVisible": true
+      "id": null
     },
     "menuOpen": true,
     "firstMobileMenuLink": {
       "tag": "a",
       "text": "Work",
       "href": "/work",
-      "id": null,
-      "focusVisible": true
+      "focusVisible": true,
+      "id": null
     },
     "passed": true
   },

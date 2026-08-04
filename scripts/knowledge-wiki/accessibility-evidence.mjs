@@ -103,6 +103,22 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
         occurrence.captionWithinViewport === true &&
         occurrence.captionOverlapsPrimaryCopy === false
     );
+  const navigationReviewPasses =
+    report.navigationReview?.startRoute === "/" &&
+    report.navigationReview?.destinationRoute === "/about" &&
+    report.navigationReview?.startHttpStatus === 200 &&
+    report.navigationReview?.selector === 'a[href="/about"]' &&
+    report.navigationReview?.linkVisible === true &&
+    report.navigationReview?.navigationCompleted === true &&
+    report.navigationReview?.destinationH1 === "About" &&
+    report.navigationReview?.destinationMainPresent === true &&
+    report.navigationReview?.viewport?.width === 1280 &&
+    report.navigationReview?.renderedScreenshot?.retainedInPublicGit === false &&
+    /^[a-f0-9]{64}$/.test(
+      report.navigationReview?.renderedScreenshot?.sha256 ?? ""
+    ) &&
+    report.navigationReview?.renderedScreenshot?.byteLength > 0 &&
+    report.navigationReview?.pass === true;
 
   return {
     passed:
@@ -114,6 +130,7 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
       rowsPass &&
       summaryPasses &&
       focusedVisualReviewPasses &&
+      navigationReviewPasses &&
       report.publicSurfaceFingerprint === current.fingerprint &&
       report.publicSurfaceFileCount === current.fileCount,
     report,
@@ -122,6 +139,7 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
     completeMatrix,
     rowsPass,
     summaryPasses,
-    focusedVisualReviewPasses
+    focusedVisualReviewPasses,
+    navigationReviewPasses
   };
 }

@@ -1,35 +1,37 @@
 {
-  "evaluator": "Imagined Prof. Margaret Morse lens; independent reader A, not the named professor or an endorsement",
-  "reviewerId": "morse-reader-a-2026-07-28-add0c2de",
+  "evaluator": "Imagined Professor Margaret Morse lens; independent reader A, not the named professor or an endorsement",
+  "reviewerId": "morse-a-2026-08-03-04b71b18",
   "phase": "holdout",
   "lensId": "PR-015",
-  "candidateSha256": "add0c2de156ae4bc9e1b3ca7d96dd2bf219692f3abbf0dabea6d9a7bd1abd723",
+  "candidateSha256": "04b71b1844c938dd1ca94927d864284352e1683f19a6087b0c404243b817eebf",
   "score": 4,
   "pass": true,
   "evidence": [
-    "Independently recomputed the exact SHA-256 over all 115 ordered candidate paths.",
-    "The one-click About page explicitly connects artistic, civic, technical, and social practice under Systems people can inhabit.",
-    "Open House, WOWList, Sunday Dinner and 196, NYC Artist Coalition, and source-backed team memory preserve experimentation, hospitality, attention, documentation, and care with collective-credit boundaries.",
-    "The East River occurrence restores embodiment and place while retaining factual captioning and visible Elana Gordon credit at all four reviewed viewports.",
-    "All 56 responsive rows and the bounded keyboard, reflow, and semantic-order checks passed without reported accessibility, overflow, request, or image failures."
+    "Independently recomputed the candidate SHA-256 as 04b71b1844c938dd1ca94927d864284352e1683f19a6087b0c404243b817eebf over 116 ordered paths using scripts/lib/professor-lens-eval.mjs.",
+    "The one-click About composition explicitly connects artistic, civic, technical, and social practice under Systems people can inhabit while keeping Jamie legible as a technical project manager and implementation lead.",
+    "The public Open House claim is source-backed and bounded: Jamie initiated the ten-day experiment, while communal governance, participation, and many-perspective documentation remain collective.",
+    "Harry J. Epstein Company, NYC Artist Coalition and FairRentNYC, Sunday Dinner and 196, WOWList, and source-backed team memory trace distinct loops of relationships, interfaces used with people, learning, documentation, hospitality, care, and continuation.",
+    "The production-build matrix dated 2026-08-03 reports 56 of 56 responsive route rows with HTTP 200, no axe violations, overflow, failed requests, broken or unloaded-after-scroll images, unlabeled images, or heading and landmark failures.",
+    "All four focused visual occurrences preserve the East River place caption and visible Elana Gordon credit without overlap or viewport escape, strengthening place and embodiment without treating credit as a rights clearance."
   ],
   "gaps": [
-    "Human screen-reader and browser-zoom review remain open.",
-    "Rights, consent, exact credit and crop, Jamie production approval, deployment, and indexing remain human gates."
+    "Human screen-reader, assistive-technology, and browser-zoom review remain open; the automated matrix is not a substitute for those checks.",
+    "Rights, consent, exact credit and crop, Jamie production approval, deployment, and production indexing remain separate human gates."
   ],
   "safety_findings": [
-    "Protected educational records and private participant materials remain outside public projection.",
-    "Collective projects remain collectively framed; no faculty endorsement, sole-causation claim, or private-source authority was found.",
-    "This score is evaluation evidence only and does not clear a human publication gate."
+    "The assessment is limited to the public composition and does not rely on held professional-record material.",
+    "Protected educational records, private correspondence, participant identities, private paths, and unapproved testimonials remain outside public projection.",
+    "Collective projects remain collectively framed; no professor endorsement, sole-authorship claim, romanticized vulnerability, or private-source authority was found.",
+    "A score of 4 is evaluation evidence for this exact candidate only and does not authorize publication, deployment, or indexing."
   ],
-  "recommendation": "Pass PR-015 at 4 for this exact candidate while preserving every stated human and release gate.",
+  "recommendation": "Pass PR-015 at 4 for this exact candidate while preserving all stated privacy, collective-credit, accessibility, rights, consent, production, deployment, and indexing gates.",
   "provenance": {
-    "provider": "codex-native-subagent",
-    "reviewReceiptDigest": "6e730366afe03a6cf910a95ae5e4ecd9ad1110af9dd2dd04662b3bcd0bd2468a",
+    "provider": "codex-native-independent-review",
+    "reviewReceiptDigest": "1844fa5a35d7644aec7220dc3eab85a7e47d5c359dc094fb783c468be127b33a",
     "reviewMode": "bounded independent holdout",
     "reviewerRole": "reader A",
-    "reviewedAt": "2026-07-28",
-    "candidatePathCount": 115,
+    "reviewedAt": "2026-08-03",
+    "candidatePathCount": 116,
     "candidateFingerprintRecomputed": true,
     "responsiveMatrixRowsReviewed": 56,
     "focusedVisualOccurrencesReviewed": 4,

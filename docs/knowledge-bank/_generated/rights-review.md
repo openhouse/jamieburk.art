@@ -3,12 +3,13 @@
 
 **Source commit:** `606ebdbc6db61d8dd6f561a2a47f47829cd26481`
 **Generation time:** 2026-08-03T14:01:06-04:00
-**Source fingerprint:** `219613910021b99be123ba56a983dfa3029cf61b39dc3c640a9106e0ffe1db5e`
+**Source fingerprint:** `ca8624425b000ec9d9dc8b7f62527d950de065e69766aabd2f8a30479dd3a3d0`
 
 - `asset.photo.digital-district.001` - rights `permission-needed`, consent `review-needed`, display `hold`
 - `asset.photo.kc-town-hall.hard-hat.001` - rights `permission-needed`, consent `not-applicable`, display `hold`
 - `asset.photo.kc-town-hall.kc-star-aerial.2021` - rights `do-not-publish`, consent `not-applicable`, display `hold`
 - `asset.photo.kc-town-hall.stewardship-interior.001` - rights `permission-needed`, consent `review-needed`, display `hold`
+- `asset.photo-set.mit-interrogative-design.2024` - rights `permission-needed`, consent `review-needed`, display `hold`
 - `asset.photo.nyc-council.field-kit.2026.001` - rights `permission-needed`, consent `not-applicable`, display `hold`
 - `asset.photo.nycac-dcla-listening-room.2017.001` - rights `unknown`, consent `review-needed`, display `hold`
 - `asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb` - rights `permission-needed`, consent `review-needed`, display `hold`

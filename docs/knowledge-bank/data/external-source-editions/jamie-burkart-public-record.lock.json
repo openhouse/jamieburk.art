@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "source_repository": "openhouse/jamie-burkart-public-record",
+  "source_repository_visibility": "private",
+  "source_branch": "feature/initial-public-source-edition",
+  "source_commit": "f9858d41b28b36c35aece8e6986629ac569aaa84",
+  "source_manifest_path": "manifests/public-knowledge-manifest.json",
+  "source_manifest_sha256": "23a2a65ce9769a3d7643727bf533857dbc35a26f3c880bd06d57e8503ba074a8",
+  "source_candidate_fingerprint": "ff882202174c3f117af4e48a78c21c3d2ff2bea575be2459dcc7b3b9d54f1612",
+  "record_count": 12,
+  "imported_at": "2026-08-03",
+  "imported_by": "Jamie Burkart and Codex",
+  "public_release_authorized": false,
+  "projection_state": "knowledge-wiki-reference-only",
+  "private_runtime_dependency": false,
+  "rollback": "Remove the lock, snapshot, data module, and Wiki index in one reviewed change; public builds must remain independent of the sibling repository."
+}

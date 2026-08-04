@@ -3,20 +3,21 @@
 
 **Source commit:** `606ebdbc6db61d8dd6f561a2a47f47829cd26481`
 **Generation time:** 2026-08-03T14:01:06-04:00
-**Source fingerprint:** `219613910021b99be123ba56a983dfa3029cf61b39dc3c640a9106e0ffe1db5e`
+**Source fingerprint:** `ca8624425b000ec9d9dc8b7f62527d950de065e69766aabd2f8a30479dd3a3d0`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 260
+- Nodes added: 279
 - Nodes removed: 0
-- Edges added: 844
+- Edges added: 899
 - Edges removed: 0
 - New type-aware orphans: 0
-- Current rights-review records: 185
+- Current rights-review records: 186
 
 ## Added nodes
 
 - `asset.graphic.kc-town-hall.walkshed.2019.001`
+- `asset.photo-set.mit-interrogative-design.2024`
 - `asset.photo.east-river-manhattan-bridge.2022.001`
 - `asset.photo.kc-town-hall.hard-hat.001`
 - `asset.photo.kc-town-hall.kc-star-aerial.2021`
@@ -208,6 +209,8 @@ Compared with the graph artifact on `origin/develop`.
 - `decision.photo.pre-launch.rights-narrowing.2026-07-28`
 - `edition.layout-c.2026-07`
 - `evaluation.curatorial.layout-c.home-east-river.v1`
+- `evaluation.jamie-public-record-integration.2026-08-03`
+- `event.mit.interrogative-design-symposium.2024`
 - `event.nyc.commercial-rent.friends-and-lovers.2026-02-17`
 - `event.nyc.commercial-rent.project-x.2026-03-10`
 - `event.nyc.commercial-rent.public-event.2025-11-13`
@@ -223,19 +226,26 @@ Compared with the graph artifact on `origin/develop`.
 - `event.nycc.stated-meeting.commercial-rent-int-93-introduction.2022-03-24`
 - `event.nys.commercial-rent.bill-introduction-release.2026-02-17`
 - `event.nys.commercial-rent.jimmys-corner-rally.2026-04-10`
+- `event.studio3.ai-made-me-do-it.2024`
+- `event.weibel.in-terms-of-media.2024`
 - `index.knowledge-wiki.commercial-rent-public-support`
 - `index.knowledge-wiki.commercial-rent-testimony`
+- `index.knowledge-wiki.jamie-public-record-source-edition`
 - `index.knowledge-wiki.jamie-sourcebook`
 - `index.knowledge-wiki.photography`
 - `index.knowledge-wiki.photography-notebook`
+- `index.knowledge-wiki.professional-record`
 - `index.knowledge-wiki.public-testimony-and-hearing-voices`
 - `index.photo-set.east-river-canoe.2022`
 - `index.photo-set.kc-town-hall-fieldwork`
+- `index.photo-set.mit-interrogative-design.2024`
 - `index.photo-set.nycac-dcla-formation.2017`
 - `index.photo-set.nycac-project-sites.2017-2026`
 - `index.public-testimony`
 - `method.photography-east-river-canary`
+- `person.diya-vij`
 - `person.elana-gordon`
+- `person.warren-sack`
 - `projection.photo.layout-c.home.east-river`
 - `research-inquiry.documented-canoe-bike-journeys`
 - `research-inquiry.photography.196-first-pass-proposal`
@@ -243,13 +253,17 @@ Compared with the graph artifact on `origin/develop`.
 - `research-inquiry.photography.field-corpus-001`
 - `research-inquiry.photography.oral-history-stewardship-afterlife-001`
 - `research.photographic-source-return.2026-07-26`
+- `research.professional-record-promotion.2026-08-03`
 - `source.heteroglossia.cabaret-law.2017-09-14`
 - `source.heteroglossia.commercial-rent-stabilization.2021-09-17`
 - `source.heteroglossia.cultural-affairs-budget.2018-03-16`
 - `source.heteroglossia.sbjsa.2018-10-22`
+- `source.jamie-public-record-initial-manifest`
 - `source.kc-town-hall.local-digital-archive.2026-07`
 - `source.kc-town-hall.photographic-oral-histories.2026-07`
+- `source.mit.interrogative-design-symposium.2024`
 - `source.nyc-council.field-kit-oral-history.2026-07`
+- `source.nyc.diya-vij-appointment.2026`
 - `source.nycac.dcla-formation-source-return.2026-07`
 - `source.nycac.project-site-photograph-census.2026-07-28`
 - `source.nycc.consumer-affairs.cabaret-law-2017-06-19.official-transcript`
@@ -266,13 +280,18 @@ Compared with the graph artifact on `origin/develop`.
 - `source.nysboe.primary.ad56.2026`
 - `source.permission.elana-gordon.east-river.2026-07`
 - `source.photo-metadata.east-river.2022.public-safe`
+- `source.professional-record.photo-field.2026-08`
+- `source.professional-record.research.2026-08`
 - `source.protected.current-workstream.2026-07-27`
 - `source.recollection.jamie-canoe-commuting.2026-07`
 - `source.statement.commercial-rent.jimmys-corner-rally.2026-04-10`
 - `source.statement.commercial-rent.state-introduction.2026-02-17`
+- `source.studio3.ai-made-me-do-it.2024`
 - `source.transcript.commercial-rent.friends-and-lovers.2026-02-17`
 - `source.transcript.commercial-rent.project-x.2026-03-10`
 - `source.transcript.commercial-rent.public-event.2025-11-13`
+- `source.ucsc.warren-sack-profile.2026`
+- `source.weibel.in-terms-of-media.2024`
 - `testimony.jamie-burkart.cabaret-law.2017-09-14`
 - `testimony.jamie-burkart.cultural-affairs-budget.2018-03-16`
 - `testimony.jamie-burkart.sbjsa.2018-10-22`

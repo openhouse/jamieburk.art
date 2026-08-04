@@ -1,35 +1,41 @@
 {
-  "evaluator": "Imagined Prof. Margaret Morse lens; independent reader B, not the named professor or an endorsement",
-  "reviewerId": "morse-reader-b-2026-07-28-add0c2de",
+  "evaluator": "Imagined Professor Margaret Morse lens; independent reader B, not the named professor or an endorsement",
+  "reviewerId": "morse-b-2026-08-03-04b71b18-hillclimb",
   "phase": "holdout",
   "lensId": "PR-015",
-  "candidateSha256": "add0c2de156ae4bc9e1b3ca7d96dd2bf219692f3abbf0dabea6d9a7bd1abd723",
+  "candidateSha256": "04b71b1844c938dd1ca94927d864284352e1683f19a6087b0c404243b817eebf",
   "score": 4,
   "pass": true,
   "evidence": [
-    "Independently recomputed the exact SHA-256 over all 115 ordered candidate paths.",
-    "Open House establishes a bounded participatory artistic lineage that continues through co-built civic, social, and technical systems.",
-    "Sunday Dinner and 196 make hospitality, trust, onboarding, artist support, documentation, and returning visible as operating practice while participant records remain private.",
-    "The place-specific homepage photograph keeps the portfolio embodied rather than reducing it to a claims system.",
-    "All 56 route and viewport rows and four focused caption-credit occurrences passed their declared checks."
+    "Independently recomputed the exact candidate fingerprint as 04b71b1844c938dd1ca94927d864284352e1683f19a6087b0c404243b817eebf over 116 ordered paths using scripts/lib/professor-lens-eval.mjs.",
+    "The newly added navigationReview closes the prior one-click evidence gap: in the exact production build, the visible homepage About link at a[href=\"/about\"] was clicked, navigation completed at /about, and the destination presented H1 About and a main landmark.",
+    "The navigationReview also closes the prior rendered-capture evidence gap by binding the inspected 1280-pixel-wide full-page render to SHA-256 df047e1af973a0d775afab35f86e9554fd720a39e51635dcdf61e02fa71f1768 and byte length 585715 while retaining no screenshot in public Git.",
+    "The one-click About composition visibly connects artistic, civic, technical, and social practice under Systems people can inhabit while keeping Jamie legible as a technical project manager and implementation lead.",
+    "Open House, Sunday Dinner and 196, NYC Artist Coalition and FairRentNYC, WOWList, Harry J. Epstein Company, and source-backed team memory provide more than three concrete continuities through collective experimentation, hospitality, participation, attention, documentation, place, care, human use, and continuation.",
+    "The recursive sequence—observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue—makes clear why these systems differ from conventional administration.",
+    "All 56 production-build route and viewport rows pass their declared HTTP, heading, landmark, axe, overflow, request, and image checks; all four focused visual occurrences retain the East River caption and Elana Gordon credit without overlap or viewport escape.",
+    "The repository's fail-closed accessibility-evidence validator accepts the current public-surface fingerprint, complete matrix, focused visual review, and navigationReview."
   ],
   "gaps": [
-    "The broader documentary-photo constellation remains held pending exact source, creator, rights, consent, dignity, caption, crop, alt-text, and destination review.",
-    "Human screen-reader, browser-zoom, production, deployment, and indexing decisions remain open."
+    "Human screen-reader, keyboard, assistive-technology, and browser-zoom review remain open accessibility gates.",
+    "The rendered-capture receipt establishes bounded navigation and rendering evidence; it does not grant image rights, consent, dignity, exact credit, crop, or destination approval.",
+    "Jamie approval, production authorization, deployment, production verification, and production indexing remain open, with staging required to remain noindex."
   ],
   "safety_findings": [
-    "No protected UCSC praise is projected as endorsement.",
-    "Open House, WOWList, coalition, and Sunday Dinner language retains collective governance and credit.",
-    "The East River photograph remains occurrence-bounded and does not acquire broader rights from this score."
+    "Collective work remains collectively credited across Open House, Sunday Dinner and 196, WOWList, and NYC Artist Coalition; no sole-authorship or sole-causation claim was found.",
+    "Participant identities, private community records, protected educational records, private correspondence, private archive paths, and unapproved testimonials remain outside public projection.",
+    "The imagined lens is evaluative framing only and is neither Professor Margaret Morse's judgment nor an endorsement.",
+    "The screenshot hash is an integrity receipt, not publication permission, rights clearance, consent, accessibility approval, production approval, deployment authorization, or indexing authorization.",
+    "This score applies only to the exact 116-path candidate fingerprint and does not close any human gate."
   ],
-  "recommendation": "Pass PR-015 at 4 for this exact candidate; keep every human rights and release gate open.",
+  "recommendation": "Pass PR-015 at score 4 for this exact candidate. The navigationReview closes the prior one-click and rendered-capture evidence gap while preserving every collective-credit, privacy, rights, consent, accessibility, production, deployment, and indexing gate.",
   "provenance": {
-    "provider": "codex-native-subagent",
-    "reviewReceiptDigest": "8fcc743ac0edbb12b91ef0321808236aef382bef35929732663799517a538416",
+    "provider": "codex-native-independent-review",
+    "reviewReceiptDigest": "d65795e048306737d5b45be3507b47c6dd3ac1ec8d6023629f08c10d4755f049",
     "reviewMode": "bounded independent holdout",
     "reviewerRole": "reader B",
-    "reviewedAt": "2026-07-28",
-    "candidatePathCount": 115,
+    "reviewedAt": "2026-08-03",
+    "candidatePathCount": 116,
     "candidateFingerprintRecomputed": true,
     "responsiveMatrixRowsReviewed": 56,
     "focusedVisualOccurrencesReviewed": 4,

@@ -1,10 +1,10 @@
 {
   "runVersion": 3,
-  "judgeId": "composite-holdout-source-integrity-v3-ci-final-2026-07-28",
+  "judgeId": "composite-holdout-source-integrity-v4-combined-2026-08-03",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
-  "rubricSha256": "fbd3009370350f1daae86b75425e87b0bd7157df7f8eb7c92a61e10107178fbd",
-  "candidateFingerprint": "808e2babf5b1e3b55d571b106ba128b9a8aeab9b8fd9fabab72e8941a7937507",
+  "rubricSha256": "3fe95a2b9c1f22cdb7d95c3168af73e8eb659900ffd258cd65ebb6feb06e44c1",
+  "candidateFingerprint": "f979fdb2e8325e3819b1a765bec003943d2f3b70cc7a91dd94351efd2a8f58ad",
   "verdict": "accepted",
   "scores": [
     {
@@ -12,119 +12,111 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "Deterministic evaluation matched all 14 frozen A-N branch heads.",
-        "Frozen branch-head digest efa94ea9c3b7190deca61024093d30e4d78a2efdebf04b78b5d6857d9df7a002 remained exact."
+        "frozen-composite-rubric.json records exactly one frozen commit for each feature/evals-A through feature/evals-N, names feature/knowledge-h as the integration branch, and names develop as the pull-request base.",
+        "deterministic-evidence.json reports COMP-001 passing for the exact candidate."
       ],
-      "rationale": "The candidate preserves the complete frozen input inventory without omission or substitution."
+      "rationale": "The frozen inventory, immutable commit-object expectation, explicit integration/base branches, and reference-only source-branch boundary are complete and candidate-bound."
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All 14 branch decisions have canonical dispositions, destinations, and verification records.",
-        "The integration register digest matched 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d."
+        "The frozen rubric binds the integration register and its SHA-256 digest and requires a decision, rationale, destination, verification criteria, and projection decision for every frozen branch.",
+        "deterministic-evidence.json reports COMP-002 passing for the exact candidate."
       ],
-      "rationale": "Decision provenance is explicit, complete, and deterministically bound."
+      "rationale": "The packet supplies digest-bound deterministic evidence that all A-N integration decisions are inspectable and that adopted ideas are tied to canonical destinations and verification rather than decorative records."
     },
     {
       "criterionId": "COMP-003",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Evaluation found 11 canonical architecture files and zero forbidden parallel architecture files.",
-        "Application imports use the public claim layer; protected source records and locators are excluded from the generated public registry."
+        "frozen-composite-rubric.json identifies the H-derived schema, records, public projection, registry, and proof files as canonical and enumerates forbidden parallel lifecycle files.",
+        "deterministic-evidence.json reports COMP-003 passing; the public-record edition is reference-only, has no private runtime dependency, and leaves complete statement bodies in their canonical editions."
       ],
-      "rationale": "The candidate maintains one governed architecture and a clear private-to-public projection boundary."
+      "rationale": "The candidate retains one canonical knowledge architecture, prevents parallel lifecycle imports, and exposes bounded public-safe projections rather than protected source bodies."
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All 4 lifecycle-operation tests passed.",
-        "Tests cover replay, duplicate identity, collision, and query behavior."
+        "deterministic-evidence.json reports COMP-004 passing for the exact candidate.",
+        "The frozen criterion covers idempotent replay, linked duplicate preservation, changed-content collision rejection, and queries for held claims, inquiries, corrections, projection states, and orphan sources; the packet reports 385 Wiki records, 1329 edges, 411 prose links, and zero type-aware orphans."
       ],
-      "rationale": "The lifecycle model is append-safe and rejects ambiguous or conflicting updates."
+      "rationale": "The deterministic result directly covers the append-safety and lifecycle-query contract, while the Wiki health evidence confirms that the resulting graph remains navigable without orphaned typed records."
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Deterministic checks validated 286 sources, 102 claims, 34 agency relations, and 4 correction records.",
-        "Public-safety, citation, knowledge-evaluation, and lifecycle checks passed.",
-        "Public transcript indexes contain locator and participation metadata without third-party speech text; official transcript capsules declare protected-source non-republication.",
-        "Generated Wiki and employment outputs passed clean-checkout currentness checks."
+        "deterministic-evidence.json reports COMP-005 passing for the exact candidate.",
+        "professional-record-and-reception.md explicitly separates public record, encounter, relationship, reception, recommendation, and endorsement; it refuses to infer endorsement from co-presence, employment, correspondence, old evaluation, or institutional title.",
+        "The public-record source edition preserves four coverage gaps as questions and states that protected research cannot establish participation, role, speech, relationship, collaboration, or endorsement."
       ],
-      "rationale": "Source relationships, attribution, collective credit, corrections, population boundaries, transcript exclusion, and generated-output provenance are materially enforced."
+      "rationale": "Source and claim boundaries remain explicit, collective and institutional credit are not collapsed into individual credit, corrections remain independently actionable, and gaps are not promoted into claims."
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Professor-lens evaluation passed 14 of 14 criteria.",
-        "Public pages remain composed and selective; no proofs, knowledge-bank, public-claims, archive-browser, or raw-transcript route was introduced.",
-        "Collective outcomes are separated from Jamie's bounded individual role."
+        "The homepage and About screenshots and TSX excerpts present a selective hiring-facing narrative rather than a database mirror, with Jamie legible as a technical project manager and implementation lead.",
+        "about-page.tsx preserves artistic, civic, technical, relational, and social continuity and reconstructs a recursive sequence of observing relationships, modeling systems, prototyping interfaces, using them with people, learning, revising, documenting, and handing off.",
+        "Collective work is described with bounded language such as work built and used with many collaborators; deterministic-evidence.json reports COMP-006 passing."
       ],
-      "rationale": "The public projection is usable and selective without converting the site into a claims database or overstating individual causation."
+      "rationale": "The public composition is purposeful and readable, credits Jamie's supported agency without erasing collaborators, preserves the Morse continuity, and makes the Sack practice loop reconstructable without inflating current deployment claims."
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All 5 human controls remain explicitly open, with frozen digest 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db.",
-        "Photo records keep production and indexing gates open while binding the approved public derivative, destination, context, caption, credit, crop, and rollback behavior."
+        "deterministic-evidence.json reports COMP-007 passing and keeps recommendation/endorsement, collaborator correction, photograph review, human accessibility and hiring usability, deployment, and indexing open.",
+        "professional-record-human-review.md states that automation cannot decide recommendation willingness, quotation permission, relationship fairness, or photograph publication and requires exact-candidate human review.",
+        "The source-edition evaluation describes thirteen adversarial mutations and retains public-coverage gaps as governed absences rather than synthesized evidence."
       ],
-      "rationale": "Automation does not synthesize closure for Jamie approval, collaborator correction, photographic rights and consent, accessibility, unfamiliar-reader usability, deployment, or indexing."
+      "rationale": "Blind spots remain explicit, actionable, projection-bounded, and resistant to evidence synthesis; green automation is not treated as human corroboration or publication authority."
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The recomputed semantic rubric digest exactly matched fbd3009370350f1daae86b75425e87b0bd7157df7f8eb7c92a61e10107178fbd.",
-        "All anti-gaming and mutation tests outside the intentionally uninstalled final-holdout state passed, including semantic weakening, fabricated heads, stale outputs, optimizer self-grading, duplicate reviewers, digest binding, and synthetic human-control closure.",
-        "Photo tests passed 26 of 26 and reject private locators, metadata-bearing derivatives, stale receipts, placement drift, revocation failures, and automated production or indexing."
+        "The rubric declares its frozen digest, binds the base suite, integration register, blind-spot controls, and required remote-reference namespace, prohibits optimizer self-grading, and states that not-observed cannot pass.",
+        "deterministic-evidence.json reports COMP-008 passing for the exact candidate and records successful professional-record and public-record adversarial mutation suites.",
+        "The rubric makes every criterion blocking, so weighted strengths cannot compensate for a failure."
       ],
-      "rationale": "The frozen rubric, material dependencies, public boundaries, and receipt semantics resist the tested gaming paths."
+      "rationale": "The governance contract is digest-bound and explicitly resists omission, checksum-only approval, fabricated provenance, decorative decisions, private leakage, and synthesized human evidence."
     },
     {
       "criterionId": "COMP-009",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Independent recomputation produced fingerprint 808e2babf5b1e3b55d571b106ba128b9a8aeab9b8fd9fabab72e8941a7937507 over exactly 1309 files.",
-        "The fingerprint excludes exactly the two holdout-result files while binding source, public assets, generated outputs, evaluator logic, and receipt dependencies.",
-        "The receipt contract requires two accepted judgments with distinct reviewer labels and judge IDs, exact rubric and candidate bindings, payload digests, attestations, and deterministic re-verification.",
-        "The prior-candidate receipts were treated solely as expected pre-install state and were not used as evidence."
+        "candidate-hash-manifest.json binds 1358 sorted candidate paths by byte length and SHA-256 to f979fdb2e8325e3819b1a765bec003943d2f3b70cc7a91dd94351efd2a8f58ad, with only the two declared holdout records excluded from candidate identity.",
+        "deterministic-evidence.json reports COMP-001 through COMP-008 passing and identifies COMP-009 as the expected pre-install state pending two fresh judgments.",
+        "This complete judgment binds the required rubric digest, exact candidate, provider, distinct reviewer label, review time, scores, evidence, rationale, and placeholder judgment digest while omitting private process identifiers and machine locators."
       ],
-      "rationale": "Under the specified non-circular protocol, this separately commissioned accepted judgment can be one of the two final holdouts. Stopping is valid only after this judgment and a separately commissioned parallel accepted judgment are installed and the unchanged candidate is reverified. Public receipts alone do not authenticate reviewer-process identity."
+      "rationale": "The candidate and judgment are stably bound for the two-receipt stopping protocol. This acceptance is one separately commissioned holdout judgment; final installation and stopping remain conditional on the orchestrator validating a second accepting judgment for the same candidate and rubric and replacing each placeholder digest. Human production approval remains open."
     }
   ],
   "notObserved": [],
   "findings": [
-    {
-      "classification": "expected-pre-install-holdout-state",
-      "candidateBlocking": false,
-      "releaseBlocking": true,
-      "detail": "The committed holdout files still target a prior candidate, so the baseline composite run correctly leaves COMP-009 unsatisfied. Replace them only with this accepted judgment and a separately commissioned parallel accepted judgment, then verify both receipts against the unchanged candidate."
-    },
-    {
-      "classification": "human-release-gates",
-      "candidateBlocking": false,
-      "releaseBlocking": true,
-      "detail": "Acceptance does not close Jamie exact-commit approval; collaborator correction and credit; photo rights, consent, exact credit, caption, crop, context, and destination; deployment, TLS, smoke, and rollback; indexing; or human accessibility and unfamiliar hiring-reader usability."
-    }
+    "The public-safe packet consistently distinguishes evidence access from publication permission.",
+    "Protected source bodies, correspondence, testimonial and recommendation language, private paths, private photographs, and private runtime dependencies are absent or explicitly withheld.",
+    "Jamie remains legible as an actor while shared, collective, and institutional contributions retain bounded credit.",
+    "The portfolio remains a selective public composition; deeper professional and public-record material stays in governed Wiki/reference-only states.",
+    "Publication, recommendation or endorsement, collaborator correction, photograph rights and presentation, human accessibility, deployment, and indexing remain open human gates."
   ],
-  "recommendation": "Accept this exact candidate for source-integrity holdout installation. Install this judgment and one separately commissioned parallel accepted judgment with distinct identities and valid payload digests, rerun the deterministic composite checks in a clean checkout, and proceed no further than the separately approved release stage until every human gate is explicitly closed.",
+  "recommendation": "Accept this exact candidate for holdout installation, provided the orchestrator verifies and installs a second separately commissioned accepting judgment bound to the same candidate and rubric, replaces the placeholder judgment digests, and does not treat either receipt as publication, endorsement, accessibility, deployment, or indexing approval.",
   "publicReview": {
     "provider": "independent-codex-review",
-    "reviewerLabel": "source-integrity-reviewer-a-ci-final",
-    "reviewedAt": "2026-07-28T19:43:00Z",
-    "judgmentSha256": "9c6624e6905710041139aaf64c4db83cf17472e82937bf42547d253f8c5784ac",
+    "reviewerLabel": "source-integrity-reviewer-a-combined-final",
+    "reviewedAt": "2026-08-03T19:08:43Z",
+    "judgmentSha256": "4beab8c4329a228dd573fb1d5e38eea0129f15139a3d9daef555505ce6fe89e3",
     "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted."
   }
 }

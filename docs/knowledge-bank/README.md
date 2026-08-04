@@ -67,6 +67,10 @@ relations:
     href: indexes/commercial-rent-public-support.md
     context: Active state bills, public-safe event speaker indexes, official state sources, and explicit source gaps.
   - type: related_to
+    target: index.knowledge-wiki.professional-record
+    href: indexes/professional-record-and-reception.md
+    context: Public-safe institutional facts, documented encounters, dated reception, and explicit recommendation and endorsement boundaries.
+  - type: related_to
     target: project.nyc-artist-coalition
     href: projects/nyc-artist-coalition-2017.md
     context: Governed civic-systems record strengthened by complete shared-folder accounting.
@@ -141,6 +145,10 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Commercial Rent Stabilization public support](indexes/commercial-rent-public-support.md):
   the active state bills, complete bounded public-event remarks, official state
   statement populations, and time-aware speaker roles.
+- [Professional record and reception](indexes/professional-record-and-reception.md):
+  institutional facts, documented encounters, historical evaluation, held
+  photographs, and the boundaries between relationship, recommendation, and
+  endorsement.
 - [NYC Artist Coalition](projects/nyc-artist-coalition-2017.md): public-source
   claims, collective-credit boundaries, and the governed shared-folder research
   pass.
