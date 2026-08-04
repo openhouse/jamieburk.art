@@ -1,40 +1,42 @@
 {
-  "evaluator": "Imagined Professor Warren Sack lens; independent reader C, not the named professor and not an endorsement",
-  "reviewerId": "sack-c-2026-08-03-04b71b18",
+  "evaluator": "Independent fictionalized Warren Sack analytical lens review; no endorsement or publication approval implied.",
+  "reviewerId": "sack-c-2026-08-03-30833e1c",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "04b71b1844c938dd1ca94927d864284352e1683f19a6087b0c404243b817eebf",
+  "candidateSha256": "30833e1cb63bb480e9413f67aef6438a34f0a9977537e35c6a6bdfa5add59a14",
   "score": 4,
   "pass": true,
   "evidence": [
-    "Independently recomputed the required SHA-256 over all 116 ordered candidate paths using scripts/lib/professor-lens-eval.mjs.",
-    "The About composition plainly names the recursive sequence: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.",
-    "Harry J. Epstein Company, NYC Artist Coalition and FairRentNYC, and Sunday Dinner and 196 each make a current systems loop reconstructable through distinct relationship, model, interface-and-use, and learning-and-continuity stages.",
-    "WOWList and source-backed team memory provide additional bounded continuity without presenting historical systems or an early working method as current production deployments.",
-    "The public registry binds the Open House lineage to a public article, credits Jamie's initiation without assigning sole authorship, and expressly preserves collective governance and participant privacy.",
-    "The production-build browser matrix dated 2026-08-03 reports 56 successful responsive and automated-accessibility rows, including four clean About-page rows, plus four passing focused visual occurrences."
+    "The checkout HEAD is exactly 38c25f1e3185346aad49ae9c81e1f2c0c044d616. Independent recomputation found exactly 117 candidate paths and SHA-256 30833e1cb63bb480e9413f67aef6438a34f0a9977537e35c6a6bdfa5add59a14.",
+    "PR-016 is a blocking LLM-judge rubric that requires readers to reconstruct observe relationships, model a system, prototype an interface, test through social or collective use, and document a handoff; it explicitly rejects structural-equivalence, peer-reviewed-research, production-deployment, sole-authorship, and current Max/Jitter-proficiency inventions.",
+    "The About page plainly states the recursive sequence and supplies three independent current professional systems: Harry J. Epstein Company, NYC Artist Coalition/FairRentNYC, and Sunday Dinner/196. Each names relationships, a model, interface and use, and learning and continuity, with links to project evidence.",
+    "Harry J. Epstein provides an inspectable five-stage maintenance loop from listening and requirement framing through implementation, verification, and continuity. It expressly identifies the specimen as a reconstruction derived from governed claims, not an original company document, and excludes customer data, private analytics, revenue detail, vendor terms, credentials, and sensitive practices.",
+    "Sunday Dinner/196 supplies two distinct handoff specimens. Both are labeled redacted workflow reconstructions, identify their derivation respectively from a governed acceptance workflow and a protected operating-sheet schema, and enumerate excluded identities, proposals, access details, messages, attendance histories, free text, correspondence, photographs, and outcome claims.",
+    "FairRentNYC distinguishes Jamie's public web and documentation contributions from collective campaign accomplishments and expressly disclaims sole causal credit for policy outcomes or official legal analysis. WOWList uses co-built and co-operated language rather than sole authorship.",
+    "CallNYC is consistently bounded as an archived independent prototype and explicitly not an official or current New York City Council service. Source-Backed Team Memory explicitly says it is not finished production SaaS, a completed client pilot, automated trust, or a private archive browser.",
+    "The professor-lens source note confines coursework to contextual lineage and states that it cannot support claims of invented structural equivalence, peer-reviewed research, production deployment, sole authorship of collective coursework, or current proficiency in historical tools.",
+    "The authorized QA records bind browser evidence to the current runtime-build-input fingerprint 4ef0d4f3beb2aa6f68ca7c7809a1a50e7cf7217817688eba4fdb301cf56bd6c7, while the workflow-specimen QA is also bound to the required professor candidate fingerprint.",
+    "The only permitted fresh deterministic check passed all four tests: current screenshot checksum binding, responsive-matrix completeness, keyboard/mobile-menu/focus/reflow evidence freshness, and separation of superseded screenshots."
   ],
   "gaps": [
-    "Automated axe results do not replace human screen-reader, keyboard, or browser-zoom review.",
-    "The supplied evidence does not close rights, consent, human production approval, deployment, or indexing gates."
+    "The visual evidence is from a local production build, not a production deployment; this is appropriately disclosed and prevents inferring live deployment status.",
+    "The workflow specimens are editorial reconstructions rather than original operating records. Their evidentiary value is the inspectable operating pattern, not independent authentication of every protected underlying detail.",
+    "Jamie visual/content approval, photo rights and consent review, production deployment authorization, and production indexing authorization remain open human gates."
   ],
   "safety_findings": [
-    "Collective work remains described as collective; coalition activity is not converted into sole causation or sole authorship.",
-    "Protected educational records, private correspondence, identifiers, paths, and faculty testimonial language remain withheld.",
-    "Dated coursework is bounded lineage and is not used to claim disciplinary invention, peer-reviewed research, production deployment, or current Max/Jitter proficiency.",
-    "The reviewed composition does not authorize publication of unapproved media or remove accessibility, production, staging, deployment, or indexing controls."
+    "No inspected surface converts protected coursework into endorsement, disciplinary invention, peer-reviewed research, present Max/Jitter proficiency, or production-system proof.",
+    "Collective projects retain collective credit: coalition outcomes, policy enactment, WOWList construction, and participatory governance are not attributed solely or causally to Jamie.",
+    "The public claim layer preserves explicit exclusions for private coalition records, participant data, correspondence, access information, customer data, analytics, credentials, and unapproved images.",
+    "Integration-lineage policy requires production approval to remain open, deployment not performed, indexing not authorized, and photo rights and consent subject to separate human review."
   ],
-  "recommendation": "Pass PR-016 at 4 for this exact candidate. Preserve all human approval, collective-credit, privacy, rights, accessibility, production, deployment, and indexing gates.",
+  "recommendation": "Accept PR-016 at score 4 for this exact candidate. Preserve the candidate binding and all current disclaimers; do not deploy, index, publish additional visuals, or treat reconstructed specimens as original records until the named human approval, rights, and consent gates are closed.",
   "provenance": {
     "provider": "codex-native-independent-review",
-    "reviewReceiptDigest": "37711756003ef77c990b6a4391b18698540208dce580cc7694392b44e08fe33a",
     "reviewMode": "bounded independent holdout",
-    "reviewerRole": "reader C",
+    "reviewerRole": "skeptical-overclaim-present-proof-reader",
     "reviewedAt": "2026-08-03",
-    "candidatePathCount": 116,
+    "candidatePathCount": 117,
     "candidateFingerprintRecomputed": true,
-    "responsiveMatrixRowsReviewed": 56,
-    "focusedVisualOccurrencesReviewed": 4,
     "filesEdited": false
   }
 }
