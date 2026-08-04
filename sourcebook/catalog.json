@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "title": "Jamie Burkart Sourcebook public-testimony pilot",
+  "reviewedAt": "2026-08-03",
+  "reviewBy": "2026-11-03",
+  "pilot": {
+    "populationDefinition": "All recovered-full-text entries in docs/knowledge-bank/data/public-testimony-corpus-2026-07-28.json.",
+    "populationSource": "docs/knowledge-bank/data/public-testimony-corpus-2026-07-28.json",
+    "populationSourceReviewedAt": "2026-07-28",
+    "eligibleCount": 3,
+    "includedCount": 3,
+    "excludedCount": 0,
+    "sourceCutoff": "2026-08-03",
+    "privateBuildDependency": false
+  },
+  "records": [
+    {
+      "id": "perspective.jamie-burkart.cabaret-law.2017-09-14",
+      "knowledgeWikiId": "testimony.jamie-burkart.cabaret-law.2017-09-14",
+      "title": "Jamie Burkart testimony for Cabaret Law repeal",
+      "kind": "perspective",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2026-11-03",
+      "bodyPath": "docs/knowledge-bank/testimony/2017-09-14-cabaret-law-repeal.md",
+      "bodySha256": "ab68bc31d8bd8a0a066bad5f4164a6402d04fe5faca1c56d69032c7b5b3821e5",
+      "speaker": {
+        "id": "person.jamie-burkart",
+        "publicName": "Jamie Burkart",
+        "roleAtTime": "Member, New York City Artists Coalition"
+      },
+      "context": {
+        "kind": "official-public-hearing",
+        "date": "2017-09-14",
+        "eventId": "hearing.cabaret-law.2017-09-14",
+        "publicBody": "New York City Council Committee on Consumer Affairs",
+        "occurrenceState": "documented",
+        "corroboration": ["Official hearing transcript, pages 71-74"]
+      },
+      "stance": {
+        "value": "self-description",
+        "basis": "Jamie identifies his coalition role, describes safety work, and advocates repeal in his own official testimony.",
+        "directEvidence": ["Complete statement in the controlling official transcript"]
+      },
+      "text": {
+        "completeness": "complete-statement",
+        "certification": "readable-official-transcript-extract",
+        "editorialNote": "The official transcript controls; documented spelling and obvious name repairs are disclosed in the canonical body."
+      },
+      "source": {
+        "id": "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-09-14",
+        "type": "official-transcript",
+        "url": "https://legistar.council.nyc.gov/View.ashx?GUID=817A7573-F329-49C4-849A-347B6D00CBC5&ID=5444683&M=F",
+        "locator": "Official transcript pp. 71-74"
+      },
+      "rights": {
+        "evidenceUse": "reviewed",
+        "quoteUse": "existing-public-record",
+        "fullTextRepublication": "existing-public-repository",
+        "basis": "The complete self-authored statement and its official-record basis were already governed-open in this public repository before this indexing pilot."
+      },
+      "consent": {
+        "attribution": "reviewed",
+        "publicProjection": "reviewed",
+        "owner": "Jamie Burkart",
+        "reviewedAt": "2026-08-03"
+      },
+      "projection": {
+        "status": "active",
+        "surfaces": ["github-sourcebook-pilot"]
+      },
+      "creditScope": "individual-and-collective",
+      "withdrawalState": "clear",
+      "boundaries": [
+        "The statement documents Jamie's position and self-report; it does not independently verify every factual assertion.",
+        "Coalition advocacy and Council repeal were collective and institutional outcomes; the record does not establish sole causation.",
+        "Hearing participation does not imply Council endorsement of Jamie."
+      ],
+      "browse": {
+        "years": ["2017"],
+        "projects": ["NYC Artist Coalition"],
+        "themes": ["Cultural-space safety", "Civic advocacy"],
+        "sourceTypes": ["Official public testimony"]
+      }
+    },
+    {
+      "id": "perspective.jamie-burkart.cultural-affairs-budget.2018-03-16",
+      "knowledgeWikiId": "testimony.jamie-burkart.cultural-affairs-budget.2018-03-16",
+      "title": "Jamie Burkart testimony on CreateNYC and cultural-affairs funding",
+      "kind": "perspective",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2026-11-03",
+      "bodyPath": "docs/knowledge-bank/testimony/2018-03-16-cultural-affairs-budget.md",
+      "bodySha256": "45ff4c1da56e4b188d943ccecfaaa63a5c4ad3b6b65ce7effa681119e6dfdebe",
+      "speaker": {
+        "id": "person.jamie-burkart",
+        "publicName": "Jamie Burkart",
+        "roleAtTime": "New York City Artist Coalition and artist-safety advocate"
+      },
+      "context": {
+        "kind": "official-public-hearing",
+        "date": "2018-03-16",
+        "eventId": "hearing.cultural-affairs-budget.2018-03-16",
+        "publicBody": "New York City Council Committee on Cultural Affairs, Libraries and International Intergroup Relations",
+        "occurrenceState": "documented",
+        "corroboration": ["Official hearing transcript, pages 166-168"]
+      },
+      "stance": {
+        "value": "self-description",
+        "basis": "Jamie describes coalition participation in CreateNYC and advocates cultural-affairs funding and implementation in his own testimony.",
+        "directEvidence": ["Complete statement in the controlling official transcript"]
+      },
+      "text": {
+        "completeness": "complete-statement",
+        "certification": "readable-official-transcript-extract",
+        "editorialNote": "The official transcript controls; documented spelling repairs are disclosed in the canonical body."
+      },
+      "source": {
+        "id": "SRC-NYCAC-COUNCIL-CULTURAL-AFFAIRS-BUDGET-2018-03-16",
+        "type": "official-transcript",
+        "url": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6195706&GUID=7514BB5D-51E7-4B77-92D8-A3919828DBEB",
+        "locator": "Official transcript pp. 166-168"
+      },
+      "rights": {
+        "evidenceUse": "reviewed",
+        "quoteUse": "existing-public-record",
+        "fullTextRepublication": "existing-public-repository",
+        "basis": "The complete self-authored statement and its official-record basis were already governed-open in this public repository before this indexing pilot."
+      },
+      "consent": {
+        "attribution": "reviewed",
+        "publicProjection": "reviewed",
+        "owner": "Jamie Burkart",
+        "reviewedAt": "2026-08-03"
+      },
+      "projection": {
+        "status": "active",
+        "surfaces": ["github-sourcebook-pilot"]
+      },
+      "creditScope": "individual-and-collective",
+      "withdrawalState": "clear",
+      "boundaries": [
+        "The statement documents Jamie's position and self-report; it does not independently verify every factual assertion.",
+        "CreateNYC participation and cultural-policy work were collective and institutional; the record does not establish sole authorship or causation.",
+        "Hearing participation does not imply Council or DCLA endorsement of Jamie."
+      ],
+      "browse": {
+        "years": ["2018"],
+        "projects": ["NYC Artist Coalition"],
+        "themes": ["Cultural policy", "Collective planning"],
+        "sourceTypes": ["Official public testimony"]
+      }
+    },
+    {
+      "id": "perspective.jamie-burkart.sbjsa.2018-10-22",
+      "knowledgeWikiId": "testimony.jamie-burkart.sbjsa.2018-10-22",
+      "title": "Jamie Burkart testimony for the Small Business Job Survival Act",
+      "kind": "perspective",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "lastReviewed": "2026-08-03",
+      "reviewBy": "2026-11-03",
+      "bodyPath": "docs/knowledge-bank/testimony/2018-10-22-small-business-job-survival-act.md",
+      "bodySha256": "4e20ab1bdc1fe71e2d6e59d641d1f4df56656a65138741b145830f5ed2e1acce",
+      "speaker": {
+        "id": "person.jamie-burkart",
+        "publicName": "Jamie Burkart",
+        "roleAtTime": "Member, NYC Artist Coalition"
+      },
+      "context": {
+        "kind": "official-public-hearing",
+        "date": "2018-10-22",
+        "eventId": "hearing.sbjsa.2018-10-22",
+        "publicBody": "New York City Council Committee on Small Business",
+        "occurrenceState": "documented",
+        "corroboration": ["Official hearing transcript, pages 346-348"]
+      },
+      "stance": {
+        "value": "self-description",
+        "basis": "Jamie describes affordability and cultural-space safety concerns and advocates the Small Business Job Survival Act in his own testimony.",
+        "directEvidence": ["Complete statement in the controlling official transcript"]
+      },
+      "text": {
+        "completeness": "complete-statement",
+        "certification": "readable-official-transcript-extract",
+        "editorialNote": "The official transcript controls; the readable extract is bounded to Jamie's complete statement."
+      },
+      "source": {
+        "id": "SRC-NYC-SBJSA-HEARING-2018-10-22",
+        "type": "official-transcript",
+        "url": "https://legistar.council.nyc.gov/View.ashx?GUID=3BAD981A-69D8-4D99-A882-52442F36F5A2&ID=6792384&M=F",
+        "locator": "Official transcript pp. 346-348"
+      },
+      "rights": {
+        "evidenceUse": "reviewed",
+        "quoteUse": "existing-public-record",
+        "fullTextRepublication": "existing-public-repository",
+        "basis": "The complete self-authored statement and its official-record basis were already governed-open in this public repository before this indexing pilot."
+      },
+      "consent": {
+        "attribution": "reviewed",
+        "publicProjection": "reviewed",
+        "owner": "Jamie Burkart",
+        "reviewedAt": "2026-08-03"
+      },
+      "projection": {
+        "status": "active",
+        "surfaces": ["github-sourcebook-pilot"]
+      },
+      "creditScope": "individual-and-collective",
+      "withdrawalState": "clear",
+      "boundaries": [
+        "The statement documents Jamie's position and analysis; it does not independently measure the effects of rent increases.",
+        "Campaign work and legislative authority were collective and institutional; the record does not establish sole authorship, passage, or causation.",
+        "Hearing participation does not imply Council endorsement of Jamie."
+      ],
+      "browse": {
+        "years": ["2018"],
+        "projects": ["Fair Rent NYC", "NYC Artist Coalition"],
+        "themes": ["Commercial affordability", "Cultural-space safety"],
+        "sourceTypes": ["Official public testimony"]
+      }
+    }
+  ]
+}

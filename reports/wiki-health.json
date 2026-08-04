@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-28T14:28:48-04:00",
-  "sourceCommit": "b1d476c810fc6d434b01fdab16c23ad1b961a01f",
-  "sourceFingerprint": "e5177833940ac1e9395c314bcb04693bdef8e3ec600800598ce57a3002d5c65f",
+  "generatedAt": "2026-08-03T14:01:06-04:00",
+  "sourceCommit": "606ebdbc6db61d8dd6f561a2a47f47829cd26481",
+  "sourceFingerprint": "219613910021b99be123ba56a983dfa3029cf61b39dc3c640a9106e0ffe1db5e",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
     "errors": []
   },
   "diagnostics": {
-    "records": 366,
+    "records": 367,
     "byKind": {
       "project": 14,
       "person": 2,
@@ -27,12 +27,12 @@
       "timeline": 1,
       "application": 1,
       "evaluation": 4,
-      "index": 27,
+      "index": 28,
       "capability": 5,
       "opportunity": 6,
       "projection": 5
     },
-    "typedRelations": 1266,
+    "typedRelations": 1271,
     "evidenceRelations": 8,
     "relationTypeCounts": {
       "collaborated_with": 2,
@@ -44,15 +44,15 @@
       "informed_by": 46,
       "part_of": 10,
       "projected_to": 9,
-      "related_to": 828,
+      "related_to": 833,
       "resulted_in": 6,
       "supersedes": 1,
       "supports": 19,
       "uses_method": 23,
       "uses_source": 277
     },
-    "proseLinks": 395,
-    "rootReachable": 175,
+    "proseLinks": 398,
+    "rootReachable": 176,
     "orphanCount": 0,
     "deadEndCount": 0,
     "wantedPageCount": 6,

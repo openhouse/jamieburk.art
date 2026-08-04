@@ -51,6 +51,10 @@ relations:
     href: indexes/public-testimony.md
     context: Recovered full-text public statements, explicit transcript gaps, and prepared-not-delivered boundaries.
   - type: related_to
+    target: index.knowledge-wiki.jamie-sourcebook
+    href: indexes/jamie-sourcebook.md
+    context: Git-native public Sourcebook pilot with one canonical body per statement and generated browse routes.
+  - type: related_to
     target: index.knowledge-wiki.public-testimony-and-hearing-voices
     href: indexes/public-testimony-and-hearing-voices.md
     context: Complete official-hearing populations, speaker ledgers, positions, and attribution boundaries.
@@ -124,6 +128,10 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Public testimony](indexes/public-testimony.md): recovered full-text
   statements, prepared-but-not-delivered material, and an explicit queue for
   public appearances whose verbatim records have not yet been recovered.
+- [Jamie Burkart Sourcebook pilot](indexes/jamie-sourcebook.md): three
+  already-public, self-authored Council statements joined to a governed
+  perspective registry, generated browse routes, and a fail-closed publication
+  packet.
 - [Public testimony and hearing voices](indexes/public-testimony-and-hearing-voices.md):
   complete official-hearing populations, attribution ledgers, explicit position
   signals, and the distinction between source record and editorial view.

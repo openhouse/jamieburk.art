@@ -22,6 +22,9 @@ superseded_by: null
 
 # Jamie Burkart Knowledge Ecosystem and Public Source Editions
 
+> Historical proposal snapshot. The canonical RFC 0004 is
+> [Jamie Burkart Sourcebook and Federated Knowledge Ecosystem](../0004-jamie-burkart-sourcebook-and-knowledge-ecosystem.md).
+
 ## Summary
 
 Create a coherent, cross-repository knowledge ecosystem in which private
