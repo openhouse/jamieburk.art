@@ -55,6 +55,15 @@ RFC, and the remaining human gates. Mutation tests prove that an omitted
 branch, fabricated head, missing capability, second active RFC, altered merge
 mode, closed human gate, or public-composition mashup fails closed.
 
+The visual-evidence fingerprint now distinguishes runtime and build inputs from
+unrelated root QA commands. It continues to hash every tracked `apps/www` file,
+the dependency lock, root dependency declarations, and the root build, start,
+and development commands. Changing a public source or build command still
+invalidates the visual evidence; adding an unrelated eval command does not.
+Mutation tests enforce both outcomes. The retained screenshots and interaction
+evidence were produced from the same byte-identical `apps/www` tree and
+dependency lock as this integration candidate.
+
 Repository checks establish technical and evidentiary consistency for one
 candidate. Jamie's production decision, deployment, indexing, rights and
 consent review, collaborator-sensitive credit review, and any regenerated

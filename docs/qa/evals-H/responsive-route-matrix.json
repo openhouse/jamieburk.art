@@ -2,7 +2,8 @@
   "reportVersion": 1,
   "checkedAt": "2026-08-03T18:14:55.312Z",
   "baseUrl": "http://127.0.0.1:3055",
-  "publicSurfaceFingerprint": "dfcf9144e9eb0bf511c1ea51cc7b90466066698cb64a7c636230192cadfa5daa",
+  "publicSurfaceFingerprint": "e7aa513a082bd318e96def7a5644e39abf0d88cf06953d74c239176cce869d62",
+  "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 114,
   "routes": [
     "/",

@@ -25,6 +25,7 @@ function sha256(file) {
 
 test("current visual screenshots are checksum-bound to the current public surface", () => {
   const current = computePublicSurfaceFingerprint(repoRoot);
+  assert.equal(visualManifest.publicSurfaceFingerprintPolicy, current.policy);
   assert.equal(visualManifest.publicSurfaceFingerprint, current.fingerprint);
   assert.equal(visualManifest.publicSurfaceFileCount, current.fileCount);
   assert.equal(visualManifest.passed, true);
@@ -46,6 +47,7 @@ test("the full responsive matrix is current and complete", () => {
 
 test("bounded keyboard, mobile-menu, focus, and reflow evidence is current", () => {
   const current = computePublicSurfaceFingerprint(repoRoot);
+  assert.equal(interactionManifest.publicSurfaceFingerprintPolicy, current.policy);
   assert.equal(interactionManifest.publicSurfaceFingerprint, current.fingerprint);
   assert.equal(interactionManifest.publicSurfaceFileCount, current.fileCount);
   assert.equal(interactionManifest.passed, true);

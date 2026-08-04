@@ -2,7 +2,8 @@
   "reportVersion": 3,
   "checkedAt": "2026-08-03T18:41:24.976Z",
   "baseUrl": "http://127.0.0.1:3055",
-  "publicSurfaceFingerprint": "dfcf9144e9eb0bf511c1ea51cc7b90466066698cb64a7c636230192cadfa5daa",
+  "publicSurfaceFingerprint": "e7aa513a082bd318e96def7a5644e39abf0d88cf06953d74c239176cce869d62",
+  "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 114,
   "captureMethod": "Playwright Chromium screenshots of the current built local candidate; About captures are deliberately framed on the through-line and current systems loops; no deployment or indexing action.",
   "routes": [
