@@ -42,6 +42,8 @@ is documented, and one coherent candidate advances.
   exports without adding a public portfolio route.
 - The professional record adds twelve public-safe records, seven bounded
   reference points, four explicit gaps, and protected-input fingerprints.
+- The public-record evaluator reads the canonical combined RFC while retaining
+  PR 269 provenance from the professional-record historical snapshot.
 - The combined Knowledge Wiki regenerates from authored source rather than
   resolving generated pages by hand.
 - No deployment, production indexing, photo-rights approval, collaborator

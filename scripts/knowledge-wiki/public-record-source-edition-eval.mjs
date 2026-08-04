@@ -23,7 +23,11 @@ export const sourcePagePath = path.join(
 );
 export const rfcPath = path.join(
   repoRoot,
-  "rfcs/0004-jamie-burkart-knowledge-ecosystem-and-public-source-editions.md"
+  "rfcs/0004-jamie-burkart-sourcebook-and-knowledge-ecosystem.md"
+);
+export const implementationSnapshotPath = path.join(
+  repoRoot,
+  "rfcs/history/0004-professional-record-implementation-snapshot.md"
 );
 
 function sha256(value) {
@@ -38,7 +42,8 @@ export function loadCandidate() {
     lock: JSON.parse(readFileSync(lockPath, "utf8")),
     wikiSource: readFileSync(wikiPath, "utf8"),
     sourcePageSource: readFileSync(sourcePagePath, "utf8"),
-    rfcSource: readFileSync(rfcPath, "utf8")
+    rfcSource: readFileSync(rfcPath, "utf8"),
+    implementationSnapshotSource: readFileSync(implementationSnapshotPath, "utf8")
   };
 }
 
@@ -49,7 +54,8 @@ export function evaluate(candidate) {
     lock,
     wikiSource,
     sourcePageSource,
-    rfcSource
+    rfcSource,
+    implementationSnapshotSource
   } = candidate;
   const failures = [];
   const records = manifest.records ?? [];
@@ -166,10 +172,16 @@ export function evaluate(candidate) {
   );
   check(/stage: implementing/.test(rfcSource), "RFC is not implementing");
   check(
-    /implementation: https:\/\/github\.com\/openhouse\/jamieburk\.art\/pull\/269/.test(
+    /pull_request: 270/.test(
       rfcSource
     ),
-    "RFC implementation link drifted"
+    "canonical RFC implementation provenance drifted"
+  );
+  check(
+    /implementation: https:\/\/github\.com\/openhouse\/jamieburk\.art\/pull\/269/.test(
+      implementationSnapshotSource
+    ),
+    "professional-record implementation provenance drifted"
   );
   check(
     wikiSource.includes(lock.source_commit),
@@ -187,13 +199,13 @@ export function evaluate(candidate) {
   );
   check(
     /no runtime dependency|no live dependency|without a live dependency/i.test(
-      `${wikiSource}\n${rfcSource}`
+      `${wikiSource}\n${rfcSource}\n${implementationSnapshotSource}`
     ),
     "offline public-build boundary missing"
   );
   check(
     /not.*portfolio|portfolio.*not|no portfolio projection authorized/i.test(
-      `${wikiSource}\n${rfcSource}`
+      `${wikiSource}\n${rfcSource}\n${implementationSnapshotSource}`
     ),
     "portfolio gate missing"
   );

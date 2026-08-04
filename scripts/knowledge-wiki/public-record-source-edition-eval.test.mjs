@@ -57,6 +57,15 @@ const mutations = [
       "- type: related_to\n    target: index.knowledge-wiki.jamie-public-record-source-edition",
       "- type: supports\n    target: index.knowledge-wiki.jamie-public-record-source-edition"
     );
+  }],
+  ["weakened canonical RFC stage", (value) => {
+    value.rfcSource = value.rfcSource.replace("stage: implementing", "stage: proposed");
+  }],
+  ["changed professional-record implementation provenance", (value) => {
+    value.implementationSnapshotSource = value.implementationSnapshotSource.replace(
+      "/pull/269",
+      "/pull/999"
+    );
   }]
 ];
 
