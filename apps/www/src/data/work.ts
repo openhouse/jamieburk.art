@@ -145,6 +145,12 @@ const workItemsInput = [
         description:
           "Reusable patterns for preserving the company's distinctive public voice across product, marketing, and support surfaces.",
         type: "template"
+      },
+      {
+        title: "Maintenance-to-handoff specimen",
+        description:
+          "A public-safe reconstruction shows how recurring questions became bounded requirements, incremental releases, verification, reusable patterns, and owned next actions.",
+        type: "workflow"
       }
     ],
     tags: [
@@ -485,10 +491,16 @@ const workItemsInput = [
     artifactTypes: ["photo sequence", "workflow", "template"],
     artifacts: [
       {
-        title: "Gathering rhythm",
+        title: "Residency onboarding handoff",
         description:
-          "A representative structure for welcoming, hosting, documenting, and continuing recurring cultural work.",
+          "A redacted reconstruction shows proposal review, orientation, space configuration, independent access, and continued support without exposing participant or access details.",
         type: "workflow"
+      },
+      {
+        title: "Recurring gathering operations",
+        description:
+          "A second reconstruction shows invitation, response, hosting, minimal continuity documentation, and follow-up while every participant-level value remains private.",
+        type: "template"
       }
     ],
     tags: ["Community Systems", "Documentation", "Implementation", "Knowledge Systems"],

@@ -15,6 +15,14 @@ const publicRegistryPath = path.join(
   repoRoot,
   "apps/www/src/data/knowledge-bank/public-registry.json"
 );
+const hjeContentPath = path.join(
+  repoRoot,
+  "apps/www/src/content/work/harry-j-epstein.mdx"
+);
+const sundayDinnerContentPath = path.join(
+  repoRoot,
+  "apps/www/src/content/work/196-sunday-dinner.mdx"
+);
 
 const professorRubricRelativePaths = [
   ".agents/evals/portfolio-production-readiness.json",
@@ -81,6 +89,8 @@ export function evaluateProfessorLenses({
   aboutText = readFileSync(aboutPath, "utf8"),
   sourceNoteText = readFileSync(sourceNotePath, "utf8"),
   publicRegistryText = readFileSync(publicRegistryPath, "utf8"),
+  hjeContentText = readFileSync(hjeContentPath, "utf8"),
+  sundayDinnerContentText = readFileSync(sundayDinnerContentPath, "utf8"),
   candidateFiles = loadCandidateFiles(),
   finalScorecards = finalScorecardRelativePaths.map((relativePath) =>
     JSON.parse(readFileSync(path.join(repoRoot, relativePath), "utf8"))
@@ -194,6 +204,21 @@ export function evaluateProfessorLenses({
       "Five public sequence stages checked."
     ),
     criterion(
+      "inspectable-handoff-specimens",
+      "Two current project pages expose bounded workflow specimens without publishing protected source records.",
+      [
+        "From recurring question to maintainable release",
+        "It is not an original company document",
+        "Reusable patterns, ownership, and next actions"
+      ].every((fragment) => hjeContentText.includes(fragment)) &&
+        [
+          "A resident artist can arrive and work independently",
+          "A recurring gathering can continue without exposing its participants",
+          "withholding every participant-level value"
+        ].every((fragment) => sundayDinnerContentText.includes(fragment)),
+      "HJE maintenance and Sunday Dinner / 196 handoff specimens checked."
+    ),
+    criterion(
       "protected-source-boundary",
       "The source note withholds raw educational records, private correspondence, identifiers, paths, and testimonial projection.",
       sourceNoteText.includes("protected educational records") &&
@@ -228,7 +253,9 @@ export function evaluateProfessorLenses({
         finalScorecards.every((scorecard) => scorecard.phase === "holdout" &&
           scorecard.score === 4 && scorecard.pass === true &&
           scorecard.candidateSha256 === candidateSha256),
-      `${finalScorecards.filter((scorecard) => scorecard.score === 4 && scorecard.pass === true).length}/6 final scorecards pass at 4.`
+      `${finalScorecards.filter((scorecard) => scorecard.phase === "holdout" &&
+        scorecard.score === 4 && scorecard.pass === true &&
+        scorecard.candidateSha256 === candidateSha256).length}/6 final scorecards pass at 4 and match candidate ${candidateSha256}.`
     )
   ];
 

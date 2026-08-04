@@ -53,6 +53,21 @@ test("guard rejects an incomplete recursive systems sequence", () => {
   assert.equal(result.criteria.find((item) => item.id === "recursive-sequence")?.pass, false);
 });
 
+test("guard rejects removing the public-safe handoff specimens", () => {
+  const result = evaluateProfessorLenses({
+    suite,
+    aboutText,
+    sourceNoteText,
+    hjeContentText: "Public storefront only.",
+    sundayDinnerContentText: "Summary only."
+  });
+  assert.equal(result.pass, false);
+  assert.equal(
+    result.criteria.find((item) => item.id === "inspectable-handoff-specimens")?.pass,
+    false
+  );
+});
+
 test("guard rejects private educational-record identifiers", () => {
   const result = evaluateProfessorLenses({
     suite,
