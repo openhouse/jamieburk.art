@@ -2,7 +2,7 @@
   "reportVersion": 1,
   "checkedAt": "2026-08-04T01:45:41.557Z",
   "baseUrl": "http://127.0.0.1:3055",
-  "candidateSha256": "667c1b3ca6b2f2491c993731a9eb216238677c98cb9ab1815b18af0dc79b3565",
+  "candidateSha256": "30833e1cb63bb480e9413f67aef6438a34f0a9977537e35c6a6bdfa5add59a14",
   "captureMethod": "Playwright Chromium screenshots of the current local production build; no deployment or indexing action.",
   "boundaries": [
     "The diagrams are public-safe editorial reconstructions, not original internal records.",
