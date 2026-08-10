@@ -3,9 +3,9 @@
   "runId": "hiring-public-e250fb714282",
   "generatedAt": "2026-08-03T21:47:07-04:00",
   "candidateSha": "e250fb7142820899328c73e496663e486cd1dbd8",
-  "candidatePathsClean": true,
+  "candidatePathsClean": false,
   "portfolioSnapshotHash": "63b038a6c8fa851127924ce5fff54179638901f37dcc0f625bb0c41fc64acf32",
-  "roleContextHash": "e609dbecd2231409330b4a992e1c2fa0cb8786cf463c1e4c9bfa450e0fcd3d90",
+  "roleContextHash": "96227d5af8d4f4cab9406723968b99b6c80da938436ce4bd1997d63aadc45e9b",
   "readerContextHash": "c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
   "publicSafety": {
@@ -139,7 +139,7 @@
     {
       "id": "opportunity.nyc-oti.technical-operations-manager.782369",
       "title": "NYC OTI - Technical Operations Manager 782369",
-      "roleContextHash": "4443fecc128f7e7e13e165e23bc2846a6920495f212337a4b742c5cb14cff65d",
+      "roleContextHash": "a41071bc271868cd70eefb14bb2d02953624c9685074489033972c7f2f6cc700",
       "live": true,
       "fresh": false,
       "hardScreenBlocked": false,
@@ -233,7 +233,7 @@
     {
       "id": "opportunity.aclu.product-manager-discovery.8482872002",
       "title": "ACLU - Product Manager II, Discovery",
-      "roleContextHash": "a217336b36261188e093f36243b5efa4ba5541047a31b63a76529bc7a4b44541",
+      "roleContextHash": "90af6a1dd8f4b9de299d07197e33725517895ef0e2da372cb5c18290550c2a0f",
       "live": true,
       "fresh": false,
       "hardScreenBlocked": false,
@@ -305,7 +305,7 @@
     {
       "id": "opportunity.benepass.product-operations.7f963a7a",
       "title": "Benepass - Product Operations Manager",
-      "roleContextHash": "ca08b3bbab09c784fe9698076f2429dd184df02ab13cf6c41d4211c15cc9c69b",
+      "roleContextHash": "b4482d7b9fa4fd5f69e8558c99a27229df7a2af17172a50a36f722beaa00e2f5",
       "live": true,
       "fresh": false,
       "hardScreenBlocked": false,
@@ -374,7 +374,7 @@
     {
       "id": "opportunity.codepath.claude-corps.5182020007",
       "title": "CodePath - Senior Program Manager, Claude Corps",
-      "roleContextHash": "6941a72320948903c2d926f890378cd0e8b82896cc621764cf6d5ba684ee50dd",
+      "roleContextHash": "c7f62c754b482f4bf6c95f7a598df4fab833da214dd439a48e3d54ca7b1bacbb",
       "live": true,
       "fresh": false,
       "hardScreenBlocked": false,
@@ -456,7 +456,7 @@
     {
       "id": "opportunity.asana.ai-implementation.8027437",
       "title": "Asana - AI Implementation Manager, Service Management",
-      "roleContextHash": "75ad7e8205334925037e3ce1f47fe209d04784345d2116732d948ecc408c9c00",
+      "roleContextHash": "272ad591f954693530eaced6f87e1b1abbaf8ce4ba8f29bb2154675249b94777",
       "live": true,
       "fresh": false,
       "hardScreenBlocked": false,
@@ -523,7 +523,7 @@
     {
       "id": "opportunity.permitflow.product-operations.8a6e6066",
       "title": "PermitFlow - Product Operations Manager",
-      "roleContextHash": "1d9ad0b5b0ab64748850defd6fca850568cb0c90a58f16bc17ef6a6cd54383f3",
+      "roleContextHash": "ae7e58bd4700ed0b525a2eeac34d8184bbc8864da59d0520748ae8cac9fbaff5",
       "live": true,
       "fresh": false,
       "hardScreenBlocked": false,
@@ -586,6 +586,60 @@
           ],
           "evidenceNeedles": [
             "human-correctable AI workflows"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opportunity.protected.source-backed-memory-consulting.2026",
+      "title": "Protected source-backed team-memory consulting lead",
+      "roleContextHash": "d1c8f26df4f684b263c736f2bdfad53e2b000676bfc707e6ccdb98cbcbe966bb",
+      "live": false,
+      "fresh": false,
+      "hardScreenBlocked": false,
+      "decision": "not-live",
+      "observed": 3,
+      "requirementTotal": 3,
+      "criticalObserved": 2,
+      "criticalTotal": 2,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.protected-memory.knowledge-friction",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "Jamie is developing a bounded lab method to preserve decision lineage"
+          ]
+        },
+        {
+          "requirementId": "requirement.protected-memory.human-review",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [
+            "/lab/source-backed-team-memory"
+          ],
+          "evidenceNeedles": [
+            "Human review is part of the system"
+          ]
+        },
+        {
+          "requirementId": "requirement.protected-memory.bounded-sprint",
+          "importance": "important",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/lab/source-backed-team-memory"
+          ],
+          "evidenceNeedles": [
+            "Discuss a bounded source-backed memory sprint"
           ]
         }
       ]

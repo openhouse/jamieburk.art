@@ -41,6 +41,12 @@ const opportunityQuery = queryWiki(result, {
   opportunity: "opportunity.nyc-oti.technical-operations-manager.782369"
 });
 const opportunities = result.records.filter((record) => record.kind === "opportunity");
+const liveOfficialOpportunities = opportunities.filter(
+  (record) => record.source_type === "official-employer" && record.opportunity_status === "live"
+);
+const protectedOpportunity = result.byId.get(
+  "opportunity.protected.source-backed-memory-consulting.2026"
+);
 const publicHiring = evaluatePublicHiring(defaultRepoRoot);
 const gapResolution = resolveHiringGaps(result, publicHiring.report);
 const employmentOutputs = buildEmploymentOutputs(result, publicHiring, gapResolution);
@@ -230,8 +236,8 @@ const checks = {
     existsSync(path.join(defaultRepoRoot, "scripts/check-knowledge-bank.mjs")),
 
   tier_one_official_source_records:
-    opportunities.length === 6 &&
-    opportunities.every((record) =>
+    liveOfficialOpportunities.length === 6 &&
+    liveOfficialOpportunities.every((record) =>
       record.evidence.some((evidence) => {
         const source = result.byId.get(evidence.target);
         return source?.kind === "source" && source.source_kind === "official-job-posting";
@@ -241,8 +247,8 @@ const checks = {
     opportunities.every(
       (record) =>
         record.canonical_url &&
-        record.source_type === "official-employer" &&
-        record.opportunity_status === "live" &&
+        ((record.source_type === "official-employer" && record.opportunity_status === "live") ||
+          (record.source_type === "protected-metadata" && record.opportunity_status === "conditional")) &&
         record.verified_at &&
         record.review_by &&
         record.portfolio_routes.length > 0 &&
@@ -272,6 +278,16 @@ const checks = {
     privateVault?.opaque_locator === "vault.source.communication-history" &&
     privateVault?.public_use_status === "summary-only" &&
     !result.errors.some((issue) => issue.code === "PRIVATE_PATH"),
+  protected_opportunity_state_bounded:
+    protectedOpportunity?.visibility === "summary-only" &&
+    protectedOpportunity?.source_type === "protected-metadata" &&
+    protectedOpportunity?.opportunity_status === "conditional" &&
+    protectedOpportunity?.unknowns?.length >= 3 &&
+    protectedOpportunity?.hard_screens?.every((screen) => screen.disposition === "conditional") &&
+    publicHiring.report.opportunities.find((item) => item.id === protectedOpportunity.id)?.decision === "not-live" &&
+    !JSON.stringify(protectedOpportunity).match(
+      /(?:message|email|transcript)_(?:body|excerpt)|(?:collaborator|company)_identity|private_path/i
+    ),
 
   public_evaluator_has_no_hidden_wiki:
     publicHiring.report.publicSafety.privateMarkerCount === 0 &&

@@ -3,7 +3,7 @@
 
 **Source commit:** `e250fb7142820899328c73e496663e486cd1dbd8`
 **Generation time:** 2026-08-03T21:47:07-04:00
-**Source fingerprint:** `5f52774cb1e4dced13bf0e2fabb13960af9d8fa054ef40964da7526f6be38e7e`
+**Source fingerprint:** `a37a190132a7981841a2a6c9577a1ce35a819a0701dfe23e363fd2f5e20dcbb6`
 
 ## application
 
@@ -315,6 +315,7 @@
 - [CodePath - Senior Program Manager, Claude Corps](../opportunities/codepath-claude-corps.md) - `opportunity.codepath.claude-corps.5182020007`
 - [NYC OTI - Technical Operations Manager 782369](../opportunities/oti-technical-operations.md) - `opportunity.nyc-oti.technical-operations-manager.782369`
 - [PermitFlow - Product Operations Manager](../opportunities/permitflow-product-operations.md) - `opportunity.permitflow.product-operations.8a6e6066`
+- [Protected source-backed team-memory consulting lead](../opportunities/source-backed-team-memory.md) - `opportunity.protected.source-backed-memory-consulting.2026`
 
 ## organization
 
@@ -430,6 +431,7 @@
 - [Professional record governed photo field](../sources/photo-metadata/professional-record-photo-field-2026-08.md) - `source.professional-record.photo-field.2026-08`
 - [Governed professional-record research comparison, August 2026](../sources/archives/professional-record-research-2026-08.md) - `source.professional-record.research.2026-08`
 - [Late-July 2026 current-workstream review](../sources/working/current-workstream-2026-07-27.md) - `source.protected.current-workstream.2026-07-27`
+- [Protected source-backed memory opportunity — metadata boundary](../sources/protected-source-backed-memory-opportunity.md) - `source.protected.source-backed-memory-opportunity.2026`
 - [Jamie Burkart recollection of bicycle-canoe journeys](../sources/recollections/jamie-canoe-commuting-2026-07.md) - `source.recollection.jamie-canoe-commuting.2026-07`
 - [Jamie Burkart public resume, maintained 2026](../sources/jamie-resume-2026-06-11.md) - `source.resume.jamie-burkart.2026-06-11`
 - [Jimmy's Corner rally: Small Business Rent Stabilization statements](../testimony/commercial-rent-public-support/2026-04-10-jimmys-corner-rally-statements.md) - `source.statement.commercial-rent.jimmys-corner-rally.2026-04-10`

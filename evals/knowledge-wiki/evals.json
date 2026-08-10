@@ -82,7 +82,8 @@
         "hard_screens_explicit",
         "confirmed_inferred_unknown_separate",
         "one_year_fit_bounded",
-        "protected_communications_metadata_only"
+        "protected_communications_metadata_only",
+        "protected_opportunity_state_bounded"
       ]
     },
     {

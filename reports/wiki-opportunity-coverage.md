@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity requirement coverage
 
-**Wiki fingerprint:** `5f52774cb1e4dced13bf0e2fabb13960af9d8fa054ef40964da7526f6be38e7e`
+**Wiki fingerprint:** `a37a190132a7981841a2a6c9577a1ce35a819a0701dfe23e363fd2f5e20dcbb6`
 
 Statuses preserve the difference between visible proof, Wiki-only proof, source work, experience gaps, and hard screens.
 
@@ -62,3 +62,11 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 | `requirement.permitflow.product-data` | critical | visible-weak | experience | Test present SQL and analytics fluency; do not imply tools Jamie cannot demonstrate. |
 | `requirement.permitflow.cross-functional-launch` | critical | visible-qualified | wording | Prepare one cross-functional launch sequence with actors and decisions. |
 | `requirement.permitflow.ai-automation` | important | visible-proven | none | Demonstrate the bounded workflow, not a generic enthusiasm claim. |
+
+## Protected source-backed team-memory consulting lead
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.protected-memory.knowledge-friction` | critical | visible-qualified | none | Keep the public method legible without exposing the protected lead. |
+| `requirement.protected-memory.human-review` | critical | visible-proven | none | Preserve the explicit human-review boundary. |
+| `requirement.protected-memory.bounded-sprint` | important | visible-qualified | role-context | Do not imply that a sprint was accepted, funded, or delivered. |

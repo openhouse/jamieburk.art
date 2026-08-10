@@ -5,8 +5,8 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-08-10
+review_by: 2026-09-10
 canonical_path: docs/knowledge-bank/indexes/employment-context.md
 summary: Task-oriented entry point for live opportunity research, role coverage, public-only hiring evaluation, and private-boundary rules.
 relations:
@@ -29,6 +29,9 @@ relations:
     target: opportunity.permitflow.product-operations.8a6e6066
     href: ../opportunities/permitflow-product-operations.md
   - type: related_to
+    target: opportunity.protected.source-backed-memory-consulting.2026
+    href: ../opportunities/source-backed-team-memory.md
+  - type: related_to
     target: evaluation.employment-context.coverage.2026-07-18
     href: ../evaluations/employment-context-coverage-2026-07-18.md
 ---
@@ -48,6 +51,14 @@ paths, message bodies, contact details, and real hiring outcomes remain private.
 - [CodePath - Senior Program Manager, Claude Corps](../opportunities/codepath-claude-corps.md)
 - [Asana - AI Implementation Manager](../opportunities/asana-ai-implementation.md)
 - [PermitFlow - Product Operations Manager](../opportunities/permitflow-product-operations.md)
+
+## Conditional protected context
+
+- [Protected source-backed team-memory consulting lead](../opportunities/source-backed-team-memory.md)
+
+This node belongs in the opportunity base set but not the live-job count. Its
+metadata is anonymous, its commercial state is conditional, and its protected
+communications never enter the public hiring evaluator.
 
 ## Research a role
 

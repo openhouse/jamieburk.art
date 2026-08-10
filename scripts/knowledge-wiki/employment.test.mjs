@@ -34,8 +34,15 @@ test("public hiring evaluator receives no protected Wiki or communications", () 
   assert.equal(report.publicSafety.privateMarkerCount, 0);
   assert.equal(report.publicSafety.protectedWikiReceived, false);
   assert.equal(report.publicSafety.rawCommunicationsReceived, false);
-  assert.equal(report.opportunities.length, 6);
+  assert.equal(report.opportunities.length, 7);
   assert.ok(!JSON.stringify(report).includes("wikiRecords"));
+  const protectedOpportunity = report.opportunities.find((item) => item.id.includes("protected.source-backed-memory"));
+  assert.equal(protectedOpportunity.live, false);
+  assert.equal(protectedOpportunity.decision, "not-live");
+  assert.doesNotMatch(
+    JSON.stringify(protectedOpportunity),
+    /(?:message|email|transcript)_(?:body|excerpt)|(?:collaborator|company)_identity|private_path/i
+  );
 });
 
 test("named reader profiles retain simulation disclaimers", () => {
@@ -98,6 +105,20 @@ test("closed opportunities cannot be ready for human review", () => {
   const oti = evaluatePublicHiring(root).report.opportunities.find((item) => item.id.includes("nyc-oti"));
   assert.equal(oti.live, false);
   assert.equal(oti.decision, "not-live");
+});
+
+test("protected metadata opportunity cannot become a live job by status mutation", () => {
+  const root = candidateFixture();
+  const opportunityPath = path.join(root, "docs/knowledge-bank/opportunities/source-backed-team-memory.md");
+  writeFileSync(
+    opportunityPath,
+    readFileSync(opportunityPath, "utf8").replace("opportunity_status: conditional", "opportunity_status: live")
+  );
+  const opportunity = evaluatePublicHiring(root).report.opportunities.find((item) =>
+    item.id.includes("protected.source-backed-memory")
+  );
+  assert.equal(opportunity.live, false);
+  assert.equal(opportunity.decision, "not-live");
 });
 
 test("exclusionary hard screens fail closed", () => {

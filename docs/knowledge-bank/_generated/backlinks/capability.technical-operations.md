@@ -3,7 +3,7 @@
 
 **Source commit:** `e250fb7142820899328c73e496663e486cd1dbd8`
 **Generation time:** 2026-08-03T21:47:07-04:00
-**Source fingerprint:** `5f52774cb1e4dced13bf0e2fabb13960af9d8fa054ef40964da7526f6be38e7e`
+**Source fingerprint:** `a37a190132a7981841a2a6c9577a1ce35a819a0701dfe23e363fd2f5e20dcbb6`
 
 - [NYC Artist Coalition application brief](../../applications/nycac-civic-product-operations.md) - `related_to` (frontmatter)
 - [Implementation, Adoption, and Handoff](../../capabilities/implementation-adoption-and-handoff.md) - `supports` (frontmatter)
@@ -20,6 +20,7 @@
 - [CodePath - Senior Program Manager, Claude Corps](../../opportunities/codepath-claude-corps.md) - `related_to` (frontmatter)
 - [NYC OTI - Technical Operations Manager 782369](../../opportunities/oti-technical-operations.md) - `related_to` (frontmatter)
 - [PermitFlow - Product Operations Manager](../../opportunities/permitflow-product-operations.md) - `related_to` (frontmatter)
+- [Protected source-backed team-memory consulting lead](../../opportunities/source-backed-team-memory.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `related_to` (frontmatter)
 - [Role-fit and referral map](../../projections/role-fit-and-referral-map.md) - `related_to` (frontmatter)
 - [Technical Operations portfolio projection](../../projections/work-technical-operations.md) - `related_to` (frontmatter)

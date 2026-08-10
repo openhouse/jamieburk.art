@@ -3,7 +3,7 @@
 
 **Source commit:** `e250fb7142820899328c73e496663e486cd1dbd8`
 **Generation time:** 2026-08-03T21:47:07-04:00
-**Source fingerprint:** `5f52774cb1e4dced13bf0e2fabb13960af9d8fa054ef40964da7526f6be38e7e`
+**Source fingerprint:** `a37a190132a7981841a2a6c9577a1ce35a819a0701dfe23e363fd2f5e20dcbb6`
 
 Wiki health is reported as hard gates, diagnostics, and human authority gates. These are not averaged into one synthetic score.
 
@@ -15,20 +15,20 @@ Wiki health is reported as hard gates, diagnostics, and human authority gates. T
 
 ## Diagnostics
 
-- Governed records: 386
-- Typed relations: 1326
-- Evidence relations: 8
-- Prose links: 414
-- Root-reachable governed records: 186
+- Governed records: 388
+- Typed relations: 1333
+- Evidence relations: 9
+- Prose links: 415
+- Root-reachable governed records: 187
 - Type-aware orphans: 0
 - Type-aware dead ends: 0
 - Wanted pages: 6
 - Stale pages: 0
 - Corrections: 2
 - Rights-review queue: 186
-- Opportunity records: 6
+- Opportunity records: 7
 - Live opportunity records: 6
-- Critical role requirements: 22
+- Critical role requirements: 24
 - Critical requirements requiring source, corroboration, experience, hard-screen, or unknown review: 6
 
 ## Human authority gates
