@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `b8894e9727928b67ca1f3a809dc7befb59e98f80`
-**Generation time:** 2026-08-11T19:23:52-04:00
-**Source fingerprint:** `ad15850a93c246939b9ea48fb863aed2b6defba3c2887e7f0bce345da52c9869`
+**Source commit:** `4ff407acaba74bd8d59a0904bfa04f9ec4371dea`
+**Generation time:** 2026-08-11T19:47:04-04:00
+**Source fingerprint:** `ff47305c05fdd1d6a06914975680ccb262caac0b39f53ce4b782de82c2ede730`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 282
+- Nodes added: 284
 - Nodes removed: 0
-- Edges added: 913
+- Edges added: 927
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 186
@@ -243,6 +243,7 @@ Compared with the graph artifact on `origin/develop`.
 - `index.photo-set.nycac-project-sites.2017-2026`
 - `index.public-testimony`
 - `method.photography-east-river-canary`
+- `method.recomposable-civic-cultural-systems`
 - `method.sunday-dinner-wowlist-nycac-synergy`
 - `method.wowlist-relational-curation`
 - `person.diya-vij`
@@ -256,6 +257,7 @@ Compared with the graph artifact on `origin/develop`.
 - `research-inquiry.photography.oral-history-stewardship-afterlife-001`
 - `research.photographic-source-return.2026-07-26`
 - `research.professional-record-promotion.2026-08-03`
+- `source.campaign-site.repository-family.2020-2022`
 - `source.heteroglossia.cabaret-law.2017-09-14`
 - `source.heteroglossia.commercial-rent-stabilization.2021-09-17`
 - `source.heteroglossia.cultural-affairs-budget.2018-03-16`

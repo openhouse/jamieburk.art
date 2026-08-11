@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to KC Spaces Fund
 
-**Source commit:** `b8894e9727928b67ca1f3a809dc7befb59e98f80`
-**Generation time:** 2026-08-11T19:23:52-04:00
-**Source fingerprint:** `ad15850a93c246939b9ea48fb863aed2b6defba3c2887e7f0bce345da52c9869`
+**Source commit:** `4ff407acaba74bd8d59a0904bfa04f9ec4371dea`
+**Generation time:** 2026-08-11T19:47:04-04:00
+**Source fingerprint:** `ff47305c05fdd1d6a06914975680ccb262caac0b39f53ce4b782de82c2ede730`
 
 - [Implementation and operational stewardship](../../capabilities/implementation-and-operational-stewardship.md) - `prose_link` (markdown)
 - [Implementation and operational stewardship](../../capabilities/implementation-and-operational-stewardship.md) - `related_to` (frontmatter)
@@ -14,3 +14,6 @@
 - [Role, Collective Authorship, and Protected Absence](../../indexes/role-collective-authorship-and-protected-absence.md) - `related_to` (frontmatter)
 - [Identity Systems as Shared Infrastructure](../../methods/identity-systems-as-shared-infrastructure.md) - `related_to` (frontmatter)
 - [Maintenance, handoff, and stewardship](../../methods/maintenance-handoff-and-stewardship.md) - `prose_link` (markdown)
+- [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `prose_link` (markdown)
+- [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `related_to` (frontmatter)
+- [Campaign-site repository family, 2020-2022](../../sources/campaign-site-repository-family-2020-2022.md) - `documents` (frontmatter)

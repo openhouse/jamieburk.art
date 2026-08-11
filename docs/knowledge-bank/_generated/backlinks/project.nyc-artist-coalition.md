@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to NYC Artist Coalition
 
-**Source commit:** `b8894e9727928b67ca1f3a809dc7befb59e98f80`
-**Generation time:** 2026-08-11T19:23:52-04:00
-**Source fingerprint:** `ad15850a93c246939b9ea48fb863aed2b6defba3c2887e7f0bce345da52c9869`
+**Source commit:** `4ff407acaba74bd8d59a0904bfa04f9ec4371dea`
+**Generation time:** 2026-08-11T19:47:04-04:00
+**Source fingerprint:** `ff47305c05fdd1d6a06914975680ccb262caac0b39f53ce4b782de82c2ede730`
 
 - [NYC Artist Coalition application brief](../../applications/nycac-civic-product-operations.md) - `part_of` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `related_to` (frontmatter)
@@ -199,6 +199,7 @@
 - [Jamie Burkart public testimony](../../indexes/public-testimony.md) - `related_to` (frontmatter)
 - [Jamie at Work](../../methods/jamie-at-work.md) - `related_to` (frontmatter)
 - [Participation and Relational Infrastructure](../../methods/participation-and-relational-infrastructure.md) - `related_to` (frontmatter)
+- [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `related_to` (frontmatter)
 - [Sunday Dinner, WOW List, and NYC Artist Coalition Synergy](../../methods/sunday-dinner-wowlist-nycac-synergy.md) - `related_to` (frontmatter)
 - [NYC Artist Coalition organization map](../../organizations/nyc-artist-coalition.md) - `related_to` (frontmatter)
 - [Let NYC Dance](../../projects/let-nyc-dance.md) - `related_to` (frontmatter)

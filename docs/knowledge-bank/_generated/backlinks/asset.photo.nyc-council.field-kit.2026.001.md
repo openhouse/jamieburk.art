@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Jamie with a civic field kit at New York City Council
 
-**Source commit:** `b8894e9727928b67ca1f3a809dc7befb59e98f80`
-**Generation time:** 2026-08-11T19:23:52-04:00
-**Source fingerprint:** `ad15850a93c246939b9ea48fb863aed2b6defba3c2887e7f0bce345da52c9869`
+**Source commit:** `4ff407acaba74bd8d59a0904bfa04f9ec4371dea`
+**Generation time:** 2026-08-11T19:47:04-04:00
+**Source fingerprint:** `ff47305c05fdd1d6a06914975680ccb262caac0b39f53ce4b782de82c2ede730`
 
 - [Photography knowledge loop](../../indexes/photography.md) - `has_asset` (frontmatter)
 - [Photographic source return for DCLA, KC Town Hall, and Council fieldwork](../../research-runs/photographic-source-return-2026-07-26.md) - `has_asset` (frontmatter)

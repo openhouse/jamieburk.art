@@ -1,11 +1,10 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
-# Backlinks to KC Town Hall listening within fieldwork
+# Backlinks to Campaign-site repository family, 2020-2022
 
 **Source commit:** `4ff407acaba74bd8d59a0904bfa04f9ec4371dea`
 **Generation time:** 2026-08-11T19:47:04-04:00
 **Source fingerprint:** `ff47305c05fdd1d6a06914975680ccb262caac0b39f53ce4b782de82c2ede730`
 
-- [Decision records](../../indexes/decision-records.md) - `prose_link` (markdown)
-- [Decision records](../../indexes/decision-records.md) - `related_to` (frontmatter)
 - [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `prose_link` (markdown)
-- [KC Town Hall CCED proposal bundle, 2019](../../sources/kc-town-hall-cced-proposal-2019.md) - `related_to` (frontmatter)
+- [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `prose_link` (markdown)
+- [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `uses_source` (frontmatter)

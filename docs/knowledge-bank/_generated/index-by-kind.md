@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `b8894e9727928b67ca1f3a809dc7befb59e98f80`
-**Generation time:** 2026-08-11T19:23:52-04:00
-**Source fingerprint:** `ad15850a93c246939b9ea48fb863aed2b6defba3c2887e7f0bce345da52c9869`
+**Source commit:** `4ff407acaba74bd8d59a0904bfa04f9ec4371dea`
+**Generation time:** 2026-08-11T19:47:04-04:00
+**Source fingerprint:** `ff47305c05fdd1d6a06914975680ccb262caac0b39f53ce4b782de82c2ede730`
 
 ## application
 
@@ -302,6 +302,7 @@
 - [Maintenance, handoff, and stewardship](../methods/maintenance-handoff-and-stewardship.md) - `method.maintenance-handoff-stewardship`
 - [Participation and Relational Infrastructure](../methods/participation-and-relational-infrastructure.md) - `method.participation-and-relational-infrastructure`
 - [East River photographic knowledge-loop tutorial](../workflows/photography-east-river-canary.md) - `method.photography-east-river-canary`
+- [Projects as a Recomposable Civic-Cultural System](../methods/recomposable-civic-cultural-systems.md) - `method.recomposable-civic-cultural-systems`
 - [Situated source rereading](../methods/situated-source-rereading.md) - `method.situated-source-rereading`
 - [Source-Backed Team Memory](../methods/source-backed-team-memory.md) - `method.source-backed-team-memory`
 - [Structure grows from the material](../methods/structure-grows-from-the-material.md) - `method.structure-grows-from-material`
@@ -379,6 +380,7 @@
 ## source
 
 - [CallNYC public source repository](../sources/callnyc-source-repository.md) - `source.callnyc.source-repository`
+- [Campaign-site repository family, 2020-2022](../sources/campaign-site-repository-family-2020-2022.md) - `source.campaign-site.repository-family.2020-2022`
 - [Civic Hall hackathon announcement](../sources/civichall-hackathon-announcement-2016.md) - `source.civichall.hackathon-announcement.2016`
 - [New York City Council Constituent Services Data release](../sources/nycc-constituent-services-data-2016-05-27.md) - `source.councilstat.fuller-release.2016`
 - [Open House at UC Santa Cruz](../sources/good-times-open-house-2006-06-28.md) - `source.good-times.open-house.2006-06-28`
