@@ -29,6 +29,9 @@ relations:
   - type: uses_method
     target: method.collective-credit-protected-absence
     href: collective-credit-and-protected-absence.md
+  - type: related_to
+    target: method.recomposable-civic-cultural-systems
+    href: recomposable-civic-cultural-systems.md
 ---
 
 # Sunday Dinner, WOW List, and NYC Artist Coalition Synergy
@@ -132,6 +135,14 @@ name only.
 The public record supports a bounded bridge from WOW List's `popular.vote`
 calendar into early coalition organizing. It does not establish that WOW List
 caused NYC Artist Coalition.
+
+## Beyond the three containers
+
+The [recomposable civic-cultural systems method](recomposable-civic-cultural-systems.md)
+extends this pattern across 196 Artists Residency, KC Town Hall, KC Spaces
+Fund, earlier participatory art, campaign infrastructure, and source-backed
+memory. It distinguishes explicit artifact transfer from documented component
+recurrence and later structural comparison.
 
 ## Knowledge-graph value
 
