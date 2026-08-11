@@ -98,5 +98,12 @@
     "decision_owner": "Jamie Burkart",
     "implementation_authorized": false,
     "stage_advancement": "human-only"
+  },
+  "evaluation_prototype": {
+    "policy": "config/knowledge-wiki/graph-layers.json",
+    "runtime": "scripts/knowledge-wiki/layers.mjs",
+    "cli": "scripts/knowledge-wiki/layered-graph.mjs",
+    "source_adapter_execution": false,
+    "public_projection": false
   }
 }

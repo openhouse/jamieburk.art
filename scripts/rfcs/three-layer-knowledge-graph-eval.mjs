@@ -232,6 +232,12 @@ export function evaluateGraphLayerRFC(options = {}) {
       ].every((gate) => projectionRule?.requires?.includes(gate)) &&
       /^stage:\s+exploring$/m.test(rfc) &&
       /^implementation:\s+null$/m.test(rfc),
+    prototype_boundary:
+      contract.evaluation_prototype?.policy === "config/knowledge-wiki/graph-layers.json" &&
+      contract.evaluation_prototype?.runtime === "scripts/knowledge-wiki/layers.mjs" &&
+      contract.evaluation_prototype?.cli === "scripts/knowledge-wiki/layered-graph.mjs" &&
+      contract.evaluation_prototype?.source_adapter_execution === false &&
+      contract.evaluation_prototype?.public_projection === false,
     scenario_coverage:
       scenarioResults.length >= 10 && scenarioResults.every((result) => result.passed),
     retrieval_quality:
@@ -245,7 +251,8 @@ export function evaluateGraphLayerRFC(options = {}) {
     layer_integrity: { weight: 0.2, hard: true },
     semantic_traversal: { weight: 0.2, hard: true },
     source_custody: { weight: 0.2, hard: true },
-    publication_authority: { weight: 0.15, hard: true },
+    publication_authority: { weight: 0.1, hard: true },
+    prototype_boundary: { weight: 0.05, hard: true },
     scenario_coverage: { weight: 0.15, hard: true },
     retrieval_quality: { weight: 0.1, hard: false }
   };

@@ -149,4 +149,5 @@ test("the repository RFC candidate satisfies every hard design gate", () => {
   const evaluation = evaluateGraphLayerRFC({ repoRoot: defaultRepoRoot });
   assert.deepEqual(evaluation.hard_failures, []);
   assert.equal(evaluation.scenarios.failed, 0);
+  assert.equal(evaluation.checks.prototype_boundary, true);
 });

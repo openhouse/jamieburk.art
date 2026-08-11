@@ -44,6 +44,15 @@ keep context packets relevant as the archive grows while preserving
 provenance, contradiction, rights, consent, collective credit, and human
 publication authority.
 
+At Jamie Burkart's request, pull request 273 includes a read-only evaluation
+prototype: a versioned layer policy, derived compiler, semantic-radius and
+packet-family planner, custody-request planner, projection-eligibility check,
+CLI, and implementation eval suite. The prototype supplies implementation
+evidence while the RFC remains `exploring`; it does not itself record the
+separate human stage-advancement decision required by the repository RFC
+process. It performs no authenticated source read, artifact copy, public
+projection, deployment, or indexing.
+
 ## Motivation
 
 The Knowledge Wiki is becoming a useful coordination plane across portfolio
@@ -110,7 +119,8 @@ turning access into disclosure.
 
 ## Non-goals
 
-- This RFC does not authorize implementation of the three-layer architecture.
+- The evaluation prototype does not authorize adoption, canonical-record
+  migration, source-adapter execution, or operational use of the architecture.
 - It does not create a CMS, database, search service, archive browser, private
   document browser, authentication system, or AI chatbot.
 - It does not move the full private archive, Apple Photos library, Gmail,
@@ -418,6 +428,13 @@ The companion
 expresses the proposed layers, traversal domain, transition requirements, and
 human authority boundary. It is an executable design appendix, not a runtime
 schema and not implementation authorization.
+
+The evaluation prototype uses
+`config/knowledge-wiki/graph-layers.json` to classify current record kinds and
+mixed photo-set indexes. Its runtime is
+`scripts/knowledge-wiki/layers.mjs`; the read-only CLI is
+`scripts/knowledge-wiki/layered-graph.mjs`. These paths are implementation
+evidence for review, not a stage change or source-access capability.
 
 The synthetic evaluation suite at
 `evals/knowledge-bank/graph-layers-rfc-evals.json` exercises boundary behavior:

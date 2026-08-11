@@ -41,7 +41,9 @@ needed to satisfy it:
 ## Result
 
 - Candidate fingerprint:
-  `342a03cf7214b9297c1f47c9a6972744b4ff164786043ebc5b2ff96dbd0cd5a4`
+  `c87b348621e9c9e8eb4384654a7f239e92f6396428cd8616a7735fd7bec1ef4e`
+- Rubric fingerprint:
+  `62bcc59c28ac222dd72d2c769f202c9e4bd4e809ff999c3272c277d964603a7e`
 - Score: `1.00`
 - Hard failures: none
 - Synthetic cases: `11/11`
@@ -51,6 +53,11 @@ The score does not advance the RFC, authorize implementation, establish
 editorial adequacy, clear rights or consent, or approve publication. It shows
 only that the unchanged proposal candidate satisfies its deterministic design
 contract and synthetic transition cases.
+
+The candidate now includes an explicitly bounded read-only evaluation
+prototype. That prototype is implementation evidence permitted during
+exploration; it does not change the RFC stage or the implementation authority
+record.
 
 ## Repository verification
 
