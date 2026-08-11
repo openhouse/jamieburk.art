@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-03T21:47:07-04:00",
   "sourceCommit": "e250fb7142820899328c73e496663e486cd1dbd8",
-  "sourceFingerprint": "5f52774cb1e4dced13bf0e2fabb13960af9d8fa054ef40964da7526f6be38e7e",
+  "sourceFingerprint": "d35b7f6a891cb4fa60fdc29cead32258e93e87bed756f4c68a0691d25a2f923a",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3548,6 +3548,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "method.sunday-dinner-wowlist-nycac-synergy",
+      "path": "docs/knowledge-bank/methods/sunday-dinner-wowlist-nycac-synergy.md",
+      "title": "Sunday Dinner, WOW List, and NYC Artist Coalition Synergy",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Bounded synthesis of a recurring participation pattern across a hosted gathering, a distributed discovery platform, and a civic-cultural coalition.",
+      "aliases": [],
+      "lastReviewed": "2026-08-11",
+      "reviewBy": "2026-11-11"
+    },
+    {
       "id": "method.what-is-at-stake-for-me",
       "path": "docs/knowledge-bank/methods/what-is-at-stake-for-me.md",
       "title": "What Is at Stake for Me",
@@ -3559,6 +3572,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-08-19"
+    },
+    {
+      "id": "method.wowlist-relational-curation",
+      "path": "docs/knowledge-bank/methods/wowlist-relational-curation.md",
+      "title": "WOW List Relational Curation",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Source-cited account of how invitation, onboarding, editorial voice, explainable discovery, and shared maintenance made WOW List socially operative.",
+      "aliases": [],
+      "lastReviewed": "2026-08-11",
+      "reviewBy": "2026-11-11"
     },
     {
       "id": "opportunity.aclu.product-manager-discovery.8482872002",
@@ -4984,6 +5010,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-03",
       "reviewBy": "2027-02-03"
+    },
+    {
+      "id": "source.wowlist.knowledge-repository.2026",
+      "path": "docs/knowledge-bank/sources/wowlist-knowledge-repository-2026.md",
+      "title": "Governed WOW List knowledge repository",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Opaque federation record for a private collaborator-reviewed WOW List knowledge repository.",
+      "aliases": [],
+      "lastReviewed": "2026-08-11",
+      "reviewBy": "2026-11-11"
     },
     {
       "id": "source.wowlist.repaired-transcript.2026",
@@ -13267,6 +13306,46 @@
       "context": null
     },
     {
+      "from": "method.sunday-dinner-wowlist-nycac-synergy",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "method.sunday-dinner-wowlist-nycac-synergy",
+      "type": "related_to",
+      "to": "project.sunday-dinner-196",
+      "source": "frontmatter",
+      "href": "../projects/sunday-dinner-196-orientation.md",
+      "context": null
+    },
+    {
+      "from": "method.sunday-dinner-wowlist-nycac-synergy",
+      "type": "related_to",
+      "to": "project.wowlist",
+      "source": "frontmatter",
+      "href": "../projects/wowlist-orientation.md",
+      "context": null
+    },
+    {
+      "from": "method.sunday-dinner-wowlist-nycac-synergy",
+      "type": "uses_method",
+      "to": "method.collective-credit-protected-absence",
+      "source": "frontmatter",
+      "href": "collective-credit-and-protected-absence.md",
+      "context": null
+    },
+    {
+      "from": "method.sunday-dinner-wowlist-nycac-synergy",
+      "type": "uses_method",
+      "to": "method.wowlist-relational-curation",
+      "source": "frontmatter",
+      "href": "wowlist-relational-curation.md",
+      "context": null
+    },
+    {
       "from": "method.what-is-at-stake-for-me",
       "type": "informed_by",
       "to": "method.learning-through-making",
@@ -13297,6 +13376,38 @@
       "source": "frontmatter",
       "href": "../indexes/scenes-and-places-of-work.md",
       "context": null
+    },
+    {
+      "from": "method.wowlist-relational-curation",
+      "type": "related_to",
+      "to": "project.wowlist",
+      "source": "frontmatter",
+      "href": "../projects/wowlist-orientation.md",
+      "context": null
+    },
+    {
+      "from": "method.wowlist-relational-curation",
+      "type": "supports",
+      "to": "capability.participatory-public-systems",
+      "source": "frontmatter",
+      "href": "../capabilities/participatory-public-systems.md",
+      "context": null
+    },
+    {
+      "from": "method.wowlist-relational-curation",
+      "type": "uses_method",
+      "to": "method.collective-credit-protected-absence",
+      "source": "frontmatter",
+      "href": "collective-credit-and-protected-absence.md",
+      "context": null
+    },
+    {
+      "from": "method.wowlist-relational-curation",
+      "type": "uses_source",
+      "to": "source.wowlist.knowledge-repository.2026",
+      "source": "frontmatter",
+      "href": "../sources/wowlist-knowledge-repository-2026.md",
+      "context": "A governed private repository supplies protected source support without becoming a public citation or publication authorization."
     },
     {
       "from": "opportunity.aclu.product-manager-discovery.8482872002",
@@ -14305,6 +14416,14 @@
     {
       "from": "project.wowlist",
       "type": "related_to",
+      "to": "method.sunday-dinner-wowlist-nycac-synergy",
+      "source": "frontmatter",
+      "href": "../methods/sunday-dinner-wowlist-nycac-synergy.md",
+      "context": "Places WOW List within a bounded participation-practice continuity without asserting causation or institutional succession."
+    },
+    {
+      "from": "project.wowlist",
+      "type": "related_to",
       "to": "person.jamie-burkart",
       "source": "frontmatter",
       "href": "../people/jamie-burkart.md",
@@ -14325,6 +14444,22 @@
       "source": "frontmatter",
       "href": "../capabilities/participatory-public-systems.md",
       "context": null
+    },
+    {
+      "from": "project.wowlist",
+      "type": "uses_method",
+      "to": "method.wowlist-relational-curation",
+      "source": "frontmatter",
+      "href": "../methods/wowlist-relational-curation.md",
+      "context": "Documents the invitation, onboarding, editorial, explainable-discovery, and maintenance practices that made the product socially operative."
+    },
+    {
+      "from": "project.wowlist",
+      "type": "uses_source",
+      "to": "source.wowlist.knowledge-repository.2026",
+      "source": "frontmatter",
+      "href": "../sources/wowlist-knowledge-repository-2026.md",
+      "context": "Connects the public-safe Wiki to a governed private canonical edition through an opaque summary-only source record."
     },
     {
       "from": "projection.photo.layout-c.home.east-river",
@@ -15636,6 +15771,22 @@
       "to": "event.weibel.in-terms-of-media.2024",
       "source": "frontmatter",
       "href": "../events/in-terms-of-media-symposium-2024.md",
+      "context": null
+    },
+    {
+      "from": "source.wowlist.knowledge-repository.2026",
+      "type": "documents",
+      "to": "method.wowlist-relational-curation",
+      "source": "frontmatter",
+      "href": "../methods/wowlist-relational-curation.md",
+      "context": null
+    },
+    {
+      "from": "source.wowlist.knowledge-repository.2026",
+      "type": "related_to",
+      "to": "project.wowlist",
+      "source": "frontmatter",
+      "href": "../projects/wowlist-orientation.md",
       "context": null
     },
     {
@@ -18319,6 +18470,42 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/methods/sunday-dinner-wowlist-nycac-synergy.md",
+      "from": "method.sunday-dinner-wowlist-nycac-synergy",
+      "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
+      "to": null,
+      "fragment": null,
+      "line": 137,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/sunday-dinner-wowlist-nycac-synergy.md",
+      "from": "method.sunday-dinner-wowlist-nycac-synergy",
+      "toPath": "docs/knowledge-bank/methods/wowlist-relational-curation.md",
+      "to": "method.wowlist-relational-curation",
+      "fragment": null,
+      "line": 140,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/sunday-dinner-wowlist-nycac-synergy.md",
+      "from": "method.sunday-dinner-wowlist-nycac-synergy",
+      "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
+      "to": null,
+      "fragment": null,
+      "line": 143,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/wowlist-relational-curation.md",
+      "from": "method.wowlist-relational-curation",
+      "toPath": "docs/knowledge-bank/sources/wowlist-knowledge-repository-2026.md",
+      "to": "source.wowlist.knowledge-repository.2026",
+      "fragment": null,
+      "line": 173,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/notebooks/photography/README.md",
       "from": "index.knowledge-wiki.photography-notebook",
       "toPath": "rfcs/0002-lifetime-photo-archive-fieldwork.md",
@@ -18955,6 +19142,33 @@
       "to": null,
       "fragment": null,
       "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
+      "from": "project.wowlist",
+      "toPath": "docs/knowledge-bank/methods/wowlist-relational-curation.md",
+      "to": "method.wowlist-relational-curation",
+      "fragment": null,
+      "line": 15,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
+      "from": "project.wowlist",
+      "toPath": "docs/knowledge-bank/methods/sunday-dinner-wowlist-nycac-synergy.md",
+      "to": "method.sunday-dinner-wowlist-nycac-synergy",
+      "fragment": null,
+      "line": 17,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
+      "from": "project.wowlist",
+      "toPath": "docs/knowledge-bank/sources/wowlist-knowledge-repository-2026.md",
+      "to": "source.wowlist.knowledge-repository.2026",
+      "fragment": null,
+      "line": 20,
       "kind": "link"
     },
     {

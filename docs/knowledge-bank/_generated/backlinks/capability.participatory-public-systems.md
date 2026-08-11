@@ -3,7 +3,7 @@
 
 **Source commit:** `e250fb7142820899328c73e496663e486cd1dbd8`
 **Generation time:** 2026-08-03T21:47:07-04:00
-**Source fingerprint:** `5f52774cb1e4dced13bf0e2fabb13960af9d8fa054ef40964da7526f6be38e7e`
+**Source fingerprint:** `d35b7f6a891cb4fa60fdc29cead32258e93e87bed756f4c68a0691d25a2f923a`
 
 - [Jamie with a civic field kit at New York City Council](../../assets/photographs/nyc-council-field-kit-2026.md) - `related_to` (frontmatter)
 - [Civic, cultural, and technical translation](../../capabilities/civic-cultural-and-technical-translation.md) - `related_to` (frontmatter)
@@ -12,6 +12,7 @@
 - [People, places, and the work between them](../../indexes/people-places-and-work-between-them.md) - `related_to` (frontmatter)
 - [Participation and Relational Infrastructure](../../methods/participation-and-relational-infrastructure.md) - `supports` (frontmatter)
 - [Structure grows from the material](../../methods/structure-grows-from-the-material.md) - `related_to` (frontmatter)
+- [WOW List Relational Curation](../../methods/wowlist-relational-curation.md) - `supports` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `related_to` (frontmatter)
 - [Role-fit and referral map](../../projections/role-fit-and-referral-map.md) - `related_to` (frontmatter)
 - [KC Town Hall orientation](../../projects/kc-town-hall-orientation.md) - `supports` (frontmatter)

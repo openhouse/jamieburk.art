@@ -3,13 +3,13 @@
 
 **Source commit:** `e250fb7142820899328c73e496663e486cd1dbd8`
 **Generation time:** 2026-08-03T21:47:07-04:00
-**Source fingerprint:** `5f52774cb1e4dced13bf0e2fabb13960af9d8fa054ef40964da7526f6be38e7e`
+**Source fingerprint:** `d35b7f6a891cb4fa60fdc29cead32258e93e87bed756f4c68a0691d25a2f923a`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 279
+- Nodes added: 282
 - Nodes removed: 0
-- Edges added: 899
+- Edges added: 913
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 186
@@ -243,6 +243,8 @@ Compared with the graph artifact on `origin/develop`.
 - `index.photo-set.nycac-project-sites.2017-2026`
 - `index.public-testimony`
 - `method.photography-east-river-canary`
+- `method.sunday-dinner-wowlist-nycac-synergy`
+- `method.wowlist-relational-curation`
 - `person.diya-vij`
 - `person.elana-gordon`
 - `person.warren-sack`
@@ -292,6 +294,7 @@ Compared with the graph artifact on `origin/develop`.
 - `source.transcript.commercial-rent.public-event.2025-11-13`
 - `source.ucsc.warren-sack-profile.2026`
 - `source.weibel.in-terms-of-media.2024`
+- `source.wowlist.knowledge-repository.2026`
 - `testimony.jamie-burkart.cabaret-law.2017-09-14`
 - `testimony.jamie-burkart.cultural-affairs-budget.2018-03-16`
 - `testimony.jamie-burkart.sbjsa.2018-10-22`

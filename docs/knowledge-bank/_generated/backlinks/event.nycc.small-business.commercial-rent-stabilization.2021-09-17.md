@@ -3,7 +3,7 @@
 
 **Source commit:** `e250fb7142820899328c73e496663e486cd1dbd8`
 **Generation time:** 2026-08-03T21:47:07-04:00
-**Source fingerprint:** `5f52774cb1e4dced13bf0e2fabb13960af9d8fa054ef40964da7526f6be38e7e`
+**Source fingerprint:** `d35b7f6a891cb4fa60fdc29cead32258e93e87bed756f4c68a0691d25a2f923a`
 
 - [Commercial rent stabilization testimony](../../indexes/commercial-rent-testimony.md) - `prose_link` (markdown)
 - [September 17, 2021 commercial rent stabilization hearing official transcript](../../sources/public-hearing-transcripts/commercial-rent-stabilization-hearing-2021-09-17.md) - `documents` (frontmatter)
