@@ -126,6 +126,11 @@ export function evaluateWowListSocialPractices(candidate) {
   ]) {
     check(candidate.synergySource.includes(required), `synergy page is missing ${required}`);
   }
+  const synergyFrontmatter = candidate.synergySource.match(/^---\n([\s\S]*?)\n---/)?.[1] ?? "";
+  check(
+    !/^title:\s.*\bWildlist\b/im.test(synergyFrontmatter),
+    "synergy page uses the unverified Wildlist search term as the canonical project name"
+  );
   check(
     !/WOW List therefore caused NYC Artist Coalition/i.test(candidate.synergySource),
     "synergy page asserts causal succession"

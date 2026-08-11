@@ -46,6 +46,14 @@ The synergy lies in a reusable pattern of hosting, orientation, list-making,
 facilitation, circulation, participatory naming, collaborative editing, and
 recurring convening. The governing boundary is that continuity is not inevitability.
 
+## Terminology note
+
+This page uses **WOW List**, the project name established across the reviewed
+source set. The incoming search term **Wildlist** appears only as one automated
+transcript token amid repeated spoken and written references to WOW List. It is
+kept as a retrieval term for this synthesis, not asserted as a separate project
+or verified historical name.
+
 ## Three containers
 
 ### Sunday Dinner: recurring encounter

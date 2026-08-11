@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Protected NYC Artist Coalition shared-folder census
 
-**Source commit:** `e250fb7142820899328c73e496663e486cd1dbd8`
-**Generation time:** 2026-08-03T21:47:07-04:00
-**Source fingerprint:** `d35b7f6a891cb4fa60fdc29cead32258e93e87bed756f4c68a0691d25a2f923a`
+**Source commit:** `791220ff0a7618bd95b433703a01dac2ab7f004d`
+**Generation time:** 2026-08-11T19:07:51-04:00
+**Source fingerprint:** `ad15850a93c246939b9ea48fb863aed2b6defba3c2887e7f0bce345da52c9869`
 
 - [Shared NYC Artist Coalition advocacy operating playbook](../../claims/nycac-advocacy-operating-playbook.md) - `evidence:private-support` (evidence)
 - [Shared NYC Artist Coalition advocacy operating playbook](../../claims/nycac-advocacy-operating-playbook.md) - `uses_source` (frontmatter)

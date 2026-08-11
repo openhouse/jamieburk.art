@@ -88,6 +88,17 @@ expectFailure(
 );
 
 expectFailure(
+  "the Wildlist search term cannot replace the canonical WOW List name",
+  (candidate) => {
+    candidate.synergySource = candidate.synergySource.replace(
+      "title: Sunday Dinner, WOW List, and NYC Artist Coalition Synergy",
+      "title: Sunday Dinner, Wildlist, and NYC Artist Coalition Synergy"
+    );
+  },
+  /unverified Wildlist search term as the canonical project name/
+);
+
+expectFailure(
   "the method page cannot assign sole authorship",
   (candidate) => {
     candidate.methodSource += "\nJamie alone created WOW List and its community outcomes.\n";

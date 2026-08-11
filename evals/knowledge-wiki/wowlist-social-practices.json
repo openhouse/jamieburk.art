@@ -25,6 +25,10 @@
     {
       "failure_mode": "Cross-project continuity could become causation, inevitability, or sole authorship.",
       "improvement": "Added held structured claims, project-distinct observations, collective credit, and adversarial causal, projection, and sole-credit tests."
+    },
+    {
+      "failure_mode": "An ambiguous incoming term could silently rename WOW List or create an unsupported historical alias.",
+      "improvement": "Resolved Wildlist as a retrieval-only term in the current corpus, added a terminology note, and added an adversarial canonical-title mutation."
     }
   ],
   "result": {
@@ -32,7 +36,7 @@
     "relational_curation_observations": 3,
     "relational_curation_distinct_sources": 3,
     "synergy_observations": 3,
-    "adversarial_tests": "9/9",
+    "adversarial_tests": "10/10",
     "wiki_records": 389,
     "wiki_edges": 1348,
     "wiki_prose_links": 421,
