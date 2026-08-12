@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity discovery recall
 
-**Wiki fingerprint:** `90740f70c5eb5472f1697ee2eedf32645bb35e7f6e150d82e07e22fbeefeff3e`
+**Wiki fingerprint:** `d6cfc4f9d370594d9c3a5de6dde486a6d8927c04fe922f9a12581effa2814adf`
 **Overall:** PASS
 
 ## Title-blind queries
@@ -9,6 +9,7 @@
 - `query.operating-backbone`: PASS; top results `opportunity.nyc-oti.technical-operations-manager.782369`, `opportunity.codepath.claude-corps.5182020007`, `opportunity.aclu.product-manager-discovery.8482872002`
 - `query.discovery-governance`: PASS; top results `opportunity.aclu.product-manager-discovery.8482872002`, `opportunity.asana.ai-implementation.8027437`, `opportunity.benepass.product-operations.7f963a7a`
 - `query.product-operations-physical-world`: PASS; top results `opportunity.permitflow.product-operations.8a6e6066`, `opportunity.aclu.product-manager-discovery.8482872002`, `opportunity.asana.ai-implementation.8027437`
+- `query.source-backed-memory-consulting`: PASS; top results `opportunity.protected.source-backed-memory-consulting.2026`
 
 ## Negative controls
 

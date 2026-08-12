@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-10T20:55:23-04:00",
-  "sourceCommit": "5d72b1a8b1c3fcbedb1a655e92515b5a55fc4531",
-  "sourceFingerprint": "90740f70c5eb5472f1697ee2eedf32645bb35e7f6e150d82e07e22fbeefeff3e",
+  "generatedAt": "2026-08-12T12:14:34-04:00",
+  "sourceCommit": "f76c695aa381c149ee9d5230453ee4ffae82d3e8",
+  "sourceFingerprint": "d6cfc4f9d370594d9c3a5de6dde486a6d8927c04fe922f9a12581effa2814adf",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3115,8 +3115,8 @@
       "sensitivity": "low",
       "summary": "Task-oriented entry point for live opportunity research, role coverage, public-only hiring evaluation, and private-boundary rules.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-08-10",
+      "reviewBy": "2026-09-10"
     },
     {
       "id": "index.knowledge-wiki.family-closure",
@@ -3544,7 +3544,7 @@
       "sensitivity": "low",
       "summary": "A governed workflow for turning scattered records into traceable decisions, bounded claims, open questions, and reusable handoffs.\n",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
+      "lastReviewed": "2026-08-10",
       "reviewBy": "2027-01-18"
     },
     {
@@ -3650,6 +3650,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-18",
       "reviewBy": "2026-07-21"
+    },
+    {
+      "id": "opportunity.protected.source-backed-memory-consulting.2026",
+      "path": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
+      "title": "Protected source-backed team-memory consulting lead",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Public-safe opportunity metadata for a contingent consulting lead without collaborator, company, pricing, or correspondence disclosure.",
+      "aliases": [],
+      "lastReviewed": "2026-08-10",
+      "reviewBy": "2026-09-10"
     },
     {
       "id": "organization.nyc-artist-coalition",
@@ -4851,6 +4864,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-28",
       "reviewBy": "2026-08-28"
+    },
+    {
+      "id": "source.protected.source-backed-memory-opportunity.2026",
+      "path": "docs/knowledge-bank/sources/protected-source-backed-memory-opportunity.md",
+      "title": "Protected source-backed memory opportunity — metadata boundary",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Metadata-only record for a bounded private review of an exploratory source-backed team-memory consulting lead.",
+      "aliases": [],
+      "lastReviewed": "2026-08-10",
+      "reviewBy": "2026-11-10"
     },
     {
       "id": "source.recollection.jamie-canoe-commuting.2026-07",
@@ -11621,6 +11647,14 @@
       "context": null
     },
     {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "opportunity.protected.source-backed-memory-consulting.2026",
+      "source": "frontmatter",
+      "href": "../opportunities/source-backed-team-memory.md",
+      "context": null
+    },
+    {
       "from": "index.knowledge-wiki.family-closure",
       "type": "informed_by",
       "to": "research.knowledge-wiki-family-closure.2026-07-19",
@@ -13287,6 +13321,14 @@
     {
       "from": "method.source-backed-team-memory",
       "type": "related_to",
+      "to": "opportunity.protected.source-backed-memory-consulting.2026",
+      "source": "frontmatter",
+      "href": "../opportunities/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "method.source-backed-team-memory",
+      "type": "related_to",
       "to": "project.callnyc",
       "source": "frontmatter",
       "href": "../projects/callnyc.md",
@@ -13582,6 +13624,50 @@
       "to": "source.jobs.permitflow.product-operations.8a6e6066",
       "source": "frontmatter",
       "href": "../sources/jobs-permitflow-product-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.protected.source-backed-memory-consulting.2026",
+      "type": "evidence:private-support",
+      "to": "source.protected.source-backed-memory-opportunity.2026",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "contingent consulting-opportunity classification",
+        "proposal existence",
+        "unresolved commercial state"
+      ]
+    },
+    {
+      "from": "opportunity.protected.source-backed-memory-consulting.2026",
+      "type": "projected_to",
+      "to": "portfolio.work.technical-operations",
+      "source": "frontmatter",
+      "href": "../projections/work-technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.protected.source-backed-memory-consulting.2026",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.protected.source-backed-memory-consulting.2026",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.protected.source-backed-memory-consulting.2026",
+      "type": "uses_source",
+      "to": "source.protected.source-backed-memory-opportunity.2026",
+      "source": "frontmatter",
+      "href": "../sources/protected-source-backed-memory-opportunity.md",
       "context": null
     },
     {
@@ -15585,6 +15671,14 @@
       "context": null
     },
     {
+      "from": "source.protected.source-backed-memory-opportunity.2026",
+      "type": "supports",
+      "to": "opportunity.protected.source-backed-memory-consulting.2026",
+      "source": "frontmatter",
+      "href": "../opportunities/source-backed-team-memory.md",
+      "context": null
+    },
+    {
       "from": "source.recollection.jamie-canoe-commuting.2026-07",
       "type": "related_to",
       "to": "projection.photo.layout-c.home.east-river",
@@ -16973,10 +17067,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
+      "to": "opportunity.protected.source-backed-memory-consulting.2026",
+      "fragment": null,
+      "line": 20,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
       "to": "evaluation.employment-context.coverage.2026-07-18",
       "fragment": null,
-      "line": 38,
+      "line": 46,
       "kind": "link"
     },
     {
@@ -16985,7 +17088,7 @@
       "toPath": "reports/wiki-opportunity-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 39,
+      "line": 47,
       "kind": "link"
     },
     {
@@ -16994,7 +17097,7 @@
       "toPath": "reports/wiki-career-trajectory-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 40,
+      "line": 48,
       "kind": "link"
     },
     {
@@ -17003,7 +17106,7 @@
       "toPath": "reports/wiki-source-channel-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 41,
+      "line": 49,
       "kind": "link"
     },
     {
@@ -17012,7 +17115,7 @@
       "toPath": "reports/wiki-opportunity-discovery.md",
       "to": null,
       "fragment": null,
-      "line": 42,
+      "line": 50,
       "kind": "link"
     },
     {
@@ -17021,7 +17124,7 @@
       "toPath": "reports/hiring-acceptance-public.md",
       "to": null,
       "fragment": null,
-      "line": 43,
+      "line": 51,
       "kind": "link"
     },
     {
@@ -17030,7 +17133,7 @@
       "toPath": "reports/hiring-acceptance-gap-resolution.md",
       "to": null,
       "fragment": null,
-      "line": 44,
+      "line": 52,
       "kind": "link"
     },
     {

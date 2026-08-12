@@ -102,6 +102,7 @@ function publicRoleContext(record) {
     title: record.title,
     organization: record.organization ?? record.title.split(" - ")[0],
     canonicalUrl: record.canonical_url,
+    sourceType: record.source_type,
     status: record.opportunity_status,
     verifiedAt: dateText(record.verified_at),
     reviewBy: dateText(record.review_by),
@@ -227,7 +228,11 @@ export function evaluatePublicHiring(repoRoot) {
     });
     const critical = requirementCoverage.filter((item) => item.importance === "critical");
     const criticalObserved = critical.filter((item) => item.observed).length;
-    const live = opportunity.status === "live";
+    const protectedOpportunity = opportunity.id.startsWith("opportunity.protected.");
+    const live =
+      !protectedOpportunity &&
+      opportunity.status === "live" &&
+      opportunity.sourceType === "official-employer";
     const fresh = live && opportunity.reviewBy >= generatedAt.slice(0, 10);
     const hardScreenBlocked = opportunity.hardScreens.some(
       (screen) => screen.state === "not-met" || screen.disposition === "do-not-pursue"
@@ -431,10 +436,11 @@ function sourceCoverageMarkdown(result) {
 }
 
 function discoveryReport(result, suite) {
-  const opportunities = result.records.filter(
-    (record) => record.kind === "opportunity" && record.opportunity_status === "live"
-  );
   const queries = suite.discoveryQueries.map((query) => {
+    const statuses = Array.isArray(query.statuses) && query.statuses.length ? query.statuses : ["live"];
+    const opportunities = result.records.filter(
+      (record) => record.kind === "opportunity" && statuses.includes(record.opportunity_status)
+    );
     const ranking = opportunities
       .map((opportunity) => ({
         id: opportunity.id,

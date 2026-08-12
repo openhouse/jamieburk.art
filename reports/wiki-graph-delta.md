@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `5d72b1a8b1c3fcbedb1a655e92515b5a55fc4531`
-**Generation time:** 2026-08-10T20:55:23-04:00
-**Source fingerprint:** `90740f70c5eb5472f1697ee2eedf32645bb35e7f6e150d82e07e22fbeefeff3e`
+**Source commit:** `f76c695aa381c149ee9d5230453ee4ffae82d3e8`
+**Generation time:** 2026-08-12T12:14:34-04:00
+**Source fingerprint:** `d6cfc4f9d370594d9c3a5de6dde486a6d8927c04fe922f9a12581effa2814adf`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 281
+- Nodes added: 283
 - Nodes removed: 0
-- Edges added: 905
+- Edges added: 913
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 186
@@ -244,6 +244,7 @@ Compared with the graph artifact on `origin/develop`.
 - `index.photo-set.nycac-project-sites.2017-2026`
 - `index.public-testimony`
 - `method.photography-east-river-canary`
+- `opportunity.protected.source-backed-memory-consulting.2026`
 - `person.diya-vij`
 - `person.elana-gordon`
 - `person.warren-sack`
@@ -285,6 +286,7 @@ Compared with the graph artifact on `origin/develop`.
 - `source.professional-record.photo-field.2026-08`
 - `source.professional-record.research.2026-08`
 - `source.protected.current-workstream.2026-07-27`
+- `source.protected.source-backed-memory-opportunity.2026`
 - `source.recollection.jamie-canoe-commuting.2026-07`
 - `source.statement.commercial-rent.jimmys-corner-rally.2026-04-10`
 - `source.statement.commercial-rent.state-introduction.2026-02-17`
