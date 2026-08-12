@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "rfc": 5,
+  "stage": "exploring",
+  "prototypeUnderEvaluation": true,
+  "kindLayers": {
+    "semantic": [
+      "anti-claim",
+      "application",
+      "capability",
+      "claim",
+      "correction",
+      "decision",
+      "event",
+      "glossary",
+      "index",
+      "method",
+      "opportunity",
+      "organization",
+      "person",
+      "place",
+      "project",
+      "research-inquiry",
+      "timeline"
+    ],
+    "evidence": ["asset", "evaluation", "research-run", "source"],
+    "projection": ["projection"]
+  },
+  "layerOverrides": {
+    "index.photo-set.east-river-canoe.2022": "evidence",
+    "index.photo-set.kc-town-hall-fieldwork": "evidence",
+    "index.photo-set.mit-interrogative-design.2024": "evidence",
+    "index.photo-set.nycac-dcla-formation.2017": "evidence",
+    "index.photo-set.nycac-project-sites.2017-2026": "evidence"
+  },
+  "semanticEdgeTypes": [
+    "collaborated_with",
+    "contradicts",
+    "informed_by",
+    "organized_by",
+    "part_of",
+    "participated_in",
+    "projected_to",
+    "related_to",
+    "resulted_in",
+    "supports",
+    "supersedes",
+    "uses_method"
+  ],
+  "evidenceAttachmentTypes": [
+    "documents",
+    "evidence:context",
+    "evidence:direct-support",
+    "evidence:private-support",
+    "has_asset",
+    "informed_by",
+    "related_to",
+    "supports",
+    "uses_source"
+  ],
+  "custody": {
+    "registry": "outside-public-git",
+    "credentialsAllowed": false,
+    "defaultDisposition": "not-recovered",
+    "requiresCurrentAuthorization": true,
+    "requiresBoundedRequest": true
+  }
+}

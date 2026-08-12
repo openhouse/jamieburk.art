@@ -1,13 +1,14 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `e250fb7142820899328c73e496663e486cd1dbd8`
-**Generation time:** 2026-08-03T21:47:07-04:00
-**Source fingerprint:** `5f52774cb1e4dced13bf0e2fabb13960af9d8fa054ef40964da7526f6be38e7e`
+**Source commit:** `5d72b1a8b1c3fcbedb1a655e92515b5a55fc4531`
+**Generation time:** 2026-08-10T20:55:23-04:00
+**Source fingerprint:** `90740f70c5eb5472f1697ee2eedf32645bb35e7f6e150d82e07e22fbeefeff3e`
 
 ## application
 
 - [NYC Artist Coalition application brief](../applications/nycac-civic-product-operations.md) - `application.nycac.civic-product-operations`
+- [WOW List - Senior Product Manager role-fit brief](../applications/wowlist-senior-product-manager-oti-782366.md) - `application.wowlist.senior-product-manager-oti-782366`
 
 ## asset
 
@@ -391,6 +392,7 @@
 - [Asana - AI Implementation Manager, Service Management 8027437](../sources/jobs-asana-ai-implementation-8027437.md) - `source.jobs.asana.ai-implementation.8027437`
 - [Official posting - Benepass Product Operations Manager](../sources/jobs-benepass-product-operations.md) - `source.jobs.benepass.product-operations.7f963a7a`
 - [CodePath - Senior Program Manager, Claude Corps 5182020007](../sources/jobs-codepath-claude-corps-5182020007.md) - `source.jobs.codepath.claude-corps.5182020007`
+- [NYC Jobs - Senior Product Manager 782366](../sources/jobs-oti-senior-product-manager-782366.md) - `source.jobs.oti.senior-product-manager.782366`
 - [NYC Jobs - Technical Operations Manager 782369](../sources/jobs-oti-technical-operations-782369.md) - `source.jobs.oti.technical-operations.782369`
 - [Official posting - PermitFlow Product Operations Manager](../sources/jobs-permitflow-product-operations.md) - `source.jobs.permitflow.product-operations.8a6e6066`
 - [The Kansas City Star raft report, November 15, 2007](../sources/kansas-city-star-raft-2007-11-15.md) - `source.kansas-city-star.raft.2007-11-15`

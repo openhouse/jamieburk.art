@@ -1,10 +1,12 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Participatory public systems
 
-**Source commit:** `e250fb7142820899328c73e496663e486cd1dbd8`
-**Generation time:** 2026-08-03T21:47:07-04:00
-**Source fingerprint:** `5f52774cb1e4dced13bf0e2fabb13960af9d8fa054ef40964da7526f6be38e7e`
+**Source commit:** `5d72b1a8b1c3fcbedb1a655e92515b5a55fc4531`
+**Generation time:** 2026-08-10T20:55:23-04:00
+**Source fingerprint:** `90740f70c5eb5472f1697ee2eedf32645bb35e7f6e150d82e07e22fbeefeff3e`
 
+- [WOW List - Senior Product Manager role-fit brief](../../applications/wowlist-senior-product-manager-oti-782366.md) - `prose_link` (markdown)
+- [WOW List - Senior Product Manager role-fit brief](../../applications/wowlist-senior-product-manager-oti-782366.md) - `related_to` (frontmatter)
 - [Jamie with a civic field kit at New York City Council](../../assets/photographs/nyc-council-field-kit-2026.md) - `related_to` (frontmatter)
 - [Civic, cultural, and technical translation](../../capabilities/civic-cultural-and-technical-translation.md) - `related_to` (frontmatter)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `prose_link` (markdown)

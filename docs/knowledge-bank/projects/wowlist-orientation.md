@@ -23,6 +23,10 @@ relations:
   - type: supports
     target: capability.participatory-public-systems
     href: ../capabilities/participatory-public-systems.md
+  - type: related_to
+    target: application.wowlist.senior-product-manager-oti-782366
+    href: ../applications/wowlist-senior-product-manager-oti-782366.md
+    context: Bounded role-fit translation for NYC OTI Job ID 782366 and similar resident-facing product roles.
 ---
 
 # WOWList orientation
@@ -37,3 +41,8 @@ The review-locked [social-population report](wowlist-social-population.md)
 preserves the complete capture-time Twitter population and its limits. Product
 decision history and collaborator-reviewed adoption chronology remain wanted
 records.
+
+For a bounded hiring translation, see the [Senior Product Manager role-fit
+brief](../applications/wowlist-senior-product-manager-oti-782366.md). It keeps
+collective credit, civil-service eligibility, accessibility evidence, and final
+selection as separate questions.
