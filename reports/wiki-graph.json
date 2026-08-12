@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-12T12:40:09-04:00",
   "sourceCommit": "86b76844af306f49fe229e347f1bd87abb00af45",
-  "sourceFingerprint": "5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970",
+  "sourceFingerprint": "dfc76cdd2c900a43883611cf678c3c9c6b7d65ecc8dd22d440134e7725264539",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -2567,6 +2567,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "claim.nycac.frontline-advocacy.2026-08",
+      "path": "docs/knowledge-bank/claims/nycac-frontline-advocacy-2026-08.md",
+      "title": "NYCAC and Fair Rent NYC frontline advocacy, July-August 2026",
+      "kind": "claim",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Bounded claim joining publicly acknowledged report review, a public commercial-rent statement, city-office event logistics, and scheduled state-office coordination without collapsing roles or outcomes.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2026-10-12"
+    },
+    {
       "id": "correction.callnyc-years.2026",
       "path": "docs/knowledge-bank/corrections/callnyc-years-2026.md",
       "title": "CallNYC chronology correction",
@@ -2842,6 +2855,19 @@
       "reviewBy": "2026-10-26"
     },
     {
+      "id": "event.nyc.sbu-report-launch.2026-07-29",
+      "path": "docs/knowledge-bank/events/sbu-report-launch-2026-07-29.md",
+      "title": "Empty Storefronts, High Rents public report launch",
+      "kind": "event",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public report launch where Jamie delivered a cultural-space argument for commercial rent stabilization in a formal program with the bill's two state sponsors.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2026-10-12"
+    },
+    {
       "id": "event.nycc.constituent-services-hackathon.2016",
       "path": "docs/knowledge-bank/events/nycc-constituent-services-hackathon-2016.md",
       "title": "New York City Council constituent-services hackathon",
@@ -3063,7 +3089,7 @@
       "sensitivity": "low",
       "summary": "Public-safe speaker indexes, official state sources, active bill records, and explicit gaps around Commercial Rent Stabilization.",
       "aliases": [],
-      "lastReviewed": "2026-07-28",
+      "lastReviewed": "2026-08-12",
       "reviewBy": "2026-10-28"
     },
     {
@@ -3716,7 +3742,7 @@
         "New York City Artist Coalition",
         "NYCArtC"
       ],
-      "lastReviewed": "2026-07-19",
+      "lastReviewed": "2026-08-12",
       "reviewBy": "2026-10-19"
     },
     {
@@ -3851,7 +3877,7 @@
       "sensitivity": "moderate",
       "summary": "Collective commercial-rent-stabilization campaign connecting cultural-space and small-business experience with legislative, legal, public-data, and organizing work.",
       "aliases": [],
-      "lastReviewed": "2026-07-19",
+      "lastReviewed": "2026-08-12",
       "reviewBy": "2026-09-19"
     },
     {
@@ -4149,6 +4175,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "research.nycac.frontline-advocacy.2026-08-12",
+      "path": "docs/knowledge-bank/research-runs/nycac-frontline-advocacy-2026-08-12.md",
+      "title": "NYCAC frontline advocacy source return, July 13-August 12, 2026",
+      "kind": "research-run",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Bounded close reading of report review, public advocacy, official-staff coordination, media leads, and campaign publication states.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2026-10-12"
     },
     {
       "id": "research.nycac.shared-folder.2026-07-19",
@@ -4619,6 +4658,19 @@
       "reviewBy": "2026-09-26"
     },
     {
+      "id": "source.nycac.frontline-advocacy.2026-08",
+      "path": "docs/knowledge-bank/sources/archives/nycac-frontline-advocacy-2026-08.md",
+      "title": "Governed NYCAC frontline advocacy source comparison, July 13-August 12, 2026",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Public-safe source record for a bounded comparison of correspondence, calls, attachments, transcripts, Drive documents, public pages, and campaign media.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2026-10-12"
+    },
+    {
       "id": "source.nycac.nightlife-forum-transcript.2026",
       "path": "docs/knowledge-bank/sources/nycac-nightlife-forum-transcript-2026.md",
       "title": "NYC nightlife forum corrected working transcript, 2026",
@@ -4958,6 +5010,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "source.sbu.empty-storefronts-high-rents.2026-07-28",
+      "path": "docs/knowledge-bank/sources/empty-storefronts-high-rents-2026-07-28.md",
+      "title": "Empty Storefronts, High Rents final report edition",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Exact-edition record for the July 28, 2026 Action Lab and Small Business United report, including public review credit and a descriptive-versus-causal boundary.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2026-10-12"
     },
     {
       "id": "source.statement.commercial-rent.jimmys-corner-rally.2026-04-10",
@@ -10664,6 +10729,63 @@
       "context": null
     },
     {
+      "from": "claim.nycac.frontline-advocacy.2026-08",
+      "type": "evidence:direct-support",
+      "to": "source.sbu.empty-storefronts-high-rents.2026-07-28",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "public final-report acknowledgment",
+        "exact final report edition"
+      ]
+    },
+    {
+      "from": "claim.nycac.frontline-advocacy.2026-08",
+      "type": "evidence:private-support",
+      "to": "source.nycac.frontline-advocacy.2026-08",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "bounded prepublication review scope",
+        "delivered public statement",
+        "city-office event-information handoff",
+        "scheduled future state-office coordination",
+        "media and social-credit limits"
+      ]
+    },
+    {
+      "from": "claim.nycac.frontline-advocacy.2026-08",
+      "type": "part_of",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "claim.nycac.frontline-advocacy.2026-08",
+      "type": "related_to",
+      "to": "event.nyc.sbu-report-launch.2026-07-29",
+      "source": "frontmatter",
+      "href": "../events/sbu-report-launch-2026-07-29.md",
+      "context": null
+    },
+    {
+      "from": "claim.nycac.frontline-advocacy.2026-08",
+      "type": "uses_source",
+      "to": "source.nycac.frontline-advocacy.2026-08",
+      "source": "frontmatter",
+      "href": "../sources/archives/nycac-frontline-advocacy-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "claim.nycac.frontline-advocacy.2026-08",
+      "type": "uses_source",
+      "to": "source.sbu.empty-storefronts-high-rents.2026-07-28",
+      "source": "frontmatter",
+      "href": "../sources/empty-storefronts-high-rents-2026-07-28.md",
+      "context": null
+    },
+    {
       "from": "correction.callnyc-years.2026",
       "type": "projected_to",
       "to": "portfolio.work.callnyc",
@@ -11077,6 +11199,38 @@
       "to": "source.nycac.dcla-formation-source-return.2026-07",
       "source": "frontmatter",
       "href": "../sources/archives/nycac-dcla-formation-source-return-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "event.nyc.sbu-report-launch.2026-07-29",
+      "type": "part_of",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "event.nyc.sbu-report-launch.2026-07-29",
+      "type": "related_to",
+      "to": "claim.nycac.frontline-advocacy.2026-08",
+      "source": "frontmatter",
+      "href": "../claims/nycac-frontline-advocacy-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "event.nyc.sbu-report-launch.2026-07-29",
+      "type": "uses_source",
+      "to": "source.nycac.frontline-advocacy.2026-08",
+      "source": "frontmatter",
+      "href": "../sources/archives/nycac-frontline-advocacy-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "event.nyc.sbu-report-launch.2026-07-29",
+      "type": "uses_source",
+      "to": "source.sbu.empty-storefronts-high-rents.2026-07-28",
+      "source": "frontmatter",
+      "href": "../sources/empty-storefronts-high-rents-2026-07-28.md",
       "context": null
     },
     {
@@ -11498,6 +11652,14 @@
     {
       "from": "index.knowledge-wiki.commercial-rent-public-support",
       "type": "related_to",
+      "to": "event.nyc.sbu-report-launch.2026-07-29",
+      "source": "frontmatter",
+      "href": "../events/sbu-report-launch-2026-07-29.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.commercial-rent-public-support",
+      "type": "related_to",
       "to": "index.knowledge-wiki.commercial-rent-testimony",
       "source": "frontmatter",
       "href": "commercial-rent-testimony.md",
@@ -11509,6 +11671,14 @@
       "to": "project.fair-rent-nyc",
       "source": "frontmatter",
       "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.commercial-rent-public-support",
+      "type": "uses_source",
+      "to": "source.sbu.empty-storefronts-high-rents.2026-07-28",
+      "source": "frontmatter",
+      "href": "../sources/empty-storefronts-high-rents-2026-07-28.md",
       "context": null
     },
     {
@@ -13914,6 +14084,14 @@
     {
       "from": "organization.nyc-artist-coalition",
       "type": "related_to",
+      "to": "claim.nycac.frontline-advocacy.2026-08",
+      "source": "frontmatter",
+      "href": "../claims/nycac-frontline-advocacy-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-artist-coalition",
+      "type": "related_to",
       "to": "project.fair-rent-nyc",
       "source": "frontmatter",
       "href": "../projects/fair-rent-nyc.md",
@@ -14345,10 +14523,34 @@
     },
     {
       "from": "project.fair-rent-nyc",
+      "type": "informed_by",
+      "to": "research.nycac.frontline-advocacy.2026-08-12",
+      "source": "frontmatter",
+      "href": "../research-runs/nycac-frontline-advocacy-2026-08-12.md",
+      "context": null
+    },
+    {
+      "from": "project.fair-rent-nyc",
       "type": "part_of",
       "to": "organization.nyc-artist-coalition",
       "source": "frontmatter",
       "href": "../organizations/nyc-artist-coalition.md",
+      "context": null
+    },
+    {
+      "from": "project.fair-rent-nyc",
+      "type": "related_to",
+      "to": "claim.nycac.frontline-advocacy.2026-08",
+      "source": "frontmatter",
+      "href": "../claims/nycac-frontline-advocacy-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "project.fair-rent-nyc",
+      "type": "related_to",
+      "to": "event.nyc.sbu-report-launch.2026-07-29",
+      "source": "frontmatter",
+      "href": "../events/sbu-report-launch-2026-07-29.md",
       "context": null
     },
     {
@@ -15200,6 +15402,38 @@
       "context": null
     },
     {
+      "from": "research.nycac.frontline-advocacy.2026-08-12",
+      "type": "related_to",
+      "to": "claim.nycac.frontline-advocacy.2026-08",
+      "source": "frontmatter",
+      "href": "../claims/nycac-frontline-advocacy-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "research.nycac.frontline-advocacy.2026-08-12",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.commercial-rent-public-support",
+      "source": "frontmatter",
+      "href": "../indexes/commercial-rent-public-support.md",
+      "context": null
+    },
+    {
+      "from": "research.nycac.frontline-advocacy.2026-08-12",
+      "type": "uses_source",
+      "to": "source.nycac.frontline-advocacy.2026-08",
+      "source": "frontmatter",
+      "href": "../sources/archives/nycac-frontline-advocacy-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "research.nycac.frontline-advocacy.2026-08-12",
+      "type": "uses_source",
+      "to": "source.sbu.empty-storefronts-high-rents.2026-07-28",
+      "source": "frontmatter",
+      "href": "../sources/empty-storefronts-high-rents-2026-07-28.md",
+      "context": null
+    },
+    {
       "from": "research.nycac.shared-folder.2026-07-19",
       "type": "documents",
       "to": "project.nyc-artist-coalition",
@@ -15728,6 +15962,22 @@
       "context": null
     },
     {
+      "from": "source.nycac.frontline-advocacy.2026-08",
+      "type": "related_to",
+      "to": "research.nycac.frontline-advocacy.2026-08-12",
+      "source": "frontmatter",
+      "href": "../../research-runs/nycac-frontline-advocacy-2026-08-12.md",
+      "context": null
+    },
+    {
+      "from": "source.nycac.frontline-advocacy.2026-08",
+      "type": "supports",
+      "to": "claim.nycac.frontline-advocacy.2026-08",
+      "source": "frontmatter",
+      "href": "../../claims/nycac-frontline-advocacy-2026-08.md",
+      "context": null
+    },
+    {
       "from": "source.nycac.nightlife-forum-transcript.2026",
       "type": "documents",
       "to": "project.office-of-nightlife-town-halls",
@@ -15966,6 +16216,22 @@
       "source": "frontmatter",
       "href": "../../research-inquiries/documented-canoe-bike-journeys.md",
       "context": "The recollection opened a bounded research question."
+    },
+    {
+      "from": "source.sbu.empty-storefronts-high-rents.2026-07-28",
+      "type": "related_to",
+      "to": "event.nyc.sbu-report-launch.2026-07-29",
+      "source": "frontmatter",
+      "href": "../events/sbu-report-launch-2026-07-29.md",
+      "context": null
+    },
+    {
+      "from": "source.sbu.empty-storefronts-high-rents.2026-07-28",
+      "type": "supports",
+      "to": "claim.nycac.frontline-advocacy.2026-08",
+      "source": "frontmatter",
+      "href": "../claims/nycac-frontline-advocacy-2026-08.md",
+      "context": null
     },
     {
       "from": "source.statement.commercial-rent.jimmys-corner-rally.2026-04-10",
@@ -16904,6 +17170,33 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/claims/nycac-frontline-advocacy-2026-08.md",
+      "from": "claim.nycac.frontline-advocacy.2026-08",
+      "toPath": "docs/knowledge-bank/events/sbu-report-launch-2026-07-29.md",
+      "to": "event.nyc.sbu-report-launch.2026-07-29",
+      "fragment": null,
+      "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/claims/nycac-frontline-advocacy-2026-08.md",
+      "from": "claim.nycac.frontline-advocacy.2026-08",
+      "toPath": "docs/knowledge-bank/sources/archives/nycac-frontline-advocacy-2026-08.md",
+      "to": "source.nycac.frontline-advocacy.2026-08",
+      "fragment": null,
+      "line": 37,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/claims/nycac-frontline-advocacy-2026-08.md",
+      "from": "claim.nycac.frontline-advocacy.2026-08",
+      "toPath": "docs/knowledge-bank/sources/empty-storefronts-high-rents-2026-07-28.md",
+      "to": "source.sbu.empty-storefronts-high-rents.2026-07-28",
+      "fragment": null,
+      "line": 7,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/corrections/callnyc-years-2026.md",
       "from": "correction.callnyc-years.2026",
       "toPath": "docs/knowledge-bank/projections/work-callnyc.md",
@@ -17113,10 +17406,28 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/commercial-rent-public-support.md",
       "from": "index.knowledge-wiki.commercial-rent-public-support",
+      "toPath": "docs/knowledge-bank/events/sbu-report-launch-2026-07-29.md",
+      "to": "event.nyc.sbu-report-launch.2026-07-29",
+      "fragment": null,
+      "line": 23,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/commercial-rent-public-support.md",
+      "from": "index.knowledge-wiki.commercial-rent-public-support",
       "toPath": "docs/knowledge-bank/sources/commercial-rent-public-support/eon-huntley-2026-primary-result.md",
       "to": "source.nysboe.primary.ad56.2026",
       "fragment": null,
-      "line": 29,
+      "line": 30,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/commercial-rent-public-support.md",
+      "from": "index.knowledge-wiki.commercial-rent-public-support",
+      "toPath": "docs/knowledge-bank/sources/empty-storefronts-high-rents-2026-07-28.md",
+      "to": "source.sbu.empty-storefronts-high-rents.2026-07-28",
+      "fragment": null,
+      "line": 36,
       "kind": "link"
     },
     {
@@ -17125,7 +17436,7 @@
       "toPath": "docs/knowledge-bank/events/commercial-rent-state-introduction-2026-02-17.md",
       "to": "event.nys.commercial-rent.bill-introduction-release.2026-02-17",
       "fragment": null,
-      "line": 37,
+      "line": 44,
       "kind": "link"
     },
     {
@@ -17134,7 +17445,7 @@
       "toPath": "docs/knowledge-bank/events/commercial-rent-jimmys-corner-rally-2026-04-10.md",
       "to": "event.nys.commercial-rent.jimmys-corner-rally.2026-04-10",
       "fragment": null,
-      "line": 38,
+      "line": 45,
       "kind": "link"
     },
     {
@@ -17143,7 +17454,7 @@
       "toPath": "docs/knowledge-bank/testimony/commercial-rent-public-support/2026-02-17-state-introduction-statements.md",
       "to": "source.statement.commercial-rent.state-introduction.2026-02-17",
       "fragment": null,
-      "line": 40,
+      "line": 47,
       "kind": "link"
     },
     {
@@ -17152,7 +17463,7 @@
       "toPath": "docs/knowledge-bank/testimony/commercial-rent-public-support/2026-04-10-jimmys-corner-rally-statements.md",
       "to": "source.statement.commercial-rent.jimmys-corner-rally.2026-04-10",
       "fragment": null,
-      "line": 41,
+      "line": 48,
       "kind": "link"
     },
     {
@@ -17161,7 +17472,7 @@
       "toPath": "docs/knowledge-bank/data/commercial-rent-public-support-corpus-2026-07-28.json",
       "to": null,
       "fragment": null,
-      "line": 48,
+      "line": 55,
       "kind": "link"
     },
     {
@@ -19385,6 +19696,24 @@
       "to": "asset.photo.digital-district.001",
       "fragment": "what-it-does-not-establish",
       "line": 99,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/fair-rent-nyc.md",
+      "from": "project.fair-rent-nyc",
+      "toPath": "docs/knowledge-bank/claims/nycac-frontline-advocacy-2026-08.md",
+      "to": "claim.nycac.frontline-advocacy.2026-08",
+      "fragment": null,
+      "line": 24,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/fair-rent-nyc.md",
+      "from": "project.fair-rent-nyc",
+      "toPath": "docs/knowledge-bank/research-runs/nycac-frontline-advocacy-2026-08-12.md",
+      "to": "research.nycac.frontline-advocacy.2026-08-12",
+      "fragment": null,
+      "line": 25,
       "kind": "link"
     },
     {
