@@ -28,6 +28,7 @@ import { wowListFacebookPostKnowledge } from "./wowlist-facebook-posts-2026-07.t
 import { wowListSocialPopulationJuly2026 } from "./wowlist-social-population-2026-07.ts";
 import { wowListSocialPracticesAugust2026 } from "./wowlist-social-practices-2026-08.ts";
 import { projectCompositionAugust2026 } from "./project-composition-2026-08.ts";
+import { wowListProductFitAugust2026 } from "./wowlist-product-fit-2026-08.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
@@ -71,6 +72,7 @@ const knowledgeBankInput = {
     ...nycacFacebookPostKnowledge.intakeItems,
     ...personalWowListFacebookEventKnowledge.intakeItems,
     ...participationContinuityKnowledge.intakeItems,
+    ...wowListProductFitAugust2026.intakeItems,
     ...professionalRecordAugust2026.intakeItems,
     ...nycacSocialPopulationJuly2026.intakeItems,
     ...nycacSourceExpansion.intakeItems,
@@ -117,6 +119,7 @@ const knowledgeBankInput = {
     ...nycacFacebookPostKnowledge.observations,
     ...personalWowListFacebookEventKnowledge.observations,
     ...participationContinuityKnowledge.observations,
+    ...wowListProductFitAugust2026.observations,
     ...professionalRecordAugust2026.observations,
     ...nycacSocialPopulationJuly2026.observations,
     ...nycacSourceExpansion.observations,
@@ -267,6 +270,7 @@ const knowledgeBankInput = {
     ...nycacFacebookPostKnowledge.sources,
     ...personalWowListFacebookEventKnowledge.sources,
     ...participationContinuityKnowledge.sources,
+    ...wowListProductFitAugust2026.sources,
     ...professionalRecordAugust2026.sources,
     ...nycacSocialPopulationJuly2026.sources,
     ...nycacSourceExpansion.sources,
@@ -410,6 +414,7 @@ const knowledgeBankInput = {
     ...nycacFacebookPostKnowledge.claims,
     ...personalWowListFacebookEventKnowledge.claims,
     ...participationContinuityKnowledge.claims,
+    ...wowListProductFitAugust2026.claims,
     ...professionalRecordAugust2026.claims,
     ...nycacSocialPopulationJuly2026.claims,
     ...nycacSourceExpansion.claims,
@@ -475,6 +480,7 @@ const knowledgeBankInput = {
     ...nycacFacebookPostKnowledge.researchInquiries,
     ...personalWowListFacebookEventKnowledge.researchInquiries,
     ...participationContinuityKnowledge.researchInquiries,
+    ...wowListProductFitAugust2026.researchInquiries,
     ...professionalRecordAugust2026.researchInquiries,
     ...nycacSocialPopulationJuly2026.researchInquiries,
     ...nycacSourceExpansion.researchInquiries,

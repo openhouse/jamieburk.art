@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "id": "three-layer-knowledge-graph-rfc",
+  "objective": "Keep semantic meaning, evidence, and source custody distinct while preserving governed transitions and audience-specific projection.",
+  "cases": [
+    {
+      "id": "semantic-radius-stops-before-photo-hub",
+      "operation": "semantic-radius",
+      "max_degree": 2,
+      "seed_ids": ["opportunity"],
+      "nodes": [
+        { "id": "opportunity", "layer": "semantic" },
+        { "id": "capability", "layer": "semantic" },
+        { "id": "project", "layer": "semantic" },
+        { "id": "photo-index", "layer": "evidence" },
+        { "id": "photo-001", "layer": "evidence" },
+        { "id": "source-vault", "layer": "custody" }
+      ],
+      "edges": [
+        { "source": "opportunity", "target": "capability", "type": "fits_requirement" },
+        { "source": "capability", "target": "project", "type": "demonstrated_by" },
+        { "source": "project", "target": "photo-index", "type": "documented_by" },
+        { "source": "photo-index", "target": "photo-001", "type": "contains_evidence" },
+        { "source": "photo-001", "target": "source-vault", "type": "captured_from" }
+      ],
+      "expected": {
+        "semantic_node_ids": ["capability", "opportunity", "project"],
+        "evidence_candidate_ids": ["photo-index"],
+        "custody_materialization_ids": []
+      }
+    },
+    {
+      "id": "custody-cannot-project-directly",
+      "operation": "transition",
+      "from": "custody",
+      "to": "projection",
+      "presented": ["current_authorization", "rights_decision", "editorial_approval"],
+      "expected": { "decision": "deny", "reason": "transition-not-defined" }
+    },
+    {
+      "id": "custody-capture-needs-current-authorization",
+      "operation": "transition",
+      "from": "custody",
+      "to": "evidence",
+      "presented": ["bounded_request", "source_cutoff", "disposition"],
+      "expected": {
+        "decision": "deny",
+        "rule_id": "bounded-capture",
+        "missing": ["current_authorization"]
+      }
+    },
+    {
+      "id": "bounded-custody-capture-is-allowed",
+      "operation": "transition",
+      "from": "custody",
+      "to": "evidence",
+      "presented": ["bounded_request", "current_authorization", "source_cutoff", "disposition"],
+      "expected": { "decision": "allow", "rule_id": "bounded-capture" }
+    },
+    {
+      "id": "evidence-cannot-become-meaning-without-observation",
+      "operation": "transition",
+      "from": "evidence",
+      "to": "semantic",
+      "presented": ["evidence_class", "interpretation_review"],
+      "expected": {
+        "decision": "deny",
+        "rule_id": "reviewed-interpretation",
+        "missing": ["atomic_observation"]
+      }
+    },
+    {
+      "id": "reviewed-evidence-may-inform-semantics",
+      "operation": "transition",
+      "from": "evidence",
+      "to": "semantic",
+      "presented": ["atomic_observation", "evidence_class", "interpretation_review"],
+      "expected": { "decision": "allow", "rule_id": "reviewed-interpretation" }
+    },
+    {
+      "id": "semantic-maturity-is-not-publication",
+      "operation": "transition",
+      "from": "semantic",
+      "to": "projection",
+      "presented": ["recipient", "public_safe_wording", "rights_decision"],
+      "expected": {
+        "decision": "deny",
+        "rule_id": "selective-projection",
+        "missing": ["consent_decision", "credit_review", "editorial_approval"]
+      }
+    },
+    {
+      "id": "fully-reviewed-semantic-projection-is-eligible",
+      "operation": "transition",
+      "from": "semantic",
+      "to": "projection",
+      "presented": ["recipient", "public_safe_wording", "rights_decision", "consent_decision", "credit_review", "editorial_approval"],
+      "expected": { "decision": "allow", "rule_id": "selective-projection" }
+    },
+    {
+      "id": "evidence-attachment-needs-semantic-selection",
+      "operation": "transition",
+      "from": "evidence",
+      "to": "projection",
+      "presented": ["recipient", "rights_decision", "consent_decision", "credit_review", "editorial_approval"],
+      "expected": {
+        "decision": "deny",
+        "rule_id": "approved-evidence-attachment",
+        "missing": ["semantic_selection"]
+      }
+    },
+    {
+      "id": "selected-evidence-attachment-is-eligible",
+      "operation": "transition",
+      "from": "evidence",
+      "to": "projection",
+      "presented": ["semantic_selection", "recipient", "rights_decision", "consent_decision", "credit_review", "editorial_approval"],
+      "expected": { "decision": "allow", "rule_id": "approved-evidence-attachment" }
+    },
+    {
+      "id": "per-seed-and-union-packets-defer-unbudgeted-hub",
+      "operation": "packet-plan",
+      "seed_ids": ["portfolio", "job-b", "job-a"],
+      "evidence_hub": {
+        "id": "photo-census",
+        "candidate_artifact_count": 180
+      },
+      "expected": {
+        "packet_families": [
+          { "id": "per-seed:job-a", "seed_ids": ["job-a"] },
+          { "id": "per-seed:job-b", "seed_ids": ["job-b"] },
+          { "id": "per-seed:portfolio", "seed_ids": ["portfolio"] },
+          { "id": "union", "seed_ids": ["job-a", "job-b", "portfolio"] }
+        ],
+        "evidence_expansion": {
+          "decision": "defer",
+          "hub_id": "photo-census",
+          "candidate_artifact_count": 180,
+          "reason": "explicit-artifact-budget-required"
+        },
+        "reports_per_seed_coverage": true
+      }
+    },
+    {
+      "id": "plural-lenses-survive-knowledge-flow-audit",
+      "operation": "knowledge-flow-audit",
+      "lenses": [
+        { "id": "participant" },
+        { "id": "facilitator" },
+        { "id": "specialist" }
+      ],
+      "observations": [
+        { "id": "obs-1", "lens_id": "participant", "source_id": "src-1", "observed_at": "2026-06-18T10:00:00Z" },
+        { "id": "obs-2", "lens_id": "facilitator", "source_id": "src-2", "observed_at": "2026-06-18T10:05:00Z" },
+        { "id": "obs-3", "lens_id": "specialist", "source_id": "src-3", "observed_at": "2026-06-24T14:00:00Z" }
+      ],
+      "handoffs": [
+        { "id": "handoff-1", "observation_ids": ["obs-1"], "communicated_at": "2026-06-18T10:10:00Z", "received_at": "2026-06-18T10:11:00Z" },
+        { "id": "handoff-2", "observation_ids": ["obs-2"], "communicated_at": "2026-06-18T10:12:00Z", "received_at": "2026-06-18T10:13:00Z", "incorporated_at": "2026-06-18T10:20:00Z" }
+      ],
+      "decisions": [
+        { "id": "decision-1", "decided_at": "2026-06-18T10:15:00Z", "considered_observation_ids": ["obs-1"] }
+      ],
+      "operational_questions": [
+        { "id": "question-1", "status": "open" }
+      ],
+      "expected": {
+        "lens_ids": ["facilitator", "participant", "specialist"],
+        "observation_ids": ["obs-1", "obs-2", "obs-3"],
+        "handoff_states": [
+          { "id": "handoff-1", "state": "received" },
+          { "id": "handoff-2", "state": "incorporated" }
+        ],
+        "decisions": [
+          {
+            "id": "decision-1",
+            "considered_observation_ids": ["obs-1"],
+            "available_unconsidered_observation_ids": ["obs-2"]
+          }
+        ],
+        "open_question_ids": ["question-1"]
+      }
+    },
+    {
+      "id": "scope-boundaries-compose-by-intersection",
+      "operation": "compose-boundaries",
+      "requested_fields": ["decision", "lens", "private_locator", "source_excerpt"],
+      "scopes": [
+        { "id": "team", "permitted_fields": ["decision", "lens", "source_excerpt"] },
+        { "id": "project", "permitted_fields": ["decision", "lens"] }
+      ],
+      "expected": {
+        "scope_ids": ["project", "team"],
+        "allowed_fields": ["decision", "lens"],
+        "blocked_fields": ["private_locator", "source_excerpt"]
+      }
+    },
+    {
+      "id": "participant-correction-holds-projection",
+      "operation": "record-correction",
+      "target": { "id": "observation-1", "record_state": "source-preserved" },
+      "correction": {
+        "id": "correction-1",
+        "raised_by_lens_id": "participant",
+        "status": "proposed",
+        "effect": "restrict-projection",
+        "original_preserved": true
+      },
+      "expected": {
+        "decision": "append-correction",
+        "correction_id": "correction-1",
+        "target_id": "observation-1",
+        "correction_status": "proposed",
+        "original_record_state": "source-preserved",
+        "original_preserved": true,
+        "projection_state": "held-pending-correction-review"
+      }
+    },
+    {
+      "id": "destructive-correction-is-denied",
+      "operation": "record-correction",
+      "target": { "id": "observation-1", "record_state": "source-preserved" },
+      "correction": {
+        "id": "correction-1",
+        "raised_by_lens_id": "participant",
+        "status": "accepted",
+        "effect": "append-context",
+        "original_preserved": false
+      },
+      "expected": {
+        "decision": "deny",
+        "reason": "original-record-must-be-preserved"
+      }
+    }
+  ]
+}

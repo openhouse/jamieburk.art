@@ -35,6 +35,10 @@ relations:
     target: method.sunday-dinner-wowlist-nycac-synergy
     href: ../methods/sunday-dinner-wowlist-nycac-synergy.md
     context: Places WOW List within a bounded participation-practice continuity without asserting causation or institutional succession.
+  - type: related_to
+    target: application.wowlist.senior-product-manager-oti-782366
+    href: ../applications/wowlist-senior-product-manager-oti-782366.md
+    context: Bounded role-fit translation for NYC OTI Job ID 782366 and similar resident-facing product roles.
 ---
 
 # WOWList orientation
@@ -59,3 +63,8 @@ a non-causal boundary. A [summary-only private-repository source
 record](../sources/wowlist-knowledge-repository-2026.md) ties this public-safe
 edition to the governed WOW List repository without exposing its location or
 turning access into publication approval.
+
+For a bounded hiring translation, see the [Senior Product Manager role-fit
+brief](../applications/wowlist-senior-product-manager-oti-782366.md). It keeps
+collective credit, civil-service eligibility, accessibility evidence, and final
+selection as separate questions.

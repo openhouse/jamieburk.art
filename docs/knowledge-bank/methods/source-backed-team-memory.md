@@ -5,7 +5,7 @@ kind: method
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
+last_reviewed: 2026-08-10
 review_by: 2027-01-18
 canonical_path: docs/knowledge-bank/methods/source-backed-team-memory.md
 summary: >
@@ -21,6 +21,9 @@ relations:
   - type: projected_to
     target: portfolio.work.technical-operations
     href: ../projections/work-technical-operations.md
+  - type: related_to
+    target: opportunity.protected.source-backed-memory-consulting.2026
+    href: ../opportunities/source-backed-team-memory.md
 ---
 
 # Source-Backed Team Memory

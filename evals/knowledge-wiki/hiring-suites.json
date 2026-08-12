@@ -8,7 +8,8 @@
     "docs/knowledge-bank/opportunities/benepass-product-operations.md",
     "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
     "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
-    "docs/knowledge-bank/opportunities/permitflow-product-operations.md"
+    "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
+    "docs/knowledge-bank/opportunities/source-backed-team-memory.md"
   ],
   "readerPaths": [
     "docs/qa/hiring-acceptance/readers/generic-recruiter.md",
@@ -48,6 +49,13 @@
       "id": "query.product-operations-physical-world",
       "terms": ["physical-world workflows", "public process", "product data", "customer insight", "AI automation"],
       "expectedTopK": ["opportunity.permitflow.product-operations.8a6e6066"],
+      "k": 3
+    },
+    {
+      "id": "query.source-backed-memory-consulting",
+      "terms": ["source-backed team memory", "decision lineage", "onboarding context", "human-reviewed AI", "knowledge-friction mapping"],
+      "expectedTopK": ["opportunity.protected.source-backed-memory-consulting.2026"],
+      "statuses": ["conditional"],
       "k": 3
     }
   ],

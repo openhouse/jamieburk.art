@@ -1,21 +1,22 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `4ff407acaba74bd8d59a0904bfa04f9ec4371dea`
-**Generation time:** 2026-08-11T19:47:04-04:00
-**Source fingerprint:** `ff47305c05fdd1d6a06914975680ccb262caac0b39f53ce4b782de82c2ede730`
+**Source commit:** `7e6558e885f28f607fa44b2fd66acd067760cd60`
+**Generation time:** 2026-08-12T12:32:45-04:00
+**Source fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 284
+- Nodes added: 288
 - Nodes removed: 0
-- Edges added: 927
+- Edges added: 941
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 186
 
 ## Added nodes
 
+- `application.wowlist.senior-product-manager-oti-782366`
 - `asset.graphic.kc-town-hall.walkshed.2019.001`
 - `asset.photo-set.mit-interrogative-design.2024`
 - `asset.photo.east-river-manhattan-bridge.2022.001`
@@ -246,6 +247,7 @@ Compared with the graph artifact on `origin/develop`.
 - `method.recomposable-civic-cultural-systems`
 - `method.sunday-dinner-wowlist-nycac-synergy`
 - `method.wowlist-relational-curation`
+- `opportunity.protected.source-backed-memory-consulting.2026`
 - `person.diya-vij`
 - `person.elana-gordon`
 - `person.warren-sack`
@@ -263,6 +265,7 @@ Compared with the graph artifact on `origin/develop`.
 - `source.heteroglossia.cultural-affairs-budget.2018-03-16`
 - `source.heteroglossia.sbjsa.2018-10-22`
 - `source.jamie-public-record-initial-manifest`
+- `source.jobs.oti.senior-product-manager.782366`
 - `source.kc-town-hall.local-digital-archive.2026-07`
 - `source.kc-town-hall.photographic-oral-histories.2026-07`
 - `source.mit.interrogative-design-symposium.2024`
@@ -287,6 +290,7 @@ Compared with the graph artifact on `origin/develop`.
 - `source.professional-record.photo-field.2026-08`
 - `source.professional-record.research.2026-08`
 - `source.protected.current-workstream.2026-07-27`
+- `source.protected.source-backed-memory-opportunity.2026`
 - `source.recollection.jamie-canoe-commuting.2026-07`
 - `source.statement.commercial-rent.jimmys-corner-rally.2026-04-10`
 - `source.statement.commercial-rent.state-introduction.2026-02-17`

@@ -3,10 +3,10 @@
 
 **Candidate commit:** `e250fb7142820899328c73e496663e486cd1dbd8`
 **Portfolio snapshot:** `63b038a6c8fa851127924ce5fff54179638901f37dcc0f625bb0c41fc64acf32`
-**Role-context hash:** `e609dbecd2231409330b4a992e1c2fa0cb8786cf463c1e4c9bfa450e0fcd3d90`
+**Role-context hash:** `96227d5af8d4f4cab9406723968b99b6c80da938436ce4bd1997d63aadc45e9b`
 **Reader-context hash:** `c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
-**Candidate paths clean:** yes
+**Candidate paths clean:** no
 
 > Deterministic baseline only. This is not an interview prediction, a named person's opinion, or a human reader study.
 
@@ -99,6 +99,19 @@
 - `requirement.permitflow.product-data`: **not observed** on `/work/harry-j-epstein`
 - `requirement.permitflow.cross-functional-launch`: **observed** on `/work/technical-operations`
 - `requirement.permitflow.ai-automation`: **observed** on `/lab/source-backed-team-memory`
+
+### Protected source-backed team-memory consulting lead
+
+- Deterministic disposition: `not-live`
+- Critical signals observed: 2/2
+- All signals observed: 3/3
+- Opportunity status live: no
+- Role context current at candidate time: no
+- Exclusionary hard screen recorded: no
+
+- `requirement.protected-memory.knowledge-friction`: **observed** on `/work/technical-operations`
+- `requirement.protected-memory.human-review`: **observed** on `/lab/source-backed-team-memory`
+- `requirement.protected-memory.bounded-sprint`: **observed** on `/lab/source-backed-team-memory`
 
 ## Open human gates
 

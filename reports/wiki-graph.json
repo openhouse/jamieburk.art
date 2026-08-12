@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-11T19:47:04-04:00",
-  "sourceCommit": "4ff407acaba74bd8d59a0904bfa04f9ec4371dea",
-  "sourceFingerprint": "ff47305c05fdd1d6a06914975680ccb262caac0b39f53ce4b782de82c2ede730",
+  "generatedAt": "2026-08-12T12:32:45-04:00",
+  "sourceCommit": "7e6558e885f28f607fa44b2fd66acd067760cd60",
+  "sourceFingerprint": "5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -17,6 +17,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-08-19"
+    },
+    {
+      "id": "application.wowlist.senior-product-manager-oti-782366",
+      "path": "docs/knowledge-bank/applications/wowlist-senior-product-manager-oti-782366.md",
+      "title": "WOW List - Senior Product Manager role-fit brief",
+      "kind": "application",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe translation of WOW List evidence for NYC OTI Senior Product Manager Job ID 782366 and materially similar resident-facing product roles.",
+      "aliases": [],
+      "lastReviewed": "2026-08-11",
+      "reviewBy": "2026-08-14"
     },
     {
       "id": "asset.graphic.kc-town-hall.walkshed.2019.001",
@@ -3102,8 +3115,8 @@
       "sensitivity": "low",
       "summary": "Task-oriented entry point for live opportunity research, role coverage, public-only hiring evaluation, and private-boundary rules.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-08-10",
+      "reviewBy": "2026-09-10"
     },
     {
       "id": "index.knowledge-wiki.family-closure",
@@ -3544,7 +3557,7 @@
       "sensitivity": "low",
       "summary": "A governed workflow for turning scattered records into traceable decisions, bounded claims, open questions, and reusable handoffs.\n",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
+      "lastReviewed": "2026-08-10",
       "reviewBy": "2027-01-18"
     },
     {
@@ -3676,6 +3689,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-18",
       "reviewBy": "2026-07-21"
+    },
+    {
+      "id": "opportunity.protected.source-backed-memory-consulting.2026",
+      "path": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
+      "title": "Protected source-backed team-memory consulting lead",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Public-safe opportunity metadata for a contingent consulting lead without collaborator, company, pricing, or correspondence disclosure.",
+      "aliases": [],
+      "lastReviewed": "2026-08-10",
+      "reviewBy": "2026-09-10"
     },
     {
       "id": "organization.nyc-artist-coalition",
@@ -4372,6 +4398,19 @@
       "reviewBy": "2026-07-21"
     },
     {
+      "id": "source.jobs.oti.senior-product-manager.782366",
+      "path": "docs/knowledge-bank/sources/jobs-oti-senior-product-manager-782366.md",
+      "title": "NYC Jobs - Senior Product Manager 782366",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official City of New York posting for four OTI Public Interest Technology Crew Senior Product Manager positions, rechecked August 11, 2026.",
+      "aliases": [],
+      "lastReviewed": "2026-08-11",
+      "reviewBy": "2026-08-14"
+    },
+    {
       "id": "source.jobs.oti.technical-operations.782369",
       "path": "docs/knowledge-bank/sources/jobs-oti-technical-operations-782369.md",
       "title": "NYC Jobs - Technical Operations Manager 782369",
@@ -4879,6 +4918,19 @@
       "reviewBy": "2026-08-28"
     },
     {
+      "id": "source.protected.source-backed-memory-opportunity.2026",
+      "path": "docs/knowledge-bank/sources/protected-source-backed-memory-opportunity.md",
+      "title": "Protected source-backed memory opportunity — metadata boundary",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Metadata-only record for a bounded private review of an exploratory source-backed team-memory consulting lead.",
+      "aliases": [],
+      "lastReviewed": "2026-08-10",
+      "reviewBy": "2026-11-10"
+    },
+    {
       "id": "source.recollection.jamie-canoe-commuting.2026-07",
       "path": "docs/knowledge-bank/sources/recollections/jamie-canoe-commuting-2026-07.md",
       "title": "Jamie Burkart recollection of bicycle-canoe journeys",
@@ -5139,6 +5191,38 @@
       "to": "claim.nycac.advocacy-operating-playbook",
       "source": "frontmatter",
       "href": "../claims/nycac-advocacy-operating-playbook.md",
+      "context": null
+    },
+    {
+      "from": "application.wowlist.senior-product-manager-oti-782366",
+      "type": "part_of",
+      "to": "project.wowlist",
+      "source": "frontmatter",
+      "href": "../projects/wowlist-orientation.md",
+      "context": null
+    },
+    {
+      "from": "application.wowlist.senior-product-manager-oti-782366",
+      "type": "related_to",
+      "to": "capability.participatory-public-systems",
+      "source": "frontmatter",
+      "href": "../capabilities/participatory-public-systems.md",
+      "context": null
+    },
+    {
+      "from": "application.wowlist.senior-product-manager-oti-782366",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "application.wowlist.senior-product-manager-oti-782366",
+      "type": "uses_source",
+      "to": "source.jobs.oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../sources/jobs-oti-senior-product-manager-782366.md",
       "context": null
     },
     {
@@ -11628,6 +11712,14 @@
       "context": null
     },
     {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "opportunity.protected.source-backed-memory-consulting.2026",
+      "source": "frontmatter",
+      "href": "../opportunities/source-backed-team-memory.md",
+      "context": null
+    },
+    {
       "from": "index.knowledge-wiki.family-closure",
       "type": "informed_by",
       "to": "research.knowledge-wiki-family-closure.2026-07-19",
@@ -13382,6 +13474,14 @@
     {
       "from": "method.source-backed-team-memory",
       "type": "related_to",
+      "to": "opportunity.protected.source-backed-memory-consulting.2026",
+      "source": "frontmatter",
+      "href": "../opportunities/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "method.source-backed-team-memory",
+      "type": "related_to",
       "to": "project.callnyc",
       "source": "frontmatter",
       "href": "../projects/callnyc.md",
@@ -13757,6 +13857,50 @@
       "to": "source.jobs.permitflow.product-operations.8a6e6066",
       "source": "frontmatter",
       "href": "../sources/jobs-permitflow-product-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.protected.source-backed-memory-consulting.2026",
+      "type": "evidence:private-support",
+      "to": "source.protected.source-backed-memory-opportunity.2026",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "contingent consulting-opportunity classification",
+        "proposal existence",
+        "unresolved commercial state"
+      ]
+    },
+    {
+      "from": "opportunity.protected.source-backed-memory-consulting.2026",
+      "type": "projected_to",
+      "to": "portfolio.work.technical-operations",
+      "source": "frontmatter",
+      "href": "../projections/work-technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.protected.source-backed-memory-consulting.2026",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.protected.source-backed-memory-consulting.2026",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.protected.source-backed-memory-consulting.2026",
+      "type": "uses_source",
+      "to": "source.protected.source-backed-memory-opportunity.2026",
+      "source": "frontmatter",
+      "href": "../sources/protected-source-backed-memory-opportunity.md",
       "context": null
     },
     {
@@ -14534,6 +14678,14 @@
       "source": "frontmatter",
       "href": "../sources/kansas-city-star-raft-2007-11-15.md",
       "context": null
+    },
+    {
+      "from": "project.wowlist",
+      "type": "related_to",
+      "to": "application.wowlist.senior-product-manager-oti-782366",
+      "source": "frontmatter",
+      "href": "../applications/wowlist-senior-product-manager-oti-782366.md",
+      "context": "Bounded role-fit translation for NYC OTI Job ID 782366 and similar resident-facing product roles."
     },
     {
       "from": "project.wowlist",
@@ -15368,6 +15520,14 @@
       "context": null
     },
     {
+      "from": "source.jobs.oti.senior-product-manager.782366",
+      "type": "related_to",
+      "to": "application.wowlist.senior-product-manager-oti-782366",
+      "source": "frontmatter",
+      "href": "../applications/wowlist-senior-product-manager-oti-782366.md",
+      "context": null
+    },
+    {
       "from": "source.jobs.oti.technical-operations.782369",
       "type": "supports",
       "to": "opportunity.nyc-oti.technical-operations-manager.782369",
@@ -15781,6 +15941,14 @@
       "to": "project.fair-rent-nyc",
       "source": "frontmatter",
       "href": "../../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "source.protected.source-backed-memory-opportunity.2026",
+      "type": "supports",
+      "to": "opportunity.protected.source-backed-memory-consulting.2026",
+      "source": "frontmatter",
+      "href": "../opportunities/source-backed-team-memory.md",
       "context": null
     },
     {
@@ -16574,6 +16742,42 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/applications/wowlist-senior-product-manager-oti-782366.md",
+      "from": "application.wowlist.senior-product-manager-oti-782366",
+      "toPath": "docs/knowledge-bank/capabilities/technical-operations.md",
+      "to": "capability.technical-operations",
+      "fragment": null,
+      "line": 100,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/applications/wowlist-senior-product-manager-oti-782366.md",
+      "from": "application.wowlist.senior-product-manager-oti-782366",
+      "toPath": "docs/knowledge-bank/sources/jobs-oti-senior-product-manager-782366.md",
+      "to": "source.jobs.oti.senior-product-manager.782366",
+      "fragment": null,
+      "line": 97,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/applications/wowlist-senior-product-manager-oti-782366.md",
+      "from": "application.wowlist.senior-product-manager-oti-782366",
+      "toPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
+      "to": "project.wowlist",
+      "fragment": null,
+      "line": 98,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/applications/wowlist-senior-product-manager-oti-782366.md",
+      "from": "application.wowlist.senior-product-manager-oti-782366",
+      "toPath": "docs/knowledge-bank/capabilities/participatory-public-systems.md",
+      "to": "capability.participatory-public-systems",
+      "fragment": null,
+      "line": 99,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-walkshed-2019.md",
       "from": "asset.graphic.kc-town-hall.walkshed.2019.001",
       "toPath": "apps/www/public/images/artifacts/kc-town-hall-walkshed.webp",
@@ -17152,10 +17356,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
+      "to": "opportunity.protected.source-backed-memory-consulting.2026",
+      "fragment": null,
+      "line": 20,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
       "to": "evaluation.employment-context.coverage.2026-07-18",
       "fragment": null,
-      "line": 38,
+      "line": 46,
       "kind": "link"
     },
     {
@@ -17164,7 +17377,7 @@
       "toPath": "reports/wiki-opportunity-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 39,
+      "line": 47,
       "kind": "link"
     },
     {
@@ -17173,7 +17386,7 @@
       "toPath": "reports/wiki-career-trajectory-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 40,
+      "line": 48,
       "kind": "link"
     },
     {
@@ -17182,7 +17395,7 @@
       "toPath": "reports/wiki-source-channel-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 41,
+      "line": 49,
       "kind": "link"
     },
     {
@@ -17191,7 +17404,7 @@
       "toPath": "reports/wiki-opportunity-discovery.md",
       "to": null,
       "fragment": null,
-      "line": 42,
+      "line": 50,
       "kind": "link"
     },
     {
@@ -17200,7 +17413,7 @@
       "toPath": "reports/hiring-acceptance-public.md",
       "to": null,
       "fragment": null,
-      "line": 43,
+      "line": 51,
       "kind": "link"
     },
     {
@@ -17209,7 +17422,7 @@
       "toPath": "reports/hiring-acceptance-gap-resolution.md",
       "to": null,
       "fragment": null,
-      "line": 44,
+      "line": 52,
       "kind": "link"
     },
     {
@@ -19460,6 +19673,15 @@
       "to": "source.wowlist.knowledge-repository.2026",
       "fragment": null,
       "line": 20,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
+      "from": "project.wowlist",
+      "toPath": "docs/knowledge-bank/applications/wowlist-senior-product-manager-oti-782366.md",
+      "to": "application.wowlist.senior-product-manager-oti-782366",
+      "fragment": null,
+      "line": 25,
       "kind": "link"
     },
     {

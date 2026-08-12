@@ -1,11 +1,13 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Technical Operations
 
-**Source commit:** `4ff407acaba74bd8d59a0904bfa04f9ec4371dea`
-**Generation time:** 2026-08-11T19:47:04-04:00
-**Source fingerprint:** `ff47305c05fdd1d6a06914975680ccb262caac0b39f53ce4b782de82c2ede730`
+**Source commit:** `7e6558e885f28f607fa44b2fd66acd067760cd60`
+**Generation time:** 2026-08-12T12:32:45-04:00
+**Source fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
 
 - [NYC Artist Coalition application brief](../../applications/nycac-civic-product-operations.md) - `related_to` (frontmatter)
+- [WOW List - Senior Product Manager role-fit brief](../../applications/wowlist-senior-product-manager-oti-782366.md) - `prose_link` (markdown)
+- [WOW List - Senior Product Manager role-fit brief](../../applications/wowlist-senior-product-manager-oti-782366.md) - `related_to` (frontmatter)
 - [Implementation, Adoption, and Handoff](../../capabilities/implementation-adoption-and-handoff.md) - `supports` (frontmatter)
 - [Implementation and operational stewardship](../../capabilities/implementation-and-operational-stewardship.md) - `related_to` (frontmatter)
 - [Participatory public systems](../../capabilities/participatory-public-systems.md) - `related_to` (frontmatter)
@@ -20,6 +22,7 @@
 - [CodePath - Senior Program Manager, Claude Corps](../../opportunities/codepath-claude-corps.md) - `related_to` (frontmatter)
 - [NYC OTI - Technical Operations Manager 782369](../../opportunities/oti-technical-operations.md) - `related_to` (frontmatter)
 - [PermitFlow - Product Operations Manager](../../opportunities/permitflow-product-operations.md) - `related_to` (frontmatter)
+- [Protected source-backed team-memory consulting lead](../../opportunities/source-backed-team-memory.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `related_to` (frontmatter)
 - [Role-fit and referral map](../../projections/role-fit-and-referral-map.md) - `related_to` (frontmatter)
 - [Technical Operations portfolio projection](../../projections/work-technical-operations.md) - `related_to` (frontmatter)
