@@ -41,16 +41,17 @@
     "relational_curation_distinct_sources": 3,
     "synergy_observations": 3,
     "adversarial_tests": "11/11",
-    "wiki_records": 389,
-    "wiki_edges": 1348,
-    "wiki_prose_links": 421,
+    "wiki_records": 395,
+    "wiki_edges": 1376,
+    "wiki_prose_links": 444,
     "projection_status": "hold",
     "public_safety": "passed",
-    "application_typecheck_lint_build": "passed"
+    "application_typecheck_lint_build": "passed",
+    "candidate_bound_accessibility": "passed at eef497de543aab662bdfb7d838c23d18060d76ce456ed1867e6ef14e5878eeda"
   },
   "open_exact_candidate_gates": [
     "fresh professor-lens human holdouts",
-    "fresh candidate-bound responsive accessibility evidence"
+    "two independent public-safe source-tree holdout judgments"
   ],
   "authority_boundary": "Deterministic checks do not authorize deployment, indexing, collaborator quotation, rights clearance, portfolio projection, or publication."
 }
