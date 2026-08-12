@@ -1,21 +1,22 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `1e4f5f26560d0d5a43fdb3f777af1c3c4ef763a6`
-**Generation time:** 2026-08-10T14:27:36-04:00
-**Source fingerprint:** `a37a190132a7981841a2a6c9577a1ce35a819a0701dfe23e363fd2f5e20dcbb6`
+**Source commit:** `5943f35d0c2d64e08b73800f5fda6dd1ca088efa`
+**Generation time:** 2026-08-12T12:13:27-04:00
+**Source fingerprint:** `d6cfc4f9d370594d9c3a5de6dde486a6d8927c04fe922f9a12581effa2814adf`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 281
+- Nodes added: 283
 - Nodes removed: 0
-- Edges added: 907
+- Edges added: 913
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 186
 
 ## Added nodes
 
+- `application.wowlist.senior-product-manager-oti-782366`
 - `asset.graphic.kc-town-hall.walkshed.2019.001`
 - `asset.photo-set.mit-interrogative-design.2024`
 - `asset.photo.east-river-manhattan-bridge.2022.001`
@@ -260,6 +261,7 @@ Compared with the graph artifact on `origin/develop`.
 - `source.heteroglossia.cultural-affairs-budget.2018-03-16`
 - `source.heteroglossia.sbjsa.2018-10-22`
 - `source.jamie-public-record-initial-manifest`
+- `source.jobs.oti.senior-product-manager.782366`
 - `source.kc-town-hall.local-digital-archive.2026-07`
 - `source.kc-town-hall.photographic-oral-histories.2026-07`
 - `source.mit.interrogative-design-symposium.2024`

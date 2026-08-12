@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-10T14:27:36-04:00",
-  "sourceCommit": "1e4f5f26560d0d5a43fdb3f777af1c3c4ef763a6",
-  "sourceFingerprint": "a37a190132a7981841a2a6c9577a1ce35a819a0701dfe23e363fd2f5e20dcbb6",
+  "generatedAt": "2026-08-12T12:13:27-04:00",
+  "sourceCommit": "5943f35d0c2d64e08b73800f5fda6dd1ca088efa",
+  "sourceFingerprint": "d6cfc4f9d370594d9c3a5de6dde486a6d8927c04fe922f9a12581effa2814adf",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -17,6 +17,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-08-19"
+    },
+    {
+      "id": "application.wowlist.senior-product-manager-oti-782366",
+      "path": "docs/knowledge-bank/applications/wowlist-senior-product-manager-oti-782366.md",
+      "title": "WOW List - Senior Product Manager role-fit brief",
+      "kind": "application",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe translation of WOW List evidence for NYC OTI Senior Product Manager Job ID 782366 and materially similar resident-facing product roles.",
+      "aliases": [],
+      "lastReviewed": "2026-08-11",
+      "reviewBy": "2026-08-14"
     },
     {
       "id": "asset.graphic.kc-town-hall.walkshed.2019.001",
@@ -4333,6 +4346,19 @@
       "reviewBy": "2026-07-21"
     },
     {
+      "id": "source.jobs.oti.senior-product-manager.782366",
+      "path": "docs/knowledge-bank/sources/jobs-oti-senior-product-manager-782366.md",
+      "title": "NYC Jobs - Senior Product Manager 782366",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official City of New York posting for four OTI Public Interest Technology Crew Senior Product Manager positions, rechecked August 11, 2026.",
+      "aliases": [],
+      "lastReviewed": "2026-08-11",
+      "reviewBy": "2026-08-14"
+    },
+    {
       "id": "source.jobs.oti.technical-operations.782369",
       "path": "docs/knowledge-bank/sources/jobs-oti-technical-operations-782369.md",
       "title": "NYC Jobs - Technical Operations Manager 782369",
@@ -5100,6 +5126,38 @@
       "to": "claim.nycac.advocacy-operating-playbook",
       "source": "frontmatter",
       "href": "../claims/nycac-advocacy-operating-playbook.md",
+      "context": null
+    },
+    {
+      "from": "application.wowlist.senior-product-manager-oti-782366",
+      "type": "part_of",
+      "to": "project.wowlist",
+      "source": "frontmatter",
+      "href": "../projects/wowlist-orientation.md",
+      "context": null
+    },
+    {
+      "from": "application.wowlist.senior-product-manager-oti-782366",
+      "type": "related_to",
+      "to": "capability.participatory-public-systems",
+      "source": "frontmatter",
+      "href": "../capabilities/participatory-public-systems.md",
+      "context": null
+    },
+    {
+      "from": "application.wowlist.senior-product-manager-oti-782366",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "application.wowlist.senior-product-manager-oti-782366",
+      "type": "uses_source",
+      "to": "source.jobs.oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../sources/jobs-oti-senior-product-manager-782366.md",
       "context": null
     },
     {
@@ -14391,6 +14449,14 @@
     {
       "from": "project.wowlist",
       "type": "related_to",
+      "to": "application.wowlist.senior-product-manager-oti-782366",
+      "source": "frontmatter",
+      "href": "../applications/wowlist-senior-product-manager-oti-782366.md",
+      "context": "Bounded role-fit translation for NYC OTI Job ID 782366 and similar resident-facing product roles."
+    },
+    {
+      "from": "project.wowlist",
+      "type": "related_to",
       "to": "person.jamie-burkart",
       "source": "frontmatter",
       "href": "../people/jamie-burkart.md",
@@ -15178,6 +15244,14 @@
       "to": "opportunity.codepath.claude-corps.5182020007",
       "source": "frontmatter",
       "href": "../opportunities/codepath-claude-corps.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.oti.senior-product-manager.782366",
+      "type": "related_to",
+      "to": "application.wowlist.senior-product-manager-oti-782366",
+      "source": "frontmatter",
+      "href": "../applications/wowlist-senior-product-manager-oti-782366.md",
       "context": null
     },
     {
@@ -16376,6 +16450,42 @@
       "to": null,
       "fragment": null,
       "line": 84,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/applications/wowlist-senior-product-manager-oti-782366.md",
+      "from": "application.wowlist.senior-product-manager-oti-782366",
+      "toPath": "docs/knowledge-bank/capabilities/technical-operations.md",
+      "to": "capability.technical-operations",
+      "fragment": null,
+      "line": 100,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/applications/wowlist-senior-product-manager-oti-782366.md",
+      "from": "application.wowlist.senior-product-manager-oti-782366",
+      "toPath": "docs/knowledge-bank/sources/jobs-oti-senior-product-manager-782366.md",
+      "to": "source.jobs.oti.senior-product-manager.782366",
+      "fragment": null,
+      "line": 97,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/applications/wowlist-senior-product-manager-oti-782366.md",
+      "from": "application.wowlist.senior-product-manager-oti-782366",
+      "toPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
+      "to": "project.wowlist",
+      "fragment": null,
+      "line": 98,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/applications/wowlist-senior-product-manager-oti-782366.md",
+      "from": "application.wowlist.senior-product-manager-oti-782366",
+      "toPath": "docs/knowledge-bank/capabilities/participatory-public-systems.md",
+      "to": "capability.participatory-public-systems",
+      "fragment": null,
+      "line": 99,
       "kind": "link"
     },
     {
@@ -19058,6 +19168,15 @@
       "to": null,
       "fragment": null,
       "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
+      "from": "project.wowlist",
+      "toPath": "docs/knowledge-bank/applications/wowlist-senior-product-manager-oti-782366.md",
+      "to": "application.wowlist.senior-product-manager-oti-782366",
+      "fragment": null,
+      "line": 15,
       "kind": "link"
     },
     {
