@@ -5,7 +5,7 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-28
+last_reviewed: 2026-08-12
 review_by: 2026-10-28
 canonical_path: docs/knowledge-bank/indexes/commercial-rent-public-support.md
 summary: Public-safe speaker indexes, official state sources, active bill records, and explicit gaps around Commercial Rent Stabilization.
@@ -16,6 +16,12 @@ relations:
   - type: related_to
     target: index.knowledge-wiki.commercial-rent-testimony
     href: commercial-rent-testimony.md
+  - type: related_to
+    target: event.nyc.sbu-report-launch.2026-07-29
+    href: ../events/sbu-report-launch-2026-07-29.md
+  - type: uses_source
+    target: source.sbu.empty-storefronts-high-rents.2026-07-28
+    href: ../sources/empty-storefronts-high-rents-2026-07-28.md
 ---
 
 # Commercial Rent Stabilization public support
@@ -39,15 +45,22 @@ recovered in the bounded official-source review.
 | 2025-11-13 | [Commercial Rent Stabilization public event](../events/commercial-rent-public-event-2025-11-13.md) | Emily Gallagher, Olympia Kazi, Shahana Hanif, Brad Lander |
 | 2026-02-17 | [Friends and Lovers](../events/commercial-rent-friends-and-lovers-2026-02-17.md) | Olympia Kazi, Eon Huntley, Emily Gallagher |
 | 2026-03-10 | [Project X](../events/commercial-rent-project-x-2026-03-10.md) | Eon Huntley |
+| 2026-07-29 | [Empty Storefronts, High Rents report launch](../events/sbu-report-launch-2026-07-29.md) | Julia Salazar, Emily Gallagher, Jamie Burkart, and the remaining bounded formal program |
 
-These three protected transcript derivatives yielded 47 attributed turns. The
-public repository preserves their source checksums, attribution, roles, turn
-counts, and public-safe orientations without republishing raw speech. The
+The first three protected transcript derivatives yielded 47 attributed turns.
+The public repository preserves source checksums, attribution, roles, statement
+units, and public-safe orientations without republishing raw speech. The
 2025-11-13 record includes NYC Council Member Shahana Hanif and then-NYC
 Comptroller Brad Lander. Huntley spoke at both 2026 events as an Assembly
 candidate. The [election-night record](../sources/commercial-rent-public-support/eon-huntley-2026-primary-result.md)
 now shows him first with 57.12% and all 70 districts reporting, while still
 labeling the result unofficial and not treating him as an officeholder.
+
+The July 29 protected transcript comparison confirms Jamie delivered a public
+cultural-space argument in the same formal program as both state sponsors. The
+exact [final report edition](../sources/empty-storefronts-high-rents-2026-07-28.md)
+also publicly acknowledges his bounded draft review. Raw transcript text and the
+attachment-derived PDF remain outside the public repository.
 
 ## Official state statement indexes
 

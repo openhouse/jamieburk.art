@@ -1,8 +1,8 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "corpus.commercial-rent-public-support.2026-07-28",
-  "reviewedAt": "2026-07-28",
-  "scope": "A bounded public-support index for the active New York State commercial rent stabilization bills, three recoverable public events in Jamie Burkart's protected source archive, and two official releases. It preserves attribution, roles, statement-unit counts, source integrity, and public-safe orientation without republishing raw third-party transcripts or complete release quotations.",
+  "reviewedAt": "2026-08-12",
+  "scope": "A bounded public-support index for the active New York State commercial rent stabilization bills, four recoverable public events in Jamie Burkart's protected source archive, and two official releases. It preserves attribution, roles, statement-unit counts, source integrity, and public-safe orientation without republishing raw third-party transcripts or complete release quotations.",
   "activeBills": [
     {
       "bill": "S8319",
@@ -116,6 +116,38 @@
       ]
     },
     {
+      "id": "event.nyc.sbu-report-launch.2026-07-29",
+      "date": "2026-07-29",
+      "jurisdiction": "New York City and New York State",
+      "eventType": "public-report-launch-and-campaign-event",
+      "sourceKind": "authenticated-public-event-transcript",
+      "sourceSha256": "c717c3092317ede373b5624c3ef6e7d92da48f8a5f817a3f8ac7ae1dd0593d39",
+      "transcriptionState": "authenticated-transcript-ui-review",
+      "completenessStatus": "three-selected-formal-program-speeches-indexed",
+      "publicRecordPath": "../events/sbu-report-launch-2026-07-29.md",
+      "transcriptTextState": "protected-source-not-republished",
+      "speakers": [
+        {
+          "name": "Julia Salazar",
+          "roleAtEvent": "New York State Senator and lead Senate sponsor",
+          "speakerClass": "public-official",
+          "statementCount": 1
+        },
+        {
+          "name": "Emily Gallagher",
+          "roleAtEvent": "New York State Assembly Member and lead Assembly sponsor",
+          "speakerClass": "public-official",
+          "statementCount": 1
+        },
+        {
+          "name": "Jamie Burkart",
+          "roleAtEvent": "NYC Artist Coalition member participating through Fair Rent NYC",
+          "speakerClass": "advocate",
+          "statementCount": 1
+        }
+      ]
+    },
+    {
       "id": "event.nys.commercial-rent.bill-introduction-release.2026-02-17",
       "date": "2026-02-17",
       "jurisdiction": "New York State",
@@ -205,7 +237,7 @@
     "officialElectionNightUrl": "https://nyenr.elections.ny.gov/HomeNoJS.aspx"
   },
   "searchLog": {
-    "reviewedAt": "2026-07-28",
+    "reviewedAt": "2026-08-12",
     "officialPopulation": [
       "S8319 official bill page and action history",
       "A5568A official bill page and action history",
@@ -215,17 +247,20 @@
     "archivePopulation": [
       "2025-11-13 public-event recording transcript",
       "2026-02-17 Friends and Lovers recording transcript",
-      "2026-03-10 Project X cleaned recording transcript"
+      "2026-03-10 Project X cleaned recording transcript",
+      "2026-07-29 authenticated public-event transcript"
     ],
     "findings": [
       "Two official New York State Senate releases were recovered with nine attributed statement units; the public repository indexes every attributed speaker and links the complete official source.",
       "No Assembly or Senate floor speech on S8319 or A5568A was recovered from the official bill pages, action histories, or bounded newsroom search.",
-      "Three local public-event recordings yielded 47 attributed turns for the selected formal-program speakers; the public repository preserves counts and attribution while the transcript derivatives remain protected."
+      "Three local public-event recordings yielded 47 attributed turns for the selected formal-program speakers; the public repository preserves counts and attribution while the transcript derivatives remain protected.",
+      "The July 29 authenticated transcript added three selected formal-program speeches: the two state sponsors and Jamie Burkart. The source fingerprint binds the reviewed transcript interface; raw transcript text and authenticated routes remain protected."
     ],
     "openQueries": [
       "Continue bounded event-by-event review of Jamie's public recordings and authenticated transcription archive.",
       "Review future committee, floor, press-conference, and rally records as S8319 and A5568A advance.",
-      "Classify the remaining full Project X event population without implying support from unreviewed speakers."
+      "Classify the remaining full Project X event population without implying support from unreviewed speakers.",
+      "Complete a full formal-program attribution ledger for the July 29 report launch without converting shared appearance into endorsement."
     ]
   },
   "boundaries": [

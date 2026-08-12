@@ -5,7 +5,7 @@ kind: organization
 status: maintained
 visibility: public-safe
 sensitivity: moderate
-last_reviewed: 2026-07-19
+last_reviewed: 2026-08-12
 review_by: 2026-10-19
 aliases:
   - New York City Artist Coalition
@@ -41,6 +41,9 @@ relations:
   - type: uses_source
     target: source.nycac.running-minutes.2026
     href: ../sources/nycac-running-minutes-2026.md
+  - type: related_to
+    target: claim.nycac.frontline-advocacy.2026-08
+    href: ../claims/nycac-frontline-advocacy-2026-08.md
 ---
 
 # NYC Artist Coalition
@@ -109,6 +112,12 @@ legislative provenance, policy-neutral public-data framing, meeting synthesis,
 event and signup infrastructure, cultural-space listening, and coordination
 across current and historical partner networks. Protected working records
 remain outside this public repository.
+
+A bounded July-August source return adds report review, a public commercial-rent
+statement, and direct official-staff coordination. These records sharpen
+Jamie's role as a research translator, public advocate, and coalition operator
+while preserving report authorship, government authority, collective credit,
+and publication as separate states.
 
 ## Boundaries
 
