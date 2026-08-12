@@ -3,7 +3,7 @@
 
 **Source commit:** `86b76844af306f49fe229e347f1bd87abb00af45`
 **Generation time:** 2026-08-12T12:40:09-04:00
-**Source fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
+**Source fingerprint:** `3ef11f1043c07cb0e4bf0828c4315ac9482fbad1d01d1fab0ebaf3adf9906345`
 
 ## application
 
@@ -232,6 +232,7 @@
 
 ## evaluation
 
+- [Commercial Rent Stabilization advocacy evidence hill climb](../evaluations/commercial-rent-advocacy-hill-climb-2026-08-12.md) - `evaluation.commercial-rent.advocacy-hill-climb.2026-08-12`
 - [Layout C homepage East River curatorial proposal](../evaluations/curatorial/layout-c-home-east-river-v1.md) - `evaluation.curatorial.layout-c.home-east-river.v1`
 - [Employment context coverage baseline - July 18, 2026](../evaluations/employment-context-coverage-2026-07-18.md) - `evaluation.employment-context.coverage.2026-07-18`
 - [Jamie public-record integration evaluation](../evaluations/jamie-public-record-integration-2026-08-03.md) - `evaluation.jamie-public-record-integration.2026-08-03`
@@ -241,6 +242,7 @@
 ## event
 
 - [Interrogative Design Symposium](../events/interrogative-design-symposium-2024.md) - `event.mit.interrogative-design-symposium.2024`
+- [Empty Storefronts, High Rents report launch](../events/commercial-rent-empty-storefronts-report-launch-2026-07-29.md) - `event.nyc.commercial-rent.empty-storefronts-report-launch.2026-07-29`
 - [Commercial Rent Stabilization event at Friends and Lovers](../events/commercial-rent-friends-and-lovers-2026-02-17.md) - `event.nyc.commercial-rent.friends-and-lovers.2026-02-17`
 - [Project X community conversation](../events/commercial-rent-project-x-2026-03-10.md) - `event.nyc.commercial-rent.project-x.2026-03-10`
 - [Commercial Rent Stabilization public event](../events/commercial-rent-public-event-2025-11-13.md) - `event.nyc.commercial-rent.public-event.2025-11-13`
@@ -262,6 +264,7 @@
 
 ## index
 
+- [Commercial Rent Stabilization ecosystem update map](../indexes/commercial-rent-ecosystem-update-map-2026-08-12.md) - `index.commercial-rent.ecosystem-update-map.2026-08-12`
 - [Knowledge Wiki](../README.md) - `index.knowledge-wiki`
 - [Canonical Story Bank](../indexes/canonical-story-bank.md) - `index.knowledge-wiki.canonical-story-bank`
 - [Commercial Rent Stabilization public support](../indexes/commercial-rent-public-support.md) - `index.knowledge-wiki.commercial-rent-public-support`
@@ -372,6 +375,7 @@
 
 ## research-run
 
+- [Commercial Rent Stabilization advocacy source return, August 12, 2026](../research-runs/commercial-rent-advocacy-source-return-2026-08-12.md) - `research.commercial-rent.advocacy-source-return.2026-08-12`
 - [Foundational Wiki page source return, July 19, 2026](../research-runs/foundational-source-return-2026-07-19.md) - `research.foundational-source-return.2026-07-19`
 - [Interpretive layer source return, July 19, 2026](../research-runs/interpretive-layer-source-return-2026-07-19.md) - `research.interpretive-layer-source-return.2026-07-19`
 - [Knowledge Wiki branch-family closure review](../research-runs/knowledge-wiki-family-closure-2026-07-19.md) - `research.knowledge-wiki-family-closure.2026-07-19`
@@ -381,6 +385,7 @@
 
 ## source
 
+- [Action Lab Commercial Rent Stabilization campaign post](../sources/action-lab-commercial-rent-social-post-2026-08-11.md) - `source.action-lab.commercial-rent-social-post.2026-08-11`
 - [CallNYC public source repository](../sources/callnyc-source-repository.md) - `source.callnyc.source-repository`
 - [Campaign-site repository family, 2020-2022](../sources/campaign-site-repository-family-2020-2022.md) - `source.campaign-site.repository-family.2020-2022`
 - [Civic Hall hackathon announcement](../sources/civichall-hackathon-announcement-2016.md) - `source.civichall.hackathon-announcement.2016`
@@ -439,6 +444,7 @@
 - [Late-July 2026 current-workstream review](../sources/working/current-workstream-2026-07-27.md) - `source.protected.current-workstream.2026-07-27`
 - [Protected source-backed memory opportunity — metadata boundary](../sources/protected-source-backed-memory-opportunity.md) - `source.protected.source-backed-memory-opportunity.2026`
 - [Jamie Burkart recollection of bicycle-canoe journeys](../sources/recollections/jamie-canoe-commuting-2026-07.md) - `source.recollection.jamie-canoe-commuting.2026-07`
+- [Empty Storefronts, High Rents final report](../sources/empty-storefronts-high-rents-2026.md) - `source.report.empty-storefronts-high-rents.2026`
 - [Jamie Burkart public resume, maintained 2026](../sources/jamie-resume-2026-06-11.md) - `source.resume.jamie-burkart.2026-06-11`
 - [Jimmy's Corner rally: Small Business Rent Stabilization statements](../testimony/commercial-rent-public-support/2026-04-10-jimmys-corner-rally-statements.md) - `source.statement.commercial-rent.jimmys-corner-rally.2026-04-10`
 - [State sponsors and advocates introduce the Small Business Survival Act](../testimony/commercial-rent-public-support/2026-02-17-state-introduction-statements.md) - `source.statement.commercial-rent.state-introduction.2026-02-17`

@@ -3,7 +3,7 @@
 
 **Source commit:** `86b76844af306f49fe229e347f1bd87abb00af45`
 **Generation time:** 2026-08-12T12:40:09-04:00
-**Source fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
+**Source fingerprint:** `3ef11f1043c07cb0e4bf0828c4315ac9482fbad1d01d1fab0ebaf3adf9906345`
 
 - [Interrogative Design Symposium](../../events/interrogative-design-symposium-2024.md) - `related_to` (frontmatter)
 - [AI Made Me Do It symposium and exhibition](../../events/ai-made-me-do-it-symposium-2024.md) - `related_to` (frontmatter)
@@ -25,5 +25,6 @@
 - [Sunday Dinner and 196 Artists Residency orientation](../../projects/sunday-dinner-196-orientation.md) - `related_to` (frontmatter)
 - [Waterways and participatory art orientation](../../projects/waterways-participatory-art-orientation.md) - `related_to` (frontmatter)
 - [WOWList orientation](../../projects/wowlist-orientation.md) - `related_to` (frontmatter)
+- [Commercial Rent Stabilization advocacy source return, August 12, 2026](../../research-runs/commercial-rent-advocacy-source-return-2026-08-12.md) - `related_to` (frontmatter)
 - [Foundational Wiki page source return, July 19, 2026](../../research-runs/foundational-source-return-2026-07-19.md) - `related_to` (frontmatter)
 - [Jamie Burkart practice timeline, 2004-present](../../timelines/practice-2004-present.md) - `related_to` (frontmatter)

@@ -3,7 +3,7 @@
 
 **Source commit:** `86b76844af306f49fe229e347f1bd87abb00af45`
 **Generation time:** 2026-08-12T12:40:09-04:00
-**Source fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
+**Source fingerprint:** `3ef11f1043c07cb0e4bf0828c4315ac9482fbad1d01d1fab0ebaf3adf9906345`
 
 - [NYC Artist Coalition application brief](../../applications/nycac-civic-product-operations.md) - `part_of` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `related_to` (frontmatter)

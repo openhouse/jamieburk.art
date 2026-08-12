@@ -1,6 +1,7 @@
 import { agencyGraph } from "./agency-graph.ts";
 import { archiveProductionJuly2026 } from "./archive-production-2026-07.ts";
 import { callNycSocialPopulationJuly2026 } from "./callnyc-social-population-2026-07.ts";
+import { commercialRentAdvocacyAugust2026 } from "./commercial-rent-advocacy-2026-08.ts";
 import { googleDriveProductionJuly2026 } from "./google-drive-production-2026-07.ts";
 import { historicalKnowledge } from "./historical-knowledge.ts";
 import { kcTownHallCouncilFunding } from "./kc-town-hall-council-funding.ts";
@@ -52,6 +53,7 @@ const knowledgeBankInput = {
     },
     ...archiveProductionJuly2026.intakeItems,
     ...callNycSocialPopulationJuly2026.intakeItems,
+    ...commercialRentAdvocacyAugust2026.intakeItems,
     ...googleDriveProductionJuly2026.intakeItems,
     ...historicalKnowledge.intakeItems,
     ...socialMediaProductionJuly2026.intakeItems,
@@ -99,6 +101,7 @@ const knowledgeBankInput = {
     },
     ...archiveProductionJuly2026.observations,
     ...callNycSocialPopulationJuly2026.observations,
+    ...commercialRentAdvocacyAugust2026.observations,
     ...googleDriveProductionJuly2026.observations,
     ...historicalKnowledge.observations,
     ...socialMediaProductionJuly2026.observations,
@@ -250,6 +253,7 @@ const knowledgeBankInput = {
     },
     ...archiveProductionJuly2026.sources,
     ...callNycSocialPopulationJuly2026.sources,
+    ...commercialRentAdvocacyAugust2026.sources,
     ...googleDriveProductionJuly2026.sources,
     ...historicalKnowledge.sources,
     ...socialMediaProductionJuly2026.sources,
@@ -277,9 +281,14 @@ const knowledgeBankInput = {
     ...nycacSourceExpansionII.sources,
     ...nycacPressArchive.sources
   ],
-  entities: [...agencyGraph.entities, ...kcTownHallCouncilFunding.entities],
+  entities: [
+    ...agencyGraph.entities,
+    ...commercialRentAdvocacyAugust2026.entities,
+    ...kcTownHallCouncilFunding.entities
+  ],
   agencyRelations: [
     ...agencyGraph.agencyRelations,
+    ...commercialRentAdvocacyAugust2026.agencyRelations,
     ...kcTownHallCouncilFunding.agencyRelations
   ],
   claims: [
@@ -394,6 +403,7 @@ const knowledgeBankInput = {
     },
     ...archiveProductionJuly2026.claims,
     ...callNycSocialPopulationJuly2026.claims,
+    ...commercialRentAdvocacyAugust2026.claims,
     ...googleDriveProductionJuly2026.claims,
     ...historicalKnowledge.claims,
     ...socialMediaProductionJuly2026.claims,
@@ -461,6 +471,7 @@ const knowledgeBankInput = {
     },
     ...archiveProductionJuly2026.researchInquiries,
     ...callNycSocialPopulationJuly2026.researchInquiries,
+    ...commercialRentAdvocacyAugust2026.researchInquiries,
     ...googleDriveProductionJuly2026.researchInquiries,
     ...historicalKnowledge.researchInquiries,
     ...socialMediaProductionJuly2026.researchInquiries,

@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "id": "commercial-rent-advocacy-2026-08",
+  "purpose": "Make the July 13-August 12 Commercial Rent Stabilization record more legible without converting plans, requests, staff work, report review, descriptive association, or source access into stronger unsupported claims.",
+  "criteria": [
+    {
+      "id": "CRA-001",
+      "name": "Prepared and delivered remarks stay distinct",
+      "type": "hard-gate",
+      "passCondition": "The delivered-speech claim requires the event recording, and the prepared statement cannot be substituted for it."
+    },
+    {
+      "id": "CRA-002",
+      "name": "Run of show is not attendance",
+      "type": "hard-gate",
+      "passCondition": "A planning roster cannot establish that a listed official attended or spoke."
+    },
+    {
+      "id": "CRA-003",
+      "name": "Staff coordination is not elected-official endorsement",
+      "type": "hard-gate",
+      "passCondition": "Recent city and state evidence is described as legislative-staff work unless a separate source establishes direct elected-official interaction."
+    },
+    {
+      "id": "CRA-004",
+      "name": "Scheduled is not completed",
+      "type": "hard-gate",
+      "passCondition": "The accepted August 26 meeting remains future scheduling until an occurrence record exists."
+    },
+    {
+      "id": "CRA-005",
+      "name": "Press request is not coverage",
+      "type": "hard-gate",
+      "passCondition": "The NBC footage request cannot become a broadcast, interview, quotation, article, or Jamie-attributed coverage claim."
+    },
+    {
+      "id": "CRA-006",
+      "name": "Review credit stays bounded",
+      "type": "hard-gate",
+      "passCondition": "The final acknowledgment supports thoughtful and careful review, not report authorship, data analysis, whole-report validation, or organizational endorsement."
+    },
+    {
+      "id": "CRA-007",
+      "name": "Association is not motive or causation",
+      "type": "hard-gate",
+      "passCondition": "District-level rent and vacancy association cannot establish landlord motive, warehousing, financing behavior, or individual closure cause."
+    },
+    {
+      "id": "CRA-008",
+      "name": "Public event is not media permission",
+      "type": "hard-gate",
+      "passCondition": "Audio, images, footage, exact quotations, and informal remarks remain held for rights and consent review."
+    },
+    {
+      "id": "CRA-009",
+      "name": "Public projection remains a human gate",
+      "type": "hard-gate",
+      "passCondition": "Every new website and resume projection is held or disallowed until Jamie approval and its source and rights gates close."
+    },
+    {
+      "id": "CRA-010",
+      "name": "Social publication is not coalition credit",
+      "type": "hard-gate",
+      "passCondition": "A live campaign post remains distinct from accepted collaboration, completed NYC Artist Coalition credit, Jamie authorship, Jamie-attributed coverage, and image-reuse permission."
+    }
+  ],
+  "command": "npm run evals:commercial-rent-advocacy && npm run test:commercial-rent-advocacy",
+  "humanGates": [
+    "Jamie approves any promotion into the portfolio or resume.",
+    "The report owner approves attribution beyond the printed acknowledgment.",
+    "The delivered transcript is checked against audio before exact quotation.",
+    "Recording and image rights are reviewed separately from factual event verification.",
+    "Future meetings are recorded only after occurrence and participant review."
+  ]
+}

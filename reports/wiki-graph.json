@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-12T12:40:09-04:00",
   "sourceCommit": "86b76844af306f49fe229e347f1bd87abb00af45",
-  "sourceFingerprint": "5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970",
+  "sourceFingerprint": "3ef11f1043c07cb0e4bf0828c4315ac9482fbad1d01d1fab0ebaf3adf9906345",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -2710,6 +2710,19 @@
       "reviewBy": "2027-01-26"
     },
     {
+      "id": "evaluation.commercial-rent.advocacy-hill-climb.2026-08-12",
+      "path": "docs/knowledge-bank/evaluations/commercial-rent-advocacy-hill-climb-2026-08-12.md",
+      "title": "Commercial Rent Stabilization advocacy evidence hill climb",
+      "kind": "evaluation",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Baseline, bounded intervention, and acceptance conditions for the August 2026 advocacy source return.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2026-09-12"
+    },
+    {
       "id": "evaluation.curatorial.layout-c.home-east-river.v1",
       "path": "docs/knowledge-bank/evaluations/curatorial/layout-c-home-east-river-v1.md",
       "title": "Layout C homepage East River curatorial proposal",
@@ -2786,6 +2799,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-03",
       "reviewBy": "2026-11-03"
+    },
+    {
+      "id": "event.nyc.commercial-rent.empty-storefronts-report-launch.2026-07-29",
+      "path": "docs/knowledge-bank/events/commercial-rent-empty-storefronts-report-launch-2026-07-29.md",
+      "title": "Empty Storefronts, High Rents report launch",
+      "kind": "event",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Source-bounded record of Jamie's delivered Commercial Rent Stabilization advocacy remarks at the July 29, 2026 Small Business United report launch.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2026-09-12"
     },
     {
       "id": "event.nyc.commercial-rent.friends-and-lovers.2026-02-17",
@@ -3024,6 +3050,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-03",
       "reviewBy": "2026-11-03"
+    },
+    {
+      "id": "index.commercial-rent.ecosystem-update-map.2026-08-12",
+      "path": "docs/knowledge-bank/indexes/commercial-rent-ecosystem-update-map-2026-08-12.md",
+      "title": "Commercial Rent Stabilization ecosystem update map",
+      "kind": "index",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Repository-by-repository update plan for the July 13-August 12 report review, public speech, staff coordination, and evidence custody.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2026-09-12"
     },
     {
       "id": "index.knowledge-wiki",
@@ -3716,7 +3755,7 @@
         "New York City Artist Coalition",
         "NYCArtC"
       ],
-      "lastReviewed": "2026-07-19",
+      "lastReviewed": "2026-08-12",
       "reviewBy": "2026-10-19"
     },
     {
@@ -3757,7 +3796,7 @@
       "aliases": [
         "James Burkart"
       ],
-      "lastReviewed": "2026-08-03",
+      "lastReviewed": "2026-08-12",
       "reviewBy": "2026-10-19"
     },
     {
@@ -3851,8 +3890,8 @@
       "sensitivity": "moderate",
       "summary": "Collective commercial-rent-stabilization campaign connecting cultural-space and small-business experience with legislative, legal, public-data, and organizing work.",
       "aliases": [],
-      "lastReviewed": "2026-07-19",
-      "reviewBy": "2026-09-19"
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2026-09-12"
     },
     {
       "id": "project.harry-j-epstein",
@@ -4112,6 +4151,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "research.commercial-rent.advocacy-source-return.2026-08-12",
+      "path": "docs/knowledge-bank/research-runs/commercial-rent-advocacy-source-return-2026-08-12.md",
+      "title": "Commercial Rent Stabilization advocacy source return, August 12, 2026",
+      "kind": "research-run",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Governed close reading of Jamie's July 13-August 12 report review, public speech, legislative-staff coordination, press leads, and ecosystem records.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2026-09-12"
+    },
+    {
       "id": "research.foundational-source-return.2026-07-19",
       "path": "docs/knowledge-bank/research-runs/foundational-source-return-2026-07-19.md",
       "title": "Foundational Wiki page source return, July 19, 2026",
@@ -4188,6 +4240,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-03",
       "reviewBy": "2026-10-03"
+    },
+    {
+      "id": "source.action-lab.commercial-rent-social-post.2026-08-11",
+      "path": "docs/knowledge-bank/sources/action-lab-commercial-rent-social-post-2026-08-11.md",
+      "title": "Action Lab Commercial Rent Stabilization campaign post",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-source record separating the live August 11 campaign post from Jamie attribution, completed NYC Artist Coalition collaborator credit, causal proof, and image-reuse permission.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2026-09-12"
     },
     {
       "id": "source.callnyc.source-repository",
@@ -4914,8 +4979,8 @@
       "sensitivity": "high",
       "summary": "Public-safe metadata for protected job-search, commercial-rent, speech-preparation, and prepublication-review materials reviewed in late July 2026.",
       "aliases": [],
-      "lastReviewed": "2026-07-28",
-      "reviewBy": "2026-08-28"
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2026-09-12"
     },
     {
       "id": "source.protected.source-backed-memory-opportunity.2026",
@@ -4945,6 +5010,19 @@
       ],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "source.report.empty-storefronts-high-rents.2026",
+      "path": "docs/knowledge-bank/sources/empty-storefronts-high-rents-2026.md",
+      "title": "Empty Storefronts, High Rents final report",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe source record for the final July 2026 report, its acknowledgment of Jamie's review, its district-level findings, and its methodological limits.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2026-09-12"
     },
     {
       "id": "source.resume.jamie-burkart.2026-06-11",
@@ -10912,6 +10990,14 @@
       "context": null
     },
     {
+      "from": "evaluation.commercial-rent.advocacy-hill-climb.2026-08-12",
+      "type": "informed_by",
+      "to": "research.commercial-rent.advocacy-source-return.2026-08-12",
+      "source": "frontmatter",
+      "href": "../research-runs/commercial-rent-advocacy-source-return-2026-08-12.md",
+      "context": null
+    },
+    {
       "from": "evaluation.curatorial.layout-c.home-east-river.v1",
       "type": "related_to",
       "to": "asset.photo.east-river-manhattan-bridge.2022.001",
@@ -11005,6 +11091,30 @@
       "to": "source.mit.interrogative-design-symposium.2024",
       "source": "frontmatter",
       "href": "../sources/mit-interrogative-design-symposium-2024.md",
+      "context": null
+    },
+    {
+      "from": "event.nyc.commercial-rent.empty-storefronts-report-launch.2026-07-29",
+      "type": "informed_by",
+      "to": "research.commercial-rent.advocacy-source-return.2026-08-12",
+      "source": "frontmatter",
+      "href": "../research-runs/commercial-rent-advocacy-source-return-2026-08-12.md",
+      "context": null
+    },
+    {
+      "from": "event.nyc.commercial-rent.empty-storefronts-report-launch.2026-07-29",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "event.nyc.commercial-rent.empty-storefronts-report-launch.2026-07-29",
+      "type": "uses_source",
+      "to": "source.report.empty-storefronts-high-rents.2026",
+      "source": "frontmatter",
+      "href": "../sources/empty-storefronts-high-rents-2026.md",
       "context": null
     },
     {
@@ -11317,6 +11427,22 @@
       "to": "source.weibel.in-terms-of-media.2024",
       "source": "frontmatter",
       "href": "../sources/weibel-in-terms-of-media-2024.md",
+      "context": null
+    },
+    {
+      "from": "index.commercial-rent.ecosystem-update-map.2026-08-12",
+      "type": "informed_by",
+      "to": "research.commercial-rent.advocacy-source-return.2026-08-12",
+      "source": "frontmatter",
+      "href": "../research-runs/commercial-rent-advocacy-source-return-2026-08-12.md",
+      "context": null
+    },
+    {
+      "from": "index.commercial-rent.ecosystem-update-map.2026-08-12",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
       "context": null
     },
     {
@@ -13906,6 +14032,14 @@
     {
       "from": "organization.nyc-artist-coalition",
       "type": "informed_by",
+      "to": "research.commercial-rent.advocacy-source-return.2026-08-12",
+      "source": "frontmatter",
+      "href": "../research-runs/commercial-rent-advocacy-source-return-2026-08-12.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-artist-coalition",
+      "type": "informed_by",
       "to": "research.nycac.shared-folder.2026-07-19",
       "source": "frontmatter",
       "href": "../research-runs/nycac-shared-folder-2026-07-19.md",
@@ -14026,6 +14160,14 @@
     {
       "from": "person.jamie-burkart",
       "type": "informed_by",
+      "to": "research.commercial-rent.advocacy-source-return.2026-08-12",
+      "source": "frontmatter",
+      "href": "../research-runs/commercial-rent-advocacy-source-return-2026-08-12.md",
+      "context": null
+    },
+    {
+      "from": "person.jamie-burkart",
+      "type": "informed_by",
       "to": "research.foundational-source-return.2026-07-19",
       "source": "frontmatter",
       "href": "../research-runs/foundational-source-return-2026-07-19.md",
@@ -14038,6 +14180,14 @@
       "source": "frontmatter",
       "href": "../events/interrogative-design-symposium-2024.md",
       "context": "Bounded attendance and photography claim; no speaking or institutional role asserted."
+    },
+    {
+      "from": "person.jamie-burkart",
+      "type": "participated_in",
+      "to": "event.nyc.commercial-rent.empty-storefronts-report-launch.2026-07-29",
+      "source": "frontmatter",
+      "href": "../events/commercial-rent-empty-storefronts-report-launch-2026-07-29.md",
+      "context": "Delivered public Commercial Rent Stabilization remarks; quotation and portfolio projection remain held."
     },
     {
       "from": "person.jamie-burkart",
@@ -14345,10 +14495,34 @@
     },
     {
       "from": "project.fair-rent-nyc",
+      "type": "informed_by",
+      "to": "research.commercial-rent.advocacy-source-return.2026-08-12",
+      "source": "frontmatter",
+      "href": "../research-runs/commercial-rent-advocacy-source-return-2026-08-12.md",
+      "context": null
+    },
+    {
+      "from": "project.fair-rent-nyc",
       "type": "part_of",
       "to": "organization.nyc-artist-coalition",
       "source": "frontmatter",
       "href": "../organizations/nyc-artist-coalition.md",
+      "context": null
+    },
+    {
+      "from": "project.fair-rent-nyc",
+      "type": "related_to",
+      "to": "event.nyc.commercial-rent.empty-storefronts-report-launch.2026-07-29",
+      "source": "frontmatter",
+      "href": "../events/commercial-rent-empty-storefronts-report-launch-2026-07-29.md",
+      "context": null
+    },
+    {
+      "from": "project.fair-rent-nyc",
+      "type": "related_to",
+      "to": "index.commercial-rent.ecosystem-update-map.2026-08-12",
+      "source": "frontmatter",
+      "href": "../indexes/commercial-rent-ecosystem-update-map-2026-08-12.md",
       "context": null
     },
     {
@@ -14365,6 +14539,14 @@
       "to": "source.nycac.running-minutes.2026",
       "source": "frontmatter",
       "href": "../sources/nycac-running-minutes-2026.md",
+      "context": null
+    },
+    {
+      "from": "project.fair-rent-nyc",
+      "type": "uses_source",
+      "to": "source.report.empty-storefronts-high-rents.2026",
+      "source": "frontmatter",
+      "href": "../sources/empty-storefronts-high-rents-2026.md",
       "context": null
     },
     {
@@ -14944,6 +15126,70 @@
       "context": null
     },
     {
+      "from": "research.commercial-rent.advocacy-source-return.2026-08-12",
+      "type": "documents",
+      "to": "event.nyc.commercial-rent.empty-storefronts-report-launch.2026-07-29",
+      "source": "frontmatter",
+      "href": "../events/commercial-rent-empty-storefronts-report-launch-2026-07-29.md",
+      "context": null
+    },
+    {
+      "from": "research.commercial-rent.advocacy-source-return.2026-08-12",
+      "type": "related_to",
+      "to": "evaluation.commercial-rent.advocacy-hill-climb.2026-08-12",
+      "source": "frontmatter",
+      "href": "../evaluations/commercial-rent-advocacy-hill-climb-2026-08-12.md",
+      "context": null
+    },
+    {
+      "from": "research.commercial-rent.advocacy-source-return.2026-08-12",
+      "type": "related_to",
+      "to": "index.commercial-rent.ecosystem-update-map.2026-08-12",
+      "source": "frontmatter",
+      "href": "../indexes/commercial-rent-ecosystem-update-map-2026-08-12.md",
+      "context": null
+    },
+    {
+      "from": "research.commercial-rent.advocacy-source-return.2026-08-12",
+      "type": "related_to",
+      "to": "organization.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-artist-coalition.md",
+      "context": null
+    },
+    {
+      "from": "research.commercial-rent.advocacy-source-return.2026-08-12",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "../people/jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "research.commercial-rent.advocacy-source-return.2026-08-12",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "research.commercial-rent.advocacy-source-return.2026-08-12",
+      "type": "uses_source",
+      "to": "source.action-lab.commercial-rent-social-post.2026-08-11",
+      "source": "frontmatter",
+      "href": "../sources/action-lab-commercial-rent-social-post-2026-08-11.md",
+      "context": null
+    },
+    {
+      "from": "research.commercial-rent.advocacy-source-return.2026-08-12",
+      "type": "uses_source",
+      "to": "source.report.empty-storefronts-high-rents.2026",
+      "source": "frontmatter",
+      "href": "../sources/empty-storefronts-high-rents-2026.md",
+      "context": null
+    },
+    {
       "from": "research.foundational-source-return.2026-07-19",
       "type": "documents",
       "to": "method.situated-source-rereading",
@@ -15357,6 +15603,22 @@
       "to": "source.weibel.in-terms-of-media.2024",
       "source": "frontmatter",
       "href": "../sources/weibel-in-terms-of-media-2024.md",
+      "context": null
+    },
+    {
+      "from": "source.action-lab.commercial-rent-social-post.2026-08-11",
+      "type": "informed_by",
+      "to": "research.commercial-rent.advocacy-source-return.2026-08-12",
+      "source": "frontmatter",
+      "href": "../research-runs/commercial-rent-advocacy-source-return-2026-08-12.md",
+      "context": null
+    },
+    {
+      "from": "source.action-lab.commercial-rent-social-post.2026-08-11",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
       "context": null
     },
     {
@@ -15937,6 +16199,14 @@
     },
     {
       "from": "source.protected.current-workstream.2026-07-27",
+      "type": "informed_by",
+      "to": "research.commercial-rent.advocacy-source-return.2026-08-12",
+      "source": "frontmatter",
+      "href": "../../research-runs/commercial-rent-advocacy-source-return-2026-08-12.md",
+      "context": null
+    },
+    {
+      "from": "source.protected.current-workstream.2026-07-27",
       "type": "related_to",
       "to": "project.fair-rent-nyc",
       "source": "frontmatter",
@@ -15966,6 +16236,30 @@
       "source": "frontmatter",
       "href": "../../research-inquiries/documented-canoe-bike-journeys.md",
       "context": "The recollection opened a bounded research question."
+    },
+    {
+      "from": "source.report.empty-storefronts-high-rents.2026",
+      "type": "informed_by",
+      "to": "research.commercial-rent.advocacy-source-return.2026-08-12",
+      "source": "frontmatter",
+      "href": "../research-runs/commercial-rent-advocacy-source-return-2026-08-12.md",
+      "context": null
+    },
+    {
+      "from": "source.report.empty-storefronts-high-rents.2026",
+      "type": "related_to",
+      "to": "event.nyc.commercial-rent.empty-storefronts-report-launch.2026-07-29",
+      "source": "frontmatter",
+      "href": "../events/commercial-rent-empty-storefronts-report-launch-2026-07-29.md",
+      "context": null
+    },
+    {
+      "from": "source.report.empty-storefronts-high-rents.2026",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
     },
     {
       "from": "source.statement.commercial-rent.jimmys-corner-rally.2026-04-10",
@@ -16207,7 +16501,7 @@
       "toPath": "docs/knowledge-bank/citational-care.md",
       "to": null,
       "fragment": null,
-      "line": 141,
+      "line": 147,
       "kind": "link"
     },
     {
@@ -16216,7 +16510,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc.md",
       "to": "project.callnyc",
       "fragment": null,
-      "line": 142,
+      "line": 148,
       "kind": "link"
     },
     {
@@ -16225,7 +16519,7 @@
       "toPath": "docs/knowledge-bank/intake-and-maturation.md",
       "to": null,
       "fragment": null,
-      "line": 145,
+      "line": 151,
       "kind": "link"
     },
     {
@@ -16234,7 +16528,7 @@
       "toPath": "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md",
       "to": null,
       "fragment": null,
-      "line": 149,
+      "line": 155,
       "kind": "link"
     },
     {
@@ -16243,7 +16537,7 @@
       "toPath": "docs/knowledge-bank/agency-and-collective-credit.md",
       "to": null,
       "fragment": null,
-      "line": 156,
+      "line": 162,
       "kind": "link"
     },
     {
@@ -16252,7 +16546,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-finkelpearl-council-hearing-review.md",
       "to": null,
       "fragment": null,
-      "line": 161,
+      "line": 167,
       "kind": "link"
     },
     {
@@ -16261,7 +16555,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-campaign-press-archive.md",
       "to": null,
       "fragment": null,
-      "line": 167,
+      "line": 173,
       "kind": "link"
     },
     {
@@ -16270,7 +16564,7 @@
       "toPath": "docs/knowledge-bank/projects/talks-not-raids.md",
       "to": null,
       "fragment": null,
-      "line": 172,
+      "line": 178,
       "kind": "link"
     },
     {
@@ -16279,7 +16573,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 178,
+      "line": 184,
       "kind": "link"
     },
     {
@@ -16288,7 +16582,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/kcspacesfund-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 180,
+      "line": 186,
       "kind": "link"
     },
     {
@@ -16297,7 +16591,7 @@
       "toPath": "docs/knowledge-bank/projects/jamie-personal-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 186,
+      "line": 192,
       "kind": "link"
     },
     {
@@ -16306,7 +16600,7 @@
       "toPath": "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
       "to": null,
       "fragment": null,
-      "line": 188,
+      "line": 194,
       "kind": "link"
     },
     {
@@ -16315,7 +16609,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-town-hall.md",
       "to": null,
       "fragment": null,
-      "line": 196,
+      "line": 202,
       "kind": "link"
     },
     {
@@ -16324,7 +16618,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
       "to": null,
       "fragment": null,
-      "line": 202,
+      "line": 208,
       "kind": "link"
     },
     {
@@ -16333,7 +16627,7 @@
       "toPath": "docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
       "to": null,
       "fragment": null,
-      "line": 204,
+      "line": 210,
       "kind": "link"
     },
     {
@@ -16342,7 +16636,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
       "to": null,
       "fragment": null,
-      "line": 210,
+      "line": 216,
       "kind": "link"
     },
     {
@@ -16351,7 +16645,7 @@
       "toPath": "docs/knowledge-bank/projects/archive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 216,
+      "line": 222,
       "kind": "link"
     },
     {
@@ -16360,7 +16654,7 @@
       "toPath": "docs/knowledge-bank/projects/icloud-teams-archive-delta-2026-07-15.md",
       "to": null,
       "fragment": null,
-      "line": 222,
+      "line": 228,
       "kind": "link"
     },
     {
@@ -16369,7 +16663,7 @@
       "toPath": "docs/knowledge-bank/projects/google-drive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 228,
+      "line": 234,
       "kind": "link"
     },
     {
@@ -16378,7 +16672,7 @@
       "toPath": "docs/knowledge-bank/projects/social-media-archive-production.md",
       "to": null,
       "fragment": null,
-      "line": 234,
+      "line": 240,
       "kind": "link"
     },
     {
@@ -16387,7 +16681,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 240,
+      "line": 246,
       "kind": "link"
     },
     {
@@ -16396,7 +16690,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
       "to": null,
       "fragment": null,
-      "line": 242,
+      "line": 248,
       "kind": "link"
     },
     {
@@ -16405,7 +16699,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-retrievable-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 248,
+      "line": 254,
       "kind": "link"
     },
     {
@@ -16414,16 +16708,7 @@
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md",
       "to": null,
       "fragment": null,
-      "line": 253,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
-      "to": null,
-      "fragment": null,
-      "line": 255,
+      "line": 259,
       "kind": "link"
     },
     {
@@ -16438,10 +16723,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
+      "to": null,
+      "fragment": null,
+      "line": 261,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/projects/urbanhermit-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 262,
+      "line": 268,
       "kind": "link"
     },
     {
@@ -16450,7 +16744,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 264,
+      "line": 270,
       "kind": "link"
     },
     {
@@ -16459,7 +16753,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 270,
+      "line": 276,
       "kind": "link"
     },
     {
@@ -16468,25 +16762,7 @@
       "toPath": "docs/knowledge-bank/data/callnyc-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 272,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
-      "to": null,
-      "fragment": null,
-      "line": 277,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
-      "to": null,
-      "fragment": null,
-      "line": 279,
+      "line": 278,
       "kind": "link"
     },
     {
@@ -16501,7 +16777,16 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
+      "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
+      "to": null,
+      "fragment": null,
+      "line": 283,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
       "line": 285,
@@ -16510,28 +16795,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
+      "to": null,
+      "fragment": null,
+      "line": 291,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 287,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
-      "to": null,
-      "fragment": null,
-      "line": 294,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/data/wowlist-sunday-dinner-callscript-controls.json",
-      "to": null,
-      "fragment": null,
-      "line": 296,
+      "line": 293,
       "kind": "link"
     },
     {
@@ -16546,7 +16822,16 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
-      "toPath": "evals/knowledge-bank/runs/2026-07-15-wowlist-sunday-dinner-callscript-continuity.md",
+      "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
+      "to": null,
+      "fragment": null,
+      "line": 300,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/data/wowlist-sunday-dinner-callscript-controls.json",
       "to": null,
       "fragment": null,
       "line": 302,
@@ -16555,10 +16840,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "evals/knowledge-bank/runs/2026-07-15-wowlist-sunday-dinner-callscript-continuity.md",
+      "to": null,
+      "fragment": null,
+      "line": 308,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 305,
+      "line": 311,
       "kind": "link"
     },
     {
@@ -16567,7 +16861,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 310,
+      "line": 316,
       "kind": "link"
     },
     {
@@ -16576,7 +16870,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 311,
+      "line": 317,
       "kind": "link"
     },
     {
@@ -16708,10 +17002,55 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/research-runs/commercial-rent-advocacy-source-return-2026-08-12.md",
+      "to": "research.commercial-rent.advocacy-source-return.2026-08-12",
+      "fragment": null,
+      "line": 71,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/events/commercial-rent-empty-storefronts-report-launch-2026-07-29.md",
+      "to": "event.nyc.commercial-rent.empty-storefronts-report-launch.2026-07-29",
+      "fragment": null,
+      "line": 72,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/sources/action-lab-commercial-rent-social-post-2026-08-11.md",
+      "to": "source.action-lab.commercial-rent-social-post.2026-08-11",
+      "fragment": null,
+      "line": 74,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/indexes/commercial-rent-ecosystem-update-map-2026-08-12.md",
+      "to": "index.commercial-rent.ecosystem-update-map.2026-08-12",
+      "fragment": null,
+      "line": 75,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/evaluations/commercial-rent-advocacy-hill-climb-2026-08-12.md",
+      "to": "evaluation.commercial-rent.advocacy-hill-climb.2026-08-12",
+      "fragment": null,
+      "line": 76,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/indexes/professional-record-and-reception.md",
       "to": "index.knowledge-wiki.professional-record",
       "fragment": null,
-      "line": 71,
+      "line": 77,
       "kind": "link"
     },
     {
@@ -16720,7 +17059,7 @@
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
       "to": "project.nyc-artist-coalition",
       "fragment": null,
-      "line": 75,
+      "line": 81,
       "kind": "link"
     },
     {
@@ -16729,7 +17068,7 @@
       "toPath": "docs/knowledge-bank/_generated/wanted-pages.md",
       "to": null,
       "fragment": null,
-      "line": 78,
+      "line": 84,
       "kind": "link"
     },
     {
@@ -16738,7 +17077,7 @@
       "toPath": "docs/knowledge-bank/workflow.md",
       "to": null,
       "fragment": null,
-      "line": 84,
+      "line": 90,
       "kind": "link"
     },
     {
@@ -19172,6 +19511,15 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/organizations/nyc-artist-coalition.md",
+      "from": "organization.nyc-artist-coalition",
+      "toPath": "docs/knowledge-bank/research-runs/commercial-rent-advocacy-source-return-2026-08-12.md",
+      "to": "research.commercial-rent.advocacy-source-return.2026-08-12",
+      "fragment": null,
+      "line": 74,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
       "from": "person.jamie-burkart",
       "toPath": "docs/knowledge-bank/indexes/jamie-public-record-source-edition.md",
@@ -19201,10 +19549,19 @@
     {
       "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
       "from": "person.jamie-burkart",
+      "toPath": "docs/knowledge-bank/research-runs/commercial-rent-advocacy-source-return-2026-08-12.md",
+      "to": "research.commercial-rent.advocacy-source-return.2026-08-12",
+      "fragment": null,
+      "line": 38,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
+      "from": "person.jamie-burkart",
       "toPath": "docs/knowledge-bank/projects/harry-j-epstein.md",
       "to": "project.harry-j-epstein",
       "fragment": null,
-      "line": 42,
+      "line": 49,
       "kind": "link"
     },
     {
@@ -19213,7 +19570,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
       "to": "project.wowlist",
       "fragment": null,
-      "line": 43,
+      "line": 50,
       "kind": "link"
     },
     {
@@ -19222,7 +19579,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc.md",
       "to": "project.callnyc",
       "fragment": null,
-      "line": 44,
+      "line": 51,
       "kind": "link"
     },
     {
@@ -19231,7 +19588,7 @@
       "toPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
       "to": "method.source-backed-team-memory",
       "fragment": null,
-      "line": 45,
+      "line": 52,
       "kind": "link"
     },
     {
@@ -19240,7 +19597,7 @@
       "toPath": "docs/knowledge-bank/organizations/nyc-artist-coalition.md",
       "to": "organization.nyc-artist-coalition",
       "fragment": null,
-      "line": 49,
+      "line": 56,
       "kind": "link"
     },
     {
@@ -19249,7 +19606,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-town-hall-orientation.md",
       "to": "project.kc-town-hall",
       "fragment": null,
-      "line": 50,
+      "line": 57,
       "kind": "link"
     },
     {
@@ -19258,7 +19615,7 @@
       "toPath": "docs/knowledge-bank/projects/talks-not-raids-orientation.md",
       "to": "project.talks-not-raids",
       "fragment": null,
-      "line": 51,
+      "line": 58,
       "kind": "link"
     },
     {
@@ -19267,7 +19624,7 @@
       "toPath": "docs/knowledge-bank/projects/fair-rent-nyc.md",
       "to": "project.fair-rent-nyc",
       "fragment": null,
-      "line": 52,
+      "line": 59,
       "kind": "link"
     },
     {
@@ -19276,7 +19633,7 @@
       "toPath": "docs/knowledge-bank/projects/waterways-participatory-art-orientation.md",
       "to": "project.waterways-participatory-art",
       "fragment": null,
-      "line": 56,
+      "line": 63,
       "kind": "link"
     },
     {
@@ -19285,7 +19642,7 @@
       "toPath": "docs/knowledge-bank/projects/nter-chng.md",
       "to": "project.nter-chng",
       "fragment": null,
-      "line": 57,
+      "line": 64,
       "kind": "link"
     },
     {
@@ -19294,7 +19651,7 @@
       "toPath": "docs/knowledge-bank/projects/sunday-dinner-196-orientation.md",
       "to": "project.sunday-dinner-196",
       "fragment": null,
-      "line": 58,
+      "line": 65,
       "kind": "link"
     },
     {
@@ -19303,7 +19660,7 @@
       "toPath": "docs/knowledge-bank/projects/office-of-nightlife-town-halls.md",
       "to": "project.office-of-nightlife-town-halls",
       "fragment": null,
-      "line": 59,
+      "line": 66,
       "kind": "link"
     },
     {
@@ -19312,7 +19669,7 @@
       "toPath": "docs/knowledge-bank/timelines/practice-2004-present.md",
       "to": "timeline.jamie-practice.2004-present",
       "fragment": null,
-      "line": 71,
+      "line": 78,
       "kind": "link"
     },
     {
@@ -19321,7 +19678,7 @@
       "toPath": "docs/knowledge-bank/methods/collective-credit-and-protected-absence.md",
       "to": "method.collective-credit-protected-absence",
       "fragment": null,
-      "line": 84,
+      "line": 91,
       "kind": "link"
     },
     {
@@ -19385,6 +19742,15 @@
       "to": "asset.photo.digital-district.001",
       "fragment": "what-it-does-not-establish",
       "line": 99,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/fair-rent-nyc.md",
+      "from": "project.fair-rent-nyc",
+      "toPath": "docs/knowledge-bank/research-runs/commercial-rent-advocacy-source-return-2026-08-12.md",
+      "to": "research.commercial-rent.advocacy-source-return.2026-08-12",
+      "fragment": null,
+      "line": 22,
       "kind": "link"
     },
     {
@@ -20123,6 +20489,15 @@
       "to": null,
       "fragment": null,
       "line": 9,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/working/current-workstream-2026-07-27.md",
+      "from": "source.protected.current-workstream.2026-07-27",
+      "toPath": "docs/knowledge-bank/research-runs/commercial-rent-advocacy-source-return-2026-08-12.md",
+      "to": "research.commercial-rent.advocacy-source-return.2026-08-12",
+      "fragment": null,
+      "line": 35,
       "kind": "link"
     },
     {
