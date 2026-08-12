@@ -1,10 +1,10 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-08-12T16:24:57.314Z",
-  "baseUrl": "http://127.0.0.1:3055",
-  "publicSurfaceFingerprint": "387d6abba1b6681b8c442d5b89ef38de2debf4c38bb0d928163b583ded613553",
+  "checkedAt": "2026-08-12T16:36:46.428Z",
+  "baseUrl": "http://127.0.0.1:3057",
+  "publicSurfaceFingerprint": "eef497de543aab662bdfb7d838c23d18060d76ce456ed1867e6ef14e5878eeda",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 116,
+  "publicSurfaceFileCount": 118,
   "method": "Playwright keyboard interaction plus bounded DOM and viewport inspection on the built local candidate. This is not a human screen-reader or assistive-technology session.",
   "keyboard": {
     "desktopTabSequence": [

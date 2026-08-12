@@ -1,10 +1,10 @@
 {
   "reportVersion": 3,
-  "checkedAt": "2026-08-12T16:24:57.314Z",
-  "baseUrl": "http://127.0.0.1:3055",
-  "publicSurfaceFingerprint": "387d6abba1b6681b8c442d5b89ef38de2debf4c38bb0d928163b583ded613553",
+  "checkedAt": "2026-08-12T16:36:46.428Z",
+  "baseUrl": "http://127.0.0.1:3057",
+  "publicSurfaceFingerprint": "eef497de543aab662bdfb7d838c23d18060d76ce456ed1867e6ef14e5878eeda",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 116,
+  "publicSurfaceFileCount": 118,
   "captureMethod": "Playwright Chromium screenshots of the current built local candidate; About captures are deliberately framed on the through-line and current systems loops; no deployment or indexing action.",
   "routes": [
     {
