@@ -1,10 +1,10 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-08-12T16:36:29.322Z",
-  "baseUrl": "http://127.0.0.1:3056",
-  "publicSurfaceFingerprint": "eef497de543aab662bdfb7d838c23d18060d76ce456ed1867e6ef14e5878eeda",
+  "checkedAt": "2026-08-12T22:02:29.990Z",
+  "baseUrl": "http://127.0.0.1:3057",
+  "publicSurfaceFingerprint": "e47f936d76722c85deb948d389f3036eebef8c0cef568907d553a07c9c05483a",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 118,
+  "publicSurfaceFileCount": 119,
   "routes": [
     "/",
     "/work",
@@ -824,7 +824,7 @@
     "nonSuccessResponses": 0,
     "invalidHeadingOrLandmarkRows": 0,
     "lazyImagesObserved": 20,
-    "unloadedImagesBeforeScroll": 11,
+    "unloadedImagesBeforeScroll": 21,
     "lazyImageFollowUpPerformed": true,
     "allImagesLoadedAfterScroll": true
   },
@@ -886,7 +886,7 @@
     "passed": true
   },
   "navigationReview": {
-    "checkedAt": "2026-08-12T16:36:29.323Z",
+    "checkedAt": "2026-08-12T22:02:29.990Z",
     "startRoute": "/",
     "destinationRoute": "/about",
     "startHttpStatus": 200,

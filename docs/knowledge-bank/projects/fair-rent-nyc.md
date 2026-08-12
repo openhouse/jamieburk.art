@@ -5,12 +5,15 @@ kind: project
 status: maintained
 visibility: public-safe
 sensitivity: moderate
-last_reviewed: 2026-07-19
+last_reviewed: 2026-08-12
 review_by: 2026-09-19
 canonical_path: docs/knowledge-bank/projects/fair-rent-nyc.md
 summary: Collective commercial-rent-stabilization campaign connecting cultural-space and small-business experience with legislative, legal, public-data, and organizing work.
 credit_scope: collective
 relations:
+  - type: related_to
+    target: project.fair-rent-nyc.recent-advocacy.2026-08
+    href: fair-rent-nyc-recent-advocacy-2026-08.md
   - type: part_of
     target: organization.nyc-artist-coalition
     href: ../organizations/nyc-artist-coalition.md
@@ -41,6 +44,11 @@ The 2026 record documents work to preserve earlier Fair Rent NYC campaign
 history while coordinating with current small-business and policy partners. It
 keeps city and state lanes distinct, identifies legal and policy questions,
 and treats data, contacts, stories, and publication as governed resources.
+
+The [July 13-August 12 advocacy cycle](fair-rent-nyc-recent-advocacy-2026-08.md)
+adds a bounded report review, July 29 public remarks, an official legislative-
+status check, a campaign-publication correction, and a protected coordination
+lane. Public portfolio projection remains a separate Jamie approval decision.
 
 ## Boundary
 

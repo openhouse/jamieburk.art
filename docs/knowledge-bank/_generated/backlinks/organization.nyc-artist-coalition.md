@@ -3,7 +3,7 @@
 
 **Source commit:** `86b76844af306f49fe229e347f1bd87abb00af45`
 **Generation time:** 2026-08-12T12:40:09-04:00
-**Source fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
+**Source fingerprint:** `2214644631dc83566195142d752f739b75d33cb1a5bd6ecefe05df5afaa92561`
 
 - [Civic, cultural, and technical translation](../../capabilities/civic-cultural-and-technical-translation.md) - `prose_link` (markdown)
 - [Civic, cultural, and technical translation](../../capabilities/civic-cultural-and-technical-translation.md) - `related_to` (frontmatter)
@@ -24,6 +24,7 @@
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
 - [Small Cultural Spaces Where Culture Is Born](../../places/small-cultural-spaces.md) - `related_to` (frontmatter)
 - [Fair Rent NYC](../../projects/fair-rent-nyc.md) - `part_of` (frontmatter)
+- [Fair Rent NYC recent advocacy, July 13-August 12, 2026](../../projects/fair-rent-nyc-recent-advocacy-2026-08.md) - `related_to` (frontmatter)
 - [Let NYC Dance](../../projects/let-nyc-dance.md) - `part_of` (frontmatter)
 - [Office of Nightlife town halls](../../projects/office-of-nightlife-town-halls.md) - `part_of` (frontmatter)
 - [Save NYC Spaces](../../projects/save-nyc-spaces.md) - `part_of` (frontmatter)

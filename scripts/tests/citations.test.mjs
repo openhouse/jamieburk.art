@@ -67,10 +67,16 @@ test("Claim resolver returns only active approved projections", () => {
 test("corrections retire old wording from public surfaces", () => {
   const text = ["apps/www/src/content/work/callnyc.mdx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts", "apps/www/src/app/resume/page.tsx"].map((path) => readFileSync(path, "utf8")).join("\n");
   assert.doesNotMatch(text, /first civic-data hackathon|2014[-–]2015/i);
-  assert.equal(knowledgeBank.corrections.length, 4);
+  assert.equal(knowledgeBank.corrections.length, 5);
   assert.ok(knowledgeBank.corrections.some((correction) =>
     correction.id === "COR-NYCAC-CABARET-HEARING-DATE-2026" &&
     correction.replacementText === "September 14, 2017"
+  ));
+  assert.ok(knowledgeBank.corrections.some((correction) =>
+    correction.id === "COR-SBU-CAROUSEL-BUSINESS-CLOSURES-2026-08" &&
+    correction.previousText === "84,000 businesses closed in Q2 2025" &&
+    correction.replacementText === "8,400 businesses closed in Q2 2025" &&
+    correction.status === "active"
   ));
 });
 

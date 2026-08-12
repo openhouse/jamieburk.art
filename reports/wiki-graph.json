@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-12T12:40:09-04:00",
   "sourceCommit": "86b76844af306f49fe229e347f1bd87abb00af45",
-  "sourceFingerprint": "5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970",
+  "sourceFingerprint": "2214644631dc83566195142d752f739b75d33cb1a5bd6ecefe05df5afaa92561",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3102,7 +3102,7 @@
       "sensitivity": "moderate",
       "summary": "Hiring-oriented map separating difficult conditions, Jamie's supported responsibility, usable deliverables, wider results, and evidence boundaries.",
       "aliases": [],
-      "lastReviewed": "2026-07-19",
+      "lastReviewed": "2026-08-12",
       "reviewBy": "2026-10-19"
     },
     {
@@ -3310,7 +3310,7 @@
       "sensitivity": "moderate",
       "summary": "Task-oriented queue for evidence debt, claim maturity, corrections, protected absences, rights, and selective projection.",
       "aliases": [],
-      "lastReviewed": "2026-07-19",
+      "lastReviewed": "2026-08-12",
       "reviewBy": "2026-10-19"
     },
     {
@@ -3851,8 +3851,21 @@
       "sensitivity": "moderate",
       "summary": "Collective commercial-rent-stabilization campaign connecting cultural-space and small-business experience with legislative, legal, public-data, and organizing work.",
       "aliases": [],
-      "lastReviewed": "2026-07-19",
+      "lastReviewed": "2026-08-12",
       "reviewBy": "2026-09-19"
+    },
+    {
+      "id": "project.fair-rent-nyc.recent-advocacy.2026-08",
+      "path": "docs/knowledge-bank/projects/fair-rent-nyc-recent-advocacy-2026-08.md",
+      "title": "Fair Rent NYC recent advocacy, July 13-August 12, 2026",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public-safe close reading of Jamie's report review, July 29 public remarks, protected official coordination, current legislative status, and unresolved media and data-publication questions.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2026-09-12"
     },
     {
       "id": "project.harry-j-epstein",
@@ -14354,6 +14367,14 @@
     {
       "from": "project.fair-rent-nyc",
       "type": "related_to",
+      "to": "project.fair-rent-nyc.recent-advocacy.2026-08",
+      "source": "frontmatter",
+      "href": "fair-rent-nyc-recent-advocacy-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "project.fair-rent-nyc",
+      "type": "related_to",
       "to": "project.save-nyc-spaces",
       "source": "frontmatter",
       "href": "save-nyc-spaces.md",
@@ -14365,6 +14386,38 @@
       "to": "source.nycac.running-minutes.2026",
       "source": "frontmatter",
       "href": "../sources/nycac-running-minutes-2026.md",
+      "context": null
+    },
+    {
+      "from": "project.fair-rent-nyc.recent-advocacy.2026-08",
+      "type": "part_of",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "project.fair-rent-nyc.recent-advocacy.2026-08",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.decisions-deliverables-operational-outcomes",
+      "source": "frontmatter",
+      "href": "../indexes/decisions-deliverables-and-operational-outcomes.md",
+      "context": null
+    },
+    {
+      "from": "project.fair-rent-nyc.recent-advocacy.2026-08",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.research-agenda-and-held-claims",
+      "source": "frontmatter",
+      "href": "../indexes/research-agenda-and-held-claims.md",
+      "context": null
+    },
+    {
+      "from": "project.fair-rent-nyc.recent-advocacy.2026-08",
+      "type": "related_to",
+      "to": "organization.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-artist-coalition.md",
       "context": null
     },
     {
@@ -19385,6 +19438,15 @@
       "to": "asset.photo.digital-district.001",
       "fragment": "what-it-does-not-establish",
       "line": 99,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/fair-rent-nyc.md",
+      "from": "project.fair-rent-nyc",
+      "toPath": "docs/knowledge-bank/projects/fair-rent-nyc-recent-advocacy-2026-08.md",
+      "to": "project.fair-rent-nyc.recent-advocacy.2026-08",
+      "fragment": null,
+      "line": 22,
       "kind": "link"
     },
     {

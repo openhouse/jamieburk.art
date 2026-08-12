@@ -5,7 +5,7 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: moderate
-last_reviewed: 2026-07-19
+last_reviewed: 2026-08-12
 review_by: 2026-10-19
 canonical_path: docs/knowledge-bank/indexes/decisions-deliverables-and-operational-outcomes.md
 summary: Hiring-oriented map separating difficult conditions, Jamie's supported responsibility, usable deliverables, wider results, and evidence boundaries.
@@ -46,6 +46,7 @@ evidence does not establish.
 | --- | --- | --- | --- | --- |
 | CallNYC | Independently built a follow-on interpretation of released CouncilStat data | Resident-facing issue pathways and contextual next steps | Public reporting and bounded Council-account amplification | No Council adoption, usage total, constituent outcome, or official-product status |
 | NYC Artist Coalition | Founding and early organizing role plus documented identity, implementation, and participation systems | Meetings, campaign routes, testimony support, practical resources, and public interfaces | Coalition work appears within broader policy and agency histories | Outcomes were collective and institutional; complete task allocation is unresolved |
+| Fair Rent NYC, July-August 2026 | Bounded report review and a public cultural-space argument; protected post-event office coordination remains held | Acknowledged corrections and limitations in a released report, a delivered public argument, current legislative-status records, and explicit follow-up gates | The cycle strengthened campaign evidence, public framing, and coordination infrastructure | No co-authorship, media placement, counterpart endorsement, legislation passage, or attributable campaign impact is claimed |
 | KC Town Hall | Co-developed the successful CCED request, served as the City's named developer/presenter, remained a named developer point of contact through documented compliance progress, and later transitioned the project to a mission-aligned organization | Stabilization scope, survey workflow, presentation, proposal, public-benefit packet, pre-disbursement coordination, and responsible handoff | Secured a $490,539 public funding award and transitioned the project to a mission-aligned organization | Jamie did not hold institutional voting authority; the transition is an authorized first-party account; the full municipal lifecycle remains preserved in the project Wiki |
 | KC Spaces Fund | Behind-the-scenes website, theme, widget, deployment, and action-route implementation | A coherent campaign site with donation, application, signup, contact, and fundraising display | The public fundraiser records its result | The result does not prove site causality or make Jamie an organizer or grant decision-maker |
 | Source-Backed Team Memory | Designed a bounded source, privacy, review, prototype, and continue-revise-stop process | Inspectable implementation choices before production commitment | A reusable engagement design and current Wiki practice | Proposal and method do not establish client adoption or a production platform |
