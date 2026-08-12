@@ -121,6 +121,22 @@ test("protected metadata opportunity cannot become a live job by status mutation
   assert.equal(opportunity.decision, "not-live");
 });
 
+test("protected opportunity cannot become live by mutating both source type and status", () => {
+  const root = candidateFixture();
+  const opportunityPath = path.join(root, "docs/knowledge-bank/opportunities/source-backed-team-memory.md");
+  writeFileSync(
+    opportunityPath,
+    readFileSync(opportunityPath, "utf8")
+      .replace("source_type: protected-metadata", "source_type: official-employer")
+      .replace("opportunity_status: conditional", "opportunity_status: live")
+  );
+  const opportunity = evaluatePublicHiring(root).report.opportunities.find((item) =>
+    item.id.includes("protected.source-backed-memory")
+  );
+  assert.equal(opportunity.live, false);
+  assert.equal(opportunity.decision, "not-live");
+});
+
 test("exclusionary hard screens fail closed", () => {
   const root = candidateFixture();
   const opportunityPath = path.join(root, "docs/knowledge-bank/opportunities/oti-technical-operations.md");

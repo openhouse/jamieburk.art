@@ -228,7 +228,11 @@ export function evaluatePublicHiring(repoRoot) {
     });
     const critical = requirementCoverage.filter((item) => item.importance === "critical");
     const criticalObserved = critical.filter((item) => item.observed).length;
-    const live = opportunity.status === "live" && opportunity.sourceType === "official-employer";
+    const protectedOpportunity = opportunity.id.startsWith("opportunity.protected.");
+    const live =
+      !protectedOpportunity &&
+      opportunity.status === "live" &&
+      opportunity.sourceType === "official-employer";
     const fresh = live && opportunity.reviewBy >= generatedAt.slice(0, 10);
     const hardScreenBlocked = opportunity.hardScreens.some(
       (screen) => screen.state === "not-met" || screen.disposition === "do-not-pursue"
