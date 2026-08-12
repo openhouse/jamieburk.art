@@ -232,12 +232,54 @@ function runBoundaryComposition(scenario) {
   };
 }
 
+function runCorrectionReview(contract, scenario) {
+  const correction = scenario.correction ?? {};
+  const target = scenario.target ?? {};
+  const practice = contract.knowledge_practice ?? {};
+
+  if (correction.original_preserved !== true) {
+    return { decision: "deny", reason: "original-record-must-be-preserved" };
+  }
+  if (!target.id || !correction.id || !correction.raised_by_lens_id) {
+    return { decision: "deny", reason: "correction-identity-incomplete" };
+  }
+  if (!(practice.correction_statuses ?? []).includes(correction.status)) {
+    return { decision: "deny", reason: "correction-status-not-recognized" };
+  }
+  if (!(practice.correction_effects ?? []).includes(correction.effect)) {
+    return { decision: "deny", reason: "correction-effect-not-recognized" };
+  }
+
+  const unresolved = ["proposed", "acknowledged", "disputed", "held"].includes(
+    correction.status
+  );
+  const projectionState =
+    correction.effect === "restrict-projection"
+      ? unresolved
+        ? "held-pending-correction-review"
+        : correction.status === "accepted"
+          ? "restricted"
+          : "unchanged-after-review"
+      : "review-required";
+
+  return {
+    decision: "append-correction",
+    correction_id: correction.id,
+    target_id: target.id,
+    correction_status: correction.status,
+    original_record_state: target.record_state,
+    original_preserved: true,
+    projection_state: projectionState
+  };
+}
+
 export function runGraphLayerScenario(contract, scenario) {
   if (scenario.operation === "transition") return runTransition(contract, scenario);
   if (scenario.operation === "semantic-radius") return runSemanticRadius(contract, scenario);
   if (scenario.operation === "packet-plan") return runPacketPlan(contract, scenario);
   if (scenario.operation === "knowledge-flow-audit") return runKnowledgeFlowAudit(scenario);
   if (scenario.operation === "compose-boundaries") return runBoundaryComposition(scenario);
+  if (scenario.operation === "record-correction") return runCorrectionReview(contract, scenario);
   throw new Error(`unknown graph-layer RFC eval operation: ${scenario.operation}`);
 }
 
@@ -327,6 +369,15 @@ export function evaluateGraphLayerRFC(options = {}) {
       knowledgePractice?.counterfactuals_remain_questions === true &&
       knowledgePractice?.boundary_composition === "intersection-most-restrictive" &&
       knowledgePractice?.simulated_voice_requires_human_confirmation === true,
+    participant_correction:
+      ["target_id", "raised_by_lens_id", "status", "effect", "original_preserved"].every(
+        (field) => knowledgePractice?.correction_requires?.includes(field)
+      ) &&
+      ["proposed", "acknowledged", "accepted", "disputed", "declined", "withdrawn", "held"].every(
+        (state) => knowledgePractice?.correction_statuses?.includes(state)
+      ) &&
+      knowledgePractice?.correction_preserves_original === true &&
+      knowledgePractice?.unresolved_restriction_policy === "hold-projection",
     scenario_coverage:
       scenarioResults.length >= 10 && scenarioResults.every((result) => result.passed),
     retrieval_quality:
@@ -337,12 +388,13 @@ export function evaluateGraphLayerRFC(options = {}) {
   };
 
   const rubric = {
-    layer_integrity: { weight: 0.2, hard: true },
+    layer_integrity: { weight: 0.15, hard: true },
     semantic_traversal: { weight: 0.15, hard: true },
-    source_custody: { weight: 0.2, hard: true },
+    source_custody: { weight: 0.15, hard: true },
     publication_authority: { weight: 0.1, hard: true },
     prototype_boundary: { weight: 0.05, hard: true },
     heteroglossic_knowledge_practice: { weight: 0.1, hard: true },
+    participant_correction: { weight: 0.1, hard: true },
     scenario_coverage: { weight: 0.1, hard: true },
     retrieval_quality: { weight: 0.1, hard: false }
   };

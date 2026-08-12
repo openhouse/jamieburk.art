@@ -99,6 +99,11 @@
     "observation_requires": ["lens_id", "source_id", "observed_at"],
     "handoff_states": ["proposed", "communicated", "received", "incorporated", "acted"],
     "decision_requires": ["decided_at", "considered_observation_ids"],
+    "correction_requires": ["target_id", "raised_by_lens_id", "status", "effect", "original_preserved"],
+    "correction_statuses": ["proposed", "acknowledged", "accepted", "disputed", "declined", "withdrawn", "held"],
+    "correction_effects": ["append-context", "correct-field", "restrict-projection", "reject-totalization"],
+    "correction_preserves_original": true,
+    "unresolved_restriction_policy": "hold-projection",
     "counterfactuals_remain_questions": true,
     "boundary_composition": "intersection-most-restrictive",
     "simulated_voice_requires_human_confirmation": true

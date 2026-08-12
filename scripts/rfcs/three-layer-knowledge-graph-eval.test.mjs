@@ -207,10 +207,56 @@ test("scope composition keeps only fields every contributing scope permits", () 
   });
 });
 
+test("a participant correction holds projection without rewriting the source", () => {
+  const result = runGraphLayerScenario(contract, {
+    id: "participant-correction-holds-projection",
+    operation: "record-correction",
+    target: { id: "observation-1", record_state: "source-preserved" },
+    correction: {
+      id: "correction-1",
+      raised_by_lens_id: "participant",
+      status: "proposed",
+      effect: "restrict-projection",
+      original_preserved: true
+    }
+  });
+
+  assert.deepEqual(result, {
+    decision: "append-correction",
+    correction_id: "correction-1",
+    target_id: "observation-1",
+    correction_status: "proposed",
+    original_record_state: "source-preserved",
+    original_preserved: true,
+    projection_state: "held-pending-correction-review"
+  });
+});
+
+test("a correction that would replace the source fails closed", () => {
+  const result = runGraphLayerScenario(contract, {
+    id: "destructive-correction-is-denied",
+    operation: "record-correction",
+    target: { id: "observation-1", record_state: "source-preserved" },
+    correction: {
+      id: "correction-1",
+      raised_by_lens_id: "participant",
+      status: "accepted",
+      effect: "append-context",
+      original_preserved: false
+    }
+  });
+
+  assert.deepEqual(result, {
+    decision: "deny",
+    reason: "original-record-must-be-preserved"
+  });
+});
+
 test("the repository RFC candidate satisfies every hard design gate", () => {
   const evaluation = evaluateGraphLayerRFC({ repoRoot: defaultRepoRoot });
   assert.deepEqual(evaluation.hard_failures, []);
   assert.equal(evaluation.scenarios.failed, 0);
   assert.equal(evaluation.checks.prototype_boundary, true);
   assert.equal(evaluation.checks.heteroglossic_knowledge_practice, true);
+  assert.equal(evaluation.checks.participant_correction, true);
 });

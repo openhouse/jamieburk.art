@@ -59,13 +59,32 @@ prototype. That prototype is implementation evidence permitted during
 exploration; it does not change the RFC stage or the implementation authority
 record.
 
+## August 12 knowledge-practice hill climbs
+
+The proposal now preserves attributed lenses and temporal handoff states,
+composes scoped permissions by intersection, and supports append-only
+participant correction. An unresolved request to restrict projection holds the
+affected projection; a correction that would replace the governed original
+fails closed. The RFC also records its generic architecture relationship to the
+protected opportunity classification in PR #272 without importing protected
+source context.
+
+- Candidate fingerprint:
+  `5502515b290cca95bb3e1368fc7daa37febc5e3c971988478d8ae793cd7ef687`
+- Rubric fingerprint:
+  `0defb500c013b992a7e5382262d898c3ac9cbc97652bf23e413486f83b0310d4`
+- Score: `1.00`
+- Hard failures: none
+- Synthetic cases: `15/15`
+- Behavior-first tests: `11/11`
+- Lowest criteria: none
+
 ## Repository verification
 
-The RFC structure check, the eleven synthetic scenarios, the seven
-behavior-first tests, the knowledge-bank eval check, and the public-safety check
-pass. The complete repository check reaches the composite integration holdout
-gate and then fails closed, as designed: adding this proposal creates a new
-source-tree candidate, so two semantic judgments bound to the prior candidate
-cannot be reused. Fresh human commissioning remains an orchestration gate
+The RFC structure check and the current fifteen synthetic scenarios and eleven
+behavior-first tests pass. The complete repository check reaches the
+independent professor-lens holdout gate and then fails closed, as designed:
+none of the six final scorecards match the branch's exact current public
+candidate `e3d01eda…`. Fresh human commissioning remains an orchestration gate
 outside public Git; this run does not manufacture or carry forward those
 judgments.

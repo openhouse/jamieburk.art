@@ -395,6 +395,20 @@ scope where a later decision was made. The correction is therefore not “share
 everything.” It is to define the minimum necessary handoff, preserve its
 source, and record its state.
 
+### Participant correction without historical erasure
+
+A participant may challenge an attributed observation, dispute a handoff
+state, supply context, or restrict a proposed projection. The correction is a
+new attributed record linked to the original; it does not replace the source
+or make earlier recipients retroactively know the corrected account.
+
+Every correction records its target, raising lens, status, requested effect,
+and whether the original remains preserved. An unresolved request to restrict
+projection holds the affected projection pending human review. Acceptance may
+change a later projection while the source record and correction history stay
+inspectable. Declining or disputing a correction also remains part of the
+record; the graph does not convert review into consensus.
+
 ### Scoped universes and boundary composition
 
 A team, project, care relationship, personal archive, job application, and
@@ -536,6 +550,14 @@ scopes retain only mutually permitted fields. The
 evaluator at `scripts/rfcs/three-layer-knowledge-graph-eval.mjs` reports hard
 failures separately from weighted design criteria.
 
+The suite also verifies that participant corrections append to history, that
+unresolved restriction requests hold a projection, and that destructive
+replacement fails closed. This RFC is the generic architecture dependency for
+the protected opportunity classification under review in PR #272. That
+relationship does not authorize this branch to import protected sources,
+identify a prospective client, or convert a private opportunity into a public
+claim.
+
 ## Security and privacy
 
 The primary threats are:
@@ -554,7 +576,9 @@ The primary threats are:
 - a timeline converting chronology into causality or an unanswered
   counterfactual into fact; and
 - one contributing scope's broad permission overriding another scope's narrower
-  trust boundary.
+  trust boundary; and
+- a correction workflow deleting the original, inventing participant agreement,
+  or continuing a projection while a restriction request is unresolved.
 
 The design fails closed:
 
@@ -726,3 +750,5 @@ an explicit decision rather than an accidental default.
   overwriting its earlier situated observation?
 - When does an unresolved operational question belong in a recipient projection
   rather than only in the private research record?
+- Which roles may acknowledge, accept, decline, or resolve a participant
+  correction in each scoped universe?

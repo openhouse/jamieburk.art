@@ -194,6 +194,43 @@
         "allowed_fields": ["decision", "lens"],
         "blocked_fields": ["private_locator", "source_excerpt"]
       }
+    },
+    {
+      "id": "participant-correction-holds-projection",
+      "operation": "record-correction",
+      "target": { "id": "observation-1", "record_state": "source-preserved" },
+      "correction": {
+        "id": "correction-1",
+        "raised_by_lens_id": "participant",
+        "status": "proposed",
+        "effect": "restrict-projection",
+        "original_preserved": true
+      },
+      "expected": {
+        "decision": "append-correction",
+        "correction_id": "correction-1",
+        "target_id": "observation-1",
+        "correction_status": "proposed",
+        "original_record_state": "source-preserved",
+        "original_preserved": true,
+        "projection_state": "held-pending-correction-review"
+      }
+    },
+    {
+      "id": "destructive-correction-is-denied",
+      "operation": "record-correction",
+      "target": { "id": "observation-1", "record_state": "source-preserved" },
+      "correction": {
+        "id": "correction-1",
+        "raised_by_lens_id": "participant",
+        "status": "accepted",
+        "effect": "append-context",
+        "original_preserved": false
+      },
+      "expected": {
+        "decision": "deny",
+        "reason": "original-record-must-be-preserved"
+      }
     }
   ]
 }
