@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Participatory public systems
 
-**Source commit:** `f76c695aa381c149ee9d5230453ee4ffae82d3e8`
-**Generation time:** 2026-08-12T12:14:34-04:00
-**Source fingerprint:** `d6cfc4f9d370594d9c3a5de6dde486a6d8927c04fe922f9a12581effa2814adf`
+**Source commit:** `86b76844af306f49fe229e347f1bd87abb00af45`
+**Generation time:** 2026-08-12T12:40:09-04:00
+**Source fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
 
 - [WOW List - Senior Product Manager role-fit brief](../../applications/wowlist-senior-product-manager-oti-782366.md) - `prose_link` (markdown)
 - [WOW List - Senior Product Manager role-fit brief](../../applications/wowlist-senior-product-manager-oti-782366.md) - `related_to` (frontmatter)
@@ -14,6 +14,7 @@
 - [People, places, and the work between them](../../indexes/people-places-and-work-between-them.md) - `related_to` (frontmatter)
 - [Participation and Relational Infrastructure](../../methods/participation-and-relational-infrastructure.md) - `supports` (frontmatter)
 - [Structure grows from the material](../../methods/structure-grows-from-the-material.md) - `related_to` (frontmatter)
+- [WOW List Relational Curation](../../methods/wowlist-relational-curation.md) - `supports` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `related_to` (frontmatter)
 - [Role-fit and referral map](../../projections/role-fit-and-referral-map.md) - `related_to` (frontmatter)
 - [KC Town Hall orientation](../../projects/kc-town-hall-orientation.md) - `supports` (frontmatter)

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-12T12:14:34-04:00",
-  "sourceCommit": "f76c695aa381c149ee9d5230453ee4ffae82d3e8",
-  "sourceFingerprint": "d6cfc4f9d370594d9c3a5de6dde486a6d8927c04fe922f9a12581effa2814adf",
+  "generatedAt": "2026-08-12T12:40:09-04:00",
+  "sourceCommit": "86b76844af306f49fe229e347f1bd87abb00af45",
+  "sourceFingerprint": "5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3522,6 +3522,19 @@
       "reviewBy": "2027-01-26"
     },
     {
+      "id": "method.recomposable-civic-cultural-systems",
+      "path": "docs/knowledge-bank/methods/recomposable-civic-cultural-systems.md",
+      "title": "Projects as a Recomposable Civic-Cultural System",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Evidence-tiered model of how technical modules, social protocols, public artifacts, and stewardship practices can be adapted across projects without flattening context, credit, authority, or outcomes.",
+      "aliases": [],
+      "lastReviewed": "2026-08-11",
+      "reviewBy": "2026-11-11"
+    },
+    {
       "id": "method.situated-source-rereading",
       "path": "docs/knowledge-bank/methods/situated-source-rereading.md",
       "title": "Situated source rereading",
@@ -3561,6 +3574,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "method.sunday-dinner-wowlist-nycac-synergy",
+      "path": "docs/knowledge-bank/methods/sunday-dinner-wowlist-nycac-synergy.md",
+      "title": "Sunday Dinner, WOW List, and NYC Artist Coalition Synergy",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Bounded synthesis of a recurring participation pattern across a hosted gathering, a distributed discovery platform, and a civic-cultural coalition.",
+      "aliases": [],
+      "lastReviewed": "2026-08-11",
+      "reviewBy": "2026-11-11"
+    },
+    {
       "id": "method.what-is-at-stake-for-me",
       "path": "docs/knowledge-bank/methods/what-is-at-stake-for-me.md",
       "title": "What Is at Stake for Me",
@@ -3572,6 +3598,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-08-19"
+    },
+    {
+      "id": "method.wowlist-relational-curation",
+      "path": "docs/knowledge-bank/methods/wowlist-relational-curation.md",
+      "title": "WOW List Relational Curation",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Source-cited account of how invitation, onboarding, editorial voice, explainable discovery, and shared maintenance made WOW List socially operative.",
+      "aliases": [],
+      "lastReviewed": "2026-08-11",
+      "reviewBy": "2026-11-11"
     },
     {
       "id": "opportunity.aclu.product-manager-discovery.8482872002",
@@ -4162,6 +4201,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2027-01-19"
+    },
+    {
+      "id": "source.campaign-site.repository-family.2020-2022",
+      "path": "docs/knowledge-bank/sources/campaign-site-repository-family-2020-2022.md",
+      "title": "Campaign-site repository family, 2020-2022",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Metadata-only record of a protected repository-family census documenting shared Git ancestry and reusable theme and fundraiser-display modules across campaign instances.",
+      "aliases": [],
+      "lastReviewed": "2026-08-11",
+      "reviewBy": "2026-11-11"
     },
     {
       "id": "source.civichall.hackathon-announcement.2016",
@@ -5036,6 +5088,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-03",
       "reviewBy": "2027-02-03"
+    },
+    {
+      "id": "source.wowlist.knowledge-repository.2026",
+      "path": "docs/knowledge-bank/sources/wowlist-knowledge-repository-2026.md",
+      "title": "Governed WOW List knowledge repository",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Opaque federation record for a private collaborator-reviewed WOW List knowledge repository.",
+      "aliases": [],
+      "lastReviewed": "2026-08-11",
+      "reviewBy": "2026-11-11"
     },
     {
       "id": "source.wowlist.repaired-transcript.2026",
@@ -12497,6 +12562,14 @@
     {
       "from": "index.knowledge-wiki.project-lineages",
       "type": "related_to",
+      "to": "method.recomposable-civic-cultural-systems",
+      "source": "frontmatter",
+      "href": "../methods/recomposable-civic-cultural-systems.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.project-lineages",
+      "type": "related_to",
       "to": "method.structure-grows-from-material",
       "source": "frontmatter",
       "href": "../methods/structure-grows-from-the-material.md",
@@ -13287,6 +13360,86 @@
       "context": null
     },
     {
+      "from": "method.recomposable-civic-cultural-systems",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "method.recomposable-civic-cultural-systems",
+      "type": "related_to",
+      "to": "project.kc-spaces-fund",
+      "source": "frontmatter",
+      "href": "../projects/kc-spaces-fund-orientation.md",
+      "context": null
+    },
+    {
+      "from": "method.recomposable-civic-cultural-systems",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "method.recomposable-civic-cultural-systems",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "method.recomposable-civic-cultural-systems",
+      "type": "related_to",
+      "to": "project.sunday-dinner-196",
+      "source": "frontmatter",
+      "href": "../projects/sunday-dinner-196-orientation.md",
+      "context": null
+    },
+    {
+      "from": "method.recomposable-civic-cultural-systems",
+      "type": "related_to",
+      "to": "project.wowlist",
+      "source": "frontmatter",
+      "href": "../projects/wowlist-orientation.md",
+      "context": null
+    },
+    {
+      "from": "method.recomposable-civic-cultural-systems",
+      "type": "uses_method",
+      "to": "method.maintenance-handoff-stewardship",
+      "source": "frontmatter",
+      "href": "maintenance-handoff-and-stewardship.md",
+      "context": null
+    },
+    {
+      "from": "method.recomposable-civic-cultural-systems",
+      "type": "uses_method",
+      "to": "method.participation-and-relational-infrastructure",
+      "source": "frontmatter",
+      "href": "participation-and-relational-infrastructure.md",
+      "context": null
+    },
+    {
+      "from": "method.recomposable-civic-cultural-systems",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "method.recomposable-civic-cultural-systems",
+      "type": "uses_source",
+      "to": "source.campaign-site.repository-family.2020-2022",
+      "source": "frontmatter",
+      "href": "../sources/campaign-site-repository-family-2020-2022.md",
+      "context": null
+    },
+    {
       "from": "method.situated-source-rereading",
       "type": "informed_by",
       "to": "research.foundational-source-return.2026-07-19",
@@ -13367,6 +13520,54 @@
       "context": null
     },
     {
+      "from": "method.sunday-dinner-wowlist-nycac-synergy",
+      "type": "related_to",
+      "to": "method.recomposable-civic-cultural-systems",
+      "source": "frontmatter",
+      "href": "recomposable-civic-cultural-systems.md",
+      "context": null
+    },
+    {
+      "from": "method.sunday-dinner-wowlist-nycac-synergy",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "method.sunday-dinner-wowlist-nycac-synergy",
+      "type": "related_to",
+      "to": "project.sunday-dinner-196",
+      "source": "frontmatter",
+      "href": "../projects/sunday-dinner-196-orientation.md",
+      "context": null
+    },
+    {
+      "from": "method.sunday-dinner-wowlist-nycac-synergy",
+      "type": "related_to",
+      "to": "project.wowlist",
+      "source": "frontmatter",
+      "href": "../projects/wowlist-orientation.md",
+      "context": null
+    },
+    {
+      "from": "method.sunday-dinner-wowlist-nycac-synergy",
+      "type": "uses_method",
+      "to": "method.collective-credit-protected-absence",
+      "source": "frontmatter",
+      "href": "collective-credit-and-protected-absence.md",
+      "context": null
+    },
+    {
+      "from": "method.sunday-dinner-wowlist-nycac-synergy",
+      "type": "uses_method",
+      "to": "method.wowlist-relational-curation",
+      "source": "frontmatter",
+      "href": "wowlist-relational-curation.md",
+      "context": null
+    },
+    {
       "from": "method.what-is-at-stake-for-me",
       "type": "informed_by",
       "to": "method.learning-through-making",
@@ -13397,6 +13598,38 @@
       "source": "frontmatter",
       "href": "../indexes/scenes-and-places-of-work.md",
       "context": null
+    },
+    {
+      "from": "method.wowlist-relational-curation",
+      "type": "related_to",
+      "to": "project.wowlist",
+      "source": "frontmatter",
+      "href": "../projects/wowlist-orientation.md",
+      "context": null
+    },
+    {
+      "from": "method.wowlist-relational-curation",
+      "type": "supports",
+      "to": "capability.participatory-public-systems",
+      "source": "frontmatter",
+      "href": "../capabilities/participatory-public-systems.md",
+      "context": null
+    },
+    {
+      "from": "method.wowlist-relational-curation",
+      "type": "uses_method",
+      "to": "method.collective-credit-protected-absence",
+      "source": "frontmatter",
+      "href": "collective-credit-and-protected-absence.md",
+      "context": null
+    },
+    {
+      "from": "method.wowlist-relational-curation",
+      "type": "uses_source",
+      "to": "source.wowlist.knowledge-repository.2026",
+      "source": "frontmatter",
+      "href": "../sources/wowlist-knowledge-repository-2026.md",
+      "context": "A governed private repository supplies protected source support without becoming a public citation or publication authorization."
     },
     {
       "from": "opportunity.aclu.product-manager-discovery.8482872002",
@@ -14457,6 +14690,14 @@
     {
       "from": "project.wowlist",
       "type": "related_to",
+      "to": "method.sunday-dinner-wowlist-nycac-synergy",
+      "source": "frontmatter",
+      "href": "../methods/sunday-dinner-wowlist-nycac-synergy.md",
+      "context": "Places WOW List within a bounded participation-practice continuity without asserting causation or institutional succession."
+    },
+    {
+      "from": "project.wowlist",
+      "type": "related_to",
       "to": "person.jamie-burkart",
       "source": "frontmatter",
       "href": "../people/jamie-burkart.md",
@@ -14477,6 +14718,22 @@
       "source": "frontmatter",
       "href": "../capabilities/participatory-public-systems.md",
       "context": null
+    },
+    {
+      "from": "project.wowlist",
+      "type": "uses_method",
+      "to": "method.wowlist-relational-curation",
+      "source": "frontmatter",
+      "href": "../methods/wowlist-relational-curation.md",
+      "context": "Documents the invitation, onboarding, editorial, explainable-discovery, and maintenance practices that made the product socially operative."
+    },
+    {
+      "from": "project.wowlist",
+      "type": "uses_source",
+      "to": "source.wowlist.knowledge-repository.2026",
+      "source": "frontmatter",
+      "href": "../sources/wowlist-knowledge-repository-2026.md",
+      "context": "Connects the public-safe Wiki to a governed private canonical edition through an opaque summary-only source record."
     },
     {
       "from": "projection.photo.layout-c.home.east-river",
@@ -15116,6 +15373,22 @@
       "to": "decision.callnyc.issue-pathways",
       "source": "frontmatter",
       "href": "../decisions/callnyc-issue-pathways.md",
+      "context": null
+    },
+    {
+      "from": "source.campaign-site.repository-family.2020-2022",
+      "type": "documents",
+      "to": "project.kc-spaces-fund",
+      "source": "frontmatter",
+      "href": "../projects/kc-spaces-fund-orientation.md",
+      "context": null
+    },
+    {
+      "from": "source.campaign-site.repository-family.2020-2022",
+      "type": "related_to",
+      "to": "method.recomposable-civic-cultural-systems",
+      "source": "frontmatter",
+      "href": "../methods/recomposable-civic-cultural-systems.md",
       "context": null
     },
     {
@@ -15804,6 +16077,22 @@
       "to": "event.weibel.in-terms-of-media.2024",
       "source": "frontmatter",
       "href": "../events/in-terms-of-media-symposium-2024.md",
+      "context": null
+    },
+    {
+      "from": "source.wowlist.knowledge-repository.2026",
+      "type": "documents",
+      "to": "method.wowlist-relational-curation",
+      "source": "frontmatter",
+      "href": "../methods/wowlist-relational-curation.md",
+      "context": null
+    },
+    {
+      "from": "source.wowlist.knowledge-repository.2026",
+      "type": "related_to",
+      "to": "project.wowlist",
+      "source": "frontmatter",
+      "href": "../projects/wowlist-orientation.md",
       "context": null
     },
     {
@@ -18114,7 +18403,7 @@
       "toPath": "docs/knowledge-bank/sources/ucsc-narrative-evaluations-2004-2006.md",
       "to": "source.ucsc.narrative-evaluations.2004-2006",
       "fragment": null,
-      "line": 10,
+      "line": 15,
       "kind": "link"
     },
     {
@@ -18123,7 +18412,7 @@
       "toPath": "docs/knowledge-bank/sources/good-times-open-house-2006-06-28.md",
       "to": "source.good-times.open-house.2006-06-28",
       "fragment": null,
-      "line": 12,
+      "line": 17,
       "kind": "link"
     },
     {
@@ -18132,7 +18421,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
       "to": "project.wowlist",
       "fragment": null,
-      "line": 14,
+      "line": 19,
       "kind": "link"
     },
     {
@@ -18141,7 +18430,7 @@
       "toPath": "docs/knowledge-bank/projects/sunday-dinner-196-orientation.md",
       "to": "project.sunday-dinner-196",
       "fragment": null,
-      "line": 25,
+      "line": 30,
       "kind": "link"
     },
     {
@@ -18150,7 +18439,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
       "to": "project.wowlist",
       "fragment": null,
-      "line": 25,
+      "line": 30,
       "kind": "link"
     },
     {
@@ -18159,7 +18448,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc.md",
       "to": "project.callnyc",
       "fragment": null,
-      "line": 27,
+      "line": 32,
       "kind": "link"
     },
     {
@@ -18168,7 +18457,7 @@
       "toPath": "docs/knowledge-bank/organizations/nyc-artist-coalition.md",
       "to": "organization.nyc-artist-coalition",
       "fragment": null,
-      "line": 30,
+      "line": 35,
       "kind": "link"
     },
     {
@@ -18177,7 +18466,7 @@
       "toPath": "docs/knowledge-bank/projects/let-nyc-dance.md",
       "to": "project.let-nyc-dance",
       "fragment": null,
-      "line": 40,
+      "line": 45,
       "kind": "link"
     },
     {
@@ -18186,7 +18475,7 @@
       "toPath": "docs/knowledge-bank/projects/office-of-nightlife-town-halls.md",
       "to": "project.office-of-nightlife-town-halls",
       "fragment": null,
-      "line": 40,
+      "line": 45,
       "kind": "link"
     },
     {
@@ -18195,7 +18484,7 @@
       "toPath": "docs/knowledge-bank/projects/talks-not-raids-orientation.md",
       "to": "project.talks-not-raids",
       "fragment": null,
-      "line": 41,
+      "line": 46,
       "kind": "link"
     },
     {
@@ -18204,7 +18493,7 @@
       "toPath": "docs/knowledge-bank/projects/fair-rent-nyc.md",
       "to": "project.fair-rent-nyc",
       "fragment": null,
-      "line": 42,
+      "line": 47,
       "kind": "link"
     },
     {
@@ -18213,7 +18502,7 @@
       "toPath": "docs/knowledge-bank/projects/save-nyc-spaces.md",
       "to": "project.save-nyc-spaces",
       "fragment": null,
-      "line": 43,
+      "line": 48,
       "kind": "link"
     },
     {
@@ -18222,7 +18511,7 @@
       "toPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
       "to": "method.source-backed-team-memory",
       "fragment": null,
-      "line": 46,
+      "line": 51,
       "kind": "link"
     },
     {
@@ -18231,7 +18520,7 @@
       "toPath": "docs/knowledge-bank/projects/harry-j-epstein.md",
       "to": "project.harry-j-epstein",
       "fragment": null,
-      "line": 57,
+      "line": 62,
       "kind": "link"
     },
     {
@@ -18240,7 +18529,16 @@
       "toPath": "docs/knowledge-bank/projects/kc-town-hall-orientation.md",
       "to": "project.kc-town-hall",
       "fragment": null,
-      "line": 57,
+      "line": 62,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/project-lineages.md",
+      "from": "index.knowledge-wiki.project-lineages",
+      "toPath": "docs/knowledge-bank/methods/recomposable-civic-cultural-systems.md",
+      "to": "method.recomposable-civic-cultural-systems",
+      "fragment": null,
+      "line": 8,
       "kind": "link"
     },
     {
@@ -18523,12 +18821,192 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/methods/recomposable-civic-cultural-systems.md",
+      "from": "method.recomposable-civic-cultural-systems",
+      "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
+      "to": null,
+      "fragment": null,
+      "line": 152,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/recomposable-civic-cultural-systems.md",
+      "from": "method.recomposable-civic-cultural-systems",
+      "toPath": "docs/knowledge-bank/sources/campaign-site-repository-family-2020-2022.md",
+      "to": "source.campaign-site.repository-family.2020-2022",
+      "fragment": null,
+      "line": 173,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/recomposable-civic-cultural-systems.md",
+      "from": "method.recomposable-civic-cultural-systems",
+      "toPath": "docs/knowledge-bank/projects/sunday-dinner-196-orientation.md",
+      "to": "project.sunday-dinner-196",
+      "fragment": null,
+      "line": 179,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/recomposable-civic-cultural-systems.md",
+      "from": "method.recomposable-civic-cultural-systems",
+      "toPath": "docs/knowledge-bank/projects/kc-town-hall-orientation.md",
+      "to": "project.kc-town-hall",
+      "fragment": null,
+      "line": 182,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/recomposable-civic-cultural-systems.md",
+      "from": "method.recomposable-civic-cultural-systems",
+      "toPath": "docs/knowledge-bank/projects/kc-spaces-fund-orientation.md",
+      "to": "project.kc-spaces-fund",
+      "fragment": null,
+      "line": 185,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/recomposable-civic-cultural-systems.md",
+      "from": "method.recomposable-civic-cultural-systems",
+      "toPath": "docs/knowledge-bank/methods/sunday-dinner-wowlist-nycac-synergy.md",
+      "to": "method.sunday-dinner-wowlist-nycac-synergy",
+      "fragment": null,
+      "line": 329,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/recomposable-civic-cultural-systems.md",
+      "from": "method.recomposable-civic-cultural-systems",
+      "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
+      "to": null,
+      "fragment": null,
+      "line": 331,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/recomposable-civic-cultural-systems.md",
+      "from": "method.recomposable-civic-cultural-systems",
+      "toPath": "docs/knowledge-bank/methods/participation-and-relational-infrastructure.md",
+      "to": "method.participation-and-relational-infrastructure",
+      "fragment": null,
+      "line": 334,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/recomposable-civic-cultural-systems.md",
+      "from": "method.recomposable-civic-cultural-systems",
+      "toPath": "docs/knowledge-bank/methods/maintenance-handoff-and-stewardship.md",
+      "to": "method.maintenance-handoff-stewardship",
+      "fragment": null,
+      "line": 337,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/recomposable-civic-cultural-systems.md",
+      "from": "method.recomposable-civic-cultural-systems",
+      "toPath": "docs/knowledge-bank/indexes/project-lineages.md",
+      "to": "index.knowledge-wiki.project-lineages",
+      "fragment": null,
+      "line": 339,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/recomposable-civic-cultural-systems.md",
+      "from": "method.recomposable-civic-cultural-systems",
+      "toPath": "docs/knowledge-bank/sources/campaign-site-repository-family-2020-2022.md",
+      "to": "source.campaign-site.repository-family.2020-2022",
+      "fragment": null,
+      "line": 341,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/recomposable-civic-cultural-systems.md",
+      "from": "method.recomposable-civic-cultural-systems",
+      "toPath": "docs/knowledge-bank/decisions/kc-town-hall-listening-fieldwork.md",
+      "to": "decision.kc-town-hall.listening-fieldwork",
+      "fragment": null,
+      "line": 343,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/recomposable-civic-cultural-systems.md",
+      "from": "method.recomposable-civic-cultural-systems",
+      "toPath": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
+      "to": null,
+      "fragment": null,
+      "line": 344,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/recomposable-civic-cultural-systems.md",
+      "from": "method.recomposable-civic-cultural-systems",
+      "toPath": "docs/knowledge-bank/decisions/open-house-communal-governance.md",
+      "to": "decision.open-house.communal-governance",
+      "fragment": null,
+      "line": 346,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/recomposable-civic-cultural-systems.md",
+      "from": "method.recomposable-civic-cultural-systems",
+      "toPath": "docs/knowledge-bank/projects/waterways-participatory-art-orientation.md",
+      "to": "project.waterways-participatory-art",
+      "fragment": null,
+      "line": 347,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
       "from": "method.source-backed-team-memory",
       "toPath": "docs/knowledge-bank/capabilities/technical-operations.md",
       "to": "capability.technical-operations",
       "fragment": null,
       "line": 18,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/sunday-dinner-wowlist-nycac-synergy.md",
+      "from": "method.sunday-dinner-wowlist-nycac-synergy",
+      "toPath": "docs/knowledge-bank/methods/recomposable-civic-cultural-systems.md",
+      "to": "method.recomposable-civic-cultural-systems",
+      "fragment": null,
+      "line": 106,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/sunday-dinner-wowlist-nycac-synergy.md",
+      "from": "method.sunday-dinner-wowlist-nycac-synergy",
+      "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
+      "to": null,
+      "fragment": null,
+      "line": 153,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/sunday-dinner-wowlist-nycac-synergy.md",
+      "from": "method.sunday-dinner-wowlist-nycac-synergy",
+      "toPath": "docs/knowledge-bank/methods/wowlist-relational-curation.md",
+      "to": "method.wowlist-relational-curation",
+      "fragment": null,
+      "line": 156,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/sunday-dinner-wowlist-nycac-synergy.md",
+      "from": "method.sunday-dinner-wowlist-nycac-synergy",
+      "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
+      "to": null,
+      "fragment": null,
+      "line": 159,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/wowlist-relational-curation.md",
+      "from": "method.wowlist-relational-curation",
+      "toPath": "docs/knowledge-bank/sources/wowlist-knowledge-repository-2026.md",
+      "to": "source.wowlist.knowledge-repository.2026",
+      "fragment": null,
+      "line": 173,
       "kind": "link"
     },
     {
@@ -19173,10 +19651,37 @@
     {
       "fromPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
       "from": "project.wowlist",
+      "toPath": "docs/knowledge-bank/methods/wowlist-relational-curation.md",
+      "to": "method.wowlist-relational-curation",
+      "fragment": null,
+      "line": 15,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
+      "from": "project.wowlist",
+      "toPath": "docs/knowledge-bank/methods/sunday-dinner-wowlist-nycac-synergy.md",
+      "to": "method.sunday-dinner-wowlist-nycac-synergy",
+      "fragment": null,
+      "line": 17,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
+      "from": "project.wowlist",
+      "toPath": "docs/knowledge-bank/sources/wowlist-knowledge-repository-2026.md",
+      "to": "source.wowlist.knowledge-repository.2026",
+      "fragment": null,
+      "line": 20,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
+      "from": "project.wowlist",
       "toPath": "docs/knowledge-bank/applications/wowlist-senior-product-manager-oti-782366.md",
       "to": "application.wowlist.senior-product-manager-oti-782366",
       "fragment": null,
-      "line": 15,
+      "line": 25,
       "kind": "link"
     },
     {

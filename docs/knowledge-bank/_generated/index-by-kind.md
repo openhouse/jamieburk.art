@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `f76c695aa381c149ee9d5230453ee4ffae82d3e8`
-**Generation time:** 2026-08-12T12:14:34-04:00
-**Source fingerprint:** `d6cfc4f9d370594d9c3a5de6dde486a6d8927c04fe922f9a12581effa2814adf`
+**Source commit:** `86b76844af306f49fe229e347f1bd87abb00af45`
+**Generation time:** 2026-08-12T12:40:09-04:00
+**Source fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
 
 ## application
 
@@ -303,10 +303,13 @@
 - [Maintenance, handoff, and stewardship](../methods/maintenance-handoff-and-stewardship.md) - `method.maintenance-handoff-stewardship`
 - [Participation and Relational Infrastructure](../methods/participation-and-relational-infrastructure.md) - `method.participation-and-relational-infrastructure`
 - [East River photographic knowledge-loop tutorial](../workflows/photography-east-river-canary.md) - `method.photography-east-river-canary`
+- [Projects as a Recomposable Civic-Cultural System](../methods/recomposable-civic-cultural-systems.md) - `method.recomposable-civic-cultural-systems`
 - [Situated source rereading](../methods/situated-source-rereading.md) - `method.situated-source-rereading`
 - [Source-Backed Team Memory](../methods/source-backed-team-memory.md) - `method.source-backed-team-memory`
 - [Structure grows from the material](../methods/structure-grows-from-the-material.md) - `method.structure-grows-from-material`
+- [Sunday Dinner, WOW List, and NYC Artist Coalition Synergy](../methods/sunday-dinner-wowlist-nycac-synergy.md) - `method.sunday-dinner-wowlist-nycac-synergy`
 - [What Is at Stake for Me](../methods/what-is-at-stake-for-me.md) - `method.what-is-at-stake-for-me`
+- [WOW List Relational Curation](../methods/wowlist-relational-curation.md) - `method.wowlist-relational-curation`
 
 ## opportunity
 
@@ -379,6 +382,7 @@
 ## source
 
 - [CallNYC public source repository](../sources/callnyc-source-repository.md) - `source.callnyc.source-repository`
+- [Campaign-site repository family, 2020-2022](../sources/campaign-site-repository-family-2020-2022.md) - `source.campaign-site.repository-family.2020-2022`
 - [Civic Hall hackathon announcement](../sources/civichall-hackathon-announcement-2016.md) - `source.civichall.hackathon-announcement.2016`
 - [New York City Council Constituent Services Data release](../sources/nycc-constituent-services-data-2016-05-27.md) - `source.councilstat.fuller-release.2016`
 - [Open House at UC Santa Cruz](../sources/good-times-open-house-2006-06-28.md) - `source.good-times.open-house.2006-06-28`
@@ -446,6 +450,7 @@
 - [Warren Sack - Film and Digital Media Department](../sources/ucsc-warren-sack-profile-2026.md) - `source.ucsc.warren-sack-profile.2026`
 - [Protected communication history - public-safe metadata boundary](../sources/protected-communication-vault-metadata.md) - `source.vault.communication-history.metadata`
 - [Weibel Institute In Terms of Media event record](../sources/weibel-in-terms-of-media-2024.md) - `source.weibel.in-terms-of-media.2024`
+- [Governed WOW List knowledge repository](../sources/wowlist-knowledge-repository-2026.md) - `source.wowlist.knowledge-repository.2026`
 - [What is WOW List repaired transcript](../sources/wowlist-repaired-transcript-2026.md) - `source.wowlist.repaired-transcript.2026`
 - [Jamie Burkart testimony for Cabaret Law repeal](../testimony/2017-09-14-cabaret-law-repeal.md) - `testimony.jamie-burkart.cabaret-law.2017-09-14`
 - [Jamie Burkart testimony on CreateNYC and cultural-affairs funding](../testimony/2018-03-16-cultural-affairs-budget.md) - `testimony.jamie-burkart.cultural-affairs-budget.2018-03-16`

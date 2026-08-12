@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "evaluated_at": "2026-08-11",
+  "scope": "WOW List relational-curation and Sunday Dinner-WOW List-NYC Artist Coalition synergy records",
+  "red_candidate": {
+    "status": "failed-as-expected",
+    "failures": [
+      "relational-curation method page absent",
+      "summary-only federation source absent",
+      "orientation relations absent",
+      "structured relational-curation claim and source-distinct observations absent",
+      "cross-project synergy page absent",
+      "structured synergy claim and project-distinct observations absent"
+    ]
+  },
+  "hill_climb": [
+    {
+      "failure_mode": "A private knowledge repository could become a public locator or implied publication authority.",
+      "improvement": "Added an opaque summary-only source record plus a protected structured source with no URL and private-support citation rendering disabled."
+    },
+    {
+      "failure_mode": "Social-practice guidance could be inflated into uniform participant experience or consent.",
+      "improvement": "Required explicit experience and consent boundaries in prose and structured anti-claims."
+    },
+    {
+      "failure_mode": "Cross-project continuity could become causation, inevitability, or sole authorship.",
+      "improvement": "Added held structured claims, project-distinct observations, collective credit, and adversarial causal, projection, and sole-credit tests."
+    },
+    {
+      "failure_mode": "An ambiguous incoming term could silently rename WOW List or create an unsupported historical alias.",
+      "improvement": "Resolved Wildlist as a retrieval-only term in the current corpus, added a terminology note, and added an adversarial canonical-title mutation."
+    },
+    {
+      "failure_mode": "A changed frontmatter visibility could be hidden by copying the old summary-only phrase into body prose.",
+      "improvement": "Made the evaluator read exact frontmatter fields and added an adversarial laundering mutation."
+    }
+  ],
+  "result": {
+    "status": "deterministic-checks-passed",
+    "relational_curation_observations": 3,
+    "relational_curation_distinct_sources": 3,
+    "synergy_observations": 3,
+    "adversarial_tests": "11/11",
+    "wiki_records": 395,
+    "wiki_edges": 1376,
+    "wiki_prose_links": 444,
+    "projection_status": "hold",
+    "public_safety": "passed",
+    "application_typecheck_lint_build": "passed",
+    "candidate_bound_accessibility": "passed at eef497de543aab662bdfb7d838c23d18060d76ce456ed1867e6ef14e5878eeda"
+  },
+  "open_exact_candidate_gates": [
+    "fresh professor-lens human holdouts",
+    "two independent public-safe source-tree holdout judgments"
+  ],
+  "authority_boundary": "Deterministic checks do not authorize deployment, indexing, collaborator quotation, rights clearance, portfolio projection, or publication."
+}

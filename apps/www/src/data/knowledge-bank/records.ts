@@ -26,6 +26,8 @@ import { socialMediaProductionJuly2026 } from "./social-media-production-2026-07
 import { urbanhermitSocialPopulationJuly2026 } from "./urbanhermit-social-population-2026-07.ts";
 import { wowListFacebookPostKnowledge } from "./wowlist-facebook-posts-2026-07.ts";
 import { wowListSocialPopulationJuly2026 } from "./wowlist-social-population-2026-07.ts";
+import { wowListSocialPracticesAugust2026 } from "./wowlist-social-practices-2026-08.ts";
+import { projectCompositionAugust2026 } from "./project-composition-2026-08.ts";
 import { wowListProductFitAugust2026 } from "./wowlist-product-fit-2026-08.ts";
 
 const knowledgeBankInput = {
@@ -56,6 +58,8 @@ const knowledgeBankInput = {
     ...urbanhermitSocialPopulationJuly2026.intakeItems,
     ...wowListFacebookPostKnowledge.intakeItems,
     ...wowListSocialPopulationJuly2026.intakeItems,
+    ...wowListSocialPracticesAugust2026.intakeItems,
+    ...projectCompositionAugust2026.intakeItems,
     ...kcTownHallCouncilFunding.intakeItems,
     ...kcTownHallFieldPractice.intakeItems,
     ...kcTownHallSocialCorpus.intakeItems,
@@ -101,6 +105,8 @@ const knowledgeBankInput = {
     ...urbanhermitSocialPopulationJuly2026.observations,
     ...wowListFacebookPostKnowledge.observations,
     ...wowListSocialPopulationJuly2026.observations,
+    ...wowListSocialPracticesAugust2026.observations,
+    ...projectCompositionAugust2026.observations,
     ...kcTownHallCouncilFunding.observations,
     ...kcTownHallFieldPractice.observations,
     ...kcTownHallSocialCorpus.observations,
@@ -250,6 +256,8 @@ const knowledgeBankInput = {
     ...urbanhermitSocialPopulationJuly2026.sources,
     ...wowListFacebookPostKnowledge.sources,
     ...wowListSocialPopulationJuly2026.sources,
+    ...wowListSocialPracticesAugust2026.sources,
+    ...projectCompositionAugust2026.sources,
     ...kcTownHallCouncilFunding.sources,
     ...kcTownHallFieldPractice.sources,
     ...kcTownHallSocialCorpus.sources,
@@ -392,6 +400,8 @@ const knowledgeBankInput = {
     ...urbanhermitSocialPopulationJuly2026.claims,
     ...wowListFacebookPostKnowledge.claims,
     ...wowListSocialPopulationJuly2026.claims,
+    ...wowListSocialPracticesAugust2026.claims,
+    ...projectCompositionAugust2026.claims,
     ...kcTownHallCouncilFunding.claims,
     ...kcTownHallFieldPractice.claims,
     ...kcTownHallSocialCorpus.claims,
@@ -457,6 +467,8 @@ const knowledgeBankInput = {
     ...urbanhermitSocialPopulationJuly2026.researchInquiries,
     ...wowListFacebookPostKnowledge.researchInquiries,
     ...wowListSocialPopulationJuly2026.researchInquiries,
+    ...wowListSocialPracticesAugust2026.researchInquiries,
+    ...projectCompositionAugust2026.researchInquiries,
     ...kcTownHallCouncilFunding.researchInquiries,
     ...kcTownHallFieldPractice.researchInquiries,
     ...kcTownHallSocialCorpus.researchInquiries,

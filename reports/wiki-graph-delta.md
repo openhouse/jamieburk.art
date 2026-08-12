@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `f76c695aa381c149ee9d5230453ee4ffae82d3e8`
-**Generation time:** 2026-08-12T12:14:34-04:00
-**Source fingerprint:** `d6cfc4f9d370594d9c3a5de6dde486a6d8927c04fe922f9a12581effa2814adf`
+**Source commit:** `86b76844af306f49fe229e347f1bd87abb00af45`
+**Generation time:** 2026-08-12T12:40:09-04:00
+**Source fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 283
+- Nodes added: 288
 - Nodes removed: 0
-- Edges added: 913
+- Edges added: 941
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 186
@@ -244,6 +244,9 @@ Compared with the graph artifact on `origin/develop`.
 - `index.photo-set.nycac-project-sites.2017-2026`
 - `index.public-testimony`
 - `method.photography-east-river-canary`
+- `method.recomposable-civic-cultural-systems`
+- `method.sunday-dinner-wowlist-nycac-synergy`
+- `method.wowlist-relational-curation`
 - `opportunity.protected.source-backed-memory-consulting.2026`
 - `person.diya-vij`
 - `person.elana-gordon`
@@ -256,6 +259,7 @@ Compared with the graph artifact on `origin/develop`.
 - `research-inquiry.photography.oral-history-stewardship-afterlife-001`
 - `research.photographic-source-return.2026-07-26`
 - `research.professional-record-promotion.2026-08-03`
+- `source.campaign-site.repository-family.2020-2022`
 - `source.heteroglossia.cabaret-law.2017-09-14`
 - `source.heteroglossia.commercial-rent-stabilization.2021-09-17`
 - `source.heteroglossia.cultural-affairs-budget.2018-03-16`
@@ -296,6 +300,7 @@ Compared with the graph artifact on `origin/develop`.
 - `source.transcript.commercial-rent.public-event.2025-11-13`
 - `source.ucsc.warren-sack-profile.2026`
 - `source.weibel.in-terms-of-media.2024`
+- `source.wowlist.knowledge-repository.2026`
 - `testimony.jamie-burkart.cabaret-law.2017-09-14`
 - `testimony.jamie-burkart.cultural-affairs-budget.2018-03-16`
 - `testimony.jamie-burkart.sbjsa.2018-10-22`

@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Source-Backed Team Memory
 
-**Source commit:** `f76c695aa381c149ee9d5230453ee4ffae82d3e8`
-**Generation time:** 2026-08-12T12:14:34-04:00
-**Source fingerprint:** `d6cfc4f9d370594d9c3a5de6dde486a6d8927c04fe922f9a12581effa2814adf`
+**Source commit:** `86b76844af306f49fe229e347f1bd87abb00af45`
+**Generation time:** 2026-08-12T12:40:09-04:00
+**Source fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
 
 - [Civic, cultural, and technical translation](../../capabilities/civic-cultural-and-technical-translation.md) - `prose_link` (markdown)
 - [Technical Operations](../../capabilities/technical-operations.md) - `prose_link` (markdown)
@@ -16,6 +16,7 @@
 - [What the work was up against](../../indexes/what-the-work-was-up-against.md) - `prose_link` (markdown)
 - [Project lineages](../../indexes/project-lineages.md) - `prose_link` (markdown)
 - [Collective credit and protected absence](../../methods/collective-credit-and-protected-absence.md) - `related_to` (frontmatter)
+- [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `uses_method` (frontmatter)
 - [Situated source rereading](../../methods/situated-source-rereading.md) - `related_to` (frontmatter)
 - [ACLU - Product Manager II, Discovery](../../opportunities/aclu-product-discovery.md) - `uses_method` (frontmatter)
 - [Asana - AI Implementation Manager, Service Management](../../opportunities/asana-ai-implementation.md) - `uses_method` (frontmatter)
