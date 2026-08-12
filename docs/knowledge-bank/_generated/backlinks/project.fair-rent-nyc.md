@@ -3,7 +3,7 @@
 
 **Source commit:** `86b76844af306f49fe229e347f1bd87abb00af45`
 **Generation time:** 2026-08-12T12:40:09-04:00
-**Source fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
+**Source fingerprint:** `dfc76cdd2c900a43883611cf678c3c9c6b7d65ecc8dd22d440134e7725264539`
 
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `related_to` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [hur5tftl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj.md) - `related_to` (frontmatter)
@@ -24,9 +24,11 @@
 - [FairRentNYC: pxl 20230202 142709440 [h23frdp4]](../../assets/photographs/project-sites/fair-rent-nyc-pxl-20230202-142709440-h23frdp4zr.md) - `related_to` (frontmatter)
 - [FairRentNYC: pxl 20230202 142709440 [zwhoed2j]](../../assets/photographs/project-sites/fair-rent-nyc-pxl-20230202-142709440-zwhoed2jr6.md) - `related_to` (frontmatter)
 - [Implementation, Adoption, and Handoff](../../capabilities/implementation-adoption-and-handoff.md) - `related_to` (frontmatter)
+- [NYCAC and Fair Rent NYC frontline advocacy, July-August 2026](../../claims/nycac-frontline-advocacy-2026-08.md) - `part_of` (frontmatter)
 - [Commercial Rent Stabilization event at Friends and Lovers](../../events/commercial-rent-friends-and-lovers-2026-02-17.md) - `related_to` (frontmatter)
 - [Project X community conversation](../../events/commercial-rent-project-x-2026-03-10.md) - `related_to` (frontmatter)
 - [Commercial Rent Stabilization public event](../../events/commercial-rent-public-event-2025-11-13.md) - `related_to` (frontmatter)
+- [Empty Storefronts, High Rents public report launch](../../events/sbu-report-launch-2026-07-29.md) - `part_of` (frontmatter)
 - [Commercial rent stabilization hearing](../../events/commercial-rent-stabilization-hearing-2021-09-17.md) - `related_to` (frontmatter)
 - [Committee on Small Business hearing on the Small Business Jobs Survival Act](../../events/small-business-job-survival-hearing-2018-10-22.md) - `related_to` (frontmatter)
 - [Int. 1796 commercial rent stabilization introduction](../../events/commercial-rent-int-1796-introduction-2019-11-14.md) - `related_to` (frontmatter)
