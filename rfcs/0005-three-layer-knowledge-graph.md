@@ -42,7 +42,10 @@ source-specific workflows. Audience-specific projections remain a fourth
 output rather than another source of truth. This architecture is intended to
 keep context packets relevant as the archive grows while preserving
 provenance, contradiction, rights, consent, collective credit, and human
-publication authority.
+publication authority. It also treats plural, attributed lenses and explicit
+knowledge handoffs as first-class operating structure: synthesis may ensemble
+different readings without forcing consensus or turning one perspective into a
+total account.
 
 At Jamie Burkart's request, pull request 273 includes a read-only evaluation
 prototype: a versioned layer policy, derived compiler, semantic-radius and
@@ -93,6 +96,14 @@ The observed problems are:
 6. **A structural pass is not editorial adequacy.** Reaching every node and
    verifying every checksum does not prove that a packet is useful to a photo
    editor, hiring reader, researcher, or public visitor.
+7. **Knowledge state is more precise than availability.** A record may have
+   been created, communicated, received, incorporated into a decision, or acted
+   on. Collapsing those events into “the team knew” conceals the handoff that
+   may need repair.
+8. **Plurality is not a defect to normalize away.** People in different roles
+   may hold source-backed, mutually complicating views. A summary that invents
+   one institutional voice can erase expertise, boundaries, disagreement, and
+   the conditions under which trust was granted.
 
 The expected outcome is a graph that can remain deep without making every
 query broad, and a materialization workflow that can remain powerful without
@@ -116,6 +127,12 @@ turning access into disclosure.
   compiler while establishing a migration path.
 - Evaluate retrieval relevance, source completeness, privacy loss, and human
   authority independently.
+- Preserve attributed lenses, disagreements, and open operational questions
+  without requiring a single consensus interpretation.
+- Make knowledge handoffs and their temporal states inspectable, including what
+  was available but not demonstrably considered before a decision.
+- Compose permissioned scopes by their most restrictive effective boundary
+  when knowledge from multiple universes enters one projection.
 
 ## Non-goals
 
@@ -182,6 +199,21 @@ turning access into disclosure.
 **Private-full packet**
 : A packet compiled inside a named private recipient envelope with all permitted
   context and explicit protected dispositions. It is not a publication bundle.
+
+**Lens**
+: An attributed, situated way of observing or interpreting an event. A lens
+records role, source, time, and scope; it does not claim that its holder knew all
+other records or endorsed a later synthesis.
+
+**Knowledge handoff**
+: A typed transfer between scopes or roles whose state may be proposed,
+communicated, received, incorporated, or acted on. These states are not
+interchangeable.
+
+**Operational question**
+: A source-linked question about flow, timing, standing, responsibility, or a
+missing decision basis. A counterfactual may remain useful as an operational
+question without being promoted to a factual claim.
 
 ## Detailed design
 
@@ -326,6 +358,64 @@ Cross-layer transitions are default-deny.
 There is no custody-to-projection transition. Source artifacts must first
 receive evidence identity and then be attached to a reviewed semantic selection.
 
+### Heteroglossic team-knowledge practice
+
+The graph should help a team coordinate without pretending the team must be of
+one mind. Its unit of integrity is not a consensus paragraph; it is a
+source-addressable ensemble whose component lenses remain recoverable.
+
+A reusable diagnostic form is a **multi-lens knowledge timeline**:
+
+| Time | Lens or role | Observation | Source | Handoff state | Decision relation | Operational question |
+|---|---|---|---|---|---|---|
+| bounded timestamp | attributed scope | what this source directly records | opaque evidence ID | proposed / communicated / received / incorporated / acted | considered / available-unconsidered / later / unknown | unresolved flow question |
+
+The table is a debugging interface, not a device for deciding which person is
+right. It should make visible:
+
+- what each role could observe within its own scope;
+- what was expected to travel to another role;
+- whether receipt, incorporation, or action is actually evidenced;
+- which source-backed observations were available before a decision;
+- which observations were considered, unconsidered, later, or unknown;
+- where standing, purpose, or responsibility changed; and
+- which contradictions or counterfactuals must remain open questions.
+
+Ensemble synthesis may compare and translate lenses, but it must not silently
+merge them. It preserves source attribution and uncertainty, names any
+translation step, and distinguishes an authored synthesis from the speech or
+belief of a participant. A simulated expert or participant voice is a review
+hypothesis, never that person's statement, approval, or proxy decision; the
+actual person must confirm any position attributed to them.
+
+This pattern reframes a common team failure. The problem is not always missing
+information. It may be a broken handoff: a criterion, promise, qualification,
+purpose, or boundary existed in one scope but did not travel durably into the
+scope where a later decision was made. The correction is therefore not “share
+everything.” It is to define the minimum necessary handoff, preserve its
+source, and record its state.
+
+### Scoped universes and boundary composition
+
+A team, project, care relationship, personal archive, job application, and
+public portfolio are separate knowledge universes. Each may stand on its own
+with its own membership, purpose, custody, language, retention, and authority.
+They may compose for a named task, but composition does not dissolve their
+boundaries.
+
+For a projection built from scopes `S1 ... Sn`, the default permitted field set
+is their intersection:
+
+```text
+effective fields = requested fields ∩ allowed(S1) ∩ ... ∩ allowed(Sn)
+```
+
+Any additional disclosure requires an explicit override from every authority
+whose scope would otherwise withhold it. Missing or ambiguous permission fails
+closed. The resulting projection records the contributing scope IDs, allowed
+fields, blocked fields, recipient, purpose, and review owner. No scope inherits
+another scope's broader audience merely because the records can be joined.
+
 ### Traversal and packet compilation
 
 A graph-radius run proceeds in phases:
@@ -440,7 +530,9 @@ The synthetic evaluation suite at
 `evals/knowledge-bank/graph-layers-rfc-evals.json` exercises boundary behavior:
 semantic traversal stops before an evidence hub, stale access cannot become a
 capture, evidence cannot become semantics without an observation, source
-custody cannot project directly, and publication remains human-gated. The
+custody cannot project directly, publication remains human-gated, plural lenses
+survive a knowledge-flow audit, handoff states remain distinct, and composed
+scopes retain only mutually permitted fields. The
 evaluator at `scripts/rfcs/three-layer-knowledge-graph-eval.mjs` reports hard
 failures separately from weighted design criteria.
 
@@ -456,7 +548,13 @@ The primary threats are:
 - a recipient receiving the private-full packet when only a minimum-necessary
   projection was approved;
 - a high score masking failure of rights, consent, identity, or publication
-  authority.
+  authority;
+- an ensemble summary presenting a simulated or synthesized voice as a real
+  participant's statement;
+- a timeline converting chronology into causality or an unanswered
+  counterfactual into fact; and
+- one contributing scope's broad permission overriding another scope's narrower
+  trust boundary.
 
 The design fails closed:
 
@@ -622,3 +720,9 @@ an explicit decision rather than an accidental default.
   an RFC appendix, or be replaced by implementation schemas after acceptance?
 - What human review protocol is proportionate for private LLM context packets
   that will never be published but may contain sensitive source material?
+- Which handoff states need independent evidence receipts in a production
+  implementation, and which can be derived safely from source events?
+- How should the graph represent a lens that changes over time without
+  overwriting its earlier situated observation?
+- When does an unresolved operational question belong in a recipient projection
+  rather than only in the private research record?

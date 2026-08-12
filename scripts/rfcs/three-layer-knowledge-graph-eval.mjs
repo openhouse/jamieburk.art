@@ -157,10 +157,87 @@ function runPacketPlan(contract, scenario) {
   };
 }
 
+function runKnowledgeFlowAudit(scenario) {
+  const observations = [...(scenario.observations ?? [])].sort((left, right) =>
+    left.id.localeCompare(right.id, "en")
+  );
+  const observationById = new Map(observations.map((item) => [item.id, item]));
+  const handoffs = [...(scenario.handoffs ?? [])].sort((left, right) =>
+    left.id.localeCompare(right.id, "en")
+  );
+
+  const availableAt = (observationId, cutoff) => {
+    const observation = observationById.get(observationId);
+    if (!observation || observation.observed_at > cutoff) return false;
+    return handoffs.some(
+      (handoff) =>
+        (handoff.observation_ids ?? []).includes(observationId) &&
+        handoff.received_at &&
+        handoff.received_at <= cutoff
+    );
+  };
+
+  return {
+    lens_ids: sortedUnique((scenario.lenses ?? []).map((item) => item.id)),
+    observation_ids: observations.map((item) => item.id),
+    handoff_states: handoffs.map((handoff) => ({
+      id: handoff.id,
+      state: handoff.incorporated_at
+        ? "incorporated"
+        : handoff.received_at
+          ? "received"
+          : handoff.communicated_at
+            ? "communicated"
+            : "proposed"
+    })),
+    decisions: [...(scenario.decisions ?? [])]
+      .sort((left, right) => left.id.localeCompare(right.id, "en"))
+      .map((decision) => {
+        const considered = sortedUnique(decision.considered_observation_ids ?? []);
+        const consideredSet = new Set(considered);
+        return {
+          id: decision.id,
+          considered_observation_ids: considered,
+          available_unconsidered_observation_ids: observations
+            .map((item) => item.id)
+            .filter(
+              (observationId) =>
+                !consideredSet.has(observationId) &&
+                availableAt(observationId, decision.decided_at)
+            )
+        };
+      }),
+    open_question_ids: sortedUnique(
+      (scenario.operational_questions ?? [])
+        .filter((item) => item.status === "open")
+        .map((item) => item.id)
+    )
+  };
+}
+
+function runBoundaryComposition(scenario) {
+  const requested = sortedUnique(scenario.requested_fields ?? []);
+  const scopes = [...(scenario.scopes ?? [])].sort((left, right) =>
+    left.id.localeCompare(right.id, "en")
+  );
+  const allowed = requested.filter((field) =>
+    scopes.every((scope) => (scope.permitted_fields ?? []).includes(field))
+  );
+  const allowedSet = new Set(allowed);
+
+  return {
+    scope_ids: scopes.map((scope) => scope.id),
+    allowed_fields: allowed,
+    blocked_fields: requested.filter((field) => !allowedSet.has(field))
+  };
+}
+
 export function runGraphLayerScenario(contract, scenario) {
   if (scenario.operation === "transition") return runTransition(contract, scenario);
   if (scenario.operation === "semantic-radius") return runSemanticRadius(contract, scenario);
   if (scenario.operation === "packet-plan") return runPacketPlan(contract, scenario);
+  if (scenario.operation === "knowledge-flow-audit") return runKnowledgeFlowAudit(scenario);
+  if (scenario.operation === "compose-boundaries") return runBoundaryComposition(scenario);
   throw new Error(`unknown graph-layer RFC eval operation: ${scenario.operation}`);
 }
 
@@ -201,6 +278,7 @@ export function evaluateGraphLayerRFC(options = {}) {
   const custodyCaptureRule = contract.transitions?.find(
     (transition) => transition.from === "custody" && transition.to === "evidence"
   );
+  const knowledgePractice = contract.knowledge_practice;
 
   const checks = {
     layer_integrity:
@@ -238,6 +316,17 @@ export function evaluateGraphLayerRFC(options = {}) {
       contract.evaluation_prototype?.cli === "scripts/knowledge-wiki/layered-graph.mjs" &&
       contract.evaluation_prototype?.source_adapter_execution === false &&
       contract.evaluation_prototype?.public_projection === false,
+    heteroglossic_knowledge_practice:
+      knowledgePractice?.synthesis_mode === "ensemble-without-forced-consensus" &&
+      ["lens_id", "source_id", "observed_at"].every((field) =>
+        knowledgePractice?.observation_requires?.includes(field)
+      ) &&
+      ["proposed", "communicated", "received", "incorporated", "acted"].every(
+        (state) => knowledgePractice?.handoff_states?.includes(state)
+      ) &&
+      knowledgePractice?.counterfactuals_remain_questions === true &&
+      knowledgePractice?.boundary_composition === "intersection-most-restrictive" &&
+      knowledgePractice?.simulated_voice_requires_human_confirmation === true,
     scenario_coverage:
       scenarioResults.length >= 10 && scenarioResults.every((result) => result.passed),
     retrieval_quality:
@@ -249,11 +338,12 @@ export function evaluateGraphLayerRFC(options = {}) {
 
   const rubric = {
     layer_integrity: { weight: 0.2, hard: true },
-    semantic_traversal: { weight: 0.2, hard: true },
+    semantic_traversal: { weight: 0.15, hard: true },
     source_custody: { weight: 0.2, hard: true },
     publication_authority: { weight: 0.1, hard: true },
     prototype_boundary: { weight: 0.05, hard: true },
-    scenario_coverage: { weight: 0.15, hard: true },
+    heteroglossic_knowledge_practice: { weight: 0.1, hard: true },
+    scenario_coverage: { weight: 0.1, hard: true },
     retrieval_quality: { weight: 0.1, hard: false }
   };
 

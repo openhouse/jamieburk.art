@@ -140,6 +140,60 @@
         },
         "reports_per_seed_coverage": true
       }
+    },
+    {
+      "id": "plural-lenses-survive-knowledge-flow-audit",
+      "operation": "knowledge-flow-audit",
+      "lenses": [
+        { "id": "participant" },
+        { "id": "facilitator" },
+        { "id": "specialist" }
+      ],
+      "observations": [
+        { "id": "obs-1", "lens_id": "participant", "source_id": "src-1", "observed_at": "2026-06-18T10:00:00Z" },
+        { "id": "obs-2", "lens_id": "facilitator", "source_id": "src-2", "observed_at": "2026-06-18T10:05:00Z" },
+        { "id": "obs-3", "lens_id": "specialist", "source_id": "src-3", "observed_at": "2026-06-24T14:00:00Z" }
+      ],
+      "handoffs": [
+        { "id": "handoff-1", "observation_ids": ["obs-1"], "communicated_at": "2026-06-18T10:10:00Z", "received_at": "2026-06-18T10:11:00Z" },
+        { "id": "handoff-2", "observation_ids": ["obs-2"], "communicated_at": "2026-06-18T10:12:00Z", "received_at": "2026-06-18T10:13:00Z", "incorporated_at": "2026-06-18T10:20:00Z" }
+      ],
+      "decisions": [
+        { "id": "decision-1", "decided_at": "2026-06-18T10:15:00Z", "considered_observation_ids": ["obs-1"] }
+      ],
+      "operational_questions": [
+        { "id": "question-1", "status": "open" }
+      ],
+      "expected": {
+        "lens_ids": ["facilitator", "participant", "specialist"],
+        "observation_ids": ["obs-1", "obs-2", "obs-3"],
+        "handoff_states": [
+          { "id": "handoff-1", "state": "received" },
+          { "id": "handoff-2", "state": "incorporated" }
+        ],
+        "decisions": [
+          {
+            "id": "decision-1",
+            "considered_observation_ids": ["obs-1"],
+            "available_unconsidered_observation_ids": ["obs-2"]
+          }
+        ],
+        "open_question_ids": ["question-1"]
+      }
+    },
+    {
+      "id": "scope-boundaries-compose-by-intersection",
+      "operation": "compose-boundaries",
+      "requested_fields": ["decision", "lens", "private_locator", "source_excerpt"],
+      "scopes": [
+        { "id": "team", "permitted_fields": ["decision", "lens", "source_excerpt"] },
+        { "id": "project", "permitted_fields": ["decision", "lens"] }
+      ],
+      "expected": {
+        "scope_ids": ["project", "team"],
+        "allowed_fields": ["decision", "lens"],
+        "blocked_fields": ["private_locator", "source_excerpt"]
+      }
     }
   ]
 }
