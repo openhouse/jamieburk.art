@@ -1,10 +1,10 @@
 {
   "reportVersion": 3,
-  "checkedAt": "2026-08-04T02:00:52.558Z",
+  "checkedAt": "2026-08-12T16:24:57.314Z",
   "baseUrl": "http://127.0.0.1:3055",
-  "publicSurfaceFingerprint": "4ef0d4f3beb2aa6f68ca7c7809a1a50e7cf7217817688eba4fdb301cf56bd6c7",
+  "publicSurfaceFingerprint": "387d6abba1b6681b8c442d5b89ef38de2debf4c38bb0d928163b583ded613553",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 115,
+  "publicSurfaceFileCount": 116,
   "captureMethod": "Playwright Chromium screenshots of the current built local candidate; About captures are deliberately framed on the through-line and current systems loops; no deployment or indexing action.",
   "routes": [
     {
@@ -65,7 +65,7 @@
           },
           "pixelWidth": 375,
           "pixelHeight": 1200,
-          "sha256": "a523a36715b2ef7a6e7aa0ce6d214a75d06fbe844d7c5ed7ea38bcfff71a5615",
+          "sha256": "413e2f7911f5ee140209fb952eaf64061c00a63970556bc5d782e2ec677f4729",
           "file": "professor-lenses-about-mobile.png",
           "framedContent": {
             "throughLineHeadingPresent": true,
