@@ -40,6 +40,8 @@ export function evaluateWowListSocialPractices(candidate) {
   const synergyClaim = bank.claims.find((item) => item.id === "CLM-SUNDAY-DINNER-WOWLIST-NYCAC-SYNERGY");
   const observations = bank.observations.filter((item) => item.claimIds.includes("CLM-WOWLIST-RELATIONAL-CURATION"));
   const synergyObservations = bank.observations.filter((item) => item.claimIds.includes("CLM-SUNDAY-DINNER-WOWLIST-NYCAC-SYNERGY"));
+  const repositoryFrontmatter =
+    candidate.repositorySource.match(/^---\n([\s\S]*?)\n---/)?.[1] ?? "";
 
   for (const required of [
     "## Central finding",
@@ -72,9 +74,9 @@ export function evaluateWowListSocialPractices(candidate) {
     "WOW List orientation does not link the governed repository source"
   );
   check(
-    /id: source\.wowlist\.knowledge-repository\.2026/.test(candidate.repositorySource) &&
-      /visibility: summary-only/.test(candidate.repositorySource) &&
-      /opaque_locator: federation\.repository\.wowlist-knowledge/.test(candidate.repositorySource),
+    /^id: source\.wowlist\.knowledge-repository\.2026$/m.test(repositoryFrontmatter) &&
+      /^visibility: summary-only$/m.test(repositoryFrontmatter) &&
+      /^opaque_locator: federation\.repository\.wowlist-knowledge$/m.test(repositoryFrontmatter),
     "federated repository source note is missing or exposes the wrong boundary"
   );
   check(

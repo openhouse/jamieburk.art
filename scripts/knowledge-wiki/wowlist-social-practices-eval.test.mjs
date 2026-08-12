@@ -31,6 +31,16 @@ expectFailure(
 );
 
 expectFailure(
+  "the summary-only source boundary cannot be laundered through body text",
+  (candidate) => {
+    candidate.repositorySource = candidate.repositorySource
+      .replace("visibility: summary-only", "visibility: public")
+      .concat("\nA stale note says visibility: summary-only.\n");
+  },
+  /federated repository source note is missing or exposes the wrong boundary/
+);
+
+expectFailure(
   "the relational-curation claim cannot activate a public projection",
   (candidate) => {
     const claim = candidate.knowledgeBank.claims.find((item) => item.id === "CLM-WOWLIST-RELATIONAL-CURATION");
