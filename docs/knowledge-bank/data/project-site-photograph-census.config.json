@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-07-28",
+  "sourceRecordId": "source.nycac.project-site-photograph-census.2026-07-28",
+  "indexRecordId": "index.photo-set.nycac-project-sites.2017-2026",
+  "inputReceipt": {
+    "captureMethod": "Wayback CDX JSON query plus exact id_ HTML retrieval; every checked-in HTML manifest records archive URL, source digest, local SHA-256, and recovery state.",
+    "cdxFields": ["timestamp", "original", "mimetype", "digest", "length"],
+    "collapse": "urlkey",
+    "filters": ["statuscode:200"],
+    "sourceManifestRoot": "docs/knowledge-bank/data/project-site-photograph-source-manifests",
+    "reconstructionBoundary": "The checked-in CDX files reproduce the complete URL populations. The HTML CDX files and manifests bind every contextual page capture; exact pages may be re-fetched from each manifest archiveUrl and verified against its SHA-256."
+  },
+  "sites": [
+    {
+      "id": "nyc-artist-coalition",
+      "label": "NYC Artist Coalition",
+      "domain": "nycartc.com",
+      "projectIds": ["project.nyc-artist-coalition"],
+      "cdxKey": "nycartc",
+      "captureReceipt": {
+        "capturedAt": "2026-07-28T07:38:12-04:00",
+        "imageCdxQuery": "https://web.archive.org/cdx/search/cdx?url=nycartc.com/*&output=json&filter=statuscode:200&filter=mimetype:image/.*&fl=timestamp,original,mimetype,digest,length&collapse=urlkey",
+        "imageCdxPath": "docs/knowledge-bank/data/project-site-photograph-source-manifests/nycartc-images-cdx.json",
+        "imageCdxSha256": "ea139a97dc9e5fe0109165029686f3de6bcc78445ab901edb3ce02229049035a",
+        "imageRowCount": 207,
+        "htmlCdxQuery": "https://web.archive.org/cdx/search/cdx?url=nycartc.com/*&output=json&filter=statuscode:200&filter=mimetype:text/html&fl=timestamp,original,mimetype,digest,length&collapse=urlkey",
+        "htmlCdxPath": "docs/knowledge-bank/data/project-site-photograph-source-manifests/nycartc-html-cdx.json",
+        "htmlCdxSha256": "d5a8202f1a1deb7094649393421a8cc31669361bce42d6fba3988797f1fff20c",
+        "htmlManifestPath": "docs/knowledge-bank/data/project-site-photograph-source-manifests/nycartc-html-manifest.json",
+        "htmlManifestSha256": "df0e29ed90352b26f3ce37db5cf029205c45bdb822802940648020ef7563b399",
+        "htmlPageCount": 119
+      }
+    },
+    {
+      "id": "fair-rent-nyc",
+      "label": "FairRentNYC",
+      "domain": "fairrentnyc.nycartc.com",
+      "projectIds": ["project.fair-rent-nyc", "project.nyc-artist-coalition"],
+      "cdxKey": "fairrentnyc",
+      "captureReceipt": {
+        "capturedAt": "2026-07-28T07:38:24-04:00",
+        "imageCdxQuery": "https://web.archive.org/cdx/search/cdx?url=fairrentnyc.nycartc.com/*&output=json&filter=statuscode:200&filter=mimetype:image/.*&fl=timestamp,original,mimetype,digest,length&collapse=urlkey",
+        "imageCdxPath": "docs/knowledge-bank/data/project-site-photograph-source-manifests/fairrentnyc-images-cdx.json",
+        "imageCdxSha256": "82314cf4037435a09617b8081e7fa9a326edf21e9ff3b9d4c7c28fbece0d6fe1",
+        "imageRowCount": 107,
+        "htmlCdxQuery": "https://web.archive.org/cdx/search/cdx?url=fairrentnyc.nycartc.com/*&output=json&filter=statuscode:200&filter=mimetype:text/html&fl=timestamp,original,mimetype,digest,length&collapse=urlkey",
+        "htmlCdxPath": "docs/knowledge-bank/data/project-site-photograph-source-manifests/fairrentnyc-html-cdx.json",
+        "htmlCdxSha256": "4a0285fafa81f85a4d2a1b2b335c1136431d13430dcc5ea536260e5293103a37",
+        "htmlManifestPath": "docs/knowledge-bank/data/project-site-photograph-source-manifests/fairrentnyc-html-manifest.json",
+        "htmlManifestSha256": "c1eafcd58051fab1b92f369f1cd00c795108d1a91e464cdc24bd7403b23dec52",
+        "htmlPageCount": 10
+      }
+    },
+    {
+      "id": "talks-not-raids",
+      "label": "Talks Not Raids",
+      "domain": "talksnotraids.com",
+      "projectIds": ["project.talks-not-raids", "project.nyc-artist-coalition"],
+      "cdxKey": "talksnotraids",
+      "captureReceipt": {
+        "capturedAt": "2026-07-28T07:38:34-04:00",
+        "imageCdxQuery": "https://web.archive.org/cdx/search/cdx?url=talksnotraids.com/*&output=json&filter=statuscode:200&filter=mimetype:image/.*&fl=timestamp,original,mimetype,digest,length&collapse=urlkey",
+        "imageCdxPath": "docs/knowledge-bank/data/project-site-photograph-source-manifests/talksnotraids-images-cdx.json",
+        "imageCdxSha256": "10600ebb6e7048ec8220ff2ee93c194579a1aa32b27224fd89a693937bfec026",
+        "imageRowCount": 65,
+        "htmlCdxQuery": "https://web.archive.org/cdx/search/cdx?url=talksnotraids.com/*&output=json&filter=statuscode:200&filter=mimetype:text/html&fl=timestamp,original,mimetype,digest,length&collapse=urlkey",
+        "htmlCdxPath": "docs/knowledge-bank/data/project-site-photograph-source-manifests/talksnotraids-html-cdx.json",
+        "htmlCdxSha256": "0dab57be3efcc3087d9765c5e184e4d15ae01b20183d23d240aa8f8e8e9433c9",
+        "htmlManifestPath": "docs/knowledge-bank/data/project-site-photograph-source-manifests/talksnotraids-html-manifest.json",
+        "htmlManifestSha256": "c67eadddb381d4f024ab600d4bacbf4b8349f42f1cbbce85b7f55afde60c0a21",
+        "htmlPageCount": 2
+      }
+    },
+    {
+      "id": "let-nyc-dance",
+      "label": "Let NYC Dance",
+      "domain": "letnycdance.nycartc.com",
+      "projectIds": ["project.let-nyc-dance", "project.nyc-artist-coalition"],
+      "cdxKey": "letnycdance",
+      "captureReceipt": {
+        "capturedAt": "2026-07-28T07:38:43-04:00",
+        "imageCdxQuery": "https://web.archive.org/cdx/search/cdx?url=letnycdance.nycartc.com/*&output=json&filter=statuscode:200&filter=mimetype:image/.*&fl=timestamp,original,mimetype,digest,length&collapse=urlkey",
+        "imageCdxPath": "docs/knowledge-bank/data/project-site-photograph-source-manifests/letnycdance-images-cdx.json",
+        "imageCdxSha256": "a393d3dc02af9485cca206b67acc041ab0b09c0431e46b4752346bc1b0301957",
+        "imageRowCount": 87,
+        "htmlCdxQuery": "https://web.archive.org/cdx/search/cdx?url=letnycdance.nycartc.com/*&output=json&filter=statuscode:200&filter=mimetype:text/html&fl=timestamp,original,mimetype,digest,length&collapse=urlkey",
+        "htmlCdxPath": "docs/knowledge-bank/data/project-site-photograph-source-manifests/letnycdance-html-cdx.json",
+        "htmlCdxSha256": "a18bd22a9c1c5b4949074b2551b0436699d7ec9cbafa08d503467a17e2dcad98",
+        "htmlManifestPath": "docs/knowledge-bank/data/project-site-photograph-source-manifests/letnycdance-html-manifest.json",
+        "htmlManifestSha256": "22a204a55cf7122664725bfe45843a5726ca6269abf711ecb1b0a565dd85dabe",
+        "htmlPageCount": 2
+      }
+    },
+    {
+      "id": "save-nyc-spaces",
+      "label": "Save NYC Spaces",
+      "domain": "savenycspaces.nycartc.com",
+      "projectIds": ["project.save-nyc-spaces", "project.nyc-artist-coalition"],
+      "cdxKey": "savenycspaces",
+      "captureReceipt": {
+        "capturedAt": "2026-07-28T07:38:54-04:00",
+        "imageCdxQuery": "https://web.archive.org/cdx/search/cdx?url=savenycspaces.nycartc.com/*&output=json&filter=statuscode:200&filter=mimetype:image/.*&fl=timestamp,original,mimetype,digest,length&collapse=urlkey",
+        "imageCdxPath": "docs/knowledge-bank/data/project-site-photograph-source-manifests/savenycspaces-images-cdx.json",
+        "imageCdxSha256": "203dff4d443681f8fd8b6a7fcd8bd1dda566087aa0f76a350b7d2cc7f35229b6",
+        "imageRowCount": 56,
+        "htmlCdxQuery": "https://web.archive.org/cdx/search/cdx?url=savenycspaces.nycartc.com/*&output=json&filter=statuscode:200&filter=mimetype:text/html&fl=timestamp,original,mimetype,digest,length&collapse=urlkey",
+        "htmlCdxPath": "docs/knowledge-bank/data/project-site-photograph-source-manifests/savenycspaces-html-cdx.json",
+        "htmlCdxSha256": "178ed08c591d5b486b7a6796f32b02559f7e1ddf08ab7dd35b94592223ec365e",
+        "htmlManifestPath": "docs/knowledge-bank/data/project-site-photograph-source-manifests/savenycspaces-html-manifest.json",
+        "htmlManifestSha256": "cefac7980bcec3b47874a7f7ccc0f6d2f7ce93d6d12e72433065dc81de7e01e5",
+        "htmlPageCount": 1
+      }
+    }
+  ]
+}

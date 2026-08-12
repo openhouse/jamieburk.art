@@ -15,7 +15,7 @@ export function JBCard({
 }: JBCardProps) {
   return (
     <Component
-      className={`rounded-lg border border-jb-ink/15 bg-jb-warm/86 p-5 shadow-sm ${className}`}
+      className={`rounded border border-jb-ink/15 bg-jb-warm p-5 ${className}`}
       id={id}
     >
       {children}

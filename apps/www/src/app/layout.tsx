@@ -21,14 +21,14 @@ export const metadata: Metadata = createMetadata();
 
 export const viewport: Viewport = {
   colorScheme: "light",
-  themeColor: "#0b5f81",
+  themeColor: "#2f6f89",
   width: "device-width",
   initialScale: 1
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html className={`${karla.variable} ${oswald.variable}`} lang="en">
+    <html className={`${karla.variable} ${oswald.variable}`} data-theme="human-index" lang="en">
       <body>
         <SiteHeader />
         <main id="main">{children}</main>

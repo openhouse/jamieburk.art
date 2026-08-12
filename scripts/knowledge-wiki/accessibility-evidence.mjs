@@ -21,11 +21,33 @@ export const canonicalAccessibilityRoutes = Object.freeze([
   "/work/kc-town-hall"
 ]);
 export const canonicalAccessibilityViewports = Object.freeze([360, 375, 768, 1280]);
+export const publicSurfaceFingerprintPolicy = "v2-runtime-build-inputs";
 
-export function computePublicSurfaceFingerprint(repoRoot) {
+function stablePackageProjection(packageJson) {
+  const scripts = packageJson.scripts ?? {};
+  return {
+    workspaces: packageJson.workspaces ?? [],
+    engines: packageJson.engines ?? {},
+    packageManager: packageJson.packageManager ?? null,
+    dependencies: packageJson.dependencies ?? {},
+    devDependencies: packageJson.devDependencies ?? {},
+    optionalDependencies: packageJson.optionalDependencies ?? {},
+    peerDependencies: packageJson.peerDependencies ?? {},
+    overrides: packageJson.overrides ?? {},
+    scripts: {
+      build: scripts.build ?? null,
+      dev: scripts.dev ?? null,
+      start: scripts.start ?? null
+    }
+  };
+}
+
+export function computePublicSurfaceFingerprint(repoRoot, options = {}) {
+  const read = (relativePath) =>
+    options.fileOverrides?.[relativePath] ?? readFileSync(path.join(repoRoot, relativePath));
   const files = execFileSync(
     "git",
-    ["ls-files", "apps/www", "package.json", "package-lock.json"],
+    ["ls-files", "apps/www", "package-lock.json"],
     { cwd: repoRoot, encoding: "utf8" }
   )
     .trim()
@@ -36,10 +58,21 @@ export function computePublicSurfaceFingerprint(repoRoot) {
   for (const relativePath of files) {
     hash.update(relativePath);
     hash.update("\0");
-    hash.update(readFileSync(path.join(repoRoot, relativePath)));
+    hash.update(read(relativePath));
     hash.update("\0");
   }
-  return { fingerprint: hash.digest("hex"), fileCount: files.length };
+  const packageProjection = stablePackageProjection(
+    JSON.parse(String(read("package.json")))
+  );
+  hash.update("package.json#runtime-build-inputs");
+  hash.update("\0");
+  hash.update(JSON.stringify(packageProjection));
+  hash.update("\0");
+  return {
+    fingerprint: hash.digest("hex"),
+    fileCount: files.length + 1,
+    policy: publicSurfaceFingerprintPolicy
+  };
 }
 
 export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride) {
@@ -87,6 +120,38 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
     report.summary.unloadedImagesBeforeScroll > 0 &&
     report.summary.lazyImageFollowUpPerformed === true &&
     report.summary.allImagesLoadedAfterScroll === true;
+  const focusedVisualReviewPasses =
+    report.focusedVisualReview?.route === "/" &&
+    report.focusedVisualReview?.passed === true &&
+    report.focusedVisualReview?.occurrences?.length ===
+      canonicalAccessibilityViewports.length &&
+    report.focusedVisualReview.occurrences.every(
+      (occurrence) =>
+        canonicalAccessibilityViewports.includes(occurrence.viewport) &&
+        occurrence.captionPresent === true &&
+        occurrence.captionPartCount === 2 &&
+        occurrence.captionAndCreditSeparated === true &&
+        occurrence.computedFontSizePx >=
+          report.focusedVisualReview.minimumCaptionFontSizePx &&
+        occurrence.captionWithinViewport === true &&
+        occurrence.captionOverlapsPrimaryCopy === false
+    );
+  const navigationReviewPasses =
+    report.navigationReview?.startRoute === "/" &&
+    report.navigationReview?.destinationRoute === "/about" &&
+    report.navigationReview?.startHttpStatus === 200 &&
+    report.navigationReview?.selector === 'a[href="/about"]' &&
+    report.navigationReview?.linkVisible === true &&
+    report.navigationReview?.navigationCompleted === true &&
+    report.navigationReview?.destinationH1 === "About" &&
+    report.navigationReview?.destinationMainPresent === true &&
+    report.navigationReview?.viewport?.width === 1280 &&
+    report.navigationReview?.renderedScreenshot?.retainedInPublicGit === false &&
+    /^[a-f0-9]{64}$/.test(
+      report.navigationReview?.renderedScreenshot?.sha256 ?? ""
+    ) &&
+    report.navigationReview?.renderedScreenshot?.byteLength > 0 &&
+    report.navigationReview?.pass === true;
 
   return {
     passed:
@@ -97,6 +162,9 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
       completeMatrix &&
       rowsPass &&
       summaryPasses &&
+      focusedVisualReviewPasses &&
+      navigationReviewPasses &&
+      report.publicSurfaceFingerprintPolicy === current.policy &&
       report.publicSurfaceFingerprint === current.fingerprint &&
       report.publicSurfaceFileCount === current.fileCount,
     report,
@@ -104,6 +172,8 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
     canonicalCoverage,
     completeMatrix,
     rowsPass,
-    summaryPasses
+    summaryPasses,
+    focusedVisualReviewPasses,
+    navigationReviewPasses
   };
 }

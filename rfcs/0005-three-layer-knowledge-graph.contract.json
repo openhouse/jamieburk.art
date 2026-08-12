@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "rfc": 5,
+  "stage": "exploring",
+  "layers": {
+    "semantic": {
+      "question": "What does this mean?",
+      "instance_location": "governed-knowledge-environment",
+      "stores_private_locators": false
+    },
+    "evidence": {
+      "question": "What supports, complicates, or contradicts it?",
+      "instance_location": "governed-evidence-environment",
+      "stores_private_locators": false
+    },
+    "custody": {
+      "question": "Where are the authoritative bytes and under what authority?",
+      "instance_location": "outside-public-git",
+      "credentials_allowed": false
+    }
+  },
+  "traversal": {
+    "degree_domain": "semantic",
+    "semantic_edge_types": [
+      "demonstrated_by",
+      "fits_requirement",
+      "informed_by",
+      "participated_in",
+      "projected_to",
+      "related_to"
+    ],
+    "evidence_boundary_edge_types": [
+      "documented_by",
+      "supported_by",
+      "complicated_by",
+      "contradicted_by"
+    ],
+    "evidence_expansion": "attachment-phase",
+    "custody_materialization": "source-specific-adapter",
+    "default_cross_layer": "deny"
+  },
+  "transitions": [
+    {
+      "id": "bounded-capture",
+      "from": "custody",
+      "to": "evidence",
+      "requires": [
+        "bounded_request",
+        "current_authorization",
+        "source_cutoff",
+        "disposition"
+      ]
+    },
+    {
+      "id": "reviewed-interpretation",
+      "from": "evidence",
+      "to": "semantic",
+      "requires": [
+        "atomic_observation",
+        "evidence_class",
+        "interpretation_review"
+      ]
+    },
+    {
+      "id": "selective-projection",
+      "from": "semantic",
+      "to": "projection",
+      "requires": [
+        "recipient",
+        "public_safe_wording",
+        "rights_decision",
+        "consent_decision",
+        "credit_review",
+        "editorial_approval"
+      ]
+    },
+    {
+      "id": "approved-evidence-attachment",
+      "from": "evidence",
+      "to": "projection",
+      "requires": [
+        "semantic_selection",
+        "recipient",
+        "rights_decision",
+        "consent_decision",
+        "credit_review",
+        "editorial_approval"
+      ]
+    }
+  ],
+  "retrieval": {
+    "packet_families": ["per-seed", "union"],
+    "hub_policy": "lazy-evidence-expansion",
+    "requires_explicit_artifact_budget": true,
+    "reports_per_seed_coverage": true
+  },
+  "knowledge_practice": {
+    "synthesis_mode": "ensemble-without-forced-consensus",
+    "observation_requires": ["lens_id", "source_id", "observed_at"],
+    "handoff_states": ["proposed", "communicated", "received", "incorporated", "acted"],
+    "decision_requires": ["decided_at", "considered_observation_ids"],
+    "correction_requires": ["target_id", "raised_by_lens_id", "status", "effect", "original_preserved"],
+    "correction_statuses": ["proposed", "acknowledged", "accepted", "disputed", "declined", "withdrawn", "held"],
+    "correction_effects": ["append-context", "correct-field", "restrict-projection", "reject-totalization"],
+    "correction_preserves_original": true,
+    "unresolved_restriction_policy": "hold-projection",
+    "counterfactuals_remain_questions": true,
+    "boundary_composition": "intersection-most-restrictive",
+    "simulated_voice_requires_human_confirmation": true
+  },
+  "authority": {
+    "decision_owner": "Jamie Burkart",
+    "implementation_authorized": false,
+    "stage_advancement": "human-only"
+  },
+  "evaluation_prototype": {
+    "policy": "config/knowledge-wiki/graph-layers.json",
+    "runtime": "scripts/knowledge-wiki/layers.mjs",
+    "cli": "scripts/knowledge-wiki/layered-graph.mjs",
+    "source_adapter_execution": false,
+    "public_projection": false
+  }
+}

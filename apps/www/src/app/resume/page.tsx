@@ -53,6 +53,12 @@ export default function ResumePage() {
                       projection="resume-html"
                       surface="/resume"
                     />
+                  ) : proof.id === "kc-town-hall-public-benefit-documentation" ? (
+                    <Claim
+                      claimId="CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION"
+                      projection="resume-html"
+                      surface="/resume"
+                    />
                   ) : (
                     proof.shortWording ?? proof.publicWording
                   )}

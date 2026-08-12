@@ -1,11 +1,40 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Fair Rent NYC
 
-**Source commit:** `76a4328d235b4c97f1d61beab8a982fe12015dff`
-**Generation time:** 2026-07-21T17:51:37-04:00
-**Source fingerprint:** `fb2c6641a77507ea31add3a4d8062b2e963113b4bfe2d5b0836a12fd8a53657a`
+**Source commit:** `86b76844af306f49fe229e347f1bd87abb00af45`
+**Generation time:** 2026-08-12T12:40:09-04:00
+**Source fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
 
+- [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `related_to` (frontmatter)
+- [FairRentNYC: 2019 03 18 small business rally 1 [hur5tftl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj.md) - `related_to` (frontmatter)
+- [FairRentNYC: 2019 03 18 small business rally 1 [wp36j4c2]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-wp36j4c2rp.md) - `related_to` (frontmatter)
+- [FairRentNYC: 3 store collage 05 [55tq7pfm]](../../assets/photographs/project-sites/fair-rent-nyc-3-store-collage-05-55tq7pfmks.md) - `related_to` (frontmatter)
+- [FairRentNYC: 3 store collage 05 [7mwquler]](../../assets/photographs/project-sites/fair-rent-nyc-3-store-collage-05-7mwqulerjz.md) - `related_to` (frontmatter)
+- [FairRentNYC: 3 store collage 05 [auibkvak]](../../assets/photographs/project-sites/fair-rent-nyc-3-store-collage-05-auibkvakta.md) - `related_to` (frontmatter)
+- [FairRentNYC: 93383c1e 5096 48d2 9667 1b4f82221c88 [mqam242d]](../../assets/photographs/project-sites/fair-rent-nyc-93383c1e-5096-48d2-9667-1b4f82221c88-mqam242dtv.md) - `related_to` (frontmatter)
+- [FairRentNYC: 93383c1e 5096 48d2 9667 1b4f82221c88 [rgljdy6k]](../../assets/photographs/project-sites/fair-rent-nyc-93383c1e-5096-48d2-9667-1b4f82221c88-rgljdy6ku7.md) - `related_to` (frontmatter)
+- [FairRentNYC: 93383c1e 5096 48d2 9667 1b4f82221c88 [wogrjt4l]](../../assets/photographs/project-sites/fair-rent-nyc-93383c1e-5096-48d2-9667-1b4f82221c88-wogrjt4lub.md) - `related_to` (frontmatter)
+- [FairRentNYC: 93383c1e 5096 48d2 9667 1b4f82221c88 [y7bhc33x]](../../assets/photographs/project-sites/fair-rent-nyc-93383c1e-5096-48d2-9667-1b4f82221c88-y7bhc33xd5.md) - `related_to` (frontmatter)
+- [FairRentNYC: fair rent [5n6nefif]](../../assets/photographs/project-sites/fair-rent-nyc-fair-rent-5n6nefif3p.md) - `related_to` (frontmatter)
+- [FairRentNYC: fair rent [6shh3ejg]](../../assets/photographs/project-sites/fair-rent-nyc-fair-rent-6shh3ejgfx.md) - `related_to` (frontmatter)
+- [FairRentNYC: fair rent [dygklad7]](../../assets/photographs/project-sites/fair-rent-nyc-fair-rent-dygklad7jf.md) - `related_to` (frontmatter)
+- [FairRentNYC: fair rent [wivo6ht3]](../../assets/photographs/project-sites/fair-rent-nyc-fair-rent-wivo6ht34b.md) - `related_to` (frontmatter)
+- [FairRentNYC: pxl 20230202 142709440 [57zyta6k]](../../assets/photographs/project-sites/fair-rent-nyc-pxl-20230202-142709440-57zyta6kmr.md) - `related_to` (frontmatter)
+- [FairRentNYC: pxl 20230202 142709440 [gxpmu5yz]](../../assets/photographs/project-sites/fair-rent-nyc-pxl-20230202-142709440-gxpmu5yzye.md) - `related_to` (frontmatter)
+- [FairRentNYC: pxl 20230202 142709440 [h23frdp4]](../../assets/photographs/project-sites/fair-rent-nyc-pxl-20230202-142709440-h23frdp4zr.md) - `related_to` (frontmatter)
+- [FairRentNYC: pxl 20230202 142709440 [zwhoed2j]](../../assets/photographs/project-sites/fair-rent-nyc-pxl-20230202-142709440-zwhoed2jr6.md) - `related_to` (frontmatter)
 - [Implementation, Adoption, and Handoff](../../capabilities/implementation-adoption-and-handoff.md) - `related_to` (frontmatter)
+- [Commercial Rent Stabilization event at Friends and Lovers](../../events/commercial-rent-friends-and-lovers-2026-02-17.md) - `related_to` (frontmatter)
+- [Project X community conversation](../../events/commercial-rent-project-x-2026-03-10.md) - `related_to` (frontmatter)
+- [Commercial Rent Stabilization public event](../../events/commercial-rent-public-event-2025-11-13.md) - `related_to` (frontmatter)
+- [Commercial rent stabilization hearing](../../events/commercial-rent-stabilization-hearing-2021-09-17.md) - `related_to` (frontmatter)
+- [Committee on Small Business hearing on the Small Business Jobs Survival Act](../../events/small-business-job-survival-hearing-2018-10-22.md) - `related_to` (frontmatter)
+- [Int. 1796 commercial rent stabilization introduction](../../events/commercial-rent-int-1796-introduction-2019-11-14.md) - `related_to` (frontmatter)
+- [Int. 93 commercial rent stabilization introduction](../../events/commercial-rent-int-93-introduction-2022-03-24.md) - `related_to` (frontmatter)
+- [State sponsors introduce S8319 and A5568A](../../events/commercial-rent-state-introduction-2026-02-17.md) - `related_to` (frontmatter)
+- [Jimmy's Corner rally for Small Business Rent Stabilization](../../events/commercial-rent-jimmys-corner-rally-2026-04-10.md) - `related_to` (frontmatter)
+- [Commercial Rent Stabilization public support](../../indexes/commercial-rent-public-support.md) - `related_to` (frontmatter)
+- [Commercial rent stabilization testimony](../../indexes/commercial-rent-testimony.md) - `related_to` (frontmatter)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `prose_link` (markdown)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `related_to` (frontmatter)
 - [Project lineages](../../indexes/project-lineages.md) - `prose_link` (markdown)
@@ -13,3 +42,11 @@
 - [NYC Artist Coalition organization map](../../organizations/nyc-artist-coalition.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
 - [Save NYC Spaces](../../projects/save-nyc-spaces.md) - `related_to` (frontmatter)
+- [Active New York State commercial rent stabilization bills](../../sources/commercial-rent-public-support/active-state-bills-2025-2026.md) - `related_to` (frontmatter)
+- [Late-July 2026 current-workstream review](../../sources/working/current-workstream-2026-07-27.md) - `related_to` (frontmatter)
+- [Jimmy's Corner rally: Small Business Rent Stabilization statements](../../testimony/commercial-rent-public-support/2026-04-10-jimmys-corner-rally-statements.md) - `related_to` (frontmatter)
+- [State sponsors and advocates introduce the Small Business Survival Act](../../testimony/commercial-rent-public-support/2026-02-17-state-introduction-statements.md) - `related_to` (frontmatter)
+- [Friends and Lovers Commercial Rent Stabilization event: speaker index](../../testimony/commercial-rent-public-support/2026-02-17-friends-and-lovers-supportive-remarks.md) - `related_to` (frontmatter)
+- [Project X community event: Eon Huntley speaker index](../../testimony/commercial-rent-public-support/2026-03-10-project-x-eon-huntley.md) - `related_to` (frontmatter)
+- [Commercial Rent Stabilization public event: speaker index](../../testimony/commercial-rent-public-support/2025-11-13-commissioner-supportive-remarks.md) - `related_to` (frontmatter)
+- [Jamie Burkart testimony for the Small Business Job Survival Act](../../testimony/2018-10-22-small-business-job-survival-act.md) - `related_to` (frontmatter)

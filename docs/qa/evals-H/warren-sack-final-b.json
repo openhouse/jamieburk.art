@@ -1,43 +1,40 @@
 {
-  "evaluator": "Codex independent holdout reader",
-  "reviewerId": "sack-b-employment-release",
+  "evaluator": "Independent fictionalized Warren Sack analytical-lens review; not Professor Sack, an endorsement, or publication approval.",
+  "reviewerId": "sack-b-2026-08-03-30833e1c",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58",
+  "candidateSha256": "30833e1cb63bb480e9413f67aef6438a34f0a9977537e35c6a6bdfa5add59a14",
   "score": 4,
   "pass": true,
   "evidence": [
-    "The SHA-256 independently recomputed from the ordered candidate paths and NUL-delimited hashing procedure exactly matches the expected candidate hash.",
-    "/about states the recursive method plainly: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.",
-    "The About-page comparisons connect relationship models, interfaces and use, and learning and continuity across Harry J. Epstein Company, FairRentNYC, WOWList, and Sunday Dinner / 196.",
-    "Harry J. Epstein Company shows current relational systems work: customer language, product judgment, institutional knowledge, and operating habits become a maintained storefront, reusable content patterns, incremental releases, and team workflows.",
-    "FairRentNYC shows sophisticated social-software reasoning: stakeholders, lived experience, meetings, public sources, protected context, and open questions become campaign interfaces, participation pathways, source maps, decision records, action trackers, and recoverable collective memory.",
-    "WOWList is correctly presented as historical and co-built. It models informal relationships among scenes, interests, places, and venues as followable keyword communities supporting distributed publishing, event discovery, digests, and embeddable calendars.",
-    "CallNYC is correctly labeled as an archived, unofficial prototype. It converts constituent-services records and administrative categories into issue pathways, district context, resident-facing guidance, public documentation, and explicit limitations.",
-    "Sunday Dinner / 196 treats hospitality, trust, shared space, invitations, onboarding, access handoffs, and recurring rhythms as participation infrastructure while withholding private community records.",
-    "Source-Backed Team Memory is presented as a current early method rather than deployed software. Its Known / Open / Protected model, source-linked workflow, human review, correction, and transfer pattern demonstrate present relational information-structure reasoning.",
-    "The UCSC source note treats the educational records as protected rubric context, preserves collective credit, and explicitly bars claims of structural-equivalence invention, peer-reviewed research, production deployment from coursework, sole authorship, or present proficiency in historical tools."
+    "The About page states the recursive method plainly—observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue—and links directly to project evidence within two clicks of the homepage.",
+    "Three current systems loops are specifically reconstructable. HJE connects customer and operating relationships to an integrated commerce model, a maintained public storefront, incremental releases, bounded analytical learning, reusable patterns, ownership, and later-maintainer handoff. FairRentNYC connects coalition relationships and public/private sources to campaign interfaces, documented collective use, retained implementation and maintenance history, source maps, running minutes, question logs, action tracking, and collaborator continuity. Sunday Dinner/196 connects hospitality and artist-support relationships to recurring gathering and residency workflows, documented use, protected operational records, follow-up, and handoff.",
+    "The new HJE specimen exposes a five-stage Listen–Frame–Implement–Verify–Continue maintenance cycle. It is paired with an approved July 2026 storefront capture showing a maintained customer-facing system and explicitly identifies the workflow as an editorial reconstruction rather than an original company record.",
+    "The two Sunday Dinner/196 specimens make otherwise protected operations inspectable through bounded five-stage sequences: residency proposal review through independent-access handoff and recurring invitation through continuity follow-up. Canonical claims separately support Jamie's documented onboarding workflow and use of a structured recurring-gathering sheet while withholding all participant-level values.",
+    "Actual use is distinguished from technical output: the HJE storefront is current and maintained; FairRentNYC has public campaign surfaces, collective participation records, and repository-level implementation evidence; Sunday Dinner has public milestone corroboration and a protected aggregate record supporting recurring operational continuity. WOWList is correctly historical production evidence, CallNYC is an archived unofficial prototype, and Source-Backed Team Memory is explicitly an early method rather than deployed SaaS.",
+    "Role and credit allocation remain legible: Jamie's direct implementation and stewardship are named where supported, HJE credits its team, WOWList remains co-built, coalition achievements and shared-account authorship remain collective, Sunday Dinner credits its community, and CallNYC avoids official-city affiliation.",
+    "The browser-QA receipt is bound to the candidate hash and records four passing Chromium checks across mobile and desktop for HJE and Sunday Dinner/196: HTTP 200, one H1 per page, expected specimen and step counts, no overflow, no broken images, and no failed requests.",
+    "The candidate path set and fingerprint were independently recomputed from scripts/lib/professor-lens-eval.mjs: 117 paths and SHA-256 30833e1cb63bb480e9413f67aef6438a34f0a9977537e35c6a6bdfa5add59a14."
   ],
-  "gaps": [],
+  "gaps": [
+    "The HJE workflow is necessarily a public-safe reconstruction, not an inspectable original internal handoff document; the page states this limitation clearly and supplies the maintained storefront as independent public evidence.",
+    "The residency source establishes a documented onboarding plan, not a completed artistic outcome or universal workflow. The Knowledge Wiki correctly prohibits those inferences and does not use it to prove the separate resident-artist count.",
+    "The browser-QA JSON supplies screenshot hashes and structural results, but the screenshot payloads are outside the fingerprinted 117-path candidate set; the receipt should not be represented as stronger visual provenance than it provides."
+  ],
   "safety_findings": [
-    "Public project language consistently distinguishes individual contributions from collective outcomes through terms such as co-built, co-founded, collaborators, collectively governed, and campaign accomplishments remain collective.",
-    "Historical projects and archived prototypes are visibly distinguished from current work and present capability.",
-    "No public candidate page claims formal structural-equivalence research or current Max/Jitter proficiency.",
-    "Protected educational records, identifiers, correspondence, private paths, and raw evaluation text are not reproduced on the public surfaces.",
-    "The source note explicitly says the lenses are not endorsements and does not represent any named person as participating in this evaluation."
+    "The specimens preserve customer confidentiality and participant privacy by excluding customer data, private analytics, revenue detail, vendor terms, credentials, identities, addresses, access instructions, attendance histories, correspondence, proposals, photographs, and free text.",
+    "The Knowledge Wiki maintains explicit consent and evidentiary boundaries: private recordkeeping is not publication consent, residency documentation is not proof of artistic outcome, attendance marks are not unique-person counts, and protected sources do not authorize participant representation.",
+    "Coursework and historical work remain bounded lineage: Open House is identified as a UCSC gallery experiment, WOWList as historical, and CallNYC as archived and unofficial. The candidate does not infer disciplinary invention, peer-reviewed research, production deployment, sole authorship, or current Max/Jitter proficiency.",
+    "Deployment and indexing remain gated. Staging defaults to noindex, production indexing requires the production environment plus an explicit index policy, and repository checks do not replace Jamie's approval of the exact candidate."
   ],
-  "recommendation": "Pass PR-016 for employment release. The candidate demonstrates sophisticated relational and social-system reasoning across current and historical work while maintaining the required attribution, privacy, chronology, and anti-overclaim boundaries.",
+  "recommendation": "Accept PR-016 at score 4 for this exact candidate. Preserve every reconstruction label, privacy and collective-credit boundary, archived/prototype distinction, and human approval gate; permit staging review only and do not deploy or enable production indexing without Jamie's explicit approval.",
   "provenance": {
-    "provider": "codex-native-subagent",
-    "processSessionId": "019f785d-3430-7501-b79e-615807b4265c",
-    "agentNickname": "Halley",
-    "model": "gpt-5.6-sol",
-    "reasoningEffort": "xhigh",
-    "sandbox": "read-only",
-    "ephemeral": true,
-    "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "Recorded verbatim from a completed independent holdout result by the parent orchestrator.",
-    "startedAt": "2026-07-19T03:13:21.927Z",
-    "completedAt": "2026-07-19T03:17:30.064Z"
+    "provider": "codex-native-independent-review",
+    "reviewMode": "bounded independent holdout",
+    "reviewerRole": "implementation-adoption-handoff-reader",
+    "reviewedAt": "2026-08-03",
+    "candidatePathCount": 117,
+    "candidateFingerprintRecomputed": true,
+    "filesEdited": false
   }
 }

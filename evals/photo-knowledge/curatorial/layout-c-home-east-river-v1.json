@@ -1,0 +1,45 @@
+{
+  "runId": "layout-c-home-east-river-v1",
+  "simulationNotice": "Imagined editorial perspectives, not endorsements or evidence of the named people's private opinions.",
+  "visitorProblem": "Help a first-time hiring or referral reader understand Jamie's presence and working orientation while preserving literal role clarity and immediate Work and Resume actions.",
+  "blindPass": {
+    "visibleOnly": true,
+    "reading": "A person prepared for water travel occupies the edge of a large civic landscape; bridge, weather, shoreline, paddle, and life vest carry distinct material information.",
+    "prohibitedInferences": [
+      "profession",
+      "frequency of travel",
+      "leadership",
+      "project identity",
+      "outcome"
+    ]
+  },
+  "contextualPass": {
+    "route": "/",
+    "requiredFirstViewportSignals": [
+      "Jamie Burkart",
+      "Technical Project Manager",
+      "I help emerging work become usable systems.",
+      "View selected work",
+      "View resume"
+    ],
+    "lead": "asset.photo.east-river-manhattan-bridge.2022.001",
+    "alternative": "asset.photo.raft-riverboat",
+    "dissent": "Do not let the lead photograph make the portfolio read as a personal adventure or photography site before role fit becomes clear."
+  },
+  "authority": {
+    "panelRole": "advisory",
+    "selectionMethod": "human editorial decision",
+    "prohibitedMethods": [
+      "ranked-choice voting",
+      "majority vote",
+      "aggregate model score",
+      "aesthetic score"
+    ],
+    "publicationOwner": "Jamie Burkart"
+  },
+  "counterfactuals": [
+    "current East River occurrence",
+    "raft and riverboat alternative",
+    "no-photo homepage"
+  ]
+}

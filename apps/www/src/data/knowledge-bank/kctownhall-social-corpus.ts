@@ -424,9 +424,9 @@ export const kcTownHallSocialCorpus = {
       canonicalUrl: "https://www.kansascity.com/news/politics-government/article256377677.html",
       preferredPublicUrl: "canonical",
       publicCitation: "Kevin Hardy, Mike Hendricks, and Cortlynn Stark, 'Advocates say City Hall has moved too slow with special tax meant to improve East Side,' The Kansas City Star, December 27, 2021.",
-      publicNote: "The investigation independently describes the proposed KC Town Hall program and reports that a final contract had not been completed more than two years after the CCED Board recommendation.",
-      supportsGenerally: ["independent description of KC Town Hall as a proposed neighborhood resource and cultural center", "four proposed retail spaces and three proposed apartments", "no final contract completed by the article's December 2021 publication date", "reported administrative delay after the CCED Board recommendation"],
-      doesNotEstablish: ["the later project-withdrawal reason", "receipt or expenditure of appropriated funds", "construction or completion", "Jamie's individual role or causal credit"]
+      publicNote: "The investigation leads with KC Town Hall, reports a final contract still incomplete more than two years after the Board recommendation, and describes insurance and tax-document roadblocks. Its elevated lead photograph of the building is credited to Tammy Ljungblad; publication by the Star does not clear reuse rights for this portfolio.",
+      supportsGenerally: ["independent description of KC Town Hall as a proposed neighborhood resource and cultural center", "four proposed retail spaces and three proposed apartments", "no final contract completed by the article's December 2021 publication date", "reported administrative delay after the CCED Board recommendation", "reported insurance and tax-document roadblocks in the KC Town Hall process", "a published elevated view of the KC Town Hall building credited to Tammy Ljungblad"],
+      doesNotEstablish: ["the later project-withdrawal reason", "receipt or expenditure of appropriated funds", "construction or completion", "Jamie's individual role or causal credit", "portfolio republication rights for the Kansas City Star photograph"]
     },
     {
       id: "SRC-KCUR-MISSOURI-PRIMARY-GUIDE-2018",

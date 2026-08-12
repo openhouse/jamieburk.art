@@ -6,7 +6,7 @@ if (errors.length) throw new Error(`Cannot report an invalid citation registry:\
 const report = citationReport();
 const table = (rows) => rows.map(([label, count]) => `| ${label} | ${count} |`).join("\n");
 const lines = [
-  "# Citation report", "", "Generated from the canonical machine-readable Knowledge Bank. Do not edit this report by hand.", "",
+  "# Citation report", "", "Generated from the canonical machine-readable Knowledge Wiki citation registry. Legacy module paths remain compatibility locators. Do not edit this report by hand.", "",
   "## Sources by kind", "", "| Kind | Count |", "| --- | ---: |", table(report.sourceKinds), "",
   "## Sources by visibility", "", "| Visibility | Count |", "| --- | ---: |", table(report.sourceVisibility), "",
   "## Preservation", "", "| Status | Count |", "| --- | ---: |", table(report.preservation), "",

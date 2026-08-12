@@ -5,7 +5,7 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
+last_reviewed: 2026-07-26
 review_by: 2027-01-18
 aliases:
   - Knowledge Bank
@@ -27,6 +27,14 @@ relations:
     href: indexes/living-archive.md
     context: Orientation, missing-page, project, and situated source-return map.
   - type: related_to
+    target: index.knowledge-wiki.photography-notebook
+    href: notebooks/photography/README.md
+    context: Public-safe working notebook for exploratory photographic fieldwork.
+  - type: related_to
+    target: index.knowledge-wiki.photography
+    href: indexes/photography.md
+    context: Governed photo assets, exact occurrences, corrections, recollections, and human release gates.
+  - type: related_to
     target: index.knowledge-wiki.project-lineages
     href: indexes/project-lineages.md
     context: Bounded inheritance, adaptation, and divergence across projects.
@@ -38,6 +46,30 @@ relations:
     target: index.knowledge-wiki.family-closure
     href: indexes/family-closure.md
     context: Selective integration record for the frozen Knowledge Wiki A-E branch family.
+  - type: related_to
+    target: index.public-testimony
+    href: indexes/public-testimony.md
+    context: Recovered full-text public statements, explicit transcript gaps, and prepared-not-delivered boundaries.
+  - type: related_to
+    target: index.knowledge-wiki.jamie-sourcebook
+    href: indexes/jamie-sourcebook.md
+    context: Git-native public Sourcebook pilot with one canonical body per statement and generated browse routes.
+  - type: related_to
+    target: index.knowledge-wiki.public-testimony-and-hearing-voices
+    href: indexes/public-testimony-and-hearing-voices.md
+    context: Complete official-hearing populations, speaker ledgers, positions, and attribution boundaries.
+  - type: related_to
+    target: index.knowledge-wiki.commercial-rent-testimony
+    href: indexes/commercial-rent-testimony.md
+    context: Commercial Rent Stabilization bill introductions, prime-sponsor findings, hearing voices, and written-testimony queue.
+  - type: related_to
+    target: index.knowledge-wiki.commercial-rent-public-support
+    href: indexes/commercial-rent-public-support.md
+    context: Active state bills, public-safe event speaker indexes, official state sources, and explicit source gaps.
+  - type: related_to
+    target: index.knowledge-wiki.professional-record
+    href: indexes/professional-record-and-reception.md
+    context: Public-safe institutional facts, documented encounters, dated reception, and explicit recommendation and endorsement boundaries.
   - type: related_to
     target: project.nyc-artist-coalition
     href: projects/nyc-artist-coalition-2017.md
@@ -59,7 +91,7 @@ Protected source material remains outside the repository.
 The repo is public. Do not put anything here that would be unsafe, unfair, too
 private, or too hard to defend if quoted in a newspaper.
 
-The website is a projection of this bank. The bank can hold more structure than
+The website is a projection of this Wiki. The Wiki can hold more structure than
 the site shows: canonical claim language, evidence posture, source-basis
 categories, public-use guidance, guardrails, projection surfaces, and explicit
 non-public boundaries.
@@ -84,6 +116,12 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Living archive](indexes/living-archive.md): Jamie, the practice throughline,
   the priority project and campaign cohort, ethical methods, visual evidence,
   and a dated return to original source material.
+- [Photography field notebook](notebooks/photography/README.md): exploratory
+  questions, sequence sketches, visual patterns, counterreadings, and dated
+  public-safe changes in understanding.
+- [Photography knowledge loop](indexes/photography.md): first-class photo
+  records, exact page occurrences, credit corrections, recollections, protected
+  absence, and release gates implemented through the East River canary.
 - [Project lineages](indexes/project-lineages.md): inheritance, adaptation, and
   divergence without retrospective inevitability.
 - [Decision records](indexes/decision-records.md): bounded reconstructions that
@@ -91,6 +129,26 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Branch-family closure](indexes/family-closure.md): exact frozen donors,
   selected strengths, consolidated pages, deliberate deferrals, and the human
   gates still required before public projection.
+- [Public testimony](indexes/public-testimony.md): recovered full-text
+  statements, prepared-but-not-delivered material, and an explicit queue for
+  public appearances whose verbatim records have not yet been recovered.
+- [Jamie Burkart Sourcebook pilot](indexes/jamie-sourcebook.md): three
+  already-public, self-authored Council statements joined to a governed
+  perspective registry, generated browse routes, and a fail-closed publication
+  packet.
+- [Public testimony and hearing voices](indexes/public-testimony-and-hearing-voices.md):
+  complete official-hearing populations, attribution ledgers, explicit position
+  signals, and the distinction between source record and editorial view.
+- [Commercial Rent Stabilization testimony](indexes/commercial-rent-testimony.md):
+  the 2019 introduction, 2021 hearing, 2022 reintroduction, prime-sponsor
+  findings, supportive-speaker index, and written-submission review queue.
+- [Commercial Rent Stabilization public support](indexes/commercial-rent-public-support.md):
+  the active state bills, complete bounded public-event remarks, official state
+  statement populations, and time-aware speaker roles.
+- [Professional record and reception](indexes/professional-record-and-reception.md):
+  institutional facts, documented encounters, historical evaluation, held
+  photographs, and the boundaries between relationship, recommendation, and
+  endorsement.
 - [NYC Artist Coalition](projects/nyc-artist-coalition-2017.md): public-source
   claims, collective-credit boundaries, and the governed shared-folder research
   pass.
@@ -104,7 +162,7 @@ links, search stable IDs, use Find All References when needed, and run
 
 ## Purpose
 
-The knowledge bank exists to:
+The Knowledge Wiki exists to:
 
 - preserve strong, defensible professional claims;
 - keep public site copy grounded in evidence;
@@ -120,7 +178,7 @@ The knowledge bank exists to:
 
 ## Publication Model
 
-- **Knowledge bank:** public-safe repository layer for defensible claims,
+- **Knowledge Wiki:** public-safe repository layer for defensible claims,
   boundaries, and projection guidance.
 - **Intake and observations:** lossless public-safe capture and proposition-level
   source reading in `historical-knowledge.ts`.
@@ -144,7 +202,7 @@ detail.
 
 ## Projection Rule
 
-The site should project from this bank, not mirror it.
+The site should project from this Wiki, not mirror it.
 
 For hiring pages, prefer role-fit claims: requirements, workflow mapping,
 documentation architecture, source-backed memory, implementation support,

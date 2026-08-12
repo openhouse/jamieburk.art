@@ -19,6 +19,9 @@ relations:
   - type: related_to
     target: method.structure-grows-from-material
     href: ../methods/structure-grows-from-the-material.md
+  - type: related_to
+    target: method.recomposable-civic-cultural-systems
+    href: ../methods/recomposable-civic-cultural-systems.md
 ---
 
 # Project lineages
@@ -26,6 +29,11 @@ relations:
 A lineage is a documented inheritance, adaptation, or divergence. It is not a
 claim that every later project was predetermined, that one project caused the
 next, or that a varied life was secretly one inevitable career plan.
+
+The [recomposable civic-cultural systems method](../methods/recomposable-civic-cultural-systems.md)
+adds a component-level reading: it distinguishes direct artifact transfer,
+documented recurrence, and structural comparison while mapping how technical
+modules and relationship-bearing practices can be adapted across projects.
 
 ## Social software, shared space, and public participation
 
@@ -82,6 +90,15 @@ continuity visible: inherited knowledge or infrastructure must remain usable
 through change. The shared pattern is stewardship, not sameness; a store, a
 building, and a public knowledge system require different authorities and
 forms of care.
+
+## Literal component reuse
+
+The protected campaign-site repository-family census supplies one unusually
+concrete lineage: KC Spaces Fund and later campaign instances share Git
+ancestry and reusable theme and fundraiser-display modules. That technical
+fact remains narrower than a claim about shared organizers, governance,
+positions, audiences, or results. Code lineage and social lineage are separate
+relations even when they meet in one project.
 
 ## Reading rule
 

@@ -1,41 +1,38 @@
 {
-  "evaluator": "Independent holdout reader applying PR-016",
-  "reviewerId": "sack-a-employment-release",
+  "evaluator": "independent-holdout-reader-a",
+  "reviewerId": "sack-a-2026-08-03-30833e1c",
   "phase": "holdout",
   "lensId": "PR-016",
-  "candidateSha256": "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58",
+  "candidateSha256": "30833e1cb63bb480e9413f67aef6438a34f0a9977537e35c6a6bdfa5add59a14",
   "score": 4,
   "pass": true,
   "evidence": [
-    "The computed SHA-256 for the candidate subset exactly matches the expected fingerprint.",
-    "apps/www/src/app/about/page.tsx:91-100 plainly states the recurring sequence: recognize relationships, observe, model, prototype, test with people, document, and enable continuation.",
-    "apps/www/src/app/about/page.tsx:103-223 traces relationships, interface and use, learning, documentation, and continuity through four distinct projects.",
-    "Harry J. Epstein connects stakeholder and operating relationships to a maintained customer interface, incremental releases, analytics-guided learning, reusable patterns, and team workflows.",
-    "FairRentNYC connects lived experience, public sources, policy actors, and collaborators to source maps, campaign interfaces, collective events, running minutes, action trackers, and recoverable decision context.",
-    "WOWList connects organizer vocabulary and informal networks to a keyword-community model, publishing interfaces, documented organizer use, support materials, and reusable distribution patterns while describing the work as co-built and historical.",
-    "CallNYC connects constituent-service records to issue-pathway modeling, a bounded public prototype, documented stakeholder interaction, iteration, public documentation, and a preserved implementation repository.",
-    "apps/www/src/data/work.ts distinguishes ongoing work from historical or archived projects: HJE and FairRentNYC are marked present, WOWList and 196 are historical, CallNYC is archived, and the team-memory lab is explicitly early.",
-    "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md:54-57 defines the lens as evidence across projects rather than abstract systems language or a historical tool list."
+    "The candidate fingerprint was independently recomputed from the 117 sorted professorCandidateRelativePaths exported by scripts/lib/professor-lens-eval.mjs and exactly matched 30833e1cb63bb480e9413f67aef6438a34f0a9977537e35c6a6bdfa5add59a14 at commit c6feffc89a6590b2b81820e82f442b901b65e030.",
+    "The homepage establishes the operating motif and links directly to About through primary navigation; About then plainly names the recursive sequence—observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue—and links each system loop to project evidence.",
+    "Harry J. Epstein Company supplies a current, inspectable loop: customer and team questions become bounded requirements, incremental releases, verification through public paths and stakeholder signals, then reusable patterns, ownership, and next actions. The workflow is explicitly a public-safe reconstruction rather than an original company record.",
+    "NYC Artist Coalition and FairRentNYC supply a second current loop connecting lived experience, meetings, sources, open questions, and public actors to a recoverable civic model; campaign interfaces were used collectively, while running minutes, source maps, question logs, decision records, and action trackers preserve learning and continuation.",
+    "Sunday Dinner and 196 supply a third current loop through two concrete workflow specimens: artist proposal review, orientation, space configuration, independent-access handoff, and continued support; and invitation, response, hosting, minimal documentation, follow-up, and recurrence. Participant-level values and access details remain withheld.",
+    "WOWList and CallNYC add bounded historical continuity without carrying the current-work judgment: WOWList translates community vocabulary into distributed publishing workflows with shared credit, while CallNYC translates civic data into resident-facing pathways and is clearly marked archived, unofficial, independent, and unsuitable as current guidance.",
+    "Source-Backed Team Memory demonstrates present information-architecture learning through Known/Open/Protected states and a concrete CallNYC correction propagated across public surfaces, while explicitly remaining an early method—not production SaaS, an automated trust system, or a completed client pilot.",
+    "The public registry and UCSC source note preserve collective credit and anti-overclaim boundaries: protected coursework is not reproduced or projected as structural-equivalence invention, peer-reviewed research, production deployment, sole authorship, or current Max/Jitter proficiency. The exact-candidate QA report separately keeps deployment, indexing, rights, consent, collaborator-credit review, and Jamie's production decision open."
   ],
-  "gaps": [],
+  "gaps": [
+    "FairRentNYC's detailed campaign-memory and source-map specimens remain protected, so its handoff is inspectable through governed claims, a public campaign surface, and explicit artifact descriptions rather than a fully rendered internal workflow.",
+    "Source-Backed Team Memory has iterative research and human-review evidence but no completed collective client pilot; the page correctly excludes it from the three-system current-use threshold."
+  ],
   "safety_findings": [
-    "Collective credit is preserved: Open House is described as initiated by Jamie and collectively governed; WOWList is co-built; coalition outcomes remain collective.",
-    "Protected educational records, identifiers, correspondence, grades, and private archive paths are explicitly withheld and are not reproduced.",
-    "Historical work is labeled as historical or archived and is not presented as proof of current proficiency in historical toolsets.",
-    "The source note explicitly states that the faculty lenses are not endorsements; no named professor is represented as participating in this review or endorsing Jamie."
+    "Collective work is consistently bounded: coalition outcomes, WOWList production, Open House governance, and civic participation are not converted into sole authorship or individual policy causality.",
+    "Private analytics, customer data, coalition strategy, legal-review material, participant records, correspondence, identities, access instructions, protected educational records, and private archive paths remain excluded from public projection.",
+    "All release authority remains human-gated: this score does not approve production deployment, indexing, photographs, collaborator-sensitive credit, consent, or publication of the exact candidate."
   ],
-  "recommendation": "Pass for employment release under the existing collective-credit, privacy, historical-status, and anti-endorsement boundaries.",
+  "recommendation": "Accept PR-016 at score 4 for this exact candidate. Preserve the existing protected-specimen boundaries and require fresh candidate-bound review after any public-surface change; do not treat this judgment as publication, deployment, consent, or endorsement approval.",
   "provenance": {
-    "provider": "codex-native-subagent",
-    "processSessionId": "019f785d-32c0-7560-95c9-20df2f9c4702",
-    "agentNickname": "Franklin",
-    "model": "gpt-5.6-sol",
-    "reasoningEffort": "xhigh",
-    "sandbox": "read-only",
-    "ephemeral": true,
-    "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "Recorded verbatim from a completed independent holdout result by the parent orchestrator.",
-    "startedAt": "2026-07-19T03:13:21.573Z",
-    "completedAt": "2026-07-19T03:17:30.054Z"
+    "provider": "codex-native-independent-review",
+    "reviewMode": "bounded independent holdout",
+    "reviewerRole": "social-software-information-architecture-reader",
+    "reviewedAt": "2026-08-03",
+    "candidatePathCount": 117,
+    "candidateFingerprintRecomputed": true,
+    "filesEdited": false
   }
 }

@@ -1,6 +1,6 @@
 {
   "suite": "knowledge-wiki-foundation-E",
-  "version": 4,
+  "version": 5,
   "authority": "knowledge-wiki-employment-context-and-hiring-acceptance-team-handoff-2026-07-18.md, with M as the implementation spine",
   "principle": "Markdown is the record. The graph is compiled from the record. The portfolio is a selective projection from the governed system.",
   "scoring": "Every deterministic criterion blocks independently. Human authority gates must remain explicitly open until observed; they are not averaged into a synthetic score.",
@@ -82,7 +82,8 @@
         "hard_screens_explicit",
         "confirmed_inferred_unknown_separate",
         "one_year_fit_bounded",
-        "protected_communications_metadata_only"
+        "protected_communications_metadata_only",
+        "protected_opportunity_state_bounded"
       ]
     },
     {
@@ -166,9 +167,64 @@
         "family_public_projection_still_selective",
         "family_public_safety_preserved",
         "merge_readiness_ci_enforced",
-        "rfp_contract_enforced",
+        "rfc_contract_enforced",
         "generated_outputs_locale_independent",
         "diff_hygiene_clean"
+      ]
+    },
+    {
+      "id": "photography-field-notebook",
+      "criteria": [
+        "photography_notebook_materialized",
+        "photography_notebook_reachable",
+        "photography_notebook_content_bound",
+        "field_corpus_state_truthful",
+        "one_photo_canary_bounded",
+        "one_photo_canary_privacy_fails_closed",
+        "one_photo_canary_capability_gap_explicit",
+        "one_photo_canary_release_path_bounded",
+        "one_photo_canary_does_not_complete_field",
+        "attention_not_publication",
+        "four_photo_layers_distinct",
+        "experimental_space_preserved",
+        "photo_observations_remain_questions",
+        "collective_agency_and_absence_preserved",
+        "public_notebook_has_no_private_payload",
+        "photo_encounters_are_additive",
+        "photo_publication_gates_human",
+        "no_public_photo_route",
+        "photo_rfc_boundary_preserved",
+        "photo_source_non_mutation_preserved",
+        "residency_proposal_not_contract",
+        "artistic_divergence_protected",
+        "residency_container_not_deadline",
+        "open_ended_outcome_protected",
+        "host_acceptance_preserves_artist_agency",
+        "remembered_teju_source_positioned_honestly",
+        "human_host_acceptance_recorded",
+        "oral_history_prompt_bounded",
+        "oral_history_intake_cannot_auto_promote",
+        "oral_history_research_and_credit_open",
+        "oral_history_privacy_fails_closed",
+        "oral_history_not_publication"
+      ]
+    },
+    {
+      "id": "photographic-source-return",
+      "criteria": [
+        "photographic_source_return_materialized",
+        "photographic_source_return_reachable",
+        "photo_evidence_layers_distinct",
+        "photo_clusters_do_not_inflate_evidence",
+        "oral_history_received_without_auto_promotion",
+        "dcla_host_mobilization_and_participation_bounded",
+        "photo_rights_and_consent_fail_closed",
+        "map_derivative_exact_and_bounded",
+        "protected_photo_payload_not_published",
+        "apple_photos_capability_gap_explicit",
+        "knowledge_wiki_naming_is_canonical",
+        "portfolio_projection_remains_selective",
+        "source_return_human_authority_preserved"
       ]
     }
   ]

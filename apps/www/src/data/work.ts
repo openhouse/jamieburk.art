@@ -66,7 +66,8 @@ const workMetaSchema = z.object({
           alt: z.string(),
           caption: z.string(),
           href: z.string(),
-          sourceLabel: z.string()
+          sourceLabel: z.string(),
+          fit: z.enum(["cover", "contain"]).optional()
         })
         .optional()
     })
@@ -144,6 +145,12 @@ const workItemsInput = [
         description:
           "Reusable patterns for preserving the company's distinctive public voice across product, marketing, and support surfaces.",
         type: "template"
+      },
+      {
+        title: "Maintenance-to-handoff specimen",
+        description:
+          "A public-safe reconstruction shows how recurring questions became bounded requirements, incremental releases, verification, reusable patterns, and owned next actions.",
+        type: "workflow"
       }
     ],
     tags: [
@@ -409,7 +416,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Django / PostgreSQL / PostGIS and Ember community-calendar platform organized around followable keyword communities, adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+      "Co-built and operated a community-calendar platform for DIY arts and music organizers. A July 2017 production snapshot records 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -432,9 +439,9 @@ const workItemsInput = [
     ],
     tags: ["Community Systems", "Web Systems", "Product Operations", "Public-Facing Tools"],
     capabilities: [
-      "Django",
-      "PostgreSQL / PostGIS",
-      "Ember.js",
+      "Community Platform Delivery",
+      "Organizer Workflow Design",
+      "Product Operations",
       "Community Platform Design",
       "Event Workflows"
     ],
@@ -452,13 +459,13 @@ const workItemsInput = [
       "Followable keyword communities",
       "Organizer-facing distribution workflows",
       "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
-      "Roughly 35 city ecosystems reached"
+      "35 city-region keys with at least 50 posts in the July 2017 snapshot"
     ],
     knownOpenProtected: {
       known:
         "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
       open:
-        "Screenshots, archive links, and precise adoption wording need approval.",
+        "Screenshots, archive links, and individual technical-contribution allocation need further review.",
       protected:
         "Private user data, organizer contact lists, and unapproved community records are not published."
     }
@@ -471,7 +478,7 @@ const workItemsInput = [
     summary:
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
     role: "Host, Organizer & Systems Steward",
-    years: "2010s",
+    years: "2010s-present",
     status: "Short proof page",
     featured: true,
     priority: 5,
@@ -484,10 +491,16 @@ const workItemsInput = [
     artifactTypes: ["photo sequence", "workflow", "template"],
     artifacts: [
       {
-        title: "Gathering rhythm",
+        title: "Residency onboarding handoff",
         description:
-          "A representative structure for welcoming, hosting, documenting, and continuing recurring cultural work.",
+          "A redacted reconstruction shows proposal review, orientation, space configuration, independent access, and continued support without exposing participant or access details.",
         type: "workflow"
+      },
+      {
+        title: "Recurring gathering operations",
+        description:
+          "A second reconstruction shows invitation, response, hosting, minimal continuity documentation, and follow-up while every participant-level value remains private.",
+        type: "template"
       }
     ],
     tags: ["Community Systems", "Documentation", "Implementation", "Knowledge Systems"],
@@ -497,7 +510,7 @@ const workItemsInput = [
     sourceLayer:
       "Public-safe summary, approved public materials pending, and private records intentionally omitted.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
-    currentStatus: "Public-safe summary only.",
+    currentStatus: "Active practice; public-safe summary only.",
     group: "Community and cultural infrastructure",
     roleFit:
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
@@ -520,10 +533,10 @@ const workItemsInput = [
     title: "KC Town Hall LLC",
     slug: "kc-town-hall",
     series: "Built Environment",
-    subtitle: "Adaptive reuse planning and public-benefit documentation",
+    subtitle: "A $490,539 public funding award, field implementation, and responsible transition",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. After the CCED Board recommended $490,539, the Council accepted the recommendation, authorized funding-agreement negotiations, and separately appropriated the amount. The City later reported no disbursement; the project withdrew, and the full unused appropriation returned to the fund.",
-    role: "Project Planning & Documentation Support",
+      "Secured a $490,539 public funding award by co-developing KC Town Hall's successful CCED proposal and serving as the City's named developer/presenter for the exact request, then transitioned the project to a mission-aligned organization.",
+    role: "Co-founder, Project Manager & CCED Developer/Presenter",
     years: "2019-2024 public record",
     status: "Short proof page",
     featured: false,
@@ -536,9 +549,24 @@ const workItemsInput = [
     whatWasUnclear:
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
     whatBecameUsable:
-      "Planning materials, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    artifactTypes: ["guide", "source map", "template"],
+      "A successful $490,539 public funding request, planning materials, public-benefit documentation, stakeholder context, a multi-year municipal compliance record, and a mission-aligned transition.",
+    artifactTypes: ["map", "guide", "source map", "template"],
     artifacts: [
+      {
+        title: "Ten-minute-walk proposal map",
+        description:
+          "A neighborhood-scale planning graphic from the 2019 proposal, presented here as a public-safe crop with obsolete contact details removed.",
+        type: "map",
+        media: {
+          src: "/images/artifacts/kc-town-hall-walkshed.webp",
+          alt: "KC Town Hall proposal map showing a ten-minute walking area around the project location.",
+          caption:
+            "The map made a proposed neighborhood-scale constituency visible. It documents a planning frame, not a completed program or outcome.",
+          href: "/images/artifacts/kc-town-hall-walkshed.webp",
+          sourceLabel: "proposal map",
+          fit: "contain"
+        }
+      },
       {
         title: "Public-benefit documentation set",
         description:
@@ -549,29 +577,31 @@ const workItemsInput = [
     tags: ["Implementation", "Documentation", "Knowledge Systems", "Public-Facing Tools"],
     capabilities: ["Stakeholder Documentation", "Funding Support", "Historic Preservation Context"],
     careNote:
-      "Council appropriation did not become disbursement: the City reported no funds disbursed in 2022 and returned the full unused amount after project withdrawal in 2024. Private financial, legal, property, and stakeholder details are omitted.",
+      "Securing the award names Jamie's documented proposal-and-presentation role; institutional authority remained with the Board and Council, and appropriation was not payment to Jamie. The transition is an authorized first-party professional account. Private personal, financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Official Kansas City Council and CCED records, the complete public-safe account corpus, Council-role records, approved resume language, and bounded public project context.",
+      "Official Kansas City Council and CCED records, a protected public-safe review of the 2019 proposal, the complete public account corpus, Council-role records, approved resume language, and bounded project context.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
-    currentStatus: "The project later withdrew; the full unused appropriation returned to the fund in 2024.",
+    currentStatus: "Jamie later transitioned the project to a mission-aligned organization.",
     group: "Operating systems for teams",
     roleFit:
-      "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
+      "Funding strategy, proposal development, public presentation, long-horizon project management, public-benefit documentation, compliance coordination, and implementation support.",
     evidence: [
+      "$490,539 public funding award secured through a successful CCED request",
+      "Named City developer/presenter for the exact request",
       "Redevelopment planning",
       "Public-benefit documentation",
+      "Named developer point of contact in 2022 and 2023 City reports",
+      "M/WBE and CREO compliance progress",
       "Recurring public intake, service coordination, and result reporting",
-      "CCED Board recommendation",
-      "$490,539 Council appropriation",
-      "No reported disbursement; full unused amount returned"
+      "Mission-aligned project transition"
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-led adaptive reuse planning and public-benefit documentation. Official records establish the municipal funding lifecycle; the complete surviving public-account corpus separately documents a collective resident intake, service-coordination, and reporting workflow.",
+        "Jamie co-led the project, served as the City's named developer/presenter for the successful $490,539 request, remained a named developer point of contact through documented compliance progress in 2022-2023, and later transitioned the project to a mission-aligned organization. The complete surviving public-account corpus separately documents a collective resident intake, service-coordination, and reporting workflow.",
       open:
-        "The legislative records do not establish Jamie's individual causal role in the Board or Council actions or explain why the project withdrew.",
+        "The receiving organization, legal form, timing, and transfer scope are intentionally not asserted. The public transcript of Jamie's recalled City Council testimony remains unrecovered.",
       protected:
-        "Private financial, legal, property, banking, and stakeholder details are omitted."
+        "Private personal, correspondence, financial, legal, property, banking, and stakeholder details are omitted."
     }
   }
 ] satisfies WorkMeta[];

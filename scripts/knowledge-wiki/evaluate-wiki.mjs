@@ -22,6 +22,9 @@ import { findDisclosedProtectedIdentityDirectives } from "./privacy-boundaries.m
 import { evaluateMissingPages } from "./missing-pages-eval.mjs";
 import { evaluateInterpretiveLayer } from "./interpretive-layer-eval.mjs";
 import { evaluateFamilyClosure } from "./family-closure-eval.mjs";
+import { evaluatePhotographyNotebook } from "./photography-notebook-eval.mjs";
+import { evaluatePhotographicSourceReturn } from "./photographic-source-return-eval.mjs";
+import { evaluateLayout } from "../check-layout-evals.mjs";
 
 const suite = JSON.parse(
   readFileSync(path.join(defaultRepoRoot, "evals/knowledge-wiki/evals.json"), "utf8")
@@ -38,6 +41,12 @@ const opportunityQuery = queryWiki(result, {
   opportunity: "opportunity.nyc-oti.technical-operations-manager.782369"
 });
 const opportunities = result.records.filter((record) => record.kind === "opportunity");
+const liveOfficialOpportunities = opportunities.filter(
+  (record) => record.source_type === "official-employer" && record.opportunity_status === "live"
+);
+const protectedOpportunity = result.byId.get(
+  "opportunity.protected.source-backed-memory-consulting.2026"
+);
 const publicHiring = evaluatePublicHiring(defaultRepoRoot);
 const gapResolution = resolveHiringGaps(result, publicHiring.report);
 const employmentOutputs = buildEmploymentOutputs(result, publicHiring, gapResolution);
@@ -51,6 +60,9 @@ const disclosedProtectedIdentityDirectives = findDisclosedProtectedIdentityDirec
 const missingPages = evaluateMissingPages({ result });
 const interpretiveLayer = evaluateInterpretiveLayer({ result });
 const familyClosure = evaluateFamilyClosure({ result });
+const photographyNotebook = evaluatePhotographyNotebook({ result });
+const photographicSourceReturn = evaluatePhotographicSourceReturn({ result });
+const layoutEvaluation = evaluateLayout(defaultRepoRoot);
 
 const adrPath = path.join(defaultRepoRoot, "docs/architecture/ADR-knowledge-wiki-canonicality.md");
 const adr = existsSync(adrPath) ? readFileSync(adrPath, "utf8") : "";
@@ -88,15 +100,7 @@ const changedPublicUiPaths = changedPaths.filter((file) =>
 );
 const technicalOperationsPath = "apps/www/src/app/work/technical-operations/page.tsx";
 const technicalOperationsSource = readFileSync(path.join(defaultRepoRoot, technicalOperationsPath), "utf8");
-const boundedPublicUiPaths = [
-  "apps/www/src/app/globals.css",
-  "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
-  technicalOperationsPath,
-  "apps/www/src/components/CaseStudyBlocks.tsx",
-  "apps/www/src/components/TagList.tsx"
-].sort();
-const boundedPublicUiChange = JSON.stringify(changedPublicUiPaths.sort()) ===
-  JSON.stringify(boundedPublicUiPaths);
+const boundedPublicUiChange = publicUiChanged && layoutEvaluation.passed;
 const caseStudyBlocksSource = readFileSync(
   path.join(defaultRepoRoot, "apps/www/src/components/CaseStudyBlocks.tsx"),
   "utf8"
@@ -134,7 +138,8 @@ const checks = {
     caseStudyBlocksSource.includes('tone="inverted"') &&
     !caseStudyBlocksSource.includes("text-jb-paper/70") &&
     !caseStudyBlocksSource.includes("text-jb-ink/64") &&
-    tagListSource.includes("border-jb-paper/45 bg-jb-paper text-jb-blue") &&
+    tagListSource.includes("border-white/45 text-white") &&
+    layoutEvaluation.passed &&
     !labSource.includes("text-jb-ink/68"),
   branch_donor_synthesis:
     adr.includes("## Branch donor synthesis") &&
@@ -219,14 +224,20 @@ const checks = {
     ) &&
     existsSync(
       path.join(defaultRepoRoot, "scripts/knowledge-wiki/family-closure-eval.test.mjs")
+    ) &&
+    existsSync(
+      path.join(
+        defaultRepoRoot,
+        "scripts/knowledge-wiki/photographic-source-return-eval.test.mjs"
+      )
     ),
   legacy_checks_preserved:
     readFileSync(path.join(defaultRepoRoot, "package.json"), "utf8").includes("npm run check:citations") &&
     existsSync(path.join(defaultRepoRoot, "scripts/check-knowledge-bank.mjs")),
 
   tier_one_official_source_records:
-    opportunities.length === 6 &&
-    opportunities.every((record) =>
+    liveOfficialOpportunities.length === 6 &&
+    liveOfficialOpportunities.every((record) =>
       record.evidence.some((evidence) => {
         const source = result.byId.get(evidence.target);
         return source?.kind === "source" && source.source_kind === "official-job-posting";
@@ -236,8 +247,8 @@ const checks = {
     opportunities.every(
       (record) =>
         record.canonical_url &&
-        record.source_type === "official-employer" &&
-        record.opportunity_status === "live" &&
+        ((record.source_type === "official-employer" && record.opportunity_status === "live") ||
+          (record.source_type === "protected-metadata" && record.opportunity_status === "conditional")) &&
         record.verified_at &&
         record.review_by &&
         record.portfolio_routes.length > 0 &&
@@ -267,6 +278,16 @@ const checks = {
     privateVault?.opaque_locator === "vault.source.communication-history" &&
     privateVault?.public_use_status === "summary-only" &&
     !result.errors.some((issue) => issue.code === "PRIVATE_PATH"),
+  protected_opportunity_state_bounded:
+    protectedOpportunity?.visibility === "summary-only" &&
+    protectedOpportunity?.source_type === "protected-metadata" &&
+    protectedOpportunity?.opportunity_status === "conditional" &&
+    protectedOpportunity?.unknowns?.length >= 3 &&
+    protectedOpportunity?.hard_screens?.every((screen) => screen.disposition === "conditional") &&
+    publicHiring.report.opportunities.find((item) => item.id === protectedOpportunity.id)?.decision === "not-live" &&
+    !JSON.stringify(protectedOpportunity).match(
+      /(?:message|email|transcript)_(?:body|excerpt)|(?:collaborator|company)_identity|private_path/i
+    ),
 
   public_evaluator_has_no_hidden_wiki:
     publicHiring.report.publicSafety.privateMarkerCount === 0 &&
@@ -293,7 +314,9 @@ const checks = {
       publicHiring.report.readerContextHash,
       publicHiring.report.promptHash
     ].every((value) => /^[0-9a-f]{64}$/.test(value)),
-  role_contexts_fresh: publicHiring.report.opportunities.every((item) => item.fresh),
+  role_contexts_fresh: publicHiring.report.opportunities.every(
+    (item) => item.fresh || item.decision !== "deterministic-ready-for-human-review"
+  ),
   external_outcomes_remain_open:
     result.health.humanGates.some(
       (gate) => gate.id === "hiring-outcomes" && !["completed", "resolved"].includes(gate.state)
@@ -313,7 +336,9 @@ const checks = {
 
   ...missingPages.checks,
   ...interpretiveLayer.checks,
-  ...familyClosure.checks
+  ...familyClosure.checks,
+  ...photographyNotebook.checks,
+  ...photographicSourceReturn.checks
 };
 
 let failed = 0;

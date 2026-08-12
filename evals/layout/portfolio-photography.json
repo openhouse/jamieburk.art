@@ -1,0 +1,47 @@
+{
+  "id": "portfolio-photography-layout-v1",
+  "title": "Human Index photographic portfolio layout",
+  "intent": "Photography changes the portfolio's editorial rhythm while remaining public-safe, accessible, and subordinate to human publication authority.",
+  "criteria": [
+    {
+      "id": "manifest-bound-publication",
+      "blocking": true,
+      "criterion": "Every field photograph is registered once in the public manifest with stable dimensions, alt text, caption, credit, placement, status, and boundary."
+    },
+    {
+      "id": "minimal-authorized-field",
+      "blocking": true,
+      "criterion": "The pre-launch layout uses only the fully bound, credited, Jamie-authorized East River derivative; unresolved archival images remain outside the public bundle."
+    },
+    {
+      "id": "metadata-and-locator-safety",
+      "blocking": true,
+      "criterion": "Public assets and source code contain no EXIF payload, private archive UUID, original camera filename, or protected filesystem path."
+    },
+    {
+      "id": "editorial-not-decorative",
+      "blocking": true,
+      "criterion": "The home photograph is full-bleed, unframed, credited, and editorially specific; About and Colophon remain text-led until additional images complete creator, credit, rights, caption, crop, and destination review."
+    },
+    {
+      "id": "deliberate-absence",
+      "blocking": true,
+      "criterion": "Work, resume, and contact do not receive adjacent photographs merely to achieve coverage."
+    },
+    {
+      "id": "human-index-material-system",
+      "blocking": true,
+      "criterion": "The Human Index palette is active and gradients, decorative orbs, and bokeh are absent."
+    },
+    {
+      "id": "responsive-image-contract",
+      "blocking": true,
+      "criterion": "Images use Next Image, explicit intrinsic dimensions or fill, stable aspect ratios, responsive sizes, and a viewport-bounded hero."
+    },
+    {
+      "id": "human-authority-remains-open",
+      "blocking": true,
+      "criterion": "The design documentation states that automated scores and staging review do not replace human rights or production approval."
+    }
+  ]
+}

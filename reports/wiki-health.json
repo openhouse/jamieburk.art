@@ -1,67 +1,68 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-21T17:51:37-04:00",
-  "sourceCommit": "76a4328d235b4c97f1d61beab8a982fe12015dff",
-  "sourceFingerprint": "fb2c6641a77507ea31add3a4d8062b2e963113b4bfe2d5b0836a12fd8a53657a",
+  "generatedAt": "2026-08-12T12:40:09-04:00",
+  "sourceCommit": "86b76844af306f49fe229e347f1bd87abb00af45",
+  "sourceFingerprint": "5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
     "errors": []
   },
   "diagnostics": {
-    "records": 107,
+    "records": 395,
     "byKind": {
       "project": 14,
-      "person": 1,
+      "person": 4,
       "organization": 1,
-      "event": 1,
+      "event": 19,
       "place": 1,
-      "source": 29,
-      "asset": 1,
+      "source": 74,
+      "asset": 188,
       "claim": 2,
-      "research-run": 4,
-      "research-inquiry": 1,
-      "decision": 5,
-      "correction": 1,
-      "method": 10,
+      "research-run": 6,
+      "research-inquiry": 6,
+      "decision": 8,
+      "correction": 2,
+      "method": 14,
       "timeline": 1,
-      "application": 1,
-      "evaluation": 3,
-      "index": 17,
+      "application": 2,
+      "evaluation": 5,
+      "index": 31,
       "capability": 5,
-      "opportunity": 6,
-      "projection": 3
+      "opportunity": 7,
+      "projection": 5
     },
-    "typedRelations": 427,
-    "evidenceRelations": 8,
+    "typedRelations": 1367,
+    "evidenceRelations": 9,
     "relationTypeCounts": {
-      "collaborated_with": 1,
-      "documents": 18,
+      "collaborated_with": 2,
+      "documents": 39,
       "evidence:context": 1,
       "evidence:direct-support": 6,
-      "evidence:private-support": 1,
-      "has_asset": 2,
-      "informed_by": 43,
-      "part_of": 9,
-      "projected_to": 6,
-      "related_to": 243,
-      "resulted_in": 5,
+      "evidence:private-support": 2,
+      "has_asset": 14,
+      "informed_by": 48,
+      "part_of": 11,
+      "participated_in": 3,
+      "projected_to": 10,
+      "related_to": 885,
+      "resulted_in": 6,
       "supersedes": 1,
-      "supports": 19,
-      "uses_method": 21,
-      "uses_source": 59
+      "supports": 21,
+      "uses_method": 32,
+      "uses_source": 295
     },
-    "proseLinks": 291,
-    "rootReachable": 106,
+    "proseLinks": 444,
+    "rootReachable": 194,
     "orphanCount": 0,
     "deadEndCount": 0,
     "wantedPageCount": 6,
     "stalePageCount": 0,
-    "correctionCount": 1,
-    "rightsReviewCount": 1,
-    "opportunityCount": 6,
+    "correctionCount": 2,
+    "rightsReviewCount": 186,
+    "opportunityCount": 7,
     "liveOpportunityCount": 6,
-    "criticalRequirementCount": 22,
+    "criticalRequirementCount": 24,
     "criticalRequirementGapCount": 6,
     "warningCount": 0,
     "warnings": []
@@ -151,12 +152,1313 @@
       "title": "CallNYC chronology correction",
       "path": "docs/knowledge-bank/corrections/callnyc-years-2026.md",
       "humanReview": "resolved"
+    },
+    {
+      "id": "correction.photo.east-river-credit.2026-07",
+      "title": "Add Elana Gordon's credit to the East River homepage occurrence",
+      "path": "docs/knowledge-bank/corrections/east-river-credit-2026-07.md",
+      "humanReview": "not-requested"
     }
   ],
   "rightsReview": [
     {
       "id": "asset.photo.digital-district.001",
       "path": "docs/knowledge-bank/assets/digital-district-photo.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.kc-town-hall.hard-hat.001",
+      "path": "docs/knowledge-bank/assets/photographs/kc-town-hall-hard-hat-worksite.md",
+      "rightsState": "permission-needed",
+      "consentState": "not-applicable",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.kc-town-hall.kc-star-aerial.2021",
+      "path": "docs/knowledge-bank/assets/photographs/kc-town-hall-kc-star-aerial-2021.md",
+      "rightsState": "do-not-publish",
+      "consentState": "not-applicable",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.kc-town-hall.stewardship-interior.001",
+      "path": "docs/knowledge-bank/assets/photographs/kc-town-hall-stewardship-interior.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo-set.mit-interrogative-design.2024",
+      "path": "docs/knowledge-bank/assets/photographs/mit-interrogative-design-symposium-2024-held.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.nyc-council.field-kit.2026.001",
+      "path": "docs/knowledge-bank/assets/photographs/nyc-council-field-kit-2026.md",
+      "rightsState": "permission-needed",
+      "consentState": "not-applicable",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.nycac-dcla-listening-room.2017.001",
+      "path": "docs/knowledge-bank/assets/photographs/nycac-dcla-listening-room-2017.md",
+      "rightsState": "unknown",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-wp36j4c2rp",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-wp36j4c2rp.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.fair-rent-nyc-3-store-collage-05-55tq7pfmks",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/fair-rent-nyc-3-store-collage-05-55tq7pfmks.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.fair-rent-nyc-3-store-collage-05-7mwqulerjz",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/fair-rent-nyc-3-store-collage-05-7mwqulerjz.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.fair-rent-nyc-3-store-collage-05-auibkvakta",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/fair-rent-nyc-3-store-collage-05-auibkvakta.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.fair-rent-nyc-93383c1e-5096-48d2-9667-1b4f82221c88-mqam242dtv",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/fair-rent-nyc-93383c1e-5096-48d2-9667-1b4f82221c88-mqam242dtv.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.fair-rent-nyc-93383c1e-5096-48d2-9667-1b4f82221c88-rgljdy6ku7",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/fair-rent-nyc-93383c1e-5096-48d2-9667-1b4f82221c88-rgljdy6ku7.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.fair-rent-nyc-93383c1e-5096-48d2-9667-1b4f82221c88-wogrjt4lub",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/fair-rent-nyc-93383c1e-5096-48d2-9667-1b4f82221c88-wogrjt4lub.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.fair-rent-nyc-93383c1e-5096-48d2-9667-1b4f82221c88-y7bhc33xd5",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/fair-rent-nyc-93383c1e-5096-48d2-9667-1b4f82221c88-y7bhc33xd5.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.fair-rent-nyc-fair-rent-5n6nefif3p",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/fair-rent-nyc-fair-rent-5n6nefif3p.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.fair-rent-nyc-fair-rent-6shh3ejgfx",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/fair-rent-nyc-fair-rent-6shh3ejgfx.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.fair-rent-nyc-fair-rent-dygklad7jf",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/fair-rent-nyc-fair-rent-dygklad7jf.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.fair-rent-nyc-fair-rent-wivo6ht34b",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/fair-rent-nyc-fair-rent-wivo6ht34b.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.fair-rent-nyc-pxl-20230202-142709440-57zyta6kmr",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/fair-rent-nyc-pxl-20230202-142709440-57zyta6kmr.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.fair-rent-nyc-pxl-20230202-142709440-gxpmu5yzye",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/fair-rent-nyc-pxl-20230202-142709440-gxpmu5yzye.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.fair-rent-nyc-pxl-20230202-142709440-h23frdp4zr",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/fair-rent-nyc-pxl-20230202-142709440-h23frdp4zr.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.fair-rent-nyc-pxl-20230202-142709440-zwhoed2jr6",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/fair-rent-nyc-pxl-20230202-142709440-zwhoed2jr6.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-1926-2017-xyqgow5wnp",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-1926-2017-xyqgow5wnp.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-1926-cabaret-law-b-s4gqqimexc",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-1926-cabaret-law-b-s4gqqimexc.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-2017-town-hall-1200-ykavn3ewpf",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-2017-town-hall-1200-ykavn3ewpf.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-alan-maisel-twdpbfjz3p",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-alan-maisel-twdpbfjz3p.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-antonio-reynoso-cvu34y472s",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-antonio-reynoso-cvu34y472s.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-barry-grodenchik-2rk6c6siqg",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-barry-grodenchik-2rk6c6siqg.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-bill-perkins-usdugmuw4r",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-bill-perkins-usdugmuw4r.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-carlos-menchaca-ogeku6seea",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-carlos-menchaca-ogeku6seea.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-corey-johnson-hzzzx2a5xm",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-corey-johnson-hzzzx2a5xm.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-daniel-dromm-ozir3jsjlm",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-daniel-dromm-ozir3jsjlm.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-daniel-garodnick-awlnsyhtdj",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-daniel-garodnick-awlnsyhtdj.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-donovan-richards-jqyafawzk4",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-donovan-richards-jqyafawzk4.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-eric-ulrich-mkizejb3ja",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-eric-ulrich-mkizejb3ja.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-helen-rosenthal-kxenpmtkgr",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-helen-rosenthal-kxenpmtkgr.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-jimmy-van-bramer-5dsbikyihh",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-jimmy-van-bramer-5dsbikyihh.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-jumaane-williams-gy2esgcipp",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-jumaane-williams-gy2esgcipp.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-karen-koslowitz-jnmebztjec",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-karen-koslowitz-jnmebztjec.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-laurie-cumbo-mevd65rnjx",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-laurie-cumbo-mevd65rnjx.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-let-nyc-dance-house-of-yes-julia-fredenburg-f2mu22wwkg",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-let-nyc-dance-house-of-yes-julia-fredenburg-f2mu22wwkg.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-margaret-chin-wk6xabw6ql",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-margaret-chin-wk6xabw6ql.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-mark-levine-2jxnh66gbb",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-mark-levine-2jxnh66gbb.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-mark-treyger-4ks5c5jhem",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-mark-treyger-4ks5c5jhem.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-market-hotel-nyc-artist-coaltion-6vunzmqzjj",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-market-hotel-nyc-artist-coaltion-6vunzmqzjj.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-rafael-espinal-6jz2wkscm2",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-rafael-espinal-6jz2wkscm2.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-ritchie-torres-kcqrlhyvwi",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-ritchie-torres-kcqrlhyvwi.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-robert-cornegy-d4wtl3ldxl",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-robert-cornegy-d4wtl3ldxl.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-rosie-mendez-i5lwpuknu7",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-rosie-mendez-i5lwpuknu7.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-stephen-levin-cu2ylm4kqe",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-stephen-levin-cu2ylm4kqe.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-vincent-gentile-76aeslrnke",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-vincent-gentile-76aeslrnke.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.let-nyc-dance-ydanis-rodriguez-46gt7e6az4",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/let-nyc-dance-ydanis-rodriguez-46gt7e6az4.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-17917123-1848339695420410-3377721570655705398-o-hcq",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-17917123-1848339695420410-3377721570655705398-o-hcq.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-31957946863-31ea6584e1-z-1-uqt2vkcich",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-31957946863-31ea6584e1-z-1-uqt2vkcich.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-32944305043-21fa1fbfee-z-1-43xhrt3knm",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-32944305043-21fa1fbfee-z-1-43xhrt3knm.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-32944305093-ceef03f207-z-6fwero36sr",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-32944305093-ceef03f207-z-6fwero36sr.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-33372687200-002ff61294-z-mrq4yfva6q",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-33372687200-002ff61294-z-mrq4yfva6q.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-33628280601-215894e78f-z-zw55tekyjj",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-33628280601-215894e78f-z-zw55tekyjj.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-33628280601-c82658d4ac-o-lty2nsnh5u",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-33628280601-c82658d4ac-o-lty2nsnh5u.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-33628281531-f9329aee4d-k-hyo3oocoaa",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-33628281531-f9329aee4d-k-hyo3oocoaa.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-33628281531-fc67dd17f4-z-2-6t722fage6",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-33628281531-fc67dd17f4-z-2-6t722fage6.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-37262361084-8683f65c0b-z-idqgmlsxwy",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-37262361084-8683f65c0b-z-idqgmlsxwy.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-37262370324-1d7261082f-z-e2qkofhumx",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-37262370324-1d7261082f-z-e2qkofhumx.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-37262370324-236d7afa4b-o-cegdqmvbqg",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-37262370324-236d7afa4b-o-cegdqmvbqg.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-37262372324-d4126f9e0c-z-didaqu45tb",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-37262372324-d4126f9e0c-z-didaqu45tb.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-49202060612-3546ffa633-k-1-rto4ijf6wo",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-49202060612-3546ffa633-k-1-rto4ijf6wo.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-alicka-ampry-samuel-circle-lzj3nr3j6y",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-alicka-ampry-samuel-circle-lzj3nr3j6y.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-andrew-cohen-vjjqv7ls3i",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-andrew-cohen-vjjqv7ls3i.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-antonio-reynoso-circle-iqo5aoy4j2",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-antonio-reynoso-circle-iqo5aoy4j2.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-ayala-1-fjix57tdcn",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-ayala-1-fjix57tdcn.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-brannon-1-3i4dg5rddm",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-brannon-1-3i4dg5rddm.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-cabaret-law-repealed-1-tm4smyhatk",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-cabaret-law-repealed-1-tm4smyhatk.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-cabaretlawhearing-ro2jfllpxc",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-cabaretlawhearing-ro2jfllpxc.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-cabaretlawhearingdate-5rakuktoxy",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-cabaretlawhearingdate-5rakuktoxy.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-carlina-rivera-circle-ug6fdgm5nu",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-carlina-rivera-circle-ug6fdgm5nu.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-carlos-menchaca-z7gt77byft",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-carlos-menchaca-z7gt77byft.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-chhaya-r3u3vf6lur",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-chhaya-r3u3vf6lur.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-coalitionpink-odzxtpn73d",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-coalitionpink-odzxtpn73d.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-consumeraffairs-r4bot5ckms",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-consumeraffairs-r4bot5ckms.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-crains200-y6mmwishgn",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-crains200-y6mmwishgn.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-dailynews-2wm6c7onsj",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-dailynews-2wm6c7onsj.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-daniel-dromm-circle-2plblr2y3w",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-daniel-dromm-circle-2plblr2y3w.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-dca-nycac-njyx7gyih5",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-dca-nycac-njyx7gyih5.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-dclameeting-votfesewvy",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-dclameeting-votfesewvy.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-dclamtgbig-6mdan5cem5",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-dclamtgbig-6mdan5cem5.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-dclarecs-a3p5xyhpmi",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-dclarecs-a3p5xyhpmi.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-debbie-rose-circle-srnwl5om3r",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-debbie-rose-circle-srnwl5om3r.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-dekalb-vacant-upy657gtbt",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-dekalb-vacant-upy657gtbt.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-dianamoremedium-xddt6z6tsl",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-dianamoremedium-xddt6z6tsl.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-diaz-1-siyep53ysr",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-diaz-1-siyep53ysr.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-district-37-h3jgccnqxo",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-district-37-h3jgccnqxo.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-elsewhere-js3e5532uw",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-elsewhere-js3e5532uw.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-espinalrepeal-1-3v7tbu6n3k",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-espinalrepeal-1-3v7tbu6n3k.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-fair-rent-nyc-hearing-inst-3-iz2faaiyi7",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-fair-rent-nyc-hearing-inst-3-iz2faaiyi7.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-feb-general-big-q4ll2rqkye",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-feb-general-big-q4ll2rqkye.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-feb-general-bx7jewsrbt",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-feb-general-bx7jewsrbt.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-finkelpearlbanner-mellxxxn6p",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-finkelpearlbanner-mellxxxn6p.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-finkelpearlbig-63svvopekf",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-finkelpearlbig-63svvopekf.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-frankiebig-mutslzp3d6",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-frankiebig-mutslzp3d6.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-frontspace-khpio2bzpx",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-frontspace-khpio2bzpx.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-generalmeetingbig-o7fy62oxst",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-generalmeetingbig-o7fy62oxst.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-gjonaj-vdg5k7isr6",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-gjonaj-vdg5k7isr6.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-house-of-yes-zeokrkquv3",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-house-of-yes-zeokrkquv3.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-house-of-yesmedium2-r74xlukul2",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-house-of-yesmedium2-r74xlukul2.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-isabella-rivera-izzie-i24xfxiiuz",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-isabella-rivera-izzie-i24xfxiiuz.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-jimmy-van-bramer-circle-2plfakp67g",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-jimmy-van-bramer-circle-2plfakp67g.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-kallos-t3ixmrrbml",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-kallos-t3ixmrrbml.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-kurtisblow-urbihy6dit",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-kurtisblow-urbihy6dit.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-lander-ql7btdby6u",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-lander-ql7btdby6u.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-lander-xcdrkb6dqd",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-lander-xcdrkb6dqd.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-letnycdance-hearing-pz5a6yuis3",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-letnycdance-hearing-pz5a6yuis3.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-levin-pzmgk2pnnk",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-levin-pzmgk2pnnk.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-llp-popupshop-2017header-do3jz32yf4",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-llp-popupshop-2017header-do3jz32yf4.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-local802-htc3nmzl63",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-local802-htc3nmzl63.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-madiba-5roi5v66j3",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-madiba-5roi5v66j3.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-margaret-chin-circle-y6k4o3fhwq",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-margaret-chin-circle-y6k4o3fhwq.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-market-hotel-town-hall-hm7hv2umpg",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-market-hotel-town-hall-hm7hv2umpg.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-meeting-hfrytoufle",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-meeting-hfrytoufle.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-nightmayortownhallkurtisblow-pbqpbkvdlb",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-nightmayortownhallkurtisblow-pbqpbkvdlb.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-nolarodneym-iesa2vglbh",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-nolarodneym-iesa2vglbh.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-nyc-artist-coalition-julia-fredenburg-77twt2aaax",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-nyc-artist-coalition-julia-fredenburg-77twt2aaax.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-nyc-artist-coalition-y4exbsexmk",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-nyc-artist-coalition-y4exbsexmk.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-nycac-banner-2500-2-1-s3xgxswydm",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-nycac-banner-2500-2-1-s3xgxswydm.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-oakland-warehouse-cobanner-hyionve5bg",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-oakland-warehouse-cobanner-hyionve5bg.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-olmypia-i663wmmte6",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-olmypia-i663wmmte6.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-olympia-zzajw3c3xh",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-olympia-zzajw3c3xh.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-powers-1-jq3s2z25bs",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-powers-1-jq3s2z25bs.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-rachelnelsonmedium-agi44xob2h",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-rachelnelsonmedium-agi44xob2h.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-richards-gqkhbwtpkx",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-richards-gqkhbwtpkx.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-rosenthal-3bdwnrecvt",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-rosenthal-3bdwnrecvt.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-savenycspaces1-apxwca2pe4",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-savenycspaces1-apxwca2pe4.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-savenycspacesnycartc-zj2rj5nq3o",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-savenycspacesnycartc-zj2rj5nq3o.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-sbjsaphoto2-v3wodi5oi7",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-sbjsaphoto2-v3wodi5oi7.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-sf-daqy27icjr",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-sf-daqy27icjr.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-signing-group-photo-qp5ovk4zdg",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-signing-group-photo-qp5ovk4zdg.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-smlevinmedium-reorspn5i6",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-smlevinmedium-reorspn5i6.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-stephen-levin-circle-jzgkxr35vl",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-stephen-levin-circle-jzgkxr35vl.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-streetvendors-heawwemv2v",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-streetvendors-heawwemv2v.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-talks-not-raids-save-nyc-spaces-nyc-artist-coalitio",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-talks-not-raids-save-nyc-spaces-nyc-artist-coalitio.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-tara-sosdkqmr3m",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-tara-sosdkqmr3m.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-tarabig-y5xygqbrk2",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-tarabig-y5xygqbrk2.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-townhallbig-7u455nbgqm",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-townhallbig-7u455nbgqm.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-vacant-les-5b37myedhp",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-vacant-les-5b37myedhp.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-vacant-storefront-madiba-lfbce7dr2h",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-vacant-storefront-madiba-lfbce7dr2h.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-vanessa-gibson-circle-3rbchgegfr",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-vanessa-gibson-circle-3rbchgegfr.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-villagvoice-square2-2vnhl3ngh6",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-villagvoice-square2-2vnhl3ngh6.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-whisk-zpj2reqer2",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-whisk-zpj2reqer2.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-workinggroup1-3sjruikrf3",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-workinggroup1-3sjruikrf3.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-workinggroup1big-aw634d35lc",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-workinggroup1big-aw634d35lc.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-workinggroup2-cr5nwxmmj6",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-workinggroup2-cr5nwxmmj6.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.nyc-artist-coalition-workinggroup2big-e6e25aubq3",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/nyc-artist-coalition-workinggroup2big-e6e25aubq3.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.save-nyc-spaces-ali-rosa-salas-kwla4ltfwy",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-ali-rosa-salas-kwla4ltfwy.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.save-nyc-spaces-anya-sapozhnikova-kvcmtdtnpn",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-anya-sapozhnikova-kvcmtdtnpn.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.save-nyc-spaces-brian-polite-yaq3xtgujp",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-brian-polite-yaq3xtgujp.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.save-nyc-spaces-charlie-ahearn-bthjxzwua5",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-charlie-ahearn-bthjxzwua5.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.save-nyc-spaces-deearah-wright-4ouydsxmt7",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-deearah-wright-4ouydsxmt7.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.save-nyc-spaces-funkrust-save-nyc-spaces-tvuybcfjsg",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-funkrust-save-nyc-spaces-tvuybcfjsg.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.save-nyc-spaces-jamie-burkart-zkmvu7b5je",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-jamie-burkart-zkmvu7b5je.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.save-nyc-spaces-jeannie-hopper-avlgwpg7za",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-jeannie-hopper-avlgwpg7za.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.save-nyc-spaces-joe-ahearn-djxz7ekpnh",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-joe-ahearn-djxz7ekpnh.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.save-nyc-spaces-joe-conzo-jr-1200-pvzcgqbbam",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-joe-conzo-jr-1200-pvzcgqbbam.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.save-nyc-spaces-kurtis-blow-f4zed7m53p",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-kurtis-blow-f4zed7m53p.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.save-nyc-spaces-kurtis-blow-save-nyc-spaces-nyc-artist-coalition-ys4wajp",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-kurtis-blow-save-nyc-spaces-nyc-artist-coalition-ys4wajp.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.save-nyc-spaces-libertad-guerra-vexk7aqy6f",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-libertad-guerra-vexk7aqy6f.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.save-nyc-spaces-molly-cox-4gsglcwqxm",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-molly-cox-4gsglcwqxm.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.save-nyc-spaces-nikki-brown-h5pvobsrst",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-nikki-brown-h5pvobsrst.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.save-nyc-spaces-olympia-kazi-ocmu7cczmp",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-olympia-kazi-ocmu7cczmp.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.save-nyc-spaces-pooyan-aslani-jz7hlhlht5",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-pooyan-aslani-jz7hlhlht5.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.save-nyc-spaces-rachel-nelson-dtdfvedipb",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-rachel-nelson-dtdfvedipb.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-tnyszfjgnt",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-tnyszfjgnt.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.save-nyc-spaces-talks-not-raids-save-nyc-spaces-nyc-artist-coalition-44i",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-talks-not-raids-save-nyc-spaces-nyc-artist-coalition-44i.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.save-nyc-spaces-town-hall-09-1200-wj2m6brhky",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-town-hall-09-1200-wj2m6brhky.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.talks-not-raids-cabaretlawrepeal-crop-06-s3b2ct3iyp",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/talks-not-raids-cabaretlawrepeal-crop-06-s3b2ct3iyp.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.talks-not-raids-coalition-meeting-1080-02-ils7zj74e4",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/talks-not-raids-coalition-meeting-1080-02-ils7zj74e4.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.talks-not-raids-dianamora-35dytmtdrh",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/talks-not-raids-dianamora-35dytmtdrh.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.talks-not-raids-nolarodney-cd4wwi3is7",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/talks-not-raids-nolarodney-cd4wwi3is7.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.talks-not-raids-olmypiakazi-wtfysfwklh",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/talks-not-raids-olmypiakazi-wtfysfwklh.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.talks-not-raids-rachelnelson-vgunrdhlpm",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/talks-not-raids-rachelnelson-vgunrdhlpm.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.talks-not-raids-save-nyc-spaces-group-krobqbzklw",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/talks-not-raids-save-nyc-spaces-group-krobqbzklw.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-a7ura7t",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-a7ura7t.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-thumb-f",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-thumb-f.md",
+      "rightsState": "permission-needed",
+      "consentState": "review-needed",
+      "publicDisplayStatus": "hold"
+    },
+    {
+      "id": "asset.photo.project-site.talks-not-raids-stephenlevin-3lpdubkj6h",
+      "path": "docs/knowledge-bank/assets/photographs/project-sites/talks-not-raids-stephenlevin-3lpdubkj6h.md",
       "rightsState": "permission-needed",
       "consentState": "review-needed",
       "publicDisplayStatus": "hold"

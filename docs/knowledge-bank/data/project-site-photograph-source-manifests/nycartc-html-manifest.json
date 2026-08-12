@@ -1,0 +1,1081 @@
+{
+  "version": 1,
+  "generatedAt": "2026-07-28T11:38:12.185Z",
+  "sourceCdxSha256": "d5a8202f1a1deb7094649393421a8cc31669361bce42d6fba3988797f1fff20c",
+  "population": 119,
+  "recovered": 119,
+  "notRecovered": 0,
+  "pages": [
+    {
+      "timestamp": "20170706230851",
+      "original": "http://nycartc.com/",
+      "digest": "ATIUQYSGHIRHFEHTYIDEFGEC7KKOWLIA",
+      "archiveUrl": "https://web.archive.org/web/20170706230851id_/http://nycartc.com/",
+      "filename": "666ddebc1320883fe5b75f313527907d4032682e7266614f1f467e4b3a44829a.html",
+      "sha256": "023fd3cb45afa535a09c2738c7ecfbbe1d797efc0fba3243d0f0afc2d09ae08d",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250808084509",
+      "original": "https://nycartc.com/?ref=nodepression.org",
+      "digest": "VZOOCVJRKIH3ZN7QWGOTRGJLXQWJ6VJZ",
+      "archiveUrl": "https://web.archive.org/web/20250808084509id_/https://nycartc.com/?ref=nodepression.org",
+      "filename": "1bb9902a112e6784171ea22669170bc0145b0351ff3a2ccaadf8116faadd2464.html",
+      "sha256": "c276782fb42daf67cf497fab9a7dad28b8450cb2ffa0fa6e81f76bbaa536307d",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20220522135540",
+      "original": "https://nycartc.com:443/agenda-2-6-17/",
+      "digest": "LUIRWXGVXP53HVTLQ3FMNZAFMC7KTXAZ",
+      "archiveUrl": "https://web.archive.org/web/20220522135540id_/https://nycartc.com:443/agenda-2-6-17/",
+      "filename": "d4f1e48a29e511a9b425889b3daee28173d8b86f331334e83ddf3f2e68acf3b6.html",
+      "sha256": "b91a3726f9bbfed91de506e7d79d30a3621a87c9ffc896253dbd456e9bf3c70b",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20171015101601",
+      "original": "http://nycartc.com:80/apply-night-mayor/",
+      "digest": "7B6Y3L62C42WK45MZT6RMZIFMBOWTQUC",
+      "archiveUrl": "https://web.archive.org/web/20171015101601id_/http://nycartc.com:80/apply-night-mayor/",
+      "filename": "19f046ab42c94d713a58a948b1bf70f53a638d08c2e513081f3e52f99556ec4a.html",
+      "sha256": "f777414cfecda9aba8b7b8bc69929de03551cb88f1f6d9b9533807b8cb086067",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20180627030643",
+      "original": "http://nycartc.com:80/apply-night-mayor/amp/",
+      "digest": "O6GI7TY2WB5HAO2DZUGZ3LEF6FIJD4HN",
+      "archiveUrl": "https://web.archive.org/web/20180627030643id_/http://nycartc.com:80/apply-night-mayor/amp/",
+      "filename": "02354399afda3f956de6724a43999532c841b8f0383e44bef7461628539d5ce4.html",
+      "sha256": "df7567e17003bdd947f11c2e8dc149cd637c61fac900de3ef1c5d4a4953373c2",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20170909141050",
+      "original": "http://nycartc.com:80/author/nyc-artist-coalition/",
+      "digest": "K2OPLCUWBU4QDIRYPHMNLJ5E3U4IOCSF",
+      "archiveUrl": "https://web.archive.org/web/20170909141050id_/http://nycartc.com:80/author/nyc-artist-coalition/",
+      "filename": "0bacdbe292d974143db42f4ddf904d0f1cf2bd922910963498c0aff9a3bff17c.html",
+      "sha256": "020573ad68eff8d8bcaf1d75ad3c539c71e1f57c9c9b060640c6b916b93e9e34",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20181006134112",
+      "original": "http://nycartc.com/author/nyc-artist-coalition/page/2/",
+      "digest": "3MOBSXJRMV73DOQDX4OFMC7LMABMG7PL",
+      "archiveUrl": "https://web.archive.org/web/20181006134112id_/http://nycartc.com/author/nyc-artist-coalition/page/2/",
+      "filename": "302d4277f3201af1fd392ce57c61d7f10627b3ba19bf188e600e20de148094d7.html",
+      "sha256": "5ec0876137ba534fe87f491a62796f3ea51636bb4d62a5af07718c38f5bd9f91",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20190818201622",
+      "original": "http://nycartc.com/author/nyc-artist-coalition/page/3/",
+      "digest": "CBV7JDOYVJGIIWQM5T2NJNNZJJOCH2PD",
+      "archiveUrl": "https://web.archive.org/web/20190818201622id_/http://nycartc.com/author/nyc-artist-coalition/page/3/",
+      "filename": "b8d6f288256cb4db8f18962375931e0d7c0d529a75939c8ad8e88ff556ca46cf.html",
+      "sha256": "422f7e89995223158f87c1e111ae6228d1c7ac304046de5aa9ef1fd46508c3e6",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20210618212310",
+      "original": "https://nycartc.com/c2c-owc/",
+      "digest": "6QOFC22V6H25DD4US4JFWRPBENNR3J25",
+      "archiveUrl": "https://web.archive.org/web/20210618212310id_/https://nycartc.com/c2c-owc/",
+      "filename": "b4fb400520dfd31a1590cfff628c72f211e242a05f9fff250b4e57b51ad96dd5.html",
+      "sha256": "c9ffa5ce53dca1b08ac6e5820c3c7e11cb554eddcbb6239f1794f1fe782b882a",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20170430024714",
+      "original": "http://nycartc.com:80/cabaret/",
+      "digest": "MUOLQDH2SCDNYKFGDRK6LCTGRQRM2RNS",
+      "archiveUrl": "https://web.archive.org/web/20170430024714id_/http://nycartc.com:80/cabaret/",
+      "filename": "ff274db8f56ee9b7abc70c02f45537380226d626a5475d6f6c0ae738a83a66ec.html",
+      "sha256": "58284caffd13449e427ef976ccec4fd197598589f566d26722c13136f2f1e7b0",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20180913125508",
+      "original": "http://nycartc.com/cabaret/amp/",
+      "digest": "NWL5SHEGO4AHQM7O4CWWBR7XP27EGTPY",
+      "archiveUrl": "https://web.archive.org/web/20180913125508id_/http://nycartc.com/cabaret/amp/",
+      "filename": "f5e55c4ad25e4e051b5266b41cb9c34200d8963a12d8db5b856fb45ee4caf44c.html",
+      "sha256": "a1d45d76a502d03fc7aab5242407f845d84315a14850d86df5038248ef929fcb",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20170909170150",
+      "original": "http://nycartc.com:80/calendar/",
+      "digest": "JHPJLK6LTNVK6NBCNO4F24MSMRHZJMCU",
+      "archiveUrl": "https://web.archive.org/web/20170909170150id_/http://nycartc.com:80/calendar/",
+      "filename": "c377976d3dda43fd239a6a2e4ba9fe9448eb75caebdef8c2d5ede30de06e7672.html",
+      "sha256": "4061957f852392a3614e4f3614a32be513b3599c0c47138096f35a336c400ed5",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20170909170156",
+      "original": "http://nycartc.com:80/closed/",
+      "digest": "GM6DHX2JTDGA2UF4BXI4YQE6I7GAPKTH",
+      "archiveUrl": "https://web.archive.org/web/20170909170156id_/http://nycartc.com:80/closed/",
+      "filename": "24a48d30490a9d1495bfc197e4edc1f419957598f5ab6d83592096b91707b5bb.html",
+      "sha256": "bb9a7937aa27cf03e0018156a11ee3aed729adb53f159cd650bd53543145577c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20170608220752",
+      "original": "http://nycartc.com:80/contact/",
+      "digest": "EXHKFNKRIFWQXPAGI5DEZQA63KLAMK6R",
+      "archiveUrl": "https://web.archive.org/web/20170608220752id_/http://nycartc.com:80/contact/",
+      "filename": "85834a7df551f4c9d85e9783f75bdc969019578a5c61091714e5f3babb88d533.html",
+      "sha256": "baebebde080f50c3e2beb5f58ec5cba6f532956403624d879ed4092a30748c9a",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20171016112250",
+      "original": "http://nycartc.com:80/contact/amp/",
+      "digest": "VKYVSQEEI7EZPBET2UKHNQWFB4YKUUHO",
+      "archiveUrl": "https://web.archive.org/web/20171016112250id_/http://nycartc.com:80/contact/amp/",
+      "filename": "d97ea84093f91197098bf16954c82d5fc93297ab5505ece2ea4dc4bcdca68cec.html",
+      "sha256": "72cc0c26f02a274571f6b3aaa3b5433d32f0851f87df081907b597be1b1c70e5",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20200421223902",
+      "original": "http://nycartc.com/covid19-relief/",
+      "digest": "LGJI2CIUWSG72NGIPDFYNUUNFIEIIM5F",
+      "archiveUrl": "https://web.archive.org/web/20200421223902id_/http://nycartc.com/covid19-relief/",
+      "filename": "1e251fab114417641bfe8fd8fe0e15c29565f5dec67b5f0f9ec45dce0860b297.html",
+      "sha256": "02df3742dfdfec7a6b0e163ce15653b466932140bc4ddf13b1764235075275c0",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20200501214559",
+      "original": "http://nycartc.com/covid19-relief/amp/",
+      "digest": "TLS5LAIUDD27Q3XEYQQNOA2MP3HVLVU3",
+      "archiveUrl": "https://web.archive.org/web/20200501214559id_/http://nycartc.com/covid19-relief/amp/",
+      "filename": "16b20c5b09783d7e6ae1e3f12822f2510a7c4965491556cff6e9ac6888ab9c9c.html",
+      "sha256": "8c4c812ba47eeb0c4d87c3c3c6c14ce6a38e7cd4f6075ff8f5436f48e119af38",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20230923220412",
+      "original": "https://nycartc.com/covid19-relief/?utm_source=NYC+Artist+Coalition&utm_campaign=33184cbada-EMAIL_CAMPAIGN_2019_02_06_04_59_COPY_09&utm_medium=email&utm_term=0_628c56d813-33184cbada-72502449",
+      "digest": "CKW55WHBTROYEFDCGZ2ERBA3PKPSKV3I",
+      "archiveUrl": "https://web.archive.org/web/20230923220412id_/https://nycartc.com/covid19-relief/?utm_source=NYC+Artist+Coalition&utm_campaign=33184cbada-EMAIL_CAMPAIGN_2019_02_06_04_59_COPY_09&utm_medium=email&utm_term=0_628c56d813-33184cbada-72502449",
+      "filename": "8b10f645a39349702a460d6c5e3afebe49bde109a5f4a08bc8d550a636b7a359.html",
+      "sha256": "aabf92266811920a4330c366b99b59fd176f32c64523b0b29bd2136d4560b4e0",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20210511032000",
+      "original": "https://nycartc.com/dcla-meeting/",
+      "digest": "QS2VAL267XQYRGAW3HGFYQEUWBHDNPHY",
+      "archiveUrl": "https://web.archive.org/web/20210511032000id_/https://nycartc.com/dcla-meeting/",
+      "filename": "bf279022b15ef16dcd6dac422e71fad53c72494a6b471de0cf79eefa6f833485.html",
+      "sha256": "076f330af53d18e057aecf879d32dd005daeb2c4ff74e0bf23bfa134580502bb",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20170909170051",
+      "original": "http://nycartc.com:80/documents/",
+      "digest": "V6YLMZMUPCUXOIXRTACW3IILUI2KJU5V",
+      "archiveUrl": "https://web.archive.org/web/20170909170051id_/http://nycartc.com:80/documents/",
+      "filename": "e7d8ce53d9c5a3e901897804ed075eceff651a68c73c7d46c990abd4cf6858fb.html",
+      "sha256": "18ffa247dae959db427ec71ea8c99bfd090389839930ec799f07bb7cdb4c0a66",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20181005172930",
+      "original": "http://nycartc.com/documents/amp/",
+      "digest": "RWSZKUUGJPHXETVM42A4K2AUOUT45YAD",
+      "archiveUrl": "https://web.archive.org/web/20181005172930id_/http://nycartc.com/documents/amp/",
+      "filename": "923c16fee7cd28efa7b055820b842ca6d46b5726b1d8d869086244d208dd10cc.html",
+      "sha256": "328f0950bdd0ff62e642e3c51c419903e8af2aea34bde5ed6fb2d49814bfb12b",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20190717070245",
+      "original": "http://www.nycartc.com/fairrentnyc/",
+      "digest": "JJ4VRGNMV7VCCK27MZ7V6LE542JRD56B",
+      "archiveUrl": "https://web.archive.org/web/20190717070245id_/http://www.nycartc.com/fairrentnyc/",
+      "filename": "063c19fa1b9f31a566e0a336261fe2338655d6b49835654fcfcd5229e452d233.html",
+      "sha256": "777ca98b0bc13bd3b4f8838b922695c5f90395d5f7adad0eb1fe6fd0be149fc3",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20200506200727",
+      "original": "http://nycartc.com/fairrentnyc/amp/",
+      "digest": "G4743RL2TSNNHSRTEGJHI76RCX7UKKTA",
+      "archiveUrl": "https://web.archive.org/web/20200506200727id_/http://nycartc.com/fairrentnyc/amp/",
+      "filename": "5782c56ee3628273fa22f33f61d6deda7c19002f61bc2968bdb9a6f431262632.html",
+      "sha256": "b014bacbb2d50cbde4552208756d8200cca933e5787bf951dd95e80b39ad235e",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20220522145720",
+      "original": "https://nycartc.com:443/footloose-for-real/",
+      "digest": "DGZJTR47QRBOHNKP76U45NMGP2HHPRIX",
+      "archiveUrl": "https://web.archive.org/web/20220522145720id_/https://nycartc.com:443/footloose-for-real/",
+      "filename": "0d1b289272a84b624b2b63607adb62627771c2f50850f08218e371372e28b790.html",
+      "sha256": "bd0445fb04a642e72da21e1b20f5cc6f7efde85da5328b39502aeb3bbc487d82",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20221024023436",
+      "original": "https://nycartc.com/ghost/",
+      "digest": "PEYR5C76G5GT6JJKCBQPLRI2B7HMF2W5",
+      "archiveUrl": "https://web.archive.org/web/20221024023436id_/https://nycartc.com/ghost/",
+      "filename": "8abc0a077a4c7263c8f96fe3ce2ba52c1c1d52d3af982777a4129599f3a18bce.html",
+      "sha256": "67c623bd5243138714d2eb7cf28e841f8961ecd19178efad3eec0d696488ab78",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20170708233755",
+      "original": "http://nycartc.com/join/",
+      "digest": "WIC4XHNLWAX7GKNMIPJE3ZN4ZBJNC4GE",
+      "archiveUrl": "https://web.archive.org/web/20170708233755id_/http://nycartc.com/join/",
+      "filename": "95ecf1f1eb363f8533e2f2ea4dfe68f306cf2a39a2f2a73f5f311e9b43566be4.html",
+      "sha256": "da0a4cd5d6258c7b741a5d1c4e63c44a1d1de026c258517c3113dacb91bc0ffb",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20170908005917",
+      "original": "http://nycartc.com:80/kevinbacon/",
+      "digest": "STEMPX4MA23VN42CQC7OOKBQ2DX4YFN2",
+      "archiveUrl": "https://web.archive.org/web/20170908005917id_/http://nycartc.com:80/kevinbacon/",
+      "filename": "0a51618b249a764f019b6ffebcf09bc7e2e345f5425a1823fece35677c27d109.html",
+      "sha256": "15f4364f0e2271520add9e6ea0348815b8845bc4d6055d91349a8262c3dbbc32",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20170909221727",
+      "original": "http://nycartc.com:80/kevinbacon/amp/",
+      "digest": "2UHJPL55PQH44WEG5QVU5R55PZRWOWRC",
+      "archiveUrl": "https://web.archive.org/web/20170909221727id_/http://nycartc.com:80/kevinbacon/amp/",
+      "filename": "12f6bc3fed76d3e467d246d6307f28cb912e31ef26241cb40df97662bfbc97b2.html",
+      "sha256": "b690c2cef9a47c33b41735850616583372f46d46e60ba09b11d42f9f20dac336",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20170912055512",
+      "original": "http://nycartc.com:80/letnycdance/",
+      "digest": "ZCKEPOTRQWOLYIQFURMGVZ5PSCZMEWHK",
+      "archiveUrl": "https://web.archive.org/web/20170912055512id_/http://nycartc.com:80/letnycdance/",
+      "filename": "6b311ecc4d0eb72eae1ddb419087f74fc6e98ce97b2dc536dfec186cc044965c.html",
+      "sha256": "c60c1ff5776b2466c7ff0e91525e773dda54744016df7c111cca688edb382f55",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20190703152942",
+      "original": "http://nycartc.com/letnycdance-guide/",
+      "digest": "6JP5YHWM3ILFKFTUVCF6JYQNC62ICNXD",
+      "archiveUrl": "https://web.archive.org/web/20190703152942id_/http://nycartc.com/letnycdance-guide/",
+      "filename": "2bc0df43d9ad5a0343a654a4593410c016ff7accdcd8dde7d72d2a6df7090624.html",
+      "sha256": "92592356ab13e35754c17cb85d6ed5dd86b53760dca85135ae3e5f95ad3c44d4",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20190808040149",
+      "original": "http://nycartc.com/letnycdance-guide/amp/",
+      "digest": "O5Z4EW24K6GIFYLIODJLNN2DFYPFHOHR",
+      "archiveUrl": "https://web.archive.org/web/20190808040149id_/http://nycartc.com/letnycdance-guide/amp/",
+      "filename": "aaf5a2a92929b300c3c76d9ef7b06f2f5d42849cf2a837287ff64c6722057d96.html",
+      "sha256": "8081d99188ff3b33e9342b6668af17dcd954f9570b1e4840ebf04c7e5307e3ef",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20180425042449",
+      "original": "http://nycartc.com:80/letnycdance/amp/",
+      "digest": "7OVRLMXRIKP3LBH7A4HGQ3WFZGWZSRME",
+      "archiveUrl": "https://web.archive.org/web/20180425042449id_/http://nycartc.com:80/letnycdance/amp/",
+      "filename": "ac544a1dff49ddef0defeea5eccc8d4721e7ee5321bc2d8516c82d3cd1ecdee0.html",
+      "sha256": "74997820f30b7c57d9cb0945479560a773d0754c635b65207f67409fcd4abc39",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20170624100411",
+      "original": "http://nycartc.com:80/letter-espinal/",
+      "digest": "LNXBEIJI5SMHGC62XGZ33VYOSFJCUGCI",
+      "archiveUrl": "https://web.archive.org/web/20170624100411id_/http://nycartc.com:80/letter-espinal/",
+      "filename": "56446394637f4176d3b28bbcd5bacddcb56aad768133fce2427ea6354a4a1bfd.html",
+      "sha256": "58f26e9210c8fa26a206a1c5b0e89d433b96544df3d148e8c8eda7ff8f23989e",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20171030135706",
+      "original": "http://nycartc.com/letter-espinal/amp/",
+      "digest": "ONAF6IHO7RLVHGRJ63KRRTC5XPRJK54U",
+      "archiveUrl": "https://web.archive.org/web/20171030135706id_/http://nycartc.com/letter-espinal/amp/",
+      "filename": "811936f18e5248c39d81b96e0093277f74e6ebfb8e92915589c008941a8e2866.html",
+      "sha256": "a9345e254142db7ba054a82f3004a4bde1f985f951614ada8516a070cdc165d8",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20200427103336",
+      "original": "http://nycartc.com/march/",
+      "digest": "2POWMP6PH25BPK233THT6TC3V7AAQBSI",
+      "archiveUrl": "https://web.archive.org/web/20200427103336id_/http://nycartc.com/march/",
+      "filename": "57e389b3f70d3b2b7d7b593c2e26997b1b7a7609b8f421e6cda7d0cd7c201520.html",
+      "sha256": "c318393aa3f3acd9835ab85a80109e105b5736553c61cc46fd3cef808aff17f3",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20190718084058",
+      "original": "http://nycartc.com/march-general-mtg/",
+      "digest": "VXF3CPWWPLUHTZP7WR2OUBHDM45CGBBA",
+      "archiveUrl": "https://web.archive.org/web/20190718084058id_/http://nycartc.com/march-general-mtg/",
+      "filename": "cd9d81451991bd56e7383849dcb59abed1b826283ec1c49cab8e6bf8a63d8ed6.html",
+      "sha256": "a615e5c189ca3a875d2b7c0450239ceed0119ccd514003de0c77b326f029495d",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20191018211533",
+      "original": "http://nycartc.com/march-general-mtg/amp/",
+      "digest": "X2VF3JZFCIY2RCMRLR73IYMREK3IS2Z5",
+      "archiveUrl": "https://web.archive.org/web/20191018211533id_/http://nycartc.com/march-general-mtg/amp/",
+      "filename": "b1f77f6ed9567f84eeb9e09ae2de0dc72155f31c94fcb917b1308d0949d502ac.html",
+      "sha256": "b1de45d8d7b51354a9e4acb137aeb35482b09f4e92010484c9ff1d596ae9048a",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20200507003608",
+      "original": "http://nycartc.com/march/amp/",
+      "digest": "X65WMON6P3NQ22BLW4HT7MTEWXOO7UHE",
+      "archiveUrl": "https://web.archive.org/web/20200507003608id_/http://nycartc.com/march/amp/",
+      "filename": "beb802a9e66b39811a3fa5055fcc6bc38daf5ed2dd54e596bd74cfa262da8d6b.html",
+      "sha256": "2752e47d1624b1bda54cbaf23cdd0460b3707028792d575085f06243e73ff3c7",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20171015101617",
+      "original": "http://nycartc.com:80/night-mayor-town-hall-digiguide/",
+      "digest": "TIJTSKHNCSZRVAWUB23RRSOHAWL25SUV",
+      "archiveUrl": "https://web.archive.org/web/20171015101617id_/http://nycartc.com:80/night-mayor-town-hall-digiguide/",
+      "filename": "4c0f7bfa40dd05c12f3991b68d104c23a820683574a7283627302e8fa0c7481c.html",
+      "sha256": "86d7eb8fa863ca751388c29c175a9a2ecf8b3e1739bf8b35dd3eaab7ec9113cf",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20171015101624",
+      "original": "http://nycartc.com:80/nightmayor/",
+      "digest": "MFT5MXRRUXZOL35OKTQFTZCXXM67GGKY",
+      "archiveUrl": "https://web.archive.org/web/20171015101624id_/http://nycartc.com:80/nightmayor/",
+      "filename": "087b6583099e6004e74438f9709663a9bdfdc2d891c26dd58b669dd4f91234d2.html",
+      "sha256": "0e45c4b405cec8e7fc3c44dc1c017da77781c63406e0688d88fa5411662387e1",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20170912055550",
+      "original": "http://nycartc.com:80/nightmayor-cmt/",
+      "digest": "SY46DIXD4ZQ2KTLKUTVKR7UJIATBFUKH",
+      "archiveUrl": "https://web.archive.org/web/20170912055550id_/http://nycartc.com:80/nightmayor-cmt/",
+      "filename": "a0f6dcca4b5e6bab04c1d884aba75e446d406d98445345b6c45c284efa827082.html",
+      "sha256": "593cce75bf7bb236afa7ea9973e4068efff0c547ee1da95ed4b66479e3bb12af",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20190815134958",
+      "original": "http://nycartc.com/nightmayor-cmt/amp/",
+      "digest": "VAQTUZQFN6MI3RKDV5B3IN7BBTM6C7BH",
+      "archiveUrl": "https://web.archive.org/web/20190815134958id_/http://nycartc.com/nightmayor-cmt/amp/",
+      "filename": "1b9ff94da9a54ab848c0638ebb431e00fd5d20ecee0ebb2e7b709054388e3471.html",
+      "sha256": "cf099218151b2d950bbab3013d293a051d3512a2824efa3f8d3ffd93a16de1ec",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20181005084249",
+      "original": "http://nycartc.com/nightmayor/amp/",
+      "digest": "A5KFGESUQN6C67PPZYP7TIZI3IZGGKIS",
+      "archiveUrl": "https://web.archive.org/web/20181005084249id_/http://nycartc.com/nightmayor/amp/",
+      "filename": "52a2bc282110d37d16855837ed8e71826763c71ededa3ba1a1856186965bfccc.html",
+      "sha256": "a867c2e2cd4cb08f5479a619e33c6edcc60b27b3644f03d72689d38843dc6b2e",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20171015101612",
+      "original": "http://nycartc.com:80/nyc-artist-coalition-repeal-the-cabaret-law-bill-1652-testimony/",
+      "digest": "DUX66L3EZYGBVY5NGGU7L6KOLSPHDVYP",
+      "archiveUrl": "https://web.archive.org/web/20171015101612id_/http://nycartc.com:80/nyc-artist-coalition-repeal-the-cabaret-law-bill-1652-testimony/",
+      "filename": "e8c73005b81b88c373538c2e61e2a8e3039a01e71100918044e2351b03472f41.html",
+      "sha256": "dc067644f24895b05f502d90d764b66e04b188943f6d67f633aa2abca811f033",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20181005102434",
+      "original": "http://nycartc.com/nyc-artist-coalition-repeal-the-cabaret-law-bill-1652-testimony/amp/",
+      "digest": "FSGKD6S5XRFMH4224M67CNDKKWAQJ3PW",
+      "archiveUrl": "https://web.archive.org/web/20181005102434id_/http://nycartc.com/nyc-artist-coalition-repeal-the-cabaret-law-bill-1652-testimony/amp/",
+      "filename": "74affbd369cdff0963b925ca029395089d397023ea206582d01d2e5ffd6afa12.html",
+      "sha256": "8e87495b3bfefa6eb31b649f7f7ff9f5578fe730c37e9764f859012653195a95",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20190217062420",
+      "original": "http://nycartc.com:80/nycdca/",
+      "digest": "L34LZ7YCFXDSJAJUK6RLBGEHN3GXIJMY",
+      "archiveUrl": "https://web.archive.org/web/20190217062420id_/http://nycartc.com:80/nycdca/",
+      "filename": "627963129811ed57b534f4e2fad3e43b071fb8734f3df0872056158edd41ad07.html",
+      "sha256": "cf8173578d73304fabc05457ff8a05f8fd6de655e425d4992de87c0d60be4f67",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20190218233816",
+      "original": "http://nycartc.com:80/nycdca/amp/",
+      "digest": "HZHVCVSFR2T24WQTCXVO2TS2VDMES4WR",
+      "archiveUrl": "https://web.archive.org/web/20190218233816id_/http://nycartc.com:80/nycdca/amp/",
+      "filename": "649b99c598a3013e57c23196d0dac9c5036021d3c3eaa3c2a6fff9bca217098a.html",
+      "sha256": "fd927fc347889b7bf6ea99e3fc93d59460c56fb9c711cf816da41914aae76366",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20190718061743",
+      "original": "http://nycartc.com/nycdcla/",
+      "digest": "PMDSCYGFVGFV5KBLHHC7VHXJI5ANG5QG",
+      "archiveUrl": "https://web.archive.org/web/20190718061743id_/http://nycartc.com/nycdcla/",
+      "filename": "d6b4f7c683570b22df18b8630686a9b53fbae98ee517d0a22af165e100f2f9e1.html",
+      "sha256": "3c5dc0b426d69ed62f116385b703005ea553e4bc7c5db4a1be699bd969bf7875",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20171018173931",
+      "original": "http://nycartc.com/page/2/",
+      "digest": "DJRXJM3SR4LN2A53DFIGU4CNB6CGBIE2",
+      "archiveUrl": "https://web.archive.org/web/20171018173931id_/http://nycartc.com/page/2/",
+      "filename": "4ab4241a6032698039816f8ee39c93dc303355e4cfea4ad61a5c07ab8214951f.html",
+      "sha256": "236836ce96ddaf8ee923b15035c98aa48aba993c1dbffd7a491aa9e029a7ff24",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20171030125947",
+      "original": "http://nycartc.com/page/3/",
+      "digest": "AFEBSVGE3V7NPLBD7PGLSLHK66FWQWHG",
+      "archiveUrl": "https://web.archive.org/web/20171030125947id_/http://nycartc.com/page/3/",
+      "filename": "b8831a0a54bb4d9a6b11f07f7e9628814f8e8bca3148a32b708996c23728287d.html",
+      "sha256": "a450fcbb44df4469648866e922307b4cd813bf3b91f04b58d8d1e2859c812153",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20171104131930",
+      "original": "http://nycartc.com/page/4/",
+      "digest": "VASUNWSUBPLJRYLVAC5SEI5OO5GT64VC",
+      "archiveUrl": "https://web.archive.org/web/20171104131930id_/http://nycartc.com/page/4/",
+      "filename": "49959f5ef67d3a6c02c2e0e2e75553a094131477161c4ae5d4ade1ee05092dca.html",
+      "sha256": "a2472b3c5e88a65abd5ab56736d4ddf24221d50166b87b4bee51e0ec29527c2d",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20190730065051",
+      "original": "http://nycartc.com/page/5/",
+      "digest": "P5GCLXRBQLNL3KLOMP3EYDBWOP5T5FGN",
+      "archiveUrl": "https://web.archive.org/web/20190730065051id_/http://nycartc.com/page/5/",
+      "filename": "199cd01b54d5f99a6883c5acc21acf9dc5a4ce126100e0f7d7dde5238ebb6707.html",
+      "sha256": "8d61577fffbfb5f6044c61a2fcfa993d61225b4f8d8032f8fa6de9c8b9accea2",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20190218233829",
+      "original": "http://nycartc.com:80/path-to-be-legal/",
+      "digest": "ANZWBMR25ETRNZNSIXOOHGELB7UH4UPW",
+      "archiveUrl": "https://web.archive.org/web/20190218233829id_/http://nycartc.com:80/path-to-be-legal/",
+      "filename": "45a8b41556478951a3ce05bbe27829a3b6142cadebe26c96d2d4ee473460528d.html",
+      "sha256": "6c911d06de8ada4f97bce5ecc3fdd647497a2633a57ee390d37cbf3f769a40ae",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20170909170718",
+      "original": "http://nycartc.com:80/preserve-communitydriven/",
+      "digest": "TPPBFD66ENPCB6SEY7KUKP67T7CWKHBL",
+      "archiveUrl": "https://web.archive.org/web/20170909170718id_/http://nycartc.com:80/preserve-communitydriven/",
+      "filename": "4f8b9ee442c4ea7a7291c227ce5c538cad7df67cbb8b9c0247b97b3a34a85cfd.html",
+      "sha256": "d686512f7d6429a48092a3a1570807ee28af9c80fc5922efcb37f7ebbce917dd",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20170909170723",
+      "original": "http://nycartc.com:80/press/",
+      "digest": "CB5SHDJLKOL2GP2FIQUIVLNVJAJXUCW3",
+      "archiveUrl": "https://web.archive.org/web/20170909170723id_/http://nycartc.com:80/press/",
+      "filename": "b066e96ee2748aab89bfb6e629a2601f82f8a37e7c78bb01b5f65d204042e9ad.html",
+      "sha256": "695e8129f2647c280c205d97195890b3a98d79e9c4032e8266390f4af869c02b",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20180425023641",
+      "original": "http://nycartc.com:80/priorities/",
+      "digest": "326V44EAXTSUC2JYO4ASINJ2RMCYNK57",
+      "archiveUrl": "https://web.archive.org/web/20180425023641id_/http://nycartc.com:80/priorities/",
+      "filename": "a817ed003528dccb68400bc933f18f50bb68394782f683cd050f0615f3412c47.html",
+      "sha256": "dbf23e247d3a1b671c9c03a44e68174e3905660b9bdf170bf14bdf0dcac370d1",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20181005071624",
+      "original": "http://nycartc.com/priorities/amp/",
+      "digest": "GTSKQER5XAGAPQIW5A7WTINM7UUOYSFX",
+      "archiveUrl": "https://web.archive.org/web/20181005071624id_/http://nycartc.com/priorities/amp/",
+      "filename": "860f3a66980be8d17c35a9d84ec2338a4c69c76c46dd075b8099bc127d85446c.html",
+      "sha256": "d7bbd9b7d901d5905b314d8ab61ed89f17909179e350d5924029a7f342904df6",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20171015101709",
+      "original": "http://nycartc.com:80/repeal-the-cabaret-law-now-city-hall-hearing/",
+      "digest": "EH2HXCWM7FBVNKLJXTWFVOPIHZDZADZI",
+      "archiveUrl": "https://web.archive.org/web/20171015101709id_/http://nycartc.com:80/repeal-the-cabaret-law-now-city-hall-hearing/",
+      "filename": "47fc4ff0b3bb55cabd40c9c0a2bdf684584f02bb6e6ee4cef0b30dc439a48efa.html",
+      "sha256": "ee88d5ca2141e2d4bcb71dabc20cf1157aeb14915546c287ef6a8ba5369d6a24",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20191018030339",
+      "original": "http://nycartc.com/repeal-the-cabaret-law-now-city-hall-hearing/amp/",
+      "digest": "5TVU23222MKMJ2WTW2YZWAAG4F4MY2FV",
+      "archiveUrl": "https://web.archive.org/web/20191018030339id_/http://nycartc.com/repeal-the-cabaret-law-now-city-hall-hearing/amp/",
+      "filename": "f4d4701dce0f38de2d730f8b85ead6c4d632ea5b5e5ff096aea69008fc1fb56b.html",
+      "sha256": "d358d4fa043840e4fe3ad70bf30f68f0e919bb7af881ba650bb19da885d5915b",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20170909170106",
+      "original": "http://nycartc.com:80/safety/",
+      "digest": "GGFCB2BQOZL5UBHWR2KKRSC5YVWTYWUZ",
+      "archiveUrl": "https://web.archive.org/web/20170909170106id_/http://nycartc.com:80/safety/",
+      "filename": "6db76aa35b4472728b73bd94e5c0809a4a669e48a359a0b44c225bf743a338d8.html",
+      "sha256": "45e5128fc47a45ea3aa2c38c823a7cb63ff16549b19295a1f154bc3b4cc55c9b",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20181005053108",
+      "original": "http://nycartc.com/safety/amp/",
+      "digest": "UNB7KZ7WO2JXODYOZHFNAG7SY5WWBM3P",
+      "archiveUrl": "https://web.archive.org/web/20181005053108id_/http://nycartc.com/safety/amp/",
+      "filename": "91b80a81cb4119c2abde0a4bfb5aa776660e30b2a807554ba0a3c7d37ec931e4.html",
+      "sha256": "a9bc18a0e0624b4e1f6cb8b6fca873c998709cec7cbcbcebd81ceb6ea0d248ca",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20200427103958",
+      "original": "http://nycartc.com/sbjsa/",
+      "digest": "3VTZ3T5NP7PHX43Q53HXZQLZZY5LMT6C",
+      "archiveUrl": "https://web.archive.org/web/20200427103958id_/http://nycartc.com/sbjsa/",
+      "filename": "7ab4b89824a4093737a62457874b000cb2029248ff94ac69b46fc78e1bd77b1a.html",
+      "sha256": "7168c1b6a82131c7e32445f3272aa9824425cfb5e9ea352d4ecc1209b4e204da",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20200506170126",
+      "original": "http://nycartc.com/sbjsa/amp/",
+      "digest": "ZTR6BA34F67HVOF5VU35KLROHVP5KWOC",
+      "archiveUrl": "https://web.archive.org/web/20200506170126id_/http://nycartc.com/sbjsa/amp/",
+      "filename": "743e0e399fe4db91de6b8ff12f8fccaaa4d336ea93af3efc6a7c0b6165d80a05.html",
+      "sha256": "d6dbc75ea3a4a3321029118ccb95fdf266c087cdeb4fce519a5585de0791e754",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20190606005633",
+      "original": "http://nycartc.com/speakout/",
+      "digest": "LCXNUM5HH4RLKSAAQX3MZQ7CGIQ6L7LM",
+      "archiveUrl": "https://web.archive.org/web/20190606005633id_/http://nycartc.com/speakout/",
+      "filename": "8138d5386cdb423267c99bbdb8cd197721498f0c543d40bb52ffc64c6f14a10c.html",
+      "sha256": "2e88ddf52ee9a13636b41a0d5a34630a2eb3937f5903a529ece9df19c931e3be",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174300",
+      "original": "https://nycartc.com/speakout/?utm_%E2%80%A6",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174300id_/https://nycartc.com/speakout/?utm_%E2%80%A6",
+      "filename": "ac2459bf19e069e0a19892d88255bc690774f692ee57b68dfeb1279e4c54f277.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174249",
+      "original": "https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_%E2%80%A6",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174249id_/https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_%E2%80%A6",
+      "filename": "46bfe881fd9c8e668da3f66b65a58650e7d121d5456cd64ab52223651e2a2c41.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174225",
+      "original": "https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A6",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174225id_/https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A6",
+      "filename": "18821494d9f4266f9018ad887938f4b149686a64a3586b2effa6a09f6c97509c.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174514",
+      "original": "https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A61/10",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174514id_/https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A61/10",
+      "filename": "f55ca91a8e747d0378e428db3e61733bb354bb540c9baae38d2b0a3adc046739.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174235",
+      "original": "https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A61/10MENU",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174235id_/https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A61/10MENU",
+      "filename": "2350b0ce886243f0a93ebb0f9ee5e41b893c31d02bd8329aaba1e8c8cc852b2c.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174214",
+      "original": "https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A62/10",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174214id_/https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A62/10",
+      "filename": "d9664b5ff667101aa543956ff897d4bb8ed7e700abd02e0f31220ffabb9f2480.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174249",
+      "original": "https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A62/10Show",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174249id_/https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A62/10Show",
+      "filename": "740f09fcc96d3f36885529c97836b7fd4d86799f176198a7a139d622c145ac2d.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174426",
+      "original": "https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A63/10",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174426id_/https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A63/10",
+      "filename": "f8f5708e28227fcf6cf4e271b2712c41fc58fb0292d84526a831a637e56fc8f2.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174349",
+      "original": "https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A63/10Show",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174349id_/https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A63/10Show",
+      "filename": "00d4d93f4d2428d0c253b0366c4286a3d581be6f428e916d5dbd9aa55c381c12.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174538",
+      "original": "https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A64/10",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174538id_/https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A64/10",
+      "filename": "ea8bfcedb9e3b29fe8252d6a55dd4dcd7b61c4abf55cb9c7625487bb20c05d37.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174322",
+      "original": "https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A64/10All",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174322id_/https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A64/10All",
+      "filename": "cfa31eb8cae194cd53e728f583a3d357930ce5e3c0b6ebf73bc2af330d5dcf85.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174237",
+      "original": "https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A65/10",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174237id_/https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A65/10",
+      "filename": "96d58d930621ef24a4573e5b840c9370d5ddd32591e376348a42fe032e0cbe55.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174046",
+      "original": "https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A65/10twitter:",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174046id_/https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A65/10twitter:",
+      "filename": "6f5358df6d21f5cf56c27fbb0e1d1ba913796659221abb3807eb5b3aae4f7787.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174213",
+      "original": "https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A66/10",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174213id_/https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A66/10",
+      "filename": "dbae1ae9087e29c6dcdce297c3735dbabc5fda031a40501f552b44dc586b450b.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174355",
+      "original": "https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A66/10In",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174355id_/https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A66/10In",
+      "filename": "08e77187723ffbf128d0f6848502eb0f9a1dc5014ab2f443ad643704d3857484.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174257",
+      "original": "https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A67/10",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174257id_/https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A67/10",
+      "filename": "11db8475587684096cea57e7cba6b6633ddce5438fee3166833ae271372ee0fe.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174213",
+      "original": "https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A67/10manner",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174213id_/https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A67/10manner",
+      "filename": "b5fb7a7ff4570aafcef289670d96fc9691a464e50eb18b316a50132b166760af.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174559",
+      "original": "https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A68/10",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174559id_/https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A68/10",
+      "filename": "076e9d12a80f7101dca5aa0eebb8492c1a03774ef4eac0855ceaa922463b67ee.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174243",
+      "original": "https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A68/101",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174243id_/https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A68/101",
+      "filename": "7391c46430a544087e8c01566a5c484df552a6d42dcebfdb10138068cdfa41de.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174301",
+      "original": "https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A69/10",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174301id_/https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A69/10",
+      "filename": "454b3017222be31aff6d2fc0ae4ed7a128e050f3722490f966e30eeb2fdd5fe4.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174214",
+      "original": "https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A69/10Read",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174214id_/https://nycartc.com/speakout/?utm_source=NYC+Artist+Coalition&utm_campaign=05f18b45e2%C2%ADEMAIL_CAMPAIGN_2017_02_02&utm_medium=email&utm_t%E2%80%A69/10Read",
+      "filename": "018e2366bef7c2b97f1b2f693b5037c29c3ea90e4e355f4cd3d5c86882270813.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174744",
+      "original": "https://nycartc.com/speakout/?utm_t%E2%80%A6",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174744id_/https://nycartc.com/speakout/?utm_t%E2%80%A6",
+      "filename": "3eb2c383c213610792cc84e134251723232c50cb3cb4a1e49b56d4d89384798e.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174224",
+      "original": "https://nycartc.com/speakout/?utm_t%E2%80%A61/10",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174224id_/https://nycartc.com/speakout/?utm_t%E2%80%A61/10",
+      "filename": "0d57424986908c00b09131121225a2981904590aa98c39974ad7d10c44aa8de4.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174242",
+      "original": "https://nycartc.com/speakout/?utm_t%E2%80%A61/10MENU",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174242id_/https://nycartc.com/speakout/?utm_t%E2%80%A61/10MENU",
+      "filename": "5eb5dca4ae2b3e1319521a62a499e241e2b1fbbaa5cb745adec1393a8466fb72.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174258",
+      "original": "https://nycartc.com/speakout/?utm_t%E2%80%A62/10",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174258id_/https://nycartc.com/speakout/?utm_t%E2%80%A62/10",
+      "filename": "603e255c6a1b4c5ecbc8929f3c8bbccffe4b65a3718c048d2c05417e9e761ba4.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174227",
+      "original": "https://nycartc.com/speakout/?utm_t%E2%80%A62/10Show",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174227id_/https://nycartc.com/speakout/?utm_t%E2%80%A62/10Show",
+      "filename": "59b7bb3a14c18442638f8b01b7670e66177c76f0039ca4d749c19d12e4cd84b8.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174238",
+      "original": "https://nycartc.com/speakout/?utm_t%E2%80%A63/10",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174238id_/https://nycartc.com/speakout/?utm_t%E2%80%A63/10",
+      "filename": "73e2c8a267edd2c7b4fc5dacb79671784a257e72054c448ca7a74607d5b112c7.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174409",
+      "original": "https://nycartc.com/speakout/?utm_t%E2%80%A63/10Show",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174409id_/https://nycartc.com/speakout/?utm_t%E2%80%A63/10Show",
+      "filename": "84f36011b1821973fc60fbdd3555ac9afa84453afe5e640e646372e3ea93b1be.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174233",
+      "original": "https://nycartc.com/speakout/?utm_t%E2%80%A64/10",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174233id_/https://nycartc.com/speakout/?utm_t%E2%80%A64/10",
+      "filename": "abda86aa27a5b7cb9e6e1088adba54b343185178f41603292b3be31d6f720d7e.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174231",
+      "original": "https://nycartc.com/speakout/?utm_t%E2%80%A64/10All",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174231id_/https://nycartc.com/speakout/?utm_t%E2%80%A64/10All",
+      "filename": "3bf30042c4ed4c6cd89c2c7985356b77e7f8a5fcf40896d6ea22f21e1698f965.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174356",
+      "original": "https://nycartc.com/speakout/?utm_t%E2%80%A65/10",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174356id_/https://nycartc.com/speakout/?utm_t%E2%80%A65/10",
+      "filename": "a16c1414a1c2c22f8099aa1dc7d60b27da45e50ccf0552c09cbda61fb75cb733.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174251",
+      "original": "https://nycartc.com/speakout/?utm_t%E2%80%A65/10twitter:",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174251id_/https://nycartc.com/speakout/?utm_t%E2%80%A65/10twitter:",
+      "filename": "71baf01db1aac9f8553ff846c47e98c3beaba9bc78570104dd6b95ab46e068ea.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174303",
+      "original": "https://nycartc.com/speakout/?utm_t%E2%80%A66/10",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174303id_/https://nycartc.com/speakout/?utm_t%E2%80%A66/10",
+      "filename": "5321a5f4e937d9da3a68a5687bfc486253cd0f7846d5581e83bd1646fbde9c86.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174304",
+      "original": "https://nycartc.com/speakout/?utm_t%E2%80%A66/10In",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174304id_/https://nycartc.com/speakout/?utm_t%E2%80%A66/10In",
+      "filename": "6657751cd24caeff2b792637e4e6584511eda5ffa12fb833608ca871de344e60.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174306",
+      "original": "https://nycartc.com/speakout/?utm_t%E2%80%A67/10",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174306id_/https://nycartc.com/speakout/?utm_t%E2%80%A67/10",
+      "filename": "95aceec5460955bed48c5406f87dfa209bb0b4971944679a6742713a428ee05f.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174903",
+      "original": "https://nycartc.com/speakout/?utm_t%E2%80%A67/10manner",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174903id_/https://nycartc.com/speakout/?utm_t%E2%80%A67/10manner",
+      "filename": "7f528b55a60e292f91dfebcd426b58a9254d278a61b86bfce6fbe19032be1e91.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174300",
+      "original": "https://nycartc.com/speakout/?utm_t%E2%80%A68/101",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174300id_/https://nycartc.com/speakout/?utm_t%E2%80%A68/101",
+      "filename": "a7ec1f8807da4ebb7978073040d093b53079f9435f8c71ae0d9f48ac369094cd.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174322",
+      "original": "https://nycartc.com/speakout/?utm_t%E2%80%A69/10",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174322id_/https://nycartc.com/speakout/?utm_t%E2%80%A69/10",
+      "filename": "06b361a61d6502f8b8d6641bf927fbec9c3536ef2ae37f04b3b8088d7d0a31d7.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20250803174346",
+      "original": "https://nycartc.com/speakout/?utm_t%E2%80%A69/10Read",
+      "digest": "LELUYTWAMZISOIIMBXLV3QXBO4BE6KF6",
+      "archiveUrl": "https://web.archive.org/web/20250803174346id_/https://nycartc.com/speakout/?utm_t%E2%80%A69/10Read",
+      "filename": "8532d40c43384a86cc7be789fd01b0d00281d99b2a2925229d0e4e1668d36454.html",
+      "sha256": "c2bf3bcbe57e40f1ebedd27b97f9baae9d3465cfc57341fe193b76398449770c",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20170909170139",
+      "original": "http://nycartc.com:80/supporters-list/",
+      "digest": "JZR5KFQMWIO6MRUJPGRBN5YPEHV4JEKF",
+      "archiveUrl": "https://web.archive.org/web/20170909170139id_/http://nycartc.com:80/supporters-list/",
+      "filename": "a95955e780e724adab5fce06ccc8d7ed9d4a8a53ffb658336ade9a2559d8d190.html",
+      "sha256": "64513675b10cf02990c5ef9f04e0b1089a7e0216c31c0bbfde2edfbb47b09d51",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20220522130928",
+      "original": "https://nycartc.com:443/tag/city-council/",
+      "digest": "ZPOZI6PQTZIRRF32TG77SCDP6AJH2LBP",
+      "archiveUrl": "https://web.archive.org/web/20220522130928id_/https://nycartc.com:443/tag/city-council/",
+      "filename": "17f48fe16e2f46fa46b13d070c2322a3db3f03e7c3734c19c62d6458ac6d2fc4.html",
+      "sha256": "46fb0436363055230cece8fb03b09c012c33ff165970976b0e4c03be3baa74f5",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20171016112255",
+      "original": "http://nycartc.com:80/tag/contact/",
+      "digest": "D2SZTALNVIEMOELHEPBU2ESX3ZH34EJP",
+      "archiveUrl": "https://web.archive.org/web/20171016112255id_/http://nycartc.com:80/tag/contact/",
+      "filename": "7e8b45ba5df911cb2f24dee781d002ace38d1bd75d9937faac5e5511b57aeb0a.html",
+      "sha256": "aa71d443d20656eadeb4d5a157943301a1ff0907f4d378dd1f0c64a122c513ab",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20220522151223",
+      "original": "https://nycartc.com:443/tag/getting-started/",
+      "digest": "UISNM46FHCREI6SGXSLYJFNDIWAQFIR6",
+      "archiveUrl": "https://web.archive.org/web/20220522151223id_/https://nycartc.com:443/tag/getting-started/",
+      "filename": "9544a818b307cdf7e951d1108ad52fba98718d410ec1bdd160d215665d9ccfec.html",
+      "sha256": "c4d2f2b3a4afbbbe3746cbfcfde20efe0b3a6c23073bc69b03096ed137e40b2f",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20220522134805",
+      "original": "https://nycartc.com:443/tag/letnydance/",
+      "digest": "LVMZP6AM7AKPXZNZJ574N6VFIFUPFN6Q",
+      "archiveUrl": "https://web.archive.org/web/20220522134805id_/https://nycartc.com:443/tag/letnydance/",
+      "filename": "2973a72a0270bcb12cd245fad4d30faac15bce3c52b0b9ba939cb4b20116070c.html",
+      "sha256": "bb6bca5c41dcbaef9ead8ca33efd92994c148c68e18ff270a3d256a3468b7132",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20220522150403",
+      "original": "https://nycartc.com:443/tag/night-mayor/",
+      "digest": "JISAO3JUVTRA5D5SI2HGVAMNDU2WN5HH",
+      "archiveUrl": "https://web.archive.org/web/20220522150403id_/https://nycartc.com:443/tag/night-mayor/",
+      "filename": "7859946b4f73e8fec4897f34a30fdd65d0fb1506b740e5d0aa0efb0cb38bef99.html",
+      "sha256": "55c3a1e5094b93414ccd86725c82b3d0cc020c47010be9dcac5dcf24b81f125a",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20220522134526",
+      "original": "https://nycartc.com:443/tag/rafael-espinal/",
+      "digest": "Z45IHDWPYREHCR4726NHXHF5CXT54XNM",
+      "archiveUrl": "https://web.archive.org/web/20220522134526id_/https://nycartc.com:443/tag/rafael-espinal/",
+      "filename": "f9f2d6043b1bec6a6bba53ee14a188fbb79ac95e22b35e62aea56d575ee8a707.html",
+      "sha256": "6311a52b0497cc35c41b6a73f16196935373953e20c68723a22250fc2b47ffc1",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20170908002550",
+      "original": "http://nycartc.com:80/testimony/",
+      "digest": "MU6BG42HBQ6GEW6R4HBT7B5SCQIB5EPI",
+      "archiveUrl": "https://web.archive.org/web/20170908002550id_/http://nycartc.com:80/testimony/",
+      "filename": "b6015129cddea08d0556329e25cd6f0050d83433e3a0e6b5ced9004cd53fcd62.html",
+      "sha256": "eb4512d6f5237dfabad361a73f6a20f0a8cccf2570749f7de4a5831763a8b7a1",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20170910094037",
+      "original": "http://nycartc.com:80/testimony/amp/",
+      "digest": "FH4Y5W2EQMZAOQ3DHII5SQJOZXRUKSNO",
+      "archiveUrl": "https://web.archive.org/web/20170910094037id_/http://nycartc.com:80/testimony/amp/",
+      "filename": "ab391d75abc64b28e16388bf93196106eb617a559acc8f46fdbd559f66d32c9c.html",
+      "sha256": "ad1415cb473f2b7d29f23e8c02d1b7f0a1f130a344a1792015717512f1327f28",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20190818201628",
+      "original": "http://nycartc.com/vacant-storefronts-in-nyc/",
+      "digest": "OEMJM24WCM7TXO5YXPWGSNFCDOF65AGV",
+      "archiveUrl": "https://web.archive.org/web/20190818201628id_/http://nycartc.com/vacant-storefronts-in-nyc/",
+      "filename": "9f2e5cd30b502b91400f61686a5985fafbbde064ebed516b2809de38557f7574.html",
+      "sha256": "f65d3ad0ceee414b395b7c2199aa9e7b938a6e29203241427a97c4459351d9b7",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20200506145749",
+      "original": "http://nycartc.com/vacant-storefronts-in-nyc/amp/",
+      "digest": "HWAHEC2LSOI2R7OXEVVOH5WWH3FSETRK",
+      "archiveUrl": "https://web.archive.org/web/20200506145749id_/http://nycartc.com/vacant-storefronts-in-nyc/amp/",
+      "filename": "be4f2a7b9b8852f5e8e5d947ce2b0a253adfdcbb1bda7b548bdf13e93d1a8de3.html",
+      "sha256": "9f0c5098209077241f6684b3ac55a0827193dcbd994e28fb83dbbc261271ac65",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20190606000517",
+      "original": "http://nycartc.com/video-historic-meeting-nyc-artist-coalition-market-hotel-w-nyc-council-dcla/",
+      "digest": "UXYWKPVA44HZFOAW7ECATAYUTVMB6RNB",
+      "archiveUrl": "https://web.archive.org/web/20190606000517id_/http://nycartc.com/video-historic-meeting-nyc-artist-coalition-market-hotel-w-nyc-council-dcla/",
+      "filename": "1edc3d8a6bc0acb0a75229800874abf0faf76dbb8a5a418726f0e4ae93f32ed9.html",
+      "sha256": "b9b5e6746f1f3971f82008ef4d407783fa49a1ac0b285e447b43ee20ab6621b3",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20170605043952",
+      "original": "http://nycartc.com:80/vote/",
+      "digest": "RHKHFDSED6BANZXA3BMADSPDCHE52OAV",
+      "archiveUrl": "https://web.archive.org/web/20170605043952id_/http://nycartc.com:80/vote/",
+      "filename": "b596232f61c13c97a6870870ca15fa1811e3c1619a7795d169877f6cab4cef91.html",
+      "sha256": "54effa67c8049b03f4ffd4ce8bbf8351614fdc5c3ae024922afd93c95bd6a510",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20190718082602",
+      "original": "http://nycartc.com/vote-recs/",
+      "digest": "ARL2NODUNFRLED2AZINDXC5IPNCT65J2",
+      "archiveUrl": "https://web.archive.org/web/20190718082602id_/http://nycartc.com/vote-recs/",
+      "filename": "e9ce477c0b2a9af76398bca9556920a0ff3df5c7c5728cee3c6ae8451ba91845.html",
+      "sha256": "e41c2be76125cc9cece805d54ef058f8cd3b3fe8f12599edadf3987e09161457",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20191018202550",
+      "original": "http://nycartc.com/vote-recs/amp/",
+      "digest": "2BICLAMNJQR3LYSUWBCPNRE7BGHF6IXE",
+      "archiveUrl": "https://web.archive.org/web/20191018202550id_/http://nycartc.com/vote-recs/amp/",
+      "filename": "c487bc59e4a372e3a75478066ae8e347e0977e24af58f5e6460152d11a940794.html",
+      "sha256": "444302fd006675be4375b6a7e80a130de2e9f2a54421cd67a224f51605a9c798",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20220522150433",
+      "original": "https://nycartc.com:443/vote-safety/",
+      "digest": "7LTQGACJ6RCUNPMHVQ5BA6TRZJAOVLKE",
+      "archiveUrl": "https://web.archive.org/web/20220522150433id_/https://nycartc.com:443/vote-safety/",
+      "filename": "ae1b35f645e10eae452826b8de2f4bb531a4010e353e9cd157a0698f1a7a2b0e.html",
+      "sha256": "82dde28cb2a6ec88cdff3790159417eada57e5a083f605e58f13c30b82532573",
+      "status": "recovered"
+    }
+  ]
+}

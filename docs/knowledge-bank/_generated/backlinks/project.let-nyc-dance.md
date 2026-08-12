@@ -1,10 +1,41 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Let NYC Dance
 
-**Source commit:** `76a4328d235b4c97f1d61beab8a982fe12015dff`
-**Generation time:** 2026-07-21T17:51:37-04:00
-**Source fingerprint:** `fb2c6641a77507ea31add3a4d8062b2e963113b4bfe2d5b0836a12fd8a53657a`
+**Source commit:** `86b76844af306f49fe229e347f1bd87abb00af45`
+**Generation time:** 2026-08-12T12:40:09-04:00
+**Source fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
 
+- [Let NYC Dance: 1926 2017 [xyqgow5w]](../../assets/photographs/project-sites/let-nyc-dance-1926-2017-xyqgow5wnp.md) - `related_to` (frontmatter)
+- [Let NYC Dance: 1926 cabaret law b [s4gqqime]](../../assets/photographs/project-sites/let-nyc-dance-1926-cabaret-law-b-s4gqqimexc.md) - `related_to` (frontmatter)
+- [Let NYC Dance: 2017 town hall 1200 [ykavn3ew]](../../assets/photographs/project-sites/let-nyc-dance-2017-town-hall-1200-ykavn3ewpf.md) - `related_to` (frontmatter)
+- [Let NYC Dance: alan maisel [twdpbfjz]](../../assets/photographs/project-sites/let-nyc-dance-alan-maisel-twdpbfjz3p.md) - `related_to` (frontmatter)
+- [Let NYC Dance: antonio reynoso [cvu34y47]](../../assets/photographs/project-sites/let-nyc-dance-antonio-reynoso-cvu34y472s.md) - `related_to` (frontmatter)
+- [Let NYC Dance: barry grodenchik [2rk6c6si]](../../assets/photographs/project-sites/let-nyc-dance-barry-grodenchik-2rk6c6siqg.md) - `related_to` (frontmatter)
+- [Let NYC Dance: bill perkins [usdugmuw]](../../assets/photographs/project-sites/let-nyc-dance-bill-perkins-usdugmuw4r.md) - `related_to` (frontmatter)
+- [Let NYC Dance: carlos menchaca [ogeku6se]](../../assets/photographs/project-sites/let-nyc-dance-carlos-menchaca-ogeku6seea.md) - `related_to` (frontmatter)
+- [Let NYC Dance: corey johnson [hzzzx2a5]](../../assets/photographs/project-sites/let-nyc-dance-corey-johnson-hzzzx2a5xm.md) - `related_to` (frontmatter)
+- [Let NYC Dance: daniel dromm [ozir3jsj]](../../assets/photographs/project-sites/let-nyc-dance-daniel-dromm-ozir3jsjlm.md) - `related_to` (frontmatter)
+- [Let NYC Dance: daniel garodnick [awlnsyht]](../../assets/photographs/project-sites/let-nyc-dance-daniel-garodnick-awlnsyhtdj.md) - `related_to` (frontmatter)
+- [Let NYC Dance: donovan richards [jqyafawz]](../../assets/photographs/project-sites/let-nyc-dance-donovan-richards-jqyafawzk4.md) - `related_to` (frontmatter)
+- [Let NYC Dance: eric ulrich [mkizejb3]](../../assets/photographs/project-sites/let-nyc-dance-eric-ulrich-mkizejb3ja.md) - `related_to` (frontmatter)
+- [Let NYC Dance: helen rosenthal [kxenpmtk]](../../assets/photographs/project-sites/let-nyc-dance-helen-rosenthal-kxenpmtkgr.md) - `related_to` (frontmatter)
+- [Let NYC Dance: jimmy van bramer [5dsbikyi]](../../assets/photographs/project-sites/let-nyc-dance-jimmy-van-bramer-5dsbikyihh.md) - `related_to` (frontmatter)
+- [Let NYC Dance: jumaane williams [gy2esgci]](../../assets/photographs/project-sites/let-nyc-dance-jumaane-williams-gy2esgcipp.md) - `related_to` (frontmatter)
+- [Let NYC Dance: karen koslowitz [jnmebztj]](../../assets/photographs/project-sites/let-nyc-dance-karen-koslowitz-jnmebztjec.md) - `related_to` (frontmatter)
+- [Let NYC Dance: laurie cumbo [mevd65rn]](../../assets/photographs/project-sites/let-nyc-dance-laurie-cumbo-mevd65rnjx.md) - `related_to` (frontmatter)
+- [Let NYC Dance: let nyc dance house of yes julia fredenburg [f2mu22ww]](../../assets/photographs/project-sites/let-nyc-dance-let-nyc-dance-house-of-yes-julia-fredenburg-f2mu22wwkg.md) - `related_to` (frontmatter)
+- [Let NYC Dance: margaret chin [wk6xabw6]](../../assets/photographs/project-sites/let-nyc-dance-margaret-chin-wk6xabw6ql.md) - `related_to` (frontmatter)
+- [Let NYC Dance: mark levine [2jxnh66g]](../../assets/photographs/project-sites/let-nyc-dance-mark-levine-2jxnh66gbb.md) - `related_to` (frontmatter)
+- [Let NYC Dance: mark treyger [4ks5c5jh]](../../assets/photographs/project-sites/let-nyc-dance-mark-treyger-4ks5c5jhem.md) - `related_to` (frontmatter)
+- [Let NYC Dance: market hotel nyc artist coaltion [6vunzmqz]](../../assets/photographs/project-sites/let-nyc-dance-market-hotel-nyc-artist-coaltion-6vunzmqzjj.md) - `related_to` (frontmatter)
+- [Let NYC Dance: rafael espinal [6jz2wksc]](../../assets/photographs/project-sites/let-nyc-dance-rafael-espinal-6jz2wkscm2.md) - `related_to` (frontmatter)
+- [Let NYC Dance: ritchie torres [kcqrlhyv]](../../assets/photographs/project-sites/let-nyc-dance-ritchie-torres-kcqrlhyvwi.md) - `related_to` (frontmatter)
+- [Let NYC Dance: robert cornegy [d4wtl3ld]](../../assets/photographs/project-sites/let-nyc-dance-robert-cornegy-d4wtl3ldxl.md) - `related_to` (frontmatter)
+- [Let NYC Dance: rosie mendez [i5lwpukn]](../../assets/photographs/project-sites/let-nyc-dance-rosie-mendez-i5lwpuknu7.md) - `related_to` (frontmatter)
+- [Let NYC Dance: stephen levin [cu2ylm4k]](../../assets/photographs/project-sites/let-nyc-dance-stephen-levin-cu2ylm4kqe.md) - `related_to` (frontmatter)
+- [Let NYC Dance: vincent gentile [76aeslrn]](../../assets/photographs/project-sites/let-nyc-dance-vincent-gentile-76aeslrnke.md) - `related_to` (frontmatter)
+- [Let NYC Dance: ydanis rodriguez [46gt7e6a]](../../assets/photographs/project-sites/let-nyc-dance-ydanis-rodriguez-46gt7e6az4.md) - `related_to` (frontmatter)
+- [Committee on Consumer Affairs Cabaret Law repeal hearing](../../events/cabaret-law-repeal-hearing-2017-09-14.md) - `related_to` (frontmatter)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `prose_link` (markdown)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `related_to` (frontmatter)
 - [Project lineages](../../indexes/project-lineages.md) - `prose_link` (markdown)
@@ -13,3 +44,4 @@
 - [Small Cultural Spaces Where Culture Is Born](../../places/small-cultural-spaces.md) - `related_to` (frontmatter)
 - [Office of Nightlife town halls](../../projects/office-of-nightlife-town-halls.md) - `related_to` (frontmatter)
 - [Talks Not Raids orientation](../../projects/talks-not-raids-orientation.md) - `related_to` (frontmatter)
+- [Jamie Burkart testimony for Cabaret Law repeal](../../testimony/2017-09-14-cabaret-law-repeal.md) - `related_to` (frontmatter)

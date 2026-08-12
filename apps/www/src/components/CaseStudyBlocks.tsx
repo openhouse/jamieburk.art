@@ -78,7 +78,11 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
                 <a className="block" href={artifact.media.href}>
                   <Image
                     alt={artifact.media.alt}
-                    className="aspect-[3/2] w-full object-cover object-top"
+                    className={`aspect-[3/2] w-full bg-white ${
+                      artifact.media.fit === "contain"
+                        ? "object-contain"
+                        : "object-cover object-top"
+                    }`}
                     height={800}
                     sizes="(min-width: 768px) 66vw, 100vw"
                     src={artifact.media.src}

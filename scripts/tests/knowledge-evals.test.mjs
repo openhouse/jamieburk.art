@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
+import "../knowledge-wiki/public-record-source-edition-eval.test.mjs";
 import { kcTownHallFieldPractice } from "../../apps/www/src/data/knowledge-bank/kctownhall-field-practice.ts";
 import { kcTownHallSocialCorpus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-corpus.ts";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
@@ -1257,7 +1258,7 @@ test("KC Town Hall appropriation cannot be projected as receipt or expenditure",
   }
 });
 
-test("KC Town Hall public projection must retain non-disbursement and withdrawal", () => {
+test("KC Town Hall archival lifecycle projection retains non-disbursement and withdrawal", () => {
   const claim = knowledgeBank.claims.find(
     (item) => item.id === suite.pilot.kcTownHallCouncilFunding.claimId
   );
@@ -1375,42 +1376,47 @@ test("KC Town Hall source citation cannot recast appropriation as payment", () =
   }
 });
 
-test("KC Town Hall stewardship transition remains a held participant-memory lead", () => {
+test("KC Town Hall stewardship transition is a bounded authorized first-party claim", () => {
   const pilot = suite.pilot.kcTownHallCouncilFunding;
   const intake = knowledgeBank.intakeItems.find((item) => item.id === pilot.transitionIntakeId);
   const observation = knowledgeBank.observations.find((item) => item.id === pilot.transitionObservationId);
+  const source = knowledgeBank.sources.find((item) => item.id === pilot.transitionSourceId);
+  const claim = knowledgeBank.claims.find((item) => item.id === pilot.transitionClaimId);
   const inquiry = knowledgeBank.researchInquiries.find((item) => item.id === pilot.transitionInquiryId);
 
   assert.equal(intake?.kind, "memory-lead");
-  assert.equal(intake?.disposition, "researching");
-  assert.deepEqual(intake?.sourceIds, []);
+  assert.equal(intake?.disposition, "integrated");
+  assert.deepEqual(intake?.sourceIds, [pilot.transitionSourceId]);
   assert.equal(observation?.kind, "participant-memory");
-  assert.equal(observation?.status, "captured");
-  assert.deepEqual(observation?.claimIds, []);
-  assert.equal(inquiry?.resultStatus, "inconclusive");
-  assert.deepEqual(inquiry?.sourceIds, []);
-  assert.ok(knowledgeBank.claims.every((claim) =>
-    claim.researchInquiryIds.every((inquiryId) => inquiryId !== pilot.transitionInquiryId)
+  assert.equal(observation?.status, "verified");
+  assert.equal(observation?.sourceId, pilot.transitionSourceId);
+  assert.deepEqual(observation?.claimIds, [pilot.transitionClaimId]);
+  assert.equal(source?.visibility, "protected");
+  assert.match(source?.publicNote ?? "", /authorized professional account/i);
+  assert.equal(claim?.status, "confirmed-with-boundary");
+  assert.ok(claim?.projections.some((projection) =>
+    projection.key === "resume-html" &&
+    /transitioned the project to a mission-aligned organization/i.test(projection.text)
   ));
+  assert.equal(inquiry?.resultStatus, "partially-recovered");
+  assert.deepEqual(inquiry?.sourceIds, [pilot.transitionSourceId]);
 });
 
-test("KC Town Hall transition memory cannot be promoted without evidence review", () => {
+test("KC Town Hall transition claim cannot invent recipient identity or legal mechanics", () => {
   const pilot = suite.pilot.kcTownHallCouncilFunding;
-  const observation = knowledgeBank.observations.find((item) => item.id === pilot.transitionObservationId);
-  assert.ok(observation);
-  const originalStatus = observation.status;
-  const originalClaimIds = observation.claimIds;
+  const claim = knowledgeBank.claims.find((item) => item.id === pilot.transitionClaimId);
+  const projection = claim?.projections.find((item) => item.key === "case-study");
+  assert.ok(projection);
+  const originalText = projection.text;
 
   try {
-    observation.status = "verified";
-    observation.claimIds = [pilot.contributionClaimId];
+    projection.text = "Jamie legally transferred KC Town Hall and its City award to the receiving nonprofit.";
     const result = evaluateKnowledgeBank(suite);
-    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-MATURATION")?.score, 1);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-PROJECTION")?.score, 1);
     assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1);
     assert.equal(result.accepted, false);
   } finally {
-    observation.status = originalStatus;
-    observation.claimIds = originalClaimIds;
+    projection.text = originalText;
   }
 });
 
@@ -1497,7 +1503,7 @@ test("KC Town Hall agency graph keeps Jamie's planning contribution separate fro
   }
 });
 
-test("KC Town Hall technical-operations wording retains the unused-return boundary", () => {
+test("KC Town Hall technical-operations wording retains the award and transition", () => {
   const proof = proofClaims.find(
     (item) => item.id === suite.pilot.kcTownHallCouncilFunding.proofId
   );
@@ -1505,7 +1511,7 @@ test("KC Town Hall technical-operations wording retains the unused-return bounda
   const originalWording = proof.shortWording;
 
   try {
-    proof.shortWording = "Jamie co-led adaptive reuse planning that advanced through Council appropriation.";
+    proof.shortWording = "Jamie co-led adaptive reuse planning for KC Town Hall.";
     const result = evaluateKnowledgeBank(suite);
     assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-PROJECTION")?.score, 1);
     assert.equal(result.accepted, false);
@@ -1531,22 +1537,26 @@ test("KC Town Hall source-backed proof coverage cannot regress to research-neede
   }
 });
 
-test("KC Town Hall page citation retains the later disposition record", () => {
+test("KC Town Hall page citation retains the official award chain", () => {
   const page = knowledgeBank.pages.find(
     (item) => item.id === suite.pilot.kcTownHallCouncilFunding.pageId
   );
   assert.ok(page?.occurrences.length);
-  const originalSourceIds = page.occurrences[0].sourceIds;
+  const awardOccurrence = page.occurrences.find(
+    (occurrence) => occurrence.id === "jamie-secured-cced-award"
+  );
+  assert.ok(awardOccurrence?.sourceIds);
+  const originalSourceIds = awardOccurrence.sourceIds;
 
   try {
-    page.occurrences[0].sourceIds = page.occurrences[0].sourceIds.filter(
-      (sourceId) => sourceId !== "SRC-KC-TOWN-HALL-ORDINANCE-240317"
+    awardOccurrence.sourceIds = awardOccurrence.sourceIds.filter(
+      (sourceId) => sourceId !== "SRC-KC-TOWN-HALL-ORDINANCE-190642"
     );
     const result = evaluateKnowledgeBank(suite);
     assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-COVERAGE")?.score, 1);
     assert.equal(result.accepted, false);
   } finally {
-    page.occurrences[0].sourceIds = originalSourceIds;
+    awardOccurrence.sourceIds = originalSourceIds;
   }
 });
 

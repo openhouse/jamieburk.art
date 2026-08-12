@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "runId": "2026-07-26-east-river-canary",
+  "recordedAt": "2026-07-28",
+  "baseBranch": "features/layout-C",
+  "baseCommit": "fea303e54c6b5fae36caee872a2a7450501f9e11",
+  "implementationBranch": "feature/pre-launch-C",
+  "sourceCommit": "4483bb48f0db4c86171849a28bcb3147d3a2dde0",
+  "candidateFingerprint": "36019ec42ffcd70eeda51f79eec0216076ea301ca5c4922c9098ad8ec0a41d47",
+  "candidateFileCount": 221,
+  "derivativeSha256": "748b6f12e2845dd7dc1ca3fa3f35d61c26a468150b7e3d6d386ae3622d996621",
+  "privateBindingVerification": "verified-carried-forward",
+  "publicGit": "approved",
+  "staging": "approved",
+  "production": "open",
+  "indexing": "open",
+  "automatedApproval": false,
+  "simulationNotice": true,
+  "humanGates": [
+    "Jamie production approval",
+    "indexing approval",
+    "new crop, destination, context, or permission review"
+  ],
+  "carryForwardPolicyVersion": 1,
+  "bindingRelevantFingerprint": "093dda41121d2b619ae507c1d950fcea07cdcd92ed3ea5cc4f458d6db7127818",
+  "bindingRelevantItemCount": 18,
+  "carriedForwardFromCandidateFingerprint": "a831458db6bea05aa1f8ff866f7841edb11d4db88e0a660524655543b0ecc231",
+  "carriedForwardFromCandidateFileCount": 36,
+  "carriedForwardFromSourceCommit": "487239f87287f384a08161158d914cda3f74274f",
+  "carriedForwardFromReceiptSha256": "532dc91e4dc90692306fe19ced48dffd02b91cdad3f1bb6640d930d473c07e39",
+  "carriedForwardFromPrivateBindingVerification": "verified"
+}

@@ -124,6 +124,15 @@ try {
   failures.push("scripts/check-knowledge-bank.mjs - knowledge-bank gate failed");
 }
 
+try {
+  execFileSync(process.execPath, [path.join(repoRoot, "scripts/sourcebook/check.mjs")], {
+    cwd: repoRoot,
+    stdio: "inherit"
+  });
+} catch {
+  failures.push("scripts/sourcebook/check.mjs - Sourcebook public-boundary gate failed");
+}
+
 const allFiles = walk(repoRoot);
 const textFiles = allFiles.filter((file) => textExtensions.has(path.extname(file)));
 const shippedTextFiles = textFiles.filter((file) => {
@@ -145,6 +154,25 @@ const shippedContentFiles = shippedTextFiles.filter((file) => !scannerFiles.has(
 const publicContentFiles = shippedContentFiles.filter((file) => {
   return relative(file) !== "apps/www/src/data/proofs.ts";
 });
+const publicKnowledgeTranscriptIndexes = textFiles.filter((file) => {
+  const rel = relative(file);
+  return (
+    rel.startsWith("docs/knowledge-bank/data/public-hearing-speakers/") ||
+    rel ===
+      "docs/knowledge-bank/data/hearing-heteroglossia-corpus-2026-07-28.json" ||
+    rel.startsWith("docs/knowledge-bank/testimony/heteroglossia/") ||
+    rel.startsWith(
+      "docs/knowledge-bank/testimony/commercial-rent-public-support/"
+    )
+  );
+});
+const publishedEvaluationEvidence = textFiles.filter((file) => {
+  const rel = relative(file);
+  return (
+    rel.startsWith("docs/evals/runs/") ||
+    rel.startsWith("docs/qa/")
+  );
+});
 
 for (const file of allFiles) {
   const rel = relative(file);
@@ -161,6 +189,17 @@ for (const file of allFiles) {
 
   if (privatePathPattern.test(rel) || /\.private\./i.test(rel)) {
     addFailure(file, "private/source-material path must not be committed");
+  }
+
+  if (
+    rel.startsWith(
+      "docs/knowledge-bank/data/public-hearing-transcripts/"
+    )
+  ) {
+    addFailure(
+      file,
+      "raw public-hearing transcript derivative must remain outside public Git"
+    );
   }
 
   if (/\.(key|pem|p12|crt|cer)$/i.test(rel)) {
@@ -184,6 +223,24 @@ scanPattern(
   publicContentFiles,
   "raw/private transcript exposure appears in production-facing content",
   /\b(?:otter(?:\.ai|_ai)?|raw\s+(?:meeting\s+)?transcripts?|private\s+transcript\s+excerpt|corrected[_ -]?(?:working[_ -]?)?transcripts?|repaired[_ -]?transcripts?)\b/i
+);
+
+scanPattern(
+  publicKnowledgeTranscriptIndexes,
+  "public Knowledge Wiki transcript index contains republished raw speech",
+  /(?:"text"\s*:|^#{2,4}\s+Transcript(?:\s+turns)?\s*$)/im
+);
+
+scanPattern(
+  publishedEvaluationEvidence,
+  "published evaluation evidence contains a private local filesystem locator",
+  /(?:\/private\/tmp\/|\/Users\/|\/Volumes\/)/i
+);
+
+scanPattern(
+  publishedEvaluationEvidence,
+  "published evaluation evidence contains a raw internal process identifier",
+  /"processSession(?:Id|Digest)"\s*:/i
 );
 
 scanPattern(

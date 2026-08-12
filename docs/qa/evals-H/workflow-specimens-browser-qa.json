@@ -1,0 +1,102 @@
+{
+  "reportVersion": 1,
+  "checkedAt": "2026-08-04T01:45:41.557Z",
+  "baseUrl": "http://127.0.0.1:3055",
+  "candidateSha256": "30833e1cb63bb480e9413f67aef6438a34f0a9977537e35c6a6bdfa5add59a14",
+  "captureMethod": "Playwright Chromium screenshots of the current local production build; no deployment or indexing action.",
+  "boundaries": [
+    "The diagrams are public-safe editorial reconstructions, not original internal records.",
+    "No participant rows, customer records, private analytics, access details, or unapproved media are included.",
+    "This report does not authorize deployment, indexing, or publication of additional material."
+  ],
+  "rows": [
+    {
+      "route": "/work/harry-j-epstein",
+      "viewport": {
+        "name": "mobile",
+        "width": 375,
+        "height": 812
+      },
+      "status": 200,
+      "failures": [],
+      "screenshot": "workflow-hje-mobile.png",
+      "h1Count": 1,
+      "specimenCount": 1,
+      "stepCount": 5,
+      "overflowingSteps": 0,
+      "brokenImages": 0,
+      "documentWidth": 375,
+      "viewportWidth": 375,
+      "pass": true,
+      "screenshotSha256": "813a1a750950d1727166abed1107c10f43794f48f6a5f6a76fdd805274bae276"
+    },
+    {
+      "route": "/work/harry-j-epstein",
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 900
+      },
+      "status": 200,
+      "failures": [],
+      "screenshot": "workflow-hje-desktop.png",
+      "h1Count": 1,
+      "specimenCount": 1,
+      "stepCount": 5,
+      "overflowingSteps": 0,
+      "brokenImages": 0,
+      "documentWidth": 1280,
+      "viewportWidth": 1280,
+      "pass": true,
+      "screenshotSha256": "784d44ae07d6f5c6ca2746f2f88ebbedd1a921b8619283b2f7595f3936e16270"
+    },
+    {
+      "route": "/work/196-sunday-dinner",
+      "viewport": {
+        "name": "mobile",
+        "width": 375,
+        "height": 812
+      },
+      "status": 200,
+      "failures": [],
+      "screenshot": "workflow-196-sunday-dinner-mobile.png",
+      "h1Count": 1,
+      "specimenCount": 2,
+      "stepCount": 10,
+      "overflowingSteps": 0,
+      "brokenImages": 0,
+      "documentWidth": 375,
+      "viewportWidth": 375,
+      "pass": true,
+      "screenshotSha256": "373f9741eb5f4979e052ac42b41ad31cbafee8c9c251379421649a9e0576f213"
+    },
+    {
+      "route": "/work/196-sunday-dinner",
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 900
+      },
+      "status": 200,
+      "failures": [],
+      "screenshot": "workflow-196-sunday-dinner-desktop.png",
+      "h1Count": 1,
+      "specimenCount": 2,
+      "stepCount": 10,
+      "overflowingSteps": 0,
+      "brokenImages": 0,
+      "documentWidth": 1280,
+      "viewportWidth": 1280,
+      "pass": true,
+      "screenshotSha256": "aa0ebc0f4f692cab99f36b44fa8a9107c090f3ad901ec221bf8b5d538db1fb45"
+    }
+  ],
+  "summary": {
+    "rowCount": 4,
+    "passingRows": 4,
+    "failedRequests": 0,
+    "overflowingSteps": 0,
+    "brokenImages": 0,
+    "passed": true
+  }
+}

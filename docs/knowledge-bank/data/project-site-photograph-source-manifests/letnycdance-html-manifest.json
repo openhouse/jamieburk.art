@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "generatedAt": "2026-07-28T11:38:43.514Z",
+  "sourceCdxSha256": "a18bd22a9c1c5b4949074b2551b0436699d7ec9cbafa08d503467a17e2dcad98",
+  "population": 2,
+  "recovered": 2,
+  "notRecovered": 0,
+  "pages": [
+    {
+      "timestamp": "20170901203907",
+      "original": "http://letnycdance.nycartc.com/",
+      "digest": "PTAPE2YKFHVSFC3D55Q7XP2L4CDTUHR6",
+      "archiveUrl": "https://web.archive.org/web/20170901203907id_/http://letnycdance.nycartc.com/",
+      "filename": "f5bec0fe6f1687b74424985f4979e37c4c3cc562be10a8359287adf5a7f88036.html",
+      "sha256": "e95d8214a8f04c3adcf739f52d547d478ae3e9dd59c87e23b0eaf38a4101548f",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20170903223410",
+      "original": "http://letnycdance.nycartc.com/s/map.html",
+      "digest": "OIFMPV3FCUQSPRSKPWZOJAUSP7CGQXVA",
+      "archiveUrl": "https://web.archive.org/web/20170903223410id_/http://letnycdance.nycartc.com/s/map.html",
+      "filename": "3694b7d28b5ead91f9dc604c93e4c053eb29122471f689de56b613d02118a493.html",
+      "sha256": "ec514cbe1a6d0c453c021b7cf2b4c3be86f18a55c54ef3923854382d7b80e98b",
+      "status": "recovered"
+    }
+  ]
+}

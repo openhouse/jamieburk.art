@@ -57,12 +57,15 @@ const blindSpotControlsPath = path.join(
 );
 export const blindSpotControls = JSON.parse(readFileSync(blindSpotControlsPath, "utf8"));
 const KCTH_FIELD_PRACTICE_REVIEW_LOCKS = Object.freeze({
-  corpusSha256: "7344b91556feaffebbcf4394b0b6cca9ac005c8d94d3b325dce97c557fc1cdc1",
-  canonicalRecordsSha256: "00d2c80af90f0584311a5557e2ad02a8b67d63e7b1c5719a2418d82f692d4865",
-  governedKnowledgeSha256: "1b01cfff6bbffaf40430c3a1870ce8a1b0b5e8a6cffed47bddc3aec3f089de21",
-  proofProjectionSha256: "f8af10efe6b6c073197cc8f0f53189b04933dc66a4059807d727454724e9a07d",
-  caseStudyMdxSha256: "859205fe5cd3d7aa538a4706d52ff2476657565336a8157b1bffc8a4fb502bce",
-  sharedPublicSurfacesSha256: "1f46195106bbfa6af572a32f4ae9fb57a12e687bf1154fe92f0d6b0822635846",
+  corpusSha256: "20969ea8c506b025cfc6cd0dadb6b4eab4ce7eb93935885c421be5ca33b5563a",
+  canonicalRecordsSha256: "aec8ae4d0ca23edeee8043565f2a292e5679959c04685c697c7f2c8428f4868c",
+  governedKnowledgeSha256: "ecfe86b9804ebd2310012a8fbb0b0017ee2ce4b2b4de7d67ede1e5f156a63b5d",
+  proofProjectionSha256: "89e737e2b4620a430933669aabbafcd0924534a2ac55acce8a82a102131aeef3",
+  caseStudyMdxSha256: "21d241eae57f230f4863ded3afeacca25715e5c3335c83c4314764d141d33178",
+  // Re-reviewed 2026-08-03 after adding public-safe HJE and Sunday Dinner/196
+  // handoff specimens to the shared work metadata. Field-practice claims,
+  // evidence, holds, and the KC Town Hall case-study wording did not change.
+  sharedPublicSurfacesSha256: "e0080f82ce2dde8feb83f8d04f761a30b624537056bda41d10a507afd5077f30",
   publicReviewReportSha256: "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696"
 });
 // Re-reviewed 2026-07-21 after removing trailing Markdown line-break spaces for
@@ -105,8 +108,14 @@ const PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   governanceBindingsSha256: "462c571728b828871229a018aaee8503d666943b0bce508eaa92231391baf1e8",
   publicReportSha256: "0e8dc37b79624e2ac86a026fca40741ee578aeb22bc5002e795775c1df5e650e",
   wowListMdxSha256: "920a67545ba6bbe346309c79247a12e1e0a3028c09cb5c36e1a85e35f8013df8",
-  sundayDinnerMdxSha256: "2c9e22237d23a1b99262634f75cb24f7eeca300c0ed59e0dec26b6c3a54dd6be",
-  proofContentSha256: "04bda7a50e53a7c78d4f49b7f139a424514e03d83994c3fbb63cd6fbd25be685"
+  // Re-reviewed 2026-08-03 after adding two public-safe handoff specimens.
+  // The governed event corpus, projections, and collective-credit limits did
+  // not change.
+  sundayDinnerMdxSha256: "9a2ad4b667d5ad80ec9f20e9965455219d9d7cd4a833d268b8a8ee3d2be72bef",
+  // Re-reviewed 2026-07-28 after replacing the WOWList adoption estimate with
+  // the exact July 2017 city-region-key threshold. The governed event corpus,
+  // projections, and collective-credit limits did not change.
+  proofContentSha256: "ece31ff79a8dc4bd542469ffb8a8edae8da249627a62ca152a8c5bee7b9a0be7"
 });
 const WOWLIST_FACEBOOK_POST_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "5755dfbbb6388ca369b90337e210502dd264bb22d554cf8f0294027de08ffc72",
@@ -764,16 +773,28 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
 
   const kcTownHall = suite.pilot.kcTownHallCouncilFunding;
   const kcTownHallIntake = intakeById.get(kcTownHall.intakeId);
+  const kcTownHallAwardIntake = intakeById.get(kcTownHall.awardIntakeId);
+  const kcTownHallStewardshipIntake = intakeById.get(kcTownHall.stewardshipIntakeId);
   const kcTownHallContributionIntake = intakeById.get(kcTownHall.contributionIntakeId);
   const kcTownHallTransitionIntake = intakeById.get(kcTownHall.transitionIntakeId);
   const kcTownHallSources = kcTownHall.sourceIds.map((id) => sourceById.get(id));
+  const kcTownHallAwardSources = kcTownHall.awardSourceIds.map((id) => sourceById.get(id));
+  const kcTownHallStewardshipSources = kcTownHall.stewardshipSourceIds.map((id) => sourceById.get(id));
   const kcTownHallContributionSource = sourceById.get(kcTownHall.contributionSourceId);
+  const kcTownHallTransitionSource = sourceById.get(kcTownHall.transitionSourceId);
   const kcTownHallObservations = kcTownHall.observationIds.map((id) => observationById.get(id));
+  const kcTownHallAwardObservations = kcTownHall.awardObservationIds.map((id) => observationById.get(id));
+  const kcTownHallStewardshipObservations = kcTownHall.stewardshipObservationIds.map((id) => observationById.get(id));
   const kcTownHallContributionObservation = observationById.get(kcTownHall.contributionObservationId);
   const kcTownHallTransitionObservation = observationById.get(kcTownHall.transitionObservationId);
   const kcTownHallClaim = claimById.get(kcTownHall.claimId);
+  const kcTownHallAwardClaim = claimById.get(kcTownHall.awardClaimId);
+  const kcTownHallStewardshipClaim = claimById.get(kcTownHall.stewardshipClaimId);
   const kcTownHallContributionClaim = claimById.get(kcTownHall.contributionClaimId);
+  const kcTownHallTransitionClaim = claimById.get(kcTownHall.transitionClaimId);
   const kcTownHallInquiry = inquiryById.get(kcTownHall.inquiryId);
+  const kcTownHallAwardInquiry = inquiryById.get(kcTownHall.awardInquiryId);
+  const kcTownHallStewardshipInquiry = inquiryById.get(kcTownHall.stewardshipInquiryId);
   const kcTownHallTransitionInquiry = inquiryById.get(kcTownHall.transitionInquiryId);
   const kcTownHallRelations = kcTownHall.relationIds.map((id) => relationById.get(id));
   const kcTownHallProofCoverage = knowledgeBank.proofCoverageTargets.find(
@@ -781,14 +802,33 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
   );
   const kcTownHallProof = proofClaims.find((proof) => proof.id === kcTownHall.proofId);
   const kcTownHallPage = knowledgeBank.pages.find((page) => page.id === kcTownHall.pageId);
-  const kcTownHallProofSourceIds = [...kcTownHall.sourceIds, kcTownHall.contributionSourceId];
-  const kcTownHallProofCoverageSourceIds = [
-    ...kcTownHallProofSourceIds,
+  const kcTownHallProofSourceIds = [
+    "SRC-KC-TOWN-HALL-CCED-BOARD-MATERIALS-2019",
     "SRC-KCTH-CCED-PROPOSAL-BUNDLE-2019",
-    "SRC-KCTH-FIELD-PRACTICE-REVIEW-2026"
+    "SRC-KC-TOWN-HALL-RESOLUTION-190649",
+    "SRC-KC-TOWN-HALL-ORDINANCE-190642",
+    "SRC-KC-TOWN-HALL-CCED-UPDATE-2022-05-17",
+    "SRC-KC-TOWN-HALL-ORDINANCE-240317",
+    "SRC-KCSTAR-CCED-PROJECT-DELAYS-2021",
+    "SRC-KC-TOWN-HALL-CCED-REPORT-2022-12",
+    "SRC-KC-TOWN-HALL-CCED-REPORT-2023",
+    "SRC-KCMO-ORDINANCE-230316",
+    "SRC-KC-TOWN-HALL-CCED-UPDATE-2023-12-12",
+    kcTownHall.contributionSourceId,
+    kcTownHall.transitionSourceId
+  ];
+  const kcTownHallProofCoverageSourceIds = [
+    ...new Set([
+      ...kcTownHallProofSourceIds,
+      "SRC-KCTH-CCED-PROPOSAL-BUNDLE-2019",
+      "SRC-KCTH-FIELD-PRACTICE-REVIEW-2026"
+    ])
   ];
   const kcTownHallProofCoverageInquiryIds = [
     kcTownHall.inquiryId,
+    kcTownHall.awardInquiryId,
+    kcTownHall.stewardshipInquiryId,
+    kcTownHall.transitionInquiryId,
     "INQ-KCTH-PHASE-ONE-ROLE-AND-COMPLETION",
     "INQ-KCTH-SURVEY-DESIGN-AND-FIELD-PRACTICE"
   ];
@@ -799,7 +839,16 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
     "SRC-KCMO-COUNCIL-ROSTER-2018",
     "SRC-KCMO-COUNCIL-BUSINESS-SESSION-TERMS"
   ];
-  const kcTownHallPageSourceIds = [...kcTownHallProofSourceIds, ...kcTownHallSocialSourceIds];
+  const kcTownHallPageSourceIds = [
+    "SRC-KC-TOWN-HALL-CCED-BOARD-MATERIALS-2019",
+    "SRC-KC-TOWN-HALL-RESOLUTION-190649",
+    "SRC-KC-TOWN-HALL-ORDINANCE-190642",
+    "SRC-KCSTAR-CCED-PROJECT-DELAYS-2021",
+    "SRC-KC-TOWN-HALL-CCED-REPORT-2022-12",
+    "SRC-KC-TOWN-HALL-CCED-REPORT-2023",
+    kcTownHall.contributionSourceId,
+    ...kcTownHallSocialSourceIds
+  ];
   const kcTownHallMdx = overrides.kcTownHallMdx ?? readFileSync(
     path.join(repoRoot, "apps/www/src/content/work/kc-town-hall.mdx"),
     "utf8"
@@ -833,6 +882,16 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
     ["OBS-KC-TOWN-HALL-NO-DISBURSEMENT-2022", "SRC-KC-TOWN-HALL-CCED-UPDATE-2022-05-17"],
     ["OBS-KC-TOWN-HALL-WITHDRAWAL-240317", "SRC-KC-TOWN-HALL-ORDINANCE-240317"]
   ]);
+  const expectedKcTownHallAwardObservationSources = new Map([
+    ["OBS-KC-TOWN-HALL-JAMIE-DEVELOPER-PRESENTER-2019", "SRC-KC-TOWN-HALL-CCED-BOARD-MATERIALS-2019"],
+    ["OBS-KC-TOWN-HALL-SUCCESSFUL-REQUEST-2019", "SRC-KC-TOWN-HALL-CCED-BOARD-MATERIALS-2019"]
+  ]);
+  const expectedKcTownHallStewardshipObservationSources = new Map([
+    ["OBS-KC-TOWN-HALL-KCSTAR-ADMINISTRATIVE-BURDEN-2021", "SRC-KCSTAR-CCED-PROJECT-DELAYS-2021"],
+    ["OBS-KC-TOWN-HALL-JAMIE-DEVELOPER-CONTACT-2022", "SRC-KC-TOWN-HALL-CCED-REPORT-2022-12"],
+    ["OBS-KC-TOWN-HALL-COMPLIANCE-PROGRESS-2023", "SRC-KC-TOWN-HALL-CCED-REPORT-2023"],
+    ["OBS-KC-TOWN-HALL-POLICY-DEADLINE-2023", "SRC-KC-TOWN-HALL-CCED-UPDATE-2023-12-12"]
+  ]);
   const expectedKcTownHallRelations = new Map([
     ["REL-KC-CCED-BOARD-RECOMMENDED-TOWN-HALL", {
       actorId: "ENT-KC-CCED-BOARD",
@@ -845,6 +904,27 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       action: "co-led",
       objectId: "ENT-KC-TOWN-HALL-LLC",
       creditScope: "shared"
+    }],
+    ["REL-JAMIE-CODEVELOPED-PRESENTED-KC-TOWN-HALL-REQUEST", {
+      actorId: "ENT-JAMIE-BURKART",
+      action: "co-developed-and-presented",
+      objectId: "ENT-KC-TOWN-HALL-CCED-APPROPRIATION",
+      creditScope: "shared",
+      claimId: kcTownHall.awardClaimId
+    }],
+    ["REL-JAMIE-SUSTAINED-KC-TOWN-HALL-CCED-COORDINATION", {
+      actorId: "ENT-JAMIE-BURKART",
+      action: "served-as-developer-contact",
+      objectId: "ENT-KC-TOWN-HALL-LLC",
+      creditScope: "shared",
+      claimId: kcTownHall.stewardshipClaimId
+    }],
+    ["REL-JAMIE-TRANSITIONED-KC-TOWN-HALL-STEWARDSHIP", {
+      actorId: "ENT-JAMIE-BURKART",
+      action: "transitioned-stewardship-to",
+      objectId: "ENT-KC-TOWN-HALL-MISSION-ALIGNED-SUCCESSOR",
+      creditScope: "individual",
+      claimId: kcTownHall.transitionClaimId
     }],
     ["REL-KC-COUNCIL-ACCEPTED-TOWN-HALL-RECOMMENDATION", {
       actorId: "ENT-KC-COUNCIL",
@@ -874,12 +954,53 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
   const kcTownHallCaseStudyProjection = kcTownHallClaim?.projections.find(
     (projection) => projection.key === "case-study"
   );
+  const kcTownHallAwardProjection = kcTownHallAwardClaim?.projections.find(
+    (projection) => projection.key === "case-study"
+  );
+  const kcTownHallStewardshipProjection = kcTownHallStewardshipClaim?.projections.find(
+    (projection) => projection.key === "case-study"
+  );
+  const kcTownHallTransitionCaseStudyProjection = kcTownHallTransitionClaim?.projections.find(
+    (projection) => projection.key === "case-study"
+  );
+  const kcTownHallTransitionResumeProjection = kcTownHallTransitionClaim?.projections.find(
+    (projection) => projection.key === "resume-html"
+  );
   const kcTownHallContentSha256 = createHash("sha256").update(JSON.stringify({
-    intakes: [kcTownHallIntake, kcTownHallContributionIntake, kcTownHallTransitionIntake],
-    sources: [...kcTownHallSources, kcTownHallContributionSource],
-    observations: [...kcTownHallObservations, kcTownHallContributionObservation, kcTownHallTransitionObservation],
-    claims: [kcTownHallClaim, kcTownHallContributionClaim],
-    inquiries: [kcTownHallInquiry, kcTownHallTransitionInquiry],
+    intakes: [
+      kcTownHallIntake,
+      kcTownHallAwardIntake,
+      kcTownHallStewardshipIntake,
+      kcTownHallContributionIntake,
+      kcTownHallTransitionIntake
+    ],
+    sources: [
+      ...new Map(
+        [...kcTownHallSources, ...kcTownHallAwardSources, ...kcTownHallStewardshipSources, kcTownHallContributionSource, kcTownHallTransitionSource]
+          .filter(Boolean)
+          .map((source) => [source.id, source])
+      ).values()
+    ],
+    observations: [
+      ...kcTownHallObservations,
+      ...kcTownHallAwardObservations,
+      ...kcTownHallStewardshipObservations,
+      kcTownHallContributionObservation,
+      kcTownHallTransitionObservation
+    ],
+    claims: [
+      kcTownHallClaim,
+      kcTownHallAwardClaim,
+      kcTownHallStewardshipClaim,
+      kcTownHallContributionClaim,
+      kcTownHallTransitionClaim
+    ],
+    inquiries: [
+      kcTownHallInquiry,
+      kcTownHallAwardInquiry,
+      kcTownHallStewardshipInquiry,
+      kcTownHallTransitionInquiry
+    ],
     relations: kcTownHallRelations,
     proof: kcTownHallProof,
     proofCoverage: kcTownHallProofCoverage,
@@ -892,7 +1013,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       /recommend/i.test(value) &&
       /accept(?:ed|ance)/i.test(value) &&
       /appropriat/i.test(value) &&
-      /(?:no disbursement|no funds disbursed|absence of reported disbursement)/i.test(value) &&
+      /(?:no disbursement|no funds (?:were )?disbursed|absence of reported disbursement)/i.test(value) &&
       /(?:withdrew|withdrawal)/i.test(value) &&
       /unused/i.test(value)
   );
@@ -901,12 +1022,39 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
   );
   const hasKcTownHallOutcomeBoundary = (value) => Boolean(
     value &&
-      /(?:no disbursement|no funds disbursed|reported no disbursement)/i.test(value) &&
+      /(?:no disbursement|no funds (?:were )?disbursed|reported no disbursement)/i.test(value) &&
       /(?:withdrew|withdrawal)/i.test(value) &&
       /unused/i.test(value)
   );
+  const hasKcTownHallAwardRole = (value) => Boolean(
+    value &&
+      /Jamie secured a \$490,?539 public funding award/i.test(value) &&
+      /co-develop/i.test(value) &&
+      /named developer\/presenter/i.test(value)
+  );
+  const hasKcTownHallStewardship = (value) => Boolean(
+    value &&
+      /(?:named developer point of contact|name Jamie as (?:a )?developer point of contact)/i.test(value) &&
+      /2022/i.test(value) &&
+      /2023/i.test(value) &&
+      /M\/WBE/i.test(value) &&
+      /CREO/i.test(value)
+  );
+  const hasKcTownHallTransition = (value) => Boolean(
+    value &&
+      /transitioned (?:the project|KC Town Hall project stewardship) to a mission-aligned organization/i.test(value)
+  );
   const kcTownHallPublicText = [
     ...(kcTownHallClaim?.projections
+      .filter((projection) => projection.status === "active")
+      .map((projection) => projection.text) ?? []),
+    ...(kcTownHallAwardClaim?.projections
+      .filter((projection) => projection.status === "active")
+      .map((projection) => projection.text) ?? []),
+    ...(kcTownHallStewardshipClaim?.projections
+      .filter((projection) => projection.status === "active")
+      .map((projection) => projection.text) ?? []),
+    ...(kcTownHallTransitionClaim?.projections
       .filter((projection) => projection.status === "active")
       .map((projection) => projection.text) ?? []),
     kcTownHallProof?.publicWording,
@@ -915,17 +1063,30 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
     kcTownHallWorkText,
     kcTownHallMdx
   ].filter(Boolean).join("\n");
+  const kcTownHallHiringFacingText = [
+    kcTownHallAwardProjection?.text,
+    kcTownHallTransitionCaseStudyProjection?.text,
+    kcTownHallTransitionResumeProjection?.text,
+    kcTownHallProof?.publicWording,
+    kcTownHallProof?.shortWording,
+    kcTownHallProof?.detailedPublicWording,
+    kcTownHallWorkSummary
+  ].filter(Boolean).join("\n");
   const kcTownHallForbiddenPatterns = [
     /KC Town Hall (?:received|spent|was paid) \$?490,?539/i,
-    /KC Town Hall (?:secured|obtained|got|won|was granted|was awarded)[^.]{0,80}\$?490,?539/i,
-    /(?:City|Council) (?:granted|gave|paid|funded|awarded) KC Town Hall[^.]{0,80}\$?490,?539/i,
+    /KC Town Hall (?:obtained|got|was paid)[^.]{0,80}\$?490,?539/i,
+    /(?:City|Council) (?:gave|paid|funded) KC Town Hall[^.]{0,80}\$?490,?539/i,
     /funding agreement was executed/i,
-    /Jamie[^.]{0,120}(?:secured|caused|won|obtained|persuaded|convinced|drove|delivered)[^.]{0,120}(?:Board|Council|recommendation|appropriation|funding)/i,
-    /Jamie(?:'s|’s)?[^.]{0,120}(?:brought in|earned|got)[^.]{0,120}(?:\$?490,?539|City (?:funding|money|award))/i,
+    /(?<!does not mean )Jamie[^.]{0,120}(?:controlled|solely caused|persuaded|convinced)[^.]{0,120}(?:Board|Council|recommendation|appropriation|vote)/i,
+    /Jamie[^.]{0,120}secured[^.]{0,120}(?:Council appropriation|Board recommendation)/i,
+    /Jamie[^.]{0,120}(?:personally received|personally spent)[^.]{0,80}\$?490,?539/i,
+    /Jamie(?:'s|’s)?[^.]{0,120}(?:brought in|earned|got)[^.]{0,120}(?:\$?490,?539|City (?:money|payment))/i,
     /Jamie[^.]{0,120}(?:made|got)[^.]{0,80}(?:Board|Council|City)[^.]{0,80}(?:recommend|approve|fund|appropriate)/i,
     /Jamie[^.]{0,120}(?:responsible for|resulted in|led to)[^.]{0,120}(?:Board|Council|recommendation|appropriation)/i,
     /(?:Board|Council)[^.]{0,120}(?:because of|due to|as a result of)[^.]{0,80}Jamie/i,
-    /City funded (?:construction|project completion)/i
+    /City funded (?:construction|project completion)/i,
+    /Jamie alone (?:wrote|created|made|authored)[^.]{0,80}(?:proposal|presentation)/i,
+    /(?:wife|marriage|divorc|cold cutoff|12[- ]word note|twelve[- ]word note)/i
   ];
   const kcTownHallMdxForbiddenPatterns = [
     /\$490,?539/i,
@@ -948,6 +1109,39 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         kcTownHallContributionSource?.supportsGenerally.includes(support)
       )
   );
+  const kcTownHallAwardEvidenceClosed = Boolean(
+    kcTownHallAwardClaim?.evidence.length === kcTownHall.awardSourceIds.length &&
+      sameOrderedValues(
+        kcTownHallAwardClaim.evidence.map((evidence) => evidence.sourceId),
+        kcTownHall.awardSourceIds
+      ) &&
+      kcTownHallAwardClaim.evidence.every((evidence) =>
+        evidence.supports.length > 0 && evidence.supports.every((support) =>
+          sourceById.get(evidence.sourceId)?.supportsGenerally.includes(support)
+        )
+      )
+  );
+  const kcTownHallStewardshipEvidenceClosed = Boolean(
+    kcTownHallStewardshipClaim?.evidence.length === kcTownHall.stewardshipSourceIds.length &&
+      sameOrderedValues(
+        kcTownHallStewardshipClaim.evidence.map((evidence) => evidence.sourceId),
+        kcTownHall.stewardshipSourceIds
+      ) &&
+      kcTownHallStewardshipClaim.evidence.every((evidence) =>
+        evidence.supports.length > 0 && evidence.supports.every((support) =>
+          sourceById.get(evidence.sourceId)?.supportsGenerally.includes(support)
+        )
+      )
+  );
+  const kcTownHallTransitionEvidenceClosed = Boolean(
+    kcTownHallTransitionClaim?.evidence.length === 1 &&
+      kcTownHallTransitionClaim.evidence[0].sourceId === kcTownHall.transitionSourceId &&
+      kcTownHallTransitionClaim.evidence[0].renderCitation === false &&
+      kcTownHallTransitionClaim.evidence[0].supports.length > 0 &&
+      kcTownHallTransitionClaim.evidence[0].supports.every((support) =>
+        kcTownHallTransitionSource?.supportsGenerally.includes(support)
+      )
+  );
   const kcTownHallComplete = Boolean(
     kcTownHallIntake?.kind === "public-artifact" &&
       kcTownHallIntake.visibility === "public-safe" &&
@@ -956,6 +1150,20 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       sameOrderedValues(kcTownHallIntake.observationIds, kcTownHall.observationIds) &&
       kcTownHallIntake.researchInquiryIds.includes(kcTownHall.inquiryId) &&
       kcTownHallIntake.boundaries.length >= 3 &&
+      kcTownHallAwardIntake?.kind === "public-artifact" &&
+      kcTownHallAwardIntake.visibility === "public-safe" &&
+      kcTownHallAwardIntake.disposition === "integrated" &&
+      sameOrderedValues(kcTownHallAwardIntake.sourceIds, kcTownHall.awardSourceIds) &&
+      sameOrderedValues(kcTownHallAwardIntake.observationIds, kcTownHall.awardObservationIds) &&
+      sameOrderedValues(kcTownHallAwardIntake.researchInquiryIds, [kcTownHall.awardInquiryId]) &&
+      kcTownHallAwardIntake.boundaries.length >= 4 &&
+      kcTownHallStewardshipIntake?.kind === "public-artifact" &&
+      kcTownHallStewardshipIntake.visibility === "public-safe" &&
+      kcTownHallStewardshipIntake.disposition === "integrated" &&
+      sameOrderedValues(kcTownHallStewardshipIntake.sourceIds, kcTownHall.stewardshipSourceIds) &&
+      sameOrderedValues(kcTownHallStewardshipIntake.observationIds, kcTownHall.stewardshipObservationIds) &&
+      sameOrderedValues(kcTownHallStewardshipIntake.researchInquiryIds, [kcTownHall.stewardshipInquiryId]) &&
+      kcTownHallStewardshipIntake.boundaries.length >= 4 &&
       kcTownHallContributionIntake?.kind === "public-artifact" &&
       kcTownHallContributionIntake.visibility === "public-safe" &&
       kcTownHallContributionIntake.disposition === "integrated" &&
@@ -964,8 +1172,8 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       kcTownHallContributionIntake.boundaries.length >= 3 &&
       kcTownHallTransitionIntake?.kind === "memory-lead" &&
       kcTownHallTransitionIntake.visibility === "public-safe" &&
-      kcTownHallTransitionIntake.disposition === "researching" &&
-      sameOrderedValues(kcTownHallTransitionIntake.sourceIds, []) &&
+      kcTownHallTransitionIntake.disposition === "integrated" &&
+      sameOrderedValues(kcTownHallTransitionIntake.sourceIds, [kcTownHall.transitionSourceId]) &&
       sameOrderedValues(kcTownHallTransitionIntake.observationIds, [kcTownHall.transitionObservationId]) &&
       sameOrderedValues(kcTownHallTransitionIntake.researchInquiryIds, [kcTownHall.transitionInquiryId]) &&
       kcTownHallTransitionIntake.boundaries.length >= 3 &&
@@ -975,10 +1183,37 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
           source.supportsGenerally.length > 0 &&
           source.doesNotEstablish.length >= 3
       ) &&
+      kcTownHallAwardSources.every((source) =>
+        source &&
+          source.supportsGenerally.length > 0 &&
+          source.doesNotEstablish.length >= 4 &&
+          (
+            source.id === "SRC-KCTH-CCED-PROPOSAL-BUNDLE-2019"
+              ? source.kind === "project-archive" && source.visibility === "protected"
+              : source.kind === "government-record" && source.visibility === "public"
+          )
+      ) &&
+      kcTownHallStewardshipSources.every((source) =>
+        source &&
+          source.visibility === "public" &&
+          source.supportsGenerally.length > 0 &&
+          source.doesNotEstablish.length >= 4 &&
+          (
+            source.id === "SRC-KCSTAR-CCED-PROJECT-DELAYS-2021"
+              ? source.kind === "published-article"
+              : source.kind === "government-record"
+          )
+      ) &&
       kcTownHallContributionSource?.kind === "project-archive" &&
       kcTownHallContributionSource.visibility === "public" &&
       kcTownHallContributionSource.supportsGenerally.length >= 2 &&
       kcTownHallContributionSource.doesNotEstablish.length >= 4 &&
+      kcTownHallTransitionSource?.kind === "project-archive" &&
+      kcTownHallTransitionSource.visibility === "protected" &&
+      kcTownHallTransitionSource.preservationStatus === "private" &&
+      Boolean(kcTownHallTransitionSource.protectedLocatorId) &&
+      kcTownHallTransitionSource.supportsGenerally.length >= 2 &&
+      kcTownHallTransitionSource.doesNotEstablish.length >= 6 &&
       kcTownHallObservations.every((observation) =>
         observation?.kind === "source-fact" &&
           observation.status === "verified" &&
@@ -989,6 +1224,26 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
           observation.claimIds.includes(kcTownHall.claimId) &&
           observation.researchInquiryIds.includes(kcTownHall.inquiryId)
       ) &&
+      kcTownHallAwardObservations.every((observation) =>
+        observation?.kind === "source-fact" &&
+          observation.status === "verified" &&
+          observation.publicSafe === true &&
+          observation.sourceId === expectedKcTownHallAwardObservationSources.get(observation.id) &&
+          observation.locator &&
+          observation.limitations.length >= 2 &&
+          observation.claimIds.includes(kcTownHall.awardClaimId) &&
+          observation.researchInquiryIds.includes(kcTownHall.awardInquiryId)
+      ) &&
+      kcTownHallStewardshipObservations.every((observation) =>
+        observation?.kind === "source-fact" &&
+          observation.status === "verified" &&
+          observation.publicSafe === true &&
+          observation.sourceId === expectedKcTownHallStewardshipObservationSources.get(observation.id) &&
+          observation.locator &&
+          observation.limitations.length >= 2 &&
+          observation.claimIds.includes(kcTownHall.stewardshipClaimId) &&
+          observation.researchInquiryIds.includes(kcTownHall.stewardshipInquiryId)
+      ) &&
       kcTownHallContributionObservation?.kind === "source-fact" &&
       kcTownHallContributionObservation.status === "verified" &&
       kcTownHallContributionObservation.publicSafe === true &&
@@ -997,12 +1252,12 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       kcTownHallContributionObservation.limitations.length >= 2 &&
       kcTownHallContributionObservation.claimIds.includes(kcTownHall.contributionClaimId) &&
       kcTownHallTransitionObservation?.kind === "participant-memory" &&
-      kcTownHallTransitionObservation.status === "captured" &&
+      kcTownHallTransitionObservation.status === "verified" &&
       kcTownHallTransitionObservation.publicSafe === true &&
-      !kcTownHallTransitionObservation.sourceId &&
+      kcTownHallTransitionObservation.sourceId === kcTownHall.transitionSourceId &&
       kcTownHallTransitionObservation.locator &&
       kcTownHallTransitionObservation.limitations.length >= 3 &&
-      sameOrderedValues(kcTownHallTransitionObservation.claimIds, []) &&
+      sameOrderedValues(kcTownHallTransitionObservation.claimIds, [kcTownHall.transitionClaimId]) &&
       sameOrderedValues(kcTownHallTransitionObservation.researchInquiryIds, [kcTownHall.transitionInquiryId]) &&
       kcTownHallClaim?.status === "confirmed-with-boundary" &&
       kcTownHallClaim.boundaries.length >= 3 &&
@@ -1018,6 +1273,28 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
           sameOrderedValues(projection.surfaces, ["docs/knowledge-bank/projects/kc-town-hall"])
       ) &&
       kcTownHallEvidenceClosed &&
+      kcTownHallAwardClaim?.status === "confirmed-with-boundary" &&
+      kcTownHallAwardClaim.boundaries.length >= 4 &&
+      kcTownHallAwardClaim.antiClaims.length >= 6 &&
+      sameOrderedValues(kcTownHallAwardClaim.researchInquiryIds, [kcTownHall.awardInquiryId]) &&
+      kcTownHallAwardProjection?.status === "active" &&
+      kcTownHallAwardProjection.citationRequired === true &&
+      sameOrderedValues(kcTownHallAwardProjection.surfaces, ["/work/kc-town-hall"]) &&
+      kcTownHallAwardClaim.projections.some((projection) =>
+        projection.key === "archive-note" &&
+          projection.status === "active" &&
+          projection.citationRequired === true &&
+          sameOrderedValues(projection.surfaces, ["docs/knowledge-bank/projects/kc-town-hall"])
+      ) &&
+      kcTownHallAwardEvidenceClosed &&
+      kcTownHallStewardshipClaim?.status === "confirmed-with-boundary" &&
+      kcTownHallStewardshipClaim.boundaries.length >= 4 &&
+      kcTownHallStewardshipClaim.antiClaims.length >= 5 &&
+      sameOrderedValues(kcTownHallStewardshipClaim.researchInquiryIds, [kcTownHall.stewardshipInquiryId]) &&
+      kcTownHallStewardshipProjection?.status === "active" &&
+      kcTownHallStewardshipProjection.citationRequired === true &&
+      sameOrderedValues(kcTownHallStewardshipProjection.surfaces, ["/work/kc-town-hall"]) &&
+      kcTownHallStewardshipEvidenceClosed &&
       kcTownHallContributionClaim?.status === "confirmed-with-boundary" &&
       kcTownHallContributionClaim.boundaries.length >= 3 &&
       kcTownHallContributionClaim.antiClaims.length >= 4 &&
@@ -1028,14 +1305,39 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
           sameOrderedValues(projection.surfaces, ["/work/kc-town-hall"])
       ) &&
       kcTownHallContributionEvidenceClosed &&
+      kcTownHallTransitionClaim?.status === "confirmed-with-boundary" &&
+      kcTownHallTransitionClaim.boundaries.length >= 4 &&
+      kcTownHallTransitionClaim.antiClaims.length >= 5 &&
+      sameOrderedValues(kcTownHallTransitionClaim.researchInquiryIds, [kcTownHall.transitionInquiryId]) &&
+      kcTownHallTransitionCaseStudyProjection?.status === "active" &&
+      kcTownHallTransitionCaseStudyProjection.citationRequired === false &&
+      sameOrderedValues(kcTownHallTransitionCaseStudyProjection.surfaces, ["/work/kc-town-hall"]) &&
+      kcTownHallTransitionResumeProjection?.status === "active" &&
+      kcTownHallTransitionResumeProjection.citationRequired === false &&
+      sameOrderedValues(kcTownHallTransitionResumeProjection.surfaces, ["/resume"]) &&
+      kcTownHallTransitionClaim.projections.some((projection) =>
+        projection.key === "archive-note" &&
+          projection.status === "active" &&
+          projection.citationRequired === false &&
+          sameOrderedValues(projection.surfaces, ["docs/knowledge-bank/projects/kc-town-hall"])
+      ) &&
+      kcTownHallTransitionEvidenceClosed &&
       kcTownHallInquiry?.resultStatus === "recovered" &&
       sameOrderedValues(kcTownHallInquiry.sourceIds, kcTownHall.sourceIds) &&
       kcTownHallInquiry.findings.length >= 4 &&
       kcTownHallInquiry.limitations.length >= 3 &&
-      kcTownHallTransitionInquiry?.resultStatus === "inconclusive" &&
-      sameOrderedValues(kcTownHallTransitionInquiry.sourceIds, []) &&
-      kcTownHallTransitionInquiry.findings.length >= 1 &&
-      kcTownHallTransitionInquiry.limitations.length >= 3 &&
+      kcTownHallAwardInquiry?.resultStatus === "recovered" &&
+      sameOrderedValues(kcTownHallAwardInquiry.sourceIds, kcTownHall.awardSourceIds) &&
+      kcTownHallAwardInquiry.findings.length >= 5 &&
+      kcTownHallAwardInquiry.limitations.length >= 4 &&
+      kcTownHallStewardshipInquiry?.resultStatus === "recovered" &&
+      sameOrderedValues(kcTownHallStewardshipInquiry.sourceIds, kcTownHall.stewardshipSourceIds) &&
+      kcTownHallStewardshipInquiry.findings.length >= 4 &&
+      kcTownHallStewardshipInquiry.limitations.length >= 4 &&
+      kcTownHallTransitionInquiry?.resultStatus === "partially-recovered" &&
+      sameOrderedValues(kcTownHallTransitionInquiry.sourceIds, [kcTownHall.transitionSourceId]) &&
+      kcTownHallTransitionInquiry.findings.length >= 4 &&
+      kcTownHallTransitionInquiry.limitations.length >= 4 &&
       kcTownHallProofCoverage?.status === "partially-source-backed" &&
       sameOrderedValues(kcTownHallProofCoverage.sourceIds, kcTownHallProofCoverageSourceIds) &&
       sameOrderedValues(kcTownHallProofCoverage.researchInquiryIds, kcTownHallProofCoverageInquiryIds) &&
@@ -1043,15 +1345,37 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       /Ordinance 190642/.test(kcTownHallProof?.sourceBasis ?? "") &&
       /May 17, 2022/.test(kcTownHallProof?.sourceBasis ?? "") &&
       /Ordinance 240317/.test(kcTownHallProof?.sourceBasis ?? "") &&
-      /approved resume/i.test(kcTownHallProof?.sourceBasis ?? "") &&
-      /municipal records[^.]*do not establish Jamie/i.test(kcTownHallProof?.sourceBasis ?? "") &&
+      /developer\/presenter/i.test(kcTownHallProof?.sourceBasis ?? "") &&
+      /protected 2019 proposal bundle/i.test(kcTownHallProof?.sourceBasis ?? "") &&
+      /Ordinance 230316/.test(kcTownHallProof?.sourceBasis ?? "") &&
+      /does not establish sole authorship/i.test(kcTownHallProof?.sourceBasis ?? "") &&
       sameOrderedValues(kcTownHallPage?.sourceOrder, kcTownHallPageSourceIds) &&
-      kcTownHallPage?.occurrences.length === 3 &&
+      kcTownHallPage?.occurrences.length === 5 &&
       kcTownHallPage.occurrences.some((occurrence) =>
-        occurrence.id === "council-appropriation-lifecycle" &&
-          occurrence.claimId === kcTownHall.claimId &&
+        occurrence.id === "jamie-secured-cced-award" &&
+          occurrence.claimId === kcTownHall.awardClaimId &&
           occurrence.projection === "case-study" &&
-          sameOrderedValues(occurrence.sourceIds, kcTownHall.sourceIds)
+          sameOrderedValues(occurrence.sourceIds, [
+            "SRC-KC-TOWN-HALL-CCED-BOARD-MATERIALS-2019",
+            "SRC-KC-TOWN-HALL-RESOLUTION-190649",
+            "SRC-KC-TOWN-HALL-ORDINANCE-190642"
+          ])
+      ) &&
+      kcTownHallPage.occurrences.some((occurrence) =>
+        occurrence.id === "mission-aligned-transition" &&
+          occurrence.claimId === kcTownHall.transitionClaimId &&
+          occurrence.projection === "case-study" &&
+          occurrence.sourceIds === undefined
+      ) &&
+      kcTownHallPage.occurrences.some((occurrence) =>
+          occurrence.id === "administrative-stewardship" &&
+          occurrence.claimId === kcTownHall.stewardshipClaimId &&
+          occurrence.projection === "case-study" &&
+          sameOrderedValues(occurrence.sourceIds, [
+            "SRC-KCSTAR-CCED-PROJECT-DELAYS-2021",
+            "SRC-KC-TOWN-HALL-CCED-REPORT-2022-12",
+            "SRC-KC-TOWN-HALL-CCED-REPORT-2023"
+          ])
       ) &&
       kcTownHallPage.occurrences.some((occurrence) =>
         occurrence.id === "jamie-planning-contribution" &&
@@ -1075,9 +1399,12 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
           relation.creditScope === expected.creditScope &&
           relation.status === "confirmed-with-boundary" &&
           relation.claimIds.includes(
-            relation.id === "REL-JAMIE-COLED-KC-TOWN-HALL-PLANNING"
-              ? kcTownHall.contributionClaimId
-              : kcTownHall.claimId
+            expected.claimId ??
+              (
+                relation.id === "REL-JAMIE-COLED-KC-TOWN-HALL-PLANNING"
+                  ? kcTownHall.contributionClaimId
+                  : kcTownHall.claimId
+              )
           ) &&
           relation.sourceSupportKeys.length > 0 &&
           relation.sourceSupportKeys.every((supportKey) => relation.sourceIds.some(
@@ -1085,24 +1412,193 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
           )) &&
           relation.boundaries.length > 0);
       }) &&
-      kcTownHallMdx.includes(`claimId="${kcTownHall.claimId}"`) &&
-      kcTownHallMdx.includes('occurrenceId="council-appropriation-lifecycle"') &&
+      kcTownHallMdx.includes(`claimId="${kcTownHall.awardClaimId}"`) &&
+      kcTownHallMdx.includes('occurrenceId="jamie-secured-cced-award"') &&
+      kcTownHallMdx.includes(`claimId="${kcTownHall.transitionClaimId}"`) &&
+      kcTownHallMdx.includes(`claimId="${kcTownHall.stewardshipClaimId}"`) &&
+      kcTownHallMdx.includes('occurrenceId="administrative-stewardship"') &&
       kcTownHallMdx.includes(`claimId="${kcTownHall.contributionClaimId}"`) &&
       kcTownHallMdx.includes('occurrenceId="jamie-planning-contribution"') &&
       kcTownHallMdxSha256 === kcTownHall.approvedMdxSha256 &&
       kcTownHallContentSha256 === kcTownHall.approvedContentSha256 &&
       hasKcTownHallLifecycle(kcTownHallCaseStudyProjection.text) &&
       hasKcTownHallNegotiationBoundary(kcTownHallCaseStudyProjection.text) &&
-      hasKcTownHallLifecycle(kcTownHallProof?.publicWording) &&
-      hasKcTownHallNegotiationBoundary(kcTownHallProof?.publicWording) &&
-      hasKcTownHallLifecycle(kcTownHallProof?.detailedPublicWording) &&
-      hasKcTownHallNegotiationBoundary(kcTownHallProof?.detailedPublicWording) &&
-      hasKcTownHallLifecycle(kcTownHallWorkSummary) &&
-      hasKcTownHallNegotiationBoundary(kcTownHallWorkSummary) &&
-      hasKcTownHallOutcomeBoundary(kcTownHallProof?.shortWording) &&
+      hasKcTownHallAwardRole(kcTownHallAwardProjection?.text) &&
+      hasKcTownHallStewardship(kcTownHallStewardshipProjection?.text) &&
+      hasKcTownHallTransition(kcTownHallTransitionCaseStudyProjection?.text) &&
+      hasKcTownHallTransition(kcTownHallTransitionResumeProjection?.text) &&
+      /secured a \$490,?539 public funding award/i.test(kcTownHallProof?.publicWording ?? "") &&
+      hasKcTownHallTransition(kcTownHallProof?.publicWording) &&
+      hasKcTownHallTransition(kcTownHallProof?.shortWording) &&
+      hasKcTownHallTransition(kcTownHallProof?.detailedPublicWording) &&
+      /named developer\/presenter/i.test(kcTownHallProof?.detailedPublicWording ?? "") &&
+      hasKcTownHallStewardship(kcTownHallProof?.detailedPublicWording) &&
+      /secured a \$490,?539 public funding award/i.test(kcTownHallWorkSummary ?? "") &&
+      hasKcTownHallTransition(kcTownHallWorkSummary) &&
+      !/(?:withdraw|disburs|unused appropriation)/i.test(kcTownHallHiringFacingText) &&
       kcTownHallForbiddenPatterns.every((pattern) => !pattern.test(kcTownHallPublicText)) &&
       kcTownHallMdxForbiddenPatterns.every((pattern) => !pattern.test(kcTownHallMdxProse))
   );
+  if (process.env.DEBUG_KCTH === "1") {
+    console.error(JSON.stringify({
+      hashes: {
+        mdx: [kcTownHallMdxSha256, kcTownHall.approvedMdxSha256],
+        content: [kcTownHallContentSha256, kcTownHall.approvedContentSha256]
+      },
+      counts: {
+        awardEvidence: [kcTownHallAwardClaim?.evidence.length, kcTownHall.awardSourceIds.length],
+        stewardshipEvidence: [kcTownHallStewardshipClaim?.evidence.length, kcTownHall.stewardshipSourceIds.length],
+        relations: [kcTownHallRelations.length, expectedKcTownHallRelations.size],
+        pageOccurrences: kcTownHallPage?.occurrences.length
+      },
+      diagnostics: {
+        lifecycleSources: kcTownHallSources.map((source) => ({
+          id: source?.id,
+          kind: source?.kind,
+          visibility: source?.visibility,
+          supports: source?.supportsGenerally.length,
+          boundaries: source?.doesNotEstablish.length
+        })),
+        awardSources: kcTownHallAwardSources.map((source) => ({
+          id: source?.id,
+          kind: source?.kind,
+          visibility: source?.visibility,
+          supports: source?.supportsGenerally.length,
+          boundaries: source?.doesNotEstablish.length
+        })),
+        stewardshipSources: kcTownHallStewardshipSources.map((source) => ({
+          id: source?.id,
+          kind: source?.kind,
+          visibility: source?.visibility,
+          supports: source?.supportsGenerally.length,
+          boundaries: source?.doesNotEstablish.length
+        })),
+        contributionSource: {
+          id: kcTownHallContributionSource?.id,
+          kind: kcTownHallContributionSource?.kind,
+          visibility: kcTownHallContributionSource?.visibility,
+          supports: kcTownHallContributionSource?.supportsGenerally.length,
+          boundaries: kcTownHallContributionSource?.doesNotEstablish.length
+        },
+        intakes: [
+          kcTownHallIntake,
+          kcTownHallAwardIntake,
+          kcTownHallStewardshipIntake,
+          kcTownHallContributionIntake,
+          kcTownHallTransitionIntake
+        ].map((intake) => ({
+          id: intake?.id,
+          kind: intake?.kind,
+          visibility: intake?.visibility,
+          disposition: intake?.disposition,
+          sources: intake?.sourceIds.length,
+          observations: intake?.observationIds.length,
+          inquiries: intake?.researchInquiryIds.length,
+          boundaries: intake?.boundaries.length
+        })),
+        observations: [
+          ...kcTownHallObservations,
+          ...kcTownHallAwardObservations,
+          ...kcTownHallStewardshipObservations,
+          kcTownHallContributionObservation,
+          kcTownHallTransitionObservation
+        ].map((observation) => ({
+          id: observation?.id,
+          kind: observation?.kind,
+          status: observation?.status,
+          publicSafe: observation?.publicSafe,
+          sourceId: observation?.sourceId,
+          locator: Boolean(observation?.locator),
+          limitations: observation?.limitations.length,
+          claims: observation?.claimIds,
+          inquiries: observation?.researchInquiryIds
+        })),
+        relations: kcTownHallRelations.map((relation) => {
+          const expected = relation && expectedKcTownHallRelations.get(relation.id);
+          return {
+            id: relation?.id,
+            expected: Boolean(expected),
+            actor: relation?.actorIds,
+            expectedActor: expected?.actorId,
+            action: relation?.action,
+            expectedAction: expected?.action,
+            object: relation?.objectId,
+            expectedObject: expected?.objectId,
+            credit: relation?.creditScope,
+            expectedCredit: expected?.creditScope,
+            status: relation?.status,
+            claims: relation?.claimIds,
+            expectedClaim: expected?.claimId,
+            supports: relation?.sourceSupportKeys.length,
+            unsupportedKeys: relation?.sourceSupportKeys.filter((supportKey) => !relation.sourceIds.some(
+              (sourceId) => sourceById.get(sourceId)?.supportsGenerally.includes(supportKey)
+            )),
+            boundaries: relation?.boundaries.length
+          };
+        }),
+        inquiryCounts: {
+          lifecycle: [kcTownHallInquiry?.resultStatus, kcTownHallInquiry?.findings.length, kcTownHallInquiry?.limitations.length],
+          award: [kcTownHallAwardInquiry?.resultStatus, kcTownHallAwardInquiry?.findings.length, kcTownHallAwardInquiry?.limitations.length],
+          stewardship: [kcTownHallStewardshipInquiry?.resultStatus, kcTownHallStewardshipInquiry?.findings.length, kcTownHallStewardshipInquiry?.limitations.length],
+          transition: [kcTownHallTransitionInquiry?.resultStatus, kcTownHallTransitionInquiry?.findings.length, kcTownHallTransitionInquiry?.limitations.length]
+        },
+        claimCounts: {
+          lifecycle: [kcTownHallClaim?.status, kcTownHallClaim?.boundaries.length, kcTownHallClaim?.antiClaims.length],
+          award: [kcTownHallAwardClaim?.status, kcTownHallAwardClaim?.boundaries.length, kcTownHallAwardClaim?.antiClaims.length],
+          stewardship: [kcTownHallStewardshipClaim?.status, kcTownHallStewardshipClaim?.boundaries.length, kcTownHallStewardshipClaim?.antiClaims.length],
+          contribution: [kcTownHallContributionClaim?.status, kcTownHallContributionClaim?.boundaries.length, kcTownHallContributionClaim?.antiClaims.length]
+        },
+        closed: {
+          lifecycle: kcTownHallEvidenceClosed,
+          award: kcTownHallAwardEvidenceClosed,
+          stewardship: kcTownHallStewardshipEvidenceClosed,
+          contribution: kcTownHallContributionEvidenceClosed
+        },
+        guards: {
+          sourceBasisResolution: /Resolution 190649/.test(kcTownHallProof?.sourceBasis ?? ""),
+          sourceBasisOrdinance190642: /Ordinance 190642/.test(kcTownHallProof?.sourceBasis ?? ""),
+          sourceBasisMay2022: /May 17, 2022/.test(kcTownHallProof?.sourceBasis ?? ""),
+          sourceBasisOrdinance240317: /Ordinance 240317/.test(kcTownHallProof?.sourceBasis ?? ""),
+          sourceBasisPresenter: /developer\/presenter/i.test(kcTownHallProof?.sourceBasis ?? ""),
+          sourceBasisProposal: /protected 2019 proposal bundle/i.test(kcTownHallProof?.sourceBasis ?? ""),
+          sourceBasisOrdinance230316: /Ordinance 230316/.test(kcTownHallProof?.sourceBasis ?? ""),
+          sourceBasisAuthorship: /does not establish sole authorship/i.test(kcTownHallProof?.sourceBasis ?? ""),
+          lifecycleProjection: hasKcTownHallLifecycle(kcTownHallCaseStudyProjection?.text),
+          negotiationProjection: hasKcTownHallNegotiationBoundary(kcTownHallCaseStudyProjection?.text),
+          awardProjection: hasKcTownHallAwardRole(kcTownHallAwardProjection?.text),
+          stewardshipProjection: hasKcTownHallStewardship(kcTownHallStewardshipProjection?.text),
+          publicAgreement: /(?:funding )?agreement was not completed/i.test(kcTownHallProof?.publicWording ?? ""),
+          publicAward: /secured a \$490,?539 public funding award/i.test(kcTownHallProof?.publicWording ?? ""),
+          detailedPresenter: /named developer\/presenter/i.test(kcTownHallProof?.detailedPublicWording ?? ""),
+          workAgreement: /agreement was not completed/i.test(kcTownHallWorkSummary ?? ""),
+          workAward: /secured a \$490,?539 public funding award/i.test(kcTownHallWorkSummary ?? "")
+        }
+      },
+      exact: {
+        awardEvidence: kcTownHallAwardEvidenceClosed,
+        stewardshipEvidence: kcTownHallStewardshipEvidenceClosed,
+        proofCoverageSources: sameOrderedValues(kcTownHallProofCoverage?.sourceIds, kcTownHallProofCoverageSourceIds),
+        proofCoverageInquiries: sameOrderedValues(kcTownHallProofCoverage?.researchInquiryIds, kcTownHallProofCoverageInquiryIds),
+        pageSources: sameOrderedValues(kcTownHallPage?.sourceOrder, kcTownHallPageSourceIds)
+      },
+      text: {
+        award: hasKcTownHallAwardRole(kcTownHallAwardProjection?.text),
+        stewardship: hasKcTownHallStewardship(kcTownHallStewardshipProjection?.text),
+        proofPublicLifecycle: hasKcTownHallLifecycle(kcTownHallProof?.publicWording),
+        proofDetailedLifecycle: hasKcTownHallLifecycle(kcTownHallProof?.detailedPublicWording),
+        proofDetailedStewardship: hasKcTownHallStewardship(kcTownHallProof?.detailedPublicWording),
+        workLifecycle: hasKcTownHallLifecycle(kcTownHallWorkSummary),
+        shortOutcome: hasKcTownHallOutcomeBoundary(kcTownHallProof?.shortWording),
+        forbidden: kcTownHallForbiddenPatterns
+          .map((pattern) => pattern.test(kcTownHallPublicText) ? pattern.toString() : null)
+          .filter(Boolean),
+        mdxForbidden: kcTownHallMdxForbiddenPatterns
+          .map((pattern) => pattern.test(kcTownHallMdxProse) ? pattern.toString() : null)
+          .filter(Boolean)
+      },
+      complete: kcTownHallComplete
+    }, null, 2));
+  }
 
   const pilotIntakes = suite.pilot.intakeIds.map((id) => intakeById.get(id));
   const pilotSources = suite.pilot.sourceIds.map((id) => sourceById.get(id));
@@ -1806,8 +2302,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         archiveLabPage?.occurrences.map((occurrence) => occurrence.id),
         archive.labOccurrenceIds
       ) &&
-      archiveLabPage?.sourceOrder.length === 1 &&
-      archiveLabPage.sourceOrder[0] === archive.certificateSourceId &&
+      sameOrderedValues(archiveLabPage?.sourceOrder, archive.labSourceIds) &&
       fairRentMdx.includes('claimId="CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026"') &&
       fairRentMdx.includes('claimId="CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026"') &&
       archiveLabSource.includes('claimId="CLM-SOURCE-BACKED-MEMORY-METHOD-2026"') &&
@@ -3189,6 +3684,18 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
     kcTownHallMdxSha256 === KCTH_FIELD_PRACTICE_REVIEW_LOCKS.caseStudyMdxSha256 &&
     fieldPracticeSharedPublicSurfacesSha256 === KCTH_FIELD_PRACTICE_REVIEW_LOCKS.sharedPublicSurfacesSha256 &&
     fieldPracticePublicReviewReportSha256 === KCTH_FIELD_PRACTICE_REVIEW_LOCKS.publicReviewReportSha256;
+  if (process.env.DEBUG_FIELD_PRACTICE === "1") {
+    console.error(JSON.stringify({
+      corpusSha256: fieldPracticeContentSha256,
+      canonicalRecordsSha256: fieldPracticeCanonicalRecordsSha256,
+      governedKnowledgeSha256: kcTownHallContentSha256,
+      proofProjectionSha256: fieldPracticeProofProjectionSha256,
+      caseStudyMdxSha256: kcTownHallMdxSha256,
+      sharedPublicSurfacesSha256: fieldPracticeSharedPublicSurfacesSha256,
+      publicReviewReportSha256: fieldPracticePublicReviewReportSha256,
+      approved: KCTH_FIELD_PRACTICE_REVIEW_LOCKS
+    }, null, 2));
+  }
   const fieldPracticePrivatePathFree = !/(?:\/Users\/|\/Volumes\/|\/private\/tmp\/|GoogleDrive-|Mobile Documents)/.test(
     JSON.stringify(kcTownHallFieldPractice) + fieldPracticeReport
   );
@@ -5093,6 +5600,14 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
     }))
   )).digest("hex");
   const agencyGraphApproved = agencyGraphSha256 === agency.approvedGraphSha256;
+  if (process.env.DEBUG_AGENCY === "1") {
+    console.error(JSON.stringify({
+      actualGraphSha256: agencyGraphSha256,
+      approvedGraphSha256: agency.approvedGraphSha256,
+      relationCount: knowledgeBank.agencyRelations.length,
+      expectedRelationCount: agency.expectedRelationCount
+    }, null, 2));
+  }
   const enactedRelations = knowledgeBank.agencyRelations.filter(
     (relation) => relation.action === "enacted"
   );
@@ -5174,7 +5689,15 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         relation.actorIds.every((actorId) => entityById.get(actorId)?.publicSafe) &&
         entityById.get(relation.objectId)?.publicSafe &&
         relation.claimIds.every((claimId) => claimById.has(claimId)) &&
-        relation.sourceIds.every((sourceId) => sourceById.get(sourceId)?.visibility === "public") &&
+        relation.sourceIds.every((sourceId) => {
+          const source = sourceById.get(sourceId);
+          return source?.visibility === "public" || (
+            source?.visibility === "protected" &&
+            Boolean(source.protectedLocatorId) &&
+            !publicRegistryText.includes(source.id) &&
+            !publicRegistryText.includes(source.protectedLocatorId)
+          );
+        }) &&
         relation.sourceIds.every((sourceId) =>
           relation.claimIds.some((claimId) =>
             claimById.get(claimId)?.evidence.some((evidence) => evidence.sourceId === sourceId)

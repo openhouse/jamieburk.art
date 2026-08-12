@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "id": "commercial-rent-public-support",
+  "purpose": "Preserve the strongest recoverable public-support record without flattening source classes, speaker roles, completeness, or public/private boundaries.",
+  "criteria": [
+    {
+      "id": "CRPS-001",
+      "name": "Bounded population closure",
+      "type": "hard-gate",
+      "passCondition": "Every full-text claim names its recoverable population: all attributed turns for selected formal-program speakers or all attributed quotations in one official source."
+    },
+    {
+      "id": "CRPS-002",
+      "name": "Source-class integrity",
+      "type": "hard-gate",
+      "passCondition": "Speech transcripts, press-release quotations, bill records, sponsor memos, and election results remain explicitly distinct."
+    },
+    {
+      "id": "CRPS-003",
+      "name": "Time-aware role attribution",
+      "type": "hard-gate",
+      "passCondition": "Each speaker has a role at the event; later election results do not retroactively confer office."
+    },
+    {
+      "id": "CRPS-004",
+      "name": "Protected locator boundary",
+      "type": "hard-gate",
+      "passCondition": "Public records contain no private paths, authenticated transcript URLs, personal email addresses, or raw audio locators."
+    },
+    {
+      "id": "CRPS-005",
+      "name": "No endorsement conversion",
+      "type": "hard-gate",
+      "passCondition": "Policy support is never represented as endorsement of Jamie or his portfolio."
+    },
+    {
+      "id": "CRPS-006",
+      "name": "Null findings remain visible",
+      "type": "hard-gate",
+      "passCondition": "A floor speech or other expected source that was not recovered is recorded as a bounded null finding, not invented or silently omitted."
+    }
+  ],
+  "command": "npm run test:commercial-rent-public-support",
+  "humanGates": [
+    "Jamie may correct names, event context, transcription, and role descriptions.",
+    "Publication beyond the governed Wiki remains a separate editorial decision.",
+    "Future source recovery expands the corpus only after the same checks pass."
+  ]
+}

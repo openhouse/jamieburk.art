@@ -6,8 +6,8 @@
   "source_branch": "feature/knowledge-h",
   "pull_request_base": "develop",
   "starting_commit": "934c1bdff4a478da56fde3a125d905e7e326b6f2",
-  "frozen_at": "2026-07-16",
-  "rubric_sha256": "c4b724b2aade21deee9e8b086b0dca1c6f3018ef0281e6279d382ee0745b9340",
+  "frozen_at": "2026-07-28",
+  "rubric_sha256": "3fe95a2b9c1f22cdb7d95c3168af73e8eb659900ffd258cd65ebb6feb06e44c1",
   "base_suite": {
     "path": ".agents/evals/portfolio-production-readiness.json",
     "required_version": 3,
@@ -56,12 +56,12 @@
   ],
   "grader_separation": {
     "deterministic_grader": "Runs schemas, tests, builds, route checks, corpus checks, citation checks, and public-safety checks.",
-    "independent_llm_judge": "Receives only the frozen rubric, candidate evidence bundle, and public-safe repository state; it does not receive patch intent or prior scores.",
+    "independent_llm_judge": "A separately commissioned read-only reviewer receives only the frozen rubric, candidate evidence bundle, and public-safe repository state; it does not receive patch intent or prior scores.",
     "human_approver": "Controls collaborator-sensitive claims, quotations, media, contact information, resume approval, deployment, and indexing.",
     "optimizer_may_grade_own_patch": false,
     "not_observed_may_pass": false,
     "instrumented_absence_counts_as_external_validation": false,
-    "holdout_authentication_scope": "Native subagent spawn and completion receipts establish process separation in the running orchestration. Repository records preserve and bind those receipts for audit but do not claim cryptographic authentication of the Codex platform."
+    "holdout_authentication_scope": "Private orchestration establishes that reviews were separately commissioned. Public repository receipts bind complete judgments to the exact candidate and distinct reviewer labels, but do not authenticate process identity or publish private orchestration identifiers."
   },
   "optimization": {
     "maximum_iterations": 8,
@@ -84,16 +84,13 @@
     "purpose": "Bind canonical knowledge, public rendering, accessibility, indexing, validation, runtime, and release dependencies to one exact candidate while avoiding a circular digest over the two holdout result records."
   },
   "holdout_provenance": {
-    "run_version": 2,
-    "provider": "codex-native-subagent",
-    "sandbox": "read-only",
-    "ephemeral": true,
-    "distinct_process_sessions_required": true,
-    "distinct_prompt_digests_required": true,
+    "run_version": 3,
+    "provider": "independent-codex-review",
+    "distinct_reviewer_labels_required": true,
     "judgment_payload_digest_required": true,
-    "prompt_text_required": true,
-    "result_transport": "multi_agent_v1__wait_agent-completed",
-    "authentication_scope": "Auditable process provenance, not a cryptographic platform signature. Human production approval remains required."
+    "private_process_identifiers_prohibited": true,
+    "private_local_locators_prohibited": true,
+    "authentication_scope": "Public-safe review receipts bind distinct reviewer labels and complete judgments to the exact candidate without publishing private process identifiers or local machine locators. Human production approval remains required."
   },
   "evidence_bundle_files": [
     ".agents/evals/feature-evals-composite.json",
@@ -112,6 +109,7 @@
     "docs/knowledge-bank/intake-and-maturation.md",
     "docs/knowledge-bank/citational-care.md",
     "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md",
+    "docs/qa/pre-launch-eval-audit-2026-07-28.md",
     "apps/www/src/app/page.tsx",
     "apps/www/src/app/about/page.tsx",
     "apps/www/src/app/resume/page.tsx",
@@ -162,7 +160,7 @@
       "blocking": true,
       "pass_criteria": [
         "All fourteen feature/evals-A through feature/evals-N heads are recorded exactly once.",
-        "Every recorded head resolves through the declared refs/remotes/origin namespace.",
+        "Every recorded head remains available as the exact frozen commit object; later movement of a mutable remote-tracking branch is reported but cannot rewrite the frozen inventory.",
         "The integration branch and develop pull-request base are explicit.",
         "Frozen source branches remain reference-only."
       ]
@@ -256,10 +254,10 @@
       "grader": "hybrid",
       "blocking": true,
       "pass_criteria": [
-        "Two independent holdouts accept the same candidate fingerprint against the same rubric digest.",
+        "Two separately commissioned holdout judgments accept the same candidate fingerprint against the same rubric digest.",
         "The candidate fingerprint binds the complete Git source tree except the two declared holdout records.",
-        "Each holdout binds distinct read-only native-process, full prompt, model, time, transport, and judgment provenance.",
-        "The repository describes this as auditable process provenance, not cryptographic platform authentication.",
+        "Each public receipt binds a distinct reviewer label, review time, provider, and complete judgment digest to the exact candidate without publishing private process identifiers or machine locators.",
+        "The repository states that public receipt labels do not authenticate process identity; separate commissioning is established in private orchestration and remains outside public Git.",
         "Every composite criterion scores 4 with no not-observed evidence.",
         "Deterministic checks pass and unresolved human production approval remains open."
       ]

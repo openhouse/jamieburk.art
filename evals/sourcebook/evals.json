@@ -1,0 +1,30 @@
+{
+  "suite": "jamie-sourcebook-public-trust-boundary",
+  "version": 1,
+  "requiredPassRate": 1,
+  "criteria": [
+    "catalog-and-packet-schema",
+    "population-closure",
+    "one-canonical-body",
+    "body-fingerprint-freshness",
+    "generated-output-freshness",
+    "no-protected-locators",
+    "stance-basis-required",
+    "support-requires-direct-evidence",
+    "endorsement-is-not-a-stance",
+    "occurrence-requires-corroboration",
+    "transcript-certification-cannot-inflate",
+    "active-projection-requires-rights-and-consent",
+    "active-projection-is-git-only",
+    "withdrawal-invalidates-packet",
+    "publication-packet-fields-are-allowlisted",
+    "publication-packet-hashes-match"
+  ],
+  "humanGates": [
+    "third-party rights and consent",
+    "photo rights and consent",
+    "portfolio editorial selection",
+    "deployment",
+    "production indexing"
+  ]
+}

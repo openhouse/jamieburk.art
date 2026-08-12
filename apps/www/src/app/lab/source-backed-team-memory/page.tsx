@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import SourceBackedMemory from "@/content/lab/source-backed-team-memory.mdx";
-import { Claim, References } from "@/components/citations";
+import { Cite, Claim, References } from "@/components/citations";
 import { JBButton } from "@/components/JBButton";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
@@ -77,6 +77,40 @@ export default function SourceBackedTeamMemoryPage() {
               </div>
             ))}
           </div>
+        </section>
+        <section className="mt-12 border-b border-jb-ink/12 pb-10">
+          <p className="text-sm font-semibold uppercase text-jb-blue">
+            Concrete correction trace
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold text-jb-ink">
+            The public record changed the portfolio
+          </h2>
+          <p className="mt-4 max-w-3xl leading-8 text-jb-ink/76">
+            Earlier portfolio copy dated CallNYC to 2014-2015. A recovered
+            Council hackathon announcement, the fuller CouncilStat data-release
+            chronology, and contemporaneous Politico coverage placed the work
+            in 2016.<Cite pageId="source-backed-team-memory" occurrenceId="callnyc-correction-trace" />{" "}
+            The correction was applied to the work index, case study, and
+            resume while the prior wording and reason remained visible in the
+            Knowledge Wiki.
+          </p>
+          <dl className="mt-6 grid gap-px border border-jb-ink/12 bg-jb-ink/12 md:grid-cols-3">
+            <div className="bg-jb-paper p-5">
+              <dt className="font-semibold text-jb-blue">Before</dt>
+              <dd className="mt-2 text-sm leading-6 text-jb-ink/74">2014-2015</dd>
+            </div>
+            <div className="bg-jb-paper p-5">
+              <dt className="font-semibold text-jb-blue">After</dt>
+              <dd className="mt-2 text-sm leading-6 text-jb-ink/74">2016</dd>
+            </div>
+            <div className="bg-jb-paper p-5">
+              <dt className="font-semibold text-jb-blue">Handoff</dt>
+              <dd className="mt-2 text-sm leading-6 text-jb-ink/74">
+                One correction propagated to every public surface that carried
+                the date.
+              </dd>
+            </div>
+          </dl>
         </section>
         <section className="mt-12 grid gap-6 border-b border-jb-ink/12 pb-10 lg:grid-cols-[0.58fr_0.42fr] lg:items-center">
           <figure className="overflow-hidden rounded-lg border border-jb-ink/12 bg-jb-paper">

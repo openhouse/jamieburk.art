@@ -1,0 +1,1553 @@
+{
+  "schemaVersion": 1,
+  "corpusId": "corpus.nyc-council.public-hearing-voices.2026-07",
+  "event": {
+    "id": "event.nycc.consumer-affairs.cabaret-law-2017-06-19",
+    "title": "Committee on Consumer Affairs Cabaret Law hearing",
+    "date": "2017-06-19",
+    "committee": "Committee on Consumer Affairs",
+    "championedIssues": [
+      "Cabaret Law repeal",
+      "legal dance",
+      "an Office of Nightlife",
+      "safer relationships between cultural spaces and city agencies"
+    ]
+  },
+  "source": {
+    "organization": "New York City Council",
+    "officialUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=41F1062B-FC32-4A12-846E-65CEB3BB052C&ID=5316935&M=F",
+    "protectedTranscriptKey": "cabaret-2017-06-19.txt",
+    "extraction": "pdftotext -layout",
+    "transcriptSha256": "0010de8685d6041c1297f8d72d7ce39f86fe60c9e0c8e18096c1dcc0cf218fa2",
+    "publicRepositoryState": "Official source link, checksum, population counts, page locators, and speaker index only; raw transcript text is not republished."
+  },
+  "method": {
+    "population": "Every attributed speaker turn parsed from the complete official transcript text.",
+    "attribution": "Speaker labels are preserved from the official transcript. A small alias map normalizes obvious recorded variants while retaining every original label.",
+    "position": "High-precision phrase matching identifies explicit positions. Context and review-needed records remain in the public-safe speaker index; the official transcript remains the authority.",
+    "warning": "Position fields are research aids, not quotations, endorsements, or substitutes for human close reading. Transcript text remains outside the public repository."
+  },
+  "closure": {
+    "pageCount": 229,
+    "turnCount": 374,
+    "speakerCount": 58,
+    "explicitSupportSpeakerCount": 11,
+    "alignmentReviewNeededCount": 37,
+    "jamieTranscriptRecovered": true,
+    "allParsedTurnsAssignedToSpeaker": true
+  },
+  "explicitSupportSpeakers": [
+    {
+      "speaker": "Alicia Kazzi",
+      "position": "explicit-support-with-caveat",
+      "transcriptPages": [
+        151
+      ],
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "repeal the cabaret law"
+      ]
+    },
+    {
+      "speaker": "Alyssa Chapman",
+      "position": "explicit-support-with-caveat",
+      "transcriptPages": [
+        121
+      ],
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "should be repealed"
+      ]
+    },
+    {
+      "speaker": "Andrew Muchmore",
+      "position": "explicit-support-with-caveat",
+      "transcriptPages": [
+        18,
+        20,
+        46,
+        47
+      ],
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "i support"
+      ]
+    },
+    {
+      "speaker": "Council Member Reynoso",
+      "position": "explicit-support-with-caveat",
+      "transcriptPages": [
+        11,
+        59,
+        61,
+        62
+      ],
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "repeal the cabaret law"
+      ]
+    },
+    {
+      "speaker": "Derek Leon Washington",
+      "position": "explicit-support",
+      "transcriptPages": [
+        219,
+        221
+      ],
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "repeal the cabaret law"
+      ]
+    },
+    {
+      "speaker": "Dj Straight The Navigator",
+      "position": "explicit-support-with-caveat",
+      "transcriptPages": [
+        211
+      ],
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "should be repealed"
+      ]
+    },
+    {
+      "speaker": "Dominique Keegan",
+      "position": "explicit-support-with-caveat",
+      "transcriptPages": [
+        149
+      ],
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "i support"
+      ]
+    },
+    {
+      "speaker": "Jamie Burkart",
+      "position": "explicit-support",
+      "transcriptPages": [
+        200
+      ],
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "repeal the cabaret law",
+        "legalize dance"
+      ]
+    },
+    {
+      "speaker": "John Barclay",
+      "position": "explicit-support-with-caveat",
+      "transcriptPages": [
+        105,
+        140,
+        141
+      ],
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "i support"
+      ]
+    },
+    {
+      "speaker": "Leah Lonzo",
+      "position": "explicit-support",
+      "transcriptPages": [
+        223,
+        224
+      ],
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "repeal the cabaret law"
+      ]
+    },
+    {
+      "speaker": "Shira Gans",
+      "position": "explicit-support-with-caveat",
+      "transcriptPages": [
+        64,
+        79,
+        81,
+        82,
+        86,
+        87,
+        88
+      ],
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "we support"
+      ]
+    }
+  ],
+  "speakers": [
+    {
+      "speaker": "Ali Coleman",
+      "transcriptLabels": [
+        "ALI COLEMAN"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        173
+      ],
+      "wordCount": 373,
+      "turnCount": 1,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but "
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Alicia Kazzi",
+      "transcriptLabels": [
+        "ALICIA KAZZI"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        151
+      ],
+      "wordCount": 988,
+      "turnCount": 1,
+      "position": "explicit-support-with-caveat",
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "repeal the cabaret law"
+      ],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but ",
+        "recommend"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Allen Sugarman",
+      "transcriptLabels": [
+        "ALLEN SUGARMAN"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        191,
+        193
+      ],
+      "wordCount": 667,
+      "turnCount": 3,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but ",
+        "amend"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Alyssa Chapman",
+      "transcriptLabels": [
+        "ALYSSA CHAPMAN"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        121
+      ],
+      "wordCount": 561,
+      "turnCount": 1,
+      "position": "explicit-support-with-caveat",
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "should be repealed"
+      ],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "recommend"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Andrew Muchmore",
+      "transcriptLabels": [
+        "ANDREW MUCHMORE"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        18,
+        20,
+        46,
+        47
+      ],
+      "wordCount": 1813,
+      "turnCount": 7,
+      "position": "explicit-support-with-caveat",
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "i support"
+      ],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "however",
+        "but ",
+        "concern",
+        "amend",
+        "question"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Andrew Rigie",
+      "transcriptLabels": [
+        "ANDREW RIGIE"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        111,
+        132,
+        134,
+        136,
+        137,
+        140
+      ],
+      "wordCount": 1406,
+      "turnCount": 6,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but ",
+        "concern",
+        "recommend",
+        "question"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Arelia Taveras",
+      "transcriptLabels": [
+        "ARELIA TAVERAS"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        144,
+        145,
+        149
+      ],
+      "wordCount": 1033,
+      "turnCount": 4,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but ",
+        "concern"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Auburn Terkel",
+      "transcriptLabels": [
+        "AUBURN TERKEL"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        164,
+        187,
+        188,
+        189
+      ],
+      "wordCount": 1049,
+      "turnCount": 5,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "however",
+        "but ",
+        "concern",
+        "amend"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Ayel",
+      "transcriptLabels": [
+        "AYEL"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        209
+      ],
+      "wordCount": 385,
+      "turnCount": 1,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "however",
+        "but "
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "B E F O R E",
+      "transcriptLabels": [
+        "B E F O R E"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        1
+      ],
+      "wordCount": 5,
+      "turnCount": 1,
+      "position": "procedural-or-unattributed",
+      "basis": "The transcript label is procedural or does not identify a person.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Brandon Hoy",
+      "transcriptLabels": [
+        "BRANDON HOY"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        26,
+        28,
+        29,
+        48,
+        49,
+        50,
+        61
+      ],
+      "wordCount": 910,
+      "turnCount": 9,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but ",
+        "question"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Brenda Neville",
+      "transcriptLabels": [
+        "BRENDA NEVILLE"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        225
+      ],
+      "wordCount": 382,
+      "turnCount": 1,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "however",
+        "but "
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Brendan Mcglynn",
+      "transcriptLabels": [
+        "BRENDAN MCGLYNN"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        208
+      ],
+      "wordCount": 160,
+      "turnCount": 1,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but "
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Chairperson Espinal",
+      "transcriptLabels": [
+        "CHAIRPERSON ESPINAL"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        11,
+        12,
+        18,
+        20,
+        26,
+        28,
+        29,
+        37,
+        45,
+        46,
+        47,
+        48,
+        49,
+        51,
+        52,
+        53,
+        54,
+        56,
+        57,
+        58,
+        59,
+        62,
+        63,
+        64,
+        70,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        81,
+        82,
+        84,
+        86,
+        87,
+        88,
+        93,
+        96,
+        99,
+        101,
+        103,
+        104,
+        105,
+        108,
+        125,
+        129,
+        131,
+        133,
+        135,
+        136,
+        138,
+        140,
+        141,
+        142,
+        143,
+        145,
+        148,
+        149,
+        156,
+        161,
+        170,
+        179,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        193,
+        197,
+        199,
+        200,
+        202,
+        203,
+        204,
+        205,
+        212,
+        213,
+        216,
+        221,
+        222,
+        223,
+        224,
+        225,
+        227
+      ],
+      "wordCount": 7304,
+      "turnCount": 148,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but ",
+        "concern",
+        "question"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Christopher Carroll",
+      "transcriptLabels": [
+        "CHRISTOPHER CARROLL"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        29,
+        51
+      ],
+      "wordCount": 930,
+      "turnCount": 2,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "however",
+        "but ",
+        "concern",
+        "question"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Council Member Johnson",
+      "transcriptLabels": [
+        "COUNCIL MEMBER JOHNSON"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        93,
+        95,
+        96,
+        101
+      ],
+      "wordCount": 1051,
+      "turnCount": 12,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but ",
+        "concern"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Council Member Levin",
+      "transcriptLabels": [
+        "COUNCIL MEMBER LEVIN"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        89,
+        90,
+        91,
+        92,
+        93
+      ],
+      "wordCount": 313,
+      "turnCount": 12,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but ",
+        "question"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Council Member Reynoso",
+      "transcriptLabels": [
+        "COUNCIL MEMBER REYNOSO"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        11,
+        59,
+        61,
+        62
+      ],
+      "wordCount": 724,
+      "turnCount": 7,
+      "position": "explicit-support-with-caveat",
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "repeal the cabaret law"
+      ],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but "
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Council Members",
+      "transcriptLabels": [
+        "COUNCIL MEMBERS"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        1
+      ],
+      "wordCount": 395,
+      "turnCount": 1,
+      "position": "procedural-or-unattributed",
+      "basis": "The transcript label is procedural or does not identify a person.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "David Rosen",
+      "transcriptLabels": [
+        "DAVID ROSEN"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        178,
+        179,
+        185,
+        186
+      ],
+      "wordCount": 1491,
+      "turnCount": 9,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "however",
+        "but ",
+        "concern",
+        "recommend"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Deputy Commissioner Bagga",
+      "transcriptLabels": [
+        "DEPUTY COMMISSIONER BAGGA"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        99
+      ],
+      "wordCount": 397,
+      "turnCount": 1,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but "
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Derek Leon Washington",
+      "transcriptLabels": [
+        "DEREK LEON WASHINGTON"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        219,
+        221
+      ],
+      "wordCount": 330,
+      "turnCount": 2,
+      "position": "explicit-support",
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "repeal the cabaret law"
+      ],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Diego Vargas",
+      "transcriptLabels": [
+        "DIEGO VARGAS"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        177
+      ],
+      "wordCount": 329,
+      "turnCount": 1,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Dj Straight The Navigator",
+      "transcriptLabels": [
+        "DJ STRAIGHT THE NAVIGATOR"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        211
+      ],
+      "wordCount": 325,
+      "turnCount": 1,
+      "position": "explicit-support-with-caveat",
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "should be repealed"
+      ],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but "
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Dominique Keegan",
+      "transcriptLabels": [
+        "DOMINIQUE KEEGAN"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        149
+      ],
+      "wordCount": 508,
+      "turnCount": 3,
+      "position": "explicit-support-with-caveat",
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "i support"
+      ],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but "
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Elvis Silverado",
+      "transcriptLabels": [
+        "ELVIS SILVERADO"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        188
+      ],
+      "wordCount": 38,
+      "turnCount": 1,
+      "position": "context",
+      "basis": "No explicit position on the bounded championed issues was detected.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Elvis Silverio",
+      "transcriptLabels": [
+        "ELVIS SILVERIO"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        168,
+        189,
+        190
+      ],
+      "wordCount": 451,
+      "turnCount": 4,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but ",
+        "amend"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Emily Edwards",
+      "transcriptLabels": [
+        "EMILY EDWARDS"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        207
+      ],
+      "wordCount": 179,
+      "turnCount": 1,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "amend"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Female Speaker",
+      "transcriptLabels": [
+        "FEMALE SPEAKER"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        205
+      ],
+      "wordCount": 2,
+      "turnCount": 1,
+      "position": "procedural-or-unattributed",
+      "basis": "The transcript label is procedural or does not identify a person.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Frankie Dekay",
+      "transcriptLabels": [
+        "FRANKIE DEKAY"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        12
+      ],
+      "wordCount": 4,
+      "turnCount": 1,
+      "position": "context",
+      "basis": "No explicit position on the bounded championed issues was detected.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Garrold Dolan",
+      "transcriptLabels": [
+        "GARROLD DOLAN"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        216,
+        222
+      ],
+      "wordCount": 493,
+      "turnCount": 2,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but "
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Gerald Dolan",
+      "transcriptLabels": [
+        "GERALD DOLAN"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        212
+      ],
+      "wordCount": 1,
+      "turnCount": 1,
+      "position": "context",
+      "basis": "No explicit position on the bounded championed issues was detected.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Greg Miller",
+      "transcriptLabels": [
+        "GREG MILLER"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        156
+      ],
+      "wordCount": 938,
+      "turnCount": 1,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but ",
+        "amend"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Held At",
+      "transcriptLabels": [
+        "HELD AT"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        1
+      ],
+      "wordCount": 5,
+      "turnCount": 1,
+      "position": "procedural-or-unattributed",
+      "basis": "The transcript label is procedural or does not identify a person.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "James Bora",
+      "transcriptLabels": [
+        "JAMES BORA"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        161
+      ],
+      "wordCount": 742,
+      "turnCount": 1,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but ",
+        "amend"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "James Deer",
+      "transcriptLabels": [
+        "JAMES DEER"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        218,
+        221,
+        222
+      ],
+      "wordCount": 635,
+      "turnCount": 3,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but "
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Jamie Burkart",
+      "transcriptLabels": [
+        "JAMIE BURKHART"
+      ],
+      "attributionStatus": "normalized-from-transcript-label",
+      "transcriptPages": [
+        200
+      ],
+      "wordCount": 461,
+      "turnCount": 3,
+      "position": "explicit-support",
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "repeal the cabaret law",
+        "legalize dance"
+      ],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Jerry Goldman",
+      "transcriptLabels": [
+        "JERRY GOLDMAN"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        37
+      ],
+      "wordCount": 1707,
+      "turnCount": 1,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but ",
+        "concern",
+        "question"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "John Barclay",
+      "transcriptLabels": [
+        "JOHN BARCLAY"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        105,
+        140,
+        141
+      ],
+      "wordCount": 559,
+      "turnCount": 6,
+      "position": "explicit-support-with-caveat",
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "i support"
+      ],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but ",
+        "concern"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "John Levy",
+      "transcriptLabels": [
+        "JOHN LEVY"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        202
+      ],
+      "wordCount": 236,
+      "turnCount": 1,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Julia Samonikova",
+      "transcriptLabels": [
+        "JULIA SAMONIKOVA"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        213
+      ],
+      "wordCount": 361,
+      "turnCount": 2,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Julie Malnig",
+      "transcriptLabels": [
+        "JULIE MALNIG"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        205
+      ],
+      "wordCount": 456,
+      "turnCount": 1,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but ",
+        "amend",
+        "question"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Leah Lonzo",
+      "transcriptLabels": [
+        "LEAH LONZO"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        223,
+        224
+      ],
+      "wordCount": 287,
+      "turnCount": 2,
+      "position": "explicit-support",
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "repeal the cabaret law"
+      ],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Lindsay Greene",
+      "transcriptLabels": [
+        "LINDSAY GREENE"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        70,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        84,
+        87,
+        89,
+        90,
+        91,
+        92,
+        93,
+        95,
+        102,
+        104
+      ],
+      "wordCount": 1655,
+      "turnCount": 30,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "however",
+        "but ",
+        "question"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Lucille Gresley",
+      "transcriptLabels": [
+        "LUCILLE GRESLEY"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        194,
+        197,
+        204
+      ],
+      "wordCount": 771,
+      "turnCount": 5,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but "
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Mahanna Landone",
+      "transcriptLabels": [
+        "MAHANNA LANDONE"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        172,
+        190
+      ],
+      "wordCount": 301,
+      "turnCount": 3,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but "
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Male Speaker",
+      "transcriptLabels": [
+        "MALE SPEAKER"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        63,
+        142,
+        190
+      ],
+      "wordCount": 9,
+      "turnCount": 3,
+      "position": "procedural-or-unattributed",
+      "basis": "The transcript label is procedural or does not identify a person.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Molly Martinez",
+      "transcriptLabels": [
+        "MOLLY MARTINEZ"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        214,
+        216
+      ],
+      "wordCount": 301,
+      "turnCount": 2,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but "
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Nancy Miller",
+      "transcriptLabels": [
+        "NANCY MILLER"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        197
+      ],
+      "wordCount": 488,
+      "turnCount": 1,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but "
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Panel Members",
+      "transcriptLabels": [
+        "PANEL MEMBERS"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        64
+      ],
+      "wordCount": 4,
+      "turnCount": 1,
+      "position": "procedural-or-unattributed",
+      "basis": "The transcript label is procedural or does not identify a person.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Paul Seres",
+      "transcriptLabels": [
+        "PAUL SERES"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        115,
+        129,
+        130,
+        131,
+        132,
+        135,
+        136,
+        139,
+        141
+      ],
+      "wordCount": 2225,
+      "turnCount": 12,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "however",
+        "but ",
+        "recommend"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Pedro Goico",
+      "transcriptLabels": [
+        "PEDRO GOICO"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        124,
+        125,
+        139
+      ],
+      "wordCount": 1375,
+      "turnCount": 3,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but ",
+        "concern"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Rachel Nelson",
+      "transcriptLabels": [
+        "RACHEL NELSON"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        33,
+        53,
+        57,
+        58
+      ],
+      "wordCount": 1181,
+      "turnCount": 6,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but "
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Sergeant-At-Arms",
+      "transcriptLabels": [
+        "SERGEANT-AT-ARMS"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        5,
+        20,
+        29,
+        105,
+        143
+      ],
+      "wordCount": 1360,
+      "turnCount": 7,
+      "position": "procedural-or-unattributed",
+      "basis": "The transcript label is procedural or does not identify a person.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Shira Gans",
+      "transcriptLabels": [
+        "SHIRA GANS"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        64,
+        79,
+        81,
+        82,
+        86,
+        87,
+        88
+      ],
+      "wordCount": 1876,
+      "turnCount": 10,
+      "position": "explicit-support-with-caveat",
+      "basis": "Automatic high-precision scan found explicit favorable language tied to at least one championed issue. This is a research classification, not an endorsement claim.",
+      "supportSignals": [
+        "we support"
+      ],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but ",
+        "concern"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Susan Stetzer",
+      "transcriptLabels": [
+        "SUSAN STETZER"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        107,
+        108,
+        133,
+        136,
+        142,
+        143
+      ],
+      "wordCount": 755,
+      "turnCount": 11,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but ",
+        "concern"
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Tamala Boyd",
+      "transcriptLabels": [
+        "TAMALA BOYD"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        95,
+        96
+      ],
+      "wordCount": 111,
+      "turnCount": 5,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [],
+      "transcriptTextState": "protected-source-not-republished"
+    },
+    {
+      "speaker": "Todd Patrick",
+      "transcriptLabels": [
+        "TODD PATRICK"
+      ],
+      "attributionStatus": "transcript-label",
+      "transcriptPages": [
+        175,
+        187
+      ],
+      "wordCount": 609,
+      "turnCount": 2,
+      "position": "alignment-review-needed",
+      "basis": "The testimony discusses issue terms but does not match the deliberately narrow explicit-position rules.",
+      "supportSignals": [],
+      "oppositionSignals": [],
+      "caveatSignals": [
+        "but "
+      ],
+      "transcriptTextState": "protected-source-not-republished"
+    }
+  ]
+}

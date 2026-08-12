@@ -1,67 +1,61 @@
-import { JBButton } from "@/components/JBButton";
+import Image from "next/image";
+import Link from "next/link";
+import { portfolioPhotos } from "@/data/photography";
 
 export function Hero() {
+  const photo = portfolioPhotos.eastRiver;
+
   return (
-    <section className="border-b-4 jb-rule">
-      <div className="jb-frame grid gap-10 py-16 md:grid-cols-[1.25fr_0.75fr] md:items-end md:py-20">
-        <div className="jb-reading">
-          <p className="text-sm font-semibold uppercase text-jb-blue">
+    <section className="jb-hero" aria-labelledby="home-title">
+      <div className="jb-hero-image">
+        <Image
+          alt={photo.alt}
+          className="object-cover object-[73%_center] sm:object-center"
+          fill
+          priority
+          sizes="100vw"
+          src={photo.src}
+        />
+      </div>
+      <div className="jb-frame jb-hero-content">
+        <div>
+          <p className="jb-eyebrow text-white/82">
             Technical Project Manager - Product Operations & Implementation
           </p>
-          <h1 className="mt-5 font-display text-5xl font-bold leading-[1.02] text-jb-ink sm:text-6xl">
+          <h1
+            className="mt-5 font-display text-6xl font-medium leading-[0.96] text-white sm:text-7xl"
+            id="home-title"
+          >
             Jamie Burkart
           </h1>
-          <p className="mt-6 text-2xl font-semibold leading-snug text-jb-green">
-            I create operating structure for complex public-facing teams.
+          <p className="mt-6 max-w-2xl text-2xl font-semibold leading-snug text-white sm:text-3xl">
+            I help emerging work become usable systems.
           </p>
-          <p className="mt-5 text-xl leading-8 text-jb-ink/78">
-            I help teams turn ambiguous, stakeholder-heavy work into usable
-            systems: requirements, workflows, documentation, decision trails,
-            launch support, onboarding, and durable handoffs.
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-white/84 sm:text-xl">
+            I work with public-facing teams to clarify requirements, build
+            workflows and tools, carry context through implementation, and
+            leave behind documentation people can use.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <JBButton href="/work">View selected work</JBButton>
-            <JBButton href="/resume" variant="secondary">
+            <Link
+              className="inline-flex min-h-11 items-center bg-white px-5 py-3 font-semibold text-jb-ink hover:bg-jb-sky"
+              href="/work"
+            >
+              View selected work
+            </Link>
+            <Link
+              className="inline-flex min-h-11 items-center border border-white/70 px-5 py-3 font-semibold text-white hover:bg-white hover:text-jb-ink"
+              href="/resume"
+            >
               View resume
-            </JBButton>
-            <JBButton href="/contact" variant="ghost">
-              Contact Jamie
-            </JBButton>
+            </Link>
           </div>
-          <p className="mt-6 text-sm font-medium text-jb-ink/64">
-            Brooklyn, NY / Civic technology / Product operations / Knowledge
-            systems / Public-facing tools
-          </p>
-        </div>
-        <div
-          aria-label="Representative operating-structure diagram"
-          className="jb-artifact-surface rounded-lg border border-jb-ink/15 p-5 shadow-sm"
-        >
-          <div className="grid grid-cols-2 gap-3 text-sm font-semibold text-jb-ink md:grid-cols-1 lg:grid-cols-2">
-            {[
-              "Requirements",
-              "Workflows",
-              "Decision Trails",
-              "Launch Support",
-              "Onboarding",
-              "Handoffs"
-            ].map((label, index) => (
-              <div
-                className="min-h-22 rounded-lg border border-jb-ink/12 bg-jb-paper/76 p-4"
-                key={label}
-              >
-                <span className="text-xs text-jb-blue">0{index + 1}</span>
-                <p className="mt-5">{label}</p>
-              </div>
-            ))}
-          </div>
-          <p className="mt-5 text-sm leading-6 text-jb-ink/68">
-            Scattered context becomes shared records, public guidance,
-            maintainable workflows, and materials people can use after the
-            meeting is over.
-          </p>
         </div>
       </div>
+      <p className="jb-hero-caption">
+        <span className="block">{photo.caption}</span>
+        <span className="mt-1 block text-white/92">{photo.credit}</span>
+      </p>
     </section>
   );
 }

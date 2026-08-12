@@ -35,3 +35,16 @@ claiming that every participant shared the same experience.
 The review-locked [continuity report](wowlist-sunday-dinner-callscript-continuity.md)
 keeps the protected database and attendance evidence, public Call Script
 record, chronology, and privacy boundaries separate.
+
+## Public-safe workflow specimens
+
+The portfolio now exposes two derived schemas rather than any source record.
+The residency specimen shows proposal review, video-call orientation, space
+configuration, independent access, and continued availability. The recurring
+gathering specimen shows invitation, response, hosting, minimal continuity
+documentation, and follow-up.
+
+These are editorial reconstructions from the governed claim set. They contain
+no participant rows or values, names, contacts, addresses, access instructions,
+messages, proposals, attendance histories, free text, photographs, or claims
+about an artist's outcome.

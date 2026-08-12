@@ -1,0 +1,26 @@
+{
+  "suite": "professional-record-public-pilot-2026-08-03",
+  "manifestPath": "docs/knowledge-bank/data/professional-record-public-v1.json",
+  "indexId": "index.knowledge-wiki.professional-record",
+  "researchRunId": "research.professional-record-promotion.2026-08-03",
+  "personIds": [
+    "person.warren-sack",
+    "person.diya-vij"
+  ],
+  "eventIds": [
+    "event.mit.interrogative-design-symposium.2024",
+    "event.studio3.ai-made-me-do-it.2024",
+    "event.weibel.in-terms-of-media.2024"
+  ],
+  "photoAssetId": "asset.photo-set.mit-interrogative-design.2024",
+  "claimIds": [
+    "CLM-JAMIE-UCSC-COMPUTATIONAL-MEDIA-FOUNDATION",
+    "CLM-JAMIE-MIT-INTERROGATIVE-DESIGN-ATTENDANCE-2024",
+    "CLM-JAMIE-AUSTRIA-MEDIA-SYMPOSIA-2024"
+  ],
+  "inputFingerprints": {
+    "candidate-A": "422c8f1eac03bee6f05e9fd6bc263ec863c4d5d0c3007277e98bf90df1fcee57",
+    "candidate-B": "aa81e24b1f8bd50b4b926b96a53e30af99d2c7fe2e4f2d8665ac938c0ee4ed36",
+    "candidate-C": "2f34b09fcf8f95c002afd357a64b3862c05bd6b56282e7bca965e730558983db"
+  }
+}

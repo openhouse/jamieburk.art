@@ -4,12 +4,19 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
 
-import { evaluateProfessorLenses } from "../lib/professor-lens-eval.mjs";
+import {
+  evaluateProfessorLenses,
+  professorCandidateRelativePaths
+} from "../lib/professor-lens-eval.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const aboutText = readFileSync(path.join(repoRoot, "apps/www/src/app/about/page.tsx"), "utf8");
 const sourceNoteText = readFileSync(
   path.join(repoRoot, "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md"),
+  "utf8"
+);
+const publicRegistryText = readFileSync(
+  path.join(repoRoot, "apps/www/src/data/knowledge-bank/public-registry.json"),
   "utf8"
 );
 const suite = JSON.parse(
@@ -25,8 +32,12 @@ test("professor lenses pass every bounded criterion", () => {
 test("guard rejects erasing collective Open House governance", () => {
   const result = evaluateProfessorLenses({
     suite,
-    aboutText: aboutText.replace("participants collectively governed", "Jamie governed"),
-    sourceNoteText
+    aboutText,
+    sourceNoteText,
+    publicRegistryText: publicRegistryText.replace(
+      "participants used communal decision-making",
+      "Jamie governed"
+    )
   });
   assert.equal(result.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "open-house-boundary")?.pass, false);
@@ -40,6 +51,21 @@ test("guard rejects an incomplete recursive systems sequence", () => {
   });
   assert.equal(result.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "recursive-sequence")?.pass, false);
+});
+
+test("guard rejects removing the public-safe handoff specimens", () => {
+  const result = evaluateProfessorLenses({
+    suite,
+    aboutText,
+    sourceNoteText,
+    hjeContentText: "Public storefront only.",
+    sundayDinnerContentText: "Summary only."
+  });
+  assert.equal(result.pass, false);
+  assert.equal(
+    result.criteria.find((item) => item.id === "inspectable-handoff-specimens")?.pass,
+    false
+  );
 });
 
 test("guard rejects private educational-record identifiers", () => {
@@ -110,5 +136,26 @@ test("guard rejects a scorecard bound to another public candidate", () => {
     finalScorecards: staleScorecards
   });
   assert.equal(result.pass, false);
+  assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts")?.pass, false);
+});
+
+test("guard binds visual-system and photo changes to a new candidate", () => {
+  const candidateFiles = Object.fromEntries(professorCandidateRelativePaths.map((relativePath) => [
+    relativePath,
+    readFileSync(path.join(repoRoot, relativePath))
+  ]));
+  candidateFiles["apps/www/src/app/globals.css"] = Buffer.concat([
+    candidateFiles["apps/www/src/app/globals.css"],
+    Buffer.from("\n/* unreviewed visual change */\n")
+  ]);
+
+  const result = evaluateProfessorLenses({
+    suite,
+    aboutText,
+    sourceNoteText,
+    candidateFiles
+  });
+  assert.equal(result.pass, false);
+  assert.equal(result.criteria.find((item) => item.id === "candidate-fingerprint")?.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts")?.pass, false);
 });

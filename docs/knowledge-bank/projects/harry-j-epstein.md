@@ -56,6 +56,18 @@ and remain subject to corroboration.
 - analytics and conversion visibility;
 - operational support that could continue after Jamie moved away.
 
+## Public-safe workflow specimen
+
+The portfolio projects a derived maintenance-to-handoff sequence: listen for a
+recurring customer or team question; frame a bounded requirement; implement an
+incremental change; verify the public path and available signals with
+stakeholders; and preserve reusable patterns, ownership, and next actions for
+staff and later maintainers.
+
+This is an editorial reconstruction from the governed claim set, not an
+original company document. It publishes no customer records, private analytics,
+revenue detail, vendor terms, credentials, or sensitive operating practices.
+
 ## Boundary
 
 Do not attribute company outcomes solely to Jamie. The system depended on the

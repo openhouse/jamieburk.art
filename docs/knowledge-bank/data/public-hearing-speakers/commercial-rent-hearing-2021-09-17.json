@@ -1,0 +1,1288 @@
+{
+  "transcriptKey": "commercial-rent-hearing-2021-09-17.txt",
+  "turnCount": 711,
+  "speakerCount": 84,
+  "transcriptTextState": "protected-source-not-republished",
+  "speakers": [
+    {
+      "speaker": "B E F O R E",
+      "pages": [
+        1
+      ],
+      "turnCount": 1,
+      "wordCount": 3
+    },
+    {
+      "speaker": "COUNCIL MEMBERS",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "turnCount": 1,
+      "wordCount": 160
+    },
+    {
+      "speaker": "HELD AT",
+      "pages": [
+        1
+      ],
+      "turnCount": 1,
+      "wordCount": 5
+    },
+    {
+      "speaker": "CHAIRPERSON GJONAJ",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        17,
+        18,
+        19,
+        20,
+        22,
+        29,
+        30,
+        39,
+        42,
+        43,
+        46,
+        47,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        72,
+        74,
+        89,
+        91,
+        92,
+        93,
+        94,
+        95,
+        98,
+        107,
+        108,
+        112,
+        119,
+        128,
+        130,
+        131,
+        132,
+        181,
+        198,
+        200,
+        201,
+        202,
+        203,
+        214,
+        228,
+        229,
+        233,
+        241,
+        244,
+        254,
+        255,
+        256,
+        257,
+        260,
+        261,
+        262,
+        263,
+        266,
+        267,
+        272,
+        276,
+        279,
+        291,
+        292,
+        293,
+        298,
+        299,
+        309,
+        310,
+        311,
+        312,
+        313,
+        316,
+        319,
+        320,
+        324,
+        325,
+        326
+      ],
+      "turnCount": 125,
+      "wordCount": 6849
+    },
+    {
+      "speaker": "SERGEANT AT ARMS",
+      "pages": [
+        6,
+        98,
+        109,
+        112,
+        113,
+        114,
+        118,
+        119,
+        120,
+        122,
+        123,
+        125,
+        127,
+        128,
+        132,
+        134,
+        136,
+        139,
+        140,
+        142,
+        151,
+        154,
+        156,
+        159,
+        162,
+        165,
+        168,
+        171,
+        174,
+        175,
+        177,
+        178,
+        180,
+        181,
+        184,
+        186,
+        188,
+        189,
+        191,
+        193,
+        203,
+        205,
+        208,
+        211,
+        214,
+        217,
+        220,
+        223,
+        226,
+        228,
+        230,
+        232,
+        233,
+        235,
+        239,
+        242,
+        244,
+        245,
+        248,
+        251,
+        254,
+        257,
+        263,
+        268,
+        270,
+        273,
+        275,
+        276,
+        279,
+        280,
+        281,
+        284,
+        286,
+        288,
+        290,
+        293,
+        297,
+        299,
+        303,
+        306,
+        309,
+        313,
+        320
+      ],
+      "turnCount": 100,
+      "wordCount": 359
+    },
+    {
+      "speaker": "COUNCIL MEMBER LEVIN",
+      "pages": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        165,
+        167,
+        194,
+        195,
+        196,
+        197,
+        202,
+        238,
+        247,
+        255,
+        256,
+        260,
+        261,
+        262,
+        296,
+        316,
+        317,
+        318,
+        319,
+        324,
+        325
+      ],
+      "turnCount": 70,
+      "wordCount": 5534
+    },
+    {
+      "speaker": "COUNCIL MEMBER TREYGER",
+      "pages": [
+        18,
+        19
+      ],
+      "turnCount": 1,
+      "wordCount": 351
+    },
+    {
+      "speaker": "COUNCIL MEMBER ROSENTHAL",
+      "pages": [
+        20,
+        21,
+        22
+      ],
+      "turnCount": 1,
+      "wordCount": 425
+    },
+    {
+      "speaker": "COUNCIL MEMBER YEGER",
+      "pages": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        201,
+        279,
+        280,
+        301,
+        302,
+        303
+      ],
+      "turnCount": 7,
+      "wordCount": 2336
+    },
+    {
+      "speaker": "COMMITTEE COUNSEL",
+      "pages": [
+        30,
+        31,
+        32,
+        39,
+        42,
+        51,
+        56,
+        57,
+        74,
+        98,
+        107,
+        108,
+        109,
+        112,
+        113,
+        114,
+        118,
+        120,
+        122,
+        123,
+        125,
+        127,
+        128,
+        132,
+        134,
+        136,
+        137,
+        139,
+        140,
+        142,
+        144,
+        151,
+        153,
+        156,
+        159,
+        162,
+        165,
+        167,
+        168,
+        171,
+        174,
+        175,
+        178,
+        181,
+        184,
+        186,
+        189,
+        191,
+        194,
+        197,
+        201,
+        203,
+        205,
+        208,
+        211,
+        214,
+        217,
+        220,
+        223,
+        226,
+        229,
+        230,
+        232,
+        233,
+        235,
+        238,
+        239,
+        242,
+        244,
+        245,
+        247,
+        248,
+        251,
+        254,
+        257,
+        260,
+        263,
+        267,
+        268,
+        270,
+        272,
+        273,
+        275,
+        276,
+        279,
+        280,
+        281,
+        284,
+        286,
+        288,
+        293,
+        296,
+        299,
+        301,
+        303,
+        306,
+        313,
+        316,
+        320,
+        323,
+        324
+      ],
+      "turnCount": 121,
+      "wordCount": 3232
+    },
+    {
+      "speaker": "COMMISSIONER DORIS",
+      "pages": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        66,
+        67,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        80,
+        81,
+        82,
+        83,
+        85,
+        86,
+        88,
+        92,
+        93,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "turnCount": 59,
+      "wordCount": 6906
+    },
+    {
+      "speaker": "DEPUTY COMMISSIONER ANDERSON",
+      "pages": [
+        31,
+        39,
+        40,
+        41,
+        52,
+        53,
+        54,
+        55,
+        56
+      ],
+      "turnCount": 6,
+      "wordCount": 936
+    },
+    {
+      "speaker": "FIRST DEPUTY COMMISSIONER MALLON",
+      "pages": [
+        31
+      ],
+      "turnCount": 1,
+      "wordCount": 2
+    },
+    {
+      "speaker": "DEPUTY COMMISSIONER BACKER",
+      "pages": [
+        32
+      ],
+      "turnCount": 1,
+      "wordCount": 2
+    },
+    {
+      "speaker": "COUNCIL MEMBER DINOWITZ",
+      "pages": [
+        98,
+        99,
+        100,
+        101,
+        102,
+        104,
+        105,
+        106,
+        107
+      ],
+      "turnCount": 16,
+      "wordCount": 700
+    },
+    {
+      "speaker": "DEPUTY DIRECTOR BAKER",
+      "pages": [
+        99,
+        100
+      ],
+      "turnCount": 2,
+      "wordCount": 67
+    },
+    {
+      "speaker": "BOROUGH PRESIDENT BREWER",
+      "pages": [
+        109,
+        110,
+        111,
+        112
+      ],
+      "turnCount": 2,
+      "wordCount": 634
+    },
+    {
+      "speaker": "HUSAM KHALED",
+      "pages": [
+        113,
+        114
+      ],
+      "turnCount": 1,
+      "wordCount": 288
+    },
+    {
+      "speaker": "REGGIE THOMAS",
+      "pages": [
+        115,
+        116,
+        117,
+        118
+      ],
+      "turnCount": 2,
+      "wordCount": 777
+    },
+    {
+      "speaker": "INTERPRETER",
+      "pages": [
+        119,
+        120,
+        208
+      ],
+      "turnCount": 2,
+      "wordCount": 229
+    },
+    {
+      "speaker": "RUTH LOPEZ MARTINEZ",
+      "pages": [
+        119
+      ],
+      "turnCount": 1,
+      "wordCount": 3
+    },
+    {
+      "speaker": "VANNA VALDEZ",
+      "pages": [
+        120,
+        121,
+        122
+      ],
+      "turnCount": 1,
+      "wordCount": 400
+    },
+    {
+      "speaker": "ANDREW CASTELLI",
+      "pages": [
+        123,
+        124,
+        125
+      ],
+      "turnCount": 3,
+      "wordCount": 433
+    },
+    {
+      "speaker": "BILL ABRAMSON",
+      "pages": [
+        125,
+        126,
+        127
+      ],
+      "turnCount": 3,
+      "wordCount": 499
+    },
+    {
+      "speaker": "IMRAN HOSSAIN",
+      "pages": [
+        128,
+        129,
+        130,
+        131,
+        132
+      ],
+      "turnCount": 5,
+      "wordCount": 557
+    },
+    {
+      "speaker": "NICOLA HERYET",
+      "pages": [
+        132,
+        133
+      ],
+      "turnCount": 2,
+      "wordCount": 292
+    },
+    {
+      "speaker": "ERIC OBENZINGER",
+      "pages": [
+        134,
+        135,
+        136
+      ],
+      "turnCount": 1,
+      "wordCount": 490
+    },
+    {
+      "speaker": "LEE SOLOMON",
+      "pages": [
+        136,
+        137,
+        138,
+        139
+      ],
+      "turnCount": 5,
+      "wordCount": 522
+    },
+    {
+      "speaker": "RACHEL NICOLAZZO",
+      "pages": [
+        140,
+        141,
+        142
+      ],
+      "turnCount": 1,
+      "wordCount": 430
+    },
+    {
+      "speaker": "STEVE KIRKPATRICK",
+      "pages": [
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        151
+      ],
+      "turnCount": 13,
+      "wordCount": 886
+    },
+    {
+      "speaker": "RACHEL NELSON",
+      "pages": [
+        151,
+        152,
+        153
+      ],
+      "turnCount": 1,
+      "wordCount": 518
+    },
+    {
+      "speaker": "RONALD ZECCARDI",
+      "pages": [
+        154,
+        155,
+        156
+      ],
+      "turnCount": 2,
+      "wordCount": 539
+    },
+    {
+      "speaker": "SHABAD SIMON-ALEXANDER",
+      "pages": [
+        157,
+        158,
+        159
+      ],
+      "turnCount": 2,
+      "wordCount": 579
+    },
+    {
+      "speaker": "HANI SALAMA",
+      "pages": [
+        159,
+        160,
+        161,
+        162
+      ],
+      "turnCount": 3,
+      "wordCount": 492
+    },
+    {
+      "speaker": "OLYMPIA KAZI",
+      "pages": [
+        162,
+        163,
+        164
+      ],
+      "turnCount": 1,
+      "wordCount": 474
+    },
+    {
+      "speaker": "BADR FUAD",
+      "pages": [
+        165,
+        166,
+        167,
+        168
+      ],
+      "turnCount": 2,
+      "wordCount": 405
+    },
+    {
+      "speaker": "RUI LI",
+      "pages": [
+        168,
+        169,
+        170,
+        171
+      ],
+      "turnCount": 2,
+      "wordCount": 609
+    },
+    {
+      "speaker": "CHARLOTTA JANSSEN",
+      "pages": [
+        171,
+        172,
+        173,
+        174
+      ],
+      "turnCount": 4,
+      "wordCount": 538
+    },
+    {
+      "speaker": "CARINA KAUFMAN-GUTIERREZ",
+      "pages": [
+        175,
+        176,
+        177
+      ],
+      "turnCount": 2,
+      "wordCount": 542
+    },
+    {
+      "speaker": "BETH KRIEGER",
+      "pages": [
+        178,
+        179,
+        180
+      ],
+      "turnCount": 2,
+      "wordCount": 484
+    },
+    {
+      "speaker": "ABIGAIL ELMAN",
+      "pages": [
+        181,
+        182,
+        183
+      ],
+      "turnCount": 1,
+      "wordCount": 430
+    },
+    {
+      "speaker": "ALEXANDER LYCOYANNIS",
+      "pages": [
+        184,
+        185,
+        186,
+        198,
+        199,
+        200
+      ],
+      "turnCount": 4,
+      "wordCount": 905
+    },
+    {
+      "speaker": "ANNA CHIANG",
+      "pages": [
+        186,
+        187,
+        188,
+        189
+      ],
+      "turnCount": 3,
+      "wordCount": 529
+    },
+    {
+      "speaker": "ANN KORCHAK",
+      "pages": [
+        189,
+        190,
+        191
+      ],
+      "turnCount": 1,
+      "wordCount": 374
+    },
+    {
+      "speaker": "PAULA SEGAL",
+      "pages": [
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197
+      ],
+      "turnCount": 9,
+      "wordCount": 1013
+    },
+    {
+      "speaker": "MS. R. SANZ",
+      "pages": [
+        203,
+        204,
+        205
+      ],
+      "turnCount": 2,
+      "wordCount": 440
+    },
+    {
+      "speaker": "TAYLOR JAMES",
+      "pages": [
+        205,
+        206,
+        207,
+        208
+      ],
+      "turnCount": 2,
+      "wordCount": 425
+    },
+    {
+      "speaker": "RYAN MONELL",
+      "pages": [
+        208,
+        209,
+        210
+      ],
+      "turnCount": 1,
+      "wordCount": 463
+    },
+    {
+      "speaker": "MELISSA GOMEZ",
+      "pages": [
+        211,
+        212,
+        213,
+        214
+      ],
+      "turnCount": 3,
+      "wordCount": 622
+    },
+    {
+      "speaker": "JAIME CHIEN",
+      "pages": [
+        214,
+        215,
+        216,
+        217
+      ],
+      "turnCount": 1,
+      "wordCount": 554
+    },
+    {
+      "speaker": "DAVID ESTRADA",
+      "pages": [
+        217,
+        218,
+        219,
+        220
+      ],
+      "turnCount": 2,
+      "wordCount": 524
+    },
+    {
+      "speaker": "NATASHA AMOTT",
+      "pages": [
+        220,
+        221,
+        222,
+        223
+      ],
+      "turnCount": 1,
+      "wordCount": 493
+    },
+    {
+      "speaker": "JOSH NACHOWITZ",
+      "pages": [
+        223,
+        224,
+        225,
+        226
+      ],
+      "turnCount": 1,
+      "wordCount": 536
+    },
+    {
+      "speaker": "LAUREN GARDNER",
+      "pages": [
+        226,
+        227,
+        228,
+        229
+      ],
+      "turnCount": 7,
+      "wordCount": 553
+    },
+    {
+      "speaker": "JOANNE PODELL",
+      "pages": [
+        230,
+        231,
+        232
+      ],
+      "turnCount": 2,
+      "wordCount": 539
+    },
+    {
+      "speaker": "BARBARA BLAIR",
+      "pages": [
+        233
+      ],
+      "turnCount": 2,
+      "wordCount": 23
+    },
+    {
+      "speaker": "MARY ANN ROTHMAN",
+      "pages": [
+        233,
+        234,
+        235
+      ],
+      "turnCount": 1,
+      "wordCount": 336
+    },
+    {
+      "speaker": "CATHERINE MURCEK",
+      "pages": [
+        235,
+        236,
+        237,
+        238,
+        239
+      ],
+      "turnCount": 2,
+      "wordCount": 563
+    },
+    {
+      "speaker": "SOPHIA HARRISON",
+      "pages": [
+        239,
+        240,
+        241,
+        242
+      ],
+      "turnCount": 4,
+      "wordCount": 484
+    },
+    {
+      "speaker": "JESSE GEE GALVEZ",
+      "pages": [
+        242,
+        243,
+        244
+      ],
+      "turnCount": 4,
+      "wordCount": 452
+    },
+    {
+      "speaker": "UNIDENTIFIED",
+      "pages": [
+        244
+      ],
+      "turnCount": 1,
+      "wordCount": 1
+    },
+    {
+      "speaker": "GUY YEDWAB",
+      "pages": [
+        245,
+        246,
+        247
+      ],
+      "turnCount": 2,
+      "wordCount": 492
+    },
+    {
+      "speaker": "JENNY DUBNAU",
+      "pages": [
+        248,
+        249,
+        250,
+        251
+      ],
+      "turnCount": 1,
+      "wordCount": 549
+    },
+    {
+      "speaker": "JOSEPH CONDON",
+      "pages": [
+        251,
+        252,
+        253,
+        254,
+        255,
+        256
+      ],
+      "turnCount": 6,
+      "wordCount": 771
+    },
+    {
+      "speaker": "BILL MONTANA",
+      "pages": [
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263
+      ],
+      "turnCount": 13,
+      "wordCount": 735
+    },
+    {
+      "speaker": "OK",
+      "pages": [
+        262
+      ],
+      "turnCount": 1,
+      "wordCount": 23
+    },
+    {
+      "speaker": "ERIC GURAL",
+      "pages": [
+        263,
+        264,
+        265,
+        266,
+        267
+      ],
+      "turnCount": 4,
+      "wordCount": 800
+    },
+    {
+      "speaker": "LAURA SEWELL",
+      "pages": [
+        268,
+        269,
+        270
+      ],
+      "turnCount": 1,
+      "wordCount": 445
+    },
+    {
+      "speaker": "LIONEL GUY BREMOND",
+      "pages": [
+        270,
+        271,
+        272
+      ],
+      "turnCount": 2,
+      "wordCount": 368
+    },
+    {
+      "speaker": "JAMES WACHT",
+      "pages": [
+        273,
+        274,
+        275,
+        276
+      ],
+      "turnCount": 5,
+      "wordCount": 620
+    },
+    {
+      "speaker": "ROBIN ABRAMS",
+      "pages": [
+        276,
+        277,
+        278,
+        279
+      ],
+      "turnCount": 4,
+      "wordCount": 517
+    },
+    {
+      "speaker": "MONIQUE WONG",
+      "pages": [
+        280,
+        281
+      ],
+      "turnCount": 2,
+      "wordCount": 195
+    },
+    {
+      "speaker": "YARA FLINN",
+      "pages": [
+        281,
+        282,
+        283
+      ],
+      "turnCount": 1,
+      "wordCount": 500
+    },
+    {
+      "speaker": "MARC RIBOT",
+      "pages": [
+        284,
+        285,
+        286
+      ],
+      "turnCount": 2,
+      "wordCount": 462
+    },
+    {
+      "speaker": "TRE MCMANUS",
+      "pages": [
+        286,
+        287,
+        288
+      ],
+      "turnCount": 1,
+      "wordCount": 402
+    },
+    {
+      "speaker": "DAVID EISENBACH",
+      "pages": [
+        288,
+        289,
+        290,
+        291,
+        292,
+        293
+      ],
+      "turnCount": 7,
+      "wordCount": 805
+    },
+    {
+      "speaker": "JARED COOPERMAN",
+      "pages": [
+        293,
+        294,
+        295,
+        296
+      ],
+      "turnCount": 3,
+      "wordCount": 517
+    },
+    {
+      "speaker": "GREGORY YOUDAN",
+      "pages": [
+        297,
+        298
+      ],
+      "turnCount": 1,
+      "wordCount": 352
+    },
+    {
+      "speaker": "LAURA WEBER",
+      "pages": [
+        299,
+        300,
+        301,
+        302,
+        303
+      ],
+      "turnCount": 5,
+      "wordCount": 441
+    },
+    {
+      "speaker": "KHARI WHITE",
+      "pages": [
+        304,
+        305,
+        306
+      ],
+      "turnCount": 1,
+      "wordCount": 431
+    },
+    {
+      "speaker": "LAURA WOLF POWERS",
+      "pages": [
+        306,
+        307,
+        308,
+        309,
+        310,
+        311,
+        312,
+        313
+      ],
+      "turnCount": 10,
+      "wordCount": 895
+    },
+    {
+      "speaker": "ERIC DILLENBERGER",
+      "pages": [
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        320
+      ],
+      "turnCount": 7,
+      "wordCount": 640
+    },
+    {
+      "speaker": "ERIC",
+      "pages": [
+        318
+      ],
+      "turnCount": 1,
+      "wordCount": 5
+    },
+    {
+      "speaker": "ANDREA BOWEN",
+      "pages": [
+        320,
+        321,
+        322,
+        323
+      ],
+      "turnCount": 1,
+      "wordCount": 612
+    }
+  ]
+}

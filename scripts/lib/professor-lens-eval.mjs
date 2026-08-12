@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -10,20 +11,36 @@ const sourceNotePath = path.join(
   repoRoot,
   "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md"
 );
+const publicRegistryPath = path.join(
+  repoRoot,
+  "apps/www/src/data/knowledge-bank/public-registry.json"
+);
+const hjeContentPath = path.join(
+  repoRoot,
+  "apps/www/src/content/work/harry-j-epstein.mdx"
+);
+const sundayDinnerContentPath = path.join(
+  repoRoot,
+  "apps/www/src/content/work/196-sunday-dinner.mdx"
+);
 
-const candidateRelativePaths = [
+const professorRubricRelativePaths = [
   ".agents/evals/portfolio-production-readiness.json",
-  "apps/www/src/app/about/page.tsx",
-  "apps/www/src/app/page.tsx",
-  "apps/www/src/app/work/technical-operations/page.tsx",
-  "apps/www/src/content/work/harry-j-epstein.mdx",
-  "apps/www/src/content/work/wowlist.mdx",
-  "apps/www/src/content/work/callnyc.mdx",
-  "apps/www/src/content/work/196-sunday-dinner.mdx",
-  "apps/www/src/content/work/fair-rent-nyc.mdx",
-  "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
-  "apps/www/src/data/work.ts"
+  "DESIGN.md"
 ];
+
+const publicSurfaceRelativePaths = execFileSync(
+  "git",
+  ["ls-files", "apps/www", "package.json", "package-lock.json"],
+  { cwd: repoRoot, encoding: "utf8" }
+)
+  .trim()
+  .split("\n")
+  .filter(Boolean);
+
+export const professorCandidateRelativePaths = [
+  ...new Set([...professorRubricRelativePaths, ...publicSurfaceRelativePaths])
+].sort();
 
 const finalScorecardRelativePaths = [
   "docs/qa/evals-H/margaret-morse-final-a.json",
@@ -34,7 +51,7 @@ const finalScorecardRelativePaths = [
   "docs/qa/evals-H/warren-sack-final-c.json"
 ];
 
-const approvedCandidateSha256 = "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58";
+const approvedCandidateSha256 = "30833e1cb63bb480e9413f67aef6438a34f0a9977537e35c6a6bdfa5add59a14";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },
@@ -52,16 +69,17 @@ function joined(entry) {
 }
 
 function loadCandidateFiles() {
-  return Object.fromEntries(candidateRelativePaths.map((relativePath) => [
+  return Object.fromEntries(professorCandidateRelativePaths.map((relativePath) => [
     relativePath,
-    readFileSync(path.join(repoRoot, relativePath), "utf8")
+    readFileSync(path.join(repoRoot, relativePath))
   ]));
 }
 
-function fingerprintCandidate(candidateFiles) {
+export function fingerprintProfessorCandidate(candidateFiles) {
   const hash = createHash("sha256");
-  for (const relativePath of candidateRelativePaths) {
-    hash.update(relativePath).update("\0").update(candidateFiles[relativePath] ?? "").update("\0");
+  for (const relativePath of professorCandidateRelativePaths) {
+    const content = candidateFiles[relativePath] ?? Buffer.alloc(0);
+    hash.update(relativePath).update("\0").update(content).update("\0");
   }
   return hash.digest("hex");
 }
@@ -70,6 +88,9 @@ export function evaluateProfessorLenses({
   suite = JSON.parse(readFileSync(suitePath, "utf8")),
   aboutText = readFileSync(aboutPath, "utf8"),
   sourceNoteText = readFileSync(sourceNotePath, "utf8"),
+  publicRegistryText = readFileSync(publicRegistryPath, "utf8"),
+  hjeContentText = readFileSync(hjeContentPath, "utf8"),
+  sundayDinnerContentText = readFileSync(sundayDinnerContentPath, "utf8"),
   candidateFiles = loadCandidateFiles(),
   finalScorecards = finalScorecardRelativePaths.map((relativePath) =>
     JSON.parse(readFileSync(path.join(repoRoot, relativePath), "utf8"))
@@ -79,9 +100,9 @@ export function evaluateProfessorLenses({
   const sack = suite.evals.find((entry) => entry.id === "PR-016");
   const morseText = joined(morse);
   const sackText = joined(sack);
-  const combinedPublicText = `${aboutText}\n${sourceNoteText}`;
+  const combinedPublicText = `${aboutText}\n${sourceNoteText}\n${publicRegistryText}`;
   const totalWeight = suite.evals.reduce((sum, entry) => sum + entry.weight, 0);
-  const candidateSha256 = fingerprintCandidate(candidateFiles);
+  const candidateSha256 = fingerprintProfessorCandidate(candidateFiles);
   const relationshipRows = aboutText.match(/Relationships:<\/strong>/g)?.length ?? 0;
   const interfaceRows = aboutText.match(/Interface and use:<\/strong>/g)?.length ?? 0;
   const learningRows = aboutText.match(/Learning and continuity:/g)?.length ?? 0;
@@ -161,9 +182,12 @@ export function evaluateProfessorLenses({
     criterion(
       "open-house-boundary",
       "The public Open House lineage states initiation, ten-day form, and collective governance without solo-production language.",
-      aboutText.includes("Open House") &&
-        aboutText.includes("ten-day UCSC gallery experiment I initiated") &&
-        aboutText.includes("participants collectively governed") &&
+      aboutText.includes("CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY") &&
+        aboutText.includes('occurrenceId="open-house-participatory-gallery"') &&
+        publicRegistryText.includes("I initiated Open House, a ten-day UCSC gallery experiment") &&
+        publicRegistryText.includes("participants used communal decision-making") &&
+        publicRegistryText.includes("many-perspective documentation") &&
+        sourceNoteText.includes("became collectively governed") &&
         sourceNoteText.includes("CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY"),
       "Public article and governed claim linkage checked."
     ),
@@ -178,6 +202,21 @@ export function evaluateProfessorLenses({
         "document enough for others to continue"
       ].every((fragment) => aboutText.includes(fragment)),
       "Five public sequence stages checked."
+    ),
+    criterion(
+      "inspectable-handoff-specimens",
+      "Two current project pages expose bounded workflow specimens without publishing protected source records.",
+      [
+        "From recurring question to maintainable release",
+        "It is not an original company document",
+        "Reusable patterns, ownership, and next actions"
+      ].every((fragment) => hjeContentText.includes(fragment)) &&
+        [
+          "A resident artist can arrive and work independently",
+          "A recurring gathering can continue without exposing its participants",
+          "withholding every participant-level value"
+        ].every((fragment) => sundayDinnerContentText.includes(fragment)),
+      "HJE maintenance and Sunday Dinner / 196 handoff specimens checked."
     ),
     criterion(
       "protected-source-boundary",
@@ -214,7 +253,9 @@ export function evaluateProfessorLenses({
         finalScorecards.every((scorecard) => scorecard.phase === "holdout" &&
           scorecard.score === 4 && scorecard.pass === true &&
           scorecard.candidateSha256 === candidateSha256),
-      `${finalScorecards.filter((scorecard) => scorecard.score === 4 && scorecard.pass === true).length}/6 final scorecards pass at 4.`
+      `${finalScorecards.filter((scorecard) => scorecard.phase === "holdout" &&
+        scorecard.score === 4 && scorecard.pass === true &&
+        scorecard.candidateSha256 === candidateSha256).length}/6 final scorecards pass at 4 and match candidate ${candidateSha256}.`
     )
   ];
 

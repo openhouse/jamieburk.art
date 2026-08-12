@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "candidateBranch": "feature/pre-launch-integration-C",
+  "pullRequestBase": "develop",
+  "productBase": {
+    "branch": "feature/pre-launch-C",
+    "head": "945cd984b0e2b40c745b95b18d87f9e8768db0bf",
+    "mode": "product-base"
+  },
+  "sources": [
+    {
+      "branch": "feature/pre-launch-A",
+      "head": "7deec7be0499e3387bbe6acf52758e6c7e133904",
+      "mode": "reviewed-lineage"
+    },
+    {
+      "branch": "feature/pre-launch-B",
+      "head": "da7a2a290301e055ca99a316961f75f9fbeee4ed",
+      "mode": "reviewed-lineage"
+    },
+    {
+      "branch": "feature/pre-launch-C",
+      "head": "945cd984b0e2b40c745b95b18d87f9e8768db0bf",
+      "mode": "product-base"
+    },
+    {
+      "branch": "feature/pre-launch-D",
+      "head": "28178266175a4b94befa89b7c268a44d16658880",
+      "mode": "reviewed-lineage"
+    },
+    {
+      "branch": "feature/pre-launch-E",
+      "head": "3c36070db597a8b001aca404b0343d78d6f14b96",
+      "mode": "reviewed-lineage"
+    },
+    {
+      "branch": "feature/knowledge-ecosystem-rfc-C",
+      "head": "2af96c8044f1a0c70a610b8f81c4ba5b680df883",
+      "mode": "substantive-merge"
+    },
+    {
+      "branch": "agent/jamie-knowledge-ecosystem-rfc",
+      "head": "166fc2ac920a112d76114703b80a5cf00536e90b",
+      "mode": "substantive-merge"
+    },
+    {
+      "branch": "feature/professional-record-C",
+      "head": "c12a69476cb62f17baf1bcd10a5ffff6e8f84dcb",
+      "mode": "substantive-merge"
+    }
+  ],
+  "requiredPaths": [
+    "rfcs/0004-jamie-burkart-sourcebook-and-knowledge-ecosystem.md",
+    "rfcs/history/0004-initial-proposal-knowledge-ecosystem-and-public-source-editions.md",
+    "rfcs/history/0004-professional-record-implementation-snapshot.md",
+    "sourcebook/README.md",
+    "sourcebook/catalog.json",
+    "apps/www/src/data/knowledge-bank/professional-record-2026-08.ts",
+    "docs/knowledge-bank/indexes/professional-record-and-reception.md",
+    "evals/professional-record/evals.json",
+    "docs/qa/pre-launch-family-integration-C.md"
+  ],
+  "humanGates": {
+    "productionApproval": "open",
+    "productionDeployment": "not-performed",
+    "productionIndexing": "not-authorized",
+    "photoRightsAndConsent": "separate-human-review",
+    "collaboratorCreditAndCorrection": "separate-human-review",
+    "candidateBoundSemanticReview": "must-be-regenerated-after-candidate-change"
+  },
+  "publicSurfaceDecision": "Retain feature/pre-launch-C as the public portfolio composition. Preserve A, B, D, and E as reviewed Git ancestry; do not combine their mutually exclusive generated outputs or page compositions. Integrate the C-based RFC, Sourcebook, and professional-record work as governed, non-public knowledge infrastructure."
+}

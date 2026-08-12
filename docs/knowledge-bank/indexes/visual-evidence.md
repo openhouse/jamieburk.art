@@ -5,7 +5,7 @@ kind: index
 status: governed-open
 visibility: public-safe
 sensitivity: moderate
-last_reviewed: 2026-07-19
+last_reviewed: 2026-07-22
 review_by: 2026-10-19
 canonical_path: docs/knowledge-bank/indexes/visual-evidence.md
 summary: Public-safe map of visual evidence that is approved, metadata-only, held for review, missing, or still awaiting research across Jamie's projects.
@@ -19,6 +19,10 @@ relations:
   - type: related_to
     target: research.foundational-source-return.2026-07-19
     href: ../research-runs/foundational-source-return-2026-07-19.md
+  - type: related_to
+    target: index.knowledge-wiki.photography-notebook
+    href: ../notebooks/photography/README.md
+    context: Public-safe sketchpad for exploratory fields, questions, and changed readings.
 wanted:
   - id: index.visual-rights-and-consent-register
     proposed_title: Private visual rights and consent register
@@ -65,3 +69,10 @@ identities, prohibited inferences, and the exact public surface under review.
 
 Visual discovery may suggest new research. It cannot promote a claim or clear
 an image automatically.
+
+## Working notebook
+
+The [photography field notebook](../notebooks/photography/README.md) preserves
+public-safe questions, sequence sketches, counterreadings, and dated changes in
+understanding. Exact images, identifiers, private notes, and clearance records
+remain outside public Git.

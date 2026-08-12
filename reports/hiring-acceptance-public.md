@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `ecb6d79bfddd647f8718068143ff6df24c58f594`
-**Portfolio snapshot:** `407a53865536333f15ebc661d5db05577cb01ebe20f0eb4b18c42b67a6dd9272`
-**Role-context hash:** `e609dbecd2231409330b4a992e1c2fa0cb8786cf463c1e4c9bfa450e0fcd3d90`
+**Candidate commit:** `1e4f5f26560d0d5a43fdb3f777af1c3c4ef763a6`
+**Portfolio snapshot:** `63b038a6c8fa851127924ce5fff54179638901f37dcc0f625bb0c41fc64acf32`
+**Role-context hash:** `96227d5af8d4f4cab9406723968b99b6c80da938436ce4bd1997d63aadc45e9b`
 **Reader-context hash:** `c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
 **Candidate paths clean:** yes
@@ -14,11 +14,11 @@
 
 ### NYC OTI - Technical Operations Manager 782369
 
-- Deterministic disposition: `deterministic-ready-for-human-review`
+- Deterministic disposition: `evidence-gap-review`
 - Critical signals observed: 4/4
 - All signals observed: 5/6
 - Opportunity status live: yes
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
 - `requirement.oti.delivery-coordination`: **observed** on `/work/technical-operations`
@@ -34,7 +34,7 @@
 - Critical signals observed: 2/4
 - All signals observed: 2/5
 - Opportunity status live: yes
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
 - `requirement.aclu.discovery-and-synthesis`: **observed** on `/work/technical-operations`
@@ -45,11 +45,11 @@
 
 ### Benepass - Product Operations Manager
 
-- Deterministic disposition: `deterministic-ready-for-human-review`
+- Deterministic disposition: `evidence-gap-review`
 - Critical signals observed: 3/4
 - All signals observed: 3/4
 - Opportunity status live: yes
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
 - `requirement.benepass.launch-readiness`: **observed** on `/work/technical-operations`
@@ -59,11 +59,11 @@
 
 ### CodePath - Senior Program Manager, Claude Corps
 
-- Deterministic disposition: `deterministic-ready-for-human-review`
+- Deterministic disposition: `evidence-gap-review`
 - Critical signals observed: 4/4
 - All signals observed: 5/5
 - Opportunity status live: yes
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
 - `requirement.codepath.master-program-plan`: **observed** on `/work/technical-operations`
@@ -78,7 +78,7 @@
 - Critical signals observed: 1/3
 - All signals observed: 2/4
 - Opportunity status live: yes
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
 - `requirement.asana.implementation-ownership`: **not observed** on `/work/technical-operations`
@@ -92,13 +92,26 @@
 - Critical signals observed: 2/3
 - All signals observed: 3/4
 - Opportunity status live: yes
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
 - `requirement.permitflow.physical-public-systems`: **observed** on `/work/kc-town-hall`, `/work/callnyc`
 - `requirement.permitflow.product-data`: **not observed** on `/work/harry-j-epstein`
 - `requirement.permitflow.cross-functional-launch`: **observed** on `/work/technical-operations`
 - `requirement.permitflow.ai-automation`: **observed** on `/lab/source-backed-team-memory`
+
+### Protected source-backed team-memory consulting lead
+
+- Deterministic disposition: `not-live`
+- Critical signals observed: 2/2
+- All signals observed: 3/3
+- Opportunity status live: no
+- Role context current at candidate time: no
+- Exclusionary hard screen recorded: no
+
+- `requirement.protected-memory.knowledge-friction`: **observed** on `/work/technical-operations`
+- `requirement.protected-memory.human-review`: **observed** on `/lab/source-backed-team-memory`
+- `requirement.protected-memory.bounded-sprint`: **observed** on `/lab/source-backed-team-memory`
 
 ## Open human gates
 

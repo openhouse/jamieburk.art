@@ -93,3 +93,15 @@ public Explorer.
   employer-branded public page.
 - A future Knowledge Wiki Explorer, if warranted by real use, will be private,
   read-only first, and derived from the canonical graph export.
+
+## Naming clarification, 2026-07-26
+
+The canonical reader-facing and operator-facing product name is **Knowledge
+Wiki**. Documentation headings, generated prose, and the primary repository
+command use that name.
+
+The physical `docs/knowledge-bank` root, TypeScript `knowledge-bank` module
+paths, legacy record identifiers, and `npm run knowledge-bank` remain bounded
+compatibility locators. They do not rename the product and should not be copied
+into new reader-facing language. A physical or identifier migration requires a
+separate ADR, parity checks, and a complete link and citation rebind.

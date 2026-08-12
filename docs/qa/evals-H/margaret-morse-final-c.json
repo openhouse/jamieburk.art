@@ -1,43 +1,41 @@
 {
-  "evaluator": "Independent holdout reader applying the fictionalized PR-015 Margaret Morse lens",
-  "reviewerId": "morse-c-employment-release",
+  "evaluator": "Independent holdout evaluation using a fictionalized Margaret Morse analytical lens; not Professor Morse, an endorsement, or publication approval.",
+  "reviewerId": "morse-c-2026-08-03-30833e1c",
   "phase": "holdout",
   "lensId": "PR-015",
-  "candidateSha256": "c66d862854082f8aff99845041dc697fcccf5a5f82343482eb26fb823c43fa58",
+  "candidateSha256": "30833e1cb63bb480e9413f67aef6438a34f0a9977537e35c6a6bdfa5add59a14",
   "score": 4,
   "pass": true,
   "evidence": [
-    "The SHA-256 independently recomputed from the ordered eleven-file candidate subset exactly matches the expected fingerprint.",
-    "The homepage leads with technical project management, product operations, implementation, and durable handoffs; the global navigation provides a direct one-click path to About.",
-    "The About page keeps current professional focus primary while a bounded 'Systems people can inhabit' section explicitly connects artistic, civic, technical, and social practice.",
-    "The current Harry J. Epstein work connects attention to customer language and institutional voice with maintained interfaces, bounded analytics, incremental learning, and reusable workflows.",
-    "The 2017-Present NYC Artist Coalition and FairRentNYC work connects cultural-space experience, participation, public interfaces, source-backed documentation, stakeholder care, and collective continuity to clear employment capabilities.",
-    "The 2026 Source-Backed Team Memory lab demonstrates current investigation through reviewable, human-correctable operating memory while explicitly identifying itself as an early method rather than production SaaS.",
-    "Historical WOWList and Sunday Dinner / 196 continuities preserve community vocabulary, distributed participation, hospitality, place, artist support, consent, and situated learning without displacing the employment narrative.",
-    "The public Open House source supports the bounded historical account of a ten-day experiment, Jamie's initiating role, communal decision-making, public participation, and many-perspective documentation: https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html",
-    "The UCSC source note explicitly withholds raw educational records, grades, identifiers, private archive paths, correspondence, and unapproved testimonial material."
+    "The exact requested branch and commit were verified, and recomputation from scripts/lib/professor-lens-eval.mjs produced 117 paths and SHA-256 30833e1cb63bb480e9413f67aef6438a34f0a9977537e35c6a6bdfa5add59a14.",
+    "From the homepage, About is one interaction in desktop navigation and two interactions on mobile through Menu; the responsive QA independently records successful Home-to-About navigation.",
+    "The About surface explicitly connects artistic, civic, technical, and social practice, then defines inhabitable systems concretely as structures people can participate in, influence, remember, and continue.",
+    "The through-line is supported by specific continuities: Open House establishes participatory experimentation; WOWList connects community vocabulary to publishing infrastructure; Sunday Dinner and 196 connect hospitality to repeatable onboarding and continuity; NYC Artist Coalition connects lived cultural-space experience to collective civic records; Harry J. Epstein connects customer and team relationships to maintained operations.",
+    "Three current systems loops identify relationships, models, interfaces in actual use, and learning or continuity for Harry J. Epstein Company, NYC Artist Coalition and FairRentNYC, and Sunday Dinner and 196.",
+    "Project credibility extends beyond thematic prose: HJE includes a maintained public storefront and a five-step bounded maintenance specimen; FairRentNYC includes an inspectable campaign surface and collective operating evidence; Sunday Dinner and 196 include two ten-step total workflow reconstructions; WOWList provides dated historical production counts and shared-credit adoption evidence.",
+    "The workflow browser report is bound to the required candidate SHA and records four passing mobile and desktop rows, with no failed requests, overflowing steps, or broken images. The responsive matrix records 56 passing route-viewport rows with no axe violations, overflow, failed requests, broken images, or invalid heading and landmark rows.",
+    "The Open House claim is tied to a contemporaneous public Good Times article and carefully limits Jamie's role to initiation while crediting participant governance and many-perspective documentation.",
+    "Language remains disciplined: potentially abstract phrases such as “systems people can inhabit” are immediately translated into observable requirements, interfaces, participation, documentation, handoffs, and continuation; the inspected copy avoids mystical, confessional, romanticized, or sole-causation framing."
   ],
-  "gaps": [],
+  "gaps": [
+    "Jamie’s exact-candidate content approval remains an open human gate.",
+    "Production deployment and indexing authorization remain open and are not granted by this holdout result.",
+    "Some protected-work evidence is necessarily presented through clearly labeled public-safe reconstructions rather than original internal records; this is an appropriate privacy boundary but limits direct inspection of those originals."
+  ],
   "safety_findings": [
-    "Open House is described with bounded initiation language and collective governance rather than solo authorship.",
-    "WOWList is identified as co-built, NYC Artist Coalition outcomes remain collective, and the 196 / Sunday Dinner community receives explicit credit.",
-    "The candidate does not reproduce protected educational records, private correspondence, student identifiers, private paths, or unapproved faculty testimonial text.",
-    "Historical projects are dated and distinguished from current capability; the current lab is explicitly bounded as early research and consulting practice.",
-    "The linked 2006 article contains sensitive participant circumstances, but the portfolio does not reproduce them and the knowledge-bank boundary prohibits renewed publication of participant identities, circumstances, or images without review.",
-    "No participation or endorsement by Margaret Morse, Warren Sack, or another named person is inferred from the lens, source note, or this evaluation."
+    "Collective credit is explicit across WOWList, NYC Artist Coalition, Sunday Dinner and 196, Open House, and campaign outcomes; the site does not convert participation or advocacy into sole authorship or policy causation.",
+    "Participant rows, identities, contacts, attendance histories, correspondence, access details, customer records, private analytics, and legal-review context are expressly withheld.",
+    "A bounded scan of all 117 candidate paths found none of the specified student-identifier, private absolute-path, educational-email, or raw narrative-record filename patterns.",
+    "The workflow specimens disclose their reconstructed status and state that they are not original internal records; the QA evidence explicitly denies deployment, indexing, or additional-publication authorization."
   ],
-  "recommendation": "Pass PR-015 for employment-facing use. The portfolio is job-useful while preserving artistic investigation, situated learning, and the Open House collective-governance boundary; retain the present historical/current labels and privacy controls.",
+  "recommendation": "Pass PR-015 at 4 for this exact candidate: the through-line is unusually specific, reachable, inspectable, and trustworthy. Preserve the current claim boundaries and collective credit, but do not deploy or enable indexing until Jamie approves this exact candidate and all remaining human release gates are closed.",
   "provenance": {
-    "provider": "codex-native-subagent",
-    "processSessionId": "019f785d-316a-7d60-a90e-a060ef98498b",
-    "agentNickname": "Bacon",
-    "model": "gpt-5.6-sol",
-    "reasoningEffort": "xhigh",
-    "sandbox": "read-only",
-    "ephemeral": true,
-    "resultTransport": "multi_agent_v1__wait_agent-completed",
-    "operatorAttestation": "Recorded verbatim from a completed independent holdout result by the parent orchestrator.",
-    "startedAt": "2026-07-19T03:13:21.244Z",
-    "completedAt": "2026-07-19T03:17:30.045Z"
+    "provider": "codex-native-independent-review",
+    "reviewMode": "bounded independent holdout",
+    "reviewerRole": "skeptical-public-sector-reader",
+    "reviewedAt": "2026-08-03",
+    "candidatePathCount": 117,
+    "candidateFingerprintRecomputed": true,
+    "filesEdited": false
   }
 }

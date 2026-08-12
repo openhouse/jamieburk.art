@@ -46,7 +46,7 @@ with at least one.
 The public claim is therefore stronger and more exact than a rounded resume
 memory: the platform's July 2017 production data supports 1,800+ users, 16,000+
 posts/events, 23,000+ lists/tags, 28,000+ list follows, 20,000+ saved events,
-and activity across roughly 35 city ecosystems at the conservative 50-post
+and activity across 35 city-region keys at the conservative 50-post
 threshold.
 
 These are historical production counts. They are not current active users,
