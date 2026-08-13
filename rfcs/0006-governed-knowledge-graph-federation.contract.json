@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "rfc": 6,
+  "stage": "exploring",
+  "snapshot": {
+    "required_instance_fields": [
+      "id",
+      "registry",
+      "source_revision",
+      "manifest_digest",
+      "declared_visibility",
+      "observed_visibility",
+      "public_release_authorized",
+      "runtime_dependency",
+      "standalone"
+    ],
+    "revision_pattern": "^[0-9a-f]{40}$",
+    "digest_pattern": "^[0-9a-f]{64}$",
+    "allowed_visibilities": ["opaque", "private", "public", "unobserved"],
+    "allowed_runtime_dependencies": ["checked-in-snapshot", "local", "none"]
+  },
+  "identity": {
+    "required_claim_policy": "independent",
+    "reference_authority": "none",
+    "allowed_facets": [
+      "evidence",
+      "portfolio-projection",
+      "semantic-interpretation",
+      "source-body",
+      "source-custody"
+    ]
+  },
+  "projection": {
+    "statuses": ["active", "hold"],
+    "required_gates": [
+      "consent_decision",
+      "credit_review",
+      "editorial_approval",
+      "public_safe_wording",
+      "rights_decision"
+    ],
+    "open_correction_statuses": [
+      "acknowledged",
+      "disputed",
+      "held",
+      "proposed"
+    ]
+  },
+  "public_safety": {
+    "forbidden_patterns": [
+      "\\/Users\\/",
+      "\\/Volumes\\/",
+      "Mobile Documents",
+      "BEGIN (?:RSA |OPENSSH )?PRIVATE KEY",
+      "\\b(?:sk-proj-|ghp_|AKIA)[A-Za-z0-9_-]{12,}\\b"
+    ]
+  },
+  "authority": {
+    "decision_owner": "Jamie Burkart",
+    "implementation_authorized": false,
+    "stage_advancement": "human-only"
+  }
+}
