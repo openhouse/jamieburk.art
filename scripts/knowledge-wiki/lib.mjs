@@ -242,7 +242,8 @@ const opportunityLeadershipContextSchema = z
       "role-identity-matched",
       "role-only",
       "nearest-public-operational-lead",
-      "official-initiative-leader"
+      "official-initiative-leader",
+      "official-agency-leader"
     ]),
     source: stableIdSchema,
     boundary: z.string().min(1)

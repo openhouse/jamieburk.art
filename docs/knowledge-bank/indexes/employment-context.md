@@ -8,7 +8,7 @@ sensitivity: low
 last_reviewed: 2026-08-13
 review_by: 2026-09-13
 canonical_path: docs/knowledge-bank/indexes/employment-context.md
-summary: Task-oriented entry point for live opportunity research, role coverage, public-only hiring evaluation, and private-boundary rules.
+summary: Task-oriented entry point for live opportunity research, historical role benchmarks, public-only hiring evaluation, and private-boundary rules.
 relations:
   - type: related_to
     target: opportunity.codepath.engineering-project-manager.5160542007
@@ -75,13 +75,23 @@ the nearest public senior vision context. The confidence labels are material:
   direct reporting line.
 - `official-initiative-leader` establishes public vision and authority for the
   initiative, not direct supervision or hiring participation.
+- `official-agency-leader` establishes the nearest public senior agency vision,
+  not direct supervision or hiring participation.
 
 No public context record is an endorsement, private opinion, relationship, or
 prediction of a hiring decision.
 
-## Earlier researched contexts
+## Historical benchmark
 
 - [NYC OTI - Technical Operations Manager](../opportunities/oti-technical-operations.md)
+
+Job 782369 expired on August 7, 2026. Jamie identifies its combination of team
+operations, technical delivery, hiring, onboarding, runbooks, and leadership
+reporting as an unusually strong future-role archetype. It remains searchable
+for recurrence and gap analysis but must never enter the live-application set.
+
+## Earlier researched contexts
+
 - [ACLU - Product Manager II, Discovery](../opportunities/aclu-product-discovery.md)
 - [CodePath - Senior Program Manager, Claude Corps](../opportunities/codepath-claude-corps.md)
 - [Asana - AI Implementation Manager](../opportunities/asana-ai-implementation.md)

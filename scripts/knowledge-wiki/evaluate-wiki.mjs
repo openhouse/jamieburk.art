@@ -54,6 +54,10 @@ const priorityOpportunityIds = hiringSuite.priorityOpportunityIds ?? [];
 const priorityOpportunities = priorityOpportunityIds
   .map((id) => result.byId.get(id))
   .filter(Boolean);
+const benchmarkOpportunityIds = hiringSuite.benchmarkOpportunityIds ?? [];
+const benchmarkOpportunities = benchmarkOpportunityIds
+  .map((id) => result.byId.get(id))
+  .filter(Boolean);
 const gapResolution = resolveHiringGaps(result, publicHiring.report);
 const employmentOutputs = buildEmploymentOutputs(result, publicHiring, gapResolution);
 const discovery = discoveryChecks(result);
@@ -242,7 +246,7 @@ const checks = {
     existsSync(path.join(defaultRepoRoot, "scripts/check-knowledge-bank.mjs")),
 
   tier_one_official_source_records:
-    liveOfficialOpportunities.length >= 9 &&
+    liveOfficialOpportunities.length >= 8 &&
     liveOfficialOpportunities.every((record) =>
       record.evidence.some((evidence) => {
         const source = result.byId.get(evidence.target);
@@ -253,7 +257,8 @@ const checks = {
     opportunities.every(
       (record) =>
         record.canonical_url &&
-        ((record.source_type === "official-employer" && record.opportunity_status === "live") ||
+        ((record.source_type === "official-employer" &&
+          ["live", "closed", "historical-benchmark"].includes(record.opportunity_status)) ||
           (record.source_type === "protected-metadata" && record.opportunity_status === "conditional")) &&
         record.verified_at &&
         record.review_by &&
@@ -263,7 +268,7 @@ const checks = {
   stable_requirement_ids:
     requirementIds.length >= 25 && new Set(requirementIds).size === requirementIds.length,
   operator_queries:
-    queryWiki(result, { liveOpportunities: true }).records.length >= 9 &&
+    queryWiki(result, { liveOpportunities: true }).records.length >= 8 &&
     queryWiki(result, { requirement: "requirement.oti.delivery-coordination" }).opportunity?.id ===
       "opportunity.nyc-oti.technical-operations-manager.782369",
   priority_opportunity_set_complete:
@@ -293,6 +298,32 @@ const checks = {
         context?.person &&
           result.byId.get(context.person)?.kind === "person" &&
           result.byId.has(context.source)
+      );
+    }),
+  historical_benchmark_set_bounded:
+    benchmarkOpportunityIds.length === 1 &&
+    benchmarkOpportunities.length === benchmarkOpportunityIds.length &&
+    benchmarkOpportunities.every(
+      (record) =>
+        record.kind === "opportunity" &&
+        record.source_type === "official-employer" &&
+        record.opportunity_status === "historical-benchmark" &&
+        publicHiring.report.opportunities.find((item) => item.id === record.id)?.benchmark === true &&
+        publicHiring.report.opportunities.find((item) => item.id === record.id)?.decision ===
+          "historical-benchmark"
+    ),
+  historical_benchmark_leadership_bounded:
+    benchmarkOpportunities.every((record) => {
+      const reporting = record.public_reporting_context;
+      const vision = record.public_vision_context;
+      return Boolean(
+        reporting?.identification === "role-only" &&
+          !reporting.person &&
+          result.byId.has(reporting.source) &&
+          vision?.identification === "official-agency-leader" &&
+          vision.person &&
+          result.byId.get(vision.person)?.kind === "person" &&
+          result.byId.has(vision.source)
       );
     }),
   hard_screens_explicit: opportunities.every((record) => record.hard_screens.length > 0),

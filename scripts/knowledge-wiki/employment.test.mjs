@@ -34,7 +34,7 @@ test("public hiring evaluator receives no protected Wiki or communications", () 
   assert.equal(report.publicSafety.privateMarkerCount, 0);
   assert.equal(report.publicSafety.protectedWikiReceived, false);
   assert.equal(report.publicSafety.rawCommunicationsReceived, false);
-  assert.equal(report.opportunities.length, 5);
+  assert.equal(report.opportunities.length, 6);
   assert.ok(!JSON.stringify(report).includes("wikiRecords"));
   const protectedOpportunity = report.opportunities.find((item) => item.id.includes("protected.source-backed-memory"));
   assert.equal(protectedOpportunity.live, false);
@@ -80,6 +80,21 @@ test("priority opportunities preserve public leadership confidence boundaries", 
     byId.get("opportunity.nyc-oti.senior-product-manager.782366")
       ?.publicReportingContext?.identification,
     "nearest-public-operational-lead"
+  );
+  assert.equal(
+    byId.get("opportunity.nyc-oti.technical-operations-manager.782369")
+      ?.publicReportingContext?.identification,
+    "role-only"
+  );
+  assert.equal(
+    byId.get("opportunity.nyc-oti.technical-operations-manager.782369")
+      ?.publicReportingContext?.person,
+    undefined
+  );
+  assert.equal(
+    byId.get("opportunity.nyc-oti.technical-operations-manager.782369")
+      ?.publicVisionContext?.identification,
+    "official-agency-leader"
   );
   assert.ok(
     [...byId.values()]
@@ -148,6 +163,30 @@ test("closed priority opportunities cannot be ready for human review", () => {
   const oti = evaluatePublicHiring(root).report.opportunities.find((item) => item.id.includes("nyc-oti"));
   assert.equal(oti.live, false);
   assert.equal(oti.decision, "not-live");
+});
+
+test("expired OTI operations role remains a benchmark even after a live-status mutation", () => {
+  const root = candidateFixture();
+  const opportunityPath = path.join(root, "docs/knowledge-bank/opportunities/oti-technical-operations.md");
+  const before = evaluatePublicHiring(root).report.opportunities.find(
+    (item) => item.id === "opportunity.nyc-oti.technical-operations-manager.782369"
+  );
+  assert.equal(before.benchmark, true);
+  assert.equal(before.live, false);
+  assert.equal(before.decision, "historical-benchmark");
+  writeFileSync(
+    opportunityPath,
+    readFileSync(opportunityPath, "utf8").replace(
+      "opportunity_status: historical-benchmark",
+      "opportunity_status: live"
+    )
+  );
+  const after = evaluatePublicHiring(root).report.opportunities.find(
+    (item) => item.id === "opportunity.nyc-oti.technical-operations-manager.782369"
+  );
+  assert.equal(after.benchmark, true);
+  assert.equal(after.live, false);
+  assert.equal(after.decision, "historical-benchmark");
 });
 
 test("protected metadata opportunity cannot become a live job by status mutation", () => {

@@ -8,18 +8,21 @@ sensitivity: low
 last_reviewed: 2026-08-13
 review_by: 2026-08-16
 canonical_path: docs/knowledge-bank/evaluations/employment-leadership-context-2026-08-13.md
-summary: Regression contract for current opportunity selection, reporting-context confidence, senior vision context, and external hiring boundaries.
+summary: Regression contract for four current opportunities, one expired benchmark, reporting-confidence, senior vision context, and external hiring boundaries.
 evaluation_type: employment-leadership-context
 failure_modes:
   - A published reporting role is silently converted into a named direct manager.
   - A nearby operational or executive leader is presented as the direct supervisor.
   - A public biography is treated as a private opinion, endorsement, or hiring decision.
   - A priority opportunity lacks a current official posting or an explicit hard-screen review.
+  - An expired opportunity is silently routed back into the live application or readiness set.
 deterministic_checks:
   - Four priority opportunity IDs resolve to live official-employer records.
+  - Job 782369 resolves separately as an official historical benchmark and never as ready for application.
   - Each priority record has a typed reporting context, source, confidence state, and boundary.
   - Each priority record has a sourced person for senior vision context.
-  - ACLU remains role-only and OTI remains nearest-public-operational-lead unless stronger evidence is recovered.
+  - ACLU and expired Job 782369 remain role-only; OTI Product Manager remains nearest-public-operational-lead unless stronger evidence is recovered.
+  - The expired benchmark remains retrievable through a title-blind future-role query.
 human_checks:
   - Confirm the actual direct manager and decision authority during the hiring process.
   - Recheck each posting and leadership page before outward use.
@@ -40,14 +43,18 @@ relations:
   - type: related_to
     target: opportunity.nyc-oti.senior-product-manager.782366
     href: ../opportunities/oti-senior-product-manager-782366.md
+  - type: related_to
+    target: opportunity.nyc-oti.technical-operations-manager.782369
+    href: ../opportunities/oti-technical-operations.md
 human_review: governed-open
 ---
 
 # Priority opportunity leadership-context evaluation
 
 This evaluation exists because an org-chart-shaped answer can look precise
-while being false. It preserves four distinct evidence states and fails closed
-when a person has not been publicly verified.
+while being false and an expired dream role can look actionable when it is not.
+It preserves typed leadership evidence and temporal state, failing closed when
+a person has not been publicly verified or a vacancy is no longer live.
 
 The deterministic evaluator can validate graph shape, source presence, and
 confidence boundaries. It cannot confirm an internal reporting line, predict a

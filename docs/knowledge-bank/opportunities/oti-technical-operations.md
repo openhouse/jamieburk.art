@@ -2,17 +2,17 @@
 id: opportunity.nyc-oti.technical-operations-manager.782369
 title: NYC OTI - Technical Operations Manager 782369
 kind: opportunity
-status: governed-open
+status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-08-13
+review_by: 2026-11-13
 canonical_path: docs/knowledge-bank/opportunities/oti-technical-operations.md
-summary: Public-safe, source-backed requirement and portfolio-coverage map for NYC OTI's live Technical Operations Manager role.
+summary: Expired, source-backed benchmark for future roles that own the operating backbone of a small public-interest technology team.
 canonical_url: https://cityjobs.nyc.gov/job/technical-operations-manager-in-brooklyn-jid-44321
 source_type: official-employer
-opportunity_status: live
-verified_at: 2026-07-18
+opportunity_status: historical-benchmark
+verified_at: 2026-08-13
 portfolio_routes:
   - /
   - /work/technical-operations
@@ -32,7 +32,8 @@ discovery_terms:
 confirmed_facts:
   - Job ID 782369 is a full-time role in OTI's Commissioner's Office at 15 MetroTech.
   - The posted salary range is $75,000 to $160,000.
-  - The official posting lists August 7, 2026 as the deadline.
+  - The official posting lists August 7, 2026 as the deadline and now labels the vacancy expired.
+  - The official posting classifies the position as experienced non-manager with one position advertised.
   - The role owns hiring, planning, delivery tracking, onboarding, reporting, decision systems, and operating documentation.
 inferences:
   - The timing and operating language make a connection to OTI's Public Interest Technology Crews plausible, not confirmed.
@@ -40,6 +41,17 @@ unknowns:
   - Direct reporting line and exact team assignment.
   - Salary hiring target, work model, union status, and budget or procurement authority.
   - Frequency of nights, evenings, or weekend shifts in practice.
+public_reporting_context:
+  role: OTI leadership
+  identification: role-only
+  source: source.jobs.oti.technical-operations.782369
+  boundary: The posting says the role reports up to OTI leadership but does not identify a supervisor, hiring manager, or specific team leader.
+public_vision_context:
+  role: NYC Chief Technology Officer and OTI Commissioner
+  person: person.lisa-gelobter
+  identification: official-agency-leader
+  source: source.nyc.lisa-gelobter-appointment.2026-02-10
+  boundary: Gelobter is the official head of OTI and nearest public senior vision leader, not a confirmed direct manager or participant in the Job 782369 hiring decision.
 hard_screens:
   - id: screen.oti.minimum-qualification
     text: Civil-service education and experience qualification must be confirmed by OTI.
@@ -140,6 +152,12 @@ relations:
   - type: uses_source
     target: source.jobs.oti.technical-operations.782369
     href: ../sources/jobs-oti-technical-operations-782369.md
+  - type: uses_source
+    target: source.nyc.lisa-gelobter-appointment.2026-02-10
+    href: ../sources/nyc-lisa-gelobter-appointment-2026.md
+  - type: related_to
+    target: person.lisa-gelobter
+    href: ../people/lisa-gelobter.md
   - type: related_to
     target: capability.technical-operations
     href: ../capabilities/technical-operations.md
@@ -157,17 +175,31 @@ evidence:
     relationship: direct-support
     confidence: high
     supports:
-      - official role facts and requirements as rechecked on July 18, 2026
+      - official role facts, requirements, and expired status as rechecked on August 13, 2026
+  - target: source.nyc.lisa-gelobter-appointment.2026-02-10
+    relationship: context
+    confidence: high
+    supports:
+      - Lisa Gelobter's official role as NYC CTO, OTI Commissioner, and nearest senior agency vision leader
 human_review: governed-open
 ---
 
 # NYC OTI - Technical Operations Manager 782369
 
-The role asks one person to own a team's operating backbone: how it hires,
+This expired role asked one person to own a team's operating backbone: how it hires,
 plans, tracks delivery, onboards, reports, decides, documents, and improves.
-Jamie's public portfolio already shows the central operating pattern. The
-application still needs concrete artifacts and honest answers about civil-
-service qualification, authority, and the 24/7 shift language.
+Jamie identifies it as an unusually strong benchmark for future opportunities
+with the same operating pattern. It is not an application target. Future roles
+still require fresh qualification, authority, work-pattern, and reporting-line
+review.
+
+## Leadership context
+
+The posting says the role would report up to OTI leadership but names no direct
+manager. [Lisa Gelobter](../people/lisa-gelobter.md), as NYC CTO and OTI
+Commissioner, is the nearest public senior leader whose agency vision the work
+would implement. The evidence does not establish that she would directly
+supervise this role or participate in its hiring.
 
 ## Requirement coverage
 
@@ -180,7 +212,9 @@ into experience.
 Use [/work/technical-operations](../../../apps/www/src/app/work/technical-operations/page.tsx)
 as the role-fit surface. Do not turn it into an OTI-branded application page.
 
-## Freshness
+## Benchmark use
 
-Recheck the [official posting](../sources/jobs-oti-technical-operations-782369.md)
-every 48 to 72 hours while the role is live.
+Keep the [expired official posting](../sources/jobs-oti-technical-operations-782369.md)
+as a future-search archetype for roles combining technical project management,
+team operations, hiring and onboarding, cross-functional delivery, decision
+systems, runbooks, and candid leadership reporting. Never present it as open.

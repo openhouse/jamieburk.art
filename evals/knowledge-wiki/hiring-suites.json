@@ -1,6 +1,6 @@
 {
   "id": "current-priority-2026-08-13",
-  "version": 2,
+  "version": 3,
   "principle": "The public evaluator sees public projection files and public role and reader context only; Wiki gap resolution is a separate pass.",
   "priorityOpportunityIds": [
     "opportunity.codepath.engineering-project-manager.5160542007",
@@ -8,11 +8,15 @@
     "opportunity.benepass.product-operations.7f963a7a",
     "opportunity.nyc-oti.senior-product-manager.782366"
   ],
+  "benchmarkOpportunityIds": [
+    "opportunity.nyc-oti.technical-operations-manager.782369"
+  ],
   "opportunityPaths": [
     "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
     "docs/knowledge-bank/opportunities/aclu-senior-project-manager.md",
     "docs/knowledge-bank/opportunities/benepass-product-operations.md",
     "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
+    "docs/knowledge-bank/opportunities/oti-technical-operations.md",
     "docs/knowledge-bank/opportunities/source-backed-team-memory.md"
   ],
   "readerPaths": [
@@ -59,6 +63,13 @@
       "id": "query.resident-facing-product",
       "terms": ["resident-facing products", "public launch", "discovery", "accessibility", "outcomes not outputs"],
       "expectedTopK": ["opportunity.nyc-oti.senior-product-manager.782366"],
+      "k": 3
+    },
+    {
+      "id": "query.future-technical-operations-backbone",
+      "terms": ["delivery coordination", "team operating systems", "onboarding documentation", "risk surfacing", "government technology"],
+      "expectedTopK": ["opportunity.nyc-oti.technical-operations-manager.782369"],
+      "statuses": ["historical-benchmark"],
       "k": 3
     },
     {
