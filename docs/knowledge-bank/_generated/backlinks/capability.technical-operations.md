@@ -3,7 +3,7 @@
 
 **Source commit:** `0ad633f2b6c1ecd6d9b7c122fcabe89e7fdc29d3`
 **Generation time:** 2026-08-13T13:04:20-04:00
-**Source fingerprint:** `4fda88de388e55c698a3286d5b80e0fedbdcba4bbe72b9875ea360dae7f9fc88`
+**Source fingerprint:** `44ab26d76549a1aef8de2de4f2c24dadaefaa4c83ab46f1fcd7baac2affed9a7`
 
 - [NYC Artist Coalition application brief](../../applications/nycac-civic-product-operations.md) - `related_to` (frontmatter)
 - [WOW List - Senior Product Manager role-fit brief](../../applications/wowlist-senior-product-manager-oti-782366.md) - `prose_link` (markdown)
@@ -17,9 +17,12 @@
 - [Jamie at Work](../../methods/jamie-at-work.md) - `supports` (frontmatter)
 - [Source-Backed Team Memory](../../methods/source-backed-team-memory.md) - `prose_link` (markdown)
 - [Source-Backed Team Memory](../../methods/source-backed-team-memory.md) - `related_to` (frontmatter)
+- [ACLU - Senior Project Manager, Learning and Project Solutions](../../opportunities/aclu-senior-project-manager-lps.md) - `related_to` (frontmatter)
+- [ACLU - Senior Project Manager, National Campaigns](../../opportunities/aclu-senior-project-manager-national-campaigns.md) - `related_to` (frontmatter)
 - [Asana - AI Implementation Manager, Service Management](../../opportunities/asana-ai-implementation.md) - `related_to` (frontmatter)
 - [Benepass - Product Operations Manager](../../opportunities/benepass-product-operations.md) - `related_to` (frontmatter)
 - [CodePath - Senior Program Manager, Claude Corps](../../opportunities/codepath-claude-corps.md) - `related_to` (frontmatter)
+- [NYC OTI - Senior Product Manager 782366](../../opportunities/oti-senior-product-manager.md) - `related_to` (frontmatter)
 - [NYC OTI - Technical Operations Manager 782369](../../opportunities/oti-technical-operations.md) - `related_to` (frontmatter)
 - [PermitFlow - Product Operations Manager](../../opportunities/permitflow-product-operations.md) - `related_to` (frontmatter)
 - [Protected source-backed team-memory consulting lead](../../opportunities/source-backed-team-memory.md) - `related_to` (frontmatter)

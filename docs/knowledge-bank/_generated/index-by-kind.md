@@ -3,7 +3,7 @@
 
 **Source commit:** `0ad633f2b6c1ecd6d9b7c122fcabe89e7fdc29d3`
 **Generation time:** 2026-08-13T13:04:20-04:00
-**Source fingerprint:** `4fda88de388e55c698a3286d5b80e0fedbdcba4bbe72b9875ea360dae7f9fc88`
+**Source fingerprint:** `44ab26d76549a1aef8de2de4f2c24dadaefaa4c83ab46f1fcd7baac2affed9a7`
 
 ## application
 
@@ -234,6 +234,7 @@
 
 - [Layout C homepage East River curatorial proposal](../evaluations/curatorial/layout-c-home-east-river-v1.md) - `evaluation.curatorial.layout-c.home-east-river.v1`
 - [Employment context coverage baseline - July 18, 2026](../evaluations/employment-context-coverage-2026-07-18.md) - `evaluation.employment-context.coverage.2026-07-18`
+- [Employment opportunity leadership and freshness evaluation - August 13, 2026](../evaluations/employment-opportunity-leadership-2026-08-13.md) - `evaluation.employment-opportunity-leadership.2026-08-13`
 - [Jamie public-record integration evaluation](../evaluations/jamie-public-record-integration-2026-08-03.md) - `evaluation.jamie-public-record-integration.2026-08-03`
 - [Knowledge Wiki retrieval tasks](../evaluations/retrieval-tasks.md) - `evaluation.knowledge-wiki.retrieval-tasks`
 - [NYC Artist Coalition shared-folder production evals](../evaluations/nycac-shared-folder-production-2026-07-19.md) - `evaluation.nycac.shared-folder-production.2026-07-19`
@@ -315,9 +316,12 @@
 ## opportunity
 
 - [ACLU - Product Manager II, Discovery](../opportunities/aclu-product-discovery.md) - `opportunity.aclu.product-manager-discovery.8482872002`
+- [ACLU - Senior Project Manager, Learning and Project Solutions](../opportunities/aclu-senior-project-manager-lps.md) - `opportunity.aclu.senior-project-manager-lps.8620968002`
+- [ACLU - Senior Project Manager, National Campaigns](../opportunities/aclu-senior-project-manager-national-campaigns.md) - `opportunity.aclu.senior-project-manager-national-campaigns.8631854002`
 - [Asana - AI Implementation Manager, Service Management](../opportunities/asana-ai-implementation.md) - `opportunity.asana.ai-implementation.8027437`
 - [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md) - `opportunity.benepass.product-operations.7f963a7a`
 - [CodePath - Senior Program Manager, Claude Corps](../opportunities/codepath-claude-corps.md) - `opportunity.codepath.claude-corps.5182020007`
+- [NYC OTI - Senior Product Manager 782366](../opportunities/oti-senior-product-manager.md) - `opportunity.nyc-oti.senior-product-manager.782366`
 - [NYC OTI - Technical Operations Manager 782369](../opportunities/oti-technical-operations.md) - `opportunity.nyc-oti.technical-operations-manager.782369`
 - [PermitFlow - Product Operations Manager](../opportunities/permitflow-product-operations.md) - `opportunity.permitflow.product-operations.8a6e6066`
 - [Protected source-backed team-memory consulting lead](../opportunities/source-backed-team-memory.md) - `opportunity.protected.source-backed-memory-consulting.2026`
@@ -328,9 +332,16 @@
 
 ## person
 
+- [Aileen Palmer](../people/aileen-palmer.md) - `person.aileen-palmer`
+- [Deirdre Schifeling](../people/deirdre-schifeling.md) - `person.deirdre-schifeling`
 - [Diya Vij](../people/diya-vij.md) - `person.diya-vij`
 - [Elana Gordon](../people/elana-gordon.md) - `person.elana-gordon`
+- [Jaclyn Chen](../people/jaclyn-chen.md) - `person.jaclyn-chen`
+- [James Williams](../people/james-williams-aclu.md) - `person.james-williams-aclu`
 - [Jamie Burkart](../people/jamie-burkart.md) - `person.jamie-burkart`
+- [Lisa Gelobter](../people/lisa-gelobter.md) - `person.lisa-gelobter`
+- [Luke Farrell](../people/luke-farrell.md) - `person.luke-farrell`
+- [Terence Dougherty](../people/terence-dougherty.md) - `person.terence-dougherty`
 - [Warren Sack](../people/warren-sack.md) - `person.warren-sack`
 
 ## place
@@ -383,6 +394,9 @@
 
 ## source
 
+- [ACLU biography - Deirdre Schifeling](../sources/aclu-deirdre-schifeling-bio.md) - `source.aclu.deirdre-schifeling-bio`
+- [ACLU biography - Terence Dougherty](../sources/aclu-terence-dougherty-bio.md) - `source.aclu.terence-dougherty-bio`
+- [Benepass leadership context - Jaclyn Chen](../sources/benepass-jaclyn-chen-leadership.md) - `source.benepass.jaclyn-chen-leadership.2026`
 - [CallNYC public source repository](../sources/callnyc-source-repository.md) - `source.callnyc.source-repository`
 - [Campaign-site repository family, 2020-2022](../sources/campaign-site-repository-family-2020-2022.md) - `source.campaign-site.repository-family.2020-2022`
 - [Civic Hall hackathon announcement](../sources/civichall-hackathon-announcement-2016.md) - `source.civichall.hackathon-announcement.2016`
@@ -396,6 +410,8 @@
 - [Jamie Burkart public-record initial manifest](../sources/jamie-public-record-initial-manifest.md) - `source.jamie-public-record-initial-manifest`
 - [Jamie Burkart writer's voice synthesis, July 2026](../sources/writers-voice-synthesis-2026-07.md) - `source.jamie.writers-voice-synthesis.2026-07`
 - [ACLU - Product Manager II, Discovery 8482872002](../sources/jobs-aclu-product-discovery-8482872002.md) - `source.jobs.aclu.product-discovery.8482872002`
+- [Official posting - ACLU Senior Project Manager, Learning and Project Solutions](../sources/jobs-aclu-senior-project-manager-lps-8620968002.md) - `source.jobs.aclu.senior-project-manager-lps.8620968002`
+- [Official posting - ACLU Senior Project Manager, National Campaigns](../sources/jobs-aclu-senior-project-manager-national-campaigns-8631854002.md) - `source.jobs.aclu.senior-project-manager-national-campaigns.8631854002`
 - [Asana - AI Implementation Manager, Service Management 8027437](../sources/jobs-asana-ai-implementation-8027437.md) - `source.jobs.asana.ai-implementation.8027437`
 - [Official posting - Benepass Product Operations Manager](../sources/jobs-benepass-product-operations.md) - `source.jobs.benepass.product-operations.7f963a7a`
 - [CodePath - Senior Program Manager, Claude Corps 5182020007](../sources/jobs-codepath-claude-corps-5182020007.md) - `source.jobs.codepath.claude-corps.5182020007`
@@ -411,10 +427,14 @@
 - [Frozen Knowledge Wiki branch C](../sources/knowledge-wiki-branch-c-2026-07-19.md) - `source.knowledge-wiki.branch-c.2026-07-19`
 - [Frozen Knowledge Wiki branch D](../sources/knowledge-wiki-branch-d-2026-07-19.md) - `source.knowledge-wiki.branch-d.2026-07-19`
 - [Frozen Knowledge Wiki branch E](../sources/knowledge-wiki-branch-e-2026-07-19.md) - `source.knowledge-wiki.branch-e.2026-07-19`
+- [Public professional profile - Aileen Palmer at Benepass](../sources/linkedin-aileen-palmer-benepass.md) - `source.linkedin.aileen-palmer-benepass.2026`
+- [Public professional profile - James Williams at ACLU National Campaigns](../sources/linkedin-james-williams-aclu-national-campaigns.md) - `source.linkedin.james-williams-aclu-national-campaigns.2026`
+- [Public professional post - Luke Farrell leading NYC PIT Crew](../sources/linkedin-luke-farrell-pit-crew-leadership.md) - `source.linkedin.luke-farrell-pit-crew-leadership.2026`
 - [MIT Interrogative Design Symposium event page](../sources/mit-interrogative-design-symposium-2024.md) - `source.mit.interrogative-design-symposium.2024`
 - [Archived NTER CHNG project homepage](../sources/nter-chng-archived-homepage-2011.md) - `source.nter-chng.archived-homepage.2011`
 - [NYC Council field-kit photograph oral history, July 2026](../sources/recollections/nyc-council-field-kit-oral-history-2026-07.md) - `source.nyc-council.field-kit-oral-history.2026-07`
 - [Appointment of Diya Vij as Commissioner of Cultural Affairs](../sources/dcla-diya-vij-appointment-2026.md) - `source.nyc.diya-vij-appointment.2026`
+- [NYC Mayor's Office - Public Interest Technology Crew launch](../sources/nyc-pit-crew-launch-2026.md) - `source.nyc.pit-crew-launch.2026-07-13`
 - [NYC Artist Coalition DCLA formation source return, 2026](../sources/archives/nycac-dcla-formation-source-return-2026-07.md) - `source.nycac.dcla-formation-source-return.2026-07`
 - [NYC nightlife forum corrected working transcript, 2026](../sources/nycac-nightlife-forum-transcript-2026.md) - `source.nycac.nightlife-forum-transcript.2026`
 - [NYC Artist Coalition project-site photograph census](../sources/archives/nycac-project-site-photograph-census-2026-07.md) - `source.nycac.project-site-photograph-census.2026-07-28`

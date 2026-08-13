@@ -3,21 +3,64 @@
 
 **Candidate commit:** `1e4f5f26560d0d5a43fdb3f777af1c3c4ef763a6`
 **Portfolio snapshot:** `63b038a6c8fa851127924ce5fff54179638901f37dcc0f625bb0c41fc64acf32`
-**Role-context hash:** `96227d5af8d4f4cab9406723968b99b6c80da938436ce4bd1997d63aadc45e9b`
+**Role-context hash:** `ca809978dd2296c836ae34294101ae765fb13ead9c4bb4a305640a58286c0347`
 **Reader-context hash:** `c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
-**Candidate paths clean:** yes
+**Candidate paths clean:** no
 
 > Deterministic baseline only. This is not an interview prediction, a named person's opinion, or a human reader study.
 
 ## Opportunity results
 
-### NYC OTI - Technical Operations Manager 782369
+### NYC OTI - Senior Product Manager 782366
+
+- Deterministic disposition: `deterministic-ready-for-human-review`
+- Critical signals observed: 4/5
+- All signals observed: 4/5
+- Opportunity status live: yes
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
+
+- `requirement.oti-product.end-to-end-public-product`: **observed** on `/work/callnyc`, `/work/technical-operations`
+- `requirement.oti-product.discovery-and-research`: **observed** on `/work/technical-operations`, `/lab/source-backed-team-memory`
+- `requirement.oti-product.cross-functional-launch`: **observed** on `/work/technical-operations`
+- `requirement.oti-product.metrics-and-learning`: **not observed** on `/work/technical-operations`
+- `requirement.oti-product.accessibility-privacy`: **observed** on `/lab/source-backed-team-memory`
+
+### ACLU - Senior Project Manager, Learning and Project Solutions
 
 - Deterministic disposition: `evidence-gap-review`
+- Critical signals observed: 2/3
+- All signals observed: 3/4
+- Opportunity status live: yes
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
+
+- `requirement.aclu-lps.systems-implementation`: **observed** on `/work/technical-operations`, `/work/callnyc`
+- `requirement.aclu-lps.plan-budget-risk`: **observed** on `/work/technical-operations`
+- `requirement.aclu-lps.business-analysis`: **not observed**
+- `requirement.aclu-lps.organizational-learning`: **observed** on `/work/technical-operations`
+
+### ACLU - Senior Project Manager, National Campaigns
+
+- Deterministic disposition: `deterministic-ready-for-human-review`
+- Critical signals observed: 3/3
+- All signals observed: 4/4
+- Opportunity status live: yes
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
+
+- `requirement.aclu-campaigns.project-systems`: **observed** on `/work/technical-operations`, `/work/fair-rent-nyc`
+- `requirement.aclu-campaigns.communications`: **observed** on `/work/technical-operations`
+- `requirement.aclu-campaigns.advocacy-context`: **observed** on `/work/callnyc`
+- `requirement.aclu-campaigns.judgment-and-discretion`: **observed** on `/work/technical-operations`
+
+### NYC OTI - Technical Operations Manager 782369
+
+- Deterministic disposition: `not-live`
 - Critical signals observed: 4/4
 - All signals observed: 5/6
-- Opportunity status live: yes
+- Opportunity status live: no
 - Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
@@ -30,10 +73,10 @@
 
 ### ACLU - Product Manager II, Discovery
 
-- Deterministic disposition: `evidence-gap-review`
+- Deterministic disposition: `not-live`
 - Critical signals observed: 2/4
 - All signals observed: 2/5
-- Opportunity status live: yes
+- Opportunity status live: no
 - Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
@@ -45,11 +88,11 @@
 
 ### Benepass - Product Operations Manager
 
-- Deterministic disposition: `evidence-gap-review`
+- Deterministic disposition: `deterministic-ready-for-human-review`
 - Critical signals observed: 3/4
 - All signals observed: 3/4
 - Opportunity status live: yes
-- Role context current at candidate time: no
+- Role context current at candidate time: yes
 - Exclusionary hard screen recorded: no
 
 - `requirement.benepass.launch-readiness`: **observed** on `/work/technical-operations`
@@ -59,10 +102,10 @@
 
 ### CodePath - Senior Program Manager, Claude Corps
 
-- Deterministic disposition: `evidence-gap-review`
+- Deterministic disposition: `not-live`
 - Critical signals observed: 4/4
 - All signals observed: 5/5
-- Opportunity status live: yes
+- Opportunity status live: no
 - Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 

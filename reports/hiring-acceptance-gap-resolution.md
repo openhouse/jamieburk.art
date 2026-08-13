@@ -2,13 +2,15 @@
 # Hiring acceptance Wiki gap resolution
 
 **Candidate commit:** `1e4f5f26560d0d5a43fdb3f777af1c3c4ef763a6`
-**Public report hash:** `95758e22ae1fce793566b0820369d47ac076b2b4da0df53ce5dd89a62ac7585a`
-**Wiki fingerprint:** `4fda88de388e55c698a3286d5b80e0fedbdcba4bbe72b9875ea360dae7f9fc88`
+**Public report hash:** `f0b639a7967074ba7d09d723d3f9f26b49b56099ae1f931c66e87a54684eedfb`
+**Wiki fingerprint:** `44ab26d76549a1aef8de2de4f2c24dadaefaa4c83ab46f1fcd7baac2affed9a7`
 
 The gap resolver runs after the public-only evaluator. It can identify Wiki evidence, but every public change remains human-reviewed.
 
 ## Findings
 
+- `requirement.oti-product.metrics-and-learning` - **visible-weak-evidence-gap**; Prepare one verified outcomes-and-learning example; do not substitute activity counts for resident outcomes.
+- `requirement.aclu-lps.business-analysis` - **role-context-or-evidence-unknown**; Prepare one redacted process map or requirements artifact.
 - `requirement.oti.government-hiring-and-procurement` - **visible-weak-evidence-gap**; Do not imply procurement authority; clarify adjacent government-process experience in the application.
 - `requirement.aclu.facilitation-without-authority` - **visible-weak-evidence-gap**; Name one bounded facilitation decision and its usable output.
 - `requirement.aclu.product-brief` - **wiki-proven-not-projected**; Produce and human-review a redacted retrospective CallNYC product brief.

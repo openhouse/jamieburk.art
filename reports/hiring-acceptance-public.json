@@ -3,9 +3,9 @@
   "runId": "hiring-public-1e4f5f26560d",
   "generatedAt": "2026-08-10T14:27:36-04:00",
   "candidateSha": "1e4f5f26560d0d5a43fdb3f777af1c3c4ef763a6",
-  "candidatePathsClean": true,
+  "candidatePathsClean": false,
   "portfolioSnapshotHash": "63b038a6c8fa851127924ce5fff54179638901f37dcc0f625bb0c41fc64acf32",
-  "roleContextHash": "96227d5af8d4f4cab9406723968b99b6c80da938436ce4bd1997d63aadc45e9b",
+  "roleContextHash": "ca809978dd2296c836ae34294101ae765fb13ead9c4bb4a305640a58286c0347",
   "readerContextHash": "c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
   "publicSafety": {
@@ -137,13 +137,232 @@
   ],
   "opportunities": [
     {
-      "id": "opportunity.nyc-oti.technical-operations-manager.782369",
-      "title": "NYC OTI - Technical Operations Manager 782369",
-      "roleContextHash": "a41071bc271868cd70eefb14bb2d02953624c9685074489033972c7f2f6cc700",
+      "id": "opportunity.nyc-oti.senior-product-manager.782366",
+      "title": "NYC OTI - Senior Product Manager 782366",
+      "roleContextHash": "c7ceb38471ce7eeb806906f23e801b91fff00ef1fc73ddbedbedc8f429a73435",
       "live": true,
-      "fresh": false,
+      "fresh": true,
+      "hardScreenBlocked": false,
+      "decision": "deterministic-ready-for-human-review",
+      "observed": 4,
+      "requirementTotal": 5,
+      "criticalObserved": 4,
+      "criticalTotal": 5,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.oti-product.end-to-end-public-product",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/callnyc",
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "public-facing",
+            "public launch"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti-product.discovery-and-research",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/technical-operations",
+            "/lab/source-backed-team-memory"
+          ],
+          "evidenceNeedles": [
+            "clarifies requirements",
+            "evidence"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti-product.cross-functional-launch",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "product, engineering, security, legal"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti-product.metrics-and-learning",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-weak",
+          "routes": [
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "operational metrics",
+            "retrospectives"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti-product.accessibility-privacy",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/lab/source-backed-team-memory"
+          ],
+          "evidenceNeedles": [
+            "Protected"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opportunity.aclu.senior-project-manager-lps.8620968002",
+      "title": "ACLU - Senior Project Manager, Learning and Project Solutions",
+      "roleContextHash": "0ff1f8a719b8ab111a4439e3f7c5a901f9c49678c4682c58573ee2d3abe8b335",
+      "live": true,
+      "fresh": true,
       "hardScreenBlocked": false,
       "decision": "evidence-gap-review",
+      "observed": 3,
+      "requirementTotal": 4,
+      "criticalObserved": 2,
+      "criticalTotal": 3,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.aclu-lps.systems-implementation",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [
+            "/work/technical-operations",
+            "/work/callnyc"
+          ],
+          "evidenceNeedles": [
+            "Coordinate delivery across concurrent projects",
+            "implementation"
+          ]
+        },
+        {
+          "requirementId": "requirement.aclu-lps.plan-budget-risk",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "Track status, surface risks early"
+          ]
+        },
+        {
+          "requirementId": "requirement.aclu-lps.business-analysis",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.aclu-lps.organizational-learning",
+          "importance": "important",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "retrospectives"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "title": "ACLU - Senior Project Manager, National Campaigns",
+      "roleContextHash": "706c7ca4f50dc791bd2624168fa46b2ea2d8b1960b8ae3fea08d72755188c352",
+      "live": true,
+      "fresh": true,
+      "hardScreenBlocked": false,
+      "decision": "deterministic-ready-for-human-review",
+      "observed": 4,
+      "requirementTotal": 4,
+      "criticalObserved": 3,
+      "criticalTotal": 3,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.aclu-campaigns.project-systems",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [
+            "/work/technical-operations",
+            "/work/fair-rent-nyc"
+          ],
+          "evidenceNeedles": [
+            "Coordinate delivery across concurrent projects",
+            "coalition"
+          ]
+        },
+        {
+          "requirementId": "requirement.aclu-campaigns.communications",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "Report team health, project status, and operational metrics"
+          ]
+        },
+        {
+          "requirementId": "requirement.aclu-campaigns.advocacy-context",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/callnyc"
+          ],
+          "evidenceNeedles": [
+            "New York City Council"
+          ]
+        },
+        {
+          "requirementId": "requirement.aclu-campaigns.judgment-and-discretion",
+          "importance": "important",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "surface risks early"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "title": "NYC OTI - Technical Operations Manager 782369",
+      "roleContextHash": "e3276849ef75ff417c661428500d2524f4468706b5004170248ce4f779c87b1b",
+      "live": false,
+      "fresh": false,
+      "hardScreenBlocked": false,
+      "decision": "not-live",
       "observed": 5,
       "requirementTotal": 6,
       "criticalObserved": 4,
@@ -233,11 +452,11 @@
     {
       "id": "opportunity.aclu.product-manager-discovery.8482872002",
       "title": "ACLU - Product Manager II, Discovery",
-      "roleContextHash": "90af6a1dd8f4b9de299d07197e33725517895ef0e2da372cb5c18290550c2a0f",
-      "live": true,
+      "roleContextHash": "f0781056f5d21de434f5e28bae6afaaa398479aa59624f3f9fb79e8cb1855167",
+      "live": false,
       "fresh": false,
       "hardScreenBlocked": false,
-      "decision": "evidence-gap-review",
+      "decision": "not-live",
       "observed": 2,
       "requirementTotal": 5,
       "criticalObserved": 2,
@@ -305,11 +524,11 @@
     {
       "id": "opportunity.benepass.product-operations.7f963a7a",
       "title": "Benepass - Product Operations Manager",
-      "roleContextHash": "b4482d7b9fa4fd5f69e8558c99a27229df7a2af17172a50a36f722beaa00e2f5",
+      "roleContextHash": "f6f4230c2d818f9c38b4ffecca5612b6c8e6749402c3b4fd3668bbdb85e86cd3",
       "live": true,
-      "fresh": false,
+      "fresh": true,
       "hardScreenBlocked": false,
-      "decision": "evidence-gap-review",
+      "decision": "deterministic-ready-for-human-review",
       "observed": 3,
       "requirementTotal": 4,
       "criticalObserved": 3,
@@ -374,11 +593,11 @@
     {
       "id": "opportunity.codepath.claude-corps.5182020007",
       "title": "CodePath - Senior Program Manager, Claude Corps",
-      "roleContextHash": "c7f62c754b482f4bf6c95f7a598df4fab833da214dd439a48e3d54ca7b1bacbb",
-      "live": true,
+      "roleContextHash": "fed1cf4f45eac105e117be3acc67051faa8da0e568e3dfbd96d8ac986c75c8c9",
+      "live": false,
       "fresh": false,
       "hardScreenBlocked": false,
-      "decision": "evidence-gap-review",
+      "decision": "not-live",
       "observed": 5,
       "requirementTotal": 5,
       "criticalObserved": 4,

@@ -34,7 +34,7 @@ test("public hiring evaluator receives no protected Wiki or communications", () 
   assert.equal(report.publicSafety.privateMarkerCount, 0);
   assert.equal(report.publicSafety.protectedWikiReceived, false);
   assert.equal(report.publicSafety.rawCommunicationsReceived, false);
-  assert.equal(report.opportunities.length, 7);
+  assert.equal(report.opportunities.length, 10);
   assert.ok(!JSON.stringify(report).includes("wikiRecords"));
   const protectedOpportunity = report.opportunities.find((item) => item.id.includes("protected.source-backed-memory"));
   assert.equal(protectedOpportunity.live, false);
@@ -62,8 +62,12 @@ test("removing a declared public proof lowers observed requirement coverage", ()
     readFileSync(routePath, "utf8").replaceAll("Coordinate delivery across concurrent projects", "")
   );
   const after = evaluatePublicHiring(root).report;
-  const beforeOti = before.opportunities.find((item) => item.id.includes("nyc-oti"));
-  const afterOti = after.opportunities.find((item) => item.id.includes("nyc-oti"));
+  const beforeOti = before.opportunities.find(
+    (item) => item.id === "opportunity.nyc-oti.technical-operations-manager.782369"
+  );
+  const afterOti = after.opportunities.find(
+    (item) => item.id === "opportunity.nyc-oti.technical-operations-manager.782369"
+  );
   assert.ok(afterOti.criticalObserved < beforeOti.criticalObserved);
 });
 
@@ -97,12 +101,14 @@ test("gap resolver remains separate and cannot approve projection", () => {
 
 test("closed opportunities cannot be ready for human review", () => {
   const root = candidateFixture();
-  const opportunityPath = path.join(root, "docs/knowledge-bank/opportunities/oti-technical-operations.md");
+  const opportunityPath = path.join(root, "docs/knowledge-bank/opportunities/oti-senior-product-manager.md");
   writeFileSync(
     opportunityPath,
     readFileSync(opportunityPath, "utf8").replace("opportunity_status: live", "opportunity_status: closed")
   );
-  const oti = evaluatePublicHiring(root).report.opportunities.find((item) => item.id.includes("nyc-oti"));
+  const oti = evaluatePublicHiring(root).report.opportunities.find(
+    (item) => item.id === "opportunity.nyc-oti.senior-product-manager.782366"
+  );
   assert.equal(oti.live, false);
   assert.equal(oti.decision, "not-live");
 });
@@ -139,7 +145,7 @@ test("protected opportunity cannot become live by mutating both source type and 
 
 test("exclusionary hard screens fail closed", () => {
   const root = candidateFixture();
-  const opportunityPath = path.join(root, "docs/knowledge-bank/opportunities/oti-technical-operations.md");
+  const opportunityPath = path.join(root, "docs/knowledge-bank/opportunities/oti-senior-product-manager.md");
   writeFileSync(
     opportunityPath,
     readFileSync(opportunityPath, "utf8").replace(
@@ -147,7 +153,9 @@ test("exclusionary hard screens fail closed", () => {
       "state: not-met\n    disposition: do-not-pursue"
     )
   );
-  const oti = evaluatePublicHiring(root).report.opportunities.find((item) => item.id.includes("nyc-oti"));
+  const oti = evaluatePublicHiring(root).report.opportunities.find(
+    (item) => item.id === "opportunity.nyc-oti.senior-product-manager.782366"
+  );
   assert.equal(oti.hardScreenBlocked, true);
   assert.equal(oti.decision, "hard-screen-exclusion");
 });

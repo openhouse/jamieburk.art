@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity requirement coverage
 
-**Wiki fingerprint:** `4fda88de388e55c698a3286d5b80e0fedbdcba4bbe72b9875ea360dae7f9fc88`
+**Wiki fingerprint:** `44ab26d76549a1aef8de2de4f2c24dadaefaa4c83ab46f1fcd7baac2affed9a7`
 
 Statuses preserve the difference between visible proof, Wiki-only proof, source work, experience gaps, and hard screens.
 
@@ -14,6 +14,24 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 | `requirement.aclu.privacy-and-governance` | critical | visible-qualified | none | Keep the human-review and protected-source boundary explicit. |
 | `requirement.aclu.product-brief` | critical | wiki-proven-not-projected | public-projection | Produce and human-review a redacted retrospective CallNYC product brief. |
 | `requirement.aclu.do-not-build-judgment` | important | source-needed | source | Revisit one bounded decision record; do not invent a do-not-build example. |
+
+## ACLU - Senior Project Manager, Learning and Project Solutions
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.aclu-lps.systems-implementation` | critical | visible-proven | none | Lead with one bounded implementation from ambiguity through usable handoff. |
+| `requirement.aclu-lps.plan-budget-risk` | critical | visible-qualified | wording | Prepare an honest budget-responsibility example without implying procurement authority. |
+| `requirement.aclu-lps.business-analysis` | critical | visible-qualified | public-projection | Prepare one redacted process map or requirements artifact. |
+| `requirement.aclu-lps.organizational-learning` | important | visible-proven | none | Explain what changed after a retrospective and remained in use. |
+
+## ACLU - Senior Project Manager, National Campaigns
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.aclu-campaigns.project-systems` | critical | visible-proven | none | Use one coalition sequence to show plan, dependencies, decisions, and handoffs. |
+| `requirement.aclu-campaigns.communications` | critical | visible-qualified | public-projection | Prepare a compact redacted campaign update and a public remarks example. |
+| `requirement.aclu-campaigns.advocacy-context` | critical | visible-qualified | wording | Separate direct contribution, coalition action, and elected-official authority in every example. |
+| `requirement.aclu-campaigns.judgment-and-discretion` | important | visible-qualified | wording | Prepare one example of protecting sensitive work while keeping a public process moving. |
 
 ## Asana - AI Implementation Manager, Service Management
 
@@ -42,6 +60,16 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 | `requirement.codepath.executive-reporting` | critical | visible-qualified | public-projection | Prepare one status-report sample for interview. |
 | `requirement.codepath.ai-first-workflow` | critical | visible-proven | none | Demonstrate the working Wiki and eval system without centering it over the program. |
 | `requirement.codepath.handoff-ready-systems` | important | visible-proven | none | Keep this as a recurring cross-project pattern. |
+
+## NYC OTI - Senior Product Manager 782366
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.oti-product.end-to-end-public-product` | critical | visible-qualified | wording | Tell one end-to-end CallNYC story with explicit product decisions and bounded authorship. |
+| `requirement.oti-product.discovery-and-research` | critical | visible-qualified | public-projection | Prepare a concise discovery artifact showing questions, evidence, tradeoffs, and decision. |
+| `requirement.oti-product.cross-functional-launch` | critical | visible-proven | none | Show how Jamie made dependencies and decision ownership legible. |
+| `requirement.oti-product.metrics-and-learning` | critical | visible-weak | source | Prepare one verified outcomes-and-learning example; do not substitute activity counts for resident outcomes. |
+| `requirement.oti-product.accessibility-privacy` | critical | visible-qualified | wording | Name an actual gate and what it prevented or changed. |
 
 ## NYC OTI - Technical Operations Manager 782369
 

@@ -2,9 +2,37 @@
   "schemaVersion": 1,
   "candidateSha": "1e4f5f26560d0d5a43fdb3f777af1c3c4ef763a6",
   "portfolioSnapshotHash": "63b038a6c8fa851127924ce5fff54179638901f37dcc0f625bb0c41fc64acf32",
-  "publicReportHash": "95758e22ae1fce793566b0820369d47ac076b2b4da0df53ce5dd89a62ac7585a",
-  "wikiSourceFingerprint": "4fda88de388e55c698a3286d5b80e0fedbdcba4bbe72b9875ea360dae7f9fc88",
+  "publicReportHash": "f0b639a7967074ba7d09d723d3f9f26b49b56099ae1f931c66e87a54684eedfb",
+  "wikiSourceFingerprint": "44ab26d76549a1aef8de2de4f2c24dadaefaa4c83ab46f1fcd7baac2affed9a7",
   "findings": [
+    {
+      "findingId": "finding.requirement.oti-product.metrics-and-learning",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "requirementId": "requirement.oti-product.metrics-and-learning",
+      "classification": "visible-weak-evidence-gap",
+      "wikiRecords": [
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "visible-weak",
+      "gapType": "source",
+      "smallestResponsibleChange": "Prepare one verified outcomes-and-learning example; do not substitute activity counts for resident outcomes.",
+      "requiresOriginalSourceReview": true,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.aclu-lps.business-analysis",
+      "opportunityId": "opportunity.aclu.senior-project-manager-lps.8620968002",
+      "requirementId": "requirement.aclu-lps.business-analysis",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "public-projection",
+      "smallestResponsibleChange": "Prepare one redacted process map or requirements artifact.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
     {
       "findingId": "finding.requirement.oti.government-hiring-and-procurement",
       "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",

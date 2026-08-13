@@ -2,17 +2,17 @@
 id: opportunity.codepath.claude-corps.5182020007
 title: CodePath - Senior Program Manager, Claude Corps
 kind: opportunity
-status: governed-open
+status: archived
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-08-13
+review_by: 2026-11-13
 canonical_path: docs/knowledge-bank/opportunities/codepath-claude-corps.md
-summary: Public-safe requirement and portfolio-coverage map for CodePath's live Senior Program Manager, Claude Corps role.
+summary: Historical requirement and portfolio-coverage map for the closed CodePath Senior Program Manager, Claude Corps role.
 canonical_url: https://job-boards.greenhouse.io/codepath/jobs/5182020007
 source_type: official-employer
-opportunity_status: live
-verified_at: 2026-07-18
+opportunity_status: closed
+verified_at: 2026-08-13
 portfolio_routes:
   - /
   - /work/technical-operations
@@ -137,7 +137,11 @@ human_review: governed-open
 
 # CodePath - Senior Program Manager, Claude Corps
 
-The role closely matches Jamie's cross-partner planning, documentation,
+The official job URL redirected to CodePath's openings index and no longer
+showed this role on August 13, 2026. Preserve the record as a historical fit
+map.
+
+The role closely matched Jamie's cross-partner planning, documentation,
 facilitation, and handoff pattern. The important acceptance question is whether
 the role has enough distributed ownership to avoid making one person the
 permanent bottleneck.

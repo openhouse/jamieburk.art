@@ -47,6 +47,13 @@ const liveOfficialOpportunities = opportunities.filter(
 const protectedOpportunity = result.byId.get(
   "opportunity.protected.source-backed-memory-consulting.2026"
 );
+const priorityOpportunityIds = [
+  "opportunity.aclu.senior-project-manager-lps.8620968002",
+  "opportunity.benepass.product-operations.7f963a7a",
+  "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+  "opportunity.nyc-oti.senior-product-manager.782366"
+];
+const priorityOpportunities = priorityOpportunityIds.map((id) => result.byId.get(id));
 const publicHiring = evaluatePublicHiring(defaultRepoRoot);
 const gapResolution = resolveHiringGaps(result, publicHiring.report);
 const employmentOutputs = buildEmploymentOutputs(result, publicHiring, gapResolution);
@@ -219,6 +226,7 @@ const checks = {
   mutation_suite:
     existsSync(path.join(defaultRepoRoot, "scripts/knowledge-wiki/wiki.test.mjs")) &&
     existsSync(path.join(defaultRepoRoot, "scripts/knowledge-wiki/employment.test.mjs")) &&
+    existsSync(path.join(defaultRepoRoot, "scripts/knowledge-wiki/opportunity-leadership.test.mjs")) &&
     existsSync(
       path.join(defaultRepoRoot, "scripts/knowledge-wiki/interpretive-layer-eval.test.mjs")
     ) &&
@@ -247,7 +255,7 @@ const checks = {
     opportunities.every(
       (record) =>
         record.canonical_url &&
-        ((record.source_type === "official-employer" && record.opportunity_status === "live") ||
+        ((record.source_type === "official-employer" && ["live", "closed", "historical-benchmark"].includes(record.opportunity_status)) ||
           (record.source_type === "protected-metadata" && record.opportunity_status === "conditional")) &&
         record.verified_at &&
         record.review_by &&
@@ -273,6 +281,20 @@ const checks = {
       record.one_year_risk_conditions.length > 0 &&
       record.interview_questions.length > 0
   ),
+  priority_opportunity_leadership_bounded:
+    priorityOpportunities.every(
+      (record) =>
+        record?.opportunity_status === "live" &&
+        record?.leadership_context?.direct_report?.evidence_state &&
+        record?.leadership_context?.direct_report?.note &&
+        record?.leadership_context?.senior_vision?.person_id &&
+        record?.leadership_context?.senior_vision?.evidence_state === "official-senior-leader"
+    ) &&
+    result.byId.get("opportunity.aclu.senior-project-manager-lps.8620968002")?.leadership_context?.direct_report?.person_id == null &&
+    result.byId.get("opportunity.benepass.product-operations.7f963a7a")?.leadership_context?.direct_report?.evidence_state === "posting-named-person" &&
+    result.byId.get("opportunity.aclu.senior-project-manager-national-campaigns.8631854002")?.leadership_context?.direct_report?.evidence_state === "public-title-match-not-confirmed" &&
+    result.byId.get("opportunity.nyc-oti.senior-product-manager.782366")?.leadership_context?.direct_report?.evidence_state === "public-operating-lead-not-confirmed" &&
+    result.byId.get("opportunity.nyc-oti.technical-operations-manager.782369")?.opportunity_status === "closed",
   protected_communications_metadata_only:
     privateVault?.visibility === "summary-only" &&
     privateVault?.opaque_locator === "vault.source.communication-history" &&

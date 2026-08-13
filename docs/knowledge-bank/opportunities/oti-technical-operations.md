@@ -2,17 +2,17 @@
 id: opportunity.nyc-oti.technical-operations-manager.782369
 title: NYC OTI - Technical Operations Manager 782369
 kind: opportunity
-status: governed-open
+status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-08-13
+review_by: 2026-11-13
 canonical_path: docs/knowledge-bank/opportunities/oti-technical-operations.md
-summary: Public-safe, source-backed requirement and portfolio-coverage map for NYC OTI's live Technical Operations Manager role.
+summary: Historical benchmark and requirement map for the expired NYC OTI Technical Operations Manager role that remains a close fit for future analogous openings.
 canonical_url: https://cityjobs.nyc.gov/job/technical-operations-manager-in-brooklyn-jid-44321
 source_type: official-employer
-opportunity_status: live
-verified_at: 2026-07-18
+opportunity_status: closed
+verified_at: 2026-08-13
 portfolio_routes:
   - /
   - /work/technical-operations
@@ -33,9 +33,11 @@ confirmed_facts:
   - Job ID 782369 is a full-time role in OTI's Commissioner's Office at 15 MetroTech.
   - The posted salary range is $75,000 to $160,000.
   - The official posting lists August 7, 2026 as the deadline.
+  - The official page states that the vacancy has expired.
   - The role owns hiring, planning, delivery tracking, onboarding, reporting, decision systems, and operating documentation.
 inferences:
   - The timing and operating language make a connection to OTI's Public Interest Technology Crews plausible, not confirmed.
+  - The role remains a useful dream-role benchmark for future openings because its operating-backbone language maps unusually closely to Jamie's demonstrated practice.
 unknowns:
   - Direct reporting line and exact team assignment.
   - Salary hiring target, work model, union status, and budget or procurement authority.
@@ -163,6 +165,12 @@ human_review: governed-open
 
 # NYC OTI - Technical Operations Manager 782369
 
+## Historical benchmark
+
+The official page now marks this vacancy expired. Preserve it as a dream-role
+benchmark for analogous future openings, not as an active lead or evidence of
+an application outcome.
+
 The role asks one person to own a team's operating backbone: how it hires,
 plans, tracks delivery, onboards, reports, decides, documents, and improves.
 Jamie's public portfolio already shows the central operating pattern. The
@@ -183,4 +191,4 @@ as the role-fit surface. Do not turn it into an OTI-branded application page.
 ## Freshness
 
 Recheck the [official posting](../sources/jobs-oti-technical-operations-782369.md)
-every 48 to 72 hours while the role is live.
+before using it as a comparison for a future role.

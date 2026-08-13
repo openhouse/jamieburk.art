@@ -1,8 +1,11 @@
 {
-  "id": "current-priority-2026-07-18",
-  "version": 1,
+  "id": "current-priority-2026-08-13",
+  "version": 2,
   "principle": "The public evaluator sees public projection files and public role and reader context only; Wiki gap resolution is a separate pass.",
   "opportunityPaths": [
+    "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
+    "docs/knowledge-bank/opportunities/aclu-senior-project-manager-lps.md",
+    "docs/knowledge-bank/opportunities/aclu-senior-project-manager-national-campaigns.md",
     "docs/knowledge-bank/opportunities/oti-technical-operations.md",
     "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
     "docs/knowledge-bank/opportunities/benepass-product-operations.md",
@@ -37,12 +40,32 @@
       "id": "query.operating-backbone",
       "terms": ["delivery coordination", "team operating systems", "onboarding documentation", "risk surfacing", "public launch"],
       "expectedTopK": ["opportunity.nyc-oti.technical-operations-manager.782369", "opportunity.codepath.claude-corps.5182020007"],
+      "statuses": ["closed"],
+      "k": 3
+    },
+    {
+      "id": "query.current-project-systems",
+      "terms": ["complex project delivery", "systems implementation", "process improvement", "business analysis", "post-mortem learning"],
+      "expectedTopK": ["opportunity.aclu.senior-project-manager-lps.8620968002"],
+      "k": 3
+    },
+    {
+      "id": "query.current-advocacy-operations",
+      "terms": ["advocacy campaign operations", "internal communications", "research and talking points", "coalition coordination"],
+      "expectedTopK": ["opportunity.aclu.senior-project-manager-national-campaigns.8631854002"],
+      "k": 3
+    },
+    {
+      "id": "query.current-resident-product",
+      "terms": ["resident-facing product delivery", "problem framing and discovery", "cross-functional product leadership", "accessibility and privacy", "post-launch measurement"],
+      "expectedTopK": ["opportunity.nyc-oti.senior-product-manager.782366"],
       "k": 3
     },
     {
       "id": "query.discovery-governance",
       "terms": ["structured discovery", "stakeholder listening", "privacy-aware product judgment", "decision traceability", "low-risk pilots"],
       "expectedTopK": ["opportunity.aclu.product-manager-discovery.8482872002"],
+      "statuses": ["closed"],
       "k": 3
     },
     {

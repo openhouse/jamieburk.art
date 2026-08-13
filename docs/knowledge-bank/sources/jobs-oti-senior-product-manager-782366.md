@@ -5,14 +5,17 @@ kind: source
 status: maintained
 visibility: public
 sensitivity: low
-last_reviewed: 2026-08-11
+last_reviewed: 2026-08-13
 review_by: 2026-08-14
 canonical_path: docs/knowledge-bank/sources/jobs-oti-senior-product-manager-782366.md
-summary: Official City of New York posting for four OTI Public Interest Technology Crew Senior Product Manager positions, rechecked August 11, 2026.
+summary: Official City of New York posting for four OTI Public Interest Technology Crew Senior Product Manager positions, rechecked August 13, 2026.
 source_kind: official-job-posting
 url: https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-44507
-retrieved_at: 2026-08-11
+retrieved_at: 2026-08-13
 relations:
+  - type: supports
+    target: opportunity.nyc-oti.senior-product-manager.782366
+    href: ../opportunities/oti-senior-product-manager.md
   - type: related_to
     target: application.wowlist.senior-product-manager-oti-782366
     href: ../applications/wowlist-senior-product-manager-oti-782366.md

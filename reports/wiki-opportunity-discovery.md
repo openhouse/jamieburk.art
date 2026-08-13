@@ -1,14 +1,17 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity discovery recall
 
-**Wiki fingerprint:** `4fda88de388e55c698a3286d5b80e0fedbdcba4bbe72b9875ea360dae7f9fc88`
+**Wiki fingerprint:** `44ab26d76549a1aef8de2de4f2c24dadaefaa4c83ab46f1fcd7baac2affed9a7`
 **Overall:** PASS
 
 ## Title-blind queries
 
 - `query.operating-backbone`: PASS; top results `opportunity.nyc-oti.technical-operations-manager.782369`, `opportunity.codepath.claude-corps.5182020007`, `opportunity.aclu.product-manager-discovery.8482872002`
-- `query.discovery-governance`: PASS; top results `opportunity.aclu.product-manager-discovery.8482872002`, `opportunity.asana.ai-implementation.8027437`, `opportunity.benepass.product-operations.7f963a7a`
-- `query.product-operations-physical-world`: PASS; top results `opportunity.permitflow.product-operations.8a6e6066`, `opportunity.aclu.product-manager-discovery.8482872002`, `opportunity.asana.ai-implementation.8027437`
+- `query.current-project-systems`: PASS; top results `opportunity.aclu.senior-project-manager-lps.8620968002`, `opportunity.aclu.senior-project-manager-national-campaigns.8631854002`, `opportunity.asana.ai-implementation.8027437`
+- `query.current-advocacy-operations`: PASS; top results `opportunity.aclu.senior-project-manager-national-campaigns.8631854002`, `opportunity.aclu.senior-project-manager-lps.8620968002`, `opportunity.asana.ai-implementation.8027437`
+- `query.current-resident-product`: PASS; top results `opportunity.nyc-oti.senior-product-manager.782366`, `opportunity.aclu.senior-project-manager-lps.8620968002`, `opportunity.aclu.senior-project-manager-national-campaigns.8631854002`
+- `query.discovery-governance`: PASS; top results `opportunity.aclu.product-manager-discovery.8482872002`, `opportunity.codepath.claude-corps.5182020007`, `opportunity.nyc-oti.technical-operations-manager.782369`
+- `query.product-operations-physical-world`: PASS; top results `opportunity.permitflow.product-operations.8a6e6066`, `opportunity.aclu.senior-project-manager-lps.8620968002`, `opportunity.aclu.senior-project-manager-national-campaigns.8631854002`
 - `query.source-backed-memory-consulting`: PASS; top results `opportunity.protected.source-backed-memory-consulting.2026`
 
 ## Negative controls

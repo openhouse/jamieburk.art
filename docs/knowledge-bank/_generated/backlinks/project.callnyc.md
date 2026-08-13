@@ -3,7 +3,7 @@
 
 **Source commit:** `0ad633f2b6c1ecd6d9b7c122fcabe89e7fdc29d3`
 **Generation time:** 2026-08-13T13:04:20-04:00
-**Source fingerprint:** `4fda88de388e55c698a3286d5b80e0fedbdcba4bbe72b9875ea360dae7f9fc88`
+**Source fingerprint:** `44ab26d76549a1aef8de2de4f2c24dadaefaa4c83ab46f1fcd7baac2affed9a7`
 
 - [Digital District participant photograph metadata](../../assets/digital-district-photo.md) - `part_of` (frontmatter)
 - [Jamie with a civic field kit at New York City Council](../../assets/photographs/nyc-council-field-kit-2026.md) - `related_to` (frontmatter)
@@ -29,6 +29,7 @@
 - [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `related_to` (frontmatter)
 - [Source-Backed Team Memory](../../methods/source-backed-team-memory.md) - `related_to` (frontmatter)
 - [ACLU - Product Manager II, Discovery](../../opportunities/aclu-product-discovery.md) - `related_to` (frontmatter)
+- [NYC OTI - Senior Product Manager 782366](../../opportunities/oti-senior-product-manager.md) - `related_to` (frontmatter)
 - [NYC OTI - Technical Operations Manager 782369](../../opportunities/oti-technical-operations.md) - `related_to` (frontmatter)
 - [PermitFlow - Product Operations Manager](../../opportunities/permitflow-product-operations.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
