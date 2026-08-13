@@ -1,8 +1,10 @@
 # Launch-B named public-reader post-hill-climb
 
 **Public candidate:** `f8d31b0bfb4b3ccb1dda1c26cba00d18c61ab9b2` at
-`https://staging-b.jamieburk.art`  
-**Design and availability:** **PASS**  
+`https://staging-b.jamieburk.art`
+
+**Design and availability:** **PASS**
+
 **Modeled hiring acceptance:** **FAIL - 0 of 8 required reader-opportunity pairs passed**
 
 These are fictionalized public-source analytical lenses. The named people did
