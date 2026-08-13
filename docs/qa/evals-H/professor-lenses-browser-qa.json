@@ -1,11 +1,11 @@
 {
-  "reportVersion": 3,
-  "checkedAt": "2026-08-13T17:20:55.454Z",
-  "baseUrl": "http://127.0.0.1:3056",
-  "publicSurfaceFingerprint": "78a93fd1ed18fd5cf9762a0ae551a440f47c0f0002d79d065041db6af17f7914",
+  "reportVersion": 4,
+  "checkedAt": "2026-08-13T20:57:33.377Z",
+  "baseUrl": "http://127.0.0.1:3103",
+  "publicSurfaceFingerprint": "22e75644f4433111922998298e80e9c65065673aecc8a1125e5d630843a14c92",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 119,
-  "captureMethod": "Playwright Chromium screenshots of the current built local candidate; About captures are deliberately framed on the through-line and current systems loops; no deployment or indexing action.",
+  "publicSurfaceFileCount": 125,
+  "captureMethod": "Playwright Chromium viewport screenshots of the current built local candidate; About captures are framed on the systems through-line; no deployment or indexing action.",
   "routes": [
     {
       "path": "/",
@@ -20,7 +20,7 @@
           },
           "pixelWidth": 1280,
           "pixelHeight": 900,
-          "sha256": "d44779c5d008a113393a46992d1f7f2d1014df8c7e8153babca34f01af6ae317",
+          "sha256": "7ff02c019578cce0298caf900c7b880e3d9ffc2e0e97dd15c789ad85dbcd8b80",
           "file": "candidate-home-desktop.png"
         },
         {
@@ -31,7 +31,7 @@
           },
           "pixelWidth": 375,
           "pixelHeight": 812,
-          "sha256": "e0f7847570872a2c0caf6753675079db99d32dbb62f58ba83d522e75a84b0401",
+          "sha256": "a3233b7565d0417ded117b0b2cfd5d504bbee270ae408026853739b8008a3ef1",
           "file": "candidate-home-viewport.png"
         }
       ]
@@ -49,11 +49,10 @@
           },
           "pixelWidth": 1280,
           "pixelHeight": 900,
-          "sha256": "e322e5d01e6b47c0af09c14f5b1c92de55346d0bb3ea313309f6e6415866db81",
+          "sha256": "74724ed4278bab16ea13080ce969dc115054c5f0c8863c159b1623d10a246ac1",
           "file": "professor-lenses-about-desktop.png",
           "framedContent": {
-            "throughLineHeadingPresent": true,
-            "currentSystemsLabelPresent": true,
+            "systemsPeopleCanInhabitHeadingPresent": true,
             "currentPracticeDocumented": true
           }
         },
@@ -65,11 +64,10 @@
           },
           "pixelWidth": 375,
           "pixelHeight": 1200,
-          "sha256": "b448010a05bb77a4ffcfb6d4d62b038ae44b83c26c01a3791393a14ee65edc6d",
+          "sha256": "fb2e2b92d3de26287de71bc466ad3640a9c56fa9ae7b47a7fd6ec07fb33007cc",
           "file": "professor-lenses-about-mobile.png",
           "framedContent": {
-            "throughLineHeadingPresent": true,
-            "currentSystemsLabelPresent": true,
+            "systemsPeopleCanInhabitHeadingPresent": true,
             "currentPracticeDocumented": true
           }
         }

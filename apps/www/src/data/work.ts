@@ -220,7 +220,14 @@ const workItemsInput = [
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
       "Recurring cultural-space meetings, public event pathways, practical safety and legal sessions, town halls, hearings, campaign actions, running minutes, action trackers, source maps, public campaign websites, and shared campaign memory.",
-    artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
+    artifactTypes: [
+      "website",
+      "photo sequence",
+      "source map",
+      "meeting memory",
+      "decision record",
+      "public handout"
+    ],
     artifacts: [
       {
         title: "Campaign-memory spine",
@@ -279,14 +286,14 @@ const workItemsInput = [
       { label: "Let NYC Dance", url: "https://letnycdance.nycartc.com/" }
     ],
     careNote:
-      "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
+      "Public-safe summary of collective civic and coalition work. The three-part participation sequence uses exact, approved portfolio occurrences; it does not authorize other private notes, legal-review materials, stakeholder lists, raw strategy documents, or internal materials.",
     sourceLayer:
-      "Public sources, approved public campaign screenshot, meeting-memory summaries, private/redacted coalition context, and collaborator review for additional named materials.",
+      "Public sources, approved public campaign captures, two governed photo occurrences from the NYC Artist Coalition project archive, meeting-memory summaries, private/redacted coalition context, and collaborator review for additional named materials.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
     },
-    currentStatus: "Active public-safe summary with an approved public campaign screenshot.",
+    currentStatus: "Active public-safe case study with a governed participation sequence and approved public campaign captures.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic delivery, coalition operations, product operations, documentation architecture, source-backed memory, public guidance, policy communications, and implementation support.",
@@ -411,14 +418,14 @@ const workItemsInput = [
       }
   },
   {
-    title: "WOWList.org",
+    title: "WOW List",
     slug: "wowlist",
     series: "Community Platform",
-    subtitle: "Followable keyword communities for arts and music organizers",
+    subtitle: "A community calendar returning through a public invitation to test",
     summary:
       "Co-built and operated a community-calendar platform for DIY arts and music organizers. A July 2017 production snapshot records 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts.",
     role: "Co-builder & Product Operator",
-    years: "2010s",
+    years: "2010s-2026 relaunch",
     status: "Short proof page",
     featured: true,
     priority: 4,
@@ -435,6 +442,21 @@ const workItemsInput = [
         description:
           "A lightweight distribution pattern for followable arts, music, and local-interest communities.",
         type: "diagram"
+      },
+      {
+        title: "Public relaunch surface",
+        description:
+          "The live landing and About experience invite testers back into WOW List without presenting the historical platform as fully restored.",
+        type: "public-safe screenshot",
+        media: {
+          src: "/artifacts/wowlist/public-relaunch.jpg",
+          alt: "WOW List landing page with the words being there changes everything, illustrated devices, a tester sign-up form, and a gathering in the background.",
+          caption:
+            "WOW List public landing captured August 13, 2026. The current invitation is live and intentionally noindex while the wider platform remains in development.",
+          href: "https://wowlist.org/",
+          sourceLabel: "WOW List public website",
+          fit: "contain"
+        }
       }
     ],
     tags: ["Community Systems", "Web Systems", "Product Operations", "Public-Facing Tools"],
@@ -446,14 +468,15 @@ const workItemsInput = [
       "Event Workflows"
     ],
     careNote:
-      "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
+      "Historical proof and current relaunch surface. The public landing is an invitation to testers, not evidence that the full historical platform has been restored.",
     sourceLayer:
-      "Public-safe summary, historical project context, and screenshots pending Jamie approval.",
+      "Public-safe historical project records, the current openhouse/wowlist.org main branch, and an approved capture of the live noindex landing page.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
-    currentStatus: "Historical short proof page.",
+    currentStatus: "Public landing and About experience live for tester recruitment; full platform restoration is not claimed.",
     group: "Community and cultural infrastructure",
     roleFit:
       "Community systems, product operations, public-facing platforms, and event distribution workflows.",
+    links: [{ label: "Visit WOW List", url: "https://wowlist.org/" }],
     evidence: [
       "Django / PostgreSQL / PostGIS and Ember platform",
       "Followable keyword communities",
@@ -463,9 +486,9 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
+        "WOW List was a co-built community-calendar platform organized around followable keyword communities; a public landing and About experience are now live for tester recruitment.",
       open:
-        "Screenshots, archive links, and individual technical-contribution allocation need further review.",
+        "The historical application, archive links, and individual technical-contribution allocation need further review before stronger restoration claims.",
       protected:
         "Private user data, organizer contact lists, and unapproved community records are not published."
     }

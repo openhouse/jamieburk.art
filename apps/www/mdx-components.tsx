@@ -1,5 +1,6 @@
 import type { MDXComponents } from "mdx/types";
 import { Cite, Claim, References } from "@/components/citations";
+import { ParticipationSystem } from "@/components/ParticipationSystem";
 import { WorkflowSpecimen } from "@/components/WorkflowSpecimen";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
@@ -21,6 +22,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     Cite,
     Claim,
     References,
+    ParticipationSystem,
     WorkflowSpecimen,
     ...components
   };

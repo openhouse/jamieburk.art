@@ -86,15 +86,19 @@
       "grader": "hybrid",
       "blocking": true,
       "weight": 12,
-      "inputs": ["Harry J. Epstein case study", "FairRentNYC case study", "CallNYC case study", "Source-Backed Team Memory lab"],
+      "inputs": ["Harry J. Epstein case study", "FairRentNYC case study and participation sequence", "CallNYC case study", "WOW List current proof surface", "Source-Backed Team Memory lab"],
       "procedure": [
         "Inventory visible figures, screenshots, diagrams, downloads, and public artifacts.",
-        "Verify each artifact's caption, provenance, alt text, consent status, and relation to a claim.",
+        "Verify each artifact's caption, provenance, alt text, consent status, exact derivative, permission record, and relation to a claim.",
+        "For the FairRentNYC participation sequence, verify the order from facilitated room to shared public surface to collective public assembly, the ten-frame Let NYC Dance capture method, and the unchanged homepage hero.",
         "Have a blind judge explain what each artifact proves."
       ],
       "pass_criteria": [
         "Each lead page contains at least one genuine inspectable artifact, not only a styled descriptive card.",
-        "Every visual has useful alt text, a caption, a source or ownership note, and public-safety approval.",
+        "Every visual has useful alt text, a caption, a source or ownership note, an exact derivative record, and public-safety approval.",
+        "The FairRentNYC sequence makes Jamie's facilitation and implementation legible while keeping campaign work and outcomes collective.",
+        "The selected Let NYC Dance frame is frame 5 of ten one-second candidates captured after the video loaded; the other nine are not committed.",
+        "The existing homepage hero remains unchanged, and the WOW List capture is framed as a live tester invitation rather than full platform restoration.",
         "The homepage or Technical Operations page links to at least three inspectable proof objects.",
         "A judge can connect each artifact to a specific action, outcome, or operating capability."
       ],

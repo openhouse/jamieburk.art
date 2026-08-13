@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `0ad633f2b6c1ecd6d9b7c122fcabe89e7fdc29d3`
-**Generation time:** 2026-08-13T13:04:20-04:00
-**Source fingerprint:** `44ab26d76549a1aef8de2de4f2c24dadaefaa4c83ab46f1fcd7baac2affed9a7`
+**Source commit:** `35527351e5f08fba4a917cd193dac36e1c9907df`
+**Generation time:** 2026-08-13T14:31:16-04:00
+**Source fingerprint:** `f6f87d48bc1a9abe5424c304ec68d9cbd8b4ff80cb7ce5896b62e3514a5ba8c8`
 
 ## application
 
@@ -21,6 +21,8 @@
 - [Jamie and a collaborator inside KC Town Hall](../assets/photographs/kc-town-hall-stewardship-interior.md) - `asset.photo.kc-town-hall.stewardship-interior.001`
 - [Jamie with a civic field kit at New York City Council](../assets/photographs/nyc-council-field-kit-2026.md) - `asset.photo.nyc-council.field-kit.2026.001`
 - [DCLA listening room, January 2017](../assets/photographs/nycac-dcla-listening-room-2017.md) - `asset.photo.nycac-dcla-listening-room.2017.001`
+- [Save NYC Spaces town hall at Market Hotel, 2017](../assets/photographs/nycac-market-hotel-town-hall-2017.md) - `asset.photo.nycac.market-hotel-town-hall.2017.001`
+- [Shoestring Press advocacy coordination, 2017](../assets/photographs/nycac-shoestring-facilitation-2017.md) - `asset.photo.nycac.shoestring-facilitation.2017.001`
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb`
 - [FairRentNYC: 2019 03 18 small business rally 1 [hur5tftl]](../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj.md) - `asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj`
 - [FairRentNYC: 2019 03 18 small business rally 1 [wp36j4c2]](../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-wp36j4c2rp.md) - `asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-wp36j4c2rp`
@@ -200,6 +202,8 @@
 - [Talks Not Raids: save nyc spaces group photo nyc artist coalition [a7ura7th]](../assets/photographs/project-sites/talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-a7ura7t.md) - `asset.photo.project-site.talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-a7ura7t`
 - [Talks Not Raids: save nyc spaces group photo nyc artist coalition thumb [fqny62h4]](../assets/photographs/project-sites/talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-thumb-f.md) - `asset.photo.project-site.talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-thumb-f`
 - [Talks Not Raids: stephenlevin [3lpdubkj]](../assets/photographs/project-sites/talks-not-raids-stephenlevin-3lpdubkj6h.md) - `asset.photo.project-site.talks-not-raids-stephenlevin-3lpdubkj6h`
+- [Let NYC Dance loaded hero-video public surface](../assets/graphics/let-nyc-dance-public-surface-2026-08-13.md) - `asset.screenshot.let-nyc-dance.public-surface.2026-08-13`
+- [WOW List public tester invitation](../assets/graphics/wowlist-public-relaunch-2026-08-13.md) - `asset.screenshot.wowlist.public-relaunch.2026-08-13`
 
 ## capability
 
@@ -226,6 +230,7 @@
 - [KC Town Hall listening within fieldwork](../decisions/kc-town-hall-listening-fieldwork.md) - `decision.kc-town-hall.listening-fieldwork`
 - [Knowledge Wiki depth with selective public projection](../decisions/knowledge-wiki-selective-projection.md) - `decision.knowledge-wiki.selective-projection`
 - [Open House communal governance inside negotiated boundaries](../decisions/open-house-communal-governance.md) - `decision.open-house.communal-governance`
+- [Compose facilitation, shared surface, and public assembly](../decisions/photography/fair-rent-participation-sequence-2026-08-13.md) - `decision.photo.fair-rent-participation-sequence.2026-08-13`
 - [Select the East River photograph for the Layout C homepage](../decisions/photography/layout-c-home-east-river-v1.md) - `decision.photo.layout-c.home-east-river.v1`
 - [Keep the Layout C resume route photograph-free](../decisions/photography/layout-c-resume-no-photo-v1.md) - `decision.photo.layout-c.resume-no-photo.v1`
 - [Narrow the pre-launch public photo field to fully bound occurrences](../decisions/photography/pre-launch-rights-narrowing-2026-07-28.md) - `decision.photo.pre-launch.rights-narrowing.2026-07-28`
@@ -372,6 +377,7 @@
 - [CallNYC portfolio projection](../projections/work-callnyc.md) - `portfolio.work.callnyc`
 - [Technical Operations portfolio projection](../projections/work-technical-operations.md) - `portfolio.work.technical-operations`
 - [Layout C homepage East River occurrence](../projections/photography/layout-c-home-east-river.md) - `projection.photo.layout-c.home.east-river`
+- [Fair Rent case-study participation sequence](../projections/photography/fair-rent-participation-sequence-2026-08.md) - `projection.visual.fair-rent.participation-sequence.2026-08`
 
 ## research-inquiry
 
@@ -454,7 +460,10 @@
 - [Active New York State commercial rent stabilization bills](../sources/commercial-rent-public-support/active-state-bills-2025-2026.md) - `source.nys.commercial-rent.active-bills.2025-2026`
 - [2026 Democratic primary election-night result for Assembly District 56](../sources/commercial-rent-public-support/eon-huntley-2026-primary-result.md) - `source.nysboe.primary.ad56.2026`
 - [Elana Gordon East River portfolio permission summary](../sources/permissions/elana-gordon-east-river-portfolio-2026.md) - `source.permission.elana-gordon.east-river.2026-07`
+- [Photo-select source-album portfolio publication authorization](../sources/permissions/photo-select-album-portfolio-2026-08-13.md) - `source.permission.jamie.photo-select-portfolio.2026-08-13`
+- [August 2026 public-site capture publication decisions](../sources/permissions/public-site-captures-2026-08-13.md) - `source.permission.jamie.public-site-captures.2026-08-13`
 - [East River photograph public-safe metadata summary](../sources/photo-metadata/east-river-2022-public-safe.md) - `source.photo-metadata.east-river.2022.public-safe`
+- [NYC Artist Coalition participation-sequence public-safe metadata](../sources/photo-metadata/nycac-participation-sequence-2026-public-safe.md) - `source.photo-metadata.nycac-participation-sequence.2026-08-13`
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`
 - [Professional record governed photo field](../sources/photo-metadata/professional-record-photo-field-2026-08.md) - `source.professional-record.photo-field.2026-08`
 - [Governed professional-record research comparison, August 2026](../sources/archives/professional-record-research-2026-08.md) - `source.professional-record.research.2026-08`

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-13T13:04:20-04:00",
-  "sourceCommit": "0ad633f2b6c1ecd6d9b7c122fcabe89e7fdc29d3",
-  "sourceFingerprint": "44ab26d76549a1aef8de2de4f2c24dadaefaa4c83ab46f1fcd7baac2affed9a7",
+  "generatedAt": "2026-08-13T14:31:16-04:00",
+  "sourceCommit": "35527351e5f08fba4a917cd193dac36e1c9907df",
+  "sourceFingerprint": "f6f87d48bc1a9abe5424c304ec68d9cbd8b4ff80cb7ce5896b62e3514a5ba8c8",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -147,6 +147,32 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-09-26"
+    },
+    {
+      "id": "asset.photo.nycac.market-hotel-town-hall.2017.001",
+      "path": "docs/knowledge-bank/assets/photographs/nycac-market-hotel-town-hall-2017.md",
+      "title": "Save NYC Spaces town hall at Market Hotel, 2017",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Selected portfolio photograph of speakers and organizers holding the Save NYC Spaces and NYC Artist Coalition banner before a packed Market Hotel crowd.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2027-02-13"
+    },
+    {
+      "id": "asset.photo.nycac.shoestring-facilitation.2017.001",
+      "path": "docs/knowledge-bank/assets/photographs/nycac-shoestring-facilitation-2017.md",
+      "title": "Shoestring Press advocacy coordination, 2017",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Selected portfolio photograph showing Jamie facilitating and visualizing an advocacy-group coordination meeting in the Shoestring Press garden.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2027-02-13"
     },
     {
       "id": "asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb",
@@ -2476,6 +2502,32 @@
       "reviewBy": "2026-10-28"
     },
     {
+      "id": "asset.screenshot.let-nyc-dance.public-surface.2026-08-13",
+      "path": "docs/knowledge-bank/assets/graphics/let-nyc-dance-public-surface-2026-08-13.md",
+      "title": "Let NYC Dance loaded hero-video public surface",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact portfolio capture selected from ten one-second samples after the live Let NYC Dance embedded hero video reached a playable state.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2027-02-13"
+    },
+    {
+      "id": "asset.screenshot.wowlist.public-relaunch.2026-08-13",
+      "path": "docs/knowledge-bank/assets/graphics/wowlist-public-relaunch-2026-08-13.md",
+      "title": "WOW List public tester invitation",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact capture of the live WOW List landing page and its public tester invitation on August 13, 2026.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2027-02-13"
+    },
+    {
       "id": "capability.civic-cultural-technical-translation",
       "path": "docs/knowledge-bank/capabilities/civic-cultural-and-technical-translation.md",
       "title": "Civic, cultural, and technical translation",
@@ -2656,6 +2708,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "decision.photo.fair-rent-participation-sequence.2026-08-13",
+      "path": "docs/knowledge-bank/decisions/photography/fair-rent-participation-sequence-2026-08-13.md",
+      "title": "Compose facilitation, shared surface, and public assembly",
+      "kind": "decision",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Select two permission-cleared archival photographs and one timed public-site capture as a bounded hiring-facing sequence while preserving the existing homepage hero.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2027-02-13"
     },
     {
       "id": "decision.photo.layout-c.home-east-river.v1",
@@ -3115,7 +3180,7 @@
       "sensitivity": "low",
       "summary": "Index of bounded decision reconstructions preserving actors, constraints, alternatives, artifacts, outcomes, unknowns, and projection holds.",
       "aliases": [],
-      "lastReviewed": "2026-07-28",
+      "lastReviewed": "2026-08-13",
       "reviewBy": "2026-10-19"
     },
     {
@@ -4190,6 +4255,19 @@
       "reviewBy": "2027-01-26"
     },
     {
+      "id": "projection.visual.fair-rent.participation-sequence.2026-08",
+      "path": "docs/knowledge-bank/projections/photography/fair-rent-participation-sequence-2026-08.md",
+      "title": "Fair Rent case-study participation sequence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact three-part occurrence binding facilitation, the Let NYC Dance public surface, and the Save NYC Spaces town hall to the Fair Rent case study.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2027-02-13"
+    },
+    {
       "id": "research-inquiry.documented-canoe-bike-journeys",
       "path": "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md",
       "title": "Documented bicycle-canoe journeys",
@@ -5139,6 +5217,32 @@
       "reviewBy": "2027-01-26"
     },
     {
+      "id": "source.permission.jamie.photo-select-portfolio.2026-08-13",
+      "path": "docs/knowledge-bank/sources/permissions/photo-select-album-portfolio-2026-08-13.md",
+      "title": "Photo-select source-album portfolio publication authorization",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe capsule recording Jamie Burkart's direct authorization to publish members of the exact Apple Photos content set underlying the August 2026 photo-select job on his professional portfolio.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2027-02-13"
+    },
+    {
+      "id": "source.permission.jamie.public-site-captures.2026-08-13",
+      "path": "docs/knowledge-bank/sources/permissions/public-site-captures-2026-08-13.md",
+      "title": "August 2026 public-site capture publication decisions",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Jamie approved exact captures of the live Let NYC Dance and WOW List public surfaces for portfolio use, with collective credit and current-status boundaries.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2027-02-13"
+    },
+    {
       "id": "source.photo-metadata.east-river.2022.public-safe",
       "path": "docs/knowledge-bank/sources/photo-metadata/east-river-2022-public-safe.md",
       "title": "East River photograph public-safe metadata summary",
@@ -5150,6 +5254,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "source.photo-metadata.nycac-participation-sequence.2026-08-13",
+      "path": "docs/knowledge-bank/sources/photo-metadata/nycac-participation-sequence-2026-public-safe.md",
+      "title": "NYC Artist Coalition participation-sequence public-safe metadata",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Sanitized metadata, visible-scene review, Jamie's first-person context, and public-source comparison for two selected NYC Artist Coalition photographs.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2027-02-13"
     },
     {
       "id": "source.politico.callnyc.2016-03-14",
@@ -5733,6 +5850,62 @@
       "context": null
     },
     {
+      "from": "asset.photo.nycac.market-hotel-town-hall.2017.001",
+      "type": "projected_to",
+      "to": "projection.visual.fair-rent.participation-sequence.2026-08",
+      "source": "frontmatter",
+      "href": "../../projections/photography/fair-rent-participation-sequence-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac.market-hotel-town-hall.2017.001",
+      "type": "related_to",
+      "to": "asset.photo.project-site.talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-a7ura7t",
+      "source": "frontmatter",
+      "href": "project-sites/talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-a7ura7t.md",
+      "context": "Historical project-site census record for a corresponding public derivative; its former hold remains valid history."
+    },
+    {
+      "from": "asset.photo.nycac.market-hotel-town-hall.2017.001",
+      "type": "uses_source",
+      "to": "source.permission.jamie.photo-select-portfolio.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/photo-select-album-portfolio-2026-08-13.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac.market-hotel-town-hall.2017.001",
+      "type": "uses_source",
+      "to": "source.photo-metadata.nycac-participation-sequence.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/photo-metadata/nycac-participation-sequence-2026-public-safe.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac.shoestring-facilitation.2017.001",
+      "type": "projected_to",
+      "to": "projection.visual.fair-rent.participation-sequence.2026-08",
+      "source": "frontmatter",
+      "href": "../../projections/photography/fair-rent-participation-sequence-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac.shoestring-facilitation.2017.001",
+      "type": "uses_source",
+      "to": "source.permission.jamie.photo-select-portfolio.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/photo-select-album-portfolio-2026-08-13.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac.shoestring-facilitation.2017.001",
+      "type": "uses_source",
+      "to": "source.photo-metadata.nycac-participation-sequence.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/photo-metadata/nycac-participation-sequence-2026-public-safe.md",
+      "context": null
+    },
+    {
       "from": "asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb",
       "type": "related_to",
       "to": "index.photo-set.nycac-project-sites.2017-2026",
@@ -10682,6 +10855,30 @@
       "to": "source.nycac.project-site-photograph-census.2026-07-28",
       "source": "frontmatter",
       "href": "../../../sources/archives/nycac-project-site-photograph-census-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "asset.screenshot.let-nyc-dance.public-surface.2026-08-13",
+      "type": "projected_to",
+      "to": "projection.visual.fair-rent.participation-sequence.2026-08",
+      "source": "frontmatter",
+      "href": "../../projections/photography/fair-rent-participation-sequence-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "asset.screenshot.let-nyc-dance.public-surface.2026-08-13",
+      "type": "uses_source",
+      "to": "source.permission.jamie.public-site-captures.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/public-site-captures-2026-08-13.md",
+      "context": null
+    },
+    {
+      "from": "asset.screenshot.wowlist.public-relaunch.2026-08-13",
+      "type": "uses_source",
+      "to": "source.permission.jamie.public-site-captures.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/public-site-captures-2026-08-13.md",
       "context": null
     },
     {
@@ -11136,6 +11333,54 @@
       "to": "source.good-times.open-house.2006-06-28",
       "source": "frontmatter",
       "href": "../sources/good-times-open-house-2006-06-28.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.fair-rent-participation-sequence.2026-08-13",
+      "type": "projected_to",
+      "to": "projection.visual.fair-rent.participation-sequence.2026-08",
+      "source": "frontmatter",
+      "href": "../../projections/photography/fair-rent-participation-sequence-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.fair-rent-participation-sequence.2026-08-13",
+      "type": "related_to",
+      "to": "asset.photo.nycac.market-hotel-town-hall.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-market-hotel-town-hall-2017.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.fair-rent-participation-sequence.2026-08-13",
+      "type": "related_to",
+      "to": "asset.photo.nycac.shoestring-facilitation.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-shoestring-facilitation-2017.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.fair-rent-participation-sequence.2026-08-13",
+      "type": "related_to",
+      "to": "asset.screenshot.let-nyc-dance.public-surface.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../assets/graphics/let-nyc-dance-public-surface-2026-08-13.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.fair-rent-participation-sequence.2026-08-13",
+      "type": "related_to",
+      "to": "asset.screenshot.wowlist.public-relaunch.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../assets/graphics/wowlist-public-relaunch-2026-08-13.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.fair-rent-participation-sequence.2026-08-13",
+      "type": "related_to",
+      "to": "decision.photo.pre-launch.rights-narrowing.2026-07-28",
+      "source": "frontmatter",
+      "href": "pre-launch-rights-narrowing-2026-07-28.md",
       "context": null
     },
     {
@@ -11912,6 +12157,14 @@
       "to": "decision.open-house.communal-governance",
       "source": "frontmatter",
       "href": "../decisions/open-house-communal-governance.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.decision-records",
+      "type": "related_to",
+      "to": "decision.photo.fair-rent-participation-sequence.2026-08-13",
+      "source": "frontmatter",
+      "href": "../decisions/photography/fair-rent-participation-sequence-2026-08-13.md",
       "context": null
     },
     {
@@ -15240,6 +15493,14 @@
     },
     {
       "from": "project.nyc-artist-coalition",
+      "type": "projected_to",
+      "to": "projection.visual.fair-rent.participation-sequence.2026-08",
+      "source": "frontmatter",
+      "href": "../projections/photography/fair-rent-participation-sequence-2026-08.md",
+      "context": "Hiring-facing visual sequence connecting facilitated listening, shared campaign infrastructure, and a collective public convening."
+    },
+    {
+      "from": "project.nyc-artist-coalition",
       "type": "related_to",
       "to": "application.nycac.civic-product-operations",
       "source": "frontmatter",
@@ -15492,6 +15753,30 @@
       "to": "source.permission.elana-gordon.east-river.2026-07",
       "source": "frontmatter",
       "href": "../../sources/permissions/elana-gordon-east-river-portfolio-2026.md",
+      "context": null
+    },
+    {
+      "from": "projection.visual.fair-rent.participation-sequence.2026-08",
+      "type": "related_to",
+      "to": "decision.photo.fair-rent-participation-sequence.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../decisions/photography/fair-rent-participation-sequence-2026-08-13.md",
+      "context": null
+    },
+    {
+      "from": "projection.visual.fair-rent.participation-sequence.2026-08",
+      "type": "uses_source",
+      "to": "source.permission.jamie.photo-select-portfolio.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/photo-select-album-portfolio-2026-08-13.md",
+      "context": null
+    },
+    {
+      "from": "projection.visual.fair-rent.participation-sequence.2026-08",
+      "type": "uses_source",
+      "to": "source.permission.jamie.public-site-captures.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/public-site-captures-2026-08-13.md",
       "context": null
     },
     {
@@ -16727,11 +17012,59 @@
       "context": null
     },
     {
+      "from": "source.permission.jamie.photo-select-portfolio.2026-08-13",
+      "type": "related_to",
+      "to": "asset.photo.nycac.market-hotel-town-hall.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-market-hotel-town-hall-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.permission.jamie.photo-select-portfolio.2026-08-13",
+      "type": "related_to",
+      "to": "asset.photo.nycac.shoestring-facilitation.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-shoestring-facilitation-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.permission.jamie.public-site-captures.2026-08-13",
+      "type": "related_to",
+      "to": "asset.screenshot.let-nyc-dance.public-surface.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../assets/graphics/let-nyc-dance-public-surface-2026-08-13.md",
+      "context": null
+    },
+    {
+      "from": "source.permission.jamie.public-site-captures.2026-08-13",
+      "type": "related_to",
+      "to": "asset.screenshot.wowlist.public-relaunch.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../assets/graphics/wowlist-public-relaunch-2026-08-13.md",
+      "context": null
+    },
+    {
       "from": "source.photo-metadata.east-river.2022.public-safe",
       "type": "related_to",
       "to": "asset.photo.east-river-manhattan-bridge.2022.001",
       "source": "frontmatter",
       "href": "../../assets/photographs/east-river-manhattan-bridge-2022.md",
+      "context": null
+    },
+    {
+      "from": "source.photo-metadata.nycac-participation-sequence.2026-08-13",
+      "type": "related_to",
+      "to": "asset.photo.nycac.market-hotel-town-hall.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-market-hotel-town-hall-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.photo-metadata.nycac-participation-sequence.2026-08-13",
+      "type": "related_to",
+      "to": "asset.photo.nycac.shoestring-facilitation.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-shoestring-facilitation-2017.md",
       "context": null
     },
     {
@@ -18171,6 +18504,15 @@
       "to": "decision.photo.pre-launch.rights-narrowing.2026-07-28",
       "fragment": null,
       "line": 18,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/decision-records.md",
+      "from": "index.knowledge-wiki.decision-records",
+      "toPath": "docs/knowledge-bank/decisions/photography/fair-rent-participation-sequence-2026-08-13.md",
+      "to": "decision.photo.fair-rent-participation-sequence.2026-08-13",
+      "fragment": null,
+      "line": 19,
       "kind": "link"
     },
     {
@@ -20325,6 +20667,15 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/projections/photography/fair-rent-participation-sequence-2026-08.md",
+      "from": "projection.visual.fair-rent.participation-sequence.2026-08",
+      "toPath": "docs/knowledge-bank/decisions/photography/fair-rent-participation-sequence-2026-08-13.md",
+      "to": "decision.photo.fair-rent-participation-sequence.2026-08-13",
+      "fragment": null,
+      "line": 13,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md",
       "from": null,
       "toPath": "docs/knowledge-bank/data/blind-spot-controls-2026-07.json",
@@ -20453,10 +20804,19 @@
     {
       "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
       "from": "project.nyc-artist-coalition",
+      "toPath": "docs/knowledge-bank/projections/photography/fair-rent-participation-sequence-2026-08.md",
+      "to": "projection.visual.fair-rent.participation-sequence.2026-08",
+      "fragment": null,
+      "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+      "from": "project.nyc-artist-coalition",
       "toPath": "docs/knowledge-bank/projects/nycac-campaign-press-archive.md",
       "to": null,
       "fragment": null,
-      "line": 109,
+      "line": 113,
       "kind": "link"
     },
     {
@@ -20465,7 +20825,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-campaign-press-readings.md",
       "to": null,
       "fragment": null,
-      "line": 110,
+      "line": 114,
       "kind": "link"
     },
     {
@@ -20474,7 +20834,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-finkelpearl-council-hearing-review.md",
       "to": null,
       "fragment": null,
-      "line": 191,
+      "line": 195,
       "kind": "link"
     },
     {
@@ -20483,7 +20843,7 @@
       "toPath": "docs/knowledge-bank/research-runs/nycac-shared-folder-2026-07-19.md",
       "to": "research.nycac.shared-folder.2026-07-19",
       "fragment": null,
-      "line": 40,
+      "line": 44,
       "kind": "link"
     },
     {
@@ -20492,7 +20852,7 @@
       "toPath": "docs/knowledge-bank/sources/nycac-protected-shared-folder-census-2026.md",
       "to": "source.nycac.shared-folder-census.2026",
       "fragment": null,
-      "line": 41,
+      "line": 45,
       "kind": "link"
     },
     {
@@ -20501,7 +20861,7 @@
       "toPath": "docs/knowledge-bank/claims/nycac-advocacy-operating-playbook.md",
       "to": "claim.nycac.advocacy-operating-playbook",
       "fragment": null,
-      "line": 42,
+      "line": 46,
       "kind": "link"
     },
     {
@@ -20510,7 +20870,7 @@
       "toPath": "docs/knowledge-bank/applications/nycac-civic-product-operations.md",
       "to": "application.nycac.civic-product-operations",
       "fragment": null,
-      "line": 43,
+      "line": 47,
       "kind": "link"
     },
     {
@@ -20519,7 +20879,7 @@
       "toPath": "docs/knowledge-bank/evaluations/nycac-shared-folder-production-2026-07-19.md",
       "to": "evaluation.nycac.shared-folder-production.2026-07-19",
       "fragment": null,
-      "line": 44,
+      "line": 48,
       "kind": "link"
     },
     {

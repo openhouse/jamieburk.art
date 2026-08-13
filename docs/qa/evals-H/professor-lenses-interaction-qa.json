@@ -1,23 +1,23 @@
 {
-  "reportVersion": 1,
-  "checkedAt": "2026-08-13T17:20:55.454Z",
-  "baseUrl": "http://127.0.0.1:3056",
-  "publicSurfaceFingerprint": "78a93fd1ed18fd5cf9762a0ae551a440f47c0f0002d79d065041db6af17f7914",
+  "reportVersion": 2,
+  "checkedAt": "2026-08-13T20:57:33.377Z",
+  "baseUrl": "http://127.0.0.1:3103",
+  "publicSurfaceFingerprint": "22e75644f4433111922998298e80e9c65065673aecc8a1125e5d630843a14c92",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 119,
+  "publicSurfaceFileCount": 125,
   "method": "Playwright keyboard interaction plus bounded DOM and viewport inspection on the built local candidate. This is not a human screen-reader or assistive-technology session.",
   "keyboard": {
     "desktopTabSequence": [
       {
         "tag": "a",
-        "text": "Skiptocontent",
+        "text": "Skip to content",
         "href": "#main",
         "focusVisible": true,
         "id": null
       },
       {
         "tag": "a",
-        "text": "JBJamieBurkart",
+        "text": "Jamie Burkart",
         "href": "/",
         "focusVisible": true,
         "id": null
@@ -31,7 +31,7 @@
       },
       {
         "tag": "a",
-        "text": "TechnicalOperations",
+        "text": "Technical Operations",
         "href": "/work/technical-operations",
         "focusVisible": true,
         "id": null

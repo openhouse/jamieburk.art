@@ -33,7 +33,8 @@
         "six-image campaign carousel",
         "four historical field-note photographs"
       ],
-      "pixel_publication_authorized": false
+      "pixel_publication_authorized": true,
+      "pixel_publication_scope": "Exact members of the Apple Photos content set underlying the August photo-select job are cleared for jamieburk.art portfolio consideration; each public occurrence still requires selection, caption, credit, derivative, and destination review."
     },
     "authenticated_public_surfaces": {
       "state": "reviewed",
@@ -94,8 +95,8 @@
       ]
     },
     "historical_field_material": {
-      "evidence_state": "protected-context-only",
-      "finding": "Four older storefront field-note photographs show earlier issue-routing practice, but they fall outside the thirty-day activity window and remain uncleared for publication.",
+      "evidence_state": "permission-cleared-editorial-hold",
+      "finding": "Four older storefront field-note photographs show earlier issue-routing practice and fall outside the thirty-day activity window. Items within the exact approved source-album set are cleared for portfolio consideration, but these four remain unselected and held in this recent-advocacy record.",
       "public_display": "hold"
     }
   },
@@ -140,7 +141,7 @@
     "private_contact_data": "withheld",
     "authenticated_locators": "withheld",
     "tracked_changes": "withheld",
-    "photograph_pixels": "withheld",
+    "photograph_pixels": "approved-only-through-explicit-asset-occurrences",
     "portfolio_projection": "hold",
     "human_approval_required": true
   }

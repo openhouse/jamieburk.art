@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "id": "participation-visual-sequence-2026-08-13",
+  "purpose": "Verify that the Fair Rent visual sequence makes Jamie's action, shared digital infrastructure, and collective public participation legible while preserving exact-asset, permission, credit, privacy, and homepage boundaries.",
+  "route": "/work/fair-rent-nyc",
+  "hero": {
+    "path": "apps/www/src/components/Hero.tsx",
+    "requiredSha256": "0fc3d8d0e5404cd11f4c234254defe7b911c9e50c2f4a5430b70a8e6c57ec90b"
+  },
+  "assets": [
+    {
+      "id": "asset.photo.nycac.shoestring-facilitation.2017.001",
+      "path": "apps/www/public/images/participation/shoestring-facilitation.webp",
+      "mediaType": "image/webp",
+      "sha256": "89ae389662f9a1f5365a03455ce32b90e8147d96223de737f35f9f205a514ff8"
+    },
+    {
+      "id": "asset.screenshot.let-nyc-dance.public-surface.2026-08-13",
+      "path": "apps/www/public/artifacts/let-nyc-dance/public-surface.jpg",
+      "mediaType": "image/jpeg",
+      "sha256": "cce00bc7ff1f73352d607ae85b30288d1623c0698f2887816bdbbdc08e83bf30"
+    },
+    {
+      "id": "asset.photo.nycac.market-hotel-town-hall.2017.001",
+      "path": "apps/www/public/images/participation/save-nyc-spaces-market-hotel.webp",
+      "mediaType": "image/webp",
+      "sha256": "d0cc239bfe4d20c5faa319912c5a8440c0940b8cb525ef390fc2a47ddc3044dc"
+    },
+    {
+      "id": "asset.screenshot.wowlist.public-relaunch.2026-08-13",
+      "path": "apps/www/public/artifacts/wowlist/public-relaunch.jpg",
+      "mediaType": "image/jpeg",
+      "sha256": "021304c2e0e15bb28bb3015b14cfae08f122b87317dd88e4a1124ff959927723"
+    }
+  ],
+  "captureSelection": {
+    "candidateCount": 10,
+    "cadenceSeconds": 1,
+    "selectedFrame": 5,
+    "unselectedCandidatesCommitted": 0
+  },
+  "requiredRecords": [
+    "source.permission.jamie.photo-select-portfolio.2026-08-13",
+    "source.permission.jamie.public-site-captures.2026-08-13",
+    "projection.visual.fair-rent.participation-sequence.2026-08",
+    "decision.photo.fair-rent-participation-sequence.2026-08-13"
+  ],
+  "hardGates": [
+    "Exact asset checksums and encodings match the governed records.",
+    "The existing homepage Hero component is byte-for-byte unchanged.",
+    "Frame 5 is the only committed Let NYC Dance candidate after ten one-second captures.",
+    "Every visible occurrence has useful alt text, caption, credit, permission, and a bounded evidentiary purpose.",
+    "No private album title, private library identifier, local path, or unselected capture enters public Git.",
+    "Collective campaign work is not converted into solo authorship, attendance, endorsement, legislative authority, or policy causality.",
+    "Asset approval remains separate from approval of the exact production candidate and indexing state."
+  ],
+  "hillClimb": {
+    "baselineWeakness": "The Fair Rent case study described an operating system but showed only a single campaign screenshot in its artifact gallery.",
+    "boundedChange": "Add one three-part visual sequence from facilitation to shared surface to public assembly, plus the current WOW List proof capture, without changing the homepage hero.",
+    "keepWhen": "Deterministic gates pass and fresh desktop and mobile review improves actor-action-purpose-result legibility without weakening truth, consent, collective credit, accessibility, or release discipline."
+  }
+}

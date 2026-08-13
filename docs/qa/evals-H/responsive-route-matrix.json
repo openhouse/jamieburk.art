@@ -1,10 +1,10 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-08-13T17:20:44.860Z",
-  "baseUrl": "http://127.0.0.1:3056",
-  "publicSurfaceFingerprint": "78a93fd1ed18fd5cf9762a0ae551a440f47c0f0002d79d065041db6af17f7914",
+  "checkedAt": "2026-08-13T20:50:16.018Z",
+  "baseUrl": "http://127.0.0.1:3103",
+  "publicSurfaceFingerprint": "22e75644f4433111922998298e80e9c65065673aecc8a1125e5d630843a14c92",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 119,
+  "publicSurfaceFileCount": 125,
   "routes": [
     "/",
     "/work",
@@ -823,8 +823,8 @@
     "failedRequests": 0,
     "nonSuccessResponses": 0,
     "invalidHeadingOrLandmarkRows": 0,
-    "lazyImagesObserved": 20,
-    "unloadedImagesBeforeScroll": 20,
+    "lazyImagesObserved": 36,
+    "unloadedImagesBeforeScroll": 38,
     "lazyImageFollowUpPerformed": true,
     "allImagesLoadedAfterScroll": true
   },
@@ -843,8 +843,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionAndCreditSeparated": true,
-        "captionOverlapsPrimaryCopy": false
+        "captionOverlapsPrimaryCopy": false,
+        "captionAndCreditSeparated": true
       },
       {
         "viewport": 375,
@@ -855,8 +855,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionAndCreditSeparated": true,
-        "captionOverlapsPrimaryCopy": false
+        "captionOverlapsPrimaryCopy": false,
+        "captionAndCreditSeparated": true
       },
       {
         "viewport": 768,
@@ -867,8 +867,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionAndCreditSeparated": true,
-        "captionOverlapsPrimaryCopy": false
+        "captionOverlapsPrimaryCopy": false,
+        "captionAndCreditSeparated": true
       },
       {
         "viewport": 1280,
@@ -879,14 +879,14 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionAndCreditSeparated": true,
-        "captionOverlapsPrimaryCopy": false
+        "captionOverlapsPrimaryCopy": false,
+        "captionAndCreditSeparated": true
       }
     ],
     "passed": true
   },
   "navigationReview": {
-    "checkedAt": "2026-08-13T17:20:44.860Z",
+    "checkedAt": "2026-08-13T20:50:16.018Z",
     "startRoute": "/",
     "destinationRoute": "/about",
     "startHttpStatus": 200,
@@ -901,8 +901,8 @@
       "height": 900
     },
     "renderedScreenshot": {
-      "sha256": "9a66381f04e34ca235e22f94b31c5e20e5dd3a5c60ad882a37879e7cf7c3c364",
-      "byteLength": 587828,
+      "sha256": "7e10731f445b437bf2e687335ca115872e49632236ebf020fcf67b70feb46f3b",
+      "byteLength": 583885,
       "width": 1280,
       "fullPage": true,
       "retainedInPublicGit": false,
