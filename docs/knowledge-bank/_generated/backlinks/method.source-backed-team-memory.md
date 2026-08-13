@@ -3,7 +3,7 @@
 
 **Source commit:** `ff5ac23d34653e9e5e6e9528c4b39374f4851f49`
 **Generation time:** 2026-08-13T12:43:30-04:00
-**Source fingerprint:** `dfc76cdd2c900a43883611cf678c3c9c6b7d65ecc8dd22d440134e7725264539`
+**Source fingerprint:** `cfbf30c92da0c34890db6373da51917d96af50833f05ad5a9489cae99c1376eb`
 
 - [Civic, cultural, and technical translation](../../capabilities/civic-cultural-and-technical-translation.md) - `prose_link` (markdown)
 - [Technical Operations](../../capabilities/technical-operations.md) - `prose_link` (markdown)
@@ -19,9 +19,12 @@
 - [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `uses_method` (frontmatter)
 - [Situated source rereading](../../methods/situated-source-rereading.md) - `related_to` (frontmatter)
 - [ACLU - Product Manager II, Discovery](../../opportunities/aclu-product-discovery.md) - `uses_method` (frontmatter)
+- [ACLU - Senior Project Manager, Learning and Project Solutions](../../opportunities/aclu-senior-project-manager.md) - `uses_method` (frontmatter)
 - [Asana - AI Implementation Manager, Service Management](../../opportunities/asana-ai-implementation.md) - `uses_method` (frontmatter)
 - [Benepass - Product Operations Manager](../../opportunities/benepass-product-operations.md) - `uses_method` (frontmatter)
 - [CodePath - Senior Program Manager, Claude Corps](../../opportunities/codepath-claude-corps.md) - `uses_method` (frontmatter)
+- [CodePath - Engineering Project Manager](../../opportunities/codepath-engineering-project-manager.md) - `uses_method` (frontmatter)
+- [NYC OTI - PIT Crew Senior Product Manager 782366](../../opportunities/oti-senior-product-manager-782366.md) - `uses_method` (frontmatter)
 - [NYC OTI - Technical Operations Manager 782369](../../opportunities/oti-technical-operations.md) - `uses_method` (frontmatter)
 - [PermitFlow - Product Operations Manager](../../opportunities/permitflow-product-operations.md) - `uses_method` (frontmatter)
 - [Protected source-backed team-memory consulting lead](../../opportunities/source-backed-team-memory.md) - `uses_method` (frontmatter)

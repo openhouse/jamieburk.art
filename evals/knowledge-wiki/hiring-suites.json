@@ -1,14 +1,18 @@
 {
-  "id": "current-priority-2026-07-18",
-  "version": 1,
+  "id": "current-priority-2026-08-13",
+  "version": 2,
   "principle": "The public evaluator sees public projection files and public role and reader context only; Wiki gap resolution is a separate pass.",
+  "priorityOpportunityIds": [
+    "opportunity.codepath.engineering-project-manager.5160542007",
+    "opportunity.aclu.senior-project-manager.8620968002",
+    "opportunity.benepass.product-operations.7f963a7a",
+    "opportunity.nyc-oti.senior-product-manager.782366"
+  ],
   "opportunityPaths": [
-    "docs/knowledge-bank/opportunities/oti-technical-operations.md",
-    "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
+    "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
+    "docs/knowledge-bank/opportunities/aclu-senior-project-manager.md",
     "docs/knowledge-bank/opportunities/benepass-product-operations.md",
-    "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
-    "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
-    "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
+    "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
     "docs/knowledge-bank/opportunities/source-backed-team-memory.md"
   ],
   "readerPaths": [
@@ -35,20 +39,26 @@
   "discoveryQueries": [
     {
       "id": "query.operating-backbone",
-      "terms": ["delivery coordination", "team operating systems", "onboarding documentation", "risk surfacing", "public launch"],
-      "expectedTopK": ["opportunity.nyc-oti.technical-operations-manager.782369", "opportunity.codepath.claude-corps.5182020007"],
+      "terms": ["engineering delivery", "bug pipeline", "quality assurance", "small team", "process judgment"],
+      "expectedTopK": ["opportunity.codepath.engineering-project-manager.5160542007"],
       "k": 3
     },
     {
-      "id": "query.discovery-governance",
-      "terms": ["structured discovery", "stakeholder listening", "privacy-aware product judgment", "decision traceability", "low-risk pilots"],
-      "expectedTopK": ["opportunity.aclu.product-manager-discovery.8482872002"],
+      "id": "query.organizational-project-delivery",
+      "terms": ["systems implementation", "project strategy", "business analysis", "process improvement", "organizational standards"],
+      "expectedTopK": ["opportunity.aclu.senior-project-manager.8620968002"],
       "k": 3
     },
     {
-      "id": "query.product-operations-physical-world",
-      "terms": ["physical-world workflows", "public process", "product data", "customer insight", "AI automation"],
-      "expectedTopK": ["opportunity.permitflow.product-operations.8a6e6066"],
+      "id": "query.launch-readiness",
+      "terms": ["launch readiness", "go no-go", "operational impact", "runbooks", "post-launch learning"],
+      "expectedTopK": ["opportunity.benepass.product-operations.7f963a7a"],
+      "k": 3
+    },
+    {
+      "id": "query.resident-facing-product",
+      "terms": ["resident-facing products", "public launch", "discovery", "accessibility", "outcomes not outputs"],
+      "expectedTopK": ["opportunity.nyc-oti.senior-product-manager.782366"],
       "k": 3
     },
     {

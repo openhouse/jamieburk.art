@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-13T12:43:30-04:00",
   "sourceCommit": "ff5ac23d34653e9e5e6e9528c4b39374f4851f49",
-  "sourceFingerprint": "dfc76cdd2c900a43883611cf678c3c9c6b7d65ecc8dd22d440134e7725264539",
+  "sourceFingerprint": "cfbf30c92da0c34890db6373da51917d96af50833f05ad5a9489cae99c1376eb",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -2749,6 +2749,19 @@
       "reviewBy": "2026-07-21"
     },
     {
+      "id": "evaluation.employment-leadership-context.2026-08-13",
+      "path": "docs/knowledge-bank/evaluations/employment-leadership-context-2026-08-13.md",
+      "title": "Priority opportunity leadership-context evaluation - August 13, 2026",
+      "kind": "evaluation",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Regression contract for current opportunity selection, reporting-context confidence, senior vision context, and external hiring boundaries.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-08-16"
+    },
+    {
       "id": "evaluation.jamie-public-record-integration.2026-08-03",
       "path": "docs/knowledge-bank/evaluations/jamie-public-record-integration-2026-08-03.md",
       "title": "Jamie public-record integration evaluation",
@@ -3141,8 +3154,8 @@
       "sensitivity": "low",
       "summary": "Task-oriented entry point for live opportunity research, role coverage, public-only hiring evaluation, and private-boundary rules.",
       "aliases": [],
-      "lastReviewed": "2026-08-10",
-      "reviewBy": "2026-09-10"
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-09-13"
     },
     {
       "id": "index.knowledge-wiki.family-closure",
@@ -3652,6 +3665,19 @@
       "reviewBy": "2026-07-21"
     },
     {
+      "id": "opportunity.aclu.senior-project-manager.8620968002",
+      "path": "docs/knowledge-bank/opportunities/aclu-senior-project-manager.md",
+      "title": "ACLU - Senior Project Manager, Learning and Project Solutions",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe requirement, leadership-context, and portfolio-coverage map for ACLU's live Senior Project Manager role.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-08-16"
+    },
+    {
       "id": "opportunity.asana.ai-implementation.8027437",
       "path": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
       "title": "Asana - AI Implementation Manager, Service Management",
@@ -3674,8 +3700,8 @@
       "sensitivity": "low",
       "summary": "Public-safe requirement and portfolio-coverage map for Benepass's live Product Operations Manager role.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-08-16"
     },
     {
       "id": "opportunity.codepath.claude-corps.5182020007",
@@ -3689,6 +3715,32 @@
       "aliases": [],
       "lastReviewed": "2026-07-18",
       "reviewBy": "2026-07-21"
+    },
+    {
+      "id": "opportunity.codepath.engineering-project-manager.5160542007",
+      "path": "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
+      "title": "CodePath - Engineering Project Manager",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe requirement, leadership-context, and portfolio-coverage map for CodePath's live Engineering Project Manager role.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-08-16"
+    },
+    {
+      "id": "opportunity.nyc-oti.senior-product-manager.782366",
+      "path": "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
+      "title": "NYC OTI - PIT Crew Senior Product Manager 782366",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe requirement, qualification, and leadership-context map for four live OTI PIT Crew Senior Product Manager positions.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-08-14"
     },
     {
       "id": "opportunity.nyc-oti.technical-operations-manager.782369",
@@ -3746,6 +3798,45 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "person.aileen-palmer",
+      "path": "docs/knowledge-bank/people/aileen-palmer.md",
+      "title": "Aileen Palmer",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public reporting context named in Benepass's Product Operations Manager posting.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-09-13"
+    },
+    {
+      "id": "person.charizma-williams",
+      "path": "docs/knowledge-bank/people/charizma-williams.md",
+      "title": "Charizma Williams",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-role context for the ACLU Chief Operating Officer, without substituting her for an unnamed direct manager.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-11-13"
+    },
+    {
+      "id": "person.chris-coleman",
+      "path": "docs/knowledge-bank/people/chris-coleman.md",
+      "title": "Chris Coleman",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-role context for CodePath's Chief Product Officer, bounded against invented org-chart or hiring claims.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-11-13"
+    },
+    {
       "id": "person.diya-vij",
       "path": "docs/knowledge-bank/people/diya-vij.md",
       "title": "Diya Vij",
@@ -3772,6 +3863,19 @@
       "reviewBy": "2027-01-26"
     },
     {
+      "id": "person.jaclyn-chen",
+      "path": "docs/knowledge-bank/people/jaclyn-chen.md",
+      "title": "Jaclyn Chen",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-role context for Benepass's CEO and co-founder, separated from the named direct manager.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-11-13"
+    },
+    {
       "id": "person.jamie-burkart",
       "path": "docs/knowledge-bank/people/jamie-burkart.md",
       "title": "Jamie Burkart",
@@ -3787,6 +3891,32 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "person.lisa-gelobter",
+      "path": "docs/knowledge-bank/people/lisa-gelobter.md",
+      "title": "Lisa Gelobter",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public initiative-leadership context for NYC OTI and PIT Crew, without a direct-manager or hiring claim.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-11-13"
+    },
+    {
+      "id": "person.luke-farrell",
+      "path": "docs/knowledge-bank/people/luke-farrell.md",
+      "title": "Luke Farrell",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Nearest public operational-lead context recovered for NYC's PIT Crew, bounded against a false direct-manager claim.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-09-13"
+    },
+    {
       "id": "person.warren-sack",
       "path": "docs/knowledge-bank/people/warren-sack.md",
       "title": "Warren Sack",
@@ -3798,6 +3928,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-03",
       "reviewBy": "2026-11-03"
+    },
+    {
+      "id": "person.zack-parker",
+      "path": "docs/knowledge-bank/people/zack-parker.md",
+      "title": "Zack Parker",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-role context for CodePath's Vice President, Engineering, without inferring private hiring views or participation.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-11-13"
     },
     {
       "id": "place.small-cultural-spaces",
@@ -4229,6 +4372,32 @@
       "reviewBy": "2026-10-03"
     },
     {
+      "id": "source.aclu.charizma-williams",
+      "path": "docs/knowledge-bank/sources/aclu-charizma-williams.md",
+      "title": "ACLU official biography - Charizma Williams",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official ACLU biography identifying Charizma Williams as Chief Operating Officer and describing her operating portfolio.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-11-13"
+    },
+    {
+      "id": "source.benepass.jaclyn-chen",
+      "path": "docs/knowledge-bank/sources/benepass-jaclyn-chen.md",
+      "title": "Benepass official team page - Jaclyn Chen",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official Benepass page identifying Jaclyn Chen as CEO and co-founder.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-11-13"
+    },
+    {
       "id": "source.callnyc.source-repository",
       "path": "docs/knowledge-bank/sources/callnyc-source-repository.md",
       "title": "CallNYC public source repository",
@@ -4266,6 +4435,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-18",
       "reviewBy": "2027-01-18"
+    },
+    {
+      "id": "source.codepath.leadership.2026",
+      "path": "docs/knowledge-bank/sources/codepath-leadership-2026.md",
+      "title": "CodePath official leadership pages - 2026",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official CodePath pages identifying current engineering and product leadership relevant to the Engineering Project Manager role.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-09-13"
     },
     {
       "id": "source.councilstat.fuller-release.2016",
@@ -4398,6 +4580,19 @@
       "reviewBy": "2026-07-21"
     },
     {
+      "id": "source.jobs.aclu.senior-project-manager.8620968002",
+      "path": "docs/knowledge-bank/sources/jobs-aclu-senior-project-manager-8620968002.md",
+      "title": "Official posting - ACLU Senior Project Manager 8620968002",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official ACLU posting for a term-limited Senior Project Manager on Learning and Project Solutions, rechecked August 13, 2026.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-08-16"
+    },
+    {
       "id": "source.jobs.asana.ai-implementation.8027437",
       "path": "docs/knowledge-bank/sources/jobs-asana-ai-implementation-8027437.md",
       "title": "Asana - AI Implementation Manager, Service Management 8027437",
@@ -4418,10 +4613,10 @@
       "status": "maintained",
       "visibility": "public",
       "sensitivity": "low",
-      "summary": "Official Benepass posting for a Product Operations Manager, rechecked July 18, 2026.",
+      "summary": "Official Benepass posting for a Product Operations Manager, rechecked August 13, 2026.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-08-16"
     },
     {
       "id": "source.jobs.codepath.claude-corps.5182020007",
@@ -4437,6 +4632,19 @@
       "reviewBy": "2026-07-21"
     },
     {
+      "id": "source.jobs.codepath.engineering-project-manager.5160542007",
+      "path": "docs/knowledge-bank/sources/jobs-codepath-engineering-project-manager-5160542007.md",
+      "title": "Official posting - CodePath Engineering Project Manager 5160542007",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official CodePath posting for a remote Engineering Project Manager, rechecked August 13, 2026.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-08-16"
+    },
+    {
       "id": "source.jobs.oti.senior-product-manager.782366",
       "path": "docs/knowledge-bank/sources/jobs-oti-senior-product-manager-782366.md",
       "title": "NYC Jobs - Senior Product Manager 782366",
@@ -4444,9 +4652,9 @@
       "status": "maintained",
       "visibility": "public",
       "sensitivity": "low",
-      "summary": "Official City of New York posting for four OTI Public Interest Technology Crew Senior Product Manager positions, rechecked August 11, 2026.",
+      "summary": "Official City of New York posting for four OTI Public Interest Technology Crew Senior Product Manager positions, rechecked August 13, 2026.",
       "aliases": [],
-      "lastReviewed": "2026-08-11",
+      "lastReviewed": "2026-08-13",
       "reviewBy": "2026-08-14"
     },
     {
@@ -4643,6 +4851,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-03",
       "reviewBy": "2027-02-03"
+    },
+    {
+      "id": "source.nyc.pit-crew-launch.2026-07-13",
+      "path": "docs/knowledge-bank/sources/nyc-pit-crew-launch-2026.md",
+      "title": "NYC Mayor's Office - PIT Crew launch announcement",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official July 13, 2026 announcement establishing the PIT Crew initiative and Lisa Gelobter's public delivery vision.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-11-13"
     },
     {
       "id": "source.nycac.dcla-formation-source-return.2026-07",
@@ -4981,6 +5202,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-10",
       "reviewBy": "2026-11-10"
+    },
+    {
+      "id": "source.public.luke-farrell-pit-crew.2026-07",
+      "path": "docs/knowledge-bank/sources/luke-farrell-pit-crew-2026.md",
+      "title": "Luke Farrell public professional post - PIT Crew leadership",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Self-authored public professional post in which Luke Farrell describes leading NYC's PIT Crew team.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-09-13"
     },
     {
       "id": "source.recollection.jamie-canoe-commuting.2026-07",
@@ -11066,6 +11300,46 @@
       "context": null
     },
     {
+      "from": "evaluation.employment-leadership-context.2026-08-13",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.employment-context",
+      "source": "frontmatter",
+      "href": "../indexes/employment-context.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.employment-leadership-context.2026-08-13",
+      "type": "related_to",
+      "to": "opportunity.aclu.senior-project-manager.8620968002",
+      "source": "frontmatter",
+      "href": "../opportunities/aclu-senior-project-manager.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.employment-leadership-context.2026-08-13",
+      "type": "related_to",
+      "to": "opportunity.benepass.product-operations.7f963a7a",
+      "source": "frontmatter",
+      "href": "../opportunities/benepass-product-operations.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.employment-leadership-context.2026-08-13",
+      "type": "related_to",
+      "to": "opportunity.codepath.engineering-project-manager.5160542007",
+      "source": "frontmatter",
+      "href": "../opportunities/codepath-engineering-project-manager.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.employment-leadership-context.2026-08-13",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-senior-product-manager-782366.md",
+      "context": null
+    },
+    {
       "from": "evaluation.jamie-public-record-integration.2026-08-03",
       "type": "informed_by",
       "to": "source.jamie-public-record-initial-manifest",
@@ -11836,9 +12110,25 @@
     {
       "from": "index.knowledge-wiki.employment-context",
       "type": "related_to",
+      "to": "evaluation.employment-leadership-context.2026-08-13",
+      "source": "frontmatter",
+      "href": "../evaluations/employment-leadership-context-2026-08-13.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
       "to": "opportunity.aclu.product-manager-discovery.8482872002",
       "source": "frontmatter",
       "href": "../opportunities/aclu-product-discovery.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "opportunity.aclu.senior-project-manager.8620968002",
+      "source": "frontmatter",
+      "href": "../opportunities/aclu-senior-project-manager.md",
       "context": null
     },
     {
@@ -11863,6 +12153,22 @@
       "to": "opportunity.codepath.claude-corps.5182020007",
       "source": "frontmatter",
       "href": "../opportunities/codepath-claude-corps.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "opportunity.codepath.engineering-project-manager.5160542007",
+      "source": "frontmatter",
+      "href": "../opportunities/codepath-engineering-project-manager.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-senior-product-manager-782366.md",
       "context": null
     },
     {
@@ -13836,6 +14142,74 @@
       "context": null
     },
     {
+      "from": "opportunity.aclu.senior-project-manager.8620968002",
+      "type": "evidence:context",
+      "to": "source.aclu.charizma-williams",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "current public identity and remit of the Chief Operating Officer"
+      ]
+    },
+    {
+      "from": "opportunity.aclu.senior-project-manager.8620968002",
+      "type": "evidence:direct-support",
+      "to": "source.jobs.aclu.senior-project-manager.8620968002",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official role facts, requirements, and reporting-role language rechecked August 13, 2026"
+      ]
+    },
+    {
+      "from": "opportunity.aclu.senior-project-manager.8620968002",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.aclu.senior-project-manager.8620968002",
+      "type": "related_to",
+      "to": "person.charizma-williams",
+      "source": "frontmatter",
+      "href": "../people/charizma-williams.md",
+      "context": "Nearest public senior leader for the office, not the unnamed direct manager."
+    },
+    {
+      "from": "opportunity.aclu.senior-project-manager.8620968002",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.aclu.senior-project-manager.8620968002",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.aclu.senior-project-manager.8620968002",
+      "type": "uses_source",
+      "to": "source.aclu.charizma-williams",
+      "source": "frontmatter",
+      "href": "../sources/aclu-charizma-williams.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.aclu.senior-project-manager.8620968002",
+      "type": "uses_source",
+      "to": "source.jobs.aclu.senior-project-manager.8620968002",
+      "source": "frontmatter",
+      "href": "../sources/jobs-aclu-senior-project-manager-8620968002.md",
+      "context": null
+    },
+    {
       "from": "opportunity.asana.ai-implementation.8027437",
       "type": "evidence:context",
       "to": "source.jobs.asana.ai-implementation.8027437",
@@ -13871,12 +14245,22 @@
     },
     {
       "from": "opportunity.benepass.product-operations.7f963a7a",
+      "type": "evidence:context",
+      "to": "source.benepass.jaclyn-chen",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "current public identity of the CEO and co-founder"
+      ]
+    },
+    {
+      "from": "opportunity.benepass.product-operations.7f963a7a",
       "type": "evidence:direct-support",
       "to": "source.jobs.benepass.product-operations.7f963a7a",
       "source": "evidence",
       "confidence": "high",
       "supports": [
-        "official role facts and requirements as rechecked July 18, 2026"
+        "official role facts and requirements as rechecked August 13, 2026"
       ]
     },
     {
@@ -13889,10 +14273,34 @@
     },
     {
       "from": "opportunity.benepass.product-operations.7f963a7a",
+      "type": "related_to",
+      "to": "person.aileen-palmer",
+      "source": "frontmatter",
+      "href": "../people/aileen-palmer.md",
+      "context": "Direct reporting person named in the official posting."
+    },
+    {
+      "from": "opportunity.benepass.product-operations.7f963a7a",
+      "type": "related_to",
+      "to": "person.jaclyn-chen",
+      "source": "frontmatter",
+      "href": "../people/jaclyn-chen.md",
+      "context": "Nearest company-level vision leader."
+    },
+    {
+      "from": "opportunity.benepass.product-operations.7f963a7a",
       "type": "uses_method",
       "to": "method.source-backed-team-memory",
       "source": "frontmatter",
       "href": "../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.benepass.product-operations.7f963a7a",
+      "type": "uses_source",
+      "to": "source.benepass.jaclyn-chen",
+      "source": "frontmatter",
+      "href": "../sources/benepass-jaclyn-chen.md",
       "context": null
     },
     {
@@ -13935,6 +14343,168 @@
       "to": "source.jobs.codepath.claude-corps.5182020007",
       "source": "frontmatter",
       "href": "../sources/jobs-codepath-claude-corps-5182020007.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.codepath.engineering-project-manager.5160542007",
+      "type": "evidence:context",
+      "to": "source.codepath.leadership.2026",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "current public identities of the VP Engineering and Chief Product Officer"
+      ]
+    },
+    {
+      "from": "opportunity.codepath.engineering-project-manager.5160542007",
+      "type": "evidence:direct-support",
+      "to": "source.jobs.codepath.engineering-project-manager.5160542007",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official role facts, requirements, and reporting-role language rechecked August 13, 2026"
+      ]
+    },
+    {
+      "from": "opportunity.codepath.engineering-project-manager.5160542007",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.codepath.engineering-project-manager.5160542007",
+      "type": "related_to",
+      "to": "person.chris-coleman",
+      "source": "frontmatter",
+      "href": "../people/chris-coleman.md",
+      "context": "Nearest published product-engineering vision context."
+    },
+    {
+      "from": "opportunity.codepath.engineering-project-manager.5160542007",
+      "type": "related_to",
+      "to": "person.zack-parker",
+      "source": "frontmatter",
+      "href": "../people/zack-parker.md",
+      "context": "Current official VP Engineering role match; confirm the actual reporting line."
+    },
+    {
+      "from": "opportunity.codepath.engineering-project-manager.5160542007",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.codepath.engineering-project-manager.5160542007",
+      "type": "uses_source",
+      "to": "source.codepath.leadership.2026",
+      "source": "frontmatter",
+      "href": "../sources/codepath-leadership-2026.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.codepath.engineering-project-manager.5160542007",
+      "type": "uses_source",
+      "to": "source.jobs.codepath.engineering-project-manager.5160542007",
+      "source": "frontmatter",
+      "href": "../sources/jobs-codepath-engineering-project-manager-5160542007.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.senior-product-manager.782366",
+      "type": "evidence:context",
+      "to": "source.nyc.pit-crew-launch.2026-07-13",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official initiative leadership and public delivery vision"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-oti.senior-product-manager.782366",
+      "type": "evidence:context",
+      "to": "source.public.luke-farrell-pit-crew.2026-07",
+      "source": "evidence",
+      "confidence": "moderate",
+      "supports": [
+        "nearest publicly identified operational lead, without a direct-manager claim"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-oti.senior-product-manager.782366",
+      "type": "evidence:direct-support",
+      "to": "source.jobs.oti.senior-product-manager.782366",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official role facts, requirements, civil-service screen, and deadline rechecked August 13, 2026"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-oti.senior-product-manager.782366",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.senior-product-manager.782366",
+      "type": "related_to",
+      "to": "person.lisa-gelobter",
+      "source": "frontmatter",
+      "href": "../people/lisa-gelobter.md",
+      "context": "Official initiative and executive vision leader."
+    },
+    {
+      "from": "opportunity.nyc-oti.senior-product-manager.782366",
+      "type": "related_to",
+      "to": "person.luke-farrell",
+      "source": "frontmatter",
+      "href": "../people/luke-farrell.md",
+      "context": "Nearest public operational lead; not a confirmed direct manager."
+    },
+    {
+      "from": "opportunity.nyc-oti.senior-product-manager.782366",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.senior-product-manager.782366",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.senior-product-manager.782366",
+      "type": "uses_source",
+      "to": "source.jobs.oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../sources/jobs-oti-senior-product-manager-782366.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.senior-product-manager.782366",
+      "type": "uses_source",
+      "to": "source.nyc.pit-crew-launch.2026-07-13",
+      "source": "frontmatter",
+      "href": "../sources/nyc-pit-crew-launch-2026.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.senior-product-manager.782366",
+      "type": "uses_source",
+      "to": "source.public.luke-farrell-pit-crew.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/luke-farrell-pit-crew-2026.md",
       "context": null
     },
     {
@@ -14154,6 +14724,54 @@
       "context": null
     },
     {
+      "from": "person.aileen-palmer",
+      "type": "related_to",
+      "to": "opportunity.benepass.product-operations.7f963a7a",
+      "source": "frontmatter",
+      "href": "../opportunities/benepass-product-operations.md",
+      "context": null
+    },
+    {
+      "from": "person.aileen-palmer",
+      "type": "uses_source",
+      "to": "source.jobs.benepass.product-operations.7f963a7a",
+      "source": "frontmatter",
+      "href": "../sources/jobs-benepass-product-operations.md",
+      "context": null
+    },
+    {
+      "from": "person.charizma-williams",
+      "type": "related_to",
+      "to": "opportunity.aclu.senior-project-manager.8620968002",
+      "source": "frontmatter",
+      "href": "../opportunities/aclu-senior-project-manager.md",
+      "context": null
+    },
+    {
+      "from": "person.charizma-williams",
+      "type": "uses_source",
+      "to": "source.aclu.charizma-williams",
+      "source": "frontmatter",
+      "href": "../sources/aclu-charizma-williams.md",
+      "context": null
+    },
+    {
+      "from": "person.chris-coleman",
+      "type": "related_to",
+      "to": "opportunity.codepath.engineering-project-manager.5160542007",
+      "source": "frontmatter",
+      "href": "../opportunities/codepath-engineering-project-manager.md",
+      "context": null
+    },
+    {
+      "from": "person.chris-coleman",
+      "type": "uses_source",
+      "to": "source.codepath.leadership.2026",
+      "source": "frontmatter",
+      "href": "../sources/codepath-leadership-2026.md",
+      "context": null
+    },
+    {
       "from": "person.diya-vij",
       "type": "related_to",
       "to": "organization.nyc-artist-coalition",
@@ -14192,6 +14810,22 @@
       "source": "frontmatter",
       "href": "../sources/permissions/elana-gordon-east-river-portfolio-2026.md",
       "context": "Public-safe permission and credit summary; private correspondence remains outside Git."
+    },
+    {
+      "from": "person.jaclyn-chen",
+      "type": "related_to",
+      "to": "opportunity.benepass.product-operations.7f963a7a",
+      "source": "frontmatter",
+      "href": "../opportunities/benepass-product-operations.md",
+      "context": null
+    },
+    {
+      "from": "person.jaclyn-chen",
+      "type": "uses_source",
+      "to": "source.benepass.jaclyn-chen",
+      "source": "frontmatter",
+      "href": "../sources/benepass-jaclyn-chen.md",
+      "context": null
     },
     {
       "from": "person.jamie-burkart",
@@ -14298,6 +14932,46 @@
       "context": null
     },
     {
+      "from": "person.lisa-gelobter",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-senior-product-manager-782366.md",
+      "context": null
+    },
+    {
+      "from": "person.lisa-gelobter",
+      "type": "uses_source",
+      "to": "source.nyc.pit-crew-launch.2026-07-13",
+      "source": "frontmatter",
+      "href": "../sources/nyc-pit-crew-launch-2026.md",
+      "context": null
+    },
+    {
+      "from": "person.luke-farrell",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-senior-product-manager-782366.md",
+      "context": null
+    },
+    {
+      "from": "person.luke-farrell",
+      "type": "related_to",
+      "to": "source.nyc.pit-crew-launch.2026-07-13",
+      "source": "frontmatter",
+      "href": "../sources/nyc-pit-crew-launch-2026.md",
+      "context": null
+    },
+    {
+      "from": "person.luke-farrell",
+      "type": "uses_source",
+      "to": "source.public.luke-farrell-pit-crew.2026-07",
+      "source": "frontmatter",
+      "href": "../sources/luke-farrell-pit-crew-2026.md",
+      "context": null
+    },
+    {
       "from": "person.warren-sack",
       "type": "related_to",
       "to": "event.mit.interrogative-design-symposium.2024",
@@ -14327,6 +15001,22 @@
       "to": "source.ucsc.warren-sack-profile.2026",
       "source": "frontmatter",
       "href": "../sources/ucsc-warren-sack-profile-2026.md",
+      "context": null
+    },
+    {
+      "from": "person.zack-parker",
+      "type": "related_to",
+      "to": "opportunity.codepath.engineering-project-manager.5160542007",
+      "source": "frontmatter",
+      "href": "../opportunities/codepath-engineering-project-manager.md",
+      "context": null
+    },
+    {
+      "from": "person.zack-parker",
+      "type": "uses_source",
+      "to": "source.codepath.leadership.2026",
+      "source": "frontmatter",
+      "href": "../sources/codepath-leadership-2026.md",
       "context": null
     },
     {
@@ -15594,6 +16284,38 @@
       "context": null
     },
     {
+      "from": "source.aclu.charizma-williams",
+      "type": "related_to",
+      "to": "opportunity.aclu.senior-project-manager.8620968002",
+      "source": "frontmatter",
+      "href": "../opportunities/aclu-senior-project-manager.md",
+      "context": null
+    },
+    {
+      "from": "source.aclu.charizma-williams",
+      "type": "related_to",
+      "to": "person.charizma-williams",
+      "source": "frontmatter",
+      "href": "../people/charizma-williams.md",
+      "context": "Official current role identity and published remit."
+    },
+    {
+      "from": "source.benepass.jaclyn-chen",
+      "type": "related_to",
+      "to": "opportunity.benepass.product-operations.7f963a7a",
+      "source": "frontmatter",
+      "href": "../opportunities/benepass-product-operations.md",
+      "context": null
+    },
+    {
+      "from": "source.benepass.jaclyn-chen",
+      "type": "related_to",
+      "to": "person.jaclyn-chen",
+      "source": "frontmatter",
+      "href": "../people/jaclyn-chen.md",
+      "context": "Official current role identity."
+    },
+    {
       "from": "source.callnyc.source-repository",
       "type": "documents",
       "to": "project.callnyc",
@@ -15632,6 +16354,30 @@
       "source": "frontmatter",
       "href": "../events/nycc-constituent-services-hackathon-2016.md",
       "context": null
+    },
+    {
+      "from": "source.codepath.leadership.2026",
+      "type": "related_to",
+      "to": "opportunity.codepath.engineering-project-manager.5160542007",
+      "source": "frontmatter",
+      "href": "../opportunities/codepath-engineering-project-manager.md",
+      "context": null
+    },
+    {
+      "from": "source.codepath.leadership.2026",
+      "type": "related_to",
+      "to": "person.chris-coleman",
+      "source": "frontmatter",
+      "href": "../people/chris-coleman.md",
+      "context": "Official current leadership identity."
+    },
+    {
+      "from": "source.codepath.leadership.2026",
+      "type": "related_to",
+      "to": "person.zack-parker",
+      "source": "frontmatter",
+      "href": "../people/zack-parker.md",
+      "context": "Official current leadership identity."
     },
     {
       "from": "source.councilstat.fuller-release.2016",
@@ -15730,12 +16476,36 @@
       "context": null
     },
     {
+      "from": "source.jobs.aclu.senior-project-manager.8620968002",
+      "type": "related_to",
+      "to": "person.charizma-williams",
+      "source": "frontmatter",
+      "href": "../people/charizma-williams.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.aclu.senior-project-manager.8620968002",
+      "type": "supports",
+      "to": "opportunity.aclu.senior-project-manager.8620968002",
+      "source": "frontmatter",
+      "href": "../opportunities/aclu-senior-project-manager.md",
+      "context": null
+    },
+    {
       "from": "source.jobs.asana.ai-implementation.8027437",
       "type": "supports",
       "to": "opportunity.asana.ai-implementation.8027437",
       "source": "frontmatter",
       "href": "../opportunities/asana-ai-implementation.md",
       "context": null
+    },
+    {
+      "from": "source.jobs.benepass.product-operations.7f963a7a",
+      "type": "related_to",
+      "to": "person.aileen-palmer",
+      "source": "frontmatter",
+      "href": "../people/aileen-palmer.md",
+      "context": "Direct reporting person named in the posting."
     },
     {
       "from": "source.jobs.benepass.product-operations.7f963a7a",
@@ -15754,11 +16524,35 @@
       "context": null
     },
     {
+      "from": "source.jobs.codepath.engineering-project-manager.5160542007",
+      "type": "related_to",
+      "to": "person.zack-parker",
+      "source": "frontmatter",
+      "href": "../people/zack-parker.md",
+      "context": "The posting names the VP Engineering role; the separate leadership source identifies the current person."
+    },
+    {
+      "from": "source.jobs.codepath.engineering-project-manager.5160542007",
+      "type": "supports",
+      "to": "opportunity.codepath.engineering-project-manager.5160542007",
+      "source": "frontmatter",
+      "href": "../opportunities/codepath-engineering-project-manager.md",
+      "context": null
+    },
+    {
       "from": "source.jobs.oti.senior-product-manager.782366",
       "type": "related_to",
       "to": "application.wowlist.senior-product-manager-oti-782366",
       "source": "frontmatter",
       "href": "../applications/wowlist-senior-product-manager-oti-782366.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.oti.senior-product-manager.782366",
+      "type": "supports",
+      "to": "opportunity.nyc-oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-senior-product-manager-782366.md",
       "context": null
     },
     {
@@ -15935,6 +16729,30 @@
       "to": "person.diya-vij",
       "source": "frontmatter",
       "href": "../people/diya-vij.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.pit-crew-launch.2026-07-13",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-senior-product-manager-782366.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.pit-crew-launch.2026-07-13",
+      "type": "related_to",
+      "to": "person.lisa-gelobter",
+      "source": "frontmatter",
+      "href": "../people/lisa-gelobter.md",
+      "context": "Official initiative-leadership identity and public vision."
+    },
+    {
+      "from": "source.nyc.pit-crew-launch.2026-07-13",
+      "type": "related_to",
+      "to": "person.luke-farrell",
+      "source": "frontmatter",
+      "href": "../people/luke-farrell.md",
       "context": null
     },
     {
@@ -16200,6 +17018,22 @@
       "source": "frontmatter",
       "href": "../opportunities/source-backed-team-memory.md",
       "context": null
+    },
+    {
+      "from": "source.public.luke-farrell-pit-crew.2026-07",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-senior-product-manager-782366.md",
+      "context": null
+    },
+    {
+      "from": "source.public.luke-farrell-pit-crew.2026-07",
+      "type": "related_to",
+      "to": "person.luke-farrell",
+      "source": "frontmatter",
+      "href": "../people/luke-farrell.md",
+      "context": "Self-authored public operational-lead context."
     },
     {
       "from": "source.recollection.jamie-canoe-commuting.2026-07",
@@ -17613,8 +18447,8 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
-      "to": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "toPath": "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
+      "to": "opportunity.codepath.engineering-project-manager.5160542007",
       "fragment": null,
       "line": 11,
       "kind": "link"
@@ -17622,8 +18456,8 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
-      "to": "opportunity.aclu.product-manager-discovery.8482872002",
+      "toPath": "docs/knowledge-bank/opportunities/aclu-senior-project-manager.md",
+      "to": "opportunity.aclu.senior-project-manager.8620968002",
       "fragment": null,
       "line": 12,
       "kind": "link"
@@ -17640,10 +18474,37 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
+      "to": "opportunity.nyc-oti.senior-product-manager.782366",
+      "fragment": null,
+      "line": 14,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
+      "to": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "fragment": null,
+      "line": 35,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
+      "to": "opportunity.aclu.product-manager-discovery.8482872002",
+      "fragment": null,
+      "line": 36,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
       "to": "opportunity.codepath.claude-corps.5182020007",
       "fragment": null,
-      "line": 14,
+      "line": 37,
       "kind": "link"
     },
     {
@@ -17652,7 +18513,7 @@
       "toPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
       "to": "opportunity.asana.ai-implementation.8027437",
       "fragment": null,
-      "line": 15,
+      "line": 38,
       "kind": "link"
     },
     {
@@ -17661,7 +18522,7 @@
       "toPath": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
       "to": "opportunity.permitflow.product-operations.8a6e6066",
       "fragment": null,
-      "line": 16,
+      "line": 39,
       "kind": "link"
     },
     {
@@ -17670,7 +18531,7 @@
       "toPath": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
       "to": "opportunity.protected.source-backed-memory-consulting.2026",
       "fragment": null,
-      "line": 20,
+      "line": 43,
       "kind": "link"
     },
     {
@@ -17679,7 +18540,16 @@
       "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
       "to": "evaluation.employment-context.coverage.2026-07-18",
       "fragment": null,
-      "line": 46,
+      "line": 69,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/evaluations/employment-leadership-context-2026-08-13.md",
+      "to": "evaluation.employment-leadership-context.2026-08-13",
+      "fragment": null,
+      "line": 70,
       "kind": "link"
     },
     {
@@ -17688,7 +18558,7 @@
       "toPath": "reports/wiki-opportunity-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 47,
+      "line": 71,
       "kind": "link"
     },
     {
@@ -17697,7 +18567,7 @@
       "toPath": "reports/wiki-career-trajectory-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 48,
+      "line": 72,
       "kind": "link"
     },
     {
@@ -17706,7 +18576,7 @@
       "toPath": "reports/wiki-source-channel-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 49,
+      "line": 73,
       "kind": "link"
     },
     {
@@ -17715,7 +18585,7 @@
       "toPath": "reports/wiki-opportunity-discovery.md",
       "to": null,
       "fragment": null,
-      "line": 50,
+      "line": 74,
       "kind": "link"
     },
     {
@@ -17724,7 +18594,7 @@
       "toPath": "reports/hiring-acceptance-public.md",
       "to": null,
       "fragment": null,
-      "line": 51,
+      "line": 75,
       "kind": "link"
     },
     {
@@ -17733,7 +18603,7 @@
       "toPath": "reports/hiring-acceptance-gap-resolution.md",
       "to": null,
       "fragment": null,
-      "line": 52,
+      "line": 76,
       "kind": "link"
     },
     {
@@ -19384,12 +20254,48 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/opportunities/aclu-senior-project-manager.md",
+      "from": "opportunity.aclu.senior-project-manager.8620968002",
+      "toPath": "docs/knowledge-bank/people/charizma-williams.md",
+      "to": "person.charizma-williams",
+      "fragment": null,
+      "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/aclu-senior-project-manager.md",
+      "from": "opportunity.aclu.senior-project-manager.8620968002",
+      "toPath": "docs/knowledge-bank/sources/jobs-aclu-senior-project-manager-8620968002.md",
+      "to": "source.jobs.aclu.senior-project-manager.8620968002",
+      "fragment": null,
+      "line": 12,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
       "from": "opportunity.asana.ai-implementation.8027437",
       "toPath": "docs/knowledge-bank/sources/jobs-asana-ai-implementation-8027437.md",
       "to": "source.jobs.asana.ai-implementation.8027437",
       "fragment": null,
       "line": 9,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
+      "from": "opportunity.benepass.product-operations.7f963a7a",
+      "toPath": "docs/knowledge-bank/people/aileen-palmer.md",
+      "to": "person.aileen-palmer",
+      "fragment": null,
+      "line": 11,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
+      "from": "opportunity.benepass.product-operations.7f963a7a",
+      "toPath": "docs/knowledge-bank/people/jaclyn-chen.md",
+      "to": "person.jaclyn-chen",
+      "fragment": null,
+      "line": 12,
       "kind": "link"
     },
     {
@@ -19408,6 +20314,69 @@
       "to": "source.jobs.codepath.claude-corps.5182020007",
       "fragment": null,
       "line": 9,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
+      "from": "opportunity.codepath.engineering-project-manager.5160542007",
+      "toPath": "docs/knowledge-bank/people/zack-parker.md",
+      "to": "person.zack-parker",
+      "fragment": null,
+      "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
+      "from": "opportunity.codepath.engineering-project-manager.5160542007",
+      "toPath": "docs/knowledge-bank/people/chris-coleman.md",
+      "to": "person.chris-coleman",
+      "fragment": null,
+      "line": 11,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
+      "from": "opportunity.codepath.engineering-project-manager.5160542007",
+      "toPath": "docs/knowledge-bank/sources/jobs-codepath-engineering-project-manager-5160542007.md",
+      "to": "source.jobs.codepath.engineering-project-manager.5160542007",
+      "fragment": null,
+      "line": 12,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
+      "from": "opportunity.codepath.engineering-project-manager.5160542007",
+      "toPath": "docs/knowledge-bank/sources/codepath-leadership-2026.md",
+      "to": "source.codepath.leadership.2026",
+      "fragment": null,
+      "line": 13,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
+      "from": "opportunity.nyc-oti.senior-product-manager.782366",
+      "toPath": "docs/knowledge-bank/people/luke-farrell.md",
+      "to": "person.luke-farrell",
+      "fragment": null,
+      "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
+      "from": "opportunity.nyc-oti.senior-product-manager.782366",
+      "toPath": "docs/knowledge-bank/people/lisa-gelobter.md",
+      "to": "person.lisa-gelobter",
+      "fragment": null,
+      "line": 11,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
+      "from": "opportunity.nyc-oti.senior-product-manager.782366",
+      "toPath": "docs/knowledge-bank/sources/jobs-oti-senior-product-manager-782366.md",
+      "to": "source.jobs.oti.senior-product-manager.782366",
+      "fragment": null,
+      "line": 13,
       "kind": "link"
     },
     {

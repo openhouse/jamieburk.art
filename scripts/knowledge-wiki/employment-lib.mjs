@@ -121,7 +121,9 @@ function publicRoleContext(record) {
     })),
     oneYearSuccessConditions: record.one_year_success_conditions,
     oneYearRiskConditions: record.one_year_risk_conditions,
-    interviewQuestions: record.interview_questions
+    interviewQuestions: record.interview_questions,
+    publicReportingContext: record.public_reporting_context ?? null,
+    publicVisionContext: record.public_vision_context ?? null
   };
 }
 
@@ -174,6 +176,8 @@ function publicEvaluationMarkdown(report) {
       `- Opportunity status live: ${opportunity.live ? "yes" : "no"}`,
       `- Role context current at candidate time: ${opportunity.fresh ? "yes" : "no"}`,
       `- Exclusionary hard screen recorded: ${opportunity.hardScreenBlocked ? "yes" : "no"}`,
+      `- Public reporting context: ${opportunity.publicReportingContext?.role ?? "not recorded"} (${opportunity.publicReportingContext?.identification ?? "not recorded"})`,
+      `- Public vision context: ${opportunity.publicVisionContext?.role ?? "not recorded"} (${opportunity.publicVisionContext?.identification ?? "not recorded"})`,
       ""
     );
     for (const requirement of opportunity.requirementCoverage) {
@@ -244,6 +248,8 @@ export function evaluatePublicHiring(repoRoot) {
       live,
       fresh,
       hardScreenBlocked,
+      publicReportingContext: opportunity.publicReportingContext,
+      publicVisionContext: opportunity.publicVisionContext,
       decision:
         !live
           ? "not-live"

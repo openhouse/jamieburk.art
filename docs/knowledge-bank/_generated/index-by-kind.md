@@ -3,7 +3,7 @@
 
 **Source commit:** `ff5ac23d34653e9e5e6e9528c4b39374f4851f49`
 **Generation time:** 2026-08-13T12:43:30-04:00
-**Source fingerprint:** `dfc76cdd2c900a43883611cf678c3c9c6b7d65ecc8dd22d440134e7725264539`
+**Source fingerprint:** `cfbf30c92da0c34890db6373da51917d96af50833f05ad5a9489cae99c1376eb`
 
 ## application
 
@@ -235,6 +235,7 @@
 
 - [Layout C homepage East River curatorial proposal](../evaluations/curatorial/layout-c-home-east-river-v1.md) - `evaluation.curatorial.layout-c.home-east-river.v1`
 - [Employment context coverage baseline - July 18, 2026](../evaluations/employment-context-coverage-2026-07-18.md) - `evaluation.employment-context.coverage.2026-07-18`
+- [Priority opportunity leadership-context evaluation - August 13, 2026](../evaluations/employment-leadership-context-2026-08-13.md) - `evaluation.employment-leadership-context.2026-08-13`
 - [Jamie public-record integration evaluation](../evaluations/jamie-public-record-integration-2026-08-03.md) - `evaluation.jamie-public-record-integration.2026-08-03`
 - [Knowledge Wiki retrieval tasks](../evaluations/retrieval-tasks.md) - `evaluation.knowledge-wiki.retrieval-tasks`
 - [NYC Artist Coalition shared-folder production evals](../evaluations/nycac-shared-folder-production-2026-07-19.md) - `evaluation.nycac.shared-folder-production.2026-07-19`
@@ -316,9 +317,12 @@
 ## opportunity
 
 - [ACLU - Product Manager II, Discovery](../opportunities/aclu-product-discovery.md) - `opportunity.aclu.product-manager-discovery.8482872002`
+- [ACLU - Senior Project Manager, Learning and Project Solutions](../opportunities/aclu-senior-project-manager.md) - `opportunity.aclu.senior-project-manager.8620968002`
 - [Asana - AI Implementation Manager, Service Management](../opportunities/asana-ai-implementation.md) - `opportunity.asana.ai-implementation.8027437`
 - [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md) - `opportunity.benepass.product-operations.7f963a7a`
 - [CodePath - Senior Program Manager, Claude Corps](../opportunities/codepath-claude-corps.md) - `opportunity.codepath.claude-corps.5182020007`
+- [CodePath - Engineering Project Manager](../opportunities/codepath-engineering-project-manager.md) - `opportunity.codepath.engineering-project-manager.5160542007`
+- [NYC OTI - PIT Crew Senior Product Manager 782366](../opportunities/oti-senior-product-manager-782366.md) - `opportunity.nyc-oti.senior-product-manager.782366`
 - [NYC OTI - Technical Operations Manager 782369](../opportunities/oti-technical-operations.md) - `opportunity.nyc-oti.technical-operations-manager.782369`
 - [PermitFlow - Product Operations Manager](../opportunities/permitflow-product-operations.md) - `opportunity.permitflow.product-operations.8a6e6066`
 - [Protected source-backed team-memory consulting lead](../opportunities/source-backed-team-memory.md) - `opportunity.protected.source-backed-memory-consulting.2026`
@@ -329,10 +333,17 @@
 
 ## person
 
+- [Aileen Palmer](../people/aileen-palmer.md) - `person.aileen-palmer`
+- [Charizma Williams](../people/charizma-williams.md) - `person.charizma-williams`
+- [Chris Coleman](../people/chris-coleman.md) - `person.chris-coleman`
 - [Diya Vij](../people/diya-vij.md) - `person.diya-vij`
 - [Elana Gordon](../people/elana-gordon.md) - `person.elana-gordon`
+- [Jaclyn Chen](../people/jaclyn-chen.md) - `person.jaclyn-chen`
 - [Jamie Burkart](../people/jamie-burkart.md) - `person.jamie-burkart`
+- [Lisa Gelobter](../people/lisa-gelobter.md) - `person.lisa-gelobter`
+- [Luke Farrell](../people/luke-farrell.md) - `person.luke-farrell`
 - [Warren Sack](../people/warren-sack.md) - `person.warren-sack`
+- [Zack Parker](../people/zack-parker.md) - `person.zack-parker`
 
 ## place
 
@@ -384,9 +395,12 @@
 
 ## source
 
+- [ACLU official biography - Charizma Williams](../sources/aclu-charizma-williams.md) - `source.aclu.charizma-williams`
+- [Benepass official team page - Jaclyn Chen](../sources/benepass-jaclyn-chen.md) - `source.benepass.jaclyn-chen`
 - [CallNYC public source repository](../sources/callnyc-source-repository.md) - `source.callnyc.source-repository`
 - [Campaign-site repository family, 2020-2022](../sources/campaign-site-repository-family-2020-2022.md) - `source.campaign-site.repository-family.2020-2022`
 - [Civic Hall hackathon announcement](../sources/civichall-hackathon-announcement-2016.md) - `source.civichall.hackathon-announcement.2016`
+- [CodePath official leadership pages - 2026](../sources/codepath-leadership-2026.md) - `source.codepath.leadership.2026`
 - [New York City Council Constituent Services Data release](../sources/nycc-constituent-services-data-2016-05-27.md) - `source.councilstat.fuller-release.2016`
 - [Open House at UC Santa Cruz](../sources/good-times-open-house-2006-06-28.md) - `source.good-times.open-house.2006-06-28`
 - [Cabaret Law repeal hearing: supportive witness testimony](../testimony/heteroglossia/2017-09-14-cabaret-law-supportive-witnesses.md) - `source.heteroglossia.cabaret-law.2017-09-14`
@@ -397,9 +411,11 @@
 - [Jamie Burkart public-record initial manifest](../sources/jamie-public-record-initial-manifest.md) - `source.jamie-public-record-initial-manifest`
 - [Jamie Burkart writer's voice synthesis, July 2026](../sources/writers-voice-synthesis-2026-07.md) - `source.jamie.writers-voice-synthesis.2026-07`
 - [ACLU - Product Manager II, Discovery 8482872002](../sources/jobs-aclu-product-discovery-8482872002.md) - `source.jobs.aclu.product-discovery.8482872002`
+- [Official posting - ACLU Senior Project Manager 8620968002](../sources/jobs-aclu-senior-project-manager-8620968002.md) - `source.jobs.aclu.senior-project-manager.8620968002`
 - [Asana - AI Implementation Manager, Service Management 8027437](../sources/jobs-asana-ai-implementation-8027437.md) - `source.jobs.asana.ai-implementation.8027437`
 - [Official posting - Benepass Product Operations Manager](../sources/jobs-benepass-product-operations.md) - `source.jobs.benepass.product-operations.7f963a7a`
 - [CodePath - Senior Program Manager, Claude Corps 5182020007](../sources/jobs-codepath-claude-corps-5182020007.md) - `source.jobs.codepath.claude-corps.5182020007`
+- [Official posting - CodePath Engineering Project Manager 5160542007](../sources/jobs-codepath-engineering-project-manager-5160542007.md) - `source.jobs.codepath.engineering-project-manager.5160542007`
 - [NYC Jobs - Senior Product Manager 782366](../sources/jobs-oti-senior-product-manager-782366.md) - `source.jobs.oti.senior-product-manager.782366`
 - [NYC Jobs - Technical Operations Manager 782369](../sources/jobs-oti-technical-operations-782369.md) - `source.jobs.oti.technical-operations.782369`
 - [Official posting - PermitFlow Product Operations Manager](../sources/jobs-permitflow-product-operations.md) - `source.jobs.permitflow.product-operations.8a6e6066`
@@ -416,6 +432,7 @@
 - [Archived NTER CHNG project homepage](../sources/nter-chng-archived-homepage-2011.md) - `source.nter-chng.archived-homepage.2011`
 - [NYC Council field-kit photograph oral history, July 2026](../sources/recollections/nyc-council-field-kit-oral-history-2026-07.md) - `source.nyc-council.field-kit-oral-history.2026-07`
 - [Appointment of Diya Vij as Commissioner of Cultural Affairs](../sources/dcla-diya-vij-appointment-2026.md) - `source.nyc.diya-vij-appointment.2026`
+- [NYC Mayor's Office - PIT Crew launch announcement](../sources/nyc-pit-crew-launch-2026.md) - `source.nyc.pit-crew-launch.2026-07-13`
 - [NYC Artist Coalition DCLA formation source return, 2026](../sources/archives/nycac-dcla-formation-source-return-2026-07.md) - `source.nycac.dcla-formation-source-return.2026-07`
 - [Governed NYCAC frontline advocacy source comparison, July 13-August 12, 2026](../sources/archives/nycac-frontline-advocacy-2026-08.md) - `source.nycac.frontline-advocacy.2026-08`
 - [NYC nightlife forum corrected working transcript, 2026](../sources/nycac-nightlife-forum-transcript-2026.md) - `source.nycac.nightlife-forum-transcript.2026`
@@ -442,6 +459,7 @@
 - [Governed professional-record research comparison, August 2026](../sources/archives/professional-record-research-2026-08.md) - `source.professional-record.research.2026-08`
 - [Late-July 2026 current-workstream review](../sources/working/current-workstream-2026-07-27.md) - `source.protected.current-workstream.2026-07-27`
 - [Protected source-backed memory opportunity — metadata boundary](../sources/protected-source-backed-memory-opportunity.md) - `source.protected.source-backed-memory-opportunity.2026`
+- [Luke Farrell public professional post - PIT Crew leadership](../sources/luke-farrell-pit-crew-2026.md) - `source.public.luke-farrell-pit-crew.2026-07`
 - [Jamie Burkart recollection of bicycle-canoe journeys](../sources/recollections/jamie-canoe-commuting-2026-07.md) - `source.recollection.jamie-canoe-commuting.2026-07`
 - [Jamie Burkart public resume, maintained 2026](../sources/jamie-resume-2026-06-11.md) - `source.resume.jamie-burkart.2026-06-11`
 - [Empty Storefronts, High Rents final report edition](../sources/empty-storefronts-high-rents-2026-07-28.md) - `source.sbu.empty-storefronts-high-rents.2026-07-28`

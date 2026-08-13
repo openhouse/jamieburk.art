@@ -3,13 +3,13 @@
 
 **Source commit:** `ff5ac23d34653e9e5e6e9528c4b39374f4851f49`
 **Generation time:** 2026-08-13T12:43:30-04:00
-**Source fingerprint:** `dfc76cdd2c900a43883611cf678c3c9c6b7d65ecc8dd22d440134e7725264539`
+**Source fingerprint:** `cfbf30c92da0c34890db6373da51917d96af50833f05ad5a9489cae99c1376eb`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 5
+- Nodes added: 23
 - Nodes removed: 0
-- Edges added: 24
+- Edges added: 97
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 186
@@ -17,7 +17,25 @@ Compared with the graph artifact on `origin/develop`.
 ## Added nodes
 
 - `claim.nycac.frontline-advocacy.2026-08`
+- `evaluation.employment-leadership-context.2026-08-13`
 - `event.nyc.sbu-report-launch.2026-07-29`
+- `opportunity.aclu.senior-project-manager.8620968002`
+- `opportunity.codepath.engineering-project-manager.5160542007`
+- `opportunity.nyc-oti.senior-product-manager.782366`
+- `person.aileen-palmer`
+- `person.charizma-williams`
+- `person.chris-coleman`
+- `person.jaclyn-chen`
+- `person.lisa-gelobter`
+- `person.luke-farrell`
+- `person.zack-parker`
 - `research.nycac.frontline-advocacy.2026-08-12`
+- `source.aclu.charizma-williams`
+- `source.benepass.jaclyn-chen`
+- `source.codepath.leadership.2026`
+- `source.jobs.aclu.senior-project-manager.8620968002`
+- `source.jobs.codepath.engineering-project-manager.5160542007`
+- `source.nyc.pit-crew-launch.2026-07-13`
 - `source.nycac.frontline-advocacy.2026-08`
+- `source.public.luke-farrell-pit-crew.2026-07`
 - `source.sbu.empty-storefronts-high-rents.2026-07-28`

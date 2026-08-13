@@ -34,7 +34,7 @@ test("public hiring evaluator receives no protected Wiki or communications", () 
   assert.equal(report.publicSafety.privateMarkerCount, 0);
   assert.equal(report.publicSafety.protectedWikiReceived, false);
   assert.equal(report.publicSafety.rawCommunicationsReceived, false);
-  assert.equal(report.opportunities.length, 7);
+  assert.equal(report.opportunities.length, 5);
   assert.ok(!JSON.stringify(report).includes("wikiRecords"));
   const protectedOpportunity = report.opportunities.find((item) => item.id.includes("protected.source-backed-memory"));
   assert.equal(protectedOpportunity.live, false);
@@ -53,13 +53,56 @@ test("named reader profiles retain simulation disclaimers", () => {
   assert.ok(named.every((reader) => reader.prohibitedAssumptions.length >= 2));
 });
 
+test("priority opportunities preserve public leadership confidence boundaries", () => {
+  const { report } = evaluatePublicHiring(defaultRepoRoot);
+  const byId = new Map(report.opportunities.map((item) => [item.id, item]));
+  assert.equal(
+    byId.get("opportunity.codepath.engineering-project-manager.5160542007")
+      ?.publicReportingContext?.identification,
+    "role-identity-matched"
+  );
+  assert.equal(
+    byId.get("opportunity.aclu.senior-project-manager.8620968002")
+      ?.publicReportingContext?.identification,
+    "role-only"
+  );
+  assert.equal(
+    byId.get("opportunity.aclu.senior-project-manager.8620968002")
+      ?.publicReportingContext?.person,
+    undefined
+  );
+  assert.equal(
+    byId.get("opportunity.benepass.product-operations.7f963a7a")
+      ?.publicReportingContext?.identification,
+    "named-in-posting"
+  );
+  assert.equal(
+    byId.get("opportunity.nyc-oti.senior-product-manager.782366")
+      ?.publicReportingContext?.identification,
+    "nearest-public-operational-lead"
+  );
+  assert.ok(
+    [...byId.values()]
+      .filter((item) => !item.id.includes("protected.source-backed-memory"))
+      .every((item) => item.publicVisionContext?.person && item.publicVisionContext?.boundary)
+  );
+});
+
 test("removing a declared public proof lowers observed requirement coverage", () => {
   const root = candidateFixture();
   const before = evaluatePublicHiring(root).report;
   const routePath = path.join(root, "apps/www/src/app/work/technical-operations/page.tsx");
+  const proofPath = path.join(root, "apps/www/src/data/proofs.ts");
   writeFileSync(
     routePath,
     readFileSync(routePath, "utf8").replaceAll("Coordinate delivery across concurrent projects", "")
+  );
+  writeFileSync(
+    proofPath,
+    readFileSync(proofPath, "utf8").replaceAll(
+      "move public-facing technical work from ambiguity to launch",
+      ""
+    )
   );
   const after = evaluatePublicHiring(root).report;
   const beforeOti = before.opportunities.find((item) => item.id.includes("nyc-oti"));
@@ -95,9 +138,9 @@ test("gap resolver remains separate and cannot approve projection", () => {
   ));
 });
 
-test("closed opportunities cannot be ready for human review", () => {
+test("closed priority opportunities cannot be ready for human review", () => {
   const root = candidateFixture();
-  const opportunityPath = path.join(root, "docs/knowledge-bank/opportunities/oti-technical-operations.md");
+  const opportunityPath = path.join(root, "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md");
   writeFileSync(
     opportunityPath,
     readFileSync(opportunityPath, "utf8").replace("opportunity_status: live", "opportunity_status: closed")
@@ -139,7 +182,7 @@ test("protected opportunity cannot become live by mutating both source type and 
 
 test("exclusionary hard screens fail closed", () => {
   const root = candidateFixture();
-  const opportunityPath = path.join(root, "docs/knowledge-bank/opportunities/oti-technical-operations.md");
+  const opportunityPath = path.join(root, "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md");
   writeFileSync(
     opportunityPath,
     readFileSync(opportunityPath, "utf8").replace(

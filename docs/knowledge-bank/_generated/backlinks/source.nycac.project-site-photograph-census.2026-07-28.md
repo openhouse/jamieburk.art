@@ -3,7 +3,7 @@
 
 **Source commit:** `ff5ac23d34653e9e5e6e9528c4b39374f4851f49`
 **Generation time:** 2026-08-13T12:43:30-04:00
-**Source fingerprint:** `dfc76cdd2c900a43883611cf678c3c9c6b7d65ecc8dd22d440134e7725264539`
+**Source fingerprint:** `cfbf30c92da0c34890db6373da51917d96af50833f05ad5a9489cae99c1376eb`
 
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `uses_source` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [hur5tftl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj.md) - `uses_source` (frontmatter)

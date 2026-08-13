@@ -3,9 +3,9 @@
   "runId": "hiring-public-1e4f5f26560d",
   "generatedAt": "2026-08-10T14:27:36-04:00",
   "candidateSha": "1e4f5f26560d0d5a43fdb3f777af1c3c4ef763a6",
-  "candidatePathsClean": true,
+  "candidatePathsClean": false,
   "portfolioSnapshotHash": "63b038a6c8fa851127924ce5fff54179638901f37dcc0f625bb0c41fc64acf32",
-  "roleContextHash": "96227d5af8d4f4cab9406723968b99b6c80da938436ce4bd1997d63aadc45e9b",
+  "roleContextHash": "4cb307a69a539848513f56477fb55dee6bc69df8651b7b715646c112d6758f86",
   "readerContextHash": "c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
   "publicSafety": {
@@ -137,20 +137,34 @@
   ],
   "opportunities": [
     {
-      "id": "opportunity.nyc-oti.technical-operations-manager.782369",
-      "title": "NYC OTI - Technical Operations Manager 782369",
-      "roleContextHash": "a41071bc271868cd70eefb14bb2d02953624c9685074489033972c7f2f6cc700",
+      "id": "opportunity.codepath.engineering-project-manager.5160542007",
+      "title": "CodePath - Engineering Project Manager",
+      "roleContextHash": "82e0583f3f40fa7ee4a5eb0bd8982bad428fa0779699bedcb5971291f1646b7b",
       "live": true,
-      "fresh": false,
+      "fresh": true,
       "hardScreenBlocked": false,
+      "publicReportingContext": {
+        "role": "Vice President, Engineering",
+        "person": "person.zack-parker",
+        "identification": "role-identity-matched",
+        "source": "source.codepath.leadership.2026",
+        "boundary": "The posting names only the role; the current official leadership page supplies the person match."
+      },
+      "publicVisionContext": {
+        "role": "Chief Product Officer",
+        "person": "person.chris-coleman",
+        "identification": "role-identity-matched",
+        "source": "source.codepath.leadership.2026",
+        "boundary": "Official pages identify product-engineering remit, not a complete reporting chain or hiring role."
+      },
       "decision": "evidence-gap-review",
-      "observed": 5,
-      "requirementTotal": 6,
-      "criticalObserved": 4,
+      "observed": 3,
+      "requirementTotal": 5,
+      "criticalObserved": 2,
       "criticalTotal": 4,
       "requirementCoverage": [
         {
-          "requirementId": "requirement.oti.delivery-coordination",
+          "requirementId": "requirement.codepath.engineering-delivery",
           "importance": "critical",
           "observed": true,
           "matchedPublicText": true,
@@ -159,52 +173,31 @@
             "/work/technical-operations"
           ],
           "evidenceNeedles": [
-            "Coordinate delivery across concurrent projects"
+            "Coordinate delivery across concurrent projects",
+            "Track status, surface risks early"
           ]
         },
         {
-          "requirementId": "requirement.oti.risk-and-dependencies",
+          "requirementId": "requirement.codepath.qa-and-bug-pipeline",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
-          "declaredPublicStatus": "visible-proven",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "Track status, surface risks early",
-            "Coordinate dependencies across product, engineering, security, legal"
-          ]
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-weak",
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
-          "requirementId": "requirement.oti.onboarding-and-runbooks",
+          "requirementId": "requirement.codepath.technical-test-fluency",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
-          "declaredPublicStatus": "visible-proven",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "Onboard collaborators with handbooks, runbooks"
-          ]
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "source-needed",
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
-          "requirementId": "requirement.oti.reporting-and-metrics",
+          "requirementId": "requirement.codepath.proportionate-process",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
-          "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "Report team health, project status, and operational metrics"
-          ]
-        },
-        {
-          "requirementId": "requirement.oti.continuous-improvement",
-          "importance": "important",
           "observed": true,
           "matchedPublicText": true,
           "declaredPublicStatus": "visible-proven",
@@ -216,62 +209,8 @@
           ]
         },
         {
-          "requirementId": "requirement.oti.government-hiring-and-procurement",
+          "requirementId": "requirement.codepath.ai-automation",
           "importance": "important",
-          "observed": false,
-          "matchedPublicText": true,
-          "declaredPublicStatus": "visible-weak",
-          "routes": [
-            "/work/callnyc"
-          ],
-          "evidenceNeedles": [
-            "New York City Council"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "opportunity.aclu.product-manager-discovery.8482872002",
-      "title": "ACLU - Product Manager II, Discovery",
-      "roleContextHash": "90af6a1dd8f4b9de299d07197e33725517895ef0e2da372cb5c18290550c2a0f",
-      "live": true,
-      "fresh": false,
-      "hardScreenBlocked": false,
-      "decision": "evidence-gap-review",
-      "observed": 2,
-      "requirementTotal": 5,
-      "criticalObserved": 2,
-      "criticalTotal": 4,
-      "requirementCoverage": [
-        {
-          "requirementId": "requirement.aclu.discovery-and-synthesis",
-          "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
-          "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "clarifies requirements"
-          ]
-        },
-        {
-          "requirementId": "requirement.aclu.facilitation-without-authority",
-          "importance": "critical",
-          "observed": false,
-          "matchedPublicText": true,
-          "declaredPublicStatus": "visible-weak",
-          "routes": [
-            "/work/fair-rent-nyc"
-          ],
-          "evidenceNeedles": [
-            "collaborators"
-          ]
-        },
-        {
-          "requirementId": "requirement.aclu.privacy-and-governance",
-          "importance": "critical",
           "observed": true,
           "matchedPublicText": true,
           "declaredPublicStatus": "visible-qualified",
@@ -279,37 +218,125 @@
             "/lab/source-backed-team-memory"
           ],
           "evidenceNeedles": [
-            "Known, Open, and Protected"
+            "human-correctable AI workflows"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opportunity.aclu.senior-project-manager.8620968002",
+      "title": "ACLU - Senior Project Manager, Learning and Project Solutions",
+      "roleContextHash": "69e5968685cb0ea61484facecfd2aa0e2083e7ba381b8a3f88d34574166070a2",
+      "live": true,
+      "fresh": true,
+      "hardScreenBlocked": false,
+      "publicReportingContext": {
+        "role": "Senior Director, Learning and Project Solutions",
+        "identification": "role-only",
+        "source": "source.jobs.aclu.senior-project-manager.8620968002",
+        "boundary": "The official posting names the manager's title but no person; no public identity was verified."
+      },
+      "publicVisionContext": {
+        "role": "Chief Operating Officer",
+        "person": "person.charizma-williams",
+        "identification": "role-identity-matched",
+        "source": "source.aclu.charizma-williams",
+        "boundary": "The role sits in the COO's office; this does not make the COO the direct manager or hiring lead."
+      },
+      "decision": "deterministic-ready-for-human-review",
+      "observed": 4,
+      "requirementTotal": 5,
+      "criticalObserved": 3,
+      "criticalTotal": 4,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.aclu.project-strategy",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [
+            "/resume",
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "turning ambiguous work into requirements, workflows, documentation",
+            "Build planning cycles, team rituals, decision frameworks"
           ]
         },
         {
-          "requirementId": "requirement.aclu.product-brief",
+          "requirementId": "requirement.aclu.cross-department-delivery",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "Coordinate dependencies across product, engineering, security, legal",
+            "Track status, surface risks early"
+          ]
+        },
+        {
+          "requirementId": "requirement.aclu.business-analysis",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/resume"
+          ],
+          "evidenceNeedles": [
+            "requirements, workflows, documentation"
+          ]
+        },
+        {
+          "requirementId": "requirement.aclu.budget-and-resources",
           "importance": "critical",
           "observed": false,
           "matchedPublicText": false,
-          "declaredPublicStatus": "wiki-proven-not-projected",
+          "declaredPublicStatus": "visible-weak",
           "routes": [],
           "evidenceNeedles": []
         },
         {
-          "requirementId": "requirement.aclu.do-not-build-judgment",
+          "requirementId": "requirement.aclu.organizational-standards",
           "importance": "important",
-          "observed": false,
-          "matchedPublicText": false,
-          "declaredPublicStatus": "source-needed",
-          "routes": [],
-          "evidenceNeedles": []
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "handbooks, runbooks, operating documentation"
+          ]
         }
       ]
     },
     {
       "id": "opportunity.benepass.product-operations.7f963a7a",
       "title": "Benepass - Product Operations Manager",
-      "roleContextHash": "b4482d7b9fa4fd5f69e8558c99a27229df7a2af17172a50a36f722beaa00e2f5",
+      "roleContextHash": "4c35e8774b5c80b504d0b84697ee47576af329c3e612dd3f90d473beca940f68",
       "live": true,
-      "fresh": false,
+      "fresh": true,
       "hardScreenBlocked": false,
-      "decision": "evidence-gap-review",
+      "publicReportingContext": {
+        "role": "Head of Customer Operations",
+        "person": "person.aileen-palmer",
+        "identification": "named-in-posting",
+        "source": "source.jobs.benepass.product-operations.7f963a7a",
+        "boundary": "The official posting directly names Aileen Palmer as the reporting person; it does not establish private views or final hiring authority."
+      },
+      "publicVisionContext": {
+        "role": "CEO and co-founder",
+        "person": "person.jaclyn-chen",
+        "identification": "role-identity-matched",
+        "source": "source.benepass.jaclyn-chen",
+        "boundary": "The official team page establishes company leadership and vision context, not direct supervision of this role."
+      },
+      "decision": "deterministic-ready-for-human-review",
       "observed": 3,
       "requirementTotal": 4,
       "criticalObserved": 3,
@@ -372,34 +399,34 @@
       ]
     },
     {
-      "id": "opportunity.codepath.claude-corps.5182020007",
-      "title": "CodePath - Senior Program Manager, Claude Corps",
-      "roleContextHash": "c7f62c754b482f4bf6c95f7a598df4fab833da214dd439a48e3d54ca7b1bacbb",
+      "id": "opportunity.nyc-oti.senior-product-manager.782366",
+      "title": "NYC OTI - PIT Crew Senior Product Manager 782366",
+      "roleContextHash": "373fc6c7eca9e6ff863d72909170d9d698bf8279b254f97c8621bb99d5555400",
       "live": true,
-      "fresh": false,
+      "fresh": true,
       "hardScreenBlocked": false,
+      "publicReportingContext": {
+        "role": "PIT Crew operational lead",
+        "person": "person.luke-farrell",
+        "identification": "nearest-public-operational-lead",
+        "source": "source.public.luke-farrell-pit-crew.2026-07",
+        "boundary": "Farrell publicly says he leads PIT Crew, but the posting does not name a supervisor or direct hiring manager."
+      },
+      "publicVisionContext": {
+        "role": "Commissioner and Chief Technology Officer",
+        "person": "person.lisa-gelobter",
+        "identification": "official-initiative-leader",
+        "source": "source.nyc.pit-crew-launch.2026-07-13",
+        "boundary": "Official sources establish initiative leadership and vision, not direct supervision of this position."
+      },
       "decision": "evidence-gap-review",
       "observed": 5,
-      "requirementTotal": 5,
+      "requirementTotal": 7,
       "criticalObserved": 4,
-      "criticalTotal": 4,
+      "criticalTotal": 6,
       "requirementCoverage": [
         {
-          "requirementId": "requirement.codepath.master-program-plan",
-          "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
-          "declaredPublicStatus": "visible-proven",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "delivery rhythms, decision records",
-            "Track status, surface risks early"
-          ]
-        },
-        {
-          "requirementId": "requirement.codepath.partner-coordination",
+          "requirementId": "requirement.oti-senior-product-manager.end-to-end-product",
           "importance": "critical",
           "observed": true,
           "matchedPublicText": true,
@@ -408,11 +435,59 @@
             "/work/technical-operations"
           ],
           "evidenceNeedles": [
-            "external stakeholders"
+            "move public-facing technical work from ambiguity to launch",
+            "Coordinate delivery across concurrent projects"
           ]
         },
         {
-          "requirementId": "requirement.codepath.executive-reporting",
+          "requirementId": "requirement.oti-senior-product-manager.discovery-research",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-weak",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.oti-senior-product-manager.tradeoffs-and-briefs",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "decision records",
+            "status reporting, and retrospectives"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti-senior-product-manager.agency-policy-translation",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/technical-operations",
+            "/work/fair-rent-nyc"
+          ],
+          "evidenceNeedles": [
+            "Coordinate dependencies across product, engineering, security, legal",
+            "city/state strategy lanes"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti-senior-product-manager.accessibility-compliance",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-weak",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.oti-senior-product-manager.metrics-outcomes",
           "importance": "critical",
           "observed": true,
           "matchedPublicText": true,
@@ -425,167 +500,16 @@
           ]
         },
         {
-          "requirementId": "requirement.codepath.ai-first-workflow",
-          "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
-          "declaredPublicStatus": "visible-proven",
-          "routes": [
-            "/lab/source-backed-team-memory"
-          ],
-          "evidenceNeedles": [
-            "human-correctable AI workflows"
-          ]
-        },
-        {
-          "requirementId": "requirement.codepath.handoff-ready-systems",
-          "importance": "important",
-          "observed": true,
-          "matchedPublicText": true,
-          "declaredPublicStatus": "visible-proven",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "durable handoffs",
-            "without overengineering"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "opportunity.asana.ai-implementation.8027437",
-      "title": "Asana - AI Implementation Manager, Service Management",
-      "roleContextHash": "272ad591f954693530eaced6f87e1b1abbaf8ce4ba8f29bb2154675249b94777",
-      "live": true,
-      "fresh": false,
-      "hardScreenBlocked": false,
-      "decision": "evidence-gap-review",
-      "observed": 2,
-      "requirementTotal": 4,
-      "criticalObserved": 1,
-      "criticalTotal": 3,
-      "requirementCoverage": [
-        {
-          "requirementId": "requirement.asana.implementation-ownership",
-          "importance": "critical",
-          "observed": false,
-          "matchedPublicText": true,
-          "declaredPublicStatus": "visible-weak",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "implementation"
-          ]
-        },
-        {
-          "requirementId": "requirement.asana.ai-workflow-design",
-          "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
-          "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/lab/source-backed-team-memory"
-          ],
-          "evidenceNeedles": [
-            "human-correctable AI workflows"
-          ]
-        },
-        {
-          "requirementId": "requirement.asana.risk-and-change-management",
-          "importance": "critical",
-          "observed": false,
-          "matchedPublicText": true,
-          "declaredPublicStatus": "visible-weak",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "surface risks early"
-          ]
-        },
-        {
-          "requirementId": "requirement.asana.reusable-playbooks",
+          "requirementId": "requirement.oti-senior-product-manager.public-rollout",
           "importance": "important",
           "observed": true,
           "matchedPublicText": true,
           "declaredPublicStatus": "visible-qualified",
           "routes": [
-            "/work/technical-operations"
+            "/work/fair-rent-nyc"
           ],
           "evidenceNeedles": [
-            "handbooks, runbooks"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "opportunity.permitflow.product-operations.8a6e6066",
-      "title": "PermitFlow - Product Operations Manager",
-      "roleContextHash": "ae7e58bd4700ed0b525a2eeac34d8184bbc8864da59d0520748ae8cac9fbaff5",
-      "live": true,
-      "fresh": false,
-      "hardScreenBlocked": false,
-      "decision": "evidence-gap-review",
-      "observed": 3,
-      "requirementTotal": 4,
-      "criticalObserved": 2,
-      "criticalTotal": 3,
-      "requirementCoverage": [
-        {
-          "requirementId": "requirement.permitflow.physical-public-systems",
-          "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
-          "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/work/kc-town-hall",
-            "/work/callnyc"
-          ],
-          "evidenceNeedles": [
-            "historic building",
-            "constituent-services data"
-          ]
-        },
-        {
-          "requirementId": "requirement.permitflow.product-data",
-          "importance": "critical",
-          "observed": false,
-          "matchedPublicText": true,
-          "declaredPublicStatus": "visible-weak",
-          "routes": [
-            "/work/harry-j-epstein"
-          ],
-          "evidenceNeedles": [
-            "analytics"
-          ]
-        },
-        {
-          "requirementId": "requirement.permitflow.cross-functional-launch",
-          "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
-          "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "Coordinate dependencies across product, engineering",
-            "public launch"
-          ]
-        },
-        {
-          "requirementId": "requirement.permitflow.ai-automation",
-          "importance": "important",
-          "observed": true,
-          "matchedPublicText": true,
-          "declaredPublicStatus": "visible-proven",
-          "routes": [
-            "/lab/source-backed-team-memory"
-          ],
-          "evidenceNeedles": [
-            "human-correctable AI workflows"
+            "policy communications"
           ]
         }
       ]
@@ -593,10 +517,12 @@
     {
       "id": "opportunity.protected.source-backed-memory-consulting.2026",
       "title": "Protected source-backed team-memory consulting lead",
-      "roleContextHash": "d1c8f26df4f684b263c736f2bdfad53e2b000676bfc707e6ccdb98cbcbe966bb",
+      "roleContextHash": "1ca9ad3bd7cfe81cb81b0b402eacd5dccbf1a771aeade41c3b9c9daf93f42f0f",
       "live": false,
       "fresh": false,
       "hardScreenBlocked": false,
+      "publicReportingContext": null,
+      "publicVisionContext": null,
       "decision": "not-live",
       "observed": 3,
       "requirementTotal": 3,

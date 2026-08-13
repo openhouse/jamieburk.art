@@ -2,18 +2,16 @@
 # Hiring acceptance Wiki gap resolution
 
 **Candidate commit:** `1e4f5f26560d0d5a43fdb3f777af1c3c4ef763a6`
-**Public report hash:** `95758e22ae1fce793566b0820369d47ac076b2b4da0df53ce5dd89a62ac7585a`
-**Wiki fingerprint:** `dfc76cdd2c900a43883611cf678c3c9c6b7d65ecc8dd22d440134e7725264539`
+**Public report hash:** `0a9870220ee03efac92ba03af9bae38c8ec5a696b3d850c34895c7f85c859778`
+**Wiki fingerprint:** `cfbf30c92da0c34890db6373da51917d96af50833f05ad5a9489cae99c1376eb`
 
 The gap resolver runs after the public-only evaluator. It can identify Wiki evidence, but every public change remains human-reviewed.
 
 ## Findings
 
-- `requirement.oti.government-hiring-and-procurement` - **visible-weak-evidence-gap**; Do not imply procurement authority; clarify adjacent government-process experience in the application.
-- `requirement.aclu.facilitation-without-authority` - **visible-weak-evidence-gap**; Name one bounded facilitation decision and its usable output.
-- `requirement.aclu.product-brief` - **wiki-proven-not-projected**; Produce and human-review a redacted retrospective CallNYC product brief.
-- `requirement.aclu.do-not-build-judgment` - **source-needs-close-reading**; Revisit one bounded decision record; do not invent a do-not-build example.
+- `requirement.codepath.qa-and-bug-pipeline` - **visible-weak-evidence-gap**; Inventory real QA and issue-triage work; do not substitute general project coordination.
+- `requirement.codepath.technical-test-fluency` - **source-needs-close-reading**; Verify current hands-on evidence and prepare a bounded technical demonstration if supportable.
+- `requirement.aclu.budget-and-resources` - **visible-weak-evidence-gap**; Identify exact budget and resource authority; do not imply procurement or financial authority not held.
 - `requirement.benepass.quantified-prioritization` - **visible-weak-evidence-gap**; Use only supported HJE figures and explain the decision they informed.
-- `requirement.asana.implementation-ownership` - **true-experience-gap**; Distinguish direct client implementation from internal and public-facing delivery.
-- `requirement.asana.risk-and-change-management` - **true-experience-gap**; Do not substitute general risk coordination for migration or configuration experience.
-- `requirement.permitflow.product-data` - **true-experience-gap**; Test present SQL and analytics fluency; do not imply tools Jamie cannot demonstrate.
+- `requirement.oti-senior-product-manager.discovery-research` - **visible-weak-evidence-gap**; Prepare a precise discovery example and distinguish direct user research from adjacent public listening.
+- `requirement.oti-senior-product-manager.accessibility-compliance` - **true-experience-gap**; Inventory direct accessibility and compliance practice; site conformance alone is not product-leadership experience.

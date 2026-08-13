@@ -5,14 +5,14 @@ kind: opportunity
 status: governed-open
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-08-13
+review_by: 2026-08-16
 canonical_path: docs/knowledge-bank/opportunities/benepass-product-operations.md
 summary: Public-safe requirement and portfolio-coverage map for Benepass's live Product Operations Manager role.
 canonical_url: https://jobs.ashbyhq.com/benepass/7f963a7a-aaad-456b-b12b-7f34b35d51cf/
 source_type: official-employer
 opportunity_status: live
-verified_at: 2026-07-18
+verified_at: 2026-08-13
 portfolio_routes:
   - /
   - /work/technical-operations
@@ -33,6 +33,7 @@ confirmed_facts:
 inferences: []
 unknowns:
   - Expected analytical tooling and depth of direct Product Operations tenure.
+  - The reporting chain above Head of Customer Operations and exact hiring authority.
 hard_screens:
   - id: screen.benepass.product-operations-tenure
     text: The posting asks for five to eight or more years in Product Operations, project management, technical program management, or similar work.
@@ -97,6 +98,18 @@ one_year_risk_conditions:
 interview_questions:
   - Who has final go/no-go authority, and how are disagreements resolved?
   - Which operational metrics are trusted today?
+public_reporting_context:
+  role: Head of Customer Operations
+  person: person.aileen-palmer
+  identification: named-in-posting
+  source: source.jobs.benepass.product-operations.7f963a7a
+  boundary: The official posting directly names Aileen Palmer as the reporting person; it does not establish private views or final hiring authority.
+public_vision_context:
+  role: CEO and co-founder
+  person: person.jaclyn-chen
+  identification: role-identity-matched
+  source: source.benepass.jaclyn-chen
+  boundary: The official team page establishes company leadership and vision context, not direct supervision of this role.
 relations:
   - type: uses_source
     target: source.jobs.benepass.product-operations.7f963a7a
@@ -107,12 +120,28 @@ relations:
   - type: uses_method
     target: method.source-backed-team-memory
     href: ../methods/source-backed-team-memory.md
+  - type: related_to
+    target: person.aileen-palmer
+    href: ../people/aileen-palmer.md
+    context: Direct reporting person named in the official posting.
+  - type: related_to
+    target: person.jaclyn-chen
+    href: ../people/jaclyn-chen.md
+    context: Nearest company-level vision leader.
+  - type: uses_source
+    target: source.benepass.jaclyn-chen
+    href: ../sources/benepass-jaclyn-chen.md
 evidence:
   - target: source.jobs.benepass.product-operations.7f963a7a
     relationship: direct-support
     confidence: high
     supports:
-      - official role facts and requirements as rechecked July 18, 2026
+      - official role facts and requirements as rechecked August 13, 2026
+  - target: source.benepass.jaclyn-chen
+    relationship: context
+    confidence: high
+    supports:
+      - current public identity of the CEO and co-founder
 human_review: governed-open
 ---
 
@@ -124,4 +153,6 @@ operational impact and quantified prioritization more concrete without
 overstating formal SaaS Product Operations tenure.
 
 Recheck the [official source](../sources/jobs-benepass-product-operations.md)
-before outward use.
+before outward use. Keep named reporting person
+[Aileen Palmer](../people/aileen-palmer.md) distinct from company vision leader
+[Jaclyn Chen](../people/jaclyn-chen.md).

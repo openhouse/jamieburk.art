@@ -3,7 +3,7 @@
 
 **Source commit:** `ff5ac23d34653e9e5e6e9528c4b39374f4851f49`
 **Generation time:** 2026-08-13T12:43:30-04:00
-**Source fingerprint:** `dfc76cdd2c900a43883611cf678c3c9c6b7d65ecc8dd22d440134e7725264539`
+**Source fingerprint:** `cfbf30c92da0c34890db6373da51917d96af50833f05ad5a9489cae99c1376eb`
 
 - [KC Town Hall ten-minute-walk proposal map](../../assets/graphics/kc-town-hall-walkshed-2019.md) - `documents` (frontmatter)
 - [Kansas City Star aerial view of KC Town Hall](../../assets/photographs/kc-town-hall-kc-star-aerial-2021.md) - `related_to` (frontmatter)
