@@ -1,10 +1,10 @@
 {
   "runVersion": 3,
-  "judgeId": "composite-hiring-composition-2026-08-13-c57d5c02",
+  "judgeId": "composite-hiring-composition-2026-08-13-9ced6331",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
   "rubricSha256": "3fe95a2b9c1f22cdb7d95c3168af73e8eb659900ffd258cd65ebb6feb06e44c1",
-  "candidateFingerprint": "c57d5c0224ff4d8978af00c32b0e56184b98e80196b39610fbce89ab270e657c",
+  "candidateFingerprint": "9ced6331033da69607392cdaca93ab3e058152d5885e73da70c2db2c57043a5a",
   "verdict": "accepted",
   "scores": [
     {
@@ -12,118 +12,123 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        ".agents/evals/feature-evals-composite.json records exactly 14 frozen heads for feature/evals-A through feature/evals-N and pins refs/remotes/origin as the mutable comparison namespace.",
-        "docs/integration/feature-evals-composite.json contains one matching decision per frozen branch and identifies feature/knowledge-h as writableBranch and develop as pullRequestBase.",
-        "scripts/lib/composite-integration-eval.mjs verifies each frozen commit object independently of later remote-tracking ref movement."
+        ".agents/evals/feature-evals-composite.json records exactly fourteen frozen heads, feature/evals-A through feature/evals-N, plus source branch feature/knowledge-h and pull-request base develop.",
+        "docs/integration/feature-evals-composite.json contains exactly one decision for each A-N branch, repeats the corresponding frozen commit, and states that frozen branches are read-only reference implementations.",
+        "scripts/lib/composite-integration-eval.mjs resolves every frozen commit object independently of mutable remote-tracking refs; the deterministic evaluation reported 14/14 decisions and zero missing commit objects."
       ],
-      "rationale": "The A–N inventory is complete, exact, reference-only, and resistant to mutable branch movement."
+      "rationale": "The complete A-N inventory is immutable, explicit, available, and reference-only."
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
       "evidence": [
-        "docs/integration/feature-evals-composite.json gives every branch an allowed decision, substantive rationale, existing destinationPaths, and COMP verificationIds.",
-        "docs/integration/feature-evals-composite.json records the deliberate websiteDecision to retain the selective H-derived public composition rather than project architecture work as additional copy.",
-        "scripts/tests/composite-integration.test.mjs rejects missing destinations and decorative decision records."
+        "docs/integration/feature-evals-composite.json gives every branch an allowed decision, substantive strength and rationale, existing destination paths, and COMP verification IDs.",
+        "docs/integration/feature-evals-composite.json explicitly retains the H-derived public composition and declines additional public copy merely because governance and architecture became deeper.",
+        "scripts/lib/composite-integration-eval.mjs verifies destination existence, decision vocabulary, rationale substance, verification IDs, website disposition, and the reviewed register digest."
       ],
-      "rationale": "Integration choices are inspectable, verifiable, and explicit about both projection and non-projection."
+      "rationale": "Integration choices are inspectable, operationally linked, and deliberate about public projection."
     },
     {
       "criterionId": "COMP-003",
       "score": 4,
       "pass": true,
       "evidence": [
-        "apps/www/src/data/knowledge-bank/public.ts parses public-registry.json through schemas that omit protected evidence locators and internal excerpts.",
-        "apps/www/src/data/knowledge-bank/index.ts exposes public projection helpers to citation components, while the forbidden lifecycle-schema.ts, lifecycle-records.ts, and development-records.ts roots are absent.",
-        "scripts/lib/composite-integration-eval.mjs verifies all 11 canonical files, the constrained public-registry shape, and absence of parallel architectures."
+        ".agents/evals/feature-evals-composite.json names the H-derived schema, records, agency graph, lifecycle operations, redacted public registry, and proofs module as canonical files.",
+        "scripts/lib/composite-integration-eval.mjs verifies all 11 canonical files, rejects three named parallel lifecycle roots, and reported that no parallel architecture was copied.",
+        "apps/www/src/app/about/page.tsx projects governed wording through the Claim component, while apps/www/src/data/knowledge-bank/public-registry.json exposes only claims, pages, and sources."
       ],
-      "rationale": "The repository maintains one canonical knowledge architecture and a distinct redacted public projection layer."
+      "rationale": "The repository maintains one canonical knowledge architecture and a bounded public projection."
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
       "evidence": [
-        "apps/www/src/data/knowledge-bank/lifecycle-operations.ts implements stable replay, linked duplicate preservation, collision rejection, and lifecycle queries.",
-        "scripts/tests/lifecycle-operations.test.mjs passes tests for identical replay, changed-content ID collision, linked duplicates, and queryable lifecycle state.",
-        "scripts/lib/composite-integration-eval.mjs exercises held claims, unresolved inquiries, corrections, projection states, and orphan-source reporting."
+        "apps/www/src/data/knowledge-bank/lifecycle-operations.ts implements identical-ID replay, linked duplicate preservation, collision rejection, and lifecycle queries.",
+        "scripts/tests/lifecycle-operations.test.mjs separately covers already-present replay, duplicate-preserved artifacts, changed-content stable-ID rejection, held claims, inquiries, corrections, projection states, and zero orphan sources.",
+        "scripts/lib/composite-integration-eval.mjs exercises the canonical operations against the populated knowledge bank rather than a decorative fixture."
       ],
-      "rationale": "Intake behavior is append-safe, and the lifecycle states required for correction and selective projection remain queryable."
+      "rationale": "Intake is append-safe and the required lifecycle states are queryable."
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
       "evidence": [
-        "apps/www/src/data/knowledge-bank/records.ts validates a corpus of 310 sources, 113 claims, 35 agency relations, and 4 corrections without citation or protected-data errors.",
-        "apps/www/src/data/knowledge-bank/agency-graph.ts separates individual, shared, collective, and institutional action and gives each relation sources and explicit causal or credit boundaries.",
-        "scripts/tests/knowledge-evals.test.mjs passes agency, correction, population, source-closure, privacy, and anti-overclaim tests across the canonical corpus."
+        "scripts/lib/composite-integration-eval.mjs validated 310 sources, 113 claims, 35 agency relations, and four corrections with current derived Wiki and employment outputs.",
+        "apps/www/src/data/knowledge-bank/agency-graph.ts distinguishes individual, shared, collective, and institutional credit and attaches sources and explicit boundaries to every relation.",
+        "apps/www/src/data/knowledge-bank/records.ts and scripts/lib/citation-validation.mjs preserve source does-not-establish limits, evidence relationships, protected boundaries, and bounded population claims; the relevant deterministic tests completed successfully."
       ],
-      "rationale": "Source, claim, population, correction, and agency integrity are bounded and mutation-tested; advocacy and participation are not converted into enactment or sole causation."
+      "rationale": "Source, claim, agency, correction, population, and derived-output integrity are substantively governed and validated."
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
       "evidence": [
-        "apps/www/src/app/page.tsx presents a short hiring-oriented route through technical operations, selected systems, capabilities, resume, and contact rather than mirroring the Knowledge Wiki.",
-        "apps/www/src/components/Hero.tsx immediately names Jamie's target role, agency, operating contribution, and usable outputs in plain language; the supplied desktop and mobile captures preserve that hierarchy and legibility.",
-        "apps/www/src/app/about/page.tsx connects artistic, civic, technical, relational, and social practice while making observe, model, prototype, use, learn, revise, and handoff reconstructable.",
-        "apps/www/src/app/work/technical-operations/page.tsx maps role requirements to bounded project proofs and durable team-operating outcomes."
+        "apps/www/src/app/page.tsx gives hiring readers a short role-fit path, selected systems, usable transformations, and an explicit listen-map-build-document-transfer operating pattern instead of mirroring the knowledge bank.",
+        "apps/www/src/app/about/page.tsx clearly names Jamie's role and actions while tracing artistic, civic, technical, relational, and social continuity through Open House, WOWList, Sunday Dinner and 196, coalition work, and source-backed team memory.",
+        "scripts/lib/professor-lens-eval.mjs reconstructs relationship, model, interface/use, learning/continuity, and handoff loops and reported 16/16 criteria passing while mature held claims remain outside any public proofs route.",
+        "The supplied desktop and mobile captures show a legible role statement, strong primary actions, readable reflow, and an About composition that remains coherent at narrow width."
       ],
-      "rationale": "The portfolio is selective and legible to a public-sector hiring reader, makes Jamie visible without inflation or self-erasure, and preserves both practice continuity and operational method."
+      "rationale": "The portfolio is selective and hiring-legible, makes Jamie's agency and usable outcomes visible, and retains interdisciplinary continuity without inflated causation or self-erasure."
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "docs/knowledge-bank/data/blind-spot-controls-2026-07.json keeps human corroboration, collective review, hiring usability, job funnel, and external validity explicitly open.",
-        "docs/knowledge-bank/data/blind-spot-controls-2026-07.json gives every human-evidence gap requiredEvidence, passWhen, antiGaming, nextAction, and publicProjectionRule fields.",
-        "docs/qa/pre-launch-eval-audit-2026-07-28.md states that automated or LLM evidence cannot establish hiring effectiveness, consent, collaborator review, or production approval."
+        "docs/knowledge-bank/data/blind-spot-controls-2026-07.json keeps human corroboration, collective review, hiring usability, job funnel, and external validity open and states that instrumentation is not validation.",
+        "Each relevant control in docs/knowledge-bank/data/blind-spot-controls-2026-07.json includes required evidence, anti-gaming constraints, a next action, and a public-projection rule.",
+        "scripts/lib/composite-integration-eval.mjs verified all five human-evidence controls under the reviewed digest and treats governed absence as an open gap rather than synthesized evidence."
       ],
-      "rationale": "Blind spots are governed absences with actionable collection plans, not synthetic evidence or inferred validation."
+      "rationale": "The blind spots remain explicit, actionable, and resistant to conversion of missing human evidence into a passing factual claim."
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
       "evidence": [
-        "scripts/lib/composite-integration-eval.mjs independently recomputes the semantic rubric digest as 3fe95a2b9c1f22cdb7d95c3168af73e8eb659900ffd258cd65ebb6feb06e44c1 and compares it with a separately pinned constant.",
-        "scripts/tests/composite-integration.test.mjs rejects semantic weakening with refreshed checksums, fabricated heads, optimizer self-grading, synthesized human evidence, stale generated outputs, and compensated blocking failures.",
-        ".agents/evals/portfolio-production-readiness.json, docs/integration/feature-evals-composite.json, and docs/knowledge-bank/data/blind-spot-controls-2026-07.json are bound through reviewed digests."
+        "The exported computeCompositeRubricDigest helper in scripts/lib/composite-integration-eval.mjs independently recomputed 3fe95a2b9c1f22cdb7d95c3168af73e8eb659900ffd258cd65ebb6feb06e44c1.",
+        "scripts/tests/composite-integration.test.mjs tests semantic mutation, checksum-only authorization, base-suite drift, optimizer self-grading, candidate-file mutation, receipt integrity, and related stopping-contract attacks.",
+        ".agents/evals/feature-evals-composite.json forbids optimizer self-grading and not-observed passes, freezes the rubric during optimization, and makes every COMP criterion blocking.",
+        "scripts/lib/composite-integration-eval.mjs binds the base suite, integration register, blind-spot controls, branch namespace, derived-output currentness, and uncompensated blocking results."
       ],
-      "rationale": "The frozen governance contract resists checksum refresh and score gaming, preserves grader separation, and treats every blocking failure as non-compensable."
+      "rationale": "The frozen semantic contract and its mutation defenses prevent checksum refreshes, weighting, or grader overlap from masking substantive weakening."
     },
     {
       "criterionId": "COMP-009",
       "score": 4,
       "pass": true,
       "evidence": [
-        "scripts/lib/composite-integration-eval.mjs recomputes 1,531 candidate paths and exact fingerprint c57d5c0224ff4d8978af00c32b0e56184b98e80196b39610fbce89ab270e657c using the exported source-tree helper.",
-        ".agents/evals/feature-evals-composite.json limits candidate exclusions to the two declared holdout result records and requires complete-judgment digests plus public-safe receipt attestations.",
-        "scripts/tests/composite-integration.test.mjs proves source and binary mutations change the candidate fingerprint and proves the judgment digest binds receipt metadata and the complete review payload.",
-        "scripts/lib/composite-integration-eval.mjs requires distinct reviewer labels, exact-candidate and rubric binding, complete all-4 judgments, empty notObserved arrays, and valid public receipt digests for the final aggregate."
+        "The exported helpers in scripts/lib/composite-integration-eval.mjs independently enumerated 1,531 candidate paths and recomputed fingerprint 9ced6331033da69607392cdaca93ab3e058152d5885e73da70c2db2c57043a5a.",
+        ".agents/evals/feature-evals-composite.json defines git-source-tree identity and excludes only the two declared holdout result paths; scripts/lib/composite-integration-eval.mjs verifies that this exclusion exactly equals holdout_runs and that canonical and evidence-bundle files remain included.",
+        "scripts/lib/composite-integration-eval.mjs hashes the complete judgment payload, binds provider, distinct reviewer label, review time, attestation, rubric, candidate, verdict, scores, observations, findings, and recommendation, and rejects private process or machine-locator implications through the required public attestation.",
+        "scripts/tests/composite-integration.test.mjs exercises candidate mutation and complete-judgment receipt binding. This complete individual judgment accepts the exact candidate with every criterion at 4/pass and no notObserved items."
       ],
-      "rationale": "The exact-tree identity, narrow exclusion, complete-judgment binding, and public receipt mechanism are sound. This complete individual judgment accepts the exact candidate, so COMP-009 passes for this review without requiring the separately commissioned receipt to be present or authenticated here. Only the repository's deterministic final evaluator may establish the two-judgment aggregate."
+      "rationale": "The exact-tree identity, narrow two-receipt exclusion, complete-judgment digest, and public receipt mechanism are sound for this individual review. The separately commissioned judgment is neither required nor authenticated here; only the repository's deterministic final evaluator may establish the two-judgment aggregate."
     }
   ],
   "notObserved": [],
   "findings": [
-    "The exact candidate identity was independently recomputed as 1,531 paths with fingerprint c57d5c0224ff4d8978af00c32b0e56184b98e80196b39610fbce89ab270e657c.",
-    "The semantic rubric digest was independently recomputed as 3fe95a2b9c1f22cdb7d95c3168af73e8eb659900ffd258cd65ebb6feb06e44c1.",
-    "Relevant deterministic tests produced 231 passes out of 232; the sole failure was the aggregate composite acceptance assertion because existing holdout receipts do not yet satisfy the deterministic two-judgment gate. Under this commission's explicit COMP-009 rule, that does not block this individual judgment.",
-    "The candidate-bound accessibility subset passed 18 of 18 tests, covering the 56-route/viewport matrix, axe results, reflow, keyboard and focus evidence, image loading, contrast, and screenshot freshness.",
-    "Human corroboration, collaborator correction and consent, media rights, Jamie's exact-candidate approval, deployment, rollback, production publication, and indexing remain explicitly open.",
-    "This judgment does not infer, authenticate, or substitute for the separately commissioned review. Only the repository's deterministic final evaluator may establish the two-judgment aggregate."
+    "The supplied desktop and mobile captures support a selective, readable composition with a direct public-sector hiring proposition, clear navigation, usable calls to action, and coherent responsive reflow.",
+    "Agency records and public copy distinguish Jamie's individual contribution from shared, collective, and institutional action; advocacy, testimony, implementation, participation, and coalition work are not presented as legislative enactment or sole causation.",
+    "Human corroboration remains open.",
+    "Collaborator correction, collective review, and consent remain open.",
+    "Media rights remain open.",
+    "Jamie's exact-candidate approval remains open.",
+    "Deployment and rollback verification remain open.",
+    "Production publication remains open.",
+    "Production indexing remains open.",
+    "This is one judgment only and does not infer or authenticate the separately commissioned review. Only the repository's deterministic final evaluator may establish the two-judgment aggregate."
   ],
-  "recommendation": "Accept this exact candidate as one complete hiring-composition holdout judgment. Preserve all open human and release gates, commission and record the separate review independently, then use only the repository's deterministic final evaluator to establish the two-judgment aggregate.",
+  "recommendation": "Accept this individual exact-candidate hiring-composition judgment. Preserve every stated human, rights, release, deployment, rollback, publication, and indexing gate; submit this receipt to the deterministic final evaluator only after the separately commissioned judgment is available through its independent process.",
   "publicReview": {
     "provider": "independent-codex-review",
     "reviewerLabel": "hiring-composition-reviewer-b-2026-08-13",
-    "reviewedAt": "2026-08-13T21:26:07Z",
+    "reviewedAt": "2026-08-13T17:33:56-04:00",
     "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted.",
-    "judgmentSha256": "e5587dabcfd95497f305a7553d44bae6998f275b353a5fe423437cdb9fadef73"
+    "judgmentSha256": "a6a7f59a508cd9271c6e071fa27d54b6354b811ee568ef82d7b1300ed64dbd7b"
   }
 }
