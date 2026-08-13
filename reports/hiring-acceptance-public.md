@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `1e9583b4d8ea910b10071b6350c45b179b4814bf`
+**Candidate commit:** `197a3b3bd851b96e829f988f7ba349c51e434a10`
 **Portfolio snapshot:** `63b038a6c8fa851127924ce5fff54179638901f37dcc0f625bb0c41fc64acf32`
-**Role-context hash:** `4cb307a69a539848513f56477fb55dee6bc69df8651b7b715646c112d6758f86`
+**Role-context hash:** `864ae3e33506ec9500c390a04bcdfc5255d9ed39c36fdfdcfb5d7e2e2f44afc1`
 **Reader-context hash:** `c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
 **Candidate paths clean:** yes
@@ -18,6 +18,7 @@
 - Critical signals observed: 2/4
 - All signals observed: 3/5
 - Opportunity status live: yes
+- Historical benchmark: no
 - Role context current at candidate time: yes
 - Exclusionary hard screen recorded: no
 - Public reporting context: Vice President, Engineering (role-identity-matched)
@@ -35,6 +36,7 @@
 - Critical signals observed: 3/4
 - All signals observed: 4/5
 - Opportunity status live: yes
+- Historical benchmark: no
 - Role context current at candidate time: yes
 - Exclusionary hard screen recorded: no
 - Public reporting context: Senior Director, Learning and Project Solutions (role-only)
@@ -52,6 +54,7 @@
 - Critical signals observed: 3/4
 - All signals observed: 3/4
 - Opportunity status live: yes
+- Historical benchmark: no
 - Role context current at candidate time: yes
 - Exclusionary hard screen recorded: no
 - Public reporting context: Head of Customer Operations (named-in-posting)
@@ -68,6 +71,7 @@
 - Critical signals observed: 4/6
 - All signals observed: 5/7
 - Opportunity status live: yes
+- Historical benchmark: no
 - Role context current at candidate time: yes
 - Exclusionary hard screen recorded: no
 - Public reporting context: PIT Crew operational lead (nearest-public-operational-lead)
@@ -81,12 +85,32 @@
 - `requirement.oti-senior-product-manager.metrics-outcomes`: **observed** on `/work/technical-operations`
 - `requirement.oti-senior-product-manager.public-rollout`: **observed** on `/work/fair-rent-nyc`
 
+### NYC OTI - Technical Operations Manager 782369
+
+- Deterministic disposition: `historical-benchmark`
+- Critical signals observed: 4/4
+- All signals observed: 5/6
+- Opportunity status live: no
+- Historical benchmark: yes
+- Role context current at candidate time: no
+- Exclusionary hard screen recorded: no
+- Public reporting context: OTI leadership (role-only)
+- Public vision context: NYC Chief Technology Officer and OTI Commissioner (official-agency-leader)
+
+- `requirement.oti.delivery-coordination`: **observed** on `/work/technical-operations`
+- `requirement.oti.risk-and-dependencies`: **observed** on `/work/technical-operations`
+- `requirement.oti.onboarding-and-runbooks`: **observed** on `/work/technical-operations`
+- `requirement.oti.reporting-and-metrics`: **observed** on `/work/technical-operations`
+- `requirement.oti.continuous-improvement`: **observed** on `/work/technical-operations`
+- `requirement.oti.government-hiring-and-procurement`: **not observed** on `/work/callnyc`
+
 ### Protected source-backed team-memory consulting lead
 
 - Deterministic disposition: `not-live`
 - Critical signals observed: 2/2
 - All signals observed: 3/3
 - Opportunity status live: no
+- Historical benchmark: no
 - Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 - Public reporting context: not recorded (not recorded)

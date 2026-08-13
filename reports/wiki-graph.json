@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-13T13:45:34-04:00",
-  "sourceCommit": "1e9583b4d8ea910b10071b6350c45b179b4814bf",
-  "sourceFingerprint": "cfbf30c92da0c34890db6373da51917d96af50833f05ad5a9489cae99c1376eb",
+  "generatedAt": "2026-08-13T14:02:53-04:00",
+  "sourceCommit": "197a3b3bd851b96e829f988f7ba349c51e434a10",
+  "sourceFingerprint": "4efb66fc2c71c0dc43e606385e4278de52ef3fab1f1109df604df66d0db89ab0",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -2756,7 +2756,7 @@
       "status": "governed-open",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Regression contract for current opportunity selection, reporting-context confidence, senior vision context, and external hiring boundaries.",
+      "summary": "Regression contract for four current opportunities, one expired benchmark, reporting-confidence, senior vision context, and external hiring boundaries.",
       "aliases": [],
       "lastReviewed": "2026-08-13",
       "reviewBy": "2026-08-16"
@@ -3152,7 +3152,7 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Task-oriented entry point for live opportunity research, role coverage, public-only hiring evaluation, and private-boundary rules.",
+      "summary": "Task-oriented entry point for live opportunity research, historical role benchmarks, public-only hiring evaluation, and private-boundary rules.",
       "aliases": [],
       "lastReviewed": "2026-08-13",
       "reviewBy": "2026-09-13"
@@ -3747,13 +3747,13 @@
       "path": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
       "title": "NYC OTI - Technical Operations Manager 782369",
       "kind": "opportunity",
-      "status": "governed-open",
+      "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Public-safe, source-backed requirement and portfolio-coverage map for NYC OTI's live Technical Operations Manager role.",
+      "summary": "Expired, source-backed benchmark for future roles that own the operating backbone of a small public-interest technology team.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-11-13"
     },
     {
       "id": "opportunity.permitflow.product-operations.8a6e6066",
@@ -3898,7 +3898,7 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Public initiative-leadership context for NYC OTI and PIT Crew, without a direct-manager or hiring claim.",
+      "summary": "Public agency- and initiative-leadership context for NYC OTI and PIT Crew, without a direct-manager or hiring claim.",
       "aliases": [],
       "lastReviewed": "2026-08-13",
       "reviewBy": "2026-11-13"
@@ -4662,13 +4662,13 @@
       "path": "docs/knowledge-bank/sources/jobs-oti-technical-operations-782369.md",
       "title": "NYC Jobs - Technical Operations Manager 782369",
       "kind": "source",
-      "status": "maintained",
+      "status": "archived",
       "visibility": "public",
       "sensitivity": "low",
-      "summary": "Official City of New York posting for the OTI Technical Operations Manager role, rechecked July 18, 2026.",
+      "summary": "Official City of New York posting for expired Job 782369, retained as a future Technical Operations benchmark.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-11-13"
     },
     {
       "id": "source.jobs.permitflow.product-operations.8a6e6066",
@@ -4851,6 +4851,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-03",
       "reviewBy": "2027-02-03"
+    },
+    {
+      "id": "source.nyc.lisa-gelobter-appointment.2026-02-10",
+      "path": "docs/knowledge-bank/sources/nyc-lisa-gelobter-appointment-2026.md",
+      "title": "NYC Mayor's Office - Lisa Gelobter appointment",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official February 10, 2026 appointment announcement identifying Lisa Gelobter as NYC CTO and OTI Commissioner and describing her agency-wide public-service technology vision.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-11-13"
     },
     {
       "id": "source.nyc.pit-crew-launch.2026-07-13",
@@ -11340,6 +11353,14 @@
       "context": null
     },
     {
+      "from": "evaluation.employment-leadership-context.2026-08-13",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-technical-operations.md",
+      "context": null
+    },
+    {
       "from": "evaluation.jamie-public-record-integration.2026-08-03",
       "type": "informed_by",
       "to": "source.jamie-public-record-initial-manifest",
@@ -14509,12 +14530,22 @@
     },
     {
       "from": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "type": "evidence:context",
+      "to": "source.nyc.lisa-gelobter-appointment.2026-02-10",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "Lisa Gelobter's official role as NYC CTO, OTI Commissioner, and nearest senior agency vision leader"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-oti.technical-operations-manager.782369",
       "type": "evidence:direct-support",
       "to": "source.jobs.oti.technical-operations.782369",
       "source": "evidence",
       "confidence": "high",
       "supports": [
-        "official role facts and requirements as rechecked on July 18, 2026"
+        "official role facts, requirements, and expired status as rechecked on August 13, 2026"
       ]
     },
     {
@@ -14531,6 +14562,14 @@
       "to": "capability.technical-operations",
       "source": "frontmatter",
       "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "type": "related_to",
+      "to": "person.lisa-gelobter",
+      "source": "frontmatter",
+      "href": "../people/lisa-gelobter.md",
       "context": null
     },
     {
@@ -14555,6 +14594,14 @@
       "to": "source.jobs.oti.technical-operations.782369",
       "source": "frontmatter",
       "href": "../sources/jobs-oti-technical-operations-782369.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "type": "uses_source",
+      "to": "source.nyc.lisa-gelobter-appointment.2026-02-10",
+      "source": "frontmatter",
+      "href": "../sources/nyc-lisa-gelobter-appointment-2026.md",
       "context": null
     },
     {
@@ -14937,6 +14984,22 @@
       "to": "opportunity.nyc-oti.senior-product-manager.782366",
       "source": "frontmatter",
       "href": "../opportunities/oti-senior-product-manager-782366.md",
+      "context": null
+    },
+    {
+      "from": "person.lisa-gelobter",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "person.lisa-gelobter",
+      "type": "uses_source",
+      "to": "source.nyc.lisa-gelobter-appointment.2026-02-10",
+      "source": "frontmatter",
+      "href": "../sources/nyc-lisa-gelobter-appointment-2026.md",
       "context": null
     },
     {
@@ -16732,6 +16795,22 @@
       "context": null
     },
     {
+      "from": "source.nyc.lisa-gelobter-appointment.2026-02-10",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.lisa-gelobter-appointment.2026-02-10",
+      "type": "related_to",
+      "to": "person.lisa-gelobter",
+      "source": "frontmatter",
+      "href": "../people/lisa-gelobter.md",
+      "context": "Official agency-leadership identity and public vision."
+    },
+    {
       "from": "source.nyc.pit-crew-launch.2026-07-13",
       "type": "related_to",
       "to": "opportunity.nyc-oti.senior-product-manager.782366",
@@ -18486,7 +18565,7 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
       "to": "opportunity.nyc-oti.technical-operations-manager.782369",
       "fragment": null,
-      "line": 35,
+      "line": 37,
       "kind": "link"
     },
     {
@@ -18495,7 +18574,7 @@
       "toPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
       "to": "opportunity.aclu.product-manager-discovery.8482872002",
       "fragment": null,
-      "line": 36,
+      "line": 46,
       "kind": "link"
     },
     {
@@ -18504,7 +18583,7 @@
       "toPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
       "to": "opportunity.codepath.claude-corps.5182020007",
       "fragment": null,
-      "line": 37,
+      "line": 47,
       "kind": "link"
     },
     {
@@ -18513,7 +18592,7 @@
       "toPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
       "to": "opportunity.asana.ai-implementation.8027437",
       "fragment": null,
-      "line": 38,
+      "line": 48,
       "kind": "link"
     },
     {
@@ -18522,7 +18601,7 @@
       "toPath": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
       "to": "opportunity.permitflow.product-operations.8a6e6066",
       "fragment": null,
-      "line": 39,
+      "line": 49,
       "kind": "link"
     },
     {
@@ -18531,7 +18610,7 @@
       "toPath": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
       "to": "opportunity.protected.source-backed-memory-consulting.2026",
       "fragment": null,
-      "line": 43,
+      "line": 53,
       "kind": "link"
     },
     {
@@ -18540,7 +18619,7 @@
       "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
       "to": "evaluation.employment-context.coverage.2026-07-18",
       "fragment": null,
-      "line": 69,
+      "line": 79,
       "kind": "link"
     },
     {
@@ -18549,7 +18628,7 @@
       "toPath": "docs/knowledge-bank/evaluations/employment-leadership-context-2026-08-13.md",
       "to": "evaluation.employment-leadership-context.2026-08-13",
       "fragment": null,
-      "line": 70,
+      "line": 80,
       "kind": "link"
     },
     {
@@ -18558,7 +18637,7 @@
       "toPath": "reports/wiki-opportunity-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 71,
+      "line": 81,
       "kind": "link"
     },
     {
@@ -18567,7 +18646,7 @@
       "toPath": "reports/wiki-career-trajectory-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 72,
+      "line": 82,
       "kind": "link"
     },
     {
@@ -18576,7 +18655,7 @@
       "toPath": "reports/wiki-source-channel-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 73,
+      "line": 83,
       "kind": "link"
     },
     {
@@ -18585,7 +18664,7 @@
       "toPath": "reports/wiki-opportunity-discovery.md",
       "to": null,
       "fragment": null,
-      "line": 74,
+      "line": 84,
       "kind": "link"
     },
     {
@@ -18594,7 +18673,7 @@
       "toPath": "reports/hiring-acceptance-public.md",
       "to": null,
       "fragment": null,
-      "line": 75,
+      "line": 85,
       "kind": "link"
     },
     {
@@ -18603,7 +18682,7 @@
       "toPath": "reports/hiring-acceptance-gap-resolution.md",
       "to": null,
       "fragment": null,
-      "line": 76,
+      "line": 86,
       "kind": "link"
     },
     {
@@ -20382,10 +20461,19 @@
     {
       "fromPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
       "from": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "toPath": "docs/knowledge-bank/people/lisa-gelobter.md",
+      "to": "person.lisa-gelobter",
+      "fragment": null,
+      "line": 14,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
+      "from": "opportunity.nyc-oti.technical-operations-manager.782369",
       "toPath": "apps/www/src/app/work/technical-operations/page.tsx",
       "to": null,
       "fragment": null,
-      "line": 18,
+      "line": 27,
       "kind": "link"
     },
     {
@@ -20394,7 +20482,7 @@
       "toPath": "docs/knowledge-bank/sources/jobs-oti-technical-operations-782369.md",
       "to": "source.jobs.oti.technical-operations.782369",
       "fragment": null,
-      "line": 23,
+      "line": 32,
       "kind": "link"
     },
     {

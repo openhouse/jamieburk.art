@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "runId": "hiring-public-1e9583b4d8ea",
-  "generatedAt": "2026-08-13T13:45:34-04:00",
-  "candidateSha": "1e9583b4d8ea910b10071b6350c45b179b4814bf",
+  "runId": "hiring-public-197a3b3bd851",
+  "generatedAt": "2026-08-13T14:02:53-04:00",
+  "candidateSha": "197a3b3bd851b96e829f988f7ba349c51e434a10",
   "candidatePathsClean": true,
   "portfolioSnapshotHash": "63b038a6c8fa851127924ce5fff54179638901f37dcc0f625bb0c41fc64acf32",
-  "roleContextHash": "4cb307a69a539848513f56477fb55dee6bc69df8651b7b715646c112d6758f86",
+  "roleContextHash": "864ae3e33506ec9500c390a04bcdfc5255d9ed39c36fdfdcfb5d7e2e2f44afc1",
   "readerContextHash": "c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
   "publicSafety": {
@@ -140,6 +140,7 @@
       "id": "opportunity.codepath.engineering-project-manager.5160542007",
       "title": "CodePath - Engineering Project Manager",
       "roleContextHash": "82e0583f3f40fa7ee4a5eb0bd8982bad428fa0779699bedcb5971291f1646b7b",
+      "benchmark": false,
       "live": true,
       "fresh": true,
       "hardScreenBlocked": false,
@@ -227,6 +228,7 @@
       "id": "opportunity.aclu.senior-project-manager.8620968002",
       "title": "ACLU - Senior Project Manager, Learning and Project Solutions",
       "roleContextHash": "69e5968685cb0ea61484facecfd2aa0e2083e7ba381b8a3f88d34574166070a2",
+      "benchmark": false,
       "live": true,
       "fresh": true,
       "hardScreenBlocked": false,
@@ -319,6 +321,7 @@
       "id": "opportunity.benepass.product-operations.7f963a7a",
       "title": "Benepass - Product Operations Manager",
       "roleContextHash": "4c35e8774b5c80b504d0b84697ee47576af329c3e612dd3f90d473beca940f68",
+      "benchmark": false,
       "live": true,
       "fresh": true,
       "hardScreenBlocked": false,
@@ -402,6 +405,7 @@
       "id": "opportunity.nyc-oti.senior-product-manager.782366",
       "title": "NYC OTI - PIT Crew Senior Product Manager 782366",
       "roleContextHash": "373fc6c7eca9e6ff863d72909170d9d698bf8279b254f97c8621bb99d5555400",
+      "benchmark": false,
       "live": true,
       "fresh": true,
       "hardScreenBlocked": false,
@@ -515,9 +519,118 @@
       ]
     },
     {
+      "id": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "title": "NYC OTI - Technical Operations Manager 782369",
+      "roleContextHash": "9d4c7ae7e858db05d84622631ceb569d1e51c93734bb30bb985977dbebb89147",
+      "benchmark": true,
+      "live": false,
+      "fresh": false,
+      "hardScreenBlocked": false,
+      "publicReportingContext": {
+        "role": "OTI leadership",
+        "identification": "role-only",
+        "source": "source.jobs.oti.technical-operations.782369",
+        "boundary": "The posting says the role reports up to OTI leadership but does not identify a supervisor, hiring manager, or specific team leader."
+      },
+      "publicVisionContext": {
+        "role": "NYC Chief Technology Officer and OTI Commissioner",
+        "person": "person.lisa-gelobter",
+        "identification": "official-agency-leader",
+        "source": "source.nyc.lisa-gelobter-appointment.2026-02-10",
+        "boundary": "Gelobter is the official head of OTI and nearest public senior vision leader, not a confirmed direct manager or participant in the Job 782369 hiring decision."
+      },
+      "decision": "historical-benchmark",
+      "observed": 5,
+      "requirementTotal": 6,
+      "criticalObserved": 4,
+      "criticalTotal": 4,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.oti.delivery-coordination",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "Coordinate delivery across concurrent projects"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti.risk-and-dependencies",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "Track status, surface risks early",
+            "Coordinate dependencies across product, engineering, security, legal"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti.onboarding-and-runbooks",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "Onboard collaborators with handbooks, runbooks"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti.reporting-and-metrics",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "Report team health, project status, and operational metrics"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti.continuous-improvement",
+          "importance": "important",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "Improve working systems over time without overengineering"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti.government-hiring-and-procurement",
+          "importance": "important",
+          "observed": false,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-weak",
+          "routes": [
+            "/work/callnyc"
+          ],
+          "evidenceNeedles": [
+            "New York City Council"
+          ]
+        }
+      ]
+    },
+    {
       "id": "opportunity.protected.source-backed-memory-consulting.2026",
       "title": "Protected source-backed team-memory consulting lead",
       "roleContextHash": "1ca9ad3bd7cfe81cb81b0b402eacd5dccbf1a771aeade41c3b9c9daf93f42f0f",
+      "benchmark": false,
       "live": false,
       "fresh": false,
       "hardScreenBlocked": false,
