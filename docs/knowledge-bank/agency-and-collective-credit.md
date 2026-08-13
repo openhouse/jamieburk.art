@@ -1,6 +1,6 @@
 # Agency and collective credit
 
-**Reviewed:** 2026-07-14
+**Reviewed:** 2026-08-13
 
 The canonical machine-readable graph lives in
 `apps/www/src/data/knowledge-bank/agency-graph.ts`. It exists to make strong
@@ -47,6 +47,9 @@ as authoring legislation, enacting a law, or solely causing a collective outcome
 | Cabaret licensing repeal | New York City Council | Enacted Local Law 214 | The official record establishes repeal and retained security provisions; advocacy credit remains collective. |
 | Sunday Dinner | Jamie and Julia | Co-hosted weekly community dinners | Hosting credit stays shared, and the 2017 profile does not establish full duration or attendance totals. |
 | Commercial rent protections | Jamie | Testified before the Council | The transcript establishes Jamie's position and participation, not enactment or Council endorsement. |
+| Empty Storefronts, High Rents | Jamie | Reviewed the draft report | The public report credits Jamie's thoughtful and careful review, and protected provenance records that many edits were incorporated; this is not authorship, methods ownership, independent validation, legal approval, or sole causation. |
+| July 2026 report release | Jamie | Prepared remarks and participated in person | Protected records support a speaking slot, supplied remarks, and participant-attested participation; a named public transcript, press quotation, or verbatim delivery record remains unrecovered. |
+| Commercial rent coordination | Jamie | Coordinated with City Council and State Assembly office staff | Direct exchanges support logistics, legislative context, and a proposed future coordination cadence; they do not establish official endorsement, institutional adoption, decision rights, bill authorship, or that a scheduled meeting occurred. |
 | CreateNYC recommendations | NYC Artist Coalition | Co-created a structured policy agenda | City-preserved records establish collective recommendations and dialogue, not individual authorship or implementation of every proposal. |
 | M.A.R.C.H. transparency | NYC Artist Coalition | Advocated for transparency and alternatives | The 2017 recommendation establishes the agenda, not authorship or sole causation of Local Law 220. |
 | M.A.R.C.H. transparency law | New York City Council | Enacted Local Law 220 | The official record establishes reporting and notice requirements; enactment remains institutional. |

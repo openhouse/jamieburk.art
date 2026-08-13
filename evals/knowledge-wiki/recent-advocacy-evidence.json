@@ -1,0 +1,52 @@
+{
+  "suite": "nycac-crs-recent-advocacy-evidence-2026-08-13",
+  "objective": "Preserve the strongest supported account of Jamie's recent report, public-communication, and elected-office coordination work while failing closed on authorship, public delivery, endorsement, future meetings, private payloads, and portfolio projection.",
+  "candidate": {
+    "branch": "feature/launch-2026-08-13-02-C",
+    "reviewWindow": "2026-07-15/2026-08-13",
+    "dataPath": "docs/knowledge-bank/data/nycac-crs-recent-advocacy-2026-08-13.json",
+    "closeReadingPath": "docs/knowledge-bank/research-runs/nycac-crs-30-day-close-reading-2026-08-13.md"
+  },
+  "hardGates": [
+    "report review never becomes authorship, methods ownership, independent validation, or legal approval",
+    "scheduled or prepared speech never becomes public delivery proof",
+    "direct staff coordination never becomes elected-official endorsement or institutional adoption",
+    "a future scheduled meeting never becomes an occurred meeting",
+    "raw correspondence, private locators, contact data, tracked changes, and uncleared pixels stay out of the public-safe repository",
+    "research does not activate a portfolio projection",
+    "four repository authorities remain distinct"
+  ],
+  "mutationRun": {
+    "initialRed": {
+      "result": "module-not-found",
+      "meaning": "The tests existed before the evaluator implementation."
+    },
+    "firstImplementedRun": {
+      "passed": 8,
+      "failed": 2,
+      "findings": [
+        "The future-meeting state had no executable guard.",
+        "The endorsement mutation did not remove the actual endorsed wording and was corrected before scoring."
+      ]
+    },
+    "correctedBaseline": {
+      "passed": 9,
+      "failed": 1,
+      "weakestCriterion": "future meeting state"
+    },
+    "hillClimb": {
+      "change": "Require both the exact scheduled-not-occurred evidence state and an explicit anti-claim against representing the scheduled meeting as occurred.",
+      "expectedFinal": {
+        "passed": 10,
+        "failed": 0
+      }
+    }
+  },
+  "humanGates": {
+    "sourceAccessIsPublicationPermission": false,
+    "evalPassIsPublicationApproval": false,
+    "portfolioProjection": "Jamie approval required",
+    "photoPublication": "rights, consent, credit, caption, crop, and destination review required",
+    "exactCandidateHoldout": "COMP-009 remains independent and cannot be averaged away"
+  }
+}
