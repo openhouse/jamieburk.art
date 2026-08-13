@@ -556,9 +556,9 @@ export const nycacRecentAdvocacyAugust2026 = {
         "SRC-NYCAC-RECENT-ADVOCACY-RESEARCH-2026-08"
       ],
       sourceSupportKeys: [
-        "public review acknowledgement",
-        "many review edits incorporated",
-        "independent replication explicitly excluded"
+        "Jamie's draft-review acknowledgement",
+        "methods and limitations wording",
+        "review incorporation acknowledgement"
       ],
       boundaries: [
         "Review credit does not establish authorship, methods ownership, legal approval, independent replication, or sole causation."
@@ -582,9 +582,9 @@ export const nycacRecentAdvocacyAugust2026 = {
         "SRC-NYCAC-RECENT-ADVOCACY-RESEARCH-2026-08"
       ],
       sourceSupportKeys: [
-        "public event identity",
-        "scheduled two-minute role",
-        "participant-attested in-person participation"
+        "rally and press-conference format",
+        "prepared press quote and remarks",
+        "participant-attested event participation"
       ],
       boundaries: [
         "No named public transcript, caption, press quotation, or organizer publication of Jamie's delivered words was recovered."
@@ -604,7 +604,7 @@ export const nycacRecentAdvocacyAugust2026 = {
       status: "confirmed-with-boundary",
       claimIds: ["CLM-NYCAC-ELECTED-OFFICE-COORDINATION-2026"],
       sourceIds: ["SRC-NYCAC-RECENT-ADVOCACY-RESEARCH-2026-08"],
-      sourceSupportKeys: ["direct staff coordination", "speaker-not-organizer boundary"],
+      sourceSupportKeys: ["direct elected-office staff coordination"],
       boundaries: [
         "The exchange does not establish Council Member attendance, endorsement, office adoption, or Jamie's event authority."
       ],
@@ -623,7 +623,10 @@ export const nycacRecentAdvocacyAugust2026 = {
       status: "confirmed-with-boundary",
       claimIds: ["CLM-NYCAC-ELECTED-OFFICE-COORDINATION-2026"],
       sourceIds: ["SRC-NYCAC-RECENT-ADVOCACY-RESEARCH-2026-08"],
-      sourceSupportKeys: ["direct call", "context acknowledged", "future coordination proposed"],
+      sourceSupportKeys: [
+        "direct elected-office staff coordination",
+        "future meeting status"
+      ],
       boundaries: [
         "The future meeting had not occurred inside the review window, and the exchange does not establish endorsement, adoption, bill authorship, or decision rights."
       ],
