@@ -41,8 +41,18 @@ const opportunityQuery = queryWiki(result, {
   opportunity: "opportunity.nyc-oti.technical-operations-manager.782369"
 });
 const opportunities = result.records.filter((record) => record.kind === "opportunity");
-const liveOfficialOpportunities = opportunities.filter(
-  (record) => record.source_type === "official-employer" && record.opportunity_status === "live"
+const priorityOpportunityIds = [
+  "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+  "opportunity.codepath.senior-ai-operations-lead.5175813007",
+  "opportunity.codepath.engineering-project-manager.5160542007",
+  "opportunity.nyc-oti.senior-product-manager.782366"
+];
+const priorityOpportunities = priorityOpportunityIds.map((id) => result.byId.get(id));
+const otiOperationsWatch = result.byId.get(
+  "opportunity.nyc-oti.technical-operations-manager.782369"
+);
+const liveOpportunityIds = new Set(
+  queryWiki(result, { liveOpportunities: true }).records.map((record) => record.id)
 );
 const protectedOpportunity = result.byId.get(
   "opportunity.protected.source-backed-memory-consulting.2026"
@@ -236,8 +246,9 @@ const checks = {
     existsSync(path.join(defaultRepoRoot, "scripts/check-knowledge-bank.mjs")),
 
   tier_one_official_source_records:
-    liveOfficialOpportunities.length === 6 &&
-    liveOfficialOpportunities.every((record) =>
+    priorityOpportunities.every((record) =>
+      record?.source_type === "official-employer" &&
+      record.opportunity_status === "live" &&
       record.evidence.some((evidence) => {
         const source = result.byId.get(evidence.target);
         return source?.kind === "source" && source.source_kind === "official-job-posting";
@@ -247,7 +258,8 @@ const checks = {
     opportunities.every(
       (record) =>
         record.canonical_url &&
-        ((record.source_type === "official-employer" && record.opportunity_status === "live") ||
+        ((record.source_type === "official-employer" &&
+          ["live", "closed", "historical-benchmark"].includes(record.opportunity_status)) ||
           (record.source_type === "protected-metadata" && record.opportunity_status === "conditional")) &&
         record.verified_at &&
         record.review_by &&
@@ -257,9 +269,34 @@ const checks = {
   stable_requirement_ids:
     requirementIds.length >= 25 && new Set(requirementIds).size === requirementIds.length,
   operator_queries:
-    queryWiki(result, { liveOpportunities: true }).records.length === 6 &&
+    priorityOpportunityIds.every((id) => liveOpportunityIds.has(id)) &&
+    !liveOpportunityIds.has("opportunity.nyc-oti.technical-operations-manager.782369") &&
     queryWiki(result, { requirement: "requirement.oti.delivery-coordination" }).opportunity?.id ===
       "opportunity.nyc-oti.technical-operations-manager.782369",
+  priority_opportunities_current:
+    priorityOpportunities.every(
+      (record) =>
+        record?.opportunity_status === "live" &&
+        record.verified_at === "2026-08-13" &&
+        record.review_by >= "2026-08-14"
+    ),
+  reporting_context_bounded:
+    [...priorityOpportunities, otiOperationsWatch].every(
+      (record) =>
+        record?.reporting_context?.direct_manager_title &&
+        record.reporting_context.senior_vision_owner &&
+        record.reporting_context.senior_vision_owner_title &&
+        record.reporting_context.senior_vision_basis &&
+        record.reporting_context.verified_at === "2026-08-13" &&
+        (record.reporting_context.direct_manager_public_status === "not-publicly-named"
+          ? record.reporting_context.direct_manager_person === null
+          : Boolean(record.reporting_context.direct_manager_person))
+    ),
+  closed_watch_pattern_preserved:
+    otiOperationsWatch?.opportunity_status === "closed" &&
+    otiOperationsWatch.confirmed_facts.some((fact) => fact.includes("vacancy has expired")) &&
+    otiOperationsWatch.inferences.some((fact) => fact.includes("historical watch pattern")) &&
+    !liveOpportunityIds.has(otiOperationsWatch.id),
   hard_screens_explicit: opportunities.every((record) => record.hard_screens.length > 0),
   confirmed_inferred_unknown_separate: opportunities.every(
     (record) =>

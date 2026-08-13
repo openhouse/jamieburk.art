@@ -4,10 +4,14 @@
   "objective": "Compile the current Knowledge Wiki into separately inspectable semantic, evidence, custody-request, and projection responsibilities without allowing evidence volume or source access to bypass semantic radius or human authority.",
   "seedIds": [
     "index.knowledge-wiki",
+    "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
     "opportunity.aclu.product-manager-discovery.8482872002",
     "opportunity.asana.ai-implementation.8027437",
     "opportunity.benepass.product-operations.7f963a7a",
     "opportunity.codepath.claude-corps.5182020007",
+    "opportunity.codepath.engineering-project-manager.5160542007",
+    "opportunity.codepath.senior-ai-operations-lead.5175813007",
+    "opportunity.nyc-oti.senior-product-manager.782366",
     "opportunity.nyc-oti.technical-operations-manager.782369",
     "opportunity.permitflow.product-operations.8a6e6066"
   ],

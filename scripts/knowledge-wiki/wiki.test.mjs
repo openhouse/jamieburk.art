@@ -453,3 +453,39 @@ test("stale live opportunity remains visible as a diagnostic failure", () => {
   mutate(root, "opportunities/job.md", (value) => value.replaceAll("2026-07-21", "2026-07-17"));
   assertIssue(compile(root), "STALE");
 });
+
+test("an unnamed direct manager cannot silently acquire a person", () => {
+  const root = fixture();
+  addOpportunity(root);
+  mutate(root, "opportunities/job.md", (value) => value.replace(
+    "verified_at: 2026-07-18",
+    `verified_at: 2026-07-18
+reporting_context:
+  direct_manager_title: Director of Delivery
+  direct_manager_person: Named Person
+  direct_manager_public_status: not-publicly-named
+  senior_vision_owner: Senior Leader
+  senior_vision_owner_title: Chief Program Officer
+  senior_vision_basis: Official public leadership page.
+  verified_at: 2026-07-18`
+  ));
+  assertIssue(compile(root), "SCHEMA");
+});
+
+test("an official title-holder match remains explicitly different from a posting-named manager", () => {
+  const root = fixture();
+  addOpportunity(root);
+  mutate(root, "opportunities/job.md", (value) => value.replace(
+    "verified_at: 2026-07-18",
+    `verified_at: 2026-07-18
+reporting_context:
+  direct_manager_title: Director of Delivery
+  direct_manager_person: Public Title Holder
+  direct_manager_public_status: title-matched-on-official-team-page
+  senior_vision_owner: Senior Leader
+  senior_vision_owner_title: Chief Program Officer
+  senior_vision_basis: Official public leadership page.
+  verified_at: 2026-07-18`
+  ));
+  assert.deepEqual(compile(root).errors, []);
+});

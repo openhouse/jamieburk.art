@@ -1,8 +1,12 @@
 {
-  "id": "current-priority-2026-07-18",
-  "version": 1,
+  "id": "current-priority-2026-08-13",
+  "version": 2,
   "principle": "The public evaluator sees public projection files and public role and reader context only; Wiki gap resolution is a separate pass.",
   "opportunityPaths": [
+    "docs/knowledge-bank/opportunities/aclu-senior-project-manager-national-campaigns.md",
+    "docs/knowledge-bank/opportunities/codepath-senior-ai-operations-lead.md",
+    "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
+    "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
     "docs/knowledge-bank/opportunities/oti-technical-operations.md",
     "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
     "docs/knowledge-bank/opportunities/benepass-product-operations.md",
@@ -25,6 +29,7 @@
     "/work/callnyc": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts"],
     "/work/fair-rent-nyc": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts"],
     "/work/harry-j-epstein": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts"],
+    "/work/wowlist": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts"],
     "/work/196-sunday-dinner": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts"],
     "/work/kc-town-hall": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts"],
     "/lab/source-backed-team-memory": ["apps/www/src/app/lab/source-backed-team-memory/page.tsx", "apps/www/src/data/proofs.ts"],
@@ -34,15 +39,34 @@
   },
   "discoveryQueries": [
     {
-      "id": "query.operating-backbone",
-      "terms": ["delivery coordination", "team operating systems", "onboarding documentation", "risk surfacing", "public launch"],
-      "expectedTopK": ["opportunity.nyc-oti.technical-operations-manager.782369", "opportunity.codepath.claude-corps.5182020007"],
+      "id": "query.advocacy-campaign-operations",
+      "terms": ["advocacy campaign operations", "complex project delivery", "collaboration systems", "internal communications", "legislative coordination"],
+      "expectedTopK": ["opportunity.aclu.senior-project-manager-national-campaigns.8631854002"],
       "k": 3
     },
     {
-      "id": "query.discovery-governance",
-      "terms": ["structured discovery", "stakeholder listening", "privacy-aware product judgment", "decision traceability", "low-risk pilots"],
-      "expectedTopK": ["opportunity.aclu.product-manager-discovery.8482872002"],
+      "id": "query.embedded-ai-operations",
+      "terms": ["embedded AI enablement", "human-in-the-loop workflows", "operational automation", "reusable agent assets", "quality rubrics and evals"],
+      "expectedTopK": ["opportunity.codepath.senior-ai-operations-lead.5175813007"],
+      "k": 3
+    },
+    {
+      "id": "query.engineering-quality-delivery",
+      "terms": ["engineering delivery coordination", "hands-on quality assurance", "bug pipeline ownership", "test automation", "lightweight team process"],
+      "expectedTopK": ["opportunity.codepath.engineering-project-manager.5160542007"],
+      "k": 3
+    },
+    {
+      "id": "query.resident-facing-public-product",
+      "terms": ["resident-facing product delivery", "public interest technology", "product discovery and research", "rapid prototyping and launch", "agency policy translation"],
+      "expectedTopK": ["opportunity.nyc-oti.senior-product-manager.782366"],
+      "k": 3
+    },
+    {
+      "id": "query.closed-operating-backbone-watch",
+      "terms": ["delivery coordination", "team operating systems", "onboarding documentation", "risk surfacing", "public launch"],
+      "expectedTopK": ["opportunity.nyc-oti.technical-operations-manager.782369", "opportunity.codepath.claude-corps.5182020007"],
+      "statuses": ["closed"],
       "k": 3
     },
     {

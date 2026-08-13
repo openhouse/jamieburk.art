@@ -106,6 +106,7 @@ function publicRoleContext(record) {
     status: record.opportunity_status,
     verifiedAt: dateText(record.verified_at),
     reviewBy: dateText(record.review_by),
+    reportingContext: record.reporting_context ?? null,
     portfolioRoutes: record.portfolio_routes,
     confirmedFacts: record.confirmed_facts,
     inferences: record.inferences,
@@ -240,6 +241,7 @@ export function evaluatePublicHiring(repoRoot) {
     return {
       id: opportunity.id,
       title: opportunity.title,
+      reportingContext: opportunity.reportingContext,
       roleContextHash: sha256(JSON.stringify(opportunity)),
       live,
       fresh,

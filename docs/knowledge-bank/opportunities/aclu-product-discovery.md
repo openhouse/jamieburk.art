@@ -2,17 +2,17 @@
 id: opportunity.aclu.product-manager-discovery.8482872002
 title: ACLU - Product Manager II, Discovery
 kind: opportunity
-status: governed-open
+status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-08-13
+review_by: 2026-11-13
 canonical_path: docs/knowledge-bank/opportunities/aclu-product-discovery.md
-summary: Public-safe requirement and portfolio-coverage map for ACLU's live term-limited Product Manager II, Discovery role.
+summary: Public-safe historical portfolio-coverage map for ACLU's closed term-limited Product Manager II, Discovery role.
 canonical_url: https://job-boards.greenhouse.io/aclu/jobs/8482872002
 source_type: official-employer
-opportunity_status: live
-verified_at: 2026-07-18
+opportunity_status: closed
+verified_at: 2026-08-13
 portfolio_routes:
   - /
   - /work/callnyc
@@ -32,6 +32,7 @@ confirmed_facts:
   - The New York role is hybrid, three-year term-limited, and reports to the Head of Product.
   - The posted New York salary is $142,694.
   - The application requires a redacted PRD or product brief from a launched product.
+  - The exact posting now redirects to the ACLU current-openings page and the role is no longer listed.
 inferences: []
 unknowns:
   - The identity of the Head of Product and the role's first discovery portfolio.
@@ -132,10 +133,10 @@ human_review: governed-open
 
 # ACLU - Product Manager II, Discovery
 
-This role fits Jamie's listening, synthesis, facilitation, source discipline,
+This closed role remains a useful product-discovery benchmark for Jamie's listening, synthesis, facilitation, source discipline,
 and ambiguity work. The decisive unresolved artifact is a concise, redacted
 product brief from a launched product. A retrospective CallNYC brief is a
 promising candidate, not yet an accepted substitute.
 
-Recheck the [official source](../sources/jobs-aclu-product-discovery-8482872002.md)
-before outward use.
+Do not count the [official source](../sources/jobs-aclu-product-discovery-8482872002.md)
+as a live application.

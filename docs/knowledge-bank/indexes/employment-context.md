@@ -5,11 +5,23 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-10
-review_by: 2026-09-10
+last_reviewed: 2026-08-13
+review_by: 2026-08-16
 canonical_path: docs/knowledge-bank/indexes/employment-context.md
 summary: Task-oriented entry point for live opportunity research, role coverage, public-only hiring evaluation, and private-boundary rules.
 relations:
+  - type: related_to
+    target: opportunity.aclu.senior-project-manager-national-campaigns.8631854002
+    href: ../opportunities/aclu-senior-project-manager-national-campaigns.md
+  - type: related_to
+    target: opportunity.codepath.senior-ai-operations-lead.5175813007
+    href: ../opportunities/codepath-senior-ai-operations-lead.md
+  - type: related_to
+    target: opportunity.codepath.engineering-project-manager.5160542007
+    href: ../opportunities/codepath-engineering-project-manager.md
+  - type: related_to
+    target: opportunity.nyc-oti.senior-product-manager.782366
+    href: ../opportunities/oti-senior-product-manager.md
   - type: related_to
     target: opportunity.nyc-oti.technical-operations-manager.782369
     href: ../opportunities/oti-technical-operations.md
@@ -45,12 +57,27 @@ paths, message bodies, contact details, and real hiring outcomes remain private.
 
 ## Current priority contexts
 
-- [NYC OTI - Technical Operations Manager](../opportunities/oti-technical-operations.md)
-- [ACLU - Product Manager II, Discovery](../opportunities/aclu-product-discovery.md)
+- [ACLU - Senior Project Manager, National Campaigns](../opportunities/aclu-senior-project-manager-national-campaigns.md)
+- [CodePath - Senior AI Operations Lead](../opportunities/codepath-senior-ai-operations-lead.md)
+- [CodePath - Engineering Project Manager](../opportunities/codepath-engineering-project-manager.md)
+- [NYC OTI - Senior Product Manager 782366](../opportunities/oti-senior-product-manager.md)
+
+These four postings were live when rechecked August 13, 2026. Facts about
+reporting lines distinguish a posting-named title, a current official
+title-holder match, and a senior vision owner. A title match is not proof of a
+hiring manager, interview participant, private opinion, or final org chart.
+
+## Other tracked live contexts requiring periodic refresh
+
 - [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md)
-- [CodePath - Senior Program Manager, Claude Corps](../opportunities/codepath-claude-corps.md)
 - [Asana - AI Implementation Manager](../opportunities/asana-ai-implementation.md)
 - [PermitFlow - Product Operations Manager](../opportunities/permitflow-product-operations.md)
+
+## Closed watch patterns
+
+- [NYC OTI - Technical Operations Manager 782369](../opportunities/oti-technical-operations.md) - expired August 7, 2026; Jamie's clearest future OTI operations watch pattern.
+- [ACLU - Product Manager II, Discovery](../opportunities/aclu-product-discovery.md) - exact posting closed.
+- [CodePath - Senior Program Manager, Claude Corps](../opportunities/codepath-claude-corps.md) - exact posting closed.
 
 ## Conditional protected context
 

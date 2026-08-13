@@ -2,17 +2,25 @@
 id: opportunity.nyc-oti.technical-operations-manager.782369
 title: NYC OTI - Technical Operations Manager 782369
 kind: opportunity
-status: governed-open
+status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-08-13
+review_by: 2026-11-13
 canonical_path: docs/knowledge-bank/opportunities/oti-technical-operations.md
-summary: Public-safe, source-backed requirement and portfolio-coverage map for NYC OTI's live Technical Operations Manager role.
+summary: Public-safe historical watch pattern and portfolio-coverage map for NYC OTI's expired Technical Operations Manager role.
 canonical_url: https://cityjobs.nyc.gov/job/technical-operations-manager-in-brooklyn-jid-44321
 source_type: official-employer
-opportunity_status: live
-verified_at: 2026-07-18
+opportunity_status: closed
+verified_at: 2026-08-13
+reporting_context:
+  direct_manager_title: PIT Crew or OTI operations leader, title not stated in the posting
+  direct_manager_person: null
+  direct_manager_public_status: not-publicly-named
+  senior_vision_owner: Lisa Gelobter
+  senior_vision_owner_title: Chief Technology Officer and OTI Commissioner
+  senior_vision_basis: The official PIT Crew launch announcement identifies Gelobter as OTI's technology leader and states her vision for simpler, user-informed, trustworthy City services.
+  verified_at: 2026-08-13
 portfolio_routes:
   - /
   - /work/technical-operations
@@ -32,14 +40,17 @@ discovery_terms:
 confirmed_facts:
   - Job ID 782369 is a full-time role in OTI's Commissioner's Office at 15 MetroTech.
   - The posted salary range is $75,000 to $160,000.
-  - The official posting lists August 7, 2026 as the deadline.
+  - The official posting lists August 7, 2026 as the deadline and now states that the vacancy has expired.
   - The role owns hiring, planning, delivery tracking, onboarding, reporting, decision systems, and operating documentation.
+  - Neither the posting nor the PIT Crew page names a direct manager; the official launch announcement identifies Lisa Gelobter as CTO and OTI Commissioner.
 inferences:
-  - The timing and operating language make a connection to OTI's Public Interest Technology Crews plausible, not confirmed.
+  - The timing, Commissioner's Office placement, and operating language make the role a strong historical watch pattern for future PIT Crew operations openings.
+  - Lisa Gelobter is the nearest publicly named senior leader whose PIT Crew vision the role would have implemented; she is not established as the direct manager.
 unknowns:
   - Direct reporting line and exact team assignment.
   - Salary hiring target, work model, union status, and budget or procurement authority.
   - Frequency of nights, evenings, or weekend shifts in practice.
+  - Whether and when OTI will reopen this role or a materially similar operating-backbone position.
 hard_screens:
   - id: screen.oti.minimum-qualification
     text: Civil-service education and experience qualification must be confirmed by OTI.
@@ -140,6 +151,9 @@ relations:
   - type: uses_source
     target: source.jobs.oti.technical-operations.782369
     href: ../sources/jobs-oti-technical-operations-782369.md
+  - type: uses_source
+    target: source.nyc.pit-crew-launch.2026-07-13
+    href: ../sources/nyc-pit-crew-launch-2026.md
   - type: related_to
     target: capability.technical-operations
     href: ../capabilities/technical-operations.md
@@ -157,17 +171,24 @@ evidence:
     relationship: direct-support
     confidence: high
     supports:
-      - official role facts and requirements as rechecked on July 18, 2026
+      - official role facts, requirements, and expired status as rechecked on August 13, 2026
+  - target: source.nyc.pit-crew-launch.2026-07-13
+    relationship: direct-support
+    confidence: high
+    supports:
+      - Lisa Gelobter's current title and the public PIT Crew vision
 human_review: governed-open
 ---
 
 # NYC OTI - Technical Operations Manager 782369
 
-The role asks one person to own a team's operating backbone: how it hires,
+This expired role asked one person to own a team's operating backbone: how it hires,
 plans, tracks delivery, onboards, reports, decides, documents, and improves.
 Jamie's public portfolio already shows the central operating pattern. The
-application still needs concrete artifacts and honest answers about civil-
-service qualification, authority, and the 24/7 shift language.
+role remains Jamie's clearest OTI watch pattern: future materially similar
+openings should be surfaced quickly. Any new application still needs concrete
+artifacts and honest answers about civil-service qualification, authority, and
+the 24/7 shift language.
 
 ## Requirement coverage
 
@@ -182,5 +203,5 @@ as the role-fit surface. Do not turn it into an OTI-branded application page.
 
 ## Freshness
 
-Recheck the [official posting](../sources/jobs-oti-technical-operations-782369.md)
-every 48 to 72 hours while the role is live.
+The [official posting](../sources/jobs-oti-technical-operations-782369.md) is
+retained as a closed benchmark. Do not count it as a live application.

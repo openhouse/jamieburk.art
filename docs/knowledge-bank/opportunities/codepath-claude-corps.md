@@ -2,17 +2,17 @@
 id: opportunity.codepath.claude-corps.5182020007
 title: CodePath - Senior Program Manager, Claude Corps
 kind: opportunity
-status: governed-open
+status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-08-13
+review_by: 2026-11-13
 canonical_path: docs/knowledge-bank/opportunities/codepath-claude-corps.md
-summary: Public-safe requirement and portfolio-coverage map for CodePath's live Senior Program Manager, Claude Corps role.
+summary: Public-safe historical portfolio-coverage map for CodePath's closed Senior Program Manager, Claude Corps role.
 canonical_url: https://job-boards.greenhouse.io/codepath/jobs/5182020007
 source_type: official-employer
-opportunity_status: live
-verified_at: 2026-07-18
+opportunity_status: closed
+verified_at: 2026-08-13
 portfolio_routes:
   - /
   - /work/technical-operations
@@ -36,6 +36,7 @@ confirmed_facts:
   - The role is remote in the United States and reports to the Senior Director, AI Programs.
   - The posted salary is $110,000 to $150,000.
   - The program spans internal teams, Anthropic, host organizations, and a fund manager.
+  - The exact posting now redirects to CodePath's current openings and the role is no longer listed.
 inferences: []
 unknowns:
   - Realistic salary placement and expected daily pace during cohort launches.
@@ -137,10 +138,10 @@ human_review: governed-open
 
 # CodePath - Senior Program Manager, Claude Corps
 
-The role closely matches Jamie's cross-partner planning, documentation,
+This closed role remains a useful benchmark for Jamie's cross-partner planning, documentation,
 facilitation, and handoff pattern. The important acceptance question is whether
 the role has enough distributed ownership to avoid making one person the
 permanent bottleneck.
 
-Recheck the [official source](../sources/jobs-codepath-claude-corps-5182020007.md)
-before outward use.
+Do not count the [official source](../sources/jobs-codepath-claude-corps-5182020007.md)
+as a live application.

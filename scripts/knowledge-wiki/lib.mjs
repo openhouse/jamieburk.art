@@ -233,6 +233,20 @@ const opportunityScreenSchema = z.object({
   disposition: z.enum(["proceed", "verify", "conditional", "do-not-pursue"])
 });
 
+const opportunityReportingContextSchema = z.object({
+  direct_manager_title: z.string().min(1),
+  direct_manager_person: z.string().min(1).nullable(),
+  direct_manager_public_status: z.enum([
+    "named-in-posting",
+    "title-matched-on-official-team-page",
+    "not-publicly-named"
+  ]),
+  senior_vision_owner: z.string().min(1),
+  senior_vision_owner_title: z.string().min(1),
+  senior_vision_basis: z.string().min(1),
+  verified_at: z.string().regex(/^\d{4}-\d{2}-\d{2}$/)
+});
+
 export const wikiRecordSchema = z
   .object({
     id: stableIdSchema,
@@ -304,6 +318,7 @@ export const wikiRecordSchema = z
     source_type: z.enum(["official-employer", "official-public-data", "protected-metadata"]).optional(),
     opportunity_status: z.enum(["live", "closed", "historical-benchmark", "conditional"]).optional(),
     verified_at: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
+    reporting_context: opportunityReportingContextSchema.optional(),
     role_requirements: z.array(opportunityRequirementSchema).default([]),
     hard_screens: z.array(opportunityScreenSchema).default([]),
     portfolio_routes: z.array(z.string().startsWith("/")).default([]),
@@ -429,6 +444,26 @@ export const wikiRecordSchema = z
       }
       if (record.discovery_terms.length < 3) {
         context.addIssue({ code: "custom", path: ["discovery_terms"], message: "opportunity records require at least three title-blind discovery terms" });
+      }
+      if (
+        record.reporting_context?.direct_manager_public_status === "not-publicly-named" &&
+        record.reporting_context.direct_manager_person !== null
+      ) {
+        context.addIssue({
+          code: "custom",
+          path: ["reporting_context", "direct_manager_person"],
+          message: "an opportunity with no publicly named direct manager must keep the person null"
+        });
+      }
+      if (
+        record.reporting_context?.direct_manager_public_status !== "not-publicly-named" &&
+        record.reporting_context?.direct_manager_person === null
+      ) {
+        context.addIssue({
+          code: "custom",
+          path: ["reporting_context", "direct_manager_person"],
+          message: "a publicly matched direct manager status requires a person"
+        });
       }
       const requirementIds = record.role_requirements.map((item) => item.id);
       if (new Set(requirementIds).size !== requirementIds.length) {

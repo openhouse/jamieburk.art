@@ -34,7 +34,7 @@ test("public hiring evaluator receives no protected Wiki or communications", () 
   assert.equal(report.publicSafety.privateMarkerCount, 0);
   assert.equal(report.publicSafety.protectedWikiReceived, false);
   assert.equal(report.publicSafety.rawCommunicationsReceived, false);
-  assert.equal(report.opportunities.length, 7);
+  assert.equal(report.opportunities.length, 11);
   assert.ok(!JSON.stringify(report).includes("wikiRecords"));
   const protectedOpportunity = report.opportunities.find((item) => item.id.includes("protected.source-backed-memory"));
   assert.equal(protectedOpportunity.live, false);
@@ -43,6 +43,40 @@ test("public hiring evaluator receives no protected Wiki or communications", () 
     JSON.stringify(protectedOpportunity),
     /(?:message|email|transcript)_(?:body|excerpt)|(?:collaborator|company)_identity|private_path/i
   );
+});
+
+test("priority reporting contexts preserve named title matches and public unknowns", () => {
+  const { report } = evaluatePublicHiring(defaultRepoRoot);
+  const aclu = report.opportunities.find((item) =>
+    item.id.includes("senior-project-manager-national-campaigns")
+  );
+  const aiOps = report.opportunities.find((item) =>
+    item.id.includes("senior-ai-operations-lead")
+  );
+  const engineering = report.opportunities.find((item) =>
+    item.id.includes("engineering-project-manager")
+  );
+  const otiProduct = report.opportunities.find((item) =>
+    item.id.includes("senior-product-manager.782366")
+  );
+
+  assert.equal(aclu.reportingContext.direct_manager_person, null);
+  assert.equal(aclu.reportingContext.senior_vision_owner, "Deirdre Schifeling");
+  assert.equal(aiOps.reportingContext.direct_manager_person, "Quinton Ma");
+  assert.equal(aiOps.reportingContext.senior_vision_owner, "Brian Madigan");
+  assert.equal(engineering.reportingContext.direct_manager_person, "Zack Parker");
+  assert.equal(engineering.reportingContext.senior_vision_owner, "Chris Coleman");
+  assert.equal(otiProduct.reportingContext.direct_manager_person, null);
+  assert.equal(otiProduct.reportingContext.senior_vision_owner, "Lisa Gelobter");
+});
+
+test("expired OTI operations role remains a non-live watch pattern", () => {
+  const { report } = evaluatePublicHiring(defaultRepoRoot);
+  const opportunity = report.opportunities.find((item) =>
+    item.id === "opportunity.nyc-oti.technical-operations-manager.782369"
+  );
+  assert.equal(opportunity.live, false);
+  assert.equal(opportunity.decision, "not-live");
 });
 
 test("named reader profiles retain simulation disclaimers", () => {
@@ -62,8 +96,12 @@ test("removing a declared public proof lowers observed requirement coverage", ()
     readFileSync(routePath, "utf8").replaceAll("Coordinate delivery across concurrent projects", "")
   );
   const after = evaluatePublicHiring(root).report;
-  const beforeOti = before.opportunities.find((item) => item.id.includes("nyc-oti"));
-  const afterOti = after.opportunities.find((item) => item.id.includes("nyc-oti"));
+  const beforeOti = before.opportunities.find(
+    (item) => item.id === "opportunity.nyc-oti.technical-operations-manager.782369"
+  );
+  const afterOti = after.opportunities.find(
+    (item) => item.id === "opportunity.nyc-oti.technical-operations-manager.782369"
+  );
   assert.ok(afterOti.criticalObserved < beforeOti.criticalObserved);
 });
 
@@ -97,12 +135,14 @@ test("gap resolver remains separate and cannot approve projection", () => {
 
 test("closed opportunities cannot be ready for human review", () => {
   const root = candidateFixture();
-  const opportunityPath = path.join(root, "docs/knowledge-bank/opportunities/oti-technical-operations.md");
+  const opportunityPath = path.join(root, "docs/knowledge-bank/opportunities/oti-senior-product-manager.md");
   writeFileSync(
     opportunityPath,
     readFileSync(opportunityPath, "utf8").replace("opportunity_status: live", "opportunity_status: closed")
   );
-  const oti = evaluatePublicHiring(root).report.opportunities.find((item) => item.id.includes("nyc-oti"));
+  const oti = evaluatePublicHiring(root).report.opportunities.find(
+    (item) => item.id === "opportunity.nyc-oti.senior-product-manager.782366"
+  );
   assert.equal(oti.live, false);
   assert.equal(oti.decision, "not-live");
 });
@@ -139,7 +179,7 @@ test("protected opportunity cannot become live by mutating both source type and 
 
 test("exclusionary hard screens fail closed", () => {
   const root = candidateFixture();
-  const opportunityPath = path.join(root, "docs/knowledge-bank/opportunities/oti-technical-operations.md");
+  const opportunityPath = path.join(root, "docs/knowledge-bank/opportunities/oti-senior-product-manager.md");
   writeFileSync(
     opportunityPath,
     readFileSync(opportunityPath, "utf8").replace(
@@ -147,7 +187,9 @@ test("exclusionary hard screens fail closed", () => {
       "state: not-met\n    disposition: do-not-pursue"
     )
   );
-  const oti = evaluatePublicHiring(root).report.opportunities.find((item) => item.id.includes("nyc-oti"));
+  const oti = evaluatePublicHiring(root).report.opportunities.find(
+    (item) => item.id === "opportunity.nyc-oti.senior-product-manager.782366"
+  );
   assert.equal(oti.hardScreenBlocked, true);
   assert.equal(oti.decision, "hard-screen-exclusion");
 });
