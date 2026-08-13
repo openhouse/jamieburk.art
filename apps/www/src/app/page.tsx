@@ -1,18 +1,10 @@
 import Link from "next/link";
 import type { Route } from "next";
-import { CapabilityGrid } from "@/components/CapabilityGrid";
 import { ContactCTA } from "@/components/ContactCTA";
 import { Hero } from "@/components/Hero";
 import { ProofStrip } from "@/components/ProofStrip";
 import { WorkCard } from "@/components/WorkCard";
 import { featuredWork } from "@/data/work";
-
-const transformations = [
-  ["Emerging stakeholder context", "shared decision records"],
-  ["Public data awaiting translation", "civic guidance and source maps"],
-  ["Long-running operations", "maintainable e-commerce workflows"],
-  ["Recurring community gatherings", "repeatable participation infrastructure"]
-];
 
 const startHereLinks = [
   {
@@ -21,19 +13,9 @@ const startHereLinks = [
     note: "The fastest role-fit proof surface for public-sector technical operations, product operations, implementation, and delivery coordination."
   },
   {
-    href: "/work/harry-j-epstein",
-    label: "Harry J. Epstein Company",
-    note: "Legacy e-commerce, analytics, content, marketing, and operations modernization."
-  },
-  {
-    href: "/work/fair-rent-nyc",
-    label: "FairRentNYC / Commercial Rent Stabilization",
-    note: "Campaign memory, source maps, public-data framing, and coalition operations."
-  },
-  {
-    href: "/work/callnyc",
-    label: "CallNYC.org",
-    note: "Civic open data translated into resident-facing guidance."
+    href: "/work",
+    label: "Selected work",
+    note: "Full case studies across commercial, civic, campaign, and community systems."
   },
   {
     href: "/resume",
@@ -78,7 +60,6 @@ export default function HomePage() {
         </div>
       </section>
       <ProofStrip />
-      <CapabilityGrid />
       <section className="jb-frame py-16">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="jb-reading">
@@ -100,36 +81,6 @@ export default function HomePage() {
           {featuredWork.map((item) => (
             <WorkCard item={item} key={item.slug} />
           ))}
-        </div>
-      </section>
-      <section className="border-y border-jb-ink/15 bg-jb-warm py-16">
-        <div className="jb-frame grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="jb-reading">
-            <p className="jb-section-label">Operating motif</p>
-            <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
-              Structure grows from the material
-            </h2>
-            <p className="mt-4 leading-8 text-jb-ink/76">
-              The projects differ, but the move is consistent: clarify what is
-              known, protect what should stay private, and leave behind material
-              people can act on.
-            </p>
-          </div>
-          <ol className="border-t border-jb-ink/20">
-            {transformations.map(([from, to], index) => (
-              <li
-                className="grid gap-2 border-b border-jb-ink/20 py-5 sm:grid-cols-[3rem_1fr_auto_1fr] sm:items-baseline"
-                key={from}
-              >
-                <span className="font-label text-sm text-jb-blue">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <p className="font-semibold text-jb-ink">{from}</p>
-                <span className="hidden text-jb-blue sm:block">becomes</span>
-                <p className="font-semibold text-jb-green">{to}</p>
-              </li>
-            ))}
-          </ol>
         </div>
       </section>
       <section className="jb-frame grid gap-8 py-16 lg:grid-cols-[0.8fr_1.2fr]">

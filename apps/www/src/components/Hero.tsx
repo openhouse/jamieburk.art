@@ -18,7 +18,7 @@ export function Hero() {
         />
       </div>
       <div className="jb-frame jb-hero-content">
-        <div>
+        <div className="jb-hero-copy">
           <p className="jb-eyebrow text-white/82">
             Technical Project Manager - Product Operations & Implementation
           </p>
@@ -39,9 +39,9 @@ export function Hero() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               className="inline-flex min-h-11 items-center bg-white px-5 py-3 font-semibold text-jb-ink hover:bg-jb-sky"
-              href="/work"
+              href="/work/technical-operations"
             >
-              View selected work
+              See role-fit evidence
             </Link>
             <Link
               className="inline-flex min-h-11 items-center border border-white/70 px-5 py-3 font-semibold text-white hover:bg-white hover:text-jb-ink"

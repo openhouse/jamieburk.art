@@ -91,7 +91,7 @@ h2 {
 }
 
 :focus-visible {
-  outline: 3px solid var(--jb-yellow-ochre);
+  outline: 3px solid var(--jb-broadway-blue);
   outline-offset: 3px;
 }
 
@@ -159,6 +159,12 @@ h2 {
 
 .jb-hero-content > div {
   max-width: 46rem;
+}
+
+.jb-hero-copy {
+  background: rgba(18, 28, 34, 0.9);
+  border-left: 4px solid var(--jb-yellow-ochre);
+  padding: clamp(1.25rem, 3vw, 2rem);
 }
 
 .jb-hero-caption {

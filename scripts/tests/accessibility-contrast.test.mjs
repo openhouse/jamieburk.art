@@ -57,3 +57,13 @@ test("the lowest shared ink opacity remains AA on paper", () => {
   assert.ok(ink && paper);
   assert.ok(contrast(blend(ink, paper, 0.62), paper) >= 4.5);
 });
+
+test("the global focus ring meets non-text contrast on white", () => {
+  const tokens = readFileSync(path.join(repoRoot, "apps/www/src/styles/tokens.css"), "utf8");
+  const styles = readFileSync(path.join(repoRoot, "apps/www/src/app/globals.css"), "utf8");
+  const blue = tokens.match(/--jb-broadway-blue:\s*(#[0-9a-f]{6})/i)?.[1];
+  const paper = tokens.match(/--jb-oil-white:\s*(#[0-9a-f]{6})/i)?.[1];
+  assert.ok(blue && paper);
+  assert.ok(contrast(blue, paper) >= 3);
+  assert.ok(styles.includes("outline: 3px solid var(--jb-broadway-blue)"));
+});

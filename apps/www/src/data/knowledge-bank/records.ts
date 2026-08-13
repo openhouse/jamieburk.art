@@ -552,6 +552,7 @@ const knowledgeBankInput = {
       "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12",
       "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
       "SRC-NYC-SBJSA-HEARING-2018-10-22",
+      "SRC-SBU-EMPTY-STOREFRONTS-HIGH-RENTS-REPORT-2026",
       "SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE",
       "SRC-FAIRRENTNYC-GITHUB-REPOSITORY",
       "SRC-NYCAC-CREATENYC-SUBMISSION-2017-03-17",
@@ -573,6 +574,7 @@ const knowledgeBankInput = {
       { id: "founder-operating-role", claimId: "CLM-NYCAC-FOUNDER-AND-OPERATING-ROLE", projection: "case-study", sourceIds: ["SRC-NYCAC-NPR-CABARET-2017-09-20", "SRC-NYCAC-BEDFORD-DIY-SPACES-2017-02-07", "SRC-NYCAC-SUPPORTERS-LIST"] },
       { id: "nightlife-town-hall", claimId: "CLM-NYCAC-NIGHTLIFE-TOWN-HALL-2017", projection: "case-study", sourceIds: ["SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12", "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"] },
       { id: "sbjsa-testimony", claimId: "CLM-NYCAC-SBJSA-TESTIMONY-2018", projection: "case-study", sourceIds: ["SRC-NYC-SBJSA-HEARING-2018-10-22"] },
+      { id: "sbu-report-review", claimId: "CLM-NYCAC-SBU-REPORT-REVIEW-2026", projection: "case-study", sourceIds: ["SRC-SBU-EMPTY-STOREFRONTS-HIGH-RENTS-REPORT-2026"] },
       { id: "campaign-web-implementation", claimId: "CLM-NYCAC-CAMPAIGN-WEB-IMPLEMENTATION", projection: "case-study", sourceIds: ["SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE", "SRC-FAIRRENTNYC-GITHUB-REPOSITORY"] },
       { id: "talks-not-raids-policy-arc", claimId: "CLM-NYCAC-TALKS-NOT-RAIDS-POLICY-ARC", projection: "case-study", sourceIds: ["SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE", "SRC-NYCAC-CREATENYC-SUBMISSION-2017-03-17", "SRC-NYC-MARCH-REPORT-Q1-Q2-2020", "SRC-NYC-MARCH-LOCAL-LAW-220-2019", "SRC-NYC-ONL-REPORT-2023-24"] },
       { id: "coalition-social-identity", claimId: "CLM-NYCAC-SOCIAL-IDENTITY-CONTINUITY", projection: "case-study", sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-NYCAC-X-PROFILE", "SRC-NYCAC-DOCUMENT-JOURNAL-2018"] },
@@ -646,13 +648,40 @@ const knowledgeBankInput = {
       }
     ]
   }, {
-    id: "wowlist",
-    surface: "/work/wowlist",
+    id: "technical-operations",
+    surface: "/work/technical-operations",
     sourceOrder: [
-      "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026",
       "SRC-WOWLIST-X-POPULATION-MANIFEST",
       "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
       "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+      "SRC-SBU-EMPTY-STOREFRONTS-HIGH-RENTS-REPORT-2026"
+    ],
+    occurrences: [
+      {
+        id: "wowlist-senior-product-practice",
+        claimId: "CLM-WOWLIST-SENIOR-PRODUCT-PRACTICE-2026",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-WOWLIST-X-POPULATION-MANIFEST",
+          "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
+          "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016"
+        ]
+      },
+      {
+        id: "sbu-report-review",
+        claimId: "CLM-NYCAC-SBU-REPORT-REVIEW-2026",
+        projection: "case-study",
+        sourceIds: ["SRC-SBU-EMPTY-STOREFRONTS-HIGH-RENTS-REPORT-2026"]
+      }
+    ]
+  }, {
+    id: "wowlist",
+    surface: "/work/wowlist",
+    sourceOrder: [
+      "SRC-WOWLIST-X-POPULATION-MANIFEST",
+      "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
+      "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+      "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026",
       "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
       "SRC-WOWLIST-SBDIY-ADOPTION",
       "SRC-CALLSCRIPT-FACEBOOK-PAGE",
@@ -662,6 +691,7 @@ const knowledgeBankInput = {
       "SRC-FACEBOOK-PERSONAL-WOWLIST-EVENT-CENSUS-2026"
     ],
     occurrences: [
+      { id: "senior-product-practice", claimId: "CLM-WOWLIST-SENIOR-PRODUCT-PRACTICE-2026", projection: "case-study", sourceIds: ["SRC-WOWLIST-X-POPULATION-MANIFEST", "SRC-WOWLIST-SUNDAY-DINNER-POST-2014", "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016"] },
       { id: "production-scale", claimId: "CLM-WOWLIST-PRODUCTION-SCALE-2017", projection: "case-study", sourceIds: ["SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026"] },
       { id: "social-provenance-and-support", claimId: "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT", projection: "case-study", sourceIds: ["SRC-WOWLIST-X-POPULATION-MANIFEST", "SRC-WOWLIST-SUNDAY-DINNER-POST-2014", "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016", "SRC-WOWLIST-SHELBY-TUTORIAL-2015", "SRC-WOWLIST-SBDIY-ADOPTION"] },
       { id: "callscript-participation-continuity", claimId: "CLM-CALLSCRIPT-WOWLIST-NYCAC-CONTINUITY-2017", projection: "case-study", sourceIds: ["SRC-CALLSCRIPT-FACEBOOK-PAGE", "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017-01-27", "SRC-FB-JAMIE-DCLA-DIY-SPACES-EVENT-2017-01-25", "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026"] },

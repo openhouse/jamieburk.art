@@ -1132,6 +1132,27 @@
         "outcomes for every venue",
         "that M.A.R.C.H. ended before December 2023"
       ]
+    },
+    {
+      "id": "SRC-SBU-EMPTY-STOREFRONTS-HIGH-RENTS-REPORT-2026",
+      "title": "Empty Storefronts, High Rents",
+      "organization": "Small Business United, The Action Lab, Main Street Alliance, and Small Business Majority",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-07-29",
+      "accessedAt": "2026-08-13",
+      "canonicalUrl": "https://smallbizunited.com/reports/260728_SBU_FinalReport.pdf",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Small Business United et al., Empty Storefronts, High Rents: Why New York City Needs Commercial Rent Stabilization, July 2026.",
+      "publicNote": "The report's acknowledgements identify the lead author/data analyst, other contributors, and Jamie's bounded draft-review credit.",
+      "doesNotEstablish": [
+        "Jamie as author or co-author",
+        "Jamie as methods owner",
+        "independent replication",
+        "legal approval",
+        "a complete edit-by-edit provenance"
+      ]
     }
   ],
   "claims": [
@@ -2464,6 +2485,67 @@
       ]
     },
     {
+      "id": "CLM-WOWLIST-SENIOR-PRODUCT-PRACTICE-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "WOW List provides unusually broad evidence of Jamie's senior product practice: he and Richard Caceres co-built a working community-calendar service, and Jamie's documented work spans product definition, implementation, participatory discovery, adoption, communications, instrumentation, and stewardship.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/technical-operations",
+            "/work/wowlist"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "WOW List provides unusually broad evidence of Jamie's senior product practice: he and Richard Caceres co-built a working community-calendar service, and Jamie's documented work spans product definition, implementation, participatory discovery, adoption, communications, instrumentation, and stewardship.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "docs/knowledge-bank/applications/wowlist-senior-product-manager-oti-782366"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-WOWLIST-X-POPULATION-MANIFEST",
+          "relationship": "direct-support",
+          "supports": [
+            "bounded public operating record and organizer workflows"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
+          "relationship": "direct-support",
+          "supports": [
+            "shared Richard and Jamie credit",
+            "Sunday Dinner provenance"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "join, publishing, profile, and followed-calendar workflows"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "A strong product-practice match does not guarantee an award or substitute for employer evaluation.",
+        "Civil-service eligibility requires a separate human review of Jamie's complete education and employment chronology.",
+        "Accessibility, security, and government-compliance experience must not be inferred from production operation alone.",
+        "Preserve Richard Caceres's co-builder credit and wider collective labor."
+      ]
+    },
+    {
       "id": "CLM-NYCAC-X-RETRIEVABLE-SOCIAL-INFRASTRUCTURE",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -2707,6 +2789,40 @@
         "The sequence connects Jamie's implementation work, collective advocacy, Council enactment, and later City action without claiming that one caused the next.",
         "Use 'replaced' from the Office report rather than saying Jamie or the coalition disbanded M.A.R.C.H."
       ]
+    },
+    {
+      "id": "CLM-NYCAC-SBU-REPORT-REVIEW-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The published Empty Storefronts, High Rents report names Mahin Rahman Tawrat as lead author and data analyst and credits Jamie Burkart for a thoughtful and careful review of the draft.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/technical-operations",
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-SBU-EMPTY-STOREFRONTS-HIGH-RENTS-REPORT-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "public report credit",
+            "lead-author boundary",
+            "final methods limitations"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Describe the contribution as bounded pre-publication review, not authorship, co-authorship, methods ownership, independent validation, or legal review.",
+        "Do not assign a contribution percentage or claim every proposed edit was adopted.",
+        "Keep the publishers, lead author/data analyst, other contributors, and coalition field visible."
+      ]
     }
   ],
   "pages": [
@@ -2814,6 +2930,7 @@
         "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12",
         "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
         "SRC-NYC-SBJSA-HEARING-2018-10-22",
+        "SRC-SBU-EMPTY-STOREFRONTS-HIGH-RENTS-REPORT-2026",
         "SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE",
         "SRC-FAIRRENTNYC-GITHUB-REPOSITORY",
         "SRC-NYCAC-CREATENYC-SUBMISSION-2017-03-17",
@@ -2865,6 +2982,14 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-NYC-SBJSA-HEARING-2018-10-22"
+          ]
+        },
+        {
+          "id": "sbu-report-review",
+          "claimId": "CLM-NYCAC-SBU-REPORT-REVIEW-2026",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-SBU-EMPTY-STOREFRONTS-HIGH-RENTS-REPORT-2026"
           ]
         },
         {
@@ -3013,13 +3138,43 @@
       ]
     },
     {
-      "id": "wowlist",
-      "surface": "/work/wowlist",
+      "id": "technical-operations",
+      "surface": "/work/technical-operations",
       "sourceOrder": [
-        "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026",
         "SRC-WOWLIST-X-POPULATION-MANIFEST",
         "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
         "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+        "SRC-SBU-EMPTY-STOREFRONTS-HIGH-RENTS-REPORT-2026"
+      ],
+      "occurrences": [
+        {
+          "id": "wowlist-senior-product-practice",
+          "claimId": "CLM-WOWLIST-SENIOR-PRODUCT-PRACTICE-2026",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-WOWLIST-X-POPULATION-MANIFEST",
+            "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
+            "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016"
+          ]
+        },
+        {
+          "id": "sbu-report-review",
+          "claimId": "CLM-NYCAC-SBU-REPORT-REVIEW-2026",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-SBU-EMPTY-STOREFRONTS-HIGH-RENTS-REPORT-2026"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wowlist",
+      "surface": "/work/wowlist",
+      "sourceOrder": [
+        "SRC-WOWLIST-X-POPULATION-MANIFEST",
+        "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
+        "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+        "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026",
         "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
         "SRC-WOWLIST-SBDIY-ADOPTION",
         "SRC-CALLSCRIPT-FACEBOOK-PAGE",
@@ -3029,6 +3184,16 @@
         "SRC-FACEBOOK-PERSONAL-WOWLIST-EVENT-CENSUS-2026"
       ],
       "occurrences": [
+        {
+          "id": "senior-product-practice",
+          "claimId": "CLM-WOWLIST-SENIOR-PRODUCT-PRACTICE-2026",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-WOWLIST-X-POPULATION-MANIFEST",
+            "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
+            "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016"
+          ]
+        },
         {
           "id": "production-scale",
           "claimId": "CLM-WOWLIST-PRODUCTION-SCALE-2017",

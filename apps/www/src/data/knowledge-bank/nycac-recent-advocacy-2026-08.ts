@@ -342,6 +342,13 @@ export const nycacRecentAdvocacyAugust2026 = {
       status: "confirmed-with-boundary",
       projections: [
         {
+          key: "case-study",
+          text: "The published Empty Storefronts, High Rents report names Mahin Rahman Tawrat as lead author and data analyst and credits Jamie Burkart for a thoughtful and careful review of the draft.",
+          status: "active",
+          citationRequired: true,
+          surfaces: ["/work/technical-operations", "/work/fair-rent-nyc"]
+        },
+        {
           key: "archive-note",
           text: "The published Empty Storefronts, High Rents report credits Jamie Burkart for a thoughtful and careful review of the draft; protected provenance records that many review edits were incorporated.",
           status: "hold",

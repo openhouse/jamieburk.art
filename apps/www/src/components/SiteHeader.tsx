@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { site } from "@/data/site";
 
 const navItems = [
@@ -10,6 +13,17 @@ const navItems = [
 ] as const;
 
 export function SiteHeader() {
+  const pathname = usePathname();
+  const isActive = (href: (typeof navItems)[number]["href"]) => {
+    if (href === "/work/technical-operations") {
+      return pathname === href;
+    }
+    if (href === "/work") {
+      return pathname === href || (pathname.startsWith("/work/") && pathname !== "/work/technical-operations");
+    }
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
+
   return (
     <header className="sticky top-0 z-40 border-b border-jb-ink/15 bg-white">
       <a className="skip-link btn btn-primary" href="#main">
@@ -25,7 +39,12 @@ export function SiteHeader() {
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
-                  className="inline-flex min-h-11 items-center border-b-2 border-transparent text-jb-ink/78 hover:border-jb-blue hover:text-jb-blue"
+                  aria-current={isActive(item.href) ? "page" : undefined}
+                  className={`inline-flex min-h-11 items-center border-b-2 font-semibold ${
+                    isActive(item.href)
+                      ? "border-jb-blue text-jb-ink"
+                      : "border-transparent text-jb-ink/78 hover:border-jb-blue hover:text-jb-blue"
+                  }`}
                   href={item.href}
                 >
                   {item.label}
@@ -46,7 +65,12 @@ export function SiteHeader() {
               {navItems.map((item) => (
                 <li key={item.href}>
                   <Link
-                    className="flex min-h-11 items-center border-b border-jb-ink/10 px-3 text-sm font-semibold text-jb-ink hover:bg-jb-warm hover:text-jb-blue"
+                    aria-current={isActive(item.href) ? "page" : undefined}
+                    className={`flex min-h-11 items-center border-b px-3 text-sm font-semibold ${
+                      isActive(item.href)
+                        ? "border-jb-blue bg-jb-warm text-jb-ink"
+                        : "border-jb-ink/10 text-jb-ink hover:bg-jb-warm hover:text-jb-blue"
+                    }`}
                     href={item.href}
                   >
                     {item.label}
