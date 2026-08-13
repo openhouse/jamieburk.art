@@ -50,7 +50,7 @@
     "photos:hillclimb": "npm run photos:check && npm run photos:test && npm run photos:report && npm run wiki:graph && npm run wiki:report && npm run wiki:check",
     "evals:portfolio": "node scripts/check-portfolio-evals.mjs",
     "evals:hiring-readers": "node scripts/evals-hiring-reader-acceptance.mjs --input evals/hiring-readers/current.json",
-    "test:hiring-readers": "node --test scripts/tests/hiring-reader-acceptance.test.mjs scripts/tests/hiring-reader-surface.test.mjs",
+    "test:hiring-readers": "node --test scripts/tests/hiring-reader-acceptance.test.mjs scripts/tests/hiring-reader-surface.test.mjs scripts/tests/production-build-memory.test.mjs",
     "evals:composite": "node scripts/check-composite-integration.mjs",
     "test:composite": "node --test scripts/tests/composite-integration.test.mjs",
     "test:lifecycle-operations": "node --test scripts/tests/lifecycle-operations.test.mjs",

@@ -38,6 +38,9 @@ const nextConfig: NextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   output: "standalone",
   outputFileTracingRoot: path.join(process.cwd(), "../../"),
+  experimental: {
+    webpackMemoryOptimizations: true
+  },
   reactStrictMode: true,
   poweredByHeader: false,
   typedRoutes: true,
