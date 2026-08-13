@@ -1,5 +1,5 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
-# Backlinks to Protected source-backed team-memory consulting lead
+# Backlinks to Named public-reader acceptance evaluation - Launch B
 
 **Source commit:** `190ae5932ea089a50b21cffbf9e764802f457c59`
 **Generation time:** 2026-08-13T18:30:12-04:00
@@ -7,5 +7,4 @@
 
 - [Employment context and hiring acceptance](../../indexes/employment-context.md) - `prose_link` (markdown)
 - [Employment context and hiring acceptance](../../indexes/employment-context.md) - `related_to` (frontmatter)
-- [Source-Backed Team Memory](../../methods/source-backed-team-memory.md) - `related_to` (frontmatter)
-- [Protected source-backed memory opportunity — metadata boundary](../../sources/protected-source-backed-memory-opportunity.md) - `supports` (frontmatter)
+- [Technical Operations portfolio projection](../../projections/work-technical-operations.md) - `related_to` (frontmatter)

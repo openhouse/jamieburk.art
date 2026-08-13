@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-13T14:02:53-04:00",
-  "sourceCommit": "197a3b3bd851b96e829f988f7ba349c51e434a10",
-  "sourceFingerprint": "77ea285639e130a99debf41aca6238f74fca8a0a764c17149557dfd13785d0aa",
+  "generatedAt": "2026-08-13T18:30:12-04:00",
+  "sourceCommit": "190ae5932ea089a50b21cffbf9e764802f457c59",
+  "sourceFingerprint": "53aeaaa4e53be514917e76740477937c2cda187215cc830cdb6e22bac5caa325",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -2812,6 +2812,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-18",
       "reviewBy": "2026-08-18"
+    },
+    {
+      "id": "evaluation.named-public-reader-acceptance.2026-08-13",
+      "path": "docs/knowledge-bank/evaluations/named-public-reader-acceptance-2026-08-13.md",
+      "title": "Named public-reader acceptance evaluation - Launch B",
+      "kind": "evaluation",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-web-only modeled hiring acceptance gates for eight named reader-opportunity pairs, bounded against false participation, endorsement, prediction, or invented reporting lines.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-08-14"
     },
     {
       "id": "evaluation.nycac.shared-folder-production.2026-07-19",
@@ -11582,6 +11595,118 @@
       "context": null
     },
     {
+      "from": "evaluation.named-public-reader-acceptance.2026-08-13",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.employment-context",
+      "source": "frontmatter",
+      "href": "../indexes/employment-context.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.named-public-reader-acceptance.2026-08-13",
+      "type": "related_to",
+      "to": "opportunity.aclu.senior-project-manager.8620968002",
+      "source": "frontmatter",
+      "href": "../opportunities/aclu-senior-project-manager.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.named-public-reader-acceptance.2026-08-13",
+      "type": "related_to",
+      "to": "opportunity.benepass.product-operations.7f963a7a",
+      "source": "frontmatter",
+      "href": "../opportunities/benepass-product-operations.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.named-public-reader-acceptance.2026-08-13",
+      "type": "related_to",
+      "to": "opportunity.codepath.engineering-project-manager.5160542007",
+      "source": "frontmatter",
+      "href": "../opportunities/codepath-engineering-project-manager.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.named-public-reader-acceptance.2026-08-13",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-senior-product-manager-782366.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.named-public-reader-acceptance.2026-08-13",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.named-public-reader-acceptance.2026-08-13",
+      "type": "related_to",
+      "to": "person.aileen-palmer",
+      "source": "frontmatter",
+      "href": "../people/aileen-palmer.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.named-public-reader-acceptance.2026-08-13",
+      "type": "related_to",
+      "to": "person.charizma-williams",
+      "source": "frontmatter",
+      "href": "../people/charizma-williams.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.named-public-reader-acceptance.2026-08-13",
+      "type": "related_to",
+      "to": "person.chris-coleman",
+      "source": "frontmatter",
+      "href": "../people/chris-coleman.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.named-public-reader-acceptance.2026-08-13",
+      "type": "related_to",
+      "to": "person.jaclyn-chen",
+      "source": "frontmatter",
+      "href": "../people/jaclyn-chen.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.named-public-reader-acceptance.2026-08-13",
+      "type": "related_to",
+      "to": "person.lisa-gelobter",
+      "source": "frontmatter",
+      "href": "../people/lisa-gelobter.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.named-public-reader-acceptance.2026-08-13",
+      "type": "related_to",
+      "to": "person.luke-farrell",
+      "source": "frontmatter",
+      "href": "../people/luke-farrell.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.named-public-reader-acceptance.2026-08-13",
+      "type": "related_to",
+      "to": "person.zack-parker",
+      "source": "frontmatter",
+      "href": "../people/zack-parker.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.named-public-reader-acceptance.2026-08-13",
+      "type": "related_to",
+      "to": "portfolio.work.technical-operations",
+      "source": "frontmatter",
+      "href": "../projections/work-technical-operations.md",
+      "context": null
+    },
+    {
       "from": "evaluation.nycac.shared-folder-production.2026-07-19",
       "type": "related_to",
       "to": "project.nyc-artist-coalition",
@@ -12331,6 +12456,14 @@
       "to": "evaluation.employment-leadership-context.2026-08-13",
       "source": "frontmatter",
       "href": "../evaluations/employment-leadership-context-2026-08-13.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "evaluation.named-public-reader-acceptance.2026-08-13",
+      "source": "frontmatter",
+      "href": "../evaluations/named-public-reader-acceptance-2026-08-13.md",
       "context": null
     },
     {
@@ -15437,6 +15570,14 @@
       "to": "capability.technical-operations",
       "source": "frontmatter",
       "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "portfolio.work.technical-operations",
+      "type": "related_to",
+      "to": "evaluation.named-public-reader-acceptance.2026-08-13",
+      "source": "frontmatter",
+      "href": "../evaluations/named-public-reader-acceptance-2026-08-13.md",
       "context": null
     },
     {
@@ -18961,10 +19102,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/evaluations/named-public-reader-acceptance-2026-08-13.md",
+      "to": "evaluation.named-public-reader-acceptance.2026-08-13",
+      "fragment": null,
+      "line": 35,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
       "to": "opportunity.nyc-oti.technical-operations-manager.782369",
       "fragment": null,
-      "line": 37,
+      "line": 41,
       "kind": "link"
     },
     {
@@ -18973,7 +19123,7 @@
       "toPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
       "to": "opportunity.aclu.product-manager-discovery.8482872002",
       "fragment": null,
-      "line": 46,
+      "line": 50,
       "kind": "link"
     },
     {
@@ -18982,7 +19132,7 @@
       "toPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
       "to": "opportunity.codepath.claude-corps.5182020007",
       "fragment": null,
-      "line": 47,
+      "line": 51,
       "kind": "link"
     },
     {
@@ -18991,7 +19141,7 @@
       "toPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
       "to": "opportunity.asana.ai-implementation.8027437",
       "fragment": null,
-      "line": 48,
+      "line": 52,
       "kind": "link"
     },
     {
@@ -19000,7 +19150,7 @@
       "toPath": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
       "to": "opportunity.permitflow.product-operations.8a6e6066",
       "fragment": null,
-      "line": 49,
+      "line": 53,
       "kind": "link"
     },
     {
@@ -19009,7 +19159,7 @@
       "toPath": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
       "to": "opportunity.protected.source-backed-memory-consulting.2026",
       "fragment": null,
-      "line": 53,
+      "line": 57,
       "kind": "link"
     },
     {
@@ -19018,7 +19168,7 @@
       "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
       "to": "evaluation.employment-context.coverage.2026-07-18",
       "fragment": null,
-      "line": 79,
+      "line": 83,
       "kind": "link"
     },
     {
@@ -19027,7 +19177,7 @@
       "toPath": "docs/knowledge-bank/evaluations/employment-leadership-context-2026-08-13.md",
       "to": "evaluation.employment-leadership-context.2026-08-13",
       "fragment": null,
-      "line": 80,
+      "line": 84,
       "kind": "link"
     },
     {
@@ -19036,7 +19186,7 @@
       "toPath": "reports/wiki-opportunity-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 81,
+      "line": 85,
       "kind": "link"
     },
     {
@@ -19045,7 +19195,7 @@
       "toPath": "reports/wiki-career-trajectory-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 82,
+      "line": 86,
       "kind": "link"
     },
     {
@@ -19054,7 +19204,7 @@
       "toPath": "reports/wiki-source-channel-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 83,
+      "line": 87,
       "kind": "link"
     },
     {
@@ -19063,7 +19213,7 @@
       "toPath": "reports/wiki-opportunity-discovery.md",
       "to": null,
       "fragment": null,
-      "line": 84,
+      "line": 88,
       "kind": "link"
     },
     {
@@ -19072,7 +19222,7 @@
       "toPath": "reports/hiring-acceptance-public.md",
       "to": null,
       "fragment": null,
-      "line": 85,
+      "line": 89,
       "kind": "link"
     },
     {
@@ -19081,7 +19231,7 @@
       "toPath": "reports/hiring-acceptance-gap-resolution.md",
       "to": null,
       "fragment": null,
-      "line": 86,
+      "line": 90,
       "kind": "link"
     },
     {

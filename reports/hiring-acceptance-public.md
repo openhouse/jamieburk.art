@@ -1,10 +1,10 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `197a3b3bd851b96e829f988f7ba349c51e434a10`
-**Portfolio snapshot:** `63b038a6c8fa851127924ce5fff54179638901f37dcc0f625bb0c41fc64acf32`
+**Candidate commit:** `190ae5932ea089a50b21cffbf9e764802f457c59`
+**Portfolio snapshot:** `f2b7c5ce8009f79a4b602e1227fef1cc8f61ccb7ca19f4ca9ea056f7fd563c8b`
 **Role-context hash:** `864ae3e33506ec9500c390a04bcdfc5255d9ed39c36fdfdcfb5d7e2e2f44afc1`
-**Reader-context hash:** `c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702`
+**Reader-context hash:** `e055b82642616d52177ad68ae4d3bbaeb3953ef3c75cfa3e159c65166862e29f`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
 **Candidate paths clean:** yes
 
@@ -107,8 +107,8 @@
 ### Protected source-backed team-memory consulting lead
 
 - Deterministic disposition: `not-live`
-- Critical signals observed: 2/2
-- All signals observed: 3/3
+- Critical signals observed: 1/2
+- All signals observed: 2/3
 - Opportunity status live: no
 - Historical benchmark: no
 - Role context current at candidate time: no
@@ -116,7 +116,7 @@
 - Public reporting context: not recorded (not recorded)
 - Public vision context: not recorded (not recorded)
 
-- `requirement.protected-memory.knowledge-friction`: **observed** on `/work/technical-operations`
+- `requirement.protected-memory.knowledge-friction`: **not observed**
 - `requirement.protected-memory.human-review`: **observed** on `/lab/source-backed-team-memory`
 - `requirement.protected-memory.bounded-sprint`: **observed** on `/lab/source-backed-team-memory`
 

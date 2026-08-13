@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `197a3b3bd851b96e829f988f7ba349c51e434a10`
-**Generation time:** 2026-08-13T14:02:53-04:00
-**Source fingerprint:** `77ea285639e130a99debf41aca6238f74fca8a0a764c17149557dfd13785d0aa`
+**Source commit:** `190ae5932ea089a50b21cffbf9e764802f457c59`
+**Generation time:** 2026-08-13T18:30:12-04:00
+**Source fingerprint:** `53aeaaa4e53be514917e76740477937c2cda187215cc830cdb6e22bac5caa325`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 33
+- Nodes added: 34
 - Nodes removed: 0
-- Edges added: 140
+- Edges added: 156
 - Edges removed: 2
 - New type-aware orphans: 0
 - Current rights-review records: 185
@@ -20,6 +20,7 @@ Compared with the graph artifact on `origin/develop`.
 - `claim.nycac.frontline-advocacy.2026-08`
 - `edition.launch.2026-08`
 - `evaluation.employment-leadership-context.2026-08-13`
+- `evaluation.named-public-reader-acceptance.2026-08-13`
 - `event.nyc.sbu-report-launch.2026-07-29`
 - `opportunity.aclu.senior-project-manager.8620968002`
 - `opportunity.codepath.engineering-project-manager.5160542007`

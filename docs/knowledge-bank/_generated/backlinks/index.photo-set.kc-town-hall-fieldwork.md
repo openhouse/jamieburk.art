@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to KC Town Hall fieldwork and proposal visual set
 
-**Source commit:** `197a3b3bd851b96e829f988f7ba349c51e434a10`
-**Generation time:** 2026-08-13T14:02:53-04:00
-**Source fingerprint:** `77ea285639e130a99debf41aca6238f74fca8a0a764c17149557dfd13785d0aa`
+**Source commit:** `190ae5932ea089a50b21cffbf9e764802f457c59`
+**Generation time:** 2026-08-13T18:30:12-04:00
+**Source fingerprint:** `53aeaaa4e53be514917e76740477937c2cda187215cc830cdb6e22bac5caa325`
 
 - [KC Town Hall ten-minute-walk proposal map](../../assets/graphics/kc-town-hall-walkshed-2019.md) - `related_to` (frontmatter)
 - [Jamie at the KC Town Hall worksite](../../assets/photographs/kc-town-hall-hard-hat-worksite.md) - `related_to` (frontmatter)
