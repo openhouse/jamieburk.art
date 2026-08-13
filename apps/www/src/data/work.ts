@@ -418,7 +418,7 @@ const workItemsInput = [
     summary:
       "Co-built and operated a community-calendar platform for DIY arts and music organizers. A July 2017 production snapshot records 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts.",
     role: "Co-builder & Product Operator",
-    years: "2010s",
+    years: "2010s; public return in progress, 2026",
     status: "Short proof page",
     featured: true,
     priority: 4,
@@ -430,6 +430,12 @@ const workItemsInput = [
       "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
     artifactTypes: ["website", "workflow", "prototype"],
     artifacts: [
+      {
+        title: "Recognizable public return threshold",
+        description:
+          "A live landing page, About page, and consented tester invitation restore the original public promise without pretending that the community calendar is already back.",
+        type: "website"
+      },
       {
         title: "Keyword-community model",
         description:
@@ -445,12 +451,17 @@ const workItemsInput = [
       "Community Platform Design",
       "Event Workflows"
     ],
+    links: [
+      { label: "Visit WOW List", url: "https://wowlist.org/" },
+      { label: "About WOW List", url: "https://wowlist.org/about" }
+    ],
     careNote:
-      "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
+      "The live surface is a noindex tester threshold, not the restored calendar. Historical scale remains a dated 2017 snapshot, and private member or archival material stays offline.",
     sourceLayer:
-      "Public-safe summary, historical project context, and screenshots pending Jamie approval.",
+      "Live public landing and About pages, source-backed project memory, historical public-safe aggregates, and private member and introduction records intentionally omitted.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
-    currentStatus: "Historical short proof page.",
+    currentStatus:
+      "Live, deliberately small noindex public threshold with a tester invitation; the community calendar itself is not yet restored.",
     group: "Community and cultural infrastructure",
     roleFit:
       "Community systems, product operations, public-facing platforms, and event distribution workflows.",
@@ -463,9 +474,9 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
+        "WOWList was a co-built community-calendar platform organized around followable keyword communities, and a deliberately small public return threshold is live now.",
       open:
-        "Screenshots, archive links, and individual technical-contribution allocation need further review.",
+        "The contemporary calendar, contribution model, governance, moderation, retention, and broader relaunch sequence remain open product work.",
       protected:
         "Private user data, organizer contact lists, and unapproved community records are not published."
     }

@@ -3,7 +3,7 @@
 
 **Source commit:** `197a3b3bd851b96e829f988f7ba349c51e434a10`
 **Generation time:** 2026-08-13T14:02:53-04:00
-**Source fingerprint:** `4efb66fc2c71c0dc43e606385e4278de52ef3fab1f1109df604df66d0db89ab0`
+**Source fingerprint:** `77ea285639e130a99debf41aca6238f74fca8a0a764c17149557dfd13785d0aa`
 
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `related_to` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [hur5tftl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj.md) - `related_to` (frontmatter)
@@ -170,7 +170,7 @@
 - [Save NYC Spaces: olympia kazi [ocmu7ccz]](../../assets/photographs/project-sites/save-nyc-spaces-olympia-kazi-ocmu7cczmp.md) - `related_to` (frontmatter)
 - [Save NYC Spaces: pooyan aslani [jz7hlhlh]](../../assets/photographs/project-sites/save-nyc-spaces-pooyan-aslani-jz7hlhlht5.md) - `related_to` (frontmatter)
 - [Save NYC Spaces: rachel nelson [dtdfvedi]](../../assets/photographs/project-sites/save-nyc-spaces-rachel-nelson-dtdfvedipb.md) - `related_to` (frontmatter)
-- [Save NYC Spaces: save nyc spaces group photo nyc artist coalition [6y2gjc2r]](../../assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md) - `related_to` (frontmatter)
+- [Save NYC Spaces banner at Market Hotel, 2017](../../assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md) - `related_to` (frontmatter)
 - [Save NYC Spaces: save nyc spaces group [tnyszfjg]](../../assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-tnyszfjgnt.md) - `related_to` (frontmatter)
 - [Save NYC Spaces / Talks Not Raids: save nyc spaces nyc artist coalition [44iyucy6]](../../assets/photographs/project-sites/save-nyc-spaces-talks-not-raids-save-nyc-spaces-nyc-artist-coalition-44i.md) - `related_to` (frontmatter)
 - [Save NYC Spaces: town hall 09 1200 [wj2m6brh]](../../assets/photographs/project-sites/save-nyc-spaces-town-hall-09-1200-wj2m6brhky.md) - `related_to` (frontmatter)

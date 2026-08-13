@@ -1,8 +1,12 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
-# Backlinks to Save NYC Spaces: save nyc spaces group photo nyc artist coalition [6y2gjc2r]
+# Backlinks to Save NYC Spaces banner at Market Hotel, 2017
 
 **Source commit:** `197a3b3bd851b96e829f988f7ba349c51e434a10`
 **Generation time:** 2026-08-13T14:02:53-04:00
-**Source fingerprint:** `4efb66fc2c71c0dc43e606385e4278de52ef3fab1f1109df604df66d0db89ab0`
+**Source fingerprint:** `77ea285639e130a99debf41aca6238f74fca8a0a764c17149557dfd13785d0aa`
 
-- None.
+- [Photography knowledge loop](../../indexes/photography.md) - `has_asset` (frontmatter)
+- [Photography knowledge loop](../../indexes/photography.md) - `prose_link` (markdown)
+- [Paul Mossine](../../people/paul-mossine.md) - `related_to` (frontmatter)
+- [Fair Rent NYC Market Hotel public-room occurrence](../../projections/photography/fair-rent-nyc-market-hotel-banner.md) - `uses_source` (frontmatter)
+- [Jamie Burkart portfolio-album publication authorization](../../sources/permissions/jamie-portfolio-album-2026-08-13.md) - `related_to` (frontmatter)

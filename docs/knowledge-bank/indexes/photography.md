@@ -5,7 +5,7 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-26
+last_reviewed: 2026-08-13
 review_by: 2027-01-26
 canonical_path: docs/knowledge-bank/indexes/photography.md
 summary: Public-safe orientation to the governed relationship among private photo sources, first-class Wiki records, exact portfolio occurrences, recollection, correction, and human publication gates.
@@ -14,6 +14,14 @@ relations:
     target: asset.photo.east-river-manhattan-bridge.2022.001
     href: ../assets/photographs/east-river-manhattan-bridge-2022.md
     context: First complete public-safe canary asset.
+  - type: has_asset
+    target: asset.photo.nycac-shoestring-facilitation.2017.001
+    href: ../assets/photographs/nycac-shoestring-facilitation-2017.md
+    context: Cleared Shoestring Press facilitation occurrence for the Fair Rent NYC case study.
+  - type: has_asset
+    target: asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2
+    href: ../assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md
+    context: Cleared Market Hotel public-room occurrence for the Fair Rent NYC case study.
   - type: related_to
     target: index.photo-set.east-river-canoe.2022
     href: photo-sets/east-river-canoe-2022.md
@@ -34,8 +42,17 @@ relations:
     target: projection.photo.layout-c.home.east-river
     href: ../projections/photography/layout-c-home-east-river.md
   - type: related_to
+    target: projection.photo.fair-rent-nyc.shoestring-facilitation
+    href: ../projections/photography/fair-rent-nyc-shoestring-facilitation.md
+  - type: related_to
+    target: projection.photo.fair-rent-nyc.market-hotel-banner
+    href: ../projections/photography/fair-rent-nyc-market-hotel-banner.md
+  - type: related_to
     target: edition.layout-c.2026-07
     href: ../projections/photography/edition-layout-c-2026-07.md
+  - type: related_to
+    target: edition.launch.2026-08
+    href: ../projections/photography/edition-launch-2026-08.md
   - type: related_to
     target: correction.photo.east-river-credit.2026-07
     href: ../corrections/east-river-credit-2026-07.md
@@ -72,6 +89,27 @@ relations:
 This index begins with one complete occurrence rather than attempting to mirror
 Jamie Burkart's private photo archive. The archive remains private and
 additive. The portfolio remains selective and composed.
+
+## August 13 participation sequence
+
+Two additional, metadata-stripped derivatives now form a bounded case-study
+sequence with the Let NYC Dance public surface:
+
+- [Shoestring Press facilitation](../assets/photographs/nycac-shoestring-facilitation-2017.md)
+  shows the working alignment layer.
+- [Market Hotel banner room](../assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md)
+  shows the collective public-room layer.
+- [August 2026 photographic edition](../projections/photography/edition-launch-2026-08.md)
+  binds all three exact occurrences while leaving production and indexing open.
+- [Paul Mossine](../people/paul-mossine.md) is credited as photographer for
+  both 2017 case-study images.
+
+Jamie checked the designated portfolio album as cleared for this portfolio and
+specifically requested consideration of both frames. The [public-safe
+authorization capsule](../sources/permissions/jamie-portfolio-album-2026-08-13.md)
+keeps that decision separate from creator credit, metadata exposure, exact
+occurrence review, and production/indexing approval. The existing East River
+homepage hero is unchanged.
 
 ## East River canary
 

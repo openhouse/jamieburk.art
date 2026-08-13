@@ -134,6 +134,8 @@ function candidateFiles(repoRoot) {
     "apps/www/src/components/Hero.tsx",
     "apps/www/src/data/photography.ts",
     "apps/www/public/images/field-notes/jamie-east-river.webp",
+    "apps/www/public/images/field-notes/nycac-market-hotel-banner.webp",
+    "apps/www/public/images/field-notes/nycac-shoestring-facilitation.webp",
     "evals/photo-knowledge/canary.json",
     "evals/photo-knowledge/evals.json",
     "evals/photo-knowledge/curatorial/layout-c-home-east-river-v1.json",
@@ -398,6 +400,69 @@ export function evaluatePhotoKnowledgeModel(model) {
     canary.photographerId
   ];
 
+  const expectedBoundPhotoIds = [
+    "east-river",
+    "nycac-market-hotel-banner",
+    "nycac-shoestring-facilitation"
+  ];
+  const observedBoundPhotoIds = publicPhotoManifest
+    ?.filter((item) => item.knowledgeStatus === "bound")
+    .map((item) => item.id)
+    .sort();
+  const exactReviewedField =
+    JSON.stringify(observedBoundPhotoIds) ===
+      JSON.stringify([...expectedBoundPhotoIds].sort()) &&
+    publicPhotoManifest?.length === expectedBoundPhotoIds.length;
+  const everyBoundOccurrenceAligned = publicPhotoManifest?.every((item) => {
+    const photoAsset = record(item.wikiId);
+    const photoStatementIds = new Set(
+      photoAsset?.statements?.map((statement) => statement.id) ?? []
+    );
+    const expectedDerivativePath = `apps/www/public${item.src}`;
+    const derivativeAligned = photoAsset?.public_derivatives?.some(
+      (derivative) =>
+        derivative.id === item.derivativeId &&
+        derivative.path === expectedDerivativePath &&
+        derivative.width === item.width &&
+        derivative.height === item.height &&
+        derivative.metadata_stripped === true
+    );
+    const placementsAligned =
+      item.placementIds?.length > 0 &&
+      item.placementIds.every((placementId) => {
+        const occurrence = record(placementId);
+        return (
+          occurrence?.asset === item.wikiId &&
+          occurrence?.derivative === item.derivativeId &&
+          occurrence?.caption?.text === item.caption &&
+          occurrence?.credit?.text === item.credit &&
+          occurrence?.caption?.assertions?.every((id) =>
+            item.captionAssertionIds.includes(id)
+          ) &&
+          occurrence?.credit?.assertions?.every((id) =>
+            item.creditAssertionIds.includes(id)
+          ) &&
+          occurrence?.approval?.public_git === "approved" &&
+          occurrence?.approval?.staging === "approved" &&
+          occurrence?.approval?.production === "open" &&
+          occurrence?.approval?.indexing === "open" &&
+          occurrence?.rollback?.preserves_history === true
+        );
+      });
+    return (
+      Boolean(photoAsset) &&
+      derivativeAligned &&
+      placementsAligned &&
+      item.captionAssertionIds?.every((id) => photoStatementIds.has(id)) &&
+      item.creditAssertionIds?.every((id) => photoStatementIds.has(id)) &&
+      item.publicationStatus === "jamie-authorized" &&
+      item.releaseState?.publicGit === "approved" &&
+      item.releaseState?.staging === "approved" &&
+      item.releaseState?.production === "open" &&
+      item.releaseState?.indexing === "open"
+    );
+  });
+
   const manifestAligned =
     east?.wikiId === canary.assetId &&
     east?.derivativeId === canary.derivative.id &&
@@ -409,14 +474,8 @@ export function evaluatePhotoKnowledgeModel(model) {
     east?.releaseState?.indexing === "open" &&
     east?.captionAssertionIds?.every((id) => statementIds.has(id)) &&
     east?.creditAssertionIds?.every((id) => statementIds.has(id)) &&
-    publicPhotoManifest?.filter((item) => item.id !== "east-river").every(
-      (item) =>
-        item.wikiId === null &&
-        item.knowledgeStatus === "phase-2-reconciliation-pending" &&
-        item.placementIds.length === 0 &&
-        item.releaseState?.production === "open" &&
-        item.releaseState?.indexing === "open"
-    );
+    exactReviewedField &&
+    everyBoundOccurrenceAligned;
 
   const privateResolutionAttested =
     asset?.private_source_binding?.opaque_id === canary.privateBinding.opaqueId &&
@@ -544,7 +603,7 @@ export function evaluatePhotoKnowledgeModel(model) {
       Boolean(inquiry),
     selective_projection:
       checks.protected_absence_not_auto_filled &&
-      publicPhotoManifest?.filter((item) => item.knowledgeStatus === "bound").length === 1 &&
+      exactReviewedField &&
       publicPhotoManifest
         ?.filter((item) => item.knowledgeStatus === "phase-2-reconciliation-pending")
         .every(

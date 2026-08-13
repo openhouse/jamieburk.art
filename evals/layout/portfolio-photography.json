@@ -11,7 +11,7 @@
     {
       "id": "minimal-authorized-field",
       "blocking": true,
-      "criterion": "The pre-launch layout uses only the fully bound, credited, Jamie-authorized East River derivative; unresolved archival images remain outside the public bundle."
+      "criterion": "The pre-launch layout uses exactly three fully bound, credited, Jamie-authorized derivatives: the unchanged East River hero plus the Shoestring Press and Market Hotel case-study photographs; unresolved archival images remain outside the public bundle."
     },
     {
       "id": "metadata-and-locator-safety",
@@ -21,12 +21,12 @@
     {
       "id": "editorial-not-decorative",
       "blocking": true,
-      "criterion": "The home photograph is full-bleed, unframed, credited, and editorially specific; About and Colophon remain text-led until additional images complete creator, credit, rights, caption, crop, and destination review."
+      "criterion": "The home photograph remains full-bleed and unchanged; the two new photographs appear only in the Fair Rent NYC evidence sequence with a campaign screenshot, captions, credits, and explicit interpretation boundaries; About and Colophon remain text-led."
     },
     {
       "id": "deliberate-absence",
       "blocking": true,
-      "criterion": "Work, resume, and contact do not receive adjacent photographs merely to achieve coverage."
+      "criterion": "The work index, resume, contact, About, and Colophon do not receive adjacent photographs merely to achieve coverage; the selected case-study images remain purpose-bound."
     },
     {
       "id": "human-index-material-system",

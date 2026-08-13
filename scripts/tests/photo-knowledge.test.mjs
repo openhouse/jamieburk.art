@@ -160,6 +160,14 @@ test("manifest and Wiki placement drift fails closed", async () => {
   assert.equal(result.checks.manifest_wiki_placement_alignment, false);
 });
 
+test("a missing case-study creator credit fails manifest alignment", async () => {
+  const model = await baselineModel();
+  model.portfolioPhotos.nycacShoestringFacilitation.credit = "";
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.manifest_wiki_placement_alignment, false);
+  assert.equal(result.passed, false);
+});
+
 test("revocation cannot leave an active occurrence valid", async () => {
   const model = await baselineModel();
   model.recordsById[model.canary.permissionSourceId].permission_capsule.public_git = "revoked";

@@ -12,7 +12,7 @@ import {
 
 const publicClaimSchema = z.object({
   id: z.string().min(1),
-  status: z.enum(["confirmed", "confirmed-with-boundary"]),
+  status: z.enum(["confirmed", "confirmed-with-boundary", "use-with-care"]),
   projections: z.array(claimProjectionSchema),
   evidence: z.array(evidenceRelationshipSchema.omit({ internalExcerpt: true, locator: true })),
   boundaries: z.array(z.string())

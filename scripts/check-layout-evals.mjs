@@ -46,26 +46,28 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     (match) => match[1]
   );
   const expectedSources = [
-    "/images/field-notes/jamie-east-river.webp"
+    "/images/field-notes/jamie-east-river.webp",
+    "/images/field-notes/nycac-market-hotel-banner.webp",
+    "/images/field-notes/nycac-shoestring-facilitation.webp"
   ];
   if (JSON.stringify(sources.sort()) !== JSON.stringify(expectedSources.sort())) {
-    fail("minimal-authorized-field", "The public field must contain exactly the four reviewed derivatives.");
+    fail("minimal-authorized-field", "The public field must contain exactly the three reviewed derivatives.");
   }
 
   for (const field of ["id", "width", "height", "alt", "caption", "credit", "placements", "publicationStatus", "publicUseBoundary"]) {
     const count = [...manifest.matchAll(new RegExp(`\\b${field}:`, "g"))].length;
-    if (count !== 2) {
+    if (count !== 4) {
       fail("manifest-bound-publication", `Manifest field ${field} is missing from one or more photos.`);
     }
   }
-  if ([...manifest.matchAll(/publicationStatus: "jamie-authorized"/g)].length !== 2) {
+  if ([...manifest.matchAll(/publicationStatus: "jamie-authorized"/g)].length !== 4) {
     fail("manifest-bound-publication", "Every photo must retain the Jamie-authorized publication status.");
   }
 
   const publicImageRoot = path.join(root, "apps/www/public/images/field-notes");
   const publicImages = walkFiles(publicImageRoot).sort();
-  if (publicImages.length !== 1 || publicImages.some((file) => !file.endsWith(".webp"))) {
-    fail("minimal-authorized-field", "The field-notes directory must contain only the fully bound East River WebP derivative.");
+  if (publicImages.length !== 3 || publicImages.some((file) => !file.endsWith(".webp"))) {
+    fail("minimal-authorized-field", "The field-notes directory must contain only the three fully bound WebP derivatives.");
   }
   for (const relativeImagePath of publicImages) {
     const bytes = readFileSync(path.join(publicImageRoot, relativeImagePath));
@@ -83,6 +85,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     manifest,
     readText("apps/www/src/components/FieldPhoto.tsx"),
     readText("apps/www/src/components/Hero.tsx"),
+    readText("apps/www/src/components/ParticipationSequence.tsx"),
     readText("apps/www/src/app/about/page.tsx"),
     readText("apps/www/src/app/colophon/page.tsx")
   ].join("\n");
@@ -98,6 +101,12 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   const colophon = readText("apps/www/src/app/colophon/page.tsx");
   if (!hero.includes("portfolioPhotos.eastRiver") || !hero.includes("fill") || /rounded|shadow/.test(hero)) {
     fail("editorial-not-decorative", "The home photograph must remain full-bleed, unframed, and manifest-bound.");
+  }
+  const participationSequence = readText("apps/www/src/components/ParticipationSequence.tsx");
+  if (!participationSequence.includes("portfolioPhotos.nycacShoestringFacilitation") ||
+      !participationSequence.includes("portfolioPhotos.nycacMarketHotelBanner") ||
+      !participationSequence.includes("let-nyc-dance-public-surface.webp")) {
+    fail("editorial-not-decorative", "The two participation photographs and campaign screenshot must remain composed as one Fair Rent NYC evidence sequence.");
   }
   if (/FieldPhoto|portfolioPhotos|\/images\/field-notes\//.test(about) ||
       /FieldPhoto|portfolioPhotos|\/images\/field-notes\//.test(colophon)) {

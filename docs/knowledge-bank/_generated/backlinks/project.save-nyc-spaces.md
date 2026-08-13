@@ -3,7 +3,7 @@
 
 **Source commit:** `197a3b3bd851b96e829f988f7ba349c51e434a10`
 **Generation time:** 2026-08-13T14:02:53-04:00
-**Source fingerprint:** `4efb66fc2c71c0dc43e606385e4278de52ef3fab1f1109df604df66d0db89ab0`
+**Source fingerprint:** `77ea285639e130a99debf41aca6238f74fca8a0a764c17149557dfd13785d0aa`
 
 - [Save NYC Spaces: ali rosa salas [kwla4ltf]](../../assets/photographs/project-sites/save-nyc-spaces-ali-rosa-salas-kwla4ltfwy.md) - `related_to` (frontmatter)
 - [Save NYC Spaces: anya sapozhnikova [kvcmtdtn]](../../assets/photographs/project-sites/save-nyc-spaces-anya-sapozhnikova-kvcmtdtnpn.md) - `related_to` (frontmatter)
@@ -23,7 +23,7 @@
 - [Save NYC Spaces: olympia kazi [ocmu7ccz]](../../assets/photographs/project-sites/save-nyc-spaces-olympia-kazi-ocmu7cczmp.md) - `related_to` (frontmatter)
 - [Save NYC Spaces: pooyan aslani [jz7hlhlh]](../../assets/photographs/project-sites/save-nyc-spaces-pooyan-aslani-jz7hlhlht5.md) - `related_to` (frontmatter)
 - [Save NYC Spaces: rachel nelson [dtdfvedi]](../../assets/photographs/project-sites/save-nyc-spaces-rachel-nelson-dtdfvedipb.md) - `related_to` (frontmatter)
-- [Save NYC Spaces: save nyc spaces group photo nyc artist coalition [6y2gjc2r]](../../assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md) - `related_to` (frontmatter)
+- [Save NYC Spaces banner at Market Hotel, 2017](../../assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md) - `related_to` (frontmatter)
 - [Save NYC Spaces: save nyc spaces group [tnyszfjg]](../../assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-tnyszfjgnt.md) - `related_to` (frontmatter)
 - [Save NYC Spaces / Talks Not Raids: save nyc spaces nyc artist coalition [44iyucy6]](../../assets/photographs/project-sites/save-nyc-spaces-talks-not-raids-save-nyc-spaces-nyc-artist-coalition-44i.md) - `related_to` (frontmatter)
 - [Save NYC Spaces: town hall 09 1200 [wj2m6brh]](../../assets/photographs/project-sites/save-nyc-spaces-town-hall-09-1200-wj2m6brhky.md) - `related_to` (frontmatter)
@@ -33,3 +33,4 @@
 - [NYC Artist Coalition organization map](../../organizations/nyc-artist-coalition.md) - `prose_link` (markdown)
 - [NYC Artist Coalition organization map](../../organizations/nyc-artist-coalition.md) - `related_to` (frontmatter)
 - [Fair Rent NYC](../../projects/fair-rent-nyc.md) - `related_to` (frontmatter)
+- [Fair Rent NYC Market Hotel public-room occurrence](../../projections/photography/fair-rent-nyc-market-hotel-banner.md) - `related_to` (frontmatter)

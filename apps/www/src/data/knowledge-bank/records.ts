@@ -13,6 +13,7 @@ import { nycacFacebookEventKnowledge } from "./nycac-facebook-events-2026-07.ts"
 import { nycacFacebookPostKnowledge } from "./nycac-facebook-posts-2026-07.ts";
 import { personalWowListFacebookEventKnowledge } from "./personal-wowlist-facebook-events-2026-07.ts";
 import { participationContinuityKnowledge } from "./participation-continuity-2026-07.ts";
+import { participationImagesAugust2026 } from "./participation-images-2026-08.ts";
 import { professionalRecordAugust2026 } from "./professional-record-2026-08.ts";
 import { nycacImplementationEvidence } from "./nycac-implementation-evidence.ts";
 import { nycacFrontlineAdvocacyAugust2026 } from "./nycac-frontline-advocacy-2026-08.ts";
@@ -74,6 +75,7 @@ const knowledgeBankInput = {
     ...nycacFacebookPostKnowledge.intakeItems,
     ...personalWowListFacebookEventKnowledge.intakeItems,
     ...participationContinuityKnowledge.intakeItems,
+    ...participationImagesAugust2026.intakeItems,
     ...wowListProductFitAugust2026.intakeItems,
     ...professionalRecordAugust2026.intakeItems,
     ...nycacSocialPopulationJuly2026.intakeItems,
@@ -122,6 +124,7 @@ const knowledgeBankInput = {
     ...nycacFacebookPostKnowledge.observations,
     ...personalWowListFacebookEventKnowledge.observations,
     ...participationContinuityKnowledge.observations,
+    ...participationImagesAugust2026.observations,
     ...wowListProductFitAugust2026.observations,
     ...professionalRecordAugust2026.observations,
     ...nycacSocialPopulationJuly2026.observations,
@@ -274,6 +277,7 @@ const knowledgeBankInput = {
     ...nycacFacebookPostKnowledge.sources,
     ...personalWowListFacebookEventKnowledge.sources,
     ...participationContinuityKnowledge.sources,
+    ...participationImagesAugust2026.sources,
     ...wowListProductFitAugust2026.sources,
     ...professionalRecordAugust2026.sources,
     ...nycacSocialPopulationJuly2026.sources,
@@ -419,6 +423,7 @@ const knowledgeBankInput = {
     ...nycacFacebookPostKnowledge.claims,
     ...personalWowListFacebookEventKnowledge.claims,
     ...participationContinuityKnowledge.claims,
+    ...participationImagesAugust2026.claims,
     ...wowListProductFitAugust2026.claims,
     ...professionalRecordAugust2026.claims,
     ...nycacSocialPopulationJuly2026.claims,
@@ -486,6 +491,7 @@ const knowledgeBankInput = {
     ...nycacFacebookPostKnowledge.researchInquiries,
     ...personalWowListFacebookEventKnowledge.researchInquiries,
     ...participationContinuityKnowledge.researchInquiries,
+    ...participationImagesAugust2026.researchInquiries,
     ...wowListProductFitAugust2026.researchInquiries,
     ...professionalRecordAugust2026.researchInquiries,
     ...nycacSocialPopulationJuly2026.researchInquiries,
@@ -561,7 +567,9 @@ const knowledgeBankInput = {
       "SRC-X-HELP-ACCOUNT-ARCHIVE",
       "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
       "SRC-NYCAC-FACEBOOK-POST-CENSUS-2026",
-      "SRC-NYCAC-FACEBOOK-POST-REPORT-2026"
+      "SRC-NYCAC-FACEBOOK-POST-REPORT-2026",
+      "SRC-JAMIE-NYCAC-SHOESTRING-ACCOUNT-2026",
+      "SRC-NYCAC-SHOESTRING-PHOTO-2017"
     ],
     occurrences: [
       { id: "cabaret-safety-organizing", claimId: "CLM-NYCAC-CABARET-SAFETY-ORGANIZING", projection: "case-study", sourceIds: ["SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19", "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-09-14"] },
@@ -575,6 +583,7 @@ const knowledgeBankInput = {
       { id: "coalition-participation-system", claimId: "CLM-NYCAC-PARTICIPATION-SYSTEM", projection: "case-study", sourceIds: ["SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026", "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19", "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"] },
       { id: "coalition-event-response-signals", claimId: "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SIGNALS", projection: "case-study", sourceIds: ["SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026"] },
       { id: "coalition-facebook-public-operating-record", claimId: "CLM-NYCAC-FACEBOOK-PUBLIC-OPERATING-RECORD", projection: "case-study", sourceIds: ["SRC-NYCAC-FACEBOOK-POST-CENSUS-2026", "SRC-NYCAC-FACEBOOK-POST-REPORT-2026"] },
+      { id: "shared-campaign-infrastructure", claimId: "CLM-NYCAC-SHARED-CAMPAIGN-INFRASTRUCTURE-2017", projection: "case-study", sourceIds: ["SRC-JAMIE-NYCAC-SHOESTRING-ACCOUNT-2026", "SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE", "SRC-NYCAC-SHOESTRING-PHOTO-2017"] },
       { id: "crs-campaign-memory-system", claimId: "CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026", projection: "case-study" },
       { id: "crs-provenance-redline", claimId: "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026", projection: "case-study" }
     ]
@@ -644,6 +653,7 @@ const knowledgeBankInput = {
     id: "wowlist",
     surface: "/work/wowlist",
     sourceOrder: [
+      "SRC-WOWLIST-PUBLIC-THRESHOLD-2026",
       "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026",
       "SRC-WOWLIST-X-POPULATION-MANIFEST",
       "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
@@ -657,6 +667,7 @@ const knowledgeBankInput = {
       "SRC-FACEBOOK-PERSONAL-WOWLIST-EVENT-CENSUS-2026"
     ],
     occurrences: [
+      { id: "public-threshold-2026", claimId: "CLM-WOWLIST-PUBLIC-THRESHOLD-2026", projection: "case-study", sourceIds: ["SRC-WOWLIST-PUBLIC-THRESHOLD-2026"] },
       { id: "production-scale", claimId: "CLM-WOWLIST-PRODUCTION-SCALE-2017", projection: "case-study", sourceIds: ["SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026"] },
       { id: "social-provenance-and-support", claimId: "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT", projection: "case-study", sourceIds: ["SRC-WOWLIST-X-POPULATION-MANIFEST", "SRC-WOWLIST-SUNDAY-DINNER-POST-2014", "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016", "SRC-WOWLIST-SHELBY-TUTORIAL-2015", "SRC-WOWLIST-SBDIY-ADOPTION"] },
       { id: "callscript-participation-continuity", claimId: "CLM-CALLSCRIPT-WOWLIST-NYCAC-CONTINUITY-2017", projection: "case-study", sourceIds: ["SRC-CALLSCRIPT-FACEBOOK-PAGE", "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017-01-27", "SRC-FB-JAMIE-DCLA-DIY-SPACES-EVENT-2017-01-25", "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026"] },
