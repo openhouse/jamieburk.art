@@ -1,8 +1,8 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-08-13T17:10:32.645Z",
+  "checkedAt": "2026-08-13T17:20:44.860Z",
   "baseUrl": "http://127.0.0.1:3056",
-  "publicSurfaceFingerprint": "1e37b0aa0676168ccbf49af092f8cd7a45bea5f7663d0e595a7e8698e1737da8",
+  "publicSurfaceFingerprint": "78a93fd1ed18fd5cf9762a0ae551a440f47c0f0002d79d065041db6af17f7914",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 119,
   "routes": [
@@ -843,8 +843,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionOverlapsPrimaryCopy": false,
-        "captionAndCreditSeparated": true
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
       },
       {
         "viewport": 375,
@@ -855,8 +855,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionOverlapsPrimaryCopy": false,
-        "captionAndCreditSeparated": true
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
       },
       {
         "viewport": 768,
@@ -867,8 +867,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionOverlapsPrimaryCopy": false,
-        "captionAndCreditSeparated": true
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
       },
       {
         "viewport": 1280,
@@ -879,14 +879,14 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionOverlapsPrimaryCopy": false,
-        "captionAndCreditSeparated": true
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
       }
     ],
     "passed": true
   },
   "navigationReview": {
-    "checkedAt": "2026-08-13T17:10:32.645Z",
+    "checkedAt": "2026-08-13T17:20:44.860Z",
     "startRoute": "/",
     "destinationRoute": "/about",
     "startHttpStatus": 200,

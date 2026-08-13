@@ -1,8 +1,8 @@
 {
   "reportVersion": 3,
-  "checkedAt": "2026-08-13T17:13:39.970Z",
-  "baseUrl": "http://127.0.0.1:3057",
-  "publicSurfaceFingerprint": "1e37b0aa0676168ccbf49af092f8cd7a45bea5f7663d0e595a7e8698e1737da8",
+  "checkedAt": "2026-08-13T17:20:55.454Z",
+  "baseUrl": "http://127.0.0.1:3056",
+  "publicSurfaceFingerprint": "78a93fd1ed18fd5cf9762a0ae551a440f47c0f0002d79d065041db6af17f7914",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 119,
   "captureMethod": "Playwright Chromium screenshots of the current built local candidate; About captures are deliberately framed on the through-line and current systems loops; no deployment or indexing action.",
@@ -20,7 +20,7 @@
           },
           "pixelWidth": 1280,
           "pixelHeight": 900,
-          "sha256": "48905c76fd9878a87e82dd6d749148140bd6a445ccf1765cd5beb0aaa04c5a85",
+          "sha256": "d44779c5d008a113393a46992d1f7f2d1014df8c7e8153babca34f01af6ae317",
           "file": "candidate-home-desktop.png"
         },
         {
