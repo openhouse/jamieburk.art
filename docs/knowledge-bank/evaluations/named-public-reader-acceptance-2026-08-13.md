@@ -10,11 +10,11 @@ review_by: 2026-08-14
 canonical_path: docs/knowledge-bank/evaluations/named-public-reader-acceptance-2026-08-13.md
 summary: Public-web-only modeled hiring acceptance gates for eight named reader-opportunity pairs, bounded against false participation, endorsement, prediction, or invented reporting lines.
 evaluation_type: named-public-reader-acceptance
-candidate_commit: 5115471c8ca476658b7d092ae5ab9ffe5e97fa5e
+candidate_commit: f8d31b0bfb4b3ccb1dda1c26cba00d18c61ab9b2
 public_origin: https://staging-b.jamieburk.art
 overall_result: fail
 required_pair_count: 8
-passed_pair_count: 1
+passed_pair_count: 0
 failure_modes:
   - A fictionalized lens is presented as the named person's real view, participation, endorsement, or hiring decision.
   - A public operational or vision leader is silently converted into a direct manager.
@@ -110,6 +110,21 @@ desktop and mobile. It found clear role positioning but delayed case summaries,
 late artifact access, repetitive evidence structures, and mobile reading
 burden. The origin later returned HTTP 502 across core routes, so availability
 also failed.
+
+## Post-hill-climb result
+
+The exact public candidate
+`f8d31b0bfb4b3ccb1dda1c26cba00d18c61ab9b2` passed the independent design,
+availability, responsive-layout, navigation, image-loading, and basic-usability
+checks. Role and value were clear within fifteen seconds, and supported
+responsibility, result, evidence, and artifact access now arrive before the long
+case narrative.
+
+The stricter named-reader rerun remained **fail: 0 of 8 required pairs**. The
+result does not assert that Jamie lacks the underlying ability. It records that
+the public candidate alone does not demonstrate every job-specific proof family
+needed for a final modeled hire decision. The separate machine-readable receipt
+preserves each reader's constructive critique and inspected routes.
 
 ## Hill-climb boundary
 

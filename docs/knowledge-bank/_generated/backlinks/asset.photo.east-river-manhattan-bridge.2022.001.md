@@ -3,7 +3,7 @@
 
 **Source commit:** `190ae5932ea089a50b21cffbf9e764802f457c59`
 **Generation time:** 2026-08-13T18:30:12-04:00
-**Source fingerprint:** `53aeaaa4e53be514917e76740477937c2cda187215cc830cdb6e22bac5caa325`
+**Source fingerprint:** `eb7a2fa77725905c6d19bbb8e8cf58572c53d2e6c4e8906b3cb4a063a8afc607`
 
 - [Add Elana Gordon's credit to the East River homepage occurrence](../../corrections/east-river-credit-2026-07.md) - `related_to` (frontmatter)
 - [Layout C homepage East River curatorial proposal](../../evaluations/curatorial/layout-c-home-east-river-v1.md) - `related_to` (frontmatter)

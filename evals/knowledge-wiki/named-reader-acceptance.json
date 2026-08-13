@@ -2,7 +2,7 @@
   "id": "named-public-reader-acceptance-2026-08-13",
   "schemaVersion": 1,
   "publicOrigin": "https://staging-b.jamieburk.art",
-  "currentRunPath": "evals/knowledge-wiki/runs/2026-08-13-launch-b-named-reader-baseline.json",
+  "currentRunPath": "evals/knowledge-wiki/runs/2026-08-13-launch-b-named-reader-post-hillclimb.json",
   "contract": {
     "publicOnly": true,
     "actualPeopleParticipated": false,

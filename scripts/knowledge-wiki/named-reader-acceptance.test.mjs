@@ -15,7 +15,7 @@ test("current named-reader receipt is coherent and honestly failing", () => {
   const result = validateNamedReaderAcceptance(repoRoot, { config, run });
   assert.deepEqual(result.issues, []);
   assert.equal(result.summary.overall, "fail");
-  assert.equal(result.summary.passedPairCount, 1);
+  assert.equal(result.summary.passedPairCount, 0);
 });
 
 test("named-reader receipt rejects false participation and missing coverage", () => {
