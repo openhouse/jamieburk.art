@@ -41,7 +41,7 @@ export function createMetadata({
           url: new URL("/opengraph-image", SITE_URL),
           width: 1200,
           height: 630,
-          alt: "Jamie Burkart - Technical Project Manager"
+          alt: "Jamie Burkart - Product leadership for public-facing systems"
         }
       ]
     },

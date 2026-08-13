@@ -9,8 +9,8 @@ sensitivity: low
 last_reviewed: 2026-07-26
 review_by: 2027-01-26
 canonical_path: docs/knowledge-bank/projections/photography/layout-c-home-east-river.md
-summary: Exact public occurrence binding the East River derivative to the Layout C homepage hero, crop, caption, credit, assertions, and release states.
-projection_status: active
+summary: Historical occurrence that bound the East River derivative to the superseded Layout C homepage hero.
+projection_status: deprecated
 portfolio_edition: edition.layout-c.2026-07
 asset: asset.photo.east-river-manhattan-bridge.2022.001
 derivative: derivative.photo.east-river.layout-c.v1
@@ -65,13 +65,14 @@ relations:
 
 # Layout C homepage East River occurrence
 
-This is the unit approved for public Git and staging review: exact image,
+This was the unit approved for public Git and staging review: exact image,
 transform, route, component, crop family, alt text, caption, credit, and
-surrounding first-viewport task.
+surrounding first-viewport task. The occurrence was superseded on August 12,
+2026, by the public-service product folio and is no longer rendered.
 
-Production publication and indexing remain open. If creator attribution,
-permission, caption basis, dignity review, or derivative identity changes, the
-occurrence fails closed until the affected records are reviewed again.
+Any future reuse requires a new current occurrence. Creator attribution,
+permission, caption basis, dignity review, and derivative identity remain in
+the historical record.
 
 ## Rollback
 

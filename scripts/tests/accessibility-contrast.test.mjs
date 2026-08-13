@@ -57,3 +57,16 @@ test("the lowest shared ink opacity remains AA on paper", () => {
   assert.ok(ink && paper);
   assert.ok(contrast(blend(ink, paper, 0.62), paper) >= 4.5);
 });
+
+test("folio progress marks and yellow-field actions retain AA contrast", () => {
+  const tokens = readFileSync(path.join(repoRoot, "apps/www/src/styles/tokens.css"), "utf8");
+  const globals = readFileSync(path.join(repoRoot, "apps/www/src/app/globals.css"), "utf8");
+  const rose = tokens.match(/--jb-classic-rose:\s*(#[0-9a-f]{6})/i)?.[1];
+  const ink = tokens.match(/--jb-oil-ink:\s*(#[0-9a-f]{6})/i)?.[1];
+  const paper = tokens.match(/--jb-oil-white:\s*(#[0-9a-f]{6})/i)?.[1];
+  const yellow = tokens.match(/--jb-lemon-yellow:\s*(#[0-9a-f]{6})/i)?.[1];
+  assert.ok(rose && ink && paper && yellow);
+  assert.ok(contrast(rose, paper) >= 4.5);
+  assert.ok(contrast(ink, yellow) >= 4.5);
+  assert.match(globals, /\.jb-next-move \.btn-outline\s*\{[\s\S]*?color:\s*var\(--jb-oil-ink\)/);
+});

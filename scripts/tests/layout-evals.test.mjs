@@ -19,7 +19,7 @@ test("a private archive identifier fails closed", () => {
 test("a missing caption fails the manifest contract", () => {
   const path = "apps/www/src/data/photography.ts";
   const source = readFileSync(path, "utf8").replace(
-    'caption: "At the East River beneath the Manhattan Bridge, 2022.",',
+    'caption:\n      "A collaborative planning field: needs, offers, questions, and possible actions made visible together.",',
     ""
   );
   const result = evaluateLayout(process.cwd(), { [path]: source });
@@ -32,5 +32,24 @@ test("a decorative gradient fails the material-system contract", () => {
   const source = `${readFileSync(path, "utf8")}\n.test { background: linear-gradient(red, blue); }\n`;
   const result = evaluateLayout(process.cwd(), { [path]: source });
   assert.equal(result.passed, false);
-  assert(result.failures.some(({ criterion }) => criterion === "human-index-material-system"));
+  assert(result.failures.some(({ criterion }) => criterion === "public-service-folio-material-system"));
+});
+
+test("a production authorization regression fails closed", () => {
+  const path = "apps/www/src/data/photography.ts";
+  const source = readFileSync(path, "utf8").replace(
+    'production: "approved",',
+    'production: "open",'
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "manifest-bound-publication"));
+});
+
+test("a FORM seed mismatch fails the persisted direction contract", () => {
+  const path = "apps/www/src/app/layout.tsx";
+  const source = readFileSync(path, "utf8").replace('seed: "603b707c"', 'seed: "drifted"');
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "direction-contract-persisted"));
 });

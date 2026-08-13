@@ -1,6 +1,5 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
-import { JBCard } from "@/components/JBCard";
 import { TagList } from "@/components/TagList";
 import type { WorkMeta } from "@/types/work";
 
@@ -15,7 +14,7 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
   ];
 
   return (
-    <section aria-labelledby="at-a-glance" className="rounded-lg bg-jb-blue p-5 text-jb-paper">
+    <section aria-labelledby="at-a-glance" className="bg-jb-blue p-5 text-jb-paper">
       <h2 className="text-xl font-semibold" id="at-a-glance">
         At a glance
       </h2>
@@ -47,10 +46,10 @@ export function ArtifactList({ item }: { item: WorkMeta }) {
       <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-list">
         Primary artifacts
       </h2>
-      <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+      <ul className="mt-4 border-t border-jb-ink/25 sm:grid sm:grid-cols-2">
         {item.artifactTypes.map((artifact) => (
           <li
-            className="rounded-lg border border-jb-ink/12 bg-jb-paper px-4 py-3 text-sm font-medium text-jb-ink"
+            className="border-b border-jb-ink/20 bg-jb-paper py-3 pr-4 text-sm font-medium text-jb-ink"
             key={artifact}
           >
             {artifact}
@@ -68,11 +67,11 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
         Artifact gallery
       </h2>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
-        {item.artifacts.map((artifact, index) => {
+        {item.artifacts.map((artifact) => {
           if (artifact.media) {
             return (
               <figure
-                className="overflow-hidden rounded-lg border border-jb-ink/15 bg-jb-paper shadow-sm md:col-span-2"
+                className="overflow-hidden border border-jb-ink/15 bg-jb-paper md:col-span-2"
                 key={artifact.title}
               >
                 <a className="block" href={artifact.media.href}>
@@ -90,12 +89,12 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
                   />
                 </a>
                 <figcaption className="border-t border-jb-ink/10 p-5">
-                  <p className="text-xs font-semibold uppercase text-jb-blue">
-                    {artifact.type} / 0{index + 1}
-                  </p>
-                  <h3 className="mt-2 text-xl font-semibold text-jb-ink">
+                  <h3 className="text-xl font-semibold text-jb-ink">
                     {artifact.title}
                   </h3>
+                  <p className="mt-2 text-xs font-semibold uppercase text-jb-blue">
+                    {artifact.type}
+                  </p>
                   <p className="mt-2 text-sm leading-6 text-jb-ink/74">
                     {artifact.description}
                   </p>
@@ -114,17 +113,17 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
           }
 
           return (
-            <JBCard className="jb-artifact-surface min-h-56" key={artifact.title}>
-              <p className="text-xs font-semibold uppercase text-jb-blue">
-                {artifact.type} / 0{index + 1}
-              </p>
-              <h3 className="mt-10 text-xl font-semibold text-jb-ink">
+            <article className="jb-artifact-surface min-h-56 border-t border-jb-ink/20 p-5" key={artifact.title}>
+              <h3 className="text-xl font-semibold text-jb-ink">
                 {artifact.title}
               </h3>
+              <p className="mt-2 text-xs font-semibold uppercase text-jb-blue">
+                {artifact.type}
+              </p>
               <p className="mt-3 text-sm leading-6 text-jb-ink/72">
                 {artifact.description}
               </p>
-            </JBCard>
+            </article>
           );
         })}
       </div>
@@ -144,12 +143,12 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
       <h2 className="text-2xl font-semibold text-jb-ink" id="scope-and-sources">
         Scope and sources
       </h2>
-      <div className="mt-5 grid gap-4 md:grid-cols-3">
+      <div className="mt-5 border-t border-jb-ink/25 md:grid md:grid-cols-3">
         {blocks.map(([label, text]) => (
-          <JBCard key={label}>
+          <div className="border-b border-jb-ink/20 py-5 pr-5" key={label}>
             <h3 className="text-lg font-semibold text-jb-blue">{label}</h3>
             <p className="mt-3 text-sm leading-6 text-jb-ink/72">{text}</p>
-          </JBCard>
+          </div>
         ))}
       </div>
       {item.sourceLayer ? (
@@ -158,7 +157,7 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
         </p>
       ) : null}
       {item.careNote || item.publicSafety?.note ? (
-        <details className="mt-4 max-w-4xl border-l-4 border-jb-ochre bg-jb-lemon/20 px-4 py-3 text-sm text-jb-ink/76">
+        <details className="mt-4 max-w-4xl border-y border-jb-ochre bg-jb-lemon/20 px-4 py-3 text-sm text-jb-ink/76">
           <summary className="cursor-pointer font-semibold text-jb-blue">
             Claim and care limits
           </summary>
@@ -188,7 +187,7 @@ function NoteBlock({
   }[tone];
 
   return (
-    <section className={`rounded-lg border p-5 ${styles}`}>
+    <section className={`border p-5 ${styles}`}>
       <h2 className="text-xl font-semibold text-jb-ink">{title}</h2>
       <div className="mt-3 text-sm leading-6 text-jb-ink/76">{children}</div>
     </section>
@@ -261,7 +260,7 @@ export function LinksList({ item }: { item: WorkMeta }) {
         {item.links.map((link) => (
           <li key={link.url}>
             <a
-              className="inline-flex rounded-lg border border-jb-ink/12 bg-jb-paper px-4 py-3 text-jb-blue hover:border-jb-blue/40 hover:text-jb-green"
+              className="inline-flex border-b-2 border-jb-blue py-2 text-jb-blue hover:border-jb-green hover:text-jb-green"
               href={link.url}
             >
               {link.label}

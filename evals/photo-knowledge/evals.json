@@ -20,6 +20,7 @@
     "permission_scope_exact_and_fail_closed",
     "caption_assertions_source_bound",
     "manifest_wiki_placement_alignment",
+    "portfolio_album_projection_governed",
     "revocation_and_rollback_available",
     "protected_absence_not_auto_filled",
     "recollection_does_not_auto_project",
@@ -52,7 +53,7 @@
     {
       "id": "selective_projection",
       "threshold": 1,
-      "description": "One canary becomes deeply governed while the remaining public photographs stay in a declared reconciliation queue and the site remains composed."
+      "description": "The historical canary remains governed, six owner-authorized portfolio selections are exact and source-bound, pending photographs fail closed, and the site remains composed."
     },
     {
       "id": "teammate_reproducibility",

@@ -1,23 +1,23 @@
 {
-  "reportVersion": 1,
-  "checkedAt": "2026-08-12T16:36:46.428Z",
+  "reportVersion": 2,
+  "checkedAt": "2026-08-13T01:09:13.732Z",
   "baseUrl": "http://127.0.0.1:3057",
-  "publicSurfaceFingerprint": "eef497de543aab662bdfb7d838c23d18060d76ce456ed1867e6ef14e5878eeda",
+  "publicSurfaceFingerprint": "b07e12824e0ff76922497020a979851b11494455cb7a49bb4b8b96537e0f79b4",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 118,
+  "publicSurfaceFileCount": 125,
   "method": "Playwright keyboard interaction plus bounded DOM and viewport inspection on the built local candidate. This is not a human screen-reader or assistive-technology session.",
   "keyboard": {
     "desktopTabSequence": [
       {
         "tag": "a",
-        "text": "Skiptocontent",
+        "text": "Skip to content",
         "href": "#main",
         "focusVisible": true,
         "id": null
       },
       {
         "tag": "a",
-        "text": "JBJamieBurkart",
+        "text": "Jamie Burkart",
         "href": "/",
         "focusVisible": true,
         "id": null
@@ -31,7 +31,7 @@
       },
       {
         "tag": "a",
-        "text": "TechnicalOperations",
+        "text": "Product Delivery",
         "href": "/work/technical-operations",
         "focusVisible": true,
         "id": null
@@ -192,7 +192,7 @@
       },
       {
         "level": 2,
-        "text": "Looking for technical project management, product operations, implementation, or knowledge-systems support?"
+        "text": "Let’s talk about the public product work."
       }
     ],
     "passed": true

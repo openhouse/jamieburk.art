@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 type JBButtonProps = {
   href: string;
   children: ReactNode;
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: "primary" | "secondary" | "ghost" | "inverse";
   download?: boolean;
 };
 
@@ -17,11 +17,13 @@ export function JBButton({
 }: JBButtonProps) {
   const className = {
     primary:
-      "btn btn-primary h-auto min-h-11 max-w-full whitespace-normal rounded-lg px-5 py-3 text-center leading-5 normal-case tracking-normal",
+      "btn btn-primary h-auto min-h-11 max-w-full whitespace-normal rounded-none px-5 py-3 text-center leading-5 normal-case tracking-normal",
     secondary:
-      "btn btn-outline h-auto min-h-11 max-w-full whitespace-normal rounded-lg border-jb-blue px-5 py-3 text-center leading-5 text-jb-blue normal-case tracking-normal hover:border-jb-blue hover:bg-jb-blue hover:text-jb-paper",
+      "btn btn-outline h-auto min-h-11 max-w-full whitespace-normal rounded-none border-jb-blue px-5 py-3 text-center leading-5 text-jb-blue normal-case tracking-normal hover:border-jb-blue hover:bg-jb-blue hover:text-jb-paper",
     ghost:
-      "btn btn-ghost h-auto min-h-11 max-w-full whitespace-normal rounded-lg px-5 py-3 text-center leading-5 text-jb-ink normal-case tracking-normal hover:bg-jb-sky/20"
+      "btn btn-ghost h-auto min-h-11 max-w-full whitespace-normal rounded-none px-5 py-3 text-center leading-5 text-jb-ink normal-case tracking-normal hover:bg-jb-sky/20",
+    inverse:
+      "btn h-auto min-h-11 max-w-full whitespace-normal rounded-none border-jb-paper bg-jb-paper px-5 py-3 text-center leading-5 text-jb-ink normal-case tracking-normal hover:border-jb-lemon hover:bg-jb-lemon hover:text-jb-ink"
   }[variant];
 
   if (href.startsWith("/")) {

@@ -898,6 +898,27 @@
       ]
     },
     {
+      "id": "SRC-ACTION-LAB-SBU-REPORT-LAUNCH-2026-07-29",
+      "title": "Small Business United release of Empty Storefronts, High Rents",
+      "organization": "The Action Lab / Small Business United",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-07-29",
+      "accessedAt": "2026-08-12",
+      "canonicalUrl": "https://actionlabny.org/events/small-business-united-rally",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "The Action Lab, 'Join Small Business United for the Release of Empty Storefronts, High Rents,' July 29, 2026.",
+      "publicNote": "Public event record for the report launch and Commercial Rent Stabilization advocacy gathering.",
+      "doesNotEstablish": [
+        "complete speaker roster",
+        "Jamie's delivered wording",
+        "published media placement",
+        "attendance total",
+        "legislative outcome"
+      ]
+    },
+    {
       "id": "SRC-NYCAC-X-RETRIEVABLE-POPULATION-2026",
       "title": "NYC Artist Coalition X retrievable-population manifest",
       "organization": "Jamie Burkart portfolio knowledge bank",
@@ -2464,6 +2485,58 @@
       ]
     },
     {
+      "id": "CLM-FAIRRENT-REPORT-REVIEW-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie completed a bounded pre-publication review of the 2026 Small Business United report; the released report acknowledges his contribution and incorporates documented corrections and limitations.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "The contribution was review, not co-authorship, report authorship, data-analysis ownership, or legal approval.",
+        "The report team retained final editorial authority and did not adopt every recommendation.",
+        "A credited review does not make Jamie responsible for every report claim or campaign recommendation."
+      ]
+    },
+    {
+      "id": "CLM-FAIRRENT-PUBLIC-SPEECH-2026-07-29",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "At the July 29, 2026, report launch, Jamie made the cultural-space case for Commercial Rent Stabilization, connecting predictable leases with the continuity and safety of neighborhood cultural infrastructure.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-ACTION-LAB-SBU-REPORT-LAUNCH-2026-07-29",
+          "relationship": "context",
+          "supports": [
+            "public event identity and purpose"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "This establishes public speaking, not a published interview, broadcast, or media placement.",
+        "The remarks support Jamie's advocacy position, not passage or enactment of legislation.",
+        "The event record does not establish audience size, complete speaker roster, or attributable campaign impact."
+      ]
+    },
+    {
       "id": "CLM-NYCAC-X-RETRIEVABLE-SOCIAL-INFRASTRUCTURE",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -2828,7 +2901,8 @@
         "SRC-X-HELP-ACCOUNT-ARCHIVE",
         "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
         "SRC-NYCAC-FACEBOOK-POST-CENSUS-2026",
-        "SRC-NYCAC-FACEBOOK-POST-REPORT-2026"
+        "SRC-NYCAC-FACEBOOK-POST-REPORT-2026",
+        "SRC-ACTION-LAB-SBU-REPORT-LAUNCH-2026-07-29"
       ],
       "occurrences": [
         {
@@ -2944,6 +3018,19 @@
           "id": "crs-provenance-redline",
           "claimId": "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026",
           "projection": "case-study"
+        },
+        {
+          "id": "small-business-united-report-review",
+          "claimId": "CLM-FAIRRENT-REPORT-REVIEW-2026",
+          "projection": "case-study"
+        },
+        {
+          "id": "small-business-united-public-remarks",
+          "claimId": "CLM-FAIRRENT-PUBLIC-SPEECH-2026-07-29",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-ACTION-LAB-SBU-REPORT-LAUNCH-2026-07-29"
+          ]
         }
       ]
     },

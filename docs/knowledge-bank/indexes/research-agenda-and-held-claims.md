@@ -5,7 +5,7 @@ kind: index
 status: governed-open
 visibility: public-safe
 sensitivity: moderate
-last_reviewed: 2026-07-19
+last_reviewed: 2026-08-12
 review_by: 2026-10-19
 canonical_path: docs/knowledge-bank/indexes/research-agenda-and-held-claims.md
 summary: Task-oriented queue for evidence debt, claim maturity, corrections, protected absences, rights, and selective projection.
@@ -77,6 +77,20 @@ Claim maturity is not publication permission.
   copyright, consent, context, and display permission.
 - **Protected absence:** do not create a research task merely to expose private
   context that is unnecessary to the professional account.
+
+## Fair Rent NYC recent-cycle queue
+
+- **Projection approval:** the report-review and July 29 public-speaking claims
+  are mature but remain unselected for portfolio surfaces.
+- **Official coordination:** retain the protected source lane until Jamie and,
+  where appropriate, counterparts approve any public wording or attribution.
+- **Media placement:** reopen the bounded not-recovered finding only when a
+  clipping, link, recording, newsroom confirmation, or other publication record
+  appears.
+- **Numerical correction:** reconcile 84,000 versus 8,400 with the originating
+  NYCEDC source before reusing the campaign statistic.
+- **Legislative status:** recheck A5568A, S8319, and Council Resolution 496 at
+  every publication date; introduced or active does not mean passed.
 
 ## Required shape for an open question
 

@@ -1,47 +1,52 @@
 {
-  "id": "portfolio-photography-layout-v1",
-  "title": "Human Index photographic portfolio layout",
-  "intent": "Photography changes the portfolio's editorial rhythm while remaining public-safe, accessible, and subordinate to human publication authority.",
+  "id": "portfolio-photography-layout-v2",
+  "title": "Public Service Briefing Folio photographic layout",
+  "intent": "Photography gives the product folio documentary specificity while remaining governed, accessible, and subordinate to human publication authority.",
   "criteria": [
     {
       "id": "manifest-bound-publication",
       "blocking": true,
-      "criterion": "Every field photograph is registered once in the public manifest with stable dimensions, alt text, caption, credit, placement, status, and boundary."
+      "criterion": "Every photograph remains registered with dimensions, alt text, caption, credit, placement, status, release state, and public-use boundary; the six source-album photographs retain Jamie-approved public Git, staging, production, indexing, and represented-person permission."
     },
     {
-      "id": "minimal-authorized-field",
+      "id": "authorized-public-field",
       "blocking": true,
-      "criterion": "The pre-launch layout uses only the fully bound, credited, Jamie-authorized East River derivative; unresolved archival images remain outside the public bundle."
+      "criterion": "The active product folio uses exactly the six selected, metadata-stripped source-album derivatives; the superseded East River record remains historical and is not silently reactivated."
     },
     {
       "id": "metadata-and-locator-safety",
       "blocking": true,
-      "criterion": "Public assets and source code contain no EXIF payload, private archive UUID, original camera filename, or protected filesystem path."
+      "criterion": "Public assets and source code contain no EXIF payload, private archive UUID, original camera filename, protected filesystem path, private People tag, or private album locator."
     },
     {
       "id": "editorial-not-decorative",
       "blocking": true,
-      "criterion": "The home photograph is full-bleed, unframed, credited, and editorially specific; About and Colophon remain text-led until additional images complete creator, credit, rights, caption, crop, and destination review."
+      "criterion": "The first surface is a split product proposition and working-session photograph; every additional photograph performs a specific case, fieldwork, maintenance, or operating-logistics role."
     },
     {
-      "id": "deliberate-absence",
+      "id": "deliberate-placement",
       "blocking": true,
-      "criterion": "Work, resume, and contact do not receive adjacent photographs merely to achieve coverage."
+      "criterion": "Every photographic occurrence is deliberate and governed; Work index, Resume, Contact, About, and Colophon remain text-led rather than receiving adjacent image coverage."
     },
     {
-      "id": "human-index-material-system",
+      "id": "public-service-folio-material-system",
       "blocking": true,
-      "criterion": "The Human Index palette is active and gradients, decorative orbs, and bokeh are absent."
+      "criterion": "The Public Service Briefing Folio palette and compressed display type are active while gradients, decorative orbs, bokeh, and generic SaaS styling remain absent."
     },
     {
       "id": "responsive-image-contract",
       "blocking": true,
-      "criterion": "Images use Next Image, explicit intrinsic dimensions or fill, stable aspect ratios, responsive sizes, and a viewport-bounded hero."
+      "criterion": "Images use Next Image, explicit intrinsic dimensions, stable aspect ratios, responsive sizes, manifest alt text, and viewport-bounded compositions."
     },
     {
       "id": "human-authority-remains-open",
       "blocking": true,
-      "criterion": "The design documentation states that automated scores and staging review do not replace human rights or production approval."
+      "criterion": "Design documentation states that access, automated evaluation, staging visibility, and repository inclusion do not confer publication permission and that Jamie retains publication and indexing authority."
+    },
+    {
+      "id": "direction-contract-persisted",
+      "blocking": true,
+      "criterion": "DESIGN.md and emitted root markup corroborate FORM seed 603b707c and the five-block world, mechanism, first-surface, signature, and craft-floor contract."
     }
   ]
 }

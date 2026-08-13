@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to NYC Artist Coalition organization map
 
-**Source commit:** `86b76844af306f49fe229e347f1bd87abb00af45`
-**Generation time:** 2026-08-12T12:40:09-04:00
-**Source fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
+**Source commit:** `2c62596a23f9a7171647d8d757dd0b3dbc145df5`
+**Generation time:** 2026-08-12T18:09:25-04:00
+**Source fingerprint:** `b6a33ac804b58c2b2b197420914cb44ed853b681e53a5817e63dbe2e12ecda30`
 
 - [Civic, cultural, and technical translation](../../capabilities/civic-cultural-and-technical-translation.md) - `prose_link` (markdown)
 - [Civic, cultural, and technical translation](../../capabilities/civic-cultural-and-technical-translation.md) - `related_to` (frontmatter)
@@ -24,6 +24,7 @@
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
 - [Small Cultural Spaces Where Culture Is Born](../../places/small-cultural-spaces.md) - `related_to` (frontmatter)
 - [Fair Rent NYC](../../projects/fair-rent-nyc.md) - `part_of` (frontmatter)
+- [Fair Rent NYC recent advocacy, July 13-August 12, 2026](../../projects/fair-rent-nyc-recent-advocacy-2026-08.md) - `related_to` (frontmatter)
 - [Let NYC Dance](../../projects/let-nyc-dance.md) - `part_of` (frontmatter)
 - [Office of Nightlife town halls](../../projects/office-of-nightlife-town-halls.md) - `part_of` (frontmatter)
 - [Save NYC Spaces](../../projects/save-nyc-spaces.md) - `part_of` (frontmatter)

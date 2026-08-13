@@ -7,15 +7,12 @@ type StatusBadgeProps = {
 
 export function StatusBadge({ status, visibility }: StatusBadgeProps) {
   return (
-    <div className="flex flex-wrap gap-2 text-xs font-semibold uppercase">
+    <div className="flex flex-wrap gap-2 text-xs font-semibold uppercase text-jb-gray">
       {status ? (
-        <span className="border-l-2 border-jb-green pl-2 text-jb-green">{status}</span>
+        <span>{status}</span>
       ) : null}
-      {visibility ? (
-        <span className="border-l-2 border-jb-blue pl-2 text-jb-blue">
-          {visibility}
-        </span>
-      ) : null}
+      {status && visibility ? <span aria-hidden="true">/</span> : null}
+      {visibility ? <span>{visibility}</span> : null}
     </div>
   );
 }

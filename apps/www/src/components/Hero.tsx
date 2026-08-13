@@ -1,61 +1,50 @@
-import Image from "next/image";
 import Link from "next/link";
+import { FieldPhoto } from "@/components/FieldPhoto";
 import { portfolioPhotos } from "@/data/photography";
 
 export function Hero() {
-  const photo = portfolioPhotos.eastRiver;
-
   return (
-    <section className="jb-hero" aria-labelledby="home-title">
-      <div className="jb-hero-image">
-        <Image
-          alt={photo.alt}
-          className="object-cover object-[73%_center] sm:object-center"
-          fill
-          priority
-          sizes="100vw"
-          src={photo.src}
-        />
-      </div>
-      <div className="jb-frame jb-hero-content">
-        <div>
-          <p className="jb-eyebrow text-white/82">
-            Technical Project Manager - Product Operations & Implementation
-          </p>
-          <h1
-            className="mt-5 font-display text-6xl font-medium leading-[0.96] text-white sm:text-7xl"
-            id="home-title"
-          >
-            Jamie Burkart
+    <section className="jb-product-hero" aria-labelledby="home-title">
+      <div className="jb-frame jb-product-hero-grid">
+        <div className="jb-product-hero-copy">
+          <h1 id="home-title">
+            <span className="jb-product-hero-title">
+              Product leadership for public-facing systems.
+            </span>
           </h1>
-          <p className="mt-6 max-w-2xl text-2xl font-semibold leading-snug text-white sm:text-3xl">
-            I help emerging work become usable systems.
+          <p className="jb-product-hero-name">Jamie Burkart</p>
+          <p className="jb-product-hero-lede">
+            I turn ambiguous public problems into services people can navigate—
+            from discovery and prototyping through launch, measurement, and handoff.
           </p>
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-white/84 sm:text-xl">
-            I work with public-facing teams to clarify requirements, build
-            workflows and tools, carry context through implementation, and
-            leave behind documentation people can use.
+          <p className="jb-product-hero-context">
+            Senior product management, technical delivery, and operating structure
+            for cross-functional teams.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              className="inline-flex min-h-11 items-center bg-white px-5 py-3 font-semibold text-jb-ink hover:bg-jb-sky"
-              href="/work"
-            >
-              View selected work
+          <div className="jb-product-hero-actions">
+            <Link className="jb-action jb-action-primary" href="/work/technical-operations">
+              See product delivery
             </Link>
-            <Link
-              className="inline-flex min-h-11 items-center border border-white/70 px-5 py-3 font-semibold text-white hover:bg-white hover:text-jb-ink"
-              href="/resume"
-            >
+            <Link className="jb-action jb-action-secondary" href="/resume">
               View resume
             </Link>
           </div>
         </div>
+        <FieldPhoto
+          className="jb-product-hero-photo"
+          imageClassName="aspect-[3/2] object-[52%_45%] lg:aspect-[1.2/1]"
+          photo={portfolioPhotos.publicWorkConversation}
+          priority
+          sizes="(max-width: 1023px) 100vw, 48vw"
+        />
       </div>
-      <p className="jb-hero-caption">
-        <span className="block">{photo.caption}</span>
-        <span className="mt-1 block text-white/92">{photo.credit}</span>
-      </p>
+      <div className="jb-product-hero-rail" aria-label="Product delivery lifecycle">
+        <div className="jb-frame grid md:grid-cols-3">
+          <p><strong>01</strong> Discover <span aria-hidden="true">→</span> define</p>
+          <p><strong>02</strong> Prototype <span aria-hidden="true">→</span> launch</p>
+          <p><strong>03</strong> Measure <span aria-hidden="true">→</span> hand off</p>
+        </div>
+      </div>
     </section>
   );
 }

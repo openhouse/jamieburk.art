@@ -298,6 +298,7 @@ export const agencyRelationSchema = z.object({
     "co-hosted",
     "convened",
     "co-developed-and-presented",
+    "reviewed",
     "served-as-developer-contact",
     "transitioned-stewardship-to",
     "recommended-for-funding",

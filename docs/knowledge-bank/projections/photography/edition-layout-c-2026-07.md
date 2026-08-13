@@ -9,8 +9,8 @@ sensitivity: low
 last_reviewed: 2026-07-26
 review_by: 2027-01-26
 canonical_path: docs/knowledge-bank/projections/photography/edition-layout-c-2026-07.md
-summary: Dated staging edition for the Layout C composition, binding its East River occurrence and deliberate resume-route protected absence without claiming timeless finality.
-projection_status: active
+summary: Superseded dated staging edition for the Layout C composition, preserving its East River occurrence and deliberate resume-route protected absence.
+projection_status: deprecated
 candidate_lineage:
   base_branch: features/layout-C
   base_commit: fea303e54c6b5fae36caee872a2a7450501f9e11
@@ -43,8 +43,8 @@ relations:
 # Layout C photographic portfolio edition
 
 This page records a dated portfolio edition, not a final interpretation of the
-archive. Its active status means the occurrence is present in the branch and
-staging candidate. It does not mean production or indexing is approved.
+archive. The edition was superseded on August 12, 2026, and remains as
+historical lineage rather than a current staging candidate.
 
 The edition includes one governed homepage occurrence and one deliberate
 no-photo decision for the résumé route. Other Layout C images remain visible in

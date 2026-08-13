@@ -1,153 +1,173 @@
 import Link from "next/link";
 import type { Route } from "next";
-import { CapabilityGrid } from "@/components/CapabilityGrid";
 import { ContactCTA } from "@/components/ContactCTA";
+import { FieldPhoto } from "@/components/FieldPhoto";
 import { Hero } from "@/components/Hero";
-import { ProofStrip } from "@/components/ProofStrip";
-import { WorkCard } from "@/components/WorkCard";
-import { featuredWork } from "@/data/work";
+import { portfolioPhotos } from "@/data/photography";
 
-const transformations = [
-  ["Emerging stakeholder context", "shared decision records"],
-  ["Public data awaiting translation", "civic guidance and source maps"],
-  ["Long-running operations", "maintainable e-commerce workflows"],
-  ["Recurring community gatherings", "repeatable participation infrastructure"]
-];
-
-const startHereLinks = [
+const productLanes = [
   {
-    href: "/work/technical-operations",
-    label: "Technical Operations & Implementation",
-    note: "The fastest role-fit proof surface for public-sector technical operations, product operations, implementation, and delivery coordination."
+    number: "01",
+    title: "Find the real problem",
+    body: "Listen across residents, operators, subject-matter experts, and decision-makers; frame needs, risks, and the smallest useful release."
   },
   {
-    href: "/work/harry-j-epstein",
-    label: "Harry J. Epstein Company",
-    note: "Legacy e-commerce, analytics, content, marketing, and operations modernization."
+    number: "02",
+    title: "Make the path testable",
+    body: "Turn complex policy, data, and operating context into flows, prototypes, requirements, decision records, and launch plans."
   },
   {
-    href: "/work/fair-rent-nyc",
-    label: "FairRentNYC / Commercial Rent Stabilization",
-    note: "Campaign memory, source maps, public-data framing, and coalition operations."
-  },
-  {
-    href: "/work/callnyc",
-    label: "CallNYC.org",
-    note: "Civic open data translated into resident-facing guidance."
-  },
-  {
-    href: "/resume",
-    label: "Resume",
-    note: "PDF for applications and hiring workflows."
+    number: "03",
+    title: "Ship what can last",
+    body: "Coordinate delivery, learn from use, surface failure honestly, and leave documentation, ownership, and metrics behind."
   }
 ];
+
+const cases = [
+  {
+    name: "WOW List",
+    href: "/work/wowlist",
+    title: "A community platform built around how culture actually travels.",
+    body: "I co-built the product model and platform that let people follow local arts and music through keywords, places, and trusted community signals.",
+    proof: "Product model · platform delivery · community adoption",
+    className: "jb-case-wow"
+  },
+  {
+    name: "CallNYC",
+    href: "/work/callnyc",
+    title: "Public data translated into a resident-facing route.",
+    body: "I designed an independent civic prototype that turned government records into issue- and place-based next steps people could understand and act on.",
+    proof: "Problem framing · information architecture · working prototype",
+    className: "jb-case-callnyc"
+  },
+  {
+    name: "Fair Rent NYC",
+    href: "/work/fair-rent-nyc",
+    title: "Policy work made legible, coordinated, and public.",
+    body: "As an organizer working collectively, I have built campaign websites, coalition memory, source maps, public materials, and current report-review and speaking contributions.",
+    proof: "Public launch · stakeholder translation · governed evidence",
+    className: "jb-case-fairrent"
+  }
+] as const;
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <section className="jb-frame py-16">
-        <div className="grid gap-10 lg:grid-cols-[0.36fr_0.64fr]">
-          <div className="jb-reading">
-            <p className="jb-section-label">Start here</p>
-            <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
-              Quick path through the portfolio
-            </h2>
-            <p className="mt-4 leading-8 text-jb-ink/76">
-              New to my work? These pages give the clearest route through the
-              site for hiring managers, referrers, civic-tech peers, and
-              collaborators.
+
+      <section className="jb-frame jb-product-lanes" aria-labelledby="what-i-lead">
+        <div className="jb-product-section-intro">
+          <h2 id="what-i-lead">What I lead</h2>
+          <p>
+            The whole path from a consequential, loosely defined need to a public
+            service with a team, an operating rhythm, and an accountable next step.
+          </p>
+        </div>
+        <ol>
+          {productLanes.map((lane) => (
+            <li key={lane.number}>
+              <span>{lane.number}</span>
+              <h3>{lane.title}</h3>
+              <p>{lane.body}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section className="jb-casebook" aria-labelledby="selected-product-work">
+        <div className="jb-frame">
+          <div className="jb-casebook-heading">
+            <h2 id="selected-product-work">Three products. One operating instinct.</h2>
+            <p>
+              Make complexity navigable without flattening the people, evidence,
+              policy, or maintenance work inside it.
             </p>
           </div>
-          <div>
-            {startHereLinks.map((item) => (
-              <Link
-                className="jb-index-link group hover:text-jb-blue sm:grid-cols-[0.42fr_0.58fr] sm:items-baseline"
-                href={item.href as Route}
-                key={item.href}
-              >
-                <span className="text-lg font-semibold text-jb-blue group-hover:text-jb-green">
-                  {item.label}
-                </span>
-                <span className="block text-sm leading-6 text-jb-ink/70">
-                  {item.note}
-                </span>
-              </Link>
-            ))}
+
+          <article className="jb-case-feature jb-case-wow">
+            <div className="jb-case-copy">
+              <h3><span>{cases[0].name}:</span> {cases[0].title}</h3>
+              <div className="jb-case-evidence-field" aria-hidden="true">
+                <span>NEEDS</span><span>OFFERS</span><span>PLACES</span><span>NEXT MOVES</span>
+              </div>
+              <p className="jb-case-body">{cases[0].body}</p>
+              <p className="jb-case-proof">{cases[0].proof}</p>
+              <Link href={cases[0].href as Route}>Read the WOW List case <span aria-hidden="true">→</span></Link>
+            </div>
+            <FieldPhoto
+              imageClassName="aspect-[3/2]"
+              photo={portfolioPhotos.collectiveSynthesis}
+              sizes="(max-width: 1023px) 100vw, 52vw"
+            />
+          </article>
+
+          <div className="jb-case-pair">
+            <article className="jb-case-feature jb-case-callnyc">
+              <FieldPhoto
+                imageClassName="aspect-[1.55/1] object-[center_42%]"
+                photo={portfolioPhotos.callNycInterface}
+                sizes="(max-width: 1023px) 100vw, 48vw"
+              />
+              <div className="jb-case-copy">
+                <h3><span>{cases[1].name}:</span> {cases[1].title}</h3>
+                <p className="jb-case-body">{cases[1].body}</p>
+                <p className="jb-case-proof">{cases[1].proof}</p>
+                <Link href={cases[1].href as Route}>Read the CallNYC case <span aria-hidden="true">→</span></Link>
+              </div>
+            </article>
+            <article className="jb-case-feature jb-case-fairrent">
+              <FieldPhoto
+                imageClassName="aspect-[1.55/1] object-[center_58%]"
+                photo={portfolioPhotos.fairRentMaterials}
+                sizes="(max-width: 1023px) 100vw, 48vw"
+              />
+              <div className="jb-case-copy">
+                <h3><span>{cases[2].name}:</span> {cases[2].title}</h3>
+                <p className="jb-case-body">{cases[2].body}</p>
+                <p className="jb-case-proof">{cases[2].proof}</p>
+                <Link href={cases[2].href as Route}>Read the Fair Rent case <span aria-hidden="true">→</span></Link>
+              </div>
+            </article>
           </div>
         </div>
       </section>
-      <ProofStrip />
-      <CapabilityGrid />
-      <section className="jb-frame py-16">
-        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div className="jb-reading">
-            <p className="jb-section-label">Selected systems</p>
-            <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
-              Proof across operating, civic, and community systems
-            </h2>
-            <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: emerging, high-context
-              work becoming usable systems, public-facing tools,
-              documentation, decision trails, and durable handoffs.
-            </p>
-          </div>
-          <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
-            View all work
+
+      <section className="jb-frame jb-method-field" aria-labelledby="built-for-reality">
+        <div className="jb-method-copy">
+          <h2 id="built-for-reality">Built for reality, including what happens after launch.</h2>
+          <p>
+            I bring a product manager’s sequencing, a technical lead’s fluency,
+            and an operator’s respect for maintenance. Documentation is not the
+            residue of delivery; it is part of how ownership moves.
+          </p>
+          <Link className="jb-text-link" href="/work/technical-operations">
+            Explore the full delivery practice <span aria-hidden="true">→</span>
           </Link>
         </div>
-        <div className="mt-8">
-          {featuredWork.map((item) => (
-            <WorkCard item={item} key={item.slug} />
-          ))}
+        <div className="jb-method-photos">
+          <FieldPhoto
+            imageClassName="aspect-[4/3]"
+            photo={portfolioPhotos.materialRepair}
+            sizes="(max-width: 1023px) 100vw, 36vw"
+          />
+          <FieldPhoto
+            imageClassName="aspect-[3/4]"
+            photo={portfolioPhotos.inventiveLogistics}
+            sizes="(max-width: 1023px) 70vw, 23vw"
+          />
         </div>
       </section>
-      <section className="border-y border-jb-ink/15 bg-jb-warm py-16">
-        <div className="jb-frame grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="jb-reading">
-            <p className="jb-section-label">Operating motif</p>
-            <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
-              Structure grows from the material
-            </h2>
-            <p className="mt-4 leading-8 text-jb-ink/76">
-              The projects differ, but the move is consistent: clarify what is
-              known, protect what should stay private, and leave behind material
-              people can act on.
+
+      <section className="jb-next-move">
+        <div className="jb-frame grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+          <h2>Need someone who can enter complexity and leave a usable system?</h2>
+          <div>
+            <p>
+              I am looking for senior product and technical delivery roles in
+              public service, civic technology, and mission-driven organizations.
             </p>
+            <div className="mt-6"><ContactCTA compact /></div>
           </div>
-          <ol className="border-t border-jb-ink/20">
-            {transformations.map(([from, to], index) => (
-              <li
-                className="grid gap-2 border-b border-jb-ink/20 py-5 sm:grid-cols-[3rem_1fr_auto_1fr] sm:items-baseline"
-                key={from}
-              >
-                <span className="font-label text-sm text-jb-blue">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <p className="font-semibold text-jb-ink">{from}</p>
-                <span className="hidden text-jb-blue sm:block">becomes</span>
-                <p className="font-semibold text-jb-green">{to}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-      <section className="jb-frame grid gap-8 py-16 lg:grid-cols-[0.8fr_1.2fr]">
-        <div>
-          <p className="jb-section-label">How I work</p>
-          <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
-            Listen. Map. Build. Document. Transfer.
-          </h2>
-        </div>
-        <div className="space-y-7">
-          <p className="text-xl leading-9 text-jb-ink/78">
-            I usually enter when the work is important but loosely defined. I
-            listen across stakeholders, map what is known and unknown, create
-            the workflows or documentation the team needs, support launch or
-            adoption, and leave behind materials that make the work easier to
-            maintain.
-          </p>
-          <ContactCTA />
         </div>
       </section>
     </>

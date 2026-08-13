@@ -202,9 +202,9 @@ const workItemsInput = [
     series: "Civic Systems",
     subtitle: "Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization",
     summary:
-      "As a founding member and organizer of NYC Artist Coalition, implemented and maintained campaign websites and helped build coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability.",
-    role: "Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead",
-    years: "2017-Present",
+      "NPR described Jamie as a founding member of NYC Artist Coalition; as an organizer working collectively, he implemented and maintained campaign websites and helped build coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability.",
+    role: "Organizer · Civic Systems and Policy Communications",
+    years: "2017–2026 documented activity",
     status: "Full case study",
     featured: true,
     priority: 2,

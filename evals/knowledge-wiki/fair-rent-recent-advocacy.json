@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "id": "fair-rent-recent-advocacy-2026-08-12",
+  "objective": "Preserve the July 13-August 12, 2026 Fair Rent NYC advocacy cycle as a governed source-to-observation-to-claim-to-agency path without inflating review into authorship, public speaking into media placement, office coordination into endorsement, or pending legislation into passage.",
+  "candidate": {
+    "branch": "feature/launch-2026-08-12-C",
+    "baseCommit": "780d2b898de899445b11e922c4a34fddd40bbd3c",
+    "knowledgeModule": "apps/www/src/data/knowledge-bank/fair-rent-recent-advocacy-2026-08.ts",
+    "projectDocument": "docs/knowledge-bank/projects/fair-rent-nyc-recent-advocacy-2026-08.md",
+    "knowledgeModuleSha256": "70276304e2154b393e05b3f474831fa91c70aed7a9c1f15558e6c7943047db6b",
+    "projectDocumentSha256": "15ac6f643b171b7af7520ad6c2f3c9b16203d5ff66ca35f78abe8ffc40eefb6d"
+  },
+  "required": {
+    "claimIds": [
+      "CLM-FAIRRENT-REPORT-REVIEW-2026",
+      "CLM-FAIRRENT-PUBLIC-SPEECH-2026-07-29",
+      "CLM-FAIRRENT-RECENT-OFFICIAL-COORDINATION-2026-08",
+      "CLM-FAIRRENT-CURRENT-LEGISLATIVE-STATUS-2026-08-12",
+      "CLM-SBU-CAROUSEL-COUNT-CONFLICT-2026-08",
+      "CLM-FAIRRENT-PRESS-PLACEMENT-NOT-RECOVERED-2026"
+    ],
+    "agencyRelationIds": [
+      "REL-JAMIE-SBU-REPORT-REVIEW-2026",
+      "REL-JAMIE-SBU-REPORT-LAUNCH-SPEECH-2026"
+    ],
+    "correctionId": "COR-SBU-CAROUSEL-BUSINESS-CLOSURES-2026-08",
+    "publicProjectionAuthorized": false
+  }
+}

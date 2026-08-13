@@ -1,235 +1,138 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-06T10:15:27Z",
-  "title": "Design System: Jamie Burkart Portfolio",
+  "generatedAt": "2026-08-12T23:51:41Z",
+  "title": "Design System: Public Service Briefing Folio",
   "extensions": {
+    "formDirection": {
+      "seed": "603b707c",
+      "world": "public-service-briefing-folio",
+      "mechanism": "complex-public-work-to-traceable-decisions-and-usable-systems",
+      "firstSurface": "product-ownership-public-service-judgment-shipping-fluency",
+      "signature": "evidence-rail-and-documentary-folio-field",
+      "craftFloor": "no-eyebrows-card-grids-gradients-fake-technical-chrome-or-decorative-metrics"
+    },
     "colorMeta": {
-      "broadway-blue": {
-        "role": "primary",
-        "displayName": "Broadway Blue",
-        "canonical": "#0b5f81",
-        "tonalRamp": [
-          "oklch(15% 0.055 230)",
-          "oklch(26% 0.075 230)",
-          "oklch(37% 0.095 230)",
-          "oklch(48% 0.105 230)",
-          "oklch(60% 0.09 230)",
-          "oklch(72% 0.065 230)",
-          "oklch(84% 0.04 230)",
-          "oklch(95% 0.018 230)"
-        ]
-      },
-      "oil-white": {
-        "role": "neutral",
-        "displayName": "Oil White",
-        "canonical": "#eeefec",
-        "tonalRamp": [
-          "oklch(18% 0.006 110)",
-          "oklch(30% 0.007 110)",
-          "oklch(42% 0.008 110)",
-          "oklch(55% 0.009 110)",
-          "oklch(68% 0.01 110)",
-          "oklch(80% 0.011 110)",
-          "oklch(90% 0.012 110)",
-          "oklch(96% 0.012 110)"
-        ]
-      },
-      "oil-paper": {
-        "role": "neutral",
-        "displayName": "Oil Paper",
-        "canonical": "#f7f4ee",
-        "tonalRamp": [
-          "oklch(18% 0.01 85)",
-          "oklch(30% 0.012 85)",
-          "oklch(42% 0.014 85)",
-          "oklch(55% 0.016 85)",
-          "oklch(68% 0.018 85)",
-          "oklch(81% 0.02 85)",
-          "oklch(91% 0.022 85)",
-          "oklch(97% 0.022 85)"
-        ]
-      },
-      "oil-ink": {
-        "role": "neutral",
-        "displayName": "Oil Ink",
-        "canonical": "#343435",
-        "tonalRamp": [
-          "#1c1c1d",
-          "#272728",
-          "#343435",
-          "#4a4a4b",
-          "#626263",
-          "#818182",
-          "#b5b5b5",
-          "#ececec"
-        ]
-      },
-      "deep-green": {
-        "role": "secondary",
-        "displayName": "Deep Green",
-        "canonical": "#1f5c3e",
-        "tonalRamp": [
-          "oklch(15% 0.05 150)",
-          "oklch(26% 0.07 150)",
-          "oklch(37% 0.085 150)",
-          "oklch(48% 0.09 150)",
-          "oklch(60% 0.075 150)",
-          "oklch(72% 0.055 150)",
-          "oklch(84% 0.035 150)",
-          "oklch(95% 0.016 150)"
-        ]
-      },
-      "yellow-ochre": {
-        "role": "accent",
-        "displayName": "Yellow Ochre",
-        "canonical": "#e9b64e",
-        "tonalRamp": [
-          "oklch(20% 0.06 82)",
-          "oklch(32% 0.08 82)",
-          "oklch(44% 0.1 82)",
-          "oklch(56% 0.12 82)",
-          "oklch(68% 0.125 82)",
-          "oklch(78% 0.1 82)",
-          "oklch(88% 0.065 82)",
-          "oklch(96% 0.03 82)"
-        ]
-      }
+      "broadway-blue": { "role": "primary", "displayName": "Broadway Blue", "canonical": "#0e62a3" },
+      "oil-white": { "role": "neutral", "displayName": "Oil White", "canonical": "#fffdf7" },
+      "warm-paper": { "role": "neutral", "displayName": "Warm Paper", "canonical": "#f2eee4" },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#101b20" },
+      "graphite": { "role": "neutral", "displayName": "Graphite", "canonical": "#4d5d61" },
+      "deep-green": { "role": "secondary", "displayName": "Deep Green", "canonical": "#1f6b53" },
+      "dark-field": { "role": "neutral", "displayName": "Dark Field", "canonical": "#18252a" },
+      "yellow-ochre": { "role": "accent", "displayName": "Yellow Ochre", "canonical": "#d7a615" },
+      "signal-yellow": { "role": "accent", "displayName": "Signal Yellow", "canonical": "#f4c447" },
+      "pale-orange": { "role": "tertiary", "displayName": "Pale Orange", "canonical": "#f5d7ca" },
+      "pale-blue": { "role": "tertiary", "displayName": "Pale Blue", "canonical": "#d9eaf2" },
+      "progress-rose": { "role": "accent", "displayName": "Progress Rose", "canonical": "#c63b21" }
     },
     "typographyMeta": {
-      "display": {
-        "displayName": "Display",
-        "purpose": "Hero identity and major page titles only."
-      },
-      "headline": {
-        "displayName": "Headline",
-        "purpose": "Section headers and case-study landmarks."
-      },
-      "body": {
-        "displayName": "Body",
-        "purpose": "Long summaries, notes, care language, and MDX case-study prose."
-      }
+      "display": { "displayName": "Display", "purpose": "Page propositions and major section arguments; capped at 6rem." },
+      "body": { "displayName": "Body", "purpose": "Fast, warm reading for evidence and operational prose." },
+      "label": { "displayName": "Label", "purpose": "Compact evidence, stage, and action language." }
     },
     "shadows": [
       {
-        "name": "quiet-surface-shadow",
-        "value": "shadow-sm",
-        "purpose": "Low-contrast lift for cards or representative artifact panels only."
+        "name": "mobile-menu-overlay",
+        "value": "0 10px 15px -3px rgb(16 27 32 / 0.10), 0 4px 6px -4px rgb(16 27 32 / 0.10)",
+        "purpose": "Temporary mobile navigation overlay only; documentary surfaces remain flat."
       }
     ],
     "motion": [
       {
-        "name": "state-transition",
-        "value": "160ms ease",
-        "purpose": "Small state changes such as skip-link reveal and hover feedback."
-      },
-      {
         "name": "reduced-motion",
         "value": "@media (prefers-reduced-motion: reduce)",
-        "purpose": "Disable animation and smooth scrolling for users requesting reduced motion."
+        "purpose": "Disable nonessential animation and smooth scrolling when requested."
       }
     ],
     "breakpoints": [
-      {
-        "name": "sm",
-        "value": "640px"
-      },
-      {
-        "name": "md",
-        "value": "768px"
-      },
-      {
-        "name": "lg",
-        "value": "1024px"
-      }
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
     ]
   },
   "components": [
     {
-      "name": "Primary Button",
+      "name": "Primary Action",
       "kind": "button",
-      "refersTo": "button-primary",
-      "description": "Main forward action for work, resume, and contact paths.",
-      "html": "<button class=\"ds-button-primary\">View selected work</button>",
-      "css": ".ds-button-primary { background: var(--jb-broadway-blue, #0b5f81); color: var(--jb-oil-white, #eeefec); border: 1px solid var(--jb-broadway-blue, #0b5f81); border-radius: 0.35rem; padding: 0.75rem 1rem; font-family: Karla, ui-sans-serif, system-ui, sans-serif; font-size: 1rem; font-weight: 700; line-height: 1.2; transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease; } .ds-button-primary:hover { background: var(--jb-deep-green, #1f5c3e); border-color: var(--jb-deep-green, #1f5c3e); } .ds-button-primary:focus-visible { outline: 3px solid var(--jb-yellow-ochre, #e9b64e); outline-offset: 3px; }"
+      "refersTo": "jb-action-primary",
+      "description": "Square, high-contrast next action for product proof and contact paths.",
+      "html": "<a class=\"ds-action-primary\" href=\"#\">See product delivery</a>",
+      "css": ".ds-action-primary { display:inline-flex; align-items:center; justify-content:center; min-height:3rem; padding:.8rem 1.15rem; border:2px solid #101b20; border-radius:0; background:#101b20; color:#fffdf7; font:750 1rem/1.15 Karla,ui-sans-serif,system-ui,sans-serif; } .ds-action-primary:hover { background:#0e62a3; border-color:#0e62a3; } .ds-action-primary:focus-visible { outline:3px solid #d7a615; outline-offset:3px; }"
     },
     {
-      "name": "Secondary Button",
+      "name": "Secondary Action",
       "kind": "button",
-      "refersTo": "button-secondary",
-      "description": "Quiet secondary route for resume and supporting actions.",
-      "html": "<button class=\"ds-button-secondary\">Download resume</button>",
-      "css": ".ds-button-secondary { background: var(--jb-oil-paper, #f7f4ee); color: var(--jb-oil-ink, #343435); border: 1px solid rgba(52, 52, 53, 0.2); border-radius: 0.35rem; padding: 0.75rem 1rem; font-family: Karla, ui-sans-serif, system-ui, sans-serif; font-size: 1rem; font-weight: 700; line-height: 1.2; transition: border-color 160ms ease, color 160ms ease; } .ds-button-secondary:hover { border-color: var(--jb-broadway-blue, #0b5f81); color: var(--jb-broadway-blue, #0b5f81); } .ds-button-secondary:focus-visible { outline: 3px solid var(--jb-yellow-ochre, #e9b64e); outline-offset: 3px; }"
+      "refersTo": "jb-action-secondary",
+      "description": "Square paper action for a supporting route.",
+      "html": "<a class=\"ds-action-secondary\" href=\"#\">View resume</a>",
+      "css": ".ds-action-secondary { display:inline-flex; align-items:center; justify-content:center; min-height:3rem; padding:.8rem 1.15rem; border:2px solid #101b20; border-radius:0; background:#fffdf7; color:#101b20; font:750 1rem/1.15 Karla,ui-sans-serif,system-ui,sans-serif; } .ds-action-secondary:hover { background:#f4c447; } .ds-action-secondary:focus-visible { outline:3px solid #d7a615; outline-offset:3px; }"
     },
     {
-      "name": "Status Chip",
-      "kind": "chip",
-      "refersTo": "status-chip",
-      "description": "Compact public-safety and page-status metadata.",
-      "html": "<span class=\"ds-status-chip\">Public-safe summary only</span>",
-      "css": ".ds-status-chip { display: inline-flex; align-items: center; width: fit-content; border: 1px solid rgba(52, 52, 53, 0.18); border-radius: 999px; background: var(--jb-oil-white, #eeefec); color: var(--jb-oil-ink, #343435); padding: 0.35rem 0.65rem; font-family: Karla, ui-sans-serif, system-ui, sans-serif; font-size: 0.8125rem; font-weight: 700; line-height: 1.1; }"
+      "name": "Evidence Rail",
+      "kind": "sequence",
+      "refersTo": "jb-product-hero-rail",
+      "description": "Ink field with signal-yellow numerals and ruled lifecycle stages.",
+      "html": "<div class=\"jb-product-hero-rail\"><p><strong>01</strong>Discover to define</p></div>",
+      "css": ".jb-product-hero-rail { background:#101b20; color:#fffdf7; } .jb-product-hero-rail p { border-bottom:1px solid rgb(255 253 247 / .22); } .jb-product-hero-rail strong { color:#f4c447; }"
     },
     {
-      "name": "Work Card",
-      "kind": "card",
-      "refersTo": "card",
-      "description": "Scannable case-study preview with public-safe evidence structure.",
-      "html": "<article class=\"ds-work-card\"><span class=\"ds-status-chip\">Full case study</span><h3>Harry J. Epstein Company</h3><p class=\"ds-work-card-subtitle\">E-commerce and operations modernization</p><p>Helped a legacy industrial business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.</p></article>",
-      "css": ".ds-work-card { background: var(--jb-oil-paper, #f7f4ee); color: var(--jb-oil-ink, #343435); border: 1px solid rgba(52, 52, 53, 0.15); border-radius: 0.5rem; padding: 1.25rem; font-family: Karla, ui-sans-serif, system-ui, sans-serif; box-shadow: 0 1px 2px rgba(52, 52, 53, 0.08); max-width: 32rem; } .ds-work-card h3 { margin: 1rem 0 0.35rem; color: var(--jb-oil-ink, #343435); font-size: 1.5rem; line-height: 1.2; font-weight: 700; } .ds-work-card p { margin: 0.75rem 0 0; font-size: 1rem; line-height: 1.6; } .ds-work-card-subtitle { color: var(--jb-deep-green, #1f5c3e); font-weight: 700; } .ds-work-card:focus-within { outline: 3px solid var(--jb-yellow-ochre, #e9b64e); outline-offset: 3px; }"
+      "name": "Three-Stage Progress List",
+      "kind": "sequence",
+      "refersTo": "jb-product-lanes",
+      "description": "Responsive numbered stages for finding, testing, and sustaining the product path.",
+      "html": "<ol class=\"jb-product-lanes\"><li><span>01</span><h3>Find the real problem</h3></li></ol>",
+      "css": ".jb-product-lanes li { border-top:2px solid #101b20; } .jb-product-lanes li > span { color:#c63b21; }"
     },
     {
-      "name": "Text Navigation",
-      "kind": "nav",
-      "refersTo": "navigation",
-      "description": "Restrained route set for portfolio review, not an app shell.",
-      "html": "<nav class=\"ds-nav\"><a href=\"#\">Work</a><a href=\"#\">Resume</a><a href=\"#\">About</a><a href=\"#\">Contact</a></nav>",
-      "css": ".ds-nav { display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; font-family: Karla, ui-sans-serif, system-ui, sans-serif; } .ds-nav a { color: var(--jb-oil-ink, #343435); text-decoration: none; font-size: 0.95rem; font-weight: 700; line-height: 1.2; } .ds-nav a:hover { color: var(--jb-broadway-blue, #0b5f81); } .ds-nav a:focus-visible { outline: 3px solid var(--jb-yellow-ochre, #e9b64e); outline-offset: 3px; }"
+      "name": "Casebook Band",
+      "kind": "casebook",
+      "refersTo": "jb-casebook",
+      "description": "Full-width dark field combining bounded product language, governed photography, captions, and proof links.",
+      "html": "<section class=\"jb-casebook\"><article class=\"jb-case-feature\"><h3>Product case</h3></article></section>",
+      "css": ".jb-casebook { background:#18252a; color:#fffdf7; } .jb-case-feature { border-top:1px solid rgb(255 253 247 / .25); border-radius:0; box-shadow:none; }"
+    },
+    {
+      "name": "Delivery Ledger",
+      "kind": "ledger",
+      "refersTo": "jb-delivery-ledger",
+      "description": "Rule-separated rows connecting operating capability to named evidence and deeper routes.",
+      "html": "<section class=\"jb-delivery-ledger\"><article><h3>Capability</h3><p>Evidence</p></article></section>",
+      "css": ".jb-delivery-ledger article { border-top:1px solid rgb(16 27 32 / .28); border-radius:0; box-shadow:none; }"
+    },
+    {
+      "name": "Briefing Navigation",
+      "kind": "navigation",
+      "refersTo": "site-navigation",
+      "description": "Compact portfolio routes with Product Delivery foregrounded and visible keyboard focus.",
+      "html": "<nav><a href=\"/work/technical-operations\">Product Delivery</a><a href=\"/resume\">Resume</a></nav>",
+      "css": "nav a { color:#101b20; text-decoration:none; } nav a:hover { color:#0e62a3; text-decoration:underline; } nav a:focus-visible { outline:3px solid #d7a615; outline-offset:3px; }"
     }
   ],
   "narrative": {
-    "northStar": "The Public Workbench",
-    "overview": "The system should feel like a careful working table where evidence has been sorted, labeled, and made usable without exposing private source material. It uses print-adjacent restraint, civic color, readable type, and modest component structure to make complex work legible.\n\nThis is a brand surface, but the brand is the operating practice. The design must create trust through order, language, and public-safety boundaries rather than spectacle. It rejects generic SaaS drama, consultant hype, private archive behavior, and decorative AI-template flourishes.",
+    "northStar": "Public Service Briefing Folio",
+    "overview": "A composed briefing for public-sector product hiring panels. Complicated public work becomes traceable decisions, sequenced delivery, and usable systems through evidence rails and generous documentary fields.",
     "keyCharacteristics": [
-      "Public-safe before persuasive.",
-      "Dense enough to show real work, calm enough to scan.",
-      "Warm, precise, and modular.",
-      "Evidence-led, never inflated.",
-      "Human without becoming decorative."
+      "Complicated public work becomes traceable decisions and usable systems.",
+      "Evidence rails expose sequence, proof, and ownership.",
+      "Generous documentary fields protect consequential language from decorative clutter.",
+      "Product ownership, public-service judgment, and shipping fluency are legible on the first surface.",
+      "Photography operates as governed evidence, not wallpaper."
     ],
     "rules": [
-      {
-        "name": "The Public-Safety Color Rule",
-        "body": "Color must clarify status, evidence, action, or reading hierarchy. If color only decorates, remove it.",
-        "section": "colors"
-      },
-      {
-        "name": "The Ochre Rarity Rule",
-        "body": "Yellow ochre earns attention through scarcity. Use it for focus, selection, and occasional proof, not as a general accent wash.",
-        "section": "colors"
-      },
-      {
-        "name": "The Plain Evidence Rule",
-        "body": "Use type weight, spacing, and placement before inventing visual effects. No gradient text, no ornamental tracking, no clever typographic gimmicks.",
-        "section": "typography"
-      },
-      {
-        "name": "The Flat Workbench Rule",
-        "body": "Surfaces rest on the page. Lift appears only when it helps a card or artifact read as a discrete object.",
-        "section": "elevation"
-      }
+      { "name": "Evidence Rail", "body": "Every major surface exposes sequence, proof, or ownership through numbered progress marks, ruled rows, lifecycle rails, or decision ledgers.", "section": "components" },
+      { "name": "Folio Field", "body": "Consequential language receives generous space. Decorative cards do not fill the field.", "section": "elevation" },
+      { "name": "Signal Color", "body": "Yellow and rose indicate action, progression, or evidence; they are never confetti.", "section": "colors" },
+      { "name": "Rules Before Shadows", "body": "If a boundary can be communicated with a rule or tonal field, a shadow is forbidden.", "section": "elevation" }
     ],
     "dos": [
-      "Do keep public safety visible in the structure of every case study.",
-      "Do use Broadway Blue for primary action and Deep Green for outcome-oriented emphasis.",
-      "Do keep summaries scannable while preserving nuance.",
-      "Do use representative diagrams, approved artifacts, and redacted examples instead of raw private material.",
-      "Do keep focus states highly visible and reduced-motion behavior intact."
+      "Make Jamie's product role, decisions, handoffs, and bounded proof immediately scannable.",
+      "Preserve collective credit, governed photography, descriptive captions, and public-safe evidence boundaries.",
+      "Use flat color fields, fine rules, lifecycle marks, and delivery ledgers as the signature vocabulary."
     ],
     "donts": [
-      "Don't make the site feel like a generic SaaS landing page, a private archive browser, a consultant hype funnel, a heavy animated portfolio, or a decorative AI-generated template.",
-      "Don't publish private emails, raw transcripts, private coalition notes, legal-review materials, private correspondence, internal analytics, client-private material, unapproved photos, private fonts, or named stakeholder details without approval.",
-      "Don't use gradient text, glassmorphism, giant hero metrics, decorative side-stripe borders, or endlessly repeated icon-card grids.",
-      "Don't over-round cards or panels beyond the existing 0.5rem card radius.",
-      "Don't let color or visual texture compete with the evidence."
+      "Do not use eyebrows above headings, generic card grids, pills, gradients, fake technical chrome, authority-by-association, or decorative metrics.",
+      "Do not publish private correspondence, raw records, internal analytics, archive locators, or unapproved material.",
+      "Do not infer production publication or indexing approval from access, evaluation, staging, or repository inclusion."
     ]
   }
 }

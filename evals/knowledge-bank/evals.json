@@ -1071,9 +1071,9 @@
       "proofId": "nyc-artist-coalition-public-web-infrastructure"
     },
     "agencyGraph": {
-      "expectedEntityCount": 32,
-      "expectedRelationCount": 34,
-      "approvedGraphSha256": "5471c699a6f92a46f974dcbe898f89cf101dff44ea646d51d61c6752e8ede829",
+      "expectedEntityCount": 34,
+      "expectedRelationCount": 36,
+      "approvedGraphSha256": "7260cfba5c3ed2daa35f22f3a3263250a1e2706ffa6a5049a4d84b5a01e68305",
       "relationIds": [
         "REL-WATERWAYS-RAFT-ORIGIN",
         "REL-GREAT-ACCOMMODATIONS-SPEARHEADED",
@@ -1108,7 +1108,9 @@
         "REL-KC-COUNCIL-ACCEPTED-TOWN-HALL-RECOMMENDATION",
         "REL-KC-COUNCIL-APPROPRIATED-TOWN-HALL-FUNDS",
         "REL-KC-TOWN-HALL-WITHDREW-CCED-PROJECT",
-        "REL-KC-COUNCIL-RECLAIMED-TOWN-HALL-APPROPRIATION"
+        "REL-KC-COUNCIL-RECLAIMED-TOWN-HALL-APPROPRIATION",
+        "REL-JAMIE-SBU-REPORT-REVIEW-2026",
+        "REL-JAMIE-SBU-REPORT-LAUNCH-SPEECH-2026"
       ],
       "enactedRelationIds": [
         "REL-COUNCIL-OFFICE-ENACTMENT",
