@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity requirement coverage
 
-**Wiki fingerprint:** `95fbcd6c8e58e7309f88d940c50bfe9e34e14ce2dcee0d95197c1f6a9deea079`
+**Wiki fingerprint:** `5df3eb46a1146a3bd30d17d832626abcd0febabd6f6b6647b12dd9dfe56c90cd`
 
 Statuses preserve the difference between visible proof, Wiki-only proof, source work, experience gaps, and hard screens.
 
@@ -14,6 +14,16 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 | `requirement.aclu.privacy-and-governance` | critical | visible-qualified | none | Keep the human-review and protected-source boundary explicit. |
 | `requirement.aclu.product-brief` | critical | wiki-proven-not-projected | public-projection | Produce and human-review a redacted retrospective CallNYC product brief. |
 | `requirement.aclu.do-not-build-judgment` | important | source-needed | source | Revisit one bounded decision record; do not invent a do-not-build example. |
+
+## ACLU - Senior Project Manager, National Campaigns
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.aclu-national-campaigns.complex-project-delivery` | critical | visible-proven | none | Lead with one bounded Fair Rent or NYC Artist Coalition delivery sequence and keep collective outcomes collective. |
+| `requirement.aclu-national-campaigns.advocacy-operations` | critical | visible-proven | none | Use the recent report review, public speaking, and elected-office follow-through as three separate contribution claims. |
+| `requirement.aclu-national-campaigns.communication-systems` | critical | visible-qualified | public-projection | Prepare a redacted weekly status, decision log, or source map as an interview artifact. |
+| `requirement.aclu-national-campaigns.research-and-judgment` | important | visible-qualified | wording | Show one public-safe example of research becoming a decision-ready briefing without exposing protected coalition material. |
+| `requirement.aclu-national-campaigns.budget-administration` | important | visible-weak | public-projection | Verify the strongest truthful budget or invoice example; do not imply formal procurement authority. |
 
 ## Asana - AI Implementation Manager, Service Management
 
@@ -42,6 +52,37 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 | `requirement.codepath.executive-reporting` | critical | visible-qualified | public-projection | Prepare one status-report sample for interview. |
 | `requirement.codepath.ai-first-workflow` | critical | visible-proven | none | Demonstrate the working Wiki and eval system without centering it over the program. |
 | `requirement.codepath.handoff-ready-systems` | important | visible-proven | none | Keep this as a recurring cross-project pattern. |
+
+## CodePath - Engineering Project Manager
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.codepath-engineering-pm.delivery` | critical | visible-proven | none | Lead with one engineering-adjacent delivery story that names issue, triage, implementation, verification, and handoff. |
+| `requirement.codepath-engineering-pm.hands-on-qa` | critical | visible-qualified | retrieval | Prepare one specific QA and UAT trace with severity, reproduction steps, expected behavior, fix verification, and outcome. |
+| `requirement.codepath-engineering-pm.test-case-writing` | critical | source-needed | source | Produce a small truthful repository example or acknowledge the gap; do not infer current test fluency from historical Django work. |
+| `requirement.codepath-engineering-pm.lightweight-process` | critical | visible-proven | none | Describe one time Jamie intentionally reduced, replaced, or declined process. |
+| `requirement.codepath-engineering-pm.ai-automation` | important | visible-qualified | wording | Demonstrate one bounded AI-assisted check with failure modes and human review. |
+
+## CodePath - Senior AI Operations Lead
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.codepath-ai-ops.workflow-audit` | critical | visible-qualified | none | Prepare one end-to-end before-and-after workflow with the human work, not the tool, at the center. |
+| `requirement.codepath-ai-ops.agent-delivery` | critical | wiki-proven-not-projected | experience | Select one genuinely used workflow and document users, tools, review gates, measured change, and production boundary; do not call the lab production SaaS. |
+| `requirement.codepath-ai-ops.quality-gates` | critical | visible-qualified | none | Demonstrate deterministic checks, adversarial mutations, and human holdouts as a bounded quality system. |
+| `requirement.codepath-ai-ops.reusable-assets` | critical | visible-proven | none | Show one reusable asset and the evidence that another person could operate it. |
+| `requirement.codepath-ai-ops.outcome-measurement` | important | visible-qualified | source | Recover one defensible adoption, time, quality, or error-rate baseline for a real workflow. |
+
+## NYC OTI - Senior Product Manager 782366
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.oti-product-manager.end-to-end-product` | critical | visible-proven | none | Lead with WOW List for end-to-end product practice and CallNYC for resident-facing public interpretation. |
+| `requirement.oti-product-manager.discovery` | critical | visible-qualified | wording | Prepare one moderated or situated discovery story with participants, decision, version-one scope, and what changed. |
+| `requirement.oti-product-manager.public-launch` | critical | visible-proven | none | Pair one production launch with one public communications example and state the decision authority accurately. |
+| `requirement.oti-product-manager.measurement` | critical | visible-qualified | public-projection | Prepare a concise metric tree that separates activity, adoption, resident outcome, and learning. |
+| `requirement.oti-product-manager.privacy-and-ethics` | critical | visible-qualified | none | Present privacy governance as product judgment, not as a substitute for formal security, legal, or compliance authority. |
+| `requirement.oti-product-manager.accessibility-conformance` | critical | experience-gap | experience | Add a truthful conformance example if one exists; otherwise present accessibility delivery as a development area and name the review partners Jamie would bring in early. |
 
 ## NYC OTI - Technical Operations Manager 782369
 

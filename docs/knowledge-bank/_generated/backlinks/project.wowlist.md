@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to WOWList orientation
 
-**Source commit:** `0cf41c2ff2a5488bf4366a577a77edc9dd9e50b1`
-**Generation time:** 2026-08-13T13:28:07-04:00
-**Source fingerprint:** `95fbcd6c8e58e7309f88d940c50bfe9e34e14ce2dcee0d95197c1f6a9deea079`
+**Source commit:** `cd8592e7ee46211c0b1c76bdd5909d5ebe6cdc79`
+**Generation time:** 2026-08-13T14:26:22-04:00
+**Source fingerprint:** `5df3eb46a1146a3bd30d17d832626abcd0febabd6f6b6647b12dd9dfe56c90cd`
 
 - [WOW List - Senior Product Manager role-fit brief](../../applications/wowlist-senior-product-manager-oti-782366.md) - `part_of` (frontmatter)
 - [WOW List - Senior Product Manager role-fit brief](../../applications/wowlist-senior-product-manager-oti-782366.md) - `prose_link` (markdown)
@@ -19,6 +19,7 @@
 - [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `related_to` (frontmatter)
 - [Sunday Dinner, WOW List, and NYC Artist Coalition Synergy](../../methods/sunday-dinner-wowlist-nycac-synergy.md) - `related_to` (frontmatter)
 - [WOW List Relational Curation](../../methods/wowlist-relational-curation.md) - `related_to` (frontmatter)
+- [CodePath - Engineering Project Manager](../../opportunities/codepath-engineering-project-manager.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
 - [Governed WOW List knowledge repository](../../sources/wowlist-knowledge-repository-2026.md) - `related_to` (frontmatter)
 - [What is WOW List repaired transcript](../../sources/wowlist-repaired-transcript-2026.md) - `documents` (frontmatter)

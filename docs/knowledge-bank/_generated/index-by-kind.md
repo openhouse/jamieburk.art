@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `0cf41c2ff2a5488bf4366a577a77edc9dd9e50b1`
-**Generation time:** 2026-08-13T13:28:07-04:00
-**Source fingerprint:** `95fbcd6c8e58e7309f88d940c50bfe9e34e14ce2dcee0d95197c1f6a9deea079`
+**Source commit:** `cd8592e7ee46211c0b1c76bdd5909d5ebe6cdc79`
+**Generation time:** 2026-08-13T14:26:22-04:00
+**Source fingerprint:** `5df3eb46a1146a3bd30d17d832626abcd0febabd6f6b6647b12dd9dfe56c90cd`
 
 ## application
 
@@ -318,9 +318,13 @@
 ## opportunity
 
 - [ACLU - Product Manager II, Discovery](../opportunities/aclu-product-discovery.md) - `opportunity.aclu.product-manager-discovery.8482872002`
+- [ACLU - Senior Project Manager, National Campaigns](../opportunities/aclu-senior-project-manager-national-campaigns.md) - `opportunity.aclu.senior-project-manager-national-campaigns.8631854002`
 - [Asana - AI Implementation Manager, Service Management](../opportunities/asana-ai-implementation.md) - `opportunity.asana.ai-implementation.8027437`
 - [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md) - `opportunity.benepass.product-operations.7f963a7a`
 - [CodePath - Senior Program Manager, Claude Corps](../opportunities/codepath-claude-corps.md) - `opportunity.codepath.claude-corps.5182020007`
+- [CodePath - Engineering Project Manager](../opportunities/codepath-engineering-project-manager.md) - `opportunity.codepath.engineering-project-manager.5160542007`
+- [CodePath - Senior AI Operations Lead](../opportunities/codepath-senior-ai-operations-lead.md) - `opportunity.codepath.senior-ai-operations-lead.5175813007`
+- [NYC OTI - Senior Product Manager 782366](../opportunities/oti-senior-product-manager.md) - `opportunity.nyc-oti.senior-product-manager.782366`
 - [NYC OTI - Technical Operations Manager 782369](../opportunities/oti-technical-operations.md) - `opportunity.nyc-oti.technical-operations-manager.782369`
 - [PermitFlow - Product Operations Manager](../opportunities/permitflow-product-operations.md) - `opportunity.permitflow.product-operations.8a6e6066`
 - [Protected source-backed team-memory consulting lead](../opportunities/source-backed-team-memory.md) - `opportunity.protected.source-backed-memory-consulting.2026`
@@ -386,9 +390,11 @@
 
 ## source
 
+- [ACLU political and advocacy leadership - August 2026](../sources/aclu-political-advocacy-leadership-2026.md) - `source.aclu.political-advocacy-leadership.2026-08-13`
 - [CallNYC public source repository](../sources/callnyc-source-repository.md) - `source.callnyc.source-repository`
 - [Campaign-site repository family, 2020-2022](../sources/campaign-site-repository-family-2020-2022.md) - `source.campaign-site.repository-family.2020-2022`
 - [Civic Hall hackathon announcement](../sources/civichall-hackathon-announcement-2016.md) - `source.civichall.hackathon-announcement.2016`
+- [CodePath team and senior leadership - August 2026](../sources/codepath-leadership-2026.md) - `source.codepath.leadership.2026-08-13`
 - [Empty Storefronts, High Rents](../sources/commercial-rent-public-support/empty-storefronts-high-rents-2026.md) - `source.commercial-rent.empty-storefronts-high-rents.2026-07`
 - [New York City Council Constituent Services Data release](../sources/nycc-constituent-services-data-2016-05-27.md) - `source.councilstat.fuller-release.2016`
 - [Federated Knowledge Wiki graph ecosystem review](../sources/federated-knowledge-graph-ecosystem-review-2026-08-13.md) - `source.federated-knowledge-graph-ecosystem-review.2026-08-13`
@@ -401,9 +407,12 @@
 - [Jamie Burkart public-record initial manifest](../sources/jamie-public-record-initial-manifest.md) - `source.jamie-public-record-initial-manifest`
 - [Jamie Burkart writer's voice synthesis, July 2026](../sources/writers-voice-synthesis-2026-07.md) - `source.jamie.writers-voice-synthesis.2026-07`
 - [ACLU - Product Manager II, Discovery 8482872002](../sources/jobs-aclu-product-discovery-8482872002.md) - `source.jobs.aclu.product-discovery.8482872002`
+- [ACLU - Senior Project Manager, National Campaigns 8631854002](../sources/jobs-aclu-senior-project-manager-national-campaigns-8631854002.md) - `source.jobs.aclu.senior-project-manager-national-campaigns.8631854002`
 - [Asana - AI Implementation Manager, Service Management 8027437](../sources/jobs-asana-ai-implementation-8027437.md) - `source.jobs.asana.ai-implementation.8027437`
 - [Official posting - Benepass Product Operations Manager](../sources/jobs-benepass-product-operations.md) - `source.jobs.benepass.product-operations.7f963a7a`
 - [CodePath - Senior Program Manager, Claude Corps 5182020007](../sources/jobs-codepath-claude-corps-5182020007.md) - `source.jobs.codepath.claude-corps.5182020007`
+- [CodePath - Engineering Project Manager 5160542007](../sources/jobs-codepath-engineering-project-manager-5160542007.md) - `source.jobs.codepath.engineering-project-manager.5160542007`
+- [CodePath - Senior AI Operations Lead 5175813007](../sources/jobs-codepath-senior-ai-operations-lead-5175813007.md) - `source.jobs.codepath.senior-ai-operations-lead.5175813007`
 - [NYC Jobs - Senior Product Manager 782366](../sources/jobs-oti-senior-product-manager-782366.md) - `source.jobs.oti.senior-product-manager.782366`
 - [NYC Jobs - Technical Operations Manager 782369](../sources/jobs-oti-technical-operations-782369.md) - `source.jobs.oti.technical-operations.782369`
 - [Official posting - PermitFlow Product Operations Manager](../sources/jobs-permitflow-product-operations.md) - `source.jobs.permitflow.product-operations.8a6e6066`
@@ -420,6 +429,7 @@
 - [Archived NTER CHNG project homepage](../sources/nter-chng-archived-homepage-2011.md) - `source.nter-chng.archived-homepage.2011`
 - [NYC Council field-kit photograph oral history, July 2026](../sources/recollections/nyc-council-field-kit-oral-history-2026-07.md) - `source.nyc-council.field-kit-oral-history.2026-07`
 - [Appointment of Diya Vij as Commissioner of Cultural Affairs](../sources/dcla-diya-vij-appointment-2026.md) - `source.nyc.diya-vij-appointment.2026`
+- [NYC launches the Public Interest Technology Crew - July 2026](../sources/nyc-pit-crew-launch-2026.md) - `source.nyc.pit-crew-launch.2026-07-13`
 - [NYC Artist Coalition DCLA formation source return, 2026](../sources/archives/nycac-dcla-formation-source-return-2026-07.md) - `source.nycac.dcla-formation-source-return.2026-07`
 - [NYC nightlife forum corrected working transcript, 2026](../sources/nycac-nightlife-forum-transcript-2026.md) - `source.nycac.nightlife-forum-transcript.2026`
 - [NYC Artist Coalition project-site photograph census](../sources/archives/nycac-project-site-photograph-census-2026-07.md) - `source.nycac.project-site-photograph-census.2026-07-28`

@@ -1,10 +1,80 @@
 {
   "schemaVersion": 1,
-  "candidateSha": "1e4f5f26560d0d5a43fdb3f777af1c3c4ef763a6",
+  "candidateSha": "cd8592e7ee46211c0b1c76bdd5909d5ebe6cdc79",
   "portfolioSnapshotHash": "63b038a6c8fa851127924ce5fff54179638901f37dcc0f625bb0c41fc64acf32",
-  "publicReportHash": "95758e22ae1fce793566b0820369d47ac076b2b4da0df53ce5dd89a62ac7585a",
-  "wikiSourceFingerprint": "95fbcd6c8e58e7309f88d940c50bfe9e34e14ce2dcee0d95197c1f6a9deea079",
+  "publicReportHash": "a5171929b130b9600d6b36408a5f6ee4072310d3cd5c4fcd9cf5d93bdf74f745",
+  "wikiSourceFingerprint": "5df3eb46a1146a3bd30d17d832626abcd0febabd6f6b6647b12dd9dfe56c90cd",
   "findings": [
+    {
+      "findingId": "finding.requirement.aclu-national-campaigns.budget-administration",
+      "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "requirementId": "requirement.aclu-national-campaigns.budget-administration",
+      "classification": "visible-weak-evidence-gap",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-weak",
+      "gapType": "public-projection",
+      "smallestResponsibleChange": "Verify the strongest truthful budget or invoice example; do not imply formal procurement authority.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.codepath-ai-ops.agent-delivery",
+      "opportunityId": "opportunity.codepath.senior-ai-operations-lead.5175813007",
+      "requirementId": "requirement.codepath-ai-ops.agent-delivery",
+      "classification": "true-experience-gap",
+      "wikiRecords": [
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "wiki-proven-not-projected",
+      "gapType": "experience",
+      "smallestResponsibleChange": "Select one genuinely used workflow and document users, tools, review gates, measured change, and production boundary; do not call the lab production SaaS.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.codepath-engineering-pm.hands-on-qa",
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "requirementId": "requirement.codepath-engineering-pm.hands-on-qa",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "retrieval",
+      "smallestResponsibleChange": "Prepare one specific QA and UAT trace with severity, reproduction steps, expected behavior, fix verification, and outcome.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.codepath-engineering-pm.test-case-writing",
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "requirementId": "requirement.codepath-engineering-pm.test-case-writing",
+      "classification": "source-needs-close-reading",
+      "wikiRecords": [
+        "project.wowlist"
+      ],
+      "currentStatus": "source-needed",
+      "gapType": "source",
+      "smallestResponsibleChange": "Produce a small truthful repository example or acknowledge the gap; do not infer current test fluency from historical Django work.",
+      "requiresOriginalSourceReview": true,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-product-manager.accessibility-conformance",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "requirementId": "requirement.oti-product-manager.accessibility-conformance",
+      "classification": "true-experience-gap",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "experience-gap",
+      "gapType": "experience",
+      "smallestResponsibleChange": "Add a truthful conformance example if one exists; otherwise present accessibility delivery as a development area and name the review partners Jamie would bring in early.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
     {
       "findingId": "finding.requirement.oti.government-hiring-and-procurement",
       "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",

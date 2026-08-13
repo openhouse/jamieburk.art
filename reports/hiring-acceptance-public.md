@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `1e4f5f26560d0d5a43fdb3f777af1c3c4ef763a6`
+**Candidate commit:** `cd8592e7ee46211c0b1c76bdd5909d5ebe6cdc79`
 **Portfolio snapshot:** `63b038a6c8fa851127924ce5fff54179638901f37dcc0f625bb0c41fc64acf32`
-**Role-context hash:** `96227d5af8d4f4cab9406723968b99b6c80da938436ce4bd1997d63aadc45e9b`
+**Role-context hash:** `456f4915e1877465434388a709b305e78d2160344c406e7fa0e6229f1c28d368`
 **Reader-context hash:** `c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
 **Candidate paths clean:** yes
@@ -12,12 +12,73 @@
 
 ## Opportunity results
 
-### NYC OTI - Technical Operations Manager 782369
+### ACLU - Senior Project Manager, National Campaigns
+
+- Deterministic disposition: `deterministic-ready-for-human-review`
+- Critical signals observed: 3/3
+- All signals observed: 4/5
+- Opportunity status live: yes
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
+
+- `requirement.aclu-national-campaigns.complex-project-delivery`: **observed** on `/work/technical-operations`
+- `requirement.aclu-national-campaigns.advocacy-operations`: **observed** on `/work/fair-rent-nyc`
+- `requirement.aclu-national-campaigns.communication-systems`: **observed** on `/work/technical-operations`
+- `requirement.aclu-national-campaigns.research-and-judgment`: **observed** on `/work/fair-rent-nyc`
+- `requirement.aclu-national-campaigns.budget-administration`: **not observed**
+
+### CodePath - Senior AI Operations Lead
+
+- Deterministic disposition: `deterministic-ready-for-human-review`
+- Critical signals observed: 3/4
+- All signals observed: 4/5
+- Opportunity status live: yes
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
+
+- `requirement.codepath-ai-ops.workflow-audit`: **observed** on `/work/technical-operations`
+- `requirement.codepath-ai-ops.agent-delivery`: **not observed** on `/lab/source-backed-team-memory`
+- `requirement.codepath-ai-ops.quality-gates`: **observed** on `/lab/source-backed-team-memory`
+- `requirement.codepath-ai-ops.reusable-assets`: **observed** on `/work/technical-operations`
+- `requirement.codepath-ai-ops.outcome-measurement`: **observed** on `/work/technical-operations`
+
+### CodePath - Engineering Project Manager
 
 - Deterministic disposition: `evidence-gap-review`
-- Critical signals observed: 4/4
+- Critical signals observed: 2/4
+- All signals observed: 3/5
+- Opportunity status live: yes
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
+
+- `requirement.codepath-engineering-pm.delivery`: **observed** on `/work/technical-operations`
+- `requirement.codepath-engineering-pm.hands-on-qa`: **not observed**
+- `requirement.codepath-engineering-pm.test-case-writing`: **not observed**
+- `requirement.codepath-engineering-pm.lightweight-process`: **observed** on `/work/technical-operations`
+- `requirement.codepath-engineering-pm.ai-automation`: **observed** on `/lab/source-backed-team-memory`
+
+### NYC OTI - Senior Product Manager 782366
+
+- Deterministic disposition: `deterministic-ready-for-human-review`
+- Critical signals observed: 5/6
 - All signals observed: 5/6
 - Opportunity status live: yes
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
+
+- `requirement.oti-product-manager.end-to-end-product`: **observed** on `/work/wowlist`, `/work/callnyc`
+- `requirement.oti-product-manager.discovery`: **observed** on `/work/wowlist`
+- `requirement.oti-product-manager.public-launch`: **observed** on `/work/technical-operations`
+- `requirement.oti-product-manager.measurement`: **observed** on `/work/wowlist`, `/work/technical-operations`
+- `requirement.oti-product-manager.privacy-and-ethics`: **observed** on `/lab/source-backed-team-memory`
+- `requirement.oti-product-manager.accessibility-conformance`: **not observed**
+
+### NYC OTI - Technical Operations Manager 782369
+
+- Deterministic disposition: `not-live`
+- Critical signals observed: 4/4
+- All signals observed: 5/6
+- Opportunity status live: no
 - Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
@@ -30,10 +91,10 @@
 
 ### ACLU - Product Manager II, Discovery
 
-- Deterministic disposition: `evidence-gap-review`
+- Deterministic disposition: `not-live`
 - Critical signals observed: 2/4
 - All signals observed: 2/5
-- Opportunity status live: yes
+- Opportunity status live: no
 - Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
@@ -59,10 +120,10 @@
 
 ### CodePath - Senior Program Manager, Claude Corps
 
-- Deterministic disposition: `evidence-gap-review`
+- Deterministic disposition: `not-live`
 - Critical signals observed: 4/4
 - All signals observed: 5/5
-- Opportunity status live: yes
+- Opportunity status live: no
 - Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 

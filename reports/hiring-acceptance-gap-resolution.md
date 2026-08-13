@@ -1,14 +1,19 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Hiring acceptance Wiki gap resolution
 
-**Candidate commit:** `1e4f5f26560d0d5a43fdb3f777af1c3c4ef763a6`
-**Public report hash:** `95758e22ae1fce793566b0820369d47ac076b2b4da0df53ce5dd89a62ac7585a`
-**Wiki fingerprint:** `95fbcd6c8e58e7309f88d940c50bfe9e34e14ce2dcee0d95197c1f6a9deea079`
+**Candidate commit:** `cd8592e7ee46211c0b1c76bdd5909d5ebe6cdc79`
+**Public report hash:** `a5171929b130b9600d6b36408a5f6ee4072310d3cd5c4fcd9cf5d93bdf74f745`
+**Wiki fingerprint:** `5df3eb46a1146a3bd30d17d832626abcd0febabd6f6b6647b12dd9dfe56c90cd`
 
 The gap resolver runs after the public-only evaluator. It can identify Wiki evidence, but every public change remains human-reviewed.
 
 ## Findings
 
+- `requirement.aclu-national-campaigns.budget-administration` - **visible-weak-evidence-gap**; Verify the strongest truthful budget or invoice example; do not imply formal procurement authority.
+- `requirement.codepath-ai-ops.agent-delivery` - **true-experience-gap**; Select one genuinely used workflow and document users, tools, review gates, measured change, and production boundary; do not call the lab production SaaS.
+- `requirement.codepath-engineering-pm.hands-on-qa` - **role-context-or-evidence-unknown**; Prepare one specific QA and UAT trace with severity, reproduction steps, expected behavior, fix verification, and outcome.
+- `requirement.codepath-engineering-pm.test-case-writing` - **source-needs-close-reading**; Produce a small truthful repository example or acknowledge the gap; do not infer current test fluency from historical Django work.
+- `requirement.oti-product-manager.accessibility-conformance` - **true-experience-gap**; Add a truthful conformance example if one exists; otherwise present accessibility delivery as a development area and name the review partners Jamie would bring in early.
 - `requirement.oti.government-hiring-and-procurement` - **visible-weak-evidence-gap**; Do not imply procurement authority; clarify adjacent government-process experience in the application.
 - `requirement.aclu.facilitation-without-authority` - **visible-weak-evidence-gap**; Name one bounded facilitation decision and its usable output.
 - `requirement.aclu.product-brief` - **wiki-proven-not-projected**; Produce and human-review a redacted retrospective CallNYC product brief.
