@@ -1,15 +1,16 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Commercial Rent Stabilization public support
 
-**Source commit:** `048fa2a63f75f7883a614bb2b03e4f3f04323d47`
-**Generation time:** 2026-08-13T12:50:24-04:00
-**Source fingerprint:** `3a8b7f42f1d21f68c54828597eca07dbf6800ed0303d0ecf9603c42e850252f5`
+**Source commit:** `0cf41c2ff2a5488bf4366a577a77edc9dd9e50b1`
+**Generation time:** 2026-08-13T13:28:07-04:00
+**Source fingerprint:** `95fbcd6c8e58e7309f88d940c50bfe9e34e14ce2dcee0d95197c1f6a9deea079`
 
 - [Knowledge Wiki](../../README.md) - `prose_link` (markdown)
 - [Knowledge Wiki](../../README.md) - `related_to` (frontmatter)
 - [Commercial rent stabilization testimony](../../indexes/commercial-rent-testimony.md) - `prose_link` (markdown)
 - [Federated Knowledge Wiki graph ecosystem](../../indexes/federated-knowledge-graph-ecosystem.md) - `related_to` (frontmatter)
 - [Jamie Burkart public testimony](../../indexes/public-testimony.md) - `prose_link` (markdown)
+- [Empty Storefronts, High Rents](../../sources/commercial-rent-public-support/empty-storefronts-high-rents-2026.md) - `related_to` (frontmatter)
 - [Active New York State commercial rent stabilization bills](../../sources/commercial-rent-public-support/active-state-bills-2025-2026.md) - `related_to` (frontmatter)
 - [2026 Democratic primary election-night result for Assembly District 56](../../sources/commercial-rent-public-support/eon-huntley-2026-primary-result.md) - `related_to` (frontmatter)
 - [Jimmy's Corner rally: Small Business Rent Stabilization statements](../../testimony/commercial-rent-public-support/2026-04-10-jimmys-corner-rally-statements.md) - `related_to` (frontmatter)

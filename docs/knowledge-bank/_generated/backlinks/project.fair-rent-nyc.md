@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Fair Rent NYC
 
-**Source commit:** `048fa2a63f75f7883a614bb2b03e4f3f04323d47`
-**Generation time:** 2026-08-13T12:50:24-04:00
-**Source fingerprint:** `3a8b7f42f1d21f68c54828597eca07dbf6800ed0303d0ecf9603c42e850252f5`
+**Source commit:** `0cf41c2ff2a5488bf4366a577a77edc9dd9e50b1`
+**Generation time:** 2026-08-13T13:28:07-04:00
+**Source fingerprint:** `95fbcd6c8e58e7309f88d940c50bfe9e34e14ce2dcee0d95197c1f6a9deea079`
 
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `related_to` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [hur5tftl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj.md) - `related_to` (frontmatter)
@@ -24,6 +24,8 @@
 - [FairRentNYC: pxl 20230202 142709440 [h23frdp4]](../../assets/photographs/project-sites/fair-rent-nyc-pxl-20230202-142709440-h23frdp4zr.md) - `related_to` (frontmatter)
 - [FairRentNYC: pxl 20230202 142709440 [zwhoed2j]](../../assets/photographs/project-sites/fair-rent-nyc-pxl-20230202-142709440-zwhoed2jr6.md) - `related_to` (frontmatter)
 - [Implementation, Adoption, and Handoff](../../capabilities/implementation-adoption-and-handoff.md) - `related_to` (frontmatter)
+- [NYC Artist Coalition and Fair Rent NYC frontline advocacy, July-August 2026](../../claims/nycac-crs-frontline-advocacy-2026.md) - `related_to` (frontmatter)
+- [Empty Storefronts, High Rents report launch and press conference](../../events/empty-storefronts-high-rents-report-launch-2026-07-29.md) - `related_to` (frontmatter)
 - [Commercial Rent Stabilization event at Friends and Lovers](../../events/commercial-rent-friends-and-lovers-2026-02-17.md) - `related_to` (frontmatter)
 - [Project X community conversation](../../events/commercial-rent-project-x-2026-03-10.md) - `related_to` (frontmatter)
 - [Commercial Rent Stabilization public event](../../events/commercial-rent-public-event-2025-11-13.md) - `related_to` (frontmatter)
@@ -42,6 +44,7 @@
 - [NYC Artist Coalition organization map](../../organizations/nyc-artist-coalition.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
 - [Save NYC Spaces](../../projects/save-nyc-spaces.md) - `related_to` (frontmatter)
+- [Empty Storefronts, High Rents](../../sources/commercial-rent-public-support/empty-storefronts-high-rents-2026.md) - `related_to` (frontmatter)
 - [Active New York State commercial rent stabilization bills](../../sources/commercial-rent-public-support/active-state-bills-2025-2026.md) - `related_to` (frontmatter)
 - [Late-July 2026 current-workstream review](../../sources/working/current-workstream-2026-07-27.md) - `related_to` (frontmatter)
 - [Jimmy's Corner rally: Small Business Rent Stabilization statements](../../testimony/commercial-rent-public-support/2026-04-10-jimmys-corner-rally-statements.md) - `related_to` (frontmatter)

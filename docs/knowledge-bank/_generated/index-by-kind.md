@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `048fa2a63f75f7883a614bb2b03e4f3f04323d47`
-**Generation time:** 2026-08-13T12:50:24-04:00
-**Source fingerprint:** `3a8b7f42f1d21f68c54828597eca07dbf6800ed0303d0ecf9603c42e850252f5`
+**Source commit:** `0cf41c2ff2a5488bf4366a577a77edc9dd9e50b1`
+**Generation time:** 2026-08-13T13:28:07-04:00
+**Source fingerprint:** `95fbcd6c8e58e7309f88d940c50bfe9e34e14ce2dcee0d95197c1f6a9deea079`
 
 ## application
 
@@ -213,6 +213,7 @@
 
 - [CallNYC was an independent CouncilStat follow-on](../claims/callnyc-independent-follow-on.md) - `claim.callnyc.independent-follow-on`
 - [Shared NYC Artist Coalition advocacy operating playbook](../claims/nycac-advocacy-operating-playbook.md) - `claim.nycac.advocacy-operating-playbook`
+- [NYC Artist Coalition and Fair Rent NYC frontline advocacy, July-August 2026](../claims/nycac-crs-frontline-advocacy-2026.md) - `claim.nycac.crs-frontline-advocacy.2026-07-08`
 
 ## correction
 
@@ -236,10 +237,12 @@
 - [Employment context coverage baseline - July 18, 2026](../evaluations/employment-context-coverage-2026-07-18.md) - `evaluation.employment-context.coverage.2026-07-18`
 - [Jamie public-record integration evaluation](../evaluations/jamie-public-record-integration-2026-08-03.md) - `evaluation.jamie-public-record-integration.2026-08-03`
 - [Knowledge Wiki retrieval tasks](../evaluations/retrieval-tasks.md) - `evaluation.knowledge-wiki.retrieval-tasks`
+- [NYCAC and Fair Rent NYC frontline advocacy eval](../evaluations/nycac-crs-frontline-advocacy-2026-08-13.md) - `evaluation.nycac.crs-frontline-source-return.2026-08-13`
 - [NYC Artist Coalition shared-folder production evals](../evaluations/nycac-shared-folder-production-2026-07-19.md) - `evaluation.nycac.shared-folder-production.2026-07-19`
 
 ## event
 
+- [Empty Storefronts, High Rents report launch and press conference](../events/empty-storefronts-high-rents-report-launch-2026-07-29.md) - `event.commercial-rent.empty-storefronts-report-launch.2026-07-29`
 - [Interrogative Design Symposium](../events/interrogative-design-symposium-2024.md) - `event.mit.interrogative-design-symposium.2024`
 - [Commercial Rent Stabilization event at Friends and Lovers](../events/commercial-rent-friends-and-lovers-2026-02-17.md) - `event.nyc.commercial-rent.friends-and-lovers.2026-02-17`
 - [Project X community conversation](../events/commercial-rent-project-x-2026-03-10.md) - `event.nyc.commercial-rent.project-x.2026-03-10`
@@ -376,6 +379,7 @@
 - [Foundational Wiki page source return, July 19, 2026](../research-runs/foundational-source-return-2026-07-19.md) - `research.foundational-source-return.2026-07-19`
 - [Interpretive layer source return, July 19, 2026](../research-runs/interpretive-layer-source-return-2026-07-19.md) - `research.interpretive-layer-source-return.2026-07-19`
 - [Knowledge Wiki branch-family closure review](../research-runs/knowledge-wiki-family-closure-2026-07-19.md) - `research.knowledge-wiki-family-closure.2026-07-19`
+- [NYCAC and Fair Rent NYC 30-day frontline advocacy source return](../research-runs/nycac-crs-frontline-advocacy-2026-08-13.md) - `research.nycac.crs-frontline-source-return.2026-08-13`
 - [NYC Artist Coalition shared-folder archival production](../research-runs/nycac-shared-folder-2026-07-19.md) - `research.nycac.shared-folder.2026-07-19`
 - [Photographic source return for DCLA, KC Town Hall, and Council fieldwork](../research-runs/photographic-source-return-2026-07-26.md) - `research.photographic-source-return.2026-07-26`
 - [Professional record public-safe promotion review, August 3, 2026](../research-runs/professional-record-promotion-2026-08-03.md) - `research.professional-record-promotion.2026-08-03`
@@ -385,6 +389,7 @@
 - [CallNYC public source repository](../sources/callnyc-source-repository.md) - `source.callnyc.source-repository`
 - [Campaign-site repository family, 2020-2022](../sources/campaign-site-repository-family-2020-2022.md) - `source.campaign-site.repository-family.2020-2022`
 - [Civic Hall hackathon announcement](../sources/civichall-hackathon-announcement-2016.md) - `source.civichall.hackathon-announcement.2016`
+- [Empty Storefronts, High Rents](../sources/commercial-rent-public-support/empty-storefronts-high-rents-2026.md) - `source.commercial-rent.empty-storefronts-high-rents.2026-07`
 - [New York City Council Constituent Services Data release](../sources/nycc-constituent-services-data-2016-05-27.md) - `source.councilstat.fuller-release.2016`
 - [Federated Knowledge Wiki graph ecosystem review](../sources/federated-knowledge-graph-ecosystem-review-2026-08-13.md) - `source.federated-knowledge-graph-ecosystem-review.2026-08-13`
 - [Open House at UC Santa Cruz](../sources/good-times-open-house-2006-06-28.md) - `source.good-times.open-house.2006-06-28`
