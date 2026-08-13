@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-08-13",
+  "scope": "Bounded public-safe close reading of the current Knowledge Wiki graph ecosystem",
+  "authority": {
+    "rfc": 5,
+    "rfc_stage": "exploring",
+    "implementation_authorized": false,
+    "stage_advancement": "human-only",
+    "projection_status": "hold"
+  },
+  "systems": [
+    {
+      "id": "portfolio-projection",
+      "source_visibility": "public",
+      "locator_disclosure": "public",
+      "role": "selective public-safe portfolio projection",
+      "observed_development": "The portfolio repository now carries a three-layer graph prototype, governed canonical claims, held projections, and exact-candidate release gates.",
+      "canonical_authority": [
+        "portfolio composition",
+        "public-safe claim wording inside this repository",
+        "candidate-bound release evidence"
+      ],
+      "cannot_authorize": [
+        "access to protected sources",
+        "publication from an adjacent repository",
+        "production deployment or indexing"
+      ]
+    },
+    {
+      "id": "public-record-edition",
+      "source_visibility": "public",
+      "locator_disclosure": "public",
+      "role": "Jamie-centered public-source orientation",
+      "observed_development": "The public record added source-backed WOW List product-leadership, social-practice, and recomposable-system records while retaining correction and coverage-gap controls.",
+      "canonical_authority": [
+        "public-source record bodies",
+        "public browse structures",
+        "public correction paths"
+      ],
+      "cannot_authorize": [
+        "private-source disclosure",
+        "portfolio selection",
+        "endorsement or recommendation claims"
+      ]
+    },
+    {
+      "id": "issue-source-edition",
+      "source_visibility": "public",
+      "locator_disclosure": "public",
+      "role": "issue-specific public source library",
+      "observed_development": "The issue edition remains the canonical home for complete public statement and policy-source bodies rather than duplicating them into every audience projection.",
+      "canonical_authority": [
+        "issue-specific public source bodies",
+        "speaker and legislation indexes",
+        "source-gap records"
+      ],
+      "cannot_authorize": [
+        "cross-project causation",
+        "portfolio selection",
+        "present-day role or endorsement claims"
+      ]
+    },
+    {
+      "id": "protected-research-production",
+      "source_visibility": "protected",
+      "locator_disclosure": "withheld",
+      "role": "governed archival research and distributed team-memory production",
+      "observed_development": "Recent work packages bind source coverage, claims, artifacts, privacy review, checksums, propagation notes, and human gates into repeatable research returns.",
+      "canonical_authority": [
+        "named research-package custody",
+        "bounded source and artifact ledgers",
+        "package-specific privacy review"
+      ],
+      "cannot_authorize": [
+        "public projection",
+        "live repository synchronization",
+        "another system's editorial decision"
+      ]
+    },
+    {
+      "id": "protected-packet-materializer",
+      "source_visibility": "protected",
+      "locator_disclosure": "withheld",
+      "role": "bounded graph-radius context materialization",
+      "observed_development": "The packet layer now supports semantic-radius selection, lazy evidence attachment, count-and-digest hub summaries, compact overviews, attributed lenses, and typed knowledge handoffs.",
+      "canonical_authority": [
+        "packet compilation behavior",
+        "recipient and artifact budgets",
+        "packet-level boundary intersection"
+      ],
+      "cannot_authorize": [
+        "source access",
+        "factual truth",
+        "editorial adequacy or publication"
+      ]
+    },
+    {
+      "id": "protected-subject-knowledge",
+      "source_visibility": "protected",
+      "locator_disclosure": "withheld",
+      "role": "source-backed subject synthesis and lineage review",
+      "observed_development": "The subject edition distinguishes frozen population receipts, typed artifact lineage, verified preservation, security holds, collective credit, and unresolved access gaps.",
+      "canonical_authority": [
+        "subject-specific protected observations",
+        "bounded population receipts",
+        "protected repository-lineage review"
+      ],
+      "cannot_authorize": [
+        "credential clearance",
+        "collaborator access",
+        "public wording or publication"
+      ]
+    },
+    {
+      "id": "bounded-project-threshold",
+      "source_visibility": "protected",
+      "locator_disclosure": "withheld",
+      "role": "project-specific public-experience candidate",
+      "observed_development": "The current threshold combines historical-tense source return, original artifacts, shared credit, a source-backed writer's-voice method, and a human-reviewed copy register without announcing a full service relaunch.",
+      "canonical_authority": [
+        "project implementation",
+        "project-specific source-return decisions",
+        "candidate-bound interface and copy checks"
+      ],
+      "cannot_authorize": [
+        "historic member contact",
+        "full archive publication",
+        "deployment, indexing, or relaunch claims"
+      ]
+    }
+  ],
+  "handoffs": [
+    {
+      "id": "custody-to-evidence",
+      "from": "protected-research-production",
+      "to": "protected-subject-knowledge",
+      "automatic": false,
+      "requires": [
+        "bounded request",
+        "current authorization",
+        "source cutoff",
+        "disposition",
+        "capture receipt"
+      ]
+    },
+    {
+      "id": "evidence-to-semantics",
+      "from": "protected-subject-knowledge",
+      "to": "public-record-edition",
+      "automatic": false,
+      "requires": [
+        "atomic observation",
+        "evidence class",
+        "interpretation review",
+        "public-safe wording",
+        "collective-credit review"
+      ]
+    },
+    {
+      "id": "semantics-to-packet",
+      "from": "public-record-edition",
+      "to": "protected-packet-materializer",
+      "automatic": false,
+      "requires": [
+        "named recipient",
+        "purpose",
+        "semantic radius",
+        "artifact budget",
+        "most-restrictive boundary"
+      ]
+    },
+    {
+      "id": "semantics-to-project-threshold",
+      "from": "public-record-edition",
+      "to": "bounded-project-threshold",
+      "automatic": false,
+      "requires": [
+        "source basis",
+        "rights decision",
+        "consent decision",
+        "credit review",
+        "editorial approval"
+      ]
+    },
+    {
+      "id": "semantics-to-portfolio",
+      "from": "public-record-edition",
+      "to": "portfolio-projection",
+      "automatic": false,
+      "requires": [
+        "audience",
+        "purpose",
+        "public-safe wording",
+        "rights decision",
+        "consent decision",
+        "credit review",
+        "editorial approval"
+      ]
+    },
+    {
+      "id": "public-output-to-new-evidence",
+      "from": "bounded-project-threshold",
+      "to": "portfolio-projection",
+      "automatic": false,
+      "requires": [
+        "bounded public capture",
+        "dated observation",
+        "source identity",
+        "interpretation review"
+      ]
+    }
+  ],
+  "invariants": [
+    "access-is-not-consent",
+    "evidence-is-not-publication-permission",
+    "graph-relation-is-not-causation",
+    "packet-is-not-projection",
+    "public-threshold-is-not-archive-completeness",
+    "private-visibility-is-not-security-clearance",
+    "automated-score-is-not-human-approval",
+    "no-live-cross-repository-runtime-dependency"
+  ],
+  "next_questions": [
+    "Can each handoff emit a content-addressed public-safe receipt without exposing protected locators?",
+    "Can correction propagation be tested without creating a live synchronization dependency?",
+    "Do independent human readers find bounded packets useful at the intended semantic radius?",
+    "Which system owns withdrawal when consent, rights, or source authority changes?"
+  ]
+}

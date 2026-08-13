@@ -2,6 +2,7 @@ import { agencyGraph } from "./agency-graph.ts";
 import { archiveProductionJuly2026 } from "./archive-production-2026-07.ts";
 import { callNycSocialPopulationJuly2026 } from "./callnyc-social-population-2026-07.ts";
 import { googleDriveProductionJuly2026 } from "./google-drive-production-2026-07.ts";
+import { federatedEcosystemAugust2026 } from "./federated-ecosystem-2026-08.ts";
 import { historicalKnowledge } from "./historical-knowledge.ts";
 import { kcTownHallCouncilFunding } from "./kc-town-hall-council-funding.ts";
 import { kcTownHallFieldPractice } from "./kctownhall-field-practice.ts";
@@ -60,6 +61,7 @@ const knowledgeBankInput = {
     ...wowListSocialPopulationJuly2026.intakeItems,
     ...wowListSocialPracticesAugust2026.intakeItems,
     ...projectCompositionAugust2026.intakeItems,
+    ...federatedEcosystemAugust2026.intakeItems,
     ...kcTownHallCouncilFunding.intakeItems,
     ...kcTownHallFieldPractice.intakeItems,
     ...kcTownHallSocialCorpus.intakeItems,
@@ -107,6 +109,7 @@ const knowledgeBankInput = {
     ...wowListSocialPopulationJuly2026.observations,
     ...wowListSocialPracticesAugust2026.observations,
     ...projectCompositionAugust2026.observations,
+    ...federatedEcosystemAugust2026.observations,
     ...kcTownHallCouncilFunding.observations,
     ...kcTownHallFieldPractice.observations,
     ...kcTownHallSocialCorpus.observations,
@@ -258,6 +261,7 @@ const knowledgeBankInput = {
     ...wowListSocialPopulationJuly2026.sources,
     ...wowListSocialPracticesAugust2026.sources,
     ...projectCompositionAugust2026.sources,
+    ...federatedEcosystemAugust2026.sources,
     ...kcTownHallCouncilFunding.sources,
     ...kcTownHallFieldPractice.sources,
     ...kcTownHallSocialCorpus.sources,
@@ -402,6 +406,7 @@ const knowledgeBankInput = {
     ...wowListSocialPopulationJuly2026.claims,
     ...wowListSocialPracticesAugust2026.claims,
     ...projectCompositionAugust2026.claims,
+    ...federatedEcosystemAugust2026.claims,
     ...kcTownHallCouncilFunding.claims,
     ...kcTownHallFieldPractice.claims,
     ...kcTownHallSocialCorpus.claims,
@@ -469,6 +474,7 @@ const knowledgeBankInput = {
     ...wowListSocialPopulationJuly2026.researchInquiries,
     ...wowListSocialPracticesAugust2026.researchInquiries,
     ...projectCompositionAugust2026.researchInquiries,
+    ...federatedEcosystemAugust2026.researchInquiries,
     ...kcTownHallCouncilFunding.researchInquiries,
     ...kcTownHallFieldPractice.researchInquiries,
     ...kcTownHallSocialCorpus.researchInquiries,

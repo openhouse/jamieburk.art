@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `86b76844af306f49fe229e347f1bd87abb00af45`
-**Generation time:** 2026-08-12T12:40:09-04:00
-**Source fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
+**Source commit:** `4bb920c4e9f76c346a4ae04436fc5c6f1b8f92a7`
+**Generation time:** 2026-08-13T12:49:28-04:00
+**Source fingerprint:** `3a8b7f42f1d21f68c54828597eca07dbf6800ed0303d0ecf9603c42e850252f5`
 
 ## application
 
@@ -270,6 +270,7 @@
 - [Decisions, Deliverables, and Operational Outcomes](../indexes/decisions-deliverables-and-operational-outcomes.md) - `index.knowledge-wiki.decisions-deliverables-operational-outcomes`
 - [Employment context and hiring acceptance](../indexes/employment-context.md) - `index.knowledge-wiki.employment-context`
 - [Knowledge Wiki branch-family closure](../indexes/family-closure.md) - `index.knowledge-wiki.family-closure`
+- [Federated Knowledge Wiki graph ecosystem](../indexes/federated-knowledge-graph-ecosystem.md) - `index.knowledge-wiki.federated-graph-ecosystem`
 - [Jamie Burkart public-record source edition](../indexes/jamie-public-record-source-edition.md) - `index.knowledge-wiki.jamie-public-record-source-edition`
 - [Jamie Burkart Sourcebook pilot](../indexes/jamie-sourcebook.md) - `index.knowledge-wiki.jamie-sourcebook`
 - [Living archive and missing-page map](../indexes/living-archive.md) - `index.knowledge-wiki.living-archive`
@@ -385,6 +386,7 @@
 - [Campaign-site repository family, 2020-2022](../sources/campaign-site-repository-family-2020-2022.md) - `source.campaign-site.repository-family.2020-2022`
 - [Civic Hall hackathon announcement](../sources/civichall-hackathon-announcement-2016.md) - `source.civichall.hackathon-announcement.2016`
 - [New York City Council Constituent Services Data release](../sources/nycc-constituent-services-data-2016-05-27.md) - `source.councilstat.fuller-release.2016`
+- [Federated Knowledge Wiki graph ecosystem review](../sources/federated-knowledge-graph-ecosystem-review-2026-08-13.md) - `source.federated-knowledge-graph-ecosystem-review.2026-08-13`
 - [Open House at UC Santa Cruz](../sources/good-times-open-house-2006-06-28.md) - `source.good-times.open-house.2006-06-28`
 - [Cabaret Law repeal hearing: supportive witness testimony](../testimony/heteroglossia/2017-09-14-cabaret-law-supportive-witnesses.md) - `source.heteroglossia.cabaret-law.2017-09-14`
 - [Commercial rent stabilization hearing: supportive testimony and prime-sponsor statements](../testimony/heteroglossia/2021-09-17-commercial-rent-stabilization-supportive-speakers.md) - `source.heteroglossia.commercial-rent-stabilization.2021-09-17`

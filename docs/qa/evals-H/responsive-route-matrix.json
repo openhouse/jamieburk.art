@@ -1,10 +1,10 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-08-12T16:36:29.322Z",
+  "checkedAt": "2026-08-13T16:38:47.381Z",
   "baseUrl": "http://127.0.0.1:3056",
-  "publicSurfaceFingerprint": "eef497de543aab662bdfb7d838c23d18060d76ce456ed1867e6ef14e5878eeda",
+  "publicSurfaceFingerprint": "d7f66a1fefa673b4a67771954bf5cd35a3ae8e3f12d4c2c42be13c8ab8825839",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 118,
+  "publicSurfaceFileCount": 119,
   "routes": [
     "/",
     "/work",
@@ -824,7 +824,7 @@
     "nonSuccessResponses": 0,
     "invalidHeadingOrLandmarkRows": 0,
     "lazyImagesObserved": 20,
-    "unloadedImagesBeforeScroll": 11,
+    "unloadedImagesBeforeScroll": 20,
     "lazyImageFollowUpPerformed": true,
     "allImagesLoadedAfterScroll": true
   },
@@ -843,8 +843,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionOverlapsPrimaryCopy": false,
-        "captionAndCreditSeparated": true
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
       },
       {
         "viewport": 375,
@@ -855,8 +855,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionOverlapsPrimaryCopy": false,
-        "captionAndCreditSeparated": true
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
       },
       {
         "viewport": 768,
@@ -867,8 +867,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionOverlapsPrimaryCopy": false,
-        "captionAndCreditSeparated": true
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
       },
       {
         "viewport": 1280,
@@ -879,14 +879,14 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionOverlapsPrimaryCopy": false,
-        "captionAndCreditSeparated": true
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
       }
     ],
     "passed": true
   },
   "navigationReview": {
-    "checkedAt": "2026-08-12T16:36:29.323Z",
+    "checkedAt": "2026-08-13T16:38:47.381Z",
     "startRoute": "/",
     "destinationRoute": "/about",
     "startHttpStatus": 200,
@@ -901,8 +901,8 @@
       "height": 900
     },
     "renderedScreenshot": {
-      "sha256": "7e10731f445b437bf2e687335ca115872e49632236ebf020fcf67b70feb46f3b",
-      "byteLength": 583885,
+      "sha256": "df047e1af973a0d775afab35f86e9554fd720a39e51635dcdf61e02fa71f1768",
+      "byteLength": 585715,
       "width": 1280,
       "fullPage": true,
       "retainedInPublicGit": false,

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "evaluated_at": "2026-08-13",
+  "scope": "Federated Knowledge Wiki graph ecosystem roles, handoffs, canonical claim, and public-safe close reading",
+  "red_candidate": {
+    "status": "failed-as-expected",
+    "failures": [
+      "federated ecosystem evaluator absent",
+      "RFC authority mutation passed",
+      "protected locator disclosure mutation passed",
+      "automatic handoff mutation passed",
+      "projection gate removal mutation passed",
+      "authority invariant removal mutation passed",
+      "project relaunch-boundary removal mutation passed",
+      "duplicate system identity mutation passed",
+      "held claim activation mutation passed",
+      "protected evidence citation mutation passed",
+      "system-observation and anti-claim collapse mutation passed"
+    ]
+  },
+  "bounded_change": [
+    "Add a public-safe seven-role ecosystem snapshot tied to RFC 0005 without changing its exploring stage.",
+    "Add seven source-distinct canonical observations, one held claim, four protected summary sources, and one open handoff inquiry.",
+    "Add six non-automatic handoff contracts and eight non-collapsible authority invariants.",
+    "Add a close-reading index that treats federation, correction propagation, recipient usefulness, and withdrawal as the next bounded questions."
+  ],
+  "result": {
+    "status": "deterministic-checks-passed",
+    "systems": 7,
+    "governed_handoffs": 6,
+    "source_distinct_observations": 7,
+    "protected_summary_sources": 4,
+    "adversarial_tests": "11/11",
+    "candidate_bound_accessibility": "11/11",
+    "public_surface_fingerprint": "d7f66a1fefa673b4a67771954bf5cd35a3ae8e3f12d4c2c42be13c8ab8825839",
+    "application_check": "typecheck, lint, and production build passed",
+    "wiki_records": 397,
+    "wiki_edges": 1384,
+    "wiki_prose_links": 445,
+    "wiki_blocking_criteria": "151/151",
+    "type_aware_orphans": 0,
+    "projection_status": "hold"
+  },
+  "open_exact_candidate_gate": "Six professor-lens holdout scorecards remain bound to the prior public candidate and must be recommissioned for this exact candidate before the complete repository check can pass.",
+  "open_human_gates": [
+    "RFC 0005 stage and implementation decision",
+    "independent recipient usefulness holdouts",
+    "cross-repository correction propagation and rollback drill",
+    "source access, rights, consent, collective credit, and publication review",
+    "staging, production deployment, and indexing approval"
+  ],
+  "authority_boundary": "The snapshot records recent development and a testable interface. It does not merge adjacent branches, create live adapters, expose protected repositories, advance RFC 0005, publish a portfolio route, deploy, or enable indexing."
+}
