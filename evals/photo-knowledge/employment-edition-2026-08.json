@@ -1,0 +1,80 @@
+{
+  "suite": "employment-edition-product-practice-sequence",
+  "version": 1,
+  "assetId": "asset-set.photo.employment-edition-terminal-six.2026-08",
+  "metadataSourceId": "source.photo-metadata.employment-edition.2026-08.public-safe",
+  "permissionSourceId": "source.permission.employment-edition-source-album.2026-08",
+  "selectionDecisionId": "decision.photo.home-product-practice.2026-08",
+  "placementId": "projection.photo.home-product-practice.2026-08",
+  "route": "/",
+  "heroManifestKey": "civicFieldExchange",
+  "derivatives": [
+    {
+      "manifestKey": "civicFieldExchange",
+      "id": "civic-field-exchange",
+      "derivativeId": "derivative.photo.civic-field-exchange.home.v1",
+      "path": "apps/www/public/images/product-practice/civic-field-exchange.webp",
+      "sha256": "99394e4941704d9a24a2139334156507e1dc0011075bb7161ef80a2952acdab8",
+      "width": 2560,
+      "height": 1707,
+      "placement": "home"
+    },
+    {
+      "manifestKey": "collectiveSynthesis",
+      "id": "collective-synthesis",
+      "derivativeId": "derivative.photo.collective-synthesis.field-record.v1",
+      "path": "apps/www/public/images/product-practice/collective-synthesis.webp",
+      "sha256": "80634b6d3c9f2fac2f6591eeb2c566e087deaf9eaf6abcb2ebbcd0e8a46c2e1b",
+      "width": 1920,
+      "height": 1280,
+      "placement": "home-field-record"
+    },
+    {
+      "manifestKey": "civicInterface",
+      "id": "civic-interface",
+      "derivativeId": "derivative.photo.civic-interface.field-record.v1",
+      "path": "apps/www/public/images/product-practice/civic-interface.webp",
+      "sha256": "5d38bf676e5f65778ef8ebe433c432fa4ef09aaad8e2b777d92f892d320c9e4c",
+      "width": 1920,
+      "height": 1280,
+      "placement": "home-field-record"
+    },
+    {
+      "manifestKey": "publicInformationMaterials",
+      "id": "public-information-materials",
+      "derivativeId": "derivative.photo.public-information-materials.field-record.v1",
+      "path": "apps/www/public/images/product-practice/public-information-materials.webp",
+      "sha256": "73e332e18b3d5df99d195f8cb41d88abdf8b5cb8860758526a0a5586ffc6d222",
+      "width": 1200,
+      "height": 1600,
+      "placement": "home-field-record"
+    },
+    {
+      "manifestKey": "maintenanceInPractice",
+      "id": "maintenance-in-practice",
+      "derivativeId": "derivative.photo.maintenance-in-practice.field-record.v1",
+      "path": "apps/www/public/images/product-practice/maintenance-in-practice.webp",
+      "sha256": "14653dfb7d01c5698f0671c008dd54094521519d4cc84a51a2d808fca0f42805",
+      "width": 1920,
+      "height": 1440,
+      "placement": "home-field-record"
+    },
+    {
+      "manifestKey": "bicycleCanoeSystem",
+      "id": "bicycle-canoe-system",
+      "derivativeId": "derivative.photo.bicycle-canoe-system.field-record.v1",
+      "path": "apps/www/public/images/product-practice/bicycle-canoe-system.webp",
+      "sha256": "d6d58214766092f8754e4c3d4de5fc84f70d52c8854f574c6fbb1da42471ea34",
+      "width": 1200,
+      "height": 1600,
+      "placement": "home-field-record"
+    }
+  ],
+  "firstViewportSignals": [
+    "Jamie Burkart",
+    "Senior Product Manager",
+    "turns public problems into products people can use.",
+    "See the product proof",
+    "Resume"
+  ]
+}

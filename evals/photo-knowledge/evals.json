@@ -19,6 +19,12 @@
     "creator_credit_and_custody_distinct",
     "permission_scope_exact_and_fail_closed",
     "caption_assertions_source_bound",
+    "employment_records_materialized",
+    "employment_derivatives_integrity_and_metadata_stripping",
+    "employment_permission_scope_and_release_gate",
+    "employment_caption_assertions_source_bound",
+    "employment_manifest_wiki_alignment",
+    "employment_selection_remains_human",
     "manifest_wiki_placement_alignment",
     "revocation_and_rollback_available",
     "protected_absence_not_auto_filled",
@@ -32,7 +38,7 @@
     {
       "id": "documentary_integrity",
       "threshold": 1,
-      "description": "Creator, custody, permission, visible observation, metadata, recollection, and interpretation remain distinct and source-bound."
+      "description": "Creator, custody, permission, visible observation, metadata, recollection, and interpretation remain distinct and source-bound across the retained canary and the six-image employment edition."
     },
     {
       "id": "placement_coherence",
@@ -52,7 +58,7 @@
     {
       "id": "selective_projection",
       "threshold": 1,
-      "description": "One canary becomes deeply governed while the remaining public photographs stay in a declared reconciliation queue and the site remains composed."
+      "description": "The retained canary and the six purpose-selected employment photographs are governed exactly while the site remains selective and composed."
     },
     {
       "id": "teammate_reproducibility",

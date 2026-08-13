@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-12T18:09:08-04:00",
   "sourceCommit": "04a64dcc01f65f5e74686d8ba7302725d3ed4314",
-  "sourceFingerprint": "3ef11f1043c07cb0e4bf0828c4315ac9482fbad1d01d1fab0ebaf3adf9906345",
+  "sourceFingerprint": "f8d65d63bf35117d2edd7316446f3acb39a0fd61b2552b6c731b68f789453d47",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -30,6 +30,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-11",
       "reviewBy": "2026-08-14"
+    },
+    {
+      "id": "asset-set.photo.employment-edition-terminal-six.2026-08",
+      "path": "docs/knowledge-bank/assets/photographs/employment-edition-terminal-six-2026-08.md",
+      "title": "August 2026 employment-edition terminal six photographs",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Six metadata-stripped public derivatives selected from a recursively edited, rights-cleared portfolio source album to show Jamie Burkart's product practice in material form.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2027-02-12"
     },
     {
       "id": "asset.graphic.kc-town-hall.walkshed.2019.001",
@@ -78,7 +91,7 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Public-safe record for a 2022 photograph of Jamie Burkart at the East River, made by Elana Gordon and used as the Layout C homepage hero.",
+      "summary": "Public-safe record for a 2022 photograph of Jamie Burkart at the East River, made by Elana Gordon, first used as the Layout C hero and retained in the current homepage field record.",
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-26"
@@ -2658,6 +2671,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "decision.photo.home-product-practice.2026-08",
+      "path": "docs/knowledge-bank/decisions/photography/home-product-practice-2026-08.md",
+      "title": "Use the terminal six to make product practice visible on the homepage",
+      "kind": "decision",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Bounded employment-edition decision selecting one current field image and five supporting records from a recursive photo edit, then retaining the separately cleared East River canary as a sixth field-record image, while preserving role clarity, collective credit, and open release gates.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2027-02-12"
+    },
+    {
       "id": "decision.photo.layout-c.home-east-river.v1",
       "path": "docs/knowledge-bank/decisions/photography/layout-c-home-east-river-v1.md",
       "title": "Select the East River photograph for the Layout C homepage",
@@ -3128,8 +3154,8 @@
       "sensitivity": "low",
       "summary": "Index of bounded decision reconstructions preserving actors, constraints, alternatives, artifacts, outcomes, unknowns, and projection holds.",
       "aliases": [],
-      "lastReviewed": "2026-07-28",
-      "reviewBy": "2026-10-19"
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2026-11-12"
     },
     {
       "id": "index.knowledge-wiki.decisions-deliverables-operational-outcomes",
@@ -3245,7 +3271,7 @@
       "sensitivity": "low",
       "summary": "Public-safe orientation to the governed relationship among private photo sources, first-class Wiki records, exact portfolio occurrences, recollection, correction, and human publication gates.",
       "aliases": [],
-      "lastReviewed": "2026-07-26",
+      "lastReviewed": "2026-08-12",
       "reviewBy": "2027-01-26"
     },
     {
@@ -4060,14 +4086,27 @@
       "reviewBy": "2026-10-19"
     },
     {
-      "id": "projection.photo.layout-c.home.east-river",
-      "path": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
-      "title": "Layout C homepage East River occurrence",
+      "id": "projection.photo.home-product-practice.2026-08",
+      "path": "docs/knowledge-bank/projections/photography/home-product-practice-2026-08.md",
+      "title": "August 2026 homepage product-practice photo sequence",
       "kind": "projection",
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Exact public occurrence binding the East River derivative to the Layout C homepage hero, crop, caption, credit, assertions, and release states.",
+      "summary": "Exact homepage occurrence binding six governed derivatives to one hero and one field-record sequence for the senior product-manager employment edition.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2027-02-12"
+    },
+    {
+      "id": "projection.photo.layout-c.home.east-river",
+      "path": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
+      "title": "Retained East River homepage field-record occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact public occurrence binding the East River derivative to the homepage field record, crop, caption, credit, assertions, and release states after its original Layout C hero use.",
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-26"
@@ -4918,6 +4957,19 @@
       "reviewBy": "2027-01-26"
     },
     {
+      "id": "source.permission.employment-edition-source-album.2026-08",
+      "path": "docs/knowledge-bank/sources/permissions/employment-edition-source-album-portfolio-2026-08.md",
+      "title": "Employment-edition source album portfolio permission summary",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe capsule recording Jamie Burkart's confirmation that every photograph in the bounded source album has publication rights and permission for use on the jamieburk.art portfolio.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2027-02-12"
+    },
+    {
       "id": "source.photo-metadata.east-river.2022.public-safe",
       "path": "docs/knowledge-bank/sources/photo-metadata/east-river-2022-public-safe.md",
       "title": "East River photograph public-safe metadata summary",
@@ -4929,6 +4981,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "source.photo-metadata.employment-edition.2026-08.public-safe",
+      "path": "docs/knowledge-bank/sources/photo-metadata/employment-edition-terminal-six-2026-08-public-safe.md",
+      "title": "Employment-edition terminal six metadata summary",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe capsule of the bounded Apple Photos reconciliation used to check people, dates, album context, and caption precision for the six selected portfolio derivatives.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2027-02-12"
     },
     {
       "id": "source.politico.callnyc.2016-03-14",
@@ -5301,6 +5366,30 @@
       "to": "source.jobs.oti.senior-product-manager.782366",
       "source": "frontmatter",
       "href": "../sources/jobs-oti-senior-product-manager-782366.md",
+      "context": null
+    },
+    {
+      "from": "asset-set.photo.employment-edition-terminal-six.2026-08",
+      "type": "projected_to",
+      "to": "projection.photo.home-product-practice.2026-08",
+      "source": "frontmatter",
+      "href": "../../projections/photography/home-product-practice-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "asset-set.photo.employment-edition-terminal-six.2026-08",
+      "type": "uses_source",
+      "to": "source.permission.employment-edition-source-album.2026-08",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/employment-edition-source-album-portfolio-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "asset-set.photo.employment-edition-terminal-six.2026-08",
+      "type": "uses_source",
+      "to": "source.photo-metadata.employment-edition.2026-08.public-safe",
+      "source": "frontmatter",
+      "href": "../../sources/photo-metadata/employment-edition-terminal-six-2026-08-public-safe.md",
       "context": null
     },
     {
@@ -10918,6 +11007,22 @@
       "context": null
     },
     {
+      "from": "decision.photo.home-product-practice.2026-08",
+      "type": "related_to",
+      "to": "projection.photo.home-product-practice.2026-08",
+      "source": "frontmatter",
+      "href": "../../projections/photography/home-product-practice-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.home-product-practice.2026-08",
+      "type": "uses_source",
+      "to": "source.permission.employment-edition-source-album.2026-08",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/employment-edition-source-album-portfolio-2026-08.md",
+      "context": null
+    },
+    {
       "from": "decision.photo.layout-c.home-east-river.v1",
       "type": "related_to",
       "to": "evaluation.curatorial.layout-c.home-east-river.v1",
@@ -11704,6 +11809,14 @@
     {
       "from": "index.knowledge-wiki.decision-records",
       "type": "related_to",
+      "to": "decision.photo.home-product-practice.2026-08",
+      "source": "frontmatter",
+      "href": "../decisions/photography/home-product-practice-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.decision-records",
+      "type": "related_to",
       "to": "decision.photo.layout-c.home-east-river.v1",
       "source": "frontmatter",
       "href": "../decisions/photography/layout-c-home-east-river-v1.md",
@@ -12368,6 +12481,14 @@
     {
       "from": "index.knowledge-wiki.photography",
       "type": "has_asset",
+      "to": "asset-set.photo.employment-edition-terminal-six.2026-08",
+      "source": "frontmatter",
+      "href": "../assets/photographs/employment-edition-terminal-six-2026-08.md",
+      "context": "Six rights-cleared, metadata-stripped derivatives selected for the August 2026 senior product-manager employment edition."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "has_asset",
       "to": "asset.photo.east-river-manhattan-bridge.2022.001",
       "source": "frontmatter",
       "href": "../assets/photographs/east-river-manhattan-bridge-2022.md",
@@ -12388,6 +12509,14 @@
       "source": "frontmatter",
       "href": "../corrections/east-river-credit-2026-07.md",
       "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "decision.photo.home-product-practice.2026-08",
+      "source": "frontmatter",
+      "href": "../decisions/photography/home-product-practice-2026-08.md",
+      "context": "Bounded decision to use one current hero and a five-image field record without exposing the private archive."
     },
     {
       "from": "index.knowledge-wiki.photography",
@@ -12460,6 +12589,14 @@
       "source": "frontmatter",
       "href": "photo-sets/nycac-project-sites-2017-2026.md",
       "context": "Full-population image disposition and held photograph families recovered from five NYC Artist Coalition project sites."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "projection.photo.home-product-practice.2026-08",
+      "source": "frontmatter",
+      "href": "../projections/photography/home-product-practice-2026-08.md",
+      "context": "Exact homepage sequence and release-state binding for the employment edition."
     },
     {
       "from": "index.knowledge-wiki.photography",
@@ -14918,6 +15055,22 @@
       "context": "Connects the public-safe Wiki to a governed private canonical edition through an opaque summary-only source record."
     },
     {
+      "from": "projection.photo.home-product-practice.2026-08",
+      "type": "uses_source",
+      "to": "asset-set.photo.employment-edition-terminal-six.2026-08",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/employment-edition-terminal-six-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.home-product-practice.2026-08",
+      "type": "uses_source",
+      "to": "source.permission.employment-edition-source-album.2026-08",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/employment-edition-source-album-portfolio-2026-08.md",
+      "context": null
+    },
+    {
       "from": "projection.photo.layout-c.home.east-river",
       "type": "related_to",
       "to": "edition.layout-c.2026-07",
@@ -16158,11 +16311,27 @@
       "context": null
     },
     {
+      "from": "source.permission.employment-edition-source-album.2026-08",
+      "type": "related_to",
+      "to": "asset-set.photo.employment-edition-terminal-six.2026-08",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/employment-edition-terminal-six-2026-08.md",
+      "context": null
+    },
+    {
       "from": "source.photo-metadata.east-river.2022.public-safe",
       "type": "related_to",
       "to": "asset.photo.east-river-manhattan-bridge.2022.001",
       "source": "frontmatter",
       "href": "../../assets/photographs/east-river-manhattan-bridge-2022.md",
+      "context": null
+    },
+    {
+      "from": "source.photo-metadata.employment-edition.2026-08.public-safe",
+      "type": "related_to",
+      "to": "asset-set.photo.employment-edition-terminal-six.2026-08",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/employment-edition-terminal-six-2026-08.md",
       "context": null
     },
     {
@@ -17639,6 +17808,15 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/indexes/decision-records.md",
+      "from": "index.knowledge-wiki.decision-records",
+      "toPath": "docs/knowledge-bank/decisions/photography/home-product-practice-2026-08.md",
+      "to": "decision.photo.home-product-practice.2026-08",
+      "fragment": null,
+      "line": 19,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
@@ -18316,10 +18494,37 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/photography.md",
       "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/photographs/employment-edition-terminal-six-2026-08.md",
+      "to": "asset-set.photo.employment-edition-terminal-six.2026-08",
+      "fragment": null,
+      "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/decisions/photography/home-product-practice-2026-08.md",
+      "to": "decision.photo.home-product-practice.2026-08",
+      "fragment": null,
+      "line": 13,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/projections/photography/home-product-practice-2026-08.md",
+      "to": "projection.photo.home-product-practice.2026-08",
+      "fragment": null,
+      "line": 14,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
       "toPath": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
       "to": "asset.photo.east-river-manhattan-bridge.2022.001",
       "fragment": null,
-      "line": 27,
+      "line": 38,
       "kind": "link"
     },
     {
@@ -18328,7 +18533,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/east-river-canoe-2022.md",
       "to": "index.photo-set.east-river-canoe.2022",
       "fragment": null,
-      "line": 28,
+      "line": 39,
       "kind": "link"
     },
     {
@@ -18337,7 +18542,7 @@
       "toPath": "docs/knowledge-bank/people/elana-gordon.md",
       "to": "person.elana-gordon",
       "fragment": null,
-      "line": 29,
+      "line": 40,
       "kind": "link"
     },
     {
@@ -18346,7 +18551,7 @@
       "toPath": "docs/knowledge-bank/sources/photo-metadata/east-river-2022-public-safe.md",
       "to": "source.photo-metadata.east-river.2022.public-safe",
       "fragment": null,
-      "line": 30,
+      "line": 41,
       "kind": "link"
     },
     {
@@ -18355,7 +18560,7 @@
       "toPath": "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md",
       "to": "source.permission.elana-gordon.east-river.2026-07",
       "fragment": null,
-      "line": 31,
+      "line": 42,
       "kind": "link"
     },
     {
@@ -18364,7 +18569,7 @@
       "toPath": "docs/knowledge-bank/evaluations/curatorial/layout-c-home-east-river-v1.md",
       "to": "evaluation.curatorial.layout-c.home-east-river.v1",
       "fragment": null,
-      "line": 32,
+      "line": 43,
       "kind": "link"
     },
     {
@@ -18373,7 +18578,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/layout-c-home-east-river-v1.md",
       "to": "decision.photo.layout-c.home-east-river.v1",
       "fragment": null,
-      "line": 33,
+      "line": 44,
       "kind": "link"
     },
     {
@@ -18382,7 +18587,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/layout-c-resume-no-photo-v1.md",
       "to": "decision.photo.layout-c.resume-no-photo.v1",
       "fragment": null,
-      "line": 34,
+      "line": 45,
       "kind": "link"
     },
     {
@@ -18391,7 +18596,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/pre-launch-rights-narrowing-2026-07-28.md",
       "to": "decision.photo.pre-launch.rights-narrowing.2026-07-28",
       "fragment": null,
-      "line": 35,
+      "line": 46,
       "kind": "link"
     },
     {
@@ -18400,7 +18605,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
       "to": "projection.photo.layout-c.home.east-river",
       "fragment": null,
-      "line": 36,
+      "line": 47,
       "kind": "link"
     },
     {
@@ -18409,7 +18614,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/edition-layout-c-2026-07.md",
       "to": "edition.layout-c.2026-07",
       "fragment": null,
-      "line": 37,
+      "line": 48,
       "kind": "link"
     },
     {
@@ -18418,7 +18623,7 @@
       "toPath": "docs/knowledge-bank/corrections/east-river-credit-2026-07.md",
       "to": "correction.photo.east-river-credit.2026-07",
       "fragment": null,
-      "line": 38,
+      "line": 49,
       "kind": "link"
     },
     {
@@ -18427,7 +18632,7 @@
       "toPath": "docs/knowledge-bank/sources/recollections/jamie-canoe-commuting-2026-07.md",
       "to": "source.recollection.jamie-canoe-commuting.2026-07",
       "fragment": null,
-      "line": 39,
+      "line": 50,
       "kind": "link"
     },
     {
@@ -18436,7 +18641,7 @@
       "toPath": "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md",
       "to": "research-inquiry.documented-canoe-bike-journeys",
       "fragment": null,
-      "line": 40,
+      "line": 51,
       "kind": "link"
     },
     {
@@ -18445,7 +18650,7 @@
       "toPath": "docs/knowledge-bank/workflows/photography-east-river-canary.md",
       "to": "method.photography-east-river-canary",
       "fragment": null,
-      "line": 41,
+      "line": 52,
       "kind": "link"
     },
     {
@@ -18454,7 +18659,7 @@
       "toPath": "rfcs/0003-living-photographic-knowledge-loop.md",
       "to": null,
       "fragment": null,
-      "line": 49,
+      "line": 60,
       "kind": "link"
     },
     {
@@ -18463,7 +18668,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-dcla-formation-2017.md",
       "to": "index.photo-set.nycac-dcla-formation.2017",
       "fragment": null,
-      "line": 54,
+      "line": 65,
       "kind": "link"
     },
     {
@@ -18472,7 +18677,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/kc-town-hall-fieldwork.md",
       "to": "index.photo-set.kc-town-hall-fieldwork",
       "fragment": null,
-      "line": 55,
+      "line": 66,
       "kind": "link"
     },
     {
@@ -18481,7 +18686,7 @@
       "toPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-walkshed-2019.md",
       "to": "asset.graphic.kc-town-hall.walkshed.2019.001",
       "fragment": null,
-      "line": 60,
+      "line": 71,
       "kind": "link"
     },
     {
@@ -18490,7 +18695,7 @@
       "toPath": "docs/knowledge-bank/research-runs/photographic-source-return-2026-07-26.md",
       "to": "research.photographic-source-return.2026-07-26",
       "fragment": null,
-      "line": 62,
+      "line": 73,
       "kind": "link"
     },
     {
@@ -18499,7 +18704,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-project-sites-2017-2026.md",
       "to": "index.photo-set.nycac-project-sites.2017-2026",
       "fragment": null,
-      "line": 67,
+      "line": 78,
       "kind": "link"
     },
     {

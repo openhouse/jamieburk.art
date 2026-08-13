@@ -8,7 +8,7 @@ sensitivity: low
 last_reviewed: 2026-07-26
 review_by: 2027-01-26
 canonical_path: docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md
-summary: Public-safe record for a 2022 photograph of Jamie Burkart at the East River, made by Elana Gordon and used as the Layout C homepage hero.
+summary: Public-safe record for a 2022 photograph of Jamie Burkart at the East River, made by Elana Gordon, first used as the Layout C hero and retained in the current homepage field record.
 media_type: photograph
 rights_state: cleared
 consent_state: cleared
@@ -101,9 +101,10 @@ relations:
 
 ## Current public use
 
-The exact derivative appears as the Layout C homepage hero. The factual caption
-names the public place and year. The credit names Elana Gordon as photographer
-and Jamie Burkart's photo archive as the custodian of this copy.
+The exact derivative appears in the homepage field record after originating as
+the Layout C hero. The factual caption names the public place and year. The
+credit names Elana Gordon as photographer and Jamie Burkart's photo archive as
+the custodian of this copy.
 
 ## What is established
 

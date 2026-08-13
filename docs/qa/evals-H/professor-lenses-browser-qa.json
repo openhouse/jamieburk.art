@@ -1,11 +1,11 @@
 {
   "reportVersion": 3,
-  "checkedAt": "2026-08-12T16:36:46.428Z",
-  "baseUrl": "http://127.0.0.1:3057",
-  "publicSurfaceFingerprint": "eef497de543aab662bdfb7d838c23d18060d76ce456ed1867e6ef14e5878eeda",
+  "checkedAt": "2026-08-12T23:56:28.653297Z",
+  "baseUrl": "http://127.0.0.1:3042",
+  "publicSurfaceFingerprint": "43530d014f7b9b2d6a36d1e8ccf5efcba1b168b1450a5ef1cc0fb1954bf4982b",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 118,
-  "captureMethod": "Playwright Chromium screenshots of the current built local candidate; About captures are deliberately framed on the through-line and current systems loops; no deployment or indexing action.",
+  "publicSurfaceFileCount": 125,
+  "captureMethod": "Playwright Chromium screenshots of the exact built local candidate; About captures are deliberately framed on the through-line and current systems loops; no deployment or indexing action.",
   "routes": [
     {
       "path": "/",
@@ -20,8 +20,15 @@
           },
           "pixelWidth": 1280,
           "pixelHeight": 900,
-          "sha256": "7ff02c019578cce0298caf900c7b880e3d9ffc2e0e97dd15c789ad85dbcd8b80",
-          "file": "candidate-home-desktop.png"
+          "httpStatus": 200,
+          "documentTitle": "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
+          "h1Count": 1,
+          "h1Text": "Jamie Burkart\nturns public problems into products people can use.",
+          "nextjsPortalCount": 0,
+          "frameworkErrorTextCount": 0,
+          "sha256": "adc10af66eb1ca7428344480b74f900a10c50cb682379c1cd35b803fe2f291f9",
+          "file": "candidate-home-desktop.png",
+          "passed": true
         },
         {
           "name": "mobile",
@@ -31,8 +38,15 @@
           },
           "pixelWidth": 375,
           "pixelHeight": 812,
-          "sha256": "a3233b7565d0417ded117b0b2cfd5d504bbee270ae408026853739b8008a3ef1",
-          "file": "candidate-home-viewport.png"
+          "httpStatus": 200,
+          "documentTitle": "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
+          "h1Count": 1,
+          "h1Text": "Jamie Burkart\nturns public problems into products people can use.",
+          "nextjsPortalCount": 0,
+          "frameworkErrorTextCount": 0,
+          "sha256": "b32afa31f713e520e750f7f3a61157842e7a30c18ed88070c5e2f765c5cf6b75",
+          "file": "candidate-home-viewport.png",
+          "passed": true
         }
       ]
     },
@@ -49,11 +63,18 @@
           },
           "pixelWidth": 1280,
           "pixelHeight": 900,
-          "sha256": "74724ed4278bab16ea13080ce969dc115054c5f0c8863c159b1623d10a246ac1",
+          "httpStatus": 200,
+          "documentTitle": "About - Jamie Burkart",
+          "h1Count": 1,
+          "h1Text": "About",
+          "nextjsPortalCount": 0,
+          "frameworkErrorTextCount": 0,
+          "sha256": "0e3198679fff40a1c025d4665cb2837ef6235ba3b7a24b443cab9816de4b0ca1",
           "file": "professor-lenses-about-desktop.png",
+          "passed": true,
           "framedContent": {
             "throughLineHeadingPresent": true,
-            "currentSystemsLabelPresent": true,
+            "currentSystemsLabelPresent": false,
             "currentPracticeDocumented": true
           }
         },
@@ -65,11 +86,18 @@
           },
           "pixelWidth": 375,
           "pixelHeight": 1200,
-          "sha256": "413e2f7911f5ee140209fb952eaf64061c00a63970556bc5d782e2ec677f4729",
+          "httpStatus": 200,
+          "documentTitle": "About - Jamie Burkart",
+          "h1Count": 1,
+          "h1Text": "About",
+          "nextjsPortalCount": 0,
+          "frameworkErrorTextCount": 0,
+          "sha256": "fb2e2b92d3de26287de71bc466ad3640a9c56fa9ae7b47a7fd6ec07fb33007cc",
           "file": "professor-lenses-about-mobile.png",
+          "passed": true,
           "framedContent": {
             "throughLineHeadingPresent": true,
-            "currentSystemsLabelPresent": true,
+            "currentSystemsLabelPresent": false,
             "currentPracticeDocumented": true
           }
         }

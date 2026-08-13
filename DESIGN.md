@@ -1,6 +1,6 @@
 ---
 name: "Jamie Burkart Portfolio"
-description: "A public-safe editorial portfolio for technical project management, product operations, implementation, and civic work."
+description: "A public-safe editorial portfolio for senior product management, technical project delivery, implementation, and civic work."
 theme: "human-index"
 colors:
   primary-work-jacket-blue: "#2f6f89"
@@ -35,6 +35,11 @@ The interface is neither an archive browser nor a photo gallery. Text and image
 work together to make Jamie's recurring action legible: listening for emerging
 structure, building usable forms with people, and leaving continuity behind.
 
+For the August 2026 employment edition, the single page job is sharper: a
+public-sector hiring reader should recognize a senior product leader, understand
+the discover-deliver-sustain practice, inspect three decisive cases, and reach a
+resume or conversation without decoding the archive behind the page.
+
 ## Color
 
 - **Work-jacket blue** carries links, primary actions, and structural emphasis.
@@ -51,8 +56,9 @@ texture.
 
 Display type uses a system serif for identity, page titles, and true editorial
 landmarks. Karla carries prose and controls. Oswald carries compact labels and
-index numbers. Letter spacing is never negative. Large type is reserved for the
-home hero and page titles; panel headings remain compact.
+index numbers. Tight negative tracking is reserved for large display headlines;
+body copy and utility labels remain neutral or open. Large type is reserved for
+the home hero, section theses, and page titles; evidence labels remain compact.
 
 ## Photography
 
@@ -72,10 +78,17 @@ people, artwork, caption, and collective-credit questions are resolved. A route
 may deliberately contain no photograph when the available image would weaken
 truth, comparison, or task completion.
 
+Jamie confirmed on August 12, 2026 that the bounded employment-edition source
+album has publication rights and permission for this portfolio. That clears the
+six selected derivatives for the exact governed occurrence. It does not erase
+creator-credit duties, collective context, the distinction between access and
+consent, or the still-open production and indexing decisions.
+
 ## Composition
 
-- The home hero is full-bleed, photographic, and unframed. Text sits directly
-  in the scene with one even contrast wash, never a gradient or a card.
+- The home hero is a split field: role-first work-jacket blue beside a current,
+  full-bleed, unframed civic-work photograph. The split keeps copy readable
+  without turning the photograph into wallpaper or placing text over a face.
 - Indexes use rules, numbers, and stable columns instead of repeated floating
   cards.
 - Cards are reserved for discrete artifacts, calls to action, and genuinely
@@ -83,8 +96,32 @@ truth, comparison, or task completion.
 - Photographs receive stable aspect ratios and captions beneath the image.
 - Page sections are full-width bands or unframed layouts with a constrained
   inner measure.
-- The first viewport names Jamie and his literal role while leaving a hint of
-  the next section on common desktop and mobile screens.
+- The first viewport names Jamie, the literal senior product role, the value
+  proposition, and two actions. Desktop shows the current photograph beside
+  that proposition; mobile places the complete proposition before the image.
+
+## August 2026 employment-edition composition
+
+The homepage uses the Impeccable concept seed `5e4cf5f7` and assigned structure
+three: discover, deliver, sustain. The structure won because it maps directly
+to product leadership and asks less of a ten-second hiring reader than a
+portfolio taxonomy or archive explanation.
+
+The signature is a product-practice case file made from the portfolio's own
+materials: documentary photography, work-jacket blue, graphite, field paper,
+serif declarations, ruled evidence, and compact utility labels. The one visual
+risk is scale—the thesis and case names are allowed to read like civic posters—
+while everything else stays flat, unrounded, still, and operational.
+
+The public story is deliberately short:
+
+1. Jamie turns public problems into products people can use.
+2. The practice moves through discovery, delivery, and sustainability.
+3. WOW List, Harry J. Epstein Company, and NYC Artist Coalition / Fair Rent NYC
+   prove the practice under different conditions.
+4. Seven governed photographs make the work material without exposing the
+   private archive or selection machinery.
+5. The final band offers one role-specific conversation and the resume.
 
 ## Accessibility
 

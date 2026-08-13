@@ -28,7 +28,7 @@
     "caption": "At the East River beneath the Manhattan Bridge, 2022.",
     "credit": "Photograph by Elana Gordon. From Jamie Burkart's photo archive.",
     "route": "/",
-    "component": "Hero"
+    "component": "HomePage field record"
   },
   "privateBinding": {
     "provider": "photo-fieldwork",

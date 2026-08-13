@@ -24,7 +24,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   const evaluation = JSON.parse(readText("evals/layout/portfolio-photography.json"));
   const expectedCriteria = [
     "manifest-bound-publication",
-    "minimal-authorized-field",
+    "authorized-employment-field",
     "metadata-and-locator-safety",
     "editorial-not-decorative",
     "deliberate-absence",
@@ -42,33 +42,44 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
 
   const manifestPath = "apps/www/src/data/photography.ts";
   const manifest = readText(manifestPath);
-  const sources = [...manifest.matchAll(/src: "(\/images\/field-notes\/[^"]+)"/g)].map(
+  const sources = [...manifest.matchAll(/src: "(\/images\/(?:field-notes|product-practice)\/[^\"]+)"/g)].map(
     (match) => match[1]
   );
   const expectedSources = [
-    "/images/field-notes/jamie-east-river.webp"
+    "/images/field-notes/jamie-east-river.webp",
+    "/images/product-practice/bicycle-canoe-system.webp",
+    "/images/product-practice/civic-field-exchange.webp",
+    "/images/product-practice/civic-interface.webp",
+    "/images/product-practice/collective-synthesis.webp",
+    "/images/product-practice/maintenance-in-practice.webp",
+    "/images/product-practice/public-information-materials.webp"
   ];
   if (JSON.stringify(sources.sort()) !== JSON.stringify(expectedSources.sort())) {
-    fail("minimal-authorized-field", "The public field must contain exactly the four reviewed derivatives.");
+    fail("authorized-employment-field", "The public field must contain exactly the seven reviewed derivatives.");
   }
 
   for (const field of ["id", "width", "height", "alt", "caption", "credit", "placements", "publicationStatus", "publicUseBoundary"]) {
     const count = [...manifest.matchAll(new RegExp(`\\b${field}:`, "g"))].length;
-    if (count !== 2) {
+    if (count !== expectedSources.length + 1) {
       fail("manifest-bound-publication", `Manifest field ${field} is missing from one or more photos.`);
     }
   }
-  if ([...manifest.matchAll(/publicationStatus: "jamie-authorized"/g)].length !== 2) {
+  if ([...manifest.matchAll(/publicationStatus: "jamie-authorized",/g)].length !== expectedSources.length) {
     fail("manifest-bound-publication", "Every photo must retain the Jamie-authorized publication status.");
   }
 
-  const publicImageRoot = path.join(root, "apps/www/public/images/field-notes");
-  const publicImages = walkFiles(publicImageRoot).sort();
-  if (publicImages.length !== 1 || publicImages.some((file) => !file.endsWith(".webp"))) {
-    fail("minimal-authorized-field", "The field-notes directory must contain only the fully bound East River WebP derivative.");
+  const publicImageRoots = [
+    path.join(root, "apps/www/public/images/field-notes"),
+    path.join(root, "apps/www/public/images/product-practice")
+  ];
+  const publicImages = publicImageRoots.flatMap((imageRoot) =>
+    walkFiles(imageRoot).map((file) => ({ imageRoot, file }))
+  );
+  if (publicImages.length !== expectedSources.length || publicImages.some(({ file }) => !file.endsWith(".webp"))) {
+    fail("authorized-employment-field", "The public image directories must contain only the seven bound WebP derivatives.");
   }
-  for (const relativeImagePath of publicImages) {
-    const bytes = readFileSync(path.join(publicImageRoot, relativeImagePath));
+  for (const { imageRoot, file: relativeImagePath } of publicImages) {
+    const bytes = readFileSync(path.join(imageRoot, relativeImagePath));
     const binary = bytes.toString("latin1");
     if (/EXIF|Exif|GPSLatitude|GPSLongitude|<x:xmpmeta/i.test(binary)) {
       fail("metadata-and-locator-safety", `${relativeImagePath} contains embedded metadata.`);
@@ -96,12 +107,12 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   const hero = readText("apps/www/src/components/Hero.tsx");
   const about = readText("apps/www/src/app/about/page.tsx");
   const colophon = readText("apps/www/src/app/colophon/page.tsx");
-  if (!hero.includes("portfolioPhotos.eastRiver") || !hero.includes("fill") || /rounded|shadow/.test(hero)) {
+  if (!hero.includes("portfolioPhotos.civicFieldExchange") || !hero.includes("fill") || /rounded|shadow/.test(hero)) {
     fail("editorial-not-decorative", "The home photograph must remain full-bleed, unframed, and manifest-bound.");
   }
-  if (/FieldPhoto|portfolioPhotos|\/images\/field-notes\//.test(about) ||
-      /FieldPhoto|portfolioPhotos|\/images\/field-notes\//.test(colophon)) {
-    fail("editorial-not-decorative", "About and Colophon must remain text-led until additional images complete exact rights and credit review.");
+  if (/FieldPhoto|portfolioPhotos|\/images\/(?:field-notes|product-practice)\//.test(about) ||
+      /FieldPhoto|portfolioPhotos|\/images\/(?:field-notes|product-practice)\//.test(colophon)) {
+    fail("editorial-not-decorative", "About and Colophon must remain text-led.");
   }
 
   for (const route of [
@@ -109,7 +120,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     "apps/www/src/app/resume/page.tsx",
     "apps/www/src/app/contact/page.tsx"
   ]) {
-    if (/FieldPhoto|portfolioPhotos|\/images\/field-notes\//.test(readText(route))) {
+    if (/FieldPhoto|portfolioPhotos|\/images\/(?:field-notes|product-practice)\//.test(readText(route))) {
       fail("deliberate-absence", `${route} received a field photograph without a new editorial decision.`);
     }
   }

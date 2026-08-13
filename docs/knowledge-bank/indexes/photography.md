@@ -5,11 +5,23 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-26
+last_reviewed: 2026-08-12
 review_by: 2027-01-26
 canonical_path: docs/knowledge-bank/indexes/photography.md
 summary: Public-safe orientation to the governed relationship among private photo sources, first-class Wiki records, exact portfolio occurrences, recollection, correction, and human publication gates.
 relations:
+  - type: has_asset
+    target: asset-set.photo.employment-edition-terminal-six.2026-08
+    href: ../assets/photographs/employment-edition-terminal-six-2026-08.md
+    context: Six rights-cleared, metadata-stripped derivatives selected for the August 2026 senior product-manager employment edition.
+  - type: related_to
+    target: decision.photo.home-product-practice.2026-08
+    href: ../decisions/photography/home-product-practice-2026-08.md
+    context: Bounded decision to use one current hero and a five-image field record without exposing the private archive.
+  - type: related_to
+    target: projection.photo.home-product-practice.2026-08
+    href: ../projections/photography/home-product-practice-2026-08.md
+    context: Exact homepage sequence and release-state binding for the employment edition.
   - type: has_asset
     target: asset.photo.east-river-manhattan-bridge.2022.001
     href: ../assets/photographs/east-river-manhattan-bridge-2022.md
@@ -72,6 +84,17 @@ relations:
 This index begins with one complete occurrence rather than attempting to mirror
 Jamie Burkart's private photo archive. The archive remains private and
 additive. The portfolio remains selective and composed.
+
+## August 2026 employment edition
+
+The [employment-edition terminal six](../assets/photographs/employment-edition-terminal-six-2026-08.md)
+extend the photo knowledge loop from a single canary to a bounded, purpose-built
+homepage sequence. Jamie confirmed source-album publication rights and
+portfolio permission. The [selection decision](../decisions/photography/home-product-practice-2026-08.md)
+and [exact occurrence](../projections/photography/home-product-practice-2026-08.md)
+keep the composed public result separate from the private Apple Photos library,
+the recursive selector output, and the still-open production and indexing
+decisions.
 
 ## East River canary
 

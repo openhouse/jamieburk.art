@@ -1,6 +1,6 @@
 ---
 id: projection.photo.layout-c.home.east-river
-title: Layout C homepage East River occurrence
+title: Retained East River homepage field-record occurrence
 kind: projection
 projection_type: photo-occurrence
 status: maintained
@@ -9,21 +9,21 @@ sensitivity: low
 last_reviewed: 2026-07-26
 review_by: 2027-01-26
 canonical_path: docs/knowledge-bank/projections/photography/layout-c-home-east-river.md
-summary: Exact public occurrence binding the East River derivative to the Layout C homepage hero, crop, caption, credit, assertions, and release states.
+summary: Exact public occurrence binding the East River derivative to the homepage field record, crop, caption, credit, assertions, and release states after its original Layout C hero use.
 projection_status: active
 portfolio_edition: edition.layout-c.2026-07
 asset: asset.photo.east-river-manhattan-bridge.2022.001
 derivative: derivative.photo.east-river.layout-c.v1
 route: /
-component: Hero
+component: HomePage field record
 purpose:
-  - orientation
-  - personal-presence
+  - field-record
+  - public-context
   - public-scale
 sequence:
-  position: 1
-  follows: null
-  precedes: section.start-here
+  position: 7
+  follows: derivative.photo.bicycle-canoe-system.field-record.v1
+  precedes: section.product-close
 crop:
   desktop: 50% 50%
   mobile: 73% 50%
@@ -45,7 +45,7 @@ approval:
   production: open
   indexing: open
 rollback:
-  action: Remove the Hero image occurrence and retain the existing role-first text composition.
+  action: Remove the East River field-record image occurrence and retain the role-first text composition.
   preserves_history: true
 relations:
   - type: uses_source
@@ -63,11 +63,12 @@ relations:
     href: edition-layout-c-2026-07.md
 ---
 
-# Layout C homepage East River occurrence
+# Retained East River homepage field-record occurrence
 
 This is the unit approved for public Git and staging review: exact image,
-transform, route, component, crop family, alt text, caption, credit, and
-surrounding first-viewport task.
+transform, route, field-record placement, crop family, alt text, caption, and
+credit. It preserves the original Layout C canary while moving the ten-second
+role task to the new text-and-current-fieldwork hero.
 
 Production publication and indexing remain open. If creator attribution,
 permission, caption basis, dignity review, or derivative identity changes, the
@@ -75,6 +76,7 @@ occurrence fails closed until the affected records are reviewed again.
 
 ## Rollback
 
-Remove the Hero image occurrence and retain the role-first text composition.
+Remove the East River field-record occurrence and retain the role-first text
+composition.
 Do not delete the asset, correction, permission summary, or historical decision
 record. A withdrawal changes use, not history.

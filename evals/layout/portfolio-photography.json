@@ -1,7 +1,7 @@
 {
   "id": "portfolio-photography-layout-v1",
   "title": "Human Index photographic portfolio layout",
-  "intent": "Photography changes the portfolio's editorial rhythm while remaining public-safe, accessible, and subordinate to human publication authority.",
+  "intent": "Photography makes Jamie's senior product practice immediately legible while remaining public-safe, accessible, and subordinate to human publication authority.",
   "criteria": [
     {
       "id": "manifest-bound-publication",
@@ -9,9 +9,9 @@
       "criterion": "Every field photograph is registered once in the public manifest with stable dimensions, alt text, caption, credit, placement, status, and boundary."
     },
     {
-      "id": "minimal-authorized-field",
+      "id": "authorized-employment-field",
       "blocking": true,
-      "criterion": "The pre-launch layout uses only the fully bound, credited, Jamie-authorized East River derivative; unresolved archival images remain outside the public bundle."
+      "criterion": "The layout uses only the six portfolio-cleared source-album derivatives plus the previously cleared East River photograph. No unresolved archival image enters the public bundle."
     },
     {
       "id": "metadata-and-locator-safety",
@@ -21,7 +21,7 @@
     {
       "id": "editorial-not-decorative",
       "blocking": true,
-      "criterion": "The home photograph is full-bleed, unframed, credited, and editorially specific; About and Colophon remain text-led until additional images complete creator, credit, rights, caption, crop, and destination review."
+      "criterion": "The home hero is full-bleed, unframed, credited, and editorially specific; supporting photographs form a compact field record rather than a decorative gallery. About and Colophon remain text-led."
     },
     {
       "id": "deliberate-absence",

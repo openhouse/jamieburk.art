@@ -1,10 +1,10 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-08-12T16:36:46.428Z",
-  "baseUrl": "http://127.0.0.1:3057",
-  "publicSurfaceFingerprint": "eef497de543aab662bdfb7d838c23d18060d76ce456ed1867e6ef14e5878eeda",
+  "checkedAt": "2026-08-12T23:56:28.653297Z",
+  "baseUrl": "http://127.0.0.1:3042",
+  "publicSurfaceFingerprint": "43530d014f7b9b2d6a36d1e8ccf5efcba1b168b1450a5ef1cc0fb1954bf4982b",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 118,
+  "publicSurfaceFileCount": 125,
   "method": "Playwright keyboard interaction plus bounded DOM and viewport inspection on the built local candidate. This is not a human screen-reader or assistive-technology session.",
   "keyboard": {
     "desktopTabSequence": [
@@ -17,7 +17,7 @@
       },
       {
         "tag": "a",
-        "text": "JBJamieBurkart",
+        "text": "JamieBurkart",
         "href": "/",
         "focusVisible": true,
         "id": null
@@ -31,8 +31,8 @@
       },
       {
         "tag": "a",
-        "text": "TechnicalOperations",
-        "href": "/work/technical-operations",
+        "text": "Productcase",
+        "href": "/work/wowlist",
         "focusVisible": true,
         "id": null
       },
