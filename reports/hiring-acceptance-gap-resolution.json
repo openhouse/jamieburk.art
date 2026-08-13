@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "candidateSha": "1e4f5f26560d0d5a43fdb3f777af1c3c4ef763a6",
+  "candidateSha": "1e9583b4d8ea910b10071b6350c45b179b4814bf",
   "portfolioSnapshotHash": "63b038a6c8fa851127924ce5fff54179638901f37dcc0f625bb0c41fc64acf32",
-  "publicReportHash": "0a9870220ee03efac92ba03af9bae38c8ec5a696b3d850c34895c7f85c859778",
+  "publicReportHash": "18821cb93e567b18374001ed92c9024944db8af0c6fd8667765b77f7a7e9b9e3",
   "wikiSourceFingerprint": "cfbf30c92da0c34890db6373da51917d96af50833f05ad5a9489cae99c1376eb",
   "findings": [
     {
