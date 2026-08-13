@@ -1,10 +1,10 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-08-13T16:38:47.381Z",
-  "baseUrl": "http://127.0.0.1:3056",
-  "publicSurfaceFingerprint": "d7f66a1fefa673b4a67771954bf5cd35a3ae8e3f12d4c2c42be13c8ab8825839",
+  "checkedAt": "2026-08-13T18:41:23.496Z",
+  "baseUrl": "http://127.0.0.1:3057",
+  "publicSurfaceFingerprint": "71866adb6883e82c207e219a2281c87d4fa26c89feff57cbeae6ddaa35ff1dee",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 119,
+  "publicSurfaceFileCount": 120,
   "routes": [
     "/",
     "/work",
@@ -843,8 +843,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionAndCreditSeparated": true,
-        "captionOverlapsPrimaryCopy": false
+        "captionOverlapsPrimaryCopy": false,
+        "captionAndCreditSeparated": true
       },
       {
         "viewport": 375,
@@ -855,8 +855,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionAndCreditSeparated": true,
-        "captionOverlapsPrimaryCopy": false
+        "captionOverlapsPrimaryCopy": false,
+        "captionAndCreditSeparated": true
       },
       {
         "viewport": 768,
@@ -867,8 +867,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionAndCreditSeparated": true,
-        "captionOverlapsPrimaryCopy": false
+        "captionOverlapsPrimaryCopy": false,
+        "captionAndCreditSeparated": true
       },
       {
         "viewport": 1280,
@@ -879,14 +879,14 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionAndCreditSeparated": true,
-        "captionOverlapsPrimaryCopy": false
+        "captionOverlapsPrimaryCopy": false,
+        "captionAndCreditSeparated": true
       }
     ],
     "passed": true
   },
   "navigationReview": {
-    "checkedAt": "2026-08-13T16:38:47.381Z",
+    "checkedAt": "2026-08-13T18:41:23.496Z",
     "startRoute": "/",
     "destinationRoute": "/about",
     "startHttpStatus": 200,
@@ -901,8 +901,8 @@
       "height": 900
     },
     "renderedScreenshot": {
-      "sha256": "df047e1af973a0d775afab35f86e9554fd720a39e51635dcdf61e02fa71f1768",
-      "byteLength": 585715,
+      "sha256": "79ce48540dff53e29c7acc8126892ab9673eab1ab0014a1c31415f74f6a4ef56",
+      "byteLength": 583564,
       "width": 1280,
       "fullPage": true,
       "retainedInPublicGit": false,
