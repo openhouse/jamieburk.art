@@ -5,7 +5,7 @@ kind: project
 status: maintained
 visibility: public-safe
 sensitivity: moderate
-last_reviewed: 2026-07-19
+last_reviewed: 2026-08-13
 review_by: 2026-09-19
 canonical_path: docs/knowledge-bank/projects/fair-rent-nyc.md
 summary: Collective commercial-rent-stabilization campaign connecting cultural-space and small-business experience with legislative, legal, public-data, and organizing work.
@@ -20,6 +20,15 @@ relations:
   - type: related_to
     target: project.save-nyc-spaces
     href: save-nyc-spaces.md
+  - type: uses_source
+    target: source.commercial-rent.empty-storefronts-high-rents.2026-07
+    href: ../sources/commercial-rent-public-support/empty-storefronts-high-rents-2026.md
+  - type: related_to
+    target: research.nycac.crs-frontline-source-return.2026-08-13
+    href: ../research-runs/nycac-crs-frontline-advocacy-2026-08-13.md
+  - type: related_to
+    target: evaluation.nycac.crs-frontline-source-return.2026-08-13
+    href: ../evaluations/nycac-crs-frontline-advocacy-2026-08-13.md
 ---
 
 # Fair Rent NYC
@@ -34,6 +43,18 @@ memory, running minutes, legislative provenance, public-data materials,
 movement mapping, action tools, and stakeholder follow-up. The work is shared
 with organizers, small-business owners, cultural-space participants, lawyers,
 policy partners, elected officials, and staff.
+
+From July 14 through August 13, 2026, the governed record adds three bounded
+contributions: a detailed and publicly credited review of *Empty Storefronts,
+High Rents*; a formal cultural-space and public-data speaking role at its July
+29 press conference; and government-relations follow-through comprising one
+completed city-office handoff and one scheduled state-staff alignment channel.
+The [source return](../research-runs/nycac-crs-frontline-advocacy-2026-08-13.md)
+keeps each maturity state and evidence class explicit. Its [held claim
+record](../claims/nycac-crs-frontline-advocacy-2026.md) and [adversarial
+evaluation](../evaluations/nycac-crs-frontline-advocacy-2026-08-13.md) prevent
+report credit, public speaking, office routing, or scheduled alignment from
+silently maturing into a stronger public claim.
 
 ## Present focus
 

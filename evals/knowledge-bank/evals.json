@@ -1071,9 +1071,9 @@
       "proofId": "nyc-artist-coalition-public-web-infrastructure"
     },
     "agencyGraph": {
-      "expectedEntityCount": 32,
-      "expectedRelationCount": 34,
-      "approvedGraphSha256": "5471c699a6f92a46f974dcbe898f89cf101dff44ea646d51d61c6752e8ede829",
+      "expectedEntityCount": 33,
+      "expectedRelationCount": 35,
+      "approvedGraphSha256": "bd1a5288ec461434f36a7789781efea73e3d6d3b14d98bf527f6a396f0967c48",
       "relationIds": [
         "REL-WATERWAYS-RAFT-ORIGIN",
         "REL-GREAT-ACCOMMODATIONS-SPEARHEADED",
@@ -1108,7 +1108,8 @@
         "REL-KC-COUNCIL-ACCEPTED-TOWN-HALL-RECOMMENDATION",
         "REL-KC-COUNCIL-APPROPRIATED-TOWN-HALL-FUNDS",
         "REL-KC-TOWN-HALL-WITHDREW-CCED-PROJECT",
-        "REL-KC-COUNCIL-RECLAIMED-TOWN-HALL-APPROPRIATION"
+        "REL-KC-COUNCIL-RECLAIMED-TOWN-HALL-APPROPRIATION",
+        "AGENCY-NYCAC-CRS-PRESS-CONFERENCE-SPEAKING-2026"
       ],
       "enactedRelationIds": [
         "REL-COUNCIL-OFFICE-ENACTMENT",

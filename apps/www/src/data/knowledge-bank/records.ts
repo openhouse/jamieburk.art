@@ -16,6 +16,7 @@ import { personalWowListFacebookEventKnowledge } from "./personal-wowlist-facebo
 import { participationContinuityKnowledge } from "./participation-continuity-2026-07.ts";
 import { professionalRecordAugust2026 } from "./professional-record-2026-08.ts";
 import { nycacImplementationEvidence } from "./nycac-implementation-evidence.ts";
+import { nycacCrsFrontlineAugust2026 } from "./nycac-crs-frontline-2026-08.ts";
 import { nycacInstitutionalCapacity } from "./nycac-institutional-capacity.ts";
 import { nycacSharedFolderProduction } from "./nycac-shared-folder-production-2026-07.ts";
 import { nycacSocialPopulationJuly2026 } from "./nycac-social-population-2026-07.ts";
@@ -62,6 +63,7 @@ const knowledgeBankInput = {
     ...wowListSocialPracticesAugust2026.intakeItems,
     ...projectCompositionAugust2026.intakeItems,
     ...federatedEcosystemAugust2026.intakeItems,
+    ...nycacCrsFrontlineAugust2026.intakeItems,
     ...kcTownHallCouncilFunding.intakeItems,
     ...kcTownHallFieldPractice.intakeItems,
     ...kcTownHallSocialCorpus.intakeItems,
@@ -110,6 +112,7 @@ const knowledgeBankInput = {
     ...wowListSocialPracticesAugust2026.observations,
     ...projectCompositionAugust2026.observations,
     ...federatedEcosystemAugust2026.observations,
+    ...nycacCrsFrontlineAugust2026.observations,
     ...kcTownHallCouncilFunding.observations,
     ...kcTownHallFieldPractice.observations,
     ...kcTownHallSocialCorpus.observations,
@@ -262,6 +265,7 @@ const knowledgeBankInput = {
     ...wowListSocialPracticesAugust2026.sources,
     ...projectCompositionAugust2026.sources,
     ...federatedEcosystemAugust2026.sources,
+    ...nycacCrsFrontlineAugust2026.sources,
     ...kcTownHallCouncilFunding.sources,
     ...kcTownHallFieldPractice.sources,
     ...kcTownHallSocialCorpus.sources,
@@ -281,10 +285,15 @@ const knowledgeBankInput = {
     ...nycacSourceExpansionII.sources,
     ...nycacPressArchive.sources
   ],
-  entities: [...agencyGraph.entities, ...kcTownHallCouncilFunding.entities],
+  entities: [
+    ...agencyGraph.entities,
+    ...kcTownHallCouncilFunding.entities,
+    ...nycacCrsFrontlineAugust2026.entities
+  ],
   agencyRelations: [
     ...agencyGraph.agencyRelations,
-    ...kcTownHallCouncilFunding.agencyRelations
+    ...kcTownHallCouncilFunding.agencyRelations,
+    ...nycacCrsFrontlineAugust2026.agencyRelations
   ],
   claims: [
     {
@@ -407,6 +416,7 @@ const knowledgeBankInput = {
     ...wowListSocialPracticesAugust2026.claims,
     ...projectCompositionAugust2026.claims,
     ...federatedEcosystemAugust2026.claims,
+    ...nycacCrsFrontlineAugust2026.claims,
     ...kcTownHallCouncilFunding.claims,
     ...kcTownHallFieldPractice.claims,
     ...kcTownHallSocialCorpus.claims,
@@ -475,6 +485,7 @@ const knowledgeBankInput = {
     ...wowListSocialPracticesAugust2026.researchInquiries,
     ...projectCompositionAugust2026.researchInquiries,
     ...federatedEcosystemAugust2026.researchInquiries,
+    ...nycacCrsFrontlineAugust2026.researchInquiries,
     ...kcTownHallCouncilFunding.researchInquiries,
     ...kcTownHallFieldPractice.researchInquiries,
     ...kcTownHallSocialCorpus.researchInquiries,

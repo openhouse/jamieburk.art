@@ -5,7 +5,7 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-28
+last_reviewed: 2026-08-13
 review_by: 2026-10-28
 canonical_path: docs/knowledge-bank/indexes/commercial-rent-public-support.md
 summary: Public-safe speaker indexes, official state sources, active bill records, and explicit gaps around Commercial Rent Stabilization.
@@ -16,6 +16,9 @@ relations:
   - type: related_to
     target: index.knowledge-wiki.commercial-rent-testimony
     href: commercial-rent-testimony.md
+  - type: related_to
+    target: event.commercial-rent.empty-storefronts-report-launch.2026-07-29
+    href: ../events/empty-storefronts-high-rents-report-launch-2026-07-29.md
 ---
 
 # Commercial Rent Stabilization public support
@@ -32,10 +35,21 @@ sponsored by State Senator Julia Salazar and Assembly Member Emily Gallagher.
 The official records place both bills in committee. No floor speech was
 recovered in the bounded official-source review.
 
+## July 2026 report and launch
+
+The source edition now includes [*Empty Storefronts, High
+Rents*](../sources/commercial-rent-public-support/empty-storefronts-high-rents-2026.md),
+its public acknowledgment of Jamie's draft review, its descriptive findings,
+and its registered-rent and causal limits. The separate [July 29 report launch
+record](../events/empty-storefronts-high-rents-report-launch-2026-07-29.md)
+establishes Jamie's formal speaking participation while keeping prepared text,
+delivered speech, press placement, and elected-official endorsement distinct.
+
 ## Recovered public-event speaker indexes
 
 | Date | Event | Bounded formal-program speakers |
 |---|---|---|
+| 2026-07-29 | [Empty Storefronts, High Rents report launch](../events/empty-storefronts-high-rents-report-launch-2026-07-29.md) | Jamie Burkart is established from a protected event record; complete public speaker index remains open |
 | 2025-11-13 | [Commercial Rent Stabilization public event](../events/commercial-rent-public-event-2025-11-13.md) | Emily Gallagher, Olympia Kazi, Shahana Hanif, Brad Lander |
 | 2026-02-17 | [Friends and Lovers](../events/commercial-rent-friends-and-lovers-2026-02-17.md) | Olympia Kazi, Eon Huntley, Emily Gallagher |
 | 2026-03-10 | [Project X](../events/commercial-rent-project-x-2026-03-10.md) | Eon Huntley |
@@ -70,9 +84,10 @@ checksums, roles, and open queries. “All” means every attributed turn is
 counted for the named speakers in the bounded formal program, or every
 attributed speaker is indexed from the named official release.
 
-The remaining queue includes future state proceedings, additional public-event
-recordings, and the unclassified remainder of the Project X event. Absence from
-this index is not evidence of opposition or nonparticipation.
+The remaining queue includes original-audio review for July 29, future state
+proceedings, additional public-event recordings, and the unclassified remainder
+of the Project X event. Absence from this index is not evidence of opposition
+or nonparticipation.
 
 ## Editorial boundary
 
