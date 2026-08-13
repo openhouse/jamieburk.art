@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `86b76844af306f49fe229e347f1bd87abb00af45`
-**Generation time:** 2026-08-12T12:40:09-04:00
-**Source fingerprint:** `2214644631dc83566195142d752f739b75d33cb1a5bd6ecefe05df5afaa92561`
+**Source commit:** `2c62596a23f9a7171647d8d757dd0b3dbc145df5`
+**Generation time:** 2026-08-12T18:09:25-04:00
+**Source fingerprint:** `b6a33ac804b58c2b2b197420914cb44ed853b681e53a5817e63dbe2e12ecda30`
 
 ## application
 
@@ -21,6 +21,12 @@
 - [Jamie and a collaborator inside KC Town Hall](../assets/photographs/kc-town-hall-stewardship-interior.md) - `asset.photo.kc-town-hall.stewardship-interior.001`
 - [Jamie with a civic field kit at New York City Council](../assets/photographs/nyc-council-field-kit-2026.md) - `asset.photo.nyc-council.field-kit.2026.001`
 - [DCLA listening room, January 2017](../assets/photographs/nycac-dcla-listening-room-2017.md) - `asset.photo.nycac-dcla-listening-room.2017.001`
+- [CallNYC interface in use, 2019](../assets/photographs/portfolio-callnyc-interface-2019.md) - `asset.photo.portfolio-field.callnyc-interface.2019`
+- [Collective synthesis field, 2017](../assets/photographs/portfolio-collective-synthesis-2017.md) - `asset.photo.portfolio-field.collective-synthesis.2017`
+- [Fair Rent NYC bilingual materials, 2023](../assets/photographs/portfolio-fair-rent-materials-2023.md) - `asset.photo.portfolio-field.fair-rent-materials.2023`
+- [Inventive logistics, 2023](../assets/photographs/portfolio-inventive-logistics-2023.md) - `asset.photo.portfolio-field.inventive-logistics.2023`
+- [Material repair, 2018](../assets/photographs/portfolio-material-repair-2018.md) - `asset.photo.portfolio-field.material-repair.2018`
+- [Public-work conversation, 2026](../assets/photographs/portfolio-public-work-conversation-2026.md) - `asset.photo.portfolio-field.public-work-conversation.2026`
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb`
 - [FairRentNYC: 2019 03 18 small business rally 1 [hur5tftl]](../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj.md) - `asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj`
 - [FairRentNYC: 2019 03 18 small business rally 1 [wp36j4c2]](../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-wp36j4c2rp.md) - `asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-wp36j4c2rp`
@@ -229,6 +235,7 @@
 - [Select the East River photograph for the Layout C homepage](../decisions/photography/layout-c-home-east-river-v1.md) - `decision.photo.layout-c.home-east-river.v1`
 - [Keep the Layout C resume route photograph-free](../decisions/photography/layout-c-resume-no-photo-v1.md) - `decision.photo.layout-c.resume-no-photo.v1`
 - [Narrow the pre-launch public photo field to fully bound occurrences](../decisions/photography/pre-launch-rights-narrowing-2026-07-28.md) - `decision.photo.pre-launch.rights-narrowing.2026-07-28`
+- [Select a public-service product folio for the homepage](../decisions/photography/product-folio-home-2026-08-12.md) - `decision.photo.product-folio.home.2026-08-12`
 
 ## evaluation
 
@@ -361,6 +368,15 @@
 - [CallNYC portfolio projection](../projections/work-callnyc.md) - `portfolio.work.callnyc`
 - [Technical Operations portfolio projection](../projections/work-technical-operations.md) - `portfolio.work.technical-operations`
 - [Layout C homepage East River occurrence](../projections/photography/layout-c-home-east-river.md) - `projection.photo.layout-c.home.east-river`
+- [Homepage CallNYC interface occurrence](../projections/photography/product-folio-home-callnyc-interface.md) - `projection.photo.product-folio.home.callnyc-interface`
+- [Homepage collective synthesis occurrence](../projections/photography/product-folio-home-collective-synthesis.md) - `projection.photo.product-folio.home.collective-synthesis`
+- [Homepage public-work conversation occurrence](../projections/photography/product-folio-home-conversation.md) - `projection.photo.product-folio.home.conversation`
+- [Homepage Fair Rent materials occurrence](../projections/photography/product-folio-home-fair-rent-materials.md) - `projection.photo.product-folio.home.fair-rent-materials`
+- [Homepage inventive logistics occurrence](../projections/photography/product-folio-home-inventive-logistics.md) - `projection.photo.product-folio.home.inventive-logistics`
+- [Homepage material repair occurrence](../projections/photography/product-folio-home-material-repair.md) - `projection.photo.product-folio.home.material-repair`
+- [Product Delivery public-work conversation occurrence](../projections/photography/product-folio-product-delivery-conversation.md) - `projection.photo.product-folio.product-delivery.conversation`
+- [CallNYC case-study interface occurrence](../projections/photography/product-folio-work-callnyc-interface.md) - `projection.photo.product-folio.work-callnyc.callnyc-interface`
+- [Fair Rent case-study materials occurrence](../projections/photography/product-folio-work-fair-rent-materials.md) - `projection.photo.product-folio.work-fair-rent.fair-rent-materials`
 
 ## research-inquiry
 
@@ -433,6 +449,7 @@
 - [Active New York State commercial rent stabilization bills](../sources/commercial-rent-public-support/active-state-bills-2025-2026.md) - `source.nys.commercial-rent.active-bills.2025-2026`
 - [2026 Democratic primary election-night result for Assembly District 56](../sources/commercial-rent-public-support/eon-huntley-2026-primary-result.md) - `source.nysboe.primary.ad56.2026`
 - [Elana Gordon East River portfolio permission summary](../sources/permissions/elana-gordon-east-river-portfolio-2026.md) - `source.permission.elana-gordon.east-river.2026-07`
+- [Portfolio source album publication authorization](../sources/permissions/portfolio-source-album-2026-08-12.md) - `source.permission.portfolio-source-album.2026-08-12`
 - [East River photograph public-safe metadata summary](../sources/photo-metadata/east-river-2022-public-safe.md) - `source.photo-metadata.east-river.2022.public-safe`
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`
 - [Professional record governed photo field](../sources/photo-metadata/professional-record-photo-field-2026-08.md) - `source.professional-record.photo-field.2026-08`

@@ -10,12 +10,12 @@ const githubUrl =
 
 export const site = {
   name: "Jamie Burkart",
-  role: "Technical Project Manager - Product Operations & Implementation",
+  role: "Product and Technical Delivery Leader",
   url: SITE_URL,
   title:
-    "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
+    "Jamie Burkart - Product Leadership for Public-Facing Systems",
   description:
-    "Brooklyn-based technical project manager creating operating structure across product operations, implementation, documentation, civic technology, web systems, knowledge systems, and public-facing tools.",
+    "Brooklyn-based product and technical delivery leader turning ambiguous public problems into usable services from discovery through launch, measurement, and handoff.",
   emailLabel: contactEmail,
   emailHref: `mailto:${contactEmail}`,
   hasPublicEmail: true,

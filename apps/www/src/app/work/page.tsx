@@ -27,7 +27,7 @@ export default function WorkPage() {
           </p>
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold">
             <Link className="border-b border-jb-blue text-jb-blue hover:text-jb-green" href="/work/technical-operations">
-              Technical Operations proof page
+              Product Delivery proof page
             </Link>
             <Link className="border-b border-jb-blue text-jb-blue hover:text-jb-green" href="/lab/source-backed-team-memory">
               Source-backed memory lab

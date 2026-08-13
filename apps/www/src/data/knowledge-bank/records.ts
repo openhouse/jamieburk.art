@@ -567,7 +567,8 @@ const knowledgeBankInput = {
       "SRC-X-HELP-ACCOUNT-ARCHIVE",
       "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
       "SRC-NYCAC-FACEBOOK-POST-CENSUS-2026",
-      "SRC-NYCAC-FACEBOOK-POST-REPORT-2026"
+      "SRC-NYCAC-FACEBOOK-POST-REPORT-2026",
+      "SRC-ACTION-LAB-SBU-REPORT-LAUNCH-2026-07-29"
     ],
     occurrences: [
       { id: "cabaret-safety-organizing", claimId: "CLM-NYCAC-CABARET-SAFETY-ORGANIZING", projection: "case-study", sourceIds: ["SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19", "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-09-14"] },
@@ -582,7 +583,9 @@ const knowledgeBankInput = {
       { id: "coalition-event-response-signals", claimId: "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SIGNALS", projection: "case-study", sourceIds: ["SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026"] },
       { id: "coalition-facebook-public-operating-record", claimId: "CLM-NYCAC-FACEBOOK-PUBLIC-OPERATING-RECORD", projection: "case-study", sourceIds: ["SRC-NYCAC-FACEBOOK-POST-CENSUS-2026", "SRC-NYCAC-FACEBOOK-POST-REPORT-2026"] },
       { id: "crs-campaign-memory-system", claimId: "CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026", projection: "case-study" },
-      { id: "crs-provenance-redline", claimId: "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026", projection: "case-study" }
+      { id: "crs-provenance-redline", claimId: "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026", projection: "case-study" },
+      { id: "small-business-united-report-review", claimId: "CLM-FAIRRENT-REPORT-REVIEW-2026", projection: "case-study" },
+      { id: "small-business-united-public-remarks", claimId: "CLM-FAIRRENT-PUBLIC-SPEECH-2026-07-29", projection: "case-study", sourceIds: ["SRC-ACTION-LAB-SBU-REPORT-LAUNCH-2026-07-29"] }
     ]
   }, {
     id: "kc-town-hall",

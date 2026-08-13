@@ -1,15 +1,15 @@
 {
-  "reportVersion": 3,
-  "checkedAt": "2026-08-12T16:36:46.428Z",
+  "reportVersion": 4,
+  "checkedAt": "2026-08-13T01:09:13.732Z",
   "baseUrl": "http://127.0.0.1:3057",
-  "publicSurfaceFingerprint": "eef497de543aab662bdfb7d838c23d18060d76ce456ed1867e6ef14e5878eeda",
+  "publicSurfaceFingerprint": "b07e12824e0ff76922497020a979851b11494455cb7a49bb4b8b96537e0f79b4",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 118,
-  "captureMethod": "Playwright Chromium screenshots of the current built local candidate; About captures are deliberately framed on the through-line and current systems loops; no deployment or indexing action.",
+  "publicSurfaceFileCount": 125,
+  "captureMethod": "Playwright Chromium viewport screenshots of the current built local candidate; About captures are framed on the systems through-line; no deployment or indexing action.",
   "routes": [
     {
       "path": "/",
-      "title": "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
+      "title": "Jamie Burkart - Product Leadership for Public-Facing Systems",
       "h1Count": 1,
       "screenshots": [
         {
@@ -20,7 +20,7 @@
           },
           "pixelWidth": 1280,
           "pixelHeight": 900,
-          "sha256": "7ff02c019578cce0298caf900c7b880e3d9ffc2e0e97dd15c789ad85dbcd8b80",
+          "sha256": "a8a3abfc1e5aed85f5a1d6fe44227377fb92abe4a6455bbf5118cdc0bb770d2b",
           "file": "candidate-home-desktop.png"
         },
         {
@@ -31,7 +31,7 @@
           },
           "pixelWidth": 375,
           "pixelHeight": 812,
-          "sha256": "a3233b7565d0417ded117b0b2cfd5d504bbee270ae408026853739b8008a3ef1",
+          "sha256": "63c0dee0dff8e0b62ca90caeadb4f736576b69d4aa16daf091541ad6b5c07a53",
           "file": "candidate-home-viewport.png"
         }
       ]
@@ -49,11 +49,10 @@
           },
           "pixelWidth": 1280,
           "pixelHeight": 900,
-          "sha256": "74724ed4278bab16ea13080ce969dc115054c5f0c8863c159b1623d10a246ac1",
+          "sha256": "5bc32b5376c007d6efc60f6f3e7256a8c119e3e1c684b641120452a035586e27",
           "file": "professor-lenses-about-desktop.png",
           "framedContent": {
-            "throughLineHeadingPresent": true,
-            "currentSystemsLabelPresent": true,
+            "systemsPeopleCanInhabitHeadingPresent": true,
             "currentPracticeDocumented": true
           }
         },
@@ -65,11 +64,10 @@
           },
           "pixelWidth": 375,
           "pixelHeight": 1200,
-          "sha256": "413e2f7911f5ee140209fb952eaf64061c00a63970556bc5d782e2ec677f4729",
+          "sha256": "0af121e556a95474f65bc040c866a0a9000216cca489307b9f7c5bed201ca7f7",
           "file": "professor-lenses-about-mobile.png",
           "framedContent": {
-            "throughLineHeadingPresent": true,
-            "currentSystemsLabelPresent": true,
+            "systemsPeopleCanInhabitHeadingPresent": true,
             "currentPracticeDocumented": true
           }
         }

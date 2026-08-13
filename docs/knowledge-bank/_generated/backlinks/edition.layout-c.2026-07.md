@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Layout C photographic portfolio edition
 
-**Source commit:** `86b76844af306f49fe229e347f1bd87abb00af45`
-**Generation time:** 2026-08-12T12:40:09-04:00
-**Source fingerprint:** `2214644631dc83566195142d752f739b75d33cb1a5bd6ecefe05df5afaa92561`
+**Source commit:** `2c62596a23f9a7171647d8d757dd0b3dbc145df5`
+**Generation time:** 2026-08-12T18:09:25-04:00
+**Source fingerprint:** `b6a33ac804b58c2b2b197420914cb44ed853b681e53a5817e63dbe2e12ecda30`
 
 - [Keep the Layout C resume route photograph-free](../../decisions/photography/layout-c-resume-no-photo-v1.md) - `related_to` (frontmatter)
 - [Narrow the pre-launch public photo field to fully bound occurrences](../../decisions/photography/pre-launch-rights-narrowing-2026-07-28.md) - `projected_to` (frontmatter)

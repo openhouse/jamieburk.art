@@ -8,15 +8,14 @@ sensitivity: low
 last_reviewed: 2026-07-26
 review_by: 2027-01-26
 canonical_path: docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md
-summary: Public-safe record for a 2022 photograph of Jamie Burkart at the East River, made by Elana Gordon and used as the Layout C homepage hero.
+summary: Public-safe historical record for a 2022 photograph of Jamie Burkart at the East River, made by Elana Gordon and formerly used as the Layout C homepage hero.
 media_type: photograph
 rights_state: cleared
 consent_state: cleared
 public_display_status: cleared
 projection:
-  status: active
-  surfaces:
-    - /
+  status: deprecated
+  surfaces: []
 private_source_binding:
   provider: photo-fieldwork
   opaque_id: pfwpub_ylAbyl1bHgM5
@@ -29,7 +28,7 @@ public_derivatives:
     height: 960
     checksum: 748b6f12e2845dd7dc1ca3fa3f35d61c26a468150b7e3d6d386ae3622d996621
     metadata_stripped: true
-    status: staging-candidate
+    status: historical
 statements:
   - id: statement.photo.east-river.creator.unknown.v1
     property: creator
@@ -99,11 +98,12 @@ relations:
 
 ![Jamie Burkart in a life vest holding a canoe paddle on the East River shoreline beneath the Manhattan Bridge.](../../../../apps/www/public/images/field-notes/jamie-east-river.webp)
 
-## Current public use
+## Historical public use
 
-The exact derivative appears as the Layout C homepage hero. The factual caption
-names the public place and year. The credit names Elana Gordon as photographer
-and Jamie Burkart's photo archive as the custodian of this copy.
+The exact derivative appeared as the Layout C homepage hero. On August 12,
+2026, that composition was superseded by the public-service product folio. The
+factual caption and corrected Elana Gordon credit remain in the historical
+record.
 
 ## What is established
 
@@ -129,7 +129,6 @@ competing attribution.
 
 ## Open gates
 
-Public Git and staging review are approved for this occurrence. Production
-publication and indexing remain open decisions for Jamie. Revocation routes to
-the occurrence record and rollback instructions rather than deleting this
-historical asset record.
+The former occurrence remains recorded but is no longer projected by the
+portfolio. Any future reuse would require a new current occurrence and review;
+historical credit and correction records remain auditable.

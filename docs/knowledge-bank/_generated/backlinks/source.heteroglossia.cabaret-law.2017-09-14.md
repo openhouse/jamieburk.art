@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Cabaret Law repeal hearing: supportive witness testimony
 
-**Source commit:** `86b76844af306f49fe229e347f1bd87abb00af45`
-**Generation time:** 2026-08-12T12:40:09-04:00
-**Source fingerprint:** `2214644631dc83566195142d752f739b75d33cb1a5bd6ecefe05df5afaa92561`
+**Source commit:** `2c62596a23f9a7171647d8d757dd0b3dbc145df5`
+**Generation time:** 2026-08-12T18:09:25-04:00
+**Source fingerprint:** `b6a33ac804b58c2b2b197420914cb44ed853b681e53a5817e63dbe2e12ecda30`
 
 - [Jamie Burkart public testimony](../../indexes/public-testimony.md) - `prose_link` (markdown)
 - [Jamie Burkart public testimony](../../indexes/public-testimony.md) - `related_to` (frontmatter)

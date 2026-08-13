@@ -1,27 +1,27 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-12T12:40:09-04:00",
-  "sourceCommit": "86b76844af306f49fe229e347f1bd87abb00af45",
-  "sourceFingerprint": "2214644631dc83566195142d752f739b75d33cb1a5bd6ecefe05df5afaa92561",
+  "generatedAt": "2026-08-12T18:09:25-04:00",
+  "sourceCommit": "2c62596a23f9a7171647d8d757dd0b3dbc145df5",
+  "sourceFingerprint": "b6a33ac804b58c2b2b197420914cb44ed853b681e53a5817e63dbe2e12ecda30",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
     "errors": []
   },
   "diagnostics": {
-    "records": 396,
+    "records": 413,
     "byKind": {
       "project": 15,
       "person": 4,
       "organization": 1,
       "event": 19,
       "place": 1,
-      "source": 74,
-      "asset": 188,
+      "source": 75,
+      "asset": 194,
       "claim": 2,
       "research-run": 6,
       "research-inquiry": 6,
-      "decision": 8,
+      "decision": 9,
       "correction": 2,
       "method": 14,
       "timeline": 1,
@@ -30,9 +30,9 @@
       "index": 31,
       "capability": 5,
       "opportunity": 7,
-      "projection": 5
+      "projection": 14
     },
-    "typedRelations": 1372,
+    "typedRelations": 1396,
     "evidenceRelations": 9,
     "relationTypeCounts": {
       "collaborated_with": 2,
@@ -45,17 +45,17 @@
       "part_of": 12,
       "participated_in": 3,
       "projected_to": 10,
-      "related_to": 889,
+      "related_to": 906,
       "resulted_in": 6,
       "supersedes": 1,
       "supports": 21,
       "uses_method": 32,
-      "uses_source": 295
+      "uses_source": 302
     },
-    "proseLinks": 445,
-    "rootReachable": 195,
+    "proseLinks": 455,
+    "rootReachable": 205,
     "orphanCount": 0,
-    "deadEndCount": 0,
+    "deadEndCount": 9,
     "wantedPageCount": 6,
     "stalePageCount": 0,
     "correctionCount": 2,
@@ -100,7 +100,53 @@
     }
   ],
   "orphans": [],
-  "deadEnds": [],
+  "deadEnds": [
+    {
+      "id": "projection.photo.product-folio.home.callnyc-interface",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/product-folio-home-callnyc-interface.md"
+    },
+    {
+      "id": "projection.photo.product-folio.home.collective-synthesis",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/product-folio-home-collective-synthesis.md"
+    },
+    {
+      "id": "projection.photo.product-folio.home.conversation",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/product-folio-home-conversation.md"
+    },
+    {
+      "id": "projection.photo.product-folio.home.fair-rent-materials",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/product-folio-home-fair-rent-materials.md"
+    },
+    {
+      "id": "projection.photo.product-folio.home.inventive-logistics",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/product-folio-home-inventive-logistics.md"
+    },
+    {
+      "id": "projection.photo.product-folio.home.material-repair",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/product-folio-home-material-repair.md"
+    },
+    {
+      "id": "projection.photo.product-folio.product-delivery.conversation",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/product-folio-product-delivery-conversation.md"
+    },
+    {
+      "id": "projection.photo.product-folio.work-callnyc.callnyc-interface",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/product-folio-work-callnyc-interface.md"
+    },
+    {
+      "id": "projection.photo.product-folio.work-fair-rent.fair-rent-materials",
+      "kind": "projection",
+      "path": "docs/knowledge-bank/projections/photography/product-folio-work-fair-rent-materials.md"
+    }
+  ],
   "wanted": [
     {
       "id": "source.nycac.founding-and-handoff.2016-2018",

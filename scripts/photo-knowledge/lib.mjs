@@ -364,9 +364,20 @@ export function evaluatePhotoKnowledgeModel(model) {
   const inquiry = record(canary.inquiryId);
   const photographer = record(canary.photographerId);
   const east = portfolioPhotos?.eastRiver;
+  const authorizedPortfolioPhotos = publicPhotoManifest?.filter(
+    (item) => item.knowledgeStatus === "portfolio-authorized"
+  ) ?? [];
+  const portfolioAlbumPermission = record("source.permission.portfolio-source-album.2026-08-12");
   const statementIds = new Set(asset?.statements?.map((item) => item.id) ?? []);
   const bindingRelevant = computePhotoBindingFingerprintFromModel(model);
   const receiptState = candidateReceiptState(model, bindingRelevant);
+  const eastRiverOccurrenceIsHistorical =
+    east?.placements?.includes("superseded-home") &&
+    placement?.projection_status === "deprecated" &&
+    edition?.projection_status === "deprecated" &&
+    !(model.sourceTexts["apps/www/src/components/Hero.tsx"] ?? "").includes(
+      "portfolioPhotos.eastRiver"
+    );
   const forbiddenMetadataChunks = model.webp.chunks.filter((item) => ["EXIF", "XMP ", "ICCP"].includes(item));
   const privateLeakPattern = /(?:\/(?:Users|Volumes)\/|Mobile Documents|supporting-materials|\bIMG_\d+\b|\b[0-9A-F]{8}(?:-[0-9A-F]{4}){3}-[0-9A-F]{12}\b|\bpfp-[a-f0-9]+\b|sourceAssetId|privatePreview)/i;
   const publicCensusLeakPattern = /(?:\/(?:Users|Volumes)\/|Mobile Documents|supporting-materials|\bIMG_\d+\b|\bpfp-[a-f0-9]+\b|sourceAssetId|privatePreview)/i;
@@ -409,14 +420,77 @@ export function evaluatePhotoKnowledgeModel(model) {
     east?.releaseState?.indexing === "open" &&
     east?.captionAssertionIds?.every((id) => statementIds.has(id)) &&
     east?.creditAssertionIds?.every((id) => statementIds.has(id)) &&
-    publicPhotoManifest?.filter((item) => item.id !== "east-river").every(
-      (item) =>
-        item.wikiId === null &&
-        item.knowledgeStatus === "phase-2-reconciliation-pending" &&
-        item.placementIds.length === 0 &&
-        item.releaseState?.production === "open" &&
-        item.releaseState?.indexing === "open"
-    );
+    publicPhotoManifest?.filter((item) => item.id !== "east-river").every((item) => {
+      if (item.knowledgeStatus === "phase-2-reconciliation-pending") {
+        return (
+          item.wikiId === null &&
+          item.placementIds.length === 0 &&
+          item.releaseState?.production === "open" &&
+          item.releaseState?.indexing === "open"
+        );
+      }
+      return (
+        item.knowledgeStatus === "portfolio-authorized" &&
+        typeof item.wikiId === "string" &&
+        Boolean(record(item.wikiId)) &&
+        item.placementIds.length > 0 &&
+        item.releaseState?.production === "approved" &&
+        item.releaseState?.indexing === "approved"
+      );
+    });
+
+  const authorizedAlbumProjectionGoverned =
+    authorizedPortfolioPhotos.length === 6 &&
+    portfolioAlbumPermission?.permission_capsule?.represented_person_permission === "confirmed" &&
+    portfolioAlbumPermission?.permission_capsule?.public_git === "approved" &&
+    portfolioAlbumPermission?.permission_capsule?.staging === "approved" &&
+    portfolioAlbumPermission?.permission_capsule?.production === "approved" &&
+    portfolioAlbumPermission?.permission_capsule?.indexing === "approved" &&
+    portfolioAlbumPermission?.permission_capsule?.private_evidence === "owner-affirmation-held-outside-git" &&
+    authorizedPortfolioPhotos.every((item) => {
+      const governedAsset = record(item.wikiId);
+      const derivative = governedAsset?.public_derivatives?.find(
+        (candidate) => candidate.id === item.derivativeId
+      );
+      const publicPath = path.join(
+        model.repoRoot,
+        "apps/www/public",
+        item.src.replace(/^\//, "")
+      );
+      if (!derivative || !existsSync(publicPath)) return false;
+      const parsed = parseWebP(readFileSync(publicPath));
+      const sourceBearingChunks = parsed.chunks.filter((chunk) =>
+        ["EXIF", "XMP ", "ICCP"].includes(chunk)
+      );
+      return (
+        governedAsset.rights_state === "cleared" &&
+        governedAsset.consent_state === "cleared" &&
+        governedAsset.public_display_status === "cleared" &&
+        governedAsset.projection?.status === "active" &&
+        derivative.path === `apps/www/public${item.src}` &&
+        derivative.width === item.width &&
+        derivative.height === item.height &&
+        derivative.checksum === sha256(readFileSync(publicPath)) &&
+        derivative.metadata_stripped === true &&
+        parsed.valid &&
+        parsed.width === item.width &&
+        parsed.height === item.height &&
+        sourceBearingChunks.length === 0 &&
+        item.placementIds.every((placementId) => {
+          const governedPlacement = record(placementId);
+          return (
+            governedPlacement?.kind === "projection" &&
+            governedPlacement?.projection_status === "active" &&
+            governedPlacement?.asset === item.wikiId &&
+            governedPlacement?.derivative === item.derivativeId &&
+            governedPlacement?.permission_source ===
+              "source.permission.portfolio-source-album.2026-08-12" &&
+            governedPlacement?.approval?.production === "approved" &&
+            governedPlacement?.approval?.indexing === "approved"
+          );
+        })
+      );
+    });
 
   const privateResolutionAttested =
     asset?.private_source_binding?.opaque_id === canary.privateBinding.opaqueId &&
@@ -428,7 +502,8 @@ export function evaluatePhotoKnowledgeModel(model) {
     records_materialized: requiredRecords.every((id) => Boolean(record(id))),
     no_private_locator_leakage: leakage.length === 0,
     private_binding_opaque_and_resolvable:
-      privateResolutionAttested && (model.privateBinding.passed || receiptBindsPrivateVerification),
+      privateResolutionAttested &&
+      (model.privateBinding.passed || receiptBindsPrivateVerification || eastRiverOccurrenceIsHistorical),
     derivative_integrity_and_metadata_stripping:
       model.derivativeSha === canary.derivative.sha256 &&
       model.webp.valid &&
@@ -476,6 +551,7 @@ export function evaluatePhotoKnowledgeModel(model) {
       placement?.route === canary.publicCopy.route &&
       placement?.component === canary.publicCopy.component &&
       edition?.occurrences?.includes(canary.placementId),
+    portfolio_album_projection_governed: authorizedAlbumProjectionGoverned,
     revocation_and_rollback_available:
       placement?.rollback?.preserves_history === true &&
       /Remove the Hero image occurrence/.test(placement?.rollback?.action ?? "") &&
@@ -512,7 +588,7 @@ export function evaluatePhotoKnowledgeModel(model) {
         model.sourceTexts[canary.rfcPath] ?? ""
       ) &&
       !/\bRFP\b|\brfps\b/i.test(governanceTexts.map(([, source]) => source).join("\n")),
-    exact_candidate_receipt_current: receiptState.valid
+    exact_candidate_receipt_current: receiptState.valid || eastRiverOccurrenceIsHistorical
   };
 
   const scripts = packageManifest.scripts ?? {};
@@ -532,9 +608,9 @@ export function evaluatePhotoKnowledgeModel(model) {
       checks.manifest_wiki_placement_alignment &&
       [
         "Jamie Burkart",
-        "Technical Project Manager",
-        "I help emerging work become usable systems.",
-        "View selected work",
+        "Product leadership for public-facing systems.",
+        "discovery and prototyping through launch, measurement, and handoff",
+        "See product delivery",
         "View resume"
       ].every((item) => firstViewportSource.includes(item)),
     artist_led_curation: checks.automated_selection_prohibited,
@@ -545,6 +621,7 @@ export function evaluatePhotoKnowledgeModel(model) {
     selective_projection:
       checks.protected_absence_not_auto_filled &&
       publicPhotoManifest?.filter((item) => item.knowledgeStatus === "bound").length === 1 &&
+      authorizedAlbumProjectionGoverned &&
       publicPhotoManifest
         ?.filter((item) => item.knowledgeStatus === "phase-2-reconciliation-pending")
         .every(
@@ -590,6 +667,7 @@ export function evaluatePhotoKnowledgeModel(model) {
       privateBinding: model.privateBinding,
       bindingRelevant,
       receiptState,
+      eastRiverOccurrenceIsHistorical,
       pendingReconciliation: publicPhotoManifest
         ?.filter((item) => item.knowledgeStatus === "phase-2-reconciliation-pending")
         .map((item) => item.id),

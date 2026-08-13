@@ -5,7 +5,7 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-26
+last_reviewed: 2026-08-12
 review_by: 2027-01-26
 canonical_path: docs/knowledge-bank/indexes/photography.md
 summary: Public-safe orientation to the governed relationship among private photo sources, first-class Wiki records, exact portfolio occurrences, recollection, correction, and human publication gates.
@@ -65,6 +65,10 @@ relations:
     target: research.photographic-source-return.2026-07-26
     href: ../research-runs/photographic-source-return-2026-07-26.md
     context: Dated return to supplied photographs, oral histories, proposal, connected archives, local records, and the live Photos capability boundary.
+  - type: related_to
+    target: decision.photo.product-folio.home.2026-08-12
+    href: ../decisions/photography/product-folio-home-2026-08-12.md
+    context: Authorized six-image public-service product folio and its bounded page occurrences.
 ---
 
 # Photography knowledge loop
@@ -116,6 +120,15 @@ homepage.
 Passing automation cannot grant rights, consent, dignity clearance, production
 publication, or indexing approval. See [RFC 0003](../../../rfcs/0003-living-photographic-knowledge-loop.md)
 for the complete design and staged rollout.
+
+## August 12 public-service product folio
+
+The [product-folio decision](../decisions/photography/product-folio-home-2026-08-12.md)
+selects six photographs from a portfolio-authorized source album. Jamie has
+confirmed publication rights and depicted-person permission for the portfolio
+site. That permission resolves the album-level rights gate for the selected
+derivatives; occurrence-specific crop, caption, and creator credit remain
+editorial fields, and exact-candidate production review remains separate.
 
 ## July 26 source return
 

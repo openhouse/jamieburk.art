@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Jamie Burkart - Technical Project Manager";
+export const alt = "Jamie Burkart - Product leadership for public-facing systems";
 export const size = {
   width: 1200,
   height: 630
@@ -14,8 +14,8 @@ export default function Image() {
       <div
         style={{
           alignItems: "flex-start",
-          background: "#eeefec",
-          color: "#343435",
+          background: "#fffdf7",
+          color: "#101b20",
           display: "flex",
           flexDirection: "column",
           fontFamily: "sans-serif",
@@ -27,20 +27,20 @@ export default function Image() {
       >
         <div
           style={{
-            background: "#0b5f81",
+            background: "#0e62a3",
             height: "12px",
             marginBottom: "54px",
             width: "100%"
           }}
         />
-        <div style={{ color: "#0b5f81", fontSize: 34, fontWeight: 700 }}>
-          Technical Project Manager - Product Operations & Implementation
-        </div>
-        <div style={{ fontSize: 88, fontWeight: 800, marginTop: 24 }}>
+        <div style={{ color: "#0e62a3", fontSize: 34, fontWeight: 700 }}>
           Jamie Burkart
         </div>
-        <div style={{ color: "#1f5c3e", fontSize: 42, fontWeight: 700, marginTop: 28 }}>
-          I turn ambiguous work into usable systems.
+        <div style={{ fontSize: 80, fontWeight: 800, lineHeight: 0.98, marginTop: 28 }}>
+          Product leadership for public-facing systems.
+        </div>
+        <div style={{ color: "#1f6b53", fontSize: 34, fontWeight: 700, marginTop: 30 }}>
+          Discovery → launch → measurement → handoff
         </div>
       </div>
     ),

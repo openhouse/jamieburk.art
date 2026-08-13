@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-12T12:40:09-04:00",
-  "sourceCommit": "86b76844af306f49fe229e347f1bd87abb00af45",
-  "sourceFingerprint": "2214644631dc83566195142d752f739b75d33cb1a5bd6ecefe05df5afaa92561",
+  "generatedAt": "2026-08-12T18:09:25-04:00",
+  "sourceCommit": "2c62596a23f9a7171647d8d757dd0b3dbc145df5",
+  "sourceFingerprint": "b6a33ac804b58c2b2b197420914cb44ed853b681e53a5817e63dbe2e12ecda30",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -78,7 +78,7 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Public-safe record for a 2022 photograph of Jamie Burkart at the East River, made by Elana Gordon and used as the Layout C homepage hero.",
+      "summary": "Public-safe historical record for a 2022 photograph of Jamie Burkart at the East River, made by Elana Gordon and formerly used as the Layout C homepage hero.",
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-26"
@@ -147,6 +147,84 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-09-26"
+    },
+    {
+      "id": "asset.photo.portfolio-field.callnyc-interface.2019",
+      "path": "docs/knowledge-bank/assets/photographs/portfolio-callnyc-interface-2019.md",
+      "title": "CallNYC interface in use, 2019",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe record for Paul Mossine's photograph of an archived CallNYC route displayed on a phone.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2027-02-12"
+    },
+    {
+      "id": "asset.photo.portfolio-field.collective-synthesis.2017",
+      "path": "docs/knowledge-bank/assets/photographs/portfolio-collective-synthesis-2017.md",
+      "title": "Collective synthesis field, 2017",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe record for a field of handwritten cards made during collaborative planning.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2027-02-12"
+    },
+    {
+      "id": "asset.photo.portfolio-field.fair-rent-materials.2023",
+      "path": "docs/knowledge-bank/assets/photographs/portfolio-fair-rent-materials-2023.md",
+      "title": "Fair Rent NYC bilingual materials, 2023",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe record for English- and Spanish-language Fair Rent NYC materials displayed together.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2027-02-12"
+    },
+    {
+      "id": "asset.photo.portfolio-field.inventive-logistics.2023",
+      "path": "docs/knowledge-bank/assets/photographs/portfolio-inventive-logistics-2023.md",
+      "title": "Inventive logistics, 2023",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe record for a photograph of Jamie with a bicycle, trailer, and canoe.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2027-02-12"
+    },
+    {
+      "id": "asset.photo.portfolio-field.material-repair.2018",
+      "path": "docs/knowledge-bank/assets/photographs/portfolio-material-repair-2018.md",
+      "title": "Material repair, 2018",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe record for a photograph of Jamie Burkart making a masonry repair.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2027-02-12"
+    },
+    {
+      "id": "asset.photo.portfolio-field.public-work-conversation.2026",
+      "path": "docs/knowledge-bank/assets/photographs/portfolio-public-work-conversation-2026.md",
+      "title": "Public-work conversation, 2026",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe record for a photograph of Jamie reviewing public-facing materials with a collaborator at a July 2026 Fair Rent NYC event.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2027-02-12"
     },
     {
       "id": "asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb",
@@ -2697,6 +2775,19 @@
       "reviewBy": "2026-08-28"
     },
     {
+      "id": "decision.photo.product-folio.home.2026-08-12",
+      "path": "docs/knowledge-bank/decisions/photography/product-folio-home-2026-08-12.md",
+      "title": "Select a public-service product folio for the homepage",
+      "kind": "decision",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Select six authorized documentary photographs to make product leadership visible without relying on prestige, affiliation, or private archive disclosure.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2027-02-12"
+    },
+    {
       "id": "edition.layout-c.2026-07",
       "path": "docs/knowledge-bank/projections/photography/edition-layout-c-2026-07.md",
       "title": "Layout C photographic portfolio edition",
@@ -2704,7 +2795,7 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Dated staging edition for the Layout C composition, binding its East River occurrence and deliberate resume-route protected absence without claiming timeless finality.",
+      "summary": "Superseded dated staging edition for the Layout C composition, preserving its East River occurrence and deliberate resume-route protected absence.",
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-26"
@@ -3206,7 +3297,7 @@
       "sensitivity": "low",
       "summary": "Public-safe orientation to the governed relationship among private photo sources, first-class Wiki records, exact portfolio occurrences, recollection, correction, and human publication gates.",
       "aliases": [],
-      "lastReviewed": "2026-07-26",
+      "lastReviewed": "2026-08-12",
       "reviewBy": "2027-01-26"
     },
     {
@@ -4041,10 +4132,127 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Exact public occurrence binding the East River derivative to the Layout C homepage hero, crop, caption, credit, assertions, and release states.",
+      "summary": "Historical occurrence that bound the East River derivative to the superseded Layout C homepage hero.",
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "projection.photo.product-folio.home.callnyc-interface",
+      "path": "docs/knowledge-bank/projections/photography/product-folio-home-callnyc-interface.md",
+      "title": "Homepage CallNYC interface occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact homepage occurrence for Paul Mossine's CallNYC interface photograph.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2027-02-12"
+    },
+    {
+      "id": "projection.photo.product-folio.home.collective-synthesis",
+      "path": "docs/knowledge-bank/projections/photography/product-folio-home-collective-synthesis.md",
+      "title": "Homepage collective synthesis occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact homepage occurrence for the collective synthesis field.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2027-02-12"
+    },
+    {
+      "id": "projection.photo.product-folio.home.conversation",
+      "path": "docs/knowledge-bank/projections/photography/product-folio-home-conversation.md",
+      "title": "Homepage public-work conversation occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact homepage occurrence for the public-work conversation photograph.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2027-02-12"
+    },
+    {
+      "id": "projection.photo.product-folio.home.fair-rent-materials",
+      "path": "docs/knowledge-bank/projections/photography/product-folio-home-fair-rent-materials.md",
+      "title": "Homepage Fair Rent materials occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact homepage occurrence for the bilingual Fair Rent NYC materials photograph.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2027-02-12"
+    },
+    {
+      "id": "projection.photo.product-folio.home.inventive-logistics",
+      "path": "docs/knowledge-bank/projections/photography/product-folio-home-inventive-logistics.md",
+      "title": "Homepage inventive logistics occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact homepage occurrence for the bicycle, trailer, and canoe photograph.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2027-02-12"
+    },
+    {
+      "id": "projection.photo.product-folio.home.material-repair",
+      "path": "docs/knowledge-bank/projections/photography/product-folio-home-material-repair.md",
+      "title": "Homepage material repair occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact homepage occurrence for the masonry repair photograph.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2027-02-12"
+    },
+    {
+      "id": "projection.photo.product-folio.product-delivery.conversation",
+      "path": "docs/knowledge-bank/projections/photography/product-folio-product-delivery-conversation.md",
+      "title": "Product Delivery public-work conversation occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact Product Delivery occurrence for the public-work conversation photograph.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2027-02-12"
+    },
+    {
+      "id": "projection.photo.product-folio.work-callnyc.callnyc-interface",
+      "path": "docs/knowledge-bank/projections/photography/product-folio-work-callnyc-interface.md",
+      "title": "CallNYC case-study interface occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact CallNYC case-study occurrence for Paul Mossine's archived interface photograph.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2027-02-12"
+    },
+    {
+      "id": "projection.photo.product-folio.work-fair-rent.fair-rent-materials",
+      "path": "docs/knowledge-bank/projections/photography/product-folio-work-fair-rent-materials.md",
+      "title": "Fair Rent case-study materials occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact Fair Rent case-study occurrence for the bilingual campaign materials photograph.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2027-02-12"
     },
     {
       "id": "research-inquiry.documented-canoe-bike-journeys",
@@ -4866,6 +5074,19 @@
       "reviewBy": "2027-01-26"
     },
     {
+      "id": "source.permission.portfolio-source-album.2026-08-12",
+      "path": "docs/knowledge-bank/sources/permissions/portfolio-source-album-2026-08-12.md",
+      "title": "Portfolio source album publication authorization",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe capsule recording Jamie Burkart's authorization to publish photographs from one bounded source album on his professional portfolio, including represented-person permission.",
+      "aliases": [],
+      "lastReviewed": "2026-08-12",
+      "reviewBy": "2027-02-12"
+    },
+    {
       "id": "source.photo-metadata.east-river.2022.public-safe",
       "path": "docs/knowledge-bank/sources/photo-metadata/east-river-2022-public-safe.md",
       "title": "East River photograph public-safe metadata summary",
@@ -5444,6 +5665,54 @@
       "to": "source.nycac.dcla-formation-source-return.2026-07",
       "source": "frontmatter",
       "href": "../../sources/archives/nycac-dcla-formation-source-return-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.portfolio-field.callnyc-interface.2019",
+      "type": "uses_source",
+      "to": "source.permission.portfolio-source-album.2026-08-12",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/portfolio-source-album-2026-08-12.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.portfolio-field.collective-synthesis.2017",
+      "type": "uses_source",
+      "to": "source.permission.portfolio-source-album.2026-08-12",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/portfolio-source-album-2026-08-12.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.portfolio-field.fair-rent-materials.2023",
+      "type": "uses_source",
+      "to": "source.permission.portfolio-source-album.2026-08-12",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/portfolio-source-album-2026-08-12.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.portfolio-field.inventive-logistics.2023",
+      "type": "uses_source",
+      "to": "source.permission.portfolio-source-album.2026-08-12",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/portfolio-source-album-2026-08-12.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.portfolio-field.material-repair.2018",
+      "type": "uses_source",
+      "to": "source.permission.portfolio-source-album.2026-08-12",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/portfolio-source-album-2026-08-12.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.portfolio-field.public-work-conversation.2026",
+      "type": "uses_source",
+      "to": "source.permission.portfolio-source-album.2026-08-12",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/portfolio-source-album-2026-08-12.md",
       "context": null
     },
     {
@@ -10909,6 +11178,134 @@
       "context": null
     },
     {
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "type": "related_to",
+      "to": "asset.photo.portfolio-field.callnyc-interface.2019",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/portfolio-callnyc-interface-2019.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "type": "related_to",
+      "to": "asset.photo.portfolio-field.collective-synthesis.2017",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/portfolio-collective-synthesis-2017.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "type": "related_to",
+      "to": "asset.photo.portfolio-field.fair-rent-materials.2023",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/portfolio-fair-rent-materials-2023.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "type": "related_to",
+      "to": "asset.photo.portfolio-field.inventive-logistics.2023",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/portfolio-inventive-logistics-2023.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "type": "related_to",
+      "to": "asset.photo.portfolio-field.material-repair.2018",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/portfolio-material-repair-2018.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "type": "related_to",
+      "to": "asset.photo.portfolio-field.public-work-conversation.2026",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/portfolio-public-work-conversation-2026.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "type": "related_to",
+      "to": "projection.photo.product-folio.home.callnyc-interface",
+      "source": "frontmatter",
+      "href": "../../projections/photography/product-folio-home-callnyc-interface.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "type": "related_to",
+      "to": "projection.photo.product-folio.home.collective-synthesis",
+      "source": "frontmatter",
+      "href": "../../projections/photography/product-folio-home-collective-synthesis.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "type": "related_to",
+      "to": "projection.photo.product-folio.home.conversation",
+      "source": "frontmatter",
+      "href": "../../projections/photography/product-folio-home-conversation.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "type": "related_to",
+      "to": "projection.photo.product-folio.home.fair-rent-materials",
+      "source": "frontmatter",
+      "href": "../../projections/photography/product-folio-home-fair-rent-materials.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "type": "related_to",
+      "to": "projection.photo.product-folio.home.inventive-logistics",
+      "source": "frontmatter",
+      "href": "../../projections/photography/product-folio-home-inventive-logistics.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "type": "related_to",
+      "to": "projection.photo.product-folio.home.material-repair",
+      "source": "frontmatter",
+      "href": "../../projections/photography/product-folio-home-material-repair.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "type": "related_to",
+      "to": "projection.photo.product-folio.product-delivery.conversation",
+      "source": "frontmatter",
+      "href": "../../projections/photography/product-folio-product-delivery-conversation.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "type": "related_to",
+      "to": "projection.photo.product-folio.work-callnyc.callnyc-interface",
+      "source": "frontmatter",
+      "href": "../../projections/photography/product-folio-work-callnyc-interface.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "type": "related_to",
+      "to": "projection.photo.product-folio.work-fair-rent.fair-rent-materials",
+      "source": "frontmatter",
+      "href": "../../projections/photography/product-folio-work-fair-rent-materials.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "type": "uses_source",
+      "to": "source.permission.portfolio-source-album.2026-08-12",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/portfolio-source-album-2026-08-12.md",
+      "context": null
+    },
+    {
       "from": "edition.layout-c.2026-07",
       "type": "related_to",
       "to": "decision.photo.layout-c.resume-no-photo.v1",
@@ -12299,6 +12696,14 @@
       "source": "frontmatter",
       "href": "../decisions/photography/pre-launch-rights-narrowing-2026-07-28.md",
       "context": "Pre-launch withdrawal of three incompletely credited derivatives from the public bundle."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "decision.photo.product-folio.home.2026-08-12",
+      "source": "frontmatter",
+      "href": "../decisions/photography/product-folio-home-2026-08-12.md",
+      "context": "Authorized six-image public-service product folio and its bounded page occurrences."
     },
     {
       "from": "index.knowledge-wiki.photography",
@@ -15949,6 +16354,14 @@
       "context": null
     },
     {
+      "from": "source.permission.portfolio-source-album.2026-08-12",
+      "type": "related_to",
+      "to": "decision.photo.product-folio.home.2026-08-12",
+      "source": "frontmatter",
+      "href": "../../decisions/photography/product-folio-home-2026-08-12.md",
+      "context": null
+    },
+    {
       "from": "source.photo-metadata.east-river.2022.public-safe",
       "type": "related_to",
       "to": "asset.photo.east-river-manhattan-bridge.2022.001",
@@ -16963,6 +17376,87 @@
       "to": "portfolio.work.callnyc",
       "fragment": null,
       "line": 6,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/decisions/photography/product-folio-home-2026-08-12.md",
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "toPath": "docs/knowledge-bank/projections/photography/product-folio-home-conversation.md",
+      "to": "projection.photo.product-folio.home.conversation",
+      "fragment": null,
+      "line": 15,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/decisions/photography/product-folio-home-2026-08-12.md",
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "toPath": "docs/knowledge-bank/projections/photography/product-folio-home-collective-synthesis.md",
+      "to": "projection.photo.product-folio.home.collective-synthesis",
+      "fragment": null,
+      "line": 16,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/decisions/photography/product-folio-home-2026-08-12.md",
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "toPath": "docs/knowledge-bank/projections/photography/product-folio-home-callnyc-interface.md",
+      "to": "projection.photo.product-folio.home.callnyc-interface",
+      "fragment": null,
+      "line": 17,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/decisions/photography/product-folio-home-2026-08-12.md",
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "toPath": "docs/knowledge-bank/projections/photography/product-folio-home-fair-rent-materials.md",
+      "to": "projection.photo.product-folio.home.fair-rent-materials",
+      "fragment": null,
+      "line": 18,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/decisions/photography/product-folio-home-2026-08-12.md",
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "toPath": "docs/knowledge-bank/projections/photography/product-folio-home-material-repair.md",
+      "to": "projection.photo.product-folio.home.material-repair",
+      "fragment": null,
+      "line": 19,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/decisions/photography/product-folio-home-2026-08-12.md",
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "toPath": "docs/knowledge-bank/projections/photography/product-folio-home-inventive-logistics.md",
+      "to": "projection.photo.product-folio.home.inventive-logistics",
+      "fragment": null,
+      "line": 20,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/decisions/photography/product-folio-home-2026-08-12.md",
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "toPath": "docs/knowledge-bank/projections/photography/product-folio-product-delivery-conversation.md",
+      "to": "projection.photo.product-folio.product-delivery.conversation",
+      "fragment": null,
+      "line": 21,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/decisions/photography/product-folio-home-2026-08-12.md",
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "toPath": "docs/knowledge-bank/projections/photography/product-folio-work-callnyc-interface.md",
+      "to": "projection.photo.product-folio.work-callnyc.callnyc-interface",
+      "fragment": null,
+      "line": 22,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/decisions/photography/product-folio-home-2026-08-12.md",
+      "from": "decision.photo.product-folio.home.2026-08-12",
+      "toPath": "docs/knowledge-bank/projections/photography/product-folio-work-fair-rent-materials.md",
+      "to": "projection.photo.product-folio.work-fair-rent.fair-rent-materials",
+      "fragment": null,
+      "line": 23,
       "kind": "link"
     },
     {
@@ -18174,10 +18668,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/photography.md",
       "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/decisions/photography/product-folio-home-2026-08-12.md",
+      "to": "decision.photo.product-folio.home.2026-08-12",
+      "fragment": null,
+      "line": 54,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
       "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-dcla-formation-2017.md",
       "to": "index.photo-set.nycac-dcla-formation.2017",
       "fragment": null,
-      "line": 54,
+      "line": 63,
       "kind": "link"
     },
     {
@@ -18186,7 +18689,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/kc-town-hall-fieldwork.md",
       "to": "index.photo-set.kc-town-hall-fieldwork",
       "fragment": null,
-      "line": 55,
+      "line": 64,
       "kind": "link"
     },
     {
@@ -18195,7 +18698,7 @@
       "toPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-walkshed-2019.md",
       "to": "asset.graphic.kc-town-hall.walkshed.2019.001",
       "fragment": null,
-      "line": 60,
+      "line": 69,
       "kind": "link"
     },
     {
@@ -18204,7 +18707,7 @@
       "toPath": "docs/knowledge-bank/research-runs/photographic-source-return-2026-07-26.md",
       "to": "research.photographic-source-return.2026-07-26",
       "fragment": null,
-      "line": 62,
+      "line": 71,
       "kind": "link"
     },
     {
@@ -18213,7 +18716,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-project-sites-2017-2026.md",
       "to": "index.photo-set.nycac-project-sites.2017-2026",
       "fragment": null,
-      "line": 67,
+      "line": 76,
       "kind": "link"
     },
     {

@@ -8,25 +8,26 @@ brand
 
 Hiring managers, product and operations leaders, civic technology teams,
 implementation teams, collaborators, and trusted reviewers who need to quickly
-understand Jamie Burkart's professional shape. They arrive with limited time
-and need credible, public-safe evidence that Jamie can create operating
-structure for complex public-facing work.
+understand Jamie Burkart's professional shape. The immediate audience is a
+public-sector product hiring panel scanning for resident-facing judgment,
+end-to-end delivery, technical fluency, and credible cross-functional practice.
 
 ## Product Purpose
 
-This portfolio makes Jamie legible as a Technical Project Manager - Product
-Operations & Implementation lead. It should show how ambiguous,
-stakeholder-heavy work becomes usable systems: requirements, workflows,
-documentation, decision trails, launch support, onboarding, and durable
-handoffs. Success means a reviewer can understand Jamie's role fit, trust the
-evidence, and know what to do next without exposing private or sensitive
+This portfolio makes Jamie legible as a senior product and technical delivery
+leader for public-facing systems. It shows how ambiguous, stakeholder-heavy
+problems become usable services through discovery, product framing,
+prototyping, implementation, public launch, measurement, documentation, and
+durable handoffs. Success means a reviewer recognizes the role fit in ten
+seconds, finds three concrete product proofs within ninety seconds, trusts the
+evidence, and knows what to do next without exposing private or sensitive
 materials.
 
 ## Brand Personality
 
-Precise, warm, modular, and ethically grounded. The emotional goal is calm
-confidence: the site should feel careful, useful, public-safe, and human rather
-than flashy, inflated, or self-mythologizing.
+Precise, warm, direct, field-tested, and ethically grounded. The emotional goal
+is active confidence: the site should feel like consequential public work made
+navigable, not a corporate pitch, prestige display, or self-mythology.
 
 ## Anti-references
 
@@ -45,6 +46,8 @@ private fonts, and named stakeholder details that have not been approved.
 3. Make evidence scan quickly while preserving nuance.
 4. Use collective-work language where the work was collaborative.
 5. Leave every page feeling like documentation is care.
+6. Make the first viewport prove product identity, public-service judgment,
+   and delivery fluency before asking the reader to infer them.
 
 ## Accessibility & Inclusion
 

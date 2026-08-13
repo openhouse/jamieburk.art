@@ -393,7 +393,7 @@ const claims: KnowledgeBank["claims"] = [
     project: "fair-rent-nyc",
     internalClaim: "Jamie completed a bounded pre-publication factual, source, bill-mechanics, accessibility, and claim-scope review of Empty Storefronts, High Rents; the final report acknowledges his review and incorporates documented corrections and limitations while retaining final editorial authority with the report team.",
     status: "confirmed-with-boundary",
-    projections: [{ key: "archive-note", text: "Jamie completed a bounded pre-publication review of the 2026 Small Business United report; the released report acknowledges his contribution and incorporates documented corrections and limitations.", status: "hold", citationRequired: true, surfaces: [] }],
+    projections: [{ key: "case-study", text: "Jamie completed a bounded pre-publication review of the 2026 Small Business United report; the released report acknowledges his contribution and incorporates documented corrections and limitations.", status: "active", citationRequired: false, surfaces: ["/work/fair-rent-nyc"] }],
     evidence: [
       { sourceId: "SRC-SBU-EMPTY-STOREFRONTS-HIGH-RENTS-2026-07-29", relationship: "direct-support", supports: ["final acknowledgment", "released report disposition"], locator: "Acknowledgments and final report text.", confidence: "high", renderCitation: false },
       { sourceId: "SRC-JAMIE-SBU-REPORT-REVIEW-2026-07-25", relationship: "private-support", supports: ["scope and substance of Jamie's tracked review"], locator: "Protected tracked review.", confidence: "high", renderCitation: false }
@@ -409,7 +409,7 @@ const claims: KnowledgeBank["claims"] = [
     project: "commercial-rent-stabilization",
     internalClaim: "Jamie delivered public remarks at the July 29 Small Business United report launch, using the cultural-space lane to connect rent predictability, neighborhood value, public safety, displacement, and open public data.",
     status: "confirmed-with-boundary",
-    projections: [{ key: "case-study", text: "At the July 29, 2026, report launch, Jamie made the cultural-space case for Commercial Rent Stabilization, connecting predictable leases with the continuity and safety of neighborhood cultural infrastructure.", status: "hold", citationRequired: true, surfaces: [] }],
+    projections: [{ key: "case-study", text: "At the July 29, 2026, report launch, Jamie made the cultural-space case for Commercial Rent Stabilization, connecting predictable leases with the continuity and safety of neighborhood cultural infrastructure.", status: "active", citationRequired: true, surfaces: ["/work/fair-rent-nyc"] }],
     evidence: [
       { sourceId: "SRC-FAIRRENT-JULY29-DELIVERED-REMARKS-TRANSCRIPT", relationship: "private-support", supports: ["Jamie delivered public remarks", "cultural-space, displacement, safety, and data themes"], locator: "Protected delivered-remarks segment.", confidence: "high", renderCitation: false },
       { sourceId: "SRC-ACTION-LAB-SBU-REPORT-LAUNCH-2026-07-29", relationship: "context", supports: ["public event identity and purpose"], confidence: "high", renderCitation: true }

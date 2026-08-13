@@ -64,6 +64,14 @@ function appendPendingPhoto(model) {
   return pending;
 }
 
+function reactivateEastRiver(model) {
+  model.portfolioPhotos.eastRiver.placements = ["home"];
+  model.recordsById[model.canary.placementId].projection_status = "active";
+  model.recordsById[model.canary.editionId].projection_status = "active";
+  model.sourceTexts["apps/www/src/components/Hero.tsx"] +=
+    "\n// active occurrence: portfolioPhotos.eastRiver";
+}
+
 test("East River canary passes every hard gate and criterion", async () => {
   const result = evaluatePhotoKnowledgeModel(await baselineModel());
   assert.equal(result.passed, true);
@@ -160,6 +168,32 @@ test("manifest and Wiki placement drift fails closed", async () => {
   assert.equal(result.checks.manifest_wiki_placement_alignment, false);
 });
 
+test("portfolio album authorization and exact derivatives pass as one governed projection", async () => {
+  const model = await baselineModel();
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.portfolio_album_projection_governed, true);
+});
+
+test("represented-person permission cannot drift after selection", async () => {
+  const model = await baselineModel();
+  model.recordsById[
+    "source.permission.portfolio-source-album.2026-08-12"
+  ].permission_capsule.represented_person_permission = "unconfirmed";
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.portfolio_album_projection_governed, false);
+  assert.equal(result.passed, false);
+});
+
+test("an authorized photograph cannot point to an ungoverned route occurrence", async () => {
+  const model = await baselineModel();
+  model.recordsById[
+    "projection.photo.product-folio.product-delivery.conversation"
+  ].projection_status = "hold";
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.portfolio_album_projection_governed, false);
+  assert.equal(result.passed, false);
+});
+
 test("revocation cannot leave an active occurrence valid", async () => {
   const model = await baselineModel();
   model.recordsById[model.canary.permissionSourceId].permission_capsule.public_git = "revoked";
@@ -235,6 +269,7 @@ test("production and indexing approval cannot be automated", async () => {
 
 test("stale candidate evidence fails closed", async () => {
   const model = await baselineModel();
+  reactivateEastRiver(model);
   model.candidateReceipt.candidateFingerprint = "f".repeat(64);
   const result = evaluatePhotoKnowledgeModel(model);
   assert.equal(result.checks.exact_candidate_receipt_current, false);
@@ -242,6 +277,7 @@ test("stale candidate evidence fails closed", async () => {
 
 test("a verified binding may carry forward across unrelated candidate-scope additions", async () => {
   const model = await baselineModel();
+  reactivateEastRiver(model);
   model.candidate.fingerprint = "4".repeat(64);
   model.candidate.fileCount += 1;
   attachCarriedForwardReceipt(model);
@@ -252,6 +288,7 @@ test("a verified binding may carry forward across unrelated candidate-scope addi
 
 test("changing Hero source invalidates a carried-forward binding receipt", async () => {
   const model = await baselineModel();
+  reactivateEastRiver(model);
   attachCarriedForwardReceipt(model);
   model.sourceTexts["apps/www/src/components/Hero.tsx"] += "\n// changed placement";
   const result = evaluatePhotoKnowledgeModel(model);
@@ -261,6 +298,7 @@ test("changing Hero source invalidates a carried-forward binding receipt", async
 
 test("changing the East River manifest invalidates a carried-forward binding receipt", async () => {
   const model = await baselineModel();
+  reactivateEastRiver(model);
   attachCarriedForwardReceipt(model);
   model.portfolioPhotos.eastRiver.caption = "A changed caption.";
   const result = evaluatePhotoKnowledgeModel(model);

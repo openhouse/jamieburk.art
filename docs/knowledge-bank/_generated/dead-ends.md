@@ -1,8 +1,16 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Type-aware dead ends
 
-**Source commit:** `86b76844af306f49fe229e347f1bd87abb00af45`
-**Generation time:** 2026-08-12T12:40:09-04:00
-**Source fingerprint:** `2214644631dc83566195142d752f739b75d33cb1a5bd6ecefe05df5afaa92561`
+**Source commit:** `2c62596a23f9a7171647d8d757dd0b3dbc145df5`
+**Generation time:** 2026-08-12T18:09:25-04:00
+**Source fingerprint:** `b6a33ac804b58c2b2b197420914cb44ed853b681e53a5817e63dbe2e12ecda30`
 
-- None.
+- `projection.photo.product-folio.home.callnyc-interface` (projection)
+- `projection.photo.product-folio.home.collective-synthesis` (projection)
+- `projection.photo.product-folio.home.conversation` (projection)
+- `projection.photo.product-folio.home.fair-rent-materials` (projection)
+- `projection.photo.product-folio.home.inventive-logistics` (projection)
+- `projection.photo.product-folio.home.material-repair` (projection)
+- `projection.photo.product-folio.product-delivery.conversation` (projection)
+- `projection.photo.product-folio.work-callnyc.callnyc-interface` (projection)
+- `projection.photo.product-folio.work-fair-rent.fair-rent-materials` (projection)
