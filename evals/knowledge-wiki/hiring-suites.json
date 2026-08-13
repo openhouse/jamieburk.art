@@ -21,8 +21,13 @@
   ],
   "readerPaths": [
     "docs/qa/hiring-acceptance/readers/generic-recruiter.md",
+    "docs/qa/hiring-acceptance/readers/zack-parker.md",
+    "docs/qa/hiring-acceptance/readers/chris-coleman.md",
+    "docs/qa/hiring-acceptance/readers/charizma-williams.md",
     "docs/qa/hiring-acceptance/readers/lisa-gelobter.md",
     "docs/qa/hiring-acceptance/readers/aileen-palmer.md",
+    "docs/qa/hiring-acceptance/readers/jaclyn-chen.md",
+    "docs/qa/hiring-acceptance/readers/luke-farrell.md",
     "docs/qa/hiring-acceptance/readers/herminia-ibarra.md",
     "docs/qa/hiring-acceptance/readers/claudio-fernandez-araoz.md",
     "docs/qa/hiring-acceptance/readers/amy-edmondson.md"

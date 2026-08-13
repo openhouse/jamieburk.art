@@ -46,6 +46,9 @@ relations:
   - type: related_to
     target: evaluation.employment-leadership-context.2026-08-13
     href: ../evaluations/employment-leadership-context-2026-08-13.md
+  - type: related_to
+    target: evaluation.named-public-reader-acceptance.2026-08-13
+    href: ../evaluations/named-public-reader-acceptance-2026-08-13.md
 ---
 
 # Employment context and hiring acceptance
@@ -80,6 +83,10 @@ the nearest public senior vision context. The confidence labels are material:
 
 No public context record is an endorsement, private opinion, relationship, or
 prediction of a hiring decision.
+
+The [Launch-B named public-reader evaluation](../evaluations/named-public-reader-acceptance-2026-08-13.md)
+records fictionalized, public-web-only acceptance tests separately from actual
+people, interviews, endorsements, and hiring authority.
 
 ## Historical benchmark
 
