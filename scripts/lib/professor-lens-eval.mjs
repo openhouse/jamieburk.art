@@ -43,19 +43,19 @@ export const professorCandidateRelativePaths = [
 ].sort();
 
 const finalScorecardRelativePaths = [
-  "docs/qa/evals-H/margaret-morse-final-2026-08-13-a.json",
-  "docs/qa/evals-H/margaret-morse-final-2026-08-13-b.json",
-  "docs/qa/evals-H/margaret-morse-final-2026-08-13-c.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-13-b.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-13-c.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-13-d.json"
+  "docs/qa/evals-H/margaret-morse-final-2026-08-13-v4-a.json",
+  "docs/qa/evals-H/margaret-morse-final-2026-08-13-v4-b.json",
+  "docs/qa/evals-H/margaret-morse-final-2026-08-13-v4-c.json",
+  "docs/qa/evals-H/warren-sack-final-2026-08-13-v4-a.json",
+  "docs/qa/evals-H/warren-sack-final-2026-08-13-v4-b.json",
+  "docs/qa/evals-H/warren-sack-final-2026-08-13-v4-c.json"
 ];
 
 const dissentScorecardRelativePaths = [
   "docs/qa/evals-H/warren-sack-dissent-2026-08-13-a.json"
 ];
 
-const approvedCandidateSha256 = "51084e34d4f4db259126df29062b66ce157b6c43c15c4db8f4e3f994946c441f";
+const approvedCandidateSha256 = "4c8b17e8a7a69226c184fbaac09dd0025836dd4d608fb7f4075548614fdd7c4f";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },
@@ -266,13 +266,14 @@ export function evaluateProfessorLenses({
     ),
     criterion(
       "dissent-preserved",
-      "The hill climb preserves the exact-candidate dissent that identified the stale photo receipt and prompted fresh mobile verification.",
+      "The hill climb preserves the pre-clean-candidate dissent that identified the stale photo receipt and prompted fresh mobile verification, without counting it as a final holdout.",
       dissentScorecards.length === 1 &&
         dissentScorecards.every((scorecard) => scorecard.phase === "holdout" &&
           scorecard.lensId === "PR-016" &&
           scorecard.score === 3 && scorecard.pass === false &&
-          scorecard.candidateSha256 === candidateSha256),
-      `${dissentScorecards.length}/1 exact-candidate dissent scorecard preserved.`
+          scorecard.candidateSha256 === "51084e34d4f4db259126df29062b66ce157b6c43c15c4db8f4e3f994946c441f" &&
+          scorecard.candidateSha256 !== candidateSha256),
+      `${dissentScorecards.length}/1 pre-clean-candidate dissent scorecard preserved.`
     )
   ];
 
