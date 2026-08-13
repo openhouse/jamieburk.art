@@ -2,8 +2,8 @@
 
 # Photo knowledge health
 
-Candidate fingerprint: `040ca512b31cc0bcb41e1a41bcfc11e8e3e68a55897329bf1f5491dfe0ab18a7`
-Candidate files: 218
+Candidate fingerprint: `ebdfe35d1da9d0b931c37b7b26b045a532440f890ed4193f6024fa80e111ccf9`
+Candidate files: 234
 
 | Check | State |
 |---|---|
@@ -14,6 +14,12 @@ Candidate files: 218
 | creator_credit_and_custody_distinct | PASS |
 | permission_scope_exact_and_fail_closed | PASS |
 | caption_assertions_source_bound | PASS |
+| employment_records_materialized | PASS |
+| employment_derivatives_integrity_and_metadata_stripping | PASS |
+| employment_permission_scope_and_release_gate | PASS |
+| employment_caption_assertions_source_bound | PASS |
+| employment_manifest_wiki_alignment | PASS |
+| employment_selection_remains_human | PASS |
 | manifest_wiki_placement_alignment | PASS |
 | revocation_and_rollback_available | PASS |
 | protected_absence_not_auto_filled | PASS |

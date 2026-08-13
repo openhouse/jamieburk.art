@@ -5,8 +5,8 @@ kind: source
 status: governed-open
 visibility: summary-only
 sensitivity: high
-last_reviewed: 2026-07-28
-review_by: 2026-08-28
+last_reviewed: 2026-08-12
+review_by: 2026-09-12
 canonical_path: docs/knowledge-bank/sources/working/current-workstream-2026-07-27.md
 summary: Public-safe metadata for protected job-search, commercial-rent, speech-preparation, and prepublication-review materials reviewed in late July 2026.
 source_kind: protected-current-work-bundle
@@ -19,6 +19,9 @@ relations:
   - type: related_to
     target: project.fair-rent-nyc
     href: ../../projects/fair-rent-nyc.md
+  - type: informed_by
+    target: research.commercial-rent.advocacy-source-return.2026-08-12
+    href: ../../research-runs/commercial-rent-advocacy-source-return-2026-08-12.md
 ---
 
 # Late-July 2026 current-workstream review
@@ -47,8 +50,17 @@ relations:
 
 Jamie can perform careful prepublication product and data-quality review across
 research method, public claims, legislation, accessibility, attribution, and
-release operations. This remains held until the report is public or the
-commissioning team approves public attribution.
+release operations. The final report and its printed acknowledgment are now
+recovered, closing the attribution gap at reviewer level. Portfolio wording
+remains held pending Jamie approval, a stable public report route, and a
+decision about whether publisher or collaborator review is required.
+
+## August 12 continuation
+
+The [governed source return](../../research-runs/commercial-rent-advocacy-source-return-2026-08-12.md)
+now separates the final report from its draft, the delivered public speech from
+the prepared statement, official-staff coordination from elected-official
+endorsement, and a press footage request from published coverage.
 
 ## Protected boundary
 

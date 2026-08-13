@@ -5,7 +5,7 @@ kind: person
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-03
+last_reviewed: 2026-08-12
 review_by: 2026-10-19
 aliases:
   - James Burkart
@@ -54,6 +54,13 @@ relations:
     target: event.weibel.in-terms-of-media.2024
     href: ../events/in-terms-of-media-symposium-2024.md
     context: Bounded first-person attendance record.
+  - type: informed_by
+    target: research.commercial-rent.advocacy-source-return.2026-08-12
+    href: ../research-runs/commercial-rent-advocacy-source-return-2026-08-12.md
+  - type: participated_in
+    target: event.nyc.commercial-rent.empty-storefronts-report-launch.2026-07-29
+    href: ../events/commercial-rent-empty-storefronts-report-launch-2026-07-29.md
+    context: Delivered public Commercial Rent Stabilization remarks; quotation and portfolio projection remain held.
 ---
 
 # Jamie Burkart
@@ -91,6 +98,13 @@ The [professional record and reception index](../indexes/professional-record-and
 keeps institutional facts, documented encounters, historical evaluations, and
 third-party reception discoverable without turning co-presence or old records
 into current recommendations or endorsements.
+
+The [August 2026 Commercial Rent Stabilization source return](../research-runs/commercial-rent-advocacy-source-return-2026-08-12.md)
+documents a recent sequence of report-quality review, public speaking,
+legislative-staff coordination, and campaign-memory work. It is a strong
+present-tense example of Jamie operating across evidence, narrative,
+stakeholders, and implementation. New case-study and resume wording remains
+held until its explicit human and rights gates close.
 
 ## Project map
 

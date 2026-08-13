@@ -1,12 +1,12 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Layout C photographic portfolio edition
 
-**Source commit:** `86b76844af306f49fe229e347f1bd87abb00af45`
-**Generation time:** 2026-08-12T12:40:09-04:00
-**Source fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
+**Source commit:** `04a64dcc01f65f5e74686d8ba7302725d3ed4314`
+**Generation time:** 2026-08-12T18:09:08-04:00
+**Source fingerprint:** `f8d65d63bf35117d2edd7316446f3acb39a0fd61b2552b6c731b68f789453d47`
 
 - [Keep the Layout C resume route photograph-free](../../decisions/photography/layout-c-resume-no-photo-v1.md) - `related_to` (frontmatter)
 - [Narrow the pre-launch public photo field to fully bound occurrences](../../decisions/photography/pre-launch-rights-narrowing-2026-07-28.md) - `projected_to` (frontmatter)
 - [Photography knowledge loop](../../indexes/photography.md) - `prose_link` (markdown)
 - [Photography knowledge loop](../../indexes/photography.md) - `related_to` (frontmatter)
-- [Layout C homepage East River occurrence](../../projections/photography/layout-c-home-east-river.md) - `related_to` (frontmatter)
+- [Retained East River homepage field-record occurrence](../../projections/photography/layout-c-home-east-river.md) - `related_to` (frontmatter)

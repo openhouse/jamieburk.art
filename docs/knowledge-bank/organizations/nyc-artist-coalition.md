@@ -5,7 +5,7 @@ kind: organization
 status: maintained
 visibility: public-safe
 sensitivity: moderate
-last_reviewed: 2026-07-19
+last_reviewed: 2026-08-12
 review_by: 2026-10-19
 aliases:
   - New York City Artist Coalition
@@ -41,6 +41,9 @@ relations:
   - type: uses_source
     target: source.nycac.running-minutes.2026
     href: ../sources/nycac-running-minutes-2026.md
+  - type: informed_by
+    target: research.commercial-rent.advocacy-source-return.2026-08-12
+    href: ../research-runs/commercial-rent-advocacy-source-return-2026-08-12.md
 ---
 
 # NYC Artist Coalition
@@ -110,6 +113,13 @@ event and signup infrastructure, cultural-space listening, and coordination
 across current and historical partner networks. Protected working records
 remain outside this public repository.
 
+The July 29 report launch adds a compact example of that pattern in current
+practice. Jamie moved between draft-review quality, delivered public advocacy,
+event-information handoff, and legislative-staff follow-through while the
+coalition, report publishers, organizers, researchers, and public offices kept
+their own authority and credit. See the
+[August 12 source return](../research-runs/commercial-rent-advocacy-source-return-2026-08-12.md).
+
 ## Boundaries
 
 - Co-founding does not mean sole founding.
@@ -117,3 +127,5 @@ remain outside this public repository.
 - Public-official participation does not equal endorsement.
 - A passed law or changed agency practice cannot be assigned to one advocate.
 - Research authorization does not clear collaborator records for publication.
+- A report acknowledgment supports careful-review credit, not report authorship
+  or organizational endorsement of every claim.

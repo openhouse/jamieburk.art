@@ -5,8 +5,8 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-28
-review_by: 2026-10-19
+last_reviewed: 2026-08-12
+review_by: 2026-11-12
 canonical_path: docs/knowledge-bank/indexes/decision-records.md
 summary: Index of bounded decision reconstructions preserving actors, constraints, alternatives, artifacts, outcomes, unknowns, and projection holds.
 relations:
@@ -37,6 +37,9 @@ relations:
   - type: related_to
     target: decision.photo.pre-launch.rights-narrowing.2026-07-28
     href: ../decisions/photography/pre-launch-rights-narrowing-2026-07-28.md
+  - type: related_to
+    target: decision.photo.home-product-practice.2026-08
+    href: ../decisions/photography/home-product-practice-2026-08.md
 ---
 
 # Decision records
@@ -56,6 +59,7 @@ the archive does not preserve.
 - [Layout C homepage: East River photographic occurrence](../decisions/photography/layout-c-home-east-river-v1.md)
 - [Layout C resume: protected photographic absence](../decisions/photography/layout-c-resume-no-photo-v1.md)
 - [Pre-launch photography: narrow the public field to fully bound occurrences](../decisions/photography/pre-launch-rights-narrowing-2026-07-28.md)
+- [August 2026 employment edition: make product practice visible through the terminal six](../decisions/photography/home-product-practice-2026-08.md)
 
 ## Contract
 

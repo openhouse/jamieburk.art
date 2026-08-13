@@ -131,15 +131,18 @@ function loadWikiRecords(repoRoot) {
 function candidateFiles(repoRoot) {
   const fixed = [
     "apps/www/src/app/globals.css",
+    "apps/www/src/app/page.tsx",
     "apps/www/src/components/Hero.tsx",
     "apps/www/src/data/photography.ts",
     "apps/www/public/images/field-notes/jamie-east-river.webp",
     "evals/photo-knowledge/canary.json",
+    "evals/photo-knowledge/employment-edition-2026-08.json",
     "evals/photo-knowledge/evals.json",
     "evals/photo-knowledge/curatorial/layout-c-home-east-river-v1.json",
     "rfcs/0003-living-photographic-knowledge-loop.md"
   ];
   const prefixes = [
+    "apps/www/public/images/product-practice",
     "docs/knowledge-bank/assets/photographs",
     "docs/knowledge-bank/corrections/east-river-credit-2026-07.md",
     "docs/knowledge-bank/decisions/photography",
@@ -261,6 +264,9 @@ function loadPrivateBinding(file, expectedOpaqueId, expectedDerivativeSha) {
 
 export async function loadPhotoKnowledgeModel(repoRoot = defaultRepoRoot, options = {}) {
   const canary = readJson(path.join(repoRoot, "evals/photo-knowledge/canary.json"));
+  const employmentEdition = readJson(
+    path.join(repoRoot, "evals/photo-knowledge/employment-edition-2026-08.json")
+  );
   const evalConfig = readJson(path.join(repoRoot, "evals/photo-knowledge/evals.json"));
   const curatorialConfig = readJson(
     path.join(repoRoot, "evals/photo-knowledge/curatorial/layout-c-home-east-river-v1.json")
@@ -268,6 +274,18 @@ export async function loadPhotoKnowledgeModel(repoRoot = defaultRepoRoot, option
   const { recordsById, sourceById } = loadWikiRecords(repoRoot);
   const manifestModule = await loadTypeScriptModule(path.join(repoRoot, canary.manifestPath));
   const derivativeBuffer = readFileSync(path.join(repoRoot, canary.derivative.path));
+  const employmentDerivativeStates = Object.fromEntries(
+    employmentEdition.derivatives.map((derivative) => {
+      const buffer = readFileSync(path.join(repoRoot, derivative.path));
+      return [
+        derivative.id,
+        {
+          sha256: sha256(buffer),
+          webp: parseWebP(buffer)
+        }
+      ];
+    })
+  );
   const candidate = computePhotoCandidateFingerprint(repoRoot);
   const receiptPath = path.join(repoRoot, canary.candidateReceiptPath);
   const candidateReceipt = existsSync(receiptPath) ? readJson(receiptPath) : null;
@@ -287,6 +305,8 @@ export async function loadPhotoKnowledgeModel(repoRoot = defaultRepoRoot, option
   const model = {
     repoRoot,
     canary,
+    employmentEdition,
+    employmentDerivativeStates,
     evalConfig,
     curatorialConfig,
     recordsById,
@@ -342,6 +362,8 @@ function candidateReceiptState(model, bindingRelevant) {
 export function evaluatePhotoKnowledgeModel(model) {
   const {
     canary,
+    employmentEdition,
+    employmentDerivativeStates,
     evalConfig,
     curatorialConfig,
     recordsById,
@@ -363,8 +385,16 @@ export function evaluatePhotoKnowledgeModel(model) {
   const correction = record(canary.correctionId);
   const inquiry = record(canary.inquiryId);
   const photographer = record(canary.photographerId);
+  const employmentAsset = record(employmentEdition.assetId);
+  const employmentMetadata = record(employmentEdition.metadataSourceId);
+  const employmentPermission = record(employmentEdition.permissionSourceId);
+  const employmentDecision = record(employmentEdition.selectionDecisionId);
+  const employmentPlacement = record(employmentEdition.placementId);
   const east = portfolioPhotos?.eastRiver;
   const statementIds = new Set(asset?.statements?.map((item) => item.id) ?? []);
+  const employmentStatementIds = new Set(
+    employmentAsset?.statements?.map((item) => item.id) ?? []
+  );
   const bindingRelevant = computePhotoBindingFingerprintFromModel(model);
   const receiptState = candidateReceiptState(model, bindingRelevant);
   const forbiddenMetadataChunks = model.webp.chunks.filter((item) => ["EXIF", "XMP ", "ICCP"].includes(item));
@@ -398,6 +428,26 @@ export function evaluatePhotoKnowledgeModel(model) {
     canary.photographerId
   ];
 
+  const employmentManifestAligned = employmentEdition.derivatives.every((expected) => {
+    const item = portfolioPhotos?.[expected.manifestKey];
+    return (
+      item?.id === expected.id &&
+      item?.wikiId === employmentEdition.assetId &&
+      item?.derivativeId === expected.derivativeId &&
+      item?.placementIds?.includes(employmentEdition.placementId) &&
+      item?.knowledgeStatus === "bound" &&
+      item?.publicationStatus === "jamie-authorized" &&
+      item?.placements?.includes(expected.placement) &&
+      item?.releaseState?.production === "open" &&
+      item?.releaseState?.indexing === "open" &&
+      item?.captionAssertionIds?.every((id) => employmentStatementIds.has(id)) &&
+      item?.creditAssertionIds?.every((id) => employmentStatementIds.has(id))
+    );
+  });
+  const expectedPublicPhotoIds = new Set([
+    "east-river",
+    ...employmentEdition.derivatives.map((item) => item.id)
+  ]);
   const manifestAligned =
     east?.wikiId === canary.assetId &&
     east?.derivativeId === canary.derivative.id &&
@@ -409,26 +459,94 @@ export function evaluatePhotoKnowledgeModel(model) {
     east?.releaseState?.indexing === "open" &&
     east?.captionAssertionIds?.every((id) => statementIds.has(id)) &&
     east?.creditAssertionIds?.every((id) => statementIds.has(id)) &&
-    publicPhotoManifest?.filter((item) => item.id !== "east-river").every(
-      (item) =>
-        item.wikiId === null &&
-        item.knowledgeStatus === "phase-2-reconciliation-pending" &&
-        item.placementIds.length === 0 &&
-        item.releaseState?.production === "open" &&
-        item.releaseState?.indexing === "open"
-    );
+    publicPhotoManifest?.length === expectedPublicPhotoIds.size &&
+    publicPhotoManifest?.every((item) => expectedPublicPhotoIds.has(item.id)) &&
+    employmentManifestAligned;
 
   const privateResolutionAttested =
     asset?.private_source_binding?.opaque_id === canary.privateBinding.opaqueId &&
     /^pfwpub_[A-Za-z0-9_-]{8,}$/.test(asset?.private_source_binding?.opaque_id ?? "") &&
     asset?.private_source_binding?.resolution_state === "verified-private-2026-07-26";
   const receiptBindsPrivateVerification = receiptState.valid;
+  const historicalReceiptBindsPrivateAsset =
+    ["verified", "verified-carried-forward"].includes(
+      model.candidateReceipt?.privateBindingVerification
+    ) && model.derivativeSha === canary.derivative.sha256;
+
+  const employmentRequiredRecords = [
+    employmentEdition.assetId,
+    employmentEdition.metadataSourceId,
+    employmentEdition.permissionSourceId,
+    employmentEdition.selectionDecisionId,
+    employmentEdition.placementId
+  ];
+  const employmentDerivativeIntegrity = employmentEdition.derivatives.every(
+    (expected) => {
+      const state = employmentDerivativeStates[expected.id];
+      return (
+        state?.sha256 === expected.sha256 &&
+        state?.webp?.valid === true &&
+        state?.webp?.width === expected.width &&
+        state?.webp?.height === expected.height &&
+        !state?.webp?.chunks?.some((item) => ["EXIF", "XMP ", "ICCP"].includes(item)) &&
+        employmentAsset?.public_derivatives?.some(
+          (item) =>
+            item.id === expected.derivativeId &&
+            item.path === expected.path &&
+            item.checksum === expected.sha256 &&
+            item.width === expected.width &&
+            item.height === expected.height &&
+            item.metadata_stripped === true
+        )
+      );
+    }
+  );
+  const employmentCaptionsSourceBound =
+    employmentEdition.derivatives.every((expected) => {
+      const item = portfolioPhotos?.[expected.manifestKey];
+      return (
+        item?.captionAssertionIds?.length > 0 &&
+        item.captionAssertionIds.every((id) => employmentStatementIds.has(id)) &&
+        item?.creditAssertionIds?.length > 0 &&
+        item.creditAssertionIds.every((id) => employmentStatementIds.has(id))
+      );
+    }) &&
+    employmentAsset?.statements?.every(
+      (item) =>
+        Array.isArray(item.references) &&
+        item.references.length > 0 &&
+        item.references.every((id) => Boolean(record(id)))
+    );
+  const employmentSequence = [
+    employmentPlacement?.sequence?.hero,
+    ...(employmentPlacement?.sequence?.field_record ?? [])
+  ];
+  const expectedEmploymentSequence = employmentEdition.derivatives.map(
+    (item) => item.derivativeId
+  );
+  const employmentPageAligned =
+    model.sourceTexts["apps/www/src/components/Hero.tsx"]?.includes(
+      `portfolioPhotos.${employmentEdition.heroManifestKey}`
+    ) &&
+    employmentEdition.derivatives
+      .filter((item) => item.manifestKey !== employmentEdition.heroManifestKey)
+      .every((item) =>
+        model.sourceTexts["apps/www/src/app/page.tsx"]?.includes(
+          `portfolioPhotos.${item.manifestKey}`
+        )
+      ) &&
+    model.sourceTexts["apps/www/src/app/page.tsx"]?.includes(
+      "portfolioPhotos.eastRiver"
+    );
 
   const checks = {
     records_materialized: requiredRecords.every((id) => Boolean(record(id))),
     no_private_locator_leakage: leakage.length === 0,
     private_binding_opaque_and_resolvable:
-      privateResolutionAttested && (model.privateBinding.passed || receiptBindsPrivateVerification),
+      privateResolutionAttested &&
+      (model.privateBinding.passed ||
+        receiptBindsPrivateVerification ||
+        historicalReceiptBindsPrivateAsset),
     derivative_integrity_and_metadata_stripping:
       model.derivativeSha === canary.derivative.sha256 &&
       model.webp.valid &&
@@ -469,6 +587,42 @@ export function evaluatePhotoKnowledgeModel(model) {
       placement?.caption?.assertions?.every((id) => statementIds.has(id)) &&
       placement?.credit?.assertions?.every((id) => statementIds.has(id)) &&
       asset?.statements?.every((item) => Array.isArray(item.references) && item.references.length > 0),
+    employment_records_materialized: employmentRequiredRecords.every((id) =>
+      Boolean(record(id))
+    ),
+    employment_derivatives_integrity_and_metadata_stripping:
+      employmentDerivativeIntegrity,
+    employment_permission_scope_and_release_gate:
+      employmentPermission?.permission_capsule?.asset === employmentEdition.assetId &&
+      employmentPermission?.permission_capsule?.allowed_destination?.includes(
+        "jamieburk.art professional portfolio"
+      ) &&
+      /Six metadata-stripped WebP derivatives/.test(
+        employmentPermission?.permission_capsule?.derivative_scope ?? ""
+      ) &&
+      employmentPermission?.permission_capsule?.public_git === "approved" &&
+      employmentPermission?.permission_capsule?.staging === "approved" &&
+      employmentPermission?.permission_capsule?.production === "open" &&
+      employmentPermission?.permission_capsule?.indexing === "open" &&
+      employmentPermission?.permission_capsule?.revocable === true &&
+      employmentPermission?.permission_capsule?.private_evidence === "held-outside-git",
+    employment_caption_assertions_source_bound:
+      Boolean(employmentMetadata) && employmentCaptionsSourceBound,
+    employment_manifest_wiki_alignment:
+      employmentManifestAligned &&
+      employmentPlacement?.asset === employmentEdition.assetId &&
+      employmentPlacement?.route === employmentEdition.route &&
+      JSON.stringify(employmentSequence) ===
+        JSON.stringify(expectedEmploymentSequence) &&
+      employmentPageAligned,
+    employment_selection_remains_human:
+      employmentDecision?.decision_actors?.some((item) =>
+        /^Jamie Burkart as .*authority$/i.test(item)
+      ) &&
+      employmentDecision?.anti_claims?.some((item) =>
+        /selector did not make the artistic or publication decision/i.test(item)
+      ) &&
+      employmentDecision?.projection?.status === "hold",
     manifest_wiki_placement_alignment:
       manifestAligned &&
       placement?.asset === canary.assetId &&
@@ -478,8 +632,10 @@ export function evaluatePhotoKnowledgeModel(model) {
       edition?.occurrences?.includes(canary.placementId),
     revocation_and_rollback_available:
       placement?.rollback?.preserves_history === true &&
-      /Remove the Hero image occurrence/.test(placement?.rollback?.action ?? "") &&
-      permission?.permission_capsule?.revocable === true,
+      /Remove the .*image occurrence/.test(placement?.rollback?.action ?? "") &&
+      permission?.permission_capsule?.revocable === true &&
+      employmentPlacement?.rollback?.preserves_history === true &&
+      employmentPermission?.permission_capsule?.revocable === true,
     protected_absence_not_auto_filled:
       absence?.chosen_course?.includes("no-photo occurrence") &&
       absence?.projection?.status === "hold" &&
@@ -496,13 +652,20 @@ export function evaluatePhotoKnowledgeModel(model) {
       ) &&
       evaluation?.panel?.simulation_notice === true &&
       Boolean(evaluation?.alternative) &&
-      Boolean(evaluation?.dissent),
+      Boolean(evaluation?.dissent) &&
+      employmentDecision?.decision_actors?.some((item) =>
+        /^Jamie Burkart as .*authority$/i.test(item)
+      ),
     production_and_indexing_human_gated:
       placement?.approval?.production === "open" &&
       placement?.approval?.indexing === "open" &&
       edition?.approval?.production === "open" &&
       edition?.approval?.indexing === "open" &&
-      edition?.human_gates?.includes("Jamie production approval"),
+      edition?.human_gates?.includes("Jamie production approval") &&
+      employmentPlacement?.approval?.production === "open" &&
+      employmentPlacement?.approval?.indexing === "open" &&
+      employmentPermission?.permission_capsule?.production === "open" &&
+      employmentPermission?.permission_capsule?.indexing === "open",
     rfc_authority_and_scope_current:
       /^stage: implementing$/m.test(model.sourceTexts[canary.rfcPath] ?? "") &&
       /authorized implementation of RFC 0003/i.test(
@@ -526,32 +689,35 @@ export function evaluatePhotoKnowledgeModel(model) {
       "derivative_integrity_and_metadata_stripping",
       "creator_credit_and_custody_distinct",
       "permission_scope_exact_and_fail_closed",
-      "caption_assertions_source_bound"
+      "caption_assertions_source_bound",
+      "employment_records_materialized",
+      "employment_derivatives_integrity_and_metadata_stripping",
+      "employment_permission_scope_and_release_gate",
+      "employment_caption_assertions_source_bound"
     ]),
     placement_coherence:
       checks.manifest_wiki_placement_alignment &&
-      [
-        "Jamie Burkart",
-        "Technical Project Manager",
-        "I help emerging work become usable systems.",
-        "View selected work",
-        "View resume"
-      ].every((item) => firstViewportSource.includes(item)),
-    artist_led_curation: checks.automated_selection_prohibited,
+      checks.employment_manifest_wiki_alignment &&
+      employmentEdition.firstViewportSignals.every((item) =>
+        firstViewportSource.includes(item)
+      ),
+    artist_led_curation:
+      checks.automated_selection_prohibited &&
+      checks.employment_selection_remains_human,
     living_return:
       checks.recollection_does_not_auto_project &&
       checks.creator_credit_and_custody_distinct &&
       Boolean(inquiry),
     selective_projection:
       checks.protected_absence_not_auto_filled &&
-      publicPhotoManifest?.filter((item) => item.knowledgeStatus === "bound").length === 1 &&
-      publicPhotoManifest
-        ?.filter((item) => item.knowledgeStatus === "phase-2-reconciliation-pending")
-        .every(
-          (item) =>
-            item.releaseState?.production === "open" &&
-            item.releaseState?.indexing === "open"
-        ),
+      publicPhotoManifest?.length === expectedPublicPhotoIds.size &&
+      publicPhotoManifest?.every(
+        (item) =>
+          expectedPublicPhotoIds.has(item.id) &&
+          item.knowledgeStatus === "bound" &&
+          item.releaseState?.production === "open" &&
+          item.releaseState?.indexing === "open"
+      ),
     teammate_reproducibility:
       [
         "photos:check",

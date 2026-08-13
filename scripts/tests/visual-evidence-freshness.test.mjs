@@ -36,6 +36,22 @@ test("current visual screenshots are checksum-bound to the current public surfac
     const screenshotPath = path.join(evidenceDir, capture.file);
     assert.ok(existsSync(screenshotPath), capture.file);
     assert.equal(sha256(screenshotPath), capture.sha256, capture.file);
+    assert.ok(
+      capture.httpStatus >= 200 && capture.httpStatus < 400,
+      `${capture.file} returned ${capture.httpStatus}`
+    );
+    assert.equal(capture.h1Count, 1, `${capture.file} must contain one H1`);
+    assert.ok(capture.h1Text?.trim(), `${capture.file} must record its H1 text`);
+    assert.equal(
+      capture.nextjsPortalCount,
+      0,
+      `${capture.file} contains Next.js development or error chrome`
+    );
+    assert.equal(
+      capture.frameworkErrorTextCount,
+      0,
+      `${capture.file} contains framework error text`
+    );
   }
 });
 

@@ -19,7 +19,7 @@ test("a private archive identifier fails closed", () => {
 test("a missing caption fails the manifest contract", () => {
   const path = "apps/www/src/data/photography.ts";
   const source = readFileSync(path, "utf8").replace(
-    'caption: "At the East River beneath the Manhattan Bridge, 2022.",',
+    'caption: "A bicycle-and-canoe transport system in use, 2023.",',
     ""
   );
   const result = evaluateLayout(process.cwd(), { [path]: source });

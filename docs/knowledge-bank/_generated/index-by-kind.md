@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `86b76844af306f49fe229e347f1bd87abb00af45`
-**Generation time:** 2026-08-12T12:40:09-04:00
-**Source fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
+**Source commit:** `04a64dcc01f65f5e74686d8ba7302725d3ed4314`
+**Generation time:** 2026-08-12T18:09:08-04:00
+**Source fingerprint:** `f8d65d63bf35117d2edd7316446f3acb39a0fd61b2552b6c731b68f789453d47`
 
 ## application
 
@@ -12,6 +12,7 @@
 
 ## asset
 
+- [August 2026 employment-edition terminal six photographs](../assets/photographs/employment-edition-terminal-six-2026-08.md) - `asset-set.photo.employment-edition-terminal-six.2026-08`
 - [KC Town Hall ten-minute-walk proposal map](../assets/graphics/kc-town-hall-walkshed-2019.md) - `asset.graphic.kc-town-hall.walkshed.2019.001`
 - [MIT Interrogative Design Symposium held photo set](../assets/photographs/mit-interrogative-design-symposium-2024-held.md) - `asset.photo-set.mit-interrogative-design.2024`
 - [Digital District participant photograph metadata](../assets/digital-district-photo.md) - `asset.photo.digital-district.001`
@@ -226,12 +227,14 @@
 - [KC Town Hall listening within fieldwork](../decisions/kc-town-hall-listening-fieldwork.md) - `decision.kc-town-hall.listening-fieldwork`
 - [Knowledge Wiki depth with selective public projection](../decisions/knowledge-wiki-selective-projection.md) - `decision.knowledge-wiki.selective-projection`
 - [Open House communal governance inside negotiated boundaries](../decisions/open-house-communal-governance.md) - `decision.open-house.communal-governance`
+- [Use the terminal six to make product practice visible on the homepage](../decisions/photography/home-product-practice-2026-08.md) - `decision.photo.home-product-practice.2026-08`
 - [Select the East River photograph for the Layout C homepage](../decisions/photography/layout-c-home-east-river-v1.md) - `decision.photo.layout-c.home-east-river.v1`
 - [Keep the Layout C resume route photograph-free](../decisions/photography/layout-c-resume-no-photo-v1.md) - `decision.photo.layout-c.resume-no-photo.v1`
 - [Narrow the pre-launch public photo field to fully bound occurrences](../decisions/photography/pre-launch-rights-narrowing-2026-07-28.md) - `decision.photo.pre-launch.rights-narrowing.2026-07-28`
 
 ## evaluation
 
+- [Commercial Rent Stabilization advocacy evidence hill climb](../evaluations/commercial-rent-advocacy-hill-climb-2026-08-12.md) - `evaluation.commercial-rent.advocacy-hill-climb.2026-08-12`
 - [Layout C homepage East River curatorial proposal](../evaluations/curatorial/layout-c-home-east-river-v1.md) - `evaluation.curatorial.layout-c.home-east-river.v1`
 - [Employment context coverage baseline - July 18, 2026](../evaluations/employment-context-coverage-2026-07-18.md) - `evaluation.employment-context.coverage.2026-07-18`
 - [Jamie public-record integration evaluation](../evaluations/jamie-public-record-integration-2026-08-03.md) - `evaluation.jamie-public-record-integration.2026-08-03`
@@ -241,6 +244,7 @@
 ## event
 
 - [Interrogative Design Symposium](../events/interrogative-design-symposium-2024.md) - `event.mit.interrogative-design-symposium.2024`
+- [Empty Storefronts, High Rents report launch](../events/commercial-rent-empty-storefronts-report-launch-2026-07-29.md) - `event.nyc.commercial-rent.empty-storefronts-report-launch.2026-07-29`
 - [Commercial Rent Stabilization event at Friends and Lovers](../events/commercial-rent-friends-and-lovers-2026-02-17.md) - `event.nyc.commercial-rent.friends-and-lovers.2026-02-17`
 - [Project X community conversation](../events/commercial-rent-project-x-2026-03-10.md) - `event.nyc.commercial-rent.project-x.2026-03-10`
 - [Commercial Rent Stabilization public event](../events/commercial-rent-public-event-2025-11-13.md) - `event.nyc.commercial-rent.public-event.2025-11-13`
@@ -262,6 +266,7 @@
 
 ## index
 
+- [Commercial Rent Stabilization ecosystem update map](../indexes/commercial-rent-ecosystem-update-map-2026-08-12.md) - `index.commercial-rent.ecosystem-update-map.2026-08-12`
 - [Knowledge Wiki](../README.md) - `index.knowledge-wiki`
 - [Canonical Story Bank](../indexes/canonical-story-bank.md) - `index.knowledge-wiki.canonical-story-bank`
 - [Commercial Rent Stabilization public support](../indexes/commercial-rent-public-support.md) - `index.knowledge-wiki.commercial-rent-public-support`
@@ -359,7 +364,8 @@
 - [Role-fit and referral map](../projections/role-fit-and-referral-map.md) - `portfolio.role-fit-referral-map`
 - [CallNYC portfolio projection](../projections/work-callnyc.md) - `portfolio.work.callnyc`
 - [Technical Operations portfolio projection](../projections/work-technical-operations.md) - `portfolio.work.technical-operations`
-- [Layout C homepage East River occurrence](../projections/photography/layout-c-home-east-river.md) - `projection.photo.layout-c.home.east-river`
+- [August 2026 homepage product-practice photo sequence](../projections/photography/home-product-practice-2026-08.md) - `projection.photo.home-product-practice.2026-08`
+- [Retained East River homepage field-record occurrence](../projections/photography/layout-c-home-east-river.md) - `projection.photo.layout-c.home.east-river`
 
 ## research-inquiry
 
@@ -372,6 +378,7 @@
 
 ## research-run
 
+- [Commercial Rent Stabilization advocacy source return, August 12, 2026](../research-runs/commercial-rent-advocacy-source-return-2026-08-12.md) - `research.commercial-rent.advocacy-source-return.2026-08-12`
 - [Foundational Wiki page source return, July 19, 2026](../research-runs/foundational-source-return-2026-07-19.md) - `research.foundational-source-return.2026-07-19`
 - [Interpretive layer source return, July 19, 2026](../research-runs/interpretive-layer-source-return-2026-07-19.md) - `research.interpretive-layer-source-return.2026-07-19`
 - [Knowledge Wiki branch-family closure review](../research-runs/knowledge-wiki-family-closure-2026-07-19.md) - `research.knowledge-wiki-family-closure.2026-07-19`
@@ -381,6 +388,7 @@
 
 ## source
 
+- [Action Lab Commercial Rent Stabilization campaign post](../sources/action-lab-commercial-rent-social-post-2026-08-11.md) - `source.action-lab.commercial-rent-social-post.2026-08-11`
 - [CallNYC public source repository](../sources/callnyc-source-repository.md) - `source.callnyc.source-repository`
 - [Campaign-site repository family, 2020-2022](../sources/campaign-site-repository-family-2020-2022.md) - `source.campaign-site.repository-family.2020-2022`
 - [Civic Hall hackathon announcement](../sources/civichall-hackathon-announcement-2016.md) - `source.civichall.hackathon-announcement.2016`
@@ -432,13 +440,16 @@
 - [Active New York State commercial rent stabilization bills](../sources/commercial-rent-public-support/active-state-bills-2025-2026.md) - `source.nys.commercial-rent.active-bills.2025-2026`
 - [2026 Democratic primary election-night result for Assembly District 56](../sources/commercial-rent-public-support/eon-huntley-2026-primary-result.md) - `source.nysboe.primary.ad56.2026`
 - [Elana Gordon East River portfolio permission summary](../sources/permissions/elana-gordon-east-river-portfolio-2026.md) - `source.permission.elana-gordon.east-river.2026-07`
+- [Employment-edition source album portfolio permission summary](../sources/permissions/employment-edition-source-album-portfolio-2026-08.md) - `source.permission.employment-edition-source-album.2026-08`
 - [East River photograph public-safe metadata summary](../sources/photo-metadata/east-river-2022-public-safe.md) - `source.photo-metadata.east-river.2022.public-safe`
+- [Employment-edition terminal six metadata summary](../sources/photo-metadata/employment-edition-terminal-six-2026-08-public-safe.md) - `source.photo-metadata.employment-edition.2026-08.public-safe`
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`
 - [Professional record governed photo field](../sources/photo-metadata/professional-record-photo-field-2026-08.md) - `source.professional-record.photo-field.2026-08`
 - [Governed professional-record research comparison, August 2026](../sources/archives/professional-record-research-2026-08.md) - `source.professional-record.research.2026-08`
 - [Late-July 2026 current-workstream review](../sources/working/current-workstream-2026-07-27.md) - `source.protected.current-workstream.2026-07-27`
 - [Protected source-backed memory opportunity — metadata boundary](../sources/protected-source-backed-memory-opportunity.md) - `source.protected.source-backed-memory-opportunity.2026`
 - [Jamie Burkart recollection of bicycle-canoe journeys](../sources/recollections/jamie-canoe-commuting-2026-07.md) - `source.recollection.jamie-canoe-commuting.2026-07`
+- [Empty Storefronts, High Rents final report](../sources/empty-storefronts-high-rents-2026.md) - `source.report.empty-storefronts-high-rents.2026`
 - [Jamie Burkart public resume, maintained 2026](../sources/jamie-resume-2026-06-11.md) - `source.resume.jamie-burkart.2026-06-11`
 - [Jimmy's Corner rally: Small Business Rent Stabilization statements](../testimony/commercial-rent-public-support/2026-04-10-jimmys-corner-rally-statements.md) - `source.statement.commercial-rent.jimmys-corner-rally.2026-04-10`
 - [State sponsors and advocates introduce the Small Business Survival Act](../testimony/commercial-rent-public-support/2026-02-17-state-introduction-statements.md) - `source.statement.commercial-rent.state-introduction.2026-02-17`

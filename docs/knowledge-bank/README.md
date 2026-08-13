@@ -145,6 +145,12 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Commercial Rent Stabilization public support](indexes/commercial-rent-public-support.md):
   the active state bills, complete bounded public-event remarks, official state
   statement populations, and time-aware speaker roles.
+- [August 2026 Commercial Rent Stabilization source return](research-runs/commercial-rent-advocacy-source-return-2026-08-12.md):
+  Jamie's final-report review, [delivered public advocacy](events/commercial-rent-empty-storefronts-report-launch-2026-07-29.md),
+  legislative-staff coordination, bounded press findings, a
+  [live campaign-post and collaborator-state record](sources/action-lab-commercial-rent-social-post-2026-08-11.md), the
+  [ecosystem update map](indexes/commercial-rent-ecosystem-update-map-2026-08-12.md),
+  and the [adversarial hill climb](evaluations/commercial-rent-advocacy-hill-climb-2026-08-12.md).
 - [Professional record and reception](indexes/professional-record-and-reception.md):
   institutional facts, documented encounters, historical evaluation, held
   photographs, and the boundaries between relationship, recommendation, and

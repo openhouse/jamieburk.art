@@ -1,153 +1,182 @@
+import Image from "next/image";
 import Link from "next/link";
-import type { Route } from "next";
-import { CapabilityGrid } from "@/components/CapabilityGrid";
-import { ContactCTA } from "@/components/ContactCTA";
 import { Hero } from "@/components/Hero";
-import { ProofStrip } from "@/components/ProofStrip";
-import { WorkCard } from "@/components/WorkCard";
-import { featuredWork } from "@/data/work";
+import { portfolioPhotos } from "@/data/photography";
+import { site } from "@/data/site";
 
-const transformations = [
-  ["Emerging stakeholder context", "shared decision records"],
-  ["Public data awaiting translation", "civic guidance and source maps"],
-  ["Long-running operations", "maintainable e-commerce workflows"],
-  ["Recurring community gatherings", "repeatable participation infrastructure"]
+const productMoves = [
+  {
+    title: "Discover",
+    text: "Frame the real problem with users, partners, operators, and the people carrying the constraints.",
+    proof: "Participatory research, public meetings, source maps, field observation"
+  },
+  {
+    title: "Deliver",
+    text: "Turn complexity into a bounded release: priorities, requirements, workflows, implementation, and a clear launch path.",
+    proof: "Working products, civic interfaces, campaign tools, operating systems"
+  },
+  {
+    title: "Sustain",
+    text: "Build adoption, measurement, documentation, and ownership into the product so it survives the handoff.",
+    proof: "Onboarding, communications, instrumentation, maintenance, durable memory"
+  }
 ];
 
-const startHereLinks = [
+const supportingPhotos = [
+  portfolioPhotos.collectiveSynthesis,
+  portfolioPhotos.civicInterface,
+  portfolioPhotos.publicInformationMaterials,
+  portfolioPhotos.maintenanceInPractice,
+  portfolioPhotos.bicycleCanoeSystem,
+  portfolioPhotos.eastRiver
+];
+
+const selectedCases = [
   {
-    href: "/work/technical-operations",
-    label: "Technical Operations & Implementation",
-    note: "The fastest role-fit proof surface for public-sector technical operations, product operations, implementation, and delivery coordination."
+    href: "/work/wowlist",
+    title: "WOW List",
+    role: "Co-builder and product steward with Richard Caceres",
+    summary:
+      "A working multi-user community-calendar platform shaped through participatory discovery, organizer support, communications, instrumentation, and long-term stewardship.",
+    proof: "End-to-end product practice",
+    tone: "blue"
   },
   {
     href: "/work/harry-j-epstein",
-    label: "Harry J. Epstein Company",
-    note: "Legacy e-commerce, analytics, content, marketing, and operations modernization."
+    title: "Harry J. Epstein Company",
+    role: "Technical Project Manager and Web Systems Lead",
+    summary:
+      "Long-running e-commerce, content, analytics, marketing, and operational modernization for an 80+ year-old business.",
+    proof: "Implementation and operations",
+    tone: "green"
   },
   {
     href: "/work/fair-rent-nyc",
-    label: "FairRentNYC / Commercial Rent Stabilization",
-    note: "Campaign memory, source maps, public-data framing, and coalition operations."
-  },
-  {
-    href: "/work/callnyc",
-    label: "CallNYC.org",
-    note: "Civic open data translated into resident-facing guidance."
-  },
-  {
-    href: "/resume",
-    label: "Resume",
-    note: "PDF for applications and hiring workflows."
+    title: "NYC Artist Coalition / Fair Rent NYC",
+    role: "Co-founder, civic systems, coalition operations, policy communications",
+    summary:
+      "Public-facing tools, source maps, campaign memory, participation systems, and policy communications built across a collective advocacy effort.",
+    proof: "Public-interest delivery",
+    tone: "ochre"
   }
-];
+] as const;
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <section className="jb-frame py-16">
-        <div className="grid gap-10 lg:grid-cols-[0.36fr_0.64fr]">
-          <div className="jb-reading">
-            <p className="jb-section-label">Start here</p>
-            <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
-              Quick path through the portfolio
-            </h2>
-            <p className="mt-4 leading-8 text-jb-ink/76">
-              New to my work? These pages give the clearest route through the
-              site for hiring managers, referrers, civic-tech peers, and
-              collaborators.
+
+      <section className="jb-product-proof" id="product-proof">
+        <div className="jb-frame">
+          <div className="jb-product-proof-heading">
+            <h2>A product leader for the difficult middle.</h2>
+            <p>
+              My strongest work happens between a public need and a durable
+              service—where research, delivery, policy, operations, and trust
+              have to become one coherent product practice.
             </p>
           </div>
-          <div>
-            {startHereLinks.map((item) => (
+          <ol className="jb-product-moves">
+            {productMoves.map((move) => (
+              <li key={move.title}>
+                <h3>{move.title}</h3>
+                <p>{move.text}</p>
+                <span>{move.proof}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className="jb-product-casefile">
+        <div className="jb-frame">
+          <div className="jb-product-casefile-intro">
+            <h2>Three cases make the argument.</h2>
+            <p>
+              Product, implementation, and civic delivery are not separate
+              stories here. They are the same recurring capability under
+              different conditions.
+            </p>
+          </div>
+          <div className="jb-product-case-list">
+            {selectedCases.map((item, index) => (
               <Link
-                className="jb-index-link group hover:text-jb-blue sm:grid-cols-[0.42fr_0.58fr] sm:items-baseline"
-                href={item.href as Route}
+                className={`jb-product-case jb-product-case-${item.tone}`}
+                href={item.href}
                 key={item.href}
               >
-                <span className="text-lg font-semibold text-jb-blue group-hover:text-jb-green">
-                  {item.label}
+                <span className="jb-product-case-index">
+                  {String(index + 1).padStart(2, "0")}
                 </span>
-                <span className="block text-sm leading-6 text-jb-ink/70">
-                  {item.note}
+                <div>
+                  <h3>{item.title}</h3>
+                  <p className="jb-product-case-role">{item.role}</p>
+                  <p className="jb-product-case-summary">{item.summary}</p>
+                </div>
+                <span className="jb-product-case-proof">{item.proof}</span>
+                <span className="jb-product-case-arrow" aria-hidden="true">
+                  →
                 </span>
               </Link>
             ))}
           </div>
         </div>
       </section>
-      <ProofStrip />
-      <CapabilityGrid />
-      <section className="jb-frame py-16">
-        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div className="jb-reading">
-            <p className="jb-section-label">Selected systems</p>
-            <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
-              Proof across operating, civic, and community systems
-            </h2>
-            <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: emerging, high-context
-              work becoming usable systems, public-facing tools,
-              documentation, decision trails, and durable handoffs.
+
+      <section className="jb-product-field" aria-labelledby="field-record-title">
+        <div className="jb-frame">
+          <div className="jb-product-field-intro">
+            <h2 id="field-record-title">The work leaves a field record.</h2>
+            <p>
+              These seven photographs—the terminal six from a recursive career
+              edit plus the retained East River canary—show product practice in
+              material form: synthesis, interface, communication, maintenance,
+              invention, direct exchange, and public context.
             </p>
           </div>
-          <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
-            View all work
-          </Link>
-        </div>
-        <div className="mt-8">
-          {featuredWork.map((item) => (
-            <WorkCard item={item} key={item.slug} />
-          ))}
-        </div>
-      </section>
-      <section className="border-y border-jb-ink/15 bg-jb-warm py-16">
-        <div className="jb-frame grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="jb-reading">
-            <p className="jb-section-label">Operating motif</p>
-            <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
-              Structure grows from the material
-            </h2>
-            <p className="mt-4 leading-8 text-jb-ink/76">
-              The projects differ, but the move is consistent: clarify what is
-              known, protect what should stay private, and leave behind material
-              people can act on.
-            </p>
-          </div>
-          <ol className="border-t border-jb-ink/20">
-            {transformations.map(([from, to], index) => (
-              <li
-                className="grid gap-2 border-b border-jb-ink/20 py-5 sm:grid-cols-[3rem_1fr_auto_1fr] sm:items-baseline"
-                key={from}
-              >
-                <span className="font-label text-sm text-jb-blue">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <p className="font-semibold text-jb-ink">{from}</p>
-                <span className="hidden text-jb-blue sm:block">becomes</span>
-                <p className="font-semibold text-jb-green">{to}</p>
-              </li>
+          <div className="jb-product-filmstrip">
+            {supportingPhotos.map((photo) => (
+              <figure key={photo.id}>
+                <div className="jb-product-filmstrip-frame">
+                  <Image
+                    alt={photo.alt}
+                    fill
+                    sizes="(max-width: 639px) 82vw, (max-width: 1023px) 42vw, 26vw"
+                    src={photo.src}
+                  />
+                </div>
+                <figcaption>{photo.caption}</figcaption>
+              </figure>
             ))}
-          </ol>
+          </div>
         </div>
       </section>
-      <section className="jb-frame grid gap-8 py-16 lg:grid-cols-[0.8fr_1.2fr]">
-        <div>
-          <p className="jb-section-label">How I work</p>
-          <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
-            Listen. Map. Build. Document. Transfer.
-          </h2>
-        </div>
-        <div className="space-y-7">
-          <p className="text-xl leading-9 text-jb-ink/78">
-            I usually enter when the work is important but loosely defined. I
-            listen across stakeholders, map what is known and unknown, create
-            the workflows or documentation the team needs, support launch or
-            adoption, and leave behind materials that make the work easier to
-            maintain.
-          </p>
-          <ContactCTA />
+
+      <section className="jb-product-close">
+        <div className="jb-frame jb-product-close-grid">
+          <div>
+            <h2>I can help a public-facing team move.</h2>
+            <p className="jb-product-close-copy">
+              Bring me the consequential product that still has too many
+              languages, owners, constraints, or unknowns. I will help make the
+              next decision clear and the resulting system usable.
+            </p>
+          </div>
+          <div className="jb-product-contact">
+            <p className="jb-product-contact-label">Next conversation</p>
+            <p className="jb-product-contact-copy">
+              For Senior Product Manager roles in civic technology,
+              public-interest delivery, or complex implementation.
+            </p>
+            <div className="jb-product-actions">
+              <a className="jb-product-primary" href={site.emailHref}>
+                Email Jamie
+              </a>
+              <Link className="jb-product-secondary" href="/resume">
+                View resume
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </>

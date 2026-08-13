@@ -71,6 +71,44 @@ test("East River canary passes every hard gate and criterion", async () => {
   assert.deepEqual(result.failedCriteria, []);
 });
 
+test("employment-edition manifest drift fails the exact placement gate", async () => {
+  const model = await baselineModel();
+  model.portfolioPhotos.civicFieldExchange.derivativeId =
+    "derivative.photo.wrong.home.v1";
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.employment_manifest_wiki_alignment, false);
+});
+
+test("employment-edition derivative record drift fails closed", async () => {
+  const model = await baselineModel();
+  model.recordsById[
+    "asset-set.photo.employment-edition-terminal-six.2026-08"
+  ].public_derivatives[0].checksum = "0".repeat(64);
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(
+    result.checks.employment_derivatives_integrity_and_metadata_stripping,
+    false
+  );
+});
+
+test("employment-edition production approval remains a human gate", async () => {
+  const model = await baselineModel();
+  model.recordsById[
+    "source.permission.employment-edition-source-album.2026-08"
+  ].permission_capsule.production = "approved";
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.employment_permission_scope_and_release_gate, false);
+});
+
+test("employment-edition selection loses validity without Jamie as authority", async () => {
+  const model = await baselineModel();
+  model.recordsById[
+    "decision.photo.home-product-practice.2026-08"
+  ].decision_actors = ["AI-assisted selector"];
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.employment_selection_remains_human, false);
+});
+
 test("private source locators fail closed", async () => {
   const model = await baselineModel();
   model.sourceTexts["docs/knowledge-bank/fixture.md"] = "/Users/example/Photos Library.photoslibrary";

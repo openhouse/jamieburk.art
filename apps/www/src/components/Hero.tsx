@@ -3,58 +3,58 @@ import Link from "next/link";
 import { portfolioPhotos } from "@/data/photography";
 
 export function Hero() {
-  const photo = portfolioPhotos.eastRiver;
+  const photo = portfolioPhotos.civicFieldExchange;
 
   return (
-    <section className="jb-hero" aria-labelledby="home-title">
-      <div className="jb-hero-image">
+    <section className="jb-product-hero" aria-labelledby="home-title">
+      <div className="jb-product-hero-photo">
         <Image
           alt={photo.alt}
-          className="object-cover object-[73%_center] sm:object-center"
+          className="object-cover object-[58%_center]"
           fill
           priority
-          sizes="100vw"
+          sizes="(max-width: 899px) 100vw, 58vw"
           src={photo.src}
         />
       </div>
-      <div className="jb-frame jb-hero-content">
-        <div>
-          <p className="jb-eyebrow text-white/82">
-            Technical Project Manager - Product Operations & Implementation
-          </p>
-          <h1
-            className="mt-5 font-display text-6xl font-medium leading-[0.96] text-white sm:text-7xl"
-            id="home-title"
-          >
-            Jamie Burkart
-          </h1>
-          <p className="mt-6 max-w-2xl text-2xl font-semibold leading-snug text-white sm:text-3xl">
-            I help emerging work become usable systems.
-          </p>
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-white/84 sm:text-xl">
-            I work with public-facing teams to clarify requirements, build
-            workflows and tools, carry context through implementation, and
-            leave behind documentation people can use.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              className="inline-flex min-h-11 items-center bg-white px-5 py-3 font-semibold text-jb-ink hover:bg-jb-sky"
-              href="/work"
-            >
-              View selected work
-            </Link>
-            <Link
-              className="inline-flex min-h-11 items-center border border-white/70 px-5 py-3 font-semibold text-white hover:bg-white hover:text-jb-ink"
-              href="/resume"
-            >
-              View resume
-            </Link>
-          </div>
+      <div className="jb-product-hero-copy">
+        <h1 id="home-title">
+          Jamie Burkart
+          <span>turns public problems into products people can use.</span>
+        </h1>
+        <p className="jb-product-role">
+          Senior Product Manager · Civic technology · Public-interest delivery
+        </p>
+        <p className="jb-product-deck">
+          I lead ambiguous, stakeholder-heavy work from discovery through
+          implementation, launch, adoption, and durable handoff.
+        </p>
+        <div className="jb-product-actions">
+          <Link className="jb-product-primary" href="#product-proof">
+            See the product proof
+          </Link>
+          <Link className="jb-product-secondary" href="/resume">
+            Resume
+          </Link>
         </div>
+        <dl className="jb-product-signal" aria-label="Product practice signal">
+          <div>
+            <dt>Product</dt>
+            <dd>discovery through stewardship</dd>
+          </div>
+          <div>
+            <dt>Delivery</dt>
+            <dd>tools, launches, adoption</dd>
+          </div>
+          <div>
+            <dt>Context</dt>
+            <dd>people, policy, systems, delivery</dd>
+          </div>
+        </dl>
       </div>
-      <p className="jb-hero-caption">
-        <span className="block">{photo.caption}</span>
-        <span className="mt-1 block text-white/92">{photo.credit}</span>
+      <p className="jb-product-hero-caption">
+        <span>{photo.caption}</span>
+        <span>{photo.credit}</span>
       </p>
     </section>
   );
