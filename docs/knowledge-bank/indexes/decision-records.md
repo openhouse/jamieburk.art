@@ -37,6 +37,9 @@ relations:
   - type: related_to
     target: decision.photo.pre-launch.rights-narrowing.2026-07-28
     href: ../decisions/photography/pre-launch-rights-narrowing-2026-07-28.md
+  - type: related_to
+    target: decision.photo.launch-2026.field-system-pairs
+    href: ../decisions/photography/launch-2026-field-system-pairs.md
 ---
 
 # Decision records
@@ -56,6 +59,7 @@ the archive does not preserve.
 - [Layout C homepage: East River photographic occurrence](../decisions/photography/layout-c-home-east-river-v1.md)
 - [Layout C resume: protected photographic absence](../decisions/photography/layout-c-resume-no-photo-v1.md)
 - [Pre-launch photography: narrow the public field to fully bound occurrences](../decisions/photography/pre-launch-rights-narrowing-2026-07-28.md)
+- [Launch 2026 photography: preserve the hero and select two field-and-system pairs](../decisions/photography/launch-2026-field-system-pairs.md)
 
 ## Contract
 

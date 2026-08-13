@@ -34,3 +34,37 @@ test("a decorative gradient fails the material-system contract", () => {
   assert.equal(result.passed, false);
   assert(result.failures.some(({ criterion }) => criterion === "human-index-material-system"));
 });
+
+test("replacing the existing hero with an advocacy photograph fails closed", () => {
+  const path = "apps/www/src/components/Hero.tsx";
+  const source = readFileSync(path, "utf8").replace(
+    "portfolioPhotos.eastRiver",
+    "portfolioPhotos.saveNYCSpacesTownHall"
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "editorial-not-decorative"));
+});
+
+test("removing album publication approval fails closed", () => {
+  const path =
+    "docs/knowledge-bank/sources/permissions/jamie-nycac-portfolio-album-clearance-2026-08.md";
+  const source = readFileSync(path, "utf8").replace(
+    "album_scope_publication: approved",
+    "album_scope_publication: open"
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "minimal-authorized-field"));
+});
+
+test("removing the Fair Rent field-and-system pair fails closed", () => {
+  const path = "apps/www/src/app/work/[slug]/page.tsx";
+  const source = readFileSync(path, "utf8").replace(
+    '<FieldSystemEvidence variant="fair-rent" />',
+    ""
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "editorial-not-decorative"));
+});

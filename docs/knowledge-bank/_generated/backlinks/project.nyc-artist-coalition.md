@@ -3,9 +3,11 @@
 
 **Source commit:** `cd8592e7ee46211c0b1c76bdd5909d5ebe6cdc79`
 **Generation time:** 2026-08-13T14:26:22-04:00
-**Source fingerprint:** `5df3eb46a1146a3bd30d17d832626abcd0febabd6f6b6647b12dd9dfe56c90cd`
+**Source fingerprint:** `d801832533b660e4f309fe61ed6b853265c18f17ef84b80f47075de6e119f73b`
 
 - [NYC Artist Coalition application brief](../../applications/nycac-civic-product-operations.md) - `part_of` (frontmatter)
+- [NYC Artist Coalition Office of Nightlife town hall at Market Hotel, 2017](../../assets/photographs/nycac-save-nyc-spaces-town-hall-2017.md) - `related_to` (frontmatter)
+- [Jamie Burkart facilitating at Shoestring Press, 2017](../../assets/photographs/nycac-shoestring-facilitation-2017.md) - `related_to` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `related_to` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [hur5tftl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj.md) - `related_to` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [wp36j4c2]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-wp36j4c2rp.md) - `related_to` (frontmatter)

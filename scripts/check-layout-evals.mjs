@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -46,26 +47,28 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     (match) => match[1]
   );
   const expectedSources = [
-    "/images/field-notes/jamie-east-river.webp"
+    "/images/field-notes/coalition-facilitation-shoestring.webp",
+    "/images/field-notes/jamie-east-river.webp",
+    "/images/field-notes/save-nyc-spaces-town-hall.webp"
   ];
   if (JSON.stringify(sources.sort()) !== JSON.stringify(expectedSources.sort())) {
-    fail("minimal-authorized-field", "The public field must contain exactly the four reviewed derivatives.");
+    fail("minimal-authorized-field", "The public field must contain exactly the three reviewed derivatives.");
   }
 
   for (const field of ["id", "width", "height", "alt", "caption", "credit", "placements", "publicationStatus", "publicUseBoundary"]) {
     const count = [...manifest.matchAll(new RegExp(`\\b${field}:`, "g"))].length;
-    if (count !== 2) {
+    if (count !== 4) {
       fail("manifest-bound-publication", `Manifest field ${field} is missing from one or more photos.`);
     }
   }
-  if ([...manifest.matchAll(/publicationStatus: "jamie-authorized"/g)].length !== 2) {
+  if ([...manifest.matchAll(/publicationStatus: "jamie-authorized"/g)].length !== 4) {
     fail("manifest-bound-publication", "Every photo must retain the Jamie-authorized publication status.");
   }
 
   const publicImageRoot = path.join(root, "apps/www/public/images/field-notes");
   const publicImages = walkFiles(publicImageRoot).sort();
-  if (publicImages.length !== 1 || publicImages.some((file) => !file.endsWith(".webp"))) {
-    fail("minimal-authorized-field", "The field-notes directory must contain only the fully bound East River WebP derivative.");
+  if (publicImages.length !== 3 || publicImages.some((file) => !file.endsWith(".webp"))) {
+    fail("minimal-authorized-field", "The field-notes directory must contain only the three fully bound WebP derivatives.");
   }
   for (const relativeImagePath of publicImages) {
     const bytes = readFileSync(path.join(publicImageRoot, relativeImagePath));
@@ -94,10 +97,55 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   }
 
   const hero = readText("apps/www/src/components/Hero.tsx");
+  const fieldSystemEvidence = readText("apps/www/src/components/FieldSystemEvidence.tsx");
+  const home = readText("apps/www/src/app/page.tsx");
+  const fairRent = readText("apps/www/src/app/work/[slug]/page.tsx");
+  const albumPermission = readText(
+    "docs/knowledge-bank/sources/permissions/jamie-nycac-portfolio-album-clearance-2026-08.md"
+  );
+  const letNYCDanceCapture = readText(
+    "docs/knowledge-bank/sources/photo-metadata/let-nyc-dance-selected-frame-2026-08.md"
+  );
+  const letNYCDanceScreenshot = readFileSync(
+    path.join(root, "apps/www/public/artifacts/fair-rent-nyc/let-nyc-dance-site.png")
+  );
   const about = readText("apps/www/src/app/about/page.tsx");
   const colophon = readText("apps/www/src/app/colophon/page.tsx");
   if (!hero.includes("portfolioPhotos.eastRiver") || !hero.includes("fill") || /rounded|shadow/.test(hero)) {
     fail("editorial-not-decorative", "The home photograph must remain full-bleed, unframed, and manifest-bound.");
+  }
+  if (
+    !fieldSystemEvidence.includes("portfolioPhotos.saveNYCSpacesTownHall") ||
+    !fieldSystemEvidence.includes("portfolioPhotos.coalitionFacilitationShoestring") ||
+    !fieldSystemEvidence.includes("/artifacts/fair-rent-nyc/public-site.png") ||
+    !fieldSystemEvidence.includes("/artifacts/fair-rent-nyc/let-nyc-dance-site.png") ||
+    !fieldSystemEvidence.includes('from "next/image"')
+  ) {
+    fail("editorial-not-decorative", "Both field-and-system pairs must remain explicit, manifest-bound, and responsive.");
+  }
+  if (
+    home.indexOf("<CapabilityGrid />") > home.indexOf('<FieldSystemEvidence variant="home" />') ||
+    home.indexOf('<FieldSystemEvidence variant="home" />') > home.indexOf("Selected systems") ||
+    !fairRent.includes('<FieldSystemEvidence variant="fair-rent" />')
+  ) {
+    fail("editorial-not-decorative", "The two field-and-system pairs moved outside their reviewed editorial sequence.");
+  }
+  if (
+    !albumPermission.includes("album_scope_publication: approved") ||
+    !albumPermission.includes("required_credit: Photo courtesy NYC Artist Coalition.") ||
+    !albumPermission.includes("production: open") ||
+    !albumPermission.includes("indexing: open") ||
+    !albumPermission.includes("private_evidence: held-outside-git")
+  ) {
+    fail("minimal-authorized-field", "The destination-specific album clearance or its open human gates are incomplete.");
+  }
+  const selectedScreenshotSha = createHash("sha256").update(letNYCDanceScreenshot).digest("hex");
+  if (
+    selectedScreenshotSha !== "c5122b3d6d49cb34548d5b7a4b3e6f139eaa9ba38b86c3602335f87a4f6305f5" ||
+    !letNYCDanceCapture.includes("selected_frame: 8") ||
+    !letNYCDanceCapture.includes("once per second for ten seconds")
+  ) {
+    fail("manifest-bound-publication", "The selected Let NYC Dance frame is not the exact documented ten-second filmstrip choice.");
   }
   if (/FieldPhoto|portfolioPhotos|\/images\/field-notes\//.test(about) ||
       /FieldPhoto|portfolioPhotos|\/images\/field-notes\//.test(colophon)) {
@@ -122,7 +170,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     fail("human-index-material-system", "A prohibited gradient, orb, or bokeh treatment appears in global CSS.");
   }
   const fieldPhoto = readText("apps/www/src/components/FieldPhoto.tsx");
-  if (!fieldPhoto.includes('from "next/image"') || !fieldPhoto.includes("sizes={sizes}") || !fieldPhoto.includes("photo.alt")) {
+  if (!fieldPhoto.includes('from "next/image"') || !fieldPhoto.includes("sizes={sizes}") || !fieldPhoto.includes("photo.alt") || !fieldSystemEvidence.includes("sizes=")) {
     fail("responsive-image-contract", "Field photos must retain Next Image, responsive sizes, and manifest alt text.");
   }
   if (!globalCss.includes("100svh")) {

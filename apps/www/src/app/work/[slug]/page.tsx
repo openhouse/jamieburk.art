@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
+import { FieldSystemEvidence } from "@/components/FieldSystemEvidence";
 import { workItems, type WorkSlug } from "@/data/work";
 import { createMetadata } from "@/lib/metadata";
 import { getWorkBySlug, workContentBySlug } from "@/lib/work";
@@ -40,6 +41,7 @@ export default async function WorkDetailPage({ params }: PageProps) {
   return (
     <CaseStudyLayout item={item}>
       <Content />
+      {slug === "fair-rent-nyc" ? <FieldSystemEvidence variant="fair-rent" /> : null}
     </CaseStudyLayout>
   );
 }

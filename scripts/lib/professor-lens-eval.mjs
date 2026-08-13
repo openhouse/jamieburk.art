@@ -43,15 +43,19 @@ export const professorCandidateRelativePaths = [
 ].sort();
 
 const finalScorecardRelativePaths = [
-  "docs/qa/evals-H/margaret-morse-final-2026-08-12-a.json",
-  "docs/qa/evals-H/margaret-morse-final-2026-08-12-b.json",
-  "docs/qa/evals-H/margaret-morse-final-2026-08-12-c.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-12-a.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-12-b.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-12-c.json"
+  "docs/qa/evals-H/margaret-morse-final-2026-08-13-a.json",
+  "docs/qa/evals-H/margaret-morse-final-2026-08-13-b.json",
+  "docs/qa/evals-H/margaret-morse-final-2026-08-13-c.json",
+  "docs/qa/evals-H/warren-sack-final-2026-08-13-b.json",
+  "docs/qa/evals-H/warren-sack-final-2026-08-13-c.json",
+  "docs/qa/evals-H/warren-sack-final-2026-08-13-d.json"
 ];
 
-const approvedCandidateSha256 = "5a52f34cbe2a40944f75a25d64f3339d4fabe78ad0d189d5468b6fdf5ea7dc42";
+const dissentScorecardRelativePaths = [
+  "docs/qa/evals-H/warren-sack-dissent-2026-08-13-a.json"
+];
+
+const approvedCandidateSha256 = "51084e34d4f4db259126df29062b66ce157b6c43c15c4db8f4e3f994946c441f";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },
@@ -93,6 +97,9 @@ export function evaluateProfessorLenses({
   sundayDinnerContentText = readFileSync(sundayDinnerContentPath, "utf8"),
   candidateFiles = loadCandidateFiles(),
   finalScorecards = finalScorecardRelativePaths.map((relativePath) =>
+    JSON.parse(readFileSync(path.join(repoRoot, relativePath), "utf8"))
+  ),
+  dissentScorecards = dissentScorecardRelativePaths.map((relativePath) =>
     JSON.parse(readFileSync(path.join(repoRoot, relativePath), "utf8"))
   )
 } = {}) {
@@ -256,6 +263,16 @@ export function evaluateProfessorLenses({
       `${finalScorecards.filter((scorecard) => scorecard.phase === "holdout" &&
         scorecard.score === 4 && scorecard.pass === true &&
         scorecard.candidateSha256 === candidateSha256).length}/6 final scorecards pass at 4 and match candidate ${candidateSha256}.`
+    ),
+    criterion(
+      "dissent-preserved",
+      "The hill climb preserves the exact-candidate dissent that identified the stale photo receipt and prompted fresh mobile verification.",
+      dissentScorecards.length === 1 &&
+        dissentScorecards.every((scorecard) => scorecard.phase === "holdout" &&
+          scorecard.lensId === "PR-016" &&
+          scorecard.score === 3 && scorecard.pass === false &&
+          scorecard.candidateSha256 === candidateSha256),
+      `${dissentScorecards.length}/1 exact-candidate dissent scorecard preserved.`
     )
   ];
 

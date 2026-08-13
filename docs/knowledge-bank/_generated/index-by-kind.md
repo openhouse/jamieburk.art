@@ -3,7 +3,7 @@
 
 **Source commit:** `cd8592e7ee46211c0b1c76bdd5909d5ebe6cdc79`
 **Generation time:** 2026-08-13T14:26:22-04:00
-**Source fingerprint:** `5df3eb46a1146a3bd30d17d832626abcd0febabd6f6b6647b12dd9dfe56c90cd`
+**Source fingerprint:** `d801832533b660e4f309fe61ed6b853265c18f17ef84b80f47075de6e119f73b`
 
 ## application
 
@@ -21,6 +21,8 @@
 - [Jamie and a collaborator inside KC Town Hall](../assets/photographs/kc-town-hall-stewardship-interior.md) - `asset.photo.kc-town-hall.stewardship-interior.001`
 - [Jamie with a civic field kit at New York City Council](../assets/photographs/nyc-council-field-kit-2026.md) - `asset.photo.nyc-council.field-kit.2026.001`
 - [DCLA listening room, January 2017](../assets/photographs/nycac-dcla-listening-room-2017.md) - `asset.photo.nycac-dcla-listening-room.2017.001`
+- [NYC Artist Coalition Office of Nightlife town hall at Market Hotel, 2017](../assets/photographs/nycac-save-nyc-spaces-town-hall-2017.md) - `asset.photo.nycac.save-nyc-spaces-town-hall.2017.001`
+- [Jamie Burkart facilitating at Shoestring Press, 2017](../assets/photographs/nycac-shoestring-facilitation-2017.md) - `asset.photo.nycac.shoestring-facilitation.2017.001`
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb`
 - [FairRentNYC: 2019 03 18 small business rally 1 [hur5tftl]](../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj.md) - `asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj`
 - [FairRentNYC: 2019 03 18 small business rally 1 [wp36j4c2]](../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-wp36j4c2rp.md) - `asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-wp36j4c2rp`
@@ -227,12 +229,14 @@
 - [KC Town Hall listening within fieldwork](../decisions/kc-town-hall-listening-fieldwork.md) - `decision.kc-town-hall.listening-fieldwork`
 - [Knowledge Wiki depth with selective public projection](../decisions/knowledge-wiki-selective-projection.md) - `decision.knowledge-wiki.selective-projection`
 - [Open House communal governance inside negotiated boundaries](../decisions/open-house-communal-governance.md) - `decision.open-house.communal-governance`
+- [Select two field-and-system pairs for the launch-2026 portfolio candidate](../decisions/photography/launch-2026-field-system-pairs.md) - `decision.photo.launch-2026.field-system-pairs`
 - [Select the East River photograph for the Layout C homepage](../decisions/photography/layout-c-home-east-river-v1.md) - `decision.photo.layout-c.home-east-river.v1`
 - [Keep the Layout C resume route photograph-free](../decisions/photography/layout-c-resume-no-photo-v1.md) - `decision.photo.layout-c.resume-no-photo.v1`
 - [Narrow the pre-launch public photo field to fully bound occurrences](../decisions/photography/pre-launch-rights-narrowing-2026-07-28.md) - `decision.photo.pre-launch.rights-narrowing.2026-07-28`
 
 ## evaluation
 
+- [Launch 2026 field-and-system pair curatorial proposal](../evaluations/curatorial/launch-2026-field-system-pairs.md) - `evaluation.curatorial.launch-2026.field-system-pairs`
 - [Layout C homepage East River curatorial proposal](../evaluations/curatorial/layout-c-home-east-river-v1.md) - `evaluation.curatorial.layout-c.home-east-river.v1`
 - [Employment context coverage baseline - July 18, 2026](../evaluations/employment-context-coverage-2026-07-18.md) - `evaluation.employment-context.coverage.2026-07-18`
 - [Jamie public-record integration evaluation](../evaluations/jamie-public-record-integration-2026-08-03.md) - `evaluation.jamie-public-record-integration.2026-08-03`
@@ -367,6 +371,8 @@
 - [Role-fit and referral map](../projections/role-fit-and-referral-map.md) - `portfolio.role-fit-referral-map`
 - [CallNYC portfolio projection](../projections/work-callnyc.md) - `portfolio.work.callnyc`
 - [Technical Operations portfolio projection](../projections/work-technical-operations.md) - `portfolio.work.technical-operations`
+- [Launch 2026 Fair Rent case-study Shoestring field-and-system occurrence](../projections/photography/launch-2026-fair-rent-shoestring-facilitation.md) - `projection.photo.launch-2026.fair-rent.shoestring-facilitation`
+- [Launch 2026 homepage Save NYC Spaces field-and-system occurrence](../projections/photography/launch-2026-home-save-nyc-spaces-town-hall.md) - `projection.photo.launch-2026.home.save-nyc-spaces-town-hall`
 - [Layout C homepage East River occurrence](../projections/photography/layout-c-home-east-river.md) - `projection.photo.layout-c.home.east-river`
 
 ## research-inquiry
@@ -431,6 +437,7 @@
 - [Appointment of Diya Vij as Commissioner of Cultural Affairs](../sources/dcla-diya-vij-appointment-2026.md) - `source.nyc.diya-vij-appointment.2026`
 - [NYC launches the Public Interest Technology Crew - July 2026](../sources/nyc-pit-crew-launch-2026.md) - `source.nyc.pit-crew-launch.2026-07-13`
 - [NYC Artist Coalition DCLA formation source return, 2026](../sources/archives/nycac-dcla-formation-source-return-2026-07.md) - `source.nycac.dcla-formation-source-return.2026-07`
+- [July Meeting, Shoe String Press BK](../sources/photo-metadata/nycac-shoestring-flickr-2017.md) - `source.nycac.flickr.shoestring-facilitation.2017`
 - [NYC nightlife forum corrected working transcript, 2026](../sources/nycac-nightlife-forum-transcript-2026.md) - `source.nycac.nightlife-forum-transcript.2026`
 - [NYC Artist Coalition project-site photograph census](../sources/archives/nycac-project-site-photograph-census-2026-07.md) - `source.nycac.project-site-photograph-census.2026-07-28`
 - [Commercial Rent Stabilization collaboration running minutes, 2026](../sources/nycac-running-minutes-2026.md) - `source.nycac.running-minutes.2026`
@@ -449,6 +456,7 @@
 - [Active New York State commercial rent stabilization bills](../sources/commercial-rent-public-support/active-state-bills-2025-2026.md) - `source.nys.commercial-rent.active-bills.2025-2026`
 - [2026 Democratic primary election-night result for Assembly District 56](../sources/commercial-rent-public-support/eon-huntley-2026-primary-result.md) - `source.nysboe.primary.ad56.2026`
 - [Elana Gordon East River portfolio permission summary](../sources/permissions/elana-gordon-east-river-portfolio-2026.md) - `source.permission.elana-gordon.east-river.2026-07`
+- [Jamie Burkart NYC Artist Coalition portfolio-album clearance](../sources/permissions/jamie-nycac-portfolio-album-clearance-2026-08.md) - `source.permission.jamie-nycac-portfolio-album.2026-08`
 - [East River photograph public-safe metadata summary](../sources/photo-metadata/east-river-2022-public-safe.md) - `source.photo-metadata.east-river.2022.public-safe`
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`
 - [Professional record governed photo field](../sources/photo-metadata/professional-record-photo-field-2026-08.md) - `source.professional-record.photo-field.2026-08`
@@ -457,6 +465,7 @@
 - [Protected source-backed memory opportunity — metadata boundary](../sources/protected-source-backed-memory-opportunity.md) - `source.protected.source-backed-memory-opportunity.2026`
 - [Jamie Burkart recollection of bicycle-canoe journeys](../sources/recollections/jamie-canoe-commuting-2026-07.md) - `source.recollection.jamie-canoe-commuting.2026-07`
 - [Jamie Burkart public resume, maintained 2026](../sources/jamie-resume-2026-06-11.md) - `source.resume.jamie-burkart.2026-06-11`
+- [Let NYC Dance loaded-video selected frame, August 2026](../sources/photo-metadata/let-nyc-dance-selected-frame-2026-08.md) - `source.screenshot.let-nyc-dance.selected-frame.2026-08`
 - [Jimmy's Corner rally: Small Business Rent Stabilization statements](../testimony/commercial-rent-public-support/2026-04-10-jimmys-corner-rally-statements.md) - `source.statement.commercial-rent.jimmys-corner-rally.2026-04-10`
 - [State sponsors and advocates introduce the Small Business Survival Act](../testimony/commercial-rent-public-support/2026-02-17-state-introduction-statements.md) - `source.statement.commercial-rent.state-introduction.2026-02-17`
 - [Studio3 AI Made Me Do It event page](../sources/studio3-ai-made-me-do-it-2024.md) - `source.studio3.ai-made-me-do-it.2024`

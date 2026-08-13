@@ -3,7 +3,7 @@
 
 **Source commit:** `cd8592e7ee46211c0b1c76bdd5909d5ebe6cdc79`
 **Generation time:** 2026-08-13T14:26:22-04:00
-**Source fingerprint:** `5df3eb46a1146a3bd30d17d832626abcd0febabd6f6b6647b12dd9dfe56c90cd`
+**Source fingerprint:** `d801832533b660e4f309fe61ed6b853265c18f17ef84b80f47075de6e119f73b`
 
 - [NYC Artist Coalition / Talks Not Raids: save nyc spaces nyc artist coalition [7cao5kfz]](../../assets/photographs/project-sites/nyc-artist-coalition-talks-not-raids-save-nyc-spaces-nyc-artist-coalitio.md) - `related_to` (frontmatter)
 - [Save NYC Spaces / Talks Not Raids: save nyc spaces nyc artist coalition [44iyucy6]](../../assets/photographs/project-sites/save-nyc-spaces-talks-not-raids-save-nyc-spaces-nyc-artist-coalition-44i.md) - `related_to` (frontmatter)

@@ -131,9 +131,13 @@ function loadWikiRecords(repoRoot) {
 function candidateFiles(repoRoot) {
   const fixed = [
     "apps/www/src/app/globals.css",
+    "apps/www/src/components/FieldSystemEvidence.tsx",
     "apps/www/src/components/Hero.tsx",
     "apps/www/src/data/photography.ts",
+    "apps/www/public/artifacts/fair-rent-nyc/let-nyc-dance-site.png",
+    "apps/www/public/images/field-notes/coalition-facilitation-shoestring.webp",
     "apps/www/public/images/field-notes/jamie-east-river.webp",
+    "apps/www/public/images/field-notes/save-nyc-spaces-town-hall.webp",
     "evals/photo-knowledge/canary.json",
     "evals/photo-knowledge/evals.json",
     "evals/photo-knowledge/curatorial/layout-c-home-east-river-v1.json",
@@ -275,7 +279,7 @@ export async function loadPhotoKnowledgeModel(repoRoot = defaultRepoRoot, option
   const scanFiles = candidateFiles(repoRoot).filter((item) => !item.endsWith(canary.candidateReceiptPath));
   const sourceTexts = Object.fromEntries(
     scanFiles
-      .filter((item) => !item.endsWith(".webp"))
+      .filter((item) => !/\.(?:png|webp)$/i.test(item))
       .map((item) => [item, readFileSync(path.join(repoRoot, item), "utf8")])
   );
   const privateBinding = loadPrivateBinding(
@@ -411,9 +415,13 @@ export function evaluatePhotoKnowledgeModel(model) {
     east?.creditAssertionIds?.every((id) => statementIds.has(id)) &&
     publicPhotoManifest?.filter((item) => item.id !== "east-river").every(
       (item) =>
-        item.wikiId === null &&
-        item.knowledgeStatus === "phase-2-reconciliation-pending" &&
-        item.placementIds.length === 0 &&
+        typeof item.wikiId === "string" &&
+        item.wikiId.length > 0 &&
+        item.knowledgeStatus === "bound" &&
+        item.placementIds.length === 1 &&
+        item.publicationStatus === "jamie-authorized" &&
+        item.releaseState?.publicGit === "approved" &&
+        item.releaseState?.staging === "approved" &&
         item.releaseState?.production === "open" &&
         item.releaseState?.indexing === "open"
     );
@@ -544,7 +552,7 @@ export function evaluatePhotoKnowledgeModel(model) {
       Boolean(inquiry),
     selective_projection:
       checks.protected_absence_not_auto_filled &&
-      publicPhotoManifest?.filter((item) => item.knowledgeStatus === "bound").length === 1 &&
+      publicPhotoManifest?.filter((item) => item.knowledgeStatus === "bound").length === 3 &&
       publicPhotoManifest
         ?.filter((item) => item.knowledgeStatus === "phase-2-reconciliation-pending")
         .every(

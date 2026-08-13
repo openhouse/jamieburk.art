@@ -139,6 +139,17 @@ test("guard rejects a scorecard bound to another public candidate", () => {
   assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts")?.pass, false);
 });
 
+test("guard rejects erasing the exact-candidate hill-climb dissent", () => {
+  const result = evaluateProfessorLenses({
+    suite,
+    aboutText,
+    sourceNoteText,
+    dissentScorecards: []
+  });
+  assert.equal(result.pass, false);
+  assert.equal(result.criteria.find((item) => item.id === "dissent-preserved")?.pass, false);
+});
+
 test("guard binds visual-system and photo changes to a new candidate", () => {
   const candidateFiles = Object.fromEntries(professorCandidateRelativePaths.map((relativePath) => [
     relativePath,

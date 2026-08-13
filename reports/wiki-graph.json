@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-13T14:26:22-04:00",
   "sourceCommit": "cd8592e7ee46211c0b1c76bdd5909d5ebe6cdc79",
-  "sourceFingerprint": "5df3eb46a1146a3bd30d17d832626abcd0febabd6f6b6647b12dd9dfe56c90cd",
+  "sourceFingerprint": "d801832533b660e4f309fe61ed6b853265c18f17ef84b80f47075de6e119f73b",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -147,6 +147,32 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-09-26"
+    },
+    {
+      "id": "asset.photo.nycac.save-nyc-spaces-town-hall.2017.001",
+      "path": "docs/knowledge-bank/assets/photographs/nycac-save-nyc-spaces-town-hall-2017.md",
+      "title": "NYC Artist Coalition Office of Nightlife town hall at Market Hotel, 2017",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe record for the selected photograph of speakers and organizers holding a Save NYC Spaces banner before the crowd at the October 2017 Office of Nightlife town hall at Market Hotel.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2027-02-13"
+    },
+    {
+      "id": "asset.photo.nycac.shoestring-facilitation.2017.001",
+      "path": "docs/knowledge-bank/assets/photographs/nycac-shoestring-facilitation-2017.md",
+      "title": "Jamie Burkart facilitating at Shoestring Press, 2017",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe record for the selected photograph of Jamie Burkart performing visual facilitation during a July 2017 NYC Artist Coalition meeting at Shoestring Press.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2027-02-13"
     },
     {
       "id": "asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb",
@@ -2671,6 +2697,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "decision.photo.launch-2026.field-system-pairs",
+      "path": "docs/knowledge-bank/decisions/photography/launch-2026-field-system-pairs.md",
+      "title": "Select two field-and-system pairs for the launch-2026 portfolio candidate",
+      "kind": "decision",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Bounded selection decision preserving the East River hero while adding two exact, governed field-and-system pairs to the homepage and Fair Rent case study.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2027-02-13"
+    },
+    {
       "id": "decision.photo.layout-c.home-east-river.v1",
       "path": "docs/knowledge-bank/decisions/photography/layout-c-home-east-river-v1.md",
       "title": "Select the East River photograph for the Layout C homepage",
@@ -2721,6 +2760,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "evaluation.curatorial.launch-2026.field-system-pairs",
+      "path": "docs/knowledge-bank/evaluations/curatorial/launch-2026-field-system-pairs.md",
+      "title": "Launch 2026 field-and-system pair curatorial proposal",
+      "kind": "evaluation",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe curatorial proposal for two restrained field-and-system pairs that preserve the existing hero and show how Jamie's digital systems support collective participation.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2027-02-13"
     },
     {
       "id": "evaluation.curatorial.layout-c.home-east-river.v1",
@@ -4125,6 +4177,32 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "projection.photo.launch-2026.fair-rent.shoestring-facilitation",
+      "path": "docs/knowledge-bank/projections/photography/launch-2026-fair-rent-shoestring-facilitation.md",
+      "title": "Launch 2026 Fair Rent case-study Shoestring field-and-system occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact Fair Rent case-study occurrence pairing the 2017 Shoestring Press facilitation photograph with the selected loaded-video frame from the Let NYC Dance public site.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2027-02-13"
+    },
+    {
+      "id": "projection.photo.launch-2026.home.save-nyc-spaces-town-hall",
+      "path": "docs/knowledge-bank/projections/photography/launch-2026-home-save-nyc-spaces-town-hall.md",
+      "title": "Launch 2026 homepage Save NYC Spaces field-and-system occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact homepage occurrence pairing the 2017 Market Hotel town-hall photograph with the FairRentNYC public campaign surface while preserving the existing East River hero.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2027-02-13"
+    },
+    {
       "id": "projection.photo.layout-c.home.east-river",
       "path": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
       "title": "Layout C homepage East River occurrence",
@@ -4840,6 +4918,19 @@
       "reviewBy": "2026-09-26"
     },
     {
+      "id": "source.nycac.flickr.shoestring-facilitation.2017",
+      "path": "docs/knowledge-bank/sources/photo-metadata/nycac-shoestring-flickr-2017.md",
+      "title": "July Meeting, Shoe String Press BK",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public Flickr occurrence supporting the NYC Artist Coalition meeting context, July 24 2017 capture date, and visible facilitation scene at Shoestring Press.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2027-02-13"
+    },
+    {
       "id": "source.nycac.nightlife-forum-transcript.2026",
       "path": "docs/knowledge-bank/sources/nycac-nightlife-forum-transcript-2026.md",
       "title": "NYC nightlife forum corrected working transcript, 2026",
@@ -5074,6 +5165,19 @@
       "reviewBy": "2027-01-26"
     },
     {
+      "id": "source.permission.jamie-nycac-portfolio-album.2026-08",
+      "path": "docs/knowledge-bank/sources/permissions/jamie-nycac-portfolio-album-clearance-2026-08.md",
+      "title": "Jamie Burkart NYC Artist Coalition portfolio-album clearance",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe capsule recording Jamie Burkart's destination-specific clearance to publish photographs from the identified NYC Artist Coalition album in his professional portfolio.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2027-02-13"
+    },
+    {
       "id": "source.photo-metadata.east-river.2022.public-safe",
       "path": "docs/knowledge-bank/sources/photo-metadata/east-river-2022-public-safe.md",
       "title": "East River photograph public-safe metadata summary",
@@ -5179,6 +5283,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "source.screenshot.let-nyc-dance.selected-frame.2026-08",
+      "path": "docs/knowledge-bank/sources/photo-metadata/let-nyc-dance-selected-frame-2026-08.md",
+      "title": "Let NYC Dance loaded-video selected frame, August 2026",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact public-site screenshot selected from a ten-frame, one-frame-per-second capture after the Let NYC Dance hero video loaded and began playing.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2027-02-13"
     },
     {
       "id": "source.statement.commercial-rent.jimmys-corner-rally.2026-04-10",
@@ -5652,6 +5769,70 @@
       "to": "source.nycac.dcla-formation-source-return.2026-07",
       "source": "frontmatter",
       "href": "../../sources/archives/nycac-dcla-formation-source-return-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac.save-nyc-spaces-town-hall.2017.001",
+      "type": "projected_to",
+      "to": "projection.photo.launch-2026.home.save-nyc-spaces-town-hall",
+      "source": "frontmatter",
+      "href": "../../projections/photography/launch-2026-home-save-nyc-spaces-town-hall.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac.save-nyc-spaces-town-hall.2017.001",
+      "type": "related_to",
+      "to": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2",
+      "source": "frontmatter",
+      "href": "project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md",
+      "context": "The earlier census record remains held as source history; this exact derivative has a new destination-specific permission and occurrence review."
+    },
+    {
+      "from": "asset.photo.nycac.save-nyc-spaces-town-hall.2017.001",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac.save-nyc-spaces-town-hall.2017.001",
+      "type": "uses_source",
+      "to": "source.permission.jamie-nycac-portfolio-album.2026-08",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/jamie-nycac-portfolio-album-clearance-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac.shoestring-facilitation.2017.001",
+      "type": "projected_to",
+      "to": "projection.photo.launch-2026.fair-rent.shoestring-facilitation",
+      "source": "frontmatter",
+      "href": "../../projections/photography/launch-2026-fair-rent-shoestring-facilitation.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac.shoestring-facilitation.2017.001",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac.shoestring-facilitation.2017.001",
+      "type": "uses_source",
+      "to": "source.nycac.flickr.shoestring-facilitation.2017",
+      "source": "frontmatter",
+      "href": "../../sources/photo-metadata/nycac-shoestring-flickr-2017.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac.shoestring-facilitation.2017.001",
+      "type": "uses_source",
+      "to": "source.permission.jamie-nycac-portfolio-album.2026-08",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/jamie-nycac-portfolio-album-clearance-2026-08.md",
       "context": null
     },
     {
@@ -11117,6 +11298,30 @@
       "context": null
     },
     {
+      "from": "decision.photo.launch-2026.field-system-pairs",
+      "type": "related_to",
+      "to": "evaluation.curatorial.launch-2026.field-system-pairs",
+      "source": "frontmatter",
+      "href": "../../evaluations/curatorial/launch-2026-field-system-pairs.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.launch-2026.field-system-pairs",
+      "type": "related_to",
+      "to": "projection.photo.launch-2026.fair-rent.shoestring-facilitation",
+      "source": "frontmatter",
+      "href": "../../projections/photography/launch-2026-fair-rent-shoestring-facilitation.md",
+      "context": null
+    },
+    {
+      "from": "decision.photo.launch-2026.field-system-pairs",
+      "type": "related_to",
+      "to": "projection.photo.launch-2026.home.save-nyc-spaces-town-hall",
+      "source": "frontmatter",
+      "href": "../../projections/photography/launch-2026-home-save-nyc-spaces-town-hall.md",
+      "context": null
+    },
+    {
       "from": "decision.photo.layout-c.home-east-river.v1",
       "type": "related_to",
       "to": "evaluation.curatorial.layout-c.home-east-river.v1",
@@ -11186,6 +11391,14 @@
       "to": "projection.photo.layout-c.home.east-river",
       "source": "frontmatter",
       "href": "layout-c-home-east-river.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.curatorial.launch-2026.field-system-pairs",
+      "type": "resulted_in",
+      "to": "decision.photo.launch-2026.field-system-pairs",
+      "source": "frontmatter",
+      "href": "../../decisions/photography/launch-2026-field-system-pairs.md",
       "context": null
     },
     {
@@ -11906,6 +12119,14 @@
       "to": "decision.open-house.communal-governance",
       "source": "frontmatter",
       "href": "../decisions/open-house-communal-governance.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.decision-records",
+      "type": "related_to",
+      "to": "decision.photo.launch-2026.field-system-pairs",
+      "source": "frontmatter",
+      "href": "../decisions/photography/launch-2026-field-system-pairs.md",
       "context": null
     },
     {
@@ -12662,10 +12883,34 @@
     },
     {
       "from": "index.knowledge-wiki.photography",
+      "type": "has_asset",
+      "to": "asset.photo.nycac.save-nyc-spaces-town-hall.2017.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/nycac-save-nyc-spaces-town-hall-2017.md",
+      "context": "Destination-cleared Market Hotel field photograph for the launch-2026 portfolio candidate."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "has_asset",
+      "to": "asset.photo.nycac.shoestring-facilitation.2017.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/nycac-shoestring-facilitation-2017.md",
+      "context": "Destination-cleared Shoestring Press facilitation photograph for the launch-2026 portfolio candidate."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
       "type": "related_to",
       "to": "correction.photo.east-river-credit.2026-07",
       "source": "frontmatter",
       "href": "../corrections/east-river-credit-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "decision.photo.launch-2026.field-system-pairs",
+      "source": "frontmatter",
+      "href": "../decisions/photography/launch-2026-field-system-pairs.md",
       "context": null
     },
     {
@@ -12698,6 +12943,14 @@
       "to": "edition.layout-c.2026-07",
       "source": "frontmatter",
       "href": "../projections/photography/edition-layout-c-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "evaluation.curatorial.launch-2026.field-system-pairs",
+      "source": "frontmatter",
+      "href": "../evaluations/curatorial/launch-2026-field-system-pairs.md",
       "context": null
     },
     {
@@ -12739,6 +12992,22 @@
       "source": "frontmatter",
       "href": "photo-sets/nycac-project-sites-2017-2026.md",
       "context": "Full-population image disposition and held photograph families recovered from five NYC Artist Coalition project sites."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "projection.photo.launch-2026.fair-rent.shoestring-facilitation",
+      "source": "frontmatter",
+      "href": "../projections/photography/launch-2026-fair-rent-shoestring-facilitation.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "projection.photo.launch-2026.home.save-nyc-spaces-town-hall",
+      "source": "frontmatter",
+      "href": "../projections/photography/launch-2026-home-save-nyc-spaces-town-hall.md",
+      "context": null
     },
     {
       "from": "index.knowledge-wiki.photography",
@@ -15399,6 +15668,46 @@
       "context": "Connects the public-safe Wiki to a governed private canonical edition through an opaque summary-only source record."
     },
     {
+      "from": "projection.photo.launch-2026.fair-rent.shoestring-facilitation",
+      "type": "uses_source",
+      "to": "asset.photo.nycac.shoestring-facilitation.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-shoestring-facilitation-2017.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.launch-2026.fair-rent.shoestring-facilitation",
+      "type": "uses_source",
+      "to": "source.permission.jamie-nycac-portfolio-album.2026-08",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/jamie-nycac-portfolio-album-clearance-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.launch-2026.fair-rent.shoestring-facilitation",
+      "type": "uses_source",
+      "to": "source.screenshot.let-nyc-dance.selected-frame.2026-08",
+      "source": "frontmatter",
+      "href": "../../sources/photo-metadata/let-nyc-dance-selected-frame-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.launch-2026.home.save-nyc-spaces-town-hall",
+      "type": "uses_source",
+      "to": "asset.photo.nycac.save-nyc-spaces-town-hall.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-save-nyc-spaces-town-hall-2017.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.launch-2026.home.save-nyc-spaces-town-hall",
+      "type": "uses_source",
+      "to": "source.permission.jamie-nycac-portfolio-album.2026-08",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/jamie-nycac-portfolio-album-clearance-2026-08.md",
+      "context": null
+    },
+    {
       "from": "projection.photo.layout-c.home.east-river",
       "type": "related_to",
       "to": "edition.layout-c.2026-07",
@@ -16535,6 +16844,14 @@
       "context": null
     },
     {
+      "from": "source.nycac.flickr.shoestring-facilitation.2017",
+      "type": "related_to",
+      "to": "asset.photo.nycac.shoestring-facilitation.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-shoestring-facilitation-2017.md",
+      "context": null
+    },
+    {
       "from": "source.nycac.nightlife-forum-transcript.2026",
       "type": "documents",
       "to": "project.office-of-nightlife-town-halls",
@@ -16703,6 +17020,22 @@
       "context": null
     },
     {
+      "from": "source.permission.jamie-nycac-portfolio-album.2026-08",
+      "type": "related_to",
+      "to": "asset.photo.nycac.save-nyc-spaces-town-hall.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-save-nyc-spaces-town-hall-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.permission.jamie-nycac-portfolio-album.2026-08",
+      "type": "related_to",
+      "to": "asset.photo.nycac.shoestring-facilitation.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-shoestring-facilitation-2017.md",
+      "context": null
+    },
+    {
       "from": "source.photo-metadata.east-river.2022.public-safe",
       "type": "related_to",
       "to": "asset.photo.east-river-manhattan-bridge.2022.001",
@@ -16773,6 +17106,14 @@
       "source": "frontmatter",
       "href": "../../research-inquiries/documented-canoe-bike-journeys.md",
       "context": "The recollection opened a bounded research question."
+    },
+    {
+      "from": "source.screenshot.let-nyc-dance.selected-frame.2026-08",
+      "type": "related_to",
+      "to": "projection.photo.launch-2026.fair-rent.shoestring-facilitation",
+      "source": "frontmatter",
+      "href": "../../projections/photography/launch-2026-fair-rent-shoestring-facilitation.md",
+      "context": null
     },
     {
       "from": "source.statement.commercial-rent.jimmys-corner-rally.2026-04-10",
@@ -17612,6 +17953,24 @@
       "kind": "image"
     },
     {
+      "fromPath": "docs/knowledge-bank/assets/photographs/nycac-save-nyc-spaces-town-hall-2017.md",
+      "from": "asset.photo.nycac.save-nyc-spaces-town-hall.2017.001",
+      "toPath": "apps/www/public/images/field-notes/save-nyc-spaces-town-hall.webp",
+      "to": null,
+      "fragment": null,
+      "line": 4,
+      "kind": "image"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/assets/photographs/nycac-shoestring-facilitation-2017.md",
+      "from": "asset.photo.nycac.shoestring-facilitation.2017.001",
+      "toPath": "apps/www/public/images/field-notes/coalition-facilitation-shoestring.webp",
+      "to": null,
+      "fragment": null,
+      "line": 4,
+      "kind": "image"
+    },
+    {
       "fromPath": "docs/knowledge-bank/capabilities/civic-cultural-and-technical-translation.md",
       "from": "capability.civic-cultural-technical-translation",
       "toPath": "docs/knowledge-bank/projects/callnyc.md",
@@ -18140,6 +18499,15 @@
       "to": "decision.photo.pre-launch.rights-narrowing.2026-07-28",
       "fragment": null,
       "line": 18,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/decision-records.md",
+      "from": "index.knowledge-wiki.decision-records",
+      "toPath": "docs/knowledge-bank/decisions/photography/launch-2026-field-system-pairs.md",
+      "to": "decision.photo.launch-2026.field-system-pairs",
+      "fragment": null,
+      "line": 19,
       "kind": "link"
     },
     {
@@ -18856,10 +19224,46 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/photography.md",
       "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/evaluations/curatorial/launch-2026-field-system-pairs.md",
+      "to": "evaluation.curatorial.launch-2026.field-system-pairs",
+      "fragment": null,
+      "line": 14,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/decisions/photography/launch-2026-field-system-pairs.md",
+      "to": "decision.photo.launch-2026.field-system-pairs",
+      "fragment": null,
+      "line": 15,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/projections/photography/launch-2026-home-save-nyc-spaces-town-hall.md",
+      "to": "projection.photo.launch-2026.home.save-nyc-spaces-town-hall",
+      "fragment": null,
+      "line": 16,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/projections/photography/launch-2026-fair-rent-shoestring-facilitation.md",
+      "to": "projection.photo.launch-2026.fair-rent.shoestring-facilitation",
+      "fragment": null,
+      "line": 17,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
       "toPath": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
       "to": "asset.photo.east-river-manhattan-bridge.2022.001",
       "fragment": null,
-      "line": 27,
+      "line": 38,
       "kind": "link"
     },
     {
@@ -18868,7 +19272,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/east-river-canoe-2022.md",
       "to": "index.photo-set.east-river-canoe.2022",
       "fragment": null,
-      "line": 28,
+      "line": 39,
       "kind": "link"
     },
     {
@@ -18877,7 +19281,7 @@
       "toPath": "docs/knowledge-bank/people/elana-gordon.md",
       "to": "person.elana-gordon",
       "fragment": null,
-      "line": 29,
+      "line": 40,
       "kind": "link"
     },
     {
@@ -18886,7 +19290,7 @@
       "toPath": "docs/knowledge-bank/sources/photo-metadata/east-river-2022-public-safe.md",
       "to": "source.photo-metadata.east-river.2022.public-safe",
       "fragment": null,
-      "line": 30,
+      "line": 41,
       "kind": "link"
     },
     {
@@ -18895,7 +19299,7 @@
       "toPath": "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md",
       "to": "source.permission.elana-gordon.east-river.2026-07",
       "fragment": null,
-      "line": 31,
+      "line": 42,
       "kind": "link"
     },
     {
@@ -18904,7 +19308,7 @@
       "toPath": "docs/knowledge-bank/evaluations/curatorial/layout-c-home-east-river-v1.md",
       "to": "evaluation.curatorial.layout-c.home-east-river.v1",
       "fragment": null,
-      "line": 32,
+      "line": 43,
       "kind": "link"
     },
     {
@@ -18913,7 +19317,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/layout-c-home-east-river-v1.md",
       "to": "decision.photo.layout-c.home-east-river.v1",
       "fragment": null,
-      "line": 33,
+      "line": 44,
       "kind": "link"
     },
     {
@@ -18922,7 +19326,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/layout-c-resume-no-photo-v1.md",
       "to": "decision.photo.layout-c.resume-no-photo.v1",
       "fragment": null,
-      "line": 34,
+      "line": 45,
       "kind": "link"
     },
     {
@@ -18931,7 +19335,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/pre-launch-rights-narrowing-2026-07-28.md",
       "to": "decision.photo.pre-launch.rights-narrowing.2026-07-28",
       "fragment": null,
-      "line": 35,
+      "line": 46,
       "kind": "link"
     },
     {
@@ -18940,7 +19344,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
       "to": "projection.photo.layout-c.home.east-river",
       "fragment": null,
-      "line": 36,
+      "line": 47,
       "kind": "link"
     },
     {
@@ -18949,7 +19353,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/edition-layout-c-2026-07.md",
       "to": "edition.layout-c.2026-07",
       "fragment": null,
-      "line": 37,
+      "line": 48,
       "kind": "link"
     },
     {
@@ -18958,7 +19362,7 @@
       "toPath": "docs/knowledge-bank/corrections/east-river-credit-2026-07.md",
       "to": "correction.photo.east-river-credit.2026-07",
       "fragment": null,
-      "line": 38,
+      "line": 49,
       "kind": "link"
     },
     {
@@ -18967,7 +19371,7 @@
       "toPath": "docs/knowledge-bank/sources/recollections/jamie-canoe-commuting-2026-07.md",
       "to": "source.recollection.jamie-canoe-commuting.2026-07",
       "fragment": null,
-      "line": 39,
+      "line": 50,
       "kind": "link"
     },
     {
@@ -18976,7 +19380,7 @@
       "toPath": "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md",
       "to": "research-inquiry.documented-canoe-bike-journeys",
       "fragment": null,
-      "line": 40,
+      "line": 51,
       "kind": "link"
     },
     {
@@ -18985,7 +19389,7 @@
       "toPath": "docs/knowledge-bank/workflows/photography-east-river-canary.md",
       "to": "method.photography-east-river-canary",
       "fragment": null,
-      "line": 41,
+      "line": 52,
       "kind": "link"
     },
     {
@@ -18994,7 +19398,7 @@
       "toPath": "rfcs/0003-living-photographic-knowledge-loop.md",
       "to": null,
       "fragment": null,
-      "line": 49,
+      "line": 60,
       "kind": "link"
     },
     {
@@ -19003,7 +19407,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-dcla-formation-2017.md",
       "to": "index.photo-set.nycac-dcla-formation.2017",
       "fragment": null,
-      "line": 54,
+      "line": 65,
       "kind": "link"
     },
     {
@@ -19012,7 +19416,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/kc-town-hall-fieldwork.md",
       "to": "index.photo-set.kc-town-hall-fieldwork",
       "fragment": null,
-      "line": 55,
+      "line": 66,
       "kind": "link"
     },
     {
@@ -19021,7 +19425,7 @@
       "toPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-walkshed-2019.md",
       "to": "asset.graphic.kc-town-hall.walkshed.2019.001",
       "fragment": null,
-      "line": 60,
+      "line": 71,
       "kind": "link"
     },
     {
@@ -19030,7 +19434,7 @@
       "toPath": "docs/knowledge-bank/research-runs/photographic-source-return-2026-07-26.md",
       "to": "research.photographic-source-return.2026-07-26",
       "fragment": null,
-      "line": 62,
+      "line": 73,
       "kind": "link"
     },
     {
@@ -19039,7 +19443,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-project-sites-2017-2026.md",
       "to": "index.photo-set.nycac-project-sites.2017-2026",
       "fragment": null,
-      "line": 67,
+      "line": 78,
       "kind": "link"
     },
     {

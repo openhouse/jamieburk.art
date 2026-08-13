@@ -65,6 +65,26 @@ relations:
     target: research.photographic-source-return.2026-07-26
     href: ../research-runs/photographic-source-return-2026-07-26.md
     context: Dated return to supplied photographs, oral histories, proposal, connected archives, local records, and the live Photos capability boundary.
+  - type: has_asset
+    target: asset.photo.nycac.save-nyc-spaces-town-hall.2017.001
+    href: ../assets/photographs/nycac-save-nyc-spaces-town-hall-2017.md
+    context: Destination-cleared Market Hotel field photograph for the launch-2026 portfolio candidate.
+  - type: has_asset
+    target: asset.photo.nycac.shoestring-facilitation.2017.001
+    href: ../assets/photographs/nycac-shoestring-facilitation-2017.md
+    context: Destination-cleared Shoestring Press facilitation photograph for the launch-2026 portfolio candidate.
+  - type: related_to
+    target: evaluation.curatorial.launch-2026.field-system-pairs
+    href: ../evaluations/curatorial/launch-2026-field-system-pairs.md
+  - type: related_to
+    target: decision.photo.launch-2026.field-system-pairs
+    href: ../decisions/photography/launch-2026-field-system-pairs.md
+  - type: related_to
+    target: projection.photo.launch-2026.home.save-nyc-spaces-town-hall
+    href: ../projections/photography/launch-2026-home-save-nyc-spaces-town-hall.md
+  - type: related_to
+    target: projection.photo.launch-2026.fair-rent.shoestring-facilitation
+    href: ../projections/photography/launch-2026-fair-rent-shoestring-facilitation.md
 ---
 
 # Photography knowledge loop
@@ -72,6 +92,17 @@ relations:
 This index begins with one complete occurrence rather than attempting to mirror
 Jamie Burkart's private photo archive. The archive remains private and
 additive. The portfolio remains selective and composed.
+
+## Launch 2026 field-and-system pairs
+
+The launch candidate preserves the existing East River hero and adds two
+destination-cleared field/interface pairings. Their records remain separate so
+selection, evidence, exact placement, and publication authority stay auditable:
+
+- [Curatorial evaluation](../evaluations/curatorial/launch-2026-field-system-pairs.md)
+- [Selection decision](../decisions/photography/launch-2026-field-system-pairs.md)
+- [Homepage occurrence](../projections/photography/launch-2026-home-save-nyc-spaces-town-hall.md)
+- [Fair Rent case-study occurrence](../projections/photography/launch-2026-fair-rent-shoestring-facilitation.md)
 
 ## East River canary
 
