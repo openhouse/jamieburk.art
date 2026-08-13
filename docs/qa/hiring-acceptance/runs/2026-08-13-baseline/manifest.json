@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "suiteId": "named-public-hiring-readers-2026-08-13",
+  "runId": "named-readers-baseline-afa29bb3e",
+  "evaluatedGitRev": "afa29bb3e7be8c5aa47be6d98de535ec99afa3e2",
+  "evaluatedUrl": "https://staging-a.jamieburk.art",
+  "runDate": "2026-08-13",
+  "method": "Six sequential sandboxed public-web-only tasks, one separate task per unique named person; Lisa Gelobter returned separate decisions for two OTI roles.",
+  "uniqueReaderCount": 6,
+  "evaluationCount": 7,
+  "passCount": 0,
+  "failCount": 7,
+  "suiteVerdict": "fail",
+  "allMustPass": true,
+  "results": [
+    {
+      "gateId": "gate.aclu-national-campaigns.deirdre-schifeling",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.9,
+      "primaryBlocker": "No public proof of budget, procurement, invoice ownership or one complete scope-schedule-metrics delivery record.",
+      "gapClass": "portfolio-or-experience-unresolved"
+    },
+    {
+      "gateId": "gate.codepath-ai-operations.quinton-ma",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.95,
+      "primaryBlocker": "No personally shipped professional LLM or agent workflow with users, evals, handoff, and measured change.",
+      "gapClass": "mandatory-experience-unverified"
+    },
+    {
+      "gateId": "gate.codepath-ai-operations.brian-madigan",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.97,
+      "primaryBlocker": "No production AI adoption case demonstrating changed behavior, reusable assets, and measurable organizational value.",
+      "gapClass": "mandatory-experience-unverified"
+    },
+    {
+      "gateId": "gate.codepath-engineering.zack-parker",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.92,
+      "primaryBlocker": "No issue-to-fix trace showing bug reproduction, stack-trace interpretation, test authorship, and fix verification.",
+      "gapClass": "mandatory-experience-unverified"
+    },
+    {
+      "gateId": "gate.codepath-engineering.chris-coleman",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.92,
+      "primaryBlocker": "No end-to-end quality case connecting hands-on QA and regression protection to product or learner outcomes.",
+      "gapClass": "mandatory-experience-unverified"
+    },
+    {
+      "gateId": "gate.oti-senior-product.lisa-gelobter",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.92,
+      "primaryBlocker": "No complete discovery-to-launch dossier with accessibility, instrumentation, City conformance, and resolved civil-service eligibility.",
+      "gapClass": "portfolio-and-eligibility-unresolved"
+    },
+    {
+      "gateId": "gate.oti-technical-operations.lisa-gelobter",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.89,
+      "primaryBlocker": "No formal technical-team hiring, employee onboarding, team-health metrics, procurement authority, or multi-project operating case; role is expired.",
+      "gapClass": "portfolio-or-experience-unresolved-and-role-closed"
+    }
+  ],
+  "disclaimer": "Synthetic public-context evaluations only; not the named people's participation, opinions, endorsements, or actual hiring decisions."
+}

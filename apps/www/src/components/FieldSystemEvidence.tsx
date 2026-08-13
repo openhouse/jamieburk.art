@@ -53,12 +53,16 @@ function EvidenceContent({ variant }: FieldSystemEvidenceProps) {
         <p className="max-w-3xl text-lg leading-8 text-jb-ink/78">{item.body}</p>
       </div>
       <div className="mt-8 grid gap-8 md:grid-cols-[minmax(0,1.45fr)_minmax(0,1fr)] md:items-start">
-        <FieldPhoto
-          imageClassName="aspect-[3/2] object-cover"
-          photo={item.photo}
-          sizes="(min-width: 768px) 58vw, 100vw"
-        />
+        <div>
+          <p className="jb-section-label mb-3">Field context</p>
+          <FieldPhoto
+            imageClassName="aspect-[3/2] object-cover"
+            photo={item.photo}
+            sizes="(min-width: 768px) 58vw, 100vw"
+          />
+        </div>
         <figure className="m-0">
+          <p className="jb-section-label mb-3">Public system</p>
           <a
             aria-label={item.screenshot.label}
             className="block overflow-hidden bg-white outline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-jb-blue"
@@ -75,7 +79,12 @@ function EvidenceContent({ variant }: FieldSystemEvidenceProps) {
           </a>
           <figcaption className="jb-photo-caption">
             <span>{item.screenshot.caption}</span>
-            <span>Public campaign website.</span>
+            <a
+              className="font-semibold text-jb-blue hover:text-jb-green"
+              href={item.screenshot.href}
+            >
+              {item.screenshot.label} <span aria-hidden="true">↗</span>
+            </a>
           </figcaption>
         </figure>
       </div>

@@ -67,6 +67,20 @@ reporting lines distinguish a posting-named title, a current official
 title-holder match, and a senior vision owner. A title match is not proof of a
 hiring manager, interview participant, private opinion, or final org chart.
 
+## Public reporting-context readers
+
+| Opportunity | Nearest publicly identified direct-report context | Nearest publicly identified senior vision context |
+|---|---|---|
+| ACLU Senior Project Manager, National Campaigns | Senior Director of National Campaigns; person not publicly named | Deirdre Schifeling, Chief Political and Advocacy Officer |
+| CodePath Senior AI Operations Lead | Quinton Ma, Director of Business Operations; official-title match, not posting-named | Brian Madigan, Chief Operating Officer |
+| CodePath Engineering Project Manager | Zack Parker, Vice President of Engineering; official-title match, not posting-named | Chris Coleman, Chief Product Officer |
+| NYC OTI Senior Product Manager 782366 | PIT Crew product or program leader; title and person not publicly named | Lisa Gelobter, Chief Technology Officer and OTI Commissioner |
+| NYC OTI Technical Operations Manager 782369 | PIT Crew or OTI operations leader; title and person not publicly named | Lisa Gelobter, Chief Technology Officer and OTI Commissioner |
+
+The last OTI role is expired and remains only a historical watch pattern. These
+names define fictionalized public-context eval lenses, not confirmed
+interviewers, private opinions, endorsements, or actual hiring decisions.
+
 ## Other tracked live contexts requiring periodic refresh
 
 - [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md)
@@ -124,5 +138,7 @@ reader comprehension.
 npm run wiki:query -- --live-opportunities
 npm run wiki:query -- --requirement requirement.oti.delivery-coordination
 npm run wiki:employment:report
+npm run check:named-hiring-evals
+npm run evals:named-hiring-readers
 npm run wiki:hillclimb
 ```

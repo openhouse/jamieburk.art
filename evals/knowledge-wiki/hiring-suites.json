@@ -17,6 +17,11 @@
   ],
   "readerPaths": [
     "docs/qa/hiring-acceptance/readers/generic-recruiter.md",
+    "docs/qa/hiring-acceptance/readers/deirdre-schifeling.md",
+    "docs/qa/hiring-acceptance/readers/quinton-ma.md",
+    "docs/qa/hiring-acceptance/readers/brian-madigan.md",
+    "docs/qa/hiring-acceptance/readers/zack-parker.md",
+    "docs/qa/hiring-acceptance/readers/chris-coleman.md",
     "docs/qa/hiring-acceptance/readers/lisa-gelobter.md",
     "docs/qa/hiring-acceptance/readers/aileen-palmer.md",
     "docs/qa/hiring-acceptance/readers/herminia-ibarra.md",

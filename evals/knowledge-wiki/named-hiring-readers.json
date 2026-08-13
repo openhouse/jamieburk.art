@@ -1,0 +1,103 @@
+{
+  "id": "named-public-hiring-readers-2026-08-13",
+  "version": 1,
+  "purpose": "Test whether the exact public portfolio supplies enough role-specific evidence for a synthetic public-context reader to reach the strict statement: I would hire this person for this job.",
+  "targetUrl": "https://staging-a.jamieburk.art",
+  "acceptanceGate": "I would hire this person for this job",
+  "passPolicy": {
+    "allEvaluationsMustPass": true,
+    "averagingAllowed": false,
+    "potentialAloneMayPass": false,
+    "missingMaterialEvidenceFails": true,
+    "actualHiringOutcomeClaimed": false
+  },
+  "execution": {
+    "oneSandboxedTaskPerNamedPerson": true,
+    "tasksRunSequentially": true,
+    "separateChatPerNamedPerson": true,
+    "publicWebOnly": true,
+    "repositoryOrWikiAccessForJudges": false,
+    "priorJudgeOutputVisible": false
+  },
+  "hardInvariants": [
+    "Every named-person result is a fictionalized analytical lens, never a quote, endorsement, participation claim, or actual hiring decision.",
+    "A public title match is not a confirmed manager, interviewer, or final reporting relationship.",
+    "No judge may receive local files, source code, private knowledge, raw communications, protected evidence, or another judge's output.",
+    "A portfolio edit may not convert missing experience, employer eligibility, closed status, or an unknown reporting line into a pass.",
+    "The expired OTI Technical Operations role remains a historical watch pattern and never counts as a current opening.",
+    "Every failure must distinguish a public-communication gap from an experience, eligibility, or role-context gap."
+  ],
+  "opportunityReaders": [
+    {
+      "id": "gate.aclu-national-campaigns.deirdre-schifeling",
+      "readerId": "reader.deirdre-schifeling",
+      "readerPath": "docs/qa/hiring-acceptance/readers/deirdre-schifeling.md",
+      "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "opportunityPath": "docs/knowledge-bank/opportunities/aclu-senior-project-manager-national-campaigns.md",
+      "relationshipToRole": "nearest publicly named senior vision leader; direct manager not publicly named",
+      "opportunityStatus": "live",
+      "requiredRoutes": ["/", "/work/technical-operations", "/work/fair-rent-nyc", "/resume", "/contact"]
+    },
+    {
+      "id": "gate.codepath-ai-operations.quinton-ma",
+      "readerId": "reader.quinton-ma",
+      "readerPath": "docs/qa/hiring-acceptance/readers/quinton-ma.md",
+      "opportunityId": "opportunity.codepath.senior-ai-operations-lead.5175813007",
+      "opportunityPath": "docs/knowledge-bank/opportunities/codepath-senior-ai-operations-lead.md",
+      "relationshipToRole": "public title match for likely direct manager; not posting-named or confirmed",
+      "opportunityStatus": "live",
+      "requiredRoutes": ["/", "/work/technical-operations", "/lab/source-backed-team-memory", "/work/harry-j-epstein", "/resume", "/contact"]
+    },
+    {
+      "id": "gate.codepath-ai-operations.brian-madigan",
+      "readerId": "reader.brian-madigan",
+      "readerPath": "docs/qa/hiring-acceptance/readers/brian-madigan.md",
+      "opportunityId": "opportunity.codepath.senior-ai-operations-lead.5175813007",
+      "opportunityPath": "docs/knowledge-bank/opportunities/codepath-senior-ai-operations-lead.md",
+      "relationshipToRole": "nearest publicly named senior operations vision leader; not established direct manager",
+      "opportunityStatus": "live",
+      "requiredRoutes": ["/", "/work/technical-operations", "/lab/source-backed-team-memory", "/work/harry-j-epstein", "/resume", "/contact"]
+    },
+    {
+      "id": "gate.codepath-engineering.zack-parker",
+      "readerId": "reader.zack-parker",
+      "readerPath": "docs/qa/hiring-acceptance/readers/zack-parker.md",
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "opportunityPath": "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
+      "relationshipToRole": "public title match for likely direct manager; not posting-named or confirmed",
+      "opportunityStatus": "live",
+      "requiredRoutes": ["/", "/work/technical-operations", "/work/harry-j-epstein", "/work/wowlist", "/lab/source-backed-team-memory", "/resume", "/contact"]
+    },
+    {
+      "id": "gate.codepath-engineering.chris-coleman",
+      "readerId": "reader.chris-coleman",
+      "readerPath": "docs/qa/hiring-acceptance/readers/chris-coleman.md",
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "opportunityPath": "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
+      "relationshipToRole": "nearest publicly named senior product-engineering vision leader; not established direct manager",
+      "opportunityStatus": "live",
+      "requiredRoutes": ["/", "/work/technical-operations", "/work/harry-j-epstein", "/work/wowlist", "/lab/source-backed-team-memory", "/resume", "/contact"]
+    },
+    {
+      "id": "gate.oti-senior-product.lisa-gelobter",
+      "readerId": "reader.lisa-gelobter",
+      "readerPath": "docs/qa/hiring-acceptance/readers/lisa-gelobter.md",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
+      "relationshipToRole": "nearest publicly named senior OTI vision leader; direct manager not publicly named",
+      "opportunityStatus": "live",
+      "requiredRoutes": ["/", "/work/technical-operations", "/work/wowlist", "/work/callnyc", "/work/fair-rent-nyc", "/lab/source-backed-team-memory", "/resume", "/contact"]
+    },
+    {
+      "id": "gate.oti-technical-operations.lisa-gelobter",
+      "readerId": "reader.lisa-gelobter",
+      "readerPath": "docs/qa/hiring-acceptance/readers/lisa-gelobter.md",
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
+      "relationshipToRole": "nearest publicly named senior OTI vision leader; direct manager not publicly named",
+      "opportunityStatus": "closed-expired-historical-watch",
+      "requiredRoutes": ["/", "/work/technical-operations", "/work/callnyc", "/work/fair-rent-nyc", "/work/harry-j-epstein", "/lab/source-backed-team-memory", "/resume", "/contact"]
+    }
+  ],
+  "latestRunPath": "docs/qa/hiring-acceptance/runs/2026-08-13-baseline/manifest.json"
+}
