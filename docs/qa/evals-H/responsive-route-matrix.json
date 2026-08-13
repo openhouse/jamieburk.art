@@ -1,10 +1,10 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-08-12T16:36:29.322Z",
+  "checkedAt": "2026-08-13T17:10:32.645Z",
   "baseUrl": "http://127.0.0.1:3056",
-  "publicSurfaceFingerprint": "eef497de543aab662bdfb7d838c23d18060d76ce456ed1867e6ef14e5878eeda",
+  "publicSurfaceFingerprint": "1e37b0aa0676168ccbf49af092f8cd7a45bea5f7663d0e595a7e8698e1737da8",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 118,
+  "publicSurfaceFileCount": 119,
   "routes": [
     "/",
     "/work",
@@ -824,7 +824,7 @@
     "nonSuccessResponses": 0,
     "invalidHeadingOrLandmarkRows": 0,
     "lazyImagesObserved": 20,
-    "unloadedImagesBeforeScroll": 11,
+    "unloadedImagesBeforeScroll": 20,
     "lazyImageFollowUpPerformed": true,
     "allImagesLoadedAfterScroll": true
   },
@@ -886,7 +886,7 @@
     "passed": true
   },
   "navigationReview": {
-    "checkedAt": "2026-08-12T16:36:29.323Z",
+    "checkedAt": "2026-08-13T17:10:32.645Z",
     "startRoute": "/",
     "destinationRoute": "/about",
     "startHttpStatus": 200,
@@ -901,8 +901,8 @@
       "height": 900
     },
     "renderedScreenshot": {
-      "sha256": "7e10731f445b437bf2e687335ca115872e49632236ebf020fcf67b70feb46f3b",
-      "byteLength": 583885,
+      "sha256": "9a66381f04e34ca235e22f94b31c5e20e5dd3a5c60ad882a37879e7cf7c3c364",
+      "byteLength": 587828,
       "width": 1280,
       "fullPage": true,
       "retainedInPublicGit": false,

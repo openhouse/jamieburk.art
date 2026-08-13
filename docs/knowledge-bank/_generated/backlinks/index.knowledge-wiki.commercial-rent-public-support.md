@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Commercial Rent Stabilization public support
 
-**Source commit:** `6d5a999bc8a00a191a79bea2453b3975372fef2c`
-**Generation time:** 2026-08-13T12:27:32-04:00
-**Source fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
+**Source commit:** `0ad633f2b6c1ecd6d9b7c122fcabe89e7fdc29d3`
+**Generation time:** 2026-08-13T13:04:20-04:00
+**Source fingerprint:** `4fda88de388e55c698a3286d5b80e0fedbdcba4bbe72b9875ea360dae7f9fc88`
 
 - [Knowledge Wiki](../../README.md) - `prose_link` (markdown)
 - [Knowledge Wiki](../../README.md) - `related_to` (frontmatter)
@@ -11,6 +11,7 @@
 - [Jamie Burkart public testimony](../../indexes/public-testimony.md) - `prose_link` (markdown)
 - [Active New York State commercial rent stabilization bills](../../sources/commercial-rent-public-support/active-state-bills-2025-2026.md) - `related_to` (frontmatter)
 - [2026 Democratic primary election-night result for Assembly District 56](../../sources/commercial-rent-public-support/eon-huntley-2026-primary-result.md) - `related_to` (frontmatter)
+- [Empty Storefronts, High Rents](../../sources/commercial-rent-public-support/empty-storefronts-high-rents-report-2026.md) - `related_to` (frontmatter)
 - [Jimmy's Corner rally: Small Business Rent Stabilization statements](../../testimony/commercial-rent-public-support/2026-04-10-jimmys-corner-rally-statements.md) - `related_to` (frontmatter)
 - [State sponsors and advocates introduce the Small Business Survival Act](../../testimony/commercial-rent-public-support/2026-02-17-state-introduction-statements.md) - `related_to` (frontmatter)
 - [Friends and Lovers Commercial Rent Stabilization event: speaker index](../../testimony/commercial-rent-public-support/2026-02-17-friends-and-lovers-supportive-remarks.md) - `related_to` (frontmatter)

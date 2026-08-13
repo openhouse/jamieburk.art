@@ -1,10 +1,10 @@
 {
   "reportVersion": 3,
-  "checkedAt": "2026-08-12T16:36:46.428Z",
+  "checkedAt": "2026-08-13T17:13:39.970Z",
   "baseUrl": "http://127.0.0.1:3057",
-  "publicSurfaceFingerprint": "eef497de543aab662bdfb7d838c23d18060d76ce456ed1867e6ef14e5878eeda",
+  "publicSurfaceFingerprint": "1e37b0aa0676168ccbf49af092f8cd7a45bea5f7663d0e595a7e8698e1737da8",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 118,
+  "publicSurfaceFileCount": 119,
   "captureMethod": "Playwright Chromium screenshots of the current built local candidate; About captures are deliberately framed on the through-line and current systems loops; no deployment or indexing action.",
   "routes": [
     {
@@ -20,7 +20,7 @@
           },
           "pixelWidth": 1280,
           "pixelHeight": 900,
-          "sha256": "7ff02c019578cce0298caf900c7b880e3d9ffc2e0e97dd15c789ad85dbcd8b80",
+          "sha256": "48905c76fd9878a87e82dd6d749148140bd6a445ccf1765cd5beb0aaa04c5a85",
           "file": "candidate-home-desktop.png"
         },
         {
@@ -31,7 +31,7 @@
           },
           "pixelWidth": 375,
           "pixelHeight": 812,
-          "sha256": "a3233b7565d0417ded117b0b2cfd5d504bbee270ae408026853739b8008a3ef1",
+          "sha256": "e0f7847570872a2c0caf6753675079db99d32dbb62f58ba83d522e75a84b0401",
           "file": "candidate-home-viewport.png"
         }
       ]
@@ -49,7 +49,7 @@
           },
           "pixelWidth": 1280,
           "pixelHeight": 900,
-          "sha256": "74724ed4278bab16ea13080ce969dc115054c5f0c8863c159b1623d10a246ac1",
+          "sha256": "e322e5d01e6b47c0af09c14f5b1c92de55346d0bb3ea313309f6e6415866db81",
           "file": "professor-lenses-about-desktop.png",
           "framedContent": {
             "throughLineHeadingPresent": true,
@@ -65,7 +65,7 @@
           },
           "pixelWidth": 375,
           "pixelHeight": 1200,
-          "sha256": "413e2f7911f5ee140209fb952eaf64061c00a63970556bc5d782e2ec677f4729",
+          "sha256": "b448010a05bb77a4ffcfb6d4d62b038ae44b83c26c01a3791393a14ee65edc6d",
           "file": "professor-lenses-about-mobile.png",
           "framedContent": {
             "throughLineHeadingPresent": true,
