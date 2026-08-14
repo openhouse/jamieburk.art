@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "scope": "Every unique governed job opportunity represented in evals/hiring-readers/current.json requires one distinct dated resume and an exact-resume assessment from each named reader assigned to that opportunity.",
+  "sourceHiringReaderRegistry": "evals/hiring-readers/current.json",
+  "acceptanceQuestion": "I would advance this candidate to an interview for this job based on this resume.",
+  "passPolicy": "unanimous-named-readers-per-opportunity",
+  "skillContract": {
+    "primarySkill": {
+      "id": "review-resume",
+      "package": "phuryn/pm-skills@review-resume",
+      "repository": "https://github.com/phuryn/pm-skills",
+      "upstreamCommit": "18468a95b427e70e258b51389796367c6f684e7d",
+      "skillSha256": "cec1de0916b608a559844c5f39a3b18e65f88d6694d3bb9c1ff04bde9e062c2f",
+      "installedLocation": "global user skill store; local path intentionally not committed",
+      "registryInstallsObserved": "2.1K",
+      "practicesApplied": [
+        "specific professional summary",
+        "no personal pronouns",
+        "one-to-two-page concision",
+        "achievement-action-context evidence",
+        "professional email",
+        "job-specific tailoring",
+        "product and business evidence in bullets",
+        "standard ATS section order",
+        "career-transition framing",
+        "clear standard language with actual titles preserved"
+      ]
+    },
+    "complementaryInstalledSkills": [
+      "hiring",
+      "job-application-optimizer",
+      "tailored-resume-generator"
+    ],
+    "localOverrides": [
+      "A target-role headline may never replace or rename an actual employment title.",
+      "Only governed metrics and outcomes may appear; missing metrics remain gaps rather than invented numbers.",
+      "Collective work retains collaborator credit and bounded causation.",
+      "Named readers are fictionalized public-context lenses, not participation, quotations, endorsements, or real hiring decisions.",
+      "Resume screening answers whether to advance to interview; it does not claim that a resume alone proves a final hire decision."
+    ]
+  },
+  "humanReviewGates": [
+    "Jamie approves each exact resume before application submission.",
+    "Employers retain eligibility, interview, and hiring authority.",
+    "A real named person has not reviewed a resume unless a separately verified real review is recorded."
+  ],
+  "opportunities": [
+    {
+      "opportunityId": "opportunity.aclu.senior-project-manager-lps.8620968002",
+      "opportunityPath": "docs/knowledge-bank/opportunities/aclu-senior-project-manager-lps.md",
+      "jobTitle": "ACLU - Senior Project Manager, Learning and Project Solutions",
+      "targetRole": "Senior Project Manager, Learning and Project Solutions",
+      "resumePath": "resume-versions/2026-08-14/aclu-senior-project-manager-learning-project-solutions-8620968002/Jamie-Burkart-Resume.md",
+      "resumeSha256": "f3a730623dee959d68fc200acaa21c27cfad1a5d2579a91f2bc34ce305180dd7",
+      "requiredTerms": ["systems implementation", "business analysis", "process improvement", "cross-departmental", "requirements", "risks", "post-mortem", "budget"],
+      "hiringGoal": "Deliver complex cross-departmental systems and process implementations with clear scope, risk visibility, useful closeout learning, and humane change enablement.",
+      "mustHaveEvidence": ["end-to-end systems implementation", "business analysis and requirements", "plans, risks, budgets, and resources", "post-mortem learning and reusable documentation"],
+      "biasChecks": ["Do not penalize independent or civic work merely because it did not occur inside a large enterprise.", "Do not treat warmth or stylistic similarity as evidence of project-delivery capability."],
+      "readerAssessments": [
+        {
+          "personId": "person.terence-dougherty",
+          "name": "Terence Dougherty",
+          "relationship": "senior-vision",
+          "resumeSha256": "f3a730623dee959d68fc200acaa21c27cfad1a5d2579a91f2bc34ce305180dd7",
+          "skillId": "review-resume",
+          "simulatedPublicFigureLens": true,
+          "nonEndorsementBoundary": "Fictionalized public-context resume assessment, not participation, quotation, endorsement, or a hiring decision by Terence Dougherty.",
+          "access": {"scope": "application-resume-and-public-job-context-only", "repositoryAccess": false, "privateSourceAccess": false},
+          "decision": "pass",
+          "wouldAdvanceToInterview": true,
+          "strengths": ["The resume connects systems implementation, requirements, risk, documentation, and transfer across several complex operating settings.", "Metrics are bounded and collaborative authority remains legible."],
+          "risks": ["Enterprise budget scope, personnel authority, and large-scale learning-platform implementation remain interview questions."],
+          "interviewEvidenceNeeded": ["Walk through one implementation from current-state analysis through future-state adoption and retrospective change.", "Clarify direct budget, vendor, and resource decisions without implying enterprise authority not held."]
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "opportunityPath": "docs/knowledge-bank/opportunities/aclu-senior-project-manager-national-campaigns.md",
+      "jobTitle": "ACLU - Senior Project Manager, National Campaigns",
+      "targetRole": "Senior Project Manager, National Campaigns",
+      "resumePath": "resume-versions/2026-08-14/aclu-senior-project-manager-national-campaigns-8631854002/Jamie-Burkart-Resume.md",
+      "resumeSha256": "e5986355e0f72e30e9f73ce17fea216c9217ce9217f236f88c299cb5c44afdb0",
+      "requiredTerms": ["advocacy campaign operations", "talking points", "internal communications", "executive reporting", "coalition", "schedules", "budget", "metrics"],
+      "hiringGoal": "Turn integrated national advocacy strategy into coordinated plans, communications, risk management, public action, and learning without erasing affiliates or community leadership.",
+      "mustHaveEvidence": ["advocacy campaign operations", "coalition coordination", "campaign writing and public communications", "plans, schedules, risks, budgets, and metrics"],
+      "biasChecks": ["Evaluate transferable operating capability directly rather than treating national-office pedigree as a proxy.", "Do not confuse campaign visibility or charisma with disciplined delivery evidence."],
+      "readerAssessments": [
+        {
+          "personId": "person.james-williams-aclu",
+          "name": "James Williams",
+          "relationship": "likely-direct-report",
+          "resumeSha256": "e5986355e0f72e30e9f73ce17fea216c9217ce9217f236f88c299cb5c44afdb0",
+          "skillId": "review-resume",
+          "simulatedPublicFigureLens": true,
+          "nonEndorsementBoundary": "Fictionalized public-context resume assessment, not participation, quotation, endorsement, or a hiring decision by James Williams.",
+          "access": {"scope": "application-resume-and-public-job-context-only", "repositoryAccess": false, "privateSourceAccess": false},
+          "decision": "pass",
+          "wouldAdvanceToInterview": true,
+          "strengths": ["Campaign planning, testimony, coalition coordination, communications, and follow-through appear as sustained operating work rather than isolated volunteer activity.", "The resume distinguishes contribution, collective action, and public authority."],
+          "risks": ["National affiliate coordination, rapid-response cadence, and formal campaign budget authority are not established."],
+          "interviewEvidenceNeeded": ["Present one campaign plan with objective, owners, timeline, risks, metrics, and a decision changed by evidence."]
+        },
+        {
+          "personId": "person.deirdre-schifeling",
+          "name": "Deirdre Schifeling",
+          "relationship": "senior-vision",
+          "resumeSha256": "e5986355e0f72e30e9f73ce17fea216c9217ce9217f236f88c299cb5c44afdb0",
+          "skillId": "review-resume",
+          "simulatedPublicFigureLens": true,
+          "nonEndorsementBoundary": "Fictionalized public-context resume assessment, not participation, quotation, endorsement, or a hiring decision by Deirdre Schifeling.",
+          "access": {"scope": "application-resume-and-public-job-context-only", "repositoryAccess": false, "privateSourceAccess": false},
+          "decision": "pass",
+          "wouldAdvanceToInterview": true,
+          "strengths": ["The resume presents coalition power, public communication, discretion, and delivery as one integrated practice.", "Civil-rights judgment is supported by privacy, authority, and collective-credit boundaries."],
+          "risks": ["Ownership of national integrated strategy and multi-state resource allocation remains unproven."],
+          "interviewEvidenceNeeded": ["Explain how the operating model would transfer across headquarters, affiliates, legal, communications, organizing, and policy teams."]
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "opportunityPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
+      "jobTitle": "Benepass - Product Operations Manager",
+      "targetRole": "Product Operations Manager",
+      "resumePath": "resume-versions/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume.md",
+      "resumeSha256": "ec7377fc26957a7db0ee671c6a311bd8a98e54be4de35f6b3575c1aea9f36590",
+      "requiredTerms": ["launch readiness", "Product and Engineering", "operational impact", "prioritization", "runbooks", "post-launch learning", "revenue", "retention"],
+      "hiringGoal": "Create a trusted Operations-to-Product system that improves priorities, launch readiness, adoption, operational impact, and post-launch learning.",
+      "mustHaveEvidence": ["customer and operations signal translation", "launch readiness and risk", "runbooks and scalable handoff", "quantified prioritization and product learning"],
+      "biasChecks": ["Assess demonstrated operating loops rather than using a formal Product Operations title as the only proxy.", "Do not convert community-product scale into unsupported B2B SaaS scale."],
+      "readerAssessments": [
+        {
+          "personId": "person.aileen-palmer",
+          "name": "Aileen Palmer",
+          "relationship": "likely-direct-report",
+          "resumeSha256": "ec7377fc26957a7db0ee671c6a311bd8a98e54be4de35f6b3575c1aea9f36590",
+          "skillId": "review-resume",
+          "simulatedPublicFigureLens": true,
+          "nonEndorsementBoundary": "Fictionalized public-context resume assessment, not participation, quotation, endorsement, or a hiring decision by Aileen Palmer.",
+          "access": {"scope": "application-resume-and-public-job-context-only", "repositoryAccess": false, "privateSourceAccess": false},
+          "decision": "pass",
+          "wouldAdvanceToInterview": true,
+          "strengths": ["Customer and operating signals visibly become requirements, releases, adoption support, runbooks, and learning.", "The commercial and community-product evidence supports transfer without claiming formal SaaS tenure."],
+          "risks": ["Formal B2B SaaS Product Operations tenure, roadmap authority, and recurring executive operating cadence remain gaps."],
+          "interviewEvidenceNeeded": ["Walk through one Operations-to-Product priority from signal through launch, adoption, result, and roadmap change."]
+        },
+        {
+          "personId": "person.jaclyn-chen",
+          "name": "Jaclyn Chen",
+          "relationship": "senior-vision",
+          "resumeSha256": "ec7377fc26957a7db0ee671c6a311bd8a98e54be4de35f6b3575c1aea9f36590",
+          "skillId": "review-resume",
+          "simulatedPublicFigureLens": true,
+          "nonEndorsementBoundary": "Fictionalized public-context resume assessment, not participation, quotation, endorsement, or a hiring decision by Jaclyn Chen.",
+          "access": {"scope": "application-resume-and-public-job-context-only", "repositoryAccess": false, "privateSourceAccess": false},
+          "decision": "pass",
+          "wouldAdvanceToInterview": true,
+          "strengths": ["The resume makes the full operating loop and the discipline of incremental change easy to see.", "Revenue, adoption, and delivery evidence are quantified without keyword inflation."],
+          "risks": ["Retention ownership, launch volume, team scale, and go/no-go authority need direct interview evidence."],
+          "interviewEvidenceNeeded": ["Bring one contested priority with alternatives, criteria, decision owner, release, measurable result, and subsequent learning."]
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
+      "jobTitle": "NYC OTI - Senior Product Manager 782366",
+      "targetRole": "Senior Product Manager - Public Interest Technology Crew",
+      "resumePath": "resume-versions/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume.md",
+      "resumeSha256": "01486f20dd30f1fca27a18aa65df5dddc9bf45a3e712061bc7b7fb5adf566257",
+      "requiredTerms": ["resident-facing", "problem framing", "participatory discovery", "prioritization", "version one", "public launch", "accessibility", "privacy", "metrics"],
+      "hiringGoal": "Ship measurable resident-facing services end-to-end while strengthening agency ownership, accessibility, privacy, public accountability, and in-house delivery capacity.",
+      "mustHaveEvidence": ["resident-facing product from problem framing through launch", "discovery and version-one prioritization", "cross-functional public delivery", "metrics, accessibility, privacy, and institutional transfer"],
+      "biasChecks": ["Evaluate product decisions and outcomes rather than requiring a conventional Product Manager title as a proxy.", "Do not let mission affinity substitute for the civil-service and role-level evidence screens."],
+      "readerAssessments": [
+        {
+          "personId": "person.luke-farrell",
+          "name": "Luke Farrell",
+          "relationship": "likely-direct-report",
+          "resumeSha256": "01486f20dd30f1fca27a18aa65df5dddc9bf45a3e712061bc7b7fb5adf566257",
+          "skillId": "review-resume",
+          "simulatedPublicFigureLens": true,
+          "nonEndorsementBoundary": "Fictionalized public-context resume assessment, not participation, quotation, endorsement, or a hiring decision by Luke Farrell; the reporting line is not confirmed.",
+          "access": {"scope": "application-resume-and-public-job-context-only", "repositoryAccess": false, "privateSourceAccess": false},
+          "decision": "pass",
+          "wouldAdvanceToInterview": true,
+          "strengths": ["CallNYC and WOWList make resident-facing product definition, launch, adoption, and stewardship concrete.", "The resume names version-one decisions, cross-functional delivery, metrics, accessibility, privacy, and handoff early."],
+          "risks": ["Formal government product ownership, audited accessibility delivery, and the Senior IT Architect eligibility screen remain unresolved."],
+          "interviewEvidenceNeeded": ["Tell one end-to-end product story with user evidence, options, prioritization, launch, metric, learning, and agency handoff."]
+        },
+        {
+          "personId": "person.lisa-gelobter",
+          "name": "Lisa Gelobter",
+          "relationship": "senior-vision",
+          "resumeSha256": "01486f20dd30f1fca27a18aa65df5dddc9bf45a3e712061bc7b7fb5adf566257",
+          "skillId": "review-resume",
+          "simulatedPublicFigureLens": true,
+          "nonEndorsementBoundary": "Fictionalized public-context resume assessment, not participation, quotation, endorsement, or a hiring decision by Lisa Gelobter.",
+          "access": {"scope": "application-resume-and-public-job-context-only", "repositoryAccess": false, "privateSourceAccess": false},
+          "decision": "pass",
+          "wouldAdvanceToInterview": true,
+          "strengths": ["The resume joins technical delivery with civic participation, public communication, ethical data practice, and durable public capacity.", "Quantified evidence is balanced by explicit limits on causation, authority, and compliance."],
+          "risks": ["Resident-outcome measurement and formal agency research practice need deeper evidence during interview."],
+          "interviewEvidenceNeeded": ["Explain how the first ninety days would frame a resident problem, partner with an agency, define success, and leave ownership inside government."]
+        }
+      ]
+    }
+  ]
+}

@@ -53,19 +53,18 @@ export function evaluateResumeVersions(root = defaultRoot) {
   const requiredSections = [
     "# Jamie Burkart",
     "## Professional Summary",
-    "## Core Capabilities",
-    "## Selected Product & Civic Impact",
     "## Professional Experience",
     "## Education & Professional Development",
-    "## Additional"
+    "## Core Skills",
+    "## Selected Product Evidence"
   ];
   const wordCount = resume.trim().split(/\s+/).length;
   if (!requiredSections.every((heading) => resume.includes(heading)) ||
       /^\s*\|.+\|\s*$/m.test(resume) ||
       /!\[[^\]]*\]\(/.test(resume) ||
       /\b(?:I|me|my)\b/.test(resume) ||
-      wordCount > 1050) {
-    fail("ats-structure", `The resume lost a standard ATS section, introduced a table, image, or first-person pronoun, or exceeded 1,050 words (observed ${wordCount}).`);
+      wordCount < 450 || wordCount > 850) {
+    fail("ats-structure", `The resume lost a standard ATS section, introduced a table, image, or first-person pronoun, or fell outside 450-850 words (observed ${wordCount}).`);
   }
 
   const roleTerms = [
