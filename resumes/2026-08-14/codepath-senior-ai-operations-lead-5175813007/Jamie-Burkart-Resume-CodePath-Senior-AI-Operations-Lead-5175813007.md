@@ -28,27 +28,27 @@ New York, NY / Remote | 2012–Present
 - Use AI-assisted research, coding, documentation, and evaluation with Git/GitHub, JavaScript/TypeScript, React/Next.js, Python, SQL, APIs, Docker/Dokku, and structured knowledge workflows; retain source, privacy, consent, collective-credit, and human-authorization boundaries.
 - Separate measured system signals—coverage, pass/fail criteria, exact-candidate fingerprints, regressions, and review status—from open questions about adoption, time saved, quality gained, user behavior, or causal impact.
 
-### NYC Artist Coalition / FairRentNYC — Co-Founder, Civic Systems & Coalition Operations Lead
+### [NYC Artist Coalition](https://nycartc.com/) / [FairRentNYC](https://fairrentnyc.nycartc.com/) — Co-Founder, Civic Systems & Coalition Operations Lead
 
 New York, NY | 2017–Present
 
 - Built and stewarded 30+ pages of shared campaign memory for a 2026 Commercial Rent Stabilization collaboration, connecting running minutes, decisions, actions, source maps, legal and policy questions, media assets, and city/state workstreams.
 - Translate coalition workflow discovery into maintained digital infrastructure while keeping private notes, legal review, personal data, and sensitive strategy protected and subject to human review.
 
-### WOWList.org — Co-Founder, Product & Community Systems
+### [WOWList.org](https://wowlist.org/) — Co-Founder, Product & Community Systems
 
 New York, NY / Remote | 2015–2020
 
 - Co-founded, co-built, and operated with Richard Caceres a natural-language community-calendar platform spanning product definition, implementation, organizer onboarding, support, public communication, instrumentation, and low-cost operations across distributed maintainers.
 - Reached a July 2017 production snapshot of 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts; distinguish these activity counts from adoption quality, retention, changed team behavior, or causal impact.
 
-### Harry J. Epstein Company — Product, Web & Operations Partner through THICK ARTS
+### [Harry J. Epstein Company](https://www.harryepstein.com/) — Product, Web & Operations Partner through THICK ARTS
 
 Kansas City, MO / Remote | 2012–Present
 
 - Led long-running e-commerce, analytics, content, marketing, and operations workflow improvements, contributing to a period of 2x revenue growth while helping an 80+ year-old industrial business modernize incrementally.
 
-### CallNYC.org — Civic-Tech Builder & Product Translator
+### [CallNYC.org](https://callnyc.org/) — Civic-Tech Builder & Product Translator
 
 New York, NY | 2016
 

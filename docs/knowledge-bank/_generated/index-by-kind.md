@@ -3,7 +3,7 @@
 
 **Source commit:** `351d68f5761db464bcff124b5c301d644740b56a`
 **Generation time:** 2026-08-14T16:07:29-04:00
-**Source fingerprint:** `18e8a7729f280335b1c46944b8c52fa69a69860616e59c0a6e1492047c62b806`
+**Source fingerprint:** `eb999e116462398bfeae517b1ac808ed1b86d98e61f5eb27505faf3e6fc5c296`
 
 ## application
 
@@ -292,6 +292,7 @@
 - [What the work was up against](../indexes/what-the-work-was-up-against.md) - `index.knowledge-wiki.pressures`
 - [Professional record and reception](../indexes/professional-record-and-reception.md) - `index.knowledge-wiki.professional-record`
 - [Project lineages](../indexes/project-lineages.md) - `index.knowledge-wiki.project-lineages`
+- [Public project websites currently responding](../indexes/project-websites-live-2026-08-14.md) - `index.knowledge-wiki.project-websites-live.2026-08-14`
 - [Public testimony and hearing voices](../indexes/public-testimony-and-hearing-voices.md) - `index.knowledge-wiki.public-testimony-and-hearing-voices`
 - [Relational Infrastructure Atlas](../indexes/relational-infrastructure-atlas.md) - `index.knowledge-wiki.relational-infrastructure-atlas`
 - [Research Agenda and Held Claims](../indexes/research-agenda-and-held-claims.md) - `index.knowledge-wiki.research-agenda-and-held-claims`
@@ -401,10 +402,12 @@
 - [Photographic source return for DCLA, KC Town Hall, and Council fieldwork](../research-runs/photographic-source-return-2026-07-26.md) - `research.photographic-source-return.2026-07-26`
 - [Portfolio project-cover private editor field](../research-runs/portfolio-project-cover-field-2026-08-14.md) - `research.portfolio-project-cover-field.2026-08-14`
 - [Professional record public-safe promotion review, August 3, 2026](../research-runs/professional-record-promotion-2026-08-03.md) - `research.professional-record-promotion.2026-08-03`
+- [Restored project sites close reading](../research-runs/restored-project-sites-close-reading-2026-08-14.md) - `research.restored-project-sites.close-reading.2026-08-14`
 
 ## source
 
 - [ACLU political and advocacy leadership - August 2026](../sources/aclu-political-advocacy-leadership-2026.md) - `source.aclu.political-advocacy-leadership.2026-08-13`
+- [CallNYC restored public site](../sources/callnyc-live-site-2026-08-14.md) - `source.callnyc.live-site.2026-08-14`
 - [CallNYC public source repository](../sources/callnyc-source-repository.md) - `source.callnyc.source-repository`
 - [Campaign-site repository family, 2020-2022](../sources/campaign-site-repository-family-2020-2022.md) - `source.campaign-site.repository-family.2020-2022`
 - [Civic Hall hackathon announcement](../sources/civichall-hackathon-announcement-2016.md) - `source.civichall.hackathon-announcement.2016`
@@ -432,6 +435,7 @@
 - [Official posting - PermitFlow Product Operations Manager](../sources/jobs-permitflow-product-operations.md) - `source.jobs.permitflow.product-operations.8a6e6066`
 - [The Kansas City Star raft report, November 15, 2007](../sources/kansas-city-star-raft-2007-11-15.md) - `source.kansas-city-star.raft.2007-11-15`
 - [KC Town Hall CCED proposal bundle, 2019](../sources/kc-town-hall-cced-proposal-2019.md) - `source.kc-town-hall.cced-proposal.2019`
+- [KC Town Hall restored public site](../sources/kc-town-hall-live-site-2026-08-14.md) - `source.kc-town-hall.live-site.2026-08-14`
 - [KC Town Hall local digital archive review, July 2026](../sources/archives/kc-town-hall-local-digital-archive-2026-07.md) - `source.kc-town-hall.local-digital-archive.2026-07`
 - [KC Town Hall photographic oral histories, July 2026](../sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md) - `source.kc-town-hall.photographic-oral-histories.2026-07`
 - [Frozen Knowledge Wiki branch A](../sources/knowledge-wiki-branch-a-2026-07-19.md) - `source.knowledge-wiki.branch-a.2026-07-19`
@@ -471,6 +475,7 @@
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`
 - [Professional record governed photo field](../sources/photo-metadata/professional-record-photo-field-2026-08.md) - `source.professional-record.photo-field.2026-08`
 - [Governed professional-record research comparison, August 2026](../sources/archives/professional-record-research-2026-08.md) - `source.professional-record.research.2026-08`
+- [Jamie Burkart project websites live check](../sources/project-websites-live-check-2026-08-14.md) - `source.project-websites.live-check.2026-08-14`
 - [Late-July 2026 current-workstream review](../sources/working/current-workstream-2026-07-27.md) - `source.protected.current-workstream.2026-07-27`
 - [Protected source-backed memory opportunity — metadata boundary](../sources/protected-source-backed-memory-opportunity.md) - `source.protected.source-backed-memory-opportunity.2026`
 - [Jamie Burkart recollection of bicycle-canoe journeys](../sources/recollections/jamie-canoe-commuting-2026-07.md) - `source.recollection.jamie-canoe-commuting.2026-07`
@@ -487,6 +492,7 @@
 - [Protected communication history - public-safe metadata boundary](../sources/protected-communication-vault-metadata.md) - `source.vault.communication-history.metadata`
 - [Weibel Institute In Terms of Media event record](../sources/weibel-in-terms-of-media-2024.md) - `source.weibel.in-terms-of-media.2024`
 - [Governed WOW List knowledge repository](../sources/wowlist-knowledge-repository-2026.md) - `source.wowlist.knowledge-repository.2026`
+- [WOW List restored public site](../sources/wowlist-live-site-2026-08-14.md) - `source.wowlist.live-site.2026-08-14`
 - [What is WOW List repaired transcript](../sources/wowlist-repaired-transcript-2026.md) - `source.wowlist.repaired-transcript.2026`
 - [Jamie Burkart testimony for Cabaret Law repeal](../testimony/2017-09-14-cabaret-law-repeal.md) - `testimony.jamie-burkart.cabaret-law.2017-09-14`
 - [Jamie Burkart testimony on CreateNYC and cultural-affairs funding](../testimony/2018-03-16-cultural-affairs-budget.md) - `testimony.jamie-burkart.cultural-affairs-budget.2018-03-16`

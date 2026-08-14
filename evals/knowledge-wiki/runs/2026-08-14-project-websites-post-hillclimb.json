@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "evalId": "project-websites-current-inventory-2026-08-14",
+  "runId": "2026-08-14-project-websites-post-hillclimb",
+  "stage": "after-restored-site-inventory",
+  "overall": "pass",
+  "summary": {
+    "maintainedInventoryExists": true,
+    "governedSites": 10,
+    "closeReadSites": 3,
+    "portfolioDirectLinks": 8,
+    "resumeMentionLinkPairs": 29
+  },
+  "boundary": "Ten means the current governed inventory under the documented scope. Responding does not mean current service, exhaustive lifetime census, or sole authorship."
+}
+

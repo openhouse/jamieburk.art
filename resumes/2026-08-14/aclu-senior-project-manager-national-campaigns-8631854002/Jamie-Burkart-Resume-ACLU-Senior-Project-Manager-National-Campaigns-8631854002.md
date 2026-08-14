@@ -19,7 +19,7 @@ Senior project and campaign-operations leader with 14+ years translating complex
 
 ## Professional Experience
 
-### NYC Artist Coalition / FairRentNYC — Co-Founder, Coalition Operations & Policy Communications Lead
+### [NYC Artist Coalition](https://nycartc.com/) / [FairRentNYC](https://fairrentnyc.nycartc.com/) — Co-Founder, Coalition Operations & Policy Communications Lead
 
 New York, NY | 2017–Present
 
@@ -33,24 +33,24 @@ New York, NY | 2017–Present
 New York, NY / Remote | 2012–Present
 
 - Lead multi-organization web, communications, and operating-system projects from ambiguous needs through requirements, work plans, stakeholder alignment, implementation, launch, adoption, issue resolution, reporting, and durable handoff.
-- Led long-running e-commerce, analytics, content, marketing, and operational improvements for Harry J. Epstein Company, contributing to a period of 2x revenue growth while helping an 80+ year-old industrial business modernize without losing its trusted public voice.
+- Led long-running e-commerce, analytics, content, marketing, and operational improvements for [Harry J. Epstein Company](https://www.harryepstein.com/), contributing to a period of 2x revenue growth while helping an 80+ year-old industrial business modernize without losing its trusted public voice.
 - Coordinate vendors, documentation, release dependencies, risk, and decision-making; build only the amount of process a team can use and maintain.
 
-### KC Town Hall LLC — Co-Founder & Project Manager
+### [KC Town Hall LLC](https://kctownhall.com/) — Co-Founder & Project Manager
 
 Kansas City, MO | 2015–2024
 
 - Co-led planning, vendor coordination, public-benefit documentation, municipal compliance, and field dependencies for adaptive reuse of an approximately 6,500 sq. ft. historic building.
 - Co-developed a successful $490,539 public funding request, served as the City's named developer/presenter, and later transitioned the project to a mission-aligned organization. The award was not disbursed, and the record does not establish procurement authority.
 
-### WOWList.org — Co-Founder, Product & Community Systems
+### [WOWList.org](https://wowlist.org/) — Co-Founder, Product & Community Systems
 
 New York, NY / Remote | 2015–2020
 
 - Co-founded, co-built, and operated with Richard Caceres a natural-language community-calendar platform, coordinating organizer onboarding, public communication, technical releases, support, and low-cost operations across a distributed maintainer network.
 - Reached a July 2017 production snapshot of 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts; these are activity counts, not retention, policy, or causal impact claims.
 
-### CallNYC.org — Civic-Tech Builder & Product Translator
+### [CallNYC.org](https://callnyc.org/) — Civic-Tech Builder & Product Translator
 
 New York, NY | 2016
 

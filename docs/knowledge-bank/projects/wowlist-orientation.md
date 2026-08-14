@@ -5,7 +5,7 @@ kind: project
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-19
+last_reviewed: 2026-08-14
 review_by: 2026-10-19
 aliases:
   - WOW List
@@ -31,6 +31,10 @@ relations:
     target: source.wowlist.knowledge-repository.2026
     href: ../sources/wowlist-knowledge-repository-2026.md
     context: Connects the public-safe Wiki to a governed private canonical edition through an opaque summary-only source record.
+  - type: uses_source
+    target: source.wowlist.live-site.2026-08-14
+    href: ../sources/wowlist-live-site-2026-08-14.md
+    context: Records the restored two-page relaunch preview and its current noindex boundary.
   - type: related_to
     target: method.sunday-dinner-wowlist-nycac-synergy
     href: ../methods/sunday-dinner-wowlist-nycac-synergy.md
@@ -68,3 +72,12 @@ For a bounded hiring translation, see the [Senior Product Manager role-fit
 brief](../applications/wowlist-senior-product-manager-oti-782366.md). It keeps
 collective credit, civil-service eligibility, accessibility evidence, and final
 selection as separate questions.
+
+## Restored public site
+
+[WOW List](https://wowlist.org/) is currently a two-page, noindex relaunch
+preview. The [August 2026 close
+reading](../sources/wowlist-live-site-2026-08-14.md) records the clear
+real-life-participation invitation, shared Richard Caceres/Jamie Burkart credit,
+and the underlying natural-language product model. The preview is not the
+historic application, user database, or a current-adoption measure.

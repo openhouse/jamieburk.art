@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "id": "resume-artifact.nyc-oti.senior-product-manager.782366.pdf",
+  "targetRole": "Senior Product Manager",
+  "organization": "NYC Office of Technology and Innovation - Public Interest Technology Crew",
+  "jobId": "782366",
+  "sourceMarkdownPath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
+  "sourceMarkdownSha256": "33f481d9c86f19f7e12f621057b213ca492b25228ebd753e133a2a42f031f0e0",
+  "pdfPath": "output/pdf/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf",
+  "pdfSha256": "a27b34dd649feec52bae16a939dff80ca586dba46d71a516b83eff2aeedd5f4b",
+  "pdfSizeBytes": 101955,
+  "pageCount": 2,
+  "pageSizePoints": [612, 792],
+  "documentTitle": "Jamie Burkart ◍ Resume ◍ NYC OTI Senior Product Manager 782366 ◍ 2026-08-14",
+  "templateProvenance": {
+    "source": "Native copy of the user-supplied prior Google Docs resume",
+    "sourceRemainedReadOnly": true,
+    "copiedDocumentEdited": true,
+    "publicRepositoryExcludesGoogleDocumentIds": true
+  },
+  "layoutSignature": {
+    "page": "US Letter",
+    "marginsPoints": {
+      "top": 36,
+      "bottom": 36,
+      "left": 43.2,
+      "right": 43.2
+    },
+    "displayTypeface": "Palatino Linotype",
+    "roleTypeface": "Oswald",
+    "bodyTypeface": "Karla",
+    "nativeHyperlinksRequired": true
+  },
+  "requiredLinks": [
+    "mailto:jamie.burkart@gmail.com",
+    "https://jamieburk.art/",
+    "https://www.linkedin.com/in/jamie-burkart/",
+    "https://github.com/openhouse",
+    "https://www.harryepstein.com/",
+    "https://nycartc.com/",
+    "https://fairrentnyc.nycartc.com/",
+    "https://wowlist.org/",
+    "https://callnyc.org/",
+    "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf",
+    "https://kctownhall.com/"
+  ],
+  "hardGates": [
+    "source-markdown-bound",
+    "exact-pdf-bound",
+    "valid-pdf-envelope",
+    "two-page-letter-layout",
+    "tagged-google-docs-export",
+    "safe-static-pdf",
+    "native-hyperlinks",
+    "complete-visual-inspection"
+  ],
+  "visualInspection": {
+    "status": "pass",
+    "inspectedAt": "2026-08-14",
+    "pagesInspected": [1, 2],
+    "criteria": {
+      "noClippedOrOverlappingText": true,
+      "noOrphanedHeadings": true,
+      "consistentTypography": true,
+      "clearTwoPageNarrative": true,
+      "readableAtNormalScale": true,
+      "balancedWhitespace": true
+    }
+  },
+  "hillClimb": {
+    "baseline": "The tailored Markdown passed content gates but no application-ready PDF was bound to the exact source or visually inspected.",
+    "candidate": "A native Google Docs copy carries the tailored content into the established two-page layout, preserves the source typography system, adds native hyperlinks, and passes exact-artifact and all-page visual QA.",
+    "boundedChange": "Created the application-specific PDF artifact without changing the source template or weakening factual, collective-credit, privacy, or consent boundaries."
+  },
+  "boundary": "This artifact gate verifies the exact PDF, source binding, structural safety, hyperlinks, and recorded all-page visual inspection. It is not an employer endorsement, civil-service eligibility decision, application submission, or guarantee of interview or hire."
+}

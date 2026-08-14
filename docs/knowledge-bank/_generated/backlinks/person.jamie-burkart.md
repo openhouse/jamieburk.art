@@ -3,7 +3,7 @@
 
 **Source commit:** `351d68f5761db464bcff124b5c301d644740b56a`
 **Generation time:** 2026-08-14T16:07:29-04:00
-**Source fingerprint:** `18e8a7729f280335b1c46944b8c52fa69a69860616e59c0a6e1492047c62b806`
+**Source fingerprint:** `eb999e116462398bfeae517b1ac808ed1b86d98e61f5eb27505faf3e6fc5c296`
 
 - [Interrogative Design Symposium](../../events/interrogative-design-symposium-2024.md) - `related_to` (frontmatter)
 - [AI Made Me Do It symposium and exhibition](../../events/ai-made-me-do-it-symposium-2024.md) - `related_to` (frontmatter)
@@ -13,6 +13,7 @@
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `related_to` (frontmatter)
 - [Professional record and reception](../../indexes/professional-record-and-reception.md) - `prose_link` (markdown)
 - [Professional record and reception](../../indexes/professional-record-and-reception.md) - `related_to` (frontmatter)
+- [Public project websites currently responding](../../indexes/project-websites-live-2026-08-14.md) - `related_to` (frontmatter)
 - [Visual evidence index](../../indexes/visual-evidence.md) - `related_to` (frontmatter)
 - [Structure grows from the material](../../methods/structure-grows-from-the-material.md) - `related_to` (frontmatter)
 - [Diya Vij](../../people/diya-vij.md) - `related_to` (frontmatter)

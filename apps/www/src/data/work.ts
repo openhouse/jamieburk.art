@@ -377,6 +377,7 @@ const workItemsInput = [
       "Public Interfaces"
     ],
     links: [
+      { label: "Archived project site", url: "https://callnyc.org/" },
       {
         label: "Politico New York archived PDF",
         url: "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf"
@@ -445,6 +446,7 @@ const workItemsInput = [
       "Community Platform Design",
       "Event Workflows"
     ],
+    links: [{ label: "Project site", url: "https://wowlist.org/" }],
     careNote:
       "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
     sourceLayer:
@@ -576,6 +578,7 @@ const workItemsInput = [
     ],
     tags: ["Implementation", "Documentation", "Knowledge Systems", "Public-Facing Tools"],
     capabilities: ["Stakeholder Documentation", "Funding Support", "Historic Preservation Context"],
+    links: [{ label: "Historical project site", url: "https://kctownhall.com/" }],
     careNote:
       "Securing the award names Jamie's documented proposal-and-presentation role; institutional authority remained with the Board and Council, and appropriation was not payment to Jamie. The transition is an authorized first-party professional account. Private personal, financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:

@@ -3,7 +3,7 @@
 
 **Source commit:** `351d68f5761db464bcff124b5c301d644740b56a`
 **Generation time:** 2026-08-14T16:07:29-04:00
-**Source fingerprint:** `18e8a7729f280335b1c46944b8c52fa69a69860616e59c0a6e1492047c62b806`
+**Source fingerprint:** `eb999e116462398bfeae517b1ac808ed1b86d98e61f5eb27505faf3e6fc5c296`
 
 - [WOW List - Senior Product Manager role-fit brief](../../applications/wowlist-senior-product-manager-oti-782366.md) - `part_of` (frontmatter)
 - [WOW List - Senior Product Manager role-fit brief](../../applications/wowlist-senior-product-manager-oti-782366.md) - `prose_link` (markdown)
@@ -22,4 +22,5 @@
 - [CodePath - Engineering Project Manager](../../opportunities/codepath-engineering-project-manager.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
 - [Governed WOW List knowledge repository](../../sources/wowlist-knowledge-repository-2026.md) - `related_to` (frontmatter)
+- [WOW List restored public site](../../sources/wowlist-live-site-2026-08-14.md) - `documents` (frontmatter)
 - [What is WOW List repaired transcript](../../sources/wowlist-repaired-transcript-2026.md) - `documents` (frontmatter)

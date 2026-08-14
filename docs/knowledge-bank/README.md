@@ -75,6 +75,10 @@ relations:
     href: indexes/federated-knowledge-graph-ecosystem.md
     context: Current repository roles, non-automatic handoffs, protected boundaries, and held integration questions across the graph ecosystem.
   - type: related_to
+    target: index.knowledge-wiki.project-websites-live.2026-08-14
+    href: indexes/project-websites-live-2026-08-14.md
+    context: Dated, expiring inventory of public project homes, contribution boundaries, and current-service interpretations.
+  - type: related_to
     target: project.nyc-artist-coalition
     href: projects/nyc-artist-coalition-2017.md
     context: Governed civic-systems record strengthened by complete shared-folder accounting.
@@ -156,6 +160,9 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Federated Knowledge Wiki graph ecosystem](indexes/federated-knowledge-graph-ecosystem.md):
   the current division of custody, evidence, semantic, packet, source-edition,
   project-threshold, and portfolio authority across non-automatic handoffs.
+- [Public project websites currently responding](indexes/project-websites-live-2026-08-14.md):
+  the dated current count, project links, contribution boundaries, and the
+  distinction between a responding website and a current service.
 - [NYC Artist Coalition](projects/nyc-artist-coalition-2017.md): public-source
   claims, collective-credit boundaries, and the governed shared-folder research
   pass.

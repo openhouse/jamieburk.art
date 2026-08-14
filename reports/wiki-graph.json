@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-14T16:07:29-04:00",
   "sourceCommit": "351d68f5761db464bcff124b5c301d644740b56a",
-  "sourceFingerprint": "18e8a7729f280335b1c46944b8c52fa69a69860616e59c0a6e1492047c62b806",
+  "sourceFingerprint": "eb999e116462398bfeae517b1ac808ed1b86d98e61f5eb27505faf3e6fc5c296",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3431,6 +3431,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "index.knowledge-wiki.project-websites-live.2026-08-14",
+      "path": "docs/knowledge-bank/indexes/project-websites-live-2026-08-14.md",
+      "title": "Public project websites currently responding",
+      "kind": "index",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Governed, expiring inventory of ten public project homes with documented Jamie build, implementation, maintenance, or systems-lead contributions.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-09-13"
+    },
+    {
       "id": "index.knowledge-wiki.public-testimony-and-hearing-voices",
       "path": "docs/knowledge-bank/indexes/public-testimony-and-hearing-voices.md",
       "title": "Public testimony and hearing voices",
@@ -4059,7 +4072,7 @@
         "Call NYC",
         "CallNYC.org"
       ],
-      "lastReviewed": "2026-07-18",
+      "lastReviewed": "2026-08-14",
       "reviewBy": "2027-01-18"
     },
     {
@@ -4113,7 +4126,7 @@
       "sensitivity": "moderate",
       "summary": "Adaptive-reuse, neighborhood fieldwork, resident-service, and public-benefit documentation project with municipal funding history kept distinct from disbursement and completion.",
       "aliases": [],
-      "lastReviewed": "2026-07-19",
+      "lastReviewed": "2026-08-14",
       "reviewBy": "2026-10-19"
     },
     {
@@ -4238,7 +4251,7 @@
         "WOW List",
         "wowlist.org"
       ],
-      "lastReviewed": "2026-07-19",
+      "lastReviewed": "2026-08-14",
       "reviewBy": "2026-10-19"
     },
     {
@@ -4489,6 +4502,19 @@
       "reviewBy": "2026-10-03"
     },
     {
+      "id": "research.restored-project-sites.close-reading.2026-08-14",
+      "path": "docs/knowledge-bank/research-runs/restored-project-sites-close-reading-2026-08-14.md",
+      "title": "Restored project sites close reading",
+      "kind": "research-run",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Cross-site close reading of KC Town Hall, WOW List, and CallNYC after their August 2026 restoration.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-09-13"
+    },
+    {
       "id": "source.aclu.political-advocacy-leadership.2026-08-13",
       "path": "docs/knowledge-bank/sources/aclu-political-advocacy-leadership-2026.md",
       "title": "ACLU political and advocacy leadership - August 2026",
@@ -4499,6 +4525,19 @@
       "summary": "Official ACLU leadership evidence identifying Deirdre Schifeling as Chief Political and Advocacy Officer and leader of the National Political Advocacy Department.",
       "aliases": [],
       "lastReviewed": "2026-08-13",
+      "reviewBy": "2026-09-13"
+    },
+    {
+      "id": "source.callnyc.live-site.2026-08-14",
+      "path": "docs/knowledge-bank/sources/callnyc-live-site-2026-08-14.md",
+      "title": "CallNYC restored public site",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Bounded close reading and HTTP crawl of the restored archived CallNYC prototype.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
       "reviewBy": "2026-09-13"
     },
     {
@@ -4851,6 +4890,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "source.kc-town-hall.live-site.2026-08-14",
+      "path": "docs/knowledge-bank/sources/kc-town-hall-live-site-2026-08-14.md",
+      "title": "KC Town Hall restored public site",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Bounded close reading and HTTP crawl of the restored KC Town Hall public site.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-09-13"
     },
     {
       "id": "source.kc-town-hall.local-digital-archive.2026-07",
@@ -5360,6 +5412,19 @@
       "reviewBy": "2026-10-03"
     },
     {
+      "id": "source.project-websites.live-check.2026-08-14",
+      "path": "docs/knowledge-bank/sources/project-websites-live-check-2026-08-14.md",
+      "title": "Jamie Burkart project websites live check",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Dated HTTP inventory of ten public project homes with documented Jamie build, implementation, maintenance, or systems-lead contributions.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-09-13"
+    },
+    {
       "id": "source.protected.current-workstream.2026-07-27",
       "path": "docs/knowledge-bank/sources/working/current-workstream-2026-07-27.md",
       "title": "Late-July 2026 current-workstream review",
@@ -5569,6 +5634,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-11",
       "reviewBy": "2026-11-11"
+    },
+    {
+      "id": "source.wowlist.live-site.2026-08-14",
+      "path": "docs/knowledge-bank/sources/wowlist-live-site-2026-08-14.md",
+      "title": "WOW List restored public site",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Bounded close reading and HTTP crawl of the WOW List relaunch preview.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-09-13"
     },
     {
       "id": "source.wowlist.repaired-transcript.2026",
@@ -12230,6 +12308,14 @@
     {
       "from": "index.knowledge-wiki",
       "type": "related_to",
+      "to": "index.knowledge-wiki.project-websites-live.2026-08-14",
+      "source": "frontmatter",
+      "href": "indexes/project-websites-live-2026-08-14.md",
+      "context": "Dated, expiring inventory of public project homes, contribution boundaries, and current-service interpretations."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "related_to",
       "to": "index.knowledge-wiki.public-testimony-and-hearing-voices",
       "source": "frontmatter",
       "href": "indexes/public-testimony-and-hearing-voices.md",
@@ -13569,6 +13655,54 @@
       "to": "timeline.jamie-practice.2004-present",
       "source": "frontmatter",
       "href": "../timelines/practice-2004-present.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.project-websites-live.2026-08-14",
+      "type": "related_to",
+      "to": "person.jamie-burkart",
+      "source": "frontmatter",
+      "href": "../people/jamie-burkart.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.project-websites-live.2026-08-14",
+      "type": "related_to",
+      "to": "research.restored-project-sites.close-reading.2026-08-14",
+      "source": "frontmatter",
+      "href": "../research-runs/restored-project-sites-close-reading-2026-08-14.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.project-websites-live.2026-08-14",
+      "type": "uses_source",
+      "to": "source.callnyc.live-site.2026-08-14",
+      "source": "frontmatter",
+      "href": "../sources/callnyc-live-site-2026-08-14.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.project-websites-live.2026-08-14",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.live-site.2026-08-14",
+      "source": "frontmatter",
+      "href": "../sources/kc-town-hall-live-site-2026-08-14.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.project-websites-live.2026-08-14",
+      "type": "uses_source",
+      "to": "source.project-websites.live-check.2026-08-14",
+      "source": "frontmatter",
+      "href": "../sources/project-websites-live-check-2026-08-14.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.project-websites-live.2026-08-14",
+      "type": "uses_source",
+      "to": "source.wowlist.live-site.2026-08-14",
+      "source": "frontmatter",
+      "href": "../sources/wowlist-live-site-2026-08-14.md",
       "context": null
     },
     {
@@ -15568,6 +15702,14 @@
     {
       "from": "project.callnyc",
       "type": "uses_source",
+      "to": "source.callnyc.live-site.2026-08-14",
+      "source": "frontmatter",
+      "href": "../sources/callnyc-live-site-2026-08-14.md",
+      "context": null
+    },
+    {
+      "from": "project.callnyc",
+      "type": "uses_source",
       "to": "source.callnyc.source-repository",
       "source": "frontmatter",
       "href": "../sources/callnyc-source-repository.md",
@@ -15724,6 +15866,14 @@
       "source": "frontmatter",
       "href": "../capabilities/participatory-public-systems.md",
       "context": null
+    },
+    {
+      "from": "project.kc-town-hall",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.live-site.2026-08-14",
+      "source": "frontmatter",
+      "href": "../sources/kc-town-hall-live-site-2026-08-14.md",
+      "context": "Records the restored historical project site and its current-service boundary."
     },
     {
       "from": "project.let-nyc-dance",
@@ -16004,6 +16154,14 @@
       "source": "frontmatter",
       "href": "../sources/wowlist-knowledge-repository-2026.md",
       "context": "Connects the public-safe Wiki to a governed private canonical edition through an opaque summary-only source record."
+    },
+    {
+      "from": "project.wowlist",
+      "type": "uses_source",
+      "to": "source.wowlist.live-site.2026-08-14",
+      "source": "frontmatter",
+      "href": "../sources/wowlist-live-site-2026-08-14.md",
+      "context": "Records the restored two-page relaunch preview and its current noindex boundary."
     },
     {
       "from": "projection.photo.kc-town-hall.roof-work",
@@ -16774,11 +16932,43 @@
       "context": null
     },
     {
+      "from": "research.restored-project-sites.close-reading.2026-08-14",
+      "type": "uses_source",
+      "to": "source.callnyc.live-site.2026-08-14",
+      "source": "frontmatter",
+      "href": "../sources/callnyc-live-site-2026-08-14.md",
+      "context": null
+    },
+    {
+      "from": "research.restored-project-sites.close-reading.2026-08-14",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.live-site.2026-08-14",
+      "source": "frontmatter",
+      "href": "../sources/kc-town-hall-live-site-2026-08-14.md",
+      "context": null
+    },
+    {
+      "from": "research.restored-project-sites.close-reading.2026-08-14",
+      "type": "uses_source",
+      "to": "source.wowlist.live-site.2026-08-14",
+      "source": "frontmatter",
+      "href": "../sources/wowlist-live-site-2026-08-14.md",
+      "context": null
+    },
+    {
       "from": "source.aclu.political-advocacy-leadership.2026-08-13",
       "type": "supports",
       "to": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
       "source": "frontmatter",
       "href": "../opportunities/aclu-senior-project-manager-national-campaigns.md",
+      "context": null
+    },
+    {
+      "from": "source.callnyc.live-site.2026-08-14",
+      "type": "documents",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
       "context": null
     },
     {
@@ -17083,6 +17273,14 @@
       "to": "decision.kc-town-hall.listening-fieldwork",
       "source": "frontmatter",
       "href": "../decisions/kc-town-hall-listening-fieldwork.md",
+      "context": null
+    },
+    {
+      "from": "source.kc-town-hall.live-site.2026-08-14",
+      "type": "documents",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../projects/kc-town-hall-orientation.md",
       "context": null
     },
     {
@@ -17702,6 +17900,14 @@
       "context": null
     },
     {
+      "from": "source.wowlist.live-site.2026-08-14",
+      "type": "documents",
+      "to": "project.wowlist",
+      "source": "frontmatter",
+      "href": "../projects/wowlist-orientation.md",
+      "context": null
+    },
+    {
       "from": "source.wowlist.repaired-transcript.2026",
       "type": "documents",
       "to": "project.wowlist",
@@ -17813,7 +18019,7 @@
       "toPath": "docs/knowledge-bank/citational-care.md",
       "to": null,
       "fragment": null,
-      "line": 144,
+      "line": 147,
       "kind": "link"
     },
     {
@@ -17822,7 +18028,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc.md",
       "to": "project.callnyc",
       "fragment": null,
-      "line": 145,
+      "line": 148,
       "kind": "link"
     },
     {
@@ -17831,7 +18037,7 @@
       "toPath": "docs/knowledge-bank/intake-and-maturation.md",
       "to": null,
       "fragment": null,
-      "line": 148,
+      "line": 151,
       "kind": "link"
     },
     {
@@ -17840,7 +18046,7 @@
       "toPath": "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md",
       "to": null,
       "fragment": null,
-      "line": 152,
+      "line": 155,
       "kind": "link"
     },
     {
@@ -17849,7 +18055,7 @@
       "toPath": "docs/knowledge-bank/agency-and-collective-credit.md",
       "to": null,
       "fragment": null,
-      "line": 159,
+      "line": 162,
       "kind": "link"
     },
     {
@@ -17858,7 +18064,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-finkelpearl-council-hearing-review.md",
       "to": null,
       "fragment": null,
-      "line": 164,
+      "line": 167,
       "kind": "link"
     },
     {
@@ -17867,7 +18073,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-campaign-press-archive.md",
       "to": null,
       "fragment": null,
-      "line": 170,
+      "line": 173,
       "kind": "link"
     },
     {
@@ -17876,7 +18082,7 @@
       "toPath": "docs/knowledge-bank/projects/talks-not-raids.md",
       "to": null,
       "fragment": null,
-      "line": 175,
+      "line": 178,
       "kind": "link"
     },
     {
@@ -17885,7 +18091,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 181,
+      "line": 184,
       "kind": "link"
     },
     {
@@ -17894,7 +18100,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/kcspacesfund-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 183,
+      "line": 186,
       "kind": "link"
     },
     {
@@ -17903,7 +18109,7 @@
       "toPath": "docs/knowledge-bank/projects/jamie-personal-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 189,
+      "line": 192,
       "kind": "link"
     },
     {
@@ -17912,7 +18118,7 @@
       "toPath": "docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json",
       "to": null,
       "fragment": null,
-      "line": 191,
+      "line": 194,
       "kind": "link"
     },
     {
@@ -17921,7 +18127,7 @@
       "toPath": "docs/knowledge-bank/projects/kc-town-hall.md",
       "to": null,
       "fragment": null,
-      "line": 199,
+      "line": 202,
       "kind": "link"
     },
     {
@@ -17930,7 +18136,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
       "to": null,
       "fragment": null,
-      "line": 205,
+      "line": 208,
       "kind": "link"
     },
     {
@@ -17939,7 +18145,7 @@
       "toPath": "docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
       "to": null,
       "fragment": null,
-      "line": 207,
+      "line": 210,
       "kind": "link"
     },
     {
@@ -17948,7 +18154,7 @@
       "toPath": "docs/knowledge-bank/intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md",
       "to": null,
       "fragment": null,
-      "line": 213,
+      "line": 216,
       "kind": "link"
     },
     {
@@ -17957,7 +18163,7 @@
       "toPath": "docs/knowledge-bank/projects/archive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 219,
+      "line": 222,
       "kind": "link"
     },
     {
@@ -17966,7 +18172,7 @@
       "toPath": "docs/knowledge-bank/projects/icloud-teams-archive-delta-2026-07-15.md",
       "to": null,
       "fragment": null,
-      "line": 225,
+      "line": 228,
       "kind": "link"
     },
     {
@@ -17975,7 +18181,7 @@
       "toPath": "docs/knowledge-bank/projects/google-drive-production-2026-07-14.md",
       "to": null,
       "fragment": null,
-      "line": 231,
+      "line": 234,
       "kind": "link"
     },
     {
@@ -17984,7 +18190,7 @@
       "toPath": "docs/knowledge-bank/projects/social-media-archive-production.md",
       "to": null,
       "fragment": null,
-      "line": 237,
+      "line": 240,
       "kind": "link"
     },
     {
@@ -17993,7 +18199,7 @@
       "toPath": "docs/knowledge-bank/projects/nycac-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 243,
+      "line": 246,
       "kind": "link"
     },
     {
@@ -18002,7 +18208,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
       "to": null,
       "fragment": null,
-      "line": 245,
+      "line": 248,
       "kind": "link"
     },
     {
@@ -18011,7 +18217,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-retrievable-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 251,
+      "line": 254,
       "kind": "link"
     },
     {
@@ -18020,16 +18226,7 @@
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md",
       "to": null,
       "fragment": null,
-      "line": 256,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
-      "to": null,
-      "fragment": null,
-      "line": 258,
+      "line": 259,
       "kind": "link"
     },
     {
@@ -18044,10 +18241,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
+      "to": null,
+      "fragment": null,
+      "line": 261,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/projects/urbanhermit-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 265,
+      "line": 268,
       "kind": "link"
     },
     {
@@ -18056,7 +18262,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 267,
+      "line": 270,
       "kind": "link"
     },
     {
@@ -18065,7 +18271,7 @@
       "toPath": "docs/knowledge-bank/projects/callnyc-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 273,
+      "line": 276,
       "kind": "link"
     },
     {
@@ -18074,7 +18280,7 @@
       "toPath": "docs/knowledge-bank/data/callnyc-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 275,
+      "line": 278,
       "kind": "link"
     },
     {
@@ -18092,7 +18298,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
       "to": null,
       "fragment": null,
-      "line": 280,
+      "line": 283,
       "kind": "link"
     },
     {
@@ -18101,7 +18307,7 @@
       "toPath": "docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
       "to": null,
       "fragment": null,
-      "line": 282,
+      "line": 285,
       "kind": "link"
     },
     {
@@ -18110,7 +18316,7 @@
       "toPath": "docs/knowledge-bank/projects/wowlist-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 288,
+      "line": 291,
       "kind": "link"
     },
     {
@@ -18119,25 +18325,7 @@
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/wowlist-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 290,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
-      "to": null,
-      "fragment": null,
-      "line": 297,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/README.md",
-      "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/data/wowlist-sunday-dinner-callscript-controls.json",
-      "to": null,
-      "fragment": null,
-      "line": 299,
+      "line": 293,
       "kind": "link"
     },
     {
@@ -18152,16 +18340,25 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
-      "toPath": "evals/knowledge-bank/runs/2026-07-15-wowlist-sunday-dinner-callscript-continuity.md",
+      "toPath": "docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md",
       "to": null,
       "fragment": null,
-      "line": 305,
+      "line": 300,
       "kind": "link"
     },
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
-      "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
+      "toPath": "docs/knowledge-bank/data/wowlist-sunday-dinner-callscript-controls.json",
+      "to": null,
+      "fragment": null,
+      "line": 302,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
+      "toPath": "evals/knowledge-bank/runs/2026-07-15-wowlist-sunday-dinner-callscript-continuity.md",
       "to": null,
       "fragment": null,
       "line": 308,
@@ -18170,10 +18367,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts.md",
+      "to": null,
+      "fragment": null,
+      "line": 311,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json",
       "to": null,
       "fragment": null,
-      "line": 313,
+      "line": 316,
       "kind": "link"
     },
     {
@@ -18182,7 +18388,7 @@
       "toPath": "evals/knowledge-bank/runs/2026-07-15-nycac-facebook-posts.md",
       "to": null,
       "fragment": null,
-      "line": 314,
+      "line": 317,
       "kind": "link"
     },
     {
@@ -18332,10 +18538,19 @@
     {
       "fromPath": "docs/knowledge-bank/README.md",
       "from": "index.knowledge-wiki",
+      "toPath": "docs/knowledge-bank/indexes/project-websites-live-2026-08-14.md",
+      "to": "index.knowledge-wiki.project-websites-live.2026-08-14",
+      "fragment": null,
+      "line": 78,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/README.md",
+      "from": "index.knowledge-wiki",
       "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
       "to": "project.nyc-artist-coalition",
       "fragment": null,
-      "line": 78,
+      "line": 81,
       "kind": "link"
     },
     {
@@ -18344,7 +18559,7 @@
       "toPath": "docs/knowledge-bank/_generated/wanted-pages.md",
       "to": null,
       "fragment": null,
-      "line": 81,
+      "line": 84,
       "kind": "link"
     },
     {
@@ -18353,7 +18568,7 @@
       "toPath": "docs/knowledge-bank/workflow.md",
       "to": null,
       "fragment": null,
-      "line": 87,
+      "line": 90,
       "kind": "link"
     },
     {
@@ -20337,6 +20552,15 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/indexes/project-websites-live-2026-08-14.md",
+      "from": "index.knowledge-wiki.project-websites-live.2026-08-14",
+      "toPath": "docs/knowledge-bank/research-runs/restored-project-sites-close-reading-2026-08-14.md",
+      "to": "research.restored-project-sites.close-reading.2026-08-14",
+      "fragment": null,
+      "line": 11,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/indexes/public-testimony-and-hearing-voices.md",
       "from": "index.knowledge-wiki.public-testimony-and-hearing-voices",
       "toPath": "docs/knowledge-bank/events/cabaret-law-hearing-2017-06-19.md",
@@ -21194,6 +21418,15 @@
     {
       "fromPath": "docs/knowledge-bank/projects/callnyc.md",
       "from": "project.callnyc",
+      "toPath": "docs/knowledge-bank/sources/callnyc-live-site-2026-08-14.md",
+      "to": "source.callnyc.live-site.2026-08-14",
+      "fragment": null,
+      "line": 112,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/callnyc.md",
+      "from": "project.callnyc",
       "toPath": "docs/knowledge-bank/events/nycc-constituent-services-hackathon-2016.md",
       "to": "event.nycc.constituent-services-hackathon.2016",
       "fragment": "source-basis",
@@ -21288,6 +21521,15 @@
       "to": null,
       "fragment": null,
       "line": 12,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/kc-town-hall-orientation.md",
+      "from": "project.kc-town-hall",
+      "toPath": "docs/knowledge-bank/sources/kc-town-hall-live-site-2026-08-14.md",
+      "to": "source.kc-town-hall.live-site.2026-08-14",
+      "fragment": null,
+      "line": 21,
       "kind": "link"
     },
     {
@@ -21552,6 +21794,15 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
+      "from": "project.wowlist",
+      "toPath": "docs/knowledge-bank/sources/wowlist-live-site-2026-08-14.md",
+      "to": "source.wowlist.live-site.2026-08-14",
+      "fragment": null,
+      "line": 33,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/projects/wowlist-social-population.md",
       "from": null,
       "toPath": "docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
@@ -21810,6 +22061,33 @@
       "to": null,
       "fragment": null,
       "line": 55,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/research-runs/restored-project-sites-close-reading-2026-08-14.md",
+      "from": "research.restored-project-sites.close-reading.2026-08-14",
+      "toPath": "docs/knowledge-bank/sources/kc-town-hall-live-site-2026-08-14.md",
+      "to": "source.kc-town-hall.live-site.2026-08-14",
+      "fragment": null,
+      "line": 19,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/research-runs/restored-project-sites-close-reading-2026-08-14.md",
+      "from": "research.restored-project-sites.close-reading.2026-08-14",
+      "toPath": "docs/knowledge-bank/sources/wowlist-live-site-2026-08-14.md",
+      "to": "source.wowlist.live-site.2026-08-14",
+      "fragment": null,
+      "line": 21,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/research-runs/restored-project-sites-close-reading-2026-08-14.md",
+      "from": "research.restored-project-sites.close-reading.2026-08-14",
+      "toPath": "docs/knowledge-bank/sources/callnyc-live-site-2026-08-14.md",
+      "to": "source.callnyc.live-site.2026-08-14",
+      "fragment": null,
+      "line": 23,
       "kind": "link"
     },
     {

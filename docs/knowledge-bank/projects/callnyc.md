@@ -5,7 +5,7 @@ kind: project
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
+last_reviewed: 2026-08-14
 review_by: 2027-01-18
 aliases:
   - Call NYC
@@ -31,6 +31,9 @@ relations:
   - type: uses_source
     target: source.callnyc.source-repository
     href: ../sources/callnyc-source-repository.md
+  - type: uses_source
+    target: source.callnyc.live-site.2026-08-14
+    href: ../sources/callnyc-live-site-2026-08-14.md
   - type: related_to
     target: decision.callnyc.issue-pathways
     href: ../decisions/callnyc-issue-pathways.md
@@ -155,3 +158,12 @@ The public source repository preserves a non-participant graphic reading
 "CALL NYC." It is cleared for display as the archived independent prototype's
 project mark. It does not establish Council ownership, affiliation, formal
 submission, or current-service status.
+
+## Restored public site
+
+The restored [CallNYC public site](https://callnyc.org/) is available as an
+archived, unofficial prototype. The [August 2026 close
+reading](../sources/callnyc-live-site-2026-08-14.md) documents its substantial
+issue-pathway information architecture and the remaining tension between the
+footer archive disclaimer and current-sounding guidance. Availability does not
+make its people, data, phone actions, or resident guidance current.

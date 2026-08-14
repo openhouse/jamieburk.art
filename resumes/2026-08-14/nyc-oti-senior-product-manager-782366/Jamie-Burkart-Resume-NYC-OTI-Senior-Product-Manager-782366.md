@@ -24,10 +24,10 @@ Senior product and technical project manager with 14+ years shipping public-faci
 New York, NY / Remote | 2012–Present
 
 - Lead end-to-end web product, design, and engineering engagements, turning ambiguous stakeholder needs into product direction, information architecture, technical scope, sequenced releases, testing, launch plans, adoption materials, maintenance workflows, and handoff documentation.
-- Led long-running e-commerce, analytics, content, marketing, and operational improvements for Harry J. Epstein Company, contributing to a period of 2x revenue growth while helping an 80+ year-old industrial business modernize without losing its trusted public voice.
+- Led long-running e-commerce, analytics, content, marketing, and operational improvements for [Harry J. Epstein Company](https://www.harryepstein.com/), contributing to a period of 2x revenue growth while helping an 80+ year-old industrial business modernize without losing its trusted public voice.
 - Build maintainable publishing systems, campaign hubs, resource libraries, data workflows, and web infrastructure; preserve product briefs, decisions, reusable patterns, and post-launch learning so teams can continue the work.
 
-### NYC Artist Coalition / FairRentNYC — Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead
+### [NYC Artist Coalition](https://nycartc.com/) / [FairRentNYC](https://fairrentnyc.nycartc.com/) — Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead
 
 New York, NY | 2017–Present
 
@@ -35,7 +35,7 @@ New York, NY | 2017–Present
 - Built and stewarded 30+ pages of shared campaign memory for a 2026 Commercial Rent Stabilization collaboration, connecting running minutes, decision records, action items, legal and policy questions, media assets, public-data framing, and city/state strategy lanes.
 - Implement and maintain public-facing campaign systems; facilitate challenging meetings; brief and work directly with elected officials and staff; and represent the work in public testimony, presentations, and press while preserving collective credit and sensitive boundaries.
 
-### WOWList.org — Co-Founder, Product & Community Systems
+### [WOWList.org](https://wowlist.org/) — Co-Founder, Product & Community Systems
 
 New York, NY / Remote | 2015–2020
 
@@ -43,14 +43,14 @@ New York, NY / Remote | 2015–2020
 - Connected participatory discovery with hands-on implementation, organizer onboarding, support, adoption, public communication, instrumentation, and low-cost production operations across a distributed maintainer network.
 - Reached a July 2017 production snapshot of 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts; distinguish these activity counts from retention, resident outcomes, or causal impact.
 
-### CallNYC.org — Civic-Tech Builder & Product Translator
+### [CallNYC.org](https://callnyc.org/) — Civic-Tech Builder & Product Translator
 
 New York, NY | 2016
 
 - Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in [Politico New York](https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf).
 - Took the civic prototype from problem definition and information architecture through implementation and public release. The archived site is unofficial and not a current City service.
 
-### KC Town Hall LLC — Co-Founder & Project Manager, Historic Restoration / Mixed-Use Development
+### [KC Town Hall LLC](https://kctownhall.com/) — Co-Founder & Project Manager, Historic Restoration / Mixed-Use Development
 
 Kansas City, MO | 2015–2024
 
