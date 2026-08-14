@@ -3,7 +3,7 @@
 
 **Source commit:** `b61d947eeafb8abf05edacb30950beda51374108`
 **Generation time:** 2026-08-14T19:07:56-04:00
-**Source fingerprint:** `c9e65f3ad909804c9bc09ac89b1d1332bd3fec1484c714f79bbd927026b3401c`
+**Source fingerprint:** `7e4f0b585c6173a273222020620546e4472fcf5fa1f939a14d33220fd9f70152`
 
 - [Implementation, Adoption, and Handoff](../../capabilities/implementation-adoption-and-handoff.md) - `related_to` (frontmatter)
 - [Implementation and operational stewardship](../../capabilities/implementation-and-operational-stewardship.md) - `prose_link` (markdown)
@@ -19,4 +19,5 @@
 - [Jamie at Work](../../methods/jamie-at-work.md) - `related_to` (frontmatter)
 - [Maintenance, handoff, and stewardship](../../methods/maintenance-handoff-and-stewardship.md) - `prose_link` (markdown)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
+- [Thick Arts formation and Harry J. Epstein storefront chronology, August 2026](../../sources/hje-formation-and-storefront-chronology-2026-08.md) - `documents` (frontmatter)
 - [Harry J. Epstein Company archival research brief, July 2026](../../sources/hje-research-brief-2026-07.md) - `documents` (frontmatter)

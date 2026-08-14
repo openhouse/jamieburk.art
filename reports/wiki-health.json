@@ -2,21 +2,21 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-14T19:07:56-04:00",
   "sourceCommit": "b61d947eeafb8abf05edacb30950beda51374108",
-  "sourceFingerprint": "c9e65f3ad909804c9bc09ac89b1d1332bd3fec1484c714f79bbd927026b3401c",
+  "sourceFingerprint": "7e4f0b585c6173a273222020620546e4472fcf5fa1f939a14d33220fd9f70152",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
     "errors": []
   },
   "diagnostics": {
-    "records": 437,
+    "records": 438,
     "byKind": {
       "project": 14,
       "person": 5,
       "organization": 1,
       "event": 20,
       "place": 1,
-      "source": 91,
+      "source": 92,
       "asset": 192,
       "claim": 3,
       "research-run": 9,
@@ -32,11 +32,11 @@
       "opportunity": 11,
       "projection": 10
     },
-    "typedRelations": 1511,
+    "typedRelations": 1513,
     "evidenceRelations": 20,
     "relationTypeCounts": {
       "collaborated_with": 3,
-      "documents": 44,
+      "documents": 45,
       "evidence:context": 1,
       "evidence:corroborating": 2,
       "evidence:direct-support": 14,
@@ -51,7 +51,7 @@
       "supersedes": 1,
       "supports": 30,
       "uses_method": 33,
-      "uses_source": 334
+      "uses_source": 335
     },
     "proseLinks": 482,
     "rootReachable": 221,

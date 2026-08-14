@@ -3,7 +3,7 @@
   "id": "project-websites-current-inventory-2026-08-14",
   "verifiedAt": "2026-08-14",
   "maxAgeDays": 30,
-  "expectedCount": 10,
+  "expectedCount": 9,
   "inventoryPath": "docs/knowledge-bank/indexes/project-websites-live-2026-08-14.md",
   "liveCheckPath": "docs/knowledge-bank/sources/project-websites-live-check-2026-08-14.md",
   "researchRunPath": "docs/knowledge-bank/research-runs/restored-project-sites-close-reading-2026-08-14.md",
@@ -16,19 +16,6 @@
     "narrowProjectIds": ["project.callnyc"]
   },
   "sites": [
-    {
-      "projectId": "project.harry-j-epstein",
-      "name": "Harry J. Epstein Company",
-      "url": "https://www.harryepstein.com/",
-      "finalUrl": "https://www.harryepstein.com/",
-      "httpStatus": 200,
-      "contentType": "text/html",
-      "interpretation": "active-operational",
-      "creditScope": "systems lead within a company team",
-      "projectRecordPath": "docs/knowledge-bank/projects/harry-j-epstein.md",
-      "portfolioLinkRequired": true,
-      "resumeAliases": ["Harry J. Epstein Company"]
-    },
     {
       "projectId": "project.nyc-artist-coalition",
       "name": "NYC Artist Coalition",

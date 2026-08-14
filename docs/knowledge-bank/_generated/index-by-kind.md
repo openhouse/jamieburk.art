@@ -3,7 +3,7 @@
 
 **Source commit:** `b61d947eeafb8abf05edacb30950beda51374108`
 **Generation time:** 2026-08-14T19:07:56-04:00
-**Source fingerprint:** `c9e65f3ad909804c9bc09ac89b1d1332bd3fec1484c714f79bbd927026b3401c`
+**Source fingerprint:** `7e4f0b585c6173a273222020620546e4472fcf5fa1f939a14d33220fd9f70152`
 
 ## application
 
@@ -420,6 +420,7 @@
 - [Commercial rent stabilization hearing: supportive testimony and prime-sponsor statements](../testimony/heteroglossia/2021-09-17-commercial-rent-stabilization-supportive-speakers.md) - `source.heteroglossia.commercial-rent-stabilization.2021-09-17`
 - [Cultural Affairs preliminary budget hearing: supportive witness testimony](../testimony/heteroglossia/2018-03-16-cultural-affairs-supportive-witnesses.md) - `source.heteroglossia.cultural-affairs-budget.2018-03-16`
 - [Small Business Job Survival Act hearing: supportive witness testimony](../testimony/heteroglossia/2018-10-22-sbjsa-supportive-witnesses.md) - `source.heteroglossia.sbjsa.2018-10-22`
+- [Thick Arts formation and Harry J. Epstein storefront chronology, August 2026](../sources/hje-formation-and-storefront-chronology-2026-08.md) - `source.hje.formation-and-storefront-chronology.2026-08`
 - [Harry J. Epstein Company archival research brief, July 2026](../sources/hje-research-brief-2026-07.md) - `source.hje.research-brief.2026-07`
 - [Jamie Burkart public-record initial manifest](../sources/jamie-public-record-initial-manifest.md) - `source.jamie-public-record-initial-manifest`
 - [Jamie Burkart writer's voice synthesis, July 2026](../sources/writers-voice-synthesis-2026-07.md) - `source.jamie.writers-voice-synthesis.2026-07`

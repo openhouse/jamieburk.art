@@ -52,6 +52,10 @@ export function evaluateProjectWebsites({
     ])
   );
   const portfolioSites = sites.filter((site) => site.portfolioLinkRequired);
+  const hjeSuccessorExcluded =
+    !sites.some((site) => site.projectId === "project.harry-j-epstein") &&
+    /current Harry J\. Epstein website[\s\S]*excluded from this[\s\S]*count/i.test(inventory) &&
+    /Successor website captured July 2026[\s\S]*not evidence of Jamie's present stewardship/.test(work);
   const verifiedAt = new Date(`${activeConfig.verifiedAt}T12:00:00Z`);
 
   const projectRecordsBound = sites.every((site) => {
@@ -145,7 +149,7 @@ export function evaluateProjectWebsites({
       id: "inventory-url-coverage",
       pass:
         indexCoverage &&
-        /\*\*10 project websites\*\*/.test(inventory) &&
+        new RegExp(`\\*\\*${activeConfig.expectedCount} project websites\\*\\*`).test(inventory) &&
         /not an exhaustive lifetime census/i.test(inventory),
       detail: "Index and live-check source enumerate every home and qualify the count."
     },
@@ -184,6 +188,11 @@ export function evaluateProjectWebsites({
         /shared\s+or\s+independent\s+credit\s+scope/i.test(inventory) &&
         sites.every((site) => site.creditScope.length > 20),
       detail: "Availability, current service, and contribution scope remain distinct."
+    },
+    {
+      id: "successor-site-boundary",
+      pass: hjeSuccessorExcluded,
+      detail: "The current Harry J. Epstein successor site remains contextual and is excluded from the Jamie-built live-site count."
     },
     {
       id: "portfolio-direct-links",

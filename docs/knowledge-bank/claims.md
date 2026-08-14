@@ -18,6 +18,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## hje-first-client-chronology - First client and formalization chronology
+
+**Status:** Ready
+**Support level:** Moderate
+**Evidence class:** New York Department of State record / Archive.org captures / Jamie review confirmation
+**Public wording:** Jamie began the Harry J. Epstein Company client relationship in 2009, formed Thick Arts LLC on July 6, 2012 with the existing engagement becoming its first client relationship, and continued the work through 2015.
+**Detailed public-safe wording:** New York's official entity record independently verifies Thick Arts LLC's July 6, 2012 formation. Jamie's authorized professional account supports the 2009-2015 client relationship and first-client status. Archive.org separately bounds the historic storefront from January 2010 through its July-August 2015 transition.
+**Where to project:** Work card, HJE case study.
+**Why it matters:** Corrects the client chronology and shows how Jamie formalized an existing practice without implying that the LLC existed in 2009 or that the client remains current.
+**Guardrail:** Keep the 2009 client start, July 6, 2012 LLC formation, 2009-2015 engagement, and January 2010-July 2015 archive observation bounds distinct.
+**Do not say:** Harry J. Epstein Company was a Thick Arts LLC client before July 6, 2012; New York's entity record proves first-client status; Archive.org proves contract dates; Jamie currently maintains the successor website.
+**Protected boundaries:** Contracts, invoices, private correspondence, customer records, and vendor records stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-08-14
+
 ## hje-modernization-stewardship - Legacy e-commerce modernization
 
 **Status:** Ready  
@@ -27,11 +42,11 @@ claim beyond the wording and guardrails here.
 **Detailed public-safe wording:** Jamie maintained and improved the company's web and e-commerce presence, coordinated incremental releases, and translated legacy operating knowledge into searchable content, analytics, marketing, and operational workflows while preserving its public voice.
 **Where to project:** Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-term implementation, stakeholder translation, and operating-system work in a real business environment.  
-**Guardrail:** Use stewardship and contribution language.  
+**Guardrail:** Use stewardship and contribution language in the historical 2009-2015 engagement; do not imply present maintenance of the successor site.
 **Do not say:** Jamie fully owned the business, owned all growth, or replaced the company's institutional knowledge.  
 **Protected boundaries:** Private dashboards, credentials, customer data, revenue detail, vendor terms, and sensitive operating practices stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-08-14
 
 ## hje-revenue-growth-contribution - Revenue growth contribution
 

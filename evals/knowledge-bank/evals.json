@@ -1203,6 +1203,13 @@
       "intent": "Contribution records make each actor, action, purpose, result, source, and boundary explicit while separating Jamie's work, shared work, coalition action, and institutional enactment."
     },
     {
+      "id": "KB-EVAL-HJE-CLIENT-FORMALIZATION-CHRONOLOGY",
+      "label": "Harry J. Epstein client and Thick Arts formalization chronology",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "The portfolio dates Jamie's Harry J. Epstein relationship 2009-2015, verifies Thick Arts LLC's July 6, 2012 formation from an official state record, presents first-client status as Jamie's authorized account, preserves Archive.org storefront observation bounds, excludes the successor site from the Jamie-built-live-site count, and never implies present maintenance."
+    },
+    {
       "id": "KB-EVAL-PRESS-ARCHIVE",
       "label": "Campaign press archive completeness",
       "weight": 0,

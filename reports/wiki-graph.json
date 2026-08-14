@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-14T19:07:56-04:00",
   "sourceCommit": "b61d947eeafb8abf05edacb30950beda51374108",
-  "sourceFingerprint": "c9e65f3ad909804c9bc09ac89b1d1332bd3fec1484c714f79bbd927026b3401c",
+  "sourceFingerprint": "7e4f0b585c6173a273222020620546e4472fcf5fa1f939a14d33220fd9f70152",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3438,7 +3438,7 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Governed, expiring inventory of ten public project homes with documented Jamie build, implementation, maintenance, or systems-lead contributions.",
+      "summary": "Governed, expiring inventory of nine public project homes with documented Jamie build, implementation, maintenance, or systems-lead contributions; successor sites are excluded when Jamie's implementation is no longer the responding surface.",
       "aliases": [],
       "lastReviewed": "2026-08-14",
       "reviewBy": "2026-09-13"
@@ -4096,12 +4096,12 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Long-running e-commerce, analytics, publishing, and operational modernization for a multigenerational Kansas City industrial supply business.",
+      "summary": "A 2009-2015 client relationship that became Thick Arts LLC's first client engagement after the LLC's July 6, 2012 formation, joining e-commerce, analytics, publishing, and operational modernization for a multigenerational Kansas City industrial supply business.",
       "aliases": [
         "HJE"
       ],
-      "lastReviewed": "2026-07-19",
-      "reviewBy": "2026-10-19"
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-11-14"
     },
     {
       "id": "project.kc-spaces-fund",
@@ -4695,6 +4695,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-28",
       "reviewBy": "2026-10-28"
+    },
+    {
+      "id": "source.hje.formation-and-storefront-chronology.2026-08",
+      "path": "docs/knowledge-bank/sources/hje-formation-and-storefront-chronology-2026-08.md",
+      "title": "Thick Arts formation and Harry J. Epstein storefront chronology, August 2026",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-record chronology separating Thick Arts LLC's official formation, Jamie's first-party client account, and Archive.org storefront observation bounds.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-11-14"
     },
     {
       "id": "source.hje.research-brief.2026-07",
@@ -5419,7 +5432,7 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Dated HTTP inventory of ten public project homes with documented Jamie build, implementation, maintenance, or systems-lead contributions.",
+      "summary": "Dated HTTP inventory of nine public project homes with documented Jamie build, implementation, maintenance, or systems-lead contributions.",
       "aliases": [],
       "lastReviewed": "2026-08-14",
       "reviewBy": "2026-09-13"
@@ -5710,8 +5723,8 @@
       "sensitivity": "low",
       "summary": "Bounded chronology tracing continuity among Jamie's artistic experiments, participatory systems, civic technology, operations work, and source-backed memory practice.",
       "aliases": [],
-      "lastReviewed": "2026-07-19",
-      "reviewBy": "2026-10-19"
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-11-14"
     }
   ],
   "edges": [
@@ -15806,6 +15819,14 @@
     {
       "from": "project.harry-j-epstein",
       "type": "uses_source",
+      "to": "source.hje.formation-and-storefront-chronology.2026-08",
+      "source": "frontmatter",
+      "href": "../sources/hje-formation-and-storefront-chronology-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "project.harry-j-epstein",
+      "type": "uses_source",
       "to": "source.hje.research-brief.2026-07",
       "source": "frontmatter",
       "href": "../sources/hje-research-brief-2026-07.md",
@@ -17129,6 +17150,14 @@
       "to": "index.public-testimony",
       "source": "frontmatter",
       "href": "../../indexes/public-testimony.md",
+      "context": null
+    },
+    {
+      "from": "source.hje.formation-and-storefront-chronology.2026-08",
+      "type": "documents",
+      "to": "project.harry-j-epstein",
+      "source": "frontmatter",
+      "href": "../projects/harry-j-epstein.md",
       "context": null
     },
     {
@@ -22186,7 +22215,7 @@
       "toPath": "docs/knowledge-bank/research-runs/restored-project-sites-close-reading-2026-08-14.md",
       "to": "research.restored-project-sites.close-reading.2026-08-14",
       "fragment": null,
-      "line": 29,
+      "line": 28,
       "kind": "link"
     },
     {

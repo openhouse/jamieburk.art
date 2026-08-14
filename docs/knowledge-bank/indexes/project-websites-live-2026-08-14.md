@@ -8,7 +8,7 @@ sensitivity: low
 last_reviewed: 2026-08-14
 review_by: 2026-09-13
 canonical_path: docs/knowledge-bank/indexes/project-websites-live-2026-08-14.md
-summary: Governed, expiring inventory of ten public project homes with documented Jamie build, implementation, maintenance, or systems-lead contributions.
+summary: Governed, expiring inventory of nine public project homes with documented Jamie build, implementation, maintenance, or systems-lead contributions; successor sites are excluded when Jamie's implementation is no longer the responding surface.
 relations:
   - type: related_to
     target: research.restored-project-sites.close-reading.2026-08-14
@@ -34,7 +34,7 @@ relations:
 
 ## Current answer
 
-**10 project websites** in the governed inventory responded successfully on
+**9 project websites** in the governed inventory responded successfully on
 August 14, 2026. This is the accurate maintained count for the defined scope
 below, not an exhaustive lifetime census and not a claim that every service or
 fact on every site is current.
@@ -46,7 +46,6 @@ limits remain explicit.
 
 | Project home | Public interpretation | Jamie contribution boundary |
 |---|---|---|
-| [Harry J. Epstein Company](https://www.harryepstein.com/) | Active operational surface | Long-running web, e-commerce, analytics, publishing, and operations systems lead within the company team |
 | [NYC Artist Coalition](https://nycartc.com/) | Active coalition and advocacy surface | Founding-member/organizer role and public web infrastructure; collective campaign work |
 | [FairRentNYC](https://fairrentnyc.nycartc.com/) | Active advocacy and reference surface | Campaign-site implementation and maintenance within collective advocacy |
 | [Talks Not Raids](https://talksnotraids.com/) | Historical campaign surface with active-looking legacy calls | Direct implementation and maintenance; collective campaign outcomes |
@@ -70,6 +69,10 @@ Count one distinct public project home when:
 
 Do not count jamieburk.art, press/evidence pages, government pages, social
 profiles, source repositories, Wayback pages, campaign subpages, private
-locators, or an ungoverned recollection. Recheck the domains within 30 days and
+locators, successor sites not established as Jamie's implementation, or an
+ungoverned recollection. The current Harry J. Epstein website is linked from
+the historical case study as company context, but it is excluded from this
+count because the documented client engagement ended in 2015 and the current
+successor surface is not presented as Jamie's work. Recheck the domains within 30 days and
 update the date, status, evidence, and count together. “Responding” never means
 “current service.”

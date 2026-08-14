@@ -6,12 +6,12 @@
   "overall": "pass",
   "summary": {
     "maintainedInventoryExists": true,
-    "governedSites": 10,
+    "governedSites": 9,
     "closeReadSites": 3,
     "renderedDesktopCloseReadSites": 3,
     "renderedNarrowCloseReadSites": 1,
-    "portfolioDirectLinks": 9,
-    "resumeMentionLinkPairs": 29
+    "portfolioDirectLinks": 8,
+    "resumeMentionLinkPairs": 24
   },
-  "boundary": "Ten means the current governed inventory under the documented scope. Responding does not mean current service, exhaustive lifetime census, or sole authorship."
+  "boundary": "Nine means the current governed inventory under the documented scope. Responding does not mean current service, exhaustive lifetime census, or sole authorship. Successor sites are excluded when Jamie's implementation is not the responding surface."
 }

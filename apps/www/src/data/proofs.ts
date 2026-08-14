@@ -70,6 +70,42 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "hje-first-client-chronology",
+    status: "ready",
+    supportLevel: "moderate",
+    evidenceClass: ["public-source", "jamie-review-confirmation"],
+    publicWording:
+      "Jamie began the Harry J. Epstein Company client relationship in 2009, formed Thick Arts LLC on July 6, 2012 with the existing engagement becoming its first client relationship, and continued the work through 2015.",
+    shortWording:
+      "First Thick Arts client relationship, 2009-2015; LLC formed July 6, 2012",
+    detailedPublicWording:
+      "Jamie dates the Harry J. Epstein Company engagement 2009-2015 and identifies it as the work that became Thick Arts LLC's first client relationship after the LLC's July 6, 2012 formation. New York's official entity record independently verifies the formation date; Archive.org separately bounds the historic storefront from January 2010 through its July-August 2015 transition.",
+    sourceBasis:
+      "Jamie's authorized first-party professional account, New York Department of State entity data, and three public Archive.org captures.",
+    sourceNote:
+      "The state record verifies formation only; first-client status and the client dates are Jamie's account; Archive.org provides storefront observation bounds rather than contract dates.",
+    whyItMatters:
+      "Corrects the client chronology and shows how Jamie formalized an existing practice without implying that the LLC existed in 2009 or that the client remains current.",
+    guardrail:
+      "Keep the 2009 client start, July 6, 2012 LLC formation, 2009-2015 engagement, and January 2010-July 2015 archive bounds distinct.",
+    doNotSay: [
+      "Harry J. Epstein Company was a Thick Arts LLC client before July 6, 2012",
+      "New York's entity record proves Harry J. Epstein Company was the first client",
+      "Archive.org proves the exact contract dates",
+      "Jamie currently maintains the successor website"
+    ],
+    protectedBoundaries: [
+      "Contracts",
+      "Invoices and billing records",
+      "Private correspondence",
+      "Customer and vendor records"
+    ],
+    surfaces: ["work-card", "case-study"],
+    relatedProjects: ["harry-j-epstein"],
+    relatedCapabilities: ["e-commerce", "implementation", "handoffs"],
+    lastReviewed: "2026-08-14"
+  },
+  {
     id: "hje-modernization-stewardship",
     status: "ready",
     supportLevel: "strong",
@@ -80,8 +116,10 @@ export const proofClaims: ProofClaim[] = [
       "Jamie led long-running e-commerce and operations improvements for a legacy industrial business",
     detailedPublicWording:
       "Jamie maintained and improved the company's web and e-commerce presence, coordinated incremental releases, and translated legacy operating knowledge into searchable content, analytics, marketing, and operational workflows while preserving its public voice.",
-    sourceBasis: "Approved resume language, public website context, and public-safe business summary.",
-    guardrail: "Use stewardship and contribution language.",
+    sourceBasis:
+      "Approved resume language, public Archive.org storefront captures, New York's official entity record, successor-site business context, and a public-safe business summary.",
+    guardrail:
+      "Use stewardship and contribution language in the historical 2009-2015 engagement; do not imply present maintenance of the successor site.",
     doNotSay: [
       "Jamie fully owned the business",
       "Jamie owned all growth",
@@ -98,7 +136,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["harry-j-epstein"],
     relatedCapabilities: ["e-commerce", "analytics", "workflow-mapping", "handoffs"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-08-14"
   },
   {
     id: "hje-revenue-growth-contribution",

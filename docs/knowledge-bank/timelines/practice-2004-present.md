@@ -5,8 +5,8 @@ kind: timeline
 status: governed-open
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-19
-review_by: 2026-10-19
+last_reviewed: 2026-08-14
+review_by: 2026-11-14
 canonical_path: docs/knowledge-bank/timelines/practice-2004-present.md
 summary: Bounded chronology tracing continuity among Jamie's artistic experiments, participatory systems, civic technology, operations work, and source-backed memory practice.
 relations:
@@ -60,13 +60,20 @@ final endpoint.
 
 See [Waterways and participatory art](../projects/waterways-participatory-art-orientation.md).
 
-## 2009-2011: Legacy commerce and networked installation
+## 2009-2015: Client practice, formalization, and legacy commerce
 
-At Harry J. Epstein Company, Jamie's documented portfolio practice centered on
+Jamie dates the Harry J. Epstein Company client relationship 2009-2015. The
+engagement began before he formalized his practice, then became Thick Arts LLC's
+first client relationship after the LLC's July 6, 2012 formation. New York's
+official entity record verifies the formation date; first-client status remains
+Jamie's authorized professional account. His documented portfolio practice centered on
 translating a specialized paper-and-phone business into e-commerce, analytics,
 publishing, and maintainable web operations while preserving the store's
-distinctive voice. Component-level and outcome claims remain separately
-bounded.
+distinctive voice. Archive.org independently observes the commerce host from
+January 2010 through its July-August 2015 transition. Component-level, billing,
+and outcome claims remain separately bounded.
+
+## 2010-2011: Networked installation
 
 NTER CHNG, co-created with Drew Bolton and Garrett Fuselier, treated text
 messaging, software, and gallery architecture as a live public conversation.

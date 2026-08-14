@@ -140,6 +140,86 @@
       ]
     },
     {
+      "id": "SRC-THICK-ARTS-NYS-DOS-2012-07-06",
+      "title": "New York Department of State record for Thick Arts LLC",
+      "organization": "New York State Department of State, Division of Corporations",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2012-07-06",
+      "accessedAt": "2026-08-14",
+      "canonicalUrl": "https://data.ny.gov/resource/n9v6-gdp6.json?$select=dos_id%2Ccurrent_entity_name%2Cinitial_dos_filing_date%2Ccounty%2Cjurisdiction%2Centity_type&$where=current_entity_name%3D%27THICK%20ARTS%20LLC%27",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York Department of State record for Thick Arts LLC, DOS ID 4267566, filed July 6, 2012.",
+      "publicNote": "The official dataset identifies the entity as a New York domestic LLC filed in Kings County. It does not identify members or clients.",
+      "doesNotEstablish": [
+        "who the LLC's members or clients were",
+        "Harry J. Epstein Company's first-client status",
+        "the 2009 start of Jamie's client relationship",
+        "contract or invoice dates"
+      ]
+    },
+    {
+      "id": "SRC-HJE-WAYBACK-STOREFRONT-2010-01-01",
+      "title": "Harry J. Epstein Company storefront first observed host capture",
+      "organization": "Harry J. Epstein Company",
+      "kind": "archived-web-capture",
+      "visibility": "public",
+      "preservationStatus": "archived",
+      "publishedAt": "2010-01-01",
+      "accessedAt": "2026-08-14",
+      "canonicalUrl": "http://store.harryepstein.com/",
+      "archiveUrl": "https://web.archive.org/web/20100101090939/http://store.harryepstein.com/",
+      "preferredPublicUrl": "archive",
+      "publicCitation": "Archive.org capture of store.harryepstein.com entering its merchant2 commerce application, January 1, 2010.",
+      "publicNote": "A directly captured storefront homepage appears on March 3, 2010; January 1 is an observed lower bound rather than an exact launch date.",
+      "doesNotEstablish": [
+        "the exact storefront launch date",
+        "a client or contract start date",
+        "continuous availability between captures"
+      ]
+    },
+    {
+      "id": "SRC-HJE-WAYBACK-STOREFRONT-2015-07-03",
+      "title": "Harry J. Epstein Company functioning storefront capture",
+      "organization": "Harry J. Epstein Company",
+      "kind": "archived-web-capture",
+      "visibility": "public",
+      "preservationStatus": "archived",
+      "publishedAt": "2015-07-03",
+      "accessedAt": "2026-08-14",
+      "canonicalUrl": "http://store.harryepstein.com/",
+      "archiveUrl": "https://web.archive.org/web/20150703004948/http://store.harryepstein.com/",
+      "preferredPublicUrl": "archive",
+      "publicCitation": "Archive.org capture of the functioning Harry J. Epstein Company storefront homepage, July 3, 2015.",
+      "publicNote": "The page includes catalog navigation, search, product prices, account and checkout routes, and 2015 publishing.",
+      "doesNotEstablish": [
+        "the exact client end date",
+        "Jamie's responsibility for every component or business outcome",
+        "current maintenance of the successor website"
+      ]
+    },
+    {
+      "id": "SRC-HJE-WAYBACK-STOREFRONT-REDIRECT-2015-08-01",
+      "title": "Harry J. Epstein Company storefront successor-site redirect",
+      "organization": "Harry J. Epstein Company",
+      "kind": "archived-web-capture",
+      "visibility": "public",
+      "preservationStatus": "archived",
+      "publishedAt": "2015-08-01",
+      "accessedAt": "2026-08-14",
+      "canonicalUrl": "http://store.harryepstein.com/",
+      "archiveUrl": "https://web.archive.org/web/20150801160416/http://store.harryepstein.com/",
+      "preferredPublicUrl": "archive",
+      "publicCitation": "Archive.org capture of store.harryepstein.com redirecting to the successor www.harryepstein.com site, August 1, 2015.",
+      "publicNote": "The archived HTTP response redirects the old host to http://www.harryepstein.com/index.php/.",
+      "doesNotEstablish": [
+        "the exact client end date",
+        "who built or maintained the successor website",
+        "current client stewardship"
+      ]
+    },
+    {
       "id": "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28",
       "title": "Open House: How Jamie Burkart turned a UCSC gallery into a 10-day experiment in communal living",
       "organization": "Good Times",
@@ -1519,6 +1599,77 @@
       ]
     },
     {
+      "id": "CLM-HJE-THICK-ARTS-FORMALIZATION-2009-2015",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie began working with Harry J. Epstein Company in 2009. He formalized his practice as Thick Arts LLC on July 6, 2012, with the existing engagement becoming the LLC's first client relationship; the work continued through 2015. The formation date comes from New York's official entity record, while first-client status and the 2009-2015 relationship are Jamie's authorized professional account. Archive.org independently preserves the commerce host from January 2010 through a functioning July 2015 storefront and its August 2015 redirect to a successor site.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/harry-j-epstein"
+          ]
+        },
+        {
+          "key": "work-card",
+          "text": "First Thick Arts client relationship, 2009-2015; the LLC was formed in 2012 and the historic storefront remained observable through its 2015 transition.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-THICK-ARTS-NYS-DOS-2012-07-06",
+          "relationship": "direct-support",
+          "supports": [
+            "Thick Arts LLC's initial DOS filing date was July 6, 2012"
+          ],
+          "publicNote": "Independent support for the LLC formation date only; the record does not name clients or members.",
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-HJE-WAYBACK-STOREFRONT-2010-01-01",
+          "relationship": "corroborating",
+          "supports": [
+            "the commerce host was observable at the start of 2010"
+          ],
+          "publicNote": "Archive observation bound, not an exact launch or contract date.",
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-HJE-WAYBACK-STOREFRONT-2015-07-03",
+          "relationship": "corroborating",
+          "supports": [
+            "a functioning customer-facing storefront remained observable on July 3, 2015"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-HJE-WAYBACK-STOREFRONT-REDIRECT-2015-08-01",
+          "relationship": "supports-boundary",
+          "supports": [
+            "the old storefront redirected to a successor site by August 1, 2015"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Keep the 2009 client relationship start distinct from Thick Arts LLC's July 6, 2012 legal formation.",
+        "Present first-client status as Jamie's first-party account, not a fact proved by the state record or Archive.org.",
+        "Use Archive.org dates as storefront observation bounds, not contract or billing dates.",
+        "Do not present the successor website as Jamie's current implementation or maintenance work.",
+        "Keep the Sackin family's authority and product knowledge, staff labor, customers, vendors, and later maintenance distinct from Jamie's contribution."
+      ]
+    },
+    {
       "id": "CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -2792,6 +2943,29 @@
           "projection": "archive-note",
           "sourceIds": [
             "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harry-j-epstein",
+      "surface": "/work/harry-j-epstein",
+      "sourceOrder": [
+        "SRC-THICK-ARTS-NYS-DOS-2012-07-06",
+        "SRC-HJE-WAYBACK-STOREFRONT-2010-01-01",
+        "SRC-HJE-WAYBACK-STOREFRONT-2015-07-03",
+        "SRC-HJE-WAYBACK-STOREFRONT-REDIRECT-2015-08-01"
+      ],
+      "occurrences": [
+        {
+          "id": "thick-arts-formalization-chronology",
+          "claimId": "CLM-HJE-THICK-ARTS-FORMALIZATION-2009-2015",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-THICK-ARTS-NYS-DOS-2012-07-06",
+            "SRC-HJE-WAYBACK-STOREFRONT-2010-01-01",
+            "SRC-HJE-WAYBACK-STOREFRONT-2015-07-03",
+            "SRC-HJE-WAYBACK-STOREFRONT-REDIRECT-2015-08-01"
           ]
         }
       ]

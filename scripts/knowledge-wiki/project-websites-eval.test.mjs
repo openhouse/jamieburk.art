@@ -83,6 +83,29 @@ test("responding cannot be silently promoted to current service", () => {
   );
 });
 
+test("a successor surface cannot be counted as Jamie's currently running implementation", () => {
+  const candidate = cloneConfig();
+  candidate.sites.push({
+    projectId: "project.harry-j-epstein",
+    name: "Harry J. Epstein Company",
+    url: "https://www.harryepstein.com/",
+    finalUrl: "https://www.harryepstein.com/",
+    httpStatus: 200,
+    contentType: "text/html",
+    interpretation: "active-operational",
+    creditScope: "historical systems lead within a company team",
+    projectRecordPath: "docs/knowledge-bank/projects/harry-j-epstein.md",
+    portfolioLinkRequired: true,
+    resumeAliases: ["Harry J. Epstein Company"]
+  });
+  candidate.expectedCount = 10;
+  const result = evaluateProjectWebsites({ config: candidate });
+  assert.equal(
+    result.checks.find((check) => check.id === "successor-site-boundary").pass,
+    false
+  );
+});
+
 test("a rendered close reading cannot silently fall back to HTTP-only evidence", () => {
   const site = config.sites.find((candidate) => candidate.projectId === "project.wowlist");
   const original = text(site.closeReadSourcePath);

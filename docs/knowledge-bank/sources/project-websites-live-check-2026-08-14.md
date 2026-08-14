@@ -8,7 +8,7 @@ sensitivity: low
 last_reviewed: 2026-08-14
 review_by: 2026-09-13
 canonical_path: docs/knowledge-bank/sources/project-websites-live-check-2026-08-14.md
-summary: Dated HTTP inventory of ten public project homes with documented Jamie build, implementation, maintenance, or systems-lead contributions.
+summary: Dated HTTP inventory of nine public project homes with documented Jamie build, implementation, maintenance, or systems-lead contributions.
 source_kind: public-web-census
 relations: []
 ---
@@ -18,19 +18,18 @@ relations: []
 **Checked:** August 14, 2026  
 **Recheck by:** September 13, 2026
 
-Ten distinct project homes in the governed portfolio inventory returned HTTP
+Nine distinct project homes in the governed portfolio inventory returned HTTP
 200 after redirects to HTTPS and served HTML in the August 14 recheck:
 
-1. [Harry J. Epstein Company](https://www.harryepstein.com/)
-2. [NYC Artist Coalition](https://nycartc.com/)
-3. [FairRentNYC](https://fairrentnyc.nycartc.com/)
-4. [Talks Not Raids](https://talksnotraids.com/)
-5. [Let NYC Dance](https://letnycdance.nycartc.com/)
-6. [Save NYC Spaces](https://savenycspaces.nycartc.com/)
-7. [KC Spaces Fund](https://kcspacesfund.com/)
-8. [KC Town Hall](https://kctownhall.com/)
-9. [WOW List](https://wowlist.org/)
-10. [CallNYC](https://callnyc.org/)
+1. [NYC Artist Coalition](https://nycartc.com/)
+2. [FairRentNYC](https://fairrentnyc.nycartc.com/)
+3. [Talks Not Raids](https://talksnotraids.com/)
+4. [Let NYC Dance](https://letnycdance.nycartc.com/)
+5. [Save NYC Spaces](https://savenycspaces.nycartc.com/)
+6. [KC Spaces Fund](https://kcspacesfund.com/)
+7. [KC Town Hall](https://kctownhall.com/)
+8. [WOW List](https://wowlist.org/)
+9. [CallNYC](https://callnyc.org/)
 
 “Responding” means the public home answered the bounded check. It does not mean
 that every link, transaction, form, fact, service, campaign, or instruction is
@@ -53,5 +52,7 @@ collective work stays shared. The inventory does not claim sole authorship.
 This is a maintained current inventory, not an exhaustive lifetime census. It
 excludes jamieburk.art, press and evidence pages, social profiles, government
 pages, repositories, Wayback captures, campaign subpages, private locators, and
-projects for which the contribution or current public home has not yet been
-governed.
+successor surfaces that are not established as Jamie's implementation. The
+current Harry J. Epstein website remains useful company context, but the
+documented 2009-2015 engagement and 2015 storefront transition do not support
+counting that successor site as a currently running Jamie-built project home.

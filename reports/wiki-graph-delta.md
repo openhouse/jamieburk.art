@@ -3,13 +3,13 @@
 
 **Source commit:** `b61d947eeafb8abf05edacb30950beda51374108`
 **Generation time:** 2026-08-14T19:07:56-04:00
-**Source fingerprint:** `c9e65f3ad909804c9bc09ac89b1d1332bd3fec1484c714f79bbd927026b3401c`
+**Source fingerprint:** `7e4f0b585c6173a273222020620546e4472fcf5fa1f939a14d33220fd9f70152`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 29
+- Nodes added: 30
 - Nodes removed: 37
-- Edges added: 113
+- Edges added: 115
 - Edges removed: 180
 - New type-aware orphans: 0
 - Current rights-review records: 186
@@ -37,6 +37,7 @@ Compared with the graph artifact on `origin/develop`.
 - `source.codepath.leadership.2026-08-13`
 - `source.commercial-rent.empty-storefronts-high-rents.2026-07`
 - `source.federated-knowledge-graph-ecosystem-review.2026-08-13`
+- `source.hje.formation-and-storefront-chronology.2026-08`
 - `source.jobs.aclu.senior-project-manager-national-campaigns.8631854002`
 - `source.jobs.codepath.senior-ai-operations-lead.5175813007`
 - `source.kc-town-hall.live-site.2026-08-14`

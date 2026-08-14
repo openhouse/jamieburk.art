@@ -4,6 +4,7 @@ import { callNycSocialPopulationJuly2026 } from "./callnyc-social-population-202
 import { googleDriveProductionJuly2026 } from "./google-drive-production-2026-07.ts";
 import { federatedEcosystemAugust2026 } from "./federated-ecosystem-2026-08.ts";
 import { historicalKnowledge } from "./historical-knowledge.ts";
+import { hjeChronologyAugust2026 } from "./hje-chronology-2026-08.ts";
 import { kcTownHallCouncilFunding } from "./kc-town-hall-council-funding.ts";
 import { kcTownHallFieldPractice } from "./kctownhall-field-practice.ts";
 import { kcTownHallSocialCorpus } from "./kctownhall-social-corpus.ts";
@@ -55,6 +56,7 @@ const knowledgeBankInput = {
     ...archiveProductionJuly2026.intakeItems,
     ...callNycSocialPopulationJuly2026.intakeItems,
     ...googleDriveProductionJuly2026.intakeItems,
+    ...hjeChronologyAugust2026.intakeItems,
     ...historicalKnowledge.intakeItems,
     ...socialMediaProductionJuly2026.intakeItems,
     ...urbanhermitSocialPopulationJuly2026.intakeItems,
@@ -104,6 +106,7 @@ const knowledgeBankInput = {
     ...archiveProductionJuly2026.observations,
     ...callNycSocialPopulationJuly2026.observations,
     ...googleDriveProductionJuly2026.observations,
+    ...hjeChronologyAugust2026.observations,
     ...historicalKnowledge.observations,
     ...socialMediaProductionJuly2026.observations,
     ...urbanhermitSocialPopulationJuly2026.observations,
@@ -257,6 +260,7 @@ const knowledgeBankInput = {
     ...archiveProductionJuly2026.sources,
     ...callNycSocialPopulationJuly2026.sources,
     ...googleDriveProductionJuly2026.sources,
+    ...hjeChronologyAugust2026.sources,
     ...historicalKnowledge.sources,
     ...socialMediaProductionJuly2026.sources,
     ...urbanhermitSocialPopulationJuly2026.sources,
@@ -287,11 +291,13 @@ const knowledgeBankInput = {
   ],
   entities: [
     ...agencyGraph.entities,
+    ...hjeChronologyAugust2026.entities,
     ...kcTownHallCouncilFunding.entities,
     ...nycacCrsFrontlineAugust2026.entities
   ],
   agencyRelations: [
     ...agencyGraph.agencyRelations,
+    ...hjeChronologyAugust2026.agencyRelations,
     ...kcTownHallCouncilFunding.agencyRelations,
     ...nycacCrsFrontlineAugust2026.agencyRelations
   ],
@@ -408,6 +414,7 @@ const knowledgeBankInput = {
     ...archiveProductionJuly2026.claims,
     ...callNycSocialPopulationJuly2026.claims,
     ...googleDriveProductionJuly2026.claims,
+    ...hjeChronologyAugust2026.claims,
     ...historicalKnowledge.claims,
     ...socialMediaProductionJuly2026.claims,
     ...urbanhermitSocialPopulationJuly2026.claims,
@@ -477,6 +484,7 @@ const knowledgeBankInput = {
     ...archiveProductionJuly2026.researchInquiries,
     ...callNycSocialPopulationJuly2026.researchInquiries,
     ...googleDriveProductionJuly2026.researchInquiries,
+    ...hjeChronologyAugust2026.researchInquiries,
     ...historicalKnowledge.researchInquiries,
     ...socialMediaProductionJuly2026.researchInquiries,
     ...urbanhermitSocialPopulationJuly2026.researchInquiries,
@@ -506,6 +514,7 @@ const knowledgeBankInput = {
   ],
   proofCoverageTargets: [...proofCoverageTargets],
   corrections: [
+    ...hjeChronologyAugust2026.corrections,
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-CHRONOLOGY-CORRECTION-2016", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" },
@@ -523,6 +532,28 @@ const knowledgeBankInput = {
         claimId: "CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY",
         projection: "archive-note",
         sourceIds: ["SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28"]
+      }
+    ]
+  }, {
+    id: "harry-j-epstein",
+    surface: "/work/harry-j-epstein",
+    sourceOrder: [
+      "SRC-THICK-ARTS-NYS-DOS-2012-07-06",
+      "SRC-HJE-WAYBACK-STOREFRONT-2010-01-01",
+      "SRC-HJE-WAYBACK-STOREFRONT-2015-07-03",
+      "SRC-HJE-WAYBACK-STOREFRONT-REDIRECT-2015-08-01"
+    ],
+    occurrences: [
+      {
+        id: "thick-arts-formalization-chronology",
+        claimId: "CLM-HJE-THICK-ARTS-FORMALIZATION-2009-2015",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-THICK-ARTS-NYS-DOS-2012-07-06",
+          "SRC-HJE-WAYBACK-STOREFRONT-2010-01-01",
+          "SRC-HJE-WAYBACK-STOREFRONT-2015-07-03",
+          "SRC-HJE-WAYBACK-STOREFRONT-REDIRECT-2015-08-01"
+        ]
       }
     ]
   }, {

@@ -60,6 +60,7 @@ test("KC Town Hall keeps the hiring-facing award, transition, and planning recor
 test("Claim resolver returns only active approved projections", () => {
   assert.match(getClaimProjection("CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", "case-study", "/work/callnyc").text, /first CouncilStat hackathon/);
   assert.match(getClaimProjection("CLM-NYCAC-X-RETRIEVABLE-SOCIAL-INFRASTRUCTURE", "case-study", "/work/fair-rent-nyc").text, /3,123 unique public records/);
+  assert.match(getClaimProjection("CLM-HJE-THICK-ARTS-FORMALIZATION-2009-2015", "case-study", "/work/harry-j-epstein").text, /July 6, 2012/);
   assert.throws(() => getClaimProjection("CLM-CALLNYC-DIGITAL-DISTRICT", "photo-caption", "/work/callnyc"), /Unknown public claim/);
   assert.throws(() => getClaimProjection("CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", "resume-html", "/work"), /not approved/);
 });
@@ -67,7 +68,11 @@ test("Claim resolver returns only active approved projections", () => {
 test("corrections retire old wording from public surfaces", () => {
   const text = ["apps/www/src/content/work/callnyc.mdx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts", "apps/www/src/app/resume/page.tsx"].map((path) => readFileSync(path, "utf8")).join("\n");
   assert.doesNotMatch(text, /first civic-data hackathon|2014[-–]2015/i);
-  assert.equal(knowledgeBank.corrections.length, 4);
+  assert.equal(knowledgeBank.corrections.length, 5);
+  assert.ok(knowledgeBank.corrections.some((correction) =>
+    correction.id === "COR-HJE-TIMEFRAME-2026" &&
+    correction.replacementText.includes("2009-2015")
+  ));
   assert.ok(knowledgeBank.corrections.some((correction) =>
     correction.id === "COR-NYCAC-CABARET-HEARING-DATE-2026" &&
     correction.replacementText === "September 14, 2017"
