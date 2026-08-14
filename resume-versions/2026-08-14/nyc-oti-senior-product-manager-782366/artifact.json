@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "targetJobId": "782366",
+  "generatedOn": "2026-08-14",
+  "sourceMarkdown": "Jamie-Burkart-Resume.md",
+  "sourceMarkdownSha256": "0121e085c03095ab329f9a3e16bea4b7e9c4949546e81229d132b802451162e1",
+  "pdf": {
+    "file": "Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf",
+    "mediaType": "application/pdf",
+    "sha256": "94e55f943a84337616793f7b4a3d97d8fe80fc2a31a67cee709d947a3682bbd5",
+    "bytes": 80523,
+    "pages": 2,
+    "pageSize": "US Letter",
+    "tagged": true
+  },
+  "layout": {
+    "source": "native-google-doc-copy",
+    "typography": [
+      "Palatino Linotype",
+      "Oswald",
+      "Karla"
+    ],
+    "sourceStylesPreserved": true,
+    "intentionalAdaptations": [
+      "The target role occupies the prior resume's teal Oswald role line.",
+      "A page break before 196 Artists Residency keeps experience groups intact and avoids a stranded bullet continuation."
+    ]
+  },
+  "googleWorkspace": {
+    "sourceWasTreatedReadOnly": true,
+    "sourceUnchangedAfterCopy": true,
+    "sourceLocatorCommitted": false,
+    "copyLocatorCommitted": false
+  },
+  "visualInspection": {
+    "status": "pass",
+    "pagesInspected": [
+      1,
+      2
+    ],
+    "checks": [
+      "No clipped or overlapping text",
+      "No broken glyphs",
+      "No isolated section heading or bullet continuation",
+      "Readable hierarchy, contact links, margins, and line spacing"
+    ]
+  }
+}

@@ -6,6 +6,8 @@
   "targetRole": "Senior Product Manager, Public Interest Technology Crew",
   "targetSource": "docs/knowledge-bank/sources/jobs-oti-senior-product-manager-782366.md",
   "targetResume": "resume-versions/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume.md",
+  "targetPdf": "resume-versions/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf",
+  "targetArtifactManifest": "resume-versions/2026-08-14/nyc-oti-senior-product-manager-782366/artifact.json",
   "humanReviewGates": [
     "Jamie approves the exact resume before submission.",
     "NYC OTI determines civil-service minimum-qualification eligibility.",
@@ -41,6 +43,11 @@
       "id": "truth-boundaries",
       "blocking": true,
       "criterion": "Accessibility familiarity is distinguished from audited compliance, and the resume does not invent formal government product ownership, formal research programs, or sole policy causation."
+    },
+    {
+      "id": "submission-pdf",
+      "blocking": true,
+      "criterion": "The exact Markdown candidate has a digest-bound, two-page, tagged US Letter PDF that preserves the approved resume typography and has passed visual inspection."
     },
     {
       "id": "public-safety",

@@ -1,4 +1,5 @@
-import { existsSync, readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { existsSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -12,8 +13,13 @@ const expectedCriteria = [
   "evidence-anchors",
   "collective-credit",
   "truth-boundaries",
+  "submission-pdf",
   "public-safety"
 ];
+
+function digest(content) {
+  return createHash("sha256").update(content).digest("hex");
+}
 
 export function evaluateResumeVersions(root = defaultRoot) {
   const failures = [];
@@ -125,6 +131,59 @@ export function evaluateResumeVersions(root = defaultRoot) {
   if (unsupportedClaims.some((pattern) => pattern.test(resume)) ||
       !resume.includes("Familiarity with WCAG 2.1 AA and Section 508")) {
     fail("truth-boundaries", "The resume overclaims an unverified qualification or loses the bounded accessibility wording.");
+  }
+
+  const targetPdf = evaluation.targetPdf;
+  const targetArtifactManifest = evaluation.targetArtifactManifest;
+  const expectedDirectory = "resume-versions/2026-08-14/nyc-oti-senior-product-manager-782366";
+  if (targetPdf !== `${expectedDirectory}/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf` ||
+      targetArtifactManifest !== `${expectedDirectory}/artifact.json`) {
+    fail("submission-pdf", "The submission PDF and artifact manifest are not bound to the exact dated Job ID 782366 directory.");
+  } else {
+    const pdfPath = path.join(root, targetPdf);
+    const artifactPath = path.join(root, targetArtifactManifest);
+    if (!existsSync(pdfPath) || !existsSync(artifactPath)) {
+      fail("submission-pdf", "The application PDF or its artifact manifest is missing.");
+    } else {
+      const pdf = readFileSync(pdfPath);
+      const pdfText = pdf.toString("latin1");
+      const artifact = JSON.parse(readFileSync(artifactPath, "utf8"));
+      const pageObjects = pdfText.match(/\/Type\s*\/Page\b/g)?.length ?? 0;
+      const requiredFonts = ["PalatinoLinotype", "Oswald", "Karla"];
+      const checks = artifact?.visualInspection?.checks ?? [];
+      if (!pdf.subarray(0, 5).equals(Buffer.from("%PDF-")) ||
+          pageObjects !== 2 ||
+          !pdfText.includes("/Count 2") ||
+          (pdfText.match(/\/MediaBox \[0 0 612 792\]/g)?.length ?? 0) !== 2 ||
+          !pdfText.includes("/Marked true") ||
+          !pdfText.includes("/StructTreeRoot") ||
+          !pdfText.includes("/DisplayDocTitle true") ||
+          !requiredFonts.every((font) => pdfText.includes(font)) ||
+          artifact.schemaVersion !== 1 ||
+          artifact.targetJobId !== "782366" ||
+          artifact.sourceMarkdown !== "Jamie-Burkart-Resume.md" ||
+          artifact.sourceMarkdownSha256 !== digest(resume) ||
+          artifact?.pdf?.file !== path.basename(targetPdf) ||
+          artifact?.pdf?.mediaType !== "application/pdf" ||
+          artifact?.pdf?.sha256 !== digest(pdf) ||
+          artifact?.pdf?.bytes !== statSync(pdfPath).size ||
+          artifact?.pdf?.pages !== 2 ||
+          artifact?.pdf?.pageSize !== "US Letter" ||
+          artifact?.pdf?.tagged !== true ||
+          artifact?.layout?.source !== "native-google-doc-copy" ||
+          JSON.stringify(artifact?.layout?.typography) !== JSON.stringify(["Palatino Linotype", "Oswald", "Karla"]) ||
+          artifact?.layout?.sourceStylesPreserved !== true ||
+          artifact?.googleWorkspace?.sourceWasTreatedReadOnly !== true ||
+          artifact?.googleWorkspace?.sourceUnchangedAfterCopy !== true ||
+          artifact?.googleWorkspace?.sourceLocatorCommitted !== false ||
+          artifact?.googleWorkspace?.copyLocatorCommitted !== false ||
+          artifact?.visualInspection?.status !== "pass" ||
+          JSON.stringify(artifact?.visualInspection?.pagesInspected) !== "[1,2]" ||
+          !Array.isArray(checks) || checks.length < 4 ||
+          /docs\.google\.com\/document\/d\//i.test(JSON.stringify(artifact))) {
+        fail("submission-pdf", "The submission PDF is stale, malformed, not two-page/tagged, missing the approved typography, not visually inspected, or exposes a protected Google Doc locator.");
+      }
+    }
   }
 
   if (/\/(?:Users|Volumes)\/|[0-9A-F]{8}(?:-[0-9A-F]{4}){3}-[0-9A-F]{12}|private correspondence|raw transcript|people tags|gpslatitude/i.test(resume)) {

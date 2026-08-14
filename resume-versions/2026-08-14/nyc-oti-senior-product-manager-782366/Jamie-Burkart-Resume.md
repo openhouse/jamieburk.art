@@ -45,7 +45,7 @@ Hands-on product and technical project leader with 14+ years moving public-facin
 
 *Kansas City, MO | 2015-2024*
 
-- Co-led community listening, scope, sequencing, budgeting, design, public funding, vendors, field implementation, and public-benefit reporting for a 6,500 sq. ft. adaptive-reuse project; secured a **$490,539 public funding award** through a successful CCED proposal and presentation.
+- Co-led community listening, scope, sequencing, budgeting, design, public funding, vendors, field implementation, and public-benefit reporting for a 6,500 sq. ft. adaptive-reuse project; secured a **$490,539 public funding recommendation** through a successful CCED proposal and presentation.
 
 ## Selected Product Evidence
 

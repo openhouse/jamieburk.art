@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
+import { cpSync, mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
@@ -12,6 +12,18 @@ const targetPath = path.join(
   "2026-08-14",
   "nyc-oti-senior-product-manager-782366",
   "Jamie-Burkart-Resume.md"
+);
+const targetPdfPath = path.join(
+  "resume-versions",
+  "2026-08-14",
+  "nyc-oti-senior-product-manager-782366",
+  "Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf"
+);
+const targetArtifactPath = path.join(
+  "resume-versions",
+  "2026-08-14",
+  "nyc-oti-senior-product-manager-782366",
+  "artifact.json"
 );
 
 function run(root = repoRoot) {
@@ -33,6 +45,8 @@ function fixture(resume) {
       id: "oti-senior-product-manager-resume-v1",
       targetJobId: "782366",
       targetResume: targetPath,
+      targetPdf: targetPdfPath,
+      targetArtifactManifest: targetArtifactPath,
       criteria: [
         { id: "versioned-path", blocking: true },
         { id: "ats-structure", blocking: true },
@@ -40,6 +54,7 @@ function fixture(resume) {
         { id: "evidence-anchors", blocking: true },
         { id: "collective-credit", blocking: true },
         { id: "truth-boundaries", blocking: true },
+        { id: "submission-pdf", blocking: true },
         { id: "public-safety", blocking: true }
       ]
     }),
@@ -52,6 +67,27 @@ function fixture(resume) {
 test("the current OTI application resume satisfies every blocking contract", () => {
   const result = run();
   assert.equal(result.status, 0, result.stderr || result.stdout);
+});
+
+test("a stale submission PDF manifest fails the exact-artifact gate", () => {
+  const root = mkdtempSync(path.join(tmpdir(), "resume-pdf-eval-"));
+  try {
+    cpSync(path.join(repoRoot, "evals/resume-versions"), path.join(root, "evals/resume-versions"), { recursive: true });
+    cpSync(
+      path.join(repoRoot, "resume-versions/2026-08-14/nyc-oti-senior-product-manager-782366"),
+      path.join(root, "resume-versions/2026-08-14/nyc-oti-senior-product-manager-782366"),
+      { recursive: true }
+    );
+    const artifactPath = path.join(root, targetArtifactPath);
+    const artifact = JSON.parse(readFileSync(artifactPath, "utf8"));
+    artifact.pdf.sha256 = "0".repeat(64);
+    writeFileSync(artifactPath, `${JSON.stringify(artifact, null, 2)}\n`, "utf8");
+    const result = run(root);
+    assert.notEqual(result.status, 0);
+    assert.match(result.stderr, /submission-pdf/);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
 });
 
 test("a generic resume without the resident-facing product lifecycle fails role alignment", () => {
