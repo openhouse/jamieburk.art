@@ -1,8 +1,8 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-08-13T21:01:42.942Z",
-  "baseUrl": "http://127.0.0.1:3121",
-  "publicSurfaceFingerprint": "0b266c1d19ac176a6ff2664b84b3c527ed5aed955d6505bda1cc3e64107f08f0",
+  "checkedAt": "2026-08-14T01:36:16.253Z",
+  "baseUrl": "https://staging-a.jamieburk.art",
+  "publicSurfaceFingerprint": "793d30531eb963eff7fe16f700f6c2497d13ab3c4ef624b8be4492933b4ae9ad",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 124,
   "routes": [
@@ -886,7 +886,7 @@
     "passed": true
   },
   "navigationReview": {
-    "checkedAt": "2026-08-13T21:01:42.942Z",
+    "checkedAt": "2026-08-14T01:36:16.253Z",
     "startRoute": "/",
     "destinationRoute": "/about",
     "startHttpStatus": 200,
@@ -901,8 +901,8 @@
       "height": 900
     },
     "renderedScreenshot": {
-      "sha256": "79ce48540dff53e29c7acc8126892ab9673eab1ab0014a1c31415f74f6a4ef56",
-      "byteLength": 583564,
+      "sha256": "7e10731f445b437bf2e687335ca115872e49632236ebf020fcf67b70feb46f3b",
+      "byteLength": 583885,
       "width": 1280,
       "fullPage": true,
       "retainedInPublicGit": false,
