@@ -8,6 +8,7 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 FROM base AS deps
+ENV NODE_OPTIONS=--max-old-space-size=256
 COPY package.json package-lock.json ./
 COPY apps/www/package.json ./apps/www/package.json
 RUN npm ci
