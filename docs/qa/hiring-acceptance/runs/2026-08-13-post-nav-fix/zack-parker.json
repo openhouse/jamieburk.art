@@ -1,0 +1,26 @@
+{
+  "gateId": "gate.codepath-engineering.zack-parker",
+  "disclaimer": "Fictionalized analytical lens only; not Zack Parker's participation, opinion, quote, endorsement, or a CodePath hiring decision.",
+  "relationshipCaveat": "The posting reports to CodePath's VP of Engineering, and CodePath's public team page lists Zack Parker as VP, Engineering; this suggests possible direct-manager context only, not confirmation that he owns this requisition.",
+  "verdict": "fail",
+  "judgeVerdictNormalizedToContract": "reject",
+  "acceptanceStatement": "I would not yet hire this person for this job",
+  "judgeAcceptanceStatementRejectedAsContradictory": "I would hire this person for this job.",
+  "confidence": 0.86,
+  "publicEvidence": [
+    "The portfolio substantiates long-running technical/project operations: requirements, incremental releases, stakeholder translation, public-path verification, documentation, and handoffs (Technical Operations; Harry J. Epstein).",
+    "WOWList provides credible product-platform context, including co-building and operating a Django/PostgreSQL/PostGIS/Ember community platform with historical scale.",
+    "The lab demonstrates careful AI-workflow judgment and human review, plus public evidence of AI Evals for Engineers & PMs coursework.",
+    "The public resume claims 14+ years creating operating structure and relevant delivery/operations outcomes."
+  ],
+  "primaryBlocker": "Public evidence does not demonstrate hands-on QA ownership for a small engineering team: reproducing bugs, reading stack traces, operating a bug pipeline, or authoring automated tests—especially the requested Capybara/RSpec or comparable evidence.",
+  "gapClass": "must-have-execution-evidence",
+  "constructiveFeedback": [
+    "Add one public-safe, concrete QA case: issue intake, reproduction steps, prioritization, engineer handoff, verification, and the measured result.",
+    "Show a small redacted test artifact or walkthrough proving test-case authorship and technical fluency; name the framework only if accurate.",
+    "Make the connection between AI use and quality automation specific: what repetitive QA work was automated, how human review worked, and what failure modes were checked."
+  ],
+  "reviewedAt": "2026-08-13",
+  "publicWebOnly": true,
+  "priorJudgeOutputVisible": false
+}

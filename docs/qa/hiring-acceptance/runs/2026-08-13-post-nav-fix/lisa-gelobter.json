@@ -1,0 +1,43 @@
+{
+  "disclaimer": "Fictionalized public-context lens only; not Lisa Gelobter's participation, opinion, endorsement, or a hiring decision.",
+  "relationshipCaveat": "Lisa Gelobter is publicly announced as NYC CTO and OTI Commissioner; the direct managers for these requisitions are not publicly named.",
+  "reviewedAt": "2026-08-13",
+  "publicWebOnly": true,
+  "priorJudgeOutputVisible": false,
+  "results": [
+    {
+      "gateId": "gate.oti-senior-product.lisa-gelobter",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "judgeWordingNormalizedToContract": "I would not hire this person for this job.",
+      "confidence": 0.82,
+      "publicEvidence": [
+        "The portfolio credibly shows technical-project and product-operations work: delivery coordination, risk surfacing, documentation, public-facing guidance, and cross-functional dependencies.",
+        "It presents relevant civic/public-facing work including CallNYC, FairRentNYC, WOWList, and long-running e-commerce operations improvement."
+      ],
+      "primaryBlocker": "The public record does not establish the Senior Product Manager's required direct, end-to-end ownership of resident-facing products through discovery, user research, prioritization, metrics/instrumentation, accessibility/privacy tradeoffs, and public launch.",
+      "gapClass": "missing-public-evidence",
+      "constructiveFeedback": [
+        "Add a concise, public-safe case study proving one end-to-end product cycle: problem, resident research, decision authority, shipped v1, launch, and measured outcome.",
+        "State the candidate's product-owner scope and evidence of accessibility, privacy, and cross-agency launch coordination without overstating collective work."
+      ]
+    },
+    {
+      "gateId": "gate.oti-technical-operations.lisa-gelobter",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "judgeWordingNormalizedToContract": "I would not hire this person for this job.",
+      "confidence": 0.99,
+      "publicEvidence": [
+        "The portfolio strongly maps to the historical role pattern: delivery coordination, planning rhythms, risk management, decision records, onboarding, operating documentation, and launch support.",
+        "The City Jobs listing states that Job ID 782369 expired on 2026-08-07."
+      ],
+      "primaryBlocker": "This requisition is closed and cannot pass as a current job, regardless of role-fit evidence.",
+      "gapClass": "role-closed",
+      "constructiveFeedback": [
+        "Treat this as a historical watch pattern and seek a currently open requisition with comparable technical-operations scope.",
+        "For future comparable roles, add public-safe examples of operational metrics, hiring/onboarding ownership, and government procurement or structured-hiring experience."
+      ]
+    }
+  ]
+}

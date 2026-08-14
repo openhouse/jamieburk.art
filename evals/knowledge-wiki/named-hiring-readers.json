@@ -99,5 +99,5 @@
       "requiredRoutes": ["/", "/work/technical-operations", "/work/callnyc", "/work/fair-rent-nyc", "/work/harry-j-epstein", "/lab/source-backed-team-memory", "/resume", "/contact"]
     }
   ],
-  "latestRunPath": "docs/qa/hiring-acceptance/runs/2026-08-13-final/manifest.json"
+  "latestRunPath": "docs/qa/hiring-acceptance/runs/2026-08-13-post-nav-fix/manifest.json"
 }

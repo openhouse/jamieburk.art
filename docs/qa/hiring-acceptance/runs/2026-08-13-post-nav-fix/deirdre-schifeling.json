@@ -1,0 +1,25 @@
+{
+  "gateId": "gate.aclu-national-campaigns.deirdre-schifeling",
+  "disclaimer": "Fictionalized analytical lens only; not Deirdre Schifeling's participation, opinion, quote, endorsement, or an actual ACLU hiring decision.",
+  "relationshipCaveat": "Schifeling is the nearest publicly named senior vision leader; the direct manager, the Senior Director of National Campaigns, is not publicly named.",
+  "verdict": "fail",
+  "acceptanceStatement": "I would not yet hire this person for this job",
+  "confidence": 0.78,
+  "publicEvidence": [
+    "The technical-operations page credibly maps Jamie's work to delivery coordination, risk/status systems, cross-functional dependencies, documentation, launch support, and operating metrics.",
+    "The FairRentNYC case study provides bounded, source-linked evidence of coalition organizing, public-policy testimony, campaign-web implementation, shared campaign memory, source maps, and careful public/private handling.",
+    "The resume page presents 14+ years of operating-structure work, civic systems/coalition operations, and several concrete outcomes.",
+    "The ACLU posting requires significant project-management/internal-communications experience plus a strong understanding of advocacy campaign operations; it also assigns budget/procurement tracking, national-department and affiliate coordination, strategic support to the Senior Director, and work across changing issue priorities.",
+    "The public bio frames the relevant department as responsible for national and state policy/campaign teams, grassroots-organizing infrastructure, and electoral programming."
+  ],
+  "primaryBlocker": "The public record supports strong adjacent civic and coalition operations, but does not supply enough verified role-specific evidence of leading large, complex national campaign portfolios across affiliates—especially budget/procurement ownership, senior-level internal communications, and strategic support in a national political-advocacy environment—to make an unconditional hire decision.",
+  "gapClass": "experience/eligibility/role-context",
+  "constructiveFeedback": [
+    "Add public-safe, source-backed examples that specify project scale, multi-team or affiliate coordination, timelines, budgets/procurement responsibility, and measurable delivery outcomes.",
+    "Provide a concise role-fit artifact showing internal memos, reporting/dashboard practice, research/talking-point support, and how decisions moved through senior stakeholders, with sensitive content redacted.",
+    "Clarify any directly relevant national, electoral, legislative, or administrative advocacy-campaign experience and scope without converting collective outcomes into individual causation."
+  ],
+  "reviewedAt": "2026-08-13",
+  "publicWebOnly": true,
+  "priorJudgeOutputVisible": false
+}

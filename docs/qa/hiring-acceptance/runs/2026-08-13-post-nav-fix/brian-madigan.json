@@ -1,0 +1,22 @@
+{
+  "gateId": "gate.codepath-ai-operations.brian-madigan",
+  "disclaimer": "This is a fictionalized analytical lens informed only by Brian Madigan's public CodePath role and public CodePath context; it is not his participation, opinion, quote, endorsement, or an actual hiring decision.",
+  "relationshipCaveat": "Brian Madigan is publicly identified as CodePath COO, but he is not established here as this role's direct manager; the posting names the Director of Business Operations.",
+  "verdict": "fail",
+  "acceptanceStatement": "I would not yet hire this person for this job",
+  "judgeWordingNormalizedToContract": "I would not hire this person for this job based on the public evidence currently available.",
+  "confidence": 0.93,
+  "publicEvidence": [
+    "The portfolio demonstrates substantial operations and implementation strength: long-running e-commerce and operational workflow improvements, requirements clarification, incremental releases, stakeholder translation, documentation, and handoffs.",
+    "The public lab page shows sound human-in-the-loop AI judgment, source-linked records, protected-context boundaries, and completion of an AI evaluation course.",
+    "CodePath requires 5+ years of automation/ops tooling with recent professional hands-on LLM/agent work, shipped task-specific agents/automations, production quality gates/evals, and measured organizational outcomes."
+  ],
+  "primaryBlocker": "The public portfolio does not establish that Jamie personally built, deployed, and iterated a production LLM agent or automation in a professional setting, using relevant tools or integrations, with measurable adoption, quality, or time-saved outcomes.",
+  "gapClass": "required-experience-evidence",
+  "constructiveFeedback": [
+    "Add one public-safe case study documenting a personally shipped LLM workflow: the team problem, tools/integrations, v1 delivery, human-review and evaluation rubric, adoption/enablement approach, measured outcome, iteration, and clean handoff. Keep the existing privacy and collective-credit boundaries."
+  ],
+  "reviewedAt": "2026-08-13",
+  "publicWebOnly": true,
+  "priorJudgeOutputVisible": false
+}

@@ -1,0 +1,24 @@
+{
+  "gateId": "gate.codepath-engineering.chris-coleman",
+  "disclaimer": "Fictionalized analytical lens based only on public CodePath context; this is not Chris Coleman's participation, opinion, quote, endorsement, or an actual hiring decision.",
+  "relationshipCaveat": "Chris Coleman is public-facing CodePath leadership context only. The posting reports to the VP of Engineering; no direct-manager relationship is established.",
+  "verdict": "fail",
+  "acceptanceStatement": "I would not yet hire this person for this job",
+  "confidence": 0.84,
+  "publicEvidence": [
+    "The technical-operations page credibly presents delivery coordination, cross-functional dependency management, risk/status reporting, operating documentation, launch support, and a stated preference for useful rather than excessive process.",
+    "The HJE and WOWList portfolio surfaces support experience with long-running e-commerce/operations improvement and co-building/operating a community platform.",
+    "The resume/contact surfaces make the candidate reachable and position the work as technical project management, product operations, and implementation.",
+    "CodePath's public role requires hands-on QA ownership: reproducing bugs, reading stack traces, writing automated test cases, running the bug pipeline, and ideally Capybara/RSpec or comparable test tooling."
+  ],
+  "primaryBlocker": "The public portfolio does not provide material, concrete evidence that Jamie has personally owned hands-on QA and a bug pipeline or can write/maintain automated tests—the role's central execution gate.",
+  "gapClass": "material-role-requirement-evidence",
+  "constructiveFeedback": [
+    "Add a public-safe, outcome-specific case study showing bug intake, reproduction, prioritization, engineering routing, verification, and the resulting quality/release impact.",
+    "Show a bounded technical testing artifact or walkthrough that demonstrates test-case design and actual use of an automated testing tool; name Capybara/RSpec-equivalent experience only if accurate.",
+    "Make the connection between AI-assisted operational work and repeatable QA automation explicit, including human review and quality safeguards."
+  ],
+  "reviewedAt": "2026-08-13",
+  "publicWebOnly": true,
+  "priorJudgeOutputVisible": false
+}

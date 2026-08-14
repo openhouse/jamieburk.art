@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "suiteId": "named-public-hiring-readers-2026-08-13",
+  "runId": "named-readers-post-nav-fix-c2b8c7435",
+  "evaluatedGitRev": "c2b8c74353ca631b03e85d084a9d6fbcdedb0e45",
+  "evaluatedUrl": "https://staging-a.jamieburk.art",
+  "portfolioSnapshotHash": "cd5c0a61b920a9b28c87856c1e1eaa6d9683940aa2aad5e96f6ca84af45f36f1",
+  "runDate": "2026-08-13",
+  "method": "Six sequential sandboxed public-web-only tasks, one separate task per unique named person; Lisa Gelobter returned separate decisions for two OTI roles. Judges received no repository, Wiki, private evidence, or prior judge output. Qualitative confidence and non-contract acceptance wording were normalized only where recorded transparently in the reader artifact.",
+  "uniqueReaderCount": 6,
+  "evaluationCount": 7,
+  "passCount": 0,
+  "failCount": 7,
+  "suiteVerdict": "fail",
+  "allMustPass": true,
+  "results": [
+    {
+      "gateId": "gate.aclu-national-campaigns.deirdre-schifeling",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.78,
+      "primaryBlocker": "The public record does not verify leadership of large national campaign portfolios across affiliates, including budget and procurement ownership, senior internal communications, and strategic support.",
+      "gapClass": "experience-eligibility-role-context-unresolved"
+    },
+    {
+      "gateId": "gate.codepath-ai-operations.quinton-ma",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.9,
+      "primaryBlocker": "No public case verifies a professional LLM or agent workflow personally shipped with users, integrations, quality gates, adoption, handoff, and measured change.",
+      "gapClass": "mandatory-experience-unverified"
+    },
+    {
+      "gateId": "gate.codepath-ai-operations.brian-madigan",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.93,
+      "primaryBlocker": "The portfolio does not establish a production LLM agent or automation personally built, deployed, iterated, adopted, and measured in a professional setting.",
+      "gapClass": "mandatory-experience-unverified"
+    },
+    {
+      "gateId": "gate.codepath-engineering.zack-parker",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.86,
+      "primaryBlocker": "No public evidence demonstrates hands-on QA ownership: reproducing bugs, reading traces, operating a bug pipeline, authoring automated tests, and verifying closure.",
+      "gapClass": "mandatory-execution-evidence-unverified"
+    },
+    {
+      "gateId": "gate.codepath-engineering.chris-coleman",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.84,
+      "primaryBlocker": "The public portfolio does not prove personal ownership of hands-on QA, automated testing, and the resulting product-quality or release impact.",
+      "gapClass": "mandatory-execution-evidence-unverified"
+    },
+    {
+      "gateId": "gate.oti-senior-product.lisa-gelobter",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.82,
+      "primaryBlocker": "No public case establishes end-to-end ownership of a resident-facing product through discovery, research, prioritization, accessibility and privacy tradeoffs, launch, instrumentation, and learning.",
+      "gapClass": "portfolio-and-role-context-unresolved"
+    },
+    {
+      "gateId": "gate.oti-technical-operations.lisa-gelobter",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.99,
+      "primaryBlocker": "The requisition is closed and cannot pass as a current job; it remains only a historical watch pattern.",
+      "gapClass": "role-closed"
+    }
+  ],
+  "disclaimer": "Synthetic public-context evaluations only; not the named people's participation, opinions, endorsements, or actual hiring decisions."
+}

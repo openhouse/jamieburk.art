@@ -1,0 +1,26 @@
+{
+  "gateId": "gate.codepath-ai-operations.quinton-ma",
+  "disclaimer": "This is a fictionalized analytical lens, not Quinton Ma's participation, opinion, endorsement, or an actual hiring decision.",
+  "relationshipCaveat": "Quinton Ma is public-context only: a title match for Director, Business Operations and a possible direct-manager context, but is not named in the posting or confirmed to manage this role.",
+  "verdict": "fail",
+  "acceptanceStatement": "I would not yet hire this person for this job",
+  "confidence": 0.9,
+  "confidenceLabelFromJudge": "high",
+  "publicEvidence": [
+    "The Technical Operations page credibly shows long-running delivery, requirements, workflow, documentation, risk/status, launch, and handoff practice.",
+    "The Harry J. Epstein case supports sustained e-commerce and operations modernization, stakeholder translation, incremental releases, and contribution to online growth.",
+    "The Source-Backed Team Memory page shows thoughtful human-review, source-linking, correction, and evaluation concepts; it explicitly frames the work as a developing lab method, not a finished production system.",
+    "The resume records completion of AI Evals for Engineers & PMs in 2026."
+  ],
+  "primaryBlocker": "The public site does not verify recent professional experience personally building and shipping LLM agents/automations, productionizing them with measurable outcomes, or embedding with nontechnical teams to drive AI adoption—the core requirements of this role.",
+  "gapClass": "experience/eligibility/context",
+  "constructiveFeedback": [
+    "Add one public-safe, role-specific case study of an LLM workflow personally shipped: users, workflow, tools/integrations, human review and quality gates, deployment/handoff, and measured change.",
+    "State the professional setting, timeframe, and personal role clearly enough to establish the posting's 5+ years automation/ops-tooling requirement and recent hands-on LLM/agent work.",
+    "Show evidence of enablement with nontechnical colleagues and an outcome metric such as time saved, quality improvement, adoption, or recurrence reduction.",
+    "Keep the lab's careful boundaries, but distinguish coursework/prototype method from deployed professional work."
+  ],
+  "reviewedAt": "2026-08-13",
+  "publicWebOnly": true,
+  "priorJudgeOutputVisible": false
+}
