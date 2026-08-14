@@ -6,7 +6,8 @@ import { fileURLToPath } from "node:url";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 
-test("the Docker production build enables Next's lower-memory webpack mode", () => {
+test("the Docker production build bounds worker concurrency and enables lower-memory webpack mode", () => {
   const source = readFileSync(path.join(repoRoot, "apps/www/next.config.ts"), "utf8");
+  assert.match(source, /experimental:\s*\{[\s\S]*cpus:\s*1/);
   assert.match(source, /experimental:\s*\{[\s\S]*webpackMemoryOptimizations:\s*true/);
 });

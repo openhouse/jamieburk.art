@@ -39,6 +39,7 @@ const nextConfig: NextConfig = {
   output: "standalone",
   outputFileTracingRoot: path.join(process.cwd(), "../../"),
   experimental: {
+    cpus: 1,
     webpackMemoryOptimizations: true
   },
   reactStrictMode: true,
