@@ -96,6 +96,58 @@ export default function TechnicalOperationsPage() {
         ))}
       </nav>
 
+      <section className="border-t-4 border-jb-ink py-12" aria-labelledby="product-team-transfer">
+        <div className="grid gap-8 lg:grid-cols-[0.34fr_0.66fr]">
+          <div>
+            <p className="jb-section-label">Product-team transfer</p>
+            <h2 className="mt-3 text-4xl leading-tight text-jb-ink" id="product-team-transfer">
+              How this operating pattern meets a product team
+            </h2>
+            <p className="mt-4 leading-7 text-jb-ink/74">
+              The evidence comes from commercial operations, a community product,
+              civic technology, and coalition delivery. Here is the direct transfer.
+            </p>
+          </div>
+          <div>
+            <div className="grid gap-7 md:grid-cols-3">
+              <div>
+                <h3 className="text-xl font-semibold text-jb-ink">Before launch</h3>
+                <p className="mt-3 leading-7 text-jb-ink/76">
+                  Translate a proposed change into user paths, downstream operating
+                  requirements, dependencies, readiness questions, risks, owners,
+                  and an explicit escalation path.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-jb-ink">Prioritization</h3>
+                <p className="mt-3 leading-7 text-jb-ink/76">
+                  Turn requests into bounded problem statements; compare user
+                  friction, business or mission consequence, implementation effort,
+                  operational risk, and the evidence still needed.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-jb-ink">After launch</h3>
+                <p className="mt-3 leading-7 text-jb-ink/76">
+                  Inspect the real path and available adoption or operating signals;
+                  record what changed, update the workflow, and transfer ownership
+                  with the decision history intact.
+                </p>
+              </div>
+            </div>
+            <div className="mt-7 border-y border-jb-ink/20 py-6">
+              <p className="leading-7 text-jb-ink/76">
+                This is a transferable operating pattern, not a claim of formal B2B
+                SaaS Product Operations tenure, go/no-go authority,
+                retention-metric ownership, or roadmap control. The cases below make
+                the underlying decisions, delivery, adoption signals, business
+                contribution, and limits inspectable.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="scroll-mt-28 border-t-4 border-jb-blue py-12" id="public-product-delivery">
         <div className="grid gap-8 lg:grid-cols-[0.34fr_0.66fr]">
           <div>

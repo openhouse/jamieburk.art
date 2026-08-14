@@ -26,6 +26,19 @@ test("the technical-operations surface gives three hiring contexts a concrete ev
   assert.ok(page.includes("CLM-NYCAC-SBU-REPORT-REVIEW-2026"));
 });
 
+test("product-team transfer is explicit without inventing SaaS authority", () => {
+  const page = read("apps/www/src/app/work/technical-operations/page.tsx");
+
+  for (const heading of ["Before launch", "Prioritization", "After launch"]) {
+    assert.ok(page.includes(heading), `missing ${heading}`);
+  }
+  assert.ok(page.includes("transferable operating pattern"));
+  assert.match(page, /formal B2B\s+SaaS Product Operations tenure/);
+  assert.ok(page.includes("go/no-go authority"));
+  assert.ok(page.includes("retention-metric ownership"));
+  assert.ok(page.includes("roadmap control"));
+});
+
 test("new hiring claims are active only on governed public surfaces", () => {
   const productFit = read(
     "apps/www/src/data/knowledge-bank/wowlist-product-fit-2026-08.ts"
