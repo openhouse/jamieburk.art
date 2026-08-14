@@ -50,7 +50,7 @@ projection:
     - /work/fair-rent-nyc
     - /work/callnyc
     - /work/wow-list
-    - /work/sunday-dinner
+    - /work/196-sunday-dinner
     - /work/kc-town-hall
 relations:
   - type: related_to
