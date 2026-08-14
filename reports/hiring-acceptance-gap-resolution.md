@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Hiring acceptance Wiki gap resolution
 
-**Candidate commit:** `8ca42a05f0e08e016967f444474293484c004ef0`
-**Public report hash:** `2ea543221a863a69ca4c3d505ce6602f9d7018e0bcdf91d9aaafc7f994f79d39`
-**Wiki fingerprint:** `f6f87d48bc1a9abe5424c304ec68d9cbd8b4ff80cb7ce5896b62e3514a5ba8c8`
+**Candidate commit:** `b0151ec32fe99dd47a68e72a1db99b033a1bd0a3`
+**Public report hash:** `d70fa4ad4dc73bef884d8105cfd7f77d62345c15c4c0e4684f94af0a1468b127`
+**Wiki fingerprint:** `e530ec91a77d83a48cccb224a95f65181ad39e19df2aae338b8ada4519f18c5c`
 
 The gap resolver runs after the public-only evaluator. It can identify Wiki evidence, but every public change remains human-reviewed.
 
@@ -16,7 +16,6 @@ The gap resolver runs after the public-only evaluator. It can identify Wiki evid
 - `requirement.aclu-lps.organizational-learning` - **role-context-or-evidence-unknown**; Explain what changed after a retrospective and remained in use.
 - `requirement.aclu-campaigns.communications` - **role-context-or-evidence-unknown**; Prepare a compact redacted campaign update and a public remarks example.
 - `requirement.aclu-campaigns.judgment-and-discretion` - **role-context-or-evidence-unknown**; Prepare one example of protecting sensitive work while keeping a public process moving.
-- `requirement.oti.delivery-coordination` - **role-context-or-evidence-unknown**; Lead with one concrete delivery example in the application.
 - `requirement.oti.risk-and-dependencies` - **role-context-or-evidence-unknown**; Keep the public wording concise; add detail in interview.
 - `requirement.oti.onboarding-and-runbooks` - **role-context-or-evidence-unknown**; Prepare one inspectable redacted artifact for interview.
 - `requirement.oti.reporting-and-metrics` - **role-context-or-evidence-unknown**; Prepare a compact example of a weekly status and risk report.

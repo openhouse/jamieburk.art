@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-13T19:41:15-04:00",
-  "sourceCommit": "9e5da4876f7d23a31612ef249baf6cdee03a5da1",
-  "sourceFingerprint": "b94184b2ce247e3baa3e42118466fabf5ffbdb1d947fed7e87b7b8312f1bf2ae",
+  "generatedAt": "2026-08-14T13:02:34-04:00",
+  "sourceCommit": "b0151ec32fe99dd47a68e72a1db99b033a1bd0a3",
+  "sourceFingerprint": "e530ec91a77d83a48cccb224a95f65181ad39e19df2aae338b8ada4519f18c5c",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -21278,6 +21278,15 @@
       "to": null,
       "fragment": null,
       "line": 154,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/kc-town-hall.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/intake/2026-08-14-kcth-tired-of-tires-source-return.md",
+      "to": null,
+      "fragment": null,
+      "line": 197,
       "kind": "link"
     },
     {

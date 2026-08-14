@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `8ca42a05f0e08e016967f444474293484c004ef0`
-**Portfolio snapshot:** `e2be3c565fa63cc675a08418708d1033e9b5169ec6e099f68bc69ae31759a8d4`
-**Role-context hash:** `ca809978dd2296c836ae34294101ae765fb13ead9c4bb4a305640a58286c0347`
+**Candidate commit:** `b0151ec32fe99dd47a68e72a1db99b033a1bd0a3`
+**Portfolio snapshot:** `b5a13a7faa396a93588203c8d7979802b806f97b196f19570a0027bb8f717aad`
+**Role-context hash:** `011c4b7e3321ca233a37de0fc6fbf3b3c6e183499ae8b150e9c81eb8d2b8901f`
 **Reader-context hash:** `c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
 **Candidate paths clean:** yes
@@ -58,13 +58,13 @@
 ### NYC OTI - Technical Operations Manager 782369
 
 - Deterministic disposition: `not-live`
-- Critical signals observed: 0/4
-- All signals observed: 0/6
+- Critical signals observed: 1/4
+- All signals observed: 1/6
 - Opportunity status live: no
 - Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
-- `requirement.oti.delivery-coordination`: **not observed**
+- `requirement.oti.delivery-coordination`: **observed** on `/work/technical-operations`
 - `requirement.oti.risk-and-dependencies`: **not observed**
 - `requirement.oti.onboarding-and-runbooks`: **not observed**
 - `requirement.oti.reporting-and-metrics`: **not observed**

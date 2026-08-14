@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "candidateSha": "8ca42a05f0e08e016967f444474293484c004ef0",
-  "portfolioSnapshotHash": "e2be3c565fa63cc675a08418708d1033e9b5169ec6e099f68bc69ae31759a8d4",
-  "publicReportHash": "2ea543221a863a69ca4c3d505ce6602f9d7018e0bcdf91d9aaafc7f994f79d39",
-  "wikiSourceFingerprint": "f6f87d48bc1a9abe5424c304ec68d9cbd8b4ff80cb7ce5896b62e3514a5ba8c8",
+  "candidateSha": "b0151ec32fe99dd47a68e72a1db99b033a1bd0a3",
+  "portfolioSnapshotHash": "b5a13a7faa396a93588203c8d7979802b806f97b196f19570a0027bb8f717aad",
+  "publicReportHash": "d70fa4ad4dc73bef884d8105cfd7f77d62345c15c4c0e4684f94af0a1468b127",
+  "wikiSourceFingerprint": "e530ec91a77d83a48cccb224a95f65181ad39e19df2aae338b8ada4519f18c5c",
   "findings": [
     {
       "findingId": "finding.requirement.oti-product.cross-functional-launch",
@@ -100,20 +100,6 @@
       "currentStatus": "visible-qualified",
       "gapType": "wording",
       "smallestResponsibleChange": "Prepare one example of protecting sensitive work while keeping a public process moving.",
-      "requiresOriginalSourceReview": false,
-      "requiresHumanApproval": true
-    },
-    {
-      "findingId": "finding.requirement.oti.delivery-coordination",
-      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
-      "requirementId": "requirement.oti.delivery-coordination",
-      "classification": "role-context-or-evidence-unknown",
-      "wikiRecords": [
-        "capability.technical-operations"
-      ],
-      "currentStatus": "visible-proven",
-      "gapType": "none",
-      "smallestResponsibleChange": "Lead with one concrete delivery example in the application.",
       "requiresOriginalSourceReview": false,
       "requiresHumanApproval": true
     },
