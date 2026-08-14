@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "evalId": "resume.codepath.engineering-project-manager.5160542007.pdf-visual",
+  "inspectedAt": "2026-08-14T17:32:00-04:00",
+  "sourceTemplate": {
+    "access": "read-only source; edited only in a new private copy for this opportunity",
+    "revisionUnchangedAfterExport": true,
+    "privateLocatorCommitted": false
+  },
+  "markdown": {
+    "path": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.md",
+    "sha256": "680f9f92f734135b21784b646eea4e55090f8dcdca5708f8b99d0603534cc121"
+  },
+  "pdf": {
+    "path": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.pdf",
+    "sha256": "2c0189c34fbaf278ae2361191f9927d386b47099f5e095bc8b7d2fd502cdfc66",
+    "bytes": 81434,
+    "pages": 2,
+    "pageSize": "US Letter"
+  },
+  "inspection": {
+    "method": "Exported from the native Google Docs working copy, rasterized every page at 120 DPI, and visually inspected at original detail.",
+    "allPagesRasterized": true,
+    "actualNamedPeopleParticipated": false,
+    "pages": [
+      {
+        "page": 1,
+        "pass": true,
+        "notes": "Name, engineering-project title, contact links, summary, quality system, technical fluency, and primary delivery experience are legible with no clipping, overlap, or broken hierarchy."
+      },
+      {
+        "page": 2,
+        "pass": true,
+        "notes": "CallNYC, coalition operations, KC Town Hall, education, and work authorization remain legible and collectively credited; the removed grant-disbursement sentence leaves a clean close."
+      }
+    ]
+  },
+  "overall": "pass",
+  "boundary": "Artifact and visual-quality inspection only. No named hiring reader participated, and a pass is not an endorsement, interview promise, eligibility determination, or hiring decision."
+}

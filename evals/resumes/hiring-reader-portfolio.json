@@ -106,7 +106,7 @@
             { "id": "risk-and-confidentiality", "patterns": ["risk and issue management", "Confidentiality", "private and protected information"] },
             { "id": "accessibility-and-inclusion", "patterns": ["accessibility-aware", "inclusive operations", "civil liberties"] },
             { "id": "cross-department-delivery", "patterns": ["cross-department", "multi-organization", "stakeholder alignment"] },
-            { "id": "budget-claim-boundary", "patterns": ["no unsupported budget-control claim", "award was not disbursed"] }
+            { "id": "public-funding-role-boundary", "patterns": ["named developer/presenter", "documented point of contact", "public funding request"] }
           ],
           "constructiveCritique": "This version makes the systems and organizational-learning case without overstating authority. Its most important open question is how Jamie handles enterprise-scale budgets, governance, and internal power when a decision is contested.",
           "validateNext": "Request the required writing sample and use a structured scenario to test change management, budget reasoning, confidentiality, accessibility, and stakeholder conflict."
@@ -219,7 +219,7 @@
             { "id": "continuous-improvement", "patterns": ["continuous improvement", "retrospectives", "process improvement"] },
             { "id": "public-service-technology", "patterns": ["public-interest technology", "public-service", "digital equity"] },
             { "id": "resident-service-operations", "patterns": ["Tired of Tires", "field collection", "City recycling handoff"] },
-            { "id": "authority-boundary", "patterns": ["does not establish procurement authority", "award was not disbursed"] }
+            { "id": "public-funding-role-boundary", "patterns": ["named developer/presenter", "documented point of contact", "public funding request"] }
           ],
           "constructiveCritique": "This is a strong future-role benchmark because it converts founder-level responsibility into delivery, risk, documentation, and team-capacity language while preserving authority boundaries.",
           "validateNext": "For a materially similar future opening, test portfolio governance, personnel operations, procurement and budget exposure, escalation judgment, and civil-service eligibility."

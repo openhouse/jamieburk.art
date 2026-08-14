@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "evalId": "resume.nyc-oti.senior-product-manager.782366.pdf-visual",
+  "evalId": "resume.aclu.senior-project-manager.8620968002.pdf-visual",
   "inspectedAt": "2026-08-14T17:32:00-04:00",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy for this opportunity",
@@ -8,13 +8,13 @@
     "privateLocatorCommitted": false
   },
   "markdown": {
-    "path": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
-    "sha256": "91850899da1d5b1a98a5b05088646227d10055b1ca5e9a0c7920e3de256d3590"
+    "path": "resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-8620968002.md",
+    "sha256": "9010c23c6400e40f32e192dd48cd01ff47f5a9e37ad6e5ea53997c40cda8ef70"
   },
   "pdf": {
-    "path": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf",
-    "sha256": "6312456b47cc15debff0cc2055cb3d3ad592c0bb8dcd217c7f38733247dbacd8",
-    "bytes": 91453,
+    "path": "resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-8620968002.pdf",
+    "sha256": "fb317451b8fdbf677e85d1f961b2bb92b06a18f639bbdc921a444f8556745548",
+    "bytes": 82896,
     "pages": 2,
     "pageSize": "US Letter"
   },
@@ -26,12 +26,12 @@
       {
         "page": 1,
         "pass": true,
-        "notes": "Name, target title, contact links, profile, full product lifecycle, responsible public technology, and primary experience are legible with clear hierarchy and no clipping or overlap."
+        "notes": "Mission-aligned systems implementation, business analysis, confidentiality, accessibility, and cross-department delivery are immediately legible with a consistent hierarchy."
       },
       {
         "page": 2,
         "pass": true,
-        "notes": "WOW List, CallNYC, KC Town Hall, additional leadership, education, and work authorization are legible. Politico New York is visibly blue and underlined and links to the archived article PDF."
+        "notes": "KC Town Hall, WOW List, CallNYC, Sunday Dinner, education, and work authorization read cleanly; affirmative role evidence replaces defensive grant-disbursement wording."
       }
     ]
   },

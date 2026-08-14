@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "evalId": "resume.benepass.product-operations-manager.7f963a7a.pdf-visual",
+  "inspectedAt": "2026-08-14T17:32:00-04:00",
+  "sourceTemplate": {
+    "access": "read-only source; edited only in a new private copy for this opportunity",
+    "revisionUnchangedAfterExport": true,
+    "privateLocatorCommitted": false
+  },
+  "markdown": {
+    "path": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.md",
+    "sha256": "2fbb5028687a33f982968c8878c642a03a4ba5ff2333c383ed7d168babf67141"
+  },
+  "pdf": {
+    "path": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.pdf",
+    "sha256": "951ad5f8f5c77962b70921d67789367bdaf27dbb2bd7ef9c4c730700c8f585f4",
+    "bytes": 82464,
+    "pages": 2,
+    "pageSize": "US Letter"
+  },
+  "inspection": {
+    "method": "Exported from the native Google Docs working copy, rasterized every page at 120 DPI, and visually inspected at original detail; PDF text coordinates confirmed the expected 36 point top margin.",
+    "allPagesRasterized": true,
+    "actualNamedPeopleParticipated": false,
+    "pages": [
+      {
+        "page": 1,
+        "pass": true,
+        "notes": "Product operations, launch readiness, downstream impact, go/no-go support, prioritization, and accountable operating systems read clearly with intact contact links and page geometry."
+      },
+      {
+        "page": 2,
+        "pass": true,
+        "notes": "Coalition delivery, resident-facing CallNYC, KC Town Hall, Sunday Dinner, education, and authorization remain coherent; the closing experience bullet no longer carries defensive disbursement language."
+      }
+    ]
+  },
+  "overall": "pass",
+  "boundary": "Artifact and visual-quality inspection only. No named hiring reader participated, and a pass is not an endorsement, interview promise, eligibility determination, or hiring decision."
+}

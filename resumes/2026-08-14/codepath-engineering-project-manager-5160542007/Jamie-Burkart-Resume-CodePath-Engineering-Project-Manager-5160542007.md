@@ -52,7 +52,7 @@ New York, NY | 2017–Present
 
 Kansas City, MO | 2015–2024
 
-- Coordinated plans, vendors, public documentation, municipal requirements, field dependencies, and compliance for adaptive reuse of an approximately 6,500 sq. ft. historic building; co-developed a successful $490,539 public funding request and later transitioned the project to a mission-aligned organization. The award was not disbursed to the project.
+- Coordinated plans, vendors, public documentation, municipal requirements, field dependencies, and compliance for adaptive reuse of an approximately 6,500 sq. ft. historic building; co-developed a successful $490,539 public funding request and later transitioned the project to a mission-aligned organization.
 
 ## Education & Professional Development
 

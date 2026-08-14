@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "evalId": "resume.nyc-oti.senior-product-manager.782366.pdf-visual",
+  "evalId": "resume.nyc-oti.technical-operations-manager.782369.pdf-visual",
   "inspectedAt": "2026-08-14T17:32:00-04:00",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy for this opportunity",
@@ -8,13 +8,13 @@
     "privateLocatorCommitted": false
   },
   "markdown": {
-    "path": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
-    "sha256": "91850899da1d5b1a98a5b05088646227d10055b1ca5e9a0c7920e3de256d3590"
+    "path": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.md",
+    "sha256": "910a521d9cb9bbdb5c1ead8e3a0a8dc96221a3517ba116d66e840c5b52e09b24"
   },
   "pdf": {
-    "path": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf",
-    "sha256": "6312456b47cc15debff0cc2055cb3d3ad592c0bb8dcd217c7f38733247dbacd8",
-    "bytes": 91453,
+    "path": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.pdf",
+    "sha256": "592044e0b1f9261eec43772153a053d18282ec8de75337d245f187270ef0eff8",
+    "bytes": 84992,
     "pages": 2,
     "pageSize": "US Letter"
   },
@@ -26,12 +26,12 @@
       {
         "page": 1,
         "pass": true,
-        "notes": "Name, target title, contact links, profile, full product lifecycle, responsible public technology, and primary experience are legible with clear hierarchy and no clipping or overlap."
+        "notes": "Technical operations, delivery coordination, team operating systems, cross-functional translation, and public-interest technology are immediately legible with intact hierarchy."
       },
       {
         "page": 2,
         "pass": true,
-        "notes": "WOW List, CallNYC, KC Town Hall, additional leadership, education, and work authorization are legible. Politico New York is visibly blue and underlined and links to the archived article PDF."
+        "notes": "WOW List, CallNYC, Tired of Tires, KC Town Hall, Sunday Dinner, education, and authorization read cleanly; positive documented-role wording replaces the defensive grant sentence."
       }
     ]
   },

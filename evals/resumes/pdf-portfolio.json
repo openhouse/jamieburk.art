@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "id": "resume-pdf-portfolio-2026-08-14",
+  "evaluatedAt": "2026-08-14T17:32:00-04:00",
+  "currentRunPath": "evals/resumes/runs/2026-08-14-resume-pdf-portfolio-post-hillclimb.json",
+  "sourceTemplate": {
+    "access": "read-only source; edits occur only in private opportunity-specific copies",
+    "privateLocatorCommitted": false,
+    "styleSignature": {
+      "pageSize": "US Letter",
+      "pageWidthPoints": 612,
+      "pageHeightPoints": 792,
+      "marginsPoints": {
+        "top": 36,
+        "bottom": 36,
+        "left": 43.2,
+        "right": 43.2
+      },
+      "name": "Palatino Linotype 21 pt",
+      "role": "Oswald 11.5 pt",
+      "body": "Karla 10.5 pt",
+      "sectionHeading": "Karla 9 pt bold",
+      "links": "blue and underlined"
+    }
+  },
+  "artifactStandards": {
+    "expectedPages": 2,
+    "minimumBytes": 50000,
+    "maximumBytes": 10000000,
+    "expectedMediaBox": [0, 0, 612, 792],
+    "requiredContactLinks": [
+      "mailto:jamie.burkart@gmail.com",
+      "https://jamieburk.art/",
+      "https://www.linkedin.com/in/jamie-burkart/",
+      "https://github.com/openhouse"
+    ]
+  },
+  "versions": [
+    {
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "markdownPath": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.md",
+      "pdfPath": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.pdf",
+      "visualRunPath": "evals/resumes/runs/2026-08-14-codepath-engineering-project-manager-5160542007-pdf-visual.json"
+    },
+    {
+      "opportunityId": "opportunity.aclu.senior-project-manager.8620968002",
+      "markdownPath": "resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-8620968002.md",
+      "pdfPath": "resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-8620968002.pdf",
+      "visualRunPath": "evals/resumes/runs/2026-08-14-aclu-senior-project-manager-8620968002-pdf-visual.json"
+    },
+    {
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "markdownPath": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.md",
+      "pdfPath": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.pdf",
+      "visualRunPath": "evals/resumes/runs/2026-08-14-benepass-product-operations-manager-7f963a7a-pdf-visual.json"
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "markdownPath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
+      "pdfPath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf",
+      "visualRunPath": "evals/resumes/runs/2026-08-14-oti-senior-product-manager-pdf-visual.json"
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "markdownPath": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.md",
+      "pdfPath": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.pdf",
+      "visualRunPath": "evals/resumes/runs/2026-08-14-oti-technical-operations-manager-782369-pdf-visual.json"
+    }
+  ]
+}

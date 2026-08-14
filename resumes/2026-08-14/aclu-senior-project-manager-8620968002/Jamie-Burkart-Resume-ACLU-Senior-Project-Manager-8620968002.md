@@ -40,7 +40,7 @@ New York, NY | 2017–Present
 Kansas City, MO | 2015–2024
 
 - Co-led strategy, planning, public-benefit documentation, vendor coordination, field implementation, and municipal compliance for adaptive reuse of an approximately 6,500 sq. ft. historic building into four commercial spaces and three homes.
-- Co-developed the successful CCED proposal and served as the City's named developer/presenter for a $490,539 public funding request; remained a documented point of contact through M/WBE and CREO compliance progress and later transitioned the project to a mission-aligned organization. The award was not disbursed to the project, and no unsupported budget-control claim is made.
+- Co-developed the successful CCED proposal and served as the City's named developer/presenter for a $490,539 public funding request; remained a documented point of contact through M/WBE and CREO compliance progress and later transitioned the project to a mission-aligned organization.
 
 ### WOWList.org — Co-Founder, Product & Community Systems
 

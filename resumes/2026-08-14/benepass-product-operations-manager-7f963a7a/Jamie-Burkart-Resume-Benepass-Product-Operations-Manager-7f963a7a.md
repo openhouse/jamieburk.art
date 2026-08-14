@@ -52,7 +52,7 @@ New York, NY | 2016
 
 Kansas City, MO | 2015–2024
 
-- Coordinated planning, vendors, public documentation, municipal compliance, and field dependencies for an approximately 6,500 sq. ft. adaptive-reuse project; co-developed a successful $490,539 public funding request and later transitioned the project to a mission-aligned organization. The award was not disbursed to the project.
+- Coordinated planning, vendors, public documentation, municipal compliance, and field dependencies for an approximately 6,500 sq. ft. adaptive-reuse project; co-developed a successful $490,539 public funding request and later transitioned the project to a mission-aligned organization.
 
 ### 196 Artists Residency / Sunday Dinner — Founder & Systems Steward
 

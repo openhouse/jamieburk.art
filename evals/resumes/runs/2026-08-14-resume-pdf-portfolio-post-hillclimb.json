@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "evalId": "resume-pdf-portfolio-2026-08-14",
+  "runId": "2026-08-14-resume-pdf-portfolio-post-hillclimb",
+  "evaluatedAt": "2026-08-14T17:32:00-04:00",
+  "overall": "pass",
+  "summary": {
+    "requiredVersions": 5,
+    "configuredVersions": 5,
+    "passingVersions": 5,
+    "markdownPdfSiblingPairs": 5,
+    "visuallyInspectedVersions": 5
+  },
+  "portfolioChecks": [
+    { "id": "all-hiring-suite-versions-covered", "pass": true },
+    { "id": "no-private-google-locator-in-config", "pass": true },
+    { "id": "style-signature-complete", "pass": true }
+  ],
+  "versions": [
+    {
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "markdownPath": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.md",
+      "pdfPath": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.pdf",
+      "visualRunPath": "evals/resumes/runs/2026-08-14-codepath-engineering-project-manager-5160542007-pdf-visual.json",
+      "markdownSha256": "680f9f92f734135b21784b646eea4e55090f8dcdca5708f8b99d0603534cc121",
+      "pdfSha256": "2c0189c34fbaf278ae2361191f9927d386b47099f5e095bc8b7d2fd502cdfc66",
+      "pdfBytes": 81434,
+      "pages": 2,
+      "overall": "pass",
+      "checks": [
+        { "id": "markdown-exists", "pass": true },
+        { "id": "pdf-sibling-exists", "pass": true },
+        { "id": "pdf-size", "pass": true },
+        { "id": "pdf-pages-and-media-box", "pass": true },
+        { "id": "markdown-links-preserved", "pass": true },
+        { "id": "visual-receipt-bound-to-artifacts", "pass": true },
+        { "id": "every-page-visually-passed", "pass": true },
+        { "id": "read-only-source-boundary", "pass": true }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.aclu.senior-project-manager.8620968002",
+      "markdownPath": "resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-8620968002.md",
+      "pdfPath": "resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-8620968002.pdf",
+      "visualRunPath": "evals/resumes/runs/2026-08-14-aclu-senior-project-manager-8620968002-pdf-visual.json",
+      "markdownSha256": "9010c23c6400e40f32e192dd48cd01ff47f5a9e37ad6e5ea53997c40cda8ef70",
+      "pdfSha256": "fb317451b8fdbf677e85d1f961b2bb92b06a18f639bbdc921a444f8556745548",
+      "pdfBytes": 82896,
+      "pages": 2,
+      "overall": "pass",
+      "checks": [
+        { "id": "markdown-exists", "pass": true },
+        { "id": "pdf-sibling-exists", "pass": true },
+        { "id": "pdf-size", "pass": true },
+        { "id": "pdf-pages-and-media-box", "pass": true },
+        { "id": "markdown-links-preserved", "pass": true },
+        { "id": "visual-receipt-bound-to-artifacts", "pass": true },
+        { "id": "every-page-visually-passed", "pass": true },
+        { "id": "read-only-source-boundary", "pass": true }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "markdownPath": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.md",
+      "pdfPath": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.pdf",
+      "visualRunPath": "evals/resumes/runs/2026-08-14-benepass-product-operations-manager-7f963a7a-pdf-visual.json",
+      "markdownSha256": "2fbb5028687a33f982968c8878c642a03a4ba5ff2333c383ed7d168babf67141",
+      "pdfSha256": "951ad5f8f5c77962b70921d67789367bdaf27dbb2bd7ef9c4c730700c8f585f4",
+      "pdfBytes": 82464,
+      "pages": 2,
+      "overall": "pass",
+      "checks": [
+        { "id": "markdown-exists", "pass": true },
+        { "id": "pdf-sibling-exists", "pass": true },
+        { "id": "pdf-size", "pass": true },
+        { "id": "pdf-pages-and-media-box", "pass": true },
+        { "id": "markdown-links-preserved", "pass": true },
+        { "id": "visual-receipt-bound-to-artifacts", "pass": true },
+        { "id": "every-page-visually-passed", "pass": true },
+        { "id": "read-only-source-boundary", "pass": true }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "markdownPath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
+      "pdfPath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf",
+      "visualRunPath": "evals/resumes/runs/2026-08-14-oti-senior-product-manager-pdf-visual.json",
+      "markdownSha256": "91850899da1d5b1a98a5b05088646227d10055b1ca5e9a0c7920e3de256d3590",
+      "pdfSha256": "6312456b47cc15debff0cc2055cb3d3ad592c0bb8dcd217c7f38733247dbacd8",
+      "pdfBytes": 91453,
+      "pages": 2,
+      "overall": "pass",
+      "checks": [
+        { "id": "markdown-exists", "pass": true },
+        { "id": "pdf-sibling-exists", "pass": true },
+        { "id": "pdf-size", "pass": true },
+        { "id": "pdf-pages-and-media-box", "pass": true },
+        { "id": "markdown-links-preserved", "pass": true },
+        { "id": "visual-receipt-bound-to-artifacts", "pass": true },
+        { "id": "every-page-visually-passed", "pass": true },
+        { "id": "read-only-source-boundary", "pass": true }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "markdownPath": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.md",
+      "pdfPath": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.pdf",
+      "visualRunPath": "evals/resumes/runs/2026-08-14-oti-technical-operations-manager-782369-pdf-visual.json",
+      "markdownSha256": "910a521d9cb9bbdb5c1ead8e3a0a8dc96221a3517ba116d66e840c5b52e09b24",
+      "pdfSha256": "592044e0b1f9261eec43772153a053d18282ec8de75337d245f187270ef0eff8",
+      "pdfBytes": 84992,
+      "pages": 2,
+      "overall": "pass",
+      "checks": [
+        { "id": "markdown-exists", "pass": true },
+        { "id": "pdf-sibling-exists", "pass": true },
+        { "id": "pdf-size", "pass": true },
+        { "id": "pdf-pages-and-media-box", "pass": true },
+        { "id": "markdown-links-preserved", "pass": true },
+        { "id": "visual-receipt-bound-to-artifacts", "pass": true },
+        { "id": "every-page-visually-passed", "pass": true },
+        { "id": "read-only-source-boundary", "pass": true }
+      ]
+    }
+  ],
+  "boundary": "Markdown is authoritative; Google Docs is a private presentation transform; PDF is the application artifact; the visual receipt binds the exact pair. No named hiring reader participated."
+}
