@@ -38,9 +38,16 @@ const nextConfig: NextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   output: "standalone",
   outputFileTracingRoot: path.join(process.cwd(), "../../"),
+  experimental: {
+    cpus: 1,
+    webpackMemoryOptimizations: true
+  },
   reactStrictMode: true,
   poweredByHeader: false,
   typedRoutes: true,
+  typescript: {
+    ignoreBuildErrors: process.env.NEXT_BUILD_SKIP_VERIFIED_TYPECHECK === "1"
+  },
   images: {
     formats: ["image/avif", "image/webp"]
   },
