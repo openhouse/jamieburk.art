@@ -45,6 +45,9 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   typedRoutes: true,
+  typescript: {
+    ignoreBuildErrors: process.env.NEXT_BUILD_SKIP_VERIFIED_TYPECHECK === "1"
+  },
   images: {
     formats: ["image/avif", "image/webp"]
   },
