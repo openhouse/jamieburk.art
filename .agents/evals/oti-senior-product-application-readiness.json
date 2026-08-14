@@ -32,5 +32,6 @@
     }
   ],
   "humanAcceptanceQuestion": "Under an explicitly fictionalized public-source lens, would the reader hire Jamie for NYC OTI Senior Product Manager Job ID 782366?",
-  "humanGate": "A deterministic pass establishes truthful public evidence coverage only. The named-reader gate remains a separate public-web-only human or independent-model judgment."
+  "humanGate": "A deterministic pass establishes truthful public evidence coverage only. The named-reader gate remains a separate public-web-only human or independent-model judgment.",
+  "latestRunPath": "evals/knowledge-wiki/runs/2026-08-13-oti-product-application-hillclimb.json"
 }

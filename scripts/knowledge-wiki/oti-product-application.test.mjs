@@ -110,3 +110,19 @@ test("OTI candidate preserves shared credit and qualification boundaries", () =>
   );
   assert.match(resumeProjection.text, /Co-founded and co-built WOW List/i);
 });
+
+test("OTI named-reader receipt stays independent, exact-candidate, and honestly failing", () => {
+  const receipt = JSON.parse(
+    readFileSync(path.join(repoRoot, rubric.latestRunPath), "utf8")
+  );
+  assert.match(receipt.candidateCommit, /^[0-9a-f]{40}$/);
+  assert.equal(receipt.publicOrigin, "https://staging-b.jamieburk.art");
+  assert.equal(receipt.actualPeopleParticipated, false);
+  assert.equal(receipt.evaluationMethod.publicWebOnly, true);
+  assert.equal(receipt.evaluationMethod.sequential, true);
+  assert.equal(receipt.evaluationMethod.independent, true);
+  assert.equal(receipt.results.length, 2);
+  assert.ok(receipt.results.every((result) => result.modeledVerdict === "fail"));
+  assert.ok(receipt.results.every((result) => result.interviewRecommendation === true));
+  assert.equal(receipt.overall, "fail");
+});
