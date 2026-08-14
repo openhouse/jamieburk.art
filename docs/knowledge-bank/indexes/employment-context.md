@@ -49,6 +49,10 @@ relations:
   - type: related_to
     target: evaluation.named-public-reader-acceptance.2026-08-13
     href: ../evaluations/named-public-reader-acceptance-2026-08-13.md
+  - type: related_to
+    target: application.nyc-oti.senior-product-manager.782366
+    href: ../applications/nyc-oti-senior-product-manager-782366.md
+    context: Jamie-authorized date-level submission milestone with a pending outcome and protected confirmation evidence.
 ---
 
 # Employment context and hiring acceptance
@@ -56,7 +60,10 @@ relations:
 This index connects present-tense role research to the deep Wiki without
 turning a private job hunt into public content. Opportunity facts come from
 official employer sources. Application status, relationship history, warm
-paths, message bodies, contact details, and real hiring outcomes remain private.
+paths, message bodies, contact details, and real hiring outcomes remain private
+by default. A Jamie-authorized public-safe milestone may retain a date-level
+state and governed artifact lineage; confirmation artifacts and correspondence
+remain private, and later outcomes require separate approval.
 
 ## Current priority contexts
 
@@ -64,6 +71,15 @@ paths, message bodies, contact details, and real hiring outcomes remain private.
 - [ACLU - Senior Project Manager, Learning and Project Solutions](../opportunities/aclu-senior-project-manager.md)
 - [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md)
 - [NYC OTI - PIT Crew Senior Product Manager](../opportunities/oti-senior-product-manager-782366.md)
+
+## Current authorized milestone
+
+Jamie authorized the Wiki to record the date-level
+[NYC OTI Senior Product Manager application milestone](../applications/nyc-oti-senior-product-manager-782366.md).
+The record connects the role, official source, tailored resume, role-fit brief,
+privacy boundary, reusable form-workflow learning, and next-stage operating
+loop. It does not publish the confirmation capture or imply an interview,
+offer, appointment, or endorsement.
 
 ## Reporting and vision context
 

@@ -7,6 +7,13 @@
   "officialSource": "https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-44507",
   "sourceVerifiedAt": "2026-08-14",
   "resumePath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
+  "applicationLifecycle": {
+    "milestonePath": "docs/knowledge-bank/applications/nyc-oti-senior-product-manager-782366.md",
+    "state": "submitted",
+    "submittedOn": "2026-08-14",
+    "outcomeState": "pending",
+    "boundary": "The private confirmation capture, application form contents, applicant identifiers, and correspondence stay outside the public repository."
+  },
   "documentArtifact": {
     "pdfPath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf",
     "publicPdfPath": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",

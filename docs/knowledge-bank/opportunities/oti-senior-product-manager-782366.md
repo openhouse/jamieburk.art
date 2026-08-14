@@ -5,8 +5,8 @@ kind: opportunity
 status: governed-open
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-13
-review_by: 2026-08-14
+last_reviewed: 2026-08-14
+review_by: 2026-08-21
 canonical_path: docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md
 summary: Public-safe requirement, qualification, and leadership-context map for four live OTI PIT Crew Senior Product Manager positions.
 canonical_url: https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-44507
@@ -193,6 +193,10 @@ relations:
   - type: uses_method
     target: method.source-backed-team-memory
     href: ../methods/source-backed-team-memory.md
+  - type: related_to
+    target: application.nyc-oti.senior-product-manager.782366
+    href: ../applications/nyc-oti-senior-product-manager-782366.md
+    context: Jamie-authorized public-safe submission milestone; employer outcome remains pending.
 evidence:
   - target: source.jobs.oti.senior-product-manager.782366
     relationship: direct-support
@@ -227,6 +231,10 @@ It supports application use without assigning Jamie sole program authorship.
 The public record identifies initiative and operational leadership but not a
 direct supervisor. Keep [Luke Farrell](../people/luke-farrell.md) as nearest
 public operational lead and [Lisa Gelobter](../people/lisa-gelobter.md) as
-official initiative leader. Recheck the
-[official posting](../sources/jobs-oti-senior-product-manager-782366.md) before
-the August 14 deadline.
+official initiative leader.
+
+Jamie authorized a [public-safe application milestone](../applications/nyc-oti-senior-product-manager-782366.md)
+after submitting on August 14, 2026. Submission establishes action, not
+civil-service eligibility, employer review, an interview, an offer, or an
+appointment. The private confirmation and later correspondence remain outside
+the repository.
