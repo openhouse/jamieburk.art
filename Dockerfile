@@ -13,6 +13,7 @@ COPY apps/www/package.json ./apps/www/package.json
 RUN npm ci
 
 FROM base AS builder
+ENV NODE_OPTIONS=--max-old-space-size=512
 ARG APP_ENV=staging
 ARG SITE_ENV=staging
 ARG NEXT_PUBLIC_DEPLOY_ENV=staging
