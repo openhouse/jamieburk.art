@@ -105,9 +105,12 @@ const PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   governedModuleSha256: "17756383e3e3fe07dd5691fe6866efe5d7292217a31fb5ab355cd71d8f64e940",
   canonicalKnowledgeSha256: "575a9c54527e5c42e7b38a077ef2438fac2073ab5eafc24656c2c677d43afaac",
   reviewConfigurationSha256: "939b9ccc09b790520450a8c3295f1436193c9c2e9c6505350fc4c0bfb23c86b0",
-  governanceBindingsSha256: "462c571728b828871229a018aaee8503d666943b0bce508eaa92231391baf1e8",
+  // Re-reviewed 2026-08-14 after adding the source-bounded senior-product
+  // projection and its page occurrence. The personal event corpus, event
+  // projection, and collective-credit limits did not change.
+  governanceBindingsSha256: "2452ad0dc845ede1a1662fe5cdb7227028b28f91aff9adf5a6f52b9aa9ed4173",
   publicReportSha256: "0e8dc37b79624e2ac86a026fca40741ee578aeb22bc5002e795775c1df5e650e",
-  wowListMdxSha256: "920a67545ba6bbe346309c79247a12e1e0a3028c09cb5c36e1a85e35f8013df8",
+  wowListMdxSha256: "25488373c1393cd76084dd1c423cc23d78788f29132e452106c5ed412d12689f",
   // Re-reviewed 2026-08-03 after adding two public-safe handoff specimens.
   // The governed event corpus, projections, and collective-credit limits did
   // not change.

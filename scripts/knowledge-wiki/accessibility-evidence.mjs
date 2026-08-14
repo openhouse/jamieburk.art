@@ -52,7 +52,9 @@ export function computePublicSurfaceFingerprint(repoRoot, options = {}) {
   )
     .trim()
     .split("\n")
-    .filter(Boolean)
+    .filter((relativePath) =>
+      Boolean(relativePath) && relativePath !== "apps/www/next-env.d.ts"
+    )
     .sort();
   const hash = createHash("sha256");
   for (const relativePath of files) {

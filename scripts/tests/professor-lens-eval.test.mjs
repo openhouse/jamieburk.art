@@ -6,6 +6,7 @@ import test from "node:test";
 
 import {
   evaluateProfessorLenses,
+  fingerprintProfessorCandidate,
   professorCandidateRelativePaths
 } from "../lib/professor-lens-eval.mjs";
 
@@ -169,4 +170,19 @@ test("guard binds visual-system and photo changes to a new candidate", () => {
   assert.equal(result.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "candidate-fingerprint")?.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts")?.pass, false);
+});
+
+test("candidate fingerprint excludes the Next-generated environment declaration", () => {
+  assert.equal(professorCandidateRelativePaths.includes("apps/www/next-env.d.ts"), false);
+
+  const candidateFiles = Object.fromEntries(professorCandidateRelativePaths.map((relativePath) => [
+    relativePath,
+    readFileSync(path.join(repoRoot, relativePath))
+  ]));
+  const before = fingerprintProfessorCandidate(candidateFiles);
+  candidateFiles["apps/www/next-env.d.ts"] = Buffer.from(
+    'import "./.next/dev/types/routes.d.ts";\n'
+  );
+
+  assert.equal(fingerprintProfessorCandidate(candidateFiles), before);
 });

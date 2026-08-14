@@ -1,11 +1,11 @@
 {
-  "reportVersion": 4,
-  "checkedAt": "2026-08-14T02:16:44.771Z",
-  "baseUrl": "https://staging-a.jamieburk.art",
-  "publicSurfaceFingerprint": "793d30531eb963eff7fe16f700f6c2497d13ab3c4ef624b8be4492933b4ae9ad",
+  "reportVersion": 3,
+  "checkedAt": "2026-08-14T16:13:56.371Z",
+  "baseUrl": "http://127.0.0.1:3056",
+  "publicSurfaceFingerprint": "1227632945c7c64d95861738223c023d2363c252a81a125370ddf3fbadc5095b",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 124,
-  "captureMethod": "Playwright Chromium viewport screenshots of the noindex staging deployment whose public app source matches the exact candidate; About captures are framed on the systems through-line; no production deployment or indexing action.",
+  "publicSurfaceFileCount": 123,
+  "captureMethod": "Playwright Chromium screenshots of the current built local candidate; About captures are deliberately framed on the through-line and current systems loops; no deployment or indexing action.",
   "routes": [
     {
       "path": "/",
@@ -20,7 +20,7 @@
           },
           "pixelWidth": 1280,
           "pixelHeight": 900,
-          "sha256": "276b72b5a63080876ea82fca1fe87cdc6bd7276859265ef505afd8d49469dd51",
+          "sha256": "49ab5253dfc39864e01ebbdc269b26a1bf8576bd06dbf82934ef503588f5537e",
           "file": "candidate-home-desktop.png"
         },
         {
@@ -31,7 +31,7 @@
           },
           "pixelWidth": 375,
           "pixelHeight": 812,
-          "sha256": "d21dc6cca045b867817b96cd82d5c9e872adde0ac2d58ca4673487352c587f34",
+          "sha256": "88564c58e55ff57baf9116ce15883a756eabe3968ec091044e9dde0b3334353d",
           "file": "candidate-home-viewport.png"
         }
       ]
@@ -49,10 +49,11 @@
           },
           "pixelWidth": 1280,
           "pixelHeight": 900,
-          "sha256": "74724ed4278bab16ea13080ce969dc115054c5f0c8863c159b1623d10a246ac1",
+          "sha256": "5668cf43ce1ea4777b17a5e5a28315d2677bfbe108594cb7224f839fd5c488d7",
           "file": "professor-lenses-about-desktop.png",
           "framedContent": {
-            "systemsPeopleCanInhabitHeadingPresent": true,
+            "throughLineHeadingPresent": true,
+            "currentSystemsLabelPresent": true,
             "currentPracticeDocumented": true
           }
         },
@@ -64,10 +65,11 @@
           },
           "pixelWidth": 375,
           "pixelHeight": 1200,
-          "sha256": "fb2e2b92d3de26287de71bc466ad3640a9c56fa9ae7b47a7fd6ec07fb33007cc",
+          "sha256": "66cc25c88c512eb822890d6d75c9597e54a755b2a40939240c2e00a5ea5d7bb5",
           "file": "professor-lenses-about-mobile.png",
           "framedContent": {
-            "systemsPeopleCanInhabitHeadingPresent": true,
+            "throughLineHeadingPresent": true,
+            "currentSystemsLabelPresent": true,
             "currentPracticeDocumented": true
           }
         }
@@ -75,5 +77,5 @@
     }
   ],
   "passed": true,
-  "verification": "Fresh Playwright viewport captures from the noindex staging deployment; screenshots retained and content-addressed in this directory."
+  "verification": "Fresh Playwright viewport captures from the exact local production build; screenshots retained and content-addressed in this directory."
 }

@@ -49,6 +49,15 @@ test("public source changes still invalidate visual evidence", () => {
   assert.notEqual(mutated.fingerprint, current.current.fingerprint);
 });
 
+test("Next-generated environment declarations do not invalidate visual evidence", () => {
+  const mutated = computePublicSurfaceFingerprint(defaultRepoRoot, {
+    fileOverrides: {
+      "apps/www/next-env.d.ts": 'import "./.next/dev/types/routes.d.ts";\n'
+    }
+  });
+  assert.equal(mutated.fingerprint, current.current.fingerprint);
+});
+
 test("an axe violation fails closed", () => {
   const report = structuredClone(current.report);
   report.rows[0].violations.push({ id: "color-contrast", impact: "serious", nodeCount: 1 });

@@ -1,0 +1,36 @@
+{
+  "evaluator": "Fictionalized Warren Sack analytical lens: recursive social systems; not Warren Sack's participation, opinion, quotation, endorsement, or approval",
+  "reviewerId": "oti-sack-security-final-b",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "8e486bf7f7bb1d95c881d5cf1b5bd239beb90df1da002c8841fe6f6f21a990f0",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "About makes the recursive loop explicit: observe relationships, model a system, prototype an interface, test with people, and document for continuation, then repeats the sequence across three current examples.",
+    "Harry J. Epstein joins customer and team relationships, a bounded model, live storefront use, analytical learning, reusable patterns, ownership, and maintenance through its Listen, Frame, Implement, Verify, Continue loop.",
+    "Fair Rent NYC turns lived experience, meetings, sources, questions, and accountable actors into a civic record, then connects sites, town halls, hearings, action paths, minutes, source maps, question logs, and action trackers.",
+    "Sunday Dinner/196 models participation through invitation, onboarding, hosting, minimal documentation, access handoff, follow-up, and continued availability while participant-level records remain private.",
+    "WOW List counts are historical, CallNYC is archived and unofficial, current systems are labeled, HJE and Sunday Dinner specimens are marked reconstructions, and team memory is early research rather than a completed client pilot."
+  ],
+  "gaps": [
+    "WOW List's relationship-to-use chain is strong, but its learning, iteration, and handoff stage is less concretely artifacted than the current proof loops.",
+    "The homepage compresses the feedback loop; the fuller recursive account appropriately lives on the prominent About route."
+  ],
+  "safety_findings": [
+    "WOW List is co-built, coalition outcomes remain collective, Sunday Dinner names co-organizing, and CallNYC avoids official-affiliation claims.",
+    "Protected participant data, coalition and legal context, customer analytics, access details, private archives, and unapproved materials are withheld.",
+    "Reconstructions are not presented as original internal documents, and historical evidence is not presented as current deployment or guidance.",
+    "The retained responsive screenshots show the proposition and through-line without surfacing private material."
+  ],
+  "recommendation": "Pass PR-016 at 4; retain this exact candidate and treat a more explicit WOW List learning-and-transfer artifact as a non-blocking future opportunity.",
+  "provenance": {
+    "provider": "OpenAI Codex",
+    "reviewMode": "fresh-independent-rendered-public-surface-only",
+    "reviewerRole": "fictionalized analytical-lens holdout evaluator",
+    "reviewedAt": "2026-08-14T16:30:20.632Z",
+    "candidatePathCount": 125,
+    "candidateFingerprintSuppliedByHarness": true,
+    "filesEdited": false
+  }
+}

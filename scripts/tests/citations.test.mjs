@@ -98,3 +98,9 @@ test("rendering primitives preserve no-JavaScript document semantics", () => {
   assert.match(sourceNote, /role="doc-backlink"/);
   assert.match(sourceNote, /Official document/);
 });
+
+test("the About citation renders its page-local source notes", () => {
+  const about = readFileSync("apps/www/src/app/about/page.tsx", "utf8");
+  assert.match(about, /occurrenceId="open-house-participatory-gallery"/);
+  assert.match(about, /<References pageId="about" \/>/);
+});

@@ -122,6 +122,13 @@ const claims: KnowledgeBank["claims"] = [
         status: "active",
         citationRequired: true,
         surfaces: ["docs/knowledge-bank/applications/wowlist-senior-product-manager-oti-782366"]
+      },
+      {
+        key: "case-study",
+        text: "WOW List provides unusually broad evidence of Jamie's senior product practice: he and Richard Caceres co-built a working community-calendar service, and Jamie's documented work spans product definition, implementation, participatory discovery, adoption, communications, instrumentation, and stewardship.",
+        status: "active",
+        citationRequired: true,
+        surfaces: ["/work/wowlist"]
       }
     ],
     evidence: [
@@ -129,6 +136,7 @@ const claims: KnowledgeBank["claims"] = [
       { sourceId: "SRC-WOWLIST-X-POPULATION-MANIFEST", relationship: "direct-support", supports: ["bounded public operating record and organizer workflows"], confidence: "high", renderCitation: true },
       { sourceId: "SRC-WOWLIST-SUNDAY-DINNER-POST-2014", relationship: "direct-support", supports: ["shared Richard and Jamie credit", "Sunday Dinner provenance"], confidence: "high", renderCitation: true },
       { sourceId: "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016", relationship: "direct-support", supports: ["join, publishing, profile, and followed-calendar workflows"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026", relationship: "corroborating", supports: ["bounded production scale and instrumentation"], confidence: "high", renderCitation: true },
       { sourceId: "SRC-WOWLIST-PRODUCTION-DATABASE-2017-07-22", relationship: "corroborating", supports: ["historical production scale and instrumentation"], confidence: "high", renderCitation: true }
     ],
     boundaries: [

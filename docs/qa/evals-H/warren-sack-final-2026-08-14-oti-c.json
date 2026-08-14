@@ -1,0 +1,36 @@
+{
+  "evaluator": "Fictionalized Warren Sack analytical lens: recursive social systems; not Warren Sack's participation, opinion, quotation, endorsement, or approval",
+  "reviewerId": "oti-sack-security-final-c",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "8e486bf7f7bb1d95c881d5cf1b5bd239beb90df1da002c8841fe6f6f21a990f0",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The homepage states the transferable loop as Listen, Map, Build, Document, Transfer alongside examples of structure growing from social and operational material.",
+    "About defines the sequence from relationships through model, interface, use and testing, then documentation and continuity, and applies it to three current systems.",
+    "Harry J. Epstein presents a labeled public-safe reconstruction moving from recurring questions through framing, implementation, verification, reusable patterns, ownership, and continuation.",
+    "WOW List, Fair Rent NYC, and Sunday Dinner/196 connect community relationships to publishing, campaign, gathering, and residency use, with reusable workflows, source maps, action trackers, and handoffs preserving learning.",
+    "CallNYC and Source-Backed Team Memory distinguish an archived unofficial prototype from an early research method while exposing a correction trace and human-review gates."
+  ],
+  "gaps": [
+    "WOW List and CallNYC do not label every loop stage as explicitly as About or HJE, so readers synthesize model, learning, and handoff across sections.",
+    "Specific transfer recipients are clearest on HJE, Fair Rent NYC, and Sunday Dinner/196; WOW List's eventual stewardship and handoff could be more concrete."
+  ],
+  "safety_findings": [
+    "Historical, current, archived, early-method, synthetic, and reconstructed evidence are consistently distinguished.",
+    "Collective credit is preserved through co-built language, named team and community credits, and explicit rejection of sole-causation claims.",
+    "Participant records, coalition strategy, customer data, analytics, legal-review context, and unapproved materials remain withheld.",
+    "No rendered-page console errors were observed across the inspected routes."
+  ],
+  "recommendation": "Pass PR-016 at 4 and retain this exact candidate; compact loop summaries on historical cases are a non-blocking future refinement.",
+  "provenance": {
+    "provider": "OpenAI Codex",
+    "reviewMode": "fresh-independent-rendered-public-surface-only",
+    "reviewerRole": "fictionalized analytical-lens holdout evaluator",
+    "reviewedAt": "2026-08-14T12:34:25-04:00",
+    "candidatePathCount": 125,
+    "candidateFingerprintSuppliedByHarness": true,
+    "filesEdited": false
+  }
+}

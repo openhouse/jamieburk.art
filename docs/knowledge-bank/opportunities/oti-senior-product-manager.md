@@ -68,7 +68,7 @@ role_requirements:
       - capability.participatory-public-systems
     public_evidence:
       - route: /work/wowlist
-        needle: community-calendar platform
+        needle: documented work spans product definition
       - route: /work/callnyc
         needle: resident-facing guidance
     status: visible-proven

@@ -1,0 +1,36 @@
+{
+  "evaluator": "Fictionalized Prof. Margaret Morse analytical lens: inhabited systems; not Margaret Morse's participation, opinion, quotation, endorsement, or approval",
+  "reviewerId": "oti-morse-security-final-a",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "8e486bf7f7bb1d95c881d5cf1b5bd239beb90df1da002c8841fe6f6f21a990f0",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "About makes the lineage explicit through Systems people can inhabit, connecting Open House, WOW List, Sunday Dinner/196, coalition work, and team memory to a senior-practice method of observing, modeling, prototyping, testing with people, documenting, and transferring.",
+    "The homepage translates that method into technical project management, product operations, implementation, and documentation, then makes clear that the system lives between the screen and the room.",
+    "WOW List supplies concrete product evidence through a co-built platform, organizer workflows, community vocabulary as information architecture, operating measures, named co-builder Richard Caceres, and bounded claims about Jamie's role.",
+    "Fair Rent NYC shows civic delivery as an inhabited system in which meetings, testimony, campaign sites, source maps, decision records, action paths, and facilitation become shared infrastructure while preserving coalition authorship.",
+    "Harry J. Epstein and Sunday Dinner/196 show the method transferring across domains through long-term implementation and participation infrastructure grounded in hospitality, onboarding, access handoffs, facilitation, and continuity."
+  ],
+  "gaps": [
+    "The artistic lineage is clearest on About and appears below the fold on the homepage, but the prominent About path makes this non-blocking.",
+    "WOW List and Sunday Dinner/196 rely heavily on prose and reconstructed workflows; another approved public-safe process artifact could make human inhabitation more immediate."
+  ],
+  "safety_findings": [
+    "Collective credit is explicit through co-built language, named collaborators where established, coalition and team credits, and limits on individual causation.",
+    "Participant rows, guest lists, access details, correspondence, legal-review context, stakeholder information, and unapproved images or quotations remain withheld.",
+    "Historical metrics and gathering counts carry visible methodological qualifications rather than being presented as current activity, unique-person counts, or audited attendance.",
+    "Public photographs carry visible attribution; no private participant material was apparent."
+  ],
+  "recommendation": "Pass PR-015 at 4 for this exact rendered candidate; preserve the inhabited-systems bridge, collective-credit language, and privacy boundaries.",
+  "provenance": {
+    "provider": "OpenAI Codex",
+    "reviewMode": "fresh-independent-rendered-public-surface-only",
+    "reviewerRole": "fictionalized analytical-lens holdout evaluator",
+    "reviewedAt": "2026-08-14T12:17:03-04:00",
+    "candidatePathCount": 125,
+    "candidateFingerprintSuppliedByHarness": true,
+    "filesEdited": false
+  }
+}

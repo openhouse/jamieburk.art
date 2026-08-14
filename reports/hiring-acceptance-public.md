@@ -2,11 +2,11 @@
 # Public-only hiring acceptance baseline
 
 **Candidate commit:** `1c08247b6e272976a71133a81bf22d4606017c2f`
-**Portfolio snapshot:** `cd5c0a61b920a9b28c87856c1e1eaa6d9683940aa2aad5e96f6ca84af45f36f1`
-**Role-context hash:** `456f4915e1877465434388a709b305e78d2160344c406e7fa0e6229f1c28d368`
+**Portfolio snapshot:** `35f2154b1d37f7e6063e5cbda97fb1695f93ff88f83800777dd5fdfe385e1d22`
+**Role-context hash:** `fa2bbf11462a256ddf7358d40c1e5f4a34786b2e7439777dcc02a3fd82f8315d`
 **Reader-context hash:** `177f555134dc0c18066adfd1eaa94edf245f8cd357e5fdcaa62cdfcab2650580`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
-**Candidate paths clean:** yes
+**Candidate paths clean:** no
 
 > Deterministic baseline only. This is not an interview prediction, a named person's opinion, or a human reader study.
 
@@ -66,7 +66,7 @@
 - Role context current at candidate time: yes
 - Exclusionary hard screen recorded: no
 
-- `requirement.oti-product-manager.end-to-end-product`: **observed** on `/work/wowlist`, `/work/callnyc`
+- `requirement.oti-product-manager.end-to-end-product`: **observed** on `/work/callnyc`
 - `requirement.oti-product-manager.discovery`: **observed** on `/work/wowlist`
 - `requirement.oti-product-manager.public-launch`: **observed** on `/work/technical-operations`
 - `requirement.oti-product-manager.measurement`: **observed** on `/work/wowlist`, `/work/technical-operations`

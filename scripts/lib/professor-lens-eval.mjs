@@ -36,19 +36,21 @@ const publicSurfaceRelativePaths = execFileSync(
 )
   .trim()
   .split("\n")
-  .filter(Boolean);
+  .filter((relativePath) =>
+    Boolean(relativePath) && relativePath !== "apps/www/next-env.d.ts"
+  );
 
 export const professorCandidateRelativePaths = [
   ...new Set([...professorRubricRelativePaths, ...publicSurfaceRelativePaths])
 ].sort();
 
 const finalScorecardRelativePaths = [
-  "docs/qa/evals-H/margaret-morse-final-2026-08-13-v6-a.json",
-  "docs/qa/evals-H/margaret-morse-final-2026-08-13-v6-b.json",
-  "docs/qa/evals-H/margaret-morse-final-2026-08-13-v6-c.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-13-v6-a.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-13-v6-b.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-13-v6-c.json"
+  "docs/qa/evals-H/margaret-morse-final-2026-08-14-oti-a.json",
+  "docs/qa/evals-H/margaret-morse-final-2026-08-14-oti-b.json",
+  "docs/qa/evals-H/margaret-morse-final-2026-08-14-oti-c.json",
+  "docs/qa/evals-H/warren-sack-final-2026-08-14-oti-a.json",
+  "docs/qa/evals-H/warren-sack-final-2026-08-14-oti-b.json",
+  "docs/qa/evals-H/warren-sack-final-2026-08-14-oti-c.json"
 ];
 
 const dissentScorecardRelativePaths = [
@@ -56,7 +58,7 @@ const dissentScorecardRelativePaths = [
   "docs/qa/evals-H/margaret-morse-dissent-2026-08-13-v5-c.json"
 ];
 
-const approvedCandidateSha256 = "e12a558094f94ed2f967bae3a29918c696fa1b6fc0ace9c1303eedbb23de54aa";
+const approvedCandidateSha256 = "8e486bf7f7bb1d95c881d5cf1b5bd239beb90df1da002c8841fe6f6f21a990f0";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },

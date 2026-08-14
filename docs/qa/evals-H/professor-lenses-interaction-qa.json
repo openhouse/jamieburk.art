@@ -1,23 +1,23 @@
 {
-  "reportVersion": 2,
-  "checkedAt": "2026-08-14T02:16:44.771Z",
-  "baseUrl": "https://staging-a.jamieburk.art",
-  "publicSurfaceFingerprint": "793d30531eb963eff7fe16f700f6c2497d13ab3c4ef624b8be4492933b4ae9ad",
+  "reportVersion": 1,
+  "checkedAt": "2026-08-14T16:13:56.371Z",
+  "baseUrl": "http://127.0.0.1:3056",
+  "publicSurfaceFingerprint": "1227632945c7c64d95861738223c023d2363c252a81a125370ddf3fbadc5095b",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 124,
-  "method": "Playwright keyboard interaction plus bounded DOM and viewport inspection on the noindex staging deployment whose public app source matches the exact candidate. This is not a human screen-reader or assistive-technology session.",
+  "publicSurfaceFileCount": 123,
+  "method": "Playwright keyboard interaction plus bounded DOM and viewport inspection on the built local candidate. This is not a human screen-reader or assistive-technology session.",
   "keyboard": {
     "desktopTabSequence": [
       {
         "tag": "a",
-        "text": "Skip to content",
+        "text": "Skiptocontent",
         "href": "#main",
         "focusVisible": true,
         "id": null
       },
       {
         "tag": "a",
-        "text": "Jamie Burkart",
+        "text": "JBJamieBurkart",
         "href": "/",
         "focusVisible": true,
         "id": null
@@ -31,7 +31,7 @@
       },
       {
         "tag": "a",
-        "text": "Technical Operations",
+        "text": "TechnicalOperations",
         "href": "/work/technical-operations",
         "focusVisible": true,
         "id": null
@@ -81,8 +81,6 @@
       "focusVisible": true,
       "id": null
     },
-    "menuOpenAfterNavigation": false,
-    "navigationDestination": "/work",
     "passed": true
   },
   "reflow": {
@@ -191,6 +189,10 @@
       {
         "level": 3,
         "text": "Source-backed team memory"
+      },
+      {
+        "level": 2,
+        "text": "Sources and notes"
       },
       {
         "level": 2,

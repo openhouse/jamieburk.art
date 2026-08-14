@@ -1,0 +1,35 @@
+{
+  "evaluator": "Fictionalized Prof. Margaret Morse analytical lens: inhabited systems; not Margaret Morse's participation, opinion, quotation, endorsement, or approval",
+  "reviewerId": "oti-morse-security-final-b",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "8e486bf7f7bb1d95c881d5cf1b5bd239beb90df1da002c8841fe6f6f21a990f0",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The homepage establishes technical project management, product operations, and implementation while its screen-and-room language connects technical delivery to human participation.",
+    "About presents Open House, WOW List, Sunday Dinner/196, coalition work, and source-backed memory as a recursive practice of observing relationships, modeling systems, prototyping interfaces, testing with people, and documenting continuity.",
+    "WOW List demonstrates co-built product leadership across participatory discovery, implementation, adoption, communications, instrumentation, and stewardship, supported by bounded historical production counts.",
+    "Harry J. Epstein translates long-running social and institutional knowledge into an implementation loop with stakeholder translation, reusable workflows, and careful contribution language.",
+    "Fair Rent NYC and Sunday Dinner/196 show systems being inhabited as meetings, onboarding, hospitality, hearings, public action pathways, facilitation, and handoffs become durable civic infrastructure."
+  ],
+  "gaps": [
+    "Evidence of people inhabiting systems is primarily written and diagrammatic; more approved public-safe field imagery or artifacts could deepen the experiential proof.",
+    "WOW List properly leaves individual technical-contribution allocation and additional screenshots pending, slightly limiting technical specificity."
+  ],
+  "safety_findings": [
+    "Collective credit is explicit, especially for WOW List and coalition outcomes.",
+    "The inspected pages distinguish Jamie's implementation from shared authorship and policy causation.",
+    "Participant records, access details, private strategy, legal-review material, customer data, and unapproved images remain withheld."
+  ],
+  "recommendation": "Pass PR-015 at 4 and retain this exact candidate; treat approved visual evidence as a non-blocking future opportunity.",
+  "provenance": {
+    "provider": "OpenAI Codex",
+    "reviewMode": "fresh-independent-rendered-public-surface-only",
+    "reviewerRole": "fictionalized analytical-lens holdout evaluator",
+    "reviewedAt": "2026-08-14T12:20:12-04:00",
+    "candidatePathCount": 125,
+    "candidateFingerprintSuppliedByHarness": true,
+    "filesEdited": false
+  }
+}

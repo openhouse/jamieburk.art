@@ -1,0 +1,36 @@
+{
+  "evaluator": "Fictionalized Prof. Margaret Morse analytical lens: inhabited systems; not Margaret Morse's participation, opinion, quotation, endorsement, or approval",
+  "reviewerId": "oti-morse-security-final-c",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "8e486bf7f7bb1d95c881d5cf1b5bd239beb90df1da002c8841fe6f6f21a990f0",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The homepage frames Jamie as a technical project manager and implementation lead who turns emerging work into usable systems, then connects digital surfaces to rooms, meetings, decisions, and handoffs.",
+    "About makes the lineage explicit from Open House through WOW List, Sunday Dinner/196, coalition work, and source-backed memory via a recurring method of observing relationships, modeling, prototyping, testing with people, and documenting for continuation.",
+    "WOW List demonstrates senior product practice across co-building, product definition, implementation, participatory discovery, adoption, instrumentation, and stewardship while centering organizers' own vocabulary.",
+    "Fair Rent NYC presents listening meetings, ballots, sessions, town halls, hearings, campaign sites, source maps, and action trackers as inhabited civic infrastructure without turning coalition outcomes into solo authorship.",
+    "Sunday Dinner/196 turns hospitality, artist autonomy, onboarding, facilitation, and continuity into operational systems without exposing participants."
+  ],
+  "gaps": [
+    "The artistic lineage is clearest on About; a reader who stays near the homepage's top could miss its origin.",
+    "WOW List is text-heavy and lacks another approved visual artifact, making its inhabited social texture less immediate than the richer field-system pairings."
+  ],
+  "safety_findings": [
+    "Collective credit consistently preserves co-built work, named collaborators, coalition actors, company teams, and community credit.",
+    "Public-safe and summary-only boundaries are explicit.",
+    "Participant records, contact data, strategy, legal-review material, access details, private analytics, and unapproved images remain withheld.",
+    "Historical counts and policy outcomes are bounded; no privacy leak or sole-causation claim was apparent."
+  ],
+  "recommendation": "Pass PR-015 at 4 and retain this exact candidate; an additional approved WOW List artifact is a non-blocking future opportunity.",
+  "provenance": {
+    "provider": "OpenAI Codex",
+    "reviewMode": "fresh-independent-rendered-public-surface-only",
+    "reviewerRole": "fictionalized analytical-lens holdout evaluator",
+    "reviewedAt": "2026-08-14T12:23:08-04:00",
+    "candidatePathCount": 125,
+    "candidateFingerprintSuppliedByHarness": true,
+    "filesEdited": false
+  }
+}

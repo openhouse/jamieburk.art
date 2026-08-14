@@ -1,0 +1,36 @@
+{
+  "evaluator": "Fictionalized Warren Sack analytical lens: recursive social systems; not Warren Sack's participation, opinion, quotation, endorsement, or approval",
+  "reviewerId": "oti-sack-security-final-a",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "8e486bf7f7bb1d95c881d5cf1b5bd239beb90df1da002c8841fe6f6f21a990f0",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "About makes the recursive sequence unmistakable from relationships through model, interface and use, then learning and continuity, with three current systems loops across business, coalition, and community contexts.",
+    "Harry J. Epstein presents a living feedback system in which customer and team questions become bounded requirements, incremental releases, verification, reusable patterns, ownership, and handoff; its reconstructed specimen is labeled.",
+    "Fair Rent NYC connects participation, meetings, sources, policy actors, campaign interfaces, public use, decision records, and reusable coalition memory while preserving shared causation and collaborator credit.",
+    "Sunday Dinner/196 shows hospitality and trust becoming invitation, onboarding, access, documentation, and continuity patterns while participant-level records remain private.",
+    "WOW List metrics are historical rather than current, CallNYC is archived and unofficial, team memory is early research rather than a completed client pilot, and reconstructed workflows are visibly marked."
+  ],
+  "gaps": [
+    "The full loop is most explicit on About; individual case studies use different structures, so a direct-entry visitor may need the About synthesis to see every stage.",
+    "The source-backed-memory example demonstrates review and correction but appropriately lacks real client-pilot evidence."
+  ],
+  "safety_findings": [
+    "Known, open, and protected boundaries and withheld private records are explicit.",
+    "Historical counts, current practice, archived prototypes, and reconstructions are not conflated.",
+    "Collective campaigns and co-built products retain collaborator credit and reject sole-causation claims.",
+    "No private participant data, legal-review material, customer data, internal analytics, or sensitive access details were observed."
+  ],
+  "recommendation": "Pass PR-016 at 4 and retain this exact candidate; its recurring social-systems loop is publicly legible across domains and bounded by clear provenance, privacy, and collective credit.",
+  "provenance": {
+    "provider": "OpenAI Codex",
+    "reviewMode": "fresh-independent-rendered-public-surface-only",
+    "reviewerRole": "fictionalized analytical-lens holdout evaluator",
+    "reviewedAt": "2026-08-14T16:27:15Z",
+    "candidatePathCount": 125,
+    "candidateFingerprintSuppliedByHarness": true,
+    "filesEdited": false
+  }
+}

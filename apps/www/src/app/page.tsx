@@ -22,6 +22,11 @@ const startHereLinks = [
     note: "The fastest role-fit proof surface for public-sector technical operations, product operations, implementation, and delivery coordination."
   },
   {
+    href: "/work/wowlist",
+    label: "WOWList.org",
+    note: "A co-built community-calendar with natural-language entry, organizer workflows, email digests, embeds, and historical production instrumentation."
+  },
+  {
     href: "/work/harry-j-epstein",
     label: "Harry J. Epstein Company",
     note: "Legacy e-commerce, analytics, content, marketing, and operations modernization."

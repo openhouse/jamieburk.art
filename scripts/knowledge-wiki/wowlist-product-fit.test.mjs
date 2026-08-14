@@ -15,6 +15,8 @@ const sourcePath = path.join(
   repoRoot,
   "docs/knowledge-bank/sources/jobs-oti-senior-product-manager-782366.md"
 );
+const caseStudyPath = path.join(repoRoot, "apps/www/src/content/work/wowlist.mdx");
+const homepagePath = path.join(repoRoot, "apps/www/src/app/page.tsx");
 
 test("WOW List Senior Product Manager fit remains source-backed and bounded", () => {
   const application = readFileSync(applicationPath, "utf8");
@@ -54,4 +56,28 @@ test("WOW List Senior Product Manager fit remains source-backed and bounded", ()
   assert.doesNotMatch(application, /meets the civil-service minimum qualifications/);
   assert.doesNotMatch(application, /fully WCAG 2\.1 AA compliant/);
   assert.doesNotMatch(application, /guaranteed to be awarded/);
+});
+
+test("the public WOW List case projects the bounded senior-product evidence", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WOWLIST-SENIOR-PRODUCT-PRACTICE-2026"
+  );
+  const caseStudy = readFileSync(caseStudyPath, "utf8");
+  const homepage = readFileSync(homepagePath, "utf8");
+  const projection = claim?.projections.find((item) => item.key === "case-study");
+
+  assert.ok(projection, "missing public case-study projection");
+  assert.equal(projection.status, "active");
+  assert.equal(projection.citationRequired, true);
+  assert.deepEqual(projection.surfaces, ["/work/wowlist"]);
+  assert.match(projection.text, /Richard Caceres co-built/);
+  assert.match(projection.text, /product definition, implementation, participatory discovery/);
+  assert.match(projection.text, /instrumentation, and stewardship/);
+  assert.match(
+    caseStudy,
+    /claimId="CLM-WOWLIST-SENIOR-PRODUCT-PRACTICE-2026"[\s\S]*projection="case-study"[\s\S]*occurrenceId="senior-product-practice"/
+  );
+  assert.match(homepage, /href: "\/work\/wowlist"/);
+  assert.match(homepage, /natural-language entry/);
+  assert.doesNotMatch(caseStudy, /sole (?:owner|founder|builder)/i);
 });

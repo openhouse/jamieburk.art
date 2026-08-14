@@ -1,10 +1,10 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-08-14T01:36:16.253Z",
-  "baseUrl": "https://staging-a.jamieburk.art",
-  "publicSurfaceFingerprint": "793d30531eb963eff7fe16f700f6c2497d13ab3c4ef624b8be4492933b4ae9ad",
+  "checkedAt": "2026-08-14T16:13:41.007Z",
+  "baseUrl": "http://127.0.0.1:3056",
+  "publicSurfaceFingerprint": "1227632945c7c64d95861738223c023d2363c252a81a125370ddf3fbadc5095b",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 124,
+  "publicSurfaceFileCount": 123,
   "routes": [
     "/",
     "/work",
@@ -843,8 +843,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionOverlapsPrimaryCopy": false,
-        "captionAndCreditSeparated": true
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
       },
       {
         "viewport": 375,
@@ -855,8 +855,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionOverlapsPrimaryCopy": false,
-        "captionAndCreditSeparated": true
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
       },
       {
         "viewport": 768,
@@ -867,8 +867,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionOverlapsPrimaryCopy": false,
-        "captionAndCreditSeparated": true
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
       },
       {
         "viewport": 1280,
@@ -879,14 +879,14 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionOverlapsPrimaryCopy": false,
-        "captionAndCreditSeparated": true
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
       }
     ],
     "passed": true
   },
   "navigationReview": {
-    "checkedAt": "2026-08-14T01:36:16.253Z",
+    "checkedAt": "2026-08-14T16:13:41.007Z",
     "startRoute": "/",
     "destinationRoute": "/about",
     "startHttpStatus": 200,
@@ -901,8 +901,8 @@
       "height": 900
     },
     "renderedScreenshot": {
-      "sha256": "7e10731f445b437bf2e687335ca115872e49632236ebf020fcf67b70feb46f3b",
-      "byteLength": 583885,
+      "sha256": "212c576d3d90f6cd9013d273a81a824f24c3fdff0c8f031155c342bf55445081",
+      "byteLength": 604764,
       "width": 1280,
       "fullPage": true,
       "retainedInPublicGit": false,

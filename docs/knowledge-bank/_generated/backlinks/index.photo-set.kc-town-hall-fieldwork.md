@@ -3,7 +3,7 @@
 
 **Source commit:** `b224d676f90bdd026e353a5b5bd577cfe6619602`
 **Generation time:** 2026-08-13T21:26:38-04:00
-**Source fingerprint:** `d801832533b660e4f309fe61ed6b853265c18f17ef84b80f47075de6e119f73b`
+**Source fingerprint:** `9beb454fa76a5f7b9524733fe196ebdc58182ffab37d874da32db10d0a0fbf22`
 
 - [KC Town Hall ten-minute-walk proposal map](../../assets/graphics/kc-town-hall-walkshed-2019.md) - `related_to` (frontmatter)
 - [Jamie at the KC Town Hall worksite](../../assets/photographs/kc-town-hall-hard-hat-worksite.md) - `related_to` (frontmatter)
