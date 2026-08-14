@@ -4,7 +4,10 @@ import path from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
 
-import { evaluateResume } from "./evaluate-tailored-resume.mjs";
+import {
+  evaluateDocumentArtifact,
+  evaluateResume
+} from "./evaluate-tailored-resume.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const resumePath = path.join(
@@ -15,6 +18,12 @@ const resume = readFileSync(resumePath, "utf8");
 
 test("the OTI tailored resume passes every deterministic application gate", () => {
   const result = evaluateResume(resume);
+  assert.equal(result.overall, "pass", JSON.stringify(result.checks, null, 2));
+  assert.equal(result.passedChecks, result.totalChecks);
+});
+
+test("the OTI PDF is current, visually inspected, and installed as the public download", () => {
+  const result = evaluateDocumentArtifact();
   assert.equal(result.overall, "pass", JSON.stringify(result.checks, null, 2));
   assert.equal(result.passedChecks, result.totalChecks);
 });

@@ -1,4 +1,5 @@
-import { readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -166,13 +167,110 @@ export function evaluateResume(resumeText, sourcePath = rubric.resumePath) {
   };
 }
 
+function sha256(bytes) {
+  return createHash("sha256").update(bytes).digest("hex");
+}
+
+export function evaluateDocumentArtifact(root = repoRoot) {
+  const config = rubric.documentArtifact;
+  const pdfPath = path.join(root, config.pdfPath);
+  const publicPdfPath = path.join(root, config.publicPdfPath);
+  const inspectionPath = path.join(root, config.visualInspectionRunPath);
+  const pdf = existsSync(pdfPath) ? readFileSync(pdfPath) : null;
+  const publicPdf = existsSync(publicPdfPath) ? readFileSync(publicPdfPath) : null;
+  const inspection = existsSync(inspectionPath)
+    ? JSON.parse(readFileSync(inspectionPath, "utf8"))
+    : null;
+  const pdfText = pdf?.toString("latin1") ?? "";
+  const pdfHash = pdf ? sha256(pdf) : null;
+  const pageCount = (pdfText.match(/\/Type\s*\/Page\b/g) ?? []).length;
+
+  const checks = [
+    {
+      id: "tailored-pdf-exists",
+      pass: pdf !== null,
+      detail: config.pdfPath
+    },
+    {
+      id: "pdf-signature-and-application-size",
+      pass:
+        pdf !== null &&
+        pdf.subarray(0, 5).toString("ascii") === "%PDF-" &&
+        pdf.length >= config.minimumBytes &&
+        pdf.length <= config.maximumBytes,
+      detail: pdf
+        ? `${pdf.length} bytes; required ${config.minimumBytes}-${config.maximumBytes}.`
+        : "PDF is missing."
+    },
+    {
+      id: "expected-page-count",
+      pass: pageCount === config.expectedPages,
+      detail: `${pageCount} pages; expected ${config.expectedPages}.`
+    },
+    {
+      id: "required-link-annotations",
+      pass: config.requiredLinkTargets.every((target) => pdfText.includes(target)),
+      detail: `${config.requiredLinkTargets.filter((target) => pdfText.includes(target)).length}/${config.requiredLinkTargets.length} required links embedded.`
+    },
+    {
+      id: "public-download-matches-tailored-pdf",
+      pass: pdf !== null && publicPdf !== null && pdf.equals(publicPdf),
+      detail: "The portfolio download is byte-identical to the application-tailored PDF."
+    },
+    {
+      id: "visual-inspection-current",
+      pass:
+        inspection !== null &&
+        inspection.overall === "pass" &&
+        inspection.inspection.actualNamedPeopleParticipated === false &&
+        inspection.pdf.sha256 === pdfHash &&
+        inspection.pdf.bytes === pdf?.length &&
+        inspection.pdf.pages === pageCount &&
+        inspection.inspection.pages.length === pageCount &&
+        inspection.inspection.pages.every((page) => page.pass),
+      detail: inspection
+        ? `Inspection binds ${inspection.pdf.sha256} across ${inspection.inspection.pages.length} rendered pages.`
+        : "Visual inspection record is missing."
+    },
+    {
+      id: "read-only-template-copy-boundary",
+      pass:
+        inspection !== null &&
+        inspection.sourceTemplate.revisionUnchangedAfterExport === true &&
+        /read-only source/i.test(inspection.sourceTemplate.access) &&
+        /new private copy/i.test(inspection.sourceTemplate.access),
+      detail: "The recorded workflow kept the source unchanged and edited only a new private copy."
+    }
+  ];
+
+  return {
+    schemaVersion: 1,
+    rubricId: `${rubric.id}.document-artifact`,
+    pdfPath: config.pdfPath,
+    publicPdfPath: config.publicPdfPath,
+    sha256: pdfHash,
+    passedChecks: checks.filter((check) => check.pass).length,
+    totalChecks: checks.length,
+    overall: checks.every((check) => check.pass) ? "pass" : "fail",
+    checks
+  };
+}
+
 function main() {
   const argPath = process.argv.slice(2).find((arg) => !arg.startsWith("--"));
   const sourcePath = argPath ?? rubric.resumePath;
   const absolutePath = path.isAbsolute(sourcePath)
     ? sourcePath
     : path.join(repoRoot, sourcePath);
-  const result = evaluateResume(readFileSync(absolutePath, "utf8"), sourcePath);
+  const resume = evaluateResume(readFileSync(absolutePath, "utf8"), sourcePath);
+  const documentArtifact = evaluateDocumentArtifact();
+  const result = {
+    schemaVersion: 1,
+    overall:
+      resume.overall === "pass" && documentArtifact.overall === "pass" ? "pass" : "fail",
+    resume,
+    documentArtifact
+  };
   console.log(JSON.stringify(result, null, 2));
   if (result.overall !== "pass") process.exitCode = 1;
 }

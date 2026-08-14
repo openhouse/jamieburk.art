@@ -47,8 +47,8 @@ New York, NY / Remote | 2015–2020
 
 New York, NY | 2016
 
-- Built and launched an independent resident-facing follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services open data into issue pathways, district context, and next-step guidance.
-- Took the civic prototype from problem definition and information architecture through implementation and public release; the project received 2016 coverage in Politico New York. The archived site is unofficial and not a current City service.
+- Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.
+- Took the civic prototype from problem definition and information architecture through implementation and public release. The archived site is unofficial and not a current City service.
 
 ### KC Town Hall LLC — Co-Founder & Project Manager, Historic Restoration / Mixed-Use Development
 
