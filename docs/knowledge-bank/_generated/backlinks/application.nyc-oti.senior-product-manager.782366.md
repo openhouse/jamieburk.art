@@ -1,5 +1,5 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
-# Backlinks to Asana - AI Implementation Manager, Service Management
+# Backlinks to NYC OTI Senior Product Manager 782366 application milestone
 
 **Source commit:** `5ec4b1cde64b351859133d84f982a197fad6c03a`
 **Generation time:** 2026-08-14T16:46:21-04:00
@@ -7,4 +7,5 @@
 
 - [Employment context and hiring acceptance](../../indexes/employment-context.md) - `prose_link` (markdown)
 - [Employment context and hiring acceptance](../../indexes/employment-context.md) - `related_to` (frontmatter)
-- [Asana - AI Implementation Manager, Service Management 8027437](../../sources/jobs-asana-ai-implementation-8027437.md) - `supports` (frontmatter)
+- [NYC OTI - PIT Crew Senior Product Manager 782366](../../opportunities/oti-senior-product-manager-782366.md) - `prose_link` (markdown)
+- [NYC OTI - PIT Crew Senior Product Manager 782366](../../opportunities/oti-senior-product-manager-782366.md) - `related_to` (frontmatter)
