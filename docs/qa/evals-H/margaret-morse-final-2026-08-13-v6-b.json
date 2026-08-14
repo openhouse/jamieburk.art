@@ -1,0 +1,37 @@
+{
+  "disclaimer": "This scorecard applies a fictionalized Margaret Morse analytical lens. It is not an endorsement, quotation, named-professor judgment, publication approval, or production approval.",
+  "reviewerId": "fictionalized-margaret-morse-v6-b-e12a5580",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "e12a558094f94ed2f967bae3a29918c696fa1b6fc0ace9c1303eedbb23de54aa",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "At a 390 by 844 mobile viewport, Menu began closed, opened to reveal a visible 44-pixel-high About target, and selecting About reached /about with the heading About.",
+    "The About page explicitly joins the artistic, civic, technical, and social lineage through Open House and the recurring question of how structures help people recognize relationships, participate, remember, and continue.",
+    "The portfolio distinguishes these systems from conventional administration through the visible sequence: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.",
+    "More than three public-safe continuities are legible: WOWList turns organizers' existing language into followable community surfaces; Sunday Dinner and 196 connect hospitality and trust to repeatable hosting, onboarding, documentation, and handoffs; NYC Artist Coalition and FairRentNYC connect lived experience, public sources, testimony, meetings, and decisions to recoverable coalition infrastructure; Harry J. Epstein and source-backed team memory provide additional continuities.",
+    "Field and system evidence is concrete. WOWList presents historical production counts and organizer use while labeling them historical; Sunday Dinner and 196 show bounded residency and gathering workflows; coalition work names town halls, hearings, safety sessions, campaign sites, source maps, question logs, and action trackers used with collaborators.",
+    "Collective credit remains visible through wording such as co-built, co-organizers, participants, many collaborators, and coalition work. Jamie's initiating, organizing, implementation, documentation, and maintenance roles remain legible without converting collective outcomes into sole authorship.",
+    "Privacy boundaries are explicit: participant-level values remain withheld, private participant records remain private, and the coalition case study excludes strategy, legal-review context, private stakeholder information, and unapproved quotations.",
+    "No protected educational record, private correspondence, private identifier, archive locator, or unapproved testimonial was visible on the inspected public staging surfaces."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "The reviewed staging surface was marked noindex and nofollow.",
+    "Historical metrics are qualified as historical rather than current activity.",
+    "Reconstructed workflows are labeled as bounded reconstructions and withhold identities, access details, participant values, and private records.",
+    "The review establishes public-surface safety only; it does not authorize publication, indexing, or production deployment."
+  ],
+  "recommendation": "Accept this exact candidate as a passing PR-015 holdout at score 4. Preserve the current mobile navigation, collective-credit language, historical qualifiers, privacy boundaries, and protected-source exclusions through any later release decision.",
+  "provenance": {
+    "reviewedAt": "2026-08-13",
+    "candidateCommit": "c2b8c74353ca631b03e85d084a9d6fbcdedb0e45",
+    "candidatePathCount": 126,
+    "candidateFingerprintRecomputed": true,
+    "priorScorecardsRead": false,
+    "filesEdited": false,
+    "reviewSurface": "https://staging-a.jamieburk.art",
+    "reviewScope": "PR-015 rubric and evaluator verification plus public-staging-only rendered holdout"
+  }
+}

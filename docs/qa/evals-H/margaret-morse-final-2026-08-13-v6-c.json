@@ -1,0 +1,32 @@
+{
+  "disclaimer": "Fictionalized Margaret Morse analytical lens only; not an endorsement, quotation, named-professor judgment, publication approval, or production approval.",
+  "reviewerId": "fictionalized-margaret-morse-v6-c-e12a5580",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "e12a558094f94ed2f967bae3a29918c696fa1b6fc0ace9c1303eedbb23de54aa",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "A real 390x844 mobile-browser interaction opened Menu, navigated to About, and confirmed the details menu was closed after navigation.",
+    "Within two clicks, About visibly connects artistic, civic, technical, and social practice and links onward to project evidence.",
+    "Harry J. Epstein Company, NYC Artist Coalition/FairRentNYC, and Sunday Dinner/196 each show relationships, a system model, use with people, and documented learning or continuity; WOWList and source-backed team memory add further continuity.",
+    "Rendered wording distinguishes conventional administration from inhabitable systems through participation, influence, memory, handoffs, and continuation.",
+    "Collective language credits participants and collaborators; Sunday Dinner/196 explicitly keeps private participant records private."
+  ],
+  "gaps": [
+    "No blocking PR-015 gap observed; protected-source exclusion was assessed from the rendered public surface, not by opening protected materials."
+  ],
+  "safety_findings": [
+    "No protected educational record, private correspondence, or unapproved testimonial was visibly quoted or projected.",
+    "Collective credit, participant privacy, and staging noindex boundaries remained legible."
+  ],
+  "recommendation": "Accept this candidate for the PR-015 holdout at score 4 while preserving separate human publication and production approval gates.",
+  "provenance": {
+    "reviewedAt": "2026-08-13",
+    "candidateCommit": "c2b8c74353ca631b03e85d084a9d6fbcdedb0e45",
+    "candidatePathCount": 126,
+    "candidateFingerprintRecomputed": true,
+    "priorScorecardsRead": false,
+    "filesEdited": false
+  }
+}

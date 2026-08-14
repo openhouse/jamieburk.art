@@ -1,0 +1,30 @@
+{
+  "disclaimer": "Fictionalized Warren Sack analytical lens; not an endorsement, quote, named-professor judgment, publication approval, or production approval.",
+  "reviewerId": "fictionalized-warren-sack-v6-b-e12a5580",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "e12a558094f94ed2f967bae3a29918c696fa1b6fc0ace9c1303eedbb23de54aa",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "Recomputed the 126-file candidate fingerprint: e12a558094f94ed2f967bae3a29918c696fa1b6fc0ace9c1303eedbb23de54aa.",
+    "Staging /about is reachable from the homepage in one click and names the method plainly: relationships -> model -> interface -> use with people -> continuity documentation.",
+    "Three current loops are concretely traceable: Harry J. Epstein joins customer/team relationships to a maintained storefront and reusable workflows; FairRentNYC joins civic testimony and actors to public pathways, source maps, and action trackers; Sunday Dinner/196 joins hospitality and participation to recurring gatherings and residency handoffs.",
+    "Additional loops make the field/system relation legible: WOWList translates organizer language into followable communities, publishing, digests, and calendars; team memory connects sources, claims, decisions, and contributors to inspectable correction and handoff practices.",
+    "Anti-overclaim boundaries are explicit: historical/current-research material is not framed as deployment; team memory is an early method, not completed client pilot or production SaaS; protected records and collaborator context remain outside the public record."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "No public-private boundary failure observed in the inspected staging surfaces.",
+    "Collective governance and collaborator use are preserved; no sole-authorship, disciplinary-invention, peer-review, or current Max/Jitter claim observed."
+  ],
+  "recommendation": "Pass PR-016 holdout at 4. Preserve the explicit bounded-lineage and non-production language through subsequent edits.",
+  "provenance": {
+    "reviewedAt": "2026-08-13",
+    "candidateCommit": "c2b8c74353ca631b03e85d084a9d6fbcdedb0e45",
+    "candidatePathCount": 126,
+    "candidateFingerprintRecomputed": true,
+    "priorScorecardsRead": false,
+    "filesEdited": false
+  }
+}

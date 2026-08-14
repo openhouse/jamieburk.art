@@ -1,0 +1,30 @@
+{
+  "disclaimer": "Fictionalized analytical lens, not an endorsement, quote, named-professor judgment, publication approval, or production approval.",
+  "reviewerId": "fictionalized-warren-sack-v6-c-e12a5580",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "e12a558094f94ed2f967bae3a29918c696fa1b6fc0ace9c1303eedbb23de54aa",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "Public staging homepage reaches /about in one click; /about states the full recursive method plainly and links to project evidence within two clicks.",
+    "Three current loops are reconstructable: HJE connects customer/team relationships to an e-commerce interface and reusable operational handoff; NYC Artist Coalition/FairRentNYC connects civic records and actors to campaign/town-hall/action interfaces and recoverable trackers; Sunday Dinner/196 connects trust and participation to hosting/residency workflows and privacy-bounded continuity.",
+    "Inspectable specimens make the model-to-interface-to-collective-use-to-handoff movement concrete: HJE's bounded release loop and 196's residency/gathering handoffs.",
+    "The team-memory lab calls itself an early method/consulting practice, not finished software or a client pilot; staging is noindex,nofollow."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "Collective language is preserved for coalition and participant work.",
+    "Workflow specimens explicitly withhold customer data, private analytics, participant-level values, identities, access details, correspondence, and protected records.",
+    "No disciplinary invention, peer-reviewed research, production-deployment, sole-authorship, or current Max/Jitter-proficiency claim was observed on the reviewed public surface."
+  ],
+  "recommendation": "Pass PR-016 at 4. The rendered candidate makes recursive social-systems practice specific, inspectable, and bounded without converting protected lineage into present-proof overclaims.",
+  "provenance": {
+    "reviewedAt": "2026-08-13",
+    "candidateCommit": "c2b8c74353ca631b03e85d084a9d6fbcdedb0e45",
+    "candidatePathCount": 126,
+    "candidateFingerprintRecomputed": true,
+    "priorScorecardsRead": false,
+    "filesEdited": false
+  }
+}

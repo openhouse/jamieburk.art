@@ -43,19 +43,20 @@ export const professorCandidateRelativePaths = [
 ].sort();
 
 const finalScorecardRelativePaths = [
-  "docs/qa/evals-H/margaret-morse-final-2026-08-13-v4-a.json",
-  "docs/qa/evals-H/margaret-morse-final-2026-08-13-v4-b.json",
-  "docs/qa/evals-H/margaret-morse-final-2026-08-13-v4-c.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-13-v4-a.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-13-v4-b.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-13-v4-c.json"
+  "docs/qa/evals-H/margaret-morse-final-2026-08-13-v6-a.json",
+  "docs/qa/evals-H/margaret-morse-final-2026-08-13-v6-b.json",
+  "docs/qa/evals-H/margaret-morse-final-2026-08-13-v6-c.json",
+  "docs/qa/evals-H/warren-sack-final-2026-08-13-v6-a.json",
+  "docs/qa/evals-H/warren-sack-final-2026-08-13-v6-b.json",
+  "docs/qa/evals-H/warren-sack-final-2026-08-13-v6-c.json"
 ];
 
 const dissentScorecardRelativePaths = [
-  "docs/qa/evals-H/warren-sack-dissent-2026-08-13-a.json"
+  "docs/qa/evals-H/warren-sack-dissent-2026-08-13-a.json",
+  "docs/qa/evals-H/margaret-morse-dissent-2026-08-13-v5-c.json"
 ];
 
-const approvedCandidateSha256 = "4c8b17e8a7a69226c184fbaac09dd0025836dd4d608fb7f4075548614fdd7c4f";
+const approvedCandidateSha256 = "e12a558094f94ed2f967bae3a29918c696fa1b6fc0ace9c1303eedbb23de54aa";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },
@@ -266,14 +267,16 @@ export function evaluateProfessorLenses({
     ),
     criterion(
       "dissent-preserved",
-      "The hill climb preserves the pre-clean-candidate dissent that identified the stale photo receipt and prompted fresh mobile verification, without counting it as a final holdout.",
-      dissentScorecards.length === 1 &&
+      "The hill climb preserves both earlier dissents: stale photo evidence and persistent mobile navigation. Neither can count as a final holdout.",
+      dissentScorecards.length === 2 &&
         dissentScorecards.every((scorecard) => scorecard.phase === "holdout" &&
-          scorecard.lensId === "PR-016" &&
           scorecard.score === 3 && scorecard.pass === false &&
-          scorecard.candidateSha256 === "51084e34d4f4db259126df29062b66ce157b6c43c15c4db8f4e3f994946c441f" &&
-          scorecard.candidateSha256 !== candidateSha256),
-      `${dissentScorecards.length}/1 pre-clean-candidate dissent scorecard preserved.`
+          scorecard.candidateSha256 !== candidateSha256) &&
+        dissentScorecards.some((scorecard) => scorecard.lensId === "PR-016" &&
+          scorecard.candidateSha256 === "51084e34d4f4db259126df29062b66ce157b6c43c15c4db8f4e3f994946c441f") &&
+        dissentScorecards.some((scorecard) => scorecard.lensId === "PR-015" &&
+          scorecard.candidateSha256 === "4605a9adad10bfca08ee0eaaefc66329bf268db9f65265095cec1b9e293130ed"),
+      `${dissentScorecards.length}/2 historical dissent scorecards preserved.`
     )
   ];
 

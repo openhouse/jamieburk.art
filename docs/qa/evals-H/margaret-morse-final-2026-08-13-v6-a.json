@@ -1,0 +1,76 @@
+{
+  "disclaimer": "This is a fictionalized Margaret Morse analytical lens, not an endorsement, quotation, named-professor judgment, publication approval, or production approval.",
+  "reviewerId": "fictionalized-margaret-morse-v6-a-e12a5580",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "e12a558094f94ed2f967bae3a29918c696fa1b6fc0ace9c1303eedbb23de54aa",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    {
+      "criterion": "mobile_two_click_path",
+      "finding": "At a 390x844 viewport, the homepage Menu opened a labeled Mobile navigation containing About. Activating About reached https://staging-a.jamieburk.art/about with title About - Jamie Burkart. The path is one navigation action after opening the menu."
+    },
+    {
+      "criterion": "visible_social_practice_lineage",
+      "finding": "The About page visibly connects Open House, WOWList, Sunday Dinner / 196, NYC Artist Coalition, and source-backed team memory under Systems people can inhabit. It explicitly joins artistic, civic, technical, and social practice while keeping Jamie's technical-project-management and implementation role prominent."
+    },
+    {
+      "criterion": "inhabited_systems",
+      "finding": "The public through-line asks how structures help people recognize relationships, participate, remember, and continue. Its recursive sequence—observe relationships, model a system, prototype an interface, test it with people, and document for continuation—distinguishes the practice from conventional administration."
+    },
+    {
+      "criterion": "project_continuity",
+      "finding": "More than three public-safe continuities are legible: WOWList turns organizer vocabulary into followable community infrastructure; Sunday Dinner / 196 turns hospitality, onboarding, and trust into repeatable participation systems; NYC Artist Coalition / FairRentNYC joins field meetings, public interfaces, source maps, and durable coalition memory; Harry J. Epstein connects customer and team relationships to maintained operational releases."
+    },
+    {
+      "criterion": "field_system_continuity",
+      "finding": "The FairRentNYC case study states that field work and technical work are one practice: conversations become shared public surfaces and paths others can continue. Visible examples include meetings, town halls, hearings, campaign sites, running minutes, question logs, action trackers, and source maps."
+    },
+    {
+      "criterion": "collective_credit",
+      "finding": "WOWList is consistently described as co-built and credits collaborators. FairRentNYC names many collaborators and expressly rejects sole causation for coalition and policy outcomes. Sunday Dinner identifies co-organizers where supported and credits the 196 / Sunday Dinner community."
+    },
+    {
+      "criterion": "privacy_and_care",
+      "finding": "Sunday Dinner / 196 publishes redacted workflow reconstructions while withholding participant names, contacts, attendance histories, correspondence, access details, proposals, photographs, and participant-level values. The source-backed-memory page keeps Known, Open, and Protected states distinct and rejects unsafe private-archive browsing."
+    },
+    {
+      "criterion": "public_safety",
+      "finding": "No protected educational record, private correspondence, private archive path, participant-level record, unapproved testimonial, or romanticized vulnerability was observed on the reviewed public surfaces. Historical counts are bounded as snapshots rather than current activity, and research/method work is not presented as production deployment."
+    }
+  ],
+  "gaps": [
+    {
+      "severity": "non_blocking",
+      "finding": "The About-page Open House citation exposed a cautious claim and an accessible source title, but its anchor did not surface a separate visible citation-note body during this holdout. No private material was consulted to compensate."
+    },
+    {
+      "severity": "non_blocking",
+      "finding": "The staging pages did not visibly expose a deployment commit identifier; candidate binding therefore rests on the independently recomputed candidate fingerprint and the staging attestation, not a public runtime SHA."
+    }
+  ],
+  "safety_findings": {
+    "collective_credit_preserved": true,
+    "participant_privacy_preserved": true,
+    "protected_educational_records_projected": false,
+    "private_correspondence_projected": false,
+    "unapproved_testimonials_projected": false,
+    "romanticized_vulnerability_observed": false,
+    "production_or_current_proficiency_overclaim_observed": false,
+    "human_approval_gates_remain_open": true
+  },
+  "recommendation": "PASS PR-015 at 4 for this exact candidate. Preserve the existing collective-credit, privacy, historical-status, and protected-source boundaries. Re-run the holdout after any candidate-affecting change. This pass does not authorize publication, deployment, production indexing, collaborator consent, media use, or release.",
+  "provenance": {
+    "reviewedAt": "2026-08-13",
+    "candidateCommit": "c2b8c74353ca631b03e85d084a9d6fbcdedb0e45",
+    "candidatePathCount": 126,
+    "candidateFingerprintRecomputed": true,
+    "candidateFingerprintMatchedExpected": true,
+    "reviewMode": "independent bounded holdout",
+    "priorScorecardsRead": false,
+    "docsQaEvalsHOutputsRead": false,
+    "filesEdited": false,
+    "candidateWorkingTreeCleanAfterReview": true
+  }
+}
