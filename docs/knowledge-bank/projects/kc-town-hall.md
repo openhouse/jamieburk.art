@@ -155,6 +155,54 @@ See the
 for the proposition ledger, source boundaries, privacy decisions, and research
 queue.
 
+## Tired of Tires Resident Service Source Return
+
+An August 14 source return materially deepens the resident-service record. The
+archived service page establishes a recurring free household tire pickup built
+by KC Town Hall and Oak Park Neighborhood Association, with published dates,
+request and volunteer routes, and the shared author label `Julia and Jamie`. A
+contemporaneous protected coordination record identifies James Burkart as the
+driver for the May 2019 launch pickup and records the City fee waiver and
+first-Saturday recycling handoff.
+
+Jamie supplies an authorized first-party professional account of designing the
+service, web page, and 4x6 handbills and of recurring route, pickup, and
+measurement work. The authenticated design archive preserves the exact tire and
+neighborhood-survey handbill compositions. Together, these sources support the
+bounded claim that Jamie **helped design and operate** Tired of Tires. They do
+not establish sole credit, responsibility for every later route, or authorship
+of every shared record.
+
+The project-maintained calculator records **1,970 tires** across monthly entries
+from May 2019 through September 2022 and estimates **$44,890 in avoided disposal
+fees** under its own stated assumptions. This is not audited City data, an
+independent economic-impact study, a unique-resident count, a completed-request
+count, or proof of complete lifetime or walkshed coverage. Row-level resident
+data remains protected.
+
+Two exact public-safe design derivatives are approved for the portfolio: the
+historic 2021 service handbill and the 2019 neighborhood-survey handbill. Both
+exclude obsolete contact details and resident response data. The authorization
+is limited to these derivatives, not the full Drive or photo corpus.
+
+The paired handbills also preserve an important planning loop. The proposal
+reproduces the neighborhood survey, says its results shaped the proposal, and
+includes a restaurant and kitchen-incubator concept. Jamie reports that service
+conversations surfaced home-catering ambitions and licensed-kitchen needs. That
+specific conversation-to-facility causal chain remains a protected research
+lead pending de-identified survey, design-iteration, agency, architect, or
+collaborator evidence.
+
+See the
+[Tired of Tires source return](../intake/2026-08-14-kcth-tired-of-tires-source-return.md)
+for the resident-service blueprint, aggregate method, artifact disposition,
+agency relations, and open inquiries.
+
+Canonical claims:
+
+- `CLM-KCTH-TIRED-OF-TIRES-SERVICE-DESIGN`
+- `CLM-KCTH-TIRED-OF-TIRES-MEASUREMENT`
+
 ## Mission-Aligned Transition
 
 Jamie has authorized a bounded first-party professional claim that he
@@ -194,6 +242,11 @@ research inquiry, not projected copy.
 - `SRC-KCTH-GHOST-ARCHIVE-2020`
 - `SRC-CLEVELAND-AVE-KC-TIRES-CAPTURE-2020`
 - `SRC-KCTH-FIELD-PRACTICE-REVIEW-2026`
+- `SRC-KCTH-TIRES-WAYBACK-2021`
+- `SRC-KCTH-TIRES-TRACKER-2019-2022`
+- `SRC-KCTH-TIRES-CITY-COORDINATION-2019`
+- `SRC-KCTH-TIRES-DESIGN-AUTHORIZATION-2026`
+- `SRC-KCTH-TIRES-DESIGN-ARCHIVE-2019-2021`
 - `SRC-JAMIE-KC-TOWN-HALL-TRANSITION-AUTHORIZATION-2026`
 
 ## Boundary
@@ -221,3 +274,11 @@ archive and social records establish a recurring project-level tire service,
 not Jamie's individual operating role, an Indian Mound expansion, completed
 service units, or audited results. Cleveland Avenue co-founder, design, mapping,
 printing, distribution, and capital-decision propositions remain open inquiries.
+
+The August source return narrows part of that earlier hold: Jamie's launch-
+driving role is now contemporaneously documented; a bounded helped-design-and-
+operate claim combines first-party authorization with the public service page,
+coordination record, and exact design archive; and the tracker aggregate is now
+project-source-backed. It does not mature every-month route responsibility,
+Indian Mound expansion, complete walkshed coverage, or the service-contact-to-
+facility causal pathway.

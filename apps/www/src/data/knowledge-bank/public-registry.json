@@ -528,6 +528,28 @@
       ]
     },
     {
+      "id": "SRC-KCTH-TIRES-WAYBACK-2021",
+      "title": "Tired of Tires? Free Tire Pickup",
+      "organization": "KC Town Hall",
+      "author": "Julia and Jamie",
+      "kind": "archived-web-capture",
+      "visibility": "public",
+      "preservationStatus": "archived",
+      "publishedAt": "2019-05-02",
+      "accessedAt": "2026-08-14",
+      "canonicalUrl": "https://kctownhall.com/tires/",
+      "archiveUrl": "https://web.archive.org/web/20210806195823/https://kctownhall.com/tires/",
+      "preferredPublicUrl": "archive",
+      "publicCitation": "KC Town Hall, 'Tired of Tires? Free Tire Pickup,' published May 2, 2019, archived August 6, 2021.",
+      "publicNote": "The capture preserves the resident promise, partners, household eligibility, request and volunteer routes, 2021 dates, and the shared author label without reusing historical contact details.",
+      "doesNotEstablish": [
+        "individual authorship of each page element",
+        "Jamie's responsibility for every pickup",
+        "an audited service total or unique-resident count",
+        "City endorsement of the broader KC Town Hall project"
+      ]
+    },
+    {
       "id": "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
       "title": "Authenticated @KCTownHall full-population recovery and public-post ledger",
       "organization": "KC Town Hall",
@@ -1977,6 +1999,63 @@
       ]
     },
     {
+      "id": "CLM-KCTH-TIRED-OF-TIRES-SERVICE-DESIGN",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie helped design and operate Tired of Tires, a recurring free household pickup service built with KC Town Hall, Oak Park Neighborhood Association, residents, and City partners. Contemporaneous records identify him as the driver for the May 2019 launch pickup.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KCTH-TIRES-WAYBACK-2021",
+          "relationship": "direct-support",
+          "supports": [
+            "a recurring free household tire-pickup service offered by KC Town Hall and Oak Park Neighborhood Association",
+            "published service dates and resident request or volunteer routes",
+            "the page-level author label Julia and Jamie"
+          ],
+          "publicNote": "The public page establishes shared service identity and a co-authored surface.",
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The claim says 'helped' because KC Town Hall, Oak Park Neighborhood Association, residents, City staff, and other collaborators each held part of the service.",
+        "The contemporaneous record identifies Jamie as launch driver, not driver for every month.",
+        "First-party design and recurring-operation evidence is not an independent audit or collaborator testimonial.",
+        "Resident requests, addresses, contact details, and row-level logs remain private."
+      ]
+    },
+    {
+      "id": "CLM-KCTH-TIRED-OF-TIRES-MEASUREMENT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A project-maintained tracker records 1,970 tires across monthly entries from May 2019 through September 2022 and estimates $44,890 in avoided disposal fees under its stated assumptions.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Always retain 'project-maintained' and the May 2019-September 2022 recorded date range.",
+        "Always identify $44,890 as a tracker estimate under stated assumptions.",
+        "Do not translate tires into unique residents, households, completed requests, exact walkshed coverage, or City-verified impact.",
+        "The resident-level workbook remains protected."
+      ]
+    },
+    {
       "id": "CLM-KCTH-SOCIAL-SERVICE-REPORTING",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -3083,6 +3162,7 @@
         "SRC-KC-TOWN-HALL-CCED-REPORT-2022-12",
         "SRC-KC-TOWN-HALL-CCED-REPORT-2023",
         "SRC-JAMIE-RESUME-KC-TOWN-HALL-2026",
+        "SRC-KCTH-TIRES-WAYBACK-2021",
         "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
         "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29",
         "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29",
@@ -3122,6 +3202,19 @@
           "sourceIds": [
             "SRC-JAMIE-RESUME-KC-TOWN-HALL-2026"
           ]
+        },
+        {
+          "id": "tired-of-tires-service-design",
+          "claimId": "CLM-KCTH-TIRED-OF-TIRES-SERVICE-DESIGN",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KCTH-TIRES-WAYBACK-2021"
+          ]
+        },
+        {
+          "id": "tired-of-tires-measurement",
+          "claimId": "CLM-KCTH-TIRED-OF-TIRES-MEASUREMENT",
+          "projection": "case-study"
         },
         {
           "id": "public-service-interface",

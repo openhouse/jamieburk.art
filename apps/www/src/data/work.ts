@@ -556,10 +556,10 @@ const workItemsInput = [
     title: "KC Town Hall LLC",
     slug: "kc-town-hall",
     series: "Built Environment",
-    subtitle: "A $490,539 public funding award, field implementation, and responsible transition",
+    subtitle: "Resident service design, field implementation, a $490,539 public award, and responsible transition",
     summary:
-      "Secured a $490,539 public funding award by co-developing KC Town Hall's successful CCED proposal and serving as the City's named developer/presenter for the exact request, then transitioned the project to a mission-aligned organization.",
-    role: "Co-founder, Project Manager & CCED Developer/Presenter",
+      "Co-led KC Town Hall's planning and resident-facing operations: helped design and operate Tired of Tires, co-developed and presented the successful $490,539 CCED request, and later transitioned the project to a mission-aligned organization.",
+    role: "Co-founder, Project Manager, Service Designer & CCED Developer/Presenter",
     years: "2019-2024 public record",
     status: "Short proof page",
     featured: false,
@@ -572,9 +572,51 @@ const workItemsInput = [
     whatWasUnclear:
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
     whatBecameUsable:
-      "A successful $490,539 public funding request, planning materials, public-benefit documentation, stakeholder context, a multi-year municipal compliance record, and a mission-aligned transition.",
-    artifactTypes: ["map", "guide", "source map", "template"],
+      "A recurring household service with resident intake, field pickup, a City recycling handoff, project-maintained measurement, a successful $490,539 public funding request, and a mission-aligned transition.",
+    artifactTypes: ["public handout", "workflow", "map", "source map"],
     artifacts: [
+      {
+        title: "Tired of Tires service handbill",
+        description:
+          "A historic 2021 4x6 handbill made the service promise, household eligibility, monthly cadence, and resident action legible at a glance.",
+        type: "public handout",
+        media: {
+          src: "/images/artifacts/kc-town-hall-tired-of-tires-handbill-2021.webp",
+          alt: "Historic Tired of Tires handbill announcing monthly free household curbside tire pickup with KC Town Hall and Oak Park Neighborhood Association, with a list of 2021 dates.",
+          caption:
+            "Historic artifact, not a current service notice. This public-safe crop preserves the resident promise and date rhythm while excluding obsolete phone and email details.",
+          href: "/images/artifacts/kc-town-hall-tired-of-tires-handbill-2021.webp",
+          sourceLabel: "historic service handbill",
+          fit: "contain"
+        }
+      },
+      {
+        title: "Resident service workflow",
+        description:
+          "A plain-language promise connected household requests, recurring field pickup, a municipal recycling handoff, and project-maintained measurement without exposing resident records.",
+        type: "workflow"
+      },
+      {
+        title: "Neighborhood survey handbill",
+        description:
+          "The paired 4x6 survey asked residents to choose desired services near home or write in their own idea, turning field contact into a planning input.",
+        type: "public handout",
+        media: {
+          src: "/images/artifacts/kc-town-hall-neighborhood-survey-handbill-2019.webp",
+          alt: "Historic KC Town Hall survey handbill asking what residents would like at 36th and Indiana, with checkboxes for neighborhood services and blank response fields.",
+          caption:
+            "Public-safe crop from the 2019 proposal. Blank form labels remain visible; obsolete contact details and all resident response data are excluded.",
+          href: "/images/artifacts/kc-town-hall-neighborhood-survey-handbill-2019.webp",
+          sourceLabel: "historic neighborhood survey",
+          fit: "contain"
+        }
+      },
+      {
+        title: "Service-to-planning feedback loop",
+        description:
+          "Tire pickup created a recurring point of contact; the survey carried neighborhood priorities back into program planning. The proposal says survey results shaped what followed.",
+        type: "workflow"
+      },
       {
         title: "Ten-minute-walk proposal map",
         description:
@@ -594,21 +636,24 @@ const workItemsInput = [
         title: "Public-benefit documentation set",
         description:
           "Representative materials for describing intended public value, funding context, and stakeholder needs.",
-        type: "guide"
+        type: "source map"
       }
     ],
     tags: ["Implementation", "Documentation", "Knowledge Systems", "Public-Facing Tools"],
-    capabilities: ["Stakeholder Documentation", "Funding Support", "Historic Preservation Context"],
+    capabilities: ["Resident Service Design", "Field Operations", "Cross-Agency Coordination", "Measurement", "Stakeholder Documentation", "Funding Support", "Historic Preservation Context"],
     careNote:
-      "Securing the award names Jamie's documented proposal-and-presentation role; institutional authority remained with the Board and Council, and appropriation was not payment to Jamie. The transition is an authorized first-party professional account. Private personal, financial, legal, property, and stakeholder details are omitted.",
+      "The service claim says Jamie helped design and operate because the work belonged to residents, KC Town Hall, Oak Park Neighborhood Association, City partners, and other collaborators. The tracker is project-maintained, not City-audited; resident records remain private. Securing the award names Jamie's documented proposal-and-presentation role, while institutional authority remained with the Board and Council.",
     sourceLayer:
-      "Official Kansas City Council and CCED records, a protected public-safe review of the 2019 proposal, the complete public account corpus, Council-role records, approved resume language, and bounded project context.",
-    credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
+      "Official Kansas City Council and CCED records; the archived public service page; a protected aggregate review of the service tracker and launch coordination; exact governed handbill artifacts; the complete public account corpus; and authorized first-party professional context.",
+    credits: ["Jamie Burkart", "Julia Fredenburg", "KC Town Hall LLC collaborators", "Oak Park Neighborhood Association", "participating residents and City partners"],
     currentStatus: "Jamie later transitioned the project to a mission-aligned organization.",
     group: "Operating systems for teams",
     roleFit:
-      "Funding strategy, proposal development, public presentation, long-horizon project management, public-benefit documentation, compliance coordination, and implementation support.",
+      "Resident-facing service design, field operations, cross-agency implementation, measurement, funding strategy, public presentation, long-horizon project management, and responsible handoff.",
     evidence: [
+      "Helped design and operate a recurring free household tire-pickup service",
+      "Contemporaneously identified driver for the May 2019 launch pickup",
+      "Project-maintained tracker records 1,970 tires and estimates $44,890 in avoided disposal fees across monthly entries from May 2019 through September 2022",
       "$490,539 public funding award secured through a successful CCED request",
       "Named City developer/presenter for the exact request",
       "Redevelopment planning",
@@ -620,11 +665,11 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-led the project, served as the City's named developer/presenter for the successful $490,539 request, remained a named developer point of contact through documented compliance progress in 2022-2023, and later transitioned the project to a mission-aligned organization. The complete surviving public-account corpus separately documents a collective resident intake, service-coordination, and reporting workflow.",
+        "Jamie co-led the project; helped design and operate Tired of Tires; is contemporaneously identified as the May 2019 launch driver; served as the City's named developer/presenter for the successful $490,539 request; and later transitioned the project to a mission-aligned organization. A project-maintained tracker records 1,970 tires and an estimated $44,890 in avoided disposal fees across its dated monthly entries.",
       open:
-        "The receiving organization, legal form, timing, and transfer scope are intentionally not asserted. The public transcript of Jamie's recalled City Council testimony remains unrecovered.",
+        "Every-month route responsibility, complete walkshed coverage, the specific survey-to-facility causal path, the receiving organization, legal form, timing, and transfer scope are intentionally not asserted. The public transcript of Jamie's recalled City Council testimony remains unrecovered.",
       protected:
-        "Private personal, correspondence, financial, legal, property, banking, and stakeholder details are omitted."
+        "Resident names, addresses, requests, phone numbers, email addresses, private correspondence, row-level service records, and personal, financial, legal, property, banking, and stakeholder details are omitted."
     }
   }
 ] satisfies WorkMeta[];

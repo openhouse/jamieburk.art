@@ -6,6 +6,7 @@ import { historicalKnowledge } from "./historical-knowledge.ts";
 import { kcTownHallCouncilFunding } from "./kc-town-hall-council-funding.ts";
 import { kcTownHallFieldPractice } from "./kctownhall-field-practice.ts";
 import { kcTownHallSocialCorpus } from "./kctownhall-social-corpus.ts";
+import { kcTownHallTiredOfTiresSourceReturn } from "./kctownhall-tired-of-tires-source-return.ts";
 import { kcSpacesFundFacebookPostKnowledge } from "./kcspacesfund-facebook-posts-2026-07.ts";
 import { jamiePersonalFacebookPostKnowledge } from "./jamie-personal-facebook-posts-2026-07.ts";
 import { nycacPressArchive } from "./nycac-press-archive.ts";
@@ -63,6 +64,7 @@ const knowledgeBankInput = {
     ...projectCompositionAugust2026.intakeItems,
     ...kcTownHallCouncilFunding.intakeItems,
     ...kcTownHallFieldPractice.intakeItems,
+    ...kcTownHallTiredOfTiresSourceReturn.intakeItems,
     ...kcTownHallSocialCorpus.intakeItems,
     ...kcSpacesFundFacebookPostKnowledge.intakeItems,
     ...jamiePersonalFacebookPostKnowledge.intakeItems,
@@ -111,6 +113,7 @@ const knowledgeBankInput = {
     ...projectCompositionAugust2026.observations,
     ...kcTownHallCouncilFunding.observations,
     ...kcTownHallFieldPractice.observations,
+    ...kcTownHallTiredOfTiresSourceReturn.observations,
     ...kcTownHallSocialCorpus.observations,
     ...kcSpacesFundFacebookPostKnowledge.observations,
     ...jamiePersonalFacebookPostKnowledge.observations,
@@ -263,6 +266,7 @@ const knowledgeBankInput = {
     ...projectCompositionAugust2026.sources,
     ...kcTownHallCouncilFunding.sources,
     ...kcTownHallFieldPractice.sources,
+    ...kcTownHallTiredOfTiresSourceReturn.sources,
     ...kcTownHallSocialCorpus.sources,
     ...kcSpacesFundFacebookPostKnowledge.sources,
     ...jamiePersonalFacebookPostKnowledge.sources,
@@ -284,11 +288,13 @@ const knowledgeBankInput = {
   entities: [
     ...agencyGraph.entities,
     ...kcTownHallCouncilFunding.entities,
+    ...kcTownHallTiredOfTiresSourceReturn.entities,
     ...nycacRecentAdvocacyAugust2026.entities
   ],
   agencyRelations: [
     ...agencyGraph.agencyRelations,
     ...kcTownHallCouncilFunding.agencyRelations,
+    ...kcTownHallTiredOfTiresSourceReturn.agencyRelations,
     ...nycacRecentAdvocacyAugust2026.agencyRelations
   ],
   claims: [
@@ -413,6 +419,7 @@ const knowledgeBankInput = {
     ...projectCompositionAugust2026.claims,
     ...kcTownHallCouncilFunding.claims,
     ...kcTownHallFieldPractice.claims,
+    ...kcTownHallTiredOfTiresSourceReturn.claims,
     ...kcTownHallSocialCorpus.claims,
     ...kcSpacesFundFacebookPostKnowledge.claims,
     ...jamiePersonalFacebookPostKnowledge.claims,
@@ -481,6 +488,7 @@ const knowledgeBankInput = {
     ...projectCompositionAugust2026.researchInquiries,
     ...kcTownHallCouncilFunding.researchInquiries,
     ...kcTownHallFieldPractice.researchInquiries,
+    ...kcTownHallTiredOfTiresSourceReturn.researchInquiries,
     ...kcTownHallSocialCorpus.researchInquiries,
     ...kcSpacesFundFacebookPostKnowledge.researchInquiries,
     ...jamiePersonalFacebookPostKnowledge.researchInquiries,
@@ -596,6 +604,7 @@ const knowledgeBankInput = {
       "SRC-KC-TOWN-HALL-CCED-REPORT-2022-12",
       "SRC-KC-TOWN-HALL-CCED-REPORT-2023",
       "SRC-JAMIE-RESUME-KC-TOWN-HALL-2026",
+      "SRC-KCTH-TIRES-WAYBACK-2021",
       "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
       "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29",
       "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29",
@@ -633,6 +642,17 @@ const knowledgeBankInput = {
         claimId: "CLM-KC-TOWN-HALL-JAMIE-PLANNING-CONTRIBUTION",
         projection: "case-study",
         sourceIds: ["SRC-JAMIE-RESUME-KC-TOWN-HALL-2026"]
+      },
+      {
+        id: "tired-of-tires-service-design",
+        claimId: "CLM-KCTH-TIRED-OF-TIRES-SERVICE-DESIGN",
+        projection: "case-study",
+        sourceIds: ["SRC-KCTH-TIRES-WAYBACK-2021"]
+      },
+      {
+        id: "tired-of-tires-measurement",
+        claimId: "CLM-KCTH-TIRED-OF-TIRES-MEASUREMENT",
+        projection: "case-study"
       },
       {
         id: "public-service-interface",
