@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Commercial rent stabilization hearing
 
-**Source commit:** `ace3985e92c59540c914ec2974a6396fe5c3e56f`
-**Generation time:** 2026-08-13T23:11:44-04:00
-**Source fingerprint:** `4bce31b66f1ad8d96b944d46e4b3c26224fb4e0fabbd1d3d281f080bcf8021ea`
+**Source commit:** `50cfa8ed3f1894c20da32e3ee4418bcf538b56e8`
+**Generation time:** 2026-08-13T23:23:41-04:00
+**Source fingerprint:** `5b1026b1cf2184a07b46286c42990b6135e53eb3a69927bfb982415f26697768`
 
 - [Commercial rent stabilization testimony](../../indexes/commercial-rent-testimony.md) - `prose_link` (markdown)
 - [September 17, 2021 commercial rent stabilization hearing official transcript](../../sources/public-hearing-transcripts/commercial-rent-stabilization-hearing-2021-09-17.md) - `documents` (frontmatter)
