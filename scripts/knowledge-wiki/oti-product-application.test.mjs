@@ -179,3 +179,23 @@ test("OTI application milestone eval rejects outcome inflation and confirmation 
     false
   );
 });
+
+test("OTI application milestone receipt preserves the measured hill climb and human boundary", () => {
+  const receipt = JSON.parse(
+    readFileSync(path.join(repoRoot, rubric.latestMilestoneRunPath), "utf8")
+  );
+
+  assert.match(receipt.candidateCommit, /^[0-9a-f]{40}$/);
+  assert.equal(receipt.candidateBranch, "feature/2026-08-14-B");
+  assert.equal(receipt.actualPeopleParticipated, false);
+  assert.equal(receipt.submissionActionPerformedBy, "Jamie Burkart");
+  assert.equal(receipt.confirmationArtifactCommitted, false);
+  assert.equal(receipt.baseline.passedChecks, 2);
+  assert.deepEqual(
+    receipt.iterations.map((iteration) => iteration.passedChecks),
+    [8, 9]
+  );
+  assert.ok(receipt.mutationControls.every((control) => control.pass));
+  assert.equal(receipt.finalResult.graph.typeAwareOrphans, 0);
+  assert.equal(receipt.overall, "pass");
+});
