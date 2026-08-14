@@ -206,12 +206,30 @@ test("a panel without dissent fails artist-led curation", async () => {
   assert.equal(result.criteria.artist_led_curation, false);
 });
 
-test("binding every public photograph defeats selective materialization", async () => {
+test("a bound photograph without a governed asset and occurrence fails selective materialization", async () => {
   const model = await baselineModel();
   const pending = appendPendingPhoto(model);
   pending.knowledgeStatus = "bound";
   pending.wikiId = "asset.photo.auto-generated";
   const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.criteria.selective_projection, false);
+});
+
+test("a bound photograph cannot lose its governed occurrence", async () => {
+  const model = await baselineModel();
+  const sunday = model.publicPhotoManifest.find((item) => item.id === "sunday-dinner-shared-map");
+  delete model.recordsById[sunday.placementIds[0]];
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.manifest_wiki_placement_alignment, false);
+  assert.equal(result.criteria.selective_projection, false);
+});
+
+test("a bound photograph cannot receive automated production approval", async () => {
+  const model = await baselineModel();
+  const sunday = model.publicPhotoManifest.find((item) => item.id === "sunday-dinner-shared-map");
+  model.recordsById[sunday.placementIds[0]].approval.production = "approved";
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.manifest_wiki_placement_alignment, false);
   assert.equal(result.criteria.selective_projection, false);
 });
 

@@ -1,32 +1,37 @@
 {
-  "id": "portfolio-photography-layout-v1",
+  "id": "portfolio-photography-layout-v3",
   "title": "Human Index photographic portfolio layout",
-  "intent": "Photography changes the portfolio's editorial rhythm while remaining public-safe, accessible, and subordinate to human publication authority.",
+  "intent": "Photography and public interfaces make situated work credible while remaining public-safe, accessible, project-specific, and subordinate to human publication authority.",
   "criteria": [
     {
       "id": "manifest-bound-publication",
       "blocking": true,
-      "criterion": "Every field photograph is registered once in the public manifest with stable dimensions, alt text, caption, credit, placement, status, and boundary."
+      "criterion": "Every public photograph is registered once with stable dimensions, alt text, caption, credit, placement, status, permission, and interpretation boundary."
     },
     {
-      "id": "minimal-authorized-field",
+      "id": "governed-photographic-field",
       "blocking": true,
-      "criterion": "The pre-launch layout uses only the fully bound, credited, Jamie-authorized East River derivative; unresolved archival images remain outside the public bundle."
+      "criterion": "The launch candidate uses exactly five reviewed photographs: the unchanged East River hero, the Shoestring Press and Market Hotel evidence sequence, the Sunday Dinner cover, and the KC Town Hall cover."
     },
     {
       "id": "metadata-and-locator-safety",
       "blocking": true,
-      "criterion": "Public assets and source code contain no EXIF payload, private archive UUID, original camera filename, or protected filesystem path."
+      "criterion": "Public assets and source code contain no EXIF payload, private archive UUID, original camera filename, People metadata, GPS data, or protected filesystem path."
     },
     {
       "id": "editorial-not-decorative",
       "blocking": true,
-      "criterion": "The home photograph is full-bleed, unframed, credited, and editorially specific; About and Colophon remain text-led until additional images complete creator, credit, rights, caption, crop, and destination review."
+      "criterion": "The homepage photograph remains unchanged; the Fair Rent sequence retains facilitation, shared public infrastructure, and collective public action; About and Colophon remain text-led."
     },
     {
-      "id": "deliberate-absence",
+      "id": "truthful-project-cover-field",
       "blocking": true,
-      "criterion": "Work, resume, and contact do not receive adjacent photographs merely to achieve coverage."
+      "criterion": "Every work item has one project-bound cover: Harry J. Epstein, CallNYC, and WOW List use their own public surfaces; Fair Rent NYC, Sunday Dinner, and KC Town Hall use governed photographs."
+    },
+    {
+      "id": "tag-navigation-contract",
+      "blocking": true,
+      "criterion": "Every tag-shaped control is a keyboard-reachable link to a visible filtered work-index state, with a clear route back to the complete index."
     },
     {
       "id": "human-index-material-system",
@@ -41,7 +46,7 @@
     {
       "id": "human-authority-remains-open",
       "blocking": true,
-      "criterion": "The design documentation states that automated scores and staging review do not replace human rights or production approval."
+      "criterion": "Design and Knowledge Wiki records state that automated scores and staging review do not replace rights, dignity, attribution, exact-candidate production approval, or indexing approval."
     }
   ]
 }

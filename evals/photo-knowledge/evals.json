@@ -1,6 +1,6 @@
 {
   "suite": "living-photographic-knowledge-loop",
-  "version": 1,
+  "version": 2,
   "principle": "Artists choose; archival production supports; the Knowledge Wiki remembers; rights govern; the portfolio composes; Jamie decides what becomes public.",
   "hillClimbProtocol": {
     "method": "Improve the lowest failing criterion with one bounded change, rerun every affected deterministic check and mutation test, and retain the change only when truth, privacy, credit, dignity, accessibility, and human authority do not regress.",
@@ -52,7 +52,7 @@
     {
       "id": "selective_projection",
       "threshold": 1,
-      "description": "One canary becomes deeply governed while the remaining public photographs stay in a declared reconciliation queue and the site remains composed."
+      "description": "Every promoted public photograph is deeply governed or remains in a declared reconciliation queue while the much larger private archive stays outside the public projection."
     },
     {
       "id": "teammate_reproducibility",

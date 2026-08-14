@@ -1,24 +1,55 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Route } from "next";
 import { StatusBadge } from "@/components/StatusBadge";
 import { TagList } from "@/components/TagList";
+import { getWorkCover } from "@/data/work-covers";
 import type { WorkMeta } from "@/types/work";
 
 type WorkCardProps = {
+  eager?: boolean;
   item: WorkMeta;
 };
 
-export function WorkCard({ item }: WorkCardProps) {
+export function WorkCard({ eager = false, item }: WorkCardProps) {
+  const cover = getWorkCover(item.slug);
+
   return (
-    <article className="border-t border-jb-ink/20 py-6 last:border-b">
-      <div className="grid gap-5 md:grid-cols-[0.34fr_0.66fr]">
-        <div>
-          <StatusBadge status={item.status} visibility={item.visibility} />
-          <p className="mt-4 text-sm font-semibold text-jb-green">{item.series}</p>
-          <p className="mt-1 text-sm text-jb-ink/64">{item.years}</p>
-        </div>
+    <article className="border-t border-jb-ink/20 py-8 last:border-b">
+      <div className="grid gap-6 lg:grid-cols-[minmax(18rem,0.42fr)_minmax(0,0.58fr)] lg:gap-8">
+        <figure className="min-w-0">
+          <Link
+            aria-label={`Read the ${item.title} case study`}
+            className="group block overflow-hidden bg-jb-ink/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-jb-blue"
+            href={`/work/${item.slug}` as Route}
+          >
+            <Image
+              alt={cover.alt}
+              className={`aspect-[3/2] w-full transition-[filter] duration-200 group-hover:brightness-95 motion-reduce:transition-none ${
+                cover.fit === "contain" ? "object-contain" : "object-cover"
+              }`}
+              height={cover.height}
+              loading={eager ? "eager" : "lazy"}
+              sizes="(min-width: 1024px) 42vw, 100vw"
+              src={cover.src}
+              style={{ objectPosition: cover.objectPosition }}
+              width={cover.width}
+            />
+          </Link>
+          <figcaption className="mt-3 text-xs leading-5 text-jb-ink/64">
+            <span>{cover.caption}</span>{" "}
+            <span className="font-medium text-jb-ink/72">{cover.credit}</span>
+          </figcaption>
+        </figure>
         <div className="min-w-0">
-          <h2 className="text-3xl leading-tight text-jb-ink">
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <p className="text-sm font-semibold text-jb-green">{item.series}</p>
+              <p className="mt-1 text-sm text-jb-ink/64">{item.years}</p>
+            </div>
+            <StatusBadge status={item.status} visibility={item.visibility} />
+          </div>
+          <h2 className="mt-5 text-3xl leading-tight text-jb-ink">
             <Link className="hover:text-jb-blue" href={`/work/${item.slug}` as Route}>
               {item.title}
             </Link>

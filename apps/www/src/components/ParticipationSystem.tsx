@@ -3,10 +3,12 @@ import { participationMedia } from "@/data/participationMedia";
 import type { ParticipationMedia } from "@/data/participationMedia";
 
 function EvidenceFigure({
+  eager = false,
   media,
   imageClassName = "",
   sizes
 }: {
+  eager?: boolean;
   media: ParticipationMedia;
   imageClassName?: string;
   sizes: string;
@@ -16,6 +18,7 @@ function EvidenceFigure({
       alt={media.alt}
       className={`h-auto w-full bg-jb-paper object-cover ${imageClassName}`}
       height={media.height}
+      loading={eager ? "eager" : "lazy"}
       sizes={sizes}
       src={media.src}
       width={media.width}
@@ -121,6 +124,7 @@ export function ParticipationSystem() {
 
       <div>
         <EvidenceFigure
+          eager
           imageClassName="object-center"
           media={townHall}
           sizes="(min-width: 1024px) 65vw, 100vw"

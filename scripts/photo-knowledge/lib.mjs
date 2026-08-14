@@ -398,6 +398,54 @@ export function evaluatePhotoKnowledgeModel(model) {
     canary.photographerId
   ];
 
+  const nonCanaryPhotos = publicPhotoManifest?.filter((item) => item.id !== "east-river") ?? [];
+  const governedAdditionalPhotos = nonCanaryPhotos.every((item) => {
+    if (item.knowledgeStatus === "phase-2-reconciliation-pending") {
+      return (
+        item.wikiId === null &&
+        item.placementIds.length === 0 &&
+        item.releaseState?.production === "open" &&
+        item.releaseState?.indexing === "open"
+      );
+    }
+    if (item.knowledgeStatus !== "bound" || !item.wikiId || item.placementIds.length === 0) {
+      return false;
+    }
+    const itemAsset = record(item.wikiId);
+    const itemStatementIds = new Set(itemAsset?.statements?.map((statement) => statement.id) ?? []);
+    const expectedDerivativePath = `apps/www/public${item.src}`;
+    const derivativeAligned = itemAsset?.public_derivatives?.some(
+      (derivative) =>
+        derivative.id === item.derivativeId &&
+        derivative.path === expectedDerivativePath &&
+        derivative.metadata_stripped === true
+    );
+    const assertionsAligned =
+      item.captionAssertionIds?.every((id) => itemStatementIds.has(id)) &&
+      item.creditAssertionIds?.every((id) => itemStatementIds.has(id));
+    const placementsAligned = item.placementIds.every((id) => {
+      const occurrence = record(id);
+      return (
+        occurrence?.asset === item.wikiId &&
+        occurrence?.derivative === item.derivativeId &&
+        occurrence?.permission_source &&
+        Boolean(record(occurrence.permission_source)) &&
+        occurrence?.approval?.public_git === "approved" &&
+        occurrence?.approval?.staging === "approved" &&
+        occurrence?.approval?.production === "open" &&
+        occurrence?.approval?.indexing === "open" &&
+        occurrence?.rollback?.preserves_history === true
+      );
+    });
+    return (
+      derivativeAligned &&
+      assertionsAligned &&
+      placementsAligned &&
+      item.releaseState?.production === "open" &&
+      item.releaseState?.indexing === "open"
+    );
+  });
+
   const manifestAligned =
     east?.wikiId === canary.assetId &&
     east?.derivativeId === canary.derivative.id &&
@@ -409,14 +457,7 @@ export function evaluatePhotoKnowledgeModel(model) {
     east?.releaseState?.indexing === "open" &&
     east?.captionAssertionIds?.every((id) => statementIds.has(id)) &&
     east?.creditAssertionIds?.every((id) => statementIds.has(id)) &&
-    publicPhotoManifest?.filter((item) => item.id !== "east-river").every(
-      (item) =>
-        item.wikiId === null &&
-        item.knowledgeStatus === "phase-2-reconciliation-pending" &&
-        item.placementIds.length === 0 &&
-        item.releaseState?.production === "open" &&
-        item.releaseState?.indexing === "open"
-    );
+    governedAdditionalPhotos;
 
   const privateResolutionAttested =
     asset?.private_source_binding?.opaque_id === canary.privateBinding.opaqueId &&
@@ -534,7 +575,7 @@ export function evaluatePhotoKnowledgeModel(model) {
         "Jamie Burkart",
         "Technical Project Manager",
         "I help emerging work become usable systems.",
-        "View selected work",
+        "See role-fit evidence",
         "View resume"
       ].every((item) => firstViewportSource.includes(item)),
     artist_led_curation: checks.automated_selection_prohibited,
@@ -544,14 +585,8 @@ export function evaluatePhotoKnowledgeModel(model) {
       Boolean(inquiry),
     selective_projection:
       checks.protected_absence_not_auto_filled &&
-      publicPhotoManifest?.filter((item) => item.knowledgeStatus === "bound").length === 1 &&
-      publicPhotoManifest
-        ?.filter((item) => item.knowledgeStatus === "phase-2-reconciliation-pending")
-        .every(
-          (item) =>
-            item.releaseState?.production === "open" &&
-            item.releaseState?.indexing === "open"
-        ),
+      publicPhotoManifest?.filter((item) => item.knowledgeStatus === "bound").length >= 1 &&
+      governedAdditionalPhotos,
     teammate_reproducibility:
       [
         "photos:check",
@@ -592,6 +627,9 @@ export function evaluatePhotoKnowledgeModel(model) {
       receiptState,
       pendingReconciliation: publicPhotoManifest
         ?.filter((item) => item.knowledgeStatus === "phase-2-reconciliation-pending")
+        .map((item) => item.id),
+      boundPhotos: publicPhotoManifest
+        ?.filter((item) => item.knowledgeStatus === "bound")
         .map((item) => item.id),
       candidate: model.candidate
     }

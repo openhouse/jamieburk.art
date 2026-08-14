@@ -3,7 +3,7 @@
 
 **Source commit:** `9e5da4876f7d23a31612ef249baf6cdee03a5da1`
 **Generation time:** 2026-08-13T19:41:15-04:00
-**Source fingerprint:** `f6f87d48bc1a9abe5424c304ec68d9cbd8b4ff80cb7ce5896b62e3514a5ba8c8`
+**Source fingerprint:** `b94184b2ce247e3baa3e42118466fabf5ffbdb1d947fed7e87b7b8312f1bf2ae`
 
 ## application
 
@@ -18,6 +18,7 @@
 - [East River beneath the Manhattan Bridge, 2022](../assets/photographs/east-river-manhattan-bridge-2022.md) - `asset.photo.east-river-manhattan-bridge.2022.001`
 - [Jamie at the KC Town Hall worksite](../assets/photographs/kc-town-hall-hard-hat-worksite.md) - `asset.photo.kc-town-hall.hard-hat.001`
 - [Kansas City Star aerial view of KC Town Hall](../assets/photographs/kc-town-hall-kc-star-aerial-2021.md) - `asset.photo.kc-town-hall.kc-star-aerial.2021`
+- [KC Town Hall roof work, 2019](../assets/photographs/kc-town-hall-roof-work-2019.md) - `asset.photo.kc-town-hall.roof-work.2019.001`
 - [Jamie and a collaborator inside KC Town Hall](../assets/photographs/kc-town-hall-stewardship-interior.md) - `asset.photo.kc-town-hall.stewardship-interior.001`
 - [Jamie with a civic field kit at New York City Council](../assets/photographs/nyc-council-field-kit-2026.md) - `asset.photo.nyc-council.field-kit.2026.001`
 - [DCLA listening room, January 2017](../assets/photographs/nycac-dcla-listening-room-2017.md) - `asset.photo.nycac-dcla-listening-room.2017.001`
@@ -202,6 +203,7 @@
 - [Talks Not Raids: save nyc spaces group photo nyc artist coalition [a7ura7th]](../assets/photographs/project-sites/talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-a7ura7t.md) - `asset.photo.project-site.talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-a7ura7t`
 - [Talks Not Raids: save nyc spaces group photo nyc artist coalition thumb [fqny62h4]](../assets/photographs/project-sites/talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-thumb-f.md) - `asset.photo.project-site.talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-thumb-f`
 - [Talks Not Raids: stephenlevin [3lpdubkj]](../assets/photographs/project-sites/talks-not-raids-stephenlevin-3lpdubkj6h.md) - `asset.photo.project-site.talks-not-raids-stephenlevin-3lpdubkj6h`
+- [Sunday Dinner shared map and table, 2013](../assets/photographs/sunday-dinner-shared-map-2013.md) - `asset.photo.sunday-dinner.shared-map.2013.001`
 - [Let NYC Dance loaded hero-video public surface](../assets/graphics/let-nyc-dance-public-surface-2026-08-13.md) - `asset.screenshot.let-nyc-dance.public-surface.2026-08-13`
 - [WOW List public tester invitation](../assets/graphics/wowlist-public-relaunch-2026-08-13.md) - `asset.screenshot.wowlist.public-relaunch.2026-08-13`
 
@@ -238,6 +240,7 @@
 ## evaluation
 
 - [Layout C homepage East River curatorial proposal](../evaluations/curatorial/layout-c-home-east-river-v1.md) - `evaluation.curatorial.layout-c.home-east-river.v1`
+- [Portfolio project-cover curatorial record](../evaluations/curatorial/portfolio-project-covers-2026-08-13.md) - `evaluation.curatorial.portfolio-project-covers.2026-08-13`
 - [Employment context coverage baseline - July 18, 2026](../evaluations/employment-context-coverage-2026-07-18.md) - `evaluation.employment-context.coverage.2026-07-18`
 - [Employment opportunity leadership and freshness evaluation - August 13, 2026](../evaluations/employment-opportunity-leadership-2026-08-13.md) - `evaluation.employment-opportunity-leadership.2026-08-13`
 - [Jamie public-record integration evaluation](../evaluations/jamie-public-record-integration-2026-08-03.md) - `evaluation.jamie-public-record-integration.2026-08-03`
@@ -346,6 +349,7 @@
 - [Jamie Burkart](../people/jamie-burkart.md) - `person.jamie-burkart`
 - [Lisa Gelobter](../people/lisa-gelobter.md) - `person.lisa-gelobter`
 - [Luke Farrell](../people/luke-farrell.md) - `person.luke-farrell`
+- [Paul Mossine](../people/paul-mossine.md) - `person.paul-mossine`
 - [Terence Dougherty](../people/terence-dougherty.md) - `person.terence-dougherty`
 - [Warren Sack](../people/warren-sack.md) - `person.warren-sack`
 
@@ -372,11 +376,14 @@
 
 ## projection
 
+- [August 2026 launch-candidate photographic edition](../projections/photography/edition-launch-2026-08.md) - `edition.launch.2026-08`
 - [Layout C photographic portfolio edition](../projections/photography/edition-layout-c-2026-07.md) - `edition.layout-c.2026-07`
 - [Role-fit and referral map](../projections/role-fit-and-referral-map.md) - `portfolio.role-fit-referral-map`
 - [CallNYC portfolio projection](../projections/work-callnyc.md) - `portfolio.work.callnyc`
 - [Technical Operations portfolio projection](../projections/work-technical-operations.md) - `portfolio.work.technical-operations`
+- [KC Town Hall roof-work occurrence](../projections/photography/kc-town-hall-roof-work.md) - `projection.photo.kc-town-hall.roof-work`
 - [Layout C homepage East River occurrence](../projections/photography/layout-c-home-east-river.md) - `projection.photo.layout-c.home.east-river`
+- [Sunday Dinner shared-map occurrence](../projections/photography/sunday-dinner-shared-map.md) - `projection.photo.sunday-dinner.shared-map`
 - [Fair Rent case-study participation sequence](../projections/photography/fair-rent-participation-sequence-2026-08.md) - `projection.visual.fair-rent.participation-sequence.2026-08`
 
 ## research-inquiry
@@ -460,10 +467,12 @@
 - [Active New York State commercial rent stabilization bills](../sources/commercial-rent-public-support/active-state-bills-2025-2026.md) - `source.nys.commercial-rent.active-bills.2025-2026`
 - [2026 Democratic primary election-night result for Assembly District 56](../sources/commercial-rent-public-support/eon-huntley-2026-primary-result.md) - `source.nysboe.primary.ad56.2026`
 - [Elana Gordon East River portfolio permission summary](../sources/permissions/elana-gordon-east-river-portfolio-2026.md) - `source.permission.elana-gordon.east-river.2026-07`
+- [Jamie Burkart portfolio-album publication authorization](../sources/permissions/jamie-portfolio-album-2026-08-13.md) - `source.permission.jamie-portfolio-album.2026-08-13`
 - [Photo-select source-album portfolio publication authorization](../sources/permissions/photo-select-album-portfolio-2026-08-13.md) - `source.permission.jamie.photo-select-portfolio.2026-08-13`
 - [August 2026 public-site capture publication decisions](../sources/permissions/public-site-captures-2026-08-13.md) - `source.permission.jamie.public-site-captures.2026-08-13`
 - [East River photograph public-safe metadata summary](../sources/photo-metadata/east-river-2022-public-safe.md) - `source.photo-metadata.east-river.2022.public-safe`
 - [NYC Artist Coalition participation-sequence public-safe metadata](../sources/photo-metadata/nycac-participation-sequence-2026-public-safe.md) - `source.photo-metadata.nycac-participation-sequence.2026-08-13`
+- [Public-safe metadata capsule for the August 2026 project-cover images](../sources/photo-metadata/portfolio-cover-images-2026-public-safe.md) - `source.photo-metadata.portfolio-cover-images.2026.public-safe`
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`
 - [Professional record governed photo field](../sources/photo-metadata/professional-record-photo-field-2026-08.md) - `source.professional-record.photo-field.2026-08`
 - [Governed professional-record research comparison, August 2026](../sources/archives/professional-record-research-2026-08.md) - `source.professional-record.research.2026-08`
@@ -483,6 +492,7 @@
 - [Protected communication history - public-safe metadata boundary](../sources/protected-communication-vault-metadata.md) - `source.vault.communication-history.metadata`
 - [Weibel Institute In Terms of Media event record](../sources/weibel-in-terms-of-media-2024.md) - `source.weibel.in-terms-of-media.2024`
 - [Governed WOW List knowledge repository](../sources/wowlist-knowledge-repository-2026.md) - `source.wowlist.knowledge-repository.2026`
+- [WOW List public return threshold, August 2026](../sources/wowlist-public-threshold-2026-08.md) - `source.wowlist.public-threshold.2026-08-13`
 - [What is WOW List repaired transcript](../sources/wowlist-repaired-transcript-2026.md) - `source.wowlist.repaired-transcript.2026`
 - [Jamie Burkart testimony for Cabaret Law repeal](../testimony/2017-09-14-cabaret-law-repeal.md) - `testimony.jamie-burkart.cabaret-law.2017-09-14`
 - [Jamie Burkart testimony on CreateNYC and cultural-affairs funding](../testimony/2018-03-16-cultural-affairs-budget.md) - `testimony.jamie-burkart.cultural-affairs-budget.2018-03-16`

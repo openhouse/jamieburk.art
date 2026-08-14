@@ -37,6 +37,22 @@ relations:
     target: edition.layout-c.2026-07
     href: ../projections/photography/edition-layout-c-2026-07.md
   - type: related_to
+    target: edition.launch.2026-08
+    href: ../projections/photography/edition-launch-2026-08.md
+    context: Launch-candidate edition joining the retained hero, Fair Rent participation sequence, project-bound photographs, and public interface captures.
+  - type: related_to
+    target: evaluation.curatorial.portfolio-project-covers.2026-08-13
+    href: ../evaluations/curatorial/portfolio-project-covers-2026-08-13.md
+  - type: related_to
+    target: projection.photo.sunday-dinner.shared-map
+    href: ../projections/photography/sunday-dinner-shared-map.md
+  - type: related_to
+    target: projection.photo.kc-town-hall.roof-work
+    href: ../projections/photography/kc-town-hall-roof-work.md
+  - type: related_to
+    target: person.paul-mossine
+    href: ../people/paul-mossine.md
+  - type: related_to
     target: correction.photo.east-river-credit.2026-07
     href: ../corrections/east-river-credit-2026-07.md
   - type: related_to
@@ -116,6 +132,20 @@ homepage.
 Passing automation cannot grant rights, consent, dignity clearance, production
 publication, or indexing approval. See [RFC 0003](../../../rfcs/0003-living-photographic-knowledge-loop.md)
 for the complete design and staged rollout.
+
+## August 2026 project-cover edition
+
+The [launch-candidate edition](../projections/photography/edition-launch-2026-08.md)
+keeps the East River hero, reuses the governed Fair Rent participation sequence,
+and adds bounded Sunday Dinner and KC Town Hall occurrences. Public interface
+captures cover the three projects whose strongest evidence is the system itself.
+The result is a composed six-project sequence, not a public mirror of the private
+archive.
+
+- [Project-cover curatorial record](../evaluations/curatorial/portfolio-project-covers-2026-08-13.md)
+- [Sunday Dinner shared-map occurrence](../projections/photography/sunday-dinner-shared-map.md)
+- [KC Town Hall roof-work occurrence](../projections/photography/kc-town-hall-roof-work.md)
+- [Paul Mossine creator-credit record](../people/paul-mossine.md)
 
 ## July 26 source return
 

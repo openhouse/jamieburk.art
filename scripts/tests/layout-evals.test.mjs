@@ -16,15 +16,45 @@ test("a private archive identifier fails closed", () => {
   assert(result.failures.some(({ criterion }) => criterion === "metadata-and-locator-safety"));
 });
 
-test("a missing caption fails the manifest contract", () => {
+test("a missing creator credit fails the manifest contract", () => {
   const path = "apps/www/src/data/photography.ts";
   const source = readFileSync(path, "utf8").replace(
-    'caption: "At the East River beneath the Manhattan Bridge, 2022.",',
+    'credit: "Photograph by Paul Mossine. From Jamie Burkart\'s photo archive.",',
     ""
   );
   const result = evaluateLayout(process.cwd(), { [path]: source });
   assert.equal(result.passed, false);
   assert(result.failures.some(({ criterion }) => criterion === "manifest-bound-publication"));
+});
+
+test("the homepage hero remains bound to the East River photograph", () => {
+  const path = "apps/www/src/components/Hero.tsx";
+  const source = readFileSync(path, "utf8").replace(
+    "portfolioPhotos.eastRiver",
+    "portfolioPhotos.kcTownHallRoofWork"
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "editorial-not-decorative"));
+});
+
+test("every work item retains a truthful cover visual", () => {
+  const path = "apps/www/src/data/work-covers.ts";
+  const source = readFileSync(path, "utf8").replace(
+    'src: "/artifacts/wowlist/public-threshold.webp",',
+    'src: "/artifacts/hje/public-site.png",'
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "truthful-project-cover-field"));
+});
+
+test("tag-shaped controls retain real destinations", () => {
+  const path = "apps/www/src/components/TagList.tsx";
+  const source = readFileSync(path, "utf8").replace("/work?tag=", "/work#");
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "tag-navigation-contract"));
 });
 
 test("a decorative gradient fails the material-system contract", () => {
