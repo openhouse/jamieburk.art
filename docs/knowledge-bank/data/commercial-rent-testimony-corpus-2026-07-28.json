@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "id": "corpus.nycc.commercial-rent-stabilization-testimony.2026-07-28",
+  "reviewedAt": "2026-07-28",
+  "scope": "Official New York City Council records for the introduction, hearing, and reintroduction of the commercial rent stabilization bills championed by Fair Rent NYC: Int. 1796-2019 and Int. 93-2022.",
+  "bills": [
+    {
+      "fileNumber": "Int 1796-2019",
+      "primeSponsor": "Stephen T. Levin",
+      "introduced": "2019-11-14",
+      "committeeHearing": "2021-09-17",
+      "status": "Filed (End of Session)",
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=B2FF2D24-F642-42A1-BEBB-D8D59E079D99&ID=4230081"
+    },
+    {
+      "fileNumber": "Int 0093-2022",
+      "primeSponsor": "Diana I. Ayala",
+      "introduced": "2022-03-24",
+      "committeeHearing": null,
+      "status": "Filed (End of Session)",
+      "legislationUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=0FA34310-33D2-4090-9A39-2396910C9EB5&ID=5534186"
+    }
+  ],
+  "events": [
+    {
+      "id": "event.nycc.stated-meeting.commercial-rent-int-1796-introduction.2019-11-14",
+      "date": "2019-11-14",
+      "eventType": "stated-meeting-introduction",
+      "bill": "Int 1796-2019",
+      "officialTranscriptUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=7B14A16A-CBC9-4709-9E56-B57DA651503B&ID=7950220&M=F",
+      "protectedTranscriptKey": "commercial-rent-stated-2019-11-14.txt",
+      "speakerIndexFile": "commercial-rent-stated-2019-11-14.json",
+      "pageCount": 109,
+      "turnCount": 430,
+      "speakerLabelCount": 59,
+      "primeSponsor": "Stephen T. Levin",
+      "primeSponsorTranscriptLabel": "COUNCIL MEMBER LEVIN",
+      "primeSponsorBillSpecificStatementStatus": "not-recovered",
+      "finding": "The complete stated-meeting transcript records Stephen Levin at roll call, voting, and offering remarks about a different bill. It does not record a bill-specific statement from him about Int. 1796."
+    },
+    {
+      "id": "event.nycc.small-business.commercial-rent-stabilization.2021-09-17",
+      "date": "2021-09-17",
+      "eventType": "committee-hearing",
+      "bill": "Int 1796-2019",
+      "officialTranscriptUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=A1B80F54-A723-4AD9-94A4-D2E67FFEEFBE&ID=9899049&M=F",
+      "officialWrittenTestimonyUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=9845228&GUID=15401C6A-BE04-4ACB-83B0-15CD9C3F3C0A",
+      "protectedTranscriptKey": "commercial-rent-hearing-2021-09-17.txt",
+      "speakerIndexFile": "commercial-rent-hearing-2021-09-17.json",
+      "pageCount": 327,
+      "turnCount": 711,
+      "speakerLabelCount": 84,
+      "primeSponsor": "Stephen T. Levin",
+      "primeSponsorTranscriptLabel": "COUNCIL MEMBER LEVIN",
+      "primeSponsorBillSpecificStatementStatus": "recovered-full",
+      "supportiveSpeakerCount": 35,
+      "supportiveTurnCount": 161,
+      "supportiveView": "../testimony/heteroglossia/2021-09-17-commercial-rent-stabilization-supportive-speakers.md",
+      "writtenSubmissionBundle": {
+        "pageCount": 237,
+        "pdfSha256": "286fdd587fd08ca1bbe5039b077f1f752e012cda2bb23177aa8714c6f9f1233e",
+        "status": "attribution-and-redaction-review-queued",
+        "publicProjection": "held",
+        "reason": "The official bundle includes unrelated submissions and incidental contact details. Preserve the official source and index each attributed submission before publishing a redacted text derivative."
+      }
+    },
+    {
+      "id": "event.nycc.stated-meeting.commercial-rent-int-93-introduction.2022-03-24",
+      "date": "2022-03-24",
+      "eventType": "stated-meeting-introduction",
+      "bill": "Int 0093-2022",
+      "officialTranscriptUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=72BAA43F-B658-4164-B2F3-E98ADB16C3E2&ID=10873894&M=F",
+      "protectedTranscriptKey": "commercial-rent-stated-2022-03-24.txt",
+      "speakerIndexFile": "commercial-rent-stated-2022-03-24.json",
+      "pageCount": 68,
+      "turnCount": 311,
+      "speakerLabelCount": 54,
+      "primeSponsor": "Diana I. Ayala",
+      "primeSponsorTranscriptLabel": "COUNCIL MEMBER AYALA",
+      "primeSponsorBillSpecificStatementStatus": "not-recovered",
+      "finding": "The complete stated-meeting transcript records Diana Ayala at roll call and voting aye on all. It does not record a bill-specific statement from her about Int. 93."
+    }
+  ],
+  "boundaries": [
+    "The complete official transcript remains the authority for attributed speech; raw text is not republished in public Git.",
+    "The supportive-speaker index includes explicit support, support with conditions, and issue-support; each stance remains visible without duplicating complete testimony.",
+    "No bill-specific prime-sponsor speech is inferred from an agenda item, sponsor listing, roll call, or vote.",
+    "The written-testimony bundle remains linked but held from republication pending document-level attribution and incidental-contact redaction.",
+    "The corpus does not imply that every supportive speaker collaborated with Jamie or endorses Jamie's portfolio."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "evalId": "resume.nyc-oti.senior-product-manager.782366.pdf-visual",
+  "inspectedAt": "2026-08-14T13:22:00-04:00",
+  "sourceTemplate": {
+    "access": "read-only source; edited only in a new private copy",
+    "revisionUnchangedAfterExport": true
+  },
+  "pdf": {
+    "path": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf",
+    "sha256": "47087b3403ea4961f04634a7222a7c8fefc6d7e1f48df01531670cd1b95041f9",
+    "bytes": 90648,
+    "pages": 2,
+    "pageSize": "US Letter"
+  },
+  "inspection": {
+    "method": "Exported from the native Google Docs copy, rendered every page at 150 DPI, and visually inspected at original detail.",
+    "actualNamedPeopleParticipated": false,
+    "pages": [
+      {
+        "page": 1,
+        "pass": true,
+        "notes": "Name, target title, contact links, profile, skills, and the first two experience sections are legible with clear hierarchy and no clipping or overlap."
+      },
+      {
+        "page": 2,
+        "pass": true,
+        "notes": "WOW List, CallNYC, KC Town Hall, additional leadership, education, and work authorization are legible with clear grouping and no clipping or overlap."
+      }
+    ],
+    "checks": {
+      "noClippingOrOverlap": true,
+      "typographicHierarchyPreserved": true,
+      "twoPageReadingOrderCoherent": true,
+      "contactAndPortfolioLinksPresent": true,
+      "collectiveCreditAndClaimBoundariesVisible": true
+    }
+  },
+  "overall": "pass",
+  "boundary": "This is an artifact and visual-quality inspection. No named hiring reader participated, and a pass is not an interview, endorsement, eligibility determination, or hiring decision. Private Google document locators are intentionally excluded from the public repository."
+}

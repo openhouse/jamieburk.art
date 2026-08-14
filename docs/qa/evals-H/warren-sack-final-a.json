@@ -1,0 +1,38 @@
+{
+  "evaluator": "independent-holdout-reader-a",
+  "reviewerId": "sack-a-2026-08-03-30833e1c",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "30833e1cb63bb480e9413f67aef6438a34f0a9977537e35c6a6bdfa5add59a14",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The candidate fingerprint was independently recomputed from the 117 sorted professorCandidateRelativePaths exported by scripts/lib/professor-lens-eval.mjs and exactly matched 30833e1cb63bb480e9413f67aef6438a34f0a9977537e35c6a6bdfa5add59a14 at commit c6feffc89a6590b2b81820e82f442b901b65e030.",
+    "The homepage establishes the operating motif and links directly to About through primary navigation; About then plainly names the recursive sequence—observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue—and links each system loop to project evidence.",
+    "Harry J. Epstein Company supplies a current, inspectable loop: customer and team questions become bounded requirements, incremental releases, verification through public paths and stakeholder signals, then reusable patterns, ownership, and next actions. The workflow is explicitly a public-safe reconstruction rather than an original company record.",
+    "NYC Artist Coalition and FairRentNYC supply a second current loop connecting lived experience, meetings, sources, open questions, and public actors to a recoverable civic model; campaign interfaces were used collectively, while running minutes, source maps, question logs, decision records, and action trackers preserve learning and continuation.",
+    "Sunday Dinner and 196 supply a third current loop through two concrete workflow specimens: artist proposal review, orientation, space configuration, independent-access handoff, and continued support; and invitation, response, hosting, minimal documentation, follow-up, and recurrence. Participant-level values and access details remain withheld.",
+    "WOWList and CallNYC add bounded historical continuity without carrying the current-work judgment: WOWList translates community vocabulary into distributed publishing workflows with shared credit, while CallNYC translates civic data into resident-facing pathways and is clearly marked archived, unofficial, independent, and unsuitable as current guidance.",
+    "Source-Backed Team Memory demonstrates present information-architecture learning through Known/Open/Protected states and a concrete CallNYC correction propagated across public surfaces, while explicitly remaining an early method—not production SaaS, an automated trust system, or a completed client pilot.",
+    "The public registry and UCSC source note preserve collective credit and anti-overclaim boundaries: protected coursework is not reproduced or projected as structural-equivalence invention, peer-reviewed research, production deployment, sole authorship, or current Max/Jitter proficiency. The exact-candidate QA report separately keeps deployment, indexing, rights, consent, collaborator-credit review, and Jamie's production decision open."
+  ],
+  "gaps": [
+    "FairRentNYC's detailed campaign-memory and source-map specimens remain protected, so its handoff is inspectable through governed claims, a public campaign surface, and explicit artifact descriptions rather than a fully rendered internal workflow.",
+    "Source-Backed Team Memory has iterative research and human-review evidence but no completed collective client pilot; the page correctly excludes it from the three-system current-use threshold."
+  ],
+  "safety_findings": [
+    "Collective work is consistently bounded: coalition outcomes, WOWList production, Open House governance, and civic participation are not converted into sole authorship or individual policy causality.",
+    "Private analytics, customer data, coalition strategy, legal-review material, participant records, correspondence, identities, access instructions, protected educational records, and private archive paths remain excluded from public projection.",
+    "All release authority remains human-gated: this score does not approve production deployment, indexing, photographs, collaborator-sensitive credit, consent, or publication of the exact candidate."
+  ],
+  "recommendation": "Accept PR-016 at score 4 for this exact candidate. Preserve the existing protected-specimen boundaries and require fresh candidate-bound review after any public-surface change; do not treat this judgment as publication, deployment, consent, or endorsement approval.",
+  "provenance": {
+    "provider": "codex-native-independent-review",
+    "reviewMode": "bounded independent holdout",
+    "reviewerRole": "social-software-information-architecture-reader",
+    "reviewedAt": "2026-08-03",
+    "candidatePathCount": 117,
+    "candidateFingerprintRecomputed": true,
+    "filesEdited": false
+  }
+}

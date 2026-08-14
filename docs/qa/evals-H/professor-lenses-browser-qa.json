@@ -1,0 +1,81 @@
+{
+  "reportVersion": 3,
+  "checkedAt": "2026-08-12T16:36:46.428Z",
+  "baseUrl": "http://127.0.0.1:3057",
+  "publicSurfaceFingerprint": "eef497de543aab662bdfb7d838c23d18060d76ce456ed1867e6ef14e5878eeda",
+  "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
+  "publicSurfaceFileCount": 118,
+  "captureMethod": "Playwright Chromium screenshots of the current built local candidate; About captures are deliberately framed on the through-line and current systems loops; no deployment or indexing action.",
+  "routes": [
+    {
+      "path": "/",
+      "title": "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
+      "h1Count": 1,
+      "screenshots": [
+        {
+          "name": "desktop",
+          "requestedViewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "pixelWidth": 1280,
+          "pixelHeight": 900,
+          "sha256": "7ff02c019578cce0298caf900c7b880e3d9ffc2e0e97dd15c789ad85dbcd8b80",
+          "file": "candidate-home-desktop.png"
+        },
+        {
+          "name": "mobile",
+          "requestedViewport": {
+            "width": 375,
+            "height": 812
+          },
+          "pixelWidth": 375,
+          "pixelHeight": 812,
+          "sha256": "a3233b7565d0417ded117b0b2cfd5d504bbee270ae408026853739b8008a3ef1",
+          "file": "candidate-home-viewport.png"
+        }
+      ]
+    },
+    {
+      "path": "/about",
+      "title": "About - Jamie Burkart",
+      "h1Count": 1,
+      "screenshots": [
+        {
+          "name": "desktop-through-line",
+          "requestedViewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "pixelWidth": 1280,
+          "pixelHeight": 900,
+          "sha256": "74724ed4278bab16ea13080ce969dc115054c5f0c8863c159b1623d10a246ac1",
+          "file": "professor-lenses-about-desktop.png",
+          "framedContent": {
+            "throughLineHeadingPresent": true,
+            "currentSystemsLabelPresent": true,
+            "currentPracticeDocumented": true
+          }
+        },
+        {
+          "name": "mobile-through-line",
+          "requestedViewport": {
+            "width": 375,
+            "height": 1200
+          },
+          "pixelWidth": 375,
+          "pixelHeight": 1200,
+          "sha256": "413e2f7911f5ee140209fb952eaf64061c00a63970556bc5d782e2ec677f4729",
+          "file": "professor-lenses-about-mobile.png",
+          "framedContent": {
+            "throughLineHeadingPresent": true,
+            "currentSystemsLabelPresent": true,
+            "currentPracticeDocumented": true
+          }
+        }
+      ]
+    }
+  ],
+  "passed": true,
+  "verification": "Fresh Playwright viewport captures from the exact local production build; screenshots retained and content-addressed in this directory."
+}

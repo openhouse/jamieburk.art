@@ -1,0 +1,16 @@
+{
+  "name": "jamieburk-art",
+  "healthchecks": {
+    "web": [
+      {
+        "type": "startup",
+        "name": "web check",
+        "description": "Portfolio responds to health endpoint",
+        "path": "/api/health",
+        "attempts": 6,
+        "initialDelay": 5,
+        "timeout": 5
+      }
+    ]
+  }
+}

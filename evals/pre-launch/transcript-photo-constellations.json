@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "id": "transcript-photo-constellations",
+  "purpose": "Reconnect simultaneous documentary recordings and photographs without weakening private-source, identity, collective-credit, or publication boundaries.",
+  "criteria": [
+    {
+      "id": "TPC-001",
+      "name": "Bidirectional event reconciliation",
+      "type": "hard-gate",
+      "passCondition": "The method supports transcript-to-photograph and photograph-to-transcript research through a declared event anchor."
+    },
+    {
+      "id": "TPC-002",
+      "name": "Private identity join",
+      "type": "hard-gate",
+      "passCondition": "Existing Apple Photos People associations may support retrieval only in the private layer; unnamed faces and sensitive traits are never inferred."
+    },
+    {
+      "id": "TPC-003",
+      "name": "Prior-select calibration",
+      "type": "hard-gate",
+      "passCondition": "Nested _keep depth is a prior-curatorial signal, not proof of quality, identity, meaning, rights, consent, or publication suitability."
+    },
+    {
+      "id": "TPC-004",
+      "name": "Complete family before hero selection",
+      "type": "hard-gate",
+      "passCondition": "A private event constellation retains sequences, near-duplicates, counterexamples, uncertainty, holds, and unclassified material before any public edit."
+    },
+    {
+      "id": "TPC-005",
+      "name": "Non-destructive workspace",
+      "type": "hard-gate",
+      "passCondition": "Only additive membership pointers may be written inside the authorized Apple Photos workspace; source records and prior selects remain unchanged."
+    },
+    {
+      "id": "TPC-006",
+      "name": "Publication remains human-gated",
+      "type": "hard-gate",
+      "passCondition": "Retrieval, prior public appearance, People association, or select depth never confers rights, consent, credit, dignity, caption, crop, accessibility, destination, or Jamie approval."
+    },
+    {
+      "id": "TPC-007",
+      "name": "Bounded population honesty",
+      "type": "hard-gate",
+      "passCondition": "Every pass declares the event and source population searched, available private surfaces, unresolved matches, and bounded null findings."
+    }
+  ],
+  "command": "npm run test:transcript-photo-constellations",
+  "humanGates": [
+    "Jamie confirms event context and corrects transcript or People associations.",
+    "A photo editor reviews the complete candidate family and exact pixels.",
+    "Creator, represented-person, rights, consent, dignity, credit, crop, caption, alt-text, destination, and Jamie approvals remain open until the exact use is reviewed."
+  ]
+}

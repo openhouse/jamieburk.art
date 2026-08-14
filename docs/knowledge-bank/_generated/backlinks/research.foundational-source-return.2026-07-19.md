@@ -1,0 +1,14 @@
+<!-- GENERATED FILE. DO NOT EDIT. -->
+# Backlinks to Foundational Wiki page source return, July 19, 2026
+
+**Source commit:** `747605e3c34a6426c027a1c85ff82c3a6275ac36`
+**Generation time:** 2026-08-14T11:32:41-04:00
+**Source fingerprint:** `e4fc52c24bbf54e2f4cd03c7f545b8eb1d0af9c4a3ed28af19991b37897fcb60`
+
+- [Living archive and missing-page map](../../indexes/living-archive.md) - `prose_link` (markdown)
+- [Living archive and missing-page map](../../indexes/living-archive.md) - `related_to` (frontmatter)
+- [Visual evidence index](../../indexes/visual-evidence.md) - `related_to` (frontmatter)
+- [Situated source rereading](../../methods/situated-source-rereading.md) - `informed_by` (frontmatter)
+- [Structure grows from the material](../../methods/structure-grows-from-the-material.md) - `informed_by` (frontmatter)
+- [Jamie Burkart](../../people/jamie-burkart.md) - `informed_by` (frontmatter)
+- [Jamie Burkart practice timeline, 2004-present](../../timelines/practice-2004-present.md) - `informed_by` (frontmatter)

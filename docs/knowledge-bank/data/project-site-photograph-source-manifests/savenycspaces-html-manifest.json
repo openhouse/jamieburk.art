@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "generatedAt": "2026-07-28T11:38:54.127Z",
+  "sourceCdxSha256": "178ed08c591d5b486b7a6796f32b02559f7e1ddf08ab7dd35b94592223ec365e",
+  "population": 1,
+  "recovered": 0,
+  "notRecovered": 1,
+  "pages": [
+    {
+      "timestamp": "20180626234111",
+      "original": "http://savenycspaces.nycartc.com:80/",
+      "digest": "REBYR6KSG5GERCHUV3KW2WNXI6FKQQBG",
+      "archiveUrl": "https://web.archive.org/web/20180626234111id_/http://savenycspaces.nycartc.com:80/",
+      "status": "not-recovered",
+      "error": "TypeError: fetch failed"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "suite": "photographic-source-return-2026-07-26",
+  "researchRunId": "research.photographic-source-return.2026-07-26",
+  "eventId": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
+  "heldPhotoIds": [
+    "asset.photo.nycac-dcla-listening-room.2017.001",
+    "asset.photo.kc-town-hall.hard-hat.001",
+    "asset.photo.kc-town-hall.stewardship-interior.001",
+    "asset.photo.nyc-council.field-kit.2026.001"
+  ],
+  "mapAssetId": "asset.graphic.kc-town-hall.walkshed.2019.001",
+  "clusterIds": [
+    "index.photo-set.nycac-dcla-formation.2017",
+    "index.photo-set.kc-town-hall-fieldwork"
+  ],
+  "sourceIds": [
+    "source.nycac.dcla-formation-source-return.2026-07",
+    "source.kc-town-hall.photographic-oral-histories.2026-07",
+    "source.nyc-council.field-kit-oral-history.2026-07",
+    "source.kc-town-hall.local-digital-archive.2026-07"
+  ],
+  "mapDerivativePath": "apps/www/public/images/artifacts/kc-town-hall-walkshed.webp",
+  "mapDerivativeChecksum": "426114d96a438b8e8c7c8a45d6d4e3765b386e3081739ffb30bd3abd9ae4aa26"
+}

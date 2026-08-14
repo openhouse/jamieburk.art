@@ -1,0 +1,236 @@
+{
+  "suite": "knowledge-wiki-foundation-E",
+  "version": 5,
+  "authority": "knowledge-wiki-employment-context-and-hiring-acceptance-team-handoff-2026-07-18.md, with M as the implementation spine",
+  "principle": "Markdown is the record. The graph is compiled from the record. The portfolio is a selective projection from the governed system.",
+  "scoring": "Every deterministic criterion blocks independently. Human authority gates must remain explicitly open until observed; they are not averaged into a synthetic score.",
+  "lenses": [
+    {
+      "id": "architecture",
+      "criteria": [
+        "canonical_product_name",
+        "compatibility_alias",
+        "single_physical_root",
+        "canonicality_adr",
+        "existing_authorities_preserved",
+        "bounded_public_projection_change",
+        "branch_donor_synthesis",
+        "no_explorer"
+      ]
+    },
+    {
+      "id": "abby-information-architecture",
+      "criteria": [
+        "task_oriented_root",
+        "stable_unique_ids",
+        "aliases_unique",
+        "relative_links_resolve",
+        "heading_fragments_resolve",
+        "typed_targets_and_hrefs_align",
+        "pilot_reachable",
+        "type_aware_orphans"
+      ]
+    },
+    {
+      "id": "chad-professional-argument",
+      "criteria": [
+        "jamie_visible_as_actor",
+        "purpose_and_usable_result_visible",
+        "technical_operations_query",
+        "public_projection_smaller_than_wiki"
+      ]
+    },
+    {
+      "id": "gerdes-provenance",
+      "criteria": [
+        "source_identity_preserved",
+        "evidence_types_distinct",
+        "not_recovered_not_nonexistence",
+        "asset_evidence_not_rights"
+      ]
+    },
+    {
+      "id": "governance-and-citational-care",
+      "criteria": [
+        "claim_source_closure",
+        "correction_traceable",
+        "private_paths_rejected",
+        "rights_pending_fails_closed",
+        "anti_claims_preserved",
+        "protected_identity_directives_generic",
+        "human_gates_open"
+      ]
+    },
+    {
+      "id": "engineering",
+      "criteria": [
+        "graph_deterministic",
+        "generated_outputs_current",
+        "employment_outputs_current",
+        "candidate_bound_accessibility_evidence",
+        "mutation_suite",
+        "legacy_checks_preserved"
+      ]
+    },
+    {
+      "id": "opportunity-governance",
+      "criteria": [
+        "tier_one_official_source_records",
+        "opportunity_contract_complete",
+        "stable_requirement_ids",
+        "operator_queries",
+        "priority_opportunity_set_complete",
+        "priority_reporting_context_bounded",
+        "priority_vision_context_complete",
+        "historical_benchmark_set_bounded",
+        "historical_benchmark_leadership_bounded",
+        "hard_screens_explicit",
+        "confirmed_inferred_unknown_separate",
+        "one_year_fit_bounded",
+        "protected_communications_metadata_only",
+        "protected_opportunity_state_bounded"
+      ]
+    },
+    {
+      "id": "hiring-acceptance-separation",
+      "criteria": [
+        "public_evaluator_has_no_hidden_wiki",
+        "gap_resolver_separate",
+        "reader_profiles_disclaimed",
+        "candidate_and_context_hashes_present",
+        "role_contexts_fresh",
+        "external_outcomes_remain_open"
+      ]
+    },
+    {
+      "id": "opportunity-discovery",
+      "criteria": [
+        "title_blind_recall_passes",
+        "negative_controls_excluded",
+        "real_gaps_remain_visible",
+        "portfolio_projection_remains_selective"
+      ]
+    },
+    {
+      "id": "living-archive-and-source-return",
+      "criteria": [
+        "priority_missing_pages_materialized",
+        "living_archive_reachable",
+        "source_return_current_and_complete",
+        "original_sources_materially_reached",
+        "prior_readings_and_changes_preserved",
+        "contradictions_remain_open",
+        "research_authority_not_publication",
+        "librarian_requests_actionable",
+        "protected_sources_metadata_only",
+        "remaining_wants_explicit",
+        "public_projection_still_selective"
+      ]
+    },
+    {
+      "id": "interpretive-layer-and-decision-records",
+      "criteria": [
+        "interpretive_records_materialized",
+        "interpretive_navigation_reachable",
+        "pressures_precede_responses_without_deficit",
+        "people_places_collective_credit_bounded",
+        "project_lineages_not_teleology",
+        "maintenance_handoff_is_delivery",
+        "capabilities_cross_project_and_evidence_bound",
+        "decision_contract_complete",
+        "decision_credit_and_projection_bounded",
+        "decision_query_operational",
+        "interpretive_source_return_current",
+        "interpretive_protected_sources_metadata_only",
+        "councilstat_source_gap_closed",
+        "interpretive_public_projection_selective"
+      ]
+    },
+    {
+      "id": "knowledge-wiki-family-closure",
+      "criteria": [
+        "family_records_materialized",
+        "exact_frozen_donors_recorded",
+        "donor_provenance_preserved",
+        "root_and_closure_navigation",
+        "baseline_architecture_preserved",
+        "source_return_candidate_specific",
+        "editorial_compression_explicit",
+        "adoption_states_stay_distinct",
+        "identity_authorship_bounded",
+        "emerging_work_not_deficit",
+        "participation_keeps_people_as_agents",
+        "scenes_do_not_replace_evidence",
+        "outcomes_adoption_afterlives_separated",
+        "relations_do_not_become_causality",
+        "decision_and_outcome_layers_separated",
+        "role_credit_and_absence_bounded",
+        "research_agenda_keeps_maturity_separate",
+        "story_contract_bounded",
+        "learning_retains_writing_and_limits",
+        "first_person_authorship_human_controlled",
+        "family_public_projection_still_selective",
+        "family_public_safety_preserved",
+        "merge_readiness_ci_enforced",
+        "rfc_contract_enforced",
+        "generated_outputs_locale_independent",
+        "diff_hygiene_clean"
+      ]
+    },
+    {
+      "id": "photography-field-notebook",
+      "criteria": [
+        "photography_notebook_materialized",
+        "photography_notebook_reachable",
+        "photography_notebook_content_bound",
+        "field_corpus_state_truthful",
+        "one_photo_canary_bounded",
+        "one_photo_canary_privacy_fails_closed",
+        "one_photo_canary_capability_gap_explicit",
+        "one_photo_canary_release_path_bounded",
+        "one_photo_canary_does_not_complete_field",
+        "attention_not_publication",
+        "four_photo_layers_distinct",
+        "experimental_space_preserved",
+        "photo_observations_remain_questions",
+        "collective_agency_and_absence_preserved",
+        "public_notebook_has_no_private_payload",
+        "photo_encounters_are_additive",
+        "photo_publication_gates_human",
+        "no_public_photo_route",
+        "photo_rfc_boundary_preserved",
+        "photo_source_non_mutation_preserved",
+        "residency_proposal_not_contract",
+        "artistic_divergence_protected",
+        "residency_container_not_deadline",
+        "open_ended_outcome_protected",
+        "host_acceptance_preserves_artist_agency",
+        "remembered_teju_source_positioned_honestly",
+        "human_host_acceptance_recorded",
+        "oral_history_prompt_bounded",
+        "oral_history_intake_cannot_auto_promote",
+        "oral_history_research_and_credit_open",
+        "oral_history_privacy_fails_closed",
+        "oral_history_not_publication"
+      ]
+    },
+    {
+      "id": "photographic-source-return",
+      "criteria": [
+        "photographic_source_return_materialized",
+        "photographic_source_return_reachable",
+        "photo_evidence_layers_distinct",
+        "photo_clusters_do_not_inflate_evidence",
+        "oral_history_received_without_auto_promotion",
+        "dcla_host_mobilization_and_participation_bounded",
+        "photo_rights_and_consent_fail_closed",
+        "map_derivative_exact_and_bounded",
+        "protected_photo_payload_not_published",
+        "apple_photos_capability_gap_explicit",
+        "knowledge_wiki_naming_is_canonical",
+        "portfolio_projection_remains_selective",
+        "source_return_human_authority_preserved"
+      ]
+    }
+  ]
+}

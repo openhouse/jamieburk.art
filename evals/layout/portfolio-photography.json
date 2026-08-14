@@ -1,0 +1,52 @@
+{
+  "id": "portfolio-photography-layout-v2",
+  "title": "Human Index photographic portfolio layout",
+  "intent": "Photography changes the portfolio's editorial rhythm while remaining public-safe, accessible, and subordinate to human publication authority.",
+  "criteria": [
+    {
+      "id": "manifest-bound-publication",
+      "blocking": true,
+      "criterion": "Every field photograph is registered once in the public manifest with stable dimensions, alt text, caption, credit, placement, status, and boundary."
+    },
+    {
+      "id": "governed-photographic-field",
+      "blocking": true,
+      "criterion": "The launch-candidate layout uses exactly five fully bound, credited, Jamie-authorized photographs: the unchanged East River hero, the Shoestring Press and Market Hotel sequence, the Sunday Dinner cover, and the KC Town Hall cover; unresolved archive images remain outside the public bundle."
+    },
+    {
+      "id": "metadata-and-locator-safety",
+      "blocking": true,
+      "criterion": "Public assets and source code contain no EXIF payload, private archive UUID, original camera filename, or protected filesystem path."
+    },
+    {
+      "id": "editorial-not-decorative",
+      "blocking": true,
+      "criterion": "The home photograph remains full-bleed and unchanged; the work index gives all six projects one truthful visual threshold by composing governed situated-work photographs with project-specific public screenshots; the Fair Rent NYC sequence retains its campaign screenshot, captions, credits, and interpretation boundaries; About and Colophon remain text-led."
+    },
+    {
+      "id": "truthful-project-cover-field",
+      "blocking": true,
+      "criterion": "Every work item has exactly one project-bound cover. Harry J. Epstein, CallNYC, and WOW List use their own public surfaces; Fair Rent NYC, Sunday Dinner, and KC Town Hall use governed photographs. Resume, contact, About, and Colophon remain deliberately text-led."
+    },
+    {
+      "id": "tag-navigation-contract",
+      "blocking": true,
+      "criterion": "Every tag-shaped control is a keyboard-reachable link to a visible filtered work-index state, and the filtered state has a clear route back to the complete index."
+    },
+    {
+      "id": "human-index-material-system",
+      "blocking": true,
+      "criterion": "The Human Index palette is active and gradients, decorative orbs, and bokeh are absent."
+    },
+    {
+      "id": "responsive-image-contract",
+      "blocking": true,
+      "criterion": "Images use Next Image, explicit intrinsic dimensions or fill, stable aspect ratios, responsive sizes, and a viewport-bounded hero."
+    },
+    {
+      "id": "human-authority-remains-open",
+      "blocking": true,
+      "criterion": "The design documentation states that automated scores and staging review do not replace human rights or production approval."
+    }
+  ]
+}

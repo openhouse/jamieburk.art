@@ -1,0 +1,43 @@
+{
+  "evaluator": "independent-holdout-reader-a",
+  "reviewerId": "morse-a-2026-08-03-30833e1c",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "30833e1cb63bb480e9413f67aef6438a34f0a9977537e35c6a6bdfa5add59a14",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The requested branch and commit were verified exactly: feature/pre-launch-integration-C at c6feffc89a6590b2b81820e82f442b901b65e030. Recomputing professorCandidateRelativePaths and fingerprintProfessorCandidate from scripts/lib/professor-lens-eval.mjs produced 117 paths and SHA-256 30833e1cb63bb480e9413f67aef6438a34f0a9977537e35c6a6bdfa5add59a14.",
+    "The homepage establishes Jamie first as a technical project manager and implementation lead whose recurring work turns high-context operating, civic, and community needs into usable systems, documentation, decision trails, and handoffs. The persistent primary navigation makes the About threshold reachable directly from the homepage.",
+    "The About page provides an unusually clear and inspectable threshold: “Systems people can inhabit” explicitly connects artistic, civic, technical, and social practice, then traces relationships, models, interfaces-in-use, and learning or continuity through current Harry J. Epstein, FairRentNYC, and Sunday Dinner / 196 work. Current professional evidence therefore carries the judgment rather than relying on UCSC history.",
+    "Harry J. Epstein shows present technical and product-operations practice grounded in customer language, company voice, real customer and team use, bounded analytics, incremental releases, reusable patterns, and maintained ownership. Its workflow specimen begins with a human question and preserves judgment and continuity rather than reducing people to operational inputs.",
+    "FairRentNYC makes civic systems inhabitable through recurring meetings, lived experience, hearings, practical sessions, public action pathways, running minutes, source maps, question logs, and action trackers. The case study and registry distinguish Jamie’s implementation and stewardship from collective campaign authorship, policy authority, or sole causation.",
+    "Sunday Dinner / 196 supplies the strongest artistic and social continuity: hospitality, shared space, artist agency, onboarding, access handoffs, food, welcome, introductions, minimal documentation, and continued availability are treated as conditions of participation rather than efficiency metrics. Both specimens explicitly withhold participant-level values, identities, proposals, access details, correspondence, photographs, and artistic-outcome claims.",
+    "WOWList and CallNYC extend the lineage without carrying the current-practice burden: WOWList documents co-built, distributed community vocabulary and organizer workflows, while archived CallNYC translates difficult public data into resident-facing choices with explicit unofficial and historical-use boundaries.",
+    "Source-Backed Team Memory keeps attention, correction, and care inside the technical method through Known/Open/Protected states, source-linked drafts, human review, visible uncertainty, and a concrete correction trace. It is clearly labeled an early method rather than production SaaS, automated trust, surveillance, or a private-archive browser.",
+    "The public-safe professor source note uses Open House only as bounded lineage: a public article supports Jamie’s initiation of a ten-day experiment that became collectively governed, while protected educational records, private correspondence, identifiers, archive paths, and faculty testimonial language remain unquoted and unprojected.",
+    "The browser-QA artifact is bound to the candidate fingerprint and records four passing Playwright production-build checks across mobile and desktop for HJE and Sunday Dinner / 196: all routes returned 200, all three specimens and fifteen total viewport-specific step instances were present as expected, and no overflow or broken-image failures were reported."
+  ],
+  "gaps": [
+    "WOWList remains a historical short proof page with screenshots and contribution allocation still awaiting Jamie’s review; it should remain supporting lineage rather than evidence of current service availability or present technical proficiency.",
+    "The workflow specimens are editorial reconstructions, not original organizational records. Their value depends on retaining the prominent reconstruction and boundary labels and avoiding later embellishment with private rows, inferred outcomes, or participant narratives.",
+    "Sunday Dinner / 196 still lists named participants, photographs, and additional artifacts as requiring consent and approval. The present restraint is a strength, but those open permissions prevent treating the page as authorization for richer media or testimonial publication."
+  ],
+  "safety_findings": [
+    "Collective credit is consistently preserved: Open House is described as collectively governed; WOWList is co-built; NYC Artist Coalition campaign positions and outcomes remain collective; and Sunday Dinner / 196 credits the community rather than converting participation into Jamie’s sole accomplishment.",
+    "Participant privacy is materially protected. Sunday Dinner / 196 publishes aggregate or schema-level workflow form while excluding identities, contacts, attendance histories, free text, access instructions, correspondence, and unapproved images; the registry also states that private recordkeeping is not consent or endorsement.",
+    "Photo and testimonial permissions remain open gates. The professor note declines to project the faculty recommendation, the Open House claim requires separate editorial and consent review for participant identities or photographs, and the work metadata keeps unapproved community images offline.",
+    "Jamie approval, production deployment, and indexing remain open gates. The rubric requires explicit approval of the exact candidate; staging and default configuration remain noindex; production indexing requires an explicit production environment plus NEXT_PUBLIC_ROBOTS_POLICY=index. This evaluation grants none of those approvals.",
+    "The repository was inspected read-only, existing docs/qa/evals-H scorecards were not read, and git status remained clean."
+  ],
+  "recommendation": "Pass PR-015 at 4 for this exact fingerprint. Preserve the current hierarchy in which present professional practice carries the argument and UCSC supplies only bounded lineage; retain every reconstruction, collective-credit, privacy, consent, testimonial, and historical-status boundary. Do not treat this score as Jamie approval, asset permission, deployment authorization, indexing authorization, endorsement, or publication approval.",
+  "provenance": {
+    "provider": "codex-native-independent-review",
+    "reviewMode": "bounded independent holdout",
+    "reviewerRole": "practice-lineage-reader",
+    "reviewedAt": "2026-08-03",
+    "candidatePathCount": 117,
+    "candidateFingerprintRecomputed": true,
+    "filesEdited": false
+  }
+}

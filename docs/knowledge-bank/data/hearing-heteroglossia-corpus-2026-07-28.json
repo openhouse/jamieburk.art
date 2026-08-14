@@ -1,0 +1,2640 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-07-28",
+  "populationDefinition": "Public officials, invited witnesses, and public witnesses in four official NYC Council transcripts whose statements affirmatively supported the issue Jamie championed, including support with stated amendments or conditions. Substantive supportive statements by public officials are included and marked as such. Procedural-only remarks, opposition, neutral expert analysis, and unresolved stances remain in the complete official transcript corpus but are outside this full-text supportive-speaker view.",
+  "summary": {
+    "eventCount": 4,
+    "supportiveWitnessCount": 119,
+    "supportivePublicOfficialCount": 15,
+    "supportiveTurnCount": 881
+  },
+  "events": [
+    {
+      "id": "hearing.cabaret-law.2017-09-14",
+      "date": "2017-09-14",
+      "title": "Cabaret Law repeal hearing: supportive witness testimony",
+      "subject": "Repeal of the Cabaret Law while retaining specified safety provisions",
+      "sourceId": "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-09-14",
+      "sourceUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=817A7573-F329-49C4-849A-347B6D00CBC5&ID=5444683&M=F",
+      "transcriptBasename": "cabaret-2017-09-14.txt",
+      "outputPath": "docs/knowledge-bank/testimony/heteroglossia/2017-09-14-cabaret-law-supportive-witnesses.md",
+      "sourceSpeakerCount": 40,
+      "sourceTurnCount": 291,
+      "supportiveWitnessCount": 30,
+      "supportivePublicOfficialCount": 2,
+      "supportiveTurnCount": 262,
+      "speakers": [
+        {
+          "name": "Rafael Espinal",
+          "attribution": "New York City Council Member, committee chair, and prime sponsor, Intro 1652-A",
+          "stance": "prime-sponsor-support",
+          "publicOfficial": true,
+          "transcriptLabels": [
+            "CHAIRPERSON ESPINAL"
+          ],
+          "pages": [
+            6,
+            7,
+            8,
+            9,
+            14,
+            15,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            25,
+            30,
+            35,
+            42,
+            43,
+            50,
+            51,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            87,
+            88,
+            92,
+            96,
+            97,
+            98,
+            99,
+            100,
+            104,
+            106,
+            112,
+            114,
+            119,
+            122,
+            123,
+            129,
+            132,
+            133,
+            136,
+            137,
+            139,
+            141,
+            142
+          ],
+          "turnCount": 116,
+          "wordCount": 2906,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Lindsay Greene",
+          "attribution": "Senior Advisor to the Deputy Mayor for Housing and Economic Development; testimony on behalf of the de Blasio administration",
+          "stance": "administration-support",
+          "publicOfficial": true,
+          "transcriptLabels": [
+            "LINDSAY GREENE"
+          ],
+          "pages": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "turnCount": 23,
+          "wordCount": 1411,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Mercedes Ellington",
+          "attribution": "Founder and President, Duke Ellington Center for the Arts",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "MERCEDES ELLINGTON"
+          ],
+          "pages": [
+            22,
+            23,
+            24,
+            25,
+            42
+          ],
+          "turnCount": 6,
+          "wordCount": 562,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Max Travis",
+          "attribution": "Associate, Muchmore & Associates, PLLC",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "MAX TRAVIS"
+          ],
+          "pages": [
+            25,
+            26,
+            27,
+            28,
+            29,
+            30
+          ],
+          "turnCount": 3,
+          "wordCount": 975,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Jerry Goldman",
+          "attribution": "Attorney; Dance Parade and LegalizeDance advocate",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "JERRY GOLDMAN"
+          ],
+          "pages": [
+            30,
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "turnCount": 3,
+          "wordCount": 1027,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Olympia Kazi",
+          "attribution": "NYC Artist Coalition",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "OLYMPIA KAZI"
+          ],
+          "pages": [
+            35,
+            36,
+            37,
+            38,
+            39
+          ],
+          "turnCount": 1,
+          "wordCount": 718,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Frankie Decaiza Hutchinson",
+          "attribution": "Dance Liberation",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "FRANKIE DECAIZA HUTCHINSON"
+          ],
+          "pages": [
+            39,
+            40,
+            41,
+            42
+          ],
+          "turnCount": 1,
+          "wordCount": 689,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Rachel Nelson",
+          "attribution": "Brooklyn small-business owner and DIY-scene participant",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "RACHEL NELSON"
+          ],
+          "pages": [
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            65
+          ],
+          "turnCount": 6,
+          "wordCount": 1693,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Andrew Rigie",
+          "attribution": "Executive Director, NYC Hospitality Alliance",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "ANDREW RIGIE"
+          ],
+          "pages": [
+            51,
+            52,
+            53,
+            54
+          ],
+          "turnCount": 1,
+          "wordCount": 528,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Robert Bookman",
+          "attribution": "Attorney and co-founder, NYC Hospitality Alliance",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "ROB BOOKMAN"
+          ],
+          "pages": [
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            66
+          ],
+          "turnCount": 15,
+          "wordCount": 1852,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Christopher Carroll",
+          "attribution": "Political Director, Associated Musicians of Greater New York Local 802 AFM",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "CHRISTOPHER CARROLL"
+          ],
+          "pages": [
+            66,
+            67,
+            68,
+            69,
+            78,
+            79
+          ],
+          "turnCount": 5,
+          "wordCount": 663,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Greg Miller",
+          "attribution": "Executive Director, Dance Parade",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "GREG MILLER"
+          ],
+          "pages": [
+            69,
+            70,
+            71,
+            82,
+            83
+          ],
+          "turnCount": 4,
+          "wordCount": 502,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Jamie Burkart",
+          "attribution": "NYC Artist Coalition",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "JAMIE BURKHART"
+          ],
+          "pages": [
+            71,
+            72,
+            73,
+            74
+          ],
+          "turnCount": 1,
+          "wordCount": 637,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "John Barclay",
+          "attribution": "Bar owner",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "JOHN BARCLAY"
+          ],
+          "pages": [
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83
+          ],
+          "turnCount": 15,
+          "wordCount": 935,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Robert Blumenblatt",
+          "attribution": "Dance Parade organizer",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "ROBERT BLUMENBLATT"
+          ],
+          "pages": [
+            84,
+            85,
+            86,
+            87,
+            88,
+            92,
+            95,
+            96,
+            99
+          ],
+          "turnCount": 10,
+          "wordCount": 1055,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Justin Carter",
+          "attribution": "Musician and co-owner, Nowadays",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "JUSTIN CARTER"
+          ],
+          "pages": [
+            84,
+            85,
+            88,
+            89,
+            90,
+            96,
+            97,
+            98,
+            99
+          ],
+          "turnCount": 12,
+          "wordCount": 841,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Conrad Neblett",
+          "attribution": "Harlem resident",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "CONRAD NEBLETT"
+          ],
+          "pages": [
+            90,
+            91,
+            92
+          ],
+          "turnCount": 1,
+          "wordCount": 354,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Matt Ardsley",
+          "attribution": "New York City resident and dancer",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "MATT ARDSLEY"
+          ],
+          "pages": [
+            92,
+            93,
+            94,
+            95
+          ],
+          "turnCount": 2,
+          "wordCount": 610,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Allen Sugarman",
+          "attribution": "Attorney and social dancer",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "ALLEN SUGARMAN"
+          ],
+          "pages": [
+            99,
+            100,
+            101,
+            102,
+            103,
+            104
+          ],
+          "turnCount": 2,
+          "wordCount": 913,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Allie Coleman",
+          "attribution": "House Coalition organizer and dancer",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "ALLIE COLEMAN"
+          ],
+          "pages": [
+            104,
+            105,
+            106
+          ],
+          "turnCount": 4,
+          "wordCount": 418,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Julia Shelly Covan",
+          "attribution": "Independent artist and event organizer",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "JULIA SHELLY COVAN"
+          ],
+          "pages": [
+            106,
+            107,
+            108,
+            109
+          ],
+          "turnCount": 1,
+          "wordCount": 596,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Nikki Brown",
+          "attribution": "Managing Director, Boiler Room",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "NIKKI BROWN"
+          ],
+          "pages": [
+            109,
+            110,
+            111,
+            112
+          ],
+          "turnCount": 1,
+          "wordCount": 601,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Gail Madera",
+          "attribution": "Dancer",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "GAIL MADERA"
+          ],
+          "pages": [
+            112,
+            113,
+            114
+          ],
+          "turnCount": 2,
+          "wordCount": 437,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Hannah Jew",
+          "attribution": "Dance/NYC",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "HANNAH JEW"
+          ],
+          "pages": [
+            115,
+            116
+          ],
+          "turnCount": 1,
+          "wordCount": 322,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Anna Rockefeller Garcia",
+          "attribution": "Dancer and founder, Full Circle Productions",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "ANNA ROCKEFELLER GARCIA"
+          ],
+          "pages": [
+            116,
+            117,
+            118,
+            119
+          ],
+          "turnCount": 2,
+          "wordCount": 721,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Akim Funk Buddha",
+          "attribution": "Performer and interdisciplinary artist; transcript renders the name as Akim/Akin",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "AKIN"
+          ],
+          "pages": [
+            119,
+            120,
+            121,
+            122
+          ],
+          "turnCount": 2,
+          "wordCount": 574,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Tom Marnetti",
+          "attribution": "Restaurant owner and nightlife worker",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "TOM MARNETTI"
+          ],
+          "pages": [
+            122,
+            123,
+            124,
+            125,
+            126,
+            127,
+            128,
+            129
+          ],
+          "turnCount": 7,
+          "wordCount": 1311,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Anonymous tango-event producer",
+          "attribution": "Anonymous statement read into the record by Rachel Santos",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "RACHEL SANTOS"
+          ],
+          "pages": [
+            129,
+            130,
+            131,
+            132
+          ],
+          "turnCount": 1,
+          "wordCount": 615,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Jeanine Hopper",
+          "attribution": "DJ and radio producer, Liquid Sound Lounge / WBAI",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "JEANINE HOPPER"
+          ],
+          "pages": [
+            132,
+            133,
+            134,
+            135,
+            136,
+            137,
+            138,
+            139
+          ],
+          "turnCount": 10,
+          "wordCount": 1201,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Glenn Raymond",
+          "attribution": "Nightclub owner",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "GLENN RAYMOND"
+          ],
+          "pages": [
+            139,
+            140,
+            141
+          ],
+          "turnCount": 4,
+          "wordCount": 498,
+          "transcriptTextState": "protected-source-not-republished"
+        }
+      ]
+    },
+    {
+      "id": "hearing.cultural-affairs-budget.2018-03-16",
+      "date": "2018-03-16",
+      "title": "Cultural Affairs preliminary budget hearing: supportive witness testimony",
+      "subject": "DCLA funding and implementation of CreateNYC",
+      "sourceId": "SRC-NYCAC-COUNCIL-CULTURAL-AFFAIRS-BUDGET-2018-03-16",
+      "sourceUrl": "https://legistar.council.nyc.gov/View.ashx?M=F&ID=6195706&GUID=7514BB5D-51E7-4B77-92D8-A3919828DBEB",
+      "transcriptBasename": "dcla-2018-03-16.txt",
+      "outputPath": "docs/knowledge-bank/testimony/heteroglossia/2018-03-16-cultural-affairs-supportive-witnesses.md",
+      "sourceSpeakerCount": 40,
+      "sourceTurnCount": 217,
+      "supportiveWitnessCount": 14,
+      "supportivePublicOfficialCount": 2,
+      "supportiveTurnCount": 118,
+      "speakers": [
+        {
+          "name": "Jimmy Van Bramer",
+          "attribution": "New York City Council Member and chair, Committee on Cultural Affairs, Libraries and International Intergroup Relations; Cultural Affairs portion only",
+          "stance": "institutional-support",
+          "publicOfficial": true,
+          "transcriptLabels": [
+            "CHAIRMAN VAN BRAMER"
+          ],
+          "pages": [
+            66,
+            67,
+            68,
+            69,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            117,
+            118,
+            119,
+            121,
+            122,
+            123,
+            125,
+            126,
+            127,
+            128,
+            130,
+            131,
+            133,
+            134,
+            135,
+            137,
+            140,
+            141,
+            142,
+            143,
+            145,
+            146,
+            147,
+            148,
+            149,
+            150,
+            152,
+            153,
+            154,
+            155,
+            157,
+            160,
+            161,
+            162,
+            163,
+            164,
+            165,
+            166,
+            167,
+            168
+          ],
+          "turnCount": 58,
+          "wordCount": 5749,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Tom Finkelpearl",
+          "attribution": "Commissioner, New York City Department of Cultural Affairs",
+          "stance": "institutional-support",
+          "publicOfficial": true,
+          "transcriptLabels": [
+            "COMMISSIONER TOM FINKELPEARL"
+          ],
+          "pages": [
+            67,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            86,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118
+          ],
+          "turnCount": 37,
+          "wordCount": 6284,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "John Calvelli",
+          "attribution": "Co-chair, Cultural Institutions Group; Executive Vice President for Public Affairs, Wildlife Conservation Society; co-chair, New Yorkers for Culture and Arts",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "JOHN CALVELLI"
+          ],
+          "pages": [
+            122,
+            123,
+            124,
+            125,
+            126,
+            127
+          ],
+          "turnCount": 8,
+          "wordCount": 800,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Christopher Carroll",
+          "attribution": "Local 802, American Federation of Musicians",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "CHRISTOPHER CARROLL"
+          ],
+          "pages": [
+            128,
+            129,
+            130,
+            131
+          ],
+          "turnCount": 2,
+          "wordCount": 527,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Sheila Lewandowski",
+          "attribution": "Founder and Executive Director, Chocolate Factory Theater",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "SHEILA LEWANDOWSKI"
+          ],
+          "pages": [
+            131,
+            132,
+            133
+          ],
+          "turnCount": 1,
+          "wordCount": 561,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Lucy Sexton",
+          "attribution": "Executive Director, New Yorkers for Culture and Arts",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "LUCY SEXTON"
+          ],
+          "pages": [
+            135,
+            136,
+            137
+          ],
+          "turnCount": 1,
+          "wordCount": 543,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Ellen Leszynski",
+          "attribution": "Brooklyn Academy of Music",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "ELLEN LESZYNSKI"
+          ],
+          "pages": [
+            143,
+            144,
+            145
+          ],
+          "turnCount": 1,
+          "wordCount": 544,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Mark Rossier",
+          "attribution": "Director of Grants, New York Foundation for the Arts",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "MARK ROSSIER"
+          ],
+          "pages": [
+            146,
+            147
+          ],
+          "turnCount": 1,
+          "wordCount": 358,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Jeffrey Omara",
+          "attribution": "Actor and member, Fair Wage on Stage",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "JEFFREY OMARA",
+            "JEFFREY OMARA (SP?)",
+            "JEFFERY OMARA (SP?)"
+          ],
+          "pages": [
+            155,
+            156,
+            157
+          ],
+          "turnCount": 3,
+          "wordCount": 482,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Stephanie Wilchfort",
+          "attribution": "President and CEO, Brooklyn Children's Museum",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "STEPHANIE WILCHFORT"
+          ],
+          "pages": [
+            157,
+            158,
+            159,
+            160
+          ],
+          "turnCount": 1,
+          "wordCount": 434,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Tiffany Bryant",
+          "attribution": "The Public Theater",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "TIFFANY BRYANT"
+          ],
+          "pages": [
+            160,
+            161
+          ],
+          "turnCount": 1,
+          "wordCount": 314,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "David Johnston",
+          "attribution": "Executive Director, Exploring the Metropolis",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "DAVID JOHNSTON"
+          ],
+          "pages": [
+            162,
+            163
+          ],
+          "turnCount": 1,
+          "wordCount": 346,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Tiffany Geigel",
+          "attribution": "Dance/NYC",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "TIFFANY GEIGEL"
+          ],
+          "pages": [
+            164,
+            165
+          ],
+          "turnCount": 1,
+          "wordCount": 343,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Jamie Burkart",
+          "attribution": "NYC Artist Coalition and artist-safety advocate",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "JAMIE BURART",
+            "JAMIE BURKART"
+          ],
+          "pages": [
+            166,
+            167
+          ],
+          "turnCount": 2,
+          "wordCount": 350,
+          "transcriptTextState": "protected-source-not-republished"
+        }
+      ]
+    },
+    {
+      "id": "hearing.sbjsa.2018-10-22",
+      "date": "2018-10-22",
+      "title": "Small Business Job Survival Act hearing: supportive witness testimony",
+      "subject": "Commercial-lease protections and the Small Business Job Survival Act",
+      "sourceId": "SRC-NYC-SBJSA-HEARING-2018-10-22",
+      "sourceUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=3BAD981A-69D8-4D99-A882-52442F36F5A2&ID=6792384&M=F",
+      "transcriptBasename": "sbjsa-2018-10-22.txt",
+      "outputPath": "docs/knowledge-bank/testimony/heteroglossia/2018-10-22-sbjsa-supportive-witnesses.md",
+      "sourceSpeakerCount": 79,
+      "sourceTurnCount": 863,
+      "supportiveWitnessCount": 40,
+      "supportivePublicOfficialCount": 10,
+      "supportiveTurnCount": 340,
+      "speakers": [
+        {
+          "name": "Ydanis Rodriguez",
+          "attribution": "New York City Council Member and prime sponsor, Intro 737-A",
+          "stance": "prime-sponsor-support",
+          "publicOfficial": true,
+          "transcriptLabels": [
+            "COUNCIL MEMBER RODRIGUEZ"
+          ],
+          "pages": [
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            150,
+            151,
+            190,
+            191,
+            192,
+            193,
+            236,
+            237
+          ],
+          "turnCount": 15,
+          "wordCount": 2667,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Corey Johnson",
+          "attribution": "Speaker of the New York City Council",
+          "stance": "supportive-legislative-intent-with-substantive-amendments",
+          "publicOfficial": true,
+          "transcriptLabels": [
+            "SPEAKER JOHNSON"
+          ],
+          "pages": [
+            9,
+            10,
+            11,
+            12,
+            33,
+            34,
+            35,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            97,
+            98,
+            102,
+            112,
+            113,
+            114,
+            118,
+            122,
+            128,
+            129,
+            134,
+            135,
+            136,
+            137,
+            138,
+            139,
+            140,
+            141,
+            156,
+            157,
+            158,
+            159,
+            161,
+            162,
+            163,
+            170,
+            173,
+            176,
+            179,
+            180,
+            181,
+            182,
+            183,
+            184,
+            185,
+            186,
+            187,
+            188,
+            189,
+            190,
+            193,
+            214,
+            215,
+            216,
+            217,
+            218,
+            219,
+            224,
+            225,
+            226,
+            227,
+            228,
+            229,
+            230,
+            243,
+            245,
+            246,
+            247,
+            248,
+            249,
+            250,
+            251,
+            252,
+            253,
+            254,
+            273
+          ],
+          "turnCount": 93,
+          "wordCount": 7885,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Stephen Levin",
+          "attribution": "New York City Council Member and bill sponsor",
+          "stance": "sponsor-support",
+          "publicOfficial": true,
+          "transcriptLabels": [
+            "COUNCIL MEMBER LEVIN"
+          ],
+          "pages": [
+            143,
+            144,
+            151,
+            152,
+            153,
+            154,
+            155,
+            156
+          ],
+          "turnCount": 13,
+          "wordCount": 325,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Margaret Chin",
+          "attribution": "New York City Council Member",
+          "stance": "support-with-amendments",
+          "publicOfficial": true,
+          "transcriptLabels": [
+            "COUNCIL MEMBER CHIN"
+          ],
+          "pages": [
+            77,
+            78,
+            79,
+            80
+          ],
+          "turnCount": 4,
+          "wordCount": 434,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Carlina Rivera",
+          "attribution": "New York City Council Member",
+          "stance": "support-with-amendments",
+          "publicOfficial": true,
+          "transcriptLabels": [
+            "COUNCIL MEMBER RIVERA"
+          ],
+          "pages": [
+            80,
+            81,
+            82,
+            83,
+            84
+          ],
+          "turnCount": 7,
+          "wordCount": 384,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Gale Brewer",
+          "attribution": "Manhattan Borough President",
+          "stance": "support-with-conditions",
+          "publicOfficial": true,
+          "transcriptLabels": [
+            "BOROUGH PRESIDENT BREWER"
+          ],
+          "pages": [
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            119,
+            122,
+            123
+          ],
+          "turnCount": 7,
+          "wordCount": 1147,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Ruth Messinger",
+          "attribution": "Former Manhattan Borough President and former New York City Council Member",
+          "stance": "support",
+          "publicOfficial": true,
+          "transcriptLabels": [
+            "BOROUGH PRESIDENT MESSINGER",
+            "RUTH MESSINGER"
+          ],
+          "pages": [
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            120,
+            121
+          ],
+          "turnCount": 4,
+          "wordCount": 1830,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Richard Gottfried",
+          "attribution": "New York State Assembly Member",
+          "stance": "support",
+          "publicOfficial": true,
+          "transcriptLabels": [
+            "ASSEMBLY MEMBER GOTTFRIED"
+          ],
+          "pages": [
+            110,
+            111,
+            112,
+            113,
+            114,
+            121
+          ],
+          "turnCount": 6,
+          "wordCount": 637,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Brad Hoylman",
+          "attribution": "New York State Senator",
+          "stance": "support",
+          "publicOfficial": true,
+          "transcriptLabels": [
+            "SENATOR HOYLMAN",
+            "SENATOR BRAD HOYLMAN"
+          ],
+          "pages": [
+            114,
+            115,
+            116,
+            117,
+            118,
+            120,
+            123
+          ],
+          "turnCount": 3,
+          "wordCount": 901,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "David Eisenbach",
+          "attribution": "Friends of the SBJSA",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "DAVID EISENBACH"
+          ],
+          "pages": [
+            123,
+            124,
+            125,
+            126,
+            127,
+            128,
+            137,
+            140,
+            144,
+            145,
+            146,
+            147,
+            148,
+            149,
+            150,
+            151,
+            152,
+            153,
+            154,
+            155,
+            158,
+            162
+          ],
+          "turnCount": 44,
+          "wordCount": 1824,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Elvis Silverio",
+          "attribution": "National Restaurant, Bar and Lounge Association",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "ELVIS SILVERIO"
+          ],
+          "pages": [
+            128,
+            129,
+            130,
+            131,
+            138
+          ],
+          "turnCount": 7,
+          "wordCount": 603,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "James Klein",
+          "attribution": "Friends of the SBJSA",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "JAMES KLEIN"
+          ],
+          "pages": [
+            131,
+            132,
+            133,
+            134,
+            136,
+            137,
+            138,
+            139,
+            141,
+            142,
+            143,
+            145,
+            146,
+            155,
+            156,
+            159,
+            160,
+            161
+          ],
+          "turnCount": 23,
+          "wordCount": 2023,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Nelson Eusebio",
+          "attribution": "National Supermarket Association",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "NELSON EUSEBIO"
+          ],
+          "pages": [
+            198,
+            199,
+            200,
+            201,
+            217,
+            218,
+            221,
+            222,
+            223,
+            224,
+            237,
+            238
+          ],
+          "turnCount": 15,
+          "wordCount": 1270,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Laura Sewell",
+          "attribution": "Executive Director, East Village Community Coalition",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "LAURA SEWELL"
+          ],
+          "pages": [
+            201,
+            202,
+            203,
+            219,
+            220,
+            226,
+            227,
+            228,
+            232,
+            233,
+            234,
+            235
+          ],
+          "turnCount": 17,
+          "wordCount": 979,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Harry Bubbins",
+          "attribution": "Greenwich Village Society for Historic Preservation",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "HARRY BUBBINS"
+          ],
+          "pages": [
+            203,
+            204,
+            205,
+            206
+          ],
+          "turnCount": 1,
+          "wordCount": 517,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Justin Levinson",
+          "attribution": "Vacant New York project",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "JUSTIN LEVINSON"
+          ],
+          "pages": [
+            206,
+            207,
+            208,
+            209,
+            224
+          ],
+          "turnCount": 3,
+          "wordCount": 600,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Kirsten Theodos",
+          "attribution": "Co-founder, Take Back NYC",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "KIRSTEN THEODOS"
+          ],
+          "pages": [
+            209,
+            210,
+            211
+          ],
+          "turnCount": 1,
+          "wordCount": 458,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Griffin Hansbury",
+          "attribution": "Writer as Jeremiah Moss; clinical social worker and small-business owner",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "GRIFFIN HANSBURY"
+          ],
+          "pages": [
+            211,
+            212,
+            213,
+            214,
+            215,
+            216
+          ],
+          "turnCount": 7,
+          "wordCount": 672,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Lourdes Camacho",
+          "attribution": "Upper West Side resident and consumer; name normalized from transcript",
+          "stance": "support-with-conditions",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "LORDES COMATCHO"
+          ],
+          "pages": [
+            290,
+            291
+          ],
+          "turnCount": 1,
+          "wordCount": 298,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Marlene Cintron",
+          "attribution": "President, Bronx Overall Economic Development Corporation; testimony for Bronx Borough President Ruben Diaz Jr.",
+          "stance": "support-with-amendments",
+          "publicOfficial": true,
+          "transcriptLabels": [
+            "MARLENE CINTRON"
+          ],
+          "pages": [
+            291,
+            292,
+            293,
+            294,
+            312,
+            313,
+            314,
+            316,
+            317,
+            318,
+            319
+          ],
+          "turnCount": 9,
+          "wordCount": 1058,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Bill Borock",
+          "attribution": "Save Chelsea",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "BILL BOROCK"
+          ],
+          "pages": [
+            294,
+            295,
+            296,
+            319,
+            320
+          ],
+          "turnCount": 6,
+          "wordCount": 510,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Ray Rogers",
+          "attribution": "Small-business owner, Corporate Campaign",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "RAY ROGERS"
+          ],
+          "pages": [
+            297,
+            298,
+            299,
+            300
+          ],
+          "turnCount": 4,
+          "wordCount": 599,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Quenia Abreu",
+          "attribution": "President, New York Women's Chamber of Commerce",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "QUENIA ABREU"
+          ],
+          "pages": [
+            300,
+            301,
+            302,
+            303,
+            304,
+            305
+          ],
+          "turnCount": 2,
+          "wordCount": 1089,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Frank Garcia",
+          "attribution": "New York State Hispanic Chamber of Commerce and National Association of Latino State Chambers",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "FRANK GARCIA"
+          ],
+          "pages": [
+            305,
+            306,
+            307,
+            308,
+            309,
+            310,
+            311,
+            314,
+            315,
+            316,
+            318
+          ],
+          "turnCount": 23,
+          "wordCount": 1139,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Olympia Kazi",
+          "attribution": "NYC Artist Coalition",
+          "stance": "support-with-amendments",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "OLYMPIA KAZI"
+          ],
+          "pages": [
+            338,
+            339,
+            340,
+            341,
+            342
+          ],
+          "turnCount": 1,
+          "wordCount": 759,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Judy Richheimer",
+          "attribution": "Government Relations Committee, Guides Association of New York City",
+          "stance": "issue-support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "JUDY RICHHEIMER"
+          ],
+          "pages": [
+            342,
+            343,
+            344
+          ],
+          "turnCount": 1,
+          "wordCount": 360,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Jamie Burkart",
+          "attribution": "NYC Artist Coalition",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "JAMIE BURKART"
+          ],
+          "pages": [
+            346,
+            347,
+            348
+          ],
+          "turnCount": 1,
+          "wordCount": 345,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Nikki Ledger",
+          "attribution": "Public witness",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "NIKKI LEDGER"
+          ],
+          "pages": [
+            358,
+            359,
+            360,
+            361
+          ],
+          "turnCount": 2,
+          "wordCount": 550,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Brandon Sullivan",
+          "attribution": "Author",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "BRANDON SULLIVAN"
+          ],
+          "pages": [
+            361,
+            362,
+            363
+          ],
+          "turnCount": 1,
+          "wordCount": 382,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Patricia Dorfman",
+          "attribution": "Clean Streets for All",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "PATRICIA DORFMAN"
+          ],
+          "pages": [
+            365,
+            366,
+            367,
+            374,
+            375,
+            377
+          ],
+          "turnCount": 4,
+          "wordCount": 495,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Lauren Gardner",
+          "attribution": "School for Poetic Computation and Babycastles",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "LAUREN GARDNER",
+            "LARUEN GARDNER"
+          ],
+          "pages": [
+            367,
+            368,
+            369,
+            370
+          ],
+          "turnCount": 2,
+          "wordCount": 765,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Brent O'Leary",
+          "attribution": "Queens resident and son of a small-business owner",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "BRENT O’LEARY"
+          ],
+          "pages": [
+            371,
+            372,
+            373
+          ],
+          "turnCount": 2,
+          "wordCount": 419,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Laura Travers",
+          "attribution": "Small-business owner",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "LAURA TRAVERS"
+          ],
+          "pages": [
+            378,
+            379,
+            380
+          ],
+          "turnCount": 2,
+          "wordCount": 402,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Manny Gomez",
+          "attribution": "Former president and then-chair, Sunnyside Chamber of Commerce",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "MANNY GOMEZ"
+          ],
+          "pages": [
+            380,
+            381,
+            382
+          ],
+          "turnCount": 1,
+          "wordCount": 602,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Ayisha Oglivie",
+          "attribution": "Community Board 12 member and small-business advocate",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "AYISHA OGLIVIE"
+          ],
+          "pages": [
+            383,
+            384,
+            385,
+            386
+          ],
+          "turnCount": 2,
+          "wordCount": 783,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "David Mulkins",
+          "attribution": "President, Bowery Alliance of Neighbors",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "DAVID MULKINS"
+          ],
+          "pages": [
+            387,
+            388
+          ],
+          "turnCount": 1,
+          "wordCount": 361,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Nick",
+          "attribution": "Astoria yoga and meditation studio owner; surname not stated in the transcript",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "NICK"
+          ],
+          "pages": [
+            388,
+            389,
+            390,
+            391
+          ],
+          "turnCount": 1,
+          "wordCount": 656,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Christian Emanuel",
+          "attribution": "Brooklyn resident and member of a small-business family",
+          "stance": "issue-support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "CHRISTIAN EMANUEL"
+          ],
+          "pages": [
+            391,
+            392,
+            393,
+            394
+          ],
+          "turnCount": 1,
+          "wordCount": 656,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Helene Storgen",
+          "attribution": "Former owner, Clayworks Pottery",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "HELENE STORGEN"
+          ],
+          "pages": [
+            395,
+            396,
+            397,
+            398,
+            399
+          ],
+          "turnCount": 1,
+          "wordCount": 875,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Pamela Dayton",
+          "attribution": "SaveNYC supporter and Broadway-community participant",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "PAMELA DAYTON"
+          ],
+          "pages": [
+            399,
+            400,
+            401,
+            402
+          ],
+          "turnCount": 2,
+          "wordCount": 419,
+          "transcriptTextState": "protected-source-not-republished"
+        }
+      ]
+    },
+    {
+      "id": "hearing.commercial-rent-stabilization.2021-09-17",
+      "date": "2021-09-17",
+      "title": "Commercial rent stabilization hearing: supportive testimony and prime-sponsor statements",
+      "subject": "Commercial rent stabilization and Intro 1796-2019",
+      "sourceId": "source.nycc.small-business.commercial-rent-stabilization-2021-09-17.official-transcript",
+      "sourceUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=A1B80F54-A723-4AD9-94A4-D2E67FFEEFBE&ID=9899049&M=F",
+      "transcriptBasename": "commercial-rent-hearing-2021-09-17.txt",
+      "outputPath": "docs/knowledge-bank/testimony/heteroglossia/2021-09-17-commercial-rent-stabilization-supportive-speakers.md",
+      "sourceSpeakerCount": 84,
+      "sourceTurnCount": 711,
+      "supportiveWitnessCount": 35,
+      "supportivePublicOfficialCount": 1,
+      "supportiveTurnCount": 161,
+      "speakers": [
+        {
+          "name": "Stephen Levin",
+          "attribution": "New York City Council Member and prime sponsor, Intro 1796-2019",
+          "stance": "prime-sponsor-support",
+          "publicOfficial": true,
+          "transcriptLabels": [
+            "COUNCIL MEMBER LEVIN"
+          ],
+          "pages": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            144,
+            145,
+            146,
+            147,
+            148,
+            149,
+            150,
+            151,
+            165,
+            167,
+            194,
+            195,
+            196,
+            197,
+            202,
+            238,
+            247,
+            255,
+            256,
+            260,
+            261,
+            262,
+            296,
+            316,
+            317,
+            318,
+            319,
+            324,
+            325
+          ],
+          "turnCount": 70,
+          "wordCount": 5534,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Husam Khaled",
+          "attribution": "Yemeni American Merchant Association",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "HUSAM KHALED"
+          ],
+          "pages": [
+            113,
+            114
+          ],
+          "turnCount": 1,
+          "wordCount": 288,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Ruth Lopez Martinez",
+          "attribution": "Owner, Palante Cleaning; Spanish testimony and the official transcript's English interpretation",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "RUTH LOPEZ MARTINEZ",
+            "INTERPRETER"
+          ],
+          "pages": [
+            119,
+            120
+          ],
+          "turnCount": 2,
+          "wordCount": 229,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Vanna Valdez",
+          "attribution": "South Bronx resident, small-business owner, and Bronx Clay worker-owner",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "VANNA VALDEZ"
+          ],
+          "pages": [
+            120,
+            121,
+            122
+          ],
+          "turnCount": 1,
+          "wordCount": 400,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Imran Hossain",
+          "attribution": "Staff attorney, Volunteers of Legal Service Microenterprise Project",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "IMRAN HOSSAIN"
+          ],
+          "pages": [
+            128,
+            129,
+            130,
+            131,
+            132
+          ],
+          "turnCount": 5,
+          "wordCount": 557,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Rachel Nicolazzo",
+          "attribution": "Artist and small property owner",
+          "stance": "support-with-exemption-request",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "RACHEL NICOLAZZO"
+          ],
+          "pages": [
+            140,
+            141,
+            142
+          ],
+          "turnCount": 1,
+          "wordCount": 430,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Rachel Nelson",
+          "attribution": "Small-business owner, artist, and parent",
+          "stance": "support-with-qualification",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "RACHEL NELSON"
+          ],
+          "pages": [
+            151,
+            152,
+            153
+          ],
+          "turnCount": 1,
+          "wordCount": 518,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Shabad Simon-Alexander",
+          "attribution": "Fourth-generation New Yorker and former small-business owner",
+          "stance": "issue-support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "SHABAD SIMON-ALEXANDER"
+          ],
+          "pages": [
+            157,
+            158,
+            159
+          ],
+          "turnCount": 2,
+          "wordCount": 579,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Olympia Kazi",
+          "attribution": "NYC Artist Coalition, United for Small Business NYC, and NYC Nightlife Advisory Board",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "OLYMPIA KAZI"
+          ],
+          "pages": [
+            162,
+            163,
+            164
+          ],
+          "turnCount": 1,
+          "wordCount": 474,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Badr Fuad",
+          "attribution": "Member of a Yemeni American bodega-owning family; testimony in a personal capacity",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "BADR FUAD"
+          ],
+          "pages": [
+            165,
+            166,
+            167,
+            168
+          ],
+          "turnCount": 2,
+          "wordCount": 405,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Rui Li",
+          "attribution": "Street Vendor Project organizer and United for Small Business NYC member",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "RUI LI"
+          ],
+          "pages": [
+            168,
+            169,
+            170,
+            171
+          ],
+          "turnCount": 2,
+          "wordCount": 609,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Charlotta Janssen",
+          "attribution": "Restaurant owner and Restaurant Coalition participant",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "CHARLOTTA JANSSEN"
+          ],
+          "pages": [
+            171,
+            172,
+            173,
+            174
+          ],
+          "turnCount": 4,
+          "wordCount": 538,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Carina Kaufman-Gutierrez",
+          "attribution": "Deputy Director, Street Vendor Project, Urban Justice Center",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "CARINA KAUFMAN-GUTIERREZ"
+          ],
+          "pages": [
+            175,
+            176,
+            177
+          ],
+          "turnCount": 2,
+          "wordCount": 542,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Abigail Elman",
+          "attribution": "Cooper Square Committee and United for Small Business NYC",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "ABIGAIL ELMAN"
+          ],
+          "pages": [
+            181,
+            182,
+            183
+          ],
+          "turnCount": 1,
+          "wordCount": 430,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Paula Segal",
+          "attribution": "Senior staff attorney, TakeRoot Justice Equitable Neighborhoods practice",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "PAULA SEGAL"
+          ],
+          "pages": [
+            191,
+            192,
+            193,
+            194,
+            195,
+            196,
+            197
+          ],
+          "turnCount": 9,
+          "wordCount": 1013,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Taylor James",
+          "attribution": "Staff attorney, Legal Aid Society Community Development Project",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "TAYLOR JAMES"
+          ],
+          "pages": [
+            205,
+            206,
+            207,
+            208
+          ],
+          "turnCount": 2,
+          "wordCount": 425,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Natasha Amott",
+          "attribution": "Small-business owner and former owner of Whisk",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "NATASHA AMOTT"
+          ],
+          "pages": [
+            220,
+            221,
+            222,
+            223
+          ],
+          "turnCount": 1,
+          "wordCount": 493,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Lauren Gardner",
+          "attribution": "Director, Babycastles",
+          "stance": "issue-support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "LAUREN GARDNER"
+          ],
+          "pages": [
+            226,
+            227,
+            228,
+            229
+          ],
+          "turnCount": 7,
+          "wordCount": 553,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Catherine Murcek",
+          "attribution": "Worker-owner and New York City Network of Worker Cooperatives member",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "CATHERINE MURCEK"
+          ],
+          "pages": [
+            235,
+            236,
+            237,
+            238,
+            239
+          ],
+          "turnCount": 2,
+          "wordCount": 563,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Sophia Harrison",
+          "attribution": "Founder and executive director of a Coney Island youth cultural institution",
+          "stance": "support-with-qualification",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "SOPHIA HARRISON"
+          ],
+          "pages": [
+            239,
+            240,
+            241,
+            242
+          ],
+          "turnCount": 4,
+          "wordCount": 484,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Jesse Gee Galvez",
+          "attribution": "Owner, Galleria J. Antonio",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "JESSE GEE GALVEZ"
+          ],
+          "pages": [
+            242,
+            243,
+            244
+          ],
+          "turnCount": 4,
+          "wordCount": 452,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Guy Yedwab",
+          "attribution": "League of Independent Theater and United for Small Business NYC",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "GUY YEDWAB"
+          ],
+          "pages": [
+            245,
+            246,
+            247
+          ],
+          "turnCount": 2,
+          "wordCount": 492,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Jenny Dubnau",
+          "attribution": "Artist, commercial tenant, and founding member of the Artist Studio Affordability Project",
+          "stance": "support-with-amendments",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "JENNY DUBNAU"
+          ],
+          "pages": [
+            248,
+            249,
+            250,
+            251
+          ],
+          "turnCount": 1,
+          "wordCount": 549,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Laura Sewell",
+          "attribution": "Executive Director, East Village Community Coalition",
+          "stance": "issue-support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "LAURA SEWELL"
+          ],
+          "pages": [
+            268,
+            269,
+            270
+          ],
+          "turnCount": 1,
+          "wordCount": 445,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Lionel Guy Bremond",
+          "attribution": "Owner, Cafe Paulette and Petite Paulette",
+          "stance": "issue-support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "LIONEL GUY BREMOND"
+          ],
+          "pages": [
+            270,
+            271,
+            272
+          ],
+          "turnCount": 2,
+          "wordCount": 368,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Monique Wong",
+          "attribution": "Garment District manufacturer",
+          "stance": "issue-support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "MONIQUE WONG"
+          ],
+          "pages": [
+            280,
+            281
+          ],
+          "turnCount": 2,
+          "wordCount": 195,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Yara Flinn",
+          "attribution": "New York City fashion designer",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "YARA FLINN"
+          ],
+          "pages": [
+            281,
+            282,
+            283
+          ],
+          "turnCount": 1,
+          "wordCount": 500,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Marc Ribot",
+          "attribution": "Musician, Music Workers Alliance member, and union member",
+          "stance": "issue-support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "MARC RIBOT"
+          ],
+          "pages": [
+            284,
+            285,
+            286
+          ],
+          "turnCount": 2,
+          "wordCount": 462,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Tre McManus",
+          "attribution": "Circus artist, educator, and nonprofit cultural-space operator",
+          "stance": "issue-support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "TRE MCMANUS"
+          ],
+          "pages": [
+            286,
+            287,
+            288
+          ],
+          "turnCount": 1,
+          "wordCount": 402,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "David Eisenbach",
+          "attribution": "Founder, Friends of the Small Business Jobs Survival Act",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "DAVID EISENBACH"
+          ],
+          "pages": [
+            288,
+            289,
+            290,
+            291,
+            292,
+            293
+          ],
+          "turnCount": 7,
+          "wordCount": 805,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Gregory Youdan",
+          "attribution": "Research and Advocacy Coordinator, Dance/NYC",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "GREGORY YOUDAN"
+          ],
+          "pages": [
+            297,
+            298
+          ],
+          "turnCount": 1,
+          "wordCount": 352,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Laura Weber",
+          "attribution": "Owner, LW Pearl garment manufacturing",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "LAURA WEBER"
+          ],
+          "pages": [
+            299,
+            300,
+            301,
+            302,
+            303
+          ],
+          "turnCount": 5,
+          "wordCount": 441,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Khari White",
+          "attribution": "Chair, NAACP Jamaica Branch Economic Development Committee",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "KHARI WHITE"
+          ],
+          "pages": [
+            304,
+            305,
+            306
+          ],
+          "turnCount": 1,
+          "wordCount": 431,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Laura Wolf-Powers",
+          "attribution": "Associate professor of urban policy and planning, Hunter College; testimony in a personal capacity",
+          "stance": "support-with-implementation-conditions",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "LAURA WOLF POWERS"
+          ],
+          "pages": [
+            306,
+            307,
+            308,
+            309,
+            310,
+            311,
+            312,
+            313
+          ],
+          "turnCount": 10,
+          "wordCount": 895,
+          "transcriptTextState": "protected-source-not-republished"
+        },
+        {
+          "name": "Andrea Bowen",
+          "attribution": "Government affairs consultant, New York City Network of Worker Cooperatives",
+          "stance": "support",
+          "publicOfficial": false,
+          "transcriptLabels": [
+            "ANDREA BOWEN"
+          ],
+          "pages": [
+            320,
+            321,
+            322,
+            323
+          ],
+          "turnCount": 1,
+          "wordCount": 612,
+          "transcriptTextState": "protected-source-not-republished"
+        }
+      ]
+    }
+  ]
+}

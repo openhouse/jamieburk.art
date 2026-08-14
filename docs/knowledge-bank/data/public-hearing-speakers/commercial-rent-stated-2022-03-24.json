@@ -1,0 +1,613 @@
+{
+  "transcriptKey": "commercial-rent-stated-2022-03-24.txt",
+  "turnCount": 311,
+  "speakerCount": 54,
+  "transcriptTextState": "protected-source-not-republished",
+  "speakers": [
+    {
+      "speaker": "B E F O R E",
+      "pages": [
+        1
+      ],
+      "turnCount": 1,
+      "wordCount": 4
+    },
+    {
+      "speaker": "COUNCIL MEMBERS",
+      "pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "turnCount": 1,
+      "wordCount": 148
+    },
+    {
+      "speaker": "HELD AT",
+      "pages": [
+        1
+      ],
+      "turnCount": 1,
+      "wordCount": 7
+    },
+    {
+      "speaker": "COUNCIL CLERK",
+      "pages": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        23,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        41
+      ],
+      "turnCount": 116,
+      "wordCount": 314
+    },
+    {
+      "speaker": "COUNCIL MEMBER ABREU",
+      "pages": [
+        4,
+        27,
+        49,
+        50
+      ],
+      "turnCount": 3,
+      "wordCount": 253
+    },
+    {
+      "speaker": "COUNCIL MEMBER ARIOLA",
+      "pages": [
+        4,
+        27,
+        64,
+        65,
+        66
+      ],
+      "turnCount": 5,
+      "wordCount": 348
+    },
+    {
+      "speaker": "COUNCIL MEMBER POWERS",
+      "pages": [
+        4,
+        8,
+        9,
+        10,
+        11,
+        23,
+        24,
+        25,
+        27,
+        31,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        43,
+        45,
+        46,
+        48,
+        49,
+        50,
+        51,
+        54,
+        56,
+        58,
+        60,
+        62,
+        64,
+        66
+      ],
+      "turnCount": 46,
+      "wordCount": 1326
+    },
+    {
+      "speaker": "UNIDENTIFIED",
+      "pages": [
+        4
+      ],
+      "turnCount": 1,
+      "wordCount": 52
+    },
+    {
+      "speaker": "COUNCIL MEMBER AYALA",
+      "pages": [
+        5,
+        27
+      ],
+      "turnCount": 2,
+      "wordCount": 4
+    },
+    {
+      "speaker": "COUNCIL MEMBER BARRON",
+      "pages": [
+        5,
+        27,
+        28,
+        56,
+        57,
+        58
+      ],
+      "turnCount": 6,
+      "wordCount": 516
+    },
+    {
+      "speaker": "COUNCIL MEMBER BOTTCHER",
+      "pages": [
+        5,
+        28
+      ],
+      "turnCount": 2,
+      "wordCount": 2
+    },
+    {
+      "speaker": "COUNCIL MEMBER BRANNAN",
+      "pages": [
+        5,
+        28
+      ],
+      "turnCount": 2,
+      "wordCount": 2
+    },
+    {
+      "speaker": "COUNCIL MEMBER BREWER",
+      "pages": [
+        5,
+        28,
+        37
+      ],
+      "turnCount": 3,
+      "wordCount": 176
+    },
+    {
+      "speaker": "COUNCIL MEMBER BROOKS-POWERS",
+      "pages": [
+        5,
+        28
+      ],
+      "turnCount": 2,
+      "wordCount": 4
+    },
+    {
+      "speaker": "COUNCIL MEMBER CARR",
+      "pages": [
+        5,
+        28
+      ],
+      "turnCount": 2,
+      "wordCount": 4
+    },
+    {
+      "speaker": "COUNCIL MEMBER DE LA ROSA",
+      "pages": [
+        5,
+        28
+      ],
+      "turnCount": 2,
+      "wordCount": 2
+    },
+    {
+      "speaker": "COUNCIL MEMBER DINOWITZ",
+      "pages": [
+        5,
+        28
+      ],
+      "turnCount": 2,
+      "wordCount": 2
+    },
+    {
+      "speaker": "COUNCIL MEMBER FELIZ",
+      "pages": [
+        5,
+        29,
+        50,
+        51
+      ],
+      "turnCount": 3,
+      "wordCount": 232
+    },
+    {
+      "speaker": "COUNCIL MEMBER GENNARO",
+      "pages": [
+        6,
+        29,
+        43,
+        44,
+        45
+      ],
+      "turnCount": 3,
+      "wordCount": 408
+    },
+    {
+      "speaker": "COUNCIL MEMBER HANIF",
+      "pages": [
+        6,
+        29,
+        41,
+        42,
+        43
+      ],
+      "turnCount": 3,
+      "wordCount": 343
+    },
+    {
+      "speaker": "COUNCIL MEMBER HANKS",
+      "pages": [
+        6,
+        29
+      ],
+      "turnCount": 2,
+      "wordCount": 4
+    },
+    {
+      "speaker": "COUNCIL MEMBER HOLDEN",
+      "pages": [
+        6,
+        29
+      ],
+      "turnCount": 2,
+      "wordCount": 2
+    },
+    {
+      "speaker": "COUNCIL MEMBER HUDSON",
+      "pages": [
+        6,
+        29,
+        54,
+        55,
+        56
+      ],
+      "turnCount": 3,
+      "wordCount": 373
+    },
+    {
+      "speaker": "COUNCIL MEMBER JOSEPH",
+      "pages": [
+        6,
+        29
+      ],
+      "turnCount": 2,
+      "wordCount": 4
+    },
+    {
+      "speaker": "COUNCIL MEMBER KAGAN",
+      "pages": [
+        6,
+        29,
+        45,
+        46
+      ],
+      "turnCount": 3,
+      "wordCount": 198
+    },
+    {
+      "speaker": "COUNCIL MEMBER KRISHNAN",
+      "pages": [
+        6,
+        29
+      ],
+      "turnCount": 2,
+      "wordCount": 4
+    },
+    {
+      "speaker": "COUNCIL MEMBER LEE",
+      "pages": [
+        6,
+        29,
+        46,
+        47,
+        48
+      ],
+      "turnCount": 3,
+      "wordCount": 405
+    },
+    {
+      "speaker": "COUNCIL MEMBER LOUIS",
+      "pages": [
+        6,
+        29,
+        30
+      ],
+      "turnCount": 2,
+      "wordCount": 11
+    },
+    {
+      "speaker": "COUNCIL MEMBER MARTE",
+      "pages": [
+        6,
+        30
+      ],
+      "turnCount": 2,
+      "wordCount": 4
+    },
+    {
+      "speaker": "COMMISSIONER MOLINA",
+      "pages": [
+        7
+      ],
+      "turnCount": 1,
+      "wordCount": 1
+    },
+    {
+      "speaker": "COUNCIL MEMBER MEALY",
+      "pages": [
+        7,
+        33
+      ],
+      "turnCount": 2,
+      "wordCount": 6
+    },
+    {
+      "speaker": "COUNCIL MEMBER MENIN",
+      "pages": [
+        7,
+        10,
+        30,
+        48,
+        49
+      ],
+      "turnCount": 4,
+      "wordCount": 191
+    },
+    {
+      "speaker": "COUNCIL MEMBER NARCISSE",
+      "pages": [
+        7,
+        30,
+        35,
+        36
+      ],
+      "turnCount": 3,
+      "wordCount": 338
+    },
+    {
+      "speaker": "COUNCIL MEMBER NURSE",
+      "pages": [
+        7,
+        10,
+        30
+      ],
+      "turnCount": 3,
+      "wordCount": 42
+    },
+    {
+      "speaker": "COUNCIL MEMBER PALADINO",
+      "pages": [
+        7,
+        30
+      ],
+      "turnCount": 2,
+      "wordCount": 4
+    },
+    {
+      "speaker": "COUNCIL MEMBER RESTLER",
+      "pages": [
+        7,
+        30
+      ],
+      "turnCount": 2,
+      "wordCount": 2
+    },
+    {
+      "speaker": "COUNCIL MEMBER RICHARDSON JORDAN",
+      "pages": [
+        7,
+        24,
+        25,
+        30
+      ],
+      "turnCount": 3,
+      "wordCount": 167
+    },
+    {
+      "speaker": "COUNCIL MEMBER RILEY",
+      "pages": [
+        7,
+        30
+      ],
+      "turnCount": 2,
+      "wordCount": 4
+    },
+    {
+      "speaker": "COUNCIL MEMBER RIVERA",
+      "pages": [
+        7,
+        30,
+        62,
+        63,
+        64
+      ],
+      "turnCount": 3,
+      "wordCount": 373
+    },
+    {
+      "speaker": "COUNCIL MEMBER SALAMANCA",
+      "pages": [
+        7,
+        30
+      ],
+      "turnCount": 2,
+      "wordCount": 4
+    },
+    {
+      "speaker": "COUNCIL MEMBER BORELLI",
+      "pages": [
+        8,
+        33,
+        39,
+        40,
+        41
+      ],
+      "turnCount": 3,
+      "wordCount": 405
+    },
+    {
+      "speaker": "COUNCIL MEMBER SANCHEZ",
+      "pages": [
+        8,
+        31,
+        60,
+        61,
+        62
+      ],
+      "turnCount": 3,
+      "wordCount": 382
+    },
+    {
+      "speaker": "COUNCIL MEMBER SCHULMAN",
+      "pages": [
+        8,
+        31
+      ],
+      "turnCount": 2,
+      "wordCount": 4
+    },
+    {
+      "speaker": "COUNCIL MEMBER STEVENS",
+      "pages": [
+        8,
+        31
+      ],
+      "turnCount": 2,
+      "wordCount": 2
+    },
+    {
+      "speaker": "COUNCIL MEMBER UNG",
+      "pages": [
+        8,
+        31
+      ],
+      "turnCount": 2,
+      "wordCount": 2
+    },
+    {
+      "speaker": "COUNCIL MEMBER VERNIKOV",
+      "pages": [
+        8,
+        31
+      ],
+      "turnCount": 2,
+      "wordCount": 2
+    },
+    {
+      "speaker": "COUNCIL MEMBER WILLIAMS",
+      "pages": [
+        8,
+        23,
+        24,
+        31,
+        51,
+        52,
+        53,
+        54
+      ],
+      "turnCount": 6,
+      "wordCount": 486
+    },
+    {
+      "speaker": "COUNCIL MEMBER WON",
+      "pages": [
+        8,
+        16,
+        31,
+        58,
+        59,
+        60
+      ],
+      "turnCount": 7,
+      "wordCount": 467
+    },
+    {
+      "speaker": "COUNCIL MEMBER YEGER",
+      "pages": [
+        8,
+        31,
+        32
+      ],
+      "turnCount": 3,
+      "wordCount": 277
+    },
+    {
+      "speaker": "SPEAKER ADAMS",
+      "pages": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27,
+        33,
+        66,
+        67
+      ],
+      "turnCount": 19,
+      "wordCount": 2387
+    },
+    {
+      "speaker": "REVEREND DR. LYNN SEXTON",
+      "pages": [
+        9,
+        10
+      ],
+      "turnCount": 1,
+      "wordCount": 170
+    },
+    {
+      "speaker": "SERGEANT AT ARMS",
+      "pages": [
+        16,
+        17,
+        57,
+        60
+      ],
+      "turnCount": 3,
+      "wordCount": 40
+    },
+    {
+      "speaker": "COUNCIL MEMBER MOYA",
+      "pages": [
+        27
+      ],
+      "turnCount": 1,
+      "wordCount": 1
+    },
+    {
+      "speaker": "ALL COUNCIL MEMBERS",
+      "pages": [
+        38,
+        39
+      ],
+      "turnCount": 3,
+      "wordCount": 3
+    }
+  ]
+}

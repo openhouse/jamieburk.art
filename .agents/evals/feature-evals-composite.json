@@ -1,0 +1,266 @@
+{
+  "version": 1,
+  "suite_id": "feature-evals-composite-integration",
+  "title": "Feature eval family composite integration",
+  "objective": "Integrate the strongest contracts from feature/evals-A through feature/evals-N into one public-safe, inspectable knowledge and portfolio system without importing parallel architectures or weakening human approval boundaries.",
+  "source_branch": "feature/knowledge-h",
+  "pull_request_base": "develop",
+  "starting_commit": "934c1bdff4a478da56fde3a125d905e7e326b6f2",
+  "frozen_at": "2026-07-28",
+  "rubric_sha256": "3fe95a2b9c1f22cdb7d95c3168af73e8eb659900ffd258cd65ebb6feb06e44c1",
+  "base_suite": {
+    "path": ".agents/evals/portfolio-production-readiness.json",
+    "required_version": 3,
+    "sha256": "a4116f1145e235bbbf87b237bb1901f562502465d20637c50d9cb64d9f5e84c7"
+  },
+  "integration_register": "docs/integration/feature-evals-composite.json",
+  "integration_register_sha256": "9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d",
+  "blind_spot_controls": {
+    "path": "docs/knowledge-bank/data/blind-spot-controls-2026-07.json",
+    "sha256": "9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db"
+  },
+  "required_branch_ref_namespace": "refs/remotes/origin",
+  "required_branch_heads": {
+    "feature/evals-A": "3757c4f529cc05d169f30ec059b13bea24cc75d1",
+    "feature/evals-B": "67fc30427e544199540f81d6b50cf94ef8101f47",
+    "feature/evals-C": "ff440a9c9a15c844b779bbca0c1404eaebcb8031",
+    "feature/evals-D": "5a7095ffc8e064c5fff8a5acfb114e04f7114a15",
+    "feature/evals-E": "d7d8e0d050b6a8c481fa5aaf2429d6427aa886ea",
+    "feature/evals-F": "ba74618558e55a836d9a73b5293f6fdb45e684ff",
+    "feature/evals-G": "d97055d72d794b9ecfd338e10277e4feb14ea918",
+    "feature/evals-H": "934c1bdff4a478da56fde3a125d905e7e326b6f2",
+    "feature/evals-I": "793f7262cd3df8d7401d9b3e0f8209240d5fa640",
+    "feature/evals-J": "7e1b758b416bbe7c221f601e331696d95515c593",
+    "feature/evals-K": "5b0cbcd1a7f913d2281c671e46903ad997a743f5",
+    "feature/evals-L": "68846b1f0a8672ff80598a7fef50ce5343c3e004",
+    "feature/evals-M": "289dd4499eb3e7b78bc16b380a02ac180dca35bb",
+    "feature/evals-N": "10d20ecd5d8d9f3b94b403fbecf483fef92b5dfe"
+  },
+  "canonical_files": [
+    "apps/www/src/data/knowledge-bank/schema.ts",
+    "apps/www/src/data/knowledge-bank/records.ts",
+    "apps/www/src/data/knowledge-bank/historical-knowledge.ts",
+    "apps/www/src/data/knowledge-bank/agency-graph.ts",
+    "apps/www/src/data/knowledge-bank/lifecycle-operations.ts",
+    "apps/www/src/data/knowledge-bank/public.ts",
+    "apps/www/src/data/knowledge-bank/public-registry.json",
+    "apps/www/src/data/proofs.ts",
+    "docs/knowledge-bank/intake-and-maturation.md",
+    "docs/knowledge-bank/citational-care.md",
+    "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md"
+  ],
+  "forbidden_parallel_architectures": [
+    "apps/www/src/data/knowledge-bank/lifecycle-schema.ts",
+    "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+    "apps/www/src/data/knowledge-bank/development-records.ts"
+  ],
+  "grader_separation": {
+    "deterministic_grader": "Runs schemas, tests, builds, route checks, corpus checks, citation checks, and public-safety checks.",
+    "independent_llm_judge": "A separately commissioned read-only reviewer receives only the frozen rubric, candidate evidence bundle, and public-safe repository state; it does not receive patch intent or prior scores.",
+    "human_approver": "Controls collaborator-sensitive claims, quotations, media, contact information, resume approval, deployment, and indexing.",
+    "optimizer_may_grade_own_patch": false,
+    "not_observed_may_pass": false,
+    "instrumented_absence_counts_as_external_validation": false,
+    "holdout_authentication_scope": "Private orchestration establishes that reviews were separately commissioned. Public repository receipts bind complete judgments to the exact candidate and distinct reviewer labels, but do not authenticate process identity or publish private orchestration identifiers."
+  },
+  "optimization": {
+    "maximum_iterations": 8,
+    "stop_after_no_improvement_iterations": 3,
+    "two_consecutive_complete_passes_required": true,
+    "rubric_is_frozen_during_run": true,
+    "selection_order": [
+      "failed blocking criterion by severity",
+      "largest remaining evidence gap",
+      "smallest coherent low-risk patch"
+    ]
+  },
+  "candidate_identity": {
+    "strategy": "git-source-tree",
+    "include": "Every tracked or unignored source-tree file returned by git ls-files --cached --others --exclude-standard.",
+    "exclude_only": [
+      "docs/evals/runs/2026-07-16-feature-evals-composite-final-a.json",
+      "docs/evals/runs/2026-07-16-feature-evals-composite-final-b.json"
+    ],
+    "purpose": "Bind canonical knowledge, public rendering, accessibility, indexing, validation, runtime, and release dependencies to one exact candidate while avoiding a circular digest over the two holdout result records."
+  },
+  "holdout_provenance": {
+    "run_version": 3,
+    "provider": "independent-codex-review",
+    "distinct_reviewer_labels_required": true,
+    "judgment_payload_digest_required": true,
+    "private_process_identifiers_prohibited": true,
+    "private_local_locators_prohibited": true,
+    "authentication_scope": "Public-safe review receipts bind distinct reviewer labels and complete judgments to the exact candidate without publishing private process identifiers or local machine locators. Human production approval remains required."
+  },
+  "evidence_bundle_files": [
+    ".agents/evals/feature-evals-composite.json",
+    ".agents/evals/portfolio-production-readiness.json",
+    "docs/integration/feature-evals-composite.json",
+    "docs/integration/feature-evals-composite.md",
+    "apps/www/src/data/knowledge-bank/schema.ts",
+    "apps/www/src/data/knowledge-bank/records.ts",
+    "apps/www/src/data/knowledge-bank/historical-knowledge.ts",
+    "apps/www/src/data/knowledge-bank/agency-graph.ts",
+    "apps/www/src/data/knowledge-bank/lifecycle-operations.ts",
+    "apps/www/src/data/knowledge-bank/public.ts",
+    "apps/www/src/data/knowledge-bank/public-registry.json",
+    "apps/www/src/data/knowledge-bank/index.ts",
+    "apps/www/src/data/proofs.ts",
+    "docs/knowledge-bank/intake-and-maturation.md",
+    "docs/knowledge-bank/citational-care.md",
+    "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md",
+    "docs/qa/pre-launch-eval-audit-2026-07-28.md",
+    "apps/www/src/app/page.tsx",
+    "apps/www/src/app/about/page.tsx",
+    "apps/www/src/app/resume/page.tsx",
+    "apps/www/src/app/work/technical-operations/page.tsx",
+    "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
+    "apps/www/src/content/work/harry-j-epstein.mdx",
+    "apps/www/src/content/work/wowlist.mdx",
+    "apps/www/src/content/work/callnyc.mdx",
+    "apps/www/src/content/work/196-sunday-dinner.mdx",
+    "apps/www/src/content/work/fair-rent-nyc.mdx",
+    "apps/www/src/content/work/kc-town-hall.mdx",
+    "apps/www/src/data/work.ts",
+    "apps/www/src/components/Hero.tsx",
+    "apps/www/src/components/ProofStrip.tsx",
+    "apps/www/src/components/CapabilityGrid.tsx",
+    "apps/www/src/app/layout.tsx",
+    "apps/www/src/app/globals.css",
+    "apps/www/next.config.ts",
+    "apps/www/src/app/robots.ts",
+    "apps/www/src/app/sitemap.ts",
+    "Dockerfile",
+    "docs/knowledge-bank/data/blind-spot-controls-2026-07.json",
+    "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
+    "scripts/lib/composite-integration-eval.mjs",
+    "scripts/check-composite-integration.mjs",
+    "scripts/lib/citation-validation.mjs",
+    "scripts/lib/professor-lens-eval.mjs",
+    "scripts/tests/composite-integration.test.mjs",
+    "scripts/tests/knowledge-evals.test.mjs",
+    "scripts/tests/lifecycle-operations.test.mjs",
+    "docs/qa/evals-H/margaret-morse-final-a.json",
+    "docs/qa/evals-H/margaret-morse-final-b.json",
+    "docs/qa/evals-H/margaret-morse-final-c.json",
+    "docs/qa/evals-H/warren-sack-final-a.json",
+    "docs/qa/evals-H/warren-sack-final-b.json",
+    "docs/qa/evals-H/warren-sack-final-c.json",
+    "package.json"
+  ],
+  "holdout_runs": [
+    "docs/evals/runs/2026-07-16-feature-evals-composite-final-a.json",
+    "docs/evals/runs/2026-07-16-feature-evals-composite-final-b.json"
+  ],
+  "criteria": [
+    {
+      "id": "COMP-001",
+      "title": "Frozen A-N family inventory",
+      "grader": "deterministic",
+      "blocking": true,
+      "pass_criteria": [
+        "All fourteen feature/evals-A through feature/evals-N heads are recorded exactly once.",
+        "Every recorded head remains available as the exact frozen commit object; later movement of a mutable remote-tracking branch is reported but cannot rewrite the frozen inventory.",
+        "The integration branch and develop pull-request base are explicit.",
+        "Frozen source branches remain reference-only."
+      ]
+    },
+    {
+      "id": "COMP-002",
+      "title": "Inspectable integration decisions",
+      "grader": "deterministic",
+      "blocking": true,
+      "pass_criteria": [
+        "Every frozen branch has an adopt, adapt, already-present, or reject decision with rationale.",
+        "Every adopted idea names existing destination files and verification criteria.",
+        "The register records deliberate website projection or non-projection decisions."
+      ]
+    },
+    {
+      "id": "COMP-003",
+      "title": "One canonical knowledge architecture",
+      "grader": "deterministic",
+      "blocking": true,
+      "pass_criteria": [
+        "The H-derived schema, records, public registry, and proof layer remain canonical.",
+        "No frozen branch's parallel lifecycle architecture is copied into the composite.",
+        "The public application imports only redacted projections."
+      ]
+    },
+    {
+      "id": "COMP-004",
+      "title": "Append-safe intake and lifecycle queries",
+      "grader": "deterministic",
+      "blocking": true,
+      "pass_criteria": [
+        "Replaying an identical intake is idempotent.",
+        "A repeated artifact with a new ID is preserved as a linked duplicate.",
+        "A stable ID collision with changed content is rejected.",
+        "Held claims, open inquiries, corrections, projection states, and orphan sources are queryable."
+      ]
+    },
+    {
+      "id": "COMP-005",
+      "title": "Source, claim, agency, correction, and population integrity",
+      "grader": "deterministic",
+      "blocking": true,
+      "pass_criteria": [
+        "Canonical knowledge validation passes without broken references or protected leakage.",
+        "Sources retain does-not-establish boundaries and claims retain evidence roles.",
+        "Individual, shared, collective, and institutional credit remain distinct.",
+        "Population claims retain surface, capture-date, denominator, and recovery-gap boundaries."
+      ]
+    },
+    {
+      "id": "COMP-006",
+      "title": "Selective public composition and practice continuity",
+      "grader": "independent_llm_judge",
+      "blocking": true,
+      "pass_criteria": [
+        "The website remains a purposeful projection rather than a knowledge-bank mirror.",
+        "Chad's lens names supported agency and usable results without inflation or self-erasure.",
+        "Margaret Morse's lens preserves artistic, civic, technical, relational, and social continuity.",
+        "Warren Sack's lens makes observe, model, prototype, use, learn, revise, and handoff reconstructable."
+      ]
+    },
+    {
+      "id": "COMP-007",
+      "title": "Blind spots remain honest and actionable",
+      "grader": "hybrid",
+      "blocking": true,
+      "pass_criteria": [
+        "Open human corroboration, collective review, hiring usability, job funnel, and external-validity gaps remain open.",
+        "A passing blind-spot control means governed absence, not synthesized evidence.",
+        "Every gap has evidence requirements, anti-gaming rules, next action, and a projection boundary."
+      ]
+    },
+    {
+      "id": "COMP-008",
+      "title": "Frozen recursive governance resists score gaming",
+      "grader": "hybrid",
+      "blocking": true,
+      "pass_criteria": [
+        "The rubric digest matches the frozen semantic contract.",
+        "A separately pinned digest rejects semantic weakening even when the mutable suite checksum is refreshed.",
+        "The complete base portfolio suite, decision register, blind-spot controls, and source-branch namespace are bound to reviewed digests.",
+        "The optimizer cannot grade its own patch and not-observed cannot pass.",
+        "Mutation tests reject branch omission, checksum-only approval, fabricated branch heads, decorative decision records, private leakage, and human-evidence synthesis.",
+        "No weighted strength compensates for a blocking failure."
+      ]
+    },
+    {
+      "id": "COMP-009",
+      "title": "Stable exact-candidate stopping decision",
+      "grader": "hybrid",
+      "blocking": true,
+      "pass_criteria": [
+        "Two separately commissioned holdout judgments accept the same candidate fingerprint against the same rubric digest.",
+        "The candidate fingerprint binds the complete Git source tree except the two declared holdout records.",
+        "Each public receipt binds a distinct reviewer label, review time, provider, and complete judgment digest to the exact candidate without publishing private process identifiers or machine locators.",
+        "The repository states that public receipt labels do not authenticate process identity; separate commissioning is established in private orchestration and remains outside public Git.",
+        "Every composite criterion scores 4 with no not-observed evidence.",
+        "Deterministic checks pass and unresolved human production approval remains open."
+      ]
+    }
+  ]
+}

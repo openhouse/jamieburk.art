@@ -1,0 +1,118 @@
+{
+  "suite": "knowledge-wiki-branch-family-closure",
+  "version": 1,
+  "encounterDate": "2026-07-19",
+  "closureIndexId": "index.knowledge-wiki.family-closure",
+  "sourceEncounterId": "research.knowledge-wiki-family-closure.2026-07-19",
+  "donors": [
+    {
+      "branch": "feature/knowledge-wiki-A",
+      "head": "920f9024d7e058700f282e3e1e76188fe1c5294e",
+      "sourceId": "source.knowledge-wiki.branch-a.2026-07-19",
+      "sourcePath": "docs/knowledge-bank/sources/knowledge-wiki-branch-a-2026-07-19.md",
+      "integratedRecordIds": [
+        "capability.implementation-adoption-and-handoff",
+        "method.identity-systems-as-shared-infrastructure",
+        "index.knowledge-wiki.canonical-story-bank",
+        "index.knowledge-wiki.research-agenda-and-held-claims",
+        "index.knowledge-wiki.scenes-and-places-of-work",
+        "method.participation-and-relational-infrastructure"
+      ]
+    },
+    {
+      "branch": "feature/knowledge-wiki-B",
+      "head": "268a92d794f5b604f4004fc9d6e5652f234fc61b",
+      "sourceId": "source.knowledge-wiki.branch-b.2026-07-19",
+      "sourcePath": "docs/knowledge-bank/sources/knowledge-wiki-branch-b-2026-07-19.md",
+      "integratedRecordIds": [
+        "method.identity-systems-as-shared-infrastructure",
+        "index.knowledge-wiki.scenes-and-places-of-work",
+        "method.learning-through-making",
+        "method.what-is-at-stake-for-me"
+      ]
+    },
+    {
+      "branch": "feature/knowledge-wiki-C",
+      "head": "6a2af7396240381ce04aad9b9129ba402b83c134",
+      "sourceId": "source.knowledge-wiki.branch-c.2026-07-19",
+      "sourcePath": "docs/knowledge-bank/sources/knowledge-wiki-branch-c-2026-07-19.md",
+      "integratedRecordIds": [
+        "index.knowledge-wiki.research-agenda-and-held-claims",
+        "index.knowledge-wiki.scenes-and-places-of-work",
+        "method.jamie-at-work",
+        "method.participation-and-relational-infrastructure",
+        "place.small-cultural-spaces",
+        "index.knowledge-wiki.outcomes-adoption-afterlives"
+      ]
+    },
+    {
+      "branch": "feature/knowledge-wiki-D",
+      "head": "e5a7ac607bfbd5a428bb18c2f7af5baad614132b",
+      "sourceId": "source.knowledge-wiki.branch-d.2026-07-19",
+      "sourcePath": "docs/knowledge-bank/sources/knowledge-wiki-branch-d-2026-07-19.md",
+      "integratedRecordIds": [
+        "index.knowledge-wiki.research-agenda-and-held-claims",
+        "index.knowledge-wiki.outcomes-adoption-afterlives",
+        "index.knowledge-wiki.relational-infrastructure-atlas",
+        "index.knowledge-wiki.decisions-deliverables-operational-outcomes",
+        "index.knowledge-wiki.role-authorship-protected-absence"
+      ]
+    },
+    {
+      "branch": "feature/knowledge-wiki-E",
+      "head": "9f1bbfacec3edbfbc47a5200f777d4f498da0ec4",
+      "sourceId": "source.knowledge-wiki.branch-e.2026-07-19",
+      "sourcePath": "docs/knowledge-bank/sources/knowledge-wiki-branch-e-2026-07-19.md",
+      "integratedRecordIds": []
+    }
+  ],
+  "baselineRecords": [
+    ["index.knowledge-wiki", "docs/knowledge-bank/README.md"],
+    ["index.knowledge-wiki.living-archive", "docs/knowledge-bank/indexes/living-archive.md"],
+    ["index.knowledge-wiki.decision-records", "docs/knowledge-bank/indexes/decision-records.md"],
+    ["method.maintenance-handoff-stewardship", "docs/knowledge-bank/methods/maintenance-handoff-and-stewardship.md"]
+  ],
+  "requiredRecords": [
+    ["index.knowledge-wiki.family-closure", "docs/knowledge-bank/indexes/family-closure.md"],
+    ["research.knowledge-wiki-family-closure.2026-07-19", "docs/knowledge-bank/research-runs/knowledge-wiki-family-closure-2026-07-19.md"],
+    ["source.knowledge-wiki.branch-a.2026-07-19", "docs/knowledge-bank/sources/knowledge-wiki-branch-a-2026-07-19.md"],
+    ["source.knowledge-wiki.branch-b.2026-07-19", "docs/knowledge-bank/sources/knowledge-wiki-branch-b-2026-07-19.md"],
+    ["source.knowledge-wiki.branch-c.2026-07-19", "docs/knowledge-bank/sources/knowledge-wiki-branch-c-2026-07-19.md"],
+    ["source.knowledge-wiki.branch-d.2026-07-19", "docs/knowledge-bank/sources/knowledge-wiki-branch-d-2026-07-19.md"],
+    ["source.knowledge-wiki.branch-e.2026-07-19", "docs/knowledge-bank/sources/knowledge-wiki-branch-e-2026-07-19.md"],
+    ["capability.implementation-adoption-and-handoff", "docs/knowledge-bank/capabilities/implementation-adoption-and-handoff.md"],
+    ["method.identity-systems-as-shared-infrastructure", "docs/knowledge-bank/methods/identity-systems-as-shared-infrastructure.md"],
+    ["index.knowledge-wiki.canonical-story-bank", "docs/knowledge-bank/indexes/canonical-story-bank.md"],
+    ["index.knowledge-wiki.research-agenda-and-held-claims", "docs/knowledge-bank/indexes/research-agenda-and-held-claims.md"],
+    ["index.knowledge-wiki.scenes-and-places-of-work", "docs/knowledge-bank/indexes/scenes-and-places-of-work.md"],
+    ["method.learning-through-making", "docs/knowledge-bank/methods/learning-through-making.md"],
+    ["method.what-is-at-stake-for-me", "docs/knowledge-bank/methods/what-is-at-stake-for-me.md"],
+    ["method.jamie-at-work", "docs/knowledge-bank/methods/jamie-at-work.md"],
+    ["method.participation-and-relational-infrastructure", "docs/knowledge-bank/methods/participation-and-relational-infrastructure.md"],
+    ["place.small-cultural-spaces", "docs/knowledge-bank/places/small-cultural-spaces.md"],
+    ["index.knowledge-wiki.outcomes-adoption-afterlives", "docs/knowledge-bank/indexes/outcomes-adoption-and-afterlives.md"],
+    ["index.knowledge-wiki.relational-infrastructure-atlas", "docs/knowledge-bank/indexes/relational-infrastructure-atlas.md"],
+    ["index.knowledge-wiki.decisions-deliverables-operational-outcomes", "docs/knowledge-bank/indexes/decisions-deliverables-and-operational-outcomes.md"],
+    ["index.knowledge-wiki.role-authorship-protected-absence", "docs/knowledge-bank/indexes/role-collective-authorship-and-protected-absence.md"]
+  ],
+  "integratedRecordIds": [
+    "capability.implementation-adoption-and-handoff",
+    "method.identity-systems-as-shared-infrastructure",
+    "index.knowledge-wiki.canonical-story-bank",
+    "index.knowledge-wiki.research-agenda-and-held-claims",
+    "index.knowledge-wiki.scenes-and-places-of-work",
+    "method.learning-through-making",
+    "method.what-is-at-stake-for-me",
+    "method.jamie-at-work",
+    "method.participation-and-relational-infrastructure",
+    "place.small-cultural-spaces",
+    "index.knowledge-wiki.outcomes-adoption-afterlives",
+    "index.knowledge-wiki.relational-infrastructure-atlas",
+    "index.knowledge-wiki.decisions-deliverables-operational-outcomes",
+    "index.knowledge-wiki.role-authorship-protected-absence"
+  ],
+  "publicRegistryPath": "apps/www/src/data/knowledge-bank/records.ts",
+  "ciWorkflowPath": ".github/workflows/portfolio-readiness.yml",
+  "baseRef": "origin/develop",
+  "parallelWikiRoot": "docs/knowledge-wiki"
+}

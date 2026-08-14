@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-07-28",
+  "populationDefinition": "Public testimony by Jamie Burkart recovered in the governed source record, plus specifically identified public-testimony leads that remain unrecovered and prepared remarks not yet delivered.",
+  "recoveredFullTextCount": 3,
+  "unrecoveredPublicTestimonyCount": 2,
+  "preparedNotDeliveredCount": 1,
+  "entries": [
+    {
+      "id": "testimony.jamie-burkart.cabaret-law.2017-09-14",
+      "date": "2017-09-14",
+      "body": "New York City Council Committee on Consumer Affairs",
+      "subject": "Cabaret Law repeal",
+      "status": "recovered-full-text",
+      "sourceId": "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-09-14",
+      "locator": "Official transcript pp. 71-74",
+      "canonicalPath": "docs/knowledge-bank/testimony/2017-09-14-cabaret-law-repeal.md"
+    },
+    {
+      "id": "testimony.jamie-burkart.cultural-affairs-budget.2018-03-16",
+      "date": "2018-03-16",
+      "body": "New York City Council Committee on Cultural Affairs, Libraries and International Intergroup Relations",
+      "subject": "CreateNYC implementation and cultural-affairs funding",
+      "status": "recovered-full-text",
+      "sourceId": "SRC-NYCAC-COUNCIL-CULTURAL-AFFAIRS-BUDGET-2018-03-16",
+      "locator": "Official transcript pp. 166-168",
+      "canonicalPath": "docs/knowledge-bank/testimony/2018-03-16-cultural-affairs-budget.md"
+    },
+    {
+      "id": "testimony.jamie-burkart.sbjsa.2018-10-22",
+      "date": "2018-10-22",
+      "body": "New York City Council Committee on Small Business",
+      "subject": "Small Business Job Survival Act",
+      "status": "recovered-full-text",
+      "sourceId": "SRC-NYC-SBJSA-HEARING-2018-10-22",
+      "locator": "Official transcript pp. 346-348",
+      "canonicalPath": "docs/knowledge-bank/testimony/2018-10-22-small-business-job-survival-act.md"
+    },
+    {
+      "id": "testimony.jamie-burkart.kc-town-hall-cced.2019-06-12",
+      "date": "2019-06-12",
+      "body": "Kansas City Central City Economic Development Sales Tax Board",
+      "subject": "KC Town Hall funding request",
+      "status": "public-event-transcript-not-recovered",
+      "sourceId": "SRC-KC-TOWN-HALL-CCED-BOARD-MATERIALS-2019",
+      "locator": "Meeting minutes identify Jamie as developer/presenter for proposal 16; verbatim testimony not recovered."
+    },
+    {
+      "id": "testimony.jamie-burkart.kc-town-hall-withdrawal.2024",
+      "date": "2024",
+      "body": "Kansas City public legislative process",
+      "subject": "KC Town Hall CCED withdrawal",
+      "status": "public-event-transcript-not-recovered",
+      "sourceId": "SRC-KC-TOWN-HALL-ORDINANCE-240317",
+      "locator": "Ordinance 240317 records withdrawal; Jamie recalls public testimony, whose transcript remains unrecovered."
+    },
+    {
+      "id": "remarks.jamie-burkart.commercial-rent-stabilization.2026-07",
+      "date": "2026-07",
+      "body": "Prepared remarks",
+      "subject": "Commercial Rent Stabilization and public data",
+      "status": "prepared-not-delivered",
+      "sourceId": "SRC-PROTECTED-CURRENT-WORKSTREAM-2026-07-27",
+      "locator": "Protected rehearsal transcript; not public testimony."
+    }
+  ],
+  "boundaries": [
+    "This person-centered corpus contains Jamie's user-authorized public statements. A separate event-level heteroglossia index preserves attribution, page locators, role, stance, and turn counts for configured supportive public witnesses while leaving raw third-party testimony in the protected research layer.",
+    "Readable transcripts retain the official record's substance while correcting obvious name spellings in brackets or editorial notes; the official transcript controls.",
+    "An event listing or recollection is not a recovered verbatim transcript.",
+    "Prepared remarks do not become public testimony until delivery is established.",
+    "This inventory is complete for the testimony already identified in the governed record, not proof that no other testimony exists."
+  ]
+}

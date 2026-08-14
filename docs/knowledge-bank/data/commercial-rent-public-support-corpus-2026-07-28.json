@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 2,
+  "id": "corpus.commercial-rent-public-support.2026-07-28",
+  "reviewedAt": "2026-08-12",
+  "scope": "A bounded public-support index for the active New York State commercial rent stabilization bills, four recoverable public events in Jamie Burkart's protected source archive, and two official releases. It preserves attribution, roles, statement-unit counts, source integrity, and public-safe orientation without republishing raw third-party transcripts or complete release quotations.",
+  "activeBills": [
+    {
+      "bill": "S8319",
+      "jurisdiction": "New York State Senate",
+      "sponsor": "Julia Salazar",
+      "status": "In Senate Cities 1 Committee",
+      "introduced": "2025-06-02",
+      "latestAction": "2026-01-07",
+      "officialUrl": "https://www.nysenate.gov/legislation/bills/2025/S8319"
+    },
+    {
+      "bill": "A5568A",
+      "jurisdiction": "New York State Assembly",
+      "sponsor": "Emily Gallagher",
+      "status": "In Assembly Cities Committee",
+      "introduced": "2025-02-14",
+      "amended": "2025-05-27",
+      "latestAction": "2026-01-07",
+      "officialUrl": "https://www.nysenate.gov/legislation/bills/2025/A5568/amendment/A"
+    }
+  ],
+  "events": [
+    {
+      "id": "event.nyc.commercial-rent.public-event.2025-11-13",
+      "date": "2025-11-13",
+      "jurisdiction": "New York City and New York State",
+      "eventType": "public-policy-and-campaign-event",
+      "sourceKind": "user-recorded-public-event-transcript",
+      "sourceSha256": "09740cc2c0abf50e6078db69424f24df871bbf15f52a3b6861dedd482f82406a",
+      "transcriptionState": "automated-transcript-unrepaired",
+      "completenessStatus": "all-attributed-turns-counted-for-bounded-formal-program-speakers",
+      "publicRecordPath": "../testimony/commercial-rent-public-support/2025-11-13-commissioner-supportive-remarks.md",
+      "transcriptTextState": "protected-source-not-republished",
+      "speakers": [
+        {
+          "name": "Emily Gallagher",
+          "roleAtEvent": "New York State Assembly Member and bill sponsor",
+          "speakerClass": "public-official",
+          "turnCount": 9
+        },
+        {
+          "name": "Olympia Kazi",
+          "roleAtEvent": "Co-founder, NYC Artist Coalition and Music Workers Alliance",
+          "speakerClass": "advocate",
+          "turnCount": 2
+        },
+        {
+          "name": "Shahana Hanif",
+          "roleAtEvent": "New York City Council Member",
+          "speakerClass": "public-official",
+          "turnCount": 2
+        },
+        {
+          "name": "Brad Lander",
+          "roleAtEvent": "New York City Comptroller",
+          "speakerClass": "public-official",
+          "turnCount": 3
+        }
+      ]
+    },
+    {
+      "id": "event.nyc.commercial-rent.friends-and-lovers.2026-02-17",
+      "date": "2026-02-17",
+      "jurisdiction": "New York City and New York State",
+      "eventType": "public-policy-and-campaign-event",
+      "sourceKind": "user-recorded-public-event-transcript",
+      "sourceSha256": "d35f082a82bd23a065894b2af00fdf11e29762a421366187cccf4b4a685fe4e2",
+      "transcriptionState": "automated-transcript-unrepaired",
+      "completenessStatus": "all-attributed-turns-counted-for-bounded-formal-program-speakers",
+      "publicRecordPath": "../testimony/commercial-rent-public-support/2026-02-17-friends-and-lovers-supportive-remarks.md",
+      "transcriptTextState": "protected-source-not-republished",
+      "speakers": [
+        {
+          "name": "Olympia Kazi",
+          "roleAtEvent": "Co-founder, NYC Artist Coalition and Music Workers Alliance",
+          "speakerClass": "advocate",
+          "turnCount": 6
+        },
+        {
+          "name": "Eon Huntley",
+          "roleAtEvent": "Candidate for New York State Assembly District 56",
+          "speakerClass": "candidate",
+          "turnCount": 5
+        },
+        {
+          "name": "Emily Gallagher",
+          "roleAtEvent": "New York State Assembly Member and bill sponsor",
+          "speakerClass": "public-official",
+          "turnCount": 18
+        }
+      ]
+    },
+    {
+      "id": "event.nyc.commercial-rent.project-x.2026-03-10",
+      "date": "2026-03-10",
+      "jurisdiction": "New York City and New York State",
+      "eventType": "public-community-and-campaign-event",
+      "sourceKind": "user-recorded-public-event-transcript",
+      "sourceSha256": "630ae41310f78f338f6b6648c4fbdc041edabc4d78b54601b948d1b6a9f00a26",
+      "transcriptionState": "human-cleaned-transcript",
+      "completenessStatus": "all-attributed-turns-counted-for-eon-huntley",
+      "publicRecordPath": "../testimony/commercial-rent-public-support/2026-03-10-project-x-eon-huntley.md",
+      "transcriptTextState": "protected-source-not-republished",
+      "speakers": [
+        {
+          "name": "Eon Huntley",
+          "roleAtEvent": "Candidate for New York State Assembly District 56",
+          "speakerClass": "candidate",
+          "turnCount": 2
+        }
+      ]
+    },
+    {
+      "id": "event.nyc.sbu-report-launch.2026-07-29",
+      "date": "2026-07-29",
+      "jurisdiction": "New York City and New York State",
+      "eventType": "public-report-launch-and-campaign-event",
+      "sourceKind": "authenticated-public-event-transcript",
+      "sourceSha256": "c717c3092317ede373b5624c3ef6e7d92da48f8a5f817a3f8ac7ae1dd0593d39",
+      "transcriptionState": "authenticated-transcript-ui-review",
+      "completenessStatus": "three-selected-formal-program-speeches-indexed",
+      "publicRecordPath": "../events/sbu-report-launch-2026-07-29.md",
+      "transcriptTextState": "protected-source-not-republished",
+      "speakers": [
+        {
+          "name": "Julia Salazar",
+          "roleAtEvent": "New York State Senator and lead Senate sponsor",
+          "speakerClass": "public-official",
+          "statementCount": 1
+        },
+        {
+          "name": "Emily Gallagher",
+          "roleAtEvent": "New York State Assembly Member and lead Assembly sponsor",
+          "speakerClass": "public-official",
+          "statementCount": 1
+        },
+        {
+          "name": "Jamie Burkart",
+          "roleAtEvent": "NYC Artist Coalition member participating through Fair Rent NYC",
+          "speakerClass": "advocate",
+          "statementCount": 1
+        }
+      ]
+    },
+    {
+      "id": "event.nys.commercial-rent.bill-introduction-release.2026-02-17",
+      "date": "2026-02-17",
+      "jurisdiction": "New York State",
+      "eventType": "official-bill-introduction-release",
+      "sourceKind": "official-government-press-release",
+      "officialUrl": "https://www.nysenate.gov/newsroom/press-releases/2026/julia-salazar/senator-salazar-and-assembly-member-gallagher-introduce?page=4",
+      "completenessStatus": "all-attributed-speakers-indexed",
+      "publicRecordPath": "../testimony/commercial-rent-public-support/2026-02-17-state-introduction-statements.md",
+      "statementTextState": "official-source-link-and-public-safe-paraphrase",
+      "speakers": [
+        {
+          "name": "Julia Salazar",
+          "roleAtEvent": "New York State Senator and lead Senate sponsor",
+          "speakerClass": "public-official",
+          "statementCount": 1
+        },
+        {
+          "name": "Emily Gallagher",
+          "roleAtEvent": "New York State Assembly Member and lead Assembly sponsor",
+          "speakerClass": "public-official",
+          "statementCount": 1
+        },
+        {
+          "name": "Olympia Kazi",
+          "roleAtEvent": "Urban activist",
+          "speakerClass": "advocate",
+          "statementCount": 1
+        },
+        {
+          "name": "Small Business United",
+          "roleAtEvent": "Small-business organizing coalition",
+          "speakerClass": "organization",
+          "statementCount": 1
+        }
+      ]
+    },
+    {
+      "id": "event.nys.commercial-rent.jimmys-corner-rally.2026-04-10",
+      "date": "2026-04-10",
+      "jurisdiction": "New York State",
+      "eventType": "official-rally-release",
+      "sourceKind": "official-government-press-release",
+      "officialUrl": "https://www.nysenate.gov/newsroom/press-releases/2026/julia-salazar/senator-salazar-rallies-jimmys-corner-and-small-business?page=0",
+      "completenessStatus": "all-attributed-speakers-indexed",
+      "publicRecordPath": "../testimony/commercial-rent-public-support/2026-04-10-jimmys-corner-rally-statements.md",
+      "statementTextState": "official-source-link-and-public-safe-paraphrase",
+      "speakers": [
+        {
+          "name": "Julia Salazar",
+          "roleAtEvent": "New York State Senator and lead Senate sponsor",
+          "speakerClass": "public-official",
+          "statementCount": 1
+        },
+        {
+          "name": "Emily Gallagher",
+          "roleAtEvent": "New York State Assembly Member and lead Assembly sponsor",
+          "speakerClass": "public-official",
+          "statementCount": 1
+        },
+        {
+          "name": "Olympia Kazi",
+          "roleAtEvent": "Co-founder, NYC Artist Coalition and Music Workers Alliance",
+          "speakerClass": "advocate",
+          "statementCount": 1
+        },
+        {
+          "name": "Linda B. Rosenthal",
+          "roleAtEvent": "New York State Assembly Member and Chair, Assembly Committee on Housing",
+          "speakerClass": "public-official",
+          "statementCount": 1
+        },
+        {
+          "name": "Jo Anne Simon",
+          "roleAtEvent": "New York State Assembly Member",
+          "speakerClass": "public-official",
+          "statementCount": 1
+        }
+      ]
+    }
+  ],
+  "eonHuntleyStatus": {
+    "roleWhenSpeaking": "Candidate for New York State Assembly District 56",
+    "statusOnReviewDate": "Apparent Democratic primary winner in complete unofficial election-night results; not yet an Assembly Member",
+    "electionDistrictsReporting": "70 of 70",
+    "votes": 8438,
+    "voteShare": "57.12%",
+    "officialElectionNightUrl": "https://nyenr.elections.ny.gov/HomeNoJS.aspx"
+  },
+  "searchLog": {
+    "reviewedAt": "2026-08-12",
+    "officialPopulation": [
+      "S8319 official bill page and action history",
+      "A5568A official bill page and action history",
+      "New York State Senate newsroom issue and exact-bill searches",
+      "New York State Board of Elections unofficial election-night results"
+    ],
+    "archivePopulation": [
+      "2025-11-13 public-event recording transcript",
+      "2026-02-17 Friends and Lovers recording transcript",
+      "2026-03-10 Project X cleaned recording transcript",
+      "2026-07-29 authenticated public-event transcript"
+    ],
+    "findings": [
+      "Two official New York State Senate releases were recovered with nine attributed statement units; the public repository indexes every attributed speaker and links the complete official source.",
+      "No Assembly or Senate floor speech on S8319 or A5568A was recovered from the official bill pages, action histories, or bounded newsroom search.",
+      "Three local public-event recordings yielded 47 attributed turns for the selected formal-program speakers; the public repository preserves counts and attribution while the transcript derivatives remain protected.",
+      "The July 29 authenticated transcript added three selected formal-program speeches: the two state sponsors and Jamie Burkart. The source fingerprint binds the reviewed transcript interface; raw transcript text and authenticated routes remain protected."
+    ],
+    "openQueries": [
+      "Continue bounded event-by-event review of Jamie's public recordings and authenticated transcription archive.",
+      "Review future committee, floor, press-conference, and rally records as S8319 and A5568A advance.",
+      "Classify the remaining full Project X event population without implying support from unreviewed speakers.",
+      "Complete a full formal-program attribution ledger for the July 29 report launch without converting shared appearance into endorsement."
+    ]
+  },
+  "boundaries": [
+    "A press-release quotation is not labeled as a speech or hearing statement.",
+    "A bill sponsor memo is not labeled as a speech.",
+    "A candidate's later election result does not retroactively change the role held when a speech was delivered.",
+    "Authenticated transcript URLs, private file paths, raw audio locators, raw third-party speech, and personal contact details remain outside the public repository.",
+    "Protected transcript derivatives preserve speech for authorized research; the public index does not imply that any speaker endorses Jamie or his portfolio.",
+    "All means the declared recoverable population, not every supportive statement ever made."
+  ]
+}

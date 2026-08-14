@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "generatedAt": "2026-07-28T11:38:24.608Z",
+  "sourceCdxSha256": "4a0285fafa81f85a4d2a1b2b335c1136431d13430dcc5ea536260e5293103a37",
+  "population": 10,
+  "recovered": 10,
+  "notRecovered": 0,
+  "pages": [
+    {
+      "timestamp": "20200313182910",
+      "original": "https://fairrentnyc.nycartc.com/",
+      "digest": "77O5MNYKT5FRUQDHP5KENI33IFVGID6V",
+      "archiveUrl": "https://web.archive.org/web/20200313182910id_/https://fairrentnyc.nycartc.com/",
+      "filename": "2fdd1a727e19eacc5af94ae174f55a4f3482ed9323fc12dbbb753df1bfb67d39.html",
+      "sha256": "0ae9a501f211d4c576559b92f00717e762522cd5f027bc7a23b2759d4fd4c1e8",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20230323210006",
+      "original": "https://fairrentnyc.nycartc.com/2023-call-for-hearing/",
+      "digest": "GQ24FUZSPKRHNG6O6LFTM5FXY7XYB2JI",
+      "archiveUrl": "https://web.archive.org/web/20230323210006id_/https://fairrentnyc.nycartc.com/2023-call-for-hearing/",
+      "filename": "714c6cb5d277d0a450374935138e89c1b25e5f71ba729e903b98dfeb3717e913.html",
+      "sha256": "fc102c0e35bd20c78617faa08df51442bef4b2445158b794f82e8cf56927afea",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20230323205712",
+      "original": "https://fairrentnyc.nycartc.com/about/",
+      "digest": "MA2YIJMMUGR5ZZ7SFP3TAEYP7FTWOU4I",
+      "archiveUrl": "https://web.archive.org/web/20230323205712id_/https://fairrentnyc.nycartc.com/about/",
+      "filename": "2cf79f3025ef042a1127fb166b91adffa9359d70632b31e030a918ab3eb877c3.html",
+      "sha256": "591c912ee93cd5e2a372019d08e695035b35cb8f4be44f7fc2bc3c0c3a4e0d48",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20230323214447",
+      "original": "https://fairrentnyc.nycartc.com/author/fair-rent-nyc/",
+      "digest": "FGKK3HMGOTSFWYCB4Y4SFW2LXWQB32A7",
+      "archiveUrl": "https://web.archive.org/web/20230323214447id_/https://fairrentnyc.nycartc.com/author/fair-rent-nyc/",
+      "filename": "4e8afc23e8fdb47eefdba4ce13577eba0e6a5ec4e7a73e564f11c11e8c110785.html",
+      "sha256": "a957482308c655dc3746fe348a3a6ffe748f15dbd9ee7a37f3e2469070c64796",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20230323195103",
+      "original": "https://fairrentnyc.nycartc.com/call-city-council-fairrentnyc-script/",
+      "digest": "FZDASBDMIZAKEFAMDZLZOQ3AGDWASXLV",
+      "archiveUrl": "https://web.archive.org/web/20230323195103id_/https://fairrentnyc.nycartc.com/call-city-council-fairrentnyc-script/",
+      "filename": "3648710737738f97971cd88685eb0c3bf253fc091ea3781c3ebe8937d29c85c9.html",
+      "sha256": "cdfb0805f0489636ca5ea0cc1fcecaffda0986b729bacc0759ee4d42da9fa585",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20230323214831",
+      "original": "https://fairrentnyc.nycartc.com/city-council-sponsors-of-intro-93/",
+      "digest": "R7X7BWBWGIHBXEMWWWT2PIW2HQMGNSZ6",
+      "archiveUrl": "https://web.archive.org/web/20230323214831id_/https://fairrentnyc.nycartc.com/city-council-sponsors-of-intro-93/",
+      "filename": "473938829ebfb1faa460c302e57fdb3744e72487923d713d29233c803642f095.html",
+      "sha256": "8454fc89dc5901ec7d23ad6af099c0181853ea3e5d806832be6cb2d22279eb7e",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20230508232024",
+      "original": "https://fairrentnyc.nycartc.com/ghost/",
+      "digest": "VV4QZG7RBLYWEQLDWGL3MGZACITMLFPE",
+      "archiveUrl": "https://web.archive.org/web/20230508232024id_/https://fairrentnyc.nycartc.com/ghost/",
+      "filename": "ce680228a0fa529ce3c524cdbaa87e9de8b3909ce172ee7eaa9d83f3fc99d7d3.html",
+      "sha256": "91ca4c5657c4c6a2a4d9f153bc24421adbc7967cbbfd807fadcadd24b3d3ecb8",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20230323201205",
+      "original": "https://fairrentnyc.nycartc.com/join-form/",
+      "digest": "GSNLS2FILGY6K2FOGQ6KSKBB6OENBZAM",
+      "archiveUrl": "https://web.archive.org/web/20230323201205id_/https://fairrentnyc.nycartc.com/join-form/",
+      "filename": "4b6daab7196a53dfed3f32dae5c89b662fb6236a3c4b60aeab6ae37e88a8f65e.html",
+      "sha256": "684f1db3ca782c0c119bb1c98335972244276b14f8b9f78cfb3ad958e2a65ad0",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20260309002243",
+      "original": "https://fairrentnyc.nycartc.com/library/",
+      "digest": "7BMP26ZMMRCFHC5GKC3IAICKLVLDK3DG",
+      "archiveUrl": "https://web.archive.org/web/20260309002243id_/https://fairrentnyc.nycartc.com/library/",
+      "filename": "53115b7ad6fec4d6119516691856b977c1e84c3ed959d6afd59c8545ba3e99a4.html",
+      "sha256": "677ec81c10709c70abb0d9d7379eb00b977f2680fa353443536b57e89e1438ec",
+      "status": "recovered"
+    },
+    {
+      "timestamp": "20230323194749",
+      "original": "https://fairrentnyc.nycartc.com/what-is-commercial-rent-stabilization/",
+      "digest": "AETT2ZRUR5N3IQFGSSECDDD3B4RBSEJV",
+      "archiveUrl": "https://web.archive.org/web/20230323194749id_/https://fairrentnyc.nycartc.com/what-is-commercial-rent-stabilization/",
+      "filename": "fe7fd2e268760c08180ab84bcd6d9e8b87a1ceca1c2c5478b1025febf0b3e64e.html",
+      "sha256": "270e84b35c778339bfc2db5d559cba68284c756e1ff8fc1581130a60e81494a7",
+      "status": "recovered"
+    }
+  ]
+}

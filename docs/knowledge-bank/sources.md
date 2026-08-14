@@ -1,0 +1,168 @@
+# Source Basis
+
+This file names source categories that can support public-safe claims without
+publishing private source material.
+
+## Source Classes
+
+### Approved Resume
+
+Resume text Jamie has approved for public professional use.
+
+### Public Project Artifact
+
+Public websites, public records, public case-study pages, public coverage,
+public GitHub repositories, or public project URLs.
+
+Approved public artifact examples for this launch pass include:
+
+- NYC Artist Coalition public website.
+- NYC Artist Coalition supporters, Cabaret Law, Save NYC Spaces, and repeal
+  campaign pages.
+- Contemporary reporting from Gothamist, NPR, Bedford + Bowery, Mixmag, and
+  VICE.
+- Official New York City Council legislation and hearing records for the
+  Office of Nightlife, Cabaret Law repeal and testimony, M.A.R.C.H. reporting
+  and notice, Cultural Affairs testimony, and commercial-rent testimony.
+- The City-preserved NYC Artist Coalition CreateNYC submission and the final
+  CreateNYC cultural plan.
+- NYC Office of Nightlife annual reports documenting implementation of Local
+  Law 220 and the December 2023 replacement of M.A.R.C.H. with CURE.
+- NYC Government Publications Portal record for the first biannual M.A.R.C.H.
+  report under Local Law 220.
+- FairRentNYC public website.
+- Talks Not Raids public website.
+- Let NYC Dance public website.
+- Harry J. Epstein Company public website.
+- CallNYC public GitHub repository.
+- CallNYC archived Politico New York PDF.
+- KC Spaces Fund public GoFundMe page.
+- KC Spaces Fund public campaign domain.
+- NPR's 2016 credit for the Horse Lords "Truthers" video.
+- Make Us Visible and XR Ensemble records for "Claudette's Theatre on Wheels."
+- Wave Farm's BAPLab 2006 program and Artforum's event account.
+- The archived NTER CHNG project homepage and The Pitch's contemporary event
+  listing.
+- America: Now and Here's archived NTER CHNG and Kansas City launch records.
+- The Nerman Museum's America: Now and Here exhibition-context page.
+- The public AI Evals for Engineers and PMs completion certificate.
+
+The complete public-safe inventory of NYC Artist Coalition campaign press
+indexes lives in
+[projects/nycac-campaign-press-archive.md](projects/nycac-campaign-press-archive.md).
+Its 44 source-specific dispositions and bounded paraphrases live in
+[projects/nycac-campaign-press-readings.md](projects/nycac-campaign-press-readings.md).
+The readings preserve what an article reports or argues; campaign selection
+alone does not establish article accuracy, Jamie's individual role, or policy
+causation.
+
+The KC Town Hall social-corpus audit reconciles all 183 items in the surviving
+profile control: 142 account posts, 13 account replies, and 28 reposts. Its
+public-safe ledger retains classifications, posted destinations, public account
+identities from repost lists, media signals, status identifiers, and mutable
+reaction snapshots without reproducing post text, phone numbers, street
+addresses, session material, messages, or private analytics. See the
+[full-population production note](intake/2026-07-14-kctownhall-full-population-social-corpus.md).
+
+KCUR election guidance, Northeast News affordable-housing reporting, Curbed
+housing-policy reporting, and Kansas City Star reporting about Leon's Thriftway
+are retained as sources routed by the account. Their appearance establishes
+public circulation and mission context, not coverage of KC Town Hall, project
+authorship, partnership, adoption, or impact.
+
+The separate
+[2021 Kansas City Star investigation](https://www.kansascity.com/news/politics-government/article256377677.html)
+is independent coverage of KC Town Hall's proposed form and the contract status
+reported at publication. It does not establish the later withdrawal reason,
+funding receipt, construction, completion, or Jamie's individual role.
+
+### Public-Safe Archive Summary
+
+Aggregate or summarized knowledge derived from private records without exposing
+the private records, private paths, names, contact lists, raw transcripts,
+attendance records, private rows, screenshots, or correspondence.
+
+Protected archive support is represented only by public-safe metadata and an
+opaque locator ID. A protected source has no repository path or public URL and
+cannot render as a public citation. The July 2026 archive-production pass uses
+this pattern for CRS operating-memory and legislative-provenance artifacts, an
+approved resume, a bounded source-backed-memory proposal, and two NTER CHNG
+working artifacts. The NTER CHNG records preserve bounded installation-system,
+shared-credit, and attributed-intent observations while withholding participant
+phone numbers, message transcripts, family logistics, and raw working text.
+
+The Google Drive Shared Drive production pass uses the same pattern for a 196
+Artists Residency acceptance workflow, a Sunday Dinner operating-sheet schema,
+three visual-documentation leads, and a WOW List meeting-video lead. The two
+workflow artifacts can support bounded public practice claims without exposing
+their underlying records. The media and meeting leads remain unquoted and off
+public surfaces until rights, consent, credit, context, and editorial review
+are complete.
+
+The KC Town Hall field-practice pass uses protected source records for the 2019
+CCED proposal bundle, a KC Town Hall public-site export, a Cleveland Avenue
+social-page capture, and Jamie's participant-memory intake. The proposal is
+represented only through bounded page-level observations because its raw form
+contains financial, contact, credit, property, and other protected material.
+The site export is never published because it contains credentials, subscriber
+data, and private fields. The Cleveland Avenue source body did not materialize
+in this pass; protected OCR is context, not a recovered public citation.
+
+The public-safe
+[field-practice review](intake/2026-07-15-kcth-field-implementation-neighborhood-practice.md)
+records the evidence posture and research queue. It is an AI-assisted synthesis,
+not independent verification of participant memory.
+
+### NYC Artist Coalition Facebook Event Census
+
+The [public-safe 33-event census](../../apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json)
+and [archival-production report](projects/nyc-artist-coalition-facebook-events.md)
+preserve every event identity exposed by the authenticated Past Events index,
+one unresolved host-control slot, public event metadata, bounded response
+snapshots, selected source routes, and protected-link dispositions. Raw event
+bodies, participant identities, comments, meeting credentials, private working
+links, and authenticated-session state are excluded.
+
+This is complete disposition of the 34 displayed control slots, not a native
+Meta owner export or proof that no event was removed before capture. Facebook
+response labels are not attendance, unique people, reach, endorsement, or
+impact. Jamie's contribution is supported by his first-hand account plus
+selected contemporaneous corroboration; event-level authorship remains open.
+
+### AI-Assisted Archival Review
+
+Evidence-based notes generated by AI after Jamie reviews local/private archive
+materials. These may support internal claim development only when the resulting
+public claim is independently bounded, source-labeled, and stripped of private
+paths, raw correspondence, lists, payment records, credentials, and sensitive
+personal or financial material.
+
+AI-assisted archival review is not a human collaborator testimonial.
+
+### Firsthand / Collaborator Context
+
+Known through Jamie or collaborators, but not yet necessarily approved for
+stronger public publication.
+
+### Approval Pending
+
+Potentially usable, but do not project to public pages until Jamie or
+collaborators approve.
+
+## Prohibited Source Material In This Repo
+
+- raw transcripts;
+- private correspondence;
+- legal-review materials;
+- private coalition notes;
+- raw community records;
+- guest lists;
+- resident records;
+- client-private documents;
+- internal analytics;
+- credentials;
+- unapproved screenshots;
+- unapproved quotes;
+- unapproved photos;
+- private financial records;
+- private personal records.

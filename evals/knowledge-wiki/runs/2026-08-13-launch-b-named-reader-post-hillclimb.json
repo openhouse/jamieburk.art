@@ -1,0 +1,258 @@
+{
+  "id": "launch-b-named-reader-post-hillclimb-2026-08-13",
+  "schemaVersion": 1,
+  "candidateCommit": "f8d31b0bfb4b3ccb1dda1c26cba00d18c61ab9b2",
+  "candidateBranch": "feature/launch-2026-08-13-02-B",
+  "publicOrigin": "https://staging-b.jamieburk.art",
+  "evaluatedAt": "2026-08-13",
+  "actualPeopleParticipated": false,
+  "accessBoundary": "public-web-only",
+  "evaluationMethod": {
+    "fictionalizedPublicSourceLenses": true,
+    "separateTaskPerNamedReader": true,
+    "sequential": true,
+    "independent": true,
+    "priorResultsProvided": false,
+    "repositoryAccessProvided": false,
+    "privateContextProvided": false
+  },
+  "availability": {
+    "initialStatus": "pass",
+    "finalStatus": "pass",
+    "evidence": "An independent public-browser check loaded all ten requested routes at desktop and mobile. Exact-commit verification and a final health request returned HTTP 200 with noindex headers.",
+    "gate": "pass"
+  },
+  "results": [
+    {
+      "pairId": "codepath-zack-parker",
+      "readerId": "reader.zack-parker",
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "modeledVerdict": "fail",
+      "acceptanceStatement": "Under this fictionalized public-source lens, I would not yet hire this person for this job.",
+      "pagesInspected": [
+        "https://staging-b.jamieburk.art/",
+        "https://staging-b.jamieburk.art/work/technical-operations",
+        "https://staging-b.jamieburk.art/work/harry-j-epstein",
+        "https://staging-b.jamieburk.art/work/wowlist",
+        "https://staging-b.jamieburk.art/work/callnyc",
+        "https://staging-b.jamieburk.art/lab/source-backed-team-memory",
+        "https://staging-b.jamieburk.art/resume"
+      ],
+      "strongestSignals": [
+        "Shipped technical-product work is visible through WOWList and CallNYC.",
+        "HJE shows incremental delivery and durable implementation stewardship.",
+        "Evidence boundaries and operating judgment are unusually clear."
+      ],
+      "gateBlockers": [
+        "No inspectable bug-pipeline and fix-verification lifecycle.",
+        "No diagnostic or automated-regression-test specimen.",
+        "AI practice is not yet a measured engineering or QA automation."
+      ],
+      "constructiveCritique": "Publish one truthful issue-to-regression lifecycle and one measured AI-enabled operating loop if source evidence exists."
+    },
+    {
+      "pairId": "codepath-chris-coleman",
+      "readerId": "reader.chris-coleman",
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "modeledVerdict": "fail",
+      "acceptanceStatement": "Under this fictionalized public-source lens, I would not yet hire this person for this job.",
+      "pagesInspected": [
+        "https://staging-b.jamieburk.art/",
+        "https://staging-b.jamieburk.art/work/technical-operations",
+        "https://staging-b.jamieburk.art/work/harry-j-epstein",
+        "https://staging-b.jamieburk.art/work/callnyc",
+        "https://staging-b.jamieburk.art/work/wowlist",
+        "https://staging-b.jamieburk.art/lab/source-backed-team-memory",
+        "https://staging-b.jamieburk.art/about"
+      ],
+      "strongestSignals": [
+        "Ambiguity is repeatedly translated into proportionate operating structure.",
+        "Technical fluency is connected to shipped public products.",
+        "Documentation and human-review judgment are strong."
+      ],
+      "gateBlockers": [
+        "Hands-on engineering QA ownership is not demonstrated.",
+        "Operational AI impact remains under-evidenced.",
+        "The education and learner-outcome connection is indirect."
+      ],
+      "constructiveCritique": "Add a supported engineering-quality mini-case and a truthful connection between Jamie's public-serving practice and CodePath's learner mission."
+    },
+    {
+      "pairId": "aclu-charizma-williams",
+      "readerId": "reader.charizma-williams",
+      "opportunityId": "opportunity.aclu.senior-project-manager.8620968002",
+      "modeledVerdict": "fail",
+      "acceptanceStatement": "Under this fictionalized public-source lens, I would not yet hire this person for this job.",
+      "pagesInspected": [
+        "https://staging-b.jamieburk.art/",
+        "https://staging-b.jamieburk.art/work/technical-operations",
+        "https://staging-b.jamieburk.art/work/harry-j-epstein",
+        "https://staging-b.jamieburk.art/work/fair-rent-nyc",
+        "https://staging-b.jamieburk.art/work/kc-town-hall",
+        "https://staging-b.jamieburk.art/about",
+        "https://staging-b.jamieburk.art/resume"
+      ],
+      "strongestSignals": [
+        "Mission alignment and confidentiality judgment are visible.",
+        "Coalition work shows sustained multi-stakeholder coordination.",
+        "HJE shows requirements, releases, verification, and handoffs."
+      ],
+      "gateBlockers": [
+        "Direct budget and resource-allocation authority is not established.",
+        "Organizational training design and adoption are not demonstrated.",
+        "No enterprise-scale controls and closeout case is inspectable."
+      ],
+      "constructiveCritique": "Publish one real public-safe control packet covering scope, schedule, resources, change, training, and closeout if the governed record supports it."
+    },
+    {
+      "pairId": "benepass-aileen-palmer",
+      "readerId": "reader.aileen-palmer",
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "modeledVerdict": "fail",
+      "acceptanceStatement": "Under this fictionalized public-source lens, I would not yet hire this person for this job.",
+      "pagesInspected": [
+        "https://staging-b.jamieburk.art/",
+        "https://staging-b.jamieburk.art/work/technical-operations",
+        "https://staging-b.jamieburk.art/work/harry-j-epstein",
+        "https://staging-b.jamieburk.art/work/wowlist",
+        "https://staging-b.jamieburk.art/work/fair-rent-nyc",
+        "https://staging-b.jamieburk.art/about",
+        "https://staging-b.jamieburk.art/resume"
+      ],
+      "strongestSignals": [
+        "Long-running technical and operational ownership is credible.",
+        "WOWList shows a real product at meaningful historical scale.",
+        "FairRentNYC shows high-context operating memory and coordination."
+      ],
+      "gateBlockers": [
+        "No complete sprint-based launch-readiness and go/no-go trace.",
+        "No quantified Ops-to-Product prioritization example.",
+        "B2B SaaS customer-operations scope remains transferable rather than direct."
+      ],
+      "constructiveCritique": "Show one launch plan through post-launch learning and one operational-data tradeoff grounded in a real decision."
+    },
+    {
+      "pairId": "benepass-jaclyn-chen",
+      "readerId": "reader.jaclyn-chen",
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "modeledVerdict": "fail",
+      "acceptanceStatement": "Under this fictionalized public-source lens, I would not yet hire this person for this job.",
+      "pagesInspected": [
+        "https://staging-b.jamieburk.art/",
+        "https://staging-b.jamieburk.art/work/technical-operations",
+        "https://staging-b.jamieburk.art/work/harry-j-epstein",
+        "https://staging-b.jamieburk.art/work/wowlist",
+        "https://staging-b.jamieburk.art/resume"
+      ],
+      "strongestSignals": [
+        "The portfolio connects technical systems with user empathy.",
+        "HJE demonstrates durable commercial stewardship.",
+        "WOWList demonstrates product building and adoption."
+      ],
+      "gateBlockers": [
+        "No named recurring Product and Engineering sprint partnership.",
+        "No inspectable single-threaded launch-readiness case.",
+        "No quantified Ops roadmap and business-outcome prioritization trace."
+      ],
+      "constructiveCritique": "Turn one supported launch into an end-to-end case with team, dependencies, readiness call, metrics, and learning."
+    },
+    {
+      "pairId": "oti-product-luke-farrell",
+      "readerId": "reader.luke-farrell",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "modeledVerdict": "fail",
+      "acceptanceStatement": "Under this fictionalized public-source lens, I would not yet hire this person for this job.",
+      "pagesInspected": [
+        "https://staging-b.jamieburk.art/",
+        "https://staging-b.jamieburk.art/work/technical-operations",
+        "https://staging-b.jamieburk.art/work/callnyc",
+        "https://staging-b.jamieburk.art/work/fair-rent-nyc",
+        "https://staging-b.jamieburk.art/work/wowlist",
+        "https://staging-b.jamieburk.art/resume"
+      ],
+      "strongestSignals": [
+        "CallNYC is a bounded resident-facing civic product.",
+        "WOWList shows real product operation and historical adoption.",
+        "FairRentNYC shows policy and stakeholder complexity."
+      ],
+      "gateBlockers": [
+        "No complete Jamie-owned resident discovery-to-learning chain.",
+        "Accessibility, privacy, instrumentation, and post-launch outcome decisions are incomplete.",
+        "Senior IT Architect eligibility remains unresolved."
+      ],
+      "constructiveCritique": "Compose one complete product dossier with decision authority, research, V1 tradeoffs, cross-functional delivery, rollout, outcomes, and learning."
+    },
+    {
+      "pairId": "oti-product-lisa-gelobter",
+      "readerId": "reader.lisa-gelobter",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "modeledVerdict": "fail",
+      "acceptanceStatement": "Under this fictionalized public-source lens, I would not yet hire this person for this job.",
+      "pagesInspected": [
+        "https://staging-b.jamieburk.art/",
+        "https://staging-b.jamieburk.art/work/technical-operations",
+        "https://staging-b.jamieburk.art/work/callnyc",
+        "https://staging-b.jamieburk.art/work/fair-rent-nyc",
+        "https://staging-b.jamieburk.art/work/wowlist",
+        "https://staging-b.jamieburk.art/resume"
+      ],
+      "strongestSignals": [
+        "CallNYC shows resident-centered service translation.",
+        "WOWList shows public-facing product operation and adoption.",
+        "The portfolio demonstrates accountable evidence and collective credit."
+      ],
+      "gateBlockers": [
+        "Accountable senior product ownership is not yet demonstrated end to end.",
+        "Research, accessibility, outcome measurement, and team authority remain incomplete.",
+        "The civil-service qualification path is unresolved."
+      ],
+      "constructiveCritique": "Lead with a source-backed product decision trail rather than asking the reader to assemble one across several projects."
+    },
+    {
+      "pairId": "oti-operations-lisa-gelobter",
+      "readerId": "reader.lisa-gelobter",
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "modeledVerdict": "fail",
+      "acceptanceStatement": "Under this fictionalized public-source lens, I would not yet hire this person for a future materially similar role.",
+      "pagesInspected": [
+        "https://staging-b.jamieburk.art/",
+        "https://staging-b.jamieburk.art/work/technical-operations",
+        "https://staging-b.jamieburk.art/work/harry-j-epstein",
+        "https://staging-b.jamieburk.art/work/fair-rent-nyc",
+        "https://staging-b.jamieburk.art/work/kc-town-hall",
+        "https://staging-b.jamieburk.art/resume"
+      ],
+      "strongestSignals": [
+        "Technical Operations is closely aligned and immediately legible.",
+        "Several cases demonstrate continuity, coordination, and durable handoffs.",
+        "Public-sector judgment and long-horizon stewardship are credible."
+      ],
+      "gateBlockers": [
+        "Technical hiring and structured new-hire ramp are not demonstrated.",
+        "No live multi-project operating packet shows blocker removal and retrospectives.",
+        "Team-health and throughput improvement metrics are absent."
+      ],
+      "constructiveCritique": "Publish one real operating-system case with team topology, cadence, blocker removal, onboarding, metrics, and retrospective change.",
+      "benchmarkBoundary": "The vacancy expired August 7, 2026. This result applies only to a future materially similar role."
+    }
+  ],
+  "browserEvidence": {
+    "independent": true,
+    "desktopViewport": "1440x1000",
+    "mobileViewport": "390x844",
+    "routesLoaded": 10,
+    "overall": "pass",
+    "observations": [
+      "Role and value are clear within fifteen seconds.",
+      "The decision-action-artifact-result order materially reduces reader effort.",
+      "Mobile navigation exposes an explicit Close menu label.",
+      "All checked case-study images loaded with nonzero dimensions.",
+      "No requested route overflowed horizontally.",
+      "Remaining burden is long mobile case pages and governance metadata competing with the portfolio story."
+    ]
+  },
+  "requiredPairCount": 8,
+  "passedPairCount": 0,
+  "overall": "fail",
+  "disclaimer": "These are modeled fictionalized public-source judgments, not the named people's views, participation, endorsements, or hiring decisions."
+}
