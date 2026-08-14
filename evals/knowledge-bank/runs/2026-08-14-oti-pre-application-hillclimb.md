@@ -15,9 +15,10 @@ instrumentation, and stewardship. The public case study did not project that
 conclusion, and the homepage fast path did not link directly to WOW List.
 
 The strict named-public-reader run remains `0/7`: the latest independent reader
-artifacts cannot be rebound to a changed candidate, the OTI civil-service screen
-remains unresolved, and the expired OTI Technical Operations role cannot pass as
-a current opening. This bounded climb does not rewrite those results.
+panel was rerun sequentially against the exact noindex staging candidate. The OTI
+civil-service screen remains unresolved, and the expired OTI Technical Operations
+role cannot pass as a current opening. This bounded climb does not rewrite those
+results.
 
 ## First bounded change
 
@@ -88,6 +89,11 @@ fingerprint.
 - A compatible production-dependency lockfile refresh moved the resolved Next.js,
   PostCSS, Sharp, Nano ID, and js-yaml versions beyond the advisories reported at
   baseline; `npm audit --omit=dev` then reported `0` known vulnerabilities.
+- Six fresh public-web-only named-reader tasks evaluated seven opportunity gates
+  sequentially against the noindex staging candidate. The strict result remains
+  `0/7`; the OTI Product Manager reader recognized the stronger WOW List product
+  evidence while retaining the unresolved civil-service and complete product-loop
+  blockers.
 
 ## Boundaries retained
 

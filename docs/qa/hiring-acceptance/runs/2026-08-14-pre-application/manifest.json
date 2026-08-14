@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "suiteId": "named-public-hiring-readers-2026-08-13",
+  "runId": "named-readers-pre-application-399ae16f7",
+  "evaluatedGitRev": "399ae16f7fc738f467bd51ed6ebb506b659c52b2",
+  "evaluatedUrl": "https://staging-a.jamieburk.art",
+  "portfolioSnapshotHash": "35f2154b1d37f7e6063e5cbda97fb1695f93ff88f83800777dd5fdfe385e1d22",
+  "runDate": "2026-08-14",
+  "method": "Six fresh sequential sandboxed public-web-only tasks, one separate task per unique named person; the Lisa Gelobter lens returned separate decisions for the live OTI product role and expired OTI operations watch pattern. Judges received no repository, Wiki, private evidence, or prior judge output. Two non-contract fail statements were transparently normalized to the suite's required wording; verdicts and blockers were not changed.",
+  "uniqueReaderCount": 6,
+  "evaluationCount": 7,
+  "passCount": 0,
+  "failCount": 7,
+  "suiteVerdict": "fail",
+  "allMustPass": true,
+  "results": [
+    {
+      "gateId": "gate.aclu-national-campaigns.deirdre-schifeling",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.91,
+      "primaryBlocker": "The public evidence does not establish ownership of national affiliate-scale campaign operations, especially budget and procurement responsibility, portfolio schedules and metrics, and executive-ready internal communications.",
+      "gapClass": "senior-national-campaign-operations-evidence-gap"
+    },
+    {
+      "gateId": "gate.codepath-ai-operations.quinton-ma",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.97,
+      "primaryBlocker": "No public case proves a recent professional LLM workflow or agent personally shipped with tools or APIs, production quality gates, adoption, handoff, and measured user outcome.",
+      "gapClass": "recent-professional-ai-agent-shipping-unverified"
+    },
+    {
+      "gateId": "gate.codepath-ai-operations.brian-madigan",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.95,
+      "primaryBlocker": "No public evidence demonstrates sustained production LLM or agent workflows with nontechnical teams, changed behavior, reusable capability transfer, and measured time or quality gains.",
+      "gapClass": "production-ai-adoption-and-measured-change-unverified"
+    },
+    {
+      "gateId": "gate.codepath-engineering.zack-parker",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.96,
+      "primaryBlocker": "The portfolio does not prove a role-critical hands-on QA loop from bug reproduction and trace interpretation through prioritization, authored automated testing, fix verification, and regression closure.",
+      "gapClass": "role-critical-qa-experience-unverified"
+    },
+    {
+      "gateId": "gate.codepath-engineering.chris-coleman",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.93,
+      "primaryBlocker": "The public record does not establish repeated hands-on ownership of a production bug-and-quality pipeline or measurable reliability outcomes.",
+      "gapClass": "hands-on-quality-and-regression-evidence-gap"
+    },
+    {
+      "gateId": "gate.oti-senior-product.lisa-gelobter",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.96,
+      "primaryBlocker": "Senior IT Architect civil-service eligibility remains unresolved, and the public portfolio does not yet expose one complete resident-facing discovery, prioritization, MVP, accessibility, privacy, launch, instrumentation, learning, and decision-authority chain.",
+      "gapClass": "civil-service-and-complete-senior-product-proof-unresolved"
+    },
+    {
+      "gateId": "gate.oti-technical-operations.lisa-gelobter",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.99,
+      "primaryBlocker": "The official vacancy is expired and cannot pass as a current opportunity.",
+      "gapClass": "role-closed"
+    }
+  ],
+  "disclaimer": "Synthetic public-context evaluations only; not the named people's participation, opinions, endorsements, or actual hiring decisions."
+}

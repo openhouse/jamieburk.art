@@ -1,12 +1,12 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `1c08247b6e272976a71133a81bf22d4606017c2f`
+**Candidate commit:** `399ae16f7fc738f467bd51ed6ebb506b659c52b2`
 **Portfolio snapshot:** `35f2154b1d37f7e6063e5cbda97fb1695f93ff88f83800777dd5fdfe385e1d22`
 **Role-context hash:** `fa2bbf11462a256ddf7358d40c1e5f4a34786b2e7439777dcc02a3fd82f8315d`
 **Reader-context hash:** `177f555134dc0c18066adfd1eaa94edf245f8cd357e5fdcaa62cdfcab2650580`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
-**Candidate paths clean:** no
+**Candidate paths clean:** yes
 
 > Deterministic baseline only. This is not an interview prediction, a named person's opinion, or a human reader study.
 

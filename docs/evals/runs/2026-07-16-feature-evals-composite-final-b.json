@@ -1,35 +1,133 @@
 {
   "runVersion": 3,
-  "judgeId": "independent-codex-oti-composition-oriole-2026-08-14",
+  "judgeId": "independent-public-composition-cedar",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
   "rubricSha256": "3fe95a2b9c1f22cdb7d95c3168af73e8eb659900ffd258cd65ebb6feb06e44c1",
-  "candidateFingerprint": "90966386fb5fb2759624a4949684b1b990c7d8f33eacbb65df2a417c776303dc",
+  "candidateFingerprint": "ca888c0a7e2aba61b083bb912633545cf1895f43ada424c4b06992bd12f07542",
   "verdict": "accepted",
   "scores": [
-    {"criterionId":"COMP-001","score":4,"pass":true,"evidence":["The rubric and register enumerate the complete frozen A-N family, all objects remain available, and the writable integration branch and develop base are explicit."],"rationale":"The frozen family is complete and separated from the integration branch."},
-    {"criterionId":"COMP-002","score":4,"pass":true,"evidence":["Fourteen unique decisions have valid dispositions, substantive rationales, existing destinations, verification IDs, and a selective public-projection decision."],"rationale":"The integration choices are inspectable and operationally grounded."},
-    {"criterionId":"COMP-003","score":4,"pass":true,"evidence":["All canonical architecture files exist, forbidden parallel roots are absent, the public registry is bounded, and /proofs, /knowledge-bank, and /public-claims return the intentional 404 page."],"rationale":"One canonical model supports bounded public projections rather than a public claims database."},
-    {"criterionId":"COMP-004","score":4,"pass":true,"evidence":["Replay, duplicate preservation, collision rejection, and lifecycle-state queries pass; held claims, inquiries, corrections, and zero orphan sources remain visible."],"rationale":"Intake is append-safe and unresolved or corrective states remain inspectable."},
-    {"criterionId":"COMP-005","score":4,"pass":true,"evidence":["Knowledge and citation validation pass across 310 sources, 113 claims, 35 agency relations, and four corrections; generated Wiki outputs are current and public copy preserves collective credit and protected boundaries."],"rationale":"Sources, claims, agency, population limits, correction history, and public boundaries remain coherent."},
-    {"criterionId":"COMP-006","score":4,"pass":true,"evidence":["Home and Technical Operations lower reader burden; About preserves the artistic, civic, technical, relational, and social through-line; WOW List and Sunday Dinner/196 expose recursive product and participation loops; retained responsive captures and live mobile checks remain coherent; held claims stay off public database routes."],"rationale":"OTI-adjacent fit, inhabited systems, recursive learning, Jamie's agency, collective credit, and responsive composition are all legible."},
-    {"criterionId":"COMP-007","score":4,"pass":true,"evidence":["Human corroboration, collective review, hiring usability, job-funnel evidence, and external validity remain explicitly open with anti-gaming rules and projection boundaries."],"rationale":"The candidate does not convert internal evaluation or withheld evidence into human validation."},
-    {"criterionId":"COMP-008","score":4,"pass":true,"evidence":["The rubric and dependency digests match; the contract forbids self-grading, not-observed passes, and blocker compensation; mutation coverage and currentness checks pass."],"rationale":"The frozen semantic contract is fail-closed and resistant to the tested gaming strategies."},
-    {"criterionId":"COMP-009","score":4,"pass":true,"evidence":["The commission, independent enumeration, and review all bind to candidate 90966386fb5fb2759624a4949684b1b990c7d8f33eacbb65df2a417c776303dc across 1,565 files and the frozen rubric; the peer receipt was intentionally unobserved and convergence remains the deterministic aggregator's task."],"rationale":"This receipt is a complete independent exact-candidate judgment under a sound stopping contract."}
+    {
+      "criterionId": "COMP-001",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        ".agents/evals/feature-evals-composite.json records feature/evals-A through feature/evals-N exactly once with frozen heads.",
+        "The rubric names feature/knowledge-h as the source branch, develop as the pull-request base, and refs/remotes/origin as the required reference namespace.",
+        "docs/integration/feature-evals-composite.json states that frozen branches are read-only reference implementations."
+      ],
+      "rationale": "The permitted governance artifacts provide a complete, internally consistent fourteen-branch inventory and explicitly prohibit treating the frozen branches as writable integration targets."
+    },
+    {
+      "criterionId": "COMP-002",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "docs/integration/feature-evals-composite.json contains one decision for each of the fourteen frozen branches.",
+        "Every decision includes a rationale, destinationPaths, and verificationIds.",
+        "The register explicitly retains the H-derived public composition and explains why architecture improvements do not justify indiscriminate additional public copy."
+      ],
+      "rationale": "The integration decisions are inspectable, branch-complete, destination-specific, and explicit about both projection and restraint."
+    },
+    {
+      "criterionId": "COMP-003",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The frozen rubric names the H-derived schema, records, public registry, historical knowledge, agency graph, lifecycle operations, public projection, and proof layer as canonical.",
+        "The rubric explicitly forbids the three named parallel lifecycle files.",
+        "The inspected public pages render selective Claim and Cite projections with public source notes and boundaries rather than exposing a knowledge-bank interface."
+      ],
+      "rationale": "On the public review surface, the application behaves as a selective redacted projection and shows no parallel public architecture or protected-record browser. Source-tree enforcement remains the separate source-integrity reviewer's responsibility and is not fabricated here."
+    },
+    {
+      "criterionId": "COMP-004",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The feature/evals-K decision explicitly names append, collision, duplicate-preservation, and lifecycle-query behavior adapted into the canonical lifecycle operations.",
+        "The feature/evals-G and feature/evals-N decisions explicitly retain held-knowledge progression, unresolved research, and held-claim queries.",
+        "The register names canonical destination files and COMP-004 verification coverage."
+      ],
+      "rationale": "The allowed governance evidence completely specifies the append-safe lifecycle contract and its canonical destinations. This public-composition holdout does not claim to have rerun repository-mechanical tests assigned to the source-integrity holdout."
+    },
+    {
+      "criterionId": "COMP-005",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "Rendered case studies provide numbered source notes with explicit does-not-establish boundaries.",
+        "WOWList preserves Jamie and Richard Caceres as co-builders and distinguishes historical production counts from current activity.",
+        "FairRentNYC repeatedly distinguishes Jamie's direct work from collective campaign and policy outcomes.",
+        "Population language includes capture dates, denominators, retrievability limits, and recovery gaps without presenting platform signals as attendance, endorsement, causality, or complete exports."
+      ],
+      "rationale": "The public evidence maintains source limits, evidence roles, agency distinctions, collective credit, and population boundaries while still making Jamie's supported actions legible."
+    },
+    {
+      "criterionId": "COMP-006",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The homepage leads with a clear role, supported operating proposition, fast role-fit route, selected work, and a concise Listen, Map, Build, Document, Transfer sequence.",
+        "The About page explicitly connects artistic, civic, technical, relational, and social practice under Systems people can inhabit.",
+        "The About page reconstructs relationships, model, interface and use, learning, revision, continuity, and handoff across three current systems loops.",
+        "Technical Operations and the case studies name Jamie's actions and usable results while preserving collaborators, scope limits, and contribution language.",
+        "Desktop and mobile captures are legible, responsive, and match their recorded SHA-256 values."
+      ],
+      "rationale": "The site is a purposeful hiring-facing composition rather than a claims mirror. Jamie is visible without sole-credit inflation, the artistic and relational lineage remains intact, and the recursive systems method is reconstructable across multiple public examples."
+    },
+    {
+      "criterionId": "COMP-007",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The named-reader manifest honestly records 0 passes and 7 failures with specific blocker and gap classifications.",
+        "The named-reader suite prohibits converting potential, missing experience, uncertain eligibility, expired roles, or unknown reporting relationships into passes.",
+        "The WOWList product-fit record keeps civil-service eligibility, accessibility, security, government responsibilities, and measurable resident outcomes open through explicit boundaries, anti-claims, and a research inquiry.",
+        "The integration register states that the governed blind-spot controls retain evidence requirements, anti-gaming rules, next actions, and projection boundaries."
+      ],
+      "rationale": "The 0/7 result is preserved as an actionable readiness blocker rather than concealed or synthesized into positive evidence. It does not invalidate the quality of the public composition, but it must remain open until the named evidence is genuinely supplied."
+    },
+    {
+      "criterionId": "COMP-008",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The supplied rubric digest exactly matches the frozen rubric's rubric_sha256.",
+        "The rubric separately binds the base suite, integration register, blind-spot controls, and source-branch namespace.",
+        "The rubric prohibits optimizer self-grading, prohibits not-observed passes, requires blocking invariants, and enumerates the mutation classes that must be rejected.",
+        "The register preserves explicit destination and verification records instead of decorative branch summaries."
+      ],
+      "rationale": "The semantic governance contract is frozen, digest-bound, grader-separated, and explicit about anti-gaming invariants. Execution of repository mutation tests belongs to the separate source-integrity review and is not asserted by this public reviewer."
+    },
+    {
+      "criterionId": "COMP-009",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "This judgment is bound to candidate fingerprint ca888c0a7e2aba61b083bb912633545cf1895f43ada424c4b06992bd12f07542 and rubric digest 3fe95a2b9c1f22cdb7d95c3168af73e8eb659900ffd258cd65ebb6feb06e44c1.",
+        "The review packet identifies 1566 candidate files under the complete-source-tree fingerprint policy.",
+        "The authorized staging routes returned HTTP 200 and noindex, nofollow headers.",
+        "The permitted QA reports record 56 responsive route and viewport rows with no non-success responses, accessibility violations, overflow, broken images, or failed requests.",
+        "The governance contract keeps production deployment, indexing, collaborator-sensitive material, and Jamie approval as unresolved human gates."
+      ],
+      "rationale": "This independently commissioned public-composition judgment accepts the exact candidate. Pairing it with a second independently commissioned judgment, computing judgmentSha256, and confirming deterministic source integrity are orchestration responsibilities; this review neither inspected nor relied on another holdout."
+    }
   ],
   "notObserved": [],
   "findings": [
-    "No blocking public-composition, governance, route, lifecycle, responsive-layout, or protected-boundary failure was observed.",
-    "The OTI fit is communicated through broadly reusable Product Operations and Implementation proof; a recruiter still makes the final organization-specific connection.",
-    "Human corroboration, collective review, hiring usability, job-funnel outcomes, external validity, production approval, deployment, and indexing remain open.",
-    "The peer receipt was not inspected; deterministic aggregation must establish exact-candidate convergence."
+    "The public site presents a coherent technical-project-management and product-operations identity while retaining civic, artistic, relational, and social continuity.",
+    "Claims are unusually inspectable for a portfolio: citations, source limits, capture boundaries, collective credit, archival status, and protected-data exclusions remain visible.",
+    "The named-reader result remains 0 of 7. Acceptance here is a public-composition judgment, not a claim that any named hiring gate, eligibility screen, or role-specific evidence gap has passed.",
+    "Staging is healthy and intentionally non-indexable; production deployment and indexing remain human decisions.",
+    "Repository-mechanical implementation and test execution were deliberately left to the separate source-integrity holdout."
   ],
-  "recommendation": "Accept this exact candidate for composite convergence and staging review; preserve the selective composition and safety boundaries, and leave production and indexing to Jamie's explicit approval.",
+  "recommendation": "Accept this exact candidate for the public-composition half of the composite holdout. Preserve the 0/7 named-reader blocker, keep staging noindex, require the separate source-integrity acceptance and second exact-candidate holdout before stopping, and retain Jamie's production and indexing approval gate.",
   "publicReview": {
     "provider": "independent-codex-review",
-    "reviewerLabel": "oti-composite-reader-oriole",
-    "reviewedAt": "2026-08-14T13:00:46-04:00",
+    "reviewerLabel": "public-composition-cedar",
+    "reviewedAt": "2026-08-14T18:02:46Z",
     "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted.",
-    "judgmentSha256": "4b90f7ab3567255f0a20a38ba8a9b60344ecb8f8473f42aa14a46592b0fc2397"
+    "judgmentSha256": "3e35decc3653baf0cc7acfa654284f1b33d53afd0cbe82838f86819a6941d69f"
   }
 }
