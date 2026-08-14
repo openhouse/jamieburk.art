@@ -1,14 +1,16 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Layout C homepage East River occurrence
 
-**Source commit:** `399ae16f7fc738f467bd51ed6ebb506b659c52b2`
-**Generation time:** 2026-08-14T13:09:03-04:00
-**Source fingerprint:** `9beb454fa76a5f7b9524733fe196ebdc58182ffab37d874da32db10d0a0fbf22`
+**Source commit:** `175cb6038dc4d3c6b7b97b2d44979adaf371e4b3`
+**Generation time:** 2026-08-14T15:45:33-04:00
+**Source fingerprint:** `18e8a7729f280335b1c46944b8c52fa69a69860616e59c0a6e1492047c62b806`
 
 - [East River beneath the Manhattan Bridge, 2022](../../assets/photographs/east-river-manhattan-bridge-2022.md) - `projected_to` (frontmatter)
 - [Add Elana Gordon's credit to the East River homepage occurrence](../../corrections/east-river-credit-2026-07.md) - `related_to` (frontmatter)
 - [Select the East River photograph for the Layout C homepage](../../decisions/photography/layout-c-home-east-river-v1.md) - `related_to` (frontmatter)
 - [Narrow the pre-launch public photo field to fully bound occurrences](../../decisions/photography/pre-launch-rights-narrowing-2026-07-28.md) - `projected_to` (frontmatter)
+- [August 2026 launch-candidate photographic edition](../../projections/photography/edition-launch-2026-08.md) - `prose_link` (markdown)
+- [August 2026 launch-candidate photographic edition](../../projections/photography/edition-launch-2026-08.md) - `related_to` (frontmatter)
 - [Layout C photographic portfolio edition](../../projections/photography/edition-layout-c-2026-07.md) - `related_to` (frontmatter)
 - [Photography knowledge loop](../../indexes/photography.md) - `prose_link` (markdown)
 - [Photography knowledge loop](../../indexes/photography.md) - `related_to` (frontmatter)

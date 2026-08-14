@@ -1,13 +1,14 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to KC Town Hall fieldwork and proposal visual set
 
-**Source commit:** `399ae16f7fc738f467bd51ed6ebb506b659c52b2`
-**Generation time:** 2026-08-14T13:09:03-04:00
-**Source fingerprint:** `9beb454fa76a5f7b9524733fe196ebdc58182ffab37d874da32db10d0a0fbf22`
+**Source commit:** `175cb6038dc4d3c6b7b97b2d44979adaf371e4b3`
+**Generation time:** 2026-08-14T15:45:33-04:00
+**Source fingerprint:** `18e8a7729f280335b1c46944b8c52fa69a69860616e59c0a6e1492047c62b806`
 
 - [KC Town Hall ten-minute-walk proposal map](../../assets/graphics/kc-town-hall-walkshed-2019.md) - `related_to` (frontmatter)
 - [Jamie at the KC Town Hall worksite](../../assets/photographs/kc-town-hall-hard-hat-worksite.md) - `related_to` (frontmatter)
 - [Kansas City Star aerial view of KC Town Hall](../../assets/photographs/kc-town-hall-kc-star-aerial-2021.md) - `related_to` (frontmatter)
+- [KC Town Hall roof work, 2019](../../assets/photographs/kc-town-hall-roof-work-2019.md) - `related_to` (frontmatter)
 - [Jamie and a collaborator inside KC Town Hall](../../assets/photographs/kc-town-hall-stewardship-interior.md) - `related_to` (frontmatter)
 - [Photography knowledge loop](../../indexes/photography.md) - `prose_link` (markdown)
 - [Photography knowledge loop](../../indexes/photography.md) - `related_to` (frontmatter)
