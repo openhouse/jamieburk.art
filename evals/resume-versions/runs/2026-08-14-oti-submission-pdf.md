@@ -1,7 +1,7 @@
 # OTI Senior Product Manager submission PDF hill climb
 
-Date: 2026-08-14  
-Job ID: 782366  
+Date: 2026-08-14
+Job ID: 782366
 Resume source: `resume-versions/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume.md`
 
 ## Outcome
