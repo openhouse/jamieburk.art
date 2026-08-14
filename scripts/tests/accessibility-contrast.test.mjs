@@ -74,4 +74,14 @@ test("the resume action keeps an inverse foreground on its blue panel", () => {
 
   assert.match(resume, /variant="inverse"/);
   assert.match(button, /inverse:[\s\S]*border-jb-paper[\s\S]*text-jb-paper[\s\S]*hover:bg-jb-paper[\s\S]*hover:text-jb-blue/);
+  assert.match(button, /inverse:[\s\S]*focus-visible:border-jb-paper[\s\S]*focus-visible:bg-jb-blue[\s\S]*focus-visible:text-jb-paper[\s\S]*focus-visible:outline-jb-paper/);
+});
+
+test("the skip link is immediately visible on focus and transfers focus to main", () => {
+  const styles = readFileSync(path.join(repoRoot, "apps/www/src/app/globals.css"), "utf8");
+  const layout = readFileSync(path.join(repoRoot, "apps/www/src/app/layout.tsx"), "utf8");
+
+  assert.match(styles, /\.skip-link\s*\{[^}]*top:\s*-10rem;[^}]*transition:\s*none;/s);
+  assert.match(styles, /\.skip-link:focus(?:-visible)?\s*\{[^}]*top:\s*1rem;/s);
+  assert.match(layout, /<main id="main" tabIndex=\{-1\}>/);
 });
