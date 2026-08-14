@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "id": "resume-hiring-reader-portfolio-2026-08-14",
+  "evaluatedAt": "2026-08-14T17:30:00-04:00",
+  "readerSuitePath": "evals/knowledge-wiki/named-hiring-readers.json",
+  "currentRunPath": "evals/resumes/runs/2026-08-14-hiring-reader-resume-portfolio-post-hillclimb.json",
+  "methodology": {
+    "primarySkill": "interviewing-evaluating-candidates",
+    "installedPath": ".agents/skills/interviewing-evaluating-candidates/SKILL.md",
+    "skillFileSha256": "43adae4069319ca03f5cce7de286c7009c31bbc50925608de32a534ed222f196",
+    "sourceRepository": "https://github.com/refoundai/lenny-skills",
+    "supportingSkills": [
+      "hiring",
+      "review-resume",
+      "ai-evals"
+    ],
+    "principles": [
+      "Define the actual work and first-year outcomes for each role.",
+      "Apply one opportunity-specific evidence bar consistently to every version.",
+      "Use the resume only to decide whether to advance to a structured interview or practical work sample.",
+      "Retain open hard screens, work-sample questions, and reference checks after a resume passes.",
+      "Counter similarity and charisma bias by testing evidence, agency, collaboration, craft, and claim boundaries."
+    ]
+  },
+  "contract": {
+    "scope": "Every opportunity currently represented in the named public hiring-reader registry, including its expired benchmark.",
+    "actualPeopleParticipated": false,
+    "modeledReaderBasis": "Public job descriptions, public organizational context, and the repository's public-safe opportunity records only.",
+    "acceptanceQuestion": "Under this explicitly fictionalized public-source lens, would this reader advance Jamie from resume review to a structured interview or practical work sample for this opportunity?",
+    "passDecision": "advance-to-structured-next-step",
+    "notEstablishedByPass": [
+      "An actual named person reviewed, approved, endorsed, or would hire Jamie.",
+      "Jamie will receive an interview, offer, appointment, or final hiring decision.",
+      "Civil-service, authorization, reference, background, or other formal screens are satisfied.",
+      "A resume substitutes for a work sample, structured interview, reference check, or employer judgment."
+    ]
+  },
+  "resumeStandards": {
+    "minimumWords": 400,
+    "maximumWords": 850,
+    "minimumNumericSignals": 6,
+    "maximumBulletsPerRole": 5,
+    "requiredHeadings": [
+      "Professional Summary",
+      "Core Skills",
+      "Professional Experience",
+      "Education"
+    ],
+    "forbiddenPatterns": [
+      "(?:I|me|my) (?:would|will) be hired",
+      "(?:guaranteed|guarantees) (?:an interview|employment|a job|an offer)",
+      "(?:Deirdre Schifeling|Quinton Ma|Brian Madigan|Zack Parker|Chris Coleman|Lisa Gelobter) (?:reviewed|approved|endorsed|recommended|would hire)",
+      "(?:solely created|single-handedly|personally caused)",
+      "(?:WCAG compliant|Section 508 compliant)"
+    ]
+  },
+  "versions": [
+    {
+      "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "organization": "ACLU",
+      "targetRole": "Senior Project Manager, National Campaigns",
+      "status": "live-priority",
+      "officialSource": "https://job-boards.greenhouse.io/aclu/jobs/8631854002",
+      "opportunityPath": "docs/knowledge-bank/opportunities/aclu-senior-project-manager-national-campaigns.md",
+      "resumePath": "resumes/2026-08-14/aclu-senior-project-manager-national-campaigns-8631854002/Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-National-Campaigns-8631854002.md",
+      "readerCriteria": [
+        {
+          "gateId": "gate.aclu-national-campaigns.deirdre-schifeling",
+          "readerId": "reader.deirdre-schifeling",
+          "displayName": "Deirdre Schifeling",
+          "relationship": "nearest-public-senior-vision-context; direct manager is not publicly named",
+          "signalGroups": [
+            { "id": "target-role", "patterns": ["Senior Project Manager, National Campaigns", "Advocacy Campaign Operations"] },
+            { "id": "complex-delivery", "patterns": ["scope, schedule", "concurrent projects", "risk and dependency tracking"] },
+            { "id": "advocacy-operations", "patterns": ["advocacy campaign operations", "Commercial Rent Stabilization", "testimony plans"] },
+            { "id": "research-and-communications", "patterns": ["source maps", "talking points", "policy questions"] },
+            { "id": "campaign-operating-system", "patterns": ["decision records", "campaign metrics", "shared campaign memory"] },
+            { "id": "confidentiality-and-agency", "patterns": ["collective credit", "private coalition", "Confidentiality"] },
+            { "id": "budget-and-vendor-boundary", "patterns": ["vendor coordination", "$490,539 public funding request", "does not establish procurement authority"] }
+          ],
+          "constructiveCritique": "The resume makes the advocacy-operations and complex-delivery fit visible without claiming sole campaign outcomes. Budget administration and national-scale authority remain interview questions.",
+          "validateNext": "Use a structured campaign scenario to test schedule, metric, budget, confidentiality, contested priorities, affiliate agency, and sustainability judgment."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.codepath.senior-ai-operations-lead.5175813007",
+      "organization": "CodePath",
+      "targetRole": "Senior AI Operations Lead",
+      "status": "live-priority",
+      "officialSource": "https://job-boards.greenhouse.io/codepath/jobs/5175813007",
+      "opportunityPath": "docs/knowledge-bank/opportunities/codepath-senior-ai-operations-lead.md",
+      "resumePath": "resumes/2026-08-14/codepath-senior-ai-operations-lead-5175813007/Jamie-Burkart-Resume-CodePath-Senior-AI-Operations-Lead-5175813007.md",
+      "readerCriteria": [
+        {
+          "gateId": "gate.codepath-ai-operations.quinton-ma",
+          "readerId": "reader.quinton-ma",
+          "displayName": "Quinton Ma",
+          "relationship": "public title match for likely direct manager; not posting-named or confirmed",
+          "signalGroups": [
+            { "id": "target-role", "patterns": ["Senior AI Operations Lead", "AI Operations & Enablement"] },
+            { "id": "workflow-discovery", "patterns": ["map real workflows", "workflow discovery", "embed with nontechnical"] },
+            { "id": "shipped-ai-work", "patterns": ["built and maintains a source-backed team-memory system", "AI-assisted knowledge workflow", "human-correctable AI workflows"] },
+            { "id": "quality-system", "patterns": ["deterministic checks", "adversarial mutations", "human holdouts", "drift controls"] },
+            { "id": "reusable-assets", "patterns": ["reusable skills", "templates", "runbooks", "durable handoffs"] },
+            { "id": "measurement", "patterns": ["time saved", "quality gained", "adoption", "error rates"] },
+            { "id": "team-self-sufficiency", "patterns": ["team self-sufficiency", "teams can continue", "less dependent"] }
+          ],
+          "constructiveCritique": "The resume shows a serious AI quality and enablement practice. The application must still bind one workflow to real users, production boundaries, and a defensible before-and-after measure.",
+          "validateNext": "Inspect one personally built workflow end to end: users, tools, APIs, review gates, failure modes, adoption, measured change, maintenance, and handoff."
+        },
+        {
+          "gateId": "gate.codepath-ai-operations.brian-madigan",
+          "readerId": "reader.brian-madigan",
+          "displayName": "Brian Madigan",
+          "relationship": "nearest-public-senior-operations-vision context; not established direct manager",
+          "signalGroups": [
+            { "id": "organizational-scale", "patterns": ["organizational scalability", "distributed maintainers", "operating systems"] },
+            { "id": "embedded-enablement", "patterns": ["embedded workflow discovery", "nontechnical teams", "operational automation"] },
+            { "id": "adoption-and-behavior", "patterns": ["adoption", "changed team behavior", "team self-sufficiency"] },
+            { "id": "reusable-handoff", "patterns": ["reusable skills", "clean handoffs", "durable handoffs"] },
+            { "id": "leadership-reporting", "patterns": ["leadership reporting", "engagement prioritization", "candid status"] },
+            { "id": "outcome-boundary", "patterns": ["activity counts", "causal impact", "measured operational change"] }
+          ],
+          "constructiveCritique": "The resume frames AI as organizational capability rather than agent volume. The unresolved screen is whether this practice has produced measured behavior change in a professional operating context.",
+          "validateNext": "Probe prioritization across functions, executive reporting, adoption, maintenance cost, security and privacy escalation, and whether teams become less dependent after each engagement."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "organization": "CodePath",
+      "targetRole": "Engineering Project Manager",
+      "status": "live-priority",
+      "officialSource": "https://job-boards.greenhouse.io/codepath/jobs/5160542007",
+      "opportunityPath": "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
+      "resumePath": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.md",
+      "readerCriteria": [
+        {
+          "gateId": "gate.codepath-engineering.zack-parker",
+          "readerId": "reader.zack-parker",
+          "displayName": "Zack Parker",
+          "relationship": "public title match for likely direct manager; not posting-named or confirmed",
+          "signalGroups": [
+            { "id": "engineering-delivery", "patterns": ["engineering delivery", "delivery planning", "scope and sequence"] },
+            { "id": "quality-system", "patterns": ["quality assurance", "bug triage", "test cases", "regression expectations"] },
+            { "id": "technical-fluency", "patterns": ["Python/Django", "JavaScript/TypeScript", "Git/GitHub"] },
+            { "id": "process-judgment", "patterns": ["proportionate structure", "process when its cost exceeds its value", "without adding unnecessary ceremony"] },
+            { "id": "ai-workflow", "patterns": ["AI-assisted", "human review", "deterministic checks"] },
+            { "id": "status-and-ownership", "patterns": ["status reporting", "clarify ownership", "action and decision logs"] }
+          ],
+          "constructiveCritique": "The resume earns a screen through hands-on engineering coordination and a concrete quality loop; the next artifact should show one issue becoming a reproducible test and owned release decision.",
+          "validateNext": "Use a structured work sample to test bug reproduction, prioritization, QA design, status communication, and proportionate process judgment."
+        },
+        {
+          "gateId": "gate.codepath-engineering.chris-coleman",
+          "readerId": "reader.chris-coleman",
+          "displayName": "Chris Coleman",
+          "relationship": "nearest-public-senior-product-engineering vision context; not established direct manager",
+          "signalGroups": [
+            { "id": "product-engineering-bridge", "patterns": ["Product and stakeholder translation", "engineers, product decisions", "engineering constraints"] },
+            { "id": "learning-mission", "patterns": ["community-calendar", "community stakeholders", "organizer support"] },
+            { "id": "responsible-ai", "patterns": ["AI-assisted", "human review", "source boundaries"] },
+            { "id": "durable-collaboration", "patterns": ["durable handoff", "documentation", "release notes"] },
+            { "id": "public-benefit-orientation", "patterns": ["Civic-Tech Builder", "resident-facing", "public funding request"] }
+          ],
+          "constructiveCritique": "Jamie is legible as an engineering-facing operator with a community-service orientation; the interview must connect that experience directly to learner outcomes and internal team leverage.",
+          "validateNext": "Probe how Jamie would define success for engineering delivery when quality, learner experience, and a small team's capacity compete."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "organization": "NYC Office of Technology and Innovation",
+      "targetRole": "Senior Product Manager",
+      "status": "live-priority",
+      "officialSource": "https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-44507",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
+      "resumePath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
+      "readerCriteria": [
+        {
+          "gateId": "gate.oti-senior-product.lisa-gelobter",
+          "readerId": "reader.lisa-gelobter",
+          "displayName": "Lisa Gelobter",
+          "relationship": "nearest-public-senior OTI vision context; direct manager is not publicly named",
+          "signalGroups": [
+            { "id": "public-interest-technology", "patterns": ["civic technology", "Responsible public technology", "public-service"] },
+            { "id": "in-house-capacity", "patterns": ["durable handoffs", "teams can continue", "maintainable publishing systems"] },
+            { "id": "technical-fluency", "patterns": ["systems architecture", "JavaScript/TypeScript", "Python/Django"] },
+            { "id": "participatory-practice", "patterns": ["participatory discovery", "stakeholder listening", "organizer onboarding"] },
+            { "id": "resident-service-delivery", "patterns": ["Tired of Tires", "free resident service", "pickup operations"] },
+            { "id": "digital-equity-and-usability", "patterns": ["accessibility-aware", "resident-facing", "issue pages"] },
+            { "id": "learning-system", "patterns": ["post-launch learning", "retrospectives", "shared campaign memory"] }
+          ],
+          "constructiveCritique": "Jamie is legible as a technically fluent public-interest product operator who builds institutional memory. The next gate is focused, accountable product leadership inside a large public institution.",
+          "validateNext": "Probe public-service motivation, power sharing, managerability, outcome measurement, a real product tradeoff, and the ability to build City capacity rather than personal dependency."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "organization": "NYC Office of Technology and Innovation",
+      "targetRole": "Technical Operations Manager",
+      "status": "expired-benchmark",
+      "officialSource": "https://cityjobs.nyc.gov/job/technical-operations-manager-in-brooklyn-jid-44321",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
+      "resumePath": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.md",
+      "readerCriteria": [
+        {
+          "gateId": "gate.oti-technical-operations.lisa-gelobter",
+          "readerId": "reader.lisa-gelobter",
+          "displayName": "Lisa Gelobter",
+          "relationship": "nearest-public-senior OTI vision context for an expired benchmark; direct manager is not publicly named",
+          "signalGroups": [
+            { "id": "technical-operations", "patterns": ["Technical Operations Manager", "technical operations and project manager", "Technical Operations & Project Manager"] },
+            { "id": "delivery-and-risk", "patterns": ["Delivery coordination", "risk and dependency tracking", "surface blockers"] },
+            { "id": "team-operating-system", "patterns": ["Team operating systems", "status reporting", "decision records"] },
+            { "id": "onboarding-and-runbooks", "patterns": ["onboarding guides", "runbooks", "handbooks"] },
+            { "id": "continuous-improvement", "patterns": ["continuous improvement", "retrospectives", "process improvement"] },
+            { "id": "public-service-technology", "patterns": ["public-interest technology", "public-service", "digital equity"] },
+            { "id": "resident-service-operations", "patterns": ["Tired of Tires", "field collection", "City recycling handoff"] },
+            { "id": "authority-boundary", "patterns": ["does not establish procurement authority", "award was not disbursed"] }
+          ],
+          "constructiveCritique": "This is a strong future-role benchmark because it translates founder responsibility into delivery, risk, documentation, and team-capacity language while preserving authority boundaries.",
+          "validateNext": "For a materially similar future opening, test portfolio governance, personnel operations, procurement and budget exposure, escalation judgment, civil-service eligibility, and shift expectations."
+        }
+      ]
+    }
+  ]
+}

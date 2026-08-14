@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "evalId": "resume-hiring-reader-portfolio-2026-08-14",
+  "runId": "2026-08-14-hiring-reader-resume-portfolio-baseline",
+  "stage": "baseline-before-reader-bound-resume-portfolio",
+  "requiredOpportunityVersions": 5,
+  "maintainedOpportunityVersions": 1,
+  "requiredReaderOpportunityPairs": 7,
+  "passingReaderOpportunityPairs": 1,
+  "overall": "fail",
+  "decision": "do-not-advance",
+  "actualPeopleParticipated": false,
+  "note": "Only the OTI Senior Product Manager resume existed at baseline. This is a coverage failure, not a retroactive judgment of Jamie's experience or any real person's opinion."
+}

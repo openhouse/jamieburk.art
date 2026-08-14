@@ -31,6 +31,12 @@
       "skillPath": ".agents/skills/impeccable/SKILL.md",
       "computedHash": "14b94c217b5a313cd69eccbed288cce844611f491df2d9e133fa10b19ff28a5a"
     },
+    "interviewing-evaluating-candidates": {
+      "source": "refoundai/lenny-skills",
+      "sourceType": "github",
+      "skillPath": "skills/interviewing-evaluating-candidates/SKILL.md",
+      "computedHash": "ce27c3d2c771cfe8cb6092bee23543a124d691aac7ac2c3d04263a8dbeb5705c"
+    },
     "seo-audit": {
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",
