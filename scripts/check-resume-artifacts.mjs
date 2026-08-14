@@ -14,6 +14,7 @@ const expectedCriteria = [
   "pdf-structure",
   "approved-typography",
   "visual-inspection",
+  "resume-editorial-preferences",
   "public-safety"
 ];
 
@@ -164,6 +165,23 @@ export function evaluateResumeArtifacts(root = defaultRoot) {
         JSON.stringify(artifact?.visualInspection?.pagesInspected) !== JSON.stringify(pages) ||
         !Array.isArray(checks) || checks.length < 4) {
       fail("visual-inspection", `${label}: every exported page needs a complete visual-inspection receipt.`);
+    }
+
+    const preferences = evaluation.editorialPreferences ?? {};
+    const politicoLabel = preferences.politicoLabel;
+    const forbiddenDispositionPatterns = Array.isArray(preferences.forbiddenHiringFacingDispositionPatterns)
+      ? preferences.forbiddenHiringFacingDispositionPatterns
+      : [];
+    const politicoUrl = preferences.politicoArticleUrl;
+    const markdownPoliticoLink = `[*${politicoLabel}*](${politicoUrl})`;
+    if (forbiddenDispositionPatterns.some((pattern) =>
+      typeof pattern === "string" && pattern && resume.toLowerCase().includes(pattern.toLowerCase())
+    )) {
+      fail("resume-editorial-preferences", `${label}: hiring-facing resume includes nonessential non-disbursement disposition language.`);
+    }
+    if (politicoLabel && resume.includes(politicoLabel) &&
+        (!politicoUrl || !resume.includes(markdownPoliticoLink) || !pdfText.includes(politicoUrl))) {
+      fail("resume-editorial-preferences", `${label}: Politico New York must link to the canonical archived article PDF in Markdown and the exported PDF.`);
     }
 
     if (protectedLocatorPattern.test(resume) || protectedLocatorPattern.test(JSON.stringify(artifact))) {

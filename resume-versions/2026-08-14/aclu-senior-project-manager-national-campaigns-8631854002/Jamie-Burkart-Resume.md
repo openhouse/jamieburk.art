@@ -49,7 +49,7 @@ Civic campaign, technical project, and coalition-operations leader with 14+ year
 
 ## Selected Campaign Evidence
 
-- **CallNYC:** Built and launched an independent civic product translating New York City constituent-services data into **61 issue pathways**, Council member context, and resident next steps; covered in *Politico New York*.
+- **CallNYC:** Built and launched an independent civic product translating New York City constituent-services data into **61 issue pathways**, Council member context, and resident next steps; covered in [*Politico New York*](https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf).
 - **Public communication:** Develops speeches, testimony, briefing materials, press language, public handouts, campaign sites, and action pathways while distinguishing personal contribution, coalition action, and public-official authority.
 - **Learning and metrics:** Separates activity, participation, reach, intermediate outcomes, and durable impact; documents decisions and retrospectives without converting activity counts into unsupported policy causation.
 

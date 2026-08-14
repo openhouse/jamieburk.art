@@ -14,6 +14,15 @@
     "sourceLocatorMayBeCommitted": false,
     "copyLocatorMayBeCommitted": false
   },
+  "editorialPreferences": {
+    "forbiddenHiringFacingDispositionPatterns": [
+      "not disbursed",
+      "no funds were disbursed",
+      "non-disbursement"
+    ],
+    "politicoLabel": "Politico New York",
+    "politicoArticleUrl": "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf"
+  },
   "criteria": [
     {
       "id": "complete-opportunity-coverage",
@@ -49,6 +58,11 @@
       "id": "visual-inspection",
       "blocking": true,
       "criterion": "Every exported page has a complete visual-inspection receipt covering clipping, overlap, glyphs, Markdown residue, grouping, hierarchy, links, spacing, and page balance."
+    },
+    {
+      "id": "resume-editorial-preferences",
+      "blocking": true,
+      "criterion": "Hiring-facing resumes omit nonessential non-disbursement disposition language; whenever Politico New York appears, its full visible label links to the canonical archived article PDF in both Markdown and the exported PDF."
     },
     {
       "id": "public-safety",

@@ -3,7 +3,7 @@
   "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
   "generatedOn": "2026-08-14",
   "sourceMarkdown": "Jamie-Burkart-Resume.md",
-  "sourceMarkdownSha256": "e5986355e0f72e30e9f73ce17fea216c9217ce9217f236f88c299cb5c44afdb0",
+  "sourceMarkdownSha256": "ecb198e544a73464edaec243baf90af0fa5c40dde80cce6035c58a60aca71132",
   "opportunitySource": {
     "file": "docs/knowledge-bank/opportunities/aclu-senior-project-manager-national-campaigns.md",
     "sha256": "bbcacb59819593bb80c6e957452c1229e9677e33cd433987252a26c6c9dc2d3a"
@@ -11,8 +11,8 @@
   "pdf": {
     "file": "Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-National-Campaigns-8631854002.pdf",
     "mediaType": "application/pdf",
-    "sha256": "3cb382b75d0edcff2f5da426b303aebe7eaa13064184ef2d05039d3bf02e2044",
-    "bytes": 82884,
+    "sha256": "21d510613f761e10578c87f9d2c349cd740dca6799ec2c170e51cda8edc81b12",
+    "bytes": 84008,
     "pages": 2,
     "pageSize": "US Letter",
     "tagged": true
@@ -29,7 +29,7 @@
     "intentionalAdaptations": [
       "The opportunity title occupies the established teal Oswald role line.",
       "A page break before 196 Artists Residency keeps every experience group and evidence list intact.",
-      "The Politico New York title retains the tailored Markdown's italic emphasis without exposing Markdown markers."
+      "Politico New York is a visible source-style hyperlink to the canonical archived article PDF without exposing Markdown markers."
     ]
   },
   "googleWorkspace": {
@@ -50,7 +50,8 @@
       "No clipped, overlapping, or missing text",
       "No broken glyphs or visible Markdown markers",
       "No stranded heading, split experience group, or isolated bullet continuation",
-      "Readable hierarchy, contact links, margins, line spacing, and page balance"
+      "Readable hierarchy, contact links, margins, line spacing, and page balance",
+      "Politico New York is visibly linked in source-consistent blue italic underlined styling"
     ]
   }
 }

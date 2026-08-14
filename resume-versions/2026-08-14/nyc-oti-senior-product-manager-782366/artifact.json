@@ -3,7 +3,7 @@
   "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
   "generatedOn": "2026-08-14",
   "sourceMarkdown": "Jamie-Burkart-Resume.md",
-  "sourceMarkdownSha256": "0121e085c03095ab329f9a3e16bea4b7e9c4949546e81229d132b802451162e1",
+  "sourceMarkdownSha256": "b6beeb5c3df11f7600f6f9aaa93a508aed4140ff27fc6f58c9e0fcf6499e13c8",
   "opportunitySource": {
     "file": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
     "sha256": "e244c8222d6c431fd9d9ce34349f2b57c139656adf225974d4f6462ce55dd25d"
@@ -11,8 +11,8 @@
   "pdf": {
     "file": "Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf",
     "mediaType": "application/pdf",
-    "sha256": "94e55f943a84337616793f7b4a3d97d8fe80fc2a31a67cee709d947a3682bbd5",
-    "bytes": 80523,
+    "sha256": "dc13d1e474ece7cecd5c880669dbb729168c3759c1aa68f6e96ed83464db7f9c",
+    "bytes": 84935,
     "pages": 2,
     "pageSize": "US Letter",
     "tagged": true
@@ -28,7 +28,8 @@
     "sourceStylesPreserved": true,
     "intentionalAdaptations": [
       "The target role occupies the prior resume's teal Oswald role line.",
-      "A page break before 196 Artists Residency keeps experience groups intact and avoids a stranded bullet continuation."
+      "A page break before 196 Artists Residency keeps experience groups intact and avoids a stranded bullet continuation.",
+      "Politico New York is a visible source-style hyperlink to the canonical archived article PDF."
     ]
   },
   "googleWorkspace": {
@@ -49,7 +50,8 @@
       "No clipped or overlapping text",
       "No broken glyphs",
       "No isolated section heading or bullet continuation",
-      "Readable hierarchy, contact links, margins, and line spacing"
+      "Readable hierarchy, contact links, margins, and line spacing",
+      "Politico New York is visibly linked in source-consistent blue italic underlined styling"
     ]
   }
 }

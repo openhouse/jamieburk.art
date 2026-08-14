@@ -49,7 +49,7 @@ Hands-on product and technical project leader with 14+ years moving public-facin
 
 ## Selected Product Evidence
 
-- **CallNYC:** Built and launched an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into **61 resident-facing issue pathways**, Council member context, and next-step guidance; covered in *Politico New York*.
+- **CallNYC:** Built and launched an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into **61 resident-facing issue pathways**, Council member context, and next-step guidance; covered in [*Politico New York*](https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf).
 - **Responsible delivery:** Familiarity with WCAG 2.1 AA and Section 508 and their implications for product scope and tradeoffs; builds accessibility review, privacy, ethical data handling, and human approval into release decisions without claiming audited compliance.
 - **Product learning:** Defines success measures, interprets product and operational metrics, documents learning, and distinguishes outputs, adoption, service quality, and resident outcomes.
 

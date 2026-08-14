@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { appendFileSync, cpSync, mkdtempSync, mkdirSync, readFileSync, rmSync, unlinkSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
@@ -39,6 +40,10 @@ function writeJson(root, relativePath, value) {
 
 function firstEntry(root) {
   return readJson(root, "evals/resume-hiring-readers/current.json").opportunities[0];
+}
+
+function sha256(value) {
+  return createHash("sha256").update(value).digest("hex");
 }
 
 test("every governed opportunity has a current styled and visually inspected PDF sibling", () => {
@@ -131,6 +136,69 @@ test("an incomplete page-inspection receipt fails closed", () => {
     const result = run(root);
     assert.notEqual(result.status, 0);
     assert.match(result.stdout, /visual-inspection/);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test("non-disbursement disposition language fails the hiring-facing editorial preference", () => {
+  const root = fixture();
+  try {
+    const entry = firstEntry(root);
+    appendFileSync(path.join(root, entry.resumePath), "\nThe award was not disbursed to the project.\n", "utf8");
+    const result = run(root);
+    assert.notEqual(result.status, 0);
+    assert.match(result.stdout, /resume-editorial-preferences/);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test("a Politico New York mention without the canonical Markdown link fails closed", () => {
+  const root = fixture();
+  try {
+    const manifest = readJson(root, "evals/resume-hiring-readers/current.json");
+    const entry = manifest.opportunities.find(
+      ({ opportunityId }) => opportunityId === "opportunity.nyc-oti.senior-product-manager.782366"
+    );
+    const resumePath = path.join(root, entry.resumePath);
+    const resume = readFileSync(resumePath, "utf8").replace(
+      "[*Politico New York*](https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf)",
+      "*Politico New York*"
+    );
+    writeFileSync(resumePath, resume, "utf8");
+    const result = run(root);
+    assert.notEqual(result.status, 0);
+    assert.match(result.stdout, /resume-editorial-preferences/);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test("a Politico New York PDF without the canonical article destination fails closed", () => {
+  const root = fixture();
+  try {
+    const manifest = readJson(root, "evals/resume-hiring-readers/current.json");
+    const entry = manifest.opportunities.find(
+      ({ opportunityId }) => opportunityId === "opportunity.nyc-oti.senior-product-manager.782366"
+    );
+    const directory = path.dirname(path.join(root, entry.resumePath));
+    const artifactRelative = path.relative(root, path.join(directory, "artifact.json"));
+    const artifact = readJson(root, artifactRelative);
+    const pdfPath = path.join(directory, artifact.pdf.file);
+    const pdf = readFileSync(pdfPath);
+    const expected = Buffer.from("https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf");
+    const replacement = Buffer.from(`https://example.com/${"x".repeat(expected.length - "https://example.com/".length)}`);
+    assert.equal(replacement.length, expected.length);
+    const index = pdf.indexOf(expected);
+    assert.notEqual(index, -1, "current fixture must contain the canonical PDF destination");
+    replacement.copy(pdf, index);
+    writeFileSync(pdfPath, pdf);
+    artifact.pdf.sha256 = sha256(pdf);
+    writeJson(root, artifactRelative, artifact);
+    const result = run(root);
+    assert.notEqual(result.status, 0);
+    assert.match(result.stdout, /resume-editorial-preferences/);
   } finally {
     rmSync(root, { recursive: true, force: true });
   }
