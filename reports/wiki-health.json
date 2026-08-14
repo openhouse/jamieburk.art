@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-13T19:08:29-04:00",
-  "sourceCommit": "f48bc4e2c3a2e26b6fba0d6dc2df4608cab26c7c",
+  "generatedAt": "2026-08-13T20:12:17-04:00",
+  "sourceCommit": "6a0ef573f991747831fc1d9c615eb37d675bd5d9",
   "sourceFingerprint": "d801832533b660e4f309fe61ed6b853265c18f17ef84b80f47075de6e119f73b",
   "hardGates": {
     "passed": true,
