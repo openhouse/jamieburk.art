@@ -40,8 +40,9 @@ below, not an exhaustive lifetime census and not a claim that every service or
 fact on every site is current.
 
 The [restored-sites close reading](../research-runs/restored-project-sites-close-reading-2026-08-14.md)
-records the cross-site method, findings, and rendered-browser limitation for KC
-Town Hall, WOW List, and CallNYC.
+records the rendered desktop method and findings for KC Town Hall, WOW List,
+and CallNYC, plus one bounded narrow-viewport observation for CallNYC. Its audit
+limits remain explicit.
 
 | Project home | Public interpretation | Jamie contribution boundary |
 |---|---|---|

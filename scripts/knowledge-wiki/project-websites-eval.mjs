@@ -36,9 +36,21 @@ export function evaluateProjectWebsites({
   const liveCheck = readText(activeConfig.liveCheckPath, root, fileOverrides);
   const research = readText(activeConfig.researchRunPath, root, fileOverrides);
   const work = readText("apps/www/src/data/work.ts", root, fileOverrides);
+  const technicalOperations = readText(
+    "apps/www/src/app/work/technical-operations/page.tsx",
+    root,
+    fileOverrides
+  );
+  const portfolioLinkSurface = `${work}\n${technicalOperations}`;
   const resumeRegistry = readJson(activeConfig.resumeRegistryPath, root, fileOverrides);
   const currentRun = readJson(activeConfig.currentRunPath, root, fileOverrides);
   const closeReadSites = sites.filter((site) => site.closeReadSourcePath);
+  const closeReadTexts = new Map(
+    closeReadSites.map((site) => [
+      site.projectId,
+      readText(site.closeReadSourcePath, root, fileOverrides)
+    ])
+  );
   const portfolioSites = sites.filter((site) => site.portfolioLinkRequired);
   const verifiedAt = new Date(`${activeConfig.verifiedAt}T12:00:00Z`);
 
@@ -52,7 +64,7 @@ export function evaluateProjectWebsites({
   );
 
   const closeReadsBound = closeReadSites.every((site) => {
-    const text = readText(site.closeReadSourcePath, root, fileOverrides);
+    const text = closeReadTexts.get(site.projectId) ?? "";
     return (
       text.includes(`canonical_url: ${site.url}`) &&
       text.includes(`target: ${site.projectId}`) &&
@@ -60,7 +72,22 @@ export function evaluateProjectWebsites({
     );
   });
 
-  const portfolioDirectLinks = portfolioSites.filter((site) => work.includes(site.url)).length;
+  const renderedDesktopCloseReadSites = closeReadSites.filter((site) => {
+    const text = closeReadTexts.get(site.projectId) ?? "";
+    return (
+      text.includes("## Rendered browser observation") &&
+      text.includes(activeConfig.renderedReview.desktopViewport)
+    );
+  }).length;
+  const renderedNarrowCloseReadSites = activeConfig.renderedReview.narrowProjectIds.filter(
+    (projectId) =>
+      (closeReadTexts.get(projectId) ?? "").includes(activeConfig.renderedReview.narrowViewport)
+  ).length;
+  const callNycCloseRead = closeReadTexts.get("project.callnyc") ?? "";
+
+  const portfolioDirectLinks = portfolioSites.filter((site) =>
+    portfolioLinkSurface.includes(site.url)
+  ).length;
   let resumeMentionLinkPairs = 0;
   let linkedResumeMentionPairs = 0;
   for (const version of resumeRegistry.versions) {
@@ -77,6 +104,8 @@ export function evaluateProjectWebsites({
     maintainedInventoryExists: Boolean(inventory),
     governedSites: sites.length,
     closeReadSites: closeReadSites.length,
+    renderedDesktopCloseReadSites,
+    renderedNarrowCloseReadSites,
     portfolioDirectLinks,
     resumeMentionLinkPairs: linkedResumeMentionPairs
   };
@@ -128,9 +157,25 @@ export function evaluateProjectWebsites({
     {
       id: "method-boundary",
       pass:
-        /does \*\*not\*\* claim a rendered visual, responsive, keyboard, screen-reader/.test(research) &&
-        /No form was submitted/.test(research),
-      detail: "The HTTP close reading does not masquerade as a rendered or transactional audit."
+        /does \*\*not\*\* claim a complete responsive,[\s\S]*keyboard, screen-reader/.test(research) &&
+        /No form was submitted/.test(research) &&
+        /no telephone action was activated/i.test(research),
+      detail: "Rendered observations do not masquerade as complete accessibility, responsive, or transactional audits."
+    },
+    {
+      id: "rendered-observation-coverage",
+      pass:
+        renderedDesktopCloseReadSites === activeConfig.renderedReview.expectedDesktopSites &&
+        renderedNarrowCloseReadSites === activeConfig.renderedReview.narrowProjectIds.length,
+      detail: `${renderedDesktopCloseReadSites}/${activeConfig.renderedReview.expectedDesktopSites} desktop close readings and ${renderedNarrowCloseReadSites}/${activeConfig.renderedReview.narrowProjectIds.length} bounded narrow-viewport checks are recorded.`
+    },
+    {
+      id: "callnyc-archive-boundary-corrected",
+      pass:
+        /appears at the very\s+top/.test(callNycCloseRead) &&
+        /archived, unofficial prototype/.test(callNycCloseRead) &&
+        /operative\s+`tel:` links/.test(callNycCloseRead),
+      detail: "CallNYC records both the now-first archive notice and the remaining historical-action risk."
     },
     {
       id: "current-service-and-credit-boundary",

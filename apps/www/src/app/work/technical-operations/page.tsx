@@ -50,7 +50,7 @@ const proofMap = [
   },
   {
     project: "KC Spaces Fund",
-    href: "/work/technical-operations#public-facing-launch-and-adoption",
+    href: "https://kcspacesfund.com/",
     proof:
       "Jamie built campaign web infrastructure and supported an available cross-channel identity for a collaborator-led mutual-aid campaign."
   },
@@ -112,6 +112,10 @@ const proofDestinations: Record<string, { project: string; href: Route }> = {
   "kc-town-hall-public-benefit-documentation": {
     project: "KC Town Hall",
     href: "/work/kc-town-hall" as Route
+  },
+  "kc-spaces-fund-digital-infrastructure": {
+    project: "KC Spaces Fund",
+    href: "https://kcspacesfund.com/" as Route
   },
   "source-backed-team-memory-method": {
     project: "Source-Backed Team Memory",
@@ -195,11 +199,7 @@ export default function TechnicalOperationsPage() {
                         >
                           {destination.project}
                         </Link>
-                      ) : (
-                        <span className="font-semibold text-jb-ink">
-                          KC Spaces Fund
-                        </span>
-                      )}
+                      ) : null}
                       <span className="mt-1 block text-sm leading-6 text-jb-ink/72">
                         {proof.shortWording ?? proof.publicWording}
                       </span>

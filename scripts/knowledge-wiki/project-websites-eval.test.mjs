@@ -82,3 +82,31 @@ test("responding cannot be silently promoted to current service", () => {
     false
   );
 });
+
+test("a rendered close reading cannot silently fall back to HTTP-only evidence", () => {
+  const site = config.sites.find((candidate) => candidate.projectId === "project.wowlist");
+  const original = text(site.closeReadSourcePath);
+  const result = evaluateProjectWebsites({
+    fileOverrides: {
+      [site.closeReadSourcePath]: original.replace("## Rendered browser observation", "## HTML observation")
+    }
+  });
+  assert.equal(
+    result.checks.find((check) => check.id === "rendered-observation-coverage").pass,
+    false
+  );
+});
+
+test("CallNYC must preserve both the first archive notice and remaining action risk", () => {
+  const site = config.sites.find((candidate) => candidate.projectId === "project.callnyc");
+  const original = text(site.closeReadSourcePath);
+  const result = evaluateProjectWebsites({
+    fileOverrides: {
+      [site.closeReadSourcePath]: original.replace("operative\n`tel:` links", "disabled telephone links")
+    }
+  });
+  assert.equal(
+    result.checks.find((check) => check.id === "callnyc-archive-boundary-corrected").pass,
+    false
+  );
+});

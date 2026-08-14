@@ -19,7 +19,7 @@ relations: []
 **Recheck by:** September 13, 2026
 
 Ten distinct project homes in the governed portfolio inventory returned HTTP
-200 after redirects to HTTPS and served HTML:
+200 after redirects to HTTPS and served HTML in the August 14 recheck:
 
 1. [Harry J. Epstein Company](https://www.harryepstein.com/)
 2. [NYC Artist Coalition](https://nycartc.com/)
@@ -37,6 +37,11 @@ that every link, transaction, form, fact, service, campaign, or instruction is
 current. No form, purchase, donation, signup, or resident-service action was
 submitted. External services that refused automated `HEAD` requests or timed
 out were not labeled broken without a browser confirmation.
+
+KC Town Hall, WOW List, and CallNYC also received rendered desktop close
+readings. CallNYC received one additional narrow-viewport home-page check. The
+[cross-site research run](../research-runs/restored-project-sites-close-reading-2026-08-14.md)
+records those observations and their explicit limits.
 
 ## Count rule
 

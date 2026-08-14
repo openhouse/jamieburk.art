@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-14T16:07:29-04:00",
-  "sourceCommit": "351d68f5761db464bcff124b5c301d644740b56a",
-  "sourceFingerprint": "eb999e116462398bfeae517b1ac808ed1b86d98e61f5eb27505faf3e6fc5c296",
+  "generatedAt": "2026-08-14T18:51:20-04:00",
+  "sourceCommit": "8f669c51ece55037a041999856060ea4d0d24137",
+  "sourceFingerprint": "c9e65f3ad909804c9bc09ac89b1d1332bd3fec1484c714f79bbd927026b3401c",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -4535,7 +4535,7 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Bounded close reading and HTTP crawl of the restored archived CallNYC prototype.",
+      "summary": "Bounded rendered close reading and HTTP crawl of the restored archived CallNYC prototype.",
       "aliases": [],
       "lastReviewed": "2026-08-14",
       "reviewBy": "2026-09-13"
@@ -4899,7 +4899,7 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Bounded close reading and HTTP crawl of the restored KC Town Hall public site.",
+      "summary": "Bounded rendered close reading and HTTP crawl of the restored KC Town Hall public site.",
       "aliases": [],
       "lastReviewed": "2026-08-14",
       "reviewBy": "2026-09-13"
@@ -5643,7 +5643,7 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Bounded close reading and HTTP crawl of the WOW List relaunch preview.",
+      "summary": "Bounded rendered close reading and HTTP crawl of the WOW List relaunch preview.",
       "aliases": [],
       "lastReviewed": "2026-08-14",
       "reviewBy": "2026-09-13"
@@ -22069,7 +22069,7 @@
       "toPath": "docs/knowledge-bank/sources/kc-town-hall-live-site-2026-08-14.md",
       "to": "source.kc-town-hall.live-site.2026-08-14",
       "fragment": null,
-      "line": 19,
+      "line": 21,
       "kind": "link"
     },
     {
@@ -22078,7 +22078,7 @@
       "toPath": "docs/knowledge-bank/sources/wowlist-live-site-2026-08-14.md",
       "to": "source.wowlist.live-site.2026-08-14",
       "fragment": null,
-      "line": 21,
+      "line": 25,
       "kind": "link"
     },
     {
@@ -22087,7 +22087,7 @@
       "toPath": "docs/knowledge-bank/sources/callnyc-live-site-2026-08-14.md",
       "to": "source.callnyc.live-site.2026-08-14",
       "fragment": null,
-      "line": 23,
+      "line": 30,
       "kind": "link"
     },
     {
@@ -22178,6 +22178,15 @@
       "to": null,
       "fragment": null,
       "line": 19,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/project-websites-live-check-2026-08-14.md",
+      "from": "source.project-websites.live-check.2026-08-14",
+      "toPath": "docs/knowledge-bank/research-runs/restored-project-sites-close-reading-2026-08-14.md",
+      "to": "research.restored-project-sites.close-reading.2026-08-14",
+      "fragment": null,
+      "line": 29,
       "kind": "link"
     },
     {

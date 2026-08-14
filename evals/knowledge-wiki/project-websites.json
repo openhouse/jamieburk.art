@@ -9,6 +9,12 @@
   "researchRunPath": "docs/knowledge-bank/research-runs/restored-project-sites-close-reading-2026-08-14.md",
   "resumeRegistryPath": "evals/resumes/hiring-reader-portfolio.json",
   "currentRunPath": "evals/knowledge-wiki/runs/2026-08-14-project-websites-post-hillclimb.json",
+  "renderedReview": {
+    "desktopViewport": "1280 × 720",
+    "expectedDesktopSites": 3,
+    "narrowViewport": "390 × 844",
+    "narrowProjectIds": ["project.callnyc"]
+  },
   "sites": [
     {
       "projectId": "project.harry-j-epstein",
@@ -98,7 +104,7 @@
       "interpretation": "historical-mutual-aid-campaign",
       "creditScope": "site, theme, fundraising display, domain, and platform implementation within shared work",
       "projectRecordPath": "docs/knowledge-bank/projects/kc-spaces-fund-orientation.md",
-      "portfolioLinkRequired": false,
+      "portfolioLinkRequired": true,
       "resumeAliases": []
     },
     {
@@ -145,4 +151,3 @@
     }
   ]
 }
-
