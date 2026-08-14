@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "rubricId": "resume.nyc-oti.senior-product-manager.782366",
+  "candidate": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
+  "inputSha256": "6382a1dd264f996594c422b287f9d520a2086fe93897f5f9b1b8e5180827fe4f",
+  "evaluatedAt": "2026-08-14T20:49:52.878Z",
+  "wordCount": 782,
+  "numericSignalCount": 23,
+  "passedChecks": 14,
+  "totalChecks": 14,
+  "score": 100,
+  "overall": "pass",
+  "hillClimb": {
+    "baselineScore": 7,
+    "candidateScore": 100,
+    "delta": 93,
+    "boundedChange": "Replaced an unqualified generalist scaffold with an ATS-readable, job-specific account of end-to-end product management, public-sector translation, responsible technology, resident-service fulfillment, quantified scale, civil-service screening evidence, direct source access, and collective-credit boundaries."
+  },
+  "passingCheckIds": [
+    "exact-target-title",
+    "standard-sections",
+    "ats-safe-markdown",
+    "complete-contact-block",
+    "word-count",
+    "role-language-in-first-third",
+    "end-to-end-product-language",
+    "cross-functional-public-delivery",
+    "resident-service-delivery",
+    "responsible-technology-language",
+    "quantified-evidence",
+    "civil-service-screen-evidence",
+    "direct-source-link-and-concise-transition",
+    "collective-credit-and-claim-safety"
+  ],
+  "boundary": "A deterministic resume-format and role-alignment pass is not a hiring prediction, civil-service eligibility decision, human proofread, reference check, application submission, or employer endorsement."
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "rubricId": "resume.nyc-oti.senior-product-manager.782366",
+  "candidate": "evals/resumes/fixtures/oti-senior-product-manager-pre-tailoring.md",
+  "inputSha256": "bbcba619303da2c55dba9573f0ca7edd6e861bf6b7e985782da422c7ff2e17f9",
+  "evaluationInput": "A minimal pre-tailoring scaffold retained as a reproducible negative fixture.",
+  "evaluatedAt": "2026-08-14T20:50:09.930Z",
+  "wordCount": 25,
+  "numericSignalCount": 0,
+  "passedChecks": 1,
+  "totalChecks": 14,
+  "score": 7,
+  "overall": "fail",
+  "passingCheckIds": [
+    "ats-safe-markdown"
+  ],
+  "interpretation": "The scaffold was readable but made the hiring reader infer the target role, product lifecycle, public-service delivery, technical depth, scale, and claim boundaries. It is a negative fixture, not an assessment of Jamie's experience."
+}
