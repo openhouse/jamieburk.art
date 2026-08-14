@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.nyc-oti.senior-product-manager.782366.pdf-visual",
-  "inspectedAt": "2026-08-14T13:22:00-04:00",
+  "inspectedAt": "2026-08-14T15:15:56-04:00",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy",
     "revisionUnchangedAfterExport": true
   },
   "pdf": {
     "path": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf",
-    "sha256": "47087b3403ea4961f04634a7222a7c8fefc6d7e1f48df01531670cd1b95041f9",
-    "bytes": 90648,
+    "sha256": "10dd60305a53913fc12d98f04d9bd12cd5c31b1d7b65d82087b8942908207526",
+    "bytes": 91337,
     "pages": 2,
     "pageSize": "US Letter"
   },
@@ -25,7 +25,7 @@
       {
         "page": 2,
         "pass": true,
-        "notes": "WOW List, CallNYC, KC Town Hall, additional leadership, education, and work authorization are legible with clear grouping and no clipping or overlap."
+        "notes": "WOW List, CallNYC, KC Town Hall, additional leadership, education, and work authorization are legible with clear grouping and no clipping or overlap. Politico New York remains typographically consistent and links to the archived article PDF; the KC Town Hall transition ends cleanly without the removed disbursement sentence."
       }
     ],
     "checks": {
@@ -33,6 +33,7 @@
       "typographicHierarchyPreserved": true,
       "twoPageReadingOrderCoherent": true,
       "contactAndPortfolioLinksPresent": true,
+      "politicoSourceLinkPresent": true,
       "collectiveCreditAndClaimBoundariesVisible": true
     }
   },
