@@ -1349,4 +1349,3 @@ How it works: Ask the candidate: 'What are your top 10 accomplishments?' Look fo
 An interview question used to test a PM candidate's experience, humility, and ability to learn from failure.
 
 How it works: Ask 'What's the worst product you've ever shipped?' Look for candidates who laugh, admit a real mistake, and explain what they learned from the failure.
-

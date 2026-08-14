@@ -34,7 +34,7 @@
 
 ## Anuj Rathi
 
-**Insight:** 
+**Insight:**
 
 *Source: [The full-stack PM | Anuj Rathi (Swiggy, Jupiter Money, Flipkart)](https://www.youtube.com/watch?v=1sClhfuCxP0) @ 00:49:19*
 
@@ -117,7 +117,7 @@
 
 ## Crystal W
 
-**Insight:** 
+**Insight:**
 
 *Source: How to scrappily hire for, measure, and unlock growth | Crystal Widjaja, Gojek and Kumu @ 00:52:44*
 
@@ -125,7 +125,7 @@
 
 ## Dhanji R. Prasanna
 
-**Insight:** 
+**Insight:**
 
 *Source: [How Block is becoming the most AI-native enterprise in the world | Dhanji R. Prasanna](https://www.youtube.com/watch?v=JMeXWVw0r3E) @ 00:46:14*
 
@@ -133,7 +133,7 @@
 
 ## EOY Review
 
-**Insight:** 
+**Insight:**
 
 *Source: EOY Review @ 00:19:14*
 
@@ -181,7 +181,7 @@
 
 ## Hari Srinivasan
 
-**Insight:** 
+**Insight:**
 
 *Source: [LinkedIn’s product evolution and the art of building complex systems | Hari Srinivasan (LinkedIn)](https://www.youtube.com/watch?v=ZUwkTs_QWqg) @ 00:58:06*
 
@@ -239,7 +239,7 @@
 
 ## Jason Droege
 
-**Insight:** 
+**Insight:**
 
 *Source: [First interview with Scale AI’s CEO: $14B Meta deal, what’s working in enterprise AI, and what frontier labs are building next | Jason Droege](https://www.youtube.com/watch?v=W99jdYZOlN0) @ 01:09:31*
 
@@ -301,7 +301,7 @@
 
 ## Judd Antin
 
-**Insight:** 
+**Insight:**
 
 *Source: [The UX research reckoning is here | Judd Antin (Airbnb, Meta)](https://www.youtube.com/watch?v=L6RKi9ZvkT4) @ 00:17:44*
 
@@ -350,7 +350,7 @@
 
 ## Ken Norton
 
-**Insight:** 
+**Insight:**
 
 *Source: How to unlock your product leadership skills | Ken Norton, Ex-Google @ 01:05:40*
 
@@ -394,13 +394,13 @@
 
 ## Lauren Ipsen
 
-**Insight:** 
+**Insight:**
 
 *Source: [Lessons from one of the world’s top executive recruiters | Lauren Ipsen (Daversa Partners, General Catalyst)](https://www.youtube.com/watch?v=v3pofqabzhs) @ 00:44:20*
 
 ---
 
-**Insight:** 
+**Insight:**
 
 *Source: [Lessons from one of the world’s top executive recruiters | Lauren Ipsen (Daversa Partners, General Catalyst)](https://www.youtube.com/watch?v=v3pofqabzhs) @ 00:49:53*
 
@@ -701,7 +701,7 @@
 
 ## Matt MacInnis
 
-**Insight:** 
+**Insight:**
 
 *Source: [10 contrarian leadership truths every leader needs to hear | Matt MacInnis (Rippling)](https://www.youtube.com/watch?v=O_W76LR77Vw) @ 00:34:30*
 
@@ -737,7 +737,7 @@
 
 ## Merci Grace
 
-**Insight:** 
+**Insight:**
 
 *Source: Merci Grace (ex-Head of Growth at Slack) on PLG, interviewing, storytelling, building a diverse team, hiring salespeople, building a growth team, and much more @ 44:46*
 
@@ -771,7 +771,7 @@
 
 ## Oji Udezue
 
-**Insight:** 
+**Insight:**
 
 *Source: [Picking sharp problems, increasing virality, and unique product frameworks | Oji Udezue (Typeform, Twitter, Calendly, Atlassian)](https://www.youtube.com/watch?v=T8TQGbJhv6Q) @ 01:01:27*
 
@@ -861,13 +861,13 @@
 
 ---
 
-**Insight:** 
+**Insight:**
 
 *Source: [The rituals of great teams | Shishir Mehrotra of Coda, YouTube, Microsoft](https://www.youtube.com/watch?v=7uSuMIJhONA) @ 01:04:05*
 
 ---
 
-**Insight:** 
+**Insight:**
 
 *Source: [The rituals of great teams | Shishir Mehrotra of Coda, YouTube, Microsoft](https://www.youtube.com/watch?v=7uSuMIJhONA) @ 00:58:20*
 
@@ -911,4 +911,3 @@
 *Source: Yuhki Yamashata @ 00:48:51*
 
 ---
-
