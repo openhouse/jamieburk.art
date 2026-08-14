@@ -17,5 +17,7 @@ Named profiles are simulated lenses based on cited public context. They are not
 the person's actual opinion, participation, endorsement, or hiring decision.
 
 The deterministic baseline proves candidate binding, context binding, coverage
-classification, freshness, and privacy boundaries. Fresh human reader studies
-remain an open authority gate.
+classification, freshness, and privacy boundaries. The named-reader suite adds
+fresh, isolated fictionalized simulations against the exact public candidate;
+its current receipt lives in `evals/hiring-readers/current.json`. Actual hiring
+readers, references, interviews, and employment decisions remain human gates.

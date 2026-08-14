@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "runId": "hiring-public-35527351e5f0",
-  "generatedAt": "2026-08-13T14:31:16-04:00",
-  "candidateSha": "35527351e5f08fba4a917cd193dac36e1c9907df",
-  "candidatePathsClean": false,
-  "portfolioSnapshotHash": "b49257b6c64c59c2ee772c697fe845662209e74e6bea8da1b95a442c6e8a8b13",
+  "runId": "hiring-public-8ca42a05f0e0",
+  "generatedAt": "2026-08-13T22:52:30-04:00",
+  "candidateSha": "8ca42a05f0e08e016967f444474293484c004ef0",
+  "candidatePathsClean": true,
+  "portfolioSnapshotHash": "e2be3c565fa63cc675a08418708d1033e9b5169ec6e099f68bc69ae31759a8d4",
   "roleContextHash": "ca809978dd2296c836ae34294101ae765fb13ead9c4bb4a305640a58286c0347",
   "readerContextHash": "c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
@@ -143,10 +143,10 @@
       "live": true,
       "fresh": true,
       "hardScreenBlocked": false,
-      "decision": "deterministic-ready-for-human-review",
-      "observed": 4,
+      "decision": "evidence-gap-review",
+      "observed": 3,
       "requirementTotal": 5,
-      "criticalObserved": 4,
+      "criticalObserved": 3,
       "criticalTotal": 5,
       "requirementCoverage": [
         {
@@ -156,12 +156,10 @@
           "matchedPublicText": true,
           "declaredPublicStatus": "visible-qualified",
           "routes": [
-            "/work/callnyc",
-            "/work/technical-operations"
+            "/work/callnyc"
           ],
           "evidenceNeedles": [
-            "public-facing",
-            "public launch"
+            "public-facing"
           ]
         },
         {
@@ -182,29 +180,20 @@
         {
           "requirementId": "requirement.oti-product.cross-functional-launch",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-proven",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "product, engineering, security, legal"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.oti-product.metrics-and-learning",
           "importance": "critical",
           "observed": false,
-          "matchedPublicText": true,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-weak",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "operational metrics",
-            "retrospectives"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.oti-product.accessibility-privacy",
@@ -229,9 +218,9 @@
       "fresh": true,
       "hardScreenBlocked": false,
       "decision": "evidence-gap-review",
-      "observed": 3,
+      "observed": 1,
       "requirementTotal": 4,
-      "criticalObserved": 2,
+      "criticalObserved": 1,
       "criticalTotal": 3,
       "requirementCoverage": [
         {
@@ -241,26 +230,20 @@
           "matchedPublicText": true,
           "declaredPublicStatus": "visible-proven",
           "routes": [
-            "/work/technical-operations",
             "/work/callnyc"
           ],
           "evidenceNeedles": [
-            "Coordinate delivery across concurrent projects",
             "implementation"
           ]
         },
         {
           "requirementId": "requirement.aclu-lps.plan-budget-risk",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "Track status, surface risks early"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.aclu-lps.business-analysis",
@@ -274,15 +257,11 @@
         {
           "requirementId": "requirement.aclu-lps.organizational-learning",
           "importance": "important",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-proven",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "retrospectives"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         }
       ]
     },
@@ -293,10 +272,10 @@
       "live": true,
       "fresh": true,
       "hardScreenBlocked": false,
-      "decision": "deterministic-ready-for-human-review",
-      "observed": 4,
+      "decision": "evidence-gap-review",
+      "observed": 2,
       "requirementTotal": 4,
-      "criticalObserved": 3,
+      "criticalObserved": 2,
       "criticalTotal": 3,
       "requirementCoverage": [
         {
@@ -306,26 +285,20 @@
           "matchedPublicText": true,
           "declaredPublicStatus": "visible-proven",
           "routes": [
-            "/work/technical-operations",
             "/work/fair-rent-nyc"
           ],
           "evidenceNeedles": [
-            "Coordinate delivery across concurrent projects",
             "coalition"
           ]
         },
         {
           "requirementId": "requirement.aclu-campaigns.communications",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "Report team health, project status, and operational metrics"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.aclu-campaigns.advocacy-context",
@@ -343,15 +316,11 @@
         {
           "requirementId": "requirement.aclu-campaigns.judgment-and-discretion",
           "importance": "important",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "surface risks early"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         }
       ]
     },
@@ -363,76 +332,55 @@
       "fresh": false,
       "hardScreenBlocked": false,
       "decision": "not-live",
-      "observed": 5,
+      "observed": 0,
       "requirementTotal": 6,
-      "criticalObserved": 4,
+      "criticalObserved": 0,
       "criticalTotal": 4,
       "requirementCoverage": [
         {
           "requirementId": "requirement.oti.delivery-coordination",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-proven",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "Coordinate delivery across concurrent projects"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.oti.risk-and-dependencies",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-proven",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "Track status, surface risks early",
-            "Coordinate dependencies across product, engineering, security, legal"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.oti.onboarding-and-runbooks",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-proven",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "Onboard collaborators with handbooks, runbooks"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.oti.reporting-and-metrics",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "Report team health, project status, and operational metrics"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.oti.continuous-improvement",
           "importance": "important",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-proven",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "Improve working systems over time without overengineering"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.oti.government-hiring-and-procurement",
@@ -528,52 +476,38 @@
       "live": true,
       "fresh": true,
       "hardScreenBlocked": false,
-      "decision": "deterministic-ready-for-human-review",
-      "observed": 3,
+      "decision": "evidence-gap-review",
+      "observed": 0,
       "requirementTotal": 4,
-      "criticalObserved": 3,
+      "criticalObserved": 0,
       "criticalTotal": 4,
       "requirementCoverage": [
         {
           "requirementId": "requirement.benepass.launch-readiness",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "public launch",
-            "surface risks early"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.benepass.product-engineering-translation",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "product, engineering, security, legal"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.benepass.runbooks-and-learning",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-proven",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "handbooks, runbooks",
-            "retrospectives"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.benepass.quantified-prioritization",
@@ -598,50 +532,37 @@
       "fresh": false,
       "hardScreenBlocked": false,
       "decision": "not-live",
-      "observed": 5,
+      "observed": 2,
       "requirementTotal": 5,
-      "criticalObserved": 4,
+      "criticalObserved": 1,
       "criticalTotal": 4,
       "requirementCoverage": [
         {
           "requirementId": "requirement.codepath.master-program-plan",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-proven",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "delivery rhythms, decision records",
-            "Track status, surface risks early"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.codepath.partner-coordination",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "external stakeholders"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.codepath.executive-reporting",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "Report team health, project status, and operational metrics"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.codepath.ai-first-workflow",
@@ -666,8 +587,7 @@
             "/work/technical-operations"
           ],
           "evidenceNeedles": [
-            "durable handoffs",
-            "without overengineering"
+            "durable handoffs"
           ]
         }
       ]
@@ -680,7 +600,7 @@
       "fresh": false,
       "hardScreenBlocked": false,
       "decision": "evidence-gap-review",
-      "observed": 2,
+      "observed": 1,
       "requirementTotal": 4,
       "criticalObserved": 1,
       "criticalTotal": 3,
@@ -715,27 +635,19 @@
           "requirementId": "requirement.asana.risk-and-change-management",
           "importance": "critical",
           "observed": false,
-          "matchedPublicText": true,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-weak",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "surface risks early"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.asana.reusable-playbooks",
           "importance": "important",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "handbooks, runbooks"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         }
       ]
     },
@@ -747,9 +659,9 @@
       "fresh": false,
       "hardScreenBlocked": false,
       "decision": "evidence-gap-review",
-      "observed": 3,
+      "observed": 2,
       "requirementTotal": 4,
-      "criticalObserved": 2,
+      "criticalObserved": 1,
       "criticalTotal": 3,
       "requirementCoverage": [
         {
@@ -783,16 +695,11 @@
         {
           "requirementId": "requirement.permitflow.cross-functional-launch",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "Coordinate dependencies across product, engineering",
-            "public launch"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.permitflow.ai-automation",
@@ -817,23 +724,19 @@
       "fresh": false,
       "hardScreenBlocked": false,
       "decision": "not-live",
-      "observed": 3,
+      "observed": 2,
       "requirementTotal": 3,
-      "criticalObserved": 2,
+      "criticalObserved": 1,
       "criticalTotal": 2,
       "requirementCoverage": [
         {
           "requirementId": "requirement.protected-memory.knowledge-friction",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "Jamie is developing a bounded lab method to preserve decision lineage"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.protected-memory.human-review",

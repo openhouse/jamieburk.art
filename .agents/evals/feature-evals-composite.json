@@ -6,12 +6,12 @@
   "source_branch": "feature/knowledge-h",
   "pull_request_base": "develop",
   "starting_commit": "934c1bdff4a478da56fde3a125d905e7e326b6f2",
-  "frozen_at": "2026-07-28",
-  "rubric_sha256": "3fe95a2b9c1f22cdb7d95c3168af73e8eb659900ffd258cd65ebb6feb06e44c1",
+  "frozen_at": "2026-08-13",
+  "rubric_sha256": "b5cd5eed8dec4c3e4f37423a44d510950c4a87ca13ad3f522f566c5202fccc5b",
   "base_suite": {
     "path": ".agents/evals/portfolio-production-readiness.json",
     "required_version": 3,
-    "sha256": "a4116f1145e235bbbf87b237bb1901f562502465d20637c50d9cb64d9f5e84c7"
+    "sha256": "329aa861be6232f4907d9f59998eaaa8648e7ec335e0ed43e2efd4ebe1362fa9"
   },
   "integration_register": "docs/integration/feature-evals-composite.json",
   "integration_register_sha256": "9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d",

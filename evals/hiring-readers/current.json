@@ -1,0 +1,346 @@
+{
+  "schemaVersion": 1,
+  "target": {
+    "candidateGitRev": "8ca42a05f0e08e016967f444474293484c004ef0",
+    "publicSurfaceDigest": "f1130c02d2375a33e3511ea0d62710483e30c5486ee1cf5213fc667255ee46a5",
+    "publicSurfaceDigestAlgorithm": "SHA256(public-surface-normalized-text-v1 NUL + each sorted route + NUL + normalized rendered body text + NUL)",
+    "url": "https://staging-c.jamieburk.art"
+  },
+  "acceptanceQuestion": "I would hire this person for this job.",
+  "passPolicy": "unanimous-named-readers",
+  "summary": {
+    "acceptedReaders": 7,
+    "evaluatedReaders": 7,
+    "passed": true,
+    "baselineAcceptedReaders": 1,
+    "baselineEvaluatedReaders": 7,
+    "method": "Seven isolated, sequential, fictionalized public-context reader simulations inspected only the exact deployed public surface or candidate-bound Browser captures of that surface. Results are analytical lenses, not participation or endorsement by the named people."
+  },
+  "discardedAttempts": [
+    {
+      "taskId": "jaclyn-final-12d8cded",
+      "reason": "Protocol-invalid because the task omitted two required public routes and treated absent public commit metadata as a hiring blocker."
+    },
+    {
+      "taskId": "jaclyn-complete-final-12d8cded",
+      "reason": "Valid fail on the prior exact candidate. Its product-prioritization and post-launch-learning critique caused the bounded 8ca42a05 hill climb."
+    },
+    {
+      "taskId": "james-final-8ca42a05-dns-invalid",
+      "reason": "Protocol-invalid because isolated-sandbox DNS prevented five mandatory routes from loading. The clean rerun used candidate-bound public Browser captures and inspected every required route."
+    }
+  ],
+  "evaluations": [
+    {
+      "id": "final-terence-dougherty",
+      "opportunityId": "opportunity.aclu.senior-project-manager-lps.8620968002",
+      "reader": {
+        "personId": "person.terence-dougherty",
+        "name": "Terence Dougherty",
+        "relationship": "senior-vision",
+        "reportingLineConfirmed": false
+      },
+      "simulatedPublicFigureLens": true,
+      "nonEndorsementBoundary": "This is a fictionalized public-context analytical lens, not participation or endorsement by Terence Dougherty; the role's direct manager remains publicly unresolved.",
+      "access": { "scope": "public-web-only", "repositoryAccess": false, "privateSourceAccess": false },
+      "isolation": { "taskId": "terence-final-8ca42a05", "separateChat": true, "priorReaderOutputsAvailable": false },
+      "visitedRoutes": ["/", "/work/technical-operations", "/work/wowlist", "/work/fair-rent-nyc", "/lab/source-backed-team-memory", "/resume", "/about"],
+      "evidence": [
+        { "route": "/work/technical-operations", "observation": "The public surface presents an inspectable Frame-Decide-Deliver-Verify-Transfer sequence joining requirements, prioritization, risk, ownership, adoption signals, escalation, and handoff." },
+        { "route": "/work/fair-rent-nyc", "observation": "Coalition evidence makes facilitation, change enablement, stakeholder coordination, public implementation, action tracking, and protected-context judgment concrete." },
+        { "route": "/lab/source-backed-team-memory", "observation": "Known/Open/Protected records, corrections, review states, and human ownership make documentation legible as organizational learning infrastructure." }
+      ],
+      "decision": "pass",
+      "wouldHireForRole": true,
+      "confidence": 0.86,
+      "strengths": [
+        "I would hire this person for this job.",
+        "Jamie turns ambiguity into bounded requirements, owned actions, implementation, verification, and durable transfer.",
+        "Documentation functions as organizational infrastructure rather than archival ornament."
+      ],
+      "risks": [
+        "Enterprise learning programs, learning-platform ownership, vendor selection, procurement, and recurring budget authority are not demonstrated.",
+        "Transfer to a large national institution remains a transfer judgment rather than established tenure."
+      ],
+      "constructiveCritique": [
+        "Prepare one end-to-end learning-support specimen with audience need, facilitation design, adoption plan, feedback signal, revision, and handoff.",
+        "Surface a bounded resource-planning or external-partner example and quantify scale where the public record permits."
+      ],
+      "blockingReasons": [],
+      "impeccable": {
+        "aiSlopVerdict": "Low: specific evidence, calibrated limits, named collaborators, and varied project texture outweigh repeated portfolio formulas.",
+        "cognitiveLoad": "Moderate; long cases combine narrative, qualifications, citations, artifacts, and boundaries.",
+        "priorityIssues": ["Make enterprise-transfer evidence scannable in under two minutes.", "Strengthen measured learning-adoption evidence."]
+      }
+    },
+    {
+      "id": "final-aileen-palmer",
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "reader": {
+        "personId": "person.aileen-palmer",
+        "name": "Aileen Palmer",
+        "relationship": "likely-direct-report",
+        "reportingLineConfirmed": true
+      },
+      "simulatedPublicFigureLens": true,
+      "nonEndorsementBoundary": "This is a fictionalized public-context analytical lens, not participation or endorsement by Aileen Palmer.",
+      "access": { "scope": "public-web-only", "repositoryAccess": false, "privateSourceAccess": false },
+      "isolation": { "taskId": "aileen-final-8ca42a05", "separateChat": true, "priorReaderOutputsAvailable": false },
+      "visitedRoutes": ["/", "/work/technical-operations", "/work/harry-j-epstein", "/work/wowlist", "/resume", "/about"],
+      "evidence": [
+        { "route": "/work/technical-operations", "observation": "The exact candidate explicitly translates prior work into before-launch readiness, prioritization, after-launch inspection, ownership, escalation, verification, and handoff." },
+        { "route": "/work/harry-j-epstein", "observation": "The commercial case joins customer questions and operating knowledge to bounded requirements, incremental releases, customer-path inspection, analytics judgment, and reusable patterns." },
+        { "route": "/work/wowlist", "observation": "WOW List supplies transferable product definition, organizer workflows, adoption, instrumentation, communications, support, and stewardship evidence." }
+      ],
+      "decision": "pass",
+      "wouldHireForRole": true,
+      "confidence": 0.82,
+      "strengths": [
+        "I would hire this person for this job.",
+        "Jamie translates customer and operating insight into requirements, owners, releases, verification, and handoffs.",
+        "The public record covers discovery through adoption and post-launch learning while preserving honest experience boundaries."
+      ],
+      "risks": [
+        "Formal B2B SaaS Product Operations tenure, benefits-domain experience, roadmap control, retention ownership, and recurring executive cadence are not established.",
+        "Few examples show launch target, adoption result, decision, and subsequent iteration in one compact sequence."
+      ],
+      "constructiveCritique": [
+        "Prepare a Benepass-shaped example from Customer Operations signal through Product and Engineering priority, readiness, adoption, learning, and roadmap change.",
+        "Show a public-safe operating-review, intake-to-priority, launch-checklist, or decision-log artifact."
+      ],
+      "blockingReasons": [],
+      "impeccable": {
+        "aiSlopVerdict": "Low-to-moderate: specific projects and careful evidence boundaries counter repeated abstract operating-language formulas.",
+        "cognitiveLoad": "Moderate; the strongest Benepass signals are present but distributed across several long pages.",
+        "priorityIssues": ["Make Customer Operations-to-Product translation unmistakable.", "Compress repeated abstractions and foreground outcomes."]
+      }
+    },
+    {
+      "id": "final-jaclyn-chen",
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "reader": {
+        "personId": "person.jaclyn-chen",
+        "name": "Jaclyn Chen",
+        "relationship": "senior-vision",
+        "reportingLineConfirmed": false
+      },
+      "simulatedPublicFigureLens": true,
+      "nonEndorsementBoundary": "This is a fictionalized public-context analytical lens, not participation or endorsement by Jaclyn Chen.",
+      "access": { "scope": "public-web-only", "repositoryAccess": false, "privateSourceAccess": false },
+      "isolation": { "taskId": "jaclyn-final-8ca42a05", "separateChat": true, "priorReaderOutputsAvailable": false },
+      "visitedRoutes": ["/", "/work/technical-operations", "/work/harry-j-epstein", "/work/wowlist", "/resume", "/about"],
+      "evidence": [
+        { "route": "/work/technical-operations", "observation": "The new before-launch, prioritization, and after-launch model makes user paths, dependencies, risks, owners, escalation, adoption signals, workflow updates, and transfer explicit." },
+        { "route": "/work/harry-j-epstein", "observation": "Fourteen years of commercial operations connects customer language, internal habits, product information, analytics, e-commerce, and implementation." },
+        { "route": "/work/wowlist", "observation": "Historical counts and independent organizer use demonstrate a real product beyond a concept prototype while remaining bounded as historical activity." }
+      ],
+      "decision": "pass",
+      "wouldHireForRole": true,
+      "confidence": 0.78,
+      "strengths": [
+        "I would hire this person for this job.",
+        "The portfolio now demonstrates the core operating loop Benepass needs from friction through priority, launch, adoption signal, learning, and handoff.",
+        "Commercial discipline and genuine community-product evidence make the transfer credible without inventing B2B SaaS tenure."
+      ],
+      "risks": [
+        "No formal Product Operations tenure inside a scaled B2B SaaS company is established.",
+        "Roadmap authority, go/no-go governance, retention metrics, team scale, launch volume, and executive planning remain interview questions."
+      ],
+      "constructiveCritique": [
+        "Prepare one compact contested-priority story with stakeholders, criteria, tradeoff, owner, release, measurable result, and learning.",
+        "Quantify release frequency, concurrent workstreams, stakeholder scale, and friction reduction where public-safe."
+      ],
+      "blockingReasons": [],
+      "impeccable": {
+        "aiSlopVerdict": "Pass: repeated systems language is recognizable, but specific metrics, named work, honest limits, and attributable evidence make the portfolio feel authored.",
+        "cognitiveLoad": "Moderate; the strongest executive proof still requires more reading than a first pass should.",
+        "priorityIssues": ["Make scaled B2B SaaS transfer concrete in interview.", "Group the resume around customer insight, launch operations, and organizational systems."]
+      }
+    },
+    {
+      "id": "final-james-williams",
+      "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "reader": {
+        "personId": "person.james-williams-aclu",
+        "name": "James Williams",
+        "relationship": "likely-direct-report",
+        "reportingLineConfirmed": false
+      },
+      "simulatedPublicFigureLens": true,
+      "nonEndorsementBoundary": "This is a fictionalized public-context analytical lens, not participation or endorsement by James Williams; the reporting line is not publicly confirmed.",
+      "access": { "scope": "public-web-only", "repositoryAccess": false, "privateSourceAccess": false },
+      "isolation": { "taskId": "james-final-8ca42a05", "separateChat": true, "priorReaderOutputsAvailable": false },
+      "visitedRoutes": ["/", "/work/technical-operations", "/work/fair-rent-nyc", "/work/kc-town-hall", "/resume", "/about"],
+      "evidence": [
+        { "route": "/work/technical-operations", "observation": "Campaign work becomes owners, risks, next actions, escalation paths, incremental delivery, verification, and transfer without unsupported national or budget claims." },
+        { "route": "/work/fair-rent-nyc", "observation": "Recurring meetings, priority ballots, run-of-show documents, scripts, testimony, public forums, hearings, source lineage, decision records, and follow-through demonstrate hands-on integrated campaign operations." },
+        { "route": "/work/kc-town-hall", "observation": "Public presentation, stakeholder documentation, compliance coordination, resident-service workflows, a successful municipal request, and responsible transition demonstrate institutional delivery." }
+      ],
+      "decision": "pass",
+      "wouldHireForRole": true,
+      "confidence": 0.79,
+      "strengths": [
+        "I would hire this person for this job.",
+        "Jamie converts coalition listening into coordinated schedules, public events, testimony, campaign surfaces, decision records, and next steps.",
+        "Civil-rights judgment is visible in collective credit, careful causation, privacy, legal-review boundaries, and evidence discipline."
+      ],
+      "risks": [
+        "National campaign portfolio, multi-state resources, formal staffing or budget authority, and rapid-response operations are not established.",
+        "Metrics emphasize participation and operating evidence more than structured campaign outcomes."
+      ],
+      "constructiveCritique": [
+        "Prepare one campaign-plan artifact covering objectives, milestones, owners, resource assumptions, risks, escalation triggers, metrics, and learning cadence.",
+        "Prepare a bounded rapid-response story and distinguish activity, reach, intermediate outcomes, and durable impact."
+      ],
+      "blockingReasons": [],
+      "impeccable": {
+        "aiSlopVerdict": "No decisive AI-slop signal; civic specificity and evidence consciousness outweigh repeated modular phrasing.",
+        "cognitiveLoad": "High on the longest campaign case because substantiation sometimes outruns prioritization.",
+        "priorityIssues": ["Surface campaign-management proof earlier.", "Clarify local-to-national transfer as an operating model."]
+      }
+    },
+    {
+      "id": "final-deirdre-schifeling",
+      "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "reader": {
+        "personId": "person.deirdre-schifeling",
+        "name": "Deirdre Schifeling",
+        "relationship": "senior-vision",
+        "reportingLineConfirmed": false
+      },
+      "simulatedPublicFigureLens": true,
+      "nonEndorsementBoundary": "This is a fictionalized public-context analytical lens, not participation or endorsement by Deirdre Schifeling.",
+      "access": { "scope": "public-web-only", "repositoryAccess": false, "privateSourceAccess": false },
+      "isolation": { "taskId": "deirdre-final-8ca42a05", "separateChat": true, "priorReaderOutputsAvailable": false },
+      "visitedRoutes": ["/", "/work/technical-operations", "/work/fair-rent-nyc", "/work/kc-town-hall", "/resume", "/about"],
+      "evidence": [
+        { "route": "/work/technical-operations", "observation": "The portfolio translates strategy into bounded requirements, owners, dependencies, risks, releases, verification, escalation, and handoff while preserving authority limits." },
+        { "route": "/work/fair-rent-nyc", "observation": "Coalition listening, priority setting, testimony planning, public narrative, meetings, hearings, campaign sites, policy-source lineage, and protected-context handling form a credible integrated-advocacy record." },
+        { "route": "/about", "observation": "The practice connects observation, modeling, prototyping, use, learning, documentation, public benefit, accessibility, consent, privacy, repair, and institutional memory." }
+      ],
+      "decision": "pass",
+      "wouldHireForRole": true,
+      "confidence": 0.78,
+      "strengths": [
+        "I would hire this person for this job.",
+        "Jamie translates ambiguous campaign goals into plans, public actions, verification, and continuity.",
+        "Coalition-power practice and responsible civil-rights judgment are legible without inflated scale or causality."
+      ],
+      "risks": [
+        "National affiliate coordination, personnel management, advocacy-budget ownership, and national resource allocation are not established.",
+        "The record supports implementation more strongly than ownership of integrated national strategy."
+      ],
+      "constructiveCritique": [
+        "Prepare a concrete national-transfer scenario joining headquarters, affiliates, communications, legal, organizing, and policy teams.",
+        "Clarify personally owned, influenced, and collective decisions, and show how evidence changed a plan or resource choice."
+      ],
+      "blockingReasons": [],
+      "impeccable": {
+        "aiSlopVerdict": "Low: project-specific evidence and care boundaries outweigh a somewhat templated cadence.",
+        "cognitiveLoad": "Clear repeated structures aid scanning, but dense qualifications can hide leadership decisions.",
+        "priorityIssues": ["Surface three campaign-leadership decisions first.", "Strengthen the closing civil-liberties vision."]
+      }
+    },
+    {
+      "id": "final-luke-farrell",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "reader": {
+        "personId": "person.luke-farrell",
+        "name": "Luke Farrell",
+        "relationship": "likely-direct-report",
+        "reportingLineConfirmed": false
+      },
+      "simulatedPublicFigureLens": true,
+      "nonEndorsementBoundary": "This is a fictionalized public-context analytical lens, not participation or endorsement by Luke Farrell; the reporting line is not publicly confirmed.",
+      "access": { "scope": "public-web-only", "repositoryAccess": false, "privateSourceAccess": false },
+      "isolation": { "taskId": "luke-final-8ca42a05", "separateChat": true, "priorReaderOutputsAvailable": false },
+      "visitedRoutes": ["/", "/work/technical-operations", "/work/callnyc", "/work/wowlist", "/work/fair-rent-nyc", "/resume", "/about"],
+      "evidence": [
+        { "route": "/work/technical-operations", "observation": "The role-fit synthesis covers problem framing, discovery, prioritization, delivery, verification, adoption signals, ownership, escalation, and institutional transfer." },
+        { "route": "/work/callnyc", "observation": "CallNYC translates administrative data into 61 resident-facing issue pathways, district context, and next-step guidance with clear unofficial and archival limits." },
+        { "route": "/work/wowlist", "observation": "WOW List supplies end-to-end product evidence across discovery, definition, implementation, support, adoption, instrumentation, iteration, and stewardship." }
+      ],
+      "decision": "pass",
+      "wouldHireForRole": true,
+      "confidence": 0.79,
+      "strengths": [
+        "I would hire this person for this job.",
+        "Jamie begins with recognizable resident decisions rather than underlying administrative data structures.",
+        "Civic and coalition cases demonstrate credible cross-functional delivery, trust judgment, and institutional handoff without pretending to be government portfolio authority."
+      ],
+      "risks": [
+        "NYC agency employment, procurement, budget, personnel, roadmap authority, and multi-agency production delivery are not established.",
+        "Accessibility delivery, current production operations, service-level management, and verified resident outcomes need interview evidence."
+      ],
+      "constructiveCritique": [
+        "Prepare a prioritized product-decision record with rejected options, tradeoffs, owner, launch, measure, and result.",
+        "Provide a concrete accessibility and launch-readiness example covering tests, remediation, privacy, escalation, instrumentation, and post-launch findings."
+      ],
+      "blockingReasons": [],
+      "impeccable": {
+        "aiSlopVerdict": "Low-to-moderate: specific metrics and candid non-claims counter repetitive scaffolding and disclaimer formulas.",
+        "cognitiveLoad": "Long evidence blocks and repeated boundary modules sometimes obscure the decisive product choices.",
+        "priorityIssues": ["Make accessibility practice demonstrable.", "Connect adoption signals to hypotheses, thresholds, decisions, and resident outcomes."]
+      }
+    },
+    {
+      "id": "final-lisa-gelobter",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "reader": {
+        "personId": "person.lisa-gelobter",
+        "name": "Lisa Gelobter",
+        "relationship": "senior-vision",
+        "reportingLineConfirmed": false
+      },
+      "simulatedPublicFigureLens": true,
+      "nonEndorsementBoundary": "This is a fictionalized public-context analytical lens, not participation or endorsement by Lisa Gelobter.",
+      "access": { "scope": "public-web-only", "repositoryAccess": false, "privateSourceAccess": false },
+      "isolation": { "taskId": "lisa-final-8ca42a05", "separateChat": true, "priorReaderOutputsAvailable": false },
+      "visitedRoutes": ["/", "/work/technical-operations", "/work/callnyc", "/work/wowlist", "/work/fair-rent-nyc", "/resume", "/about"],
+      "evidence": [
+        { "route": "/work/technical-operations", "observation": "Participatory discovery, requirements, priorities, incremental delivery, adoption signals, verification, escalation, ownership, and decision history form an accountable senior operating model." },
+        { "route": "/work/callnyc", "observation": "CallNYC demonstrates resident-problem framing, product definition, 61 issue pathways, district context, next-step guidance, public launch, iteration, documentation, and clear service limits." },
+        { "route": "/work/fair-rent-nyc", "observation": "Coalition facilitation, priority setting, public communication, source governance, sensitive-context handling, implementation, and collective credit demonstrate trustworthy public-interest delivery." }
+      ],
+      "decision": "pass",
+      "wouldHireForRole": true,
+      "confidence": 0.82,
+      "strengths": [
+        "I would hire this person for this job.",
+        "Jamie converts loosely defined civic and community needs into usable public-facing systems and accountable next steps.",
+        "Trust, source provenance, privacy boundaries, correction paths, and institutional continuity are treated as product quality."
+      ],
+      "risks": [
+        "Government roadmap, procurement, budget, personnel, and multi-agency production authority are not established.",
+        "Accessibility delivery, service-quality indicators, resident outcomes, and recent formal product-organization experience remain gaps."
+      ],
+      "constructiveCritique": [
+        "Prepare a product-decision record joining resident need, discovery, rejected options, prioritization, release, adoption measure, learning, and handoff owner.",
+        "Provide a bounded accessibility specimen and distinguish outputs, adoption, service quality, equity indicators, and resident outcomes."
+      ],
+      "blockingReasons": [],
+      "impeccable": {
+        "aiSlopVerdict": "No strong AI-slop signal: project-specific evidence and attribution outweigh repeated formulas and defensive caveats.",
+        "cognitiveLoad": "Consistent hierarchy helps, but the longer cases require work to isolate decisive resident-service judgments.",
+        "priorityIssues": ["Make resident needs and measured service effects more prominent.", "Surface prioritization tradeoffs and individual accountability."]
+      }
+    }
+  ],
+  "neutralImpeccableAssessment": {
+    "status": "pass",
+    "taskId": "impeccable-final-8ca42a05",
+    "targetGitRev": "8ca42a05f0e08e016967f444474293484c004ef0",
+    "access": { "scope": "public-web-only", "repositoryAccess": false, "privateSourceAccess": false, "priorReaderOutputsAvailable": false },
+    "hardGateFailures": [],
+    "evidence": [
+      "Desktop and mobile checks found no horizontal overflow on the homepage, resume, or technical-operations route.",
+      "The first Tab revealed a fully visible skip link and Enter transferred focus to MAIN#main.",
+      "The resume download control exposed a distinct 3px focus indicator with approximately 5.6:1 contrast.",
+      "The editorial grid, typography, project-specific evidence, citations, and scope boundaries passed the design-specificity and AI-slop scan."
+    ],
+    "constructiveCritique": [
+      "Improve long-page navigation and compress repeated evidence structures.",
+      "Prioritize the strongest resume impact items for mobile scanning."
+    ]
+  }
+}

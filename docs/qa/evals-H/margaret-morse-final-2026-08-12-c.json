@@ -1,1 +1,27 @@
-{"evaluator":"Fictionalized Margaret Morse analytical-lens review; not a quotation, endorsement, or publication approval.","reviewerId":"morse-c-v2-2026-08-12-5a52f34c","phase":"holdout","lensId":"PR-015","candidateSha256":"5a52f34cbe2a40944f75a25d64f3339d4fabe78ad0d189d5468b6fdf5ea7dc42","score":4,"pass":true,"evidence":["Independently recomputed the SHA-256 from all 120 professorCandidateRelativePaths using fingerprintProfessorCandidate; it exactly matches the required candidate fingerprint.","apps/www/src/app/page.tsx and apps/www/src/components/Hero.tsx establish immediate professional legibility and provide one-click routes to Work and About through the visible navigation.","apps/www/src/app/about/page.tsx supplies the two-click threshold: “Systems people can inhabit” explicitly connects artistic, civic, technical, and social practice without displacing Jamie’s technical-project-management and implementation role.","The About page traces three clearly marked current practices—Harry J. Epstein Company, NYC Artist Coalition/FairRentNYC, and Sunday Dinner/196—through relationships, models, interfaces and use, learning, documentation, and continuity.","apps/www/src/content/work/harry-j-epstein.mdx shows attention to customer language and institutional memory becoming maintainable workflows, with a bounded reconstruction that excludes customer data, private analytics, revenue detail, and sensitive operations.","apps/www/src/content/work/fair-rent-nyc.mdx treats documentation as coalition infrastructure, preserves collective accomplishment and legislative-causality boundaries, and excludes strategy, legal-review context, private stakeholder information, and unapproved quotations.","apps/www/src/content/work/196-sunday-dinner.mdx makes hospitality, place, trust, participant agency, and continuity operationally legible while withholding identities, proposals, access details, attendance histories, correspondence, images, and participant-level values.","The five attached captures visibly agree with candidate-source navigation, headings, principal wording, hierarchy, status labels, workflow specimens, and public-safety boundaries; no rendered/source mismatch was observed.","apps/www/next.config.ts and apps/www/src/app/robots.ts keep the default candidate noindex/nofollow and require an explicit production indexing policy, preserving the deployment gate."],"gaps":["No material PR-015 gap was found within the bounded candidate and rendered evidence.","This score does not satisfy or replace the rubric’s three-judge median requirement, Jamie’s exact-candidate approval, visual/asset consent decisions, deployment approval, or indexing approval."],"safety_findings":["Collective work remains collectively credited; individual implementation and organizing are not converted into sole authorship, legislative enactment, or sole causation.","Participant privacy and agency are explicitly protected in the Sunday Dinner/196 reconstructions, including boundaries around identities, attendance, correspondence, access, proposals, photographs, and outcomes.","The candidate does not visibly quote or project protected educational records, private correspondence, or an unapproved testimonial; the Open House lineage appears only as bounded public-safe claim language.","Historical, current, public-safe, and summary-only distinctions are visibly maintained.","Production deployment and indexing remain human-gated; access to evidence and this evaluation must not be treated as consent or publication approval."],"recommendation":"Pass PR-015 at 4 for this exact frozen candidate. Preserve all existing collective-credit, participant-privacy, protected-record, testimonial, deployment, and indexing boundaries; obtain Jamie’s explicit approval of the exact candidate and indexing state before any production publication.","provenance":{"provider":"independent-codex-review","reviewMode":"bounded independent holdout","reviewerRole":"collective-care-and-place-reader","reviewedAt":"2026-08-12","candidatePathCount":120,"candidateFingerprintRecomputed":true,"filesEdited":false}}
+{
+  "evaluator": "Fictionalized Margaret Morse analytical lens; not her participation, quotation, endorsement, or publication approval.",
+  "reviewerId": "morse-c-v4-2026-08-13-40437699",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "404376992695431861412b6d8d130310e9719e0c6904a2b98e5e1ed61966b77b",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The reviewer independently verified the full candidate path count and fingerprint before judgment.",
+    "The recurring form is legible across commercial, civic, cultural, and lab work: listen closely, shape a usable interface, support participation, learn, and leave continuity behind.",
+    "Concrete project pages prevent the through-line from becoming abstract biography.",
+    "Privacy, consent, attribution, and publication remain distinct gates across the inspected surfaces."
+  ],
+  "gaps": ["The site should continue resisting the temptation to add protected material merely to make already-defensible practice more vivid."],
+  "safety_findings": ["No protected educational-record quotation, private correspondence, participant record, or unapproved testimonial appeared in the evaluated public candidate."],
+  "recommendation": "Pass at 4; preserve the inhabited-systems evidence and its conservative public-safe boundaries.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "bounded independent holdout",
+    "reviewerRole": "practice-lineage-reader-c",
+    "reviewedAt": "2026-08-13",
+    "candidatePathCount": 127,
+    "candidateFingerprintRecomputed": true,
+    "filesEdited": false
+  }
+}

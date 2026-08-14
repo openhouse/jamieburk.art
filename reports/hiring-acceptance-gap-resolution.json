@@ -1,10 +1,24 @@
 {
   "schemaVersion": 1,
-  "candidateSha": "35527351e5f08fba4a917cd193dac36e1c9907df",
-  "portfolioSnapshotHash": "b49257b6c64c59c2ee772c697fe845662209e74e6bea8da1b95a442c6e8a8b13",
-  "publicReportHash": "5bbdaf63680d57224adfb9a8051184a6a1958cfe68fab57fafe2edf1efd3f74b",
+  "candidateSha": "8ca42a05f0e08e016967f444474293484c004ef0",
+  "portfolioSnapshotHash": "e2be3c565fa63cc675a08418708d1033e9b5169ec6e099f68bc69ae31759a8d4",
+  "publicReportHash": "2ea543221a863a69ca4c3d505ce6602f9d7018e0bcdf91d9aaafc7f994f79d39",
   "wikiSourceFingerprint": "f6f87d48bc1a9abe5424c304ec68d9cbd8b4ff80cb7ce5896b62e3514a5ba8c8",
   "findings": [
+    {
+      "findingId": "finding.requirement.oti-product.cross-functional-launch",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "requirementId": "requirement.oti-product.cross-functional-launch",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-proven",
+      "gapType": "none",
+      "smallestResponsibleChange": "Show how Jamie made dependencies and decision ownership legible.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
     {
       "findingId": "finding.requirement.oti-product.metrics-and-learning",
       "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
@@ -20,6 +34,20 @@
       "requiresHumanApproval": true
     },
     {
+      "findingId": "finding.requirement.aclu-lps.plan-budget-risk",
+      "opportunityId": "opportunity.aclu.senior-project-manager-lps.8620968002",
+      "requirementId": "requirement.aclu-lps.plan-budget-risk",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "wording",
+      "smallestResponsibleChange": "Prepare an honest budget-responsibility example without implying procurement authority.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
       "findingId": "finding.requirement.aclu-lps.business-analysis",
       "opportunityId": "opportunity.aclu.senior-project-manager-lps.8620968002",
       "requirementId": "requirement.aclu-lps.business-analysis",
@@ -30,6 +58,119 @@
       "currentStatus": "visible-qualified",
       "gapType": "public-projection",
       "smallestResponsibleChange": "Prepare one redacted process map or requirements artifact.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.aclu-lps.organizational-learning",
+      "opportunityId": "opportunity.aclu.senior-project-manager-lps.8620968002",
+      "requirementId": "requirement.aclu-lps.organizational-learning",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "visible-proven",
+      "gapType": "none",
+      "smallestResponsibleChange": "Explain what changed after a retrospective and remained in use.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.aclu-campaigns.communications",
+      "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "requirementId": "requirement.aclu-campaigns.communications",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "public-projection",
+      "smallestResponsibleChange": "Prepare a compact redacted campaign update and a public remarks example.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.aclu-campaigns.judgment-and-discretion",
+      "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "requirementId": "requirement.aclu-campaigns.judgment-and-discretion",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "wording",
+      "smallestResponsibleChange": "Prepare one example of protecting sensitive work while keeping a public process moving.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti.delivery-coordination",
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "requirementId": "requirement.oti.delivery-coordination",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-proven",
+      "gapType": "none",
+      "smallestResponsibleChange": "Lead with one concrete delivery example in the application.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti.risk-and-dependencies",
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "requirementId": "requirement.oti.risk-and-dependencies",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations",
+        "project.callnyc"
+      ],
+      "currentStatus": "visible-proven",
+      "gapType": "none",
+      "smallestResponsibleChange": "Keep the public wording concise; add detail in interview.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti.onboarding-and-runbooks",
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "requirementId": "requirement.oti.onboarding-and-runbooks",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "visible-proven",
+      "gapType": "none",
+      "smallestResponsibleChange": "Prepare one inspectable redacted artifact for interview.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti.reporting-and-metrics",
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "requirementId": "requirement.oti.reporting-and-metrics",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "wording",
+      "smallestResponsibleChange": "Prepare a compact example of a weekly status and risk report.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti.continuous-improvement",
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "requirementId": "requirement.oti.continuous-improvement",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-proven",
+      "gapType": "none",
+      "smallestResponsibleChange": "Preserve the current direct phrasing.",
       "requiresOriginalSourceReview": false,
       "requiresHumanApproval": true
     },
@@ -90,6 +231,48 @@
       "requiresHumanApproval": true
     },
     {
+      "findingId": "finding.requirement.benepass.launch-readiness",
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "requirementId": "requirement.benepass.launch-readiness",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "wording",
+      "smallestResponsibleChange": "Prepare a concrete launch-readiness example and decision boundary.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.benepass.product-engineering-translation",
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "requirementId": "requirement.benepass.product-engineering-translation",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "wording",
+      "smallestResponsibleChange": "Name the operational consequence, not merely the stakeholder list.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.benepass.runbooks-and-learning",
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "requirementId": "requirement.benepass.runbooks-and-learning",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "visible-proven",
+      "gapType": "none",
+      "smallestResponsibleChange": "Prepare one inspectable sample.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
       "findingId": "finding.requirement.benepass.quantified-prioritization",
       "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
       "requirementId": "requirement.benepass.quantified-prioritization",
@@ -99,6 +282,48 @@
       "gapType": "source",
       "smallestResponsibleChange": "Use only supported HJE figures and explain the decision they informed.",
       "requiresOriginalSourceReview": true,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.codepath.master-program-plan",
+      "opportunityId": "opportunity.codepath.claude-corps.5182020007",
+      "requirementId": "requirement.codepath.master-program-plan",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-proven",
+      "gapType": "none",
+      "smallestResponsibleChange": "Prepare a redacted plan-of-record artifact.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.codepath.partner-coordination",
+      "opportunityId": "opportunity.codepath.claude-corps.5182020007",
+      "requirementId": "requirement.codepath.partner-coordination",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "project.callnyc"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "wording",
+      "smallestResponsibleChange": "Name one multi-organization delivery sequence.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.codepath.executive-reporting",
+      "opportunityId": "opportunity.codepath.claude-corps.5182020007",
+      "requirementId": "requirement.codepath.executive-reporting",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "public-projection",
+      "smallestResponsibleChange": "Prepare one status-report sample for interview.",
+      "requiresOriginalSourceReview": false,
       "requiresHumanApproval": true
     },
     {
@@ -130,6 +355,20 @@
       "requiresHumanApproval": true
     },
     {
+      "findingId": "finding.requirement.asana.reusable-playbooks",
+      "opportunityId": "opportunity.asana.ai-implementation.8027437",
+      "requirementId": "requirement.asana.reusable-playbooks",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "wording",
+      "smallestResponsibleChange": "Prepare one implementation-oriented playbook sample.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
       "findingId": "finding.requirement.permitflow.product-data",
       "opportunityId": "opportunity.permitflow.product-operations.8a6e6066",
       "requirementId": "requirement.permitflow.product-data",
@@ -138,6 +377,35 @@
       "currentStatus": "visible-weak",
       "gapType": "experience",
       "smallestResponsibleChange": "Test present SQL and analytics fluency; do not imply tools Jamie cannot demonstrate.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.permitflow.cross-functional-launch",
+      "opportunityId": "opportunity.permitflow.product-operations.8a6e6066",
+      "requirementId": "requirement.permitflow.cross-functional-launch",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "wording",
+      "smallestResponsibleChange": "Prepare one cross-functional launch sequence with actors and decisions.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.protected-memory.knowledge-friction",
+      "opportunityId": "opportunity.protected.source-backed-memory-consulting.2026",
+      "requirementId": "requirement.protected-memory.knowledge-friction",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "method.source-backed-team-memory",
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "none",
+      "smallestResponsibleChange": "Keep the public method legible without exposing the protected lead.",
       "requiresOriginalSourceReview": false,
       "requiresHumanApproval": true
     }

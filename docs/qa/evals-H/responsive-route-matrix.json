@@ -1,8 +1,8 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-08-13T20:50:16.018Z",
-  "baseUrl": "http://127.0.0.1:3103",
-  "publicSurfaceFingerprint": "22e75644f4433111922998298e80e9c65065673aecc8a1125e5d630843a14c92",
+  "checkedAt": "2026-08-14T03:49:50.299Z",
+  "baseUrl": "https://staging-c.jamieburk.art",
+  "publicSurfaceFingerprint": "87f528ec76e01ebc1740cffb790f685020d1afdd7acd6cde9b7e045e69200957",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 125,
   "routes": [
@@ -824,7 +824,7 @@
     "nonSuccessResponses": 0,
     "invalidHeadingOrLandmarkRows": 0,
     "lazyImagesObserved": 36,
-    "unloadedImagesBeforeScroll": 38,
+    "unloadedImagesBeforeScroll": 34,
     "lazyImageFollowUpPerformed": true,
     "allImagesLoadedAfterScroll": true
   },
@@ -886,7 +886,7 @@
     "passed": true
   },
   "navigationReview": {
-    "checkedAt": "2026-08-13T20:50:16.018Z",
+    "checkedAt": "2026-08-14T03:49:50.299Z",
     "startRoute": "/",
     "destinationRoute": "/about",
     "startHttpStatus": 200,
@@ -901,8 +901,8 @@
       "height": 900
     },
     "renderedScreenshot": {
-      "sha256": "7e10731f445b437bf2e687335ca115872e49632236ebf020fcf67b70feb46f3b",
-      "byteLength": 583885,
+      "sha256": "307bcd3778043df3c9c2a8eb4160f3a8f81ac522e52cd3a07730c384f4d0b277",
+      "byteLength": 585553,
       "width": 1280,
       "fullPage": true,
       "retainedInPublicGit": false,
