@@ -1,15 +1,16 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Harry J. Epstein Company digital operations
 
-**Source commit:** `2be06955b3e63f77f403ccbb02fd21b6a959449c`
-**Generation time:** 2026-08-14T15:38:44-04:00
-**Source fingerprint:** `77b899a4d84924186b95592e46ab240114acd967d71c13aa7517629e56320e9c`
+**Source commit:** `13874d63b634022acb476b336254f8224ed54fd9`
+**Generation time:** 2026-08-14T16:26:00-04:00
+**Source fingerprint:** `d2abdb36159c24e45c55178b2ec32a870966584f4ffaacfcf1b83a32b772aa78`
 
 - [Implementation, Adoption, and Handoff](../../capabilities/implementation-adoption-and-handoff.md) - `related_to` (frontmatter)
 - [Implementation and operational stewardship](../../capabilities/implementation-and-operational-stewardship.md) - `prose_link` (markdown)
 - [Implementation and operational stewardship](../../capabilities/implementation-and-operational-stewardship.md) - `related_to` (frontmatter)
 - [Harry J. Epstein continuity-oriented modernization](../../decisions/hje-continuity-modernization.md) - `resulted_in` (frontmatter)
 - [Canonical Story Bank](../../indexes/canonical-story-bank.md) - `related_to` (frontmatter)
+- [Live Project Websites](../../indexes/live-project-websites.md) - `related_to` (frontmatter)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `prose_link` (markdown)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `related_to` (frontmatter)
 - [People, places, and the work between them](../../indexes/people-places-and-work-between-them.md) - `prose_link` (markdown)

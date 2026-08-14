@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `2be06955b3e63f77f403ccbb02fd21b6a959449c`
-**Generation time:** 2026-08-14T15:38:44-04:00
-**Source fingerprint:** `77b899a4d84924186b95592e46ab240114acd967d71c13aa7517629e56320e9c`
+**Source commit:** `13874d63b634022acb476b336254f8224ed54fd9`
+**Generation time:** 2026-08-14T16:26:00-04:00
+**Source fingerprint:** `d2abdb36159c24e45c55178b2ec32a870966584f4ffaacfcf1b83a32b772aa78`
 
 ## application
 
@@ -282,6 +282,7 @@
 - [Knowledge Wiki branch-family closure](../indexes/family-closure.md) - `index.knowledge-wiki.family-closure`
 - [Jamie Burkart public-record source edition](../indexes/jamie-public-record-source-edition.md) - `index.knowledge-wiki.jamie-public-record-source-edition`
 - [Jamie Burkart Sourcebook pilot](../indexes/jamie-sourcebook.md) - `index.knowledge-wiki.jamie-sourcebook`
+- [Live Project Websites](../indexes/live-project-websites.md) - `index.knowledge-wiki.live-project-websites`
 - [Living archive and missing-page map](../indexes/living-archive.md) - `index.knowledge-wiki.living-archive`
 - [Outcomes, Adoption, and Afterlives](../indexes/outcomes-adoption-and-afterlives.md) - `index.knowledge-wiki.outcomes-adoption-afterlives`
 - [People, places, and the work between them](../indexes/people-places-and-work-between-them.md) - `index.knowledge-wiki.people-places-work`
@@ -397,6 +398,7 @@
 
 ## research-run
 
+- [Restored project sites close reading, August 14, 2026](../research-runs/restored-project-sites-close-reading-2026-08-14.md) - `research-run.restored-project-sites.2026-08-14`
 - [Foundational Wiki page source return, July 19, 2026](../research-runs/foundational-source-return-2026-07-19.md) - `research.foundational-source-return.2026-07-19`
 - [Interpretive layer source return, July 19, 2026](../research-runs/interpretive-layer-source-return-2026-07-19.md) - `research.interpretive-layer-source-return.2026-07-19`
 - [Knowledge Wiki branch-family closure review](../research-runs/knowledge-wiki-family-closure-2026-07-19.md) - `research.knowledge-wiki-family-closure.2026-07-19`
@@ -410,6 +412,7 @@
 - [ACLU biography - Deirdre Schifeling](../sources/aclu-deirdre-schifeling-bio.md) - `source.aclu.deirdre-schifeling-bio`
 - [ACLU biography - Terence Dougherty](../sources/aclu-terence-dougherty-bio.md) - `source.aclu.terence-dougherty-bio`
 - [Benepass leadership context - Jaclyn Chen](../sources/benepass-jaclyn-chen-leadership.md) - `source.benepass.jaclyn-chen-leadership.2026`
+- [CallNYC restored archived prototype, August 2026](../sources/callnyc-restored-site-2026-08-14.md) - `source.callnyc.restored-site.2026-08-14`
 - [CallNYC public source repository](../sources/callnyc-source-repository.md) - `source.callnyc.source-repository`
 - [Campaign-site repository family, 2020-2022](../sources/campaign-site-repository-family-2020-2022.md) - `source.campaign-site.repository-family.2020-2022`
 - [Civic Hall hackathon announcement](../sources/civichall-hackathon-announcement-2016.md) - `source.civichall.hackathon-announcement.2016`
@@ -435,6 +438,7 @@
 - [KC Town Hall CCED proposal bundle, 2019](../sources/kc-town-hall-cced-proposal-2019.md) - `source.kc-town-hall.cced-proposal.2019`
 - [KC Town Hall local digital archive review, July 2026](../sources/archives/kc-town-hall-local-digital-archive-2026-07.md) - `source.kc-town-hall.local-digital-archive.2026-07`
 - [KC Town Hall photographic oral histories, July 2026](../sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md) - `source.kc-town-hall.photographic-oral-histories.2026-07`
+- [KC Town Hall restored public site, August 2026](../sources/kctownhall-live-site-2026-08-14.md) - `source.kctownhall.live-site.2026-08-14`
 - [Frozen Knowledge Wiki branch A](../sources/knowledge-wiki-branch-a-2026-07-19.md) - `source.knowledge-wiki.branch-a.2026-07-19`
 - [Frozen Knowledge Wiki branch B](../sources/knowledge-wiki-branch-b-2026-07-19.md) - `source.knowledge-wiki.branch-b.2026-07-19`
 - [Frozen Knowledge Wiki branch C](../sources/knowledge-wiki-branch-c-2026-07-19.md) - `source.knowledge-wiki.branch-c.2026-07-19`

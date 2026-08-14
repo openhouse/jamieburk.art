@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `2be06955b3e63f77f403ccbb02fd21b6a959449c`
-**Generation time:** 2026-08-14T15:38:44-04:00
-**Source fingerprint:** `77b899a4d84924186b95592e46ab240114acd967d71c13aa7517629e56320e9c`
+**Source commit:** `13874d63b634022acb476b336254f8224ed54fd9`
+**Generation time:** 2026-08-14T16:26:00-04:00
+**Source fingerprint:** `d2abdb36159c24e45c55178b2ec32a870966584f4ffaacfcf1b83a32b772aa78`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 26
+- Nodes added: 30
 - Nodes removed: 34
-- Edges added: 87
+- Edges added: 105
 - Edges removed: 178
 - New type-aware orphans: 0
 - Current rights-review records: 186
@@ -23,18 +23,22 @@ Compared with the graph artifact on `origin/develop`.
 - `decision.photo.fair-rent-participation-sequence.2026-08-13`
 - `evaluation.employment-opportunity-leadership.2026-08-13`
 - `event.nyc.sbu.empty-storefronts-high-rents-release.2026-07-29`
+- `index.knowledge-wiki.live-project-websites`
 - `opportunity.aclu.senior-project-manager-lps.8620968002`
 - `opportunity.aclu.senior-project-manager-national-campaigns.8631854002`
 - `person.deirdre-schifeling`
 - `person.james-williams-aclu`
 - `person.terence-dougherty`
 - `projection.visual.fair-rent.participation-sequence.2026-08`
+- `research-run.restored-project-sites.2026-08-14`
 - `research.nycac-crs-30-day-close-reading.2026-08-13`
 - `source.aclu.deirdre-schifeling-bio`
 - `source.aclu.terence-dougherty-bio`
 - `source.benepass.jaclyn-chen-leadership.2026`
+- `source.callnyc.restored-site.2026-08-14`
 - `source.jobs.aclu.senior-project-manager-lps.8620968002`
 - `source.jobs.aclu.senior-project-manager-national-campaigns.8631854002`
+- `source.kctownhall.live-site.2026-08-14`
 - `source.linkedin.aileen-palmer-benepass.2026`
 - `source.linkedin.james-williams-aclu-national-campaigns.2026`
 - `source.linkedin.luke-farrell-pit-crew-leadership.2026`

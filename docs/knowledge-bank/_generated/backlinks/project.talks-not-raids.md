@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Talks Not Raids orientation
 
-**Source commit:** `2be06955b3e63f77f403ccbb02fd21b6a959449c`
-**Generation time:** 2026-08-14T15:38:44-04:00
-**Source fingerprint:** `77b899a4d84924186b95592e46ab240114acd967d71c13aa7517629e56320e9c`
+**Source commit:** `13874d63b634022acb476b336254f8224ed54fd9`
+**Generation time:** 2026-08-14T16:26:00-04:00
+**Source fingerprint:** `d2abdb36159c24e45c55178b2ec32a870966584f4ffaacfcf1b83a32b772aa78`
 
 - [NYC Artist Coalition / Talks Not Raids: save nyc spaces nyc artist coalition [7cao5kfz]](../../assets/photographs/project-sites/nyc-artist-coalition-talks-not-raids-save-nyc-spaces-nyc-artist-coalitio.md) - `related_to` (frontmatter)
 - [Save NYC Spaces / Talks Not Raids: save nyc spaces nyc artist coalition [44iyucy6]](../../assets/photographs/project-sites/save-nyc-spaces-talks-not-raids-save-nyc-spaces-nyc-artist-coalition-44i.md) - `related_to` (frontmatter)
@@ -18,6 +18,7 @@
 - [Talks Not Raids: save nyc spaces group photo nyc artist coalition thumb [fqny62h4]](../../assets/photographs/project-sites/talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-thumb-f.md) - `related_to` (frontmatter)
 - [Talks Not Raids: stephenlevin [3lpdubkj]](../../assets/photographs/project-sites/talks-not-raids-stephenlevin-3lpdubkj6h.md) - `related_to` (frontmatter)
 - [Committee on Public Safety hearing on M.A.R.C.H. operations](../../events/march-operations-hearing-2019-02-11.md) - `related_to` (frontmatter)
+- [Live Project Websites](../../indexes/live-project-websites.md) - `related_to` (frontmatter)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `prose_link` (markdown)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `related_to` (frontmatter)
 - [Project lineages](../../indexes/project-lineages.md) - `prose_link` (markdown)

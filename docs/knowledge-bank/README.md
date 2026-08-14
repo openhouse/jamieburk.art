@@ -71,6 +71,10 @@ relations:
     href: indexes/professional-record-and-reception.md
     context: Public-safe institutional facts, documented encounters, dated reception, and explicit recommendation and endorsement boundaries.
   - type: related_to
+    target: index.knowledge-wiki.live-project-websites
+    href: indexes/live-project-websites.md
+    context: Dated project-home inventory with current, returning, historical, and credit-open states kept distinct.
+  - type: related_to
     target: project.nyc-artist-coalition
     href: projects/nyc-artist-coalition-2017.md
     context: Governed civic-systems record strengthened by complete shared-folder accounting.
@@ -149,6 +153,10 @@ The website should use the clearest subset for a specific audience and purpose.
   institutional facts, documented encounters, historical evaluation, held
   photographs, and the boundaries between relationship, recommendation, and
   endorsement.
+- [Live project websites](indexes/live-project-websites.md): ten meaningful
+  project homes currently reachable, a nine-site evidence-backed Jamie
+  implementation count, alias deduplication, and current-versus-historical
+  link labels.
 - [NYC Artist Coalition](projects/nyc-artist-coalition-2017.md): public-source
   claims, collective-credit boundaries, and the governed shared-folder research
   pass.

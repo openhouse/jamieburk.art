@@ -384,6 +384,7 @@ const workItemsInput = [
       "Public Interfaces"
     ],
     links: [
+      { label: "Visit restored CallNYC archive", url: "https://callnyc.org/" },
       {
         label: "Politico New York archived PDF",
         url: "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf"
@@ -641,6 +642,12 @@ const workItemsInput = [
     ],
     tags: ["Implementation", "Documentation", "Knowledge Systems", "Public-Facing Tools"],
     capabilities: ["Resident Service Design", "Field Operations", "Cross-Agency Coordination", "Measurement", "Stakeholder Documentation", "Funding Support", "Historic Preservation Context"],
+    links: [
+      {
+        label: "KC Town Hall historical project site",
+        url: "https://kctownhall.com/"
+      }
+    ],
     careNote:
       "The service claim says Jamie helped design and operate because the work belonged to residents, KC Town Hall, Oak Park Neighborhood Association, City partners, and other collaborators. The tracker is project-maintained, not City-audited; resident records remain private. Securing the award names Jamie's documented proposal-and-presentation role, while institutional authority remained with the Board and Council.",
     sourceLayer:
