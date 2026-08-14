@@ -68,3 +68,14 @@ test("removing the Fair Rent field-and-system pair fails closed", () => {
   assert.equal(result.passed, false);
   assert(result.failures.some(({ criterion }) => criterion === "editorial-not-decorative"));
 });
+
+test("removing mobile-menu close-on-navigation behavior fails closed", () => {
+  const path = "apps/www/src/components/SiteHeader.tsx";
+  const source = readFileSync(path, "utf8").replace(
+    "onClick={closeMobileNavigation}",
+    ""
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "responsive-navigation"));
+});

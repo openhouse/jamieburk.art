@@ -1,0 +1,33 @@
+{
+  "evaluator": "Fictionalized Margaret Morse analytical lens; not a quotation, endorsement, named-professor judgment, or publication approval.",
+  "reviewerId": "pr015-independent-holdout-v5-c-4605a9ad",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "4605a9adad10bfca08ee0eaaefc66329bf268db9f65265095cec1b9e293130ed",
+  "score": 3,
+  "pass": false,
+  "evidence": [
+    "The independently recomputed fingerprint covered 126 bound paths and matched the candidate SHA-256.",
+    "The About page connected artistic, civic, technical, and social practice through multiple inspectable continuities.",
+    "The field-and-system pairings preserved collective credit, bounded captions, and legible responsive stacking.",
+    "At mobile width, activating About from the open Menu changed the route but left the disclosure open over the destination."
+  ],
+  "gaps": [
+    "The persistent app-layout header retained the native details element's open state after client-side navigation.",
+    "Because the holdout passes only at 4, the unresolved mobile interaction prevented a passing score."
+  ],
+  "safety_findings": [
+    "No claim, rights, consent, publication, production, or indexing gate needed to be weakened to address the interaction defect.",
+    "Collective credit and protected-source boundaries passed and remained unchanged."
+  ],
+  "recommendation": "Close the mobile navigation disclosure when a route link is activated, verify the transition at mobile width, and rerun every exact-candidate holdout.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "bounded independent holdout",
+    "reviewerRole": "responsive practice-lineage reader",
+    "reviewedAt": "2026-08-13",
+    "candidatePathCount": 126,
+    "candidateFingerprintRecomputed": true,
+    "filesEdited": false
+  }
+}

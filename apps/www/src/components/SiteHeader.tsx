@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import type { MouseEvent } from "react";
 import { site } from "@/data/site";
 
 const navItems = [
@@ -8,6 +11,10 @@ const navItems = [
   { href: "/resume", label: "Resume" },
   { href: "/contact", label: "Contact" }
 ] as const;
+
+function closeMobileNavigation(event: MouseEvent<HTMLAnchorElement>) {
+  event.currentTarget.closest("details")?.removeAttribute("open");
+}
 
 export function SiteHeader() {
   return (
@@ -48,6 +55,7 @@ export function SiteHeader() {
                   <Link
                     className="flex min-h-11 items-center border-b border-jb-ink/10 px-3 text-sm font-semibold text-jb-ink hover:bg-jb-warm hover:text-jb-blue"
                     href={item.href}
+                    onClick={closeMobileNavigation}
                   >
                     {item.label}
                   </Link>

@@ -97,6 +97,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   }
 
   const hero = readText("apps/www/src/components/Hero.tsx");
+  const siteHeader = readText("apps/www/src/components/SiteHeader.tsx");
   const fieldSystemEvidence = readText("apps/www/src/components/FieldSystemEvidence.tsx");
   const home = readText("apps/www/src/app/page.tsx");
   const fairRent = readText("apps/www/src/app/work/[slug]/page.tsx");
@@ -175,6 +176,13 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   }
   if (!globalCss.includes("100svh")) {
     fail("responsive-image-contract", "The stable viewport-bounded hero contract is incomplete.");
+  }
+  if (
+    !siteHeader.startsWith('"use client";') ||
+    !siteHeader.includes('closest("details")?.removeAttribute("open")') ||
+    !siteHeader.includes("onClick={closeMobileNavigation}")
+  ) {
+    fail("responsive-navigation", "Mobile navigation links must close the persistent disclosure when activated.");
   }
 
   const design = readText("DESIGN.md");
