@@ -1,11 +1,8 @@
 # syntax=docker/dockerfile:1.7
 
-FROM node:26-bookworm-slim AS base
+FROM node:26-bullseye-slim AS base
 WORKDIR /repo
 ENV NEXT_TELEMETRY_DISABLED=1
-RUN apt-get update \
-  && apt-get install -y --no-install-recommends ca-certificates \
-  && rm -rf /var/lib/apt/lists/*
 
 FROM base AS deps
 COPY package.json package-lock.json ./
@@ -29,7 +26,7 @@ COPY --from=deps /repo/node_modules ./node_modules
 COPY . .
 RUN npm run build -w @jamie-burkart/www
 
-FROM node:26-bookworm-slim AS runner
+FROM node:26-bullseye-slim AS runner
 WORKDIR /app
 ARG APP_ENV=staging
 ARG SITE_ENV=staging
