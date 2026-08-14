@@ -159,8 +159,8 @@ export function evaluateResumeVersions(root = defaultRoot) {
           !pdfText.includes("/StructTreeRoot") ||
           !pdfText.includes("/DisplayDocTitle true") ||
           !requiredFonts.every((font) => pdfText.includes(font)) ||
-          artifact.schemaVersion !== 1 ||
-          artifact.targetJobId !== "782366" ||
+          artifact.schemaVersion !== 2 ||
+          artifact.opportunityId !== "opportunity.nyc-oti.senior-product-manager.782366" ||
           artifact.sourceMarkdown !== "Jamie-Burkart-Resume.md" ||
           artifact.sourceMarkdownSha256 !== digest(resume) ||
           artifact?.pdf?.file !== path.basename(targetPdf) ||
@@ -171,10 +171,13 @@ export function evaluateResumeVersions(root = defaultRoot) {
           artifact?.pdf?.pageSize !== "US Letter" ||
           artifact?.pdf?.tagged !== true ||
           artifact?.layout?.source !== "native-google-doc-copy" ||
+          artifact?.layout?.styleReference !== "please-read-only resume style source example" ||
           JSON.stringify(artifact?.layout?.typography) !== JSON.stringify(["Palatino Linotype", "Oswald", "Karla"]) ||
           artifact?.layout?.sourceStylesPreserved !== true ||
           artifact?.googleWorkspace?.sourceWasTreatedReadOnly !== true ||
           artifact?.googleWorkspace?.sourceUnchangedAfterCopy !== true ||
+          artifact?.googleWorkspace?.nativeCopyCreated !== true ||
+          artifact?.googleWorkspace?.connectorReadbackVerified !== true ||
           artifact?.googleWorkspace?.sourceLocatorCommitted !== false ||
           artifact?.googleWorkspace?.copyLocatorCommitted !== false ||
           artifact?.visualInspection?.status !== "pass" ||

@@ -1,9 +1,13 @@
 {
-  "schemaVersion": 1,
-  "targetJobId": "782366",
+  "schemaVersion": 2,
+  "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
   "generatedOn": "2026-08-14",
   "sourceMarkdown": "Jamie-Burkart-Resume.md",
   "sourceMarkdownSha256": "0121e085c03095ab329f9a3e16bea4b7e9c4949546e81229d132b802451162e1",
+  "opportunitySource": {
+    "file": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
+    "sha256": "e244c8222d6c431fd9d9ce34349f2b57c139656adf225974d4f6462ce55dd25d"
+  },
   "pdf": {
     "file": "Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf",
     "mediaType": "application/pdf",
@@ -15,6 +19,7 @@
   },
   "layout": {
     "source": "native-google-doc-copy",
+    "styleReference": "please-read-only resume style source example",
     "typography": [
       "Palatino Linotype",
       "Oswald",
@@ -29,6 +34,8 @@
   "googleWorkspace": {
     "sourceWasTreatedReadOnly": true,
     "sourceUnchangedAfterCopy": true,
+    "nativeCopyCreated": true,
+    "connectorReadbackVerified": true,
     "sourceLocatorCommitted": false,
     "copyLocatorCommitted": false
   },

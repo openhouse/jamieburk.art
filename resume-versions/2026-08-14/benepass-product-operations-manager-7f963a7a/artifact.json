@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 2,
+  "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+  "generatedOn": "2026-08-14",
+  "sourceMarkdown": "Jamie-Burkart-Resume.md",
+  "sourceMarkdownSha256": "ec7377fc26957a7db0ee671c6a311bd8a98e54be4de35f6b3575c1aea9f36590",
+  "opportunitySource": {
+    "file": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
+    "sha256": "91189119424c261b856d69c7a935310b9d591faf03164ef14f8a838c49175367"
+  },
+  "pdf": {
+    "file": "Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.pdf",
+    "mediaType": "application/pdf",
+    "sha256": "43e313849d5f6536668c6cb628971880d97f41cea70fe7b9133064d64ac3f721",
+    "bytes": 78662,
+    "pages": 2,
+    "pageSize": "US Letter",
+    "tagged": true
+  },
+  "layout": {
+    "source": "native-google-doc-copy",
+    "styleReference": "please-read-only resume style source example",
+    "typography": [
+      "Palatino Linotype",
+      "Oswald",
+      "Karla"
+    ],
+    "sourceStylesPreserved": true,
+    "intentionalAdaptations": [
+      "The opportunity title occupies the established teal Oswald role line.",
+      "A page break before 196 Artists Residency keeps every experience group and evidence list intact."
+    ]
+  },
+  "googleWorkspace": {
+    "sourceWasTreatedReadOnly": true,
+    "sourceUnchangedAfterCopy": true,
+    "nativeCopyCreated": true,
+    "connectorReadbackVerified": true,
+    "sourceLocatorCommitted": false,
+    "copyLocatorCommitted": false
+  },
+  "visualInspection": {
+    "status": "pass",
+    "pagesInspected": [
+      1,
+      2
+    ],
+    "checks": [
+      "No clipped, overlapping, or missing text",
+      "No broken glyphs or visible Markdown markers",
+      "No stranded heading, split experience group, or isolated bullet continuation",
+      "Readable hierarchy, contact links, margins, line spacing, and page balance"
+    ]
+  }
+}

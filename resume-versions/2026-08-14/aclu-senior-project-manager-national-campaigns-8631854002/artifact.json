@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 2,
+  "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+  "generatedOn": "2026-08-14",
+  "sourceMarkdown": "Jamie-Burkart-Resume.md",
+  "sourceMarkdownSha256": "e5986355e0f72e30e9f73ce17fea216c9217ce9217f236f88c299cb5c44afdb0",
+  "opportunitySource": {
+    "file": "docs/knowledge-bank/opportunities/aclu-senior-project-manager-national-campaigns.md",
+    "sha256": "bbcacb59819593bb80c6e957452c1229e9677e33cd433987252a26c6c9dc2d3a"
+  },
+  "pdf": {
+    "file": "Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-National-Campaigns-8631854002.pdf",
+    "mediaType": "application/pdf",
+    "sha256": "3cb382b75d0edcff2f5da426b303aebe7eaa13064184ef2d05039d3bf02e2044",
+    "bytes": 82884,
+    "pages": 2,
+    "pageSize": "US Letter",
+    "tagged": true
+  },
+  "layout": {
+    "source": "native-google-doc-copy",
+    "styleReference": "please-read-only resume style source example",
+    "typography": [
+      "Palatino Linotype",
+      "Oswald",
+      "Karla"
+    ],
+    "sourceStylesPreserved": true,
+    "intentionalAdaptations": [
+      "The opportunity title occupies the established teal Oswald role line.",
+      "A page break before 196 Artists Residency keeps every experience group and evidence list intact.",
+      "The Politico New York title retains the tailored Markdown's italic emphasis without exposing Markdown markers."
+    ]
+  },
+  "googleWorkspace": {
+    "sourceWasTreatedReadOnly": true,
+    "sourceUnchangedAfterCopy": true,
+    "nativeCopyCreated": true,
+    "connectorReadbackVerified": true,
+    "sourceLocatorCommitted": false,
+    "copyLocatorCommitted": false
+  },
+  "visualInspection": {
+    "status": "pass",
+    "pagesInspected": [
+      1,
+      2
+    ],
+    "checks": [
+      "No clipped, overlapping, or missing text",
+      "No broken glyphs or visible Markdown markers",
+      "No stranded heading, split experience group, or isolated bullet continuation",
+      "Readable hierarchy, contact links, margins, line spacing, and page balance"
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "opportunity-resume-artifact-sync-v1",
+  "title": "Opportunity-tailored Markdown and PDF resume synchronization",
+  "sourceOpportunityManifest": "evals/resume-hiring-readers/current.json",
+  "styleContract": {
+    "source": "native-google-doc-copy",
+    "styleReference": "please-read-only resume style source example",
+    "typography": [
+      "Palatino Linotype",
+      "Oswald",
+      "Karla"
+    ],
+    "sourceLocatorMayBeCommitted": false,
+    "copyLocatorMayBeCommitted": false
+  },
+  "criteria": [
+    {
+      "id": "complete-opportunity-coverage",
+      "blocking": true,
+      "criterion": "Every governed hiring-reader opportunity has exactly one dated Markdown resume, one PDF sibling, and one artifact manifest; no tailored Markdown resume is orphaned from the opportunity manifest."
+    },
+    {
+      "id": "opportunity-source-current",
+      "blocking": true,
+      "criterion": "Each artifact is bound to the current SHA-256 of its governed opportunity source so a changed role brief forces re-tailoring and review."
+    },
+    {
+      "id": "markdown-current",
+      "blocking": true,
+      "criterion": "The exact Markdown digest matches both the hiring-reader assessment manifest and the PDF artifact manifest."
+    },
+    {
+      "id": "google-docs-lineage",
+      "blocking": true,
+      "criterion": "Each PDF records a native Google Docs copy workflow, preserved source styles, connector readback, and an unchanged read-only style source without committing protected document locators."
+    },
+    {
+      "id": "pdf-structure",
+      "blocking": true,
+      "criterion": "Each PDF is digest-bound, tagged, one or two US Letter pages, and machine-readable."
+    },
+    {
+      "id": "approved-typography",
+      "blocking": true,
+      "criterion": "Each PDF embeds the established Palatino Linotype, Oswald, and Karla typography."
+    },
+    {
+      "id": "visual-inspection",
+      "blocking": true,
+      "criterion": "Every exported page has a complete visual-inspection receipt covering clipping, overlap, glyphs, Markdown residue, grouping, hierarchy, links, spacing, and page balance."
+    },
+    {
+      "id": "public-safety",
+      "blocking": true,
+      "criterion": "Neither resume nor artifact metadata commits Google Docs IDs, Drive locators, private filesystem paths, or other protected workflow identifiers."
+    }
+  ]
+}

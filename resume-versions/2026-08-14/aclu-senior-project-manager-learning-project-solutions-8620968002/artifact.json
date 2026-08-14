@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 2,
+  "opportunityId": "opportunity.aclu.senior-project-manager-lps.8620968002",
+  "generatedOn": "2026-08-14",
+  "sourceMarkdown": "Jamie-Burkart-Resume.md",
+  "sourceMarkdownSha256": "f3a730623dee959d68fc200acaa21c27cfad1a5d2579a91f2bc34ce305180dd7",
+  "opportunitySource": {
+    "file": "docs/knowledge-bank/opportunities/aclu-senior-project-manager-lps.md",
+    "sha256": "bbb2f2bed117da095505ee6e5816a565556b7e02cc22b25e5c444e994fb4cdf8"
+  },
+  "pdf": {
+    "file": "Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-Learning-and-Project-Solutions-8620968002.pdf",
+    "mediaType": "application/pdf",
+    "sha256": "0a43194150b48726987d4606368dccc15f48710dfe5ba927a6cbe97bc2c73773",
+    "bytes": 79393,
+    "pages": 2,
+    "pageSize": "US Letter",
+    "tagged": true
+  },
+  "layout": {
+    "source": "native-google-doc-copy",
+    "styleReference": "please-read-only resume style source example",
+    "typography": [
+      "Palatino Linotype",
+      "Oswald",
+      "Karla"
+    ],
+    "sourceStylesPreserved": true,
+    "intentionalAdaptations": [
+      "The opportunity title occupies the established teal Oswald role line.",
+      "A page break before 196 Artists Residency keeps every experience group and evidence list intact."
+    ]
+  },
+  "googleWorkspace": {
+    "sourceWasTreatedReadOnly": true,
+    "sourceUnchangedAfterCopy": true,
+    "nativeCopyCreated": true,
+    "connectorReadbackVerified": true,
+    "sourceLocatorCommitted": false,
+    "copyLocatorCommitted": false
+  },
+  "visualInspection": {
+    "status": "pass",
+    "pagesInspected": [
+      1,
+      2
+    ],
+    "checks": [
+      "No clipped, overlapping, or missing text",
+      "No broken glyphs or visible Markdown markers",
+      "No stranded heading, split experience group, or isolated bullet continuation",
+      "Readable hierarchy, contact links, margins, line spacing, and page balance"
+    ]
+  }
+}
