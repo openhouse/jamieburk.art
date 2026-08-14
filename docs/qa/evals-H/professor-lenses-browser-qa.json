@@ -1,11 +1,11 @@
 {
   "reportVersion": 4,
-  "checkedAt": "2026-08-13T21:21:23.404Z",
-  "baseUrl": "http://127.0.0.1:3122",
-  "publicSurfaceFingerprint": "0b266c1d19ac176a6ff2664b84b3c527ed5aed955d6505bda1cc3e64107f08f0",
+  "checkedAt": "2026-08-14T02:16:44.771Z",
+  "baseUrl": "https://staging-a.jamieburk.art",
+  "publicSurfaceFingerprint": "793d30531eb963eff7fe16f700f6c2497d13ab3c4ef624b8be4492933b4ae9ad",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 124,
-  "captureMethod": "Playwright Chromium viewport screenshots of the current built local candidate; About captures are framed on the systems through-line; no deployment or indexing action.",
+  "captureMethod": "Playwright Chromium viewport screenshots of the noindex staging deployment whose public app source matches the exact candidate; About captures are framed on the systems through-line; no production deployment or indexing action.",
   "routes": [
     {
       "path": "/",
@@ -20,7 +20,7 @@
           },
           "pixelWidth": 1280,
           "pixelHeight": 900,
-          "sha256": "c7577d3edd56d4bbe829a7b6b5096513ca5888cd4460c85d6b7dd4829bba06ce",
+          "sha256": "276b72b5a63080876ea82fca1fe87cdc6bd7276859265ef505afd8d49469dd51",
           "file": "candidate-home-desktop.png"
         },
         {
@@ -31,7 +31,7 @@
           },
           "pixelWidth": 375,
           "pixelHeight": 812,
-          "sha256": "7c07c4012556125fe1260a30f86aff97a9723e3ec9dbf47fe7a7f9c5f6fddb90",
+          "sha256": "d21dc6cca045b867817b96cd82d5c9e872adde0ac2d58ca4673487352c587f34",
           "file": "candidate-home-viewport.png"
         }
       ]
@@ -75,5 +75,5 @@
     }
   ],
   "passed": true,
-  "verification": "Fresh Playwright viewport captures from the exact local production build; screenshots retained and content-addressed in this directory."
+  "verification": "Fresh Playwright viewport captures from the noindex staging deployment; screenshots retained and content-addressed in this directory."
 }

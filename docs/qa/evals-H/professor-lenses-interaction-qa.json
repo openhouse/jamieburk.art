@@ -1,11 +1,11 @@
 {
   "reportVersion": 2,
-  "checkedAt": "2026-08-13T21:21:23.404Z",
-  "baseUrl": "http://127.0.0.1:3122",
-  "publicSurfaceFingerprint": "0b266c1d19ac176a6ff2664b84b3c527ed5aed955d6505bda1cc3e64107f08f0",
+  "checkedAt": "2026-08-14T02:16:44.771Z",
+  "baseUrl": "https://staging-a.jamieburk.art",
+  "publicSurfaceFingerprint": "793d30531eb963eff7fe16f700f6c2497d13ab3c4ef624b8be4492933b4ae9ad",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 124,
-  "method": "Playwright keyboard interaction plus bounded DOM and viewport inspection on the built local candidate. This is not a human screen-reader or assistive-technology session.",
+  "method": "Playwright keyboard interaction plus bounded DOM and viewport inspection on the noindex staging deployment whose public app source matches the exact candidate. This is not a human screen-reader or assistive-technology session.",
   "keyboard": {
     "desktopTabSequence": [
       {
@@ -81,6 +81,8 @@
       "focusVisible": true,
       "id": null
     },
+    "menuOpenAfterNavigation": false,
+    "navigationDestination": "/work",
     "passed": true
   },
   "reflow": {
