@@ -4,7 +4,13 @@ import { JBCard } from "@/components/JBCard";
 import { TagList } from "@/components/TagList";
 import type { WorkMeta } from "@/types/work";
 
-export function AtAGlance({ item }: { item: WorkMeta }) {
+export function AtAGlance({
+  item,
+  headingId = "at-a-glance"
+}: {
+  item: WorkMeta;
+  headingId?: string;
+}) {
   const rows = [
     ["Role", item.role],
     ["Years", item.years],
@@ -15,8 +21,8 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
   ];
 
   return (
-    <section aria-labelledby="at-a-glance" className="rounded-lg bg-jb-blue p-5 text-jb-paper">
-      <h2 className="text-xl font-semibold" id="at-a-glance">
+    <section aria-labelledby={headingId} className="rounded-lg bg-jb-blue p-5 text-jb-paper">
+      <h2 className="text-xl font-semibold" id={headingId}>
         At a glance
       </h2>
       <dl className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
@@ -47,10 +53,10 @@ export function ArtifactList({ item }: { item: WorkMeta }) {
       <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-list">
         Primary artifacts
       </h2>
-      <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+      <ul className="mt-4 grid border-y border-jb-ink/20 sm:grid-cols-2">
         {item.artifactTypes.map((artifact) => (
           <li
-            className="rounded-lg border border-jb-ink/12 bg-jb-paper px-4 py-3 text-sm font-medium text-jb-ink"
+            className="border-b border-jb-ink/12 px-1 py-3 text-sm font-medium text-jb-ink last:border-b-0 sm:odd:border-r sm:odd:pr-4 sm:even:pl-4"
             key={artifact}
           >
             {artifact}
@@ -84,6 +90,7 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
                         : "object-cover object-top"
                     }`}
                     height={800}
+                    loading="eager"
                     sizes="(min-width: 768px) 66vw, 100vw"
                     src={artifact.media.src}
                     width={1200}

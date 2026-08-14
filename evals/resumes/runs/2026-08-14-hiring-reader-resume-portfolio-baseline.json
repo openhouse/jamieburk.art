@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "evalId": "resume-hiring-reader-portfolio-2026-08-14",
+  "runId": "2026-08-14-hiring-reader-resume-portfolio-baseline",
+  "stage": "baseline-before-portfolio-resume-system",
+  "requiredOpportunityVersions": 5,
+  "maintainedOpportunityVersions": 1,
+  "requiredReaderOpportunityPairs": 8,
+  "evaluatedReaderOpportunityPairs": 0,
+  "passingReaderOpportunityPairs": 0,
+  "overall": "fail",
+  "decision": "do-not-claim-reader-screen-coverage",
+  "actualPeopleParticipated": false,
+  "note": "The baseline records missing system coverage: only the OTI Product Manager resume version existed, and no deterministic resume-stage named-reader portfolio eval existed. It does not retroactively judge the quality of that resume."
+}

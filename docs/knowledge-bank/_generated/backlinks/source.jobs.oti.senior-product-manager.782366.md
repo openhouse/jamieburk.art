@@ -1,9 +1,12 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to NYC Jobs - Senior Product Manager 782366
 
-**Source commit:** `86b76844af306f49fe229e347f1bd87abb00af45`
-**Generation time:** 2026-08-12T12:40:09-04:00
-**Source fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
+**Source commit:** `747605e3c34a6426c027a1c85ff82c3a6275ac36`
+**Generation time:** 2026-08-14T11:32:41-04:00
+**Source fingerprint:** `e4fc52c24bbf54e2f4cd03c7f545b8eb1d0af9c4a3ed28af19991b37897fcb60`
 
 - [WOW List - Senior Product Manager role-fit brief](../../applications/wowlist-senior-product-manager-oti-782366.md) - `prose_link` (markdown)
 - [WOW List - Senior Product Manager role-fit brief](../../applications/wowlist-senior-product-manager-oti-782366.md) - `uses_source` (frontmatter)
+- [NYC OTI - PIT Crew Senior Product Manager 782366](../../opportunities/oti-senior-product-manager-782366.md) - `evidence:direct-support` (evidence)
+- [NYC OTI - PIT Crew Senior Product Manager 782366](../../opportunities/oti-senior-product-manager-782366.md) - `prose_link` (markdown)
+- [NYC OTI - PIT Crew Senior Product Manager 782366](../../opportunities/oti-senior-product-manager-782366.md) - `uses_source` (frontmatter)

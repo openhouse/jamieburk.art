@@ -1,0 +1,74 @@
+{
+  "id": "oti-product-application-hillclimb-2026-08-13",
+  "schemaVersion": 1,
+  "candidateCommit": "75985063d11d6df0355f4b38e6013e2d5425df5b",
+  "candidateBranch": "feature/launch-2026-08-13-02-B",
+  "publicOrigin": "https://staging-b.jamieburk.art",
+  "evaluatedAt": "2026-08-13",
+  "actualPeopleParticipated": false,
+  "evaluationMethod": {
+    "fictionalizedPublicSourceLenses": true,
+    "publicWebOnly": true,
+    "separateTaskPerNamedReader": true,
+    "sequential": true,
+    "independent": true,
+    "priorResultsProvided": false,
+    "repositoryAccessProvided": false,
+    "privateContextProvided": false
+  },
+  "availability": {
+    "deploymentRevisionMatched": true,
+    "healthStatus": 200,
+    "robotsPolicy": "noindex, nofollow",
+    "criticalRouteRecheck": {
+      "status": "pass",
+      "routeCount": 5,
+      "slowestTotalSeconds": 0.256
+    },
+    "boundary": "One evaluator observed transient route timeouts. An independent concurrent recheck returned HTTP 200 for the homepage, WOW List, resume, About, and Contact, with every response completing in under 0.26 seconds."
+  },
+  "results": [
+    {
+      "pairId": "oti-product-luke-farrell-application-night",
+      "readerId": "reader.luke-farrell",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "modeledVerdict": "fail",
+      "interviewRecommendation": true,
+      "acceptanceStatement": "Under this fictionalized public-source lens, I would not yet make the final hiring decision from the site alone; I would advance Jamie to a serious interview.",
+      "strongestSignals": [
+        "WOW List now shows co-founder responsibility, community discovery, a specific natural-language product decision, implementation and adoption work, and historical production scale.",
+        "The homepage makes more than fourteen years of operating structure, public-facing tools, implementation, UAT, launch support, documentation, and handoffs legible.",
+        "FairRentNYC and the About page show public-service judgment, complex stakeholder translation, systems modeling, interface testing, and continuity."
+      ],
+      "gateBlockers": [
+        "No single recent case proves the full problem-framing-to-prioritized-V1-to-launch-to-instrumented-outcomes arc.",
+        "Explicit roadmap tradeoffs, accessibility, security and compliance coordination, executive decision-making, and PM mentorship or hiring remain thin.",
+        "Historical activity counts do not establish resident outcomes, and the separate civil-service qualification screen remains open."
+      ],
+      "singleBestImprovement": "Publish one concise role-specific resident-product case covering discovery, Jamie's decision authority, V1 tradeoffs, cross-functional and policy coordination, production gates, launch, measurement, and post-launch learning."
+    },
+    {
+      "pairId": "oti-product-lisa-gelobter-application-night",
+      "readerId": "reader.lisa-gelobter",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "modeledVerdict": "fail",
+      "interviewRecommendation": true,
+      "acceptanceStatement": "Under this fictionalized public-source lens, I would not make the hire from the site alone; I would consider Jamie for an interview.",
+      "strongestSignals": [
+        "The portfolio shows a strong public-interest orientation and disciplined handling of privacy, evidence, and collective credit.",
+        "WOW List demonstrates co-founded product leadership, a working natural-language platform, adoption workflows, and historical usage.",
+        "FairRentNYC and Technical Operations show stakeholder translation, policy complexity, requirements, delivery coordination, risk surfacing, and durable handoffs."
+      ],
+      "gateBlockers": [
+        "The public site does not yet prove Jamie personally owned an entire resident-facing product lifecycle from discovery through iteration.",
+        "Formal resident research, research-to-roadmap decisions, metrics, accessibility, security and compliance decisions, and post-launch learning remain under-evidenced.",
+        "Mentoring, hiring, senior product-culture leadership, and the separate civil-service qualification path are not established."
+      ],
+      "singleBestImprovement": "Publish one OTI-targeted evidence-backed case showing problem framing, research, discarded options, Jamie's decisions, MVP scope, cross-functional delivery, production review, launch, metrics, and retrospective."
+    }
+  ],
+  "passedPairCount": 0,
+  "requiredPairCount": 2,
+  "overall": "fail",
+  "disclaimer": "These are modeled fictionalized public-source judgments, not the named people's views, participation, endorsements, or hiring decisions."
+}

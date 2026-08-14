@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "rubricId": "resume.nyc-oti.senior-product-manager.782366",
+  "candidate": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
+  "evaluatedAt": "2026-08-14T13:39:57.638Z",
+  "wordCount": 799,
+  "numericSignalCount": 23,
+  "passedChecks": 13,
+  "totalChecks": 13,
+  "score": 100,
+  "overall": "pass",
+  "hillClimb": {
+    "baselineScore": 17,
+    "candidateScore": 100,
+    "delta": 83,
+    "boundedChange": "Added a source-bounded resident-service example spanning access, intake, field fulfillment, municipal handoff, and public reporting; tightened the summary to keep the application-specific resume within its 800-word ceiling while retaining collective-credit, privacy, evidence, outcome, accessibility, funding, and civil-service boundaries."
+  },
+  "passingCheckIds": [
+    "exact-target-title",
+    "standard-sections",
+    "ats-safe-markdown",
+    "complete-contact-block",
+    "word-count",
+    "role-language-in-first-third",
+    "end-to-end-product-language",
+    "cross-functional-public-delivery",
+    "resident-service-delivery",
+    "responsible-technology-language",
+    "quantified-evidence",
+    "civil-service-screen-evidence",
+    "collective-credit-and-claim-safety"
+  ],
+  "boundary": "A deterministic resume-format and role-alignment pass is not a hiring prediction, civil-service eligibility decision, human proofread, reference check, application submission, or employer endorsement."
+}

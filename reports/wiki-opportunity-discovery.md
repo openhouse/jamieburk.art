@@ -1,14 +1,16 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity discovery recall
 
-**Wiki fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
+**Wiki fingerprint:** `e4fc52c24bbf54e2f4cd03c7f545b8eb1d0af9c4a3ed28af19991b37897fcb60`
 **Overall:** PASS
 
 ## Title-blind queries
 
-- `query.operating-backbone`: PASS; top results `opportunity.nyc-oti.technical-operations-manager.782369`, `opportunity.codepath.claude-corps.5182020007`, `opportunity.aclu.product-manager-discovery.8482872002`
-- `query.discovery-governance`: PASS; top results `opportunity.aclu.product-manager-discovery.8482872002`, `opportunity.asana.ai-implementation.8027437`, `opportunity.benepass.product-operations.7f963a7a`
-- `query.product-operations-physical-world`: PASS; top results `opportunity.permitflow.product-operations.8a6e6066`, `opportunity.aclu.product-manager-discovery.8482872002`, `opportunity.asana.ai-implementation.8027437`
+- `query.operating-backbone`: PASS; top results `opportunity.codepath.engineering-project-manager.5160542007`, `opportunity.aclu.product-manager-discovery.8482872002`, `opportunity.aclu.senior-project-manager.8620968002`
+- `query.organizational-project-delivery`: PASS; top results `opportunity.aclu.senior-project-manager.8620968002`, `opportunity.aclu.product-manager-discovery.8482872002`, `opportunity.asana.ai-implementation.8027437`
+- `query.launch-readiness`: PASS; top results `opportunity.benepass.product-operations.7f963a7a`, `opportunity.permitflow.product-operations.8a6e6066`, `opportunity.aclu.product-manager-discovery.8482872002`
+- `query.resident-facing-product`: PASS; top results `opportunity.nyc-oti.senior-product-manager.782366`, `opportunity.aclu.product-manager-discovery.8482872002`, `opportunity.aclu.senior-project-manager.8620968002`
+- `query.future-technical-operations-backbone`: PASS; top results `opportunity.nyc-oti.technical-operations-manager.782369`
 - `query.source-backed-memory-consulting`: PASS; top results `opportunity.protected.source-backed-memory-consulting.2026`
 
 ## Negative controls

@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to CallNYC
 
-**Source commit:** `86b76844af306f49fe229e347f1bd87abb00af45`
-**Generation time:** 2026-08-12T12:40:09-04:00
-**Source fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
+**Source commit:** `747605e3c34a6426c027a1c85ff82c3a6275ac36`
+**Generation time:** 2026-08-14T11:32:41-04:00
+**Source fingerprint:** `e4fc52c24bbf54e2f4cd03c7f545b8eb1d0af9c4a3ed28af19991b37897fcb60`
 
 - [Digital District participant photograph metadata](../../assets/digital-district-photo.md) - `part_of` (frontmatter)
 - [Jamie with a civic field kit at New York City Council](../../assets/photographs/nyc-council-field-kit-2026.md) - `related_to` (frontmatter)
@@ -29,6 +29,8 @@
 - [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `related_to` (frontmatter)
 - [Source-Backed Team Memory](../../methods/source-backed-team-memory.md) - `related_to` (frontmatter)
 - [ACLU - Product Manager II, Discovery](../../opportunities/aclu-product-discovery.md) - `related_to` (frontmatter)
+- [ACLU - Senior Project Manager, Learning and Project Solutions](../../opportunities/aclu-senior-project-manager.md) - `related_to` (frontmatter)
+- [NYC OTI - PIT Crew Senior Product Manager 782366](../../opportunities/oti-senior-product-manager-782366.md) - `related_to` (frontmatter)
 - [NYC OTI - Technical Operations Manager 782369](../../opportunities/oti-technical-operations.md) - `related_to` (frontmatter)
 - [PermitFlow - Product Operations Manager](../../opportunities/permitflow-product-operations.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)

@@ -68,6 +68,32 @@ test("the late-2025 event preserves Hanif, Lander, Gallagher, and Kazi", () => {
   }
 });
 
+test("the July 29 report launch keeps Jamie and the two state sponsors in one bounded program", () => {
+  const event = corpus.events.find(
+    ({ id }) => id === "event.nyc.sbu-report-launch.2026-07-29"
+  );
+
+  assert.ok(event);
+  assert.equal(event.sourceKind, "authenticated-public-event-transcript");
+  assert.equal(event.sourceSha256.length, 64);
+  assert.equal(event.completenessStatus, "three-selected-formal-program-speeches-indexed");
+  assert.deepEqual(
+    event.speakers.map(({ name }) => name),
+    ["Julia Salazar", "Emily Gallagher", "Jamie Burkart"]
+  );
+  assert.deepEqual(
+    event.speakers.map(({ speakerClass }) => speakerClass),
+    ["public-official", "public-official", "advocate"]
+  );
+
+  const eventRecord = readText(
+    "docs/knowledge-bank/events/sbu-report-launch-2026-07-29.md"
+  ).replace(/\s+/g, " ");
+  assert.match(eventRecord, /same formal program/i);
+  assert.match(eventRecord, /does not establish that another speaker endorses Jamie/i);
+  assert.match(eventRecord, /Council Member Marte did not speak/i);
+});
+
 test("Huntley remains a candidate when speaking and has a time-aware current status", () => {
   const huntleyEvents = corpus.events.filter((event) =>
     event.speakers.some(({ name }) => name === "Eon Huntley")

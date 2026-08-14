@@ -34,3 +34,52 @@ test("a decorative gradient fails the material-system contract", () => {
   assert.equal(result.passed, false);
   assert(result.failures.some(({ criterion }) => criterion === "human-index-material-system"));
 });
+
+test("removing a participation-sequence photographer credit fails closed", () => {
+  const path = "apps/www/src/data/photography.ts";
+  const source = readFileSync(path, "utf8").replace(
+    'credit: "Photograph by Paul Mossine. From Jamie Burkart\'s photo archive.",',
+    ""
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "manifest-bound-publication"));
+});
+
+test("private People or GPS metadata cannot enter the public photography surface", () => {
+  const path = "apps/www/src/components/ParticipationSequence.tsx";
+  const source = `${readFileSync(path, "utf8")}\n// /Volumes/archive People tags GPSLatitude\n`;
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "metadata-and-locator-safety"));
+});
+
+test("the homepage hero remains bound to the East River photograph", () => {
+  const path = "apps/www/src/components/Hero.tsx";
+  const source = readFileSync(path, "utf8").replace(
+    "portfolioPhotos.eastRiver",
+    "portfolioPhotos.nycacMarketHotelBanner"
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "editorial-not-decorative"));
+});
+
+test("every work item retains a truthful cover visual", () => {
+  const path = "apps/www/src/data/work-covers.ts";
+  const source = readFileSync(path, "utf8").replace(
+    'src: "/artifacts/wowlist/public-threshold.webp",',
+    'src: "/artifacts/hje/public-site.png",'
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "truthful-project-cover-field"));
+});
+
+test("tag-shaped controls retain real destinations", () => {
+  const path = "apps/www/src/components/TagList.tsx";
+  const source = readFileSync(path, "utf8").replace("/work?tag=", "/work#");
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "tag-navigation-contract"));
+});

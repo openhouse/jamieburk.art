@@ -34,9 +34,10 @@ export function SiteHeader() {
             ))}
           </ul>
         </nav>
-        <details className="relative md:hidden">
+        <details className="group relative md:hidden">
           <summary className="flex min-h-11 cursor-pointer list-none items-center border border-jb-ink/25 px-4 text-sm font-semibold text-jb-ink">
-            Menu
+            <span className="group-open:hidden">Menu</span>
+            <span className="hidden group-open:inline">Close menu</span>
           </summary>
           <nav
             aria-label="Mobile navigation"

@@ -5,8 +5,8 @@ kind: project
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-19
-review_by: 2026-10-19
+last_reviewed: 2026-08-13
+review_by: 2026-11-13
 aliases:
   - WOW List
   - wowlist.org
@@ -31,6 +31,10 @@ relations:
     target: source.wowlist.knowledge-repository.2026
     href: ../sources/wowlist-knowledge-repository-2026.md
     context: Connects the public-safe Wiki to a governed private canonical edition through an opaque summary-only source record.
+  - type: uses_source
+    target: source.wowlist.public-threshold.2026-08-13
+    href: ../sources/wowlist-public-threshold-2026-08.md
+    context: Records the live noindex landing, About, and tester-interest threshold inspected on August 13, 2026.
   - type: related_to
     target: method.sunday-dinner-wowlist-nycac-synergy
     href: ../methods/sunday-dinner-wowlist-nycac-synergy.md
@@ -53,6 +57,11 @@ The review-locked [social-population report](wowlist-social-population.md)
 preserves the complete capture-time Twitter population and its limits. Product
 decision history and collaborator-reviewed adoption chronology remain wanted
 records.
+
+As of August 13, 2026, WOW List also has a live, deliberately small public
+return: a recognizable landing page, an About page, and a tester-interest
+invitation. The threshold remains noindex and is not yet the restored community
+calendar. See the [dated public-surface record](../sources/wowlist-public-threshold-2026-08.md).
 
 The [relational-curation method](../methods/wowlist-relational-curation.md)
 documents how invitation, orientation, editorial voice, explainable discovery,

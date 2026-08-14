@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity requirement coverage
 
-**Wiki fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
+**Wiki fingerprint:** `e4fc52c24bbf54e2f4cd03c7f545b8eb1d0af9c4a3ed28af19991b37897fcb60`
 
 Statuses preserve the difference between visible proof, Wiki-only proof, source work, experience gaps, and hard screens.
 
@@ -14,6 +14,16 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 | `requirement.aclu.privacy-and-governance` | critical | visible-qualified | none | Keep the human-review and protected-source boundary explicit. |
 | `requirement.aclu.product-brief` | critical | wiki-proven-not-projected | public-projection | Produce and human-review a redacted retrospective CallNYC product brief. |
 | `requirement.aclu.do-not-build-judgment` | important | source-needed | source | Revisit one bounded decision record; do not invent a do-not-build example. |
+
+## ACLU - Senior Project Manager, Learning and Project Solutions
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.aclu.project-strategy` | critical | visible-proven | none | Lead with one complex implementation in which strategy changed the plan. |
+| `requirement.aclu.cross-department-delivery` | critical | visible-proven | none | Prepare a start-to-close delivery narrative with decisions and postmortem learning. |
+| `requirement.aclu.business-analysis` | critical | visible-qualified | wording | Show one before-and-after workflow and the stakeholder evidence behind it. |
+| `requirement.aclu.budget-and-resources` | critical | visible-weak | source | Identify exact budget and resource authority; do not imply procurement or financial authority not held. |
+| `requirement.aclu.organizational-standards` | important | visible-qualified | none | Prepare one reusable standard or training artifact for discussion. |
 
 ## Asana - AI Implementation Manager, Service Management
 
@@ -42,6 +52,28 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 | `requirement.codepath.executive-reporting` | critical | visible-qualified | public-projection | Prepare one status-report sample for interview. |
 | `requirement.codepath.ai-first-workflow` | critical | visible-proven | none | Demonstrate the working Wiki and eval system without centering it over the program. |
 | `requirement.codepath.handoff-ready-systems` | important | visible-proven | none | Keep this as a recurring cross-project pattern. |
+
+## CodePath - Engineering Project Manager
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.codepath.engineering-delivery` | critical | visible-proven | none | Prepare a concise engineering-delivery example with an inspectable plan of record. |
+| `requirement.codepath.qa-and-bug-pipeline` | critical | visible-weak | public-projection | Inventory real QA and issue-triage work; do not substitute general project coordination. |
+| `requirement.codepath.technical-test-fluency` | critical | source-needed | source | Verify current hands-on evidence and prepare a bounded technical demonstration if supportable. |
+| `requirement.codepath.proportionate-process` | critical | visible-proven | none | Explain one instance of intentionally removing or declining process. |
+| `requirement.codepath.ai-automation` | important | visible-qualified | wording | Demonstrate one measured automation loop tied to delivery or QA. |
+
+## NYC OTI - PIT Crew Senior Product Manager 782366
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.oti-senior-product-manager.end-to-end-product` | critical | visible-qualified | wording | Present one product-shaped case with Jamie's decisions, boundaries, and public launch role explicit. |
+| `requirement.oti-senior-product-manager.discovery-research` | critical | visible-qualified | public-projection | Use the bounded Tired of Tires service example in the application; distinguish direct field contact, project-level survey evidence, and held component-authorship details. |
+| `requirement.oti-senior-product-manager.tradeoffs-and-briefs` | critical | visible-qualified | wording | Prepare one redacted product brief and one hard scope tradeoff. |
+| `requirement.oti-senior-product-manager.agency-policy-translation` | critical | visible-qualified | none | Use collective-credit language while naming Jamie's translation and implementation role. |
+| `requirement.oti-senior-product-manager.accessibility-compliance` | critical | visible-weak | experience | Inventory direct accessibility and compliance practice; site conformance alone is not product-leadership experience. |
+| `requirement.oti-senior-product-manager.metrics-outcomes` | critical | visible-qualified | wording | Prepare one outcome metric with a candid measurement limitation. |
+| `requirement.oti-senior-product-manager.public-rollout` | important | visible-qualified | wording | Lead with recent public communications and coalition implementation without claiming sole campaign outcomes. |
 
 ## NYC OTI - Technical Operations Manager 782369
 

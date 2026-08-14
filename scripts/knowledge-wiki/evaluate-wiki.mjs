@@ -15,6 +15,7 @@ import {
   buildEmploymentOutputs,
   discoveryChecks,
   evaluatePublicHiring,
+  loadHiringSuite,
   resolveHiringGaps
 } from "./employment-lib.mjs";
 import { validateResponsiveAccessibilityEvidence } from "./accessibility-evidence.mjs";
@@ -48,6 +49,15 @@ const protectedOpportunity = result.byId.get(
   "opportunity.protected.source-backed-memory-consulting.2026"
 );
 const publicHiring = evaluatePublicHiring(defaultRepoRoot);
+const hiringSuite = loadHiringSuite(defaultRepoRoot);
+const priorityOpportunityIds = hiringSuite.priorityOpportunityIds ?? [];
+const priorityOpportunities = priorityOpportunityIds
+  .map((id) => result.byId.get(id))
+  .filter(Boolean);
+const benchmarkOpportunityIds = hiringSuite.benchmarkOpportunityIds ?? [];
+const benchmarkOpportunities = benchmarkOpportunityIds
+  .map((id) => result.byId.get(id))
+  .filter(Boolean);
 const gapResolution = resolveHiringGaps(result, publicHiring.report);
 const employmentOutputs = buildEmploymentOutputs(result, publicHiring, gapResolution);
 const discovery = discoveryChecks(result);
@@ -236,7 +246,7 @@ const checks = {
     existsSync(path.join(defaultRepoRoot, "scripts/check-knowledge-bank.mjs")),
 
   tier_one_official_source_records:
-    liveOfficialOpportunities.length === 6 &&
+    liveOfficialOpportunities.length >= 8 &&
     liveOfficialOpportunities.every((record) =>
       record.evidence.some((evidence) => {
         const source = result.byId.get(evidence.target);
@@ -247,7 +257,8 @@ const checks = {
     opportunities.every(
       (record) =>
         record.canonical_url &&
-        ((record.source_type === "official-employer" && record.opportunity_status === "live") ||
+        ((record.source_type === "official-employer" &&
+          ["live", "closed", "historical-benchmark"].includes(record.opportunity_status)) ||
           (record.source_type === "protected-metadata" && record.opportunity_status === "conditional")) &&
         record.verified_at &&
         record.review_by &&
@@ -257,9 +268,64 @@ const checks = {
   stable_requirement_ids:
     requirementIds.length >= 25 && new Set(requirementIds).size === requirementIds.length,
   operator_queries:
-    queryWiki(result, { liveOpportunities: true }).records.length === 6 &&
+    queryWiki(result, { liveOpportunities: true }).records.length >= 8 &&
     queryWiki(result, { requirement: "requirement.oti.delivery-coordination" }).opportunity?.id ===
       "opportunity.nyc-oti.technical-operations-manager.782369",
+  priority_opportunity_set_complete:
+    priorityOpportunityIds.length === 4 &&
+    priorityOpportunities.length === priorityOpportunityIds.length &&
+    priorityOpportunities.every(
+      (record) =>
+        record.kind === "opportunity" &&
+        record.source_type === "official-employer" &&
+        record.opportunity_status === "live"
+    ),
+  priority_reporting_context_bounded:
+    priorityOpportunities.every((record) => {
+      const context = record.public_reporting_context;
+      if (!context || !result.byId.has(context.source)) return false;
+      if (context.identification === "role-only") return !context.person;
+      return Boolean(context.person && result.byId.get(context.person)?.kind === "person");
+    }) &&
+    result.byId.get("opportunity.aclu.senior-project-manager.8620968002")
+      ?.public_reporting_context?.identification === "role-only" &&
+    result.byId.get("opportunity.nyc-oti.senior-product-manager.782366")
+      ?.public_reporting_context?.identification === "nearest-public-operational-lead",
+  priority_vision_context_complete:
+    priorityOpportunities.every((record) => {
+      const context = record.public_vision_context;
+      return Boolean(
+        context?.person &&
+          result.byId.get(context.person)?.kind === "person" &&
+          result.byId.has(context.source)
+      );
+    }),
+  historical_benchmark_set_bounded:
+    benchmarkOpportunityIds.length === 1 &&
+    benchmarkOpportunities.length === benchmarkOpportunityIds.length &&
+    benchmarkOpportunities.every(
+      (record) =>
+        record.kind === "opportunity" &&
+        record.source_type === "official-employer" &&
+        record.opportunity_status === "historical-benchmark" &&
+        publicHiring.report.opportunities.find((item) => item.id === record.id)?.benchmark === true &&
+        publicHiring.report.opportunities.find((item) => item.id === record.id)?.decision ===
+          "historical-benchmark"
+    ),
+  historical_benchmark_leadership_bounded:
+    benchmarkOpportunities.every((record) => {
+      const reporting = record.public_reporting_context;
+      const vision = record.public_vision_context;
+      return Boolean(
+        reporting?.identification === "role-only" &&
+          !reporting.person &&
+          result.byId.has(reporting.source) &&
+          vision?.identification === "official-agency-leader" &&
+          vision.person &&
+          result.byId.get(vision.person)?.kind === "person" &&
+          result.byId.has(vision.source)
+      );
+    }),
   hard_screens_explicit: opportunities.every((record) => record.hard_screens.length > 0),
   confirmed_inferred_unknown_separate: opportunities.every(
     (record) =>

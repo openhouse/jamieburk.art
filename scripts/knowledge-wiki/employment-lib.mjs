@@ -121,7 +121,9 @@ function publicRoleContext(record) {
     })),
     oneYearSuccessConditions: record.one_year_success_conditions,
     oneYearRiskConditions: record.one_year_risk_conditions,
-    interviewQuestions: record.interview_questions
+    interviewQuestions: record.interview_questions,
+    publicReportingContext: record.public_reporting_context ?? null,
+    publicVisionContext: record.public_vision_context ?? null
   };
 }
 
@@ -172,8 +174,11 @@ function publicEvaluationMarkdown(report) {
       `- Critical signals observed: ${opportunity.criticalObserved}/${opportunity.criticalTotal}`,
       `- All signals observed: ${opportunity.observed}/${opportunity.requirementTotal}`,
       `- Opportunity status live: ${opportunity.live ? "yes" : "no"}`,
+      `- Historical benchmark: ${opportunity.benchmark ? "yes" : "no"}`,
       `- Role context current at candidate time: ${opportunity.fresh ? "yes" : "no"}`,
       `- Exclusionary hard screen recorded: ${opportunity.hardScreenBlocked ? "yes" : "no"}`,
+      `- Public reporting context: ${opportunity.publicReportingContext?.role ?? "not recorded"} (${opportunity.publicReportingContext?.identification ?? "not recorded"})`,
+      `- Public vision context: ${opportunity.publicVisionContext?.role ?? "not recorded"} (${opportunity.publicVisionContext?.identification ?? "not recorded"})`,
       ""
     );
     for (const requirement of opportunity.requirementCoverage) {
@@ -197,6 +202,7 @@ function publicEvaluationMarkdown(report) {
 
 export function evaluatePublicHiring(repoRoot) {
   const suite = loadHiringSuite(repoRoot);
+  const benchmarkOpportunityIds = new Set(suite.benchmarkOpportunityIds ?? []);
   const opportunities = suite.opportunityPaths.map((item) => readMatter(repoRoot, item));
   const readers = suite.readerPaths.map((item) => readMatter(repoRoot, item));
   const corpora = routeCorpora(repoRoot, suite);
@@ -229,8 +235,10 @@ export function evaluatePublicHiring(repoRoot) {
     const critical = requirementCoverage.filter((item) => item.importance === "critical");
     const criticalObserved = critical.filter((item) => item.observed).length;
     const protectedOpportunity = opportunity.id.startsWith("opportunity.protected.");
+    const benchmark = benchmarkOpportunityIds.has(opportunity.id);
     const live =
       !protectedOpportunity &&
+      !benchmark &&
       opportunity.status === "live" &&
       opportunity.sourceType === "official-employer";
     const fresh = live && opportunity.reviewBy >= generatedAt.slice(0, 10);
@@ -241,11 +249,16 @@ export function evaluatePublicHiring(repoRoot) {
       id: opportunity.id,
       title: opportunity.title,
       roleContextHash: sha256(JSON.stringify(opportunity)),
+      benchmark,
       live,
       fresh,
       hardScreenBlocked,
+      publicReportingContext: opportunity.publicReportingContext,
+      publicVisionContext: opportunity.publicVisionContext,
       decision:
-        !live
+        benchmark
+          ? "historical-benchmark"
+          : !live
           ? "not-live"
           : hardScreenBlocked
             ? "hard-screen-exclusion"

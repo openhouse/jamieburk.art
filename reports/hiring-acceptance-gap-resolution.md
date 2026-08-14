@@ -1,19 +1,19 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Hiring acceptance Wiki gap resolution
 
-**Candidate commit:** `1e4f5f26560d0d5a43fdb3f777af1c3c4ef763a6`
-**Public report hash:** `95758e22ae1fce793566b0820369d47ac076b2b4da0df53ce5dd89a62ac7585a`
-**Wiki fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
+**Candidate commit:** `747605e3c34a6426c027a1c85ff82c3a6275ac36`
+**Public report hash:** `d93a69916364afd42e273ccdb4ac12ee7c0350b3a126ebec370ca4599f0bc589`
+**Wiki fingerprint:** `e4fc52c24bbf54e2f4cd03c7f545b8eb1d0af9c4a3ed28af19991b37897fcb60`
 
 The gap resolver runs after the public-only evaluator. It can identify Wiki evidence, but every public change remains human-reviewed.
 
 ## Findings
 
-- `requirement.oti.government-hiring-and-procurement` - **visible-weak-evidence-gap**; Do not imply procurement authority; clarify adjacent government-process experience in the application.
-- `requirement.aclu.facilitation-without-authority` - **visible-weak-evidence-gap**; Name one bounded facilitation decision and its usable output.
-- `requirement.aclu.product-brief` - **wiki-proven-not-projected**; Produce and human-review a redacted retrospective CallNYC product brief.
-- `requirement.aclu.do-not-build-judgment` - **source-needs-close-reading**; Revisit one bounded decision record; do not invent a do-not-build example.
+- `requirement.codepath.qa-and-bug-pipeline` - **visible-weak-evidence-gap**; Inventory real QA and issue-triage work; do not substitute general project coordination.
+- `requirement.codepath.technical-test-fluency` - **source-needs-close-reading**; Verify current hands-on evidence and prepare a bounded technical demonstration if supportable.
+- `requirement.aclu.budget-and-resources` - **visible-weak-evidence-gap**; Identify exact budget and resource authority; do not imply procurement or financial authority not held.
 - `requirement.benepass.quantified-prioritization` - **visible-weak-evidence-gap**; Use only supported HJE figures and explain the decision they informed.
-- `requirement.asana.implementation-ownership` - **true-experience-gap**; Distinguish direct client implementation from internal and public-facing delivery.
-- `requirement.asana.risk-and-change-management` - **true-experience-gap**; Do not substitute general risk coordination for migration or configuration experience.
-- `requirement.permitflow.product-data` - **true-experience-gap**; Test present SQL and analytics fluency; do not imply tools Jamie cannot demonstrate.
+- `requirement.oti-senior-product-manager.discovery-research` - **role-context-or-evidence-unknown**; Use the bounded Tired of Tires service example in the application; distinguish direct field contact, project-level survey evidence, and held component-authorship details.
+- `requirement.oti-senior-product-manager.accessibility-compliance` - **true-experience-gap**; Inventory direct accessibility and compliance practice; site conformance alone is not product-leadership experience.
+- `requirement.oti.government-hiring-and-procurement` - **visible-weak-evidence-gap**; Do not imply procurement authority; clarify adjacent government-process experience in the application.
+- `requirement.protected-memory.knowledge-friction` - **role-context-or-evidence-unknown**; Keep the public method legible without exposing the protected lead.

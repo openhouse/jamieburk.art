@@ -86,7 +86,7 @@
       "grader": "hybrid",
       "blocking": true,
       "weight": 12,
-      "inputs": ["Harry J. Epstein case study", "FairRentNYC case study", "CallNYC case study", "Source-Backed Team Memory lab"],
+      "inputs": ["Harry J. Epstein case study", "FairRentNYC case study including the Let NYC Dance participation sequence", "CallNYC case study", "Source-Backed Team Memory lab"],
       "procedure": [
         "Inventory visible figures, screenshots, diagrams, downloads, and public artifacts.",
         "Verify each artifact's caption, provenance, alt text, consent status, and relation to a claim.",
@@ -95,6 +95,7 @@
       "pass_criteria": [
         "Each lead page contains at least one genuine inspectable artifact, not only a styled descriptive card.",
         "Every visual has useful alt text, a caption, a source or ownership note, and public-safety approval.",
+        "The FairRentNYC sequence makes the relationship among shared campaign infrastructure, coalition facilitation, and collective public participation legible without treating images as proof of exact remarks, attendance, endorsement, or sole causation.",
         "The homepage or Technical Operations page links to at least three inspectable proof objects.",
         "A judge can connect each artifact to a specific action, outcome, or operating capability."
       ],
@@ -201,7 +202,7 @@
       "pass_criteria": [
         "A CTA labeled Download resume points to the PDF and initiates or clearly reaches a PDF download.",
         "A CTA pointing to the resume HTML page is labeled View resume or equivalent.",
-        "Email, contact, work, and case-study actions have truthful labels and no dead ends.",
+        "Email, contact, work, case-study, and tag-filter actions have truthful labels and no dead ends.",
         "All primary actions are reachable by keyboard."
       ],
       "evidence_required": ["CTA inventory", "destination results", "keyboard results"],
@@ -310,7 +311,7 @@
       ],
       "pass_criteria": [
         "The approval register and launch ledger do not contradict each other.",
-        "Every new screenshot, photograph, quote, credit, or collaborator-sensitive artifact has recorded approval.",
+        "Every new screenshot, photograph, quote, credit, or collaborator-sensitive artifact has recorded approval; the designated portfolio-album authorization remains destination-bound and excludes private metadata.",
         "Jamie explicitly approves the exact production candidate and indexing state."
       ],
       "evidence_required": ["dated approval record", "candidate SHA", "asset approvals", "final go or no-go decision"],

@@ -414,11 +414,11 @@ const workItemsInput = [
     title: "WOWList.org",
     slug: "wowlist",
     series: "Community Platform",
-    subtitle: "Followable keyword communities for arts and music organizers",
+    subtitle: "Natural-language community infrastructure for arts and music organizers",
     summary:
-      "Co-built and operated a community-calendar platform for DIY arts and music organizers. A July 2017 production snapshot records 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts.",
-    role: "Co-builder & Product Operator",
-    years: "2010s",
+      "Co-founded, co-built, and operated a natural-language community-calendar platform for DIY arts and music organizers. A July 2017 production snapshot records 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts.",
+    role: "Co-founder, Product & Community Systems",
+    years: "2010s; public return in progress, 2026",
     status: "Short proof page",
     featured: true,
     priority: 4,
@@ -427,9 +427,15 @@ const workItemsInput = [
     whatWasUnclear:
       "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
-      "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
+      "A natural-language, collaboratively editable event system that turned community vocabulary into followable keyword calendars and organizer-facing distribution workflows.",
     artifactTypes: ["website", "workflow", "prototype"],
     artifacts: [
+      {
+        title: "Recognizable public return threshold",
+        description:
+          "A live landing page, About page, and consented tester invitation restore the original public promise without pretending that the community calendar is already back.",
+        type: "website"
+      },
       {
         title: "Keyword-community model",
         description:
@@ -445,27 +451,37 @@ const workItemsInput = [
       "Community Platform Design",
       "Event Workflows"
     ],
+    links: [
+      { label: "Visit WOW List", url: "https://wowlist.org/" },
+      { label: "About WOW List", url: "https://wowlist.org/about" }
+    ],
     careNote:
-      "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
+      "The live surface is a noindex tester threshold, not the restored calendar. Historical scale remains a dated 2017 snapshot, and private company, member, or archival material stays offline.",
     sourceLayer:
-      "Public-safe summary, historical project context, and screenshots pending Jamie approval.",
-    credits: ["Jamie Burkart", "WOWList collaborators"],
-    currentStatus: "Historical short proof page.",
+      "Live public landing and About pages, source-backed project memory, Jamie's public-safe product-design account, historical public-safe aggregates, and private member and introduction records intentionally omitted.",
+    credits: [
+      "Jamie Burkart",
+      "Richard Caceres",
+      "WOWList organizers, editors, facilitators, maintainers, and participants"
+    ],
+    currentStatus:
+      "Live, deliberately small noindex public threshold with a tester invitation; the community calendar itself is not yet restored.",
     group: "Community and cultural infrastructure",
     roleFit:
-      "Community systems, product operations, public-facing platforms, and event distribution workflows.",
+      "Accountable product leadership, community discovery, natural-language systems, product operations, public-facing platforms, and event distribution workflows.",
     evidence: [
+      "Natural-language, collaboratively editable event entry and followable keyword communities",
+      "Co-founder product responsibility across implementation, adoption, communication, and stewardship",
       "Django / PostgreSQL / PostGIS and Ember platform",
-      "Followable keyword communities",
       "Organizer-facing distribution workflows",
       "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
       "35 city-region keys with at least 50 posts in the July 2017 snapshot"
     ],
     knownOpenProtected: {
       known:
-        "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
+        "Jamie and Richard Caceres co-built a natural-language community-calendar platform organized around followable keyword communities, and a deliberately small public return threshold is live now.",
       open:
-        "Screenshots, archive links, and individual technical-contribution allocation need further review.",
+        "The contemporary calendar, contribution model, governance, moderation, retention, and broader relaunch sequence remain open product work.",
       protected:
         "Private user data, organizer contact lists, and unapproved community records are not published."
     }

@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Rights and consent review
 
-**Source commit:** `86b76844af306f49fe229e347f1bd87abb00af45`
-**Generation time:** 2026-08-12T12:40:09-04:00
-**Source fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
+**Source commit:** `747605e3c34a6426c027a1c85ff82c3a6275ac36`
+**Generation time:** 2026-08-14T11:32:41-04:00
+**Source fingerprint:** `e4fc52c24bbf54e2f4cd03c7f545b8eb1d0af9c4a3ed28af19991b37897fcb60`
 
 - `asset.photo.digital-district.001` - rights `permission-needed`, consent `review-needed`, display `hold`
 - `asset.photo.kc-town-hall.hard-hat.001` - rights `permission-needed`, consent `not-applicable`, display `hold`
@@ -177,7 +177,6 @@
 - `asset.photo.project-site.save-nyc-spaces-olympia-kazi-ocmu7cczmp` - rights `permission-needed`, consent `review-needed`, display `hold`
 - `asset.photo.project-site.save-nyc-spaces-pooyan-aslani-jz7hlhlht5` - rights `permission-needed`, consent `review-needed`, display `hold`
 - `asset.photo.project-site.save-nyc-spaces-rachel-nelson-dtdfvedipb` - rights `permission-needed`, consent `review-needed`, display `hold`
-- `asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2` - rights `permission-needed`, consent `review-needed`, display `hold`
 - `asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-tnyszfjgnt` - rights `permission-needed`, consent `review-needed`, display `hold`
 - `asset.photo.project-site.save-nyc-spaces-talks-not-raids-save-nyc-spaces-nyc-artist-coalition-44i` - rights `permission-needed`, consent `review-needed`, display `hold`
 - `asset.photo.project-site.save-nyc-spaces-town-hall-09-1200-wj2m6brhky` - rights `permission-needed`, consent `review-needed`, display `hold`

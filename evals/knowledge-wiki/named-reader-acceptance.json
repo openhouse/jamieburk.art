@@ -1,0 +1,84 @@
+{
+  "id": "named-public-reader-acceptance-2026-08-13",
+  "schemaVersion": 1,
+  "publicOrigin": "https://staging-b.jamieburk.art",
+  "currentRunPath": "evals/knowledge-wiki/runs/2026-08-13-launch-b-named-reader-post-hillclimb.json",
+  "contract": {
+    "publicOnly": true,
+    "actualPeopleParticipated": false,
+    "acceptanceQuestion": "Under this explicitly fictionalized public-source lens, would this reader hire Jamie for the live job or, for an expired benchmark, a future materially similar role?",
+    "passPolicy": "Every required reader-opportunity pair must pass, the evaluated public origin must be available, and no private or repository evidence may reach the evaluator.",
+    "failurePolicy": "A coherent evaluation may remain FAIL. Deterministic validation must never convert a modeled failure into a pass."
+  },
+  "readerOpportunityPairs": [
+    {
+      "id": "codepath-zack-parker",
+      "readerId": "reader.zack-parker",
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "relationship": "published-reporting-role-to-person-match",
+      "required": true
+    },
+    {
+      "id": "codepath-chris-coleman",
+      "readerId": "reader.chris-coleman",
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "relationship": "nearest-public-senior-vision-context",
+      "required": true
+    },
+    {
+      "id": "aclu-charizma-williams",
+      "readerId": "reader.charizma-williams",
+      "opportunityId": "opportunity.aclu.senior-project-manager.8620968002",
+      "relationship": "nearest-public-senior-vision-context",
+      "required": true
+    },
+    {
+      "id": "benepass-aileen-palmer",
+      "readerId": "reader.aileen-palmer",
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "relationship": "person-named-in-posting-as-reporting-context",
+      "required": true
+    },
+    {
+      "id": "benepass-jaclyn-chen",
+      "readerId": "reader.jaclyn-chen",
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "relationship": "nearest-public-senior-vision-context",
+      "required": true
+    },
+    {
+      "id": "oti-product-luke-farrell",
+      "readerId": "reader.luke-farrell",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "relationship": "nearest-public-operational-lead-not-confirmed-manager",
+      "required": true
+    },
+    {
+      "id": "oti-product-lisa-gelobter",
+      "readerId": "reader.lisa-gelobter",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "relationship": "official-initiative-vision-leader",
+      "required": true
+    },
+    {
+      "id": "oti-operations-lisa-gelobter",
+      "readerId": "reader.lisa-gelobter",
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "relationship": "official-agency-vision-leader-expired-benchmark",
+      "required": true,
+      "benchmark": true
+    }
+  ],
+  "coverageExceptions": [
+    {
+      "opportunityId": "opportunity.aclu.senior-project-manager.8620968002",
+      "role": "Senior Director, Learning and Project Solutions",
+      "reason": "The posting publishes the direct manager's title but not a person's name; the eval must not invent one."
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "role": "OTI leadership",
+      "reason": "The expired posting names no direct manager; Lisa Gelobter is evaluated only as public agency vision context."
+    }
+  ]
+}

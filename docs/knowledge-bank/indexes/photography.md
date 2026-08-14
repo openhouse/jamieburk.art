@@ -5,7 +5,7 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-26
+last_reviewed: 2026-08-14
 review_by: 2027-01-26
 canonical_path: docs/knowledge-bank/indexes/photography.md
 summary: Public-safe orientation to the governed relationship among private photo sources, first-class Wiki records, exact portfolio occurrences, recollection, correction, and human publication gates.
@@ -14,12 +14,43 @@ relations:
     target: asset.photo.east-river-manhattan-bridge.2022.001
     href: ../assets/photographs/east-river-manhattan-bridge-2022.md
     context: First complete public-safe canary asset.
+  - type: has_asset
+    target: asset.photo.nycac-shoestring-facilitation.2017.001
+    href: ../assets/photographs/nycac-shoestring-facilitation-2017.md
+    context: Cleared Shoestring Press facilitation occurrence for the Fair Rent NYC case study.
+  - type: has_asset
+    target: asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2
+    href: ../assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md
+    context: Cleared Market Hotel public-room occurrence for the Fair Rent NYC case study.
+  - type: has_asset
+    target: asset.photo.sunday-dinner.shared-map.2013.001
+    href: ../assets/photographs/sunday-dinner-shared-map-2013.md
+    context: Cleared shared-table occurrence for the Sunday Dinner case study.
+  - type: has_asset
+    target: asset.photo.kc-town-hall.roof-work.2019.001
+    href: ../assets/photographs/kc-town-hall-roof-work-2019.md
+    context: Cleared field-implementation occurrence for the KC Town Hall case study.
+  - type: has_asset
+    target: asset.design.kc-town-hall.tired-of-tires-flyer.2019.001
+    href: ../assets/graphics/kc-town-hall-tired-of-tires-flyer-2019.md
+    context: Cropped resident-service promise with obsolete contact details and dates excluded.
+  - type: has_asset
+    target: asset.photo.kc-town-hall.tired-of-tires-before.2022.001
+    href: ../assets/photographs/kc-town-hall-tired-of-tires-before-2022.md
+    context: First frame in a cleared matched field pair for one collection site.
+  - type: has_asset
+    target: asset.photo.kc-town-hall.tired-of-tires-after.2022.001
+    href: ../assets/photographs/kc-town-hall-tired-of-tires-after-2022.md
+    context: Second frame in a cleared matched field pair for one collection site.
   - type: related_to
     target: index.photo-set.east-river-canoe.2022
     href: photo-sets/east-river-canoe-2022.md
   - type: related_to
     target: evaluation.curatorial.layout-c.home-east-river.v1
     href: ../evaluations/curatorial/layout-c-home-east-river-v1.md
+  - type: related_to
+    target: evaluation.curatorial.portfolio-project-covers.2026-08-13
+    href: ../evaluations/curatorial/portfolio-project-covers-2026-08-13.md
   - type: related_to
     target: decision.photo.layout-c.home-east-river.v1
     href: ../decisions/photography/layout-c-home-east-river-v1.md
@@ -34,8 +65,17 @@ relations:
     target: projection.photo.layout-c.home.east-river
     href: ../projections/photography/layout-c-home-east-river.md
   - type: related_to
+    target: projection.photo.fair-rent-nyc.shoestring-facilitation
+    href: ../projections/photography/fair-rent-nyc-shoestring-facilitation.md
+  - type: related_to
+    target: projection.photo.fair-rent-nyc.market-hotel-banner
+    href: ../projections/photography/fair-rent-nyc-market-hotel-banner.md
+  - type: related_to
     target: edition.layout-c.2026-07
     href: ../projections/photography/edition-layout-c-2026-07.md
+  - type: related_to
+    target: edition.launch.2026-08
+    href: ../projections/photography/edition-launch-2026-08.md
   - type: related_to
     target: correction.photo.east-river-credit.2026-07
     href: ../corrections/east-river-credit-2026-07.md
@@ -72,6 +112,51 @@ relations:
 This index begins with one complete occurrence rather than attempting to mirror
 Jamie Burkart's private photo archive. The archive remains private and
 additive. The portfolio remains selective and composed.
+
+## August 13 participation sequence
+
+Two additional, metadata-stripped derivatives now form a bounded case-study
+sequence with the Let NYC Dance public surface:
+
+- [Shoestring Press facilitation](../assets/photographs/nycac-shoestring-facilitation-2017.md)
+  shows the working alignment layer.
+- [Market Hotel banner room](../assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md)
+  shows the collective public-room layer.
+- [August 2026 photographic edition](../projections/photography/edition-launch-2026-08.md)
+  binds the five governed photograph occurrences while leaving production and
+  indexing open.
+- [Paul Mossine](../people/paul-mossine.md) is credited as photographer for
+  both 2017 case-study images.
+- [Sunday Dinner shared map](../assets/photographs/sunday-dinner-shared-map-2013.md)
+  shows social infrastructure taking form at a shared table.
+- [KC Town Hall roof work](../assets/photographs/kc-town-hall-roof-work-2019.md)
+  shows field implementation under material conditions.
+- [Project-cover curatorial record](../evaluations/curatorial/portfolio-project-covers-2026-08-13.md)
+  preserves the bounded selection method, visual sequence, dissent, and human
+  publication gates.
+
+Jamie checked the designated portfolio album as cleared for this portfolio and
+specifically requested consideration of both frames. The [public-safe
+authorization capsule](../sources/permissions/jamie-portfolio-album-2026-08-13.md)
+keeps that decision separate from creator credit, metadata exposure, exact
+occurrence review, and production/indexing approval. The existing East River
+homepage hero is unchanged.
+
+## August 14 resident-service sequence
+
+The [Tired of Tires source return](../sources/kc-town-hall-tired-of-tires-design-field-archive-2026.md)
+adds an outreach artifact and one matched before-and-after field pair to the KC
+Town Hall case study. The exact occurrences are governed separately:
+
+- [cropped resident-service flyer](../assets/graphics/kc-town-hall-tired-of-tires-flyer-2019.md);
+- [field condition before collection](../assets/photographs/kc-town-hall-tired-of-tires-before-2022.md); and
+- [the matched frame after collection](../assets/photographs/kc-town-hall-tired-of-tires-after-2022.md).
+
+The [authorization capsule](../sources/permissions/kc-town-hall-tired-of-tires-portfolio-2026-08-14.md)
+records Jamie's exact-occurrence decision while keeping obsolete contact
+details, resident records, addresses, private-derived aggregates, Drive
+locators, other archive items, component authorship, and photographer identity
+outside the public claim.
 
 ## East River canary
 

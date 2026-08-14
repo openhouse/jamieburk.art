@@ -233,6 +233,38 @@ const opportunityScreenSchema = z.object({
   disposition: z.enum(["proceed", "verify", "conditional", "do-not-pursue"])
 });
 
+const opportunityLeadershipContextSchema = z
+  .object({
+    role: z.string().min(1),
+    person: stableIdSchema.optional(),
+    identification: z.enum([
+      "named-in-posting",
+      "role-identity-matched",
+      "role-only",
+      "nearest-public-operational-lead",
+      "official-initiative-leader",
+      "official-agency-leader"
+    ]),
+    source: stableIdSchema,
+    boundary: z.string().min(1)
+  })
+  .superRefine((context, refinement) => {
+    if (context.identification === "role-only" && context.person) {
+      refinement.addIssue({
+        code: "custom",
+        path: ["person"],
+        message: "role-only leadership context cannot identify a person"
+      });
+    }
+    if (context.identification !== "role-only" && !context.person) {
+      refinement.addIssue({
+        code: "custom",
+        path: ["person"],
+        message: "identified leadership context requires a person ID"
+      });
+    }
+  });
+
 export const wikiRecordSchema = z
   .object({
     id: stableIdSchema,
@@ -313,7 +345,9 @@ export const wikiRecordSchema = z
     unknowns: z.array(z.string().min(1)).default([]),
     one_year_success_conditions: z.array(z.string().min(1)).default([]),
     one_year_risk_conditions: z.array(z.string().min(1)).default([]),
-    interview_questions: z.array(z.string().min(1)).default([])
+    interview_questions: z.array(z.string().min(1)).default([]),
+    public_reporting_context: opportunityLeadershipContextSchema.optional(),
+    public_vision_context: opportunityLeadershipContextSchema.optional()
   })
   .passthrough()
   .superRefine((record, context) => {

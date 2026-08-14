@@ -5,11 +5,20 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-10
-review_by: 2026-09-10
+last_reviewed: 2026-08-13
+review_by: 2026-09-13
 canonical_path: docs/knowledge-bank/indexes/employment-context.md
-summary: Task-oriented entry point for live opportunity research, role coverage, public-only hiring evaluation, and private-boundary rules.
+summary: Task-oriented entry point for live opportunity research, historical role benchmarks, public-only hiring evaluation, and private-boundary rules.
 relations:
+  - type: related_to
+    target: opportunity.codepath.engineering-project-manager.5160542007
+    href: ../opportunities/codepath-engineering-project-manager.md
+  - type: related_to
+    target: opportunity.aclu.senior-project-manager.8620968002
+    href: ../opportunities/aclu-senior-project-manager.md
+  - type: related_to
+    target: opportunity.nyc-oti.senior-product-manager.782366
+    href: ../opportunities/oti-senior-product-manager-782366.md
   - type: related_to
     target: opportunity.nyc-oti.technical-operations-manager.782369
     href: ../opportunities/oti-technical-operations.md
@@ -34,6 +43,12 @@ relations:
   - type: related_to
     target: evaluation.employment-context.coverage.2026-07-18
     href: ../evaluations/employment-context-coverage-2026-07-18.md
+  - type: related_to
+    target: evaluation.employment-leadership-context.2026-08-13
+    href: ../evaluations/employment-leadership-context-2026-08-13.md
+  - type: related_to
+    target: evaluation.named-public-reader-acceptance.2026-08-13
+    href: ../evaluations/named-public-reader-acceptance-2026-08-13.md
 ---
 
 # Employment context and hiring acceptance
@@ -45,9 +60,46 @@ paths, message bodies, contact details, and real hiring outcomes remain private.
 
 ## Current priority contexts
 
-- [NYC OTI - Technical Operations Manager](../opportunities/oti-technical-operations.md)
-- [ACLU - Product Manager II, Discovery](../opportunities/aclu-product-discovery.md)
+- [CodePath - Engineering Project Manager](../opportunities/codepath-engineering-project-manager.md)
+- [ACLU - Senior Project Manager, Learning and Project Solutions](../opportunities/aclu-senior-project-manager.md)
 - [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md)
+- [NYC OTI - PIT Crew Senior Product Manager](../opportunities/oti-senior-product-manager-782366.md)
+
+## Reporting and vision context
+
+Each priority opportunity separates the nearest public reporting context from
+the nearest public senior vision context. The confidence labels are material:
+
+- `named-in-posting` means the official posting names the person.
+- `role-identity-matched` joins a posting's role title to a current official
+  leadership page; it is not the same as being named in the posting.
+- `role-only` preserves a published manager title when no person is verified.
+- `nearest-public-operational-lead` identifies proximity without claiming a
+  direct reporting line.
+- `official-initiative-leader` establishes public vision and authority for the
+  initiative, not direct supervision or hiring participation.
+- `official-agency-leader` establishes the nearest public senior agency vision,
+  not direct supervision or hiring participation.
+
+No public context record is an endorsement, private opinion, relationship, or
+prediction of a hiring decision.
+
+The [Launch-B named public-reader evaluation](../evaluations/named-public-reader-acceptance-2026-08-13.md)
+records fictionalized, public-web-only acceptance tests separately from actual
+people, interviews, endorsements, and hiring authority.
+
+## Historical benchmark
+
+- [NYC OTI - Technical Operations Manager](../opportunities/oti-technical-operations.md)
+
+Job 782369 expired on August 7, 2026. Jamie identifies its combination of team
+operations, technical delivery, hiring, onboarding, runbooks, and leadership
+reporting as an unusually strong future-role archetype. It remains searchable
+for recurrence and gap analysis but must never enter the live-application set.
+
+## Earlier researched contexts
+
+- [ACLU - Product Manager II, Discovery](../opportunities/aclu-product-discovery.md)
 - [CodePath - Senior Program Manager, Claude Corps](../opportunities/codepath-claude-corps.md)
 - [Asana - AI Implementation Manager](../opportunities/asana-ai-implementation.md)
 - [PermitFlow - Product Operations Manager](../opportunities/permitflow-product-operations.md)
@@ -81,6 +133,7 @@ not endorsements, participation, private opinions, or hiring decisions.
 ## Reports
 
 - [Authored employment coverage baseline](../evaluations/employment-context-coverage-2026-07-18.md)
+- [Priority leadership-context evaluation](../evaluations/employment-leadership-context-2026-08-13.md)
 - [Opportunity coverage](../../../reports/wiki-opportunity-coverage.md)
 - [Career trajectory coverage](../../../reports/wiki-career-trajectory-coverage.md)
 - [Source-channel coverage](../../../reports/wiki-source-channel-coverage.md)

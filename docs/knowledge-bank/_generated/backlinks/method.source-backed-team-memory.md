@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Source-Backed Team Memory
 
-**Source commit:** `86b76844af306f49fe229e347f1bd87abb00af45`
-**Generation time:** 2026-08-12T12:40:09-04:00
-**Source fingerprint:** `5076b9b0ee0d78d611a8ef07ad8ed3e58aea749ec6fda561f3a3bee575b72970`
+**Source commit:** `747605e3c34a6426c027a1c85ff82c3a6275ac36`
+**Generation time:** 2026-08-14T11:32:41-04:00
+**Source fingerprint:** `e4fc52c24bbf54e2f4cd03c7f545b8eb1d0af9c4a3ed28af19991b37897fcb60`
 
 - [Civic, cultural, and technical translation](../../capabilities/civic-cultural-and-technical-translation.md) - `prose_link` (markdown)
 - [Technical Operations](../../capabilities/technical-operations.md) - `prose_link` (markdown)
@@ -19,9 +19,12 @@
 - [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `uses_method` (frontmatter)
 - [Situated source rereading](../../methods/situated-source-rereading.md) - `related_to` (frontmatter)
 - [ACLU - Product Manager II, Discovery](../../opportunities/aclu-product-discovery.md) - `uses_method` (frontmatter)
+- [ACLU - Senior Project Manager, Learning and Project Solutions](../../opportunities/aclu-senior-project-manager.md) - `uses_method` (frontmatter)
 - [Asana - AI Implementation Manager, Service Management](../../opportunities/asana-ai-implementation.md) - `uses_method` (frontmatter)
 - [Benepass - Product Operations Manager](../../opportunities/benepass-product-operations.md) - `uses_method` (frontmatter)
 - [CodePath - Senior Program Manager, Claude Corps](../../opportunities/codepath-claude-corps.md) - `uses_method` (frontmatter)
+- [CodePath - Engineering Project Manager](../../opportunities/codepath-engineering-project-manager.md) - `uses_method` (frontmatter)
+- [NYC OTI - PIT Crew Senior Product Manager 782366](../../opportunities/oti-senior-product-manager-782366.md) - `uses_method` (frontmatter)
 - [NYC OTI - Technical Operations Manager 782369](../../opportunities/oti-technical-operations.md) - `uses_method` (frontmatter)
 - [PermitFlow - Product Operations Manager](../../opportunities/permitflow-product-operations.md) - `uses_method` (frontmatter)
 - [Protected source-backed team-memory consulting lead](../../opportunities/source-backed-team-memory.md) - `uses_method` (frontmatter)

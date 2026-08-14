@@ -364,22 +364,25 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: [
       "approved-resume",
       "public-safe-archive-summary",
-      "firsthand-collaborator-context"
+      "firsthand-collaborator-context",
+      "jamie-review-confirmation"
     ],
     publicWording:
-      "Co-built and operated WOWList.org, a community-calendar platform for DIY arts and music organizers. A July 2017 production snapshot records 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts.",
+      "Co-founded, co-built, and operated WOW List, a natural-language community-calendar platform for DIY arts and music organizers. A July 2017 production snapshot records 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts.",
     shortWording:
-      "Jamie co-built and operated WOWList for DIY arts and music organizers",
+      "Jamie co-founded and co-built WOW List as a natural-language community platform",
     detailedPublicWording:
-      "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
+      "Jamie and Richard Caceres co-built WOW List around a deliberately light product decision: collaboratively editable natural-language event text, followable keyword communities, weekly digest emails, embeddable calendars, and low-cost deployment for local organizers.",
     sourceBasis:
-      "Approved resume language, public-safe aggregate historical summary, complete recovered public-account census, and a public 2016 Sunday Dinner event linking directly into WOW List.",
+      "Approved resume language, Jamie's public-safe first-person product-design account, public-safe aggregate historical summary, complete recovered public-account census, and public organizer-support records.",
     guardrail:
-      "Use approximate adoption language, do not describe city activity as official chapters, and treat the Sunday Dinner link as one concrete route rather than a complete adoption or traffic census.",
+      "Keep product credit and community labor shared with Richard Caceres and the wider organizer network. Do not infer sole ownership, sole implementation, accessibility compliance, or hiring eligibility.",
     doNotSay: [
       "Official chapters in 35 cities",
       "Full ownership of all organizer adoption",
-      "Current active platform unless confirmed"
+      "Current active platform unless confirmed",
+      "Jamie was sole owner or sole builder",
+      "WOW List proves WCAG or Section 508 compliance"
     ],
     protectedBoundaries: [
       "Private user data",
@@ -391,7 +394,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["wowlist"],
     relatedCapabilities: ["django", "postgresql", "postgis", "ember", "community-platforms"],
-    lastReviewed: "2026-07-15"
+    lastReviewed: "2026-08-13"
   },
   {
     id: "sunday-dinner-196-participation-infrastructure",

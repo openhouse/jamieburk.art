@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "id": "oti-senior-product-application-readiness",
+  "title": "OTI Senior Product Manager application readiness",
+  "objective": "Make Jamie's accountable product leadership legible to a public-web-only hiring reader without exposing private company records, weakening collective credit, or implying civil-service eligibility.",
+  "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+  "publicRoutes": [
+    "/",
+    "/work/wowlist",
+    "/resume"
+  ],
+  "hardGates": [
+    {
+      "id": "public-product-responsibility",
+      "description": "The WOW List first read identifies Jamie as a co-founder with product and community-systems responsibility while preserving Richard Caceres's co-builder credit."
+    },
+    {
+      "id": "product-decision-trail",
+      "description": "The case identifies a specific product choice connecting community language, natural-language event entry, text parsing, and followable distribution."
+    },
+    {
+      "id": "collective-credit",
+      "description": "Richard Caceres and the wider organizer and contributor network remain visibly credited."
+    },
+    {
+      "id": "private-source-boundary",
+      "description": "Public output contains no operating-agreement terms, private correspondence, signatures, financial details, protected locators, or governance-derived ownership percentages without explicit publication approval."
+    },
+    {
+      "id": "qualification-boundary",
+      "description": "Product fit does not become a claim of civil-service eligibility, historical accessibility compliance, or guaranteed hiring."
+    }
+  ],
+  "humanAcceptanceQuestion": "Under an explicitly fictionalized public-source lens, would the reader hire Jamie for NYC OTI Senior Product Manager Job ID 782366?",
+  "humanGate": "A deterministic pass establishes truthful public evidence coverage only. The named-reader gate remains a separate public-web-only human or independent-model judgment.",
+  "latestRunPath": "evals/knowledge-wiki/runs/2026-08-13-oti-product-application-hillclimb.json"
+}

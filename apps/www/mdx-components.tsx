@@ -1,5 +1,7 @@
 import type { MDXComponents } from "mdx/types";
 import { Cite, Claim, References } from "@/components/citations";
+import { ParticipationSequence } from "@/components/ParticipationSequence";
+import { ResidentServiceSequence } from "@/components/ResidentServiceSequence";
 import { WorkflowSpecimen } from "@/components/WorkflowSpecimen";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
@@ -20,6 +22,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
     Cite,
     Claim,
+    ParticipationSequence,
+    ResidentServiceSequence,
     References,
     WorkflowSpecimen,
     ...components

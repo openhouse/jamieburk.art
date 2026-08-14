@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "rfc": 6,
+  "stage": "proposed",
+  "purpose": "Move bounded knowledge between independently governed repositories without transferring source, editorial, or publication authority.",
+  "repository_roles": {
+    "source-custody": {
+      "authority": "authoritative bytes, access boundary, and capture state",
+      "public_dependency_allowed": false
+    },
+    "governed-research": {
+      "authority": "request scope, coverage, transformations, findings, gaps, and deliverable boundary",
+      "may_approve_publication": false
+    },
+    "canonical-subject-edition": {
+      "authority": "canonical public-safe source records, source bodies when allowed, provenance, and corrections",
+      "may_approve_portfolio_selection": false
+    },
+    "public-record": {
+      "authority": "subject-centered public records and commit-bound references to canonical editions",
+      "may_approve_portfolio_selection": false
+    },
+    "semantic-evidence-graph": {
+      "authority": "claims, anti-claims, evidence relations, inquiries, agency, and projection eligibility",
+      "may_approve_publication": false
+    },
+    "deterministic-packet-compiler": {
+      "authority": "bounded traversal, packet assembly, artifact disposition, checksums, and reproducibility receipts",
+      "canonical_source": false,
+      "release_authority": false
+    },
+    "public-composition": {
+      "authority": "project-specific arrangement, temporal posture, source-backed voice, and bounded invitation",
+      "may_claim_current_activity_without_review": false
+    },
+    "portfolio-projection": {
+      "authority": "audience-specific selection and composition for the portfolio",
+      "archival_completeness": false
+    }
+  },
+  "exchange_kinds": {
+    "transport_only": [
+      "capture-receipt",
+      "canonical-record-reference",
+      "context-packet",
+      "correction-notice",
+      "publication-proposal"
+    ],
+    "release_candidates": [
+      "projection-proposal",
+      "release-receipt"
+    ]
+  },
+  "envelope": {
+    "required_fields": [
+      "envelope_id",
+      "contract_version",
+      "kind",
+      "origin",
+      "target",
+      "purpose",
+      "lineage",
+      "disposition"
+    ],
+    "origin_requires": [
+      "repository_role",
+      "snapshot_commit",
+      "record_ids",
+      "content_fingerprint"
+    ],
+    "lineage_requires": [
+      "source_cutoff",
+      "input_snapshots",
+      "transformation_receipts",
+      "coverage",
+      "limitations"
+    ],
+    "protected_fields_forbidden_in_public_envelopes": [
+      "credentials",
+      "private_filesystem_paths",
+      "protected_locators",
+      "private_graph_counts",
+      "private_identifiers",
+      "raw_private_source_bodies"
+    ],
+    "minimum_necessary": true,
+    "boundary_composition": "intersection-most-restrictive"
+  },
+  "transitions": [
+    {
+      "id": "bounded-capture-receipt",
+      "from": "source-custody",
+      "to": "governed-research",
+      "kind": "capture-receipt",
+      "authority_transferred": false
+    },
+    {
+      "id": "reviewed-publication-proposal",
+      "from": "governed-research",
+      "to": "canonical-subject-edition",
+      "kind": "publication-proposal",
+      "requires_new_public_identity": true,
+      "authority_transferred": false
+    },
+    {
+      "id": "pinned-canonical-reference",
+      "from": "canonical-subject-edition",
+      "to": "public-record",
+      "kind": "canonical-record-reference",
+      "authority_transferred": false
+    },
+    {
+      "id": "reviewed-semantic-binding",
+      "from": "canonical-subject-edition",
+      "to": "semantic-evidence-graph",
+      "kind": "canonical-record-reference",
+      "authority_transferred": false
+    },
+    {
+      "id": "bounded-context-compilation",
+      "from": "semantic-evidence-graph",
+      "to": "deterministic-packet-compiler",
+      "kind": "context-packet",
+      "authority_transferred": false
+    },
+    {
+      "id": "project-composition-proposal",
+      "from": "semantic-evidence-graph",
+      "to": "public-composition",
+      "kind": "projection-proposal",
+      "authority_transferred": false
+    },
+    {
+      "id": "portfolio-projection-proposal",
+      "from": "semantic-evidence-graph",
+      "to": "portfolio-projection",
+      "kind": "projection-proposal",
+      "authority_transferred": false
+    },
+    {
+      "id": "candidate-bound-release-receipt",
+      "from": "public-composition",
+      "to": "human-controlled-release",
+      "kind": "release-receipt",
+      "authority_transferred": false
+    },
+    {
+      "id": "candidate-bound-portfolio-receipt",
+      "from": "portfolio-projection",
+      "to": "human-controlled-release",
+      "kind": "release-receipt",
+      "authority_transferred": false
+    }
+  ],
+  "candidate_binding": {
+    "required_fields": [
+      "commit",
+      "content_fingerprint"
+    ],
+    "input_snapshot_digests_required": true,
+    "generated_output_digests_required": true,
+    "stale_after_candidate_change": true,
+    "sibling_candidate_receipts_reusable": false
+  },
+  "temporal_postures": [
+    "historic",
+    "current",
+    "relaunch-proposed"
+  ],
+  "voice": {
+    "source_backed_review_required": true,
+    "simulated_voice_is_attribution": false,
+    "simulated_voice_requires_human_confirmation": true,
+    "multiple_lenses_may_remain_unresolved": true
+  },
+  "human_gates": {
+    "required": [
+      "public_safety",
+      "rights",
+      "consent",
+      "collective_credit",
+      "editorial_selection",
+      "voice",
+      "publication"
+    ],
+    "allowed_states": [
+      "approved",
+      "not-applicable"
+    ],
+    "approval_required": [
+      "public_safety",
+      "editorial_selection",
+      "publication"
+    ],
+    "record_requires": [
+      "state",
+      "authority",
+      "decided_by",
+      "decided_at"
+    ],
+    "record_authority": "human-recorded",
+    "deployment_is_separate": true,
+    "production_indexing_is_separate": true
+  },
+  "correction_policy": {
+    "append_only": true,
+    "original_preserved": true,
+    "restrictive_effect": "restrict-projection",
+    "hold_statuses": [
+      "proposed",
+      "acknowledged",
+      "disputed",
+      "held"
+    ],
+    "dependent_envelopes_must_be_rechecked": true
+  },
+  "invariants": [
+    "access-is-not-consent",
+    "evidence-is-not-publication-permission",
+    "repository-presence-is-not-projection-selection",
+    "transport-is-not-canonical-authority",
+    "packet-completeness-is-not-editorial-adequacy",
+    "current-claim-requires-current-review",
+    "human-gate-is-not-automatable",
+    "deployment-is-not-indexing-approval"
+  ],
+  "authority": {
+    "decision_owner": "Jamie Burkart",
+    "implementation_authorized": false,
+    "stage_advancement": "human-only",
+    "automation_release_authority": "none"
+  },
+  "synthetic_evaluation": {
+    "script": "scripts/rfcs/federated-knowledge-exchange-eval.mjs",
+    "test": "scripts/rfcs/federated-knowledge-exchange-eval.test.mjs",
+    "cross_repository_access": false,
+    "source_materialization": false,
+    "public_projection": false,
+    "deployment": false,
+    "indexing": false
+  }
+}
