@@ -55,7 +55,7 @@ test("removing album publication approval fails closed", () => {
   );
   const result = evaluateLayout(process.cwd(), { [path]: source });
   assert.equal(result.passed, false);
-  assert(result.failures.some(({ criterion }) => criterion === "minimal-authorized-field"));
+  assert(result.failures.some(({ criterion }) => criterion === "governed-photographic-field"));
 });
 
 test("removing the Fair Rent field-and-system pair fails closed", () => {
@@ -78,4 +78,23 @@ test("removing mobile-menu close-on-navigation behavior fails closed", () => {
   const result = evaluateLayout(process.cwd(), { [path]: source });
   assert.equal(result.passed, false);
   assert(result.failures.some(({ criterion }) => criterion === "responsive-navigation"));
+});
+
+test("every work item retains a governed project-bound cover", () => {
+  const path = "apps/www/src/data/work-covers.ts";
+  const source = readFileSync(path, "utf8").replace(
+    'src: "/artifacts/wowlist/public-threshold.webp",',
+    'src: "/artifacts/hje/public-site.png",'
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "truthful-project-cover-field"));
+});
+
+test("tag-shaped controls retain real destinations", () => {
+  const path = "apps/www/src/components/TagList.tsx";
+  const source = readFileSync(path, "utf8").replace("/work?tag=", "/work#");
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "tag-navigation-contract"));
 });

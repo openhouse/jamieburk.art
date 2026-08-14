@@ -11,7 +11,18 @@ export const metadata: Metadata = createMetadata({
   path: "/work"
 });
 
-export default function WorkPage() {
+type WorkPageProps = {
+  searchParams: Promise<{ tag?: string | string[] }>;
+};
+
+export default async function WorkPage({ searchParams }: WorkPageProps) {
+  const params = await searchParams;
+  const requestedTag = Array.isArray(params.tag) ? params.tag[0] : params.tag;
+  const availableTags = new Set(workItems.flatMap((item) => item.tags));
+  const selectedTag = requestedTag && availableTags.has(requestedTag)
+    ? requestedTag
+    : null;
+
   return (
     <div className="jb-frame py-14">
       <div className="grid gap-8 lg:grid-cols-[0.32fr_0.68fr]">
@@ -35,11 +46,28 @@ export default function WorkPage() {
           </div>
         </div>
       </div>
-      <div className="mt-16 space-y-16">
+      <div className="mt-16 space-y-16" id="work-index">
+        {selectedTag ? (
+          <div className="flex flex-wrap items-baseline justify-between gap-4 border-y border-jb-ink/20 py-4">
+            <p className="text-lg text-jb-ink">
+              Showing projects tagged <strong>“{selectedTag}”</strong>
+            </p>
+            <Link
+              className="border-b border-jb-blue font-semibold text-jb-blue hover:border-jb-green hover:text-jb-green"
+              href="/work#work-index"
+            >
+              Clear filter
+            </Link>
+          </div>
+        ) : null}
         {workGroups.map((group) => {
-          const groupedItems = workItems.filter((item) => item.group === group);
+          const groupedItems = workItems.filter((item) => {
+            return item.group === group && (!selectedTag || item.tags.includes(selectedTag));
+          });
 
           if (group === "Source-backed memory / AI lab") {
+            if (selectedTag) return null;
+
             return (
               <section key={group}>
                 <h2 className="jb-section-label">{group}</h2>

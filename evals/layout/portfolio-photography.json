@@ -1,5 +1,5 @@
 {
-  "id": "portfolio-photography-layout-v1",
+  "id": "portfolio-photography-layout-v3",
   "title": "Human Index photographic portfolio layout",
   "intent": "Photography changes the portfolio's editorial rhythm while remaining public-safe, accessible, and subordinate to human publication authority.",
   "criteria": [
@@ -9,9 +9,9 @@
       "criterion": "Every field photograph is registered once in the public manifest with stable dimensions, alt text, caption, credit, placement, status, and boundary."
     },
     {
-      "id": "minimal-authorized-field",
+      "id": "governed-photographic-field",
       "blocking": true,
-      "criterion": "The launch candidate uses exactly three fully bound, credited, Jamie-authorized field derivatives: the unchanged East River hero and two destination-reviewed NYC Artist Coalition occurrences."
+      "criterion": "The launch candidate uses exactly five fully bound, credited, Jamie-authorized field derivatives: the unchanged East River hero, the two destination-reviewed NYC Artist Coalition occurrences, the Sunday Dinner cover, and the KC Town Hall cover; three newly curated cover leads remain private pending exact rights, dignity, and attribution review."
     },
     {
       "id": "metadata-and-locator-safety",
@@ -24,9 +24,14 @@
       "criterion": "The East River hero remains unchanged; two restrained field-and-system pairs make implementation legible on the homepage and Fair Rent case study, while About and Colophon remain text-led."
     },
     {
-      "id": "deliberate-absence",
+      "id": "truthful-project-cover-field",
       "blocking": true,
-      "criterion": "Work, resume, and contact do not receive adjacent photographs merely to achieve coverage."
+      "criterion": "Every work item has exactly one project-bound visual cover: Fair Rent NYC, Sunday Dinner, and KC Town Hall use governed photographs; Harry J. Epstein, CallNYC, and WOW List use their own public surfaces while private photo leads await exact clearance."
+    },
+    {
+      "id": "tag-navigation-contract",
+      "blocking": true,
+      "criterion": "Every tag-shaped control is a keyboard-reachable link to a visible filtered work-index state, and the filtered state has a clear route back to the complete index."
     },
     {
       "id": "human-index-material-system",

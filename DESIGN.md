@@ -56,7 +56,7 @@ home hero and page titles; panel headings remain compact.
 
 ## Photography
 
-Photography is an argument, not wallpaper. Every public image must:
+Photography is an argument, not wallpaper. Every public photograph must:
 
 1. Appear in `apps/www/src/data/photography.ts`.
 2. Use a metadata-stripped derivative with a neutral public filename.
@@ -66,6 +66,14 @@ Photography is an argument, not wallpaper. Every public image must:
    locations beyond what the composition intentionally publishes.
 5. Remain subject to human rights and caption review. Selection quality and an
    automated score never confer publication permission.
+
+Project covers are bound in `apps/www/src/data/work-covers.ts`. A governed
+photograph must reference `apps/www/src/data/photography.ts`; a public-safe
+screenshot may be bound directly only when it captures an already-public
+surface and carries stable dimensions, useful alt text, a factual caption, and
+a dated source or credit. Each project keeps one project-specific cover across
+the work index and its case-study threshold unless an approved placement calls
+for a deliberate alternative.
 
 Relational and campaign photographs stay held until photographer, depicted
 people, artwork, caption, and collective-credit questions are resolved. A route
@@ -78,6 +86,9 @@ truth, comparison, or task completion.
   in the scene with one even contrast wash, never a gradient or a card.
 - Indexes use rules, numbers, and stable columns instead of repeated floating
   cards.
+- Tags are working navigational filters, not ornamental metadata. They resolve
+  to the filtered work index; every filtered state names the active tag and
+  provides an explicit clear action.
 - Cards are reserved for discrete artifacts, calls to action, and genuinely
   bounded tools. Cards do not contain other cards.
 - Photographs receive stable aspect ratios and captions beneath the image.

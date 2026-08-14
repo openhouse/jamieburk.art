@@ -552,7 +552,7 @@ export function evaluatePhotoKnowledgeModel(model) {
       Boolean(inquiry),
     selective_projection:
       checks.protected_absence_not_auto_filled &&
-      publicPhotoManifest?.filter((item) => item.knowledgeStatus === "bound").length === 3 &&
+      publicPhotoManifest?.filter((item) => item.knowledgeStatus === "bound").length === 5 &&
       publicPhotoManifest
         ?.filter((item) => item.knowledgeStatus === "phase-2-reconciliation-pending")
         .every(

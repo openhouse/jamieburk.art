@@ -11,6 +11,23 @@ canonical_path: docs/knowledge-bank/indexes/photography.md
 summary: Public-safe orientation to the governed relationship among private photo sources, first-class Wiki records, exact portfolio occurrences, recollection, correction, and human publication gates.
 relations:
   - type: has_asset
+    target: asset.photo.sunday-dinner.shared-map.2013.001
+    href: ../assets/photographs/sunday-dinner-shared-map-2013.md
+    context: Destination-cleared shared-table photograph for the Sunday Dinner work index and case study.
+  - type: has_asset
+    target: asset.photo.kc-town-hall.roof-work.2019.001
+    href: ../assets/photographs/kc-town-hall-roof-work-2019.md
+    context: Destination-cleared field-implementation photograph for the KC Town Hall work index and case study.
+  - type: related_to
+    target: evaluation.curatorial.portfolio-project-covers.2026-08-13
+    href: ../evaluations/curatorial/portfolio-project-covers-2026-08-13.md
+  - type: related_to
+    target: edition.launch.2026-08
+    href: ../projections/photography/edition-launch-2026-08.md
+  - type: related_to
+    target: research.portfolio-project-cover-field.2026-08-14
+    href: ../research-runs/portfolio-project-cover-field-2026-08-14.md
+  - type: has_asset
     target: asset.photo.east-river-manhattan-bridge.2022.001
     href: ../assets/photographs/east-river-manhattan-bridge-2022.md
     context: First complete public-safe canary asset.
@@ -103,6 +120,23 @@ selection, evidence, exact placement, and publication authority stay auditable:
 - [Selection decision](../decisions/photography/launch-2026-field-system-pairs.md)
 - [Homepage occurrence](../projections/photography/launch-2026-home-save-nyc-spaces-town-hall.md)
 - [Fair Rent case-study occurrence](../projections/photography/launch-2026-fair-rent-shoestring-facilitation.md)
+
+## August 2026 project-cover edition
+
+The [August 2026 photographic edition](../projections/photography/edition-launch-2026-08.md)
+extends the governed public field to five photographs while preserving the
+East River hero and the two Fair Rent field/interface occurrences. The
+[project-cover curatorial record](../evaluations/curatorial/portfolio-project-covers-2026-08-13.md)
+documents the six-cover visual sequence, and the
+[private editor-field summary](../research-runs/portfolio-project-cover-field-2026-08-14.md)
+records why three new archive leads remain held.
+
+The two new public assets are the
+[Sunday Dinner shared-map photograph](../assets/photographs/sunday-dinner-shared-map-2013.md)
+and the [KC Town Hall roof-work photograph](../assets/photographs/kc-town-hall-roof-work-2019.md).
+[Paul Mossine](../people/paul-mossine.md) is credited where retained
+public-safe metadata establishes his authorship. Production publication and
+indexing remain separate human decisions.
 
 ## East River canary
 

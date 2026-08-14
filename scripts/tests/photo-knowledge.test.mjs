@@ -206,7 +206,7 @@ test("a panel without dissent fails artist-led curation", async () => {
   assert.equal(result.criteria.artist_led_curation, false);
 });
 
-test("binding every public photograph defeats selective materialization", async () => {
+test("binding an additional unreviewed photograph defeats selective materialization", async () => {
   const model = await baselineModel();
   const pending = appendPendingPhoto(model);
   pending.knowledgeStatus = "bound";

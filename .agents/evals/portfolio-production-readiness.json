@@ -201,7 +201,7 @@
       "pass_criteria": [
         "A CTA labeled Download resume points to the PDF and initiates or clearly reaches a PDF download.",
         "A CTA pointing to the resume HTML page is labeled View resume or equivalent.",
-        "Email, contact, work, and case-study actions have truthful labels and no dead ends.",
+        "Email, contact, work, case-study, and tag-filter actions have truthful labels and no dead ends.",
         "All primary actions are reachable by keyboard."
       ],
       "evidence_required": ["CTA inventory", "destination results", "keyboard results"],
@@ -310,7 +310,7 @@
       ],
       "pass_criteria": [
         "The approval register and launch ledger do not contradict each other.",
-        "Every new screenshot, photograph, quote, credit, or collaborator-sensitive artifact has recorded approval.",
+        "Every new screenshot, photograph, quote, credit, or collaborator-sensitive artifact has recorded approval; uncleared private photo leads stay outside public Git and staging.",
         "Jamie explicitly approves the exact production candidate and indexing state."
       ],
       "evidence_required": ["dated approval record", "candidate SHA", "asset approvals", "final go or no-go decision"],

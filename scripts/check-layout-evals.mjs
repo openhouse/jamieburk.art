@@ -25,10 +25,11 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   const evaluation = JSON.parse(readText("evals/layout/portfolio-photography.json"));
   const expectedCriteria = [
     "manifest-bound-publication",
-    "minimal-authorized-field",
+    "governed-photographic-field",
     "metadata-and-locator-safety",
     "editorial-not-decorative",
-    "deliberate-absence",
+    "truthful-project-cover-field",
+    "tag-navigation-contract",
     "human-index-material-system",
     "responsive-image-contract",
     "human-authority-remains-open"
@@ -49,26 +50,28 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   const expectedSources = [
     "/images/field-notes/coalition-facilitation-shoestring.webp",
     "/images/field-notes/jamie-east-river.webp",
-    "/images/field-notes/save-nyc-spaces-town-hall.webp"
+    "/images/field-notes/kc-town-hall-roof-work.webp",
+    "/images/field-notes/save-nyc-spaces-town-hall.webp",
+    "/images/field-notes/sunday-dinner-shared-map.webp"
   ];
   if (JSON.stringify(sources.sort()) !== JSON.stringify(expectedSources.sort())) {
-    fail("minimal-authorized-field", "The public field must contain exactly the three reviewed derivatives.");
+    fail("governed-photographic-field", "The public field must contain exactly the five reviewed derivatives.");
   }
 
   for (const field of ["id", "width", "height", "alt", "caption", "credit", "placements", "publicationStatus", "publicUseBoundary"]) {
     const count = [...manifest.matchAll(new RegExp(`\\b${field}:`, "g"))].length;
-    if (count !== 4) {
+    if (count !== 6) {
       fail("manifest-bound-publication", `Manifest field ${field} is missing from one or more photos.`);
     }
   }
-  if ([...manifest.matchAll(/publicationStatus: "jamie-authorized"/g)].length !== 4) {
+  if ([...manifest.matchAll(/publicationStatus: "jamie-authorized"/g)].length !== 6) {
     fail("manifest-bound-publication", "Every photo must retain the Jamie-authorized publication status.");
   }
 
   const publicImageRoot = path.join(root, "apps/www/public/images/field-notes");
   const publicImages = walkFiles(publicImageRoot).sort();
-  if (publicImages.length !== 3 || publicImages.some((file) => !file.endsWith(".webp"))) {
-    fail("minimal-authorized-field", "The field-notes directory must contain only the three fully bound WebP derivatives.");
+  if (publicImages.length !== 5 || publicImages.some((file) => !file.endsWith(".webp"))) {
+    fail("governed-photographic-field", "The field-notes directory must contain only the five fully bound WebP derivatives.");
   }
   for (const relativeImagePath of publicImages) {
     const bytes = readFileSync(path.join(publicImageRoot, relativeImagePath));
@@ -138,7 +141,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     !albumPermission.includes("indexing: open") ||
     !albumPermission.includes("private_evidence: held-outside-git")
   ) {
-    fail("minimal-authorized-field", "The destination-specific album clearance or its open human gates are incomplete.");
+    fail("governed-photographic-field", "The destination-specific album clearance or its open human gates are incomplete.");
   }
   const selectedScreenshotSha = createHash("sha256").update(letNYCDanceScreenshot).digest("hex");
   if (
@@ -153,13 +156,55 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     fail("editorial-not-decorative", "About and Colophon must remain text-led until additional images complete exact rights and credit review.");
   }
 
+  const workCovers = readText("apps/www/src/data/work-covers.ts");
+  const workCard = readText("apps/www/src/components/WorkCard.tsx");
+  const caseStudyLayout = readText("apps/www/src/components/CaseStudyLayout.tsx");
+  const workIndex = readText("apps/www/src/app/work/page.tsx");
+  const tagList = readText("apps/www/src/components/TagList.tsx");
+  const coverCount = [...workCovers.matchAll(/^  (?:"[^"]+"|[a-z]+): \{/gm)].length;
+  if (coverCount !== 6 ||
+      !workCard.includes('from "next/image"') ||
+      !workCard.includes("getWorkCover(item.slug)") ||
+      !workCard.includes("cover.src") ||
+      !workCard.includes("cover.caption") ||
+      !workCard.includes("cover.credit") ||
+      !caseStudyLayout.includes("getWorkCover(item.slug)") ||
+      !caseStudyLayout.includes("cover.src") ||
+      !caseStudyLayout.includes("cover.caption") ||
+      !caseStudyLayout.includes("cover.credit")) {
+    fail("truthful-project-cover-field", "All six work items and case studies must render one captioned and credited cover from the separate cover manifest.");
+  }
+  for (const [slug, requiredCover] of [
+    ['"harry-j-epstein"', '"/artifacts/hje/public-site.png"'],
+    ['"fair-rent-nyc"', "portfolioPhotos.saveNYCSpacesTownHall.src"],
+    ["callnyc", '"/artifacts/callnyc/archived-prototype.png"'],
+    ["wowlist", '"/artifacts/wowlist/public-threshold.webp"'],
+    ['"196-sunday-dinner"', "portfolioPhotos.sundayDinnerSharedMap.src"],
+    ['"kc-town-hall"', "portfolioPhotos.kcTownHallRoofWork.src"]
+  ]) {
+    const slugIndex = workCovers.indexOf(`${slug}: {`);
+    const coverEnd = workCovers.indexOf("},", slugIndex);
+    const coverBlock = workCovers.slice(slugIndex, coverEnd);
+    if (slugIndex < 0 || !coverBlock.includes(`src: ${requiredCover}`)) {
+      fail("truthful-project-cover-field", `Missing governed project-bound cover for ${slug}.`);
+    }
+  }
+
+  if (!tagList.includes('from "next/link"') ||
+      !tagList.includes("/work?tag=") ||
+      !tagList.includes("encodeURIComponent(tag)") ||
+      !workIndex.includes("selectedTag") ||
+      !workIndex.includes("Clear filter") ||
+      !workIndex.includes('id="work-index"')) {
+    fail("tag-navigation-contract", "Tag-shaped controls must link to a visible, clearable work-index filter state.");
+  }
+
   for (const route of [
-    "apps/www/src/app/work/page.tsx",
     "apps/www/src/app/resume/page.tsx",
     "apps/www/src/app/contact/page.tsx"
   ]) {
     if (/FieldPhoto|portfolioPhotos|\/images\/field-notes\//.test(readText(route))) {
-      fail("deliberate-absence", `${route} received a field photograph without a new editorial decision.`);
+      fail("truthful-project-cover-field", `${route} received a field photograph without a new editorial decision.`);
     }
   }
 
