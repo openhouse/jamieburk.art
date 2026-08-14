@@ -53,10 +53,10 @@ export function ArtifactList({ item }: { item: WorkMeta }) {
       <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-list">
         Primary artifacts
       </h2>
-      <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+      <ul className="mt-4 grid border-y border-jb-ink/20 sm:grid-cols-2">
         {item.artifactTypes.map((artifact) => (
           <li
-            className="rounded-lg border border-jb-ink/12 bg-jb-paper px-4 py-3 text-sm font-medium text-jb-ink"
+            className="border-b border-jb-ink/12 px-1 py-3 text-sm font-medium text-jb-ink last:border-b-0 sm:odd:border-r sm:odd:pr-4 sm:even:pl-4"
             key={artifact}
           >
             {artifact}

@@ -2,14 +2,14 @@
 
 # Photo knowledge health
 
-Candidate fingerprint: `040ca512b31cc0bcb41e1a41bcfc11e8e3e68a55897329bf1f5491dfe0ab18a7`
-Candidate files: 218
+Candidate fingerprint: `6ac1e67bfed3b5936d6770d670edd9f5e611cd53c0bba6d2eb51f96a92514c07`
+Candidate files: 241
 
 | Check | State |
 |---|---|
 | records_materialized | PASS |
 | no_private_locator_leakage | PASS |
-| private_binding_opaque_and_resolvable | PASS |
+| private_binding_opaque_and_resolvable | FAIL |
 | derivative_integrity_and_metadata_stripping | PASS |
 | creator_credit_and_custody_distinct | PASS |
 | permission_scope_exact_and_fail_closed | PASS |
@@ -21,7 +21,7 @@ Candidate files: 218
 | automated_selection_prohibited | PASS |
 | production_and_indexing_human_gated | PASS |
 | rfc_authority_and_scope_current | PASS |
-| exact_candidate_receipt_current | PASS |
+| exact_candidate_receipt_current | FAIL |
 
 ## Open human gates
 

@@ -22,12 +22,23 @@ relations:
     target: asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2
     href: ../assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md
     context: Cleared Market Hotel public-room occurrence for the Fair Rent NYC case study.
+  - type: has_asset
+    target: asset.photo.sunday-dinner.shared-map.2013.001
+    href: ../assets/photographs/sunday-dinner-shared-map-2013.md
+    context: Cleared shared-table occurrence for the Sunday Dinner case study.
+  - type: has_asset
+    target: asset.photo.kc-town-hall.roof-work.2019.001
+    href: ../assets/photographs/kc-town-hall-roof-work-2019.md
+    context: Cleared field-implementation occurrence for the KC Town Hall case study.
   - type: related_to
     target: index.photo-set.east-river-canoe.2022
     href: photo-sets/east-river-canoe-2022.md
   - type: related_to
     target: evaluation.curatorial.layout-c.home-east-river.v1
     href: ../evaluations/curatorial/layout-c-home-east-river-v1.md
+  - type: related_to
+    target: evaluation.curatorial.portfolio-project-covers.2026-08-13
+    href: ../evaluations/curatorial/portfolio-project-covers-2026-08-13.md
   - type: related_to
     target: decision.photo.layout-c.home-east-river.v1
     href: ../decisions/photography/layout-c-home-east-river-v1.md
@@ -100,9 +111,17 @@ sequence with the Let NYC Dance public surface:
 - [Market Hotel banner room](../assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md)
   shows the collective public-room layer.
 - [August 2026 photographic edition](../projections/photography/edition-launch-2026-08.md)
-  binds all three exact occurrences while leaving production and indexing open.
+  binds the five governed photograph occurrences while leaving production and
+  indexing open.
 - [Paul Mossine](../people/paul-mossine.md) is credited as photographer for
   both 2017 case-study images.
+- [Sunday Dinner shared map](../assets/photographs/sunday-dinner-shared-map-2013.md)
+  shows social infrastructure taking form at a shared table.
+- [KC Town Hall roof work](../assets/photographs/kc-town-hall-roof-work-2019.md)
+  shows field implementation under material conditions.
+- [Project-cover curatorial record](../evaluations/curatorial/portfolio-project-covers-2026-08-13.md)
+  preserves the bounded selection method, visual sequence, dissent, and human
+  publication gates.
 
 Jamie checked the designated portfolio album as cleared for this portfolio and
 specifically requested consideration of both frames. The [public-safe

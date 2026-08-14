@@ -26,7 +26,9 @@ authorization:
   selected_assets:
     - asset.photo.nycac-shoestring-facilitation.2017.001
     - asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2
-  required_credit: Photograph by Paul Mossine.
+    - asset.photo.sunday-dinner.shared-map.2013.001
+    - asset.photo.kc-town-hall.roof-work.2019.001
+  required_credit: Known photographers are visibly credited; unresolved photographer identity remains explicit.
   excludes:
     - Apple Photos identifiers
     - original archive filenames
@@ -51,6 +53,12 @@ relations:
     target: asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2
     href: ../../assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md
   - type: related_to
+    target: asset.photo.sunday-dinner.shared-map.2013.001
+    href: ../../assets/photographs/sunday-dinner-shared-map-2013.md
+  - type: related_to
+    target: asset.photo.kc-town-hall.roof-work.2019.001
+    href: ../../assets/photographs/kc-town-hall-roof-work-2019.md
+  - type: related_to
     target: person.paul-mossine
     href: ../../people/paul-mossine.md
 ---
@@ -63,6 +71,9 @@ relations:
   responsive crops, public Git, and staging review for that destination.
 - [x] Jamie specifically asks the portfolio composition to consider the
   Shoestring Press facilitation frame and the Market Hotel banner frame.
+- [x] Jamie asks every project to receive an excellent, truthful cover visual
+  and authorizes the curated Sunday Dinner and KC Town Hall derivatives for
+  public Git and staging in this portfolio.
 - [x] The existing East River homepage hero remains unchanged.
 - [x] Known photographers remain visibly credited.
 - [x] Album identifiers, People tags, face associations, geolocation, original

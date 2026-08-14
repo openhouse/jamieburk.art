@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-13T19:37:06-04:00",
-  "sourceCommit": "0e9712f4bcd2211207e99b7c3b2df2f97bdda098",
-  "sourceFingerprint": "eb7a2fa77725905c6d19bbb8e8cf58572c53d2e6c4e8906b3cb4a063a8afc607",
+  "generatedAt": "2026-08-13T21:56:30-04:00",
+  "sourceCommit": "4d62d8e294c4f00c9a7a1a1bb09f542fc92e61bb",
+  "sourceFingerprint": "4bce31b66f1ad8d96b944d46e4b3c26224fb4e0fabbd1d3d281f080bcf8021ea",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -108,6 +108,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-10-26"
+    },
+    {
+      "id": "asset.photo.kc-town-hall.roof-work.2019.001",
+      "path": "docs/knowledge-bank/assets/photographs/kc-town-hall-roof-work-2019.md",
+      "title": "KC Town Hall roof work, 2019",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe record for Paul Mossine's March 24, 2019 photograph of visible roof work during KC Town Hall field implementation.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2027-02-13"
     },
     {
       "id": "asset.photo.kc-town-hall.stewardship-interior.001",
@@ -2489,6 +2502,19 @@
       "reviewBy": "2026-10-28"
     },
     {
+      "id": "asset.photo.sunday-dinner.shared-map.2013.001",
+      "path": "docs/knowledge-bank/assets/photographs/sunday-dinner-shared-map-2013.md",
+      "title": "Sunday Dinner shared map and table, 2013",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe record for a January 6, 2013 Sunday Dinner photograph showing a shared table, a hand-drawn map, and visible group interaction.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2027-02-13"
+    },
+    {
       "id": "capability.civic-cultural-technical-translation",
       "path": "docs/knowledge-bank/capabilities/civic-cultural-and-technical-translation.md",
       "title": "Civic, cultural, and technical translation",
@@ -2730,7 +2756,7 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Dated launch-candidate edition retaining the East River homepage hero and adding two governed Fair Rent NYC case-study occurrences.",
+      "summary": "Dated launch-candidate edition retaining the East River homepage hero and binding five governed photographs across the homepage, work index, and situated-work case studies.",
       "aliases": [],
       "lastReviewed": "2026-08-13",
       "reviewBy": "2027-02-13"
@@ -2760,6 +2786,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "evaluation.curatorial.portfolio-project-covers.2026-08-13",
+      "path": "docs/knowledge-bank/evaluations/curatorial/portfolio-project-covers-2026-08-13.md",
+      "title": "Portfolio project-cover curatorial record",
+      "kind": "evaluation",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe record of the bounded visual review that selected governed photographs and interface captures for the six project covers in the August 2026 portfolio edition.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2027-02-13"
     },
     {
       "id": "evaluation.employment-context.coverage.2026-07-18",
@@ -4268,6 +4307,19 @@
       "reviewBy": "2027-02-13"
     },
     {
+      "id": "projection.photo.kc-town-hall.roof-work",
+      "path": "docs/knowledge-bank/projections/photography/kc-town-hall-roof-work.md",
+      "title": "KC Town Hall roof-work occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact public occurrence binding the KC Town Hall roof-work derivative to the work index and case study.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2027-02-13"
+    },
+    {
       "id": "projection.photo.layout-c.home.east-river",
       "path": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
       "title": "Layout C homepage East River occurrence",
@@ -4279,6 +4331,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "projection.photo.sunday-dinner.shared-map",
+      "path": "docs/knowledge-bank/projections/photography/sunday-dinner-shared-map.md",
+      "title": "Sunday Dinner shared-map occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact public occurrence binding the Sunday Dinner shared-map derivative to the work index and case study.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2027-02-13"
     },
     {
       "id": "research-inquiry.documented-canoe-bike-journeys",
@@ -5269,6 +5334,19 @@
       "reviewBy": "2027-02-13"
     },
     {
+      "id": "source.photo-metadata.portfolio-cover-images.2026.public-safe",
+      "path": "docs/knowledge-bank/sources/photo-metadata/portfolio-cover-images-2026-public-safe.md",
+      "title": "Public-safe metadata capsule for the August 2026 project-cover images",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe capsule retaining only the capture dates and creator-state information needed to govern the selected Sunday Dinner and KC Town Hall portfolio derivatives.",
+      "aliases": [],
+      "lastReviewed": "2026-08-13",
+      "reviewBy": "2027-02-13"
+    },
+    {
       "id": "source.politico.callnyc.2016-03-14",
       "path": "docs/knowledge-bank/sources/politico-callnyc-2016-03-14.md",
       "title": "Website provides new information about council members' focus",
@@ -5801,6 +5879,46 @@
       "to": "project.kc-town-hall",
       "source": "frontmatter",
       "href": "../../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.roof-work.2019.001",
+      "type": "collaborated_with",
+      "to": "person.paul-mossine",
+      "source": "frontmatter",
+      "href": "../../people/paul-mossine.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.roof-work.2019.001",
+      "type": "projected_to",
+      "to": "projection.photo.kc-town-hall.roof-work",
+      "source": "frontmatter",
+      "href": "../../projections/photography/kc-town-hall-roof-work.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.roof-work.2019.001",
+      "type": "related_to",
+      "to": "index.photo-set.kc-town-hall-fieldwork",
+      "source": "frontmatter",
+      "href": "../../indexes/photo-sets/kc-town-hall-fieldwork.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.roof-work.2019.001",
+      "type": "uses_source",
+      "to": "source.permission.jamie-portfolio-album.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/jamie-portfolio-album-2026-08-13.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.roof-work.2019.001",
+      "type": "uses_source",
+      "to": "source.photo-metadata.portfolio-cover-images.2026.public-safe",
+      "source": "frontmatter",
+      "href": "../../sources/photo-metadata/portfolio-cover-images-2026-public-safe.md",
       "context": null
     },
     {
@@ -10876,6 +10994,38 @@
       "context": null
     },
     {
+      "from": "asset.photo.sunday-dinner.shared-map.2013.001",
+      "type": "projected_to",
+      "to": "projection.photo.sunday-dinner.shared-map",
+      "source": "frontmatter",
+      "href": "../../projections/photography/sunday-dinner-shared-map.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.sunday-dinner.shared-map.2013.001",
+      "type": "related_to",
+      "to": "project.sunday-dinner-196",
+      "source": "frontmatter",
+      "href": "../../projects/sunday-dinner-196-orientation.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.sunday-dinner.shared-map.2013.001",
+      "type": "uses_source",
+      "to": "source.permission.jamie-portfolio-album.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/jamie-portfolio-album-2026-08-13.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.sunday-dinner.shared-map.2013.001",
+      "type": "uses_source",
+      "to": "source.photo-metadata.portfolio-cover-images.2026.public-safe",
+      "source": "frontmatter",
+      "href": "../../sources/photo-metadata/portfolio-cover-images-2026-public-safe.md",
+      "context": null
+    },
+    {
       "from": "capability.civic-cultural-technical-translation",
       "type": "informed_by",
       "to": "research.interpretive-layer-source-return.2026-07-19",
@@ -11469,9 +11619,25 @@
     {
       "from": "edition.launch.2026-08",
       "type": "related_to",
+      "to": "projection.photo.kc-town-hall.roof-work",
+      "source": "frontmatter",
+      "href": "kc-town-hall-roof-work.md",
+      "context": null
+    },
+    {
+      "from": "edition.launch.2026-08",
+      "type": "related_to",
       "to": "projection.photo.layout-c.home.east-river",
       "source": "frontmatter",
       "href": "layout-c-home-east-river.md",
+      "context": null
+    },
+    {
+      "from": "edition.launch.2026-08",
+      "type": "related_to",
+      "to": "projection.photo.sunday-dinner.shared-map",
+      "source": "frontmatter",
+      "href": "sunday-dinner-shared-map.md",
       "context": null
     },
     {
@@ -11504,6 +11670,30 @@
       "to": "decision.photo.layout-c.home-east-river.v1",
       "source": "frontmatter",
       "href": "../../decisions/photography/layout-c-home-east-river-v1.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.curatorial.portfolio-project-covers.2026-08-13",
+      "type": "related_to",
+      "to": "asset.photo.kc-town-hall.roof-work.2019.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-roof-work-2019.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.curatorial.portfolio-project-covers.2026-08-13",
+      "type": "related_to",
+      "to": "asset.photo.sunday-dinner.shared-map.2013.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/sunday-dinner-shared-map-2013.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.curatorial.portfolio-project-covers.2026-08-13",
+      "type": "related_to",
+      "to": "edition.launch.2026-08",
+      "source": "frontmatter",
+      "href": "../../projections/photography/edition-launch-2026-08.md",
       "context": null
     },
     {
@@ -13077,6 +13267,14 @@
     {
       "from": "index.knowledge-wiki.photography",
       "type": "has_asset",
+      "to": "asset.photo.kc-town-hall.roof-work.2019.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/kc-town-hall-roof-work-2019.md",
+      "context": "Cleared field-implementation occurrence for the KC Town Hall case study."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "has_asset",
       "to": "asset.photo.nyc-council.field-kit.2026.001",
       "source": "frontmatter",
       "href": "../assets/photographs/nyc-council-field-kit-2026.md",
@@ -13097,6 +13295,14 @@
       "source": "frontmatter",
       "href": "../assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md",
       "context": "Cleared Market Hotel public-room occurrence for the Fair Rent NYC case study."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "has_asset",
+      "to": "asset.photo.sunday-dinner.shared-map.2013.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/sunday-dinner-shared-map-2013.md",
+      "context": "Cleared shared-table occurrence for the Sunday Dinner case study."
     },
     {
       "from": "index.knowledge-wiki.photography",
@@ -13152,6 +13358,14 @@
       "to": "evaluation.curatorial.layout-c.home-east-river.v1",
       "source": "frontmatter",
       "href": "../evaluations/curatorial/layout-c-home-east-river-v1.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "evaluation.curatorial.portfolio-project-covers.2026-08-13",
+      "source": "frontmatter",
+      "href": "../evaluations/curatorial/portfolio-project-covers-2026-08-13.md",
       "context": null
     },
     {
@@ -16157,6 +16371,38 @@
       "context": null
     },
     {
+      "from": "projection.photo.kc-town-hall.roof-work",
+      "type": "related_to",
+      "to": "edition.launch.2026-08",
+      "source": "frontmatter",
+      "href": "edition-launch-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.kc-town-hall.roof-work",
+      "type": "related_to",
+      "to": "person.paul-mossine",
+      "source": "frontmatter",
+      "href": "../../people/paul-mossine.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.kc-town-hall.roof-work",
+      "type": "uses_source",
+      "to": "asset.photo.kc-town-hall.roof-work.2019.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-roof-work-2019.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.kc-town-hall.roof-work",
+      "type": "uses_source",
+      "to": "source.permission.jamie-portfolio-album.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/jamie-portfolio-album-2026-08-13.md",
+      "context": null
+    },
+    {
       "from": "projection.photo.layout-c.home.east-river",
       "type": "related_to",
       "to": "edition.layout-c.2026-07",
@@ -16186,6 +16432,30 @@
       "to": "source.permission.elana-gordon.east-river.2026-07",
       "source": "frontmatter",
       "href": "../../sources/permissions/elana-gordon-east-river-portfolio-2026.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.sunday-dinner.shared-map",
+      "type": "related_to",
+      "to": "edition.launch.2026-08",
+      "source": "frontmatter",
+      "href": "edition-launch-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.sunday-dinner.shared-map",
+      "type": "uses_source",
+      "to": "asset.photo.sunday-dinner.shared-map.2013.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/sunday-dinner-shared-map-2013.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.sunday-dinner.shared-map",
+      "type": "uses_source",
+      "to": "source.permission.jamie-portfolio-album.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/jamie-portfolio-album-2026-08-13.md",
       "context": null
     },
     {
@@ -17519,6 +17789,14 @@
     {
       "from": "source.permission.jamie-portfolio-album.2026-08-13",
       "type": "related_to",
+      "to": "asset.photo.kc-town-hall.roof-work.2019.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-roof-work-2019.md",
+      "context": null
+    },
+    {
+      "from": "source.permission.jamie-portfolio-album.2026-08-13",
+      "type": "related_to",
       "to": "asset.photo.nycac-shoestring-facilitation.2017.001",
       "source": "frontmatter",
       "href": "../../assets/photographs/nycac-shoestring-facilitation-2017.md",
@@ -17530,6 +17808,14 @@
       "to": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2",
       "source": "frontmatter",
       "href": "../../assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md",
+      "context": null
+    },
+    {
+      "from": "source.permission.jamie-portfolio-album.2026-08-13",
+      "type": "related_to",
+      "to": "asset.photo.sunday-dinner.shared-map.2013.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/sunday-dinner-shared-map-2013.md",
       "context": null
     },
     {
@@ -17559,6 +17845,14 @@
     {
       "from": "source.photo-metadata.nycac-participation-images.2017.public-safe",
       "type": "uses_source",
+      "to": "source.permission.jamie-portfolio-album.2026-08-13",
+      "source": "frontmatter",
+      "href": "../permissions/jamie-portfolio-album-2026-08-13.md",
+      "context": null
+    },
+    {
+      "from": "source.photo-metadata.portfolio-cover-images.2026.public-safe",
+      "type": "related_to",
       "to": "source.permission.jamie-portfolio-album.2026-08-13",
       "source": "frontmatter",
       "href": "../permissions/jamie-portfolio-album-2026-08-13.md",
@@ -19816,7 +20110,34 @@
       "toPath": "docs/knowledge-bank/people/paul-mossine.md",
       "to": "person.paul-mossine",
       "fragment": null,
-      "line": 19,
+      "line": 20,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/photographs/sunday-dinner-shared-map-2013.md",
+      "to": "asset.photo.sunday-dinner.shared-map.2013.001",
+      "fragment": null,
+      "line": 22,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/photographs/kc-town-hall-roof-work-2019.md",
+      "to": "asset.photo.kc-town-hall.roof-work.2019.001",
+      "fragment": null,
+      "line": 24,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/evaluations/curatorial/portfolio-project-covers-2026-08-13.md",
+      "to": "evaluation.curatorial.portfolio-project-covers.2026-08-13",
+      "fragment": null,
+      "line": 26,
       "kind": "link"
     },
     {
@@ -19825,7 +20146,7 @@
       "toPath": "docs/knowledge-bank/sources/permissions/jamie-portfolio-album-2026-08-13.md",
       "to": "source.permission.jamie-portfolio-album.2026-08-13",
       "fragment": null,
-      "line": 23,
+      "line": 31,
       "kind": "link"
     },
     {
@@ -19834,7 +20155,7 @@
       "toPath": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
       "to": "asset.photo.east-river-manhattan-bridge.2022.001",
       "fragment": null,
-      "line": 48,
+      "line": 56,
       "kind": "link"
     },
     {
@@ -19843,7 +20164,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/east-river-canoe-2022.md",
       "to": "index.photo-set.east-river-canoe.2022",
       "fragment": null,
-      "line": 49,
+      "line": 57,
       "kind": "link"
     },
     {
@@ -19852,7 +20173,7 @@
       "toPath": "docs/knowledge-bank/people/elana-gordon.md",
       "to": "person.elana-gordon",
       "fragment": null,
-      "line": 50,
+      "line": 58,
       "kind": "link"
     },
     {
@@ -19861,7 +20182,7 @@
       "toPath": "docs/knowledge-bank/sources/photo-metadata/east-river-2022-public-safe.md",
       "to": "source.photo-metadata.east-river.2022.public-safe",
       "fragment": null,
-      "line": 51,
+      "line": 59,
       "kind": "link"
     },
     {
@@ -19870,7 +20191,7 @@
       "toPath": "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md",
       "to": "source.permission.elana-gordon.east-river.2026-07",
       "fragment": null,
-      "line": 52,
+      "line": 60,
       "kind": "link"
     },
     {
@@ -19879,7 +20200,7 @@
       "toPath": "docs/knowledge-bank/evaluations/curatorial/layout-c-home-east-river-v1.md",
       "to": "evaluation.curatorial.layout-c.home-east-river.v1",
       "fragment": null,
-      "line": 53,
+      "line": 61,
       "kind": "link"
     },
     {
@@ -19888,7 +20209,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/layout-c-home-east-river-v1.md",
       "to": "decision.photo.layout-c.home-east-river.v1",
       "fragment": null,
-      "line": 54,
+      "line": 62,
       "kind": "link"
     },
     {
@@ -19897,7 +20218,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/layout-c-resume-no-photo-v1.md",
       "to": "decision.photo.layout-c.resume-no-photo.v1",
       "fragment": null,
-      "line": 55,
+      "line": 63,
       "kind": "link"
     },
     {
@@ -19906,7 +20227,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/pre-launch-rights-narrowing-2026-07-28.md",
       "to": "decision.photo.pre-launch.rights-narrowing.2026-07-28",
       "fragment": null,
-      "line": 56,
+      "line": 64,
       "kind": "link"
     },
     {
@@ -19915,7 +20236,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
       "to": "projection.photo.layout-c.home.east-river",
       "fragment": null,
-      "line": 57,
+      "line": 65,
       "kind": "link"
     },
     {
@@ -19924,7 +20245,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/edition-layout-c-2026-07.md",
       "to": "edition.layout-c.2026-07",
       "fragment": null,
-      "line": 58,
+      "line": 66,
       "kind": "link"
     },
     {
@@ -19933,7 +20254,7 @@
       "toPath": "docs/knowledge-bank/corrections/east-river-credit-2026-07.md",
       "to": "correction.photo.east-river-credit.2026-07",
       "fragment": null,
-      "line": 59,
+      "line": 67,
       "kind": "link"
     },
     {
@@ -19942,7 +20263,7 @@
       "toPath": "docs/knowledge-bank/sources/recollections/jamie-canoe-commuting-2026-07.md",
       "to": "source.recollection.jamie-canoe-commuting.2026-07",
       "fragment": null,
-      "line": 60,
+      "line": 68,
       "kind": "link"
     },
     {
@@ -19951,7 +20272,7 @@
       "toPath": "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md",
       "to": "research-inquiry.documented-canoe-bike-journeys",
       "fragment": null,
-      "line": 61,
+      "line": 69,
       "kind": "link"
     },
     {
@@ -19960,7 +20281,7 @@
       "toPath": "docs/knowledge-bank/workflows/photography-east-river-canary.md",
       "to": "method.photography-east-river-canary",
       "fragment": null,
-      "line": 62,
+      "line": 70,
       "kind": "link"
     },
     {
@@ -19969,7 +20290,7 @@
       "toPath": "rfcs/0003-living-photographic-knowledge-loop.md",
       "to": null,
       "fragment": null,
-      "line": 70,
+      "line": 78,
       "kind": "link"
     },
     {
@@ -19978,7 +20299,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-dcla-formation-2017.md",
       "to": "index.photo-set.nycac-dcla-formation.2017",
       "fragment": null,
-      "line": 75,
+      "line": 83,
       "kind": "link"
     },
     {
@@ -19987,7 +20308,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/kc-town-hall-fieldwork.md",
       "to": "index.photo-set.kc-town-hall-fieldwork",
       "fragment": null,
-      "line": 76,
+      "line": 84,
       "kind": "link"
     },
     {
@@ -19996,7 +20317,7 @@
       "toPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-walkshed-2019.md",
       "to": "asset.graphic.kc-town-hall.walkshed.2019.001",
       "fragment": null,
-      "line": 81,
+      "line": 89,
       "kind": "link"
     },
     {
@@ -20005,7 +20326,7 @@
       "toPath": "docs/knowledge-bank/research-runs/photographic-source-return-2026-07-26.md",
       "to": "research.photographic-source-return.2026-07-26",
       "fragment": null,
-      "line": 83,
+      "line": 91,
       "kind": "link"
     },
     {
@@ -20014,7 +20335,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-project-sites-2017-2026.md",
       "to": "index.photo-set.nycac-project-sites.2017-2026",
       "fragment": null,
-      "line": 88,
+      "line": 96,
       "kind": "link"
     },
     {
@@ -21292,7 +21613,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
       "to": "projection.photo.layout-c.home.east-river",
       "fragment": null,
-      "line": 15,
+      "line": 16,
       "kind": "link"
     },
     {
@@ -21301,7 +21622,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/fair-rent-nyc-shoestring-facilitation.md",
       "to": "projection.photo.fair-rent-nyc.shoestring-facilitation",
       "fragment": null,
-      "line": 16,
+      "line": 17,
       "kind": "link"
     },
     {
@@ -21310,7 +21631,25 @@
       "toPath": "docs/knowledge-bank/projections/photography/fair-rent-nyc-market-hotel-banner.md",
       "to": "projection.photo.fair-rent-nyc.market-hotel-banner",
       "fragment": null,
-      "line": 17,
+      "line": 18,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projections/photography/edition-launch-2026-08.md",
+      "from": "edition.launch.2026-08",
+      "toPath": "docs/knowledge-bank/projections/photography/sunday-dinner-shared-map.md",
+      "to": "projection.photo.sunday-dinner.shared-map",
+      "fragment": null,
+      "line": 19,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projections/photography/edition-launch-2026-08.md",
+      "from": "edition.launch.2026-08",
+      "toPath": "docs/knowledge-bank/projections/photography/kc-town-hall-roof-work.md",
+      "to": "projection.photo.kc-town-hall.roof-work",
+      "fragment": null,
+      "line": 20,
       "kind": "link"
     },
     {

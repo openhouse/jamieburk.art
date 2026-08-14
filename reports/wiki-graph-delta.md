@@ -1,24 +1,27 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `0e9712f4bcd2211207e99b7c3b2df2f97bdda098`
-**Generation time:** 2026-08-13T19:37:06-04:00
-**Source fingerprint:** `eb7a2fa77725905c6d19bbb8e8cf58572c53d2e6c4e8906b3cb4a063a8afc607`
+**Source commit:** `4d62d8e294c4f00c9a7a1a1bb09f542fc92e61bb`
+**Generation time:** 2026-08-13T21:56:30-04:00
+**Source fingerprint:** `4bce31b66f1ad8d96b944d46e4b3c26224fb4e0fabbd1d3d281f080bcf8021ea`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 34
+- Nodes added: 40
 - Nodes removed: 0
-- Edges added: 156
+- Edges added: 183
 - Edges removed: 2
 - New type-aware orphans: 0
 - Current rights-review records: 185
 
 ## Added nodes
 
+- `asset.photo.kc-town-hall.roof-work.2019.001`
 - `asset.photo.nycac-shoestring-facilitation.2017.001`
+- `asset.photo.sunday-dinner.shared-map.2013.001`
 - `claim.nycac.frontline-advocacy.2026-08`
 - `edition.launch.2026-08`
+- `evaluation.curatorial.portfolio-project-covers.2026-08-13`
 - `evaluation.employment-leadership-context.2026-08-13`
 - `evaluation.named-public-reader-acceptance.2026-08-13`
 - `event.nyc.sbu-report-launch.2026-07-29`
@@ -35,6 +38,8 @@ Compared with the graph artifact on `origin/develop`.
 - `person.zack-parker`
 - `projection.photo.fair-rent-nyc.market-hotel-banner`
 - `projection.photo.fair-rent-nyc.shoestring-facilitation`
+- `projection.photo.kc-town-hall.roof-work`
+- `projection.photo.sunday-dinner.shared-map`
 - `research.nycac.frontline-advocacy.2026-08-12`
 - `source.aclu.charizma-williams`
 - `source.benepass.jaclyn-chen`
@@ -47,6 +52,7 @@ Compared with the graph artifact on `origin/develop`.
 - `source.nycac.frontline-advocacy.2026-08`
 - `source.permission.jamie-portfolio-album.2026-08-13`
 - `source.photo-metadata.nycac-participation-images.2017.public-safe`
+- `source.photo-metadata.portfolio-cover-images.2026.public-safe`
 - `source.public.luke-farrell-pit-crew.2026-07`
 - `source.sbu.empty-storefronts-high-rents.2026-07-28`
 - `source.wowlist.public-threshold.2026-08-13`

@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `0e9712f4bcd2211207e99b7c3b2df2f97bdda098`
-**Generation time:** 2026-08-13T19:37:06-04:00
-**Source fingerprint:** `eb7a2fa77725905c6d19bbb8e8cf58572c53d2e6c4e8906b3cb4a063a8afc607`
+**Source commit:** `4d62d8e294c4f00c9a7a1a1bb09f542fc92e61bb`
+**Generation time:** 2026-08-13T21:56:30-04:00
+**Source fingerprint:** `4bce31b66f1ad8d96b944d46e4b3c26224fb4e0fabbd1d3d281f080bcf8021ea`
 
 ## application
 
@@ -18,6 +18,7 @@
 - [East River beneath the Manhattan Bridge, 2022](../assets/photographs/east-river-manhattan-bridge-2022.md) - `asset.photo.east-river-manhattan-bridge.2022.001`
 - [Jamie at the KC Town Hall worksite](../assets/photographs/kc-town-hall-hard-hat-worksite.md) - `asset.photo.kc-town-hall.hard-hat.001`
 - [Kansas City Star aerial view of KC Town Hall](../assets/photographs/kc-town-hall-kc-star-aerial-2021.md) - `asset.photo.kc-town-hall.kc-star-aerial.2021`
+- [KC Town Hall roof work, 2019](../assets/photographs/kc-town-hall-roof-work-2019.md) - `asset.photo.kc-town-hall.roof-work.2019.001`
 - [Jamie and a collaborator inside KC Town Hall](../assets/photographs/kc-town-hall-stewardship-interior.md) - `asset.photo.kc-town-hall.stewardship-interior.001`
 - [Jamie with a civic field kit at New York City Council](../assets/photographs/nyc-council-field-kit-2026.md) - `asset.photo.nyc-council.field-kit.2026.001`
 - [DCLA listening room, January 2017](../assets/photographs/nycac-dcla-listening-room-2017.md) - `asset.photo.nycac-dcla-listening-room.2017.001`
@@ -201,6 +202,7 @@
 - [Talks Not Raids: save nyc spaces group photo nyc artist coalition [a7ura7th]](../assets/photographs/project-sites/talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-a7ura7t.md) - `asset.photo.project-site.talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-a7ura7t`
 - [Talks Not Raids: save nyc spaces group photo nyc artist coalition thumb [fqny62h4]](../assets/photographs/project-sites/talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-thumb-f.md) - `asset.photo.project-site.talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-thumb-f`
 - [Talks Not Raids: stephenlevin [3lpdubkj]](../assets/photographs/project-sites/talks-not-raids-stephenlevin-3lpdubkj6h.md) - `asset.photo.project-site.talks-not-raids-stephenlevin-3lpdubkj6h`
+- [Sunday Dinner shared map and table, 2013](../assets/photographs/sunday-dinner-shared-map-2013.md) - `asset.photo.sunday-dinner.shared-map.2013.001`
 
 ## capability
 
@@ -235,6 +237,7 @@
 ## evaluation
 
 - [Layout C homepage East River curatorial proposal](../evaluations/curatorial/layout-c-home-east-river-v1.md) - `evaluation.curatorial.layout-c.home-east-river.v1`
+- [Portfolio project-cover curatorial record](../evaluations/curatorial/portfolio-project-covers-2026-08-13.md) - `evaluation.curatorial.portfolio-project-covers.2026-08-13`
 - [Employment context coverage baseline - July 18, 2026](../evaluations/employment-context-coverage-2026-07-18.md) - `evaluation.employment-context.coverage.2026-07-18`
 - [Priority opportunity leadership-context evaluation - August 13, 2026](../evaluations/employment-leadership-context-2026-08-13.md) - `evaluation.employment-leadership-context.2026-08-13`
 - [Jamie public-record integration evaluation](../evaluations/jamie-public-record-integration-2026-08-03.md) - `evaluation.jamie-public-record-integration.2026-08-03`
@@ -378,7 +381,9 @@
 - [Technical Operations portfolio projection](../projections/work-technical-operations.md) - `portfolio.work.technical-operations`
 - [Fair Rent NYC Market Hotel public-room occurrence](../projections/photography/fair-rent-nyc-market-hotel-banner.md) - `projection.photo.fair-rent-nyc.market-hotel-banner`
 - [Fair Rent NYC Shoestring Press facilitation occurrence](../projections/photography/fair-rent-nyc-shoestring-facilitation.md) - `projection.photo.fair-rent-nyc.shoestring-facilitation`
+- [KC Town Hall roof-work occurrence](../projections/photography/kc-town-hall-roof-work.md) - `projection.photo.kc-town-hall.roof-work`
 - [Layout C homepage East River occurrence](../projections/photography/layout-c-home-east-river.md) - `projection.photo.layout-c.home.east-river`
+- [Sunday Dinner shared-map occurrence](../projections/photography/sunday-dinner-shared-map.md) - `projection.photo.sunday-dinner.shared-map`
 
 ## research-inquiry
 
@@ -464,6 +469,7 @@
 - [Jamie Burkart portfolio-album publication authorization](../sources/permissions/jamie-portfolio-album-2026-08-13.md) - `source.permission.jamie-portfolio-album.2026-08-13`
 - [East River photograph public-safe metadata summary](../sources/photo-metadata/east-river-2022-public-safe.md) - `source.photo-metadata.east-river.2022.public-safe`
 - [NYC Artist Coalition selected participation images public-safe metadata](../sources/photo-metadata/nycac-participation-images-2017-public-safe.md) - `source.photo-metadata.nycac-participation-images.2017.public-safe`
+- [Public-safe metadata capsule for the August 2026 project-cover images](../sources/photo-metadata/portfolio-cover-images-2026-public-safe.md) - `source.photo-metadata.portfolio-cover-images.2026.public-safe`
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`
 - [Professional record governed photo field](../sources/photo-metadata/professional-record-photo-field-2026-08.md) - `source.professional-record.photo-field.2026-08`
 - [Governed professional-record research comparison, August 2026](../sources/archives/professional-record-research-2026-08.md) - `source.professional-record.research.2026-08`

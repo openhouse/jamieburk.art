@@ -64,3 +64,22 @@ test("the homepage hero remains bound to the East River photograph", () => {
   assert.equal(result.passed, false);
   assert(result.failures.some(({ criterion }) => criterion === "editorial-not-decorative"));
 });
+
+test("every work item retains a truthful cover visual", () => {
+  const path = "apps/www/src/data/work-covers.ts";
+  const source = readFileSync(path, "utf8").replace(
+    'src: "/artifacts/wowlist/public-threshold.webp",',
+    'src: "/artifacts/hje/public-site.png",'
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "truthful-project-cover-field"));
+});
+
+test("tag-shaped controls retain real destinations", () => {
+  const path = "apps/www/src/components/TagList.tsx";
+  const source = readFileSync(path, "utf8").replace("/work?tag=", "/work#");
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "tag-navigation-contract"));
+});

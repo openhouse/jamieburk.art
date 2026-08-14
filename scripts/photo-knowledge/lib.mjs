@@ -132,10 +132,16 @@ function candidateFiles(repoRoot) {
   const fixed = [
     "apps/www/src/app/globals.css",
     "apps/www/src/components/Hero.tsx",
+    "apps/www/src/components/CaseStudyLayout.tsx",
+    "apps/www/src/components/WorkCard.tsx",
     "apps/www/src/data/photography.ts",
+    "apps/www/src/data/work-covers.ts",
     "apps/www/public/images/field-notes/jamie-east-river.webp",
+    "apps/www/public/images/field-notes/kc-town-hall-roof-work.webp",
     "apps/www/public/images/field-notes/nycac-market-hotel-banner.webp",
     "apps/www/public/images/field-notes/nycac-shoestring-facilitation.webp",
+    "apps/www/public/images/field-notes/sunday-dinner-shared-map.webp",
+    "apps/www/public/artifacts/wowlist/public-threshold.webp",
     "evals/photo-knowledge/canary.json",
     "evals/photo-knowledge/evals.json",
     "evals/photo-knowledge/curatorial/layout-c-home-east-river-v1.json",
@@ -402,8 +408,10 @@ export function evaluatePhotoKnowledgeModel(model) {
 
   const expectedBoundPhotoIds = [
     "east-river",
+    "kc-town-hall-roof-work",
     "nycac-market-hotel-banner",
-    "nycac-shoestring-facilitation"
+    "nycac-shoestring-facilitation",
+    "sunday-dinner-shared-map"
   ];
   const observedBoundPhotoIds = publicPhotoManifest
     ?.filter((item) => item.knowledgeStatus === "bound")
