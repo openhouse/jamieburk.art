@@ -71,10 +71,12 @@ test("the global focus ring meets non-text contrast on white", () => {
 test("the resume action keeps an inverse foreground on its blue panel", () => {
   const button = readFileSync(path.join(repoRoot, "apps/www/src/components/JBButton.tsx"), "utf8");
   const resume = readFileSync(path.join(repoRoot, "apps/www/src/components/ResumeCTA.tsx"), "utf8");
+  const styles = readFileSync(path.join(repoRoot, "apps/www/src/app/globals.css"), "utf8");
 
   assert.match(resume, /variant="inverse"/);
   assert.match(button, /inverse:[\s\S]*border-jb-paper[\s\S]*text-jb-paper[\s\S]*hover:bg-jb-paper[\s\S]*hover:text-jb-blue/);
-  assert.match(button, /inverse:[\s\S]*focus-visible:border-jb-paper[\s\S]*focus-visible:bg-jb-blue[\s\S]*focus-visible:text-jb-paper[\s\S]*focus-visible:outline-jb-paper/);
+  assert.match(button, /inverse:[\s\S]*jb-button-inverse/);
+  assert.match(styles, /\.jb-button-inverse:focus-visible\s*\{[^}]*background:\s*var\(--jb-broadway-blue\);[^}]*border-color:\s*var\(--jb-oil-white\);[^}]*color:\s*var\(--jb-oil-white\);[^}]*outline:\s*3px solid var\(--jb-oil-white\);[^}]*outline-offset:\s*3px;/s);
 });
 
 test("the skip link is immediately visible on focus and transfers focus to main", () => {

@@ -95,6 +95,14 @@ h2 {
   outline-offset: 3px;
 }
 
+.jb-button-inverse:focus-visible {
+  background: var(--jb-broadway-blue);
+  border-color: var(--jb-oil-white);
+  color: var(--jb-oil-white);
+  outline: 3px solid var(--jb-oil-white);
+  outline-offset: 3px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
