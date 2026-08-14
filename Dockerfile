@@ -14,7 +14,7 @@ COPY apps/www/package.json ./apps/www/package.json
 RUN npm ci
 
 FROM base AS builder
-ENV NODE_OPTIONS=--max-old-space-size=208
+ENV NODE_OPTIONS=--max-old-space-size=256
 ARG APP_ENV=staging
 ARG SITE_ENV=staging
 ARG NEXT_PUBLIC_DEPLOY_ENV=staging
@@ -30,7 +30,7 @@ ENV NEXT_PUBLIC_ROBOTS_POLICY=$NEXT_PUBLIC_ROBOTS_POLICY
 COPY --from=deps /repo/node_modules ./node_modules
 COPY . .
 RUN npm run typecheck -w @jamie-burkart/www
-RUN NEXT_BUILD_SKIP_VERIFIED_TYPECHECK=1 npm run build -w @jamie-burkart/www
+RUN NODE_OPTIONS=--max-old-space-size=208 NEXT_BUILD_SKIP_VERIFIED_TYPECHECK=1 npm run build -w @jamie-burkart/www
 
 FROM node:26-bookworm-slim AS runner
 WORKDIR /app

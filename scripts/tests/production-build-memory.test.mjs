@@ -22,10 +22,10 @@ test("the Docker production build stays within the staging host's memory budget"
   );
   assert.match(
     dockerfile,
-    /FROM base AS builder[\s\S]*ENV NODE_OPTIONS=--max-old-space-size=208/
+    /FROM base AS builder[\s\S]*ENV NODE_OPTIONS=--max-old-space-size=256/
   );
   assert.match(
     dockerfile,
-    /RUN npm run typecheck -w @jamie-burkart\/www\s+RUN NEXT_BUILD_SKIP_VERIFIED_TYPECHECK=1 npm run build -w @jamie-burkart\/www/
+    /RUN npm run typecheck -w @jamie-burkart\/www\s+RUN NODE_OPTIONS=--max-old-space-size=208 NEXT_BUILD_SKIP_VERIFIED_TYPECHECK=1 npm run build -w @jamie-burkart\/www/
   );
 });
