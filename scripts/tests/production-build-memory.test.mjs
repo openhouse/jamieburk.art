@@ -22,7 +22,7 @@ test("the Docker production build stays within the staging host's memory budget"
   );
   assert.match(
     dockerfile,
-    /FROM base AS builder[\s\S]*ENV NODE_OPTIONS=--max-old-space-size=256/
+    /FROM base AS builder[\s\S]*ENV NODE_OPTIONS=--max-old-space-size=384/
   );
   assert.match(
     dockerfile,
