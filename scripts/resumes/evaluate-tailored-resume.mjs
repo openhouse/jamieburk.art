@@ -223,6 +223,13 @@ export function evaluateDocumentArtifact(root = repoRoot) {
       detail: `${config.requiredLinkTargets.filter((target) => pdfText.includes(target)).length}/${config.requiredLinkTargets.length} required links embedded.`
     },
     {
+      id: "visible-politico-link-affordance",
+      pass:
+        inspection?.inspection?.checks?.politicoSourceLinkVisibleBlueAndUnderlined === true,
+      detail:
+        "The current hash-bound visual inspection confirms that Politico New York is blue and underlined."
+    },
+    {
       id: "public-download-matches-tailored-pdf",
       pass: pdf !== null && publicPdf !== null && pdf.equals(publicPdf),
       detail: "The portfolio download is byte-identical to the application-tailored PDF."
