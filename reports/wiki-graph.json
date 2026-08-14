@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-14T18:03:31-04:00",
   "sourceCommit": "b1ef10fcc8f4052d7ba35a22b3df49eeabafe912",
-  "sourceFingerprint": "d2abdb36159c24e45c55178b2ec32a870966584f4ffaacfcf1b83a32b772aa78",
+  "sourceFingerprint": "24999273041207999309bb14a80d1115a7aff5f02105ea001f416c2e0dcb4df5",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -2693,8 +2693,8 @@
       "sensitivity": "moderate",
       "summary": "Bounded reconstruction of an implementation approach that translated inherited store knowledge into digital commerce and operations without treating continuity as obsolete.",
       "aliases": [],
-      "lastReviewed": "2026-07-19",
-      "reviewBy": "2026-10-19"
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-11-14"
     },
     {
       "id": "decision.kc-town-hall.listening-fieldwork",
@@ -4161,12 +4161,12 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Long-running e-commerce, analytics, publishing, and operational modernization for a multigenerational Kansas City industrial supply business.",
+      "summary": "Jamie's 2009-2015 HJE engagement, formalized through the July 6, 2012 formation of Thick Arts LLC with HJE as its first client, joining e-commerce, analytics, publishing, and operational modernization.",
       "aliases": [
         "HJE"
       ],
-      "lastReviewed": "2026-07-19",
-      "reviewBy": "2026-10-19"
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-11-14"
     },
     {
       "id": "project.kc-spaces-fund",
@@ -4732,8 +4732,21 @@
       "sensitivity": "moderate",
       "summary": "Metadata-only record of a working source map that separates public business history from Jamie's firsthand account of implementation responsibilities.",
       "aliases": [],
-      "lastReviewed": "2026-07-19",
-      "reviewBy": "2026-10-19"
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-11-14"
+    },
+    {
+      "id": "source.hje.wayback-chronology.2026-08",
+      "path": "docs/knowledge-bank/sources/hje-wayback-chronology-2026-08.md",
+      "title": "Harry J. Epstein historic storefront Wayback chronology, August 2026",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public Archive.org observation bounds for store.harryepstein.com and its 2015 transition to a successor website.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-11-14"
     },
     {
       "id": "source.jamie-public-record-initial-manifest",
@@ -5584,6 +5597,19 @@
       "reviewBy": "2027-02-03"
     },
     {
+      "id": "source.thick-arts.nys-dos-formation.2012-07-06",
+      "path": "docs/knowledge-bank/sources/thick-arts-nys-dos-formation-2012-07-06.md",
+      "title": "New York State formation record for THICK ARTS LLC",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Official New York State open-data record identifying THICK ARTS LLC as a domestic limited liability company initially filed July 6, 2012.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-11-14"
+    },
+    {
       "id": "source.transcript.commercial-rent.friends-and-lovers.2026-02-17",
       "path": "docs/knowledge-bank/testimony/commercial-rent-public-support/2026-02-17-friends-and-lovers-supportive-remarks.md",
       "title": "Friends and Lovers Commercial Rent Stabilization event: speaker index",
@@ -5762,8 +5788,8 @@
       "sensitivity": "low",
       "summary": "Bounded chronology tracing continuity among Jamie's artistic experiments, participatory systems, civic technology, operations work, and source-backed memory practice.",
       "aliases": [],
-      "lastReviewed": "2026-07-19",
-      "reviewBy": "2026-10-19"
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-11-14"
     }
   ],
   "edges": [
@@ -11510,6 +11536,22 @@
       "context": null
     },
     {
+      "from": "decision.hje.continuity-modernization",
+      "type": "uses_source",
+      "to": "source.hje.wayback-chronology.2026-08",
+      "source": "frontmatter",
+      "href": "../sources/hje-wayback-chronology-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "decision.hje.continuity-modernization",
+      "type": "uses_source",
+      "to": "source.thick-arts.nys-dos-formation.2012-07-06",
+      "source": "frontmatter",
+      "href": "../sources/thick-arts-nys-dos-formation-2012-07-06.md",
+      "context": null
+    },
+    {
       "from": "decision.kc-town-hall.listening-fieldwork",
       "type": "informed_by",
       "to": "research.interpretive-layer-source-return.2026-07-19",
@@ -15858,6 +15900,22 @@
       "context": null
     },
     {
+      "from": "project.harry-j-epstein",
+      "type": "uses_source",
+      "to": "source.hje.wayback-chronology.2026-08",
+      "source": "frontmatter",
+      "href": "../sources/hje-wayback-chronology-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "project.harry-j-epstein",
+      "type": "uses_source",
+      "to": "source.thick-arts.nys-dos-formation.2012-07-06",
+      "source": "frontmatter",
+      "href": "../sources/thick-arts-nys-dos-formation-2012-07-06.md",
+      "context": null
+    },
+    {
       "from": "project.kc-spaces-fund",
       "type": "related_to",
       "to": "person.jamie-burkart",
@@ -17106,6 +17164,46 @@
       "context": null
     },
     {
+      "from": "source.hje.research-brief.2026-07",
+      "type": "informed_by",
+      "to": "source.hje.wayback-chronology.2026-08",
+      "source": "frontmatter",
+      "href": "hje-wayback-chronology-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "source.hje.research-brief.2026-07",
+      "type": "informed_by",
+      "to": "source.thick-arts.nys-dos-formation.2012-07-06",
+      "source": "frontmatter",
+      "href": "thick-arts-nys-dos-formation-2012-07-06.md",
+      "context": null
+    },
+    {
+      "from": "source.hje.wayback-chronology.2026-08",
+      "type": "documents",
+      "to": "project.harry-j-epstein",
+      "source": "frontmatter",
+      "href": "../projects/harry-j-epstein.md",
+      "context": null
+    },
+    {
+      "from": "source.hje.wayback-chronology.2026-08",
+      "type": "related_to",
+      "to": "source.hje.research-brief.2026-07",
+      "source": "frontmatter",
+      "href": "hje-research-brief-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "source.hje.wayback-chronology.2026-08",
+      "type": "related_to",
+      "to": "source.thick-arts.nys-dos-formation.2012-07-06",
+      "source": "frontmatter",
+      "href": "thick-arts-nys-dos-formation-2012-07-06.md",
+      "context": null
+    },
+    {
       "from": "source.jamie-public-record-initial-manifest",
       "type": "related_to",
       "to": "index.knowledge-wiki.jamie-public-record-source-edition",
@@ -17807,6 +17905,22 @@
       "to": "event.studio3.ai-made-me-do-it.2024",
       "source": "frontmatter",
       "href": "../events/ai-made-me-do-it-symposium-2024.md",
+      "context": null
+    },
+    {
+      "from": "source.thick-arts.nys-dos-formation.2012-07-06",
+      "type": "documents",
+      "to": "project.harry-j-epstein",
+      "source": "frontmatter",
+      "href": "../projects/harry-j-epstein.md",
+      "context": null
+    },
+    {
+      "from": "source.thick-arts.nys-dos-formation.2012-07-06",
+      "type": "related_to",
+      "to": "source.hje.wayback-chronology.2026-08",
+      "source": "frontmatter",
+      "href": "hje-wayback-chronology-2026-08.md",
       "context": null
     },
     {

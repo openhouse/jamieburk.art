@@ -3,7 +3,7 @@
 
 **Source commit:** `b1ef10fcc8f4052d7ba35a22b3df49eeabafe912`
 **Generation time:** 2026-08-14T18:03:31-04:00
-**Source fingerprint:** `d2abdb36159c24e45c55178b2ec32a870966584f4ffaacfcf1b83a32b772aa78`
+**Source fingerprint:** `24999273041207999309bb14a80d1115a7aff5f02105ea001f416c2e0dcb4df5`
 
 ## application
 
@@ -423,6 +423,7 @@
 - [Cultural Affairs preliminary budget hearing: supportive witness testimony](../testimony/heteroglossia/2018-03-16-cultural-affairs-supportive-witnesses.md) - `source.heteroglossia.cultural-affairs-budget.2018-03-16`
 - [Small Business Job Survival Act hearing: supportive witness testimony](../testimony/heteroglossia/2018-10-22-sbjsa-supportive-witnesses.md) - `source.heteroglossia.sbjsa.2018-10-22`
 - [Harry J. Epstein Company archival research brief, July 2026](../sources/hje-research-brief-2026-07.md) - `source.hje.research-brief.2026-07`
+- [Harry J. Epstein historic storefront Wayback chronology, August 2026](../sources/hje-wayback-chronology-2026-08.md) - `source.hje.wayback-chronology.2026-08`
 - [Jamie Burkart public-record initial manifest](../sources/jamie-public-record-initial-manifest.md) - `source.jamie-public-record-initial-manifest`
 - [Jamie Burkart writer's voice synthesis, July 2026](../sources/writers-voice-synthesis-2026-07.md) - `source.jamie.writers-voice-synthesis.2026-07`
 - [ACLU - Product Manager II, Discovery 8482872002](../sources/jobs-aclu-product-discovery-8482872002.md) - `source.jobs.aclu.product-discovery.8482872002`
@@ -488,6 +489,7 @@
 - [Jimmy's Corner rally: Small Business Rent Stabilization statements](../testimony/commercial-rent-public-support/2026-04-10-jimmys-corner-rally-statements.md) - `source.statement.commercial-rent.jimmys-corner-rally.2026-04-10`
 - [State sponsors and advocates introduce the Small Business Survival Act](../testimony/commercial-rent-public-support/2026-02-17-state-introduction-statements.md) - `source.statement.commercial-rent.state-introduction.2026-02-17`
 - [Studio3 AI Made Me Do It event page](../sources/studio3-ai-made-me-do-it-2024.md) - `source.studio3.ai-made-me-do-it.2024`
+- [New York State formation record for THICK ARTS LLC](../sources/thick-arts-nys-dos-formation-2012-07-06.md) - `source.thick-arts.nys-dos-formation.2012-07-06`
 - [Friends and Lovers Commercial Rent Stabilization event: speaker index](../testimony/commercial-rent-public-support/2026-02-17-friends-and-lovers-supportive-remarks.md) - `source.transcript.commercial-rent.friends-and-lovers.2026-02-17`
 - [Project X community event: Eon Huntley speaker index](../testimony/commercial-rent-public-support/2026-03-10-project-x-eon-huntley.md) - `source.transcript.commercial-rent.project-x.2026-03-10`
 - [Commercial Rent Stabilization public event: speaker index](../testimony/commercial-rent-public-support/2025-11-13-commissioner-supportive-remarks.md) - `source.transcript.commercial-rent.public-event.2025-11-13`

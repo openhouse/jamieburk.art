@@ -1206,6 +1206,13 @@
       "intent": "Contribution records make each actor, action, purpose, result, source, and boundary explicit while separating Jamie's work, shared work, coalition action, and institutional enactment."
     },
     {
+      "id": "KB-EVAL-HJE-CLIENT-CHRONOLOGY",
+      "label": "Harry J. Epstein client and storefront chronology",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "The portfolio states that Jamie's HJE work began in 2009, that he formalized it as Thick Arts LLC during the engagement, that New York State independently records the LLC's initial filing on July 6, 2012, that HJE was the LLC's first client, and that the relationship continued through the 2015 storefront transition. It distinguishes official formation evidence, Jamie's first-party relationship account, Archive.org observation bounds, and the successor site."
+    },
+    {
       "id": "KB-EVAL-PRESS-ARCHIVE",
       "label": "Campaign press archive completeness",
       "weight": 0,

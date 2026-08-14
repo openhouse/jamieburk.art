@@ -65,12 +65,16 @@ test("Claim resolver returns only active approved projections", () => {
 });
 
 test("corrections retire old wording from public surfaces", () => {
-  const text = ["apps/www/src/content/work/callnyc.mdx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts", "apps/www/src/app/resume/page.tsx"].map((path) => readFileSync(path, "utf8")).join("\n");
-  assert.doesNotMatch(text, /first civic-data hackathon|2014[-–]2015/i);
-  assert.equal(knowledgeBank.corrections.length, 4);
+  const text = ["apps/www/src/content/work/callnyc.mdx", "apps/www/src/content/work/harry-j-epstein.mdx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts", "apps/www/src/app/resume/page.tsx"].map((path) => readFileSync(path, "utf8")).join("\n");
+  assert.doesNotMatch(text, /first civic-data hackathon|2014[-–]2015|years:\s*["']2012-Present["']/i);
   assert.ok(knowledgeBank.corrections.some((correction) =>
     correction.id === "COR-NYCAC-CABARET-HEARING-DATE-2026" &&
     correction.replacementText === "September 14, 2017"
+  ));
+  assert.ok(knowledgeBank.corrections.some((correction) =>
+    correction.id === "COR-HJE-TIMEFRAME-2026" &&
+    correction.previousText === "2012-Present" &&
+    correction.replacementText === "2009-2015"
   ));
 });
 

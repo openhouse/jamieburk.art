@@ -18,20 +18,35 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## hje-first-client-chronology - First client and storefront chronology
+
+**Status:** Ready
+**Support level:** Moderate
+**Evidence class:** Jamie review confirmation / public Archive.org captures
+**Public wording:** Jamie's Harry J. Epstein Company work began in 2009. He formalized the practice as Thick Arts LLC in 2012, with HJE as the LLC's first client, and continued the engagement through the 2015 storefront transition.
+**Detailed public-safe wording:** Jamie states that his HJE work began in 2009 and that he formalized the practice as Thick Arts LLC during the engagement, with HJE as its first client. New York State records the LLC's initial filing on July 6, 2012. Archive.org first observed the commerce host in January 2010, preserves a functioning storefront through July 2015, and records its redirect to a successor site by August 2015.
+**Where to project:** Work card and case study.
+**Why it matters:** Corrects the public chronology while showing an early client relationship and a completed transition rather than implying current stewardship.
+**Guardrail:** Keep the 2009 work start, July 6, 2012 LLC formation, 2009-2015 client engagement, January 2010-July 2015 archive observation bounds, and successor website distinct.
+**Do not say:** 2012-Present; the HJE work began when Thick Arts LLC was formed in 2012; Archive.org proves the exact contract dates; Jamie currently maintains the successor website; public sources independently prove the first-client relationship.
+**Protected boundaries:** Contracts, invoices, billing records, private correspondence, and private company records beyond the normalized public formation entry stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-08-14
+
 ## hje-modernization-stewardship - Legacy e-commerce modernization
 
 **Status:** Ready  
 **Support level:** Strong  
-**Evidence class:** Approved resume / public project artifact / public-safe archive summary  
+**Evidence class:** Approved resume / public Archive.org captures / successor-site business context / public-safe archive summary
 **Public wording:** Led long-running web, e-commerce, analytics, marketing, content, and operational workflow improvements that helped an 80+ year-old industrial business adapt online.
 **Detailed public-safe wording:** Jamie maintained and improved the company's web and e-commerce presence, coordinated incremental releases, and translated legacy operating knowledge into searchable content, analytics, marketing, and operational workflows while preserving its public voice.
 **Where to project:** Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-term implementation, stakeholder translation, and operating-system work in a real business environment.  
-**Guardrail:** Use stewardship and contribution language.  
+**Guardrail:** Use stewardship and contribution language in the historical 2009-2015 engagement; do not imply present maintenance of the successor site.
 **Do not say:** Jamie fully owned the business, owned all growth, or replaced the company's institutional knowledge.  
 **Protected boundaries:** Private dashboards, credentials, customer data, revenue detail, vendor terms, and sensitive operating practices stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-08-14
 
 ## hje-revenue-growth-contribution - Revenue growth contribution
 

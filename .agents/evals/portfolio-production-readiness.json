@@ -163,6 +163,7 @@
         "All deterministic claim and public-safety checks pass.",
         "Every strong public claim resolves to an approved proof record and source basis.",
         "No public page strengthens ownership, causality, authority, scale, or current status.",
+        "The Harry J. Epstein case states that the work began in 2009, that Jamie formalized it as Thick Arts LLC during the engagement, that New York State independently records the LLC's initial filing on July 6, 2012, that HJE was the LLC's first client, and that the relationship continued through 2015; it separates formation evidence, first-party relationship evidence, Archive.org observation bounds, and the successor website.",
         "No protected source material or unapproved collaborator material is published."
       ],
       "evidence_required": ["check output", "claim-to-proof report", "approval references"],

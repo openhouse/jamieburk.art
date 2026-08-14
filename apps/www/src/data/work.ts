@@ -103,14 +103,15 @@ const workItemsInput = [
     series: "Operating Structure",
     subtitle: "E-commerce and operations modernization",
     summary:
-      "Led long-running web, e-commerce, analytics, marketing, content, and operational workflow improvements that helped an 80+ year-old industrial business adapt online.",
+      "The work began in 2009. Jamie formalized the practice as Thick Arts LLC in 2012, with Harry J. Epstein Company as the LLC's first client, and led the engagement through the 2015 storefront transition.",
     role: "Technical Project Manager & Web Systems Lead",
-    years: "2012-Present",
+    years: "2009-2015",
     status: "Full case study",
     featured: true,
     priority: 1,
     visibility: "public-safe",
     proofBankIds: [
+      "hje-first-client-chronology",
       "hje-modernization-stewardship",
       "hje-revenue-growth-contribution"
     ],
@@ -121,17 +122,17 @@ const workItemsInput = [
     artifactTypes: ["website", "workflow", "analytics summary", "public-safe screenshot"],
     artifacts: [
       {
-        title: "Public e-commerce surface",
+        title: "Successor public website",
         description:
-          "The current storefront brings product discovery, customer language, editorial voice, video, promotions, and ordering into one maintained public system.",
+          "The company's live successor site provides present-day business context after the documented 2009-2015 engagement; it is not presented as Jamie's implementation or current maintenance work.",
         type: "public-safe screenshot",
         media: {
           src: "/artifacts/hje/public-site.png",
           alt: "Harry J. Epstein Company storefront showing navigation, product search, editorial artwork, video, and commerce controls.",
           caption:
-            "Public storefront captured July 2026. It shows the maintained customer-facing system, not private analytics or internal operations.",
+            "Successor website captured July 2026. It provides current business context and is not evidence of Jamie's present stewardship.",
           href: "https://www.harryepstein.com/",
-          sourceLabel: "Harry J. Epstein Company public website"
+          sourceLabel: "Harry J. Epstein Company successor website"
         }
       },
       {
@@ -172,12 +173,13 @@ const workItemsInput = [
     careNote:
       "No private analytics dashboards, revenue details, passwords, customer data, vendor information, or internal operational materials are published.",
     sourceLayer:
-      "Public website, approved public-site screenshot, public-safe summary, resume-backed impact claims, and private materials intentionally omitted.",
+      "Jamie's authorized first-party client chronology, public Archive.org storefront captures, the successor website as business context, public-safe summaries, resume-backed impact claims, and private materials intentionally omitted.",
     credits: ["Jamie Burkart", "Harry J. Epstein Company team"],
     publicSafety: {
       note: "Use only public-safe claims and approved screenshots. Treat metrics as contribution language unless Jamie approves more precise wording."
     },
-    currentStatus: "Public-safe full case study with an approved public-site screenshot.",
+    currentStatus:
+      "Historical 2009-2015 client-engagement case study; the successor website is linked only for current business context.",
     group: "Operating systems for teams",
     roleFit:
       "Technical operations, product operations, implementation, business analysis, documentation, and small-business web systems.",

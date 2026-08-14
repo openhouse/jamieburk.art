@@ -5,11 +5,11 @@ kind: decision
 status: maintained
 visibility: public-safe
 sensitivity: moderate
-last_reviewed: 2026-07-19
-review_by: 2026-10-19
+last_reviewed: 2026-08-14
+review_by: 2026-11-14
 canonical_path: docs/knowledge-bank/decisions/hje-continuity-modernization.md
 summary: Bounded reconstruction of an implementation approach that translated inherited store knowledge into digital commerce and operations without treating continuity as obsolete.
-decision_period: 2008-2015
+decision_period: 2009-2015
 decision_state: documented-with-boundary
 decision_question: How could an inherited industrial-supply business become more searchable and operable online without flattening its specialized knowledge and voice?
 decision_actors:
@@ -46,6 +46,12 @@ anti_claims:
   - Modernization did not mean replacing the people, language, and routines that made the store useful.
 relations:
   - type: uses_source
+    target: source.thick-arts.nys-dos-formation.2012-07-06
+    href: ../sources/thick-arts-nys-dos-formation-2012-07-06.md
+  - type: uses_source
+    target: source.hje.wayback-chronology.2026-08
+    href: ../sources/hje-wayback-chronology-2026-08.md
+  - type: uses_source
     target: source.hje.research-brief.2026-07
     href: ../sources/hje-research-brief-2026-07.md
   - type: resulted_in
@@ -63,6 +69,13 @@ decision meeting. Jamie's work treated staff knowledge, catalog language,
 customer practice, and business continuity as implementation inputs. The
 selected course is therefore documented with a boundary, while the competing
 courses remain explicitly unobserved.
+
+The governed portfolio dates the engagement 2009-2015. Jamie formalized the
+already-running work as Thick Arts LLC in 2012; New York State records the
+LLC's initial filing on July 6. Public captures bound
+the observable storefront from January 2010 through July 2015 and its redirect
+to a successor site by August 2015; they do not establish exact contract dates
+or current stewardship of that successor site.
 
 The record does not convert a multi-person business into an individual product
 story. Component-level attribution remains a stated research need.

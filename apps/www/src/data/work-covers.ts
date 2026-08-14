@@ -20,8 +20,8 @@ const workCovers = {
     height: 785,
     alt: "Harry J. Epstein Company storefront showing product search, editorial artwork, video, navigation, and commerce controls.",
     caption:
-      "The maintained public storefront brings discovery, editorial voice, customer guidance, and ordering into one system.",
-    credit: "Public website capture, July 2026.",
+      "The live successor storefront provides present-day business context; the documented Thick Arts engagement ran from 2009 through 2015.",
+    credit: "Successor website capture, July 2026; not presented as Jamie's current implementation.",
     kind: "screenshot"
   },
   "fair-rent-nyc": {

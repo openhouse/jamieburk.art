@@ -3,7 +3,7 @@
 
 **Source commit:** `b1ef10fcc8f4052d7ba35a22b3df49eeabafe912`
 **Generation time:** 2026-08-14T18:03:31-04:00
-**Source fingerprint:** `d2abdb36159c24e45c55178b2ec32a870966584f4ffaacfcf1b83a32b772aa78`
+**Source fingerprint:** `24999273041207999309bb14a80d1115a7aff5f02105ea001f416c2e0dcb4df5`
 
 - [Implementation, Adoption, and Handoff](../../capabilities/implementation-adoption-and-handoff.md) - `related_to` (frontmatter)
 - [Implementation and operational stewardship](../../capabilities/implementation-and-operational-stewardship.md) - `prose_link` (markdown)
@@ -21,3 +21,5 @@
 - [Maintenance, handoff, and stewardship](../../methods/maintenance-handoff-and-stewardship.md) - `prose_link` (markdown)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
 - [Harry J. Epstein Company archival research brief, July 2026](../../sources/hje-research-brief-2026-07.md) - `documents` (frontmatter)
+- [Harry J. Epstein historic storefront Wayback chronology, August 2026](../../sources/hje-wayback-chronology-2026-08.md) - `documents` (frontmatter)
+- [New York State formation record for THICK ARTS LLC](../../sources/thick-arts-nys-dos-formation-2012-07-06.md) - `documents` (frontmatter)

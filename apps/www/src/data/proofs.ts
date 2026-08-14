@@ -70,6 +70,43 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "hje-first-client-chronology",
+    status: "ready",
+    supportLevel: "moderate",
+    evidenceClass: ["public-source", "jamie-review-confirmation"],
+    publicWording:
+      "Jamie's Harry J. Epstein Company work began in 2009. He formalized the practice as Thick Arts LLC in 2012, with HJE as the LLC's first client, and continued the engagement through the 2015 storefront transition.",
+    shortWording:
+      "HJE work began in 2009 and became Thick Arts LLC's first client relationship when Jamie formed the company in 2012",
+    detailedPublicWording:
+      "Jamie states that his HJE work began in 2009 and that he formalized the practice as Thick Arts LLC during the engagement, with HJE as its first client. New York State records the LLC's initial filing on July 6, 2012. Archive.org first observed the commerce host in January 2010, preserves a functioning storefront through July 2015, and records its redirect to a successor site by August 2015.",
+    sourceBasis:
+      "Jamie's authorized first-party professional account, the official New York State active-corporations record, and three public Archive.org captures that bound the observable storefront chronology.",
+    sourceNote:
+      "The official State record verifies the July 6, 2012 LLC filing. The 2009 work start and first-client relationship are first-party evidence; the public archive supports observation dates rather than contract or billing bookends.",
+    whyItMatters:
+      "Corrects the public chronology while showing an early client relationship and a completed transition rather than implying current stewardship.",
+    guardrail:
+      "Keep the 2009 work start, July 6, 2012 LLC formation, 2009-2015 client engagement, January 2010-July 2015 archive observation bounds, and successor website distinct.",
+    doNotSay: [
+      "2012-Present",
+      "The HJE work began when Thick Arts LLC was formed in 2012",
+      "Archive.org proves the exact contract dates",
+      "Jamie currently maintains the successor website",
+      "Public sources independently prove the first-client relationship"
+    ],
+    protectedBoundaries: [
+      "Contracts",
+      "Invoices and billing records",
+      "Private correspondence",
+      "Private company records beyond the normalized public formation entry"
+    ],
+    surfaces: ["work-card", "case-study"],
+    relatedProjects: ["harry-j-epstein"],
+    relatedCapabilities: ["e-commerce", "implementation", "handoffs"],
+    lastReviewed: "2026-08-14"
+  },
+  {
     id: "hje-modernization-stewardship",
     status: "ready",
     supportLevel: "strong",
@@ -80,8 +117,10 @@ export const proofClaims: ProofClaim[] = [
       "Jamie led long-running e-commerce and operations improvements for a legacy industrial business",
     detailedPublicWording:
       "Jamie maintained and improved the company's web and e-commerce presence, coordinated incremental releases, and translated legacy operating knowledge into searchable content, analytics, marketing, and operational workflows while preserving its public voice.",
-    sourceBasis: "Approved resume language, public website context, and public-safe business summary.",
-    guardrail: "Use stewardship and contribution language.",
+    sourceBasis:
+      "Approved resume language, public Archive.org storefront captures, successor-site business context, and a public-safe business summary.",
+    guardrail:
+      "Use stewardship and contribution language in the historical 2009-2015 engagement; do not imply present maintenance of the successor site.",
     doNotSay: [
       "Jamie fully owned the business",
       "Jamie owned all growth",
@@ -98,7 +137,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["harry-j-epstein"],
     relatedCapabilities: ["e-commerce", "analytics", "workflow-mapping", "handoffs"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-08-14"
   },
   {
     id: "hje-revenue-growth-contribution",

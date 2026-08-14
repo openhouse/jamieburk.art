@@ -3,13 +3,13 @@
 
 **Source commit:** `b1ef10fcc8f4052d7ba35a22b3df49eeabafe912`
 **Generation time:** 2026-08-14T18:03:31-04:00
-**Source fingerprint:** `d2abdb36159c24e45c55178b2ec32a870966584f4ffaacfcf1b83a32b772aa78`
+**Source fingerprint:** `24999273041207999309bb14a80d1115a7aff5f02105ea001f416c2e0dcb4df5`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 30
+- Nodes added: 32
 - Nodes removed: 34
-- Edges added: 105
+- Edges added: 116
 - Edges removed: 178
 - New type-aware orphans: 0
 - Current rights-review records: 186
@@ -36,6 +36,7 @@ Compared with the graph artifact on `origin/develop`.
 - `source.aclu.terence-dougherty-bio`
 - `source.benepass.jaclyn-chen-leadership.2026`
 - `source.callnyc.restored-site.2026-08-14`
+- `source.hje.wayback-chronology.2026-08`
 - `source.jobs.aclu.senior-project-manager-lps.8620968002`
 - `source.jobs.aclu.senior-project-manager-national-campaigns.8631854002`
 - `source.kctownhall.live-site.2026-08-14`
@@ -46,3 +47,4 @@ Compared with the graph artifact on `origin/develop`.
 - `source.permission.jamie.public-site-captures.2026-08-13`
 - `source.photo-metadata.nycac-participation-sequence.2026-08-13`
 - `source.sbu.empty-storefronts-high-rents.2026`
+- `source.thick-arts.nys-dos-formation.2012-07-06`
