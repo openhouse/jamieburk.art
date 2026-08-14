@@ -49,7 +49,11 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: process.env.NEXT_BUILD_SKIP_VERIFIED_TYPECHECK === "1"
   },
   images: {
-    formats: ["image/avif", "image/webp"]
+    formats: ["image/avif", "image/webp"],
+    // Every public image is already a reviewed, metadata-stripped derivative.
+    // Serving those bounded files directly avoids runtime optimizer stalls on
+    // the single-CPU Dokku application while preserving Next Image geometry.
+    unoptimized: true
   },
   async headers() {
     return [

@@ -1,5 +1,5 @@
 {
-  "id": "portfolio-photography-layout-v3",
+  "id": "portfolio-photography-layout-v4",
   "title": "Human Index photographic portfolio layout",
   "intent": "Photography and public interfaces make situated work credible while remaining public-safe, accessible, project-specific, and subordinate to human publication authority.",
   "criteria": [
@@ -42,6 +42,11 @@
       "id": "responsive-image-contract",
       "blocking": true,
       "criterion": "Images use Next Image, explicit intrinsic dimensions or fill, stable aspect ratios, responsive sizes, and a viewport-bounded hero."
+    },
+    {
+      "id": "reliable-image-delivery",
+      "blocking": true,
+      "criterion": "Reviewed local image derivatives bypass runtime optimization on the single-CPU Dokku app and remain small enough for direct delivery."
     },
     {
       "id": "human-authority-remains-open",

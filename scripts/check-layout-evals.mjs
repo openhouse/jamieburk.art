@@ -31,6 +31,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     "tag-navigation-contract",
     "human-index-material-system",
     "responsive-image-contract",
+    "reliable-image-delivery",
     "human-authority-remains-open"
   ];
   const observedCriteria = evaluation.criteria.map(({ id }) => id);
@@ -162,6 +163,31 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
       !caseStudyLayout.includes("sizes=") || !caseStudyLayout.includes('loading="eager"') ||
       !globalCss.includes("100svh")) {
     fail("responsive-image-contract", "The responsive cover or viewport-bounded hero contract is incomplete.");
+  }
+
+  const nextConfig = readText("apps/www/next.config.ts");
+  if (!/images\s*:\s*\{[\s\S]*?unoptimized\s*:\s*true[\s\S]*?\}/.test(nextConfig)) {
+    fail(
+      "reliable-image-delivery",
+      "Reviewed local derivatives must bypass the runtime image optimizer on Dokku."
+    );
+  }
+  const directlyDeliveredImages = [
+    "apps/www/public/images",
+    "apps/www/public/artifacts"
+  ].flatMap((relativeRoot) =>
+    walkFiles(path.join(root, relativeRoot)).map((relativePath) =>
+      path.join(relativeRoot, relativePath)
+    )
+  ).filter((relativePath) => /\.(?:avif|jpe?g|png|webp)$/i.test(relativePath));
+  const oversizedImage = directlyDeliveredImages.find(
+    (relativePath) => statSync(path.join(root, relativePath)).size > 512 * 1024
+  );
+  if (oversizedImage) {
+    fail(
+      "reliable-image-delivery",
+      `${oversizedImage} exceeds the 512 KiB direct-delivery budget.`
+    );
   }
 
   const design = readText("DESIGN.md");
