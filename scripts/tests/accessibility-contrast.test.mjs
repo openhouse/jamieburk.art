@@ -67,3 +67,11 @@ test("the global focus ring meets non-text contrast on white", () => {
   assert.ok(contrast(blue, paper) >= 3);
   assert.ok(styles.includes("outline: 3px solid var(--jb-broadway-blue)"));
 });
+
+test("the resume action keeps an inverse foreground on its blue panel", () => {
+  const button = readFileSync(path.join(repoRoot, "apps/www/src/components/JBButton.tsx"), "utf8");
+  const resume = readFileSync(path.join(repoRoot, "apps/www/src/components/ResumeCTA.tsx"), "utf8");
+
+  assert.match(resume, /variant="inverse"/);
+  assert.match(button, /inverse:[\s\S]*border-jb-paper[\s\S]*text-jb-paper[\s\S]*hover:bg-jb-paper[\s\S]*hover:text-jb-blue/);
+});
