@@ -74,6 +74,15 @@ test("the OTI PDF embeds the Politico article link", () => {
   assert.ok(pdf.includes(politicoArticleUrl));
 });
 
+test("the OTI PDF keeps the Politico link visibly blue and underlined", () => {
+  const result = evaluateDocumentArtifact();
+  const linkAffordance = result.checks.find(
+    (check) => check.id === "visible-politico-link-affordance"
+  );
+
+  assert.equal(linkAffordance?.pass, true, JSON.stringify(result.checks, null, 2));
+});
+
 test("the evaluator rejects loss of the exact target title", () => {
   const mutation = resume.replaceAll("Senior Product Manager", "Product Lead");
   const result = evaluateResume(mutation, "mutation:no-target-title");

@@ -20,9 +20,9 @@ stop and answer it truthfully; do not guess.
 3. Use this exact sibling PDF: [Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf](./Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf).
    On iPhone, open that link and save the PDF to Files before returning to the
    application.
-4. Confirm that the filename ends in `.pdf`. The verified file is 91,337 bytes,
+4. Confirm that the filename ends in `.pdf`. The verified file is 91,453 bytes,
    two US Letter pages, and has SHA-256
-   `10dd60305a53913fc12d98f04d9bd12cd5c31b1d7b65d82087b8942908207526`.
+   `6312456b47cc15debff0cc2055cb3d3ad592c0bb8dcd217c7f38733247dbacd8`.
 
 ## Screen 1 — candidate information
 
