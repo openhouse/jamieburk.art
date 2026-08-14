@@ -1,0 +1,51 @@
+{
+  "id": "oti-senior-product-manager-resume-v1",
+  "title": "NYC OTI Senior Product Manager application resume",
+  "targetJobId": "782366",
+  "targetOrganization": "NYC Office of Technology and Innovation",
+  "targetRole": "Senior Product Manager, Public Interest Technology Crew",
+  "targetSource": "docs/knowledge-bank/sources/jobs-oti-senior-product-manager-782366.md",
+  "targetResume": "resume-versions/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume.md",
+  "humanReviewGates": [
+    "Jamie approves the exact resume before submission.",
+    "NYC OTI determines civil-service minimum-qualification eligibility.",
+    "The resume does not claim formal government product ownership, audited WCAG or Section 508 conformance, or causal responsibility for collective policy outcomes."
+  ],
+  "criteria": [
+    {
+      "id": "versioned-path",
+      "blocking": true,
+      "criterion": "The resume lives under a stable date and exact job-application directory bound to Job ID 782366."
+    },
+    {
+      "id": "ats-structure",
+      "blocking": true,
+      "criterion": "The Markdown uses standard ATS headings and avoids tables, images, and first-person prose."
+    },
+    {
+      "id": "role-language",
+      "blocking": true,
+      "criterion": "The resume truthfully exposes the posting's end-to-end resident-facing product lifecycle, cross-functional delivery, launch, measurement, accessibility, and privacy language."
+    },
+    {
+      "id": "evidence-anchors",
+      "blocking": true,
+      "criterion": "Role language is supported by governed project names, collaborators, and bounded quantitative evidence."
+    },
+    {
+      "id": "collective-credit",
+      "blocking": true,
+      "criterion": "Collaborative products and campaigns retain collaborator credit and reject sole-authorship language."
+    },
+    {
+      "id": "truth-boundaries",
+      "blocking": true,
+      "criterion": "Accessibility familiarity is distinguished from audited compliance, and the resume does not invent formal government product ownership, formal research programs, or sole policy causation."
+    },
+    {
+      "id": "public-safety",
+      "blocking": true,
+      "criterion": "No private archive locator, identifier, correspondence, transcript, People metadata, or geolocation enters the application artifact."
+    }
+  ]
+}
