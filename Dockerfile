@@ -30,7 +30,7 @@ ENV NEXT_PUBLIC_ROBOTS_POLICY=$NEXT_PUBLIC_ROBOTS_POLICY
 COPY --from=deps /repo/node_modules ./node_modules
 COPY . .
 RUN npm run typecheck -w @jamie-burkart/www
-RUN NODE_OPTIONS=--max-old-space-size=208 NEXT_BUILD_SKIP_VERIFIED_TYPECHECK=1 npm run build -w @jamie-burkart/www
+RUN NODE_OPTIONS=--max-old-space-size=320 NEXT_BUILD_SKIP_VERIFIED_TYPECHECK=1 npm run build -w @jamie-burkart/www
 
 FROM node:26-bookworm-slim AS runner
 WORKDIR /app
