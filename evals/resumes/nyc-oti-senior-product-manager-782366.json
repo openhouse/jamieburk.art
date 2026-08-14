@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "resume.nyc-oti.senior-product-manager.782366",
+  "targetRole": "Senior Product Manager",
+  "organization": "NYC Office of Technology and Innovation - Public Interest Technology Crew",
+  "jobId": "782366",
+  "officialSource": "https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-44507",
+  "sourceVerifiedAt": "2026-08-14",
+  "resumePath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
+  "wordCount": {
+    "minimum": 400,
+    "maximum": 800
+  },
+  "hardGates": [
+    "exact-target-title",
+    "standard-sections",
+    "ats-safe-markdown",
+    "complete-contact-block",
+    "word-count",
+    "role-language-in-first-third",
+    "end-to-end-product-language",
+    "cross-functional-public-delivery",
+    "responsible-technology-language",
+    "quantified-evidence",
+    "civil-service-screen-evidence",
+    "collective-credit-and-claim-safety"
+  ],
+  "claimBoundaries": [
+    "Do not guarantee civil-service eligibility, an interview, or a hiring outcome.",
+    "Do not claim sole creation of WOW List, coalition outcomes, or public-policy change.",
+    "Do not claim historical WCAG 2.1 AA or Section 508 conformance without direct evidence.",
+    "Do not convert activity counts into retention, resident outcomes, or causal impact.",
+    "Keep the KC Town Hall award distinct from receipt or expenditure of funds."
+  ]
+}

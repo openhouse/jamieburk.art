@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "rubricId": "resume.nyc-oti.senior-product-manager.782366",
+  "candidate": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+  "evaluationInput": "Selectable text extracted from the maintained public PDF with pdftotext -layout.",
+  "evaluatedAt": "2026-08-14T13:37:00.199Z",
+  "wordCount": 826,
+  "numericSignalCount": 22,
+  "passedChecks": 2,
+  "totalChecks": 12,
+  "score": 17,
+  "overall": "fail",
+  "passingCheckIds": [
+    "ats-safe-markdown",
+    "quantified-evidence"
+  ],
+  "interpretation": "This is a role-specific alignment score, not an assessment of the generic resume's overall quality. The baseline retained strong quantified evidence but required the hiring reader to infer the exact Senior Product Manager fit and exceeded the application rubric's word-count ceiling. PDF extraction also omits the targets behind visible hyperlink labels, so the contact-link gate correctly did not pass on extracted visible text alone."
+}
