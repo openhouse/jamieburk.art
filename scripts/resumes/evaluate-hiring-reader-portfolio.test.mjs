@@ -22,6 +22,14 @@ test("every named-reader opportunity resume advances through every modeled reade
   assert.equal(result.summary.passingReaderOpportunityPairs, 7);
   assert.equal(result.actualPeopleParticipated, false);
   assert.equal(result.decision, "advance-to-structured-next-step");
+  assert.deepEqual(result.methodologySkills, [
+    "interviewing-evaluating-candidates",
+    "review-resume"
+  ]);
+  for (const version of result.versions) {
+    assert.equal(version.reviewResumeCriteriaPassed, 10);
+    assert.equal(version.reviewResumeCriteriaRequired, 10);
+  }
 });
 
 test("a missing opportunity-specific resume fails closed", () => {
@@ -95,6 +103,35 @@ test("skill loss or drift fails the methodology dependency", () => {
     (check) => check.id === "candidate-evaluation-skill-pinned"
   );
   assert.equal(skillCheck.pass, false);
+  assert.equal(result.overall, "fail");
+});
+
+test("resume-review skill loss or drift fails the methodology dependency", () => {
+  const result = evaluateHiringReaderPortfolio({
+    resumeSkillTextOverride: "# Different resume-review skill"
+  });
+  const skillCheck = result.portfolioChecks.find(
+    (check) => check.id === "resume-review-skill-pinned"
+  );
+  assert.equal(skillCheck.pass, false);
+  assert.equal(result.overall, "fail");
+});
+
+test("a generic untailored summary fails the installed resume-review gate", () => {
+  const version = config.versions[0];
+  const original = readFileSync(path.join(repoRoot, version.resumePath), "utf8");
+  const mutation = original.replace(
+    /## Professional Summary[\s\S]*?(?=## Core Skills)/,
+    "## Professional Summary\n\nPassionate about building great products and a strategic thinker.\n\n"
+  );
+  const result = evaluateHiringReaderPortfolio({
+    resumeOverrides: { [version.resumePath]: mutation }
+  });
+  const summaryCheck = result.versions[0].reviewResumeChecks.find(
+    (check) => check.id === "professional-summary"
+  );
+  assert.equal(summaryCheck.pass, false);
+  assert.equal(result.versions[0].readerResults[0].modeledVerdict, "fail");
   assert.equal(result.overall, "fail");
 });
 

@@ -3,7 +3,10 @@
   "evalId": "resume-hiring-reader-portfolio-2026-08-14",
   "runId": "2026-08-14-hiring-reader-resume-portfolio-post-hillclimb",
   "evaluatedAt": "2026-08-14T17:30:00-04:00",
-  "methodologySkill": "interviewing-evaluating-candidates",
+  "methodologySkills": [
+    "interviewing-evaluating-candidates",
+    "review-resume"
+  ],
   "actualPeopleParticipated": false,
   "acceptanceQuestion": "Under this explicitly fictionalized public-source lens, would this reader advance Jamie from resume review to a structured interview or practical work sample for this opportunity?",
   "decision": "advance-to-structured-next-step",
@@ -32,6 +35,11 @@
       "detail": "interviewing-evaluating-candidates is repository-pinned with source provenance and an exact SKILL.md digest."
     },
     {
+      "id": "resume-review-skill-pinned",
+      "pass": true,
+      "detail": "review-resume is repository-pinned with marketplace provenance and an exact SKILL.md digest."
+    },
+    {
       "id": "fictionalized-public-context-boundary",
       "pass": true,
       "detail": "A modeled pass advances to a structured next step and cannot represent actual participation or a final hire."
@@ -45,6 +53,9 @@
       "wordCount": 659,
       "numericSignalCount": 20,
       "sha256": "658c700df20c189dfcdea85104570ce40d1ec64453a3fd4cbc52a66947386ba0",
+      "reviewResumeSkill": "review-resume",
+      "reviewResumeCriteriaPassed": 10,
+      "reviewResumeCriteriaRequired": 10,
       "overall": "pass",
       "readerResults": [
         {
@@ -67,6 +78,9 @@
       "wordCount": 632,
       "numericSignalCount": 17,
       "sha256": "afca72890e66de2ef45ecb83dc0f2fd7b77837b9c0f412dc715148d33546cac1",
+      "reviewResumeSkill": "review-resume",
+      "reviewResumeCriteriaPassed": 10,
+      "reviewResumeCriteriaRequired": 10,
       "overall": "pass",
       "readerResults": [
         {
@@ -100,6 +114,9 @@
       "wordCount": 640,
       "numericSignalCount": 20,
       "sha256": "053e232f5094324330db25490960b4ea5956a674edaf0e421d9c5adf038f2f3e",
+      "reviewResumeSkill": "review-resume",
+      "reviewResumeCriteriaPassed": 10,
+      "reviewResumeCriteriaRequired": 10,
       "overall": "pass",
       "readerResults": [
         {
@@ -133,6 +150,9 @@
       "wordCount": 782,
       "numericSignalCount": 23,
       "sha256": "33f481d9c86f19f7e12f621057b213ca492b25228ebd753e133a2a42f031f0e0",
+      "reviewResumeSkill": "review-resume",
+      "reviewResumeCriteriaPassed": 10,
+      "reviewResumeCriteriaRequired": 10,
       "overall": "pass",
       "readerResults": [
         {
@@ -155,6 +175,9 @@
       "wordCount": 712,
       "numericSignalCount": 23,
       "sha256": "8885a0383dee37424086ea8f454c609bc5bd70ea7a84437b7d56101b3bd58eb0",
+      "reviewResumeSkill": "review-resume",
+      "reviewResumeCriteriaPassed": 10,
+      "reviewResumeCriteriaRequired": 10,
       "overall": "pass",
       "readerResults": [
         {

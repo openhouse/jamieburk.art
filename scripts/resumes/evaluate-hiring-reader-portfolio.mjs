@@ -60,13 +60,41 @@ function maximumRoleBullets(markdown) {
   }, 0);
 }
 
+function sectionText(markdown, heading) {
+  return markdown.split(new RegExp(`^## ${heading}[^\\n]*$`, "im"))[1]?.split(/^## /m)[0]?.trim() ?? "";
+}
+
+function experienceBullets(markdown) {
+  return [...sectionText(markdown, "Professional Experience").matchAll(/^- (.+)$/gm)].map(
+    (match) => match[1]
+  );
+}
+
+function evidenceBearingBulletRatio(markdown) {
+  const bullets = experienceBullets(markdown);
+  if (bullets.length === 0) return 0;
+  const actionVerb = /^(?:Built|Co-built|Co-developed|Co-founded|Co-led|Contributed|Coordinate|Coordinated|Created|Facilitate|Help|Helped|Implement|Implemented|Lead|Led|Reached|Separate|Translate|Use|Work)\b/i;
+  const contextOrMeasure = /(?:\$?\d[\d,.]*(?:\+|x|%|\s*sq\.\s*ft\.)?|\b(?:across|by|connecting|contributing|covered|from|into|through|translating|while|with|without)\b)/i;
+  const evidenceBearing = bullets.filter(
+    (bullet) => actionVerb.test(bullet) && contextOrMeasure.test(bullet)
+  ).length;
+  return evidenceBearing / bullets.length;
+}
+
+function countExperienceSignalGroups(version, experience) {
+  return version.readerCriteria
+    .flatMap((reader) => reader.signalGroups)
+    .filter((group) => containsAny(experience, group.patterns)).length;
+}
+
 export function evaluateHiringReaderPortfolio({
   root = repoRoot,
   config = defaultConfig,
   readerSuite = defaultReaderSuite,
   skillsLock = defaultSkillsLock,
   resumeOverrides = {},
-  skillTextOverride
+  skillTextOverride,
+  resumeSkillTextOverride
 } = {}) {
   const requiredOpportunityIds = [
     ...new Set(readerSuite.opportunityReaders.map((reader) => reader.opportunityId))
@@ -81,6 +109,12 @@ export function evaluateHiringReaderPortfolio({
     existsSync(installedSkillPath) ? readFileSync(installedSkillPath, "utf8") : null
   );
   const skillLock = skillsLock.skills?.[config.methodology.primarySkill];
+  const resumeReviewMethod = config.methodology.resumeReviewSkill;
+  const resumeReviewSkillPath = path.join(root, resumeReviewMethod.installedPath);
+  const resumeReviewSkill = resumeSkillTextOverride ?? (
+    existsSync(resumeReviewSkillPath) ? readFileSync(resumeReviewSkillPath, "utf8") : null
+  );
+  const resumeReviewSkillLock = skillsLock.skills?.[resumeReviewMethod.name];
 
   const portfolioChecks = [
     {
@@ -101,6 +135,15 @@ export function evaluateHiringReaderPortfolio({
         skillLock?.source === "refoundai/lenny-skills" &&
         skillLock?.sourceType === "github",
       detail: `${config.methodology.primarySkill} is repository-pinned with source provenance and an exact SKILL.md digest.`
+    },
+    {
+      id: "resume-review-skill-pinned",
+      pass:
+        resumeReviewSkill !== null &&
+        sha256(resumeReviewSkill) === resumeReviewMethod.skillFileSha256 &&
+        resumeReviewSkillLock?.source === "phuryn/pm-skills" &&
+        resumeReviewSkillLock?.sourceType === "github",
+      detail: `${resumeReviewMethod.name} is repository-pinned with marketplace provenance and an exact SKILL.md digest.`
     },
     {
       id: "fictionalized-public-context-boundary",
@@ -124,6 +167,114 @@ export function evaluateHiringReaderPortfolio({
     const opportunityPath = path.join(root, version.opportunityPath);
     const opportunityText = existsSync(opportunityPath) ? readFileSync(opportunityPath, "utf8") : "";
     const maximumBullets = markdown ? maximumRoleBullets(markdown) : 0;
+    const summaryText = markdown ? sectionText(markdown, "Professional Summary") : "";
+    const summaryWords = wordsIn(summaryText);
+    const experienceText = markdown ? sectionText(markdown, "Professional Experience") : "";
+    const experienceSignalGroups = countExperienceSignalGroups(version, experienceText);
+    const evidenceRatio = markdown ? evidenceBearingBulletRatio(markdown) : 0;
+    const roleHeadings = markdown ? [...experienceText.matchAll(/^### .+$/gm)] : [];
+    const datedRoleLines = markdown
+      ? [...experienceText.matchAll(/^[^\n]*\|\s*(?:[A-Za-z]{3,9}\s+)?\d{4}(?:[–-](?:Present|\d{4}))?\s*$/gm)]
+      : [];
+    const headingPositions = {
+      summary: markdown?.search(/^## Professional Summary\s*$/im) ?? -1,
+      experience: markdown?.search(/^## Professional Experience\s*$/im) ?? -1,
+      education: markdown?.search(/^## Education(?:\s|\s*&)/im) ?? -1
+    };
+    const productBusinessSignals = [
+      "adoption",
+      "analytics",
+      "implementation",
+      "operations",
+      "prioritization",
+      "release",
+      "requirements",
+      "research",
+      "risk",
+      "roadmap",
+      "stakeholder",
+      "users"
+    ].filter((signal) => experienceText.toLowerCase().includes(signal));
+    const targetFunctionTokens = version.targetRole
+      .toLowerCase()
+      .split(/[^a-z]+/)
+      .filter(
+        (token) =>
+          token.length >= 7 &&
+          !["manager", "national", "senior"].includes(token)
+      );
+
+    const reviewResumeChecks = [
+      {
+        id: "professional-summary",
+        pass:
+          summaryWords.length >= 30 &&
+          summaryWords.length <= 100 &&
+          !config.resumeStandards.genericSummaryPatterns.some((pattern) =>
+            summaryText.toLowerCase().includes(pattern.toLowerCase())
+          ),
+        detail: `${summaryWords.length}-word specific summary without configured generic phrases.`
+      },
+      {
+        id: "pronoun-free-voice",
+        pass: markdown !== null && !/\b(?:I|me|my|mine|we|our|ours|he|his|she|her|hers)\b/i.test(plainText),
+        detail: "No first- or third-person pronouns in resume prose."
+      },
+      {
+        id: "concise-role-history",
+        pass:
+          words.length >= config.resumeStandards.minimumWords &&
+          words.length <= config.resumeStandards.maximumWords &&
+          maximumBullets > 0 &&
+          maximumBullets <= config.resumeStandards.maximumBulletsPerRole,
+        detail: `${words.length} words; no role exceeds ${maximumBullets} bullets.`
+      },
+      {
+        id: "xyzs-evidence-proxy",
+        pass: evidenceRatio >= config.resumeStandards.minimumEvidenceBearingBulletRatio,
+        detail: `${Math.round(evidenceRatio * 100)}% of experience bullets pair an action with a measure or specific context; required ${Math.round(config.resumeStandards.minimumEvidenceBearingBulletRatio * 100)}%.`
+      },
+      {
+        id: "professional-email",
+        pass: /jamie\.burkart@gmail\.com/i.test(markdown ?? ""),
+        detail: "Professional name-based email is present."
+      },
+      {
+        id: "job-specific-tailoring",
+        pass:
+          firstThird.toLowerCase().includes(version.targetRole.toLowerCase()) &&
+          experienceSignalGroups >= config.resumeStandards.minimumExperienceSignalGroups,
+        detail: `Exact target is prominent; ${experienceSignalGroups} reader signal groups appear in experience evidence.`
+      },
+      {
+        id: "product-and-business-skills-in-evidence",
+        pass: productBusinessSignals.length >= 3,
+        detail: `${productBusinessSignals.length} product/business signals appear in experience bullets: ${productBusinessSignals.join(", ")}.`
+      },
+      {
+        id: "section-order",
+        pass:
+          headingPositions.summary >= 0 &&
+          headingPositions.experience > headingPositions.summary &&
+          headingPositions.education > headingPositions.experience,
+        detail: "Contact information precedes summary; experience precedes education."
+      },
+      {
+        id: "career-transition-framing",
+        pass:
+          /14\+ years/i.test(summaryText) &&
+          targetFunctionTokens.some((token) => summaryText.toLowerCase().includes(token)),
+        detail: "Mid-career experience and target-function continuity are explicit in the summary."
+      },
+      {
+        id: "clear-role-language",
+        pass:
+          roleHeadings.length > 0 &&
+          roleHeadings.length === datedRoleLines.length &&
+          !/\b(?:ninja|guru|rockstar|wizard)\b/i.test(experienceText),
+        detail: `${roleHeadings.length}/${datedRoleLines.length} roles have dated entries and no novelty-title language.`
+      }
+    ];
 
     const artifactChecks = [
       {
@@ -211,7 +362,8 @@ export function evaluateHiringReaderPortfolio({
       }
     ];
 
-    const artifactPass = artifactChecks.every((check) => check.pass);
+    const reviewResumePass = reviewResumeChecks.every((check) => check.pass);
+    const artifactPass = artifactChecks.every((check) => check.pass) && reviewResumePass;
     const readerResults = version.readerCriteria.map((reader) => {
       const registryEntry = readerSuite.opportunityReaders.find((entry) => entry.id === reader.gateId);
       const readerProfilePath = registryEntry?.readerPath
@@ -262,11 +414,15 @@ export function evaluateHiringReaderPortfolio({
       wordCount: words.length,
       numericSignalCount: numericSignals.size,
       sha256: markdown ? sha256(markdown) : null,
+      reviewResumeSkill: resumeReviewMethod.name,
+      reviewResumeCriteriaPassed: reviewResumeChecks.filter((check) => check.pass).length,
+      reviewResumeCriteriaRequired: reviewResumeChecks.length,
       overall:
         artifactPass && readerResults.every((reader) => reader.modeledVerdict === "pass")
           ? "pass"
           : "fail",
       artifactChecks,
+      reviewResumeChecks,
       readerResults
     };
   });
@@ -288,7 +444,7 @@ export function evaluateHiringReaderPortfolio({
     evalId: config.id,
     runId: "2026-08-14-hiring-reader-resume-portfolio-post-hillclimb",
     evaluatedAt: config.evaluatedAt,
-    methodologySkill: config.methodology.primarySkill,
+    methodologySkills: [config.methodology.primarySkill, resumeReviewMethod.name],
     actualPeopleParticipated: false,
     acceptanceQuestion: config.contract.acceptanceQuestion,
     decision: overallPass ? config.contract.passDecision : "do-not-advance",
@@ -312,7 +468,7 @@ export function currentRunSnapshot(result) {
     evalId: result.evalId,
     runId: result.runId,
     evaluatedAt: result.evaluatedAt,
-    methodologySkill: result.methodologySkill,
+    methodologySkills: result.methodologySkills,
     actualPeopleParticipated: result.actualPeopleParticipated,
     acceptanceQuestion: result.acceptanceQuestion,
     decision: result.decision,
@@ -326,6 +482,9 @@ export function currentRunSnapshot(result) {
       wordCount: version.wordCount,
       numericSignalCount: version.numericSignalCount,
       sha256: version.sha256,
+      reviewResumeSkill: version.reviewResumeSkill,
+      reviewResumeCriteriaPassed: version.reviewResumeCriteriaPassed,
+      reviewResumeCriteriaRequired: version.reviewResumeCriteriaRequired,
       overall: version.overall,
       readerResults: version.readerResults.map((reader) => ({
         gateId: reader.gateId,

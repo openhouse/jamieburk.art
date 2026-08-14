@@ -9,9 +9,16 @@
     "installedPath": ".agents/skills/interviewing-evaluating-candidates/SKILL.md",
     "skillFileSha256": "43adae4069319ca03f5cce7de286c7009c31bbc50925608de32a534ed222f196",
     "sourceRepository": "https://github.com/refoundai/lenny-skills",
+    "resumeReviewSkill": {
+      "name": "review-resume",
+      "installedPath": ".agents/skills/review-resume/SKILL.md",
+      "skillFileSha256": "cec1de0916b608a559844c5f39a3b18e65f88d6694d3bb9c1ff04bde9e062c2f",
+      "sourceRepository": "https://github.com/phuryn/pm-skills",
+      "marketplaceInstallCountObserved": "2.1K",
+      "observedAt": "2026-08-14"
+    },
     "supportingSkills": [
       "hiring",
-      "review-resume",
       "ai-evals"
     ],
     "principles": [
@@ -40,6 +47,14 @@
     "maximumWords": 850,
     "minimumNumericSignals": 6,
     "maximumBulletsPerRole": 5,
+    "minimumEvidenceBearingBulletRatio": 0.7,
+    "minimumExperienceSignalGroups": 3,
+    "genericSummaryPatterns": [
+      "passionate about building great products",
+      "innovative product leader",
+      "strategic thinker",
+      "team player"
+    ],
     "requiredHeadings": [
       "Professional Summary",
       "Core Skills",

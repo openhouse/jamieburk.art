@@ -37,6 +37,12 @@
       "skillPath": "skills/interviewing-evaluating-candidates/SKILL.md",
       "computedHash": "ce27c3d2c771cfe8cb6092bee23543a124d691aac7ac2c3d04263a8dbeb5705c"
     },
+    "review-resume": {
+      "source": "phuryn/pm-skills",
+      "sourceType": "github",
+      "skillPath": "pm-toolkit/skills/review-resume/SKILL.md",
+      "computedHash": "457ce744e2da12f85aa98d0a4f5f08eec71817405cb2c06b45c09575b83b9852"
+    },
     "seo-audit": {
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",
