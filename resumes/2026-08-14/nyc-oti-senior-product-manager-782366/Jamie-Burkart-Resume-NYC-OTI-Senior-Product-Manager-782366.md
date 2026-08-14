@@ -8,7 +8,7 @@ Brooklyn, NY | (816) 728-8685 | [jamie.burkart@gmail.com](mailto:jamie.burkart@g
 
 ## Professional Summary
 
-Senior product and technical project manager with 14+ years shaping and shipping resident-facing and public-facing digital products, services, and operating systems across civic technology, community platforms, small business, and cultural advocacy. Leads work from problem framing and participatory discovery through product briefs, prioritization, implementation, public launch, adoption, measurement, and retrospective documentation. Translates among residents and organizers, agency and policy stakeholders, designers, engineers, operational teams, and senior decision-makers. Brings hands-on technical fluency, strong written and verbal communication, and privacy-conscious, accessibility-aware delivery in complex, legacy, and resource-constrained environments.
+Senior product and technical project manager with 14+ years shipping public-facing products, services, and operating systems across civic technology, community platforms, small business, and cultural advocacy. Leads from problem framing and participatory discovery through briefs, prioritization, implementation, launch, adoption, measurement, and retrospectives. Translates among residents, organizers, policy stakeholders, designers, engineers, operations teams, and senior decision-makers. Brings hands-on technical fluency with privacy-conscious, accessibility-aware delivery in legacy and resource-constrained environments.
 
 ## Core Skills
 
@@ -55,6 +55,7 @@ New York, NY | 2016
 Kansas City, MO | 2015–2024
 
 - Co-led planning, public-benefit documentation, vendor coordination, and municipal compliance for adaptive reuse of an approximately 6,500 sq. ft. historic building into four commercial spaces and three homes.
+- Helped deliver Tired of Tires, a recurring free resident service connecting household eligibility, form and phone intake, scheduled field collection, City recycling coordination, volunteer participation, and public result reporting; public records document Jamie's participation in pickup operations.
 - Co-developed the successful CCED proposal and served as the City's named developer/presenter for a $490,539 public funding request, remained a documented developer point of contact through compliance progress, and later transitioned the project to a mission-aligned organization. The award was not disbursed to the project.
 
 ## Additional Leadership

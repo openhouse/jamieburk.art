@@ -53,6 +53,7 @@ New York, NY | 2016
 Kansas City, MO | 2015–2024
 
 - Coordinated planning, vendors, field dependencies, public-benefit documentation, municipal reporting, and M/WBE and CREO compliance for an approximately 6,500 sq. ft. adaptive-reuse project.
+- Helped operate Tired of Tires, a recurring free resident service connecting intake, field collection, volunteers, and a City recycling handoff; public records document Jamie's participation in pickup operations.
 - Co-developed a successful $490,539 public funding request, served as the City's named developer/presenter, remained a documented point of contact through compliance progress, and later transitioned the project to a mission-aligned organization. The award was not disbursed; the record does not establish procurement authority.
 
 ### 196 Artists Residency / Sunday Dinner — Founder & Systems Steward

@@ -49,28 +49,30 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   const expectedSources = [
     "/images/field-notes/jamie-east-river.webp",
     "/images/field-notes/kc-town-hall-roof-work.webp",
+    "/images/field-notes/kc-town-hall-tired-of-tires-after.webp",
+    "/images/field-notes/kc-town-hall-tired-of-tires-before.webp",
     "/images/field-notes/nycac-market-hotel-banner.webp",
     "/images/field-notes/nycac-shoestring-facilitation.webp",
     "/images/field-notes/sunday-dinner-shared-map.webp"
   ];
   if (JSON.stringify(sources.sort()) !== JSON.stringify(expectedSources.sort())) {
-    fail("governed-photographic-field", "The public field must contain exactly the five reviewed derivatives.");
+    fail("governed-photographic-field", "The public field must contain exactly the seven reviewed photographic derivatives.");
   }
 
   for (const field of ["id", "width", "height", "alt", "caption", "credit", "placements", "publicationStatus", "publicUseBoundary"]) {
     const count = [...manifest.matchAll(new RegExp(`\\b${field}:`, "g"))].length;
-    if (count !== 6) {
+    if (count !== 9) {
       fail("manifest-bound-publication", `Manifest field ${field} is missing from one or more photos.`);
     }
   }
-  if ([...manifest.matchAll(/publicationStatus: "jamie-authorized"/g)].length !== 6) {
+  if ([...manifest.matchAll(/publicationStatus: "jamie-authorized"/g)].length !== 9) {
     fail("manifest-bound-publication", "Every photo must retain the Jamie-authorized publication status.");
   }
 
   const publicImageRoot = path.join(root, "apps/www/public/images/field-notes");
   const publicImages = walkFiles(publicImageRoot).sort();
-  if (publicImages.length !== 5 || publicImages.some((file) => !file.endsWith(".webp"))) {
-    fail("governed-photographic-field", "The field-notes directory must contain only the five fully bound WebP derivatives.");
+  if (publicImages.length !== 7 || publicImages.some((file) => !file.endsWith(".webp"))) {
+    fail("governed-photographic-field", "The field-notes directory must contain only the seven fully bound photographic WebP derivatives.");
   }
   for (const relativeImagePath of publicImages) {
     const bytes = readFileSync(path.join(publicImageRoot, relativeImagePath));
@@ -89,6 +91,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     readText("apps/www/src/components/FieldPhoto.tsx"),
     readText("apps/www/src/components/Hero.tsx"),
     readText("apps/www/src/components/ParticipationSequence.tsx"),
+    readText("apps/www/src/components/ResidentServiceSequence.tsx"),
     readText("apps/www/src/app/about/page.tsx"),
     readText("apps/www/src/app/colophon/page.tsx")
   ].join("\n");
@@ -110,6 +113,12 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
       !participationSequence.includes("portfolioPhotos.nycacMarketHotelBanner") ||
       !participationSequence.includes("let-nyc-dance-public-surface.webp")) {
     fail("editorial-not-decorative", "The two participation photographs and campaign screenshot must remain composed as one Fair Rent NYC evidence sequence.");
+  }
+  const residentServiceSequence = readText("apps/www/src/components/ResidentServiceSequence.tsx");
+  if (!residentServiceSequence.includes("portfolioPhotos.kcTownHallTiredOfTiresFlyer") ||
+      !residentServiceSequence.includes("portfolioPhotos.kcTownHallTiredOfTiresBefore") ||
+      !residentServiceSequence.includes("portfolioPhotos.kcTownHallTiredOfTiresAfter")) {
+    fail("editorial-not-decorative", "The governed flyer and matched before-and-after field photographs must remain composed as one resident-service evidence sequence.");
   }
   if (/FieldPhoto|portfolioPhotos|\/images\/field-notes\//.test(about) ||
       /FieldPhoto|portfolioPhotos|\/images\/field-notes\//.test(colophon)) {

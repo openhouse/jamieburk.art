@@ -4,7 +4,10 @@ export type PortfolioPhoto = {
     | "nycac-shoestring-facilitation"
     | "nycac-market-hotel-banner"
     | "sunday-dinner-shared-map"
-    | "kc-town-hall-roof-work";
+    | "kc-town-hall-roof-work"
+    | "kc-town-hall-tired-of-tires-flyer"
+    | "kc-town-hall-tired-of-tires-before"
+    | "kc-town-hall-tired-of-tires-after";
   src: string;
   width: number;
   height: number;
@@ -195,6 +198,100 @@ export const portfolioPhotos = {
     },
     publicUseBoundary:
       "Jamie authorized this exact portfolio occurrence from the designated portfolio album. Paul Mossine is credited as photographer; the image documents field work but does not establish a trade credential, ownership, completed scope, outcome, or sole authorship."
+  },
+  kcTownHallTiredOfTiresFlyer: {
+    id: "kc-town-hall-tired-of-tires-flyer",
+    src: "/images/artifacts/kc-town-hall-tired-of-tires-flyer.webp",
+    width: 912,
+    height: 500,
+    alt: "Archived Tired of Tires flyer announcing a recurring free residential tire-pickup service from KC Town Hall and the Oak Park Neighborhood Association.",
+    caption:
+      "An archived outreach design translated eligibility and a recurring schedule into a resident-facing service promise. Obsolete contact details and dates are excluded from this public derivative.",
+    credit:
+      "From the KC Town Hall project archive. Component design authorship remains under review.",
+    wikiId: "asset.design.kc-town-hall.tired-of-tires-flyer.2019.001",
+    derivativeId: "derivative.design.kc-town-hall.tired-of-tires-flyer.public-crop.v1",
+    placementIds: ["projection.visual.kc-town-hall.tired-of-tires-flyer"],
+    captionAssertionIds: [
+      "statement.design.kc-town-hall.tired-of-tires-service-model.v1",
+      "statement.design.kc-town-hall.tired-of-tires-public-crop.v1"
+    ],
+    creditAssertionIds: [
+      "statement.design.kc-town-hall.tired-of-tires-archive-custody.v1"
+    ],
+    knowledgeStatus: "bound",
+    placements: ["kc-town-hall"],
+    publicationStatus: "jamie-authorized",
+    releaseState: {
+      publicGit: "approved",
+      staging: "approved",
+      production: "open",
+      indexing: "open"
+    },
+    publicUseBoundary:
+      "Jamie explicitly authorized portfolio use of the project design archive. The public derivative excludes obsolete contact details and dates; it establishes the service promise and project-level design, not individual component authorship."
+  },
+  kcTownHallTiredOfTiresBefore: {
+    id: "kc-town-hall-tired-of-tires-before",
+    src: "/images/field-notes/kc-town-hall-tired-of-tires-before.webp",
+    width: 912,
+    height: 670,
+    alt: "A large curbside stack of used tires in front of a residential block and community garden.",
+    caption:
+      "Before collection: one curbside site in the project's curated June 2022 field archive.",
+    credit:
+      "From the KC Town Hall project archive. Photographer not identified in the retained export.",
+    wikiId: "asset.photo.kc-town-hall.tired-of-tires-before.2022.001",
+    derivativeId: "derivative.photo.kc-town-hall.tired-of-tires-before.v1",
+    placementIds: ["projection.photo.kc-town-hall.tired-of-tires-before"],
+    captionAssertionIds: [
+      "statement.photo.kc-town-hall.tired-of-tires-before-context.v1"
+    ],
+    creditAssertionIds: [
+      "statement.photo.kc-town-hall.tired-of-tires-archive-credit.v1"
+    ],
+    knowledgeStatus: "bound",
+    placements: ["kc-town-hall"],
+    publicationStatus: "jamie-authorized",
+    releaseState: {
+      publicGit: "approved",
+      staging: "approved",
+      production: "open",
+      indexing: "open"
+    },
+    publicUseBoundary:
+      "Jamie explicitly authorized this portfolio occurrence from the project archive. The image documents a curbside field condition; it does not identify a resident, publish an address, or establish who placed or collected the tires."
+  },
+  kcTownHallTiredOfTiresAfter: {
+    id: "kc-town-hall-tired-of-tires-after",
+    src: "/images/field-notes/kc-town-hall-tired-of-tires-after.webp",
+    width: 912,
+    height: 670,
+    alt: "The same residential curb and community-garden frontage after the stack of used tires was removed.",
+    caption:
+      "After collection: the matched frame retained beside the before image in the project's curated June 2022 field archive.",
+    credit:
+      "From the KC Town Hall project archive. Photographer not identified in the retained export.",
+    wikiId: "asset.photo.kc-town-hall.tired-of-tires-after.2022.001",
+    derivativeId: "derivative.photo.kc-town-hall.tired-of-tires-after.v1",
+    placementIds: ["projection.photo.kc-town-hall.tired-of-tires-after"],
+    captionAssertionIds: [
+      "statement.photo.kc-town-hall.tired-of-tires-after-context.v1"
+    ],
+    creditAssertionIds: [
+      "statement.photo.kc-town-hall.tired-of-tires-archive-credit.v1"
+    ],
+    knowledgeStatus: "bound",
+    placements: ["kc-town-hall"],
+    publicationStatus: "jamie-authorized",
+    releaseState: {
+      publicGit: "approved",
+      staging: "approved",
+      production: "open",
+      indexing: "open"
+    },
+    publicUseBoundary:
+      "Jamie explicitly authorized this portfolio occurrence from the project archive. The matched pair documents removal at one curbside site; it does not establish an audited program total, identify a resident, or publish an address."
   }
 } as const satisfies Record<string, PortfolioPhoto>;
 

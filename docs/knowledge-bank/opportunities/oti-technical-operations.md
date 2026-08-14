@@ -68,6 +68,7 @@ role_requirements:
     text: Coordinate concurrent work from concept through public launch.
     wiki_evidence:
       - capability.technical-operations
+      - project.kc-town-hall.tired-of-tires
     public_evidence:
       - route: /work/technical-operations
         needle: Coordinate delivery across concurrent projects
@@ -161,6 +162,10 @@ relations:
   - type: related_to
     target: capability.technical-operations
     href: ../capabilities/technical-operations.md
+  - type: related_to
+    target: project.kc-town-hall.tired-of-tires
+    href: ../projects/tired-of-tires-resident-service.md
+    context: Recurring service operations, field execution, intake, and City handoff for this historical benchmark.
   - type: related_to
     target: project.callnyc
     href: ../projects/callnyc.md

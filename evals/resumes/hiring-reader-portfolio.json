@@ -169,6 +169,7 @@
           "relationship": "nearest-public-operational-lead; not a confirmed direct manager",
           "signalGroups": [
             { "id": "resident-facing-product", "patterns": ["resident-facing", "public-facing digital products", "constituent-services"] },
+            { "id": "resident-service-delivery", "patterns": ["Tired of Tires", "scheduled field collection", "City recycling coordination"] },
             { "id": "discovery-through-launch", "patterns": ["participatory discovery", "public launch", "post-launch learning"] },
             { "id": "mvp-and-prioritization", "patterns": ["MVP", "version-one scoping", "prioritization"] },
             { "id": "cross-functional-government", "patterns": ["agency and policy stakeholders", "designers, engineers", "elected officials and staff"] },
@@ -188,6 +189,7 @@
             { "id": "in-house-capacity", "patterns": ["durable handoffs", "teams can continue", "maintainable publishing systems"] },
             { "id": "technical-fluency", "patterns": ["systems architecture", "JavaScript/TypeScript", "Python/Django"] },
             { "id": "participatory-practice", "patterns": ["participatory discovery", "stakeholder listening", "organizer onboarding"] },
+            { "id": "resident-service-delivery", "patterns": ["Tired of Tires", "free resident service", "pickup operations"] },
             { "id": "digital-equity-and-usability", "patterns": ["accessibility-aware", "resident-facing", "issue pathways"] },
             { "id": "learning-system", "patterns": ["post-launch learning", "retrospectives", "shared campaign memory"] }
           ],
@@ -216,6 +218,7 @@
             { "id": "onboarding-and-runbooks", "patterns": ["onboarding guides", "runbooks", "handbooks"] },
             { "id": "continuous-improvement", "patterns": ["continuous improvement", "retrospectives", "process improvement"] },
             { "id": "public-service-technology", "patterns": ["public-interest technology", "public-service", "digital equity"] },
+            { "id": "resident-service-operations", "patterns": ["Tired of Tires", "field collection", "City recycling handoff"] },
             { "id": "authority-boundary", "patterns": ["does not establish procurement authority", "award was not disbursed"] }
           ],
           "constructiveCritique": "This is a strong future-role benchmark because it converts founder-level responsibility into delivery, risk, documentation, and team-capacity language while preserving authority boundaries.",

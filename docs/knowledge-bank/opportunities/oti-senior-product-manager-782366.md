@@ -70,12 +70,13 @@ role_requirements:
     text: Plan discovery with New Yorkers and agency partners and turn research into a buildable direction.
     wiki_evidence:
       - project.callnyc
+      - project.kc-town-hall.tired-of-tires
     public_evidence:
       - route: /work/callnyc
         needle: issue pathways and next-step guidance
-    status: visible-weak
+    status: visible-qualified
     gap_type: public-projection
-    next_action: Prepare a precise discovery example and distinguish direct user research from adjacent public listening.
+    next_action: Use the bounded Tired of Tires service example in the application; distinguish direct field contact, project-level survey evidence, and held component-authorship details.
   - id: requirement.oti-senior-product-manager.tradeoffs-and-briefs
     importance: critical
     kind: artifact
@@ -185,6 +186,10 @@ relations:
   - type: related_to
     target: project.callnyc
     href: ../projects/callnyc.md
+  - type: related_to
+    target: project.kc-town-hall.tired-of-tires
+    href: ../projects/tired-of-tires-resident-service.md
+    context: Resident-facing service model and Jamie's documented pickup participation; sole design and complete operations remain unclaimed.
   - type: uses_method
     target: method.source-backed-team-memory
     href: ../methods/source-backed-team-memory.md
@@ -213,6 +218,11 @@ The work itself is a high mission and practice fit: resident-facing product
 delivery, policy translation, public launch, documentation, and institutional
 learning. The civil-service title screen is a genuine precondition, not a
 wording problem, and the current record does not establish that Jamie meets it.
+
+The [Tired of Tires resident-service record](../projects/tired-of-tires-resident-service.md)
+adds a concrete service-delivery example spanning eligibility, intake, field
+fulfillment, municipal handoff, public reporting, and direct resident contact.
+It supports application use without assigning Jamie sole program authorship.
 
 The public record identifies initiative and operational leadership but not a
 direct supervisor. Keep [Luke Farrell](../people/luke-farrell.md) as nearest

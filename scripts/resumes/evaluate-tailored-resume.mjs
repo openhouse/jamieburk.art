@@ -104,6 +104,16 @@ export function evaluateResume(resumeText, sourcePath = rubric.resumePath) {
       detail: "Shows cross-functional delivery and public-sector stakeholder translation."
     },
     {
+      id: "resident-service-delivery",
+      pass:
+        /Tired of Tires/i.test(plainText) &&
+        /household eligibility/i.test(plainText) &&
+        /field collection/i.test(plainText) &&
+        /City recycling coordination/i.test(plainText) &&
+        /public records document Jamie's participation/i.test(plainText),
+      detail: "Includes a bounded, evidence-backed resident service spanning access, fulfillment, municipal handoff, and Jamie's documented participation."
+    },
+    {
       id: "responsible-technology-language",
       pass: [
         /accessibility/i,

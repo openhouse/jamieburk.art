@@ -155,6 +155,23 @@ See the
 for the proposition ledger, source boundaries, privacy decisions, and research
 queue.
 
+## Tired of Tires as a Resident Service
+
+A new [resident-service evidence review](../intake/2026-08-14-kcth-tired-of-tires-resident-service.md)
+links the public Wayback capture, public participation records, the protected
+proposal review, and Jamie's new oral-history addendum. The resulting bounded
+claim is stronger than the July record: the service model and Jamie's direct
+participation are now supported for application use, while individual design
+ownership, complete operations, audited totals, and the exact
+research-to-requirements chain remain open. Authenticated review also recovered
+the protected operating-workbook structure, rendered outreach designs, and a
+curated matched field pair. Jamie authorized exact public-safe derivatives of
+the flyer and before-and-after photographs for the portfolio; resident records,
+private-derived aggregates, obsolete contact details, and other archive items
+remain outside the public surface.
+
+See [Tired of Tires resident service](tired-of-tires-resident-service.md).
+
 ## Mission-Aligned Transition
 
 Jamie has authorized a bounded first-party professional claim that he
@@ -188,6 +205,8 @@ research inquiry, not projected copy.
 - `SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29`
 - `SRC-KCMO-COUNCIL-ROSTER-2018`
 - `SRC-KCMO-COUNCIL-BUSINESS-SESSION-TERMS`
+- `SRC-WAYBACK-KCTH-TIRED-OF-TIRES-2020-10-30`
+- `SRC-KCTH-TIRED-OF-TIRES-RESIDENT-SERVICE-REVIEW-2026-08-14`
 - `SRC-KCSTAR-CCED-PROJECT-DELAYS-2021`
 - `SRC-KCTH-FIELD-PRACTICE-MEMORY-2026`
 - `SRC-KCTH-CCED-PROPOSAL-BUNDLE-2019`

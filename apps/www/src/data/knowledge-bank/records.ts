@@ -5,6 +5,7 @@ import { googleDriveProductionJuly2026 } from "./google-drive-production-2026-07
 import { historicalKnowledge } from "./historical-knowledge.ts";
 import { kcTownHallCouncilFunding } from "./kc-town-hall-council-funding.ts";
 import { kcTownHallFieldPractice } from "./kctownhall-field-practice.ts";
+import { kcTownHallResidentServiceAugust2026 } from "./kctownhall-resident-service-2026-08.ts";
 import { kcTownHallSocialCorpus } from "./kctownhall-social-corpus.ts";
 import { kcSpacesFundFacebookPostKnowledge } from "./kcspacesfund-facebook-posts-2026-07.ts";
 import { jamiePersonalFacebookPostKnowledge } from "./jamie-personal-facebook-posts-2026-07.ts";
@@ -64,6 +65,7 @@ const knowledgeBankInput = {
     ...projectCompositionAugust2026.intakeItems,
     ...kcTownHallCouncilFunding.intakeItems,
     ...kcTownHallFieldPractice.intakeItems,
+    ...kcTownHallResidentServiceAugust2026.intakeItems,
     ...kcTownHallSocialCorpus.intakeItems,
     ...kcSpacesFundFacebookPostKnowledge.intakeItems,
     ...jamiePersonalFacebookPostKnowledge.intakeItems,
@@ -113,6 +115,7 @@ const knowledgeBankInput = {
     ...projectCompositionAugust2026.observations,
     ...kcTownHallCouncilFunding.observations,
     ...kcTownHallFieldPractice.observations,
+    ...kcTownHallResidentServiceAugust2026.observations,
     ...kcTownHallSocialCorpus.observations,
     ...kcSpacesFundFacebookPostKnowledge.observations,
     ...jamiePersonalFacebookPostKnowledge.observations,
@@ -266,6 +269,7 @@ const knowledgeBankInput = {
     ...projectCompositionAugust2026.sources,
     ...kcTownHallCouncilFunding.sources,
     ...kcTownHallFieldPractice.sources,
+    ...kcTownHallResidentServiceAugust2026.sources,
     ...kcTownHallSocialCorpus.sources,
     ...kcSpacesFundFacebookPostKnowledge.sources,
     ...jamiePersonalFacebookPostKnowledge.sources,
@@ -412,6 +416,7 @@ const knowledgeBankInput = {
     ...projectCompositionAugust2026.claims,
     ...kcTownHallCouncilFunding.claims,
     ...kcTownHallFieldPractice.claims,
+    ...kcTownHallResidentServiceAugust2026.claims,
     ...kcTownHallSocialCorpus.claims,
     ...kcSpacesFundFacebookPostKnowledge.claims,
     ...jamiePersonalFacebookPostKnowledge.claims,
@@ -481,6 +486,7 @@ const knowledgeBankInput = {
     ...projectCompositionAugust2026.researchInquiries,
     ...kcTownHallCouncilFunding.researchInquiries,
     ...kcTownHallFieldPractice.researchInquiries,
+    ...kcTownHallResidentServiceAugust2026.researchInquiries,
     ...kcTownHallSocialCorpus.researchInquiries,
     ...kcSpacesFundFacebookPostKnowledge.researchInquiries,
     ...jamiePersonalFacebookPostKnowledge.researchInquiries,
