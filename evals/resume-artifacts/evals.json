@@ -23,11 +23,32 @@
     "politicoLabel": "Politico New York",
     "politicoArticleUrl": "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf"
   },
+  "applicationGuideContract": {
+    "file": "Application-Instructions.md",
+    "statusValues": [
+      "ready-for-jamie-review",
+      "blocked"
+    ],
+    "requiredSections": [
+      "Submission status",
+      "Files",
+      "Exact field instructions",
+      "Final review gate"
+    ],
+    "rules": [
+      "Every opportunity directory contains one guide bound to the exact current Markdown and PDF digests.",
+      "A ready guide gives exact actions for observed fields and names no unresolved blocker.",
+      "A blocked guide names the blocking condition and does not invent fields or answers.",
+      "Protected-category answers remain Jamie's private choice and are never committed.",
+      "Unknown later application pages fail closed for Jamie's review.",
+      "Jamie alone performs final submission."
+    ]
+  },
   "criteria": [
     {
       "id": "complete-opportunity-coverage",
       "blocking": true,
-      "criterion": "Every governed hiring-reader opportunity has exactly one dated Markdown resume, one PDF sibling, and one artifact manifest; no tailored Markdown resume is orphaned from the opportunity manifest."
+      "criterion": "Every governed hiring-reader opportunity has exactly one dated Markdown resume, one PDF sibling, one artifact manifest, and one application guide; no tailored Markdown resume is orphaned from the opportunity manifest."
     },
     {
       "id": "opportunity-source-current",
@@ -65,9 +86,14 @@
       "criterion": "Hiring-facing resumes omit nonessential non-disbursement disposition language; whenever Politico New York appears, its full visible label links to the canonical archived article PDF in both Markdown and the exported PDF."
     },
     {
+      "id": "application-guide",
+      "blocking": true,
+      "criterion": "Each opportunity directory includes an exact-resume-bound application guide with the observed field actions, an explicit blocker when needed, fail-closed treatment of unseen questions, and Jamie's final-submit gate."
+    },
+    {
       "id": "public-safety",
       "blocking": true,
-      "criterion": "Neither resume nor artifact metadata commits Google Docs IDs, Drive locators, private filesystem paths, or other protected workflow identifiers."
+      "criterion": "Neither resume, artifact metadata, nor application guide commits Google Docs IDs, Drive locators, private filesystem paths, protected-category answers, or other protected workflow identifiers."
     }
   ]
 }

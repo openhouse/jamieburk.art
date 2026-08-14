@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
-import { appendFileSync, cpSync, mkdtempSync, mkdirSync, readFileSync, rmSync, unlinkSync, writeFileSync } from "node:fs";
+import { appendFileSync, cpSync, existsSync, mkdtempSync, mkdirSync, readFileSync, rmSync, unlinkSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
@@ -50,7 +50,113 @@ test("every governed opportunity has a current styled and visually inspected PDF
   const result = run();
   assert.equal(result.status, 0, result.stderr || result.stdout);
   const report = JSON.parse(result.stdout);
-  assert.deepEqual(report.metrics, { opportunities: 4, markdownResumes: 4, pdfs: 4, artifacts: 4 });
+  assert.deepEqual(report.metrics, { opportunities: 4, markdownResumes: 4, pdfs: 4, artifacts: 4, applicationGuides: 4 });
+});
+
+test("a missing application guide fails one-to-one opportunity coverage", () => {
+  const root = fixture();
+  try {
+    const entry = firstEntry(root);
+    const guidePath = path.join(path.dirname(path.join(root, entry.resumePath)), "Application-Instructions.md");
+    if (existsSync(guidePath)) unlinkSync(guidePath);
+    const result = run(root);
+    assert.notEqual(result.status, 0);
+    assert.match(result.stdout, /application-guide/);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test("an application guide bound to an older resume fails closed", () => {
+  const root = fixture();
+  try {
+    const entry = firstEntry(root);
+    const guidePath = path.join(path.dirname(path.join(root, entry.resumePath)), "Application-Instructions.md");
+    const guide = existsSync(guidePath)
+      ? readFileSync(guidePath, "utf8").replace(entry.resumeSha256, "0".repeat(64))
+      : `---\nopportunity_id: ${entry.opportunityId}\nresume_markdown_sha256: ${"0".repeat(64)}\n---\n`;
+    writeFileSync(guidePath, guide, "utf8");
+    const result = run(root);
+    assert.notEqual(result.status, 0);
+    assert.match(result.stdout, /application-guide/);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test("a ready application guide without exact entry instructions fails closed", () => {
+  const root = fixture();
+  try {
+    const manifest = readJson(root, "evals/resume-hiring-readers/current.json");
+    const entry = manifest.opportunities.find(
+      ({ opportunityId }) => opportunityId === "opportunity.nyc-oti.senior-product-manager.782366"
+    );
+    const guidePath = path.join(path.dirname(path.join(root, entry.resumePath)), "Application-Instructions.md");
+    const guide = existsSync(guidePath)
+      ? readFileSync(guidePath, "utf8").replace("## Exact field instructions", "## Incomplete notes")
+      : `---\nopportunity_id: ${entry.opportunityId}\napplication_status: ready-for-jamie-review\n---\n`;
+    writeFileSync(guidePath, guide, "utf8");
+    const result = run(root);
+    assert.notEqual(result.status, 0);
+    assert.match(result.stdout, /application-guide/);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test("a blocked application guide without a named blocker fails closed", () => {
+  const root = fixture();
+  try {
+    const manifest = readJson(root, "evals/resume-hiring-readers/current.json");
+    const entry = manifest.opportunities.find(
+      ({ opportunityId }) => opportunityId === "opportunity.benepass.product-operations.7f963a7a"
+    );
+    const guidePath = path.join(path.dirname(path.join(root, entry.resumePath)), "Application-Instructions.md");
+    const guide = existsSync(guidePath)
+      ? readFileSync(guidePath, "utf8").replace(/^blocker:.*$/m, "blocker:")
+      : `---\nopportunity_id: ${entry.opportunityId}\napplication_status: blocked\nblocker:\n---\n`;
+    writeFileSync(guidePath, guide, "utf8");
+    const result = run(root);
+    assert.notEqual(result.status, 0);
+    assert.match(result.stdout, /application-guide/);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test("application guides cannot commit private paths or protected-category answers", () => {
+  const root = fixture();
+  try {
+    const entry = firstEntry(root);
+    const guidePath = path.join(path.dirname(path.join(root, entry.resumePath)), "Application-Instructions.md");
+    appendFileSync(
+      guidePath,
+      "\nPrivate source: /Users/jamie/medical/disability-status.txt\nprotected_category_answer: disability-status-present\n",
+      "utf8"
+    );
+    const result = run(root);
+    assert.notEqual(result.status, 0);
+    assert.match(result.stdout, /public-safety/);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test("application guides preserve Jamie's final-submit gate", () => {
+  const root = fixture();
+  try {
+    const entry = firstEntry(root);
+    const guidePath = path.join(path.dirname(path.join(root, entry.resumePath)), "Application-Instructions.md");
+    const guide = existsSync(guidePath)
+      ? readFileSync(guidePath, "utf8").replace("Jamie alone clicks the final Submit button.", "Submit the application automatically.")
+      : `---\nopportunity_id: ${entry.opportunityId}\n---\nSubmit the application automatically.\n`;
+    writeFileSync(guidePath, guide, "utf8");
+    const result = run(root);
+    assert.notEqual(result.status, 0);
+    assert.match(result.stdout, /application-guide/);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
 });
 
 test("a missing PDF sibling fails complete coverage", () => {

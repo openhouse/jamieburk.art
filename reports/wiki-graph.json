@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-14T13:02:34-04:00",
-  "sourceCommit": "b0151ec32fe99dd47a68e72a1db99b033a1bd0a3",
-  "sourceFingerprint": "e530ec91a77d83a48cccb224a95f65181ad39e19df2aae338b8ada4519f18c5c",
+  "generatedAt": "2026-08-14T15:38:44-04:00",
+  "sourceCommit": "2be06955b3e63f77f403ccbb02fd21b6a959449c",
+  "sourceFingerprint": "77b899a4d84924186b95592e46ab240114acd967d71c13aa7517629e56320e9c",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3812,13 +3812,13 @@
       "path": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
       "title": "Benepass - Product Operations Manager",
       "kind": "opportunity",
-      "status": "governed-open",
+      "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Public-safe requirement and portfolio-coverage map for Benepass's live Product Operations Manager role.",
+      "summary": "Public-safe requirement and portfolio-coverage map for a Benepass Product Operations Manager role whose official application URL now returns Job not found.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2026-08-16"
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-09-14"
     },
     {
       "id": "opportunity.codepath.claude-corps.5182020007",
@@ -4782,10 +4782,10 @@
       "status": "maintained",
       "visibility": "public",
       "sensitivity": "low",
-      "summary": "Official Benepass posting for a Product Operations Manager, rechecked August 13, 2026.",
+      "summary": "Official Benepass Product Operations Manager URL; the preserved role text was available August 13 and the application returned Job not found on August 14, 2026.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2026-08-16"
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-09-14"
     },
     {
       "id": "source.jobs.codepath.claude-corps.5182020007",
@@ -20899,7 +20899,7 @@
       "toPath": "docs/knowledge-bank/sources/jobs-benepass-product-operations.md",
       "to": "source.jobs.benepass.product-operations.7f963a7a",
       "fragment": null,
-      "line": 13,
+      "line": 14,
       "kind": "link"
     },
     {

@@ -71,6 +71,25 @@ test("a different resume-review skill fingerprint fails the pinned skill contrac
   }
 });
 
+test("a retained resume packet must bind to a live or closed application opportunity", () => {
+  const root = fixture();
+  try {
+    const relativePath = "docs/knowledge-bank/opportunities/benepass-product-operations.md";
+    const opportunityPath = path.join(root, relativePath);
+    const opportunity = readFileSync(opportunityPath, "utf8").replace(
+      "opportunity_status: closed",
+      "opportunity_status: historical-benchmark"
+    );
+    writeFileSync(opportunityPath, opportunity, "utf8");
+    const result = run(root);
+    assert.notEqual(result.status, 0, "current resume packets must not silently become historical benchmarks");
+    const report = JSON.parse(result.stdout);
+    assert.match(report.failures.map(({ criterion }) => criterion).join("\n"), /opportunity-binding/);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
 test("a generic target-role headline fails job-specific resume tailoring", () => {
   const root = fixture();
   try {

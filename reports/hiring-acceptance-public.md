@@ -3,10 +3,10 @@
 
 **Candidate commit:** `b0151ec32fe99dd47a68e72a1db99b033a1bd0a3`
 **Portfolio snapshot:** `b5a13a7faa396a93588203c8d7979802b806f97b196f19570a0027bb8f717aad`
-**Role-context hash:** `011c4b7e3321ca233a37de0fc6fbf3b3c6e183499ae8b150e9c81eb8d2b8901f`
+**Role-context hash:** `060563fa59962bacb7e00f3ebb166f94dbcaf48e1ffcd7c714bd6c19217cd455`
 **Reader-context hash:** `c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
-**Candidate paths clean:** yes
+**Candidate paths clean:** no
 
 > Deterministic baseline only. This is not an interview prediction, a named person's opinion, or a human reader study.
 
@@ -88,11 +88,11 @@
 
 ### Benepass - Product Operations Manager
 
-- Deterministic disposition: `evidence-gap-review`
+- Deterministic disposition: `not-live`
 - Critical signals observed: 0/4
 - All signals observed: 0/4
-- Opportunity status live: yes
-- Role context current at candidate time: yes
+- Opportunity status live: no
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
 - `requirement.benepass.launch-readiness`: **not observed**

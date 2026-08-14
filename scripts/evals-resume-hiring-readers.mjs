@@ -107,8 +107,8 @@ export function evaluateResumeHiringReaders(root = defaultRoot) {
 
     const opportunity = readFileSync(opportunityPath, "utf8");
     if (frontMatterValue(opportunity, "id") !== entry.opportunityId ||
-        frontMatterValue(opportunity, "opportunity_status") !== "live") {
-      fail("opportunity-binding", `${label}: resume must bind to the exact live governed opportunity ID.`);
+        !["live", "closed"].includes(frontMatterValue(opportunity, "opportunity_status"))) {
+      fail("opportunity-binding", `${label}: resume must bind to the exact live or closed governed opportunity ID.`);
     }
 
     if (!/^resume-versions\/\d{4}-\d{2}-\d{2}\/[a-z0-9-]+\/Jamie-Burkart-Resume\.md$/.test(entry.resumePath ?? "")) {

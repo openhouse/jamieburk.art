@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity discovery recall
 
-**Wiki fingerprint:** `e530ec91a77d83a48cccb224a95f65181ad39e19df2aae338b8ada4519f18c5c`
+**Wiki fingerprint:** `77b899a4d84924186b95592e46ab240114acd967d71c13aa7517629e56320e9c`
 **Overall:** PASS
 
 ## Title-blind queries
@@ -10,7 +10,7 @@
 - `query.current-project-systems`: PASS; top results `opportunity.aclu.senior-project-manager-lps.8620968002`, `opportunity.aclu.senior-project-manager-national-campaigns.8631854002`, `opportunity.asana.ai-implementation.8027437`
 - `query.current-advocacy-operations`: PASS; top results `opportunity.aclu.senior-project-manager-national-campaigns.8631854002`, `opportunity.aclu.senior-project-manager-lps.8620968002`, `opportunity.asana.ai-implementation.8027437`
 - `query.current-resident-product`: PASS; top results `opportunity.nyc-oti.senior-product-manager.782366`, `opportunity.aclu.senior-project-manager-lps.8620968002`, `opportunity.aclu.senior-project-manager-national-campaigns.8631854002`
-- `query.discovery-governance`: PASS; top results `opportunity.aclu.product-manager-discovery.8482872002`, `opportunity.codepath.claude-corps.5182020007`, `opportunity.nyc-oti.technical-operations-manager.782369`
+- `query.discovery-governance`: PASS; top results `opportunity.aclu.product-manager-discovery.8482872002`, `opportunity.benepass.product-operations.7f963a7a`, `opportunity.codepath.claude-corps.5182020007`
 - `query.product-operations-physical-world`: PASS; top results `opportunity.permitflow.product-operations.8a6e6066`, `opportunity.aclu.senior-project-manager-lps.8620968002`, `opportunity.aclu.senior-project-manager-national-campaigns.8631854002`
 - `query.source-backed-memory-consulting`: PASS; top results `opportunity.protected.source-backed-memory-consulting.2026`
 

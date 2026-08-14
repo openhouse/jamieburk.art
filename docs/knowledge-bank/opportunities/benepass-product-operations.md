@@ -2,17 +2,17 @@
 id: opportunity.benepass.product-operations.7f963a7a
 title: Benepass - Product Operations Manager
 kind: opportunity
-status: governed-open
+status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-13
-review_by: 2026-08-16
+last_reviewed: 2026-08-14
+review_by: 2026-09-14
 canonical_path: docs/knowledge-bank/opportunities/benepass-product-operations.md
-summary: Public-safe requirement and portfolio-coverage map for Benepass's live Product Operations Manager role.
+summary: Public-safe requirement and portfolio-coverage map for a Benepass Product Operations Manager role whose official application URL now returns Job not found.
 canonical_url: https://jobs.ashbyhq.com/benepass/7f963a7a-aaad-456b-b12b-7f34b35d51cf/
 source_type: official-employer
-opportunity_status: live
-verified_at: 2026-08-13
+opportunity_status: closed
+verified_at: 2026-08-14
 portfolio_routes:
   - /
   - /work/technical-operations
@@ -27,6 +27,7 @@ discovery_terms:
   - runbooks
   - post-launch learning
 confirmed_facts:
+  - The official Ashby application URL returned Job not found when rechecked on August 14, 2026.
   - The role is US remote and reports to Head of Customer Operations Aileen Palmer.
   - The posted base salary is $150,000 to $180,000 plus equity.
   - The role makes go/no-go recommendations and owns an Ops-to-Product prioritization system.
@@ -157,5 +158,7 @@ Aileen Palmer is the explicitly named direct manager. Jaclyn Chen is the
 nearest publicly documented senior company vision owner; that is organizational
 context, not a direct reporting line.
 
-Recheck the [official source](../sources/jobs-benepass-product-operations.md)
-before outward use.
+The application is currently blocked because the
+[official source](../sources/jobs-benepass-product-operations.md) returns Job
+not found. Preserve the tailored packet for a future matching role, but do not
+represent this listing as open without a new official verification.

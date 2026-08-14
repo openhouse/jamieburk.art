@@ -244,7 +244,7 @@ const checks = {
     existsSync(path.join(defaultRepoRoot, "scripts/check-knowledge-bank.mjs")),
 
   tier_one_official_source_records:
-    liveOfficialOpportunities.length === 6 &&
+    liveOfficialOpportunities.length === 5 &&
     liveOfficialOpportunities.every((record) =>
       record.evidence.some((evidence) => {
         const source = result.byId.get(evidence.target);
@@ -265,7 +265,7 @@ const checks = {
   stable_requirement_ids:
     requirementIds.length >= 25 && new Set(requirementIds).size === requirementIds.length,
   operator_queries:
-    queryWiki(result, { liveOpportunities: true }).records.length === 6 &&
+    queryWiki(result, { liveOpportunities: true }).records.length === 5 &&
     queryWiki(result, { requirement: "requirement.oti.delivery-coordination" }).opportunity?.id ===
       "opportunity.nyc-oti.technical-operations-manager.782369",
   hard_screens_explicit: opportunities.every((record) => record.hard_screens.length > 0),
@@ -284,13 +284,14 @@ const checks = {
   priority_opportunity_leadership_bounded:
     priorityOpportunities.every(
       (record) =>
-        record?.opportunity_status === "live" &&
+        ["live", "closed"].includes(record?.opportunity_status) &&
         record?.leadership_context?.direct_report?.evidence_state &&
         record?.leadership_context?.direct_report?.note &&
         record?.leadership_context?.senior_vision?.person_id &&
         record?.leadership_context?.senior_vision?.evidence_state === "official-senior-leader"
     ) &&
     result.byId.get("opportunity.aclu.senior-project-manager-lps.8620968002")?.leadership_context?.direct_report?.person_id == null &&
+    result.byId.get("opportunity.benepass.product-operations.7f963a7a")?.opportunity_status === "closed" &&
     result.byId.get("opportunity.benepass.product-operations.7f963a7a")?.leadership_context?.direct_report?.evidence_state === "posting-named-person" &&
     result.byId.get("opportunity.aclu.senior-project-manager-national-campaigns.8631854002")?.leadership_context?.direct_report?.evidence_state === "public-title-match-not-confirmed" &&
     result.byId.get("opportunity.nyc-oti.senior-product-manager.782366")?.leadership_context?.direct_report?.evidence_state === "public-operating-lead-not-confirmed" &&

@@ -8,7 +8,7 @@ import { compileWiki, defaultRepoRoot } from "./lib.mjs";
 
 const expected = new Map([
   ["opportunity.aclu.senior-project-manager-lps.8620968002", "live"],
-  ["opportunity.benepass.product-operations.7f963a7a", "live"],
+  ["opportunity.benepass.product-operations.7f963a7a", "closed"],
   ["opportunity.aclu.senior-project-manager-national-campaigns.8631854002", "live"],
   ["opportunity.nyc-oti.senior-product-manager.782366", "live"],
   ["opportunity.nyc-oti.technical-operations-manager.782369", "closed"]
@@ -27,7 +27,10 @@ test("priority opportunity records preserve current live and closed states", () 
     const opportunity = result.byId.get(id);
     assert.ok(opportunity, `${id} must exist`);
     assert.equal(opportunity.opportunity_status, status);
-    assert.equal(opportunity.verified_at, "2026-08-13");
+    assert.equal(
+      opportunity.verified_at,
+      id === "opportunity.benepass.product-operations.7f963a7a" ? "2026-08-14" : "2026-08-13"
+    );
     assert.ok(
       opportunity.evidence.some((item) => {
         const source = result.byId.get(item.target);
