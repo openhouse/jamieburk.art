@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to KC Town Hall orientation
 
-**Source commit:** `5ec4b1cde64b351859133d84f982a197fad6c03a`
-**Generation time:** 2026-08-14T16:46:21-04:00
-**Source fingerprint:** `88ebb82ccc1c3e6a67bb048cc564af27a7feb9afb49e13c16e4690f66a4f003f`
+**Source commit:** `7bb04756f7480f6d9ce370b69643ccf091900a5c`
+**Generation time:** 2026-08-14T17:40:55-04:00
+**Source fingerprint:** `631d2fa594b8cadc90dca810a030b7fadea909fcfdab19bad0f05e8224d1a1bd`
 
 - [KC Town Hall ten-minute-walk proposal map](../../assets/graphics/kc-town-hall-walkshed-2019.md) - `documents` (frontmatter)
 - [Kansas City Star aerial view of KC Town Hall](../../assets/photographs/kc-town-hall-kc-star-aerial-2021.md) - `related_to` (frontmatter)
@@ -36,3 +36,4 @@
 - [KC Town Hall photographic oral histories, July 2026](../../sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md) - `documents` (frontmatter)
 - [Tired of Tires public service page, archived October 30, 2020](../../sources/kc-town-hall-tired-of-tires-wayback-2020.md) - `related_to` (frontmatter)
 - [Tired of Tires protected design and field archive](../../sources/kc-town-hall-tired-of-tires-design-field-archive-2026.md) - `related_to` (frontmatter)
+- [Live project-website audit and restored-surface close reading](../../sources/project-website-live-audit-2026-08-14.md) - `related_to` (frontmatter)

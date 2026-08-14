@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `5ec4b1cde64b351859133d84f982a197fad6c03a`
-**Generation time:** 2026-08-14T16:46:21-04:00
-**Source fingerprint:** `88ebb82ccc1c3e6a67bb048cc564af27a7feb9afb49e13c16e4690f66a4f003f`
+**Source commit:** `7bb04756f7480f6d9ce370b69643ccf091900a5c`
+**Generation time:** 2026-08-14T17:40:55-04:00
+**Source fingerprint:** `631d2fa594b8cadc90dca810a030b7fadea909fcfdab19bad0f05e8224d1a1bd`
 
 ## application
 
@@ -484,6 +484,7 @@
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`
 - [Professional record governed photo field](../sources/photo-metadata/professional-record-photo-field-2026-08.md) - `source.professional-record.photo-field.2026-08`
 - [Governed professional-record research comparison, August 2026](../sources/archives/professional-record-research-2026-08.md) - `source.professional-record.research.2026-08`
+- [Live project-website audit and restored-surface close reading](../sources/project-website-live-audit-2026-08-14.md) - `source.project-websites.live-audit.2026-08-14`
 - [Late-July 2026 current-workstream review](../sources/working/current-workstream-2026-07-27.md) - `source.protected.current-workstream.2026-07-27`
 - [Protected source-backed memory opportunity — metadata boundary](../sources/protected-source-backed-memory-opportunity.md) - `source.protected.source-backed-memory-opportunity.2026`
 - [Luke Farrell public professional post - PIT Crew leadership](../sources/luke-farrell-pit-crew-2026.md) - `source.public.luke-farrell-pit-crew.2026-07`

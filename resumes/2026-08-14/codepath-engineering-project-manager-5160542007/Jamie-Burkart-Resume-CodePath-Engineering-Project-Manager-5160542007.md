@@ -26,29 +26,29 @@ New York, NY / Remote | 2012–Present
 - Lead web product, design, engineering, and maintenance engagements from problem definition through requirements, implementation, testing, public release, adoption support, monitoring, issue resolution, and handoff.
 - Work directly in JavaScript/TypeScript, React/Next.js, Ember.js, Python/Django, SQL, Git/GitHub, Docker/Dokku, APIs, and analytics; investigate defects, inspect application behavior and logs, define regression expectations, and verify fixes.
 - Build delivery systems that fit the team: scoped backlogs, decision logs, action trackers, release checklists, documentation, and retrospectives. Remove or decline process when its cost exceeds its value.
-- Led long-running e-commerce, analytics, content, marketing, and operational improvements for Harry J. Epstein Company, contributing to a period of 2x revenue growth while helping an 80+ year-old business modernize its public and operating systems.
+- Led long-running e-commerce, analytics, content, marketing, and operational improvements for [Harry J. Epstein Company](https://www.harryepstein.com/), contributing to a period of 2x revenue growth while helping an 80+ year-old business modernize its public and operating systems.
 
-### WOWList.org — Co-Founder, Product & Community Systems
+### [WOWList.org](https://wowlist.org/) — Co-Founder, Product & Community Systems
 
 New York, NY / Remote | 2015–2020
 
 - Co-founded, co-built, and operated with Richard Caceres a Python/Django, PostgreSQL/PostGIS, and Ember.js community-calendar platform, coordinating product definition, implementation, organizer support, public communication, releases, and low-cost production operations.
 - Reached a July 2017 production snapshot of 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts through natural-language event entry, followable keyword communities, weekly digests, profiles, embeds, and calendar connections. These are activity and scale signals, not causal impact claims.
 
-### CallNYC.org — Civic-Tech Builder & Product Translator
+### [CallNYC.org](https://callnyc.org/) — Civic-Tech Builder & Product Translator
 
 New York, NY | 2016
 
 - Built and launched an independent resident-facing follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services open data into issue pathways, district context, and next-step guidance; covered by Politico New York in 2016.
 
-### NYC Artist Coalition / FairRentNYC — Co-Founder, Civic Systems & Coalition Operations Lead
+### [NYC Artist Coalition](https://nycartc.com/) / [FairRentNYC](https://fairrentnyc.nycartc.com/) — Co-Founder, Civic Systems & Coalition Operations Lead
 
 New York, NY | 2017–Present
 
 - Implement and maintain public campaign systems while coordinating requirements, content, policy questions, stakeholder feedback, issue follow-up, and time-sensitive public releases across technical and nontechnical collaborators.
 - Built and stewarded 30+ pages of shared campaign memory connecting decisions, action items, risks, source maps, public-data framing, and city/state workstreams without publishing private coalition records.
 
-### KC Town Hall LLC — Co-Founder & Project Manager
+### [KC Town Hall LLC](https://kctownhall.com/) — Co-Founder & Project Manager
 
 Kansas City, MO | 2015–2024
 

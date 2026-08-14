@@ -212,7 +212,12 @@ export default function TechnicalOperationsPage() {
                         {destination.project}
                       </Link>
                     ) : (
-                      <span className="font-semibold text-jb-ink">KC Spaces Fund</span>
+                      <a
+                        className="font-semibold text-jb-blue hover:text-jb-green"
+                        href="https://kcspacesfund.com/"
+                      >
+                        KC Spaces Fund
+                      </a>
                     )}
                     <span className="mt-1 block text-sm leading-6 text-jb-ink/72">
                       {proof.shortWording ?? proof.publicWording}

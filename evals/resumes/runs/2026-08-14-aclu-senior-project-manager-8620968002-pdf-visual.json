@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.aclu.senior-project-manager.8620968002.pdf-visual",
-  "inspectedAt": "2026-08-14T17:32:00-04:00",
+  "inspectedAt": "2026-08-14T18:32:00-04:00",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy for this opportunity",
     "revisionUnchangedAfterExport": true,
@@ -9,17 +9,17 @@
   },
   "markdown": {
     "path": "resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-8620968002.md",
-    "sha256": "9010c23c6400e40f32e192dd48cd01ff47f5a9e37ad6e5ea53997c40cda8ef70"
+    "sha256": "bda547600677c6bb92052327c3755d9e7a9302b149f3507dae5005f51deed44b"
   },
   "pdf": {
     "path": "resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-8620968002.pdf",
-    "sha256": "fb317451b8fdbf677e85d1f961b2bb92b06a18f639bbdc921a444f8556745548",
-    "bytes": 82896,
+    "sha256": "93e13626936c18669e2115b4bf22e335bb606ef0d3fc8964858ed253a030fb36",
+    "bytes": 87756,
     "pages": 2,
     "pageSize": "US Letter"
   },
   "inspection": {
-    "method": "Exported from the native Google Docs working copy, rasterized every page at 120 DPI, and visually inspected at original detail.",
+    "method": "Exported from the native Google Docs working copy, rasterized every page at 144 DPI, visually inspected at original detail, and checked for preserved PDF link annotations.",
     "allPagesRasterized": true,
     "actualNamedPeopleParticipated": false,
     "pages": [

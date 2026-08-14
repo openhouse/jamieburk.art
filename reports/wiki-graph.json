@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-14T16:46:21-04:00",
-  "sourceCommit": "5ec4b1cde64b351859133d84f982a197fad6c03a",
-  "sourceFingerprint": "88ebb82ccc1c3e6a67bb048cc564af27a7feb9afb49e13c16e4690f66a4f003f",
+  "generatedAt": "2026-08-14T17:40:55-04:00",
+  "sourceCommit": "7bb04756f7480f6d9ce370b69643ccf091900a5c",
+  "sourceFingerprint": "631d2fa594b8cadc90dca810a030b7fadea909fcfdab19bad0f05e8224d1a1bd",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -4150,8 +4150,8 @@
         "Call NYC",
         "CallNYC.org"
       ],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2027-01-18"
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-09-14"
     },
     {
       "id": "project.fair-rent-nyc",
@@ -4204,8 +4204,8 @@
       "sensitivity": "moderate",
       "summary": "Adaptive-reuse, neighborhood fieldwork, resident-service, and public-benefit documentation project with municipal funding history kept distinct from disbursement and completion.",
       "aliases": [],
-      "lastReviewed": "2026-07-19",
-      "reviewBy": "2026-10-19"
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-09-14"
     },
     {
       "id": "project.kc-town-hall.tired-of-tires",
@@ -4342,8 +4342,8 @@
         "WOW List",
         "wowlist.org"
       ],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2026-11-13"
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-09-14"
     },
     {
       "id": "projection.photo.fair-rent-nyc.market-hotel-banner",
@@ -5527,6 +5527,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-03",
       "reviewBy": "2026-10-03"
+    },
+    {
+      "id": "source.project-websites.live-audit.2026-08-14",
+      "path": "docs/knowledge-bank/sources/project-website-live-audit-2026-08-14.md",
+      "title": "Live project-website audit and restored-surface close reading",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Dated rendered-page and HTTP audit of the three restored sites and the broader tracked project-site inventory, with currentness and implementation credit kept separate.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-09-14"
     },
     {
       "id": "source.protected.current-workstream.2026-07-27",
@@ -16218,6 +16231,14 @@
       "context": null
     },
     {
+      "from": "project.callnyc",
+      "type": "uses_source",
+      "to": "source.project-websites.live-audit.2026-08-14",
+      "source": "frontmatter",
+      "href": "../sources/project-website-live-audit-2026-08-14.md",
+      "context": "Rechecks the restored archive, sampled routes, accessibility debt, dependency decay, and current-service boundary."
+    },
+    {
       "from": "project.fair-rent-nyc",
       "type": "informed_by",
       "to": "research.nycac.frontline-advocacy.2026-08-12",
@@ -16352,6 +16373,14 @@
       "source": "frontmatter",
       "href": "../capabilities/participatory-public-systems.md",
       "context": null
+    },
+    {
+      "from": "project.kc-town-hall",
+      "type": "uses_source",
+      "to": "source.project-websites.live-audit.2026-08-14",
+      "source": "frontmatter",
+      "href": "../sources/project-website-live-audit-2026-08-14.md",
+      "context": "Records the restored historical public surface, resident-service pathways, technical observations, and currentness boundary."
     },
     {
       "from": "project.kc-town-hall.tired-of-tires",
@@ -16688,6 +16717,14 @@
       "source": "frontmatter",
       "href": "../methods/wowlist-relational-curation.md",
       "context": "Documents the invitation, onboarding, editorial, explainable-discovery, and maintenance practices that made the product socially operative."
+    },
+    {
+      "from": "project.wowlist",
+      "type": "uses_source",
+      "to": "source.project-websites.live-audit.2026-08-14",
+      "source": "frontmatter",
+      "href": "../sources/project-website-live-audit-2026-08-14.md",
+      "context": "Rechecks the restored public surface, its shared provenance, noindex state, consent language, and launch observations."
     },
     {
       "from": "project.wowlist",
@@ -18415,6 +18452,30 @@
       "to": "research.professional-record-promotion.2026-08-03",
       "source": "frontmatter",
       "href": "../../research-runs/professional-record-promotion-2026-08-03.md",
+      "context": null
+    },
+    {
+      "from": "source.project-websites.live-audit.2026-08-14",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "source.project-websites.live-audit.2026-08-14",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "source.project-websites.live-audit.2026-08-14",
+      "type": "related_to",
+      "to": "project.wowlist",
+      "source": "frontmatter",
+      "href": "../projects/wowlist-orientation.md",
       "context": null
     },
     {
@@ -22353,6 +22414,15 @@
     {
       "fromPath": "docs/knowledge-bank/projects/callnyc.md",
       "from": "project.callnyc",
+      "toPath": "docs/knowledge-bank/assets/digital-district-photo.md",
+      "to": "asset.photo.digital-district.001",
+      "fragment": "what-it-does-not-establish",
+      "line": 114,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/callnyc.md",
+      "from": "project.callnyc",
       "toPath": "docs/knowledge-bank/events/nycc-constituent-services-hackathon-2016.md",
       "to": "event.nycc.constituent-services-hackathon.2016",
       "fragment": "source-basis",
@@ -22380,10 +22450,10 @@
     {
       "fromPath": "docs/knowledge-bank/projects/callnyc.md",
       "from": "project.callnyc",
-      "toPath": "docs/knowledge-bank/assets/digital-district-photo.md",
-      "to": "asset.photo.digital-district.001",
-      "fragment": "what-it-does-not-establish",
-      "line": 99,
+      "toPath": "docs/knowledge-bank/sources/project-website-live-audit-2026-08-14.md",
+      "to": "source.project-websites.live-audit.2026-08-14",
+      "fragment": "callnyc-close-reading",
+      "line": 45,
       "kind": "link"
     },
     {
@@ -22438,6 +22508,15 @@
       "to": null,
       "fragment": null,
       "line": 12,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/kc-town-hall-orientation.md",
+      "from": "project.kc-town-hall",
+      "toPath": "docs/knowledge-bank/sources/project-website-live-audit-2026-08-14.md",
+      "to": "source.project-websites.live-audit.2026-08-14",
+      "fragment": "kc-town-hall-close-reading",
+      "line": 29,
       "kind": "link"
     },
     {
@@ -22704,10 +22783,19 @@
     {
       "fromPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
       "from": "project.wowlist",
+      "toPath": "docs/knowledge-bank/sources/project-website-live-audit-2026-08-14.md",
+      "to": "source.project-websites.live-audit.2026-08-14",
+      "fragment": "wow-list-close-reading",
+      "line": 19,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
+      "from": "project.wowlist",
       "toPath": "docs/knowledge-bank/methods/wowlist-relational-curation.md",
       "to": "method.wowlist-relational-curation",
       "fragment": null,
-      "line": 20,
+      "line": 28,
       "kind": "link"
     },
     {
@@ -22716,7 +22804,7 @@
       "toPath": "docs/knowledge-bank/methods/sunday-dinner-wowlist-nycac-synergy.md",
       "to": "method.sunday-dinner-wowlist-nycac-synergy",
       "fragment": null,
-      "line": 22,
+      "line": 30,
       "kind": "link"
     },
     {
@@ -22725,7 +22813,7 @@
       "toPath": "docs/knowledge-bank/sources/wowlist-knowledge-repository-2026.md",
       "to": "source.wowlist.knowledge-repository.2026",
       "fragment": null,
-      "line": 25,
+      "line": 33,
       "kind": "link"
     },
     {
@@ -22734,7 +22822,7 @@
       "toPath": "docs/knowledge-bank/applications/wowlist-senior-product-manager-oti-782366.md",
       "to": "application.wowlist.senior-product-manager-oti-782366",
       "fragment": null,
-      "line": 30,
+      "line": 38,
       "kind": "link"
     },
     {
@@ -23086,6 +23174,15 @@
       "to": null,
       "fragment": null,
       "line": 19,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/project-website-live-audit-2026-08-14.md",
+      "from": "source.project-websites.live-audit.2026-08-14",
+      "toPath": "docs/knowledge-bank/data/project-website-live-inventory-2026-08-14.json",
+      "to": null,
+      "fragment": null,
+      "line": 13,
       "kind": "link"
     },
     {

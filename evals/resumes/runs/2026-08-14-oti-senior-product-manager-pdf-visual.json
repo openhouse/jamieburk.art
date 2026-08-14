@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.nyc-oti.senior-product-manager.782366.pdf-visual",
-  "inspectedAt": "2026-08-14T17:32:00-04:00",
+  "inspectedAt": "2026-08-14T18:32:00-04:00",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy for this opportunity",
     "revisionUnchangedAfterExport": true,
@@ -9,17 +9,17 @@
   },
   "markdown": {
     "path": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
-    "sha256": "91850899da1d5b1a98a5b05088646227d10055b1ca5e9a0c7920e3de256d3590"
+    "sha256": "df1b441f31c2aa79cdf55a99792f8e86efe9abefbaca5e495e4380410052e9ee"
   },
   "pdf": {
     "path": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf",
-    "sha256": "6312456b47cc15debff0cc2055cb3d3ad592c0bb8dcd217c7f38733247dbacd8",
-    "bytes": 91453,
+    "sha256": "dcdf4ee1e816ddbd2bfa440a9e5f4a439a7506e28dde2a1815eda82fce180499",
+    "bytes": 96900,
     "pages": 2,
     "pageSize": "US Letter"
   },
   "inspection": {
-    "method": "Exported from the native Google Docs working copy, rasterized every page at 120 DPI, and visually inspected at original detail.",
+    "method": "Exported from the native Google Docs working copy, rasterized every page at 144 DPI, visually inspected at original detail, and checked for preserved PDF link annotations.",
     "allPagesRasterized": true,
     "actualNamedPeopleParticipated": false,
     "pages": [

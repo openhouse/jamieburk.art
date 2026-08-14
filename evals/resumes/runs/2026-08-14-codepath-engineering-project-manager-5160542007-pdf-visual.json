@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.codepath.engineering-project-manager.5160542007.pdf-visual",
-  "inspectedAt": "2026-08-14T17:32:00-04:00",
+  "inspectedAt": "2026-08-14T18:32:00-04:00",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy for this opportunity",
     "revisionUnchangedAfterExport": true,
@@ -9,17 +9,17 @@
   },
   "markdown": {
     "path": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.md",
-    "sha256": "680f9f92f734135b21784b646eea4e55090f8dcdca5708f8b99d0603534cc121"
+    "sha256": "c4011bdcc109dc52d5af7380f0779d33568e2acd589514a23b6c612923bd78b1"
   },
   "pdf": {
     "path": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.pdf",
-    "sha256": "2c0189c34fbaf278ae2361191f9927d386b47099f5e095bc8b7d2fd502cdfc66",
-    "bytes": 81434,
+    "sha256": "ae20009efe2275b54b6e994996279341d875fbb51fe3dcbd0070115741eeb269",
+    "bytes": 85972,
     "pages": 2,
     "pageSize": "US Letter"
   },
   "inspection": {
-    "method": "Exported from the native Google Docs working copy, rasterized every page at 120 DPI, and visually inspected at original detail.",
+    "method": "Exported from the native Google Docs working copy, rasterized every page at 144 DPI, visually inspected at original detail, and checked for preserved PDF link annotations.",
     "allPagesRasterized": true,
     "actualNamedPeopleParticipated": false,
     "pages": [

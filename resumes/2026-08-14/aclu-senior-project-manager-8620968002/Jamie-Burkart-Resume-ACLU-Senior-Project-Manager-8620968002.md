@@ -25,9 +25,9 @@ New York, NY / Remote | 2012–Present
 
 - Lead complex web, information, and operating-system implementations from discovery through business requirements, information architecture, technical scope, delivery plans, testing, rollout, adoption, maintenance, and handoff.
 - Facilitate stakeholder alignment and translate different professional languages into usable plans, interfaces, workflows, training materials, decision logs, and accountable next steps.
-- Led long-running e-commerce, analytics, content, marketing, and operational improvements for Harry J. Epstein Company, contributing to a period of 2x revenue growth while helping an 80+ year-old legacy business modernize its customer and internal workflows.
+- Led long-running e-commerce, analytics, content, marketing, and operational improvements for [Harry J. Epstein Company](https://www.harryepstein.com/), contributing to a period of 2x revenue growth while helping an 80+ year-old legacy business modernize its customer and internal workflows.
 
-### NYC Artist Coalition / FairRentNYC — Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead
+### [NYC Artist Coalition](https://nycartc.com/) / [FairRentNYC](https://fairrentnyc.nycartc.com/) — Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead
 
 New York, NY | 2017–Present
 
@@ -35,20 +35,20 @@ New York, NY | 2017–Present
 - Built and stewarded 30+ pages of shared campaign memory for a 2026 Commercial Rent Stabilization collaboration, connecting running minutes, decisions, action items, legal and policy questions, media assets, public-data framing, and city/state strategy lanes.
 - Facilitate challenging meetings; brief and work directly with elected officials and staff; maintain tact and confidentiality across public and protected information; and represent collective work in testimony, presentations, and press without claiming sole campaign outcomes.
 
-### KC Town Hall LLC — Co-Founder & Project Manager, Historic Restoration / Mixed-Use Development
+### [KC Town Hall LLC](https://kctownhall.com/) — Co-Founder & Project Manager, Historic Restoration / Mixed-Use Development
 
 Kansas City, MO | 2015–2024
 
 - Co-led strategy, planning, public-benefit documentation, vendor coordination, field implementation, and municipal compliance for adaptive reuse of an approximately 6,500 sq. ft. historic building into four commercial spaces and three homes.
 - Co-developed the successful CCED proposal and served as the City's named developer/presenter for a $490,539 public funding request; remained a documented point of contact through M/WBE and CREO compliance progress and later transitioned the project to a mission-aligned organization.
 
-### WOWList.org — Co-Founder, Product & Community Systems
+### [WOWList.org](https://wowlist.org/) — Co-Founder, Product & Community Systems
 
 New York, NY / Remote | 2015–2020
 
 - Co-founded, co-built, and operated with Richard Caceres a community-calendar platform, coordinating technical work, organizer needs, public communication, onboarding, support, adoption, and distributed maintenance across approximately 35 city ecosystems.
 
-### CallNYC.org — Civic-Tech Builder & Product Translator
+### [CallNYC.org](https://callnyc.org/) — Civic-Tech Builder & Product Translator
 
 New York, NY | 2016
 

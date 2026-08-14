@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.benepass.product-operations-manager.7f963a7a.pdf-visual",
-  "inspectedAt": "2026-08-14T17:32:00-04:00",
+  "inspectedAt": "2026-08-14T18:32:00-04:00",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy for this opportunity",
     "revisionUnchangedAfterExport": true,
@@ -9,17 +9,17 @@
   },
   "markdown": {
     "path": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.md",
-    "sha256": "2fbb5028687a33f982968c8878c642a03a4ba5ff2333c383ed7d168babf67141"
+    "sha256": "6ed61c8b07f9a6c5dbee80d75446e026dbaca06834892c2dadae3aef9b32e601"
   },
   "pdf": {
     "path": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.pdf",
-    "sha256": "951ad5f8f5c77962b70921d67789367bdaf27dbb2bd7ef9c4c730700c8f585f4",
-    "bytes": 82464,
+    "sha256": "5e865aaa4759eacbe48025cc295574d07ef6ee7392f04d7090d620aebe1cd646",
+    "bytes": 87038,
     "pages": 2,
     "pageSize": "US Letter"
   },
   "inspection": {
-    "method": "Exported from the native Google Docs working copy, rasterized every page at 120 DPI, and visually inspected at original detail; PDF text coordinates confirmed the expected 36 point top margin.",
+    "method": "Exported from the native Google Docs working copy, rasterized every page at 144 DPI, visually inspected at original detail, checked for preserved PDF link annotations, and confirmed against the expected 36 point top margin.",
     "allPagesRasterized": true,
     "actualNamedPeopleParticipated": false,
     "pages": [

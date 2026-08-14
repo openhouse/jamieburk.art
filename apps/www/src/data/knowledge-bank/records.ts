@@ -31,6 +31,7 @@ import { wowListFacebookPostKnowledge } from "./wowlist-facebook-posts-2026-07.t
 import { wowListSocialPopulationJuly2026 } from "./wowlist-social-population-2026-07.ts";
 import { wowListSocialPracticesAugust2026 } from "./wowlist-social-practices-2026-08.ts";
 import { projectCompositionAugust2026 } from "./project-composition-2026-08.ts";
+import { projectWebsiteKnowledgeAugust2026 } from "./project-websites-2026-08.ts";
 import { wowListProductFitAugust2026 } from "./wowlist-product-fit-2026-08.ts";
 
 const knowledgeBankInput = {
@@ -63,6 +64,7 @@ const knowledgeBankInput = {
     ...wowListSocialPopulationJuly2026.intakeItems,
     ...wowListSocialPracticesAugust2026.intakeItems,
     ...projectCompositionAugust2026.intakeItems,
+    ...projectWebsiteKnowledgeAugust2026.intakeItems,
     ...kcTownHallCouncilFunding.intakeItems,
     ...kcTownHallFieldPractice.intakeItems,
     ...kcTownHallResidentServiceAugust2026.intakeItems,
@@ -113,6 +115,7 @@ const knowledgeBankInput = {
     ...wowListSocialPopulationJuly2026.observations,
     ...wowListSocialPracticesAugust2026.observations,
     ...projectCompositionAugust2026.observations,
+    ...projectWebsiteKnowledgeAugust2026.observations,
     ...kcTownHallCouncilFunding.observations,
     ...kcTownHallFieldPractice.observations,
     ...kcTownHallResidentServiceAugust2026.observations,
@@ -287,7 +290,8 @@ const knowledgeBankInput = {
     ...nycacSocialPopulationJuly2026.sources,
     ...nycacSourceExpansion.sources,
     ...nycacSourceExpansionII.sources,
-    ...nycacPressArchive.sources
+    ...nycacPressArchive.sources,
+    ...projectWebsiteKnowledgeAugust2026.sources
   ],
   entities: [...agencyGraph.entities, ...kcTownHallCouncilFunding.entities],
   agencyRelations: [
@@ -414,6 +418,7 @@ const knowledgeBankInput = {
     ...wowListSocialPopulationJuly2026.claims,
     ...wowListSocialPracticesAugust2026.claims,
     ...projectCompositionAugust2026.claims,
+    ...projectWebsiteKnowledgeAugust2026.claims,
     ...kcTownHallCouncilFunding.claims,
     ...kcTownHallFieldPractice.claims,
     ...kcTownHallResidentServiceAugust2026.claims,
@@ -484,6 +489,7 @@ const knowledgeBankInput = {
     ...wowListSocialPopulationJuly2026.researchInquiries,
     ...wowListSocialPracticesAugust2026.researchInquiries,
     ...projectCompositionAugust2026.researchInquiries,
+    ...projectWebsiteKnowledgeAugust2026.researchInquiries,
     ...kcTownHallCouncilFunding.researchInquiries,
     ...kcTownHallFieldPractice.researchInquiries,
     ...kcTownHallResidentServiceAugust2026.researchInquiries,

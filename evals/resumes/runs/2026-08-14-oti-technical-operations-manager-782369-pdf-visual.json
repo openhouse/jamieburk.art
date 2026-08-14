@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.nyc-oti.technical-operations-manager.782369.pdf-visual",
-  "inspectedAt": "2026-08-14T17:32:00-04:00",
+  "inspectedAt": "2026-08-14T18:32:00-04:00",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy for this opportunity",
     "revisionUnchangedAfterExport": true,
@@ -9,17 +9,17 @@
   },
   "markdown": {
     "path": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.md",
-    "sha256": "910a521d9cb9bbdb5c1ead8e3a0a8dc96221a3517ba116d66e840c5b52e09b24"
+    "sha256": "f3c452d0e21802434e693690374625355db88dc36fb27cfeb8de406a9e0c5ca4"
   },
   "pdf": {
     "path": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.pdf",
-    "sha256": "592044e0b1f9261eec43772153a053d18282ec8de75337d245f187270ef0eff8",
-    "bytes": 84992,
+    "sha256": "4182a32ced28fe873042a6f89db1315cdfb1f2c50a0d9416cfda14ade3459f5a",
+    "bytes": 89707,
     "pages": 2,
     "pageSize": "US Letter"
   },
   "inspection": {
-    "method": "Exported from the native Google Docs working copy, rasterized every page at 120 DPI, and visually inspected at original detail.",
+    "method": "Exported from the native Google Docs working copy, rasterized every page at 144 DPI, visually inspected at original detail, and checked for preserved PDF link annotations.",
     "allPagesRasterized": true,
     "actualNamedPeopleParticipated": false,
     "pages": [

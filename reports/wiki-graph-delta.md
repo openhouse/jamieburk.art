@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `5ec4b1cde64b351859133d84f982a197fad6c03a`
-**Generation time:** 2026-08-14T16:46:21-04:00
-**Source fingerprint:** `88ebb82ccc1c3e6a67bb048cc564af27a7feb9afb49e13c16e4690f66a4f003f`
+**Source commit:** `7bb04756f7480f6d9ce370b69643ccf091900a5c`
+**Generation time:** 2026-08-14T17:40:55-04:00
+**Source fingerprint:** `631d2fa594b8cadc90dca810a030b7fadea909fcfdab19bad0f05e8224d1a1bd`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 1
+- Nodes added: 2
 - Nodes removed: 0
-- Edges added: 7
+- Edges added: 13
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 185
@@ -17,3 +17,4 @@ Compared with the graph artifact on `origin/develop`.
 ## Added nodes
 
 - `application.nyc-oti.senior-product-manager.782366`
+- `source.project-websites.live-audit.2026-08-14`

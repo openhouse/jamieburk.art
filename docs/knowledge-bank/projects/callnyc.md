@@ -5,8 +5,8 @@ kind: project
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2027-01-18
+last_reviewed: 2026-08-14
+review_by: 2026-09-14
 aliases:
   - Call NYC
   - CallNYC.org
@@ -31,6 +31,10 @@ relations:
   - type: uses_source
     target: source.callnyc.source-repository
     href: ../sources/callnyc-source-repository.md
+  - type: uses_source
+    target: source.project-websites.live-audit.2026-08-14
+    href: ../sources/project-website-live-audit-2026-08-14.md
+    context: Rechecks the restored archive, sampled routes, accessibility debt, dependency decay, and current-service boundary.
   - type: related_to
     target: decision.callnyc.issue-pathways
     href: ../decisions/callnyc-issue-pathways.md
@@ -79,6 +83,21 @@ and the [active chronology correction](../corrections/callnyc-years-2026.md).
 
 CallNYC is an archived independent prototype. It was not an official Council
 product, a documented formal submission, or a documented winner.
+
+## Restored public surface - August 14, 2026
+
+[callnyc.org](https://callnyc.org/) is again reachable and opens with the
+necessary “Archived project demo (snapshot). Not official, not current”
+boundary. The restored interface keeps its central product decision visible:
+residents can begin with a recognizable issue, move into an issue pathway, and
+see district-office context without first learning the CouncilStat dataset.
+
+Twelve sampled internal routes returned `200`, but the archive also shows
+maintenance debt: images lack alternative text, an old font call is blocked as
+mixed content, and some portrait or map dependencies no longer resolve.
+Historical officeholders, statistics, categories, and telephone numbers remain
+archive material, not present-day resident guidance. See the [dated close
+reading](../sources/project-website-live-audit-2026-08-14.md#callnyc-close-reading).
 
 ## Source inventory
 
