@@ -47,6 +47,14 @@ test("protected local paths are rejected from public-reader evidence", () => {
   assert.ok(validation.issues.some((issue) => issue.includes("protected local path")));
 });
 
+test("a stale public portfolio snapshot fails closed", () => {
+  const suite = loadNamedHiringSuite();
+  const run = clone(loadNamedHiringRun());
+  run.portfolioSnapshotHash = "0".repeat(64);
+  const validation = validateNamedHiringRun({ suite, run });
+  assert.ok(validation.issues.some((issue) => issue.includes("current public hiring surface")));
+});
+
 test("reader isolation and no-repository rules are invariant", () => {
   const suite = clone(loadNamedHiringSuite());
   const run = loadNamedHiringRun();

@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "suiteId": "named-public-hiring-readers-2026-08-13",
+  "runId": "named-readers-final-eb2aa0c54",
+  "evaluatedGitRev": "eb2aa0c54493e72e7e22dc0f8595f209ba7b196a",
+  "evaluatedUrl": "https://staging-a.jamieburk.art",
+  "portfolioSnapshotHash": "05205505539fc365af60fd8b9f4e6533889937387b8338490405cf67f704d70d",
+  "runDate": "2026-08-13",
+  "method": "Six sequential sandboxed public-web-only tasks, one separate task per unique named person; Lisa Gelobter returned separate decisions for two OTI roles. Judges received no repository, Wiki, private evidence, or prior judge output.",
+  "uniqueReaderCount": 6,
+  "evaluationCount": 7,
+  "passCount": 0,
+  "failCount": 7,
+  "suiteVerdict": "fail",
+  "allMustPass": true,
+  "results": [
+    {
+      "gateId": "gate.aclu-national-campaigns.deirdre-schifeling",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.9,
+      "primaryBlocker": "No single institutional-scale campaign-operations record joins scope, schedule, metrics, executive communications, budget, procurement, and invoice responsibility.",
+      "gapClass": "portfolio-or-experience-unresolved"
+    },
+    {
+      "gateId": "gate.codepath-ai-operations.quinton-ma",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.97,
+      "primaryBlocker": "No personally shipped professional LLM or agent workflow with real operational users, tools or APIs, production quality gates, adoption, handoff, and measured change.",
+      "gapClass": "mandatory-experience-unverified"
+    },
+    {
+      "gateId": "gate.codepath-ai-operations.brian-madigan",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.95,
+      "primaryBlocker": "No production AI adoption case demonstrating reliable operation, changed team behavior, reusable capability, and measurable organizational value.",
+      "gapClass": "mandatory-experience-unverified"
+    },
+    {
+      "gateId": "gate.codepath-engineering.zack-parker",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.93,
+      "primaryBlocker": "No issue-to-fix trace showing defect reproduction, prioritization, stack-trace interpretation, test authorship, routing, and verified closure.",
+      "gapClass": "mandatory-experience-unverified"
+    },
+    {
+      "gateId": "gate.codepath-engineering.chris-coleman",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.95,
+      "primaryBlocker": "No end-to-end quality case connects hands-on QA and regression protection to product reliability or learner outcomes.",
+      "gapClass": "mandatory-experience-unverified"
+    },
+    {
+      "gateId": "gate.oti-senior-product.lisa-gelobter",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.93,
+      "primaryBlocker": "No complete senior-product record proves resident discovery, prioritization, MVP tradeoffs, cross-functional authority, accessibility, instrumentation, launch learning, and civil-service eligibility.",
+      "gapClass": "portfolio-and-eligibility-unresolved"
+    },
+    {
+      "gateId": "gate.oti-technical-operations.lisa-gelobter",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.99,
+      "primaryBlocker": "The requisition is expired; a future equivalent would still need an artifact-level concurrent-delivery, hiring or onboarding, metrics, and procurement operating case.",
+      "gapClass": "role-closed-and-portfolio-or-experience-unresolved"
+    }
+  ],
+  "disclaimer": "Synthetic public-context evaluations only; not the named people's participation, opinions, endorsements, or actual hiring decisions."
+}

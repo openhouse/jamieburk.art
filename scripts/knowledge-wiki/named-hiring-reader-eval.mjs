@@ -76,8 +76,18 @@ export function validateNamedHiringRun({ repoRoot = defaultRepoRoot, suite, run 
   add(run?.suiteId === suite?.id, "run suite id must match contract");
   add(/^[0-9a-f]{40}$/.test(run?.evaluatedGitRev ?? ""), "evaluated Git revision must be a full SHA");
   add(/^https:\/\//.test(run?.evaluatedUrl ?? ""), "evaluated URL must be public HTTPS");
+  add(/^[0-9a-f]{64}$/.test(run?.portfolioSnapshotHash ?? ""), "portfolio snapshot hash must be SHA-256");
   add(run?.allMustPass === true, "run must preserve all-must-pass policy");
   add(!protectedPathPattern.test(JSON.stringify(run)), "run contains a protected local path or secret marker");
+
+  const publicReportPath = "reports/hiring-acceptance-public.json";
+  if (existsSync(path.join(repoRoot, publicReportPath))) {
+    const publicReport = readJson(repoRoot, publicReportPath);
+    add(
+      run?.portfolioSnapshotHash === publicReport?.portfolioSnapshotHash,
+      "run portfolio snapshot does not match the current public hiring surface"
+    );
+  }
 
   const results = Array.isArray(run?.results) ? run.results : [];
   const resultIds = results.map((result) => result.gateId);
