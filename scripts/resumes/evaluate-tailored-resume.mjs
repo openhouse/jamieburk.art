@@ -9,6 +9,8 @@ const rubricPath = path.join(
   "evals/resumes/nyc-oti-senior-product-manager-782366.json"
 );
 const rubric = JSON.parse(readFileSync(rubricPath, "utf8"));
+const politicoArticleUrl =
+  "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf";
 
 export function evaluateResume(resumeText, sourcePath = rubric.resumePath) {
   const normalized = resumeText.replace(/\r\n/g, "\n");
@@ -140,14 +142,22 @@ export function evaluateResume(resumeText, sourcePath = rubric.resumePath) {
       detail: "Surfaces education, tenure, systems architecture, and infrastructure experience for employer review."
     },
     {
+      id: "direct-source-link-and-concise-transition",
+      pass:
+        normalized.includes(`[Politico New York](${politicoArticleUrl})`) &&
+        /later transitioned the project to a mission-aligned organization/i.test(plainText) &&
+        !/The award was not disbursed to the project\./i.test(plainText),
+      detail: "Links the contemporaneous Politico article directly and keeps the KC Town Hall transition concise."
+    },
+    {
       id: "collective-credit-and-claim-safety",
       pass:
         /Richard Caceres/i.test(plainText) &&
         /collective credit/i.test(plainText) &&
-        /award was not disbursed/i.test(plainText) &&
+        /later transitioned the project to a mission-aligned organization/i.test(plainText) &&
         /distinguish these activity counts/i.test(plainText) &&
         !/(?:guaranteed|solely created|single-handedly|caused 2x|WCAG compliant|Section 508 compliant)/i.test(plainText),
-      detail: "Preserves co-builder credit, metric boundaries, funding status, and anti-overclaim language."
+      detail: "Preserves co-builder credit, metric boundaries, the project transition, and anti-overclaim language."
     }
   ];
 

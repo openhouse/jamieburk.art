@@ -47,7 +47,7 @@ New York, NY / Remote | 2015–2020
 
 New York, NY | 2016
 
-- Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.
+- Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in [Politico New York](https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf).
 - Took the civic prototype from problem definition and information architecture through implementation and public release. The archived site is unofficial and not a current City service.
 
 ### KC Town Hall LLC — Co-Founder & Project Manager, Historic Restoration / Mixed-Use Development
@@ -56,7 +56,7 @@ Kansas City, MO | 2015–2024
 
 - Co-led planning, public-benefit documentation, vendor coordination, and municipal compliance for adaptive reuse of an approximately 6,500 sq. ft. historic building into four commercial spaces and three homes.
 - Helped deliver Tired of Tires, a recurring free resident service connecting household eligibility, form and phone intake, scheduled field collection, City recycling coordination, volunteer participation, and public result reporting; public records document Jamie's participation in pickup operations.
-- Co-developed the successful CCED proposal and served as the City's named developer/presenter for a $490,539 public funding request, remained a documented developer point of contact through compliance progress, and later transitioned the project to a mission-aligned organization. The award was not disbursed to the project.
+- Co-developed the successful CCED proposal and served as the City's named developer/presenter for a $490,539 public funding request, remained a documented developer point of contact through compliance progress, and later transitioned the project to a mission-aligned organization.
 
 ## Additional Leadership
 

@@ -15,6 +15,8 @@ const resumePath = path.join(
   "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md"
 );
 const resume = readFileSync(resumePath, "utf8");
+const politicoArticleUrl =
+  "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf";
 
 test("the OTI tailored resume passes every deterministic application gate", () => {
   const result = evaluateResume(resume);
@@ -27,6 +29,51 @@ test("the OTI PDF is current, visually inspected, and installed as the public do
   assert.equal(result.overall, "pass", JSON.stringify(result.checks, null, 2));
   assert.equal(result.passedChecks, result.totalChecks);
 });
+
+test("the OTI resume links the Politico article and keeps the KC Town Hall transition concise", () => {
+  const result = evaluateResume(resume);
+  const sourceAccess = result.checks.find(
+    (check) => check.id === "direct-source-link-and-concise-transition"
+  );
+
+  assert.equal(sourceAccess?.pass, true, JSON.stringify(result.checks, null, 2));
+  assert.match(
+    resume,
+    new RegExp(`\\[Politico New York\\]\\(${politicoArticleUrl.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\$&")}\\)`)
+  );
+  assert.doesNotMatch(resume, /The award was not disbursed to the project\./i);
+
+  const unlinked = resume.replace(
+    `[Politico New York](${politicoArticleUrl})`,
+    "Politico New York"
+  );
+  const verbose = `${resume}\nThe award was not disbursed to the project.\n`;
+
+  assert.equal(
+    evaluateResume(unlinked).checks.find(
+      (check) => check.id === "direct-source-link-and-concise-transition"
+    )?.pass,
+    false
+  );
+  assert.equal(
+    evaluateResume(verbose).checks.find(
+      (check) => check.id === "direct-source-link-and-concise-transition"
+    )?.pass,
+    false
+  );
+});
+
+test("the OTI PDF embeds the Politico article link", () => {
+  const pdf = readFileSync(
+    path.join(
+      repoRoot,
+      "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf"
+    )
+  ).toString("latin1");
+
+  assert.ok(pdf.includes(politicoArticleUrl));
+});
+
 test("the evaluator rejects loss of the exact target title", () => {
   const mutation = resume.replaceAll("Senior Product Manager", "Product Lead");
   const result = evaluateResume(mutation, "mutation:no-target-title");
