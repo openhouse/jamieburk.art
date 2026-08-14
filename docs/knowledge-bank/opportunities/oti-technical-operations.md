@@ -60,7 +60,7 @@ role_requirements:
       - capability.technical-operations
     public_evidence:
       - route: /work/technical-operations
-        needle: Coordinate delivery across concurrent projects
+        needle: Coordinate the smallest useful release
     status: visible-proven
     gap_type: none
     next_action: Lead with one concrete delivery example in the application.

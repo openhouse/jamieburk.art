@@ -59,7 +59,7 @@ test("removing a declared public proof lowers observed requirement coverage", ()
   const routePath = path.join(root, "apps/www/src/app/work/technical-operations/page.tsx");
   writeFileSync(
     routePath,
-    readFileSync(routePath, "utf8").replaceAll("Coordinate delivery across concurrent projects", "")
+    readFileSync(routePath, "utf8").replaceAll("Coordinate the smallest useful release", "")
   );
   const after = evaluatePublicHiring(root).report;
   const beforeOti = before.opportunities.find(
