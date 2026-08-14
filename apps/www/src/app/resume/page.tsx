@@ -58,6 +58,12 @@ export default function ResumePage() {
                   projection="resume-html"
                   surface="/resume"
                 />
+              ) : proof.id === "wowlist-community-platform" ? (
+                <Claim
+                  claimId="CLM-WOWLIST-NATURAL-LANGUAGE-PRODUCT-DECISION-2026"
+                  projection="resume-html"
+                  surface="/resume"
+                />
               ) : (
                 proof.shortWording ?? proof.publicWording
               )}

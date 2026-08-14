@@ -4,6 +4,8 @@ const reviewedAt = "2026-08-11";
 const jobSourceId = "SRC-NYC-OTI-SENIOR-PRODUCT-MANAGER-782366";
 const claimId = "CLM-WOWLIST-SENIOR-PRODUCT-PRACTICE-2026";
 const inquiryId = "INQ-WOWLIST-OTI-SENIOR-PRODUCT-GAPS-2026";
+const productDecisionClaimId = "CLM-WOWLIST-NATURAL-LANGUAGE-PRODUCT-DECISION-2026";
+const productAccountSourceId = "SRC-WOWLIST-PRODUCT-DESIGN-ACCOUNT-2026";
 
 const intakeItems: KnowledgeBank["intakeItems"] = [
   {
@@ -22,11 +24,13 @@ const intakeItems: KnowledgeBank["intakeItems"] = [
       "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
       "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
       "SRC-WOWLIST-X-POPULATION-MANIFEST",
-      "SRC-WOWLIST-PRODUCTION-DATABASE-2017-07-22"
+      "SRC-WOWLIST-PRODUCTION-DATABASE-2017-07-22",
+      productAccountSourceId
     ],
     observationIds: [
       "OBS-OTI-SENIOR-PRODUCT-MANAGER-REQUIREMENTS-2026",
-      "OBS-WOWLIST-SENIOR-PRODUCT-PRACTICE-2026"
+      "OBS-WOWLIST-SENIOR-PRODUCT-PRACTICE-2026",
+      "OBS-WOWLIST-NATURAL-LANGUAGE-PRODUCT-DECISION-2026"
     ],
     researchInquiryIds: [inquiryId],
     boundaries: [
@@ -77,6 +81,27 @@ const observations: KnowledgeBank["observations"] = [
       "The evidence supports a strong fit interpretation, not an employer endorsement or hiring outcome.",
       "WOW List alone does not establish formal agency, policy, legal, executive, procurement, personnel-management, or accessibility-compliance experience."
     ]
+  },
+  {
+    id: "OBS-WOWLIST-NATURAL-LANGUAGE-PRODUCT-DECISION-2026",
+    intakeId: "INTAKE-WOWLIST-OTI-SENIOR-PRODUCT-FIT-2026",
+    sourceId: productAccountSourceId,
+    comparisonSourceIds: [
+      "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+      "SRC-WOWLIST-X-POPULATION-MANIFEST"
+    ],
+    project: "wowlist",
+    kind: "bounded-inference",
+    text: "Jamie's first-person product-design account describes a WOW List post as one collaboratively editable natural-language text field rather than a complex event form. The public product record corroborates event contribution, profiles, followed lists, weekly email, and organizer use.",
+    locator: "Public-safe first-person product account compared with public product-support records.",
+    status: "corroborated",
+    publicSafe: true,
+    claimIds: [productDecisionClaimId],
+    researchInquiryIds: [inquiryId],
+    limitations: [
+      "The exact allocation of implementation work between co-builders is not established by these sources.",
+      "This decision record does not establish a formal moderated-research protocol, accessibility conformance, or causal community outcome."
+    ]
   }
 ];
 
@@ -106,6 +131,31 @@ const sources: KnowledgeBank["sources"] = [
       "an employer endorsement",
       "historical WOW List accessibility compliance"
     ]
+  },
+  {
+    id: productAccountSourceId,
+    title: "Jamie Burkart first-person WOW List product-design account",
+    author: "Jamie Burkart",
+    kind: "research-run",
+    visibility: "protected",
+    preservationStatus: "private",
+    publishedAt: "2026-08-13",
+    accessedAt: "2026-08-13",
+    publicCitation: "Jamie Burkart, first-person WOW List product-design account, August 13, 2026; public-safe summary retained.",
+    publicNote: "The account identifies the deliberately light natural-language entry model; adjacent public and contemporaneous records supply corroboration and boundaries.",
+    supportsGenerally: [
+      "collaboratively editable event text",
+      "natural-language entry",
+      "intentional contrast with complex event forms"
+    ],
+    doesNotEstablish: [
+      "independent verification of every interface state",
+      "individual implementation authorship",
+      "formal user-research protocol",
+      "accessibility conformance",
+      "causal community outcomes"
+    ],
+    protectedLocatorId: "WOWLIST-PRODUCT-DESIGN-ACCOUNT-2026"
   }
 ];
 
@@ -153,6 +203,66 @@ const claims: KnowledgeBank["claims"] = [
     ],
     researchInquiryIds: [inquiryId],
     reviewedAt,
+    reviewedBy: ["Jamie Burkart", "Codex source-backed application review"]
+  },
+  {
+    id: productDecisionClaimId,
+    project: "wowlist",
+    internalClaim: "WOW List made an intentional natural-language product decision: collaboratively editable event text became the basis for followable keyword-community and distribution workflows rather than forcing organizers through a complex event form.",
+    status: "confirmed-with-boundary",
+    projections: [
+      {
+        key: "case-study",
+        text: "The product decision was intentionally light: rather than force organizers through a complex event form, WOW List treated each post as collaboratively editable natural-language text. Natural-language processing and followable keyword communities turned that writing into event distribution, profiles, followed lists, and weekly email.",
+        status: "active",
+        citationRequired: true,
+        surfaces: ["/work/wowlist"]
+      },
+      {
+        key: "resume-html",
+        text: "Co-founded and co-built WOW List with Richard Caceres, connecting a natural-language community-calendar product with organizer discovery, adoption, public communication, instrumentation, and long-term stewardship.",
+        status: "active",
+        citationRequired: false,
+        surfaces: ["/resume"]
+      }
+    ],
+    evidence: [
+      {
+        sourceId: productAccountSourceId,
+        relationship: "private-support",
+        supports: ["collaboratively editable text field", "intentional natural-language entry decision"],
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+        relationship: "corroborating",
+        supports: ["event contribution", "profiles", "followed lists", "weekly email"],
+        confidence: "high",
+        renderCitation: true
+      },
+      {
+        sourceId: "SRC-WOWLIST-X-POPULATION-MANIFEST",
+        relationship: "context",
+        supports: ["bounded public product-operating record", "organizer-facing workflows"],
+        confidence: "high",
+        renderCitation: true
+      }
+    ],
+    boundaries: [
+      "Keep product and implementation credit shared with Richard Caceres and the people who used, maintained, and extended local calendars.",
+      "The first-person account establishes Jamie's product rationale; adjacent public records corroborate the product features and organizer workflows.",
+      "This record does not establish formal moderated research, historical accessibility conformance, retention, or causal community outcomes.",
+      "Product fit does not establish civil-service eligibility or guarantee an employer decision."
+    ],
+    antiClaims: [
+      "Jamie alone designed or implemented every product feature.",
+      "Natural-language entry eliminated all organizer burden.",
+      "Historical activity counts prove resident outcomes.",
+      "WOW List proves WCAG or Section 508 compliance."
+    ],
+    researchInquiryIds: [inquiryId],
+    reviewedAt: "2026-08-13",
     reviewedBy: ["Jamie Burkart", "Codex source-backed application review"]
   }
 ];

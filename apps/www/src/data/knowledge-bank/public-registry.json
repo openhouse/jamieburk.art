@@ -2671,6 +2671,60 @@
       ]
     },
     {
+      "id": "CLM-WOWLIST-NATURAL-LANGUAGE-PRODUCT-DECISION-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The product decision was intentionally light: rather than force organizers through a complex event form, WOW List treated each post as collaboratively editable natural-language text. Natural-language processing and followable keyword communities turned that writing into event distribution, profiles, followed lists, and weekly email.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        },
+        {
+          "key": "resume-html",
+          "text": "Co-founded and co-built WOW List with Richard Caceres, connecting a natural-language community-calendar product with organizer discovery, adoption, public communication, instrumentation, and long-term stewardship.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/resume"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+          "relationship": "corroborating",
+          "supports": [
+            "event contribution",
+            "profiles",
+            "followed lists",
+            "weekly email"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-X-POPULATION-MANIFEST",
+          "relationship": "context",
+          "supports": [
+            "bounded public product-operating record",
+            "organizer-facing workflows"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Keep product and implementation credit shared with Richard Caceres and the people who used, maintained, and extended local calendars.",
+        "The first-person account establishes Jamie's product rationale; adjacent public records corroborate the product features and organizer workflows.",
+        "This record does not establish formal moderated research, historical accessibility conformance, retention, or causal community outcomes.",
+        "Product fit does not establish civil-service eligibility or guarantee an employer decision."
+      ]
+    },
+    {
       "id": "CLM-NYCAC-X-RETRIEVABLE-SOCIAL-INFRASTRUCTURE",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -3275,6 +3329,15 @@
             "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
             "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
             "SRC-WOWLIST-SBDIY-ADOPTION"
+          ]
+        },
+        {
+          "id": "natural-language-product-decision",
+          "claimId": "CLM-WOWLIST-NATURAL-LANGUAGE-PRODUCT-DECISION-2026",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+            "SRC-WOWLIST-X-POPULATION-MANIFEST"
           ]
         },
         {
