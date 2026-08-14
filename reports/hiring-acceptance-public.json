@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "runId": "hiring-public-13874d63b634",
-  "generatedAt": "2026-08-14T16:26:00-04:00",
-  "candidateSha": "13874d63b634022acb476b336254f8224ed54fd9",
-  "candidatePathsClean": false,
+  "runId": "hiring-public-b1ef10fcc8f4",
+  "generatedAt": "2026-08-14T18:03:31-04:00",
+  "candidateSha": "b1ef10fcc8f4052d7ba35a22b3df49eeabafe912",
+  "candidatePathsClean": true,
   "portfolioSnapshotHash": "a6811bfb628fa2e82650663868b1ff83fd56da9ff0926e638c097cb15ed4c2aa",
   "roleContextHash": "060563fa59962bacb7e00f3ebb166f94dbcaf48e1ffcd7c714bd6c19217cd455",
   "readerContextHash": "c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702",
