@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Save NYC Spaces
 
-**Source commit:** `ad29ec83eb565e02837158b0d1fab083f2ccf6ac`
-**Generation time:** 2026-08-14T10:02:37-04:00
-**Source fingerprint:** `5b1026b1cf2184a07b46286c42990b6135e53eb3a69927bfb982415f26697768`
+**Source commit:** `747605e3c34a6426c027a1c85ff82c3a6275ac36`
+**Generation time:** 2026-08-14T11:32:41-04:00
+**Source fingerprint:** `e4fc52c24bbf54e2f4cd03c7f545b8eb1d0af9c4a3ed28af19991b37897fcb60`
 
 - [Save NYC Spaces: ali rosa salas [kwla4ltf]](../../assets/photographs/project-sites/save-nyc-spaces-ali-rosa-salas-kwla4ltfwy.md) - `related_to` (frontmatter)
 - [Save NYC Spaces: anya sapozhnikova [kvcmtdtn]](../../assets/photographs/project-sites/save-nyc-spaces-anya-sapozhnikova-kvcmtdtnpn.md) - `related_to` (frontmatter)

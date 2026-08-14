@@ -2,8 +2,8 @@
 
 # Photo knowledge health
 
-Candidate fingerprint: `6ac1e67bfed3b5936d6770d670edd9f5e611cd53c0bba6d2eb51f96a92514c07`
-Candidate files: 241
+Candidate fingerprint: `6cbd480a2b99d6b0333c668d8729de4788a093007a1141c935cac619b1dad2f8`
+Candidate files: 251
 
 | Check | State |
 |---|---|

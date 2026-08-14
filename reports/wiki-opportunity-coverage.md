@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity requirement coverage
 
-**Wiki fingerprint:** `5b1026b1cf2184a07b46286c42990b6135e53eb3a69927bfb982415f26697768`
+**Wiki fingerprint:** `e4fc52c24bbf54e2f4cd03c7f545b8eb1d0af9c4a3ed28af19991b37897fcb60`
 
 Statuses preserve the difference between visible proof, Wiki-only proof, source work, experience gaps, and hard screens.
 
@@ -68,7 +68,7 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 | Requirement | Importance | Status | Gap | Next action |
 |---|---|---|---|---|
 | `requirement.oti-senior-product-manager.end-to-end-product` | critical | visible-qualified | wording | Present one product-shaped case with Jamie's decisions, boundaries, and public launch role explicit. |
-| `requirement.oti-senior-product-manager.discovery-research` | critical | visible-weak | public-projection | Prepare a precise discovery example and distinguish direct user research from adjacent public listening. |
+| `requirement.oti-senior-product-manager.discovery-research` | critical | visible-qualified | public-projection | Use the bounded Tired of Tires service example in the application; distinguish direct field contact, project-level survey evidence, and held component-authorship details. |
 | `requirement.oti-senior-product-manager.tradeoffs-and-briefs` | critical | visible-qualified | wording | Prepare one redacted product brief and one hard scope tradeoff. |
 | `requirement.oti-senior-product-manager.agency-policy-translation` | critical | visible-qualified | none | Use collective-credit language while naming Jamie's translation and implementation role. |
 | `requirement.oti-senior-product-manager.accessibility-compliance` | critical | visible-weak | experience | Inventory direct accessibility and compliance practice; site conformance alone is not product-leadership experience. |

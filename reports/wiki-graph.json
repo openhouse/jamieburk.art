@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-14T10:02:37-04:00",
-  "sourceCommit": "ad29ec83eb565e02837158b0d1fab083f2ccf6ac",
-  "sourceFingerprint": "5b1026b1cf2184a07b46286c42990b6135e53eb3a69927bfb982415f26697768",
+  "generatedAt": "2026-08-14T11:32:41-04:00",
+  "sourceCommit": "747605e3c34a6426c027a1c85ff82c3a6275ac36",
+  "sourceFingerprint": "e4fc52c24bbf54e2f4cd03c7f545b8eb1d0af9c4a3ed28af19991b37897fcb60",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -30,6 +30,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-11",
       "reviewBy": "2026-08-14"
+    },
+    {
+      "id": "asset.design.kc-town-hall.tired-of-tires-flyer.2019.001",
+      "path": "docs/knowledge-bank/assets/graphics/kc-town-hall-tired-of-tires-flyer-2019.md",
+      "title": "Tired of Tires resident-service flyer",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe record for a cropped outreach design stating the recurring free residential tire-pickup service model.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2027-02-14"
     },
     {
       "id": "asset.graphic.kc-town-hall.walkshed.2019.001",
@@ -134,6 +147,32 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-09-26"
+    },
+    {
+      "id": "asset.photo.kc-town-hall.tired-of-tires-after.2022.001",
+      "path": "docs/knowledge-bank/assets/photographs/kc-town-hall-tired-of-tires-after-2022.md",
+      "title": "Tired of Tires collection site after removal, 2022",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe record for the matched field frame showing the same curbside collection site after tire removal.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2027-02-14"
+    },
+    {
+      "id": "asset.photo.kc-town-hall.tired-of-tires-before.2022.001",
+      "path": "docs/knowledge-bank/assets/photographs/kc-town-hall-tired-of-tires-before-2022.md",
+      "title": "Tired of Tires collection site before removal, 2022",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe record for one matched field frame showing tires at a curbside collection site before removal.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2027-02-14"
     },
     {
       "id": "asset.photo.nyc-council.field-kit.2026.001",
@@ -2756,7 +2795,7 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Dated launch-candidate edition retaining the East River homepage hero and binding five governed photographs across the homepage, work index, and situated-work case studies.",
+      "summary": "Dated launch-candidate edition retaining the East River homepage hero and binding eight governed visual occurrences across the homepage, work index, and situated-work case studies.",
       "aliases": [],
       "lastReviewed": "2026-08-13",
       "reviewBy": "2027-02-13"
@@ -3323,7 +3362,7 @@
       "sensitivity": "low",
       "summary": "Public-safe orientation to the governed relationship among private photo sources, first-class Wiki records, exact portfolio occurrences, recollection, correction, and human publication gates.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
+      "lastReviewed": "2026-08-14",
       "reviewBy": "2027-01-26"
     },
     {
@@ -4156,6 +4195,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "project.kc-town-hall.tired-of-tires",
+      "path": "docs/knowledge-bank/projects/tired-of-tires-resident-service.md",
+      "title": "Tired of Tires resident service",
+      "kind": "project",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Evidence-bounded account of a recurring free neighborhood tire-pickup service and Jamie's documented participation in its field operations.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-11-14"
+    },
+    {
       "id": "project.let-nyc-dance",
       "path": "docs/knowledge-bank/projects/let-nyc-dance.md",
       "title": "Let NYC Dance",
@@ -4320,6 +4372,32 @@
       "reviewBy": "2027-02-13"
     },
     {
+      "id": "projection.photo.kc-town-hall.tired-of-tires-after",
+      "path": "docs/knowledge-bank/projections/photography/kc-town-hall-tired-of-tires-after.md",
+      "title": "Tired of Tires after-collection occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact public occurrence binding the after-collection field frame to the KC Town Hall resident-service sequence.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2027-02-14"
+    },
+    {
+      "id": "projection.photo.kc-town-hall.tired-of-tires-before",
+      "path": "docs/knowledge-bank/projections/photography/kc-town-hall-tired-of-tires-before.md",
+      "title": "Tired of Tires before-collection occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact public occurrence binding the before-collection field frame to the KC Town Hall resident-service sequence.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2027-02-14"
+    },
+    {
       "id": "projection.photo.layout-c.home.east-river",
       "path": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
       "title": "Layout C homepage East River occurrence",
@@ -4344,6 +4422,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-13",
       "reviewBy": "2027-02-13"
+    },
+    {
+      "id": "projection.visual.kc-town-hall.tired-of-tires-flyer",
+      "path": "docs/knowledge-bank/projections/photography/kc-town-hall-tired-of-tires-flyer.md",
+      "title": "Tired of Tires resident-service flyer occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact public occurrence binding the cropped service flyer to the KC Town Hall resident-service sequence.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2027-02-14"
     },
     {
       "id": "research-inquiry.documented-canoe-bike-journeys",
@@ -4879,6 +4970,32 @@
       "reviewBy": "2026-09-26"
     },
     {
+      "id": "source.kc-town-hall.tired-of-tires-wayback.2020-10-30",
+      "path": "docs/knowledge-bank/sources/kc-town-hall-tired-of-tires-wayback-2020.md",
+      "title": "Tired of Tires public service page, archived October 30, 2020",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Public Wayback capture documenting the recurring household tire-pickup service model, shared page byline, and bounded first-party result reporting.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-11-14"
+    },
+    {
+      "id": "source.kc-town-hall.tired-of-tires.design-field-archive.2019-2022",
+      "path": "docs/knowledge-bank/sources/kc-town-hall-tired-of-tires-design-field-archive-2026.md",
+      "title": "Tired of Tires protected design and field archive",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe custody and permission record for reviewed outreach designs and one matched field-photograph pair.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-11-14"
+    },
+    {
       "id": "source.knowledge-wiki.branch-a.2026-07-19",
       "path": "docs/knowledge-bank/sources/knowledge-wiki-branch-a-2026-07-19.md",
       "title": "Frozen Knowledge Wiki branch A",
@@ -5306,6 +5423,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-13",
       "reviewBy": "2027-02-13"
+    },
+    {
+      "id": "source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14",
+      "path": "docs/knowledge-bank/sources/permissions/kc-town-hall-tired-of-tires-portfolio-2026-08-14.md",
+      "title": "Tired of Tires portfolio-derivative authorization",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe capsule recording Jamie Burkart's authorization of three exact Tired of Tires derivatives for jamieburk.art.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2027-02-14"
     },
     {
       "id": "source.photo-metadata.east-river.2022.public-safe",
@@ -5746,6 +5876,30 @@
       "context": null
     },
     {
+      "from": "asset.design.kc-town-hall.tired-of-tires-flyer.2019.001",
+      "type": "projected_to",
+      "to": "projection.visual.kc-town-hall.tired-of-tires-flyer",
+      "source": "frontmatter",
+      "href": "../../projections/photography/kc-town-hall-tired-of-tires-flyer.md",
+      "context": null
+    },
+    {
+      "from": "asset.design.kc-town-hall.tired-of-tires-flyer.2019.001",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.tired-of-tires.design-field-archive.2019-2022",
+      "source": "frontmatter",
+      "href": "../../sources/kc-town-hall-tired-of-tires-design-field-archive-2026.md",
+      "context": null
+    },
+    {
+      "from": "asset.design.kc-town-hall.tired-of-tires-flyer.2019.001",
+      "type": "uses_source",
+      "to": "source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/kc-town-hall-tired-of-tires-portfolio-2026-08-14.md",
+      "context": null
+    },
+    {
       "from": "asset.graphic.kc-town-hall.walkshed.2019.001",
       "type": "documents",
       "to": "project.kc-town-hall",
@@ -5943,6 +6097,54 @@
       "to": "source.kc-town-hall.photographic-oral-histories.2026-07",
       "source": "frontmatter",
       "href": "../../sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.tired-of-tires-after.2022.001",
+      "type": "projected_to",
+      "to": "projection.photo.kc-town-hall.tired-of-tires-after",
+      "source": "frontmatter",
+      "href": "../../projections/photography/kc-town-hall-tired-of-tires-after.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.tired-of-tires-after.2022.001",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.tired-of-tires.design-field-archive.2019-2022",
+      "source": "frontmatter",
+      "href": "../../sources/kc-town-hall-tired-of-tires-design-field-archive-2026.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.tired-of-tires-after.2022.001",
+      "type": "uses_source",
+      "to": "source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/kc-town-hall-tired-of-tires-portfolio-2026-08-14.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.tired-of-tires-before.2022.001",
+      "type": "projected_to",
+      "to": "projection.photo.kc-town-hall.tired-of-tires-before",
+      "source": "frontmatter",
+      "href": "../../projections/photography/kc-town-hall-tired-of-tires-before.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.tired-of-tires-before.2022.001",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.tired-of-tires.design-field-archive.2019-2022",
+      "source": "frontmatter",
+      "href": "../../sources/kc-town-hall-tired-of-tires-design-field-archive-2026.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.tired-of-tires-before.2022.001",
+      "type": "uses_source",
+      "to": "source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/kc-town-hall-tired-of-tires-portfolio-2026-08-14.md",
       "context": null
     },
     {
@@ -11627,6 +11829,22 @@
     {
       "from": "edition.launch.2026-08",
       "type": "related_to",
+      "to": "projection.photo.kc-town-hall.tired-of-tires-after",
+      "source": "frontmatter",
+      "href": "kc-town-hall-tired-of-tires-after.md",
+      "context": null
+    },
+    {
+      "from": "edition.launch.2026-08",
+      "type": "related_to",
+      "to": "projection.photo.kc-town-hall.tired-of-tires-before",
+      "source": "frontmatter",
+      "href": "kc-town-hall-tired-of-tires-before.md",
+      "context": null
+    },
+    {
+      "from": "edition.launch.2026-08",
+      "type": "related_to",
       "to": "projection.photo.layout-c.home.east-river",
       "source": "frontmatter",
       "href": "layout-c-home-east-river.md",
@@ -11638,6 +11856,14 @@
       "to": "projection.photo.sunday-dinner.shared-map",
       "source": "frontmatter",
       "href": "sunday-dinner-shared-map.md",
+      "context": null
+    },
+    {
+      "from": "edition.launch.2026-08",
+      "type": "related_to",
+      "to": "projection.visual.kc-town-hall.tired-of-tires-flyer",
+      "source": "frontmatter",
+      "href": "kc-town-hall-tired-of-tires-flyer.md",
       "context": null
     },
     {
@@ -13259,6 +13485,14 @@
     {
       "from": "index.knowledge-wiki.photography",
       "type": "has_asset",
+      "to": "asset.design.kc-town-hall.tired-of-tires-flyer.2019.001",
+      "source": "frontmatter",
+      "href": "../assets/graphics/kc-town-hall-tired-of-tires-flyer-2019.md",
+      "context": "Cropped resident-service promise with obsolete contact details and dates excluded."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "has_asset",
       "to": "asset.photo.east-river-manhattan-bridge.2022.001",
       "source": "frontmatter",
       "href": "../assets/photographs/east-river-manhattan-bridge-2022.md",
@@ -13271,6 +13505,22 @@
       "source": "frontmatter",
       "href": "../assets/photographs/kc-town-hall-roof-work-2019.md",
       "context": "Cleared field-implementation occurrence for the KC Town Hall case study."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "has_asset",
+      "to": "asset.photo.kc-town-hall.tired-of-tires-after.2022.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/kc-town-hall-tired-of-tires-after-2022.md",
+      "context": "Second frame in a cleared matched field pair for one collection site."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "has_asset",
+      "to": "asset.photo.kc-town-hall.tired-of-tires-before.2022.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/kc-town-hall-tired-of-tires-before-2022.md",
+      "context": "First frame in a cleared matched field pair for one collection site."
     },
     {
       "from": "index.knowledge-wiki.photography",
@@ -15082,6 +15332,14 @@
     },
     {
       "from": "opportunity.nyc-oti.senior-product-manager.782366",
+      "type": "related_to",
+      "to": "project.kc-town-hall.tired-of-tires",
+      "source": "frontmatter",
+      "href": "../projects/tired-of-tires-resident-service.md",
+      "context": "Resident-facing service model and Jamie's documented pickup participation; sole design and complete operations remain unclaimed."
+    },
+    {
+      "from": "opportunity.nyc-oti.senior-product-manager.782366",
       "type": "uses_method",
       "to": "method.source-backed-team-memory",
       "source": "frontmatter",
@@ -15163,6 +15421,14 @@
       "source": "frontmatter",
       "href": "../projects/callnyc.md",
       "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "type": "related_to",
+      "to": "project.kc-town-hall.tired-of-tires",
+      "source": "frontmatter",
+      "href": "../projects/tired-of-tires-resident-service.md",
+      "context": "Recurring service operations, field execution, intake, and City handoff for this historical benchmark."
     },
     {
       "from": "opportunity.nyc-oti.technical-operations-manager.782369",
@@ -16019,6 +16285,70 @@
       "context": null
     },
     {
+      "from": "project.kc-town-hall.tired-of-tires",
+      "type": "part_of",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "project.kc-town-hall.tired-of-tires",
+      "type": "related_to",
+      "to": "opportunity.aclu.senior-project-manager.8620968002",
+      "source": "frontmatter",
+      "href": "../opportunities/aclu-senior-project-manager.md",
+      "context": "Relevant cross-organization implementation and community-accountability evidence."
+    },
+    {
+      "from": "project.kc-town-hall.tired-of-tires",
+      "type": "related_to",
+      "to": "opportunity.benepass.product-operations.7f963a7a",
+      "source": "frontmatter",
+      "href": "../opportunities/benepass-product-operations.md",
+      "context": "Relevant service operations, intake, downstream handoff, and learning-loop evidence; not commercial benefits-platform experience."
+    },
+    {
+      "from": "project.kc-town-hall.tired-of-tires",
+      "type": "related_to",
+      "to": "opportunity.codepath.engineering-project-manager.5160542007",
+      "source": "frontmatter",
+      "href": "../opportunities/codepath-engineering-project-manager.md",
+      "context": "Secondary evidence of operating cadence and field feedback, not engineering QA or bug-pipeline proof."
+    },
+    {
+      "from": "project.kc-town-hall.tired-of-tires",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-senior-product-manager-782366.md",
+      "context": "Strong resident-facing service-design and field-delivery evidence, with individual design ownership still bounded."
+    },
+    {
+      "from": "project.kc-town-hall.tired-of-tires",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-technical-operations.md",
+      "context": "Strong recurring operations, cross-organization handoff, intake, and public-service delivery evidence for a historical benchmark."
+    },
+    {
+      "from": "project.kc-town-hall.tired-of-tires",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.tired-of-tires-wayback.2020-10-30",
+      "source": "frontmatter",
+      "href": "../sources/kc-town-hall-tired-of-tires-wayback-2020.md",
+      "context": null
+    },
+    {
+      "from": "project.kc-town-hall.tired-of-tires",
+      "type": "uses_source",
+      "to": "source.kc-town-hall.tired-of-tires.design-field-archive.2019-2022",
+      "source": "frontmatter",
+      "href": "../sources/kc-town-hall-tired-of-tires-design-field-archive-2026.md",
+      "context": null
+    },
+    {
       "from": "project.let-nyc-dance",
       "type": "part_of",
       "to": "organization.nyc-artist-coalition",
@@ -16403,6 +16733,54 @@
       "context": null
     },
     {
+      "from": "projection.photo.kc-town-hall.tired-of-tires-after",
+      "type": "related_to",
+      "to": "edition.launch.2026-08",
+      "source": "frontmatter",
+      "href": "edition-launch-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.kc-town-hall.tired-of-tires-after",
+      "type": "uses_source",
+      "to": "asset.photo.kc-town-hall.tired-of-tires-after.2022.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-tired-of-tires-after-2022.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.kc-town-hall.tired-of-tires-after",
+      "type": "uses_source",
+      "to": "source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/kc-town-hall-tired-of-tires-portfolio-2026-08-14.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.kc-town-hall.tired-of-tires-before",
+      "type": "related_to",
+      "to": "edition.launch.2026-08",
+      "source": "frontmatter",
+      "href": "edition-launch-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.kc-town-hall.tired-of-tires-before",
+      "type": "uses_source",
+      "to": "asset.photo.kc-town-hall.tired-of-tires-before.2022.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-tired-of-tires-before-2022.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.kc-town-hall.tired-of-tires-before",
+      "type": "uses_source",
+      "to": "source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/kc-town-hall-tired-of-tires-portfolio-2026-08-14.md",
+      "context": null
+    },
+    {
       "from": "projection.photo.layout-c.home.east-river",
       "type": "related_to",
       "to": "edition.layout-c.2026-07",
@@ -16456,6 +16834,30 @@
       "to": "source.permission.jamie-portfolio-album.2026-08-13",
       "source": "frontmatter",
       "href": "../../sources/permissions/jamie-portfolio-album-2026-08-13.md",
+      "context": null
+    },
+    {
+      "from": "projection.visual.kc-town-hall.tired-of-tires-flyer",
+      "type": "related_to",
+      "to": "edition.launch.2026-08",
+      "source": "frontmatter",
+      "href": "edition-launch-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "projection.visual.kc-town-hall.tired-of-tires-flyer",
+      "type": "uses_source",
+      "to": "asset.design.kc-town-hall.tired-of-tires-flyer.2019.001",
+      "source": "frontmatter",
+      "href": "../../assets/graphics/kc-town-hall-tired-of-tires-flyer-2019.md",
+      "context": null
+    },
+    {
+      "from": "projection.visual.kc-town-hall.tired-of-tires-flyer",
+      "type": "uses_source",
+      "to": "source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/kc-town-hall-tired-of-tires-portfolio-2026-08-14.md",
       "context": null
     },
     {
@@ -17443,6 +17845,38 @@
       "context": null
     },
     {
+      "from": "source.kc-town-hall.tired-of-tires-wayback.2020-10-30",
+      "type": "documents",
+      "to": "project.kc-town-hall.tired-of-tires",
+      "source": "frontmatter",
+      "href": "../projects/tired-of-tires-resident-service.md",
+      "context": null
+    },
+    {
+      "from": "source.kc-town-hall.tired-of-tires-wayback.2020-10-30",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "source.kc-town-hall.tired-of-tires.design-field-archive.2019-2022",
+      "type": "documents",
+      "to": "project.kc-town-hall.tired-of-tires",
+      "source": "frontmatter",
+      "href": "../projects/tired-of-tires-resident-service.md",
+      "context": null
+    },
+    {
+      "from": "source.kc-town-hall.tired-of-tires.design-field-archive.2019-2022",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
       "from": "source.knowledge-wiki.branch-a.2026-07-19",
       "type": "related_to",
       "to": "index.knowledge-wiki.family-closure",
@@ -17824,6 +18258,30 @@
       "to": "person.paul-mossine",
       "source": "frontmatter",
       "href": "../../people/paul-mossine.md",
+      "context": null
+    },
+    {
+      "from": "source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14",
+      "type": "related_to",
+      "to": "asset.design.kc-town-hall.tired-of-tires-flyer.2019.001",
+      "source": "frontmatter",
+      "href": "../../assets/graphics/kc-town-hall-tired-of-tires-flyer-2019.md",
+      "context": null
+    },
+    {
+      "from": "source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14",
+      "type": "related_to",
+      "to": "asset.photo.kc-town-hall.tired-of-tires-after.2022.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-tired-of-tires-after-2022.md",
+      "context": null
+    },
+    {
+      "from": "source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14",
+      "type": "related_to",
+      "to": "asset.photo.kc-town-hall.tired-of-tires-before.2022.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-tired-of-tires-before-2022.md",
       "context": null
     },
     {
@@ -20080,6 +20538,42 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/photography.md",
       "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/indexes/photo-sets/kc-town-hall-fieldwork.md",
+      "to": "index.photo-set.kc-town-hall-fieldwork",
+      "fragment": null,
+      "line": 100,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-walkshed-2019.md",
+      "to": "asset.graphic.kc-town-hall.walkshed.2019.001",
+      "fragment": null,
+      "line": 105,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/research-runs/photographic-source-return-2026-07-26.md",
+      "to": "research.photographic-source-return.2026-07-26",
+      "fragment": null,
+      "line": 107,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-project-sites-2017-2026.md",
+      "to": "index.photo-set.nycac-project-sites.2017-2026",
+      "fragment": null,
+      "line": 112,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
       "toPath": "docs/knowledge-bank/assets/photographs/nycac-shoestring-facilitation-2017.md",
       "to": "asset.photo.nycac-shoestring-facilitation.2017.001",
       "fragment": null,
@@ -20152,10 +20646,55 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/photography.md",
       "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/sources/kc-town-hall-tired-of-tires-design-field-archive-2026.md",
+      "to": "source.kc-town-hall.tired-of-tires.design-field-archive.2019-2022",
+      "fragment": null,
+      "line": 39,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-tired-of-tires-flyer-2019.md",
+      "to": "asset.design.kc-town-hall.tired-of-tires-flyer.2019.001",
+      "fragment": null,
+      "line": 43,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/photographs/kc-town-hall-tired-of-tires-before-2022.md",
+      "to": "asset.photo.kc-town-hall.tired-of-tires-before.2022.001",
+      "fragment": null,
+      "line": 44,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/photographs/kc-town-hall-tired-of-tires-after-2022.md",
+      "to": "asset.photo.kc-town-hall.tired-of-tires-after.2022.001",
+      "fragment": null,
+      "line": 45,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/sources/permissions/kc-town-hall-tired-of-tires-portfolio-2026-08-14.md",
+      "to": "source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14",
+      "fragment": null,
+      "line": 47,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
       "toPath": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
       "to": "asset.photo.east-river-manhattan-bridge.2022.001",
       "fragment": null,
-      "line": 56,
+      "line": 72,
       "kind": "link"
     },
     {
@@ -20164,7 +20703,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/east-river-canoe-2022.md",
       "to": "index.photo-set.east-river-canoe.2022",
       "fragment": null,
-      "line": 57,
+      "line": 73,
       "kind": "link"
     },
     {
@@ -20173,7 +20712,7 @@
       "toPath": "docs/knowledge-bank/people/elana-gordon.md",
       "to": "person.elana-gordon",
       "fragment": null,
-      "line": 58,
+      "line": 74,
       "kind": "link"
     },
     {
@@ -20182,7 +20721,7 @@
       "toPath": "docs/knowledge-bank/sources/photo-metadata/east-river-2022-public-safe.md",
       "to": "source.photo-metadata.east-river.2022.public-safe",
       "fragment": null,
-      "line": 59,
+      "line": 75,
       "kind": "link"
     },
     {
@@ -20191,7 +20730,7 @@
       "toPath": "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md",
       "to": "source.permission.elana-gordon.east-river.2026-07",
       "fragment": null,
-      "line": 60,
+      "line": 76,
       "kind": "link"
     },
     {
@@ -20200,7 +20739,7 @@
       "toPath": "docs/knowledge-bank/evaluations/curatorial/layout-c-home-east-river-v1.md",
       "to": "evaluation.curatorial.layout-c.home-east-river.v1",
       "fragment": null,
-      "line": 61,
+      "line": 77,
       "kind": "link"
     },
     {
@@ -20209,7 +20748,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/layout-c-home-east-river-v1.md",
       "to": "decision.photo.layout-c.home-east-river.v1",
       "fragment": null,
-      "line": 62,
+      "line": 78,
       "kind": "link"
     },
     {
@@ -20218,7 +20757,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/layout-c-resume-no-photo-v1.md",
       "to": "decision.photo.layout-c.resume-no-photo.v1",
       "fragment": null,
-      "line": 63,
+      "line": 79,
       "kind": "link"
     },
     {
@@ -20227,7 +20766,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/pre-launch-rights-narrowing-2026-07-28.md",
       "to": "decision.photo.pre-launch.rights-narrowing.2026-07-28",
       "fragment": null,
-      "line": 64,
+      "line": 80,
       "kind": "link"
     },
     {
@@ -20236,7 +20775,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
       "to": "projection.photo.layout-c.home.east-river",
       "fragment": null,
-      "line": 65,
+      "line": 81,
       "kind": "link"
     },
     {
@@ -20245,7 +20784,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/edition-layout-c-2026-07.md",
       "to": "edition.layout-c.2026-07",
       "fragment": null,
-      "line": 66,
+      "line": 82,
       "kind": "link"
     },
     {
@@ -20254,7 +20793,7 @@
       "toPath": "docs/knowledge-bank/corrections/east-river-credit-2026-07.md",
       "to": "correction.photo.east-river-credit.2026-07",
       "fragment": null,
-      "line": 67,
+      "line": 83,
       "kind": "link"
     },
     {
@@ -20263,7 +20802,7 @@
       "toPath": "docs/knowledge-bank/sources/recollections/jamie-canoe-commuting-2026-07.md",
       "to": "source.recollection.jamie-canoe-commuting.2026-07",
       "fragment": null,
-      "line": 68,
+      "line": 84,
       "kind": "link"
     },
     {
@@ -20272,7 +20811,7 @@
       "toPath": "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md",
       "to": "research-inquiry.documented-canoe-bike-journeys",
       "fragment": null,
-      "line": 69,
+      "line": 85,
       "kind": "link"
     },
     {
@@ -20281,7 +20820,7 @@
       "toPath": "docs/knowledge-bank/workflows/photography-east-river-canary.md",
       "to": "method.photography-east-river-canary",
       "fragment": null,
-      "line": 70,
+      "line": 86,
       "kind": "link"
     },
     {
@@ -20290,7 +20829,7 @@
       "toPath": "rfcs/0003-living-photographic-knowledge-loop.md",
       "to": null,
       "fragment": null,
-      "line": 78,
+      "line": 94,
       "kind": "link"
     },
     {
@@ -20299,43 +20838,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-dcla-formation-2017.md",
       "to": "index.photo-set.nycac-dcla-formation.2017",
       "fragment": null,
-      "line": 83,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/indexes/photo-sets/kc-town-hall-fieldwork.md",
-      "to": "index.photo-set.kc-town-hall-fieldwork",
-      "fragment": null,
-      "line": 84,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-walkshed-2019.md",
-      "to": "asset.graphic.kc-town-hall.walkshed.2019.001",
-      "fragment": null,
-      "line": 89,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/research-runs/photographic-source-return-2026-07-26.md",
-      "to": "research.photographic-source-return.2026-07-26",
-      "fragment": null,
-      "line": 91,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-project-sites-2017-2026.md",
-      "to": "index.photo-set.nycac-project-sites.2017-2026",
-      "fragment": null,
-      "line": 96,
+      "line": 99,
       "kind": "link"
     },
     {
@@ -21352,7 +21855,7 @@
       "toPath": "docs/knowledge-bank/people/luke-farrell.md",
       "to": "person.luke-farrell",
       "fragment": null,
-      "line": 10,
+      "line": 15,
       "kind": "link"
     },
     {
@@ -21361,7 +21864,7 @@
       "toPath": "docs/knowledge-bank/people/lisa-gelobter.md",
       "to": "person.lisa-gelobter",
       "fragment": null,
-      "line": 11,
+      "line": 16,
       "kind": "link"
     },
     {
@@ -21370,7 +21873,16 @@
       "toPath": "docs/knowledge-bank/sources/jobs-oti-senior-product-manager-782366.md",
       "to": "source.jobs.oti.senior-product-manager.782366",
       "fragment": null,
-      "line": 13,
+      "line": 18,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
+      "from": "opportunity.nyc-oti.senior-product-manager.782366",
+      "toPath": "docs/knowledge-bank/projects/tired-of-tires-resident-service.md",
+      "to": "project.kc-town-hall.tired-of-tires",
+      "fragment": null,
+      "line": 9,
       "kind": "link"
     },
     {
@@ -21613,7 +22125,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
       "to": "projection.photo.layout-c.home.east-river",
       "fragment": null,
-      "line": 16,
+      "line": 17,
       "kind": "link"
     },
     {
@@ -21622,7 +22134,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/fair-rent-nyc-shoestring-facilitation.md",
       "to": "projection.photo.fair-rent-nyc.shoestring-facilitation",
       "fragment": null,
-      "line": 17,
+      "line": 18,
       "kind": "link"
     },
     {
@@ -21631,7 +22143,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/fair-rent-nyc-market-hotel-banner.md",
       "to": "projection.photo.fair-rent-nyc.market-hotel-banner",
       "fragment": null,
-      "line": 18,
+      "line": 19,
       "kind": "link"
     },
     {
@@ -21640,7 +22152,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/sunday-dinner-shared-map.md",
       "to": "projection.photo.sunday-dinner.shared-map",
       "fragment": null,
-      "line": 19,
+      "line": 20,
       "kind": "link"
     },
     {
@@ -21649,7 +22161,34 @@
       "toPath": "docs/knowledge-bank/projections/photography/kc-town-hall-roof-work.md",
       "to": "projection.photo.kc-town-hall.roof-work",
       "fragment": null,
-      "line": 20,
+      "line": 21,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projections/photography/edition-launch-2026-08.md",
+      "from": "edition.launch.2026-08",
+      "toPath": "docs/knowledge-bank/projections/photography/kc-town-hall-tired-of-tires-flyer.md",
+      "to": "projection.visual.kc-town-hall.tired-of-tires-flyer",
+      "fragment": null,
+      "line": 22,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projections/photography/edition-launch-2026-08.md",
+      "from": "edition.launch.2026-08",
+      "toPath": "docs/knowledge-bank/projections/photography/kc-town-hall-tired-of-tires-before.md",
+      "to": "projection.photo.kc-town-hall.tired-of-tires-before",
+      "fragment": null,
+      "line": 23,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projections/photography/edition-launch-2026-08.md",
+      "from": "edition.launch.2026-08",
+      "toPath": "docs/knowledge-bank/projections/photography/kc-town-hall-tired-of-tires-after.md",
+      "to": "projection.photo.kc-town-hall.tired-of-tires-after",
+      "fragment": null,
+      "line": 24,
       "kind": "link"
     },
     {
@@ -21785,6 +22324,24 @@
       "to": null,
       "fragment": null,
       "line": 154,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/kc-town-hall.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/intake/2026-08-14-kcth-tired-of-tires-resident-service.md",
+      "to": null,
+      "fragment": null,
+      "line": 160,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/kc-town-hall.md",
+      "from": null,
+      "toPath": "docs/knowledge-bank/projects/tired-of-tires-resident-service.md",
+      "to": "project.kc-town-hall.tired-of-tires",
+      "fragment": null,
+      "line": 173,
       "kind": "link"
     },
     {
@@ -21974,6 +22531,15 @@
       "to": null,
       "fragment": null,
       "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/tired-of-tires-resident-service.md",
+      "from": "project.kc-town-hall.tired-of-tires",
+      "toPath": "docs/knowledge-bank/sources/kc-town-hall-tired-of-tires-wayback-2020.md",
+      "to": "source.kc-town-hall.tired-of-tires-wayback.2020-10-30",
+      "fragment": null,
+      "line": 18,
       "kind": "link"
     },
     {

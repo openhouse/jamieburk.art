@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "candidateSha": "a8d2914789df8e76f34a0c04d4cf5ad7565d0bd3",
+  "candidateSha": "747605e3c34a6426c027a1c85ff82c3a6275ac36",
   "portfolioSnapshotHash": "1b3140ea4b8b9d412845a4e08086576634bade309a79edd25224ed8b1fb377be",
-  "publicReportHash": "252891c4de19a57a29a08787f71b4c975c6cd2a580b4e1f064f3d1aeb8a85201",
-  "wikiSourceFingerprint": "5b1026b1cf2184a07b46286c42990b6135e53eb3a69927bfb982415f26697768",
+  "publicReportHash": "d93a69916364afd42e273ccdb4ac12ee7c0350b3a126ebec370ca4599f0bc589",
+  "wikiSourceFingerprint": "e4fc52c24bbf54e2f4cd03c7f545b8eb1d0af9c4a3ed28af19991b37897fcb60",
   "findings": [
     {
       "findingId": "finding.requirement.codepath.qa-and-bug-pipeline",
@@ -59,13 +59,14 @@
       "findingId": "finding.requirement.oti-senior-product-manager.discovery-research",
       "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
       "requirementId": "requirement.oti-senior-product-manager.discovery-research",
-      "classification": "visible-weak-evidence-gap",
+      "classification": "role-context-or-evidence-unknown",
       "wikiRecords": [
-        "project.callnyc"
+        "project.callnyc",
+        "project.kc-town-hall.tired-of-tires"
       ],
-      "currentStatus": "visible-weak",
+      "currentStatus": "visible-qualified",
       "gapType": "public-projection",
-      "smallestResponsibleChange": "Prepare a precise discovery example and distinguish direct user research from adjacent public listening.",
+      "smallestResponsibleChange": "Use the bounded Tired of Tires service example in the application; distinguish direct field contact, project-level survey evidence, and held component-authorship details.",
       "requiresOriginalSourceReview": false,
       "requiresHumanApproval": true
     },

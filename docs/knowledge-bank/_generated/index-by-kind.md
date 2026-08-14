@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `ad29ec83eb565e02837158b0d1fab083f2ccf6ac`
-**Generation time:** 2026-08-14T10:02:37-04:00
-**Source fingerprint:** `5b1026b1cf2184a07b46286c42990b6135e53eb3a69927bfb982415f26697768`
+**Source commit:** `747605e3c34a6426c027a1c85ff82c3a6275ac36`
+**Generation time:** 2026-08-14T11:32:41-04:00
+**Source fingerprint:** `e4fc52c24bbf54e2f4cd03c7f545b8eb1d0af9c4a3ed28af19991b37897fcb60`
 
 ## application
 
@@ -12,6 +12,7 @@
 
 ## asset
 
+- [Tired of Tires resident-service flyer](../assets/graphics/kc-town-hall-tired-of-tires-flyer-2019.md) - `asset.design.kc-town-hall.tired-of-tires-flyer.2019.001`
 - [KC Town Hall ten-minute-walk proposal map](../assets/graphics/kc-town-hall-walkshed-2019.md) - `asset.graphic.kc-town-hall.walkshed.2019.001`
 - [MIT Interrogative Design Symposium held photo set](../assets/photographs/mit-interrogative-design-symposium-2024-held.md) - `asset.photo-set.mit-interrogative-design.2024`
 - [Digital District participant photograph metadata](../assets/digital-district-photo.md) - `asset.photo.digital-district.001`
@@ -20,6 +21,8 @@
 - [Kansas City Star aerial view of KC Town Hall](../assets/photographs/kc-town-hall-kc-star-aerial-2021.md) - `asset.photo.kc-town-hall.kc-star-aerial.2021`
 - [KC Town Hall roof work, 2019](../assets/photographs/kc-town-hall-roof-work-2019.md) - `asset.photo.kc-town-hall.roof-work.2019.001`
 - [Jamie and a collaborator inside KC Town Hall](../assets/photographs/kc-town-hall-stewardship-interior.md) - `asset.photo.kc-town-hall.stewardship-interior.001`
+- [Tired of Tires collection site after removal, 2022](../assets/photographs/kc-town-hall-tired-of-tires-after-2022.md) - `asset.photo.kc-town-hall.tired-of-tires-after.2022.001`
+- [Tired of Tires collection site before removal, 2022](../assets/photographs/kc-town-hall-tired-of-tires-before-2022.md) - `asset.photo.kc-town-hall.tired-of-tires-before.2022.001`
 - [Jamie with a civic field kit at New York City Council](../assets/photographs/nyc-council-field-kit-2026.md) - `asset.photo.nyc-council.field-kit.2026.001`
 - [DCLA listening room, January 2017](../assets/photographs/nycac-dcla-listening-room-2017.md) - `asset.photo.nycac-dcla-listening-room.2017.001`
 - [Shoestring Press coalition working session, 2017](../assets/photographs/nycac-shoestring-facilitation-2017.md) - `asset.photo.nycac-shoestring-facilitation.2017.001`
@@ -362,6 +365,7 @@
 - [Harry J. Epstein Company digital operations](../projects/harry-j-epstein.md) - `project.harry-j-epstein`
 - [KC Spaces Fund](../projects/kc-spaces-fund-orientation.md) - `project.kc-spaces-fund`
 - [KC Town Hall orientation](../projects/kc-town-hall-orientation.md) - `project.kc-town-hall`
+- [Tired of Tires resident service](../projects/tired-of-tires-resident-service.md) - `project.kc-town-hall.tired-of-tires`
 - [Let NYC Dance](../projects/let-nyc-dance.md) - `project.let-nyc-dance`
 - [NTER CHNG](../projects/nter-chng.md) - `project.nter-chng`
 - [NYC Artist Coalition](../projects/nyc-artist-coalition-2017.md) - `project.nyc-artist-coalition`
@@ -382,8 +386,11 @@
 - [Fair Rent NYC Market Hotel public-room occurrence](../projections/photography/fair-rent-nyc-market-hotel-banner.md) - `projection.photo.fair-rent-nyc.market-hotel-banner`
 - [Fair Rent NYC Shoestring Press facilitation occurrence](../projections/photography/fair-rent-nyc-shoestring-facilitation.md) - `projection.photo.fair-rent-nyc.shoestring-facilitation`
 - [KC Town Hall roof-work occurrence](../projections/photography/kc-town-hall-roof-work.md) - `projection.photo.kc-town-hall.roof-work`
+- [Tired of Tires after-collection occurrence](../projections/photography/kc-town-hall-tired-of-tires-after.md) - `projection.photo.kc-town-hall.tired-of-tires-after`
+- [Tired of Tires before-collection occurrence](../projections/photography/kc-town-hall-tired-of-tires-before.md) - `projection.photo.kc-town-hall.tired-of-tires-before`
 - [Layout C homepage East River occurrence](../projections/photography/layout-c-home-east-river.md) - `projection.photo.layout-c.home.east-river`
 - [Sunday Dinner shared-map occurrence](../projections/photography/sunday-dinner-shared-map.md) - `projection.photo.sunday-dinner.shared-map`
+- [Tired of Tires resident-service flyer occurrence](../projections/photography/kc-town-hall-tired-of-tires-flyer.md) - `projection.visual.kc-town-hall.tired-of-tires-flyer`
 
 ## research-inquiry
 
@@ -434,6 +441,8 @@
 - [KC Town Hall CCED proposal bundle, 2019](../sources/kc-town-hall-cced-proposal-2019.md) - `source.kc-town-hall.cced-proposal.2019`
 - [KC Town Hall local digital archive review, July 2026](../sources/archives/kc-town-hall-local-digital-archive-2026-07.md) - `source.kc-town-hall.local-digital-archive.2026-07`
 - [KC Town Hall photographic oral histories, July 2026](../sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md) - `source.kc-town-hall.photographic-oral-histories.2026-07`
+- [Tired of Tires public service page, archived October 30, 2020](../sources/kc-town-hall-tired-of-tires-wayback-2020.md) - `source.kc-town-hall.tired-of-tires-wayback.2020-10-30`
+- [Tired of Tires protected design and field archive](../sources/kc-town-hall-tired-of-tires-design-field-archive-2026.md) - `source.kc-town-hall.tired-of-tires.design-field-archive.2019-2022`
 - [Frozen Knowledge Wiki branch A](../sources/knowledge-wiki-branch-a-2026-07-19.md) - `source.knowledge-wiki.branch-a.2026-07-19`
 - [Frozen Knowledge Wiki branch B](../sources/knowledge-wiki-branch-b-2026-07-19.md) - `source.knowledge-wiki.branch-b.2026-07-19`
 - [Frozen Knowledge Wiki branch C](../sources/knowledge-wiki-branch-c-2026-07-19.md) - `source.knowledge-wiki.branch-c.2026-07-19`
@@ -467,6 +476,7 @@
 - [2026 Democratic primary election-night result for Assembly District 56](../sources/commercial-rent-public-support/eon-huntley-2026-primary-result.md) - `source.nysboe.primary.ad56.2026`
 - [Elana Gordon East River portfolio permission summary](../sources/permissions/elana-gordon-east-river-portfolio-2026.md) - `source.permission.elana-gordon.east-river.2026-07`
 - [Jamie Burkart portfolio-album publication authorization](../sources/permissions/jamie-portfolio-album-2026-08-13.md) - `source.permission.jamie-portfolio-album.2026-08-13`
+- [Tired of Tires portfolio-derivative authorization](../sources/permissions/kc-town-hall-tired-of-tires-portfolio-2026-08-14.md) - `source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14`
 - [East River photograph public-safe metadata summary](../sources/photo-metadata/east-river-2022-public-safe.md) - `source.photo-metadata.east-river.2022.public-safe`
 - [NYC Artist Coalition selected participation images public-safe metadata](../sources/photo-metadata/nycac-participation-images-2017-public-safe.md) - `source.photo-metadata.nycac-participation-images.2017.public-safe`
 - [Public-safe metadata capsule for the August 2026 project-cover images](../sources/photo-metadata/portfolio-cover-images-2026-public-safe.md) - `source.photo-metadata.portfolio-cover-images.2026.public-safe`
