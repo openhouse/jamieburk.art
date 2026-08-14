@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "evalId": "resume-hiring-reader-portfolio-2026-08-14",
+  "runId": "2026-08-14-hiring-reader-resume-portfolio-post-hillclimb",
+  "evaluatedAt": "2026-08-14T21:00:00-04:00",
+  "methodologySkill": "interviewing-evaluating-candidates",
+  "actualPeopleParticipated": false,
+  "acceptanceQuestion": "Under this explicitly fictionalized public-source lens, would this reader advance Jamie from resume review to a structured interview or practical work sample for this opportunity?",
+  "decision": "advance-to-structured-next-step",
+  "overall": "pass",
+  "summary": {
+    "requiredOpportunityVersions": 5,
+    "maintainedOpportunityVersions": 5,
+    "passingOpportunityVersions": 5,
+    "requiredReaderOpportunityPairs": 8,
+    "passingReaderOpportunityPairs": 8
+  },
+  "portfolioChecks": [
+    {
+      "id": "priority-and-benchmark-opportunity-coverage",
+      "pass": true,
+      "detail": "5/5 required opportunity versions configured."
+    },
+    {
+      "id": "named-reader-pair-coverage",
+      "pass": true,
+      "detail": "8/8 required reader/opportunity pairs configured."
+    },
+    {
+      "id": "candidate-evaluation-skill-installed",
+      "pass": true,
+      "detail": "interviewing-evaluating-candidates is pinned inside the repository."
+    },
+    {
+      "id": "fictionalized-public-context-boundary",
+      "pass": true,
+      "detail": "A modeled pass advances to a structured next step and cannot represent actual participation or a final hire."
+    }
+  ],
+  "versions": [
+    {
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "status": "live-priority",
+      "resumePath": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.md",
+      "wordCount": 640,
+      "sha256": "df09f52e6eb7d367ce773bbd9fad82c0303c43eeaa6b12ef2071184a7e2cf382",
+      "overall": "pass",
+      "readerResults": [
+        {
+          "pairId": "codepath-zack-parker",
+          "readerId": "reader.zack-parker",
+          "displayName": "Zack Parker",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "missingSignalGroups": [],
+          "validateNext": "Use a structured work sample to test bug reproduction, prioritization, QA design, status communication, and proportionate process judgment."
+        },
+        {
+          "pairId": "codepath-chris-coleman",
+          "readerId": "reader.chris-coleman",
+          "displayName": "Chris Coleman",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "missingSignalGroups": [],
+          "validateNext": "Probe how Jamie would define success for engineering delivery when quality, learner experience, and a small team's capacity compete."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.aclu.senior-project-manager.8620968002",
+      "status": "live-priority",
+      "resumePath": "resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-8620968002.md",
+      "wordCount": 659,
+      "sha256": "ba384961a04fa99d222f2e0e5fec8cd0c87be407f0eb4a5c5d80ca0b80a78daa",
+      "overall": "pass",
+      "readerResults": [
+        {
+          "pairId": "aclu-charizma-williams",
+          "readerId": "reader.charizma-williams",
+          "displayName": "Charizma Williams",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "missingSignalGroups": [],
+          "validateNext": "Request the required writing sample and use a structured scenario to test change management, budget reasoning, confidentiality, accessibility, and stakeholder conflict."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "status": "live-priority",
+      "resumePath": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.md",
+      "wordCount": 643,
+      "sha256": "a42215df9651179d4c7e1fb4d62410a20a679b481f372ad0a46bc596f84deca8",
+      "overall": "pass",
+      "readerResults": [
+        {
+          "pairId": "benepass-aileen-palmer",
+          "readerId": "reader.aileen-palmer",
+          "displayName": "Aileen Palmer",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "missingSignalGroups": [],
+          "validateNext": "Use a launch-readiness exercise requiring a go/no-go recommendation, downstream impact map, escalation plan, success metrics, and post-launch learning loop."
+        },
+        {
+          "pairId": "benepass-jaclyn-chen",
+          "readerId": "reader.jaclyn-chen",
+          "displayName": "Jaclyn Chen",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "missingSignalGroups": [],
+          "validateNext": "Probe commercial judgment, regulated-data boundaries, customer escalation, and which operating metric Jamie would move first."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "status": "live-priority",
+      "resumePath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
+      "wordCount": 780,
+      "sha256": "554d57b3949bb96e46c2739a9f40aee0edf323fd25f6899a78e838f91612fc7e",
+      "overall": "pass",
+      "readerResults": [
+        {
+          "pairId": "oti-product-luke-farrell",
+          "readerId": "reader.luke-farrell",
+          "displayName": "Luke Farrell",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "missingSignalGroups": [],
+          "validateNext": "Test a real public-service product brief: discovery evidence, MVP, stakeholder conflict, accessibility, launch plan, outcome metric, and post-launch decision."
+        },
+        {
+          "pairId": "oti-product-lisa-gelobter",
+          "readerId": "reader.lisa-gelobter",
+          "displayName": "Lisa Gelobter",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "missingSignalGroups": [],
+          "validateNext": "Probe public-service motivation, power sharing, managerability, outcome measurement, and the ability to build City capacity rather than personal dependency."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "status": "expired-benchmark",
+      "resumePath": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.md",
+      "wordCount": 670,
+      "sha256": "5788d5afd20732d391c2a0829baa803cdc551f0c2960db77f6eb4a7e13914a0c",
+      "overall": "pass",
+      "readerResults": [
+        {
+          "pairId": "oti-operations-lisa-gelobter",
+          "readerId": "reader.lisa-gelobter",
+          "displayName": "Lisa Gelobter",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "missingSignalGroups": [],
+          "validateNext": "For a materially similar future opening, test portfolio governance, personnel operations, procurement and budget exposure, escalation judgment, and civil-service eligibility."
+        }
+      ]
+    }
+  ],
+  "boundary": "This is a deterministic, fictionalized public-source resume screen. It is not participation, endorsement, an interview promise, or a final hiring decision by any named person."
+}

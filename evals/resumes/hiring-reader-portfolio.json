@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "id": "resume-hiring-reader-portfolio-2026-08-14",
+  "evaluatedAt": "2026-08-14T21:00:00-04:00",
+  "currentRunPath": "evals/resumes/runs/2026-08-14-hiring-reader-resume-portfolio-post-hillclimb.json",
+  "methodology": {
+    "skill": "interviewing-evaluating-candidates",
+    "installedPath": ".agents/skills/interviewing-evaluating-candidates/SKILL.md",
+    "sourceRepository": "https://github.com/refoundai/lenny-skills",
+    "principles": [
+      "Define the role's core rather than screening for a generic good candidate.",
+      "Evaluate every candidate artifact against the same opportunity-specific evidence groups.",
+      "Treat the resume as an advance-to-next-step screen, not proof of a final hiring decision.",
+      "Name what a structured interview, practical work sample, reference check, or formal eligibility review must validate next."
+    ]
+  },
+  "contract": {
+    "scope": "The current priority hiring suite plus its explicitly expired benchmark role.",
+    "actualPeopleParticipated": false,
+    "modeledReaderBasis": "Public job descriptions and public professional context only.",
+    "acceptanceQuestion": "Under this explicitly fictionalized public-source lens, would this reader advance Jamie from resume review to a structured interview or practical work sample for this opportunity?",
+    "passDecision": "advance-to-structured-next-step",
+    "notEstablishedByPass": [
+      "An actual reader reviewed or endorsed the resume.",
+      "Jamie would receive an interview, offer, appointment, or final hiring decision.",
+      "Civil-service, authorization, reference, background, or other formal screens are satisfied.",
+      "A resume substitutes for a work sample, structured interview, or reference check."
+    ]
+  },
+  "resumeStandards": {
+    "minimumWords": 400,
+    "maximumWords": 850,
+    "requiredHeadings": [
+      "Professional Summary",
+      "Core Skills",
+      "Professional Experience",
+      "Education"
+    ],
+    "forbiddenPatterns": [
+      "(?:I|me|my) (?:would|will) be hired",
+      "(?:guaranteed|guarantees) (?:an interview|employment|a job|an offer)",
+      "(?:Zack Parker|Chris Coleman|Charizma Williams|Aileen Palmer|Jaclyn Chen|Luke Farrell|Lisa Gelobter) (?:reviewed|approved|endorsed|recommended|would hire)",
+      "(?:solely created|single-handedly|personally caused)",
+      "(?:WCAG compliant|Section 508 compliant)"
+    ]
+  },
+  "versions": [
+    {
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "organization": "CodePath",
+      "targetRole": "Engineering Project Manager",
+      "status": "live-priority",
+      "officialSource": "https://job-boards.greenhouse.io/codepath/jobs/5160542007",
+      "resumePath": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.md",
+      "readerCriteria": [
+        {
+          "pairId": "codepath-zack-parker",
+          "readerId": "reader.zack-parker",
+          "displayName": "Zack Parker",
+          "relationship": "published-reporting-role-to-person-match",
+          "signalGroups": [
+            { "id": "engineering-delivery", "patterns": ["engineering project", "engineering delivery", "delivery planning"] },
+            { "id": "quality-system", "patterns": ["quality assurance", "bug triage", "test cases", "regression expectations"] },
+            { "id": "technical-fluency", "patterns": ["Python/Django", "JavaScript/TypeScript", "Git/GitHub"] },
+            { "id": "process-judgment", "patterns": ["proportionate structure", "process when its cost exceeds its value", "without adding unnecessary ceremony"] },
+            { "id": "ai-workflow", "patterns": ["AI-assisted", "human review", "deterministic checks"] },
+            { "id": "status-and-ownership", "patterns": ["status reporting", "clarify ownership", "action and decision logs"] }
+          ],
+          "constructiveCritique": "The resume earns a screen by showing hands-on engineering coordination and a concrete quality loop; the next artifact should demonstrate how Jamie would turn one real issue into a reproducible test and owned release decision.",
+          "validateNext": "Use a structured work sample to test bug reproduction, prioritization, QA design, status communication, and proportionate process judgment."
+        },
+        {
+          "pairId": "codepath-chris-coleman",
+          "readerId": "reader.chris-coleman",
+          "displayName": "Chris Coleman",
+          "relationship": "nearest-public-senior-vision-context",
+          "signalGroups": [
+            { "id": "product-engineering-bridge", "patterns": ["Product and stakeholder translation", "engineers, product decisions", "engineering constraints"] },
+            { "id": "learning-mission", "patterns": ["community-calendar", "community stakeholders", "organizer support"] },
+            { "id": "responsible-ai", "patterns": ["AI-assisted", "human review", "source boundaries"] },
+            { "id": "durable-collaboration", "patterns": ["durable handoff", "documentation", "release notes"] },
+            { "id": "public-benefit-orientation", "patterns": ["Civic-Tech Builder", "resident-facing", "public funding request"] }
+          ],
+          "constructiveCritique": "The evidence makes Jamie legible as an engineering-facing operator with a community-service orientation; the interview must connect that experience directly to learner outcomes and internal team leverage.",
+          "validateNext": "Probe how Jamie would define success for engineering delivery when quality, learner experience, and a small team's capacity compete."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.aclu.senior-project-manager.8620968002",
+      "organization": "ACLU",
+      "targetRole": "Senior Project Manager",
+      "status": "live-priority",
+      "officialSource": "https://job-boards.greenhouse.io/aclu/jobs/8620968002",
+      "resumePath": "resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-8620968002.md",
+      "readerCriteria": [
+        {
+          "pairId": "aclu-charizma-williams",
+          "readerId": "reader.charizma-williams",
+          "displayName": "Charizma Williams",
+          "relationship": "nearest-public-senior-vision-context; published direct-manager title is unnamed",
+          "signalGroups": [
+            { "id": "systems-implementation", "patterns": ["Systems Implementation", "operating-system implementations", "implementation plans"] },
+            { "id": "project-strategy", "patterns": ["Project strategy", "Project charters", "work plans"] },
+            { "id": "business-analysis", "patterns": ["Business analysis", "current-state and future-state", "requirements"] },
+            { "id": "risk-and-confidentiality", "patterns": ["risk and issue management", "Confidentiality", "private and protected information"] },
+            { "id": "accessibility-and-inclusion", "patterns": ["accessibility-aware", "inclusive operations", "civil liberties"] },
+            { "id": "cross-department-delivery", "patterns": ["cross-department", "multi-organization", "stakeholder alignment"] },
+            { "id": "budget-claim-boundary", "patterns": ["no unsupported budget-control claim", "award was not disbursed"] }
+          ],
+          "constructiveCritique": "This version makes the systems and organizational-learning case without overstating authority. Its most important open question is how Jamie handles enterprise-scale budgets, governance, and internal power when a decision is contested.",
+          "validateNext": "Request the required writing sample and use a structured scenario to test change management, budget reasoning, confidentiality, accessibility, and stakeholder conflict."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "organization": "Benepass",
+      "targetRole": "Product Operations Manager",
+      "status": "live-priority",
+      "officialSource": "https://jobs.ashbyhq.com/benepass/7f963a7a-aaad-456b-b12b-7f34b35d51cf/",
+      "resumePath": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.md",
+      "readerCriteria": [
+        {
+          "pairId": "benepass-aileen-palmer",
+          "readerId": "reader.aileen-palmer",
+          "displayName": "Aileen Palmer",
+          "relationship": "person-named-in-posting-as-reporting-context",
+          "signalGroups": [
+            { "id": "launch-readiness", "patterns": ["Launch readiness", "readiness criteria", "go/no-go"] },
+            { "id": "downstream-impact", "patterns": ["downstream impact", "operational requirements", "support preparation"] },
+            { "id": "product-engineering-operations", "patterns": ["product, engineering, operations", "product-to-operations", "engineering constraints"] },
+            { "id": "prioritization-and-tradeoffs", "patterns": ["Prioritization", "tradeoffs", "customer impact"] },
+            { "id": "runbooks-and-follow-through", "patterns": ["Runbooks", "follow-through", "accountable owners"] },
+            { "id": "metrics-and-learning", "patterns": ["analytics", "post-launch learning", "retrospectives"] }
+          ],
+          "constructiveCritique": "Jamie presents credible launch and operating-system depth. The next screen must test whether those practices transfer to a fast-growing benefits platform with revenue, compliance, and customer-risk consequences.",
+          "validateNext": "Use a launch-readiness exercise requiring a go/no-go recommendation, downstream impact map, escalation plan, success metrics, and post-launch learning loop."
+        },
+        {
+          "pairId": "benepass-jaclyn-chen",
+          "readerId": "reader.jaclyn-chen",
+          "displayName": "Jaclyn Chen",
+          "relationship": "nearest-public-senior-vision-context",
+          "signalGroups": [
+            { "id": "operational-leverage", "patterns": ["Scalable operating systems", "distributed maintainers", "reusable patterns"] },
+            { "id": "customer-care", "patterns": ["customer care", "customer needs", "support"] },
+            { "id": "evidence-and-metrics", "patterns": ["analytics", "metrics", "scale and activity evidence"] },
+            { "id": "ownership", "patterns": ["keep owners accountable", "accountable owners", "follow-through"] },
+            { "id": "people-and-community", "patterns": ["community stakeholders", "organizer-facing", "individual needs"] }
+          ],
+          "constructiveCritique": "The resume shows ownership and human-centered operational leverage at meaningful scale; it should now prove comfort with commercial product economics and highly regulated benefit operations.",
+          "validateNext": "Probe commercial judgment, regulated-data boundaries, customer escalation, and which operating metric Jamie would move first."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "organization": "NYC Office of Technology and Innovation",
+      "targetRole": "Senior Product Manager",
+      "status": "live-priority",
+      "officialSource": "https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-44507",
+      "resumePath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
+      "readerCriteria": [
+        {
+          "pairId": "oti-product-luke-farrell",
+          "readerId": "reader.luke-farrell",
+          "displayName": "Luke Farrell",
+          "relationship": "nearest-public-operational-lead; not a confirmed direct manager",
+          "signalGroups": [
+            { "id": "resident-facing-product", "patterns": ["resident-facing", "public-facing digital products", "constituent-services"] },
+            { "id": "discovery-through-launch", "patterns": ["participatory discovery", "public launch", "post-launch learning"] },
+            { "id": "mvp-and-prioritization", "patterns": ["MVP", "version-one scoping", "prioritization"] },
+            { "id": "cross-functional-government", "patterns": ["agency and policy stakeholders", "designers, engineers", "elected officials and staff"] },
+            { "id": "measurement-and-learning", "patterns": ["measurement", "metrics", "retrospective"] },
+            { "id": "responsible-delivery", "patterns": ["accessibility-aware", "privacy-conscious", "public-safety review"] }
+          ],
+          "constructiveCritique": "The resume establishes the full product arc and resident-facing delivery vocabulary. The structured interview must determine how Jamie makes a hard product tradeoff inside City constraints rather than as an independent founder.",
+          "validateNext": "Test a real public-service product brief: discovery evidence, MVP, stakeholder conflict, accessibility, launch plan, outcome metric, and post-launch decision."
+        },
+        {
+          "pairId": "oti-product-lisa-gelobter",
+          "readerId": "reader.lisa-gelobter",
+          "displayName": "Lisa Gelobter",
+          "relationship": "official initiative vision leader",
+          "signalGroups": [
+            { "id": "public-interest-technology", "patterns": ["civic technology", "Responsible public technology", "public-service"] },
+            { "id": "in-house-capacity", "patterns": ["durable handoffs", "teams can continue", "maintainable publishing systems"] },
+            { "id": "technical-fluency", "patterns": ["systems architecture", "JavaScript/TypeScript", "Python/Django"] },
+            { "id": "participatory-practice", "patterns": ["participatory discovery", "stakeholder listening", "organizer onboarding"] },
+            { "id": "digital-equity-and-usability", "patterns": ["accessibility-aware", "resident-facing", "issue pathways"] },
+            { "id": "learning-system", "patterns": ["post-launch learning", "retrospectives", "shared campaign memory"] }
+          ],
+          "constructiveCritique": "Jamie is legible as a technically fluent public-interest product operator who builds institutional memory. The next gate is whether that founder-led breadth becomes focused, accountable product leadership inside a large public institution.",
+          "validateNext": "Probe public-service motivation, power sharing, managerability, outcome measurement, and the ability to build City capacity rather than personal dependency."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "organization": "NYC Office of Technology and Innovation",
+      "targetRole": "Technical Operations Manager",
+      "status": "expired-benchmark",
+      "officialSource": "https://cityjobs.nyc.gov/job/technical-operations-manager-in-brooklyn-jid-44321",
+      "resumePath": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.md",
+      "readerCriteria": [
+        {
+          "pairId": "oti-operations-lisa-gelobter",
+          "readerId": "reader.lisa-gelobter",
+          "displayName": "Lisa Gelobter",
+          "relationship": "official agency vision leader for an expired benchmark; direct manager is not publicly named",
+          "signalGroups": [
+            { "id": "technical-operations", "patterns": ["Technical Operations Manager", "technical operations and project manager", "Technical Operations & Project Manager"] },
+            { "id": "delivery-and-risk", "patterns": ["Delivery coordination", "risk and dependency tracking", "surface blockers"] },
+            { "id": "team-operating-system", "patterns": ["Team operating systems", "status reporting", "decision records"] },
+            { "id": "onboarding-and-runbooks", "patterns": ["onboarding guides", "runbooks", "handbooks"] },
+            { "id": "continuous-improvement", "patterns": ["continuous improvement", "retrospectives", "process improvement"] },
+            { "id": "public-service-technology", "patterns": ["public-interest technology", "public-service", "digital equity"] },
+            { "id": "authority-boundary", "patterns": ["does not establish procurement authority", "award was not disbursed"] }
+          ],
+          "constructiveCritique": "This is a strong future-role benchmark because it converts founder-level responsibility into delivery, risk, documentation, and team-capacity language while preserving authority boundaries.",
+          "validateNext": "For a materially similar future opening, test portfolio governance, personnel operations, procurement and budget exposure, escalation judgment, and civil-service eligibility."
+        }
+      ]
+    }
+  ]
+}
