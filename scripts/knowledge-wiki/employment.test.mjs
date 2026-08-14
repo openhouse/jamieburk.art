@@ -87,6 +87,22 @@ test("named reader profiles retain simulation disclaimers", () => {
   assert.ok(named.every((reader) => reader.prohibitedAssumptions.length >= 2));
 });
 
+test("shared navigation and field-system evidence changes invalidate the public hiring snapshot", () => {
+  const root = candidateFixture();
+  const before = evaluatePublicHiring(root).report.portfolioSnapshotHash;
+
+  for (const relativePath of [
+    "apps/www/src/components/SiteHeader.tsx",
+    "apps/www/src/components/FieldSystemEvidence.tsx"
+  ]) {
+    const target = path.join(root, relativePath);
+    writeFileSync(target, `${readFileSync(target, "utf8")}\n// evaluator freshness probe\n`);
+  }
+
+  const after = evaluatePublicHiring(root).report.portfolioSnapshotHash;
+  assert.notEqual(after, before);
+});
+
 test("removing a declared public proof lowers observed requirement coverage", () => {
   const root = candidateFixture();
   const before = evaluatePublicHiring(root).report;

@@ -29,7 +29,12 @@
     "docs/qa/hiring-acceptance/readers/amy-edmondson.md"
   ],
   "routeFiles": {
-    "/": ["apps/www/src/app/page.tsx", "apps/www/src/data/proofs.ts"],
+    "/": [
+      "apps/www/src/app/page.tsx",
+      "apps/www/src/components/SiteHeader.tsx",
+      "apps/www/src/components/FieldSystemEvidence.tsx",
+      "apps/www/src/data/proofs.ts"
+    ],
     "/work/technical-operations": ["apps/www/src/app/work/technical-operations/page.tsx", "apps/www/src/data/proofs.ts"],
     "/work/callnyc": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts"],
     "/work/fair-rent-nyc": ["apps/www/src/app/work/[slug]/page.tsx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts"],
