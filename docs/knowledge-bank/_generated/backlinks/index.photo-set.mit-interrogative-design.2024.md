@@ -1,8 +1,8 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to MIT Interrogative Design Symposium photo set
 
-**Source commit:** `90d2196176c53ed5a496e1b7a3d15308ecf30f49`
-**Generation time:** 2026-08-14T21:15:03-04:00
+**Source commit:** `796a663fdcbb8b8cd858c5c9e89217c5f1910865`
+**Generation time:** 2026-08-15T04:22:33-04:00
 **Source fingerprint:** `d2a07093a1d6377c3b41cc93f9d67431b13464038f8c2cf7d5d05c43bd0fd793`
 
 - [MIT Interrogative Design Symposium held photo set](../../assets/photographs/mit-interrogative-design-symposium-2024-held.md) - `related_to` (frontmatter)
