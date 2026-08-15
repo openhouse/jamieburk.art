@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `7bb04756f7480f6d9ce370b69643ccf091900a5c`
-**Generation time:** 2026-08-14T17:40:55-04:00
-**Source fingerprint:** `631d2fa594b8cadc90dca810a030b7fadea909fcfdab19bad0f05e8224d1a1bd`
+**Source commit:** `cf6374d145bbf3e2185fa83e78217815eca90925`
+**Generation time:** 2026-08-14T18:49:22-04:00
+**Source fingerprint:** `fde57500c6b2816b90ddd08596d58d0e0ead48d1435c588d9aff5402884c2304`
 
 ## application
 
@@ -225,6 +225,7 @@
 ## correction
 
 - [CallNYC chronology correction](../corrections/callnyc-years-2026.md) - `correction.callnyc-years.2026`
+- [Harry J. Epstein Company and Thick Arts LLC client chronology correction](../corrections/hje-thick-arts-client-chronology-2026.md) - `correction.hje-thick-arts-client-chronology.2026`
 - [Add Elana Gordon's credit to the East River homepage occurrence](../corrections/east-river-credit-2026-07.md) - `correction.photo.east-river-credit.2026-07`
 
 ## decision
@@ -473,6 +474,7 @@
 - [Committee on Small Business hearing on the Small Business Jobs Survival Act official transcript](../sources/public-hearing-transcripts/small-business-job-survival-hearing-2018-10-22.md) - `source.nycc.small-business.sbjsa-2018-10-22.official-transcript`
 - [November 14, 2019 City Council stated meeting official transcript](../sources/public-hearing-transcripts/commercial-rent-stated-meeting-2019-11-14.md) - `source.nycc.stated-meeting.2019-11-14.official-transcript`
 - [March 24, 2022 City Council stated meeting official transcript](../sources/public-hearing-transcripts/commercial-rent-stated-meeting-2022-03-24.md) - `source.nycc.stated-meeting.2022-03-24.official-transcript`
+- [New York Department of State record for Thick Arts LLC](../sources/nys-dos-thick-arts-llc-formation-2012-07-06.md) - `source.nys-dos.thick-arts-llc.formation.2012-07-06`
 - [Active New York State commercial rent stabilization bills](../sources/commercial-rent-public-support/active-state-bills-2025-2026.md) - `source.nys.commercial-rent.active-bills.2025-2026`
 - [2026 Democratic primary election-night result for Assembly District 56](../sources/commercial-rent-public-support/eon-huntley-2026-primary-result.md) - `source.nysboe.primary.ad56.2026`
 - [Elana Gordon East River portfolio permission summary](../sources/permissions/elana-gordon-east-river-portfolio-2026.md) - `source.permission.elana-gordon.east-river.2026-07`

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "evalId": "hje-thick-arts-client-chronology-2026-08-14",
+  "runId": "2026-08-14-hje-client-chronology-hillclimb",
+  "evaluatedAt": "2026-08-14T19:50:00-04:00",
+  "overall": "pass",
+  "authoritativeFacts": {
+    "practiceStartYear": 2009,
+    "llcFormationDate": "2012-07-06",
+    "clientPeriod": "2009-2015",
+    "firstClient": "Harry J. Epstein Company"
+  },
+  "baseline": {
+    "command": "npm run evals:hje-client-chronology",
+    "exitCode": 1,
+    "failureCount": 29,
+    "failureGroups": [
+      "canonical first-client and LLC-formation claims absent",
+      "official formation source and atomic source-fact observation absent",
+      "knowledge and public surfaces retained the provisional 2009-2011 period",
+      "work-card and employment coverage retained the provisional period",
+      "five maintained resumes conflated professional-practice and LLC dates"
+    ]
+  },
+  "boundedChanges": [
+    "separated the 2009 professional-practice start from the LLC's July 6, 2012 initial DOS filing date",
+    "replaced the provisional 2009-2011 client period with Jamie's authorized 2009-2015 correction",
+    "added a field-limited official NY Department of State source that does not expose the registered process address",
+    "propagated the chronology through canonical records, correction registry, public page plan, redacted public registry, project documentation, timeline, case study, work card, employment coverage, and five maintained resumes",
+    "regenerated all five Google Docs-derived PDF siblings and visually inspected all ten pages",
+    "tightened the OTI resume from 807 to 800 evaluator-counted words rather than weakening its 800-word gate"
+  ],
+  "postChange": {
+    "chronologyEval": "pass",
+    "canonicalClaims": 2,
+    "knowledgeAndSiteSurfaces": 4,
+    "maintainedResumeVariants": 5,
+    "mutationTestsPassing": 7,
+    "pdfPagesVisuallyPassing": 10
+  },
+  "boundaries": [
+    "Jamie's first-party correction supports the client period and first-client relationship.",
+    "The New York Department of State record supports the LLC formation date only.",
+    "No named hiring reader participated in the deterministic or visual checks.",
+    "A passing focused eval does not override repository-wide exact-candidate release gates."
+  ]
+}

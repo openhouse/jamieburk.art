@@ -19,14 +19,14 @@ Engineering project and technical operations manager with 14+ years keeping smal
 
 ## Professional Experience
 
-### THICK ARTS — Founder, Technical Project Manager & Web Systems Lead
+### INDEPENDENT PRACTICE / THICK ARTS LLC — Founder, Technical Project Manager & Web Systems Lead
 
-New York, NY / Remote | 2012–Present
+New York, NY / Remote | 2009–Present
 
 - Lead web product, design, engineering, and maintenance engagements from problem definition through requirements, implementation, testing, public release, adoption support, monitoring, issue resolution, and handoff.
 - Work directly in JavaScript/TypeScript, React/Next.js, Ember.js, Python/Django, SQL, Git/GitHub, Docker/Dokku, APIs, and analytics; investigate defects, inspect application behavior and logs, define regression expectations, and verify fixes.
 - Build delivery systems that fit the team: scoped backlogs, decision logs, action trackers, release checklists, documentation, and retrospectives. Remove or decline process when its cost exceeds its value.
-- Led long-running e-commerce, analytics, content, marketing, and operational improvements for [Harry J. Epstein Company](https://www.harryepstein.com/), contributing to a period of 2x revenue growth while helping an 80+ year-old business modernize its public and operating systems.
+- From 2009–2015, led work for [Harry J. Epstein Company](https://www.harryepstein.com/); in 2012, formalized the practice as Thick Arts LLC, with HJE as the LLC's first client. Led e-commerce, analytics, content, marketing, and operational improvements that contributed to a period of 2x revenue growth while helping an 80+ year-old business modernize its public and operating systems.
 
 ### [WOWList.org](https://wowlist.org/) — Co-Founder, Product & Community Systems
 

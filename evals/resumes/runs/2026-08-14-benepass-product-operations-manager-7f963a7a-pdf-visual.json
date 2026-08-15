@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.benepass.product-operations-manager.7f963a7a.pdf-visual",
-  "inspectedAt": "2026-08-14T18:32:00-04:00",
+  "inspectedAt": "2026-08-14T19:50:00-04:00",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy for this opportunity",
     "revisionUnchangedAfterExport": true,
@@ -9,12 +9,12 @@
   },
   "markdown": {
     "path": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.md",
-    "sha256": "6ed61c8b07f9a6c5dbee80d75446e026dbaca06834892c2dadae3aef9b32e601"
+    "sha256": "f99a93d7715d9276f9cf2ac26e862be5e705e68788b3f4eb18bd694da230aaa1"
   },
   "pdf": {
     "path": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.pdf",
-    "sha256": "5e865aaa4759eacbe48025cc295574d07ef6ee7392f04d7090d620aebe1cd646",
-    "bytes": 87038,
+    "sha256": "256c78f94d943e007ff3bcae7616a1d8de43900107c8a3c5767fcf10d24d8c90",
+    "bytes": 87559,
     "pages": 2,
     "pageSize": "US Letter"
   },
@@ -26,7 +26,7 @@
       {
         "page": 1,
         "pass": true,
-        "notes": "Product operations, launch readiness, downstream impact, go/no-go support, prioritization, and accountable operating systems read clearly with intact contact links and page geometry."
+        "notes": "Product operations, launch readiness, downstream impact, go/no-go support, prioritization, and accountable operating systems read clearly; the HJE chronology and linked company name remain legible."
       },
       {
         "page": 2,

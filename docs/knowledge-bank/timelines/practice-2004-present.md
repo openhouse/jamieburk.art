@@ -60,9 +60,11 @@ final endpoint.
 
 See [Waterways and participatory art](../projects/waterways-participatory-art-orientation.md).
 
-## 2009-2011: Legacy commerce and networked installation
+## 2009-2015: Legacy commerce and networked installation
 
-At Harry J. Epstein Company, Jamie's documented portfolio practice centered on
+Jamie's work with Harry J. Epstein Company began in 2009. In 2012 he formalized
+the practice as Thick Arts LLC, with HJE as the LLC's first client. During the
+documented 2009-2015 client period, Jamie's portfolio practice centered on
 translating a specialized paper-and-phone business into e-commerce, analytics,
 publishing, and maintainable web operations while preserving the store's
 distinctive voice. Component-level and outcome claims remain separately

@@ -3,6 +3,7 @@ import { archiveProductionJuly2026 } from "./archive-production-2026-07.ts";
 import { callNycSocialPopulationJuly2026 } from "./callnyc-social-population-2026-07.ts";
 import { googleDriveProductionJuly2026 } from "./google-drive-production-2026-07.ts";
 import { historicalKnowledge } from "./historical-knowledge.ts";
+import { hjeClientChronologyAugust2026 } from "./hje-client-chronology-2026-08.ts";
 import { kcTownHallCouncilFunding } from "./kc-town-hall-council-funding.ts";
 import { kcTownHallFieldPractice } from "./kctownhall-field-practice.ts";
 import { kcTownHallResidentServiceAugust2026 } from "./kctownhall-resident-service-2026-08.ts";
@@ -58,6 +59,7 @@ const knowledgeBankInput = {
     ...callNycSocialPopulationJuly2026.intakeItems,
     ...googleDriveProductionJuly2026.intakeItems,
     ...historicalKnowledge.intakeItems,
+    ...hjeClientChronologyAugust2026.intakeItems,
     ...socialMediaProductionJuly2026.intakeItems,
     ...urbanhermitSocialPopulationJuly2026.intakeItems,
     ...wowListFacebookPostKnowledge.intakeItems,
@@ -109,6 +111,7 @@ const knowledgeBankInput = {
     ...callNycSocialPopulationJuly2026.observations,
     ...googleDriveProductionJuly2026.observations,
     ...historicalKnowledge.observations,
+    ...hjeClientChronologyAugust2026.observations,
     ...socialMediaProductionJuly2026.observations,
     ...urbanhermitSocialPopulationJuly2026.observations,
     ...wowListFacebookPostKnowledge.observations,
@@ -264,6 +267,7 @@ const knowledgeBankInput = {
     ...callNycSocialPopulationJuly2026.sources,
     ...googleDriveProductionJuly2026.sources,
     ...historicalKnowledge.sources,
+    ...hjeClientChronologyAugust2026.sources,
     ...socialMediaProductionJuly2026.sources,
     ...urbanhermitSocialPopulationJuly2026.sources,
     ...wowListFacebookPostKnowledge.sources,
@@ -412,6 +416,7 @@ const knowledgeBankInput = {
     ...callNycSocialPopulationJuly2026.claims,
     ...googleDriveProductionJuly2026.claims,
     ...historicalKnowledge.claims,
+    ...hjeClientChronologyAugust2026.claims,
     ...socialMediaProductionJuly2026.claims,
     ...urbanhermitSocialPopulationJuly2026.claims,
     ...wowListFacebookPostKnowledge.claims,
@@ -516,7 +521,8 @@ const knowledgeBankInput = {
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-CHRONOLOGY-CORRECTION-2016", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" },
-    { id: "COR-NYCAC-CABARET-HEARING-DATE-2026", claimId: "CLM-NYCAC-CABARET-TESTIMONY-2017", previousText: "June 19, 2017", replacementText: "September 14, 2017", reason: "The official transcript title page identifies the Committee on Consumer Affairs hearing date as September 14, 2017.", decidedAt: "2026-07-14", affectedSurfaces: ["/work/fair-rent-nyc", "knowledge-bank", "public-citation-registry"], status: "active" }
+    { id: "COR-NYCAC-CABARET-HEARING-DATE-2026", claimId: "CLM-NYCAC-CABARET-TESTIMONY-2017", previousText: "June 19, 2017", replacementText: "September 14, 2017", reason: "The official transcript title page identifies the Committee on Consumer Affairs hearing date as September 14, 2017.", decidedAt: "2026-07-14", affectedSurfaces: ["/work/fair-rent-nyc", "knowledge-bank", "public-citation-registry"], status: "active" },
+    { id: "COR-HJE-THICK-ARTS-CHRONOLOGY-2026", claimId: "CLM-HJE-THICK-ARTS-FIRST-CLIENT-2009-2015", previousText: "Harry J. Epstein Company client chronology beginning in 2012", replacementText: "Harry J. Epstein Company was a client from 2009 through 2015 and became Thick Arts LLC's first client when Jamie formalized the practice in 2012.", reason: "Jamie corrected the client period and first-client relationship; the New York Department of State independently establishes July 6, 2012 as the LLC's initial filing date.", decidedAt: "2026-08-14", affectedSurfaces: ["/work", "/work/harry-j-epstein", "knowledge-bank", "resume", "public-citation-registry"], status: "active" }
   ],
   pages: [{
     id: "about",
@@ -530,6 +536,25 @@ const knowledgeBankInput = {
         claimId: "CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY",
         projection: "archive-note",
         sourceIds: ["SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28"]
+      }
+    ]
+  }, {
+    id: "harry-j-epstein",
+    surface: "/work/harry-j-epstein",
+    sourceOrder: [
+      "SRC-NYS-DOS-THICK-ARTS-LLC-FORMATION-2012-07-06"
+    ],
+    occurrences: [
+      {
+        id: "first-client-chronology",
+        claimId: "CLM-HJE-THICK-ARTS-FIRST-CLIENT-2009-2015",
+        projection: "case-study"
+      },
+      {
+        id: "llc-formation",
+        claimId: "CLM-THICK-ARTS-LLC-FORMATION-2012-07-06",
+        projection: "case-study",
+        sourceIds: ["SRC-NYS-DOS-THICK-ARTS-LLC-FORMATION-2012-07-06"]
       }
     ]
   }, {

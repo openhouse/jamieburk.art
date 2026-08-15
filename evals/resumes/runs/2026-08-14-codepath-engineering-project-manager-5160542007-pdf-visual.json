@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.codepath.engineering-project-manager.5160542007.pdf-visual",
-  "inspectedAt": "2026-08-14T18:32:00-04:00",
+  "inspectedAt": "2026-08-14T19:50:00-04:00",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy for this opportunity",
     "revisionUnchangedAfterExport": true,
@@ -9,12 +9,12 @@
   },
   "markdown": {
     "path": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.md",
-    "sha256": "c4011bdcc109dc52d5af7380f0779d33568e2acd589514a23b6c612923bd78b1"
+    "sha256": "5bd0721f95d0c6702b0253bf363d584974d19e8bd550664744448cec773cbb79"
   },
   "pdf": {
     "path": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.pdf",
-    "sha256": "ae20009efe2275b54b6e994996279341d875fbb51fe3dcbd0070115741eeb269",
-    "bytes": 85972,
+    "sha256": "8e5ed9206290dd6ba2f376ae02e5b5102532487847269cdbf9d8d1283404f873",
+    "bytes": 86302,
     "pages": 2,
     "pageSize": "US Letter"
   },
@@ -26,7 +26,7 @@
       {
         "page": 1,
         "pass": true,
-        "notes": "Name, engineering-project title, contact links, summary, quality system, technical fluency, and primary delivery experience are legible with no clipping, overlap, or broken hierarchy."
+        "notes": "Name, engineering-project title, contact links, summary, quality system, technical fluency, and the corrected HJE/Thick Arts chronology are legible with no clipping, overlap, or broken hierarchy."
       },
       {
         "page": 2,

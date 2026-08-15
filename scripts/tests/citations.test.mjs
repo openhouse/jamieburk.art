@@ -67,10 +67,24 @@ test("Claim resolver returns only active approved projections", () => {
 test("corrections retire old wording from public surfaces", () => {
   const text = ["apps/www/src/content/work/callnyc.mdx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts", "apps/www/src/app/resume/page.tsx"].map((path) => readFileSync(path, "utf8")).join("\n");
   assert.doesNotMatch(text, /first civic-data hackathon|2014[-–]2015/i);
-  assert.equal(knowledgeBank.corrections.length, 4);
+  const correctionIds = new Set(knowledgeBank.corrections.map((correction) => correction.id));
+  for (const id of [
+    "COR-CALLNYC-CHRONOLOGY-2026",
+    "COR-CALLNYC-SUPERLATIVE-2026",
+    "COR-CALLNYC-EVENT-TIME-2026",
+    "COR-NYCAC-CABARET-HEARING-DATE-2026",
+    "COR-HJE-THICK-ARTS-CHRONOLOGY-2026"
+  ]) {
+    assert.ok(correctionIds.has(id), `missing governed correction ${id}`);
+  }
   assert.ok(knowledgeBank.corrections.some((correction) =>
     correction.id === "COR-NYCAC-CABARET-HEARING-DATE-2026" &&
     correction.replacementText === "September 14, 2017"
+  ));
+  assert.ok(knowledgeBank.corrections.some((correction) =>
+    correction.id === "COR-HJE-THICK-ARTS-CHRONOLOGY-2026" &&
+    correction.replacementText.includes("2009 through 2015") &&
+    correction.replacementText.includes("first client")
   ));
 });
 

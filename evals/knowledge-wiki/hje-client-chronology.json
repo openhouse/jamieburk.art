@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "hje-thick-arts-client-chronology-2026-08-14",
+  "authoritativeCorrection": {
+    "practiceStartYear": 2009,
+    "llcFormationDate": "2012-07-06",
+    "practiceOngoing": true,
+    "client": "Harry J. Epstein Company",
+    "relationship": "first client",
+    "clientStartYear": 2009,
+    "clientEndYear": 2015
+  },
+  "acceptanceRules": [
+    "The knowledge bank records Jamie Burkart's first-party correction that Harry J. Epstein Company was Thick Arts LLC's first client.",
+    "The knowledge bank records the New York Department of State initial filing date of July 6, 2012 as the legal formation date for Thick Arts LLC.",
+    "The professional practice begins in 2009 and is not conflated with the LLC's 2012 legal formation.",
+    "The Harry J. Epstein Company client engagement is dated 2009-2015 and is not presented as current.",
+    "The correction appears consistently in the canonical claim layer, official-source note, project note, practice timeline, case study, work-card metadata, and every maintained opportunity resume.",
+    "The case-study claims are explicitly bound in the public page plan and generated redacted public registry.",
+    "The record does not infer every contract, invoice, or billing date from the bounded chronology."
+  ]
+}

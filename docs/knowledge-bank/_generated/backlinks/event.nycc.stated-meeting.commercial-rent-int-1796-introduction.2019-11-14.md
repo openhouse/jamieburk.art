@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Int. 1796 commercial rent stabilization introduction
 
-**Source commit:** `7bb04756f7480f6d9ce370b69643ccf091900a5c`
-**Generation time:** 2026-08-14T17:40:55-04:00
-**Source fingerprint:** `631d2fa594b8cadc90dca810a030b7fadea909fcfdab19bad0f05e8224d1a1bd`
+**Source commit:** `cf6374d145bbf3e2185fa83e78217815eca90925`
+**Generation time:** 2026-08-14T18:49:22-04:00
+**Source fingerprint:** `fde57500c6b2816b90ddd08596d58d0e0ead48d1435c588d9aff5402884c2304`
 
 - [Commercial rent stabilization testimony](../../indexes/commercial-rent-testimony.md) - `prose_link` (markdown)
 - [November 14, 2019 City Council stated meeting official transcript](../../sources/public-hearing-transcripts/commercial-rent-stated-meeting-2019-11-14.md) - `documents` (frontmatter)

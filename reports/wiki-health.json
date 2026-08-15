@@ -1,28 +1,28 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-14T17:40:55-04:00",
-  "sourceCommit": "7bb04756f7480f6d9ce370b69643ccf091900a5c",
-  "sourceFingerprint": "631d2fa594b8cadc90dca810a030b7fadea909fcfdab19bad0f05e8224d1a1bd",
+  "generatedAt": "2026-08-14T18:49:22-04:00",
+  "sourceCommit": "cf6374d145bbf3e2185fa83e78217815eca90925",
+  "sourceFingerprint": "fde57500c6b2816b90ddd08596d58d0e0ead48d1435c588d9aff5402884c2304",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
     "errors": []
   },
   "diagnostics": {
-    "records": 447,
+    "records": 449,
     "byKind": {
       "project": 15,
       "person": 12,
       "organization": 1,
       "event": 20,
       "place": 1,
-      "source": 93,
+      "source": 94,
       "asset": 194,
       "claim": 3,
       "research-run": 7,
       "research-inquiry": 6,
       "decision": 8,
-      "correction": 2,
+      "correction": 3,
       "method": 14,
       "timeline": 1,
       "application": 3,
@@ -32,11 +32,11 @@
       "opportunity": 10,
       "projection": 13
     },
-    "typedRelations": 1591,
+    "typedRelations": 1596,
     "evidenceRelations": 20,
     "relationTypeCounts": {
       "collaborated_with": 5,
-      "documents": 41,
+      "documents": 42,
       "evidence:context": 7,
       "evidence:direct-support": 10,
       "evidence:private-support": 3,
@@ -45,20 +45,20 @@
       "part_of": 14,
       "participated_in": 3,
       "projected_to": 17,
-      "related_to": 1019,
+      "related_to": 1021,
       "resulted_in": 6,
       "supersedes": 1,
       "supports": 26,
       "uses_method": 35,
-      "uses_source": 354
+      "uses_source": 356
     },
-    "proseLinks": 507,
-    "rootReachable": 239,
+    "proseLinks": 508,
+    "rootReachable": 240,
     "orphanCount": 0,
     "deadEndCount": 0,
     "wantedPageCount": 6,
     "stalePageCount": 0,
-    "correctionCount": 2,
+    "correctionCount": 3,
     "rightsReviewCount": 185,
     "opportunityCount": 10,
     "liveOpportunityCount": 8,
@@ -158,6 +158,12 @@
       "title": "Add Elana Gordon's credit to the East River homepage occurrence",
       "path": "docs/knowledge-bank/corrections/east-river-credit-2026-07.md",
       "humanReview": "not-requested"
+    },
+    {
+      "id": "correction.hje-thick-arts-client-chronology.2026",
+      "title": "Harry J. Epstein Company and Thick Arts LLC client chronology correction",
+      "path": "docs/knowledge-bank/corrections/hje-thick-arts-client-chronology-2026.md",
+      "humanReview": "resolved"
     }
   ],
   "rightsReview": [

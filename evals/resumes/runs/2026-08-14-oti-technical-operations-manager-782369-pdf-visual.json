@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.nyc-oti.technical-operations-manager.782369.pdf-visual",
-  "inspectedAt": "2026-08-14T18:32:00-04:00",
+  "inspectedAt": "2026-08-14T19:50:00-04:00",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy for this opportunity",
     "revisionUnchangedAfterExport": true,
@@ -9,12 +9,12 @@
   },
   "markdown": {
     "path": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.md",
-    "sha256": "f3c452d0e21802434e693690374625355db88dc36fb27cfeb8de406a9e0c5ca4"
+    "sha256": "135a1e26afea7d8174b511c4412a8c2ae2c17d4bcaf7db0a1bff5f7708c05590"
   },
   "pdf": {
     "path": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.pdf",
-    "sha256": "4182a32ced28fe873042a6f89db1315cdfb1f2c50a0d9416cfda14ade3459f5a",
-    "bytes": 89707,
+    "sha256": "6e334681ddb5a8a75d58e147dd760be463d952f56dc5c6aff1ffdfc63d5f5eb0",
+    "bytes": 90045,
     "pages": 2,
     "pageSize": "US Letter"
   },
@@ -26,7 +26,7 @@
       {
         "page": 1,
         "pass": true,
-        "notes": "Technical operations, delivery coordination, team operating systems, cross-functional translation, and public-interest technology are immediately legible with intact hierarchy."
+        "notes": "Technical operations, delivery coordination, team operating systems, cross-functional translation, public-interest technology, and the corrected HJE/Thick Arts chronology are immediately legible with intact hierarchy."
       },
       {
         "page": 2,

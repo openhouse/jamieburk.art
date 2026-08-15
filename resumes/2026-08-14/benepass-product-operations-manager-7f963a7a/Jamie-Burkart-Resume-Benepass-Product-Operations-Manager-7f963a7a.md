@@ -19,13 +19,13 @@ Product operations and technical project manager with 14+ years turning ambiguou
 
 ## Professional Experience
 
-### THICK ARTS — Founder, Product Operations & Technical Project Manager / Web Systems Lead
+### INDEPENDENT PRACTICE / THICK ARTS LLC — Founder, Product Operations & Technical Project Manager / Web Systems Lead
 
-New York, NY / Remote | 2012–Present
+New York, NY / Remote | 2009–Present
 
 - Lead public-facing web products and implementation work from discovery and requirements through scope, sequencing, technical delivery, testing, launch, adoption support, issue resolution, documentation, and handoff.
 - Translate among product goals, engineering constraints, customer language, content, analytics, marketing, and operations; preserve decisions, release expectations, reusable patterns, and post-launch learning.
-- Led long-running e-commerce, analytics, content, marketing, and operational improvements for [Harry J. Epstein Company](https://www.harryepstein.com/), contributing to a period of 2x revenue growth while helping an 80+ year-old business modernize product discovery, ordering, promotions, content, and maintenance workflows.
+- From 2009–2015, led work for [Harry J. Epstein Company](https://www.harryepstein.com/); in 2012, formalized the practice as Thick Arts LLC, with HJE as the LLC's first client. Led e-commerce, analytics, content, marketing, and operational improvements that contributed to a period of 2x revenue growth while helping an 80+ year-old business modernize product discovery, ordering, promotions, content, and maintenance workflows.
 
 ### [WOWList.org](https://wowlist.org/) — Co-Founder, Product & Community Systems
 

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-14T17:40:55-04:00",
-  "sourceCommit": "7bb04756f7480f6d9ce370b69643ccf091900a5c",
-  "sourceFingerprint": "631d2fa594b8cadc90dca810a030b7fadea909fcfdab19bad0f05e8224d1a1bd",
+  "generatedAt": "2026-08-14T18:49:22-04:00",
+  "sourceCommit": "cf6374d145bbf3e2185fa83e78217815eca90925",
+  "sourceFingerprint": "fde57500c6b2816b90ddd08596d58d0e0ead48d1435c588d9aff5402884c2304",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -2684,6 +2684,19 @@
       "reviewBy": "2027-01-18"
     },
     {
+      "id": "correction.hje-thick-arts-client-chronology.2026",
+      "path": "docs/knowledge-bank/corrections/hje-thick-arts-client-chronology-2026.md",
+      "title": "Harry J. Epstein Company and Thick Arts LLC client chronology correction",
+      "kind": "correction",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Records the 2009-2015 HJE engagement, HJE's status as Thick Arts LLC's first client, and the LLC's independently verified July 6, 2012 formation date without backdating the legal entity.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2027-02-14"
+    },
+    {
       "id": "correction.photo.east-river-credit.2026-07",
       "path": "docs/knowledge-bank/corrections/east-river-credit-2026-07.md",
       "title": "Add Elana Gordon's credit to the East River homepage occurrence",
@@ -4174,11 +4187,11 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Long-running e-commerce, analytics, publishing, and operational modernization for a multigenerational Kansas City industrial supply business.",
+      "summary": "A 2009-2015 client engagement centered on e-commerce, analytics, publishing, and operational modernization; when Jamie formalized his practice as Thick Arts LLC in 2012, Harry J. Epstein Company became the LLC's first client.",
       "aliases": [
         "HJE"
       ],
-      "lastReviewed": "2026-07-19",
+      "lastReviewed": "2026-08-14",
       "reviewBy": "2026-10-19"
     },
     {
@@ -5384,6 +5397,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-28",
       "reviewBy": "2027-01-28"
+    },
+    {
+      "id": "source.nys-dos.thick-arts-llc.formation.2012-07-06",
+      "path": "docs/knowledge-bank/sources/nys-dos-thick-arts-llc-formation-2012-07-06.md",
+      "title": "New York Department of State record for Thick Arts LLC",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official entity record identifying July 6, 2012 as Thick Arts LLC's initial New York Department of State filing date.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2027-02-14"
     },
     {
       "id": "source.nys.commercial-rent.active-bills.2025-2026",
@@ -11645,6 +11671,30 @@
       "context": null
     },
     {
+      "from": "correction.hje-thick-arts-client-chronology.2026",
+      "type": "related_to",
+      "to": "project.harry-j-epstein",
+      "source": "frontmatter",
+      "href": "../projects/harry-j-epstein.md",
+      "context": null
+    },
+    {
+      "from": "correction.hje-thick-arts-client-chronology.2026",
+      "type": "related_to",
+      "to": "timeline.jamie-practice.2004-present",
+      "source": "frontmatter",
+      "href": "../timelines/practice-2004-present.md",
+      "context": null
+    },
+    {
+      "from": "correction.hje-thick-arts-client-chronology.2026",
+      "type": "uses_source",
+      "to": "source.nys-dos.thick-arts-llc.formation.2012-07-06",
+      "source": "frontmatter",
+      "href": "../sources/nys-dos-thick-arts-llc-formation-2012-07-06.md",
+      "context": null
+    },
+    {
       "from": "correction.photo.east-river-credit.2026-07",
       "type": "related_to",
       "to": "asset.photo.east-river-manhattan-bridge.2022.001",
@@ -16319,6 +16369,14 @@
       "context": null
     },
     {
+      "from": "project.harry-j-epstein",
+      "type": "uses_source",
+      "to": "source.nys-dos.thick-arts-llc.formation.2012-07-06",
+      "source": "frontmatter",
+      "href": "../sources/nys-dos-thick-arts-llc-formation-2012-07-06.md",
+      "context": null
+    },
+    {
       "from": "project.kc-spaces-fund",
       "type": "related_to",
       "to": "person.jamie-burkart",
@@ -18284,6 +18342,14 @@
       "to": "event.nycc.stated-meeting.commercial-rent-int-93-introduction.2022-03-24",
       "source": "frontmatter",
       "href": "../../events/commercial-rent-int-93-introduction-2022-03-24.md",
+      "context": null
+    },
+    {
+      "from": "source.nys-dos.thick-arts-llc.formation.2012-07-06",
+      "type": "documents",
+      "to": "project.harry-j-epstein",
+      "source": "frontmatter",
+      "href": "../projects/harry-j-epstein.md",
       "context": null
     },
     {
@@ -22472,6 +22538,15 @@
       "to": "research.nycac.frontline-advocacy.2026-08-12",
       "fragment": null,
       "line": 25,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/harry-j-epstein.md",
+      "from": "project.harry-j-epstein",
+      "toPath": "docs/knowledge-bank/sources/nys-dos-thick-arts-llc-formation-2012-07-06.md",
+      "to": "source.nys-dos.thick-arts-llc.formation.2012-07-06",
+      "fragment": null,
+      "line": 18,
       "kind": "link"
     },
     {

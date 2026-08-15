@@ -225,6 +225,25 @@
       ]
     },
     {
+      "id": "SRC-NYS-DOS-THICK-ARTS-LLC-FORMATION-2012-07-06",
+      "title": "New York Department of State Active Corporations record for THICK ARTS LLC",
+      "organization": "New York State Department of State",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2012-07-06",
+      "accessedAt": "2026-08-14",
+      "canonicalUrl": "https://data.ny.gov/resource/n9v6-gdp6.json?%24select=dos_id%2Ccurrent_entity_name%2Cinitial_dos_filing_date%2Ccounty%2Cjurisdiction%2Centity_type&%24where=current_entity_name%3D%27THICK%20ARTS%20LLC%27",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York State Department of State, Active Corporations: Beginning 1800, THICK ARTS LLC entity record, accessed August 14, 2026.",
+      "publicNote": "The field-limited query omits the registered process address from the public portfolio citation.",
+      "doesNotEstablish": [
+        "the 2009 start of Jamie's professional practice",
+        "Harry J. Epstein Company as a client",
+        "the duration of the HJE engagement"
+      ]
+    },
+    {
       "id": "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
       "title": "Portfolio social-media archival production inventory",
       "organization": "Jamie Burkart portfolio knowledge bank",
@@ -1652,6 +1671,107 @@
       ]
     },
     {
+      "id": "CLM-HJE-THICK-ARTS-FIRST-CLIENT-2009-2015",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie's work with Harry J. Epstein Company began in 2009. When he formalized his practice as Thick Arts LLC in 2012, HJE became the LLC's first client; the engagement continued through 2015.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/harry-j-epstein"
+          ]
+        },
+        {
+          "key": "work-card",
+          "text": "A 2009-2015 client engagement that became Thick Arts LLC's first client relationship when Jamie formalized the practice in 2012.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work",
+            "/work/harry-j-epstein"
+          ]
+        },
+        {
+          "key": "resume-html",
+          "text": "From 2009-2015, led e-commerce and operational modernization for Harry J. Epstein Company; in 2012, formalized the practice as Thick Arts LLC with HJE as the LLC's first client.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "resumes/2026-08-14"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "The professional practice began by 2009; it was formalized as Thick Arts LLC in 2012, with Harry J. Epstein Company as the LLC's first client during a 2009-2015 engagement.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/projects/harry-j-epstein.md",
+            "docs/knowledge-bank/timelines/practice-2004-present.md"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Use 2009-present only for the combined independent practice and later LLC, not for the legal entity alone.",
+        "Use 2009-2015 for the HJE client engagement and July 6, 2012 for the LLC's initial DOS filing.",
+        "Do not turn the continuing practice into a claim that HJE remained a client after 2015.",
+        "Do not infer every contract, invoice, billing month, or maintenance interaction from the maintained portfolio range."
+      ]
+    },
+    {
+      "id": "CLM-THICK-ARTS-LLC-FORMATION-2012-07-06",
+      "status": "confirmed",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The New York Department of State records July 6, 2012 as Thick Arts LLC's initial filing date.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/harry-j-epstein"
+          ]
+        },
+        {
+          "key": "resume-html",
+          "text": "In 2012, formalized the practice as Thick Arts LLC.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "resumes/2026-08-14"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "Thick Arts LLC's initial DOS filing date was July 6, 2012.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "docs/knowledge-bank/sources/nys-dos-thick-arts-llc-formation-2012-07-06.md",
+            "docs/knowledge-bank/projects/harry-j-epstein.md"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYS-DOS-THICK-ARTS-LLC-FORMATION-2012-07-06",
+          "relationship": "direct-support",
+          "supports": [
+            "July 6, 2012 initial DOS filing date",
+            "THICK ARTS LLC as a domestic limited liability company"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The filing date is the legal-entity date, not the beginning of Jamie's independent professional practice.",
+        "The official entity record does not identify any client or establish the duration of any client engagement."
+      ]
+    },
+    {
       "id": "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -2984,6 +3104,28 @@
           "projection": "archive-note",
           "sourceIds": [
             "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harry-j-epstein",
+      "surface": "/work/harry-j-epstein",
+      "sourceOrder": [
+        "SRC-NYS-DOS-THICK-ARTS-LLC-FORMATION-2012-07-06"
+      ],
+      "occurrences": [
+        {
+          "id": "first-client-chronology",
+          "claimId": "CLM-HJE-THICK-ARTS-FIRST-CLIENT-2009-2015",
+          "projection": "case-study"
+        },
+        {
+          "id": "llc-formation",
+          "claimId": "CLM-THICK-ARTS-LLC-FORMATION-2012-07-06",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYS-DOS-THICK-ARTS-LLC-FORMATION-2012-07-06"
           ]
         }
       ]
