@@ -112,3 +112,9 @@ test("rendering primitives preserve no-JavaScript document semantics", () => {
   assert.match(sourceNote, /role="doc-backlink"/);
   assert.match(sourceNote, /Official document/);
 });
+
+test("the About page renders endnotes for its Open House citation", () => {
+  const aboutPage = readFileSync("apps/www/src/app/about/page.tsx", "utf8");
+  assert.equal(resolveCitationReferences("about").length, 1);
+  assert.match(aboutPage, /<References pageId="about" \/>/);
+});

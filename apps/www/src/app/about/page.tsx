@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Claim } from "@/components/citations/Claim";
+import { References } from "@/components/citations/References";
 import { ContactCTA } from "@/components/ContactCTA";
 import { createMetadata } from "@/lib/metadata";
 
@@ -305,6 +306,9 @@ export default function AboutPage() {
             work.
           </p>
         </div>
+      </div>
+      <div className="mt-12 max-w-3xl">
+        <References pageId="about" />
       </div>
       <div className="mt-12 max-w-3xl">
         <ContactCTA />
