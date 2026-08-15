@@ -3,7 +3,7 @@
 
 **Source commit:** `43635c80c54cfe9ca474736847cab8b01bd6d14d`
 **Generation time:** 2026-08-15T16:48:16-04:00
-**Source fingerprint:** `220b94e6ef3bd0a5f6af9c922801f491b3c2f97538ead62c7d0e546712bcf48a`
+**Source fingerprint:** `8dc978b3cebef1e2f6b17ad469cbdaec5281260f6f0b78c8e742041e06fb4465`
 
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `related_to` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [hur5tftl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj.md) - `related_to` (frontmatter)
@@ -48,6 +48,7 @@
 - [Active New York State commercial rent stabilization bills](../../sources/commercial-rent-public-support/active-state-bills-2025-2026.md) - `related_to` (frontmatter)
 - [Late-July 2026 current-workstream review](../../sources/working/current-workstream-2026-07-27.md) - `related_to` (frontmatter)
 - [Empty Storefronts, High Rents](../../sources/commercial-rent-public-support/empty-storefronts-high-rents-report-2026.md) - `related_to` (frontmatter)
+- [Chi Ossé and Emily Gallagher Small Business Rent Stabilization Reel](../../sources/commercial-rent-public-support/chiosse-emily-small-business-rent-reel-2026-08-05.md) - `related_to` (frontmatter)
 - [NYC Artist Coalition Cultural Space Rent Stabilization Story](../../sources/commercial-rent-public-support/nycartc-cultural-space-story-2026-08-15.md) - `related_to` (frontmatter)
 - [Jimmy's Corner rally: Small Business Rent Stabilization statements](../../testimony/commercial-rent-public-support/2026-04-10-jimmys-corner-rally-statements.md) - `related_to` (frontmatter)
 - [State sponsors and advocates introduce the Small Business Survival Act](../../testimony/commercial-rent-public-support/2026-02-17-state-introduction-statements.md) - `related_to` (frontmatter)

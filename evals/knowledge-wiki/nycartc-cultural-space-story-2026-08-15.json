@@ -3,7 +3,7 @@
   "runDate": "2026-08-15",
   "source": {
     "repository": "openhouse/commercial-rent-stabilization-public-support",
-    "commit": "42585897e2616f08d0751878a0a63a1d3180c1d2",
+    "commit": "ea5497dd910f3402c01e8b560b149d6674f951cc",
     "mediaSha256": "24808b127cd7af7bf0e804db0e27ec59b82d57d96ebf62a2f1e617ed6845caef"
   },
   "candidate": {
@@ -11,11 +11,11 @@
     "claims": 1,
     "agencyRelations": 1,
     "activeCitedProjections": 1,
-    "guardedBoundaries": 3
+    "guardedBoundaries": 4
   },
   "hillClimb": {
-    "adversarialTestsPassed": 6,
-    "adversarialTestsTotal": 6,
+    "adversarialTestsPassed": 8,
+    "adversarialTestsTotal": 8,
     "failureModes": [
       {
         "failure": "The expiring Story URL becomes the only source.",
@@ -40,6 +40,14 @@
       {
         "failure": "An active portfolio statement loses its citation requirement.",
         "improvement": "Require the Fair Rent case-study projection to remain active and cited."
+      },
+      {
+        "failure": "A corrected transcript state lacks a content-addressed reviewed-transcript record.",
+        "improvement": "Require the exact-commit reviewed transcript link in the Wiki source record."
+      },
+      {
+        "failure": "Cross-source editorial review is inflated into completed human listening and publication approval.",
+        "improvement": "Keep final human listening/approval as an explicit separate gate."
       }
     ]
   },
@@ -51,7 +59,7 @@
     "commercialRentPublicSupportSuite": "passed"
   },
   "humanGates": [
-    "independent audio and timing review",
+    "final human listening and transcript approval",
     "media reproduction rights",
     "represented-person consent where applicable",
     "individual editorial authorship attribution",

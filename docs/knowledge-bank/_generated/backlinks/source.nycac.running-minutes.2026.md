@@ -3,7 +3,7 @@
 
 **Source commit:** `43635c80c54cfe9ca474736847cab8b01bd6d14d`
 **Generation time:** 2026-08-15T16:48:16-04:00
-**Source fingerprint:** `220b94e6ef3bd0a5f6af9c922801f491b3c2f97538ead62c7d0e546712bcf48a`
+**Source fingerprint:** `8dc978b3cebef1e2f6b17ad469cbdaec5281260f6f0b78c8e742041e06fb4465`
 
 - [NYC Artist Coalition organization map](../../organizations/nyc-artist-coalition.md) - `uses_source` (frontmatter)
 - [Fair Rent NYC](../../projects/fair-rent-nyc.md) - `uses_source` (frontmatter)

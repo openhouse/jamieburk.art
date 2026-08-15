@@ -13,6 +13,7 @@ import { jamiePersonalFacebookPostKnowledge } from "./jamie-personal-facebook-po
 import { nycacPressArchive } from "./nycac-press-archive.ts";
 import { nycacRecentAdvocacyAugust2026 } from "./nycac-recent-advocacy-2026-08.ts";
 import { nycartcCulturalSpaceStoryAugust2026 } from "./nycartc-cultural-space-story-2026-08.ts";
+import { chiosseEmilyCommercialRentReelAugust2026 } from "./chiosse-emily-commercial-rent-reel-2026-08.ts";
 import { nycacFacebookEventKnowledge } from "./nycac-facebook-events-2026-07.ts";
 import { nycacFacebookPostKnowledge } from "./nycac-facebook-posts-2026-07.ts";
 import { personalWowListFacebookEventKnowledge } from "./personal-wowlist-facebook-events-2026-07.ts";
@@ -85,7 +86,8 @@ const knowledgeBankInput = {
     ...nycacSourceExpansionII.intakeItems,
     ...nycacPressArchive.intakeItems,
     ...nycacRecentAdvocacyAugust2026.intakeItems,
-    ...nycartcCulturalSpaceStoryAugust2026.intakeItems
+    ...nycartcCulturalSpaceStoryAugust2026.intakeItems,
+    ...chiosseEmilyCommercialRentReelAugust2026.intakeItems
   ],
   observations: [
     {
@@ -136,7 +138,8 @@ const knowledgeBankInput = {
     ...nycacSourceExpansionII.observations,
     ...nycacPressArchive.observations,
     ...nycacRecentAdvocacyAugust2026.observations,
-    ...nycartcCulturalSpaceStoryAugust2026.observations
+    ...nycartcCulturalSpaceStoryAugust2026.observations,
+    ...chiosseEmilyCommercialRentReelAugust2026.observations
   ],
   sources: [
     {
@@ -291,7 +294,8 @@ const knowledgeBankInput = {
     ...nycacSourceExpansionII.sources,
     ...nycacPressArchive.sources,
     ...nycacRecentAdvocacyAugust2026.sources,
-    ...nycartcCulturalSpaceStoryAugust2026.sources
+    ...nycartcCulturalSpaceStoryAugust2026.sources,
+    ...chiosseEmilyCommercialRentReelAugust2026.sources
   ],
   entities: [
     ...agencyGraph.entities,
@@ -299,7 +303,8 @@ const knowledgeBankInput = {
     ...kcTownHallCouncilFunding.entities,
     ...kcTownHallTiredOfTiresSourceReturn.entities,
     ...nycacRecentAdvocacyAugust2026.entities,
-    ...nycartcCulturalSpaceStoryAugust2026.entities
+    ...nycartcCulturalSpaceStoryAugust2026.entities,
+    ...chiosseEmilyCommercialRentReelAugust2026.entities
   ],
   agencyRelations: [
     ...agencyGraph.agencyRelations,
@@ -307,7 +312,8 @@ const knowledgeBankInput = {
     ...kcTownHallCouncilFunding.agencyRelations,
     ...kcTownHallTiredOfTiresSourceReturn.agencyRelations,
     ...nycacRecentAdvocacyAugust2026.agencyRelations,
-    ...nycartcCulturalSpaceStoryAugust2026.agencyRelations
+    ...nycartcCulturalSpaceStoryAugust2026.agencyRelations,
+    ...chiosseEmilyCommercialRentReelAugust2026.agencyRelations
   ],
   claims: [
     {
@@ -450,7 +456,8 @@ const knowledgeBankInput = {
     ...nycacSourceExpansionII.claims,
     ...nycacPressArchive.claims,
     ...nycacRecentAdvocacyAugust2026.claims,
-    ...nycartcCulturalSpaceStoryAugust2026.claims
+    ...nycartcCulturalSpaceStoryAugust2026.claims,
+    ...chiosseEmilyCommercialRentReelAugust2026.claims
   ],
   researchInquiries: [
     {
@@ -517,6 +524,7 @@ const knowledgeBankInput = {
     ...professionalRecordAugust2026.researchInquiries,
     ...nycacRecentAdvocacyAugust2026.researchInquiries,
     ...nycartcCulturalSpaceStoryAugust2026.researchInquiries,
+    ...chiosseEmilyCommercialRentReelAugust2026.researchInquiries,
     ...nycacSocialPopulationJuly2026.researchInquiries,
     ...nycacSourceExpansion.researchInquiries,
     ...nycacSourceExpansionII.researchInquiries,

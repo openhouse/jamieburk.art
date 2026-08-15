@@ -25,7 +25,7 @@ expectFailure(
   "a mutable branch cannot replace the pinned archive commit",
   (candidate) => {
     candidate.source.archiveUrl = candidate.source.archiveUrl.replace(
-      "42585897e2616f08d0751878a0a63a1d3180c1d2",
+      "ea5497dd910f3402c01e8b560b149d6674f951cc",
       "main"
     );
   },
@@ -77,4 +77,26 @@ expectFailure(
     candidate.claim.projections[0].citationRequired = false;
   },
   /cited Fair Rent case-study projection/
+);
+
+expectFailure(
+  "the reviewed transcript reference cannot drift to a mutable branch",
+  (candidate) => {
+    candidate.sourceDoc = candidate.sourceDoc.replace(
+      "blob/ea5497dd910f3402c01e8b560b149d6674f951cc/sources/instagram/2026-08-15-nycartc-story-3964470891412306511/transcript.reviewed.md",
+      "blob/main/sources/instagram/2026-08-15-nycartc-story-3964470891412306511/transcript.reviewed.md"
+    );
+  },
+  /reference-only, and review-gated/
+);
+
+expectFailure(
+  "cross-source editorial review cannot become final human approval",
+  (candidate) => {
+    candidate.source.publicNote = candidate.source.publicNote.replace(
+      "Final human listening/approval remains separate.",
+      "Final human listening and publication are approved."
+    );
+  },
+  /final human gate/
 );

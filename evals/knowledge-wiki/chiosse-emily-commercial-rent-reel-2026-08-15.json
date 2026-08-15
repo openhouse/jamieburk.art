@@ -1,0 +1,60 @@
+{
+  "suite": "chiosse-emily-commercial-rent-reel-2026-08-15",
+  "runDate": "2026-08-15",
+  "source": {
+    "repository": "openhouse/commercial-rent-stabilization-public-support",
+    "commit": "ea5497dd910f3402c01e8b560b149d6674f951cc",
+    "mediaSha256": "cdef31ffe73e50f70a0d09b32b7863810d39c55bcde4b06c949cafa7595bee01",
+    "reviewedTranscriptSha256": "818a9ea359ae56eac9fca7007d104e9d7d5277e2c6ad84cc23cecb177e7291ef"
+  },
+  "baselineFailure": "The canonical campaign archive contained the Reel, but the portfolio Knowledge Wiki had no navigable source node or bounded campaign-context claim for it.",
+  "candidate": {
+    "sources": 1,
+    "claims": 1,
+    "agencyRelations": 1,
+    "attributedTurns": 32,
+    "activePortfolioProjections": 0,
+    "guardedBoundaries": 5
+  },
+  "hillClimb": {
+    "adversarialTestsPassed": 7,
+    "adversarialTestsTotal": 7,
+    "failureModes": [
+      {
+        "failure": "The live Reel becomes the only source after platform change or deletion.",
+        "improvement": "Require the exact-commit canonical archive as the preferred source."
+      },
+      {
+        "failure": "Media or transcript identity drifts silently.",
+        "improvement": "Bind the record to the media and reviewed-transcript SHA-256 receipts."
+      },
+      {
+        "failure": "Two speakers collapse into one or lose shared credit.",
+        "improvement": "Require Chi Ossé and Emily Gallagher as the two ordered relation actors."
+      },
+      {
+        "failure": "Quantitative speech is treated as independently verified analysis.",
+        "improvement": "Require a transcribed-as-spoken, not-fact-checked boundary."
+      },
+      {
+        "failure": "Campaign context becomes an active claim about Jamie.",
+        "improvement": "Require zero active portfolio projections and state that Jamie does not speak or appear."
+      },
+      {
+        "failure": "Editorial transcript repair becomes automatic final human approval.",
+        "improvement": "Keep final listening and publication authority as separate gates."
+      },
+      {
+        "failure": "The reviewed transcript link drifts from the exact archive candidate.",
+        "improvement": "Require the content-addressed reviewed-transcript URL in the source document."
+      }
+    ]
+  },
+  "humanGates": [
+    "final human listening and transcript approval",
+    "media and transcript reproduction rights",
+    "represented-person and attribution review where applicable",
+    "separate quantitative fact-checking before analytical reuse",
+    "future portfolio selection or projection"
+  ]
+}

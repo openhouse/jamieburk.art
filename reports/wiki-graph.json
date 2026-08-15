@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-15T16:48:16-04:00",
   "sourceCommit": "43635c80c54cfe9ca474736847cab8b01bd6d14d",
-  "sourceFingerprint": "220b94e6ef3bd0a5f6af9c922801f491b3c2f97538ead62c7d0e546712bcf48a",
+  "sourceFingerprint": "8dc978b3cebef1e2f6b17ad469cbdaec5281260f6f0b78c8e742041e06fb4465",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -5569,6 +5569,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-13",
       "reviewBy": "2026-10-13"
+    },
+    {
+      "id": "source.social.chiosse-emily.small-business-rent-reel.2026-08-05",
+      "path": "docs/knowledge-bank/sources/commercial-rent-public-support/chiosse-emily-small-business-rent-reel-2026-08-05.md",
+      "title": "Chi Ossé and Emily Gallagher Small Business Rent Stabilization Reel",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Checksum-bound public-source reference for Chi Ossé and Emily Gallagher's joint explanation and advocacy for the state Small Business Rent Stabilization Act.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-11-15"
     },
     {
       "id": "source.social.nycartc.cultural-space-story.2026-08-15",
@@ -15920,6 +15933,14 @@
     {
       "from": "project.fair-rent-nyc",
       "type": "uses_source",
+      "to": "source.social.chiosse-emily.small-business-rent-reel.2026-08-05",
+      "source": "frontmatter",
+      "href": "../sources/commercial-rent-public-support/chiosse-emily-small-business-rent-reel-2026-08-05.md",
+      "context": null
+    },
+    {
+      "from": "project.fair-rent-nyc",
+      "type": "uses_source",
       "to": "source.social.nycartc.cultural-space-story.2026-08-15",
       "source": "frontmatter",
       "href": "../sources/commercial-rent-public-support/nycartc-cultural-space-story-2026-08-15.md",
@@ -17966,6 +17987,22 @@
       "context": null
     },
     {
+      "from": "source.social.chiosse-emily.small-business-rent-reel.2026-08-05",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.commercial-rent-public-support",
+      "source": "frontmatter",
+      "href": "../../indexes/commercial-rent-public-support.md",
+      "context": null
+    },
+    {
+      "from": "source.social.chiosse-emily.small-business-rent-reel.2026-08-05",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
       "from": "source.social.nycartc.cultural-space-story.2026-08-15",
       "type": "related_to",
       "to": "index.knowledge-wiki.commercial-rent-public-support",
@@ -19232,10 +19269,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/commercial-rent-public-support.md",
       "from": "index.knowledge-wiki.commercial-rent-public-support",
+      "toPath": "docs/knowledge-bank/sources/commercial-rent-public-support/chiosse-emily-small-business-rent-reel-2026-08-05.md",
+      "to": "source.social.chiosse-emily.small-business-rent-reel.2026-08-05",
+      "fragment": null,
+      "line": 65,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/commercial-rent-public-support.md",
+      "from": "index.knowledge-wiki.commercial-rent-public-support",
       "toPath": "docs/knowledge-bank/sources/commercial-rent-public-support/nycartc-cultural-space-story-2026-08-15.md",
       "to": "source.social.nycartc.cultural-space-story.2026-08-15",
       "fragment": null,
-      "line": 65,
+      "line": 73,
       "kind": "link"
     },
     {
@@ -19244,7 +19290,7 @@
       "toPath": "docs/knowledge-bank/data/commercial-rent-public-support-corpus-2026-07-28.json",
       "to": null,
       "fragment": null,
-      "line": 78,
+      "line": 86,
       "kind": "link"
     },
     {
@@ -21693,6 +21739,15 @@
       "to": "source.social.nycartc.cultural-space-story.2026-08-15",
       "fragment": null,
       "line": 30,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/fair-rent-nyc.md",
+      "from": "project.fair-rent-nyc",
+      "toPath": "docs/knowledge-bank/sources/commercial-rent-public-support/chiosse-emily-small-business-rent-reel-2026-08-05.md",
+      "to": "source.social.chiosse-emily.small-business-rent-reel.2026-08-05",
+      "fragment": null,
+      "line": 36,
       "kind": "link"
     },
     {

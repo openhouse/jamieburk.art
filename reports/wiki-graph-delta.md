@@ -3,13 +3,13 @@
 
 **Source commit:** `43635c80c54cfe9ca474736847cab8b01bd6d14d`
 **Generation time:** 2026-08-15T16:48:16-04:00
-**Source fingerprint:** `220b94e6ef3bd0a5f6af9c922801f491b3c2f97538ead62c7d0e546712bcf48a`
+**Source fingerprint:** `8dc978b3cebef1e2f6b17ad469cbdaec5281260f6f0b78c8e742041e06fb4465`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 34
+- Nodes added: 35
 - Nodes removed: 34
-- Edges added: 127
+- Edges added: 130
 - Edges removed: 178
 - New type-aware orphans: 0
 - Current rights-review records: 186
@@ -48,5 +48,6 @@ Compared with the graph artifact on `origin/develop`.
 - `source.permission.jamie.public-site-captures.2026-08-13`
 - `source.photo-metadata.nycac-participation-sequence.2026-08-13`
 - `source.sbu.empty-storefronts-high-rents.2026`
+- `source.social.chiosse-emily.small-business-rent-reel.2026-08-05`
 - `source.social.nycartc.cultural-space-story.2026-08-15`
 - `source.thick-arts.nys-dos-formation.2012-07-06`

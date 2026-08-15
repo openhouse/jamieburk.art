@@ -78,7 +78,15 @@ participant-attested in-person participation. A named public transcript,
 organizer caption, or press quotation of Jamie was not recovered, so the event
 is not added to the formal public-speaker population above.
 
-## August 2026 coalition Story
+## August 2026 public videos
+
+On August 5, Council Member Chi Ossé and Assembly Member Emily Gallagher
+published a joint [Small Business Rent Stabilization Act
+Reel](../sources/commercial-rent-public-support/chiosse-emily-small-business-rent-reel-2026-08-05.md).
+The complete campaign archive preserves separate attributable statement records
+and a corrected 32-turn diarized transcript. The Wiki treats this as state-bill
+campaign context, not a Jamie-authored artifact or an active portfolio
+projection.
 
 On August 15, the NYC Artist Coalition published a 31-second
 [Cultural Space Rent Stabilization Story](../sources/commercial-rent-public-support/nycartc-cultural-space-story-2026-08-15.md)
@@ -86,11 +94,11 @@ using an edited excerpt of Jamie Burkart's May 19 Wonderville remarks. It joins
 cultural-space continuity and collective agency to a call for action by both
 Albany and the New York City Council.
 
-The source edition is pinned to an immutable archive commit and media checksum.
-Coalition-account publication does not establish sole individual editorial
-authorship, and tagged accounts or sponsor acknowledgements are not represented
-as endorsements. The supplied transcript remains subject to independent audio
-and timing review.
+Both source editions are pinned to the same immutable archive commit and to
+their respective media checksums. Coalition-account publication does not
+establish sole individual editorial authorship, and tagged accounts or sponsor
+acknowledgements are not represented as endorsements. Editorially corrected
+diarized transcripts remain subject to final human listening/approval.
 
 ## Population and gaps
 

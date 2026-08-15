@@ -9,7 +9,7 @@ const repoRoot = path.resolve(scriptDir, "../..");
 const sourceId = "SRC-NYCARTC-CULTURAL-SPACE-STORY-2026-08-15";
 const claimId = "CLM-NYCARTC-CULTURAL-SPACE-STORY-2026";
 const relationId = "REL-NYCARTC-CULTURAL-SPACE-STORY-ADVOCACY-2026";
-const archiveCommit = "42585897e2616f08d0751878a0a63a1d3180c1d2";
+const archiveCommit = "ea5497dd910f3402c01e8b560b149d6674f951cc";
 const mediaSha256 = "24808b127cd7af7bf0e804db0e27ec59b82d57d96ebf62a2f1e617ed6845caef";
 const sourceDocPath = "docs/knowledge-bank/sources/commercial-rent-public-support/nycartc-cultural-space-story-2026-08-15.md";
 const indexPath = "docs/knowledge-bank/indexes/commercial-rent-public-support.md";
@@ -40,6 +40,9 @@ export function evaluateNycartcCulturalSpaceStory(candidate) {
   const pinnedArchivePattern = new RegExp(
     `github\\.com/openhouse/commercial-rent-stabilization-public-support/blob/${archiveCommit}/`
   );
+  const reviewedTranscriptPattern = new RegExp(
+    `github\\.com/openhouse/commercial-rent-stabilization-public-support/blob/${archiveCommit}/sources/instagram/2026-08-15-nycartc-story-3964470891412306511/transcript\\.reviewed\\.md`
+  );
 
   check(Boolean(source && claim && relation), "Story source, claim, and agency relation must all be materialized");
   check(
@@ -51,8 +54,9 @@ export function evaluateNycartcCulturalSpaceStory(candidate) {
   check(
     source?.publicNote?.includes(mediaSha256) &&
       source?.publicNote?.includes(archiveCommit) &&
-      /independent audio\/timing review remains pending/i.test(source?.publicNote ?? ""),
-    "Story source must retain its commit, media checksum, and transcript-review gate"
+      /corrected diarized transcript/i.test(source?.publicNote ?? "") &&
+      /Final human listening\/approval remains separate/i.test(source?.publicNote ?? ""),
+    "Story source must retain its commit, media checksum, corrected transcript state, and final human gate"
   );
   check(
     source?.media?.publicDisplayStatus === "metadata-only" &&
@@ -78,7 +82,7 @@ export function evaluateNycartcCulturalSpaceStory(candidate) {
   check(
     claim?.boundaries?.some((item) => /not as a solely authored, edited, or published Jamie artifact/i.test(item)) &&
       claim?.boundaries?.some((item) => /tagged accounts or sponsor acknowledgements as endorsements/i.test(item)) &&
-      claim?.boundaries?.some((item) => /independent audio and timing review remains pending/i.test(item)),
+      claim?.boundaries?.some((item) => /final human listening\/approval remains separate/i.test(item)),
     "Story claim must retain authorship, endorsement, and transcript-review boundaries"
   );
   check(
@@ -90,9 +94,10 @@ export function evaluateNycartcCulturalSpaceStory(candidate) {
   );
   check(
     pinnedArchivePattern.test(sourceDoc) &&
+      reviewedTranscriptPattern.test(sourceDoc) &&
       sourceDoc.includes(mediaSha256) &&
       /does not duplicate the transcript or media/i.test(sourceDoc) &&
-      /Independent audio and timing\s+review remains pending/i.test(sourceDoc),
+      /Final human\s+listening\/approval remains separate/i.test(sourceDoc),
     "Story source document must stay checksum-bound, reference-only, and review-gated"
   );
   check(
@@ -109,7 +114,7 @@ export function evaluateNycartcCulturalSpaceStory(candidate) {
       claims: claim ? 1 : 0,
       agencyRelations: relation ? 1 : 0,
       activeProjections: claim?.projections?.filter((item) => item.status === "active").length ?? 0,
-      guardedBoundaries: 3
+      guardedBoundaries: 4
     }
   };
 }

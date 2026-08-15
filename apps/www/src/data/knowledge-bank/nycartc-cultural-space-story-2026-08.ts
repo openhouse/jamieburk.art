@@ -1,5 +1,5 @@
 const reviewedAt = "2026-08-15";
-const archiveCommit = "42585897e2616f08d0751878a0a63a1d3180c1d2";
+const archiveCommit = "ea5497dd910f3402c01e8b560b149d6674f951cc";
 const mediaSha256 = "24808b127cd7af7bf0e804db0e27ec59b82d57d96ebf62a2f1e617ed6845caef";
 
 export const nycartcCulturalSpaceStoryAugust2026 = {
@@ -21,7 +21,7 @@ export const nycartcCulturalSpaceStoryAugust2026 = {
       boundaries: [
         "Coalition-account publication does not establish Jamie as the sole author, editor, or publisher.",
         "Tagged accounts and sponsor acknowledgements do not establish endorsement.",
-        "The supplied voice-loyal transcript remains subject to independent audio and timing review."
+        "The corrected diarized transcript has cross-source editorial review; final human listening/approval remains a separate gate."
       ]
     }
   ],
@@ -61,7 +61,7 @@ export const nycartcCulturalSpaceStoryAugust2026 = {
       archiveUrl: `https://github.com/openhouse/commercial-rent-stabilization-public-support/blob/${archiveCommit}/statements/campaigns/fair-rent-nyc/commercial-rent-stabilization/2026-08-15-nycartc-instagram-story-3964470891412306511/nyc-artist-coalition.md`,
       preferredPublicUrl: "archive",
       publicCitation: "NYC Artist Coalition, Cultural Space Rent Stabilization Instagram Story, August 15, 2026.",
-      publicNote: `The source edition is pinned at commit ${archiveCommit}; the 31-second media SHA-256 is ${mediaSha256}. The voice-loyal cut transcript was supplied by Jamie, and independent audio/timing review remains pending.`,
+      publicNote: `The source edition is pinned at commit ${archiveCommit}; the 31-second media SHA-256 is ${mediaSha256}. Local ASR, animated captions, Jamie's supplied cut, and the source-event transcript were reconciled into a corrected diarized transcript. Final human listening/approval remains separate.`,
       supportsGenerally: [
         "coalition-account publication",
         "August 15, 2026 publication date",
@@ -74,7 +74,7 @@ export const nycartcCulturalSpaceStoryAugust2026 = {
         "endorsement by tagged accounts or acknowledged sponsors",
         "support for every proposal by every named person",
         "legislative passage or campaign causation",
-        "independent transcript verification"
+        "completed final human listening or publication approval"
       ],
       media: {
         mediaKind: "other",
@@ -125,7 +125,7 @@ export const nycartcCulturalSpaceStoryAugust2026 = {
       boundaries: [
         "Describe the publication as a coalition Story using Jamie's attributed voice, not as a solely authored, edited, or published Jamie artifact.",
         "Do not treat tagged accounts or sponsor acknowledgements as endorsements.",
-        "The transcript was supplied by Jamie; independent audio and timing review remains pending.",
+        "The corrected diarized transcript has cross-source editorial review; final human listening/approval remains separate.",
         "Keep legislative advocacy distinct from passage, official action, and causation."
       ],
       antiClaims: [
@@ -133,7 +133,7 @@ export const nycartcCulturalSpaceStoryAugust2026 = {
         "Every tagged account endorsed the Story",
         "Every named official endorsed every proposal",
         "The Story caused legislative action",
-        "The transcript has been independently verified"
+        "The transcript has completed final human listening and publication approval"
       ],
       researchInquiryIds: [],
       reviewedAt,

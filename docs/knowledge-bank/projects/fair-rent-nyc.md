@@ -29,6 +29,9 @@ relations:
   - type: uses_source
     target: source.social.nycartc.cultural-space-story.2026-08-15
     href: ../sources/commercial-rent-public-support/nycartc-cultural-space-story-2026-08-15.md
+  - type: uses_source
+    target: source.social.chiosse-emily.small-business-rent-reel.2026-08-05
+    href: ../sources/commercial-rent-public-support/chiosse-emily-small-business-rent-reel-2026-08-05.md
 ---
 
 # Fair Rent NYC
@@ -64,6 +67,13 @@ Story](../sources/commercial-rent-public-support/nycartc-cultural-space-story-20
 carried an edited excerpt of Jamie's Wonderville remarks into a public city-and-
 state call to action. The record preserves collective publication credit,
 individual voice attribution, and the difference between tags and endorsements.
+
+An August 5 [joint Reel by Chi Ossé and Emily
+Gallagher](../sources/commercial-rent-public-support/chiosse-emily-small-business-rent-reel-2026-08-05.md)
+adds public state-bill context: its speakers explain the proposed rent-guidelines
+mechanism and call for sponsorship. Jamie does not speak or appear in that
+source, so it remains campaign context rather than a Jamie claim or portfolio
+projection.
 
 ## Boundary
 
