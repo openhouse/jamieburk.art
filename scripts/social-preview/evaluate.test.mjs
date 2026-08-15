@@ -222,7 +222,7 @@ test("a changed candidate invalidates the prior visual review", () => {
 });
 
 test("positive staging feedback cannot be promoted to production approval", () => {
-  const relativePath = "evals/social-preview/runs/2026-08-15-staging-a.json";
+  const relativePath = "evals/social-preview/runs/2026-08-15-staging-a-854.json";
   const result = evaluateSocialPreview({
     fileOverrides: {
       [relativePath]: text(relativePath).replace(
@@ -238,11 +238,11 @@ test("positive staging feedback cannot be promoted to production approval", () =
 });
 
 test("the staging attestation cannot drift from the reviewed pixel digest", () => {
-  const relativePath = "evals/social-preview/runs/2026-08-15-staging-a.json";
+  const relativePath = "evals/social-preview/runs/2026-08-15-staging-a-854.json";
   const result = evaluateSocialPreview({
     fileOverrides: {
       [relativePath]: text(relativePath).replace(
-        "9f97d037e1ff82d6b75a902f83e2cccbe1545efb578b54543dd16d6d8050be0f",
+        "6d54b100fd231b9001c17a72abf1f4d29b6fca09f320dfd4bd02c471472b1d82",
         "0".repeat(64)
       )
     }
@@ -254,7 +254,7 @@ test("the staging attestation cannot drift from the reviewed pixel digest", () =
 });
 
 test("the staging attestation cannot publish a protected local locator", () => {
-  const relativePath = "evals/social-preview/runs/2026-08-15-staging-a.json";
+  const relativePath = "evals/social-preview/runs/2026-08-15-staging-a-854.json";
   const result = evaluateSocialPreview({
     fileOverrides: {
       [relativePath]: text(relativePath).replace(

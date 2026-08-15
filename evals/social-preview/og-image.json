@@ -71,11 +71,11 @@
   "stagingReview": {
     "status": "pass",
     "reviewedAt": "2026-08-15",
-    "attestationPath": "evals/social-preview/runs/2026-08-15-staging-a.json",
-    "attestationSha256": "5655054783d63664f36354441707d5931d01685975943b00e238cff029294270",
-    "sourceCommitAtReview": "8119c50513d0910a1f8c0471028665e774a5edf3",
-    "candidateSha256": "04929969e7af6795c8e00fa8cb60935bfe7ef5b16c70d9f6d16c54dd92ac1b88",
-    "renderSha256": "9f97d037e1ff82d6b75a902f83e2cccbe1545efb578b54543dd16d6d8050be0f",
+    "attestationPath": "evals/social-preview/runs/2026-08-15-staging-a-854.json",
+    "attestationSha256": "9d4f54442dac41245bc663a368e25e2fcedf986469e0d2f050ac506027bce9e3",
+    "sourceCommitAtReview": "7d52a9099250f63ac27c3ded0c2087c757bd630a",
+    "candidateSha256": "31c210fe776450395baef591c6ba257e036b70471e4a825714659387f7fa0184",
+    "renderSha256": "6d54b100fd231b9001c17a72abf1f4d29b6fca09f320dfd4bd02c471472b1d82",
     "releaseScope": "staging-only"
   }
 }

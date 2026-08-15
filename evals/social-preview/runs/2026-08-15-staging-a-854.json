@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "suite": "global-social-preview",
+  "runId": "2026-08-15-staging-a-image-4-854-human-feedback-and-release",
+  "observedAt": "2026-08-15T14:52:06Z",
+  "environment": "staging-a",
+  "surfaceUrl": "https://staging-a.jamieburk.art/opengraph-image",
+  "sourceCommitAtReview": "7d52a9099250f63ac27c3ded0c2087c757bd630a",
+  "candidateSha256": "31c210fe776450395baef591c6ba257e036b70471e4a825714659387f7fa0184",
+  "renderSha256": "6d54b100fd231b9001c17a72abf1f4d29b6fca09f320dfd4bd02c471472b1d82",
+  "render": {
+    "width": 1200,
+    "height": 630,
+    "contentType": "image/png",
+    "selectedOverlayOpacity": 0.854,
+    "matchesLocallyInspectedPixels": true
+  },
+  "metadata": {
+    "absoluteImageUrlHost": "staging-a.jamieburk.art",
+    "twitterCard": "summary_large_image",
+    "descriptiveAltPresent": true
+  },
+  "runtime": {
+    "appEnv": "staging",
+    "isProduction": false,
+    "robotsIndexable": false,
+    "homepageNoindexHeader": true,
+    "robotsDisallowsRoot": true
+  },
+  "humanFeedback": {
+    "reviewerAuthority": "Jamie Burkart",
+    "response": "positive",
+    "publicSafeSummary": "After comparing six rendered variants, Jamie selected Image 4, the 85.4 percent overlay composition, and instructed that its score, evals, pull request, and staging-A deployment be updated.",
+    "scope": "Exact Image 4 social-preview pixels, declarative rendering score, and staging-A workflow",
+    "actualPersonParticipated": true
+  },
+  "releaseBoundary": {
+    "stagingAuthorized": true,
+    "productionAuthorized": false,
+    "indexingAuthorized": false,
+    "rightsExpanded": false
+  },
+  "evidenceBoundary": "This is a dated staging-only attestation of Jamie's task-level feedback and observed deployment state. It is not production approval, indexing approval, broader image permission, an employer endorsement, or a continuous liveness monitor."
+}
