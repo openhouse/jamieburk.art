@@ -24,7 +24,7 @@ Technical project manager and product operations lead with 14+ years shipping pu
 New York, NY / Remote | Client work since 2009; Thick Arts LLC formed 2012
 
 - Lead end-to-end web product, design, and engineering engagements, turning ambiguous stakeholder needs into product direction, information architecture, technical scope, sequenced releases, testing, launch plans, adoption materials, maintenance workflows, and handoff documentation.
-- Led e-commerce, analytics, content, marketing, and operational improvements for [Harry J. Epstein Company](https://www.harryepstein.com/) from 2009–2015, contributing to a period of 2x revenue growth while helping an 80+ year-old industrial business modernize without losing its trusted public voice.
+- Led e-commerce, analytics, content, marketing, and operational improvements for Harry J. Epstein Company from 2009–2015, contributing to a period of 2x revenue growth while helping an 80+ year-old industrial business modernize without losing its trusted public voice.
 - Build maintainable publishing systems, campaign hubs, resource libraries, data workflows, and web infrastructure; preserve product briefs, decisions, reusable patterns, and post-launch learning so teams can continue the work.
 
 ### [NYC Artist Coalition](https://nycartc.com/) / [FairRentNYC](https://fairrentnyc.nycartc.com/) — Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead

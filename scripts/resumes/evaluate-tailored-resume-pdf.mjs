@@ -31,6 +31,10 @@ export function evaluateResumePdf({
   const pageObjects = pdfText.match(/\/Type \/Page\b/g) ?? [];
   const letterMediaBoxes = pdfText.match(/\/MediaBox \[0 0 612 792\]/g) ?? [];
   const missingLinks = spec.requiredLinks.filter((url) => !pdfText.includes(`/URI (${url})`));
+  const forbiddenLinks = spec.forbiddenLinks ?? [];
+  const presentForbiddenLinks = forbiddenLinks.filter((url) =>
+    pdfText.includes(`/URI (${url})`)
+  );
   const requiredFontSignatures = spec.layoutSignature?.requiredPdfFontSignatures ?? [];
   const missingFontSignatures = requiredFontSignatures.filter(
     (signature) => !pdfText.includes(signature)
@@ -107,6 +111,18 @@ export function evaluateResumePdf({
       pass: missingLinks.length === 0,
       detail: missingLinks.length === 0 ? "All required application and project links are native PDF annotations." : `Missing links: ${missingLinks.join(", ")}`
     },
+    ...(forbiddenLinks.length > 0
+      ? [
+          {
+            id: "forbidden-hyperlinks-absent",
+            pass: presentForbiddenLinks.length === 0,
+            detail:
+              presentForbiddenLinks.length === 0
+                ? "Every deliberately plain-text reference is free of native PDF link annotations."
+                : `Forbidden links present: ${presentForbiddenLinks.join(", ")}`
+          }
+        ]
+      : []),
     ...(contentContract
       ? [
           {

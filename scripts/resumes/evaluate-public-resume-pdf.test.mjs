@@ -34,6 +34,7 @@ const publicContractSpec = {
     requiredChronologyPhrases: [
       "Client work since 2009",
       "Thick Arts LLC formed 2012",
+      "Harry J. Epstein Company",
       "2009–2015"
     ],
     prohibitedChronologyPatterns: [
@@ -55,7 +56,6 @@ const exactPublicSpec = {
     "https://jamieburk.art/",
     "https://www.linkedin.com/in/jamie-burkart/",
     "https://github.com/openhouse",
-    "https://www.harryepstein.com/",
     "https://nycartc.com/",
     "https://fairrentnyc.nycartc.com/",
     "https://wowlist.org/",
@@ -63,6 +63,7 @@ const exactPublicSpec = {
     "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf",
     "https://kctownhall.com/"
   ],
+  forbiddenLinks: ["https://www.harryepstein.com/"],
   hardGates: [
     "source-markdown-bound",
     "exact-pdf-bound",
@@ -71,6 +72,7 @@ const exactPublicSpec = {
     "tagged-google-docs-export",
     "safe-static-pdf",
     "native-hyperlinks",
+    "forbidden-hyperlinks-absent",
     "public-positioning-and-chronology",
     "complete-visual-inspection"
   ]
@@ -80,6 +82,21 @@ test("the public-resume contract rejects OTI-specific positioning and collapsed 
   const result = evaluateResumePdf({ spec: publicContractSpec, markdown, pdf });
   assert.equal(
     result.checks.find((check) => check.id === "public-positioning-and-chronology")?.pass,
+    false
+  );
+});
+
+test("the resume gate rejects a PDF that links a deliberately plain-text client name", () => {
+  const result = evaluateResumePdf({
+    spec: {
+      ...defaultSpec,
+      forbiddenLinks: ["https://www.harryepstein.com/"]
+    },
+    markdown,
+    pdf
+  });
+  assert.equal(
+    result.checks.find((check) => check.id === "forbidden-hyperlinks-absent")?.pass,
     false
   );
 });
