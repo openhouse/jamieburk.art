@@ -78,6 +78,20 @@ participant-attested in-person participation. A named public transcript,
 organizer caption, or press quotation of Jamie was not recovered, so the event
 is not added to the formal public-speaker population above.
 
+## August 2026 coalition Story
+
+On August 15, the NYC Artist Coalition published a 31-second
+[Cultural Space Rent Stabilization Story](../sources/commercial-rent-public-support/nycartc-cultural-space-story-2026-08-15.md)
+using an edited excerpt of Jamie Burkart's May 19 Wonderville remarks. It joins
+cultural-space continuity and collective agency to a call for action by both
+Albany and the New York City Council.
+
+The source edition is pinned to an immutable archive commit and media checksum.
+Coalition-account publication does not establish sole individual editorial
+authorship, and tagged accounts or sponsor acknowledgements are not represented
+as endorsements. The supplied transcript remains subject to independent audio
+and timing review.
+
 ## Population and gaps
 
 The machine-readable [corpus ledger](../data/commercial-rent-public-support-corpus-2026-07-28.json)

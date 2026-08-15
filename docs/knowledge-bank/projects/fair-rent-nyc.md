@@ -26,6 +26,9 @@ relations:
   - type: uses_source
     target: source.sbu.empty-storefronts-high-rents.2026
     href: ../sources/commercial-rent-public-support/empty-storefronts-high-rents-report-2026.md
+  - type: uses_source
+    target: source.social.nycartc.cultural-space-story.2026-08-15
+    href: ../sources/commercial-rent-public-support/nycartc-cultural-space-story-2026-08-15.md
 ---
 
 # Fair Rent NYC
@@ -55,6 +58,12 @@ in the July 29 rally, and coordinated directly with City Council and State
 Assembly office staff. The [thirty-day close reading](../research-runs/nycac-crs-30-day-close-reading-2026-08-13.md)
 keeps public credit, protected incorporation evidence, participant attestation,
 press publication, staff coordination, and official action as separate states.
+
+On August 15, the coalition's [Cultural Space Rent Stabilization
+Story](../sources/commercial-rent-public-support/nycartc-cultural-space-story-2026-08-15.md)
+carried an edited excerpt of Jamie's Wonderville remarks into a public city-and-
+state call to action. The record preserves collective publication credit,
+individual voice attribution, and the difference between tags and endorsements.
 
 ## Boundary
 

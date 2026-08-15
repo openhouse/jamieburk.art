@@ -1,0 +1,60 @@
+{
+  "suite": "nycartc-cultural-space-story-2026-08-15",
+  "runDate": "2026-08-15",
+  "source": {
+    "repository": "openhouse/commercial-rent-stabilization-public-support",
+    "commit": "42585897e2616f08d0751878a0a63a1d3180c1d2",
+    "mediaSha256": "24808b127cd7af7bf0e804db0e27ec59b82d57d96ebf62a2f1e617ed6845caef"
+  },
+  "candidate": {
+    "sources": 1,
+    "claims": 1,
+    "agencyRelations": 1,
+    "activeCitedProjections": 1,
+    "guardedBoundaries": 3
+  },
+  "hillClimb": {
+    "adversarialTestsPassed": 6,
+    "adversarialTestsTotal": 6,
+    "failureModes": [
+      {
+        "failure": "The expiring Story URL becomes the only source.",
+        "improvement": "Require the immutable canonical archive commit as the preferred source edition."
+      },
+      {
+        "failure": "Media changes without detection.",
+        "improvement": "Bind the projection to the captured media SHA-256."
+      },
+      {
+        "failure": "Coalition publication becomes sole Jamie authorship.",
+        "improvement": "Require a coalition-account publication and individual editorial-authorship boundary."
+      },
+      {
+        "failure": "Tags or sponsor acknowledgements become endorsements.",
+        "improvement": "Require an explicit non-endorsement boundary in the claim."
+      },
+      {
+        "failure": "Archived pixels become automatically displayable.",
+        "improvement": "Keep media metadata-only pending rights, consent, credit, and destination review."
+      },
+      {
+        "failure": "An active portfolio statement loses its citation requirement.",
+        "improvement": "Require the Fair Rent case-study projection to remain active and cited."
+      }
+    ]
+  },
+  "checks": {
+    "targetedEvaluator": "passed",
+    "adversarialSuite": "passed",
+    "knowledgeBankSchema": "passed-with-existing-careful-claim-warnings",
+    "wikiGraph": "passed",
+    "commercialRentPublicSupportSuite": "passed"
+  },
+  "humanGates": [
+    "independent audio and timing review",
+    "media reproduction rights",
+    "represented-person consent where applicable",
+    "individual editorial authorship attribution",
+    "future publication and placement decisions beyond the cited Fair Rent projection"
+  ]
+}

@@ -12,6 +12,7 @@ import { kcSpacesFundFacebookPostKnowledge } from "./kcspacesfund-facebook-posts
 import { jamiePersonalFacebookPostKnowledge } from "./jamie-personal-facebook-posts-2026-07.ts";
 import { nycacPressArchive } from "./nycac-press-archive.ts";
 import { nycacRecentAdvocacyAugust2026 } from "./nycac-recent-advocacy-2026-08.ts";
+import { nycartcCulturalSpaceStoryAugust2026 } from "./nycartc-cultural-space-story-2026-08.ts";
 import { nycacFacebookEventKnowledge } from "./nycac-facebook-events-2026-07.ts";
 import { nycacFacebookPostKnowledge } from "./nycac-facebook-posts-2026-07.ts";
 import { personalWowListFacebookEventKnowledge } from "./personal-wowlist-facebook-events-2026-07.ts";
@@ -83,7 +84,8 @@ const knowledgeBankInput = {
     ...nycacSourceExpansion.intakeItems,
     ...nycacSourceExpansionII.intakeItems,
     ...nycacPressArchive.intakeItems,
-    ...nycacRecentAdvocacyAugust2026.intakeItems
+    ...nycacRecentAdvocacyAugust2026.intakeItems,
+    ...nycartcCulturalSpaceStoryAugust2026.intakeItems
   ],
   observations: [
     {
@@ -133,7 +135,8 @@ const knowledgeBankInput = {
     ...nycacSourceExpansion.observations,
     ...nycacSourceExpansionII.observations,
     ...nycacPressArchive.observations,
-    ...nycacRecentAdvocacyAugust2026.observations
+    ...nycacRecentAdvocacyAugust2026.observations,
+    ...nycartcCulturalSpaceStoryAugust2026.observations
   ],
   sources: [
     {
@@ -287,21 +290,24 @@ const knowledgeBankInput = {
     ...nycacSourceExpansion.sources,
     ...nycacSourceExpansionII.sources,
     ...nycacPressArchive.sources,
-    ...nycacRecentAdvocacyAugust2026.sources
+    ...nycacRecentAdvocacyAugust2026.sources,
+    ...nycartcCulturalSpaceStoryAugust2026.sources
   ],
   entities: [
     ...agencyGraph.entities,
     ...hjeChronologyAugust2026.entities,
     ...kcTownHallCouncilFunding.entities,
     ...kcTownHallTiredOfTiresSourceReturn.entities,
-    ...nycacRecentAdvocacyAugust2026.entities
+    ...nycacRecentAdvocacyAugust2026.entities,
+    ...nycartcCulturalSpaceStoryAugust2026.entities
   ],
   agencyRelations: [
     ...agencyGraph.agencyRelations,
     ...hjeChronologyAugust2026.agencyRelations,
     ...kcTownHallCouncilFunding.agencyRelations,
     ...kcTownHallTiredOfTiresSourceReturn.agencyRelations,
-    ...nycacRecentAdvocacyAugust2026.agencyRelations
+    ...nycacRecentAdvocacyAugust2026.agencyRelations,
+    ...nycartcCulturalSpaceStoryAugust2026.agencyRelations
   ],
   claims: [
     {
@@ -443,7 +449,8 @@ const knowledgeBankInput = {
     ...nycacSourceExpansion.claims,
     ...nycacSourceExpansionII.claims,
     ...nycacPressArchive.claims,
-    ...nycacRecentAdvocacyAugust2026.claims
+    ...nycacRecentAdvocacyAugust2026.claims,
+    ...nycartcCulturalSpaceStoryAugust2026.claims
   ],
   researchInquiries: [
     {
@@ -509,6 +516,7 @@ const knowledgeBankInput = {
     ...wowListProductFitAugust2026.researchInquiries,
     ...professionalRecordAugust2026.researchInquiries,
     ...nycacRecentAdvocacyAugust2026.researchInquiries,
+    ...nycartcCulturalSpaceStoryAugust2026.researchInquiries,
     ...nycacSocialPopulationJuly2026.researchInquiries,
     ...nycacSourceExpansion.researchInquiries,
     ...nycacSourceExpansionII.researchInquiries,
