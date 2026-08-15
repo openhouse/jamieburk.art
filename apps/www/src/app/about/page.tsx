@@ -103,7 +103,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="mt-8 border-y border-jb-ink/12 py-4">
-            <p className="jb-section-label">Three current systems loops</p>
+            <p className="jb-section-label">Three systems loops</p>
             <p className="mt-2 max-w-3xl leading-7 text-jb-ink/72">
               Each example follows the same movement from observed relationships
               to a working model, an interface used with people, and a documented
@@ -121,7 +121,6 @@ export default function AboutPage() {
                     Harry J. Epstein Company
                   </Link>
                 </h3>
-                <span className="jb-section-label">Current</span>
               </div>
               <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
                 <p>
@@ -160,7 +159,6 @@ export default function AboutPage() {
                     NYC Artist Coalition and FairRentNYC
                   </Link>
                 </h3>
-                <span className="jb-section-label">Current</span>
               </div>
               <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
                 <p>
@@ -198,7 +196,6 @@ export default function AboutPage() {
                     Sunday Dinner and 196
                   </Link>
                 </h3>
-                <span className="jb-section-label">Current</span>
               </div>
               <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
                 <p>

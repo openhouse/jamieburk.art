@@ -106,6 +106,7 @@ export function evaluateProfessorLenses({
   const relationshipRows = aboutText.match(/Relationships:<\/strong>/g)?.length ?? 0;
   const interfaceRows = aboutText.match(/Interface and use:<\/strong>/g)?.length ?? 0;
   const learningRows = aboutText.match(/Learning and continuity:/g)?.length ?? 0;
+  const hjeLoopText = aboutText.match(/Harry J\. Epstein Company[\s\S]*?<\/article>/)?.[0] ?? "";
 
   const criteria = [
     criterion(
@@ -178,6 +179,13 @@ export function evaluateProfessorLenses({
       "Four examples distinguish relationship models, actual interfaces and use, and learning and continuity.",
       relationshipRows >= 4 && interfaceRows >= 4 && learningRows >= 4,
       `${relationshipRows} relationship rows; ${interfaceRows} interface-and-use rows; ${learningRows} learning-and-continuity rows.`
+    ),
+    criterion(
+      "project-status-integrity",
+      "The About-page systems loops do not present the ended HJE engagement as current work.",
+      !aboutText.includes("Three current systems loops") &&
+        !/>\s*Current\s*</.test(hjeLoopText),
+      "HJE loop heading and status label checked against the bounded 2009-2015 engagement."
     ),
     criterion(
       "open-house-boundary",
