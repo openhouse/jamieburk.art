@@ -79,9 +79,11 @@ truth, comparison, or task completion.
 - The home hero is full-bleed, photographic, and unframed. Text sits directly
   in the scene with one even contrast wash, never a gradient or a card.
 - The homepage social card carries that same full-bleed photographic grammar,
-  one even wash, and one identity field. Its visible copy is limited to the
-  canonical role and name; creator attribution follows the exact governed
-  occurrence and permission rather than becoming generic footer text.
+  one even wash, and one full-height identity field that reaches the left,
+  top, and bottom edges rather than floating over the photograph as a placard.
+  It never uses a gradient. Its visible copy is limited to the canonical role
+  and name; creator attribution follows the exact governed occurrence and
+  permission rather than becoming generic footer text.
 - Indexes use rules, numbers, and stable columns instead of repeated floating
   cards.
 - Cards are reserved for discrete artifacts, calls to action, and genuinely

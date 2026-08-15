@@ -6,8 +6,8 @@ export const homeSocialCard = {
   ...homeIdentity,
   width: 1200,
   height: 630,
-  revision: "human-index-photo-v3",
-  imagePath: "/opengraph-image?v=human-index-photo-v3",
+  revision: "human-index-photo-v4",
+  imagePath: "/opengraph-image?v=human-index-photo-v4",
   renderPhotoPath: "/images/social/jamie-east-river-og-source.jpg",
   visibleCopy: {
     role: homeIdentity.role,
@@ -33,6 +33,47 @@ export const homeSocialCard = {
   photoLabel: "East River, 2022",
   photoCredit: "Photograph by Elana Gordon"
 } as const;
+
+export function buildSocialCardLayout() {
+  return {
+    photoWash: {
+      background: "rgba(12, 22, 28, 0.24)",
+      bottom: 0,
+      display: "flex",
+      left: 0,
+      position: "absolute",
+      right: 0,
+      top: 0
+    },
+    identityField: {
+      background: "rgba(12, 22, 28, 0.74)",
+      bottom: 0,
+      display: "flex",
+      left: 0,
+      position: "absolute",
+      top: 0,
+      width: 780
+    },
+    rule: {
+      background: "#d1a23f",
+      display: "flex",
+      height: 229,
+      left: 70,
+      position: "absolute",
+      top: 145,
+      width: 6
+    },
+    copy: {
+      color: "#ffffff",
+      display: "flex",
+      flexDirection: "column",
+      left: 112,
+      position: "absolute",
+      top: 179,
+      width: 610
+    }
+  } as const;
+}
 
 export function resolveSocialCardPhotoPath(appRoot: string) {
   return join(appRoot, "public", homeSocialCard.renderPhotoPath.slice(1));

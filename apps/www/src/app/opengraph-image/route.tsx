@@ -1,6 +1,7 @@
 import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import {
+  buildSocialCardLayout,
   homeSocialCard,
   resolveSocialCardIdentityFontPath,
   resolveSocialCardInterfaceFontPath,
@@ -13,6 +14,7 @@ const size = {
   height: homeSocialCard.height
 };
 export async function GET() {
+  const layout = buildSocialCardLayout();
   const [photoData, identityFontData, interfaceRegularData, interfaceBoldData] = await Promise.all([
     readFile(resolveSocialCardPhotoPath(process.cwd())),
     readFile(resolveSocialCardIdentityFontPath(process.cwd())),
@@ -55,29 +57,12 @@ export async function GET() {
           width={1200}
         />
         <div
-          style={{
-            background: "rgba(12, 22, 28, 0.42)",
-            bottom: 0,
-            display: "flex",
-            left: 0,
-            position: "absolute",
-            right: 0,
-            top: 0
-          }}
+          style={layout.photoWash}
         />
+        <div style={layout.identityField} />
+        <div style={layout.rule} />
         <div
-          style={{
-            background: "rgba(12, 22, 28, 0.90)",
-            borderLeft: "6px solid #d1a23f",
-            color: "#ffffff",
-            display: "flex",
-            flexDirection: "column",
-            left: 70,
-            padding: "34px 40px 38px 36px",
-            position: "absolute",
-            top: 145,
-            width: 655
-          }}
+          style={layout.copy}
         >
           <div
             style={{

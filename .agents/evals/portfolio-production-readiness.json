@@ -91,7 +91,7 @@
         "Inventory visible figures, screenshots, diagrams, downloads, and public artifacts.",
         "Verify each artifact's caption, provenance, alt text, consent status, exact derivative, permission record, and relation to a claim.",
         "For the FairRentNYC participation sequence, verify the order from facilitated room to shared public surface to collective public assembly, the ten-frame Let NYC Dance capture method, and the unchanged homepage hero.",
-        "Inspect the 1200 by 630 Open Graph image and confirm its metadata-stripped East River source uses the governed homepage-aligned cover treatment, renders only Jamie's role and name, omits in-image credit under the creator's optional-credit permission, and renders Jamie's name in the same licensed identity face used on the site.",
+        "Inspect the 1200 by 630 Open Graph image and confirm its metadata-stripped East River source uses the governed homepage-aligned cover treatment, renders only Jamie's role and name, omits in-image credit under the creator's optional-credit permission, renders Jamie's name in the same licensed identity face used on the site, and carries the hierarchy in a flat full-height left identity field rather than a gradient or floating placard.",
         "Have a blind judge explain what each artifact proves."
       ],
       "pass_criteria": [
@@ -100,7 +100,7 @@
         "The FairRentNYC sequence makes Jamie's facilitation and implementation legible while keeping campaign work and outcomes collective.",
         "The selected Let NYC Dance frame is frame 5 of ten one-second candidates captured after the video loaded; the other nine are not committed.",
         "The existing homepage hero remains unchanged, and the WOW List capture is framed as a live tester invitation rather than full platform restoration.",
-        "The social card uses a metadata-stripped East River source with the approved homepage-aligned 1200 by 630 cover crop, limits visible copy to Jamie's role and name, records optional-credit provenance without putting photographer credit in the pixels, and renders Jamie's name in the same licensed TeX Gyre Pagella identity face used on the site.",
+        "The social card uses a metadata-stripped East River source with the approved homepage-aligned 1200 by 630 cover crop, limits visible copy to Jamie's role and name, records optional-credit provenance without putting photographer credit in the pixels, renders Jamie's name in the same licensed TeX Gyre Pagella identity face used on the site, and uses a flat full-height left identity field that keeps the right-side portrait open without a gradient or floating placard.",
         "The homepage or Technical Operations page links to at least three inspectable proof objects.",
         "A judge can connect each artifact to a specific action, outcome, or operating capability."
       ],

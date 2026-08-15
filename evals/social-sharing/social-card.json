@@ -1,5 +1,5 @@
 {
-  "id": "portfolio-social-sharing-v3",
+  "id": "portfolio-social-sharing-v4",
   "title": "Portfolio Open Graph and social-sharing continuity",
   "intent": "Make every shared portfolio link carry the current public identity, current page metadata, and a governed photographic card without allowing social previews to drift from the site or expand publication rights.",
   "criteria": [
@@ -11,7 +11,7 @@
     {
       "id": "identity-type-parity",
       "blocking": true,
-      "criterion": "Jamie's name uses the same TeX Gyre Pagella identity face on the site and in the rendered social card, with zero letter spacing and a revisioned v3 preview URL."
+      "criterion": "Jamie's name uses the same TeX Gyre Pagella identity face on the site and in the rendered social card, with zero letter spacing and a revisioned v4 preview URL."
     },
     {
       "id": "interface-type-continuity",
@@ -37,6 +37,11 @@
       "id": "distilled-visible-copy",
       "blocking": true,
       "criterion": "The rendered card contains exactly two visible copy blocks—the canonical role and Jamie Burkart—and does not reintroduce the tagline, site address, photo label, or photographer credit."
+    },
+    {
+      "id": "edge-to-edge-photographic-integration",
+      "blocking": true,
+      "criterion": "The role-and-name hierarchy sits in a full-height left identity field that reaches the top, bottom, and left edges; the field remains narrower than 70 percent of the card so the portrait stays open, and it uses a flat governed color rather than a gradient or floating placard."
     },
     {
       "id": "governed-photo-occurrence",

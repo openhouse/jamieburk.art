@@ -27,6 +27,7 @@ const [
   { createMetadata },
   { portfolioPhotos },
   {
+    buildSocialCardLayout,
     homeSocialCard,
     resolveSocialCardIdentityFontLicensePath,
     resolveSocialCardIdentityFontPath,
@@ -55,7 +56,7 @@ test("Open Graph and Twitter expose the same photographic large-card contract", 
   assert.equal(metadata.openGraph?.url?.toString(), "https://staging.jamieburk.art/work");
   assert.equal(
     metadata.openGraph?.images?.[0]?.url?.toString(),
-    "https://staging.jamieburk.art/opengraph-image?v=human-index-photo-v3"
+    "https://staging.jamieburk.art/opengraph-image?v=human-index-photo-v4"
   );
   assert.equal(metadata.openGraph?.images?.[0]?.width, 1200);
   assert.equal(metadata.openGraph?.images?.[0]?.height, 630);
@@ -72,7 +73,28 @@ test("Open Graph and Twitter expose the same photographic large-card contract", 
   );
   assert.equal(twitterImage?.alt, homeSocialCard.alt);
   assert.equal(homeSocialCard.photo.id, "east-river");
-  assert.equal(homeSocialCard.revision, "human-index-photo-v3");
+  assert.equal(homeSocialCard.revision, "human-index-photo-v4");
+});
+
+test("the identity field reaches both vertical edges without becoming a gradient or floating placard", () => {
+  const layout = buildSocialCardLayout();
+
+  assert.deepEqual(
+    {
+      top: layout.identityField.top,
+      bottom: layout.identityField.bottom,
+      left: layout.identityField.left
+    },
+    { top: 0, bottom: 0, left: 0 }
+  );
+  assert.equal(layout.identityField.position, "absolute");
+  assert.equal(layout.identityField.width > homeSocialCard.width / 2, true);
+  assert.equal(layout.identityField.width < homeSocialCard.width * 0.7, true);
+  assert.match(layout.identityField.background, /^rgba\(/);
+  assert.doesNotMatch(layout.identityField.background, /gradient/i);
+  assert.equal(layout.copy.position, "absolute");
+  assert.equal(layout.copy.left > layout.rule.left, true);
+  assert.equal(layout.copy.width < layout.identityField.width, true);
 });
 
 test("the social card exposes only the role and name as visible copy", () => {
