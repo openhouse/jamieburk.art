@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-15T04:22:33-04:00",
-  "sourceCommit": "796a663fdcbb8b8cd858c5c9e89217c5f1910865",
-  "sourceFingerprint": "d2a07093a1d6377c3b41cc93f9d67431b13464038f8c2cf7d5d05c43bd0fd793",
+  "generatedAt": "2026-08-15T05:17:38-04:00",
+  "sourceCommit": "4d8b4844d0c650ec3b9df3465d8c332626b9adb2",
+  "sourceFingerprint": "297b584b8226bf1b05e6300986e815632c69a1d4db4256b3bfe882bd584008cf",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -4444,7 +4444,7 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Exact social-preview occurrence binding the complete East River derivative to jamieburk.art Open Graph and Twitter cards with role-first copy, alt text, creator credit, and open production and indexing gates.",
+      "summary": "Exact social-preview occurrence binding a full-bleed East River composition to jamieburk.art Open Graph and Twitter cards with distilled role-first copy, creator attribution in alt metadata and the governed record, and open production and indexing gates.",
       "aliases": [],
       "lastReviewed": "2026-08-15",
       "reviewBy": "2027-02-15"
@@ -5455,13 +5455,13 @@
       "path": "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md",
       "title": "Elana Gordon East River portfolio permission summary",
       "kind": "source",
-      "status": "governed-open",
+      "status": "maintained",
       "visibility": "summary-only",
       "sensitivity": "moderate",
-      "summary": "Public-safe capsule recording creator confirmation, bounded portfolio permission, required credit, private evidence custody, and revocation handling.",
+      "summary": "Public-safe capsule recording creator confirmation, bounded portfolio permission, placement-specific credit choice, private evidence custody, and revocation handling.",
       "aliases": [],
-      "lastReviewed": "2026-07-26",
-      "reviewBy": "2027-01-26"
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2027-02-15"
     },
     {
       "id": "source.permission.jamie-portfolio-album.2026-08-13",
@@ -6082,7 +6082,7 @@
       "to": "projection.photo.social-preview.east-river",
       "source": "frontmatter",
       "href": "../../projections/photography/social-preview-east-river.md",
-      "context": "Complete-frame social-preview occurrence with visible creator credit."
+      "context": "Full-bleed social-preview occurrence with creator attribution in alt metadata and the governed record."
     },
     {
       "from": "asset.photo.east-river-manhattan-bridge.2022.001",

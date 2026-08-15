@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Interpretive layer source return, July 19, 2026
 
-**Source commit:** `796a663fdcbb8b8cd858c5c9e89217c5f1910865`
-**Generation time:** 2026-08-15T04:22:33-04:00
-**Source fingerprint:** `d2a07093a1d6377c3b41cc93f9d67431b13464038f8c2cf7d5d05c43bd0fd793`
+**Source commit:** `4d8b4844d0c650ec3b9df3465d8c332626b9adb2`
+**Generation time:** 2026-08-15T05:17:38-04:00
+**Source fingerprint:** `297b584b8226bf1b05e6300986e815632c69a1d4db4256b3bfe882bd584008cf`
 
 - [Civic, cultural, and technical translation](../../capabilities/civic-cultural-and-technical-translation.md) - `informed_by` (frontmatter)
 - [Implementation and operational stewardship](../../capabilities/implementation-and-operational-stewardship.md) - `informed_by` (frontmatter)
