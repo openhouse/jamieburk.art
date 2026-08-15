@@ -4,6 +4,6 @@
 
 | Asset | Destination | Credit | Public Git | Staging | Production | Indexing | Revocable |
 |---|---|---|---|---|---|---|---|
-| asset.photo.east-river-manhattan-bridge.2022.001 | jamieburk.art portfolio homepage | Photograph by Elana Gordon. | approved | approved | open | open | yes |
+| asset.photo.east-river-manhattan-bridge.2022.001 | jamieburk.art portfolio homepage, jamieburk.art global social preview | undefined | approved | approved | open | open | yes |
 
 Private correspondence and protected locators are not included.

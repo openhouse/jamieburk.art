@@ -20,7 +20,7 @@
   },
   "criteria": {
     "documentary_integrity": false,
-    "placement_coherence": false,
+    "placement_coherence": true,
     "artist_led_curation": true,
     "living_return": true,
     "selective_projection": true,
@@ -31,12 +31,11 @@
     "exact_candidate_receipt_current"
   ],
   "failedCriteria": [
-    "documentary_integrity",
-    "placement_coherence"
+    "documentary_integrity"
   ],
   "candidate": {
-    "fingerprint": "04435d3d5d834c4975110dcf94e4749d4048043199ec057080787a02f5dde426",
-    "fileCount": 243,
+    "fingerprint": "e4a1566300644abd49dae2c13793de3f7773976439caa462efc2d48962cba755",
+    "fileCount": 244,
     "files": [
       "apps/www/public/artifacts/fair-rent-nyc/let-nyc-dance-site.png",
       "apps/www/public/images/field-notes/coalition-facilitation-shoestring.webp",
@@ -46,6 +45,7 @@
       "apps/www/src/components/FieldSystemEvidence.tsx",
       "apps/www/src/components/Hero.tsx",
       "apps/www/src/data/photography.ts",
+      "apps/www/src/data/site.ts",
       "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
       "docs/knowledge-bank/assets/photographs/kc-town-hall-hard-hat-worksite.md",
       "docs/knowledge-bank/assets/photographs/kc-town-hall-kc-star-aerial-2021.md",
