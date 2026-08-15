@@ -33,8 +33,15 @@ export type PortfolioPhoto = {
   releaseState: {
     publicGit: "approved";
     staging: "approved";
-    production: "open";
-    indexing: "open";
+    production: "open" | "approved";
+    indexing: "open" | "approved";
+    decision?: {
+      authority: "Jamie Burkart";
+      approvedAt: "2026-08-15";
+      selectedVariant: "image-1-four-reader-answers";
+      alternativesReviewed: 3;
+      renderedSha256: string;
+    };
   };
   publicUseBoundary: string;
 };
@@ -96,8 +103,16 @@ export const portfolioPhotos = {
     releaseState: {
       publicGit: "approved",
       staging: "approved",
-      production: "open",
-      indexing: "open"
+      production: "approved",
+      indexing: "approved",
+      decision: {
+        authority: "Jamie Burkart",
+        approvedAt: "2026-08-15",
+        selectedVariant: "image-1-four-reader-answers",
+        alternativesReviewed: 3,
+        renderedSha256:
+          "62f01a8a26797a27ba81c81b026ee613c9bce1c9f66d3e1f2ca3434ddc450889"
+      }
     },
     publicUseBoundary:
       "Elana Gordon remains identified as photographer in the manifest and social-image alt metadata; her portfolio permission makes in-image credit optional. This exact full-bleed 1200 by 630 composition is bounded to the jamieburk.art social-preview occurrence; platform caching does not confer standalone reuse rights."

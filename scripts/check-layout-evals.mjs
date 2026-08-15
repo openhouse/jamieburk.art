@@ -249,7 +249,9 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     [...metadata.matchAll(/socialPreview\.height/g)].length !== 1 ||
     !socialPreview.includes("Photograph by Elana Gordon.") ||
     /\b(?:focus|credit):/.test(socialPreview) ||
-    renderedBindings.some((binding) => !openGraphImage.includes(binding)) ||
+    renderedBindings.some(
+      (binding) => openGraphImage.split(binding).length - 1 !== 1
+    ) ||
     /socialPreview\.(?:focus|credit)|socialPreview\.image\.caption/.test(
       openGraphImage
     ) ||
@@ -287,8 +289,14 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
       socialImageBytes.toString("latin1")
     ) ||
     !eastRiverAsset.includes(socialImageSha) ||
-    !/production: open/.test(socialPlacement) ||
-    !/indexing: open/.test(socialPlacement)
+    !/production: approved/.test(socialPlacement) ||
+    !/indexing: approved/.test(socialPlacement) ||
+    !/authority: Jamie Burkart/.test(socialPlacement) ||
+    !/selected_variant: image-1-four-reader-answers/.test(socialPlacement) ||
+    !/alternatives_reviewed: 3/.test(socialPlacement) ||
+    !/rendered_sha256: 62f01a8a26797a27ba81c81b026ee613c9bce1c9f66d3e1f2ca3434ddc450889/.test(
+      socialPlacement
+    )
   ) {
     fail(
       "social-preview-contract",

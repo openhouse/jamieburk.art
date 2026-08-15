@@ -350,6 +350,11 @@ function allTrue(object, keys) {
   return keys.every((key) => object[key] === true);
 }
 
+function dateOnly(value) {
+  const date = value instanceof Date ? value : new Date(value);
+  return Number.isNaN(date.getTime()) ? null : date.toISOString().slice(0, 10);
+}
+
 function candidateReceiptState(model, bindingRelevant) {
   const receipt = model.candidateReceipt;
   const exactCandidate =
@@ -400,6 +405,15 @@ export function evaluatePhotoKnowledgeModel(model) {
   const correction = record(canary.correctionId);
   const inquiry = record(canary.inquiryId);
   const photographer = record(canary.photographerId);
+  const socialPreviewPhoto = publicPhotoManifest?.find(
+    (item) => item.id === "east-river-social-preview"
+  );
+  const socialPreviewOccurrence = record(
+    "projection.photo.social-preview.east-river"
+  );
+  const portfolioAuthorization = record(
+    "source.permission.jamie-portfolio-album.2026-08-13"
+  );
   const east = portfolioPhotos?.eastRiver;
   const statementIds = new Set(asset?.statements?.map((item) => item.id) ?? []);
   const bindingRelevant = computePhotoBindingFingerprintFromModel(model);
@@ -454,6 +468,51 @@ export function evaluatePhotoKnowledgeModel(model) {
     JSON.stringify(observedBoundPhotoIds) ===
       JSON.stringify([...expectedBoundPhotoIds].sort()) &&
     publicPhotoManifest?.length === expectedBoundPhotoIds.length;
+  const selectedRenderSha =
+    "62f01a8a26797a27ba81c81b026ee613c9bce1c9f66d3e1f2ca3434ddc450889";
+  const selectedVariant = "image-1-four-reader-answers";
+  const socialPreviewReleaseHumanApproved =
+    socialPreviewPhoto?.releaseState?.production === "approved" &&
+    socialPreviewPhoto?.releaseState?.indexing === "approved" &&
+    socialPreviewPhoto?.releaseState?.decision?.authority === "Jamie Burkart" &&
+    socialPreviewPhoto?.releaseState?.decision?.approvedAt === "2026-08-15" &&
+    socialPreviewPhoto?.releaseState?.decision?.selectedVariant === selectedVariant &&
+    socialPreviewPhoto?.releaseState?.decision?.alternativesReviewed === 3 &&
+    socialPreviewPhoto?.releaseState?.decision?.renderedSha256 === selectedRenderSha &&
+    socialPreviewOccurrence?.approval?.production === "approved" &&
+    socialPreviewOccurrence?.approval?.indexing === "approved" &&
+    socialPreviewOccurrence?.approval?.authority === "Jamie Burkart" &&
+    dateOnly(socialPreviewOccurrence?.approval?.approved_at) === "2026-08-15" &&
+    socialPreviewOccurrence?.approval?.selected_variant === selectedVariant &&
+    socialPreviewOccurrence?.approval?.alternatives_reviewed === 3 &&
+    socialPreviewOccurrence?.approval?.rendered_sha256 === selectedRenderSha &&
+    portfolioAuthorization?.authorization?.social_preview_release?.production ===
+      "approved" &&
+    portfolioAuthorization?.authorization?.social_preview_release?.indexing ===
+      "approved" &&
+    portfolioAuthorization?.authorization?.social_preview_release?.authority ===
+      "Jamie Burkart" &&
+    dateOnly(
+      portfolioAuthorization?.authorization?.social_preview_release?.approved_at
+    ) === "2026-08-15" &&
+    portfolioAuthorization?.authorization?.social_preview_release?.selected_variant ===
+      selectedVariant &&
+    portfolioAuthorization?.authorization?.social_preview_release
+      ?.alternatives_reviewed === 3 &&
+    portfolioAuthorization?.authorization?.social_preview_release?.rendered_sha256 ===
+      selectedRenderSha &&
+    permission?.permission_capsule?.social_preview?.release?.production ===
+      "approved" &&
+    permission?.permission_capsule?.social_preview?.release?.indexing ===
+      "approved" &&
+    permission?.permission_capsule?.social_preview?.release?.authority ===
+      "Jamie Burkart" &&
+    dateOnly(permission?.permission_capsule?.social_preview?.release?.approved_at) ===
+      "2026-08-15" &&
+    permission?.permission_capsule?.social_preview?.release?.selected_variant ===
+      selectedVariant &&
+    permission?.permission_capsule?.social_preview?.release?.rendered_sha256 ===
+      selectedRenderSha;
   const everyBoundOccurrenceAligned = publicPhotoManifest?.every((item) => {
     const photoAsset = record(item.wikiId);
     const photoStatementIds = new Set(
@@ -472,6 +531,11 @@ export function evaluatePhotoKnowledgeModel(model) {
       item.placementIds?.length > 0 &&
       item.placementIds.every((placementId) => {
         const occurrence = record(placementId);
+        const releaseAligned =
+          item.id === "east-river-social-preview"
+            ? socialPreviewReleaseHumanApproved
+            : occurrence?.approval?.production === "open" &&
+              occurrence?.approval?.indexing === "open";
         return (
           occurrence?.asset === item.wikiId &&
           occurrence?.derivative === item.derivativeId &&
@@ -485,11 +549,15 @@ export function evaluatePhotoKnowledgeModel(model) {
           ) &&
           occurrence?.approval?.public_git === "approved" &&
           occurrence?.approval?.staging === "approved" &&
-          occurrence?.approval?.production === "open" &&
-          occurrence?.approval?.indexing === "open" &&
+          releaseAligned &&
           occurrence?.rollback?.preserves_history === true
         );
       });
+    const manifestReleaseAligned =
+      item.id === "east-river-social-preview"
+        ? socialPreviewReleaseHumanApproved
+        : item.releaseState?.production === "open" &&
+          item.releaseState?.indexing === "open";
     return (
       Boolean(photoAsset) &&
       derivativeAligned &&
@@ -499,8 +567,7 @@ export function evaluatePhotoKnowledgeModel(model) {
       item.publicationStatus === "jamie-authorized" &&
       item.releaseState?.publicGit === "approved" &&
       item.releaseState?.staging === "approved" &&
-      item.releaseState?.production === "open" &&
-      item.releaseState?.indexing === "open"
+      manifestReleaseAligned
     );
   });
 
@@ -607,6 +674,7 @@ export function evaluatePhotoKnowledgeModel(model) {
       edition?.approval?.production === "open" &&
       edition?.approval?.indexing === "open" &&
       edition?.human_gates?.includes("Jamie production approval"),
+    social_preview_release_human_approved: socialPreviewReleaseHumanApproved,
     rfc_authority_and_scope_current:
       /^stage: implementing$/m.test(model.sourceTexts[canary.rfcPath] ?? "") &&
       /authorized implementation of RFC 0003/i.test(
@@ -634,6 +702,7 @@ export function evaluatePhotoKnowledgeModel(model) {
     ]),
     placement_coherence:
       checks.manifest_wiki_placement_alignment &&
+      checks.social_preview_release_human_approved &&
       [
         "Jamie Burkart",
         "Technical Project Manager",

@@ -114,6 +114,17 @@ test("the distilled social preview rejects caption, focus, or pixel-credit copy"
   assert(result.failures.some(({ criterion }) => criterion === "social-preview-contract"));
 });
 
+test("the social preview renders each reader answer exactly once", () => {
+  const path = "apps/www/src/app/opengraph-image.tsx";
+  const source = readFileSync(path, "utf8").replace(
+    "{socialPreview.siteLabel}",
+    "{socialPreview.siteLabel}{socialPreview.siteLabel}"
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "social-preview-contract"));
+});
+
 test("social-preview metadata retains creator attribution when the rendered pixels omit it", () => {
   const path = "apps/www/src/data/social-preview.ts";
   const source = readFileSync(path, "utf8").replace("Photograph by Elana Gordon.", "");

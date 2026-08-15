@@ -21,6 +21,13 @@ permission_capsule:
   social_preview:
     in_image_credit: optional
     metadata_credit: Photograph by Elana Gordon.
+    release:
+      production: approved
+      indexing: approved
+      authority: Jamie Burkart
+      approved_at: 2026-08-15
+      selected_variant: image-1-four-reader-answers
+      rendered_sha256: 62f01a8a26797a27ba81c81b026ee613c9bce1c9f66d3e1f2ca3434ddc450889
   derivative_scope: Layout C homepage crop and exact 1200 by 630 social-preview crop
   public_git: approved
   staging: approved

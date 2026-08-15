@@ -9,7 +9,7 @@ sensitivity: low
 last_reviewed: 2026-08-15
 review_by: 2027-02-15
 canonical_path: docs/knowledge-bank/projections/photography/social-preview-east-river.md
-summary: Exact social-preview occurrence binding a full-bleed East River composition to jamieburk.art Open Graph and Twitter cards with distilled role-first copy, creator attribution in alt metadata and the governed record, and open production and indexing gates.
+summary: Exact social-preview occurrence binding the selected full-bleed East River composition to jamieburk.art Open Graph and Twitter cards with four reader answers, creator attribution in alt metadata and the governed record, and Jamie's dated production decision.
 projection_status: active
 portfolio_edition: edition.launch.2026-08
 asset: asset.photo.east-river-manhattan-bridge.2022.001
@@ -42,11 +42,16 @@ publication_authority_source: source.permission.jamie-portfolio-album.2026-08-13
 approval:
   public_git: approved
   staging: approved
-  production: open
-  indexing: open
+  production: approved
+  indexing: approved
+  authority: Jamie Burkart
+  approved_at: 2026-08-15
+  selected_variant: image-1-four-reader-answers
+  alternatives_reviewed: 3
+  rendered_sha256: 62f01a8a26797a27ba81c81b026ee613c9bce1c9f66d3e1f2ca3434ddc450889
 distribution_boundary: Social platforms may cache this card as a preview of jamieburk.art. No standalone reuse, endorsement, or broader image license is asserted.
 rollback:
-  action: Replace the social card with the prior text-only composition while retaining this occurrence and its review history.
+  action: Restore the prior contained split composition with visible credit while retaining this occurrence and its review history.
   preserves_history: true
 relations:
   - type: uses_source
@@ -77,8 +82,21 @@ credit optional for this bounded portfolio use. The credited homepage
 occurrence remains unchanged. Platform caching is treated as delivery of a
 jamieburk.art preview, not as permission for standalone reuse or endorsement.
 
-Public Git and staging are approved for review. Production publication and
-indexing remain open and require Jamie's exact-candidate approval.
+## Three-variant close reading
+
+Jamie reviewed three 1200 by 630 alternatives on August 15, 2026 and selected
+the current generated Image 1 composition for production and indexing. It is
+the only alternative that answers all four immediate reader questions exactly
+once: who Jamie is, his role, the value he creates, and where to continue.
+
+Image 2 remains a strong editorial alternative but omits the literal role.
+Image 3 works as an institutional title slate but omits both the working
+proposition and destination. The comparison images remain outside Git; this
+record preserves only the public-safe decision and verified selected-render
+hash.
+
+The approval binds only this image, crop, copy, route, destination, and hash.
+Any later change reopens production and indexing review.
 
 ## Rollback
 

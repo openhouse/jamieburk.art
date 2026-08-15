@@ -263,6 +263,29 @@ test("production and indexing approval cannot be automated", async () => {
   assert.equal(result.checks.production_and_indexing_human_gated, false);
 });
 
+test("the selected social preview release is bound to Jamie's exact visual decision", async () => {
+  const model = await baselineModel();
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.social_preview_release_human_approved, true);
+});
+
+test("status changes alone cannot approve the social preview release", async () => {
+  const model = await baselineModel();
+  const socialPhoto = model.publicPhotoManifest.find(
+    (item) => item.id === "east-river-social-preview"
+  );
+  const socialOccurrence = model.recordsById[
+    "projection.photo.social-preview.east-river"
+  ];
+  socialPhoto.releaseState.production = "approved";
+  socialPhoto.releaseState.indexing = "approved";
+  delete socialPhoto.releaseState.decision;
+  socialOccurrence.approval.production = "approved";
+  socialOccurrence.approval.indexing = "approved";
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.social_preview_release_human_approved, false);
+});
+
 test("stale candidate evidence fails closed", async () => {
   const model = await baselineModel();
   model.candidateReceipt.candidateFingerprint = "f".repeat(64);

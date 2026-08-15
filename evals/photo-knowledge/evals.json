@@ -25,6 +25,7 @@
     "recollection_does_not_auto_project",
     "automated_selection_prohibited",
     "production_and_indexing_human_gated",
+    "social_preview_release_human_approved",
     "rfc_authority_and_scope_current",
     "exact_candidate_receipt_current"
   ],

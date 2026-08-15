@@ -31,6 +31,14 @@ authorization:
     - asset.photo.sunday-dinner.shared-map.2013.001
     - asset.photo.kc-town-hall.roof-work.2019.001
   required_credit: Known photographers remain attributed according to creator permission and exact placement; the East River homepage credit is visible and its social-preview credit may travel in metadata rather than rendered pixels.
+  social_preview_release:
+    production: approved
+    indexing: approved
+    authority: Jamie Burkart
+    approved_at: 2026-08-15
+    selected_variant: image-1-four-reader-answers
+    alternatives_reviewed: 3
+    rendered_sha256: 62f01a8a26797a27ba81c81b026ee613c9bce1c9f66d3e1f2ca3434ddc450889
   excludes:
     - Apple Photos identifiers
     - original archive filenames
@@ -87,8 +95,11 @@ relations:
   the exact placement; Elana Gordon remains visibly credited on the homepage.
 - [x] Album identifiers, People tags, face associations, geolocation, original
   filenames, and raw metadata remain private.
-- [ ] Production publication and indexing await approval of the exact candidate
-  commit.
+- [x] After close reading of three alternatives, Jamie selected the current
+  Image 1 social-preview composition and explicitly instructed production and
+  indexing deployment on August 15, 2026.
+- [ ] Any later social-preview image, crop, copy, route, destination, or hash
+  requires a new exact-candidate decision.
 
 This capsule records the scope needed by the public portfolio without copying
 the underlying conversation or private Photos data into Git. Authorization for
