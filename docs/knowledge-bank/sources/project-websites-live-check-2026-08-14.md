@@ -15,7 +15,7 @@ relations: []
 
 # Project websites live check
 
-**Checked:** August 14, 2026  
+**Checked:** August 14, 2026
 **Recheck by:** September 13, 2026
 
 Nine distinct project homes in the governed portfolio inventory returned HTTP
