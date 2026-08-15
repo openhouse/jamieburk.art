@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-15T10:50:45-04:00",
   "sourceCommit": "f6f3d2375f0f41d5b737530463f21dbf6646b949",
-  "sourceFingerprint": "7967b05563144802bf5193371d025996b88c6185ec9d6b7fe198e512d06c377b",
+  "sourceFingerprint": "eaa16a2942b1bb8312565d853851129caf38f505dfaec5f49fd97cfc75e21e58",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -2814,6 +2814,19 @@
       "reviewBy": "2026-08-28"
     },
     {
+      "id": "decision.portfolio.cloudinary-selective-media-delivery.2026-08-15",
+      "path": "docs/knowledge-bank/decisions/cloudinary-selective-media-delivery-2026-08-15.md",
+      "title": "Selective Cloudinary delivery for governed portfolio derivatives",
+      "kind": "decision",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Bounded delivery decision to place two exact, already-public portfolio derivatives behind responsive Cloudinary transforms while retaining repository governance, same-origin fallbacks, and explicit exclusions.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-11-15"
+    },
+    {
       "id": "edition.launch.2026-08",
       "path": "docs/knowledge-bank/projections/photography/edition-launch-2026-08.md",
       "title": "August 2026 launch-candidate photographic edition",
@@ -3271,7 +3284,7 @@
       "sensitivity": "low",
       "summary": "Index of bounded decision reconstructions preserving actors, constraints, alternatives, artifacts, outcomes, unknowns, and projection holds.",
       "aliases": [],
-      "lastReviewed": "2026-07-28",
+      "lastReviewed": "2026-08-15",
       "reviewBy": "2026-10-19"
     },
     {
@@ -11932,6 +11945,30 @@
       "context": null
     },
     {
+      "from": "decision.portfolio.cloudinary-selective-media-delivery.2026-08-15",
+      "type": "related_to",
+      "to": "edition.launch.2026-08",
+      "source": "frontmatter",
+      "href": "../projections/photography/edition-launch-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "decision.portfolio.cloudinary-selective-media-delivery.2026-08-15",
+      "type": "related_to",
+      "to": "projection.photo.fair-rent-nyc.shoestring-facilitation",
+      "source": "frontmatter",
+      "href": "../projections/photography/fair-rent-nyc-shoestring-facilitation.md",
+      "context": null
+    },
+    {
+      "from": "decision.portfolio.cloudinary-selective-media-delivery.2026-08-15",
+      "type": "uses_source",
+      "to": "source.let-nyc-dance.public-surface.2026-08-13",
+      "source": "frontmatter",
+      "href": "../sources/let-nyc-dance-public-surface-2026-08.md",
+      "context": null
+    },
+    {
       "from": "edition.launch.2026-08",
       "type": "related_to",
       "to": "decision.photo.layout-c.resume-no-photo.v1",
@@ -12945,6 +12982,14 @@
       "to": "decision.photo.pre-launch.rights-narrowing.2026-07-28",
       "source": "frontmatter",
       "href": "../decisions/photography/pre-launch-rights-narrowing-2026-07-28.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.decision-records",
+      "type": "related_to",
+      "to": "decision.portfolio.cloudinary-selective-media-delivery.2026-08-15",
+      "source": "frontmatter",
+      "href": "../decisions/cloudinary-selective-media-delivery-2026-08-15.md",
       "context": null
     },
     {
@@ -20140,6 +20185,15 @@
       "to": "decision.photo.pre-launch.rights-narrowing.2026-07-28",
       "fragment": null,
       "line": 18,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/decision-records.md",
+      "from": "index.knowledge-wiki.decision-records",
+      "toPath": "docs/knowledge-bank/decisions/cloudinary-selective-media-delivery-2026-08-15.md",
+      "to": "decision.portfolio.cloudinary-selective-media-delivery.2026-08-15",
+      "fragment": null,
+      "line": 19,
       "kind": "link"
     },
     {

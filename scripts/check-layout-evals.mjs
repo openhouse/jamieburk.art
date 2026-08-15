@@ -197,8 +197,14 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     fail("human-index-material-system", "A prohibited gradient, orb, or bokeh treatment appears in global CSS.");
   }
   const fieldPhoto = readText("apps/www/src/components/FieldPhoto.tsx");
-  if (!fieldPhoto.includes('from "next/image"') || !fieldPhoto.includes("sizes={sizes}") || !fieldPhoto.includes("photo.alt")) {
-    fail("responsive-image-contract", "Field photos must retain Next Image, responsive sizes, and manifest alt text.");
+  const responsiveMedia = readText("apps/www/src/components/ResponsiveMedia.tsx");
+  if (!fieldPhoto.includes("ResponsiveMedia") ||
+      !fieldPhoto.includes("sizes={sizes}") ||
+      !fieldPhoto.includes("photo.alt") ||
+      !responsiveMedia.includes('from "next/image"') ||
+      !responsiveMedia.includes("resolveMediaDelivery") ||
+      !responsiveMedia.includes("srcSet={delivery.srcSet}")) {
+    fail("responsive-image-contract", "Field photos must retain the governed local fallback, responsive sizes, manifest alt text, and bounded direct Cloudinary srcset.");
   }
   if (!globalCss.includes("100svh")) {
     fail("responsive-image-contract", "The stable viewport-bounded hero contract is incomplete.");

@@ -12,7 +12,7 @@ export function Hero() {
           alt={photo.alt}
           className="object-cover object-[73%_center] sm:object-center"
           fill
-          priority
+          preload
           sizes="100vw"
           src={photo.src}
         />

@@ -39,7 +39,7 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
                 cover.fit === "contain" ? "object-contain" : "object-cover"
               }`}
               height={cover.height}
-              priority
+              preload
               sizes="(min-width: 1024px) 68vw, 100vw"
               src={cover.src}
               style={{ objectPosition: cover.objectPosition }}

@@ -242,12 +242,14 @@
         "Run npm check, staging preflight, and production preflight serially.",
         "Build and run the production Docker image.",
         "Smoke every canonical route, health endpoint, robots file, sitemap, and resume PDF.",
+        "Verify every active Cloudinary pilot URL, local fallback, exact asset receipt, and standalone public-asset rollback path.",
         "Inspect browser console output."
       ],
       "pass_criteria": [
         "All repository and environment preflights pass.",
         "The production Docker image builds and runs as a non-root user.",
         "Every canonical route returns the expected success status and content type.",
+        "The two allowlisted Cloudinary assets use versioned bounded transforms, while social preview, resume, fonts, and unlisted images remain same-origin.",
         "No uncaught browser-console errors appear on primary routes."
       ],
       "evidence_required": ["command output", "container identifier", "route-smoke table", "console log report"],
@@ -270,7 +272,8 @@
         "No text, navigation, or CTA overlaps or clips.",
         "Keyboard users can reach and identify every primary action.",
         "There are no critical accessibility violations.",
-        "Every meaningful image has useful alternative text and decorative images are ignored appropriately."
+        "Every meaningful image has useful alternative text and decorative images are ignored appropriately.",
+        "Responsive candidates never exceed source dimensions, text-bearing screenshots retain legibility, and only the above-fold hero is preloaded."
       ],
       "evidence_required": ["viewport matrix", "screenshots", "overflow measurements", "accessibility report"],
       "remediation_hint": "Fix the shared component or responsive constraint causing the broadest failure first."

@@ -41,7 +41,7 @@
     {
       "id": "responsive-image-contract",
       "blocking": true,
-      "criterion": "Images use Next Image, explicit intrinsic dimensions or fill, stable aspect ratios, responsive sizes, and a viewport-bounded hero."
+      "criterion": "Images retain a Next Image local fallback, explicit intrinsic dimensions or fill, stable aspect ratios, responsive sizes, and a viewport-bounded hero. Only the exact governed Cloudinary pilot assets may bypass Next optimization through a bounded responsive srcset."
     },
     {
       "id": "social-preview-contract",

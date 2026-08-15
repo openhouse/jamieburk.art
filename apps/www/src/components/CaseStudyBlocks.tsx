@@ -90,7 +90,6 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
                         : "object-cover object-top"
                     }`}
                     height={800}
-                    loading="eager"
                     sizes="(min-width: 768px) 66vw, 100vw"
                     src={artifact.media.src}
                     width={1200}
