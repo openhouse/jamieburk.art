@@ -3,7 +3,7 @@
   "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
   "generatedOn": "2026-08-14",
   "sourceMarkdown": "Jamie-Burkart-Resume.md",
-  "sourceMarkdownSha256": "d1395ca2f36d52684ba081be6b9914dc7c8f64b92ad07a3b677e80b7ed837475",
+  "sourceMarkdownSha256": "cee950eb8e146578033a9b6c48948ab5e72f182b716e11aa7bdb60dd479be27c",
   "opportunitySource": {
     "file": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
     "sha256": "e244c8222d6c431fd9d9ce34349f2b57c139656adf225974d4f6462ce55dd25d"
@@ -11,8 +11,8 @@
   "pdf": {
     "file": "Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf",
     "mediaType": "application/pdf",
-    "sha256": "16d4a0bf9d7cb392834831689cce6d41138845d02ae8236f2707142061c80d28",
-    "bytes": 95601,
+    "sha256": "8f5039b6327cb12b472b9123ef7919f6f2e9400cc952c6c10e681a06d35536db",
+    "bytes": 96970,
     "pages": 2,
     "pageSize": "US Letter",
     "tagged": true
@@ -31,6 +31,7 @@
       "The stronger staging-B resume structure was selected after a close reading of the three release candidates.",
       "A deliberate page break before WOWList keeps the first page focused on the professional summary, capabilities, Thick Arts, and current NYC coalition work.",
       "Three defensive research-process caveats were removed from hiring-facing prose while the underlying factual scope and collective credit remained unchanged.",
+      "Harry J. Epstein Company remains plain body text with no hyperlink styling or PDF link annotation.",
       "Politico New York is a visible hyperlink to the canonical archived article PDF."
     ]
   },
@@ -54,6 +55,7 @@
       "No isolated section heading or bullet continuation",
       "Readable hierarchy, contact links, margins, and line spacing",
       "Page two begins cleanly with WOWList and preserves a balanced scan path through education and additional information",
+      "Harry J. Epstein Company renders in the surrounding body style and is not interactive",
       "Politico New York is visibly linked in source-consistent blue underlined styling"
     ]
   }

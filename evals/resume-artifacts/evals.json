@@ -25,6 +25,12 @@
       "distinguish these activity counts",
       "the archived site is unofficial and not a current City service"
     ],
+    "plainTextProjectNames": [
+      {
+        "label": "Harry J. Epstein Company",
+        "forbiddenUrl": "https://www.harryepstein.com/"
+      }
+    ],
     "politicoLabel": "Politico New York",
     "politicoArticleUrl": "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf"
   },
@@ -97,7 +103,7 @@
     {
       "id": "resume-editorial-preferences",
       "blocking": true,
-      "criterion": "Hiring-facing resumes omit nonessential disposition and research-dossier caveats; whenever Politico New York appears, its full visible label links to the canonical archived article PDF in both Markdown and the exported PDF."
+      "criterion": "Hiring-facing resumes omit nonessential disposition and research-dossier caveats; Harry J. Epstein Company remains plain text; whenever Politico New York appears, its full visible label links to the canonical archived article PDF in both Markdown and the exported PDF."
     },
     {
       "id": "application-guide",

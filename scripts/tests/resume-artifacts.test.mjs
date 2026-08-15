@@ -71,6 +71,36 @@ function rebindResumeMarkdown(root, opportunityId, mutate) {
   writeFileSync(guidePath, guide, "utf8");
 }
 
+function escapedPdfLiteral(value) {
+  return Buffer.from([...value].map((character) => /[A-Za-z0-9]/.test(character)
+    ? character
+    : `\\${character.codePointAt(0).toString(8).padStart(3, "0")}`
+  ).join(""));
+}
+
+function rebindResumePdf(root, opportunityId, mutate) {
+  const manifest = readJson(root, "evals/resume-hiring-readers/current.json");
+  const entry = manifest.opportunities.find((opportunity) => opportunity.opportunityId === opportunityId);
+  assert.ok(entry, `missing fixture opportunity ${opportunityId}`);
+  const directory = path.dirname(path.join(root, entry.resumePath));
+  const artifactRelative = path.relative(root, path.join(directory, "artifact.json"));
+  const artifact = readJson(root, artifactRelative);
+  const pdfPath = path.join(directory, artifact.pdf.file);
+  const previousDigest = artifact.pdf.sha256;
+  const nextPdf = mutate(readFileSync(pdfPath));
+  const nextDigest = sha256(nextPdf);
+  writeFileSync(pdfPath, nextPdf);
+  artifact.pdf.sha256 = nextDigest;
+  artifact.pdf.bytes = nextPdf.length;
+  writeJson(root, artifactRelative, artifact);
+  const guidePath = path.join(directory, "Application-Instructions.md");
+  writeFileSync(
+    guidePath,
+    readFileSync(guidePath, "utf8").replace(previousDigest, nextDigest),
+    "utf8"
+  );
+}
+
 test("every governed opportunity has a current styled and visually inspected PDF sibling", () => {
   const result = run();
   assert.equal(result.status, 0, result.stderr || result.stdout);
@@ -368,8 +398,8 @@ test("a Politico New York PDF without the canonical article destination fails cl
     const artifact = readJson(root, artifactRelative);
     const pdfPath = path.join(directory, artifact.pdf.file);
     const pdf = readFileSync(pdfPath);
-    const expected = Buffer.from("https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf");
-    const replacement = Buffer.from(`https://example.com/${"x".repeat(expected.length - "https://example.com/".length)}`);
+    const expected = escapedPdfLiteral("https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf");
+    const replacement = Buffer.alloc(expected.length, "x");
     assert.equal(replacement.length, expected.length);
     const index = pdf.indexOf(expected);
     assert.notEqual(index, -1, "current fixture must contain the canonical PDF destination");
@@ -380,6 +410,54 @@ test("a Politico New York PDF without the canonical article destination fails cl
     const result = run(root);
     assert.notEqual(result.status, 0);
     assert.match(result.stdout, /resume-editorial-preferences/);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test("a project designated as plain text fails when Markdown or PDF still links it", () => {
+  const root = fixture();
+  try {
+    const evaluationRelative = "evals/resume-artifacts/evals.json";
+    const evaluation = readJson(root, evaluationRelative);
+    evaluation.editorialPreferences.plainTextProjectNames = [
+      {
+        label: "Harry J. Epstein Company",
+        forbiddenUrl: "https://www.harryepstein.com/"
+      }
+    ];
+    writeJson(root, evaluationRelative, evaluation);
+    rebindResumeMarkdown(root, "opportunity.nyc-oti.senior-product-manager.782366", (resume) =>
+      resume.replace(
+        "Harry J. Epstein Company,",
+        "[Harry J. Epstein Company](https://www.harryepstein.com/),"
+      )
+    );
+
+    const result = run(root);
+    assert.notEqual(result.status, 0);
+    assert.match(result.stdout, /resume-editorial-preferences/);
+    assert.match(result.stdout, /Harry J\. Epstein Company must remain plain text/);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test("an active PDF annotation fails for a project designated as plain text", () => {
+  const root = fixture();
+  try {
+    rebindResumePdf(root, "opportunity.nyc-oti.senior-product-manager.782366", (pdf) => {
+      const before = escapedPdfLiteral("https://nycartc.com/");
+      const after = escapedPdfLiteral("https://www.harryepstein.com/");
+      const index = pdf.indexOf(before);
+      assert.notEqual(index, -1, "current fixture must expose an active page-one link destination");
+      return Buffer.concat([pdf.subarray(0, index), after, pdf.subarray(index + before.length)]);
+    });
+
+    const result = run(root);
+    assert.notEqual(result.status, 0);
+    assert.match(result.stdout, /resume-editorial-preferences/);
+    assert.match(result.stdout, /Harry J\. Epstein Company must remain plain text/);
   } finally {
     rmSync(root, { recursive: true, force: true });
   }

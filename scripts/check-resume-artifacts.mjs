@@ -28,6 +28,41 @@ function digest(value) {
   return createHash("sha256").update(value).digest("hex");
 }
 
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function decodePdfLiteral(value) {
+  return value
+    .replace(/\\([0-7]{1,3})/g, (_, octal) => String.fromCodePoint(Number.parseInt(octal, 8)))
+    .replace(/\\n/g, "\n")
+    .replace(/\\r/g, "\r")
+    .replace(/\\t/g, "\t")
+    .replace(/\\b/g, "\b")
+    .replace(/\\f/g, "\f")
+    .replace(/\\([()\\])/g, "$1");
+}
+
+function activePdfLinkUris(pdfText) {
+  const objects = new Map();
+  for (const match of pdfText.matchAll(/(?:^|\n)(\d+)\s+\d+\s+obj\s*([\s\S]*?)\s*endobj/g)) {
+    objects.set(match[1], match[2]);
+  }
+  const annotationIds = new Set();
+  for (const body of objects.values()) {
+    if (!/\/Type\s*\/Page\b/.test(body)) continue;
+    const annotations = /\/Annots\s*\[([^\]]*)\]/.exec(body)?.[1] ?? "";
+    for (const reference of annotations.matchAll(/(\d+)\s+\d+\s+R/g)) annotationIds.add(reference[1]);
+  }
+  const uris = new Set();
+  for (const id of annotationIds) {
+    const body = objects.get(id) ?? "";
+    const encoded = /\/URI\s*\(((?:\\[0-7]{1,3}|\\.|[^\\)])*)\)/.exec(body)?.[1];
+    if (encoded !== undefined) uris.add(decodePdfLiteral(encoded));
+  }
+  return uris;
+}
+
 function datedResumePath(value) {
   return /^resume-versions\/(\d{4}-\d{2}-\d{2})\/[^/]+\/Jamie-Burkart-Resume\.md$/.exec(value ?? "");
 }
@@ -193,8 +228,9 @@ export function evaluateResumeArtifacts(root = defaultRoot) {
 
     const pdf = readFileSync(pdfPath);
     const pdfText = pdf.toString("latin1");
+    const pdfLinkUris = activePdfLinkUris(pdfText);
     const pageObjects = pdfText.match(/\/Type\s*\/Page\b/g)?.length ?? 0;
-    const mediaBoxes = pdfText.match(/\/MediaBox \[0 0 612 792\]/g)?.length ?? 0;
+    const mediaBoxes = pdfText.match(/\/MediaBox\s*\[\s*0\s+0\s+612\s+792\s*\]/g)?.length ?? 0;
     if (!pdf.subarray(0, 5).equals(Buffer.from("%PDF-")) ||
         pageObjects < 1 || pageObjects > 2 || mediaBoxes !== pageObjects ||
         !pdfText.includes(`/Count ${pageObjects}`) ||
@@ -228,6 +264,9 @@ export function evaluateResumeArtifacts(root = defaultRoot) {
     const forbiddenResearchDossierPatterns = Array.isArray(preferences.forbiddenResearchDossierPatterns)
       ? preferences.forbiddenResearchDossierPatterns
       : [];
+    const plainTextProjectNames = Array.isArray(preferences.plainTextProjectNames)
+      ? preferences.plainTextProjectNames
+      : [];
     const politicoUrl = preferences.politicoArticleUrl;
     const markdownPoliticoLinks = [
       `[${politicoLabel}](${politicoUrl})`,
@@ -239,8 +278,17 @@ export function evaluateResumeArtifacts(root = defaultRoot) {
       fail("resume-editorial-preferences", `${label}: hiring-facing resume includes nonessential evidence-process or disposition language.`);
     }
     if (politicoLabel && resume.includes(politicoLabel) &&
-        (!politicoUrl || !markdownPoliticoLinks.some((link) => resume.includes(link)) || !pdfText.includes(politicoUrl))) {
+        (!politicoUrl || !markdownPoliticoLinks.some((link) => resume.includes(link)) || !pdfLinkUris.has(politicoUrl))) {
       fail("resume-editorial-preferences", `${label}: Politico New York must link to the canonical archived article PDF in Markdown and the exported PDF.`);
+    }
+    for (const project of plainTextProjectNames) {
+      const projectLabel = typeof project?.label === "string" ? project.label : "";
+      const forbiddenUrl = typeof project?.forbiddenUrl === "string" ? project.forbiddenUrl : "";
+      if (!projectLabel || !forbiddenUrl) continue;
+      const markdownLink = new RegExp(`\\[(?:\\*|_)?${escapeRegExp(projectLabel)}(?:\\*|_)?\\]\\([^)]*\\)`);
+      if (markdownLink.test(resume) || pdfLinkUris.has(forbiddenUrl)) {
+        fail("resume-editorial-preferences", `${label}: ${projectLabel} must remain plain text in Markdown and PDF.`);
+      }
     }
 
     if (protectedLocatorPattern.test(resume) || protectedLocatorPattern.test(JSON.stringify(artifact))) {

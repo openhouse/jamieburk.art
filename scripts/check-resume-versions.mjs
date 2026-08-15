@@ -163,7 +163,7 @@ export function evaluateResumeVersions(root = defaultRoot) {
       if (!pdf.subarray(0, 5).equals(Buffer.from("%PDF-")) ||
           pageObjects !== 2 ||
           !pdfText.includes("/Count 2") ||
-          (pdfText.match(/\/MediaBox \[0 0 612 792\]/g)?.length ?? 0) !== 2 ||
+          (pdfText.match(/\/MediaBox\s*\[\s*0\s+0\s+612\s+792\s*\]/g)?.length ?? 0) !== 2 ||
           !pdfText.includes("/Marked true") ||
           !pdfText.includes("/StructTreeRoot") ||
           !pdfText.includes("/DisplayDocTitle true") ||
