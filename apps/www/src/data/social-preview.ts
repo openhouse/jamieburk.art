@@ -26,7 +26,6 @@ export const socialPreview = {
     sha256: "ffbff12eb926e327e90fa0002a241fa0230619e970d254791fe55f4d27a73cf5",
     sourceBoundary: "Rasterized from the local system face; no proprietary font file is distributed."
   },
-  photoCredit: "East River, 2022 · Photograph by Elana Gordon.",
   placementId: "projection.photo.global-social-preview.east-river",
-  alt: "Jamie Burkart beside the East River beneath the Manhattan Bridge, with portfolio text identifying his technical project management, product operations, and implementation practice."
+  alt: "Jamie Burkart beside the East River beneath the Manhattan Bridge, with his name and the statement: I help emerging work become usable systems."
 } as const;

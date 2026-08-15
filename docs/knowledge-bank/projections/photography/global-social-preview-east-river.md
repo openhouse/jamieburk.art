@@ -6,10 +6,10 @@ projection_type: photo-occurrence
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-14
+last_reviewed: 2026-08-15
 review_by: 2027-02-14
 canonical_path: docs/knowledge-bank/projections/photography/global-social-preview-east-river.md
-summary: Exact public occurrence binding the approved East River derivative, site identity copy, crop, alt text, visible credit, metadata tags, and release states to the global Open Graph card.
+summary: Exact public occurrence binding the approved East River derivative, distilled site identity copy, crop, alt text, governed creator attribution, metadata tags, and release states to the global Open Graph card.
 projection_status: active
 portfolio_edition: edition.launch.2026-08
 asset: asset.photo.east-river-manhattan-bridge.2022.001
@@ -21,8 +21,8 @@ purpose:
   - personal-presence
   - role-orientation
 crop:
-  social_card: 72% 50%
-alt_text: Jamie Burkart beside the East River beneath the Manhattan Bridge, with portfolio text identifying his technical project management, product operations, and implementation practice.
+  social_card: 50% 47%
+alt_text: "Jamie Burkart beside the East River beneath the Manhattan Bridge, with his name and the statement: I help emerging work become usable systems."
 caption:
   text: East River, 2022.
   assertions:
@@ -30,6 +30,8 @@ caption:
     - statement.photo.east-river.capture-year.v1
 credit:
   text: Photograph by Elana Gordon.
+  visible_in_image: false
+  choice_basis: The photographer made visible credit optional for this bounded portfolio use; authorship remains in the governed occurrence.
   assertions:
     - statement.photo.east-river.creator.v2
 identity_typography:
@@ -68,12 +70,15 @@ relations:
 # Global social preview East River occurrence
 
 This is the exact image occurrence approved for public Git and staging review:
-the metadata-stripped JPEG derivative of the approved East River photograph, a 1200 × 630 split composition,
-the current site name, role and homepage tagline, a crop that preserves Jamie's
-face and New York context, descriptive alt text, and visible Elana Gordon
-credit. Jamie's name is rendered from a checksum-bound, metadata-stripped
-Palatino raster so the social image matches the site's Palatino-first display
-identity without publishing the proprietary font program.
+the metadata-stripped JPEG derivative of the approved East River photograph in
+a full-bleed 1200 × 630 composition, the current site name and homepage
+tagline, a crop that preserves Jamie's face and New York context, descriptive
+alt text, and governed Elana Gordon creator attribution. The image itself omits
+a credit plaque under the photographer's optional-credit permission. Jamie's
+name is rendered from a checksum-bound, metadata-stripped Palatino raster so
+the social image matches the site's Palatino-first display identity without
+publishing the proprietary font program. The detailed professional role stays
+in the page metadata and linked portfolio rather than the image.
 
 The card is a traveling threshold for text messages and social platforms. It
 does not convert the photograph into proof of a professional outcome, expand
@@ -85,9 +90,10 @@ staging indexable.
 The application composes this card from `site`, `socialPreview`, and the
 governed East River photo record. The social-preview eval fails when homepage
 and card imagery diverge, metadata tags stop using the shared configuration,
-the derivative changes without a new checksum, the visible credit disappears,
-the Palatino name artwork changes without review, or the occurrence loses its
-rights and release-state bindings.
+the derivative changes without a new checksum, creator attribution or the
+optional-visible-credit boundary disappears from governance, visible credit
+creeps back into the image without review, the Palatino name artwork changes
+without review, or the occurrence loses its rights and release-state bindings.
 
 ## Rollback
 

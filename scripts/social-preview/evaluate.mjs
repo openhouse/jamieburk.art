@@ -179,8 +179,14 @@ export function evaluateSocialPreview({
     root,
     fileOverrides
   );
+  const permissionSource = readText(
+    "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md",
+    root,
+    fileOverrides
+  );
   const asset = matter(assetSource).data;
   const projection = matter(projectionSource).data;
+  const permission = matter(permissionSource).data;
   const photoBuffer = readBuffer(expected.photoPath.replace(/^\//, "apps/www/public/"), root, fileOverrides);
   const webp = parseWebP(photoBuffer);
   const rendererPhotoBuffer = readBuffer(
@@ -261,16 +267,23 @@ export function evaluateSocialPreview({
     imageRoute.includes("socialPreview.rendererPhoto.width") &&
     imageRoute.includes("socialPreview.rendererPhoto.height") &&
     imageRoute.includes("socialPreview.nameArtwork.src") &&
-    imageRoute.includes("socialPreview.role.split") &&
     imageRoute.includes("socialPreview.tagline") &&
-    imageRoute.includes("socialPreview.photoCredit");
+    imageRoute.includes("socialPreview.domain") &&
+    !imageRoute.includes("socialPreview.role") &&
+    !imageRoute.includes("socialPreview.photoCredit");
 
   const visualIdentityContract =
     expected.requiredColors.every((color) => imageRoute.toLowerCase().includes(color)) &&
+    imageRoute.includes("linear-gradient(90deg") &&
+    imageRoute.includes('height: "100%"') &&
+    imageRoute.includes('width: "100%"') &&
     imageRoute.includes('width: "58%"') &&
-    imageRoute.includes('width: "42%"') &&
-    imageRoute.includes('objectPosition: "72% 50%"') &&
-    imageRoute.includes('padding: "62px 58px 54px"');
+    imageRoute.includes(`objectPosition: "${expected.objectPosition}"`) &&
+    imageRoute.includes('padding: "58px 58px 50px"') &&
+    imageRoute.includes('height: "175px"') &&
+    imageRoute.includes('width: "350px"') &&
+    !imageRoute.includes("socialPreview.role") &&
+    !imageRoute.includes("Photograph by");
 
   const derivativeIntegrity =
     photoBuffer.length > 0 &&
@@ -304,14 +317,20 @@ export function evaluateSocialPreview({
     projection.route === expected.metadataPath &&
     projection.permission_source === expected.permissionSourceId;
 
-  const creditAndAlt =
-    social.includes(`photoCredit: "${expected.credit}"`) &&
-    projection.credit?.text === "Photograph by Elana Gordon." &&
-    imageRoute.includes("socialPreview.photoCredit") &&
+  const attributionAndAlt =
+    !social.includes("photoCredit:") &&
+    projection.credit?.text === expected.creatorCredit &&
+    projection.credit?.visible_in_image === expected.visibleCredit &&
+    permission.id === expected.permissionSourceId &&
+    permission.permission_capsule?.preferred_credit === expected.creatorCredit &&
+    permission.permission_capsule?.visible_credit_optional === true &&
+    permission.permission_capsule?.credit_policy?.global_social_preview === "governed-but-not-visible" &&
+    !imageRoute.includes("socialPreview.photoCredit") &&
+    !imageRoute.includes("Photograph by") &&
     /Jamie Burkart/.test(social) &&
     /East River/.test(social) &&
     /Manhattan Bridge/.test(social) &&
-    /technical project management/.test(social) &&
+    /usable systems/.test(social) &&
     (social.match(/alt:\s*"([^"]+)"/)?.[1]?.length ?? 0) >= 100;
 
   const releaseBoundary =
@@ -355,12 +374,12 @@ export function evaluateSocialPreview({
     {
       id: "image-route-shared-contract",
       pass: imageRouteContract,
-      detail: "The ImageResponse consumes shared title, role, tagline, photo, credit, dimensions, content type, and alt text."
+      detail: "The ImageResponse consumes the shared name artwork, tagline, domain, photo, dimensions, content type, and alt text while detailed role copy remains in metadata."
     },
     {
       id: "human-index-visual-contract",
       pass: visualIdentityContract,
-      detail: "The card preserves the Human Index palette, 58/42 split, East River crop, and safe inset."
+      detail: "The card preserves the Human Index palette, exact full-bleed East River photograph, left gradient, Palatino name scale, and safe inset."
     },
     {
       id: "derivative-integrity-and-metadata-safety",
@@ -373,9 +392,9 @@ export function evaluateSocialPreview({
       detail: "Asset, public manifest, derivative, permission source, route, and social-preview projection are closed under reference."
     },
     {
-      id: "traveling-credit-and-descriptive-alt",
-      pass: creditAndAlt,
-      detail: "Elana Gordon's credit travels inside the image and the generated card has descriptive alt text."
+      id: "governed-attribution-and-descriptive-alt",
+      pass: attributionAndAlt,
+      detail: "Elana Gordon's authorship remains governed, visible credit is intentionally omitted under optional-credit permission, and the generated card has descriptive alt text."
     },
     {
       id: "release-boundary",

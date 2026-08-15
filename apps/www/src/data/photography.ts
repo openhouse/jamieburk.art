@@ -68,7 +68,7 @@ export const portfolioPhotos = {
       indexing: "open"
     },
     publicUseBoundary:
-      "Elana Gordon is credited as photographer. Use is bounded to the approved homepage and global social-preview occurrences; no broader rights are asserted."
+      "Elana Gordon is credited as photographer. Visible credit is retained on the homepage and intentionally omitted from the global social preview under occurrence-level optional-credit permission; no broader rights are asserted."
   },
   saveNYCSpacesTownHall: {
     id: "save-nyc-spaces-town-hall",

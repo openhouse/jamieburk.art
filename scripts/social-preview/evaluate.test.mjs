@@ -49,14 +49,24 @@ test("the social preview cannot silently diverge from the homepage photograph", 
   assert.equal(result.checks.find((check) => check.id === "shared-site-identity-and-photo").pass, false);
 });
 
-test("the photographer credit cannot disappear from the traveling image", () => {
-  const relativePath = "apps/www/src/app/opengraph-image.tsx";
+test("photographer attribution cannot disappear from the governed occurrence", () => {
+  const relativePath = "docs/knowledge-bank/projections/photography/global-social-preview-east-river.md";
   const result = evaluateSocialPreview({
     fileOverrides: {
-      [relativePath]: text(relativePath).replace("{socialPreview.photoCredit}", "")
+      [relativePath]: text(relativePath).replace("  text: Photograph by Elana Gordon.", "  text: Creator not recorded.")
     }
   });
-  assert.equal(result.checks.find((check) => check.id === "traveling-credit-and-descriptive-alt").pass, false);
+  assert.equal(result.checks.find((check) => check.id === "governed-attribution-and-descriptive-alt").pass, false);
+});
+
+test("visible credit cannot silently return to the distilled traveling image", () => {
+  const relativePath = "docs/knowledge-bank/projections/photography/global-social-preview-east-river.md";
+  const result = evaluateSocialPreview({
+    fileOverrides: {
+      [relativePath]: text(relativePath).replace("  visible_in_image: false", "  visible_in_image: true")
+    }
+  });
+  assert.equal(result.checks.find((check) => check.id === "governed-attribution-and-descriptive-alt").pass, false);
 });
 
 test("the social image cannot lose its governed occurrence", () => {
@@ -76,7 +86,7 @@ test("a changed candidate invalidates the prior visual review", () => {
   const relativePath = "apps/www/src/app/opengraph-image.tsx";
   const result = evaluateSocialPreview({
     fileOverrides: {
-      [relativePath]: text(relativePath).replace('width: "58%"', 'width: "57%"')
+      [relativePath]: text(relativePath).replace('objectPosition: "50% 47%"', 'objectPosition: "50% 50%"')
     }
   });
   assert.equal(result.checks.find((check) => check.id === "exact-candidate-visual-review").pass, false);

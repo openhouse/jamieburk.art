@@ -463,8 +463,11 @@ export function evaluatePhotoKnowledgeModel(model) {
       /no broader rights are asserted/.test(east?.publicUseBoundary ?? "") &&
       !/no third-party authorship/.test(east?.publicUseBoundary ?? ""),
     permission_scope_exact_and_fail_closed:
-      permission?.permission_capsule?.required_credit === "Photograph by Elana Gordon." &&
-      permission?.permission_capsule?.derivative_scope === "Current Layout C crop and transform" &&
+      permission?.permission_capsule?.preferred_credit === "Photograph by Elana Gordon." &&
+      permission?.permission_capsule?.visible_credit_optional === true &&
+      permission?.permission_capsule?.credit_policy?.homepage === "visible" &&
+      permission?.permission_capsule?.credit_policy?.global_social_preview === "governed-but-not-visible" &&
+      permission?.permission_capsule?.derivative_scope === "Current homepage and global social-preview crops and transforms" &&
       permission?.permission_capsule?.public_git === "approved" &&
       permission?.permission_capsule?.staging === "approved" &&
       permission?.permission_capsule?.production === "open" &&
