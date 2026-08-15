@@ -101,6 +101,7 @@ export function evaluateProfessorLenses({
   const morseText = joined(morse);
   const sackText = joined(sack);
   const combinedPublicText = `${aboutText}\n${sourceNoteText}\n${publicRegistryText}`;
+  const normalizedAboutText = aboutText.replace(/\s+/g, " ");
   const totalWeight = suite.evals.reduce((sum, entry) => sum + entry.weight, 0);
   const candidateSha256 = fingerprintProfessorCandidate(candidateFiles);
   const relationshipRows = aboutText.match(/Relationships:<\/strong>/g)?.length ?? 0;
@@ -210,6 +211,19 @@ export function evaluateProfessorLenses({
         "document enough for others to continue"
       ].every((fragment) => aboutText.includes(fragment)),
       "Five public sequence stages checked."
+    ),
+    criterion(
+      "explicit-analytical-limits",
+      "The public surface rejects invention, structural-equivalence inflation, peer-review inflation, and present-proficiency inference.",
+      [
+        "an analytical pattern, not evidence",
+        "structurally equivalent",
+        "Missing evidence and relationships remain missing",
+        "I do not invent them",
+        "not peer-reviewed research",
+        "does not by itself establish present technical proficiency"
+      ].every((fragment) => normalizedAboutText.includes(fragment)),
+      "Six public anti-overclaim fragments checked."
     ),
     criterion(
       "inspectable-handoff-specimens",

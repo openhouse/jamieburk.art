@@ -53,6 +53,22 @@ test("guard rejects an incomplete recursive systems sequence", () => {
   assert.equal(result.criteria.find((item) => item.id === "recursive-sequence")?.pass, false);
 });
 
+test("guard rejects weakening the public analytical limits", () => {
+  const result = evaluateProfessorLenses({
+    suite,
+    aboutText: aboutText.replace(
+      /not peer-reviewed\s+research/,
+      "an ongoing research direction"
+    ),
+    sourceNoteText
+  });
+  assert.equal(result.pass, false);
+  assert.equal(
+    result.criteria.find((item) => item.id === "explicit-analytical-limits")?.pass,
+    false
+  );
+});
+
 test("guard rejects labeling the ended HJE engagement as current", () => {
   const mutatedAbout = aboutText
     .replace("Three systems loops", "Three current systems loops")

@@ -294,6 +294,25 @@ export default function AboutPage() {
               </div>
             </article>
           </div>
+          <aside
+            aria-labelledby="systems-comparison-limits"
+            className="mt-8 border-l-4 border-jb-ochre bg-jb-lemon/20 p-5"
+          >
+            <h3
+              className="text-lg font-semibold text-jb-ink"
+              id="systems-comparison-limits"
+            >
+              Limits of this comparison
+            </h3>
+            <p className="mt-3 leading-7 text-jb-ink/76">
+              These recurring steps are an analytical pattern, not evidence
+              that different projects are structurally equivalent. Missing
+              evidence and relationships remain missing; I do not invent them.
+              Source-Backed Team Memory is an early practice, not peer-reviewed
+              research, and historical implementation evidence does not by
+              itself establish present technical proficiency.
+            </p>
+          </aside>
         </section>
         <div className="mt-10 border-l-4 border-jb-blue bg-jb-warm p-5">
           <p className="leading-8 text-jb-ink/78">

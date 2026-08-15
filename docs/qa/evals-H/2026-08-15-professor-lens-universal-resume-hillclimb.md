@@ -72,3 +72,29 @@ This public-copy change resets the professor candidate again, to
 `45ce88b3c1f1528a022af08703f084fac63bb177274da013559ee54b40cc3e66`.
 The `morse-m` pass and `morse-n` rejection remain historical exact-candidate
 records and do not count toward the new candidate.
+
+## Third rejection and explicit analytical limits
+
+Three independent Morse-lens holdouts passed candidate `45ce88b3…` at 4/4.
+The first independent Sack-lens holdout then scored it 2/4. The reader found
+the recursive method and three project loops reconstructable within two clicks,
+but correctly found four anti-overclaim boundaries implicit rather than plainly
+visible:
+
+- a recurring analytical pattern is not proof that unlike projects are
+  structurally equivalent;
+- missing evidence and relationships must remain missing rather than be
+  invented;
+- the Source-Backed Team Memory lab is not peer-reviewed research; and
+- historical implementation evidence does not itself prove present technical
+  proficiency.
+
+The bounded repair adds one concise `Limits of this comparison` note to the
+About page and a deterministic regression covering all four stopping
+conditions. It does not add a project claim, change a project status, or
+reframe historical evidence as current capability. The three Morse passes and
+the Sack rejection remain historical exact-candidate records; every counted
+holdout resets for the changed public candidate.
+
+The clarified public candidate fingerprint is
+`82b6caf939536df8b6b24420364acc6ba6f24629d897f948b1c61023c577d34f`.
