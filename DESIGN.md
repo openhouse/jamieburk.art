@@ -11,6 +11,7 @@ colors:
   field: "#f3f6f8"
   rule: "#d9e4e9"
   ink: "#1a232b"
+  social-card-charcoal: "#0c161c"
 typography:
   identity: "TeX Gyre Pagella, Iowan Old Style, Palatino Linotype, Palatino, Baskerville, Georgia, serif"
   display: "Iowan Old Style, Palatino Linotype, Palatino, Baskerville, Georgia, serif"
@@ -87,7 +88,9 @@ truth, comparison, or task completion.
   transparent before the right-side portrait. It uses no rule or floating
   placard. Its visible copy is limited to the canonical role and name; creator
   attribution follows the exact governed occurrence and permission rather than
-  becoming generic footer text.
+  becoming generic footer text. Its executable contract and ordered change
+  protocol live in `apps/www/src/data/social-card.ts` and
+  `docs/decisions/home-social-card-rendering.md`.
 - Indexes use rules, numbers, and stable columns instead of repeated floating
   cards.
 - Cards are reserved for discrete artifacts, calls to action, and genuinely

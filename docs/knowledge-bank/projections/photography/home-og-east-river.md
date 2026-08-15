@@ -17,6 +17,10 @@ derivative: derivative.photo.east-river.og-source.v1
 route: /opengraph-image
 cache_revision: human-index-photo-v5
 component: ImageResponse
+render_contract: home-social-card-role-led-v1
+render_contract_path: apps/www/src/data/social-card.ts
+decision_record: docs/decisions/home-social-card-rendering.md
+selected_composition: role-led-cinematic
 purpose:
   - social-link-orientation
   - personal-presence
@@ -28,8 +32,12 @@ render:
   crop_alignment: center 46 percent
   new_photo_crop: true
   identity_field: full-frame-cinematic-left-gradient
+  identity_field_opacity: 1
+  minimum_accessible_identity_field_opacity: 0.674140289044
+  contrast_target: 4.5
   gradient: true
   vertical_rule: false
+  golden_render_sha256: b2eabe890f187c9e836e723c16260a8c2ffb53e7511b47712f9c099f554857a0
 alt_text: Jamie Burkart at the East River shoreline beneath the Manhattan Bridge — Technical Project Manager, Product Operations & Implementation.
 visible_identity:
   name: Jamie Burkart
@@ -81,6 +89,15 @@ frame, and becomes fully transparent before the right-side portrait. It uses
 neither the former floating placard nor a vertical rule. Only Jamie's current
 role and name are visible. His name uses the same licensed TeX Gyre Pagella
 identity face as the site.
+
+The selected composition is governed by the executable
+`home-social-card-role-led-v1` contract and its human-readable decision record.
+The contract encodes the layer order, visible-copy order, typographic hierarchy,
+selected opacity, measured contrast floor, exact render hash, instructions, and
+priority order. The renderer consumes its layout values directly. A change to
+the photograph, crop, copy, typography, gradient, or layout invalidates the old
+contrast measurement and requires the render contract, cache revision when
+pixels change, governed occurrence, evals, and inspected output to move together.
 
 Elana Gordon remains the recorded creator and remains visibly credited on the
 homepage. Her protected permission explicitly leaves visible credit or no

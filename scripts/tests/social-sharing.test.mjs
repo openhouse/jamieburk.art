@@ -29,11 +29,13 @@ const [
   {
     buildSocialCardLayout,
     homeSocialCard,
+    homeSocialCardRenderContract,
     resolveSocialCardIdentityFontLicensePath,
     resolveSocialCardIdentityFontPath,
     resolveSocialCardInterfaceFontLicensePath,
     resolveSocialCardInterfaceFontPath,
-    resolveSocialCardPhotoPath
+    resolveSocialCardPhotoPath,
+    validateHomeSocialCardRenderContract
   }
 ] = await Promise.all([
   import("../../apps/www/src/lib/metadata.ts"),
@@ -95,6 +97,57 @@ test("the cinematic identity gradient reaches every edge, clears before the port
   assert.equal(layout.copy.position, "absolute");
   assert.equal(layout.copy.left <= 72, true);
   assert.equal(layout.copy.left + layout.copy.width < homeSocialCard.width * 0.65, true);
+});
+
+test("the selected role-led composition enforces its social-preview contrast floor", () => {
+  assert.equal(typeof homeSocialCardRenderContract, "object");
+  assert.equal(homeSocialCardRenderContract.id, "home-social-card-role-led-v1");
+  assert.deepEqual(homeSocialCardRenderContract.visibleCopyOrder, ["role", "name"]);
+  assert.equal(homeSocialCardRenderContract.accessibility.targetContrastRatio, 4.5);
+  assert.equal(
+    homeSocialCardRenderContract.accessibility.minimumIdentityFieldOpacity,
+    0.674140289044
+  );
+
+  const belowFloor = structuredClone(homeSocialCardRenderContract);
+  belowFloor.layers.identityField.opacity = 0.61803398875;
+  belowFloor.accessibility.measuredIdentityFieldOpacity = 0.61803398875;
+  assert.throws(
+    () => buildSocialCardLayout(belowFloor),
+    /identity-field opacity must be at least 0\.674140289044/
+  );
+
+  const passingVariant = structuredClone(homeSocialCardRenderContract);
+  passingVariant.layers.identityField.opacity = 0.764;
+  passingVariant.accessibility.measuredIdentityFieldOpacity = 0.764;
+  const passingLayout = buildSocialCardLayout(passingVariant);
+  assert.equal(passingLayout.identityField.opacity, 0.764);
+});
+
+test("the renderer rejects a stale or internally inconsistent render receipt", () => {
+  assert.equal(typeof validateHomeSocialCardRenderContract, "function");
+  assert.doesNotThrow(() => validateHomeSocialCardRenderContract());
+
+  const staleDimensions = structuredClone(homeSocialCardRenderContract);
+  staleDimensions.goldenRender.width = 1199;
+  assert.throws(
+    () => validateHomeSocialCardRenderContract(staleDimensions),
+    /golden render dimensions must match the social-card dimensions/
+  );
+
+  const staleOpacityReceipt = structuredClone(homeSocialCardRenderContract);
+  staleOpacityReceipt.accessibility.measuredIdentityFieldOpacity = 0.91;
+  assert.throws(
+    () => validateHomeSocialCardRenderContract(staleOpacityReceipt),
+    /measured identity-field opacity must match the selected opacity/
+  );
+
+  const staleHash = structuredClone(homeSocialCardRenderContract);
+  staleHash.goldenRender.sha256 = "not-a-sha256";
+  assert.throws(
+    () => validateHomeSocialCardRenderContract(staleHash),
+    /golden render must carry a SHA-256 digest/
+  );
 });
 
 test("the social card exposes only the role and name as visible copy", () => {

@@ -45,15 +45,7 @@ export async function GET() {
           height={630}
           // @ts-expect-error Satori accepts ArrayBuffer sources for local images.
           src={photoSource}
-          style={{
-            height: "100%",
-            left: 0,
-            objectFit: "cover",
-            objectPosition: "center 46%",
-            position: "absolute",
-            top: 0,
-            width: "100%"
-          }}
+          style={layout.photo}
           width={1200}
         />
         <div
@@ -63,32 +55,24 @@ export async function GET() {
         <div
           style={layout.copy}
         >
-          <div
-            style={{
-              display: "flex",
-              fontSize: 24,
-              fontWeight: 700,
-              lineHeight: 1.18,
-              marginBottom: 17,
-              maxWidth: 560,
-              textTransform: "uppercase"
-            }}
-          >
-            {homeSocialCard.visibleCopy.role}
-          </div>
-          <div
-            style={{
-              display: "flex",
-              fontFamily: homeSocialCard.identityFont.family,
-              fontSize: 88,
-              fontWeight: homeSocialCard.identityFont.weight,
-              letterSpacing: "0em",
-              lineHeight: 0.96,
-              whiteSpace: "nowrap"
-            }}
-          >
-            {homeSocialCard.visibleCopy.name}
-          </div>
+          {layout.visibleCopyOrder.map((copyKey) =>
+            copyKey === "role" ? (
+              <div key={copyKey} style={layout.role}>
+                {homeSocialCard.visibleCopy.role}
+              </div>
+            ) : (
+              <div
+                key={copyKey}
+                style={{
+                  ...layout.name,
+                  fontFamily: homeSocialCard.identityFont.family,
+                  fontWeight: homeSocialCard.identityFont.weight
+                }}
+              >
+                {homeSocialCard.visibleCopy.name}
+              </div>
+            )
+          )}
         </div>
       </div>
     ),
