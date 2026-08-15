@@ -93,17 +93,19 @@ export function evaluateHjeClientChronology(candidate) {
     check(/2012/.test(text), `${label} must distinguish the LLC's 2012 legal formation`);
   }
 
-  check(/claimId="CLM-HJE-THICK-ARTS-FIRST-CLIENT-2009-2015"/.test(candidate.caseStudy), "case study must project the canonical first-client chronology claim");
-  check(/claimId="CLM-THICK-ARTS-LLC-FORMATION-2012-07-06"/.test(candidate.caseStudy), "case study must project the canonical LLC formation claim");
-  check(/"id": "CLM-HJE-THICK-ARTS-FIRST-CLIENT-2009-2015"/.test(candidate.publicRegistry), "public registry must include the first-client chronology claim used by the case study");
-  check(/"id": "CLM-THICK-ARTS-LLC-FORMATION-2012-07-06"/.test(candidate.publicRegistry), "public registry must include the formation claim used by the case study");
+  check(!/CLM-HJE-THICK-ARTS-FIRST-CLIENT-2009-2015|CLM-THICK-ARTS-LLC-FORMATION-2012-07-06/.test(candidate.caseStudy), "case study must not spend its narrative opening on chronology or LLC formation");
+  check(!/\b(?:2009|2012|2015)\b|first client|initial DOS filing/i.test(candidate.caseStudy), "case study narrative must keep chronology out of the composed hiring argument");
+  check(/long-running implementation problem/.test(candidate.caseStudy) && /one maintainable system/.test(candidate.caseStudy) && /2x revenue growth/.test(candidate.caseStudy), "case study must foreground implementation, maintainability, and business value");
+  check(!/"id": "CLM-HJE-THICK-ARTS-FIRST-CLIENT-2009-2015"/.test(candidate.publicRegistry), "public registry must not project the unselected first-client chronology claim");
+  check(!/"id": "CLM-THICK-ARTS-LLC-FORMATION-2012-07-06"/.test(candidate.publicRegistry), "public registry must not project the unselected formation claim");
   const hjePage = candidate.knowledgeBank.pages.find((item) => item.id === "harry-j-epstein" && item.surface === "/work/harry-j-epstein");
-  check(Boolean(hjePage), "canonical page plan for the HJE case study is missing");
-  check(hjePage?.occurrences.some((item) => item.claimId === "CLM-HJE-THICK-ARTS-FIRST-CLIENT-2009-2015"), "HJE page plan must bind the first-client chronology claim");
-  check(hjePage?.occurrences.some((item) => item.claimId === "CLM-THICK-ARTS-LLC-FORMATION-2012-07-06"), "HJE page plan must bind the formation claim");
+  check(!hjePage, "HJE chronology must not have a public page plan when it is not selected for the case-study composition");
 
   check(/title: "Harry J\. Epstein Company"[\s\S]{0,500}?years: "2009-2015"/.test(candidate.work), "HJE work-card years must be 2009-2015");
   check(!/title: "Harry J\. Epstein Company"[\s\S]{0,500}?years: "(?:2012|2009)-(?:Present|2026)"/.test(candidate.work), "HJE work-card must not imply a current client engagement");
+  const hjeWorkCard = candidate.work.match(/title: "Harry J\. Epstein Company"[\s\S]{0,900}?featured: true/)?.[0] ?? "";
+  check(!/summary:[\s\S]{0,240}?(?:2009|2012|2015|first client)/i.test(hjeWorkCard), "HJE work-card summary must leave chronology to the years attribute");
+  check(/summary:[\s\S]{0,240}?modernize without losing its trusted voice/i.test(hjeWorkCard), "HJE work-card summary must foreground modernization and preserved trust");
   check(/period: 2009-2015[\s\S]{0,180}?focus: small-business modernization/.test(candidate.employmentCoverage), "employment coverage must use the bounded 2009-2015 HJE period");
 
   check(candidate.resumes.length === 5, "exactly five maintained opportunity resumes are expected in the dated set");
@@ -119,7 +121,7 @@ export function evaluateHjeClientChronology(candidate) {
     failures,
     metrics: {
       canonicalClaims: [relationshipClaim, formationClaim].filter(Boolean).length,
-      boundedChronologySurfaces: [candidate.correction, candidate.project, candidate.timeline].filter((text) => /first client/i.test(text) && /2009(?:-|–)2015/.test(text) && /2012/.test(text)).length + Number(/CLM-HJE-THICK-ARTS-FIRST-CLIENT-2009-2015/.test(candidate.caseStudy) && /CLM-THICK-ARTS-LLC-FORMATION-2012-07-06/.test(candidate.caseStudy)),
+      boundedChronologySurfaces: [candidate.correction, candidate.project, candidate.timeline].filter((text) => /first client/i.test(text) && /2009(?:-|–)2015/.test(text) && /2012/.test(text)).length,
       maintainedResumes: candidate.resumes.length
     }
   };

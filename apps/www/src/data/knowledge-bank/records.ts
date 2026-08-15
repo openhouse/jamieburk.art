@@ -522,7 +522,7 @@ const knowledgeBankInput = {
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" },
     { id: "COR-NYCAC-CABARET-HEARING-DATE-2026", claimId: "CLM-NYCAC-CABARET-TESTIMONY-2017", previousText: "June 19, 2017", replacementText: "September 14, 2017", reason: "The official transcript title page identifies the Committee on Consumer Affairs hearing date as September 14, 2017.", decidedAt: "2026-07-14", affectedSurfaces: ["/work/fair-rent-nyc", "knowledge-bank", "public-citation-registry"], status: "active" },
-    { id: "COR-HJE-THICK-ARTS-CHRONOLOGY-2026", claimId: "CLM-HJE-THICK-ARTS-FIRST-CLIENT-2009-2015", previousText: "Harry J. Epstein Company client chronology beginning in 2012", replacementText: "Harry J. Epstein Company was a client from 2009 through 2015 and became Thick Arts LLC's first client when Jamie formalized the practice in 2012.", reason: "Jamie corrected the client period and first-client relationship; the New York Department of State independently establishes July 6, 2012 as the LLC's initial filing date.", decidedAt: "2026-08-14", affectedSurfaces: ["/work", "/work/harry-j-epstein", "knowledge-bank", "resume", "public-citation-registry"], status: "active" }
+    { id: "COR-HJE-THICK-ARTS-CHRONOLOGY-2026", claimId: "CLM-HJE-THICK-ARTS-FIRST-CLIENT-2009-2015", previousText: "Harry J. Epstein Company client chronology beginning in 2012", replacementText: "Harry J. Epstein Company was a client from 2009 through 2015 and became Thick Arts LLC's first client when Jamie formalized the practice in 2012.", reason: "Jamie corrected the client period and first-client relationship; the New York Department of State independently establishes July 6, 2012 as the LLC's initial filing date.", decidedAt: "2026-08-14", affectedSurfaces: ["/work", "knowledge-bank", "resume"], status: "active" }
   ],
   pages: [{
     id: "about",
@@ -536,25 +536,6 @@ const knowledgeBankInput = {
         claimId: "CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY",
         projection: "archive-note",
         sourceIds: ["SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28"]
-      }
-    ]
-  }, {
-    id: "harry-j-epstein",
-    surface: "/work/harry-j-epstein",
-    sourceOrder: [
-      "SRC-NYS-DOS-THICK-ARTS-LLC-FORMATION-2012-07-06"
-    ],
-    occurrences: [
-      {
-        id: "first-client-chronology",
-        claimId: "CLM-HJE-THICK-ARTS-FIRST-CLIENT-2009-2015",
-        projection: "case-study"
-      },
-      {
-        id: "llc-formation",
-        claimId: "CLM-THICK-ARTS-LLC-FORMATION-2012-07-06",
-        projection: "case-study",
-        sourceIds: ["SRC-NYS-DOS-THICK-ARTS-LLC-FORMATION-2012-07-06"]
       }
     ]
   }, {

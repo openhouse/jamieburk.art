@@ -103,7 +103,7 @@ const workItemsInput = [
     series: "Operating Structure",
     subtitle: "E-commerce and operations modernization",
     summary:
-      "Led a 2009-2015 web, e-commerce, analytics, marketing, content, and operations engagement that became Thick Arts LLC's first client relationship when the practice was formalized in 2012.",
+      "Led web, e-commerce, analytics, content, marketing, and operational improvements that helped an 80+ year-old industrial business modernize without losing its trusted voice.",
     role: "Technical Project Manager & Web Systems Lead",
     years: "2009-2015",
     status: "Full case study",

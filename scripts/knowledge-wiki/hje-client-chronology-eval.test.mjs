@@ -38,6 +38,6 @@ expectFailure("changing the official formation date fails", (candidate) => {
   candidate.contract.authoritativeCorrection.llcFormationDate = "2009-01-01";
 }, /formation-date contract must remain 2012-07-06/);
 
-expectFailure("removing the HJE page plan fails", (candidate) => {
-  candidate.knowledgeBank.pages = candidate.knowledgeBank.pages.filter((item) => item.id !== "harry-j-epstein");
-}, /canonical page plan for the HJE case study is missing/);
+expectFailure("reintroducing chronology into the HJE case study fails", (candidate) => {
+  candidate.caseStudy = `Jamie's work began in 2009; he formed Thick Arts LLC in 2012 with HJE as its first client and continued through 2015.\n${candidate.caseStudy}`;
+}, /must not spend its narrative opening on chronology|must keep chronology out/);
