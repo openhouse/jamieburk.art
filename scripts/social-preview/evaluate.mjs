@@ -211,6 +211,12 @@ export function evaluateSocialPreview({
     fileOverrides
   });
   const evidenceBuffer = readBuffer(activeConfig.visualReview.evidencePath, root, fileOverrides);
+  const stagingAttestationBuffer = readBuffer(
+    activeConfig.stagingReview.attestationPath,
+    root,
+    fileOverrides
+  );
+  const stagingAttestation = JSON.parse(stagingAttestationBuffer.toString("utf8"));
 
   const sharedIdentity =
     social.includes("title: site.name") &&
@@ -342,10 +348,11 @@ export function evaluateSocialPreview({
     eastRiverBlock.includes('production: "open"') &&
     eastRiverBlock.includes('indexing: "open"');
 
+  const publicSafetyCorpus = `${social}\n${imageRoute}\n${projectionSource}\n${stagingAttestationBuffer.toString("utf8")}`;
   const publicSafety =
-    !/\/(Users|Volumes|private)\//.test(`${social}\n${imageRoute}\n${projectionSource}`) &&
+    !/\/(Users|Volumes|private)\//.test(publicSafetyCorpus) &&
     !/[A-F0-9]{8}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{12}/i.test(
-      `${social}\n${imageRoute}\n${projectionSource}`
+      publicSafetyCorpus
     );
 
   const visualReviewCurrent =
@@ -354,6 +361,36 @@ export function evaluateSocialPreview({
     evidenceBuffer.length > 0 &&
     activeConfig.visualReview.evidenceSha256 === sha256(evidenceBuffer) &&
     activeConfig.visualReview.inspectedSizes.join(",") === "1200x630,600x315,300x158";
+
+  const stagingHumanReviewCurrent =
+    activeConfig.stagingReview.status === "pass" &&
+    activeConfig.stagingReview.releaseScope === "staging-only" &&
+    activeConfig.stagingReview.candidateSha256 === candidateSha256 &&
+    activeConfig.stagingReview.attestationSha256 === sha256(stagingAttestationBuffer) &&
+    stagingAttestation.suite === activeConfig.suite &&
+    stagingAttestation.environment === "staging-a" &&
+    stagingAttestation.sourceCommitAtReview === activeConfig.stagingReview.sourceCommitAtReview &&
+    stagingAttestation.candidateSha256 === candidateSha256 &&
+    stagingAttestation.renderSha256 === activeConfig.stagingReview.renderSha256 &&
+    stagingAttestation.render?.width === expected.width &&
+    stagingAttestation.render?.height === expected.height &&
+    stagingAttestation.render?.contentType === expected.contentType &&
+    stagingAttestation.render?.matchesLocallyInspectedPixels === true &&
+    stagingAttestation.metadata?.absoluteImageUrlHost === "staging-a.jamieburk.art" &&
+    stagingAttestation.metadata?.twitterCard === expected.twitterCard &&
+    stagingAttestation.metadata?.descriptiveAltPresent === true &&
+    stagingAttestation.runtime?.appEnv === "staging" &&
+    stagingAttestation.runtime?.isProduction === false &&
+    stagingAttestation.runtime?.robotsIndexable === false &&
+    stagingAttestation.runtime?.homepageNoindexHeader === true &&
+    stagingAttestation.runtime?.robotsDisallowsRoot === true &&
+    stagingAttestation.humanFeedback?.reviewerAuthority === "Jamie Burkart" &&
+    stagingAttestation.humanFeedback?.response === "positive" &&
+    stagingAttestation.humanFeedback?.actualPersonParticipated === true &&
+    stagingAttestation.releaseBoundary?.stagingAuthorized === true &&
+    stagingAttestation.releaseBoundary?.productionAuthorized === false &&
+    stagingAttestation.releaseBoundary?.indexingAuthorized === false &&
+    stagingAttestation.releaseBoundary?.rightsExpanded === false;
 
   const checks = [
     {
@@ -404,12 +441,17 @@ export function evaluateSocialPreview({
     {
       id: "public-safety",
       pass: publicSafety,
-      detail: "The card and occurrence expose no protected local path or archive UUID."
+      detail: "The card, occurrence, and staging attestation expose no protected local path or archive UUID."
     },
     {
       id: "exact-candidate-visual-review",
       pass: visualReviewCurrent,
       detail: `Visual review ${activeConfig.visualReview.status}; candidate ${candidateSha256}.`
+    },
+    {
+      id: "staging-human-feedback-and-release-attestation",
+      pass: stagingHumanReviewCurrent,
+      detail: "Jamie's positive visual feedback and the exact staging-A render are attested for staging only; production, indexing, and rights expansion remain false."
     }
   ];
 

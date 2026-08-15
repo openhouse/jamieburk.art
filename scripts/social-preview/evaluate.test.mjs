@@ -91,3 +91,48 @@ test("a changed candidate invalidates the prior visual review", () => {
   });
   assert.equal(result.checks.find((check) => check.id === "exact-candidate-visual-review").pass, false);
 });
+
+test("positive staging feedback cannot be promoted to production approval", () => {
+  const relativePath = "evals/social-preview/runs/2026-08-15-staging-a.json";
+  const result = evaluateSocialPreview({
+    fileOverrides: {
+      [relativePath]: text(relativePath).replace(
+        '"productionAuthorized": false',
+        '"productionAuthorized": true'
+      )
+    }
+  });
+  assert.equal(
+    result.checks.find((check) => check.id === "staging-human-feedback-and-release-attestation").pass,
+    false
+  );
+});
+
+test("the staging attestation cannot drift from the reviewed pixel digest", () => {
+  const relativePath = "evals/social-preview/runs/2026-08-15-staging-a.json";
+  const result = evaluateSocialPreview({
+    fileOverrides: {
+      [relativePath]: text(relativePath).replace(
+        "9f97d037e1ff82d6b75a902f83e2cccbe1545efb578b54543dd16d6d8050be0f",
+        "0".repeat(64)
+      )
+    }
+  });
+  assert.equal(
+    result.checks.find((check) => check.id === "staging-human-feedback-and-release-attestation").pass,
+    false
+  );
+});
+
+test("the staging attestation cannot publish a protected local locator", () => {
+  const relativePath = "evals/social-preview/runs/2026-08-15-staging-a.json";
+  const result = evaluateSocialPreview({
+    fileOverrides: {
+      [relativePath]: text(relativePath).replace(
+        "https://staging-a.jamieburk.art/opengraph-image",
+        "/Users/example/private/social-preview.png"
+      )
+    }
+  });
+  assert.equal(result.checks.find((check) => check.id === "public-safety").pass, false);
+});

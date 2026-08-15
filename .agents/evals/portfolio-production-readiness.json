@@ -471,7 +471,8 @@
         "Open Graph and Twitter metadata",
         "generated 1200 × 630 image",
         "governed photo manifest and occurrence",
-        "exact-candidate visual review"
+        "exact-candidate visual review",
+        "staging-only human-feedback and deployment attestation"
       ],
       "procedure": [
         "Verify that the card consumes the same name, role, tagline, and image records as the visible portfolio.",
@@ -479,6 +480,7 @@
         "Verify that the site uses the Palatino-first display stack and the generated card uses the exact checksum-bound Palatino name raster without distributing a proprietary font file.",
         "Check derivative checksum, metadata stripping, governed photographer attribution, occurrence-level visible-credit choice, permission source, placement, rollback, and release states.",
         "Render the exact candidate at 1200 × 630, 600 × 315, and 300 × 158; inspect one batched QA sheet for cropping, hierarchy, text wrapping, safe areas, and legibility.",
+        "Bind positive Jamie feedback and observed staging state to the exact visual candidate and pixel digest without converting staging authorization into production, indexing, rights expansion, or continuous-liveness claims.",
         "Fail when the relevant candidate fingerprint or reviewed image digest changes without a fresh visual review."
       ],
       "pass_criteria": [
@@ -487,6 +489,7 @@
         "Jamie's name uses Palatino on the site and a reviewed Palatino raster in the generated card, while the proprietary font program remains outside public Git and runtime delivery.",
         "Open Graph and Twitter metadata use the same 1200 × 630 generated image, descriptive alt text, and route-aware absolute URL.",
         "The exact photo occurrence preserves Elana Gordon's governed authorship and optional-visible-credit boundary, the checksum-bound metadata-stripped derivative, permission source, collective and interpretive boundaries, and rollback path.",
+        "Any recorded Jamie feedback states its exact scope, actual participation, candidate and render binding, and separate staging, production, indexing, and rights-expansion decisions.",
         "Public Git and staging may pass while production publication and indexing remain Jamie's open human decisions.",
         "Any material identity, metadata, crop, copy, photo, credit, rights, or rendered-pixel change invalidates the prior review."
       ],
@@ -494,6 +497,7 @@
         "deterministic social-preview report",
         "mutation tests",
         "exact-candidate QA sheet at three sizes",
+        "checksum-bound staging-only human-feedback and deployment attestation",
         "rendered metadata and image response",
         "governed photo occurrence"
       ],

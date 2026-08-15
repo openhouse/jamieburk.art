@@ -1,8 +1,8 @@
 {
   "suite": "global-social-preview",
-  "version": 2,
+  "version": 3,
   "surface": "/opengraph-image",
-  "principle": "The social preview is a traveling portfolio threshold. It must stay synchronized with the site's identity typography, governed photography, metadata, occurrence-level attribution choice, and release boundaries.",
+  "principle": "The social preview is a traveling portfolio threshold. It must stay synchronized with the site's identity typography, governed photography, metadata, occurrence-level attribution choice, exact visual review, human feedback scope, and release boundaries.",
   "expected": {
     "width": 1200,
     "height": 630,
@@ -53,5 +53,15 @@
     "evidenceSha256": "9bf6f10e7e3d1ce7a80e74a4dacd08e5a4e0e6b0bcdcadf74fbd1e4fc18af272",
     "inspectedSizes": ["1200x630", "600x315", "300x158"],
     "reviewBoundary": "Actual rendered pixels at all three listed sizes, including the full-bleed exact photograph and Palatino name artwork, inspected through fictionalized editorial lenses; not a quotation, endorsement, rights expansion, production approval, font-license expansion, or platform-delivery guarantee."
+  },
+  "stagingReview": {
+    "status": "pass",
+    "reviewedAt": "2026-08-15",
+    "attestationPath": "evals/social-preview/runs/2026-08-15-staging-a.json",
+    "attestationSha256": "5655054783d63664f36354441707d5931d01685975943b00e238cff029294270",
+    "sourceCommitAtReview": "8119c50513d0910a1f8c0471028665e774a5edf3",
+    "candidateSha256": "04929969e7af6795c8e00fa8cb60935bfe7ef5b16c70d9f6d16c54dd92ac1b88",
+    "renderSha256": "9f97d037e1ff82d6b75a902f83e2cccbe1545efb578b54543dd16d6d8050be0f",
+    "releaseScope": "staging-only"
   }
 }

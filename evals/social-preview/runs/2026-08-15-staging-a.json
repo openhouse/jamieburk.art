@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "suite": "global-social-preview",
+  "runId": "2026-08-15-staging-a-human-feedback-and-release",
+  "observedAt": "2026-08-15T08:46:56Z",
+  "environment": "staging-a",
+  "surfaceUrl": "https://staging-a.jamieburk.art/opengraph-image",
+  "sourceCommitAtReview": "8119c50513d0910a1f8c0471028665e774a5edf3",
+  "candidateSha256": "04929969e7af6795c8e00fa8cb60935bfe7ef5b16c70d9f6d16c54dd92ac1b88",
+  "renderSha256": "9f97d037e1ff82d6b75a902f83e2cccbe1545efb578b54543dd16d6d8050be0f",
+  "render": {
+    "width": 1200,
+    "height": 630,
+    "contentType": "image/png",
+    "matchesLocallyInspectedPixels": true
+  },
+  "metadata": {
+    "absoluteImageUrlHost": "staging-a.jamieburk.art",
+    "twitterCard": "summary_large_image",
+    "descriptiveAltPresent": true
+  },
+  "runtime": {
+    "appEnv": "staging",
+    "isProduction": false,
+    "robotsIndexable": false,
+    "homepageNoindexHeader": true,
+    "robotsDisallowsRoot": true
+  },
+  "humanFeedback": {
+    "reviewerAuthority": "Jamie Burkart",
+    "response": "positive",
+    "publicSafeSummary": "Jamie expressed positive visual feedback and instructed continued evaluation, pull-request update, and deployment to staging A.",
+    "scope": "Exact social-preview composition and staging workflow",
+    "actualPersonParticipated": true
+  },
+  "releaseBoundary": {
+    "stagingAuthorized": true,
+    "productionAuthorized": false,
+    "indexingAuthorized": false,
+    "rightsExpanded": false
+  },
+  "evidenceBoundary": "This is a dated staging-only attestation of Jamie's task-level feedback and observed deployment state. It is not production approval, indexing approval, broader image permission, an employer endorsement, or a continuous liveness monitor."
+}
