@@ -30,4 +30,3 @@ This source is a screening caution, not individualized tax advice.
 
 Recheck the [official source](https://europa.eu/youreurope/citizens/work/taxes/income-taxes-abroad/index_en.htm)
 and obtain qualified advice for a real arrangement.
-

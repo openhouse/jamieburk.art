@@ -30,4 +30,3 @@ profession-specific requirements.
 
 Recheck the [official source](https://europa.eu/youreurope/citizens/work/work-abroad/work-permits/index_en.htm)
 before outward use.
-

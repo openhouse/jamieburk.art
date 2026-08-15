@@ -30,4 +30,3 @@ determination for Jamie or an employer.
 
 Recheck the [official source](https://europa.eu/youreurope/citizens/work/social-security-and-benefits/country-coverage/index_en.htm)
 and obtain qualified advice for a real arrangement.
-

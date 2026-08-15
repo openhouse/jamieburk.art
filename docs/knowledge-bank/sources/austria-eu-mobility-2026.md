@@ -35,4 +35,3 @@ length of stay compliant without further review.
 Recheck the [official mobility source](https://www.migration.gv.at/en/types-of-immigration/mobility-within-the-eu/)
 and [official residence guidance](https://eausweise.oesterreich.gv.at/en/themen/menschen_aus_anderen_staaten/aufenthalt/4/Seite.120210)
 before acting.
-

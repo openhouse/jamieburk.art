@@ -27,4 +27,3 @@ citizenship, passport validity, tax status, or any employer's location policy.
 The conversation included a precise residential address. That address is not
 needed for opportunity discovery and is deliberately excluded from this
 public-safe record.
-
