@@ -134,6 +134,7 @@ function candidateFiles(repoRoot) {
     "apps/www/src/components/FieldSystemEvidence.tsx",
     "apps/www/src/components/Hero.tsx",
     "apps/www/src/data/photography.ts",
+    "apps/www/src/data/site.ts",
     "apps/www/public/artifacts/fair-rent-nyc/let-nyc-dance-site.png",
     "apps/www/public/images/field-notes/coalition-facilitation-shoestring.webp",
     "apps/www/public/images/field-notes/jamie-east-river.webp",
@@ -527,9 +528,11 @@ export function evaluatePhotoKnowledgeModel(model) {
   };
 
   const scripts = packageManifest.scripts ?? {};
-  const firstViewportSource = `${model.sourceTexts["apps/www/src/components/Hero.tsx"] ?? ""}\n${
+  const firstViewportSource = [
+    model.sourceTexts["apps/www/src/components/Hero.tsx"] ?? "",
+    model.sourceTexts["apps/www/src/data/site.ts"] ?? "",
     model.sourceTexts["apps/www/src/data/photography.ts"] ?? ""
-  }`;
+  ].join("\n");
   const criteria = {
     documentary_integrity: allTrue(checks, [
       "records_materialized",
