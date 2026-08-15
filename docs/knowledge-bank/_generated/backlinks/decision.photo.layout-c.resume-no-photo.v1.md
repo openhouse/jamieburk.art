@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Keep the Layout C resume route photograph-free
 
-**Source commit:** `6ae02b38819fd16d4b8b6aecb6af8a62790e1e36`
-**Generation time:** 2026-08-15T17:42:24-04:00
-**Source fingerprint:** `cbba07757b7521b01020a1676f54f5104a6e562f2a79a7c18ef809ccf65c582a`
+**Source commit:** `eeaf0708e69d79a184e4f71b6777c34b5f2f192f`
+**Generation time:** 2026-08-15T17:44:19-04:00
+**Source fingerprint:** `86d0ce57a8c7e097312ee7723cbb11aa661dc393c3c7a3bf74a1dd2eaf8a9dbd`
 
 - [August 2026 launch-candidate photographic edition](../../projections/photography/edition-launch-2026-08.md) - `related_to` (frontmatter)
 - [Layout C photographic portfolio edition](../../projections/photography/edition-layout-c-2026-07.md) - `related_to` (frontmatter)
