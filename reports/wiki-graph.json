@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-15T07:01:39-04:00",
-  "sourceCommit": "1a05b57fe34d925921119cc09b0ea09c342d9ae2",
-  "sourceFingerprint": "77d33fa0fda7270230abd3036ca7ab4f770d0cc6bbb773f8aad7b80104d7b915",
+  "generatedAt": "2026-08-15T16:48:16-04:00",
+  "sourceCommit": "43635c80c54cfe9ca474736847cab8b01bd6d14d",
+  "sourceFingerprint": "220b94e6ef3bd0a5f6af9c922801f491b3c2f97538ead62c7d0e546712bcf48a",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -5569,6 +5569,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-13",
       "reviewBy": "2026-10-13"
+    },
+    {
+      "id": "source.social.nycartc.cultural-space-story.2026-08-15",
+      "path": "docs/knowledge-bank/sources/commercial-rent-public-support/nycartc-cultural-space-story-2026-08-15.md",
+      "title": "NYC Artist Coalition Cultural Space Rent Stabilization Story",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Checksum-bound public source record for the coalition Story using Jamie Burkart's edited Wonderville remarks to connect cultural-space continuity with city and state commercial-rent action.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-09-15"
     },
     {
       "id": "source.statement.commercial-rent.jimmys-corner-rally.2026-04-10",
@@ -15905,6 +15918,14 @@
       "context": null
     },
     {
+      "from": "project.fair-rent-nyc",
+      "type": "uses_source",
+      "to": "source.social.nycartc.cultural-space-story.2026-08-15",
+      "source": "frontmatter",
+      "href": "../sources/commercial-rent-public-support/nycartc-cultural-space-story-2026-08-15.md",
+      "context": null
+    },
+    {
       "from": "project.harry-j-epstein",
       "type": "related_to",
       "to": "person.jamie-burkart",
@@ -17945,6 +17966,22 @@
       "context": null
     },
     {
+      "from": "source.social.nycartc.cultural-space-story.2026-08-15",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.commercial-rent-public-support",
+      "source": "frontmatter",
+      "href": "../../indexes/commercial-rent-public-support.md",
+      "context": null
+    },
+    {
+      "from": "source.social.nycartc.cultural-space-story.2026-08-15",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
       "from": "source.statement.commercial-rent.jimmys-corner-rally.2026-04-10",
       "type": "related_to",
       "to": "index.knowledge-wiki.commercial-rent-public-support",
@@ -19195,10 +19232,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/commercial-rent-public-support.md",
       "from": "index.knowledge-wiki.commercial-rent-public-support",
+      "toPath": "docs/knowledge-bank/sources/commercial-rent-public-support/nycartc-cultural-space-story-2026-08-15.md",
+      "to": "source.social.nycartc.cultural-space-story.2026-08-15",
+      "fragment": null,
+      "line": 65,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/commercial-rent-public-support.md",
+      "from": "index.knowledge-wiki.commercial-rent-public-support",
       "toPath": "docs/knowledge-bank/data/commercial-rent-public-support-corpus-2026-07-28.json",
       "to": null,
       "fragment": null,
-      "line": 64,
+      "line": 78,
       "kind": "link"
     },
     {
@@ -21638,6 +21684,15 @@
       "to": "research.nycac-crs-30-day-close-reading.2026-08-13",
       "fragment": null,
       "line": 26,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/fair-rent-nyc.md",
+      "from": "project.fair-rent-nyc",
+      "toPath": "docs/knowledge-bank/sources/commercial-rent-public-support/nycartc-cultural-space-story-2026-08-15.md",
+      "to": "source.social.nycartc.cultural-space-story.2026-08-15",
+      "fragment": null,
+      "line": 30,
       "kind": "link"
     },
     {

@@ -1,8 +1,8 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Professional record governed photo field
 
-**Source commit:** `1a05b57fe34d925921119cc09b0ea09c342d9ae2`
-**Generation time:** 2026-08-15T07:01:39-04:00
-**Source fingerprint:** `77d33fa0fda7270230abd3036ca7ab4f770d0cc6bbb773f8aad7b80104d7b915`
+**Source commit:** `43635c80c54cfe9ca474736847cab8b01bd6d14d`
+**Generation time:** 2026-08-15T16:48:16-04:00
+**Source fingerprint:** `220b94e6ef3bd0a5f6af9c922801f491b3c2f97538ead62c7d0e546712bcf48a`
 
 - [MIT Interrogative Design Symposium held photo set](../../assets/photographs/mit-interrogative-design-symposium-2024-held.md) - `uses_source` (frontmatter)

@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Fair Rent NYC
 
-**Source commit:** `1a05b57fe34d925921119cc09b0ea09c342d9ae2`
-**Generation time:** 2026-08-15T07:01:39-04:00
-**Source fingerprint:** `77d33fa0fda7270230abd3036ca7ab4f770d0cc6bbb773f8aad7b80104d7b915`
+**Source commit:** `43635c80c54cfe9ca474736847cab8b01bd6d14d`
+**Generation time:** 2026-08-15T16:48:16-04:00
+**Source fingerprint:** `220b94e6ef3bd0a5f6af9c922801f491b3c2f97538ead62c7d0e546712bcf48a`
 
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `related_to` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [hur5tftl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj.md) - `related_to` (frontmatter)
@@ -48,6 +48,7 @@
 - [Active New York State commercial rent stabilization bills](../../sources/commercial-rent-public-support/active-state-bills-2025-2026.md) - `related_to` (frontmatter)
 - [Late-July 2026 current-workstream review](../../sources/working/current-workstream-2026-07-27.md) - `related_to` (frontmatter)
 - [Empty Storefronts, High Rents](../../sources/commercial-rent-public-support/empty-storefronts-high-rents-report-2026.md) - `related_to` (frontmatter)
+- [NYC Artist Coalition Cultural Space Rent Stabilization Story](../../sources/commercial-rent-public-support/nycartc-cultural-space-story-2026-08-15.md) - `related_to` (frontmatter)
 - [Jimmy's Corner rally: Small Business Rent Stabilization statements](../../testimony/commercial-rent-public-support/2026-04-10-jimmys-corner-rally-statements.md) - `related_to` (frontmatter)
 - [State sponsors and advocates introduce the Small Business Survival Act](../../testimony/commercial-rent-public-support/2026-02-17-state-introduction-statements.md) - `related_to` (frontmatter)
 - [Friends and Lovers Commercial Rent Stabilization event: speaker index](../../testimony/commercial-rent-public-support/2026-02-17-friends-and-lovers-supportive-remarks.md) - `related_to` (frontmatter)
