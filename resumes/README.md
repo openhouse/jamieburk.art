@@ -21,6 +21,16 @@ the job source and supporting knowledge-bank records. A role-alignment eval is
 not a hiring prediction, civil-service eligibility decision, human proofread,
 application submission, or employer endorsement.
 
+Two presentation rules apply to every version and every exported PDF:
+
+- A link inside an experience-section heading remains clickable but must match
+  the surrounding heading's font, size, weight, color, and underline state. It
+  must not become a visually blue or underlined interruption inside the title.
+- WOWList is described publicly as organizer-led work active in 35+ city
+  ecosystems. Database user and event-post counts remain governed historical
+  evidence and do not appear on public surfaces, because organizer participation
+  does not represent the platform's wider readership or civic reach.
+
 The named-reader suite currently maintains versions for:
 
 - ACLU Senior Project Manager, National Campaigns;
@@ -52,4 +62,6 @@ coverage from `evals/knowledge-wiki/named-hiring-readers.json`. The public-resum
 active gate is declared in `evals/resumes/hiring-reader-portfolio.json` and fails
 closed when an opportunity is not live, its status review is stale, a reader
 profile is missing, the PDF is not bound to the exact Markdown, or the shared
-resume loses a required cross-opportunity signal.
+resume loses a required cross-opportunity signal. The public PDF gate also fails
+when an experience-heading link drifts from its surrounding style or when the
+WOWList ecosystem-scale projection regresses to user or event-post counts.

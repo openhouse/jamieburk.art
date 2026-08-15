@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { globSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
@@ -74,6 +74,36 @@ const expectedOrganizerIdentities = [
 const forbiddenPublicKey = /^(participants?|participantRows|directIdentifiers|names|emails|phoneNumbers|contacts|rawRows|rawRecords|rawBodies|commentIdentities|authenticatedUrls)$/i;
 const privateStringPattern = /(?:\/Volumes\/|\/Users\/|docs\.google\.com\/spreadsheets|[?&](?:__cft__|access_token|session|auth)=|\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b|\b\d{3}[-.) ]\d{3}[-. ]\d{4}\b)/i;
 const inflatedProjectionPattern = /(?:single-handedly founded|sole founder|Call Script alone created|445 people attended|10,000 unique people|2,780 unique attendees|official chapters|current active users|proved policy impact|caused the coalition|authored every Call Script)/i;
+const wowListPublicCountPattern = /\b\d[\d,]*\+?\s+(?:current\s+active\s+)?(?:users?|posts?\s*\/\s*events?|event posts?)\b/i;
+const preferredWowListScaleLanguage = "active in 35+ city ecosystems";
+
+function hasWowListPublicCount(text) {
+  const normalized = text.replace(/\s+/g, " ");
+  const wowListMentions = [...normalized.matchAll(/WOW\s*List/gi)];
+  return wowListMentions.some(({ index = 0 }) =>
+    wowListPublicCountPattern.test(normalized.slice(index, index + 1800))
+  );
+}
+
+function hasPreferredWowListScaleLanguage(text) {
+  return text.replace(/\s+/g, " ").includes(preferredWowListScaleLanguage);
+}
+
+function publicWowListProjectionSources() {
+  const resumePaths = globSync("resumes/**/*.md", { cwd: repoRoot });
+  const fixedPaths = [
+    "apps/www/src/data/work.ts",
+    "apps/www/src/data/proofs.ts",
+    "apps/www/src/app/work/technical-operations/page.tsx",
+    "apps/www/src/data/knowledge-bank/public-registry.json",
+    "docs/knowledge-bank/claims.md",
+    "docs/knowledge-bank/proofs.md"
+  ];
+  return [...resumePaths, ...fixedPaths].map((relativePath) => ({
+    relativePath,
+    text: read(relativePath)
+  }));
+}
 
 export function evaluateParticipationContinuity(overrides = {}) {
   const controls = overrides.controls ?? readJson(
@@ -88,6 +118,7 @@ export function evaluateParticipationContinuity(overrides = {}) {
   const moduleSource = overrides.moduleSource ?? read("apps/www/src/data/knowledge-bank/participation-continuity-2026-07.ts");
   const projectReport = overrides.projectReport ?? read("docs/knowledge-bank/projects/wowlist-sunday-dinner-callscript-continuity.md");
   const intakeReceipt = overrides.intakeReceipt ?? read("docs/knowledge-bank/intake/2026-07-15-wowlist-sunday-dinner-callscript.md");
+  const publicWowListSources = overrides.publicWowListSources ?? publicWowListProjectionSources();
   const criteria = [];
 
   function check(id, description, points, pass, evidence) {
@@ -220,7 +251,7 @@ export function evaluateParticipationContinuity(overrides = {}) {
   check(
     "PARTICIPATION-CLAIM-SEMANTICS",
     "Active projections are source-backed, selective, collectively credited, and resistant to causal inflation",
-    8,
+    4,
     selectedClaims.every((claim) => claim?.status === "confirmed-with-boundary" &&
       claim.projections.some((projection) => projection.status === "active" && projection.citationRequired)) &&
       continuityClaim?.internalClaim.includes("one bridge") &&
@@ -230,6 +261,28 @@ export function evaluateParticipationContinuity(overrides = {}) {
       sundayClaim?.antiClaims.includes("2,780 unique attendees") &&
       !inflatedProjectionPattern.test(activeProjectionText),
     "Sole credit, attendance inflation, current-product inflation, and policy causation are rejected."
+  );
+
+  const wowPublicProjectionText = (wowClaim?.projections ?? [])
+    .filter((projection) => projection.status === "active")
+    .map((projection) => projection.text)
+    .join(" ");
+  const publicCountLeaks = publicWowListSources
+    .filter(({ text }) => hasWowListPublicCount(text))
+    .map(({ relativePath }) => relativePath);
+  const missingPreferredScaleLanguage = publicWowListSources
+    .filter(({ text }) => /WOW\s*List/i.test(text))
+    .filter(({ text }) => !hasPreferredWowListScaleLanguage(text))
+    .map(({ relativePath }) => relativePath);
+  check(
+    "PARTICIPATION-WOWLIST-PUBLIC-PROJECTION",
+    "Public WOWList projections lead with activity in 35-plus city ecosystems without publishing user or event-post counts",
+    4,
+    hasPreferredWowListScaleLanguage(wowPublicProjectionText) &&
+      !hasWowListPublicCount(wowPublicProjectionText) &&
+      publicCountLeaks.length === 0 &&
+      missingPreferredScaleLanguage.length === 0,
+    `Public projection scan: ${publicCountLeaks.length} count leaks and ${missingPreferredScaleLanguage.length} surfaces missing the preferred ecosystem-scale language.`
   );
 
   const coverageById = new Map(coverage.map((item) => [item.proofId, item]));

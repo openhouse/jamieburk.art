@@ -2470,7 +2470,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "A July 2017 production snapshot records 1,846 users, 16,142 posts/events, 23,864 lists/tags, 28,837 list follows, 20,927 saved events, and 35 city-region keys with at least 50 posts. These are historical database counts, not current activity.",
+          "text": "A July 22, 2017 production snapshot supports the description active in 35+ city ecosystems. This is a bounded geographic activity signal, not official chapter status, current activity, readership, retention, or causal impact.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -2495,6 +2495,7 @@
       "boundaries": [
         "Use historical language and preserve the exact snapshot date.",
         "Keep credit shared with Richard Caceres, participating organizers, users, and other contributors.",
+        "Do not publish user or event-post counts on public surfaces.",
         "Do not expose raw database rows or describe city keys as official chapters."
       ]
     },

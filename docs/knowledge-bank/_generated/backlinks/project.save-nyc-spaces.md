@@ -3,7 +3,7 @@
 
 **Source commit:** `e6f828949da431ba32a49a67cbcb6072d96b0705`
 **Generation time:** 2026-08-15T18:45:49-04:00
-**Source fingerprint:** `27c15a5bffed283cc132257f159c1b3f784d79a085b3f0e9bcbd9109c523b752`
+**Source fingerprint:** `319644d0b8cd425eb6f5057142724ec1db41ac5bf9287595715fa2dd923aeeb5`
 
 - [Save NYC Spaces: ali rosa salas [kwla4ltf]](../../assets/photographs/project-sites/save-nyc-spaces-ali-rosa-salas-kwla4ltfwy.md) - `related_to` (frontmatter)
 - [Save NYC Spaces: anya sapozhnikova [kvcmtdtn]](../../assets/photographs/project-sites/save-nyc-spaces-anya-sapozhnikova-kvcmtdtnpn.md) - `related_to` (frontmatter)

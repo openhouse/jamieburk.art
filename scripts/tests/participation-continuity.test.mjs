@@ -91,6 +91,14 @@ test("active projections reject sole credit, current-product inflation, and caus
   }
 });
 
+test("public WOWList projections lead with 35-plus city ecosystems and omit user and event-post counts", () => {
+  const result = evaluateParticipationContinuity();
+  assert.equal(
+    result.criteria.find((criterion) => criterion.id === "PARTICIPATION-WOWLIST-PUBLIC-PROJECTION")?.pass,
+    true
+  );
+});
+
 test("source and site governance reject protected URLs and missing claim occurrences", () => {
   const sources = structuredClone(knowledgeBank.sources);
   const database = sources.find((source) => source.id === "SRC-WOWLIST-PRODUCTION-DATABASE-2017-07-22");

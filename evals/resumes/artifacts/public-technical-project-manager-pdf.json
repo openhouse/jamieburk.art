@@ -5,10 +5,10 @@
   "organization": "Public portfolio",
   "jobId": null,
   "sourceMarkdownPath": "resumes/2026-08-15/technical-project-manager-product-operations-implementation/Jamie-Burkart-Resume-Technical-Project-Manager.md",
-  "sourceMarkdownSha256": "cf157dc42fca65ad252d52db0f8bb9f85ce88c3e4c6b93ae5d310391912c9ee4",
+  "sourceMarkdownSha256": "fde24ad745ab3e8de22fa48278dc74446f71ca47cc38283c3221b14390b59fc1",
   "pdfPath": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
-  "pdfSha256": "7e0b0941f12bcb0a3c5b462d91f4a9482f967c1e7cd62dbce5285db2c380a186",
-  "pdfSizeBytes": 95394,
+  "pdfSha256": "72d49958b5e8ef971685c4c836617e5162ea6a444a5d3d45c91d0340e3986192",
+  "pdfSizeBytes": 95310,
   "pageCount": 2,
   "pageSizePoints": [612, 792],
   "documentTitle": "Jamie Burkart ◍ Resume — Technical Project Manager — 2026-08-15",
@@ -64,7 +64,37 @@
     ],
     "prohibitedChronologyPatterns": [
       "THICK ARTS LLC — Founder, Product & Technical Project Manager / Web Systems Lead\nNew York, NY / Remote | 2009–Present"
+    ],
+    "requiredPhrases": [
+      "active in 35+ city ecosystems"
+    ],
+    "prohibitedPhrases": [
+      "1,846 users",
+      "16,142 posts/events"
     ]
+  },
+  "experienceHeadingLinkStyleInspection": {
+    "status": "pass",
+    "inspectedAt": "2026-08-15",
+    "method": "Google Docs connector readback, HTML export, pdftohtml 25.11.0 XML extraction, and rendered-page inspection",
+    "pdfSha256": "72d49958b5e8ef971685c4c836617e5162ea6a444a5d3d45c91d0340e3986192",
+    "requiredLabels": [
+      "NYC Artist Coalition / FairRentNYC",
+      "WOWList.org",
+      "CallNYC.org",
+      "KC Town Hall LLC"
+    ],
+    "inspectedLabels": [
+      "NYC Artist Coalition / FairRentNYC",
+      "WOWList.org",
+      "CallNYC.org",
+      "KC Town Hall LLC"
+    ],
+    "linkedTextColor": "#333334",
+    "surroundingHeadingColor": "#333334",
+    "linkedTextBold": true,
+    "surroundingHeadingBold": true,
+    "linkedTextUnderlined": false
   },
   "hardGates": [
     "source-markdown-bound",
@@ -77,6 +107,7 @@
     "native-hyperlinks",
     "forbidden-hyperlinks-absent",
     "public-positioning-and-chronology",
+    "experience-heading-link-style",
     "complete-visual-inspection"
   ],
   "visualInspection": {
@@ -93,9 +124,9 @@
     }
   },
   "hillClimb": {
-    "baseline": "The former public PDF used the earlier Karla/Arial layout, opened page two with an orphaned Thick Arts bullet, and did not distinguish client work beginning in 2009 from the LLC's 2012 formation.",
-    "candidate": "The public PDF now uses the stronger Palatino/Oswald/Karla hierarchy, opens page two cleanly with WOWList, preserves governed claim boundaries, links selected project names, keeps Harry J. Epstein Company as deliberate plain text, and presents a shared product-operations case for every current active opportunity.",
-    "boundedChange": "Added issue reproduction, acceptance criteria, test cases, release verification, deterministic checks, human review, and explicit failure states to the existing core-skills block. This closes the smallest observed cross-opportunity evidence gaps without changing the verified experience chronology, collective-credit boundaries, or two-page layout."
+    "baseline": "The exact public PDF presented linked project names cleanly, but the link-style requirement was not candidate-bound and WOWList scale was framed with database user and event-post counts that understated organizers' wider readership.",
+    "candidate": "The public PDF now keeps every experience-heading link black, bold, and un-underlined like its surrounding heading, while describing WOWList as organizer-led publishing and discovery active in 35+ city ecosystems.",
+    "boundedChange": "Replaced one WOWList scale bullet, preserved the two-page Palatino/Oswald/Karla layout and native project links, and added exact-candidate gates for ecosystem-scale wording and visually continuous experience-heading links."
   },
-  "boundary": "This gate verifies the exact public PDF, Markdown binding, generic positioning, chronology, structural safety, required native links, explicitly forbidden links, and recorded all-page visual inspection. It is not an employer endorsement, application submission, or guarantee of interview or hire."
+  "boundary": "This gate verifies the exact public PDF, Markdown binding, generic positioning, chronology, structural safety, required native links, visually continuous experience-heading link styling, the public WOWList ecosystem-scale rule, explicitly forbidden links, and recorded all-page visual inspection. It is not an employer endorsement, application submission, or guarantee of interview or hire."
 }

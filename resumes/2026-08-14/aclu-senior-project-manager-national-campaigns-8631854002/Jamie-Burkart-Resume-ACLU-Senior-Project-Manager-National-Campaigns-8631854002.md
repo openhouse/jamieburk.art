@@ -48,7 +48,7 @@ Kansas City, MO | 2015–2024
 New York, NY / Remote | 2015–2020
 
 - Co-founded, co-built, and operated with Richard Caceres a natural-language community-calendar platform, coordinating organizer onboarding, public communication, technical releases, support, and low-cost operations across a distributed maintainer network.
-- Reached a July 2017 production snapshot of 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts; these are activity counts, not retention, policy, or causal impact claims.
+- Supported organizer-led publishing and discovery active in 35+ city ecosystems; treat that footprint as a bounded geographic activity signal, not official chapters, readership, retention, policy, or causal impact.
 
 ### [CallNYC.org](https://callnyc.org/) — Civic-Tech Builder & Product Translator
 

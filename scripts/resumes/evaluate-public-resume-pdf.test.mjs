@@ -128,3 +128,72 @@ test("the public gate rejects chronology drift even when the PDF bytes are uncha
   );
   assert.equal(result.overall, "fail");
 });
+
+test("the public gate rejects WOWList audience and post counts in favor of ecosystem scale", () => {
+  const countFramedMarkdown = Buffer.from(
+    publicMarkdown
+      .toString("utf8")
+      .replace(
+        "active in 35+ city ecosystems",
+        "at a snapshot of 1,846 users and 16,142 posts/events"
+      )
+  );
+  const result = evaluateResumePdf({
+    spec: {
+      ...exactPublicSpec,
+      contentContract: {
+        ...exactPublicSpec.contentContract,
+        requiredPhrases: ["active in 35+ city ecosystems"],
+        prohibitedPhrases: ["1,846 users", "16,142 posts/events"]
+      }
+    },
+    markdown: countFramedMarkdown,
+    pdf: publicPdf
+  });
+
+  assert.equal(
+    result.checks.find((check) => check.id === "public-positioning-and-chronology")?.pass,
+    false
+  );
+});
+
+test("the public gate requires exact-candidate evidence that linked experience headings preserve their surrounding style", () => {
+  const result = evaluateResumePdf({
+    spec: {
+      ...exactPublicSpec,
+      experienceHeadingLinkStyleInspection: {
+        status: "pass",
+        pdfSha256: sha256(publicPdf),
+        requiredLabels: [
+          "NYC Artist Coalition / FairRentNYC",
+          "WOWList.org",
+          "CallNYC.org",
+          "KC Town Hall LLC"
+        ],
+        inspectedLabels: [
+          "NYC Artist Coalition / FairRentNYC",
+          "WOWList.org",
+          "CallNYC.org",
+          "KC Town Hall LLC"
+        ],
+        linkedTextColor: "#333334",
+        surroundingHeadingColor: "#333334",
+        linkedTextBold: true,
+        surroundingHeadingBold: true,
+        linkedTextUnderlined: false
+      },
+      hardGates: [
+        ...exactPublicSpec.hardGates.slice(0, -1),
+        "experience-heading-link-style",
+        exactPublicSpec.hardGates.at(-1)
+      ]
+    },
+    markdown: publicMarkdown,
+    pdf: publicPdf
+  });
+
+  assert.equal(
+    result.checks.find((check) => check.id === "experience-heading-link-style")?.pass,
+    true
+  );
+});

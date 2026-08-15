@@ -405,17 +405,18 @@ export const proofClaims: ProofClaim[] = [
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Co-built and operated WOWList.org, a community-calendar platform for DIY arts and music organizers. A July 2017 production snapshot records 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts.",
+      "Co-built and operated WOWList.org, a natural-language community-calendar platform for DIY arts and music organizers active in 35+ city ecosystems.",
     shortWording:
       "Jamie co-built and operated WOWList for DIY arts and music organizers",
     detailedPublicWording:
-      "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
+      "WOWList enabled community organizers active in 35+ city ecosystems to publish through collaboratively editable text, follow keyword communities, receive weekly digests, embed calendars, and maintain low-cost local distribution infrastructure.",
     sourceBasis:
       "Approved resume language, public-safe aggregate historical summary, complete recovered public-account census, and a public 2016 Sunday Dinner event linking directly into WOW List.",
     guardrail:
-      "Use approximate adoption language, do not describe city activity as official chapters, and treat the Sunday Dinner link as one concrete route rather than a complete adoption or traffic census.",
+      "Lead with activity in 35+ city ecosystems rather than database user or event-post counts; do not describe city activity as official chapters, and treat the Sunday Dinner link as one concrete route rather than a complete adoption or traffic census.",
     doNotSay: [
       "Official chapters in 35 cities",
+      "User or event-post counts on public surfaces",
       "Full ownership of all organizer adoption",
       "Current active platform unless confirmed"
     ],

@@ -419,7 +419,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built and operated a community-calendar platform for DIY arts and music organizers. A July 2017 production snapshot records 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts.",
+      "Co-built and operated a natural-language community-calendar platform for DIY arts and music organizers active in 35+ city ecosystems.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -462,8 +462,8 @@ const workItemsInput = [
       "Django / PostgreSQL / PostGIS and Ember platform",
       "Followable keyword communities",
       "Organizer-facing distribution workflows",
-      "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
-      "35 city-region keys with at least 50 posts in the July 2017 snapshot"
+      "Natural-language publishing and followable keyword communities",
+      "Organizer-led activity in 35+ city ecosystems"
     ],
     knownOpenProtected: {
       known:

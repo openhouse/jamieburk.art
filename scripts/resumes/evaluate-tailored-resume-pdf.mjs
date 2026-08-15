@@ -42,6 +42,8 @@ export function evaluateResumePdf({
   const visualCriteria = Object.values(spec.visualInspection.criteria);
   const markdownText = normalizeText(markdown.toString("utf8"));
   const contentContract = spec.contentContract;
+  const requiredPhrases = contentContract?.requiredPhrases ?? [];
+  const prohibitedPhrases = contentContract?.prohibitedPhrases ?? [];
   const contentContractPass = contentContract
     ? markdownText.includes(normalizeText(contentContract.requiredHeadline)) &&
         !markdownText.includes(normalizeText(contentContract.prohibitedHeadline)) &&
@@ -50,7 +52,20 @@ export function evaluateResumePdf({
         ) &&
         contentContract.prohibitedChronologyPatterns.every(
           (pattern) => !markdownText.includes(normalizeText(pattern))
-        )
+        ) &&
+        requiredPhrases.every((phrase) => markdownText.includes(normalizeText(phrase))) &&
+        prohibitedPhrases.every((phrase) => !markdownText.includes(normalizeText(phrase)))
+    : null;
+  const headingStyleInspection = spec.experienceHeadingLinkStyleInspection;
+  const inspectedHeadingLabels = new Set(headingStyleInspection?.inspectedLabels ?? []);
+  const headingStylePass = headingStyleInspection
+    ? headingStyleInspection.status === "pass" &&
+      headingStyleInspection.pdfSha256 === sha256(pdf) &&
+      headingStyleInspection.requiredLabels.every((label) => inspectedHeadingLabels.has(label)) &&
+      headingStyleInspection.linkedTextColor === headingStyleInspection.surroundingHeadingColor &&
+      headingStyleInspection.linkedTextBold === true &&
+      headingStyleInspection.surroundingHeadingBold === true &&
+      headingStyleInspection.linkedTextUnderlined === false
     : null;
 
   const checks = [
@@ -130,6 +145,16 @@ export function evaluateResumePdf({
             pass: contentContractPass,
             detail:
               "The exact Markdown source retains generic Technical Project Manager positioning, distinguishes client work beginning in 2009 from the 2012 LLC formation, and dates the Harry J. Epstein engagement to 2009–2015; the exact rendered PDF is bound separately by digest and visual inspection."
+          }
+        ]
+      : []),
+    ...(headingStyleInspection
+      ? [
+          {
+            id: "experience-heading-link-style",
+            pass: headingStylePass,
+            detail:
+              "Every linked experience heading was inspected against the exact PDF candidate and preserves the surrounding heading's color, weight, and underline state."
           }
         ]
       : []),

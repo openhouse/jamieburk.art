@@ -3,8 +3,8 @@
   "runId": "hiring-public-b560af7a0a6d",
   "generatedAt": "2026-08-15T18:43:38-04:00",
   "candidateSha": "b560af7a0a6dee3224917099f3aff277453c07fb",
-  "candidatePathsClean": true,
-  "portfolioSnapshotHash": "7a663320825fba482168c725f49d65609bd58e5c9aa0b06e7fe331ddd7950625",
+  "candidatePathsClean": false,
+  "portfolioSnapshotHash": "68eeb9fe8e11cf82aab6430d8813c323519e1e7ba0c02ef20ddd7e81a8c12160",
   "roleContextHash": "b882795f8239432855ec1a7263e7c22f8a8e6c36944554c05a72e81dc140ad55",
   "readerContextHash": "43376836970e6a0dae369b10141e15fae9baab41fdbe2263c6c8964d0fb2ea04",
   "candidateContextHash": "6251a2430d0a133ce9e511ad76dc9b415bed1a77e10e8b29e81a73d3ad301523",
@@ -684,11 +684,9 @@
           "matchedPublicText": true,
           "declaredPublicStatus": "visible-qualified",
           "routes": [
-            "/work/wowlist",
             "/work/technical-operations"
           ],
           "evidenceNeedles": [
-            "35 city-region keys",
             "operational metrics with honesty"
           ]
         },
