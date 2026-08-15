@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { portfolioPhotos } from "@/data/photography";
+import { site } from "@/data/site";
 
 export function Hero() {
   const photo = portfolioPhotos.eastRiver;
@@ -29,7 +30,7 @@ export function Hero() {
             Jamie Burkart
           </h1>
           <p className="mt-6 max-w-2xl text-2xl font-semibold leading-snug text-white sm:text-3xl">
-            I help emerging work become usable systems.
+            {site.heroTagline}
           </p>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-white/84 sm:text-xl">
             I work with public-facing teams to clarify requirements, build

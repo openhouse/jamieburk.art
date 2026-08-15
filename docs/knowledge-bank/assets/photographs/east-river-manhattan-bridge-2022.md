@@ -8,7 +8,7 @@ sensitivity: low
 last_reviewed: 2026-07-26
 review_by: 2027-01-26
 canonical_path: docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md
-summary: Public-safe record for a 2022 photograph of Jamie Burkart at the East River, made by Elana Gordon and used as the Layout C homepage hero.
+summary: Public-safe record for a 2022 photograph of Jamie Burkart at the East River, made by Elana Gordon and used as the homepage hero and global social preview.
 media_type: photograph
 rights_state: cleared
 consent_state: cleared
@@ -17,6 +17,7 @@ projection:
   status: active
   surfaces:
     - /
+    - /opengraph-image
 private_source_binding:
   provider: photo-fieldwork
   opaque_id: pfwpub_ylAbyl1bHgM5
@@ -28,6 +29,14 @@ public_derivatives:
     width: 1280
     height: 960
     checksum: 748b6f12e2845dd7dc1ca3fa3f35d61c26a468150b7e3d6d386ae3622d996621
+    metadata_stripped: true
+    status: staging-candidate
+  - id: derivative.photo.east-river.social-preview.v1
+    path: apps/www/public/images/social/jamie-east-river-og.jpg
+    media_type: image/jpeg
+    width: 1280
+    height: 960
+    checksum: b59aa6d5e157cf3fbcc310b19b0cd0802db338e9d6b439682385d04297e3f6b1
     metadata_stripped: true
     status: staging-candidate
 statements:
@@ -83,6 +92,10 @@ relations:
     target: projection.photo.layout-c.home.east-river
     href: ../../projections/photography/layout-c-home-east-river.md
     context: Homepage hero occurrence in Layout C.
+  - type: projected_to
+    target: projection.photo.global-social-preview.east-river
+    href: ../../projections/photography/global-social-preview-east-river.md
+    context: Global Open Graph and large-image social-card occurrence.
   - type: uses_source
     target: source.photo-metadata.east-river.2022.public-safe
     href: ../../sources/photo-metadata/east-river-2022-public-safe.md
@@ -101,9 +114,12 @@ relations:
 
 ## Current public use
 
-The exact derivative appears as the Layout C homepage hero. The factual caption
-names the public place and year. The credit names Elana Gordon as photographer
-and Jamie Burkart's photo archive as the custodian of this copy.
+The governed WebP derivative appears as the Layout C homepage hero. A
+metadata-stripped JPEG derivative of the same approved photograph is used by
+the global Open Graph renderer because its image engine does not decode WebP.
+The factual caption names the public place and year. The credit names Elana
+Gordon as photographer and Jamie Burkart's photo archive as the custodian of
+this copy.
 
 ## What is established
 
@@ -129,7 +145,7 @@ competing attribution.
 
 ## Open gates
 
-Public Git and staging review are approved for this occurrence. Production
-publication and indexing remain open decisions for Jamie. Revocation routes to
-the occurrence record and rollback instructions rather than deleting this
-historical asset record.
+Public Git and staging review are approved for the homepage and social-preview
+occurrences. Production publication and indexing remain open decisions for
+Jamie. Revocation routes to each occurrence record and its rollback
+instructions rather than deleting this historical asset record.

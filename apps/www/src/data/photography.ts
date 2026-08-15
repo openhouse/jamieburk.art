@@ -23,6 +23,7 @@ export type PortfolioPhoto = {
     | "work-196-sunday-dinner"
     | "work-kc-town-hall"
     | "work-index"
+    | "social-preview"
   )[];
   publicationStatus: "jamie-authorized";
   releaseState: {
@@ -45,7 +46,10 @@ export const portfolioPhotos = {
     credit: "Photograph by Elana Gordon. From Jamie Burkart's photo archive.",
     wikiId: "asset.photo.east-river-manhattan-bridge.2022.001",
     derivativeId: "derivative.photo.east-river.layout-c.v1",
-    placementIds: ["projection.photo.layout-c.home.east-river"],
+    placementIds: [
+      "projection.photo.layout-c.home.east-river",
+      "projection.photo.global-social-preview.east-river"
+    ],
     captionAssertionIds: [
       "statement.photo.east-river.place.v1",
       "statement.photo.east-river.capture-year.v1"
@@ -55,7 +59,7 @@ export const portfolioPhotos = {
       "statement.photo.east-river.custody.v1"
     ],
     knowledgeStatus: "bound",
-    placements: ["home"],
+    placements: ["home", "social-preview"],
     publicationStatus: "jamie-authorized",
     releaseState: {
       publicGit: "approved",
@@ -64,7 +68,7 @@ export const portfolioPhotos = {
       indexing: "open"
     },
     publicUseBoundary:
-      "Elana Gordon is credited as photographer. Use is bounded to this approved portfolio occurrence; no broader rights are asserted."
+      "Elana Gordon is credited as photographer. Use is bounded to the approved homepage and global social-preview occurrences; no broader rights are asserted."
   },
   saveNYCSpacesTownHall: {
     id: "save-nyc-spaces-town-hall",

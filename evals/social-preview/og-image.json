@@ -1,0 +1,44 @@
+{
+  "suite": "global-social-preview",
+  "version": 1,
+  "surface": "/opengraph-image",
+  "principle": "The social preview is a traveling portfolio threshold. It must stay synchronized with the site's identity, governed photography, metadata, credit, and release boundaries.",
+  "expected": {
+    "width": 1200,
+    "height": 630,
+    "contentType": "image/png",
+    "metadataPath": "/opengraph-image",
+    "twitterCard": "summary_large_image",
+    "photoKey": "eastRiver",
+    "photoPath": "/images/field-notes/jamie-east-river.webp",
+    "rendererPhotoPath": "/images/social/jamie-east-river-og.jpg",
+    "assetId": "asset.photo.east-river-manhattan-bridge.2022.001",
+    "derivativeId": "derivative.photo.east-river.layout-c.v1",
+    "rendererDerivativeId": "derivative.photo.east-river.social-preview.v1",
+    "placementId": "projection.photo.global-social-preview.east-river",
+    "permissionSourceId": "source.permission.elana-gordon.east-river.2026-07",
+    "credit": "East River, 2022 · Photograph by Elana Gordon.",
+    "requiredColors": ["#1a232b", "#2f6f89", "#d9e4e9", "#a9c4cf", "#ffffff"]
+  },
+  "candidateFiles": [
+    "apps/www/src/app/opengraph-image.tsx",
+    "apps/www/src/components/Hero.tsx",
+    "apps/www/src/data/photography.ts",
+    "apps/www/src/data/site.ts",
+    "apps/www/src/data/social-preview.ts",
+    "apps/www/src/lib/metadata.ts",
+    "apps/www/public/images/field-notes/jamie-east-river.webp",
+    "apps/www/public/images/social/jamie-east-river-og.jpg",
+    "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
+    "docs/knowledge-bank/projections/photography/global-social-preview-east-river.md"
+  ],
+  "visualReview": {
+    "status": "pass",
+    "reviewedAt": "2026-08-14",
+    "candidateSha256": "47f8fe4f4c6b51835c5c43e2ad454e03480e13a9bdba483f12f215a0d20bcc30",
+    "evidencePath": "docs/qa/social-preview/og-east-river-2026-08-14.png",
+    "evidenceSha256": "e1edf94e80b19baec3c58d6870714d69b9cb4b60e2385befb549c2583010549b",
+    "inspectedSizes": ["1200x630", "600x315", "300x158"],
+    "reviewBoundary": "Actual rendered pixels inspected through fictionalized editorial lenses; not a quotation, endorsement, rights expansion, production approval, or platform-delivery guarantee."
+  }
+}

@@ -11,6 +11,7 @@ const githubUrl =
 export const site = {
   name: "Jamie Burkart",
   role: "Technical Project Manager - Product Operations & Implementation",
+  heroTagline: "I help emerging work become usable systems.",
   url: SITE_URL,
   title:
     "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",

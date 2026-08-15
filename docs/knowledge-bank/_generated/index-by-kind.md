@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `b61d947eeafb8abf05edacb30950beda51374108`
-**Generation time:** 2026-08-14T19:07:56-04:00
-**Source fingerprint:** `7e4f0b585c6173a273222020620546e4472fcf5fa1f939a14d33220fd9f70152`
+**Source commit:** `aae53e9dd853357d6ec3d04832b4b9fb1920ea09`
+**Generation time:** 2026-08-14T19:50:01-04:00
+**Source fingerprint:** `a734cb9dc717b9c412eaad4ccb22f80c69872a7302d4d2851c35c47d7e23dd9f`
 
 ## application
 
@@ -377,6 +377,7 @@
 - [Role-fit and referral map](../projections/role-fit-and-referral-map.md) - `portfolio.role-fit-referral-map`
 - [CallNYC portfolio projection](../projections/work-callnyc.md) - `portfolio.work.callnyc`
 - [Technical Operations portfolio projection](../projections/work-technical-operations.md) - `portfolio.work.technical-operations`
+- [Global social preview East River occurrence](../projections/photography/global-social-preview-east-river.md) - `projection.photo.global-social-preview.east-river`
 - [KC Town Hall roof-work occurrence](../projections/photography/kc-town-hall-roof-work.md) - `projection.photo.kc-town-hall.roof-work`
 - [Launch 2026 Fair Rent case-study Shoestring field-and-system occurrence](../projections/photography/launch-2026-fair-rent-shoestring-facilitation.md) - `projection.photo.launch-2026.fair-rent.shoestring-facilitation`
 - [Launch 2026 homepage Save NYC Spaces field-and-system occurrence](../projections/photography/launch-2026-home-save-nyc-spaces-town-hall.md) - `projection.photo.launch-2026.home.save-nyc-spaces-town-hall`

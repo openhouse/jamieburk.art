@@ -51,6 +51,10 @@ relations:
     target: projection.photo.layout-c.home.east-river
     href: ../projections/photography/layout-c-home-east-river.md
   - type: related_to
+    target: projection.photo.global-social-preview.east-river
+    href: ../projections/photography/global-social-preview-east-river.md
+    context: Governed traveling-card occurrence kept in step with the homepage identity image.
+  - type: related_to
     target: edition.layout-c.2026-07
     href: ../projections/photography/edition-layout-c-2026-07.md
   - type: related_to
@@ -167,6 +171,7 @@ homepage.
 - [Resume protected-absence decision](../decisions/photography/layout-c-resume-no-photo-v1.md)
 - [Pre-launch rights-narrowing decision](../decisions/photography/pre-launch-rights-narrowing-2026-07-28.md)
 - [Exact homepage occurrence](../projections/photography/layout-c-home-east-river.md)
+- [Global social-preview occurrence](../projections/photography/global-social-preview-east-river.md)
 - [Dated portfolio edition](../projections/photography/edition-layout-c-2026-07.md)
 - [Creator-credit correction](../corrections/east-river-credit-2026-07.md)
 - [First-person recollection](../sources/recollections/jamie-canoe-commuting-2026-07.md)

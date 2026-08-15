@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "candidateSha": "b61d947eeafb8abf05edacb30950beda51374108",
+  "candidateSha": "aae53e9dd853357d6ec3d04832b4b9fb1920ea09",
   "portfolioSnapshotHash": "4c1a82a5e52088bedaf869a435302e8dc333e02e689a37c36144d3303563449b",
-  "publicReportHash": "68ca428ea0f6feddc8abcd546df3a7a146ab7b2ac8d3c429e3b62cf693079a42",
-  "wikiSourceFingerprint": "7e4f0b585c6173a273222020620546e4472fcf5fa1f939a14d33220fd9f70152",
+  "publicReportHash": "27077352c51c8559e3c9afeeef6ae9df69c7f354fac1fa480394a211b6c66559",
+  "wikiSourceFingerprint": "a734cb9dc717b9c412eaad4ccb22f80c69872a7302d4d2851c35c47d7e23dd9f",
   "findings": [
     {
       "findingId": "finding.requirement.aclu-national-campaigns.budget-administration",
