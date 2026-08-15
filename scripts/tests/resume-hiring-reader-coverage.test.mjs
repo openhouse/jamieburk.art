@@ -100,8 +100,8 @@ test("a generic target-role headline fails job-specific resume tailoring", () =>
     );
     const resumePath = path.join(root, entry.resumePath);
     const resume = readFileSync(resumePath, "utf8").replace(
-      "## Target Role: Senior Product Manager - Public Interest Technology Crew",
-      "## Target Role: Generic Leader"
+      entry.resumeHeadline,
+      "**Generic Leader**"
     );
     writeFileSync(resumePath, resume, "utf8");
     rebindResume(entry, resume);
@@ -210,8 +210,8 @@ test("tailoring cannot rename an actual employment title to Product Manager", ()
     );
     const resumePath = path.join(root, entry.resumePath);
     const resume = readFileSync(resumePath, "utf8").replace(
-      "### THICK ARTS - Founder, Technical Project Manager & Web Systems Lead",
-      "### THICK ARTS - Senior Product Manager"
+      "### THICK ARTS LLC — Founder, Product & Technical Project Manager / Web Systems Lead",
+      "### THICK ARTS LLC — Senior Product Manager"
     );
     writeFileSync(resumePath, resume, "utf8");
     rebindResume(entry, resume);

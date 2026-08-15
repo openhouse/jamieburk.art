@@ -59,13 +59,23 @@ export function evaluateResumeVersions(root = defaultRoot) {
   const requiredSections = [
     "# Jamie Burkart",
     "## Professional Summary",
+    "## Core Skills",
     "## Professional Experience",
     "## Education & Professional Development",
-    "## Core Skills",
-    "## Selected Product Evidence"
+    "## Additional Leadership",
+    "## Additional Information"
+  ];
+  const sectionOrder = [
+    resume.indexOf("## Professional Summary"),
+    resume.indexOf("## Core Skills"),
+    resume.indexOf("## Professional Experience"),
+    resume.indexOf("## Additional Leadership"),
+    resume.indexOf("## Education & Professional Development"),
+    resume.indexOf("## Additional Information")
   ];
   const wordCount = resume.trim().split(/\s+/).length;
   if (!requiredSections.every((heading) => resume.includes(heading)) ||
+      !sectionOrder.every((index, position) => index >= 0 && (position === 0 || index > sectionOrder[position - 1])) ||
       /^\s*\|.+\|\s*$/m.test(resume) ||
       /!\[[^\]]*\]\(/.test(resume) ||
       /\b(?:I|me|my)\b/.test(resume) ||
@@ -80,14 +90,12 @@ export function evaluateResumeVersions(root = defaultRoot) {
     "discovery",
     "prioritization",
     "scoping",
-    "version one",
+    "version-one",
     "mvp",
-    "pilot",
     "public launch",
     "cross-functional",
     "user research",
     "product briefs",
-    "decision memos",
     "metrics",
     "instrumentation",
     "post-launch",
@@ -103,7 +111,7 @@ export function evaluateResumeVersions(root = defaultRoot) {
     "CallNYC",
     "WOWList",
     "Richard Caceres",
-    "35 city ecosystems",
+    "35 city-region keys",
     "Harry J. Epstein Company",
     "2x revenue growth",
     "30+ pages",
@@ -129,7 +137,8 @@ export function evaluateResumeVersions(root = defaultRoot) {
     /caused (?:the )?law/i
   ];
   if (unsupportedClaims.some((pattern) => pattern.test(resume)) ||
-      !resume.includes("Familiarity with WCAG 2.1 AA and Section 508")) {
+      !resume.includes("Accessibility-aware implementation") ||
+      !resume.includes("privacy-conscious data practice")) {
     fail("truth-boundaries", "The resume overclaims an unverified qualification or loses the bounded accessibility wording.");
   }
 

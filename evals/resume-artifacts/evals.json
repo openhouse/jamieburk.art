@@ -20,8 +20,17 @@
       "no funds were disbursed",
       "non-disbursement"
     ],
+    "forbiddenResearchDossierPatterns": [
+      "public records document Jamie's participation",
+      "distinguish these activity counts",
+      "the archived site is unofficial and not a current City service"
+    ],
     "politicoLabel": "Politico New York",
     "politicoArticleUrl": "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf"
+  },
+  "publicResumeProjection": {
+    "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+    "file": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
   },
   "applicationGuideContract": {
     "file": "Application-Instructions.md",
@@ -81,9 +90,14 @@
       "criterion": "Every exported page has a complete visual-inspection receipt covering clipping, overlap, glyphs, Markdown residue, grouping, hierarchy, links, spacing, and page balance."
     },
     {
+      "id": "public-resume-projection",
+      "blocking": true,
+      "criterion": "The public portfolio resume is byte-identical to the selected opportunity PDF so the leading-edge site and its downloadable evidence cannot drift apart."
+    },
+    {
       "id": "resume-editorial-preferences",
       "blocking": true,
-      "criterion": "Hiring-facing resumes omit nonessential non-disbursement disposition language; whenever Politico New York appears, its full visible label links to the canonical archived article PDF in both Markdown and the exported PDF."
+      "criterion": "Hiring-facing resumes omit nonessential disposition and research-dossier caveats; whenever Politico New York appears, its full visible label links to the canonical archived article PDF in both Markdown and the exported PDF."
     },
     {
       "id": "application-guide",

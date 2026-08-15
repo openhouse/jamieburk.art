@@ -14,13 +14,14 @@ const expectedCriteria = [
   "pdf-structure",
   "approved-typography",
   "visual-inspection",
+  "public-resume-projection",
   "resume-editorial-preferences",
   "application-guide",
   "public-safety"
 ];
 
 const requiredFonts = ["PalatinoLinotype", "Oswald", "Karla"];
-const protectedLocatorPattern = /docs\.google\.com\/(?:document|drive)\/|drive\.google\.com\/|\/(?:Users|Volumes)\/|\b1[A-Za-z0-9_-]{30,}\b/;
+const protectedLocatorPattern = /docs\.google\.com\/(?:document|drive)\/|drive\.google\.com\/|\/(?:Users|Volumes)\/|\b1(?![A-Fa-f0-9]{63}\b)[A-Za-z0-9_-]{30,}\b/;
 const protectedCategoryAnswerPattern = /\bprotected_category_answer\s*:/i;
 
 function digest(value) {
@@ -224,20 +225,44 @@ export function evaluateResumeArtifacts(root = defaultRoot) {
     const forbiddenDispositionPatterns = Array.isArray(preferences.forbiddenHiringFacingDispositionPatterns)
       ? preferences.forbiddenHiringFacingDispositionPatterns
       : [];
+    const forbiddenResearchDossierPatterns = Array.isArray(preferences.forbiddenResearchDossierPatterns)
+      ? preferences.forbiddenResearchDossierPatterns
+      : [];
     const politicoUrl = preferences.politicoArticleUrl;
-    const markdownPoliticoLink = `[*${politicoLabel}*](${politicoUrl})`;
-    if (forbiddenDispositionPatterns.some((pattern) =>
+    const markdownPoliticoLinks = [
+      `[${politicoLabel}](${politicoUrl})`,
+      `[*${politicoLabel}*](${politicoUrl})`
+    ];
+    if ([...forbiddenDispositionPatterns, ...forbiddenResearchDossierPatterns].some((pattern) =>
       typeof pattern === "string" && pattern && resume.toLowerCase().includes(pattern.toLowerCase())
     )) {
-      fail("resume-editorial-preferences", `${label}: hiring-facing resume includes nonessential non-disbursement disposition language.`);
+      fail("resume-editorial-preferences", `${label}: hiring-facing resume includes nonessential evidence-process or disposition language.`);
     }
     if (politicoLabel && resume.includes(politicoLabel) &&
-        (!politicoUrl || !resume.includes(markdownPoliticoLink) || !pdfText.includes(politicoUrl))) {
+        (!politicoUrl || !markdownPoliticoLinks.some((link) => resume.includes(link)) || !pdfText.includes(politicoUrl))) {
       fail("resume-editorial-preferences", `${label}: Politico New York must link to the canonical archived article PDF in Markdown and the exported PDF.`);
     }
 
     if (protectedLocatorPattern.test(resume) || protectedLocatorPattern.test(JSON.stringify(artifact))) {
       fail("public-safety", `${label}: protected Google Workspace or local filesystem locator entered the resume artifact.`);
+    }
+  }
+
+  const projection = evaluation.publicResumeProjection;
+  const projectionEntry = entries.find(({ opportunityId }) => opportunityId === projection?.opportunityId);
+  const publicPdfPath = path.join(root, projection?.file ?? "");
+  if (!projectionEntry || !projection?.file || !existsSync(publicPdfPath)) {
+    fail("public-resume-projection", "The selected opportunity or its public resume projection is missing.");
+  } else {
+    const selectedDirectory = path.dirname(path.join(root, projectionEntry.resumePath));
+    const selectedArtifactPath = path.join(selectedDirectory, "artifact.json");
+    const selectedArtifact = existsSync(selectedArtifactPath)
+      ? JSON.parse(readFileSync(selectedArtifactPath, "utf8"))
+      : undefined;
+    const selectedPdfPath = path.join(selectedDirectory, selectedArtifact?.pdf?.file ?? "");
+    if (!selectedArtifact?.pdf?.file || !existsSync(selectedPdfPath) ||
+        digest(readFileSync(publicPdfPath)) !== digest(readFileSync(selectedPdfPath))) {
+      fail("public-resume-projection", "The public resume is not byte-identical to the selected opportunity PDF.");
     }
   }
 

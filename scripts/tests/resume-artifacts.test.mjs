@@ -46,6 +46,31 @@ function sha256(value) {
   return createHash("sha256").update(value).digest("hex");
 }
 
+function rebindResumeMarkdown(root, opportunityId, mutate) {
+  const manifestRelative = "evals/resume-hiring-readers/current.json";
+  const manifest = readJson(root, manifestRelative);
+  const entry = manifest.opportunities.find((opportunity) => opportunity.opportunityId === opportunityId);
+  assert.ok(entry, `missing fixture opportunity ${opportunityId}`);
+  const resumePath = path.join(root, entry.resumePath);
+  const previousDigest = entry.resumeSha256;
+  const nextResume = mutate(readFileSync(resumePath, "utf8"));
+  const nextDigest = sha256(nextResume);
+  writeFileSync(resumePath, nextResume, "utf8");
+  entry.resumeSha256 = nextDigest;
+  for (const assessment of entry.readerAssessments ?? []) assessment.resumeSha256 = nextDigest;
+  writeJson(root, manifestRelative, manifest);
+
+  const directory = path.dirname(resumePath);
+  const artifactRelative = path.relative(root, path.join(directory, "artifact.json"));
+  const artifact = readJson(root, artifactRelative);
+  artifact.sourceMarkdownSha256 = nextDigest;
+  writeJson(root, artifactRelative, artifact);
+
+  const guidePath = path.join(directory, "Application-Instructions.md");
+  const guide = readFileSync(guidePath, "utf8").replace(previousDigest, nextDigest);
+  writeFileSync(guidePath, guide, "utf8");
+}
+
 test("every governed opportunity has a current styled and visually inspected PDF sibling", () => {
   const result = run();
   assert.equal(result.status, 0, result.stderr || result.stdout);
@@ -260,6 +285,56 @@ test("non-disbursement disposition language fails the hiring-facing editorial pr
   }
 });
 
+test("research-dossier caveats fail the hiring-facing editorial preference", () => {
+  const root = fixture();
+  try {
+    const evaluationRelative = "evals/resume-artifacts/evals.json";
+    const evaluation = readJson(root, evaluationRelative);
+    evaluation.editorialPreferences.forbiddenResearchDossierPatterns = [
+      "public records document Jamie's participation",
+      "distinguish these activity counts",
+      "the archived site is unofficial and not a current City service"
+    ];
+    writeJson(root, evaluationRelative, evaluation);
+    rebindResumeMarkdown(root, "opportunity.nyc-oti.senior-product-manager.782366", (resume) =>
+      `${resume}\nPublic records document Jamie's participation in pickup operations.\n`
+    );
+
+    const result = run(root);
+    assert.notEqual(result.status, 0);
+    assert.match(result.stdout, /resume-editorial-preferences/);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test("a public resume projection that drifts from its selected opportunity PDF fails closed", () => {
+  const root = fixture();
+  try {
+    const evaluationRelative = "evals/resume-artifacts/evals.json";
+    const evaluation = readJson(root, evaluationRelative);
+    const opportunityId = "opportunity.nyc-oti.senior-product-manager.782366";
+    const publicRelative = "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf";
+    evaluation.publicResumeProjection = { opportunityId, file: publicRelative };
+    writeJson(root, evaluationRelative, evaluation);
+
+    const manifest = readJson(root, "evals/resume-hiring-readers/current.json");
+    const entry = manifest.opportunities.find((opportunity) => opportunity.opportunityId === opportunityId);
+    const artifact = readJson(root, path.join(path.dirname(entry.resumePath), "artifact.json"));
+    const selectedPdf = path.join(root, path.dirname(entry.resumePath), artifact.pdf.file);
+    const publicPdf = path.join(root, publicRelative);
+    mkdirSync(path.dirname(publicPdf), { recursive: true });
+    cpSync(selectedPdf, publicPdf);
+    appendFileSync(publicPdf, "stale", "utf8");
+
+    const result = run(root);
+    assert.notEqual(result.status, 0);
+    assert.match(result.stdout, /public-resume-projection/);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
 test("a Politico New York mention without the canonical Markdown link fails closed", () => {
   const root = fixture();
   try {
@@ -269,8 +344,8 @@ test("a Politico New York mention without the canonical Markdown link fails clos
     );
     const resumePath = path.join(root, entry.resumePath);
     const resume = readFileSync(resumePath, "utf8").replace(
-      "[*Politico New York*](https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf)",
-      "*Politico New York*"
+      "[Politico New York](https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf)",
+      "Politico New York"
     );
     writeFileSync(resumePath, resume, "utf8");
     const result = run(root);

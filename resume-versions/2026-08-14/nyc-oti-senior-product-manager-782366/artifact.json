@@ -3,7 +3,7 @@
   "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
   "generatedOn": "2026-08-14",
   "sourceMarkdown": "Jamie-Burkart-Resume.md",
-  "sourceMarkdownSha256": "b6beeb5c3df11f7600f6f9aaa93a508aed4140ff27fc6f58c9e0fcf6499e13c8",
+  "sourceMarkdownSha256": "d1395ca2f36d52684ba081be6b9914dc7c8f64b92ad07a3b677e80b7ed837475",
   "opportunitySource": {
     "file": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
     "sha256": "e244c8222d6c431fd9d9ce34349f2b57c139656adf225974d4f6462ce55dd25d"
@@ -11,8 +11,8 @@
   "pdf": {
     "file": "Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf",
     "mediaType": "application/pdf",
-    "sha256": "dc13d1e474ece7cecd5c880669dbb729168c3759c1aa68f6e96ed83464db7f9c",
-    "bytes": 84935,
+    "sha256": "16d4a0bf9d7cb392834831689cce6d41138845d02ae8236f2707142061c80d28",
+    "bytes": 95601,
     "pages": 2,
     "pageSize": "US Letter",
     "tagged": true
@@ -28,8 +28,10 @@
     "sourceStylesPreserved": true,
     "intentionalAdaptations": [
       "The target role occupies the prior resume's teal Oswald role line.",
-      "A page break before 196 Artists Residency keeps experience groups intact and avoids a stranded bullet continuation.",
-      "Politico New York is a visible source-style hyperlink to the canonical archived article PDF."
+      "The stronger staging-B resume structure was selected after a close reading of the three release candidates.",
+      "A deliberate page break before WOWList keeps the first page focused on the professional summary, capabilities, Thick Arts, and current NYC coalition work.",
+      "Three defensive research-process caveats were removed from hiring-facing prose while the underlying factual scope and collective credit remained unchanged.",
+      "Politico New York is a visible hyperlink to the canonical archived article PDF."
     ]
   },
   "googleWorkspace": {
@@ -51,7 +53,8 @@
       "No broken glyphs",
       "No isolated section heading or bullet continuation",
       "Readable hierarchy, contact links, margins, and line spacing",
-      "Politico New York is visibly linked in source-consistent blue italic underlined styling"
+      "Page two begins cleanly with WOWList and preserves a balanced scan path through education and additional information",
+      "Politico New York is visibly linked in source-consistent blue underlined styling"
     ]
   }
 }

@@ -1,66 +1,75 @@
 # Jamie Burkart
 
-## Target Role: Senior Product Manager - Public Interest Technology Crew
+**Senior Product Manager | Civic Technology, Product Operations & Implementation**
 
 Brooklyn, NY | (816) 728-8685 | [jamie.burkart@gmail.com](mailto:jamie.burkart@gmail.com)
 
-[Portfolio](https://jamieburk.art) | [LinkedIn](https://linkedin.com/in/jamie-burkart) | [GitHub](https://github.com/openhouse)
+[Portfolio](https://jamieburk.art/) | [LinkedIn](https://www.linkedin.com/in/jamie-burkart/) | [GitHub](https://github.com/openhouse)
 
 ## Professional Summary
 
-Hands-on product and technical project leader with 14+ years moving public-facing products from ambiguous needs through problem framing, participatory discovery, prioritization, scoping, implementation, public launch, measurement, and handoff. Builds resident-facing civic tools and community platforms in complex environments, translating imperfect evidence and stakeholder needs into version one decisions, cross-functional plans, accountable delivery, and durable institutional knowledge.
-
-## Professional Experience
-
-### THICK ARTS - Founder, Technical Project Manager & Web Systems Lead
-
-*New York, NY / Remote | 2012-Present*
-
-- Lead public-facing product work end-to-end through discovery, requirements, scope, architecture, implementation, quality assurance, launch, measurement, maintenance, and handoff.
-- Coordinate design, engineering, operations, policy, communications, and executive stakeholders; clarify decisions, dependencies, tradeoffs, deliverables, and outcomes.
-- Led incremental product, e-commerce, analytics, content, and operations improvements for Harry J. Epstein Company, contributing to **2x revenue growth** within an 80+ year-old business.
-- Build source-backed knowledge systems that preserve evidence, corrections, privacy, collective credit, and human review while making team memory usable.
-
-### NYC Artist Coalition / Fair Rent NYC - Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead
-
-*New York, NY | 2017-Present*
-
-- Translate listening meetings, public testimony, policy sources, legal questions, media assets, and stakeholder decisions into **30+ pages** of shared campaign infrastructure, public guidance, and actionable workstreams.
-- Coordinate coalition partners, elected officials and staff, communications, press, venues, and participants while keeping decision ownership, privacy, and collective credit explicit.
-
-### WOWList.org - Co-Founder, Product & Community Systems
-
-*New York, NY / Remote | 2015-2020*
-
-- Co-built a Python / Django and Ember.js community-calendar with Richard Caceres from concept through launch and stewardship, using natural-language event entry, keyword communities, weekly digests, embeddable calendars, and production instrumentation.
-- Led product definition, organizer onboarding, adoption support, and distributed maintainer relationships across roughly **35 city ecosystems**.
-
-### 196 Artists Residency / Sunday Dinner - Founder & Systems Steward
-
-*Brooklyn, NY | Sunday Dinner: 2012-Present; Residency: 2020-Present*
-
-- Built repeatable intake, onboarding, scheduling, facilitation, privacy-aware documentation, and continuity systems supporting **20+ resident artists** and **300+ gatherings**.
-
-### KC Town Hall LLC - Co-Founder & Project Manager, Historic Restoration / Mixed-Use Development
-
-*Kansas City, MO | 2015-2024*
-
-- Co-led community listening, scope, sequencing, budgeting, design, public funding, vendors, field implementation, and public-benefit reporting for a 6,500 sq. ft. adaptive-reuse project; secured a **$490,539 public funding recommendation** through a successful CCED proposal and presentation.
-
-## Selected Product Evidence
-
-- **CallNYC:** Built and launched an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into **61 resident-facing issue pathways**, Council member context, and next-step guidance; covered in [*Politico New York*](https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf).
-- **Responsible delivery:** Familiarity with WCAG 2.1 AA and Section 508 and their implications for product scope and tradeoffs; builds accessibility review, privacy, ethical data handling, and human approval into release decisions without claiming audited compliance.
-- **Product learning:** Defines success measures, interprets product and operational metrics, documents learning, and distinguishes outputs, adoption, service quality, and resident outcomes.
-
-## Education & Professional Development
-
-**AI Evals for Engineers & PMs** - Shreya Shankar & Hamel Husain / Maven, 2026. Application-centric evaluations, error analysis, annotation workflows, traces, failure modes, retrieval quality, and human-in-the-loop evaluation.
-
-**University of California, Santa Cruz** - B.A., Film & Digital Media, Honors.
+Senior product and technical project manager with 14+ years shipping public-facing products, services, and operating systems across civic technology, community platforms, small business, and cultural advocacy. Leads from problem framing and participatory discovery through briefs, prioritization, implementation, launch, adoption, measurement, and retrospectives. Translates among residents, organizers, policy stakeholders, designers, engineers, operations teams, and senior decision-makers. Brings hands-on technical fluency with privacy-conscious, accessibility-aware delivery in legacy and resource-constrained environments.
 
 ## Core Skills
 
-Product briefs, decision memos, user stories, acceptance criteria, minimum viable product (MVP) and pilot scope, user research planning, user acceptance testing (UAT), post-launch retrospectives, JavaScript / TypeScript, Node.js, React / Next.js, Ember.js, Python / Django, SQL, Git / GitHub, Docker / Dokku, QGIS, API requirements, open-data workflows.
+- **Product lifecycle:** Problem framing, discovery, public and user research, requirements, user stories, product briefs, roadmap sequencing, MVP and version-one scoping, prioritization, tradeoffs, rapid prototyping, UAT/QA, public launch, metrics, post-launch learning, and retrospectives.
+- **Cross-functional delivery:** Product ownership, facilitation, stakeholder alignment, designer and engineer coordination, agency and policy translation, senior stakeholder briefings, rollout planning, risk and dependency tracking, adoption, and durable handoffs.
+- **Responsible public technology:** Accessibility-aware implementation, privacy-conscious data practice, public-safety review, source governance, evidence boundaries, and clear documentation of unknowns and decisions.
+- **Web systems architecture:** JavaScript/TypeScript, React/Next.js, Ember.js, Python/Django, SQL, PostgreSQL/PostGIS, Node.js, Git/GitHub, Docker/Dokku, QGIS, APIs, open-data workflows, analytics, and low-cost cloud infrastructure.
 
-Authorized to work in the U.S.; no sponsorship required. Valid New York State driver's license.
+## Professional Experience
+
+### THICK ARTS LLC — Founder, Product & Technical Project Manager / Web Systems Lead
+
+New York, NY / Remote | 2009–Present
+
+- Lead end-to-end web product, design, and engineering engagements, turning ambiguous stakeholder needs into product direction, information architecture, technical scope, sequenced releases, testing, launch plans, adoption materials, maintenance workflows, and handoff documentation.
+- Led e-commerce, analytics, content, marketing, and operations for [Harry J. Epstein Company](https://www.harryepstein.com/), contributing to 2x revenue growth while helping an 80+ year-old industrial business modernize without losing its trusted voice.
+- Build maintainable publishing systems, campaign hubs, resource libraries, data workflows, and web infrastructure; preserve product briefs, decisions, reusable patterns, and post-launch learning so teams can continue the work.
+
+### [NYC Artist Coalition](https://nycartc.com/) / [FairRentNYC](https://fairrentnyc.nycartc.com/) — Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead
+
+New York, NY | 2017–Present
+
+- Help turn stakeholder listening, public testimony, and coalition priorities into buildable plans, campaign websites, public forums, policy communications, calls to action, and sustained government-facing follow-through.
+- Built and stewarded 30+ pages of shared campaign memory for a 2026 Commercial Rent Stabilization collaboration, connecting running minutes, decision records, action items, legal and policy questions, media assets, public-data framing, and city/state strategy lanes.
+- Implement and maintain public-facing campaign systems; facilitate challenging meetings; brief and work directly with elected officials and staff; and represent the work in public testimony, presentations, and press while preserving collective credit and sensitive boundaries.
+
+### [WOWList.org](https://wowlist.org/) — Co-Founder, Product & Community Systems
+
+New York, NY / Remote | 2015–2020
+
+- Co-founded, co-built, and operated with Richard Caceres a natural-language community-calendar and discovery platform for DIY arts and music organizers, replacing a complex event form with collaboratively editable text, followable keyword communities, weekly digests, profiles, embeds, and calendar connections.
+- Connected participatory discovery with hands-on implementation, organizer onboarding, support, adoption, public communication, instrumentation, and low-cost production operations across a distributed maintainer network.
+- Reached a July 2017 production snapshot of 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts.
+
+### [CallNYC.org](https://callnyc.org/) — Civic-Tech Builder & Product Translator
+
+New York, NY | 2016
+
+- Built [CallNYC.org](https://callnyc.org/) as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in [Politico New York](https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf).
+- Took the independent civic prototype from problem definition and information architecture through implementation and public release; the archived site now preserves that work as public-interest technology history.
+
+### [KC Town Hall LLC](https://kctownhall.com/) — Co-Founder & Project Manager, Historic Restoration / Mixed-Use Development
+
+Kansas City, MO | 2015–2024
+
+- Co-led planning, public-benefit documentation, vendor coordination, and municipal compliance for adaptive reuse of an approximately 6,500 sq. ft. historic building into four commercial spaces and three homes.
+- Helped deliver Tired of Tires, a recurring free resident service connecting household eligibility, form and phone intake, scheduled field collection, City recycling coordination, volunteer participation, and public result reporting.
+- Co-developed the successful CCED proposal and served as the City's named developer/presenter for a $490,539 public funding request, remained a documented developer point of contact through compliance progress, and later transitioned the project to a mission-aligned organization.
+
+## Additional Leadership
+
+**196 Artists Residency / Sunday Dinner — Founder & Systems Steward** | Brooklyn, NY | 2012–Present
+
+Created repeatable invitation, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
+
+## Education & Professional Development
+
+**University of California, Santa Cruz** — B.A., Film & Digital Media, Honors
+
+**AI Evals for Engineers & PMs** — Shreya Shankar & Hamel Husain / Maven, 2026; application-centric evals, error analysis, annotation, traces, retrieval quality, and human-in-the-loop evaluation.
+
+## Additional Information
+
+Valid New York State driver's license. Authorized to work in the United States; no sponsorship required.
