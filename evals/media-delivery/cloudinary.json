@@ -1,0 +1,42 @@
+{
+  "id": "media-delivery-cloudinary-staging-canary-v1",
+  "purpose": "Keep approved portfolio media, Cloudinary delivery, performance, SEO, and release governance in step.",
+  "mode": "deterministic-hard-gates",
+  "sourceOfTruth": "Checked-in approved derivatives and their knowledge-wiki/photo release records remain canonical; Cloudinary is a rendition CDN only.",
+  "scope": {
+    "included": [
+      "five governed portfolio photographs",
+      "one representative public-site screenshot",
+      "staging-a only"
+    ],
+    "excluded": [
+      "Apple Photos originals",
+      "private archives",
+      "PDF resumes",
+      "Open Graph render inputs and output",
+      "fonts, icons, JavaScript, and CSS",
+      "production and indexing approval"
+    ]
+  },
+  "hardGates": [
+    "Each CDN asset is bound to an exact local SHA-256 and immutable Cloudinary version.",
+    "No asset enters the manifest without public Git, staging, and Cloudinary-public-delivery approval.",
+    "Production and indexing remain open human gates.",
+    "Cloudinary credentials, unsigned presets, upload widgets, and auto-upload URLs never enter public code.",
+    "Responsive widths are bounded; transforms use c_limit and measured WebP quality policies of 30 for photographs and 35 for screenshots.",
+    "An explicit local-delivery override provides rollback.",
+    "The shared CDN hostname is preconnected only when the canary is enabled.",
+    "The current local social preview and resume PDF delivery remain unchanged.",
+    "Staging emits noindex headers and is verified against one exact commit."
+  ],
+  "hillClimb": {
+    "objective": "Eliminate the app-server image proxy hop and lengthen immutable browser caching without a material first-view byte regression or any weakening of visual fidelity, rights, accessibility, or release discipline.",
+    "procedure": [
+      "Run deterministic manifest and loader tests.",
+      "Build the staging candidate and inspect rendered image URLs.",
+      "Compare representative local and Cloudinary response bytes at matched widths.",
+      "Inspect desktop and mobile rendering for crop, alt text, layout, and legibility.",
+      "Keep the change only if all hard gates pass and rollback remains available."
+    ]
+  }
+}

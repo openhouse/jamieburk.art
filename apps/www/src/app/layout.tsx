@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Karla, Oswald } from "next/font/google";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { getCloudinaryPreconnectUrl } from "@/lib/cloudinary-image-delivery.mjs";
 import { createMetadata } from "@/lib/metadata";
 import "./globals.css";
 
@@ -27,8 +28,15 @@ export const viewport: Viewport = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const cloudinaryPreconnect = getCloudinaryPreconnectUrl();
+
   return (
     <html className={`${karla.variable} ${oswald.variable}`} data-theme="human-index" lang="en">
+      <head>
+        {cloudinaryPreconnect ? (
+          <link crossOrigin="anonymous" href={cloudinaryPreconnect} rel="preconnect" />
+        ) : null}
+      </head>
       <body>
         <SiteHeader />
         <main id="main">{children}</main>

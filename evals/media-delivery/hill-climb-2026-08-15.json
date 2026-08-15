@@ -1,0 +1,74 @@
+{
+  "id": "media-delivery-hill-climb-2026-08-15",
+  "candidate": "feature/launch-2026-08-13-02-A",
+  "environment": "staging-a baseline versus immutable Cloudinary renditions",
+  "method": {
+    "widths": "Matched rendered widths",
+    "baseline": "Next.js image optimizer with its existing q=75 policy and browser AVIF acceptance",
+    "candidate": "Direct Cloudinary c_limit renditions using bounded WebP quality by media class",
+    "visualInspection": "Original-resolution decoded comparisons for the East River photograph, Market Hotel crowd photograph, and Harry J. Epstein screenshot"
+  },
+  "performanceBudget": {
+    "maximumRepresentativeByteRatio": 1.15,
+    "reason": "Permit a small first-view byte tradeoff for a direct CDN hop and a 30-day immutable browser cache, while rejecting the multi-fold regressions produced by q_auto:best."
+  },
+  "comparisons": [
+    {
+      "id": "east-river-1200",
+      "kind": "photograph",
+      "width": 1200,
+      "baselineBytes": 78357,
+      "candidateBytes": 82846,
+      "candidatePolicy": "f_webp/q_30",
+      "byteRatio": 1.0573,
+      "visualResult": "pass"
+    },
+    {
+      "id": "save-nyc-spaces-750",
+      "kind": "photograph",
+      "width": 750,
+      "baselineBytes": 25218,
+      "candidateBytes": 25824,
+      "candidatePolicy": "f_webp/q_30",
+      "byteRatio": 1.024,
+      "visualResult": "pass"
+    },
+    {
+      "id": "harry-j-epstein-750",
+      "kind": "screenshot",
+      "width": 750,
+      "baselineBytes": 26499,
+      "candidateBytes": 29662,
+      "candidatePolicy": "f_webp/q_35",
+      "byteRatio": 1.1194,
+      "visualResult": "pass",
+      "note": "q_30 was smaller than baseline but visibly softened interface text; q_35 retained the stronger documentary reading."
+    }
+  ],
+  "rejected": [
+    {
+      "policy": "f_auto/q_auto:best",
+      "eastRiver1200Bytes": 278870,
+      "reason": "3.56 times the existing baseline; failed page-speed budget."
+    },
+    {
+      "policy": "f_webp/q_25 photographs",
+      "marketHotel750Bytes": 21982,
+      "reason": "Smaller, but faces and the banner lost too much documentary detail."
+    },
+    {
+      "policy": "f_webp/q_30 screenshots",
+      "harryJEpstein750Bytes": 25360,
+      "reason": "Smaller, but interface text was visibly softer than the selected q_35 rendition."
+    }
+  ],
+  "cacheObservation": {
+    "baseline": "public, max-age=14400, must-revalidate",
+    "candidate": "private, no-transform, immutable, max-age=2592000"
+  },
+  "decision": "Keep q_30 for photographs and q_35 for screenshots on staging. Keep production and indexing gates open pending live staging observation.",
+  "sources": [
+    "https://cloudinary.com/documentation/image_optimization",
+    "https://cloudinary.com/documentation/transformation_reference"
+  ]
+}

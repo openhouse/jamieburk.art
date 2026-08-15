@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { GovernedImage } from "@/components/GovernedImage";
 import type { PortfolioPhoto } from "@/data/photography";
 
 type FieldPhotoProps = {
@@ -19,11 +19,11 @@ export function FieldPhoto({
   return (
     <figure className={`jb-field-photo ${className}`}>
       <div className="jb-field-photo-frame">
-        <Image
+        <GovernedImage
           alt={photo.alt}
           className={`h-full w-full object-cover ${imageClassName}`}
           height={photo.height}
-          priority={priority}
+          preload={priority}
           sizes={sizes}
           src={photo.src}
           width={photo.width}

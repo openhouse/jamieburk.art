@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { GovernedImage } from "@/components/GovernedImage";
 import { portfolioPhotos } from "@/data/photography";
 import { site } from "@/data/site";
 
@@ -9,11 +9,11 @@ export function Hero() {
   return (
     <section className="jb-hero" aria-labelledby="home-title">
       <div className="jb-hero-image">
-        <Image
+        <GovernedImage
           alt={photo.alt}
           className="object-cover object-[73%_center] sm:object-center"
           fill
-          priority
+          preload
           sizes="100vw"
           src={photo.src}
         />

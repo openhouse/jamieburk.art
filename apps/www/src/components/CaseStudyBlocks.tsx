@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { GovernedImage } from "@/components/GovernedImage";
 import type { ReactNode } from "react";
 import { JBCard } from "@/components/JBCard";
 import { TagList } from "@/components/TagList";
@@ -76,7 +76,7 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
                 key={artifact.title}
               >
                 <a className="block" href={artifact.media.href}>
-                  <Image
+                  <GovernedImage
                     alt={artifact.media.alt}
                     className={`aspect-[3/2] w-full bg-white ${
                       artifact.media.fit === "contain"

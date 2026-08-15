@@ -49,7 +49,9 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: process.env.NEXT_BUILD_SKIP_VERIFIED_TYPECHECK === "1"
   },
   images: {
-    formats: ["image/avif", "image/webp"]
+    formats: ["image/avif", "image/webp"],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1600, 1920],
+    imageSizes: [384]
   },
   async headers() {
     return [

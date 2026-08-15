@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { GovernedImage } from "@/components/GovernedImage";
 import Link from "next/link";
 import { FieldPhoto } from "@/components/FieldPhoto";
 import { portfolioPhotos } from "@/data/photography";
@@ -68,7 +68,7 @@ function EvidenceContent({ variant }: FieldSystemEvidenceProps) {
             className="block overflow-hidden bg-white outline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-jb-blue"
             href={item.screenshot.href}
           >
-            <Image
+            <GovernedImage
               alt={item.screenshot.alt}
               className="aspect-[3/2] h-auto w-full object-cover object-top"
               height={item.screenshot.height}
