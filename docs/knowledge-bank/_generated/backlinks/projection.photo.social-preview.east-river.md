@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to East River social-preview occurrence
 
-**Source commit:** `74aba35902a68c4b253f98d3e1ddde9404edb228`
-**Generation time:** 2026-08-15T06:18:14-04:00
-**Source fingerprint:** `a05a23aa1a4699d93ce00e0fe84f76613f5b05066c4e3f6c99739ae974f5c751`
+**Source commit:** `f6f3d2375f0f41d5b737530463f21dbf6646b949`
+**Generation time:** 2026-08-15T10:50:45-04:00
+**Source fingerprint:** `7967b05563144802bf5193371d025996b88c6185ec9d6b7fe198e512d06c377b`
 
 - [East River beneath the Manhattan Bridge, 2022](../../assets/photographs/east-river-manhattan-bridge-2022.md) - `projected_to` (frontmatter)
 - [August 2026 launch-candidate photographic edition](../../projections/photography/edition-launch-2026-08.md) - `prose_link` (markdown)
