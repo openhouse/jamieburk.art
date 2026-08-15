@@ -5,7 +5,7 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-13
+last_reviewed: 2026-08-15
 review_by: 2026-09-13
 canonical_path: docs/knowledge-bank/indexes/employment-context.md
 summary: Task-oriented entry point for live opportunity research, historical role benchmarks, public-only hiring evaluation, and private-boundary rules.
@@ -41,6 +41,9 @@ relations:
     target: opportunity.protected.source-backed-memory-consulting.2026
     href: ../opportunities/source-backed-team-memory.md
   - type: related_to
+    target: opportunity.uibk.studio3.postdoc.arch-15927
+    href: ../opportunities/uibk-studio3-postdoc-arch-15927.md
+  - type: related_to
     target: evaluation.employment-context.coverage.2026-07-18
     href: ../evaluations/employment-context-coverage-2026-07-18.md
   - type: related_to
@@ -71,6 +74,17 @@ remain private, and later outcomes require separate approval.
 - [ACLU - Senior Project Manager, Learning and Project Solutions](../opportunities/aclu-senior-project-manager.md)
 - [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md)
 - [NYC OTI - PIT Crew Senior Product Manager](../opportunities/oti-senior-product-manager-782366.md)
+
+The first three official application surfaces were rechecked as open on August
+15, 2026. The OTI candidacy is `submitted-pending`: it remains in the active
+truthfully-hirable résumé set while the outcome is unresolved, but it is no
+longer an unsubmitted opening for Jamie.
+
+The downloadable public résumé is a separate maintained artifact tailored to
+the intersection of every opportunity in this active set. It must clear every
+active fictionalized hiring-reader gate. Application-specific résumés may
+weight one opportunity more heavily; expired benchmarks, conditional leads,
+and hard-screened roles cannot enter the public-resume target set.
 
 ## Current authorized milestone
 
@@ -112,6 +126,19 @@ Job 782369 expired on August 7, 2026. Jamie identifies its combination of team
 operations, technical delivery, hiring, onboarding, runbooks, and leadership
 reporting as an unusually strong future-role archetype. It remains searchable
 for recurrence and gap analysis but must never enter the live-application set.
+
+## Hard-screened high-affinity context
+
+- [University of Innsbruck ./studio3 - University Assistant (Postdoc), ARCH-15927](../opportunities/uibk-studio3-postdoc-arch-15927.md)
+
+The posting remains open through August 27, 2026 and has exceptional thematic
+affinity with Jamie's situated systems, artistic practice, digital-media
+education, and prior engagement with ./studio3's public program. It also
+requires both an Architecture master's-level degree and an Architecture
+doctorate or PhD. Jamie's maintained record establishes neither credential.
+The exact requisition is therefore `exclude-hard-screen`: discoverable for
+adjacent-role research, but excluded from candidacy, application, public-resume
+tailoring, and named-reader acceptance.
 
 ## Earlier researched contexts
 

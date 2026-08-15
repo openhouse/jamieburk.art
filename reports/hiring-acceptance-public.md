@@ -3,10 +3,10 @@
 
 **Candidate commit:** `efcae62a06584525d91318cb41c4079fb191b719`
 **Portfolio snapshot:** `c853c01c8a7673cd1430acefedf11c4314180d37dd14ff96547a25d594ecd0c3`
-**Role-context hash:** `8fe30638508a33506628406c1fa27b3ed73e0d2035546c545a819ee085fedd4a`
+**Role-context hash:** `ab188e082c436790e9a0c6fd3f36fd7b6df6bed5e32373ed3e918f82495f245a`
 **Reader-context hash:** `e055b82642616d52177ad68ae4d3bbaeb3953ef3c75cfa3e159c65166862e29f`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
-**Candidate paths clean:** yes
+**Candidate paths clean:** no
 
 > Deterministic baseline only. This is not an interview prediction, a named person's opinion, or a human reader study.
 
@@ -103,6 +103,23 @@
 - `requirement.oti.reporting-and-metrics`: **observed** on `/work/technical-operations`
 - `requirement.oti.continuous-improvement`: **observed** on `/work/technical-operations`
 - `requirement.oti.government-hiring-and-procurement`: **not observed** on `/work/callnyc`
+
+### University of Innsbruck ./studio3 - University Assistant (Postdoc), ARCH-15927
+
+- Deterministic disposition: `hard-screen-exclusion`
+- Critical signals observed: 0/4
+- All signals observed: 0/4
+- Opportunity status live: yes
+- Historical benchmark: no
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: yes
+- Public reporting context: Head of the Institute of Experimental Architecture (role-identity-matched)
+- Public vision context: ./studio3 artistic-design working-group faculty (role-identity-matched)
+
+- `requirement.uibk.studio3.architecture-degrees`: **not observed**
+- `requirement.uibk.studio3.experimental-artistic-research`: **not observed**
+- `requirement.uibk.studio3.digital-spatial-methods`: **not observed**
+- `requirement.uibk.studio3-grants-teaching-administration`: **not observed**
 
 ### Protected source-backed team-memory consulting lead
 

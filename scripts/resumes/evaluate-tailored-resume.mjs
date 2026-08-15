@@ -190,10 +190,8 @@ function sha256(bytes) {
 export function evaluateDocumentArtifact(root = repoRoot) {
   const config = rubric.documentArtifact;
   const pdfPath = path.join(root, config.pdfPath);
-  const publicPdfPath = path.join(root, config.publicPdfPath);
   const inspectionPath = path.join(root, config.visualInspectionRunPath);
   const pdf = existsSync(pdfPath) ? readFileSync(pdfPath) : null;
-  const publicPdf = existsSync(publicPdfPath) ? readFileSync(publicPdfPath) : null;
   const inspection = existsSync(inspectionPath)
     ? JSON.parse(readFileSync(inspectionPath, "utf8"))
     : null;
@@ -234,11 +232,6 @@ export function evaluateDocumentArtifact(root = repoRoot) {
       detail: `${config.forbiddenLinkTargets.filter((target) => !pdfText.includes(target)).length}/${config.forbiddenLinkTargets.length} excluded links absent.`
     },
     {
-      id: "public-download-matches-tailored-pdf",
-      pass: pdf !== null && publicPdf !== null && pdf.equals(publicPdf),
-      detail: "The portfolio download is byte-identical to the application-tailored PDF."
-    },
-    {
       id: "visual-inspection-current",
       pass:
         inspection !== null &&
@@ -268,7 +261,6 @@ export function evaluateDocumentArtifact(root = repoRoot) {
     schemaVersion: 1,
     rubricId: `${rubric.id}.document-artifact`,
     pdfPath: config.pdfPath,
-    publicPdfPath: config.publicPdfPath,
     sha256: pdfHash,
     passedChecks: checks.filter((check) => check.pass).length,
     totalChecks: checks.length,

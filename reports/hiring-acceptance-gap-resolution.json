@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "candidateSha": "efcae62a06584525d91318cb41c4079fb191b719",
   "portfolioSnapshotHash": "c853c01c8a7673cd1430acefedf11c4314180d37dd14ff96547a25d594ecd0c3",
-  "publicReportHash": "8a0e964c825d835d5c56c385b2aaeae2992aca9365e9a05c1e6afb6acb471c2f",
-  "wikiSourceFingerprint": "fde57500c6b2816b90ddd08596d58d0e0ead48d1435c588d9aff5402884c2304",
+  "publicReportHash": "bfbf4405224c35b074e4de460390ffec4fdb332de21391fd9da23ae4e210ac1a",
+  "wikiSourceFingerprint": "484be4b0383540046a6103cc62fe24dd196596f9ea8c0ff4db5a315606bbded2",
   "findings": [
     {
       "findingId": "finding.requirement.codepath.qa-and-bug-pipeline",
@@ -95,6 +95,56 @@
       "currentStatus": "visible-weak",
       "gapType": "public-projection",
       "smallestResponsibleChange": "Do not imply procurement authority; clarify adjacent government-process experience in the application.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.uibk.studio3.architecture-degrees",
+      "opportunityId": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "requirementId": "requirement.uibk.studio3.architecture-degrees",
+      "classification": "hard-screen-gap",
+      "wikiRecords": [],
+      "currentStatus": "hard-screen",
+      "gapType": "hard-screen",
+      "smallestResponsibleChange": "Do not apply to ARCH-15927; search for adjacent roles without these credential screens.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.uibk.studio3.experimental-artistic-research",
+      "opportunityId": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "requirementId": "requirement.uibk.studio3.experimental-artistic-research",
+      "classification": "true-experience-gap",
+      "wikiRecords": [
+        "event.studio3.ai-made-me-do-it.2024"
+      ],
+      "currentStatus": "experience-gap",
+      "gapType": "experience",
+      "smallestResponsibleChange": "Treat the vocabulary as adjacent-opportunity search context, not proof of architectural research qualification.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.uibk.studio3.digital-spatial-methods",
+      "opportunityId": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "requirementId": "requirement.uibk.studio3.digital-spatial-methods",
+      "classification": "source-needs-close-reading",
+      "wikiRecords": [],
+      "currentStatus": "source-needed",
+      "gapType": "source",
+      "smallestResponsibleChange": "Inventory only exact, inspectable media-installation and spatial-computing evidence before using this language elsewhere.",
+      "requiresOriginalSourceReview": true,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.uibk.studio3-grants-teaching-administration",
+      "opportunityId": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "requirementId": "requirement.uibk.studio3-grants-teaching-administration",
+      "classification": "true-experience-gap",
+      "wikiRecords": [],
+      "currentStatus": "source-needed",
+      "gapType": "experience",
+      "smallestResponsibleChange": "Keep civic grants, facilitation, and project administration distinct from university grant management and formal academic supervision.",
       "requiresOriginalSourceReview": false,
       "requiresHumanApproval": true
     },

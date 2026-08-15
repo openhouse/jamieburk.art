@@ -27,6 +27,37 @@ test("every priority and benchmark opportunity resume advances through every mod
   assert.equal(result.decision, "advance-to-structured-next-step");
 });
 
+test("one public resume advances through every active truthfully-hirable reader lens", () => {
+  const result = evaluateHiringReaderPortfolio();
+
+  assert.ok(result.publicResume, "The evaluator must expose the maintained public resume.");
+  assert.deepEqual(
+    [...result.publicResume.activeOpportunityIds].sort(),
+    [...suite.activeTruthfullyHirableOpportunityIds].sort()
+  );
+  assert.equal(result.publicResume.overall, "pass", JSON.stringify(result.publicResume, null, 2));
+  assert.equal(result.publicResume.readerResults.length, 7);
+  assert.equal(
+    result.publicResume.readerResults.filter((reader) => reader.modeledVerdict === "pass").length,
+    7
+  );
+});
+
+test("hard-screened high-affinity roles cannot enter the public resume target set", () => {
+  assert.ok(Array.isArray(suite.activeTruthfullyHirableOpportunityIds));
+  assert.ok(Array.isArray(suite.excludedOpportunityIds));
+
+  const studio3 = suite.excludedOpportunityIds.find(
+    (entry) => entry.opportunityId === "opportunity.uibk.studio3.postdoc.arch-15927"
+  );
+  assert.equal(studio3?.disposition, "exclude-hard-screen");
+  assert.ok(studio3?.hardScreens.includes("completed architecture doctorate or PhD"));
+  assert.equal(
+    suite.activeTruthfullyHirableOpportunityIds.includes(studio3.opportunityId),
+    false
+  );
+});
+
 test("a missing opportunity-specific resume fails closed", () => {
   const missingPath = config.versions[0].resumePath;
   const result = evaluateHiringReaderPortfolio({ resumeOverrides: { [missingPath]: null } });

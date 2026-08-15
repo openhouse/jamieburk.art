@@ -34,7 +34,7 @@ test("public hiring evaluator receives no protected Wiki or communications", () 
   assert.equal(report.publicSafety.privateMarkerCount, 0);
   assert.equal(report.publicSafety.protectedWikiReceived, false);
   assert.equal(report.publicSafety.rawCommunicationsReceived, false);
-  assert.equal(report.opportunities.length, 6);
+  assert.equal(report.opportunities.length, 7);
   assert.ok(!JSON.stringify(report).includes("wikiRecords"));
   const protectedOpportunity = report.opportunities.find((item) => item.id.includes("protected.source-backed-memory"));
   assert.equal(protectedOpportunity.live, false);
@@ -43,6 +43,18 @@ test("public hiring evaluator receives no protected Wiki or communications", () 
     JSON.stringify(protectedOpportunity),
     /(?:message|email|transcript)_(?:body|excerpt)|(?:collaborator|company)_identity|private_path/i
   );
+});
+
+test("the open Studio3 postdoc remains discoverable but fails closed on its architecture degrees", () => {
+  const { report } = evaluatePublicHiring(defaultRepoRoot);
+  const studio3 = report.opportunities.find(
+    (item) => item.id === "opportunity.uibk.studio3.postdoc.arch-15927"
+  );
+
+  assert.ok(studio3, "The researched opportunity must remain in the knowledge graph.");
+  assert.equal(studio3.live, true);
+  assert.equal(studio3.hardScreenBlocked, true);
+  assert.equal(studio3.decision, "hard-screen-exclusion");
 });
 
 test("named reader profiles retain simulation disclaimers", () => {

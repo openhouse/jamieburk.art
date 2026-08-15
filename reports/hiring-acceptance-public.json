@@ -3,9 +3,9 @@
   "runId": "hiring-public-efcae62a0658",
   "generatedAt": "2026-08-14T21:56:21-04:00",
   "candidateSha": "efcae62a06584525d91318cb41c4079fb191b719",
-  "candidatePathsClean": true,
+  "candidatePathsClean": false,
   "portfolioSnapshotHash": "c853c01c8a7673cd1430acefedf11c4314180d37dd14ff96547a25d594ecd0c3",
-  "roleContextHash": "8fe30638508a33506628406c1fa27b3ed73e0d2035546c545a819ee085fedd4a",
+  "roleContextHash": "ab188e082c436790e9a0c6fd3f36fd7b6df6bed5e32373ed3e918f82495f245a",
   "readerContextHash": "e055b82642616d52177ad68ae4d3bbaeb3953ef3c75cfa3e159c65166862e29f",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
   "publicSafety": {
@@ -728,6 +728,72 @@
           "evidenceNeedles": [
             "New York City Council"
           ]
+        }
+      ]
+    },
+    {
+      "id": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "title": "University of Innsbruck ./studio3 - University Assistant (Postdoc), ARCH-15927",
+      "roleContextHash": "b950ffd46675bc244cf77f73e703337f62f6c5ec8fee919b71c9ec9051c0f5aa",
+      "benchmark": false,
+      "live": true,
+      "fresh": true,
+      "hardScreenBlocked": true,
+      "publicReportingContext": {
+        "role": "Head of the Institute of Experimental Architecture",
+        "person": "person.kathrin-aste",
+        "identification": "role-identity-matched",
+        "source": "source.uibk.studio3.leadership.2026",
+        "boundary": "Official pages establish unit leadership, not the postdoc's direct manager, selection committee, or hiring authority."
+      },
+      "publicVisionContext": {
+        "role": "./studio3 artistic-design working-group faculty",
+        "person": "person.kathrin-aste",
+        "identification": "role-identity-matched",
+        "source": "source.uibk.studio3.leadership.2026",
+        "boundary": "Official pages establish public institutional and artistic context, not private views or selection participation."
+      },
+      "decision": "hard-screen-exclusion",
+      "observed": 0,
+      "requirementTotal": 4,
+      "criticalObserved": 0,
+      "criticalTotal": 4,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.uibk.studio3.architecture-degrees",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "hard-screen",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.uibk.studio3.experimental-artistic-research",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "experience-gap",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.uibk.studio3.digital-spatial-methods",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "source-needed",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.uibk.studio3-grants-teaching-administration",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "source-needed",
+          "routes": [],
+          "evidenceNeedles": []
         }
       ]
     },

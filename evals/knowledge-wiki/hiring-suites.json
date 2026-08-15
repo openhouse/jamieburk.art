@@ -1,7 +1,13 @@
 {
   "id": "current-priority-2026-08-13",
-  "version": 3,
+  "version": 4,
   "principle": "The public evaluator sees public projection files and public role and reader context only; Wiki gap resolution is a separate pass.",
+  "activeTruthfullyHirableOpportunityIds": [
+    "opportunity.codepath.engineering-project-manager.5160542007",
+    "opportunity.aclu.senior-project-manager.8620968002",
+    "opportunity.benepass.product-operations.7f963a7a",
+    "opportunity.nyc-oti.senior-product-manager.782366"
+  ],
   "priorityOpportunityIds": [
     "opportunity.codepath.engineering-project-manager.5160542007",
     "opportunity.aclu.senior-project-manager.8620968002",
@@ -11,12 +17,26 @@
   "benchmarkOpportunityIds": [
     "opportunity.nyc-oti.technical-operations-manager.782369"
   ],
+  "excludedOpportunityIds": [
+    {
+      "opportunityId": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "status": "open-high-affinity",
+      "disposition": "exclude-hard-screen",
+      "publicResumeEligible": false,
+      "hardScreens": [
+        "completed architecture master's degree",
+        "completed architecture doctorate or PhD"
+      ],
+      "reason": "The official posting requires both architecture degrees; Jamie's maintained education record is a BA in Film and Digital Media. The role remains useful as adjacent-field and future-opportunity context, but it cannot enter the active public-resume target set."
+    }
+  ],
   "opportunityPaths": [
     "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
     "docs/knowledge-bank/opportunities/aclu-senior-project-manager.md",
     "docs/knowledge-bank/opportunities/benepass-product-operations.md",
     "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
     "docs/knowledge-bank/opportunities/oti-technical-operations.md",
+    "docs/knowledge-bank/opportunities/uibk-studio3-postdoc-arch-15927.md",
     "docs/knowledge-bank/opportunities/source-backed-team-memory.md"
   ],
   "readerPaths": [
@@ -78,6 +98,13 @@
       "k": 3
     },
     {
+      "id": "query.experimental-architecture-art-technology",
+      "terms": ["experimental architecture", "artistic research", "new media", "innovative technologies", "spatial research"],
+      "expectedTopK": ["opportunity.uibk.studio3.postdoc.arch-15927"],
+      "statuses": ["live"],
+      "k": 3
+    },
+    {
       "id": "query.source-backed-memory-consulting",
       "terms": ["source-backed team memory", "decision lineage", "onboarding context", "human-reviewed AI", "knowledge-friction mapping"],
       "expectedTopK": ["opportunity.protected.source-backed-memory-consulting.2026"],
@@ -96,6 +123,12 @@
       "id": "negative.windows-infrastructure-admin",
       "terms": ["technical operations", "risk", "documentation", "stakeholders"],
       "hardScreens": ["professional network administration certification", "hands-on Windows and network administration"],
+      "expectedDisposition": "exclude-hard-screen"
+    },
+    {
+      "id": "negative.architecture-postdoc-degrees",
+      "terms": ["art", "culture", "new media", "innovative technologies", "research"],
+      "hardScreens": ["completed architecture master's degree", "completed architecture doctorate or PhD"],
       "expectedDisposition": "exclude-hard-screen"
     }
   ]

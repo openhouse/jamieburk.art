@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "id": "resume-hiring-reader-portfolio-2026-08-14",
-  "evaluatedAt": "2026-08-14T21:00:00-04:00",
-  "currentRunPath": "evals/resumes/runs/2026-08-14-hiring-reader-resume-portfolio-post-hillclimb.json",
+  "evaluatedAt": "2026-08-15T08:15:00-04:00",
+  "currentRunPath": "evals/resumes/runs/2026-08-15-hiring-reader-resume-portfolio-universal-public.json",
   "methodology": {
     "skill": "interviewing-evaluating-candidates",
     "installedPath": ".agents/skills/interviewing-evaluating-candidates/SKILL.md",
@@ -43,6 +43,21 @@
       "(?:solely created|single-handedly|personally caused)",
       "(?:WCAG compliant|Section 508 compliant)"
     ]
+  },
+  "publicResume": {
+    "artifactId": "resume.public.active-opportunity-portfolio.2026-08-15",
+    "targetRole": "Technical Project Manager",
+    "status": "public-active-opportunity-portfolio",
+    "activeOpportunityIds": [
+      "opportunity.codepath.engineering-project-manager.5160542007",
+      "opportunity.aclu.senior-project-manager.8620968002",
+      "opportunity.benepass.product-operations.7f963a7a",
+      "opportunity.nyc-oti.senior-product-manager.782366"
+    ],
+    "resumePath": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.md",
+    "pdfPath": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "publicPdfPath": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "visualRunPath": "evals/resumes/runs/2026-08-15-public-active-opportunity-resume-pdf-visual.json"
   },
   "versions": [
     {
@@ -158,7 +173,7 @@
       "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
       "organization": "NYC Office of Technology and Innovation",
       "targetRole": "Senior Product Manager",
-      "status": "live-priority",
+      "status": "submitted-pending",
       "officialSource": "https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-44507",
       "resumePath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
       "readerCriteria": [

@@ -26,6 +26,32 @@ interview, or made a final hiring decision. Work samples, structured interviews,
 references, formal eligibility checks, and the employer's own judgment remain
 human gates.
 
+## Public resume contract
+
+The resume installed at
+`apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf`
+is not an application-specific artifact. It is the universal public resume for
+every opportunity that remains both active and truthfully hirable in
+`evals/knowledge-wiki/hiring-suites.json`.
+
+Its authoritative Markdown source is:
+
+```text
+resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.md
+```
+
+The public resume must pass every isolated fictionalized hiring-reader gate
+attached to that exact active set. A live role with an unmet hard screen remains
+discoverable in the Knowledge Wiki but is excluded from the public-resume target
+set. A submitted application remains active while its outcome is pending. An
+expired or closed role remains only as an explicitly labeled benchmark.
+
+When an opportunity enters or leaves the truthfully hirable set, update the
+Knowledge Wiki lifecycle first, then revise the universal Markdown, its PDF,
+visual receipt, and hiring-reader run together. A role-specific application
+resume may be more narrowly tailored; it never silently replaces the universal
+public resume.
+
 ## Markdown, Google Docs, and PDF contract
 
 The Markdown file is the authoritative opportunity-tailored content. Every

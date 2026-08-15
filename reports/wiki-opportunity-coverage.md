@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity requirement coverage
 
-**Wiki fingerprint:** `fde57500c6b2816b90ddd08596d58d0e0ead48d1435c588d9aff5402884c2304`
+**Wiki fingerprint:** `484be4b0383540046a6103cc62fe24dd196596f9ea8c0ff4db5a315606bbded2`
 
 Statuses preserve the difference between visible proof, Wiki-only proof, source work, experience gaps, and hard screens.
 
@@ -102,3 +102,12 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 | `requirement.protected-memory.knowledge-friction` | critical | visible-qualified | none | Keep the public method legible without exposing the protected lead. |
 | `requirement.protected-memory.human-review` | critical | visible-proven | none | Preserve the explicit human-review boundary. |
 | `requirement.protected-memory.bounded-sprint` | important | visible-qualified | role-context | Do not imply that a sprint was accepted, funded, or delivered. |
+
+## University of Innsbruck ./studio3 - University Assistant (Postdoc), ARCH-15927
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.uibk.studio3.architecture-degrees` | critical | hard-screen | hard-screen | Do not apply to ARCH-15927; search for adjacent roles without these credential screens. |
+| `requirement.uibk.studio3.experimental-artistic-research` | critical | experience-gap | experience | Treat the vocabulary as adjacent-opportunity search context, not proof of architectural research qualification. |
+| `requirement.uibk.studio3.digital-spatial-methods` | critical | source-needed | source | Inventory only exact, inspectable media-installation and spatial-computing evidence before using this language elsewhere. |
+| `requirement.uibk.studio3-grants-teaching-administration` | critical | source-needed | experience | Keep civic grants, facilitation, and project administration distinct from university grant management and formal academic supervision. |

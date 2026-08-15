@@ -8,6 +8,16 @@ test("the dated project-website inventory and restored close readings pass", () 
   assert.equal(result.passed, true, result.failures.join("\n"));
 });
 
+test("Harry J. Epstein may remain plain text in maintained resumes", () => {
+  const candidate = loadCandidate();
+  candidate.resumes = candidate.resumes.map((resume) => ({
+    ...resume,
+    text: resume.text.replaceAll("https://www.harryepstein.com/", "")
+  }));
+  const result = evaluateProjectWebsites(candidate);
+  assert.equal(result.passed, true, result.failures.join("\n"));
+});
+
 function expectFailure(name, mutate, expected) {
   test(name, () => {
     const candidate = loadCandidate();

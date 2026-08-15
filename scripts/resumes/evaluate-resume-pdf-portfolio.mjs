@@ -69,6 +69,9 @@ export function evaluateResumePdfPortfolio({
   const versions = config.versions.map((version) => {
     const markdownBuffer = getFile(version.markdownPath, root, fileOverrides);
     const pdfBuffer = getFile(version.pdfPath, root, fileOverrides);
+    const publicInstallBuffer = version.publicInstallPath
+      ? getFile(version.publicInstallPath, root, fileOverrides)
+      : null;
     const visualBuffer = getFile(version.visualRunPath, root, fileOverrides);
     const markdown =
       markdownBuffer === null
@@ -157,10 +160,22 @@ export function evaluateResumePdfPortfolio({
           visual.sourceTemplate?.privateLocatorCommitted === false &&
           !hasPrivateGoogleLocator(JSON.stringify(visual)),
         detail: "The source remains read-only and private Google locators stay out of the repository."
+      },
+      {
+        id: "public-install-byte-identical",
+        pass:
+          !version.publicInstallPath ||
+          (pdfBuffer !== null &&
+            publicInstallBuffer !== null &&
+            pdfBuffer.equals(publicInstallBuffer)),
+        detail: version.publicInstallPath
+          ? "The deployed public-resume source is byte-identical to its maintained PDF sibling."
+          : "This opportunity-specific artifact has no public install target."
       }
     ];
 
     return {
+      artifactId: version.artifactId,
       opportunityId: version.opportunityId,
       markdownPath: version.markdownPath,
       pdfPath: version.pdfPath,
@@ -169,6 +184,12 @@ export function evaluateResumePdfPortfolio({
       pdfSha256: pdfHash,
       pdfBytes: pdfBuffer?.length ?? 0,
       pages: facts?.pageCount ?? 0,
+      publicInstallPath: version.publicInstallPath,
+      publicInstallMatches: version.publicInstallPath
+        ? pdfBuffer !== null &&
+          publicInstallBuffer !== null &&
+          pdfBuffer.equals(publicInstallBuffer)
+        : null,
       preservedLinks: facts?.uris ?? [],
       checks,
       overall: checks.every((check) => check.pass) ? "pass" : "fail"
@@ -178,8 +199,8 @@ export function evaluateResumePdfPortfolio({
   const portfolioChecks = [
     {
       id: "all-hiring-suite-versions-covered",
-      pass: config.versions.length === 5,
-      detail: `${config.versions.length}/5 opportunity versions configured.`
+      pass: config.versions.length === config.artifactStandards.expectedArtifacts,
+      detail: `${config.versions.length}/${config.artifactStandards.expectedArtifacts} maintained resume artifacts configured.`
     },
     {
       id: "no-private-google-locator-in-config",
@@ -205,18 +226,18 @@ export function evaluateResumePdfPortfolio({
   const overall =
     portfolioChecks.every((check) => check.pass) &&
     passing === versions.length &&
-    versions.length === 5
+    versions.length === config.artifactStandards.expectedArtifacts
       ? "pass"
       : "fail";
 
   return {
     schemaVersion: 1,
     evalId: config.id,
-    runId: "2026-08-14-resume-pdf-portfolio-post-hillclimb",
+    runId: "2026-08-15-resume-pdf-portfolio-universal-public",
     evaluatedAt: config.evaluatedAt,
     overall,
     summary: {
-      requiredVersions: 5,
+      requiredVersions: config.artifactStandards.expectedArtifacts,
       configuredVersions: versions.length,
       passingVersions: passing,
       markdownPdfSiblingPairs: versions.filter(
@@ -243,7 +264,8 @@ export function currentRunSnapshot(result) {
     summary: result.summary,
     portfolioChecks: result.portfolioChecks.map(({ id, pass }) => ({ id, pass })),
     versions: result.versions.map((version) => ({
-      opportunityId: version.opportunityId,
+      ...(version.opportunityId ? { opportunityId: version.opportunityId } : {}),
+      ...(version.artifactId ? { artifactId: version.artifactId } : {}),
       markdownPath: version.markdownPath,
       pdfPath: version.pdfPath,
       visualRunPath: version.visualRunPath,
@@ -251,6 +273,8 @@ export function currentRunSnapshot(result) {
       pdfSha256: version.pdfSha256,
       pdfBytes: version.pdfBytes,
       pages: version.pages,
+      ...(version.publicInstallPath ? { publicInstallPath: version.publicInstallPath } : {}),
+      publicInstallMatches: version.publicInstallMatches,
       overall: version.overall,
       checks: version.checks.map(({ id, pass }) => ({ id, pass }))
     })),

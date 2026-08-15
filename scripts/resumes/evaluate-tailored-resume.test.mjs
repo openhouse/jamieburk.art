@@ -25,10 +25,15 @@ test("the OTI tailored resume passes every deterministic application gate", () =
   assert.equal(result.passedChecks, result.totalChecks);
 });
 
-test("the OTI PDF is current, visually inspected, and installed as the public download", () => {
+test("the OTI application PDF is current and visually inspected independently of the public download", () => {
   const result = evaluateDocumentArtifact();
   assert.equal(result.overall, "pass", JSON.stringify(result.checks, null, 2));
   assert.equal(result.passedChecks, result.totalChecks);
+  assert.equal(
+    result.checks.find((check) => check.id === "public-download-matches-tailored-pdf"),
+    undefined
+  );
+  assert.equal(result.publicPdfPath, undefined);
 });
 
 test("the OTI resume links the Politico article and keeps the KC Town Hall transition concise", () => {

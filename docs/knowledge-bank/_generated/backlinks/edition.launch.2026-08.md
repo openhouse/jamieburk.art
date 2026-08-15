@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to August 2026 launch-candidate photographic edition
 
-**Source commit:** `f6f3d2375f0f41d5b737530463f21dbf6646b949`
-**Generation time:** 2026-08-15T10:50:45-04:00
-**Source fingerprint:** `eaa16a2942b1bb8312565d853851129caf38f505dfaec5f49fd97cfc75e21e58`
+**Source commit:** `931a04882cd285591707f3de3c9b80f47f7a149a`
+**Generation time:** 2026-08-15T16:43:32-04:00
+**Source fingerprint:** `484be4b0383540046a6103cc62fe24dd196596f9ea8c0ff4db5a315606bbded2`
 
 - [Selective Cloudinary delivery for governed portfolio derivatives](../../decisions/cloudinary-selective-media-delivery-2026-08-15.md) - `related_to` (frontmatter)
 - [Portfolio project-cover curatorial record](../../evaluations/curatorial/portfolio-project-covers-2026-08-13.md) - `related_to` (frontmatter)

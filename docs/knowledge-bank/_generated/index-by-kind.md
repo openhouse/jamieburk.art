@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `f6f3d2375f0f41d5b737530463f21dbf6646b949`
-**Generation time:** 2026-08-15T10:50:45-04:00
-**Source fingerprint:** `eaa16a2942b1bb8312565d853851129caf38f505dfaec5f49fd97cfc75e21e58`
+**Source commit:** `931a04882cd285591707f3de3c9b80f47f7a149a`
+**Generation time:** 2026-08-15T16:43:32-04:00
+**Source fingerprint:** `484be4b0383540046a6103cc62fe24dd196596f9ea8c0ff4db5a315606bbded2`
 
 ## application
 
@@ -337,6 +337,7 @@
 - [NYC OTI - Technical Operations Manager 782369](../opportunities/oti-technical-operations.md) - `opportunity.nyc-oti.technical-operations-manager.782369`
 - [PermitFlow - Product Operations Manager](../opportunities/permitflow-product-operations.md) - `opportunity.permitflow.product-operations.8a6e6066`
 - [Protected source-backed team-memory consulting lead](../opportunities/source-backed-team-memory.md) - `opportunity.protected.source-backed-memory-consulting.2026`
+- [University of Innsbruck ./studio3 - University Assistant (Postdoc), ARCH-15927](../opportunities/uibk-studio3-postdoc-arch-15927.md) - `opportunity.uibk.studio3.postdoc.arch-15927`
 
 ## organization
 
@@ -351,9 +352,11 @@
 - [Elana Gordon](../people/elana-gordon.md) - `person.elana-gordon`
 - [Jaclyn Chen](../people/jaclyn-chen.md) - `person.jaclyn-chen`
 - [Jamie Burkart](../people/jamie-burkart.md) - `person.jamie-burkart`
+- [Kathrin Aste](../people/kathrin-aste.md) - `person.kathrin-aste`
 - [Lisa Gelobter](../people/lisa-gelobter.md) - `person.lisa-gelobter`
 - [Luke Farrell](../people/luke-farrell.md) - `person.luke-farrell`
 - [Paul Mossine](../people/paul-mossine.md) - `person.paul-mossine`
+- [Thomas Edlinger](../people/thomas-edlinger.md) - `person.thomas-edlinger`
 - [Warren Sack](../people/warren-sack.md) - `person.warren-sack`
 - [Zack Parker](../people/zack-parker.md) - `person.zack-parker`
 
@@ -441,6 +444,7 @@
 - [NYC Jobs - Senior Product Manager 782366](../sources/jobs-oti-senior-product-manager-782366.md) - `source.jobs.oti.senior-product-manager.782366`
 - [NYC Jobs - Technical Operations Manager 782369](../sources/jobs-oti-technical-operations-782369.md) - `source.jobs.oti.technical-operations.782369`
 - [Official posting - PermitFlow Product Operations Manager](../sources/jobs-permitflow-product-operations.md) - `source.jobs.permitflow.product-operations.8a6e6066`
+- [Official posting - University of Innsbruck ./studio3 postdoc ARCH-15927](../sources/jobs-uibk-studio3-postdoc-arch-15927.md) - `source.jobs.uibk.studio3.postdoc.arch-15927`
 - [The Kansas City Star raft report, November 15, 2007](../sources/kansas-city-star-raft-2007-11-15.md) - `source.kansas-city-star.raft.2007-11-15`
 - [KC Town Hall CCED proposal bundle, 2019](../sources/kc-town-hall-cced-proposal-2019.md) - `source.kc-town-hall.cced-proposal.2019`
 - [KC Town Hall local digital archive review, July 2026](../sources/archives/kc-town-hall-local-digital-archive-2026-07.md) - `source.kc-town-hall.local-digital-archive.2026-07`
@@ -503,6 +507,8 @@
 - [Commercial Rent Stabilization public event: speaker index](../testimony/commercial-rent-public-support/2025-11-13-commissioner-supportive-remarks.md) - `source.transcript.commercial-rent.public-event.2025-11-13`
 - [UCSC narrative evaluations, 2004-2006](../sources/ucsc-narrative-evaluations-2004-2006.md) - `source.ucsc.narrative-evaluations.2004-2006`
 - [Warren Sack - Film and Digital Media Department](../sources/ucsc-warren-sack-profile-2026.md) - `source.ucsc.warren-sack-profile.2026`
+- [University of Innsbruck scientific-staff profile - postdocs](../sources/uibk-postdoc-profile-2026.md) - `source.uibk.postdoc-profile.2026`
+- [Official University of Innsbruck and ./studio3 leadership context](../sources/uibk-studio3-leadership-2026.md) - `source.uibk.studio3.leadership.2026`
 - [Protected communication history - public-safe metadata boundary](../sources/protected-communication-vault-metadata.md) - `source.vault.communication-history.metadata`
 - [Weibel Institute In Terms of Media event record](../sources/weibel-in-terms-of-media-2024.md) - `source.weibel.in-terms-of-media.2024`
 - [Governed WOW List knowledge repository](../sources/wowlist-knowledge-repository-2026.md) - `source.wowlist.knowledge-repository.2026`

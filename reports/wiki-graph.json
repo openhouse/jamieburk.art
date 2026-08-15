@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-15T10:50:45-04:00",
-  "sourceCommit": "f6f3d2375f0f41d5b737530463f21dbf6646b949",
-  "sourceFingerprint": "eaa16a2942b1bb8312565d853851129caf38f505dfaec5f49fd97cfc75e21e58",
+  "generatedAt": "2026-08-15T16:43:32-04:00",
+  "sourceCommit": "931a04882cd285591707f3de3c9b80f47f7a149a",
+  "sourceFingerprint": "484be4b0383540046a6103cc62fe24dd196596f9ea8c0ff4db5a315606bbded2",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3310,7 +3310,7 @@
       "sensitivity": "low",
       "summary": "Task-oriented entry point for live opportunity research, historical role benchmarks, public-only hiring evaluation, and private-boundary rules.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
+      "lastReviewed": "2026-08-15",
       "reviewBy": "2026-09-13"
     },
     {
@@ -3938,6 +3938,19 @@
       "reviewBy": "2026-09-10"
     },
     {
+      "id": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "path": "docs/knowledge-bank/opportunities/uibk-studio3-postdoc-arch-15927.md",
+      "title": "University of Innsbruck ./studio3 - University Assistant (Postdoc), ARCH-15927",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "High-affinity experimental-architecture opportunity retained for adjacent-field discovery but excluded from active candidacy and public-resume targeting by mandatory Architecture degree screens.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-08-27"
+    },
+    {
       "id": "organization.nyc-artist-coalition",
       "path": "docs/knowledge-bank/organizations/nyc-artist-coalition.md",
       "title": "NYC Artist Coalition organization map",
@@ -4047,6 +4060,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "person.kathrin-aste",
+      "path": "docs/knowledge-bank/people/kathrin-aste.md",
+      "title": "Kathrin Aste",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public institutional context for the head of the University of Innsbruck's Institute of Experimental Architecture and ./studio3 faculty member.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-11-15"
+    },
+    {
       "id": "person.lisa-gelobter",
       "path": "docs/knowledge-bank/people/lisa-gelobter.md",
       "title": "Lisa Gelobter",
@@ -4084,6 +4110,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-13",
       "reviewBy": "2027-02-13"
+    },
+    {
+      "id": "person.thomas-edlinger",
+      "path": "docs/knowledge-bank/people/thomas-edlinger.md",
+      "title": "Thomas Edlinger",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public institutional context for ./studio3 faculty in artistic discourse.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-11-15"
     },
     {
       "id": "person.warren-sack",
@@ -4970,6 +5009,19 @@
       "reviewBy": "2026-07-21"
     },
     {
+      "id": "source.jobs.uibk.studio3.postdoc.arch-15927",
+      "path": "docs/knowledge-bank/sources/jobs-uibk-studio3-postdoc-arch-15927.md",
+      "title": "Official posting - University of Innsbruck ./studio3 postdoc ARCH-15927",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official University of Innsbruck posting for a part-time, four-year University Assistant postdoc in Experimental Architecture's ./studio3 working group.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-08-27"
+    },
+    {
       "id": "source.kansas-city-star.raft.2007-11-15",
       "path": "docs/knowledge-bank/sources/kansas-city-star-raft-2007-11-15.md",
       "title": "The Kansas City Star raft report, November 15, 2007",
@@ -5777,6 +5829,32 @@
       "aliases": [],
       "lastReviewed": "2026-08-03",
       "reviewBy": "2027-02-03"
+    },
+    {
+      "id": "source.uibk.postdoc-profile.2026",
+      "path": "docs/knowledge-bank/sources/uibk-postdoc-profile-2026.md",
+      "title": "University of Innsbruck scientific-staff profile - postdocs",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official University profile describing the general task, teaching, compensation, workplace, and fixed-term framework for postdoctoral staff.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2027-02-15"
+    },
+    {
+      "id": "source.uibk.studio3.leadership.2026",
+      "path": "docs/knowledge-bank/sources/uibk-studio3-leadership-2026.md",
+      "title": "Official University of Innsbruck and ./studio3 leadership context",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official public context for the Institute of Experimental Architecture and its ./studio3 artistic-design working group.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-11-15"
     },
     {
       "id": "source.vault.communication-history.metadata",
@@ -13161,6 +13239,14 @@
       "context": null
     },
     {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "source": "frontmatter",
+      "href": "../opportunities/uibk-studio3-postdoc-arch-15927.md",
+      "context": null
+    },
+    {
       "from": "index.knowledge-wiki.family-closure",
       "type": "informed_by",
       "to": "research.knowledge-wiki-family-closure.2026-07-19",
@@ -15755,6 +15841,84 @@
       "context": null
     },
     {
+      "from": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "type": "evidence:context",
+      "to": "source.uibk.studio3.leadership.2026",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "current public unit and working-group leadership context"
+      ]
+    },
+    {
+      "from": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "type": "evidence:direct-support",
+      "to": "source.jobs.uibk.studio3.postdoc.arch-15927",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official dates, hours, duration, compensation, duties, requirements, and degree hard screens"
+      ]
+    },
+    {
+      "from": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "type": "evidence:direct-support",
+      "to": "source.uibk.postdoc-profile.2026",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "general postdoctoral work, teaching, workplace, and fixed-term framework"
+      ]
+    },
+    {
+      "from": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "type": "related_to",
+      "to": "event.studio3.ai-made-me-do-it.2024",
+      "source": "frontmatter",
+      "href": "../events/ai-made-me-do-it-symposium-2024.md",
+      "context": "Prior institutional and thematic context only; no employment relationship or endorsement."
+    },
+    {
+      "from": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "type": "related_to",
+      "to": "person.kathrin-aste",
+      "source": "frontmatter",
+      "href": "../people/kathrin-aste.md",
+      "context": "Nearest public unit-lead and working-group context; not a confirmed direct manager."
+    },
+    {
+      "from": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "type": "related_to",
+      "to": "person.thomas-edlinger",
+      "source": "frontmatter",
+      "href": "../people/thomas-edlinger.md",
+      "context": "Public ./studio3 artistic-discourse context; no supervisory inference."
+    },
+    {
+      "from": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "type": "uses_source",
+      "to": "source.jobs.uibk.studio3.postdoc.arch-15927",
+      "source": "frontmatter",
+      "href": "../sources/jobs-uibk-studio3-postdoc-arch-15927.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "type": "uses_source",
+      "to": "source.uibk.postdoc-profile.2026",
+      "source": "frontmatter",
+      "href": "../sources/uibk-postdoc-profile-2026.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "type": "uses_source",
+      "to": "source.uibk.studio3.leadership.2026",
+      "source": "frontmatter",
+      "href": "../sources/uibk-studio3-leadership-2026.md",
+      "context": null
+    },
+    {
       "from": "organization.nyc-artist-coalition",
       "type": "informed_by",
       "to": "research.nycac.shared-folder.2026-07-19",
@@ -16043,6 +16207,22 @@
       "context": null
     },
     {
+      "from": "person.kathrin-aste",
+      "type": "related_to",
+      "to": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "source": "frontmatter",
+      "href": "../opportunities/uibk-studio3-postdoc-arch-15927.md",
+      "context": null
+    },
+    {
+      "from": "person.kathrin-aste",
+      "type": "uses_source",
+      "to": "source.uibk.studio3.leadership.2026",
+      "source": "frontmatter",
+      "href": "../sources/uibk-studio3-leadership-2026.md",
+      "context": null
+    },
+    {
       "from": "person.lisa-gelobter",
       "type": "related_to",
       "to": "opportunity.nyc-oti.senior-product-manager.782366",
@@ -16112,6 +16292,22 @@
       "to": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2",
       "source": "frontmatter",
       "href": "../assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md",
+      "context": null
+    },
+    {
+      "from": "person.thomas-edlinger",
+      "type": "related_to",
+      "to": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "source": "frontmatter",
+      "href": "../opportunities/uibk-studio3-postdoc-arch-15927.md",
+      "context": null
+    },
+    {
+      "from": "person.thomas-edlinger",
+      "type": "uses_source",
+      "to": "source.uibk.studio3.leadership.2026",
+      "source": "frontmatter",
+      "href": "../sources/uibk-studio3-leadership-2026.md",
       "context": null
     },
     {
@@ -18051,6 +18247,22 @@
       "context": null
     },
     {
+      "from": "source.jobs.uibk.studio3.postdoc.arch-15927",
+      "type": "related_to",
+      "to": "source.uibk.postdoc-profile.2026",
+      "source": "frontmatter",
+      "href": "uibk-postdoc-profile-2026.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.uibk.studio3.postdoc.arch-15927",
+      "type": "supports",
+      "to": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "source": "frontmatter",
+      "href": "../opportunities/uibk-studio3-postdoc-arch-15927.md",
+      "context": null
+    },
+    {
       "from": "source.kansas-city-star.raft.2007-11-15",
       "type": "documents",
       "to": "project.waterways-participatory-art",
@@ -18824,6 +19036,46 @@
       "to": "person.warren-sack",
       "source": "frontmatter",
       "href": "../people/warren-sack.md",
+      "context": null
+    },
+    {
+      "from": "source.uibk.postdoc-profile.2026",
+      "type": "related_to",
+      "to": "source.jobs.uibk.studio3.postdoc.arch-15927",
+      "source": "frontmatter",
+      "href": "jobs-uibk-studio3-postdoc-arch-15927.md",
+      "context": null
+    },
+    {
+      "from": "source.uibk.postdoc-profile.2026",
+      "type": "supports",
+      "to": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "source": "frontmatter",
+      "href": "../opportunities/uibk-studio3-postdoc-arch-15927.md",
+      "context": null
+    },
+    {
+      "from": "source.uibk.studio3.leadership.2026",
+      "type": "related_to",
+      "to": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "source": "frontmatter",
+      "href": "../opportunities/uibk-studio3-postdoc-arch-15927.md",
+      "context": null
+    },
+    {
+      "from": "source.uibk.studio3.leadership.2026",
+      "type": "related_to",
+      "to": "person.kathrin-aste",
+      "source": "frontmatter",
+      "href": "../people/kathrin-aste.md",
+      "context": null
+    },
+    {
+      "from": "source.uibk.studio3.leadership.2026",
+      "type": "related_to",
+      "to": "person.thomas-edlinger",
+      "source": "frontmatter",
+      "href": "../people/thomas-edlinger.md",
       "context": null
     },
     {
@@ -20199,10 +20451,55 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
+      "to": "evaluation.employment-context.coverage.2026-07-18",
+      "fragment": null,
+      "line": 119,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/evaluations/employment-leadership-context-2026-08-13.md",
+      "to": "evaluation.employment-leadership-context.2026-08-13",
+      "fragment": null,
+      "line": 120,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/wiki-opportunity-coverage.md",
+      "to": null,
+      "fragment": null,
+      "line": 121,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/wiki-career-trajectory-coverage.md",
+      "to": null,
+      "fragment": null,
+      "line": 122,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/wiki-source-channel-coverage.md",
+      "to": null,
+      "fragment": null,
+      "line": 123,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "reports/wiki-opportunity-discovery.md",
       "to": null,
       "fragment": null,
-      "line": 100,
+      "line": 124,
       "kind": "link"
     },
     {
@@ -20211,7 +20508,7 @@
       "toPath": "reports/hiring-acceptance-public.md",
       "to": null,
       "fragment": null,
-      "line": 101,
+      "line": 125,
       "kind": "link"
     },
     {
@@ -20220,7 +20517,7 @@
       "toPath": "reports/hiring-acceptance-gap-resolution.md",
       "to": null,
       "fragment": null,
-      "line": 102,
+      "line": 126,
       "kind": "link"
     },
     {
@@ -20265,7 +20562,7 @@
       "toPath": "docs/knowledge-bank/applications/nyc-oti-senior-product-manager-782366.md",
       "to": "application.nyc-oti.senior-product-manager.782366",
       "fragment": null,
-      "line": 22,
+      "line": 33,
       "kind": "link"
     },
     {
@@ -20274,7 +20571,7 @@
       "toPath": "docs/knowledge-bank/evaluations/named-public-reader-acceptance-2026-08-13.md",
       "to": "evaluation.named-public-reader-acceptance.2026-08-13",
       "fragment": null,
-      "line": 47,
+      "line": 58,
       "kind": "link"
     },
     {
@@ -20283,7 +20580,16 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
       "to": "opportunity.nyc-oti.technical-operations-manager.782369",
       "fragment": null,
-      "line": 53,
+      "line": 64,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/uibk-studio3-postdoc-arch-15927.md",
+      "to": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "fragment": null,
+      "line": 73,
       "kind": "link"
     },
     {
@@ -20292,7 +20598,7 @@
       "toPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
       "to": "opportunity.aclu.product-manager-discovery.8482872002",
       "fragment": null,
-      "line": 62,
+      "line": 86,
       "kind": "link"
     },
     {
@@ -20301,7 +20607,7 @@
       "toPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
       "to": "opportunity.codepath.claude-corps.5182020007",
       "fragment": null,
-      "line": 63,
+      "line": 87,
       "kind": "link"
     },
     {
@@ -20310,7 +20616,7 @@
       "toPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
       "to": "opportunity.asana.ai-implementation.8027437",
       "fragment": null,
-      "line": 64,
+      "line": 88,
       "kind": "link"
     },
     {
@@ -20319,7 +20625,7 @@
       "toPath": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
       "to": "opportunity.permitflow.product-operations.8a6e6066",
       "fragment": null,
-      "line": 65,
+      "line": 89,
       "kind": "link"
     },
     {
@@ -20328,52 +20634,7 @@
       "toPath": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
       "to": "opportunity.protected.source-backed-memory-consulting.2026",
       "fragment": null,
-      "line": 69,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
-      "to": "evaluation.employment-context.coverage.2026-07-18",
-      "fragment": null,
-      "line": 95,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/evaluations/employment-leadership-context-2026-08-13.md",
-      "to": "evaluation.employment-leadership-context.2026-08-13",
-      "fragment": null,
-      "line": 96,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/wiki-opportunity-coverage.md",
-      "to": null,
-      "fragment": null,
-      "line": 97,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/wiki-career-trajectory-coverage.md",
-      "to": null,
-      "fragment": null,
-      "line": 98,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/wiki-source-channel-coverage.md",
-      "to": null,
-      "fragment": null,
-      "line": 99,
+      "line": 93,
       "kind": "link"
     },
     {
@@ -22309,6 +22570,24 @@
       "to": "source.jobs.permitflow.product-operations.8a6e6066",
       "fragment": null,
       "line": 9,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/uibk-studio3-postdoc-arch-15927.md",
+      "from": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "toPath": "docs/knowledge-bank/people/kathrin-aste.md",
+      "to": "person.kathrin-aste",
+      "fragment": null,
+      "line": 17,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/uibk-studio3-postdoc-arch-15927.md",
+      "from": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "toPath": "docs/knowledge-bank/people/thomas-edlinger.md",
+      "to": "person.thomas-edlinger",
+      "fragment": null,
+      "line": 19,
       "kind": "link"
     },
     {

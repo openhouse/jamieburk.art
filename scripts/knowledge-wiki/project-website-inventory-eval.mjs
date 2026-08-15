@@ -113,7 +113,6 @@ export function evaluateProjectWebsites(candidate) {
   check(candidate.technicalOperations.includes('href="https://kcspacesfund.com/"'), "KC Spaces Fund project name must link to its public site");
 
   const requiredResumeLinks = [
-    "https://www.harryepstein.com/",
     "https://nycartc.com/",
     "https://fairrentnyc.nycartc.com/",
     "https://wowlist.org/",
