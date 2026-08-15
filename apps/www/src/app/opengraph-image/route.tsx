@@ -60,7 +60,6 @@ export async function GET() {
           style={layout.photoWash}
         />
         <div style={layout.identityField} />
-        <div style={layout.rule} />
         <div
           style={layout.copy}
         >

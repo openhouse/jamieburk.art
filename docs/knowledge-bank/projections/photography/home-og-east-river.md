@@ -15,7 +15,7 @@ portfolio_edition: edition.launch.2026-08
 asset: asset.photo.east-river-manhattan-bridge.2022.001
 derivative: derivative.photo.east-river.og-source.v1
 route: /opengraph-image
-cache_revision: human-index-photo-v4
+cache_revision: human-index-photo-v5
 component: ImageResponse
 purpose:
   - social-link-orientation
@@ -27,8 +27,9 @@ render:
   photo_treatment: full-bleed-cover
   crop_alignment: center 46 percent
   new_photo_crop: true
-  identity_field: full-height-left-edge
-  gradient: false
+  identity_field: full-frame-cinematic-left-gradient
+  gradient: true
+  vertical_rule: false
 alt_text: Jamie Burkart at the East River shoreline beneath the Manhattan Bridge — Technical Project Manager, Product Operations & Implementation.
 visible_identity:
   name: Jamie Burkart
@@ -74,11 +75,12 @@ relations:
 This social card lets the homepage travel with the same visual identity that a
 visitor encounters on arrival. It uses a metadata-stripped JPEG source from the
 cleared East River frame as a full-bleed 1200 by 630 cover image beneath one
-even contrast wash and a flat Human Index identity field that reaches the left,
-top, and bottom edges. The field replaces the former floating placard without
-introducing a gradient and leaves the right-side portrait open. Only Jamie's
-current role and name are visible. His name uses the same licensed TeX Gyre
-Pagella identity face as the site.
+light contrast wash and a cinematic left-to-right charcoal gradient. The
+gradient remains darkest beneath the role-and-name hierarchy, reaches the full
+frame, and becomes fully transparent before the right-side portrait. It uses
+neither the former floating placard nor a vertical rule. Only Jamie's current
+role and name are visible. His name uses the same licensed TeX Gyre Pagella
+identity face as the site.
 
 Elana Gordon remains the recorded creator and remains visibly credited on the
 homepage. Her protected permission explicitly leaves visible credit or no

@@ -6,8 +6,8 @@ export const homeSocialCard = {
   ...homeIdentity,
   width: 1200,
   height: 630,
-  revision: "human-index-photo-v4",
-  imagePath: "/opengraph-image?v=human-index-photo-v4",
+  revision: "human-index-photo-v5",
+  imagePath: "/opengraph-image?v=human-index-photo-v5",
   renderPhotoPath: "/images/social/jamie-east-river-og-source.jpg",
   visibleCopy: {
     role: homeIdentity.role,
@@ -37,7 +37,7 @@ export const homeSocialCard = {
 export function buildSocialCardLayout() {
   return {
     photoWash: {
-      background: "rgba(12, 22, 28, 0.24)",
+      background: "rgba(12, 22, 28, 0.12)",
       bottom: 0,
       display: "flex",
       left: 0,
@@ -46,31 +46,23 @@ export function buildSocialCardLayout() {
       top: 0
     },
     identityField: {
-      background: "rgba(12, 22, 28, 0.74)",
+      background:
+        "linear-gradient(90deg, rgba(12, 22, 28, 0.96) 0%, rgba(12, 22, 28, 0.9) 34%, rgba(12, 22, 28, 0.72) 49%, rgba(12, 22, 28, 0.36) 64%, rgba(12, 22, 28, 0.1) 77%, rgba(12, 22, 28, 0) 89%)",
       bottom: 0,
       display: "flex",
       left: 0,
       position: "absolute",
+      right: 0,
       top: 0,
-      width: 780
-    },
-    rule: {
-      background: "#d1a23f",
-      display: "flex",
-      height: 229,
-      left: 70,
-      position: "absolute",
-      top: 145,
-      width: 6
     },
     copy: {
       color: "#ffffff",
       display: "flex",
       flexDirection: "column",
-      left: 112,
+      left: 70,
       position: "absolute",
       top: 179,
-      width: 610
+      width: 650
     }
   } as const;
 }

@@ -56,7 +56,7 @@ test("Open Graph and Twitter expose the same photographic large-card contract", 
   assert.equal(metadata.openGraph?.url?.toString(), "https://staging.jamieburk.art/work");
   assert.equal(
     metadata.openGraph?.images?.[0]?.url?.toString(),
-    "https://staging.jamieburk.art/opengraph-image?v=human-index-photo-v4"
+    "https://staging.jamieburk.art/opengraph-image?v=human-index-photo-v5"
   );
   assert.equal(metadata.openGraph?.images?.[0]?.width, 1200);
   assert.equal(metadata.openGraph?.images?.[0]?.height, 630);
@@ -73,28 +73,28 @@ test("Open Graph and Twitter expose the same photographic large-card contract", 
   );
   assert.equal(twitterImage?.alt, homeSocialCard.alt);
   assert.equal(homeSocialCard.photo.id, "east-river");
-  assert.equal(homeSocialCard.revision, "human-index-photo-v4");
+  assert.equal(homeSocialCard.revision, "human-index-photo-v5");
 });
 
-test("the identity field reaches both vertical edges without becoming a gradient or floating placard", () => {
+test("the cinematic identity gradient reaches every edge, clears before the portrait, and has no rule", () => {
   const layout = buildSocialCardLayout();
 
   assert.deepEqual(
     {
       top: layout.identityField.top,
       bottom: layout.identityField.bottom,
-      left: layout.identityField.left
+      left: layout.identityField.left,
+      right: layout.identityField.right
     },
-    { top: 0, bottom: 0, left: 0 }
+    { top: 0, bottom: 0, left: 0, right: 0 }
   );
   assert.equal(layout.identityField.position, "absolute");
-  assert.equal(layout.identityField.width > homeSocialCard.width / 2, true);
-  assert.equal(layout.identityField.width < homeSocialCard.width * 0.7, true);
-  assert.match(layout.identityField.background, /^rgba\(/);
-  assert.doesNotMatch(layout.identityField.background, /gradient/i);
+  assert.match(layout.identityField.background, /^linear-gradient\(90deg,/);
+  assert.match(layout.identityField.background, /rgba\(12, 22, 28, 0\) 89%\)$/);
+  assert.equal("rule" in layout, false);
   assert.equal(layout.copy.position, "absolute");
-  assert.equal(layout.copy.left > layout.rule.left, true);
-  assert.equal(layout.copy.width < layout.identityField.width, true);
+  assert.equal(layout.copy.left <= 72, true);
+  assert.equal(layout.copy.left + layout.copy.width < homeSocialCard.width * 0.65, true);
 });
 
 test("the social card exposes only the role and name as visible copy", () => {
