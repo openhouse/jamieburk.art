@@ -5,8 +5,8 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-13
-review_by: 2026-08-16
+last_reviewed: 2026-08-15
+review_by: 2026-08-18
 canonical_path: docs/knowledge-bank/indexes/employment-context.md
 summary: Task-oriented entry point for live opportunity research, role coverage, public-only hiring evaluation, and private-boundary rules.
 relations:
@@ -60,22 +60,31 @@ paths, message bodies, contact details, and real hiring outcomes remain private.
 - [ACLU - Senior Project Manager, National Campaigns](../opportunities/aclu-senior-project-manager-national-campaigns.md)
 - [CodePath - Senior AI Operations Lead](../opportunities/codepath-senior-ai-operations-lead.md)
 - [CodePath - Engineering Project Manager](../opportunities/codepath-engineering-project-manager.md)
-- [NYC OTI - Senior Product Manager 782366](../opportunities/oti-senior-product-manager.md)
+- [Asana - AI Implementation Manager, Service Management](../opportunities/asana-ai-implementation.md)
+- [PermitFlow - Product Operations Manager](../opportunities/permitflow-product-operations.md)
 
-These four postings were live when rechecked August 13, 2026. Facts about
+These five postings were live on their official employer surfaces when
+rechecked August 15, 2026. PermitFlow's current posting does not disclose
+compensation, so the $100,000 floor remains a hard-screen question rather than
+an established fact. Facts about
 reporting lines distinguish a posting-named title, a current official
 title-holder match, and a senior vision owner. A title match is not proof of a
 hiring manager, interview participant, private opinion, or final org chart.
 
-## Other tracked live contexts requiring periodic refresh
+## Public-resume active reader set
 
-- [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md)
-- [Asana - AI Implementation Manager](../opportunities/asana-ai-implementation.md)
-- [PermitFlow - Product Operations Manager](../opportunities/permitflow-product-operations.md)
+The stable site-visitor resume is evaluated against seven fictionalized
+public-context reader gates spanning the five current priority contexts. The
+shared resume must make the common delivery case legible to every active gate;
+application-specific versions may go narrower. A modeled pass advances only to
+a structured interview or work sample. It does not assert that any named person
+participated, endorsed Jamie, or would make a final hiring decision.
 
 ## Closed watch patterns
 
 - [NYC OTI - Technical Operations Manager 782369](../opportunities/oti-technical-operations.md) - expired August 7, 2026; Jamie's clearest future OTI operations watch pattern.
+- [NYC OTI - Senior Product Manager 782366](../opportunities/oti-senior-product-manager.md) - official City page marked the exact vacancy expired when rechecked August 15, 2026.
+- [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md) - absent from the current official jobs surface when rechecked August 15, 2026.
 - [ACLU - Product Manager II, Discovery](../opportunities/aclu-product-discovery.md) - exact posting closed.
 - [CodePath - Senior Program Manager, Claude Corps](../opportunities/codepath-claude-corps.md) - exact posting closed.
 

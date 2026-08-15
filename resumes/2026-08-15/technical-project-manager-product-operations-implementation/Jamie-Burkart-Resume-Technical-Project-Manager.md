@@ -12,9 +12,9 @@ Technical project manager and product operations lead with 14+ years shipping pu
 
 ## Core Skills
 
-- **Product lifecycle:** Problem framing, discovery, public and user research, requirements, user stories, product briefs, roadmap sequencing, MVP and version-one scoping, prioritization, tradeoffs, rapid prototyping, UAT/QA, public launch, metrics, post-launch learning, and retrospectives.
+- **Product lifecycle and quality:** Problem framing, discovery, research, requirements, user stories, prioritization, prototyping, issue reproduction, acceptance criteria, test cases, UAT/QA, release verification, public launch, metrics, post-launch learning, and retrospectives.
 - **Cross-functional delivery:** Product ownership, facilitation, stakeholder alignment, designer and engineer coordination, agency and policy translation, senior stakeholder briefings, rollout planning, risk and dependency tracking, adoption, and durable handoffs.
-- **Responsible public technology:** Accessibility-aware implementation, privacy-conscious data practice, public-safety review, source governance, evidence boundaries, and clear documentation of unknowns and decisions.
+- **Responsible AI and public technology:** AI-assisted workflows with deterministic checks, human review, explicit failure states, privacy-conscious data practice, accessibility-aware implementation, source governance, evidence boundaries, and clear documentation of unknowns and decisions.
 - **Web systems architecture:** JavaScript/TypeScript, React/Next.js, Ember.js, Python/Django, SQL, PostgreSQL/PostGIS, Node.js, Git/GitHub, Docker/Dokku, QGIS, APIs, open-data workflows, analytics, and low-cost cloud infrastructure.
 
 ## Professional Experience

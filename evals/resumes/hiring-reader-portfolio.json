@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "resume-hiring-reader-portfolio-2026-08-14",
-  "evaluatedAt": "2026-08-14T17:30:00-04:00",
+  "id": "resume-hiring-reader-portfolio-2026-08-15",
+  "evaluatedAt": "2026-08-15T17:45:00-04:00",
   "readerSuitePath": "evals/knowledge-wiki/named-hiring-readers.json",
-  "currentRunPath": "evals/resumes/runs/2026-08-14-hiring-reader-resume-portfolio-post-hillclimb.json",
+  "currentRunPath": "evals/resumes/runs/2026-08-15-public-active-opportunity-resume-post-hillclimb.json",
   "methodology": {
     "primarySkill": "interviewing-evaluating-candidates",
     "installedPath": ".agents/skills/interviewing-evaluating-candidates/SKILL.md",
@@ -67,6 +67,129 @@
       "(?:Deirdre Schifeling|Quinton Ma|Brian Madigan|Zack Parker|Chris Coleman|Lisa Gelobter) (?:reviewed|approved|endorsed|recommended|would hire)",
       "(?:solely created|single-handedly|personally caused)",
       "(?:WCAG compliant|Section 508 compliant)"
+    ]
+  },
+  "publicResume": {
+    "resumePath": "resumes/2026-08-15/technical-project-manager-product-operations-implementation/Jamie-Burkart-Resume-Technical-Project-Manager.md",
+    "artifactSpecPath": "evals/resumes/artifacts/public-technical-project-manager-pdf.json",
+    "scope": "One durable site-visitor resume evaluated against every current, truthfully hirable opportunity that has an active fictionalized public-context reader gate.",
+    "statusPolicy": {
+      "requiredOpportunityStatus": "live",
+      "requireFreshReview": true,
+      "excludeClosedAndExpired": true
+    },
+    "readerCriteria": [
+      {
+        "gateId": "gate.aclu-national-campaigns.deirdre-schifeling",
+        "readerId": "reader.deirdre-schifeling",
+        "displayName": "Deirdre Schifeling",
+        "readerPath": "docs/qa/hiring-acceptance/readers/deirdre-schifeling.md",
+        "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+        "opportunityPath": "docs/knowledge-bank/opportunities/aclu-senior-project-manager-national-campaigns.md",
+        "signalGroups": [
+          { "id": "complex-campaign-delivery", "patterns": ["risk and dependency tracking", "decision records", "accountable follow-through"] },
+          { "id": "advocacy-operations", "patterns": ["Commercial Rent Stabilization", "public testimony", "elected officials and staff"] },
+          { "id": "research-and-communications", "patterns": ["source maps", "policy questions", "press"] },
+          { "id": "confidentiality-and-agency", "patterns": ["collective credit", "privacy-conscious", "sensitive boundaries"] }
+        ],
+        "constructiveCritique": "The shared resume makes complex advocacy delivery and collective accountability visible. National campaign scale, formal budget administration, and the exact three-year portfolio remain structured-interview questions.",
+        "validateNext": "Use a campaign scenario to test schedule, budget, confidentiality, contested priorities, affiliate agency, metrics, and sustainable handoff."
+      },
+      {
+        "gateId": "gate.asana-ai-implementation.arnab-bose",
+        "readerId": "reader.arnab-bose",
+        "displayName": "Arnab Bose",
+        "readerPath": "docs/qa/hiring-acceptance/readers/arnab-bose.md",
+        "opportunityId": "opportunity.asana.ai-implementation.8027437",
+        "opportunityPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
+        "signalGroups": [
+          { "id": "implementation-ownership", "patterns": ["implementation", "adoption", "client"] },
+          { "id": "ai-workflow", "patterns": ["AI-assisted", "human review", "deterministic"] },
+          { "id": "risk-and-change", "patterns": ["risk", "rollout planning", "operational improvements"] },
+          { "id": "reusable-playbooks", "patterns": ["runbooks", "reusable patterns", "handoff documentation"] }
+        ],
+        "constructiveCritique": "The shared resume now shows implementation ownership, responsible AI controls, adoption, risk, and reusable handoff. Direct enterprise migration, configuration depth, and post-sale authority remain the important screens.",
+        "validateNext": "Inspect one customer-facing implementation from discovery through configuration, change management, launch, adoption measurement, and reusable playbook."
+      },
+      {
+        "gateId": "gate.codepath-ai-operations.brian-madigan",
+        "readerId": "reader.brian-madigan",
+        "displayName": "Brian Madigan",
+        "readerPath": "docs/qa/hiring-acceptance/readers/brian-madigan.md",
+        "opportunityId": "opportunity.codepath.senior-ai-operations-lead.5175813007",
+        "opportunityPath": "docs/knowledge-bank/opportunities/codepath-senior-ai-operations-lead.md",
+        "signalGroups": [
+          { "id": "organizational-scale", "patterns": ["distributed maintainer", "operating systems", "teams can continue"] },
+          { "id": "adoption-and-handoff", "patterns": ["adoption", "durable handoffs", "onboarding"] },
+          { "id": "measurement", "patterns": ["measurement", "analytics", "activity counts"] }
+        ],
+        "constructiveCritique": "The resume frames AI and operations as organizational capability rather than tool enthusiasm. The unresolved question is whether that practice has produced measurable behavior change in a professional team.",
+        "validateNext": "Probe prioritization across functions, executive reporting, adoption, maintenance cost, privacy escalation, and team self-sufficiency."
+      },
+      {
+        "gateId": "gate.codepath-ai-operations.quinton-ma",
+        "readerId": "reader.quinton-ma",
+        "displayName": "Quinton Ma",
+        "readerPath": "docs/qa/hiring-acceptance/readers/quinton-ma.md",
+        "opportunityId": "opportunity.codepath.senior-ai-operations-lead.5175813007",
+        "opportunityPath": "docs/knowledge-bank/opportunities/codepath-senior-ai-operations-lead.md",
+        "signalGroups": [
+          { "id": "workflow-discovery", "patterns": ["problem framing", "requirements", "workflow"] },
+          { "id": "quality-system", "patterns": ["deterministic checks", "human review", "failure"] },
+          { "id": "reusable-assets", "patterns": ["templates", "runbooks", "reusable patterns"] },
+          { "id": "outcome-measurement", "patterns": ["adoption", "measurement", "post-launch learning"] }
+        ],
+        "constructiveCritique": "The resume shows a credible workflow-quality system with human review, failure states, reusable assets, and post-launch learning. A before-and-after measure tied to one production workflow would make the claim substantially stronger.",
+        "validateNext": "Inspect one workflow end to end: users, tools, review gates, failures, adoption, measured change, maintenance, and handoff."
+      },
+      {
+        "gateId": "gate.codepath-engineering.chris-coleman",
+        "readerId": "reader.chris-coleman",
+        "displayName": "Chris Coleman",
+        "readerPath": "docs/qa/hiring-acceptance/readers/chris-coleman.md",
+        "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+        "opportunityPath": "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
+        "signalGroups": [
+          { "id": "product-engineering-bridge", "patterns": ["designer and engineer coordination", "technical scope", "user stories"] },
+          { "id": "responsible-ai", "patterns": ["AI-assisted", "human review", "source governance"] },
+          { "id": "community-mission", "patterns": ["community-calendar", "organizer onboarding", "resident-facing"] },
+          { "id": "durable-collaboration", "patterns": ["documentation", "durable handoffs", "teams can continue"] }
+        ],
+        "constructiveCritique": "The shared resume connects product judgment, engineering coordination, responsible AI, and community-facing outcomes. The next screen should test tradeoffs among delivery quality, learner experience, and a small team's capacity.",
+        "validateNext": "Use a structured scenario to test success metrics, technical tradeoffs, cross-functional ownership, and mission-aligned delivery judgment."
+      },
+      {
+        "gateId": "gate.codepath-engineering.zack-parker",
+        "readerId": "reader.zack-parker",
+        "displayName": "Zack Parker",
+        "readerPath": "docs/qa/hiring-acceptance/readers/zack-parker.md",
+        "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+        "opportunityPath": "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
+        "signalGroups": [
+          { "id": "engineering-delivery", "patterns": ["sequenced releases", "risk and dependency tracking", "issue resolution"] },
+          { "id": "quality-system", "patterns": ["issue reproduction", "test cases", "release verification"] },
+          { "id": "technical-fluency", "patterns": ["Python/Django", "JavaScript/TypeScript", "Git/GitHub"] },
+          { "id": "proportionate-process", "patterns": ["proportionate", "resource-constrained", "low-cost production"] }
+        ],
+        "constructiveCritique": "The added issue-reproduction, test-case, and release-verification language closes the public resume's clearest engineering-delivery gap. A work sample should still show one issue becoming an owned test and release decision.",
+        "validateNext": "Use a work sample to test bug reproduction, prioritization, QA design, status communication, and proportionate process judgment."
+      },
+      {
+        "gateId": "gate.permitflow-product-operations.francis-thumpasery",
+        "readerId": "reader.francis-thumpasery",
+        "displayName": "Francis Thumpasery",
+        "readerPath": "docs/qa/hiring-acceptance/readers/francis-thumpasery.md",
+        "opportunityId": "opportunity.permitflow.product-operations.8a6e6066",
+        "opportunityPath": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
+        "signalGroups": [
+          { "id": "physical-public-systems", "patterns": ["historic building", "municipal compliance", "public process"] },
+          { "id": "product-data", "patterns": ["analytics", "instrumentation", "metrics"] },
+          { "id": "cross-functional-launch", "patterns": ["public launch", "designer and engineer coordination", "operations teams"] },
+          { "id": "ai-automation", "patterns": ["AI-assisted", "workflow", "human review"] }
+        ],
+        "constructiveCritique": "The resume makes the physical-world, public-process, product-data, launch, and responsible-automation pattern credible. Current compensation and hands-on product analytics or SQL depth remain explicit hard screens.",
+        "validateNext": "Verify compensation, then inspect one launch dashboard or analysis joining customer insight, product data, prioritization, adoption, and accountable automation."
+      }
     ]
   },
   "versions": [

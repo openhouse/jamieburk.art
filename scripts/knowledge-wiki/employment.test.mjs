@@ -195,17 +195,17 @@ test("protected opportunity cannot become live by mutating both source type and 
 
 test("exclusionary hard screens fail closed", () => {
   const root = candidateFixture();
-  const opportunityPath = path.join(root, "docs/knowledge-bank/opportunities/oti-senior-product-manager.md");
+  const opportunityPath = path.join(root, "docs/knowledge-bank/opportunities/aclu-senior-project-manager-national-campaigns.md");
   writeFileSync(
     opportunityPath,
     readFileSync(opportunityPath, "utf8").replace(
-      "state: review-needed\n    disposition: verify",
+      "state: likely-met\n    disposition: proceed",
       "state: not-met\n    disposition: do-not-pursue"
     )
   );
-  const oti = evaluatePublicHiring(root).report.opportunities.find(
-    (item) => item.id === "opportunity.nyc-oti.senior-product-manager.782366"
+  const aclu = evaluatePublicHiring(root).report.opportunities.find(
+    (item) => item.id === "opportunity.aclu.senior-project-manager-national-campaigns.8631854002"
   );
-  assert.equal(oti.hardScreenBlocked, true);
-  assert.equal(oti.decision, "hard-screen-exclusion");
+  assert.equal(aclu.hardScreenBlocked, true);
+  assert.equal(aclu.decision, "hard-screen-exclusion");
 });

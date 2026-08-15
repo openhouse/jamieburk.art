@@ -5,14 +5,14 @@ kind: opportunity
 status: governed-open
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-13
-review_by: 2026-08-16
+last_reviewed: 2026-08-15
+review_by: 2026-08-18
 canonical_path: docs/knowledge-bank/opportunities/codepath-senior-ai-operations-lead.md
 summary: Public-safe requirement, reporting-context, and portfolio-coverage map for CodePath's live Senior AI Operations Lead role.
 canonical_url: https://job-boards.greenhouse.io/codepath/jobs/5175813007
 source_type: official-employer
 opportunity_status: live
-verified_at: 2026-08-13
+verified_at: 2026-08-15
 reporting_context:
   direct_manager_title: Director of Business Operations
   direct_manager_person: Quinton Ma
@@ -20,7 +20,7 @@ reporting_context:
   senior_vision_owner: Brian Madigan
   senior_vision_owner_title: Chief Operating Officer
   senior_vision_basis: CodePath's official team page and COO announcement identify Madigan as the leader responsible for business operations and organizational scalability.
-  verified_at: 2026-08-13
+  verified_at: 2026-08-15
 portfolio_routes:
   - /
   - /work/technical-operations

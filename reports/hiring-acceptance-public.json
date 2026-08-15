@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "runId": "hiring-public-aae53e9dd853",
-  "generatedAt": "2026-08-14T19:50:01-04:00",
-  "candidateSha": "aae53e9dd853357d6ec3d04832b4b9fb1920ea09",
-  "candidatePathsClean": true,
-  "portfolioSnapshotHash": "4c1a82a5e52088bedaf869a435302e8dc333e02e689a37c36144d3303563449b",
-  "roleContextHash": "fa2bbf11462a256ddf7358d40c1e5f4a34786b2e7439777dcc02a3fd82f8315d",
-  "readerContextHash": "177f555134dc0c18066adfd1eaa94edf245f8cd357e5fdcaa62cdfcab2650580",
+  "runId": "hiring-public-be0d93de1c20",
+  "generatedAt": "2026-08-15T16:44:17-04:00",
+  "candidateSha": "be0d93de1c20fccec22457bb7be38ea84b12b864",
+  "candidatePathsClean": false,
+  "portfolioSnapshotHash": "7a663320825fba482168c725f49d65609bd58e5c9aa0b06e7fe331ddd7950625",
+  "roleContextHash": "b882795f8239432855ec1a7263e7c22f8a8e6c36944554c05a72e81dc140ad55",
+  "readerContextHash": "43376836970e6a0dae369b10141e15fae9baab41fdbe2263c6c8964d0fb2ea04",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
   "publicSafety": {
     "privateMarkerCount": 0,
@@ -145,6 +145,51 @@
       "disclaimer": "Simulated lens based on public organizational context, not actual participation, opinion, endorsement, or hiring decision."
     },
     {
+      "id": "reader.arnab-bose",
+      "displayName": "Arnab Bose",
+      "mode": "named-public-organization-context",
+      "category": "senior-vision-reader",
+      "publicSources": [
+        "https://asana.com/jobs/apply/8027437",
+        "https://asana.com/leadership",
+        "https://investors.asana.com/news-releases/news-release-details/asana-appoints-arnab-bose-chief-product-officer"
+      ],
+      "priorities": [
+        "customer time to first value",
+        "responsible AI workflow adoption",
+        "implementation risk and change management",
+        "reusable playbooks and product feedback"
+      ],
+      "prohibitedAssumptions": [
+        "Do not claim Arnab Bose is the direct manager or hiring decision-maker.",
+        "Do not infer his private opinion, participation, or endorsement.",
+        "Do not treat Asana's separately posted General Manager and VP vacancy as a named reporting line."
+      ],
+      "disclaimer": "Simulated lens based on public organizational context, not actual participation, opinion, endorsement, or hiring decision."
+    },
+    {
+      "id": "reader.francis-thumpasery",
+      "displayName": "Francis Thumpasery",
+      "mode": "named-public-organization-context",
+      "category": "senior-vision-reader",
+      "publicSources": [
+        "https://jobs.ashbyhq.com/permitflow/8a6e6066-1a9a-4026-aa81-e855741b2922",
+        "https://www.permitflow.com/about-us",
+        "https://www.permitflow.com/blog/permitflow-series-b"
+      ],
+      "priorities": [
+        "product operations for fragmented physical-world workflows",
+        "product data, customer insight, and prioritization",
+        "cross-functional launch readiness and adoption",
+        "AI automation with accountable operating systems"
+      ],
+      "prohibitedAssumptions": [
+        "Do not claim Francis Thumpasery is the direct manager or hiring decision-maker.",
+        "Do not infer his private opinion, participation, or endorsement."
+      ],
+      "disclaimer": "Simulated lens based on public organizational context, not actual participation, opinion, endorsement, or hiring decision."
+    },
+    {
       "id": "reader.lisa-gelobter",
       "displayName": "Lisa Gelobter",
       "mode": "named-public-organization-context",
@@ -258,9 +303,9 @@
         "senior_vision_owner": "Deirdre Schifeling",
         "senior_vision_owner_title": "Chief Political and Advocacy Officer",
         "senior_vision_basis": "The official ACLU biography says Schifeling leads the National Political Advocacy Department and its campaigns, organizing, policy, and electoral work.",
-        "verified_at": "2026-08-13T00:00:00.000Z"
+        "verified_at": "2026-08-15T00:00:00.000Z"
       },
-      "roleContextHash": "0aa2828030e4e3d61089e483b0ebc53ebb268f0c8d9330c4f25c89dc13e965d4",
+      "roleContextHash": "abeef54e8e898eace779cbc8fb6f1376da4178599106c03e5db4d279c2e534fd",
       "live": true,
       "fresh": true,
       "hardScreenBlocked": false,
@@ -346,9 +391,9 @@
         "senior_vision_owner": "Brian Madigan",
         "senior_vision_owner_title": "Chief Operating Officer",
         "senior_vision_basis": "CodePath's official team page and COO announcement identify Madigan as the leader responsible for business operations and organizational scalability.",
-        "verified_at": "2026-08-13T00:00:00.000Z"
+        "verified_at": "2026-08-15T00:00:00.000Z"
       },
-      "roleContextHash": "629bfa6cb3be3f6fb11937f8ba5bd550f46bfca6f5bda935b327098d6492a149",
+      "roleContextHash": "ccfd2e09efb8072dfb24de18055b8495c017319125c3d1cb0ffbfb48598f1d9c",
       "live": true,
       "fresh": true,
       "hardScreenBlocked": false,
@@ -436,9 +481,9 @@
         "senior_vision_owner": "Chris Coleman",
         "senior_vision_owner_title": "Chief Product Officer",
         "senior_vision_basis": "CodePath's official team page and CPO announcement identify Coleman as the leader of product engineering delivery and AI-enabled learning-product scale.",
-        "verified_at": "2026-08-13T00:00:00.000Z"
+        "verified_at": "2026-08-15T00:00:00.000Z"
       },
-      "roleContextHash": "375a46a9aab4146d2921ab02ba8fe9b5b9e3a28bbad9432346d9313f1b646be3",
+      "roleContextHash": "3c632b55b9d84a9450e67482e1da83c52f081ee9665ef80ef0a82248f8b133ea",
       "live": true,
       "fresh": true,
       "hardScreenBlocked": false,
@@ -520,11 +565,11 @@
         "senior_vision_basis": "The official PIT Crew launch announcement identifies Gelobter as OTI's technology leader and states her vision for simpler, user-informed, trustworthy City services.",
         "verified_at": "2026-08-13T00:00:00.000Z"
       },
-      "roleContextHash": "b8b796ab2563adb54d98363577b36189fab5602bc30ac91eaa11481d64895a68",
-      "live": true,
-      "fresh": true,
+      "roleContextHash": "6c28d58f01838a5a97cade66aa166f8b660d53ab800066f990f1485fa06f3583",
+      "live": false,
+      "fresh": false,
       "hardScreenBlocked": false,
-      "decision": "deterministic-ready-for-human-review",
+      "decision": "not-live",
       "observed": 5,
       "requirementTotal": 6,
       "criticalObserved": 5,
@@ -789,11 +834,11 @@
       "id": "opportunity.benepass.product-operations.7f963a7a",
       "title": "Benepass - Product Operations Manager",
       "reportingContext": null,
-      "roleContextHash": "af379b21214b664794d5465550621b467e92f57eec343195d7f55c999198d8ce",
-      "live": true,
+      "roleContextHash": "6f4b93aa15094e952567159414aa8bb40c79afee2386a3e8458c35ecc949f1b7",
+      "live": false,
       "fresh": false,
       "hardScreenBlocked": false,
-      "decision": "evidence-gap-review",
+      "decision": "not-live",
       "observed": 3,
       "requirementTotal": 4,
       "criticalObserved": 3,
@@ -941,10 +986,18 @@
     {
       "id": "opportunity.asana.ai-implementation.8027437",
       "title": "Asana - AI Implementation Manager, Service Management",
-      "reportingContext": null,
-      "roleContextHash": "ced358c6054c4f13d651b881ccaef7b0954d76ccaa795acbdb59d41aa5235b42",
+      "reportingContext": {
+        "direct_manager_title": "not stated in the posting",
+        "direct_manager_person": null,
+        "direct_manager_public_status": "not-publicly-named",
+        "senior_vision_owner": "Arnab Bose",
+        "senior_vision_owner_title": "Chief Product Officer",
+        "senior_vision_basis": "Asana's official leadership page identifies Bose as Chief Product Officer; the implementation posting places the role near the Service Management product team, while a separate open General Manager and VP posting describes ownership of that unit.",
+        "verified_at": "2026-08-15T00:00:00.000Z"
+      },
+      "roleContextHash": "66fd8f9c6f8f4c51b6b0da08c03abc1effecbb12b121f3451e6f919cf2dd7b19",
       "live": true,
-      "fresh": false,
+      "fresh": true,
       "hardScreenBlocked": false,
       "decision": "evidence-gap-review",
       "observed": 2,
@@ -1009,10 +1062,18 @@
     {
       "id": "opportunity.permitflow.product-operations.8a6e6066",
       "title": "PermitFlow - Product Operations Manager",
-      "reportingContext": null,
-      "roleContextHash": "66dbdf3941f488568c42480c41c14448222be084f0d0fed772381fba9bae4af7",
+      "reportingContext": {
+        "direct_manager_title": "not stated in the posting",
+        "direct_manager_person": null,
+        "direct_manager_public_status": "not-publicly-named",
+        "senior_vision_owner": "Francis Thumpasery",
+        "senior_vision_owner_title": "Co-Founder and CEO",
+        "senior_vision_basis": "PermitFlow's official Series B announcement identifies Thumpasery as Co-Founder and CEO and states the company vision for AI-supported construction workflows.",
+        "verified_at": "2026-08-15T00:00:00.000Z"
+      },
+      "roleContextHash": "0865b97c06b3cdb2aa104011e3673e0c520a67f3253588d7bcf086e5ead2b26e",
       "live": true,
-      "fresh": false,
+      "fresh": true,
       "hardScreenBlocked": false,
       "decision": "evidence-gap-review",
       "observed": 3,

@@ -5,14 +5,14 @@ kind: opportunity
 status: governed-open
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-13
-review_by: 2026-08-16
+last_reviewed: 2026-08-15
+review_by: 2026-08-18
 canonical_path: docs/knowledge-bank/opportunities/aclu-senior-project-manager-national-campaigns.md
 summary: Public-safe requirement, reporting-context, and portfolio-coverage map for ACLU's live Senior Project Manager, National Campaigns role.
 canonical_url: https://job-boards.greenhouse.io/aclu/jobs/8631854002
 source_type: official-employer
 opportunity_status: live
-verified_at: 2026-08-13
+verified_at: 2026-08-15
 reporting_context:
   direct_manager_title: Senior Director of National Campaigns
   direct_manager_person: null
@@ -20,7 +20,7 @@ reporting_context:
   senior_vision_owner: Deirdre Schifeling
   senior_vision_owner_title: Chief Political and Advocacy Officer
   senior_vision_basis: The official ACLU biography says Schifeling leads the National Political Advocacy Department and its campaigns, organizing, policy, and electoral work.
-  verified_at: 2026-08-13
+  verified_at: 2026-08-15
 portfolio_routes:
   - /
   - /work/technical-operations

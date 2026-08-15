@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-15T04:33:53-04:00",
-  "sourceCommit": "e3bf701adffabda01cbc239f3a701cf4da583401",
-  "sourceFingerprint": "376ce8eb09c148a3b86a7a3b81b6ff2de7514e6f5c905cee1f9fad0e318fb195",
+  "generatedAt": "2026-08-15T16:44:17-04:00",
+  "sourceCommit": "be0d93de1c20fccec22457bb7be38ea84b12b864",
+  "sourceFingerprint": "cbba07757b7521b01020a1676f54f5104a6e562f2a79a7c18ef809ccf65c582a",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3258,8 +3258,8 @@
       "sensitivity": "low",
       "summary": "Task-oriented entry point for live opportunity research, role coverage, public-only hiring evaluation, and private-boundary rules.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2026-08-16"
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-08-18"
     },
     {
       "id": "index.knowledge-wiki.family-closure",
@@ -3804,8 +3804,8 @@
       "sensitivity": "low",
       "summary": "Public-safe requirement, reporting-context, and portfolio-coverage map for ACLU's live Senior Project Manager, National Campaigns role.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2026-08-16"
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-08-18"
     },
     {
       "id": "opportunity.asana.ai-implementation.8027437",
@@ -3817,21 +3817,21 @@
       "sensitivity": "low",
       "summary": "Public-safe requirement and portfolio-coverage map for Asana's live AI Implementation Manager, Service Management role.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-08-18"
     },
     {
       "id": "opportunity.benepass.product-operations.7f963a7a",
       "path": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
       "title": "Benepass - Product Operations Manager",
       "kind": "opportunity",
-      "status": "governed-open",
+      "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Public-safe requirement and portfolio-coverage map for Benepass's live Product Operations Manager role.",
+      "summary": "Public-safe historical requirement and portfolio-coverage map for Benepass's closed Product Operations Manager role.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-09-15"
     },
     {
       "id": "opportunity.codepath.claude-corps.5182020007",
@@ -3856,8 +3856,8 @@
       "sensitivity": "low",
       "summary": "Public-safe requirement, reporting-context, and portfolio-coverage map for CodePath's live Engineering Project Manager role.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2026-08-16"
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-08-18"
     },
     {
       "id": "opportunity.codepath.senior-ai-operations-lead.5175813007",
@@ -3869,21 +3869,21 @@
       "sensitivity": "low",
       "summary": "Public-safe requirement, reporting-context, and portfolio-coverage map for CodePath's live Senior AI Operations Lead role.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2026-08-16"
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-08-18"
     },
     {
       "id": "opportunity.nyc-oti.senior-product-manager.782366",
       "path": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
       "title": "NYC OTI - Senior Product Manager 782366",
       "kind": "opportunity",
-      "status": "governed-open",
+      "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Public-safe requirement, reporting-context, and portfolio-coverage map for four live NYC OTI Public Interest Technology Crew Senior Product Manager positions.",
+      "summary": "Public-safe historical requirement, reporting-context, and portfolio-coverage map for four expired NYC OTI Public Interest Technology Crew Senior Product Manager positions.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2026-08-14"
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-09-15"
     },
     {
       "id": "opportunity.nyc-oti.technical-operations-manager.782369",
@@ -3908,8 +3908,8 @@
       "sensitivity": "low",
       "summary": "Public-safe requirement and portfolio-coverage map for PermitFlow's live Product Operations Manager role.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-08-18"
     },
     {
       "id": "opportunity.protected.source-backed-memory-consulting.2026",
@@ -4541,6 +4541,19 @@
       "reviewBy": "2026-09-13"
     },
     {
+      "id": "source.asana.product-leadership.2026-08-15",
+      "path": "docs/knowledge-bank/sources/asana-product-leadership-2026.md",
+      "title": "Official Asana product leadership context",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official Asana sources identifying Arnab Bose as Chief Product Officer and describing his human-and-AI product remit.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-09-15"
+    },
+    {
       "id": "source.callnyc.live-site.2026-08-14",
       "path": "docs/knowledge-bank/sources/callnyc-live-site-2026-08-14.md",
       "title": "CallNYC restored public site",
@@ -4795,23 +4808,23 @@
       "status": "maintained",
       "visibility": "public",
       "sensitivity": "low",
-      "summary": "Official Asana posting context for AI Implementation Manager, Service Management, rechecked July 18, 2026.",
+      "summary": "Official Asana posting context for AI Implementation Manager, Service Management, rechecked August 15, 2026.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-08-18"
     },
     {
       "id": "source.jobs.benepass.product-operations.7f963a7a",
       "path": "docs/knowledge-bank/sources/jobs-benepass-product-operations.md",
       "title": "Official posting - Benepass Product Operations Manager",
       "kind": "source",
-      "status": "maintained",
+      "status": "archived",
       "visibility": "public",
       "sensitivity": "low",
-      "summary": "Official Benepass posting for a Product Operations Manager, rechecked July 18, 2026.",
+      "summary": "Historical official Benepass posting for a Product Operations Manager; the exact role was no longer on the official board on August 15, 2026.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-09-15"
     },
     {
       "id": "source.jobs.codepath.claude-corps.5182020007",
@@ -4886,10 +4899,10 @@
       "status": "maintained",
       "visibility": "public",
       "sensitivity": "low",
-      "summary": "Official PermitFlow posting for a Product Operations Manager, rechecked July 18, 2026.",
+      "summary": "Official PermitFlow posting for a Product Operations Manager, rechecked August 15, 2026.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-08-18"
     },
     {
       "id": "source.kansas-city-star.raft.2007-11-15",
@@ -5371,6 +5384,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-13",
       "reviewBy": "2027-02-13"
+    },
+    {
+      "id": "source.permitflow.leadership.2026-08-15",
+      "path": "docs/knowledge-bank/sources/permitflow-leadership-2026.md",
+      "title": "Official PermitFlow leadership and product-vision context",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official PermitFlow sources identifying Francis Thumpasery as Co-Founder and CEO and describing the company's construction-AI vision.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-09-15"
     },
     {
       "id": "source.photo-metadata.east-river.2022.public-safe",
@@ -14886,9 +14912,19 @@
       "type": "evidence:context",
       "to": "source.jobs.asana.ai-implementation.8027437",
       "source": "evidence",
-      "confidence": "moderate",
+      "confidence": "high",
       "supports": [
-        "official role listing and supplied role-context facts as rechecked July 18, 2026"
+        "current role status, compensation, implementation scope, and requirements as rechecked August 15, 2026"
+      ]
+    },
+    {
+      "from": "opportunity.asana.ai-implementation.8027437",
+      "type": "evidence:corroborating",
+      "to": "source.asana.product-leadership.2026-08-15",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "Arnab Bose's current title and senior product-vision context"
       ]
     },
     {
@@ -14905,6 +14941,14 @@
       "to": "method.source-backed-team-memory",
       "source": "frontmatter",
       "href": "../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.asana.ai-implementation.8027437",
+      "type": "uses_source",
+      "to": "source.asana.product-leadership.2026-08-15",
+      "source": "frontmatter",
+      "href": "../sources/asana-product-leadership-2026.md",
       "context": null
     },
     {
@@ -15217,12 +15261,22 @@
     },
     {
       "from": "opportunity.permitflow.product-operations.8a6e6066",
+      "type": "evidence:corroborating",
+      "to": "source.permitflow.leadership.2026-08-15",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "Francis Thumpasery's current title and company vision context"
+      ]
+    },
+    {
+      "from": "opportunity.permitflow.product-operations.8a6e6066",
       "type": "evidence:direct-support",
       "to": "source.jobs.permitflow.product-operations.8a6e6066",
       "source": "evidence",
       "confidence": "high",
       "supports": [
-        "official role facts and requirements as rechecked July 18, 2026"
+        "official role facts and requirements as rechecked August 15, 2026"
       ]
     },
     {
@@ -15255,6 +15309,14 @@
       "to": "source.jobs.permitflow.product-operations.8a6e6066",
       "source": "frontmatter",
       "href": "../sources/jobs-permitflow-product-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.permitflow.product-operations.8a6e6066",
+      "type": "uses_source",
+      "to": "source.permitflow.leadership.2026-08-15",
+      "source": "frontmatter",
+      "href": "../sources/permitflow-leadership-2026.md",
       "context": null
     },
     {
@@ -17046,6 +17108,14 @@
       "context": null
     },
     {
+      "from": "source.asana.product-leadership.2026-08-15",
+      "type": "supports",
+      "to": "opportunity.asana.ai-implementation.8027437",
+      "source": "frontmatter",
+      "href": "../opportunities/asana-ai-implementation.md",
+      "context": null
+    },
+    {
       "from": "source.callnyc.live-site.2026-08-14",
       "type": "documents",
       "to": "project.callnyc",
@@ -17771,6 +17841,14 @@
       "to": "person.paul-mossine",
       "source": "frontmatter",
       "href": "../../people/paul-mossine.md",
+      "context": null
+    },
+    {
+      "from": "source.permitflow.leadership.2026-08-15",
+      "type": "supports",
+      "to": "opportunity.permitflow.product-operations.8a6e6066",
+      "source": "frontmatter",
+      "href": "../opportunities/permitflow-product-operations.md",
       "context": null
     },
     {
@@ -19303,28 +19381,10 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
-      "to": "opportunity.nyc-oti.senior-product-manager.782366",
-      "fragment": null,
-      "line": 14,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
-      "to": "opportunity.benepass.product-operations.7f963a7a",
-      "fragment": null,
-      "line": 23,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
       "to": "opportunity.asana.ai-implementation.8027437",
       "fragment": null,
-      "line": 24,
+      "line": 14,
       "kind": "link"
     },
     {
@@ -19333,7 +19393,7 @@
       "toPath": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
       "to": "opportunity.permitflow.product-operations.8a6e6066",
       "fragment": null,
-      "line": 25,
+      "line": 15,
       "kind": "link"
     },
     {
@@ -19342,7 +19402,25 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
       "to": "opportunity.nyc-oti.technical-operations-manager.782369",
       "fragment": null,
-      "line": 29,
+      "line": 36,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
+      "to": "opportunity.nyc-oti.senior-product-manager.782366",
+      "fragment": null,
+      "line": 37,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
+      "to": "opportunity.benepass.product-operations.7f963a7a",
+      "fragment": null,
+      "line": 38,
       "kind": "link"
     },
     {
@@ -19351,7 +19429,7 @@
       "toPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
       "to": "opportunity.aclu.product-manager-discovery.8482872002",
       "fragment": null,
-      "line": 30,
+      "line": 39,
       "kind": "link"
     },
     {
@@ -19360,7 +19438,7 @@
       "toPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
       "to": "opportunity.codepath.claude-corps.5182020007",
       "fragment": null,
-      "line": 31,
+      "line": 40,
       "kind": "link"
     },
     {
@@ -19369,7 +19447,7 @@
       "toPath": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
       "to": "opportunity.protected.source-backed-memory-consulting.2026",
       "fragment": null,
-      "line": 35,
+      "line": 44,
       "kind": "link"
     },
     {
@@ -19378,7 +19456,7 @@
       "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
       "to": "evaluation.employment-context.coverage.2026-07-18",
       "fragment": null,
-      "line": 61,
+      "line": 70,
       "kind": "link"
     },
     {
@@ -19387,7 +19465,7 @@
       "toPath": "reports/wiki-opportunity-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 62,
+      "line": 71,
       "kind": "link"
     },
     {
@@ -19396,7 +19474,7 @@
       "toPath": "reports/wiki-career-trajectory-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 63,
+      "line": 72,
       "kind": "link"
     },
     {
@@ -19405,7 +19483,7 @@
       "toPath": "reports/wiki-source-channel-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 64,
+      "line": 73,
       "kind": "link"
     },
     {
@@ -19414,7 +19492,7 @@
       "toPath": "reports/wiki-opportunity-discovery.md",
       "to": null,
       "fragment": null,
-      "line": 65,
+      "line": 74,
       "kind": "link"
     },
     {
@@ -19423,7 +19501,7 @@
       "toPath": "reports/hiring-acceptance-public.md",
       "to": null,
       "fragment": null,
-      "line": 66,
+      "line": 75,
       "kind": "link"
     },
     {
@@ -19432,7 +19510,7 @@
       "toPath": "reports/hiring-acceptance-gap-resolution.md",
       "to": null,
       "fragment": null,
-      "line": 67,
+      "line": 76,
       "kind": "link"
     },
     {
@@ -21191,24 +21269,6 @@
       "kind": "link"
     },
     {
-      "fromPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
-      "from": "opportunity.asana.ai-implementation.8027437",
-      "toPath": "docs/knowledge-bank/sources/jobs-asana-ai-implementation-8027437.md",
-      "to": "source.jobs.asana.ai-implementation.8027437",
-      "fragment": null,
-      "line": 9,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
-      "from": "opportunity.benepass.product-operations.7f963a7a",
-      "toPath": "docs/knowledge-bank/sources/jobs-benepass-product-operations.md",
-      "to": "source.jobs.benepass.product-operations.7f963a7a",
-      "fragment": null,
-      "line": 9,
-      "kind": "link"
-    },
-    {
       "fromPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
       "from": "opportunity.codepath.claude-corps.5182020007",
       "toPath": "docs/knowledge-bank/sources/jobs-codepath-claude-corps-5182020007.md",
@@ -21233,15 +21293,6 @@
       "to": "source.jobs.oti.technical-operations.782369",
       "fragment": null,
       "line": 25,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
-      "from": "opportunity.permitflow.product-operations.8a6e6066",
-      "toPath": "docs/knowledge-bank/sources/jobs-permitflow-product-operations.md",
-      "to": "source.jobs.permitflow.product-operations.8a6e6066",
-      "fragment": null,
-      "line": 9,
       "kind": "link"
     },
     {

@@ -32,6 +32,47 @@ test("every named-reader opportunity resume advances through every modeled reade
   }
 });
 
+test("the single public resume advances every currently active modeled reader", () => {
+  const result = evaluateHiringReaderPortfolio();
+  assert.ok(result.publicResume, "public resume evaluation is missing");
+  assert.equal(result.publicResume.overall, "pass", JSON.stringify(result.publicResume, null, 2));
+  assert.deepEqual(result.publicResume.activeGateIds, [
+    "gate.aclu-national-campaigns.deirdre-schifeling",
+    "gate.asana-ai-implementation.arnab-bose",
+    "gate.codepath-ai-operations.brian-madigan",
+    "gate.codepath-ai-operations.quinton-ma",
+    "gate.codepath-engineering.chris-coleman",
+    "gate.codepath-engineering.zack-parker",
+    "gate.permitflow-product-operations.francis-thumpasery"
+  ]);
+  assert.equal(result.publicResume.actualPeopleParticipated, false);
+  assert.equal(result.publicResume.decision, "advance-to-structured-next-step");
+  for (const reader of result.publicResume.readerResults) {
+    assert.equal(reader.hardScreenPass, true);
+    assert.ok(reader.constructiveCritique.length > 80);
+    assert.ok(reader.validateNext.length > 60);
+  }
+});
+
+test("the public resume fails closed when cross-opportunity quality evidence is removed", () => {
+  const publicPath = config.publicResume.resumePath;
+  const original = readFileSync(path.join(repoRoot, publicPath), "utf8");
+  const mutation = original
+    .replace(/issue reproduction/gi, "issue review")
+    .replace(/test cases/gi, "checks")
+    .replace(/release verification/gi, "release support");
+  const result = evaluateHiringReaderPortfolio({
+    resumeOverrides: { [publicPath]: mutation }
+  });
+  const zack = result.publicResume.readerResults.find(
+    (reader) => reader.readerId === "reader.zack-parker"
+  );
+  assert.equal(zack.modeledVerdict, "fail");
+  assert.ok(zack.missingSignalGroups.includes("quality-system"));
+  assert.equal(result.publicResume.overall, "fail");
+  assert.equal(result.overall, "fail");
+});
+
 test("a missing opportunity-specific resume fails closed", () => {
   const missingPath = config.versions[0].resumePath;
   const result = evaluateHiringReaderPortfolio({ resumeOverrides: { [missingPath]: null } });

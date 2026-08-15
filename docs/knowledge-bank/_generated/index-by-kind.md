@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `e3bf701adffabda01cbc239f3a701cf4da583401`
-**Generation time:** 2026-08-15T04:33:53-04:00
-**Source fingerprint:** `376ce8eb09c148a3b86a7a3b81b6ff2de7514e6f5c905cee1f9fad0e318fb195`
+**Source commit:** `be0d93de1c20fccec22457bb7be38ea84b12b864`
+**Generation time:** 2026-08-15T16:44:17-04:00
+**Source fingerprint:** `cbba07757b7521b01020a1676f54f5104a6e562f2a79a7c18ef809ccf65c582a`
 
 ## application
 
@@ -408,6 +408,7 @@
 ## source
 
 - [ACLU political and advocacy leadership - August 2026](../sources/aclu-political-advocacy-leadership-2026.md) - `source.aclu.political-advocacy-leadership.2026-08-13`
+- [Official Asana product leadership context](../sources/asana-product-leadership-2026.md) - `source.asana.product-leadership.2026-08-15`
 - [CallNYC restored public site](../sources/callnyc-live-site-2026-08-14.md) - `source.callnyc.live-site.2026-08-14`
 - [CallNYC public source repository](../sources/callnyc-source-repository.md) - `source.callnyc.source-repository`
 - [Campaign-site repository family, 2020-2022](../sources/campaign-site-repository-family-2020-2022.md) - `source.campaign-site.repository-family.2020-2022`
@@ -472,6 +473,7 @@
 - [Elana Gordon East River portfolio permission summary](../sources/permissions/elana-gordon-east-river-portfolio-2026.md) - `source.permission.elana-gordon.east-river.2026-07`
 - [Jamie Burkart NYC Artist Coalition portfolio-album clearance](../sources/permissions/jamie-nycac-portfolio-album-clearance-2026-08.md) - `source.permission.jamie-nycac-portfolio-album.2026-08`
 - [Jamie Burkart portfolio-album publication authorization](../sources/permissions/jamie-portfolio-album-2026-08-13.md) - `source.permission.jamie-portfolio-album.2026-08-13`
+- [Official PermitFlow leadership and product-vision context](../sources/permitflow-leadership-2026.md) - `source.permitflow.leadership.2026-08-15`
 - [East River photograph public-safe metadata summary](../sources/photo-metadata/east-river-2022-public-safe.md) - `source.photo-metadata.east-river.2022.public-safe`
 - [Public-safe metadata capsule for the August 2026 project-cover images](../sources/photo-metadata/portfolio-cover-images-2026-public-safe.md) - `source.photo-metadata.portfolio-cover-images.2026.public-safe`
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`

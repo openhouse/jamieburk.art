@@ -5,14 +5,22 @@ kind: opportunity
 status: governed-open
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-08-15
+review_by: 2026-08-18
 canonical_path: docs/knowledge-bank/opportunities/permitflow-product-operations.md
 summary: Public-safe requirement and portfolio-coverage map for PermitFlow's live Product Operations Manager role.
 canonical_url: https://jobs.ashbyhq.com/permitflow/8a6e6066-1a9a-4026-aa81-e855741b2922/
 source_type: official-employer
 opportunity_status: live
-verified_at: 2026-07-18
+verified_at: 2026-08-15
+reporting_context:
+  direct_manager_title: not stated in the posting
+  direct_manager_person: null
+  direct_manager_public_status: not-publicly-named
+  senior_vision_owner: Francis Thumpasery
+  senior_vision_owner_title: Co-Founder and CEO
+  senior_vision_basis: PermitFlow's official Series B announcement identifies Thumpasery as Co-Founder and CEO and states the company vision for AI-supported construction workflows.
+  verified_at: 2026-08-15
 portfolio_routes:
   - /
   - /work/technical-operations
@@ -31,11 +39,15 @@ discovery_terms:
   - AI automation
 confirmed_facts:
   - The role is New York hybrid with three office days per week.
-  - The posted compensation is $120,000 to $170,000 plus equity and bonus.
   - The role connects Product, Engineering, Analytics, AI, Operations, Sales, and Customer Success.
-inferences: []
+  - The current official posting asks for two or more years in Product Operations, Product Strategy, Business Operations, or a similar cross-functional role at a high-growth SaaS, technology, or AI-driven company.
+  - The current official posting does not disclose compensation.
+inferences:
+  - Francis Thumpasery is the nearest publicly named senior vision owner, not an established direct manager or hiring decision-maker.
 unknowns:
   - Expected SQL, dashboard, and experimentation fluency in daily work.
+  - Current compensation and whether it remains at or above Jamie's $100,000 target.
+  - The direct manager and decision rights for launch readiness, metrics, and prioritization.
 hard_screens:
   - id: screen.permitflow.product-data-literacy
     text: The role requires strong analytical skills and product-data literacy.
@@ -45,6 +57,10 @@ hard_screens:
     text: The role requires three in-office days per week in New York City.
     state: likely-met
     disposition: proceed
+  - id: screen.permitflow.compensation
+    text: Current compensation must be verified because the active posting no longer discloses a range.
+    state: review-needed
+    disposition: verify
 role_requirements:
   - id: requirement.permitflow.physical-public-systems
     importance: critical
@@ -108,6 +124,9 @@ relations:
   - type: uses_source
     target: source.jobs.permitflow.product-operations.8a6e6066
     href: ../sources/jobs-permitflow-product-operations.md
+  - type: uses_source
+    target: source.permitflow.leadership.2026-08-15
+    href: ../sources/permitflow-leadership-2026.md
   - type: related_to
     target: capability.technical-operations
     href: ../capabilities/technical-operations.md
@@ -122,7 +141,12 @@ evidence:
     relationship: direct-support
     confidence: high
     supports:
-      - official role facts and requirements as rechecked July 18, 2026
+      - official role facts and requirements as rechecked August 15, 2026
+  - target: source.permitflow.leadership.2026-08-15
+    relationship: corroborating
+    confidence: high
+    supports:
+      - Francis Thumpasery's current title and company vision context
 human_review: governed-open
 ---
 
@@ -133,5 +157,6 @@ pattern legible in one role. Product analytics is the important screen: the
 system should distinguish adjacent evidence from fluency Jamie can demonstrate
 today.
 
-Recheck the [official source](../sources/jobs-permitflow-product-operations.md)
-before outward use.
+The role remained listed on PermitFlow's official Ashby board on August 15,
+2026. The fit remains credible; compensation and hands-on product-data depth
+must be verified before treating it as a fully cleared target.

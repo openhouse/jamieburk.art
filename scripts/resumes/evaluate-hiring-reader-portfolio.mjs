@@ -87,6 +87,129 @@ function countExperienceSignalGroups(version, experience) {
     .filter((group) => containsAny(experience, group.patterns)).length;
 }
 
+function frontmatterValue(markdown, key) {
+  return markdown.match(new RegExp(`^${key}:\\s*(.+)$`, "m"))?.[1]?.trim() ?? null;
+}
+
+function getMarkdown(relativePath, root, overrides) {
+  if (Object.prototype.hasOwnProperty.call(overrides, relativePath)) {
+    return overrides[relativePath];
+  }
+  const absolutePath = path.join(root, relativePath);
+  return existsSync(absolutePath) ? readFileSync(absolutePath, "utf8") : null;
+}
+
+function evaluatePublicResume({ root, config, resumeOverrides }) {
+  const publicConfig = config.publicResume;
+  if (!publicConfig) return null;
+
+  const markdown = getMarkdown(publicConfig.resumePath, root, resumeOverrides);
+  const plainText = markdown ? normalizeText(markdown) : "";
+  const artifactSpecPath = path.join(root, publicConfig.artifactSpecPath);
+  const artifactSpec = existsSync(artifactSpecPath)
+    ? JSON.parse(readFileSync(artifactSpecPath, "utf8"))
+    : null;
+  const evaluatedDate = config.evaluatedAt.slice(0, 10);
+  const artifactChecks = [
+    {
+      id: "public-resume-file-exists",
+      pass: markdown !== null,
+      detail: publicConfig.resumePath
+    },
+    {
+      id: "public-pdf-source-binding",
+      pass:
+        markdown !== null &&
+        artifactSpec?.sourceMarkdownPath === publicConfig.resumePath &&
+        artifactSpec?.sourceMarkdownSha256 === sha256(markdown),
+      detail: publicConfig.artifactSpecPath
+    },
+    {
+      id: "fictionalized-next-step-boundary",
+      pass:
+        config.contract.actualPeopleParticipated === false &&
+        config.contract.passDecision === "advance-to-structured-next-step",
+      detail: "The modeled screen cannot claim participation, endorsement, or a final hiring outcome."
+    }
+  ];
+
+  const readers = publicConfig.readerCriteria.map((reader) => {
+    const opportunityPath = path.join(root, reader.opportunityPath);
+    const opportunity = existsSync(opportunityPath)
+      ? readFileSync(opportunityPath, "utf8")
+      : "";
+    const opportunityStatus = frontmatterValue(opportunity, "opportunity_status");
+    const reviewBy = frontmatterValue(opportunity, "review_by");
+    const opportunityId = frontmatterValue(opportunity, "id");
+    const readerProfilePath = path.join(root, reader.readerPath);
+    const profile = existsSync(readerProfilePath)
+      ? readFileSync(readerProfilePath, "utf8")
+      : "";
+    const profileBound =
+      profile.includes(`id: ${reader.readerId}`) &&
+      profile.includes(`displayName: ${reader.displayName}`) &&
+      /publicSources:/i.test(profile) &&
+      /not actual participation/i.test(profile);
+    const statusPass =
+      opportunityId === reader.opportunityId &&
+      opportunityStatus === publicConfig.statusPolicy.requiredOpportunityStatus;
+    const hardScreenPass = !/^\s*disposition:\s*do-not-pursue\s*$/im.test(opportunity);
+    const freshnessPass =
+      !publicConfig.statusPolicy.requireFreshReview ||
+      (reviewBy !== null && reviewBy >= evaluatedDate);
+    const signalResults = reader.signalGroups.map((group) => ({
+      id: group.id,
+      pass: containsAny(plainText, group.patterns)
+    }));
+    const modeledPass =
+      markdown !== null &&
+      profileBound &&
+      statusPass &&
+      hardScreenPass &&
+      freshnessPass &&
+      signalResults.every((signal) => signal.pass);
+
+    return {
+      gateId: reader.gateId,
+      readerId: reader.readerId,
+      displayName: reader.displayName,
+      opportunityId: reader.opportunityId,
+      opportunityStatus,
+      reviewBy,
+      profileBound,
+      statusPass,
+      hardScreenPass,
+      freshnessPass,
+      modeledVerdict: modeledPass ? "pass" : "fail",
+      decision: modeledPass ? config.contract.passDecision : "do-not-advance",
+      actualPersonParticipated: false,
+      matchedSignalGroups: signalResults.filter((signal) => signal.pass).map((signal) => signal.id),
+      missingSignalGroups: signalResults.filter((signal) => !signal.pass).map((signal) => signal.id),
+      constructiveCritique: reader.constructiveCritique,
+      validateNext: reader.validateNext
+    };
+  });
+  const activeGateIds = readers.map((reader) => reader.gateId).sort();
+  const overallPass =
+    artifactChecks.every((check) => check.pass) &&
+    readers.length > 0 &&
+    readers.every((reader) => reader.modeledVerdict === "pass");
+
+  return {
+    resumePath: publicConfig.resumePath,
+    sha256: markdown ? sha256(markdown) : null,
+    scope: publicConfig.scope,
+    activeGateIds,
+    activeOpportunityIds: [...new Set(readers.map((reader) => reader.opportunityId))].sort(),
+    artifactChecks,
+    readerResults: readers,
+    actualPeopleParticipated: false,
+    decision: overallPass ? config.contract.passDecision : "do-not-advance",
+    overall: overallPass ? "pass" : "fail",
+    boundary: "This single public resume is tested against current modeled reader contexts only. Closed roles are excluded, and a pass is not an employer endorsement or final hiring decision."
+  };
+}
+
 export function evaluateHiringReaderPortfolio({
   root = repoRoot,
   config = defaultConfig,
@@ -432,17 +555,19 @@ export function evaluateHiringReaderPortfolio({
     version.artifactChecks.find((check) => check.id === "resume-file-exists")?.pass
   ).length;
   const passingReaders = readerResults.filter((reader) => reader.modeledVerdict === "pass").length;
+  const publicResume = evaluatePublicResume({ root, config, resumeOverrides });
   const overallPass =
     portfolioChecks.every((check) => check.pass) &&
     versions.length === requiredOpportunityIds.length &&
     versions.every((version) => version.overall === "pass") &&
     readerResults.length === requiredGateIds.length &&
-    passingReaders === requiredGateIds.length;
+    passingReaders === requiredGateIds.length &&
+    publicResume?.overall === "pass";
 
   return {
     schemaVersion: 1,
     evalId: config.id,
-    runId: "2026-08-14-hiring-reader-resume-portfolio-post-hillclimb",
+    runId: "2026-08-15-public-active-opportunity-resume-post-hillclimb",
     evaluatedAt: config.evaluatedAt,
     methodologySkills: [config.methodology.primarySkill, resumeReviewMethod.name],
     actualPeopleParticipated: false,
@@ -458,6 +583,7 @@ export function evaluateHiringReaderPortfolio({
     },
     portfolioChecks,
     versions,
+    publicResume,
     boundary: "This is a deterministic, fictionalized public-source resume screen. It is not participation, endorsement, an interview promise, or a final hiring decision by any named person."
   };
 }
@@ -475,6 +601,7 @@ export function currentRunSnapshot(result) {
     overall: result.overall,
     summary: result.summary,
     portfolioChecks: result.portfolioChecks,
+    publicResume: result.publicResume,
     versions: result.versions.map((version) => ({
       opportunityId: version.opportunityId,
       status: version.status,

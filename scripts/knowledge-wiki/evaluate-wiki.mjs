@@ -43,9 +43,10 @@ const opportunityQuery = queryWiki(result, {
 const opportunities = result.records.filter((record) => record.kind === "opportunity");
 const priorityOpportunityIds = [
   "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+  "opportunity.asana.ai-implementation.8027437",
   "opportunity.codepath.senior-ai-operations-lead.5175813007",
   "opportunity.codepath.engineering-project-manager.5160542007",
-  "opportunity.nyc-oti.senior-product-manager.782366"
+  "opportunity.permitflow.product-operations.8a6e6066"
 ];
 const priorityOpportunities = priorityOpportunityIds.map((id) => result.byId.get(id));
 const otiOperationsWatch = result.byId.get(
@@ -277,8 +278,8 @@ const checks = {
     priorityOpportunities.every(
       (record) =>
         record?.opportunity_status === "live" &&
-        record.verified_at === "2026-08-13" &&
-        record.review_by >= "2026-08-14"
+        record.verified_at === "2026-08-15" &&
+        record.review_by >= "2026-08-18"
     ),
   reporting_context_bounded:
     [...priorityOpportunities, otiOperationsWatch].every(
@@ -287,7 +288,7 @@ const checks = {
         record.reporting_context.senior_vision_owner &&
         record.reporting_context.senior_vision_owner_title &&
         record.reporting_context.senior_vision_basis &&
-        record.reporting_context.verified_at === "2026-08-13" &&
+        record.reporting_context.verified_at >= "2026-08-13" &&
         (record.reporting_context.direct_manager_public_status === "not-publicly-named"
           ? record.reporting_context.direct_manager_person === null
           : Boolean(record.reporting_context.direct_manager_person))

@@ -2,17 +2,17 @@
 id: opportunity.nyc-oti.senior-product-manager.782366
 title: NYC OTI - Senior Product Manager 782366
 kind: opportunity
-status: governed-open
+status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-13
-review_by: 2026-08-14
+last_reviewed: 2026-08-15
+review_by: 2026-09-15
 canonical_path: docs/knowledge-bank/opportunities/oti-senior-product-manager.md
-summary: Public-safe requirement, reporting-context, and portfolio-coverage map for four live NYC OTI Public Interest Technology Crew Senior Product Manager positions.
+summary: Public-safe historical requirement, reporting-context, and portfolio-coverage map for four expired NYC OTI Public Interest Technology Crew Senior Product Manager positions.
 canonical_url: https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-44507
 source_type: official-employer
-opportunity_status: live
-verified_at: 2026-08-13
+opportunity_status: closed
+verified_at: 2026-08-15
 reporting_context:
   direct_manager_title: PIT Crew product or program leader, title not stated in the posting
   direct_manager_person: null
@@ -40,6 +40,7 @@ discovery_terms:
 confirmed_facts:
   - Job ID 782366 covers four full-time Senior Product Manager positions in OTI's Commissioner's Office at 15 MetroTech.
   - The salary range is $100,000 to $180,000 and the posting closes August 14, 2026.
+  - The official City Jobs page stated that the vacancy had expired when rechecked August 15, 2026.
   - The roles will lead resident-facing products from problem framing through discovery, prototyping, pilot, public launch, measurement, and learning.
   - Neither the posting nor the PIT Crew page names a direct manager; the official launch announcement identifies Lisa Gelobter as CTO and OTI Commissioner.
 inferences:
@@ -183,6 +184,10 @@ human_review: governed-open
 ---
 
 # NYC OTI - Senior Product Manager 782366
+
+This exact vacancy expired August 14, 2026 and is no longer a current
+public-resume gate. Keep it as the strongest recent public-interest product
+benchmark and watch for a materially similar PIT Crew opening.
 
 Jamie's product-practice fit is unusually strong: the record spans public
 problem framing, community product delivery, discovery in use, stakeholder

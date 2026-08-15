@@ -2,17 +2,17 @@
 id: opportunity.benepass.product-operations.7f963a7a
 title: Benepass - Product Operations Manager
 kind: opportunity
-status: governed-open
+status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-08-15
+review_by: 2026-09-15
 canonical_path: docs/knowledge-bank/opportunities/benepass-product-operations.md
-summary: Public-safe requirement and portfolio-coverage map for Benepass's live Product Operations Manager role.
+summary: Public-safe historical requirement and portfolio-coverage map for Benepass's closed Product Operations Manager role.
 canonical_url: https://jobs.ashbyhq.com/benepass/7f963a7a-aaad-456b-b12b-7f34b35d51cf/
 source_type: official-employer
-opportunity_status: live
-verified_at: 2026-07-18
+opportunity_status: closed
+verified_at: 2026-08-15
 portfolio_routes:
   - /
   - /work/technical-operations
@@ -30,6 +30,7 @@ confirmed_facts:
   - The role is US remote and reports to Head of Customer Operations Aileen Palmer.
   - The posted base salary is $150,000 to $180,000 plus equity.
   - The role makes go/no-go recommendations and owns an Ops-to-Product prioritization system.
+  - The exact posting was absent from Benepass's official Ashby job-board feed on August 15, 2026, and its former URL returned the generic jobs shell rather than a job posting.
 inferences: []
 unknowns:
   - Expected analytical tooling and depth of direct Product Operations tenure.
@@ -118,10 +119,10 @@ human_review: governed-open
 
 # Benepass - Product Operations Manager
 
-This is a strong operating-pattern match. The portfolio demonstrates planning,
-risk, documentation, and learning systems; the application must make downstream
-operational impact and quantified prioritization more concrete without
-overstating formal SaaS Product Operations tenure.
+This closed role remains a strong operating-pattern watch. The portfolio
+demonstrates planning, risk, documentation, and learning systems; a materially
+similar future application must make downstream operational impact and
+quantified prioritization more concrete without overstating formal SaaS Product
+Operations tenure.
 
-Recheck the [official source](../sources/jobs-benepass-product-operations.md)
-before outward use.
+The exact posting is not a current public-resume gate.

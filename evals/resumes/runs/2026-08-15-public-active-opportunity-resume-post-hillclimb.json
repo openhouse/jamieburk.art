@@ -1,0 +1,409 @@
+{
+  "schemaVersion": 1,
+  "evalId": "resume-hiring-reader-portfolio-2026-08-15",
+  "runId": "2026-08-15-public-active-opportunity-resume-post-hillclimb",
+  "evaluatedAt": "2026-08-15T17:45:00-04:00",
+  "methodologySkills": [
+    "interviewing-evaluating-candidates",
+    "review-resume"
+  ],
+  "actualPeopleParticipated": false,
+  "acceptanceQuestion": "Under this explicitly fictionalized public-source lens, would this reader advance Jamie from resume review to a structured interview or practical work sample for this opportunity?",
+  "decision": "advance-to-structured-next-step",
+  "overall": "pass",
+  "summary": {
+    "requiredOpportunityVersions": 5,
+    "maintainedOpportunityVersions": 5,
+    "passingOpportunityVersions": 5,
+    "requiredReaderOpportunityPairs": 7,
+    "passingReaderOpportunityPairs": 7
+  },
+  "portfolioChecks": [
+    {
+      "id": "named-reader-opportunity-coverage",
+      "pass": true,
+      "detail": "5/5 named-reader opportunity versions configured."
+    },
+    {
+      "id": "named-reader-pair-coverage",
+      "pass": true,
+      "detail": "7/7 named reader/opportunity gates configured."
+    },
+    {
+      "id": "candidate-evaluation-skill-pinned",
+      "pass": true,
+      "detail": "interviewing-evaluating-candidates is repository-pinned with source provenance and an exact SKILL.md digest."
+    },
+    {
+      "id": "resume-review-skill-pinned",
+      "pass": true,
+      "detail": "review-resume is repository-pinned with marketplace provenance and an exact SKILL.md digest."
+    },
+    {
+      "id": "fictionalized-public-context-boundary",
+      "pass": true,
+      "detail": "A modeled pass advances to a structured next step and cannot represent actual participation or a final hire."
+    }
+  ],
+  "publicResume": {
+    "resumePath": "resumes/2026-08-15/technical-project-manager-product-operations-implementation/Jamie-Burkart-Resume-Technical-Project-Manager.md",
+    "sha256": "cf157dc42fca65ad252d52db0f8bb9f85ce88c3e4c6b93ae5d310391912c9ee4",
+    "scope": "One durable site-visitor resume evaluated against every current, truthfully hirable opportunity that has an active fictionalized public-context reader gate.",
+    "activeGateIds": [
+      "gate.aclu-national-campaigns.deirdre-schifeling",
+      "gate.asana-ai-implementation.arnab-bose",
+      "gate.codepath-ai-operations.brian-madigan",
+      "gate.codepath-ai-operations.quinton-ma",
+      "gate.codepath-engineering.chris-coleman",
+      "gate.codepath-engineering.zack-parker",
+      "gate.permitflow-product-operations.francis-thumpasery"
+    ],
+    "activeOpportunityIds": [
+      "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "opportunity.asana.ai-implementation.8027437",
+      "opportunity.codepath.engineering-project-manager.5160542007",
+      "opportunity.codepath.senior-ai-operations-lead.5175813007",
+      "opportunity.permitflow.product-operations.8a6e6066"
+    ],
+    "artifactChecks": [
+      {
+        "id": "public-resume-file-exists",
+        "pass": true,
+        "detail": "resumes/2026-08-15/technical-project-manager-product-operations-implementation/Jamie-Burkart-Resume-Technical-Project-Manager.md"
+      },
+      {
+        "id": "public-pdf-source-binding",
+        "pass": true,
+        "detail": "evals/resumes/artifacts/public-technical-project-manager-pdf.json"
+      },
+      {
+        "id": "fictionalized-next-step-boundary",
+        "pass": true,
+        "detail": "The modeled screen cannot claim participation, endorsement, or a final hiring outcome."
+      }
+    ],
+    "readerResults": [
+      {
+        "gateId": "gate.aclu-national-campaigns.deirdre-schifeling",
+        "readerId": "reader.deirdre-schifeling",
+        "displayName": "Deirdre Schifeling",
+        "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+        "opportunityStatus": "live",
+        "reviewBy": "2026-08-18",
+        "profileBound": true,
+        "statusPass": true,
+        "hardScreenPass": true,
+        "freshnessPass": true,
+        "modeledVerdict": "pass",
+        "decision": "advance-to-structured-next-step",
+        "actualPersonParticipated": false,
+        "matchedSignalGroups": [
+          "complex-campaign-delivery",
+          "advocacy-operations",
+          "research-and-communications",
+          "confidentiality-and-agency"
+        ],
+        "missingSignalGroups": [],
+        "constructiveCritique": "The shared resume makes complex advocacy delivery and collective accountability visible. National campaign scale, formal budget administration, and the exact three-year portfolio remain structured-interview questions.",
+        "validateNext": "Use a campaign scenario to test schedule, budget, confidentiality, contested priorities, affiliate agency, metrics, and sustainable handoff."
+      },
+      {
+        "gateId": "gate.asana-ai-implementation.arnab-bose",
+        "readerId": "reader.arnab-bose",
+        "displayName": "Arnab Bose",
+        "opportunityId": "opportunity.asana.ai-implementation.8027437",
+        "opportunityStatus": "live",
+        "reviewBy": "2026-08-18",
+        "profileBound": true,
+        "statusPass": true,
+        "hardScreenPass": true,
+        "freshnessPass": true,
+        "modeledVerdict": "pass",
+        "decision": "advance-to-structured-next-step",
+        "actualPersonParticipated": false,
+        "matchedSignalGroups": [
+          "implementation-ownership",
+          "ai-workflow",
+          "risk-and-change",
+          "reusable-playbooks"
+        ],
+        "missingSignalGroups": [],
+        "constructiveCritique": "The shared resume now shows implementation ownership, responsible AI controls, adoption, risk, and reusable handoff. Direct enterprise migration, configuration depth, and post-sale authority remain the important screens.",
+        "validateNext": "Inspect one customer-facing implementation from discovery through configuration, change management, launch, adoption measurement, and reusable playbook."
+      },
+      {
+        "gateId": "gate.codepath-ai-operations.brian-madigan",
+        "readerId": "reader.brian-madigan",
+        "displayName": "Brian Madigan",
+        "opportunityId": "opportunity.codepath.senior-ai-operations-lead.5175813007",
+        "opportunityStatus": "live",
+        "reviewBy": "2026-08-18",
+        "profileBound": true,
+        "statusPass": true,
+        "hardScreenPass": true,
+        "freshnessPass": true,
+        "modeledVerdict": "pass",
+        "decision": "advance-to-structured-next-step",
+        "actualPersonParticipated": false,
+        "matchedSignalGroups": [
+          "organizational-scale",
+          "adoption-and-handoff",
+          "measurement"
+        ],
+        "missingSignalGroups": [],
+        "constructiveCritique": "The resume frames AI and operations as organizational capability rather than tool enthusiasm. The unresolved question is whether that practice has produced measurable behavior change in a professional team.",
+        "validateNext": "Probe prioritization across functions, executive reporting, adoption, maintenance cost, privacy escalation, and team self-sufficiency."
+      },
+      {
+        "gateId": "gate.codepath-ai-operations.quinton-ma",
+        "readerId": "reader.quinton-ma",
+        "displayName": "Quinton Ma",
+        "opportunityId": "opportunity.codepath.senior-ai-operations-lead.5175813007",
+        "opportunityStatus": "live",
+        "reviewBy": "2026-08-18",
+        "profileBound": true,
+        "statusPass": true,
+        "hardScreenPass": true,
+        "freshnessPass": true,
+        "modeledVerdict": "pass",
+        "decision": "advance-to-structured-next-step",
+        "actualPersonParticipated": false,
+        "matchedSignalGroups": [
+          "workflow-discovery",
+          "quality-system",
+          "reusable-assets",
+          "outcome-measurement"
+        ],
+        "missingSignalGroups": [],
+        "constructiveCritique": "The resume shows a credible workflow-quality system with human review, failure states, reusable assets, and post-launch learning. A before-and-after measure tied to one production workflow would make the claim substantially stronger.",
+        "validateNext": "Inspect one workflow end to end: users, tools, review gates, failures, adoption, measured change, maintenance, and handoff."
+      },
+      {
+        "gateId": "gate.codepath-engineering.chris-coleman",
+        "readerId": "reader.chris-coleman",
+        "displayName": "Chris Coleman",
+        "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+        "opportunityStatus": "live",
+        "reviewBy": "2026-08-18",
+        "profileBound": true,
+        "statusPass": true,
+        "hardScreenPass": true,
+        "freshnessPass": true,
+        "modeledVerdict": "pass",
+        "decision": "advance-to-structured-next-step",
+        "actualPersonParticipated": false,
+        "matchedSignalGroups": [
+          "product-engineering-bridge",
+          "responsible-ai",
+          "community-mission",
+          "durable-collaboration"
+        ],
+        "missingSignalGroups": [],
+        "constructiveCritique": "The shared resume connects product judgment, engineering coordination, responsible AI, and community-facing outcomes. The next screen should test tradeoffs among delivery quality, learner experience, and a small team's capacity.",
+        "validateNext": "Use a structured scenario to test success metrics, technical tradeoffs, cross-functional ownership, and mission-aligned delivery judgment."
+      },
+      {
+        "gateId": "gate.codepath-engineering.zack-parker",
+        "readerId": "reader.zack-parker",
+        "displayName": "Zack Parker",
+        "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+        "opportunityStatus": "live",
+        "reviewBy": "2026-08-18",
+        "profileBound": true,
+        "statusPass": true,
+        "hardScreenPass": true,
+        "freshnessPass": true,
+        "modeledVerdict": "pass",
+        "decision": "advance-to-structured-next-step",
+        "actualPersonParticipated": false,
+        "matchedSignalGroups": [
+          "engineering-delivery",
+          "quality-system",
+          "technical-fluency",
+          "proportionate-process"
+        ],
+        "missingSignalGroups": [],
+        "constructiveCritique": "The added issue-reproduction, test-case, and release-verification language closes the public resume's clearest engineering-delivery gap. A work sample should still show one issue becoming an owned test and release decision.",
+        "validateNext": "Use a work sample to test bug reproduction, prioritization, QA design, status communication, and proportionate process judgment."
+      },
+      {
+        "gateId": "gate.permitflow-product-operations.francis-thumpasery",
+        "readerId": "reader.francis-thumpasery",
+        "displayName": "Francis Thumpasery",
+        "opportunityId": "opportunity.permitflow.product-operations.8a6e6066",
+        "opportunityStatus": "live",
+        "reviewBy": "2026-08-18",
+        "profileBound": true,
+        "statusPass": true,
+        "hardScreenPass": true,
+        "freshnessPass": true,
+        "modeledVerdict": "pass",
+        "decision": "advance-to-structured-next-step",
+        "actualPersonParticipated": false,
+        "matchedSignalGroups": [
+          "physical-public-systems",
+          "product-data",
+          "cross-functional-launch",
+          "ai-automation"
+        ],
+        "missingSignalGroups": [],
+        "constructiveCritique": "The resume makes the physical-world, public-process, product-data, launch, and responsible-automation pattern credible. Current compensation and hands-on product analytics or SQL depth remain explicit hard screens.",
+        "validateNext": "Verify compensation, then inspect one launch dashboard or analysis joining customer insight, product data, prioritization, adoption, and accountable automation."
+      }
+    ],
+    "actualPeopleParticipated": false,
+    "decision": "advance-to-structured-next-step",
+    "overall": "pass",
+    "boundary": "This single public resume is tested against current modeled reader contexts only. Closed roles are excluded, and a pass is not an employer endorsement or final hiring decision."
+  },
+  "versions": [
+    {
+      "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "status": "live-priority",
+      "resumePath": "resumes/2026-08-14/aclu-senior-project-manager-national-campaigns-8631854002/Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-National-Campaigns-8631854002.md",
+      "wordCount": 659,
+      "numericSignalCount": 20,
+      "sha256": "658c700df20c189dfcdea85104570ce40d1ec64453a3fd4cbc52a66947386ba0",
+      "reviewResumeSkill": "review-resume",
+      "reviewResumeCriteriaPassed": 10,
+      "reviewResumeCriteriaRequired": 10,
+      "overall": "pass",
+      "readerResults": [
+        {
+          "gateId": "gate.aclu-national-campaigns.deirdre-schifeling",
+          "readerId": "reader.deirdre-schifeling",
+          "displayName": "Deirdre Schifeling",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "profileBound": true,
+          "missingSignalGroups": [],
+          "validateNext": "Use a structured campaign scenario to test schedule, metric, budget, confidentiality, contested priorities, affiliate agency, and sustainability judgment."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.codepath.senior-ai-operations-lead.5175813007",
+      "status": "live-priority",
+      "resumePath": "resumes/2026-08-14/codepath-senior-ai-operations-lead-5175813007/Jamie-Burkart-Resume-CodePath-Senior-AI-Operations-Lead-5175813007.md",
+      "wordCount": 632,
+      "numericSignalCount": 17,
+      "sha256": "afca72890e66de2ef45ecb83dc0f2fd7b77837b9c0f412dc715148d33546cac1",
+      "reviewResumeSkill": "review-resume",
+      "reviewResumeCriteriaPassed": 10,
+      "reviewResumeCriteriaRequired": 10,
+      "overall": "pass",
+      "readerResults": [
+        {
+          "gateId": "gate.codepath-ai-operations.quinton-ma",
+          "readerId": "reader.quinton-ma",
+          "displayName": "Quinton Ma",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "profileBound": true,
+          "missingSignalGroups": [],
+          "validateNext": "Inspect one personally built workflow end to end: users, tools, APIs, review gates, failure modes, adoption, measured change, maintenance, and handoff."
+        },
+        {
+          "gateId": "gate.codepath-ai-operations.brian-madigan",
+          "readerId": "reader.brian-madigan",
+          "displayName": "Brian Madigan",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "profileBound": true,
+          "missingSignalGroups": [],
+          "validateNext": "Probe prioritization across functions, executive reporting, adoption, maintenance cost, security and privacy escalation, and whether teams become less dependent after each engagement."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "status": "live-priority",
+      "resumePath": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.md",
+      "wordCount": 640,
+      "numericSignalCount": 20,
+      "sha256": "053e232f5094324330db25490960b4ea5956a674edaf0e421d9c5adf038f2f3e",
+      "reviewResumeSkill": "review-resume",
+      "reviewResumeCriteriaPassed": 10,
+      "reviewResumeCriteriaRequired": 10,
+      "overall": "pass",
+      "readerResults": [
+        {
+          "gateId": "gate.codepath-engineering.zack-parker",
+          "readerId": "reader.zack-parker",
+          "displayName": "Zack Parker",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "profileBound": true,
+          "missingSignalGroups": [],
+          "validateNext": "Use a structured work sample to test bug reproduction, prioritization, QA design, status communication, and proportionate process judgment."
+        },
+        {
+          "gateId": "gate.codepath-engineering.chris-coleman",
+          "readerId": "reader.chris-coleman",
+          "displayName": "Chris Coleman",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "profileBound": true,
+          "missingSignalGroups": [],
+          "validateNext": "Probe how Jamie would define success for engineering delivery when quality, learner experience, and a small team's capacity compete."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "status": "live-priority",
+      "resumePath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
+      "wordCount": 782,
+      "numericSignalCount": 23,
+      "sha256": "33f481d9c86f19f7e12f621057b213ca492b25228ebd753e133a2a42f031f0e0",
+      "reviewResumeSkill": "review-resume",
+      "reviewResumeCriteriaPassed": 10,
+      "reviewResumeCriteriaRequired": 10,
+      "overall": "pass",
+      "readerResults": [
+        {
+          "gateId": "gate.oti-senior-product.lisa-gelobter",
+          "readerId": "reader.lisa-gelobter",
+          "displayName": "Lisa Gelobter",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "profileBound": true,
+          "missingSignalGroups": [],
+          "validateNext": "Probe public-service motivation, power sharing, managerability, outcome measurement, a real product tradeoff, and the ability to build City capacity rather than personal dependency."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "status": "expired-benchmark",
+      "resumePath": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.md",
+      "wordCount": 712,
+      "numericSignalCount": 23,
+      "sha256": "8885a0383dee37424086ea8f454c609bc5bd70ea7a84437b7d56101b3bd58eb0",
+      "reviewResumeSkill": "review-resume",
+      "reviewResumeCriteriaPassed": 10,
+      "reviewResumeCriteriaRequired": 10,
+      "overall": "pass",
+      "readerResults": [
+        {
+          "gateId": "gate.oti-technical-operations.lisa-gelobter",
+          "readerId": "reader.lisa-gelobter",
+          "displayName": "Lisa Gelobter",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "profileBound": true,
+          "missingSignalGroups": [],
+          "validateNext": "For a materially similar future opening, test portfolio governance, personnel operations, procurement and budget exposure, escalation judgment, civil-service eligibility, and shift expectations."
+        }
+      ]
+    }
+  ],
+  "boundary": "This is a deterministic, fictionalized public-source resume screen. It is not participation, endorsement, an interview promise, or a final hiring decision by any named person."
+}

@@ -10,9 +10,11 @@ The durable public resume follows the same dated-version convention under:
 `resumes/YYYY-MM-DD/technical-project-manager-product-operations-implementation/`
 
 Its PDF is published at the stable portfolio path
-`/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf`. Application-specific
-resumes remain separate artifacts; they do not silently replace the public
-resume or broaden its positioning.
+`/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf`. It is the shared,
+site-visitor resume: it must retain a truthful evidence path for every active,
+truthfully hirable opportunity with a modeled public-context reader gate.
+Application-specific resumes remain separate artifacts and may be more narrowly
+tailored; they do not silently replace the public resume.
 
 Each version must remain truthful, public-safe, ATS-readable, and traceable to
 the job source and supporting knowledge-bank records. A role-alignment eval is
@@ -27,6 +29,15 @@ The named-reader suite currently maintains versions for:
 - NYC OTI Senior Product Manager;
 - NYC OTI Technical Operations Manager as an expired watch benchmark.
 
+The public-resume active set is status- and freshness-gated separately. As of
+August 15, 2026 it covers ACLU National Campaigns, Asana AI Implementation,
+CodePath AI Operations, CodePath Engineering Project Management, and PermitFlow
+Product Operations across seven fictionalized reader contexts. Closed and
+expired opportunities remain useful historical/watch records but cannot pass as
+active public-resume gates. A public gate pass means only "advance to a
+structured next step" under the modeled public-source lens; no named person
+participated or endorsed the result.
+
 Run the OTI-specific gate and the reader-bound portfolio gate with:
 
 ```sh
@@ -36,6 +47,9 @@ node --test scripts/resumes/*.test.mjs
 node scripts/resumes/evaluate-hiring-reader-portfolio.mjs
 ```
 
-The portfolio gate derives required opportunity and reader coverage from
-`evals/knowledge-wiki/named-hiring-readers.json`. A new named-reader gate makes
-the suite fail until its job-specific resume and evidence criteria are added.
+The opportunity-specific portfolio gate derives required opportunity and reader
+coverage from `evals/knowledge-wiki/named-hiring-readers.json`. The public-resume
+active gate is declared in `evals/resumes/hiring-reader-portfolio.json` and fails
+closed when an opportunity is not live, its status review is stale, a reader
+profile is missing, the PDF is not bound to the exact Markdown, or the shared
+resume loses a required cross-opportunity signal.

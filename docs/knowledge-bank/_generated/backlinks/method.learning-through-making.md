@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Learning Through Making
 
-**Source commit:** `e3bf701adffabda01cbc239f3a701cf4da583401`
-**Generation time:** 2026-08-15T04:33:53-04:00
-**Source fingerprint:** `376ce8eb09c148a3b86a7a3b81b6ff2de7514e6f5c905cee1f9fad0e318fb195`
+**Source commit:** `be0d93de1c20fccec22457bb7be38ea84b12b864`
+**Generation time:** 2026-08-15T16:44:17-04:00
+**Source fingerprint:** `cbba07757b7521b01020a1676f54f5104a6e562f2a79a7c18ef809ccf65c582a`
 
 - [Knowledge Wiki branch-family closure](../../indexes/family-closure.md) - `prose_link` (markdown)
 - [Knowledge Wiki branch-family closure](../../indexes/family-closure.md) - `related_to` (frontmatter)

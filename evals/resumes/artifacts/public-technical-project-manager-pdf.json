@@ -5,10 +5,10 @@
   "organization": "Public portfolio",
   "jobId": null,
   "sourceMarkdownPath": "resumes/2026-08-15/technical-project-manager-product-operations-implementation/Jamie-Burkart-Resume-Technical-Project-Manager.md",
-  "sourceMarkdownSha256": "45fd88261ec4f7d5972908ed2d7cfd72862ec87b247e98fe996109b948fb76f9",
+  "sourceMarkdownSha256": "cf157dc42fca65ad252d52db0f8bb9f85ce88c3e4c6b93ae5d310391912c9ee4",
   "pdfPath": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
-  "pdfSha256": "9997d98ce81c231fa3340c18c404ddfc05dadd0d50ad153f07ef9700c8101a2f",
-  "pdfSizeBytes": 95092,
+  "pdfSha256": "7e0b0941f12bcb0a3c5b462d91f4a9482f967c1e7cd62dbce5285db2c380a186",
+  "pdfSizeBytes": 95394,
   "pageCount": 2,
   "pageSizePoints": [612, 792],
   "documentTitle": "Jamie Burkart ◍ Resume — Technical Project Manager — 2026-08-15",
@@ -94,8 +94,8 @@
   },
   "hillClimb": {
     "baseline": "The former public PDF used the earlier Karla/Arial layout, opened page two with an orphaned Thick Arts bullet, and did not distinguish client work beginning in 2009 from the LLC's 2012 formation.",
-    "candidate": "The public PDF now uses the stronger Palatino/Oswald/Karla hierarchy, opens page two cleanly with WOWList, preserves governed claim boundaries, links selected project names, keeps Harry J. Epstein Company as deliberate plain text, and makes the 2009 client-work, 2012 LLC-formation, and 2009–2015 Harry J. Epstein chronology explicit.",
-    "boundedChange": "Removed only the Harry J. Epstein Company hyperlink while preserving its wording, chronology, typography, the remaining intentional links, and the proven two-page application layout."
+    "candidate": "The public PDF now uses the stronger Palatino/Oswald/Karla hierarchy, opens page two cleanly with WOWList, preserves governed claim boundaries, links selected project names, keeps Harry J. Epstein Company as deliberate plain text, and presents a shared product-operations case for every current active opportunity.",
+    "boundedChange": "Added issue reproduction, acceptance criteria, test cases, release verification, deterministic checks, human review, and explicit failure states to the existing core-skills block. This closes the smallest observed cross-opportunity evidence gaps without changing the verified experience chronology, collective-credit boundaries, or two-page layout."
   },
   "boundary": "This gate verifies the exact public PDF, Markdown binding, generic positioning, chronology, structural safety, required native links, explicitly forbidden links, and recorded all-page visual inspection. It is not an employer endorsement, application submission, or guarantee of interview or hire."
 }

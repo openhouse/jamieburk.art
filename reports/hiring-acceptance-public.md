@@ -1,12 +1,12 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `aae53e9dd853357d6ec3d04832b4b9fb1920ea09`
-**Portfolio snapshot:** `4c1a82a5e52088bedaf869a435302e8dc333e02e689a37c36144d3303563449b`
-**Role-context hash:** `fa2bbf11462a256ddf7358d40c1e5f4a34786b2e7439777dcc02a3fd82f8315d`
-**Reader-context hash:** `177f555134dc0c18066adfd1eaa94edf245f8cd357e5fdcaa62cdfcab2650580`
+**Candidate commit:** `be0d93de1c20fccec22457bb7be38ea84b12b864`
+**Portfolio snapshot:** `7a663320825fba482168c725f49d65609bd58e5c9aa0b06e7fe331ddd7950625`
+**Role-context hash:** `b882795f8239432855ec1a7263e7c22f8a8e6c36944554c05a72e81dc140ad55`
+**Reader-context hash:** `43376836970e6a0dae369b10141e15fae9baab41fdbe2263c6c8964d0fb2ea04`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
-**Candidate paths clean:** yes
+**Candidate paths clean:** no
 
 > Deterministic baseline only. This is not an interview prediction, a named person's opinion, or a human reader study.
 
@@ -59,11 +59,11 @@
 
 ### NYC OTI - Senior Product Manager 782366
 
-- Deterministic disposition: `deterministic-ready-for-human-review`
+- Deterministic disposition: `not-live`
 - Critical signals observed: 5/6
 - All signals observed: 5/6
-- Opportunity status live: yes
-- Role context current at candidate time: yes
+- Opportunity status live: no
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
 - `requirement.oti-product-manager.end-to-end-product`: **observed** on `/work/callnyc`
@@ -106,10 +106,10 @@
 
 ### Benepass - Product Operations Manager
 
-- Deterministic disposition: `evidence-gap-review`
+- Deterministic disposition: `not-live`
 - Critical signals observed: 3/4
 - All signals observed: 3/4
-- Opportunity status live: yes
+- Opportunity status live: no
 - Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
@@ -139,7 +139,7 @@
 - Critical signals observed: 1/3
 - All signals observed: 2/4
 - Opportunity status live: yes
-- Role context current at candidate time: no
+- Role context current at candidate time: yes
 - Exclusionary hard screen recorded: no
 
 - `requirement.asana.implementation-ownership`: **not observed** on `/work/technical-operations`
@@ -153,7 +153,7 @@
 - Critical signals observed: 2/3
 - All signals observed: 3/4
 - Opportunity status live: yes
-- Role context current at candidate time: no
+- Role context current at candidate time: yes
 - Exclusionary hard screen recorded: no
 
 - `requirement.permitflow.physical-public-systems`: **observed** on `/work/kc-town-hall`, `/work/callnyc`

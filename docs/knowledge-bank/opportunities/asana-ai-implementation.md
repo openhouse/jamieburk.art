@@ -5,14 +5,22 @@ kind: opportunity
 status: governed-open
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-08-15
+review_by: 2026-08-18
 canonical_path: docs/knowledge-bank/opportunities/asana-ai-implementation.md
 summary: Public-safe requirement and portfolio-coverage map for Asana's live AI Implementation Manager, Service Management role.
 canonical_url: https://asana.com/jobs/apply/8027437
 source_type: official-employer
 opportunity_status: live
-verified_at: 2026-07-18
+verified_at: 2026-08-15
+reporting_context:
+  direct_manager_title: not stated in the posting
+  direct_manager_person: null
+  direct_manager_public_status: not-publicly-named
+  senior_vision_owner: Arnab Bose
+  senior_vision_owner_title: Chief Product Officer
+  senior_vision_basis: Asana's official leadership page identifies Bose as Chief Product Officer; the implementation posting places the role near the Service Management product team, while a separate open General Manager and VP posting describes ownership of that unit.
+  verified_at: 2026-08-15
 portfolio_routes:
   - /
   - /work/technical-operations
@@ -29,11 +37,16 @@ discovery_terms:
   - time to value
   - reusable playbooks
 confirmed_facts:
-  - Asana's official New York jobs surface listed the role on July 18, 2026.
-  - The supplied official-role review describes a New York hybrid or eligible US-remote context and a $133,000 to $151,000 estimated base range.
-inferences: []
+  - Asana's official careers surface listed the role and an active Apply action on August 15, 2026.
+  - The role can be eligible-US remote or New York office-centric hybrid and has an estimated base range of $133,000 to $151,000.
+  - The role leads customer work from post-sale ideation through delivery, configuration or migration guidance, adoption, measurement, risk mitigation, and reusable playbooks.
+  - The posting does not name a direct manager.
+  - Asana's official leadership page identifies Arnab Bose as Chief Product Officer.
+inferences:
+  - Arnab Bose is the nearest publicly named senior product-vision owner, not an established direct manager or hiring decision-maker.
 unknowns:
   - Exact reporting line and the proportion of travel, configuration, and hands-on customer delivery.
+  - How the role reports while Asana separately recruits a General Manager and VP for Service Management.
 hard_screens:
   - id: screen.asana.customer-implementation-authority
     text: The role requires demonstrated customer-facing implementation and adoption authority.
@@ -99,6 +112,9 @@ relations:
   - type: uses_source
     target: source.jobs.asana.ai-implementation.8027437
     href: ../sources/jobs-asana-ai-implementation-8027437.md
+  - type: uses_source
+    target: source.asana.product-leadership.2026-08-15
+    href: ../sources/asana-product-leadership-2026.md
   - type: related_to
     target: capability.technical-operations
     href: ../capabilities/technical-operations.md
@@ -108,9 +124,14 @@ relations:
 evidence:
   - target: source.jobs.asana.ai-implementation.8027437
     relationship: context
-    confidence: moderate
+    confidence: high
     supports:
-      - official role listing and supplied role-context facts as rechecked July 18, 2026
+      - current role status, compensation, implementation scope, and requirements as rechecked August 15, 2026
+  - target: source.asana.product-leadership.2026-08-15
+    relationship: corroborating
+    confidence: high
+    supports:
+      - Arnab Bose's current title and senior product-vision context
 human_review: governed-open
 ---
 
@@ -121,5 +142,5 @@ strong operating, facilitation, documentation, and responsible-AI evidence;
 direct customer implementation, migration, and adoption authority need sharper
 proof or honest qualification.
 
-Recheck the [official source](../sources/jobs-asana-ai-implementation-8027437.md)
-before outward use.
+The official role remained open on August 15, 2026. Arnab Bose is a senior
+product-vision context, not a claimed direct supervisor or hiring participant.

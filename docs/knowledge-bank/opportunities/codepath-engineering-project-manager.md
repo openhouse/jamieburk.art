@@ -5,14 +5,14 @@ kind: opportunity
 status: governed-open
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-13
-review_by: 2026-08-16
+last_reviewed: 2026-08-15
+review_by: 2026-08-18
 canonical_path: docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md
 summary: Public-safe requirement, reporting-context, and portfolio-coverage map for CodePath's live Engineering Project Manager role.
 canonical_url: https://job-boards.greenhouse.io/codepath/jobs/5160542007
 source_type: official-employer
 opportunity_status: live
-verified_at: 2026-08-13
+verified_at: 2026-08-15
 reporting_context:
   direct_manager_title: Vice President of Engineering
   direct_manager_person: Zack Parker
@@ -20,7 +20,7 @@ reporting_context:
   senior_vision_owner: Chris Coleman
   senior_vision_owner_title: Chief Product Officer
   senior_vision_basis: CodePath's official team page and CPO announcement identify Coleman as the leader of product engineering delivery and AI-enabled learning-product scale.
-  verified_at: 2026-08-13
+  verified_at: 2026-08-15
 portfolio_routes:
   - /
   - /work/technical-operations

@@ -2,16 +2,16 @@
 id: source.jobs.benepass.product-operations.7f963a7a
 title: Official posting - Benepass Product Operations Manager
 kind: source
-status: maintained
+status: archived
 visibility: public
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-08-15
+review_by: 2026-09-15
 canonical_path: docs/knowledge-bank/sources/jobs-benepass-product-operations.md
-summary: Official Benepass posting for a Product Operations Manager, rechecked July 18, 2026.
+summary: Historical official Benepass posting for a Product Operations Manager; the exact role was no longer on the official board on August 15, 2026.
 source_kind: official-job-posting
 url: https://jobs.ashbyhq.com/benepass/7f963a7a-aaad-456b-b12b-7f34b35d51cf/
-retrieved_at: 2026-07-18
+retrieved_at: 2026-08-15
 relations:
   - type: supports
     target: opportunity.benepass.product-operations.7f963a7a
@@ -26,5 +26,6 @@ and Engineering. It emphasizes launch readiness, go/no-go recommendations,
 downstream operational impact, Ops-to-Product prioritization, runbooks, and
 post-launch learning.
 
-Recheck the [official source](https://jobs.ashbyhq.com/benepass/7f963a7a-aaad-456b-b12b-7f34b35d51cf/)
-before outward use.
+On August 15, 2026, the exact role ID was absent from Benepass's official Ashby
+job-board feed and its prior URL returned the generic jobs shell. Treat this as
+a closed historical watch, not an open opportunity.

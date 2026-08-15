@@ -1,6 +1,6 @@
 {
-  "id": "current-priority-2026-08-13",
-  "version": 2,
+  "id": "current-priority-2026-08-15",
+  "version": 3,
   "principle": "The public evaluator sees public projection files and public role and reader context only; Wiki gap resolution is a separate pass.",
   "opportunityPaths": [
     "docs/knowledge-bank/opportunities/aclu-senior-project-manager-national-campaigns.md",
@@ -22,6 +22,8 @@
     "docs/qa/hiring-acceptance/readers/brian-madigan.md",
     "docs/qa/hiring-acceptance/readers/zack-parker.md",
     "docs/qa/hiring-acceptance/readers/chris-coleman.md",
+    "docs/qa/hiring-acceptance/readers/arnab-bose.md",
+    "docs/qa/hiring-acceptance/readers/francis-thumpasery.md",
     "docs/qa/hiring-acceptance/readers/lisa-gelobter.md",
     "docs/qa/hiring-acceptance/readers/aileen-palmer.md",
     "docs/qa/hiring-acceptance/readers/herminia-ibarra.md",
@@ -70,6 +72,7 @@
       "id": "query.resident-facing-public-product",
       "terms": ["resident-facing product delivery", "public interest technology", "product discovery and research", "rapid prototyping and launch", "agency policy translation"],
       "expectedTopK": ["opportunity.nyc-oti.senior-product-manager.782366"],
+      "statuses": ["closed"],
       "k": 3
     },
     {

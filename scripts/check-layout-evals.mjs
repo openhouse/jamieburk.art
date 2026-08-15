@@ -102,6 +102,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   const hero = readText("apps/www/src/components/Hero.tsx");
   const siteHeader = readText("apps/www/src/components/SiteHeader.tsx");
   const fieldSystemEvidence = readText("apps/www/src/components/FieldSystemEvidence.tsx");
+  const governedImage = readText("apps/www/src/components/GovernedImage.tsx");
   const home = readText("apps/www/src/app/page.tsx");
   const fairRent = readText("apps/www/src/app/work/[slug]/page.tsx");
   const albumPermission = readText(
@@ -123,7 +124,8 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     !fieldSystemEvidence.includes("portfolioPhotos.coalitionFacilitationShoestring") ||
     !fieldSystemEvidence.includes("/artifacts/fair-rent-nyc/public-site.png") ||
     !fieldSystemEvidence.includes("/artifacts/fair-rent-nyc/let-nyc-dance-site.png") ||
-    !fieldSystemEvidence.includes('from "next/image"')
+    !fieldSystemEvidence.includes('from "@/components/GovernedImage"') ||
+    !governedImage.includes('from "next/image"')
   ) {
     fail("editorial-not-decorative", "Both field-and-system pairs must remain explicit, manifest-bound, and responsive.");
   }
@@ -163,11 +165,12 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   const tagList = readText("apps/www/src/components/TagList.tsx");
   const coverCount = [...workCovers.matchAll(/^  (?:"[^"]+"|[a-z]+): \{/gm)].length;
   if (coverCount !== 6 ||
-      !workCard.includes('from "next/image"') ||
+      !workCard.includes('from "@/components/GovernedImage"') ||
       !workCard.includes("getWorkCover(item.slug)") ||
       !workCard.includes("cover.src") ||
       !workCard.includes("cover.caption") ||
       !workCard.includes("cover.credit") ||
+      !caseStudyLayout.includes('from "@/components/GovernedImage"') ||
       !caseStudyLayout.includes("getWorkCover(item.slug)") ||
       !caseStudyLayout.includes("cover.src") ||
       !caseStudyLayout.includes("cover.caption") ||
@@ -216,7 +219,11 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     fail("human-index-material-system", "A prohibited gradient, orb, or bokeh treatment appears in global CSS.");
   }
   const fieldPhoto = readText("apps/www/src/components/FieldPhoto.tsx");
-  if (!fieldPhoto.includes('from "next/image"') || !fieldPhoto.includes("sizes={sizes}") || !fieldPhoto.includes("photo.alt") || !fieldSystemEvidence.includes("sizes=")) {
+  if (!fieldPhoto.includes('from "@/components/GovernedImage"') ||
+      !governedImage.includes('from "next/image"') ||
+      !fieldPhoto.includes("sizes={sizes}") ||
+      !fieldPhoto.includes("photo.alt") ||
+      !fieldSystemEvidence.includes("sizes=")) {
     fail("responsive-image-contract", "Field photos must retain Next Image, responsive sizes, and manifest alt text.");
   }
   if (!globalCss.includes("100svh")) {
