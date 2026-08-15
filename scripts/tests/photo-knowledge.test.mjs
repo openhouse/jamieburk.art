@@ -155,6 +155,17 @@ test("a changed crop scope fails exact permission", async () => {
   assert.equal(result.checks.permission_scope_exact_and_fail_closed, false);
 });
 
+test("social-preview in-image credit cannot drift from creator-authorized optional", async () => {
+  const model = await baselineModel();
+  model.recordsById[
+    model.canary.permissionSourceId
+  ].permission_capsule.social_preview = {
+    in_image_credit: "required"
+  };
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.permission_scope_exact_and_fail_closed, false);
+});
+
 test("an unsupported caption assertion fails closed", async () => {
   const model = await baselineModel();
   model.recordsById[model.canary.placementId].caption.assertions.push(

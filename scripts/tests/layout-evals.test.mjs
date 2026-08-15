@@ -95,11 +95,28 @@ test("metadata remains bound to the shared social-preview contract", () => {
   assert(result.failures.some(({ criterion }) => criterion === "social-preview-contract"));
 });
 
-test("the social preview cannot lose its governed photograph or visible credit", () => {
+test("the social preview cannot lose its governed photograph", () => {
   const path = "apps/www/src/app/opengraph-image.tsx";
-  const source = readFileSync(path, "utf8")
-    .replace("socialPreview.image.src", '"/images/field-notes/kc-town-hall-roof-work.webp"')
-    .replace("socialPreview.credit", '""');
+  const source = readFileSync(path, "utf8").replace(
+    "socialPreview.image.src",
+    '"/images/field-notes/kc-town-hall-roof-work.webp"'
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "social-preview-contract"));
+});
+
+test("the distilled social preview rejects caption, focus, or pixel-credit copy", () => {
+  const path = "apps/www/src/app/opengraph-image.tsx";
+  const source = `${readFileSync(path, "utf8")}\n// socialPreview.image.caption socialPreview.focus socialPreview.credit\n`;
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "social-preview-contract"));
+});
+
+test("social-preview metadata retains creator attribution when the rendered pixels omit it", () => {
+  const path = "apps/www/src/data/social-preview.ts";
+  const source = readFileSync(path, "utf8").replace("Photograph by Elana Gordon.", "");
   const result = evaluateLayout(process.cwd(), { [path]: source });
   assert.equal(result.passed, false);
   assert(result.failures.some(({ criterion }) => criterion === "social-preview-contract"));

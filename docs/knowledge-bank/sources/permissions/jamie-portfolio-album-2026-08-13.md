@@ -23,14 +23,14 @@ authorization:
     - metadata stripping
     - public Git derivative
     - staging review
-    - social-preview composition with visible creator credit
+    - social-preview composition with placement-specific creator attribution
   selected_assets:
     - asset.photo.east-river-manhattan-bridge.2022.001
     - asset.photo.nycac-shoestring-facilitation.2017.001
     - asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2
     - asset.photo.sunday-dinner.shared-map.2013.001
     - asset.photo.kc-town-hall.roof-work.2019.001
-  required_credit: Known photographers are visibly credited; unresolved photographer identity remains explicit.
+  required_credit: Known photographers remain attributed according to creator permission and exact placement; the East River homepage credit is visible and its social-preview credit may travel in metadata rather than rendered pixels.
   excludes:
     - Apple Photos identifiers
     - original archive filenames
@@ -80,9 +80,11 @@ relations:
   and authorizes the curated Sunday Dinner and KC Town Hall derivatives for
   public Git and staging in this portfolio.
 - [x] The existing East River homepage hero remains unchanged.
-- [x] Jamie authorizes the complete, metadata-stripped East River derivative
-  for a credited jamieburk.art social-preview occurrence and staging review.
-- [x] Known photographers remain visibly credited.
+- [x] Jamie authorizes the metadata-stripped East River derivative for the
+  exact full-bleed 1200 by 630 jamieburk.art social-preview composition, with
+  creator attribution in alt metadata rather than rendered into the pixels.
+- [x] Known photographers remain attributed according to creator permission and
+  the exact placement; Elana Gordon remains visibly credited on the homepage.
 - [x] Album identifiers, People tags, face associations, geolocation, original
   filenames, and raw metadata remain private.
 - [ ] Production publication and indexing await approval of the exact candidate
@@ -90,10 +92,11 @@ relations:
 
 This capsule records the scope needed by the public portfolio without copying
 the underlying conversation or private Photos data into Git. Authorization for
-one portfolio does not grant unrestricted reuse, erase creator credit, or make
+one portfolio does not grant unrestricted reuse, erase creator identity, or make
 the photograph proof of exact remarks, endorsement, attendance, outcome, or
 sole causation.
 
 The social-preview instruction records Jamie's publication authority for this
-portfolio surface. It does not expand Elana Gordon's creator credit or assert a
-standalone license beyond a preview of jamieburk.art.
+portfolio surface and Elana Gordon's explicit placement-level flexibility about
+credit. It does not assert a standalone license beyond a preview of
+jamieburk.art.

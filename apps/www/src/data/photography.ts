@@ -100,7 +100,7 @@ export const portfolioPhotos = {
       indexing: "open"
     },
     publicUseBoundary:
-      "Elana Gordon is credited as photographer. This complete-frame JPEG is bounded to the jamieburk.art social-preview occurrence; platform caching does not confer standalone reuse rights."
+      "Elana Gordon remains identified as photographer in the manifest and social-image alt metadata; her portfolio permission makes in-image credit optional. This exact full-bleed 1200 by 630 composition is bounded to the jamieburk.art social-preview occurrence; platform caching does not confer standalone reuse rights."
   },
   nycacShoestringFacilitation: {
     id: "nycac-shoestring-facilitation",

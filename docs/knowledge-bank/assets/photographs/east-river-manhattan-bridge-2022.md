@@ -95,7 +95,7 @@ relations:
   - type: projected_to
     target: projection.photo.social-preview.east-river
     href: ../../projections/photography/social-preview-east-river.md
-    context: Complete-frame social-preview occurrence with visible creator credit.
+    context: Full-bleed social-preview occurrence with creator attribution in alt metadata and the governed record.
   - type: uses_source
     target: source.photo-metadata.east-river.2022.public-safe
     href: ../../sources/photo-metadata/east-river-2022-public-safe.md
@@ -114,10 +114,12 @@ relations:
 
 ## Current public use
 
-The exact derivative appears as the Layout C homepage hero and as a contained,
-uncropped jamieburk.art social preview. The factual caption names the public
-place and year. The credit names Elana Gordon as photographer and Jamie
-Burkart's photo archive as the custodian of this copy.
+The exact derivatives appear as the Layout C homepage hero and as a full-bleed,
+fixed-ratio jamieburk.art social preview. The homepage visibly credits Elana
+Gordon. The social preview keeps her creator attribution in alt metadata and the
+governed record while omitting it from the rendered pixels under the exact
+permission capsule. Jamie Burkart's photo archive remains the custodian of this
+copy.
 
 ## What is established
 
@@ -137,8 +139,10 @@ first-person recollection opened those questions without changing the homepage.
 ## Correction history
 
 Layout C initially named only archive custody. On July 26, 2026, the preferred
-creator statement and visible credit were corrected to name Elana Gordon. The
-former missing-credit state remains legible as deprecated history rather than a
+creator statement and visible homepage credit were corrected to name Elana
+Gordon. The later social-preview decision changes only where that attribution
+travels, not creator identity or the homepage correction. The former
+missing-credit state remains legible as deprecated history rather than a
 competing attribution.
 
 ## Open gates

@@ -210,6 +210,9 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   const socialPlacement = readText(
     "docs/knowledge-bank/projections/photography/social-preview-east-river.md"
   );
+  const socialPermission = readText(
+    "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md"
+  );
   const socialImagePath = path.join(
     root,
     "apps/www/public/images/social/jamie-east-river-og.jpg"
@@ -228,12 +231,9 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   const renderedBindings = [
     "socialPreview.name",
     "socialPreview.role",
-    "socialPreview.focus",
     "socialPreview.proposition",
     "socialPreview.image.src",
     "socialPreview.image.alt",
-    "socialPreview.image.caption",
-    "socialPreview.credit",
     "socialPreview.siteLabel"
   ];
   if (
@@ -247,13 +247,21 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     [...metadata.matchAll(/socialPreview\.alt/g)].length !== 2 ||
     [...metadata.matchAll(/socialPreview\.width/g)].length !== 1 ||
     [...metadata.matchAll(/socialPreview\.height/g)].length !== 1 ||
+    !socialPreview.includes("Photograph by Elana Gordon.") ||
+    /\b(?:focus|credit):/.test(socialPreview) ||
     renderedBindings.some((binding) => !openGraphImage.includes(binding)) ||
+    /socialPreview\.(?:focus|credit)|socialPreview\.image\.caption/.test(
+      openGraphImage
+    ) ||
     !openGraphImage.includes('export const runtime = "nodejs"') ||
     !openGraphImage.includes('import { readFile } from "node:fs/promises"') ||
     !openGraphImage.includes("const imageData = await readSocialPreviewImage();") ||
     !openGraphImage.includes("src={imageData as unknown as string}") ||
+    !openGraphImage.includes('objectFit: "cover"') ||
+    !openGraphImage.includes('objectPosition: "center 46%"') ||
+    !openGraphImage.includes('background: "rgba(16, 25, 32, 0.48)"') ||
     /new URL\(socialPreview\.image\.src|SITE_URL/.test(openGraphImage) ||
-    !["#2f6f89", "#4e6f61", "#c83b32", "#222b36", "#f3f6f8"].every(
+    !["#2f6f89", "#222b36"].every(
       (color) => openGraphImage.includes(color)
     ) ||
     /#0b5f81|#1f5c3e|#eeefec|linear-gradient|radial-gradient|conic-gradient/i.test(
@@ -266,6 +274,13 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     !/derivative: derivative\.photo\.east-river\.social-preview\.v1/.test(
       socialPlacement
     ) ||
+    !/fixed: full-bleed 1200 by 630 cover, centered at 46 percent vertically/.test(
+      socialPlacement
+    ) ||
+    !/rendered_in_image: false/.test(socialPlacement) ||
+    !/carried_in_alt_metadata: true/.test(socialPlacement) ||
+    !/in_image_credit: optional/.test(socialPermission) ||
+    !/metadata_credit: Photograph by Elana Gordon\./.test(socialPermission) ||
     socialImageBytes[0] !== 0xff ||
     socialImageBytes[1] !== 0xd8 ||
     /EXIF|Exif|GPSLatitude|GPSLongitude|<x:xmpmeta|Photoshop 3\.0/i.test(
@@ -277,7 +292,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   ) {
     fail(
       "social-preview-contract",
-      "Open Graph, Twitter, rendered image, governed photograph, credit, visual identity, and human release gates must remain one shared contract."
+      "Open Graph, Twitter, the distilled full-bleed image, placement-specific creator attribution, and human release gates must remain one shared contract."
     );
   }
 

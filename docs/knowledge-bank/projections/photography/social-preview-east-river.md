@@ -9,7 +9,7 @@ sensitivity: low
 last_reviewed: 2026-08-15
 review_by: 2027-02-15
 canonical_path: docs/knowledge-bank/projections/photography/social-preview-east-river.md
-summary: Exact social-preview occurrence binding the complete East River derivative to jamieburk.art Open Graph and Twitter cards with role-first copy, alt text, creator credit, and open production and indexing gates.
+summary: Exact social-preview occurrence binding a full-bleed East River composition to jamieburk.art Open Graph and Twitter cards with distilled role-first copy, creator attribution in alt metadata and the governed record, and open production and indexing gates.
 projection_status: active
 portfolio_edition: edition.launch.2026-08
 asset: asset.photo.east-river-manhattan-bridge.2022.001
@@ -21,9 +21,9 @@ purpose:
   - personal-presence
   - hiring-reader-entry
 crop:
-  desktop: complete 4:3 derivative, contained without crop
-  mobile: complete 4:3 derivative, contained without crop
-alt_text: Jamie Burkart — Technical Project Manager, with a photograph of Jamie at the East River beneath the Manhattan Bridge.
+  fixed: full-bleed 1200 by 630 cover, centered at 46 percent vertically
+  source_derivative: 4:3 JPEG with intentional top-and-bottom crop in the fixed social composition
+alt_text: Jamie Burkart — Technical Project Manager — at the East River beneath the Manhattan Bridge. Photograph by Elana Gordon.
 caption:
   text: At the East River beneath the Manhattan Bridge, 2022.
   assertions:
@@ -31,6 +31,9 @@ caption:
     - statement.photo.east-river.capture-year.v1
 credit:
   text: Photograph by Elana Gordon. From Jamie Burkart's photo archive.
+  rendered_in_image: false
+  carried_in_alt_metadata: true
+  in_image_credit_basis: optional by creator for this bounded portfolio use
   assertions:
     - statement.photo.east-river.creator.v2
     - statement.photo.east-river.custody.v1
@@ -64,17 +67,20 @@ relations:
 
 This occurrence makes the site recognizable when its URL travels through text
 messages and social feeds. The role and working proposition remain primary; the
-complete, metadata-stripped East River derivative provides situated presence.
+metadata-stripped East River derivative provides situated presence through the
+exact fixed social crop.
 
-The image is contained without a new crop. Elana Gordon's creator credit is
-visible on the card, and archive custody remains distinct in the canonical
-asset record. Platform caching is treated as delivery of a jamieburk.art
-preview, not as permission for standalone reuse or endorsement.
+The image uses the exact full-bleed crop Jamie approved for this fixed social
+composition. Elana Gordon remains identified as creator in alt metadata and the
+canonical asset record; her protected permission explicitly makes in-image
+credit optional for this bounded portfolio use. The credited homepage
+occurrence remains unchanged. Platform caching is treated as delivery of a
+jamieburk.art preview, not as permission for standalone reuse or endorsement.
 
 Public Git and staging are approved for review. Production publication and
 indexing remain open and require Jamie's exact-candidate approval.
 
 ## Rollback
 
-Restore the prior text-only social card without deleting this occurrence,
-permission summary, or decision history.
+Restore the prior contained split card with visible credit without deleting
+this occurrence, permission summary, or decision history.
