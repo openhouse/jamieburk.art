@@ -128,8 +128,11 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI text, Oswald for labels, and a Palatino-first system serif
+for display headings. The global social preview uses a metadata-stripped raster
+of Jamie's name rendered in Palatino so the proprietary font file is never
+committed or served. Do not commit or serve private, proprietary, or unlicensed
+font files.
 
 ## Content Rules
 

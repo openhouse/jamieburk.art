@@ -26,6 +26,19 @@ test("Open Graph metadata cannot drift from the shared image contract", () => {
   assert.equal(result.checks.find((check) => check.id === "open-graph-and-twitter-metadata").pass, false);
 });
 
+test("the social image cannot silently fall back from the site's display typeface", () => {
+  const relativePath = "apps/www/src/data/social-preview.ts";
+  const result = evaluateSocialPreview({
+    fileOverrides: {
+      [relativePath]: text(relativePath).replace(
+        'fontFamily: "Palatino Linotype"',
+        'fontFamily: "Arial"'
+      )
+    }
+  });
+  assert.equal(result.checks.find((check) => check.id === "palatino-display-identity-boundary").pass, false);
+});
+
 test("the social preview cannot silently diverge from the homepage photograph", () => {
   const relativePath = "apps/www/src/data/social-preview.ts";
   const result = evaluateSocialPreview({

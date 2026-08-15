@@ -2,7 +2,7 @@
   "suite": "global-social-preview",
   "version": 1,
   "surface": "/opengraph-image",
-  "principle": "The social preview is a traveling portfolio threshold. It must stay synchronized with the site's identity, governed photography, metadata, credit, and release boundaries.",
+  "principle": "The social preview is a traveling portfolio threshold. It must stay synchronized with the site's identity typography, governed photography, metadata, credit, and release boundaries.",
   "expected": {
     "width": 1200,
     "height": 630,
@@ -15,6 +15,11 @@
     "assetId": "asset.photo.east-river-manhattan-bridge.2022.001",
     "derivativeId": "derivative.photo.east-river.layout-c.v1",
     "rendererDerivativeId": "derivative.photo.east-river.social-preview.v1",
+    "nameFontFamily": "Palatino Linotype",
+    "nameArtworkPath": "/images/social/jamie-burkart-palatino.png",
+    "nameArtworkSha256": "ffbff12eb926e327e90fa0002a241fa0230619e970d254791fe55f4d27a73cf5",
+    "nameArtworkWidth": 515,
+    "nameArtworkHeight": 257,
     "placementId": "projection.photo.global-social-preview.east-river",
     "permissionSourceId": "source.permission.elana-gordon.east-river.2026-07",
     "credit": "East River, 2022 · Photograph by Elana Gordon.",
@@ -22,6 +27,8 @@
   },
   "candidateFiles": [
     "apps/www/src/app/opengraph-image.tsx",
+    "apps/www/src/app/globals.css",
+    "apps/www/src/app/colophon/page.tsx",
     "apps/www/src/components/Hero.tsx",
     "apps/www/src/data/photography.ts",
     "apps/www/src/data/site.ts",
@@ -29,16 +36,19 @@
     "apps/www/src/lib/metadata.ts",
     "apps/www/public/images/field-notes/jamie-east-river.webp",
     "apps/www/public/images/social/jamie-east-river-og.jpg",
+    "apps/www/public/images/social/jamie-burkart-palatino.png",
+    "DESIGN.md",
+    "docs/typefaces.md",
     "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
     "docs/knowledge-bank/projections/photography/global-social-preview-east-river.md"
   ],
   "visualReview": {
     "status": "pass",
     "reviewedAt": "2026-08-14",
-    "candidateSha256": "47f8fe4f4c6b51835c5c43e2ad454e03480e13a9bdba483f12f215a0d20bcc30",
+    "candidateSha256": "a375ad7c653b24bb731c5fb2769621cdc874714948ce478df1f3327c3625c0f6",
     "evidencePath": "docs/qa/social-preview/og-east-river-2026-08-14.png",
-    "evidenceSha256": "e1edf94e80b19baec3c58d6870714d69b9cb4b60e2385befb549c2583010549b",
+    "evidenceSha256": "b45dd212c90db84315ec02b2cb02acf02f66fd86f9da6c70f2cc892605ecf750",
     "inspectedSizes": ["1200x630", "600x315", "300x158"],
-    "reviewBoundary": "Actual rendered pixels inspected through fictionalized editorial lenses; not a quotation, endorsement, rights expansion, production approval, or platform-delivery guarantee."
+    "reviewBoundary": "Actual rendered pixels, including the Palatino name artwork, inspected through fictionalized editorial lenses; not a quotation, endorsement, rights expansion, production approval, font-license expansion, or platform-delivery guarantee."
   }
 }

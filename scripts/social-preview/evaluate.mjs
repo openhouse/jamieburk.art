@@ -110,6 +110,30 @@ function parseJpeg(buffer) {
   };
 }
 
+function parsePng(buffer) {
+  const signature = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
+  if (buffer.length < 24 || !buffer.subarray(0, 8).equals(signature)) {
+    return { valid: false, width: null, height: null, chunks: [] };
+  }
+
+  const chunks = [];
+  let offset = 8;
+  while (offset + 12 <= buffer.length) {
+    const length = buffer.readUInt32BE(offset);
+    const type = buffer.toString("ascii", offset + 4, offset + 8);
+    chunks.push(type);
+    offset += 12 + length;
+    if (type === "IEND") break;
+  }
+
+  return {
+    valid: buffer.toString("ascii", 12, 16) === "IHDR",
+    width: buffer.readUInt32BE(16),
+    height: buffer.readUInt32BE(20),
+    chunks
+  };
+}
+
 export function computeSocialPreviewCandidateSha({
   root = defaultRoot,
   config,
@@ -138,6 +162,10 @@ export function evaluateSocialPreview({
   const hero = readText("apps/www/src/components/Hero.tsx", root, fileOverrides);
   const metadata = readText("apps/www/src/lib/metadata.ts", root, fileOverrides);
   const imageRoute = readText("apps/www/src/app/opengraph-image.tsx", root, fileOverrides);
+  const globals = readText("apps/www/src/app/globals.css", root, fileOverrides);
+  const design = readText("DESIGN.md", root, fileOverrides);
+  const typefaces = readText("docs/typefaces.md", root, fileOverrides);
+  const colophon = readText("apps/www/src/app/colophon/page.tsx", root, fileOverrides);
   const photography = readText("apps/www/src/data/photography.ts", root, fileOverrides);
   const eastRiverBlock =
     photography.match(/eastRiver:\s*\{([\s\S]*?)\n\s*\},\n\s*saveNYCSpacesTownHall:/)?.[1] ?? "";
@@ -161,6 +189,12 @@ export function evaluateSocialPreview({
     fileOverrides
   );
   const jpeg = parseJpeg(rendererPhotoBuffer);
+  const nameArtworkBuffer = readBuffer(
+    expected.nameArtworkPath.replace(/^\//, "apps/www/public/"),
+    root,
+    fileOverrides
+  );
+  const nameArtwork = parsePng(nameArtworkBuffer);
   const derivative = (asset.public_derivatives ?? []).find((item) => item.id === expected.derivativeId);
   const rendererDerivative = (asset.public_derivatives ?? []).find(
     (item) => item.id === expected.rendererDerivativeId
@@ -178,6 +212,7 @@ export function evaluateSocialPreview({
     social.includes("tagline: site.heroTagline") &&
     social.includes(`photo: portfolioPhotos.${expected.photoKey}`) &&
     hero.includes("const photo = portfolioPhotos.eastRiver") &&
+    hero.includes("{site.name}") &&
     hero.includes("{site.heroTagline}");
 
   const metadataContract =
@@ -187,6 +222,36 @@ export function evaluateSocialPreview({
     metadata.includes("height: socialPreview.height") &&
     (metadata.match(/alt: socialPreview\.alt/g)?.length ?? 0) >= 2;
 
+  const sharedTypeface =
+    social.includes("text: site.name") &&
+    social.includes(`fontFamily: "${expected.nameFontFamily}"`) &&
+    social.includes(`src: "${expected.nameArtworkPath}"`) &&
+    social.includes(`sha256: "${expected.nameArtworkSha256}"`) &&
+    globals.includes(`--font-display: "${expected.nameFontFamily}", Palatino`) &&
+    design.includes(`display: "${expected.nameFontFamily},`) &&
+    design.includes("metadata-stripped raster rendered from the local system Palatino") &&
+    typefaces.includes("A Palatino-first system serif is the display face") &&
+    colophon.includes("metadata-stripped Palatino name raster") &&
+    imageRoute.includes("socialPreview.nameArtwork.src") &&
+    imageRoute.includes("src={nameArtworkData as unknown as string}") &&
+    imageRoute.includes("height={socialPreview.nameArtwork.height}") &&
+    imageRoute.includes("width={socialPreview.nameArtwork.width}") &&
+    projection.identity_typography?.family === expected.nameFontFamily &&
+    projection.identity_typography?.name_artwork === expected.nameArtworkPath.replace(/^\//, "apps/www/public/") &&
+    projection.identity_typography?.width === expected.nameArtworkWidth &&
+    projection.identity_typography?.height === expected.nameArtworkHeight &&
+    projection.identity_typography?.checksum === expected.nameArtworkSha256 &&
+    projection.identity_typography?.metadata_stripped === true &&
+    /no proprietary font file is distributed/.test(projection.identity_typography?.source_boundary ?? "") &&
+    !social.includes(".ttf") &&
+    !imageRoute.includes("displayFont") &&
+    nameArtworkBuffer.length > 0 &&
+    nameArtwork.valid &&
+    nameArtwork.width === expected.nameArtworkWidth &&
+    nameArtwork.height === expected.nameArtworkHeight &&
+    sha256(nameArtworkBuffer) === expected.nameArtworkSha256 &&
+    !nameArtwork.chunks.some((chunk) => ["eXIf", "iCCP", "iTXt", "tEXt", "zTXt"].includes(chunk));
+
   const imageRouteContract =
     imageRoute.includes("export const alt = socialPreview.alt") &&
     imageRoute.includes("width: socialPreview.width") &&
@@ -195,7 +260,7 @@ export function evaluateSocialPreview({
     imageRoute.includes("socialPreview.rendererPhoto.src") &&
     imageRoute.includes("socialPreview.rendererPhoto.width") &&
     imageRoute.includes("socialPreview.rendererPhoto.height") &&
-    imageRoute.includes("socialPreview.title.split") &&
+    imageRoute.includes("socialPreview.nameArtwork.src") &&
     imageRoute.includes("socialPreview.role.split") &&
     imageRoute.includes("socialPreview.tagline") &&
     imageRoute.includes("socialPreview.photoCredit");
@@ -281,6 +346,11 @@ export function evaluateSocialPreview({
       id: "open-graph-and-twitter-metadata",
       pass: metadataContract,
       detail: "Open Graph and summary-large-image Twitter metadata use the shared path, dimensions, and alt text."
+    },
+    {
+      id: "palatino-display-identity-boundary",
+      pass: sharedTypeface,
+      detail: "The site uses a Palatino-first display stack and the card uses its checksum-bound, metadata-stripped Palatino name raster without distributing the proprietary font program."
     },
     {
       id: "image-route-shared-contract",

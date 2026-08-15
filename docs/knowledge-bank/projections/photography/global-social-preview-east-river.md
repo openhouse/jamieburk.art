@@ -32,6 +32,14 @@ credit:
   text: Photograph by Elana Gordon.
   assertions:
     - statement.photo.east-river.creator.v2
+identity_typography:
+  family: Palatino Linotype
+  name_artwork: apps/www/public/images/social/jamie-burkart-palatino.png
+  width: 515
+  height: 257
+  checksum: ffbff12eb926e327e90fa0002a241fa0230619e970d254791fe55f4d27a73cf5
+  metadata_stripped: true
+  source_boundary: Rasterized from the local system face; no proprietary font file is distributed.
 permission_source: source.permission.elana-gordon.east-river.2026-07
 approval:
   public_git: approved
@@ -63,7 +71,9 @@ This is the exact image occurrence approved for public Git and staging review:
 the metadata-stripped JPEG derivative of the approved East River photograph, a 1200 × 630 split composition,
 the current site name, role and homepage tagline, a crop that preserves Jamie's
 face and New York context, descriptive alt text, and visible Elana Gordon
-credit.
+credit. Jamie's name is rendered from a checksum-bound, metadata-stripped
+Palatino raster so the social image matches the site's Palatino-first display
+identity without publishing the proprietary font program.
 
 The card is a traveling threshold for text messages and social platforms. It
 does not convert the photograph into proof of a professional outcome, expand
@@ -76,7 +86,8 @@ The application composes this card from `site`, `socialPreview`, and the
 governed East River photo record. The social-preview eval fails when homepage
 and card imagery diverge, metadata tags stop using the shared configuration,
 the derivative changes without a new checksum, the visible credit disappears,
-or the occurrence loses its rights and release-state bindings.
+the Palatino name artwork changes without review, or the occurrence loses its
+rights and release-state bindings.
 
 ## Rollback
 

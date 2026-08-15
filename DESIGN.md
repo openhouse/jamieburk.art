@@ -12,7 +12,7 @@ colors:
   rule: "#d9e4e9"
   ink: "#1a232b"
 typography:
-  display: "Iowan Old Style, Palatino Linotype, Palatino, Baskerville, Georgia, serif"
+  display: "Palatino Linotype, Palatino, Iowan Old Style, Baskerville, Georgia, serif"
   body: "Karla, ui-sans-serif, system-ui, sans-serif"
   label: "Oswald, Arial Narrow, ui-sans-serif, system-ui, sans-serif"
 rounded:
@@ -49,10 +49,13 @@ texture.
 
 ## Typography
 
-Display type uses a system serif for identity, page titles, and true editorial
-landmarks. Karla carries prose and controls. Oswald carries compact labels and
-index numbers. Letter spacing is never negative. Large type is reserved for the
-home hero and page titles; panel headings remain compact.
+Display type uses a Palatino-first system serif for identity, page titles, and
+true editorial landmarks. Jamie's name in the global social preview uses a
+transparent, metadata-stripped raster rendered from the local system Palatino
+face; the proprietary font file is never committed or served. Karla carries
+prose and controls. Oswald carries compact labels and index numbers. Letter
+spacing is never negative. Large type is reserved for the home hero and page
+titles; panel headings remain compact.
 
 ## Photography
 

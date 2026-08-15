@@ -12,15 +12,22 @@ export const contentType = socialPreview.contentType;
 
 export default async function Image() {
   const photoUrl = new URL(socialPreview.rendererPhoto.src, SITE_URL).toString();
-  const photoData = await fetch(photoUrl).then((response) => {
-    if (!response.ok) {
-      throw new Error(`Unable to load social-preview photograph: ${response.status}`);
-    }
-    return response.arrayBuffer();
-  });
+  const nameArtworkUrl = new URL(socialPreview.nameArtwork.src, SITE_URL).toString();
+  const [photoData, nameArtworkData] = await Promise.all([
+    fetch(photoUrl).then((response) => {
+      if (!response.ok) {
+        throw new Error(`Unable to load social-preview photograph: ${response.status}`);
+      }
+      return response.arrayBuffer();
+    }),
+    fetch(nameArtworkUrl).then((response) => {
+      if (!response.ok) {
+        throw new Error(`Unable to load social-preview name artwork: ${response.status}`);
+      }
+      return response.arrayBuffer();
+    })
+  ]);
   const [roleLead, roleDetail] = socialPreview.role.split(" - ");
-  const [givenName, ...familyNameParts] = socialPreview.title.split(" ");
-  const familyName = familyNameParts.join(" ");
 
   return new ImageResponse(
     (
@@ -52,21 +59,18 @@ export default async function Image() {
                 width: "104px"
               }}
             />
-            <div
+            <img
+              alt=""
+              height={socialPreview.nameArtwork.height}
+              src={nameArtworkData as unknown as string}
               style={{
-                color: "#ffffff",
-                display: "flex",
-                flexDirection: "column",
-                fontFamily: "Georgia, serif",
-                fontSize: "76px",
-                fontWeight: 700,
-                letterSpacing: "-1.5px",
-                lineHeight: 0.94
+                height: "129px",
+                objectFit: "contain",
+                objectPosition: "left top",
+                width: "258px"
               }}
-            >
-              <span>{givenName}</span>
-              <span>{familyName}</span>
-            </div>
+              width={socialPreview.nameArtwork.width}
+            />
             <div
               style={{
                 color: "#d9e4e9",

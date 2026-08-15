@@ -27,7 +27,7 @@ export function Hero() {
             className="mt-5 font-display text-6xl font-medium leading-[0.96] text-white sm:text-7xl"
             id="home-title"
           >
-            Jamie Burkart
+            {site.name}
           </h1>
           <p className="mt-6 max-w-2xl text-2xl font-semibold leading-snug text-white sm:text-3xl">
             {site.heroTagline}
