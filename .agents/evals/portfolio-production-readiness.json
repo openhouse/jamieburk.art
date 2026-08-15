@@ -470,12 +470,15 @@
         "homepage hero",
         "Open Graph and Twitter metadata",
         "generated 1200 × 630 image",
+        "declarative rendering score and ranked composition instructions",
         "governed photo manifest and occurrence",
         "exact-candidate visual review",
         "staging-only human-feedback and deployment attestation"
       ],
       "procedure": [
         "Verify that the card consumes the same name, role, tagline, and image records as the visible portfolio.",
+        "Verify that the image route consumes one declarative composition score for crop, gradient, overlay opacity, spacing, and typography rather than maintaining competing constants.",
+        "Verify the selected 0.854 overlay remains above the measured 0.82395 AA floor, preserves the ranked truth, hierarchy, accessibility, photographic-openness, and exact-review priorities, and does not authorize production, indexing, or rights expansion.",
         "Verify Open Graph and summary-large-image Twitter tags, absolute image URL, dimensions, content type, and descriptive alt text.",
         "Verify that the site uses the Palatino-first display stack and the generated card uses the exact checksum-bound Palatino name raster without distributing a proprietary font file.",
         "Check derivative checksum, metadata stripping, governed photographer attribution, occurrence-level visible-credit choice, permission source, placement, rollback, and release states.",
@@ -485,6 +488,7 @@
       ],
       "pass_criteria": [
         "The global card is a truthful, recognizable extension of the Human Index visual identity and remains legible at message-preview size.",
+        "Image 4's selected 85.4% overlay and all dependent rendering instructions are declared once, consumed by the renderer, and guarded by deterministic mutation tests.",
         "Homepage and social-preview copy and photography share canonical data rather than duplicated strings or filenames.",
         "Jamie's name uses Palatino on the site and a reviewed Palatino raster in the generated card, while the proprietary font program remains outside public Git and runtime delivery.",
         "Open Graph and Twitter metadata use the same 1200 × 630 generated image, descriptive alt text, and route-aware absolute URL.",

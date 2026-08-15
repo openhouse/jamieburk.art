@@ -83,6 +83,14 @@ people, artwork, caption, and collective-credit questions are resolved. A route
 may deliberately contain no photograph when the available image would weaken
 truth, comparison, or task completion.
 
+The global social-preview card is governed by the executable instruction score
+in `apps/www/src/data/social-preview-composition.json` and its editing protocol
+in `docs/design/social-preview-score.md`. Its selected East River composition
+uses the gradient layer at 85.4% overall opacity: enough textual authority and
+AA contrast margin for downscaled previews while the photograph remains legible
+as a place and encounter. The renderer consumes the score; it does not maintain
+competing crop, overlay, spacing, or typography constants.
+
 ## Composition
 
 - The home hero is full-bleed, photographic, and unframed. Text sits directly

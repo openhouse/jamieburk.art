@@ -1,6 +1,6 @@
 {
   "suite": "global-social-preview",
-  "version": 3,
+  "version": 4,
   "surface": "/opengraph-image",
   "principle": "The social preview is a traveling portfolio threshold. It must stay synchronized with the site's identity typography, governed photography, metadata, occurrence-level attribution choice, exact visual review, human feedback scope, and release boundaries.",
   "expected": {
@@ -25,7 +25,19 @@
     "creatorCredit": "Photograph by Elana Gordon.",
     "visibleCredit": false,
     "objectPosition": "50% 47%",
-    "requiredColors": ["#1a232b", "#a9c4cf", "#ffffff"]
+    "requiredColors": ["#1a232b", "#a9c4cf", "#ffffff"],
+    "compositionPath": "apps/www/src/data/social-preview-composition.json",
+    "compositionId": "global-social-preview-east-river-v2",
+    "selectedOverlayOpacity": 0.854,
+    "measuredMinimumOverlayOpacity": 0.82395,
+    "minimumContrastRatio": 4.5,
+    "priorityIds": [
+      "truth-and-governance",
+      "name-proposition-place",
+      "accessible-authority",
+      "photographic-openness",
+      "exact-candidate-review"
+    ]
   },
   "candidateFiles": [
     "apps/www/src/app/opengraph-image.tsx",
@@ -34,12 +46,14 @@
     "apps/www/src/components/Hero.tsx",
     "apps/www/src/data/photography.ts",
     "apps/www/src/data/site.ts",
+    "apps/www/src/data/social-preview-composition.json",
     "apps/www/src/data/social-preview.ts",
     "apps/www/src/lib/metadata.ts",
     "apps/www/public/images/field-notes/jamie-east-river.webp",
     "apps/www/public/images/social/jamie-east-river-og.jpg",
     "apps/www/public/images/social/jamie-burkart-palatino.png",
     "DESIGN.md",
+    "docs/design/social-preview-score.md",
     "docs/typefaces.md",
     "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
     "docs/knowledge-bank/projections/photography/global-social-preview-east-river.md",
@@ -48,11 +62,11 @@
   "visualReview": {
     "status": "pass",
     "reviewedAt": "2026-08-15",
-    "candidateSha256": "04929969e7af6795c8e00fa8cb60935bfe7ef5b16c70d9f6d16c54dd92ac1b88",
-    "evidencePath": "docs/qa/social-preview/og-east-river-2026-08-15.png",
-    "evidenceSha256": "9bf6f10e7e3d1ce7a80e74a4dacd08e5a4e0e6b0bcdcadf74fbd1e4fc18af272",
+    "candidateSha256": "31c210fe776450395baef591c6ba257e036b70471e4a825714659387f7fa0184",
+    "evidencePath": "docs/qa/social-preview/og-east-river-854-2026-08-15.png",
+    "evidenceSha256": "dd5b76ccce9b48c43950491b6a4207786f2ce180759bfe79597393b32c9e3b60",
     "inspectedSizes": ["1200x630", "600x315", "300x158"],
-    "reviewBoundary": "Actual rendered pixels at all three listed sizes, including the full-bleed exact photograph and Palatino name artwork, inspected through fictionalized editorial lenses; not a quotation, endorsement, rights expansion, production approval, font-license expansion, or platform-delivery guarantee."
+    "reviewBoundary": "Jamie selected Image 4, the 0.854 overlay candidate, after comparing six rendered variants. Actual pixels at all three listed sizes, including the full-bleed exact photograph and Palatino name artwork, were inspected; this is not a rights expansion, production approval, indexing approval, font-license expansion, or platform-delivery guarantee."
   },
   "stagingReview": {
     "status": "pass",

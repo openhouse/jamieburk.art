@@ -164,6 +164,7 @@ export function evaluateSocialPreview({
   const imageRoute = readText("apps/www/src/app/opengraph-image.tsx", root, fileOverrides);
   const globals = readText("apps/www/src/app/globals.css", root, fileOverrides);
   const design = readText("DESIGN.md", root, fileOverrides);
+  const scoreDocumentation = readText("docs/design/social-preview-score.md", root, fileOverrides);
   const typefaces = readText("docs/typefaces.md", root, fileOverrides);
   const colophon = readText("apps/www/src/app/colophon/page.tsx", root, fileOverrides);
   const photography = readText("apps/www/src/data/photography.ts", root, fileOverrides);
@@ -187,6 +188,8 @@ export function evaluateSocialPreview({
   const asset = matter(assetSource).data;
   const projection = matter(projectionSource).data;
   const permission = matter(permissionSource).data;
+  const compositionSource = readText(expected.compositionPath, root, fileOverrides);
+  const composition = JSON.parse(compositionSource);
   const photoBuffer = readBuffer(expected.photoPath.replace(/^\//, "apps/www/public/"), root, fileOverrides);
   const webp = parseWebP(photoBuffer);
   const rendererPhotoBuffer = readBuffer(
@@ -264,6 +267,103 @@ export function evaluateSocialPreview({
     sha256(nameArtworkBuffer) === expected.nameArtworkSha256 &&
     !nameArtwork.chunks.some((chunk) => ["eXIf", "iCCP", "iTXt", "tEXt", "zTXt"].includes(chunk));
 
+  const overlayStops = composition.render?.overlay?.stops;
+  const overlayStopsValid =
+    Array.isArray(overlayStops) &&
+    overlayStops.length >= 2 &&
+    overlayStops[0]?.positionPercent === 0 &&
+    overlayStops.at(-1)?.positionPercent === 100 &&
+    overlayStops.every(
+      (stop, index) =>
+        Number.isFinite(stop.positionPercent) &&
+        stop.positionPercent >= 0 &&
+        stop.positionPercent <= 100 &&
+        (index === 0 || stop.positionPercent > overlayStops[index - 1].positionPercent) &&
+        Number.isFinite(stop.alpha) &&
+        stop.alpha >= 0 &&
+        stop.alpha <= 1
+    );
+  const rankedPrioritiesValid =
+    Array.isArray(composition.priorities) &&
+    composition.priorities.length === expected.priorityIds.length &&
+    composition.priorities.every(
+      (priority, index) =>
+        priority.rank === index + 1 &&
+        priority.id === expected.priorityIds[index] &&
+        typeof priority.instruction === "string" &&
+        priority.instruction.trim().length >= 40
+    );
+  const declarativeRenderingScore =
+    composition.schemaVersion === 1 &&
+    composition.id === expected.compositionId &&
+    composition.decision === "Image 4" &&
+    typeof composition.intent === "string" &&
+    composition.intent.trim().length >= 80 &&
+    rankedPrioritiesValid &&
+    composition.render?.canvas?.width === expected.width &&
+    composition.render?.canvas?.height === expected.height &&
+    composition.render?.canvas?.background === "#1a232b" &&
+    composition.render?.photo?.objectFit === "cover" &&
+    composition.render?.photo?.objectPosition === expected.objectPosition &&
+    composition.render?.overlay?.type === "linear-gradient" &&
+    composition.render?.overlay?.angleDegrees === 90 &&
+    composition.render?.overlay?.color === "#1a232b" &&
+    composition.render?.overlay?.opacity === expected.selectedOverlayOpacity &&
+    overlayStopsValid &&
+    Number.isFinite(composition.render?.content?.widthPercent) &&
+    composition.render?.content?.widthPercent > 0 &&
+    composition.render?.content?.widthPercent <= 100 &&
+    /^\d+px \d+px \d+px$/.test(composition.render?.content?.padding ?? "") &&
+    /^#[0-9a-f]{6}$/i.test(composition.render?.content?.textColor ?? "") &&
+    typeof composition.render?.content?.supportingFontFamily === "string" &&
+    composition.render?.content?.supportingFontFamily.trim().length > 0 &&
+    composition.render?.content?.name?.width > 0 &&
+    composition.render?.content?.name?.height > 0 &&
+    composition.render?.content?.tagline?.fontSize > 0 &&
+    composition.render?.content?.tagline?.fontWeight > 0 &&
+    composition.render?.content?.tagline?.lineHeight >= 1 &&
+    composition.render?.content?.tagline?.marginTop >= 0 &&
+    composition.render?.content?.tagline?.maxWidth > 0 &&
+    /^#[0-9a-f]{6}$/i.test(composition.render?.content?.domain?.color ?? "") &&
+    composition.render?.content?.domain?.fontSize > 0 &&
+    composition.render?.content?.domain?.fontWeight > 0 &&
+    composition.render?.content?.domain?.letterSpacing >= 0 &&
+    composition.accessibility?.minimumContrastRatio === expected.minimumContrastRatio &&
+    composition.accessibility?.measuredMinimumOverlayOpacity ===
+      expected.measuredMinimumOverlayOpacity &&
+    composition.accessibility?.selectedOverlayOpacity === expected.selectedOverlayOpacity &&
+    composition.accessibility?.selectedOverlayOpacity === composition.render?.overlay?.opacity &&
+    composition.accessibility?.selectedOverlayOpacity >
+      composition.accessibility?.measuredMinimumOverlayOpacity &&
+    composition.accessibility?.reviewSizes?.join(",") === "1200x630,600x315,300x158" &&
+    composition.boundaries?.includeRole === false &&
+    composition.boundaries?.includeVisiblePhotoCredit === false &&
+    composition.boundaries?.productionAuthorized === false &&
+    composition.boundaries?.indexingAuthorized === false &&
+    composition.boundaries?.rightsExpanded === false &&
+    scoreDocumentation.includes("85.4% overall opacity") &&
+    scoreDocumentation.includes("0.82395") &&
+    scoreDocumentation.includes("0.854") &&
+    scoreDocumentation.includes("Exact-candidate review") &&
+    scoreDocumentation.includes("production publication, indexing, rights expansion");
+
+  const scoreConsumedByImageRoute =
+    imageRoute.includes('from "@/data/social-preview-composition.json"') &&
+    imageRoute.includes("gradientFromScore()") &&
+    imageRoute.includes("socialPreviewComposition.render.canvas.background") &&
+    imageRoute.includes("socialPreviewComposition.render.photo.objectFit") &&
+    imageRoute.includes("socialPreviewComposition.render.photo.objectPosition") &&
+    imageRoute.includes("socialPreviewComposition.render.overlay.opacity") &&
+    imageRoute.includes("socialPreviewComposition.render.content.padding") &&
+    imageRoute.includes("socialPreviewComposition.render.content.widthPercent") &&
+    imageRoute.includes("socialPreviewComposition.render.content.textColor") &&
+    imageRoute.includes("socialPreviewComposition.render.content.supportingFontFamily") &&
+    imageRoute.includes("socialPreviewComposition.render.content.name.height") &&
+    imageRoute.includes("socialPreviewComposition.render.content.name.width") &&
+    imageRoute.includes("socialPreviewComposition.render.content.tagline.fontSize") &&
+    imageRoute.includes("socialPreviewComposition.render.content.domain.color") &&
+    !imageRoute.includes("opacity: 0.854");
+
   const imageRouteContract =
     imageRoute.includes("export const alt = socialPreview.alt") &&
     imageRoute.includes("width: socialPreview.width") &&
@@ -273,21 +373,20 @@ export function evaluateSocialPreview({
     imageRoute.includes("socialPreview.rendererPhoto.width") &&
     imageRoute.includes("socialPreview.rendererPhoto.height") &&
     imageRoute.includes("socialPreview.nameArtwork.src") &&
+    imageRoute.includes("socialPreviewComposition") &&
     imageRoute.includes("socialPreview.tagline") &&
     imageRoute.includes("socialPreview.domain") &&
     !imageRoute.includes("socialPreview.role") &&
     !imageRoute.includes("socialPreview.photoCredit");
 
   const visualIdentityContract =
-    expected.requiredColors.every((color) => imageRoute.toLowerCase().includes(color)) &&
-    imageRoute.includes("linear-gradient(90deg") &&
+    expected.requiredColors.every((color) => compositionSource.toLowerCase().includes(color)) &&
+    composition.render.overlay.type === "linear-gradient" &&
+    composition.render.overlay.angleDegrees === 90 &&
     imageRoute.includes('height: "100%"') &&
     imageRoute.includes('width: "100%"') &&
-    imageRoute.includes('width: "58%"') &&
-    imageRoute.includes(`objectPosition: "${expected.objectPosition}"`) &&
-    imageRoute.includes('padding: "58px 58px 50px"') &&
-    imageRoute.includes('height: "175px"') &&
-    imageRoute.includes('width: "350px"') &&
+    composition.render.photo.objectPosition === expected.objectPosition &&
+    composition.render.overlay.opacity === expected.selectedOverlayOpacity &&
     !imageRoute.includes("socialPreview.role") &&
     !imageRoute.includes("Photograph by");
 
@@ -348,7 +447,7 @@ export function evaluateSocialPreview({
     eastRiverBlock.includes('production: "open"') &&
     eastRiverBlock.includes('indexing: "open"');
 
-  const publicSafetyCorpus = `${social}\n${imageRoute}\n${projectionSource}\n${stagingAttestationBuffer.toString("utf8")}`;
+  const publicSafetyCorpus = `${social}\n${imageRoute}\n${compositionSource}\n${scoreDocumentation}\n${projectionSource}\n${stagingAttestationBuffer.toString("utf8")}`;
   const publicSafety =
     !/\/(Users|Volumes|private)\//.test(publicSafetyCorpus) &&
     !/[A-F0-9]{8}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{12}/i.test(
@@ -412,6 +511,16 @@ export function evaluateSocialPreview({
       id: "image-route-shared-contract",
       pass: imageRouteContract,
       detail: "The ImageResponse consumes the shared name artwork, tagline, domain, photo, dimensions, content type, and alt text while detailed role copy remains in metadata."
+    },
+    {
+      id: "declarative-rendering-score",
+      pass: declarativeRenderingScore,
+      detail: "Image 4's ranked instructions, 0.854 selected opacity, 0.82395 measured AA floor, visual constants, and unchanged release boundaries form one machine-readable score."
+    },
+    {
+      id: "score-consumed-by-image-route",
+      pass: scoreConsumedByImageRoute,
+      detail: "The image route realizes the composition score for crop, gradient, opacity, spacing, supporting typography, and name scale without a competing opacity constant."
     },
     {
       id: "human-index-visual-contract",
