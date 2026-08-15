@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-14T21:15:03-04:00",
   "sourceCommit": "90d2196176c53ed5a496e1b7a3d15308ecf30f49",
-  "sourceFingerprint": "fde57500c6b2816b90ddd08596d58d0e0ead48d1435c588d9aff5402884c2304",
+  "sourceFingerprint": "d2a07093a1d6377c3b41cc93f9d67431b13464038f8c2cf7d5d05c43bd0fd793",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -104,7 +104,7 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Public-safe record for a 2022 photograph of Jamie Burkart at the East River, made by Elana Gordon and used as the Layout C homepage hero.",
+      "summary": "Public-safe record for a 2022 photograph of Jamie Burkart at the East River, made by Elana Gordon and used as the Layout C homepage hero and jamieburk.art social preview.",
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-26"
@@ -2821,9 +2821,9 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Dated launch-candidate edition retaining the East River homepage hero and binding eight governed visual occurrences across the homepage, work index, and situated-work case studies.",
+      "summary": "Dated launch-candidate edition retaining the East River homepage hero and binding nine governed visual occurrences across the homepage, social preview, work index, and situated-work case studies.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
+      "lastReviewed": "2026-08-15",
       "reviewBy": "2027-02-13"
     },
     {
@@ -3388,7 +3388,7 @@
       "sensitivity": "low",
       "summary": "Public-safe orientation to the governed relationship among private photo sources, first-class Wiki records, exact portfolio occurrences, recollection, correction, and human publication gates.",
       "aliases": [],
-      "lastReviewed": "2026-08-14",
+      "lastReviewed": "2026-08-15",
       "reviewBy": "2027-01-26"
     },
     {
@@ -4437,6 +4437,19 @@
       "reviewBy": "2027-01-26"
     },
     {
+      "id": "projection.photo.social-preview.east-river",
+      "path": "docs/knowledge-bank/projections/photography/social-preview-east-river.md",
+      "title": "East River social-preview occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact social-preview occurrence binding the complete East River derivative to jamieburk.art Open Graph and Twitter cards with role-first copy, alt text, creator credit, and open production and indexing gates.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2027-02-15"
+    },
+    {
       "id": "projection.photo.sunday-dinner.shared-map",
       "path": "docs/knowledge-bank/projections/photography/sunday-dinner-shared-map.md",
       "title": "Sunday Dinner shared-map occurrence",
@@ -5460,7 +5473,7 @@
       "sensitivity": "moderate",
       "summary": "Public-safe capsule recording Jamie Burkart's destination-bound authorization to select and publish photographs from the designated Apple Photos portfolio album without exposing album identifiers or private metadata.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
+      "lastReviewed": "2026-08-15",
       "reviewBy": "2027-02-13"
     },
     {
@@ -6062,6 +6075,14 @@
       "source": "frontmatter",
       "href": "../../projections/photography/layout-c-home-east-river.md",
       "context": "Homepage hero occurrence in Layout C."
+    },
+    {
+      "from": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "type": "projected_to",
+      "to": "projection.photo.social-preview.east-river",
+      "source": "frontmatter",
+      "href": "../../projections/photography/social-preview-east-river.md",
+      "context": "Complete-frame social-preview occurrence with visible creator credit."
     },
     {
       "from": "asset.photo.east-river-manhattan-bridge.2022.001",
@@ -11969,6 +11990,14 @@
     {
       "from": "edition.launch.2026-08",
       "type": "related_to",
+      "to": "projection.photo.social-preview.east-river",
+      "source": "frontmatter",
+      "href": "social-preview-east-river.md",
+      "context": null
+    },
+    {
+      "from": "edition.launch.2026-08",
+      "type": "related_to",
       "to": "projection.photo.sunday-dinner.shared-map",
       "source": "frontmatter",
       "href": "sunday-dinner-shared-map.md",
@@ -13796,6 +13825,14 @@
       "to": "projection.photo.layout-c.home.east-river",
       "source": "frontmatter",
       "href": "../projections/photography/layout-c-home-east-river.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "projection.photo.social-preview.east-river",
+      "source": "frontmatter",
+      "href": "../projections/photography/social-preview-east-river.md",
       "context": null
     },
     {
@@ -16977,6 +17014,38 @@
       "context": null
     },
     {
+      "from": "projection.photo.social-preview.east-river",
+      "type": "related_to",
+      "to": "edition.launch.2026-08",
+      "source": "frontmatter",
+      "href": "edition-launch-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.social-preview.east-river",
+      "type": "uses_source",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/east-river-manhattan-bridge-2022.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.social-preview.east-river",
+      "type": "uses_source",
+      "to": "source.permission.elana-gordon.east-river.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/elana-gordon-east-river-portfolio-2026.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.social-preview.east-river",
+      "type": "uses_source",
+      "to": "source.permission.jamie-portfolio-album.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/jamie-portfolio-album-2026-08-13.md",
+      "context": null
+    },
+    {
       "from": "projection.photo.sunday-dinner.shared-map",
       "type": "related_to",
       "to": "edition.launch.2026-08",
@@ -18390,6 +18459,14 @@
       "to": "person.elana-gordon",
       "source": "frontmatter",
       "href": "../../people/elana-gordon.md",
+      "context": null
+    },
+    {
+      "from": "source.permission.jamie-portfolio-album.2026-08-13",
+      "type": "related_to",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/east-river-manhattan-bridge-2022.md",
       "context": null
     },
     {
@@ -22384,7 +22461,16 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
       "to": "projection.photo.layout-c.home.east-river",
       "fragment": null,
-      "line": 17,
+      "line": 18,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projections/photography/edition-launch-2026-08.md",
+      "from": "edition.launch.2026-08",
+      "toPath": "docs/knowledge-bank/projections/photography/social-preview-east-river.md",
+      "to": "projection.photo.social-preview.east-river",
+      "fragment": null,
+      "line": 19,
       "kind": "link"
     },
     {
@@ -22393,7 +22479,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/fair-rent-nyc-shoestring-facilitation.md",
       "to": "projection.photo.fair-rent-nyc.shoestring-facilitation",
       "fragment": null,
-      "line": 18,
+      "line": 20,
       "kind": "link"
     },
     {
@@ -22402,7 +22488,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/fair-rent-nyc-market-hotel-banner.md",
       "to": "projection.photo.fair-rent-nyc.market-hotel-banner",
       "fragment": null,
-      "line": 19,
+      "line": 21,
       "kind": "link"
     },
     {
@@ -22411,7 +22497,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/sunday-dinner-shared-map.md",
       "to": "projection.photo.sunday-dinner.shared-map",
       "fragment": null,
-      "line": 20,
+      "line": 22,
       "kind": "link"
     },
     {
@@ -22420,7 +22506,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/kc-town-hall-roof-work.md",
       "to": "projection.photo.kc-town-hall.roof-work",
       "fragment": null,
-      "line": 21,
+      "line": 23,
       "kind": "link"
     },
     {
@@ -22429,7 +22515,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/kc-town-hall-tired-of-tires-flyer.md",
       "to": "projection.visual.kc-town-hall.tired-of-tires-flyer",
       "fragment": null,
-      "line": 22,
+      "line": 24,
       "kind": "link"
     },
     {
@@ -22438,7 +22524,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/kc-town-hall-tired-of-tires-before.md",
       "to": "projection.photo.kc-town-hall.tired-of-tires-before",
       "fragment": null,
-      "line": 23,
+      "line": 25,
       "kind": "link"
     },
     {
@@ -22447,7 +22533,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/kc-town-hall-tired-of-tires-after.md",
       "to": "projection.photo.kc-town-hall.tired-of-tires-after",
       "fragment": null,
-      "line": 24,
+      "line": 26,
       "kind": "link"
     },
     {

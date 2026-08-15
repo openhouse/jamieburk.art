@@ -3,7 +3,7 @@
 
 **Source commit:** `90d2196176c53ed5a496e1b7a3d15308ecf30f49`
 **Generation time:** 2026-08-14T21:15:03-04:00
-**Source fingerprint:** `fde57500c6b2816b90ddd08596d58d0e0ead48d1435c588d9aff5402884c2304`
+**Source fingerprint:** `d2a07093a1d6377c3b41cc93f9d67431b13464038f8c2cf7d5d05c43bd0fd793`
 
 - [KC Town Hall roof work, 2019](../../assets/photographs/kc-town-hall-roof-work-2019.md) - `uses_source` (frontmatter)
 - [Shoestring Press coalition working session, 2017](../../assets/photographs/nycac-shoestring-facilitation-2017.md) - `uses_source` (frontmatter)
@@ -13,6 +13,7 @@
 - [Fair Rent NYC Market Hotel public-room occurrence](../../projections/photography/fair-rent-nyc-market-hotel-banner.md) - `uses_source` (frontmatter)
 - [Fair Rent NYC Shoestring Press facilitation occurrence](../../projections/photography/fair-rent-nyc-shoestring-facilitation.md) - `uses_source` (frontmatter)
 - [KC Town Hall roof-work occurrence](../../projections/photography/kc-town-hall-roof-work.md) - `uses_source` (frontmatter)
+- [East River social-preview occurrence](../../projections/photography/social-preview-east-river.md) - `uses_source` (frontmatter)
 - [Sunday Dinner shared-map occurrence](../../projections/photography/sunday-dinner-shared-map.md) - `uses_source` (frontmatter)
 - [NYC Artist Coalition selected participation images public-safe metadata](../../sources/photo-metadata/nycac-participation-images-2017-public-safe.md) - `uses_source` (frontmatter)
 - [Public-safe metadata capsule for the August 2026 project-cover images](../../sources/photo-metadata/portfolio-cover-images-2026-public-safe.md) - `related_to` (frontmatter)

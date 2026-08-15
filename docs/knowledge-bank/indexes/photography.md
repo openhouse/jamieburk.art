@@ -5,7 +5,7 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-14
+last_reviewed: 2026-08-15
 review_by: 2027-01-26
 canonical_path: docs/knowledge-bank/indexes/photography.md
 summary: Public-safe orientation to the governed relationship among private photo sources, first-class Wiki records, exact portfolio occurrences, recollection, correction, and human publication gates.
@@ -64,6 +64,9 @@ relations:
   - type: related_to
     target: projection.photo.layout-c.home.east-river
     href: ../projections/photography/layout-c-home-east-river.md
+  - type: related_to
+    target: projection.photo.social-preview.east-river
+    href: ../projections/photography/social-preview-east-river.md
   - type: related_to
     target: projection.photo.fair-rent-nyc.shoestring-facilitation
     href: ../projections/photography/fair-rent-nyc-shoestring-facilitation.md

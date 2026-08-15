@@ -83,3 +83,46 @@ test("tag-shaped controls retain real destinations", () => {
   assert.equal(result.passed, false);
   assert(result.failures.some(({ criterion }) => criterion === "tag-navigation-contract"));
 });
+
+test("metadata remains bound to the shared social-preview contract", () => {
+  const path = "apps/www/src/lib/metadata.ts";
+  const source = readFileSync(path, "utf8").replace(
+    "socialPreview.route",
+    '"/stale-social-preview"'
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "social-preview-contract"));
+});
+
+test("the social preview cannot lose its governed photograph or visible credit", () => {
+  const path = "apps/www/src/app/opengraph-image.tsx";
+  const source = readFileSync(path, "utf8")
+    .replace("socialPreview.image.src", '"/images/field-notes/kc-town-hall-roof-work.webp"')
+    .replace("socialPreview.credit", '""');
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "social-preview-contract"));
+});
+
+test("the social preview uses a renderer-supported image derivative", () => {
+  const path = "apps/www/src/data/photography.ts";
+  const source = readFileSync(path, "utf8").replace(
+    "/images/social/jamie-east-river-og.jpg",
+    "/images/social/jamie-east-river-og.webp"
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "social-preview-contract"));
+});
+
+test("the social preview loads its governed image locally rather than through a remote site URL", () => {
+  const path = "apps/www/src/app/opengraph-image.tsx";
+  const source = readFileSync(path, "utf8").replace(
+    "const imageData = await readSocialPreviewImage();",
+    "const imageData = await fetch(new URL(socialPreview.image.src, SITE_URL));"
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "social-preview-contract"));
+});

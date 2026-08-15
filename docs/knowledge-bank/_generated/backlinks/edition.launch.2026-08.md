@@ -3,7 +3,7 @@
 
 **Source commit:** `90d2196176c53ed5a496e1b7a3d15308ecf30f49`
 **Generation time:** 2026-08-14T21:15:03-04:00
-**Source fingerprint:** `fde57500c6b2816b90ddd08596d58d0e0ead48d1435c588d9aff5402884c2304`
+**Source fingerprint:** `d2a07093a1d6377c3b41cc93f9d67431b13464038f8c2cf7d5d05c43bd0fd793`
 
 - [Portfolio project-cover curatorial record](../../evaluations/curatorial/portfolio-project-covers-2026-08-13.md) - `related_to` (frontmatter)
 - [Photography knowledge loop](../../indexes/photography.md) - `prose_link` (markdown)
@@ -13,5 +13,6 @@
 - [KC Town Hall roof-work occurrence](../../projections/photography/kc-town-hall-roof-work.md) - `related_to` (frontmatter)
 - [Tired of Tires after-collection occurrence](../../projections/photography/kc-town-hall-tired-of-tires-after.md) - `related_to` (frontmatter)
 - [Tired of Tires before-collection occurrence](../../projections/photography/kc-town-hall-tired-of-tires-before.md) - `related_to` (frontmatter)
+- [East River social-preview occurrence](../../projections/photography/social-preview-east-river.md) - `related_to` (frontmatter)
 - [Sunday Dinner shared-map occurrence](../../projections/photography/sunday-dinner-shared-map.md) - `related_to` (frontmatter)
 - [Tired of Tires resident-service flyer occurrence](../../projections/photography/kc-town-hall-tired-of-tires-flyer.md) - `related_to` (frontmatter)

@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -31,6 +32,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     "tag-navigation-contract",
     "human-index-material-system",
     "responsive-image-contract",
+    "social-preview-contract",
     "human-authority-remains-open"
   ];
   const observedCriteria = evaluation.criteria.map(({ id }) => id);
@@ -61,11 +63,11 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
 
   for (const field of ["id", "width", "height", "alt", "caption", "credit", "placements", "publicationStatus", "publicUseBoundary"]) {
     const count = [...manifest.matchAll(new RegExp(`\\b${field}:`, "g"))].length;
-    if (count !== 9) {
+    if (count !== 10) {
       fail("manifest-bound-publication", `Manifest field ${field} is missing from one or more photos.`);
     }
   }
-  if ([...manifest.matchAll(/publicationStatus: "jamie-authorized"/g)].length !== 9) {
+  if ([...manifest.matchAll(/publicationStatus: "jamie-authorized"/g)].length !== 10) {
     fail("manifest-bound-publication", "Every photo must retain the Jamie-authorized publication status.");
   }
 
@@ -92,6 +94,8 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     readText("apps/www/src/components/Hero.tsx"),
     readText("apps/www/src/components/ParticipationSequence.tsx"),
     readText("apps/www/src/components/ResidentServiceSequence.tsx"),
+    readText("apps/www/src/data/social-preview.ts"),
+    readText("apps/www/src/app/opengraph-image.tsx"),
     readText("apps/www/src/app/about/page.tsx"),
     readText("apps/www/src/app/colophon/page.tsx")
   ].join("\n");
@@ -198,6 +202,83 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   }
   if (!globalCss.includes("100svh")) {
     fail("responsive-image-contract", "The stable viewport-bounded hero contract is incomplete.");
+  }
+
+  const socialPreview = readText("apps/www/src/data/social-preview.ts");
+  const openGraphImage = readText("apps/www/src/app/opengraph-image.tsx");
+  const metadata = readText("apps/www/src/lib/metadata.ts");
+  const socialPlacement = readText(
+    "docs/knowledge-bank/projections/photography/social-preview-east-river.md"
+  );
+  const socialImagePath = path.join(
+    root,
+    "apps/www/public/images/social/jamie-east-river-og.jpg"
+  );
+  const socialImageBytes = readFileSync(socialImagePath);
+  const socialImageSha = createHash("sha256").update(socialImageBytes).digest("hex");
+  const eastRiverAsset = readText(
+    "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md"
+  );
+  const metadataBindings = [
+    "socialPreview.route",
+    "socialPreview.width",
+    "socialPreview.height",
+    "socialPreview.alt"
+  ];
+  const renderedBindings = [
+    "socialPreview.name",
+    "socialPreview.role",
+    "socialPreview.focus",
+    "socialPreview.proposition",
+    "socialPreview.image.src",
+    "socialPreview.image.alt",
+    "socialPreview.image.caption",
+    "socialPreview.credit",
+    "socialPreview.siteLabel"
+  ];
+  if (
+    !socialPreview.includes("image: portfolioPhotos.eastRiverSocialPreview") ||
+    !manifest.includes('src: "/images/social/jamie-east-river-og.jpg"') ||
+    !socialPreview.includes('route: "/opengraph-image"') ||
+    !socialPreview.includes("width: 1200") ||
+    !socialPreview.includes("height: 630") ||
+    metadataBindings.some((binding) => !metadata.includes(binding)) ||
+    [...metadata.matchAll(/socialPreview\.route/g)].length !== 2 ||
+    [...metadata.matchAll(/socialPreview\.alt/g)].length !== 2 ||
+    [...metadata.matchAll(/socialPreview\.width/g)].length !== 1 ||
+    [...metadata.matchAll(/socialPreview\.height/g)].length !== 1 ||
+    renderedBindings.some((binding) => !openGraphImage.includes(binding)) ||
+    !openGraphImage.includes('export const runtime = "nodejs"') ||
+    !openGraphImage.includes('import { readFile } from "node:fs/promises"') ||
+    !openGraphImage.includes("const imageData = await readSocialPreviewImage();") ||
+    !openGraphImage.includes("src={imageData as unknown as string}") ||
+    /new URL\(socialPreview\.image\.src|SITE_URL/.test(openGraphImage) ||
+    !["#2f6f89", "#4e6f61", "#c83b32", "#222b36", "#f3f6f8"].every(
+      (color) => openGraphImage.includes(color)
+    ) ||
+    /#0b5f81|#1f5c3e|#eeefec|linear-gradient|radial-gradient|conic-gradient/i.test(
+      openGraphImage
+    ) ||
+    !/route: \/opengraph-image/.test(socialPlacement) ||
+    !/asset: asset\.photo\.east-river-manhattan-bridge\.2022\.001/.test(
+      socialPlacement
+    ) ||
+    !/derivative: derivative\.photo\.east-river\.social-preview\.v1/.test(
+      socialPlacement
+    ) ||
+    socialImageBytes[0] !== 0xff ||
+    socialImageBytes[1] !== 0xd8 ||
+    /EXIF|Exif|GPSLatitude|GPSLongitude|<x:xmpmeta|Photoshop 3\.0/i.test(
+      socialImageBytes.toString("latin1")
+    ) ||
+    !eastRiverAsset.includes(socialImageSha) ||
+    !/production: open/.test(socialPlacement) ||
+    !/indexing: open/.test(socialPlacement)
+  ) {
+    fail(
+      "social-preview-contract",
+      "Open Graph, Twitter, rendered image, governed photograph, credit, visual identity, and human release gates must remain one shared contract."
+    );
   }
 
   const design = readText("DESIGN.md");

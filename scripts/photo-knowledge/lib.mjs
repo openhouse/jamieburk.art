@@ -135,7 +135,9 @@ function candidateFiles(repoRoot) {
     "apps/www/src/components/CaseStudyLayout.tsx",
     "apps/www/src/components/WorkCard.tsx",
     "apps/www/src/components/ResidentServiceSequence.tsx",
+    "apps/www/src/app/opengraph-image.tsx",
     "apps/www/src/data/photography.ts",
+    "apps/www/src/data/social-preview.ts",
     "apps/www/src/data/work-covers.ts",
     "apps/www/public/images/field-notes/jamie-east-river.webp",
     "apps/www/public/images/field-notes/kc-town-hall-roof-work.webp",
@@ -145,6 +147,7 @@ function candidateFiles(repoRoot) {
     "apps/www/public/images/field-notes/nycac-market-hotel-banner.webp",
     "apps/www/public/images/field-notes/nycac-shoestring-facilitation.webp",
     "apps/www/public/images/field-notes/sunday-dinner-shared-map.webp",
+    "apps/www/public/images/social/jamie-east-river-og.jpg",
     "apps/www/public/artifacts/wowlist/public-threshold.webp",
     "evals/photo-knowledge/canary.json",
     "evals/photo-knowledge/evals.json",
@@ -214,9 +217,19 @@ export function computePhotoBindingFingerprintFromModel(model) {
     ["derivative-webp", stableStringify(model.webp)],
     ["manifest-east-river", stableStringify(model.portfolioPhotos?.eastRiver ?? null)],
     [
+      "manifest-east-river-social-preview",
+      stableStringify(model.portfolioPhotos?.eastRiverSocialPreview ?? null)
+    ],
+    [
       "public-manifest-east-river",
       stableStringify(
         model.publicPhotoManifest?.find((item) => item.id === "east-river") ?? null
+      )
+    ],
+    [
+      "public-manifest-east-river-social-preview",
+      stableStringify(
+        model.publicPhotoManifest?.find((item) => item.id === "east-river-social-preview") ?? null
       )
     ],
     [
@@ -226,6 +239,18 @@ export function computePhotoBindingFingerprintFromModel(model) {
     [
       "hero-styles",
       model.sourceTexts["apps/www/src/app/globals.css"] ?? ""
+    ],
+    [
+      "social-preview-source",
+      model.sourceTexts["apps/www/src/data/social-preview.ts"] ?? ""
+    ],
+    [
+      "opengraph-image-source",
+      model.sourceTexts["apps/www/src/app/opengraph-image.tsx"] ?? ""
+    ],
+    [
+      "record:projection.photo.social-preview.east-river",
+      model.sourceById["projection.photo.social-preview.east-river"] ?? ""
     ],
     ...bindingRelevantRecordIds(model.canary).map((id) => [
       `record:${id}`,
@@ -287,7 +312,7 @@ export async function loadPhotoKnowledgeModel(repoRoot = defaultRepoRoot, option
   const scanFiles = candidateFiles(repoRoot).filter((item) => !item.endsWith(canary.candidateReceiptPath));
   const sourceTexts = Object.fromEntries(
     scanFiles
-      .filter((item) => !item.endsWith(".webp"))
+      .filter((item) => !/\.(?:webp|jpe?g|png)$/i.test(item))
       .map((item) => [item, readFileSync(path.join(repoRoot, item), "utf8")])
   );
   const privateBinding = loadPrivateBinding(
@@ -412,6 +437,7 @@ export function evaluatePhotoKnowledgeModel(model) {
 
   const expectedBoundPhotoIds = [
     "east-river",
+    "east-river-social-preview",
     "kc-town-hall-roof-work",
     "kc-town-hall-tired-of-tires-flyer",
     "kc-town-hall-tired-of-tires-before",
@@ -678,8 +704,21 @@ export async function evaluatePhotoKnowledge(repoRoot = defaultRepoRoot, options
 }
 
 function placementMarkdown(model) {
-  const placement = model.recordsById[model.canary.placementId];
-  return `${generatedWarning}\n\n# Public photo placements\n\n| Asset | Derivative | Route | Component | Caption | Credit | Public Git | Staging | Production | Indexing |\n|---|---|---|---|---|---|---|---|---|---|\n| ${placement.asset} | ${placement.derivative} | \`${placement.route}\` | ${placement.component} | ${placement.caption.text} | ${placement.credit.text} | ${placement.approval.public_git} | ${placement.approval.staging} | ${placement.approval.production} | ${placement.approval.indexing} |\n`;
+  const placementIds = [
+    ...new Set(model.publicPhotoManifest.flatMap((item) => item.placementIds ?? []))
+  ];
+  const rows = placementIds
+    .map((placementId) => model.recordsById[placementId])
+    .filter(Boolean)
+    .map((placement) => {
+      const routes = placement.route
+        ? `\`${placement.route}\``
+        : placement.routes.map((route) => `\`${route}\``).join("<br>");
+      const components = placement.component ?? placement.components.join("<br>");
+      return `| ${placement.asset} | ${placement.derivative} | ${routes} | ${components} | ${placement.caption.text} | ${placement.credit.text} | ${placement.approval.public_git} | ${placement.approval.staging} | ${placement.approval.production} | ${placement.approval.indexing} |`;
+    })
+    .join("\n");
+  return `${generatedWarning}\n\n# Public photo placements\n\n| Asset | Derivative | Route | Component | Caption | Credit | Public Git | Staging | Production | Indexing |\n|---|---|---|---|---|---|---|---|---|---|\n${rows}\n`;
 }
 
 function permissionsMarkdown(model) {

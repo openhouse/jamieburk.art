@@ -3,7 +3,7 @@
 
 **Source commit:** `90d2196176c53ed5a496e1b7a3d15308ecf30f49`
 **Generation time:** 2026-08-14T21:15:03-04:00
-**Source fingerprint:** `fde57500c6b2816b90ddd08596d58d0e0ead48d1435c588d9aff5402884c2304`
+**Source fingerprint:** `d2a07093a1d6377c3b41cc93f9d67431b13464038f8c2cf7d5d05c43bd0fd793`
 
 - [Add Elana Gordon's credit to the East River homepage occurrence](../../corrections/east-river-credit-2026-07.md) - `related_to` (frontmatter)
 - [Layout C homepage East River curatorial proposal](../../evaluations/curatorial/layout-c-home-east-river-v1.md) - `related_to` (frontmatter)
@@ -14,5 +14,7 @@
 - [East River photographic knowledge-loop tutorial](../../workflows/photography-east-river-canary.md) - `related_to` (frontmatter)
 - [Elana Gordon](../../people/elana-gordon.md) - `related_to` (frontmatter)
 - [Layout C homepage East River occurrence](../../projections/photography/layout-c-home-east-river.md) - `uses_source` (frontmatter)
+- [East River social-preview occurrence](../../projections/photography/social-preview-east-river.md) - `uses_source` (frontmatter)
 - [Elana Gordon East River portfolio permission summary](../../sources/permissions/elana-gordon-east-river-portfolio-2026.md) - `related_to` (frontmatter)
+- [Jamie Burkart portfolio-album publication authorization](../../sources/permissions/jamie-portfolio-album-2026-08-13.md) - `related_to` (frontmatter)
 - [East River photograph public-safe metadata summary](../../sources/photo-metadata/east-river-2022-public-safe.md) - `related_to` (frontmatter)

@@ -4,7 +4,8 @@ import test from "node:test";
 import {
   computePhotoBindingFingerprintFromModel,
   evaluatePhotoKnowledgeModel,
-  loadPhotoKnowledgeModel
+  loadPhotoKnowledgeModel,
+  renderPhotoReport
 } from "../photo-knowledge/lib.mjs";
 
 let loaded;
@@ -69,6 +70,16 @@ test("East River canary passes every hard gate and criterion", async () => {
   assert.equal(result.passed, true);
   assert.deepEqual(result.failedHardGates, []);
   assert.deepEqual(result.failedCriteria, []);
+});
+
+test("the generated placement inventory includes the social-preview occurrence", async () => {
+  const model = await baselineModel();
+  const report = renderPhotoReport(model, evaluatePhotoKnowledgeModel(model), "placements");
+  assert.match(report, /projection|Public photo placements/);
+  assert.match(report, /`\/opengraph-image`/);
+  assert.match(report, /derivative\.photo\.east-river\.social-preview\.v1/);
+  assert.match(report, /Photo: Elana Gordon|Photograph by Elana Gordon/);
+  assert.doesNotMatch(report, /undefined/);
 });
 
 test("private source locators fail closed", async () => {

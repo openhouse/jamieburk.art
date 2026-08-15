@@ -44,6 +44,11 @@
       "criterion": "Images use Next Image, explicit intrinsic dimensions or fill, stable aspect ratios, responsive sizes, and a viewport-bounded hero."
     },
     {
+      "id": "social-preview-contract",
+      "blocking": true,
+      "criterion": "Open Graph and Twitter metadata share one governed preview contract with the rendered 1200 by 630 image; the full East River derivative, Human Index palette, factual alt text, and visible creator credit travel together, while production and indexing remain human-gated."
+    },
+    {
       "id": "human-authority-remains-open",
       "blocking": true,
       "criterion": "The design documentation states that automated scores and staging review do not replace human rights or production approval."

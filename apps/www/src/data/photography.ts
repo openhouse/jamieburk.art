@@ -1,6 +1,7 @@
 export type PortfolioPhoto = {
   id:
     | "east-river"
+    | "east-river-social-preview"
     | "nycac-shoestring-facilitation"
     | "nycac-market-hotel-banner"
     | "sunday-dinner-shared-map"
@@ -26,6 +27,7 @@ export type PortfolioPhoto = {
     | "196-sunday-dinner"
     | "kc-town-hall"
     | "work-index"
+    | "social-preview"
   )[];
   publicationStatus: "jamie-authorized";
   releaseState: {
@@ -68,6 +70,37 @@ export const portfolioPhotos = {
     },
     publicUseBoundary:
       "Elana Gordon is credited as photographer. Use is bounded to this approved portfolio occurrence; no broader rights are asserted."
+  },
+  eastRiverSocialPreview: {
+    id: "east-river-social-preview",
+    src: "/images/social/jamie-east-river-og.jpg",
+    width: 1280,
+    height: 960,
+    alt: "Jamie Burkart at the East River shoreline beneath the Manhattan Bridge.",
+    caption: "At the East River beneath the Manhattan Bridge, 2022.",
+    credit: "Photograph by Elana Gordon. From Jamie Burkart's photo archive.",
+    wikiId: "asset.photo.east-river-manhattan-bridge.2022.001",
+    derivativeId: "derivative.photo.east-river.social-preview.v1",
+    placementIds: ["projection.photo.social-preview.east-river"],
+    captionAssertionIds: [
+      "statement.photo.east-river.place.v1",
+      "statement.photo.east-river.capture-year.v1"
+    ],
+    creditAssertionIds: [
+      "statement.photo.east-river.creator.v2",
+      "statement.photo.east-river.custody.v1"
+    ],
+    knowledgeStatus: "bound",
+    placements: ["social-preview"],
+    publicationStatus: "jamie-authorized",
+    releaseState: {
+      publicGit: "approved",
+      staging: "approved",
+      production: "open",
+      indexing: "open"
+    },
+    publicUseBoundary:
+      "Elana Gordon is credited as photographer. This complete-frame JPEG is bounded to the jamieburk.art social-preview occurrence; platform caching does not confer standalone reuse rights."
   },
   nycacShoestringFacilitation: {
     id: "nycac-shoestring-facilitation",
