@@ -24,7 +24,7 @@ Senior product and technical project manager with 14+ years shipping public-faci
 New York, NY / Remote | 2009–Present
 
 - Lead end-to-end web product, design, and engineering engagements, turning ambiguous stakeholder needs into product direction, information architecture, technical scope, sequenced releases, testing, launch plans, adoption materials, maintenance workflows, and handoff documentation.
-- Led e-commerce, analytics, content, marketing, and operations for [Harry J. Epstein Company](https://www.harryepstein.com/), contributing to 2x revenue growth while helping an 80+ year-old industrial business modernize without losing its trusted voice.
+- Led e-commerce, analytics, content, marketing, and operations for Harry J. Epstein Company, contributing to 2x revenue growth while helping an 80+ year-old industrial business modernize without losing its trusted voice.
 - Build maintainable publishing systems, campaign hubs, resource libraries, data workflows, and web infrastructure; preserve product briefs, decisions, reusable patterns, and post-launch learning so teams can continue the work.
 
 ### [NYC Artist Coalition](https://nycartc.com/) / [FairRentNYC](https://fairrentnyc.nycartc.com/) — Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead

@@ -27,6 +27,9 @@
       "https://www.linkedin.com/in/jamie-burkart/",
       "https://github.com/openhouse",
       "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf"
+    ],
+    "forbiddenLinkTargets": [
+      "https://www.harryepstein.com/"
     ]
   },
   "wordCount": {

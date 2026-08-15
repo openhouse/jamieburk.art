@@ -17,6 +17,7 @@ const resumePath = path.join(
 const resume = readFileSync(resumePath, "utf8");
 const politicoArticleUrl =
   "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf";
+const harryJEpsteinUrl = "https://www.harryepstein.com/";
 
 test("the OTI tailored resume passes every deterministic application gate", () => {
   const result = evaluateResume(resume);
@@ -72,6 +73,36 @@ test("the OTI PDF embeds the Politico article link", () => {
   ).toString("latin1");
 
   assert.ok(pdf.includes(politicoArticleUrl));
+});
+
+test("the OTI resume keeps Harry J. Epstein Company as plain text", () => {
+  assert.doesNotMatch(
+    resume,
+    /\[Harry J\. Epstein Company\]\([^)]+\)/,
+    "The employer name should remain plain text in the authoritative Markdown."
+  );
+
+  const result = evaluateResume(resume);
+  assert.equal(
+    result.checks.find((check) => check.id === "hje-name-not-linked")?.pass,
+    true,
+    JSON.stringify(result.checks, null, 2)
+  );
+
+  const artifact = evaluateDocumentArtifact();
+  assert.equal(
+    artifact.checks.find((check) => check.id === "forbidden-link-annotations")?.pass,
+    true,
+    JSON.stringify(artifact.checks, null, 2)
+  );
+
+  const pdf = readFileSync(
+    path.join(
+      repoRoot,
+      "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf"
+    )
+  ).toString("latin1");
+  assert.equal(pdf.includes(harryJEpsteinUrl), false);
 });
 
 test("the evaluator rejects loss of the exact target title", () => {

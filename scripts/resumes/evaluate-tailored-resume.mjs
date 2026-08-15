@@ -11,6 +11,7 @@ const rubricPath = path.join(
 const rubric = JSON.parse(readFileSync(rubricPath, "utf8"));
 const politicoArticleUrl =
   "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf";
+const harryJEpsteinMarkdownLink = /\[Harry J\. Epstein Company\]\([^)]+\)/;
 
 export function evaluateResume(resumeText, sourcePath = rubric.resumePath) {
   const normalized = resumeText.replace(/\r\n/g, "\n");
@@ -150,6 +151,11 @@ export function evaluateResume(resumeText, sourcePath = rubric.resumePath) {
       detail: "Links the contemporaneous Politico article directly and keeps the KC Town Hall transition concise."
     },
     {
+      id: "hje-name-not-linked",
+      pass: !harryJEpsteinMarkdownLink.test(normalized),
+      detail: "Keeps Harry J. Epstein Company as plain resume text rather than a hyperlink."
+    },
+    {
       id: "collective-credit-and-claim-safety",
       pass:
         /Richard Caceres/i.test(plainText) &&
@@ -221,6 +227,11 @@ export function evaluateDocumentArtifact(root = repoRoot) {
       id: "required-link-annotations",
       pass: config.requiredLinkTargets.every((target) => pdfText.includes(target)),
       detail: `${config.requiredLinkTargets.filter((target) => pdfText.includes(target)).length}/${config.requiredLinkTargets.length} required links embedded.`
+    },
+    {
+      id: "forbidden-link-annotations",
+      pass: config.forbiddenLinkTargets.every((target) => !pdfText.includes(target)),
+      detail: `${config.forbiddenLinkTargets.filter((target) => !pdfText.includes(target)).length}/${config.forbiddenLinkTargets.length} excluded links absent.`
     },
     {
       id: "public-download-matches-tailored-pdf",
