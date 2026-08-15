@@ -6,8 +6,8 @@ source_kind: private-permission-summary
 status: governed-open
 visibility: summary-only
 sensitivity: moderate
-last_reviewed: 2026-07-26
-review_by: 2027-01-26
+last_reviewed: 2026-08-14
+review_by: 2027-02-14
 canonical_path: docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md
 summary: Public-safe capsule recording creator confirmation, bounded portfolio permission, required credit, private evidence custody, and revocation handling.
 permission_capsule:
@@ -34,6 +34,10 @@ relations:
   - type: related_to
     target: person.elana-gordon
     href: ../../people/elana-gordon.md
+  - type: related_to
+    target: projection.photo.home-og.east-river
+    href: ../../projections/photography/home-og-east-river.md
+    context: The homepage link preview uses a metadata-stripped JPEG conversion of the cleared full frame, retains visible credit, and does not claim a separate social-media license.
 ---
 
 # Elana Gordon East River portfolio permission summary
@@ -46,6 +50,13 @@ Raw messages, contact details, and the protected evidence locator are not in
 this repository. This capsule does not grant future unrestricted use, a new
 crop, commercial licensing, transfer to another site, or use outside Jamie's
 professional portfolio.
+
+The homepage Open Graph occurrence is governed as part of the same professional
+portfolio destination: it embeds a metadata-stripped JPEG conversion of the
+complete cleared frame without a new photo crop and keeps creator credit
+visible. Social-platform caching of that link preview does not become a
+standalone social-media license or authorize the image to circulate
+independently of the portfolio link.
 
 Production and indexing remain Jamie's decisions. If permission is withdrawn,
 the occurrence is removed or replaced while the historical correction and

@@ -5,8 +5,8 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-26
-review_by: 2027-01-26
+last_reviewed: 2026-08-14
+review_by: 2027-02-14
 canonical_path: docs/knowledge-bank/indexes/photography.md
 summary: Public-safe orientation to the governed relationship among private photo sources, first-class Wiki records, exact portfolio occurrences, recollection, correction, and human publication gates.
 relations:
@@ -33,6 +33,10 @@ relations:
   - type: related_to
     target: projection.photo.layout-c.home.east-river
     href: ../projections/photography/layout-c-home-east-river.md
+  - type: related_to
+    target: projection.photo.home-og.east-river
+    href: ../projections/photography/home-og-east-river.md
+    context: Full-frame homepage social preview with current identity and visible Elana Gordon credit.
   - type: related_to
     target: edition.layout-c.2026-07
     href: ../projections/photography/edition-layout-c-2026-07.md
@@ -118,6 +122,7 @@ homepage.
 - [Resume protected-absence decision](../decisions/photography/layout-c-resume-no-photo-v1.md)
 - [Pre-launch rights-narrowing decision](../decisions/photography/pre-launch-rights-narrowing-2026-07-28.md)
 - [Exact homepage occurrence](../projections/photography/layout-c-home-east-river.md)
+- [Exact homepage Open Graph occurrence](../projections/photography/home-og-east-river.md)
 - [Dated portfolio edition](../projections/photography/edition-layout-c-2026-07.md)
 - [Creator-credit correction](../corrections/east-river-credit-2026-07.md)
 - [First-person recollection](../sources/recollections/jamie-canoe-commuting-2026-07.md)

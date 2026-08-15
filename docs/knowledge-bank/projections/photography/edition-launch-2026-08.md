@@ -9,7 +9,7 @@ sensitivity: low
 last_reviewed: 2026-08-14
 review_by: 2027-02-14
 canonical_path: docs/knowledge-bank/projections/photography/edition-launch-2026-08.md
-summary: Dated launch-candidate edition retaining the East River homepage hero and binding five governed photographs across the homepage, work index, and situated-work case studies.
+summary: Dated launch-candidate edition retaining the East River homepage hero, carrying its complete frame through a metadata-stripped JPEG into the homepage social preview, and binding five governed photographs across the work index and situated-work case studies.
 projection_status: active
 candidate_lineage:
   base_branch: develop
@@ -20,6 +20,7 @@ purpose:
   - participatory-public-systems
 occurrences:
   - projection.photo.layout-c.home.east-river
+  - projection.photo.home-og.east-river
   - projection.visual.fair-rent.participation-sequence.2026-08
   - projection.photo.sunday-dinner.shared-map
   - projection.photo.kc-town-hall.roof-work
@@ -41,6 +42,9 @@ relations:
     target: projection.photo.layout-c.home.east-river
     href: layout-c-home-east-river.md
   - type: related_to
+    target: projection.photo.home-og.east-river
+    href: home-og-east-river.md
+  - type: related_to
     target: projection.visual.fair-rent.participation-sequence.2026-08
     href: fair-rent-participation-sequence-2026-08.md
   - type: related_to
@@ -56,6 +60,6 @@ relations:
 
 # August 2026 launch-candidate photographic edition
 
-This edition keeps the existing East River homepage hero unchanged. It binds five governed photographs: the hero, two Fair Rent NYC participation images, one Sunday Dinner shared-table image, and one KC Town Hall field-work image. The work index composes those photographs with truthful product screenshots so every project has a visual threshold without assigning unrelated archive photography to digital work.
+This edition keeps the existing East River homepage hero unchanged and reuses its full metadata-stripped frame inside the homepage social preview with visible photographer credit. It binds five governed photographs: the hero, two Fair Rent NYC participation images, one Sunday Dinner shared-table image, and one KC Town Hall field-work image. The work index composes those photographs with truthful product screenshots so every project has a visual threshold without assigning unrelated archive photography to digital work.
 
 Public Git and staging are approved. Production publication and indexing remain open until Jamie approves the exact candidate commit.

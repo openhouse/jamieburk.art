@@ -1,0 +1,42 @@
+{
+  "id": "portfolio-social-sharing-v1",
+  "title": "Portfolio Open Graph and social-sharing continuity",
+  "intent": "Make every shared portfolio link carry the current public identity, current page metadata, and a governed photographic card without allowing social previews to drift from the site or expand publication rights.",
+  "criteria": [
+    {
+      "id": "shared-public-identity",
+      "blocking": true,
+      "criterion": "The homepage and social card consume one canonical name, role, and tagline rather than maintaining duplicated copy."
+    },
+    {
+      "id": "page-metadata-continuity",
+      "blocking": true,
+      "criterion": "Every route produced by createMetadata carries its current title, description, canonical URL, Open Graph URL, and matching Twitter title and description."
+    },
+    {
+      "id": "large-card-parity",
+      "blocking": true,
+      "criterion": "Open Graph and Twitter use the same absolute, revisioned 1200 by 630 image URL, and Twitter declares summary_large_image so a new card revision can invalidate stale platform previews."
+    },
+    {
+      "id": "governed-photo-occurrence",
+      "blocking": true,
+      "criterion": "The card uses a metadata-stripped full-frame East River derivative through an explicit social-card placement and Knowledge Wiki projection."
+    },
+    {
+      "id": "full-frame-and-credit",
+      "blocking": true,
+      "criterion": "The East River derivative is displayed full-frame without a new crop, and the rendered card visibly credits Elana Gordon."
+    },
+    {
+      "id": "useful-social-alt",
+      "blocking": true,
+      "criterion": "The Open Graph image has useful alternative text that describes Jamie, the visible public setting, and his current role family."
+    },
+    {
+      "id": "human-release-boundary",
+      "blocking": true,
+      "criterion": "Public Git and staging approval do not imply production, indexing, a standalone social-media license, or unrestricted reuse of the photograph."
+    }
+  ]
+}

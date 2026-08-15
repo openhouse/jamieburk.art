@@ -17,6 +17,7 @@ export type PortfolioPhoto = {
   knowledgeStatus: "bound";
   placements: readonly (
     | "home"
+    | "social-card"
     | "196-sunday-dinner"
     | "kc-town-hall"
     | "work-index"
@@ -42,7 +43,10 @@ export const portfolioPhotos = {
     credit: "Photograph by Elana Gordon. From Jamie Burkart's photo archive.",
     wikiId: "asset.photo.east-river-manhattan-bridge.2022.001",
     derivativeId: "derivative.photo.east-river.layout-c.v1",
-    placementIds: ["projection.photo.layout-c.home.east-river"],
+    placementIds: [
+      "projection.photo.layout-c.home.east-river",
+      "projection.photo.home-og.east-river"
+    ],
     captionAssertionIds: [
       "statement.photo.east-river.place.v1",
       "statement.photo.east-river.capture-year.v1"
@@ -52,7 +56,7 @@ export const portfolioPhotos = {
       "statement.photo.east-river.custody.v1"
     ],
     knowledgeStatus: "bound",
-    placements: ["home"],
+    placements: ["home", "social-card"],
     publicationStatus: "jamie-authorized",
     releaseState: {
       publicGit: "approved",
@@ -61,7 +65,7 @@ export const portfolioPhotos = {
       indexing: "open"
     },
     publicUseBoundary:
-      "Elana Gordon is credited as photographer. Use is bounded to this approved portfolio occurrence; no broader rights are asserted."
+      "Elana Gordon is credited as photographer. The homepage uses the governed WebP; the Open Graph preview uses a metadata-stripped JPEG derived from the same full frame without a new crop; no broader rights are asserted."
   },
   sundayDinnerSharedMap: {
     id: "sunday-dinner-shared-map",

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/data/site";
+import { homeSocialCard } from "@/data/social-card";
 import { ROBOTS_INDEXABLE, SITE_URL } from "@/lib/site-url";
 
 type MetadataInput = {
@@ -38,10 +39,10 @@ export function createMetadata({
       type: "website",
       images: [
         {
-          url: new URL("/opengraph-image", SITE_URL),
-          width: 1200,
-          height: 630,
-          alt: "Jamie Burkart - Technical Project Manager"
+          url: new URL(homeSocialCard.imagePath, SITE_URL),
+          width: homeSocialCard.width,
+          height: homeSocialCard.height,
+          alt: homeSocialCard.alt
         }
       ]
     },
@@ -49,7 +50,12 @@ export function createMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: [new URL("/opengraph-image", SITE_URL)]
+      images: [
+        {
+          url: new URL(homeSocialCard.imagePath, SITE_URL),
+          alt: homeSocialCard.alt
+        }
+      ]
     }
   };
 }

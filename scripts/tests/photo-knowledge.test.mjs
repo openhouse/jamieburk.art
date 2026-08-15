@@ -277,6 +277,15 @@ test("changing Hero source invalidates a carried-forward binding receipt", async
   assert.equal(result.passed, false);
 });
 
+test("changing the shared home identity invalidates a carried-forward binding receipt", async () => {
+  const model = await baselineModel();
+  attachCarriedForwardReceipt(model);
+  model.sourceTexts["apps/www/src/data/home-identity.ts"] += "\n// changed public identity";
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.exact_candidate_receipt_current, false);
+  assert.equal(result.passed, false);
+});
+
 test("changing the East River manifest invalidates a carried-forward binding receipt", async () => {
   const model = await baselineModel();
   attachCarriedForwardReceipt(model);

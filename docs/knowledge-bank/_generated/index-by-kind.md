@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `b1ef10fcc8f4052d7ba35a22b3df49eeabafe912`
-**Generation time:** 2026-08-14T18:03:31-04:00
-**Source fingerprint:** `24999273041207999309bb14a80d1115a7aff5f02105ea001f416c2e0dcb4df5`
+**Source commit:** `c626b5fd96d66abad8c173655ea58511e3b4f966`
+**Generation time:** 2026-08-14T19:49:32-04:00
+**Source fingerprint:** `e9816eb079a386f923538d785171edd9a790cfcbbe74f5f3bce06c80c002a0a0`
 
 ## application
 
@@ -382,6 +382,7 @@
 - [Role-fit and referral map](../projections/role-fit-and-referral-map.md) - `portfolio.role-fit-referral-map`
 - [CallNYC portfolio projection](../projections/work-callnyc.md) - `portfolio.work.callnyc`
 - [Technical Operations portfolio projection](../projections/work-technical-operations.md) - `portfolio.work.technical-operations`
+- [Homepage Open Graph East River occurrence](../projections/photography/home-og-east-river.md) - `projection.photo.home-og.east-river`
 - [KC Town Hall roof-work occurrence](../projections/photography/kc-town-hall-roof-work.md) - `projection.photo.kc-town-hall.roof-work`
 - [Layout C homepage East River occurrence](../projections/photography/layout-c-home-east-river.md) - `projection.photo.layout-c.home.east-river`
 - [Sunday Dinner shared-map occurrence](../projections/photography/sunday-dinner-shared-map.md) - `projection.photo.sunday-dinner.shared-map`

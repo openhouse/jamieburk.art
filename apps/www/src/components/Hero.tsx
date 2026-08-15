@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { homeIdentity } from "@/data/home-identity";
 import { portfolioPhotos } from "@/data/photography";
 
 export function Hero() {
@@ -20,16 +21,16 @@ export function Hero() {
       <div className="jb-frame jb-hero-content">
         <div className="jb-hero-copy">
           <p className="jb-eyebrow text-white/82">
-            Technical Project Manager - Product Operations & Implementation
+            {homeIdentity.role}
           </p>
           <h1
             className="mt-5 font-display text-6xl font-medium leading-[0.96] text-white sm:text-7xl"
             id="home-title"
           >
-            Jamie Burkart
+            {homeIdentity.name}
           </h1>
           <p className="mt-6 max-w-2xl text-2xl font-semibold leading-snug text-white sm:text-3xl">
-            I help emerging work become usable systems.
+            {homeIdentity.tagline}
           </p>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-white/84 sm:text-xl">
             I work with public-facing teams to clarify requirements, build

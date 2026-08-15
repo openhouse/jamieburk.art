@@ -91,6 +91,7 @@
         "Inventory visible figures, screenshots, diagrams, downloads, and public artifacts.",
         "Verify each artifact's caption, provenance, alt text, consent status, exact derivative, permission record, and relation to a claim.",
         "For the FairRentNYC participation sequence, verify the order from facilitated room to shared public surface to collective public assembly, the ten-frame Let NYC Dance capture method, and the unchanged homepage hero.",
+        "Inspect the 1200 by 630 Open Graph image and confirm its metadata-stripped East River source preserves the complete frame, visibly credits Elana Gordon, and carries the current homepage identity.",
         "Have a blind judge explain what each artifact proves."
       ],
       "pass_criteria": [
@@ -99,6 +100,7 @@
         "The FairRentNYC sequence makes Jamie's facilitation and implementation legible while keeping campaign work and outcomes collective.",
         "The selected Let NYC Dance frame is frame 5 of ten one-second candidates captured after the video loaded; the other nine are not committed.",
         "The existing homepage hero remains unchanged, and the WOW List capture is framed as a live tester invitation rather than full platform restoration.",
+        "The social card uses a metadata-stripped full-frame East River derivative without a new crop and records its exact Open Graph occurrence without expanding publication permission.",
         "The homepage or Technical Operations page links to at least three inspectable proof objects.",
         "A judge can connect each artifact to a specific action, outcome, or operating capability."
       ],
@@ -219,9 +221,10 @@
       "grader": "deterministic",
       "blocking": true,
       "weight": 7,
-      "inputs": ["staging responses", "production-mode responses", "robots.txt", "sitemap.xml", "metadata"],
+      "inputs": ["staging responses", "production-mode responses", "robots.txt", "sitemap.xml", "metadata", "Open Graph image", "Twitter card"],
       "procedure": [
         "Check headers and metadata for every canonical route in staging and production mode.",
+        "Compare every route's Open Graph and Twitter title, description, canonical URL, card type, absolute image URL, dimensions, and image alternative text against the current page and shared social-card contract.",
         "Compare robots directives, sitemap membership, canonical URLs, and PDF behavior."
       ],
       "pass_criteria": [
@@ -229,6 +232,7 @@
         "Production HTML routes intended for discovery are indexable and canonicalize to jamieburk.art.",
         "The resume HTML page is not simultaneously present in the sitemap and blocked by an X-Robots-Tag header.",
         "The phone-bearing resume PDF remains noindex unless Jamie explicitly changes that policy.",
+        "Open Graph and Twitter metadata remain in step with the current page title and description, use one absolute 1200 by 630 photographic image URL, and declare summary_large_image for Twitter.",
         "The sitemap contains no route blocked from indexing and no staging URL."
       ],
       "evidence_required": ["response headers", "robots bodies", "sitemap", "canonical inventory"],

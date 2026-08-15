@@ -132,6 +132,7 @@ function candidateFiles(repoRoot) {
   const fixed = [
     "apps/www/src/app/globals.css",
     "apps/www/src/components/Hero.tsx",
+    "apps/www/src/data/home-identity.ts",
     "apps/www/src/data/photography.ts",
     "apps/www/public/images/field-notes/jamie-east-river.webp",
     "evals/photo-knowledge/canary.json",
@@ -210,6 +211,10 @@ export function computePhotoBindingFingerprintFromModel(model) {
     [
       "hero-source",
       model.sourceTexts["apps/www/src/components/Hero.tsx"] ?? ""
+    ],
+    [
+      "home-identity-source",
+      model.sourceTexts["apps/www/src/data/home-identity.ts"] ?? ""
     ],
     [
       "hero-styles",
@@ -559,7 +564,7 @@ export function evaluatePhotoKnowledgeModel(model) {
   const scripts = packageManifest.scripts ?? {};
   const firstViewportSource = `${model.sourceTexts["apps/www/src/components/Hero.tsx"] ?? ""}\n${
     model.sourceTexts["apps/www/src/data/photography.ts"] ?? ""
-  }`;
+  }\n${model.sourceTexts["apps/www/src/data/home-identity.ts"] ?? ""}`;
   const criteria = {
     documentary_integrity: allTrue(checks, [
       "records_materialized",
