@@ -110,10 +110,12 @@ export function evaluateHjeClientChronology(candidate) {
 
   check(candidate.resumes.length === 5, "exactly five maintained opportunity resumes are expected in the dated set");
   for (const resume of candidate.resumes) {
-    check(/INDEPENDENT PRACTICE \/ THICK ARTS LLC/.test(resume.text), `${resume.name} must distinguish the independent practice from the later LLC`);
-    check(/New York, NY \/ Remote \| 2009–Present/.test(resume.text), `${resume.name} must date the combined professional practice 2009-present`);
-    check(/2009–2015[\s\S]{0,220}?2012[\s\S]{0,140}?first client/i.test(resume.text), `${resume.name} must state the bounded HJE period, 2012 formalization, and first-client relationship`);
-    check(!/### THICK ARTS LLC[^\n]*\n\nNew York, NY \/ Remote \| 2009–Present/.test(resume.text), `${resume.name} must not backdate the LLC itself to 2009`);
+    const thickArtsSection = resume.text.match(/### THICK ARTS LLC[^\n]*[\s\S]*?(?=\n### |\n## |$)/)?.[0] ?? "";
+    check(/### THICK ARTS LLC —/.test(resume.text), `${resume.name} must use Thick Arts LLC as the single employer container`);
+    check(!/INDEPENDENT PRACTICE/i.test(resume.text), `${resume.name} must not breach the Thick Arts LLC container with an independent-practice label`);
+    check(/New York, NY \/ Remote \| 2009–Present/.test(thickArtsSection), `${resume.name} must retain the accurate at-a-glance experience dates`);
+    check(!/2009–2015|\bin 2012\b|first client|formalized the practice/i.test(thickArtsSection), `${resume.name} must keep formation and first-client chronology out of the resume narrative`);
+    check(/Harry J\. Epstein Company/.test(thickArtsSection) && /2x revenue growth/.test(thickArtsSection), `${resume.name} must retain value-led HJE evidence inside the Thick Arts LLC section`);
   }
 
   return {

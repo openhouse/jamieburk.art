@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.aclu.senior-project-manager.8620968002.pdf-visual",
-  "inspectedAt": "2026-08-14T19:50:00-04:00",
+  "inspectedAt": "2026-08-14T21:08:00-04:00",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy for this opportunity",
     "revisionUnchangedAfterExport": true,
@@ -9,12 +9,12 @@
   },
   "markdown": {
     "path": "resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-8620968002.md",
-    "sha256": "bbbf1401102ab6d3c9007a8cbee759cfac782a33788093d1d94762334ea4c98d"
+    "sha256": "965853c719450cad90e428b2fbfb8925aba16a58091ddb989c0a0ba1a15f1c3e"
   },
   "pdf": {
     "path": "resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-8620968002.pdf",
-    "sha256": "d8456357b934a1ada79c97340a7d9d7ed2d5e0b2499c6d2f22bfff1cef421884",
-    "bytes": 88321,
+    "sha256": "ead572baea60e333ddf2d3d8108e57c7b207311b86ad57d58531d50fee6c2a9e",
+    "bytes": 87757,
     "pages": 2,
     "pageSize": "US Letter"
   },
@@ -26,7 +26,7 @@
       {
         "page": 1,
         "pass": true,
-        "notes": "Mission-aligned systems implementation, business analysis, confidentiality, accessibility, and cross-department delivery are immediately legible; the 2009-2015 HJE engagement and 2012 LLC formalization read cleanly."
+        "notes": "Mission-aligned systems implementation, business analysis, confidentiality, accessibility, and cross-department delivery are immediately legible; the single Thick Arts LLC container and value-led HJE evidence read cleanly without formation exposition."
       },
       {
         "page": 2,

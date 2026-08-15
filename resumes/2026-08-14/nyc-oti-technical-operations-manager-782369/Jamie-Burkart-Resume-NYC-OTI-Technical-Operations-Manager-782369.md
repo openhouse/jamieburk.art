@@ -19,13 +19,13 @@ Technical operations and project manager with 14+ years building the operating s
 
 ## Professional Experience
 
-### INDEPENDENT PRACTICE / THICK ARTS LLC — Founder, Technical Operations & Project Manager / Web Systems Lead
+### THICK ARTS LLC — Founder, Technical Operations & Project Manager / Web Systems Lead
 
 New York, NY / Remote | 2009–Present
 
 - Lead independent web strategy, product, design, engineering, and maintenance engagements, converting ambiguous needs into scope, work plans, requirements, risk registers, public releases, adoption materials, operating documentation, and durable handoffs.
 - Coordinate delivery across concurrent projects; surface blockers early; maintain clear status, decision, action, and release records; support UAT/QA; and improve working systems through retrospectives without adding unnecessary ceremony.
-- From 2009–2015, led work for [Harry J. Epstein Company](https://www.harryepstein.com/); in 2012, formalized the practice as Thick Arts LLC, with HJE as the LLC's first client. Led e-commerce, analytics, content, marketing, and operational improvements that contributed to a period of 2x revenue growth while helping an 80+ year-old business adapt its public and internal systems.
+- Led e-commerce, analytics, content, marketing, and operational improvements for [Harry J. Epstein Company](https://www.harryepstein.com/) that contributed to a period of 2x revenue growth while helping an 80+ year-old business adapt its public and internal systems.
 
 ### [NYC Artist Coalition](https://nycartc.com/) / [FairRentNYC](https://fairrentnyc.nycartc.com/) — Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead
 

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.benepass.product-operations-manager.7f963a7a.pdf-visual",
-  "inspectedAt": "2026-08-14T19:50:00-04:00",
+  "inspectedAt": "2026-08-14T21:08:00-04:00",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy for this opportunity",
     "revisionUnchangedAfterExport": true,
@@ -9,12 +9,12 @@
   },
   "markdown": {
     "path": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.md",
-    "sha256": "f99a93d7715d9276f9cf2ac26e862be5e705e68788b3f4eb18bd694da230aaa1"
+    "sha256": "ee454d653a00c7e88cfaa18639a4dd6ed4146f5c1b83765e430a695a5e338d02"
   },
   "pdf": {
     "path": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.pdf",
-    "sha256": "256c78f94d943e007ff3bcae7616a1d8de43900107c8a3c5767fcf10d24d8c90",
-    "bytes": 87559,
+    "sha256": "a5e1a68b79c0a8d986684d3d933e4d5c2e7bbedddb91ec0ca1b368ef52f6b858",
+    "bytes": 87119,
     "pages": 2,
     "pageSize": "US Letter"
   },
@@ -26,7 +26,7 @@
       {
         "page": 1,
         "pass": true,
-        "notes": "Product operations, launch readiness, downstream impact, go/no-go support, prioritization, and accountable operating systems read clearly; the HJE chronology and linked company name remain legible."
+        "notes": "Product operations, launch readiness, downstream impact, go/no-go support, prioritization, and accountable operating systems read clearly; the single Thick Arts LLC container and linked, value-led HJE evidence remain legible."
       },
       {
         "page": 2,

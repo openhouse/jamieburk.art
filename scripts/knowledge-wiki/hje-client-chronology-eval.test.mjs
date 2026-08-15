@@ -18,17 +18,17 @@ function expectFailure(name, mutate, expected) {
   });
 }
 
-expectFailure("backdating the LLC itself to 2009 fails", (candidate) => {
-  candidate.resumes[0].text = candidate.resumes[0].text.replace("INDEPENDENT PRACTICE / THICK ARTS LLC", "THICK ARTS LLC");
-}, /must distinguish the independent practice/);
+expectFailure("reintroducing a mixed employer container fails", (candidate) => {
+  candidate.resumes[0].text = candidate.resumes[0].text.replace("THICK ARTS LLC", "INDEPENDENT PRACTICE / THICK ARTS LLC");
+}, /single employer container|must not breach/);
 
 expectFailure("a current-client work-card implication fails", (candidate) => {
   candidate.work = candidate.work.replace('years: "2009-2015"', 'years: "2009-Present"');
 }, /must be 2009-2015|must not imply a current client/);
 
-expectFailure("removing first-client relationship from a resume fails", (candidate) => {
-  candidate.resumes[0].text = candidate.resumes[0].text.replace("first client", "client");
-}, /first-client relationship/);
+expectFailure("reintroducing LLC formation chronology in a resume fails", (candidate) => {
+  candidate.resumes[0].text = candidate.resumes[0].text.replace("Led e-commerce", "In 2012, formalized the practice as Thick Arts LLC with HJE as its first client. Led e-commerce");
+}, /keep formation and first-client chronology out/);
 
 expectFailure("removing the canonical first-client claim fails", (candidate) => {
   candidate.knowledgeBank.claims = candidate.knowledgeBank.claims.filter((item) => item.id !== "CLM-HJE-THICK-ARTS-FIRST-CLIENT-2009-2015");

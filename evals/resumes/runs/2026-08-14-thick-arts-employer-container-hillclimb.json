@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-08-14-thick-arts-employer-container-hillclimb",
+  "evaluatedAt": "2026-08-14T22:20:00-04:00",
+  "scope": "Five maintained opportunity-tailored resumes",
+  "readerProblem": "The combined 'Independent Practice / Thick Arts LLC' heading breached the employer container and made a hiring reader parse legal and practice chronology before reaching the work.",
+  "boundedChange": "Use Thick Arts LLC as the single employer container, retain the existing at-a-glance dates, and remove LLC-formation and first-client chronology from the HJE accomplishment bullet.",
+  "baseline": {
+    "singleContainerResumes": 0,
+    "mixedContainerResumes": 5,
+    "formationNarrativeResumes": 5
+  },
+  "postHillclimb": {
+    "singleContainerResumes": 5,
+    "mixedContainerResumes": 0,
+    "formationNarrativeResumes": 0,
+    "valueLedHjeEvidenceResumes": 5
+  },
+  "acceptance": [
+    "Every maintained resume uses a THICK ARTS LLC employer heading.",
+    "Every Thick Arts LLC section retains New York, NY / Remote | 2009-Present as its at-a-glance date line.",
+    "No maintained resume uses an Independent Practice / Thick Arts LLC mixed heading.",
+    "No maintained resume explains the 2012 LLC formation or first-client chronology.",
+    "Every maintained resume retains role-tailored HJE delivery evidence and the bounded 2x revenue-growth claim."
+  ],
+  "boundary": "The governed knowledge record retains the detailed HJE and legal-entity chronology. This eval governs resume composition, not the underlying historical record."
+}

@@ -131,7 +131,6 @@ const claims: KnowledgeBank["claims"] = [
     internalClaim: "Jamie worked with Harry J. Epstein Company from 2009-2015; when he formalized his independent practice as Thick Arts LLC in 2012, HJE became the LLC's first client.",
     status: "confirmed-with-boundary",
     projections: [
-      { key: "resume-html", text: "From 2009-2015, led e-commerce and operational modernization for Harry J. Epstein Company; in 2012, formalized the practice as Thick Arts LLC with HJE as the LLC's first client.", status: "active", citationRequired: false, surfaces: ["resumes/2026-08-14"] },
       { key: "archive-note", text: "The professional practice began by 2009; it was formalized as Thick Arts LLC in 2012, with Harry J. Epstein Company as the LLC's first client during a 2009-2015 engagement.", status: "active", citationRequired: false, surfaces: ["docs/knowledge-bank/projects/harry-j-epstein.md", "docs/knowledge-bank/timelines/practice-2004-present.md"] }
     ],
     evidence: [
@@ -139,7 +138,7 @@ const claims: KnowledgeBank["claims"] = [
       { sourceId: dosSourceId, relationship: "corroborating", supports: ["the LLC existed during the client engagement", "July 6, 2012 legal formation date"], confidence: "high", renderCitation: false }
     ],
     boundaries: [
-      "Use 2009-present only for the combined independent practice and later LLC, not for the legal entity alone.",
+      "A concise resume may use Thick Arts LLC as the employer container without narrating the practice-to-LLC transition; do not treat that presentation choice as a legal-formation claim.",
       "Use 2009-2015 for the HJE client engagement and July 6, 2012 for the LLC's initial DOS filing.",
       "Do not turn the continuing practice into a claim that HJE remained a client after 2015.",
       "Do not infer every contract, invoice, billing month, or maintenance interaction from the maintained portfolio range."
@@ -155,7 +154,6 @@ const claims: KnowledgeBank["claims"] = [
     internalClaim: "The New York Department of State records July 6, 2012 as the initial DOS filing date for THICK ARTS LLC.",
     status: "confirmed",
     projections: [
-      { key: "resume-html", text: "In 2012, formalized the practice as Thick Arts LLC.", status: "active", citationRequired: false, surfaces: ["resumes/2026-08-14"] },
       { key: "archive-note", text: "Thick Arts LLC's initial DOS filing date was July 6, 2012.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/sources/nys-dos-thick-arts-llc-formation-2012-07-06.md", "docs/knowledge-bank/projects/harry-j-epstein.md"] }
     ],
     evidence: [

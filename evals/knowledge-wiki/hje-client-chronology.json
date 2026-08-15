@@ -15,8 +15,9 @@
     "The knowledge bank records the New York Department of State initial filing date of July 6, 2012 as the legal formation date for Thick Arts LLC.",
     "The professional practice begins in 2009 and is not conflated with the LLC's 2012 legal formation.",
     "The Harry J. Epstein Company client engagement is dated 2009-2015 and is not presented as current.",
-    "The correction appears consistently in the canonical claim layer, official-source note, project note, practice timeline, work-card year attribute, and every maintained opportunity resume.",
+    "The correction appears consistently in the canonical claim layer, official-source note, project note, practice timeline, and work-card year attribute.",
     "The featured work-card summary and HJE case-study narrative foreground implementation, modernization, maintainability, and business value rather than repeating chronology or LLC formation details.",
+    "Every maintained opportunity resume uses Thick Arts LLC as the single employer container and keeps HJE evidence value-led rather than narrating LLC formation or first-client chronology.",
     "The HJE case-study chronology claims are not projected into the generated public citation registry because they are not part of the selected public composition.",
     "The record does not infer every contract, invoice, or billing date from the bounded chronology."
   ]
