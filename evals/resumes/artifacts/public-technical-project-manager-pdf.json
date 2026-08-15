@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "resume-artifact.public.technical-project-manager.pdf",
+  "targetRole": "Technical Project Manager - Product Operations & Implementation",
+  "organization": "Public portfolio",
+  "jobId": null,
+  "sourceMarkdownPath": "resumes/2026-08-15/technical-project-manager-product-operations-implementation/Jamie-Burkart-Resume-Technical-Project-Manager.md",
+  "sourceMarkdownSha256": "2c37d6be85c5d77f8c7890e6f1ae7d6744abe45c1432c234bb0d8fa824a4d1bc",
+  "pdfPath": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+  "pdfSha256": "83323ccd026ed0564cdc00c7bed7e21846f4f8298c7a4cb4301fb6662ab2ff6e",
+  "pdfSizeBytes": 96781,
+  "pageCount": 2,
+  "pageSizePoints": [612, 792],
+  "documentTitle": "Jamie Burkart ◍ Resume — Technical Project Manager — 2026-08-15",
+  "templateProvenance": {
+    "source": "Native copy of the OTI application resume layout, itself derived from the user-supplied prior Google Docs resume",
+    "sourceWasNotWriteTarget": true,
+    "copiedDocumentEdited": true,
+    "publicRepositoryExcludesGoogleDocumentIds": true
+  },
+  "layoutSignature": {
+    "page": "US Letter",
+    "marginsPoints": {
+      "top": 36,
+      "bottom": 36,
+      "left": 43.2,
+      "right": 43.2
+    },
+    "displayTypeface": "Palatino Linotype",
+    "roleTypeface": "Oswald",
+    "bodyTypeface": "Karla",
+    "requiredPdfFontSignatures": [
+      "PalatinoLinotype-Roman",
+      "Oswald-Regular",
+      "Karla-Regular",
+      "Karla-Bold"
+    ],
+    "nativeHyperlinksRequired": true,
+    "pageTwoOpening": "WOWList.org"
+  },
+  "requiredLinks": [
+    "mailto:jamie.burkart@gmail.com",
+    "https://jamieburk.art/",
+    "https://www.linkedin.com/in/jamie-burkart/",
+    "https://github.com/openhouse",
+    "https://www.harryepstein.com/",
+    "https://nycartc.com/",
+    "https://fairrentnyc.nycartc.com/",
+    "https://wowlist.org/",
+    "https://callnyc.org/",
+    "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf",
+    "https://kctownhall.com/"
+  ],
+  "contentContract": {
+    "requiredHeadline": "Technical Project Manager | Product Operations & Implementation",
+    "prohibitedHeadline": "Senior Product Manager | Civic Technology, Product Operations & Implementation",
+    "requiredChronologyPhrases": [
+      "Client work since 2009",
+      "Thick Arts LLC formed 2012",
+      "2009–2015"
+    ],
+    "prohibitedChronologyPatterns": [
+      "THICK ARTS LLC — Founder, Product & Technical Project Manager / Web Systems Lead\nNew York, NY / Remote | 2009–Present"
+    ]
+  },
+  "hardGates": [
+    "source-markdown-bound",
+    "exact-pdf-bound",
+    "valid-pdf-envelope",
+    "two-page-letter-layout",
+    "tagged-google-docs-export",
+    "font-system",
+    "safe-static-pdf",
+    "native-hyperlinks",
+    "public-positioning-and-chronology",
+    "complete-visual-inspection"
+  ],
+  "visualInspection": {
+    "status": "pass",
+    "inspectedAt": "2026-08-15",
+    "pagesInspected": [1, 2],
+    "criteria": {
+      "noClippedOrOverlappingText": true,
+      "noOrphanedHeadings": true,
+      "consistentTypography": true,
+      "clearTwoPageNarrative": true,
+      "readableAtNormalScale": true,
+      "balancedWhitespace": true
+    }
+  },
+  "hillClimb": {
+    "baseline": "The former public PDF used the earlier Karla/Arial layout, opened page two with an orphaned Thick Arts bullet, and did not distinguish client work beginning in 2009 from the LLC's 2012 formation.",
+    "candidate": "The public PDF now uses the stronger Palatino/Oswald/Karla hierarchy, opens page two cleanly with WOWList, preserves governed claim boundaries, links project names, and makes the 2009 client-work, 2012 LLC-formation, and 2009–2015 Harry J. Epstein chronology explicit.",
+    "boundedChange": "Adapted the proven two-page application layout into a general Technical Project Manager resume without changing the OTI-specific artifact, weakening collective credit, or broadening publication scope."
+  },
+  "boundary": "This gate verifies the exact public PDF, Markdown binding, generic positioning, chronology, structural safety, native links, and recorded all-page visual inspection. It is not an employer endorsement, application submission, or guarantee of interview or hire."
+}

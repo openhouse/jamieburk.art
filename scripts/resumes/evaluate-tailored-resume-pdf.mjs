@@ -15,6 +15,13 @@ function sha256(value) {
   return createHash("sha256").update(value).digest("hex");
 }
 
+function normalizeText(value) {
+  return value
+    .replaceAll("\\n", "\n")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 export function evaluateResumePdf({
   spec = defaultSpec,
   markdown = readFileSync(path.join(repoRoot, spec.sourceMarkdownPath)),
@@ -24,7 +31,23 @@ export function evaluateResumePdf({
   const pageObjects = pdfText.match(/\/Type \/Page\b/g) ?? [];
   const letterMediaBoxes = pdfText.match(/\/MediaBox \[0 0 612 792\]/g) ?? [];
   const missingLinks = spec.requiredLinks.filter((url) => !pdfText.includes(`/URI (${url})`));
+  const requiredFontSignatures = spec.layoutSignature?.requiredPdfFontSignatures ?? [];
+  const missingFontSignatures = requiredFontSignatures.filter(
+    (signature) => !pdfText.includes(signature)
+  );
   const visualCriteria = Object.values(spec.visualInspection.criteria);
+  const markdownText = normalizeText(markdown.toString("utf8"));
+  const contentContract = spec.contentContract;
+  const contentContractPass = contentContract
+    ? markdownText.includes(normalizeText(contentContract.requiredHeadline)) &&
+        !markdownText.includes(normalizeText(contentContract.prohibitedHeadline)) &&
+        contentContract.requiredChronologyPhrases.every((phrase) =>
+          markdownText.includes(normalizeText(phrase))
+        ) &&
+        contentContract.prohibitedChronologyPatterns.every(
+          (pattern) => !markdownText.includes(normalizeText(pattern))
+        )
+    : null;
 
   const checks = [
     {
@@ -58,6 +81,18 @@ export function evaluateResumePdf({
         pdfText.includes("/Producer (Skia/PDF m153 Google Docs Renderer)"),
       detail: "The PDF is a tagged Google Docs export from the copied native document."
     },
+    ...(requiredFontSignatures.length > 0
+      ? [
+          {
+            id: "font-system",
+            pass: missingFontSignatures.length === 0,
+            detail:
+              missingFontSignatures.length === 0
+                ? `The PDF embeds the selected ${requiredFontSignatures.join(", ")} font signatures.`
+                : `Missing font signatures: ${missingFontSignatures.join(", ")}`
+          }
+        ]
+      : []),
     {
       id: "safe-static-pdf",
       pass:
@@ -72,6 +107,16 @@ export function evaluateResumePdf({
       pass: missingLinks.length === 0,
       detail: missingLinks.length === 0 ? "All required application and project links are native PDF annotations." : `Missing links: ${missingLinks.join(", ")}`
     },
+    ...(contentContract
+      ? [
+          {
+            id: "public-positioning-and-chronology",
+            pass: contentContractPass,
+            detail:
+              "The exact Markdown source retains generic Technical Project Manager positioning, distinguishes client work beginning in 2009 from the 2012 LLC formation, and dates the Harry J. Epstein engagement to 2009–2015; the exact rendered PDF is bound separately by digest and visual inspection."
+          }
+        ]
+      : []),
     {
       id: "complete-visual-inspection",
       pass:
