@@ -1,5 +1,5 @@
 {
-  "id": "portfolio-social-sharing-v1",
+  "id": "portfolio-social-sharing-v2",
   "title": "Portfolio Open Graph and social-sharing continuity",
   "intent": "Make every shared portfolio link carry the current public identity, current page metadata, and a governed photographic card without allowing social previews to drift from the site or expand publication rights.",
   "criteria": [
@@ -7,6 +7,21 @@
       "id": "shared-public-identity",
       "blocking": true,
       "criterion": "The homepage and social card consume one canonical name, role, and tagline rather than maintaining duplicated copy."
+    },
+    {
+      "id": "identity-type-parity",
+      "blocking": true,
+      "criterion": "Jamie's name uses the same TeX Gyre Pagella identity face on the site and in the rendered social card, with zero letter spacing and a revisioned preview URL."
+    },
+    {
+      "id": "interface-type-continuity",
+      "blocking": true,
+      "criterion": "The role, tagline, site address, photo label, and photographer credit remain in Karla so the identity serif does not spread beyond Jamie's name."
+    },
+    {
+      "id": "licensed-font-delivery",
+      "blocking": true,
+      "criterion": "The identity face and supporting Karla interface face are delivered from versioned local font assets with upstream records, public licenses, and recorded checksums; no system or resume-embedded proprietary font is republished."
     },
     {
       "id": "page-metadata-continuity",

@@ -15,7 +15,7 @@ portfolio_edition: edition.launch.2026-08
 asset: asset.photo.east-river-manhattan-bridge.2022.001
 derivative: derivative.photo.east-river.og-source.v1
 route: /opengraph-image
-cache_revision: human-index-photo-v1
+cache_revision: human-index-photo-v2
 component: ImageResponse
 purpose:
   - social-link-orientation
@@ -29,6 +29,10 @@ render:
 alt_text: Jamie Burkart at the East River shoreline beneath the Manhattan Bridge — Technical Project Manager, Product Operations & Implementation.
 visible_identity:
   name: Jamie Burkart
+  name_typeface: TeX Gyre Pagella Regular 2.501
+  name_typeface_license: GUST Font License
+  interface_typeface: Karla Regular 400 and Bold 700, version 2.004
+  interface_typeface_license: SIL Open Font License 1.1
   role: Technical Project Manager - Product Operations & Implementation
   tagline: I help emerging work become usable systems.
 caption:
@@ -72,7 +76,8 @@ This social card lets the homepage travel with the same visual identity that a
 visitor encounters on arrival. It uses a metadata-stripped JPEG conversion of
 the complete East River frame inside the card without a new photo crop. Jamie's
 current name, role, and homepage promise occupy a separate Human Index panel;
-Elana Gordon's photographer credit remains visible in the rendered image.
+Jamie's name uses the same licensed TeX Gyre Pagella identity face as the site,
+and Elana Gordon's photographer credit remains visible in the rendered image.
 
 The occurrence is bounded to the automated preview of a jamieburk.art
 professional-portfolio link. A social platform may cache that preview as part

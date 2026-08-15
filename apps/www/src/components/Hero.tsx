@@ -24,7 +24,7 @@ export function Hero() {
             {homeIdentity.role}
           </p>
           <h1
-            className="mt-5 font-display text-6xl font-medium leading-[0.96] text-white sm:text-7xl"
+            className="mt-5 font-identity text-6xl font-normal leading-[0.96] text-white sm:text-7xl"
             id="home-title"
           >
             {homeIdentity.name}

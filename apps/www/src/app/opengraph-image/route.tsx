@@ -1,6 +1,11 @@
 import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
-import { homeSocialCard, resolveSocialCardPhotoPath } from "@/data/social-card";
+import {
+  homeSocialCard,
+  resolveSocialCardIdentityFontPath,
+  resolveSocialCardInterfaceFontPath,
+  resolveSocialCardPhotoPath
+} from "@/data/social-card";
 
 export const runtime = "nodejs";
 const size = {
@@ -8,8 +13,16 @@ const size = {
   height: homeSocialCard.height
 };
 export async function GET() {
-  const photoData = await readFile(resolveSocialCardPhotoPath(process.cwd()));
+  const [photoData, identityFontData, interfaceRegularData, interfaceBoldData] = await Promise.all([
+    readFile(resolveSocialCardPhotoPath(process.cwd())),
+    readFile(resolveSocialCardIdentityFontPath(process.cwd())),
+    readFile(resolveSocialCardInterfaceFontPath(process.cwd(), 400)),
+    readFile(resolveSocialCardInterfaceFontPath(process.cwd(), 700))
+  ]);
   const photoSource = Uint8Array.from(photoData).buffer;
+  const identityFontSource = Uint8Array.from(identityFontData).buffer;
+  const interfaceRegularSource = Uint8Array.from(interfaceRegularData).buffer;
+  const interfaceBoldSource = Uint8Array.from(interfaceBoldData).buffer;
 
   return new ImageResponse(
     (
@@ -18,7 +31,7 @@ export async function GET() {
           background: "#d9e4e9",
           color: "#f4f6f7",
           display: "flex",
-          fontFamily: "sans-serif",
+          fontFamily: homeSocialCard.interfaceFont.family,
           height: "100%",
           width: "100%"
         }}
@@ -39,15 +52,16 @@ export async function GET() {
               style={{
                 display: "flex",
                 flexDirection: "column",
-                fontFamily: "serif",
+                fontFamily: homeSocialCard.identityFont.family,
                 fontSize: 70,
-                fontWeight: 500,
-                letterSpacing: "-0.02em",
-                lineHeight: 0.9
+                fontWeight: homeSocialCard.identityFont.weight,
+                letterSpacing: "0em",
+                lineHeight: 0.96
               }}
             >
-              <span>Jamie</span>
-              <span>Burkart</span>
+              {homeSocialCard.name.split(" ").map((namePart) => (
+                <span key={namePart}>{namePart}</span>
+              ))}
             </div>
             <div
               style={{
@@ -74,7 +88,6 @@ export async function GET() {
               style={{
                 color: "#ffffff",
                 display: "flex",
-                fontFamily: "serif",
                 fontSize: 31,
                 lineHeight: 1.12,
                 marginTop: "30px"
@@ -134,6 +147,28 @@ export async function GET() {
         </div>
       </div>
     ),
-    size
+    {
+      ...size,
+      fonts: [
+        {
+          name: homeSocialCard.identityFont.family,
+          data: identityFontSource,
+          weight: homeSocialCard.identityFont.weight,
+          style: "normal"
+        },
+        {
+          name: homeSocialCard.interfaceFont.family,
+          data: interfaceRegularSource,
+          weight: 400,
+          style: "normal"
+        },
+        {
+          name: homeSocialCard.interfaceFont.family,
+          data: interfaceBoldSource,
+          weight: 700,
+          style: "normal"
+        }
+      ]
+    }
   );
 }

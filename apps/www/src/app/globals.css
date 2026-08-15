@@ -46,6 +46,14 @@
 @import "../styles/tokens.css";
 @import "../styles/phi-grid.css";
 
+@font-face {
+  font-display: swap;
+  font-family: "TeX Gyre Pagella";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/tex-gyre-pagella/texgyrepagella-regular.otf") format("opentype");
+}
+
 @theme inline {
   --color-jb-blue: var(--jb-broadway-blue);
   --color-jb-paper: var(--jb-oil-white);
@@ -62,6 +70,7 @@
   --font-sans: var(--font-karla), ui-sans-serif, system-ui, sans-serif;
   --font-label: var(--font-oswald), "Arial Narrow", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Baskerville, Georgia, serif;
+  --font-identity: "TeX Gyre Pagella", "Iowan Old Style", "Palatino Linotype", Palatino, Baskerville, Georgia, serif;
 }
 
 html {
@@ -83,6 +92,12 @@ h1,
 h2 {
   font-family: var(--font-display);
   font-weight: 500;
+  letter-spacing: 0;
+}
+
+.font-identity {
+  font-family: var(--font-identity);
+  font-weight: 400;
   letter-spacing: 0;
 }
 

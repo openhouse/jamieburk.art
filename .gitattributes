@@ -1,0 +1,5 @@
+# Preserve reviewed upstream font licenses and manifests byte-for-byte.
+apps/www/public/fonts/karla/OFL.txt -whitespace
+apps/www/public/fonts/tex-gyre-pagella/GUST-FONT-LICENSE.txt -whitespace
+apps/www/public/fonts/tex-gyre-pagella/MANIFEST-TeX-Gyre-Pagella.txt -whitespace
+apps/www/public/fonts/tex-gyre-pagella/README-TeX-Gyre-Pagella.txt -whitespace

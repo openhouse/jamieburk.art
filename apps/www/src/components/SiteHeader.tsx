@@ -30,7 +30,7 @@ export function SiteHeader() {
         Skip to content
       </a>
       <div className="jb-frame flex min-h-18 items-center justify-between gap-5 py-3">
-        <Link className="font-display text-xl text-jb-ink hover:text-jb-blue" href="/">
+        <Link className="font-identity text-xl text-jb-ink hover:text-jb-blue" href="/">
           <span className="sm:hidden">JB</span>
           <span className="hidden sm:inline">{site.name}</span>
         </Link>

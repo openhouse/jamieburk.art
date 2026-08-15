@@ -12,6 +12,7 @@ colors:
   rule: "#d9e4e9"
   ink: "#1a232b"
 typography:
+  identity: "TeX Gyre Pagella, Iowan Old Style, Palatino Linotype, Palatino, Baskerville, Georgia, serif"
   display: "Iowan Old Style, Palatino Linotype, Palatino, Baskerville, Georgia, serif"
   body: "Karla, ui-sans-serif, system-ui, sans-serif"
   label: "Oswald, Arial Narrow, ui-sans-serif, system-ui, sans-serif"
@@ -49,7 +50,8 @@ texture.
 
 ## Typography
 
-Display type uses a system serif for identity, page titles, and true editorial
+TeX Gyre Pagella is the identity face for Jamie Burkart's name, including the
+Open Graph card. The system serif stack carries page titles and true editorial
 landmarks. Karla carries prose and controls. Oswald carries compact labels and
 index numbers. Letter spacing is never negative. Large type is reserved for the
 home hero and page titles; panel headings remain compact.
