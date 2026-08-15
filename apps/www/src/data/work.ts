@@ -523,9 +523,9 @@ const workItemsInput = [
     tags: ["Community Systems", "Documentation", "Implementation", "Knowledge Systems"],
     capabilities: ["Onboarding", "Facilitation", "Hospitality Systems", "Artist Support"],
     careNote:
-      "Summary-only page. Raw guest data, attendance records, private community records, and unapproved photos stay offline.",
+      "Summary-only page. Raw guest data, attendance records, private community records, and unapproved additional photos stay offline.",
     sourceLayer:
-      "Public-safe summary, approved public materials pending, and private records intentionally omitted.",
+      "Public-safe summary, one portfolio-authorized project photograph with unresolved creator credit disclosed, and private records intentionally omitted.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
     currentStatus: "Active practice; public-safe summary only.",
     group: "Community and cultural infrastructure",
@@ -541,7 +541,7 @@ const workItemsInput = [
       known:
         "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts.",
       open:
-        "Named participants, photos, and artifacts require consent and approval.",
+        "Additional named participants, photographs, and artifacts require consent and approval.",
       protected:
         "Raw guest data, private records, attendance lists, addresses, and unapproved images are omitted."
     }

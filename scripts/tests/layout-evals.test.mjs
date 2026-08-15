@@ -81,6 +81,17 @@ test("every work item retains a truthful cover visual", () => {
   assert(result.failures.some(({ criterion }) => criterion === "truthful-project-cover-field"));
 });
 
+test("an authorized project cover cannot be described as still pending", () => {
+  const path = "apps/www/src/data/work.ts";
+  const source = readFileSync(path, "utf8").replace(
+    "one portfolio-authorized project photograph with unresolved creator credit disclosed",
+    "approved public materials pending"
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "truthful-project-cover-field"));
+});
+
 test("tag-shaped controls retain real destinations", () => {
   const path = "apps/www/src/components/TagList.tsx";
   const source = readFileSync(path, "utf8").replace("/work?tag=", "/work#");

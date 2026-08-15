@@ -130,6 +130,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   }
 
   const workCovers = readText("apps/www/src/data/work-covers.ts");
+  const workData = readText("apps/www/src/data/work.ts");
   const workCard = readText("apps/www/src/components/WorkCard.tsx");
   const caseStudyLayout = readText("apps/www/src/components/CaseStudyLayout.tsx");
   const workIndex = readText("apps/www/src/app/work/page.tsx");
@@ -169,6 +170,14 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     if (slugIndex < 0 || !coverBlock.includes(`src: ${requiredCover}`)) {
       fail("truthful-project-cover-field", `Missing project-bound cover for ${title}.`);
     }
+  }
+  if (workData.includes("approved public materials pending") ||
+      !workData.includes("one portfolio-authorized project photograph") ||
+      !workData.includes("Additional named participants, photographs, and artifacts require consent and approval.")) {
+    fail(
+      "truthful-project-cover-field",
+      "The Sunday Dinner source boundary must distinguish its authorized cover from additional consent-gated media."
+    );
   }
 
   if (!tagList.includes('from "next/link"') ||
