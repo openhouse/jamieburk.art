@@ -139,7 +139,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
       fail("truthful-project-cover-field", `Missing project-bound cover for ${slug}.`);
     }
   }
-  if (!workCard.includes('from "next/image"') || !workCard.includes("getWorkCover(item.slug)") ||
+  if (!workCard.includes('from "@/components/MediaImage"') || !workCard.includes("getWorkCover(item.slug)") ||
       !workCard.includes("cover.caption") || !workCard.includes("cover.credit") ||
       !caseStudyLayout.includes("getWorkCover(item.slug)") ||
       !caseStudyLayout.includes("cover.caption") || !caseStudyLayout.includes("cover.credit")) {
@@ -166,10 +166,13 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   }
 
   const nextConfig = readText("apps/www/next.config.ts");
-  if (!/images\s*:\s*\{[\s\S]*?unoptimized\s*:\s*true[\s\S]*?\}/.test(nextConfig)) {
+  const mediaImage = readText("apps/www/src/components/MediaImage.tsx");
+  if (!/images\s*:\s*\{[\s\S]*?loaderFile\s*:\s*"\.\/src\/lib\/cloudinary-image-loader\.ts"[\s\S]*?\}/.test(nextConfig) ||
+      !mediaImage.includes("unoptimized={!useCloudinary}") ||
+      !mediaImage.includes('NEXT_PUBLIC_MEDIA_DELIVERY === "cloudinary"')) {
     fail(
       "reliable-image-delivery",
-      "Reviewed local derivatives must bypass the runtime image optimizer on Dokku."
+      "Reviewed local derivatives need direct fallback while Cloudinary handles responsive transforms away from Dokku."
     );
   }
   const directlyDeliveredImages = [

@@ -1,0 +1,13 @@
+{
+  "id": "governed-cloudinary-media-delivery-v1",
+  "purpose": "Keep approved portfolio raster delivery fast, discoverable, reversible, and in step with the repository's publication authority.",
+  "criteria": [
+    { "id": "public-safe-upload-boundary", "blocking": true },
+    { "id": "repository-source-authority", "blocking": true },
+    { "id": "immutable-versioned-delivery", "blocking": true },
+    { "id": "responsive-performance-contract", "blocking": true },
+    { "id": "reversible-delivery-switch", "blocking": true },
+    { "id": "image-search-discovery", "blocking": true },
+    { "id": "local-resilience-and-human-authority", "blocking": true }
+  ]
+}

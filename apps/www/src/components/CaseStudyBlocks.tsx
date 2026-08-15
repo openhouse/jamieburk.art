@@ -1,6 +1,6 @@
-import Image from "next/image";
 import type { ReactNode } from "react";
 import { JBCard } from "@/components/JBCard";
+import { MediaImage } from "@/components/MediaImage";
 import { TagList } from "@/components/TagList";
 import type { WorkMeta } from "@/types/work";
 
@@ -76,7 +76,7 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
                 key={artifact.title}
               >
                 <a className="block" href={artifact.media.href}>
-                  <Image
+                  <MediaImage
                     alt={artifact.media.alt}
                     className={`aspect-[3/2] w-full bg-white ${
                       artifact.media.fit === "contain"

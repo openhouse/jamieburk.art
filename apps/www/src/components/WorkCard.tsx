@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Route } from "next";
+import { MediaImage } from "@/components/MediaImage";
 import { StatusBadge } from "@/components/StatusBadge";
 import { TagList } from "@/components/TagList";
 import { getWorkCover } from "@/data/work-covers";
@@ -23,7 +23,7 @@ export function WorkCard({ eager = false, item }: WorkCardProps) {
             className="group block overflow-hidden bg-jb-ink/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-jb-blue"
             href={`/work/${item.slug}` as Route}
           >
-            <Image
+            <MediaImage
               alt={cover.alt}
               className={`aspect-[3/2] w-full transition-[filter] duration-200 group-hover:brightness-95 motion-reduce:transition-none ${
                 cover.fit === "contain" ? "object-contain" : "object-cover"

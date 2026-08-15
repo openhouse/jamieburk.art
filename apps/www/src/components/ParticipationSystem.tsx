@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { MediaImage } from "@/components/MediaImage";
 import { participationMedia } from "@/data/participationMedia";
 import type { ParticipationMedia } from "@/data/participationMedia";
 
@@ -14,7 +14,7 @@ function EvidenceFigure({
   sizes: string;
 }) {
   const image = (
-    <Image
+    <MediaImage
       alt={media.alt}
       className={`h-auto w-full bg-jb-paper object-cover ${imageClassName}`}
       height={media.height}

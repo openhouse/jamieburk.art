@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { MediaImage } from "@/components/MediaImage";
 import { homeIdentity } from "@/data/home-identity";
 import { portfolioPhotos } from "@/data/photography";
 
@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <section className="jb-hero" aria-labelledby="home-title">
       <div className="jb-hero-image">
-        <Image
+        <MediaImage
           alt={photo.alt}
           className="object-cover object-[73%_center] sm:object-center"
           fill

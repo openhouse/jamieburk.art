@@ -65,9 +65,12 @@ test("a decorative gradient fails the material-system contract", () => {
   assert(result.failures.some(({ criterion }) => criterion === "human-index-material-system"));
 });
 
-test("runtime image optimization fails the Dokku delivery contract", () => {
+test("removing the off-Dokku image loader fails the delivery contract", () => {
   const path = "apps/www/next.config.ts";
-  const source = readFileSync(path, "utf8").replace("unoptimized: true", "unoptimized: false");
+  const source = readFileSync(path, "utf8").replace(
+    'loaderFile: "./src/lib/cloudinary-image-loader.ts",',
+    ""
+  );
   const result = evaluateLayout(process.cwd(), { [path]: source });
   assert.equal(result.passed, false);
   assert(result.failures.some(({ criterion }) => criterion === "reliable-image-delivery"));

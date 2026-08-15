@@ -1,8 +1,8 @@
-import Image from "next/image";
 import type { Metadata } from "next";
 import SourceBackedMemory from "@/content/lab/source-backed-team-memory.mdx";
 import { Cite, Claim, References } from "@/components/citations";
 import { JBButton } from "@/components/JBButton";
+import { MediaImage } from "@/components/MediaImage";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
@@ -114,7 +114,7 @@ export default function SourceBackedTeamMemoryPage() {
         </section>
         <section className="mt-12 grid gap-6 border-b border-jb-ink/12 pb-10 lg:grid-cols-[0.58fr_0.42fr] lg:items-center">
           <figure className="overflow-hidden rounded-lg border border-jb-ink/12 bg-jb-paper">
-            <Image
+            <MediaImage
               alt="Certificate of completion for AI Evals for Engineers and PMs, awarded to James Burkart by Hamel Husain and Shreya Shankar through Maven."
               className="h-auto w-full"
               height={584}

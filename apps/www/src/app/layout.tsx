@@ -34,6 +34,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       data-theme="human-index"
       lang="en"
     >
+      <head>
+        <link href="https://res.cloudinary.com" rel="dns-prefetch" />
+        <link crossOrigin="anonymous" href="https://res.cloudinary.com" rel="preconnect" />
+      </head>
       <body>
         <SiteHeader />
         <main id="main" tabIndex={-1}>{children}</main>

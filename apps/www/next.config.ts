@@ -50,10 +50,12 @@ const nextConfig: NextConfig = {
   },
   images: {
     formats: ["image/avif", "image/webp"],
-    // Every public image is already a reviewed, metadata-stripped derivative.
-    // Serving those bounded files directly avoids runtime optimizer stalls on
-    // the single-CPU Dokku application while preserving Next Image geometry.
-    unoptimized: true
+    // Cloudinary performs responsive transforms away from the single-CPU
+    // Dokku app. MediaImage marks the reviewed local fallback unoptimized.
+    loader: "custom",
+    loaderFile: "./src/lib/cloudinary-image-loader.ts",
+    deviceSizes: [384, 640, 750, 828, 1080, 1200, 1600, 1920],
+    imageSizes: [64, 96, 128, 256]
   },
   async headers() {
     return [
