@@ -19,6 +19,8 @@ export const employmentReportPaths = [
 const suitePath = "evals/knowledge-wiki/hiring-suites.json";
 const privatePattern =
   /(?:\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|Library\/CloudStorage|BEGIN (?:RSA |OPENSSH )?PRIVATE KEY)/i;
+const exactResidentialAddressPattern =
+  /(?:\b\d{1,5}\s+[A-Z][\w.'-]+(?:\s+[A-Z][\w.'-]+){0,3}\s+(?:Street|St|Avenue|Ave|Road|Rd|Boulevard|Blvd|Lane|Ln|Drive|Dr|Court|Ct|Place|Pl)\b|\b(?:Apt|Apartment|Unit)\s+[A-Z0-9-]+\b)/i;
 
 function compareText(a, b) {
   return a < b ? -1 : a > b ? 1 : 0;
@@ -139,6 +141,21 @@ function publicReaderContext(record) {
   };
 }
 
+function publicCandidateContext(record) {
+  return {
+    id: record.id,
+    homeBase: record.home_base,
+    longTermHomeBase: record.long_term_home_base,
+    permanentRelocation: record.permanent_relocation,
+    partYearInternationalWork: record.part_year_international_work,
+    attestationStatus: record.attestation_status,
+    workAuthorization: record.work_authorization,
+    crossBorderGates: record.cross_border_gates,
+    protectedBoundaries: record.protected_boundaries,
+    antiClaims: record.anti_claims
+  };
+}
+
 function routeCorpora(repoRoot, suite) {
   return Object.fromEntries(
     Object.entries(suite.routeFiles).map(([route, files]) => [
@@ -157,14 +174,26 @@ function publicEvaluationMarkdown(report) {
     `**Portfolio snapshot:** \`${report.portfolioSnapshotHash}\``,
     `**Role-context hash:** \`${report.roleContextHash}\``,
     `**Reader-context hash:** \`${report.readerContextHash}\``,
+    `**Candidate-context hash:** \`${report.candidateContextHash}\``,
     `**Evaluation contract:** \`${report.promptHash}\``,
     `**Candidate paths clean:** ${report.candidatePathsClean ? "yes" : "no"}`,
     "",
     "> Deterministic baseline only. This is not an interview prediction, a named person's opinion, or a human reader study.",
     "",
-    "## Opportunity results",
+    "## Candidate mobility context",
     ""
   ];
+  lines.push(
+    `- Long-term home base: ${report.candidateContext.homeBase}`,
+    `- Permanent relocation: \`${report.candidateContext.permanentRelocation}\``,
+    `- Part-year international work: \`${report.candidateContext.partYearInternationalWork}\``,
+    `- Austria work-permit context: \`${report.candidateContext.workAuthorization.austria.status}\``,
+    "- Employer location policy, residence registration, tax/payroll, social security, and travel/time-zone fit remain separate gates.",
+    `- Exact residential address received by evaluator: ${report.publicSafety.exactResidentialAddressReceived ? "yes" : "no"}`,
+    "",
+    "## Opportunity results",
+    ""
+  );
   for (const opportunity of report.opportunities) {
     lines.push(
       `### ${opportunity.title}`,
@@ -200,9 +229,17 @@ export function evaluatePublicHiring(repoRoot) {
   const suite = loadHiringSuite(repoRoot);
   const opportunities = suite.opportunityPaths.map((item) => readMatter(repoRoot, item));
   const readers = suite.readerPaths.map((item) => readMatter(repoRoot, item));
+  const candidateContextRecord = readMatter(repoRoot, suite.candidateContextPath);
+  const candidateContext = publicCandidateContext(candidateContextRecord.data);
   const corpora = routeCorpora(repoRoot, suite);
   const publicFiles = [...new Set(Object.values(suite.routeFiles).flat())].sort();
-  const candidatePaths = [...publicFiles, ...suite.opportunityPaths, ...suite.readerPaths, suitePath];
+  const candidatePaths = [
+    ...publicFiles,
+    ...suite.opportunityPaths,
+    ...suite.readerPaths,
+    suite.candidateContextPath,
+    suitePath
+  ];
   const candidateSha = sourceCommit(repoRoot, candidatePaths);
   const generatedAt = commitTime(repoRoot, candidateSha);
   const publicEntries = publicFiles.map((file) => [file, read(repoRoot, file)]);
@@ -272,6 +309,7 @@ export function evaluatePublicHiring(repoRoot) {
     portfolioSnapshotHash: stableHash(publicEntries),
     roleContextHash: sha256(JSON.stringify(roleContexts)),
     readerContextHash: sha256(JSON.stringify(readerContexts)),
+    candidateContextHash: sha256(JSON.stringify(candidateContext)),
     promptHash: sha256(
       JSON.stringify({
         principle: suite.principle,
@@ -279,10 +317,12 @@ export function evaluatePublicHiring(repoRoot) {
       })
     ),
     publicSafety: {
-      privateMarkerCount: privatePattern.test(corpus) ? 1 : 0,
+      privateMarkerCount: privatePattern.test(`${corpus}\n${candidateContextRecord.raw}`) ? 1 : 0,
+      exactResidentialAddressReceived: exactResidentialAddressPattern.test(candidateContextRecord.raw),
       protectedWikiReceived: false,
       rawCommunicationsReceived: false
     },
+    candidateContext,
     readers: readerContexts,
     opportunities: evaluated,
     disclaimer:

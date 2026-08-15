@@ -3,13 +3,13 @@
 
 **Source commit:** `eeaf0708e69d79a184e4f71b6777c34b5f2f192f`
 **Generation time:** 2026-08-15T17:44:19-04:00
-**Source fingerprint:** `86d0ce57a8c7e097312ee7723cbb11aa661dc393c3c7a3bf74a1dd2eaf8a9dbd`
+**Source fingerprint:** `56b15b8ec3272932fb17d2e9636f0e3f0d18dc4c21b424d1712371fe548059e7`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 33
+- Nodes added: 39
 - Nodes removed: 37
-- Edges added: 127
+- Edges added: 143
 - Edges removed: 180
 - New type-aware orphans: 0
 - Current rights-review records: 186
@@ -18,6 +18,7 @@ Compared with the graph artifact on `origin/develop`.
 
 - `asset.photo.nycac.save-nyc-spaces-town-hall.2017.001`
 - `asset.photo.nycac.shoestring-facilitation.2017.001`
+- `claim.employment.mobility-and-location.2026-08-15`
 - `claim.nycac.crs-frontline-advocacy.2026-07-08`
 - `decision.photo.launch-2026.field-system-pairs`
 - `evaluation.curatorial.launch-2026.field-system-pairs`
@@ -35,11 +36,16 @@ Compared with the graph artifact on `origin/develop`.
 - `research.restored-project-sites.close-reading.2026-08-14`
 - `source.aclu.political-advocacy-leadership.2026-08-13`
 - `source.asana.product-leadership.2026-08-15`
+- `source.austria.eu-mobility.2026-08-15`
 - `source.callnyc.live-site.2026-08-14`
 - `source.codepath.leadership.2026-08-13`
 - `source.commercial-rent.empty-storefronts-high-rents.2026-07`
+- `source.eu.income-tax-abroad.2026-08-15`
+- `source.eu.social-security-country-coverage.2026-08-15`
+- `source.eu.work-permits.2026-08-15`
 - `source.federated-knowledge-graph-ecosystem-review.2026-08-13`
 - `source.hje.formation-and-storefront-chronology.2026-08`
+- `source.jamie.employment-mobility-attestation.2026-08-15`
 - `source.jobs.aclu.senior-project-manager-national-campaigns.8631854002`
 - `source.jobs.codepath.senior-ai-operations-lead.5175813007`
 - `source.kc-town-hall.live-site.2026-08-14`

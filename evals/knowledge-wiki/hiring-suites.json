@@ -2,6 +2,7 @@
   "id": "current-priority-2026-08-15",
   "version": 3,
   "principle": "The public evaluator sees public projection files and public role and reader context only; Wiki gap resolution is a separate pass.",
+  "candidateContextPath": "docs/knowledge-bank/claims/employment-mobility-and-location.md",
   "opportunityPaths": [
     "docs/knowledge-bank/opportunities/aclu-senior-project-manager-national-campaigns.md",
     "docs/knowledge-bank/opportunities/codepath-senior-ai-operations-lead.md",

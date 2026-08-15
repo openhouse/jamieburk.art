@@ -44,6 +44,9 @@ relations:
     target: opportunity.protected.source-backed-memory-consulting.2026
     href: ../opportunities/source-backed-team-memory.md
   - type: related_to
+    target: claim.employment.mobility-and-location.2026-08-15
+    href: ../claims/employment-mobility-and-location.md
+  - type: related_to
     target: evaluation.employment-context.coverage.2026-07-18
     href: ../evaluations/employment-context-coverage-2026-07-18.md
 ---
@@ -80,6 +83,23 @@ application-specific versions may go narrower. A modeled pass advances only to
 a structured interview or work sample. It does not assert that any named person
 participated, endorsed Jamie, or would make a final hiring decision.
 
+## Candidate mobility and location fit
+
+The [employment mobility and Brooklyn home-base record](../claims/employment-mobility-and-location.md)
+adds Austria and other European Union member states to opportunity discovery on
+a conditional basis. Jamie attests that he is a United States and Irish dual
+national, intends to keep Brooklyn as his long-term home base, is not seeking
+permanent relocation away from Brooklyn, and is open to part-year overseas work
+when a role supports it.
+
+EU work-permit eligibility is only one gate. Every overseas or cross-border
+opportunity must separately verify employer location policy, residence
+registration, tax and payroll, social security, travel and time-zone fit,
+compensation, language, duration, and any security restrictions. A role marked
+US remote is not internationally remote by default. The precise residential
+address is protected and is neither stored in this repository nor needed for
+opportunity discovery.
+
 ## Closed watch patterns
 
 - [NYC OTI - Technical Operations Manager 782369](../opportunities/oti-technical-operations.md) - expired August 7, 2026; Jamie's clearest future OTI operations watch pattern.
@@ -103,7 +123,9 @@ communications never enter the public hiring evaluator.
 3. Decompose requirements into stable IDs.
 4. Map Wiki evidence, public evidence, real gaps, and one next action.
 5. Preserve hard screens and one-year team questions.
-6. Keep private relationship and application context outside the repo.
+6. Apply the candidate mobility record without conflating work authorization,
+   relocation preference, and employer cross-border compatibility.
+7. Keep private relationship and application context outside the repo.
 
 ## Evaluate the public portfolio
 

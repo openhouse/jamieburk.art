@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-15T17:44:19-04:00",
   "sourceCommit": "eeaf0708e69d79a184e4f71b6777c34b5f2f192f",
-  "sourceFingerprint": "86d0ce57a8c7e097312ee7723cbb11aa661dc393c3c7a3bf74a1dd2eaf8a9dbd",
+  "sourceFingerprint": "56b15b8ec3272932fb17d2e9636f0e3f0d18dc4c21b424d1712371fe548059e7",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -2606,6 +2606,19 @@
       "reviewBy": "2027-01-18"
     },
     {
+      "id": "claim.employment.mobility-and-location.2026-08-15",
+      "path": "docs/knowledge-bank/claims/employment-mobility-and-location.md",
+      "title": "Employment mobility and Brooklyn home-base preference",
+      "kind": "claim",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "User-attested US and Irish nationality, a long-term Brooklyn home-base preference, and bounded EU opportunity-screening guidance.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-11-15"
+    },
+    {
       "id": "claim.nycac.advocacy-operating-playbook",
       "path": "docs/knowledge-bank/claims/nycac-advocacy-operating-playbook.md",
       "title": "Shared NYC Artist Coalition advocacy operating playbook",
@@ -4554,6 +4567,19 @@
       "reviewBy": "2026-09-15"
     },
     {
+      "id": "source.austria.eu-mobility.2026-08-15",
+      "path": "docs/knowledge-bank/sources/austria-eu-mobility-2026.md",
+      "title": "Austrian Federal Government - Mobility of EU citizens within the EU",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Austrian government guidance on EEA and Swiss labour-market access and residence-registration duties.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2027-02-15"
+    },
+    {
       "id": "source.callnyc.live-site.2026-08-14",
       "path": "docs/knowledge-bank/sources/callnyc-live-site-2026-08-14.md",
       "title": "CallNYC restored public site",
@@ -4643,6 +4669,45 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2027-01-19"
+    },
+    {
+      "id": "source.eu.income-tax-abroad.2026-08-15",
+      "path": "docs/knowledge-bank/sources/eu-income-tax-abroad-2026.md",
+      "title": "Your Europe - Income taxes abroad",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "European Union guidance on tax residence, worldwide income, and double-taxation complexity for people working abroad.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2027-02-15"
+    },
+    {
+      "id": "source.eu.social-security-country-coverage.2026-08-15",
+      "path": "docs/knowledge-bank/sources/eu-social-security-country-coverage-2026.md",
+      "title": "Your Europe - Social-security cover across EU countries",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "European Union guidance on determining social-security coverage when living or working in more than one country.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2027-02-15"
+    },
+    {
+      "id": "source.eu.work-permits.2026-08-15",
+      "path": "docs/knowledge-bank/sources/eu-work-permits-2026.md",
+      "title": "Your Europe - Work permits",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "European Union guidance that EU nationals generally do not need a work permit to work elsewhere in the EU.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2027-02-15"
     },
     {
       "id": "source.federated-knowledge-graph-ecosystem-review.2026-08-13",
@@ -4760,6 +4825,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-03",
       "reviewBy": "2026-11-03"
+    },
+    {
+      "id": "source.jamie.employment-mobility-attestation.2026-08-15",
+      "path": "docs/knowledge-bank/sources/jamie-employment-mobility-attestation-2026.md",
+      "title": "Jamie Burkart employment mobility attestation, August 15, 2026",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public-safe transcription of Jamie's nationality, home-base, relocation, and part-year international-work preferences; exact address excluded.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-11-15"
     },
     {
       "id": "source.jamie.writers-voice-synthesis.2026-07",
@@ -11371,6 +11449,98 @@
       "context": null
     },
     {
+      "from": "claim.employment.mobility-and-location.2026-08-15",
+      "type": "evidence:context",
+      "to": "source.austria.eu-mobility.2026-08-15",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "Austrian labour-market access and residence-registration context for EU and EEA citizens"
+      ]
+    },
+    {
+      "from": "claim.employment.mobility-and-location.2026-08-15",
+      "type": "evidence:context",
+      "to": "source.eu.work-permits.2026-08-15",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "general EU work-permit rule for EU nationals"
+      ]
+    },
+    {
+      "from": "claim.employment.mobility-and-location.2026-08-15",
+      "type": "evidence:direct-support",
+      "to": "source.jamie.employment-mobility-attestation.2026-08-15",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "dual-nationality attestation",
+        "Brooklyn home-base preference",
+        "openness to part-year overseas work"
+      ]
+    },
+    {
+      "from": "claim.employment.mobility-and-location.2026-08-15",
+      "type": "evidence:supports-boundary",
+      "to": "source.eu.income-tax-abroad.2026-08-15",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "tax residence and double-taxation caveats"
+      ]
+    },
+    {
+      "from": "claim.employment.mobility-and-location.2026-08-15",
+      "type": "evidence:supports-boundary",
+      "to": "source.eu.social-security-country-coverage.2026-08-15",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "social-security coordination caveats for work in more than one country"
+      ]
+    },
+    {
+      "from": "claim.employment.mobility-and-location.2026-08-15",
+      "type": "uses_source",
+      "to": "source.austria.eu-mobility.2026-08-15",
+      "source": "frontmatter",
+      "href": "../sources/austria-eu-mobility-2026.md",
+      "context": null
+    },
+    {
+      "from": "claim.employment.mobility-and-location.2026-08-15",
+      "type": "uses_source",
+      "to": "source.eu.income-tax-abroad.2026-08-15",
+      "source": "frontmatter",
+      "href": "../sources/eu-income-tax-abroad-2026.md",
+      "context": null
+    },
+    {
+      "from": "claim.employment.mobility-and-location.2026-08-15",
+      "type": "uses_source",
+      "to": "source.eu.social-security-country-coverage.2026-08-15",
+      "source": "frontmatter",
+      "href": "../sources/eu-social-security-country-coverage-2026.md",
+      "context": null
+    },
+    {
+      "from": "claim.employment.mobility-and-location.2026-08-15",
+      "type": "uses_source",
+      "to": "source.eu.work-permits.2026-08-15",
+      "source": "frontmatter",
+      "href": "../sources/eu-work-permits-2026.md",
+      "context": null
+    },
+    {
+      "from": "claim.employment.mobility-and-location.2026-08-15",
+      "type": "uses_source",
+      "to": "source.jamie.employment-mobility-attestation.2026-08-15",
+      "source": "frontmatter",
+      "href": "../sources/jamie-employment-mobility-attestation-2026.md",
+      "context": null
+    },
+    {
       "from": "claim.nycac.advocacy-operating-playbook",
       "type": "evidence:private-support",
       "to": "source.nycac.shared-folder-census.2026",
@@ -12627,6 +12797,14 @@
       "to": "project.nyc-artist-coalition",
       "source": "frontmatter",
       "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "claim.employment.mobility-and-location.2026-08-15",
+      "source": "frontmatter",
+      "href": "../claims/employment-mobility-and-location.md",
       "context": null
     },
     {
@@ -17116,6 +17294,14 @@
       "context": null
     },
     {
+      "from": "source.austria.eu-mobility.2026-08-15",
+      "type": "supports",
+      "to": "claim.employment.mobility-and-location.2026-08-15",
+      "source": "frontmatter",
+      "href": "../claims/employment-mobility-and-location.md",
+      "context": null
+    },
+    {
       "from": "source.callnyc.live-site.2026-08-14",
       "type": "documents",
       "to": "project.callnyc",
@@ -17220,6 +17406,30 @@
       "context": null
     },
     {
+      "from": "source.eu.income-tax-abroad.2026-08-15",
+      "type": "supports",
+      "to": "claim.employment.mobility-and-location.2026-08-15",
+      "source": "frontmatter",
+      "href": "../claims/employment-mobility-and-location.md",
+      "context": null
+    },
+    {
+      "from": "source.eu.social-security-country-coverage.2026-08-15",
+      "type": "supports",
+      "to": "claim.employment.mobility-and-location.2026-08-15",
+      "source": "frontmatter",
+      "href": "../claims/employment-mobility-and-location.md",
+      "context": null
+    },
+    {
+      "from": "source.eu.work-permits.2026-08-15",
+      "type": "supports",
+      "to": "claim.employment.mobility-and-location.2026-08-15",
+      "source": "frontmatter",
+      "href": "../claims/employment-mobility-and-location.md",
+      "context": null
+    },
+    {
       "from": "source.federated-knowledge-graph-ecosystem-review.2026-08-13",
       "type": "related_to",
       "to": "index.knowledge-wiki.federated-graph-ecosystem",
@@ -17305,6 +17515,14 @@
       "to": "index.knowledge-wiki.jamie-public-record-source-edition",
       "source": "frontmatter",
       "href": "../indexes/jamie-public-record-source-edition.md",
+      "context": null
+    },
+    {
+      "from": "source.jamie.employment-mobility-attestation.2026-08-15",
+      "type": "supports",
+      "to": "claim.employment.mobility-and-location.2026-08-15",
+      "source": "frontmatter",
+      "href": "../claims/employment-mobility-and-location.md",
       "context": null
     },
     {
@@ -19399,10 +19617,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/claims/employment-mobility-and-location.md",
+      "to": "claim.employment.mobility-and-location.2026-08-15",
+      "fragment": null,
+      "line": 36,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
       "to": "opportunity.nyc-oti.technical-operations-manager.782369",
       "fragment": null,
-      "line": 36,
+      "line": 53,
       "kind": "link"
     },
     {
@@ -19411,7 +19638,7 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
       "to": "opportunity.nyc-oti.senior-product-manager.782366",
       "fragment": null,
-      "line": 37,
+      "line": 54,
       "kind": "link"
     },
     {
@@ -19420,7 +19647,7 @@
       "toPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
       "to": "opportunity.benepass.product-operations.7f963a7a",
       "fragment": null,
-      "line": 38,
+      "line": 55,
       "kind": "link"
     },
     {
@@ -19429,7 +19656,7 @@
       "toPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
       "to": "opportunity.aclu.product-manager-discovery.8482872002",
       "fragment": null,
-      "line": 39,
+      "line": 56,
       "kind": "link"
     },
     {
@@ -19438,7 +19665,7 @@
       "toPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
       "to": "opportunity.codepath.claude-corps.5182020007",
       "fragment": null,
-      "line": 40,
+      "line": 57,
       "kind": "link"
     },
     {
@@ -19447,7 +19674,7 @@
       "toPath": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
       "to": "opportunity.protected.source-backed-memory-consulting.2026",
       "fragment": null,
-      "line": 44,
+      "line": 61,
       "kind": "link"
     },
     {
@@ -19456,7 +19683,7 @@
       "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
       "to": "evaluation.employment-context.coverage.2026-07-18",
       "fragment": null,
-      "line": 70,
+      "line": 89,
       "kind": "link"
     },
     {
@@ -19465,7 +19692,7 @@
       "toPath": "reports/wiki-opportunity-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 71,
+      "line": 90,
       "kind": "link"
     },
     {
@@ -19474,7 +19701,7 @@
       "toPath": "reports/wiki-career-trajectory-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 72,
+      "line": 91,
       "kind": "link"
     },
     {
@@ -19483,7 +19710,7 @@
       "toPath": "reports/wiki-source-channel-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 73,
+      "line": 92,
       "kind": "link"
     },
     {
@@ -19492,7 +19719,7 @@
       "toPath": "reports/wiki-opportunity-discovery.md",
       "to": null,
       "fragment": null,
-      "line": 74,
+      "line": 93,
       "kind": "link"
     },
     {
@@ -19501,7 +19728,7 @@
       "toPath": "reports/hiring-acceptance-public.md",
       "to": null,
       "fragment": null,
-      "line": 75,
+      "line": 94,
       "kind": "link"
     },
     {
@@ -19510,7 +19737,7 @@
       "toPath": "reports/hiring-acceptance-gap-resolution.md",
       "to": null,
       "fragment": null,
-      "line": 76,
+      "line": 95,
       "kind": "link"
     },
     {

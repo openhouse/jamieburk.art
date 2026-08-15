@@ -3,7 +3,7 @@
 
 **Source commit:** `eeaf0708e69d79a184e4f71b6777c34b5f2f192f`
 **Generation time:** 2026-08-15T17:44:19-04:00
-**Source fingerprint:** `86d0ce57a8c7e097312ee7723cbb11aa661dc393c3c7a3bf74a1dd2eaf8a9dbd`
+**Source fingerprint:** `56b15b8ec3272932fb17d2e9636f0e3f0d18dc4c21b424d1712371fe548059e7`
 
 ## application
 
@@ -216,6 +216,7 @@
 ## claim
 
 - [CallNYC was an independent CouncilStat follow-on](../claims/callnyc-independent-follow-on.md) - `claim.callnyc.independent-follow-on`
+- [Employment mobility and Brooklyn home-base preference](../claims/employment-mobility-and-location.md) - `claim.employment.mobility-and-location.2026-08-15`
 - [Shared NYC Artist Coalition advocacy operating playbook](../claims/nycac-advocacy-operating-playbook.md) - `claim.nycac.advocacy-operating-playbook`
 - [NYC Artist Coalition and Fair Rent NYC frontline advocacy, July-August 2026](../claims/nycac-crs-frontline-advocacy-2026.md) - `claim.nycac.crs-frontline-advocacy.2026-07-08`
 
@@ -409,6 +410,7 @@
 
 - [ACLU political and advocacy leadership - August 2026](../sources/aclu-political-advocacy-leadership-2026.md) - `source.aclu.political-advocacy-leadership.2026-08-13`
 - [Official Asana product leadership context](../sources/asana-product-leadership-2026.md) - `source.asana.product-leadership.2026-08-15`
+- [Austrian Federal Government - Mobility of EU citizens within the EU](../sources/austria-eu-mobility-2026.md) - `source.austria.eu-mobility.2026-08-15`
 - [CallNYC restored public site](../sources/callnyc-live-site-2026-08-14.md) - `source.callnyc.live-site.2026-08-14`
 - [CallNYC public source repository](../sources/callnyc-source-repository.md) - `source.callnyc.source-repository`
 - [Campaign-site repository family, 2020-2022](../sources/campaign-site-repository-family-2020-2022.md) - `source.campaign-site.repository-family.2020-2022`
@@ -416,6 +418,9 @@
 - [CodePath team and senior leadership - August 2026](../sources/codepath-leadership-2026.md) - `source.codepath.leadership.2026-08-13`
 - [Empty Storefronts, High Rents](../sources/commercial-rent-public-support/empty-storefronts-high-rents-2026.md) - `source.commercial-rent.empty-storefronts-high-rents.2026-07`
 - [New York City Council Constituent Services Data release](../sources/nycc-constituent-services-data-2016-05-27.md) - `source.councilstat.fuller-release.2016`
+- [Your Europe - Income taxes abroad](../sources/eu-income-tax-abroad-2026.md) - `source.eu.income-tax-abroad.2026-08-15`
+- [Your Europe - Social-security cover across EU countries](../sources/eu-social-security-country-coverage-2026.md) - `source.eu.social-security-country-coverage.2026-08-15`
+- [Your Europe - Work permits](../sources/eu-work-permits-2026.md) - `source.eu.work-permits.2026-08-15`
 - [Federated Knowledge Wiki graph ecosystem review](../sources/federated-knowledge-graph-ecosystem-review-2026-08-13.md) - `source.federated-knowledge-graph-ecosystem-review.2026-08-13`
 - [Open House at UC Santa Cruz](../sources/good-times-open-house-2006-06-28.md) - `source.good-times.open-house.2006-06-28`
 - [Cabaret Law repeal hearing: supportive witness testimony](../testimony/heteroglossia/2017-09-14-cabaret-law-supportive-witnesses.md) - `source.heteroglossia.cabaret-law.2017-09-14`
@@ -425,6 +430,7 @@
 - [Thick Arts formation and Harry J. Epstein storefront chronology, August 2026](../sources/hje-formation-and-storefront-chronology-2026-08.md) - `source.hje.formation-and-storefront-chronology.2026-08`
 - [Harry J. Epstein Company archival research brief, July 2026](../sources/hje-research-brief-2026-07.md) - `source.hje.research-brief.2026-07`
 - [Jamie Burkart public-record initial manifest](../sources/jamie-public-record-initial-manifest.md) - `source.jamie-public-record-initial-manifest`
+- [Jamie Burkart employment mobility attestation, August 15, 2026](../sources/jamie-employment-mobility-attestation-2026.md) - `source.jamie.employment-mobility-attestation.2026-08-15`
 - [Jamie Burkart writer's voice synthesis, July 2026](../sources/writers-voice-synthesis-2026-07.md) - `source.jamie.writers-voice-synthesis.2026-07`
 - [ACLU - Product Manager II, Discovery 8482872002](../sources/jobs-aclu-product-discovery-8482872002.md) - `source.jobs.aclu.product-discovery.8482872002`
 - [ACLU - Senior Project Manager, National Campaigns 8631854002](../sources/jobs-aclu-senior-project-manager-national-campaigns-8631854002.md) - `source.jobs.aclu.senior-project-manager-national-campaigns.8631854002`

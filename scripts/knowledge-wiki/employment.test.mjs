@@ -17,6 +17,7 @@ function candidateFixture() {
   const suite = loadHiringSuite(defaultRepoRoot);
   const files = [
     "evals/knowledge-wiki/hiring-suites.json",
+    suite.candidateContextPath,
     ...suite.opportunityPaths,
     ...suite.readerPaths,
     ...Object.values(suite.routeFiles).flat()
@@ -28,6 +29,73 @@ function candidateFixture() {
   }
   return root;
 }
+
+test("candidate mobility context keeps Brooklyn continuity separate from EU work authorization", () => {
+  const { report } = evaluatePublicHiring(defaultRepoRoot);
+
+  assert.equal(report.candidateContext.homeBase, "Brooklyn, New York");
+  assert.equal(report.candidateContext.longTermHomeBase, true);
+  assert.equal(report.candidateContext.permanentRelocation, "not-preferred");
+  assert.equal(report.candidateContext.partYearInternationalWork, "open");
+  assert.equal(report.candidateContext.attestationStatus, "user-attested");
+  assert.equal(
+    report.candidateContext.workAuthorization.austria.status,
+    "generally-no-work-permit-required"
+  );
+  assert.equal(
+    report.candidateContext.workAuthorization.austria.basis,
+    "Irish citizenship under EU free-movement rules"
+  );
+  assert.deepEqual(
+    report.candidateContext.crossBorderGates.map((gate) => gate.id),
+    [
+      "gate.employer-location-policy",
+      "gate.residence-registration",
+      "gate.tax-and-payroll",
+      "gate.social-security",
+      "gate.travel-and-time-zone"
+    ]
+  );
+  assert.equal(report.publicSafety.exactResidentialAddressReceived, false);
+  assert.doesNotMatch(
+    JSON.stringify(report.candidateContext),
+    /(?:\b\d{1,5}\s+[A-Z][\w.'-]+(?:\s+[A-Z][\w.'-]+){0,3}\s+(?:Street|St|Avenue|Ave|Road|Rd|Boulevard|Blvd|Lane|Ln|Drive|Dr|Court|Ct|Place|Pl)\b|\b(?:Apt|Apartment|Unit)\s+[A-Z0-9-]+\b)/i
+  );
+});
+
+test("candidate mobility changes invalidate the public hiring context", () => {
+  const root = candidateFixture();
+  const before = evaluatePublicHiring(root).report.candidateContextHash;
+  const contextPath = path.join(root, loadHiringSuite(root).candidateContextPath);
+
+  writeFileSync(
+    contextPath,
+    readFileSync(contextPath, "utf8").replace("home_base: Brooklyn, New York", "home_base: Vienna, Austria")
+  );
+
+  const after = evaluatePublicHiring(root).report.candidateContextHash;
+  assert.notEqual(after, before);
+});
+
+test("private candidate mobility context fails the public hiring boundary", () => {
+  const root = candidateFixture();
+  const contextPath = path.join(root, loadHiringSuite(root).candidateContextPath);
+
+  writeFileSync(contextPath, `${readFileSync(contextPath, "utf8")}\n/Users/example/private-passport-scan\n`);
+
+  assert.equal(evaluatePublicHiring(root).report.publicSafety.privateMarkerCount, 1);
+});
+
+test("mobility claim remains held and preserves legal and privacy boundaries", () => {
+  const result = compileWiki();
+  const context = result.byId.get("claim.employment.mobility-and-location.2026-08-15");
+
+  assert.equal(context.projection.status, "hold");
+  assert.equal(context.attestation_status, "user-attested");
+  assert.ok(context.protected_boundaries.includes("exact residential address"));
+  assert.ok(context.anti_claims.includes("An Irish passport by itself makes every cross-border employment arrangement compliant."));
+  assert.ok(context.anti_claims.includes("Jamie is willing to relocate permanently away from Brooklyn."));
+});
 
 test("public hiring evaluator receives no protected Wiki or communications", () => {
   const { report } = evaluatePublicHiring(defaultRepoRoot);

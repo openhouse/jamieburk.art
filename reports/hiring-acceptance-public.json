@@ -3,15 +3,77 @@
   "runId": "hiring-public-6ae02b38819f",
   "generatedAt": "2026-08-15T17:42:24-04:00",
   "candidateSha": "6ae02b38819fd16d4b8b6aecb6af8a62790e1e36",
-  "candidatePathsClean": true,
+  "candidatePathsClean": false,
   "portfolioSnapshotHash": "7a663320825fba482168c725f49d65609bd58e5c9aa0b06e7fe331ddd7950625",
   "roleContextHash": "b882795f8239432855ec1a7263e7c22f8a8e6c36944554c05a72e81dc140ad55",
   "readerContextHash": "43376836970e6a0dae369b10141e15fae9baab41fdbe2263c6c8964d0fb2ea04",
+  "candidateContextHash": "6251a2430d0a133ce9e511ad76dc9b415bed1a77e10e8b29e81a73d3ad301523",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
   "publicSafety": {
     "privateMarkerCount": 0,
+    "exactResidentialAddressReceived": false,
     "protectedWikiReceived": false,
     "rawCommunicationsReceived": false
+  },
+  "candidateContext": {
+    "id": "claim.employment.mobility-and-location.2026-08-15",
+    "homeBase": "Brooklyn, New York",
+    "longTermHomeBase": true,
+    "permanentRelocation": "not-preferred",
+    "partYearInternationalWork": "open",
+    "attestationStatus": "user-attested",
+    "workAuthorization": {
+      "united_states": {
+        "status": "user-attested-work-authorization",
+        "basis": "United States citizenship"
+      },
+      "european_union": {
+        "status": "generally-no-work-permit-required",
+        "basis": "Irish citizenship under EU free-movement rules"
+      },
+      "austria": {
+        "status": "generally-no-work-permit-required",
+        "basis": "Irish citizenship under EU free-movement rules"
+      }
+    },
+    "crossBorderGates": [
+      {
+        "id": "gate.employer-location-policy",
+        "status": "verify-per-opportunity",
+        "question": "Can the employer hire Jamie in the proposed location and employment structure?"
+      },
+      {
+        "id": "gate.residence-registration",
+        "status": "verify-before-stay",
+        "question": "What Austrian address-registration and EU residence-registration duties would the length and nature of the stay trigger?"
+      },
+      {
+        "id": "gate.tax-and-payroll",
+        "status": "qualified-review-required",
+        "question": "Which jurisdictions may tax the work, and what payroll or employer obligations follow?"
+      },
+      {
+        "id": "gate.social-security",
+        "status": "qualified-review-required",
+        "question": "Which country's social-security system applies to the actual work pattern?"
+      },
+      {
+        "id": "gate.travel-and-time-zone",
+        "status": "verify-per-opportunity",
+        "question": "Can the role's working hours, travel, security, and on-site expectations coexist with a Brooklyn home base and any part-year overseas work?"
+      }
+    ],
+    "protectedBoundaries": [
+      "exact residential address",
+      "passport numbers and identity-document images",
+      "tax identifiers, filings, and individualized legal advice"
+    ],
+    "antiClaims": [
+      "An Irish passport by itself makes every cross-border employment arrangement compliant.",
+      "Jamie is willing to relocate permanently away from Brooklyn.",
+      "A remote role necessarily permits work from another country.",
+      "Work-permit eligibility resolves residence, tax, payroll, social-security, security, or employer-policy questions."
+    ]
   },
   "readers": [
     {
