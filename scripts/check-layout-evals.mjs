@@ -172,7 +172,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     }
   }
   if (workData.includes("approved public materials pending") ||
-      !workData.includes("one portfolio-authorized project photograph") ||
+      !workData.includes("one human-reviewed project photograph cleared for bounded portfolio display") ||
       !workData.includes("Additional named participants, photographs, and artifacts require consent and approval.")) {
     fail(
       "truthful-project-cover-field",

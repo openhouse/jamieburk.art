@@ -216,7 +216,7 @@ export const portfolioPhotos = {
       indexing: "open"
     },
     publicUseBoundary:
-      "Jamie authorized this exact portfolio occurrence from the designated portfolio album. The retained export does not identify the photographer; participant identities, remarks, attendance, and private gathering records remain outside the public bundle."
+      "This exact occurrence completed human rights and represented-person review for bounded portfolio display. The retained export does not identify the photographer; participant identities, remarks, attendance, and private gathering records remain outside the public bundle."
   },
   kcTownHallRoofWork: {
     id: "kc-town-hall-roof-work",

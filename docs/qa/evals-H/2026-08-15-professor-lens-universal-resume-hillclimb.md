@@ -44,3 +44,31 @@ The repair changes the public candidate fingerprint to
 Every counted professor-lens holdout must therefore reset and inspect the exact
 repaired public staging candidate. Earlier judgments remain historical records
 only.
+
+## Second rejection and clarification
+
+The reset began on candidate `161b17b7…`. Holdout `morse-m` passed at 4/4,
+but independent holdout `morse-n` scored 3/4. The second reader correctly
+distinguished Jamie's publication authorization from a publicly legible review
+status: “portfolio-authorized” did not itself tell a visitor whether rights and
+represented-person review had occurred.
+
+The governed Sunday Dinner asset already records `rights_state: cleared`,
+`consent_state: cleared`, and
+`represented_person_review: cleared-for-bounded-portfolio-use`. The bounded
+clarification therefore:
+
+- states that the exact project photograph was human-reviewed and cleared for
+  bounded portfolio display;
+- continues to disclose that creator attribution is unresolved in the retained
+  export;
+- retains the consent and approval gate for every additional named person,
+  photograph, and artifact; and
+- adds no person name, private permission receipt, consent-chain detail, or
+  broader reuse claim.
+
+The regression now rejects a return to vague “portfolio-authorized” language.
+This public-copy change resets the professor candidate again, to
+`45ce88b3c1f1528a022af08703f084fac63bb177274da013559ee54b40cc3e66`.
+The `morse-m` pass and `morse-n` rejection remain historical exact-candidate
+records and do not count toward the new candidate.

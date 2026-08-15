@@ -84,8 +84,8 @@ test("every work item retains a truthful cover visual", () => {
 test("an authorized project cover cannot be described as still pending", () => {
   const path = "apps/www/src/data/work.ts";
   const source = readFileSync(path, "utf8").replace(
-    "one portfolio-authorized project photograph with unresolved creator credit disclosed",
-    "approved public materials pending"
+    "one human-reviewed project photograph cleared for bounded portfolio display",
+    "one portfolio-authorized project photograph"
   );
   const result = evaluateLayout(process.cwd(), { [path]: source });
   assert.equal(result.passed, false);
