@@ -501,8 +501,12 @@ export function evaluatePhotoKnowledgeModel(model) {
       /no broader rights are asserted/.test(east?.publicUseBoundary ?? "") &&
       !/no third-party authorship/.test(east?.publicUseBoundary ?? ""),
     permission_scope_exact_and_fail_closed:
-      permission?.permission_capsule?.required_credit === "Photograph by Elana Gordon." &&
-      permission?.permission_capsule?.derivative_scope === "Current Layout C crop and transform" &&
+      permission?.permission_capsule?.credit_policy === "optional-at-jamie-discretion" &&
+      permission?.permission_capsule?.selected_credit?.homepage ===
+        "Photograph by Elana Gordon." &&
+      permission?.permission_capsule?.selected_credit?.open_graph_pixels === "omitted" &&
+      permission?.permission_capsule?.derivative_scope ===
+        "Portfolio-site presentation crops and transforms selected from the authorized photographs, including the current Layout C treatment and the 1200 by 630 Open Graph cover crop." &&
       permission?.permission_capsule?.public_git === "approved" &&
       permission?.permission_capsule?.staging === "approved" &&
       permission?.permission_capsule?.production === "open" &&
@@ -653,7 +657,7 @@ function placementMarkdown(model) {
 
 function permissionsMarkdown(model) {
   const permission = model.recordsById[model.canary.permissionSourceId].permission_capsule;
-  return `${generatedWarning}\n\n# Photo permissions\n\n| Asset | Destination | Credit | Public Git | Staging | Production | Indexing | Revocable |\n|---|---|---|---|---|---|---|---|\n| ${permission.asset} | ${permission.allowed_destination.join(", ")} | ${permission.required_credit} | ${permission.public_git} | ${permission.staging} | ${permission.production} | ${permission.indexing} | ${permission.revocable ? "yes" : "no"} |\n\nPrivate correspondence and protected locators are not included.\n`;
+  return `${generatedWarning}\n\n# Photo permissions\n\n| Asset | Destination | Credit policy | Public Git | Staging | Production | Indexing | Revocable |\n|---|---|---|---|---|---|---|---|\n| ${permission.asset} | ${permission.allowed_destination.join(", ")} | ${permission.credit_policy} | ${permission.public_git} | ${permission.staging} | ${permission.production} | ${permission.indexing} | ${permission.revocable ? "yes" : "no"} |\n\nPrivate correspondence and protected locators are not included.\n`;
 }
 
 function impactMarkdown(model) {

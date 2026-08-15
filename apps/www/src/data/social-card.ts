@@ -6,9 +6,13 @@ export const homeSocialCard = {
   ...homeIdentity,
   width: 1200,
   height: 630,
-  revision: "human-index-photo-v2",
-  imagePath: "/opengraph-image?v=human-index-photo-v2",
+  revision: "human-index-photo-v3",
+  imagePath: "/opengraph-image?v=human-index-photo-v3",
   renderPhotoPath: "/images/social/jamie-east-river-og-source.jpg",
+  visibleCopy: {
+    role: homeIdentity.role,
+    name: homeIdentity.name
+  },
   identityFont: {
     family: "TeX Gyre Pagella",
     weight: 400,

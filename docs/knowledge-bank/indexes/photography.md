@@ -5,7 +5,7 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-14
+last_reviewed: 2026-08-15
 review_by: 2027-02-14
 canonical_path: docs/knowledge-bank/indexes/photography.md
 summary: Public-safe orientation to the governed relationship among private photo sources, first-class Wiki records, exact portfolio occurrences, recollection, correction, and human publication gates.
@@ -36,7 +36,7 @@ relations:
   - type: related_to
     target: projection.photo.home-og.east-river
     href: ../projections/photography/home-og-east-river.md
-    context: Full-frame homepage social preview with current identity and visible Elana Gordon credit.
+    context: Homepage-aligned full-bleed social preview with only Jamie's role and name visible; Elana Gordon remains the governed creator and homepage credit under optional-credit permission.
   - type: related_to
     target: edition.layout-c.2026-07
     href: ../projections/photography/edition-layout-c-2026-07.md

@@ -1,22 +1,22 @@
 {
-  "id": "portfolio-social-sharing-v2",
+  "id": "portfolio-social-sharing-v3",
   "title": "Portfolio Open Graph and social-sharing continuity",
   "intent": "Make every shared portfolio link carry the current public identity, current page metadata, and a governed photographic card without allowing social previews to drift from the site or expand publication rights.",
   "criteria": [
     {
       "id": "shared-public-identity",
       "blocking": true,
-      "criterion": "The homepage and social card consume one canonical name, role, and tagline rather than maintaining duplicated copy."
+      "criterion": "The homepage, metadata, and social card consume one canonical identity; the rendered card selects only the canonical role and name rather than duplicating or rewriting them."
     },
     {
       "id": "identity-type-parity",
       "blocking": true,
-      "criterion": "Jamie's name uses the same TeX Gyre Pagella identity face on the site and in the rendered social card, with zero letter spacing and a revisioned preview URL."
+      "criterion": "Jamie's name uses the same TeX Gyre Pagella identity face on the site and in the rendered social card, with zero letter spacing and a revisioned v3 preview URL."
     },
     {
       "id": "interface-type-continuity",
       "blocking": true,
-      "criterion": "The role, tagline, site address, photo label, and photographer credit remain in Karla so the identity serif does not spread beyond Jamie's name."
+      "criterion": "The visible role remains in Karla while the identity serif is reserved for Jamie's name; the tagline, site address, photo label, and photographer credit are deliberately absent from the rendered pixels."
     },
     {
       "id": "licensed-font-delivery",
@@ -34,14 +34,19 @@
       "criterion": "Open Graph and Twitter use the same absolute, revisioned 1200 by 630 image URL, and Twitter declares summary_large_image so a new card revision can invalidate stale platform previews."
     },
     {
-      "id": "governed-photo-occurrence",
+      "id": "distilled-visible-copy",
       "blocking": true,
-      "criterion": "The card uses a metadata-stripped full-frame East River derivative through an explicit social-card placement and Knowledge Wiki projection."
+      "criterion": "The rendered card contains exactly two visible copy blocks—the canonical role and Jamie Burkart—and does not reintroduce the tagline, site address, photo label, or photographer credit."
     },
     {
-      "id": "full-frame-and-credit",
+      "id": "governed-photo-occurrence",
       "blocking": true,
-      "criterion": "The East River derivative is displayed full-frame without a new crop, and the rendered card visibly credits Elana Gordon."
+      "criterion": "The card uses the metadata-stripped East River JPEG source through an explicit social-card placement and Knowledge Wiki projection, with the 1200 by 630 cover treatment recorded as part of the exact occurrence."
+    },
+    {
+      "id": "homepage-aligned-composition-and-credit-boundary",
+      "blocking": true,
+      "criterion": "The social card uses the approved homepage-aligned full-bleed crop, omits visible in-image credit under Elana Gordon's optional-credit permission, and still records Elana as creator with visible homepage credit and a revocation path."
     },
     {
       "id": "useful-social-alt",

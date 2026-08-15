@@ -20,7 +20,7 @@
     "check:citations": "node scripts/check-citations.mjs",
     "test:citations": "node --test scripts/tests/citations.test.mjs",
     "evals:hje-chronology": "node --test scripts/tests/hje-chronology.test.mjs",
-    "evals:social-sharing": "node --no-warnings --experimental-transform-types --test scripts/tests/social-sharing.test.mjs",
+    "evals:social-sharing": "node --no-warnings --test scripts/tests/social-sharing.test.mjs",
     "report:citations": "node scripts/report-citations.mjs",
     "check:rfcs": "node scripts/check-rfcs.mjs",
     "sourcebook:build": "node scripts/sourcebook/build.mjs",

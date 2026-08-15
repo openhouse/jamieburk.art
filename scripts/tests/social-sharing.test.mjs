@@ -55,7 +55,7 @@ test("Open Graph and Twitter expose the same photographic large-card contract", 
   assert.equal(metadata.openGraph?.url?.toString(), "https://staging.jamieburk.art/work");
   assert.equal(
     metadata.openGraph?.images?.[0]?.url?.toString(),
-    "https://staging.jamieburk.art/opengraph-image?v=human-index-photo-v2"
+    "https://staging.jamieburk.art/opengraph-image?v=human-index-photo-v3"
   );
   assert.equal(metadata.openGraph?.images?.[0]?.width, 1200);
   assert.equal(metadata.openGraph?.images?.[0]?.height, 630);
@@ -72,7 +72,17 @@ test("Open Graph and Twitter expose the same photographic large-card contract", 
   );
   assert.equal(twitterImage?.alt, homeSocialCard.alt);
   assert.equal(homeSocialCard.photo.id, "east-river");
-  assert.equal(homeSocialCard.revision, "human-index-photo-v2");
+  assert.equal(homeSocialCard.revision, "human-index-photo-v3");
+});
+
+test("the social card exposes only the role and name as visible copy", () => {
+  assert.deepEqual(homeSocialCard.visibleCopy, {
+    role: "Technical Project Manager - Product Operations & Implementation",
+    name: "Jamie Burkart"
+  });
+  assert.equal(Object.values(homeSocialCard.visibleCopy).includes(homeSocialCard.tagline), false);
+  assert.equal(Object.values(homeSocialCard.visibleCopy).includes(homeSocialCard.photoLabel), false);
+  assert.equal(Object.values(homeSocialCard.visibleCopy).includes(homeSocialCard.photoCredit), false);
 });
 
 test("the shared identity typeface is a locally deliverable, licensed Palatino-family face", () => {

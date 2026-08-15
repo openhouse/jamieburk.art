@@ -65,7 +65,7 @@ export const portfolioPhotos = {
       indexing: "open"
     },
     publicUseBoundary:
-      "Elana Gordon is credited as photographer. The homepage uses the governed WebP; the Open Graph preview uses a metadata-stripped JPEG derived from the same full frame without a new crop; no broader rights are asserted."
+      "Elana Gordon is credited as photographer on the homepage and remains the recorded creator. Her bounded portfolio permission makes visible credit optional at Jamie's discretion. The Open Graph preview uses a metadata-stripped JPEG source with an approved 1200 by 630 cover treatment and no in-image credit; no broader rights are asserted."
   },
   sundayDinnerSharedMap: {
     id: "sunday-dinner-shared-map",
