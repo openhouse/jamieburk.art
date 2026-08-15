@@ -469,22 +469,24 @@ export function evaluatePhotoKnowledgeModel(model) {
       JSON.stringify([...expectedBoundPhotoIds].sort()) &&
     publicPhotoManifest?.length === expectedBoundPhotoIds.length;
   const selectedRenderSha =
-    "62f01a8a26797a27ba81c81b026ee613c9bce1c9f66d3e1f2ca3434ddc450889";
-  const selectedVariant = "image-1-four-reader-answers";
+    "1f83d66b7e35e8a3a955819cf2104b79a88c9a8bd3953fd6fa691143bdb6da42";
+  const selectedVariant = "image-4-editorial-proposition";
   const socialPreviewReleaseHumanApproved =
     socialPreviewPhoto?.releaseState?.production === "approved" &&
     socialPreviewPhoto?.releaseState?.indexing === "approved" &&
     socialPreviewPhoto?.releaseState?.decision?.authority === "Jamie Burkart" &&
     socialPreviewPhoto?.releaseState?.decision?.approvedAt === "2026-08-15" &&
     socialPreviewPhoto?.releaseState?.decision?.selectedVariant === selectedVariant &&
-    socialPreviewPhoto?.releaseState?.decision?.alternativesReviewed === 3 &&
+    socialPreviewPhoto?.releaseState?.decision?.alternativesReviewed === 6 &&
+    socialPreviewPhoto?.releaseState?.decision?.uniqueCompositionsReviewed === 4 &&
     socialPreviewPhoto?.releaseState?.decision?.renderedSha256 === selectedRenderSha &&
     socialPreviewOccurrence?.approval?.production === "approved" &&
     socialPreviewOccurrence?.approval?.indexing === "approved" &&
     socialPreviewOccurrence?.approval?.authority === "Jamie Burkart" &&
     dateOnly(socialPreviewOccurrence?.approval?.approved_at) === "2026-08-15" &&
     socialPreviewOccurrence?.approval?.selected_variant === selectedVariant &&
-    socialPreviewOccurrence?.approval?.alternatives_reviewed === 3 &&
+    socialPreviewOccurrence?.approval?.alternatives_reviewed === 6 &&
+    socialPreviewOccurrence?.approval?.unique_compositions_reviewed === 4 &&
     socialPreviewOccurrence?.approval?.rendered_sha256 === selectedRenderSha &&
     portfolioAuthorization?.authorization?.social_preview_release?.production ===
       "approved" &&
@@ -498,7 +500,9 @@ export function evaluatePhotoKnowledgeModel(model) {
     portfolioAuthorization?.authorization?.social_preview_release?.selected_variant ===
       selectedVariant &&
     portfolioAuthorization?.authorization?.social_preview_release
-      ?.alternatives_reviewed === 3 &&
+      ?.alternatives_reviewed === 6 &&
+    portfolioAuthorization?.authorization?.social_preview_release
+      ?.unique_compositions_reviewed === 4 &&
     portfolioAuthorization?.authorization?.social_preview_release?.rendered_sha256 ===
       selectedRenderSha &&
     permission?.permission_capsule?.social_preview?.release?.production ===
@@ -511,6 +515,9 @@ export function evaluatePhotoKnowledgeModel(model) {
       "2026-08-15" &&
     permission?.permission_capsule?.social_preview?.release?.selected_variant ===
       selectedVariant &&
+    permission?.permission_capsule?.social_preview?.release?.alternatives_reviewed === 6 &&
+    permission?.permission_capsule?.social_preview?.release
+      ?.unique_compositions_reviewed === 4 &&
     permission?.permission_capsule?.social_preview?.release?.rendered_sha256 ===
       selectedRenderSha;
   const everyBoundOccurrenceAligned = publicPhotoManifest?.every((item) => {

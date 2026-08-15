@@ -38,8 +38,9 @@ export type PortfolioPhoto = {
     decision?: {
       authority: "Jamie Burkart";
       approvedAt: "2026-08-15";
-      selectedVariant: "image-1-four-reader-answers";
-      alternativesReviewed: 3;
+      selectedVariant: "image-4-editorial-proposition";
+      alternativesReviewed: 6;
+      uniqueCompositionsReviewed: 4;
       renderedSha256: string;
     };
   };
@@ -108,10 +109,11 @@ export const portfolioPhotos = {
       decision: {
         authority: "Jamie Burkart",
         approvedAt: "2026-08-15",
-        selectedVariant: "image-1-four-reader-answers",
-        alternativesReviewed: 3,
+        selectedVariant: "image-4-editorial-proposition",
+        alternativesReviewed: 6,
+        uniqueCompositionsReviewed: 4,
         renderedSha256:
-          "62f01a8a26797a27ba81c81b026ee613c9bce1c9f66d3e1f2ca3434ddc450889"
+          "1f83d66b7e35e8a3a955819cf2104b79a88c9a8bd3953fd6fa691143bdb6da42"
       }
     },
     publicUseBoundary:

@@ -206,6 +206,8 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
 
   const socialPreview = readText("apps/www/src/data/social-preview.ts");
   const openGraphImage = readText("apps/www/src/app/opengraph-image.tsx");
+  const appPackage = readText("apps/www/package.json");
+  const repositoryScripts = walkFiles(path.join(root, "scripts"));
   const metadata = readText("apps/www/src/lib/metadata.ts");
   const socialPlacement = readText(
     "docs/knowledge-bank/projections/photography/social-preview-east-river.md"
@@ -230,11 +232,17 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   ];
   const renderedBindings = [
     "socialPreview.name",
-    "socialPreview.role",
     "socialPreview.proposition",
     "socialPreview.image.src",
     "socialPreview.image.alt",
     "socialPreview.siteLabel"
+  ];
+  const compositionInstructions = [
+    "photograph-is-the-field",
+    "name-is-primary",
+    "proposition-is-secondary",
+    "destination-is-quiet",
+    "role-and-credit-are-metadata"
   ];
   if (
     !socialPreview.includes("image: portfolioPhotos.eastRiverSocialPreview") ||
@@ -248,6 +256,17 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     [...metadata.matchAll(/socialPreview\.width/g)].length !== 1 ||
     [...metadata.matchAll(/socialPreview\.height/g)].length !== 1 ||
     !socialPreview.includes("Photograph by Elana Gordon.") ||
+    !socialPreview.includes('id: "human-index-editorial-proposition-v1"') ||
+    !socialPreview.includes('selectedVariant: "image-4-editorial-proposition"') ||
+    !socialPreview.includes("alternativesReviewed: 6") ||
+    !socialPreview.includes("uniqueCompositionsReviewed: 4") ||
+    compositionInstructions.some((instruction) => !socialPreview.includes(instruction)) ||
+    !socialPreview.includes('renderedFields: ["name", "proposition", "siteLabel"]') ||
+    !socialPreview.includes('metadataOnlyFields: ["role", "creatorCredit"]') ||
+    !socialPreview.includes('sha256: "1f83d66b7e35e8a3a955819cf2104b79a88c9a8bd3953fd6fa691143bdb6da42"') ||
+    !appPackage.includes('"social-preview:verify"') ||
+    !appPackage.includes("npm run social-preview:verify") ||
+    !repositoryScripts.includes("check-social-preview-render.mjs") ||
     /\b(?:focus|credit):/.test(socialPreview) ||
     renderedBindings.some(
       (binding) => openGraphImage.split(binding).length - 1 !== 1
@@ -257,16 +276,26 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     ) ||
     !openGraphImage.includes('export const runtime = "nodejs"') ||
     !openGraphImage.includes('import { readFile } from "node:fs/promises"') ||
-    !openGraphImage.includes("const imageData = await readSocialPreviewImage();") ||
+    !openGraphImage.includes("readSocialPreviewAsset(socialPreview.image.src)") ||
+    !openGraphImage.includes(
+      "readSocialPreviewAsset(composition.typography.displayFont.src)"
+    ) ||
+    !openGraphImage.includes(
+      "readSocialPreviewAsset(composition.typography.bodyFont.src)"
+    ) ||
     !openGraphImage.includes("src={imageData as unknown as string}") ||
     !openGraphImage.includes('objectFit: "cover"') ||
-    !openGraphImage.includes('objectPosition: "center 46%"') ||
-    !openGraphImage.includes('background: "rgba(16, 25, 32, 0.48)"') ||
+    !socialPreview.includes('image: { objectPosition: "center 46%" }') ||
+    !openGraphImage.includes("composition.layout.image.objectPosition") ||
+    openGraphImage.includes("socialPreview.role") ||
+    !openGraphImage.includes("socialPreview.composition") ||
+    !openGraphImage.includes("readSocialPreviewAsset") ||
+    !openGraphImage.includes("fonts:") ||
+    !openGraphImage.includes("composition.contrast") ||
+    !openGraphImage.includes("composition.typography") ||
+    !openGraphImage.includes("composition.layout") ||
     /new URL\(socialPreview\.image\.src|SITE_URL/.test(openGraphImage) ||
-    !["#2f6f89", "#222b36"].every(
-      (color) => openGraphImage.includes(color)
-    ) ||
-    /#0b5f81|#1f5c3e|#eeefec|linear-gradient|radial-gradient|conic-gradient/i.test(
+    /#0b5f81|#1f5c3e|#eeefec|radial-gradient|conic-gradient/i.test(
       openGraphImage
     ) ||
     !/route: \/opengraph-image/.test(socialPlacement) ||
@@ -292,11 +321,9 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     !/production: approved/.test(socialPlacement) ||
     !/indexing: approved/.test(socialPlacement) ||
     !/authority: Jamie Burkart/.test(socialPlacement) ||
-    !/selected_variant: image-1-four-reader-answers/.test(socialPlacement) ||
-    !/alternatives_reviewed: 3/.test(socialPlacement) ||
-    !/rendered_sha256: 62f01a8a26797a27ba81c81b026ee613c9bce1c9f66d3e1f2ca3434ddc450889/.test(
-      socialPlacement
-    )
+    !/selected_variant: image-4-editorial-proposition/.test(socialPlacement) ||
+    !/alternatives_reviewed: 6/.test(socialPlacement) ||
+    !/unique_compositions_reviewed: 4/.test(socialPlacement)
   ) {
     fail(
       "social-preview-contract",

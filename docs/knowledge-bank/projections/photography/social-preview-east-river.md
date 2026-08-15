@@ -9,7 +9,7 @@ sensitivity: low
 last_reviewed: 2026-08-15
 review_by: 2027-02-15
 canonical_path: docs/knowledge-bank/projections/photography/social-preview-east-river.md
-summary: Exact social-preview occurrence binding the selected full-bleed East River composition to jamieburk.art Open Graph and Twitter cards with four reader answers, creator attribution in alt metadata and the governed record, and Jamie's dated production decision.
+summary: Exact social-preview occurrence binding the selected full-bleed East River editorial composition to jamieburk.art Open Graph and Twitter cards, with creator attribution in alt metadata and the governed record and Jamie's dated production decision.
 projection_status: active
 portfolio_edition: edition.launch.2026-08
 asset: asset.photo.east-river-manhattan-bridge.2022.001
@@ -46,9 +46,10 @@ approval:
   indexing: approved
   authority: Jamie Burkart
   approved_at: 2026-08-15
-  selected_variant: image-1-four-reader-answers
-  alternatives_reviewed: 3
-  rendered_sha256: 62f01a8a26797a27ba81c81b026ee613c9bce1c9f66d3e1f2ca3434ddc450889
+  selected_variant: image-4-editorial-proposition
+  alternatives_reviewed: 6
+  unique_compositions_reviewed: 4
+  rendered_sha256: 1f83d66b7e35e8a3a955819cf2104b79a88c9a8bd3953fd6fa691143bdb6da42
 distribution_boundary: Social platforms may cache this card as a preview of jamieburk.art. No standalone reuse, endorsement, or broader image license is asserted.
 rollback:
   action: Restore the prior contained split composition with visible credit while retaining this occurrence and its review history.
@@ -71,9 +72,10 @@ relations:
 # East River social-preview occurrence
 
 This occurrence makes the site recognizable when its URL travels through text
-messages and social feeds. The role and working proposition remain primary; the
-metadata-stripped East River derivative provides situated presence through the
-exact fixed social crop.
+messages and social feeds. Jamie's name and working proposition remain primary;
+the metadata-stripped East River derivative provides situated presence through
+the exact fixed social crop. The literal role remains available to platforms in
+the card metadata without burdening the rendered composition.
 
 The image uses the exact full-bleed crop Jamie approved for this fixed social
 composition. Elana Gordon remains identified as creator in alt metadata and the
@@ -82,18 +84,32 @@ credit optional for this bounded portfolio use. The credited homepage
 occurrence remains unchanged. Platform caching is treated as delivery of a
 jamieburk.art preview, not as permission for standalone reuse or endorsement.
 
-## Three-variant close reading
+## Six-alternative close reading
 
-Jamie reviewed three 1200 by 630 alternatives on August 15, 2026 and selected
-the current generated Image 1 composition for production and indexing. It is
-the only alternative that answers all four immediate reader questions exactly
-once: who Jamie is, his role, the value he creates, and where to continue.
+Jamie reviewed six supplied 1200 by 630 alternatives on August 15, 2026. Two
+pairs were byte-identical, leaving four distinct compositions. He explicitly
+removed Image 1 from consideration and selected Image 4, which is identical to
+Image 5, for production and indexing.
 
-Image 2 remains a strong editorial alternative but omits the literal role.
-Image 3 works as an institutional title slate but omits both the working
-proposition and destination. The comparison images remain outside Git; this
-record preserves only the public-safe decision and verified selected-render
+The selected composition gives the situated photograph the full field, makes
+Jamie's name the dominant editorial structure, follows with the plain-language
+working proposition, and leaves the destination quiet at lower left. It keeps
+the literal role and creator credit in metadata and the governed record rather
+than rendering them as additional lines. The comparison files remain outside
+Git; this record preserves the public-safe decision and exact selected-render
 hash.
+
+## Procedural score
+
+The renderer consumes a prioritized composition score in
+`apps/www/src/data/social-preview.ts`: photograph as field; name as primary;
+proposition as secondary; destination as quiet continuation; role and credit as
+metadata. The score also declares crop, contrast purpose, typography, spatial
+coordinates, selected-variant history, and the approved render dimensions and
+SHA-256. The build runs `social-preview:verify`, which fails if generated PNG
+bytes, dimensions, or content type drift from that approval. Layout evaluations
+also fail if an instruction, rendered-field boundary, metadata boundary, local
+asset binding, or verifier hook is lost.
 
 The approval binds only this image, crop, copy, route, destination, and hash.
 Any later change reopens production and indexing review.

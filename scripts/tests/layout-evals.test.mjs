@@ -2,6 +2,11 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import { evaluateLayout } from "../check-layout-evals.mjs";
+import {
+  evaluateApprovedRender,
+  inspectPng,
+  readApprovedRender
+} from "../check-social-preview-render.mjs";
 
 test("current photographic layout passes every hard gate", () => {
   const result = evaluateLayout();
@@ -125,9 +130,31 @@ test("the social preview renders each reader answer exactly once", () => {
   assert(result.failures.some(({ criterion }) => criterion === "social-preview-contract"));
 });
 
+test("the selected editorial preview keeps the role out of rendered pixels", () => {
+  const path = "apps/www/src/app/opengraph-image.tsx";
+  const source = `${readFileSync(path, "utf8")}\n// {socialPreview.role}\n`;
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "social-preview-contract"));
+});
+
+test("the procedural score cannot lose a rendering priority", () => {
+  const path = "apps/www/src/data/social-preview.ts";
+  const source = readFileSync(path, "utf8").replace(
+    "destination-is-quiet",
+    "destination-is-prominent"
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "social-preview-contract"));
+});
+
 test("social-preview metadata retains creator attribution when the rendered pixels omit it", () => {
   const path = "apps/www/src/data/social-preview.ts";
-  const source = readFileSync(path, "utf8").replace("Photograph by Elana Gordon.", "");
+  const source = readFileSync(path, "utf8").replaceAll(
+    "Photograph by Elana Gordon.",
+    ""
+  );
   const result = evaluateLayout(process.cwd(), { [path]: source });
   assert.equal(result.passed, false);
   assert(result.failures.some(({ criterion }) => criterion === "social-preview-contract"));
@@ -147,10 +174,52 @@ test("the social preview uses a renderer-supported image derivative", () => {
 test("the social preview loads its governed image locally rather than through a remote site URL", () => {
   const path = "apps/www/src/app/opengraph-image.tsx";
   const source = readFileSync(path, "utf8").replace(
-    "const imageData = await readSocialPreviewImage();",
-    "const imageData = await fetch(new URL(socialPreview.image.src, SITE_URL));"
+    "readSocialPreviewAsset(socialPreview.image.src)",
+    "fetch(new URL(socialPreview.image.src, SITE_URL))"
   );
   const result = evaluateLayout(process.cwd(), { [path]: source });
   assert.equal(result.passed, false);
   assert(result.failures.some(({ criterion }) => criterion === "social-preview-contract"));
+});
+
+test("the approved-render verifier reads the declarative composition contract", () => {
+  const contract = readApprovedRender(`approvedRender: {
+    width: 1200,
+    height: 630,
+    contentType: "image/png",
+    sha256: "abc123"
+  },`);
+  assert.deepEqual(contract, {
+    width: 1200,
+    height: 630,
+    contentType: "image/png",
+    sha256: "abc123"
+  });
+});
+
+test("the approved-render verifier reads PNG dimensions and bytes", () => {
+  const bytes = Buffer.alloc(24);
+  Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]).copy(bytes);
+  bytes.write("IHDR", 12, "ascii");
+  bytes.writeUInt32BE(1200, 16);
+  bytes.writeUInt32BE(630, 20);
+  assert.deepEqual(inspectPng(bytes), {
+    width: 1200,
+    height: 630,
+    contentType: "image/png",
+    sha256: "763d6b5763eb64e1310fc3d6b27291a4c7b3fa6d03e9cb3f71d79ddba25f58fc"
+  });
+});
+
+test("the approved-render verifier fails exact output drift", () => {
+  const observed = {
+    width: 1200,
+    height: 630,
+    contentType: "image/png",
+    sha256: "new-render"
+  };
+  const approved = { ...observed, sha256: "approved-render" };
+  assert.deepEqual(evaluateApprovedRender(observed, approved), [
+    "sha256: expected approved-render, observed new-render"
+  ]);
 });

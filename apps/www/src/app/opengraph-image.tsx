@@ -11,8 +11,8 @@ export const size = {
 };
 export const contentType = "image/png";
 
-async function readSocialPreviewImage(): Promise<ArrayBuffer> {
-  const relativePath = socialPreview.image.src.replace(/^\/+/, "");
+async function readSocialPreviewAsset(source: string): Promise<ArrayBuffer> {
+  const relativePath = source.replace(/^\/+/, "");
   const publicRoots = [
     join(process.cwd(), "apps/www/public"),
     join(process.cwd(), "public")
@@ -28,11 +28,16 @@ async function readSocialPreviewImage(): Promise<ArrayBuffer> {
     }
   }
 
-  throw lastError ?? new Error("Unable to load the social-preview image.");
+  throw lastError ?? new Error(`Unable to load social-preview asset: ${source}`);
 }
 
 export default async function Image() {
-  const imageData = await readSocialPreviewImage();
+  const composition = socialPreview.composition;
+  const [imageData, displayFontData, bodyFontData] = await Promise.all([
+    readSocialPreviewAsset(socialPreview.image.src),
+    readSocialPreviewAsset(composition.typography.displayFont.src),
+    readSocialPreviewAsset(composition.typography.bodyFont.src)
+  ]);
 
   return new ImageResponse(
     (
@@ -52,68 +57,57 @@ export default async function Image() {
           height="630"
           src={imageData as unknown as string}
           style={{
-            height: "630px",
+            height: `${composition.layout.canvas.height}px`,
             left: 0,
             objectFit: "cover",
-            objectPosition: "center 46%",
+            objectPosition: composition.layout.image.objectPosition,
             position: "absolute",
             top: 0,
-            width: "1200px"
+            width: `${composition.layout.canvas.width}px`
           }}
           width="1200"
         />
         <div
           style={{
-            background: "rgba(16, 25, 32, 0.48)",
+            background: composition.contrast.background,
             display: "flex",
-            height: "630px",
+            height: `${composition.layout.canvas.height}px`,
             left: 0,
             position: "absolute",
             top: 0,
-            width: "1200px"
+            width: `${composition.layout.canvas.width}px`
           }}
         />
         <div
           style={{
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center",
-            padding: "54px 68px 58px",
-            position: "relative",
-            width: "720px"
+            left: `${composition.layout.text.left}px`,
+            position: "absolute",
+            top: `${composition.layout.text.top}px`,
+            width: `${composition.layout.text.width}px`
           }}
         >
           <div
             style={{
-              fontFamily: "serif",
-              fontSize: "94px",
-              fontWeight: 600,
-              letterSpacing: "-0.03em",
-              lineHeight: 0.94,
-              maxWidth: "650px"
+              fontFamily: composition.typography.displayFont.family,
+              fontSize: `${composition.typography.name.fontSize}px`,
+              fontWeight: composition.typography.name.fontWeight,
+              letterSpacing: composition.typography.name.letterSpacing,
+              lineHeight: composition.typography.name.lineHeight,
+              width: `${composition.typography.name.width}px`
             }}
           >
             {socialPreview.name}
           </div>
           <div
             style={{
-              fontFamily: "sans-serif",
-              fontSize: "31px",
-              fontWeight: 700,
-              lineHeight: 1.12,
-              marginTop: "30px"
-            }}
-          >
-            {socialPreview.role}
-          </div>
-          <div
-            style={{
-              fontFamily: "sans-serif",
-              fontSize: "32px",
-              fontWeight: 600,
-              lineHeight: 1.2,
-              marginTop: "24px",
-              maxWidth: "600px"
+              fontFamily: composition.typography.bodyFont.family,
+              fontSize: `${composition.typography.proposition.fontSize}px`,
+              fontWeight: composition.typography.proposition.fontWeight,
+              lineHeight: composition.typography.proposition.lineHeight,
+              marginTop: `${composition.typography.proposition.marginTop}px`,
+              width: `${composition.typography.proposition.width}px`
             }}
           >
             {socialPreview.proposition}
@@ -121,16 +115,14 @@ export default async function Image() {
         </div>
         <div
           style={{
-            background: "#2f6f89",
-            bottom: 0,
-            color: "#ffffff",
+            bottom: `${composition.layout.destination.bottom}px`,
+            color: composition.typography.destination.color,
             display: "flex",
-            fontFamily: "sans-serif",
-            fontSize: "22px",
-            fontWeight: 700,
-            left: 0,
-            letterSpacing: "0.01em",
-            padding: "14px 22px 16px 68px",
+            fontFamily: composition.typography.bodyFont.family,
+            fontSize: `${composition.typography.destination.fontSize}px`,
+            fontWeight: composition.typography.destination.fontWeight,
+            left: `${composition.layout.destination.left}px`,
+            letterSpacing: composition.typography.destination.letterSpacing,
             position: "absolute"
           }}
         >
@@ -138,6 +130,22 @@ export default async function Image() {
         </div>
       </div>
     ),
-    size
+    {
+      ...size,
+      fonts: [
+        {
+          name: composition.typography.displayFont.family,
+          data: displayFontData,
+          style: "normal",
+          weight: composition.typography.displayFont.weight
+        },
+        {
+          name: composition.typography.bodyFont.family,
+          data: bodyFontData,
+          style: "normal",
+          weight: composition.typography.bodyFont.weight
+        }
+      ]
+    }
   );
 }

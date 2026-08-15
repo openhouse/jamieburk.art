@@ -36,9 +36,10 @@ authorization:
     indexing: approved
     authority: Jamie Burkart
     approved_at: 2026-08-15
-    selected_variant: image-1-four-reader-answers
-    alternatives_reviewed: 3
-    rendered_sha256: 62f01a8a26797a27ba81c81b026ee613c9bce1c9f66d3e1f2ca3434ddc450889
+    selected_variant: image-4-editorial-proposition
+    alternatives_reviewed: 6
+    unique_compositions_reviewed: 4
+    rendered_sha256: 1f83d66b7e35e8a3a955819cf2104b79a88c9a8bd3953fd6fa691143bdb6da42
   excludes:
     - Apple Photos identifiers
     - original archive filenames

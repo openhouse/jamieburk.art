@@ -11,7 +11,7 @@
     {
       "id": "governed-photographic-field",
       "blocking": true,
-      "criterion": "The launch-candidate layout uses exactly five fully bound, credited, Jamie-authorized photographs: the unchanged East River hero, the Shoestring Press and Market Hotel sequence, the Sunday Dinner cover, and the KC Town Hall cover; unresolved archive images remain outside the public bundle."
+      "criterion": "The launch-candidate public field uses exactly seven fully bound, credited, Jamie-authorized photographic derivatives: the unchanged East River hero, the Shoestring Press and Market Hotel sequence, the Sunday Dinner cover, the KC Town Hall roof-work cover, and the Tired of Tires before-and-after pair; unresolved archive images remain outside the public bundle."
     },
     {
       "id": "metadata-and-locator-safety",
@@ -36,7 +36,7 @@
     {
       "id": "human-index-material-system",
       "blocking": true,
-      "criterion": "The Human Index palette is active and gradients, decorative orbs, and bokeh are absent."
+      "criterion": "The Human Index palette is active and decorative gradients, orbs, and bokeh are absent. The social preview may use only its declared functional contrast field for text legibility over the governed photograph."
     },
     {
       "id": "responsive-image-contract",
@@ -46,7 +46,7 @@
     {
       "id": "social-preview-contract",
       "blocking": true,
-      "criterion": "Open Graph and Twitter metadata share one governed preview contract with the rendered 1200 by 630 image; the full-bleed East River composition carries Jamie's name, role, proposition, and site label exactly once each, while creator attribution remains in alt metadata and the governed record under placement-specific permission. Production and indexing require a dated, exact-variant human decision."
+      "criterion": "Open Graph and Twitter metadata share one governed preview contract with the rendered 1200 by 630 image. The selected Human Index editorial score carries Jamie's name, proposition, and quiet site label exactly once; role and creator attribution remain metadata-only. The photograph stays full-bleed, the functional contrast field serves legibility without becoming decoration, and production/indexing require a dated exact-render human decision."
     },
     {
       "id": "human-authority-remains-open",
