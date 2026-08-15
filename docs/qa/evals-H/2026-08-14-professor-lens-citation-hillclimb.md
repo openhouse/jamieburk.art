@@ -79,3 +79,17 @@ source file, that data-lineage repair changed the candidate to
 `8b816ff698d986d4753c0d9c694edcd8c118bdc2929d136ccbbdd5ccb32651e6`.
 All counted PR-015 and PR-016 holdouts must therefore reset once more and review
 the exact repaired staging deployment.
+
+## Final accepted candidate after lifecycle repair
+
+Candidate `8b816ff698d986d4753c0d9c694edcd8c118bdc2929d136ccbbdd5ccb32651e6`
+was deployed to noindex Staging-B at commit `a41fcab03` and received six new,
+sequential, public-web-only reviews:
+
+- PR-015, fictionalized Margaret Morse analytical lens: 4/4, 4/4, 4/4.
+- PR-016, fictionalized Warren Sack analytical lens: 4/4, 4/4, 4/4.
+
+The active deterministic gate reads only the `g`, `h`, and `i` scorecards bound
+to this candidate. All earlier scorecards remain historical records. None of
+these fictionalized analytical reviews represents participation, a statement,
+or endorsement by a named person.

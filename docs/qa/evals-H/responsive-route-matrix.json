@@ -1,8 +1,8 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-08-15T02:31:35.246Z",
+  "checkedAt": "2026-08-15T03:03:57.148Z",
   "baseUrl": "http://127.0.0.1:3061",
-  "publicSurfaceFingerprint": "01f936c13478ee0e27ca0066b4396f8e9c37107e693b89e5c80cbbd28c0694e8",
+  "publicSurfaceFingerprint": "78e58de29eab4224b185556294b50251453821216e730402afdf520141437a61",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 135,
   "requestFailurePolicy": "Exclude canceled speculative Next.js RSC prefetches (net::ERR_ABORTED with an _rsc query); retain every other failed request.",
@@ -887,7 +887,7 @@
     "passed": true
   },
   "navigationReview": {
-    "checkedAt": "2026-08-15T02:31:35.246Z",
+    "checkedAt": "2026-08-15T03:03:57.148Z",
     "startRoute": "/",
     "destinationRoute": "/about",
     "startHttpStatus": 200,
