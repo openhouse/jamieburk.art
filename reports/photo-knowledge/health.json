@@ -15,6 +15,7 @@
     "recollection_does_not_auto_project": true,
     "automated_selection_prohibited": true,
     "production_and_indexing_human_gated": true,
+    "social_preview_release_human_approved": true,
     "rfc_authority_and_scope_current": true,
     "exact_candidate_receipt_current": false
   },
@@ -34,7 +35,7 @@
     "documentary_integrity"
   ],
   "candidate": {
-    "fingerprint": "e08ee82e3b3e0b1af042718823eaadd3ccbd6117d5ecbec5af17fe37927448d3",
+    "fingerprint": "2daa4018bbba2ededc55d906859bd22e6e62edd45bae1bef2717d5d041cbb352",
     "fileCount": 255,
     "files": [
       "apps/www/public/artifacts/wowlist/public-threshold.webp",

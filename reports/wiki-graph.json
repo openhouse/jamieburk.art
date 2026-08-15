@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-15T05:17:38-04:00",
-  "sourceCommit": "4d8b4844d0c650ec3b9df3465d8c332626b9adb2",
-  "sourceFingerprint": "297b584b8226bf1b05e6300986e815632c69a1d4db4256b3bfe882bd584008cf",
+  "generatedAt": "2026-08-15T06:18:14-04:00",
+  "sourceCommit": "74aba35902a68c4b253f98d3e1ddde9404edb228",
+  "sourceFingerprint": "a05a23aa1a4699d93ce00e0fe84f76613f5b05066c4e3f6c99739ae974f5c751",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -4444,7 +4444,7 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Exact social-preview occurrence binding a full-bleed East River composition to jamieburk.art Open Graph and Twitter cards with distilled role-first copy, creator attribution in alt metadata and the governed record, and open production and indexing gates.",
+      "summary": "Exact social-preview occurrence binding the selected full-bleed East River composition to jamieburk.art Open Graph and Twitter cards with four reader answers, creator attribution in alt metadata and the governed record, and Jamie's dated production decision.",
       "aliases": [],
       "lastReviewed": "2026-08-15",
       "reviewBy": "2027-02-15"

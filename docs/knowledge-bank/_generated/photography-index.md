@@ -2,7 +2,7 @@
 
 # Photo knowledge health
 
-Candidate fingerprint: `e08ee82e3b3e0b1af042718823eaadd3ccbd6117d5ecbec5af17fe37927448d3`
+Candidate fingerprint: `2daa4018bbba2ededc55d906859bd22e6e62edd45bae1bef2717d5d041cbb352`
 Candidate files: 255
 
 | Check | State |
@@ -20,6 +20,7 @@ Candidate files: 255
 | recollection_does_not_auto_project | PASS |
 | automated_selection_prohibited | PASS |
 | production_and_indexing_human_gated | PASS |
+| social_preview_release_human_approved | PASS |
 | rfc_authority_and_scope_current | PASS |
 | exact_candidate_receipt_current | FAIL |
 
