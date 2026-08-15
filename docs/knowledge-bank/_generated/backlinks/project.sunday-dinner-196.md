@@ -1,8 +1,8 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Sunday Dinner and 196 Artists Residency orientation
 
-**Source commit:** `aa23d5e15bccf3fed95bf0370407570115e5c387`
-**Generation time:** 2026-08-14T20:43:47-04:00
+**Source commit:** `90d2196176c53ed5a496e1b7a3d15308ecf30f49`
+**Generation time:** 2026-08-14T21:15:03-04:00
 **Source fingerprint:** `fde57500c6b2816b90ddd08596d58d0e0ead48d1435c588d9aff5402884c2304`
 
 - [Sunday Dinner shared map and table, 2013](../../assets/photographs/sunday-dinner-shared-map-2013.md) - `related_to` (frontmatter)

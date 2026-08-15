@@ -1,10 +1,10 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-08-14T22:46:22.707Z",
+  "checkedAt": "2026-08-15T02:31:35.246Z",
   "baseUrl": "http://127.0.0.1:3061",
-  "publicSurfaceFingerprint": "21ef72ee6ca7aee71efdfec7d67d8bdf810a7c3d519b83c6033089000f08fede",
+  "publicSurfaceFingerprint": "01f936c13478ee0e27ca0066b4396f8e9c37107e693b89e5c80cbbd28c0694e8",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 134,
+  "publicSurfaceFileCount": 135,
   "requestFailurePolicy": "Exclude canceled speculative Next.js RSC prefetches (net::ERR_ABORTED with an _rsc query); retain every other failed request.",
   "routes": [
     "/",
@@ -887,7 +887,7 @@
     "passed": true
   },
   "navigationReview": {
-    "checkedAt": "2026-08-14T22:46:22.707Z",
+    "checkedAt": "2026-08-15T02:31:35.246Z",
     "startRoute": "/",
     "destinationRoute": "/about",
     "startHttpStatus": 200,
@@ -902,8 +902,8 @@
       "height": 900
     },
     "renderedScreenshot": {
-      "sha256": "df047e1af973a0d775afab35f86e9554fd720a39e51635dcdf61e02fa71f1768",
-      "byteLength": 585715,
+      "sha256": "3b7e2cbb876bf526f30faaa67917c95e487fc5be0b7c57c30c3d0b152637b95d",
+      "byteLength": 601283,
       "width": 1280,
       "fullPage": true,
       "retainedInPublicGit": false,

@@ -48,3 +48,34 @@ holdout.
 
 The candidate fingerprint must reset again, and every counted final holdout
 must review the repaired public staging surface.
+
+## Accepted candidate
+
+Candidate `7812ae0a29ed91b6a2a9782af5e14b7b112c26305fafd83d13ad722b4dcf6c52`
+received six fresh public-web-only holdout reviews after the second repair:
+
+- PR-015, fictionalized Margaret Morse analytical lens: 4/4, 4/4, 4/4.
+- PR-016, fictionalized Warren Sack analytical lens: 4/4, 4/4, 4/4.
+
+All six reviews used the public staging surface only, were performed
+independently and sequentially, and were bound to the exact candidate above.
+They are analytical role-play records, not statements, participation, or
+endorsements by the named people.
+
+The earlier passing scorecards remain in the repository as historical records,
+but the deterministic release gate reads only the six August 14 scorecards
+bound to the accepted candidate.
+
+## Exact-candidate reset after lifecycle repair
+
+The six reviews above remain accurate records of candidate `7812ae0a…`, but
+they no longer authorize release. A later full-suite run found one orphaned
+Tired of Tires evidence-review source. The bounded repair attached that
+AI-assisted synthesis record to the intake that produced it without promoting
+the synthesis into claim evidence or changing public copy.
+
+Because the professor-lens fingerprint intentionally binds every `apps/www`
+source file, that data-lineage repair changed the candidate to
+`8b816ff698d986d4753c0d9c694edcd8c118bdc2929d136ccbbdd5ccb32651e6`.
+All counted PR-015 and PR-016 holdouts must therefore reset once more and review
+the exact repaired staging deployment.

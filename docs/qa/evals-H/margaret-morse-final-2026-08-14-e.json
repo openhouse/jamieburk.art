@@ -1,0 +1,36 @@
+{
+  "evaluator": "Fictionalized Margaret Morse analytical lens for independent portfolio evaluation only. This is not Margaret Morse, does not speak for her, and implies no endorsement.",
+  "reviewerId": "morse-e-2026-08-14-7812ae0a",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "7812ae0a29ed91b6a2a9782af5e14b7b112c26305fafd83d13ad722b4dcf6c52",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The first screen names the target role and states the operative proposition, with direct Work and Resume routes.",
+    "The artistic, civic, technical, and social through-line is explicit within one click on About through Open House, WOW List, Sunday Dinner and 196, NYC Artist Coalition, and source-backed team memory.",
+    "At least four accurate, bounded continuities are legible within two clicks: WOW List, Sunday Dinner and 196, FairRentNYC, and CallNYC.",
+    "Technical continuity is concrete: the HJE case translates customer and team friction into bounded requirements, incremental releases, verification, reusable patterns, ownership, and handoff.",
+    "Status and date integrity are clear: HJE is 2009–2015; CallNYC is 2016 and archived; WOW List is a 2026 return in progress; FairRentNYC is 2017–Present.",
+    "Citation practice is substantive across FairRentNYC, CallNYC, WOW List, and About.",
+    "Collective credit is explicit throughout, including named co-builders and co-organizers and non-causal coalition language.",
+    "Participant privacy and private coalition boundaries are treated as design constraints rather than footnotes.",
+    "The visual system reinforces the argument with situated photography, clear typography, direct navigation, and repeated what-became-usable structures."
+  ],
+  "gaps": [
+    "Non-blocking: the bounded HJE revenue contribution is less independently inspectable than the civic cases because it has no inline public source note.",
+    "Non-blocking: the concise AI Evals education line is not source-linked; keeping it bounded is preferable to publishing protected educational records."
+  ],
+  "safety_findings": [
+    "No private participant rows, contacts, access details, credentials, private analytics, customer data, or legal-review material were visible.",
+    "Historical statistics are labeled historical, archived civic guidance is explicitly non-current, and collective outcomes are not converted into sole causation.",
+    "No protected educational records, private testimonials, or private correspondence were exposed."
+  ],
+  "recommendation": "PASS. Release this exact candidate. It makes the artistic-civic-technical-social continuity visible within two clicks and handles evidence, dates, collective authorship, participant privacy, and protected exclusions with exceptional discipline.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "public-web-only independent holdout",
+    "reviewedAt": "2026-08-14",
+    "filesEdited": false
+  }
+}

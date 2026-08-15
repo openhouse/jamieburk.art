@@ -1,0 +1,33 @@
+{
+  "evaluator": "Warren Sack — fictionalized analytical lens only. This is not Warren Sack, does not speak for him, and is not an endorsement.",
+  "reviewerId": "sack-d-2026-08-14-7812ae0a",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "7812ae0a29ed91b6a2a9782af5e14b7b112c26305fafd83d13ad722b4dcf6c52",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The About page plainly names the recursive method and is one click from the home page.",
+    "The home page offers a concise companion formulation and routes through the Work index to inspectable case studies within two clicks.",
+    "HJE reconstructs customer and team questions becoming bounded requirements, incremental changes, verification, reusable patterns, ownership, and next actions; the role is bounded to 2009–2015.",
+    "NYC Artist Coalition and FairRentNYC show lived experience, meetings, public sources, and policy actors becoming campaign sites, gatherings, source maps, minutes, question logs, and action trackers.",
+    "CallNYC shows open data becoming issue pathways, district context, and resident-facing next-step guidance, with its archived and unofficial status prominent.",
+    "WOW List shows organizer vocabulary becoming followable keyword communities, collaborative natural-language posts, publishing workflows, historical instrumentation, and stewardship.",
+    "Across the projects, social organization determines information architecture and interface rather than decorating the software.",
+    "Learning and handoff are concrete, and visible dates distinguish historical work, archived prototypes, current advocacy, and in-progress restoration."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "Collective work is credited to named collaborators and broader participant groups.",
+    "Historical metrics are dated and separated from present activity or resident outcomes.",
+    "Protected records, private participant data, internal analytics, and coalition strategy remain excluded.",
+    "The cross-project method is presented as a recurring practice, not as structural equivalence among unlike projects."
+  ],
+  "recommendation": "PASS. The public portfolio makes Jamie's recurring socio-technical method legible and inspectable across more than three bounded projects without material overclaim.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "public-web-only independent holdout",
+    "reviewedAt": "2026-08-14",
+    "filesEdited": false
+  }
+}
