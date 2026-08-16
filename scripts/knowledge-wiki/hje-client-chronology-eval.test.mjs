@@ -34,6 +34,15 @@ expectFailure("removing the canonical first-client claim fails", (candidate) => 
   candidate.knowledgeBank.claims = candidate.knowledgeBank.claims.filter((item) => item.id !== "CLM-HJE-THICK-ARTS-FIRST-CLIENT-2009-2015");
 }, /canonical HJE\/Thick Arts first-client claim is missing/);
 
+expectFailure("misclassifying Jamie's first-party correction as collaborator testimony fails", (candidate) => {
+  const intake = candidate.knowledgeBank.intakeItems.find((item) => item.id === "INTAKE-HJE-THICK-ARTS-CLIENT-CHRONOLOGY-2026-08-14");
+  intake.kind = "collaborator-note";
+}, /memory lead rather than collaborator testimony/);
+
+expectFailure("removing the first-party chronology inquiry fails", (candidate) => {
+  candidate.knowledgeBank.researchInquiries = candidate.knowledgeBank.researchInquiries.filter((item) => item.id !== "INQ-HJE-THICK-ARTS-CLIENT-CHRONOLOGY-CORROBORATION");
+}, /retain its corroboration inquiry|partially recovered/);
+
 expectFailure("changing the official formation date fails", (candidate) => {
   candidate.contract.authoritativeCorrection.llcFormationDate = "2009-01-01";
 }, /formation-date contract must remain 2012-07-06/);

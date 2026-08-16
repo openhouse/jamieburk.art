@@ -488,6 +488,7 @@ const knowledgeBankInput = {
     ...callNycSocialPopulationJuly2026.researchInquiries,
     ...googleDriveProductionJuly2026.researchInquiries,
     ...historicalKnowledge.researchInquiries,
+    ...hjeClientChronologyAugust2026.researchInquiries,
     ...socialMediaProductionJuly2026.researchInquiries,
     ...urbanhermitSocialPopulationJuly2026.researchInquiries,
     ...wowListFacebookPostKnowledge.researchInquiries,

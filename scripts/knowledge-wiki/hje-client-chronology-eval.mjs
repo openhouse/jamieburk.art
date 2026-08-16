@@ -70,6 +70,8 @@ export function evaluateHjeClientChronology(candidate) {
   const formationClaim = candidate.knowledgeBank.claims.find((item) => item.id === "CLM-THICK-ARTS-LLC-FORMATION-2012-07-06");
   const firstPartyObservation = candidate.knowledgeBank.observations.find((item) => item.id === "OBS-HJE-THICK-ARTS-FIRST-CLIENT-2009-2015");
   const officialObservation = candidate.knowledgeBank.observations.find((item) => item.id === "OBS-THICK-ARTS-LLC-FORMATION-2012-07-06");
+  const firstPartyIntake = candidate.knowledgeBank.intakeItems.find((item) => item.id === "INTAKE-HJE-THICK-ARTS-CLIENT-CHRONOLOGY-2026-08-14");
+  const chronologyInquiry = candidate.knowledgeBank.researchInquiries.find((item) => item.id === "INQ-HJE-THICK-ARTS-CLIENT-CHRONOLOGY-CORROBORATION");
   check(Boolean(relationshipClaim), "canonical HJE/Thick Arts first-client claim is missing");
   check(Boolean(formationClaim), "canonical Thick Arts LLC formation claim is missing");
   check(relationshipClaim?.status === "confirmed-with-boundary", "canonical first-client claim must retain its bounded status");
@@ -79,6 +81,11 @@ export function evaluateHjeClientChronology(candidate) {
   check(formationClaim?.internalClaim.includes("July 6, 2012"), "canonical formation claim must state the official filing date");
   check(Boolean(firstPartyObservation) && firstPartyObservation?.kind === "participant-memory", "first-party correction must remain an atomic participant-memory observation");
   check(Boolean(officialObservation) && officialObservation?.kind === "source-fact", "official formation date must remain an atomic source-fact observation");
+  check(firstPartyIntake?.kind === "memory-lead", "Jamie's first-party correction must remain a memory lead rather than collaborator testimony");
+  check(firstPartyIntake?.researchInquiryIds.includes(chronologyInquiry?.id), "first-party chronology intake must retain its corroboration inquiry");
+  check(relationshipClaim?.researchInquiryIds.includes(chronologyInquiry?.id), "first-party chronology claim must retain its corroboration inquiry");
+  check(chronologyInquiry?.resultStatus === "partially-recovered", "chronology corroboration inquiry must remain partially recovered");
+  check(chronologyInquiry?.limitations.some((item) => /not independent collaborator testimony/i.test(item)), "chronology inquiry must reject first-party evidence as collaborator testimony");
 
   check(/initial DOS[\s\S]{0,80}July 6, 2012/i.test(candidate.officialSource), "official-source note must state the July 6, 2012 initial DOS filing date");
   check(/does not[\s\S]{0,160}(?:client|2009)/i.test(candidate.officialSource), "official-source note must not be used to establish the client relationship or 2009 practice start");

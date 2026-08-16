@@ -10,12 +10,13 @@ const relationshipObservationId = "OBS-HJE-THICK-ARTS-FIRST-CLIENT-2009-2015";
 const formationObservationId = "OBS-THICK-ARTS-LLC-FORMATION-2012-07-06";
 const relationshipClaimId = "CLM-HJE-THICK-ARTS-FIRST-CLIENT-2009-2015";
 const formationClaimId = "CLM-THICK-ARTS-LLC-FORMATION-2012-07-06";
+const chronologyInquiryId = "INQ-HJE-THICK-ARTS-CLIENT-CHRONOLOGY-CORROBORATION";
 const dosQueryUrl = "https://data.ny.gov/resource/n9v6-gdp6.json?%24select=dos_id%2Ccurrent_entity_name%2Cinitial_dos_filing_date%2Ccounty%2Cjurisdiction%2Centity_type&%24where=current_entity_name%3D%27THICK%20ARTS%20LLC%27";
 
 const intakeItems: KnowledgeBank["intakeItems"] = [
   {
     id: correctionIntakeId,
-    kind: "collaborator-note",
+    kind: "memory-lead",
     title: "Harry J. Epstein Company client chronology correction",
     submittedAt: reviewedAt,
     submittedBy: "Jamie Burkart",
@@ -25,7 +26,7 @@ const intakeItems: KnowledgeBank["intakeItems"] = [
     disposition: "integrated",
     sourceIds: [firstPartySourceId],
     observationIds: [relationshipObservationId],
-    researchInquiryIds: [],
+    researchInquiryIds: [chronologyInquiryId],
     boundaries: [
       "Jamie's correction establishes the client relationship, first-client status, and maintained 2009-2015 portfolio period.",
       "It does not independently establish every contract, invoice, billing month, or later maintenance interaction.",
@@ -45,7 +46,7 @@ const intakeItems: KnowledgeBank["intakeItems"] = [
     disposition: "integrated",
     sourceIds: [dosSourceId],
     observationIds: [formationObservationId],
-    researchInquiryIds: [],
+    researchInquiryIds: [chronologyInquiryId],
     boundaries: [
       "The Department of State record establishes the entity name, type, jurisdiction, and initial filing date.",
       "It does not establish when Jamie's professional practice began, the identity of any client, or the duration of a client engagement."
@@ -66,7 +67,7 @@ const observations: KnowledgeBank["observations"] = [
     status: "verified",
     publicSafe: true,
     claimIds: [relationshipClaimId],
-    researchInquiryIds: [],
+    researchInquiryIds: [chronologyInquiryId],
     limitations: [
       "This first-party correction is authoritative for Jamie's portfolio chronology but is not a substitute for a month-by-month contract or invoice ledger."
     ]
@@ -83,7 +84,7 @@ const observations: KnowledgeBank["observations"] = [
     status: "verified",
     publicSafe: true,
     claimIds: [formationClaimId, relationshipClaimId],
-    researchInquiryIds: [],
+    researchInquiryIds: [chronologyInquiryId],
     limitations: [
       "The filing record does not establish client identity, engagement dates, or when Jamie began practicing independently."
     ]
@@ -144,7 +145,7 @@ const claims: KnowledgeBank["claims"] = [
       "Do not infer every contract, invoice, billing month, or maintenance interaction from the maintained portfolio range."
     ],
     antiClaims: ["Harry J. Epstein Company is a current client of Thick Arts LLC", "Thick Arts LLC legally existed in 2009", "the HJE client engagement ended in 2011", "the HJE client engagement continued from 2009 to the present"],
-    researchInquiryIds: [],
+    researchInquiryIds: [chronologyInquiryId],
     reviewedAt,
     reviewedBy
   },
@@ -167,4 +168,31 @@ const claims: KnowledgeBank["claims"] = [
   }
 ];
 
-export const hjeClientChronologyAugust2026 = { intakeItems, observations, sources, claims };
+const researchInquiries: KnowledgeBank["researchInquiries"] = [
+  {
+    id: chronologyInquiryId,
+    project: "harry-j-epstein",
+    question: "Which public-safe records can independently corroborate the 2009-2015 Harry J. Epstein Company client period and first-client relationship with Thick Arts LLC?",
+    methods: [
+      "Keep Jamie's authorized first-party chronology separate from independent third-party evidence.",
+      "Seek bounded public archives, contemporaneous project records, or permissioned client-side corroboration without publishing contracts, invoices, correspondence, credentials, or client-private material.",
+      "Use the New York Department of State record only for the LLC formation date; do not treat it as evidence of client identity or engagement duration."
+    ],
+    runAt: reviewedAt,
+    resultStatus: "partially-recovered",
+    findings: [
+      "Jamie's authorized first-party correction establishes the portfolio chronology he has approved for public use.",
+      "The New York Department of State independently establishes the July 6, 2012 LLC formation date within the reported client period.",
+      "No independent source reviewed in this pass establishes the full 2009-2015 client period or first-client relationship."
+    ],
+    limitations: [
+      "The official entity record does not name clients or establish engagement dates.",
+      "Jamie's first-party account is not independent collaborator testimony.",
+      "Private commercial records remain outside the public repository and are not presumed publishable."
+    ],
+    sourceIds: [firstPartySourceId, dosSourceId],
+    publicSummary: "The 2009-2015 client chronology is an authorized first-party professional account; the 2012 legal formation date is independently verified, while independent corroboration of the full client period remains open."
+  }
+];
+
+export const hjeClientChronologyAugust2026 = { intakeItems, observations, sources, claims, researchInquiries };
