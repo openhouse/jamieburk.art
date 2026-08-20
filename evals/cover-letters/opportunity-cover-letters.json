@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "id": "opportunity-cover-letters-2026-08-20",
+  "asOf": "2026-08-20T14:00:00-04:00",
+  "hiringReaderPortfolioPath": "evals/resumes/hiring-reader-portfolio.json",
+  "selectionPolicyPath": "evals/resumes/public-resume-selection.json",
+  "voice": {
+    "sourceUrl": "https://docs.google.com/document/d/18y6sZKaGGuHPBm7KGv5jENqAQJHlahxG-MPXQ0Kuwrc/edit?usp=sharing",
+    "sourceRecordPath": "docs/knowledge-bank/sources/google-doc-jamie-writers-voice.md",
+    "sourceModifiedAt": "2026-08-20T00:24:54.891Z",
+    "connectedReadAt": "2026-08-20T13:55:00-04:00",
+    "revisionSha256": "2a55fb923ff14ca8d8d6b5fcb62a85befe8b1752828ba03dd5fe5a76654515d9",
+    "maxConnectedReadAgeDays": 7,
+    "editorialSequence": [
+      "concrete encounter",
+      "human stake",
+      "hidden system",
+      "hinge distinction",
+      "durable possibility"
+    ],
+    "traits": [
+      "warm",
+      "precise",
+      "curious",
+      "protective",
+      "hopeful without naivete",
+      "lyrical only after concrete grounding"
+    ]
+  },
+  "skills": [
+    {
+      "name": "cover-letter-generator",
+      "path": ".agents/skills/cover-letter-generator/SKILL.md",
+      "lockKey": "cover-letter-generator",
+      "source": "paramchoudhary/resumeskills"
+    },
+    {
+      "name": "brand-voice-enforcement",
+      "path": ".agents/skills/brand-voice-enforcement/SKILL.md",
+      "lockKey": "brand-voice-enforcement",
+      "source": "anthropics/knowledge-work-plugins"
+    }
+  ],
+  "policy": {
+    "minimumWords": 250,
+    "maximumWords": 400,
+    "minimumBodyParagraphs": 3,
+    "maximumBodyParagraphs": 4,
+    "forbiddenPhrases": [
+      "I am writing to apply",
+      "I am the perfect candidate",
+      "uniquely qualified",
+      "guarantee results"
+    ],
+    "forbiddenUnsupportedClaims": [
+      "I secured the $490,539",
+      "I led the repeal",
+      "my legislation",
+      "I enacted",
+      "official City service"
+    ],
+    "projectAnchors": [
+      "Thick Arts",
+      "WOWList",
+      "CallNYC",
+      "FairRentNYC",
+      "NYC Artist Coalition",
+      "KC Town Hall"
+    ],
+    "hingePatterns": [
+      "not only",
+      "is not",
+      "question is not",
+      "goal is not",
+      "does not"
+    ],
+    "humanStakePatterns": [
+      "people",
+      "person",
+      "resident",
+      "user",
+      "organizer",
+      "team",
+      "public servant",
+      "applicant"
+    ],
+    "systemPatterns": [
+      "system",
+      "structure",
+      "handoff",
+      "process",
+      "operations",
+      "workflow"
+    ],
+    "durablePossibilityPatterns": [
+      "I would welcome",
+      "I can bring",
+      "I can contribute",
+      "I would expect"
+    ],
+    "authorityBoundaryPatterns": [
+      "collective",
+      "does not establish",
+      "do not claim",
+      "independent review",
+      "not identical",
+      "rather than",
+      "without"
+    ]
+  },
+  "readerContract": {
+    "actualPeopleParticipated": false,
+    "allSelectedGatesMustPass": true,
+    "passStatement": "I would advance this candidate on the strength of this cover letter and public application materials",
+    "failStatement": "I would not yet advance this candidate on the strength of this cover letter and public application materials",
+    "publicInputsOnly": true,
+    "oneIsolatedTaskPerReaderIdentity": true,
+    "latestRunPath": null
+  }
+}
+

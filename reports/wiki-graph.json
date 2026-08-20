@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-20T12:22:26-04:00",
-  "sourceCommit": "989beaea5a3c4b1f095763f5b982f1bc52e4aee1",
-  "sourceFingerprint": "acd713c8200da8f8bf21347678be407c44eb991e0df20b58901d6ee50098faf2",
+  "generatedAt": "2026-08-20T13:32:02-04:00",
+  "sourceCommit": "ed610686a9d861b25d050217b1139f2d8fa43a2e",
+  "sourceFingerprint": "875c60d94f34dc991eb16b3e6e3ec9983077612861d518da3b1b23d874731aee",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -4786,6 +4786,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2027-01-19"
+    },
+    {
+      "id": "source.google-doc.jamie-writers-voice",
+      "path": "docs/knowledge-bank/sources/google-doc-jamie-writers-voice.md",
+      "title": "Jamie Burkart's Writer's Voice - living Google Doc",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Stable pointer and bounded editorial profile for Jamie's living writer's-voice Google Doc.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
     },
     {
       "id": "source.heteroglossia.cabaret-law.2017-09-14",

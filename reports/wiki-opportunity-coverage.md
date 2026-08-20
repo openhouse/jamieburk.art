@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity requirement coverage
 
-**Wiki fingerprint:** `acd713c8200da8f8bf21347678be407c44eb991e0df20b58901d6ee50098faf2`
+**Wiki fingerprint:** `199968ad217f59412016449530ea00363e81d00b11dc6ae641154b5da2bb660d`
 
 Statuses preserve the difference between visible proof, Wiki-only proof, source work, experience gaps, and hard screens.
 

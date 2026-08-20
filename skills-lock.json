@@ -1,6 +1,12 @@
 {
   "version": 1,
   "skills": {
+    "brand-voice-enforcement": {
+      "source": "anthropics/knowledge-work-plugins",
+      "sourceType": "github",
+      "skillPath": "partner-built/brand-voice/skills/brand-voice-enforcement/SKILL.md",
+      "computedHash": "8269b6edf6ff2fd889707fc017b4f552d5bb39c2a5b6a0a17dc68e28577832ac"
+    },
     "content-strategy": {
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",
@@ -12,6 +18,12 @@
       "sourceType": "github",
       "skillPath": "skills/copywriting/SKILL.md",
       "computedHash": "c8d63b1f77be04fd54981720de65697988810bd28331097dbe0aaf3e166d638a"
+    },
+    "cover-letter-generator": {
+      "source": "paramchoudhary/resumeskills",
+      "sourceType": "github",
+      "skillPath": "skills/cover-letter-generator/SKILL.md",
+      "computedHash": "be8edf0952716e813a721f6d097cc8ae4d3562fac0a413138ca993cce8c4b5db"
     },
     "find-skills": {
       "source": "vercel-labs/skills",

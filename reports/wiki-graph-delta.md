@@ -1,13 +1,13 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `989beaea5a3c4b1f095763f5b982f1bc52e4aee1`
-**Generation time:** 2026-08-20T12:22:26-04:00
-**Source fingerprint:** `acd713c8200da8f8bf21347678be407c44eb991e0df20b58901d6ee50098faf2`
+**Source commit:** `ed610686a9d861b25d050217b1139f2d8fa43a2e`
+**Generation time:** 2026-08-20T13:32:02-04:00
+**Source fingerprint:** `875c60d94f34dc991eb16b3e6e3ec9983077612861d518da3b1b23d874731aee`
 
 `origin/develop` has no Knowledge Wiki graph artifact; the bounded pilot is reported as an addition.
 
-- Nodes added: 452
+- Nodes added: 453
 - Nodes removed: 0
 - Edges added: 1573
 - Edges removed: 0
@@ -382,6 +382,7 @@
 - `source.eu.work-permits.2026-08-15`
 - `source.federated-knowledge-graph-ecosystem-review.2026-08-13`
 - `source.good-times.open-house.2006-06-28`
+- `source.google-doc.jamie-writers-voice`
 - `source.heteroglossia.cabaret-law.2017-09-14`
 - `source.heteroglossia.commercial-rent-stabilization.2021-09-17`
 - `source.heteroglossia.cultural-affairs-budget.2018-03-16`
