@@ -1,6 +1,6 @@
 # Jamie Burkart
 
-Brooklyn, NY | (816) 728-8685 | [jamie.burkart@gmail.com](mailto:jamie.burkart@gmail.com)  
+Brooklyn, NY | (816) 728-8685 | [jamie.burkart@gmail.com](mailto:jamie.burkart@gmail.com)
 [Portfolio](https://jamieburk.art/) | [LinkedIn](https://www.linkedin.com/in/jamie-burkart/)
 
 August 20, 2026

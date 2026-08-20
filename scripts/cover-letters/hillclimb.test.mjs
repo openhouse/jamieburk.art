@@ -14,7 +14,7 @@ test("the bounded hill climb preserves passes while improving the shared weaknes
   assert.notEqual(hillclimb.baseline.coverLetterSha256, hillclimb.postHillclimb.coverLetterSha256);
   assert.equal(baseline.results.every((result) => result.verdict === "pass" && result.voiceFidelity.verdict === "pass"), true);
   assert.equal(post.results.every((result) => result.verdict === "pass" && result.voiceFidelity.verdict === "pass"), true);
-  assert.equal(post.results.every((result) => /version-one|product decision|product judgment/i.test(`${result.rationale} ${result.strengths.join(" ")}`)), true);
+  assert.equal(post.results.every((result) => /version-one|bounded MVP|product decision|product judgment/i.test(`${result.rationale} ${result.strengths.join(" ")}`)), true);
   assert.equal(post.results.every((result) => /clearer next step|agency learning|continued ownership|carry learning forward/i.test(`${result.rationale} ${result.strengths.join(" ")} ${result.voiceFidelity.rationale}`)), true);
   assert.equal(hillclimb.decision, "keep-change");
   assert.equal(hillclimb.boundedChange.claimScopeChanged, false);

@@ -19,7 +19,7 @@
   },
   "postHillclimb": {
     "runPath": "evals/cover-letters/runs/2026-08-20-cover-letter-hiring-reader-post-hillclimb.json",
-    "coverLetterSha256": "afe9b08b14dfd997f6939b0ee1705049073857b10c8428adf9c18f52fe61f120",
+    "coverLetterSha256": "9c2532201a7fb286d34566ff24d14ed890b9f00ca5c7912ef6bedcdd5bcbe8e9",
     "passingApplicationVerdicts": 2,
     "passingVoiceVerdicts": 2,
     "observedImprovement": [
@@ -35,6 +35,15 @@
       "named-reader fictionalization boundary",
       "model-call budget"
     ]
+  },
+  "formatHygieneFollowup": {
+    "reason": "Removed Markdown hard-break trailing spaces to satisfy pull-request diff hygiene.",
+    "previousCoverLetterSha256": "afe9b08b14dfd997f6939b0ee1705049073857b10c8428adf9c18f52fe61f120",
+    "currentCoverLetterSha256": "9c2532201a7fb286d34566ff24d14ed890b9f00ca5c7912ef6bedcdd5bcbe8e9",
+    "proseChanged": false,
+    "reevaluatedAt": "2026-08-20T13:42:01-04:00",
+    "passingApplicationVerdicts": 2,
+    "passingVoiceVerdicts": 2
   },
   "decision": "keep-change",
   "stopReason": "The remaining critiques ask for new evidence about measured outcomes, resident research, institutional team scale, decision authority, and civil-service eligibility. Those are interview and research gaps; adding unsupported prose would weaken the application."
