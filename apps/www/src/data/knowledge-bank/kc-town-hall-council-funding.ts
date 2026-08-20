@@ -657,7 +657,7 @@ export const kcTownHallCouncilFunding = {
         },
         {
           key: "archive-note",
-          text: "The strongest bounded professional claim is that Jamie secured a $490,539 public funding award by co-developing and presenting KC Town Hall's successful CCED request. Institutional authority remained with the Board and Council, and the award never became an executed agreement or disbursement.",
+          text: "The strongest supportable professional claim is that Jamie secured a $490,539 public funding award by co-developing and presenting KC Town Hall's successful CCED request. Institutional authority remained with the Board and Council, and the award never became an executed agreement or disbursement.",
           status: "active",
           citationRequired: true,
           surfaces: ["docs/knowledge-bank/projects/kc-town-hall"]
@@ -938,7 +938,7 @@ export const kcTownHallCouncilFunding = {
         },
         {
           key: "archive-note",
-          text: "Jamie has authorized a bounded first-party professional claim that he transitioned KC Town Hall project stewardship to a mission-aligned organization; recipient identity and legal mechanics remain outside the public claim.",
+          text: "Jamie has authorized a narrowly scoped first-party professional claim that he transitioned KC Town Hall project stewardship to a mission-aligned organization; recipient identity and legal mechanics remain outside the public claim.",
           status: "active",
           citationRequired: false,
           surfaces: ["docs/knowledge-bank/projects/kc-town-hall"]

@@ -150,7 +150,7 @@ const workItemsInput = [
       {
         title: "Maintenance-to-handoff specimen",
         description:
-          "A public-safe reconstruction shows how recurring questions became bounded requirements, incremental releases, verification, reusable patterns, and owned next actions.",
+          "A public-safe reconstruction shows how recurring questions became well-scoped requirements, incremental releases, verification, reusable patterns, and owned next actions.",
         type: "workflow"
       }
     ],

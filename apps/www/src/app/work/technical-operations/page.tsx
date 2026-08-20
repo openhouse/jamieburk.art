@@ -28,7 +28,7 @@ const roleFitPaths = [
 const deliverySequence = [
   {
     label: "Frame",
-    text: "Turn a recurring question or lived problem into a bounded requirement, with evidence and limits visible."
+    text: "Turn a recurring question or lived problem into a well-scoped requirement, with evidence and limits visible."
   },
   {
     label: "Decide",
@@ -121,7 +121,7 @@ export default function TechnicalOperationsPage() {
               <div>
                 <h3 className="text-xl font-semibold text-jb-ink">Prioritization</h3>
                 <p className="mt-3 leading-7 text-jb-ink/76">
-                  Turn requests into bounded problem statements; compare user
+                  Turn requests into well-scoped problem statements; compare user
                   friction, business or mission consequence, implementation effort,
                   operational risk, and the evidence still needed.
                 </p>
@@ -239,7 +239,7 @@ export default function TechnicalOperationsPage() {
               </p>
               <p className="mt-3 leading-8 text-jb-ink/78">
                 The public specimen follows a real operating sequence: listen to a
-                customer or team question, frame a bounded requirement, ship an
+                customer or team question, frame a well-scoped requirement, ship an
                 incremental change, inspect the customer path, and preserve reusable
                 patterns, ownership, and next actions.
               </p>

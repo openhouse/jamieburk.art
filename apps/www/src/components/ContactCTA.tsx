@@ -10,7 +10,7 @@ export function ContactCTA() {
         implementation, or knowledge-systems support?
       </h2>
       <p className="mt-3 leading-7 text-jb-ink/74">
-        Email Jamie about roles, referrals, bounded consulting work, or
+        Email Jamie about roles, referrals, focused consulting work, or
         collaboration.
       </p>
       <div className="mt-5 flex flex-wrap gap-3">

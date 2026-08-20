@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "reader-facing-language-2026-08-20",
+  "purpose": "Keep repeated governance shorthand out of reader-facing prose and require context-specific plain language instead.",
+  "forbiddenWholeWords": [
+    "bound",
+    "bounded"
+  ],
+  "caseSensitive": false,
+  "publicSurfaceCoverage": [
+    "Next.js route and component copy",
+    "MDX case studies and lab copy",
+    "homepage, site, social-card, project, and work-cover data",
+    "public proof wording",
+    "active public claim projections",
+    "renderable public citation labels and notes",
+    "all Markdown and JSON in the public resume-version tree"
+  ],
+  "nonPublicExclusions": [
+    "internal schema values and identifiers",
+    "evaluator implementation language",
+    "research-only observations, limitations, and support labels that cannot render publicly",
+    "private or held knowledge-bank material"
+  ],
+  "replacementPrinciple": "Name the actual relationship: well-scoped requirement, focused pathway, dated snapshot, defined classification, specific evidence, limited credit, or supportable claim.",
+  "acceptance": {
+    "command": "npm run evals:public-language",
+    "condition": "The assembled reader-facing corpus contains zero case-insensitive whole-word occurrences."
+  }
+}

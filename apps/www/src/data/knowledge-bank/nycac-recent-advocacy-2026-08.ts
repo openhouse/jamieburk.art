@@ -231,7 +231,7 @@ export const nycacRecentAdvocacyAugust2026 = {
       canonicalUrl: "https://smallbizunited.com/reports/260728_SBU_FinalReport.pdf",
       preferredPublicUrl: "canonical",
       publicCitation: "Small Business United et al., Empty Storefronts, High Rents: Why New York City Needs Commercial Rent Stabilization, July 2026.",
-      publicNote: "The report's acknowledgements identify the lead author/data analyst, other contributors, and Jamie's bounded draft-review credit.",
+      publicNote: "The report's acknowledgements identify the lead author/data analyst, other contributors, and Jamie's limited draft-review credit.",
       supportsGenerally: [
         "report publication",
         "lead authorship and data-analysis credit",

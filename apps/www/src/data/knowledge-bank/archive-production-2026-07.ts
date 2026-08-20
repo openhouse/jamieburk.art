@@ -1517,7 +1517,7 @@ export const archiveProductionJuly2026 = {
       projections: [
         {
           key: "case-study",
-          text: "Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
+          text: "Developing a carefully scoped lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
           status: "active",
           citationRequired: false,
           surfaces: ["/lab/source-backed-team-memory"]

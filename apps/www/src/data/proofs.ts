@@ -571,7 +571,7 @@ export const proofClaims: ProofClaim[] = [
       "KC Town Hall used its shared public account as a recurring resident-service surface: 100 of 183 surviving records concern resident tire reports, pickup coordination, result reporting, and program continuity from 2019 through 2022.",
     shortWording: "Built a recurring public intake and follow-through surface",
     detailedPublicWording:
-      "A complete 183-record public-account ledger documents a recurring operating interface and bounded civic traction: seven current public-repost-list appearances by three then-sitting Council-member accounts and two direct responses authored by sitting members.",
+      "A complete 183-record public-account ledger documents a recurring operating interface and specific civic traction: seven current public-repost-list appearances by three then-sitting Council-member accounts and two direct responses authored by sitting members.",
     sourceBasis:
       "Authenticated full-population review of the public KC Town Hall Posts, Replies, and repost-list surfaces; a 183-record public-safe ledger; two public official responses; and official Council-role records.",
     sourceNote:
@@ -605,9 +605,9 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "moderate",
     evidenceClass: ["public-safe-archive-summary"],
     publicWording:
-      "Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
+      "Developing a carefully scoped lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
     shortWording:
-      "Jamie is developing a bounded method for source-backed team memory",
+      "Jamie is developing a carefully scoped method for source-backed team memory",
     detailedPublicWording:
       "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
     sourceBasis: "Public-safe lab materials and proposal-derived method summary.",
