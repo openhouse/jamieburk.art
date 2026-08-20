@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity requirement coverage
 
-**Wiki fingerprint:** `3145cdbe1314947463b8a42d14b95da6833e9d355aaf8557f7ef2c3ee89757ba`
+**Wiki fingerprint:** `de8d12c1e4c7b4df865c3225b773b5f6fb23f9c988d78ba5fd1e90a01cbb3cb2`
 
 Statuses preserve the difference between visible proof, Wiki-only proof, source work, experience gaps, and hard screens.
 
@@ -60,6 +60,31 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 | `requirement.codepath.executive-reporting` | critical | visible-qualified | public-projection | Prepare one status-report sample for interview. |
 | `requirement.codepath.ai-first-workflow` | critical | visible-proven | none | Demonstrate the working Wiki and eval system without centering it over the program. |
 | `requirement.codepath.handoff-ready-systems` | important | visible-proven | none | Keep this as a recurring cross-project pattern. |
+
+## NYC OTI - Cybersecurity Senior Project Manager 791074
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.oti-cyber-pm-791074.portfolio` | critical | visible-qualified | experience | Use an exact multi-project operating example and name the cybersecurity ramp honestly. |
+| `requirement.oti-cyber-pm-791074.risk-procurement` | critical | visible-qualified | experience | Prepare bounded examples that distinguish vendor coordination from City procurement authority. |
+| `requirement.oti-cyber-pm-791074.reporting` | critical | visible-proven | none | Bring one public-safe report or dashboard example to interview. |
+
+## NYC OTI - Operations Manager 789810
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.oti-operations-789810.operating-system` | critical | visible-proven | none | Lead with a plan-of-record example showing how ambiguity became coordinated delivery. |
+| `requirement.oti-operations-789810.budgets-contracts` | critical | visible-qualified | experience | Prepare exact private-company budget and contracting examples and state the authority boundary. |
+| `requirement.oti-operations-789810.team-health` | critical | visible-qualified | wording | Show one reporting cadence and one reusable onboarding or runbook artifact. |
+
+## NYC OTI - Product Manager 784450
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.oti-product-784450.lifecycle` | critical | visible-proven | none | Lead with one product decision sequence from evidence through launch and learning. |
+| `requirement.oti-product-784450.research-prioritization` | critical | visible-qualified | wording | Make the research-to-decision chain explicit without overstating formal product title or authority. |
+| `requirement.oti-product-784450.requirements` | critical | visible-qualified | public-projection | Prepare a bounded, public-safe requirements example. |
+| `requirement.oti-product-784450.analytics` | critical | visible-qualified | wording | Distinguish production instrumentation and business analytics from unsupported resident-outcome claims. |
 
 ## NYC OTI - Senior Product Manager 782366
 

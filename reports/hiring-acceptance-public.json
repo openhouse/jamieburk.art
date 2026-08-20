@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "runId": "hiring-public-c626b5fd96d6",
-  "generatedAt": "2026-08-14T19:49:32-04:00",
-  "candidateSha": "c626b5fd96d66abad8c173655ea58511e3b4f966",
-  "candidatePathsClean": true,
-  "portfolioSnapshotHash": "6b10241c5d913fb2fa5391e619fb18f984a426323f3436eeae042829a23bb607",
-  "roleContextHash": "060563fa59962bacb7e00f3ebb166f94dbcaf48e1ffcd7c714bd6c19217cd455",
+  "runId": "hiring-public-14ccb9ffe9c6",
+  "generatedAt": "2026-08-15T16:32:55-04:00",
+  "candidateSha": "14ccb9ffe9c628a00a4289a49dd2d32d9e892296",
+  "candidatePathsClean": false,
+  "portfolioSnapshotHash": "958f5f0b18a994ba295c69b89d3b2e3db1219b3ec8db4fbd4a58953959694efa",
+  "roleContextHash": "a72e9f97830ae45ad1ad1a21550fd71f0e0d7f56c6bf62ec21a6a7ae4b1d853e",
   "readerContextHash": "c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
   "publicSafety": {
@@ -139,7 +139,7 @@
     {
       "id": "opportunity.nyc-oti.senior-product-manager.782366",
       "title": "NYC OTI - Senior Product Manager 782366",
-      "roleContextHash": "c7ceb38471ce7eeb806906f23e801b91fff00ef1fc73ddbedbedc8f429a73435",
+      "roleContextHash": "9ece61b702b9c23603340097d71318ae30616e27037b47a4820a450b38c12d68",
       "live": true,
       "fresh": true,
       "hardScreenBlocked": false,
@@ -211,9 +211,184 @@
       ]
     },
     {
+      "id": "opportunity.nyc-oti.product-manager.784450",
+      "title": "NYC OTI - Product Manager 784450",
+      "roleContextHash": "1e02d8be3aac92dd6e2108a3035e2afc23960494aef94a1469804e0bb0def662",
+      "live": true,
+      "fresh": true,
+      "hardScreenBlocked": false,
+      "decision": "deterministic-ready-for-human-review",
+      "observed": 4,
+      "requirementTotal": 4,
+      "criticalObserved": 4,
+      "criticalTotal": 4,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.oti-product-784450.lifecycle",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [
+            "/work/callnyc"
+          ],
+          "evidenceNeedles": [
+            "public-facing"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti-product-784450.research-prioritization",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/lab/source-backed-team-memory",
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "evidence",
+            "requirements"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti-product-784450.requirements",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "requirements"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti-product-784450.analytics",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/harry-j-epstein"
+          ],
+          "evidenceNeedles": [
+            "analytics"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opportunity.nyc-oti.operations-manager.789810",
+      "title": "NYC OTI - Operations Manager 789810",
+      "roleContextHash": "abd2c1ed52c3d4de6f18ad79e1495780125e80efd610ec3642257ca0bfdf26a0",
+      "live": true,
+      "fresh": true,
+      "hardScreenBlocked": false,
+      "decision": "deterministic-ready-for-human-review",
+      "observed": 3,
+      "requirementTotal": 3,
+      "criticalObserved": 3,
+      "criticalTotal": 3,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.oti-operations-789810.operating-system",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "owners"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti-operations-789810.budgets-contracts",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/kc-town-hall"
+          ],
+          "evidenceNeedles": [
+            "vendor"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti-operations-789810.team-health",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/kc-town-hall"
+          ],
+          "evidenceNeedles": [
+            "1,970 tires"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opportunity.nyc-oti.cybersecurity-senior-project-manager.791074",
+      "title": "NYC OTI - Cybersecurity Senior Project Manager 791074",
+      "roleContextHash": "57d4af05ceed74fd3483a52fdb5806c56c37911da9755fd0afeb2ac515ac5bf9",
+      "live": true,
+      "fresh": true,
+      "hardScreenBlocked": false,
+      "decision": "evidence-gap-review",
+      "observed": 2,
+      "requirementTotal": 3,
+      "criticalObserved": 2,
+      "criticalTotal": 3,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.oti-cyber-pm-791074.portfolio",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.oti-cyber-pm-791074.risk-procurement",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/kc-town-hall"
+          ],
+          "evidenceNeedles": [
+            "vendor"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti-cyber-pm-791074.reporting",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [
+            "/lab/source-backed-team-memory",
+            "/work/kc-town-hall"
+          ],
+          "evidenceNeedles": [
+            "evidence",
+            "1,970 tires"
+          ]
+        }
+      ]
+    },
+    {
       "id": "opportunity.aclu.senior-project-manager-lps.8620968002",
       "title": "ACLU - Senior Project Manager, Learning and Project Solutions",
-      "roleContextHash": "0ff1f8a719b8ab111a4439e3f7c5a901f9c49678c4682c58573ee2d3abe8b335",
+      "roleContextHash": "2584bcd37404c42d5a7fb570a27790c2863287809cfb93dc8c935753b21da27e",
       "live": true,
       "fresh": true,
       "hardScreenBlocked": false,
@@ -268,7 +443,7 @@
     {
       "id": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
       "title": "ACLU - Senior Project Manager, National Campaigns",
-      "roleContextHash": "706c7ca4f50dc791bd2624168fa46b2ea2d8b1960b8ae3fea08d72755188c352",
+      "roleContextHash": "3cadfae0474c91ac2e54763fadfa7b945f71cbcf97e5535111bc17136d07f0e4",
       "live": true,
       "fresh": true,
       "hardScreenBlocked": false,
@@ -599,9 +774,9 @@
     {
       "id": "opportunity.asana.ai-implementation.8027437",
       "title": "Asana - AI Implementation Manager, Service Management",
-      "roleContextHash": "272ad591f954693530eaced6f87e1b1abbaf8ce4ba8f29bb2154675249b94777",
+      "roleContextHash": "4b656ae294128770ede83929d8f48102426e698f69bb01d28b28752161f07f4d",
       "live": true,
-      "fresh": false,
+      "fresh": true,
       "hardScreenBlocked": false,
       "decision": "evidence-gap-review",
       "observed": 1,
@@ -658,9 +833,9 @@
     {
       "id": "opportunity.permitflow.product-operations.8a6e6066",
       "title": "PermitFlow - Product Operations Manager",
-      "roleContextHash": "ae7e58bd4700ed0b525a2eeac34d8184bbc8864da59d0520748ae8cac9fbaff5",
+      "roleContextHash": "8224a33916dbb07004c8bdae4dc7dfd614dead9e5e2fa9fce2cc40da1fd2440f",
       "live": true,
-      "fresh": false,
+      "fresh": true,
       "hardScreenBlocked": false,
       "decision": "evidence-gap-review",
       "observed": 2,

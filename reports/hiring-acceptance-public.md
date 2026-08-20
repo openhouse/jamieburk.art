@@ -1,12 +1,12 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `c626b5fd96d66abad8c173655ea58511e3b4f966`
-**Portfolio snapshot:** `6b10241c5d913fb2fa5391e619fb18f984a426323f3436eeae042829a23bb607`
-**Role-context hash:** `060563fa59962bacb7e00f3ebb166f94dbcaf48e1ffcd7c714bd6c19217cd455`
+**Candidate commit:** `14ccb9ffe9c628a00a4289a49dd2d32d9e892296`
+**Portfolio snapshot:** `958f5f0b18a994ba295c69b89d3b2e3db1219b3ec8db4fbd4a58953959694efa`
+**Role-context hash:** `a72e9f97830ae45ad1ad1a21550fd71f0e0d7f56c6bf62ec21a6a7ae4b1d853e`
 **Reader-context hash:** `c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
-**Candidate paths clean:** yes
+**Candidate paths clean:** no
 
 > Deterministic baseline only. This is not an interview prediction, a named person's opinion, or a human reader study.
 
@@ -26,6 +26,46 @@
 - `requirement.oti-product.cross-functional-launch`: **not observed**
 - `requirement.oti-product.metrics-and-learning`: **not observed**
 - `requirement.oti-product.accessibility-privacy`: **observed** on `/lab/source-backed-team-memory`
+
+### NYC OTI - Product Manager 784450
+
+- Deterministic disposition: `deterministic-ready-for-human-review`
+- Critical signals observed: 4/4
+- All signals observed: 4/4
+- Opportunity status live: yes
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
+
+- `requirement.oti-product-784450.lifecycle`: **observed** on `/work/callnyc`
+- `requirement.oti-product-784450.research-prioritization`: **observed** on `/lab/source-backed-team-memory`, `/work/technical-operations`
+- `requirement.oti-product-784450.requirements`: **observed** on `/work/technical-operations`
+- `requirement.oti-product-784450.analytics`: **observed** on `/work/harry-j-epstein`
+
+### NYC OTI - Operations Manager 789810
+
+- Deterministic disposition: `deterministic-ready-for-human-review`
+- Critical signals observed: 3/3
+- All signals observed: 3/3
+- Opportunity status live: yes
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
+
+- `requirement.oti-operations-789810.operating-system`: **observed** on `/work/technical-operations`
+- `requirement.oti-operations-789810.budgets-contracts`: **observed** on `/work/kc-town-hall`
+- `requirement.oti-operations-789810.team-health`: **observed** on `/work/kc-town-hall`
+
+### NYC OTI - Cybersecurity Senior Project Manager 791074
+
+- Deterministic disposition: `evidence-gap-review`
+- Critical signals observed: 2/3
+- All signals observed: 2/3
+- Opportunity status live: yes
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
+
+- `requirement.oti-cyber-pm-791074.portfolio`: **not observed**
+- `requirement.oti-cyber-pm-791074.risk-procurement`: **observed** on `/work/kc-town-hall`
+- `requirement.oti-cyber-pm-791074.reporting`: **observed** on `/lab/source-backed-team-memory`, `/work/kc-town-hall`
 
 ### ACLU - Senior Project Manager, Learning and Project Solutions
 
@@ -121,7 +161,7 @@
 - Critical signals observed: 1/3
 - All signals observed: 1/4
 - Opportunity status live: yes
-- Role context current at candidate time: no
+- Role context current at candidate time: yes
 - Exclusionary hard screen recorded: no
 
 - `requirement.asana.implementation-ownership`: **not observed** on `/work/technical-operations`
@@ -135,7 +175,7 @@
 - Critical signals observed: 1/3
 - All signals observed: 2/4
 - Opportunity status live: yes
-- Role context current at candidate time: no
+- Role context current at candidate time: yes
 - Exclusionary hard screen recorded: no
 
 - `requirement.permitflow.physical-public-systems`: **observed** on `/work/kc-town-hall`, `/work/callnyc`

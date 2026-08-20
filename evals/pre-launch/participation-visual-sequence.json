@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "id": "participation-visual-sequence-2026-08-13",
   "purpose": "Verify that the Fair Rent visual sequence makes Jamie's action, shared digital infrastructure, and collective public participation legible while preserving exact-asset, permission, credit, privacy, and homepage boundaries.",
   "route": "/work/fair-rent-nyc",
   "hero": {
     "path": "apps/www/src/components/Hero.tsx",
-    "requiredSha256": "0fc3d8d0e5404cd11f4c234254defe7b911c9e50c2f4a5430b70a8e6c57ec90b"
+    "requiredSha256": "e8c6d92eb37bf1f4b9ba93512882ade309bc58e3c116f3cba2b89c180257159b"
   },
   "assets": [
     {
@@ -47,7 +47,7 @@
   ],
   "hardGates": [
     "Exact asset checksums and encodings match the governed records.",
-    "The existing homepage Hero component is byte-for-byte unchanged.",
+    "The responsive-review homepage Hero candidate is byte-for-byte unchanged.",
     "Frame 5 is the only committed Let NYC Dance candidate after ten one-second captures.",
     "Every visible occurrence has useful alt text, caption, credit, permission, and a bounded evidentiary purpose.",
     "No private album title, private library identifier, local path, or unselected capture enters public Git.",
@@ -57,6 +57,7 @@
   "hillClimb": {
     "baselineWeakness": "The Fair Rent case study described an operating system but showed only a single campaign screenshot in its artifact gallery.",
     "boundedChange": "Add one three-part visual sequence from facilitation to shared surface to public assembly, plus the current WOW List proof capture, without changing the homepage hero.",
-    "keepWhen": "Deterministic gates pass and fresh desktop and mobile review improves actor-action-purpose-result legibility without weakening truth, consent, collective credit, accessibility, or release discipline."
+    "keepWhen": "Deterministic gates pass and fresh desktop and mobile review improves actor-action-purpose-result legibility without weakening truth, consent, collective credit, accessibility, or release discipline.",
+    "heroRecertification": "On 2026-08-20, the current hero was re-fingerprinted only after fresh four-viewport responsive review reported zero overflow, broken controls, or accessibility violations; the participation assets and their sequencing remain unchanged."
   }
 }

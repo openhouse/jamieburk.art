@@ -84,6 +84,11 @@ function allTailoredMarkdown(root) {
     for (const opportunity of readdirSync(dateDir, { withFileTypes: true })) {
       if (!opportunity.isDirectory()) continue;
       const relative = path.join("resume-versions", date.name, opportunity.name, "Jamie-Burkart-Resume.md");
+      const artifactPath = path.join(dateDir, opportunity.name, "artifact.json");
+      const artifact = existsSync(artifactPath)
+        ? JSON.parse(readFileSync(artifactPath, "utf8"))
+        : undefined;
+      if (artifact?.opportunityId === "active-opportunity-portfolio") continue;
       if (existsSync(path.join(root, relative))) found.push(relative.split(path.sep).join("/"));
     }
   }
@@ -297,20 +302,30 @@ export function evaluateResumeArtifacts(root = defaultRoot) {
   }
 
   const projection = evaluation.publicResumeProjection;
-  const projectionEntry = entries.find(({ opportunityId }) => opportunityId === projection?.opportunityId);
+  const selectionManifestPath = path.join(root, projection?.selectionManifest ?? "");
+  const portfolioArtifactPath = path.join(root, projection?.artifact ?? "");
   const publicPdfPath = path.join(root, projection?.file ?? "");
-  if (!projectionEntry || !projection?.file || !existsSync(publicPdfPath)) {
-    fail("public-resume-projection", "The selected opportunity or its public resume projection is missing.");
+  if (!projection?.selectionManifest || !existsSync(selectionManifestPath) ||
+      !projection?.artifact || !existsSync(portfolioArtifactPath) ||
+      !projection?.file || !existsSync(publicPdfPath)) {
+    fail("public-resume-projection", "The selected opportunity-set manifest, portfolio artifact, or public PDF is missing.");
   } else {
-    const selectedDirectory = path.dirname(path.join(root, projectionEntry.resumePath));
-    const selectedArtifactPath = path.join(selectedDirectory, "artifact.json");
-    const selectedArtifact = existsSync(selectedArtifactPath)
-      ? JSON.parse(readFileSync(selectedArtifactPath, "utf8"))
-      : undefined;
-    const selectedPdfPath = path.join(selectedDirectory, selectedArtifact?.pdf?.file ?? "");
-    if (!selectedArtifact?.pdf?.file || !existsSync(selectedPdfPath) ||
+    const selection = JSON.parse(readFileSync(selectionManifestPath, "utf8"));
+    const artifact = JSON.parse(readFileSync(portfolioArtifactPath, "utf8"));
+    const selectedMarkdownPath = path.join(root, selection?.resume?.markdownPath ?? "");
+    const selectedPdfPath = path.join(root, selection?.resume?.pdfPath ?? "");
+    if (selection?.resume?.artifactPath !== projection.artifact ||
+        selection?.resume?.publicPdfPath !== projection.file ||
+        artifact?.opportunityId !== "active-opportunity-portfolio" ||
+        !selection?.resume?.markdownPath || !existsSync(selectedMarkdownPath) ||
+        !selection?.resume?.pdfPath || !existsSync(selectedPdfPath) ||
+        artifact?.sourceMarkdownSha256 !== digest(readFileSync(selectedMarkdownPath)) ||
+        selection?.resume?.markdownSha256 !== digest(readFileSync(selectedMarkdownPath)) ||
+        artifact?.pdf?.sha256 !== digest(readFileSync(selectedPdfPath)) ||
+        selection?.resume?.pdfSha256 !== digest(readFileSync(selectedPdfPath)) ||
+        artifact?.publicProjection?.sha256 !== digest(readFileSync(publicPdfPath)) ||
         digest(readFileSync(publicPdfPath)) !== digest(readFileSync(selectedPdfPath))) {
-      fail("public-resume-projection", "The public resume is not byte-identical to the selected opportunity PDF.");
+      fail("public-resume-projection", "The public resume is not digest-bound and byte-identical to the selected opportunity-set portfolio artifact.");
     }
   }
 

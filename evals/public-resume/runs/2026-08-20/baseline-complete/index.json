@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "runId": "baseline-complete",
+  "evaluatedAt": "2026-08-20",
+  "resumeSha256": "d6cf9e69fb63769d0007338e0e2ed820f96de20c29b754760741538b7f04aa10",
+  "model": "gpt-5.6-sol",
+  "acceptanceQuestion": "I would hire this person for this job.",
+  "accessScope": "public-resume-and-public-job-context-only",
+  "passPolicy": "unanimous-named-readers-for-every-selected-opportunity",
+  "expectedReaderCount": 9,
+  "attemptedReaderCount": 9,
+  "passingReaderCount": 0,
+  "failingReaderCount": 9,
+  "complete": true,
+  "decision": "fail",
+  "stopReason": null,
+  "nonEndorsementBoundary": "These fictionalized public-context lenses are not participation, quotation, endorsement, or hiring decisions by the named people.",
+  "artifacts": [
+    {
+      "path": "evals/public-resume/runs/2026-08-20/baseline-complete/aclu-lps-terence.json",
+      "name": "Terence Dougherty",
+      "opportunityId": "opportunity.aclu.senior-project-manager-lps.8620968002",
+      "decision": "fail"
+    },
+    {
+      "path": "evals/public-resume/runs/2026-08-20/baseline-complete/aclu-campaigns-james.json",
+      "name": "James Williams",
+      "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "decision": "fail"
+    },
+    {
+      "path": "evals/public-resume/runs/2026-08-20/baseline-complete/aclu-campaigns-deirdre.json",
+      "name": "Deirdre Schifeling",
+      "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "decision": "fail"
+    },
+    {
+      "path": "evals/public-resume/runs/2026-08-20/baseline-complete/asana-jenn.json",
+      "name": "Jenn Wei",
+      "opportunityId": "opportunity.asana.ai-implementation.8027437",
+      "decision": "fail"
+    },
+    {
+      "path": "evals/public-resume/runs/2026-08-20/baseline-complete/oti-product-lisa.json",
+      "name": "Lisa Gelobter",
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "decision": "fail"
+    },
+    {
+      "path": "evals/public-resume/runs/2026-08-20/baseline-complete/oti-pit-luke.json",
+      "name": "Luke Farrell",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "decision": "fail"
+    },
+    {
+      "path": "evals/public-resume/runs/2026-08-20/baseline-complete/oti-pit-lisa.json",
+      "name": "Lisa Gelobter",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "decision": "fail"
+    },
+    {
+      "path": "evals/public-resume/runs/2026-08-20/baseline-complete/oti-operations-lisa.json",
+      "name": "Lisa Gelobter",
+      "opportunityId": "opportunity.nyc-oti.operations-manager.789810",
+      "decision": "fail"
+    },
+    {
+      "path": "evals/public-resume/runs/2026-08-20/baseline-complete/oti-cyber-kelly.json",
+      "name": "Kelly Moan",
+      "opportunityId": "opportunity.nyc-oti.cybersecurity-senior-project-manager.791074",
+      "decision": "fail"
+    }
+  ]
+}

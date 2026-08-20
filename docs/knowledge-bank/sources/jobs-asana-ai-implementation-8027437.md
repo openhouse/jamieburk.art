@@ -5,13 +5,13 @@ kind: source
 status: maintained
 visibility: public
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-08-20
+review_by: 2026-08-23
 canonical_path: docs/knowledge-bank/sources/jobs-asana-ai-implementation-8027437.md
-summary: Official Asana posting context for AI Implementation Manager, Service Management, rechecked July 18, 2026.
+summary: Official Asana posting for AI Implementation Manager, Service Management, rechecked August 20, 2026.
 source_kind: official-job-posting
 url: https://asana.com/jobs/apply/8027437
-retrieved_at: 2026-07-18
+retrieved_at: 2026-08-20
 relations:
   - type: supports
     target: opportunity.asana.ai-implementation.8027437
@@ -20,11 +20,11 @@ relations:
 
 # Asana - AI Implementation Manager, Service Management 8027437
 
-The official Asana careers surface listed this New York Service Management role
-on July 18, 2026. The supplied role review describes technical customer
+The official Asana application page displayed this Service Management role and
+an Apply control on August 20, 2026. The posting describes technical customer
 implementation, workflow design, migration and configuration, change
 management, risk reduction, time to value, and reusable playbooks.
 
-The direct application page was not consistently machine-readable during this
-pass. Recheck the [official source](https://asana.com/jobs/apply/8027437) and
-Asana's current jobs index before outward use.
+The role can be US remote or New York hybrid and lists a $133,000-$151,000
+estimated base range. Recheck the [official source](https://asana.com/jobs/apply/8027437)
+before outward use.

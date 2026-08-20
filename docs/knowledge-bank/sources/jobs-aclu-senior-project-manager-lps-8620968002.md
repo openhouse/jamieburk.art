@@ -5,13 +5,13 @@ kind: source
 status: maintained
 visibility: public
 sensitivity: low
-last_reviewed: 2026-08-13
-review_by: 2026-08-16
+last_reviewed: 2026-08-20
+review_by: 2026-08-23
 canonical_path: docs/knowledge-bank/sources/jobs-aclu-senior-project-manager-lps-8620968002.md
-summary: Official ACLU posting for a live, term-limited Senior Project Manager role in Learning and Project Solutions, rechecked August 13, 2026.
+summary: Official ACLU posting for a live, term-limited Senior Project Manager role in Learning and Project Solutions, rechecked August 20, 2026.
 source_kind: official-job-posting
 url: https://job-boards.greenhouse.io/aclu/jobs/8620968002
-retrieved_at: 2026-08-13
+retrieved_at: 2026-08-20
 relations:
   - type: supports
     target: opportunity.aclu.senior-project-manager-lps.8620968002
@@ -28,6 +28,6 @@ requirements, current- and future-state processes, communications, closeout,
 and post-mortems. The New York salary is $128,294, and the application requires
 a writing sample.
 
-The page displayed an active application form when rechecked on August 13,
+The page displayed an active application form when rechecked on August 20,
 2026. Recheck the [official source](https://job-boards.greenhouse.io/aclu/jobs/8620968002)
 before outward use.

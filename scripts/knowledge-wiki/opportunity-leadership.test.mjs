@@ -10,7 +10,10 @@ const expected = new Map([
   ["opportunity.aclu.senior-project-manager-lps.8620968002", "live"],
   ["opportunity.benepass.product-operations.7f963a7a", "closed"],
   ["opportunity.aclu.senior-project-manager-national-campaigns.8631854002", "live"],
+  ["opportunity.nyc-oti.product-manager.784450", "live"],
   ["opportunity.nyc-oti.senior-product-manager.782366", "live"],
+  ["opportunity.nyc-oti.operations-manager.789810", "live"],
+  ["opportunity.nyc-oti.cybersecurity-senior-project-manager.791074", "live"],
   ["opportunity.nyc-oti.technical-operations-manager.782369", "closed"]
 ]);
 
@@ -18,7 +21,15 @@ const directStates = new Map([
   ["opportunity.aclu.senior-project-manager-lps.8620968002", "posting-title-person-unresolved"],
   ["opportunity.benepass.product-operations.7f963a7a", "posting-named-person"],
   ["opportunity.aclu.senior-project-manager-national-campaigns.8631854002", "public-title-match-not-confirmed"],
-  ["opportunity.nyc-oti.senior-product-manager.782366", "public-operating-lead-not-confirmed"]
+  ["opportunity.nyc-oti.product-manager.784450", "posting-person-unresolved"],
+  ["opportunity.nyc-oti.senior-product-manager.782366", "public-operating-lead-not-confirmed"],
+  ["opportunity.nyc-oti.operations-manager.789810", "posting-person-unresolved"],
+  ["opportunity.nyc-oti.cybersecurity-senior-project-manager.791074", "posting-person-unresolved"]
+]);
+
+const expectedVerificationDates = new Map([
+  ["opportunity.benepass.product-operations.7f963a7a", "2026-08-14"],
+  ["opportunity.nyc-oti.technical-operations-manager.782369", "2026-08-13"]
 ]);
 
 test("priority opportunity records preserve current live and closed states", () => {
@@ -27,10 +38,7 @@ test("priority opportunity records preserve current live and closed states", () 
     const opportunity = result.byId.get(id);
     assert.ok(opportunity, `${id} must exist`);
     assert.equal(opportunity.opportunity_status, status);
-    assert.equal(
-      opportunity.verified_at,
-      id === "opportunity.benepass.product-operations.7f963a7a" ? "2026-08-14" : "2026-08-13"
-    );
+    assert.equal(opportunity.verified_at, expectedVerificationDates.get(id) ?? "2026-08-20");
     assert.ok(
       opportunity.evidence.some((item) => {
         const source = result.byId.get(item.target);
@@ -73,6 +81,7 @@ test("named opportunity leaders have public sources and non-endorsement boundari
       "person.deirdre-schifeling",
       "person.jaclyn-chen",
       "person.james-williams-aclu",
+      "person.kelly-moan",
       "person.lisa-gelobter",
       "person.luke-farrell",
       "person.terence-dougherty"

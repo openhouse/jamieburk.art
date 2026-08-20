@@ -1,0 +1,42 @@
+{
+  "file": "oti-pit-luke.json",
+  "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+  "personId": "person.luke-farrell",
+  "name": "Luke Farrell",
+  "relationship": "likely-direct-report",
+  "resumeSha256": "d6cf9e69fb63769d0007338e0e2ed820f96de20c29b754760741538b7f04aa10",
+  "acceptanceQuestion": "I would hire this person for this job.",
+  "decision": "fail",
+  "wouldHire": false,
+  "simulatedPublicFigureLens": true,
+  "nonEndorsementBoundary": "This fictionalized public-context lens is not participation, quotation, endorsement, or a hiring decision by the named person.",
+  "access": {
+    "scope": "public-resume-and-public-job-context-only",
+    "repositoryAccess": false,
+    "privateSourceAccess": false
+  },
+  "strengths": [
+    "14+ years of relevant product, implementation, civic-technology, and stakeholder-coordination experience",
+    "Evidence of taking multiple public-facing products from discovery through launch and maintenance",
+    "Strong alignment with resident-centered work, policy translation, documentation, facilitation, and cross-functional delivery",
+    "Some quantified outcomes, including users, content volume, geographic reach, revenue growth, public funding, and service delivery"
+  ],
+  "risks": [
+    "Resume does not establish eligibility for the Senior IT Architect civil-service minimum qualifications",
+    "Limited evidence of leading a sustained product roadmap within a large, complex government or comparable enterprise organization",
+    "Insufficient detail on team size, decision authority, budgets, delivery timelines, and direct management of designers and engineers",
+    "Accessibility, regulatory compliance, production reliability, experimentation, and KPI ownership are asserted more than demonstrated with concrete outcomes",
+    "Several prominent examples are founder-led or independent projects, leaving uncertainty about effectiveness within formal agency governance and accountability structures"
+  ],
+  "interviewEvidenceNeeded": [
+    "Complete employment chronology and detailed evidence satisfying the Senior IT Architect qualification screen",
+    "A specific example of owning a complex digital product from discovery through MVP, pilot, public launch, measurement, and iteration",
+    "Evidence of resolving conflicts among agency, policy, engineering, design, operations, legal, and resident stakeholders",
+    "Concrete accessibility, privacy, security, compliance, and production-quality decisions",
+    "Scale and composition of teams led, decision rights held, budgets managed, and delivery outcomes personally attributable to the candidate",
+    "Examples of roadmap prioritization using resident research and quantitative product data"
+  ],
+  "rationale": "The resume shows credible and unusually relevant civic-product experience, but the literal gate is whether the resume alone supports hiring this person for this exact senior role. It does not. Material civil-service eligibility remains unresolved, and the document lacks enough concrete evidence of senior product leadership at organizational scale, formal cross-functional authority, production governance, accessibility and compliance delivery, and measured iteration to justify a hire without substantial interview validation.",
+  "model": "gpt-5.6-sol",
+  "evaluatedAt": "2026-08-20"
+}

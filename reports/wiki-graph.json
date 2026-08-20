@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-15T16:48:16-04:00",
-  "sourceCommit": "43635c80c54cfe9ca474736847cab8b01bd6d14d",
-  "sourceFingerprint": "8dc978b3cebef1e2f6b17ad469cbdaec5281260f6f0b78c8e742041e06fb4465",
+  "generatedAt": "2026-08-15T17:37:38-04:00",
+  "sourceCommit": "fe2dd863db59b7c52e40ba1daedd17802af37553",
+  "sourceFingerprint": "de8d12c1e4c7b4df865c3225b773b5f6fb23f9c988d78ba5fd1e90a01cbb3cb2",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -2905,6 +2905,19 @@
       "reviewBy": "2026-08-19"
     },
     {
+      "id": "evaluation.oti-product-manager-search-ranking.2026-08-20",
+      "path": "docs/knowledge-bank/evaluations/oti-product-manager-search-ranking-2026-08-20.md",
+      "title": "OTI product-manager search - comparative fit review",
+      "kind": "evaluation",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Comparative review of all eleven roles returned by Jamie's exact NYC Jobs query, ranked for personal fit and realistic securability.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-23"
+    },
+    {
       "id": "event.mit.interrogative-design-symposium.2024",
       "path": "docs/knowledge-bank/events/interrogative-design-symposium-2024.md",
       "title": "Interrogative Design Symposium",
@@ -3258,8 +3271,8 @@
       "sensitivity": "low",
       "summary": "Task-oriented entry point for live opportunity research, role coverage, public-only hiring evaluation, and private-boundary rules.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2026-09-13"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-23"
     },
     {
       "id": "index.knowledge-wiki.family-closure",
@@ -3791,8 +3804,8 @@
       "sensitivity": "low",
       "summary": "Public-safe requirement, leadership, and portfolio-coverage map for ACLU's live Senior Project Manager role in Learning and Project Solutions.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2026-08-16"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-23"
     },
     {
       "id": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
@@ -3804,8 +3817,8 @@
       "sensitivity": "low",
       "summary": "Public-safe requirement, leadership, and portfolio-coverage map for ACLU's live Senior Project Manager role in National Campaigns.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2026-08-16"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-23"
     },
     {
       "id": "opportunity.asana.ai-implementation.8027437",
@@ -3817,8 +3830,8 @@
       "sensitivity": "low",
       "summary": "Public-safe requirement and portfolio-coverage map for Asana's live AI Implementation Manager, Service Management role.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-23"
     },
     {
       "id": "opportunity.benepass.product-operations.7f963a7a",
@@ -3847,6 +3860,45 @@
       "reviewBy": "2026-11-13"
     },
     {
+      "id": "opportunity.nyc-oti.cybersecurity-senior-project-manager.791074",
+      "path": "docs/knowledge-bank/opportunities/oti-cybersecurity-senior-project-manager-791074.md",
+      "title": "NYC OTI - Cybersecurity Senior Project Manager 791074",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe requirement, leadership, and portfolio-coverage map for the live NYC Cyber Command Senior Project Manager role.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-23"
+    },
+    {
+      "id": "opportunity.nyc-oti.operations-manager.789810",
+      "path": "docs/knowledge-bank/opportunities/oti-operations-manager-789810.md",
+      "title": "NYC OTI - Operations Manager 789810",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe requirement and portfolio-coverage map for the live OTI SPEED Operations Manager role.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-23"
+    },
+    {
+      "id": "opportunity.nyc-oti.product-manager.784450",
+      "path": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+      "title": "NYC OTI - Product Manager 784450",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe requirement, leadership, and portfolio-coverage map for NYC OTI's live Product Manager opening.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-23"
+    },
+    {
       "id": "opportunity.nyc-oti.senior-product-manager.782366",
       "path": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
       "title": "NYC OTI - Senior Product Manager 782366",
@@ -3856,8 +3908,8 @@
       "sensitivity": "low",
       "summary": "Public-safe requirement, leadership, and portfolio-coverage map for four live NYC OTI Public Interest Technology Crew Senior Product Manager positions.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2026-08-14"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-23"
     },
     {
       "id": "opportunity.nyc-oti.technical-operations-manager.782369",
@@ -3882,8 +3934,8 @@
       "sensitivity": "low",
       "summary": "Public-safe requirement and portfolio-coverage map for PermitFlow's live Product Operations Manager role.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-23"
     },
     {
       "id": "opportunity.protected.source-backed-memory-consulting.2026",
@@ -4006,6 +4058,32 @@
       ],
       "lastReviewed": "2026-08-03",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "person.jenn-wei",
+      "path": "docs/knowledge-bank/people/jenn-wei.md",
+      "title": "Jenn Wei",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public-role context for an Asana leader building the Service Management launch team, bounded against any inference of reporting line, awareness, or endorsement.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-09-20"
+    },
+    {
+      "id": "person.kelly-moan",
+      "path": "docs/knowledge-bank/people/kelly-moan.md",
+      "title": "Kelly Moan",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Official-role context for New York City's Chief Information Security Officer, bounded against any inference of awareness, endorsement, or hiring intent.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-11-20"
     },
     {
       "id": "person.lisa-gelobter",
@@ -4788,6 +4866,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "source.jobs-nyc.oti-product-manager-search.2026-08-20",
+      "path": "docs/knowledge-bank/sources/jobs-nyc-oti-product-manager-search-2026-08-20.md",
+      "title": "NYC Jobs OTI product-manager search - August 20, 2026",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Exact official eleven-result NYC Jobs search corpus used for the August 20 comparative opportunity review.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-23"
+    },
+    {
       "id": "source.jobs.aclu.product-discovery.8482872002",
       "path": "docs/knowledge-bank/sources/jobs-aclu-product-discovery-8482872002.md",
       "title": "ACLU - Product Manager II, Discovery 8482872002",
@@ -4808,10 +4899,10 @@
       "status": "maintained",
       "visibility": "public",
       "sensitivity": "low",
-      "summary": "Official ACLU posting for a live, term-limited Senior Project Manager role in Learning and Project Solutions, rechecked August 13, 2026.",
+      "summary": "Official ACLU posting for a live, term-limited Senior Project Manager role in Learning and Project Solutions, rechecked August 20, 2026.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2026-08-16"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-23"
     },
     {
       "id": "source.jobs.aclu.senior-project-manager-national-campaigns.8631854002",
@@ -4821,10 +4912,10 @@
       "status": "maintained",
       "visibility": "public",
       "sensitivity": "low",
-      "summary": "Official ACLU posting for a live, term-limited Senior Project Manager role in National Campaigns, rechecked August 13, 2026.",
+      "summary": "Official ACLU posting for a live, term-limited Senior Project Manager role in National Campaigns, rechecked August 20, 2026.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2026-08-16"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-23"
     },
     {
       "id": "source.jobs.asana.ai-implementation.8027437",
@@ -4834,10 +4925,10 @@
       "status": "maintained",
       "visibility": "public",
       "sensitivity": "low",
-      "summary": "Official Asana posting context for AI Implementation Manager, Service Management, rechecked July 18, 2026.",
+      "summary": "Official Asana posting for AI Implementation Manager, Service Management, rechecked August 20, 2026.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-23"
     },
     {
       "id": "source.jobs.benepass.product-operations.7f963a7a",
@@ -4866,6 +4957,45 @@
       "reviewBy": "2026-11-13"
     },
     {
+      "id": "source.jobs.oti.cybersecurity-senior-project-manager.791074",
+      "path": "docs/knowledge-bank/sources/jobs-oti-cybersecurity-senior-project-manager-791074.md",
+      "title": "NYC Jobs - Cybersecurity Senior Project Manager 791074",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official live NYC Cyber Command Senior Project Manager posting reviewed August 20, 2026.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-23"
+    },
+    {
+      "id": "source.jobs.oti.operations-manager.789810",
+      "path": "docs/knowledge-bank/sources/jobs-oti-operations-manager-789810.md",
+      "title": "NYC Jobs - Operations Manager 789810",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official live OTI SPEED Operations Manager posting reviewed August 20, 2026.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-23"
+    },
+    {
+      "id": "source.jobs.oti.product-manager.784450",
+      "path": "docs/knowledge-bank/sources/jobs-oti-product-manager-784450.md",
+      "title": "NYC Jobs - Product Manager 784450",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official City of New York posting for one OTI Product Manager position, rechecked August 20, 2026.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-23"
+    },
+    {
       "id": "source.jobs.oti.senior-product-manager.782366",
       "path": "docs/knowledge-bank/sources/jobs-oti-senior-product-manager-782366.md",
       "title": "NYC Jobs - Senior Product Manager 782366",
@@ -4873,10 +5003,10 @@
       "status": "maintained",
       "visibility": "public",
       "sensitivity": "low",
-      "summary": "Official City of New York posting for four OTI Public Interest Technology Crew Senior Product Manager positions, rechecked August 13, 2026.",
+      "summary": "Official City of New York posting, republished August 18, 2026, for four open OTI Public Interest Technology Crew Senior Product Manager positions.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2026-08-14"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-23"
     },
     {
       "id": "source.jobs.oti.technical-operations.782369",
@@ -4899,10 +5029,10 @@
       "status": "maintained",
       "visibility": "public",
       "sensitivity": "low",
-      "summary": "Official PermitFlow posting for a Product Operations Manager, rechecked July 18, 2026.",
+      "summary": "Official PermitFlow application route for a Product Operations Manager, rechecked August 20, 2026; analytics depth remains an evidence gap.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2026-07-21"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-23"
     },
     {
       "id": "source.kansas-city-star.raft.2007-11-15",
@@ -5061,6 +5191,19 @@
       "reviewBy": "2026-09-13"
     },
     {
+      "id": "source.linkedin.jenn-wei-asana-service-management.2026",
+      "path": "docs/knowledge-bank/sources/linkedin-jenn-wei-asana-service-management.md",
+      "title": "Jenn Wei public profile - Asana Service Management hiring context",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Public self-authored profile context connecting Jenn Wei to the team launching Asana Service Management.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-09-20"
+    },
+    {
       "id": "source.linkedin.luke-farrell-pit-crew-leadership.2026",
       "path": "docs/knowledge-bank/sources/linkedin-luke-farrell-pit-crew-leadership.md",
       "title": "Public professional post - Luke Farrell leading NYC PIT Crew",
@@ -5111,6 +5254,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-09-26"
+    },
+    {
+      "id": "source.nyc-oti.cyber-command.kelly-moan",
+      "path": "docs/knowledge-bank/sources/nyc-oti-cyber-command-kelly-moan.md",
+      "title": "NYC OTI - Cyber Command leadership",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official OTI page identifying Kelly Moan as New York City's Chief Information Security Officer and head of Cyber Command.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-11-20"
     },
     {
       "id": "source.nyc.diya-vij-appointment.2026",
@@ -11975,6 +12131,46 @@
       "context": null
     },
     {
+      "from": "evaluation.oti-product-manager-search-ranking.2026-08-20",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.cybersecurity-senior-project-manager.791074",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-cybersecurity-senior-project-manager-791074.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.oti-product-manager-search-ranking.2026-08-20",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-operations-manager-789810.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.oti-product-manager-search-ranking.2026-08-20",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-product-manager-784450.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.oti-product-manager-search-ranking.2026-08-20",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-senior-product-manager.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.oti-product-manager-search-ranking.2026-08-20",
+      "type": "uses_source",
+      "to": "source.jobs-nyc.oti-product-manager-search.2026-08-20",
+      "source": "frontmatter",
+      "href": "../sources/jobs-nyc-oti-product-manager-search-2026-08-20.md",
+      "context": null
+    },
+    {
       "from": "event.mit.interrogative-design-symposium.2024",
       "type": "has_asset",
       "to": "asset.photo-set.mit-interrogative-design.2024",
@@ -12697,6 +12893,14 @@
     {
       "from": "index.knowledge-wiki.employment-context",
       "type": "related_to",
+      "to": "evaluation.oti-product-manager-search-ranking.2026-08-20",
+      "source": "frontmatter",
+      "href": "../evaluations/oti-product-manager-search-ranking-2026-08-20.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
       "to": "opportunity.aclu.product-manager-discovery.8482872002",
       "source": "frontmatter",
       "href": "../opportunities/aclu-product-discovery.md",
@@ -12745,6 +12949,30 @@
     {
       "from": "index.knowledge-wiki.employment-context",
       "type": "related_to",
+      "to": "opportunity.nyc-oti.cybersecurity-senior-project-manager.791074",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-cybersecurity-senior-project-manager-791074.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-operations-manager-789810.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-product-manager-784450.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
       "to": "opportunity.nyc-oti.senior-product-manager.782366",
       "source": "frontmatter",
       "href": "../opportunities/oti-senior-product-manager.md",
@@ -12772,6 +13000,14 @@
       "to": "opportunity.protected.source-backed-memory-consulting.2026",
       "source": "frontmatter",
       "href": "../opportunities/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "person.jenn-wei",
+      "source": "frontmatter",
+      "href": "../people/jenn-wei.md",
       "context": null
     },
     {
@@ -14873,7 +15109,7 @@
       "source": "evidence",
       "confidence": "high",
       "supports": [
-        "official role facts, reporting title, compensation, application requirements, and duties as rechecked August 13, 2026"
+        "official role facts, reporting title, compensation, application requirements, and duties as rechecked August 20, 2026"
       ]
     },
     {
@@ -14935,7 +15171,7 @@
       "source": "evidence",
       "confidence": "high",
       "supports": [
-        "official role facts, reporting title, compensation, duties, and current application state as rechecked August 13, 2026"
+        "official role facts, reporting title, compensation, duties, and current application state as rechecked August 20, 2026"
       ]
     },
     {
@@ -14977,7 +15213,17 @@
       "source": "evidence",
       "confidence": "moderate",
       "supports": [
-        "official role listing and supplied role-context facts as rechecked July 18, 2026"
+        "official role listing, duties, working model, compensation, and application state as rechecked August 20, 2026"
+      ]
+    },
+    {
+      "from": "opportunity.asana.ai-implementation.8027437",
+      "type": "evidence:context",
+      "to": "source.linkedin.jenn-wei-asana-service-management.2026",
+      "source": "evidence",
+      "confidence": "moderate",
+      "supports": [
+        "nearest publicly visible senior vision context without proving a direct reporting line"
       ]
     },
     {
@@ -14987,6 +15233,14 @@
       "source": "frontmatter",
       "href": "../capabilities/technical-operations.md",
       "context": null
+    },
+    {
+      "from": "opportunity.asana.ai-implementation.8027437",
+      "type": "related_to",
+      "to": "person.jenn-wei",
+      "source": "frontmatter",
+      "href": "../people/jenn-wei.md",
+      "context": "Nearest publicly visible senior vision context; direct reporting remains unresolved."
     },
     {
       "from": "opportunity.asana.ai-implementation.8027437",
@@ -15109,6 +15363,136 @@
       "context": null
     },
     {
+      "from": "opportunity.nyc-oti.cybersecurity-senior-project-manager.791074",
+      "type": "evidence:context",
+      "to": "source.nyc-oti.cyber-command.kelly-moan",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "nearest publicly documented senior vision leader without proving a direct reporting line or screening participation"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-oti.cybersecurity-senior-project-manager.791074",
+      "type": "evidence:direct-support",
+      "to": "source.jobs.oti.cybersecurity-senior-project-manager.791074",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official role facts, duties, preferred experience, compensation, civil-service title, live state, and deadline as rechecked August 20, 2026"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-oti.cybersecurity-senior-project-manager.791074",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.cybersecurity-senior-project-manager.791074",
+      "type": "related_to",
+      "to": "person.kelly-moan",
+      "source": "frontmatter",
+      "href": "../people/kelly-moan.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.cybersecurity-senior-project-manager.791074",
+      "type": "uses_source",
+      "to": "source.jobs.oti.cybersecurity-senior-project-manager.791074",
+      "source": "frontmatter",
+      "href": "../sources/jobs-oti-cybersecurity-senior-project-manager-791074.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.operations-manager.789810",
+      "type": "evidence:direct-support",
+      "to": "source.jobs.oti.operations-manager.789810",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official role facts, duties, preferred experience, compensation, civil-service title, live state, and deadline as rechecked August 20, 2026"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-oti.operations-manager.789810",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.operations-manager.789810",
+      "type": "related_to",
+      "to": "person.lisa-gelobter",
+      "source": "frontmatter",
+      "href": "../people/lisa-gelobter.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.operations-manager.789810",
+      "type": "uses_source",
+      "to": "source.jobs.oti.operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../sources/jobs-oti-operations-manager-789810.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "type": "evidence:context",
+      "to": "source.nyc.pit-crew-launch.2026-07-13",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "commissioner identity and senior OTI vision without establishing a direct reporting line"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "type": "evidence:direct-support",
+      "to": "source.jobs.oti.product-manager.784450",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official role facts, minimum qualifications, duties, compensation, position count, application state, and deadline as rechecked August 20, 2026"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "type": "related_to",
+      "to": "person.lisa-gelobter",
+      "source": "frontmatter",
+      "href": "../people/lisa-gelobter.md",
+      "context": "Official commissioner and senior vision context; role-specific reporting remains unresolved."
+    },
+    {
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "type": "uses_source",
+      "to": "source.jobs.oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../sources/jobs-oti-product-manager-784450.md",
+      "context": null
+    },
+    {
       "from": "opportunity.nyc-oti.senior-product-manager.782366",
       "type": "evidence:context",
       "to": "source.linkedin.luke-farrell-pit-crew-leadership.2026",
@@ -15135,7 +15519,7 @@
       "source": "evidence",
       "confidence": "high",
       "supports": [
-        "official role facts, minimum qualifications, duties, compensation, position count, and deadline as rechecked August 13, 2026"
+        "official role facts, reposting date, minimum qualifications, duties, compensation, position count, live application state, and deadline as rechecked August 20, 2026"
       ]
     },
     {
@@ -15243,7 +15627,7 @@
       "source": "evidence",
       "confidence": "high",
       "supports": [
-        "official role facts and requirements as rechecked July 18, 2026"
+        "official role title and application route as rechecked August 20, 2026; daily analytics depth remains an evidence gap"
       ]
     },
     {
@@ -15600,6 +15984,46 @@
       "to": "method.structure-grows-from-material",
       "source": "frontmatter",
       "href": "../methods/structure-grows-from-the-material.md",
+      "context": null
+    },
+    {
+      "from": "person.jenn-wei",
+      "type": "related_to",
+      "to": "opportunity.asana.ai-implementation.8027437",
+      "source": "frontmatter",
+      "href": "../opportunities/asana-ai-implementation.md",
+      "context": null
+    },
+    {
+      "from": "person.jenn-wei",
+      "type": "uses_source",
+      "to": "source.linkedin.jenn-wei-asana-service-management.2026",
+      "source": "frontmatter",
+      "href": "../sources/linkedin-jenn-wei-asana-service-management.md",
+      "context": null
+    },
+    {
+      "from": "person.kelly-moan",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.cybersecurity-senior-project-manager.791074",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-cybersecurity-senior-project-manager-791074.md",
+      "context": null
+    },
+    {
+      "from": "person.kelly-moan",
+      "type": "uses_source",
+      "to": "source.nyc-oti.cyber-command.kelly-moan",
+      "source": "frontmatter",
+      "href": "../sources/nyc-oti-cyber-command-kelly-moan.md",
+      "context": null
+    },
+    {
+      "from": "person.lisa-gelobter",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-product-manager-784450.md",
       "context": null
     },
     {
@@ -17331,6 +17755,14 @@
       "context": null
     },
     {
+      "from": "source.jobs-nyc.oti-product-manager-search.2026-08-20",
+      "type": "related_to",
+      "to": "evaluation.oti-product-manager-search-ranking.2026-08-20",
+      "source": "frontmatter",
+      "href": "../evaluations/oti-product-manager-search-ranking-2026-08-20.md",
+      "context": null
+    },
+    {
       "from": "source.jobs.aclu.product-discovery.8482872002",
       "type": "supports",
       "to": "opportunity.aclu.product-manager-discovery.8482872002",
@@ -17376,6 +17808,30 @@
       "to": "opportunity.codepath.claude-corps.5182020007",
       "source": "frontmatter",
       "href": "../opportunities/codepath-claude-corps.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.oti.cybersecurity-senior-project-manager.791074",
+      "type": "supports",
+      "to": "opportunity.nyc-oti.cybersecurity-senior-project-manager.791074",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-cybersecurity-senior-project-manager-791074.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.oti.operations-manager.789810",
+      "type": "supports",
+      "to": "opportunity.nyc-oti.operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-operations-manager-789810.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.oti.product-manager.784450",
+      "type": "supports",
+      "to": "opportunity.nyc-oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-product-manager-784450.md",
       "context": null
     },
     {
@@ -17547,6 +18003,14 @@
       "context": null
     },
     {
+      "from": "source.linkedin.jenn-wei-asana-service-management.2026",
+      "type": "mentions",
+      "to": "person.jenn-wei",
+      "source": "frontmatter",
+      "href": "../people/jenn-wei.md",
+      "context": null
+    },
+    {
       "from": "source.linkedin.luke-farrell-pit-crew-leadership.2026",
       "type": "mentions",
       "to": "person.luke-farrell",
@@ -17592,6 +18056,14 @@
       "to": "project.nyc-artist-coalition",
       "source": "frontmatter",
       "href": "../../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc-oti.cyber-command.kelly-moan",
+      "type": "mentions",
+      "to": "person.kelly-moan",
+      "source": "frontmatter",
+      "href": "../people/kelly-moan.md",
       "context": null
     },
     {
@@ -19440,10 +19912,37 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/oti-operations-manager-789810.md",
+      "to": "opportunity.nyc-oti.operations-manager.789810",
+      "fragment": null,
+      "line": 11,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+      "to": "opportunity.nyc-oti.product-manager.784450",
+      "fragment": null,
+      "line": 12,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
       "to": "opportunity.nyc-oti.senior-product-manager.782366",
       "fragment": null,
-      "line": 11,
+      "line": 13,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/oti-cybersecurity-senior-project-manager-791074.md",
+      "to": "opportunity.nyc-oti.cybersecurity-senior-project-manager.791074",
+      "fragment": null,
+      "line": 14,
       "kind": "link"
     },
     {
@@ -19452,16 +19951,7 @@
       "toPath": "docs/knowledge-bank/opportunities/aclu-senior-project-manager-lps.md",
       "to": "opportunity.aclu.senior-project-manager-lps.8620968002",
       "fragment": null,
-      "line": 12,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
-      "to": "opportunity.benepass.product-operations.7f963a7a",
-      "fragment": null,
-      "line": 13,
+      "line": 15,
       "kind": "link"
     },
     {
@@ -19470,7 +19960,7 @@
       "toPath": "docs/knowledge-bank/opportunities/aclu-senior-project-manager-national-campaigns.md",
       "to": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
       "fragment": null,
-      "line": 14,
+      "line": 16,
       "kind": "link"
     },
     {
@@ -19479,7 +19969,16 @@
       "toPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
       "to": "opportunity.asana.ai-implementation.8027437",
       "fragment": null,
-      "line": 18,
+      "line": 20,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
+      "to": "opportunity.benepass.product-operations.7f963a7a",
+      "fragment": null,
+      "line": 21,
       "kind": "link"
     },
     {
@@ -19488,7 +19987,7 @@
       "toPath": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
       "to": "opportunity.permitflow.product-operations.8a6e6066",
       "fragment": null,
-      "line": 19,
+      "line": 22,
       "kind": "link"
     },
     {
@@ -19497,7 +19996,7 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
       "to": "opportunity.nyc-oti.technical-operations-manager.782369",
       "fragment": null,
-      "line": 23,
+      "line": 26,
       "kind": "link"
     },
     {
@@ -19506,7 +20005,7 @@
       "toPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
       "to": "opportunity.aclu.product-manager-discovery.8482872002",
       "fragment": null,
-      "line": 24,
+      "line": 27,
       "kind": "link"
     },
     {
@@ -19515,7 +20014,7 @@
       "toPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
       "to": "opportunity.codepath.claude-corps.5182020007",
       "fragment": null,
-      "line": 25,
+      "line": 28,
       "kind": "link"
     },
     {
@@ -19524,7 +20023,7 @@
       "toPath": "docs/knowledge-bank/people/aileen-palmer.md",
       "to": "person.aileen-palmer",
       "fragment": null,
-      "line": 29,
+      "line": 32,
       "kind": "link"
     },
     {
@@ -19533,7 +20032,7 @@
       "toPath": "docs/knowledge-bank/people/jaclyn-chen.md",
       "to": "person.jaclyn-chen",
       "fragment": null,
-      "line": 29,
+      "line": 32,
       "kind": "link"
     },
     {
@@ -19542,7 +20041,7 @@
       "toPath": "docs/knowledge-bank/people/deirdre-schifeling.md",
       "to": "person.deirdre-schifeling",
       "fragment": null,
-      "line": 30,
+      "line": 33,
       "kind": "link"
     },
     {
@@ -19551,7 +20050,7 @@
       "toPath": "docs/knowledge-bank/people/james-williams-aclu.md",
       "to": "person.james-williams-aclu",
       "fragment": null,
-      "line": 30,
+      "line": 33,
       "kind": "link"
     },
     {
@@ -19560,7 +20059,7 @@
       "toPath": "docs/knowledge-bank/people/terence-dougherty.md",
       "to": "person.terence-dougherty",
       "fragment": null,
-      "line": 31,
+      "line": 34,
       "kind": "link"
     },
     {
@@ -19569,7 +20068,7 @@
       "toPath": "docs/knowledge-bank/people/lisa-gelobter.md",
       "to": "person.lisa-gelobter",
       "fragment": null,
-      "line": 32,
+      "line": 35,
       "kind": "link"
     },
     {
@@ -19578,7 +20077,25 @@
       "toPath": "docs/knowledge-bank/people/luke-farrell.md",
       "to": "person.luke-farrell",
       "fragment": null,
-      "line": 32,
+      "line": 35,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/people/kelly-moan.md",
+      "to": "person.kelly-moan",
+      "fragment": null,
+      "line": 36,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/people/jenn-wei.md",
+      "to": "person.jenn-wei",
+      "fragment": null,
+      "line": 37,
       "kind": "link"
     },
     {
@@ -19587,7 +20104,7 @@
       "toPath": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
       "to": "opportunity.protected.source-backed-memory-consulting.2026",
       "fragment": null,
-      "line": 40,
+      "line": 45,
       "kind": "link"
     },
     {
@@ -19596,7 +20113,7 @@
       "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
       "to": "evaluation.employment-context.coverage.2026-07-18",
       "fragment": null,
-      "line": 67,
+      "line": 72,
       "kind": "link"
     },
     {
@@ -19605,7 +20122,16 @@
       "toPath": "docs/knowledge-bank/evaluations/employment-opportunity-leadership-2026-08-13.md",
       "to": "evaluation.employment-opportunity-leadership.2026-08-13",
       "fragment": null,
-      "line": 68,
+      "line": 73,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/evaluations/oti-product-manager-search-ranking-2026-08-20.md",
+      "to": "evaluation.oti-product-manager-search-ranking.2026-08-20",
+      "fragment": null,
+      "line": 74,
       "kind": "link"
     },
     {
@@ -19614,7 +20140,7 @@
       "toPath": "reports/wiki-opportunity-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 69,
+      "line": 75,
       "kind": "link"
     },
     {
@@ -19623,7 +20149,7 @@
       "toPath": "reports/wiki-career-trajectory-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 70,
+      "line": 76,
       "kind": "link"
     },
     {
@@ -19632,7 +20158,7 @@
       "toPath": "reports/wiki-source-channel-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 71,
+      "line": 77,
       "kind": "link"
     },
     {
@@ -19641,7 +20167,7 @@
       "toPath": "reports/wiki-opportunity-discovery.md",
       "to": null,
       "fragment": null,
-      "line": 72,
+      "line": 78,
       "kind": "link"
     },
     {
@@ -19650,7 +20176,7 @@
       "toPath": "reports/hiring-acceptance-public.md",
       "to": null,
       "fragment": null,
-      "line": 73,
+      "line": 79,
       "kind": "link"
     },
     {
@@ -19659,7 +20185,7 @@
       "toPath": "reports/hiring-acceptance-gap-resolution.md",
       "to": null,
       "fragment": null,
-      "line": 74,
+      "line": 80,
       "kind": "link"
     },
     {
@@ -21418,6 +21944,33 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-cybersecurity-senior-project-manager-791074.md",
+      "from": "opportunity.nyc-oti.cybersecurity-senior-project-manager.791074",
+      "toPath": "docs/knowledge-bank/sources/jobs-oti-cybersecurity-senior-project-manager-791074.md",
+      "to": "source.jobs.oti.cybersecurity-senior-project-manager.791074",
+      "fragment": null,
+      "line": 11,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-operations-manager-789810.md",
+      "from": "opportunity.nyc-oti.operations-manager.789810",
+      "toPath": "docs/knowledge-bank/sources/jobs-oti-operations-manager-789810.md",
+      "to": "source.jobs.oti.operations-manager.789810",
+      "fragment": null,
+      "line": 11,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "toPath": "docs/knowledge-bank/sources/jobs-oti-product-manager-784450.md",
+      "to": "source.jobs.oti.product-manager.784450",
+      "fragment": null,
+      "line": 13,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
       "from": "opportunity.nyc-oti.senior-product-manager.782366",
       "toPath": "docs/knowledge-bank/sources/jobs-oti-senior-product-manager-782366.md",
@@ -21450,7 +22003,7 @@
       "toPath": "docs/knowledge-bank/sources/jobs-permitflow-product-operations.md",
       "to": "source.jobs.permitflow.product-operations.8a6e6066",
       "fragment": null,
-      "line": 9,
+      "line": 10,
       "kind": "link"
     },
     {

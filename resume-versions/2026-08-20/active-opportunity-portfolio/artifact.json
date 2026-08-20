@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "opportunityId": "active-opportunity-portfolio",
+  "generatedOn": "2026-08-20",
+  "sourceMarkdown": "Jamie-Burkart-Resume.md",
+  "sourceMarkdownSha256": "07284cc3242ba15200b7c4fd1e4620b387ffcc6a1641daa6259ff98720689662",
+  "googleWorkspace": {
+    "sourceWasTreatedReadOnly": true,
+    "sourceUnchangedAfterCopy": true,
+    "nativeCopyCreated": true,
+    "connectorReadbackVerified": true,
+    "sourceLocatorCommitted": false,
+    "copyLocatorCommitted": false
+  },
+  "layout": {
+    "source": "native-google-doc-copy",
+    "styleReference": "please-read-only resume style source example",
+    "sourceStylesPreserved": true,
+    "typography": [
+      "Palatino Linotype",
+      "Oswald",
+      "Karla"
+    ]
+  },
+  "pdf": {
+    "file": "Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "mediaType": "application/pdf",
+    "sha256": "0e72cc95f59bb188e24cd664ad40aedc67c4a0fa9ff56a764cf7c722cea2b76d",
+    "bytes": 101390,
+    "pages": 2,
+    "pageSize": "US Letter",
+    "tagged": true
+  },
+  "publicProjection": {
+    "file": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "sha256": "0e72cc95f59bb188e24cd664ad40aedc67c4a0fa9ff56a764cf7c722cea2b76d"
+  },
+  "visualInspection": {
+    "status": "pass",
+    "pagesInspected": [
+      1,
+      2
+    ],
+    "checks": [
+      "No text or bullets clip at page edges.",
+      "No text blocks overlap.",
+      "Name, headline, headings, body, bold, and italic glyphs render correctly.",
+      "No Markdown syntax remains visible.",
+      "Experience headings remain grouped with their dates and first bullets.",
+      "The page break before WOWList creates a clear two-page narrative.",
+      "Project and contact links are legible; Harry J. Epstein Company remains plain text.",
+      "Politico New York alone carries the canonical archived-article link in its sentence.",
+      "The bounded Tired of Tires service metrics and avoided-fee estimate fit without crowding or clipping.",
+      "The governed $490,539 public-award wording fits without crowding or clipping.",
+      "Both pages preserve readable spacing and balanced hierarchy."
+    ]
+  }
+}

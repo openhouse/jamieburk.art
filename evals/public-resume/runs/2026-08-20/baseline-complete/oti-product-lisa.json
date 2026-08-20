@@ -1,0 +1,41 @@
+{
+  "file": "oti-product-lisa.json",
+  "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+  "personId": "person.lisa-gelobter",
+  "name": "Lisa Gelobter",
+  "relationship": "senior-vision",
+  "resumeSha256": "d6cf9e69fb63769d0007338e0e2ed820f96de20c29b754760741538b7f04aa10",
+  "acceptanceQuestion": "I would hire this person for this job.",
+  "decision": "fail",
+  "wouldHire": false,
+  "simulatedPublicFigureLens": true,
+  "nonEndorsementBoundary": "This fictionalized public-context lens is not participation, quotation, endorsement, or a hiring decision by the named person.",
+  "access": {
+    "scope": "public-resume-and-public-job-context-only",
+    "repositoryAccess": false,
+    "privateSourceAccess": false
+  },
+  "strengths": [
+    "More than 10 years of relevant product, implementation, and civic-technology work",
+    "Evidence of end-to-end delivery spanning discovery, requirements, launch, analytics, maintenance, and handoff",
+    "Strong alignment with dignified resident experiences, stakeholder facilitation, public-service workflows, and reusable institutional knowledge",
+    "Useful technical fluency and several quantified outcomes, including adoption, revenue, service-delivery, and public-funding metrics"
+  ],
+  "risks": [
+    "Resume asserts many required practices but provides few concrete examples of roadmap tradeoffs, KPI-driven decisions, acceptance criteria, or post-launch iteration",
+    "Insufficient evidence of owning a substantial product portfolio within a complex organization at the scale implied by NYC OTI",
+    "Cross-agency collaboration is claimed or suggested, but scope, authority, stakeholders, constraints, and outcomes are not demonstrated clearly",
+    "Limited evidence of managing dedicated multidisciplinary product teams, senior executive conflict, procurement, security, accessibility compliance, or government production operations",
+    "Several accomplishments arise from founder, coalition, or independent projects, leaving transferability to a formal institutional product-management role uncertain"
+  ],
+  "interviewEvidenceNeeded": [
+    "A detailed example of using qualitative and quantitative evidence to prioritize a roadmap and reject competing requests",
+    "Specific ownership boundaries, team composition, decision authority, budget, timeline, and measurable results for a complex product launch",
+    "Evidence of sustained KPI instrumentation and post-launch product changes driven by observed outcomes",
+    "A cross-agency or similarly complex stakeholder example involving disagreement, governance constraints, and accountable resolution",
+    "Examples demonstrating production reliability, accessibility, privacy, security, procurement, and long-term service maintenance"
+  ],
+  "rationale": "The resume shows credible alignment and merits serious consideration, but the literal gate is whether the resume alone supports hiring. It does not provide enough specific, attributable evidence of data-informed product decisions and institutional-scale product ownership to justify an unconditional hire for this exact OTI role. The gaps may be addressable in an interview, but under the stated evidence standard the result is fail.",
+  "model": "gpt-5.6-sol",
+  "evaluatedAt": "2026-08-20"
+}

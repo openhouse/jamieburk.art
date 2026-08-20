@@ -1,0 +1,43 @@
+{
+  "file": "oti-pit-lisa.json",
+  "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+  "personId": "person.lisa-gelobter",
+  "name": "Lisa Gelobter",
+  "relationship": "senior-vision",
+  "resumeSha256": "d6cf9e69fb63769d0007338e0e2ed820f96de20c29b754760741538b7f04aa10",
+  "acceptanceQuestion": "I would hire this person for this job.",
+  "decision": "fail",
+  "wouldHire": false,
+  "simulatedPublicFigureLens": true,
+  "nonEndorsementBoundary": "This fictionalized public-context lens is not participation, quotation, endorsement, or a hiring decision by the named person.",
+  "access": {
+    "scope": "public-resume-and-public-job-context-only",
+    "repositoryAccess": false,
+    "privateSourceAccess": false
+  },
+  "strengths": [
+    "14+ years of relevant product, implementation, and civic-technology work spanning discovery through launch and adoption.",
+    "Direct evidence of resident-facing digital products, including WOWList and CallNYC, taken from concept to public release.",
+    "Strong cross-functional translation across residents, policy stakeholders, government actors, designers, engineers, operations, and leadership.",
+    "Demonstrated documentation, facilitation, measurement, public communication, and durable operational handoff practices.",
+    "Public-interest orientation aligns with the PIT Crew vision of dignified resident experiences and stronger in-house delivery capacity."
+  ],
+  "risks": [
+    "The resume does not establish experience leading products at the organizational scale, complexity, or accountability level expected of a senior NYC government product manager.",
+    "Most experience appears founder-led or independently delivered; it provides limited evidence of authority and effectiveness inside a large multidisciplinary product organization.",
+    "Evidence of rapid prototyping, MVP and pilot decision-making, accessibility compliance, production-quality governance, and structured experimentation is asserted broadly but not demonstrated through specific outcomes.",
+    "Metrics show reach and delivery, but provide little evidence that resident research and product decisions measurably improved service accessibility, completion, satisfaction, equity, or operational performance.",
+    "The Senior IT Architect civil-service eligibility screen remains materially unresolved because the resume does not clearly demonstrate the required architecture-related experience or provide enough chronology to validate qualification."
+  ],
+  "interviewEvidenceNeeded": [
+    "A detailed example of leading a complex resident-facing product from discovery through prototype, MVP or pilot, public launch, and measured iteration.",
+    "Specific evidence of managing designers, engineers, researchers, agency stakeholders, and executives through conflicting priorities without relying on founder authority.",
+    "Concrete accessibility, privacy, security, legal, procurement, and government-compliance responsibilities and decisions.",
+    "Evidence connecting qualitative and quantitative research to prioritization decisions and measurable resident or operational outcomes.",
+    "Clarification of direct product-management tenure, team and budget scope, unsuccessful decisions, and lessons from products operating at meaningful scale.",
+    "A formal determination that the candidate satisfies the Senior IT Architect minimum qualifications."
+  ],
+  "rationale": "The resume demonstrates credible civic-product delivery, technical fluency, stakeholder leadership, and strong alignment with the PIT Crew’s public-interest mission. It is strong enough to justify serious consideration or an interview, but the literal gate is whether the resume alone provides enough truthful evidence to hire this person for this exact senior role. It does not. Critical evidence about large-organization product leadership, government-grade production and compliance responsibilities, measurable resident outcomes, and civil-service eligibility is absent or too general. Under a skeptical resume-only standard, those uncertainties require a fail rather than an inferred endorsement.",
+  "model": "gpt-5.6-sol",
+  "evaluatedAt": "2026-08-20"
+}

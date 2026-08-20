@@ -51,7 +51,10 @@ const priorityOpportunityIds = [
   "opportunity.aclu.senior-project-manager-lps.8620968002",
   "opportunity.benepass.product-operations.7f963a7a",
   "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
-  "opportunity.nyc-oti.senior-product-manager.782366"
+  "opportunity.nyc-oti.product-manager.784450",
+  "opportunity.nyc-oti.senior-product-manager.782366",
+  "opportunity.nyc-oti.operations-manager.789810",
+  "opportunity.nyc-oti.cybersecurity-senior-project-manager.791074"
 ];
 const priorityOpportunities = priorityOpportunityIds.map((id) => result.byId.get(id));
 const publicHiring = evaluatePublicHiring(defaultRepoRoot);
@@ -141,7 +144,8 @@ const checks = {
   bounded_public_projection_change:
     publicUiChanged &&
     boundedPublicUiChange &&
-    technicalOperationsSource.includes("I create the operating backbone complex teams need to move") &&
+    technicalOperationsSource.includes("I turn high-context work into decisions a team can execute") &&
+    technicalOperationsSource.includes("This is a transferable operating pattern, not a claim of formal B2B") &&
     caseStudyBlocksSource.includes('tone="inverted"') &&
     !caseStudyBlocksSource.includes("text-jb-paper/70") &&
     !caseStudyBlocksSource.includes("text-jb-ink/64") &&
@@ -244,7 +248,7 @@ const checks = {
     existsSync(path.join(defaultRepoRoot, "scripts/check-knowledge-bank.mjs")),
 
   tier_one_official_source_records:
-    liveOfficialOpportunities.length === 5 &&
+    liveOfficialOpportunities.length >= 5 &&
     liveOfficialOpportunities.every((record) =>
       record.evidence.some((evidence) => {
         const source = result.byId.get(evidence.target);
@@ -265,7 +269,8 @@ const checks = {
   stable_requirement_ids:
     requirementIds.length >= 25 && new Set(requirementIds).size === requirementIds.length,
   operator_queries:
-    queryWiki(result, { liveOpportunities: true }).records.length === 5 &&
+    queryWiki(result, { liveOpportunities: true }).records.length ===
+      liveOfficialOpportunities.length &&
     queryWiki(result, { requirement: "requirement.oti.delivery-coordination" }).opportunity?.id ===
       "opportunity.nyc-oti.technical-operations-manager.782369",
   hard_screens_explicit: opportunities.every((record) => record.hard_screens.length > 0),

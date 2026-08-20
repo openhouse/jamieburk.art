@@ -83,6 +83,15 @@ export function evaluateRecentAdvocacyEvidence(candidate) {
       item.relationship === "private-support"
   );
   const allProjectionStates = claims.flatMap((claim) => claim.projections ?? []);
+  const reportCaseStudy = reportClaim?.projections?.find(
+    (projection) => projection.key === "case-study"
+  );
+  const reportArchiveNote = reportClaim?.projections?.find(
+    (projection) => projection.key === "archive-note"
+  );
+  const nonReportProjections = claims
+    .filter((claim) => claim.id !== "CLM-NYCAC-SBU-REPORT-REVIEW-2026")
+    .flatMap((claim) => claim.projections ?? []);
   const publicSafeCorpus = [
     candidate.closeReading,
     JSON.stringify(candidate.data),
@@ -162,13 +171,19 @@ export function evaluateRecentAdvocacyEvidence(candidate) {
     "review window must remain the exact authorized thirty-day period"
   );
   check(
-    allProjectionStates.length === claimIds.length &&
-      allProjectionStates.every(
+    allProjectionStates.length === claimIds.length + 1 &&
+      reportCaseStudy?.status === "active" &&
+      reportCaseStudy?.citationRequired === true &&
+      JSON.stringify(reportCaseStudy?.surfaces) ===
+        JSON.stringify(["/work/technical-operations", "/work/fair-rent-nyc"]) &&
+      reportArchiveNote?.status === "hold" &&
+      reportArchiveNote?.surfaces?.length === 0 &&
+      nonReportProjections.every(
         (projection) =>
           projection.status === "hold" && projection.surfaces?.length === 0
       ) &&
       candidate.data.graph_candidate.public_site_change_authorized === false,
-    "research cannot silently authorize a portfolio projection"
+    "only the governed report-credit case study may project; research cannot authorize another public surface"
   );
 
   return {
@@ -182,6 +197,9 @@ export function evaluateRecentAdvocacyEvidence(candidate) {
       repositoryAuthorities: candidate.data.repository_destinations.length,
       heldProjections: allProjectionStates.filter(
         (projection) => projection.status === "hold"
+      ).length,
+      activeProjections: allProjectionStates.filter(
+        (projection) => projection.status === "active"
       ).length
     }
   };

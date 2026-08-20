@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "id": "public-resume-reader-set-2026-08-20",
+  "evaluatedAt": "2026-08-20",
+  "acceptanceQuestion": "I would hire this person for this job.",
+  "passPolicy": "unanimous-named-readers-for-every-selected-opportunity",
+  "selectionPolicy": {
+    "precedence": [
+      "private active-application opportunity IDs supplied at runtime",
+      "officially live and truthfully hirable opportunities",
+      "top quarter of governed historical fit"
+    ],
+    "privateApplicationStateCommitted": false,
+    "llmCommissioningRule": "Do not commission or accept hiring-reader role-play until deterministic selection, dates, hard screens, content coverage, public safety, and artifact digests pass."
+  },
+  "resume": {
+    "markdownPath": "resume-versions/2026-08-20/active-opportunity-portfolio/Jamie-Burkart-Resume.md",
+    "markdownSha256": "07284cc3242ba15200b7c4fd1e4620b387ffcc6a1641daa6259ff98720689662",
+    "pdfPath": "resume-versions/2026-08-20/active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "pdfSha256": "0e72cc95f59bb188e24cd664ad40aedc67c4a0fa9ff56a764cf7c722cea2b76d",
+    "artifactPath": "resume-versions/2026-08-20/active-opportunity-portfolio/artifact.json",
+    "publicPdfPath": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+  },
+  "opportunities": [
+    {
+      "opportunityId": "opportunity.aclu.senior-project-manager-lps.8620968002",
+      "opportunityPath": "docs/knowledge-bank/opportunities/aclu-senior-project-manager-lps.md",
+      "requiredTerms": [
+        "systems implementation",
+        "business analysis",
+        "risk and issue management",
+        "post-mortem learning"
+      ],
+      "namedReaders": [
+        {
+          "personId": "person.terence-dougherty",
+          "relationship": "senior-vision"
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "opportunityPath": "docs/knowledge-bank/opportunities/aclu-senior-project-manager-national-campaigns.md",
+      "requiredTerms": [
+        "advocacy campaign operations",
+        "internal communications",
+        "executive reporting",
+        "coalition coordination"
+      ],
+      "namedReaders": [
+        {
+          "personId": "person.james-williams-aclu",
+          "relationship": "likely-direct-report"
+        },
+        {
+          "personId": "person.deirdre-schifeling",
+          "relationship": "senior-vision"
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.asana.ai-implementation.8027437",
+      "opportunityPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
+      "requiredTerms": [
+        "customer implementation",
+        "change management",
+        "deployment risk",
+        "reusable playbooks"
+      ],
+      "namedReaders": [
+        {
+          "personId": "person.jenn-wei",
+          "relationship": "senior-vision"
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+      "requiredTerms": [
+        "qualitative and quantitative research",
+        "roadmaps",
+        "user stories",
+        "acceptance criteria",
+        "system requirements",
+        "KPIs"
+      ],
+      "namedReaders": [
+        {
+          "personId": "person.lisa-gelobter",
+          "relationship": "senior-vision"
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
+      "requiredTerms": [
+        "public launch",
+        "research",
+        "operational metrics",
+        "accessibility-aware",
+        "privacy-conscious"
+      ],
+      "namedReaders": [
+        {
+          "personId": "person.luke-farrell",
+          "relationship": "likely-direct-report"
+        },
+        {
+          "personId": "person.lisa-gelobter",
+          "relationship": "senior-vision"
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.operations-manager.789810",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-operations-manager-789810.md",
+      "requiredTerms": [
+        "budget and resource tracking",
+        "vendor coordination",
+        "onboarding",
+        "operational metrics",
+        "executive reporting"
+      ],
+      "namedReaders": [
+        {
+          "personId": "person.lisa-gelobter",
+          "relationship": "senior-vision"
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.cybersecurity-senior-project-manager.791074",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-cybersecurity-senior-project-manager-791074.md",
+      "requiredTerms": [
+        "risk and issue management",
+        "vendor coordination",
+        "operational metrics",
+        "executive reporting",
+        "technical fluency"
+      ],
+      "namedReaders": [
+        {
+          "personId": "person.kelly-moan",
+          "relationship": "senior-vision"
+        }
+      ]
+    }
+  ],
+  "readerAssessments": [
+    {
+      "file": "oti-operations-lisa.json",
+      "opportunityId": "opportunity.nyc-oti.operations-manager.789810",
+      "personId": "person.lisa-gelobter",
+      "name": "Lisa Gelobter",
+      "relationship": "senior-vision",
+      "resumeSha256": "07284cc3242ba15200b7c4fd1e4620b387ffcc6a1641daa6259ff98720689662",
+      "acceptanceQuestion": "I would hire this person for this job.",
+      "decision": "fail",
+      "wouldHire": false,
+      "simulatedPublicFigureLens": true,
+      "nonEndorsementBoundary": "This fictionalized public-context lens is not participation, quotation, endorsement, or a hiring decision by the named person.",
+      "access": {
+        "scope": "public-resume-and-public-job-context-only",
+        "repositoryAccess": false,
+        "privateSourceAccess": false
+      },
+      "strengths": [
+        "14+ years of relevant product, implementation, and operational leadership",
+        "Strong cross-functional coordination across technical, civic, policy, communications, and operations stakeholders",
+        "Evidence of public-interest technology delivery, plain-language communication, process documentation, metrics, and durable handoffs",
+        "Some relevant municipal compliance, vendor coordination, public-funding, resource-tracking, and field-operations experience",
+        "Demonstrated alignment with dignified resident experiences, accountable delivery, and iterative learning"
+      ],
+      "risks": [
+        "Resume does not establish direct ownership of expense and capital budgets at the scale or complexity implied by the role",
+        "Insufficient evidence of hands-on government contracting, procurement workflows, sourcing, or contract administration",
+        "Little explicit evidence of coordinating legal, cybersecurity, budget, procurement, and personnel support functions simultaneously",
+        "Resource allocation, capacity planning, portfolio-level work intake, and team-health reporting are asserted more than demonstrated with scope or outcomes",
+        "No clear evidence of operational responsibility for hiring and onboarding employees",
+        "Founder and coalition experience may transfer, but the resume does not prove readiness to operate within a large municipal technology bureaucracy"
+      ],
+      "interviewEvidenceNeeded": [
+        "Specific budgets personally owned, including amounts, forecasting duties, controls, variances, and expense-versus-capital treatment",
+        "Examples of procurements or contracts managed from requirements and sourcing through approval, execution, invoicing, and renewal",
+        "A concrete portfolio-operations example showing intake, prioritization, staffing allocation, dependency management, and executive reporting",
+        "Experience coordinating legal, cybersecurity, procurement, finance, and HR stakeholders under government or similarly regulated procedures",
+        "Direct examples of employee onboarding, vendor or consultant onboarding, and ongoing personnel operations",
+        "Clarification of team sizes, concurrent project volume, decision authority, and measurable improvements to delivery health"
+      ],
+      "rationale": "The resume shows a credible, mission-aligned product and program operator with substantial civic-technology and cross-functional delivery experience. However, this is specifically an operations-management role centered on budgets, procurement, contracts, resource allocation, onboarding, portfolio tracking, and coordination with institutional support functions. The resume offers adjacent experience but not enough concrete evidence of direct ownership across those core responsibilities to support the literal conclusion, on the resume alone, that I would hire this person for this exact job.",
+      "model": "gpt-5.6-sol",
+      "evaluatedAt": "2026-08-20",
+      "runArtifact": "evals/public-resume/runs/2026-08-20/hill-climb-2/oti-operations-lisa.json"
+    }
+  ],
+  "humanReviewGates": [
+    "Jamie approval is required before the public resume selection or wording changes.",
+    "Employer hiring authority remains exclusively with the real employer and its authorized staff.",
+    "Named-reader assessments are fictionalized public-context tests, not evidence that the people participated or agree.",
+    "Private application state must be supplied by an authorized operator at runtime and must not be committed."
+  ],
+  "readerEvaluationRun": {
+    "path": "evals/public-resume/runs/2026-08-20/hill-climb-2/index.json",
+    "resumeSha256": "07284cc3242ba15200b7c4fd1e4620b387ffcc6a1641daa6259ff98720689662",
+    "decision": "fail",
+    "complete": false,
+    "stopReason": "short-circuited-after-first-failure-because-unanimous-pass-was-no-longer-possible"
+  }
+}

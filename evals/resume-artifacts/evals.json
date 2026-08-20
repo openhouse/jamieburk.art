@@ -35,7 +35,8 @@
     "politicoArticleUrl": "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf"
   },
   "publicResumeProjection": {
-    "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+    "selectionManifest": "evals/public-resume/current.json",
+    "artifact": "resume-versions/2026-08-20/active-opportunity-portfolio/artifact.json",
     "file": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
   },
   "applicationGuideContract": {
@@ -98,7 +99,7 @@
     {
       "id": "public-resume-projection",
       "blocking": true,
-      "criterion": "The public portfolio resume is byte-identical to the selected opportunity PDF so the leading-edge site and its downloadable evidence cannot drift apart."
+      "criterion": "The public portfolio resume is byte-identical to the independently selected opportunity-set PDF and digest-bound to its selection manifest and artifact so the leading-edge site cannot drift from the current hiring context."
     },
     {
       "id": "resume-editorial-preferences",

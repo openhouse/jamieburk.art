@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `43635c80c54cfe9ca474736847cab8b01bd6d14d`
-**Generation time:** 2026-08-15T16:48:16-04:00
-**Source fingerprint:** `8dc978b3cebef1e2f6b17ad469cbdaec5281260f6f0b78c8e742041e06fb4465`
+**Source commit:** `fe2dd863db59b7c52e40ba1daedd17802af37553`
+**Generation time:** 2026-08-15T17:37:38-04:00
+**Source fingerprint:** `de8d12c1e4c7b4df865c3225b773b5f6fb23f9c988d78ba5fd1e90a01cbb3cb2`
 
 ## application
 
@@ -246,6 +246,7 @@
 - [Jamie public-record integration evaluation](../evaluations/jamie-public-record-integration-2026-08-03.md) - `evaluation.jamie-public-record-integration.2026-08-03`
 - [Knowledge Wiki retrieval tasks](../evaluations/retrieval-tasks.md) - `evaluation.knowledge-wiki.retrieval-tasks`
 - [NYC Artist Coalition shared-folder production evals](../evaluations/nycac-shared-folder-production-2026-07-19.md) - `evaluation.nycac.shared-folder-production.2026-07-19`
+- [OTI product-manager search - comparative fit review](../evaluations/oti-product-manager-search-ranking-2026-08-20.md) - `evaluation.oti-product-manager-search-ranking.2026-08-20`
 
 ## event
 
@@ -330,6 +331,9 @@
 - [Asana - AI Implementation Manager, Service Management](../opportunities/asana-ai-implementation.md) - `opportunity.asana.ai-implementation.8027437`
 - [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md) - `opportunity.benepass.product-operations.7f963a7a`
 - [CodePath - Senior Program Manager, Claude Corps](../opportunities/codepath-claude-corps.md) - `opportunity.codepath.claude-corps.5182020007`
+- [NYC OTI - Cybersecurity Senior Project Manager 791074](../opportunities/oti-cybersecurity-senior-project-manager-791074.md) - `opportunity.nyc-oti.cybersecurity-senior-project-manager.791074`
+- [NYC OTI - Operations Manager 789810](../opportunities/oti-operations-manager-789810.md) - `opportunity.nyc-oti.operations-manager.789810`
+- [NYC OTI - Product Manager 784450](../opportunities/oti-product-manager-784450.md) - `opportunity.nyc-oti.product-manager.784450`
 - [NYC OTI - Senior Product Manager 782366](../opportunities/oti-senior-product-manager.md) - `opportunity.nyc-oti.senior-product-manager.782366`
 - [NYC OTI - Technical Operations Manager 782369](../opportunities/oti-technical-operations.md) - `opportunity.nyc-oti.technical-operations-manager.782369`
 - [PermitFlow - Product Operations Manager](../opportunities/permitflow-product-operations.md) - `opportunity.permitflow.product-operations.8a6e6066`
@@ -348,6 +352,8 @@
 - [Jaclyn Chen](../people/jaclyn-chen.md) - `person.jaclyn-chen`
 - [James Williams](../people/james-williams-aclu.md) - `person.james-williams-aclu`
 - [Jamie Burkart](../people/jamie-burkart.md) - `person.jamie-burkart`
+- [Jenn Wei](../people/jenn-wei.md) - `person.jenn-wei`
+- [Kelly Moan](../people/kelly-moan.md) - `person.kelly-moan`
 - [Lisa Gelobter](../people/lisa-gelobter.md) - `person.lisa-gelobter`
 - [Luke Farrell](../people/luke-farrell.md) - `person.luke-farrell`
 - [Paul Mossine](../people/paul-mossine.md) - `person.paul-mossine`
@@ -427,12 +433,16 @@
 - [Harry J. Epstein historic storefront Wayback chronology, August 2026](../sources/hje-wayback-chronology-2026-08.md) - `source.hje.wayback-chronology.2026-08`
 - [Jamie Burkart public-record initial manifest](../sources/jamie-public-record-initial-manifest.md) - `source.jamie-public-record-initial-manifest`
 - [Jamie Burkart writer's voice synthesis, July 2026](../sources/writers-voice-synthesis-2026-07.md) - `source.jamie.writers-voice-synthesis.2026-07`
+- [NYC Jobs OTI product-manager search - August 20, 2026](../sources/jobs-nyc-oti-product-manager-search-2026-08-20.md) - `source.jobs-nyc.oti-product-manager-search.2026-08-20`
 - [ACLU - Product Manager II, Discovery 8482872002](../sources/jobs-aclu-product-discovery-8482872002.md) - `source.jobs.aclu.product-discovery.8482872002`
 - [Official posting - ACLU Senior Project Manager, Learning and Project Solutions](../sources/jobs-aclu-senior-project-manager-lps-8620968002.md) - `source.jobs.aclu.senior-project-manager-lps.8620968002`
 - [Official posting - ACLU Senior Project Manager, National Campaigns](../sources/jobs-aclu-senior-project-manager-national-campaigns-8631854002.md) - `source.jobs.aclu.senior-project-manager-national-campaigns.8631854002`
 - [Asana - AI Implementation Manager, Service Management 8027437](../sources/jobs-asana-ai-implementation-8027437.md) - `source.jobs.asana.ai-implementation.8027437`
 - [Official posting - Benepass Product Operations Manager](../sources/jobs-benepass-product-operations.md) - `source.jobs.benepass.product-operations.7f963a7a`
 - [CodePath - Senior Program Manager, Claude Corps 5182020007](../sources/jobs-codepath-claude-corps-5182020007.md) - `source.jobs.codepath.claude-corps.5182020007`
+- [NYC Jobs - Cybersecurity Senior Project Manager 791074](../sources/jobs-oti-cybersecurity-senior-project-manager-791074.md) - `source.jobs.oti.cybersecurity-senior-project-manager.791074`
+- [NYC Jobs - Operations Manager 789810](../sources/jobs-oti-operations-manager-789810.md) - `source.jobs.oti.operations-manager.789810`
+- [NYC Jobs - Product Manager 784450](../sources/jobs-oti-product-manager-784450.md) - `source.jobs.oti.product-manager.784450`
 - [NYC Jobs - Senior Product Manager 782366](../sources/jobs-oti-senior-product-manager-782366.md) - `source.jobs.oti.senior-product-manager.782366`
 - [NYC Jobs - Technical Operations Manager 782369](../sources/jobs-oti-technical-operations-782369.md) - `source.jobs.oti.technical-operations.782369`
 - [Official posting - PermitFlow Product Operations Manager](../sources/jobs-permitflow-product-operations.md) - `source.jobs.permitflow.product-operations.8a6e6066`
@@ -448,10 +458,12 @@
 - [Frozen Knowledge Wiki branch E](../sources/knowledge-wiki-branch-e-2026-07-19.md) - `source.knowledge-wiki.branch-e.2026-07-19`
 - [Public professional profile - Aileen Palmer at Benepass](../sources/linkedin-aileen-palmer-benepass.md) - `source.linkedin.aileen-palmer-benepass.2026`
 - [Public professional profile - James Williams at ACLU National Campaigns](../sources/linkedin-james-williams-aclu-national-campaigns.md) - `source.linkedin.james-williams-aclu-national-campaigns.2026`
+- [Jenn Wei public profile - Asana Service Management hiring context](../sources/linkedin-jenn-wei-asana-service-management.md) - `source.linkedin.jenn-wei-asana-service-management.2026`
 - [Public professional post - Luke Farrell leading NYC PIT Crew](../sources/linkedin-luke-farrell-pit-crew-leadership.md) - `source.linkedin.luke-farrell-pit-crew-leadership.2026`
 - [MIT Interrogative Design Symposium event page](../sources/mit-interrogative-design-symposium-2024.md) - `source.mit.interrogative-design-symposium.2024`
 - [Archived NTER CHNG project homepage](../sources/nter-chng-archived-homepage-2011.md) - `source.nter-chng.archived-homepage.2011`
 - [NYC Council field-kit photograph oral history, July 2026](../sources/recollections/nyc-council-field-kit-oral-history-2026-07.md) - `source.nyc-council.field-kit-oral-history.2026-07`
+- [NYC OTI - Cyber Command leadership](../sources/nyc-oti-cyber-command-kelly-moan.md) - `source.nyc-oti.cyber-command.kelly-moan`
 - [Appointment of Diya Vij as Commissioner of Cultural Affairs](../sources/dcla-diya-vij-appointment-2026.md) - `source.nyc.diya-vij-appointment.2026`
 - [NYC Mayor's Office - Public Interest Technology Crew launch](../sources/nyc-pit-crew-launch-2026.md) - `source.nyc.pit-crew-launch.2026-07-13`
 - [NYC Artist Coalition DCLA formation source return, 2026](../sources/archives/nycac-dcla-formation-source-return-2026-07.md) - `source.nycac.dcla-formation-source-return.2026-07`

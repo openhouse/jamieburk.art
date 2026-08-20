@@ -5,14 +5,23 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-13
-review_by: 2026-09-13
+last_reviewed: 2026-08-20
+review_by: 2026-08-23
 canonical_path: docs/knowledge-bank/indexes/employment-context.md
 summary: Task-oriented entry point for live opportunity research, role coverage, public-only hiring evaluation, and private-boundary rules.
 relations:
   - type: related_to
     target: opportunity.nyc-oti.senior-product-manager.782366
     href: ../opportunities/oti-senior-product-manager.md
+  - type: related_to
+    target: opportunity.nyc-oti.operations-manager.789810
+    href: ../opportunities/oti-operations-manager-789810.md
+  - type: related_to
+    target: opportunity.nyc-oti.product-manager.784450
+    href: ../opportunities/oti-product-manager-784450.md
+  - type: related_to
+    target: opportunity.nyc-oti.cybersecurity-senior-project-manager.791074
+    href: ../opportunities/oti-cybersecurity-senior-project-manager-791074.md
   - type: related_to
     target: opportunity.aclu.senior-project-manager-lps.8620968002
     href: ../opportunities/aclu-senior-project-manager-lps.md
@@ -46,6 +55,12 @@ relations:
   - type: related_to
     target: evaluation.employment-opportunity-leadership.2026-08-13
     href: ../evaluations/employment-opportunity-leadership-2026-08-13.md
+  - type: related_to
+    target: evaluation.oti-product-manager-search-ranking.2026-08-20
+    href: ../evaluations/oti-product-manager-search-ranking-2026-08-20.md
+  - type: related_to
+    target: person.jenn-wei
+    href: ../people/jenn-wei.md
 ---
 
 # Employment context and hiring acceptance
@@ -57,14 +72,17 @@ paths, message bodies, contact details, and real hiring outcomes remain private.
 
 ## Current priority contexts
 
-- [NYC OTI - Senior Product Manager](../opportunities/oti-senior-product-manager.md) — four PIT Crew positions; official deadline August 14, 2026
+- [NYC OTI - Operations Manager](../opportunities/oti-operations-manager-789810.md) — strongest combined fit and securability in the exact August 20 OTI search
+- [NYC OTI - Product Manager](../opportunities/oti-product-manager-784450.md) — strong full-lifecycle product role under the IT Project Specialist title
+- [NYC OTI - Senior Product Manager](../opportunities/oti-senior-product-manager.md) — four reopened PIT Crew positions; official deadline October 16, 2026
+- [NYC OTI - Cybersecurity Senior Project Manager](../opportunities/oti-cybersecurity-senior-project-manager-791074.md) — credible program-delivery fit with explicit cyber, tool, and certification gaps
 - [ACLU - Senior Project Manager, Learning and Project Solutions](../opportunities/aclu-senior-project-manager-lps.md)
-- [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md)
 - [ACLU - Senior Project Manager, National Campaigns](../opportunities/aclu-senior-project-manager-national-campaigns.md)
 
 ## Other live contexts
 
 - [Asana - AI Implementation Manager](../opportunities/asana-ai-implementation.md)
+- [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md)
 - [PermitFlow - Product Operations Manager](../opportunities/permitflow-product-operations.md)
 
 ## Historical fit benchmarks
@@ -79,6 +97,8 @@ paths, message bodies, contact details, and real hiring outcomes remain private.
 - [James Williams](../people/james-williams-aclu.md) and [Deirdre Schifeling](../people/deirdre-schifeling.md) — ACLU National Campaigns title-match and departmental-vision context
 - [Terence Dougherty](../people/terence-dougherty.md) — nearest named ACLU senior operational leader; the LPS direct manager remains unresolved
 - [Luke Farrell](../people/luke-farrell.md) and [Lisa Gelobter](../people/lisa-gelobter.md) — NYC PIT Crew operating-lead and commissioner-level vision context
+- [Kelly Moan](../people/kelly-moan.md) — official NYC Cyber Command senior-vision context; the Security Sciences direct manager remains unresolved
+- [Jenn Wei](../people/jenn-wei.md) — public Asana Service Management launch-team vision context; the AI Implementation Manager reporting line remains unresolved
 
 These links document public organizational context. They do not establish
 awareness, hiring authority for a particular application, recommendation, or
@@ -115,6 +135,7 @@ not endorsements, participation, private opinions, or hiring decisions.
 
 - [Authored employment coverage baseline](../evaluations/employment-context-coverage-2026-07-18.md)
 - [Opportunity leadership and freshness evaluation](../evaluations/employment-opportunity-leadership-2026-08-13.md)
+- [OTI product-manager search comparative ranking](../evaluations/oti-product-manager-search-ranking-2026-08-20.md)
 - [Opportunity coverage](../../../reports/wiki-opportunity-coverage.md)
 - [Career trajectory coverage](../../../reports/wiki-career-trajectory-coverage.md)
 - [Source-channel coverage](../../../reports/wiki-source-channel-coverage.md)

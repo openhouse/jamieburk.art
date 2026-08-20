@@ -367,11 +367,12 @@ if (!existsSync(resumePath)) {
   }
 
   if (
-    !/CallNYC\.org as an independent follow-on to the New York City\s+Council['’]s first CouncilStat hackathon/i.test(
+    /CallNYC\.org/i.test(resumeText) &&
+    !/independent civic product translating constituent-services data into\s+61 issue pathways/i.test(
       resumeText
     )
   ) {
-    addFailure(resumePath, "resume PDF is missing the approved CallNYC projection");
+    addFailure(resumePath, "resume PDF uses CallNYC without its bounded independent-product projection");
   }
 
   if (

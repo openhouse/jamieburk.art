@@ -46,6 +46,18 @@ expectFailure(
 );
 
 expectFailure(
+  "research cannot activate an additional advocacy projection",
+  (candidate) => {
+    const claim = candidate.knowledgeBank.claims.find(
+      (item) => item.id === "CLM-NYCAC-PRESS-REMARKS-PREPARATION-2026"
+    );
+    claim.projections[0].status = "active";
+    claim.projections[0].surfaces = ["/work/fair-rent-nyc"];
+  },
+  /only the governed report-credit case study may project/
+);
+
+expectFailure(
   "office-staff coordination cannot become elected-official endorsement",
   (candidate) => {
     const claim = candidate.knowledgeBank.claims.find(

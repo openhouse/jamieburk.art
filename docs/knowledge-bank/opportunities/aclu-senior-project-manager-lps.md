@@ -5,14 +5,15 @@ kind: opportunity
 status: governed-open
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-13
-review_by: 2026-08-16
+last_reviewed: 2026-08-20
+review_by: 2026-08-23
 canonical_path: docs/knowledge-bank/opportunities/aclu-senior-project-manager-lps.md
 summary: Public-safe requirement, leadership, and portfolio-coverage map for ACLU's live Senior Project Manager role in Learning and Project Solutions.
 canonical_url: https://job-boards.greenhouse.io/aclu/jobs/8620968002
 source_type: official-employer
 opportunity_status: live
-verified_at: 2026-08-13
+hirability_status: truthfully-hirable
+verified_at: 2026-08-20
 portfolio_routes:
   - /
   - /work/technical-operations
@@ -136,7 +137,7 @@ evidence:
     relationship: direct-support
     confidence: high
     supports:
-      - official role facts, reporting title, compensation, application requirements, and duties as rechecked August 13, 2026
+      - official role facts, reporting title, compensation, application requirements, and duties as rechecked August 20, 2026
   - target: source.aclu.terence-dougherty-bio
     relationship: context
     confidence: moderate

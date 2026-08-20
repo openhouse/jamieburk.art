@@ -1,0 +1,44 @@
+{
+  "file": "oti-cyber-kelly.json",
+  "opportunityId": "opportunity.nyc-oti.cybersecurity-senior-project-manager.791074",
+  "personId": "person.kelly-moan",
+  "name": "Kelly Moan",
+  "relationship": "senior-vision",
+  "resumeSha256": "d6cf9e69fb63769d0007338e0e2ed820f96de20c29b754760741538b7f04aa10",
+  "acceptanceQuestion": "I would hire this person for this job.",
+  "decision": "fail",
+  "wouldHire": false,
+  "simulatedPublicFigureLens": true,
+  "nonEndorsementBoundary": "This fictionalized public-context lens is not participation, quotation, endorsement, or a hiring decision by the named person.",
+  "access": {
+    "scope": "public-resume-and-public-job-context-only",
+    "repositoryAccess": false,
+    "privateSourceAccess": false
+  },
+  "strengths": [
+    "14+ years of end-to-end technical project, implementation, and civic-technology leadership.",
+    "Evidence of cross-functional coordination, requirements development, risk tracking, QA, launch management, reporting, documentation, and durable handoffs.",
+    "Relevant NYC stakeholder experience involving public policy, municipal compliance, public funding, and cross-agency context.",
+    "Strong technical fluency and privacy-conscious, governance-oriented delivery practices."
+  ],
+  "risks": [
+    "No demonstrated cybersecurity program, security-control deployment, incident-response, or security-operations experience.",
+    "No clear record managing a citywide or comparably large enterprise portfolio across engineering, operations, and customer applications.",
+    "Limited evidence of formal government or large-firm project management at the scale preferred by the posting.",
+    "Resume does not substantiate ownership of RFIs/RFPs, contracting, contractor management, enterprise budgets, cost-benefit analysis, or proof-of-value work.",
+    "No stated Salesforce or ServiceNow experience.",
+    "No project-management or cybersecurity certifications.",
+    "Strong adjacent capabilities do not establish readiness for the role's specialized cybersecurity responsibilities."
+  ],
+  "interviewEvidenceNeeded": [
+    "Direct experience leading cybersecurity programs or deploying security controls across complex organizations.",
+    "Specific examples of portfolio scale, governance, dependencies, risks, metrics, and executive reporting.",
+    "Ownership of public-sector procurement, RFIs/RFPs, contracts, vendors, contractors, and substantial budgets.",
+    "Experience coordinating legal, finance, communications, engineering, operations, and customer teams on security initiatives.",
+    "Salesforce, ServiceNow, and relevant cybersecurity framework experience.",
+    "Relevant project-management or cybersecurity certifications, or equivalent demonstrated expertise."
+  ],
+  "rationale": "I would not hire this person for this exact job based on the resume alone. The resume demonstrates credible senior technical project management, civic delivery, stakeholder facilitation, and documentation discipline, but the role centers on citywide cybersecurity programs and enterprise security-control deployments. The resume supplies no direct cybersecurity delivery evidence and insufficient proof of the posting's preferred enterprise/government scale, procurement, contracting, platform, and certification qualifications. Those are material readiness questions requiring additional evidence, so the literal hiring gate does not pass.",
+  "model": "gpt-5.6-sol",
+  "evaluatedAt": "2026-08-20"
+}

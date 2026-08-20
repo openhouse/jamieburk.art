@@ -311,6 +311,22 @@ export default function TechnicalOperationsPage() {
             </div>
             <div>
               <h3 className="text-xl font-semibold text-jb-ink">
+                Build the shared infrastructure behind a collective response
+              </h3>
+              <p className="mt-3 leading-8 text-jb-ink/78">
+                {proofText("kc-spaces-fund-digital-infrastructure", true)}
+              </p>
+              <a
+                className="mt-3 inline-block font-semibold text-jb-blue hover:text-jb-green"
+                href="https://kcspacesfund.com/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Visit KC Spaces Fund
+              </a>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-jb-ink">
                 Review a public report before release
               </h3>
               <div className="mt-3 leading-8 text-jb-ink/78">

@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Hiring acceptance Wiki gap resolution
 
-**Candidate commit:** `c626b5fd96d66abad8c173655ea58511e3b4f966`
-**Public report hash:** `be3b9382b2a122b0542ed8d76aafe8e19ba566fb4d58f6f9a66d0b362ce65eaa`
-**Wiki fingerprint:** `3145cdbe1314947463b8a42d14b95da6833e9d355aaf8557f7ef2c3ee89757ba`
+**Candidate commit:** `14ccb9ffe9c628a00a4289a49dd2d32d9e892296`
+**Public report hash:** `b15b8de6486606272f4f7c0e01706e0fa7939ff020ef5b36bffac50309d257bf`
+**Wiki fingerprint:** `de8d12c1e4c7b4df865c3225b773b5f6fb23f9c988d78ba5fd1e90a01cbb3cb2`
 
 The gap resolver runs after the public-only evaluator. It can identify Wiki evidence, but every public change remains human-reviewed.
 
@@ -11,6 +11,7 @@ The gap resolver runs after the public-only evaluator. It can identify Wiki evid
 
 - `requirement.oti-product.cross-functional-launch` - **role-context-or-evidence-unknown**; Show how Jamie made dependencies and decision ownership legible.
 - `requirement.oti-product.metrics-and-learning` - **visible-weak-evidence-gap**; Prepare one verified outcomes-and-learning example; do not substitute activity counts for resident outcomes.
+- `requirement.oti-cyber-pm-791074.portfolio` - **true-experience-gap**; Use an exact multi-project operating example and name the cybersecurity ramp honestly.
 - `requirement.aclu-lps.plan-budget-risk` - **role-context-or-evidence-unknown**; Prepare an honest budget-responsibility example without implying procurement authority.
 - `requirement.aclu-lps.business-analysis` - **role-context-or-evidence-unknown**; Prepare one redacted process map or requirements artifact.
 - `requirement.aclu-lps.organizational-learning` - **role-context-or-evidence-unknown**; Explain what changed after a retrospective and remained in use.

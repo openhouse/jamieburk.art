@@ -43,15 +43,11 @@ export const professorCandidateRelativePaths = [
 ].sort();
 
 const finalScorecardRelativePaths = [
-  "docs/qa/evals-H/margaret-morse-final-2026-08-12-a.json",
-  "docs/qa/evals-H/margaret-morse-final-2026-08-12-b.json",
-  "docs/qa/evals-H/margaret-morse-final-2026-08-12-c.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-12-a.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-12-b.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-12-c.json"
+  "docs/qa/evals-H/margaret-morse-current-2026-08-20-a.json"
 ];
 
-const approvedCandidateSha256 = "404376992695431861412b6d8d130310e9719e0c6904a2b98e5e1ed61966b77b";
+const approvedCandidateSha256 = "e56d6e95fee3eb4eb22560d23db0873f10772843a534fdd1c326d507b9b71cf3";
+const requiredHoldoutCount = 6;
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },
@@ -249,13 +245,14 @@ export function evaluateProfessorLenses({
     criterion(
       "unanimous-holdouts",
       "Three final holdouts per lens score the bound candidate at 4 with no failing judge.",
-      finalScorecards.length === 6 &&
+      finalScorecards.length === requiredHoldoutCount &&
         finalScorecards.every((scorecard) => scorecard.phase === "holdout" &&
           scorecard.score === 4 && scorecard.pass === true &&
           scorecard.candidateSha256 === candidateSha256),
       `${finalScorecards.filter((scorecard) => scorecard.phase === "holdout" &&
         scorecard.score === 4 && scorecard.pass === true &&
-        scorecard.candidateSha256 === candidateSha256).length}/6 final scorecards pass at 4 and match candidate ${candidateSha256}.`
+        scorecard.candidateSha256 === candidateSha256).length}/${requiredHoldoutCount} final scorecards pass at 4; ` +
+        `${finalScorecards.length}/${requiredHoldoutCount} current-candidate holdouts are present for ${candidateSha256}.`
     )
   ];
 

@@ -5,14 +5,16 @@ kind: opportunity
 status: governed-open
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-13
-review_by: 2026-08-14
+last_reviewed: 2026-08-20
+review_by: 2026-08-23
 canonical_path: docs/knowledge-bank/opportunities/oti-senior-product-manager.md
 summary: Public-safe requirement, leadership, and portfolio-coverage map for four live NYC OTI Public Interest Technology Crew Senior Product Manager positions.
 canonical_url: https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-44507
 source_type: official-employer
 opportunity_status: live
-verified_at: 2026-08-13
+hirability_status: truthfully-hirable
+verified_at: 2026-08-20
+application_deadline: 2026-10-16
 portfolio_routes:
   - /
   - /work/technical-operations
@@ -30,7 +32,7 @@ discovery_terms:
   - accessibility and privacy
   - post-launch measurement
 confirmed_facts:
-  - Job ID 782366 covers four full-time OTI Senior Product Manager positions with a $100,000 to $180,000 range and an August 14, 2026 deadline.
+  - Job ID 782366 was reposted August 18, 2026 for four full-time OTI Senior Product Manager positions with a $100,000 to $180,000 range and an October 16, 2026 deadline.
   - The positions are part of the Public Interest Technology Crew and own resident-facing products from problem framing through public launch.
   - The posting does not identify a direct manager.
 inferences:
@@ -56,7 +58,7 @@ hard_screens:
     state: review-needed
     disposition: verify
   - id: screen.oti-product.deadline
-    text: The official application deadline is August 14, 2026.
+    text: The current official application deadline is October 16, 2026.
     state: likely-met
     disposition: proceed
 role_requirements:
@@ -165,7 +167,7 @@ evidence:
     relationship: direct-support
     confidence: high
     supports:
-      - official role facts, minimum qualifications, duties, compensation, position count, and deadline as rechecked August 13, 2026
+      - official role facts, reposting date, minimum qualifications, duties, compensation, position count, live application state, and deadline as rechecked August 20, 2026
   - target: source.linkedin.luke-farrell-pit-crew-leadership.2026
     relationship: context
     confidence: moderate
@@ -181,14 +183,14 @@ human_review: governed-open
 
 # NYC OTI - Senior Product Manager 782366
 
-This is the highest-upside mission match and the most urgent application. The
+This reopened role is a high-value current pursuit. The
 portfolio already shows resident-facing civic work, cross-functional delivery,
 press and stakeholder communication, and governed knowledge systems. The two
 real screens are product-level proof from concept through launch and the Senior
 IT Architect civil-service qualifications; neither can be solved by stronger
 copy alone.
 
-Luke Farrell is the nearest publicly visible operating lead, not a confirmed
+The current posting was published August 18 and closes October 16, 2026. Luke Farrell is the nearest publicly visible operating lead, not a confirmed
 direct manager. Lisa Gelobter is the documented commissioner and senior vision
 owner. Recheck the [official posting](../sources/jobs-oti-senior-product-manager-782366.md)
 before outward use.

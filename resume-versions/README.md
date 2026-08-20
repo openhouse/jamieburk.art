@@ -30,3 +30,35 @@ External resume-review guidance remains subordinate to the repository's truth,
 privacy, collective-credit, and human-approval rules.
 
 These are application artifacts, not replacements for the canonical public resume. Jamie retains final review and submission authority, and the employer retains eligibility and hiring authority.
+
+The site-facing resume has a separate portfolio lineage:
+
+```text
+resume-versions/YYYY-MM-DD/active-opportunity-portfolio/Jamie-Burkart-Resume.md
+resume-versions/YYYY-MM-DD/active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.pdf
+resume-versions/YYYY-MM-DD/active-opportunity-portfolio/artifact.json
+evals/public-resume/current.json
+```
+
+Selection follows three deterministic tiers: private active-application IDs
+supplied at runtime; otherwise officially live, unexpired, truthfully hirable
+opportunities; otherwise the top quarter of the governed all-time fit ranking.
+Private application state is not committed to the public repository.
+
+The public-resume eval fails when the selected set changes, official-role
+verification becomes stale, required role language disappears, or the
+Markdown, styled PDF sibling, and public PDF fall out of step. Only after those
+cheaper deterministic gates pass may an isolated, public-surface-only hiring-
+reader LLM eval run. Every named reader must pass the exact current Markdown
+digest; a resume change invalidates all prior reader judgments. Closed,
+expired, evidence-gap, and do-not-pursue roles may remain in the research graph
+but cannot shape this public artifact unless a private active application is
+still genuinely under consideration.
+
+Reader runs are cached by exact résumé digest and preserved under
+`evals/public-resume/runs/`. A complete baseline may collect every reader's
+critique. Subsequent unanimous-pass hill climbs evaluate the highest-priority
+reader first and stop at the first failure, because additional model calls
+cannot change the aggregate result after one exact-digest reader has failed.
+The current manifest records incomplete coverage and the failed decision; it
+must never turn a short-circuited run into a pass.

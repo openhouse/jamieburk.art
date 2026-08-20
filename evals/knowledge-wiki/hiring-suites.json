@@ -1,9 +1,12 @@
 {
-  "id": "current-priority-2026-08-13",
+  "id": "current-priority-2026-08-20",
   "version": 2,
   "principle": "The public evaluator sees public projection files and public role and reader context only; Wiki gap resolution is a separate pass.",
   "opportunityPaths": [
     "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
+    "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+    "docs/knowledge-bank/opportunities/oti-operations-manager-789810.md",
+    "docs/knowledge-bank/opportunities/oti-cybersecurity-senior-project-manager-791074.md",
     "docs/knowledge-bank/opportunities/aclu-senior-project-manager-lps.md",
     "docs/knowledge-bank/opportunities/aclu-senior-project-manager-national-campaigns.md",
     "docs/knowledge-bank/opportunities/oti-technical-operations.md",
@@ -59,6 +62,24 @@
       "id": "query.current-resident-product",
       "terms": ["resident-facing product delivery", "problem framing and discovery", "cross-functional product leadership", "accessibility and privacy", "post-launch measurement"],
       "expectedTopK": ["opportunity.nyc-oti.senior-product-manager.782366"],
+      "k": 3
+    },
+    {
+      "id": "query.current-product-lifecycle",
+      "terms": ["full product lifecycle", "qualitative and quantitative research", "roadmap and prioritization", "user stories and acceptance criteria", "KPIs and analytics"],
+      "expectedTopK": ["opportunity.nyc-oti.product-manager.784450"],
+      "k": 3
+    },
+    {
+      "id": "query.current-speed-operations",
+      "terms": ["program operations", "budget and resource management", "contracting and procurement coordination", "team health and operational metrics", "onboarding and cross-functional delivery"],
+      "expectedTopK": ["opportunity.nyc-oti.operations-manager.789810"],
+      "k": 3
+    },
+    {
+      "id": "query.current-cyber-project-portfolio",
+      "terms": ["program portfolio management", "vendor and contract coordination", "risk and cost-benefit analysis", "dashboards reports and metrics", "proof of concept and proof of value"],
+      "expectedTopK": ["opportunity.nyc-oti.cybersecurity-senior-project-manager.791074"],
       "k": 3
     },
     {

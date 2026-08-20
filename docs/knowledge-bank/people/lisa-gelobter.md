@@ -16,6 +16,9 @@ relations:
   - type: related_to
     target: opportunity.nyc-oti.senior-product-manager.782366
     href: ../opportunities/oti-senior-product-manager.md
+  - type: related_to
+    target: opportunity.nyc-oti.product-manager.784450
+    href: ../opportunities/oti-product-manager-784450.md
 ---
 
 # Lisa Gelobter

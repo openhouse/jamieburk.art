@@ -1,0 +1,41 @@
+{
+  "file": "asana-jenn.json",
+  "opportunityId": "opportunity.asana.ai-implementation.8027437",
+  "personId": "person.jenn-wei",
+  "name": "Jenn Wei",
+  "relationship": "senior-vision",
+  "resumeSha256": "d6cf9e69fb63769d0007338e0e2ed820f96de20c29b754760741538b7f04aa10",
+  "acceptanceQuestion": "I would hire this person for this job.",
+  "decision": "fail",
+  "wouldHire": false,
+  "simulatedPublicFigureLens": true,
+  "nonEndorsementBoundary": "This fictionalized public-context lens is not participation, quotation, endorsement, or a hiring decision by the named person.",
+  "access": {
+    "scope": "public-resume-and-public-job-context-only",
+    "repositoryAccess": false,
+    "privateSourceAccess": false
+  },
+  "strengths": [
+    "14+ years leading ambiguous, cross-functional implementation and product-operations work from discovery through launch, adoption, and handoff.",
+    "Strong technical fluency and concrete experience with workflow design, requirements, QA/UAT, risk tracking, change management, documentation, and reusable playbooks.",
+    "Evidence of shipping and operating public-facing systems, including quantified adoption, operational, funding, and revenue outcomes.",
+    "Relevant stakeholder facilitation experience across clients, engineers, designers, operations teams, government, and community groups."
+  ],
+  "risks": [
+    "The resume does not demonstrate ownership of enterprise SaaS customer implementations at a scale comparable to Asana.",
+    "No clear evidence of Service Management or ITSM domain expertise, including service desks, incident/request workflows, SLAs, or enterprise service operations.",
+    "AI experience is limited to recent coursework and general human-reviewed workflow language; it does not establish successful AI product implementation for customers.",
+    "Configuration, migration, time-to-value, and change-management capabilities appear mostly in the skills summary rather than in quantified experience bullets.",
+    "The resume does not show repeated implementations across multiple enterprise customers, executive customer governance, or measurable implementation outcomes such as deployment time, adoption, retention, or expansion."
+  ],
+  "interviewEvidenceNeeded": [
+    "A detailed enterprise implementation case covering discovery, workflow redesign, configuration, migration, integrations, UAT, launch, adoption, and measurable business results.",
+    "Direct evidence of Service Management or adjacent ITSM workflow expertise.",
+    "Examples of implementing AI-enabled workflows safely in production, including evaluation, human review, governance, and outcome measurement.",
+    "Evidence of managing several complex customer deployments concurrently and creating reusable implementation playbooks from them.",
+    "Customer-facing executive communication examples involving escalations, scope tradeoffs, deployment risk, and change resistance."
+  ],
+  "rationale": "The resume shows a credible, technically fluent implementation and product-operations generalist with strong civic-tech and small-client delivery experience. However, the literal bar is whether the resume alone supplies enough evidence to hire this person as Asana's AI Implementation Manager for Service Management. It does not: the most role-specific requirements—enterprise SaaS implementation, Service Management depth, production AI implementation, repeated customer deployments, and quantified time-to-value or adoption outcomes—are insufficiently demonstrated. Under a skeptical resume-only gate, this is a fail, though the candidate could merit an exploratory screen if the process permits gathering the missing evidence.",
+  "model": "gpt-5.6-sol",
+  "evaluatedAt": "2026-08-20"
+}

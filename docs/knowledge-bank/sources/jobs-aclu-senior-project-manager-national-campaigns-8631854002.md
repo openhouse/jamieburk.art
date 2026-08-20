@@ -5,13 +5,13 @@ kind: source
 status: maintained
 visibility: public
 sensitivity: low
-last_reviewed: 2026-08-13
-review_by: 2026-08-16
+last_reviewed: 2026-08-20
+review_by: 2026-08-23
 canonical_path: docs/knowledge-bank/sources/jobs-aclu-senior-project-manager-national-campaigns-8631854002.md
-summary: Official ACLU posting for a live, term-limited Senior Project Manager role in National Campaigns, rechecked August 13, 2026.
+summary: Official ACLU posting for a live, term-limited Senior Project Manager role in National Campaigns, rechecked August 20, 2026.
 source_kind: official-job-posting
 url: https://job-boards.greenhouse.io/aclu/jobs/8631854002
-retrieved_at: 2026-08-13
+retrieved_at: 2026-08-20
 relations:
   - type: supports
     target: opportunity.aclu.senior-project-manager-national-campaigns.8631854002
@@ -26,6 +26,6 @@ National Campaigns and supports large projects, delivery systems, internal and
 external communications, research and talking points, procurement and
 invoices, and campaign operations. The New York salary is $128,294.
 
-The page displayed an active application form when rechecked on August 13,
+The page displayed an active application form when rechecked on August 20,
 2026. Recheck the [official source](https://job-boards.greenhouse.io/aclu/jobs/8631854002)
 before outward use.

@@ -15,10 +15,11 @@ const register = JSON.parse(readFileSync("docs/integration/feature-evals-composi
 const portfolioSuite = JSON.parse(readFileSync(".agents/evals/portfolio-production-readiness.json", "utf8"));
 const blindSpots = JSON.parse(readFileSync("docs/knowledge-bank/data/blind-spot-controls-2026-07.json", "utf8"));
 
-test("composite integration accepts the frozen exact candidate", () => {
+test("current composite integration fails closed when exact-candidate holdouts and locks are stale", () => {
   const result = evaluateCompositeIntegration();
-  assert.equal(result.accepted, true);
-  assert.equal(result.score, result.scoreMaximum);
+  assert.equal(result.accepted, false);
+  assert.equal(result.criteria.find((item) => item.id === "COMP-006")?.pass, false);
+  assert.equal(result.criteria.find((item) => item.id === "COMP-009")?.pass, false);
   assert.equal(result.criteria.length, 9);
 });
 
