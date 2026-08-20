@@ -5,6 +5,8 @@ Application-specific resumes use this path contract:
 ```text
 resume-versions/YYYY-MM-DD/job-application-slug/Jamie-Burkart-Resume.md
 resume-versions/YYYY-MM-DD/job-application-slug/Jamie-Burkart-Resume-<organization-and-role>.pdf
+resume-versions/YYYY-MM-DD/job-application-slug/Cover-Letter.md
+resume-versions/YYYY-MM-DD/job-application-slug/Application-Instructions.md
 resume-versions/YYYY-MM-DD/job-application-slug/artifact.json
 ```
 
@@ -22,6 +24,24 @@ the resume-artifact eval until the tailored resume and PDF are reviewed and
 regenerated together.
 
 Each version must remain truthful, source-bounded, ATS-readable, and independently reviewable. Tailoring may use a clearly labeled target-role headline and reorder governed experience; it may not present that headline as a past employment title or invent a qualification, outcome, formal authority, accessibility certification, user-research program, sole authorship, or policy causation.
+
+Every application-specific resume has a role-specific `Cover-Letter.md` sibling.
+The living Google Doc titled *My Writer's Voice* is the source of truth for
+Jamie’s voice. Its protected locator and raw contents are supplied only through
+an authenticated authoring session and are never committed. The repository
+stores a public-safe, digest-bound voice contract at
+`evals/cover-letters/voice-contract.json`; it is a tested projection, not a
+replacement authority. A material letter revision requires a fresh
+authenticated read of the living source.
+
+Cover letters add motive and connective tissue rather than repeating the full
+resume. They stay between 250 and 400 words, begin from one concrete operating
+problem, preserve collective credit and evidentiary limits, and end with a
+usable invitation. Each exact letter is bound to its exact opportunity,
+resume, voice-contract digest, and named-reader assessments. Deterministic
+freshness, structure, role-language, lineage, and public-safety checks run
+before isolated reader simulations. A changed letter, resume, opportunity, or
+voice contract invalidates earlier reader judgments.
 
 Every opportunity represented in `evals/hiring-readers/current.json` must have
 one exact dated resume in `evals/resume-hiring-readers/current.json`. Each

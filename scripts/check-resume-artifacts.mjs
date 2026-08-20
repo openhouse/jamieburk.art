@@ -17,6 +17,7 @@ const expectedCriteria = [
   "public-resume-projection",
   "resume-editorial-preferences",
   "application-guide",
+  "cover-letter",
   "public-safety"
 ];
 
@@ -100,12 +101,13 @@ export function evaluateResumeArtifacts(root = defaultRoot) {
   const fail = (criterion, message) => failures.push({ criterion, message });
   const evalPath = path.join(root, "evals/resume-artifacts/evals.json");
   const opportunityManifestPath = path.join(root, "evals/resume-hiring-readers/current.json");
+  const coverManifestPath = path.join(root, "evals/cover-letter-hiring-readers/current.json");
 
-  if (!existsSync(evalPath) || !existsSync(opportunityManifestPath)) {
+  if (!existsSync(evalPath) || !existsSync(opportunityManifestPath) || !existsSync(coverManifestPath)) {
     return {
       passed: false,
-      failures: [{ criterion: "complete-opportunity-coverage", message: "Missing resume-artifact eval or opportunity manifest." }],
-      metrics: { opportunities: 0, markdownResumes: 0, pdfs: 0, artifacts: 0, applicationGuides: 0 }
+      failures: [{ criterion: "complete-opportunity-coverage", message: "Missing resume-artifact, opportunity, or cover-letter manifest." }],
+      metrics: { opportunities: 0, markdownResumes: 0, pdfs: 0, artifacts: 0, applicationGuides: 0, coverLetters: 0 }
     };
   }
 
@@ -117,7 +119,9 @@ export function evaluateResumeArtifacts(root = defaultRoot) {
   }
 
   const opportunityManifest = JSON.parse(readFileSync(opportunityManifestPath, "utf8"));
+  const coverManifest = JSON.parse(readFileSync(coverManifestPath, "utf8"));
   const entries = Array.isArray(opportunityManifest.opportunities) ? opportunityManifest.opportunities : [];
+  const coverEntries = Array.isArray(coverManifest.opportunities) ? coverManifest.opportunities : [];
   const expectedResumePaths = entries.map(({ resumePath }) => resumePath).sort();
   const discoveredResumePaths = allTailoredMarkdown(root);
   if (new Set(entries.map(({ opportunityId }) => opportunityId)).size !== entries.length ||
@@ -128,6 +132,7 @@ export function evaluateResumeArtifacts(root = defaultRoot) {
   let pdfs = 0;
   let artifacts = 0;
   let applicationGuides = 0;
+  let coverLetters = 0;
   for (const entry of entries) {
     const label = entry.opportunityId ?? entry.jobTitle ?? "unknown opportunity";
     const pathMatch = datedResumePath(entry.resumePath);
@@ -161,6 +166,24 @@ export function evaluateResumeArtifacts(root = defaultRoot) {
       continue;
     }
     pdfs += 1;
+    const coverEntry = coverEntries.find(({ opportunityId }) => opportunityId === entry.opportunityId);
+    const coverLetterPath = path.join(directory, "Cover-Letter.md");
+    const coverLetter = existsSync(coverLetterPath) ? readFileSync(coverLetterPath, "utf8") : undefined;
+    if (!coverLetter || !coverEntry || coverEntry.coverLetterPath !== path.relative(root, coverLetterPath).split(path.sep).join("/") ||
+        coverEntry.coverLetterSha256 !== digest(coverLetter) || coverEntry.resumePath !== entry.resumePath ||
+        coverEntry.resumeSha256 !== resumeSha256 || coverEntry.opportunityPath !== entry.opportunityPath ||
+        coverEntry.opportunitySha256 !== opportunitySha256) {
+      fail("cover-letter", `${label}: Cover-Letter.md is missing or not bound to the current opportunity and resume.`);
+    } else {
+      coverLetters += 1;
+      if (frontMatterValue(coverLetter, "opportunity_id") !== entry.opportunityId ||
+          frontMatterValue(coverLetter, "resume_source") !== path.basename(entry.resumePath) ||
+          frontMatterValue(coverLetter, "writer_voice_contract") !== evaluation?.coverLetterContract?.voiceContract ||
+          frontMatterValue(coverLetter, "writer_voice_locator_committed") !== "false" ||
+          protectedLocatorPattern.test(coverLetter)) {
+        fail("cover-letter", `${label}: cover-letter voice, lineage, or public-safety metadata is incomplete.`);
+      }
+    }
     const guidePath = path.join(directory, "Application-Instructions.md");
     const guide = existsSync(guidePath) ? readFileSync(guidePath, "utf8") : undefined;
     if (!guide) {
@@ -184,7 +207,9 @@ export function evaluateResumeArtifacts(root = defaultRoot) {
           frontMatterValue(guide, "resume_markdown") !== path.basename(entry.resumePath) ||
           frontMatterValue(guide, "resume_markdown_sha256") !== resumeSha256 ||
           frontMatterValue(guide, "resume_pdf") !== pdfFiles[0] ||
-          frontMatterValue(guide, "resume_pdf_sha256") !== digest(readFileSync(pdfPath))) {
+          frontMatterValue(guide, "resume_pdf_sha256") !== digest(readFileSync(pdfPath)) ||
+          frontMatterValue(guide, "cover_letter") !== "Cover-Letter.md" ||
+          frontMatterValue(guide, "cover_letter_sha256") !== (coverLetter ? digest(coverLetter) : undefined)) {
         fail("application-guide", `${label}: application guide metadata is incomplete or not bound to the current resume and PDF.`);
       }
       if (requiredSections.some((heading) => !guide.includes(heading)) ||
@@ -337,7 +362,8 @@ export function evaluateResumeArtifacts(root = defaultRoot) {
       markdownResumes: discoveredResumePaths.length,
       pdfs,
       artifacts,
-      applicationGuides
+      applicationGuides,
+      coverLetters
     }
   };
 }

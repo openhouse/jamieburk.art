@@ -60,6 +60,18 @@
       "Jamie alone performs final submission."
     ]
   },
+  "coverLetterContract": {
+    "file": "Cover-Letter.md",
+    "readerManifest": "evals/cover-letter-hiring-readers/current.json",
+    "voiceContract": "evals/cover-letters/voice-contract.json",
+    "rules": [
+      "Every application-specific resume directory contains one role-specific cover letter.",
+      "The letter is digest-bound to the exact opportunity, resume, and public-safe writer's-voice contract.",
+      "The living Google Doc remains the source of truth; its locator and raw contents are not committed.",
+      "Deterministic checks run before isolated named-reader simulations.",
+      "Jamie approves the exact letter before submission."
+    ]
+  },
   "criteria": [
     {
       "id": "complete-opportunity-coverage",
@@ -110,6 +122,11 @@
       "id": "application-guide",
       "blocking": true,
       "criterion": "Each opportunity directory includes an exact-resume-bound application guide with the observed field actions, an explicit blocker when needed, fail-closed treatment of unseen questions, and Jamie's final-submit gate."
+    },
+    {
+      "id": "cover-letter",
+      "blocking": true,
+      "criterion": "Each application-specific resume has one role-specific, exact-digest cover-letter sibling bound to the current opportunity, resume, writer's-voice contract, and unanimous named-reader acceptance manifest."
     },
     {
       "id": "public-safety",

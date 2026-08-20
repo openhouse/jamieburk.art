@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decision",
+    "wouldAdvanceToInterview",
+    "strengths",
+    "risks",
+    "interviewEvidenceNeeded",
+    "rationale"
+  ],
+  "properties": {
+    "decision": {"type": "string", "enum": ["pass", "fail"]},
+    "wouldAdvanceToInterview": {"type": "boolean"},
+    "strengths": {"type": "array", "minItems": 2, "items": {"type": "string"}},
+    "risks": {"type": "array", "items": {"type": "string"}},
+    "interviewEvidenceNeeded": {"type": "array", "items": {"type": "string"}},
+    "rationale": {"type": "string", "minLength": 80}
+  }
+}

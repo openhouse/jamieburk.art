@@ -22,6 +22,8 @@ function fixture() {
   for (const relativePath of [
     "evals/resume-artifacts",
     "evals/resume-hiring-readers",
+    "evals/cover-letter-hiring-readers",
+    "evals/cover-letters",
     "docs/knowledge-bank/opportunities",
     "resume-versions"
   ]) {
@@ -105,7 +107,20 @@ test("every governed opportunity has a current styled and visually inspected PDF
   const result = run();
   assert.equal(result.status, 0, result.stderr || result.stdout);
   const report = JSON.parse(result.stdout);
-  assert.deepEqual(report.metrics, { opportunities: 4, markdownResumes: 4, pdfs: 4, artifacts: 4, applicationGuides: 4 });
+  assert.deepEqual(report.metrics, { opportunities: 4, markdownResumes: 4, pdfs: 4, artifacts: 4, applicationGuides: 4, coverLetters: 4 });
+});
+
+test("a missing role-specific cover letter fails opportunity artifact coverage", () => {
+  const root = fixture();
+  try {
+    const entry = firstEntry(root);
+    unlinkSync(path.join(path.dirname(path.join(root, entry.resumePath)), "Cover-Letter.md"));
+    const result = run(root);
+    assert.notEqual(result.status, 0);
+    assert.match(result.stdout, /cover-letter/);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
 });
 
 test("a missing application guide fails one-to-one opportunity coverage", () => {

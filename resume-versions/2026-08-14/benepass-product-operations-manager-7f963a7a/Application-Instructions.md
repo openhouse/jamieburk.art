@@ -9,6 +9,8 @@ resume_markdown: Jamie-Burkart-Resume.md
 resume_markdown_sha256: ec7377fc26957a7db0ee671c6a311bd8a98e54be4de35f6b3575c1aea9f36590
 resume_pdf: Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.pdf
 resume_pdf_sha256: 43e313849d5f6536668c6cb628971880d97f41cea70fe7b9133064d64ac3f721
+cover_letter: Cover-Letter.md
+cover_letter_sha256: 9cdbf73b77dd89f6b798b5fdde381935814a1c158abfbc406589c8104502e7e0
 ---
 
 # Application instructions — Benepass Product Operations Manager
@@ -29,6 +31,7 @@ or copied listing.
 
 - **Resume Markdown:** `Jamie-Burkart-Resume.md`
 - **Resume PDF held for a future verified opening:** `Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.pdf`
+- **Cover letter held for a future verified matching opening:** [`Cover-Letter.md`](./Cover-Letter.md)
 
 ## Exact field instructions
 
@@ -36,6 +39,7 @@ or copied listing.
 - **Alternative listings:** Do not submit through an aggregator or copied posting without a newly verified official employer URL.
 - **Reopening check:** Review the official Benepass careers page for a fresh role ID and full description.
 - **Future form:** Do not reuse assumed field instructions; capture and verify the complete new application before regenerating this guide.
+- **Future cover-letter field:** Recheck the newly verified role, refresh the living writer's-voice source, and paste the exact `## Letter` section only after its opportunity and reader bindings are current.
 
 ## Final review gate
 

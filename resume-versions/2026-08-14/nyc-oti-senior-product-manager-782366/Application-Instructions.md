@@ -9,6 +9,8 @@ resume_markdown: Jamie-Burkart-Resume.md
 resume_markdown_sha256: cee950eb8e146578033a9b6c48948ab5e72f182b716e11aa7bdb60dd479be27c
 resume_pdf: Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf
 resume_pdf_sha256: 8f5039b6327cb12b472b9123ef7919f6f2e9400cc952c6c10e681a06d35536db
+cover_letter: Cover-Letter.md
+cover_letter_sha256: 606eaf4b628d07ed68dc20fac90bd5db3d84456d6d042f158f4b88639d85068e
 ---
 
 # Application instructions — NYC OTI Senior Product Manager 782366
@@ -26,6 +28,7 @@ listed August 14, 2026 as the application deadline when rechecked.
 
 - **Resume Markdown:** `Jamie-Burkart-Resume.md`
 - **Resume PDF to upload:** `Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf`
+- **Cover letter / hiring-team message:** [`Cover-Letter.md`](./Cover-Letter.md), exact `## Letter` section
 
 ## Exact field instructions
 
@@ -46,21 +49,8 @@ Open the [SmartRecruiters application](https://jobs.smartrecruiters.com/oneclick
 - **X (fka Twitter):** Leave blank.
 - **Website:** Enter `https://jamieburk.art`.
 - **Resume:** Confirm that the attached file is `Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf`. If the Easy Apply upload already attached it, do not upload a second or different resume.
-- **Message to the Hiring Team:** Enter the exact message below.
+- **Message to the Hiring Team:** Paste the complete `## Letter` section from `Cover-Letter.md` exactly, beginning `Dear Hiring Team,` and ending `Jamie Burkart`.
 - **Next:** Click `Next` only after reviewing every visible field and confirming that the correct PDF is attached.
-
-Paste this message exactly:
-
-> Dear Hiring Team,
->
-> I am applying for Senior Product Manager, Job ID 782366, because my work has centered on turning ambiguous public needs into resident-facing products, participation systems, and durable operating practice. I built and launched CallNYC, translating New York City constituent-services data into 61 resident-facing issue pathways; co-built WOWList, a community-calendar platform stewarded across roughly 35 city ecosystems; and lead civic-systems and coalition operations for NYC Artist Coalition / Fair Rent NYC.
->
-> Across this work I have handled discovery, requirements, prioritization, implementation, public launch, stakeholder and press coordination, measurement, privacy, and handoff. I am drawn to the PIT Crew's mandate to pair hands-on product delivery with stronger public capacity, and I would welcome the opportunity to help ship useful, accessible services with New Yorkers and agency partners.
->
-> Portfolio: https://jamieburk.art
->
-> Thank you,
-> Jamie Burkart
 
 ### After `Next`
 
@@ -76,5 +66,6 @@ autocomplete suggestion.
 - Confirm the attached filename ends in `NYC-OTI-Senior-Product-Manager-782366.pdf`.
 - Confirm the portfolio is live at `https://jamieburk.art` before final submission.
 - Read the full message once for truth, tone, and collective credit.
+- Confirm the pasted message matches `Cover-Letter.md` exactly.
 - Review every newly revealed required field after `Next`.
 - Jamie alone clicks the final Submit button.
