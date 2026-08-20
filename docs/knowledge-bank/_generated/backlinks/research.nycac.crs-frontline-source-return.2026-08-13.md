@@ -1,8 +1,8 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to NYCAC and Fair Rent NYC 30-day frontline advocacy source return
 
-**Source commit:** `6342a6d57cf3b740f39214d2b140728fd4f74264`
-**Generation time:** 2026-08-20T17:52:55-04:00
+**Source commit:** `2ce278fa36d3e0941ec059a4044f1697e459fa5b`
+**Generation time:** 2026-08-20T19:05:24-04:00
 **Source fingerprint:** `c2931a006c61da8d8ab169b956ae070fd43f10819e0846768242f49d179ec25b`
 
 - [NYC Artist Coalition and Fair Rent NYC frontline advocacy, July-August 2026](../../claims/nycac-crs-frontline-advocacy-2026.md) - `evidence:private-support` (evidence)
