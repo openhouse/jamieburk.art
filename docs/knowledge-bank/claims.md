@@ -288,10 +288,10 @@ bundle.
 **Status:** Careful  
 **Support level:** Moderate  
 **Evidence class:** Public-safe lab materials / proposal-derived public-safe method summary  
-**Public wording:** Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.  
+**Public wording:** Developing a focused lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.
 **Detailed public-safe wording:** The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.  
 **Where to project:** Lab page, Technical Operations, future consulting materials after approval.  
-**Why it matters:** Shows Jamie's knowledge-systems direction while keeping AI and archive claims bounded.  
+**Why it matters:** Shows Jamie's knowledge-systems direction while keeping AI and archive claims carefully scoped.
 **Guardrail:** Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.  
 **Do not say:** Built a production AI memory platform for a client; automated trust; replaces human review.  
 **Protected boundaries:** Do not name private collaborators, publish pricing, publish private transcript excerpts, or publish private company context.  

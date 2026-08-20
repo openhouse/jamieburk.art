@@ -124,7 +124,7 @@ export const portfolioPhotos = {
       indexing: "open"
     },
     publicUseBoundary:
-      "Jamie authorized portfolio publication from the source album. The caption is bounded to the visible facilitation moment; the remembered shared-domain and mailing-list agreement remains a research inquiry."
+      "Jamie authorized portfolio publication from the source album. The caption describes only the visible facilitation moment; the remembered shared-domain and mailing-list agreement remains a research inquiry."
   },
   sundayDinnerSharedMap: {
     id: "sunday-dinner-shared-map",

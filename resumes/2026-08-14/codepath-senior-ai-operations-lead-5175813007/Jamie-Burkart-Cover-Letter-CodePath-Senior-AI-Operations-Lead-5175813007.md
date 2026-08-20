@@ -24,9 +24,8 @@ At Thick Arts, I build and maintain a source-backed team-memory system that turn
 
 The question is not how many agents a team can deploy. It is whether the resulting system saves time, improves quality, changes behavior, and leaves the team more capable of continuing without its builder. My work with FairRentNYC, WOWList, CallNYC, and a long-running small-business client has taught me to begin with real workflows, build only the structure people can maintain, document failure states, and protect the boundaries around private sources and collective work. I do not yet claim an audited organization-wide time-savings result; I can show the working system, its tests, its limits, and the evidence needed to measure adoption responsibly.
 
-I would welcome the chance to bring that practice into CodePath: listening first, choosing a bounded high-leverage workflow, shipping it with its review system, and leaving behind reusable capability. Thank you for considering my application.
+I would welcome the chance to bring that practice into CodePath: listening first, choosing a focused high-leverage workflow, shipping it with its review system, and leaving behind reusable capability. Thank you for considering my application.
 
 Sincerely,
 
 Jamie Burkart
-

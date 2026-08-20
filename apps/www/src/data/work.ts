@@ -150,7 +150,7 @@ const workItemsInput = [
       {
         title: "Maintenance-to-handoff specimen",
         description:
-          "A public-safe reconstruction shows how recurring questions became bounded requirements, incremental releases, verification, reusable patterns, and owned next actions.",
+          "A public-safe reconstruction shows how recurring questions became clear requirements, incremental releases, verification, reusable patterns, and owned next actions.",
         type: "workflow"
       }
     ],
@@ -584,7 +584,7 @@ const workItemsInput = [
     careNote:
       "Securing the award names Jamie's documented proposal-and-presentation role; institutional authority remained with the Board and Council, and appropriation was not payment to Jamie. The transition is an authorized first-party professional account. Private personal, financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Official Kansas City Council and CCED records, a protected public-safe review of the 2019 proposal, the complete public account corpus, Council-role records, approved resume language, and bounded project context.",
+      "Official Kansas City Council and CCED records, a protected public-safe review of the 2019 proposal, the complete public account corpus, Council-role records, approved resume language, and carefully scoped project context.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus: "Jamie later transitioned the project to a mission-aligned organization.",
     group: "Operating systems for teams",

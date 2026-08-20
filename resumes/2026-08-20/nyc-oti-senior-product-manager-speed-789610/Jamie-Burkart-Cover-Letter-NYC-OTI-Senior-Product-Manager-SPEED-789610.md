@@ -24,9 +24,8 @@ That experience sits beside fourteen years of product and technical-project work
 
 Speed is not only elapsed time. It is whether a process becomes more legible without moving risk onto the resident, small business, applicant, or public servant least able to absorb it. I bring product discovery, process mapping, user stories, acceptance criteria, web and API fluency, SQL and open-data practice, facilitation, and public implementation. I do not claim enterprise data-platform authority that my record does not establish; I can contribute a grounded bridge among lived process, product delivery, technical constraints, and accountable measurement.
 
-I would welcome the chance to help SPEED identify one costly bottleneck, build a bounded version one with the people inside it, and leave the process more transparent and maintainable. I welcome OTI's independent review of the applicable civil-service qualifications. Thank you for considering my application.
+I would welcome the chance to help SPEED identify one costly bottleneck, build a focused version one with the people inside it, and leave the process more transparent and maintainable. I welcome OTI's independent review of the applicable civil-service qualifications. Thank you for considering my application.
 
 Sincerely,
 
 Jamie Burkart
-

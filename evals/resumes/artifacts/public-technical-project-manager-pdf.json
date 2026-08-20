@@ -5,10 +5,10 @@
   "organization": "Public portfolio",
   "jobId": null,
   "sourceMarkdownPath": "resumes/2026-08-15/technical-project-manager-product-operations-implementation/Jamie-Burkart-Resume-Technical-Project-Manager.md",
-  "sourceMarkdownSha256": "fde24ad745ab3e8de22fa48278dc74446f71ca47cc38283c3221b14390b59fc1",
+  "sourceMarkdownSha256": "fcdbce3a62744c32bb6363bccd680807ed40fa8f3097b93946a123bc6cbca818",
   "pdfPath": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
-  "pdfSha256": "72d49958b5e8ef971685c4c836617e5162ea6a444a5d3d45c91d0340e3986192",
-  "pdfSizeBytes": 95310,
+  "pdfSha256": "1fd9593258eb88f3850bd33fc37a0e06406a2f9720fd6cacfdd334dc2e7e7cb1",
+  "pdfSizeBytes": 95333,
   "pageCount": 2,
   "pageSizePoints": [612, 792],
   "documentTitle": "Jamie Burkart ◍ Resume — Technical Project Manager — 2026-08-15",
@@ -70,14 +70,15 @@
     ],
     "prohibitedPhrases": [
       "1,846 users",
-      "16,142 posts/events"
+      "16,142 posts/events",
+      "bounded geographic activity signal"
     ]
   },
   "experienceHeadingLinkStyleInspection": {
     "status": "pass",
-    "inspectedAt": "2026-08-15",
+    "inspectedAt": "2026-08-20",
     "method": "Google Docs connector readback, HTML export, pdftohtml 25.11.0 XML extraction, and rendered-page inspection",
-    "pdfSha256": "72d49958b5e8ef971685c4c836617e5162ea6a444a5d3d45c91d0340e3986192",
+    "pdfSha256": "1fd9593258eb88f3850bd33fc37a0e06406a2f9720fd6cacfdd334dc2e7e7cb1",
     "requiredLabels": [
       "NYC Artist Coalition / FairRentNYC",
       "WOWList.org",
@@ -112,7 +113,7 @@
   ],
   "visualInspection": {
     "status": "pass",
-    "inspectedAt": "2026-08-15",
+    "inspectedAt": "2026-08-20",
     "pagesInspected": [1, 2],
     "criteria": {
       "noClippedOrOverlappingText": true,
@@ -124,9 +125,9 @@
     }
   },
   "hillClimb": {
-    "baseline": "The exact public PDF presented linked project names cleanly, but the link-style requirement was not candidate-bound and WOWList scale was framed with database user and event-post counts that understated organizers' wider readership.",
-    "candidate": "The public PDF now keeps every experience-heading link black, bold, and un-underlined like its surrounding heading, while describing WOWList as organizer-led publishing and discovery active in 35+ city ecosystems.",
-    "boundedChange": "Replaced one WOWList scale bullet, preserved the two-page Palatino/Oswald/Karla layout and native project links, and added exact-candidate gates for ecosystem-scale wording and visually continuous experience-heading links."
+    "baseline": "The public PDF still used internal governance vocabulary to qualify the WOWList ecosystem description.",
+    "candidate": "The public PDF now describes the 35+ city ecosystem footprint as a limited geographic activity signal while preserving every factual qualification and the established two-page layout.",
+    "boundedChange": "Replaced one adjective in the WOWList scale bullet, preserved the Palatino/Oswald/Karla layout and native project links, and added a deterministic public-language gate."
   },
   "boundary": "This gate verifies the exact public PDF, Markdown binding, generic positioning, chronology, structural safety, required native links, visually continuous experience-heading link styling, the public WOWList ecosystem-scale rule, explicitly forbidden links, and recorded all-page visual inspection. It is not an employer endorsement, application submission, or guarantee of interview or hire."
 }

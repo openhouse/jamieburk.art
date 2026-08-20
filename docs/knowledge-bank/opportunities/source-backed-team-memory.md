@@ -53,7 +53,7 @@ role_requirements:
       - capability.technical-operations
     public_evidence:
       - route: /work/technical-operations
-        needle: Jamie is developing a bounded lab method to preserve decision lineage
+        needle: Jamie is developing a focused lab method to preserve decision lineage
     status: visible-qualified
     gap_type: none
     next_action: Keep the public method legible without exposing the protected lead.
@@ -126,7 +126,7 @@ adoption, deployment, completed work, or market validation.
 
 ## Public-safe core
 
-A bounded lab method for source-backed team memory: reviewable,
+A focused lab method for source-backed team memory: reviewable,
 human-correctable, source-linked operating memory for knowledge-heavy teams.
 
 AI drafts. Humans review. The shared record remains inspectable and correctable.

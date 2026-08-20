@@ -196,7 +196,7 @@ export const hjeChronologyAugust2026 = {
       archiveUrl: "https://web.archive.org/web/20100101090939/http://store.harryepstein.com/",
       preferredPublicUrl: "archive",
       publicCitation: "Archive.org capture of store.harryepstein.com entering its merchant2 commerce application, January 1, 2010.",
-      publicNote: "A directly captured storefront homepage appears on March 3, 2010; January 1 is an observed lower bound rather than an exact launch date.",
+      publicNote: "A directly captured storefront homepage appears on March 3, 2010; January 1 is the earliest observed date rather than an exact launch date.",
       supportsGenerally: ["the store host responded and redirected into its commerce application on January 1, 2010"],
       doesNotEstablish: ["the exact storefront launch date", "a client or contract start date", "continuous availability between captures"]
     },

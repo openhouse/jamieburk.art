@@ -154,7 +154,7 @@ export default function SourceBackedTeamMemoryPage() {
             View selected work
           </JBButton>
           <JBButton href={site.emailHref}>
-            Discuss a bounded source-backed memory sprint
+            Discuss a focused source-backed memory sprint
           </JBButton>
         </div>
       </div>

@@ -196,7 +196,7 @@ export const wowListSocialPopulationJuly2026 = {
       canonicalUrl: "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
       preferredPublicUrl: "canonical",
       publicCitation: "WOW List X full-population and engagement manifest, July 15, 2026.",
-      publicNote: "A public-safe 38-row manifest with resolved URLs, bounded classifications, named public repost identities, and external-adoption examples; raw post bodies and session data are excluded.",
+      publicNote: "A public-safe 38-row manifest with resolved URLs, carefully scoped classifications, named public repost identities, and external-adoption examples; raw post bodies and session data are excluded.",
       supportsGenerally: ["38 recovered profile objects", "35 posted URLs", "relationship and workflow classifications", "bounded engagement and adoption ledgers"],
       doesNotEstablish: ["a complete product archive", "a complete lifetime engagement census", "individual post authorship", "current product availability", "formal institutional adoption"]
     },

@@ -295,7 +295,7 @@ export const nycacFacebookPostKnowledge = {
       canonicalUrl: "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json",
       preferredPublicUrl: "canonical",
       publicCitation: "NYC Artist Coalition Facebook post full-population public-safe census, July 15, 2026.",
-      publicNote: "A 445-row ledger of dates, unique one-way reconciliation hashes, source-route keys, bounded mission, stakeholder, and account-reference tags, content hashes, and displayed interaction counts. Raw bodies, underlying reconciliation identities, social-graph identities, authenticated URLs, and sensitive exact routes are excluded.",
+      publicNote: "A 445-row ledger of dates, unique one-way reconciliation hashes, source-route keys, carefully scoped mission, stakeholder, and account-reference tags, content hashes, and displayed interaction counts. Raw bodies, underlying reconciliation identities, social-graph identities, authenticated URLs, and sensitive exact routes are excluded.",
       supportsGenerally: [
         "598 encountered render rows",
         "153 deduplicated render variants",

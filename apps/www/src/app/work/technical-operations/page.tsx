@@ -64,7 +64,7 @@ const proofMap = [
     project: "Source-Backed Team Memory",
     href: "/lab/source-backed-team-memory",
     proof:
-      "Jamie is developing a bounded lab method to preserve decision lineage, onboarding context, and human-reviewed operating memory."
+      "Jamie is developing a focused lab method to preserve decision lineage, onboarding context, and human-reviewed operating memory."
   }
 ];
 

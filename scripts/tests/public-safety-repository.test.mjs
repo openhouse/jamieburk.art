@@ -22,6 +22,7 @@ const transcriptDirectory = path.join(
 );
 const evaluationRunDirectory = path.join(repoRoot, "docs/evals/runs");
 const evaluationQaDirectory = path.join(repoRoot, "docs/qa");
+const publicAssetDirectory = path.join(repoRoot, "apps/www/public");
 
 test("public transcript indexes contain metadata and locators, not raw speech", () => {
   const roots = [
@@ -116,6 +117,37 @@ test("the public-safety gate scans the complete published QA evidence tree", () 
         ),
       (error) =>
         /published evaluation evidence contains a private local filesystem locator/.test(
+          error.stderr?.toString() ?? ""
+        )
+    );
+  } finally {
+    if (existsSync(mutationPath)) unlinkSync(mutationPath);
+  }
+});
+
+test("the public-safety gate rejects bound and bounded in public-facing prose", () => {
+  const mutationPath = path.join(
+    publicAssetDirectory,
+    "__public-language-mutation__.txt"
+  );
+  try {
+    writeFileSync(
+      mutationPath,
+      "A bound plan can become a bounded public workflow.\n"
+    );
+    assert.throws(
+      () =>
+        execFileSync(
+          process.execPath,
+          [path.join(repoRoot, "scripts/check-public-safety.mjs")],
+          {
+            cwd: repoRoot,
+            encoding: "utf8",
+            stdio: ["ignore", "pipe", "pipe"]
+          }
+        ),
+      (error) =>
+        /public-facing prose uses internal vocabulary 'bound' or 'bounded'/.test(
           error.stderr?.toString() ?? ""
         )
     );

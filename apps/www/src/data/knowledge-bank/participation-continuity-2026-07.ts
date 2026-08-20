@@ -467,7 +467,7 @@ const claims: KnowledgeBank["claims"] = [
     status: "confirmed-with-boundary",
     projections: [{
       key: "case-study",
-      text: "A July 22, 2017 production snapshot supports the description active in 35+ city ecosystems. This is a bounded geographic activity signal, not official chapter status, current activity, readership, retention, or causal impact.",
+      text: "A July 22, 2017 production snapshot supports the description active in 35+ city ecosystems. This is a limited geographic activity signal, not official chapter status, current activity, readership, retention, or causal impact.",
       status: "active",
       citationRequired: true,
       surfaces: ["/work/wowlist"]

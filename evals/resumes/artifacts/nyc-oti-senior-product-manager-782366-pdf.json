@@ -5,10 +5,10 @@
   "organization": "NYC Office of Technology and Innovation - Public Interest Technology Crew",
   "jobId": "782366",
   "sourceMarkdownPath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
-  "sourceMarkdownSha256": "33f481d9c86f19f7e12f621057b213ca492b25228ebd753e133a2a42f031f0e0",
+  "sourceMarkdownSha256": "853eecb6a163790298fb676b7f604ab8d096f1a7d9c77e1cba4c08de7aae90b3",
   "pdfPath": "output/pdf/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf",
-  "pdfSha256": "a27b34dd649feec52bae16a939dff80ca586dba46d71a516b83eff2aeedd5f4b",
-  "pdfSizeBytes": 101955,
+  "pdfSha256": "b0a30921456231b3d8992fadc7823f73739cbd425306b5baa7a4c38f755ceda9",
+  "pdfSizeBytes": 101683,
   "pageCount": 2,
   "pageSizePoints": [612, 792],
   "documentTitle": "Jamie Burkart ◍ Resume ◍ NYC OTI Senior Product Manager 782366 ◍ 2026-08-14",
@@ -56,7 +56,7 @@
   ],
   "visualInspection": {
     "status": "pass",
-    "inspectedAt": "2026-08-14",
+    "inspectedAt": "2026-08-20",
     "pagesInspected": [1, 2],
     "criteria": {
       "noClippedOrOverlappingText": true,
@@ -68,9 +68,9 @@
     }
   },
   "hillClimb": {
-    "baseline": "The tailored Markdown passed content gates but no application-ready PDF was bound to the exact source or visually inspected.",
-    "candidate": "A native Google Docs copy carries the tailored content into the established two-page layout, preserves the source typography system, adds native hyperlinks, and passes exact-artifact and all-page visual QA.",
-    "boundedChange": "Created the application-specific PDF artifact without changing the source template or weakening factual, collective-credit, privacy, or consent boundaries."
+    "baseline": "The stored OTI PDF retained an older WOWList scale sentence and no longer matched the maintained application source.",
+    "candidate": "The native Google Docs artifact now matches the maintained WOWList ecosystem framing, removes the obsolete database counts, and preserves the established two-page layout and links.",
+    "boundedChange": "Updated the exact application artifact and source digest without weakening factual, collective-credit, privacy, or consent boundaries."
   },
   "boundary": "This artifact gate verifies the exact PDF, source binding, structural safety, hyperlinks, and recorded all-page visual inspection. It is not an employer endorsement, civil-service eligibility decision, application submission, or guarantee of interview or hire."
 }

@@ -41,7 +41,7 @@ New York, NY / Remote | 2015–2020
 
 - Co-founded, co-built, and operated with Richard Caceres a natural-language community-calendar and discovery platform for DIY arts and music organizers, replacing a complex event form with collaboratively editable text, followable keyword communities, weekly digests, profiles, embeds, and calendar connections.
 - Connected participatory discovery with hands-on implementation, organizer onboarding, support, adoption, public communication, instrumentation, and low-cost production operations across a distributed maintainer network.
-- Supported organizer-led publishing and discovery active in 35+ city ecosystems; treat that footprint as a bounded geographic activity signal, not official chapters, readership, retention, resident outcomes, or causal impact.
+- Supported organizer-led publishing and discovery active in 35+ city ecosystems; distinguish these activity counts from official chapters, readership, retention, resident outcomes, or causal impact.
 
 ### [CallNYC.org](https://callnyc.org/) — Civic-Tech Builder & Product Translator
 

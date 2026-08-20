@@ -154,6 +154,24 @@ const shippedContentFiles = shippedTextFiles.filter((file) => !scannerFiles.has(
 const publicContentFiles = shippedContentFiles.filter((file) => {
   return relative(file) !== "apps/www/src/data/proofs.ts";
 });
+const publicLanguageFiles = [
+  ...shippedTextFiles.filter((file) => {
+    const rel = relative(file);
+    return (
+      rel.startsWith("apps/www/src/app/") ||
+      rel.startsWith("apps/www/src/components/") ||
+      rel.startsWith("apps/www/src/content/") ||
+      rel === "apps/www/src/data/work.ts" ||
+      rel === "apps/www/src/data/proofs.ts" ||
+      rel === "apps/www/src/data/photography.ts" ||
+      rel.startsWith("apps/www/public/")
+    );
+  }),
+  ...textFiles.filter((file) => {
+    const rel = relative(file);
+    return rel.startsWith("resumes/") && rel.endsWith(".md") && rel !== "resumes/README.md";
+  })
+];
 const publicKnowledgeTranscriptIndexes = textFiles.filter((file) => {
   const rel = relative(file);
   return (
@@ -224,6 +242,70 @@ scanPattern(
   "raw/private transcript exposure appears in production-facing content",
   /\b(?:otter(?:\.ai|_ai)?|raw\s+(?:meeting\s+)?transcripts?|private\s+transcript\s+excerpt|corrected[_ -]?(?:working[_ -]?)?transcripts?|repaired[_ -]?transcripts?)\b/i
 );
+
+for (const file of publicLanguageFiles) {
+  const rel = relative(file);
+  const lines = readText(file).split("\n");
+  for (const [index, line] of lines.entries()) {
+    if (
+      rel === "apps/www/src/data/photography.ts" &&
+      /knowledgeStatus:\s*"bound"/.test(line)
+    ) {
+      continue;
+    }
+    if (/\b(?:bound|bounded)\b/i.test(line)) {
+      addFailure(
+        file,
+        "public-facing prose uses internal vocabulary 'bound' or 'bounded'",
+        index + 1
+      );
+    }
+  }
+}
+
+const publicRegistryPath = path.join(
+  repoRoot,
+  "apps/www/src/data/knowledge-bank/public-registry.json"
+);
+if (existsSync(publicRegistryPath)) {
+  const registry = JSON.parse(readText(publicRegistryPath));
+  const renderedRegistryValues = [
+    ...registry.sources.flatMap((source) => [
+      source.title,
+      source.organization,
+      source.author,
+      source.publicCitation,
+      source.publicNote,
+      ...(source.doesNotEstablish ?? [])
+    ]),
+    ...registry.claims.flatMap((claim) =>
+      claim.projections.map((projection) => projection.text)
+    )
+  ].filter((value) => typeof value === "string");
+  const registrySource = readText(publicRegistryPath);
+  for (const value of renderedRegistryValues) {
+    const match = /\b(?:bound|bounded)\b/i.exec(value);
+    if (match?.index === undefined) continue;
+    const sourceIndex = registrySource.indexOf(value);
+    addFailure(
+      publicRegistryPath,
+      "public-facing prose uses internal vocabulary 'bound' or 'bounded'",
+      sourceIndex >= 0 ? lineForMatch(registrySource, sourceIndex + match.index) : undefined
+    );
+  }
+}
+
+if (existsSync(resumePath)) {
+  const resumeText = pdftotext(resumePath);
+  const match = /\b(?:bound|bounded)\b/i.exec(resumeText);
+  if (match?.index !== undefined) {
+    addFailure(
+      resumePath,
+      "public-facing prose uses internal vocabulary 'bound' or 'bounded'",
+      lineForMatch(resumeText, match.index)
+    );
+  }
+}
 
 scanPattern(
   publicKnowledgeTranscriptIndexes,
