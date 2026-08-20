@@ -23,10 +23,10 @@ const suite = JSON.parse(
   readFileSync(path.join(repoRoot, ".agents/evals/portfolio-production-readiness.json"), "utf8")
 );
 
-test("current professor-lens gate fails closed after the first exact-candidate rejection", () => {
+test("current professor-lens gate fails closed after the reviewed candidate changes", () => {
   const result = evaluateProfessorLenses({ suite, aboutText, sourceNoteText });
   assert.equal(result.pass, false);
-  assert.equal(result.criteria.find((item) => item.id === "candidate-fingerprint")?.pass, true);
+  assert.equal(result.criteria.find((item) => item.id === "candidate-fingerprint")?.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts")?.pass, false);
 });
 

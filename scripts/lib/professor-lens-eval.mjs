@@ -252,7 +252,7 @@ export function evaluateProfessorLenses({
       `${finalScorecards.filter((scorecard) => scorecard.phase === "holdout" &&
         scorecard.score === 4 && scorecard.pass === true &&
         scorecard.candidateSha256 === candidateSha256).length}/${requiredHoldoutCount} final scorecards pass at 4; ` +
-        `${finalScorecards.length}/${requiredHoldoutCount} current-candidate holdouts are present for ${candidateSha256}.`
+        `${finalScorecards.length}/${requiredHoldoutCount} holdout receipts are present; exact-candidate matching is evaluated separately against ${candidateSha256}.`
     )
   ];
 
