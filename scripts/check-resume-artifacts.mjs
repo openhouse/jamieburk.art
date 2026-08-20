@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { inflateSync } from "node:zlib";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const defaultRoot = path.resolve(scriptDir, "..");
@@ -13,6 +14,7 @@ const expectedCriteria = [
   "google-docs-lineage",
   "pdf-structure",
   "approved-typography",
+  "list-marker-typography",
   "visual-inspection",
   "public-resume-projection",
   "resume-editorial-preferences",
@@ -27,6 +29,64 @@ const protectedCategoryAnswerPattern = /\bprotected_category_answer\s*:/i;
 
 function digest(value) {
   return createHash("sha256").update(value).digest("hex");
+}
+
+function decodedPdfStreams(pdf) {
+  const source = pdf.toString("latin1");
+  const streams = [];
+  let cursor = 0;
+  while (cursor < source.length) {
+    const marker = source.indexOf("stream", cursor);
+    if (marker < 0) break;
+    const lineEnd = source.indexOf("\n", marker + 6);
+    if (lineEnd < 0) break;
+    const dataStart = lineEnd + 1;
+    const dataEnd = source.indexOf("endstream", dataStart);
+    if (dataEnd < 0) break;
+    const dictionary = source.slice(Math.max(0, marker - 1000), marker);
+    const bytes = pdf.subarray(dataStart, dataEnd > dataStart && pdf[dataEnd - 1] === 0x0a
+      ? dataEnd - (dataEnd > dataStart + 1 && pdf[dataEnd - 2] === 0x0d ? 2 : 1)
+      : dataEnd);
+    if (/\/Filter\s*\/FlateDecode\b/.test(dictionary)) {
+      try {
+        streams.push(inflateSync(bytes).toString("latin1"));
+      } catch {
+        // Non-content streams may use additional decode parameters. They are
+        // irrelevant unless they expose tagged list items below.
+      }
+    } else {
+      streams.push(bytes.toString("latin1"));
+    }
+    cursor = dataEnd + 9;
+  }
+  return streams;
+}
+
+function listMarkerMeasurements(pdf) {
+  const number = String.raw`(?:\d+(?:\.\d*)?|\.\d+)`;
+  const transformPattern = new RegExp(
+    `(${number})\\s+0\\s+0\\s+(${number})\\s+(?:[-+]?${number}\\s+){2}cm`,
+    "g"
+  );
+  const fontPattern = new RegExp(`/([A-Za-z0-9]+)\\s+(${number})\\s+Tf`, "g");
+  const measurements = [];
+  for (const stream of decodedPdfStreams(pdf)) {
+    for (const listMatch of stream.matchAll(/\/LI\s*<<\/MCID\s+\d+\s*>>\s*BDC/g)) {
+      const start = listMatch.index ?? 0;
+      const before = stream.slice(Math.max(0, start - 700), start);
+      const transforms = [...before.matchAll(transformPattern)];
+      const scale = Number.parseFloat(transforms.at(-1)?.[2] ?? "1");
+      const window = stream.slice(start, start + 1400);
+      const fonts = [...window.matchAll(fontPattern)].map((match) => ({
+        family: match[1],
+        size: Number.parseFloat(match[2]) * scale
+      }));
+      const marker = fonts[0];
+      const text = marker && fonts.find(({ family }) => family !== marker.family);
+      if (marker && text) measurements.push({ markerPoints: marker.size, textPoints: text.size, deltaPoints: text.size - marker.size });
+    }
+  }
+  return measurements;
 }
 
 function escapeRegExp(value) {
@@ -278,6 +338,23 @@ export function evaluateResumeArtifacts(root = defaultRoot) {
       fail("approved-typography", `${label}: approved typography is absent from the manifest or embedded PDF fonts.`);
     }
 
+    const listContract = evaluation?.styleContract?.listMarkerTypography;
+    const artifactListContract = artifact?.layout?.listMarkerTypography;
+    const listMeasurements = listMarkerMeasurements(pdf);
+    const expectedDelta = listContract?.deltaPoints;
+    const tolerance = listContract?.tolerancePoints;
+    if (listContract?.relation !== "one-point-smaller-than-list-text" ||
+        expectedDelta !== 1 ||
+        listContract?.verification !== "exported-pdf-content-stream" ||
+        typeof expectedDelta !== "number" || typeof tolerance !== "number" ||
+        artifactListContract?.relation !== listContract.relation ||
+        artifactListContract?.deltaPoints !== expectedDelta ||
+        artifactListContract?.verifiedListItems !== listMeasurements.length ||
+        listMeasurements.length < 1 ||
+        listMeasurements.some(({ deltaPoints }) => Math.abs(deltaPoints - expectedDelta) > tolerance)) {
+      fail("list-marker-typography", `${label}: every exported list marker must render one point smaller than its associated item text.`);
+    }
+
     const pages = Array.from({ length: pageObjects }, (_, index) => index + 1);
     const checks = artifact?.visualInspection?.checks;
     if (artifact?.visualInspection?.status !== "pass" ||
@@ -339,6 +416,10 @@ export function evaluateResumeArtifacts(root = defaultRoot) {
     const artifact = JSON.parse(readFileSync(portfolioArtifactPath, "utf8"));
     const selectedMarkdownPath = path.join(root, selection?.resume?.markdownPath ?? "");
     const selectedPdfPath = path.join(root, selection?.resume?.pdfPath ?? "");
+    const portfolioPdf = existsSync(selectedPdfPath) ? readFileSync(selectedPdfPath) : undefined;
+    const portfolioMeasurements = portfolioPdf ? listMarkerMeasurements(portfolioPdf) : [];
+    const listContract = evaluation?.styleContract?.listMarkerTypography;
+    const portfolioListContract = artifact?.layout?.listMarkerTypography;
     if (selection?.resume?.artifactPath !== projection.artifact ||
         selection?.resume?.publicPdfPath !== projection.file ||
         artifact?.opportunityId !== "active-opportunity-portfolio" ||
@@ -351,6 +432,15 @@ export function evaluateResumeArtifacts(root = defaultRoot) {
         artifact?.publicProjection?.sha256 !== digest(readFileSync(publicPdfPath)) ||
         digest(readFileSync(publicPdfPath)) !== digest(readFileSync(selectedPdfPath))) {
       fail("public-resume-projection", "The public resume is not digest-bound and byte-identical to the selected opportunity-set portfolio artifact.");
+    }
+    if (listContract?.relation !== "one-point-smaller-than-list-text" ||
+        listContract?.deltaPoints !== 1 ||
+        portfolioListContract?.relation !== listContract.relation ||
+        portfolioListContract?.deltaPoints !== listContract.deltaPoints ||
+        portfolioListContract?.verifiedListItems !== portfolioMeasurements.length ||
+        portfolioMeasurements.length < 1 ||
+        portfolioMeasurements.some(({ deltaPoints }) => Math.abs(deltaPoints - listContract.deltaPoints) > listContract.tolerancePoints)) {
+      fail("list-marker-typography", "The selected public resume's exported list markers are not one point smaller than their associated item text.");
     }
   }
 

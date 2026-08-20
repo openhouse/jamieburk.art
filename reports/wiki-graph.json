@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-20T13:08:43-04:00",
-  "sourceCommit": "82aed4f1384fe7799c2f485ddb9395775d60a86e",
-  "sourceFingerprint": "98cfe61947950f2c486046dd36e540cc33b264a00698078dda025083f5b6d031",
+  "generatedAt": "2026-08-20T15:07:37-04:00",
+  "sourceCommit": "76eb5753cb7039843dca99824f6dc598c5f0cd6f",
+  "sourceFingerprint": "fb9a7508ac59851125b5547ebe9748f58215de7ee3a62a37ec4278080143bb10",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -2990,7 +2990,7 @@
       "status": "governed-open",
       "visibility": "public-safe",
       "sensitivity": "moderate",
-      "summary": "Public-safe event record for the January 27, 2017 DCLA meeting that became a principal formation hinge for the continuing NYC Artist Coalition operating system.",
+      "summary": "Public-safe event record for the January 27, 2017 DCLA meeting that became a principal turning point in the formation of the continuing NYC Artist Coalition operating system.",
       "aliases": [
         "NYC DIY Spaces post Ghost Ship: Dept of Cultural Affairs Meeting"
       ],
@@ -12351,7 +12351,7 @@
       "to": "project.nyc-artist-coalition",
       "source": "frontmatter",
       "href": "../projects/nyc-artist-coalition-2017.md",
-      "context": "The meeting became a principal formation hinge for the coalition's shared identity and continuing work."
+      "context": "The meeting became a principal turning point in the coalition's shared identity and continuing work."
     },
     {
       "from": "event.nyc.dcla.diy-spaces-listening.2017-01-27",

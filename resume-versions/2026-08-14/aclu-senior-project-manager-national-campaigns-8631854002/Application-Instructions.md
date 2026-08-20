@@ -8,7 +8,7 @@ canonical_application_url: https://job-boards.greenhouse.io/aclu/jobs/8631854002
 resume_markdown: Jamie-Burkart-Resume.md
 resume_markdown_sha256: ecb198e544a73464edaec243baf90af0fa5c40dde80cce6035c58a60aca71132
 resume_pdf: Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-National-Campaigns-8631854002.pdf
-resume_pdf_sha256: 21d510613f761e10578c87f9d2c349cd740dca6799ec2c170e51cda8edc81b12
+resume_pdf_sha256: 08021abe4281447e4131dccf3faacb5193a1bb0d607bb2446fc61ecd0f653c8c
 cover_letter: Cover-Letter.md
 cover_letter_sha256: e967435bae24ae6f2ba3aed3a70590f1f8783a1a416154d532368222c690bd4e
 ---

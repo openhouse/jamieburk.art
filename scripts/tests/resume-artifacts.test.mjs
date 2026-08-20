@@ -80,6 +80,14 @@ function escapedPdfLiteral(value) {
   ).join(""));
 }
 
+function activePdfUriBytes(pdf, value) {
+  for (const candidate of [Buffer.from(value), escapedPdfLiteral(value)]) {
+    const index = pdf.indexOf(candidate);
+    if (index !== -1) return { bytes: candidate, index };
+  }
+  return { bytes: Buffer.alloc(0), index: -1 };
+}
+
 function rebindResumePdf(root, opportunityId, mutate) {
   const manifest = readJson(root, "evals/resume-hiring-readers/current.json");
   const entry = manifest.opportunities.find((opportunity) => opportunity.opportunityId === opportunityId);
@@ -301,6 +309,43 @@ test("unverified Google Docs lineage fails closed", () => {
   }
 });
 
+test("a resume without the one-point-smaller list-marker contract fails closed", () => {
+  const root = fixture();
+  try {
+    const entry = firstEntry(root);
+    const relative = path.join(path.dirname(entry.resumePath), "artifact.json");
+    const artifact = readJson(root, relative);
+    delete artifact.layout.listMarkerTypography;
+    writeJson(root, relative, artifact);
+    const result = run(root);
+    assert.notEqual(result.status, 0);
+    assert.match(result.stdout, /list-marker-typography/);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test("artifact metadata cannot weaken the required one-point marker difference", () => {
+  const root = fixture();
+  try {
+    const evaluationRelative = "evals/resume-artifacts/evals.json";
+    const evaluation = readJson(root, evaluationRelative);
+    evaluation.styleContract.listMarkerTypography.deltaPoints = 0;
+    writeJson(root, evaluationRelative, evaluation);
+    for (const entry of readJson(root, "evals/resume-hiring-readers/current.json").opportunities) {
+      const relative = path.join(path.dirname(entry.resumePath), "artifact.json");
+      const artifact = readJson(root, relative);
+      artifact.layout.listMarkerTypography.deltaPoints = 0;
+      writeJson(root, relative, artifact);
+    }
+    const result = run(root);
+    assert.notEqual(result.status, 0);
+    assert.match(result.stdout, /list-marker-typography/);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
 test("an incomplete page-inspection receipt fails closed", () => {
   const root = fixture();
   try {
@@ -413,10 +458,12 @@ test("a Politico New York PDF without the canonical article destination fails cl
     const artifact = readJson(root, artifactRelative);
     const pdfPath = path.join(directory, artifact.pdf.file);
     const pdf = readFileSync(pdfPath);
-    const expected = escapedPdfLiteral("https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf");
+    const { bytes: expected, index } = activePdfUriBytes(
+      pdf,
+      "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf"
+    );
     const replacement = Buffer.alloc(expected.length, "x");
     assert.equal(replacement.length, expected.length);
-    const index = pdf.indexOf(expected);
     assert.notEqual(index, -1, "current fixture must contain the canonical PDF destination");
     replacement.copy(pdf, index);
     writeFileSync(pdfPath, pdf);
@@ -462,9 +509,10 @@ test("an active PDF annotation fails for a project designated as plain text", ()
   const root = fixture();
   try {
     rebindResumePdf(root, "opportunity.nyc-oti.senior-product-manager.782366", (pdf) => {
-      const before = escapedPdfLiteral("https://nycartc.com/");
-      const after = escapedPdfLiteral("https://www.harryepstein.com/");
-      const index = pdf.indexOf(before);
+      const { bytes: before, index } = activePdfUriBytes(pdf, "https://nycartc.com/");
+      const after = before.includes(0x5c)
+        ? escapedPdfLiteral("https://www.harryepstein.com/")
+        : Buffer.from("https://www.harryepstein.com/");
       assert.notEqual(index, -1, "current fixture must expose an active page-one link destination");
       return Buffer.concat([pdf.subarray(0, index), after, pdf.subarray(index + before.length)]);
     });

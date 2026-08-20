@@ -11,8 +11,8 @@
   "pdf": {
     "file": "Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf",
     "mediaType": "application/pdf",
-    "sha256": "8f5039b6327cb12b472b9123ef7919f6f2e9400cc952c6c10e681a06d35536db",
-    "bytes": 96970,
+    "sha256": "8b527a90cfe7709c74385c36c5b1be3c46f94b63c5b4cd2bcc83e1c0848f64e0",
+    "bytes": 95188,
     "pages": 2,
     "pageSize": "US Letter",
     "tagged": true
@@ -25,6 +25,11 @@
       "Oswald",
       "Karla"
     ],
+    "listMarkerTypography": {
+      "relation": "one-point-smaller-than-list-text",
+      "deltaPoints": 1,
+      "verifiedListItems": 16
+    },
     "sourceStylesPreserved": true,
     "intentionalAdaptations": [
       "The target role occupies the prior resume's teal Oswald role line.",
@@ -32,7 +37,8 @@
       "A deliberate page break before WOWList keeps the first page focused on the professional summary, capabilities, Thick Arts, and current NYC coalition work.",
       "Three defensive research-process caveats were removed from hiring-facing prose while the underlying factual scope and collective credit remained unchanged.",
       "Harry J. Epstein Company remains plain body text with no hyperlink styling or PDF link annotation.",
-      "Politico New York is a visible hyperlink to the canonical archived article PDF."
+      "Politico New York is a visible hyperlink to the canonical archived article PDF.",
+      "Tagged native-list markers render one point smaller than their associated item text after deterministic post-export normalization."
     ]
   },
   "googleWorkspace": {
@@ -56,7 +62,8 @@
       "Readable hierarchy, contact links, margins, and line spacing",
       "Page two begins cleanly with WOWList and preserves a balanced scan path through education and additional information",
       "Harry J. Epstein Company renders in the surrounding body style and is not interactive",
-      "Politico New York is visibly linked in source-consistent blue underlined styling"
+      "Politico New York is visibly linked in source-consistent blue underlined styling",
+      "All 16 list markers are visibly subordinate to their associated text by one point"
     ]
   }
 }

@@ -3,7 +3,7 @@
   "candidateSha": "1d915105bce173a331e76ec8a58e69ccfef536d8",
   "portfolioSnapshotHash": "960b9dad10995afda58ce8fabbc7a587c63fb8178bc633891c1e94d80bdad2b5",
   "publicReportHash": "ab25673e164ffc6ce2f4b293ba0eb8931ed175df051f98e6f8ee975057ee9ebc",
-  "wikiSourceFingerprint": "98cfe61947950f2c486046dd36e540cc33b264a00698078dda025083f5b6d031",
+  "wikiSourceFingerprint": "fb9a7508ac59851125b5547ebe9748f58215de7ee3a62a37ec4278080143bb10",
   "findings": [
     {
       "findingId": "finding.requirement.oti-product.cross-functional-launch",

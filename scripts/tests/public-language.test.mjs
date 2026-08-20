@@ -8,7 +8,7 @@ import publicRegistry from "../../apps/www/src/data/knowledge-bank/public-regist
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
-const forbiddenPublicLanguage = /\b(?:bound|bounded)\b/giu;
+const forbiddenPublicLanguage = /\b(?:bound|bounded|hinge|hinges|hinged|hinging)\b/giu;
 
 function filesWithin(relativeDirectory, extensions) {
   const directory = path.join(repoRoot, relativeDirectory);
@@ -71,6 +71,13 @@ function publicLanguageOccurrences() {
   return violations.sort();
 }
 
-test("reader-facing surfaces replace bound and bounded with context-specific language", () => {
+test("reader-facing surfaces replace governance shorthand with context-specific language", () => {
   assert.deepEqual(publicLanguageOccurrences(), []);
+});
+
+test("the public-language vocabulary rejects every form of hinge", () => {
+  assert.deepEqual(
+    occurrences("fixture", "hinge hinges hinged hinging"),
+    ["fixture: hinge", "fixture: hinges", "fixture: hinged", "fixture: hinging"]
+  );
 });

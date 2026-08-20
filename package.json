@@ -65,6 +65,7 @@
     "test:resume-versions": "node --test scripts/tests/resume-versions.test.mjs",
     "evals:resume-artifacts": "node scripts/check-resume-artifacts.mjs",
     "test:resume-artifacts": "node --test scripts/tests/resume-artifacts.test.mjs",
+    "resume:list-markers": "node scripts/normalize-resume-list-markers.mjs",
     "evals:public-resume": "node scripts/evals-public-resume-active-opportunities.mjs",
     "evals:public-resume:deterministic": "node scripts/evals-public-resume-active-opportunities.mjs --deterministic-only",
     "test:public-resume": "node --test scripts/tests/public-resume-active-opportunities.test.mjs",

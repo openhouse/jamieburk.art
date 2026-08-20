@@ -8,7 +8,7 @@ canonical_application_url: https://job-boards.greenhouse.io/aclu/jobs/8620968002
 resume_markdown: Jamie-Burkart-Resume.md
 resume_markdown_sha256: f3a730623dee959d68fc200acaa21c27cfad1a5d2579a91f2bc34ce305180dd7
 resume_pdf: Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-Learning-and-Project-Solutions-8620968002.pdf
-resume_pdf_sha256: 0a43194150b48726987d4606368dccc15f48710dfe5ba927a6cbe97bc2c73773
+resume_pdf_sha256: 0228da2606cef6167688762eb7debec7c82e0e3005639a285684366fa1fb3bd4
 cover_letter: Cover-Letter.md
 cover_letter_sha256: 0d9083397b92d9189fd789329c33d0239175b4baaf8be949ef164fe52cb2f2b3
 ---

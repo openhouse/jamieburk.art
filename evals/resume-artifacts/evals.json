@@ -11,6 +11,12 @@
       "Oswald",
       "Karla"
     ],
+    "listMarkerTypography": {
+      "relation": "one-point-smaller-than-list-text",
+      "deltaPoints": 1,
+      "tolerancePoints": 0.05,
+      "verification": "exported-pdf-content-stream"
+    },
     "sourceLocatorMayBeCommitted": false,
     "copyLocatorMayBeCommitted": false
   },
@@ -102,6 +108,11 @@
       "id": "approved-typography",
       "blocking": true,
       "criterion": "Each PDF embeds the established Palatino Linotype, Oswald, and Karla typography."
+    },
+    {
+      "id": "list-marker-typography",
+      "blocking": true,
+      "criterion": "Every native-list bullet or numeral in each exported resume PDF renders one point smaller than its associated item text."
     },
     {
       "id": "visual-inspection",

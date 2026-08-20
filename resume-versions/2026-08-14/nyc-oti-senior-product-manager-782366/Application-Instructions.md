@@ -8,7 +8,7 @@ canonical_application_url: https://jobs.smartrecruiters.com/oneclick-ui/company/
 resume_markdown: Jamie-Burkart-Resume.md
 resume_markdown_sha256: cee950eb8e146578033a9b6c48948ab5e72f182b716e11aa7bdb60dd479be27c
 resume_pdf: Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf
-resume_pdf_sha256: 8f5039b6327cb12b472b9123ef7919f6f2e9400cc952c6c10e681a06d35536db
+resume_pdf_sha256: 8b527a90cfe7709c74385c36c5b1be3c46f94b63c5b4cd2bcc83e1c0848f64e0
 cover_letter: Cover-Letter.md
 cover_letter_sha256: 606eaf4b628d07ed68dc20fac90bd5db3d84456d6d042f158f4b88639d85068e
 ---

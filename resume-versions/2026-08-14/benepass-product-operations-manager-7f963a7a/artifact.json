@@ -11,8 +11,8 @@
   "pdf": {
     "file": "Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.pdf",
     "mediaType": "application/pdf",
-    "sha256": "43e313849d5f6536668c6cb628971880d97f41cea70fe7b9133064d64ac3f721",
-    "bytes": 78662,
+    "sha256": "d88afc7815c955f6ce3885b429e824a0582ce3e0214ad7eb8f705a944c31209b",
+    "bytes": 78233,
     "pages": 2,
     "pageSize": "US Letter",
     "tagged": true
@@ -25,10 +25,16 @@
       "Oswald",
       "Karla"
     ],
+    "listMarkerTypography": {
+      "relation": "one-point-smaller-than-list-text",
+      "deltaPoints": 1,
+      "verifiedListItems": 14
+    },
     "sourceStylesPreserved": true,
     "intentionalAdaptations": [
       "The opportunity title occupies the established teal Oswald role line.",
-      "A page break before 196 Artists Residency keeps every experience group and evidence list intact."
+      "A page break before 196 Artists Residency keeps every experience group and evidence list intact.",
+      "Tagged native-list markers render one point smaller than their associated item text after deterministic post-export normalization."
     ]
   },
   "googleWorkspace": {
@@ -49,7 +55,8 @@
       "No clipped, overlapping, or missing text",
       "No broken glyphs or visible Markdown markers",
       "No stranded heading, split experience group, or isolated bullet continuation",
-      "Readable hierarchy, contact links, margins, line spacing, and page balance"
+      "Readable hierarchy, contact links, margins, line spacing, and page balance",
+      "All 14 list markers are visibly subordinate to their associated text by one point"
     ]
   }
 }

@@ -11,8 +11,8 @@
   "pdf": {
     "file": "Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-National-Campaigns-8631854002.pdf",
     "mediaType": "application/pdf",
-    "sha256": "21d510613f761e10578c87f9d2c349cd740dca6799ec2c170e51cda8edc81b12",
-    "bytes": 84008,
+    "sha256": "08021abe4281447e4131dccf3faacb5193a1bb0d607bb2446fc61ecd0f653c8c",
+    "bytes": 83742,
     "pages": 2,
     "pageSize": "US Letter",
     "tagged": true
@@ -25,11 +25,17 @@
       "Oswald",
       "Karla"
     ],
+    "listMarkerTypography": {
+      "relation": "one-point-smaller-than-list-text",
+      "deltaPoints": 1,
+      "verifiedListItems": 12
+    },
     "sourceStylesPreserved": true,
     "intentionalAdaptations": [
       "The opportunity title occupies the established teal Oswald role line.",
       "A page break before 196 Artists Residency keeps every experience group and evidence list intact.",
-      "Politico New York is a visible source-style hyperlink to the canonical archived article PDF without exposing Markdown markers."
+      "Politico New York is a visible source-style hyperlink to the canonical archived article PDF without exposing Markdown markers.",
+      "Tagged native-list markers render one point smaller than their associated item text after deterministic post-export normalization."
     ]
   },
   "googleWorkspace": {
@@ -51,7 +57,8 @@
       "No broken glyphs or visible Markdown markers",
       "No stranded heading, split experience group, or isolated bullet continuation",
       "Readable hierarchy, contact links, margins, line spacing, and page balance",
-      "Politico New York is visibly linked in source-consistent blue italic underlined styling"
+      "Politico New York is visibly linked in source-consistent blue italic underlined styling",
+      "All 12 list markers are visibly subordinate to their associated text by one point"
     ]
   }
 }

@@ -20,20 +20,28 @@
       "Palatino Linotype",
       "Oswald",
       "Karla"
+    ],
+    "listMarkerTypography": {
+      "relation": "one-point-smaller-than-list-text",
+      "deltaPoints": 1,
+      "verifiedListItems": 18
+    },
+    "intentionalAdaptations": [
+      "Tagged native-list markers render one point smaller than their associated item text after deterministic post-export normalization."
     ]
   },
   "pdf": {
     "file": "Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
     "mediaType": "application/pdf",
-    "sha256": "0e72cc95f59bb188e24cd664ad40aedc67c4a0fa9ff56a764cf7c722cea2b76d",
-    "bytes": 101390,
+    "sha256": "5d083805d65f840b144ee5bb5880706043bbf5bd24a43de25f50eeab17f4f035",
+    "bytes": 101181,
     "pages": 2,
     "pageSize": "US Letter",
     "tagged": true
   },
   "publicProjection": {
     "file": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
-    "sha256": "0e72cc95f59bb188e24cd664ad40aedc67c4a0fa9ff56a764cf7c722cea2b76d"
+    "sha256": "5d083805d65f840b144ee5bb5880706043bbf5bd24a43de25f50eeab17f4f035"
   },
   "visualInspection": {
     "status": "pass",
@@ -52,7 +60,8 @@
       "Politico New York alone carries the canonical archived-article link in its sentence.",
       "The carefully scoped Tired of Tires service metrics and avoided-fee estimate fit without crowding or clipping.",
       "The governed $490,539 public-award wording fits without crowding or clipping.",
-      "Both pages preserve readable spacing and balanced hierarchy."
+      "Both pages preserve readable spacing and balanced hierarchy.",
+      "All 18 list markers are visibly subordinate to their associated text by one point."
     ]
   }
 }

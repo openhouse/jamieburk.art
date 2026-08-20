@@ -1,11 +1,11 @@
 {
   "reportVersion": 5,
-  "checkedAt": "2026-08-20T19:00:48.275Z",
+  "checkedAt": "2026-08-20T19:48:32.348Z",
   "baseUrl": "http://127.0.0.1:3117",
-  "publicSurfaceFingerprint": "97143893d351d3d2f4c4a6ebbcc381b4d7c64ec390111769d347920faa1fc2c3",
+  "publicSurfaceFingerprint": "bfeb83290129a94feaecceed960e72c21777e35e6fc13297d1328fbe553107ad",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 155,
-  "captureMethod": "Playwright Chromium viewport screenshots of the exact local candidate; About captures are framed on the systems through-line; no deployment or indexing action.",
+  "captureMethod": "Playwright Chromium viewport screenshots of the exact production-style container candidate; About captures are framed on the systems through-line; no deployment or indexing action.",
   "routes": [
     {
       "path": "/",
@@ -20,7 +20,7 @@
           },
           "pixelWidth": 1280,
           "pixelHeight": 900,
-          "sha256": "63bcdbba1f99ea8df1d46920c28364eb5a8cc6b387d17424ec4ffe5af10c139c",
+          "sha256": "e42b31b71365406dabc915ee08eccef4976b6db6e29e2a1deda52433e2b97728",
           "file": "candidate-home-desktop.png"
         },
         {
@@ -31,7 +31,7 @@
           },
           "pixelWidth": 375,
           "pixelHeight": 812,
-          "sha256": "3a7f00083bd5dbb8640221975203d943813292ec9d0749010a969b6118b33a6d",
+          "sha256": "640af0b11ab4bdd1f8d51a7a878d9a366d51ea2f0c2a90eb7be55849d8dc444e",
           "file": "candidate-home-viewport.png"
         }
       ]
@@ -49,7 +49,7 @@
           },
           "pixelWidth": 1280,
           "pixelHeight": 900,
-          "sha256": "2d51cfacb56c87cd53cc35e2f9ec6802d1a1c8bfd078bb172c6e7bb027736eec",
+          "sha256": "395d607542ac724d9671cf1b0aeab38df8b6828c2168975012a4d3be4857c1dc",
           "file": "professor-lenses-about-desktop.png",
           "framedContent": {
             "systemsPeopleCanInhabitHeadingPresent": true,
@@ -64,7 +64,7 @@
           },
           "pixelWidth": 375,
           "pixelHeight": 1200,
-          "sha256": "ff7a0634fdb9802c23aa29bd1286894f7bcf406801620a4bb806cf95e8ab2ae8",
+          "sha256": "bbe992f2c7124c1b4a41827c3a88fc8e4b6736da5937bef07aa75b377a36990a",
           "file": "professor-lenses-about-mobile.png",
           "framedContent": {
             "systemsPeopleCanInhabitHeadingPresent": true,
@@ -75,5 +75,11 @@
     }
   ],
   "passed": true,
-  "verification": "Fresh Playwright viewport captures from the exact local candidate; screenshots retained and content-addressed in this directory."
+  "verification": "Fresh Playwright viewport captures from the exact production-style container candidate; screenshots retained and content-addressed in this directory.",
+  "refresh": {
+    "candidateChange": "Public resume PDF typography only; no route, component, style, or copy input changed.",
+    "productionBuild": "Dockerfile build completed with a clean npm ci, TypeScript check, and Next.js production build.",
+    "responsiveInspection": "All 56 route-width combinations retained one h1, one main landmark, zero horizontal overflow, zero unlabeled images, and zero broken images.",
+    "browserDiagnostics": "No browser warnings or errors were observed during the current run."
+  }
 }

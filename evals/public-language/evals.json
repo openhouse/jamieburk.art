@@ -4,7 +4,11 @@
   "purpose": "Keep repeated governance shorthand out of reader-facing prose and require context-specific plain language instead.",
   "forbiddenWholeWords": [
     "bound",
-    "bounded"
+    "bounded",
+    "hinge",
+    "hinges",
+    "hinged",
+    "hinging"
   ],
   "caseSensitive": false,
   "publicSurfaceCoverage": [
@@ -22,7 +26,7 @@
     "research-only observations, limitations, and support labels that cannot render publicly",
     "private or held knowledge-bank material"
   ],
-  "replacementPrinciple": "Name the actual relationship: well-scoped requirement, focused pathway, dated snapshot, defined classification, specific evidence, limited credit, or supportable claim.",
+  "replacementPrinciple": "Name the actual relationship: well-scoped requirement, focused pathway, dated snapshot, defined classification, specific evidence, turning point, limited credit, or supportable claim.",
   "acceptance": {
     "command": "npm run evals:public-language",
     "condition": "The assembled reader-facing corpus contains zero case-insensitive whole-word occurrences."

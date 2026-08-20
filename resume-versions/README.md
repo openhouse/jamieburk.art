@@ -13,8 +13,11 @@ resume-versions/YYYY-MM-DD/job-application-slug/artifact.json
 The Markdown is the tailored source of truth. Its PDF sibling is rendered from
 a native copy of the please-read-only Google Docs resume style example. The
 copy preserves the established Palatino Linotype, Oswald, and Karla system,
-page geometry, hierarchy, links, bullets, and spacing. Google Docs locators are
-working metadata and are never committed.
+page geometry, hierarchy, links, native lists, and spacing. After Google Docs
+export, run `scripts/normalize-resume-list-markers.mjs` on each PDF. It preserves
+the tagged list structure and reduces only each list label's text operator until
+the marker renders exactly one point smaller than its associated item text.
+Google Docs locators are working metadata and are never committed.
 
 `artifact.json` binds the opportunity source, Markdown, and PDF by SHA-256 and
 records page geometry, embedded typography, native-copy provenance, and the

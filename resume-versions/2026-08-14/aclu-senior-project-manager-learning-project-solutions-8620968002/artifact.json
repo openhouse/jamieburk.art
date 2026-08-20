@@ -11,8 +11,8 @@
   "pdf": {
     "file": "Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-Learning-and-Project-Solutions-8620968002.pdf",
     "mediaType": "application/pdf",
-    "sha256": "0a43194150b48726987d4606368dccc15f48710dfe5ba927a6cbe97bc2c73773",
-    "bytes": 79393,
+    "sha256": "0228da2606cef6167688762eb7debec7c82e0e3005639a285684366fa1fb3bd4",
+    "bytes": 79020,
     "pages": 2,
     "pageSize": "US Letter",
     "tagged": true
@@ -25,10 +25,16 @@
       "Oswald",
       "Karla"
     ],
+    "listMarkerTypography": {
+      "relation": "one-point-smaller-than-list-text",
+      "deltaPoints": 1,
+      "verifiedListItems": 13
+    },
     "sourceStylesPreserved": true,
     "intentionalAdaptations": [
       "The opportunity title occupies the established teal Oswald role line.",
-      "A page break before 196 Artists Residency keeps every experience group and evidence list intact."
+      "A page break before 196 Artists Residency keeps every experience group and evidence list intact.",
+      "Tagged native-list markers render one point smaller than their associated item text after deterministic post-export normalization."
     ]
   },
   "googleWorkspace": {
@@ -49,7 +55,8 @@
       "No clipped, overlapping, or missing text",
       "No broken glyphs or visible Markdown markers",
       "No stranded heading, split experience group, or isolated bullet continuation",
-      "Readable hierarchy, contact links, margins, line spacing, and page balance"
+      "Readable hierarchy, contact links, margins, line spacing, and page balance",
+      "All 13 list markers are visibly subordinate to their associated text by one point"
     ]
   }
 }
