@@ -64,20 +64,36 @@ test("Claim resolver returns only active approved projections", () => {
   assert.throws(() => getClaimProjection("CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", "resume-html", "/work"), /not approved/);
 });
 
-test("every public work Claim is present in the generated public registry", () => {
+test("every public work Claim matches a generated page occurrence and active projection", () => {
   const publicClaimIds = new Set(publicCitationRegistry.claims.map((claim) => claim.id));
-  const workClaimIds = readdirSync("apps/www/src/content/work")
+  const workClaims = readdirSync("apps/www/src/content/work")
     .filter((name) => name.endsWith(".mdx"))
     .flatMap((name) =>
-      [...readFileSync(`apps/www/src/content/work/${name}`, "utf8").matchAll(/claimId="([^"]+)"/g)]
-        .map((match) => match[1])
+      [...readFileSync(`apps/www/src/content/work/${name}`, "utf8").matchAll(/<Claim\s+([\s\S]*?)\/>/g)]
+        .map((match) => Object.fromEntries(
+          [...match[1].matchAll(/(claimId|projection|surface|pageId|occurrenceId)="([^"]+)"/g)]
+            .map((attribute) => [attribute[1], attribute[2]])
+        ))
     );
 
   assert.deepEqual(
-    [...new Set(workClaimIds)].filter((claimId) => !publicClaimIds.has(claimId)),
+    [...new Set(workClaims.map(({ claimId }) => claimId))].filter((claimId) => !publicClaimIds.has(claimId)),
     [],
     "Run npm run generate:citations after registering each work-page claim occurrence."
   );
+
+  for (const workClaim of workClaims) {
+    if (!workClaim.pageId && !workClaim.occurrenceId) {
+      assert.doesNotThrow(() => getClaimProjection(workClaim.claimId, workClaim.projection, workClaim.surface));
+      continue;
+    }
+    const page = publicCitationRegistry.pages.find((item) => item.id === workClaim.pageId);
+    const occurrence = page?.occurrences.find((item) => item.id === workClaim.occurrenceId);
+    assert.equal(page?.surface, workClaim.surface, `${workClaim.pageId} must govern ${workClaim.surface}`);
+    assert.equal(occurrence?.claimId, workClaim.claimId, `${workClaim.pageId}/${workClaim.occurrenceId} must bind ${workClaim.claimId}`);
+    assert.equal(occurrence?.projection, workClaim.projection, `${workClaim.pageId}/${workClaim.occurrenceId} must bind ${workClaim.projection}`);
+    assert.doesNotThrow(() => getClaimProjection(workClaim.claimId, workClaim.projection, workClaim.surface));
+  }
 });
 
 test("corrections retire old wording from public surfaces", () => {

@@ -606,7 +606,7 @@ const knowledgeBankInput = {
     sourceOrder: [],
     occurrences: [
       {
-        id: "kc-spaces-fund-public-implementation",
+        id: "digital-support",
         claimId: "CLM-KCSPACES-CROSS-CHANNEL-DIGITAL-SUPPORT",
         projection: "case-study"
       }
