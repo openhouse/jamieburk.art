@@ -29,6 +29,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     "metadata-and-locator-safety",
     "editorial-not-decorative",
     "truthful-project-cover-field",
+    "hiring-argument-project-sequence",
     "tag-navigation-contract",
     "human-index-material-system",
     "responsive-image-contract",
@@ -142,6 +143,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   }
 
   const workCovers = readText("apps/www/src/data/work-covers.ts");
+  const workData = readText("apps/www/src/data/work.ts");
   const workCard = readText("apps/www/src/components/WorkCard.tsx");
   const caseStudyLayout = readText("apps/www/src/components/CaseStudyLayout.tsx");
   const workIndex = readText("apps/www/src/app/work/page.tsx");
@@ -149,7 +151,8 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   const expectedCovers = [
     ['"harry-j-epstein"', '"/artifacts/hje/public-site.png"'],
     ['"fair-rent-nyc"', "participationMedia.marketHotelTownHall.src"],
-    ["callnyc", '"/artifacts/callnyc/archived-prototype.png"'],
+    ['"kc-spaces-fund"', '"/artifacts/kc-spaces-fund/public-site.webp"'],
+    ["callnyc", '"/artifacts/callnyc/original-launch-2016.webp"'],
     ["wowlist", '"/artifacts/wowlist/public-threshold.webp"'],
     ['"196-sunday-dinner"', "portfolioPhotos.sundayDinnerSharedMap.src"],
     ['"kc-town-hall"', "portfolioPhotos.kcTownHallRoofWork.src"]
@@ -167,6 +170,31 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
       !caseStudyLayout.includes("getWorkCover(item.slug)") ||
       !caseStudyLayout.includes("cover.caption") || !caseStudyLayout.includes("cover.credit")) {
     fail("truthful-project-cover-field", "Work cards and case-study openings must render captioned covers from the cover manifest.");
+  }
+
+  const featuredSequence = [...workData.matchAll(
+    /^    title: "([^"]+)",[\s\S]*?^    featured: (true|false),\n    priority: (\d+),/gm
+  )]
+    .map(([, title, featured, priority]) => ({
+      title,
+      featured: featured === "true",
+      priority: Number(priority)
+    }))
+    .filter(({ featured }) => featured)
+    .sort((left, right) => left.priority - right.priority)
+    .map(({ title }) => title);
+  const expectedFeaturedSequence = [
+    "NYC Artist Coalition / FairRentNYC",
+    "KC Spaces Fund",
+    "CallNYC.org",
+    "Harry J. Epstein Company",
+    "WOW List"
+  ];
+  if (JSON.stringify(featuredSequence) !== JSON.stringify(expectedFeaturedSequence)) {
+    fail(
+      "hiring-argument-project-sequence",
+      `Homepage project order drifted: ${featuredSequence.join(" -> ") || "no featured projects"}.`
+    );
   }
 
   if (!tagList.includes('from "next/link"') || !tagList.includes("/work?tag=") ||

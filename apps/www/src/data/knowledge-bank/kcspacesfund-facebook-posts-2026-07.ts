@@ -530,6 +530,13 @@ export const kcSpacesFundFacebookPostClaims: KnowledgeBank["claims"] = [
         surfaces: ["/work/technical-operations"]
       },
       {
+        key: "case-study",
+        text: "Jamie built and maintained KC Spaces Fund's campaign web infrastructure, customized a reusable Ghost theme, implemented public action routes, and supported an available cross-channel identity. Collaborator-led channels used that identity to route applications, donations, resources, and funded-space updates.",
+        status: "active",
+        citationRequired: false,
+        surfaces: ["/work/kc-spaces-fund"]
+      },
+      {
         key: "archive-note",
         text: "Jamie's bounded role was website, digital-infrastructure, and cross-channel naming support, not Facebook publishing, public organizing, fundraising ownership, or grant decisions.",
         status: "active",

@@ -102,6 +102,26 @@ test("every work item retains a truthful cover visual", () => {
   assert(result.failures.some(({ criterion }) => criterion === "truthful-project-cover-field"));
 });
 
+test("the homepage hiring argument fails when historical commercial work leads current civic work", () => {
+  const path = "apps/www/src/data/work.ts";
+  const source = readFileSync(path, "utf8")
+    .replace(
+      /title: "NYC Artist Coalition \/ FairRentNYC",([\s\S]*?)priority: 1,/,
+      'title: "NYC Artist Coalition / FairRentNYC",$1priority: 4,'
+    )
+    .replace(
+      /title: "Harry J\. Epstein Company",([\s\S]*?)priority: 4,/,
+      'title: "Harry J. Epstein Company",$1priority: 1,'
+    );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(
+    result.failures.some(
+      ({ criterion }) => criterion === "hiring-argument-project-sequence"
+    )
+  );
+});
+
 test("tag-shaped controls retain real destinations", () => {
   const path = "apps/www/src/components/TagList.tsx";
   const source = readFileSync(path, "utf8").replace("/work?tag=", "/work#");

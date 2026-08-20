@@ -159,16 +159,38 @@
       }
     },
     {
-      "id": "media.callnyc-archived-prototype",
-      "source": "/artifacts/callnyc/archived-prototype.png",
-      "sourceSha256": "b263cbef2fec8ccf684d02f2a1c08ed394e9fdb1d22a432e58b5cbef24512d3c",
-      "width": 1185,
-      "height": 790,
-      "bytes": 77927,
+      "id": "media.kc-spaces-fund-public-site",
+      "source": "/artifacts/kc-spaces-fund/public-site.webp",
+      "sourceSha256": "c753f89a7306dd6994d8cb0d350141b92ea4a217e3d27373a1b47184aeed1018",
+      "width": 1425,
+      "height": 950,
+      "bytes": 69026,
       "kind": "website-capture",
       "quality": "best",
-      "title": "Archived CallNYC prototype",
-      "caption": "The archived prototype translated civic data into issue pathways, district context, and resident guidance.",
+      "title": "KC Spaces Fund restored public campaign surface",
+      "caption": "The restored campaign surface pairs a clear public identity with donation, coalition, application, contact, and funded-space pathways.",
+      "routes": [
+        "/work",
+        "/work/kc-spaces-fund"
+      ],
+      "governanceId": "project.kc-spaces-fund",
+      "publicationStatus": "approved-public-derivative",
+      "cloudinary": {
+        "publicId": "jamieburk-art/portfolio/artifacts/kc-spaces-fund-public-site",
+        "version": 1
+      }
+    },
+    {
+      "id": "media.callnyc-original-launch-2016",
+      "source": "/artifacts/callnyc/original-launch-2016.webp",
+      "sourceSha256": "9b3933fb65cd4bbef7b198da04e3c41d55c6a52969a18113d6cea4be09441847",
+      "width": 1800,
+      "height": 1200,
+      "bytes": 92726,
+      "kind": "website-capture",
+      "quality": "best",
+      "title": "Original CallNYC public launch interface",
+      "caption": "The original public interface translated civic data into issue pathways, district context, and resident guidance.",
       "routes": [
         "/work",
         "/work/callnyc"
@@ -176,8 +198,8 @@
       "governanceId": "project.callnyc",
       "publicationStatus": "approved-public-derivative",
       "cloudinary": {
-        "publicId": "jamieburk-art/portfolio/artifacts/callnyc-archived-prototype",
-        "version": 1786825061
+        "publicId": "jamieburk-art/portfolio/artifacts/callnyc-original-launch-2016",
+        "version": 1
       }
     },
     {

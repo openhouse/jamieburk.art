@@ -66,11 +66,14 @@
       "weight": 10,
       "inputs": ["homepage", "technical operations page", "resume page"],
       "procedure": [
+        "Before spending an LLM call, deterministically verify that the homepage has exactly five featured projects in this order: NYC Artist Coalition / FairRentNYC, KC Spaces Fund, CallNYC.org, Harry J. Epstein Company, and WOW List.",
         "Give three blind judges no context beyond the candidate URLs.",
         "Allow each judge two minutes of reading.",
-        "Ask each judge to identify Jamie's target role, central value, three proof examples, and the next action they would take."
+        "Ask each judge to identify Jamie's target role, central value, three proof examples, and the next action they would take.",
+        "Ask each judge whether the project sequence advances a coherent hiring argument from current public leadership through resolved implementation, civic-product translation, sustained operations, and platform scale."
       ],
       "pass_criteria": [
+        "The deterministic sequence gate passes before any hiring-reader call is permitted.",
         "At least two of three judges identify Technical Project Manager, Product Operations, or Implementation as the role family.",
         "At least two of three judges describe the central promise as creating operating structure from ambiguous work.",
         "At least two of three judges name three accurate project proofs without inventing government employment, official authority, or solo policy causality.",
@@ -86,11 +89,13 @@
       "grader": "hybrid",
       "blocking": true,
       "weight": 12,
-      "inputs": ["Harry J. Epstein case study", "FairRentNYC case study and participation sequence", "CallNYC case study", "WOW List current proof surface", "Source-Backed Team Memory lab"],
+      "inputs": ["Harry J. Epstein case study", "FairRentNYC case study and participation sequence", "KC Spaces Fund case study", "CallNYC case study", "WOW List current proof surface", "Source-Backed Team Memory lab"],
       "procedure": [
         "Inventory visible figures, screenshots, diagrams, downloads, and public artifacts.",
         "Verify each artifact's caption, provenance, alt text, consent status, exact derivative, permission record, and relation to a claim.",
         "For the FairRentNYC participation sequence, verify the order from facilitated room to shared public surface to collective public assembly, the ten-frame Let NYC Dance capture method, and the unchanged homepage hero.",
+        "Verify that KC Spaces Fund uses the approved restored-site capture and that its caption limits Jamie's role to web infrastructure and cross-channel naming support.",
+        "Verify that CallNYC uses the approved May 4, 2016 Internet Archive capture of the original public interface without the later restored-site logo artifact or Wayback toolbar.",
         "Inspect the 1200 by 630 Open Graph image and confirm its metadata-stripped East River source uses the governed homepage-aligned cover treatment, renders only Jamie's role and name in that order, omits in-image credit under the creator's optional-credit permission, renders Jamie's name in the same licensed identity face used on the site, and carries the hierarchy over a cinematic left-to-right charcoal gradient without a vertical rule or floating placard.",
         "Verify the renderer consumes the selected home-social-card-role-led-v1 contract; the contract records rights-first priorities, layer order, visible-copy order, the 4.5 to 1 social-preview contrast target, the measured 0.674140289044 minimum identity-field opacity, the selected opacity, and the exact render hash.",
         "Have a blind judge explain what each artifact proves."
@@ -99,6 +104,8 @@
         "Each lead page contains at least one genuine inspectable artifact, not only a styled descriptive card.",
         "Every visual has useful alt text, a caption or occurrence record, a source or ownership note, an exact derivative record, context-appropriate credit governed by the applicable permission, and public-safety approval.",
         "The FairRentNYC sequence makes Jamie's facilitation and implementation legible while keeping campaign work and outcomes collective.",
+        "The KC Spaces Fund capture shows a finished public implementation while preserving public organizer credit and excluding fundraising, publishing, fiscal-sponsor, applicant-review, and grant-decision claims for Jamie.",
+        "The CallNYC cover shows the original 2016 interface, contains no Wayback toolbar, and remains clearly framed as historical product evidence rather than current or official City guidance.",
         "The selected Let NYC Dance frame is frame 5 of ten one-second candidates captured after the video loaded; the other nine are not committed.",
         "The existing homepage hero remains unchanged, and the WOW List capture is framed as a live tester invitation rather than full platform restoration.",
         "The social card uses a metadata-stripped East River source with the approved homepage-aligned 1200 by 630 cover crop, limits visible copy to Jamie's role followed by his name, records optional-credit provenance without putting photographer credit in the pixels, renders Jamie's name in the same licensed TeX Gyre Pagella identity face used on the site, and uses a cinematic left-to-right charcoal gradient that becomes fully transparent before the right-side portrait without a vertical rule or floating placard.",
@@ -361,12 +368,14 @@
         "resume page and PDF",
         "Harry J. Epstein case study",
         "FairRentNYC case study",
+        "KC Spaces Fund case study",
         "CallNYC case study"
       ],
       "procedure": [
         "Give three blind judges the rendered candidate and no implementation discussion: one human-resources gatekeeper, one public-sector generalist, and one technical delivery leader.",
         "Allow each judge ninety seconds for the homepage, Technical Operations page, and resume, followed by a scan of the three lead case studies.",
         "Ask each judge to state Jamie's target role and added value, then identify the actor, action, purpose, and usable result in each lead project.",
+        "Ask each judge whether the homepage sequence makes the strongest current-to-scaled hiring case and whether the alternating human-participation and interface evidence reads as one coherent practice.",
         "Ask each judge to flag unexplained acronyms, specialist terms, symbols, tool lists without Jamie's relationship to them, weak verbs that understate the role, and language that overstates ownership or causality.",
         "Require each judge to cite visible wording for every finding and distinguish a consequential comprehension failure from a minor editorial preference."
       ],

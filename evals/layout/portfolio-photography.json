@@ -1,5 +1,5 @@
 {
-  "id": "portfolio-photography-layout-v5",
+  "id": "portfolio-photography-layout-v6",
   "title": "Human Index photographic portfolio layout",
   "intent": "Photography and public interfaces make situated work credible while remaining public-safe, accessible, project-specific, and subordinate to human publication authority.",
   "criteria": [
@@ -31,7 +31,12 @@
     {
       "id": "truthful-project-cover-field",
       "blocking": true,
-      "criterion": "Every work item has one project-bound cover: Harry J. Epstein, CallNYC, and WOW List use their own public surfaces; Fair Rent NYC, Sunday Dinner, and KC Town Hall use governed photographs."
+      "criterion": "Every work item has one project-specific cover: KC Spaces Fund, Harry J. Epstein, CallNYC, and WOW List use their own public surfaces; Fair Rent NYC, Sunday Dinner, and KC Town Hall use governed photographs."
+    },
+    {
+      "id": "hiring-argument-project-sequence",
+      "blocking": true,
+      "criterion": "The homepage presents five projects in a deliberate hiring sequence: current NYC Artist Coalition work, resolved KC Spaces Fund implementation, civic-product translation through CallNYC, long-term Harry J. Epstein stewardship, then WOW List platform scale."
     },
     {
       "id": "tag-navigation-contract",

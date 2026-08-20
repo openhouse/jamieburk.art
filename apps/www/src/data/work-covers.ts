@@ -34,14 +34,24 @@ const workCovers = {
     kind: "photograph",
     objectPosition: "50% 45%"
   },
-  callnyc: {
-    src: "/artifacts/callnyc/archived-prototype.png",
-    width: 1185,
-    height: 790,
-    alt: "Archived CallNYC prototype showing issue navigation, resident guidance, and a Council member service profile.",
+  "kc-spaces-fund": {
+    src: "/artifacts/kc-spaces-fund/public-site.webp",
+    width: 1425,
+    height: 950,
+    alt: "KC Spaces Fund website with a blue campaign masthead, Donate action, Support section, and photographs of Kansas City arts and culture spaces.",
     caption:
-      "The archived prototype translated civic data into issue pathways, district context, and resident guidance.",
-    credit: "Archived public prototype capture, July 2026.",
+      "The restored campaign surface pairs a clear public identity with donation, coalition, application, contact, and funded-space pathways.",
+    credit: "KC Spaces Fund public website capture, August 20, 2026.",
+    kind: "screenshot"
+  },
+  callnyc: {
+    src: "/artifacts/callnyc/original-launch-2016.webp",
+    width: 1800,
+    height: 1200,
+    alt: "Original CallNYC launch interface showing resident issue guidance, ranked Council member service profiles, and topic-based navigation.",
+    caption:
+      "The original public interface translated civic data into issue pathways, district context, and resident guidance.",
+    credit: "Archived public launch capture, May 4, 2016, via the Internet Archive.",
     kind: "screenshot"
   },
   wowlist: {
