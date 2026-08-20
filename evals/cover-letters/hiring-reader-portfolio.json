@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "id": "cover-letter-hiring-reader-portfolio-2026-08-20",
+  "evaluatedAt": "2026-08-20T12:31:00-04:00",
+  "currentRunPath": "evals/cover-letters/runs/2026-08-20-cover-letter-preflight.json",
+  "writerVoiceSource": {
+    "title": "My Writer’s Voice",
+    "canonicalUrl": "https://docs.google.com/document/d/18y6sZKaGGuHPBm7KGv5jENqAQJHlahxG-MPXQ0Kuwrc/edit?usp=sharing",
+    "authority": "living-source-of-truth",
+    "accessMode": "read-only",
+    "sourceModifiedAt": "2026-08-20T00:24:54.891Z",
+    "reviewedAt": "2026-08-20T12:05:00-04:00",
+    "sourceVisibilityStatus": "access_not_verified",
+    "rawDocumentCopiedIntoRepository": false,
+    "refreshRule": "Read the current Google Doc before drafting, materially revising, or model-evaluating any cover letter; update sourceModifiedAt and reviewedAt only after that read.",
+    "publicBoundary": "The shared source URL is Jamie-authorized provenance. Do not copy the full working document into the repository or publish it as portfolio content without separate approval.",
+    "workingProfile": [
+      "Begin with a concrete encounter, locate its human stake and hidden system, make one ethical distinction, and end with a durable possibility.",
+      "Use first person as an instrument of attention: what Jamie noticed, asked, connected, built, or stayed with.",
+      "Let specific work establish usefulness instead of asking the reader to certify goodness or indispensability.",
+      "Keep warmth source-bounded: distinguish source from inference, access from consent, individual action from collective outcome, and support from endorsement.",
+      "Give each letter one governing question, one governing image, and one usable entrance; trust sequence instead of carrying the whole archive at once.",
+      "Treat documentation, handoffs, and operating structure as forms through which care and agency can endure."
+    ]
+  },
+  "methodology": {
+    "skills": [
+      {
+        "id": "cover-letter-generator",
+        "installedPath": ".agents/skills/cover-letter-generator/SKILL.md",
+        "sourceRepository": "https://github.com/paramchoudhary/resumeskills",
+        "sourceFolderHash": "fae2e17fb357f3cd646285299caa0ee9330dfcb4"
+      },
+      {
+        "id": "brand-voice-enforcement",
+        "installedPath": ".agents/skills/brand-voice-enforcement/SKILL.md",
+        "sourceRepository": "https://github.com/anthropics/knowledge-work-plugins",
+        "sourceFolderHash": "4b3ec7bf82aff1e2bee0146dbd9adfd20f26b98e"
+      },
+      {
+        "id": "interviewing-evaluating-candidates",
+        "installedPath": ".agents/skills/interviewing-evaluating-candidates/SKILL.md",
+        "sourceRepository": "https://github.com/refoundai/lenny-skills"
+      }
+    ],
+    "principles": [
+      "A role-specific letter complements rather than prose-converts its sibling resume.",
+      "Deterministic existence, lifecycle, voice, truth, and reader-signal checks run before any model call.",
+      "Only lifecycle-selected reader pairs are model-eligible; other maintained letters incur no model cost until their opportunity becomes selected.",
+      "A modeled pass advances to a structured next step and is not proof of participation, endorsement, an interview, or a final hiring decision."
+    ]
+  },
+  "contract": {
+    "actualPeopleParticipated": false,
+    "acceptanceQuestion": "Under this explicitly fictionalized public-source lens, would this role-specific cover letter, read with its sibling resume, make Jamie worth advancing to a structured interview or practical work sample for this opportunity?",
+    "passDecision": "advance-to-structured-next-step",
+    "artifactRule": "Every opportunity-specific resume maintained by the hiring-reader portfolio has one role-specific Markdown cover letter in the same directory.",
+    "expiredRule": "An expired benchmark letter must be unmistakably labeled do not submit and cannot become model-eligible."
+  },
+  "letterStandards": {
+    "minimumWords": 250,
+    "maximumWords": 400,
+    "forbiddenPatterns": [
+      "I am writing to (?:apply|express)",
+      "I believe I am the perfect candidate",
+      "(?:guaranteed|guarantees) (?:an interview|employment|a job|an offer)",
+      "(?:Zack Parker|Chris Coleman|Charizma Williams|Aileen Palmer|Jaclyn Chen|Luke Farrell|Lisa Gelobter) (?:reviewed|approved|endorsed|recommended|would hire)",
+      "(?:solely created|single-handedly|personally caused)",
+      "(?:WCAG compliant|Section 508 compliant)"
+    ]
+  },
+  "modelGate": {
+    "currentRunPath": "evals/cover-letters/runs/2026-08-20-cover-letter-hiring-reader-post-hillclimb.json",
+    "maximumCallsPerRun": 8,
+    "promptVersion": "hiring-reader-cover-letter-v1",
+    "model": "gpt-5.6-sol",
+    "cacheKeyFields": [
+      "opportunityId",
+      "readerPairId",
+      "coverLetterSha256",
+      "resumeSha256",
+      "contextSha256",
+      "voiceProfileSha256",
+      "postingSourceReviewedAt",
+      "voiceSourceModifiedAt",
+      "promptVersion"
+    ]
+  },
+  "versions": [
+    {
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "status": "live-priority",
+      "coverLetterPath": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Cover-Letter-CodePath-Engineering-Project-Manager-5160542007.md",
+      "voiceSignals": {
+        "concreteEncounter": ["At WOW List", "one collaboratively editable field"],
+        "humanStake": ["community organizer", "people looking for what was happening"],
+        "hiddenSystem": ["path from a reported need", "owned issue"],
+        "hinge": ["The work was not only shipping features", "The question is not whether"],
+        "durablePossibility": ["systems it can continue to improve", "one accurate view of delivery"]
+      },
+      "readerCriteria": [
+        {
+          "pairId": "codepath-zack-parker",
+          "signalGroups": [
+            { "id": "engineering-delivery", "patterns": ["scoped backlogs", "action and decision logs", "clear release"] },
+            { "id": "quality-ownership", "patterns": ["reproduce defects", "acceptance criteria", "regression expectations"] },
+            { "id": "proportionate-process", "patterns": ["remove process", "unnecessary ceremony"] },
+            { "id": "ai-workflow", "patterns": ["AI-assisted", "deterministic checks", "human-reviewed"] }
+          ]
+        },
+        {
+          "pairId": "codepath-chris-coleman",
+          "signalGroups": [
+            { "id": "product-engineering-bridge", "patterns": ["Python/Django", "Ember.js", "technical implementation"] },
+            { "id": "learning-mission", "patterns": ["community organizer", "distributed network of maintainers"] },
+            { "id": "durable-collaboration", "patterns": ["durable handoffs", "supported user", "systems it can continue"] }
+          ]
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.aclu.senior-project-manager.8620968002",
+      "status": "live-priority",
+      "coverLetterPath": "resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Cover-Letter-ACLU-Senior-Project-Manager-8620968002.md",
+      "voiceSignals": {
+        "concreteEncounter": ["In coalition work", "decision can survive the room"],
+        "humanStake": ["someone who was not present", "protected information"],
+        "hiddenSystem": ["shared campaign memory", "assign authority honestly"],
+        "hinge": ["not whether people care", "A plan is not complete"],
+        "durablePossibility": ["make that learning durable", "implementation as organizational learning"]
+      },
+      "readerCriteria": [
+        {
+          "pairId": "aclu-charizma-williams",
+          "signalGroups": [
+            { "id": "systems-implementation", "patterns": ["current-state analysis", "future-state workflows", "implementation plans"] },
+            { "id": "cross-department-delivery", "patterns": ["technical, operational, policy, communications, and community", "rollout", "closeout"] },
+            { "id": "risk-and-confidentiality", "patterns": ["protected information", "private coalition records offline", "confidentiality"] },
+            { "id": "project-resources", "patterns": ["$490,539", "vendor coordination", "public funding request"] }
+          ]
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "status": "live-priority",
+      "coverLetterPath": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Cover-Letter-Benepass-Product-Operations-Manager-7f963a7a.md",
+      "voiceSignals": {
+        "concreteEncounter": ["An e-commerce release", "customer can find the right tool"],
+        "humanStake": ["staff can answer the next question", "care for the customer"],
+        "hiddenSystem": ["public product and the operating practice", "downstream effect"],
+        "hinge": ["The problem is not only whether a feature can ship"],
+        "durablePossibility": ["better operating pattern for the next launch", "preserve the result"]
+      },
+      "readerCriteria": [
+        {
+          "pairId": "benepass-aileen-palmer",
+          "signalGroups": [
+            { "id": "launch-readiness", "patterns": ["readiness criteria", "risk and dependency maps", "go/no-go"] },
+            { "id": "product-operations-translation", "patterns": ["Product, Engineering, Customer Operations", "operational inputs"] },
+            { "id": "customer-care", "patterns": ["care for the customer", "support paths"] }
+          ]
+        },
+        {
+          "pairId": "benepass-jaclyn-chen",
+          "signalGroups": [
+            { "id": "commercial-evidence", "patterns": ["twofold revenue growth", "e-commerce"] },
+            { "id": "operational-leverage", "patterns": ["distributed collaborators", "permanent bottleneck", "operating pattern"] },
+            { "id": "learning-and-judgment", "patterns": ["make tradeoffs legible", "post-launch learning", "what must be learned"] }
+          ]
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "status": "submitted-pending",
+      "coverLetterPath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Cover-Letter-NYC-OTI-Senior-Product-Manager-782366.md",
+      "voiceSignals": {
+        "concreteEncounter": ["A public dataset", "CallNYC.org"],
+        "humanStake": ["help a New Yorker", "next step it gives a resident"],
+        "hiddenSystem": ["constituent-services data", "relationships, decisions, and next actions"],
+        "hinge": ["only as useful as the next step", "digital, but it does not stop at the screen"],
+        "durablePossibility": ["leave the partner agency stronger", "outcome that should determine what happens next"]
+      },
+      "readerCriteria": [
+        {
+          "pairId": "oti-product-luke-farrell",
+          "signalGroups": [
+            { "id": "resident-facing-product", "patterns": ["resident", "CallNYC.org", "issue pages"] },
+            { "id": "product-lifecycle", "patterns": ["participatory discovery", "MVP boundaries", "public release"] },
+            { "id": "cross-functional-government", "patterns": ["policy stakeholders", "elected officials and staff", "City recycling coordination"] },
+            { "id": "responsible-delivery", "patterns": ["accessibility", "privacy", "maintainability"] }
+          ]
+        },
+        {
+          "pairId": "oti-product-lisa-gelobter",
+          "signalGroups": [
+            { "id": "public-interest-technology", "patterns": ["public dataset", "civic prototype", "City government"] },
+            { "id": "participatory-practice", "patterns": ["stakeholder listening", "participatory discovery", "New Yorker"] },
+            { "id": "resident-service", "patterns": ["Tired of Tires", "free resident service", "form and phone intake"] },
+            { "id": "institutional-capacity", "patterns": ["leave the partner agency stronger", "durable enough for others to use"] }
+          ]
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "status": "expired-benchmark",
+      "coverLetterPath": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Cover-Letter-NYC-OTI-Technical-Operations-Manager-782369.md",
+      "voiceSignals": {
+        "concreteEncounter": ["A project can be moving", "different version of its state"],
+        "humanStake": ["memory of the person who stayed latest", "less dependent on any one person"],
+        "hiddenSystem": ["absent operating structure", "one trusted view"],
+        "hinge": ["What appears to be a coordination problem"],
+        "durablePossibility": ["improve it after the team learns", "available to others"]
+      },
+      "readerCriteria": [
+        {
+          "pairId": "oti-operations-lisa-gelobter",
+          "signalGroups": [
+            { "id": "technical-operations", "patterns": ["delivery tracking", "risk and dependency maps", "status reporting"] },
+            { "id": "onboarding-and-runbooks", "patterns": ["onboarding materials", "runbooks", "decision records"] },
+            { "id": "continuous-improvement", "patterns": ["retrospectives", "improve it after the team learns"] },
+            { "id": "public-service-operations", "patterns": ["resident service", "City handoff", "public reporting"] }
+          ]
+        }
+      ]
+    }
+  ]
+}
