@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "homepage-hiring-sequence-hillclimb-2026-08-20",
+  "evaluatedAt": "2026-08-20T17:24:00-04:00",
+  "criterion": "rushed-hiring-reader-legibility",
+  "activeOpportunityBasis": {
+    "submittedPending": [
+      "opportunity.nyc-oti.senior-product-manager.782366"
+    ],
+    "adjacentStrongFits": [
+      "opportunity.nyc-oti.speed-operations-manager.789810",
+      "opportunity.nyc-oti.product-manager.784450",
+      "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "opportunity.codepath.engineering-project-manager.5160542007",
+      "opportunity.aclu.senior-project-manager.8620968002",
+      "opportunity.benepass.product-operations.7f963a7a"
+    ]
+  },
+  "baseline": {
+    "sequence": [
+      "fair-rent-nyc",
+      "callnyc",
+      "kc-spaces-fund",
+      "harry-j-epstein",
+      "wowlist"
+    ],
+    "weaknesses": [
+      "The most conventionally legible long-term client proof arrived fourth.",
+      "KC Town Hall's resident-service, municipal, funding, and field implementation evidence was absent.",
+      "Sunday Dinner's onboarding, facilitation, recurrence, and continuity evidence was absent."
+    ]
+  },
+  "candidate": {
+    "sequence": [
+      "harry-j-epstein",
+      "fair-rent-nyc",
+      "callnyc",
+      "kc-town-hall",
+      "wowlist",
+      "196-sunday-dinner"
+    ],
+    "hiringQuestions": [
+      "Can Jamie deliver for an established organization?",
+      "Is his public-service practice current?",
+      "Can he translate public needs into a usable service?",
+      "Can he manage municipal, physical, and operational implementation?",
+      "Can he originate and operate a product model?",
+      "Can he sustain participation and continuity after launch?"
+    ],
+    "visualRhythm": [
+      "commercial storefront",
+      "current civic field photograph",
+      "resident-facing civic interface",
+      "built-environment field photograph",
+      "community-platform interface",
+      "participation photograph"
+    ],
+    "retainedInCompleteIndex": [
+      "kc-spaces-fund"
+    ]
+  },
+  "decision": "keep-change",
+  "boundaries": {
+    "truthClaimsChanged": false,
+    "rightsOrCreditsChanged": false,
+    "projectsDeleted": false,
+    "humanEditorialReviewRequiredForFutureReorder": true
+  }
+}

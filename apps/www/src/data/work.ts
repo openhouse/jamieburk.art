@@ -421,7 +421,7 @@ const workItemsInput = [
     role: "Web Infrastructure, Theme & Implementation Support",
     years: "2020",
     status: "Short proof page",
-    featured: true,
+    featured: false,
     priority: 3,
     visibility: "public-safe",
     proofBankIds: ["kc-spaces-fund-digital-infrastructure"],
@@ -584,7 +584,7 @@ const workItemsInput = [
     role: "Host, Organizer & Systems Steward",
     years: "2010s-present",
     status: "Short proof page",
-    featured: false,
+    featured: true,
     priority: 6,
     visibility: "summary-only",
     proofBankIds: ["sunday-dinner-196-participation-infrastructure"],
@@ -643,7 +643,7 @@ const workItemsInput = [
     role: "Co-founder, Project Manager & CCED Developer/Presenter",
     years: "2019-2024 public record",
     status: "Short proof page",
-    featured: false,
+    featured: true,
     priority: 7,
     visibility: "public-safe",
     proofBankIds: [
@@ -727,11 +727,12 @@ export type WorkSlug =
   | "wowlist";
 
 export const homepageHiringSequence = [
+  "harry-j-epstein",
   "fair-rent-nyc",
   "callnyc",
-  "kc-spaces-fund",
-  "harry-j-epstein",
-  "wowlist"
+  "kc-town-hall",
+  "wowlist",
+  "196-sunday-dinner"
 ] as const satisfies readonly WorkSlug[];
 
 export const featuredWork = homepageHiringSequence.map((slug) => {

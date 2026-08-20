@@ -95,8 +95,19 @@ test("every work item retains a truthful cover visual", () => {
 test("the homepage retains the approved hiring sequence", () => {
   const path = "apps/www/src/data/work.ts";
   const source = readFileSync(path, "utf8").replace(
-    '  "fair-rent-nyc",\n  "callnyc",',
-    '  "callnyc",\n  "fair-rent-nyc",'
+    '  "harry-j-epstein",\n  "fair-rent-nyc",',
+    '  "fair-rent-nyc",\n  "harry-j-epstein",'
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "homepage-hiring-sequence"));
+});
+
+test("Sunday Dinner cannot fall out of the homepage hiring argument", () => {
+  const path = "apps/www/src/data/work.ts";
+  const source = readFileSync(path, "utf8").replace(
+    '  "196-sunday-dinner"\n',
+    ""
   );
   const result = evaluateLayout(process.cwd(), { [path]: source });
   assert.equal(result.passed, false);

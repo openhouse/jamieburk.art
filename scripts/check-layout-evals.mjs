@@ -154,6 +154,9 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   const workCovers = readText("apps/www/src/data/work-covers.ts");
   const workData = readText("apps/www/src/data/work.ts");
   const hiringSequenceDecision = readText("docs/design/homepage-hiring-sequence.md");
+  const hiringSequenceHillclimb = JSON.parse(
+    readText("evals/layout/homepage-hiring-sequence-hillclimb.json")
+  );
   const workCard = readText("apps/www/src/components/WorkCard.tsx");
   const caseStudyLayout = readText("apps/www/src/components/CaseStudyLayout.tsx");
   const homePage = readText("apps/www/src/app/page.tsx");
@@ -205,17 +208,18 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     ? [...sequenceMatch[1].matchAll(/"([^"]+)"/g)].map((match) => match[1])
     : [];
   const expectedSequence = [
+    "harry-j-epstein",
     "fair-rent-nyc",
     "callnyc",
-    "kc-spaces-fund",
-    "harry-j-epstein",
-    "wowlist"
+    "kc-town-hall",
+    "wowlist",
+    "196-sunday-dinner"
   ];
   const quickPath = [
     'href: "/work/technical-operations"',
+    'href: "/work/harry-j-epstein"',
     'href: "/work/fair-rent-nyc"',
     'href: "/work/callnyc"',
-    'href: "/work/kc-spaces-fund"',
     'href: "/resume"'
   ];
   let lastQuickPathIndex = -1;
@@ -230,16 +234,27 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     !workData.includes("export const featuredWork = homepageHiringSequence.map") ||
     !homePage.includes("featuredWork.map") ||
     !quickPathInOrder ||
-    homePage.includes('href: "/work/harry-j-epstein"') ||
+    JSON.stringify(hiringSequenceHillclimb.candidate?.sequence) !==
+      JSON.stringify(expectedSequence) ||
+    hiringSequenceHillclimb.decision !== "keep-change" ||
+    hiringSequenceHillclimb.criterion !== "rushed-hiring-reader-legibility" ||
+    !hiringSequenceHillclimb.activeOpportunityBasis?.submittedPending?.includes(
+      "opportunity.nyc-oti.senior-product-manager.782366"
+    ) ||
+    !hiringSequenceHillclimb.candidate?.retainedInCompleteIndex?.includes(
+      "kc-spaces-fund"
+    ) ||
     !/current public instance remains archived, unofficial, and non-current/i.test(workData) ||
     !workData.includes("Historical, collaborator-led campaign") ||
     !hiringSequenceDecision.includes("The homepage is an argument, not a chronology") ||
-    !hiringSequenceDecision.includes("Is the work current?") ||
+    !/Can Jamie deliver for an\s+established organization\?/.test(hiringSequenceDecision) ||
+    !hiringSequenceDecision.includes("Sunday Dinner closes") ||
+    !hiringSequenceDecision.includes("KC Spaces Fund remains in the complete work index") ||
     !hiringSequenceDecision.includes("A later reorder should name the changed hiring question")
   ) {
     fail(
       "homepage-hiring-sequence",
-      "The approved five-project hiring sequence, mirrored quick path, or historical and collective-credit boundary has drifted."
+      "The approved six-project hiring sequence, mirrored quick path, active-opportunity basis, or historical and collective-credit boundary has drifted."
     );
   }
   if (workData.includes("approved public materials pending") ||
