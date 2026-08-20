@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "suiteId": "opportunity-cover-letters-2026-08-20",
-  "runId": "oti-cover-letters-5bd2c0aa",
+  "runId": "oti-cover-letters-6342a6d5",
   "baselineGitRev": "ed7cba069427011eacd41d905d19426ea9014adc",
-  "evaluatedMaterialGitRev": "5bd2c0aa2fc7f04229f0af2450c4542f5fbe95ee",
+  "evaluatedMaterialGitRev": "6342a6d57cf3b740f39214d2b140728fd4f74264",
   "evaluatedUrl": "https://staging-a.jamieburk.art",
   "runDate": "2026-08-20",
-  "method": "Four fresh sequential isolated tasks evaluated the eight deterministically selected OTI cover-letter gates, grouped by reader identity. After the baseline run, one bounded Product Manager letter edit added a concrete WOWList product decision. Only its two affected gates were rerun against the exact deployed material commit; six unchanged results were retained. Readers received role-specific application files, the public-site resume, official URLs, and public-context framing, but no repository, Knowledge Wiki, private evidence, authenticated account, or prior reader output. Generic hiring-framework instructions were available but supplied no candidate evidence.",
+  "method": "Three fresh sequential isolated tasks re-evaluated the four cover-letter gates whose exact artifact digests changed, grouped by reader identity. They received the exact local role-specific files and public-site resume, plus public web surfaces; staging-a still served the prior commit during those isolated reads. Four unchanged results were retained. After deployment, the health response, noindex header, home page, and downloadable resume were reverified. No repository, Knowledge Wiki, private evidence, authenticated account, or prior reader output was supplied.",
   "deterministicPreflight": {
     "status": "pass",
     "maintainedOpportunityCount": 8,
@@ -19,8 +19,8 @@
   "artifactDigests": {
     "opportunity.nyc-oti.senior-product-manager.782366": "4af441f99e7a4258f56b9486092371ea6422f92be8872b4d68c915201e9bcf38",
     "opportunity.nyc-oti.operations-manager-speed.789810": "4d6736bd5c77a13ad2202e6bcacf7cfa35c0ba8392638bc52f8a8298d7d14090",
-    "opportunity.nyc-oti.product-manager.784450": "37e29e3970b9ecf8af345ce8e467dfae14cf3cb3372c37f9270ada877b83ed89",
-    "opportunity.nyc-oti.senior-product-manager-speed.789610": "7ad526c4df5c42aee7ef09fdf7f401ab23b6755987bbf882747c764a315ada50"
+    "opportunity.nyc-oti.product-manager.784450": "805f4852332ab67682e047517eaef529c1ee139cc7200c03d4eda11b4a0f1612",
+    "opportunity.nyc-oti.senior-product-manager-speed.789610": "ba29a42b9704ec4ad802953d3a22603f8f7b5be03955173cb0c4fead1eb62ab5"
   },
   "uniqueReaderCount": 4,
   "evaluationCount": 8,
@@ -32,15 +32,23 @@
   "voiceSuiteVerdict": "pass",
   "allSelectedGatesMustPass": true,
   "hillClimb": {
-    "criterion": "Replace generalized capability inventory with one concrete product decision while preserving bounded impact and collective credit.",
-    "changedOpportunityId": "opportunity.nyc-oti.product-manager.784450",
-    "changedCoverLetterPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.md",
-    "change": "Made the participatory-discovery decision to center WOWList on one collaboratively editable text field explicit, together with the product surfaces, operating support, geographic footprint, and impact boundary.",
+    "criterion": "Replace internal evidence-governance vocabulary on public application surfaces without weakening factual limits, collective credit, or role-specific screening.",
+    "changedOpportunityIds": [
+      "opportunity.nyc-oti.product-manager.784450",
+      "opportunity.nyc-oti.senior-product-manager-speed.789610"
+    ],
+    "changedCoverLetterPaths": [
+      "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.md",
+      "resumes/2026-08-20/nyc-oti-senior-product-manager-speed-789610/Jamie-Burkart-Cover-Letter-NYC-OTI-Senior-Product-Manager-SPEED-789610.md"
+    ],
+    "change": "Replaced the public words bound and bounded with plain, context-specific wording such as limited, carefully scoped, and clear. Internal governance terms remain available where they serve the repository rather than the reader.",
     "rerunGateIds": [
       "gate.oti-product-manager.lisa-gelobter",
-      "gate.oti-product-manager.product-leadership"
+      "gate.oti-product-manager.product-leadership",
+      "gate.oti-speed-product.product-leadership",
+      "gate.oti-speed-product.leila-bozorg"
     ],
-    "result": "Both affected gates remained advance passes and voice passes. Their strongest-evidence narratives now explicitly identify the WOWList product choice; the remaining non-blocking gap is a sourceable signal-to-KPI-to-post-launch decision loop."
+    "result": "The Product Manager gates remained advancement and voice passes. The Senior SPEED Product Manager gates remained voice passes and advancement fails because the public record does not establish the posting's enterprise-architecture and enterprise-data-platform requirements. The language change improved clarity without changing substantive fit."
   },
   "results": [
     {
@@ -97,55 +105,55 @@
     },
     {
       "gateId": "gate.oti-product-manager.product-leadership",
-      "resultSource": "post-hill-climb-exact-material",
+      "resultSource": "public-language-rerun-exact-material",
       "verdict": "pass",
       "acceptanceStatement": "I would advance this candidate on the strength of this cover letter and public application materials",
-      "confidence": 0.84,
+      "confidence": 0.87,
       "voiceVerdict": "pass",
-      "strongestEvidence": "The application connects more than fourteen years of product delivery to the role's core work: framing ambiguous problems, making consequential scope decisions, translating user needs into requirements, coordinating implementation and acceptance review, launching public-facing products, supporting adoption, and maintaining them. The WOWList example is especially persuasive because it identifies a concrete discovery-driven choice—the collaboratively editable text field—and explains the surrounding product ecosystem, instrumentation, and operating constraints without overstating impact. CallNYC adds directly relevant resident-facing civic-product evidence.",
+      "strongestEvidence": "CallNYC supplies concrete end-to-end, resident-facing product evidence; WOWList shows participatory discovery producing a consequential product choice, followed by implementation, onboarding, instrumentation, and operations. Together with 14+ years of lifecycle delivery, this aligns well with the official Product Manager posting, and the public-site resume corroborates the overall record.",
       "primaryBlocker": "",
-      "gapClass": "nonblocking evidence-depth gap",
-      "constructiveCritique": "The evidence is strong enough for a screen, but product leadership is demonstrated more through credible scope and judgment than through measured outcomes. The letter names analytics, KPIs, roadmaps, and prioritization, yet supplies little concrete evidence of a KPI Jamie defined, a data-informed priority Jamie changed, or a post-launch result beyond WOWList's carefully bounded geographic footprint. The distinction between founder authority and public-team authority is unusually thoughtful and helps offset that limitation.",
-      "nextBestImprovement": "Replace one general lifecycle sentence with a compact example showing the full decision loop: the user or program problem, qualitative or quantitative signal, competing request declined or deferred, KPI selected, cross-functional decision, and observed post-launch change—with collective ownership and evidentiary limits stated as carefully as they are for WOWList."
+      "gapClass": "no-material-gap",
+      "constructiveCritique": "The application proves product judgment and delivery more strongly than measured user outcomes. Its careful description of 35+ city ecosystems as an activity signal is credible but cannot substitute for adoption, retention, or resident-impact evidence. The letter's concrete civic opening, human stake, function-versus-sustainable-service hinge, and authority-aware close form a coherent Jamie voice.",
+      "nextBestImprovement": "Add one attributable example showing a baseline, chosen KPI, post-launch result, and resulting product decision."
     },
     {
       "gateId": "gate.oti-product-manager.lisa-gelobter",
-      "resultSource": "post-hill-climb-exact-material",
+      "resultSource": "public-language-rerun-exact-material",
       "verdict": "pass",
       "acceptanceStatement": "I would advance this candidate on the strength of this cover letter and public application materials",
-      "confidence": 0.84,
+      "confidence": 0.9,
       "voiceVerdict": "pass",
-      "strongestEvidence": "The application connects 14+ years of end-to-end digital product delivery to OTI's needs through specific examples: CallNYC's resident-facing translation of constituent-services data, WOWList's research-driven simplification of organizer workflows and operation across 35+ city ecosystems, and sustained cross-functional civic systems work. It also directly addresses roadmaps, requirements, testing, adoption, analytics, accessibility, privacy, program-owner partnership, and durable handoffs while carefully distinguishing bounded evidence and collective contributions.",
+      "strongestEvidence": "The materials collectively show the required end-to-end product pattern: Jamie took CallNYC from a resident problem and open-data source through information architecture, implementation, review, and public release; co-built WOWList through participatory discovery, prioritization, launch, adoption, instrumentation, and maintenance; and created durable, authority-aware operating systems for coalition work. This directly supports the posting's requirements for lifecycle ownership, cross-functional translation, user-centered prioritization, and sustainable delivery.",
       "primaryBlocker": "",
-      "gapClass": "non-blocking outcome-measurement specificity",
-      "constructiveCritique": "The letter is unusually well aligned and coherent in Jamie's stated voice: it begins with a concrete resident problem, reveals the public-data system underneath it, makes a clear product hinge at WOWList, and ends with the durable possibility of services that residents can use and City teams can sustain. Its weakest point is that claims about analytics, KPIs, prioritization, and post-launch improvement remain more asserted than demonstrated through a named metric or decision changed by evidence.",
-      "nextBestImprovement": "Replace one broad lifecycle sentence with a compact example showing a specific qualitative or quantitative signal, the resulting prioritization decision, and the observed post-launch result—without overstating causality."
+      "gapClass": "none-material-at-screen-stage",
+      "constructiveCritique": "The application establishes sufficient product breadth and civic relevance for a screen, although its evidence for KPI ownership and decisions driven by combined qualitative and quantitative data remains less concrete than its evidence for discovery, implementation, and stakeholder coordination. The voice is coherent: a grounded resident need reveals a hidden data and organizational system, the letter makes clear hinge distinctions about function versus sustained public value and founder responsibility versus agency authority, and it closes with a durable, hopeful possibility. Collective credit and claim limits are handled carefully.",
+      "nextBestImprovement": "Add one compact, verifiable example naming the metric or research signal, the resulting prioritization decision, and what changed after launch; this would make the data-driven product-management case as concrete as the delivery case."
     },
     {
       "gateId": "gate.oti-speed-product.product-leadership",
-      "resultSource": "baseline-unchanged-material",
+      "resultSource": "public-language-rerun-exact-material",
       "verdict": "fail",
       "acceptanceStatement": "I would not yet advance this candidate on the strength of this cover letter and public application materials",
-      "confidence": 0.9,
+      "confidence": 0.93,
       "voiceVerdict": "pass",
-      "strongestEvidence": "The combination of KC Town Hall permitting experience, CallNYC, web and API fluency, SQL and open-data work, process mapping, and public-stakeholder communication is unusually relevant to SPEED's permitting mission.",
-      "primaryBlocker": "The application does not clearly establish the Senior IT Architect civil-service minimum of ten years of qualifying architecture or IT-infrastructure experience. It also lacks sufficiently demonstrated senior ownership of data-driven product strategy, business cases, KPIs, and cross-functional software outcomes at the scale implied by SPEED.",
-      "gapClass": "eligibility evidence and senior-level experience gap",
-      "constructiveCritique": "The letter has the strongest mission-to-experience connection of the four and makes a thoughtful distinction between speed and displaced risk. However, it explicitly disclaims enterprise data-platform authority and asks OTI to resolve qualification, leaving two central screening questions unanswered.",
-      "nextBestImprovement": "If factually supportable, map ten years of dated architecture or infrastructure work to a specific civil-service pathway and add a permitting or data-product case covering the diagnosed bottleneck, research and systems analysis, business case, roadmap, technical architecture discussion, KPI, shipped result, and Jamie's exact decision authority."
+      "strongestEvidence": "KC Town Hall gives unusually relevant lived-process evidence: permitting and compliance experienced as interconnected plans, vendors, financing conditions, offices, documents, and handoffs. CallNYC and WOWList add credible product-delivery and technical-translation experience.",
+      "primaryBlocker": "The public materials do not establish the official Senior Product Manager, SPEED posting's specific qualifying depth in enterprise, solutions, or network architecture or IT infrastructure, nor its preferred two-plus years building enterprise software across data governance, quality, ingestion, processing, and sharing. The letter appropriately disclaims enterprise data-platform authority, but that leaves a material screen-level gap.",
+      "gapClass": "minimum-qualification-and-enterprise-data-platform-evidence",
+      "constructiveCritique": "The letter has excellent voice: a waiting person and missing handoff lead to the hidden permitting system, the distinction between elapsed speed and displaced risk, and a durable, maintainable possibility. However, municipal redevelopment experience demonstrates process empathy and coordination—not senior ownership of enterprise, data-driven permitting software—and equivalency cannot be assumed.",
+      "nextBestImprovement": "If truthful and publicly supportable, document exact dates and scope for qualifying architecture or infrastructure work and one two-plus-year enterprise data-platform case covering ingestion, governance, quality, sharing, architecture decisions, KPIs, and outcomes. Otherwise, prioritize the Product Manager role."
     },
     {
       "gateId": "gate.oti-speed-product.leila-bozorg",
-      "resultSource": "baseline-unchanged-material",
+      "resultSource": "public-language-rerun-exact-material",
       "verdict": "fail",
       "acceptanceStatement": "I would not yet advance this candidate on the strength of this cover letter and public application materials",
       "confidence": 0.88,
       "voiceVerdict": "pass",
-      "strongestEvidence": "The KC Town Hall redevelopment provides a concrete encounter with permitting, municipal compliance, financing conditions, vendors, and fragmented handoffs, while fourteen years of product delivery, CallNYC, WOWList, and FairRentNYC demonstrate civic orientation, technical fluency, facilitation, and care with collective credit.",
-      "primaryBlocker": "The materials do not establish senior-level ownership of an enterprise data product or platform at comparable citywide or cross-agency scale. They name APIs, SQL, PostgreSQL/PostGIS, analytics, governance, and data workflows, but provide little evidence of data architecture decisions, integrations, migrations, quality controls, operating scale, measurable outcomes, or accountability across multiple institutional owners. The letter expressly concedes that enterprise data-platform authority is not established.",
-      "gapClass": "material experience-and-evidence gap",
-      "constructiveCritique": "The letter has a persuasive Jamie-shaped arc: a grounded permitting encounter reveals the human cost of missing handoffs, develops into a distinction between elapsed speed and safely legible process, and ends with a bounded, maintainable possibility. It is warm, precise, authority-aware, and careful about collaborators. But it does not convert the resume's technical vocabulary into evidence sufficient for this senior product role. This is not primarily a prose problem; unless stronger existing examples can be documented, it is an experience or role-level gap.",
-      "nextBestImprovement": "If truthful evidence exists, add one detailed enterprise-data case showing dataset or user scale, system integrations, governance and decision rights, data-quality controls, cross-functional ownership, KPIs, and a measured result. If that evidence does not exist, pursue an adjacent SPEED product or implementation role where civic-process translation and hands-on delivery are central."
+      "strongestEvidence": "KC Town Hall supplies directly relevant mixed-use permitting, compliance, stakeholder, and handoff experience; CallNYC and WOWList add credible conception-to-launch civic-product and web/data-platform work. The public staging portfolio and supplied resume substantiate that unusual bridge between built-environment process and technical implementation.",
+      "primaryBlocker": "The public materials do not establish the official posting's required ten years of full-time experience related to enterprise, solutions, network, or IT-infrastructure architecture, nor its preferred two years building enterprise software across data governance, quality, ingestion, processing, and sharing. General technology lists and smaller public products cannot supply that equivalency, and the cover letter expressly acknowledges that enterprise data-platform authority is unestablished.",
+      "gapClass": "qualification-evidence",
+      "constructiveCritique": "The language edit succeeds. The letter now moves coherently from a concrete redevelopment encounter and waiting people, through fragmented municipal handoffs, to the hinge that speed must not transfer risk, and then toward a transparent, maintainable process. It is warm, precise, protective, hopeful, authority-aware, and careful with collective credit. The remaining weakness is evidentiary rather than tonal: lifecycle capabilities are frequently asserted, but enterprise scale, data responsibilities, full-time duration, KPIs, and measurable product outcomes are not demonstrated with enough specificity for this Senior IT Architect-classified role.",
+      "nextBestImprovement": "Add one truthful, publicly supportable project example specifying dates and full-time-equivalent duration, the enterprise or infrastructure architecture responsibility, data sources and ingestion flow, governance and quality controls, cross-functional partners, scale, KPI, and measured outcome. If no such example exists, do not manufacture equivalency; prioritize an OTI product role without this enterprise-architecture qualification."
     }
   ],
   "disclaimer": "Synthetic public-context evaluations only. They are not the named people's participation, opinions, endorsements, reporting relationships, interview assessments, or hiring decisions. Public title or leadership proximity does not establish a direct manager or actual reader."
