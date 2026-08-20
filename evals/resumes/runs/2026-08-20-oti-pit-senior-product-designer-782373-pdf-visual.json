@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.nyc-oti.pit-senior-product-designer.782373.pdf-visual",
-  "inspectedAt": "2026-08-20T13:10:00-04:00",
+  "inspectedAt": "2026-08-20T16:19:26-04:00",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy for this opportunity",
     "revisionUnchangedAfterExport": true,
@@ -13,13 +13,13 @@
   },
   "pdf": {
     "path": "resumes/2026-08-20/nyc-oti-pit-senior-product-designer-782373/Jamie-Burkart-Resume-NYC-OTI-PIT-Senior-Product-Designer-782373.pdf",
-    "sha256": "d3416526a88ca109ed9eea61a3a273fb7aba66f4425f1816ac0a7f35f565674e",
-    "bytes": 95843,
+    "sha256": "b7bb07fb392bf01a198796596b361faf157fb902289937742499c61738a46812",
+    "bytes": 94476,
     "pages": 2,
     "pageSize": "US Letter"
   },
   "inspection": {
-    "method": "Exported from the native Google Docs working copy, rasterized every page at 120 DPI, visually inspected at original detail, and checked for preserved PDF link annotations.",
+    "method": "Rebuilt from the approved Google Docs export with every list marker normalized to one point below its item text; rasterized every page at 110 DPI, visually inspected all pages, compared final rasters with the pre-rebuild inspection set, and checked PDF geometry, text, and link annotations.",
     "allPagesRasterized": true,
     "actualNamedPeopleParticipated": false,
     "pages": [

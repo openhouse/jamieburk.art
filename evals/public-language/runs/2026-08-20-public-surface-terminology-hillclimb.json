@@ -1,12 +1,18 @@
 {
   "schemaVersion": 1,
   "evalId": "public-surface-terminology-hillclimb-2026-08-20",
-  "evaluatedAt": "2026-08-20T14:01:25-04:00",
+  "evaluatedAt": "2026-08-20T16:19:26-04:00",
   "targetCriterion": "visitor-facing-language-clarity",
   "baseline": {
     "prohibitedOccurrences": 30,
     "affectedFiles": 21,
     "sharedWeakness": "One internal systems term was doing too many kinds of public work: describing scope, evidence, permissions, interactions, pathways, and working methods."
+  },
+  "followUpBaseline": {
+    "termFamily": "hinge",
+    "prohibitedOccurrences": 4,
+    "affectedFiles": 4,
+    "sharedWeakness": "A repeated metaphor obscured whether the sentence meant a principle, a decisive test, a lesson, or a formation point."
   },
   "change": {
     "description": "Replaced each public occurrence with context-specific language while preserving claim scope, consent, collective credit, and internal typed workflow states.",
@@ -15,7 +21,8 @@
       "focused work, pathways, and methods",
       "a dated observed minimum",
       "carefully evidenced or documented interaction",
-      "a specific approved portfolio use"
+      "a specific approved portfolio use",
+      "a formation point, decisive test, principle, or central lesson"
     ],
     "claimScopeChanged": false,
     "newEvidenceIntroduced": false,
@@ -25,7 +32,7 @@
     "scannedFiles": 70,
     "renderedPages": 15,
     "prohibitedOccurrences": 0,
-    "deterministicTestsPassing": 4,
+    "deterministicTestsPassing": 5,
     "selectedCoverLetterModelCalls": 2,
     "selectedCoverLetterReaderPasses": 2,
     "unselectedCoverLetterReaderCallsSkipped": 14

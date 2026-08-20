@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.benepass.product-operations-manager.7f963a7a.pdf-visual",
-  "inspectedAt": "2026-08-14T21:08:00-04:00",
+  "inspectedAt": "2026-08-20T16:19:26-04:00",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy for this opportunity",
     "revisionUnchangedAfterExport": true,
@@ -13,13 +13,13 @@
   },
   "pdf": {
     "path": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.pdf",
-    "sha256": "a5e1a68b79c0a8d986684d3d933e4d5c2e7bbedddb91ec0ca1b368ef52f6b858",
-    "bytes": 87119,
+    "sha256": "87229fc9b4526a31f108b2a8c82b4e5bb1b318ede94c98b2d6ecd0c6c488bfbf",
+    "bytes": 85958,
     "pages": 2,
     "pageSize": "US Letter"
   },
   "inspection": {
-    "method": "Exported from the native Google Docs working copy, rasterized every page at 144 DPI, visually inspected at original detail, checked for preserved PDF link annotations, and confirmed against the expected 36 point top margin.",
+    "method": "Rebuilt from the approved Google Docs export with every list marker normalized to one point below its item text; rasterized every page at 110 DPI, visually inspected all pages, compared final rasters with the pre-rebuild inspection set, and checked PDF geometry, text, margins, and link annotations.",
     "allPagesRasterized": true,
     "actualNamedPeopleParticipated": false,
     "pages": [

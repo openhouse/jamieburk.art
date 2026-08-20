@@ -83,6 +83,10 @@ The PDF is produced through a private Google Docs working copy:
    changing claim scope.
 4. Apply the public-safe style signature recorded in
    `evals/resumes/pdf-portfolio.json`.
+   In every numbered or bulleted list, set the marker character or numeral
+   exactly one point smaller than the associated item text (for example, a
+   9-point bullet for 10-point item text). Keep the item text itself at the
+   established size.
 5. Export the working copy as PDF beside the Markdown.
 6. Rasterize and inspect every page.
 7. Commit a visual receipt that binds the exact Markdown and PDF SHA-256 hashes.

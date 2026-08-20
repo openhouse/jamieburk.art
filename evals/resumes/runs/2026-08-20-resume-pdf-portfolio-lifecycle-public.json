@@ -32,8 +32,8 @@
       "pdfPath": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.pdf",
       "visualRunPath": "evals/resumes/runs/2026-08-14-codepath-engineering-project-manager-5160542007-pdf-visual.json",
       "markdownSha256": "2ba31a951c8d7563b5f1ab6e847cd6c4a4b9aa1ec91e5bba68cd10e3e4b695cd",
-      "pdfSha256": "01418bba81d032100d56ffd4d1512faeb5a74f0b55265718542bc9bfad58e66e",
-      "pdfBytes": 86021,
+      "pdfSha256": "d535baedac87945daa905f163b9fd9de6cf036871fa81e48ffcc026eea676f17",
+      "pdfBytes": 84849,
       "pages": 2,
       "publicInstallMatches": null,
       "overall": "pass",
@@ -56,6 +56,10 @@
         },
         {
           "id": "markdown-links-preserved",
+          "pass": true
+        },
+        {
+          "id": "list-markers-one-point-smaller",
           "pass": true
         },
         {
@@ -82,8 +86,8 @@
       "pdfPath": "resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-8620968002.pdf",
       "visualRunPath": "evals/resumes/runs/2026-08-14-aclu-senior-project-manager-8620968002-pdf-visual.json",
       "markdownSha256": "965853c719450cad90e428b2fbfb8925aba16a58091ddb989c0a0ba1a15f1c3e",
-      "pdfSha256": "ead572baea60e333ddf2d3d8108e57c7b207311b86ad57d58531d50fee6c2a9e",
-      "pdfBytes": 87757,
+      "pdfSha256": "c246c17d1659ff33536b7a0ffd9e13cdce860482d8c780535bd911a1d280c066",
+      "pdfBytes": 86556,
       "pages": 2,
       "publicInstallMatches": null,
       "overall": "pass",
@@ -106,6 +110,10 @@
         },
         {
           "id": "markdown-links-preserved",
+          "pass": true
+        },
+        {
+          "id": "list-markers-one-point-smaller",
           "pass": true
         },
         {
@@ -132,8 +140,8 @@
       "pdfPath": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.pdf",
       "visualRunPath": "evals/resumes/runs/2026-08-14-benepass-product-operations-manager-7f963a7a-pdf-visual.json",
       "markdownSha256": "ee454d653a00c7e88cfaa18639a4dd6ed4146f5c1b83765e430a695a5e338d02",
-      "pdfSha256": "a5e1a68b79c0a8d986684d3d933e4d5c2e7bbedddb91ec0ca1b368ef52f6b858",
-      "pdfBytes": 87119,
+      "pdfSha256": "87229fc9b4526a31f108b2a8c82b4e5bb1b318ede94c98b2d6ecd0c6c488bfbf",
+      "pdfBytes": 85958,
       "pages": 2,
       "publicInstallMatches": null,
       "overall": "pass",
@@ -156,6 +164,10 @@
         },
         {
           "id": "markdown-links-preserved",
+          "pass": true
+        },
+        {
+          "id": "list-markers-one-point-smaller",
           "pass": true
         },
         {
@@ -182,8 +194,8 @@
       "pdfPath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf",
       "visualRunPath": "evals/resumes/runs/2026-08-14-oti-senior-product-manager-pdf-visual.json",
       "markdownSha256": "8bcba31995a193add743484e8966734761327a608dcd1a74f7f55ff191822830",
-      "pdfSha256": "96129a9a4df8b51b5fac3b0303a6904950c7c2e25a3f6dc93e098861a9e848bb",
-      "pdfBytes": 95157,
+      "pdfSha256": "01476448408b12433fe2939c3f4065974b5dc527f51b26849105b317c99c1b6b",
+      "pdfBytes": 93778,
       "pages": 2,
       "publicInstallMatches": null,
       "overall": "pass",
@@ -206,6 +218,10 @@
         },
         {
           "id": "markdown-links-preserved",
+          "pass": true
+        },
+        {
+          "id": "list-markers-one-point-smaller",
           "pass": true
         },
         {
@@ -232,8 +248,8 @@
       "pdfPath": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.pdf",
       "visualRunPath": "evals/resumes/runs/2026-08-20-oti-speed-operations-manager-789810-pdf-visual.json",
       "markdownSha256": "714550943bca3204e4364275d0443a386319d493945cc4959d460c2cad8df912",
-      "pdfSha256": "0df5205f8282997e5df5272aeb5f8dcd23d85aac92dd9a802a7dec218cdb8a5e",
-      "pdfBytes": 94535,
+      "pdfSha256": "52133b2a3a37328b76d6ac84ddb9d42617545b778ee6c1963f5702155e2f4714",
+      "pdfBytes": 93114,
       "pages": 2,
       "publicInstallMatches": null,
       "overall": "pass",
@@ -256,6 +272,10 @@
         },
         {
           "id": "markdown-links-preserved",
+          "pass": true
+        },
+        {
+          "id": "list-markers-one-point-smaller",
           "pass": true
         },
         {
@@ -282,8 +302,8 @@
       "pdfPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.pdf",
       "visualRunPath": "evals/resumes/runs/2026-08-20-oti-product-manager-784450-pdf-visual.json",
       "markdownSha256": "5672c871c0b71fc44816941cc17f08d81d9af88177c4ce15e81369ca95ffd1ea",
-      "pdfSha256": "184aa85af59158899922c71ca57d56a5a5ed5af234f6d69cff03ee0f6984fac0",
-      "pdfBytes": 95318,
+      "pdfSha256": "9690c9a1e20842676f10f057c05fb8bb4e742283012e45c1c38751ba0a7b6e8a",
+      "pdfBytes": 93940,
       "pages": 2,
       "publicInstallMatches": null,
       "overall": "pass",
@@ -306,6 +326,10 @@
         },
         {
           "id": "markdown-links-preserved",
+          "pass": true
+        },
+        {
+          "id": "list-markers-one-point-smaller",
           "pass": true
         },
         {
@@ -332,8 +356,8 @@
       "pdfPath": "resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Jamie-Burkart-Resume-NYC-OTI-SPEED-Senior-Product-Manager-789610.pdf",
       "visualRunPath": "evals/resumes/runs/2026-08-20-oti-speed-senior-product-manager-789610-pdf-visual.json",
       "markdownSha256": "7662a0085b231ba00f95192537f817330438758fc02af0e3da0d47f12a73d09f",
-      "pdfSha256": "8725396e0d821994265b1c2d5c5d7e97dc33fc6dcb6042efa8681aca948a272e",
-      "pdfBytes": 95411,
+      "pdfSha256": "d572bc2b9a191b0d0b1ec6046107f171b18953318d0a3b55e3a1a38f8640d80b",
+      "pdfBytes": 94057,
       "pages": 2,
       "publicInstallMatches": null,
       "overall": "pass",
@@ -356,6 +380,10 @@
         },
         {
           "id": "markdown-links-preserved",
+          "pass": true
+        },
+        {
+          "id": "list-markers-one-point-smaller",
           "pass": true
         },
         {
@@ -382,8 +410,8 @@
       "pdfPath": "resumes/2026-08-20/nyc-oti-pit-senior-product-designer-782373/Jamie-Burkart-Resume-NYC-OTI-PIT-Senior-Product-Designer-782373.pdf",
       "visualRunPath": "evals/resumes/runs/2026-08-20-oti-pit-senior-product-designer-782373-pdf-visual.json",
       "markdownSha256": "61e55159ae54651c371e6766ea3edb35c6586b3450cd34bae78fddd672ab92f6",
-      "pdfSha256": "d3416526a88ca109ed9eea61a3a273fb7aba66f4425f1816ac0a7f35f565674e",
-      "pdfBytes": 95843,
+      "pdfSha256": "b7bb07fb392bf01a198796596b361faf157fb902289937742499c61738a46812",
+      "pdfBytes": 94476,
       "pages": 2,
       "publicInstallMatches": null,
       "overall": "pass",
@@ -406,6 +434,10 @@
         },
         {
           "id": "markdown-links-preserved",
+          "pass": true
+        },
+        {
+          "id": "list-markers-one-point-smaller",
           "pass": true
         },
         {
@@ -432,8 +464,8 @@
       "pdfPath": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.pdf",
       "visualRunPath": "evals/resumes/runs/2026-08-14-oti-technical-operations-manager-782369-pdf-visual.json",
       "markdownSha256": "c5fa91a924d24cc16b7b84c58795ebd55583e13c8a9d3f7575614c23981a1307",
-      "pdfSha256": "fe7b914dce46dbf70ba31d564144c71c5168fbea6bce835a2b2443319d007804",
-      "pdfBytes": 89766,
+      "pdfSha256": "1ecc812fc6c66741c21680ab0141f4959f245f23f20f1923a2a3f511c152bd3b",
+      "pdfBytes": 88510,
       "pages": 2,
       "publicInstallMatches": null,
       "overall": "pass",
@@ -456,6 +488,10 @@
         },
         {
           "id": "markdown-links-preserved",
+          "pass": true
+        },
+        {
+          "id": "list-markers-one-point-smaller",
           "pass": true
         },
         {
@@ -482,8 +518,8 @@
       "pdfPath": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
       "visualRunPath": "evals/resumes/runs/2026-08-20-public-selected-opportunity-resume-pdf-visual.json",
       "markdownSha256": "8bcba31995a193add743484e8966734761327a608dcd1a74f7f55ff191822830",
-      "pdfSha256": "96129a9a4df8b51b5fac3b0303a6904950c7c2e25a3f6dc93e098861a9e848bb",
-      "pdfBytes": 95157,
+      "pdfSha256": "01476448408b12433fe2939c3f4065974b5dc527f51b26849105b317c99c1b6b",
+      "pdfBytes": 93778,
       "pages": 2,
       "publicInstallPath": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
       "publicInstallMatches": true,
@@ -507,6 +543,10 @@
         },
         {
           "id": "markdown-links-preserved",
+          "pass": true
+        },
+        {
+          "id": "list-markers-one-point-smaller",
           "pass": true
         },
         {

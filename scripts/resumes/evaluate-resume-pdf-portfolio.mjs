@@ -3,6 +3,7 @@ import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { inflateSync } from "node:zlib";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 
@@ -46,6 +47,69 @@ function pdfFacts(buffer) {
   return { pageCount, mediaBox, uris };
 }
 
+function decodedPdfStreams(buffer) {
+  const source = buffer.toString("latin1");
+  const streams = [];
+  const pattern = /stream\r?\n/g;
+  for (const match of source.matchAll(pattern)) {
+    const streamStart = match.index + match[0].length;
+    try {
+      // inflateSync stops at the Flate end marker, so this remains robust when
+      // compressed bytes happen to contain the ASCII text "endstream".
+      streams.push(inflateSync(buffer.subarray(streamStart)).toString("latin1"));
+    } catch {
+      // Non-Flate streams are irrelevant to the Google Docs page content.
+    }
+  }
+  return streams;
+}
+
+export function resumeListMarkerFacts(buffer, hierarchy) {
+  const items = [];
+  const markerFact = (markerFont, markerSize, tail) => {
+    const itemRun = [...tail.matchAll(/BT[\s\S]*?\/(F\d+)\s+([\d.]+)\s+Tf[\s\S]*?Tj\s*ET/g)].find(
+      (run) => run[1] !== markerFont
+    );
+    if (!itemRun) return null;
+    const markerPoints = Number(markerSize) * hierarchy.pdfCoordinateScale;
+    const itemPoints = Number(itemRun[2]) * hierarchy.pdfCoordinateScale;
+    const actualDeltaPoints = itemPoints - markerPoints;
+    return {
+      markerFont,
+      itemFont: itemRun[1],
+      markerPoints,
+      itemPoints,
+      actualDeltaPoints,
+      pass:
+        Math.abs(actualDeltaPoints - hierarchy.markerPointsBelowItem) <=
+        hierarchy.tolerancePoints
+    };
+  };
+  const bulletPattern =
+    /BT\s*\/(F\d+)\s+([\d.]+)\s+Tf(?:(?!\nET)[\s\S])*?<0194>\s+Tj\s*ET/g;
+  const listPattern =
+    /\/LI\s*<<\/MCID\s+\d+\s*>>BDC([\s\S]*?)(?=\/LI\s*<<\/MCID|Q\s*q|$)/g;
+  const markerPattern =
+    /BT\s*\/(F\d+)\s+([\d.]+)\s+Tf((?:(?!\nET)[\s\S])*?)Tj\s*ET/;
+
+  for (const stream of decodedPdfStreams(buffer)) {
+    for (const marker of stream.matchAll(bulletPattern)) {
+      const tail = stream.slice(marker.index + marker[0].length, marker.index + marker[0].length + 2000);
+      const fact = markerFact(marker[1], marker[2], tail);
+      if (fact) items.push(fact);
+    }
+    for (const listMatch of stream.matchAll(listPattern)) {
+      const block = listMatch[1];
+      const marker = block.match(markerPattern);
+      if (!marker || marker[3].includes("<0194>")) continue;
+      const tail = block.slice(marker.index + marker[0].length);
+      const fact = markerFact(marker[1], marker[2], tail);
+      if (fact) items.push(fact);
+    }
+  }
+  return items;
+}
+
 function sameArray(left, right) {
   return (
     Array.isArray(left) &&
@@ -84,6 +148,10 @@ export function evaluateResumePdfPortfolio({
     const markdownHash = markdown === null ? null : sha256(markdown);
     const pdfHash = pdfBuffer === null ? null : sha256(pdfBuffer);
     const facts = pdfBuffer === null ? null : pdfFacts(pdfBuffer);
+    const markerFacts =
+      pdfBuffer === null
+        ? []
+        : resumeListMarkerFacts(pdfBuffer, config.artifactStandards.listHierarchy);
     const requiredLinks =
       markdown === null
         ? config.artifactStandards.requiredContactLinks
@@ -126,6 +194,14 @@ export function evaluateResumePdfPortfolio({
           facts === null
             ? "No PDF links to inspect."
             : `${requiredLinks.filter((link) => facts.uris.includes(link)).length}/${requiredLinks.length} Markdown and contact links preserved.`
+      },
+      {
+        id: "list-markers-one-point-smaller",
+        pass: markerFacts.length > 0 && markerFacts.every((item) => item.pass),
+        detail:
+          markerFacts.length === 0
+            ? "No structured list markers were measurable."
+            : `${markerFacts.filter((item) => item.pass).length}/${markerFacts.length} list markers are exactly one point smaller than their item text.`
       },
       {
         id: "visual-receipt-bound-to-artifacts",
@@ -184,6 +260,7 @@ export function evaluateResumePdfPortfolio({
       pdfSha256: pdfHash,
       pdfBytes: pdfBuffer?.length ?? 0,
       pages: facts?.pageCount ?? 0,
+      listMarkers: markerFacts.length,
       publicInstallPath: version.publicInstallPath,
       publicInstallMatches: version.publicInstallPath
         ? pdfBuffer !== null &&
@@ -217,6 +294,7 @@ export function evaluateResumePdfPortfolio({
         "Oswald 11.5 pt",
         "Karla 10.5 pt",
         "Karla 9 pt bold",
+        "list marker exactly 1 pt smaller than its item text",
         "blue and underlined"
       ].every((value) => configuredText.includes(value)),
       detail: "The read-only source's public-safe layout and typography signature is recorded."

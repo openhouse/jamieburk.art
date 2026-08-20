@@ -13,7 +13,7 @@ That is what draws me to the SPEED Senior Product Manager role. Permitting is no
 
 Across Thick Arts, CallNYC, WOW List, NYC Artist Coalition, and FairRentNYC, I have taken ambiguous public-facing work from discovery and systems analysis through information architecture, requirements, prioritization, implementation, launch, and learning. I have built the software, facilitated contested conversations, briefed elected officials and staff, supported users, and maintained shared decision records. I know the difference between participating in a collective outcome and claiming authority for it; that distinction makes product leadership more trustworthy, not less decisive.
 
-The hinge is simple: speed without legibility moves uncertainty downstream. I would want SPEED’s products to shorten the resident and applicant journey by making requirements, status, ownership, and next actions clearer while preserving the reasons public safeguards exist.
+The central lesson is simple: speed without legibility moves uncertainty downstream. I would want SPEED’s products to shorten the resident and applicant journey by making requirements, status, ownership, and next actions clearer while preserving the reasons public safeguards exist.
 
 I would welcome a structured exercise around one permitting bottleneck: map the actors and systems, test the root cause, define a version-one boundary and KPIs, identify the hardest dependency, and describe how the product team and agency partners would learn after launch. The durable possibility is a City process that becomes easier to navigate and an agency network better able to improve it together.
 

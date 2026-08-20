@@ -5,9 +5,13 @@
   "purpose": "Keep visitor-facing portfolio prose and hiring artifacts clear, specific, and free of internal systems vocabulary.",
   "forbiddenStandaloneTerms": [
     "bound",
-    "bounded"
+    "bounded",
+    "hinge",
+    "hinged",
+    "hinges",
+    "hinging"
   ],
-  "replacementPrinciple": "Choose the phrase that names the actual idea: well-scoped requirements, focused work, an observed minimum, a specific approved use, or carefully evidenced interaction.",
+  "replacementPrinciple": "Choose the phrase that names the actual idea: well-scoped requirements, focused work, an observed minimum, a specific approved use, a formation point, a decisive test, a consistent principle, or carefully evidenced interaction.",
   "surfaces": [
     {
       "root": "apps/www/src/app",

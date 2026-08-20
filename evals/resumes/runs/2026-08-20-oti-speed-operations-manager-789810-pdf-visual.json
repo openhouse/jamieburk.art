@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.nyc-oti.speed-operations-manager.789810.pdf-visual",
-  "inspectedAt": "2026-08-20T13:10:00-04:00",
+  "inspectedAt": "2026-08-20T16:19:26-04:00",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy for this opportunity",
     "revisionUnchangedAfterExport": true,
@@ -13,13 +13,13 @@
   },
   "pdf": {
     "path": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.pdf",
-    "sha256": "0df5205f8282997e5df5272aeb5f8dcd23d85aac92dd9a802a7dec218cdb8a5e",
-    "bytes": 94535,
+    "sha256": "52133b2a3a37328b76d6ac84ddb9d42617545b778ee6c1963f5702155e2f4714",
+    "bytes": 93114,
     "pages": 2,
     "pageSize": "US Letter"
   },
   "inspection": {
-    "method": "Exported from the native Google Docs working copy, rasterized every page at 120 DPI, visually inspected at original detail, and checked for preserved PDF link annotations.",
+    "method": "Rebuilt from the approved Google Docs export with every list marker normalized to one point below its item text; rasterized every page at 110 DPI, visually inspected all pages, compared final rasters with the pre-rebuild inspection set, and checked PDF geometry, text, and link annotations.",
     "allPagesRasterized": true,
     "actualNamedPeopleParticipated": false,
     "pages": [

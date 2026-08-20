@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.nyc-oti.speed-senior-product-manager.789610.pdf-visual",
-  "inspectedAt": "2026-08-20T13:10:00-04:00",
+  "inspectedAt": "2026-08-20T16:19:26-04:00",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy for this opportunity",
     "revisionUnchangedAfterExport": true,
@@ -13,13 +13,13 @@
   },
   "pdf": {
     "path": "resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Jamie-Burkart-Resume-NYC-OTI-SPEED-Senior-Product-Manager-789610.pdf",
-    "sha256": "8725396e0d821994265b1c2d5c5d7e97dc33fc6dcb6042efa8681aca948a272e",
-    "bytes": 95411,
+    "sha256": "d572bc2b9a191b0d0b1ec6046107f171b18953318d0a3b55e3a1a38f8640d80b",
+    "bytes": 94057,
     "pages": 2,
     "pageSize": "US Letter"
   },
   "inspection": {
-    "method": "Exported from the native Google Docs working copy, rasterized every page at 120 DPI, visually inspected at original detail, and checked for preserved PDF link annotations.",
+    "method": "Rebuilt from the approved Google Docs export with every list marker normalized to one point below its item text; rasterized every page at 110 DPI, visually inspected all pages, compared final rasters with the pre-rebuild inspection set, and checked PDF geometry, text, and link annotations.",
     "allPagesRasterized": true,
     "actualNamedPeopleParticipated": false,
     "pages": [

@@ -20,6 +20,7 @@
       "role": "Oswald 11.5 pt",
       "body": "Karla 10.5 pt",
       "sectionHeading": "Karla 9 pt bold",
+      "listHierarchy": "list marker exactly 1 pt smaller than its item text",
       "links": "blue and underlined"
     }
   },
@@ -29,6 +30,11 @@
     "minimumBytes": 50000,
     "maximumBytes": 10000000,
     "expectedMediaBox": [0, 0, 612, 792],
+    "listHierarchy": {
+      "pdfCoordinateScale": 0.75,
+      "markerPointsBelowItem": 1,
+      "tolerancePoints": 0.02
+    },
     "requiredContactLinks": [
       "mailto:jamie.burkart@gmail.com",
       "https://jamieburk.art/",

@@ -6,6 +6,7 @@ import test from "node:test";
 import { fileURLToPath } from "node:url";
 
 import { evaluateResumePdfPortfolio } from "./evaluate-resume-pdf-portfolio.mjs";
+import { repointListMarkersInQdf } from "./normalize-resume-list-markers.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const config = JSON.parse(
@@ -74,6 +75,63 @@ test("PDF drift invalidates the bound visual receipt", () => {
     ).pass,
     false
   );
+});
+
+test("the PDF transformer makes only the marker one point smaller", () => {
+  const source = `/LI <</MCID 14 >>BDC
+BT
+/F6 14 Tf
+0 -12 Td <0194> Tj
+ET
+BT
+/F6 14 Tf
+8 0 Td <0003> Tj
+ET
+BT
+/F8 14 Tf
+24 0 Td <0036> Tj
+ET
+Q
+q`;
+  const result = repointListMarkersInQdf(source, {
+    pdfCoordinateScale: 0.75,
+    markerPointsBelowItem: 1
+  });
+  assert.equal(result.changedMarkers, 1);
+  assert.equal(result.inspectedMarkers, 1);
+  assert.match(result.source, /\/F6 12\.666667 Tf\n0 -12 Td <0194> Tj/);
+  assert.match(result.source, /\/F6 14 Tf\n8 0 Td <0003> Tj/);
+  assert.match(result.source, /\/F8 14 Tf\n24 0 Td <0036> Tj/);
+
+  const secondPass = repointListMarkersInQdf(result.source, {
+    pdfCoordinateScale: 0.75,
+    markerPointsBelowItem: 1
+  });
+  assert.equal(secondPass.changedMarkers, 0);
+  assert.equal(secondPass.inspectedMarkers, 1);
+  assert.equal(secondPass.source, result.source);
+});
+
+test("numbered list markers follow the same one-point hierarchy", () => {
+  const source = `/LI <</MCID 21 >>BDC
+BT
+/F6 14 Tf
+0 -12 Td <0014> Tj
+ET
+BT
+/F8 14 Tf
+24 0 Td <0036> Tj
+ET
+Q
+q`;
+  const result = repointListMarkersInQdf(source, {
+    pdfCoordinateScale: 0.75,
+    markerPointsBelowItem: 1
+  });
+  assert.equal(result.changedMarkers, 1);
+  assert.equal(result.inspectedMarkers, 1);
+  assert.match(result.source, /\/F6 12\.666667 Tf\n0 -12 Td <0014> Tj/);
+  assert.match(result.source, /\/F8 14 Tf\n24 0 Td <0036> Tj/);
 });
 
 test("an uninspected page fails the hard gate", () => {

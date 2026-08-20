@@ -29,7 +29,7 @@ test("the maintained public corpus contains no prohibited standalone terms", asy
   assert.equal(run.result.scannedFiles, result.scannedFiles);
   assert.equal(run.result.prohibitedOccurrences, result.findings.length);
   assert.equal(run.result.renderedPages, 15);
-  assert.equal(run.result.deterministicTestsPassing, 4);
+  assert.equal(run.result.deterministicTestsPassing, 5);
   assert.equal(run.decision, "keep-change");
 });
 
@@ -43,6 +43,19 @@ test("the evaluator fails closed when prohibited wording enters public prose", (
   assert.deepEqual(
     findings.map((finding) => finding.term.toLowerCase()),
     ["bounded", "bound"]
+  );
+});
+
+test("the evaluator rejects hinge metaphors and their common forms", () => {
+  const findings = evaluatePublicText({
+    config,
+    relativePath: "resumes/2026-08-20/example/Jamie-Burkart-Cover-Letter-Example.md",
+    text: "The hinge hinged the plan; two hinges are now hinging."
+  });
+
+  assert.deepEqual(
+    findings.map((finding) => finding.term.toLowerCase()),
+    ["hinge", "hinged", "hinges", "hinging"]
   );
 });
 
