@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-20T14:37:40-04:00",
-  "sourceCommit": "964abcb5e37b944b46ad8a58c08d494bd8bb6a1d",
-  "sourceFingerprint": "ae8742c056f32b5356498d8d5fcb47be805bafb87443b04890c1454325eb1e9c",
+  "generatedAt": "2026-08-20T15:11:49-04:00",
+  "sourceCommit": "fe693f5132733d27ef252c7f273799454cd1e725",
+  "sourceFingerprint": "7d3af88c4e2601cefca4ad823012d2a8a5588b45f4a8b5a8122643324c9aebf8",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -4723,6 +4723,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "research.nyc-jobs.citywide-monitor.2026-08-20",
+      "path": "docs/knowledge-bank/research-runs/nyc-jobs-citywide-monitor-2026-08-20.md",
+      "title": "NYC Jobs citywide opportunity monitor, August 20, 2026",
+      "kind": "research-run",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Deterministic full-feed screen and person-specific ranking that admitted six of 1,426 unique City job IDs to provisional review.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
       "id": "research.nyc-oti-product-management-ranking.2026-08-20",
       "path": "docs/knowledge-bank/research-runs/nyc-oti-product-management-ranking-2026-08-20.md",
       "title": "NYC OTI product-management search ranking, August 20, 2026",
@@ -5381,6 +5394,19 @@
       "visibility": "public",
       "sensitivity": "low",
       "summary": "Official NYC Jobs search result and posting-level verification for eleven OTI product, operations, design, research, engineering, architecture, and cybersecurity roles.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "source.nyc-open-data.jobs.pda4-rgn4",
+      "path": "docs/knowledge-bank/sources/nyc-open-data-jobs-pda4-rgn4.md",
+      "title": "NYC Open Data — NYC Jobs dataset pda4-rgn4",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official DCAS citywide job-posting feed used as a freshness trigger and discovery source, with posting-level verification retained as a separate gate.",
       "aliases": [],
       "lastReviewed": "2026-08-20",
       "reviewBy": "2026-08-27"
@@ -13493,6 +13519,14 @@
       "context": null
     },
     {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "research.nyc-jobs.citywide-monitor.2026-08-20",
+      "source": "frontmatter",
+      "href": "../research-runs/nyc-jobs-citywide-monitor-2026-08-20.md",
+      "context": "Citywide official-feed freshness, deterministic eligibility, selective scoring, and provisional opportunity intake."
+    },
+    {
       "from": "index.knowledge-wiki.family-closure",
       "type": "informed_by",
       "to": "research.knowledge-wiki-family-closure.2026-07-19",
@@ -18263,6 +18297,22 @@
       "context": null
     },
     {
+      "from": "research.nyc-jobs.citywide-monitor.2026-08-20",
+      "type": "related_to",
+      "to": "research.nyc-oti-product-management-ranking.2026-08-20",
+      "source": "frontmatter",
+      "href": "nyc-oti-product-management-ranking-2026-08-20.md",
+      "context": null
+    },
+    {
+      "from": "research.nyc-jobs.citywide-monitor.2026-08-20",
+      "type": "uses_source",
+      "to": "source.nyc-open-data.jobs.pda4-rgn4",
+      "source": "frontmatter",
+      "href": "../sources/nyc-open-data-jobs-pda4-rgn4.md",
+      "context": null
+    },
+    {
       "from": "research.nyc-oti-product-management-ranking.2026-08-20",
       "type": "related_to",
       "to": "opportunity.nyc-oti.pit-senior-product-designer.782373",
@@ -19100,6 +19150,22 @@
       "to": "opportunity.nyc-oti.speed-senior-product-manager.789610",
       "source": "frontmatter",
       "href": "../opportunities/oti-speed-senior-product-manager-789610.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc-open-data.jobs.pda4-rgn4",
+      "type": "related_to",
+      "to": "research.nyc-jobs.citywide-monitor.2026-08-20",
+      "source": "frontmatter",
+      "href": "../research-runs/nyc-jobs-citywide-monitor-2026-08-20.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc-open-data.jobs.pda4-rgn4",
+      "type": "related_to",
+      "to": "source.nyc-jobs.oti-product-search.2026-08-20",
+      "source": "frontmatter",
+      "href": "nyc-jobs-oti-product-search-2026-08-20.md",
       "context": null
     },
     {
@@ -21111,7 +21177,7 @@
       "toPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
       "to": "opportunity.aclu.product-manager-discovery.8482872002",
       "fragment": null,
-      "line": 100,
+      "line": 109,
       "kind": "link"
     },
     {
@@ -21120,7 +21186,7 @@
       "toPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
       "to": "opportunity.codepath.claude-corps.5182020007",
       "fragment": null,
-      "line": 101,
+      "line": 110,
       "kind": "link"
     },
     {
@@ -21129,7 +21195,7 @@
       "toPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
       "to": "opportunity.asana.ai-implementation.8027437",
       "fragment": null,
-      "line": 102,
+      "line": 111,
       "kind": "link"
     },
     {
@@ -21138,7 +21204,7 @@
       "toPath": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
       "to": "opportunity.permitflow.product-operations.8a6e6066",
       "fragment": null,
-      "line": 103,
+      "line": 112,
       "kind": "link"
     },
     {
@@ -21147,70 +21213,7 @@
       "toPath": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
       "to": "opportunity.protected.source-backed-memory-consulting.2026",
       "fragment": null,
-      "line": 107,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
-      "to": "evaluation.employment-context.coverage.2026-07-18",
-      "fragment": null,
-      "line": 133,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/evaluations/employment-leadership-context-2026-08-13.md",
-      "to": "evaluation.employment-leadership-context.2026-08-13",
-      "fragment": null,
-      "line": 134,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/wiki-opportunity-coverage.md",
-      "to": null,
-      "fragment": null,
-      "line": 135,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/wiki-career-trajectory-coverage.md",
-      "to": null,
-      "fragment": null,
-      "line": 136,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/wiki-source-channel-coverage.md",
-      "to": null,
-      "fragment": null,
-      "line": 137,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/wiki-opportunity-discovery.md",
-      "to": null,
-      "fragment": null,
-      "line": 138,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/hiring-acceptance-public.md",
-      "to": null,
-      "fragment": null,
-      "line": 139,
+      "line": 116,
       "kind": "link"
     },
     {
@@ -21225,10 +21228,73 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
+      "to": "evaluation.employment-context.coverage.2026-07-18",
+      "fragment": null,
+      "line": 142,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/evaluations/employment-leadership-context-2026-08-13.md",
+      "to": "evaluation.employment-leadership-context.2026-08-13",
+      "fragment": null,
+      "line": 143,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/wiki-opportunity-coverage.md",
+      "to": null,
+      "fragment": null,
+      "line": 144,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/wiki-career-trajectory-coverage.md",
+      "to": null,
+      "fragment": null,
+      "line": 145,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/wiki-source-channel-coverage.md",
+      "to": null,
+      "fragment": null,
+      "line": 146,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/wiki-opportunity-discovery.md",
+      "to": null,
+      "fragment": null,
+      "line": 147,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/hiring-acceptance-public.md",
+      "to": null,
+      "fragment": null,
+      "line": 148,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "reports/hiring-acceptance-gap-resolution.md",
       "to": null,
       "fragment": null,
-      "line": 140,
+      "line": 149,
       "kind": "link"
     },
     {
@@ -21306,10 +21372,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/research-runs/nyc-jobs-citywide-monitor-2026-08-20.md",
+      "to": "research.nyc-jobs.citywide-monitor.2026-08-20",
+      "fragment": null,
+      "line": 46,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/applications/nyc-oti-senior-product-manager-782366.md",
       "to": "application.nyc-oti.senior-product-manager.782366",
       "fragment": null,
-      "line": 47,
+      "line": 56,
       "kind": "link"
     },
     {
@@ -21318,7 +21393,7 @@
       "toPath": "docs/knowledge-bank/evaluations/named-public-reader-acceptance-2026-08-13.md",
       "to": "evaluation.named-public-reader-acceptance.2026-08-13",
       "fragment": null,
-      "line": 72,
+      "line": 81,
       "kind": "link"
     },
     {
@@ -21327,7 +21402,7 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
       "to": "opportunity.nyc-oti.technical-operations-manager.782369",
       "fragment": null,
-      "line": 78,
+      "line": 87,
       "kind": "link"
     },
     {
@@ -21336,7 +21411,7 @@
       "toPath": "docs/knowledge-bank/opportunities/uibk-studio3-postdoc-arch-15927.md",
       "to": "opportunity.uibk.studio3.postdoc.arch-15927",
       "fragment": null,
-      "line": 87,
+      "line": 96,
       "kind": "link"
     },
     {

@@ -68,6 +68,10 @@ relations:
     target: application.nyc-oti.senior-product-manager.782366
     href: ../applications/nyc-oti-senior-product-manager-782366.md
     context: Jamie-authorized date-level submission milestone with a pending outcome and protected confirmation evidence.
+  - type: related_to
+    target: research.nyc-jobs.citywide-monitor.2026-08-20
+    href: ../research-runs/nyc-jobs-citywide-monitor-2026-08-20.md
+    context: Citywide official-feed freshness, deterministic eligibility, selective scoring, and provisional opportunity intake.
 ---
 
 # Employment context and hiring acceptance
@@ -111,6 +115,15 @@ Deterministic lifecycle, date, hard-screen, artifact, and reader-coverage checks
 run before any model-based hiring-reader role play. This prevents a model call
 for a role that is closed, ineligible, not selected by the queue, or missing a
 bound resume artifact.
+
+## Citywide discovery source
+
+The [NYC Jobs citywide monitor](../research-runs/nyc-jobs-citywide-monitor-2026-08-20.md)
+uses the official DCAS Open Data feed as a source-update trigger and discovery
+surface. The August 18 source snapshot contained 1,426 unique job IDs. Six
+cleared the first strong-match gate and remain provisional research leads.
+Dataset absence cannot close an existing opportunity, and an `External` label
+cannot override explicit current-City-employee restrictions in posting text.
 
 ## Current authorized milestone
 

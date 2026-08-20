@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "dataset": {
+    "id": "pda4-rgn4",
+    "rowsUpdatedAt": 1787079680,
+    "rowsUpdatedAtIso": "2026-08-18T19:01:20.000Z"
+  },
+  "evaluatedAt": "2026-08-20T00:00:00.000Z",
+  "policy": {
+    "salaryTarget": 100000,
+    "strongMatchThreshold": {
+      "composite": 78,
+      "fit": 75,
+      "secure": 65
+    },
+    "automaticDisposition": "provisional-intake-only"
+  },
+  "census": {
+    "sourceRows": 2760,
+    "uniqueJobIds": 1426,
+    "deterministicallyEligible": 379,
+    "strongMatches": 6
+  },
+  "knownStrongMatches": [],
+  "newStrongMatches": [
+    {
+      "jobId": "789143",
+      "title": "Senior Advisor, Digital Strategy",
+      "agency": "OFFICE OF THE MAYOR",
+      "salaryFrom": 180000,
+      "salaryTo": 190000,
+      "deadline": "2026-09-29",
+      "fitScore": 100,
+      "secureScore": 90,
+      "compositeScore": 95.5,
+      "qualificationReview": "human-review-required",
+      "officialUrl": "https://cityjobs.nyc.gov/jobs?options=&page=1&q=789143"
+    },
+    {
+      "jobId": "778437",
+      "title": "Project Manager, Bureau of Enterprise Technology Business Solutions",
+      "agency": "DEPT OF HEALTH/MENTAL HYGIENE",
+      "salaryFrom": 77438,
+      "salaryTo": 122300,
+      "deadline": "2026-10-04",
+      "fitScore": 99,
+      "secureScore": 83,
+      "compositeScore": 91.8,
+      "qualificationReview": "human-review-required",
+      "officialUrl": "https://cityjobs.nyc.gov/jobs?options=&page=1&q=778437"
+    },
+    {
+      "jobId": "788977",
+      "title": "Senior Project Manager",
+      "agency": "CAMPAIGN FINANCE BOARD",
+      "salaryFrom": 115000,
+      "salaryTo": 130000,
+      "deadline": "2026-09-28",
+      "fitScore": 87,
+      "secureScore": 95,
+      "compositeScore": 90.6,
+      "qualificationReview": "human-review-required",
+      "officialUrl": "https://cityjobs.nyc.gov/jobs?options=&page=1&q=788977"
+    },
+    {
+      "jobId": "787600",
+      "title": "Technical Project Manager",
+      "agency": "OFFICE OF CRIMINAL JUSTICE",
+      "salaryFrom": 68213,
+      "salaryTo": 100000,
+      "deadline": "2026-09-20",
+      "fitScore": 100,
+      "secureScore": 73,
+      "compositeScore": 87.85,
+      "qualificationReview": "human-review-required",
+      "officialUrl": "https://cityjobs.nyc.gov/jobs?options=&page=1&q=787600"
+    },
+    {
+      "jobId": "777595",
+      "title": "Associate Director of Product Design",
+      "agency": "CAMPAIGN FINANCE BOARD",
+      "salaryFrom": 130000,
+      "salaryTo": 160000,
+      "deadline": "2026-09-27",
+      "fitScore": 84,
+      "secureScore": 80,
+      "compositeScore": 82.2,
+      "qualificationReview": "human-review-required",
+      "officialUrl": "https://cityjobs.nyc.gov/jobs?options=&page=1&q=777595"
+    },
+    {
+      "jobId": "783958",
+      "title": "Operations Manager",
+      "agency": "OFFICE OF THE MAYOR",
+      "salaryFrom": 95000,
+      "salaryTo": 105000,
+      "deadline": "2026-08-24",
+      "fitScore": 77,
+      "secureScore": 88,
+      "compositeScore": 81.95,
+      "qualificationReview": "human-review-required",
+      "officialUrl": "https://cityjobs.nyc.gov/jobs?options=&page=1&q=783958"
+    }
+  ],
+  "knownJobIdsAbsentFromDataset": [
+    "782364",
+    "782366",
+    "782369",
+    "782373",
+    "784450",
+    "789192",
+    "789563",
+    "789610",
+    "789794",
+    "789810",
+    "789837",
+    "791074"
+  ],
+  "snapshotSha256": "bcfe2b1a3c0b9d2d957fd01a4f2203eb98dc3504fe1c5c0d0797a34a189305f1"
+}

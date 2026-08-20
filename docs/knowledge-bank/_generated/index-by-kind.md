@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `964abcb5e37b944b46ad8a58c08d494bd8bb6a1d`
-**Generation time:** 2026-08-20T14:37:40-04:00
-**Source fingerprint:** `ae8742c056f32b5356498d8d5fcb47be805bafb87443b04890c1454325eb1e9c`
+**Source commit:** `fe693f5132733d27ef252c7f273799454cd1e725`
+**Generation time:** 2026-08-20T15:11:49-04:00
+**Source fingerprint:** `7d3af88c4e2601cefca4ad823012d2a8a5588b45f4a8b5a8122643324c9aebf8`
 
 ## application
 
@@ -419,6 +419,7 @@
 - [Foundational Wiki page source return, July 19, 2026](../research-runs/foundational-source-return-2026-07-19.md) - `research.foundational-source-return.2026-07-19`
 - [Interpretive layer source return, July 19, 2026](../research-runs/interpretive-layer-source-return-2026-07-19.md) - `research.interpretive-layer-source-return.2026-07-19`
 - [Knowledge Wiki branch-family closure review](../research-runs/knowledge-wiki-family-closure-2026-07-19.md) - `research.knowledge-wiki-family-closure.2026-07-19`
+- [NYC Jobs citywide opportunity monitor, August 20, 2026](../research-runs/nyc-jobs-citywide-monitor-2026-08-20.md) - `research.nyc-jobs.citywide-monitor.2026-08-20`
 - [NYC OTI product-management search ranking, August 20, 2026](../research-runs/nyc-oti-product-management-ranking-2026-08-20.md) - `research.nyc-oti-product-management-ranking.2026-08-20`
 - [NYCAC frontline advocacy source return, July 13-August 12, 2026](../research-runs/nycac-frontline-advocacy-2026-08-12.md) - `research.nycac.frontline-advocacy.2026-08-12`
 - [NYC Artist Coalition shared-folder archival production](../research-runs/nycac-shared-folder-2026-07-19.md) - `research.nycac.shared-folder.2026-07-19`
@@ -473,6 +474,7 @@
 - [Archived NTER CHNG project homepage](../sources/nter-chng-archived-homepage-2011.md) - `source.nter-chng.archived-homepage.2011`
 - [NYC Council field-kit photograph oral history, July 2026](../sources/recollections/nyc-council-field-kit-oral-history-2026-07.md) - `source.nyc-council.field-kit-oral-history.2026-07`
 - [NYC Jobs OTI product-management search, August 20, 2026](../sources/nyc-jobs-oti-product-search-2026-08-20.md) - `source.nyc-jobs.oti-product-search.2026-08-20`
+- [NYC Open Data — NYC Jobs dataset pda4-rgn4](../sources/nyc-open-data-jobs-pda4-rgn4.md) - `source.nyc-open-data.jobs.pda4-rgn4`
 - [Appointment of Diya Vij as Commissioner of Cultural Affairs](../sources/dcla-diya-vij-appointment-2026.md) - `source.nyc.diya-vij-appointment.2026`
 - [NYC Mayor's Office - Lisa Gelobter appointment](../sources/nyc-lisa-gelobter-appointment-2026.md) - `source.nyc.lisa-gelobter-appointment.2026-02-10`
 - [NYC Mayor's Office - PIT Crew launch announcement](../sources/nyc-pit-crew-launch-2026.md) - `source.nyc.pit-crew-launch.2026-07-13`

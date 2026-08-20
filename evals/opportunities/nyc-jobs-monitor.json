@@ -1,0 +1,34 @@
+{
+  "id": "nyc-jobs-opportunity-monitor-v1",
+  "source": "source.nyc-open-data.jobs.pda4-rgn4",
+  "asOf": "2026-08-20",
+  "configPath": "data/opportunities/nyc-jobs-monitor.json",
+  "snapshotPath": "data/opportunities/nyc-jobs-current.json",
+  "lifecyclePath": "evals/resumes/public-resume-selection.json",
+  "runPath": "evals/opportunities/runs/2026-08-20-nyc-jobs-monitor.json",
+  "hardGates": [
+    "source-state-is-current",
+    "strong-match-thresholds-hold",
+    "automatic-intake-remains-provisional",
+    "deterministic-gates-precede-model-review",
+    "feed-absence-cannot-change-lifecycle",
+    "daily-email-recipient-and-authority-are-governed",
+    "snapshot-counts-are-coherent"
+  ],
+  "modelPolicy": {
+    "runOnlyAfter": [
+      "source-state-is-current",
+      "strong-match-thresholds-hold",
+      "automatic-intake-remains-provisional"
+    ],
+    "scope": "new-strong-matches-only",
+    "maximumReadersPerNewMatch": 2,
+    "actualPeopleParticipated": false
+  },
+  "humanGates": [
+    "qualification review",
+    "canonical opportunity promotion",
+    "public resume or portfolio change",
+    "application submission"
+  ]
+}
