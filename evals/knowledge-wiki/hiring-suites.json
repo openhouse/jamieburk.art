@@ -1,6 +1,6 @@
 {
-  "id": "current-priority-2026-08-15",
-  "version": 3,
+  "id": "current-priority-2026-08-20",
+  "version": 4,
   "principle": "The public evaluator sees public projection files and public role and reader context only; Wiki gap resolution is a separate pass.",
   "candidateContextPath": "docs/knowledge-bank/claims/employment-mobility-and-location.md",
   "opportunityPaths": [
@@ -8,6 +8,9 @@
     "docs/knowledge-bank/opportunities/codepath-senior-ai-operations-lead.md",
     "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
     "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
+    "docs/knowledge-bank/opportunities/oti-operations-manager-speed-789810.md",
+    "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+    "docs/knowledge-bank/opportunities/oti-senior-product-manager-speed-789610.md",
     "docs/knowledge-bank/opportunities/oti-technical-operations.md",
     "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
     "docs/knowledge-bank/opportunities/benepass-product-operations.md",
@@ -26,6 +29,9 @@
     "docs/qa/hiring-acceptance/readers/arnab-bose.md",
     "docs/qa/hiring-acceptance/readers/francis-thumpasery.md",
     "docs/qa/hiring-acceptance/readers/lisa-gelobter.md",
+    "docs/qa/hiring-acceptance/readers/oti-product-management-leadership.md",
+    "docs/qa/hiring-acceptance/readers/julia-kerson.md",
+    "docs/qa/hiring-acceptance/readers/leila-bozorg.md",
     "docs/qa/hiring-acceptance/readers/aileen-palmer.md",
     "docs/qa/hiring-acceptance/readers/herminia-ibarra.md",
     "docs/qa/hiring-acceptance/readers/claudio-fernandez-araoz.md",
@@ -73,7 +79,24 @@
       "id": "query.resident-facing-public-product",
       "terms": ["resident-facing product delivery", "public interest technology", "product discovery and research", "rapid prototyping and launch", "agency policy translation"],
       "expectedTopK": ["opportunity.nyc-oti.senior-product-manager.782366"],
-      "statuses": ["closed"],
+      "k": 3
+    },
+    {
+      "id": "query.public-product-operations",
+      "terms": ["team operating systems", "public product operations", "vendor and budget coordination", "cross-disciplinary delivery", "team health"],
+      "expectedTopK": ["opportunity.nyc-oti.operations-manager-speed.789810"],
+      "k": 3
+    },
+    {
+      "id": "query.evidence-driven-public-product",
+      "terms": ["resident-facing product delivery", "evidence-driven prioritization", "cross-agency requirements translation", "user stories", "product outcomes"],
+      "expectedTopK": ["opportunity.nyc-oti.product-manager.784450"],
+      "k": 3
+    },
+    {
+      "id": "query.housing-permitting-data-product",
+      "terms": ["affordable housing process delivery", "cross-agency data products", "public permitting systems", "data governance", "continuous improvement"],
+      "expectedTopK": ["opportunity.nyc-oti.senior-product-manager-speed.789610"],
       "k": 3
     },
     {

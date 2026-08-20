@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity requirement coverage
 
-**Wiki fingerprint:** `319644d0b8cd425eb6f5057142724ec1db41ac5bf9287595715fa2dd923aeeb5`
+**Wiki fingerprint:** `c05169aae532c2a0a6940e411678892bfcab957e2d291568f34861a582fa448a`
 
 Statuses preserve the difference between visible proof, Wiki-only proof, source work, experience gaps, and hard screens.
 
@@ -72,6 +72,30 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 | `requirement.codepath-ai-ops.quality-gates` | critical | visible-qualified | none | Demonstrate deterministic checks, adversarial mutations, and human holdouts as a bounded quality system. |
 | `requirement.codepath-ai-ops.reusable-assets` | critical | visible-proven | none | Show one reusable asset and the evidence that another person could operate it. |
 | `requirement.codepath-ai-ops.outcome-measurement` | important | visible-qualified | source | Recover one defensible adoption, time, quality, or error-rate baseline for a real workflow. |
+
+## NYC OTI - Operations Manager, SPEED 789810
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.oti-operations-manager.operating-system` | critical | visible-qualified | none | Lead with Thick Arts, KC Town Hall, coalition operations, runbooks, decision records, and durable handoffs. |
+| `requirement.oti-operations-manager.procurement-budget` | critical | visible-weak | experience | Distinguish vendor, proposal, compliance, and owner responsibilities from formal City procurement authority; identify any direct budget or contract evidence before applying. |
+| `requirement.oti-operations-manager.product-teams` | critical | visible-proven | none | Use WOWList, CallNYC, and the portfolio's product-engineering delivery system. |
+
+## NYC OTI - Product Manager 784450
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.oti-product-manager-784450.lifecycle` | critical | visible-proven | none | Lead with WOWList, CallNYC, and long-term client product stewardship. |
+| `requirement.oti-product-manager-784450.outcomes` | critical | visible-qualified | public-projection | Keep claims bounded and prepare one metric tree separating activity, adoption, outcome, and learning. |
+| `requirement.oti-product-manager-784450.translation` | critical | visible-proven | none | Use a concrete cross-functional launch story with tradeoffs and decision ownership. |
+
+## NYC OTI - Senior Product Manager, SPEED 789610
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.oti-speed-product.cross-agency` | critical | visible-qualified | role-context | Lead with KC Town Hall's physical/public process and coalition/government coordination, while keeping causation and authority exact. |
+| `requirement.oti-speed-product.lifecycle` | critical | visible-proven | none | Use WOWList and CallNYC as bounded end-to-end examples. |
+| `requirement.oti-speed-product.data` | critical | visible-weak | experience | Prepare technical evidence for APIs, SQL, Postgres/PostGIS, open data, schemas, source governance, and production handoff without claiming enterprise scale that is not established. |
 
 ## NYC OTI - Senior Product Manager 782366
 

@@ -17,9 +17,9 @@ const readerSuite = JSON.parse(
 test("every named-reader opportunity resume advances through every modeled reader", () => {
   const result = evaluateHiringReaderPortfolio();
   assert.equal(result.overall, "pass", JSON.stringify(result, null, 2));
-  assert.equal(result.summary.maintainedOpportunityVersions, 5);
-  assert.equal(result.summary.passingOpportunityVersions, 5);
-  assert.equal(result.summary.passingReaderOpportunityPairs, 7);
+  assert.equal(result.summary.maintainedOpportunityVersions, 8);
+  assert.equal(result.summary.passingOpportunityVersions, 8);
+  assert.equal(result.summary.passingReaderOpportunityPairs, 14);
   assert.equal(result.actualPeopleParticipated, false);
   assert.equal(result.decision, "advance-to-structured-next-step");
   assert.deepEqual(result.methodologySkills, [
@@ -37,13 +37,14 @@ test("the single public resume advances every currently active modeled reader", 
   assert.ok(result.publicResume, "public resume evaluation is missing");
   assert.equal(result.publicResume.overall, "pass", JSON.stringify(result.publicResume, null, 2));
   assert.deepEqual(result.publicResume.activeGateIds, [
-    "gate.aclu-national-campaigns.deirdre-schifeling",
-    "gate.asana-ai-implementation.arnab-bose",
-    "gate.codepath-ai-operations.brian-madigan",
-    "gate.codepath-ai-operations.quinton-ma",
-    "gate.codepath-engineering.chris-coleman",
-    "gate.codepath-engineering.zack-parker",
-    "gate.permitflow-product-operations.francis-thumpasery"
+    "gate.oti-product-manager.lisa-gelobter",
+    "gate.oti-product-manager.product-leadership",
+    "gate.oti-senior-product.lisa-gelobter",
+    "gate.oti-senior-product.product-leadership",
+    "gate.oti-speed-operations.julia-kerson",
+    "gate.oti-speed-operations.product-leadership",
+    "gate.oti-speed-product.leila-bozorg",
+    "gate.oti-speed-product.product-leadership"
   ]);
   assert.equal(result.publicResume.actualPeopleParticipated, false);
   assert.equal(result.publicResume.decision, "advance-to-structured-next-step");
@@ -54,21 +55,21 @@ test("the single public resume advances every currently active modeled reader", 
   }
 });
 
-test("the public resume fails closed when cross-opportunity quality evidence is removed", () => {
+test("the public resume fails closed when cross-opportunity data evidence is removed", () => {
   const publicPath = config.publicResume.resumePath;
   const original = readFileSync(path.join(repoRoot, publicPath), "utf8");
   const mutation = original
-    .replace(/issue reproduction/gi, "issue review")
-    .replace(/test cases/gi, "checks")
-    .replace(/release verification/gi, "release support");
+    .replace(/SQL/gi, "structured data")
+    .replace(/PostgreSQL\/PostGIS/gi, "relational databases")
+    .replace(/APIs/gi, "integrations");
   const result = evaluateHiringReaderPortfolio({
     resumeOverrides: { [publicPath]: mutation }
   });
-  const zack = result.publicResume.readerResults.find(
-    (reader) => reader.readerId === "reader.zack-parker"
+  const speedProduct = result.publicResume.readerResults.find(
+    (reader) => reader.gateId === "gate.oti-speed-product.product-leadership"
   );
-  assert.equal(zack.modeledVerdict, "fail");
-  assert.ok(zack.missingSignalGroups.includes("quality-system"));
+  assert.equal(speedProduct.modeledVerdict, "fail");
+  assert.ok(speedProduct.missingSignalGroups.includes("data-technical"));
   assert.equal(result.publicResume.overall, "fail");
   assert.equal(result.overall, "fail");
 });
@@ -77,7 +78,7 @@ test("a missing opportunity-specific resume fails closed", () => {
   const missingPath = config.versions[0].resumePath;
   const result = evaluateHiringReaderPortfolio({ resumeOverrides: { [missingPath]: null } });
   assert.equal(result.overall, "fail");
-  assert.equal(result.summary.maintainedOpportunityVersions, 4);
+  assert.equal(result.summary.maintainedOpportunityVersions, 7);
   assert.equal(result.versions[0].overall, "fail");
 });
 

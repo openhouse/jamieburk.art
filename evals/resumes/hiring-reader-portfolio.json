@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "resume-hiring-reader-portfolio-2026-08-15",
-  "evaluatedAt": "2026-08-15T17:45:00-04:00",
+  "evaluatedAt": "2026-08-20T12:00:00-04:00",
   "readerSuitePath": "evals/knowledge-wiki/named-hiring-readers.json",
   "currentRunPath": "evals/resumes/runs/2026-08-15-public-active-opportunity-resume-post-hillclimb.json",
   "methodology": {
@@ -64,7 +64,7 @@
     "forbiddenPatterns": [
       "(?:I|me|my) (?:would|will) be hired",
       "(?:guaranteed|guarantees) (?:an interview|employment|a job|an offer)",
-      "(?:Deirdre Schifeling|Quinton Ma|Brian Madigan|Zack Parker|Chris Coleman|Lisa Gelobter) (?:reviewed|approved|endorsed|recommended|would hire)",
+      "(?:Deirdre Schifeling|Quinton Ma|Brian Madigan|Zack Parker|Chris Coleman|Lisa Gelobter|Julia Kerson|Leila Bozorg) (?:reviewed|approved|endorsed|recommended|would hire)",
       "(?:solely created|single-handedly|personally caused)",
       "(?:WCAG compliant|Section 508 compliant)"
     ]
@@ -72,13 +72,15 @@
   "publicResume": {
     "resumePath": "resumes/2026-08-15/technical-project-manager-product-operations-implementation/Jamie-Burkart-Resume-Technical-Project-Manager.md",
     "artifactSpecPath": "evals/resumes/artifacts/public-technical-project-manager-pdf.json",
+    "selectionPolicyPath": "evals/resumes/public-resume-selection.json",
+    "readerCriteriaPath": "evals/resumes/public-resume-reader-criteria.json",
     "scope": "One durable site-visitor resume evaluated against every current, truthfully hirable opportunity that has an active fictionalized public-context reader gate.",
     "statusPolicy": {
       "requiredOpportunityStatus": "live",
       "requireFreshReview": true,
       "excludeClosedAndExpired": true
     },
-    "readerCriteria": [
+    "readerCriteriaArchive20260815": [
       {
         "gateId": "gate.aclu-national-campaigns.deirdre-schifeling",
         "readerId": "reader.deirdre-schifeling",
@@ -332,6 +334,141 @@
           ],
           "constructiveCritique": "Jamie is legible as a technically fluent public-interest product operator who builds institutional memory. The next gate is focused, accountable product leadership inside a large public institution.",
           "validateNext": "Probe public-service motivation, power sharing, managerability, outcome measurement, a real product tradeoff, and the ability to build City capacity rather than personal dependency."
+        },
+        {
+          "gateId": "gate.oti-senior-product.product-leadership",
+          "readerId": "reader.oti-product-management-leadership",
+          "displayName": "OTI Product Management leadership",
+          "relationship": "likely role-based functional reader; direct manager is not publicly named",
+          "signalGroups": [
+            { "id": "target-role", "patterns": ["Senior Product Manager", "Product lifecycle"] },
+            { "id": "product-lifecycle", "patterns": ["problem framing", "user stories", "MVP and version-one scoping", "public launch"] },
+            { "id": "cross-functional", "patterns": ["designer and engineer coordination", "agency and policy translation"] },
+            { "id": "measurement", "patterns": ["instrumentation", "metrics", "post-launch learning"] },
+            { "id": "production-judgment", "patterns": ["risk and dependency tracking", "UAT/QA", "low-cost production operations"] }
+          ],
+          "constructiveCritique": "The tailored resume carries the full product lifecycle and a credible public-service operating pattern. The interview must distinguish broad founder responsibility from focused product decision authority and prove one measurable product outcome.",
+          "validateNext": "Inspect one product end to end: users, decision rights, rejected scope, accessibility, launch readiness, instrumentation, adoption, and what changed after release."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.operations-manager-speed.789810",
+      "organization": "NYC Office of Technology and Innovation",
+      "targetRole": "Operations Manager, SPEED",
+      "status": "live-priority",
+      "officialSource": "https://cityjobs.nyc.gov/job/operations-manager-in-brooklyn-jid-46143",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-operations-manager-speed-789810.md",
+      "resumePath": "resumes/2026-08-20/nyc-oti-operations-manager-speed-789810/Jamie-Burkart-Resume-NYC-OTI-Operations-Manager-SPEED-789810.md",
+      "readerCriteria": [
+        {
+          "gateId": "gate.oti-speed-operations.product-leadership",
+          "readerId": "reader.oti-product-management-leadership",
+          "displayName": "OTI Product Management leadership",
+          "relationship": "likely role-based functional reader; direct manager is not publicly named",
+          "signalGroups": [
+            { "id": "target-role", "patterns": ["Operations Manager", "Program and team operations"] },
+            { "id": "operating-system", "patterns": ["portfolio intake", "budgets", "decision records", "team health"] },
+            { "id": "delivery-control", "patterns": ["risk and dependency tracking", "status reporting", "sequenced releases"] },
+            { "id": "vendor-contract", "patterns": ["vendor and contract coordination", "municipal compliance", "procurement authority"] },
+            { "id": "team-continuity", "patterns": ["onboarding", "runbooks", "durable handoffs"] }
+          ],
+          "constructiveCritique": "The tailored resume translates Jamie's owner and connective work into operations language while keeping public procurement authority bounded. Formal City budget, contracting, and personnel practice remain structured-interview screens.",
+          "validateNext": "Use an operations case to test intake, budget and procurement boundaries, staffing, vendor escalation, executive status, team health, and a sustainable operating cadence."
+        },
+        {
+          "gateId": "gate.oti-speed-operations.julia-kerson",
+          "readerId": "reader.julia-kerson",
+          "displayName": "Julia Kerson",
+          "relationship": "nearest public SPEED operations-vision context; not established manager or decision-maker",
+          "signalGroups": [
+            { "id": "public-execution", "patterns": ["public implementation", "municipal compliance", "government-facing follow-through"] },
+            { "id": "cross-disciplinary", "patterns": ["product, engineering", "policy stakeholders", "operations partners"] },
+            { "id": "accountability", "patterns": ["owners, schedules, risks", "decision records", "action logs"] },
+            { "id": "measured-improvement", "patterns": ["analytics", "measurement", "public result reporting"] }
+          ],
+          "constructiveCritique": "The resume demonstrates operational persistence across technical, civic, vendor, and physical systems. The next question is whether Jamie can distribute authority and make a City-scale team less dependent on personal heroics.",
+          "validateNext": "Probe how Jamie would shorten a cross-agency process, define ownership, protect controls, report blockers, measure time saved, and leave a healthier team system."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "organization": "NYC Office of Technology and Innovation",
+      "targetRole": "Product Manager",
+      "status": "live-priority",
+      "officialSource": "https://cityjobs.nyc.gov/job/product-manager-in-brooklyn-jid-45056",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+      "resumePath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.md",
+      "readerCriteria": [
+        {
+          "gateId": "gate.oti-product-manager.product-leadership",
+          "readerId": "reader.oti-product-management-leadership",
+          "displayName": "OTI Product Management leadership",
+          "relationship": "likely role-based functional reader; direct manager is not publicly named",
+          "signalGroups": [
+            { "id": "target-role", "patterns": ["Product Manager", "Product lifecycle"] },
+            { "id": "product-definition", "patterns": ["problem framing", "outcomes", "requirements"] },
+            { "id": "delivery", "patterns": ["user stories", "acceptance criteria", "public launch"] },
+            { "id": "measurement", "patterns": ["KPIs", "analytics", "continuous improvement"] },
+            { "id": "agency-users", "patterns": ["agency translation", "resident-facing", "stakeholder alignment"] }
+          ],
+          "constructiveCritique": "The resume makes product functions visible across long founder and civic-project work without altering actual titles. The interview still needs a sustained roadmap story and clear decision authority.",
+          "validateNext": "Ask for a roadmap story with user evidence, outcome definition, competing stakeholders, technical constraints, acceptance criteria, launch, and a post-launch decision."
+        },
+        {
+          "gateId": "gate.oti-product-manager.lisa-gelobter",
+          "readerId": "reader.lisa-gelobter",
+          "displayName": "Lisa Gelobter",
+          "relationship": "nearest publicly named senior OTI vision context; not established manager or decision-maker",
+          "signalGroups": [
+            { "id": "usable-services", "patterns": ["resident-facing issue pages", "public-facing products", "community-calendar"] },
+            { "id": "technical-capacity", "patterns": ["Web and data systems", "maintainable publishing systems", "Git/GitHub"] },
+            { "id": "public-trust", "patterns": ["privacy-conscious", "accessibility-aware", "sensitive boundaries"] },
+            { "id": "learning", "patterns": ["post-launch learning", "retrospectives", "shared campaign memory"] }
+          ],
+          "constructiveCritique": "The tailored resume presents technology as a means to make civic and community systems more usable, with governance and maintenance instincts. Formal product-team tenure and qualification remain independent screens.",
+          "validateNext": "Probe why City service, how Jamie shares power with users and agencies, which outcome matters, and how the team—not Jamie alone—retains capability."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager-speed.789610",
+      "organization": "NYC Office of Technology and Innovation",
+      "targetRole": "Senior Product Manager, SPEED",
+      "status": "live-priority",
+      "officialSource": "https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-46148",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-speed-789610.md",
+      "resumePath": "resumes/2026-08-20/nyc-oti-senior-product-manager-speed-789610/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-SPEED-789610.md",
+      "readerCriteria": [
+        {
+          "gateId": "gate.oti-speed-product.product-leadership",
+          "readerId": "reader.oti-product-management-leadership",
+          "displayName": "OTI Product Management leadership",
+          "relationship": "likely role-based functional reader; direct manager is not publicly named",
+          "signalGroups": [
+            { "id": "target-role", "patterns": ["Senior Product Manager", "Housing Process & Data Implementation"] },
+            { "id": "physical-public-system", "patterns": ["historic building", "municipal compliance", "public process"] },
+            { "id": "data-technical", "patterns": ["SQL", "PostgreSQL/PostGIS", "APIs"] },
+            { "id": "product-delivery", "patterns": ["requirements", "user stories", "acceptance criteria"] },
+            { "id": "cross-agency", "patterns": ["agency translation", "elected officials and staff", "City recycling coordination"] }
+          ],
+          "constructiveCritique": "The resume creates a credible bridge among a physical project, public process, product delivery, and data fluency. Enterprise data governance and Senior IT Architect qualification remain open screens.",
+          "validateNext": "Use a permitting-data case to test source systems, users, governance, API constraints, roadmap tradeoffs, interagency ownership, quality measures, and bounded version one."
+        },
+        {
+          "gateId": "gate.oti-speed-product.leila-bozorg",
+          "readerId": "reader.leila-bozorg",
+          "displayName": "Leila Bozorg",
+          "relationship": "nearest public SPEED housing-and-planning vision context; not established manager or decision-maker",
+          "signalGroups": [
+            { "id": "housing-built-environment", "patterns": ["Mixed-Use Development", "four commercial spaces and three homes", "historic building"] },
+            { "id": "equitable-public-process", "patterns": ["public-benefit documentation", "resident service", "participatory discovery"] },
+            { "id": "implementation", "patterns": ["municipal compliance", "vendor coordination", "government-facing follow-through"] },
+            { "id": "measurable-delivery", "patterns": ["KPIs", "analytics", "public result reporting"] }
+          ],
+          "constructiveCritique": "Jamie can connect affordable-city mission to a real building project, public benefit, and digital delivery. The interview must test transfer to equitable citywide permitting without overstating policy authority.",
+          "validateNext": "Probe one built-environment bottleneck, who bears its cost, what evidence defines improvement, how agencies share decisions, and how speed remains equitable and accountable."
         }
       ]
     },

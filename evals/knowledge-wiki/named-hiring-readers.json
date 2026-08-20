@@ -3,6 +3,7 @@
   "version": 1,
   "purpose": "Test whether the exact public portfolio supplies enough role-specific evidence for a synthetic public-context reader to reach the strict statement: I would hire this person for this job.",
   "targetUrl": "https://staging-a.jamieburk.art",
+  "selectionPolicyPath": "evals/resumes/public-resume-selection.json",
   "acceptanceGate": "I would hire this person for this job",
   "passPolicy": {
     "allEvaluationsMustPass": true,
@@ -17,7 +18,8 @@
     "separateChatPerNamedPerson": true,
     "publicWebOnly": true,
     "repositoryOrWikiAccessForJudges": false,
-    "priorJudgeOutputVisible": false
+    "priorJudgeOutputVisible": false,
+    "deterministicPreflightRequired": true
   },
   "hardInvariants": [
     "Every named-person result is a fictionalized analytical lens, never a quote, endorsement, participation claim, or actual hiring decision.",
@@ -87,6 +89,76 @@
       "relationshipToRole": "nearest publicly named senior OTI vision leader; direct manager not publicly named",
       "opportunityStatus": "live",
       "requiredRoutes": ["/", "/work/technical-operations", "/work/wowlist", "/work/callnyc", "/work/fair-rent-nyc", "/lab/source-backed-team-memory", "/resume", "/contact"]
+    },
+    {
+      "id": "gate.oti-senior-product.product-leadership",
+      "readerId": "reader.oti-product-management-leadership",
+      "readerPath": "docs/qa/hiring-acceptance/readers/oti-product-management-leadership.md",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
+      "relationshipToRole": "likely role-based functional reader; direct manager is not publicly named",
+      "opportunityStatus": "live",
+      "requiredRoutes": ["/", "/work/technical-operations", "/work/wowlist", "/work/callnyc", "/resume", "/contact"]
+    },
+    {
+      "id": "gate.oti-speed-operations.product-leadership",
+      "readerId": "reader.oti-product-management-leadership",
+      "readerPath": "docs/qa/hiring-acceptance/readers/oti-product-management-leadership.md",
+      "opportunityId": "opportunity.nyc-oti.operations-manager-speed.789810",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-operations-manager-speed-789810.md",
+      "relationshipToRole": "likely role-based functional reader; direct manager is not publicly named",
+      "opportunityStatus": "live",
+      "requiredRoutes": ["/", "/work/technical-operations", "/work/harry-j-epstein", "/work/fair-rent-nyc", "/work/kc-town-hall", "/resume", "/contact"]
+    },
+    {
+      "id": "gate.oti-speed-operations.julia-kerson",
+      "readerId": "reader.julia-kerson",
+      "readerPath": "docs/qa/hiring-acceptance/readers/julia-kerson.md",
+      "opportunityId": "opportunity.nyc-oti.operations-manager-speed.789810",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-operations-manager-speed-789810.md",
+      "relationshipToRole": "nearest public SPEED operations-vision context; not established as manager, screener, or decision-maker",
+      "opportunityStatus": "live",
+      "requiredRoutes": ["/", "/work/technical-operations", "/work/fair-rent-nyc", "/work/kc-town-hall", "/resume", "/contact"]
+    },
+    {
+      "id": "gate.oti-product-manager.product-leadership",
+      "readerId": "reader.oti-product-management-leadership",
+      "readerPath": "docs/qa/hiring-acceptance/readers/oti-product-management-leadership.md",
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+      "relationshipToRole": "likely role-based functional reader; direct manager is not publicly named",
+      "opportunityStatus": "live",
+      "requiredRoutes": ["/", "/work/technical-operations", "/work/wowlist", "/work/callnyc", "/resume", "/contact"]
+    },
+    {
+      "id": "gate.oti-product-manager.lisa-gelobter",
+      "readerId": "reader.lisa-gelobter",
+      "readerPath": "docs/qa/hiring-acceptance/readers/lisa-gelobter.md",
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+      "relationshipToRole": "nearest publicly named senior OTI vision leader; not established as manager, screener, or decision-maker",
+      "opportunityStatus": "live",
+      "requiredRoutes": ["/", "/work/technical-operations", "/work/wowlist", "/work/callnyc", "/lab/source-backed-team-memory", "/resume", "/contact"]
+    },
+    {
+      "id": "gate.oti-speed-product.product-leadership",
+      "readerId": "reader.oti-product-management-leadership",
+      "readerPath": "docs/qa/hiring-acceptance/readers/oti-product-management-leadership.md",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager-speed.789610",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-speed-789610.md",
+      "relationshipToRole": "likely role-based functional reader; direct manager is not publicly named",
+      "opportunityStatus": "live",
+      "requiredRoutes": ["/", "/work/technical-operations", "/work/kc-town-hall", "/work/fair-rent-nyc", "/work/wowlist", "/resume", "/contact"]
+    },
+    {
+      "id": "gate.oti-speed-product.leila-bozorg",
+      "readerId": "reader.leila-bozorg",
+      "readerPath": "docs/qa/hiring-acceptance/readers/leila-bozorg.md",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager-speed.789610",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-speed-789610.md",
+      "relationshipToRole": "nearest public SPEED housing-and-planning vision context; not established as manager, screener, or decision-maker",
+      "opportunityStatus": "live",
+      "requiredRoutes": ["/", "/work/technical-operations", "/work/kc-town-hall", "/work/fair-rent-nyc", "/resume", "/contact"]
     },
     {
       "id": "gate.oti-technical-operations.lisa-gelobter",

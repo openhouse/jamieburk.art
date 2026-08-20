@@ -3,11 +3,11 @@
 
 **Candidate commit:** `1e4cc9db7504cc2674ec1524ba75a850a45c2a78`
 **Portfolio snapshot:** `68eeb9fe8e11cf82aab6430d8813c323519e1e7ba0c02ef20ddd7e81a8c12160`
-**Role-context hash:** `b882795f8239432855ec1a7263e7c22f8a8e6c36944554c05a72e81dc140ad55`
-**Reader-context hash:** `43376836970e6a0dae369b10141e15fae9baab41fdbe2263c6c8964d0fb2ea04`
+**Role-context hash:** `de3167562812363934fbaf1fa844f9abab5fec9abc0a6039d7a7ffd670c26b1d`
+**Reader-context hash:** `14aa3829d14fbf5183da78bf40051cf6c7db6f3ac223dc3f69fc7ccdce505ee1`
 **Candidate-context hash:** `6251a2430d0a133ce9e511ad76dc9b415bed1a77e10e8b29e81a73d3ad301523`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
-**Candidate paths clean:** yes
+**Candidate paths clean:** no
 
 > Deterministic baseline only. This is not an interview prediction, a named person's opinion, or a human reader study.
 
@@ -69,11 +69,11 @@
 
 ### NYC OTI - Senior Product Manager 782366
 
-- Deterministic disposition: `not-live`
+- Deterministic disposition: `deterministic-ready-for-human-review`
 - Critical signals observed: 5/6
 - All signals observed: 5/6
-- Opportunity status live: no
-- Role context current at candidate time: no
+- Opportunity status live: yes
+- Role context current at candidate time: yes
 - Exclusionary hard screen recorded: no
 
 - `requirement.oti-product-manager.end-to-end-product`: **observed** on `/work/callnyc`
@@ -82,6 +82,45 @@
 - `requirement.oti-product-manager.measurement`: **observed** on `/work/technical-operations`
 - `requirement.oti-product-manager.privacy-and-ethics`: **observed** on `/lab/source-backed-team-memory`
 - `requirement.oti-product-manager.accessibility-conformance`: **not observed**
+
+### NYC OTI - Operations Manager, SPEED 789810
+
+- Deterministic disposition: `evidence-gap-review`
+- Critical signals observed: 2/3
+- All signals observed: 2/3
+- Opportunity status live: yes
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
+
+- `requirement.oti-operations-manager.operating-system`: **observed** on `/work/technical-operations`
+- `requirement.oti-operations-manager.procurement-budget`: **not observed**
+- `requirement.oti-operations-manager.product-teams`: **observed** on `/work/technical-operations`
+
+### NYC OTI - Product Manager 784450
+
+- Deterministic disposition: `evidence-gap-review`
+- Critical signals observed: 1/3
+- All signals observed: 1/3
+- Opportunity status live: yes
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
+
+- `requirement.oti-product-manager-784450.lifecycle`: **not observed**
+- `requirement.oti-product-manager-784450.outcomes`: **observed** on `/work/technical-operations`
+- `requirement.oti-product-manager-784450.translation`: **not observed**
+
+### NYC OTI - Senior Product Manager, SPEED 789610
+
+- Deterministic disposition: `evidence-gap-review`
+- Critical signals observed: 2/3
+- All signals observed: 2/3
+- Opportunity status live: yes
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
+
+- `requirement.oti-speed-product.cross-agency`: **observed** on `/work/kc-town-hall`
+- `requirement.oti-speed-product.lifecycle`: **observed** on `/work/technical-operations`
+- `requirement.oti-speed-product.data`: **not observed** on `/lab/source-backed-team-memory`
 
 ### NYC OTI - Technical Operations Manager 782369
 

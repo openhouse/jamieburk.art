@@ -4,6 +4,8 @@ import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { evaluatePublicResumeSelection } from "./evaluate-public-resume-selection.mjs";
+
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 
 function readJson(relativePath, root = repoRoot) {
@@ -103,7 +105,14 @@ function evaluatePublicResume({ root, config, resumeOverrides }) {
   const publicConfig = config.publicResume;
   if (!publicConfig) return null;
 
-  const markdown = getMarkdown(publicConfig.resumePath, root, resumeOverrides);
+  const selection = evaluatePublicResumeSelection({ root });
+  const readerRegistry = readJson(publicConfig.readerCriteriaPath, root);
+  const queuedGateIds = new Set(selection.llmGate.queue.map((entry) => entry.gateId));
+  const readerCriteria = readerRegistry.readerCriteria.filter((reader) =>
+    queuedGateIds.has(reader.gateId)
+  );
+  const selectedResumePath = selection.selectedResumePath ?? publicConfig.resumePath;
+  const markdown = getMarkdown(selectedResumePath, root, resumeOverrides);
   const plainText = markdown ? normalizeText(markdown) : "";
   const artifactSpecPath = path.join(root, publicConfig.artifactSpecPath);
   const artifactSpec = existsSync(artifactSpecPath)
@@ -114,15 +123,24 @@ function evaluatePublicResume({ root, config, resumeOverrides }) {
     {
       id: "public-resume-file-exists",
       pass: markdown !== null,
-      detail: publicConfig.resumePath
+      detail: selectedResumePath
     },
     {
       id: "public-pdf-source-binding",
       pass:
         markdown !== null &&
-        artifactSpec?.sourceMarkdownPath === publicConfig.resumePath &&
+        artifactSpec?.sourceMarkdownPath === selectedResumePath &&
         artifactSpec?.sourceMarkdownSha256 === sha256(markdown),
       detail: publicConfig.artifactSpecPath
+    },
+    {
+      id: "deterministic-selection-before-roleplay",
+      pass:
+        selection.overall === "pass" &&
+        selection.llmGate.allowed === true &&
+        selectedResumePath === publicConfig.resumePath &&
+        readerCriteria.length === selection.llmGate.queuedCalls,
+      detail: `${selection.selectedTier}; ${selection.llmGate.queuedCalls} modeled reader calls released after deterministic checks.`
     },
     {
       id: "fictionalized-next-step-boundary",
@@ -133,7 +151,7 @@ function evaluatePublicResume({ root, config, resumeOverrides }) {
     }
   ];
 
-  const readers = publicConfig.readerCriteria.map((reader) => {
+  const readers = readerCriteria.map((reader) => {
     const opportunityPath = path.join(root, reader.opportunityPath);
     const opportunity = existsSync(opportunityPath)
       ? readFileSync(opportunityPath, "utf8")
@@ -149,14 +167,17 @@ function evaluatePublicResume({ root, config, resumeOverrides }) {
       profile.includes(`id: ${reader.readerId}`) &&
       profile.includes(`displayName: ${reader.displayName}`) &&
       /publicSources:/i.test(profile) &&
-      /not actual participation/i.test(profile);
+      /no actual participation|not actual participation/i.test(profile);
+    const selectedCandidate = selection.candidateResults.find(
+      (candidate) => candidate.opportunityId === reader.opportunityId
+    );
     const statusPass =
       opportunityId === reader.opportunityId &&
-      opportunityStatus === publicConfig.statusPolicy.requiredOpportunityStatus;
-    const hardScreenPass = !/^\s*disposition:\s*do-not-pursue\s*$/im.test(opportunity);
+      selection.selectedOpportunityIds.includes(reader.opportunityId);
+    const hardScreenPass = selectedCandidate?.checks.eligibilityPass === true;
     const freshnessPass =
       !publicConfig.statusPolicy.requireFreshReview ||
-      (reviewBy !== null && reviewBy >= evaluatedDate);
+      selectedCandidate?.checks.reviewFresh === true;
     const signalResults = reader.signalGroups.map((group) => ({
       id: group.id,
       pass: containsAny(plainText, group.patterns)
@@ -196,11 +217,12 @@ function evaluatePublicResume({ root, config, resumeOverrides }) {
     readers.every((reader) => reader.modeledVerdict === "pass");
 
   return {
-    resumePath: publicConfig.resumePath,
+    resumePath: selectedResumePath,
     sha256: markdown ? sha256(markdown) : null,
     scope: publicConfig.scope,
     activeGateIds,
     activeOpportunityIds: [...new Set(readers.map((reader) => reader.opportunityId))].sort(),
+    selection,
     artifactChecks,
     readerResults: readers,
     actualPeopleParticipated: false,

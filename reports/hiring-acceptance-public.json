@@ -3,10 +3,10 @@
   "runId": "hiring-public-1e4cc9db7504",
   "generatedAt": "2026-08-15T19:44:01-04:00",
   "candidateSha": "1e4cc9db7504cc2674ec1524ba75a850a45c2a78",
-  "candidatePathsClean": true,
+  "candidatePathsClean": false,
   "portfolioSnapshotHash": "68eeb9fe8e11cf82aab6430d8813c323519e1e7ba0c02ef20ddd7e81a8c12160",
-  "roleContextHash": "b882795f8239432855ec1a7263e7c22f8a8e6c36944554c05a72e81dc140ad55",
-  "readerContextHash": "43376836970e6a0dae369b10141e15fae9baab41fdbe2263c6c8964d0fb2ea04",
+  "roleContextHash": "de3167562812363934fbaf1fa844f9abab5fec9abc0a6039d7a7ffd670c26b1d",
+  "readerContextHash": "14aa3829d14fbf5183da78bf40051cf6c7db6f3ac223dc3f69fc7ccdce505ee1",
   "candidateContextHash": "6251a2430d0a133ce9e511ad76dc9b415bed1a77e10e8b29e81a73d3ad301523",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
   "publicSafety": {
@@ -271,6 +271,67 @@
         "Do not infer her private opinion or participation."
       ],
       "disclaimer": "Simulated lens based on public organizational context, not actual participation or endorsement."
+    },
+    {
+      "id": "reader.oti-product-management-leadership",
+      "displayName": "OTI Product Management leadership",
+      "mode": "public-role-context",
+      "category": "likely-role-based-reader",
+      "publicSources": [
+        "https://cityjobs.nyc.gov/job/executive-director-product-management-in-brooklyn-jid-46142",
+        "https://cityjobs.nyc.gov/job/product-manager-in-brooklyn-jid-45056"
+      ],
+      "priorities": [
+        "clear product or operations ownership",
+        "measurable public-service outcomes",
+        "cross-agency and cross-functional delivery",
+        "candid hard screens and sustainable handoff"
+      ],
+      "prohibitedAssumptions": [
+        "Do not invent a named direct manager, interviewer, or reporting line.",
+        "Do not infer access to internal hiring criteria or deliberations."
+      ],
+      "disclaimer": "Simulated role-based lens from public postings, not an actual person's participation or endorsement."
+    },
+    {
+      "id": "reader.julia-kerson",
+      "displayName": "Julia Kerson",
+      "mode": "named-public-organization-context",
+      "category": "confirmed-public-program-vision-reader",
+      "publicSources": [
+        "https://www.nyc.gov/mayors-office/news/2026/05/mamdani-administration-releases--speed--reforms-to-deliver-affor"
+      ],
+      "priorities": [
+        "operational execution at City scale",
+        "shorter and more accountable public processes",
+        "cross-agency coordination",
+        "measurable outcomes for New Yorkers"
+      ],
+      "prohibitedAssumptions": [
+        "Do not claim Julia Kerson is the direct hiring manager or résumé screener.",
+        "Do not infer her private opinion or participation."
+      ],
+      "disclaimer": "Simulated lens based on public SPEED leadership context, not actual participation or endorsement."
+    },
+    {
+      "id": "reader.leila-bozorg",
+      "displayName": "Leila Bozorg",
+      "mode": "named-public-organization-context",
+      "category": "confirmed-public-program-vision-reader",
+      "publicSources": [
+        "https://www.nyc.gov/mayors-office/news/2026/05/mamdani-administration-releases--speed--reforms-to-deliver-affor"
+      ],
+      "priorities": [
+        "affordable-housing delivery",
+        "equitable and usable permitting processes",
+        "evidence-driven cross-agency reform",
+        "urgency with accountable implementation"
+      ],
+      "prohibitedAssumptions": [
+        "Do not claim Leila Bozorg is the direct hiring manager or résumé screener.",
+        "Do not infer her private opinion or participation."
+      ],
+      "disclaimer": "Simulated lens based on public SPEED leadership context, not actual participation or endorsement."
     },
     {
       "id": "reader.aileen-palmer",
@@ -627,11 +688,11 @@
         "senior_vision_basis": "The official PIT Crew launch announcement identifies Gelobter as OTI's technology leader and states her vision for simpler, user-informed, trustworthy City services.",
         "verified_at": "2026-08-13T00:00:00.000Z"
       },
-      "roleContextHash": "6c28d58f01838a5a97cade66aa166f8b660d53ab800066f990f1485fa06f3583",
-      "live": false,
-      "fresh": false,
+      "roleContextHash": "857b4c273f8a77f0f575faa511dbcf4ca06207b48691699a864e66966d46e4e6",
+      "live": true,
+      "fresh": true,
       "hardScreenBlocked": false,
-      "decision": "not-live",
+      "decision": "deterministic-ready-for-human-review",
       "observed": 5,
       "requirementTotal": 6,
       "criticalObserved": 5,
@@ -711,6 +772,183 @@
           "declaredPublicStatus": "experience-gap",
           "routes": [],
           "evidenceNeedles": []
+        }
+      ]
+    },
+    {
+      "id": "opportunity.nyc-oti.operations-manager-speed.789810",
+      "title": "NYC OTI - Operations Manager, SPEED 789810",
+      "reportingContext": {
+        "direct_manager_title": "OTI Product Management or SPEED program leadership; exact reporting line not stated",
+        "direct_manager_person": null,
+        "direct_manager_public_status": "not-publicly-named",
+        "senior_vision_owner": "Leila Bozorg and Julia Kerson",
+        "senior_vision_owner_title": "SPEED Task Force co-leads; Deputy Mayor for Housing and Planning and Deputy Mayor for Operations",
+        "senior_vision_basis": "The official SPEED announcement identifies Bozorg and Kerson as task-force co-leads; neither is established as this role's direct manager or hiring decision-maker.",
+        "verified_at": "2026-08-20T00:00:00.000Z"
+      },
+      "roleContextHash": "f2c6fa65611074258f1bc2cf4abe35022a1f27455ed7241098829a5fb0bb7c4c",
+      "live": true,
+      "fresh": true,
+      "hardScreenBlocked": false,
+      "decision": "evidence-gap-review",
+      "observed": 2,
+      "requirementTotal": 3,
+      "criticalObserved": 2,
+      "criticalTotal": 3,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.oti-operations-manager.operating-system",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "operating"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti-operations-manager.procurement-budget",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-weak",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.oti-operations-manager.product-teams",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "product"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opportunity.nyc-oti.product-manager.784450",
+      "title": "NYC OTI - Product Manager 784450",
+      "reportingContext": {
+        "direct_manager_title": "OTI Product Development leadership; exact reporting line not stated",
+        "direct_manager_person": null,
+        "direct_manager_public_status": "not-publicly-named",
+        "senior_vision_owner": "Lisa Gelobter",
+        "senior_vision_owner_title": "Chief Technology Officer and OTI Commissioner",
+        "senior_vision_basis": "Gelobter is the nearest publicly named senior OTI leader; the posting does not establish her as direct manager or hiring decision-maker.",
+        "verified_at": "2026-08-20T00:00:00.000Z"
+      },
+      "roleContextHash": "f87c2149d8a71836ffbd8e7ece3b2324713a9fecfc9275f638fb1528d47d91bf",
+      "live": true,
+      "fresh": true,
+      "hardScreenBlocked": false,
+      "decision": "evidence-gap-review",
+      "observed": 1,
+      "requirementTotal": 3,
+      "criticalObserved": 1,
+      "criticalTotal": 3,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.oti-product-manager-784450.lifecycle",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.oti-product-manager-784450.outcomes",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "metrics"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti-product-manager-784450.translation",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [],
+          "evidenceNeedles": []
+        }
+      ]
+    },
+    {
+      "id": "opportunity.nyc-oti.senior-product-manager-speed.789610",
+      "title": "NYC OTI - Senior Product Manager, SPEED 789610",
+      "reportingContext": {
+        "direct_manager_title": "Executive Director, Product Management or other OTI Product Management leadership; exact reporting line not stated",
+        "direct_manager_person": null,
+        "direct_manager_public_status": "not-publicly-named",
+        "senior_vision_owner": "Leila Bozorg and Julia Kerson",
+        "senior_vision_owner_title": "SPEED Task Force co-leads; Deputy Mayor for Housing and Planning and Deputy Mayor for Operations",
+        "senior_vision_basis": "The official SPEED announcement identifies Bozorg and Kerson as task-force co-leads; neither is established as this role's direct manager or hiring decision-maker.",
+        "verified_at": "2026-08-20T00:00:00.000Z"
+      },
+      "roleContextHash": "747a0252a08ccda740411bf554ec2963d1aa5d2d6f3a8ff50acd5135a461f4e6",
+      "live": true,
+      "fresh": true,
+      "hardScreenBlocked": false,
+      "decision": "evidence-gap-review",
+      "observed": 2,
+      "requirementTotal": 3,
+      "criticalObserved": 2,
+      "criticalTotal": 3,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.oti-speed-product.cross-agency",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/kc-town-hall"
+          ],
+          "evidenceNeedles": [
+            "municipal compliance"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti-speed-product.lifecycle",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "product"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti-speed-product.data",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-weak",
+          "routes": [
+            "/lab/source-backed-team-memory"
+          ],
+          "evidenceNeedles": [
+            "source"
+          ]
         }
       ]
     },

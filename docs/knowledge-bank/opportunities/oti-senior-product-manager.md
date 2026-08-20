@@ -5,14 +5,20 @@ kind: opportunity
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-15
-review_by: 2026-09-15
+last_reviewed: 2026-08-20
+review_by: 2026-08-27
 canonical_path: docs/knowledge-bank/opportunities/oti-senior-product-manager.md
-summary: Public-safe historical requirement, reporting-context, and portfolio-coverage map for four expired NYC OTI Public Interest Technology Crew Senior Product Manager positions.
+summary: Live, reposted NYC OTI Public Interest Technology Crew Senior Product Manager opportunity covering four resident-facing product positions.
 canonical_url: https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-44507
 source_type: official-employer
-opportunity_status: closed
-verified_at: 2026-08-15
+opportunity_status: live
+application_status: not-recorded
+posted_until: 2026-10-16
+verified_at: 2026-08-20
+fit_rank: 1
+fit_score: 94
+securability_score: 72
+combined_score: 85.2
 reporting_context:
   direct_manager_title: PIT Crew product or program leader, title not stated in the posting
   direct_manager_person: null
@@ -39,8 +45,8 @@ discovery_terms:
   - accessibility and public trust
 confirmed_facts:
   - Job ID 782366 covers four full-time Senior Product Manager positions in OTI's Commissioner's Office at 15 MetroTech.
-  - The salary range is $100,000 to $180,000 and the posting closes August 14, 2026.
-  - The official City Jobs page stated that the vacancy had expired when rechecked August 15, 2026.
+  - The salary range is $100,000 to $180,000; the posting was reposted August 17, 2026 and now closes October 16, 2026.
+  - The official City Jobs detail page was rechecked August 20, 2026 after the earlier vacancy expired.
   - The roles will lead resident-facing products from problem framing through discovery, prototyping, pilot, public launch, measurement, and learning.
   - Neither the posting nor the PIT Crew page names a direct manager; the official launch announcement identifies Lisa Gelobter as CTO and OTI Commissioner.
 inferences:
@@ -55,7 +61,7 @@ hard_screens:
     state: review-needed
     disposition: verify
   - id: screen.oti-product-manager.deadline
-    text: The application must be submitted through the official system by August 14, 2026.
+    text: The reposted application must be submitted through the official system by October 16, 2026.
     state: review-needed
     disposition: verify
 role_requirements:
@@ -160,6 +166,12 @@ relations:
   - type: uses_source
     target: source.nyc.pit-crew-launch.2026-07-13
     href: ../sources/nyc-pit-crew-launch-2026.md
+  - type: uses_source
+    target: source.jobs.nyc-oti.product-management-search.2026-08-20
+    href: ../sources/jobs-oti-product-management-search-2026-08-20.md
+  - type: related_to
+    target: evaluation.jobs.nyc-oti.product-management-ranking.2026-08-20
+    href: ../evaluations/oti-product-management-ranking-2026-08-20.md
   - type: related_to
     target: application.wowlist.senior-product-manager-oti-782366
     href: ../applications/wowlist-senior-product-manager-oti-782366.md
@@ -185,15 +197,15 @@ human_review: governed-open
 
 # NYC OTI - Senior Product Manager 782366
 
-This exact vacancy expired August 14, 2026 and is no longer a current
-public-resume gate. Keep it as the strongest recent public-interest product
-benchmark and watch for a materially similar PIT Crew opening.
+The four-position vacancy that expired August 14 was reposted August 17, 2026
+and is live through October 16, 2026. It is again a current public-resume gate,
+subject to weekly official-page review and the unresolved civil-service screen.
 
 Jamie's product-practice fit is unusually strong: the record spans public
 problem framing, community product delivery, discovery in use, stakeholder
 translation, launches, instrumentation, communications, governance, and
 stewardship. The civil-service title remains a real independent screen, and the
-deadline is immediate.
+application window is time-bounded.
 
 The graph does not invent a direct manager. Lisa Gelobter is the nearest
 publicly named senior vision owner for the PIT Crew, not a claimed supervisor.

@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 import matter from "gray-matter";
 
 import { defaultRepoRoot } from "./lib.mjs";
+import { evaluatePublicResumeSelection } from "../resumes/evaluate-public-resume-selection.mjs";
 
 export const namedHiringSuitePath = "evals/knowledge-wiki/named-hiring-readers.json";
 
@@ -41,12 +42,21 @@ export function validateNamedHiringRun({ repoRoot = defaultRepoRoot, suite, run 
   add(suite?.execution?.repositoryOrWikiAccessForJudges === false, "judges cannot receive repository or Wiki access");
   add(suite?.execution?.priorJudgeOutputVisible === false, "judges cannot see prior judge output");
 
-  const gates = Array.isArray(suite?.opportunityReaders) ? suite.opportunityReaders : [];
+  const registryGates = Array.isArray(suite?.opportunityReaders) ? suite.opportunityReaders : [];
+  const registryGateIds = registryGates.map((gate) => gate.id);
+  const selection = evaluatePublicResumeSelection({ root: repoRoot });
+  const selectedGateIds = selection.llmGate.queue.map((entry) => entry.gateId);
+  const selectedGateSet = new Set(selectedGateIds);
+  const gates = registryGates.filter((gate) => selectedGateSet.has(gate.id));
   const gateIds = gates.map((gate) => gate.id);
-  add(gates.length > 0, "suite must define opportunity readers");
-  add(new Set(gateIds).size === gateIds.length, "gate ids must be unique");
+  add(registryGates.length > 0, "suite must define opportunity readers");
+  add(new Set(registryGateIds).size === registryGateIds.length, "registry gate ids must be unique");
+  add(suite?.execution?.deterministicPreflightRequired === true, "deterministic preflight is required");
+  add(selection.overall === "pass", "public resume selection must pass before named-reader work");
+  add(selection.llmGate.allowed === true, "deterministic gate must release the reader queue");
+  add(gates.length === selectedGateIds.length, "selected reader queue is not fully represented in the registry");
 
-  for (const gate of gates) {
+  for (const gate of registryGates) {
     for (const [key, label] of [
       ["readerPath", "reader profile"],
       ["opportunityPath", "opportunity record"]
@@ -91,10 +101,10 @@ export function validateNamedHiringRun({ repoRoot = defaultRepoRoot, suite, run 
 
   const results = Array.isArray(run?.results) ? run.results : [];
   const resultIds = results.map((result) => result.gateId);
-  add(results.length === gates.length, "run must contain exactly one result per opportunity-reader gate");
+  add(results.length === gates.length, "run must contain exactly one result per selected opportunity-reader gate");
   add(new Set(resultIds).size === resultIds.length, "run result gate ids must be unique");
-  add(gateIds.every((id) => resultIds.includes(id)), "run is missing an opportunity-reader gate");
-  add(resultIds.every((id) => gateIds.includes(id)), "run contains an unknown opportunity-reader gate");
+  add(gateIds.every((id) => resultIds.includes(id)), "run is missing a selected opportunity-reader gate");
+  add(resultIds.every((id) => gateIds.includes(id)), "run contains an unselected opportunity-reader gate");
 
   for (const result of results) {
     add(["pass", "fail"].includes(result.verdict), `${result.gateId} verdict must be pass or fail`);
@@ -123,10 +133,7 @@ export function validateNamedHiringRun({ repoRoot = defaultRepoRoot, suite, run 
   add(run?.failCount === failCount, "fail count is stale");
   add(run?.suiteVerdict === expectedSuiteVerdict, "suite verdict is stale or averaged");
 
-  const closedGates = new Set(
-    gates.filter((gate) => gate.opportunityStatus !== "live").map((gate) => gate.id)
-  );
-  const liveResults = results.filter((result) => !closedGates.has(result.gateId));
+  const liveResults = results;
 
   return {
     issues,

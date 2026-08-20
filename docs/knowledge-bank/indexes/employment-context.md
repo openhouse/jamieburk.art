@@ -5,8 +5,8 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-15
-review_by: 2026-08-18
+last_reviewed: 2026-08-20
+review_by: 2026-08-27
 canonical_path: docs/knowledge-bank/indexes/employment-context.md
 summary: Task-oriented entry point for live opportunity research, role coverage, public-only hiring evaluation, and private-boundary rules.
 relations:
@@ -22,6 +22,18 @@ relations:
   - type: related_to
     target: opportunity.nyc-oti.senior-product-manager.782366
     href: ../opportunities/oti-senior-product-manager.md
+  - type: related_to
+    target: opportunity.nyc-oti.operations-manager-speed.789810
+    href: ../opportunities/oti-operations-manager-speed-789810.md
+  - type: related_to
+    target: opportunity.nyc-oti.product-manager.784450
+    href: ../opportunities/oti-product-manager-784450.md
+  - type: related_to
+    target: opportunity.nyc-oti.senior-product-manager-speed.789610
+    href: ../opportunities/oti-senior-product-manager-speed-789610.md
+  - type: related_to
+    target: evaluation.jobs.nyc-oti.product-management-ranking.2026-08-20
+    href: ../evaluations/oti-product-management-ranking-2026-08-20.md
   - type: related_to
     target: opportunity.nyc-oti.technical-operations-manager.782369
     href: ../opportunities/oti-technical-operations.md
@@ -60,28 +72,31 @@ paths, message bodies, contact details, and real hiring outcomes remain private.
 
 ## Current priority contexts
 
-- [ACLU - Senior Project Manager, National Campaigns](../opportunities/aclu-senior-project-manager-national-campaigns.md)
-- [CodePath - Senior AI Operations Lead](../opportunities/codepath-senior-ai-operations-lead.md)
-- [CodePath - Engineering Project Manager](../opportunities/codepath-engineering-project-manager.md)
-- [Asana - AI Implementation Manager, Service Management](../opportunities/asana-ai-implementation.md)
-- [PermitFlow - Product Operations Manager](../opportunities/permitflow-product-operations.md)
+- [NYC OTI - PIT Crew Senior Product Manager 782366](../opportunities/oti-senior-product-manager.md)
+- [NYC OTI - SPEED Operations Manager 789810](../opportunities/oti-operations-manager-speed-789810.md)
+- [NYC OTI - Product Manager 784450](../opportunities/oti-product-manager-784450.md)
+- [NYC OTI - SPEED Senior Product Manager 789610](../opportunities/oti-senior-product-manager-speed-789610.md)
 
-These five postings were live on their official employer surfaces when
-rechecked August 15, 2026. PermitFlow's current posting does not disclose
-compensation, so the $100,000 floor remains a hard-screen question rather than
-an established fact. Facts about
-reporting lines distinguish a posting-named title, a current official
+These four postings are the top 38% nearest-integer selection from the eleven
+roles returned by the supplied OTI CityJobs search. Their official detail pages
+were rechecked August 20, 2026. See the
+[transparent ranking](../evaluations/oti-product-management-ranking-2026-08-20.md)
+for the fit/securability method, all eleven rows, and specialized gaps that
+résumé language cannot repair. Facts about reporting lines distinguish a
+posting-named title, a role-based likely reader, a current official
 title-holder match, and a senior vision owner. A title match is not proof of a
 hiring manager, interview participant, private opinion, or final org chart.
 
 ## Public-resume active reader set
 
-The stable site-visitor resume is evaluated against seven fictionalized
-public-context reader gates spanning the five current priority contexts. The
-shared resume must make the common delivery case legible to every active gate;
-application-specific versions may go narrower. A modeled pass advances only to
-a structured interview or work sample. It does not assert that any named person
-participated, endorsed Jamie, or would make a final hiring decision.
+No submitted application is recorded in the graph as of August 20. The stable
+site-visitor resume therefore follows the open-opportunity tier and is evaluated
+against eight fictionalized public-context reader gates spanning the four OTI
+roles. Deterministic application, freshness, deadline, applicant-eligibility,
+salary, ranking, and exact-artifact checks run first; unrelated reader calls are
+skipped. Application-specific versions may go narrower. A modeled pass advances
+only to a structured interview or work sample. It does not assert that any named
+person participated, endorsed Jamie, or would make a final hiring decision.
 
 ## Candidate mobility and location fit
 
@@ -103,7 +118,6 @@ opportunity discovery.
 ## Closed watch patterns
 
 - [NYC OTI - Technical Operations Manager 782369](../opportunities/oti-technical-operations.md) - expired August 7, 2026; Jamie's clearest future OTI operations watch pattern.
-- [NYC OTI - Senior Product Manager 782366](../opportunities/oti-senior-product-manager.md) - official City page marked the exact vacancy expired when rechecked August 15, 2026.
 - [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md) - absent from the current official jobs surface when rechecked August 15, 2026.
 - [ACLU - Product Manager II, Discovery](../opportunities/aclu-product-discovery.md) - exact posting closed.
 - [CodePath - Senior Program Manager, Claude Corps](../opportunities/codepath-claude-corps.md) - exact posting closed.

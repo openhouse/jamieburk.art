@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "id": "public-resume-selection-2026-08-20",
+  "asOf": "2026-08-20T12:00:00-04:00",
+  "policy": {
+    "activeApplicationStatuses": ["submitted", "screening", "interview", "final-review", "offer-pending"],
+    "openOpportunityStatus": "live",
+    "requireFreshOpportunityReview": true,
+    "minimumAcceptableSalary": 100000,
+    "historicalFallbackFraction": 0.25,
+    "historicalFallbackRounding": "ceil",
+    "unknownEligibilityFailsClosed": true,
+    "unknownSalaryFailsOpenOpportunity": true,
+    "selectionOrder": ["active-applications", "open-opportunities", "historical-top-quarter"]
+  },
+  "siteArtifact": {
+    "artifactSpecPath": "evals/resumes/artifacts/public-technical-project-manager-pdf.json",
+    "publicUrlPath": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+  },
+  "resumeSets": [
+    {
+      "opportunityIds": [
+        "opportunity.nyc-oti.operations-manager-speed.789810",
+        "opportunity.nyc-oti.product-manager.784450",
+        "opportunity.nyc-oti.senior-product-manager-speed.789610",
+        "opportunity.nyc-oti.senior-product-manager.782366"
+      ],
+      "resumePath": "resumes/2026-08-15/technical-project-manager-product-operations-implementation/Jamie-Burkart-Resume-Technical-Project-Manager.md",
+      "scope": "Current OTI product-management and operations opportunity set"
+    },
+    {
+      "opportunityIds": ["opportunity.nyc-oti.senior-product-manager.782366"],
+      "resumePath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
+      "scope": "Single active PIT Crew Senior Product Manager application"
+    },
+    {
+      "opportunityIds": ["opportunity.nyc-oti.operations-manager-speed.789810"],
+      "resumePath": "resumes/2026-08-20/nyc-oti-operations-manager-speed-789810/Jamie-Burkart-Resume-NYC-OTI-Operations-Manager-SPEED-789810.md",
+      "scope": "Single active SPEED Operations Manager application"
+    },
+    {
+      "opportunityIds": ["opportunity.nyc-oti.product-manager.784450"],
+      "resumePath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.md",
+      "scope": "Single active OTI Product Manager application"
+    },
+    {
+      "opportunityIds": ["opportunity.nyc-oti.senior-product-manager-speed.789610"],
+      "resumePath": "resumes/2026-08-20/nyc-oti-senior-product-manager-speed-789610/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-SPEED-789610.md",
+      "scope": "Single active SPEED Senior Product Manager application"
+    },
+    {
+      "opportunityIds": [
+        "opportunity.asana.ai-implementation.8027437",
+        "opportunity.nyc-oti.operations-manager-speed.789810",
+        "opportunity.nyc-oti.senior-product-manager.782366",
+        "opportunity.nyc-oti.technical-operations-manager.782369"
+      ],
+      "resumePath": "resumes/2026-08-15/technical-project-manager-product-operations-implementation/Jamie-Burkart-Resume-Technical-Project-Manager.md",
+      "scope": "Top-quarter historical fallback across the complete ranked opportunity set"
+    }
+  ],
+  "candidates": [
+    {
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
+      "historicalFitRank": 1,
+      "salaryMaximum": 180000,
+      "externalApplicantEligible": true,
+      "readerGateIds": ["gate.oti-senior-product.lisa-gelobter", "gate.oti-senior-product.product-leadership"]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
+      "historicalFitRank": 2,
+      "salaryMaximum": 180000,
+      "externalApplicantEligible": true,
+      "readerGateIds": ["gate.oti-technical-operations.lisa-gelobter"]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.operations-manager-speed.789810",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-operations-manager-speed-789810.md",
+      "historicalFitRank": 3,
+      "salaryMaximum": 160000,
+      "externalApplicantEligible": true,
+      "readerGateIds": ["gate.oti-speed-operations.product-leadership", "gate.oti-speed-operations.julia-kerson"]
+    },
+    {
+      "opportunityId": "opportunity.asana.ai-implementation.8027437",
+      "opportunityPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
+      "historicalFitRank": 4,
+      "salaryMaximum": null,
+      "externalApplicantEligible": true,
+      "readerGateIds": ["gate.asana-ai-implementation.arnab-bose"]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+      "historicalFitRank": 5,
+      "salaryMaximum": 150000,
+      "externalApplicantEligible": true,
+      "readerGateIds": ["gate.oti-product-manager.product-leadership", "gate.oti-product-manager.lisa-gelobter"]
+    },
+    {
+      "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "opportunityPath": "docs/knowledge-bank/opportunities/aclu-senior-project-manager-national-campaigns.md",
+      "historicalFitRank": 6,
+      "salaryMaximum": null,
+      "externalApplicantEligible": true,
+      "readerGateIds": ["gate.aclu-national-campaigns.deirdre-schifeling"]
+    },
+    {
+      "opportunityId": "opportunity.codepath.senior-ai-operations-lead.5175813007",
+      "opportunityPath": "docs/knowledge-bank/opportunities/codepath-senior-ai-operations-lead.md",
+      "historicalFitRank": 7,
+      "salaryMaximum": null,
+      "externalApplicantEligible": true,
+      "readerGateIds": ["gate.codepath-ai-operations.quinton-ma", "gate.codepath-ai-operations.brian-madigan"]
+    },
+    {
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "opportunityPath": "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
+      "historicalFitRank": 8,
+      "salaryMaximum": null,
+      "externalApplicantEligible": true,
+      "readerGateIds": ["gate.codepath-engineering.zack-parker", "gate.codepath-engineering.chris-coleman"]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager-speed.789610",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-speed-789610.md",
+      "historicalFitRank": 9,
+      "salaryMaximum": 180000,
+      "externalApplicantEligible": true,
+      "readerGateIds": ["gate.oti-speed-product.product-leadership", "gate.oti-speed-product.leila-bozorg"]
+    },
+    {
+      "opportunityId": "opportunity.permitflow.product-operations.8a6e6066",
+      "opportunityPath": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
+      "historicalFitRank": 10,
+      "salaryMaximum": null,
+      "externalApplicantEligible": true,
+      "readerGateIds": ["gate.permitflow-product-operations.francis-thumpasery"]
+    },
+    {
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "opportunityPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
+      "historicalFitRank": 11,
+      "salaryMaximum": null,
+      "externalApplicantEligible": true,
+      "readerGateIds": []
+    },
+    {
+      "opportunityId": "opportunity.aclu.product-manager-discovery.8482872002",
+      "opportunityPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
+      "historicalFitRank": 12,
+      "salaryMaximum": null,
+      "externalApplicantEligible": true,
+      "readerGateIds": []
+    },
+    {
+      "opportunityId": "opportunity.codepath.claude-corps.5182020007",
+      "opportunityPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
+      "historicalFitRank": 13,
+      "salaryMaximum": null,
+      "externalApplicantEligible": true,
+      "readerGateIds": []
+    }
+  ]
+}

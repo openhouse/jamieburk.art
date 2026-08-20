@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "id": "public-resume-readers-dynamic-selection-2026-08-20",
+  "selectionPolicyPath": "evals/resumes/public-resume-selection.json",
+  "readerCriteria": [
+    {
+      "gateId": "gate.oti-senior-product.lisa-gelobter",
+      "readerId": "reader.lisa-gelobter",
+      "displayName": "Lisa Gelobter",
+      "readerPath": "docs/qa/hiring-acceptance/readers/lisa-gelobter.md",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
+      "signalGroups": [
+        { "id": "public-interest-product", "patterns": ["public-facing products", "civic technology", "public technology"] },
+        { "id": "end-to-end-delivery", "patterns": ["problem framing", "user stories", "public launch"] },
+        { "id": "resident-usability", "patterns": ["resident-facing", "accessibility-aware", "participatory discovery"] },
+        { "id": "durable-capacity", "patterns": ["durable handoffs", "teams can continue", "handoff documentation"] }
+      ],
+      "constructiveCritique": "The shared resume shows public-interest product delivery, technical fluency, resident-facing interpretation, and durable handoff. The Senior IT Architect minimum and evidence of focused product authority inside a large institution remain real screens.",
+      "validateNext": "Use a structured product case to test discovery, version-one scope, accessibility, launch tradeoffs, metrics, managerability, and City capacity after handoff."
+    },
+    {
+      "gateId": "gate.oti-senior-product.product-leadership",
+      "readerId": "reader.oti-product-management-leadership",
+      "displayName": "OTI Product Management leadership",
+      "readerPath": "docs/qa/hiring-acceptance/readers/oti-product-management-leadership.md",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
+      "signalGroups": [
+        { "id": "product-lifecycle", "patterns": ["Problem framing, discovery", "acceptance criteria", "post-launch learning"] },
+        { "id": "cross-functional", "patterns": ["designer and engineer coordination", "agency and policy translation"] },
+        { "id": "measurement", "patterns": ["instrumentation", "metrics", "measurement"] },
+        { "id": "production-judgment", "patterns": ["release verification", "risk and dependency tracking", "low-cost production operations"] }
+      ],
+      "constructiveCritique": "The resume carries the full product lifecycle and makes cross-functional delivery concrete. A hiring screen should still distinguish founder-wide responsibility from the prioritization and decision authority of a senior product manager on one accountable product.",
+      "validateNext": "Inspect one product end to end: users, decision rights, roadmap, rejected scope, accessibility, launch readiness, instrumentation, adoption, and what changed after release."
+    },
+    {
+      "gateId": "gate.oti-speed-operations.product-leadership",
+      "readerId": "reader.oti-product-management-leadership",
+      "displayName": "OTI Product Management leadership",
+      "readerPath": "docs/qa/hiring-acceptance/readers/oti-product-management-leadership.md",
+      "opportunityId": "opportunity.nyc-oti.operations-manager-speed.789810",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-operations-manager-speed-789810.md",
+      "signalGroups": [
+        { "id": "operating-system", "patterns": ["operating systems", "decision records", "maintenance workflows"] },
+        { "id": "delivery-control", "patterns": ["risk and dependency tracking", "rollout planning", "sequenced releases"] },
+        { "id": "vendor-public-process", "patterns": ["vendor coordination", "municipal compliance", "public funding request"] },
+        { "id": "team-continuity", "patterns": ["onboarding", "durable handoffs", "teams can continue"] }
+      ],
+      "constructiveCritique": "The resume makes Jamie's connective operational work visible across technical, civic, vendor, and physical projects. It must not imply formal City procurement, personnel, or budget authority that the record does not establish.",
+      "validateNext": "Use an operations scenario to test portfolio intake, budget and procurement boundaries, staffing, vendor escalation, executive status, team health, and a sustainable operating cadence."
+    },
+    {
+      "gateId": "gate.oti-speed-operations.julia-kerson",
+      "readerId": "reader.julia-kerson",
+      "displayName": "Julia Kerson",
+      "readerPath": "docs/qa/hiring-acceptance/readers/julia-kerson.md",
+      "opportunityId": "opportunity.nyc-oti.operations-manager-speed.789810",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-operations-manager-speed-789810.md",
+      "signalGroups": [
+        { "id": "public-execution", "patterns": ["public process", "municipal compliance", "government-facing follow-through"] },
+        { "id": "cross-disciplinary", "patterns": ["operations teams", "designers, engineers", "policy stakeholders"] },
+        { "id": "accountability", "patterns": ["decision records", "action items", "accountable follow-through"] },
+        { "id": "measured-improvement", "patterns": ["analytics", "metrics", "post-launch learning"] }
+      ],
+      "constructiveCritique": "Jamie's record shows operational persistence across public processes and mixed stakeholder systems. The next screen is whether that practice can support a City-scale program without overcentralizing responsibility in one person.",
+      "validateNext": "Probe how Jamie would shorten a cross-agency process, define ownership, report blockers, protect controls, measure time saved, and leave a healthier team system after one year."
+    },
+    {
+      "gateId": "gate.oti-product-manager.product-leadership",
+      "readerId": "reader.oti-product-management-leadership",
+      "displayName": "OTI Product Management leadership",
+      "readerPath": "docs/qa/hiring-acceptance/readers/oti-product-management-leadership.md",
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+      "signalGroups": [
+        { "id": "product-definition", "patterns": ["product direction", "problem framing", "requirements"] },
+        { "id": "delivery", "patterns": ["user stories", "acceptance criteria", "public launch"] },
+        { "id": "outcomes", "patterns": ["analytics", "metrics", "measurement"] },
+        { "id": "agency-users", "patterns": ["agency and policy translation", "resident-facing", "stakeholder alignment"] }
+      ],
+      "constructiveCritique": "The shared resume translates long founder and civic-project work into recognizable product functions without changing the actual titles. The important remaining question is depth of product prioritization across a sustained roadmap and team.",
+      "validateNext": "Ask for a roadmap story with user evidence, outcome definition, competing stakeholders, technical constraints, acceptance criteria, launch, and a post-launch decision."
+    },
+    {
+      "gateId": "gate.oti-product-manager.lisa-gelobter",
+      "readerId": "reader.lisa-gelobter",
+      "displayName": "Lisa Gelobter",
+      "readerPath": "docs/qa/hiring-acceptance/readers/lisa-gelobter.md",
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+      "signalGroups": [
+        { "id": "usable-services", "patterns": ["resident-facing guidance", "public-facing products", "community-calendar"] },
+        { "id": "technical-capacity", "patterns": ["Web systems architecture", "maintainable publishing systems", "Git/GitHub"] },
+        { "id": "public-trust", "patterns": ["privacy-conscious", "accessibility-aware", "sensitive boundaries"] },
+        { "id": "learning", "patterns": ["post-launch learning", "retrospectives", "shared campaign memory"] }
+      ],
+      "constructiveCritique": "The resume presents technology as a means to make public and community systems easier to use, with credible governance and maintenance instincts. Formal product-team experience and civil-service qualification remain independent employer screens.",
+      "validateNext": "Probe why City service, how Jamie shares power with users and agencies, what product outcome matters, and how the team—not Jamie alone—retains capability."
+    },
+    {
+      "gateId": "gate.oti-speed-product.product-leadership",
+      "readerId": "reader.oti-product-management-leadership",
+      "displayName": "OTI Product Management leadership",
+      "readerPath": "docs/qa/hiring-acceptance/readers/oti-product-management-leadership.md",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager-speed.789610",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-speed-789610.md",
+      "signalGroups": [
+        { "id": "physical-public-system", "patterns": ["historic building", "municipal compliance", "public process"] },
+        { "id": "data-technical", "patterns": ["SQL", "PostgreSQL/PostGIS", "APIs"] },
+        { "id": "product-delivery", "patterns": ["requirements", "user stories", "acceptance criteria"] },
+        { "id": "cross-agency", "patterns": ["agency and policy translation", "elected officials and staff", "City recycling coordination"] }
+      ],
+      "constructiveCritique": "The resume supplies a rare bridge among physical projects, public process, product delivery, and data fluency. It does not yet prove the enterprise data-governance and architecture depth preferred in the posting.",
+      "validateNext": "Use a permitting-data case to test source systems, users, governance, API constraints, roadmap tradeoffs, interagency ownership, quality measures, and a bounded version one."
+    },
+    {
+      "gateId": "gate.oti-speed-product.leila-bozorg",
+      "readerId": "reader.leila-bozorg",
+      "displayName": "Leila Bozorg",
+      "readerPath": "docs/qa/hiring-acceptance/readers/leila-bozorg.md",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager-speed.789610",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-speed-789610.md",
+      "signalGroups": [
+        { "id": "housing-built-environment", "patterns": ["Mixed-Use Development", "four commercial spaces and three homes", "historic building"] },
+        { "id": "equitable-public-process", "patterns": ["public-benefit documentation", "resident service", "participatory discovery"] },
+        { "id": "implementation", "patterns": ["municipal compliance", "vendor coordination", "sustained government-facing follow-through"] },
+        { "id": "measurable-delivery", "patterns": ["metrics", "analytics", "public result reporting"] }
+      ],
+      "constructiveCritique": "Jamie can connect affordable-city mission to the mechanics of a real building project, public benefit, and digital delivery. The hiring screen should test whether that experience transfers to equitable citywide permitting without overstating housing-policy authority.",
+      "validateNext": "Probe one built-environment bottleneck, who bears its cost, what evidence would define a better process, how agencies share decisions, and how speed remains equitable and accountable."
+    },
+    {
+      "gateId": "gate.oti-technical-operations.lisa-gelobter",
+      "readerId": "reader.lisa-gelobter",
+      "displayName": "Lisa Gelobter",
+      "readerPath": "docs/qa/hiring-acceptance/readers/lisa-gelobter.md",
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "opportunityPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
+      "signalGroups": [
+        { "id": "technical-operations", "patterns": ["technical operations", "project manager", "operating systems"] },
+        { "id": "delivery-and-risk", "patterns": ["risk and dependency tracking", "surface blockers", "decision records"] },
+        { "id": "onboarding-and-runbooks", "patterns": ["onboarding", "runbooks", "handoff documentation"] },
+        { "id": "public-service-technology", "patterns": ["public-interest technology", "resident-facing", "public-facing products"] }
+      ],
+      "constructiveCritique": "This expired role remains a useful benchmark for translating founder responsibility into technical operations, delivery control, documentation, and team capacity. It is not a current opening and cannot be treated as one.",
+      "validateNext": "For a materially similar future opening, test portfolio governance, personnel operations, procurement and budget exposure, escalation judgment, civil-service eligibility, and shift expectations."
+    },
+    {
+      "gateId": "gate.asana-ai-implementation.arnab-bose",
+      "readerId": "reader.arnab-bose",
+      "displayName": "Arnab Bose",
+      "readerPath": "docs/qa/hiring-acceptance/readers/arnab-bose.md",
+      "opportunityId": "opportunity.asana.ai-implementation.8027437",
+      "opportunityPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
+      "signalGroups": [
+        { "id": "implementation-ownership", "patterns": ["implementation", "adoption", "client"] },
+        { "id": "ai-workflow", "patterns": ["AI-assisted", "human review", "deterministic"] },
+        { "id": "risk-and-change", "patterns": ["risk", "rollout planning", "operational improvements"] },
+        { "id": "reusable-playbooks", "patterns": ["runbooks", "reusable patterns", "handoff documentation"] }
+      ],
+      "constructiveCritique": "The shared resume shows implementation ownership, responsible AI controls, adoption, risk, and reusable handoff. Direct enterprise migration, configuration depth, and post-sale authority remain important screens.",
+      "validateNext": "Inspect one customer-facing implementation from discovery through configuration, change management, launch, adoption measurement, and reusable playbook."
+    }
+  ]
+}

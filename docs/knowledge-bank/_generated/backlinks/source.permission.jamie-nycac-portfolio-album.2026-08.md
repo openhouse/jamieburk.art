@@ -3,7 +3,7 @@
 
 **Source commit:** `1e4cc9db7504cc2674ec1524ba75a850a45c2a78`
 **Generation time:** 2026-08-15T19:44:01-04:00
-**Source fingerprint:** `319644d0b8cd425eb6f5057142724ec1db41ac5bf9287595715fa2dd923aeeb5`
+**Source fingerprint:** `c05169aae532c2a0a6940e411678892bfcab957e2d291568f34861a582fa448a`
 
 - [NYC Artist Coalition Office of Nightlife town hall at Market Hotel, 2017](../../assets/photographs/nycac-save-nyc-spaces-town-hall-2017.md) - `uses_source` (frontmatter)
 - [Jamie Burkart facilitating at Shoestring Press, 2017](../../assets/photographs/nycac-shoestring-facilitation-2017.md) - `uses_source` (frontmatter)

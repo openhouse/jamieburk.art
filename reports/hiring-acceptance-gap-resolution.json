@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "candidateSha": "1e4cc9db7504cc2674ec1524ba75a850a45c2a78",
   "portfolioSnapshotHash": "68eeb9fe8e11cf82aab6430d8813c323519e1e7ba0c02ef20ddd7e81a8c12160",
-  "publicReportHash": "d81ac785160e0a87fd5cb8963993292ddb8cf34b0ef25f2f714c0e4655e6e12f",
-  "wikiSourceFingerprint": "319644d0b8cd425eb6f5057142724ec1db41ac5bf9287595715fa2dd923aeeb5",
+  "publicReportHash": "ecbaee3e00b895fba23c4e2f51c00f51cb426a6861dabfd546510b225f222346",
+  "wikiSourceFingerprint": "c05169aae532c2a0a6940e411678892bfcab957e2d291568f34861a582fa448a",
   "findings": [
     {
       "findingId": "finding.requirement.aclu-national-campaigns.budget-administration",
@@ -72,6 +72,65 @@
       "currentStatus": "experience-gap",
       "gapType": "experience",
       "smallestResponsibleChange": "Add a truthful conformance example if one exists; otherwise present accessibility delivery as a development area and name the review partners Jamie would bring in early.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-operations-manager.procurement-budget",
+      "opportunityId": "opportunity.nyc-oti.operations-manager-speed.789810",
+      "requirementId": "requirement.oti-operations-manager.procurement-budget",
+      "classification": "true-experience-gap",
+      "wikiRecords": [
+        "project.kc-town-hall"
+      ],
+      "currentStatus": "visible-weak",
+      "gapType": "experience",
+      "smallestResponsibleChange": "Distinguish vendor, proposal, compliance, and owner responsibilities from formal City procurement authority; identify any direct budget or contract evidence before applying.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-product-manager-784450.lifecycle",
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "requirementId": "requirement.oti-product-manager-784450.lifecycle",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "project.wowlist",
+        "project.callnyc"
+      ],
+      "currentStatus": "visible-proven",
+      "gapType": "none",
+      "smallestResponsibleChange": "Lead with WOWList, CallNYC, and long-term client product stewardship.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-product-manager-784450.translation",
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "requirementId": "requirement.oti-product-manager-784450.translation",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations",
+        "project.callnyc"
+      ],
+      "currentStatus": "visible-proven",
+      "gapType": "none",
+      "smallestResponsibleChange": "Use a concrete cross-functional launch story with tradeoffs and decision ownership.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-speed-product.data",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager-speed.789610",
+      "requirementId": "requirement.oti-speed-product.data",
+      "classification": "true-experience-gap",
+      "wikiRecords": [
+        "method.source-backed-team-memory",
+        "project.callnyc"
+      ],
+      "currentStatus": "visible-weak",
+      "gapType": "experience",
+      "smallestResponsibleChange": "Prepare technical evidence for APIs, SQL, Postgres/PostGIS, open data, schemas, source governance, and production handoff without claiming enterprise scale that is not established.",
       "requiresOriginalSourceReview": false,
       "requiresHumanApproval": true
     },

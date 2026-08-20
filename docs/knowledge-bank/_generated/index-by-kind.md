@@ -3,7 +3,7 @@
 
 **Source commit:** `1e4cc9db7504cc2674ec1524ba75a850a45c2a78`
 **Generation time:** 2026-08-15T19:44:01-04:00
-**Source fingerprint:** `319644d0b8cd425eb6f5057142724ec1db41ac5bf9287595715fa2dd923aeeb5`
+**Source fingerprint:** `c05169aae532c2a0a6940e411678892bfcab957e2d291568f34861a582fa448a`
 
 ## application
 
@@ -244,6 +244,7 @@
 - [Portfolio project-cover curatorial record](../evaluations/curatorial/portfolio-project-covers-2026-08-13.md) - `evaluation.curatorial.portfolio-project-covers.2026-08-13`
 - [Employment context coverage baseline - July 18, 2026](../evaluations/employment-context-coverage-2026-07-18.md) - `evaluation.employment-context.coverage.2026-07-18`
 - [Jamie public-record integration evaluation](../evaluations/jamie-public-record-integration-2026-08-03.md) - `evaluation.jamie-public-record-integration.2026-08-03`
+- [Jamie-specific ranking of the NYC OTI product-manager search corpus](../evaluations/oti-product-management-ranking-2026-08-20.md) - `evaluation.jobs.nyc-oti.product-management-ranking.2026-08-20`
 - [Knowledge Wiki retrieval tasks](../evaluations/retrieval-tasks.md) - `evaluation.knowledge-wiki.retrieval-tasks`
 - [NYCAC and Fair Rent NYC frontline advocacy eval](../evaluations/nycac-crs-frontline-advocacy-2026-08-13.md) - `evaluation.nycac.crs-frontline-source-return.2026-08-13`
 - [NYC Artist Coalition shared-folder production evals](../evaluations/nycac-shared-folder-production-2026-07-19.md) - `evaluation.nycac.shared-folder-production.2026-07-19`
@@ -333,6 +334,9 @@
 - [CodePath - Senior Program Manager, Claude Corps](../opportunities/codepath-claude-corps.md) - `opportunity.codepath.claude-corps.5182020007`
 - [CodePath - Engineering Project Manager](../opportunities/codepath-engineering-project-manager.md) - `opportunity.codepath.engineering-project-manager.5160542007`
 - [CodePath - Senior AI Operations Lead](../opportunities/codepath-senior-ai-operations-lead.md) - `opportunity.codepath.senior-ai-operations-lead.5175813007`
+- [NYC OTI - Operations Manager, SPEED 789810](../opportunities/oti-operations-manager-speed-789810.md) - `opportunity.nyc-oti.operations-manager-speed.789810`
+- [NYC OTI - Product Manager 784450](../opportunities/oti-product-manager-784450.md) - `opportunity.nyc-oti.product-manager.784450`
+- [NYC OTI - Senior Product Manager, SPEED 789610](../opportunities/oti-senior-product-manager-speed-789610.md) - `opportunity.nyc-oti.senior-product-manager-speed.789610`
 - [NYC OTI - Senior Product Manager 782366](../opportunities/oti-senior-product-manager.md) - `opportunity.nyc-oti.senior-product-manager.782366`
 - [NYC OTI - Technical Operations Manager 782369](../opportunities/oti-technical-operations.md) - `opportunity.nyc-oti.technical-operations-manager.782369`
 - [PermitFlow - Product Operations Manager](../opportunities/permitflow-product-operations.md) - `opportunity.permitflow.product-operations.8a6e6066`
@@ -439,6 +443,7 @@
 - [CodePath - Senior Program Manager, Claude Corps 5182020007](../sources/jobs-codepath-claude-corps-5182020007.md) - `source.jobs.codepath.claude-corps.5182020007`
 - [CodePath - Engineering Project Manager 5160542007](../sources/jobs-codepath-engineering-project-manager-5160542007.md) - `source.jobs.codepath.engineering-project-manager.5160542007`
 - [CodePath - Senior AI Operations Lead 5175813007](../sources/jobs-codepath-senior-ai-operations-lead-5175813007.md) - `source.jobs.codepath.senior-ai-operations-lead.5175813007`
+- [NYC OTI product-manager search result corpus, August 20, 2026](../sources/jobs-oti-product-management-search-2026-08-20.md) - `source.jobs.nyc-oti.product-management-search.2026-08-20`
 - [NYC Jobs - Senior Product Manager 782366](../sources/jobs-oti-senior-product-manager-782366.md) - `source.jobs.oti.senior-product-manager.782366`
 - [NYC Jobs - Technical Operations Manager 782369](../sources/jobs-oti-technical-operations-782369.md) - `source.jobs.oti.technical-operations.782369`
 - [Official posting - PermitFlow Product Operations Manager](../sources/jobs-permitflow-product-operations.md) - `source.jobs.permitflow.product-operations.8a6e6066`
