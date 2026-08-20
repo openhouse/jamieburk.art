@@ -154,6 +154,9 @@ export function evaluateCivicMatchProfile(root = defaultRoot, { deterministicOnl
   if (/\/(?:Users|Volumes)\//.test(`${guide}\n${JSON.stringify(config)}`) || /docs\.google\.com\//.test(`${guide}\n${JSON.stringify(config)}`)) {
     fail("public safety", "a private local or Google Workspace locator entered the guide or contract");
   }
+  if (/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i.test(guide) || /\b(?:\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]\d{3}[-.\s]\d{4}\b/.test(guide)) {
+    fail("public safety", "a direct email address or phone number entered the repository guide");
+  }
   if (/\b(?:bound|bounded|hinge)\b/i.test(guide)) {
     fail("public language", "the guide contains a discouraged public-surface word");
   }
@@ -240,6 +243,9 @@ export function evaluateCivicMatchProfile(root = defaultRoot, { deterministicOnl
       Array.isArray(assessment.strengths) && assessment.strengths.length >= 2 &&
       Array.isArray(assessment.risks) && assessment.risks.length >= 1 &&
       Array.isArray(assessment.followUpEvidence) && assessment.followUpEvidence.length >= 1;
+    if (/\b(?:bound|bounded|hinge)\b/i.test(JSON.stringify(assessment))) {
+      fail("public language", `${assessment.key} contains a discouraged public-surface word`);
+    }
     if (assessmentPass) passingReaders += 1;
     else fail("reader acceptance", `${assessment.name ?? assessment.key ?? "unknown reader"} is not an exact-guide pass`);
   }

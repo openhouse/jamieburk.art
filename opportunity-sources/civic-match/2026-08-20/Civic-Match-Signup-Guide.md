@@ -23,8 +23,9 @@ submitting it. Use the existing account. Do not create a duplicate.
 
 ## Before you begin
 
-- Open the existing Civic Match account associated with
-  `jamie.burkart@gmail.com`.
+- Sign in to Jamie's existing Civic Match account with the same login method
+  used when the account was created. If that method is uncertain, use account
+  recovery or Civic Match support. Do not create a duplicate account.
 - Have the current multi-opportunity resume ready:
   `Jamie-Burkart-Resume-Technical-Project-Manager.pdf` from this directory's
   governed resume manifest.
@@ -88,8 +89,11 @@ shows no more than 300 words.
 ## Step 2 of 5 — Contact Information
 
 - **Full name:** `Jamie Burkart`
-- **Email:** `jamie.burkart@gmail.com`
-- **Cell phone:** `(816) 728-8685`
+- **Email:** Keep the email already attached to Jamie's existing account. Before
+  continuing, confirm that it is the address Jamie wants Civic Match and
+  government hiring teams to use. Do not copy the address into this repository.
+- **Cell phone:** Enter Jamie's current application phone number and compare it
+  with the current resume. Do not copy the number into this repository.
 - **Current city:** Search for `Brooklyn, New York` and select the matching
   result.
 - **Current location outside the United States:** Leave unchecked.
@@ -100,7 +104,8 @@ shows no more than 300 words.
   added and this is true.
 - **Hometown state:** Leave the derived field blank with hometown.
 
-Click `Continue` after confirming the account email and phone match the resume.
+Click `Continue` after confirming the account email and phone match Jamie's
+current application materials.
 
 ## Step 3 of 5 — Professional Experience
 
@@ -155,7 +160,7 @@ Select these five closest role labels:
 
 <!-- copy:profile-summary:start -->
 ```text
-I work where an emerging public-facing idea needs to become a service people can actually use. Over 14 years, I have led discovery, business analysis, requirements, implementation, launch, measurement, and handoff across civic technology, community development, cultural advocacy, and small-business systems. Through Thick Arts, I lead direct client implementation and coordinate collaborators, designers, engineers, vendors, operations, and leadership while maintaining plans for scope, schedules, resources, risks, decisions, and next actions. My current work includes human-reviewed AI workflows and evals that turn governed source material into public-safe application artifacts, with deterministic gates before costly model review. At KC Town Hall, I co-led municipal compliance and field implementation for the adaptive reuse of an approximately 6,500-square-foot building and served as the City's named developer/presenter for a successful $490,539 public-funding request. I built CallNYC to turn constituent-services data into 61 issue pathways; co-built WOW List, a natural-language community calendar that reached 1,846 users and 16,142 posts/events in a July 2017 production snapshot; and helped design a resident service whose tracker records 1,970 tires collected. I do my best work when residents, policy staff, designers, engineers, vendors, and leaders need clear decisions, visible risks, usable documentation, respectful facilitation, and accountable delivery. I am seeking a New York–based product, implementation, project, program, or operations role in state or local government.
+I work where an emerging public-facing idea needs to become a service people can use. Over 14 years, I have led discovery, requirements, implementation, launch, measurement, and handoff across civic technology, community development, cultural advocacy, and small-business systems. Through Thick Arts, I lead client implementation and coordinate collaborators, designers, engineers, vendors, operations, and leadership while maintaining scope, schedules, resources, risks, decisions, and next actions. For Harry J. Epstein Company, Thick Arts' first client, I led e-commerce, content, analytics, and operating improvements from 2009–2015, contributing to 2x revenue growth while supporting an incremental transition from legacy workflows. My work includes human-reviewed AI workflows and evals that turn governed source material into public-safe application artifacts, with deterministic gates before costly model review. At KC Town Hall, I co-led municipal compliance and field implementation for the adaptive reuse of an approximately 6,500-square-foot building and served as the City's named developer/presenter for a successful $490,539 public-funding request. I built CallNYC to turn constituent-services data into 61 issue pathways; co-built WOW List, a natural-language community calendar operated across 35 city ecosystems by local organizers running calendars, websites, and email lists for their scenes; and helped design a resident service whose tracker records 1,970 tires collected. I do my best work when residents, policy staff, designers, engineers, vendors, and leaders need clear decisions, visible risks, usable documentation, respectful facilitation, and accountable delivery. I am seeking a New York–based product, implementation, project, program, or operations role in state or local government.
 ```
 <!-- copy:profile-summary:end -->
 
@@ -183,7 +188,7 @@ Select: `Other`
 If a follow-up text field appears, enter:
 
 ```text
-Recommended by a friend and civic-technology colleague.
+Recommended by my friend Chad Berkowitz.
 ```
 
 ### Are you willing to speak with the media or the Civic Match team about your experience?
@@ -206,8 +211,8 @@ The review page summarizes background, contact information, professional
 experience, preferences, profile visibility, and media consent.
 
 1. Open each `Edit` control and compare the summary with this guide.
-2. Confirm the email is `jamie.burkart@gmail.com` and the phone and location are
-   no longer shown as em dashes.
+2. Confirm the email, phone, and location are accurate and no longer shown as
+   em dashes.
 3. Confirm the current role, employer, years of experience, and education are
    populated.
 4. Confirm the current multi-opportunity resume is attached.

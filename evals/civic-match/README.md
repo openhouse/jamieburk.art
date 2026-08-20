@@ -9,6 +9,12 @@ This eval tests the exact Civic Match signup guide against two audiences:
 The tests do not claim that any named person participated, spoke, endorsed
 Jamie, recommended Jamie, or made a real hiring decision.
 
+These are demanding acceptance holdouts, not calibrated predictions of what a
+real person will decide. Deterministic coverage, lineage, privacy, and language
+checks run first. Reader outputs remain subject to Jamie's judgment and should
+be calibrated against human labels before anyone treats their pass rate as a
+production-quality evaluator metric.
+
 ## Cost-staged flow
 
 1. Run `npm run evals:civic-match:deterministic` and

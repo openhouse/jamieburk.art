@@ -5,7 +5,7 @@
   "observedAt": "2026-08-20",
   "observationMode": "authenticated-read-only-field-map",
   "guidePath": "opportunity-sources/civic-match/2026-08-20/Civic-Match-Signup-Guide.md",
-  "guideSha256": "1138463578f7ed6199509d73f2882ef8a314981f60a2c2080b445942b7b7943d",
+  "guideSha256": "084971e5c991603d438a860a6718cd903e90d75fdbf56ee0094c6f858d37b781",
   "sourceRegistryPath": "evals/opportunity-intake/sources.json",
   "currentOpportunityManifest": "evals/public-resume/current.json",
   "voiceContractPath": "evals/cover-letters/voice-contract.json",
@@ -121,7 +121,7 @@
       "personId": "person.jenn-wei",
       "name": "Jenn Wei",
       "relationship": "senior-vision",
-      "guideSha256": "1138463578f7ed6199509d73f2882ef8a314981f60a2c2080b445942b7b7943d",
+      "guideSha256": "084971e5c991603d438a860a6718cd903e90d75fdbf56ee0094c6f858d37b781",
       "acceptanceQuestion": "I would hire this person for this job.",
       "decision": "fail",
       "wouldHire": false,
@@ -133,22 +133,22 @@
         "privateSourceAccess": false
       },
       "strengths": [
-        "The resume shows sustained end-to-end delivery across discovery, requirements, implementation, QA, launch, maintenance, and handoff, supported by concrete outcomes including a $490,539 public-funding award, 1,970 tires collected, and a civic product with 61 issue pathways.",
-        "The candidate presents relevant responsible-AI and implementation practices, including human review, deterministic gates, decision lineage, source governance, risk tracking, runbooks, launch checklists, retrospectives, and reusable team memory.",
-        "The record demonstrates strong cross-functional facilitation among clients, residents, policy stakeholders, designers, engineers, vendors, operations teams, and senior decision-makers."
+        "The resume shows 14+ years of end-to-end delivery across discovery, requirements, implementation, launch, measurement, and handoff, including a client engagement associated with 2x revenue growth and a civic service documenting 1,970 tires collected.",
+        "The candidate presents relevant responsible-AI practice: human-reviewed workflows, source governance, decision lineage, deterministic quality controls, and recent formal study of application-focused AI evaluation.",
+        "There is strong evidence of reusable operating discipline through runbooks, onboarding guides, decision records, launch checklists, retrospectives, and source-backed team memory."
       ],
       "risks": [
-        "The presentation does not yet establish sufficient direct authority for customer-facing enterprise SaaS implementation, adoption, and measurable time-to-value—the opportunity's explicit hard screen.",
-        "Configuration, data migration, deployment, and organizational change-management experience is described broadly but lacks a concrete example showing scope, decisions owned, obstacles resolved, adoption metrics, and post-launch accountability.",
-        "The AI evidence demonstrates responsible workflow design, but it does not yet show implementation of an AI-assisted service-management workflow for external customers at relevant scale."
+        "The presentation does not yet demonstrate enough specific, direct authority for customer-facing platform configuration, migration, adoption, and post-launch success—the opportunity's central screen.",
+        "The strongest quantified examples concern revenue, civic delivery, and public funding, but do not establish implementation measures such as time to value, adoption, go-live quality, retention, or customer outcomes for a SaaS deployment.",
+        "The posting's reporting line and the balance among configuration, migration, facilitation, travel, and ongoing customer success remain unresolved."
       ],
       "followUpEvidence": [
-        "Walk through one direct customer implementation from discovery to sustained adoption, specifying the customer, platform, implementation scope, Jamie's decision authority, configuration or migration work, change-management plan, go-live risks, adoption metrics, and time to first value.",
-        "Demonstrate a bounded AI-assisted operating workflow, including failure modes, evaluation criteria, human-review controls, production monitoring, and evidence that users adopted it.",
-        "Provide an implementation-oriented playbook or runbook and explain how lessons from multiple deployments were converted into a reusable method rather than a bespoke process.",
-        "Clarify how much hands-on enterprise platform configuration, migration, travel, and ongoing customer-success ownership the Asana role requires."
+        "Walk through one direct customer implementation from discovery to go-live and adoption, naming the customer context, Jamie's decision authority, configuration or migration work, stakeholders, setbacks, change-management actions, and measured results.",
+        "Provide a reusable implementation playbook or runbook and explain how it changed delivery quality across more than one engagement.",
+        "Demonstrate an AI-assisted operating workflow, including failure modes, human review controls, evaluation criteria, and evidence that it worked in a real organizational setting.",
+        "Clarify with Asana how much of the role requires hands-on platform configuration and migration versus facilitation, product feedback, and ongoing success ownership."
       ],
-      "rationale": "Under a fictionalized senior-vision lens based only on the supplied public role context, this is a credible adjacent candidate who merits a serious matching conversation, but the current presentation does not yet support the stronger acceptance statement that I would hire this person for this specific job. The candidate's delivery, facilitation, documentation, civic systems, and responsible-AI strengths are well evidenced. However, the role's critical customer-implementation screen remains materially unresolved: the supplied evidence does not demonstrate enterprise SaaS configuration or migration authority, sustained customer adoption ownership, or measurable time-to-value at the required level. Those are substantive qualification gaps in the presentation, not merely application, interview, reference, or final-decision steps.",
+      "rationale": "This is a credible adjacent candidate who merits an interview and serious matching consideration, especially for implementation strategy, facilitation, responsible AI, and operational documentation. However, the supplied presentation does not yet support the stronger acceptance statement that I would hire this person for this specific job: direct customer implementation authority and measurable SaaS adoption outcomes are asserted broadly but not demonstrated with a sufficiently concrete case.",
       "model": "gpt-5.6-sol",
       "evaluatedAt": "2026-08-20"
     }
@@ -165,6 +165,6 @@
     "expectedAssessments": 11,
     "completedAssessments": 1,
     "firstFailureKey": "hiring|opportunity.asana.ai-implementation.8027437|person.jenn-wei|senior-vision",
-    "guideSha256": "1138463578f7ed6199509d73f2882ef8a314981f60a2c2080b445942b7b7943d"
+    "guideSha256": "084971e5c991603d438a860a6718cd903e90d75fdbf56ee0094c6f858d37b781"
   }
 }

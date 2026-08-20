@@ -64,6 +64,16 @@ test("both 300-word Civic Match answers fit the observed form limit", () => {
   }
 });
 
+test("the repository guide does not publish Jamie's direct contact details", () => {
+  const guide = readFileSync(
+    path.join(repoRoot, "opportunity-sources/civic-match/2026-08-20/Civic-Match-Signup-Guide.md"),
+    "utf8"
+  );
+
+  assert.doesNotMatch(guide, /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i);
+  assert.doesNotMatch(guide, /\b(?:\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]\d{3}[-.\s]\d{4}\b/);
+});
+
 test("an over-limit narrative answer is rejected before LLM review", () => {
   const overLimit = Array.from({ length: 301 }, () => "word").join(" ");
   assert.equal(wordCount(overLimit), 301);
