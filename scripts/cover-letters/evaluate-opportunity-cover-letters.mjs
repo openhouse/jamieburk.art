@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -65,6 +66,10 @@ function letterText(relativePath, root, overrides) {
   if (Object.prototype.hasOwnProperty.call(overrides, relativePath)) return overrides[relativePath];
   const absolute = path.join(root, relativePath);
   return existsSync(absolute) ? readFileSync(absolute, "utf8") : null;
+}
+
+function sha256(text) {
+  return createHash("sha256").update(text).digest("hex");
 }
 
 export function evaluateOpportunityCoverLetters({
@@ -182,9 +187,56 @@ export function evaluateOpportunityCoverLetters({
     selectedVersions.map((version) => version.opportunityId),
     selection.selectedOpportunityIds
   );
-  const queueGateIds = selection.llmGate.queue.map((entry) => entry.gateId);
   const selectedReaderGateIds = selectedVersions.flatMap((version) => version.readerGateIds);
-  const selectedReadersBound = sameMembers(queueGateIds, selectedReaderGateIds);
+  const latestRunPath = effectiveConfig.readerContract.latestRunPath;
+  const latestRunAbsolute = latestRunPath ? path.join(root, latestRunPath) : null;
+  const latestRunExists = latestRunAbsolute !== null && existsSync(latestRunAbsolute);
+  const latestRun = latestRunExists ? JSON.parse(readFileSync(latestRunAbsolute, "utf8")) : null;
+  const runResults = Array.isArray(latestRun?.results) ? latestRun.results : [];
+  const runGateIds = runResults.map((result) => result.gateId);
+  const runCoversSelectedReaders = sameMembers(runGateIds, selectedReaderGateIds);
+  const resultCountsMatch =
+    latestRun !== null &&
+    latestRun.evaluationCount === runResults.length &&
+    latestRun.advancePassCount === runResults.filter((result) => result.verdict === "pass").length &&
+    latestRun.advanceFailCount === runResults.filter((result) => result.verdict === "fail").length &&
+    latestRun.voicePassCount === runResults.filter((result) => result.voiceVerdict === "pass").length &&
+    latestRun.voiceFailCount === runResults.filter((result) => result.voiceVerdict === "fail").length;
+  const acceptanceStatementsMatch = runResults.every((result) =>
+    result.verdict === "pass"
+      ? result.acceptanceStatement === effectiveConfig.readerContract.passStatement
+      : result.verdict === "fail" &&
+        result.acceptanceStatement === effectiveConfig.readerContract.failStatement
+  );
+  const readerRunIntegrityPass =
+    latestRun !== null &&
+    latestRun.suiteId === effectiveConfig.id &&
+    runCoversSelectedReaders &&
+    resultCountsMatch &&
+    acceptanceStatementsMatch;
+  const digestStates = selectedVersions.map((version) => {
+    const markdown = letterText(version.coverLetterPath, root, letterOverrides);
+    const currentSha256 = markdown === null ? null : sha256(markdown);
+    const recordedSha256 = latestRun?.artifactDigests?.[version.opportunityId] ?? null;
+    return {
+      opportunityId: version.opportunityId,
+      currentSha256,
+      recordedSha256,
+      exact: currentSha256 !== null && currentSha256 === recordedSha256
+    };
+  });
+  const exactMaterialOpportunityIds = new Set(
+    digestStates.filter((state) => state.exact).map((state) => state.opportunityId)
+  );
+  const selectedMaterialsExact = digestStates.every((state) => state.exact);
+  const advancementPass =
+    readerRunIntegrityPass &&
+    selectedMaterialsExact &&
+    runResults.every((result) => result.verdict === "pass");
+  const voicePass =
+    readerRunIntegrityPass &&
+    selectedMaterialsExact &&
+    runResults.every((result) => result.voiceVerdict === "pass");
   const deterministicPass =
     Object.values(voiceChecks).every(Boolean) &&
     skillChecksPass &&
@@ -193,10 +245,12 @@ export function evaluateOpportunityCoverLetters({
     selection.overall === "pass" &&
     selection.llmGate.allowed &&
     selectedCovered &&
-    selectedReadersBound &&
+    readerRunIntegrityPass &&
     selectedVersions.every((version) => version.deterministicPass);
   const llmQueue = deterministicPass
-    ? selection.llmGate.queue.map((entry) => {
+    ? selection.llmGate.queue
+      .filter((entry) => !exactMaterialOpportunityIds.has(entry.opportunityId))
+      .map((entry) => {
         const version = selectedVersions.find((candidate) => candidate.opportunityId === entry.opportunityId);
         return {
           ...entry,
@@ -218,18 +272,37 @@ export function evaluateOpportunityCoverLetters({
       tier: selection.selectedTier,
       opportunityIds: selection.selectedOpportunityIds,
       selectedCovered,
-      selectedReadersBound
+      selectedReadersCoveredByRun: runCoversSelectedReaders
+    },
+    readerRun: {
+      path: latestRunPath,
+      exists: latestRunExists,
+      integrityPass: readerRunIntegrityPass,
+      resultCountsMatch,
+      acceptanceStatementsMatch,
+      artifactDigests: digestStates,
+      selectedMaterialsExact,
+      advancePassCount: runResults.filter((result) => result.verdict === "pass").length,
+      advanceFailCount: runResults.filter((result) => result.verdict === "fail").length,
+      voicePassCount: runResults.filter((result) => result.voiceVerdict === "pass").length,
+      voiceFailCount: runResults.filter((result) => result.voiceVerdict === "fail").length,
+      advancementOverall: advancementPass ? "pass" : "fail",
+      voiceOverall: voicePass ? "pass" : "fail"
     },
     llmGate: {
       allowed: deterministicPass,
       queue: llmQueue,
       queuedCalls: llmQueue.length,
-      avoidedCalls: selection.llmGate.avoidedCalls,
+      avoidedCalls:
+        selection.llmGate.avoidedCalls + selectedReaderGateIds.length - llmQueue.length,
       reason: deterministicPass
-        ? "Voice provenance, skills, material bindings, role status, and exact selected readers passed before modeled review."
-        : "Named-reader work is blocked until the voice source, skills, cover letters, resumes, opportunities, and exact selection all bind."
+        ? llmQueue.length === 0
+          ? "The current reader run exactly matches every selected cover-letter digest, so no modeled review is repeated."
+          : "Only selected opportunities whose cover-letter digest changed are released for modeled review."
+        : "Named-reader work is blocked until the voice source, skills, cover letters, resumes, opportunities, selection, and latest-run integrity all bind."
     },
-    overall: deterministicPass ? "pass" : "fail",
+    maintenanceOverall: deterministicPass ? "pass" : "fail",
+    overall: deterministicPass && advancementPass && voicePass ? "pass" : "fail",
     boundary: "Modeled readers receive public application materials only. Their outputs are synthetic critique, not participation, endorsement, prediction, interview, offer, or hire."
   };
 }

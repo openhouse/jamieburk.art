@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "suiteId": "opportunity-cover-letters-2026-08-20",
+  "runId": "oti-cover-letters-5bd2c0aa",
+  "baselineGitRev": "ed7cba069427011eacd41d905d19426ea9014adc",
+  "evaluatedMaterialGitRev": "5bd2c0aa2fc7f04229f0af2450c4542f5fbe95ee",
+  "evaluatedUrl": "https://staging-a.jamieburk.art",
+  "runDate": "2026-08-20",
+  "method": "Four fresh sequential isolated tasks evaluated the eight deterministically selected OTI cover-letter gates, grouped by reader identity. After the baseline run, one bounded Product Manager letter edit added a concrete WOWList product decision. Only its two affected gates were rerun against the exact deployed material commit; six unchanged results were retained. Readers received role-specific application files, the public-site resume, official URLs, and public-context framing, but no repository, Knowledge Wiki, private evidence, authenticated account, or prior reader output. Generic hiring-framework instructions were available but supplied no candidate evidence.",
+  "deterministicPreflight": {
+    "status": "pass",
+    "maintainedOpportunityCount": 8,
+    "selectedOpportunityCount": 4,
+    "selectedGateCount": 8,
+    "avoidedGateCount": 8,
+    "voiceSourceFresh": true,
+    "materialBindingsPass": true
+  },
+  "artifactDigests": {
+    "opportunity.nyc-oti.senior-product-manager.782366": "4af441f99e7a4258f56b9486092371ea6422f92be8872b4d68c915201e9bcf38",
+    "opportunity.nyc-oti.operations-manager-speed.789810": "4d6736bd5c77a13ad2202e6bcacf7cfa35c0ba8392638bc52f8a8298d7d14090",
+    "opportunity.nyc-oti.product-manager.784450": "37e29e3970b9ecf8af345ce8e467dfae14cf3cb3372c37f9270ada877b83ed89",
+    "opportunity.nyc-oti.senior-product-manager-speed.789610": "7ad526c4df5c42aee7ef09fdf7f401ab23b6755987bbf882747c764a315ada50"
+  },
+  "uniqueReaderCount": 4,
+  "evaluationCount": 8,
+  "advancePassCount": 2,
+  "advanceFailCount": 6,
+  "voicePassCount": 8,
+  "voiceFailCount": 0,
+  "advancementSuiteVerdict": "fail",
+  "voiceSuiteVerdict": "pass",
+  "allSelectedGatesMustPass": true,
+  "hillClimb": {
+    "criterion": "Replace generalized capability inventory with one concrete product decision while preserving bounded impact and collective credit.",
+    "changedOpportunityId": "opportunity.nyc-oti.product-manager.784450",
+    "changedCoverLetterPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.md",
+    "change": "Made the participatory-discovery decision to center WOWList on one collaboratively editable text field explicit, together with the product surfaces, operating support, geographic footprint, and impact boundary.",
+    "rerunGateIds": [
+      "gate.oti-product-manager.lisa-gelobter",
+      "gate.oti-product-manager.product-leadership"
+    ],
+    "result": "Both affected gates remained advance passes and voice passes. Their strongest-evidence narratives now explicitly identify the WOWList product choice; the remaining non-blocking gap is a sourceable signal-to-KPI-to-post-launch decision loop."
+  },
+  "results": [
+    {
+      "gateId": "gate.oti-senior-product.lisa-gelobter",
+      "resultSource": "baseline-unchanged-material",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet advance this candidate on the strength of this cover letter and public application materials",
+      "confidence": 0.91,
+      "voiceVerdict": "pass",
+      "strongestEvidence": "The materials show 14+ years of end-to-end digital delivery, including resident-facing civic technology, stakeholder translation, public launches, instrumentation, privacy-conscious practice, and sustained operations. The letter also carefully distinguishes founder responsibility from institutional product authority.",
+      "primaryBlocker": "The application does not establish the Senior IT Architect minimum qualification with sufficient specificity. The degree is not in a listed technical field, and the experience bullets do not clearly document ten years of satisfactory full-time enterprise architecture, solutions architecture, network architecture, or IT infrastructure systems work—or a defensible equivalent. Preferred senior-level evidence for moderated public user research, outcome measurement, and mentorship is also comparatively thin.",
+      "gapClass": "minimum-qualification-and-experience-evidence",
+      "constructiveCritique": "The letter is coherent and well matched to PIT Crew's mission, but it treats civil-service eligibility as something for OTI to determine instead of giving reviewers the facts needed to determine it. Its strongest examples demonstrate civic commitment and broad builder responsibility; they do not yet prove the specific architectural experience required by the title or sufficiently distinguish senior product leadership from founder-led implementation.",
+      "nextBestImprovement": "If accurate, add a concise qualification map identifying ten or more years of full-time solutions, enterprise, or infrastructure architecture work, with dates, systems, scale, architectural decisions, cross-functional authority, and production responsibility. Also add one concrete example each of moderated resident research, measured outcomes, and mentorship."
+    },
+    {
+      "gateId": "gate.oti-senior-product.product-leadership",
+      "resultSource": "baseline-unchanged-material",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet advance this candidate on the strength of this cover letter and public application materials",
+      "confidence": 0.91,
+      "voiceVerdict": "pass",
+      "strongestEvidence": "CallNYC, WOWList, and 14+ years of end-to-end web-product work demonstrate civic motivation, hands-on launches, cross-functional translation, and responsible public-technology judgment.",
+      "primaryBlocker": "The application does not clearly establish the Senior IT Architect minimum qualification of ten years of satisfactory full-time experience related to enterprise architecture, solutions architecture, network architecture, or IT infrastructure systems. Product and web-systems experience cannot be presumed equivalent.",
+      "gapClass": "eligibility evidence gap",
+      "constructiveCritique": "The letter is compelling and appropriately distinguishes founder responsibility from institutional authority, but it defers the decisive civil-service question instead of documenting qualification under a specific pathway. It also gives limited evidence of senior-level product ownership over research, version-one tradeoffs, outcome metrics, mentorship, and a multidisciplinary team's deliverables.",
+      "nextBestImprovement": "If accurate, add a qualification section that maps dated, full-time architecture or infrastructure responsibilities to one exact minimum-qualification pathway, then support seniority with one product case showing team composition, discovery method, a difficult scope decision, launch outcome, instrumentation, and post-launch learning."
+    },
+    {
+      "gateId": "gate.oti-speed-operations.product-leadership",
+      "resultSource": "baseline-unchanged-material",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet advance this candidate on the strength of this cover letter and public application materials",
+      "confidence": 0.88,
+      "voiceVerdict": "pass",
+      "strongestEvidence": "KC Town Hall and Thick Arts supply credible evidence of vendor coordination, municipal compliance, work planning, risk tracking, reporting, durable handoffs, and stewardship of complex dependencies.",
+      "primaryBlocker": "The role centers on optimizing City budgets, capital and expense processes, procurements, contracting, resource allocation, onboarding, and administration. The materials explicitly acknowledge no formal City procurement authority or independent large-budget ownership and do not replace that gap with sufficiently concrete comparable responsibility.",
+      "gapClass": "experience and role-context gap",
+      "constructiveCritique": "The letter offers a strong operating philosophy, but it treats procurement and budget depth as a caveat when they are central duties. The resume lists budgets, contracts, onboarding, and resourcing mostly as skills rather than proving scale, decision authority, recurring cadence, negotiation responsibility, or outcomes.",
+      "nextBestImprovement": "Only if supported by public evidence, add two compact operations cases quantifying budget ownership, contract review or negotiation, procurement tracking, personnel onboarding, resource allocation, reporting cadence, stakeholders, and results. Otherwise prioritize product-delivery roles where the demonstrated record is stronger."
+    },
+    {
+      "gateId": "gate.oti-speed-operations.julia-kerson",
+      "resultSource": "baseline-unchanged-material",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet advance this candidate on the strength of this cover letter and public application materials",
+      "confidence": 0.94,
+      "voiceVerdict": "pass",
+      "strongestEvidence": "Jamie co-led budgets, vendor coordination, municipal compliance, and public-benefit documentation for a 6,500-square-foot redevelopment, including a successful $490,539 public-funding request; the materials also show sustained cross-functional technical delivery and disciplined operational documentation.",
+      "primaryBlocker": "The posting centers hands-on City operations across budget, capital and expense processes, procurement of tools and personnel, HR onboarding, resource allocation, and operational metrics. The materials do not establish direct ownership at meaningful scale in most of those areas and explicitly concede the procurement and large-budget gaps.",
+      "gapClass": "material experience-evidence gap, not primarily a letter or eligibility gap",
+      "constructiveCritique": "The letter is candid and coherent, but it converts too much of Jamie's adjacent experience into generalized operating language. It does not provide specific examples of contract negotiation or review, budget authority and variance management, procurement creation and tracking, hiring or onboarding, portfolio-level resource allocation, or operational reporting. The bachelor's degree plus extensive relevant experience appears to support a minimum-qualification pathway, so the decisive issue is competitive role fit rather than obvious eligibility.",
+      "nextBestImprovement": "Add only verifiable evidence showing Jamie's exact authority, dollar scope, procurement or contracting actions, budget tracking, onboarding responsibilities, resource decisions, and measurable operating outcomes. If that evidence does not exist, target an operations or technical-program role where delivery systems and stakeholder coordination are central."
+    },
+    {
+      "gateId": "gate.oti-product-manager.product-leadership",
+      "resultSource": "post-hill-climb-exact-material",
+      "verdict": "pass",
+      "acceptanceStatement": "I would advance this candidate on the strength of this cover letter and public application materials",
+      "confidence": 0.84,
+      "voiceVerdict": "pass",
+      "strongestEvidence": "The application connects more than fourteen years of product delivery to the role's core work: framing ambiguous problems, making consequential scope decisions, translating user needs into requirements, coordinating implementation and acceptance review, launching public-facing products, supporting adoption, and maintaining them. The WOWList example is especially persuasive because it identifies a concrete discovery-driven choice—the collaboratively editable text field—and explains the surrounding product ecosystem, instrumentation, and operating constraints without overstating impact. CallNYC adds directly relevant resident-facing civic-product evidence.",
+      "primaryBlocker": "",
+      "gapClass": "nonblocking evidence-depth gap",
+      "constructiveCritique": "The evidence is strong enough for a screen, but product leadership is demonstrated more through credible scope and judgment than through measured outcomes. The letter names analytics, KPIs, roadmaps, and prioritization, yet supplies little concrete evidence of a KPI Jamie defined, a data-informed priority Jamie changed, or a post-launch result beyond WOWList's carefully bounded geographic footprint. The distinction between founder authority and public-team authority is unusually thoughtful and helps offset that limitation.",
+      "nextBestImprovement": "Replace one general lifecycle sentence with a compact example showing the full decision loop: the user or program problem, qualitative or quantitative signal, competing request declined or deferred, KPI selected, cross-functional decision, and observed post-launch change—with collective ownership and evidentiary limits stated as carefully as they are for WOWList."
+    },
+    {
+      "gateId": "gate.oti-product-manager.lisa-gelobter",
+      "resultSource": "post-hill-climb-exact-material",
+      "verdict": "pass",
+      "acceptanceStatement": "I would advance this candidate on the strength of this cover letter and public application materials",
+      "confidence": 0.84,
+      "voiceVerdict": "pass",
+      "strongestEvidence": "The application connects 14+ years of end-to-end digital product delivery to OTI's needs through specific examples: CallNYC's resident-facing translation of constituent-services data, WOWList's research-driven simplification of organizer workflows and operation across 35+ city ecosystems, and sustained cross-functional civic systems work. It also directly addresses roadmaps, requirements, testing, adoption, analytics, accessibility, privacy, program-owner partnership, and durable handoffs while carefully distinguishing bounded evidence and collective contributions.",
+      "primaryBlocker": "",
+      "gapClass": "non-blocking outcome-measurement specificity",
+      "constructiveCritique": "The letter is unusually well aligned and coherent in Jamie's stated voice: it begins with a concrete resident problem, reveals the public-data system underneath it, makes a clear product hinge at WOWList, and ends with the durable possibility of services that residents can use and City teams can sustain. Its weakest point is that claims about analytics, KPIs, prioritization, and post-launch improvement remain more asserted than demonstrated through a named metric or decision changed by evidence.",
+      "nextBestImprovement": "Replace one broad lifecycle sentence with a compact example showing a specific qualitative or quantitative signal, the resulting prioritization decision, and the observed post-launch result—without overstating causality."
+    },
+    {
+      "gateId": "gate.oti-speed-product.product-leadership",
+      "resultSource": "baseline-unchanged-material",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet advance this candidate on the strength of this cover letter and public application materials",
+      "confidence": 0.9,
+      "voiceVerdict": "pass",
+      "strongestEvidence": "The combination of KC Town Hall permitting experience, CallNYC, web and API fluency, SQL and open-data work, process mapping, and public-stakeholder communication is unusually relevant to SPEED's permitting mission.",
+      "primaryBlocker": "The application does not clearly establish the Senior IT Architect civil-service minimum of ten years of qualifying architecture or IT-infrastructure experience. It also lacks sufficiently demonstrated senior ownership of data-driven product strategy, business cases, KPIs, and cross-functional software outcomes at the scale implied by SPEED.",
+      "gapClass": "eligibility evidence and senior-level experience gap",
+      "constructiveCritique": "The letter has the strongest mission-to-experience connection of the four and makes a thoughtful distinction between speed and displaced risk. However, it explicitly disclaims enterprise data-platform authority and asks OTI to resolve qualification, leaving two central screening questions unanswered.",
+      "nextBestImprovement": "If factually supportable, map ten years of dated architecture or infrastructure work to a specific civil-service pathway and add a permitting or data-product case covering the diagnosed bottleneck, research and systems analysis, business case, roadmap, technical architecture discussion, KPI, shipped result, and Jamie's exact decision authority."
+    },
+    {
+      "gateId": "gate.oti-speed-product.leila-bozorg",
+      "resultSource": "baseline-unchanged-material",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet advance this candidate on the strength of this cover letter and public application materials",
+      "confidence": 0.88,
+      "voiceVerdict": "pass",
+      "strongestEvidence": "The KC Town Hall redevelopment provides a concrete encounter with permitting, municipal compliance, financing conditions, vendors, and fragmented handoffs, while fourteen years of product delivery, CallNYC, WOWList, and FairRentNYC demonstrate civic orientation, technical fluency, facilitation, and care with collective credit.",
+      "primaryBlocker": "The materials do not establish senior-level ownership of an enterprise data product or platform at comparable citywide or cross-agency scale. They name APIs, SQL, PostgreSQL/PostGIS, analytics, governance, and data workflows, but provide little evidence of data architecture decisions, integrations, migrations, quality controls, operating scale, measurable outcomes, or accountability across multiple institutional owners. The letter expressly concedes that enterprise data-platform authority is not established.",
+      "gapClass": "material experience-and-evidence gap",
+      "constructiveCritique": "The letter has a persuasive Jamie-shaped arc: a grounded permitting encounter reveals the human cost of missing handoffs, develops into a distinction between elapsed speed and safely legible process, and ends with a bounded, maintainable possibility. It is warm, precise, authority-aware, and careful about collaborators. But it does not convert the resume's technical vocabulary into evidence sufficient for this senior product role. This is not primarily a prose problem; unless stronger existing examples can be documented, it is an experience or role-level gap.",
+      "nextBestImprovement": "If truthful evidence exists, add one detailed enterprise-data case showing dataset or user scale, system integrations, governance and decision rights, data-quality controls, cross-functional ownership, KPIs, and a measured result. If that evidence does not exist, pursue an adjacent SPEED product or implementation role where civic-process translation and hands-on delivery are central."
+    }
+  ],
+  "disclaimer": "Synthetic public-context evaluations only. They are not the named people's participation, opinions, endorsements, reporting relationships, interview assessments, or hiring decisions. Public title or leadership proximity does not establish a direct manager or actual reader."
+}
