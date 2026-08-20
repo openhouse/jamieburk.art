@@ -3,7 +3,7 @@
 
 **Source commit:** `55bbf75f258eba870fbe194bded29905bf4c6005`
 **Generation time:** 2026-08-20T15:52:53-04:00
-**Source fingerprint:** `fb9a7508ac59851125b5547ebe9748f58215de7ee3a62a37ec4278080143bb10`
+**Source fingerprint:** `e839c6993cd4ee734d4a969f64455823e571e0c6c9ce6ff9720eb3ad7b41e402`
 
 - [Office of Nightlife town halls](../../projects/office-of-nightlife-town-halls.md) - `uses_source` (frontmatter)
 - [Foundational Wiki page source return, July 19, 2026](../../research-runs/foundational-source-return-2026-07-19.md) - `prose_link` (markdown)

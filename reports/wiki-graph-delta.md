@@ -3,13 +3,13 @@
 
 **Source commit:** `55bbf75f258eba870fbe194bded29905bf4c6005`
 **Generation time:** 2026-08-20T15:52:53-04:00
-**Source fingerprint:** `fb9a7508ac59851125b5547ebe9748f58215de7ee3a62a37ec4278080143bb10`
+**Source fingerprint:** `e839c6993cd4ee734d4a969f64455823e571e0c6c9ce6ff9720eb3ad7b41e402`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 50
+- Nodes added: 56
 - Nodes removed: 34
-- Edges added: 182
+- Edges added: 194
 - Edges removed: 180
 - New type-aware orphans: 0
 - Current rights-review records: 186
@@ -26,15 +26,18 @@ Compared with the graph artifact on `origin/develop`.
 - `evaluation.oti-product-manager-search-ranking.2026-08-20`
 - `event.nyc.sbu.empty-storefronts-high-rents-release.2026-07-29`
 - `index.knowledge-wiki.live-project-websites`
+- `method.civic-match-opportunity-loop`
 - `method.nyc-jobs-opportunity-loop`
 - `opportunity.aclu.senior-project-manager-lps.8620968002`
 - `opportunity.aclu.senior-project-manager-national-campaigns.8631854002`
 - `opportunity.nyc-oti.cybersecurity-senior-project-manager.791074`
 - `opportunity.nyc-oti.operations-manager.789810`
 - `opportunity.nyc-oti.product-manager.784450`
+- `person.courtney-kishbaugh`
 - `person.deirdre-schifeling`
 - `person.james-williams-aclu`
 - `person.jenn-wei`
+- `person.josh-gee`
 - `person.kelly-moan`
 - `person.terence-dougherty`
 - `projection.photo.home-og.east-river`
@@ -45,6 +48,7 @@ Compared with the graph artifact on `origin/develop`.
 - `source.aclu.terence-dougherty-bio`
 - `source.benepass.jaclyn-chen-leadership.2026`
 - `source.callnyc.restored-site.2026-08-14`
+- `source.civic-match.candidate-network`
 - `source.hje.wayback-chronology.2026-08`
 - `source.jobs-nyc.oti-product-manager-search.2026-08-20`
 - `source.jobs.aclu.senior-project-manager-lps.8620968002`
@@ -66,3 +70,5 @@ Compared with the graph artifact on `origin/develop`.
 - `source.social.chiosse-emily.small-business-rent-reel.2026-08-05`
 - `source.social.nycartc.cultural-space-story.2026-08-15`
 - `source.thick-arts.nys-dos-formation.2012-07-06`
+- `source.work-for-america.courtney-kishbaugh-civic-match`
+- `source.work-for-america.josh-gee-civic-match`

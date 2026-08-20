@@ -61,6 +61,15 @@ relations:
   - type: related_to
     target: person.jenn-wei
     href: ../people/jenn-wei.md
+  - type: related_to
+    target: method.civic-match-opportunity-loop
+    href: ../methods/civic-match-opportunity-loop.md
+  - type: related_to
+    target: person.josh-gee
+    href: ../people/josh-gee.md
+  - type: related_to
+    target: person.courtney-kishbaugh
+    href: ../people/courtney-kishbaugh.md
 ---
 
 # Employment context and hiring acceptance
@@ -84,6 +93,12 @@ paths, message bodies, contact details, and real hiring outcomes remain private.
 - [Asana - AI Implementation Manager](../opportunities/asana-ai-implementation.md)
 - [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md)
 - [PermitFlow - Product Operations Manager](../opportunities/permitflow-product-operations.md)
+
+## Opportunity sources
+
+- [NYC Jobs opportunity action loop](../methods/nyc-jobs-opportunity-loop.md) — public bulk discovery, revision detection, and deterministic screening before official-posting verification
+- [Civic Match opportunity relationship loop](../methods/civic-match-opportunity-loop.md) — authenticated profile discovery, invitations, saves, staff matching, events, and external-application tracking
+- [Josh Gee](../people/josh-gee.md) and [Courtney Kishbaugh](../people/courtney-kishbaugh.md) — fictionalized public-context platform and program lenses for the Civic Match profile; not real participation or endorsement
 
 ## Historical fit benchmarks
 

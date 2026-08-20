@@ -3,7 +3,7 @@
 
 **Source commit:** `55bbf75f258eba870fbe194bded29905bf4c6005`
 **Generation time:** 2026-08-20T15:52:53-04:00
-**Source fingerprint:** `fb9a7508ac59851125b5547ebe9748f58215de7ee3a62a37ec4278080143bb10`
+**Source fingerprint:** `e839c6993cd4ee734d4a969f64455823e571e0c6c9ce6ff9720eb3ad7b41e402`
 
 ## application
 
@@ -309,6 +309,7 @@
 
 ## method
 
+- [Civic Match opportunity relationship loop](../methods/civic-match-opportunity-loop.md) - `method.civic-match-opportunity-loop`
 - [Collective credit and protected absence](../methods/collective-credit-and-protected-absence.md) - `method.collective-credit-protected-absence`
 - [Identity Systems as Shared Infrastructure](../methods/identity-systems-as-shared-infrastructure.md) - `method.identity-systems-as-shared-infrastructure`
 - [Jamie at Work](../methods/jamie-at-work.md) - `method.jamie-at-work`
@@ -348,6 +349,7 @@
 ## person
 
 - [Aileen Palmer](../people/aileen-palmer.md) - `person.aileen-palmer`
+- [Courtney Kishbaugh](../people/courtney-kishbaugh.md) - `person.courtney-kishbaugh`
 - [Deirdre Schifeling](../people/deirdre-schifeling.md) - `person.deirdre-schifeling`
 - [Diya Vij](../people/diya-vij.md) - `person.diya-vij`
 - [Elana Gordon](../people/elana-gordon.md) - `person.elana-gordon`
@@ -355,6 +357,7 @@
 - [James Williams](../people/james-williams-aclu.md) - `person.james-williams-aclu`
 - [Jamie Burkart](../people/jamie-burkart.md) - `person.jamie-burkart`
 - [Jenn Wei](../people/jenn-wei.md) - `person.jenn-wei`
+- [Josh Gee](../people/josh-gee.md) - `person.josh-gee`
 - [Kelly Moan](../people/kelly-moan.md) - `person.kelly-moan`
 - [Lisa Gelobter](../people/lisa-gelobter.md) - `person.lisa-gelobter`
 - [Luke Farrell](../people/luke-farrell.md) - `person.luke-farrell`
@@ -424,6 +427,7 @@
 - [CallNYC restored archived prototype, August 2026](../sources/callnyc-restored-site-2026-08-14.md) - `source.callnyc.restored-site.2026-08-14`
 - [CallNYC public source repository](../sources/callnyc-source-repository.md) - `source.callnyc.source-repository`
 - [Campaign-site repository family, 2020-2022](../sources/campaign-site-repository-family-2020-2022.md) - `source.campaign-site.repository-family.2020-2022`
+- [Civic Match candidate network](../sources/civic-match-candidate-network-2026-08-20.md) - `source.civic-match.candidate-network`
 - [Civic Hall hackathon announcement](../sources/civichall-hackathon-announcement-2016.md) - `source.civichall.hackathon-announcement.2016`
 - [New York City Council Constituent Services Data release](../sources/nycc-constituent-services-data-2016-05-27.md) - `source.councilstat.fuller-release.2016`
 - [Open House at UC Santa Cruz](../sources/good-times-open-house-2006-06-28.md) - `source.good-times.open-house.2006-06-28`
@@ -515,6 +519,8 @@
 - [Warren Sack - Film and Digital Media Department](../sources/ucsc-warren-sack-profile-2026.md) - `source.ucsc.warren-sack-profile.2026`
 - [Protected communication history - public-safe metadata boundary](../sources/protected-communication-vault-metadata.md) - `source.vault.communication-history.metadata`
 - [Weibel Institute In Terms of Media event record](../sources/weibel-in-terms-of-media-2024.md) - `source.weibel.in-terms-of-media.2024`
+- [Work for America announcement naming Courtney Kishbaugh as Civic Match director](../sources/work-for-america-courtney-kishbaugh-civic-match.md) - `source.work-for-america.courtney-kishbaugh-civic-match`
+- [Work for America announcement of Josh Gee as Civic Match vice president](../sources/work-for-america-josh-gee-civic-match.md) - `source.work-for-america.josh-gee-civic-match`
 - [Governed WOW List knowledge repository](../sources/wowlist-knowledge-repository-2026.md) - `source.wowlist.knowledge-repository.2026`
 - [WOW List public return threshold, August 2026](../sources/wowlist-public-threshold-2026-08.md) - `source.wowlist.public-threshold.2026-08-13`
 - [What is WOW List repaired transcript](../sources/wowlist-repaired-transcript-2026.md) - `source.wowlist.repaired-transcript.2026`

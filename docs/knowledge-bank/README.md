@@ -23,6 +23,10 @@ relations:
     href: indexes/employment-context.md
     context: Present-tense opportunity research and public-only hiring evaluation.
   - type: related_to
+    target: method.civic-match-opportunity-loop
+    href: methods/civic-match-opportunity-loop.md
+    context: Consent-aware candidate discovery, matching, invitations, application tracking, and feedback.
+  - type: related_to
     target: index.knowledge-wiki.living-archive
     href: indexes/living-archive.md
     context: Orientation, missing-page, project, and situated source-return map.

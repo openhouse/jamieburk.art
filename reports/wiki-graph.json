@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-20T15:52:53-04:00",
   "sourceCommit": "55bbf75f258eba870fbe194bded29905bf4c6005",
-  "sourceFingerprint": "fb9a7508ac59851125b5547ebe9748f58215de7ee3a62a37ec4278080143bb10",
+  "sourceFingerprint": "e839c6993cd4ee734d4a969f64455823e571e0c6c9ce6ff9720eb3ad7b41e402",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3613,6 +3613,19 @@
       "reviewBy": "2026-10-28"
     },
     {
+      "id": "method.civic-match-opportunity-loop",
+      "path": "docs/knowledge-bank/methods/civic-match-opportunity-loop.md",
+      "title": "Civic Match opportunity relationship loop",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "A consent-aware loop for profile discovery, invitations, saved roles, applications, staff matching, and events.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-09-20"
+    },
+    {
       "id": "method.collective-credit-protected-absence",
       "path": "docs/knowledge-bank/methods/collective-credit-and-protected-absence.md",
       "title": "Collective credit and protected absence",
@@ -4006,6 +4019,19 @@
       "reviewBy": "2026-09-13"
     },
     {
+      "id": "person.courtney-kishbaugh",
+      "path": "docs/knowledge-bank/people/courtney-kishbaugh.md",
+      "title": "Courtney Kishbaugh",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public-role context for Civic Match's program leader, preserved separately from any inference of awareness or endorsement.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-11-20"
+    },
+    {
       "id": "person.deirdre-schifeling",
       "path": "docs/knowledge-bank/people/deirdre-schifeling.md",
       "title": "Deirdre Schifeling",
@@ -4097,6 +4123,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-20",
       "reviewBy": "2026-09-20"
+    },
+    {
+      "id": "person.josh-gee",
+      "path": "docs/knowledge-bank/people/josh-gee.md",
+      "title": "Josh Gee",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Public-role context for Civic Match's platform leader, preserved separately from any inference of awareness or endorsement.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-11-20"
     },
     {
       "id": "person.kelly-moan",
@@ -4747,6 +4786,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-11",
       "reviewBy": "2026-11-11"
+    },
+    {
+      "id": "source.civic-match.candidate-network",
+      "path": "docs/knowledge-bank/sources/civic-match-candidate-network-2026-08-20.md",
+      "title": "Civic Match candidate network",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Governed source record for Civic Match as an authenticated state-and-local-government talent network.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-09-20"
     },
     {
       "id": "source.civichall.hackathon-announcement.2016",
@@ -5933,6 +5985,32 @@
       "aliases": [],
       "lastReviewed": "2026-08-03",
       "reviewBy": "2027-02-03"
+    },
+    {
+      "id": "source.work-for-america.courtney-kishbaugh-civic-match",
+      "path": "docs/knowledge-bank/sources/work-for-america-courtney-kishbaugh-civic-match.md",
+      "title": "Work for America announcement naming Courtney Kishbaugh as Civic Match director",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official Work for America source for Courtney Kishbaugh's Civic Match program leadership.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-11-20"
+    },
+    {
+      "id": "source.work-for-america.josh-gee-civic-match",
+      "path": "docs/knowledge-bank/sources/work-for-america-josh-gee-civic-match.md",
+      "title": "Work for America announcement of Josh Gee as Civic Match vice president",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official Work for America source for Josh Gee's Civic Match platform leadership.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-11-20"
     },
     {
       "id": "source.wowlist.knowledge-repository.2026",
@@ -12740,6 +12818,14 @@
     {
       "from": "index.knowledge-wiki",
       "type": "related_to",
+      "to": "method.civic-match-opportunity-loop",
+      "source": "frontmatter",
+      "href": "methods/civic-match-opportunity-loop.md",
+      "context": "Consent-aware candidate discovery, matching, invitations, application tracking, and feedback."
+    },
+    {
+      "from": "index.knowledge-wiki",
+      "type": "related_to",
       "to": "project.nyc-artist-coalition",
       "source": "frontmatter",
       "href": "projects/nyc-artist-coalition-2017.md",
@@ -12996,6 +13082,14 @@
     {
       "from": "index.knowledge-wiki.employment-context",
       "type": "related_to",
+      "to": "method.civic-match-opportunity-loop",
+      "source": "frontmatter",
+      "href": "../methods/civic-match-opportunity-loop.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
       "to": "opportunity.aclu.product-manager-discovery.8482872002",
       "source": "frontmatter",
       "href": "../opportunities/aclu-product-discovery.md",
@@ -13100,9 +13194,25 @@
     {
       "from": "index.knowledge-wiki.employment-context",
       "type": "related_to",
+      "to": "person.courtney-kishbaugh",
+      "source": "frontmatter",
+      "href": "../people/courtney-kishbaugh.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
       "to": "person.jenn-wei",
       "source": "frontmatter",
       "href": "../people/jenn-wei.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "person.josh-gee",
+      "source": "frontmatter",
+      "href": "../people/josh-gee.md",
       "context": null
     },
     {
@@ -14594,6 +14704,14 @@
       "context": null
     },
     {
+      "from": "method.civic-match-opportunity-loop",
+      "type": "uses_source",
+      "to": "source.civic-match.candidate-network",
+      "source": "frontmatter",
+      "href": "../sources/civic-match-candidate-network-2026-08-20.md",
+      "context": null
+    },
+    {
       "from": "method.collective-credit-protected-absence",
       "type": "related_to",
       "to": "method.source-backed-team-memory",
@@ -15906,6 +16024,22 @@
       "context": null
     },
     {
+      "from": "person.courtney-kishbaugh",
+      "type": "related_to",
+      "to": "method.civic-match-opportunity-loop",
+      "source": "frontmatter",
+      "href": "../methods/civic-match-opportunity-loop.md",
+      "context": null
+    },
+    {
+      "from": "person.courtney-kishbaugh",
+      "type": "uses_source",
+      "to": "source.work-for-america.courtney-kishbaugh-civic-match",
+      "source": "frontmatter",
+      "href": "../sources/work-for-america-courtney-kishbaugh-civic-match.md",
+      "context": null
+    },
+    {
       "from": "person.deirdre-schifeling",
       "type": "related_to",
       "to": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
@@ -16111,6 +16245,22 @@
       "to": "source.linkedin.jenn-wei-asana-service-management.2026",
       "source": "frontmatter",
       "href": "../sources/linkedin-jenn-wei-asana-service-management.md",
+      "context": null
+    },
+    {
+      "from": "person.josh-gee",
+      "type": "related_to",
+      "to": "method.civic-match-opportunity-loop",
+      "source": "frontmatter",
+      "href": "../methods/civic-match-opportunity-loop.md",
+      "context": null
+    },
+    {
+      "from": "person.josh-gee",
+      "type": "uses_source",
+      "to": "source.work-for-america.josh-gee-civic-match",
+      "source": "frontmatter",
+      "href": "../sources/work-for-america-josh-gee-civic-match.md",
       "context": null
     },
     {
@@ -17730,6 +17880,14 @@
       "context": null
     },
     {
+      "from": "source.civic-match.candidate-network",
+      "type": "related_to",
+      "to": "method.civic-match-opportunity-loop",
+      "source": "frontmatter",
+      "href": "../methods/civic-match-opportunity-loop.md",
+      "context": null
+    },
+    {
       "from": "source.civichall.hackathon-announcement.2016",
       "type": "documents",
       "to": "event.nycc.constituent-services-hackathon.2016",
@@ -18751,6 +18909,22 @@
       "to": "event.weibel.in-terms-of-media.2024",
       "source": "frontmatter",
       "href": "../events/in-terms-of-media-symposium-2024.md",
+      "context": null
+    },
+    {
+      "from": "source.work-for-america.courtney-kishbaugh-civic-match",
+      "type": "related_to",
+      "to": "person.courtney-kishbaugh",
+      "source": "frontmatter",
+      "href": "../people/courtney-kishbaugh.md",
+      "context": null
+    },
+    {
+      "from": "source.work-for-america.josh-gee-civic-match",
+      "type": "related_to",
+      "to": "person.josh-gee",
+      "source": "frontmatter",
+      "href": "../people/josh-gee.md",
       "context": null
     },
     {
@@ -20128,10 +20302,46 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/methods/nyc-jobs-opportunity-loop.md",
+      "to": "method.nyc-jobs-opportunity-loop",
+      "fragment": null,
+      "line": 26,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/methods/civic-match-opportunity-loop.md",
+      "to": "method.civic-match-opportunity-loop",
+      "fragment": null,
+      "line": 27,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/people/courtney-kishbaugh.md",
+      "to": "person.courtney-kishbaugh",
+      "fragment": null,
+      "line": 28,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/people/josh-gee.md",
+      "to": "person.josh-gee",
+      "fragment": null,
+      "line": 28,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
       "to": "opportunity.nyc-oti.technical-operations-manager.782369",
       "fragment": null,
-      "line": 26,
+      "line": 32,
       "kind": "link"
     },
     {
@@ -20140,7 +20350,7 @@
       "toPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
       "to": "opportunity.aclu.product-manager-discovery.8482872002",
       "fragment": null,
-      "line": 27,
+      "line": 33,
       "kind": "link"
     },
     {
@@ -20149,7 +20359,7 @@
       "toPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
       "to": "opportunity.codepath.claude-corps.5182020007",
       "fragment": null,
-      "line": 28,
+      "line": 34,
       "kind": "link"
     },
     {
@@ -20158,7 +20368,7 @@
       "toPath": "docs/knowledge-bank/people/aileen-palmer.md",
       "to": "person.aileen-palmer",
       "fragment": null,
-      "line": 32,
+      "line": 38,
       "kind": "link"
     },
     {
@@ -20167,7 +20377,7 @@
       "toPath": "docs/knowledge-bank/people/jaclyn-chen.md",
       "to": "person.jaclyn-chen",
       "fragment": null,
-      "line": 32,
+      "line": 38,
       "kind": "link"
     },
     {
@@ -20176,7 +20386,7 @@
       "toPath": "docs/knowledge-bank/people/deirdre-schifeling.md",
       "to": "person.deirdre-schifeling",
       "fragment": null,
-      "line": 33,
+      "line": 39,
       "kind": "link"
     },
     {
@@ -20185,7 +20395,7 @@
       "toPath": "docs/knowledge-bank/people/james-williams-aclu.md",
       "to": "person.james-williams-aclu",
       "fragment": null,
-      "line": 33,
+      "line": 39,
       "kind": "link"
     },
     {
@@ -20194,7 +20404,7 @@
       "toPath": "docs/knowledge-bank/people/terence-dougherty.md",
       "to": "person.terence-dougherty",
       "fragment": null,
-      "line": 34,
+      "line": 40,
       "kind": "link"
     },
     {
@@ -20203,7 +20413,7 @@
       "toPath": "docs/knowledge-bank/people/lisa-gelobter.md",
       "to": "person.lisa-gelobter",
       "fragment": null,
-      "line": 35,
+      "line": 41,
       "kind": "link"
     },
     {
@@ -20212,7 +20422,7 @@
       "toPath": "docs/knowledge-bank/people/luke-farrell.md",
       "to": "person.luke-farrell",
       "fragment": null,
-      "line": 35,
+      "line": 41,
       "kind": "link"
     },
     {
@@ -20221,7 +20431,7 @@
       "toPath": "docs/knowledge-bank/people/kelly-moan.md",
       "to": "person.kelly-moan",
       "fragment": null,
-      "line": 36,
+      "line": 42,
       "kind": "link"
     },
     {
@@ -20230,7 +20440,7 @@
       "toPath": "docs/knowledge-bank/people/jenn-wei.md",
       "to": "person.jenn-wei",
       "fragment": null,
-      "line": 37,
+      "line": 43,
       "kind": "link"
     },
     {
@@ -20239,7 +20449,7 @@
       "toPath": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
       "to": "opportunity.protected.source-backed-memory-consulting.2026",
       "fragment": null,
-      "line": 45,
+      "line": 51,
       "kind": "link"
     },
     {
@@ -20248,7 +20458,7 @@
       "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
       "to": "evaluation.employment-context.coverage.2026-07-18",
       "fragment": null,
-      "line": 72,
+      "line": 78,
       "kind": "link"
     },
     {
@@ -20257,7 +20467,7 @@
       "toPath": "docs/knowledge-bank/evaluations/employment-opportunity-leadership-2026-08-13.md",
       "to": "evaluation.employment-opportunity-leadership.2026-08-13",
       "fragment": null,
-      "line": 73,
+      "line": 79,
       "kind": "link"
     },
     {
@@ -20266,7 +20476,7 @@
       "toPath": "docs/knowledge-bank/evaluations/oti-product-manager-search-ranking-2026-08-20.md",
       "to": "evaluation.oti-product-manager-search-ranking.2026-08-20",
       "fragment": null,
-      "line": 74,
+      "line": 80,
       "kind": "link"
     },
     {
@@ -20275,7 +20485,7 @@
       "toPath": "reports/wiki-opportunity-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 75,
+      "line": 81,
       "kind": "link"
     },
     {
@@ -20284,7 +20494,7 @@
       "toPath": "reports/wiki-career-trajectory-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 76,
+      "line": 82,
       "kind": "link"
     },
     {
@@ -20293,7 +20503,7 @@
       "toPath": "reports/wiki-source-channel-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 77,
+      "line": 83,
       "kind": "link"
     },
     {
@@ -20302,7 +20512,7 @@
       "toPath": "reports/wiki-opportunity-discovery.md",
       "to": null,
       "fragment": null,
-      "line": 78,
+      "line": 84,
       "kind": "link"
     },
     {
@@ -20311,7 +20521,7 @@
       "toPath": "reports/hiring-acceptance-public.md",
       "to": null,
       "fragment": null,
-      "line": 79,
+      "line": 85,
       "kind": "link"
     },
     {
@@ -20320,7 +20530,7 @@
       "toPath": "reports/hiring-acceptance-gap-resolution.md",
       "to": null,
       "fragment": null,
-      "line": 80,
+      "line": 86,
       "kind": "link"
     },
     {
