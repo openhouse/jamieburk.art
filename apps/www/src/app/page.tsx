@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Route } from "next";
+import { CapabilityGrid } from "@/components/CapabilityGrid";
 import { ContactCTA } from "@/components/ContactCTA";
 import { Hero } from "@/components/Hero";
 import { ProofStrip } from "@/components/ProofStrip";
@@ -60,6 +61,7 @@ export default function HomePage() {
         </div>
       </section>
       <ProofStrip />
+      <CapabilityGrid />
       <section className="jb-frame py-16">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="jb-reading">

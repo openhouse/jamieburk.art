@@ -1,5 +1,5 @@
 {
-  "id": "portfolio-photography-layout-v7",
+  "id": "portfolio-photography-layout-v8",
   "title": "Human Index photographic portfolio layout",
   "intent": "Photography and public interfaces make situated work credible while remaining public-safe, accessible, project-specific, and subordinate to human publication authority.",
   "hiringArgument": {
@@ -70,6 +70,11 @@
       "id": "tag-navigation-contract",
       "blocking": true,
       "criterion": "Every tag-shaped control is a keyboard-reachable link to a visible filtered work-index state, with a clear route back to the complete index."
+    },
+    {
+      "id": "capability-navigation-contract",
+      "blocking": true,
+      "criterion": "Every homepage capability row is a full-row keyboard-reachable link to the filtered work index, uses a tag present in project data, and follows the same index interaction grammar as Start here."
     },
     {
       "id": "human-index-material-system",

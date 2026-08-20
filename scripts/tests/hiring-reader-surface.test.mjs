@@ -69,12 +69,16 @@ test("focus and hero text no longer depend on ochre or the image alone for contr
   assert.ok(hero.includes("jb-hero-copy"));
 });
 
-test("the homepage gives hiring readers one short route into the evidence", () => {
+test("the homepage gives hiring readers clear routes into the evidence", () => {
   const home = read("apps/www/src/app/page.tsx");
+  const capabilities = read("apps/www/src/components/CapabilityGrid.tsx");
   const hero = read("apps/www/src/components/Hero.tsx");
   const proofs = read("apps/www/src/data/proofs.ts");
 
-  assert.ok(!home.includes("CapabilityGrid"));
+  assert.ok(home.includes("CapabilityGrid"));
+  assert.ok(capabilities.includes('from "next/link"'));
+  assert.ok(capabilities.includes("/work?tag="));
+  assert.ok(capabilities.includes("encodeURIComponent(capability.tag)"));
   assert.ok(!home.includes("transformations.map"));
   assert.ok(hero.includes('href="/work/technical-operations"'));
   assert.match(

@@ -177,6 +177,18 @@ test("tag-shaped controls retain real destinations", () => {
   assert(result.failures.some(({ criterion }) => criterion === "tag-navigation-contract"));
 });
 
+test("homepage capability rows retain real filtered-work destinations", () => {
+  const path = "apps/www/src/components/CapabilityGrid.tsx";
+  const source = readFileSync(path, "utf8").replace("/work?tag=", "/work#");
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(
+    result.failures.some(
+      ({ criterion }) => criterion === "capability-navigation-contract"
+    )
+  );
+});
+
 test("a decorative gradient fails the material-system contract", () => {
   const path = "apps/www/src/app/globals.css";
   const source = `${readFileSync(path, "utf8")}\n.test { background: linear-gradient(red, blue); }\n`;

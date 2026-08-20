@@ -32,6 +32,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     "hiring-argument-opportunity-set",
     "hiring-argument-project-sequence",
     "tag-navigation-contract",
+    "capability-navigation-contract",
     "human-index-material-system",
     "responsive-image-contract",
     "reliable-image-delivery",
@@ -149,6 +150,8 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   const caseStudyLayout = readText("apps/www/src/components/CaseStudyLayout.tsx");
   const workIndex = readText("apps/www/src/app/work/page.tsx");
   const tagList = readText("apps/www/src/components/TagList.tsx");
+  const home = readText("apps/www/src/app/page.tsx");
+  const capabilityGrid = readText("apps/www/src/components/CapabilityGrid.tsx");
   const expectedCovers = [
     ['"harry-j-epstein"', '"/artifacts/hje/public-site.png"'],
     ['"fair-rent-nyc"', "participationMedia.marketHotelTownHall.src"],
@@ -207,6 +210,22 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
       !tagList.includes("encodeURIComponent(tag)") || !workIndex.includes("selectedTag") ||
       !workIndex.includes("Clear filter") || !workIndex.includes('id="work-index"')) {
     fail("tag-navigation-contract", "Tag-shaped controls must link to a visible, clearable work-index filter state.");
+  }
+
+  const capabilityTags = [...capabilityGrid.matchAll(/tag: "([^"]+)"/g)]
+    .map(([, tag]) => tag);
+  if (!home.includes("<CapabilityGrid />") ||
+      !capabilityGrid.includes('from "next/link"') ||
+      !capabilityGrid.includes("/work?tag=") ||
+      !capabilityGrid.includes("encodeURIComponent(capability.tag)") ||
+      !capabilityGrid.includes("#work-index") ||
+      !capabilityGrid.includes("jb-index-link group") ||
+      capabilityTags.length !== 6 || new Set(capabilityTags).size !== 6 ||
+      capabilityTags.some((tag) => !workData.includes(`"${tag}"`))) {
+    fail(
+      "capability-navigation-contract",
+      "Every homepage capability row must link to a real, visible, clearable work-index tag filter."
+    );
   }
 
   const globalCss = readText("apps/www/src/app/globals.css");
