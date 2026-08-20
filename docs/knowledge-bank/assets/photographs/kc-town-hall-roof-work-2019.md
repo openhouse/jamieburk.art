@@ -5,13 +5,13 @@ kind: asset
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-13
-review_by: 2027-02-13
+last_reviewed: 2026-08-20
+review_by: 2027-02-20
 canonical_path: docs/knowledge-bank/assets/photographs/kc-town-hall-roof-work-2019.md
-summary: Public-safe record for Paul Mossine's March 24, 2019 photograph of visible roof work during KC Town Hall field implementation.
+summary: Public-safe record for a March 24, 2019 KC Town Hall photograph of visible roof work during field implementation.
 media_type: photograph
 rights_state: cleared
-creator_state: resolved
+creator_state: unresolved
 consent_state: cleared
 represented_person_review: cleared-for-bounded-portfolio-use
 public_display_status: cleared
@@ -30,9 +30,9 @@ public_derivatives:
     metadata_stripped: true
     status: staging-candidate
 statements:
-  - id: statement.photo.kc-town-hall.roof-work.creator.v1
-    property: creator
-    value: person.paul-mossine
+  - id: statement.photo.kc-town-hall.roof-work.courtesy-credit.v1
+    property: display_credit
+    value: Photo courtesy of KC Town Hall.
     rank: preferred
     confidence: high
     references:
@@ -73,9 +73,6 @@ relations:
   - type: uses_source
     target: source.photo-metadata.portfolio-cover-images.2026.public-safe
     href: ../../sources/photo-metadata/portfolio-cover-images-2026-public-safe.md
-  - type: collaborated_with
-    target: person.paul-mossine
-    href: ../../people/paul-mossine.md
   - type: related_to
     target: index.photo-set.kc-town-hall-fieldwork
     href: ../../indexes/photo-sets/kc-town-hall-fieldwork.md
@@ -86,8 +83,8 @@ relations:
 ## Current public use
 
 The metadata-stripped derivative appears as the KC Town Hall project cover on
-the work index and as a bounded artifact on the case-study page. Paul Mossine
-is credited as photographer.
+the work index and as a limited artifact on the case-study page. The public
+display credit is "Photo courtesy of KC Town Hall."
 
 ## Evidence boundary
 

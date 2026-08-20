@@ -136,6 +136,7 @@ function candidateFiles(repoRoot) {
     "apps/www/src/components/WorkCard.tsx",
     "apps/www/src/components/ResidentServiceSequence.tsx",
     "apps/www/src/app/opengraph-image.tsx",
+    "apps/www/src/data/knowledge-bank/participation-images-2026-08.ts",
     "apps/www/src/data/photography.ts",
     "apps/www/src/data/social-preview.ts",
     "apps/www/src/data/work-covers.ts",
@@ -578,6 +579,39 @@ export function evaluatePhotoKnowledgeModel(model) {
     );
   });
 
+  const projectCourtesyCreditPolicy =
+    Array.isArray(evalConfig.projectCourtesyCredits) &&
+    evalConfig.projectCourtesyCredits.length > 0 &&
+    evalConfig.projectCourtesyCredits.every(({ photoId, credit, statementId }) => {
+      const photo = publicPhotoManifest?.find((item) => item.id === photoId);
+      const photoAsset = record(photo?.wikiId);
+      const statement = photoAsset?.statements?.find((item) => item.id === statementId);
+      const placements = photo?.placementIds?.map((id) => record(id)) ?? [];
+      return (
+        photo?.credit === credit &&
+        photo?.creditAssertionIds?.includes(statementId) &&
+        statement?.property === "display_credit" &&
+        statement?.value === credit &&
+        placements.length > 0 &&
+        placements.every(
+          (occurrence) =>
+            occurrence?.credit?.text === credit &&
+            occurrence?.credit?.assertions?.includes(statementId)
+        )
+      );
+    }) &&
+    (evalConfig.forbiddenPublicCreditPatterns ?? []).every((pattern) => {
+      const matcher = new RegExp(pattern, "i");
+      return publicPhotoManifest?.every((item) => !matcher.test(item.credit ?? ""));
+    }) &&
+    recordsById["person.paul-mossine"]?.status === "superseded" &&
+    recordsById["person.paul-mossine"]?.projection?.status === "hold" &&
+    !/Paul Mossine/i.test(
+      model.sourceTexts[
+        "apps/www/src/data/knowledge-bank/participation-images-2026-08.ts"
+      ] ?? ""
+    );
+
   const manifestAligned =
     east?.wikiId === canary.assetId &&
     east?.derivativeId === canary.derivative.id &&
@@ -654,6 +688,7 @@ export function evaluatePhotoKnowledgeModel(model) {
       placement?.route === canary.publicCopy.route &&
       placement?.component === canary.publicCopy.component &&
       edition?.occurrences?.includes(canary.placementId),
+    project_courtesy_credit_policy: projectCourtesyCreditPolicy,
     revocation_and_rollback_available:
       placement?.rollback?.preserves_history === true &&
       /Remove the Hero image occurrence/.test(placement?.rollback?.action ?? "") &&
@@ -705,7 +740,8 @@ export function evaluatePhotoKnowledgeModel(model) {
       "derivative_integrity_and_metadata_stripping",
       "creator_credit_and_custody_distinct",
       "permission_scope_exact_and_fail_closed",
-      "caption_assertions_source_bound"
+      "caption_assertions_source_bound",
+      "project_courtesy_credit_policy"
     ]),
     placement_coherence:
       checks.manifest_wiki_placement_alignment &&

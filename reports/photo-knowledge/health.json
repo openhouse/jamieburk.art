@@ -10,6 +10,7 @@
     "permission_scope_exact_and_fail_closed": true,
     "caption_assertions_source_bound": true,
     "manifest_wiki_placement_alignment": true,
+    "project_courtesy_credit_policy": true,
     "revocation_and_rollback_available": true,
     "protected_absence_not_auto_filled": true,
     "recollection_does_not_auto_project": true,
@@ -35,8 +36,8 @@
     "documentary_integrity"
   ],
   "candidate": {
-    "fingerprint": "913097a3e1a3e4cede18e2f7f5f5f80e575a52918ffb559ed032e12dafc1bec9",
-    "fileCount": 255,
+    "fingerprint": "d3e6268f935caefb493135fe00e3e62834e683237caae7f10802789ca5cbbc34",
+    "fileCount": 256,
     "files": [
       "apps/www/public/artifacts/wowlist/public-threshold.webp",
       "apps/www/public/images/artifacts/kc-town-hall-tired-of-tires-flyer.webp",
@@ -54,6 +55,7 @@
       "apps/www/src/components/Hero.tsx",
       "apps/www/src/components/ResidentServiceSequence.tsx",
       "apps/www/src/components/WorkCard.tsx",
+      "apps/www/src/data/knowledge-bank/participation-images-2026-08.ts",
       "apps/www/src/data/photography.ts",
       "apps/www/src/data/social-preview.ts",
       "apps/www/src/data/work-covers.ts",

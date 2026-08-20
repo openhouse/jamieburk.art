@@ -40,11 +40,22 @@ test("a decorative gradient fails the material-system contract", () => {
   assert(result.failures.some(({ criterion }) => criterion === "human-index-material-system"));
 });
 
-test("removing a participation-sequence photographer credit fails closed", () => {
+test("removing a participation-sequence project courtesy credit fails closed", () => {
   const path = "apps/www/src/data/photography.ts";
   const source = readFileSync(path, "utf8").replace(
-    'credit: "Photograph by Paul Mossine. From Jamie Burkart\'s photo archive.",',
+    'credit: "Photo courtesy of NYC Artist Coalition.",',
     ""
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "manifest-bound-publication"));
+});
+
+test("archive-process language in a public photo credit fails closed", () => {
+  const path = "apps/www/src/data/photography.ts";
+  const source = readFileSync(path, "utf8").replace(
+    'credit: "Photo courtesy of Sunday Dinner NYC.",',
+    'credit: "Photographer not identified in the retained export.",'
   );
   const result = evaluateLayout(process.cwd(), { [path]: source });
   assert.equal(result.passed, false);
@@ -84,8 +95,8 @@ test("every work item retains a truthful cover visual", () => {
 test("an authorized project cover cannot be described as still pending", () => {
   const path = "apps/www/src/data/work.ts";
   const source = readFileSync(path, "utf8").replace(
-    "one human-reviewed project photograph cleared for bounded portfolio display",
-    "one portfolio-authorized project photograph"
+    "one human-reviewed project photograph cleared for this portfolio display with a Sunday Dinner NYC courtesy credit",
+    "approved public materials pending"
   );
   const result = evaluateLayout(process.cwd(), { [path]: source });
   assert.equal(result.passed, false);

@@ -11,7 +11,7 @@
     {
       "id": "governed-photographic-field",
       "blocking": true,
-      "criterion": "The launch-candidate public field uses exactly seven fully bound, credited, Jamie-authorized photographic derivatives: the unchanged East River hero, the Shoestring Press and Market Hotel sequence, the Sunday Dinner cover, the KC Town Hall roof-work cover, and the Tired of Tires before-and-after pair; unresolved archive images remain outside the public bundle."
+      "criterion": "The launch-candidate public field uses exactly seven fully governed, credited, Jamie-authorized photographic derivatives: the unchanged East River hero, the Shoestring Press and Market Hotel sequence, the Sunday Dinner cover, the KC Town Hall roof-work cover, and the Tired of Tires before-and-after pair; unresolved archive images remain outside the public bundle."
     },
     {
       "id": "metadata-and-locator-safety",
@@ -41,7 +41,7 @@
     {
       "id": "responsive-image-contract",
       "blocking": true,
-      "criterion": "Images retain a Next Image local fallback, explicit intrinsic dimensions or fill, stable aspect ratios, responsive sizes, and a viewport-bounded hero. Only the exact governed Cloudinary pilot assets may bypass Next optimization through a bounded responsive srcset."
+      "criterion": "Images retain a Next Image local fallback, explicit intrinsic dimensions or fill, stable aspect ratios, responsive sizes, and a viewport-sized hero. Only the exact governed Cloudinary pilot assets may bypass Next optimization through a limited responsive srcset."
     },
     {
       "id": "social-preview-contract",

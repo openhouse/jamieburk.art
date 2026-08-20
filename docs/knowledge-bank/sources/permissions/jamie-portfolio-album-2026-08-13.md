@@ -6,8 +6,8 @@ source_kind: first-party-publication-authorization
 status: maintained
 visibility: summary-only
 sensitivity: moderate
-last_reviewed: 2026-08-15
-review_by: 2027-02-13
+last_reviewed: 2026-08-20
+review_by: 2027-02-20
 canonical_path: docs/knowledge-bank/sources/permissions/jamie-portfolio-album-2026-08-13.md
 summary: Public-safe capsule recording Jamie Burkart's destination-bound authorization to select and publish photographs from the designated Apple Photos portfolio album without exposing album identifiers or private metadata.
 authorization:
@@ -30,7 +30,7 @@ authorization:
     - asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2
     - asset.photo.sunday-dinner.shared-map.2013.001
     - asset.photo.kc-town-hall.roof-work.2019.001
-  required_credit: Known photographers remain attributed according to creator permission and exact placement; the East River homepage credit is visible and its social-preview credit may travel in metadata rather than rendered pixels.
+  required_credit: Verified photographers remain attributed according to creator permission and exact placement; otherwise the public display uses the relevant project courtesy credit. The East River homepage credit is visible and its social-preview credit may travel in metadata rather than rendered pixels.
   social_preview_release:
     production: approved
     indexing: approved
@@ -72,9 +72,6 @@ relations:
   - type: related_to
     target: asset.photo.kc-town-hall.roof-work.2019.001
     href: ../../assets/photographs/kc-town-hall-roof-work-2019.md
-  - type: related_to
-    target: person.paul-mossine
-    href: ../../people/paul-mossine.md
 ---
 
 # Jamie Burkart portfolio-album publication authorization
@@ -92,8 +89,11 @@ relations:
 - [x] Jamie authorizes the metadata-stripped East River derivative for the
   exact full-bleed 1200 by 630 jamieburk.art social-preview composition, with
   creator attribution in alt metadata rather than rendered into the pixels.
-- [x] Known photographers remain attributed according to creator permission and
-  the exact placement; Elana Gordon remains visibly credited on the homepage.
+- [x] Verified photographers remain attributed according to creator permission
+  and exact placement; Elana Gordon remains visibly credited on the homepage.
+- [x] Where no individual photographer is verified, the public display uses a
+  project courtesy credit: NYC Artist Coalition, Sunday Dinner NYC, or KC Town
+  Hall.
 - [x] Album identifiers, People tags, face associations, geolocation, original
   filenames, and raw metadata remain private.
 - [x] After close reading of three alternatives, Jamie selected the current

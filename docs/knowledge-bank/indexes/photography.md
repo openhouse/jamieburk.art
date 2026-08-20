@@ -5,8 +5,8 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-15
-review_by: 2027-01-26
+last_reviewed: 2026-08-20
+review_by: 2027-02-20
 canonical_path: docs/knowledge-bank/indexes/photography.md
 summary: Public-safe orientation to the governed relationship among private photo sources, first-class Wiki records, exact portfolio occurrences, recollection, correction, and human publication gates.
 relations:
@@ -83,6 +83,9 @@ relations:
     target: correction.photo.east-river-credit.2026-07
     href: ../corrections/east-river-credit-2026-07.md
   - type: related_to
+    target: correction.photo.project-courtesy-credits.2026-08-20
+    href: ../corrections/project-photo-courtesy-credits-2026-08-20.md
+  - type: related_to
     target: research-inquiry.documented-canoe-bike-journeys
     href: ../research-inquiries/documented-canoe-bike-journeys.md
   - type: uses_method
@@ -128,8 +131,11 @@ sequence with the Let NYC Dance public surface:
 - [August 2026 photographic edition](../projections/photography/edition-launch-2026-08.md)
   binds the five governed photograph occurrences while leaving production and
   indexing open.
-- [Paul Mossine](../people/paul-mossine.md) is credited as photographer for
-  both 2017 case-study images.
+- The NYC Artist Coalition, Sunday Dinner NYC, and KC Town Hall photographs use
+  project courtesy credits wherever no individual photographer is verified;
+  the [August 2026 credit correction](../corrections/project-photo-courtesy-credits-2026-08-20.md)
+  preserves the superseded attribution without exposing archive-process notes
+  on the portfolio.
 - [Sunday Dinner shared map](../assets/photographs/sunday-dinner-shared-map-2013.md)
   shows social infrastructure taking form at a shared table.
 - [KC Town Hall roof work](../assets/photographs/kc-town-hall-roof-work-2019.md)

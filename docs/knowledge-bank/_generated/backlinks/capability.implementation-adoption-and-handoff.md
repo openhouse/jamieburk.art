@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Implementation, Adoption, and Handoff
 
-**Source commit:** `8f863e21137af0683355e258efc6371f9c7e5344`
-**Generation time:** 2026-08-15T20:34:05-04:00
-**Source fingerprint:** `29a8bf9dfa53a0301e27508aaaceba2c2e70f52750c02de55dba42637da2a8fd`
+**Source commit:** `8d60921c4f7750457f68c6662f6d1eadd3c759f5`
+**Generation time:** 2026-08-20T14:09:10-04:00
+**Source fingerprint:** `6eea68c14cfe55d0a5d47e33c9614c8492ffaec455165540e50a17f2b61fe6a1`
 
 - [Knowledge Wiki branch-family closure](../../indexes/family-closure.md) - `prose_link` (markdown)
 - [Knowledge Wiki branch-family closure](../../indexes/family-closure.md) - `related_to` (frontmatter)

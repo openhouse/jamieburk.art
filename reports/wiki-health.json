@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-15T20:34:05-04:00",
-  "sourceCommit": "8f863e21137af0683355e258efc6371f9c7e5344",
-  "sourceFingerprint": "29a8bf9dfa53a0301e27508aaaceba2c2e70f52750c02de55dba42637da2a8fd",
+  "generatedAt": "2026-08-20T14:09:10-04:00",
+  "sourceCommit": "8d60921c4f7750457f68c6662f6d1eadd3c759f5",
+  "sourceFingerprint": "6eea68c14cfe55d0a5d47e33c9614c8492ffaec455165540e50a17f2b61fe6a1",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
     "errors": []
   },
   "diagnostics": {
-    "records": 469,
+    "records": 470,
     "byKind": {
       "project": 15,
       "person": 14,
@@ -22,7 +22,7 @@
       "research-run": 8,
       "research-inquiry": 6,
       "decision": 9,
-      "correction": 3,
+      "correction": 4,
       "method": 14,
       "timeline": 1,
       "application": 3,
@@ -32,10 +32,10 @@
       "opportunity": 15,
       "projection": 14
     },
-    "typedRelations": 1671,
+    "typedRelations": 1672,
     "evidenceRelations": 29,
     "relationTypeCounts": {
-      "collaborated_with": 5,
+      "collaborated_with": 2,
       "documents": 42,
       "evidence:context": 10,
       "evidence:direct-support": 16,
@@ -45,20 +45,20 @@
       "part_of": 14,
       "participated_in": 3,
       "projected_to": 18,
-      "related_to": 1066,
+      "related_to": 1070,
       "resulted_in": 6,
       "supersedes": 1,
       "supports": 36,
       "uses_method": 35,
       "uses_source": 375
     },
-    "proseLinks": 518,
-    "rootReachable": 250,
+    "proseLinks": 519,
+    "rootReachable": 251,
     "orphanCount": 0,
     "deadEndCount": 0,
     "wantedPageCount": 6,
     "stalePageCount": 0,
-    "correctionCount": 3,
+    "correctionCount": 4,
     "rightsReviewCount": 185,
     "opportunityCount": 15,
     "liveOpportunityCount": 13,
@@ -164,6 +164,12 @@
       "title": "Harry J. Epstein Company and Thick Arts LLC client chronology correction",
       "path": "docs/knowledge-bank/corrections/hje-thick-arts-client-chronology-2026.md",
       "humanReview": "resolved"
+    },
+    {
+      "id": "correction.photo.project-courtesy-credits.2026-08-20",
+      "title": "Correct project photograph display credits",
+      "path": "docs/knowledge-bank/corrections/project-photo-courtesy-credits-2026-08-20.md",
+      "humanReview": "not-requested"
     }
   ],
   "rightsReview": [

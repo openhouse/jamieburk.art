@@ -525,7 +525,7 @@ const workItemsInput = [
     careNote:
       "Summary-only page. Raw guest data, attendance records, private community records, and unapproved additional photos stay offline.",
     sourceLayer:
-      "Public-safe summary, one human-reviewed project photograph cleared for this portfolio display with its unresolved creator credit disclosed, and private records intentionally omitted.",
+      "Public-safe summary, one human-reviewed project photograph cleared for this portfolio display with a Sunday Dinner NYC courtesy credit, and private records intentionally omitted.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
     currentStatus: "Active practice; public-safe summary only.",
     group: "Community and cultural infrastructure",

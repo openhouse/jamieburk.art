@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-15T20:34:05-04:00",
-  "sourceCommit": "8f863e21137af0683355e258efc6371f9c7e5344",
-  "sourceFingerprint": "29a8bf9dfa53a0301e27508aaaceba2c2e70f52750c02de55dba42637da2a8fd",
+  "generatedAt": "2026-08-20T14:09:10-04:00",
+  "sourceCommit": "8d60921c4f7750457f68c6662f6d1eadd3c759f5",
+  "sourceFingerprint": "6eea68c14cfe55d0a5d47e33c9614c8492ffaec455165540e50a17f2b61fe6a1",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -54,8 +54,8 @@
       "sensitivity": "low",
       "summary": "Public-safe record for a cropped outreach design stating the recurring free residential tire-pickup service model.",
       "aliases": [],
-      "lastReviewed": "2026-08-14",
-      "reviewBy": "2027-02-14"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "asset.graphic.kc-town-hall.walkshed.2019.001",
@@ -143,10 +143,10 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Public-safe record for Paul Mossine's March 24, 2019 photograph of visible roof work during KC Town Hall field implementation.",
+      "summary": "Public-safe record for a March 24, 2019 KC Town Hall photograph of visible roof work during field implementation.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2027-02-13"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "asset.photo.kc-town-hall.stewardship-interior.001",
@@ -171,8 +171,8 @@
       "sensitivity": "low",
       "summary": "Public-safe record for the matched field frame showing the same curbside collection site after tire removal.",
       "aliases": [],
-      "lastReviewed": "2026-08-14",
-      "reviewBy": "2027-02-14"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "asset.photo.kc-town-hall.tired-of-tires-before.2022.001",
@@ -184,8 +184,8 @@
       "sensitivity": "low",
       "summary": "Public-safe record for one matched field frame showing tires at a curbside collection site before removal.",
       "aliases": [],
-      "lastReviewed": "2026-08-14",
-      "reviewBy": "2027-02-14"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "asset.photo.nyc-council.field-kit.2026.001",
@@ -221,10 +221,10 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Public-safe record for Paul Mossine's July 24, 2017 photograph of Jamie Burkart facilitating a coalition working session at Shoestring Press.",
+      "summary": "Public-safe record for a July 24, 2017 NYC Artist Coalition photograph of Jamie Burkart facilitating a coalition working session at Shoestring Press.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2027-02-13"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb",
@@ -2379,10 +2379,10 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Public-safe record for Paul Mossine's October 11, 2017 photograph of the collective Save NYC Spaces town hall room at Market Hotel.",
+      "summary": "Public-safe record for an October 11, 2017 NYC Artist Coalition photograph of the collective Save NYC Spaces town hall room at Market Hotel.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2027-02-13"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-tnyszfjgnt",
@@ -2563,8 +2563,8 @@
       "sensitivity": "low",
       "summary": "Public-safe record for a January 6, 2013 Sunday Dinner photograph showing a shared table, a hand-drawn map, and visible group interaction.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2027-02-13"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "capability.civic-cultural-technical-translation",
@@ -2708,6 +2708,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "correction.photo.project-courtesy-credits.2026-08-20",
+      "path": "docs/knowledge-bank/corrections/project-photo-courtesy-credits-2026-08-20.md",
+      "title": "Correct project photograph display credits",
+      "kind": "correction",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Attribution correction removing an incorrect named photographer and replacing public archive-process notes with project courtesy credits.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "decision.callnyc.issue-pathways",
@@ -3401,8 +3414,8 @@
       "sensitivity": "low",
       "summary": "Public-safe orientation to the governed relationship among private photo sources, first-class Wiki records, exact portfolio occurrences, recollection, correction, and human publication gates.",
       "aliases": [],
-      "lastReviewed": "2026-08-15",
-      "reviewBy": "2027-01-26"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "index.knowledge-wiki.photography-notebook",
@@ -4155,13 +4168,13 @@
       "path": "docs/knowledge-bank/people/paul-mossine.md",
       "title": "Paul Mossine",
       "kind": "person",
-      "status": "maintained",
+      "status": "superseded",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Photographer credited in the retained metadata for the selected 2017 Shoestring Press and Market Hotel NYC Artist Coalition photographs.",
+      "summary": "Superseded attribution record retained to document the correction of an inaccurate photographer credit.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2027-02-13"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "person.thomas-edlinger",
@@ -4472,8 +4485,8 @@
       "sensitivity": "low",
       "summary": "Exact public occurrence binding the Market Hotel banner derivative to the public-room panel in the Fair Rent NYC participation sequence.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2027-02-13"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "projection.photo.fair-rent-nyc.shoestring-facilitation",
@@ -4485,8 +4498,8 @@
       "sensitivity": "low",
       "summary": "Exact public occurrence binding the Shoestring Press derivative to the working-alignment panel in the Fair Rent NYC participation sequence.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2027-02-13"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "projection.photo.kc-town-hall.roof-work",
@@ -4498,8 +4511,8 @@
       "sensitivity": "low",
       "summary": "Exact public occurrence binding the KC Town Hall roof-work derivative to the work index and case study.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2027-02-13"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "projection.photo.kc-town-hall.tired-of-tires-after",
@@ -4511,8 +4524,8 @@
       "sensitivity": "low",
       "summary": "Exact public occurrence binding the after-collection field frame to the KC Town Hall resident-service sequence.",
       "aliases": [],
-      "lastReviewed": "2026-08-14",
-      "reviewBy": "2027-02-14"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "projection.photo.kc-town-hall.tired-of-tires-before",
@@ -4524,8 +4537,8 @@
       "sensitivity": "low",
       "summary": "Exact public occurrence binding the before-collection field frame to the KC Town Hall resident-service sequence.",
       "aliases": [],
-      "lastReviewed": "2026-08-14",
-      "reviewBy": "2027-02-14"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "projection.photo.layout-c.home.east-river",
@@ -4563,8 +4576,8 @@
       "sensitivity": "low",
       "summary": "Exact public occurrence binding the Sunday Dinner shared-map derivative to the work index and case study.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2027-02-13"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "projection.visual.kc-town-hall.tired-of-tires-flyer",
@@ -4576,8 +4589,8 @@
       "sensitivity": "low",
       "summary": "Exact public occurrence binding the cropped service flyer to the KC Town Hall resident-service sequence.",
       "aliases": [],
-      "lastReviewed": "2026-08-14",
-      "reviewBy": "2027-02-14"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "research-inquiry.documented-canoe-bike-journeys",
@@ -5694,8 +5707,8 @@
       "sensitivity": "moderate",
       "summary": "Public-safe capsule recording Jamie Burkart's destination-bound authorization to select and publish photographs from the designated Apple Photos portfolio album without exposing album identifiers or private metadata.",
       "aliases": [],
-      "lastReviewed": "2026-08-15",
-      "reviewBy": "2027-02-13"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14",
@@ -5731,10 +5744,10 @@
       "status": "maintained",
       "visibility": "summary-only",
       "sensitivity": "low",
-      "summary": "Public-safe metadata capsule for the two selected NYC Artist Coalition portfolio photographs, retaining only creator, date, general place, visible content, derivative identity, and archive custody.",
+      "summary": "Public-safe metadata capsule for the two selected NYC Artist Coalition portfolio photographs, retaining only creator state, project courtesy credit, date, general place, visible content, derivative identity, and archive custody.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2027-02-13"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "source.photo-metadata.portfolio-cover-images.2026.public-safe",
@@ -5744,10 +5757,10 @@
       "status": "maintained",
       "visibility": "summary-only",
       "sensitivity": "moderate",
-      "summary": "Public-safe capsule retaining only the capture dates and creator-state information needed to govern the selected Sunday Dinner and KC Town Hall portfolio derivatives.",
+      "summary": "Public-safe capsule retaining only the capture dates, creator state, and project courtesy credits needed to govern the selected Sunday Dinner and KC Town Hall portfolio derivatives.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2027-02-13"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "source.politico.callnyc.2016-03-14",
@@ -6397,14 +6410,6 @@
     },
     {
       "from": "asset.photo.kc-town-hall.roof-work.2019.001",
-      "type": "collaborated_with",
-      "to": "person.paul-mossine",
-      "source": "frontmatter",
-      "href": "../../people/paul-mossine.md",
-      "context": null
-    },
-    {
-      "from": "asset.photo.kc-town-hall.roof-work.2019.001",
       "type": "projected_to",
       "to": "projection.photo.kc-town-hall.roof-work",
       "source": "frontmatter",
@@ -6553,14 +6558,6 @@
       "to": "source.nycac.dcla-formation-source-return.2026-07",
       "source": "frontmatter",
       "href": "../../sources/archives/nycac-dcla-formation-source-return-2026-07.md",
-      "context": null
-    },
-    {
-      "from": "asset.photo.nycac-shoestring-facilitation.2017.001",
-      "type": "collaborated_with",
-      "to": "person.paul-mossine",
-      "source": "frontmatter",
-      "href": "../../people/paul-mossine.md",
       "context": null
     },
     {
@@ -11085,14 +11082,6 @@
     },
     {
       "from": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2",
-      "type": "collaborated_with",
-      "to": "person.paul-mossine",
-      "source": "frontmatter",
-      "href": "../../../people/paul-mossine.md",
-      "context": null
-    },
-    {
-      "from": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2",
       "type": "projected_to",
       "to": "projection.photo.fair-rent-nyc.market-hotel-banner",
       "source": "frontmatter",
@@ -11984,6 +11973,62 @@
       "to": "source.permission.elana-gordon.east-river.2026-07",
       "source": "frontmatter",
       "href": "../sources/permissions/elana-gordon-east-river-portfolio-2026.md",
+      "context": null
+    },
+    {
+      "from": "correction.photo.project-courtesy-credits.2026-08-20",
+      "type": "related_to",
+      "to": "asset.photo.kc-town-hall.roof-work.2019.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/kc-town-hall-roof-work-2019.md",
+      "context": null
+    },
+    {
+      "from": "correction.photo.project-courtesy-credits.2026-08-20",
+      "type": "related_to",
+      "to": "asset.photo.kc-town-hall.tired-of-tires-after.2022.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/kc-town-hall-tired-of-tires-after-2022.md",
+      "context": null
+    },
+    {
+      "from": "correction.photo.project-courtesy-credits.2026-08-20",
+      "type": "related_to",
+      "to": "asset.photo.kc-town-hall.tired-of-tires-before.2022.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/kc-town-hall-tired-of-tires-before-2022.md",
+      "context": null
+    },
+    {
+      "from": "correction.photo.project-courtesy-credits.2026-08-20",
+      "type": "related_to",
+      "to": "asset.photo.nycac-shoestring-facilitation.2017.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/nycac-shoestring-facilitation-2017.md",
+      "context": null
+    },
+    {
+      "from": "correction.photo.project-courtesy-credits.2026-08-20",
+      "type": "related_to",
+      "to": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2",
+      "source": "frontmatter",
+      "href": "../assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md",
+      "context": null
+    },
+    {
+      "from": "correction.photo.project-courtesy-credits.2026-08-20",
+      "type": "related_to",
+      "to": "asset.photo.sunday-dinner.shared-map.2013.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/sunday-dinner-shared-map-2013.md",
+      "context": null
+    },
+    {
+      "from": "correction.photo.project-courtesy-credits.2026-08-20",
+      "type": "related_to",
+      "to": "person.paul-mossine",
+      "source": "frontmatter",
+      "href": "../people/paul-mossine.md",
       "context": null
     },
     {
@@ -14032,6 +14077,14 @@
       "to": "correction.photo.east-river-credit.2026-07",
       "source": "frontmatter",
       "href": "../corrections/east-river-credit-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "correction.photo.project-courtesy-credits.2026-08-20",
+      "source": "frontmatter",
+      "href": "../corrections/project-photo-courtesy-credits-2026-08-20.md",
       "context": null
     },
     {
@@ -16711,17 +16764,9 @@
     {
       "from": "person.paul-mossine",
       "type": "related_to",
-      "to": "asset.photo.nycac-shoestring-facilitation.2017.001",
+      "to": "correction.photo.project-courtesy-credits.2026-08-20",
       "source": "frontmatter",
-      "href": "../assets/photographs/nycac-shoestring-facilitation-2017.md",
-      "context": null
-    },
-    {
-      "from": "person.paul-mossine",
-      "type": "related_to",
-      "to": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2",
-      "source": "frontmatter",
-      "href": "../assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md",
+      "href": "../corrections/project-photo-courtesy-credits-2026-08-20.md",
       "context": null
     },
     {
@@ -17578,14 +17623,6 @@
       "to": "edition.launch.2026-08",
       "source": "frontmatter",
       "href": "edition-launch-2026-08.md",
-      "context": null
-    },
-    {
-      "from": "projection.photo.kc-town-hall.roof-work",
-      "type": "related_to",
-      "to": "person.paul-mossine",
-      "source": "frontmatter",
-      "href": "../../people/paul-mossine.md",
       "context": null
     },
     {
@@ -19357,14 +19394,6 @@
       "context": null
     },
     {
-      "from": "source.permission.jamie-portfolio-album.2026-08-13",
-      "type": "related_to",
-      "to": "person.paul-mossine",
-      "source": "frontmatter",
-      "href": "../../people/paul-mossine.md",
-      "context": null
-    },
-    {
       "from": "source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14",
       "type": "related_to",
       "to": "asset.design.kc-town-hall.tired-of-tires-flyer.2019.001",
@@ -19394,14 +19423,6 @@
       "to": "asset.photo.east-river-manhattan-bridge.2022.001",
       "source": "frontmatter",
       "href": "../../assets/photographs/east-river-manhattan-bridge-2022.md",
-      "context": null
-    },
-    {
-      "from": "source.photo-metadata.nycac-participation-images.2017.public-safe",
-      "type": "related_to",
-      "to": "person.paul-mossine",
-      "source": "frontmatter",
-      "href": "../../people/paul-mossine.md",
       "context": null
     },
     {
@@ -20633,6 +20654,15 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/corrections/project-photo-courtesy-credits-2026-08-20.md",
+      "from": "correction.photo.project-courtesy-credits.2026-08-20",
+      "toPath": "docs/knowledge-bank/people/paul-mossine.md",
+      "to": "person.paul-mossine",
+      "fragment": null,
+      "line": 12,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/evaluations/retrieval-tasks.md",
       "from": "evaluation.knowledge-wiki.retrieval-tasks",
       "toPath": "docs/knowledge-bank/README.md",
@@ -21832,10 +21862,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/photography.md",
       "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-dcla-formation-2017.md",
+      "to": "index.photo-set.nycac-dcla-formation.2017",
+      "fragment": null,
+      "line": 102,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
       "toPath": "docs/knowledge-bank/indexes/photo-sets/kc-town-hall-fieldwork.md",
       "to": "index.photo-set.kc-town-hall-fieldwork",
       "fragment": null,
-      "line": 100,
+      "line": 103,
       "kind": "link"
     },
     {
@@ -21844,7 +21883,7 @@
       "toPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-walkshed-2019.md",
       "to": "asset.graphic.kc-town-hall.walkshed.2019.001",
       "fragment": null,
-      "line": 105,
+      "line": 108,
       "kind": "link"
     },
     {
@@ -21853,7 +21892,7 @@
       "toPath": "docs/knowledge-bank/research-runs/photographic-source-return-2026-07-26.md",
       "to": "research.photographic-source-return.2026-07-26",
       "fragment": null,
-      "line": 107,
+      "line": 110,
       "kind": "link"
     },
     {
@@ -21862,7 +21901,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-project-sites-2017-2026.md",
       "to": "index.photo-set.nycac-project-sites.2017-2026",
       "fragment": null,
-      "line": 112,
+      "line": 115,
       "kind": "link"
     },
     {
@@ -21895,10 +21934,10 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/photography.md",
       "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/people/paul-mossine.md",
-      "to": "person.paul-mossine",
+      "toPath": "docs/knowledge-bank/corrections/project-photo-courtesy-credits-2026-08-20.md",
+      "to": "correction.photo.project-courtesy-credits.2026-08-20",
       "fragment": null,
-      "line": 20,
+      "line": 22,
       "kind": "link"
     },
     {
@@ -21907,7 +21946,7 @@
       "toPath": "docs/knowledge-bank/assets/photographs/sunday-dinner-shared-map-2013.md",
       "to": "asset.photo.sunday-dinner.shared-map.2013.001",
       "fragment": null,
-      "line": 22,
+      "line": 25,
       "kind": "link"
     },
     {
@@ -21916,7 +21955,7 @@
       "toPath": "docs/knowledge-bank/assets/photographs/kc-town-hall-roof-work-2019.md",
       "to": "asset.photo.kc-town-hall.roof-work.2019.001",
       "fragment": null,
-      "line": 24,
+      "line": 27,
       "kind": "link"
     },
     {
@@ -21925,7 +21964,7 @@
       "toPath": "docs/knowledge-bank/evaluations/curatorial/portfolio-project-covers-2026-08-13.md",
       "to": "evaluation.curatorial.portfolio-project-covers.2026-08-13",
       "fragment": null,
-      "line": 26,
+      "line": 29,
       "kind": "link"
     },
     {
@@ -21934,7 +21973,7 @@
       "toPath": "docs/knowledge-bank/sources/permissions/jamie-portfolio-album-2026-08-13.md",
       "to": "source.permission.jamie-portfolio-album.2026-08-13",
       "fragment": null,
-      "line": 31,
+      "line": 34,
       "kind": "link"
     },
     {
@@ -21943,7 +21982,7 @@
       "toPath": "docs/knowledge-bank/sources/kc-town-hall-tired-of-tires-design-field-archive-2026.md",
       "to": "source.kc-town-hall.tired-of-tires.design-field-archive.2019-2022",
       "fragment": null,
-      "line": 39,
+      "line": 42,
       "kind": "link"
     },
     {
@@ -21952,7 +21991,7 @@
       "toPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-tired-of-tires-flyer-2019.md",
       "to": "asset.design.kc-town-hall.tired-of-tires-flyer.2019.001",
       "fragment": null,
-      "line": 43,
+      "line": 46,
       "kind": "link"
     },
     {
@@ -21961,7 +22000,7 @@
       "toPath": "docs/knowledge-bank/assets/photographs/kc-town-hall-tired-of-tires-before-2022.md",
       "to": "asset.photo.kc-town-hall.tired-of-tires-before.2022.001",
       "fragment": null,
-      "line": 44,
+      "line": 47,
       "kind": "link"
     },
     {
@@ -21970,7 +22009,7 @@
       "toPath": "docs/knowledge-bank/assets/photographs/kc-town-hall-tired-of-tires-after-2022.md",
       "to": "asset.photo.kc-town-hall.tired-of-tires-after.2022.001",
       "fragment": null,
-      "line": 45,
+      "line": 48,
       "kind": "link"
     },
     {
@@ -21979,7 +22018,7 @@
       "toPath": "docs/knowledge-bank/sources/permissions/kc-town-hall-tired-of-tires-portfolio-2026-08-14.md",
       "to": "source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14",
       "fragment": null,
-      "line": 47,
+      "line": 50,
       "kind": "link"
     },
     {
@@ -21988,7 +22027,7 @@
       "toPath": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
       "to": "asset.photo.east-river-manhattan-bridge.2022.001",
       "fragment": null,
-      "line": 72,
+      "line": 75,
       "kind": "link"
     },
     {
@@ -21997,7 +22036,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/east-river-canoe-2022.md",
       "to": "index.photo-set.east-river-canoe.2022",
       "fragment": null,
-      "line": 73,
+      "line": 76,
       "kind": "link"
     },
     {
@@ -22006,7 +22045,7 @@
       "toPath": "docs/knowledge-bank/people/elana-gordon.md",
       "to": "person.elana-gordon",
       "fragment": null,
-      "line": 74,
+      "line": 77,
       "kind": "link"
     },
     {
@@ -22015,7 +22054,7 @@
       "toPath": "docs/knowledge-bank/sources/photo-metadata/east-river-2022-public-safe.md",
       "to": "source.photo-metadata.east-river.2022.public-safe",
       "fragment": null,
-      "line": 75,
+      "line": 78,
       "kind": "link"
     },
     {
@@ -22024,7 +22063,7 @@
       "toPath": "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md",
       "to": "source.permission.elana-gordon.east-river.2026-07",
       "fragment": null,
-      "line": 76,
+      "line": 79,
       "kind": "link"
     },
     {
@@ -22033,7 +22072,7 @@
       "toPath": "docs/knowledge-bank/evaluations/curatorial/layout-c-home-east-river-v1.md",
       "to": "evaluation.curatorial.layout-c.home-east-river.v1",
       "fragment": null,
-      "line": 77,
+      "line": 80,
       "kind": "link"
     },
     {
@@ -22042,7 +22081,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/layout-c-home-east-river-v1.md",
       "to": "decision.photo.layout-c.home-east-river.v1",
       "fragment": null,
-      "line": 78,
+      "line": 81,
       "kind": "link"
     },
     {
@@ -22051,7 +22090,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/layout-c-resume-no-photo-v1.md",
       "to": "decision.photo.layout-c.resume-no-photo.v1",
       "fragment": null,
-      "line": 79,
+      "line": 82,
       "kind": "link"
     },
     {
@@ -22060,7 +22099,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/pre-launch-rights-narrowing-2026-07-28.md",
       "to": "decision.photo.pre-launch.rights-narrowing.2026-07-28",
       "fragment": null,
-      "line": 80,
+      "line": 83,
       "kind": "link"
     },
     {
@@ -22069,7 +22108,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
       "to": "projection.photo.layout-c.home.east-river",
       "fragment": null,
-      "line": 81,
+      "line": 84,
       "kind": "link"
     },
     {
@@ -22078,7 +22117,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/edition-layout-c-2026-07.md",
       "to": "edition.layout-c.2026-07",
       "fragment": null,
-      "line": 82,
+      "line": 85,
       "kind": "link"
     },
     {
@@ -22087,7 +22126,7 @@
       "toPath": "docs/knowledge-bank/corrections/east-river-credit-2026-07.md",
       "to": "correction.photo.east-river-credit.2026-07",
       "fragment": null,
-      "line": 83,
+      "line": 86,
       "kind": "link"
     },
     {
@@ -22096,7 +22135,7 @@
       "toPath": "docs/knowledge-bank/sources/recollections/jamie-canoe-commuting-2026-07.md",
       "to": "source.recollection.jamie-canoe-commuting.2026-07",
       "fragment": null,
-      "line": 84,
+      "line": 87,
       "kind": "link"
     },
     {
@@ -22105,7 +22144,7 @@
       "toPath": "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md",
       "to": "research-inquiry.documented-canoe-bike-journeys",
       "fragment": null,
-      "line": 85,
+      "line": 88,
       "kind": "link"
     },
     {
@@ -22114,7 +22153,7 @@
       "toPath": "docs/knowledge-bank/workflows/photography-east-river-canary.md",
       "to": "method.photography-east-river-canary",
       "fragment": null,
-      "line": 86,
+      "line": 89,
       "kind": "link"
     },
     {
@@ -22123,16 +22162,7 @@
       "toPath": "rfcs/0003-living-photographic-knowledge-loop.md",
       "to": null,
       "fragment": null,
-      "line": 94,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-dcla-formation-2017.md",
-      "to": "index.photo-set.nycac-dcla-formation.2017",
-      "fragment": null,
-      "line": 99,
+      "line": 97,
       "kind": "link"
     },
     {

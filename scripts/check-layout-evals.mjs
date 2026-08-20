@@ -70,6 +70,27 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   if ([...manifest.matchAll(/publicationStatus: "jamie-authorized"/g)].length !== 10) {
     fail("manifest-bound-publication", "Every photo must retain the Jamie-authorized publication status.");
   }
+  const expectedProjectCredits = [
+    ["Photo courtesy of NYC Artist Coalition.", 2],
+    ["Photo courtesy of Sunday Dinner NYC.", 1],
+    ["Photo courtesy of KC Town Hall.", 3],
+    ["Design courtesy of KC Town Hall.", 1]
+  ];
+  for (const [credit, expectedCount] of expectedProjectCredits) {
+    const observedCount = manifest.split(`credit: "${credit}"`).length - 1;
+    if (observedCount !== expectedCount) {
+      fail(
+        "manifest-bound-publication",
+        `Expected ${expectedCount} exact public occurrence(s) of project credit: ${credit}`
+      );
+    }
+  }
+  if (/Paul Mossine|retained export|photographer not identified|photographer unresolved|authorship remains under review/i.test(manifest)) {
+    fail(
+      "manifest-bound-publication",
+      "Public visual credits must use verified creator attribution or a clean project courtesy line, never an incorrect byline or archive-process note."
+    );
+  }
 
   const publicImageRoot = path.join(root, "apps/www/public/images/field-notes");
   const publicImages = walkFiles(publicImageRoot).sort();
@@ -172,7 +193,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     }
   }
   if (workData.includes("approved public materials pending") ||
-      !workData.includes("one human-reviewed project photograph cleared for bounded portfolio display") ||
+      !workData.includes("one human-reviewed project photograph cleared for this portfolio display with a Sunday Dinner NYC courtesy credit") ||
       !workData.includes("Additional named participants, photographs, and artifacts require consent and approval.")) {
     fail(
       "truthful-project-cover-field",

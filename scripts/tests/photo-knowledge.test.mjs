@@ -190,6 +190,30 @@ test("a missing case-study creator credit fails manifest alignment", async () =>
   assert.equal(result.passed, false);
 });
 
+test("project photographs use their exact courtesy credits when no creator is verified", async () => {
+  const model = await baselineModel();
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.project_courtesy_credit_policy, true);
+});
+
+test("an incorrect named photographer fails the project courtesy policy", async () => {
+  const model = await baselineModel();
+  model.portfolioPhotos.nycacShoestringFacilitation.credit =
+    "Photograph by Paul Mossine. From Jamie Burkart's photo archive.";
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.project_courtesy_credit_policy, false);
+  assert.equal(result.passed, false);
+});
+
+test("archive-process language fails the public photo credit policy", async () => {
+  const model = await baselineModel();
+  model.portfolioPhotos.sundayDinnerSharedMap.credit =
+    "Photographer not identified in the retained export.";
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.project_courtesy_credit_policy, false);
+  assert.equal(result.passed, false);
+});
+
 test("revocation cannot leave an active occurrence valid", async () => {
   const model = await baselineModel();
   model.recordsById[model.canary.permissionSourceId].permission_capsule.public_git = "revoked";
