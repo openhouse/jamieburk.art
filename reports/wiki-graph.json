@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-15T19:44:01-04:00",
-  "sourceCommit": "1e4cc9db7504cc2674ec1524ba75a850a45c2a78",
-  "sourceFingerprint": "c05169aae532c2a0a6940e411678892bfcab957e2d291568f34861a582fa448a",
+  "generatedAt": "2026-08-20T12:22:26-04:00",
+  "sourceCommit": "989beaea5a3c4b1f095763f5b982f1bc52e4aee1",
+  "sourceFingerprint": "acd713c8200da8f8bf21347678be407c44eb991e0df20b58901d6ee50098faf2",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -19313,25 +19313,7 @@
       "toPath": "docs/knowledge-bank/sources/jobs-oti-product-management-search-2026-08-20.md",
       "to": "source.jobs.nyc-oti.product-management-search.2026-08-20",
       "fragment": null,
-      "line": 39,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/evaluations/oti-product-management-ranking-2026-08-20.md",
-      "from": "evaluation.jobs.nyc-oti.product-management-ranking.2026-08-20",
-      "toPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
-      "to": "opportunity.nyc-oti.senior-product-manager.782366",
-      "fragment": null,
-      "line": 40,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/evaluations/oti-product-management-ranking-2026-08-20.md",
-      "from": "evaluation.jobs.nyc-oti.product-management-ranking.2026-08-20",
-      "toPath": "docs/knowledge-bank/opportunities/oti-operations-manager-speed-789810.md",
-      "to": "opportunity.nyc-oti.operations-manager-speed.789810",
-      "fragment": null,
-      "line": 41,
+      "line": 55,
       "kind": "link"
     },
     {
@@ -19340,7 +19322,25 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
       "to": "opportunity.nyc-oti.product-manager.784450",
       "fragment": null,
-      "line": 42,
+      "line": 56,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/evaluations/oti-product-management-ranking-2026-08-20.md",
+      "from": "evaluation.jobs.nyc-oti.product-management-ranking.2026-08-20",
+      "toPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
+      "to": "opportunity.nyc-oti.senior-product-manager.782366",
+      "fragment": null,
+      "line": 57,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/evaluations/oti-product-management-ranking-2026-08-20.md",
+      "from": "evaluation.jobs.nyc-oti.product-management-ranking.2026-08-20",
+      "toPath": "docs/knowledge-bank/opportunities/oti-operations-manager-speed-789810.md",
+      "to": "opportunity.nyc-oti.operations-manager-speed.789810",
+      "fragment": null,
+      "line": 58,
       "kind": "link"
     },
     {
@@ -19349,7 +19349,7 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-speed-789610.md",
       "to": "opportunity.nyc-oti.senior-product-manager-speed.789610",
       "fragment": null,
-      "line": 43,
+      "line": 59,
       "kind": "link"
     },
     {
@@ -19778,8 +19778,8 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
-      "to": "opportunity.nyc-oti.senior-product-manager.782366",
+      "toPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+      "to": "opportunity.nyc-oti.product-manager.784450",
       "fragment": null,
       "line": 11,
       "kind": "link"
@@ -19787,8 +19787,8 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/oti-operations-manager-speed-789810.md",
-      "to": "opportunity.nyc-oti.operations-manager-speed.789810",
+      "toPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
+      "to": "opportunity.nyc-oti.senior-product-manager.782366",
       "fragment": null,
       "line": 12,
       "kind": "link"
@@ -19796,8 +19796,8 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
-      "to": "opportunity.nyc-oti.product-manager.784450",
+      "toPath": "docs/knowledge-bank/opportunities/oti-operations-manager-speed-789810.md",
+      "to": "opportunity.nyc-oti.operations-manager-speed.789810",
       "fragment": null,
       "line": 13,
       "kind": "link"

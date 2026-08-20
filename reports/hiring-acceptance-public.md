@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `1e4cc9db7504cc2674ec1524ba75a850a45c2a78`
+**Candidate commit:** `989beaea5a3c4b1f095763f5b982f1bc52e4aee1`
 **Portfolio snapshot:** `68eeb9fe8e11cf82aab6430d8813c323519e1e7ba0c02ef20ddd7e81a8c12160`
 **Role-context hash:** `de3167562812363934fbaf1fa844f9abab5fec9abc0a6039d7a7ffd670c26b1d`
 **Reader-context hash:** `14aa3829d14fbf5183da78bf40051cf6c7db6f3ac223dc3f69fc7ccdce505ee1`
@@ -24,11 +24,11 @@
 
 ### ACLU - Senior Project Manager, National Campaigns
 
-- Deterministic disposition: `deterministic-ready-for-human-review`
+- Deterministic disposition: `evidence-gap-review`
 - Critical signals observed: 3/3
 - All signals observed: 4/5
 - Opportunity status live: yes
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
 - `requirement.aclu-national-campaigns.complex-project-delivery`: **observed** on `/work/technical-operations`
@@ -39,11 +39,11 @@
 
 ### CodePath - Senior AI Operations Lead
 
-- Deterministic disposition: `deterministic-ready-for-human-review`
+- Deterministic disposition: `evidence-gap-review`
 - Critical signals observed: 3/4
 - All signals observed: 4/5
 - Opportunity status live: yes
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
 - `requirement.codepath-ai-ops.workflow-audit`: **observed** on `/work/technical-operations`
@@ -58,7 +58,7 @@
 - Critical signals observed: 2/4
 - All signals observed: 3/5
 - Opportunity status live: yes
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
 - `requirement.codepath-engineering-pm.delivery`: **observed** on `/work/technical-operations`
@@ -188,7 +188,7 @@
 - Critical signals observed: 1/3
 - All signals observed: 2/4
 - Opportunity status live: yes
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
 - `requirement.asana.implementation-ownership`: **not observed** on `/work/technical-operations`
@@ -202,7 +202,7 @@
 - Critical signals observed: 2/3
 - All signals observed: 3/4
 - Opportunity status live: yes
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
 - `requirement.permitflow.physical-public-systems`: **observed** on `/work/kc-town-hall`, `/work/callnyc`

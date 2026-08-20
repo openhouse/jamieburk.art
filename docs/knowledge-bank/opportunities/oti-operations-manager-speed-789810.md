@@ -15,10 +15,10 @@ opportunity_status: live
 application_status: not-recorded
 posted_until: 2026-10-04
 verified_at: 2026-08-20
-fit_rank: 2
+fit_rank: 3
 fit_score: 92
-securability_score: 67
-combined_score: 82.0
+securability_score: 60
+combined_score: 79.2
 reporting_context:
   direct_manager_title: OTI Product Management or SPEED program leadership; exact reporting line not stated
   direct_manager_person: null
@@ -98,7 +98,7 @@ human_review: governed-open
 
 # NYC OTI - Operations Manager, SPEED 789810
 
-This is Jamie's second-ranked role in the supplied search corpus. It makes
+This is Jamie's third-ranked role in the supplied search corpus. It makes
 bottom-line work legible: operating cadence, budgets and vendors, onboarding,
 team health, documentation, legal and sourcing coordination, clear status, and
 the connective work that lets product teams deliver.

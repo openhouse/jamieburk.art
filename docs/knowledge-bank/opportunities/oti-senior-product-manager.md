@@ -15,10 +15,10 @@ opportunity_status: live
 application_status: not-recorded
 posted_until: 2026-10-16
 verified_at: 2026-08-20
-fit_rank: 1
+fit_rank: 2
 fit_score: 94
-securability_score: 72
-combined_score: 85.2
+securability_score: 61
+combined_score: 80.8
 reporting_context:
   direct_manager_title: PIT Crew product or program leader, title not stated in the posting
   direct_manager_person: null

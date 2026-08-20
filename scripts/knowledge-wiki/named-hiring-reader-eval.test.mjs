@@ -16,8 +16,8 @@ test("latest named hiring-reader run is structurally valid and preserves the str
   const run = loadNamedHiringRun();
   const validation = validateNamedHiringRun({ suite, run });
   assert.deepEqual(validation.issues, []);
-  assert.equal(validation.summary.evaluationCount, 7);
-  assert.equal(validation.summary.liveEvaluationCount, 6);
+  assert.equal(validation.summary.evaluationCount, 8);
+  assert.equal(validation.summary.liveEvaluationCount, 8);
   assert.equal(validation.summary.suiteVerdict, run.failCount === 0 ? "pass" : "fail");
 });
 
@@ -27,7 +27,7 @@ test("missing reader decisions fail closed", () => {
   run.results.pop();
   const validation = validateNamedHiringRun({ suite, run });
   assert.ok(validation.issues.some((issue) => issue.includes("exactly one result")));
-  assert.ok(validation.issues.some((issue) => issue.includes("missing an opportunity-reader gate")));
+  assert.ok(validation.issues.some((issue) => issue.includes("missing a selected opportunity-reader gate")));
 });
 
 test("a verdict cannot contradict the acceptance statement", () => {

@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Layout C homepage East River occurrence
 
-**Source commit:** `1e4cc9db7504cc2674ec1524ba75a850a45c2a78`
-**Generation time:** 2026-08-15T19:44:01-04:00
-**Source fingerprint:** `c05169aae532c2a0a6940e411678892bfcab957e2d291568f34861a582fa448a`
+**Source commit:** `989beaea5a3c4b1f095763f5b982f1bc52e4aee1`
+**Generation time:** 2026-08-20T12:22:26-04:00
+**Source fingerprint:** `acd713c8200da8f8bf21347678be407c44eb991e0df20b58901d6ee50098faf2`
 
 - [East River beneath the Manhattan Bridge, 2022](../../assets/photographs/east-river-manhattan-bridge-2022.md) - `projected_to` (frontmatter)
 - [Add Elana Gordon's credit to the East River homepage occurrence](../../corrections/east-river-credit-2026-07.md) - `related_to` (frontmatter)

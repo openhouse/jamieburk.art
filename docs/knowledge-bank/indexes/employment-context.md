@@ -72,9 +72,9 @@ paths, message bodies, contact details, and real hiring outcomes remain private.
 
 ## Current priority contexts
 
+- [NYC OTI - Product Manager 784450](../opportunities/oti-product-manager-784450.md)
 - [NYC OTI - PIT Crew Senior Product Manager 782366](../opportunities/oti-senior-product-manager.md)
 - [NYC OTI - SPEED Operations Manager 789810](../opportunities/oti-operations-manager-speed-789810.md)
-- [NYC OTI - Product Manager 784450](../opportunities/oti-product-manager-784450.md)
 - [NYC OTI - SPEED Senior Product Manager 789610](../opportunities/oti-senior-product-manager-speed-789610.md)
 
 These four postings are the top 38% nearest-integer selection from the eleven

@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "suiteId": "named-public-hiring-readers-2026-08-13",
+  "runId": "oti-dynamic-selection-989beaea",
+  "evaluatedGitRev": "989beaea5a3c4b1f095763f5b982f1bc52e4aee1",
+  "evaluatedUrl": "https://staging-a.jamieburk.art",
+  "portfolioSnapshotHash": "68eeb9fe8e11cf82aab6430d8813c323519e1e7ba0c02ef20ddd7e81a8c12160",
+  "runDate": "2026-08-20",
+  "method": "Four fresh sequential sandboxed public-web-only tasks, one separate task per selected reader identity: Lisa Gelobter, role-based OTI Product Management leadership, Julia Kerson, and Leila Bozorg. The deterministic resume selector reduced sixteen possible opportunity-reader calls to eight current gates, grouped into four isolated tasks. Judges received the staging site, its public resume PDF, official role pages, and public leadership context only; they received no repository, Wiki, private evidence, authenticated account, or prior judge output.",
+  "uniqueReaderCount": 4,
+  "evaluationCount": 8,
+  "passCount": 2,
+  "failCount": 6,
+  "suiteVerdict": "fail",
+  "allMustPass": true,
+  "results": [
+    {
+      "gateId": "gate.oti-senior-product.lisa-gelobter",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.94,
+      "primaryBlocker": "The public evidence does not resolve the Senior IT Architect minimum qualification underlying this role: it does not document the required six or ten years of satisfactory full-time enterprise architecture, solutions architecture, network architecture, or IT-infrastructure experience, or an accepted equivalent.",
+      "gapClass": "unresolved-minimum-qualification",
+      "constructiveCritique": "The portfolio demonstrates unusually relevant civic-product practice: public launches, stakeholder translation, legacy constraints, privacy boundaries, documentation, and hands-on implementation. The strict gate cannot substitute broad product and web-systems experience for the formal architecture requirement.",
+      "strongestEvidence": "WOWList provides the strongest senior-product signal: a five-year co-founder and product role spanning participatory discovery, implementation, organizer support, adoption, communications, instrumentation, and production operations. CallNYC adds a bounded concept-to-public-release civic product.",
+      "nextBestImprovement": "Publish a truthful qualification crosswalk mapping dated, full-time architecture or IT-infrastructure responsibilities to every required year and qualification clause; if that experience cannot be documented, pursue the role through an eligible civil-service title rather than implying equivalency."
+    },
+    {
+      "gateId": "gate.oti-senior-product.product-leadership",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.9,
+      "primaryBlocker": "The public resume does not clearly establish the civil-service minimum of ten years of satisfactory full-time enterprise architecture, solutions architecture, network architecture, or IT-infrastructure experience.",
+      "gapClass": "unresolved-eligibility",
+      "constructiveCritique": "The portfolio shows strong resident-facing product delivery, discovery, technical implementation, stakeholder translation, and responsible public launches, but the required Senior IT Architect eligibility cannot be inferred from adjacent web-systems experience.",
+      "strongestEvidence": "WOWList and CallNYC demonstrate shipped public products from problem framing through implementation and launch; FairRentNYC demonstrates complex stakeholder, policy, and documentation leadership.",
+      "nextBestImprovement": "Add a truthful qualification crosswalk documenting dates, full-time status, and specific solutions-architecture or infrastructure responsibilities that satisfy each civil-service pathway."
+    },
+    {
+      "gateId": "gate.oti-speed-operations.product-leadership",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.97,
+      "primaryBlocker": "No material public evidence establishes hands-on ownership of organizational budgets, expense and capital planning, procurement for tools or personnel, or contract negotiation, which are central responsibilities of the role.",
+      "gapClass": "role-critical-experience-gap",
+      "constructiveCritique": "The technical-operations page strongly supports dependency coordination, onboarding, status reporting, risk tracking, documentation, and cross-functional delivery, but those strengths do not substitute for budget, procurement, contracting, and administrative operations experience.",
+      "strongestEvidence": "Technical Operations presents delivery rhythms, dependency coordination, onboarding, operating documentation, and project-health reporting; KC Town Hall adds municipal compliance and funding-process exposure without claiming budget or procurement authority.",
+      "nextBestImprovement": "Publish one truthful case study showing personally owned budget tracking, procurement or contracting work, exact scope and approvals, and measurable operational results, or state clearly that this experience is absent."
+    },
+    {
+      "gateId": "gate.oti-speed-operations.julia-kerson",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.95,
+      "primaryBlocker": "No material evidence of hands-on budget and procurement ownership, including expense or capital budget management, procurements for tools or personnel, and contract or legal-document negotiation, which are central duties of this Operations Manager role.",
+      "gapClass": "role-critical-experience-gap",
+      "constructiveCritique": "The portfolio establishes strong operational documentation, cross-stakeholder coordination, onboarding systems, public-sector communication, and long-horizon civic implementation. KC Town Hall shows funding-proposal and municipal-compliance exposure, but its stated boundaries do not establish executed contracting, fund administration, procurement ownership, or budget management.",
+      "strongestEvidence": "Fourteen-plus years of operating work; thirty-plus pages of shared campaign memory and decision infrastructure; delivery across technical and civic projects; and documented coordination of a successful 490,539 dollar municipal funding request followed by compliance work and responsible transition.",
+      "nextBestImprovement": "Add one truthful, specific case study documenting personal ownership of a real budget or procurement lifecycle: amount and scope, expense or capital context, sourcing and legal dependencies, contract-review role, controls, decisions, and measurable result."
+    },
+    {
+      "gateId": "gate.oti-product-manager.product-leadership",
+      "verdict": "pass",
+      "acceptanceStatement": "I would hire this person for this job",
+      "confidence": 0.86,
+      "primaryBlocker": "",
+      "gapClass": "none",
+      "constructiveCritique": "The public evidence supports the required product lifecycle, technical fluency, prioritization, cross-functional leadership, public-interest orientation, and launch experience. Quantitative post-launch KPI ownership is less concrete than the delivery evidence, but not enough to defeat this gate.",
+      "strongestEvidence": "The resume documents fourteen-plus years of product and technical delivery; WOWList shows participatory discovery, implementation, adoption, instrumentation, and operations; CallNYC shows an independently launched civic-data product.",
+      "nextBestImprovement": "Add one compact product case study connecting a defined user problem to roadmap choices, analytics or research inputs, launch metrics, and a documented post-launch decision."
+    },
+    {
+      "gateId": "gate.oti-product-manager.lisa-gelobter",
+      "verdict": "pass",
+      "acceptanceStatement": "I would hire this person for this job",
+      "confidence": 0.84,
+      "primaryBlocker": "",
+      "gapClass": "non-blocking-measurement-specificity",
+      "constructiveCritique": "The public record clears this gate: the resume presents more than ten years of product and technical-project work, and the case studies make conception-to-launch delivery, technical fluency, cross-functional coordination, government-facing work, and public-service motivation legible. The remaining weakness is specificity: research samples, prioritization decisions, baseline KPIs, instrumentation, and post-launch changes are usually summarized rather than shown.",
+      "strongestEvidence": "Thick Arts documents long-running digital-product delivery; WOWList shows discovery-through-operations product ownership; CallNYC shows an independently shipped resident-facing civic tool; and FairRentNYC shows coalition, policy, and senior-stakeholder coordination.",
+      "nextBestImprovement": "Add one concise end-to-end case record showing the research method, decisive prioritization tradeoff, launch KPI and instrumentation, measured post-launch result, subsequent product change, and Jamie's bounded individual responsibility."
+    },
+    {
+      "gateId": "gate.oti-speed-product.product-leadership",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.95,
+      "primaryBlocker": "The public materials do not establish the role-critical two-plus years building enterprise software with data governance, data quality, ingestion, processing, and sharing; Senior IT Architect civil-service eligibility also remains insufficiently explicit.",
+      "gapClass": "role-critical-experience-and-unresolved-eligibility",
+      "constructiveCritique": "The portfolio demonstrates databases, open-data translation, technically fluent product delivery, and complex stakeholder work, but it does not support upgrading those facts into enterprise-software or formal data-governance experience.",
+      "strongestEvidence": "CallNYC demonstrates bounded open-data ingestion and resident-facing translation, while WOWList demonstrates a PostgreSQL or PostGIS-backed platform and end-to-end product operations; neither page establishes enterprise scale, governance authority, or the required duration.",
+      "nextBestImprovement": "Publish a truthful two-year enterprise-data case study specifying governance responsibilities, data-quality controls, ingestion and sharing architecture, scale, collaborators, outcomes, and exact limits of authority."
+    },
+    {
+      "gateId": "gate.oti-speed-product.leila-bozorg",
+      "verdict": "fail",
+      "acceptanceStatement": "I would not yet hire this person for this job",
+      "confidence": 0.99,
+      "primaryBlocker": "The public record does not establish the required senior product-management experience, qualifying IT or infrastructure eligibility, or direct SPEED housing and planning product ownership.",
+      "gapClass": "missing-material-evidence-unresolved-eligibility-role-critical-experience-gap",
+      "constructiveCritique": "The cited portfolio work provides relevant civic-tech, technical-operations, housing-related, and public-facing signals, but the reader did not find enough direct evidence to clear the strict seniority, enterprise-data, and eligibility screens.",
+      "strongestEvidence": "The public KC Town Hall, FairRentNYC, WOWList, and technical-operations work supplies adjacent built-environment, civic, data, and product signals without claiming SPEED or housing-policy authority.",
+      "nextBestImprovement": "Provide truthful, sourceable evidence mapping specific product ownership, launch outcomes, team scope, measurement, and qualifying education or experience to the OTI posting, without claiming SPEED authority or inventing housing-policy, procurement, enterprise-governance, or public-authority experience."
+    }
+  ],
+  "disclaimer": "Synthetic public-context evaluations only; not the named people's participation, opinions, endorsements, reporting relationships, or actual hiring decisions."
+}

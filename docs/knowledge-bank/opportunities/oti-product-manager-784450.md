@@ -15,10 +15,10 @@ opportunity_status: live
 application_status: not-recorded
 posted_until: 2026-09-04
 verified_at: 2026-08-20
-fit_rank: 3
-fit_score: 87
-securability_score: 63
-combined_score: 77.4
+fit_rank: 1
+fit_score: 89
+securability_score: 74
+combined_score: 83.0
 reporting_context:
   direct_manager_title: OTI Product Development leadership; exact reporting line not stated
   direct_manager_person: null
@@ -99,7 +99,7 @@ human_review: governed-open
 
 # NYC OTI - Product Manager 784450
 
-This is Jamie's third-ranked role in the supplied search corpus. It is a strong
+This is Jamie's first-ranked role in the supplied search corpus. It is a strong
 match for the actual functions Jamie has repeatedly performed: participatory
 discovery, product definition, requirements, cross-functional delivery,
 launch, adoption, measurement, and maintenance in public-facing systems.
@@ -108,3 +108,7 @@ The application should translate that work into product language without
 rewriting founder and project titles. The IT Project Specialist minimum,
 one-vacancy competition, and preference for 10+ years in a product role remain
 real employer screens.
+
+Two isolated synthetic public-reader lenses passed the strict staging gate for
+this role. That is a useful application-priority signal, not an employer
+endorsement, interview prediction, or hiring outcome.
