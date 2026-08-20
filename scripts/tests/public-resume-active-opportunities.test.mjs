@@ -34,7 +34,7 @@ function writeJson(root, relativePath, value) {
   writeFileSync(path.join(root, relativePath), `${JSON.stringify(value, null, 2)}\n`, "utf8");
 }
 
-test("changed public resume invalidates prior reader judgments before fresh commissioning", () => {
+test("current exact-resume reader run fails closed after the first rejection", () => {
   const result = evaluatePublicResume(repoRoot, { now: "2026-08-20" });
   assert.equal(result.pass, false);
   assert.deepEqual(result.metrics, {
@@ -42,12 +42,12 @@ test("changed public resume invalidates prior reader judgments before fresh comm
     coveredOpportunities: 7,
     namedReaders: 9,
     passingReaders: 0,
-    readerAssessmentsEvaluated: 0
+    readerAssessmentsEvaluated: 1
   });
   assert.equal(result.selectionTier, "open-truthfully-hirable");
   assert.deepEqual(result.phases, { deterministic: "pass", hiringReaders: "fail" });
   assert.match(result.failures.join("\n"), /reader coverage/i);
-  assert.doesNotMatch(result.failures.join("\n"), /reader acceptance/i);
+  assert.match(result.failures.join("\n"), /reader acceptance: Lisa Gelobter/i);
 });
 
 test("private active-application input takes precedence over posting state", () => {
