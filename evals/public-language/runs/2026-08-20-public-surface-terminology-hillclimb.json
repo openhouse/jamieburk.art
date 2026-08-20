@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "evalId": "public-surface-terminology-hillclimb-2026-08-20",
+  "evaluatedAt": "2026-08-20T14:01:25-04:00",
+  "targetCriterion": "visitor-facing-language-clarity",
+  "baseline": {
+    "prohibitedOccurrences": 30,
+    "affectedFiles": 21,
+    "sharedWeakness": "One internal systems term was doing too many kinds of public work: describing scope, evidence, permissions, interactions, pathways, and working methods."
+  },
+  "change": {
+    "description": "Replaced each public occurrence with context-specific language while preserving claim scope, consent, collective credit, and internal typed workflow states.",
+    "replacementFamilies": [
+      "well-scoped requirements",
+      "focused work, pathways, and methods",
+      "a dated observed minimum",
+      "carefully evidenced or documented interaction",
+      "a specific approved portfolio use"
+    ],
+    "claimScopeChanged": false,
+    "newEvidenceIntroduced": false,
+    "internalStateRenamed": false
+  },
+  "result": {
+    "scannedFiles": 69,
+    "renderedPages": 15,
+    "prohibitedOccurrences": 0,
+    "deterministicTestsPassing": 4,
+    "selectedCoverLetterModelCalls": 2,
+    "selectedCoverLetterReaderPasses": 2,
+    "unselectedCoverLetterReaderCallsSkipped": 14
+  },
+  "decision": "keep-change",
+  "stopReason": "The target reached zero prohibited public occurrences without changing claims, evidence, permissions, or technical state semantics."
+}

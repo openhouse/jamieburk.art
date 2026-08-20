@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "public-surface-terminology",
+  "currentRunPath": "evals/public-language/runs/2026-08-20-public-surface-terminology-hillclimb.json",
+  "purpose": "Keep visitor-facing portfolio prose and hiring artifacts clear, specific, and free of internal systems vocabulary.",
+  "forbiddenStandaloneTerms": [
+    "bound",
+    "bounded"
+  ],
+  "replacementPrinciple": "Choose the phrase that names the actual idea: well-scoped requirements, focused work, an observed minimum, a specific approved use, or carefully evidenced interaction.",
+  "surfaces": [
+    {
+      "root": "apps/www/src/app",
+      "extensions": [".ts", ".tsx"]
+    },
+    {
+      "root": "apps/www/src/components",
+      "extensions": [".ts", ".tsx"]
+    },
+    {
+      "root": "apps/www/src/content",
+      "extensions": [".md", ".mdx"]
+    },
+    {
+      "root": "apps/www/src/data/work.ts",
+      "extensions": [".ts"]
+    },
+    {
+      "root": "apps/www/src/data/proofs.ts",
+      "extensions": [".ts"]
+    },
+    {
+      "root": "apps/www/src/data/photography.ts",
+      "extensions": [".ts"]
+    },
+    {
+      "root": "resumes",
+      "extensions": [".md"],
+      "fileNamePattern": "^Jamie-Burkart-(?:Resume|Cover-Letter)-.*\\.md$"
+    }
+  ],
+  "lineExemptions": [
+    {
+      "path": "apps/www/src/data/photography.ts",
+      "pattern": "knowledgeStatus\\s*:\\s*\"bound\"",
+      "rationale": "Internal typed workflow state; it is not rendered as visitor-facing copy."
+    }
+  ]
+}

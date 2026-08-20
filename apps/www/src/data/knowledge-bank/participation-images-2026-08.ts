@@ -224,7 +224,7 @@ export const participationImagesAugust2026 = {
       preservationStatus: "private",
       capturedAt: reviewedAt,
       publicCitation:
-        "Jamie Burkart first-person account and bounded portfolio publication authorization, August 13, 2026.",
+        "Jamie Burkart first-person account and portfolio-use authorization, August 13, 2026.",
       publicNote:
         "The capsule records Jamie's recollection and authorization boundaries without correspondence, Apple Photos identifiers, People tags, or location coordinates.",
       supportsGenerally: [

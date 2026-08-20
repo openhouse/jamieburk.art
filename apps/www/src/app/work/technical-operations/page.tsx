@@ -22,7 +22,7 @@ const decisionEvidence = [
     href: "/work/harry-j-epstein",
     question: "How does recurring customer and team friction become a maintainable release?",
     decision:
-      "Jamie translated the question into a bounded requirement, coordinated an incremental change, inspected the public customer path and available signals, then preserved ownership and next actions.",
+      "Jamie translated the question into a well-scoped requirement, coordinated an incremental change, inspected the public customer path and available signals, then preserved ownership and next actions.",
     artifact: "Maintenance-to-handoff workflow specimen",
     result:
       "Repeatable patterns across product information, marketing, e-commerce operations, and customer follow-up."

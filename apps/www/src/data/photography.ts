@@ -77,7 +77,7 @@ export const portfolioPhotos = {
       indexing: "open"
     },
     publicUseBoundary:
-      "Elana Gordon is credited as photographer. Use is bounded to this approved portfolio occurrence; no broader rights are asserted."
+      "Elana Gordon is credited as photographer. Use is limited to this approved portfolio occurrence; no broader rights are asserted."
   },
   eastRiverSocialPreview: {
     id: "east-river-social-preview",
@@ -117,7 +117,7 @@ export const portfolioPhotos = {
       }
     },
     publicUseBoundary:
-      "Elana Gordon remains identified as photographer in the manifest and social-image alt metadata; her portfolio permission makes in-image credit optional. This exact full-bleed 1200 by 630 composition is bounded to the jamieburk.art social-preview occurrence; platform caching does not confer standalone reuse rights."
+      "Elana Gordon remains identified as photographer in the manifest and social-image alt metadata; her portfolio permission makes in-image credit optional. This exact full-bleed 1200 by 630 composition is approved only for the jamieburk.art social-preview occurrence; platform caching does not confer standalone reuse rights."
   },
   nycacShoestringFacilitation: {
     id: "nycac-shoestring-facilitation",
@@ -216,7 +216,7 @@ export const portfolioPhotos = {
       indexing: "open"
     },
     publicUseBoundary:
-      "This exact occurrence completed human rights and represented-person review for bounded portfolio display. The retained export does not identify the photographer; participant identities, remarks, attendance, and private gathering records remain outside the public bundle."
+      "This exact occurrence completed human rights and represented-person review for this portfolio display. The retained export does not identify the photographer; participant identities, remarks, attendance, and private gathering records remain outside the public bundle."
   },
   kcTownHallRoofWork: {
     id: "kc-town-hall-roof-work",

@@ -70,7 +70,7 @@
     ]
   },
   "modelGate": {
-    "currentRunPath": "evals/cover-letters/runs/2026-08-20-cover-letter-hiring-reader-post-hillclimb.json",
+    "currentRunPath": "evals/cover-letters/runs/2026-08-20-cover-letter-hiring-reader-public-language.json",
     "maximumCallsPerRun": 8,
     "promptVersion": "hiring-reader-cover-letter-v1",
     "model": "gpt-5.6-sol",

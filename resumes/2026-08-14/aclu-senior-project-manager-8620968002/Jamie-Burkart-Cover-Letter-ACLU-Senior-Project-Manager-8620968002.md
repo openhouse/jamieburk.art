@@ -15,7 +15,7 @@ I am drawn to the Senior Project Manager role in Learning and Project Solutions 
 
 My work with KC Town Hall adds a different scale of implementation. I co-led planning, vendor coordination, municipal compliance, and public-benefit documentation for the adaptive reuse of an approximately 6,500-square-foot historic building. I co-developed a successful $490,539 public funding request and served as the City’s named developer and presenter, while decisions and outcomes remained collective and formally governed. That experience taught me that a plan is not complete when it is persuasive. It must also assign authority honestly, connect field dependencies, protect the record, and make correction possible.
 
-The ACLU’s mission makes those distinctions especially material. I would bring warm, source-bounded communication; confidentiality and accessibility awareness; and a commitment to project standards that support judgment rather than replace it. I would welcome the opportunity to discuss an implementation in which the values of the institution changed the plan—and how I would help Business Operations and Support Services make that learning durable.
+The ACLU’s mission makes those distinctions especially material. I would bring warm, source-grounded communication; confidentiality and accessibility awareness; and a commitment to project standards that support judgment rather than replace it. I would welcome the opportunity to discuss an implementation in which the values of the institution changed the plan—and how I would help Business Operations and Support Services make that learning durable.
 
 Warmly,
 

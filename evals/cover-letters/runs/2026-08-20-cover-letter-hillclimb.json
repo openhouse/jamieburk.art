@@ -45,6 +45,18 @@
     "passingApplicationVerdicts": 2,
     "passingVoiceVerdicts": 2
   },
+  "publicLanguageFollowup": {
+    "reason": "Replaced the internal-sounding public adjective with a more direct description of deliberate version-one scope.",
+    "previousCoverLetterSha256": "9c2532201a7fb286d34566ff24d14ed890b9f00ca5c7912ef6bedcdd5bcbe8e9",
+    "currentCoverLetterSha256": "774552d20cfdbf5703ae45ecc53269d365247270048517ca35d482b1326ebaf9",
+    "runPath": "evals/cover-letters/runs/2026-08-20-cover-letter-hiring-reader-public-language.json",
+    "proseChanged": true,
+    "claimScopeChanged": false,
+    "newEvidenceIntroduced": false,
+    "reevaluatedAt": "2026-08-20T14:01:25-04:00",
+    "passingApplicationVerdicts": 2,
+    "passingVoiceVerdicts": 2
+  },
   "decision": "keep-change",
   "stopReason": "The remaining critiques ask for new evidence about measured outcomes, resident research, institutional team scale, decision authority, and civil-service eligibility. Those are interview and research gaps; adding unsupported prose would weaken the application."
 }

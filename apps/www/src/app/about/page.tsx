@@ -143,7 +143,7 @@ export default function AboutPage() {
                   <strong className="text-jb-ink">
                     Learning and continuity:
                   </strong>{" "}
-                  recurring operational questions and bounded analytics guided
+                  recurring operational questions and carefully scoped analytics guided
                   incremental releases, reusable content patterns, and clearer
                   workflows for the team.
                 </p>
