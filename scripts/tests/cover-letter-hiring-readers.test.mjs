@@ -15,6 +15,7 @@ function fixture() {
   for (const relativePath of [
     "evals/cover-letter-hiring-readers",
     "evals/cover-letters",
+    "evals/hiring-readers",
     "evals/resume-hiring-readers",
     "docs/knowledge-bank/opportunities",
     "resume-versions"
@@ -39,6 +40,22 @@ test("deterministic gates pass before any named-reader work", () => {
   assert.equal(result.pass, true, JSON.stringify(result.failures, null, 2));
   assert.deepEqual(result.phases, { deterministic: "pass", hiringReaders: "not-run" });
   assert.deepEqual(result.metrics, { opportunities: 4, namedReaders: 7, passingReaders: 0, readerAssessmentsEvaluated: 0 });
+});
+
+test("reader assignment remains available when an exact resume assessment is invalidated", () => {
+  const root = fixture();
+  try {
+    const relativePath = "evals/resume-hiring-readers/current.json";
+    const manifest = readJson(root, relativePath);
+    manifest.opportunities[0].readerAssessments = [];
+    writeJson(root, relativePath, manifest);
+
+    const result = evaluateCoverLetters(root, { now: "2026-08-20", deterministicOnly: true });
+    assert.equal(result.pass, true, JSON.stringify(result.failures, null, 2));
+    assert.deepEqual(result.phases, { deterministic: "pass", hiringReaders: "not-run" });
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
 });
 
 test("every current named reader accepts the exact cover letter and resume", () => {

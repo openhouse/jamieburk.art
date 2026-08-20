@@ -6,9 +6,9 @@ application_status: ready-for-jamie-review
 blocker: none
 canonical_application_url: https://jobs.smartrecruiters.com/oneclick-ui/company/CityOfNewYork/publication/ef8281d2-5b5d-490d-bcb2-0b5f5bd1f7e6?dcr_ci=CityOfNewYork&sid=998bc6c9-cfbe-4db9-af4b-d7bb8407f264
 resume_markdown: Jamie-Burkart-Resume.md
-resume_markdown_sha256: cee950eb8e146578033a9b6c48948ab5e72f182b716e11aa7bdb60dd479be27c
+resume_markdown_sha256: 4c1369d4ae5da088dd34c56f84f95dcd5529cc6dba0616aa844eac8156b7e5d6
 resume_pdf: Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf
-resume_pdf_sha256: 8b527a90cfe7709c74385c36c5b1be3c46f94b63c5b4cd2bcc83e1c0848f64e0
+resume_pdf_sha256: 9e9e88d7aa6b0338debd84d93d6c42438422d7d3c1d5ca61656c014ee2ff963f
 cover_letter: Cover-Letter.md
 cover_letter_sha256: 606eaf4b628d07ed68dc20fac90bd5db3d84456d6d042f158f4b88639d85068e
 ---

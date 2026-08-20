@@ -64,13 +64,15 @@ export function evaluateCoverLetters(root = defaultRoot, {
   const fail = (criterion, message) => failures.push(`${criterion}: ${message}`);
   const manifestPath = path.join(root, "evals/cover-letter-hiring-readers/current.json");
   const resumeManifestPath = path.join(root, "evals/resume-hiring-readers/current.json");
+  const hiringReaderRegistryPath = path.join(root, "evals/hiring-readers/current.json");
 
-  if (!existsSync(manifestPath) || !existsSync(resumeManifestPath)) {
-    return { pass: false, failures: ["contract: cover-letter or resume reader manifest is missing"] };
+  if (!existsSync(manifestPath) || !existsSync(resumeManifestPath) || !existsSync(hiringReaderRegistryPath)) {
+    return { pass: false, failures: ["contract: cover-letter manifest, resume manifest, or governed reader registry is missing"] };
   }
 
   const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
   const resumeManifest = JSON.parse(readFileSync(resumeManifestPath, "utf8"));
+  const hiringReaderRegistry = JSON.parse(readFileSync(hiringReaderRegistryPath, "utf8"));
   if (manifest.schemaVersion !== 1 || manifest.sourceResumeManifest !== "evals/resume-hiring-readers/current.json" ||
       manifest.acceptanceQuestion !== acceptanceQuestion || manifest.passPolicy !== "unanimous-named-readers-per-opportunity") {
     fail("contract", "schema, source manifest, acceptance question, or unanimous policy changed");
@@ -162,10 +164,13 @@ export function evaluateCoverLetters(root = defaultRoot, {
       fail("public safety", `${label}: protected local or Google Workspace locator entered the cover letter`);
     }
 
-    const resumeReaders = (resumeEntry.readerAssessments ?? []).map(({ personId, relationship }) => `${personId}|${relationship}`).sort();
+    const governedReaders = (hiringReaderRegistry.evaluations ?? [])
+      .filter(({ opportunityId }) => opportunityId === entry.opportunityId)
+      .map(({ reader }) => `${reader?.personId}|${reader?.relationship}`)
+      .sort();
     const letterReaders = (entry.namedReaders ?? []).map(({ personId, relationship }) => `${personId}|${relationship}`).sort();
-    if (JSON.stringify(resumeReaders) !== JSON.stringify(letterReaders)) {
-      fail("reader coverage", `${label}: cover-letter readers do not match the governed resume readers`);
+    if (governedReaders.length === 0 || JSON.stringify(governedReaders) !== JSON.stringify(letterReaders)) {
+      fail("reader coverage", `${label}: cover-letter readers do not match the governed reader registry`);
     }
     for (const reader of entry.namedReaders ?? []) expectedReaders.push(`${entry.opportunityId}|${reader.personId}|${reader.relationship}`);
   }

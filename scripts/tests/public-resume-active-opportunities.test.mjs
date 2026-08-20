@@ -34,7 +34,7 @@ function writeJson(root, relativePath, value) {
   writeFileSync(path.join(root, relativePath), `${JSON.stringify(value, null, 2)}\n`, "utf8");
 }
 
-test("current exact-resume reader run fails closed after the first rejection", () => {
+test("changed public resume invalidates prior reader judgments before fresh commissioning", () => {
   const result = evaluatePublicResume(repoRoot, { now: "2026-08-20" });
   assert.equal(result.pass, false);
   assert.deepEqual(result.metrics, {
@@ -42,12 +42,12 @@ test("current exact-resume reader run fails closed after the first rejection", (
     coveredOpportunities: 7,
     namedReaders: 9,
     passingReaders: 0,
-    readerAssessmentsEvaluated: 1
+    readerAssessmentsEvaluated: 0
   });
   assert.equal(result.selectionTier, "open-truthfully-hirable");
   assert.deepEqual(result.phases, { deterministic: "pass", hiringReaders: "fail" });
   assert.match(result.failures.join("\n"), /reader coverage/i);
-  assert.match(result.failures.join("\n"), /reader acceptance: Lisa Gelobter/i);
+  assert.doesNotMatch(result.failures.join("\n"), /reader acceptance/i);
 });
 
 test("private active-application input takes precedence over posting state", () => {
@@ -218,12 +218,73 @@ test("deterministic-only mode never evaluates reader judgments", () => {
   assert.equal(result.metrics.readerAssessmentsEvaluated, 0);
 });
 
+test("current hiring surfaces lead with WOW List's 35 city ecosystems without underselling activity counts", () => {
+  const publicHiringSurfaceText = [
+    "resume-versions/2026-08-20/active-opportunity-portfolio/Jamie-Burkart-Resume.md",
+    "resume-versions/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume.md",
+    "apps/www/src/data/work.ts",
+    "opportunity-sources/civic-match/2026-08-20/Civic-Match-Signup-Guide.md"
+  ].map((relativePath) => readFileSync(path.join(repoRoot, relativePath), "utf8")).join("\n");
+
+  assert.match(publicHiringSurfaceText, /roughly \*\*?35 city ecosystems\*\*?|roughly 35 city ecosystems/i);
+  assert.match(publicHiringSurfaceText, /organizers/i);
+  assert.doesNotMatch(publicHiringSurfaceText, /\b1,846\b|\b16,142\b|city-region keys/i);
+  assert.doesNotMatch(
+    publicHiringSurfaceText,
+    /distinguish(?:es|ed|ing)?[^.]{0,160}(?:retention|resident outcomes|causal impact)/i
+  );
+});
+
+test("underselling WOW List activity counts stop before hiring-reader evaluation", () => {
+  const root = fixture();
+  try {
+    const resumePath = path.join(
+      root,
+      "resume-versions/2026-08-20/active-opportunity-portfolio/Jamie-Burkart-Resume.md"
+    );
+    const resume = readFileSync(resumePath, "utf8").replace(
+      "Operated across roughly **35 city ecosystems**, supporting local organizers who used WOW List to run community calendars, websites, and email lists for their own scenes.",
+      "Reached a July 2017 production snapshot of 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts; distinguish these activity counts from retention, resident outcomes, or causal impact."
+    );
+    writeFileSync(resumePath, resume, "utf8");
+    const result = evaluatePublicResume(root, { now: "2026-08-20" });
+    assert.equal(result.pass, false);
+    assert.match(result.failures.join("\n"), /WOW List positioning/i);
+    assert.match(result.failures.join("\n"), /resume compression/i);
+    assert.equal(result.phases.hiringReaders, "not-eligible");
+    assert.equal(result.metrics.readerAssessmentsEvaluated, 0);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
 test("reader judgments are bound to the exact current resume", () => {
   const root = fixture();
   try {
     const manifestPath = "evals/public-resume/current.json";
     const manifest = readJson(root, manifestPath);
-    manifest.readerAssessments[0].resumeSha256 = "0".repeat(64);
+    const expected = manifest.opportunities[0];
+    const reader = expected.namedReaders[0];
+    manifest.readerAssessments = [{
+      opportunityId: expected.opportunityId,
+      personId: reader.personId,
+      relationship: reader.relationship,
+      name: "Fixture Reader",
+      resumeSha256: "0".repeat(64),
+      acceptanceQuestion: "I would hire this person for this job.",
+      decision: "pass",
+      wouldHire: true,
+      simulatedPublicFigureLens: true,
+      nonEndorsementBoundary: "This fictionalized public-context lens is not participation, quotation, endorsement, or a hiring decision by the named person.",
+      access: {
+        scope: "public-resume-and-public-job-context-only",
+        repositoryAccess: false,
+        privateSourceAccess: false
+      },
+      strengths: ["one", "two"],
+      risks: ["one"],
+      interviewEvidenceNeeded: ["one"]
+    }];
     writeJson(root, manifestPath, manifest);
     const result = evaluatePublicResume(root, { now: "2026-08-20" });
     assert.equal(result.pass, false);

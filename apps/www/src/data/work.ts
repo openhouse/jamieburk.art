@@ -525,7 +525,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "A community calendar returning through a public invitation to test",
     summary:
-      "Co-built and operated a community-calendar platform for DIY arts and music organizers. A July 2017 production snapshot records 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts.",
+      "Co-built and operated a community-calendar platform across roughly 35 city ecosystems, supporting local organizers who used shared publishing tools to run calendars, websites, and email lists for their scenes.",
     role: "Co-builder & Product Operator",
     years: "2010s-2026 relaunch",
     status: "Short proof page",
@@ -583,8 +583,8 @@ const workItemsInput = [
       "Django / PostgreSQL / PostGIS and Ember platform",
       "Followable keyword communities",
       "Organizer-facing distribution workflows",
-      "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
-      "35 city-region keys with at least 50 posts in the July 2017 snapshot"
+      "Local organizers used shared publishing tools to run calendars, websites, and email lists",
+      "Roughly 35 city ecosystems operated through the platform"
     ],
     knownOpenProtected: {
       known:

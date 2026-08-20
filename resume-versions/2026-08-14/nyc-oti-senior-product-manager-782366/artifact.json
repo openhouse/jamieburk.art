@@ -3,7 +3,7 @@
   "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
   "generatedOn": "2026-08-14",
   "sourceMarkdown": "Jamie-Burkart-Resume.md",
-  "sourceMarkdownSha256": "cee950eb8e146578033a9b6c48948ab5e72f182b716e11aa7bdb60dd479be27c",
+  "sourceMarkdownSha256": "4c1369d4ae5da088dd34c56f84f95dcd5529cc6dba0616aa844eac8156b7e5d6",
   "opportunitySource": {
     "file": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
     "sha256": "771a6f9100082369ad8804f807eda2bdcbc14c135f390b6194547ba340b12a12"
@@ -11,8 +11,8 @@
   "pdf": {
     "file": "Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf",
     "mediaType": "application/pdf",
-    "sha256": "8b527a90cfe7709c74385c36c5b1be3c46f94b63c5b4cd2bcc83e1c0848f64e0",
-    "bytes": 95188,
+    "sha256": "9e9e88d7aa6b0338debd84d93d6c42438422d7d3c1d5ca61656c014ee2ff963f",
+    "bytes": 94583,
     "pages": 2,
     "pageSize": "US Letter",
     "tagged": true
@@ -28,7 +28,7 @@
     "listMarkerTypography": {
       "relation": "one-point-smaller-than-list-text",
       "deltaPoints": 1,
-      "verifiedListItems": 16
+      "verifiedListItems": 17
     },
     "sourceStylesPreserved": true,
     "intentionalAdaptations": [
@@ -61,9 +61,10 @@
       "No isolated section heading or bullet continuation",
       "Readable hierarchy, contact links, margins, and line spacing",
       "Page two begins cleanly with WOWList and preserves a balanced scan path through education and additional information",
+      "The WOW List accomplishment leads with roughly 35 city ecosystems and local-organizer amplification; user and post snapshot counts and the defensive retention qualifier are absent.",
       "Harry J. Epstein Company renders in the surrounding body style and is not interactive",
       "Politico New York is visibly linked in source-consistent blue underlined styling",
-      "All 16 list markers are visibly subordinate to their associated text by one point"
+      "All 17 list markers are visibly subordinate to their associated text by one point"
     ]
   }
 }

@@ -143,15 +143,15 @@ claim beyond the wording and guardrails here.
 **Status:** Careful
 **Support level:** Careful  
 **Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context  
-**Public wording:** Co-built and operated WOWList.org, a community-calendar platform for DIY arts and music organizers. A July 2017 production snapshot records 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts.
-**Detailed public-safe wording:** WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.  
+**Public wording:** Co-built and operated WOWList.org across roughly 35 city ecosystems, supporting DIY arts and music organizers with community calendars, websites, and email distribution.
+**Detailed public-safe wording:** WOWList supported local organizers across roughly 35 city ecosystems with followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for community publishing.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows public-facing platform delivery, community workflows, and product operations for real organizers.  
-**Guardrail:** Use approximate adoption language and do not describe city activity as official chapters.  
+**Guardrail:** Lead public hiring surfaces with the roughly 35-city-ecosystem scope rather than database row counts. Use approximate adoption language and do not describe city activity as official chapters.
 **Do not say:** Official chapters in 35 cities; full ownership of all organizer adoption; current active platform unless confirmed.  
 **Protected boundaries:** Private user data, organizer contact lists, raw records, geolocation rows, and unapproved community artifacts stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-08-20
 
 ## sunday-dinner-196-participation-infrastructure - Participation infrastructure
 

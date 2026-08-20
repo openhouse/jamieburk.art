@@ -188,6 +188,15 @@ export function evaluatePublicResume(root = defaultRoot, {
   }
 
   const normalizedResume = normalize(markdown);
+  if (/\b1,846\b|\b16,142\b|city-region keys/i.test(markdown)) {
+    fail("WOW List positioning", "the current public resume exposes activity counts or database-key language that understates distributed ecosystem scale");
+  }
+  if (!/roughly \*\*35 city ecosystems\*\*/i.test(markdown) || !/local organizers/i.test(markdown)) {
+    fail("WOW List positioning", "the current public resume must lead with roughly 35 city ecosystems and the local organizers who sustained them");
+  }
+  if (/distinguish(?:es|ed|ing)?[^.]{0,160}(?:retention|resident outcomes|causal impact)/i.test(markdown)) {
+    fail("resume compression", "a defensive WOW List qualification overshadows the accomplishment");
+  }
   for (const entry of entries) {
     const record = records.find(({ id }) => id === entry.opportunityId);
     if (!record || entry.opportunityPath !== record.relativePath) {

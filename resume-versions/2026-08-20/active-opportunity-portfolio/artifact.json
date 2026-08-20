@@ -3,7 +3,7 @@
   "opportunityId": "active-opportunity-portfolio",
   "generatedOn": "2026-08-20",
   "sourceMarkdown": "Jamie-Burkart-Resume.md",
-  "sourceMarkdownSha256": "07284cc3242ba15200b7c4fd1e4620b387ffcc6a1641daa6259ff98720689662",
+  "sourceMarkdownSha256": "96748eb1cd946d027ec44a4558f12f269025cb5fed0c276cdb85fccf4be3706f",
   "googleWorkspace": {
     "sourceWasTreatedReadOnly": true,
     "sourceUnchangedAfterCopy": true,
@@ -33,15 +33,15 @@
   "pdf": {
     "file": "Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
     "mediaType": "application/pdf",
-    "sha256": "5d083805d65f840b144ee5bb5880706043bbf5bd24a43de25f50eeab17f4f035",
-    "bytes": 101181,
+    "sha256": "7ba9ad8fb4df1ecd9995684e1e9bab27f7fe828e68f45aba9f91354bb58251cc",
+    "bytes": 101275,
     "pages": 2,
     "pageSize": "US Letter",
     "tagged": true
   },
   "publicProjection": {
     "file": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
-    "sha256": "5d083805d65f840b144ee5bb5880706043bbf5bd24a43de25f50eeab17f4f035"
+    "sha256": "7ba9ad8fb4df1ecd9995684e1e9bab27f7fe828e68f45aba9f91354bb58251cc"
   },
   "visualInspection": {
     "status": "pass",
@@ -56,6 +56,7 @@
       "No Markdown syntax remains visible.",
       "Experience headings remain grouped with their dates and first bullets.",
       "The page break before WOWList creates a clear two-page narrative.",
+      "The WOW List accomplishment leads with roughly 35 city ecosystems and local-organizer amplification; user and post snapshot counts and the defensive retention qualifier are absent.",
       "Project and contact links are legible; Harry J. Epstein Company remains plain text.",
       "Politico New York alone carries the canonical archived-article link in its sentence.",
       "The carefully scoped Tired of Tires service metrics and avoided-fee estimate fit without crowding or clipping.",

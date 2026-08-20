@@ -467,7 +467,7 @@ const claims: KnowledgeBank["claims"] = [
     status: "confirmed-with-boundary",
     projections: [{
       key: "case-study",
-      text: "A July 2017 production snapshot records 1,846 users, 16,142 posts/events, 23,864 lists/tags, 28,837 list follows, 20,927 saved events, and 35 city-region keys with at least 50 posts. These are historical database counts, not current activity.",
+      text: "WOW List operated across roughly 35 city ecosystems, supporting local organizers with community calendars, websites, and weekly email distribution.",
       status: "active",
       citationRequired: true,
       surfaces: ["/work/wowlist"]
@@ -476,7 +476,7 @@ const claims: KnowledgeBank["claims"] = [
       { sourceId: sourceIds.wowDatabase, relationship: "private-support", supports: ["July 22, 2017 snapshot date", "selected production row counts", "geography thresholds"], locator: "Protected aggregate parse of the production snapshot.", confidence: "high", renderCitation: false },
       { sourceId: sourceIds.controls, relationship: "corroborating", supports: ["public-safe selected counts", "historical-use boundary", "geography definition", "privacy boundary"], confidence: "high", renderCitation: true }
     ],
-    boundaries: ["Use historical language and preserve the exact snapshot date.", "Keep credit shared with Richard Caceres, participating organizers, users, and other contributors.", "Do not expose raw database rows or describe city keys as official chapters."],
+    boundaries: ["Use historical language and preserve the exact snapshot date in internal evidence.", "Keep credit shared with Richard Caceres, participating organizers, users, and other contributors.", "Lead public hiring surfaces with the roughly 35-city-ecosystem scope rather than database row counts; do not expose raw database rows or describe city keys as official chapters."],
     antiClaims: ["current active users", "current product availability", "official chapters in 35 cities", "Jamie alone built WOW List", "the database is a complete product archive", "the counts prove community impact"],
     researchInquiryIds: ["INQ-WOWLIST-PRODUCTION-ARCHIVE-COMPLETENESS"],
     reviewedAt,

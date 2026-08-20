@@ -42,7 +42,7 @@ Technical project, product operations, and implementation leader with 14+ years 
 
 - Co-founded, co-built, and operated with Richard Caceres a natural-language community-calendar platform that replaced a complex event form with collaboratively editable text, followable keyword communities, weekly digests, profiles, embeds, and calendar connections.
 - Connected participatory discovery to product requirements, releases, onboarding, support, adoption, production instrumentation, and a feedback loop across a distributed maintainer network.
-- Reached a July 2017 production snapshot of **1,846 users**, **16,142 posts/events**, and **35 city-region keys** with at least 50 posts.
+- Operated across roughly **35 city ecosystems**, supporting local organizers who used WOW List to run community calendars, websites, and email lists for their own scenes.
 
 ### [CallNYC.org](https://callnyc.org/) — Civic-Tech Builder & Product Translator
 

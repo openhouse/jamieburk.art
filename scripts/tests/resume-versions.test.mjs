@@ -69,6 +69,22 @@ test("the current OTI application resume satisfies every blocking contract", () 
   assert.equal(result.status, 0, result.stderr || result.stdout);
 });
 
+test("WOW List scale is framed through city ecosystems and organizer enablement", () => {
+  const current = readFileSync(path.join(repoRoot, targetPath), "utf8");
+  const stale = current.replace(
+    /Operated across roughly \*\*35 city ecosystems\*\*[^\n]+/,
+    "Reached a July 2017 production snapshot of 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts; distinguish these activity counts from retention, resident outcomes, or causal impact."
+  );
+  const root = fixture(stale);
+  try {
+    const result = run(root);
+    assert.notEqual(result.status, 0);
+    assert.match(result.stderr, /35-city-ecosystem organizer story/i);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
 test("a stale submission PDF manifest fails the exact-artifact gate", () => {
   const root = mkdtempSync(path.join(tmpdir(), "resume-pdf-eval-"));
   try {

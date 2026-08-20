@@ -111,7 +111,7 @@ export function evaluateResumeVersions(root = defaultRoot) {
     "CallNYC",
     "WOWList",
     "Richard Caceres",
-    "35 city-region keys",
+    "35 city ecosystems",
     "Harry J. Epstein Company",
     "2x revenue growth",
     "30+ pages",
@@ -122,6 +122,11 @@ export function evaluateResumeVersions(root = defaultRoot) {
   const missingEvidence = evidenceAnchors.filter((anchor) => !resume.includes(anchor));
   if (missingEvidence.length) {
     fail("evidence-anchors", `Missing governed evidence anchors: ${missingEvidence.join(", ")}.`);
+  }
+  if (/1,?846|16,?142|city-region keys/i.test(resume) ||
+      /distinguish.{0,120}(?:retention|resident outcomes|causal impact)/i.test(resume) ||
+      !/35 city ecosystems.{0,180}local organizers/is.test(resume)) {
+    fail("evidence-anchors", "WOW List must lead with the 35-city-ecosystem organizer story, not underselling row counts or an extended defensive clause.");
   }
 
   if (!/\bco-built\b/i.test(resume) || !resume.includes("Richard Caceres") ||
@@ -139,7 +144,7 @@ export function evaluateResumeVersions(root = defaultRoot) {
   if (unsupportedClaims.some((pattern) => pattern.test(resume)) ||
       !resume.includes("Accessibility-aware implementation") ||
       !resume.includes("privacy-conscious data practice")) {
-    fail("truth-boundaries", "The resume overclaims an unverified qualification or loses the bounded accessibility wording.");
+    fail("truth-boundaries", "The resume overclaims an unverified qualification or loses the calibrated accessibility wording.");
   }
 
   const targetPdf = evaluation.targetPdf;
