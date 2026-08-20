@@ -1,16 +1,16 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `fe2dd863db59b7c52e40ba1daedd17802af37553`
-**Generation time:** 2026-08-15T17:37:38-04:00
-**Source fingerprint:** `de8d12c1e4c7b4df865c3225b773b5f6fb23f9c988d78ba5fd1e90a01cbb3cb2`
+**Source commit:** `904115cba7f86c2d83b161bd7575a8716f56d382`
+**Generation time:** 2026-08-20T12:44:40-04:00
+**Source fingerprint:** `5b0cede3e3a612ffd387e7e2574c3fa7b476550c4cf7a4b67e4b9fd9a88ed7de`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 47
+- Nodes added: 48
 - Nodes removed: 34
-- Edges added: 168
-- Edges removed: 178
+- Edges added: 179
+- Edges removed: 180
 - New type-aware orphans: 0
 - Current rights-review records: 186
 
@@ -20,6 +20,7 @@ Compared with the graph artifact on `origin/develop`.
 - `asset.photo.nycac.shoestring-facilitation.2017.001`
 - `asset.screenshot.let-nyc-dance.public-surface.2026-08-13`
 - `asset.screenshot.wowlist.public-relaunch.2026-08-13`
+- `correction.photo.project-courtesy-credits.2026-08-20`
 - `decision.photo.fair-rent-participation-sequence.2026-08-13`
 - `evaluation.employment-opportunity-leadership.2026-08-13`
 - `evaluation.oti-product-manager-search-ranking.2026-08-20`

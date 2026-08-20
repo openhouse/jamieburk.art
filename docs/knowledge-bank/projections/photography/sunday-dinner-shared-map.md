@@ -6,7 +6,7 @@ projection_type: photo-occurrence
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-14
+last_reviewed: 2026-08-20
 review_by: 2027-02-14
 canonical_path: docs/knowledge-bank/projections/photography/sunday-dinner-shared-map.md
 summary: Exact public occurrence binding the Sunday Dinner shared-map derivative to the work index and case study.
@@ -33,9 +33,9 @@ caption:
     - statement.photo.sunday-dinner.shared-map.context.v1
     - statement.photo.sunday-dinner.shared-map.capture-date.v1
 credit:
-  text: From Jamie Burkart's photo archive. Photographer not identified in the retained export.
+  text: Photo courtesy of Sunday Dinner NYC.
   assertions:
-    - statement.photo.sunday-dinner.shared-map.archive-credit.v1
+    - statement.photo.sunday-dinner.shared-map.project-credit.v1
 permission_source: source.permission.jamie-portfolio-album.2026-08-13
 approval:
   public_git: approved
@@ -52,6 +52,9 @@ relations:
   - type: uses_source
     target: source.permission.jamie-portfolio-album.2026-08-13
     href: ../../sources/permissions/jamie-portfolio-album-2026-08-13.md
+  - type: related_to
+    target: correction.photo.project-courtesy-credits.2026-08-20
+    href: ../../corrections/project-photo-credits-2026-08-20.md
   - type: related_to
     target: edition.launch.2026-08
     href: edition-launch-2026-08.md

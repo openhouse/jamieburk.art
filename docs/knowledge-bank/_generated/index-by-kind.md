@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `fe2dd863db59b7c52e40ba1daedd17802af37553`
-**Generation time:** 2026-08-15T17:37:38-04:00
-**Source fingerprint:** `de8d12c1e4c7b4df865c3225b773b5f6fb23f9c988d78ba5fd1e90a01cbb3cb2`
+**Source commit:** `904115cba7f86c2d83b161bd7575a8716f56d382`
+**Generation time:** 2026-08-20T12:44:40-04:00
+**Source fingerprint:** `5b0cede3e3a612ffd387e7e2574c3fa7b476550c4cf7a4b67e4b9fd9a88ed7de`
 
 ## application
 
@@ -224,6 +224,7 @@
 
 - [CallNYC chronology correction](../corrections/callnyc-years-2026.md) - `correction.callnyc-years.2026`
 - [Add Elana Gordon's credit to the East River homepage occurrence](../corrections/east-river-credit-2026-07.md) - `correction.photo.east-river-credit.2026-07`
+- [Replace unsupported individual photo credits with project courtesy credits](../corrections/project-photo-credits-2026-08-20.md) - `correction.photo.project-courtesy-credits.2026-08-20`
 
 ## decision
 

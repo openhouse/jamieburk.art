@@ -6,7 +6,7 @@ projection_type: photo-occurrence
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-14
+last_reviewed: 2026-08-20
 review_by: 2027-02-14
 canonical_path: docs/knowledge-bank/projections/photography/kc-town-hall-roof-work.md
 summary: Exact public occurrence binding the KC Town Hall roof-work derivative to the work index and case study.
@@ -33,10 +33,9 @@ caption:
     - statement.photo.kc-town-hall.roof-work.context.v1
     - statement.photo.kc-town-hall.roof-work.capture-date.v1
 credit:
-  text: Photograph by Paul Mossine. From Jamie Burkart's photo archive.
+  text: Photo courtesy of KC Town Hall.
   assertions:
-    - statement.photo.kc-town-hall.roof-work.creator.v1
-    - statement.photo.kc-town-hall.roof-work.custody.v1
+    - statement.photo.kc-town-hall.roof-work.project-credit.v1
 permission_source: source.permission.jamie-portfolio-album.2026-08-13
 approval:
   public_git: approved
@@ -54,8 +53,8 @@ relations:
     target: source.permission.jamie-portfolio-album.2026-08-13
     href: ../../sources/permissions/jamie-portfolio-album-2026-08-13.md
   - type: related_to
-    target: person.paul-mossine
-    href: ../../people/paul-mossine.md
+    target: correction.photo.project-courtesy-credits.2026-08-20
+    href: ../../corrections/project-photo-credits-2026-08-20.md
   - type: related_to
     target: edition.launch.2026-08
     href: edition-launch-2026-08.md

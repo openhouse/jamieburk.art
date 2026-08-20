@@ -5,7 +5,7 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-15
+last_reviewed: 2026-08-20
 review_by: 2027-02-14
 canonical_path: docs/knowledge-bank/indexes/photography.md
 summary: Public-safe orientation to the governed relationship among private photo sources, first-class Wiki records, exact portfolio occurrences, recollection, correction, and human publication gates.
@@ -54,8 +54,8 @@ relations:
     target: projection.photo.kc-town-hall.roof-work
     href: ../projections/photography/kc-town-hall-roof-work.md
   - type: related_to
-    target: person.paul-mossine
-    href: ../people/paul-mossine.md
+    target: correction.photo.project-courtesy-credits.2026-08-20
+    href: ../corrections/project-photo-credits-2026-08-20.md
   - type: related_to
     target: correction.photo.east-river-credit.2026-07
     href: ../corrections/east-river-credit-2026-07.md
@@ -142,7 +142,7 @@ for the complete design and staged rollout.
 
 The [launch-candidate edition](../projections/photography/edition-launch-2026-08.md)
 keeps the East River hero, reuses the governed Fair Rent participation sequence,
-and adds bounded Sunday Dinner and KC Town Hall occurrences. Public interface
+and adds specific Sunday Dinner and KC Town Hall occurrences. Public interface
 captures cover the three projects whose strongest evidence is the system itself.
 The result is a composed six-project sequence, not a public mirror of the private
 archive.
@@ -150,7 +150,7 @@ archive.
 - [Project-cover curatorial record](../evaluations/curatorial/portfolio-project-covers-2026-08-13.md)
 - [Sunday Dinner shared-map occurrence](../projections/photography/sunday-dinner-shared-map.md)
 - [KC Town Hall roof-work occurrence](../projections/photography/kc-town-hall-roof-work.md)
-- [Paul Mossine creator-credit record](../people/paul-mossine.md)
+- [Project courtesy-credit correction](../corrections/project-photo-credits-2026-08-20.md)
 
 ## July 26 source return
 

@@ -36,8 +36,7 @@ export const participationMedia = {
     alt: "Jamie Burkart, seen from behind, crouches at a grill used as a table while drawing on large sheets during a circle meeting in the Shoestring Press garden.",
     caption:
       "Facilitating an advocacy-group coordination meeting at Shoestring Press, Brooklyn, July 2017. The scene documents listening and visualization work that preceded shared campaign infrastructure.",
-    credit:
-      "Photograph by Paul Mossine. From the NYC Artist Coalition project archive.",
+    credit: "Photo courtesy of NYC Artist Coalition.",
     knowledgeId: "asset.photo.nycac.shoestring-facilitation.2017.001",
     permissionId: "source.permission.jamie.photo-select-portfolio.2026-08-13",
     projectionId: "projection.photo.fair-rent.shoestring-facilitation",
@@ -86,8 +85,7 @@ export const participationMedia = {
     alt: "Speakers and organizers hold a Save NYC Spaces and NYC Artist Coalition banner at the front of a packed Market Hotel crowd.",
     caption:
       "NYC Artist Coalition's Save NYC Spaces town hall at Market Hotel, Brooklyn, October 2017. The photograph records a coalition-scale public moment; the work and its outcomes remain collective.",
-    credit:
-      "From the NYC Artist Coalition project archive; individual photographer not recorded.",
+    credit: "Photo courtesy of NYC Artist Coalition.",
     href: "https://www.flickr.com/photos/nycartc/37918677516",
     knowledgeId: "asset.photo.nycac.market-hotel-town-hall.2017.001",
     permissionId: "source.permission.jamie.photo-select-portfolio.2026-08-13",

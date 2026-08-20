@@ -1,5 +1,5 @@
 {
-  "id": "portfolio-photography-layout-v4",
+  "id": "portfolio-photography-layout-v5",
   "title": "Human Index photographic portfolio layout",
   "intent": "Photography and public interfaces make situated work credible while remaining public-safe, accessible, project-specific, and subordinate to human publication authority.",
   "criteria": [
@@ -7,6 +7,11 @@
       "id": "manifest-bound-publication",
       "blocking": true,
       "criterion": "Every public photograph is registered once with stable dimensions, alt text, caption, credit, placement, status, permission, and interpretation boundary."
+    },
+    {
+      "id": "public-project-credit-policy",
+      "blocking": true,
+      "criterion": "A photograph without a confirmed individual creator uses concise project-centered courtesy language; visitor-facing credits never expose archive-processing uncertainty."
     },
     {
       "id": "governed-photographic-field",

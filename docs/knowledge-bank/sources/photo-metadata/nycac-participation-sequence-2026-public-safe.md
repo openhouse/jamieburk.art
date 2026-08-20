@@ -6,7 +6,7 @@ source_kind: public-safe-photo-metadata-summary
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-13
+last_reviewed: 2026-08-20
 review_by: 2027-02-13
 canonical_path: docs/knowledge-bank/sources/photo-metadata/nycac-participation-sequence-2026-public-safe.md
 summary: Sanitized metadata, visible-scene review, Jamie's first-person context, and public-source comparison for two selected NYC Artist Coalition photographs.
@@ -14,8 +14,13 @@ observations:
   - id: observation.photo.shoestring.creator.2026-08-13
     asset: asset.photo.nycac.shoestring-facilitation.2017.001
     property: creator
-    value: Paul Mossine
-    basis: embedded creator metadata in the selected original
+    value: unresolved-after-owner-correction
+    basis: Jamie's 2026-08-20 first-person correction supersedes the prior embedded-metadata attribution
+  - id: observation.photo.shoestring.public-credit.2026-08-20
+    asset: asset.photo.nycac.shoestring-facilitation.2017.001
+    property: public_credit
+    value: project.nyc-artist-coalition
+    basis: Jamie's 2026-08-20 project-credit instruction
   - id: observation.photo.shoestring.capture-date.2026-08-13
     asset: asset.photo.nycac.shoestring-facilitation.2017.001
     property: capture_date
@@ -39,8 +44,13 @@ observations:
   - id: observation.photo.market-hotel.creator.2026-08-13
     asset: asset.photo.nycac.market-hotel-town-hall.2017.001
     property: creator
-    value: not-recorded
-    basis: creator fields absent from the selected original and public Flickr owner credit is organizational
+    value: unresolved
+    basis: no confirmed individual creator attribution
+  - id: observation.photo.market-hotel.public-credit.2026-08-20
+    asset: asset.photo.nycac.market-hotel-town-hall.2017.001
+    property: public_credit
+    value: project.nyc-artist-coalition
+    basis: Jamie's 2026-08-20 project-credit instruction
 public_sources:
   - https://www.flickr.com/photos/nycartc/37918677516
 private_evidence: held-outside-git
@@ -54,6 +64,9 @@ relations:
   - type: related_to
     target: asset.photo.nycac.market-hotel-town-hall.2017.001
     href: ../../assets/photographs/nycac-market-hotel-town-hall-2017.md
+  - type: related_to
+    target: correction.photo.project-courtesy-credits.2026-08-20
+    href: ../../corrections/project-photo-credits-2026-08-20.md
 ---
 
 # NYC Artist Coalition participation-sequence metadata

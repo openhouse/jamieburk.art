@@ -5,13 +5,13 @@ kind: asset
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-13
+last_reviewed: 2026-08-20
 review_by: 2027-02-13
 canonical_path: docs/knowledge-bank/assets/photographs/nycac-market-hotel-town-hall-2017.md
 summary: Selected portfolio photograph of speakers and organizers holding the Save NYC Spaces and NYC Artist Coalition banner before a packed Market Hotel crowd.
 media_type: photograph
 rights_state: cleared
-creator_state: individually-unattributed
+creator_state: unresolved
 consent_state: cleared
 represented_person_review: completed-for-this-occurrence
 public_display_status: cleared
@@ -31,10 +31,18 @@ public_derivatives:
 statements:
   - id: statement.photo.market-hotel.creator.v1
     property: creator
-    value: individually-unattributed
+    value: unresolved
+    rank: normal
+    confidence: high
+    references:
+      - source.photo-metadata.nycac-participation-sequence.2026-08-13
+  - id: statement.photo.market-hotel.project-credit.v1
+    property: public_credit
+    value: project.nyc-artist-coalition
     rank: preferred
     confidence: high
     references:
+      - correction.photo.project-courtesy-credits.2026-08-20
       - source.photo-metadata.nycac-participation-sequence.2026-08-13
   - id: statement.photo.market-hotel.capture-date.v1
     property: capture_date
@@ -63,6 +71,9 @@ relations:
     target: source.photo-metadata.nycac-participation-sequence.2026-08-13
     href: ../../sources/photo-metadata/nycac-participation-sequence-2026-public-safe.md
   - type: related_to
+    target: correction.photo.project-courtesy-credits.2026-08-20
+    href: ../../corrections/project-photo-credits-2026-08-20.md
+  - type: related_to
     target: asset.photo.project-site.talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-a7ura7t
     href: project-sites/talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-a7ura7t.md
     context: Historical project-site census record for a corresponding public derivative; its former hold remains valid history.
@@ -77,6 +88,6 @@ This frame was chosen for its legible composition: collective campaign identity
 in the foreground and the assembled public behind it. The portfolio caption
 does not enumerate faces or claim a numeric attendance count.
 
-No individual photographer is recorded in the selected original or the public
-Flickr owner record. The occurrence therefore credits the NYC Artist Coalition
-project archive without inventing an individual attribution.
+The visible credit is “Photo courtesy of NYC Artist Coalition.” The individual
+creator remains unresolved; the courtesy line identifies project context
+without inventing an individual attribution.

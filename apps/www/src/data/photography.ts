@@ -75,8 +75,7 @@ export const portfolioPhotos = {
     alt: "A person stands at a crowded dinner table, raising one hand and holding up a sheet of paper as others laugh beside a hand-drawn map.",
     caption:
       "A Sunday Dinner gathering with a hand-drawn map and shared table, January 6, 2013.",
-    credit:
-      "From Jamie Burkart's photo archive. Photographer not identified in the retained export.",
+    credit: "Photo courtesy of Sunday Dinner NYC.",
     wikiId: "asset.photo.sunday-dinner.shared-map.2013.001",
     derivativeId: "derivative.photo.sunday-dinner.shared-map.v1",
     placementIds: ["projection.photo.sunday-dinner.shared-map"],
@@ -85,7 +84,7 @@ export const portfolioPhotos = {
       "statement.photo.sunday-dinner.shared-map.capture-date.v1"
     ],
     creditAssertionIds: [
-      "statement.photo.sunday-dinner.shared-map.archive-credit.v1"
+      "statement.photo.sunday-dinner.shared-map.project-credit.v1"
     ],
     knowledgeStatus: "bound",
     placements: ["196-sunday-dinner", "work-index"],
@@ -97,7 +96,7 @@ export const portfolioPhotos = {
       indexing: "open"
     },
     publicUseBoundary:
-      "Jamie authorized this exact portfolio occurrence from the designated portfolio album. The retained export does not identify the photographer; participant identities, remarks, attendance, and private gathering records remain outside the public bundle."
+      "Jamie authorized this exact portfolio occurrence from the designated portfolio album. Sunday Dinner NYC receives the public courtesy credit; participant identities, remarks, attendance, and private gathering records remain outside the public bundle."
   },
   kcTownHallRoofWork: {
     id: "kc-town-hall-roof-work",
@@ -106,7 +105,7 @@ export const portfolioPhotos = {
     height: 1600,
     alt: "A person in a yellow hard hat and rain jacket uses a drill on a roof assembly.",
     caption: "Roof work during KC Town Hall field implementation, March 24, 2019.",
-    credit: "Photograph by Paul Mossine. From Jamie Burkart's photo archive.",
+    credit: "Photo courtesy of KC Town Hall.",
     wikiId: "asset.photo.kc-town-hall.roof-work.2019.001",
     derivativeId: "derivative.photo.kc-town-hall.roof-work.v1",
     placementIds: ["projection.photo.kc-town-hall.roof-work"],
@@ -115,7 +114,7 @@ export const portfolioPhotos = {
       "statement.photo.kc-town-hall.roof-work.capture-date.v1"
     ],
     creditAssertionIds: [
-      "statement.photo.kc-town-hall.roof-work.creator.v1",
+      "statement.photo.kc-town-hall.roof-work.project-credit.v1",
       "statement.photo.kc-town-hall.roof-work.custody.v1"
     ],
     knowledgeStatus: "bound",
@@ -128,7 +127,7 @@ export const portfolioPhotos = {
       indexing: "open"
     },
     publicUseBoundary:
-      "Jamie authorized this exact portfolio occurrence from the designated portfolio album. Paul Mossine is credited as photographer; the image documents field work but does not establish a trade credential, ownership, completed scope, outcome, or sole authorship."
+      "Jamie authorized this exact portfolio occurrence from the designated portfolio album. KC Town Hall receives the public courtesy credit; the image documents field work but does not establish a trade credential, ownership, completed scope, outcome, or sole authorship."
   }
 } as const satisfies Record<string, PortfolioPhoto>;
 

@@ -5,15 +5,15 @@ kind: asset
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-14
+last_reviewed: 2026-08-20
 review_by: 2027-02-14
 canonical_path: docs/knowledge-bank/assets/photographs/sunday-dinner-shared-map-2013.md
 summary: Public-safe record for a January 6, 2013 Sunday Dinner photograph showing a shared table, a hand-drawn map, and visible group interaction.
 media_type: photograph
 rights_state: cleared
-creator_state: unresolved-in-retained-export
+creator_state: unresolved
 consent_state: cleared
-represented_person_review: cleared-for-bounded-portfolio-use
+represented_person_review: cleared-for-specific-portfolio-use
 public_display_status: cleared
 projection:
   status: active
@@ -45,12 +45,13 @@ statements:
     confidence: high
     references:
       - source.photo-metadata.portfolio-cover-images.2026.public-safe
-  - id: statement.photo.sunday-dinner.shared-map.archive-credit.v1
-    property: archive_custody
-    value: Jamie Burkart photo archive; photographer not identified in retained export
+  - id: statement.photo.sunday-dinner.shared-map.project-credit.v1
+    property: public_credit
+    value: project.sunday-dinner-196
     rank: preferred
     confidence: high
     references:
+      - correction.photo.project-courtesy-credits.2026-08-20
       - source.photo-metadata.portfolio-cover-images.2026.public-safe
 visible_observations:
   - A person stands at a crowded shared table, raising one hand and holding up a sheet of paper beside a hand-drawn map.
@@ -67,12 +68,17 @@ relations:
     target: source.photo-metadata.portfolio-cover-images.2026.public-safe
     href: ../../sources/photo-metadata/portfolio-cover-images-2026-public-safe.md
   - type: related_to
+    target: correction.photo.project-courtesy-credits.2026-08-20
+    href: ../../corrections/project-photo-credits-2026-08-20.md
+  - type: related_to
     target: project.sunday-dinner-196
     href: ../../projects/sunday-dinner-196-orientation.md
 ---
 
 # Sunday Dinner shared map and table, 2013
 
-The metadata-stripped derivative appears as the Sunday Dinner project cover on the work index and case-study page. The retained export does not identify the photographer, and the public credit says so.
+The metadata-stripped derivative appears as the Sunday Dinner project cover on
+the work index and case-study page. The visible credit is “Photo courtesy of
+Sunday Dinner NYC.” The individual creator remains unresolved.
 
 The frame makes a shared-table gathering and visible interaction legible. It does not publish participant identities or establish exact remarks, attendance, outcomes, or long-term effects. Public Git and staging review are approved for this exact occurrence; production publication and indexing remain open decisions for Jamie.

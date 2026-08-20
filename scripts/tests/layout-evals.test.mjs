@@ -16,15 +16,68 @@ test("a private archive identifier fails closed", () => {
   assert(result.failures.some(({ criterion }) => criterion === "metadata-and-locator-safety"));
 });
 
-test("a missing creator credit fails the manifest contract", () => {
+test("a missing public credit fails the manifest contract", () => {
   const path = "apps/www/src/data/photography.ts";
   const source = readFileSync(path, "utf8").replace(
-    'credit: "Photograph by Paul Mossine. From Jamie Burkart\'s photo archive.",',
+    'credit: "Photo courtesy of KC Town Hall.",',
     ""
   );
   const result = evaluateLayout(process.cwd(), { [path]: source });
   assert.equal(result.passed, false);
   assert(result.failures.some(({ criterion }) => criterion === "manifest-bound-publication"));
+});
+
+function projectCreditOverrides() {
+  const photographyPath = "apps/www/src/data/photography.ts";
+  const participationPath = "apps/www/src/data/participationMedia.ts";
+  return {
+    photographyPath,
+    participationPath,
+    photography: readFileSync(photographyPath, "utf8")
+      .replace(
+        '"From Jamie Burkart\'s photo archive. Photographer not identified in the retained export."',
+        '"Photo courtesy of Sunday Dinner NYC."'
+      )
+      .replace(
+        '"Photograph by Paul Mossine. From Jamie Burkart\'s photo archive."',
+        '"Photo courtesy of KC Town Hall."'
+      ),
+    participation: readFileSync(participationPath, "utf8")
+      .replace(
+        '"Photograph by Paul Mossine. From the NYC Artist Coalition project archive."',
+        '"Photo courtesy of NYC Artist Coalition."'
+      )
+      .replace(
+        '"From the NYC Artist Coalition project archive; individual photographer not recorded."',
+        '"Photo courtesy of NYC Artist Coalition."'
+      )
+  };
+}
+
+test("an unsupported individual attribution fails the public project-credit policy", () => {
+  const sources = projectCreditOverrides();
+  const result = evaluateLayout(process.cwd(), {
+    [sources.photographyPath]: sources.photography,
+    [sources.participationPath]: sources.participation.replace(
+      '"Photo courtesy of NYC Artist Coalition."',
+      '"Photograph by Example Person."'
+    )
+  });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "public-project-credit-policy"));
+});
+
+test("archive-processing commentary fails the public project-credit policy", () => {
+  const sources = projectCreditOverrides();
+  const result = evaluateLayout(process.cwd(), {
+    [sources.photographyPath]: sources.photography.replace(
+      '"Photo courtesy of Sunday Dinner NYC."',
+      '"Photographer not identified in the retained export."'
+    ),
+    [sources.participationPath]: sources.participation
+  });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "public-project-credit-policy"));
 });
 
 test("the homepage hero remains bound to the East River photograph", () => {

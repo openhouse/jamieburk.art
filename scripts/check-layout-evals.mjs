@@ -24,6 +24,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   const evaluation = JSON.parse(readText("evals/layout/portfolio-photography.json"));
   const expectedCriteria = [
     "manifest-bound-publication",
+    "public-project-credit-policy",
     "governed-photographic-field",
     "metadata-and-locator-safety",
     "editorial-not-decorative",
@@ -46,6 +47,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   const participationPath = "apps/www/src/data/participationMedia.ts";
   const photography = readText(photographyPath);
   const participation = readText(participationPath);
+  const photographySurface = [photography, participation].join("\n");
   const expectedPhotoBindings = [
     [photography, "eastRiver", "/images/field-notes/jamie-east-river.webp"],
     [photography, "sundayDinnerSharedMap", "/images/field-notes/sunday-dinner-shared-map.webp"],
@@ -65,6 +67,28 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
         !block.includes("permissionId:") && source === participation) {
       fail("manifest-bound-publication", `Incomplete governed photo binding for ${key}.`);
     }
+  }
+
+  const expectedPublicCredits = [
+    [photography, "eastRiver", "Photograph by Elana Gordon. From Jamie Burkart's photo archive."],
+    [photography, "sundayDinnerSharedMap", "Photo courtesy of Sunday Dinner NYC."],
+    [photography, "kcTownHallRoofWork", "Photo courtesy of KC Town Hall."],
+    [participation, "shoestringFacilitation", "Photo courtesy of NYC Artist Coalition."],
+    [participation, "marketHotelTownHall", "Photo courtesy of NYC Artist Coalition."]
+  ];
+  for (const [source, key, credit] of expectedPublicCredits) {
+    const start = source.indexOf(`${key}: {`);
+    const end = source.indexOf("\n  },", start);
+    const block = source.slice(start, end);
+    if (start < 0 || !block.includes(`credit: "${credit}"`)) {
+      fail("public-project-credit-policy", `Public photo credit drifted for ${key}.`);
+    }
+  }
+  if (/Paul Mossine|photographer not identified|individual photographer not recorded|retained export/i.test(photographySurface)) {
+    fail(
+      "public-project-credit-policy",
+      "Visitor-facing photo data contains an unsupported individual credit or archive-processing commentary."
+    );
   }
 
   const governedAssetRoots = [
@@ -93,7 +117,6 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   const appSource = sourceFiles
     .map((relativePath) => readText(path.join("apps/www/src", relativePath)))
     .join("\n");
-  const photographySurface = [photography, participation].join("\n");
   if (/[0-9A-F]{8}(?:-[0-9A-F]{4}){3}-[0-9A-F]{12}/i.test(photographySurface)) {
     fail("metadata-and-locator-safety", "A private archive UUID appears in public photography data.");
   }

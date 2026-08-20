@@ -5,13 +5,13 @@ kind: asset
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-13
+last_reviewed: 2026-08-20
 review_by: 2027-02-13
 canonical_path: docs/knowledge-bank/assets/photographs/nycac-shoestring-facilitation-2017.md
 summary: Selected portfolio photograph showing Jamie facilitating and visualizing an advocacy-group coordination meeting in the Shoestring Press garden.
 media_type: photograph
 rights_state: cleared
-creator_state: attributed
+creator_state: unresolved-after-owner-correction
 consent_state: cleared
 represented_person_review: completed-for-this-occurrence
 public_display_status: cleared
@@ -29,12 +29,13 @@ public_derivatives:
     metadata_stripped: true
     status: launch-candidate
 statements:
-  - id: statement.photo.shoestring.creator.v1
-    property: creator
-    value: Paul Mossine
+  - id: statement.photo.shoestring.project-credit.v1
+    property: public_credit
+    value: project.nyc-artist-coalition
     rank: preferred
     confidence: high
     references:
+      - correction.photo.project-courtesy-credits.2026-08-20
       - source.photo-metadata.nycac-participation-sequence.2026-08-13
   - id: statement.photo.shoestring.capture-date.v1
     property: capture_date
@@ -62,6 +63,9 @@ relations:
   - type: uses_source
     target: source.photo-metadata.nycac-participation-sequence.2026-08-13
     href: ../../sources/photo-metadata/nycac-participation-sequence-2026-public-safe.md
+  - type: related_to
+    target: correction.photo.project-courtesy-credits.2026-08-20
+    href: ../../corrections/project-photo-credits-2026-08-20.md
   - type: projected_to
     target: projection.visual.fair-rent.participation-sequence.2026-08
     href: ../../projections/photography/fair-rent-participation-sequence-2026-08.md
@@ -74,6 +78,7 @@ circle conversation. Its evidentiary function is specific: it makes facilitation
 and shared sense-making visible before the case study moves to a campaign
 interface and a coalition-scale public moment.
 
-Paul Mossine is credited from embedded creator metadata. Jamie's direct album
-authorization clears this exact portfolio occurrence. Production release of an
-exact site commit remains a separate gate.
+The visible credit is “Photo courtesy of NYC Artist Coalition.” The individual
+creator remains unresolved. Jamie's direct album authorization clears this
+exact portfolio occurrence. Production release of an exact site commit remains
+a separate gate.
