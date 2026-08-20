@@ -4,12 +4,17 @@ import { test } from "node:test";
 import { readFileSync } from "node:fs";
 
 import {
+  canonicalAccessibilityRoutes,
   computePublicSurfaceFingerprint,
   validateResponsiveAccessibilityEvidence
 } from "./accessibility-evidence.mjs";
 import { defaultRepoRoot } from "./lib.mjs";
 
 const current = validateResponsiveAccessibilityEvidence(defaultRepoRoot);
+
+test("the responsive accessibility matrix includes every featured project route", () => {
+  assert.equal(canonicalAccessibilityRoutes.includes("/work/kc-spaces-fund"), true);
+});
 
 test("candidate-bound responsive accessibility evidence passes", () => {
   assert.equal(current.passed, true);

@@ -108,7 +108,7 @@ const workItemsInput = [
     years: "2009-2015",
     status: "Full case study",
     featured: true,
-    priority: 1,
+    priority: 4,
     visibility: "public-safe",
     proofBankIds: [
       "hje-modernization-stewardship",
@@ -207,7 +207,7 @@ const workItemsInput = [
     years: "2017-Present",
     status: "Full case study",
     featured: true,
-    priority: 2,
+    priority: 1,
     visibility: "public-safe",
     proofBankIds: [
       "fair-rent-campaign-memory",
@@ -326,7 +326,7 @@ const workItemsInput = [
     years: "2016 - archived",
     status: "Full case study",
     featured: true,
-    priority: 3,
+    priority: 2,
     visibility: "public-safe",
     proofBankIds: ["callnyc-civic-data-guidance"],
     whatWasUnclear:
@@ -341,12 +341,12 @@ const workItemsInput = [
           "Public-facing page patterns that moved from constituent issue to relevant office, district context, and possible next step.",
         type: "prototype",
         media: {
-          src: "/artifacts/callnyc/archived-prototype.png",
-          alt: "Archived CallNYC prototype showing issue navigation, resident guidance, and a Council member service profile.",
+          src: "/artifacts/callnyc/original-launch.webp",
+          alt: "Original CallNYC launch interface showing U.S. citizenship guidance, issue navigation, and a Council member service profile.",
           caption:
-            "Archived CallNYC prototype captured July 2026. The banner marks it as an unofficial, non-current snapshot.",
+            "Original CallNYC launch interface, 2016. It documents the historical product; the current public instance remains archived, unofficial, and non-current.",
           href: "https://callnyc.org/",
-          sourceLabel: "CallNYC archived public prototype"
+          sourceLabel: "Original CallNYC press-kit screenshot"
         }
       },
       {
@@ -387,12 +387,12 @@ const workItemsInput = [
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and approved archived-prototype screenshot.",
+      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and an approved original-launch screenshot.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
     },
-    currentStatus: "Archived prototype with an approved public-safe screenshot.",
+    currentStatus: "Archived prototype shown with an approved original-launch screenshot.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
@@ -412,6 +412,93 @@ const workItemsInput = [
       }
   },
   {
+    title: "KC Spaces Fund",
+    slug: "kc-spaces-fund",
+    series: "Rapid Public Implementation",
+    subtitle: "A finished campaign site for cultural-space mutual aid",
+    summary:
+      "Built and maintained the campaign's Ghost-based web stack, customized a reusable theme, and implemented donation, application, sign-up, and contact pathways plus a fundraising progress display for a collaborator-led 2020 mutual-aid campaign.",
+    role: "Web Infrastructure, Theme & Implementation Support",
+    years: "2020",
+    status: "Short proof page",
+    featured: true,
+    priority: 3,
+    visibility: "public-safe",
+    proofBankIds: ["kc-spaces-fund-digital-infrastructure"],
+    whatWasUnclear:
+      "A fast-moving cultural-space mutual-aid campaign needed a coherent public identity and clear action paths across the website and collaborator-led social channels.",
+    whatBecameUsable:
+      "A maintained Ghost site with a reusable campaign theme and visible routes to donate, apply, join, contact, and follow fundraising progress.",
+    artifactTypes: ["website", "workflow", "public-safe screenshot"],
+    artifacts: [
+      {
+        title: "Campaign website",
+        description:
+          "A finished public surface that joined the campaign purpose, visual identity, and action routes in one legible experience.",
+        type: "public-safe screenshot",
+        media: {
+          src: "/artifacts/kc-spaces-fund/public-site.webp",
+          alt: "KC Spaces Fund website showing its cultural-space support message, donation route, navigation, and support section.",
+          caption:
+            "The public site remains reachable as a record of the 2020 campaign. Its historical donation and application language is not a current service offer.",
+          href: "https://kcspacesfund.com/",
+          sourceLabel: "KC Spaces Fund public website"
+        }
+      },
+      {
+        title: "Reusable campaign implementation",
+        description:
+          "A customized Ghost theme, deployment workflow, fundraising progress display, and reusable action-route pattern for donation, application, sign-up, and contact.",
+        type: "workflow"
+      }
+    ],
+    tags: [
+      "Technical Operations",
+      "Implementation",
+      "Web Systems",
+      "Campaign Infrastructure",
+      "Public-Facing Tools"
+    ],
+    capabilities: [
+      "Rapid Implementation",
+      "Campaign Web Systems",
+      "Theme Customization",
+      "Deployment",
+      "Action-Route Design"
+    ],
+    links: [{ label: "Visit KC Spaces Fund", url: "https://kcspacesfund.com/" }],
+    careNote:
+      "Historical, collaborator-led campaign. This page documents Jamie's web implementation role; it does not assign him organizer, fundraising, fiscal-sponsor, account-authorship, or grant-decision authority.",
+    sourceLayer:
+      "Public campaign site, contemporary public campaign records, source-backed implementation evidence, and public-safe archive summaries; private applicant, donor, payment, and subscriber records remain offline.",
+    credits: [
+      "Jamie Burkart - web infrastructure, theme, and implementation support",
+      "KC Spaces Fund's named organizers and collaborators"
+    ],
+    publicSafety: {
+      note: "Keep public organizer credit with the campaign's named organizers and describe Jamie's contribution as web infrastructure, identity support, and implementation."
+    },
+    currentStatus:
+      "Historical 2020 campaign surface; the public website remains reachable, but its donation and application language is not a current service offer.",
+    group: "Community and cultural infrastructure",
+    roleFit:
+      "Rapid public implementation, product operations, web systems, campaign infrastructure, visual communication, and cross-channel delivery.",
+    evidence: [
+      "Ghost-based campaign web stack and deployment",
+      "Customized reusable campaign theme",
+      "Donation, application, sign-up, contact, and fundraising-display pathways",
+      "Cross-channel project identity support with collaborator-led organizer credit"
+    ],
+    knownOpenProtected: {
+      known:
+        "Jamie built and maintained the campaign's public web stack, customized its theme, and implemented its principal action routes for a collaborator-led mutual-aid effort.",
+      open:
+        "Additional implementation artifacts and collaborator role details require separate review before publication.",
+      protected:
+        "Applicant, grantee, donor, subscriber, payment, credential, private correspondence, and sensitive operational records remain offline."
+    }
+  },
+  {
     title: "WOWList.org",
     slug: "wowlist",
     series: "Community Platform",
@@ -422,7 +509,7 @@ const workItemsInput = [
     years: "2010s; public return in progress, 2026",
     status: "Short proof page",
     featured: true,
-    priority: 4,
+    priority: 5,
     visibility: "public-safe",
     proofBankIds: ["wowlist-community-platform"],
     whatWasUnclear:
@@ -497,8 +584,8 @@ const workItemsInput = [
     role: "Host, Organizer & Systems Steward",
     years: "2010s-present",
     status: "Short proof page",
-    featured: true,
-    priority: 5,
+    featured: false,
+    priority: 6,
     visibility: "summary-only",
     proofBankIds: ["sunday-dinner-196-participation-infrastructure"],
     whatWasUnclear:
@@ -557,7 +644,7 @@ const workItemsInput = [
     years: "2019-2024 public record",
     status: "Short proof page",
     featured: false,
-    priority: 6,
+    priority: 7,
     visibility: "public-safe",
     proofBankIds: [
       "kc-town-hall-public-benefit-documentation",
@@ -635,10 +722,25 @@ export type WorkSlug =
   | "callnyc"
   | "fair-rent-nyc"
   | "harry-j-epstein"
+  | "kc-spaces-fund"
   | "kc-town-hall"
   | "wowlist";
 
-export const featuredWork = workItems.filter((item) => item.featured);
+export const homepageHiringSequence = [
+  "fair-rent-nyc",
+  "callnyc",
+  "kc-spaces-fund",
+  "harry-j-epstein",
+  "wowlist"
+] as const satisfies readonly WorkSlug[];
+
+export const featuredWork = homepageHiringSequence.map((slug) => {
+  const item = workItems.find((candidate) => candidate.slug === slug);
+  if (!item || !item.featured) {
+    throw new Error(`Homepage hiring-sequence item is missing or not featured: ${slug}`);
+  }
+  return item;
+});
 
 export const workGroups = [
   "Operating systems for teams",

@@ -1,12 +1,12 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `eb83765e38eeedb672e171e6bc6e1088e931ad56`
-**Portfolio snapshot:** `c335cf3b8cf69a41146b9920e6a44b7440c816c980336f1e374cdb4fa4a742f9`
+**Candidate commit:** `964abcb5e37b944b46ad8a58c08d494bd8bb6a1d`
+**Portfolio snapshot:** `e1a718fdbe5f951fb85d93f036261563b40f3b2ed32d598d6125c49b41f28f95`
 **Role-context hash:** `04acac996780f4c345a1c95163fe00f9a472ef31f54cb750077a36e04ad0bcc1`
 **Reader-context hash:** `e055b82642616d52177ad68ae4d3bbaeb3953ef3c75cfa3e159c65166862e29f`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
-**Candidate paths clean:** yes
+**Candidate paths clean:** no
 
 > Deterministic baseline only. This is not an interview prediction, a named person's opinion, or a human reader study.
 
@@ -189,7 +189,7 @@
 
 - Deterministic disposition: `not-live`
 - Critical signals observed: 1/2
-- All signals observed: 2/3
+- All signals observed: 1/3
 - Opportunity status live: no
 - Historical benchmark: no
 - Role context current at candidate time: no
@@ -199,7 +199,7 @@
 
 - `requirement.protected-memory.knowledge-friction`: **not observed**
 - `requirement.protected-memory.human-review`: **observed** on `/lab/source-backed-team-memory`
-- `requirement.protected-memory.bounded-sprint`: **observed** on `/lab/source-backed-team-memory`
+- `requirement.protected-memory.bounded-sprint`: **not observed**
 
 ## Open human gates
 

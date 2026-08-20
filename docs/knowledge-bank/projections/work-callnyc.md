@@ -5,7 +5,7 @@ kind: projection
 status: maintained
 visibility: public
 sensitivity: low
-last_reviewed: 2026-07-18
+last_reviewed: 2026-08-20
 review_by: 2026-10-18
 canonical_path: docs/knowledge-bank/projections/work-callnyc.md
 summary: Governed projection record for the public CallNYC case study.
@@ -31,12 +31,20 @@ existing structured projection model. This Wiki record maps the project, claim,
 and correction to that surface; it does not generate or automatically publish
 the route in this first release.
 
-## Current bounded language
+## Current scoped language
 
 Jamie built CallNYC.org as an independent follow-on to the New York City
 Council's first CouncilStat hackathon, translating constituent-services data
 into resident-facing issue pages and next-step guidance; the project was covered
 in Politico New York.
+
+## Visual selection - August 20, 2026
+
+The project cover now uses the original 2016 press-kit interface rather than a
+capture of the restored archive. The screenshot makes the issue-first product
+decision, resident guidance, and Council-member context legible without the
+restored site's dependency decay. Its caption still identifies the present
+CallNYC instance as archived and unofficial.
 
 ## Guardrail
 

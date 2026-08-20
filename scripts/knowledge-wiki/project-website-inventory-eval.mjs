@@ -20,7 +20,7 @@ function read(root, relative) {
   return existsSync(file) ? readFileSync(file, "utf8") : "";
 }
 
-function resumeSources(root) {
+export function resumeSources(root) {
   const directory = path.join(root, paths.resumes);
   if (!existsSync(directory)) return [];
   return readdirSync(directory, { withFileTypes: true })
@@ -28,7 +28,7 @@ function resumeSources(root) {
     .flatMap((entry) => {
       const jobDir = path.join(directory, entry.name);
       return readdirSync(jobDir)
-        .filter((name) => name.endsWith(".md"))
+        .filter((name) => name.endsWith(".md") && /Resume/.test(name))
         .map((name) => ({ name: `${entry.name}/${name}`, text: readFileSync(path.join(jobDir, name), "utf8") }));
     });
 }

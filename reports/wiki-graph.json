@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-20T14:37:40-04:00",
   "sourceCommit": "964abcb5e37b944b46ad8a58c08d494bd8bb6a1d",
-  "sourceFingerprint": "6eea68c14cfe55d0a5d47e33c9614c8492ffaec455165540e50a17f2b61fe6a1",
+  "sourceFingerprint": "ae8742c056f32b5356498d8d5fcb47be805bafb87443b04890c1454325eb1e9c",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -4251,8 +4251,21 @@
       "sensitivity": "low",
       "summary": "Governed projection record for the public CallNYC case study.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
+      "lastReviewed": "2026-08-20",
       "reviewBy": "2026-10-18"
+    },
+    {
+      "id": "portfolio.work.kc-spaces-fund",
+      "path": "docs/knowledge-bank/projections/work-kc-spaces-fund.md",
+      "title": "KC Spaces Fund portfolio projection",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Governed projection record for the public KC Spaces Fund case study and homepage card.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-11-20"
     },
     {
       "id": "portfolio.work.technical-operations",
@@ -4319,9 +4332,9 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "moderate",
-      "summary": "Collaborator-led 2020 mutual-aid campaign for Kansas City cultural spaces, supported by Jamie through bounded digital infrastructure and cross-channel identity work.",
+      "summary": "Collaborator-led 2020 mutual-aid campaign for Kansas City cultural spaces, supported by Jamie through scoped digital infrastructure and cross-channel identity work.",
       "aliases": [],
-      "lastReviewed": "2026-07-19",
+      "lastReviewed": "2026-08-20",
       "reviewBy": "2026-10-19"
     },
     {
@@ -16930,6 +16943,14 @@
       "context": null
     },
     {
+      "from": "portfolio.work.kc-spaces-fund",
+      "type": "related_to",
+      "to": "project.kc-spaces-fund",
+      "source": "frontmatter",
+      "href": "../projects/kc-spaces-fund-orientation.md",
+      "context": null
+    },
+    {
       "from": "portfolio.work.technical-operations",
       "type": "related_to",
       "to": "capability.technical-operations",
@@ -17127,6 +17148,14 @@
       "to": "source.nys-dos.thick-arts-llc.formation.2012-07-06",
       "source": "frontmatter",
       "href": "../sources/nys-dos-thick-arts-llc-formation-2012-07-06.md",
+      "context": null
+    },
+    {
+      "from": "project.kc-spaces-fund",
+      "type": "projected_to",
+      "to": "portfolio.work.kc-spaces-fund",
+      "source": "frontmatter",
+      "href": "../projections/work-kc-spaces-fund.md",
       "context": null
     },
     {
@@ -23657,6 +23686,15 @@
       "to": null,
       "fragment": null,
       "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/kc-spaces-fund-orientation.md",
+      "from": "project.kc-spaces-fund",
+      "toPath": "docs/knowledge-bank/projections/work-kc-spaces-fund.md",
+      "to": "portfolio.work.kc-spaces-fund",
+      "fragment": null,
+      "line": 22,
       "kind": "link"
     },
     {

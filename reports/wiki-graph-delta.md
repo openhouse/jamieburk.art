@@ -3,13 +3,13 @@
 
 **Source commit:** `964abcb5e37b944b46ad8a58c08d494bd8bb6a1d`
 **Generation time:** 2026-08-20T14:37:40-04:00
-**Source fingerprint:** `6eea68c14cfe55d0a5d47e33c9614c8492ffaec455165540e50a17f2b61fe6a1`
+**Source fingerprint:** `ae8742c056f32b5356498d8d5fcb47be805bafb87443b04890c1454325eb1e9c`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 25
+- Nodes added: 26
 - Nodes removed: 0
-- Edges added: 111
+- Edges added: 113
 - Edges removed: 8
 - New type-aware orphans: 0
 - Current rights-review records: 185
@@ -27,6 +27,7 @@ Compared with the graph artifact on `origin/develop`.
 - `opportunity.uibk.studio3.postdoc.arch-15927`
 - `person.kathrin-aste`
 - `person.thomas-edlinger`
+- `portfolio.work.kc-spaces-fund`
 - `projection.photo.social-preview.east-river`
 - `research.nyc-oti-product-management-ranking.2026-08-20`
 - `source.jobs.oti.executive-director-product-management.789563`

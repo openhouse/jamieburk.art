@@ -29,6 +29,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     "metadata-and-locator-safety",
     "editorial-not-decorative",
     "truthful-project-cover-field",
+    "homepage-hiring-sequence",
     "tag-navigation-contract",
     "human-index-material-system",
     "responsive-image-contract",
@@ -152,12 +153,14 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
 
   const workCovers = readText("apps/www/src/data/work-covers.ts");
   const workData = readText("apps/www/src/data/work.ts");
+  const hiringSequenceDecision = readText("docs/design/homepage-hiring-sequence.md");
   const workCard = readText("apps/www/src/components/WorkCard.tsx");
   const caseStudyLayout = readText("apps/www/src/components/CaseStudyLayout.tsx");
+  const homePage = readText("apps/www/src/app/page.tsx");
   const workIndex = readText("apps/www/src/app/work/page.tsx");
   const tagList = readText("apps/www/src/components/TagList.tsx");
   const coverCount = [...workCovers.matchAll(/^  (?:"[^"]+"|[a-z]+): \{/gm)].length;
-  if (coverCount !== 6 ||
+  if (coverCount !== 7 ||
       !workCard.includes('from "next/image"') ||
       !workCard.includes("getWorkCover(item.slug)") ||
       !workCard.includes("cover.src") ||
@@ -167,12 +170,13 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
       !caseStudyLayout.includes("cover.src") ||
       !caseStudyLayout.includes("cover.caption") ||
       !caseStudyLayout.includes("cover.credit")) {
-    fail("truthful-project-cover-field", "All six work items and case studies must render one captioned and credited cover from the separate cover manifest.");
+    fail("truthful-project-cover-field", "All seven work items and case studies must render one captioned and credited cover from the separate cover manifest.");
   }
   for (const [title, requiredCover] of [
     ["Harry J. Epstein Company", '"/artifacts/hje/public-site.png"'],
     ["NYC Artist Coalition / FairRentNYC", "portfolioPhotos.nycacMarketHotelBanner.src"],
-    ["CallNYC.org", '"/artifacts/callnyc/archived-prototype.png"'],
+    ["CallNYC.org", '"/artifacts/callnyc/original-launch.webp"'],
+    ["KC Spaces Fund", '"/artifacts/kc-spaces-fund/public-site.webp"'],
     ["WOWList.org", '"/artifacts/wowlist/public-threshold.webp"'],
     ["196 Artists Residency / Sunday Dinner", "portfolioPhotos.sundayDinnerSharedMap.src"],
     ["KC Town Hall LLC", "portfolioPhotos.kcTownHallRoofWork.src"]
@@ -181,6 +185,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
       "Harry J. Epstein Company": '"harry-j-epstein"',
       "NYC Artist Coalition / FairRentNYC": '"fair-rent-nyc"',
       "CallNYC.org": "callnyc",
+      "KC Spaces Fund": '"kc-spaces-fund"',
       "WOWList.org": "wowlist",
       "196 Artists Residency / Sunday Dinner": '"196-sunday-dinner"',
       "KC Town Hall LLC": '"kc-town-hall"'
@@ -191,6 +196,51 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     if (slugIndex < 0 || !coverBlock.includes(`src: ${requiredCover}`)) {
       fail("truthful-project-cover-field", `Missing project-bound cover for ${title}.`);
     }
+  }
+
+  const sequenceMatch = workData.match(
+    /export const homepageHiringSequence = \[([\s\S]*?)\]\s+as const satisfies/
+  );
+  const observedSequence = sequenceMatch
+    ? [...sequenceMatch[1].matchAll(/"([^"]+)"/g)].map((match) => match[1])
+    : [];
+  const expectedSequence = [
+    "fair-rent-nyc",
+    "callnyc",
+    "kc-spaces-fund",
+    "harry-j-epstein",
+    "wowlist"
+  ];
+  const quickPath = [
+    'href: "/work/technical-operations"',
+    'href: "/work/fair-rent-nyc"',
+    'href: "/work/callnyc"',
+    'href: "/work/kc-spaces-fund"',
+    'href: "/resume"'
+  ];
+  let lastQuickPathIndex = -1;
+  const quickPathInOrder = quickPath.every((needle) => {
+    const index = homePage.indexOf(needle, lastQuickPathIndex + 1);
+    if (index < 0) return false;
+    lastQuickPathIndex = index;
+    return true;
+  });
+  if (
+    JSON.stringify(observedSequence) !== JSON.stringify(expectedSequence) ||
+    !workData.includes("export const featuredWork = homepageHiringSequence.map") ||
+    !homePage.includes("featuredWork.map") ||
+    !quickPathInOrder ||
+    homePage.includes('href: "/work/harry-j-epstein"') ||
+    !/current public instance remains archived, unofficial, and non-current/i.test(workData) ||
+    !workData.includes("Historical, collaborator-led campaign") ||
+    !hiringSequenceDecision.includes("The homepage is an argument, not a chronology") ||
+    !hiringSequenceDecision.includes("Is the work current?") ||
+    !hiringSequenceDecision.includes("A later reorder should name the changed hiring question")
+  ) {
+    fail(
+      "homepage-hiring-sequence",
+      "The approved five-project hiring sequence, mirrored quick path, or historical and collective-credit boundary has drifted."
+    );
   }
   if (workData.includes("approved public materials pending") ||
       !workData.includes("one human-reviewed project photograph cleared for this portfolio display with a Sunday Dinner NYC courtesy credit") ||

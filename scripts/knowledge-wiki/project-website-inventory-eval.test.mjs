@@ -1,11 +1,22 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import { evaluateProjectWebsites, loadCandidate } from "./project-website-inventory-eval.mjs";
+import {
+  evaluateProjectWebsites,
+  loadCandidate,
+  resumeSources
+} from "./project-website-inventory-eval.mjs";
 
 test("the dated project-website inventory and restored close readings pass", () => {
   const result = evaluateProjectWebsites(loadCandidate());
   assert.equal(result.passed, true, result.failures.join("\n"));
+});
+
+test("the website-link evaluator classifies resume markdown separately from cover letters", () => {
+  const resumes = resumeSources(process.cwd());
+  assert.equal(resumes.length, 5);
+  assert(resumes.every(({ name }) => /Resume/.test(name)));
+  assert(resumes.every(({ name }) => !/Cover-Letter/.test(name)));
 });
 
 test("Harry J. Epstein may remain plain text in maintained resumes", () => {

@@ -21,19 +21,19 @@ const startHereLinks = [
     note: "The fastest role-fit proof surface for public-sector technical operations, product operations, implementation, and delivery coordination."
   },
   {
-    href: "/work/harry-j-epstein",
-    label: "Harry J. Epstein Company",
-    note: "Legacy e-commerce, analytics, content, marketing, and operations modernization."
-  },
-  {
     href: "/work/fair-rent-nyc",
-    label: "FairRentNYC / Commercial Rent Stabilization",
-    note: "Campaign memory, source maps, public-data framing, and coalition operations."
+    label: "NYC Artist Coalition / FairRentNYC",
+    note: "Current cultural-space advocacy, coalition operations, campaign systems, and public-facing policy communication."
   },
   {
     href: "/work/callnyc",
     label: "CallNYC.org",
     note: "Civic open data translated into resident-facing guidance."
+  },
+  {
+    href: "/work/kc-spaces-fund",
+    label: "KC Spaces Fund",
+    note: "A polished campaign identity and rapid public implementation with clear action routes."
   },
   {
     href: "/resume",

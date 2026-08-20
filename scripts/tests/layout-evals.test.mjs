@@ -92,6 +92,39 @@ test("every work item retains a truthful cover visual", () => {
   assert(result.failures.some(({ criterion }) => criterion === "truthful-project-cover-field"));
 });
 
+test("the homepage retains the approved hiring sequence", () => {
+  const path = "apps/www/src/data/work.ts";
+  const source = readFileSync(path, "utf8").replace(
+    '  "fair-rent-nyc",\n  "callnyc",',
+    '  "callnyc",\n  "fair-rent-nyc",'
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "homepage-hiring-sequence"));
+});
+
+test("the KC Spaces Fund cover remains its own public website", () => {
+  const path = "apps/www/src/data/work-covers.ts";
+  const source = readFileSync(path, "utf8").replace(
+    'src: "/artifacts/kc-spaces-fund/public-site.webp",',
+    'src: "/artifacts/hje/public-site.png",'
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "truthful-project-cover-field"));
+});
+
+test("CallNYC retains the original launch screenshot", () => {
+  const path = "apps/www/src/data/work-covers.ts";
+  const source = readFileSync(path, "utf8").replace(
+    'src: "/artifacts/callnyc/original-launch.webp",',
+    'src: "/artifacts/callnyc/archived-prototype.png",'
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "truthful-project-cover-field"));
+});
+
 test("an authorized project cover cannot be described as still pending", () => {
   const path = "apps/www/src/data/work.ts";
   const source = readFileSync(path, "utf8").replace(

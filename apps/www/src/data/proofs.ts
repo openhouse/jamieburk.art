@@ -473,15 +473,15 @@ export const proofClaims: ProofClaim[] = [
       "Private Drive documents",
       "Sensitive strategy, legal, financial, or personal information"
     ],
-    surfaces: ["technical-operations"],
-    relatedProjects: [],
+    surfaces: ["homepage", "technical-operations", "work-card", "case-study"],
+    relatedProjects: ["kc-spaces-fund"],
     relatedCapabilities: [
       "public-facing-web-systems",
       "campaign-infrastructure",
       "implementation",
       "technical-operations"
     ],
-    lastReviewed: "2026-07-09"
+    lastReviewed: "2026-08-20"
   },
   {
     id: "kc-town-hall-public-benefit-documentation",

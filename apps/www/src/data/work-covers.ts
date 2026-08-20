@@ -34,13 +34,23 @@ const workCovers = {
     objectPosition: "50% 45%"
   },
   callnyc: {
-    src: "/artifacts/callnyc/archived-prototype.png",
-    width: 1185,
-    height: 790,
-    alt: "Archived CallNYC prototype showing issue navigation, resident guidance, and a Council member service profile.",
+    src: "/artifacts/callnyc/original-launch.webp",
+    width: 1200,
+    height: 800,
+    alt: "Original CallNYC launch interface showing U.S. citizenship guidance, issue navigation, and a Council member service profile.",
     caption:
-      "The archived prototype translated civic data into issue pathways, district context, and resident guidance.",
-    credit: "Archived public prototype capture, July 2026.",
+      "The original interface translated civic data into issue pathways, district context, and resident guidance. CallNYC is now archived and unofficial.",
+    credit: "Original CallNYC press-kit screenshot, 2016.",
+    kind: "screenshot"
+  },
+  "kc-spaces-fund": {
+    src: "/artifacts/kc-spaces-fund/public-site.webp",
+    width: 1200,
+    height: 800,
+    alt: "KC Spaces Fund website showing its cultural-space support message, donation route, navigation, and support section.",
+    caption:
+      "The 2020 campaign surface brought its purpose, donation, application, sign-up, contact, and fundraising pathways into one coherent public system.",
+    credit: "KC Spaces Fund public website capture, August 20, 2026; historical campaign content.",
     kind: "screenshot"
   },
   wowlist: {

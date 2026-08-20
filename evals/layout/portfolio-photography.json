@@ -1,5 +1,5 @@
 {
-  "id": "portfolio-photography-layout-v2",
+  "id": "portfolio-photography-layout-v3",
   "title": "Human Index photographic portfolio layout",
   "intent": "Photography changes the portfolio's editorial rhythm while remaining public-safe, accessible, and subordinate to human publication authority.",
   "criteria": [
@@ -21,12 +21,17 @@
     {
       "id": "editorial-not-decorative",
       "blocking": true,
-      "criterion": "The home photograph remains full-bleed and unchanged; the work index gives all six projects one truthful visual threshold by composing governed situated-work photographs with project-specific public screenshots; the Fair Rent NYC sequence retains its campaign screenshot, captions, credits, and interpretation boundaries; About and Colophon remain text-led."
+      "criterion": "The home photograph remains full-bleed and unchanged; the work index gives all seven projects one truthful visual threshold by composing governed situated-work photographs with project-specific public screenshots; the Fair Rent NYC sequence retains its campaign screenshot, captions, credits, and interpretation boundaries; About and Colophon remain text-led."
     },
     {
       "id": "truthful-project-cover-field",
       "blocking": true,
-      "criterion": "Every work item has exactly one project-bound cover. Harry J. Epstein, CallNYC, and WOW List use their own public surfaces; Fair Rent NYC, Sunday Dinner, and KC Town Hall use governed photographs. Resume, contact, About, and Colophon remain deliberately text-led."
+      "criterion": "Every work item has exactly one project-bound cover. Harry J. Epstein, CallNYC, KC Spaces Fund, and WOW List use their own public surfaces; Fair Rent NYC, Sunday Dinner, and KC Town Hall use governed photographs. Resume, contact, About, and Colophon remain deliberately text-led."
+    },
+    {
+      "id": "homepage-hiring-sequence",
+      "blocking": true,
+      "criterion": "The homepage presents exactly five featured proofs in the approved hiring order: current NYC Artist Coalition work, resident-facing CallNYC product translation, polished KC Spaces Fund implementation, long-term Harry J. Epstein operations, then WOW List platform thinking. The quick path mirrors the first three proofs and keeps the resume one action away."
     },
     {
       "id": "tag-navigation-contract",
