@@ -3,7 +3,7 @@
 
 **Source commit:** `8f863e21137af0683355e258efc6371f9c7e5344`
 **Generation time:** 2026-08-15T20:34:05-04:00
-**Source fingerprint:** `484be4b0383540046a6103cc62fe24dd196596f9ea8c0ff4db5a315606bbded2`
+**Source fingerprint:** `29a8bf9dfa53a0301e27508aaaceba2c2e70f52750c02de55dba42637da2a8fd`
 
 - [NYC OTI Senior Product Manager 782366 application milestone](../../applications/nyc-oti-senior-product-manager-782366.md) - `prose_link` (markdown)
 - [NYC OTI Senior Product Manager 782366 application milestone](../../applications/nyc-oti-senior-product-manager-782366.md) - `related_to` (frontmatter)
@@ -24,7 +24,9 @@
 - [Benepass - Product Operations Manager](../../opportunities/benepass-product-operations.md) - `related_to` (frontmatter)
 - [CodePath - Senior Program Manager, Claude Corps](../../opportunities/codepath-claude-corps.md) - `related_to` (frontmatter)
 - [CodePath - Engineering Project Manager](../../opportunities/codepath-engineering-project-manager.md) - `related_to` (frontmatter)
+- [NYC OTI - Product Manager 784450](../../opportunities/oti-product-manager-784450.md) - `related_to` (frontmatter)
 - [NYC OTI - PIT Crew Senior Product Manager 782366](../../opportunities/oti-senior-product-manager-782366.md) - `related_to` (frontmatter)
+- [NYC OTI - SPEED Operations Manager 789810](../../opportunities/oti-speed-operations-manager-789810.md) - `related_to` (frontmatter)
 - [NYC OTI - Technical Operations Manager 782369](../../opportunities/oti-technical-operations.md) - `related_to` (frontmatter)
 - [PermitFlow - Product Operations Manager](../../opportunities/permitflow-product-operations.md) - `related_to` (frontmatter)
 - [Protected source-backed team-memory consulting lead](../../opportunities/source-backed-team-memory.md) - `related_to` (frontmatter)

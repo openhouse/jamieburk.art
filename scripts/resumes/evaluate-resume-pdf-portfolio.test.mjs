@@ -16,7 +16,7 @@ function sha256(value) {
   return createHash("sha256").update(value).digest("hex");
 }
 
-test("all five opportunity resumes and the public active-opportunity resume have current inspected PDF siblings", () => {
+test("all five opportunity resumes and the lifecycle-selected public resume have current inspected PDF siblings", () => {
   const result = evaluateResumePdfPortfolio();
   assert.equal(result.overall, "pass", JSON.stringify(result, null, 2));
   assert.equal(result.summary.markdownPdfSiblingPairs, 6);
@@ -24,7 +24,7 @@ test("all five opportunity resumes and the public active-opportunity resume have
   assert.equal(result.summary.passingVersions, 6);
 
   const publicResume = result.versions.find(
-    (version) => version.artifactId === "resume.public.active-opportunity-portfolio.2026-08-15"
+    (version) => version.publicInstallPath === "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
   );
   assert.ok(publicResume, "The public resume must be part of the maintained PDF portfolio.");
   assert.equal(publicResume.publicInstallMatches, true);

@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "evalId": "public-resume-opportunity-selection-2026-08-20",
+  "evaluatedAt": "2026-08-20T12:00:00-04:00",
+  "asOf": "2026-08-20",
+  "overall": "pass",
+  "selection": {
+    "tier": "submitted-active",
+    "opportunityIds": [
+      "opportunity.nyc-oti.senior-product-manager.782366"
+    ],
+    "readerPairIds": [
+      "oti-product-luke-farrell",
+      "oti-product-lisa-gelobter"
+    ]
+  },
+  "deterministicChecks": [
+    {
+      "id": "opportunity-state-schema-valid",
+      "pass": true,
+      "detail": "All lifecycle, date, eligibility, and state combinations are valid."
+    },
+    {
+      "id": "selected-opportunities-have-readers",
+      "pass": true,
+      "detail": "2 unique reader/opportunity pairs cover 1 selected opportunities."
+    },
+    {
+      "id": "selected-opportunities-have-role-artifacts",
+      "pass": true,
+      "detail": "Every selected opportunity has Markdown and PDF resume artifacts."
+    },
+    {
+      "id": "selected-opportunities-have-public-model-context",
+      "pass": true,
+      "detail": "Every selected reader call is bound to repository-held public-safe context."
+    },
+    {
+      "id": "public-artifact-coverage-is-exact",
+      "pass": true,
+      "detail": "1/1 selected opportunities are declared by the public artifact."
+    },
+    {
+      "id": "public-artifacts-exist",
+      "pass": true,
+      "detail": "The maintained public Markdown, sibling PDF, and installed site PDF all exist."
+    },
+    {
+      "id": "public-pdf-install-is-exact",
+      "pass": true,
+      "detail": "The maintained public PDF and installed site PDF are byte-identical."
+    },
+    {
+      "id": "single-opportunity-public-source-is-exact",
+      "pass": true,
+      "detail": "The public Markdown and PDF are exact copies of the selected opportunity-specific pair."
+    },
+    {
+      "id": "current-selection-matches-reviewed-expectation",
+      "pass": true,
+      "detail": "submitted-active: opportunity.nyc-oti.senior-product-manager.782366"
+    },
+    {
+      "id": "model-call-budget-respected",
+      "pass": true,
+      "detail": "2/8 maximum calls planned."
+    }
+  ],
+  "selectedOpportunities": [
+    {
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "title": "NYC OTI PIT Crew Senior Product Manager",
+      "applicationState": "submitted",
+      "outcomeState": "pending",
+      "postingState": "open",
+      "closesOn": "2026-10-16",
+      "eligibilityState": "review-needed",
+      "readerPairIds": [
+        "oti-product-luke-farrell",
+        "oti-product-lisa-gelobter"
+      ]
+    }
+  ],
+  "skippedOpportunities": [
+    {
+      "opportunityId": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "reason": "active-application-tier-takes-precedence",
+      "skippedReaderPairIds": [
+        "oti-speed-operations-role",
+        "oti-speed-operations-lisa-gelobter"
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "reason": "active-application-tier-takes-precedence",
+      "skippedReaderPairIds": [
+        "oti-product-784450-role",
+        "oti-product-784450-lisa-gelobter"
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "reason": "active-application-tier-takes-precedence",
+      "skippedReaderPairIds": [
+        "oti-speed-spm-789610-role",
+        "oti-speed-spm-789610-lisa-gelobter"
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "reason": "active-application-tier-takes-precedence",
+      "skippedReaderPairIds": [
+        "oti-pit-designer-luke-farrell",
+        "oti-pit-designer-lisa-gelobter"
+      ]
+    },
+    {
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "reason": "active-application-tier-takes-precedence",
+      "skippedReaderPairIds": [
+        "codepath-zack-parker",
+        "codepath-chris-coleman"
+      ]
+    },
+    {
+      "opportunityId": "opportunity.aclu.senior-project-manager.8620968002",
+      "reason": "active-application-tier-takes-precedence",
+      "skippedReaderPairIds": [
+        "aclu-charizma-williams"
+      ]
+    },
+    {
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "reason": "active-application-tier-takes-precedence",
+      "skippedReaderPairIds": [
+        "benepass-aileen-palmer",
+        "benepass-jaclyn-chen"
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "reason": "active-application-tier-takes-precedence",
+      "skippedReaderPairIds": [
+        "oti-operations-lisa-gelobter"
+      ]
+    },
+    {
+      "opportunityId": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "reason": "hard-screen-not-met",
+      "skippedReaderPairIds": []
+    }
+  ],
+  "publicArtifact": {
+    "markdownPath": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.md",
+    "markdownSha256": "8bcba31995a193add743484e8966734761327a608dcd1a74f7f55ff191822830",
+    "pdfPath": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "pdfSha256": "96129a9a4df8b51b5fac3b0303a6904950c7c2e25a3f6dc93e098861a9e848bb",
+    "publicInstallPath": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "publicInstallSha256": "96129a9a4df8b51b5fac3b0303a6904950c7c2e25a3f6dc93e098861a9e848bb"
+  },
+  "llmPlan": {
+    "status": "eligible",
+    "plannedCallCount": 2,
+    "skippedCallCount": 14,
+    "calls": [
+      {
+        "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+        "readerPairId": "oti-product-luke-farrell",
+        "resumeMarkdownPath": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.md",
+        "resumeSha256": "8bcba31995a193add743484e8966734761327a608dcd1a74f7f55ff191822830",
+        "contextPaths": [
+          "docs/knowledge-bank/sources/jobs-oti-senior-product-manager-782366.md",
+          "docs/knowledge-bank/sources/nyc-pit-crew-launch-2026.md",
+          "docs/knowledge-bank/sources/luke-farrell-pit-crew-2026.md"
+        ],
+        "contextSha256": "81a472acc77c4ce08003b7e863dae67c77d94191d855a33535dfd8dd9a5756b5",
+        "postingSourceReviewedAt": "2026-08-20",
+        "promptVersion": "hiring-reader-public-resume-v1"
+      },
+      {
+        "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+        "readerPairId": "oti-product-lisa-gelobter",
+        "resumeMarkdownPath": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.md",
+        "resumeSha256": "8bcba31995a193add743484e8966734761327a608dcd1a74f7f55ff191822830",
+        "contextPaths": [
+          "docs/knowledge-bank/sources/jobs-oti-senior-product-manager-782366.md",
+          "docs/knowledge-bank/sources/nyc-pit-crew-launch-2026.md",
+          "docs/knowledge-bank/sources/nyc-lisa-gelobter-appointment-2026.md"
+        ],
+        "contextSha256": "b13034d6d57e0179572d1bf0f7a21dcd5be08c0052dcb21bab8e6bb7690b2bc8",
+        "postingSourceReviewedAt": "2026-08-20",
+        "promptVersion": "hiring-reader-public-resume-v1"
+      }
+    ],
+    "acceptanceQuestion": "Under this explicitly fictionalized public-source lens, would this reader advance Jamie from resume review to a structured interview or practical work sample for this opportunity?",
+    "actualPeopleParticipated": false,
+    "boundary": "This plan permits fictionalized public-source model evaluation only. It does not record actual participation, endorsement, an interview promise, or a hiring decision."
+  }
+}

@@ -3,7 +3,7 @@
 
 **Source commit:** `8f863e21137af0683355e258efc6371f9c7e5344`
 **Generation time:** 2026-08-15T20:34:05-04:00
-**Source fingerprint:** `484be4b0383540046a6103cc62fe24dd196596f9ea8c0ff4db5a315606bbded2`
+**Source fingerprint:** `29a8bf9dfa53a0301e27508aaaceba2c2e70f52750c02de55dba42637da2a8fd`
 
 - [KC Town Hall ten-minute-walk proposal map](../../assets/graphics/kc-town-hall-walkshed-2019.md) - `documents` (frontmatter)
 - [Kansas City Star aerial view of KC Town Hall](../../assets/photographs/kc-town-hall-kc-star-aerial-2021.md) - `related_to` (frontmatter)
@@ -28,6 +28,8 @@
 - [Participation and Relational Infrastructure](../../methods/participation-and-relational-infrastructure.md) - `related_to` (frontmatter)
 - [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `prose_link` (markdown)
 - [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `related_to` (frontmatter)
+- [NYC OTI - SPEED Operations Manager 789810](../../opportunities/oti-speed-operations-manager-789810.md) - `related_to` (frontmatter)
+- [NYC OTI - SPEED Senior Product Manager 789610](../../opportunities/oti-speed-senior-product-manager-789610.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
 - [Tired of Tires resident service](../../projects/tired-of-tires-resident-service.md) - `part_of` (frontmatter)
 - [Oral history prompt 001: Stewardship afterlife](../../notebooks/photography/oral-history-stewardship-afterlife-001.md) - `related_to` (frontmatter)

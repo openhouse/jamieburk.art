@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "candidateSha": "9b7c48434fe9f40eae7fe13cebf930044aab9c3d",
   "portfolioSnapshotHash": "c335cf3b8cf69a41146b9920e6a44b7440c816c980336f1e374cdb4fa4a742f9",
-  "publicReportHash": "fdd5a1d9809a3136ac25d908f15244d7a63a6504528d045bcb590467e0704dd8",
-  "wikiSourceFingerprint": "484be4b0383540046a6103cc62fe24dd196596f9ea8c0ff4db5a315606bbded2",
+  "publicReportHash": "58c2f351a14e5872c5ee7e0c94812a2edd54f4faa2e0726b56fc13267db1821d",
+  "wikiSourceFingerprint": "29a8bf9dfa53a0301e27508aaaceba2c2e70f52750c02de55dba42637da2a8fd",
   "findings": [
     {
       "findingId": "finding.requirement.codepath.qa-and-bug-pipeline",
@@ -81,6 +81,191 @@
       "currentStatus": "visible-weak",
       "gapType": "experience",
       "smallestResponsibleChange": "Inventory direct accessibility and compliance practice; site conformance alone is not product-leadership experience.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-speed-operations-789810.operating-backbone",
+      "opportunityId": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "requirementId": "requirement.oti-speed-operations-789810.operating-backbone",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations",
+        "project.kc-town-hall",
+        "project.nyc-artist-coalition"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "public-projection",
+      "smallestResponsibleChange": "Quantify a bounded budget, vendor, or dependency example where evidence permits.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-speed-operations-789810.people-operations",
+      "opportunityId": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "requirementId": "requirement.oti-speed-operations-789810.people-operations",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "project.wowlist",
+        "project.sunday-dinner-196",
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "role-context",
+      "smallestResponsibleChange": "Separate collaborator onboarding from formal employee-management claims.",
+      "requiresOriginalSourceReview": true,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-speed-operations-789810.procurement",
+      "opportunityId": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "requirementId": "requirement.oti-speed-operations-789810.procurement",
+      "classification": "true-experience-gap",
+      "wikiRecords": [
+        "project.kc-town-hall"
+      ],
+      "currentStatus": "visible-weak",
+      "gapType": "experience",
+      "smallestResponsibleChange": "Research the exact contracts, vendors, funding packets, and sign-off authority that can be stated publicly.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-product-manager-784450.product-lifecycle",
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "requirementId": "requirement.oti-product-manager-784450.product-lifecycle",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "project.callnyc",
+        "project.wowlist",
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "public-projection",
+      "smallestResponsibleChange": "Use one compact case showing Jamie's decisions across the full lifecycle.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-product-manager-784450.cross-functional",
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "requirementId": "requirement.oti-product-manager-784450.cross-functional",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "project.callnyc",
+        "project.nyc-artist-coalition",
+        "project.kc-town-hall.tired-of-tires"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "wording",
+      "smallestResponsibleChange": "Keep Jamie's role and collective credit explicit.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-product-manager-784450.data-and-kpis",
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "requirementId": "requirement.oti-product-manager-784450.data-and-kpis",
+      "classification": "true-experience-gap",
+      "wikiRecords": [
+        "project.wowlist",
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-weak",
+      "gapType": "experience",
+      "smallestResponsibleChange": "Prepare one measured product decision and state its limits.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-speed-spm-789610.business-cases",
+      "opportunityId": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "requirementId": "requirement.oti-speed-spm-789610.business-cases",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "project.kc-town-hall",
+        "project.callnyc",
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "public-projection",
+      "smallestResponsibleChange": "Present the chain from resident need through operating and architectural requirements.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-speed-spm-789610.data-systems",
+      "opportunityId": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "requirementId": "requirement.oti-speed-spm-789610.data-systems",
+      "classification": "true-experience-gap",
+      "wikiRecords": [
+        "project.wowlist",
+        "project.callnyc"
+      ],
+      "currentStatus": "visible-weak",
+      "gapType": "experience",
+      "smallestResponsibleChange": "Distinguish demonstrated data workflows from unproven enterprise data-governance depth.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-speed-spm-789610.influence",
+      "opportunityId": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "requirementId": "requirement.oti-speed-spm-789610.influence",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "project.nyc-artist-coalition",
+        "project.kc-town-hall",
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "wording",
+      "smallestResponsibleChange": "Use one City-facing decision with outcome and authority boundaries.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-pit-designer-782373.end-to-end-design",
+      "opportunityId": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "requirementId": "requirement.oti-pit-designer-782373.end-to-end-design",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "project.callnyc",
+        "project.wowlist",
+        "project.kc-town-hall.tired-of-tires"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "public-projection",
+      "smallestResponsibleChange": "Curate three cases around design decisions and tested use, not graphic output alone.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-pit-designer-782373.accessibility",
+      "opportunityId": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "requirementId": "requirement.oti-pit-designer-782373.accessibility",
+      "classification": "true-experience-gap",
+      "wikiRecords": [
+        "capability.technical-operations",
+        "project.callnyc"
+      ],
+      "currentStatus": "visible-weak",
+      "gapType": "experience",
+      "smallestResponsibleChange": "Inventory direct accessibility decisions without claiming unsupported conformance.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-pit-designer-782373.design-systems",
+      "opportunityId": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "requirementId": "requirement.oti-pit-designer-782373.design-systems",
+      "classification": "true-experience-gap",
+      "wikiRecords": [
+        "project.wowlist"
+      ],
+      "currentStatus": "experience-gap",
+      "gapType": "experience",
+      "smallestResponsibleChange": "Do not infer Figma or formal design-system tenure; produce a bounded work sample if applying.",
       "requiresOriginalSourceReview": false,
       "requiresHumanApproval": true
     },

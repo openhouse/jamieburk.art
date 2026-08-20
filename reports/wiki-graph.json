@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-15T20:34:05-04:00",
   "sourceCommit": "8f863e21137af0683355e258efc6371f9c7e5344",
-  "sourceFingerprint": "484be4b0383540046a6103cc62fe24dd196596f9ea8c0ff4db5a315606bbded2",
+  "sourceFingerprint": "29a8bf9dfa53a0301e27508aaaceba2c2e70f52750c02de55dba42637da2a8fd",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3310,8 +3310,8 @@
       "sensitivity": "low",
       "summary": "Task-oriented entry point for live opportunity research, historical role benchmarks, public-only hiring evaluation, and private-boundary rules.",
       "aliases": [],
-      "lastReviewed": "2026-08-15",
-      "reviewBy": "2026-09-13"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
     },
     {
       "id": "index.knowledge-wiki.family-closure",
@@ -3886,6 +3886,32 @@
       "reviewBy": "2026-08-16"
     },
     {
+      "id": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "path": "docs/knowledge-bank/opportunities/oti-pit-senior-product-designer-782373.md",
+      "title": "NYC OTI - PIT Crew Senior Product Designer 782373",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Adjacent but plausible PIT Crew opportunity joining Jamie's shipped web systems, visual practice, participatory research, plain language, and resident-facing delivery.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "opportunity.nyc-oti.product-manager.784450",
+      "path": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+      "title": "NYC OTI - Product Manager 784450",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Strong-fit OTI product opportunity centered on resident-facing discovery, roadmaps, requirements, launch, outcomes, and cross-functional delivery.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
       "id": "opportunity.nyc-oti.senior-product-manager.782366",
       "path": "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
       "title": "NYC OTI - PIT Crew Senior Product Manager 782366",
@@ -3895,8 +3921,34 @@
       "sensitivity": "low",
       "summary": "Public-safe requirement, qualification, and leadership-context map for four live OTI PIT Crew Senior Product Manager positions.",
       "aliases": [],
-      "lastReviewed": "2026-08-14",
-      "reviewBy": "2026-08-21"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "path": "docs/knowledge-bank/opportunities/oti-speed-operations-manager-789810.md",
+      "title": "NYC OTI - SPEED Operations Manager 789810",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exceptional-fit OTI operations role coordinating budget, procurement, people, dependencies, reporting, and product-team delivery for SPEED.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "path": "docs/knowledge-bank/opportunities/oti-speed-senior-product-manager-789610.md",
+      "title": "NYC OTI - SPEED Senior Product Manager 789610",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Strong-fit OTI role leading business cases, roadmaps, evidence, requirements, and digital-product delivery for the SPEED affordable-housing permitting program.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
     },
     {
       "id": "opportunity.nyc-oti.technical-operations-manager.782369",
@@ -4645,6 +4697,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "research.nyc-oti-product-management-ranking.2026-08-20",
+      "path": "docs/knowledge-bank/research-runs/nyc-oti-product-management-ranking-2026-08-20.md",
+      "title": "NYC OTI product-management search ranking, August 20, 2026",
+      "kind": "research-run",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Transparent person-specific ranking of all eleven roles returned by the official OTI product-manager search, with the top five admitted as opportunities.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
       "id": "research.nycac.frontline-advocacy.2026-08-12",
       "path": "docs/knowledge-bank/research-runs/nycac-frontline-advocacy-2026-08-12.md",
       "title": "NYCAC frontline advocacy source return, July 13-August 12, 2026",
@@ -4970,6 +5035,45 @@
       "reviewBy": "2026-08-16"
     },
     {
+      "id": "source.jobs.oti.executive-director-product-management.789563",
+      "path": "docs/knowledge-bank/sources/jobs-oti-executive-director-product-management-789563.md",
+      "title": "NYC Jobs - Executive Director, Product Management 789563",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official open OTI posting used only as role-level context for the Product Management department; it does not identify a person or prove reporting lines.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "source.jobs.oti.pit-senior-product-designer.782373",
+      "path": "docs/knowledge-bank/sources/jobs-oti-pit-senior-product-designer-782373.md",
+      "title": "NYC Jobs - PIT Crew Senior Product Designer 782373",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official OTI PIT Crew Senior Product Designer posting for end-to-end resident-facing research, interaction, content, and visual design.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "source.jobs.oti.product-manager.784450",
+      "path": "docs/knowledge-bank/sources/jobs-oti-product-manager-784450.md",
+      "title": "NYC Jobs - Product Manager 784450",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official OTI Product Manager posting for resident-facing digital-product delivery in the Product Development team.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
       "id": "source.jobs.oti.senior-product-manager.782366",
       "path": "docs/knowledge-bank/sources/jobs-oti-senior-product-manager-782366.md",
       "title": "NYC Jobs - Senior Product Manager 782366",
@@ -4977,10 +5081,36 @@
       "status": "maintained",
       "visibility": "public",
       "sensitivity": "low",
-      "summary": "Official City of New York posting for four OTI Public Interest Technology Crew Senior Product Manager positions, rechecked August 13, 2026.",
+      "summary": "Official City of New York posting for four OTI Public Interest Technology Crew Senior Product Manager positions, rechecked after an August 17 repost.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2026-08-14"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "source.jobs.oti.speed-operations-manager.789810",
+      "path": "docs/knowledge-bank/sources/jobs-oti-speed-operations-manager-789810.md",
+      "title": "NYC Jobs - SPEED Operations Manager 789810",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official OTI Operations Manager posting for budget, procurement, people, dependency, and delivery operations supporting the SPEED team.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "source.jobs.oti.speed-senior-product-manager.789610",
+      "path": "docs/knowledge-bank/sources/jobs-oti-speed-senior-product-manager-789610.md",
+      "title": "NYC Jobs - SPEED Senior Product Manager 789610",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official OTI Senior Product Manager posting for digital products intended to shorten new-construction permitting through the SPEED program.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
     },
     {
       "id": "source.jobs.oti.technical-operations.782369",
@@ -5217,6 +5347,19 @@
       "reviewBy": "2026-09-26"
     },
     {
+      "id": "source.nyc-jobs.oti-product-search.2026-08-20",
+      "path": "docs/knowledge-bank/sources/nyc-jobs-oti-product-search-2026-08-20.md",
+      "title": "NYC Jobs OTI product-management search, August 20, 2026",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official NYC Jobs search result and posting-level verification for eleven OTI product, operations, design, research, engineering, architecture, and cybersecurity roles.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
       "id": "source.nyc.diya-vij-appointment.2026",
       "path": "docs/knowledge-bank/sources/dcla-diya-vij-appointment-2026.md",
       "title": "Appointment of Diya Vij as Commissioner of Cultural Affairs",
@@ -5254,6 +5397,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-13",
       "reviewBy": "2026-11-13"
+    },
+    {
+      "id": "source.nyc.speed-report.2026-05-13",
+      "path": "docs/knowledge-bank/sources/nyc-speed-report-2026.md",
+      "title": "NYC SPEED report and release, May 2026",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official program context for the interagency Streamlining Procedures to Expedite Equitable Development task force and its affordable-housing delivery reforms.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-11-20"
     },
     {
       "id": "source.nycac.dcla-formation-source-return.2026-07",
@@ -13209,9 +13365,41 @@
     {
       "from": "index.knowledge-wiki.employment-context",
       "type": "related_to",
+      "to": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-pit-senior-product-designer-782373.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-product-manager-784450.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
       "to": "opportunity.nyc-oti.senior-product-manager.782366",
       "source": "frontmatter",
       "href": "../opportunities/oti-senior-product-manager-782366.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-operations-manager-789810.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-senior-product-manager-789610.md",
       "context": null
     },
     {
@@ -15561,6 +15749,116 @@
       "context": null
     },
     {
+      "from": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "type": "evidence:direct-support",
+      "to": "source.jobs.oti.pit-senior-product-designer.782373",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official role facts",
+        "responsibilities",
+        "preferred skills",
+        "civil-service title",
+        "salary",
+        "and deadline"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "type": "related_to",
+      "to": "person.lisa-gelobter",
+      "source": "frontmatter",
+      "href": "../people/lisa-gelobter.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "type": "related_to",
+      "to": "person.luke-farrell",
+      "source": "frontmatter",
+      "href": "../people/luke-farrell.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "type": "uses_source",
+      "to": "source.jobs.oti.pit-senior-product-designer.782373",
+      "source": "frontmatter",
+      "href": "../sources/jobs-oti-pit-senior-product-designer-782373.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "type": "uses_source",
+      "to": "source.nyc.pit-crew-launch.2026-07-13",
+      "source": "frontmatter",
+      "href": "../sources/nyc-pit-crew-launch-2026.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "type": "evidence:direct-support",
+      "to": "source.jobs.oti.product-manager.784450",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official role facts",
+        "responsibilities",
+        "preferred skills",
+        "civil-service title",
+        "salary",
+        "and deadline"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "type": "related_to",
+      "to": "person.lisa-gelobter",
+      "source": "frontmatter",
+      "href": "../people/lisa-gelobter.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "type": "uses_source",
+      "to": "source.jobs.oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../sources/jobs-oti-product-manager-784450.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "type": "uses_source",
+      "to": "source.nyc-jobs.oti-product-search.2026-08-20",
+      "source": "frontmatter",
+      "href": "../sources/nyc-jobs-oti-product-search-2026-08-20.md",
+      "context": null
+    },
+    {
       "from": "opportunity.nyc-oti.senior-product-manager.782366",
       "type": "evidence:context",
       "to": "source.nyc.pit-crew-launch.2026-07-13",
@@ -15587,7 +15885,7 @@
       "source": "evidence",
       "confidence": "high",
       "supports": [
-        "official role facts, requirements, civil-service screen, and deadline rechecked August 13, 2026"
+        "official role facts, requirements, civil-service screen, and current repost deadline rechecked August 20, 2026"
       ]
     },
     {
@@ -15668,6 +15966,138 @@
       "to": "source.public.luke-farrell-pit-crew.2026-07",
       "source": "frontmatter",
       "href": "../sources/luke-farrell-pit-crew-2026.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "type": "evidence:context",
+      "to": "source.nyc.speed-report.2026-05-13",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "program purpose and interagency delivery context"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "type": "evidence:direct-support",
+      "to": "source.jobs.oti.speed-operations-manager.789810",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official role facts",
+        "responsibilities",
+        "preferred skills",
+        "civil-service title",
+        "salary",
+        "and deadline"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "type": "related_to",
+      "to": "person.lisa-gelobter",
+      "source": "frontmatter",
+      "href": "../people/lisa-gelobter.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "type": "uses_source",
+      "to": "source.jobs.oti.speed-operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../sources/jobs-oti-speed-operations-manager-789810.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "type": "uses_source",
+      "to": "source.nyc.speed-report.2026-05-13",
+      "source": "frontmatter",
+      "href": "../sources/nyc-speed-report-2026.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "type": "evidence:context",
+      "to": "source.nyc.speed-report.2026-05-13",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official SPEED purpose",
+        "stakeholder scale",
+        "and program-level reform goals"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "type": "evidence:direct-support",
+      "to": "source.jobs.oti.speed-senior-product-manager.789610",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official role facts",
+        "responsibilities",
+        "preferred skills",
+        "civil-service screen",
+        "salary",
+        "and deadline"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "type": "related_to",
+      "to": "person.lisa-gelobter",
+      "source": "frontmatter",
+      "href": "../people/lisa-gelobter.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "type": "uses_source",
+      "to": "source.jobs.oti.speed-senior-product-manager.789610",
+      "source": "frontmatter",
+      "href": "../sources/jobs-oti-speed-senior-product-manager-789610.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "type": "uses_source",
+      "to": "source.nyc.speed-report.2026-05-13",
+      "source": "frontmatter",
+      "href": "../sources/nyc-speed-report-2026.md",
       "context": null
     },
     {
@@ -17767,6 +18197,62 @@
       "context": null
     },
     {
+      "from": "research.nyc-oti-product-management-ranking.2026-08-20",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-pit-senior-product-designer-782373.md",
+      "context": null
+    },
+    {
+      "from": "research.nyc-oti-product-management-ranking.2026-08-20",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-product-manager-784450.md",
+      "context": null
+    },
+    {
+      "from": "research.nyc-oti-product-management-ranking.2026-08-20",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-senior-product-manager-782366.md",
+      "context": null
+    },
+    {
+      "from": "research.nyc-oti-product-management-ranking.2026-08-20",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-operations-manager-789810.md",
+      "context": null
+    },
+    {
+      "from": "research.nyc-oti-product-management-ranking.2026-08-20",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-senior-product-manager-789610.md",
+      "context": null
+    },
+    {
+      "from": "research.nyc-oti-product-management-ranking.2026-08-20",
+      "type": "uses_source",
+      "to": "source.nyc-jobs.oti-product-search.2026-08-20",
+      "source": "frontmatter",
+      "href": "../sources/nyc-jobs-oti-product-search-2026-08-20.md",
+      "context": null
+    },
+    {
+      "from": "research.nyc-oti-product-management-ranking.2026-08-20",
+      "type": "uses_source",
+      "to": "source.nyc.speed-report.2026-05-13",
+      "source": "frontmatter",
+      "href": "../sources/nyc-speed-report-2026.md",
+      "context": null
+    },
+    {
       "from": "research.nycac.frontline-advocacy.2026-08-12",
       "type": "related_to",
       "to": "claim.nycac.frontline-advocacy.2026-08",
@@ -18215,6 +18701,46 @@
       "context": null
     },
     {
+      "from": "source.jobs.oti.executive-director-product-management.789563",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-product-manager-784450.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.oti.executive-director-product-management.789563",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-operations-manager-789810.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.oti.executive-director-product-management.789563",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-senior-product-manager-789610.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.oti.pit-senior-product-designer.782373",
+      "type": "supports",
+      "to": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-pit-senior-product-designer-782373.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.oti.product-manager.784450",
+      "type": "supports",
+      "to": "opportunity.nyc-oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-product-manager-784450.md",
+      "context": null
+    },
+    {
       "from": "source.jobs.oti.senior-product-manager.782366",
       "type": "related_to",
       "to": "application.wowlist.senior-product-manager-oti-782366",
@@ -18228,6 +18754,22 @@
       "to": "opportunity.nyc-oti.senior-product-manager.782366",
       "source": "frontmatter",
       "href": "../opportunities/oti-senior-product-manager-782366.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.oti.speed-operations-manager.789810",
+      "type": "supports",
+      "to": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-operations-manager-789810.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.oti.speed-senior-product-manager.789610",
+      "type": "supports",
+      "to": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-senior-product-manager-789610.md",
       "context": null
     },
     {
@@ -18455,6 +18997,46 @@
       "context": null
     },
     {
+      "from": "source.nyc-jobs.oti-product-search.2026-08-20",
+      "type": "related_to",
+      "to": "research.nyc-oti-product-management-ranking.2026-08-20",
+      "source": "frontmatter",
+      "href": "../research-runs/nyc-oti-product-management-ranking-2026-08-20.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc-jobs.oti-product-search.2026-08-20",
+      "type": "supports",
+      "to": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-pit-senior-product-designer-782373.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc-jobs.oti-product-search.2026-08-20",
+      "type": "supports",
+      "to": "opportunity.nyc-oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-product-manager-784450.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc-jobs.oti-product-search.2026-08-20",
+      "type": "supports",
+      "to": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-operations-manager-789810.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc-jobs.oti-product-search.2026-08-20",
+      "type": "supports",
+      "to": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-senior-product-manager-789610.md",
+      "context": null
+    },
+    {
       "from": "source.nyc.diya-vij-appointment.2026",
       "type": "related_to",
       "to": "person.diya-vij",
@@ -18500,6 +19082,22 @@
       "to": "person.luke-farrell",
       "source": "frontmatter",
       "href": "../people/luke-farrell.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.speed-report.2026-05-13",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-operations-manager-789810.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.speed-report.2026-05-13",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-senior-product-manager-789610.md",
       "context": null
     },
     {
@@ -20451,10 +21049,55 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
+      "to": "opportunity.aclu.product-manager-discovery.8482872002",
+      "fragment": null,
+      "line": 100,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
+      "to": "opportunity.codepath.claude-corps.5182020007",
+      "fragment": null,
+      "line": 101,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
+      "to": "opportunity.asana.ai-implementation.8027437",
+      "fragment": null,
+      "line": 102,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
+      "to": "opportunity.permitflow.product-operations.8a6e6066",
+      "fragment": null,
+      "line": 103,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
+      "to": "opportunity.protected.source-backed-memory-consulting.2026",
+      "fragment": null,
+      "line": 107,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
       "to": "evaluation.employment-context.coverage.2026-07-18",
       "fragment": null,
-      "line": 119,
+      "line": 133,
       "kind": "link"
     },
     {
@@ -20463,7 +21106,7 @@
       "toPath": "docs/knowledge-bank/evaluations/employment-leadership-context-2026-08-13.md",
       "to": "evaluation.employment-leadership-context.2026-08-13",
       "fragment": null,
-      "line": 120,
+      "line": 134,
       "kind": "link"
     },
     {
@@ -20472,7 +21115,7 @@
       "toPath": "reports/wiki-opportunity-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 121,
+      "line": 135,
       "kind": "link"
     },
     {
@@ -20481,7 +21124,7 @@
       "toPath": "reports/wiki-career-trajectory-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 122,
+      "line": 136,
       "kind": "link"
     },
     {
@@ -20490,7 +21133,7 @@
       "toPath": "reports/wiki-source-channel-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 123,
+      "line": 137,
       "kind": "link"
     },
     {
@@ -20499,7 +21142,7 @@
       "toPath": "reports/wiki-opportunity-discovery.md",
       "to": null,
       "fragment": null,
-      "line": 124,
+      "line": 138,
       "kind": "link"
     },
     {
@@ -20508,16 +21151,7 @@
       "toPath": "reports/hiring-acceptance-public.md",
       "to": null,
       "fragment": null,
-      "line": 125,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/hiring-acceptance-gap-resolution.md",
-      "to": null,
-      "fragment": null,
-      "line": 126,
+      "line": 139,
       "kind": "link"
     },
     {
@@ -20527,6 +21161,15 @@
       "to": "opportunity.codepath.engineering-project-manager.5160542007",
       "fragment": null,
       "line": 14,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/hiring-acceptance-gap-resolution.md",
+      "to": null,
+      "fragment": null,
+      "line": 140,
       "kind": "link"
     },
     {
@@ -20559,10 +21202,55 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/oti-speed-operations-manager-789810.md",
+      "to": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "fragment": null,
+      "line": 18,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+      "to": "opportunity.nyc-oti.product-manager.784450",
+      "fragment": null,
+      "line": 19,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/oti-speed-senior-product-manager-789610.md",
+      "to": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "fragment": null,
+      "line": 20,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/oti-pit-senior-product-designer-782373.md",
+      "to": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "fragment": null,
+      "line": 21,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/research-runs/nyc-oti-product-management-ranking-2026-08-20.md",
+      "to": "research.nyc-oti-product-management-ranking.2026-08-20",
+      "fragment": null,
+      "line": 25,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/applications/nyc-oti-senior-product-manager-782366.md",
       "to": "application.nyc-oti.senior-product-manager.782366",
       "fragment": null,
-      "line": 33,
+      "line": 47,
       "kind": "link"
     },
     {
@@ -20571,7 +21259,7 @@
       "toPath": "docs/knowledge-bank/evaluations/named-public-reader-acceptance-2026-08-13.md",
       "to": "evaluation.named-public-reader-acceptance.2026-08-13",
       "fragment": null,
-      "line": 58,
+      "line": 72,
       "kind": "link"
     },
     {
@@ -20580,7 +21268,7 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
       "to": "opportunity.nyc-oti.technical-operations-manager.782369",
       "fragment": null,
-      "line": 64,
+      "line": 78,
       "kind": "link"
     },
     {
@@ -20589,52 +21277,7 @@
       "toPath": "docs/knowledge-bank/opportunities/uibk-studio3-postdoc-arch-15927.md",
       "to": "opportunity.uibk.studio3.postdoc.arch-15927",
       "fragment": null,
-      "line": 73,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
-      "to": "opportunity.aclu.product-manager-discovery.8482872002",
-      "fragment": null,
-      "line": 86,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
-      "to": "opportunity.codepath.claude-corps.5182020007",
-      "fragment": null,
       "line": 87,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
-      "to": "opportunity.asana.ai-implementation.8027437",
-      "fragment": null,
-      "line": 88,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
-      "to": "opportunity.permitflow.product-operations.8a6e6066",
-      "fragment": null,
-      "line": 89,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
-      "to": "opportunity.protected.source-backed-memory-consulting.2026",
-      "fragment": null,
-      "line": 93,
       "kind": "link"
     },
     {

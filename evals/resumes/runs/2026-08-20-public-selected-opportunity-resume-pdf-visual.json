@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "evalId": "resume.public.lifecycle-selected-opportunities.2026-08-20.pdf-visual",
+  "inspectedAt": "2026-08-20T12:35:00-04:00",
+  "sourceTemplate": {
+    "access": "read-only source; the public artifact is an exact copy of the currently selected opportunity-specific resume",
+    "revisionUnchangedAfterExport": true,
+    "privateLocatorCommitted": false
+  },
+  "markdown": {
+    "path": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.md",
+    "sha256": "8bcba31995a193add743484e8966734761327a608dcd1a74f7f55ff191822830"
+  },
+  "pdf": {
+    "path": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "sha256": "96129a9a4df8b51b5fac3b0303a6904950c7c2e25a3f6dc93e098861a9e848bb",
+    "bytes": 95157,
+    "pages": 2,
+    "pageSize": "US Letter"
+  },
+  "inspection": {
+    "method": "Confirmed byte identity with the selected PIT Crew opportunity PDF, rasterized every page at 144 DPI, visually inspected both pages at original detail, checked the extracted text layer, and checked preserved PDF link annotations.",
+    "allPagesRasterized": true,
+    "actualNamedPeopleParticipated": false,
+    "pages": [
+      {
+        "page": 1,
+        "pass": true,
+        "notes": "Name, Senior Product Manager title, contact links, professional summary, core skills, Thick Arts LLC, and NYC Artist Coalition / FairRentNYC are legible with strong hierarchy and no clipping, overlap, orphaned heading, or accidental hyperlink on Harry J. Epstein Company."
+      },
+      {
+        "page": 2,
+        "pass": true,
+        "notes": "WOWList.org, CallNYC.org, KC Town Hall, additional leadership, education, and work authorization are complete and legible. Politico New York is visibly blue and underlined and links to the archived article PDF; project links remain intact; no text is clipped or overlapped."
+      }
+    ]
+  },
+  "overall": "pass",
+  "boundary": "Artifact and visual-quality inspection only. No named hiring reader participated, and a pass is not an endorsement, interview promise, eligibility determination, or hiring decision."
+}

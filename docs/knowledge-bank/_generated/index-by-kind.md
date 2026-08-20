@@ -3,7 +3,7 @@
 
 **Source commit:** `8f863e21137af0683355e258efc6371f9c7e5344`
 **Generation time:** 2026-08-15T20:34:05-04:00
-**Source fingerprint:** `484be4b0383540046a6103cc62fe24dd196596f9ea8c0ff4db5a315606bbded2`
+**Source fingerprint:** `29a8bf9dfa53a0301e27508aaaceba2c2e70f52750c02de55dba42637da2a8fd`
 
 ## application
 
@@ -333,7 +333,11 @@
 - [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md) - `opportunity.benepass.product-operations.7f963a7a`
 - [CodePath - Senior Program Manager, Claude Corps](../opportunities/codepath-claude-corps.md) - `opportunity.codepath.claude-corps.5182020007`
 - [CodePath - Engineering Project Manager](../opportunities/codepath-engineering-project-manager.md) - `opportunity.codepath.engineering-project-manager.5160542007`
+- [NYC OTI - PIT Crew Senior Product Designer 782373](../opportunities/oti-pit-senior-product-designer-782373.md) - `opportunity.nyc-oti.pit-senior-product-designer.782373`
+- [NYC OTI - Product Manager 784450](../opportunities/oti-product-manager-784450.md) - `opportunity.nyc-oti.product-manager.784450`
 - [NYC OTI - PIT Crew Senior Product Manager 782366](../opportunities/oti-senior-product-manager-782366.md) - `opportunity.nyc-oti.senior-product-manager.782366`
+- [NYC OTI - SPEED Operations Manager 789810](../opportunities/oti-speed-operations-manager-789810.md) - `opportunity.nyc-oti.speed-operations-manager.789810`
+- [NYC OTI - SPEED Senior Product Manager 789610](../opportunities/oti-speed-senior-product-manager-789610.md) - `opportunity.nyc-oti.speed-senior-product-manager.789610`
 - [NYC OTI - Technical Operations Manager 782369](../opportunities/oti-technical-operations.md) - `opportunity.nyc-oti.technical-operations-manager.782369`
 - [PermitFlow - Product Operations Manager](../opportunities/permitflow-product-operations.md) - `opportunity.permitflow.product-operations.8a6e6066`
 - [Protected source-backed team-memory consulting lead](../opportunities/source-backed-team-memory.md) - `opportunity.protected.source-backed-memory-consulting.2026`
@@ -413,6 +417,7 @@
 - [Foundational Wiki page source return, July 19, 2026](../research-runs/foundational-source-return-2026-07-19.md) - `research.foundational-source-return.2026-07-19`
 - [Interpretive layer source return, July 19, 2026](../research-runs/interpretive-layer-source-return-2026-07-19.md) - `research.interpretive-layer-source-return.2026-07-19`
 - [Knowledge Wiki branch-family closure review](../research-runs/knowledge-wiki-family-closure-2026-07-19.md) - `research.knowledge-wiki-family-closure.2026-07-19`
+- [NYC OTI product-management search ranking, August 20, 2026](../research-runs/nyc-oti-product-management-ranking-2026-08-20.md) - `research.nyc-oti-product-management-ranking.2026-08-20`
 - [NYCAC frontline advocacy source return, July 13-August 12, 2026](../research-runs/nycac-frontline-advocacy-2026-08-12.md) - `research.nycac.frontline-advocacy.2026-08-12`
 - [NYC Artist Coalition shared-folder archival production](../research-runs/nycac-shared-folder-2026-07-19.md) - `research.nycac.shared-folder.2026-07-19`
 - [Photographic source return for DCLA, KC Town Hall, and Council fieldwork](../research-runs/photographic-source-return-2026-07-26.md) - `research.photographic-source-return.2026-07-26`
@@ -441,7 +446,12 @@
 - [Official posting - Benepass Product Operations Manager](../sources/jobs-benepass-product-operations.md) - `source.jobs.benepass.product-operations.7f963a7a`
 - [CodePath - Senior Program Manager, Claude Corps 5182020007](../sources/jobs-codepath-claude-corps-5182020007.md) - `source.jobs.codepath.claude-corps.5182020007`
 - [Official posting - CodePath Engineering Project Manager 5160542007](../sources/jobs-codepath-engineering-project-manager-5160542007.md) - `source.jobs.codepath.engineering-project-manager.5160542007`
+- [NYC Jobs - Executive Director, Product Management 789563](../sources/jobs-oti-executive-director-product-management-789563.md) - `source.jobs.oti.executive-director-product-management.789563`
+- [NYC Jobs - PIT Crew Senior Product Designer 782373](../sources/jobs-oti-pit-senior-product-designer-782373.md) - `source.jobs.oti.pit-senior-product-designer.782373`
+- [NYC Jobs - Product Manager 784450](../sources/jobs-oti-product-manager-784450.md) - `source.jobs.oti.product-manager.784450`
 - [NYC Jobs - Senior Product Manager 782366](../sources/jobs-oti-senior-product-manager-782366.md) - `source.jobs.oti.senior-product-manager.782366`
+- [NYC Jobs - SPEED Operations Manager 789810](../sources/jobs-oti-speed-operations-manager-789810.md) - `source.jobs.oti.speed-operations-manager.789810`
+- [NYC Jobs - SPEED Senior Product Manager 789610](../sources/jobs-oti-speed-senior-product-manager-789610.md) - `source.jobs.oti.speed-senior-product-manager.789610`
 - [NYC Jobs - Technical Operations Manager 782369](../sources/jobs-oti-technical-operations-782369.md) - `source.jobs.oti.technical-operations.782369`
 - [Official posting - PermitFlow Product Operations Manager](../sources/jobs-permitflow-product-operations.md) - `source.jobs.permitflow.product-operations.8a6e6066`
 - [Official posting - University of Innsbruck ./studio3 postdoc ARCH-15927](../sources/jobs-uibk-studio3-postdoc-arch-15927.md) - `source.jobs.uibk.studio3.postdoc.arch-15927`
@@ -460,9 +470,11 @@
 - [MIT Interrogative Design Symposium event page](../sources/mit-interrogative-design-symposium-2024.md) - `source.mit.interrogative-design-symposium.2024`
 - [Archived NTER CHNG project homepage](../sources/nter-chng-archived-homepage-2011.md) - `source.nter-chng.archived-homepage.2011`
 - [NYC Council field-kit photograph oral history, July 2026](../sources/recollections/nyc-council-field-kit-oral-history-2026-07.md) - `source.nyc-council.field-kit-oral-history.2026-07`
+- [NYC Jobs OTI product-management search, August 20, 2026](../sources/nyc-jobs-oti-product-search-2026-08-20.md) - `source.nyc-jobs.oti-product-search.2026-08-20`
 - [Appointment of Diya Vij as Commissioner of Cultural Affairs](../sources/dcla-diya-vij-appointment-2026.md) - `source.nyc.diya-vij-appointment.2026`
 - [NYC Mayor's Office - Lisa Gelobter appointment](../sources/nyc-lisa-gelobter-appointment-2026.md) - `source.nyc.lisa-gelobter-appointment.2026-02-10`
 - [NYC Mayor's Office - PIT Crew launch announcement](../sources/nyc-pit-crew-launch-2026.md) - `source.nyc.pit-crew-launch.2026-07-13`
+- [NYC SPEED report and release, May 2026](../sources/nyc-speed-report-2026.md) - `source.nyc.speed-report.2026-05-13`
 - [NYC Artist Coalition DCLA formation source return, 2026](../sources/archives/nycac-dcla-formation-source-return-2026-07.md) - `source.nycac.dcla-formation-source-return.2026-07`
 - [Governed NYCAC frontline advocacy source comparison, July 13-August 12, 2026](../sources/archives/nycac-frontline-advocacy-2026-08.md) - `source.nycac.frontline-advocacy.2026-08`
 - [NYC nightlife forum corrected working transcript, 2026](../sources/nycac-nightlife-forum-transcript-2026.md) - `source.nycac.nightlife-forum-transcript.2026`

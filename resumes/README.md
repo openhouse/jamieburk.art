@@ -30,9 +30,8 @@ human gates.
 
 The resume installed at
 `apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf`
-is not an application-specific artifact. It is the universal public resume for
-every opportunity that remains both active and truthfully hirable in
-`evals/knowledge-wiki/hiring-suites.json`.
+is a stable public URL whose content follows the lifecycle selection model in
+`evals/resumes/public-resume-selection.json`.
 
 Its authoritative Markdown source is:
 
@@ -40,17 +39,31 @@ Its authoritative Markdown source is:
 resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.md
 ```
 
-The public resume must pass every isolated fictionalized hiring-reader gate
-attached to that exact active set. A live role with an unmet hard screen remains
-discoverable in the Knowledge Wiki but is excluded from the public-resume target
-set. A submitted application remains active while its outcome is pending. An
-expired or closed role remains only as an explicitly labeled benchmark.
+The selector applies these tiers in order:
 
-When an opportunity enters or leaves the truthfully hirable set, update the
-Knowledge Wiki lifecycle first, then revise the universal Markdown, its PDF,
-visual receipt, and hiring-reader run together. A role-specific application
-resume may be more narrowly tailored; it never silently replaces the universal
-public resume.
+1. Every submitted, interviewing, or offer-stage application with a pending
+   outcome, even if its application deadline has passed.
+2. If no candidacy is active, every fresh, open, unapplied opportunity that
+   remains considered and has no failed or unknown hard screen.
+3. If neither current tier has members, the ceiling of the top quarter of
+   eligible historical opportunities by frozen fit score.
+
+The public resume must pass every isolated fictionalized hiring-reader gate
+attached to the exact selected set. A live role with an unmet hard screen
+remains discoverable in the Knowledge Wiki but is excluded. An expired or
+closed role remains only as an explicitly labeled benchmark.
+
+When an opportunity changes lifecycle, update the Knowledge Wiki and selector
+state first. Deterministic date, eligibility, artifact, exact-copy, safety, and
+reader-coverage checks run before any model review. Only the selected reader
+pairs become model-eligible; unchanged results are cached by opportunity,
+reader, resume hash, public-context hash, posting-review date, and prompt
+version. A role-specific application resume may be more narrowly tailored; it
+becomes the public resume only when the selector makes it the exact current set.
+
+The model reviews are explicitly fictionalized public-source analytical lenses.
+Named people do not participate or endorse Jamie. A pass means advance to a
+structured interview or practical work sample, not a final hiring decision.
 
 ## Markdown, Google Docs, and PDF contract
 

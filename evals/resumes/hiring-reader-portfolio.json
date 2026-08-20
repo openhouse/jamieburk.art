@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "id": "resume-hiring-reader-portfolio-2026-08-14",
-  "evaluatedAt": "2026-08-15T08:15:00-04:00",
-  "currentRunPath": "evals/resumes/runs/2026-08-15-hiring-reader-resume-portfolio-universal-public.json",
+  "evaluatedAt": "2026-08-20T12:30:00-04:00",
+  "currentRunPath": "evals/resumes/runs/2026-08-20-hiring-reader-resume-preflight.json",
   "methodology": {
     "skill": "interviewing-evaluating-candidates",
     "installedPath": ".agents/skills/interviewing-evaluating-candidates/SKILL.md",
@@ -10,12 +10,13 @@
     "principles": [
       "Define the role's core rather than screening for a generic good candidate.",
       "Evaluate every candidate artifact against the same opportunity-specific evidence groups.",
-      "Treat the resume as an advance-to-next-step screen, not proof of a final hiring decision.",
+      "Treat deterministic phrase coverage as a preflight for a separate fictionalized model review, not as a hiring verdict.",
+      "Treat any later model pass as an advance-to-next-step screen, not proof of a final hiring decision.",
       "Name what a structured interview, practical work sample, reference check, or formal eligibility review must validate next."
     ]
   },
   "contract": {
-    "scope": "The current priority hiring suite plus its explicitly expired benchmark role.",
+    "scope": "Opportunity-specific maintenance for the priority suite plus a lifecycle-selected public resume.",
     "actualPeopleParticipated": false,
     "modeledReaderBasis": "Public job descriptions and public professional context only.",
     "acceptanceQuestion": "Under this explicitly fictionalized public-source lens, would this reader advance Jamie from resume review to a structured interview or practical work sample for this opportunity?",
@@ -45,19 +46,16 @@
     ]
   },
   "publicResume": {
-    "artifactId": "resume.public.active-opportunity-portfolio.2026-08-15",
-    "targetRole": "Technical Project Manager",
-    "status": "public-active-opportunity-portfolio",
+    "artifactId": "resume.public.lifecycle-selected-opportunities.2026-08-20",
+    "targetRole": "Senior Product Manager",
+    "status": "public-lifecycle-selected-opportunities",
     "activeOpportunityIds": [
-      "opportunity.codepath.engineering-project-manager.5160542007",
-      "opportunity.aclu.senior-project-manager.8620968002",
-      "opportunity.benepass.product-operations.7f963a7a",
       "opportunity.nyc-oti.senior-product-manager.782366"
     ],
     "resumePath": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.md",
     "pdfPath": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
     "publicPdfPath": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
-    "visualRunPath": "evals/resumes/runs/2026-08-15-public-active-opportunity-resume-pdf-visual.json"
+    "visualRunPath": "evals/resumes/runs/2026-08-20-public-selected-opportunity-resume-pdf-visual.json"
   },
   "versions": [
     {

@@ -3,7 +3,7 @@
 
 **Source commit:** `8f863e21137af0683355e258efc6371f9c7e5344`
 **Generation time:** 2026-08-15T20:34:05-04:00
-**Source fingerprint:** `484be4b0383540046a6103cc62fe24dd196596f9ea8c0ff4db5a315606bbded2`
+**Source fingerprint:** `29a8bf9dfa53a0301e27508aaaceba2c2e70f52750c02de55dba42637da2a8fd`
 
 - [NYC OTI Senior Product Manager 782366 application milestone](../../applications/nyc-oti-senior-product-manager-782366.md) - `prose_link` (markdown)
 - [NYC OTI Senior Product Manager 782366 application milestone](../../applications/nyc-oti-senior-product-manager-782366.md) - `related_to` (frontmatter)
@@ -14,6 +14,7 @@
 - [Lisa Gelobter](../../people/lisa-gelobter.md) - `related_to` (frontmatter)
 - [Luke Farrell](../../people/luke-farrell.md) - `related_to` (frontmatter)
 - [Tired of Tires resident service](../../projects/tired-of-tires-resident-service.md) - `related_to` (frontmatter)
+- [NYC OTI product-management search ranking, August 20, 2026](../../research-runs/nyc-oti-product-management-ranking-2026-08-20.md) - `related_to` (frontmatter)
 - [NYC Jobs - Senior Product Manager 782366](../../sources/jobs-oti-senior-product-manager-782366.md) - `supports` (frontmatter)
 - [NYC Mayor's Office - PIT Crew launch announcement](../../sources/nyc-pit-crew-launch-2026.md) - `related_to` (frontmatter)
 - [Luke Farrell public professional post - PIT Crew leadership](../../sources/luke-farrell-pit-crew-2026.md) - `related_to` (frontmatter)

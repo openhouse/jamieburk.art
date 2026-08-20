@@ -1,12 +1,27 @@
 {
   "id": "current-priority-2026-08-13",
-  "version": 4,
+  "version": 5,
   "principle": "The public evaluator sees public projection files and public role and reader context only; Wiki gap resolution is a separate pass.",
-  "activeTruthfullyHirableOpportunityIds": [
+  "publicResumeSelectionPolicyPath": "evals/resumes/public-resume-selection.json",
+  "publicResumeSelectedOpportunityIds": [
+    "opportunity.nyc-oti.senior-product-manager.782366"
+  ],
+  "trackedOpenTruthfullyHirableOpportunityIds": [
     "opportunity.codepath.engineering-project-manager.5160542007",
     "opportunity.aclu.senior-project-manager.8620968002",
     "opportunity.benepass.product-operations.7f963a7a",
-    "opportunity.nyc-oti.senior-product-manager.782366"
+    "opportunity.nyc-oti.senior-product-manager.782366",
+    "opportunity.nyc-oti.speed-operations-manager.789810",
+    "opportunity.nyc-oti.product-manager.784450",
+    "opportunity.nyc-oti.speed-senior-product-manager.789610",
+    "opportunity.nyc-oti.pit-senior-product-designer.782373"
+  ],
+  "otiRankedTop38OpportunityIds": [
+    "opportunity.nyc-oti.senior-product-manager.782366",
+    "opportunity.nyc-oti.speed-operations-manager.789810",
+    "opportunity.nyc-oti.product-manager.784450",
+    "opportunity.nyc-oti.speed-senior-product-manager.789610",
+    "opportunity.nyc-oti.pit-senior-product-designer.782373"
   ],
   "priorityOpportunityIds": [
     "opportunity.codepath.engineering-project-manager.5160542007",
@@ -35,6 +50,10 @@
     "docs/knowledge-bank/opportunities/aclu-senior-project-manager.md",
     "docs/knowledge-bank/opportunities/benepass-product-operations.md",
     "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
+    "docs/knowledge-bank/opportunities/oti-speed-operations-manager-789810.md",
+    "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+    "docs/knowledge-bank/opportunities/oti-speed-senior-product-manager-789610.md",
+    "docs/knowledge-bank/opportunities/oti-pit-senior-product-designer-782373.md",
     "docs/knowledge-bank/opportunities/oti-technical-operations.md",
     "docs/knowledge-bank/opportunities/uibk-studio3-postdoc-arch-15927.md",
     "docs/knowledge-bank/opportunities/source-backed-team-memory.md"
@@ -88,6 +107,30 @@
       "id": "query.resident-facing-product",
       "terms": ["resident-facing products", "public launch", "discovery", "accessibility", "outcomes not outputs"],
       "expectedTopK": ["opportunity.nyc-oti.senior-product-manager.782366"],
+      "k": 3
+    },
+    {
+      "id": "query.speed-product-operations",
+      "terms": ["budget", "procurement", "onboarding", "operational metrics", "product dependencies"],
+      "expectedTopK": ["opportunity.nyc-oti.speed-operations-manager.789810"],
+      "k": 3
+    },
+    {
+      "id": "query.oti-product-lifecycle",
+      "terms": ["roadmaps", "requirements", "user stories", "KPIs", "resident-facing products"],
+      "expectedTopK": ["opportunity.nyc-oti.product-manager.784450"],
+      "k": 3
+    },
+    {
+      "id": "query.speed-senior-product",
+      "terms": ["business cases", "permitting", "systems analysis", "data quality", "influence without authority"],
+      "expectedTopK": ["opportunity.nyc-oti.speed-senior-product-manager.789610"],
+      "k": 3
+    },
+    {
+      "id": "query.pit-product-design",
+      "terms": ["interaction design", "content design", "information architecture", "accessibility", "public launch"],
+      "expectedTopK": ["opportunity.nyc-oti.pit-senior-product-designer.782373"],
       "k": 3
     },
     {

@@ -3,13 +3,13 @@
 
 **Source commit:** `8f863e21137af0683355e258efc6371f9c7e5344`
 **Generation time:** 2026-08-15T20:34:05-04:00
-**Source fingerprint:** `484be4b0383540046a6103cc62fe24dd196596f9ea8c0ff4db5a315606bbded2`
+**Source fingerprint:** `29a8bf9dfa53a0301e27508aaaceba2c2e70f52750c02de55dba42637da2a8fd`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 12
+- Nodes added: 24
 - Nodes removed: 0
-- Edges added: 51
+- Edges added: 102
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 185
@@ -19,11 +19,23 @@ Compared with the graph artifact on `origin/develop`.
 - `application.nyc-oti.senior-product-manager.782366`
 - `correction.hje-thick-arts-client-chronology.2026`
 - `decision.portfolio.cloudinary-selective-media-delivery.2026-08-15`
+- `opportunity.nyc-oti.pit-senior-product-designer.782373`
+- `opportunity.nyc-oti.product-manager.784450`
+- `opportunity.nyc-oti.speed-operations-manager.789810`
+- `opportunity.nyc-oti.speed-senior-product-manager.789610`
 - `opportunity.uibk.studio3.postdoc.arch-15927`
 - `person.kathrin-aste`
 - `person.thomas-edlinger`
 - `projection.photo.social-preview.east-river`
+- `research.nyc-oti-product-management-ranking.2026-08-20`
+- `source.jobs.oti.executive-director-product-management.789563`
+- `source.jobs.oti.pit-senior-product-designer.782373`
+- `source.jobs.oti.product-manager.784450`
+- `source.jobs.oti.speed-operations-manager.789810`
+- `source.jobs.oti.speed-senior-product-manager.789610`
 - `source.jobs.uibk.studio3.postdoc.arch-15927`
+- `source.nyc-jobs.oti-product-search.2026-08-20`
+- `source.nyc.speed-report.2026-05-13`
 - `source.nys-dos.thick-arts-llc.formation.2012-07-06`
 - `source.project-websites.live-audit.2026-08-14`
 - `source.uibk.postdoc-profile.2026`

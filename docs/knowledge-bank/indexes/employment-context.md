@@ -5,8 +5,8 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-15
-review_by: 2026-09-13
+last_reviewed: 2026-08-20
+review_by: 2026-08-27
 canonical_path: docs/knowledge-bank/indexes/employment-context.md
 summary: Task-oriented entry point for live opportunity research, historical role benchmarks, public-only hiring evaluation, and private-boundary rules.
 relations:
@@ -19,6 +19,18 @@ relations:
   - type: related_to
     target: opportunity.nyc-oti.senior-product-manager.782366
     href: ../opportunities/oti-senior-product-manager-782366.md
+  - type: related_to
+    target: opportunity.nyc-oti.speed-operations-manager.789810
+    href: ../opportunities/oti-speed-operations-manager-789810.md
+  - type: related_to
+    target: opportunity.nyc-oti.product-manager.784450
+    href: ../opportunities/oti-product-manager-784450.md
+  - type: related_to
+    target: opportunity.nyc-oti.speed-senior-product-manager.789610
+    href: ../opportunities/oti-speed-senior-product-manager-789610.md
+  - type: related_to
+    target: opportunity.nyc-oti.pit-senior-product-designer.782373
+    href: ../opportunities/oti-pit-senior-product-designer-782373.md
   - type: related_to
     target: opportunity.nyc-oti.technical-operations-manager.782369
     href: ../opportunities/oti-technical-operations.md
@@ -74,17 +86,31 @@ remain private, and later outcomes require separate approval.
 - [ACLU - Senior Project Manager, Learning and Project Solutions](../opportunities/aclu-senior-project-manager.md)
 - [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md)
 - [NYC OTI - PIT Crew Senior Product Manager](../opportunities/oti-senior-product-manager-782366.md)
+- [NYC OTI - SPEED Operations Manager](../opportunities/oti-speed-operations-manager-789810.md)
+- [NYC OTI - Product Manager](../opportunities/oti-product-manager-784450.md)
+- [NYC OTI - SPEED Senior Product Manager](../opportunities/oti-speed-senior-product-manager-789610.md)
+- [NYC OTI - PIT Crew Senior Product Designer](../opportunities/oti-pit-senior-product-designer-782373.md)
 
 The first three official application surfaces were rechecked as open on August
-15, 2026. The OTI candidacy is `submitted-pending`: it remains in the active
-truthfully-hirable résumé set while the outcome is unresolved, but it is no
-longer an unsubmitted opening for Jamie.
+20, 2026. The five OTI roles are the `ceil(11 × 0.38)` leading group from the
+[complete OTI search ranking](../research-runs/nyc-oti-product-management-ranking-2026-08-20.md).
+The PIT Crew Senior Product Manager candidacy is `submitted-pending`; the other
+four newly admitted OTI opportunities are open and not yet applied to.
 
-The downloadable public résumé is a separate maintained artifact tailored to
-the intersection of every opportunity in this active set. It must clear every
-active fictionalized hiring-reader gate. Application-specific résumés may
-weight one opportunity more heavily; expired benchmarks, conditional leads,
-and hard-screened roles cannot enter the public-resume target set.
+The downloadable public résumé follows a deterministic lifecycle queue. First,
+it targets every submitted or interviewing application with a pending outcome.
+If none exist, it targets every open, unapplied, truthfully hirable opportunity.
+If neither group exists, it targets the top quarter of eligible historical
+opportunities by the frozen fit score. Because Job 782366 is the only known
+submitted-pending application, its tailored résumé is the current public
+artifact. Application-specific résumés may be narrower; expired benchmarks,
+conditional leads, hard-screened roles, and unknown date states cannot enter
+the public target set.
+
+Deterministic lifecycle, date, hard-screen, artifact, and reader-coverage checks
+run before any model-based hiring-reader role play. This prevents a model call
+for a role that is closed, ineligible, not selected by the queue, or missing a
+bound resume artifact.
 
 ## Current authorized milestone
 

@@ -3,9 +3,9 @@
   "runId": "hiring-public-9b7c48434fe9",
   "generatedAt": "2026-08-15T19:50:23-04:00",
   "candidateSha": "9b7c48434fe9f40eae7fe13cebf930044aab9c3d",
-  "candidatePathsClean": true,
+  "candidatePathsClean": false,
   "portfolioSnapshotHash": "c335cf3b8cf69a41146b9920e6a44b7440c816c980336f1e374cdb4fa4a742f9",
-  "roleContextHash": "ab188e082c436790e9a0c6fd3f36fd7b6df6bed5e32373ed3e918f82495f245a",
+  "roleContextHash": "04acac996780f4c345a1c95163fe00f9a472ef31f54cb750077a36e04ad0bcc1",
   "readerContextHash": "e055b82642616d52177ad68ae4d3bbaeb3953ef3c75cfa3e159c65166862e29f",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
   "publicSafety": {
@@ -509,7 +509,7 @@
     {
       "id": "opportunity.nyc-oti.senior-product-manager.782366",
       "title": "NYC OTI - PIT Crew Senior Product Manager 782366",
-      "roleContextHash": "72fb2653c0d2594d05ed9e8029522b02049f0099ead4517a75af0627289b89f2",
+      "roleContextHash": "74f4fb5ed29f03e0fcbc2436696058937c1632fc383045ad2747e8468c438a99",
       "benchmark": false,
       "live": true,
       "fresh": true,
@@ -620,6 +620,231 @@
           "evidenceNeedles": [
             "policy communications"
           ]
+        }
+      ]
+    },
+    {
+      "id": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "title": "NYC OTI - SPEED Operations Manager 789810",
+      "roleContextHash": "96535ac07b25febf49a5984f205de82d08fada3ac66b5ae6c2accc707cbf93d3",
+      "benchmark": false,
+      "live": true,
+      "fresh": true,
+      "hardScreenBlocked": false,
+      "publicReportingContext": {
+        "role": "Executive Director, Product Management",
+        "identification": "role-only",
+        "source": "source.jobs.oti.executive-director-product-management.789563",
+        "boundary": "The executive role is itself open; no public source names the Operations Manager's supervisor."
+      },
+      "publicVisionContext": {
+        "role": "Commissioner and Chief Technology Officer",
+        "person": "person.lisa-gelobter",
+        "identification": "official-agency-leader",
+        "source": "source.nyc.lisa-gelobter-appointment.2026-02-10",
+        "boundary": "Agency leadership and vision are public; direct supervision is not established."
+      },
+      "decision": "evidence-gap-review",
+      "observed": 0,
+      "requirementTotal": 3,
+      "criticalObserved": 0,
+      "criticalTotal": 3,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.oti-speed-operations-789810.operating-backbone",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.oti-speed-operations-789810.people-operations",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.oti-speed-operations-789810.procurement",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-weak",
+          "routes": [],
+          "evidenceNeedles": []
+        }
+      ]
+    },
+    {
+      "id": "opportunity.nyc-oti.product-manager.784450",
+      "title": "NYC OTI - Product Manager 784450",
+      "roleContextHash": "512665a78d5e593c2d7339ecda1c18de179d2bd482e4ec3c9c56bc0ee27104d1",
+      "benchmark": false,
+      "live": true,
+      "fresh": true,
+      "hardScreenBlocked": false,
+      "publicReportingContext": {
+        "role": "Executive Director, Product Management",
+        "identification": "role-only",
+        "source": "source.jobs.oti.executive-director-product-management.789563",
+        "boundary": "The executive role is itself open; the posting does not name a manager or establish a reporting line."
+      },
+      "publicVisionContext": {
+        "role": "Commissioner and Chief Technology Officer",
+        "person": "person.lisa-gelobter",
+        "identification": "official-agency-leader",
+        "source": "source.nyc.lisa-gelobter-appointment.2026-02-10",
+        "boundary": "Official agency leadership establishes strategic context, not direct supervision."
+      },
+      "decision": "evidence-gap-review",
+      "observed": 0,
+      "requirementTotal": 3,
+      "criticalObserved": 0,
+      "criticalTotal": 3,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.oti-product-manager-784450.product-lifecycle",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.oti-product-manager-784450.cross-functional",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.oti-product-manager-784450.data-and-kpis",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-weak",
+          "routes": [],
+          "evidenceNeedles": []
+        }
+      ]
+    },
+    {
+      "id": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "title": "NYC OTI - SPEED Senior Product Manager 789610",
+      "roleContextHash": "32fcbb88efa0976e040a8c9d1a3fa6db54997ad08a9bcc65d39810e8d4857302",
+      "benchmark": false,
+      "live": true,
+      "fresh": true,
+      "hardScreenBlocked": false,
+      "publicReportingContext": {
+        "role": "Executive Director, Product Management",
+        "identification": "role-only",
+        "source": "source.jobs.oti.executive-director-product-management.789563",
+        "boundary": "The executive role is itself open; no public source names the direct manager."
+      },
+      "publicVisionContext": {
+        "role": "Commissioner and Chief Technology Officer",
+        "person": "person.lisa-gelobter",
+        "identification": "official-agency-leader",
+        "source": "source.nyc.lisa-gelobter-appointment.2026-02-10",
+        "boundary": "Gelobter's public service-access and digital-equity vision provides context, not a reporting-line claim."
+      },
+      "decision": "evidence-gap-review",
+      "observed": 0,
+      "requirementTotal": 3,
+      "criticalObserved": 0,
+      "criticalTotal": 3,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.oti-speed-spm-789610.business-cases",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.oti-speed-spm-789610.data-systems",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-weak",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.oti-speed-spm-789610.influence",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        }
+      ]
+    },
+    {
+      "id": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "title": "NYC OTI - PIT Crew Senior Product Designer 782373",
+      "roleContextHash": "a6730affdfaf5123dded338409422e5eb48af7caa7a92405180b58364eac22ed",
+      "benchmark": false,
+      "live": true,
+      "fresh": true,
+      "hardScreenBlocked": false,
+      "publicReportingContext": {
+        "role": "PIT Crew operational lead",
+        "person": "person.luke-farrell",
+        "identification": "nearest-public-operational-lead",
+        "source": "source.public.luke-farrell-pit-crew.2026-07",
+        "boundary": "Farrell publicly describes leading PIT Crew; the posting does not establish direct supervision."
+      },
+      "publicVisionContext": {
+        "role": "Commissioner and Chief Technology Officer",
+        "person": "person.lisa-gelobter",
+        "identification": "official-initiative-leader",
+        "source": "source.nyc.pit-crew-launch.2026-07-13",
+        "boundary": "Initiative leadership is public; a direct reporting relationship is not."
+      },
+      "decision": "evidence-gap-review",
+      "observed": 0,
+      "requirementTotal": 3,
+      "criticalObserved": 0,
+      "criticalTotal": 2,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.oti-pit-designer-782373.end-to-end-design",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.oti-pit-designer-782373.accessibility",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-weak",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.oti-pit-designer-782373.design-systems",
+          "importance": "important",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "experience-gap",
+          "routes": [],
+          "evidenceNeedles": []
         }
       ]
     },

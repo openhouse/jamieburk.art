@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity requirement coverage
 
-**Wiki fingerprint:** `484be4b0383540046a6103cc62fe24dd196596f9ea8c0ff4db5a315606bbded2`
+**Wiki fingerprint:** `29a8bf9dfa53a0301e27508aaaceba2c2e70f52750c02de55dba42637da2a8fd`
 
 Statuses preserve the difference between visible proof, Wiki-only proof, source work, experience gaps, and hard screens.
 
@@ -63,6 +63,22 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 | `requirement.codepath.proportionate-process` | critical | visible-proven | none | Explain one instance of intentionally removing or declining process. |
 | `requirement.codepath.ai-automation` | important | visible-qualified | wording | Demonstrate one measured automation loop tied to delivery or QA. |
 
+## NYC OTI - PIT Crew Senior Product Designer 782373
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.oti-pit-designer-782373.end-to-end-design` | critical | visible-qualified | public-projection | Curate three cases around design decisions and tested use, not graphic output alone. |
+| `requirement.oti-pit-designer-782373.accessibility` | critical | visible-weak | experience | Inventory direct accessibility decisions without claiming unsupported conformance. |
+| `requirement.oti-pit-designer-782373.design-systems` | important | experience-gap | experience | Do not infer Figma or formal design-system tenure; produce a bounded work sample if applying. |
+
+## NYC OTI - Product Manager 784450
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.oti-product-manager-784450.product-lifecycle` | critical | visible-qualified | public-projection | Use one compact case showing Jamie's decisions across the full lifecycle. |
+| `requirement.oti-product-manager-784450.cross-functional` | critical | visible-qualified | wording | Keep Jamie's role and collective credit explicit. |
+| `requirement.oti-product-manager-784450.data-and-kpis` | critical | visible-weak | experience | Prepare one measured product decision and state its limits. |
+
 ## NYC OTI - PIT Crew Senior Product Manager 782366
 
 | Requirement | Importance | Status | Gap | Next action |
@@ -74,6 +90,22 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 | `requirement.oti-senior-product-manager.accessibility-compliance` | critical | visible-weak | experience | Inventory direct accessibility and compliance practice; site conformance alone is not product-leadership experience. |
 | `requirement.oti-senior-product-manager.metrics-outcomes` | critical | visible-qualified | wording | Prepare one outcome metric with a candid measurement limitation. |
 | `requirement.oti-senior-product-manager.public-rollout` | important | visible-qualified | wording | Lead with recent public communications and coalition implementation without claiming sole campaign outcomes. |
+
+## NYC OTI - SPEED Operations Manager 789810
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.oti-speed-operations-789810.operating-backbone` | critical | visible-qualified | public-projection | Quantify a bounded budget, vendor, or dependency example where evidence permits. |
+| `requirement.oti-speed-operations-789810.people-operations` | critical | visible-qualified | role-context | Separate collaborator onboarding from formal employee-management claims. |
+| `requirement.oti-speed-operations-789810.procurement` | critical | visible-weak | experience | Research the exact contracts, vendors, funding packets, and sign-off authority that can be stated publicly. |
+
+## NYC OTI - SPEED Senior Product Manager 789610
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.oti-speed-spm-789610.business-cases` | critical | visible-qualified | public-projection | Present the chain from resident need through operating and architectural requirements. |
+| `requirement.oti-speed-spm-789610.data-systems` | critical | visible-weak | experience | Distinguish demonstrated data workflows from unproven enterprise data-governance depth. |
+| `requirement.oti-speed-spm-789610.influence` | critical | visible-qualified | wording | Use one City-facing decision with outcome and authority boundaries. |
 
 ## NYC OTI - Technical Operations Manager 782369
 

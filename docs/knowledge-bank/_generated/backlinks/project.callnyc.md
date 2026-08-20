@@ -3,7 +3,7 @@
 
 **Source commit:** `8f863e21137af0683355e258efc6371f9c7e5344`
 **Generation time:** 2026-08-15T20:34:05-04:00
-**Source fingerprint:** `484be4b0383540046a6103cc62fe24dd196596f9ea8c0ff4db5a315606bbded2`
+**Source fingerprint:** `29a8bf9dfa53a0301e27508aaaceba2c2e70f52750c02de55dba42637da2a8fd`
 
 - [Digital District participant photograph metadata](../../assets/digital-district-photo.md) - `part_of` (frontmatter)
 - [Jamie with a civic field kit at New York City Council](../../assets/photographs/nyc-council-field-kit-2026.md) - `related_to` (frontmatter)
@@ -30,7 +30,10 @@
 - [Source-Backed Team Memory](../../methods/source-backed-team-memory.md) - `related_to` (frontmatter)
 - [ACLU - Product Manager II, Discovery](../../opportunities/aclu-product-discovery.md) - `related_to` (frontmatter)
 - [ACLU - Senior Project Manager, Learning and Project Solutions](../../opportunities/aclu-senior-project-manager.md) - `related_to` (frontmatter)
+- [NYC OTI - PIT Crew Senior Product Designer 782373](../../opportunities/oti-pit-senior-product-designer-782373.md) - `related_to` (frontmatter)
+- [NYC OTI - Product Manager 784450](../../opportunities/oti-product-manager-784450.md) - `related_to` (frontmatter)
 - [NYC OTI - PIT Crew Senior Product Manager 782366](../../opportunities/oti-senior-product-manager-782366.md) - `related_to` (frontmatter)
+- [NYC OTI - SPEED Senior Product Manager 789610](../../opportunities/oti-speed-senior-product-manager-789610.md) - `related_to` (frontmatter)
 - [NYC OTI - Technical Operations Manager 782369](../../opportunities/oti-technical-operations.md) - `related_to` (frontmatter)
 - [PermitFlow - Product Operations Manager](../../opportunities/permitflow-product-operations.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)

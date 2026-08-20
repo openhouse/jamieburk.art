@@ -3,10 +3,10 @@
 
 **Candidate commit:** `9b7c48434fe9f40eae7fe13cebf930044aab9c3d`
 **Portfolio snapshot:** `c335cf3b8cf69a41146b9920e6a44b7440c816c980336f1e374cdb4fa4a742f9`
-**Role-context hash:** `ab188e082c436790e9a0c6fd3f36fd7b6df6bed5e32373ed3e918f82495f245a`
+**Role-context hash:** `04acac996780f4c345a1c95163fe00f9a472ef31f54cb750077a36e04ad0bcc1`
 **Reader-context hash:** `e055b82642616d52177ad68ae4d3bbaeb3953ef3c75cfa3e159c65166862e29f`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
-**Candidate paths clean:** yes
+**Candidate paths clean:** no
 
 > Deterministic baseline only. This is not an interview prediction, a named person's opinion, or a human reader study.
 
@@ -84,6 +84,70 @@
 - `requirement.oti-senior-product-manager.accessibility-compliance`: **not observed**
 - `requirement.oti-senior-product-manager.metrics-outcomes`: **observed** on `/work/technical-operations`
 - `requirement.oti-senior-product-manager.public-rollout`: **observed** on `/work/fair-rent-nyc`
+
+### NYC OTI - SPEED Operations Manager 789810
+
+- Deterministic disposition: `evidence-gap-review`
+- Critical signals observed: 0/3
+- All signals observed: 0/3
+- Opportunity status live: yes
+- Historical benchmark: no
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
+- Public reporting context: Executive Director, Product Management (role-only)
+- Public vision context: Commissioner and Chief Technology Officer (official-agency-leader)
+
+- `requirement.oti-speed-operations-789810.operating-backbone`: **not observed**
+- `requirement.oti-speed-operations-789810.people-operations`: **not observed**
+- `requirement.oti-speed-operations-789810.procurement`: **not observed**
+
+### NYC OTI - Product Manager 784450
+
+- Deterministic disposition: `evidence-gap-review`
+- Critical signals observed: 0/3
+- All signals observed: 0/3
+- Opportunity status live: yes
+- Historical benchmark: no
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
+- Public reporting context: Executive Director, Product Management (role-only)
+- Public vision context: Commissioner and Chief Technology Officer (official-agency-leader)
+
+- `requirement.oti-product-manager-784450.product-lifecycle`: **not observed**
+- `requirement.oti-product-manager-784450.cross-functional`: **not observed**
+- `requirement.oti-product-manager-784450.data-and-kpis`: **not observed**
+
+### NYC OTI - SPEED Senior Product Manager 789610
+
+- Deterministic disposition: `evidence-gap-review`
+- Critical signals observed: 0/3
+- All signals observed: 0/3
+- Opportunity status live: yes
+- Historical benchmark: no
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
+- Public reporting context: Executive Director, Product Management (role-only)
+- Public vision context: Commissioner and Chief Technology Officer (official-agency-leader)
+
+- `requirement.oti-speed-spm-789610.business-cases`: **not observed**
+- `requirement.oti-speed-spm-789610.data-systems`: **not observed**
+- `requirement.oti-speed-spm-789610.influence`: **not observed**
+
+### NYC OTI - PIT Crew Senior Product Designer 782373
+
+- Deterministic disposition: `evidence-gap-review`
+- Critical signals observed: 0/2
+- All signals observed: 0/3
+- Opportunity status live: yes
+- Historical benchmark: no
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
+- Public reporting context: PIT Crew operational lead (nearest-public-operational-lead)
+- Public vision context: Commissioner and Chief Technology Officer (official-initiative-leader)
+
+- `requirement.oti-pit-designer-782373.end-to-end-design`: **not observed**
+- `requirement.oti-pit-designer-782373.accessibility`: **not observed**
+- `requirement.oti-pit-designer-782373.design-systems`: **not observed**
 
 ### NYC OTI - Technical Operations Manager 782369
 

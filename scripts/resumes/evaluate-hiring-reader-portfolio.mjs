@@ -4,6 +4,8 @@ import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { selectPublicResume } from "./select-public-resume.mjs";
+
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 
 function readJson(relativePath, root = repoRoot) {
@@ -13,6 +15,7 @@ function readJson(relativePath, root = repoRoot) {
 const defaultConfig = readJson("evals/resumes/hiring-reader-portfolio.json");
 const defaultSuite = readJson("evals/knowledge-wiki/hiring-suites.json");
 const defaultNamedReader = readJson("evals/knowledge-wiki/named-reader-acceptance.json");
+const defaultSelectionConfig = readJson("evals/resumes/public-resume-selection.json");
 
 function normalizeText(markdown) {
   return markdown
@@ -67,8 +70,8 @@ function evaluateResumeVersion({ version, root, resumeOverrides, config }) {
         pairId: reader.pairId,
         readerId: reader.readerId,
         displayName: reader.displayName,
-        modeledVerdict: "fail",
-        decision: "do-not-advance",
+        preflightVerdict: "fail",
+        decision: "block-model-review",
         actualPersonParticipated: false,
         matchedSignalGroups: [],
         missingSignalGroups: reader.signalGroups.map((group) => group.id),
@@ -146,14 +149,14 @@ function evaluateResumeVersion({ version, root, resumeOverrides, config }) {
       id: group.id,
       pass: containsAny(plainText, group.patterns)
     }));
-    const modeledPass = artifactPass && signalResults.every((signal) => signal.pass);
+    const preflightPass = artifactPass && signalResults.every((signal) => signal.pass);
     return {
       pairId: reader.pairId,
       readerId: reader.readerId,
       displayName: reader.displayName,
       relationship: reader.relationship,
-      modeledVerdict: modeledPass ? "pass" : "fail",
-      decision: modeledPass ? config.contract.passDecision : "do-not-advance",
+      preflightVerdict: preflightPass ? "pass" : "fail",
+      decision: preflightPass ? "eligible-for-fictionalized-model-review" : "block-model-review",
       actualPersonParticipated: false,
       matchedSignalGroups: signalResults.filter((signal) => signal.pass).map((signal) => signal.id),
       missingSignalGroups: signalResults.filter((signal) => !signal.pass).map((signal) => signal.id),
@@ -174,7 +177,7 @@ function evaluateResumeVersion({ version, root, resumeOverrides, config }) {
     wordCount: words.length,
     sha256: sha256(markdown),
     overall:
-      artifactPass && readerResults.every((reader) => reader.modeledVerdict === "pass")
+      artifactPass && readerResults.every((reader) => reader.preflightVerdict === "pass")
         ? "pass"
         : "fail",
     artifactChecks,
@@ -187,6 +190,7 @@ export function evaluateHiringReaderPortfolio({
   config = defaultConfig,
   suite = defaultSuite,
   namedReader = defaultNamedReader,
+  selectionConfig = defaultSelectionConfig,
   resumeOverrides = {}
 } = {}) {
   const requiredOpportunityIds = [
@@ -200,7 +204,12 @@ export function evaluateHiringReaderPortfolio({
   const configuredPairs = config.versions.flatMap((version) =>
     version.readerCriteria.map((reader) => reader.pairId)
   );
-  const activeOpportunityIds = suite.activeTruthfullyHirableOpportunityIds ?? [];
+  const selection = selectPublicResume({
+    root,
+    config: selectionConfig,
+    artifactOverrides: resumeOverrides
+  });
+  const activeOpportunityIds = selection.selection.opportunityIds;
   const activeVersions = config.versions.filter((version) =>
     activeOpportunityIds.includes(version.opportunityId)
   );
@@ -238,18 +247,23 @@ export function evaluateHiringReaderPortfolio({
       detail: "A modeled pass advances to a structured next step and cannot represent actual participation or a final hire."
     },
     {
-      id: "active-public-resume-set-is-exact",
+      id: "public-resume-selector-passes",
+      pass: selection.overall === "pass" && selection.llmPlan.status === "eligible",
+      detail: `${selection.selection.tier}: ${selection.selection.opportunityIds.join(", ")}`
+    },
+    {
+      id: "lifecycle-selected-public-resume-set-is-exact",
       pass:
         Array.isArray(config.publicResume?.activeOpportunityIds) &&
         sameMembers(config.publicResume.activeOpportunityIds, activeOpportunityIds),
-      detail: `${config.publicResume?.activeOpportunityIds?.length ?? 0}/${activeOpportunityIds.length} active truthfully-hirable opportunities target the public resume.`
+      detail: `${config.publicResume?.activeOpportunityIds?.length ?? 0}/${activeOpportunityIds.length} lifecycle-selected opportunities target the public resume.`
     },
     {
       id: "hard-screened-roles-excluded-from-public-resume",
       pass: (suite.excludedOpportunityIds ?? []).every(
         (entry) =>
           entry.disposition === "exclude-hard-screen" &&
-          !config.publicResume?.activeOpportunityIds?.includes(entry.opportunityId)
+          !activeOpportunityIds.includes(entry.opportunityId)
       ),
       detail: "Hard-screened adjacent roles remain discoverable without entering the public resume target set."
     }
@@ -269,7 +283,7 @@ export function evaluateHiringReaderPortfolio({
   const maintainedVersions = versions.filter((version) =>
     version.artifactChecks.find((check) => check.id === "resume-file-exists")?.pass
   ).length;
-  const passingReaders = readerResults.filter((reader) => reader.modeledVerdict === "pass").length;
+  const passingReaders = readerResults.filter((reader) => reader.preflightVerdict === "pass").length;
   const overallPass =
     portfolioChecks.every((check) => check.pass) &&
     versions.length === requiredOpportunityIds.length &&
@@ -277,33 +291,40 @@ export function evaluateHiringReaderPortfolio({
     readerResults.length === requiredPairs.length &&
     passingReaders === requiredPairs.length &&
     publicResume.overall === "pass" &&
-    publicResume.readerResults.length === activeReaderCriteria.length;
+    publicResume.readerResults.length === activeReaderCriteria.length &&
+    publicResume.readerResults.every((reader) => reader.preflightVerdict === "pass");
 
   return {
     schemaVersion: 1,
     evalId: config.id,
-    runId: "2026-08-15-hiring-reader-resume-portfolio-universal-public",
+    runId: "2026-08-20-hiring-reader-resume-preflight",
     evaluatedAt: config.evaluatedAt,
     methodologySkill: config.methodology.skill,
     actualPeopleParticipated: false,
     acceptanceQuestion: config.contract.acceptanceQuestion,
-    decision: overallPass ? config.contract.passDecision : "do-not-advance",
+    decision: overallPass ? "eligible-for-fictionalized-model-review" : "block-model-review",
     overall: overallPass ? "pass" : "fail",
     summary: {
       requiredOpportunityVersions: requiredOpportunityIds.length,
       maintainedOpportunityVersions: maintainedVersions,
       passingOpportunityVersions: versions.filter((version) => version.overall === "pass").length,
       requiredReaderOpportunityPairs: requiredPairs.length,
-      passingReaderOpportunityPairs: passingReaders,
+      passingReaderOpportunityPreflights: passingReaders,
       requiredPublicResumeReaderPairs: activeReaderCriteria.length,
-      passingPublicResumeReaderPairs: publicResume.readerResults.filter(
-        (reader) => reader.modeledVerdict === "pass"
+      passingPublicResumeReaderPreflights: publicResume.readerResults.filter(
+        (reader) => reader.preflightVerdict === "pass"
       ).length
     },
     portfolioChecks,
     versions,
     publicResume,
-    boundary: "This is a deterministic, fictionalized public-source resume screen. It is not participation, endorsement, an interview promise, or a final hiring decision by any named person."
+    selector: {
+      tier: selection.selection.tier,
+      opportunityIds: selection.selection.opportunityIds,
+      readerPairIds: selection.selection.readerPairIds,
+      plannedModelCalls: selection.llmPlan.plannedCallCount
+    },
+    boundary: "This is a deterministic artifact and signal-coverage preflight only. It authorizes a separate fictionalized public-source model review; it is not that review, actual participation, endorsement, an interview promise, or a final hiring decision by any named person."
   };
 }
 
@@ -331,7 +352,7 @@ export function currentRunSnapshot(result) {
         pairId: reader.pairId,
         readerId: reader.readerId,
         displayName: reader.displayName,
-        modeledVerdict: reader.modeledVerdict,
+        preflightVerdict: reader.preflightVerdict,
         decision: reader.decision,
         actualPersonParticipated: reader.actualPersonParticipated,
         missingSignalGroups: reader.missingSignalGroups,
@@ -350,13 +371,14 @@ export function currentRunSnapshot(result) {
         pairId: reader.pairId,
         readerId: reader.readerId,
         displayName: reader.displayName,
-        modeledVerdict: reader.modeledVerdict,
+        preflightVerdict: reader.preflightVerdict,
         decision: reader.decision,
         actualPersonParticipated: reader.actualPersonParticipated,
         missingSignalGroups: reader.missingSignalGroups,
         validateNext: reader.validateNext
       }))
     },
+    selector: result.selector,
     boundary: result.boundary
   };
 }

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "id": "resume-pdf-portfolio-2026-08-14",
-  "evaluatedAt": "2026-08-15T08:20:00-04:00",
-  "currentRunPath": "evals/resumes/runs/2026-08-15-resume-pdf-portfolio-universal-public.json",
+  "evaluatedAt": "2026-08-20T12:35:00-04:00",
+  "currentRunPath": "evals/resumes/runs/2026-08-20-resume-pdf-portfolio-lifecycle-public.json",
   "sourceTemplate": {
     "access": "read-only source; edits occur only in private opportunity-specific copies",
     "privateLocatorCommitted": false,
@@ -68,11 +68,11 @@
       "visualRunPath": "evals/resumes/runs/2026-08-14-oti-technical-operations-manager-782369-pdf-visual.json"
     },
     {
-      "artifactId": "resume.public.active-opportunity-portfolio.2026-08-15",
+      "artifactId": "resume.public.lifecycle-selected-opportunities.2026-08-20",
       "markdownPath": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.md",
       "pdfPath": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
       "publicInstallPath": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
-      "visualRunPath": "evals/resumes/runs/2026-08-15-public-active-opportunity-resume-pdf-visual.json"
+      "visualRunPath": "evals/resumes/runs/2026-08-20-public-selected-opportunity-resume-pdf-visual.json"
     }
   ]
 }

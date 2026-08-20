@@ -233,7 +233,7 @@ export function evaluateResumePdfPortfolio({
   return {
     schemaVersion: 1,
     evalId: config.id,
-    runId: "2026-08-15-resume-pdf-portfolio-universal-public",
+    runId: "2026-08-20-resume-pdf-portfolio-lifecycle-public",
     evaluatedAt: config.evaluatedAt,
     overall,
     summary: {

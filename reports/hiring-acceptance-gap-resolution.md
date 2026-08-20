@@ -2,8 +2,8 @@
 # Hiring acceptance Wiki gap resolution
 
 **Candidate commit:** `9b7c48434fe9f40eae7fe13cebf930044aab9c3d`
-**Public report hash:** `fdd5a1d9809a3136ac25d908f15244d7a63a6504528d045bcb590467e0704dd8`
-**Wiki fingerprint:** `484be4b0383540046a6103cc62fe24dd196596f9ea8c0ff4db5a315606bbded2`
+**Public report hash:** `58c2f351a14e5872c5ee7e0c94812a2edd54f4faa2e0726b56fc13267db1821d`
+**Wiki fingerprint:** `29a8bf9dfa53a0301e27508aaaceba2c2e70f52750c02de55dba42637da2a8fd`
 
 The gap resolver runs after the public-only evaluator. It can identify Wiki evidence, but every public change remains human-reviewed.
 
@@ -15,6 +15,18 @@ The gap resolver runs after the public-only evaluator. It can identify Wiki evid
 - `requirement.benepass.quantified-prioritization` - **visible-weak-evidence-gap**; Use only supported HJE figures and explain the decision they informed.
 - `requirement.oti-senior-product-manager.discovery-research` - **role-context-or-evidence-unknown**; Use the bounded Tired of Tires service example in the application; distinguish direct field contact, project-level survey evidence, and held component-authorship details.
 - `requirement.oti-senior-product-manager.accessibility-compliance` - **true-experience-gap**; Inventory direct accessibility and compliance practice; site conformance alone is not product-leadership experience.
+- `requirement.oti-speed-operations-789810.operating-backbone` - **role-context-or-evidence-unknown**; Quantify a bounded budget, vendor, or dependency example where evidence permits.
+- `requirement.oti-speed-operations-789810.people-operations` - **role-context-or-evidence-unknown**; Separate collaborator onboarding from formal employee-management claims.
+- `requirement.oti-speed-operations-789810.procurement` - **true-experience-gap**; Research the exact contracts, vendors, funding packets, and sign-off authority that can be stated publicly.
+- `requirement.oti-product-manager-784450.product-lifecycle` - **role-context-or-evidence-unknown**; Use one compact case showing Jamie's decisions across the full lifecycle.
+- `requirement.oti-product-manager-784450.cross-functional` - **role-context-or-evidence-unknown**; Keep Jamie's role and collective credit explicit.
+- `requirement.oti-product-manager-784450.data-and-kpis` - **true-experience-gap**; Prepare one measured product decision and state its limits.
+- `requirement.oti-speed-spm-789610.business-cases` - **role-context-or-evidence-unknown**; Present the chain from resident need through operating and architectural requirements.
+- `requirement.oti-speed-spm-789610.data-systems` - **true-experience-gap**; Distinguish demonstrated data workflows from unproven enterprise data-governance depth.
+- `requirement.oti-speed-spm-789610.influence` - **role-context-or-evidence-unknown**; Use one City-facing decision with outcome and authority boundaries.
+- `requirement.oti-pit-designer-782373.end-to-end-design` - **role-context-or-evidence-unknown**; Curate three cases around design decisions and tested use, not graphic output alone.
+- `requirement.oti-pit-designer-782373.accessibility` - **true-experience-gap**; Inventory direct accessibility decisions without claiming unsupported conformance.
+- `requirement.oti-pit-designer-782373.design-systems` - **true-experience-gap**; Do not infer Figma or formal design-system tenure; produce a bounded work sample if applying.
 - `requirement.oti.government-hiring-and-procurement` - **visible-weak-evidence-gap**; Do not imply procurement authority; clarify adjacent government-process experience in the application.
 - `requirement.uibk.studio3.architecture-degrees` - **hard-screen-gap**; Do not apply to ARCH-15927; search for adjacent roles without these credential screens.
 - `requirement.uibk.studio3.experimental-artistic-research` - **true-experience-gap**; Treat the vocabulary as adjacent-opportunity search context, not proof of architectural research qualification.

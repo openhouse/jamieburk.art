@@ -1,6 +1,6 @@
 # Jamie Burkart
 
-**Technical Project Manager | Product Operations, Engineering Delivery & Implementation**
+**Senior Product Manager | Civic Technology, Product Operations & Implementation**
 
 Brooklyn, NY | (816) 728-8685 | [jamie.burkart@gmail.com](mailto:jamie.burkart@gmail.com)
 
@@ -8,14 +8,14 @@ Brooklyn, NY | (816) 728-8685 | [jamie.burkart@gmail.com](mailto:jamie.burkart@g
 
 ## Professional Summary
 
-Technical project manager and product operations leader with 14+ years moving public-facing products, organizational systems, and resident services from ambiguity through project strategy, participatory discovery, implementation, launch readiness, adoption, measurement, and learning. Bridges product, engineering, operations, community stakeholders, and senior decision-makers; translates customer needs and engineering constraints into clear scope, accountable owners, and usable systems. Builds proportionate structure for small and cross-department teams, adding process when its value exceeds its cost. Brings hands-on web fluency, responsible public-technology practice, and durable follow-through across civic technology, community platforms, cultural advocacy, and small business.
+Senior product and technical project manager with 14+ years shipping public-facing products, services, and operating systems across civic technology, community platforms, small business, and cultural advocacy. Leads from problem framing and participatory discovery through briefs, prioritization, implementation, launch, adoption, measurement, and retrospectives. Translates among residents, organizers, policy stakeholders, designers, engineers, operations teams, and senior decision-makers. Brings hands-on technical fluency with privacy-conscious, accessibility-aware delivery in legacy and resource-constrained environments.
 
 ## Core Skills
 
-- **Project strategy & systems implementation:** Project charters, business analysis, current-state and future-state workflows, requirements, implementation plans, work plans, delivery planning, status reporting, action and decision logs, ownership, dependencies, stakeholder alignment, and risk and issue management.
-- **Engineering delivery & quality:** Product and stakeholder translation, scope, issue reproduction, quality assurance, bug triage, test cases, regression expectations, QA/UAT, release notes, and durable handoff across JavaScript/TypeScript, React/Next.js, Ember.js, Python/Django, SQL, Git/GitHub, Docker/Dokku, APIs, analytics, and low-cost cloud infrastructure.
-- **Product operations:** Prioritization and tradeoffs, MVP scoping, launch readiness, readiness criteria, go/no-go recommendations, downstream impact, operational requirements, support preparation, runbooks, accountable owners, customer impact, metrics, retrospectives, and post-launch learning.
-- **Responsible delivery:** Accessibility-aware and inclusive operations; confidentiality, privacy, public-safety review, and source boundaries; AI-assisted workflows with human review and deterministic checks; clear documentation of unknowns, decisions, and protected information.
+- **Product lifecycle:** Problem framing, discovery, public and user research, requirements, user stories, product briefs, roadmap sequencing, MVP and version-one scoping, prioritization, tradeoffs, rapid prototyping, UAT/QA, public launch, metrics, post-launch learning, and retrospectives.
+- **Cross-functional delivery:** Product ownership, facilitation, stakeholder alignment, designer and engineer coordination, agency and policy translation, senior stakeholder briefings, rollout planning, risk and dependency tracking, adoption, and durable handoffs.
+- **Responsible public technology:** Accessibility-aware implementation, privacy-conscious data practice, public-safety review, source governance, evidence boundaries, and clear documentation of unknowns and decisions.
+- **Web systems architecture:** JavaScript/TypeScript, React/Next.js, Ember.js, Python/Django, SQL, PostgreSQL/PostGIS, Node.js, Git/GitHub, Docker/Dokku, QGIS, APIs, open-data workflows, analytics, and low-cost cloud infrastructure.
 
 ## Professional Experience
 
@@ -23,31 +23,32 @@ Technical project manager and product operations leader with 14+ years moving pu
 
 New York, NY / Remote | 2009–Present
 
-- Lead end-to-end web, organizational operating-system, and engineering implementations, turning ambiguous customer needs into charters, current/future-state requirements, sequenced releases, quality loops, launch plans, adoption materials, documentation, and maintainable handoffs without unnecessary ceremony.
+- Lead end-to-end web product, design, and engineering engagements, turning ambiguous stakeholder needs into product direction, information architecture, technical scope, sequenced releases, testing, launch plans, adoption materials, maintenance workflows, and handoff documentation.
 - Led e-commerce, analytics, content, marketing, and operations for Harry J. Epstein Company, contributing to 2x revenue growth while helping an 80+ year-old industrial business modernize without losing its trusted voice.
-- Build scalable operating systems, publishing tools, data workflows, and reusable patterns; clarify ownership, surface risk, support customer care, and preserve release and post-launch learning so teams can continue the work.
+- Build maintainable publishing systems, campaign hubs, resource libraries, data workflows, and web infrastructure; preserve product briefs, decisions, reusable patterns, and post-launch learning so teams can continue the work.
 
 ### [NYC Artist Coalition](https://nycartc.com/) / [FairRentNYC](https://fairrentnyc.nycartc.com/) — Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead
 
 New York, NY | 2017–Present
 
-- Turn stakeholder listening, public testimony, and coalition priorities into implementation plans, campaign websites, forums, policy communications, calls to action, and multi-organization follow-through.
-- Built and stewarded 30+ pages of shared campaign memory for a 2026 Commercial Rent Stabilization collaboration, connecting minutes, decision records, accountable actions, legal and policy questions, media assets, public-data framing, and city/state strategy while protecting private and sensitive boundaries.
-- Facilitate challenging meetings, coordinate community stakeholders, brief elected officials and staff, and represent collective work in public testimony, presentations, and press while preserving collective credit.
+- Help turn stakeholder listening, public testimony, and coalition priorities into buildable plans, campaign websites, public forums, policy communications, calls to action, and sustained government-facing follow-through.
+- Built and stewarded 30+ pages of shared campaign memory for a 2026 Commercial Rent Stabilization collaboration, connecting running minutes, decision records, action items, legal and policy questions, media assets, public-data framing, and city/state strategy lanes.
+- Implement and maintain public-facing campaign systems; facilitate challenging meetings; brief and work directly with elected officials and staff; and represent the work in public testimony, presentations, and press while preserving collective credit and sensitive boundaries.
 
 ### [WOWList.org](https://wowlist.org/) — Co-Founder, Product & Community Systems
 
 New York, NY / Remote | 2015–2020
 
-- Co-founded, co-built, and operated with Richard Caceres a natural-language community-calendar platform, combining participatory discovery, engineering delivery, organizer-facing onboarding and support, public communication, instrumentation, and low-cost production operations across distributed maintainers.
-- Reached a July 2017 production snapshot of 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts; distinguish activity counts from retention, individual needs, resident outcomes, or causal impact.
+- Co-founded, co-built, and operated with Richard Caceres a natural-language community-calendar and discovery platform for DIY arts and music organizers, replacing a complex event form with collaboratively editable text, followable keyword communities, weekly digests, profiles, embeds, and calendar connections.
+- Connected participatory discovery with hands-on implementation, organizer onboarding, support, adoption, public communication, instrumentation, and low-cost production operations across a distributed maintainer network.
+- Reached a July 2017 production snapshot of 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts; distinguish these activity counts from retention, resident outcomes, or causal impact.
 
 ### [CallNYC.org](https://callnyc.org/) — Civic-Tech Builder & Product Translator
 
 New York, NY | 2016
 
-- Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in [Politico New York](https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf).
-- Took the civic product from problem definition through information architecture, implementation, public launch, and learning. The archived site is unofficial and not a current City service.
+- Built [CallNYC.org](https://callnyc.org/) as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in [Politico New York](https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf).
+- Took the civic prototype from problem definition and information architecture through implementation and public release. The archived site is unofficial and not a current City service.
 
 ### [KC Town Hall LLC](https://kctownhall.com/) — Co-Founder & Project Manager, Historic Restoration / Mixed-Use Development
 
@@ -55,7 +56,7 @@ Kansas City, MO | 2015–2024
 
 - Co-led planning, public-benefit documentation, vendor coordination, and municipal compliance for adaptive reuse of an approximately 6,500 sq. ft. historic building into four commercial spaces and three homes.
 - Helped deliver Tired of Tires, a recurring free resident service connecting household eligibility, form and phone intake, scheduled field collection, City recycling coordination, volunteer participation, and public result reporting; public records document Jamie's participation in pickup operations.
-- Co-developed the successful CCED proposal and served as the City's named developer/presenter and documented point of contact for a $490,539 public funding request; later transitioned the project to a mission-aligned organization.
+- Co-developed the successful CCED proposal and served as the City's named developer/presenter for a $490,539 public funding request, remained a documented developer point of contact through compliance progress, and later transitioned the project to a mission-aligned organization.
 
 ## Additional Leadership
 
