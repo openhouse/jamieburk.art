@@ -7,7 +7,7 @@ test("model work is limited to lifecycle-selected reader pairs", () => {
   const plan = planCoverLetterReaderCalls();
   assert.equal(plan.status, "eligible");
   assert.equal(plan.plannedCallCount, 2);
-  assert.equal(plan.skippedCallCount, 6);
+  assert.equal(plan.skippedCallCount, 14);
   assert.deepEqual(plan.selectedOpportunityIds, ["opportunity.nyc-oti.senior-product-manager.782366"]);
   assert.deepEqual(plan.calls.map((call) => call.readerPairId).sort(), ["oti-product-lisa-gelobter", "oti-product-luke-farrell"]);
   assert.equal(plan.calls.some((call) => call.opportunityId.includes("technical-operations-manager")), false);

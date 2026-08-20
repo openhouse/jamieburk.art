@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "evalId": "resume.nyc-oti.speed-senior-product-manager.789610.pdf-visual",
+  "inspectedAt": "2026-08-20T13:10:00-04:00",
+  "sourceTemplate": {
+    "access": "read-only source; edited only in a new private copy for this opportunity",
+    "revisionUnchangedAfterExport": true,
+    "privateLocatorCommitted": false
+  },
+  "markdown": {
+    "path": "resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Jamie-Burkart-Resume-NYC-OTI-SPEED-Senior-Product-Manager-789610.md",
+    "sha256": "7662a0085b231ba00f95192537f817330438758fc02af0e3da0d47f12a73d09f"
+  },
+  "pdf": {
+    "path": "resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Jamie-Burkart-Resume-NYC-OTI-SPEED-Senior-Product-Manager-789610.pdf",
+    "sha256": "8725396e0d821994265b1c2d5c5d7e97dc33fc6dcb6042efa8681aca948a272e",
+    "bytes": 95411,
+    "pages": 2,
+    "pageSize": "US Letter"
+  },
+  "inspection": {
+    "method": "Exported from the native Google Docs working copy, rasterized every page at 120 DPI, visually inspected at original detail, and checked for preserved PDF link annotations.",
+    "allPagesRasterized": true,
+    "actualNamedPeopleParticipated": false,
+    "pages": [
+      {
+        "page": 1,
+        "pass": true,
+        "notes": "Target title, contact links, permitting and service-delivery profile, product strategy, complex delivery skills, and Thick Arts evidence are legible with clear hierarchy and no clipping, overlap, or broken glyphs."
+      },
+      {
+        "page": 2,
+        "pass": true,
+        "notes": "WOW List, CallNYC, KC Town Hall, municipal-compliance evidence, additional leadership, education, and work authorization are legible; Politico New York is visibly blue and underlined and links to the archived article PDF."
+      }
+    ]
+  },
+  "overall": "pass",
+  "boundary": "Artifact and visual-quality inspection only. No named hiring reader participated, and a pass is not an endorsement, interview promise, eligibility determination, or hiring decision."
+}

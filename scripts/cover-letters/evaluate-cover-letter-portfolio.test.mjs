@@ -15,11 +15,11 @@ test("every maintained tailored resume has a passing role-specific cover letter"
   const result = evaluateCoverLetterPortfolio();
   assert.equal(result.overall, "pass", JSON.stringify(result, null, 2));
   assert.deepEqual(result.summary, {
-    requiredLetters: 5,
-    maintainedLetters: 5,
-    passingLetters: 5,
-    requiredReaderPairs: 8,
-    passingReaderPreflights: 8
+    requiredLetters: 9,
+    maintainedLetters: 9,
+    passingLetters: 9,
+    requiredReaderPairs: 16,
+    passingReaderPreflights: 16
   });
 });
 

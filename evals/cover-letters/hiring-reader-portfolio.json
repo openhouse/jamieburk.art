@@ -204,6 +204,138 @@
       ]
     },
     {
+      "opportunityId": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "status": "live-priority",
+      "coverLetterPath": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Operations-Manager-789810.md",
+      "voiceSignals": {
+        "concreteEncounter": ["With Tired of Tires", "discarded tire"],
+        "humanStake": ["For a resident", "conditions outside the front door"],
+        "hiddenSystem": ["dependable chain", "operating system"],
+        "hinge": ["operational rigor is not paperwork", "means by which budgets"],
+        "durablePossibility": ["less dependent on any one person", "New Yorkers waiting"]
+      },
+      "readerCriteria": [
+        {
+          "pairId": "oti-speed-operations-role",
+          "signalGroups": [
+            { "id": "program-operations", "patterns": ["incoming needs into owned work", "resource decisions", "status"] },
+            { "id": "budget-procurement", "patterns": ["budgets, procurement", "$490,539", "vendor"] },
+            { "id": "dependency-management", "patterns": ["dependencies", "blocked decision", "next actions"] },
+            { "id": "team-reporting", "patterns": ["team health", "project status", "operational"] },
+            { "id": "product-team-context", "patterns": ["product dependencies", "technical systems", "SPEED"] }
+          ]
+        },
+        {
+          "pairId": "oti-speed-operations-lisa-gelobter",
+          "signalGroups": [
+            { "id": "public-service-operations", "patterns": ["resident service", "City recycling handoff", "public-benefit"] },
+            { "id": "institutional-capacity", "patterns": ["less dependent on any one person", "keep its commitments", "durable"] },
+            { "id": "cross-functional-government", "patterns": ["legal and cyber review", "government-facing dependencies", "City"] },
+            { "id": "technical-fluency", "patterns": ["technical systems", "product delivery", "Thick Arts"] }
+          ]
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "status": "live-priority",
+      "coverLetterPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.md",
+      "voiceSignals": {
+        "concreteEncounter": ["When I built CallNYC", "governing question"],
+        "humanStake": ["help a New Yorker", "one clearer next step"],
+        "hiddenSystem": ["constituent-services data", "whole institution"],
+        "hinge": ["feature is only as useful", "next action it makes possible"],
+        "durablePossibility": ["agency team better able to learn", "carry it forward"]
+      },
+      "readerCriteria": [
+        {
+          "pairId": "oti-product-784450-role",
+          "signalGroups": [
+            { "id": "product-lifecycle", "patterns": ["problem definition", "public release", "after launch"] },
+            { "id": "research-and-analytics", "patterns": ["stakeholder listening", "public data", "analytics"] },
+            { "id": "roadmaps-and-requirements", "patterns": ["roadmaps", "requirements", "user stories", "acceptance criteria"] },
+            { "id": "outcomes-and-kpis", "patterns": ["KPIs", "outcome measure", "determine what happens next"] },
+            { "id": "plain-language-collaboration", "patterns": ["designers and engineers", "program and agency", "New Yorker"] }
+          ]
+        },
+        {
+          "pairId": "oti-product-784450-lisa-gelobter",
+          "signalGroups": [
+            { "id": "public-interest-technology", "patterns": ["public products", "civic prototype", "not an official City service"] },
+            { "id": "participatory-practice", "patterns": ["stakeholder listening", "user problem", "resident-facing service"] },
+            { "id": "technical-fluency", "patterns": ["built and maintained the systems", "technical realities", "tested releases"] },
+            { "id": "institutional-learning", "patterns": ["agency team better able to learn", "carry it forward", "post-launch"] }
+          ]
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "status": "live-priority",
+      "coverLetterPath": "resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Senior-Product-Manager-789610.md",
+      "voiceSignals": {
+        "concreteEncounter": ["At KC Town Hall", "building idea"],
+        "humanStake": ["residents, vendors", "future occupants"],
+        "hiddenSystem": ["requirements, dependencies", "less visible system"],
+        "hinge": ["speed without legibility", "moves uncertainty downstream"],
+        "durablePossibility": ["City process that becomes easier", "improve it together"]
+      },
+      "readerCriteria": [
+        {
+          "pairId": "oti-speed-spm-789610-role",
+          "signalGroups": [
+            { "id": "business-case-and-root-cause", "patterns": ["business case", "root constraint", "root cause"] },
+            { "id": "roadmap-and-kpis", "patterns": ["product roadmap", "KPIs", "prioritization"] },
+            { "id": "systems-and-permitting", "patterns": ["Permitting", "municipal compliance", "technical systems"] },
+            { "id": "influence-without-authority", "patterns": ["influence people", "authority does not sit", "stakeholders"] },
+            { "id": "technical-architecture", "patterns": ["systems analysis", "built the software", "technical scope"] }
+          ]
+        },
+        {
+          "pairId": "oti-speed-spm-789610-lisa-gelobter",
+          "signalGroups": [
+            { "id": "public-service-systems", "patterns": ["public servants", "public safeguards", "City process"] },
+            { "id": "participatory-government", "patterns": ["residents", "agency partners", "elected officials and staff"] },
+            { "id": "capacity-and-handoffs", "patterns": ["shared decision records", "agency network better able", "handoffs"] },
+            { "id": "responsible-delivery", "patterns": ["preserving the reasons", "claiming authority", "trustworthy"] }
+          ]
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "status": "live-priority",
+      "coverLetterPath": "resumes/2026-08-20/nyc-oti-pit-senior-product-designer-782373/Jamie-Burkart-Cover-Letter-NYC-OTI-PIT-Senior-Product-Designer-782373.md",
+      "voiceSignals": {
+        "concreteEncounter": ["At a coalition working session", "Shoestring Press"],
+        "humanStake": ["participants tried to align", "understand one another"],
+        "hiddenSystem": ["hidden handoffs", "common object"],
+        "hinge": ["not visual polish alone", "enter the system"],
+        "durablePossibility": ["service residents can navigate", "City can keep learning"]
+      },
+      "readerCriteria": [
+        {
+          "pairId": "oti-pit-designer-luke-farrell",
+          "signalGroups": [
+            { "id": "end-to-end-design", "patterns": ["research", "information architecture", "public launch"] },
+            { "id": "resident-research", "patterns": ["resident and stakeholder listening", "map the journey", "usability"] },
+            { "id": "content-interaction-visual", "patterns": ["content and interaction design", "graphic and web design", "visual"] },
+            { "id": "accessibility-and-plain-language", "patterns": ["plain language", "accessibility", "public trust"] },
+            { "id": "engineering-handoff", "patterns": ["engineering handoff", "front-end", "maintainability"] }
+          ]
+        },
+        {
+          "pairId": "oti-pit-designer-lisa-gelobter",
+          "signalGroups": [
+            { "id": "public-interest-design", "patterns": ["resident service", "official City service", "public trust"] },
+            { "id": "participatory-practice", "patterns": ["garden circle", "shared handwritten notes", "co-design"] },
+            { "id": "technical-fluency", "patterns": ["front-end and publishing systems", "implementation", "engineering"] },
+            { "id": "durable-design-capacity", "patterns": ["design system", "City can keep learning", "after the first release"] }
+          ]
+        }
+      ]
+    },
+    {
       "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
       "status": "expired-benchmark",
       "coverLetterPath": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Cover-Letter-NYC-OTI-Technical-Operations-Manager-782369.md",

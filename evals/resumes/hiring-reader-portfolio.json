@@ -212,6 +212,162 @@
       ]
     },
     {
+      "opportunityId": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "organization": "NYC Office of Technology and Innovation",
+      "targetRole": "Operations Manager",
+      "status": "live-priority",
+      "officialSource": "https://cityjobs.nyc.gov/job/operations-manager-in-brooklyn-jid-46143",
+      "resumePath": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.md",
+      "readerCriteria": [
+        {
+          "pairId": "oti-speed-operations-role",
+          "readerId": "reader.public-role.oti-speed-operations-manager",
+          "displayName": "Published SPEED operations reporting role",
+          "relationship": "role-only public reporting context; person not publicly identified",
+          "signalGroups": [
+            { "id": "program-operations", "patterns": ["Program and team operations", "work planning", "resource allocation"] },
+            { "id": "budget-procurement", "patterns": ["budget and procurement support", "vendor coordination", "$490,539"] },
+            { "id": "dependency-management", "patterns": ["risk and dependency tracking", "escalation paths", "owned work"] },
+            { "id": "team-reporting", "patterns": ["status reporting", "operational metrics", "team health"] },
+            { "id": "product-team-context", "patterns": ["Product, design, engineering, operations", "technical systems"] }
+          ],
+          "constructiveCritique": "The resume makes Jamie legible as a hands-on operating-backbone builder. The next screen must establish the depth of direct City-scale budget, contract, procurement, personnel, and resource-allocation authority rather than inferring it from adjacent delivery work.",
+          "validateNext": "Use a structured operations case covering incoming demand, staffing and vendor constraints, budget tradeoffs, procurement dependencies, team-health reporting, and executive escalation."
+        },
+        {
+          "pairId": "oti-speed-operations-lisa-gelobter",
+          "readerId": "reader.lisa-gelobter",
+          "displayName": "Lisa Gelobter",
+          "relationship": "official agency and initiative vision context; not a confirmed direct manager",
+          "signalGroups": [
+            { "id": "public-service-operations", "patterns": ["Public-service implementation", "resident-facing service design", "government-facing"] },
+            { "id": "institutional-capacity", "patterns": ["durable handoffs", "teams can continue", "continuity systems"] },
+            { "id": "cross-functional-government", "patterns": ["policy, legal", "municipal compliance", "elected officials and staff"] },
+            { "id": "technical-fluency", "patterns": ["Technical systems", "JavaScript/TypeScript", "Python/Django"] }
+          ],
+          "constructiveCritique": "The fit is strongest where operations creates durable public-service capacity. The interview should test whether Jamie can narrow founder-level breadth into accountable support for a large City product team and make budget, personnel, and procurement constraints explicit.",
+          "validateNext": "Probe managerability, public-service motivation, power sharing, institutional handoff, and one decision where team capacity must govern product ambition."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "organization": "NYC Office of Technology and Innovation",
+      "targetRole": "Product Manager",
+      "status": "live-priority",
+      "officialSource": "https://cityjobs.nyc.gov/job/product-manager-in-brooklyn-jid-45056",
+      "resumePath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.md",
+      "readerCriteria": [
+        {
+          "pairId": "oti-product-784450-role",
+          "readerId": "reader.public-role.oti-product-manager-784450",
+          "displayName": "Published Product Manager reporting role",
+          "relationship": "role-only public reporting context; person not publicly identified",
+          "signalGroups": [
+            { "id": "product-lifecycle", "patterns": ["Product lifecycle", "conception", "launch"] },
+            { "id": "research-and-analytics", "patterns": ["public and user research", "analytics synthesis", "validated user problems"] },
+            { "id": "roadmaps-and-requirements", "patterns": ["roadmaps", "user stories", "acceptance criteria", "system requirements"] },
+            { "id": "outcomes-and-kpis", "patterns": ["KPIs", "post-launch learning", "measurement"] },
+            { "id": "plain-language-collaboration", "patterns": ["plain-language", "designers, engineers", "program and agency"] }
+          ],
+          "constructiveCritique": "The resume covers the requested product lifecycle and resident-facing context. The next gate is a specific example showing how user or program evidence changed a roadmap decision and what measurable outcome governed iteration.",
+          "validateNext": "Use a resident-service work sample to test problem validation, roadmap choice, user stories, acceptance criteria, KPI selection, launch readiness, and a post-launch decision."
+        },
+        {
+          "pairId": "oti-product-784450-lisa-gelobter",
+          "readerId": "reader.lisa-gelobter",
+          "displayName": "Lisa Gelobter",
+          "relationship": "official agency and product-management vision context; not a confirmed direct manager",
+          "signalGroups": [
+            { "id": "public-interest-technology", "patterns": ["Resident-facing public technology", "public-facing products", "public-safety review"] },
+            { "id": "participatory-practice", "patterns": ["stakeholder listening", "public and user research", "participatory discovery"] },
+            { "id": "technical-fluency", "patterns": ["Web systems architecture", "JavaScript/TypeScript", "Python/Django"] },
+            { "id": "institutional-learning", "patterns": ["durable handoffs", "teams can continue", "post-launch learning"] }
+          ],
+          "constructiveCritique": "Jamie is credible as a public-interest product builder who stays through implementation. The interview should test focused product ownership, use of resident research, outcome measurement, and the ability to strengthen rather than substitute for agency capacity.",
+          "validateNext": "Probe one hard prioritization decision, the resident evidence behind it, cross-functional influence, accessibility and privacy constraints, and the handoff that made continued City ownership possible."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "organization": "NYC Office of Technology and Innovation",
+      "targetRole": "Senior Product Manager",
+      "status": "live-priority",
+      "officialSource": "https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-46148",
+      "resumePath": "resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Jamie-Burkart-Resume-NYC-OTI-SPEED-Senior-Product-Manager-789610.md",
+      "readerCriteria": [
+        {
+          "pairId": "oti-speed-spm-789610-role",
+          "readerId": "reader.public-role.oti-speed-senior-product-manager-789610",
+          "displayName": "Published SPEED product reporting role",
+          "relationship": "role-only public reporting context; person not publicly identified",
+          "signalGroups": [
+            { "id": "business-case-and-root-cause", "patterns": ["business cases", "root-cause analysis", "root constraint"] },
+            { "id": "roadmap-and-kpis", "patterns": ["roadmaps", "KPI definition", "prioritization"] },
+            { "id": "systems-and-permitting", "patterns": ["permitting and compliance", "systems analysis", "municipal compliance"] },
+            { "id": "influence-without-authority", "patterns": ["influence without authority", "public officials", "stakeholder alignment"] },
+            { "id": "technical-architecture", "patterns": ["Web systems architecture", "technical scope", "PostgreSQL/PostGIS"] }
+          ],
+          "constructiveCritique": "The resume connects product leadership to permitting-adjacent development and systems fluency. The structured screen must verify the depth of enterprise architecture experience required by the civil-service title and test a concrete City-scale business case and roadmap.",
+          "validateNext": "Separate civil-service eligibility review from a product case covering root-cause analysis, system dependencies, business value, roadmap, KPIs, stakeholder conflict, and launch learning."
+        },
+        {
+          "pairId": "oti-speed-spm-789610-lisa-gelobter",
+          "readerId": "reader.lisa-gelobter",
+          "displayName": "Lisa Gelobter",
+          "relationship": "official agency and initiative vision context; not a confirmed direct manager",
+          "signalGroups": [
+            { "id": "public-service-systems", "patterns": ["complex civic", "public-benefit development", "public technology"] },
+            { "id": "participatory-government", "patterns": ["residents", "policy stakeholders", "public officials"] },
+            { "id": "capacity-and-handoffs", "patterns": ["durable handoffs", "teams can continue", "shared campaign memory"] },
+            { "id": "responsible-delivery", "patterns": ["accessibility-aware", "privacy-conscious", "evidence boundaries"] }
+          ],
+          "constructiveCritique": "The application presents a persuasive systems-and-public-service orientation. The next gate is whether that breadth can become focused, measurable product leadership within City authority, constraints, and institutional ownership.",
+          "validateNext": "Probe power sharing, decision authority, measurable permitting outcomes, agency-capacity building, and how Jamie would stop or narrow work when evidence does not support the roadmap."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "organization": "NYC Office of Technology and Innovation",
+      "targetRole": "Senior Product Designer",
+      "status": "live-priority",
+      "officialSource": "https://cityjobs.nyc.gov/job/senior-product-designer-in-brooklyn-jid-44505",
+      "resumePath": "resumes/2026-08-20/nyc-oti-pit-senior-product-designer-782373/Jamie-Burkart-Resume-NYC-OTI-PIT-Senior-Product-Designer-782373.md",
+      "readerCriteria": [
+        {
+          "pairId": "oti-pit-designer-luke-farrell",
+          "readerId": "reader.luke-farrell",
+          "displayName": "Luke Farrell",
+          "relationship": "nearest-public operational lead; not a confirmed direct manager",
+          "signalGroups": [
+            { "id": "end-to-end-design", "patterns": ["Product and service design", "information architecture", "public release"] },
+            { "id": "resident-research", "patterns": ["Resident and stakeholder research", "journey framing", "usability feedback"] },
+            { "id": "content-interaction-visual", "patterns": ["interaction design", "content design", "Graphic design"] },
+            { "id": "accessibility-and-plain-language", "patterns": ["plain language", "accessible content structure", "accessibility-aware"] },
+            { "id": "engineering-handoff", "patterns": ["design-to-engineering handoff", "front-end", "maintainable handoffs"] }
+          ],
+          "constructiveCritique": "The resume makes a real hybrid designer-builder case. The next screen should examine actual process artifacts and shipped interfaces, while candidly testing the conventional senior product-design, Figma, research rigor, and design-system depth not established by the resume alone.",
+          "validateNext": "Use a resident-service design exercise and portfolio walkthrough covering research, journey, content and interaction decisions, accessibility, prototyping, usability findings, visual system, and engineering handoff."
+        },
+        {
+          "pairId": "oti-pit-designer-lisa-gelobter",
+          "readerId": "reader.lisa-gelobter",
+          "displayName": "Lisa Gelobter",
+          "relationship": "official initiative vision leader; not a confirmed direct manager",
+          "signalGroups": [
+            { "id": "public-interest-design", "patterns": ["civic technologist", "public trust", "resident-facing"] },
+            { "id": "participatory-practice", "patterns": ["Participatory practice", "co-design", "stakeholder listening"] },
+            { "id": "technical-fluency", "patterns": ["Front-end and web systems", "React/Next.js", "Python/Django"] },
+            { "id": "durable-design-capacity", "patterns": ["reusable visual patterns", "teams can continue", "post-launch learning"] }
+          ],
+          "constructiveCritique": "Jamie is legible as a participatory designer who can bridge into implementation and public trust. The next gate is whether this adjacent practice meets the senior design craft bar and can strengthen an in-house City design team without overstating unsupported tools or scale.",
+          "validateNext": "Probe design critique, research synthesis, accessibility, visual craft, component and design-system thinking, collaboration with engineers, and the evidence that changed a shipped design."
+        }
+      ]
+    },
+    {
       "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
       "organization": "NYC Office of Technology and Innovation",
       "targetRole": "Technical Operations Manager",

@@ -1,6 +1,6 @@
 {
   "id": "current-priority-2026-08-13",
-  "version": 5,
+  "version": 6,
   "principle": "The public evaluator sees public projection files and public role and reader context only; Wiki gap resolution is a separate pass.",
   "publicResumeSelectionPolicyPath": "evals/resumes/public-resume-selection.json",
   "publicResumeSelectedOpportunityIds": [
@@ -27,7 +27,11 @@
     "opportunity.codepath.engineering-project-manager.5160542007",
     "opportunity.aclu.senior-project-manager.8620968002",
     "opportunity.benepass.product-operations.7f963a7a",
-    "opportunity.nyc-oti.senior-product-manager.782366"
+    "opportunity.nyc-oti.senior-product-manager.782366",
+    "opportunity.nyc-oti.speed-operations-manager.789810",
+    "opportunity.nyc-oti.product-manager.784450",
+    "opportunity.nyc-oti.speed-senior-product-manager.789610",
+    "opportunity.nyc-oti.pit-senior-product-designer.782373"
   ],
   "benchmarkOpportunityIds": [
     "opportunity.nyc-oti.technical-operations-manager.782369"

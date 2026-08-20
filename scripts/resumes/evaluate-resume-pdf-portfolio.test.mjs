@@ -16,12 +16,12 @@ function sha256(value) {
   return createHash("sha256").update(value).digest("hex");
 }
 
-test("all five opportunity resumes and the lifecycle-selected public resume have current inspected PDF siblings", () => {
+test("all nine opportunity resumes and the lifecycle-selected public resume have current inspected PDF siblings", () => {
   const result = evaluateResumePdfPortfolio();
   assert.equal(result.overall, "pass", JSON.stringify(result, null, 2));
-  assert.equal(result.summary.markdownPdfSiblingPairs, 6);
-  assert.equal(result.summary.visuallyInspectedVersions, 6);
-  assert.equal(result.summary.passingVersions, 6);
+  assert.equal(result.summary.markdownPdfSiblingPairs, 10);
+  assert.equal(result.summary.visuallyInspectedVersions, 10);
+  assert.equal(result.summary.passingVersions, 10);
 
   const publicResume = result.versions.find(
     (version) => version.publicInstallPath === "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"

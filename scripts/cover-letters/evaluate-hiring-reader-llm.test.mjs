@@ -15,7 +15,7 @@ test("the selected cover letter clears every current named-reader model gate", (
   assert.equal(result.overall, "pass", JSON.stringify(result, null, 2));
   assert.equal(result.summary.plannedModelCalls, 2);
   assert.equal(result.summary.passingModelResults, 2);
-  assert.equal(result.summary.deterministicReaderCallsSkipped, 6);
+  assert.equal(result.summary.deterministicReaderCallsSkipped, 14);
   assert.equal(result.actualPeopleParticipated, false);
 });
 

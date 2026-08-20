@@ -23,9 +23,9 @@ const selectionConfig = JSON.parse(
 test("every priority and benchmark opportunity resume clears deterministic reader preflight", () => {
   const result = evaluateHiringReaderPortfolio();
   assert.equal(result.overall, "pass", JSON.stringify(result, null, 2));
-  assert.equal(result.summary.maintainedOpportunityVersions, 5);
-  assert.equal(result.summary.passingOpportunityVersions, 5);
-  assert.equal(result.summary.passingReaderOpportunityPreflights, 8);
+  assert.equal(result.summary.maintainedOpportunityVersions, 9);
+  assert.equal(result.summary.passingOpportunityVersions, 9);
+  assert.equal(result.summary.passingReaderOpportunityPreflights, 16);
   assert.equal(result.actualPeopleParticipated, false);
   assert.equal(result.decision, "eligible-for-fictionalized-model-review");
 });
@@ -64,7 +64,7 @@ test("a missing opportunity-specific resume fails closed", () => {
   const missingPath = config.versions[0].resumePath;
   const result = evaluateHiringReaderPortfolio({ resumeOverrides: { [missingPath]: null } });
   assert.equal(result.overall, "fail");
-  assert.equal(result.summary.maintainedOpportunityVersions, 4);
+  assert.equal(result.summary.maintainedOpportunityVersions, 8);
   assert.equal(result.versions[0].overall, "fail");
 });
 
@@ -138,5 +138,19 @@ test("the maintained pass authorizes model review rather than claiming a hire de
       assert.equal(reader.decision, "eligible-for-fictionalized-model-review");
       assert.ok(reader.validateNext.length > 20);
     }
+  }
+});
+
+test("every tracked open opportunity has an exact tailored Markdown and PDF path", () => {
+  const tracked = new Set(suite.trackedOpenTruthfullyHirableOpportunityIds);
+  const configured = new Map(
+    selectionConfig.opportunities.map((opportunity) => [opportunity.opportunityId, opportunity])
+  );
+
+  for (const opportunityId of tracked) {
+    const opportunity = configured.get(opportunityId);
+    assert.ok(opportunity, `${opportunityId} must be lifecycle-configured`);
+    assert.match(opportunity.resumeMarkdownPath ?? "", /^resumes\/.+\.md$/);
+    assert.match(opportunity.resumePdfPath ?? "", /^resumes\/.+\.pdf$/);
   }
 });

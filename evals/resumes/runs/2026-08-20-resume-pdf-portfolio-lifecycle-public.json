@@ -5,11 +5,11 @@
   "evaluatedAt": "2026-08-20T12:35:00-04:00",
   "overall": "pass",
   "summary": {
-    "requiredVersions": 6,
-    "configuredVersions": 6,
-    "passingVersions": 6,
-    "markdownPdfSiblingPairs": 6,
-    "visuallyInspectedVersions": 6
+    "requiredVersions": 10,
+    "configuredVersions": 10,
+    "passingVersions": 10,
+    "markdownPdfSiblingPairs": 10,
+    "visuallyInspectedVersions": 10
   },
   "portfolioChecks": [
     {
@@ -184,6 +184,206 @@
       "markdownSha256": "8bcba31995a193add743484e8966734761327a608dcd1a74f7f55ff191822830",
       "pdfSha256": "96129a9a4df8b51b5fac3b0303a6904950c7c2e25a3f6dc93e098861a9e848bb",
       "pdfBytes": 95157,
+      "pages": 2,
+      "publicInstallMatches": null,
+      "overall": "pass",
+      "checks": [
+        {
+          "id": "markdown-exists",
+          "pass": true
+        },
+        {
+          "id": "pdf-sibling-exists",
+          "pass": true
+        },
+        {
+          "id": "pdf-size",
+          "pass": true
+        },
+        {
+          "id": "pdf-pages-and-media-box",
+          "pass": true
+        },
+        {
+          "id": "markdown-links-preserved",
+          "pass": true
+        },
+        {
+          "id": "visual-receipt-bound-to-artifacts",
+          "pass": true
+        },
+        {
+          "id": "every-page-visually-passed",
+          "pass": true
+        },
+        {
+          "id": "read-only-source-boundary",
+          "pass": true
+        },
+        {
+          "id": "public-install-byte-identical",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "markdownPath": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.md",
+      "pdfPath": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.pdf",
+      "visualRunPath": "evals/resumes/runs/2026-08-20-oti-speed-operations-manager-789810-pdf-visual.json",
+      "markdownSha256": "714550943bca3204e4364275d0443a386319d493945cc4959d460c2cad8df912",
+      "pdfSha256": "0df5205f8282997e5df5272aeb5f8dcd23d85aac92dd9a802a7dec218cdb8a5e",
+      "pdfBytes": 94535,
+      "pages": 2,
+      "publicInstallMatches": null,
+      "overall": "pass",
+      "checks": [
+        {
+          "id": "markdown-exists",
+          "pass": true
+        },
+        {
+          "id": "pdf-sibling-exists",
+          "pass": true
+        },
+        {
+          "id": "pdf-size",
+          "pass": true
+        },
+        {
+          "id": "pdf-pages-and-media-box",
+          "pass": true
+        },
+        {
+          "id": "markdown-links-preserved",
+          "pass": true
+        },
+        {
+          "id": "visual-receipt-bound-to-artifacts",
+          "pass": true
+        },
+        {
+          "id": "every-page-visually-passed",
+          "pass": true
+        },
+        {
+          "id": "read-only-source-boundary",
+          "pass": true
+        },
+        {
+          "id": "public-install-byte-identical",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "markdownPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.md",
+      "pdfPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.pdf",
+      "visualRunPath": "evals/resumes/runs/2026-08-20-oti-product-manager-784450-pdf-visual.json",
+      "markdownSha256": "5672c871c0b71fc44816941cc17f08d81d9af88177c4ce15e81369ca95ffd1ea",
+      "pdfSha256": "184aa85af59158899922c71ca57d56a5a5ed5af234f6d69cff03ee0f6984fac0",
+      "pdfBytes": 95318,
+      "pages": 2,
+      "publicInstallMatches": null,
+      "overall": "pass",
+      "checks": [
+        {
+          "id": "markdown-exists",
+          "pass": true
+        },
+        {
+          "id": "pdf-sibling-exists",
+          "pass": true
+        },
+        {
+          "id": "pdf-size",
+          "pass": true
+        },
+        {
+          "id": "pdf-pages-and-media-box",
+          "pass": true
+        },
+        {
+          "id": "markdown-links-preserved",
+          "pass": true
+        },
+        {
+          "id": "visual-receipt-bound-to-artifacts",
+          "pass": true
+        },
+        {
+          "id": "every-page-visually-passed",
+          "pass": true
+        },
+        {
+          "id": "read-only-source-boundary",
+          "pass": true
+        },
+        {
+          "id": "public-install-byte-identical",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "markdownPath": "resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Jamie-Burkart-Resume-NYC-OTI-SPEED-Senior-Product-Manager-789610.md",
+      "pdfPath": "resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Jamie-Burkart-Resume-NYC-OTI-SPEED-Senior-Product-Manager-789610.pdf",
+      "visualRunPath": "evals/resumes/runs/2026-08-20-oti-speed-senior-product-manager-789610-pdf-visual.json",
+      "markdownSha256": "7662a0085b231ba00f95192537f817330438758fc02af0e3da0d47f12a73d09f",
+      "pdfSha256": "8725396e0d821994265b1c2d5c5d7e97dc33fc6dcb6042efa8681aca948a272e",
+      "pdfBytes": 95411,
+      "pages": 2,
+      "publicInstallMatches": null,
+      "overall": "pass",
+      "checks": [
+        {
+          "id": "markdown-exists",
+          "pass": true
+        },
+        {
+          "id": "pdf-sibling-exists",
+          "pass": true
+        },
+        {
+          "id": "pdf-size",
+          "pass": true
+        },
+        {
+          "id": "pdf-pages-and-media-box",
+          "pass": true
+        },
+        {
+          "id": "markdown-links-preserved",
+          "pass": true
+        },
+        {
+          "id": "visual-receipt-bound-to-artifacts",
+          "pass": true
+        },
+        {
+          "id": "every-page-visually-passed",
+          "pass": true
+        },
+        {
+          "id": "read-only-source-boundary",
+          "pass": true
+        },
+        {
+          "id": "public-install-byte-identical",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "markdownPath": "resumes/2026-08-20/nyc-oti-pit-senior-product-designer-782373/Jamie-Burkart-Resume-NYC-OTI-PIT-Senior-Product-Designer-782373.md",
+      "pdfPath": "resumes/2026-08-20/nyc-oti-pit-senior-product-designer-782373/Jamie-Burkart-Resume-NYC-OTI-PIT-Senior-Product-Designer-782373.pdf",
+      "visualRunPath": "evals/resumes/runs/2026-08-20-oti-pit-senior-product-designer-782373-pdf-visual.json",
+      "markdownSha256": "61e55159ae54651c371e6766ea3edb35c6586b3450cd34bae78fddd672ab92f6",
+      "pdfSha256": "d3416526a88ca109ed9eea61a3a273fb7aba66f4425f1816ac0a7f35f565674e",
+      "pdfBytes": 95843,
       "pages": 2,
       "publicInstallMatches": null,
       "overall": "pass",

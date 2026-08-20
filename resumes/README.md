@@ -18,6 +18,10 @@ individual credit for collective work.
 priority opportunity in `evals/knowledge-wiki/hiring-suites.json` and for its
 explicitly expired benchmark role. It evaluates each version through the same
 public-context reader/opportunity pairs maintained by the Knowledge Wiki.
+The current complete universe is eight tracked open or pending opportunities
+plus one explicitly expired benchmark: nine tailored Markdown resumes, nine
+styled PDF siblings, nine role-specific cover letters, and sixteen governed
+reader–opportunity pairs.
 
 These are fictionalized, public-source analytical lenses. A passing resume-stage
 result means **advance to a structured interview or practical work sample**. It

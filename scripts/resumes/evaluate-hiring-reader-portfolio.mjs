@@ -198,9 +198,13 @@ export function evaluateHiringReaderPortfolio({
     ...suite.benchmarkOpportunityIds
   ];
   const configuredOpportunityIds = config.versions.map((version) => version.opportunityId);
-  const requiredPairs = namedReader.readerOpportunityPairs
+  const requiredPairIdsFromLifecycle = selectionConfig.opportunities
+    .filter((opportunity) => requiredOpportunityIds.includes(opportunity.opportunityId))
+    .flatMap((opportunity) => opportunity.readerPairIds ?? []);
+  const legacyRequiredPairIds = namedReader.readerOpportunityPairs
     .filter((pair) => pair.required)
     .map((pair) => pair.id);
+  const requiredPairs = [...new Set(requiredPairIdsFromLifecycle)];
   const configuredPairs = config.versions.flatMap((version) =>
     version.readerCriteria.map((reader) => reader.pairId)
   );
@@ -230,6 +234,11 @@ export function evaluateHiringReaderPortfolio({
       id: "named-reader-pair-coverage",
       pass: sameMembers(requiredPairs, configuredPairs),
       detail: `${configuredPairs.length}/${requiredPairs.length} required reader/opportunity pairs configured.`
+    },
+    {
+      id: "legacy-site-reader-pairs-preserved",
+      pass: legacyRequiredPairIds.every((pairId) => requiredPairs.includes(pairId)),
+      detail: `${legacyRequiredPairIds.filter((pairId) => requiredPairs.includes(pairId)).length}/${legacyRequiredPairIds.length} previously governed site-reader pairs remain in the complete artifact-reader universe.`
     },
     {
       id: "candidate-evaluation-skill-installed",

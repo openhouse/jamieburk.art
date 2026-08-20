@@ -106,8 +106,8 @@
       "readerContextPaths": {
         "oti-speed-operations-lisa-gelobter": ["docs/knowledge-bank/sources/nyc-lisa-gelobter-appointment-2026.md"]
       },
-      "resumeMarkdownPath": null,
-      "resumePdfPath": null
+      "resumeMarkdownPath": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.md",
+      "resumePdfPath": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.pdf"
     },
     {
       "opportunityId": "opportunity.nyc-oti.product-manager.784450",
@@ -126,8 +126,8 @@
       "readerContextPaths": {
         "oti-product-784450-lisa-gelobter": ["docs/knowledge-bank/sources/nyc-lisa-gelobter-appointment-2026.md"]
       },
-      "resumeMarkdownPath": null,
-      "resumePdfPath": null
+      "resumeMarkdownPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.md",
+      "resumePdfPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.pdf"
     },
     {
       "opportunityId": "opportunity.nyc-oti.speed-senior-product-manager.789610",
@@ -149,8 +149,8 @@
       "readerContextPaths": {
         "oti-speed-spm-789610-lisa-gelobter": ["docs/knowledge-bank/sources/nyc-lisa-gelobter-appointment-2026.md"]
       },
-      "resumeMarkdownPath": null,
-      "resumePdfPath": null
+      "resumeMarkdownPath": "resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Jamie-Burkart-Resume-NYC-OTI-SPEED-Senior-Product-Manager-789610.md",
+      "resumePdfPath": "resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Jamie-Burkart-Resume-NYC-OTI-SPEED-Senior-Product-Manager-789610.pdf"
     },
     {
       "opportunityId": "opportunity.nyc-oti.pit-senior-product-designer.782373",
@@ -173,8 +173,8 @@
         "oti-pit-designer-luke-farrell": ["docs/knowledge-bank/sources/luke-farrell-pit-crew-2026.md"],
         "oti-pit-designer-lisa-gelobter": ["docs/knowledge-bank/sources/nyc-lisa-gelobter-appointment-2026.md"]
       },
-      "resumeMarkdownPath": null,
-      "resumePdfPath": null
+      "resumeMarkdownPath": "resumes/2026-08-20/nyc-oti-pit-senior-product-designer-782373/Jamie-Burkart-Resume-NYC-OTI-PIT-Senior-Product-Designer-782373.md",
+      "resumePdfPath": "resumes/2026-08-20/nyc-oti-pit-senior-product-designer-782373/Jamie-Burkart-Resume-NYC-OTI-PIT-Senior-Product-Designer-782373.pdf"
     },
     {
       "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
