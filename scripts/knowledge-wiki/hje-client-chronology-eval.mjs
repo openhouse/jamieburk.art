@@ -33,7 +33,7 @@ function resumeSources(root) {
     .flatMap((entry) => {
       const jobDir = path.join(directory, entry.name);
       return readdirSync(jobDir)
-        .filter((name) => name.endsWith(".md"))
+        .filter((name) => /^Jamie-Burkart-Resume-.*\.md$/.test(name))
         .map((name) => ({ name: `${entry.name}/${name}`, text: readFileSync(path.join(jobDir, name), "utf8") }));
     });
 }

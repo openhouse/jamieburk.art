@@ -6,6 +6,7 @@ import { evaluateHjeClientChronology, loadCandidate } from "./hje-client-chronol
 test("the bounded HJE client period and independent LLC formation date pass", () => {
   const result = evaluateHjeClientChronology(loadCandidate());
   assert.equal(result.passed, true, result.failures.join("\n"));
+  assert.equal(result.metrics.maintainedResumes, 5, "cover letters and submission guides must not enter the resume corpus");
 });
 
 function expectFailure(name, mutate, expected) {
