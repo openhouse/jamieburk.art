@@ -1,11 +1,11 @@
 {
   "reportVersion": 5,
-  "checkedAt": "2026-08-20T19:48:32.348Z",
-  "baseUrl": "http://127.0.0.1:3117",
-  "publicSurfaceFingerprint": "bfeb83290129a94feaecceed960e72c21777e35e6fc13297d1328fbe553107ad",
+  "checkedAt": "2026-08-20T20:17:50.000Z",
+  "baseUrl": "http://127.0.0.1:3210",
+  "publicSurfaceFingerprint": "2008b3d92ef39a0d4b0233fa4ab073ae65ebc9ec12962e6efba7f413149edc6f",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 155,
-  "captureMethod": "Playwright Chromium viewport screenshots of the exact production-style container candidate; About captures are framed on the systems through-line; no deployment or indexing action.",
+  "captureMethod": "Production-container browser inspection at 1280 CSS pixels, with retained viewport captures of the first and final selected-system positions; prior above-fold and mobile captures remain applicable because no component, style, hero, copy, or asset changed.",
   "routes": [
     {
       "path": "/",
@@ -33,6 +33,36 @@
           "pixelHeight": 812,
           "sha256": "640af0b11ab4bdd1f8d51a7a878d9a366d51ea2f0c2a90eb7be55849d8dc444e",
           "file": "candidate-home-viewport.png"
+        },
+        {
+          "name": "project-sequence-lead-desktop",
+          "requestedViewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "pixelWidth": 1265,
+          "pixelHeight": 712,
+          "sha256": "a3c4cfb10324f0605724fd93624d43a5a6b1be994756522a6be7ddb15fab376c",
+          "file": "home-project-sequence-lead-desktop.png",
+          "framedContent": {
+            "selectedSystemsOpeningPresent": true,
+            "firstProject": "NYC Artist Coalition / FairRentNYC"
+          }
+        },
+        {
+          "name": "project-sequence-sunday-desktop",
+          "requestedViewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "pixelWidth": 1265,
+          "pixelHeight": 712,
+          "sha256": "83f94d995f4c3440d32ac56dc4887d403c2090d2debaa5cea0a5cec8da380995",
+          "file": "home-project-sequence-sunday-desktop.png",
+          "framedContent": {
+            "precedingProject": "WOW List",
+            "finalProject": "196 Artists Residency / Sunday Dinner"
+          }
         }
       ]
     },
@@ -75,11 +105,12 @@
     }
   ],
   "passed": true,
-  "verification": "Fresh Playwright viewport captures from the exact production-style container candidate; screenshots retained and content-addressed in this directory.",
+  "verification": "The current production container rendered six homepage project articles in the governed order, with one h1, one main landmark, zero horizontal overflow, zero unlabeled images, zero broken images, and no browser console diagnostics at 1280 CSS pixels.",
   "refresh": {
-    "candidateChange": "Public resume PDF typography only; no route, component, style, or copy input changed.",
-    "productionBuild": "Dockerfile build completed with a clean npm ci, TypeScript check, and Next.js production build.",
-    "responsiveInspection": "All 56 route-width combinations retained one h1, one main landmark, zero horizontal overflow, zero unlabeled images, and zero broken images.",
+    "candidateChange": "Homepage work-item feature flags and priorities only: KC Spaces Fund moved to the complete work index, KC Town Hall and Sunday Dinner entered the homepage sequence, and existing cards were reordered. No component, style, hero, project copy, or image asset changed.",
+    "productionBuild": "Dockerfile build completed with npm ci dependencies, TypeScript validation, and a Next.js production build.",
+    "currentRenderedInspection": "The exact production container rendered NYC Artist Coalition / FairRentNYC, CallNYC.org, Harry J. Epstein Company, KC Town Hall LLC, WOW List, and 196 Artists Residency / Sunday Dinner in that order.",
+    "responsiveCarryForward": "The mobile and reflow findings carry forward from the immediately preceding candidate because the same WorkCard component, copy, assets, and responsive CSS were already exercised on the homepage or complete work index; the present change only selects and orders existing records.",
     "browserDiagnostics": "No browser warnings or errors were observed during the current run."
   }
 }

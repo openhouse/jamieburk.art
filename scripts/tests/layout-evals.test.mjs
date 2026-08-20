@@ -102,17 +102,64 @@ test("every work item retains a truthful cover visual", () => {
   assert(result.failures.some(({ criterion }) => criterion === "truthful-project-cover-field"));
 });
 
+function opportunityTailoredHomepageSource() {
+  return readFileSync("apps/www/src/data/work.ts", "utf8");
+}
+
+test("the opportunity-tailored six-project homepage sequence passes", () => {
+  const path = "apps/www/src/data/work.ts";
+  const result = evaluateLayout(process.cwd(), {
+    [path]: opportunityTailoredHomepageSource()
+  });
+  assert.equal(result.passed, true, JSON.stringify(result.failures, null, 2));
+});
+
+test("a changed live opportunity set invalidates the homepage hiring argument", () => {
+  const path = "evals/public-resume/current.json";
+  const current = JSON.parse(readFileSync(path, "utf8"));
+  current.opportunities.push({
+    opportunityId: "opportunity.example.new-role",
+    opportunityPath: "docs/knowledge-bank/opportunities/example.md",
+    requiredTerms: ["new requirement"],
+    namedReaders: []
+  });
+  const result = evaluateLayout(process.cwd(), {
+    [path]: `${JSON.stringify(current, null, 2)}\n`
+  });
+  assert.equal(result.passed, false);
+  assert(
+    result.failures.some(
+      ({ criterion }) => criterion === "hiring-argument-opportunity-set"
+    )
+  );
+});
+
 test("the homepage hiring argument fails when historical commercial work leads current civic work", () => {
   const path = "apps/www/src/data/work.ts";
-  const source = readFileSync(path, "utf8")
+  const source = opportunityTailoredHomepageSource()
     .replace(
       /title: "NYC Artist Coalition \/ FairRentNYC",([\s\S]*?)priority: 1,/,
-      'title: "NYC Artist Coalition / FairRentNYC",$1priority: 4,'
+      'title: "NYC Artist Coalition / FairRentNYC",$1priority: 3,'
     )
     .replace(
-      /title: "Harry J\. Epstein Company",([\s\S]*?)priority: 4,/,
+      /title: "Harry J\. Epstein Company",([\s\S]*?)priority: 3,/,
       'title: "Harry J. Epstein Company",$1priority: 1,'
     );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(
+    result.failures.some(
+      ({ criterion }) => criterion === "hiring-argument-project-sequence"
+    )
+  );
+});
+
+test("the homepage hiring argument fails if Sunday Dinner is removed", () => {
+  const path = "apps/www/src/data/work.ts";
+  const source = opportunityTailoredHomepageSource().replace(
+    /title: "196 Artists Residency \/ Sunday Dinner",([\s\S]*?)featured: true,/,
+    'title: "196 Artists Residency / Sunday Dinner",$1featured: false,'
+  );
   const result = evaluateLayout(process.cwd(), { [path]: source });
   assert.equal(result.passed, false);
   assert(

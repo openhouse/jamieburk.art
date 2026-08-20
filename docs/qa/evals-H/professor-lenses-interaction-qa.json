@@ -1,8 +1,8 @@
 {
   "reportVersion": 3,
-  "checkedAt": "2026-08-20T19:48:32.348Z",
-  "baseUrl": "http://127.0.0.1:3117",
-  "publicSurfaceFingerprint": "bfeb83290129a94feaecceed960e72c21777e35e6fc13297d1328fbe553107ad",
+  "checkedAt": "2026-08-20T20:17:50.000Z",
+  "baseUrl": "http://127.0.0.1:3210",
+  "publicSurfaceFingerprint": "2008b3d92ef39a0d4b0233fa4ab073ae65ebc9ec12962e6efba7f413149edc6f",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 155,
   "method": "Playwright keyboard interaction plus scoped DOM and viewport inspection on the exact local candidate. This is not a human screen-reader or assistive-technology session.",
@@ -205,12 +205,12 @@
   ],
   "passed": true,
   "refresh": {
-    "candidateChange": "Public resume PDF typography only; no interactive route source changed.",
+    "candidateChange": "Homepage work-item selection and order changed without changing interactive components, navigation, focus behavior, CSS, or routes.",
     "currentChecks": [
-      "Mobile menu opened and exposed all five navigation destinations.",
-      "Home and About passed the 640-pixel and 320-pixel reflow proxies without horizontal overflow.",
-      "Home-to-About navigation completed and the destination retained its h1 and main landmark."
+      "The production-container DOM retained one main landmark and one h1.",
+      "All six selected-system cards retained real case-study and tag-link destinations.",
+      "The final homepage card is 196 Artists Residency / Sunday Dinner."
     ],
-    "carriedForwardCheck": "The keyboard sequence remains source-identical to the prior exact-candidate run; no human screen-reader claim is made."
+    "carriedForwardCheck": "Keyboard, mobile-navigation, and 320/640 reflow observations carry forward from the immediately preceding component-identical candidate; no human screen-reader claim is made."
   }
 }

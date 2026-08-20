@@ -108,7 +108,7 @@ const workItemsInput = [
     years: "2009-2015",
     status: "Full case study",
     featured: true,
-    priority: 4,
+    priority: 3,
     visibility: "public-safe",
     proofBankIds: [
       "hje-first-client-chronology",
@@ -331,8 +331,8 @@ const workItemsInput = [
     role: "Technical Project Manager & Web Systems Lead",
     years: "2020",
     status: "Full case study",
-    featured: true,
-    priority: 2,
+    featured: false,
+    priority: 7,
     visibility: "public-safe",
     proofBankIds: ["kc-spaces-fund-digital-infrastructure"],
     whatWasUnclear:
@@ -433,7 +433,7 @@ const workItemsInput = [
     years: "2016 - archived",
     status: "Full case study",
     featured: true,
-    priority: 3,
+    priority: 2,
     visibility: "public-safe",
     proofBankIds: ["callnyc-civic-data-guidance"],
     whatWasUnclear:
@@ -605,7 +605,7 @@ const workItemsInput = [
     role: "Host, Organizer & Systems Steward",
     years: "2010s-present",
     status: "Short proof page",
-    featured: false,
+    featured: true,
     priority: 6,
     visibility: "summary-only",
     proofBankIds: ["sunday-dinner-196-participation-infrastructure"],
@@ -664,8 +664,8 @@ const workItemsInput = [
     role: "Co-founder, Project Manager, Service Designer & CCED Developer/Presenter",
     years: "2019-2024 public record",
     status: "Short proof page",
-    featured: false,
-    priority: 7,
+    featured: true,
+    priority: 4,
     visibility: "public-safe",
     proofBankIds: [
       "kc-town-hall-public-benefit-documentation",

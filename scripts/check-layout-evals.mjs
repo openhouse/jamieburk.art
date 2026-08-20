@@ -29,6 +29,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     "metadata-and-locator-safety",
     "editorial-not-decorative",
     "truthful-project-cover-field",
+    "hiring-argument-opportunity-set",
     "hiring-argument-project-sequence",
     "tag-navigation-contract",
     "human-index-material-system",
@@ -183,13 +184,18 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     .filter(({ featured }) => featured)
     .sort((left, right) => left.priority - right.priority)
     .map(({ title }) => title);
-  const expectedFeaturedSequence = [
-    "NYC Artist Coalition / FairRentNYC",
-    "KC Spaces Fund",
-    "CallNYC.org",
-    "Harry J. Epstein Company",
-    "WOW List"
-  ];
+  const publicResume = JSON.parse(readText(evaluation.hiringArgument.opportunitySetSource));
+  const observedOpportunityIds = publicResume.opportunities.map(
+    ({ opportunityId }) => opportunityId
+  );
+  if (publicResume.id !== evaluation.hiringArgument.opportunitySetId ||
+      JSON.stringify(observedOpportunityIds) !== JSON.stringify(evaluation.hiringArgument.opportunityIds)) {
+    fail(
+      "hiring-argument-opportunity-set",
+      "The live opportunity set changed; re-evaluate the homepage project selection before commissioning hiring-reader review."
+    );
+  }
+  const expectedFeaturedSequence = evaluation.hiringArgument.featuredProjectSequence;
   if (JSON.stringify(featuredSequence) !== JSON.stringify(expectedFeaturedSequence)) {
     fail(
       "hiring-argument-project-sequence",

@@ -66,13 +66,15 @@
       "weight": 10,
       "inputs": ["homepage", "technical operations page", "resume page"],
       "procedure": [
-        "Before spending an LLM call, deterministically verify that the homepage has exactly five featured projects in this order: NYC Artist Coalition / FairRentNYC, KC Spaces Fund, CallNYC.org, Harry J. Epstein Company, and WOW List.",
+        "Before evaluating the homepage sequence, verify that the opportunity IDs recorded in the layout hiring-argument contract exactly match evals/public-resume/current.json; if they differ, stop and re-evaluate selection before spending an LLM call.",
+        "Before spending an LLM call, deterministically verify that the homepage has exactly six featured projects in this order: NYC Artist Coalition / FairRentNYC, CallNYC.org, Harry J. Epstein Company, KC Town Hall LLC, WOW List, and 196 Artists Residency / Sunday Dinner.",
         "Give three blind judges no context beyond the candidate URLs.",
         "Allow each judge two minutes of reading.",
         "Ask each judge to identify Jamie's target role, central value, three proof examples, and the next action they would take.",
-        "Ask each judge whether the project sequence advances a coherent hiring argument from current public leadership through resolved implementation, civic-product translation, sustained operations, and platform scale."
+        "Ask each judge whether the project sequence advances a coherent hiring argument from current civic operations through resident-facing product work, sustained client stewardship, field implementation and resource responsibility, platform scale, and human-centered onboarding and continuity."
       ],
       "pass_criteria": [
+        "The deterministic opportunity-set freshness gate passes before the sequence or any hiring-reader call is accepted.",
         "The deterministic sequence gate passes before any hiring-reader call is permitted.",
         "At least two of three judges identify Technical Project Manager, Product Operations, or Implementation as the role family.",
         "At least two of three judges describe the central promise as creating operating structure from ambiguous work.",
@@ -89,7 +91,7 @@
       "grader": "hybrid",
       "blocking": true,
       "weight": 12,
-      "inputs": ["Harry J. Epstein case study", "FairRentNYC case study and participation sequence", "KC Spaces Fund case study", "CallNYC case study", "WOW List current proof surface", "Source-Backed Team Memory lab"],
+      "inputs": ["FairRentNYC case study and participation sequence", "CallNYC case study", "Harry J. Epstein case study", "KC Town Hall case study", "WOW List current proof surface", "Sunday Dinner / 196 case study", "Source-Backed Team Memory lab"],
       "procedure": [
         "Inventory visible figures, screenshots, diagrams, downloads, and public artifacts.",
         "Verify each artifact's caption, provenance, alt text, consent status, exact derivative, permission record, and relation to a claim.",
@@ -107,7 +109,7 @@
         "The KC Spaces Fund capture shows a finished public implementation while preserving public organizer credit and excluding fundraising, publishing, fiscal-sponsor, applicant-review, and grant-decision claims for Jamie.",
         "The CallNYC cover shows the original 2016 interface, contains no Wayback toolbar, and remains clearly framed as historical product evidence rather than current or official City guidance.",
         "The selected Let NYC Dance frame is frame 5 of ten one-second candidates captured after the video loaded; the other nine are not committed.",
-        "The existing homepage hero remains unchanged, and the WOW List capture is framed as a live tester invitation rather than full platform restoration.",
+        "The existing homepage hero remains unchanged, the WOW List capture is framed as a live tester invitation rather than full platform restoration, and Sunday Dinner remains in the homepage project sequence with its governed photograph and project-centered courtesy credit.",
         "The social card uses a metadata-stripped East River source with the approved homepage-aligned 1200 by 630 cover crop, limits visible copy to Jamie's role followed by his name, records optional-credit provenance without putting photographer credit in the pixels, renders Jamie's name in the same licensed TeX Gyre Pagella identity face used on the site, and uses a cinematic left-to-right charcoal gradient that becomes fully transparent before the right-side portrait without a vertical rule or floating placard.",
         "The selected render contract is the single source for layer and copy order, blocks identity-field opacity below the measured 4.5 to 1 social-preview floor, and requires photo, crop, copy, typography, gradient, contrast, hash, cache revision, governed occurrence, and eval changes to stay synchronized.",
         "The homepage or Technical Operations page links to at least three inspectable proof objects.",
@@ -366,14 +368,14 @@
         "homepage",
         "technical operations page",
         "resume page and PDF",
-        "Harry J. Epstein case study",
         "FairRentNYC case study",
-        "KC Spaces Fund case study",
-        "CallNYC case study"
+        "CallNYC case study",
+        "Harry J. Epstein case study",
+        "KC Town Hall case study"
       ],
       "procedure": [
         "Give three blind judges the rendered candidate and no implementation discussion: one human-resources gatekeeper, one public-sector generalist, and one technical delivery leader.",
-        "Allow each judge ninety seconds for the homepage, Technical Operations page, and resume, followed by a scan of the three lead case studies.",
+        "Allow each judge ninety seconds for the homepage, Technical Operations page, and resume, followed by a scan of the four lead case studies.",
         "Ask each judge to state Jamie's target role and added value, then identify the actor, action, purpose, and usable result in each lead project.",
         "Ask each judge whether the homepage sequence makes the strongest current-to-scaled hiring case and whether the alternating human-participation and interface evidence reads as one coherent practice.",
         "Ask each judge to flag unexplained acronyms, specialist terms, symbols, tool lists without Jamie's relationship to them, weak verbs that understate the role, and language that overstates ownership or causality.",

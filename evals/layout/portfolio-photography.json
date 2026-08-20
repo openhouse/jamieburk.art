@@ -1,7 +1,30 @@
 {
-  "id": "portfolio-photography-layout-v6",
+  "id": "portfolio-photography-layout-v7",
   "title": "Human Index photographic portfolio layout",
   "intent": "Photography and public interfaces make situated work credible while remaining public-safe, accessible, project-specific, and subordinate to human publication authority.",
+  "hiringArgument": {
+    "opportunitySetSource": "evals/public-resume/current.json",
+    "opportunitySetId": "public-resume-reader-set-2026-08-20",
+    "opportunityIds": [
+      "opportunity.aclu.senior-project-manager-lps.8620968002",
+      "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "opportunity.asana.ai-implementation.8027437",
+      "opportunity.nyc-oti.product-manager.784450",
+      "opportunity.nyc-oti.senior-product-manager.782366",
+      "opportunity.nyc-oti.operations-manager.789810",
+      "opportunity.nyc-oti.cybersecurity-senior-project-manager.791074"
+    ],
+    "featuredProjectSequence": [
+      "NYC Artist Coalition / FairRentNYC",
+      "CallNYC.org",
+      "Harry J. Epstein Company",
+      "KC Town Hall LLC",
+      "WOW List",
+      "196 Artists Residency / Sunday Dinner"
+    ],
+    "selectionBasis": "Use the deterministic public-resume opportunity set when no authorized private active-application IDs are supplied. Re-evaluate this sequence before hiring-reader role play whenever that set, a project's proof strength, or a project's truthful cover changes.",
+    "sequenceLogic": "Lead with current role relevance and direct evidence, then widen the case through sustained client stewardship, field implementation and resource responsibility, platform scale, and human-centered continuity."
+  },
   "criteria": [
     {
       "id": "manifest-bound-publication",
@@ -34,9 +57,14 @@
       "criterion": "Every work item has one project-specific cover: KC Spaces Fund, Harry J. Epstein, CallNYC, and WOW List use their own public surfaces; Fair Rent NYC, Sunday Dinner, and KC Town Hall use governed photographs."
     },
     {
+      "id": "hiring-argument-opportunity-set",
+      "blocking": true,
+      "criterion": "The homepage hiring argument identifies the exact deterministic live opportunity set that informed its project selection. If that set changes, the project sequence becomes stale and hiring-reader role play is blocked until the argument is reviewed."
+    },
+    {
       "id": "hiring-argument-project-sequence",
       "blocking": true,
-      "criterion": "The homepage presents five projects in a deliberate hiring sequence: current NYC Artist Coalition work, resolved KC Spaces Fund implementation, civic-product translation through CallNYC, long-term Harry J. Epstein stewardship, then WOW List platform scale."
+      "criterion": "The homepage presents six projects in a deliberate hiring sequence for the current live opportunity set: present-day NYC Artist Coalition civic operations; direct resident-facing product work through CallNYC; long-term Harry J. Epstein client stewardship; KC Town Hall field implementation, resource responsibility, and resident service; WOW List platform scale; then Sunday Dinner and 196 onboarding, facilitation, and continuity. Sunday Dinner remains a required homepage project. Harry J. Epstein does not lead while its cover is explicitly a successor site rather than Jamie's implementation."
     },
     {
       "id": "tag-navigation-contract",
