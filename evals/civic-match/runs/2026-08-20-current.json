@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "civic-match-reader-run-2026-08-20-B",
+  "evaluatedAt": "2026-08-20T19:49:00-04:00",
+  "guideSha256": "ad55e860801d8bbba196d15fa190c1695d75147333443bcbfd40de6c8606511b",
+  "resumeSha256": "8bcba31995a193add743484e8966734761327a608dcd1a74f7f55ff191822830",
+  "selectionConfigSha256": "cf8ba35bd0fa4421a844c44a4300b8efd7096dd854ba84f6390370443a2e7e1e",
+  "hiringReaderConfigSha256": "1ce0072379fa56b48919237f6618ca9df8f4c832f921338627a266edfd49a365",
+  "publicOnly": true,
+  "actualPeopleParticipated": false,
+  "model": "gpt-5.6-sol",
+  "mode": "four-isolated-fictionalized-public-source-lenses",
+  "assessments": [
+    {
+      "personId": "person.luke-farrell",
+      "kind": "hiring-reader",
+      "packetSha256": "aa63a408be59a3725688d6b0db16ec13daaa30fd9933c123db3a3992540dcc35",
+      "acceptanceQuestion": "I want to hire this person for this current opportunity and advance them through the employer's formal process.",
+      "pass": true,
+      "strengths": [
+        "Demonstrates end-to-end product leadership from discovery and requirements through implementation, public launch, measurement, iteration, and handoff across more than 14 years.",
+        "Shows credible public-interest delivery across resident-facing services, civic-data products, coalition systems, municipal compliance, and cross-functional coordination.",
+        "Combines technical fluency with accessibility, privacy, documentation, evidence boundaries, and calibrated collective credit."
+      ],
+      "risks": [
+        "Senior IT Architect eligibility requires the employer's separate review of Jamie's complete chronology.",
+        "The formal process should validate product decision authority and readiness for City delivery structures."
+      ],
+      "followUp": [
+        "Run the formal minimum-qualification screen and a structured end-to-end public-product interview."
+      ],
+      "narrative": "The packet presents a strong match for the PIT Crew's resident-facing full-lifecycle product mandate and supports genuine hiring interest through the formal process."
+    },
+    {
+      "personId": "person.lisa-gelobter",
+      "kind": "hiring-reader",
+      "packetSha256": "940fdbfccf6550e1aa522f625d3733732c4b7ca2f210019ec7ba0b988a7e94fa",
+      "acceptanceQuestion": "I want to hire this person for this current opportunity and advance them through the employer's formal process.",
+      "pass": true,
+      "strengths": [
+        "Demonstrates 14+ years leading public-facing work across discovery, prioritization, implementation, launch, measurement, and handoff.",
+        "Shows concrete civic delivery through CallNYC, WOW List, coalition systems, and Tired of Tires while distinguishing individual and collective work.",
+        "Combines cross-functional leadership, technical fluency, accessibility and privacy awareness, and documentation discipline."
+      ],
+      "risks": [
+        "Civil-service eligibility and the precise duration of qualifying senior product work remain formal-process questions.",
+        "References and interview evidence must validate scope, production responsibility, and results."
+      ],
+      "followUp": [
+        "Use chronology review, a structured work sample, and references to validate the remaining formal questions."
+      ],
+      "narrative": "The record aligns closely with the role's resident-facing lifecycle, cross-functional delivery, rapid learning, technical translation, and public-trust requirements."
+    },
+    {
+      "personId": "person.josh-gee",
+      "kind": "civic-match-helper",
+      "packetSha256": "acde71f34388e575d8f72f4855f79db3af92d9b098e18e5d39dd3a74bc807c8d",
+      "acceptanceQuestion": "I would actively match this candidate to a current opportunity their evidence supports.",
+      "pass": true,
+      "strengths": [
+        "The resume directly supports resident-facing problem framing, discovery, implementation, public launch, measurement, documentation, and learning.",
+        "Jamie presents more than 14 years of relevant leadership with concrete civic and public-facing examples.",
+        "The profile demonstrates technical translation, accessibility awareness, privacy-conscious practice, and collective-credit discipline."
+      ],
+      "risks": [
+        "The City must resolve the separate civil-service screen and validate senior product performance through its formal process.",
+        "Transfer from founder and coalition contexts into City agency structures should be tested."
+      ],
+      "followUp": [
+        "Keep the submitted City application current and use Civic Match for discovery, matching, and tracking."
+      ],
+      "narrative": "The packet shows unusually direct alignment with the current OTI opportunity and justifies an active Civic Match recommendation."
+    },
+    {
+      "personId": "person.courtney-kishbaugh",
+      "kind": "civic-match-helper",
+      "packetSha256": "bac13716c0f088b1c9c94ed35a693e782626c2ea7723b3b07b2ca3b42fc5d205",
+      "acceptanceQuestion": "I would actively match this candidate to a current opportunity their evidence supports.",
+      "pass": true,
+      "strengths": [
+        "Jamie has more than 14 years of end-to-end product and technical project leadership aligned with the current role.",
+        "CallNYC, WOW List, coalition systems, and Tired of Tires provide concrete evidence of resident-facing civic work and public launch experience."
+      ],
+      "risks": [
+        "The City must resolve civil-service eligibility and validate references and direct ownership.",
+        "Civic Match support should complement rather than duplicate the already-submitted official application."
+      ],
+      "followUp": [
+        "Keep the Civic Match profile and OTI application state current while the employer's process remains pending."
+      ],
+      "narrative": "The record aligns directly with resident-facing product delivery in complex civic settings and supports an active match."
+    }
+  ]
+}

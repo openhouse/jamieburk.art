@@ -72,6 +72,10 @@ relations:
     target: research.nyc-jobs.citywide-monitor.2026-08-20
     href: ../research-runs/nyc-jobs-citywide-monitor-2026-08-20.md
     context: Citywide official-feed freshness, deterministic eligibility, selective scoring, and provisional opportunity intake.
+  - type: related_to
+    target: method.civic-match-opportunity-loop
+    href: ../methods/civic-match-opportunity-loop.md
+    context: Authenticated candidate-profile discovery, invitations, matching support, and human-controlled external applications.
 ---
 
 # Employment context and hiring acceptance
@@ -113,8 +117,8 @@ the public target set.
 
 Deterministic lifecycle, date, hard-screen, artifact, and reader-coverage checks
 run before any model-based hiring-reader role play. This prevents a model call
-for a role that is closed, ineligible, not selected by the queue, or missing a
-bound resume artifact.
+for a role that is closed, ineligible, not selected by the queue, or missing an
+attached resume artifact.
 
 ## Citywide discovery source
 
@@ -124,6 +128,16 @@ surface. The August 18 source snapshot contained 1,426 unique job IDs. Six
 cleared the first strong-match gate and remain provisional research leads.
 Dataset absence cannot close an existing opportunity, and an `External` label
 cannot override explicit current-City-employee restrictions in posting text.
+
+## Authenticated matching source
+
+The [Civic Match opportunity loop](../methods/civic-match-opportunity-loop.md)
+models an authenticated talent network separately from a public bulk jobs feed.
+Its distinctive signals include government-hiring-team discovery, invitations,
+saved-role interest, candidate-managed application state, and staff-assisted
+matching. The system may prepare a profile guide and matching packet, but Jamie
+controls profile visibility, protected-category answers, relocation and media
+choices, every external employer application, and final submission.
 
 ## Current authorized milestone
 
