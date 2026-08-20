@@ -1,12 +1,12 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `9b7c48434fe9f40eae7fe13cebf930044aab9c3d`
+**Candidate commit:** `eb83765e38eeedb672e171e6bc6e1088e931ad56`
 **Portfolio snapshot:** `c335cf3b8cf69a41146b9920e6a44b7440c816c980336f1e374cdb4fa4a742f9`
 **Role-context hash:** `04acac996780f4c345a1c95163fe00f9a472ef31f54cb750077a36e04ad0bcc1`
 **Reader-context hash:** `e055b82642616d52177ad68ae4d3bbaeb3953ef3c75cfa3e159c65166862e29f`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
-**Candidate paths clean:** no
+**Candidate paths clean:** yes
 
 > Deterministic baseline only. This is not an interview prediction, a named person's opinion, or a human reader study.
 
@@ -19,7 +19,7 @@
 - All signals observed: 3/5
 - Opportunity status live: yes
 - Historical benchmark: no
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 - Public reporting context: Vice President, Engineering (role-identity-matched)
 - Public vision context: Chief Product Officer (role-identity-matched)
@@ -32,12 +32,12 @@
 
 ### ACLU - Senior Project Manager, Learning and Project Solutions
 
-- Deterministic disposition: `deterministic-ready-for-human-review`
+- Deterministic disposition: `evidence-gap-review`
 - Critical signals observed: 3/4
 - All signals observed: 4/5
 - Opportunity status live: yes
 - Historical benchmark: no
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 - Public reporting context: Senior Director, Learning and Project Solutions (role-only)
 - Public vision context: Chief Operating Officer (role-identity-matched)
@@ -50,12 +50,12 @@
 
 ### Benepass - Product Operations Manager
 
-- Deterministic disposition: `deterministic-ready-for-human-review`
+- Deterministic disposition: `evidence-gap-review`
 - Critical signals observed: 3/4
 - All signals observed: 3/4
 - Opportunity status live: yes
 - Historical benchmark: no
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 - Public reporting context: Head of Customer Operations (named-in-posting)
 - Public vision context: CEO and co-founder (role-identity-matched)

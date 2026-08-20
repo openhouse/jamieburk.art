@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "runId": "hiring-public-9b7c48434fe9",
-  "generatedAt": "2026-08-15T19:50:23-04:00",
-  "candidateSha": "9b7c48434fe9f40eae7fe13cebf930044aab9c3d",
-  "candidatePathsClean": false,
+  "runId": "hiring-public-eb83765e38ee",
+  "generatedAt": "2026-08-20T11:36:12-04:00",
+  "candidateSha": "eb83765e38eeedb672e171e6bc6e1088e931ad56",
+  "candidatePathsClean": true,
   "portfolioSnapshotHash": "c335cf3b8cf69a41146b9920e6a44b7440c816c980336f1e374cdb4fa4a742f9",
   "roleContextHash": "04acac996780f4c345a1c95163fe00f9a472ef31f54cb750077a36e04ad0bcc1",
   "readerContextHash": "e055b82642616d52177ad68ae4d3bbaeb3953ef3c75cfa3e159c65166862e29f",
@@ -247,7 +247,7 @@
       "roleContextHash": "82e0583f3f40fa7ee4a5eb0bd8982bad428fa0779699bedcb5971291f1646b7b",
       "benchmark": false,
       "live": true,
-      "fresh": true,
+      "fresh": false,
       "hardScreenBlocked": false,
       "publicReportingContext": {
         "role": "Vice President, Engineering",
@@ -335,7 +335,7 @@
       "roleContextHash": "69e5968685cb0ea61484facecfd2aa0e2083e7ba381b8a3f88d34574166070a2",
       "benchmark": false,
       "live": true,
-      "fresh": true,
+      "fresh": false,
       "hardScreenBlocked": false,
       "publicReportingContext": {
         "role": "Senior Director, Learning and Project Solutions",
@@ -350,7 +350,7 @@
         "source": "source.aclu.charizma-williams",
         "boundary": "The role sits in the COO's office; this does not make the COO the direct manager or hiring lead."
       },
-      "decision": "deterministic-ready-for-human-review",
+      "decision": "evidence-gap-review",
       "observed": 4,
       "requirementTotal": 5,
       "criticalObserved": 3,
@@ -428,7 +428,7 @@
       "roleContextHash": "4c35e8774b5c80b504d0b84697ee47576af329c3e612dd3f90d473beca940f68",
       "benchmark": false,
       "live": true,
-      "fresh": true,
+      "fresh": false,
       "hardScreenBlocked": false,
       "publicReportingContext": {
         "role": "Head of Customer Operations",
@@ -444,7 +444,7 @@
         "source": "source.benepass.jaclyn-chen",
         "boundary": "The official team page establishes company leadership and vision context, not direct supervision of this role."
       },
-      "decision": "deterministic-ready-for-human-review",
+      "decision": "evidence-gap-review",
       "observed": 3,
       "requirementTotal": 4,
       "criticalObserved": 3,
