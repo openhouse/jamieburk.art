@@ -2319,6 +2319,45 @@
       ]
     },
     {
+      "id": "CLM-KCSPACES-CROSS-CHANNEL-DIGITAL-SUPPORT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "technical-operations",
+          "text": "For KC Spaces Fund, Jamie built campaign web infrastructure and supported an available cross-channel identity; collaborator-led channels used it to route applications, donations, and funded-space updates.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        },
+        {
+          "key": "case-study",
+          "text": "Jamie built and maintained KC Spaces Fund's campaign web infrastructure, customized a reusable Ghost theme, implemented public action routes, and supported an available cross-channel identity. Collaborator-led channels used that identity to route applications, donations, resources, and funded-space updates.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/kc-spaces-fund"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "Jamie's bounded role was website, digital-infrastructure, and cross-channel naming support, not Facebook publishing, public organizing, fundraising ownership, or grant decisions.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Credit Jamie with bounded web infrastructure and cross-channel naming support, not public organizing, fundraising ownership, grant decisions, or campaign voice.",
+        "The public channels corroborate identity consistency; Jamie's firsthand clarification supplies the naming-support and non-posting account, pending collaborator confirmation of process detail.",
+        "Public organizer credit remains with Caitlin Horsmon, Jordan Carr, Kendell Harbin, and Megan Pobywajlo as named by the fundraiser."
+      ]
+    },
+    {
       "id": "CLM-NYCAC-CAMPAIGN-WEB-IMPLEMENTATION",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -3215,6 +3254,18 @@
             "SRC-CALLNYC-GITHUB-REPOSITORY",
             "SRC-CALLNYC-POLITICO-2016-03-14"
           ]
+        }
+      ]
+    },
+    {
+      "id": "kc-spaces-fund",
+      "surface": "/work/kc-spaces-fund",
+      "sourceOrder": [],
+      "occurrences": [
+        {
+          "id": "kc-spaces-fund-public-implementation",
+          "claimId": "CLM-KCSPACES-CROSS-CHANNEL-DIGITAL-SUPPORT",
+          "projection": "case-study"
         }
       ]
     },

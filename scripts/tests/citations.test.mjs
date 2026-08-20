@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import test from "node:test";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { citationNoteId, getClaimProjection, publicCitationRegistry, resolveCitationOccurrence, resolveCitationReferences } from "../../apps/www/src/data/knowledge-bank/public.ts";
@@ -62,6 +62,22 @@ test("Claim resolver returns only active approved projections", () => {
   assert.match(getClaimProjection("CLM-NYCAC-X-RETRIEVABLE-SOCIAL-INFRASTRUCTURE", "case-study", "/work/fair-rent-nyc").text, /3,123 unique public records/);
   assert.throws(() => getClaimProjection("CLM-CALLNYC-DIGITAL-DISTRICT", "photo-caption", "/work/callnyc"), /Unknown public claim/);
   assert.throws(() => getClaimProjection("CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", "resume-html", "/work"), /not approved/);
+});
+
+test("every public work Claim is present in the generated public registry", () => {
+  const publicClaimIds = new Set(publicCitationRegistry.claims.map((claim) => claim.id));
+  const workClaimIds = readdirSync("apps/www/src/content/work")
+    .filter((name) => name.endsWith(".mdx"))
+    .flatMap((name) =>
+      [...readFileSync(`apps/www/src/content/work/${name}`, "utf8").matchAll(/claimId="([^"]+)"/g)]
+        .map((match) => match[1])
+    );
+
+  assert.deepEqual(
+    [...new Set(workClaimIds)].filter((claimId) => !publicClaimIds.has(claimId)),
+    [],
+    "Run npm run generate:citations after registering each work-page claim occurrence."
+  );
 });
 
 test("corrections retire old wording from public surfaces", () => {

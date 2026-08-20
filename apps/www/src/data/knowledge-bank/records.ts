@@ -601,6 +601,17 @@ const knowledgeBankInput = {
       { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
     ]
   }, {
+    id: "kc-spaces-fund",
+    surface: "/work/kc-spaces-fund",
+    sourceOrder: [],
+    occurrences: [
+      {
+        id: "kc-spaces-fund-public-implementation",
+        claimId: "CLM-KCSPACES-CROSS-CHANNEL-DIGITAL-SUPPORT",
+        projection: "case-study"
+      }
+    ]
+  }, {
     id: "fair-rent-nyc",
     surface: "/work/fair-rent-nyc",
     sourceOrder: [
