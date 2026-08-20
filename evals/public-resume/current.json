@@ -148,7 +148,50 @@
       ]
     }
   ],
-  "readerAssessments": [],
+  "readerAssessments": [
+    {
+      "file": "oti-operations-lisa.json",
+      "opportunityId": "opportunity.nyc-oti.operations-manager.789810",
+      "personId": "person.lisa-gelobter",
+      "name": "Lisa Gelobter",
+      "relationship": "senior-vision",
+      "resumeSha256": "96748eb1cd946d027ec44a4558f12f269025cb5fed0c276cdb85fccf4be3706f",
+      "acceptanceQuestion": "I would hire this person for this job.",
+      "decision": "fail",
+      "wouldHire": false,
+      "simulatedPublicFigureLens": true,
+      "nonEndorsementBoundary": "This fictionalized public-context lens is not participation, quotation, endorsement, or a hiring decision by the named person.",
+      "access": {
+        "scope": "public-resume-and-public-job-context-only",
+        "repositoryAccess": false,
+        "privateSourceAccess": false
+      },
+      "strengths": [
+        "Strong evidence of maintaining operating plans across concurrent work, including decisions, dependencies, risks, owners, resources, and next actions.",
+        "Demonstrated cross-functional coordination spanning clients, engineers, operations, communications, leadership, vendors, municipal actors, and community organizers.",
+        "Relevant service-delivery experience: requirements, implementation, QA, onboarding, support, adoption, metrics, reporting, runbooks, and durable handoffs.",
+        "The WOW List scale statement is clear and relevant: roughly 35 city ecosystems conveys distributed operational scope, while organizer amplification explains how the platform enabled local service delivery without relying on unsupported account or post counts.",
+        "Public-funding, municipal-compliance, vendor-coordination, legal-question, and executive-reporting exposure provides useful public-sector adjacency."
+      ],
+      "risks": [
+        "The resume does not establish direct responsibility for public-sector budgets, procurement, contracts, legal-review workflows, or vendor performance at the depth expected for this operations role.",
+        "The $490,539 award demonstrates proposal and stakeholder work, but not subsequent authority over expenditure, procurement, contracting, or financial controls.",
+        "No clear evidence of workforce planning, formal team-health measurement, support-function coordination, or operational metric reporting across a government technology portfolio.",
+        "Employer confirmation of the IT Project Specialist minimum qualifications remains necessary."
+      ],
+      "interviewEvidenceNeeded": [
+        "A concrete example of owning an operating picture across a multi-project portfolio, including capacity, sequencing, dependencies, risks, owners, and escalation decisions.",
+        "Exact scope of budget ownership: forecasting, reconciliation, approvals, variance reporting, and controls.",
+        "Direct experience with government procurement, solicitations, contracts, amendments, invoices, vendor governance, and coordination with legal or oversight functions.",
+        "Examples of plain-language executive reporting on team health, delivery status, operational metrics, and corrective actions.",
+        "Evidence of onboarding staff or vendors and coordinating HR, finance, procurement, legal, and technical support functions."
+      ],
+      "rationale": "The resume shows a credible product-operations and civic-service-delivery leader whose strengths align well with maintaining operational clarity and making complex work usable. However, PASS requires enough evidence to hire for this exact job from the resume alone. The role materially emphasizes budgets, contracts, procurement, vendors, legal review, support functions, and portfolio-level operational reporting; the resume establishes adjacent exposure but not sufficient direct ownership or depth in those areas. That evidence gap, combined with unresolved minimum-qualification review, makes the literal decision FAIL.",
+      "model": "gpt-5.6-sol",
+      "evaluatedAt": "2026-08-20",
+      "runArtifact": "evals/public-resume/runs/2026-08-20/hill-climb-3/oti-operations-lisa.json"
+    }
+  ],
   "humanReviewGates": [
     "Jamie approval is required before the public resume selection or wording changes.",
     "Employer hiring authority remains exclusively with the real employer and its authorized staff.",
@@ -156,10 +199,10 @@
     "Private application state must be supplied by an authorized operator at runtime and must not be committed."
   ],
   "readerEvaluationRun": {
-    "path": null,
+    "path": "evals/public-resume/runs/2026-08-20/hill-climb-3/index.json",
     "resumeSha256": "96748eb1cd946d027ec44a4558f12f269025cb5fed0c276cdb85fccf4be3706f",
-    "decision": "not-run",
+    "decision": "fail",
     "complete": false,
-    "stopReason": "invalidated-by-resume-copy-change; deterministic gates must pass before fresh named-reader commissioning"
+    "stopReason": "short-circuited-after-first-failure-because-unanimous-pass-was-no-longer-possible"
   }
 }
