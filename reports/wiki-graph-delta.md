@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `ed610686a9d861b25d050217b1139f2d8fa43a2e`
-**Generation time:** 2026-08-20T13:32:02-04:00
-**Source fingerprint:** `875c60d94f34dc991eb16b3e6e3ec9983077612861d518da3b1b23d874731aee`
+**Source commit:** `6342a6d57cf3b740f39214d2b140728fd4f74264`
+**Generation time:** 2026-08-20T17:52:55-04:00
+**Source fingerprint:** `c2931a006c61da8d8ab169b956ae070fd43f10819e0846768242f49d179ec25b`
 
 `origin/develop` has no Knowledge Wiki graph artifact; the bounded pilot is reported as an addition.
 
-- Nodes added: 453
+- Nodes added: 454
 - Nodes removed: 0
-- Edges added: 1573
+- Edges added: 1580
 - Edges removed: 0
 - New type-aware orphans: 5
 - Current rights-review records: 186
@@ -221,6 +221,7 @@
 - `claim.nycac.crs-frontline-advocacy.2026-07-08`
 - `correction.callnyc-years.2026`
 - `correction.photo.east-river-credit.2026-07`
+- `correction.photo.portfolio-project-credits.2026-08-20`
 - `decision.callnyc.issue-pathways`
 - `decision.hje.continuity-modernization`
 - `decision.kc-town-hall.listening-fieldwork`
@@ -326,7 +327,6 @@
 - `person.diya-vij`
 - `person.elana-gordon`
 - `person.jamie-burkart`
-- `person.paul-mossine`
 - `person.warren-sack`
 - `place.small-cultural-spaces`
 - `portfolio.role-fit-referral-map`
@@ -376,6 +376,7 @@
 - `source.civichall.hackathon-announcement.2016`
 - `source.codepath.leadership.2026-08-13`
 - `source.commercial-rent.empty-storefronts-high-rents.2026-07`
+- `source.correction.portfolio-project-photo-credits.2026-08-20`
 - `source.councilstat.fuller-release.2016`
 - `source.eu.income-tax-abroad.2026-08-15`
 - `source.eu.social-security-country-coverage.2026-08-15`

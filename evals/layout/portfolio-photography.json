@@ -1,5 +1,5 @@
 {
-  "id": "portfolio-photography-layout-v3",
+  "id": "portfolio-photography-layout-v4",
   "title": "Human Index photographic portfolio layout",
   "intent": "Photography changes the portfolio's editorial rhythm while remaining public-safe, accessible, and subordinate to human publication authority.",
   "criteria": [
@@ -26,7 +26,12 @@
     {
       "id": "truthful-project-cover-field",
       "blocking": true,
-      "criterion": "Every work item has exactly one project-bound visual cover: Fair Rent NYC, Sunday Dinner, and KC Town Hall use governed photographs; Harry J. Epstein, CallNYC, and WOW List use their own public surfaces while private photo leads await exact clearance."
+      "criterion": "Every work item has exactly one project-specific visual cover: Fair Rent NYC, Sunday Dinner, and KC Town Hall use governed photographs; Harry J. Epstein, CallNYC, and WOW List use their own public surfaces while private photo leads await exact clearance."
+    },
+    {
+      "id": "truthful-photo-credit",
+      "blocking": true,
+      "criterion": "Known creators are named only when confirmed; otherwise photographs use the responsible project's courtesy credit without archive-process prose."
     },
     {
       "id": "tag-navigation-contract",

@@ -263,6 +263,18 @@ for (const file of publicLanguageFiles) {
   }
 }
 
+scanPattern(
+  publicLanguageFiles,
+  "public photo credit uses a corrected individual attribution",
+  /\b(?:photo|photograph)\s+by\s+Paul\s+Mossine\b/i
+);
+
+scanPattern(
+  publicLanguageFiles,
+  "public photo credit exposes archive-process language",
+  /photographer\s+(?:is\s+)?not\s+identified\s+in\s+(?:the\s+)?retained\s+export/i
+);
+
 const publicRegistryPath = path.join(
   repoRoot,
   "apps/www/src/data/knowledge-bank/public-registry.json"

@@ -28,7 +28,7 @@ authorization:
     - asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2
     - asset.photo.sunday-dinner.shared-map.2013.001
     - asset.photo.kc-town-hall.roof-work.2019.001
-  required_credit: Known photographers are visibly credited; unresolved photographer identity remains explicit.
+  required_credit: Known photographers are visibly credited; otherwise the responsible project receives the courtesy credit.
   excludes:
     - Apple Photos identifiers
     - original archive filenames
@@ -58,9 +58,9 @@ relations:
   - type: related_to
     target: asset.photo.kc-town-hall.roof-work.2019.001
     href: ../../assets/photographs/kc-town-hall-roof-work-2019.md
-  - type: related_to
-    target: person.paul-mossine
-    href: ../../people/paul-mossine.md
+  - type: uses_source
+    target: source.correction.portfolio-project-photo-credits.2026-08-20
+    href: ../corrections/portfolio-project-photo-credits-2026-08-20.md
 ---
 
 # Jamie Burkart portfolio-album publication authorization
@@ -75,7 +75,8 @@ relations:
   and authorizes the curated Sunday Dinner and KC Town Hall derivatives for
   public Git and staging in this portfolio.
 - [x] The existing East River homepage hero remains unchanged.
-- [x] Known photographers remain visibly credited.
+- [x] Known photographers remain visibly credited; other public occurrences
+  use the responsible project's courtesy credit.
 - [x] Album identifiers, People tags, face associations, geolocation, original
   filenames, and raw metadata remain private.
 - [ ] Production publication and indexing await approval of the exact candidate

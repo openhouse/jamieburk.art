@@ -1,12 +1,13 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to KC Town Hall orientation
 
-**Source commit:** `ed610686a9d861b25d050217b1139f2d8fa43a2e`
-**Generation time:** 2026-08-20T13:32:02-04:00
-**Source fingerprint:** `875c60d94f34dc991eb16b3e6e3ec9983077612861d518da3b1b23d874731aee`
+**Source commit:** `6342a6d57cf3b740f39214d2b140728fd4f74264`
+**Generation time:** 2026-08-20T17:52:55-04:00
+**Source fingerprint:** `c2931a006c61da8d8ab169b956ae070fd43f10819e0846768242f49d179ec25b`
 
 - [KC Town Hall ten-minute-walk proposal map](../../assets/graphics/kc-town-hall-walkshed-2019.md) - `documents` (frontmatter)
 - [Kansas City Star aerial view of KC Town Hall](../../assets/photographs/kc-town-hall-kc-star-aerial-2021.md) - `related_to` (frontmatter)
+- [KC Town Hall roof work, 2019](../../assets/photographs/kc-town-hall-roof-work-2019.md) - `related_to` (frontmatter)
 - [Civic, cultural, and technical translation](../../capabilities/civic-cultural-and-technical-translation.md) - `prose_link` (markdown)
 - [Implementation, Adoption, and Handoff](../../capabilities/implementation-adoption-and-handoff.md) - `related_to` (frontmatter)
 - [Participatory public systems](../../capabilities/participatory-public-systems.md) - `related_to` (frontmatter)
@@ -29,6 +30,7 @@
 - [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `prose_link` (markdown)
 - [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
+- [KC Town Hall roof-work occurrence](../../projections/photography/kc-town-hall-roof-work.md) - `related_to` (frontmatter)
 - [Oral history prompt 001: Stewardship afterlife](../../notebooks/photography/oral-history-stewardship-afterlife-001.md) - `related_to` (frontmatter)
 - [KC Town Hall CCED proposal bundle, 2019](../../sources/kc-town-hall-cced-proposal-2019.md) - `documents` (frontmatter)
 - [KC Town Hall restored public site](../../sources/kc-town-hall-live-site-2026-08-14.md) - `documents` (frontmatter)

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-20T13:32:02-04:00",
-  "sourceCommit": "ed610686a9d861b25d050217b1139f2d8fa43a2e",
-  "sourceFingerprint": "875c60d94f34dc991eb16b3e6e3ec9983077612861d518da3b1b23d874731aee",
+  "generatedAt": "2026-08-20T17:52:55-04:00",
+  "sourceCommit": "6342a6d57cf3b740f39214d2b140728fd4f74264",
+  "sourceFingerprint": "c2931a006c61da8d8ab169b956ae070fd43f10819e0846768242f49d179ec25b",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -117,7 +117,7 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Public-safe record for Paul Mossine's March 24, 2019 photograph of visible roof work during KC Town Hall field implementation.",
+      "summary": "Public-safe record for a March 24, 2019 photograph of visible roof work during KC Town Hall field implementation.",
       "aliases": [],
       "lastReviewed": "2026-08-13",
       "reviewBy": "2027-02-13"
@@ -2671,6 +2671,19 @@
       "reviewBy": "2027-01-26"
     },
     {
+      "id": "correction.photo.portfolio-project-credits.2026-08-20",
+      "path": "docs/knowledge-bank/corrections/portfolio-project-photo-credits-2026-08-20.md",
+      "title": "Replace unsupported and archive-facing project-photo credits",
+      "kind": "correction",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Credit correction replacing an unsupported individual attribution and archive-process wording with responsible project courtesy credits.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
+    },
+    {
       "id": "decision.callnyc.issue-pathways",
       "path": "docs/knowledge-bank/decisions/callnyc-issue-pathways.md",
       "title": "CallNYC issue pathways for public constituent-services data",
@@ -4047,19 +4060,6 @@
       "reviewBy": "2026-10-19"
     },
     {
-      "id": "person.paul-mossine",
-      "path": "docs/knowledge-bank/people/paul-mossine.md",
-      "title": "Paul Mossine",
-      "kind": "person",
-      "status": "maintained",
-      "visibility": "public-safe",
-      "sensitivity": "low",
-      "summary": "Photographer credited in retained public-safe metadata for selected NYC Artist Coalition and KC Town Hall portfolio photographs.",
-      "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2027-02-13"
-    },
-    {
       "id": "person.warren-sack",
       "path": "docs/knowledge-bank/people/warren-sack.md",
       "title": "Warren Sack",
@@ -4708,6 +4708,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-13",
       "reviewBy": "2026-11-13"
+    },
+    {
+      "id": "source.correction.portfolio-project-photo-credits.2026-08-20",
+      "path": "docs/knowledge-bank/sources/corrections/portfolio-project-photo-credits-2026-08-20.md",
+      "title": "Jamie Burkart correction to portfolio project-photo credits",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "low",
+      "summary": "Public-safe capsule recording Jamie Burkart's correction that the live project photographs do not support the previously recorded individual attribution and should use project courtesy credits when the photographer is not confirmed.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "source.councilstat.fuller-release.2016",
@@ -5575,7 +5588,7 @@
       "status": "maintained",
       "visibility": "summary-only",
       "sensitivity": "moderate",
-      "summary": "Public-safe capsule retaining only the capture dates and creator-state information needed to govern the selected Sunday Dinner and KC Town Hall portfolio derivatives.",
+      "summary": "Public-safe capsule retaining only the capture dates and project-credit information needed to govern the selected Sunday Dinner and KC Town Hall portfolio derivatives.",
       "aliases": [],
       "lastReviewed": "2026-08-13",
       "reviewBy": "2027-02-13"
@@ -6125,14 +6138,6 @@
     },
     {
       "from": "asset.photo.kc-town-hall.roof-work.2019.001",
-      "type": "collaborated_with",
-      "to": "person.paul-mossine",
-      "source": "frontmatter",
-      "href": "../../people/paul-mossine.md",
-      "context": null
-    },
-    {
-      "from": "asset.photo.kc-town-hall.roof-work.2019.001",
       "type": "projected_to",
       "to": "projection.photo.kc-town-hall.roof-work",
       "source": "frontmatter",
@@ -6145,6 +6150,14 @@
       "to": "index.photo-set.kc-town-hall-fieldwork",
       "source": "frontmatter",
       "href": "../../indexes/photo-sets/kc-town-hall-fieldwork.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.kc-town-hall.roof-work.2019.001",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../../projects/kc-town-hall-orientation.md",
       "context": null
     },
     {
@@ -11750,6 +11763,46 @@
       "context": null
     },
     {
+      "from": "correction.photo.portfolio-project-credits.2026-08-20",
+      "type": "related_to",
+      "to": "projection.photo.kc-town-hall.roof-work",
+      "source": "frontmatter",
+      "href": "../projections/photography/kc-town-hall-roof-work.md",
+      "context": null
+    },
+    {
+      "from": "correction.photo.portfolio-project-credits.2026-08-20",
+      "type": "related_to",
+      "to": "projection.photo.launch-2026.fair-rent.shoestring-facilitation",
+      "source": "frontmatter",
+      "href": "../projections/photography/launch-2026-fair-rent-shoestring-facilitation.md",
+      "context": null
+    },
+    {
+      "from": "correction.photo.portfolio-project-credits.2026-08-20",
+      "type": "related_to",
+      "to": "projection.photo.launch-2026.home.save-nyc-spaces-town-hall",
+      "source": "frontmatter",
+      "href": "../projections/photography/launch-2026-home-save-nyc-spaces-town-hall.md",
+      "context": null
+    },
+    {
+      "from": "correction.photo.portfolio-project-credits.2026-08-20",
+      "type": "related_to",
+      "to": "projection.photo.sunday-dinner.shared-map",
+      "source": "frontmatter",
+      "href": "../projections/photography/sunday-dinner-shared-map.md",
+      "context": null
+    },
+    {
+      "from": "correction.photo.portfolio-project-credits.2026-08-20",
+      "type": "uses_source",
+      "to": "source.correction.portfolio-project-photo-credits.2026-08-20",
+      "source": "frontmatter",
+      "href": "../sources/corrections/portfolio-project-photo-credits-2026-08-20.md",
+      "context": null
+    },
+    {
       "from": "decision.callnyc.issue-pathways",
       "type": "informed_by",
       "to": "research.interpretive-layer-source-return.2026-07-19",
@@ -15932,30 +15985,6 @@
       "context": null
     },
     {
-      "from": "person.paul-mossine",
-      "type": "related_to",
-      "to": "asset.photo.kc-town-hall.roof-work.2019.001",
-      "source": "frontmatter",
-      "href": "../assets/photographs/kc-town-hall-roof-work-2019.md",
-      "context": null
-    },
-    {
-      "from": "person.paul-mossine",
-      "type": "related_to",
-      "to": "asset.photo.nycac.shoestring-facilitation.2017.001",
-      "source": "frontmatter",
-      "href": "../assets/photographs/nycac-shoestring-facilitation-2017.md",
-      "context": null
-    },
-    {
-      "from": "person.paul-mossine",
-      "type": "related_to",
-      "to": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2",
-      "source": "frontmatter",
-      "href": "../assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md",
-      "context": null
-    },
-    {
       "from": "person.warren-sack",
       "type": "related_to",
       "to": "event.mit.interrogative-design-symposium.2024",
@@ -16670,9 +16699,9 @@
     {
       "from": "projection.photo.kc-town-hall.roof-work",
       "type": "related_to",
-      "to": "person.paul-mossine",
+      "to": "project.kc-town-hall",
       "source": "frontmatter",
-      "href": "../../people/paul-mossine.md",
+      "href": "../../projects/kc-town-hall-orientation.md",
       "context": null
     },
     {
@@ -17564,6 +17593,38 @@
       "context": null
     },
     {
+      "from": "source.correction.portfolio-project-photo-credits.2026-08-20",
+      "type": "related_to",
+      "to": "asset.photo.kc-town-hall.roof-work.2019.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/kc-town-hall-roof-work-2019.md",
+      "context": null
+    },
+    {
+      "from": "source.correction.portfolio-project-photo-credits.2026-08-20",
+      "type": "related_to",
+      "to": "asset.photo.nycac.shoestring-facilitation.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-shoestring-facilitation-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.correction.portfolio-project-photo-credits.2026-08-20",
+      "type": "related_to",
+      "to": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md",
+      "context": null
+    },
+    {
+      "from": "source.correction.portfolio-project-photo-credits.2026-08-20",
+      "type": "related_to",
+      "to": "asset.photo.sunday-dinner.shared-map.2013.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/sunday-dinner-shared-map-2013.md",
+      "context": null
+    },
+    {
       "from": "source.councilstat.fuller-release.2016",
       "type": "documents",
       "to": "project.callnyc",
@@ -18229,10 +18290,10 @@
     },
     {
       "from": "source.permission.jamie-portfolio-album.2026-08-13",
-      "type": "related_to",
-      "to": "person.paul-mossine",
+      "type": "uses_source",
+      "to": "source.correction.portfolio-project-photo-credits.2026-08-20",
       "source": "frontmatter",
-      "href": "../../people/paul-mossine.md",
+      "href": "../corrections/portfolio-project-photo-credits-2026-08-20.md",
       "context": null
     },
     {
@@ -18257,6 +18318,14 @@
       "to": "source.permission.jamie-portfolio-album.2026-08-13",
       "source": "frontmatter",
       "href": "../permissions/jamie-portfolio-album-2026-08-13.md",
+      "context": null
+    },
+    {
+      "from": "source.photo-metadata.portfolio-cover-images.2026.public-safe",
+      "type": "uses_source",
+      "to": "source.correction.portfolio-project-photo-credits.2026-08-20",
+      "source": "frontmatter",
+      "href": "../corrections/portfolio-project-photo-credits-2026-08-20.md",
       "context": null
     },
     {
@@ -20578,15 +20647,6 @@
       "to": "asset.photo.kc-town-hall.roof-work.2019.001",
       "fragment": null,
       "line": 31,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/people/paul-mossine.md",
-      "to": "person.paul-mossine",
-      "fragment": null,
-      "line": 32,
       "kind": "link"
     },
     {

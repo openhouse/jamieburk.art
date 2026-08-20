@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `ed610686a9d861b25d050217b1139f2d8fa43a2e`
-**Generation time:** 2026-08-20T13:32:02-04:00
-**Source fingerprint:** `875c60d94f34dc991eb16b3e6e3ec9983077612861d518da3b1b23d874731aee`
+**Source commit:** `6342a6d57cf3b740f39214d2b140728fd4f74264`
+**Generation time:** 2026-08-20T17:52:55-04:00
+**Source fingerprint:** `c2931a006c61da8d8ab169b956ae070fd43f10819e0846768242f49d179ec25b`
 
 ## application
 
@@ -224,6 +224,7 @@
 
 - [CallNYC chronology correction](../corrections/callnyc-years-2026.md) - `correction.callnyc-years.2026`
 - [Add Elana Gordon's credit to the East River homepage occurrence](../corrections/east-river-credit-2026-07.md) - `correction.photo.east-river-credit.2026-07`
+- [Replace unsupported and archive-facing project-photo credits](../corrections/portfolio-project-photo-credits-2026-08-20.md) - `correction.photo.portfolio-project-credits.2026-08-20`
 
 ## decision
 
@@ -351,7 +352,6 @@
 - [Diya Vij](../people/diya-vij.md) - `person.diya-vij`
 - [Elana Gordon](../people/elana-gordon.md) - `person.elana-gordon`
 - [Jamie Burkart](../people/jamie-burkart.md) - `person.jamie-burkart`
-- [Paul Mossine](../people/paul-mossine.md) - `person.paul-mossine`
 - [Warren Sack](../people/warren-sack.md) - `person.warren-sack`
 
 ## place
@@ -421,6 +421,7 @@
 - [Civic Hall hackathon announcement](../sources/civichall-hackathon-announcement-2016.md) - `source.civichall.hackathon-announcement.2016`
 - [CodePath team and senior leadership - August 2026](../sources/codepath-leadership-2026.md) - `source.codepath.leadership.2026-08-13`
 - [Empty Storefronts, High Rents](../sources/commercial-rent-public-support/empty-storefronts-high-rents-2026.md) - `source.commercial-rent.empty-storefronts-high-rents.2026-07`
+- [Jamie Burkart correction to portfolio project-photo credits](../sources/corrections/portfolio-project-photo-credits-2026-08-20.md) - `source.correction.portfolio-project-photo-credits.2026-08-20`
 - [New York City Council Constituent Services Data release](../sources/nycc-constituent-services-data-2016-05-27.md) - `source.councilstat.fuller-release.2016`
 - [Your Europe - Income taxes abroad](../sources/eu-income-tax-abroad-2026.md) - `source.eu.income-tax-abroad.2026-08-15`
 - [Your Europe - Social-security cover across EU countries](../sources/eu-social-security-country-coverage-2026.md) - `source.eu.social-security-country-coverage.2026-08-15`

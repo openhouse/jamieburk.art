@@ -19,7 +19,7 @@ permission_capsule:
   allowed_destination:
     - jamieburk.art professional portfolio
   allowed_context: Evidence of Jamie Burkart's public-interest product, implementation, facilitation, and coalition work
-  required_credit: Photo courtesy NYC Artist Coalition.
+  required_credit: Photo courtesy of NYC Artist Coalition.
   derivative_scope: The two launch-2026 WebP derivatives and their documented crops
   public_git: approved
   staging: approved

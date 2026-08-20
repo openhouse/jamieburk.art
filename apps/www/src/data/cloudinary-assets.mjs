@@ -81,7 +81,7 @@ export const cloudinaryAssets = [
       indexing: "open"
     },
     publicUseBoundary:
-      "Exact Paul Mossine derivative already authorized with visible site credit. Cloudinary is a staging delivery surface only; the image proves no trade credential or sole authorship."
+      "Exact KC Town Hall derivative already authorized with visible project courtesy credit. Cloudinary is a staging delivery surface only; the image proves no trade credential or sole authorship."
   },
   {
     localSrc: "/images/field-notes/save-nyc-spaces-town-hall.webp",

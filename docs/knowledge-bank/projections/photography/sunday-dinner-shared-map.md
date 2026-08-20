@@ -33,9 +33,9 @@ caption:
     - statement.photo.sunday-dinner.shared-map.context.v1
     - statement.photo.sunday-dinner.shared-map.capture-date.v1
 credit:
-  text: From Jamie Burkart's photo archive. Photographer not identified in the retained export.
+  text: Photo courtesy of Sunday Dinner NYC.
   assertions:
-    - statement.photo.sunday-dinner.shared-map.archive-credit.v1
+    - statement.photo.sunday-dinner.shared-map.project-credit.v2
 permission_source: source.permission.jamie-portfolio-album.2026-08-13
 approval:
   public_git: approved

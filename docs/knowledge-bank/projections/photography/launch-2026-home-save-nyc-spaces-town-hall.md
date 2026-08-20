@@ -30,7 +30,7 @@ caption:
     - statement.photo.nycac.save-spaces.event.v1
     - statement.photo.nycac.save-spaces.year.v1
 credit:
-  text: Photo courtesy NYC Artist Coalition.
+  text: Photo courtesy of NYC Artist Coalition.
   assertions:
     - statement.photo.nycac.save-spaces.custody.v1
 permission_source: source.permission.jamie-nycac-portfolio-album.2026-08

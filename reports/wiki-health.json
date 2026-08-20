@@ -1,28 +1,28 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-20T13:32:02-04:00",
-  "sourceCommit": "ed610686a9d861b25d050217b1139f2d8fa43a2e",
-  "sourceFingerprint": "875c60d94f34dc991eb16b3e6e3ec9983077612861d518da3b1b23d874731aee",
+  "generatedAt": "2026-08-20T17:52:55-04:00",
+  "sourceCommit": "6342a6d57cf3b740f39214d2b140728fd4f74264",
+  "sourceFingerprint": "c2931a006c61da8d8ab169b956ae070fd43f10819e0846768242f49d179ec25b",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
     "errors": []
   },
   "diagnostics": {
-    "records": 453,
+    "records": 454,
     "byKind": {
       "project": 14,
-      "person": 5,
+      "person": 4,
       "organization": 1,
       "event": 20,
       "place": 1,
-      "source": 101,
+      "source": 102,
       "asset": 192,
       "claim": 4,
       "research-run": 9,
       "research-inquiry": 6,
       "decision": 9,
-      "correction": 2,
+      "correction": 3,
       "method": 14,
       "timeline": 1,
       "application": 2,
@@ -32,10 +32,10 @@
       "opportunity": 14,
       "projection": 11
     },
-    "typedRelations": 1546,
+    "typedRelations": 1553,
     "evidenceRelations": 27,
     "relationTypeCounts": {
-      "collaborated_with": 3,
+      "collaborated_with": 2,
       "documents": 45,
       "evidence:context": 3,
       "evidence:corroborating": 4,
@@ -47,20 +47,20 @@
       "part_of": 11,
       "participated_in": 3,
       "projected_to": 15,
-      "related_to": 976,
+      "related_to": 981,
       "resulted_in": 7,
       "supersedes": 1,
       "supports": 37,
       "uses_method": 33,
-      "uses_source": 348
+      "uses_source": 351
     },
-    "proseLinks": 485,
-    "rootReachable": 220,
+    "proseLinks": 484,
+    "rootReachable": 219,
     "orphanCount": 5,
     "deadEndCount": 0,
     "wantedPageCount": 6,
     "stalePageCount": 0,
-    "correctionCount": 2,
+    "correctionCount": 3,
     "rightsReviewCount": 186,
     "opportunityCount": 14,
     "liveOpportunityCount": 9,
@@ -226,6 +226,12 @@
       "id": "correction.photo.east-river-credit.2026-07",
       "title": "Add Elana Gordon's credit to the East River homepage occurrence",
       "path": "docs/knowledge-bank/corrections/east-river-credit-2026-07.md",
+      "humanReview": "not-requested"
+    },
+    {
+      "id": "correction.photo.portfolio-project-credits.2026-08-20",
+      "title": "Replace unsupported and archive-facing project-photo credits",
+      "path": "docs/knowledge-bank/corrections/portfolio-project-photo-credits-2026-08-20.md",
       "humanReview": "not-requested"
     }
   ],

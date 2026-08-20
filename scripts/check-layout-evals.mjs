@@ -29,6 +29,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     "metadata-and-locator-safety",
     "editorial-not-decorative",
     "truthful-project-cover-field",
+    "truthful-photo-credit",
     "tag-navigation-contract",
     "human-index-material-system",
     "responsive-image-contract",
@@ -66,6 +67,32 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   }
   if ([...manifest.matchAll(/publicationStatus: "jamie-authorized"/g)].length !== 6) {
     fail("manifest-bound-publication", "Every photo must retain the Jamie-authorized publication status.");
+  }
+  const requiredPhotoCredits = [
+    "Photograph by Elana Gordon. From Jamie Burkart's photo archive.",
+    "Photo courtesy of NYC Artist Coalition.",
+    "Photo courtesy of Sunday Dinner NYC.",
+    "Photo courtesy of KC Town Hall."
+  ];
+  for (const credit of requiredPhotoCredits) {
+    if (!manifest.includes(`credit: "${credit}"`)) {
+      fail(
+        "truthful-photo-credit",
+        `The public photo manifest is missing the approved credit: ${credit}`
+      );
+    }
+  }
+  if (
+    [...manifest.matchAll(/credit: "Photo courtesy of NYC Artist Coalition\."/g)]
+      .length !== 2 ||
+    /Paul Mossine|Photographer not identified in (?:the )?retained export/i.test(
+      manifest
+    )
+  ) {
+    fail(
+      "truthful-photo-credit",
+      "Project photographs must use the approved project courtesy credit without unsupported creator attribution or archive-process prose."
+    );
   }
 
   const publicImageRoot = path.join(root, "apps/www/public/images/field-notes");
@@ -138,7 +165,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   }
   if (
     !albumPermission.includes("album_scope_publication: approved") ||
-    !albumPermission.includes("required_credit: Photo courtesy NYC Artist Coalition.") ||
+    !albumPermission.includes("required_credit: Photo courtesy of NYC Artist Coalition.") ||
     !albumPermission.includes("production: open") ||
     !albumPermission.includes("indexing: open") ||
     !albumPermission.includes("private_evidence: held-outside-git")

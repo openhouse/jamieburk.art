@@ -11,7 +11,7 @@ canonical_path: docs/knowledge-bank/assets/photographs/sunday-dinner-shared-map-
 summary: Public-safe record for a January 6, 2013 Sunday Dinner photograph showing a shared table, a hand-drawn map, and visible group interaction.
 media_type: photograph
 rights_state: cleared
-creator_state: unresolved-in-retained-export
+creator_state: unresolved
 consent_state: cleared
 represented_person_review: cleared-for-bounded-portfolio-use
 public_display_status: cleared
@@ -45,13 +45,13 @@ statements:
     confidence: high
     references:
       - source.photo-metadata.portfolio-cover-images.2026.public-safe
-  - id: statement.photo.sunday-dinner.shared-map.archive-credit.v1
-    property: archive_custody
-    value: Jamie Burkart photo archive; photographer not identified in retained export
+  - id: statement.photo.sunday-dinner.shared-map.project-credit.v2
+    property: project_courtesy_credit
+    value: project.sunday-dinner-196
     rank: preferred
     confidence: high
     references:
-      - source.photo-metadata.portfolio-cover-images.2026.public-safe
+      - source.correction.portfolio-project-photo-credits.2026-08-20
 visible_observations:
   - A person stands at a crowded shared table, raising one hand and holding up a sheet of paper beside a hand-drawn map.
   - Other people at the table are visibly laughing.
@@ -76,8 +76,8 @@ relations:
 ## Current public use
 
 The metadata-stripped derivative appears as the Sunday Dinner project cover on
-the work index and as a bounded artifact on the case-study page. The retained
-export does not identify the photographer, and the public credit says so.
+the work index and on the case-study page. The public credit reads, “Photo
+courtesy of Sunday Dinner NYC.”
 
 ## Evidence boundary
 

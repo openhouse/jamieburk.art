@@ -9,14 +9,16 @@ sensitivity: moderate
 last_reviewed: 2026-08-13
 review_by: 2027-02-13
 canonical_path: docs/knowledge-bank/sources/photo-metadata/portfolio-cover-images-2026-public-safe.md
-summary: Public-safe capsule retaining only the capture dates and creator-state information needed to govern the selected Sunday Dinner and KC Town Hall portfolio derivatives.
+summary: Public-safe capsule retaining only the capture dates and project-credit information needed to govern the selected Sunday Dinner and KC Town Hall portfolio derivatives.
 retained_fields:
   sunday_dinner_shared_map:
     capture_date: 2013-01-06
-    photographer: unresolved-in-retained-export
+    creator_state: unresolved
+    public_credit: Sunday Dinner NYC
   kc_town_hall_roof_work:
     capture_date: 2019-03-24
-    photographer: Paul Mossine
+    creator_state: unresolved
+    public_credit: KC Town Hall
 excluded_fields:
   - source album identifier
   - Apple Photos identifier
@@ -34,6 +36,9 @@ relations:
   - type: related_to
     target: source.permission.jamie-portfolio-album.2026-08-13
     href: ../permissions/jamie-portfolio-album-2026-08-13.md
+  - type: uses_source
+    target: source.correction.portfolio-project-photo-credits.2026-08-20
+    href: ../corrections/portfolio-project-photo-credits-2026-08-20.md
 ---
 
 # Public-safe project-cover image metadata
@@ -43,7 +48,7 @@ the two selected public derivatives. It does not expose the source album,
 archive identifiers, original filenames, People tags, face associations,
 location, camera details, private filesystem paths, or raw metadata.
 
-The Sunday Dinner export contains no retained photographer attribution. Paul
-Mossine is credited for the KC Town Hall photograph. Public Git and staging are
-authorized; production publication and indexing remain open for the exact
-candidate.
+Neither selected project-cover record confirms an individual photographer.
+The public credits therefore name Sunday Dinner NYC and KC Town Hall as the
+responsible projects. Public Git and staging are authorized; production
+publication and indexing remain open for the exact candidate.

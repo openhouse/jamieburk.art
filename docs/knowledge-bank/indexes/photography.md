@@ -138,9 +138,9 @@ records why three new archive leads remain held.
 The two new public assets are the
 [Sunday Dinner shared-map photograph](../assets/photographs/sunday-dinner-shared-map-2013.md)
 and the [KC Town Hall roof-work photograph](../assets/photographs/kc-town-hall-roof-work-2019.md).
-[Paul Mossine](../people/paul-mossine.md) is credited where retained
-public-safe metadata establishes his authorship. Production publication and
-indexing remain separate human decisions.
+Their individual photographers are not confirmed, so the public occurrence
+credits Sunday Dinner NYC and KC Town Hall respectively. Production publication
+and indexing remain separate human decisions.
 
 ## East River canary
 

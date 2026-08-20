@@ -27,7 +27,7 @@ caption:
     - statement.photo.nycac.shoestring.facilitation.v1
     - statement.photo.nycac.shoestring.year.v1
 credit:
-  text: Photo courtesy NYC Artist Coalition.
+  text: Photo courtesy of NYC Artist Coalition.
   assertions:
     - statement.photo.nycac.shoestring.custody.v1
 permission_source: source.permission.jamie-nycac-portfolio-album.2026-08

@@ -155,3 +155,62 @@ test("the public-safety gate rejects bound and bounded in public-facing prose", 
     if (existsSync(mutationPath)) unlinkSync(mutationPath);
   }
 });
+
+test("the public-safety gate rejects a corrected photographer credit", () => {
+  const mutationPath = path.join(
+    publicAssetDirectory,
+    "__public-photo-credit-mutation__.txt"
+  );
+  try {
+    writeFileSync(mutationPath, "Photograph by Paul Mossine.\n");
+    assert.throws(
+      () =>
+        execFileSync(
+          process.execPath,
+          [path.join(repoRoot, "scripts/check-public-safety.mjs")],
+          {
+            cwd: repoRoot,
+            encoding: "utf8",
+            stdio: ["ignore", "pipe", "pipe"]
+          }
+        ),
+      (error) =>
+        /public photo credit uses a corrected individual attribution/.test(
+          error.stderr?.toString() ?? ""
+        )
+    );
+  } finally {
+    if (existsSync(mutationPath)) unlinkSync(mutationPath);
+  }
+});
+
+test("the public-safety gate rejects archive-process photo-credit prose", () => {
+  const mutationPath = path.join(
+    publicAssetDirectory,
+    "__public-photo-credit-mutation__.txt"
+  );
+  try {
+    writeFileSync(
+      mutationPath,
+      "Photographer not identified in the retained export.\n"
+    );
+    assert.throws(
+      () =>
+        execFileSync(
+          process.execPath,
+          [path.join(repoRoot, "scripts/check-public-safety.mjs")],
+          {
+            cwd: repoRoot,
+            encoding: "utf8",
+            stdio: ["ignore", "pipe", "pipe"]
+          }
+        ),
+      (error) =>
+        /public photo credit exposes archive-process language/.test(
+          error.stderr?.toString() ?? ""
+        )
+    );
+  } finally {
+    if (existsSync(mutationPath)) unlinkSync(mutationPath);
+  }
+});

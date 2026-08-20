@@ -91,6 +91,36 @@ test("every work item retains a governed project-bound cover", () => {
   assert(result.failures.some(({ criterion }) => criterion === "truthful-project-cover-field"));
 });
 
+test("an unsupported named photographer fails the project-credit contract", () => {
+  const path = "apps/www/src/data/photography.ts";
+  const source = readFileSync(path, "utf8").replace(
+    'credit: "Photo courtesy of NYC Artist Coalition.",',
+    'credit: "Photograph by Paul Mossine.",'
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(
+    result.failures.some(
+      ({ criterion }) => criterion === "truthful-photo-credit"
+    )
+  );
+});
+
+test("archive-process language fails the public project-credit contract", () => {
+  const path = "apps/www/src/data/photography.ts";
+  const source = readFileSync(path, "utf8").replace(
+    'credit: "Photo courtesy of NYC Artist Coalition.",',
+    'credit: "Photographer not identified in the retained export.",'
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(
+    result.failures.some(
+      ({ criterion }) => criterion === "truthful-photo-credit"
+    )
+  );
+});
+
 test("tag-shaped controls retain real destinations", () => {
   const path = "apps/www/src/components/TagList.tsx";
   const source = readFileSync(path, "utf8").replace("/work?tag=", "/work#");
