@@ -1,0 +1,85 @@
+name: NYC Jobs opportunity digest
+
+on:
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nyc-jobs-opportunity-digest
+  cancel-in-progress: false
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 26
+          cache: npm
+      - run: npm ci
+      - name: Run deterministic opportunity evals
+        run: npm run opportunities:nyc:eval
+      - name: Fetch NYC Jobs revision metadata
+        run: |
+          mkdir -p .tmp/nyc-jobs
+          curl --fail --silent --show-error --location \
+            https://data.cityofnewyork.us/api/views/pda4-rgn4 \
+            --output .tmp/nyc-jobs/metadata.json
+          echo "revision=$(node -p 'JSON.parse(require("fs").readFileSync(".tmp/nyc-jobs/metadata.json", "utf8")).rowsUpdatedAt')" >> "$GITHUB_OUTPUT"
+        id: metadata
+      - name: Restore processed-revision marker
+        id: revision-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: .tmp/nyc-jobs/revision-marker
+          key: nyc-jobs-revision-${{ steps.metadata.outputs.revision }}
+      - name: Fetch current postings when the source revision is new
+        if: steps.revision-cache.outputs.cache-hit != 'true'
+        run: |
+          curl --fail --silent --show-error --location \
+            'https://data.cityofnewyork.us/resource/pda4-rgn4.json?$limit=50000' \
+            --output .tmp/nyc-jobs/postings.json
+      - name: Use an empty feed for the unchanged-revision daily digest
+        if: steps.revision-cache.outputs.cache-hit == 'true'
+        run: printf '[]\n' > .tmp/nyc-jobs/postings.json
+      - name: Build and send the daily action digest
+        run: >-
+          npm run opportunities:nyc:daily --
+          --metadata .tmp/nyc-jobs/metadata.json
+          --postings .tmp/nyc-jobs/postings.json
+          --config evals/opportunity-intake/nyc-jobs.json
+          --output-dir .tmp/nyc-jobs/output
+          --candidate-queue .tmp/nyc-jobs/revision-marker/candidate-queue.json
+          ${{ steps.revision-cache.outputs.cache-hit == 'true' && '--active-digest-only' || '--force-refresh' }}
+          --send
+        env:
+          OPPORTUNITY_DIGEST_SEND_ENABLED: ${{ secrets.OPPORTUNITY_DIGEST_SEND_ENABLED }}
+          OPPORTUNITY_DIGEST_TO: ${{ secrets.OPPORTUNITY_DIGEST_TO }}
+          OPPORTUNITY_DIGEST_FROM: ${{ secrets.OPPORTUNITY_DIGEST_FROM }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+      - name: Mark this dataset revision processed
+        if: steps.revision-cache.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p .tmp/nyc-jobs/revision-marker
+          cp .tmp/nyc-jobs/metadata.json .tmp/nyc-jobs/revision-marker/metadata.json
+          cp .tmp/nyc-jobs/output/nyc-jobs-candidate-queue.json .tmp/nyc-jobs/revision-marker/candidate-queue.json
+      - name: Save processed-revision marker
+        if: steps.revision-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: .tmp/nyc-jobs/revision-marker
+          key: nyc-jobs-revision-${{ steps.metadata.outputs.revision }}
+      - name: Retain the governed action packet
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nyc-jobs-opportunity-action-packet-${{ github.run_id }}
+          path: .tmp/nyc-jobs/output
+          if-no-files-found: error
+          retention-days: 30

@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Hiring acceptance Wiki gap resolution
 
-**Candidate commit:** `14ccb9ffe9c628a00a4289a49dd2d32d9e892296`
-**Public report hash:** `b15b8de6486606272f4f7c0e01706e0fa7939ff020ef5b36bffac50309d257bf`
-**Wiki fingerprint:** `de8d12c1e4c7b4df865c3225b773b5f6fb23f9c988d78ba5fd1e90a01cbb3cb2`
+**Candidate commit:** `1d915105bce173a331e76ec8a58e69ccfef536d8`
+**Public report hash:** `ab25673e164ffc6ce2f4b293ba0eb8931ed175df051f98e6f8ee975057ee9ebc`
+**Wiki fingerprint:** `98cfe61947950f2c486046dd36e540cc33b264a00698078dda025083f5b6d031`
 
 The gap resolver runs after the public-only evaluator. It can identify Wiki evidence, but every public change remains human-reviewed.
 
@@ -38,3 +38,4 @@ The gap resolver runs after the public-only evaluator. It can identify Wiki evid
 - `requirement.permitflow.product-data` - **true-experience-gap**; Test present SQL and analytics fluency; do not imply tools Jamie cannot demonstrate.
 - `requirement.permitflow.cross-functional-launch` - **role-context-or-evidence-unknown**; Prepare one cross-functional launch sequence with actors and decisions.
 - `requirement.protected-memory.knowledge-friction` - **role-context-or-evidence-unknown**; Keep the public method legible without exposing the protected lead.
+- `requirement.protected-memory.bounded-sprint` - **role-context-or-evidence-unknown**; Do not imply that a sprint was accepted, funded, or delivered.

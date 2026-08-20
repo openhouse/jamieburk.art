@@ -3,7 +3,7 @@
 
 **Source commit:** `82aed4f1384fe7799c2f485ddb9395775d60a86e`
 **Generation time:** 2026-08-20T13:08:43-04:00
-**Source fingerprint:** `5b0cede3e3a612ffd387e7e2574c3fa7b476550c4cf7a4b67e4b9fd9a88ed7de`
+**Source fingerprint:** `98cfe61947950f2c486046dd36e540cc33b264a00698078dda025083f5b6d031`
 
 - [East River beneath the Manhattan Bridge, 2022](../../assets/photographs/east-river-manhattan-bridge-2022.md) - `projected_to` (frontmatter)
 - [Add Elana Gordon's credit to the East River homepage occurrence](../../corrections/east-river-credit-2026-07.md) - `related_to` (frontmatter)

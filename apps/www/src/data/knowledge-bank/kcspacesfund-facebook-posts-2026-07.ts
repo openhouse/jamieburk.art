@@ -538,7 +538,7 @@ export const kcSpacesFundFacebookPostClaims: KnowledgeBank["claims"] = [
       },
       {
         key: "archive-note",
-        text: "Jamie's bounded role was website, digital-infrastructure, and cross-channel naming support, not Facebook publishing, public organizing, fundraising ownership, or grant decisions.",
+        text: "Jamie's specific role was website, digital-infrastructure, and cross-channel naming support, not Facebook publishing, public organizing, fundraising ownership, or grant decisions.",
         status: "active",
         citationRequired: false,
         surfaces: ["docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts"]
@@ -551,7 +551,7 @@ export const kcSpacesFundFacebookPostClaims: KnowledgeBank["claims"] = [
       { sourceId: sourceIds.census, relationship: "context", supports: ["consistent site, application, fundraising, and spotlight routing"], confidence: "high", renderCitation: false }
     ],
     boundaries: [
-      "Credit Jamie with bounded web infrastructure and cross-channel naming support, not public organizing, fundraising ownership, grant decisions, or campaign voice.",
+      "Credit Jamie with web infrastructure and cross-channel naming support, not public organizing, fundraising ownership, grant decisions, or campaign voice.",
       "The public channels corroborate identity consistency; Jamie's firsthand clarification supplies the naming-support and non-posting account, pending collaborator confirmation of process detail.",
       "Public organizer credit remains with Caitlin Horsmon, Jordan Carr, Kendell Harbin, and Megan Pobywajlo as named by the fundraiser."
     ],

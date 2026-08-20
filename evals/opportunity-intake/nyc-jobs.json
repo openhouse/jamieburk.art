@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "datasetId": "pda4-rgn4",
+    "parentDatasetId": "kpav-sd4t",
+    "aboutUrl": "https://data.cityofnewyork.us/City-Government/NYC-Jobs/pda4-rgn4/about_data",
+    "metadataUrl": "https://data.cityofnewyork.us/api/views/pda4-rgn4",
+    "resourceUrl": "https://data.cityofnewyork.us/resource/pda4-rgn4.json",
+    "provider": "NYC Department of Citywide Administrative Services",
+    "updateCadence": "weekly"
+  },
+  "state": {
+    "rowsUpdatedAt": 1787079680,
+    "rowsUpdatedAtIso": "2026-08-18T19:01:20.000Z",
+    "refreshCompletedAt": "2026-08-20T12:00:00.000Z"
+  },
+  "policy": {
+    "salaryFloorAnnual": 100000,
+    "strongMatchThreshold": 84,
+    "minimumFitScore": 78,
+    "minimumSecurabilityScore": 70,
+    "fitWeight": 0.62,
+    "securabilityWeight": 0.38
+  },
+  "knownJobIds": [
+    "782366",
+    "782369",
+    "784450",
+    "789810",
+    "791074"
+  ],
+  "activeOpportunities": [
+    {
+      "jobId": "8620968002",
+      "title": "Senior Project Manager, Learning and Project Solutions",
+      "agency": "ACLU",
+      "actionUrl": "https://job-boards.greenhouse.io/aclu/jobs/8620968002",
+      "verifiedActionable": true,
+      "nextAction": "Confirm application state; submit the tailored packet if not yet filed, otherwise record the next follow-up date."
+    },
+    {
+      "jobId": "8631854002",
+      "title": "Senior Project Manager, National Campaigns",
+      "agency": "ACLU",
+      "actionUrl": "https://job-boards.greenhouse.io/aclu/jobs/8631854002",
+      "verifiedActionable": true,
+      "nextAction": "Confirm application state; submit the tailored packet if not yet filed, otherwise record the next follow-up date."
+    },
+    {
+      "jobId": "8027437",
+      "title": "AI Implementation Manager, Service Management",
+      "agency": "Asana",
+      "actionUrl": "https://asana.com/jobs/apply/8027437",
+      "verifiedActionable": true,
+      "nextAction": "Confirm application state; submit the tailored packet if not yet filed, otherwise record the next follow-up date."
+    },
+    {
+      "jobId": "791074",
+      "title": "Cybersecurity Senior Project Manager",
+      "agency": "NYC OTI",
+      "actionUrl": "https://cityjobs.nyc.gov/job/cybersecurity-senior-project-manager-in-brooklyn-jid-46417",
+      "verifiedActionable": true,
+      "nextAction": "Confirm application state; submit the tailored packet if not yet filed, otherwise record the next follow-up date."
+    },
+    {
+      "jobId": "789810",
+      "title": "Operations Manager",
+      "agency": "NYC OTI",
+      "actionUrl": "https://cityjobs.nyc.gov/job/operations-manager-in-brooklyn-jid-46143",
+      "verifiedActionable": true,
+      "nextAction": "Confirm application state; submit the tailored packet if not yet filed, otherwise record the next follow-up date."
+    },
+    {
+      "jobId": "784450",
+      "title": "Product Manager",
+      "agency": "NYC OTI",
+      "actionUrl": "https://cityjobs.nyc.gov/job/product-manager-in-brooklyn-jid-45056",
+      "verifiedActionable": true,
+      "nextAction": "Confirm application state; submit the prepared application if not yet filed, otherwise record the next follow-up date."
+    },
+    {
+      "jobId": "782366",
+      "title": "Senior Product Manager",
+      "agency": "NYC OTI",
+      "actionUrl": "https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-44507",
+      "verifiedActionable": true,
+      "nextAction": "Confirm application state; submit the tailored packet if not yet filed, otherwise record the next follow-up date."
+    }
+  ],
+  "admissionBoundary": "Automatic admission is to a private-action candidate intake queue only. Each candidate needs verification against the individual official posting before it becomes a canonical Knowledge Wiki opportunity or generates outward-facing material.",
+  "evaluationOrder": [
+    "dataset revision comparison",
+    "external-posting, deadline, salary, and credential screens",
+    "deterministic fit and securability scoring",
+    "individual official posting verification",
+    "named hiring-reader evaluation for application materials"
+  ],
+  "humanGates": [
+    "Jamie controls application submission and any representation made to an employer.",
+    "Jamie approval is required before a candidate queue item becomes a public Knowledge Wiki opportunity.",
+    "Employer hiring authority remains exclusively with the real employer and its authorized staff."
+  ],
+  "delivery": {
+    "schedule": "0 12 * * *",
+    "scheduleMeaning": "Daily at 12:00 UTC; approximately 8:00 a.m. EDT and 7:00 a.m. EST.",
+    "sendGateEnvironment": "OPPORTUNITY_DIGEST_SEND_ENABLED",
+    "recipientSecret": "OPPORTUNITY_DIGEST_TO",
+    "senderSecret": "OPPORTUNITY_DIGEST_FROM",
+    "credentialSecret": "RESEND_API_KEY"
+  }
+}

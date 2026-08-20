@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "candidateSha": "14ccb9ffe9c628a00a4289a49dd2d32d9e892296",
-  "portfolioSnapshotHash": "958f5f0b18a994ba295c69b89d3b2e3db1219b3ec8db4fbd4a58953959694efa",
-  "publicReportHash": "b15b8de6486606272f4f7c0e01706e0fa7939ff020ef5b36bffac50309d257bf",
-  "wikiSourceFingerprint": "de8d12c1e4c7b4df865c3225b773b5f6fb23f9c988d78ba5fd1e90a01cbb3cb2",
+  "candidateSha": "1d915105bce173a331e76ec8a58e69ccfef536d8",
+  "portfolioSnapshotHash": "960b9dad10995afda58ce8fabbc7a587c63fb8178bc633891c1e94d80bdad2b5",
+  "publicReportHash": "ab25673e164ffc6ce2f4b293ba0eb8931ed175df051f98e6f8ee975057ee9ebc",
+  "wikiSourceFingerprint": "98cfe61947950f2c486046dd36e540cc33b264a00698078dda025083f5b6d031",
   "findings": [
     {
       "findingId": "finding.requirement.oti-product.cross-functional-launch",
@@ -408,6 +408,20 @@
       "gapType": "none",
       "smallestResponsibleChange": "Keep the public method legible without exposing the protected lead.",
       "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.protected-memory.bounded-sprint",
+      "opportunityId": "opportunity.protected.source-backed-memory-consulting.2026",
+      "requirementId": "requirement.protected-memory.bounded-sprint",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "role-context",
+      "smallestResponsibleChange": "Do not imply that a sprint was accepted, funded, or delivered.",
+      "requiresOriginalSourceReview": true,
       "requiresHumanApproval": true
     }
   ],

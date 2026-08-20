@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-20T13:08:43-04:00",
   "sourceCommit": "82aed4f1384fe7799c2f485ddb9395775d60a86e",
-  "sourceFingerprint": "5b0cede3e3a612ffd387e7e2574c3fa7b476550c4cf7a4b67e4b9fd9a88ed7de",
+  "sourceFingerprint": "98cfe61947950f2c486046dd36e540cc33b264a00698078dda025083f5b6d031",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3678,6 +3678,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "method.nyc-jobs-opportunity-loop",
+      "path": "docs/knowledge-bank/methods/nyc-jobs-opportunity-loop.md",
+      "title": "NYC Jobs opportunity action loop",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "A revision-aware, cost-staged loop from NYC Jobs discovery to verified action tasks.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-09-20"
+    },
+    {
       "id": "method.participation-and-relational-infrastructure",
       "path": "docs/knowledge-bank/methods/participation-and-relational-infrastructure.md",
       "title": "Participation and Relational Infrastructure",
@@ -5267,6 +5280,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-09-26"
+    },
+    {
+      "id": "source.nyc-jobs.open-data.pda4-rgn4",
+      "path": "docs/knowledge-bank/sources/nyc-jobs-open-data-pda4-rgn4.md",
+      "title": "NYC Jobs Open Data source pda4-rgn4",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Machine-readable, weekly NYC Jobs discovery source and revision signal for governed opportunity intake.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-25"
     },
     {
       "id": "source.nyc-oti.cyber-command.kelly-moan",
@@ -13938,6 +13964,14 @@
     {
       "from": "index.knowledge-wiki.pilot",
       "type": "related_to",
+      "to": "method.nyc-jobs-opportunity-loop",
+      "source": "frontmatter",
+      "href": "../methods/nyc-jobs-opportunity-loop.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.pilot",
+      "type": "related_to",
       "to": "method.source-backed-team-memory",
       "source": "frontmatter",
       "href": "../methods/source-backed-team-memory.md",
@@ -14765,6 +14799,14 @@
       "to": "source.jamie.writers-voice-synthesis.2026-07",
       "source": "frontmatter",
       "href": "../sources/writers-voice-synthesis-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "method.nyc-jobs-opportunity-loop",
+      "type": "uses_source",
+      "to": "source.nyc-jobs.open-data.pda4-rgn4",
+      "source": "frontmatter",
+      "href": "../sources/nyc-jobs-open-data-pda4-rgn4.md",
       "context": null
     },
     {
@@ -18128,6 +18170,14 @@
       "context": null
     },
     {
+      "from": "source.nyc-jobs.open-data.pda4-rgn4",
+      "type": "related_to",
+      "to": "method.nyc-jobs-opportunity-loop",
+      "source": "frontmatter",
+      "href": "../methods/nyc-jobs-opportunity-loop.md",
+      "context": null
+    },
+    {
       "from": "source.nyc-oti.cyber-command.kelly-moan",
       "type": "mentions",
       "to": "person.kelly-moan",
@@ -21167,10 +21217,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/pilot.md",
       "from": "index.knowledge-wiki.pilot",
+      "toPath": "docs/knowledge-bank/methods/nyc-jobs-opportunity-loop.md",
+      "to": "method.nyc-jobs-opportunity-loop",
+      "fragment": null,
+      "line": 29,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/pilot.md",
+      "from": "index.knowledge-wiki.pilot",
       "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
       "to": "opportunity.nyc-oti.technical-operations-manager.782369",
       "fragment": null,
-      "line": 29,
+      "line": 30,
       "kind": "link"
     },
     {
@@ -21179,7 +21238,7 @@
       "toPath": "docs/knowledge-bank/projections/work-technical-operations.md",
       "to": "portfolio.work.technical-operations",
       "fragment": null,
-      "line": 30,
+      "line": 31,
       "kind": "link"
     },
     {
@@ -21188,7 +21247,7 @@
       "toPath": "docs/knowledge-bank/evaluations/retrieval-tasks.md",
       "to": "evaluation.knowledge-wiki.retrieval-tasks",
       "fragment": null,
-      "line": 31,
+      "line": 32,
       "kind": "link"
     },
     {
@@ -21197,7 +21256,7 @@
       "toPath": "docs/knowledge-bank/schema.md",
       "to": null,
       "fragment": null,
-      "line": 35,
+      "line": 36,
       "kind": "link"
     },
     {
@@ -21206,7 +21265,7 @@
       "toPath": "docs/knowledge-bank/workflow.md",
       "to": null,
       "fragment": null,
-      "line": 36,
+      "line": 37,
       "kind": "link"
     },
     {
@@ -21215,7 +21274,7 @@
       "toPath": "docs/knowledge-bank/_generated/index-by-kind.md",
       "to": null,
       "fragment": null,
-      "line": 37,
+      "line": 38,
       "kind": "link"
     },
     {
@@ -21224,7 +21283,7 @@
       "toPath": "reports/wiki-health.md",
       "to": null,
       "fragment": null,
-      "line": 38,
+      "line": 39,
       "kind": "link"
     },
     {

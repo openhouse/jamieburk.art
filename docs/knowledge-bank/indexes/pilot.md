@@ -26,6 +26,9 @@ relations:
     target: method.source-backed-team-memory
     href: ../methods/source-backed-team-memory.md
   - type: related_to
+    target: method.nyc-jobs-opportunity-loop
+    href: ../methods/nyc-jobs-opportunity-loop.md
+  - type: related_to
     target: opportunity.nyc-oti.technical-operations-manager.782369
     href: ../opportunities/oti-technical-operations.md
 ---
@@ -57,6 +60,7 @@ publication graphs without migrating the complete historical corpus.
 
 - [Technical Operations capability](../capabilities/technical-operations.md)
 - [Source-Backed Team Memory method](../methods/source-backed-team-memory.md)
+- [NYC Jobs opportunity action loop](../methods/nyc-jobs-opportunity-loop.md)
 - [Technical Operations opportunity lens](../opportunities/oti-technical-operations.md)
 - [Technical Operations portfolio projection](../projections/work-technical-operations.md)
 - [Retrieval tasks](../evaluations/retrieval-tasks.md)

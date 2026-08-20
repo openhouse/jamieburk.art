@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "runId": "hiring-public-14ccb9ffe9c6",
-  "generatedAt": "2026-08-15T16:32:55-04:00",
-  "candidateSha": "14ccb9ffe9c628a00a4289a49dd2d32d9e892296",
-  "candidatePathsClean": false,
-  "portfolioSnapshotHash": "958f5f0b18a994ba295c69b89d3b2e3db1219b3ec8db4fbd4a58953959694efa",
+  "runId": "hiring-public-1d915105bce1",
+  "generatedAt": "2026-08-20T13:49:56-04:00",
+  "candidateSha": "1d915105bce173a331e76ec8a58e69ccfef536d8",
+  "candidatePathsClean": true,
+  "portfolioSnapshotHash": "960b9dad10995afda58ce8fabbc7a587c63fb8178bc633891c1e94d80bdad2b5",
   "roleContextHash": "a72e9f97830ae45ad1ad1a21550fd71f0e0d7f56c6bf62ec21a6a7ae4b1d853e",
   "readerContextHash": "c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
@@ -903,7 +903,7 @@
       "fresh": false,
       "hardScreenBlocked": false,
       "decision": "not-live",
-      "observed": 2,
+      "observed": 1,
       "requirementTotal": 3,
       "criticalObserved": 1,
       "criticalTotal": 2,
@@ -933,15 +933,11 @@
         {
           "requirementId": "requirement.protected-memory.bounded-sprint",
           "importance": "important",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/lab/source-backed-team-memory"
-          ],
-          "evidenceNeedles": [
-            "Discuss a bounded source-backed memory sprint"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         }
       ]
     }

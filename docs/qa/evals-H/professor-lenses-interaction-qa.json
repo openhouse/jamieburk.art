@@ -1,11 +1,11 @@
 {
   "reportVersion": 3,
-  "checkedAt": "2026-08-20T15:39:15.112533Z",
+  "checkedAt": "2026-08-20T19:00:48.275Z",
   "baseUrl": "http://127.0.0.1:3117",
-  "publicSurfaceFingerprint": "b4422f9a0170ff0c71cc7db4e1df1c68b24117628aa2a12e208ef62c1ab27563",
+  "publicSurfaceFingerprint": "97143893d351d3d2f4c4a6ebbcc381b4d7c64ec390111769d347920faa1fc2c3",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 152,
-  "method": "Playwright keyboard interaction plus bounded DOM and viewport inspection on the exact local candidate. This is not a human screen-reader or assistive-technology session.",
+  "publicSurfaceFileCount": 155,
+  "method": "Playwright keyboard interaction plus scoped DOM and viewport inspection on the exact local candidate. This is not a human screen-reader or assistive-technology session.",
   "keyboard": {
     "desktopTabSequence": [
       {
