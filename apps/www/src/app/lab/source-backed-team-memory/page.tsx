@@ -46,7 +46,75 @@ export default function SourceBackedTeamMemoryPage() {
             surface="/lab/source-backed-team-memory"
           />
         </p>
+        <section className="mt-10 overflow-hidden rounded-lg border border-jb-blue/25 bg-jb-warm">
+          <div className="border-b border-jb-blue/15 bg-jb-blue/[0.06] p-6 sm:p-8">
+            <p className="text-sm font-semibold uppercase text-jb-blue">
+              When this becomes urgent
+            </p>
+            <h2 className="mt-3 max-w-3xl text-3xl font-semibold text-jb-ink">
+              When a team grows faster than its context can travel
+            </h2>
+            <p className="mt-4 max-w-3xl text-lg leading-8 text-jb-ink/76">
+              Ideas, decisions, product reasoning, and onboarding context can
+              get lost or flattened as new collaborators join. People repeat
+              explanations, useful contributions disappear after meetings,
+              and decisions become harder to revisit with confidence.
+            </p>
+          </div>
+          <div className="grid gap-px bg-jb-ink/10 md:grid-cols-3">
+            <div className="bg-jb-paper p-6">
+              <p className="font-label text-xs uppercase tracking-[0.16em] text-jb-ochre">
+                Start small
+              </p>
+              <h3 className="mt-3 text-xl font-semibold text-jb-blue">
+                One safe source surface
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-jb-ink/74">
+                Choose one approved, non-sensitive or representative source:
+                a meeting, decision thread, onboarding document, or product
+                discussion.
+              </p>
+            </div>
+            <div className="bg-jb-paper p-6">
+              <p className="font-label text-xs uppercase tracking-[0.16em] text-jb-ochre">
+                First engagement
+              </p>
+              <h3 className="mt-3 text-xl font-semibold text-jb-blue">
+                A short paid discovery and prototype sprint
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-jb-ink/74">
+                In 1–2 weeks, map the knowledge friction, build one reviewable
+                source-to-memory loop, and test it against questions the team
+                actually needs to answer.
+              </p>
+            </div>
+            <div className="bg-jb-paper p-6">
+              <p className="font-label text-xs uppercase tracking-[0.16em] text-jb-ochre">
+                Decision at handoff
+              </p>
+              <h3 className="mt-3 text-xl font-semibold text-jb-blue">
+                Continue, revise, or stop
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-jb-ink/74">
+                Leave with a knowledge-friction map, a small team-memory
+                prototype, practical templates, and a clear recommendation—
+                without committing to a platform.
+              </p>
+            </div>
+          </div>
+          <div className="border-t border-jb-blue/15 p-6 sm:px-8">
+            <p className="max-w-3xl leading-7 text-jb-ink/76">
+              This is more than an AI summary. The structure preserves useful
+              ideas and contributions, keeps decisions linked to sources, and
+              leaves open or unresolved questions explicitly flagged for
+              human review and correction.
+            </p>
+          </div>
+        </section>
         <div className="mt-6 rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">
+          <p className="font-label text-xs uppercase tracking-[0.16em] text-jb-ochre">
+            Scope now
+          </p>
           <p className="leading-7 text-jb-ink/76">
             Early research / method / consulting practice. Not a finished
             production SaaS, chatbot, surveillance system, AI replacement for

@@ -3,7 +3,7 @@
 
 **Source commit:** `658c65e6d01d2682e727052bab12d33dde4c3c6b`
 **Generation time:** 2026-08-21T08:56:47-04:00
-**Source fingerprint:** `16bbbdf126426b15d51a9ba8bda0d835313a5eb5f7b38b5ceea23757a75a5fdd`
+**Source fingerprint:** `20f51cfdd7890da22ebdfb0d6c318f84b02f88d376f6db1cec852725c2d9e25d`
 
 ## application
 
@@ -254,6 +254,7 @@
 - [Knowledge Wiki retrieval tasks](../evaluations/retrieval-tasks.md) - `evaluation.knowledge-wiki.retrieval-tasks`
 - [NYCAC and Fair Rent NYC frontline advocacy eval](../evaluations/nycac-crs-frontline-advocacy-2026-08-13.md) - `evaluation.nycac.crs-frontline-source-return.2026-08-13`
 - [NYC Artist Coalition shared-folder production evals](../evaluations/nycac-shared-folder-production-2026-07-19.md) - `evaluation.nycac.shared-folder-production.2026-07-19`
+- [Protected-reader Source-Backed Team Memory proposal gate](../evaluations/protected-team-memory-reader.md) - `evaluation.portfolio.source-backed-team-memory.protected-reader.2026-08-21`
 
 ## event
 

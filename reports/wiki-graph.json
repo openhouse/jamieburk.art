@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-21T08:56:47-04:00",
   "sourceCommit": "658c65e6d01d2682e727052bab12d33dde4c3c6b",
-  "sourceFingerprint": "16bbbdf126426b15d51a9ba8bda0d835313a5eb5f7b38b5ceea23757a75a5fdd",
+  "sourceFingerprint": "20f51cfdd7890da22ebdfb0d6c318f84b02f88d376f6db1cec852725c2d9e25d",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3009,6 +3009,19 @@
       "reviewBy": "2026-08-19"
     },
     {
+      "id": "evaluation.portfolio.source-backed-team-memory.protected-reader.2026-08-21",
+      "path": "docs/knowledge-bank/evaluations/protected-team-memory-reader.md",
+      "title": "Protected-reader Source-Backed Team Memory proposal gate",
+      "kind": "evaluation",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Deterministic prerequisites and a privacy-preserving modeled-reader contract for testing whether the public lab page makes a focused first engagement easy to authorize.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-09-21"
+    },
+    {
       "id": "event.commercial-rent.empty-storefronts-report-launch.2026-07-29",
       "path": "docs/knowledge-bank/events/empty-storefronts-high-rents-report-launch-2026-07-29.md",
       "title": "Empty Storefronts, High Rents report launch and press conference",
@@ -4246,7 +4259,7 @@
       "sensitivity": "high",
       "summary": "Public-safe opportunity metadata for a contingent consulting lead without collaborator, company, pricing, or correspondence disclosure.",
       "aliases": [],
-      "lastReviewed": "2026-08-10",
+      "lastReviewed": "2026-08-21",
       "reviewBy": "2026-09-10"
     },
     {
@@ -12690,6 +12703,30 @@
       "context": null
     },
     {
+      "from": "evaluation.portfolio.source-backed-team-memory.protected-reader.2026-08-21",
+      "type": "related_to",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.portfolio.source-backed-team-memory.protected-reader.2026-08-21",
+      "type": "related_to",
+      "to": "opportunity.protected.source-backed-memory-consulting.2026",
+      "source": "frontmatter",
+      "href": "../opportunities/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.portfolio.source-backed-team-memory.protected-reader.2026-08-21",
+      "type": "uses_source",
+      "to": "source.protected.source-backed-memory-opportunity.2026",
+      "source": "frontmatter",
+      "href": "../sources/protected-source-backed-memory-opportunity.md",
+      "context": null
+    },
+    {
       "from": "event.commercial-rent.empty-storefronts-report-launch.2026-07-29",
       "type": "related_to",
       "to": "claim.nycac.crs-frontline-advocacy.2026-07-08",
@@ -13463,6 +13500,14 @@
       "to": "evaluation.jobs.nyc-oti.product-management-ranking.2026-08-20",
       "source": "frontmatter",
       "href": "../evaluations/oti-product-management-ranking-2026-08-20.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "evaluation.portfolio.source-backed-team-memory.protected-reader.2026-08-21",
+      "source": "frontmatter",
+      "href": "../evaluations/protected-team-memory-reader.md",
       "context": null
     },
     {
@@ -15588,6 +15633,14 @@
     {
       "from": "method.source-backed-team-memory",
       "type": "related_to",
+      "to": "evaluation.portfolio.source-backed-team-memory.protected-reader.2026-08-21",
+      "source": "frontmatter",
+      "href": "../evaluations/protected-team-memory-reader.md",
+      "context": null
+    },
+    {
+      "from": "method.source-backed-team-memory",
+      "type": "related_to",
       "to": "opportunity.protected.source-backed-memory-consulting.2026",
       "source": "frontmatter",
       "href": "../opportunities/source-backed-team-memory.md",
@@ -16575,6 +16628,14 @@
       "to": "capability.technical-operations",
       "source": "frontmatter",
       "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.protected.source-backed-memory-consulting.2026",
+      "type": "related_to",
+      "to": "evaluation.portfolio.source-backed-team-memory.protected-reader.2026-08-21",
+      "source": "frontmatter",
+      "href": "../evaluations/protected-team-memory-reader.md",
       "context": null
     },
     {
@@ -20967,6 +21028,15 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/evaluations/protected-team-memory-reader.md",
+      "to": "evaluation.portfolio.source-backed-team-memory.protected-reader.2026-08-21",
+      "fragment": null,
+      "line": 107,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
       "to": "opportunity.nyc-oti.product-manager.784450",
       "fragment": null,
@@ -20997,7 +21067,7 @@
       "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
       "to": "evaluation.employment-context.coverage.2026-07-18",
       "fragment": null,
-      "line": 134,
+      "line": 135,
       "kind": "link"
     },
     {
@@ -21006,7 +21076,7 @@
       "toPath": "reports/wiki-opportunity-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 135,
+      "line": 136,
       "kind": "link"
     },
     {
@@ -21015,7 +21085,7 @@
       "toPath": "reports/wiki-career-trajectory-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 136,
+      "line": 137,
       "kind": "link"
     },
     {
@@ -21024,22 +21094,13 @@
       "toPath": "reports/wiki-source-channel-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 137,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/wiki-opportunity-discovery.md",
-      "to": null,
-      "fragment": null,
       "line": 138,
       "kind": "link"
     },
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/hiring-acceptance-public.md",
+      "toPath": "reports/wiki-opportunity-discovery.md",
       "to": null,
       "fragment": null,
       "line": 139,
@@ -21057,10 +21118,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/hiring-acceptance-gap-resolution.md",
+      "toPath": "reports/hiring-acceptance-public.md",
       "to": null,
       "fragment": null,
       "line": 140,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/hiring-acceptance-gap-resolution.md",
+      "to": null,
+      "fragment": null,
+      "line": 141,
       "kind": "link"
     },
     {

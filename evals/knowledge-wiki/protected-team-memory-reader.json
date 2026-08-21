@@ -1,0 +1,81 @@
+{
+  "id": "protected-reader-source-backed-team-memory-2026-08-21",
+  "version": 1,
+  "purpose": "Test whether the public Source-Backed Team Memory page makes a focused first engagement easy to authorize for the public-safe scenario derived from a protected call review.",
+  "targetPath": "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
+  "supportingPublicCopyPath": "apps/www/src/content/lab/source-backed-team-memory.mdx",
+  "targetUrl": "https://staging-a.jamieburk.art/lab/source-backed-team-memory",
+  "protectedSourceRecordPath": "docs/knowledge-bank/sources/protected-source-backed-memory-opportunity.md",
+  "scenario": {
+    "publicSafeSummary": "A small, fast-growing creative technical team needs product ideas, decision context, and onboarding knowledge to remain usable as new collaborators join.",
+    "desiredFirstEngagement": "One short paid discovery and prototype sprint using one approved, non-sensitive or representative source surface.",
+    "decisionAtEnd": "Continue, revise, or stop based on whether the team can retrieve trustworthy context, preserve unresolved contributions, and reduce repeated explanation.",
+    "actualEngagementClaimed": false
+  },
+  "sourceBoundary": {
+    "rawTranscriptInRepository": false,
+    "rawTranscriptProvidedToJudge": false,
+    "privateCompanyIdentityPublic": false,
+    "pricingPublic": false,
+    "publicSafeScenarioOnly": true
+  },
+  "judge": {
+    "kind": "llm_judge",
+    "reader": "Protected prospective technical leader",
+    "disclaimer": "Simulated protected-reader analytical lens based on a public-safe scenario abstraction. This is not a quote, endorsement, participation claim, prediction, or actual hiring decision by the real person.",
+    "inputs": [
+      "the exact rendered public page",
+      "the public-safe scenario summary in this contract"
+    ],
+    "prohibitedInputs": [
+      "repository source",
+      "private transcripts",
+      "private communications",
+      "company identity",
+      "pricing",
+      "prior judge output"
+    ],
+    "prompt": "Role-play a fictionalized prospective technical leader with the public-safe team problem in the scenario summary. Use only the exact rendered public page and that summary. Do not infer the protected reader's identity, private facts, actual participation, endorsement, or a real-world decision. First write a concise narrative critique and name the primary risk. Then return pass or fail. Pass only if every rubric item is satisfied and you would say the acceptance statement exactly; otherwise return the failure statement and the single most important revision.",
+    "acceptanceGate": "I would hire Jamie for a focused paid discovery sprint in this scenario, subject to ordinary budget and approval.",
+    "failureGate": "I would not yet hire Jamie for a focused paid discovery sprint in this scenario.",
+    "rubric": [
+      "The page begins from a specific team problem rather than a universal knowledge-system thesis.",
+      "The proposed first engagement is small, permissioned, concrete, and reversible.",
+      "The page distinguishes source-backed operating memory from generic AI summarization.",
+      "The approach preserves ideas, decisions, unresolved questions, and onboarding context without making AI the authority.",
+      "The reader can see tangible outputs and a continue, revise, or stop decision at the end.",
+      "The page makes Jamie's combination of product operations, facilitation, documentation, and technical implementation credible without claiming an engagement occurred."
+    ],
+    "outputOrder": [
+      "narrativeCritique",
+      "primaryRisk",
+      "verdict",
+      "acceptanceStatement"
+    ],
+    "verdicts": ["pass", "fail"],
+    "allCriteriaMustPass": true,
+    "developmentExamples": [
+      {
+        "label": "clear-pass-shape",
+        "inputSummary": "The page names the growth and context-loss problem, proposes one short permissioned source-to-memory test, identifies tangible outputs, preserves open questions, and ends with a continue, revise, or stop decision.",
+        "expectedVerdict": "pass"
+      },
+      {
+        "label": "clear-fail-shape",
+        "inputSummary": "The page presents a universal AI knowledge platform, asks for broad system access, and supplies no first use case, review process, artifacts, or stopping decision.",
+        "expectedVerdict": "fail"
+      },
+      {
+        "label": "borderline-fail-shape",
+        "inputSummary": "The page communicates the philosophy and privacy boundary but leaves the team problem, paid first engagement, artifacts, and success decision for the reader to infer.",
+        "expectedVerdict": "fail"
+      }
+    ],
+    "calibration": {
+      "status": "required",
+      "minimumHumanLabeledPassExamples": 20,
+      "minimumHumanLabeledFailExamples": 20,
+      "releaseAuthority": "advisory-until-calibrated"
+    }
+  }
+}

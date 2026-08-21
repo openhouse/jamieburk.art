@@ -5,7 +5,7 @@ kind: opportunity
 status: governed-open
 visibility: summary-only
 sensitivity: high
-last_reviewed: 2026-08-10
+last_reviewed: 2026-08-21
 review_by: 2026-09-10
 canonical_path: docs/knowledge-bank/opportunities/source-backed-team-memory.md
 summary: Public-safe opportunity metadata for a contingent consulting lead without collaborator, company, pricing, or correspondence disclosure.
@@ -104,6 +104,9 @@ relations:
   - type: projected_to
     target: portfolio.work.technical-operations
     href: ../projections/work-technical-operations.md
+  - type: related_to
+    target: evaluation.portfolio.source-backed-team-memory.protected-reader.2026-08-21
+    href: ../evaluations/protected-team-memory-reader.md
 evidence:
   - target: source.protected.source-backed-memory-opportunity.2026
     relationship: private-support

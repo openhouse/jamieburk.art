@@ -27,6 +27,9 @@ relations:
   - type: informed_by
     target: source.knowledge-wiki-graph-practice-review.2026-08-21
     href: ../sources/knowledge-wiki-graph-practice-review-2026-08-21.md
+  - type: related_to
+    target: evaluation.portfolio.source-backed-team-memory.protected-reader.2026-08-21
+    href: ../evaluations/protected-team-memory-reader.md
 ---
 
 # Source-Backed Team Memory

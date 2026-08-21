@@ -77,6 +77,9 @@ relations:
     target: opportunity.protected.source-backed-memory-consulting.2026
     href: ../opportunities/source-backed-team-memory.md
   - type: related_to
+    target: evaluation.portfolio.source-backed-team-memory.protected-reader.2026-08-21
+    href: ../evaluations/protected-team-memory-reader.md
+  - type: related_to
     target: claim.employment.mobility-and-location.2026-08-15
     href: ../claims/employment-mobility-and-location.md
   - type: related_to
@@ -189,6 +192,7 @@ opportunity discovery.
 ## Conditional protected context
 
 - [Protected source-backed team-memory consulting lead](../opportunities/source-backed-team-memory.md)
+- [Protected-reader proposal gate](../evaluations/protected-team-memory-reader.md)
 
 This node belongs in the opportunity base set but not the live-job count. Its
 metadata is anonymous, its commercial state is conditional, and its protected
