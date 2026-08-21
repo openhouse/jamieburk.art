@@ -29,4 +29,3 @@ For a future opening, I would welcome the chance to help OTI build operating rhy
 Sincerely,
 
 Jamie Burkart
-

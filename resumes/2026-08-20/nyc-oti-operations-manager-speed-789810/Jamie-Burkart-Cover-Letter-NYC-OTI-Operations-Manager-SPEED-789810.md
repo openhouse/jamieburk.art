@@ -29,4 +29,3 @@ I would welcome the chance to help SPEED build an operating rhythm that shortens
 Sincerely,
 
 Jamie Burkart
-

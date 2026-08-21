@@ -29,4 +29,3 @@ I would welcome the chance to help CodePath's engineering team protect focus whi
 Sincerely,
 
 Jamie Burkart
-

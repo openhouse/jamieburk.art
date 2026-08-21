@@ -29,4 +29,3 @@ I would welcome the chance to help the ACLU's national campaigns hold complexity
 Sincerely,
 
 Jamie Burkart
-
