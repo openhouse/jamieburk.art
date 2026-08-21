@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `c87a028e18150178bd4948a0fde50e17883f4716`
-**Generation time:** 2026-08-20T18:29:18-04:00
-**Source fingerprint:** `1b676ee3bee3a4b6e27dbb0ceae1ecb6d0979a8ee14703ccc900e16b0fa6a74e`
+**Source commit:** `30dfa4b7f27db68770875f6f6ddb47bafb669f72`
+**Generation time:** 2026-08-20T23:02:29-04:00
+**Source fingerprint:** `db7bb6e1b08081b7cb139f250ae71b39e7cde80e0237d1aa46c7f9fc4fd639d1`
 
 ## application
 
@@ -22,6 +22,7 @@
 - [Jamie and a collaborator inside KC Town Hall](../assets/photographs/kc-town-hall-stewardship-interior.md) - `asset.photo.kc-town-hall.stewardship-interior.001`
 - [Jamie with a civic field kit at New York City Council](../assets/photographs/nyc-council-field-kit-2026.md) - `asset.photo.nyc-council.field-kit.2026.001`
 - [DCLA listening room, January 2017](../assets/photographs/nycac-dcla-listening-room-2017.md) - `asset.photo.nycac-dcla-listening-room.2017.001`
+- [NYC Artist Coalition collective-synthesis field, 2017](../assets/photographs/nycac-collective-synthesis-2017.md) - `asset.photo.nycac.collective-synthesis.2017.001`
 - [Save NYC Spaces town hall at Market Hotel, 2017](../assets/photographs/nycac-market-hotel-town-hall-2017.md) - `asset.photo.nycac.market-hotel-town-hall.2017.001`
 - [Shoestring Press advocacy coordination, 2017](../assets/photographs/nycac-shoestring-facilitation-2017.md) - `asset.photo.nycac.shoestring-facilitation.2017.001`
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb`
@@ -321,7 +322,7 @@
 - [East River photographic knowledge-loop tutorial](../workflows/photography-east-river-canary.md) - `method.photography-east-river-canary`
 - [Projects as a Recomposable Civic-Cultural System](../methods/recomposable-civic-cultural-systems.md) - `method.recomposable-civic-cultural-systems`
 - [Situated source rereading](../methods/situated-source-rereading.md) - `method.situated-source-rereading`
-- [Source-Backed Team Memory](../methods/source-backed-team-memory.md) - `method.source-backed-team-memory`
+- [Knowledge Wiki Graph / Source-Backed Team Memory](../methods/source-backed-team-memory.md) - `method.source-backed-team-memory`
 - [Structure grows from the material](../methods/structure-grows-from-the-material.md) - `method.structure-grows-from-material`
 - [Sunday Dinner, WOW List, and NYC Artist Coalition Synergy](../methods/sunday-dinner-wowlist-nycac-synergy.md) - `method.sunday-dinner-wowlist-nycac-synergy`
 - [What Is at Stake for Me](../methods/what-is-at-stake-for-me.md) - `method.what-is-at-stake-for-me`
@@ -401,6 +402,7 @@
 - [KC Town Hall roof-work occurrence](../projections/photography/kc-town-hall-roof-work.md) - `projection.photo.kc-town-hall.roof-work`
 - [Layout C homepage East River occurrence](../projections/photography/layout-c-home-east-river.md) - `projection.photo.layout-c.home.east-river`
 - [Sunday Dinner shared-map occurrence](../projections/photography/sunday-dinner-shared-map.md) - `projection.photo.sunday-dinner.shared-map`
+- [Team-knowledge collective-synthesis occurrence](../projections/photography/team-knowledge-collective-synthesis.md) - `projection.photo.team-knowledge.collective-synthesis`
 - [Fair Rent case-study participation sequence](../projections/photography/fair-rent-participation-sequence-2026-08.md) - `projection.visual.fair-rent.participation-sequence.2026-08`
 
 ## research-inquiry
@@ -505,6 +507,7 @@
 - [East River photograph public-safe metadata summary](../sources/photo-metadata/east-river-2022-public-safe.md) - `source.photo-metadata.east-river.2022.public-safe`
 - [NYC Artist Coalition participation-sequence public-safe metadata](../sources/photo-metadata/nycac-participation-sequence-2026-public-safe.md) - `source.photo-metadata.nycac-participation-sequence.2026-08-13`
 - [Public-safe metadata capsule for the August 2026 project-cover images](../sources/photo-metadata/portfolio-cover-images-2026-public-safe.md) - `source.photo-metadata.portfolio-cover-images.2026.public-safe`
+- [Team-knowledge collective-synthesis photograph public-safe metadata](../sources/photo-metadata/team-knowledge-collective-synthesis-2026-public-safe.md) - `source.photo-metadata.team-knowledge-collective-synthesis.2026.public-safe`
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`
 - [Professional record governed photo field](../sources/photo-metadata/professional-record-photo-field-2026-08.md) - `source.professional-record.photo-field.2026-08`
 - [Governed professional-record research comparison, August 2026](../sources/archives/professional-record-research-2026-08.md) - `source.professional-record.research.2026-08`

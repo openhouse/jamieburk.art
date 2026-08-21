@@ -1,11 +1,12 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Replace unsupported individual photo credits with project courtesy credits
 
-**Source commit:** `c87a028e18150178bd4948a0fde50e17883f4716`
-**Generation time:** 2026-08-20T18:29:18-04:00
-**Source fingerprint:** `1b676ee3bee3a4b6e27dbb0ceae1ecb6d0979a8ee14703ccc900e16b0fa6a74e`
+**Source commit:** `30dfa4b7f27db68770875f6f6ddb47bafb669f72`
+**Generation time:** 2026-08-20T23:02:29-04:00
+**Source fingerprint:** `db7bb6e1b08081b7cb139f250ae71b39e7cde80e0237d1aa46c7f9fc4fd639d1`
 
 - [KC Town Hall roof work, 2019](../../assets/photographs/kc-town-hall-roof-work-2019.md) - `related_to` (frontmatter)
+- [NYC Artist Coalition collective-synthesis field, 2017](../../assets/photographs/nycac-collective-synthesis-2017.md) - `related_to` (frontmatter)
 - [Save NYC Spaces town hall at Market Hotel, 2017](../../assets/photographs/nycac-market-hotel-town-hall-2017.md) - `related_to` (frontmatter)
 - [Shoestring Press advocacy coordination, 2017](../../assets/photographs/nycac-shoestring-facilitation-2017.md) - `related_to` (frontmatter)
 - [Sunday Dinner shared map and table, 2013](../../assets/photographs/sunday-dinner-shared-map-2013.md) - `related_to` (frontmatter)

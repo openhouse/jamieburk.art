@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-20T18:29:18-04:00",
-  "sourceCommit": "c87a028e18150178bd4948a0fde50e17883f4716",
-  "sourceFingerprint": "1b676ee3bee3a4b6e27dbb0ceae1ecb6d0979a8ee14703ccc900e16b0fa6a74e",
+  "generatedAt": "2026-08-20T23:02:29-04:00",
+  "sourceCommit": "30dfa4b7f27db68770875f6f6ddb47bafb669f72",
+  "sourceFingerprint": "db7bb6e1b08081b7cb139f250ae71b39e7cde80e0237d1aa46c7f9fc4fd639d1",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -160,6 +160,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-09-26"
+    },
+    {
+      "id": "asset.photo.nycac.collective-synthesis.2017.001",
+      "path": "docs/knowledge-bank/assets/photographs/nycac-collective-synthesis-2017.md",
+      "title": "NYC Artist Coalition collective-synthesis field, 2017",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Selected portfolio photograph showing handwritten cards arranged into a shared field during an NYC Artist Coalition steering-group session.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "asset.photo.nycac.market-hotel-town-hall.2017.001",
@@ -3771,14 +3784,14 @@
     {
       "id": "method.source-backed-team-memory",
       "path": "docs/knowledge-bank/methods/source-backed-team-memory.md",
-      "title": "Source-Backed Team Memory",
+      "title": "Knowledge Wiki Graph / Source-Backed Team Memory",
       "kind": "method",
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "A governed workflow for turning scattered records into traceable decisions, bounded claims, open questions, and reusable handoffs.\n",
+      "summary": "A federated, governed practice for connecting project meaning, evidence, source custody, evaluations, human review, and audience-specific projections.\n",
       "aliases": [],
-      "lastReviewed": "2026-08-10",
+      "lastReviewed": "2026-08-20",
       "reviewBy": "2027-01-18"
     },
     {
@@ -4565,6 +4578,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-20",
       "reviewBy": "2027-02-14"
+    },
+    {
+      "id": "projection.photo.team-knowledge.collective-synthesis",
+      "path": "docs/knowledge-bank/projections/photography/team-knowledge-collective-synthesis.md",
+      "title": "Team-knowledge collective-synthesis occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact public occurrence binding the collective-synthesis derivative to the Knowledge Wiki Graph lab entry.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "projection.visual.fair-rent.participation-sequence.2026-08",
@@ -5733,7 +5759,7 @@
       "sensitivity": "moderate",
       "summary": "Public-safe capsule recording Jamie Burkart's destination-bound authorization to select and publish photographs from the designated Apple Photos portfolio album without exposing album identifiers or private metadata.",
       "aliases": [],
-      "lastReviewed": "2026-08-14",
+      "lastReviewed": "2026-08-20",
       "reviewBy": "2027-02-14"
     },
     {
@@ -5746,7 +5772,7 @@
       "sensitivity": "moderate",
       "summary": "Public-safe capsule recording Jamie Burkart's direct authorization to publish members of the exact Apple Photos content set underlying the August 2026 photo-select job on his professional portfolio.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
+      "lastReviewed": "2026-08-20",
       "reviewBy": "2027-02-13"
     },
     {
@@ -5800,6 +5826,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-20",
       "reviewBy": "2027-02-14"
+    },
+    {
+      "id": "source.photo-metadata.team-knowledge-collective-synthesis.2026.public-safe",
+      "path": "docs/knowledge-bank/sources/photo-metadata/team-knowledge-collective-synthesis-2026-public-safe.md",
+      "title": "Team-knowledge collective-synthesis photograph public-safe metadata",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe result of joining the selected photo-select occurrence to the exact source asset in Jamie's cleared Apple Photos portfolio set.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "source.politico.callnyc.2016-03-14",
@@ -6506,6 +6545,46 @@
       "to": "source.nycac.dcla-formation-source-return.2026-07",
       "source": "frontmatter",
       "href": "../../sources/archives/nycac-dcla-formation-source-return-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac.collective-synthesis.2017.001",
+      "type": "projected_to",
+      "to": "projection.photo.team-knowledge.collective-synthesis",
+      "source": "frontmatter",
+      "href": "../../projections/photography/team-knowledge-collective-synthesis.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac.collective-synthesis.2017.001",
+      "type": "related_to",
+      "to": "correction.photo.project-courtesy-credits.2026-08-20",
+      "source": "frontmatter",
+      "href": "../../corrections/project-photo-credits-2026-08-20.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac.collective-synthesis.2017.001",
+      "type": "related_to",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac.collective-synthesis.2017.001",
+      "type": "uses_source",
+      "to": "source.permission.jamie.photo-select-portfolio.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/photo-select-album-portfolio-2026-08-13.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac.collective-synthesis.2017.001",
+      "type": "uses_source",
+      "to": "source.photo-metadata.team-knowledge-collective-synthesis.2026.public-safe",
+      "source": "frontmatter",
+      "href": "../../sources/photo-metadata/team-knowledge-collective-synthesis-2026-public-safe.md",
       "context": null
     },
     {
@@ -15244,6 +15323,22 @@
     },
     {
       "from": "method.source-backed-team-memory",
+      "type": "projected_to",
+      "to": "projection.photo.team-knowledge.collective-synthesis",
+      "source": "frontmatter",
+      "href": "../projections/photography/team-knowledge-collective-synthesis.md",
+      "context": null
+    },
+    {
+      "from": "method.source-backed-team-memory",
+      "type": "related_to",
+      "to": "asset.photo.nycac.collective-synthesis.2017.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/nycac-collective-synthesis-2017.md",
+      "context": null
+    },
+    {
+      "from": "method.source-backed-team-memory",
       "type": "related_to",
       "to": "capability.technical-operations",
       "source": "frontmatter",
@@ -17359,6 +17454,38 @@
       "context": null
     },
     {
+      "from": "projection.photo.team-knowledge.collective-synthesis",
+      "type": "related_to",
+      "to": "edition.launch.2026-08",
+      "source": "frontmatter",
+      "href": "edition-launch-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.team-knowledge.collective-synthesis",
+      "type": "related_to",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.team-knowledge.collective-synthesis",
+      "type": "uses_source",
+      "to": "asset.photo.nycac.collective-synthesis.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-collective-synthesis-2017.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.team-knowledge.collective-synthesis",
+      "type": "uses_source",
+      "to": "source.permission.jamie.photo-select-portfolio.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/photo-select-album-portfolio-2026-08-13.md",
+      "context": null
+    },
+    {
       "from": "projection.visual.fair-rent.participation-sequence.2026-08",
       "type": "related_to",
       "to": "decision.photo.fair-rent-participation-sequence.2026-08-13",
@@ -18825,6 +18952,14 @@
     {
       "from": "source.permission.jamie-portfolio-album.2026-08-13",
       "type": "related_to",
+      "to": "asset.photo.nycac.collective-synthesis.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-collective-synthesis-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.permission.jamie-portfolio-album.2026-08-13",
+      "type": "related_to",
       "to": "asset.photo.nycac.market-hotel-town-hall.2017.001",
       "source": "frontmatter",
       "href": "../../assets/photographs/nycac-market-hotel-town-hall-2017.md",
@@ -18844,6 +18979,14 @@
       "to": "asset.photo.sunday-dinner.shared-map.2013.001",
       "source": "frontmatter",
       "href": "../../assets/photographs/sunday-dinner-shared-map-2013.md",
+      "context": null
+    },
+    {
+      "from": "source.permission.jamie.photo-select-portfolio.2026-08-13",
+      "type": "related_to",
+      "to": "asset.photo.nycac.collective-synthesis.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-collective-synthesis-2017.md",
       "context": null
     },
     {
@@ -18924,6 +19067,22 @@
       "to": "source.permission.jamie-portfolio-album.2026-08-13",
       "source": "frontmatter",
       "href": "../permissions/jamie-portfolio-album-2026-08-13.md",
+      "context": null
+    },
+    {
+      "from": "source.photo-metadata.team-knowledge-collective-synthesis.2026.public-safe",
+      "type": "related_to",
+      "to": "asset.photo.nycac.collective-synthesis.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-collective-synthesis-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.photo-metadata.team-knowledge-collective-synthesis.2026.public-safe",
+      "type": "uses_source",
+      "to": "source.permission.jamie.photo-select-portfolio.2026-08-13",
+      "source": "frontmatter",
+      "href": "../permissions/photo-select-album-portfolio-2026-08-13.md",
       "context": null
     },
     {
@@ -22429,10 +22588,19 @@
     {
       "fromPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
       "from": "method.source-backed-team-memory",
+      "toPath": "docs/knowledge-bank/projections/photography/team-knowledge-collective-synthesis.md",
+      "to": "projection.photo.team-knowledge.collective-synthesis",
+      "fragment": null,
+      "line": 22,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
+      "from": "method.source-backed-team-memory",
       "toPath": "docs/knowledge-bank/capabilities/technical-operations.md",
       "to": "capability.technical-operations",
       "fragment": null,
-      "line": 18,
+      "line": 56,
       "kind": "link"
     },
     {

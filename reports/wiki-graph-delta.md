@@ -1,21 +1,22 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `c87a028e18150178bd4948a0fde50e17883f4716`
-**Generation time:** 2026-08-20T18:29:18-04:00
-**Source fingerprint:** `1b676ee3bee3a4b6e27dbb0ceae1ecb6d0979a8ee14703ccc900e16b0fa6a74e`
+**Source commit:** `30dfa4b7f27db68770875f6f6ddb47bafb669f72`
+**Generation time:** 2026-08-20T23:02:29-04:00
+**Source fingerprint:** `db7bb6e1b08081b7cb139f250ae71b39e7cde80e0237d1aa46c7f9fc4fd639d1`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 63
+- Nodes added: 66
 - Nodes removed: 34
-- Edges added: 214
+- Edges added: 229
 - Edges removed: 180
 - New type-aware orphans: 0
 - Current rights-review records: 186
 
 ## Added nodes
 
+- `asset.photo.nycac.collective-synthesis.2017.001`
 - `asset.photo.nycac.market-hotel-town-hall.2017.001`
 - `asset.photo.nycac.shoestring-facilitation.2017.001`
 - `asset.screenshot.let-nyc-dance.public-surface.2026-08-13`
@@ -45,6 +46,7 @@ Compared with the graph artifact on `origin/develop`.
 - `person.sophie-sharps`
 - `person.terence-dougherty`
 - `projection.photo.home-og.east-river`
+- `projection.photo.team-knowledge.collective-synthesis`
 - `projection.visual.fair-rent.participation-sequence.2026-08`
 - `research-run.restored-project-sites.2026-08-14`
 - `research.nycac-crs-30-day-close-reading.2026-08-13`
@@ -73,6 +75,7 @@ Compared with the graph artifact on `origin/develop`.
 - `source.permission.jamie.photo-select-portfolio.2026-08-13`
 - `source.permission.jamie.public-site-captures.2026-08-13`
 - `source.photo-metadata.nycac-participation-sequence.2026-08-13`
+- `source.photo-metadata.team-knowledge-collective-synthesis.2026.public-safe`
 - `source.sbu.empty-storefronts-high-rents.2026`
 - `source.social.chiosse-emily.small-business-rent-reel.2026-08-05`
 - `source.social.nycartc.cultural-space-story.2026-08-15`

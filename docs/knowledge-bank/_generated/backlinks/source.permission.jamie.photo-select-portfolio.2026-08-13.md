@@ -1,10 +1,13 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Photo-select source-album portfolio publication authorization
 
-**Source commit:** `c87a028e18150178bd4948a0fde50e17883f4716`
-**Generation time:** 2026-08-20T18:29:18-04:00
-**Source fingerprint:** `1b676ee3bee3a4b6e27dbb0ceae1ecb6d0979a8ee14703ccc900e16b0fa6a74e`
+**Source commit:** `30dfa4b7f27db68770875f6f6ddb47bafb669f72`
+**Generation time:** 2026-08-20T23:02:29-04:00
+**Source fingerprint:** `db7bb6e1b08081b7cb139f250ae71b39e7cde80e0237d1aa46c7f9fc4fd639d1`
 
+- [NYC Artist Coalition collective-synthesis field, 2017](../../assets/photographs/nycac-collective-synthesis-2017.md) - `uses_source` (frontmatter)
 - [Save NYC Spaces town hall at Market Hotel, 2017](../../assets/photographs/nycac-market-hotel-town-hall-2017.md) - `uses_source` (frontmatter)
 - [Shoestring Press advocacy coordination, 2017](../../assets/photographs/nycac-shoestring-facilitation-2017.md) - `uses_source` (frontmatter)
+- [Team-knowledge collective-synthesis occurrence](../../projections/photography/team-knowledge-collective-synthesis.md) - `uses_source` (frontmatter)
 - [Fair Rent case-study participation sequence](../../projections/photography/fair-rent-participation-sequence-2026-08.md) - `uses_source` (frontmatter)
+- [Team-knowledge collective-synthesis photograph public-safe metadata](../../sources/photo-metadata/team-knowledge-collective-synthesis-2026-public-safe.md) - `uses_source` (frontmatter)
