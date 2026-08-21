@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity requirement coverage
 
-**Wiki fingerprint:** `330cafd45abd053b87e564436eeabc9e50f4f06fb43cb44b7fb24dc6fd9f9d9b`
+**Wiki fingerprint:** `1c923e546cb66e3eac2c22d16194adfbbb465e4019d8d09756aa6b96b93c2a14`
 
 Statuses preserve the difference between visible proof, Wiki-only proof, source work, experience gaps, and hard screens.
 
@@ -205,6 +205,14 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 | `requirement.permitflow.product-data` | critical | visible-weak | experience | Test present SQL and analytics fluency; do not imply tools Jamie cannot demonstrate. |
 | `requirement.permitflow.cross-functional-launch` | critical | visible-qualified | wording | Prepare one cross-functional launch sequence with actors and decisions. |
 | `requirement.permitflow.ai-automation` | important | visible-proven | none | Demonstrate the bounded workflow, not a generic enthusiasm claim. |
+
+## Polimorphic - Product Manager (First Product Hire)
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.polimorphic-product-manager.discovery` | critical | visible-qualified | wording | Prepare one concise discovery-to-delivery story with the user, decision, artifact, and outcome. |
+| `requirement.polimorphic-product-manager.delivery` | critical | visible-proven | none | Lead with a concrete operating cadence that linked priorities, implementation, testing, and release. |
+| `requirement.polimorphic-product-manager.technical` | critical | visible-qualified | retrieval | Prepare one technically specific example of debugging, acceptance criteria, verification, and release. |
 
 ## Protected source-backed team-memory consulting lead
 

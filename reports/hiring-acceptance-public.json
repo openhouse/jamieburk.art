@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "runId": "hiring-public-6bef1f53ef50",
-  "generatedAt": "2026-08-20T22:46:48-04:00",
-  "candidateSha": "6bef1f53ef501c8ec133afbfbc60440ce60ecbdd",
+  "runId": "hiring-public-c9c06f4b4bfe",
+  "generatedAt": "2026-08-21T16:23:24-04:00",
+  "candidateSha": "c9c06f4b4bfe53a1b7dd50472ea4a260e3bd3b68",
   "candidatePathsClean": true,
-  "portfolioSnapshotHash": "8076fcb2eacbd83c0dbf2c568c5dd00752bc77736bb99943a78ee4aaee037393",
-  "roleContextHash": "7dc29c8c0f990b04b9b284e81c8cd39d31c0ced9cae1fea65d972a9bb8a02b9d",
-  "readerContextHash": "14aa3829d14fbf5183da78bf40051cf6c7db6f3ac223dc3f69fc7ccdce505ee1",
+  "portfolioSnapshotHash": "727d831398acfb178574658ec0f8de84bddb209ac3ab62066f8b70d09c6c5e2b",
+  "roleContextHash": "79fda2bae7358619a15aabc7a7a55f670787af216f73963205fdc76bc554b9d8",
+  "readerContextHash": "37f9fc4598fa3864aef3f19afabbcab9bccb21d54f92b2d16c743db8606331e7",
   "candidateContextHash": "6251a2430d0a133ce9e511ad76dc9b415bed1a77e10e8b29e81a73d3ad301523",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
   "publicSafety": {
@@ -93,6 +93,50 @@
         "Do not infer application status or organizational preference."
       ],
       "disclaimer": "Simulated generic reader, not an actual hiring decision."
+    },
+    {
+      "id": "reader.kyle-arjun-patel",
+      "displayName": "Kyle Arjun Patel",
+      "mode": "named-public-organization-context",
+      "category": "posting-named-direct-manager",
+      "publicSources": [
+        "https://app.trinethire.com/companies/381666-polimorphic/jobs/123173-product-manager",
+        "https://www.polimorphic.com/about"
+      ],
+      "priorities": [
+        "technically credible product decisions",
+        "clear translation from customer needs to engineering work",
+        "release quality and product-delivery operations",
+        "first-product-hire ownership without unnecessary process",
+        "useful collaboration with founders and local-government customers"
+      ],
+      "prohibitedAssumptions": [
+        "Do not infer Kyle Arjun Patel's private opinion, participation, endorsement, or hiring decision.",
+        "Do not treat thematic civic fit as proof of the requested product-management and technical depth."
+      ],
+      "disclaimer": "Simulated fictionalized analytical lens based on public organizational context, not actual participation, opinion, endorsement, or hiring decision."
+    },
+    {
+      "id": "reader.parth-shah",
+      "displayName": "Parth Shah",
+      "mode": "named-public-organization-context",
+      "category": "senior-vision-owner",
+      "publicSources": [
+        "https://app.trinethire.com/companies/381666-polimorphic/jobs/123173-product-manager",
+        "https://www.polimorphic.com/about"
+      ],
+      "priorities": [
+        "durable public-service value for local-government customers",
+        "first-product-hire ownership and founder partnership",
+        "credible customer discovery and go-to-market learning",
+        "disciplined prioritization in an early-stage company",
+        "measurable progress without losing resident and staff realities"
+      ],
+      "prohibitedAssumptions": [
+        "Do not infer Parth Shah's private opinion, participation, endorsement, or hiring decision.",
+        "Do not treat mission alignment as sufficient evidence of early-stage product execution."
+      ],
+      "disclaimer": "Simulated fictionalized analytical lens based on public organizational context, not actual participation, opinion, endorsement, or hiring decision."
     },
     {
       "id": "reader.deirdre-schifeling",
@@ -416,6 +460,73 @@
     }
   ],
   "opportunities": [
+    {
+      "id": "opportunity.polimorphic.product-manager.123173",
+      "title": "Polimorphic - Product Manager (First Product Hire)",
+      "reportingContext": {
+        "direct_manager_title": "Chief Technology Officer",
+        "direct_manager_person": "Kyle Arjun Patel",
+        "direct_manager_public_status": "named-in-posting",
+        "senior_vision_owner": "Parth Shah",
+        "senior_vision_owner_title": "Cofounder and Chief Executive Officer",
+        "senior_vision_basis": "The official posting names the CTO reporting line and links the CEO and CTO as company leadership.",
+        "verified_at": "2026-08-21T00:00:00.000Z"
+      },
+      "roleContextHash": "7b85da3e6bca0d39d338fca8e1ea4f33419220681fd3dc78e5f4b23997a4c7ae",
+      "live": true,
+      "fresh": true,
+      "hardScreenBlocked": false,
+      "decision": "deterministic-ready-for-human-review",
+      "observed": 3,
+      "requirementTotal": 3,
+      "criticalObserved": 3,
+      "criticalTotal": 3,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.polimorphic-product-manager.discovery",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/wowlist",
+            "/work/callnyc"
+          ],
+          "evidenceNeedles": [
+            "community",
+            "public"
+          ]
+        },
+        {
+          "requirementId": "requirement.polimorphic-product-manager.delivery",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [
+            "/work/technical-operations",
+            "/work/harry-j-epstein"
+          ],
+          "evidenceNeedles": [
+            "delivery",
+            "operations"
+          ]
+        },
+        {
+          "requirementId": "requirement.polimorphic-product-manager.technical",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/lab/source-backed-team-memory"
+          ],
+          "evidenceNeedles": [
+            "human-correctable AI workflows"
+          ]
+        }
+      ]
+    },
     {
       "id": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
       "title": "ACLU - Senior Project Manager, National Campaigns",
@@ -1064,9 +1175,9 @@
       "fresh": false,
       "hardScreenBlocked": false,
       "decision": "not-live",
-      "observed": 2,
+      "observed": 1,
       "requirementTotal": 5,
-      "criticalObserved": 2,
+      "criticalObserved": 1,
       "criticalTotal": 4,
       "requirementCoverage": [
         {
@@ -1098,15 +1209,11 @@
         {
           "requirementId": "requirement.aclu.privacy-and-governance",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/lab/source-backed-team-memory"
-          ],
-          "evidenceNeedles": [
-            "Known, Open, and Protected"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.aclu.product-brief",

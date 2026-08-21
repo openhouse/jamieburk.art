@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Hiring acceptance Wiki gap resolution
 
-**Candidate commit:** `6bef1f53ef501c8ec133afbfbc60440ce60ecbdd`
-**Public report hash:** `16ccb3650c7148fb2224a938991e1d1a607b00b238c5b1859ca1332945399e9a`
-**Wiki fingerprint:** `330cafd45abd053b87e564436eeabc9e50f4f06fb43cb44b7fb24dc6fd9f9d9b`
+**Candidate commit:** `c9c06f4b4bfe53a1b7dd50472ea4a260e3bd3b68`
+**Public report hash:** `a231f4a765b1e19409a8a791dea7dd9ebde54987a046c0e11e687b3a5ecf6bb9`
+**Wiki fingerprint:** `1c923e546cb66e3eac2c22d16194adfbbb465e4019d8d09756aa6b96b93c2a14`
 
 The gap resolver runs after the public-only evaluator. It can identify Wiki evidence, but every public change remains human-reviewed.
 
@@ -20,6 +20,7 @@ The gap resolver runs after the public-only evaluator. It can identify Wiki evid
 - `requirement.oti-speed-product.data` - **true-experience-gap**; Prepare technical evidence for APIs, SQL, Postgres/PostGIS, open data, schemas, source governance, and production handoff without claiming enterprise scale that is not established.
 - `requirement.oti.government-hiring-and-procurement` - **visible-weak-evidence-gap**; Do not imply procurement authority; clarify adjacent government-process experience in the application.
 - `requirement.aclu.facilitation-without-authority` - **visible-weak-evidence-gap**; Name one bounded facilitation decision and its usable output.
+- `requirement.aclu.privacy-and-governance` - **role-context-or-evidence-unknown**; Keep the human-review and protected-source boundary explicit.
 - `requirement.aclu.product-brief` - **wiki-proven-not-projected**; Produce and human-review a redacted retrospective CallNYC product brief.
 - `requirement.aclu.do-not-build-judgment` - **source-needs-close-reading**; Revisit one bounded decision record; do not invent a do-not-build example.
 - `requirement.benepass.quantified-prioritization` - **visible-weak-evidence-gap**; Use only supported HJE figures and explain the decision they informed.

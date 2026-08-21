@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "candidateSha": "6bef1f53ef501c8ec133afbfbc60440ce60ecbdd",
-  "portfolioSnapshotHash": "8076fcb2eacbd83c0dbf2c568c5dd00752bc77736bb99943a78ee4aaee037393",
-  "publicReportHash": "16ccb3650c7148fb2224a938991e1d1a607b00b238c5b1859ca1332945399e9a",
-  "wikiSourceFingerprint": "330cafd45abd053b87e564436eeabc9e50f4f06fb43cb44b7fb24dc6fd9f9d9b",
+  "candidateSha": "c9c06f4b4bfe53a1b7dd50472ea4a260e3bd3b68",
+  "portfolioSnapshotHash": "727d831398acfb178574658ec0f8de84bddb209ac3ab62066f8b70d09c6c5e2b",
+  "publicReportHash": "a231f4a765b1e19409a8a791dea7dd9ebde54987a046c0e11e687b3a5ecf6bb9",
+  "wikiSourceFingerprint": "1c923e546cb66e3eac2c22d16194adfbbb465e4019d8d09756aa6b96b93c2a14",
   "findings": [
     {
       "findingId": "finding.requirement.aclu-national-campaigns.budget-administration",
@@ -159,6 +159,20 @@
       "currentStatus": "visible-weak",
       "gapType": "public-projection",
       "smallestResponsibleChange": "Name one bounded facilitation decision and its usable output.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.aclu.privacy-and-governance",
+      "opportunityId": "opportunity.aclu.product-manager-discovery.8482872002",
+      "requirementId": "requirement.aclu.privacy-and-governance",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "none",
+      "smallestResponsibleChange": "Keep the human-review and protected-source boundary explicit.",
       "requiresOriginalSourceReview": false,
       "requiresHumanApproval": true
     },

@@ -1,11 +1,12 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity discovery recall
 
-**Wiki fingerprint:** `330cafd45abd053b87e564436eeabc9e50f4f06fb43cb44b7fb24dc6fd9f9d9b`
+**Wiki fingerprint:** `1c923e546cb66e3eac2c22d16194adfbbb465e4019d8d09756aa6b96b93c2a14`
 **Overall:** PASS
 
 ## Title-blind queries
 
+- `query.local-government-first-product-hire`: PASS; top results `opportunity.polimorphic.product-manager.123173`, `opportunity.aclu.senior-project-manager-national-campaigns.8631854002`, `opportunity.asana.ai-implementation.8027437`
 - `query.advocacy-campaign-operations`: PASS; top results `opportunity.aclu.senior-project-manager-national-campaigns.8631854002`, `opportunity.asana.ai-implementation.8027437`, `opportunity.codepath.engineering-project-manager.5160542007`
 - `query.embedded-ai-operations`: PASS; top results `opportunity.codepath.senior-ai-operations-lead.5175813007`, `opportunity.aclu.senior-project-manager-national-campaigns.8631854002`, `opportunity.asana.ai-implementation.8027437`
 - `query.engineering-quality-delivery`: PASS; top results `opportunity.codepath.engineering-project-manager.5160542007`, `opportunity.aclu.senior-project-manager-national-campaigns.8631854002`, `opportunity.asana.ai-implementation.8027437`

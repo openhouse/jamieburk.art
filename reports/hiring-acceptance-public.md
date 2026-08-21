@@ -1,10 +1,10 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `6bef1f53ef501c8ec133afbfbc60440ce60ecbdd`
-**Portfolio snapshot:** `8076fcb2eacbd83c0dbf2c568c5dd00752bc77736bb99943a78ee4aaee037393`
-**Role-context hash:** `7dc29c8c0f990b04b9b284e81c8cd39d31c0ced9cae1fea65d972a9bb8a02b9d`
-**Reader-context hash:** `14aa3829d14fbf5183da78bf40051cf6c7db6f3ac223dc3f69fc7ccdce505ee1`
+**Candidate commit:** `c9c06f4b4bfe53a1b7dd50472ea4a260e3bd3b68`
+**Portfolio snapshot:** `727d831398acfb178574658ec0f8de84bddb209ac3ab62066f8b70d09c6c5e2b`
+**Role-context hash:** `79fda2bae7358619a15aabc7a7a55f670787af216f73963205fdc76bc554b9d8`
+**Reader-context hash:** `37f9fc4598fa3864aef3f19afabbcab9bccb21d54f92b2d16c743db8606331e7`
 **Candidate-context hash:** `6251a2430d0a133ce9e511ad76dc9b415bed1a77e10e8b29e81a73d3ad301523`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
 **Candidate paths clean:** yes
@@ -21,6 +21,19 @@
 - Exact residential address received by evaluator: no
 
 ## Opportunity results
+
+### Polimorphic - Product Manager (First Product Hire)
+
+- Deterministic disposition: `deterministic-ready-for-human-review`
+- Critical signals observed: 3/3
+- All signals observed: 3/3
+- Opportunity status live: yes
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
+
+- `requirement.polimorphic-product-manager.discovery`: **observed** on `/work/wowlist`, `/work/callnyc`
+- `requirement.polimorphic-product-manager.delivery`: **observed** on `/work/technical-operations`, `/work/harry-j-epstein`
+- `requirement.polimorphic-product-manager.technical`: **observed** on `/lab/source-backed-team-memory`
 
 ### ACLU - Senior Project Manager, National Campaigns
 
@@ -141,15 +154,15 @@
 ### ACLU - Product Manager II, Discovery
 
 - Deterministic disposition: `not-live`
-- Critical signals observed: 2/4
-- All signals observed: 2/5
+- Critical signals observed: 1/4
+- All signals observed: 1/5
 - Opportunity status live: no
 - Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
 - `requirement.aclu.discovery-and-synthesis`: **observed** on `/work/technical-operations`
 - `requirement.aclu.facilitation-without-authority`: **not observed** on `/work/fair-rent-nyc`
-- `requirement.aclu.privacy-and-governance`: **observed** on `/lab/source-backed-team-memory`
+- `requirement.aclu.privacy-and-governance`: **not observed**
 - `requirement.aclu.product-brief`: **not observed**
 - `requirement.aclu.do-not-build-judgment`: **not observed**
 
