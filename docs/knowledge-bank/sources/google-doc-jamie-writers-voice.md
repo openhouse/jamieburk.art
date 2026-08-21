@@ -44,7 +44,8 @@ editorial profile:
 - Begin with one concrete encounter, person, object, place, or practical
   problem.
 - Move from that encounter to the human stake and the hidden operating system.
-- Make one precise hinge distinction, then end with a usable possibility.
+- Make one precise distinction that changes how the problem is understood, then
+  end with a usable possibility.
 - Write as a witness-participant: inside the work, attentive to where personal
   authority ends, and proportionate about collective outcomes.
 - Keep the tone warm, precise, curious, protective, hopeful without naivete,

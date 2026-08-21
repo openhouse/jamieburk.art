@@ -7,8 +7,8 @@
   "sourceMarkdownPath": "resumes/2026-08-15/technical-project-manager-product-operations-implementation/Jamie-Burkart-Resume-Technical-Project-Manager.md",
   "sourceMarkdownSha256": "fcdbce3a62744c32bb6363bccd680807ed40fa8f3097b93946a123bc6cbca818",
   "pdfPath": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
-  "pdfSha256": "1fd9593258eb88f3850bd33fc37a0e06406a2f9720fd6cacfdd334dc2e7e7cb1",
-  "pdfSizeBytes": 95333,
+  "pdfSha256": "e77f583b69c1b69e7b71e4873cb07e4dc1c987b35a5b55cab13c4689b64cc623",
+  "pdfSizeBytes": 95310,
   "pageCount": 2,
   "pageSizePoints": [612, 792],
   "documentTitle": "Jamie Burkart ◍ Resume — Technical Project Manager — 2026-08-15",
@@ -78,7 +78,7 @@
     "status": "pass",
     "inspectedAt": "2026-08-20",
     "method": "Google Docs connector readback, HTML export, pdftohtml 25.11.0 XML extraction, and rendered-page inspection",
-    "pdfSha256": "1fd9593258eb88f3850bd33fc37a0e06406a2f9720fd6cacfdd334dc2e7e7cb1",
+    "pdfSha256": "e77f583b69c1b69e7b71e4873cb07e4dc1c987b35a5b55cab13c4689b64cc623",
     "requiredLabels": [
       "NYC Artist Coalition / FairRentNYC",
       "WOWList.org",
@@ -97,6 +97,17 @@
     "surroundingHeadingBold": true,
     "linkedTextUnderlined": false
   },
+  "listMarkerTypographyInspection": {
+    "status": "pass",
+    "inspectedAt": "2026-08-20",
+    "method": "Google Docs connector readback, pdftohtml 25.11.0 XML extraction, and rendered-page inspection",
+    "pdfSha256": "e77f583b69c1b69e7b71e4873cb07e4dc1c987b35a5b55cab13c4689b64cc623",
+    "listParagraphCount": 18,
+    "itemTextSizePoints": 10,
+    "markerSizePoints": 9,
+    "requiredDeltaPoints": 1,
+    "allListParagraphsMatched": true
+  },
   "hardGates": [
     "source-markdown-bound",
     "exact-pdf-bound",
@@ -109,6 +120,7 @@
     "forbidden-hyperlinks-absent",
     "public-positioning-and-chronology",
     "experience-heading-link-style",
+    "list-marker-typography",
     "complete-visual-inspection"
   ],
   "visualInspection": {
@@ -125,9 +137,9 @@
     }
   },
   "hillClimb": {
-    "baseline": "The public PDF still used internal governance vocabulary to qualify the WOWList ecosystem description.",
-    "candidate": "The public PDF now describes the 35+ city ecosystem footprint as a limited geographic activity signal while preserving every factual qualification and the established two-page layout.",
-    "boundedChange": "Replaced one adjective in the WOWList scale bullet, preserved the Palatino/Oswald/Karla layout and native project links, and added a deterministic public-language gate."
+    "baseline": "The public PDF's list markers used the same point size as the associated item text, giving punctuation and prose equal typographic weight.",
+    "candidate": "The exact public PDF now uses 9-point markers beside 10-point item text across all 18 list paragraphs while preserving the established two-page layout, links, and copy.",
+    "boundedChange": "Adjusted only native list-marker typography, preserved the Palatino/Oswald/Karla layout and project links, and added an exact-artifact deterministic gate."
   },
-  "boundary": "This gate verifies the exact public PDF, Markdown binding, generic positioning, chronology, structural safety, required native links, visually continuous experience-heading link styling, the public WOWList ecosystem-scale rule, explicitly forbidden links, and recorded all-page visual inspection. It is not an employer endorsement, application submission, or guarantee of interview or hire."
+  "boundary": "This gate verifies the exact public PDF, Markdown binding, generic positioning, chronology, structural safety, required native links, visually continuous experience-heading link styling, the one-point list-marker hierarchy, the public WOWList ecosystem-scale rule, explicitly forbidden links, and recorded all-page visual inspection. It is not an employer endorsement, application submission, or guarantee of interview or hire."
 }

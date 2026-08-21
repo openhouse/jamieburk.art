@@ -156,6 +156,37 @@ test("the public-safety gate rejects bound and bounded in public-facing prose", 
   }
 });
 
+test("the public-safety gate rejects hinge in public-facing prose", () => {
+  const mutationPath = path.join(
+    publicAssetDirectory,
+    "__public-language-hinge-mutation__.txt"
+  );
+  try {
+    writeFileSync(
+      mutationPath,
+      "This moment became the hinge between research and implementation.\n"
+    );
+    assert.throws(
+      () =>
+        execFileSync(
+          process.execPath,
+          [path.join(repoRoot, "scripts/check-public-safety.mjs")],
+          {
+            cwd: repoRoot,
+            encoding: "utf8",
+            stdio: ["ignore", "pipe", "pipe"]
+          }
+        ),
+      (error) =>
+        /public-facing prose uses internal vocabulary 'hinge'/.test(
+          error.stderr?.toString() ?? ""
+        )
+    );
+  } finally {
+    if (existsSync(mutationPath)) unlinkSync(mutationPath);
+  }
+});
+
 test("the public-safety gate rejects a corrected photographer credit", () => {
   const mutationPath = path.join(
     publicAssetDirectory,

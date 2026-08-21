@@ -10,12 +10,12 @@ review_by: 2026-10-26
 aliases:
   - "NYC DIY Spaces post Ghost Ship: Dept of Cultural Affairs Meeting"
 canonical_path: docs/knowledge-bank/events/nyc-diy-spaces-dcla-2017-01-27.md
-summary: Public-safe event record for the January 27, 2017 DCLA meeting that became a principal formation hinge for the continuing NYC Artist Coalition operating system.
+summary: Public-safe event record for the January 27, 2017 DCLA meeting that became a principal turning point in the formation of the continuing NYC Artist Coalition operating system.
 relations:
   - type: part_of
     target: project.nyc-artist-coalition
     href: ../projects/nyc-artist-coalition-2017.md
-    context: The meeting became a principal formation hinge for the coalition's shared identity and continuing work.
+    context: The meeting became a principal turning point in the formation of the coalition's shared identity and continuing work.
   - type: uses_source
     target: source.nycac.dcla-formation-source-return.2026-07
     href: ../sources/archives/nycac-dcla-formation-source-return-2026-07.md

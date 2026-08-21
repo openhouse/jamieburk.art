@@ -26,6 +26,9 @@ Two presentation rules apply to every version and every exported PDF:
 - A link inside an experience-section heading remains clickable but must match
   the surrounding heading's font, size, weight, color, and underline state. It
   must not become a visually blue or underlined interruption inside the title.
+- Every bullet, numeral, or other list marker is exactly one point smaller than
+  its associated item text in the native source and exported PDF. For example,
+  a 10-point item uses a 9-point marker.
 - WOWList is described publicly as organizer-led work active in 35+ city
   ecosystems. Database user and event-post counts remain governed historical
   evidence and do not appear on public surfaces, because organizer participation
@@ -86,4 +89,6 @@ closed when an opportunity is not live, its status review is stale, a reader
 profile is missing, the PDF is not bound to the exact Markdown, or the shared
 resume loses a required cross-opportunity signal. The public PDF gate also fails
 when an experience-heading link drifts from its surrounding style or when the
-WOWList ecosystem-scale projection regresses to user or event-post counts.
+WOWList ecosystem-scale projection regresses to user or event-post counts. It
+also fails when the recorded list-marker inspection does not prove the exact
+one-point typographic difference in the exact PDF under review.

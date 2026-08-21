@@ -3,7 +3,7 @@
 
 **Source commit:** `6bef1f53ef501c8ec133afbfbc60440ce60ecbdd`
 **Generation time:** 2026-08-20T22:46:48-04:00
-**Source fingerprint:** `0add9ec373456ae03c9bd1abc456fc603d6c9856ccb393395851280a3929292c`
+**Source fingerprint:** `330cafd45abd053b87e564436eeabc9e50f4f06fb43cb44b7fb24dc6fd9f9d9b`
 
 - [NYC Artist Coalition Office of Nightlife town hall at Market Hotel, 2017](../../assets/photographs/nycac-save-nyc-spaces-town-hall-2017.md) - `projected_to` (frontmatter)
 - [Replace unsupported and archive-facing project-photo credits](../../corrections/portfolio-project-photo-credits-2026-08-20.md) - `related_to` (frontmatter)

@@ -7,8 +7,8 @@
   "sourceMarkdownPath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
   "sourceMarkdownSha256": "853eecb6a163790298fb676b7f604ab8d096f1a7d9c77e1cba4c08de7aae90b3",
   "pdfPath": "output/pdf/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf",
-  "pdfSha256": "b0a30921456231b3d8992fadc7823f73739cbd425306b5baa7a4c38f755ceda9",
-  "pdfSizeBytes": 101683,
+  "pdfSha256": "e25145d38b0bb27b24b79198175b26cfe5a1623f54c16d97bb43da3161543f2e",
+  "pdfSizeBytes": 101633,
   "pageCount": 2,
   "pageSizePoints": [612, 792],
   "documentTitle": "Jamie Burkart ◍ Resume ◍ NYC OTI Senior Product Manager 782366 ◍ 2026-08-14",
@@ -44,6 +44,17 @@
     "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf",
     "https://kctownhall.com/"
   ],
+  "listMarkerTypographyInspection": {
+    "status": "pass",
+    "inspectedAt": "2026-08-20",
+    "method": "Google Docs connector readback, pdftohtml 25.11.0 XML extraction, and rendered-page inspection",
+    "pdfSha256": "e25145d38b0bb27b24b79198175b26cfe5a1623f54c16d97bb43da3161543f2e",
+    "listParagraphCount": 18,
+    "itemTextSizePoints": 10,
+    "markerSizePoints": 9,
+    "requiredDeltaPoints": 1,
+    "allListParagraphsMatched": true
+  },
   "hardGates": [
     "source-markdown-bound",
     "exact-pdf-bound",
@@ -52,6 +63,7 @@
     "tagged-google-docs-export",
     "safe-static-pdf",
     "native-hyperlinks",
+    "list-marker-typography",
     "complete-visual-inspection"
   ],
   "visualInspection": {
@@ -68,9 +80,9 @@
     }
   },
   "hillClimb": {
-    "baseline": "The stored OTI PDF retained an older WOWList scale sentence and no longer matched the maintained application source.",
-    "candidate": "The native Google Docs artifact now matches the maintained WOWList ecosystem framing, removes the obsolete database counts, and preserves the established two-page layout and links.",
-    "boundedChange": "Updated the exact application artifact and source digest without weakening factual, collective-credit, privacy, or consent boundaries."
+    "baseline": "The stored OTI PDF matched its maintained application source, but its list markers used the same point size as the associated item text.",
+    "candidate": "The exact application PDF now uses 9-point markers beside 10-point item text across all 18 list paragraphs while preserving the maintained content, links, and two-page layout.",
+    "boundedChange": "Adjusted only native list-marker typography and added exact-artifact evidence without weakening factual, collective-credit, privacy, or consent boundaries."
   },
-  "boundary": "This artifact gate verifies the exact PDF, source binding, structural safety, hyperlinks, and recorded all-page visual inspection. It is not an employer endorsement, civil-service eligibility decision, application submission, or guarantee of interview or hire."
+  "boundary": "This artifact gate verifies the exact PDF, source binding, structural safety, hyperlinks, the one-point list-marker hierarchy, and recorded all-page visual inspection. It is not an employer endorsement, civil-service eligibility decision, application submission, or guarantee of interview or hire."
 }

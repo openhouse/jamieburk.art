@@ -67,6 +67,21 @@ export function evaluateResumePdf({
       headingStyleInspection.surroundingHeadingBold === true &&
       headingStyleInspection.linkedTextUnderlined === false
     : null;
+  const listMarkerInspection = spec.listMarkerTypographyInspection;
+  const listMarkerTypographyPass =
+    listMarkerInspection?.status === "pass" &&
+      listMarkerInspection.pdfSha256 === sha256(pdf) &&
+      Number.isInteger(listMarkerInspection.listParagraphCount) &&
+      listMarkerInspection.listParagraphCount > 0 &&
+      Number.isFinite(listMarkerInspection.itemTextSizePoints) &&
+      Number.isFinite(listMarkerInspection.markerSizePoints) &&
+      listMarkerInspection.requiredDeltaPoints === 1 &&
+      Math.abs(
+        listMarkerInspection.itemTextSizePoints -
+          listMarkerInspection.markerSizePoints -
+          listMarkerInspection.requiredDeltaPoints
+      ) < 0.001 &&
+      listMarkerInspection.allListParagraphsMatched === true;
 
   const checks = [
     {
@@ -158,6 +173,12 @@ export function evaluateResumePdf({
           }
         ]
       : []),
+    {
+      id: "list-marker-typography",
+      pass: listMarkerTypographyPass,
+      detail:
+        "Every native list marker is exactly one point smaller than its associated item text in the exact inspected resume artifact."
+    },
     {
       id: "complete-visual-inspection",
       pass:

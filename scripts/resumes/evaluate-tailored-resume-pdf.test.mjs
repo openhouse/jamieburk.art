@@ -35,3 +35,25 @@ test("the visual record covers every page of the exact candidate", () => {
   assert.deepEqual(defaultSpec.visualInspection.pagesInspected, [1, 2]);
   assert.equal(result.checks.find((check) => check.id === "complete-visual-inspection")?.pass, true);
 });
+
+test("the PDF evaluator fails closed when list-marker evidence is missing", () => {
+  const { listMarkerTypographyInspection: _omitted, ...specWithoutInspection } =
+    defaultSpec;
+  specWithoutInspection.hardGates = [
+    ...defaultSpec.hardGates.slice(0, -1),
+    "list-marker-typography",
+    defaultSpec.hardGates.at(-1)
+  ];
+
+  const result = evaluateResumePdf({
+    spec: specWithoutInspection,
+    markdown,
+    pdf
+  });
+
+  assert.equal(
+    result.checks.find((check) => check.id === "list-marker-typography")?.pass,
+    false
+  );
+  assert.equal(result.overall, "fail");
+});

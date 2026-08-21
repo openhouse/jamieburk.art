@@ -260,6 +260,13 @@ for (const file of publicLanguageFiles) {
         index + 1
       );
     }
+    if (/\bhinge(?:s|d|ing)?\b/i.test(line)) {
+      addFailure(
+        file,
+        "public-facing prose uses internal vocabulary 'hinge'",
+        index + 1
+      );
+    }
   }
 }
 
@@ -305,6 +312,16 @@ if (existsSync(publicRegistryPath)) {
       sourceIndex >= 0 ? lineForMatch(registrySource, sourceIndex + match.index) : undefined
     );
   }
+  for (const value of renderedRegistryValues) {
+    const match = /\bhinge(?:s|d|ing)?\b/i.exec(value);
+    if (match?.index === undefined) continue;
+    const sourceIndex = registrySource.indexOf(value);
+    addFailure(
+      publicRegistryPath,
+      "public-facing prose uses internal vocabulary 'hinge'",
+      sourceIndex >= 0 ? lineForMatch(registrySource, sourceIndex + match.index) : undefined
+    );
+  }
 }
 
 if (existsSync(resumePath)) {
@@ -315,6 +332,14 @@ if (existsSync(resumePath)) {
       resumePath,
       "public-facing prose uses internal vocabulary 'bound' or 'bounded'",
       lineForMatch(resumeText, match.index)
+    );
+  }
+  const hingeMatch = /\bhinge(?:s|d|ing)?\b/i.exec(resumeText);
+  if (hingeMatch?.index !== undefined) {
+    addFailure(
+      resumePath,
+      "public-facing prose uses internal vocabulary 'hinge'",
+      lineForMatch(resumeText, hingeMatch.index)
     );
   }
 }

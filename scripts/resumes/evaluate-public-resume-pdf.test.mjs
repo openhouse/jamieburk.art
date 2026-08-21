@@ -197,3 +197,33 @@ test("the public gate requires exact-candidate evidence that linked experience h
     true
   );
 });
+
+test("the resume gate rejects list markers that are not one point smaller than their item text", () => {
+  const result = evaluateResumePdf({
+    spec: {
+      ...exactPublicSpec,
+      listMarkerTypographyInspection: {
+        status: "pass",
+        pdfSha256: sha256(publicPdf),
+        listParagraphCount: 18,
+        itemTextSizePoints: 10,
+        markerSizePoints: 10,
+        requiredDeltaPoints: 1,
+        allListParagraphsMatched: true
+      },
+      hardGates: [
+        ...exactPublicSpec.hardGates.slice(0, -1),
+        "list-marker-typography",
+        exactPublicSpec.hardGates.at(-1)
+      ]
+    },
+    markdown: publicMarkdown,
+    pdf: publicPdf
+  });
+
+  assert.equal(
+    result.checks.find((check) => check.id === "list-marker-typography")?.pass,
+    false
+  );
+  assert.equal(result.overall, "fail");
+});
