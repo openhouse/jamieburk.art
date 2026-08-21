@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "captureProtocol": "headless-browser-public-render-with-screenshot-v2",
+  "capturedAt": "2026-08-21T14:08:04.662Z",
+  "localOrigin": "http://127.0.0.1:3017",
+  "startRoute": "/lab/source-backed-team-memory",
+  "routeChain": [
+    "/lab/source-backed-team-memory",
+    "/resume",
+    "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+  ],
+  "repositoryAccess": false,
+  "sourceCodeAccess": false,
+  "navigationRule": "Begin at the team-memory page and follow only discovered, same-origin public links.",
+  "linkDiscovery": {
+    "/lab/source-backed-team-memory": [
+      "/lab/source-backed-team-memory",
+      "/resume"
+    ],
+    "/resume": [
+      "/resume",
+      "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+    ]
+  },
+  "pages": [
+    {
+      "route": "/lab/source-backed-team-memory",
+      "status": 200,
+      "title": "Knowledge Wiki Graph - Jamie Burkart",
+      "h1": "Knowledge Wiki Graph",
+      "visibleText": "Skip to content JB Jamie Burkart Work Technical Operations About Resume Contact Menu Work Technical Operations About Resume Contact Lab / method Knowledge Wiki Graph Developing the Knowledge Wiki Graph: a working source-backed team-memory method connecting project meaning, supporting evidence, responsible source custody, evaluations, and human review. Working research and operating method within Jamie's project ecosystem. Not a finished production SaaS, client deployment, chatbot, surveillance system, AI replacement for judgment, or private archive browser. Proposed first engagement One approved source. One useful team-memory test. If product reasoning, decisions, open questions, or onboarding context are getting lost, I can help the team test a practical source-backed memory pattern without introducing a new platform or asking for broad system access. The need Make important context recoverable without flattening the team's thinking or creating a second bureaucracy. What I will deliver A knowledge-friction map, one source-linked memory artifact, a correction path, and a practical success signal. What you can decide At the end of a small paid discovery and prototype: continue, revise, or stop with a useful record of what the team learned. View Jamie's resume Discuss the first engagement A shared field of handwritten cards from an NYC Artist Coalition steering-group session, February 2017. Photo courtesy of NYC Artist Coalition. Method The Knowledge Wiki Graph is my current research and operating practice for turning a project's changing universe of materials into reviewable knowledge and audience-specific outputs. It grows from earlier Noting.us and Source-Backed Team Memory experiments. The system is active in how this portfolio is researched, evaluated, corrected, and composed; it is not presented as a client-deployed platform. I do not hear this as a need for more notes. I hear it as a need for operating memory. Operating memory helps a team understand what has been decided, why it was decided, what source material supports that understanding, what remains open, who holds which context, and what new collaborators need in order to join intelligently. Three Related Graphs Semantic graph Projects, people, decisions, requirements, claims, corrections, and open questions describe what the work means now. Evidence graph Sources, artifacts, observations, contradictions, and limitations show what supports, complicates, or corrects an interpretation. Source-custody graph / layer Exact materials, versions, access conditions, rights, and retention rules record where authoritative material lives and when it may be inspected or reused. Evaluations and human review govern movement between these structures. Passing a check does not grant permission to publish. A defensible claim may remain held from the portfolio because purpose, consent, credit, or audience is unresolved. Each project repository remains useful on its own. Shared identity connects related records across the ecosystem without merging ownership, claims, permission, or publication authority. What It Makes Possible A project can emerge from a living configuration of materials, sources, relationships, corrections, evaluation results, and human decisions. As that configuration changes, documentation, application materials, public claims, and portfolio pages can be updated together without pretending that every audience should see the same thing. What a First Engagement Tests A first engagement begins with one approved source surface: for example, a meeting transcript, decision memo, onboarding document, or representative source prepared for the test. Together, we identify what is getting lost, what must remain protected, and who needs to review the result. The first loop should: preserve useful ideas, decisions, open questions, onboarding context, and product reasoning without flattening them into a generic summary; connect the resulting memory to the source material from which it was derived; give the people who hold the context a practical way to review and correct the result; test whether new collaborators can get up to speed without repeatedly asking the team to reconstruct the past; and end with a clear continue, revise, or stop recommendation before anything larger is built. No broad access to company systems is needed for this first test. The source can be non-sensitive, redacted, synthetic, or already approved for the participants. The format should fit the team: a document, a wiki page, a small Markdown structure, or another surface people already know how to use. AI drafts. Humans review. The shared record remains inspectable and correctable. What Success Looks Like The test succeeds when a team can recover why a decision was made, see what remains open, find the source behind a statement, and know who can correct it. It should reduce repeated explanation without creating a second bureaucracy. The result remains useful only while people can contest it, repair it, and decide what belongs in the shared record. What It Is Not It is not a finished production SaaS, a chatbot, a surveillance system, a replacement for judgment, a legal, medical, or financial advice system, or a private archive browser. The point is not to automate trust. The point is to make context easier to review, correct, and transfer. Review Pattern The pattern is Known / Open / Protected. Known material is public-safe or source-backed. Open material needs review, correction, or more context. Protected material is intentionally withheld because privacy, consent, law, safety, or client trust requires it. Approved source -> structured record -> source-linked draft -> ideas / decisions / open questions -> trust / privacy check -> accepted team memory. AI drafts. Humans review. The shared record remains inspectable and correctable. Example Deliverables knowledge-friction map semantic, evidence, and source-custody maps source / workflow inventory decision-memory template meeting-memory template onboarding or \"how we know what we know\" starter page privacy, access, and retention notes 30-day continue / revise / stop recommendation Role Fit The work connects technical project management, product operations, documentation architecture, AI-readiness, human review, and source-backed memory. It is visible as a lab method and as the research architecture behind this portfolio, not as the lead homepage case study. Worked example One source enters; three review states remain visible This synthetic example shows the method without exposing a private archive. The system does not force disagreement into certainty. It preserves what is supported, what needs review, and what should stay outside the public record. Known A public project brief records the launch date, intended audience, and approved owner of a decision. Open Two meeting summaries describe adoption differently, so the shared record flags the discrepancy for review. Protected Private transcripts, contact details, and unapproved collaborator context remain outside the public memory. Concrete correction trace The public record changed the portfolio Earlier portfolio copy dated CallNYC to 2014-2015. A recovered Council hackathon announcement, the fuller CouncilStat data-release chronology, and contemporaneous Politico coverage placed the work in 2016. [ 2 ] [ 3 ] [ 4 ] The correction was applied to the work index, case study, and resume while the prior wording and reason remained visible in the Knowledge Wiki. Before 2014-2015 After 2016 Handoff One correction propagated to every public surface that carried the date. Public completion certificate. Professional development, not instructor affiliation or a claim that the lab is production SaaS. Evaluation practice Human review is part of the system Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain through Maven. [ 1 ] The coursework supports this lab's emphasis on error analysis, annotation, traces, retrieval quality, and reviewable failure modes. Sources and notes These notes preserve what each source supports and where its limits remain. See something that needs correction? Contact Jamie . View 4 source notes [ 1 ] Completion certificate for James Burkart, AI Evals for Engineers and PMs, taught by Hamel Husain and Shreya Shankar through Maven. Boundary: This source does not establish an evaluator license, instructor affiliation, employment by Maven, endorsement of Jamie's lab method . Return 1 [ 2 ] Civic Hall announcement of a January 30, 2016, 1-3 p.m. New York City Council hackathon focused on constituent services. Original post The archived Civic Hall page preserves the embedded social post. It is not a recovered Civic Hall calendar listing or event-detail page. Boundary: This source does not establish a recovered Civic Hall calendar listing, a dedicated event-detail page, the complete formal event title, the agenda, the participant roster . Return 1 [ 3 ] Miranda Neubauer, 'Website provides new information about council members' focus,' Politico New York, March 14, 2016. The reporting connects Jamie to the January event, the fuller data release, and his independent development and iteration of CallNYC. Boundary: This source does not establish CallNYC as an official Council product, CallNYC as a formal hackathon submission, CallNYC as a documented winner . Return 1 [ 4 ] Public CallNYC source repository. The repository documents the surviving implementation of the independent, archived prototype. Boundary: This source does not establish official Council ownership, formal hackathon submission status, current resident-service guidance . Return 1 View selected work Discuss a focused source-backed memory sprint Jamie Burkart Technical Project Manager - Product Operations & Implementation. Public-safe portfolio, civic notebook, and future living archive. Work Technical Operations Resume Contact Colophon",
+      "visibleTextSha256": "03aa5c1dcefd1c0702314dbcc16c6af9d1a2abd8ff480b67bcd921e8d7f1e033",
+      "discoveredAllowedLinks": [
+        "/lab/source-backed-team-memory",
+        "/resume"
+      ],
+      "screenshot": {
+        "filename": "team-memory-desktop.png",
+        "format": "png",
+        "width": 1440,
+        "height": 1200,
+        "bytes": 272577,
+        "sha256": "32272a1849c32ee05ffbb1cb556556edb3264cef4ff8cdef7b1a5f7407e5b20e"
+      }
+    },
+    {
+      "route": "/resume",
+      "status": 200,
+      "title": "Resume - Jamie Burkart",
+      "h1": "Resume",
+      "visibleText": "Skip to content JB Jamie Burkart Work Technical Operations About Resume Contact Menu Work Technical Operations About Resume Contact Resume Technical Project Manager - Product Operations & Implementation I create operating structure for complex public-facing teams, turning ambiguous work into requirements, workflows, documentation, decision trails, launch support, onboarding materials, and durable handoffs. Download resume PDF Contact Jamie This public resume is maintained for the current set of roles Jamie can truthfully pursue. A specific application may use a more narrowly tailored edition. Phone remains inside the approved resume artifact; email is available on the contact page. Selected impact 14+ years creating operating structure Jamie led long-running e-commerce and operations improvements for a legacy industrial business Jamie's e-commerce and operations improvements contributed to 2x revenue growth Jamie built and stewarded 30+ pages of campaign memory for shared decisions and next steps Jamie mapped legislative source lineage so collaborators could review bill changes Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York. Jamie was a founding member and organizer who implemented and maintained campaign websites Jamie built civic systems and coalition operations for NYC Artist Coalition Jamie co-built and operated WOWList for DIY arts and music organizers Jamie created participation systems supporting 300+ gatherings and 20+ resident artists Secured a $490,539 public funding award for KC Town Hall through a successful CCED proposal and presentation, then transitioned the project to a mission-aligned organization. Jamie completed AI Evals for Engineers & PMs in 2026 Jamie Burkart Technical Project Manager - Product Operations & Implementation. Public-safe portfolio, civic notebook, and future living archive. Work Technical Operations Resume Contact Colophon",
+      "visibleTextSha256": "6f640f79bab2cc973ce9975ecf7663050485fa32a9cd06875c1592f322aa1b79",
+      "discoveredAllowedLinks": [
+        "/resume",
+        "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+      ],
+      "screenshot": {
+        "filename": "resume-desktop.png",
+        "format": "png",
+        "width": 1440,
+        "height": 1200,
+        "bytes": 223169,
+        "sha256": "fa7bf0b524c127ede0901caffb6f53382e76a1747c17a120e9398c9d1093e76c"
+      }
+    }
+  ],
+  "resumeArtifact": {
+    "route": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 101275,
+    "sha256": "7ba9ad8fb4df1ecd9995684e1e9bab27f7fe828e68f45aba9f91354bb58251cc"
+  },
+  "publicSurfaceDigest": "2531b3fe37186dfde818715dfa45c4204c93878793b7943aea614d6adae732f9"
+}

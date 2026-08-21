@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "id": "team-memory-referral-hiring-2026-08-21",
+  "inputBoundary": {
+    "anonymizedArtifacts": [
+      "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/01-prospective-collaborator-perspective.md",
+      "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/03-prospective-collaborator-voice.md"
+    ],
+    "browserReceiptPath": "evals/team-memory-referral-hiring/runs/2026-08-21/local-public-browser-receipt.json",
+    "rawTranscriptAccess": false,
+    "repositoryAccess": false,
+    "participantIdentityAccess": false,
+    "companyIdentityAccess": false,
+    "privateCorrespondenceAccess": false,
+    "rule": "The advisory model receives only the two anonymized interpretation artifacts and browser-visible public surfaces reached from the team-memory page. It receives no source tree, raw call, private identity, company identity, correspondence, or protected locator."
+  },
+  "browser": {
+    "startRoute": "/lab/source-backed-team-memory",
+    "allowedRoutes": [
+      "/lab/source-backed-team-memory",
+      "/resume",
+      "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+    ],
+    "sameOriginPublicNavigationOnly": true,
+    "requireLinkDiscovery": true,
+    "publicRenderedSurfaceOnly": true,
+    "screenshotEvidenceRequired": true,
+    "sourceCodeAccess": false,
+    "resumeArtifactRequired": true
+  },
+  "scenario": {
+    "referrerRole": "fictionalized-referring-collaborator",
+    "decisionRoles": [
+      "fictionalized-product-executive-with-budget-authority",
+      "fictionalized-operations-or-people-authority"
+    ],
+    "engagement": "small paid discovery and prototype",
+    "sequence": [
+      "The referrer shares the team-memory page with hiring authorities using a synthetic referral note.",
+      "The authorities begin at that page, follow only visible same-origin public links, review the public resume, and discuss fit, risk, authority, and the first useful decision.",
+      "The authorities decide whether to hire Jamie for the small paid discovery and prototype.",
+      "The referrer relays the decision and concrete recommendations to Jamie."
+    ]
+  },
+  "deterministicCriteria": [
+    {
+      "id": "purchaseable-engagement",
+      "route": "/lab/source-backed-team-memory",
+      "needle": "small paid discovery and prototype"
+    },
+    {
+      "id": "approved-source",
+      "route": "/lab/source-backed-team-memory",
+      "needle": "One approved source. One useful team-memory test."
+    },
+    {
+      "id": "concrete-delivery",
+      "route": "/lab/source-backed-team-memory",
+      "needle": "What I will deliver"
+    },
+    {
+      "id": "decision-output",
+      "route": "/lab/source-backed-team-memory",
+      "needle": "What you can decide"
+    },
+    {
+      "id": "resume-discoverable",
+      "route": "/lab/source-backed-team-memory",
+      "needle": "View Jamie's resume"
+    },
+    {
+      "id": "public-resume-positioning",
+      "route": "/resume",
+      "needle": "Technical Project Manager - Product Operations & Implementation"
+    }
+  ],
+  "judges": [
+    {
+      "id": "fictionalized-referral-readiness",
+      "criterion": "The public proposal gives the fictionalized referrer enough concrete, truthful, needs-aligned evidence to recommend a small paid engagement without inventing adoption, authority, budget, or endorsement.",
+      "passDefinition": "Pass only if a concise synthetic referral note can name the need, Jamie's specific contribution, the low-risk first engagement, and why leadership should review the link.",
+      "failDefinition": "Fail if the referrer must explain the product for Jamie, invent outcomes or authority, or ask leadership to infer the first engagement.",
+      "outputSchema": {
+        "critique": "string",
+        "result": "pass | fail"
+      }
+    },
+    {
+      "id": "fictionalized-hiring-authority-decision",
+      "criterion": "Based on the restricted evidence packet, fictionalized hiring authorities would authorize Jamie for the small paid discovery and prototype because it answers the organization's stated need with a useful, proportionate, reviewable first step.",
+      "passDefinition": "Pass only if the authorities decide hire-for-paid-discovery, identify who must authorize budget and source access, and state why remaining questions belong in scoping rather than blocking the engagement.",
+      "failDefinition": "Fail if the need, deliverable, adoption path, risk, or Jamie's fit remains too unclear to authorize paid work.",
+      "outputSchema": {
+        "critique": "string",
+        "result": "pass | fail"
+      }
+    },
+    {
+      "id": "fictionalized-referrer-relay",
+      "criterion": "The fictionalized referrer relays the panel's decision and gives Jamie concise, needs-oriented recommendations that make the work faster to appreciate without imitating private speech or presenting a simulated message as real.",
+      "passDefinition": "Pass only if the relay states the decision, the decisive evidence, the remaining scoping questions, and concrete improvements to Jamie's self-presentation.",
+      "failDefinition": "Fail if the relay is vague, imitative, falsely attributed, or omits actionable recommendations.",
+      "outputSchema": {
+        "critique": "string",
+        "result": "pass | fail"
+      }
+    }
+  ],
+  "evaluator": {
+    "resultPath": "evals/team-memory-referral-hiring/runs/2026-08-21/fictionalized-referral-and-authority-decision.json",
+    "simulatedRealPersonLens": true,
+    "syntheticSpeechOnly": true,
+    "nonEndorsementBoundary": "This is a fictionalized, anonymized advisory simulation. It is not a quotation, message, participation, endorsement, recommendation, offer, authorization, or hiring decision by the real participant or any real company authority.",
+    "acceptanceDecision": "hire-for-paid-discovery"
+  },
+  "policy": {
+    "deterministicChecksBeforeLlm": true,
+    "stopOnDeterministicFailure": true,
+    "calibrationStatus": "uncalibrated-advisory-simulation",
+    "humanCalibrationPending": true,
+    "reason": "No participant-approved voice profile or human-labeled decision set exists. The role play is a demanding editorial and proposal-readiness test, not a predictor or record of a real hiring decision."
+  }
+}

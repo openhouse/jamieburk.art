@@ -54,6 +54,55 @@ export default function SourceBackedTeamMemoryPage() {
             private archive browser.
           </p>
         </div>
+        <section className="mt-10 border-y border-jb-ink/12 py-8">
+          <p className="text-sm font-semibold uppercase text-jb-blue">
+            Proposed first engagement
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold text-jb-ink">
+            One approved source. One useful team-memory test.
+          </h2>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-jb-ink/76">
+            If product reasoning, decisions, open questions, or onboarding
+            context are getting lost, I can help the team test a practical
+            source-backed memory pattern without introducing a new platform or
+            asking for broad system access.
+          </p>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            <div className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
+              <h3 className="text-xl font-semibold text-jb-blue">The need</h3>
+              <p className="mt-3 text-sm leading-6 text-jb-ink/74">
+                Make important context recoverable without flattening the
+                team&apos;s thinking or creating a second bureaucracy.
+              </p>
+            </div>
+            <div className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
+              <h3 className="text-xl font-semibold text-jb-blue">
+                What I will deliver
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-jb-ink/74">
+                A knowledge-friction map, one source-linked memory artifact,
+                a correction path, and a practical success signal.
+              </p>
+            </div>
+            <div className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
+              <h3 className="text-xl font-semibold text-jb-blue">
+                What you can decide
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-jb-ink/74">
+                At the end of a small paid discovery and prototype: continue,
+                revise, or stop with a useful record of what the team learned.
+              </p>
+            </div>
+          </div>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <JBButton href="/resume" variant="secondary">
+              View Jamie&apos;s resume
+            </JBButton>
+            <JBButton href={site.emailHref}>
+              Discuss the first engagement
+            </JBButton>
+          </div>
+        </section>
         <figure className="mt-10 overflow-hidden rounded-lg border border-jb-ink/12 bg-jb-paper">
           <MediaImage
             alt={collectiveSynthesisPhoto.alt}

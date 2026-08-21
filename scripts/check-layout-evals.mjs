@@ -56,6 +56,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     [photography, "eastRiver", "/images/field-notes/jamie-east-river.webp"],
     [photography, "sundayDinnerSharedMap", "/images/field-notes/sunday-dinner-shared-map.webp"],
     [photography, "kcTownHallRoofWork", "/images/field-notes/kc-town-hall-roof-work.webp"],
+    [photography, "teamKnowledgeCollectiveSynthesis", "/images/field-notes/team-knowledge-collective-synthesis.webp"],
     [participation, "shoestringFacilitation", "/images/participation/shoestring-facilitation.webp"],
     [participation, "marketHotelTownHall", "/images/participation/save-nyc-spaces-market-hotel.webp"]
   ];
@@ -77,6 +78,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     [photography, "eastRiver", "Photograph by Elana Gordon. From Jamie Burkart's photo archive."],
     [photography, "sundayDinnerSharedMap", "Photo courtesy of Sunday Dinner NYC."],
     [photography, "kcTownHallRoofWork", "Photo courtesy of KC Town Hall."],
+    [photography, "teamKnowledgeCollectiveSynthesis", "Photo courtesy of NYC Artist Coalition."],
     [participation, "shoestringFacilitation", "Photo courtesy of NYC Artist Coalition."],
     [participation, "marketHotelTownHall", "Photo courtesy of NYC Artist Coalition."]
   ];
@@ -100,7 +102,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     "apps/www/public/images/participation"
   ];
   const expectedAssetCounts = new Map([
-    ["apps/www/public/images/field-notes", 3],
+    ["apps/www/public/images/field-notes", 4],
     ["apps/www/public/images/participation", 2]
   ]);
   for (const relativeRoot of governedAssetRoots) {

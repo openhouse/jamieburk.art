@@ -354,8 +354,8 @@
   "localOnly": [
     {
       "source": "/images/field-notes/team-knowledge-collective-synthesis.webp",
-      "sourceSha256": "27122af411317a4ba0464b69f1bc6eab9aa955a0074942527e9cc4c70cfcb9d5",
-      "bytes": 579542,
+      "sourceSha256": "d63391c1d0adb84b8d8bc2641b98dd4a12e5be6b73795b2b0eb6df0b252baa48",
+      "bytes": 495638,
       "governanceId": "asset.photo.nycac.collective-synthesis.2017.001",
       "deliveryState": "awaiting-signed-cdn-sync",
       "reason": "The approved metadata-stripped derivative remains first-party until a signed Cloudinary upload returns its immutable version; the repository copy and checksum remain authoritative."

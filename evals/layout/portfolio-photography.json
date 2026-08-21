@@ -1,5 +1,5 @@
 {
-  "id": "portfolio-photography-layout-v10",
+  "id": "portfolio-photography-layout-v11",
   "title": "Human Index photographic portfolio layout",
   "intent": "Photography and public interfaces make situated work credible while remaining public-safe, accessible, project-specific, and subordinate to human publication authority.",
   "hiringArgument": {
@@ -40,7 +40,7 @@
     {
       "id": "governed-photographic-field",
       "blocking": true,
-      "criterion": "The launch candidate uses exactly five reviewed photographs: the unchanged East River hero, the Shoestring Press and Market Hotel evidence sequence, the Sunday Dinner cover, and the KC Town Hall cover."
+      "criterion": "The launch candidate uses exactly six reviewed photographs: the unchanged East River hero, the Knowledge Wiki collective-synthesis field image, the Shoestring Press and Market Hotel evidence sequence, the Sunday Dinner cover, and the KC Town Hall cover."
     },
     {
       "id": "metadata-and-locator-safety",
