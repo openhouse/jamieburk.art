@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.nyc-oti.senior-product-manager.782366.pdf-visual",
-  "inspectedAt": "2026-08-21T01:04:31.766Z",
+  "inspectedAt": "2026-08-21T16:01:57Z",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy for this opportunity",
     "revisionUnchangedAfterExport": true,
@@ -9,24 +9,24 @@
   },
   "markdown": {
     "path": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
-    "sha256": "49ccbe5ccba8566b6ab397271fecf5cce81f9f595770b13dd1fff5bd16451973"
+    "sha256": "194cf14cf3f6bf84e09af8c5b0890d74fa18f9d62165124ccae81f2577a4f786"
   },
   "pdf": {
     "path": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf",
-    "sha256": "cd640963820d19578a67992619fd473b4aed3073fdb976d6d6f51bb1b2ff0ae7",
-    "bytes": 93331,
+    "sha256": "ce61d8379fddcae73abe0120b35f6b7edb45cdfd23734326882db042c229bcf7",
+    "bytes": 95323,
     "pages": 2,
     "pageSize": "US Letter"
   },
   "inspection": {
-    "method": "Rebuilt from the approved Google Docs export with every list marker normalized to one point below its item text; rasterized every page at 110 DPI, visually inspected all pages, compared final rasters with the pre-rebuild inspection set, and checked PDF geometry, text, and link annotations.",
+    "method": "Exported from the private opportunity-specific Google Docs working copy; verified native 9-point list markers against 10-point item text; rasterized every page at 144 DPI; visually inspected both pages; and checked PDF geometry, extracted text, and link annotations.",
     "allPagesRasterized": true,
     "actualNamedPeopleParticipated": false,
     "pages": [
       {
         "page": 1,
         "pass": true,
-        "notes": "Name, target title, contact links, profile, full product lifecycle, responsible public technology, and the single Thick Arts LLC employer container are legible with clear hierarchy and no clipping or overlap. Harry J. Epstein Company is plain black text with no underline and no hyperlink annotation."
+        "notes": "Name, target title, contact links, profile, full product lifecycle, responsible public technology, and the single Thick Arts LLC employer container are legible with clear hierarchy and no clipping or overlap. The current-versus-historical technology qualification is readable without crowding, and Harry J. Epstein Company is plain black text with no hyperlink annotation."
       },
       {
         "page": 2,

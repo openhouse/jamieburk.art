@@ -1,10 +1,10 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-08-15T22:46:44.715Z",
-  "baseUrl": "http://127.0.0.1:3061",
-  "publicSurfaceFingerprint": "82ab0ff474721b4b5d1109a83e8aca3d885dc190706c0b15e392655764747a27",
+  "checkedAt": "2026-08-21T16:15:26.714Z",
+  "baseUrl": "http://127.0.0.1:3000",
+  "publicSurfaceFingerprint": "37130a2ec29260c57fd47543e1ca07afcd00450f9b0144ea07b8aca3e11448a9",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 144,
+  "publicSurfaceFileCount": 150,
   "requestFailurePolicy": "Exclude canceled speculative Next.js RSC prefetches (net::ERR_ABORTED with an _rsc query); retain every other failed request.",
   "routes": [
     "/",
@@ -18,6 +18,7 @@
     "/work/harry-j-epstein",
     "/work/fair-rent-nyc",
     "/work/callnyc",
+    "/work/kc-spaces-fund",
     "/work/wowlist",
     "/work/196-sunday-dinner",
     "/work/kc-town-hall"
@@ -185,6 +186,20 @@
     },
     {
       "viewport": 360,
+      "path": "/work/kc-spaces-fund",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "failedRequests": []
+    },
+    {
+      "viewport": 360,
       "path": "/work/wowlist",
       "httpStatus": 200,
       "axeVersion": "4.12.1",
@@ -381,6 +396,20 @@
     },
     {
       "viewport": 375,
+      "path": "/work/kc-spaces-fund",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "failedRequests": []
+    },
+    {
+      "viewport": 375,
       "path": "/work/wowlist",
       "httpStatus": 200,
       "axeVersion": "4.12.1",
@@ -577,6 +606,20 @@
     },
     {
       "viewport": 768,
+      "path": "/work/kc-spaces-fund",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "failedRequests": []
+    },
+    {
+      "viewport": 768,
       "path": "/work/wowlist",
       "httpStatus": 200,
       "axeVersion": "4.12.1",
@@ -760,6 +803,20 @@
     {
       "viewport": 1280,
       "path": "/work/callnyc",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "failedRequests": []
+    },
+    {
+      "viewport": 1280,
+      "path": "/work/kc-spaces-fund",
       "httpStatus": 200,
       "axeVersion": "4.12.1",
       "violations": [],
@@ -815,7 +872,7 @@
     }
   ],
   "summary": {
-    "rowCount": 56,
+    "rowCount": 60,
     "axeViolations": 0,
     "criticalAxeViolations": 0,
     "overflowElements": 0,
@@ -824,8 +881,8 @@
     "failedRequests": 0,
     "nonSuccessResponses": 0,
     "invalidHeadingOrLandmarkRows": 0,
-    "lazyImagesObserved": 88,
-    "unloadedImagesBeforeScroll": 76,
+    "lazyImagesObserved": 100,
+    "unloadedImagesBeforeScroll": 70,
     "lazyImageFollowUpPerformed": true,
     "allImagesLoadedAfterScroll": true
   },
@@ -887,7 +944,7 @@
     "passed": true
   },
   "navigationReview": {
-    "checkedAt": "2026-08-15T22:46:44.715Z",
+    "checkedAt": "2026-08-21T16:15:26.714Z",
     "startRoute": "/",
     "destinationRoute": "/about",
     "startHttpStatus": 200,
@@ -902,8 +959,8 @@
       "height": 900
     },
     "renderedScreenshot": {
-      "sha256": "3b7e2cbb876bf526f30faaa67917c95e487fc5be0b7c57c30c3d0b152637b95d",
-      "byteLength": 601283,
+      "sha256": "938773c9f28a3dd5b6e69f86f2251562cb4785740f2cb002eea8d0892d90847d",
+      "byteLength": 663325,
       "width": 1280,
       "fullPage": true,
       "retainedInPublicGit": false,

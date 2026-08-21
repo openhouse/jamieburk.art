@@ -66,6 +66,25 @@ export default function SourceBackedTeamMemoryPage() {
     }
   ];
 
+  const engagementShape = [
+    {
+      label: "People",
+      text: "One sponsor, one working lead, and two or three teammates who can test whether the result helps them find and use what the team already knows."
+    },
+    {
+      label: "Source set",
+      text: "Three to five approved sources around one decision trail, such as a product brief, meeting notes, an onboarding document, and the current place where open questions live."
+    },
+    {
+      label: "Jamie returns",
+      text: "A knowledge-friction map, start-here page, decision record, open-question list, source and access notes, correction path, and a tested handoff."
+    },
+    {
+      label: "End decision",
+      text: "The team decides to continue, revise, or stop—and leaves with a clear account of what worked, what remains uncertain, who owns the next step, and what would require new authorization."
+    }
+  ];
+
   return (
     <article className="jb-frame py-12">
       <div className="jb-reading">
@@ -94,7 +113,7 @@ export default function SourceBackedTeamMemoryPage() {
           />
           <figcaption className="border-t border-jb-ink/10 p-4 text-sm leading-6 text-jb-ink/76">
             {collectiveMapPhoto.caption}
-            <span className="mt-1 block text-jb-ink/60">
+            <span className="mt-1 block text-jb-ink/70">
               {collectiveMapPhoto.credit}
             </span>
           </figcaption>
@@ -153,7 +172,7 @@ export default function SourceBackedTeamMemoryPage() {
                 className="grid gap-3 py-6 md:grid-cols-[3rem_0.38fr_0.62fr] md:items-start md:gap-5"
                 key={item.label}
               >
-                <span className="font-semibold tabular-nums text-jb-ochre">
+                <span className="font-semibold tabular-nums text-jb-blue">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <h3 className="text-lg font-semibold text-jb-blue">{item.label}</h3>
@@ -161,6 +180,48 @@ export default function SourceBackedTeamMemoryPage() {
               </li>
             ))}
           </ol>
+          <div className="mt-8 rounded-lg border border-jb-blue/25 bg-jb-warm p-6 md:p-8">
+            <p className="text-sm font-semibold uppercase text-jb-blue">
+              Proposed first engagement
+            </p>
+            <h3 className="mt-3 max-w-3xl text-2xl font-semibold text-jb-ink">
+              A two-week discovery and prototype sprint the team can authorize
+            </h3>
+            <p className="mt-4 max-w-3xl leading-8 text-jb-ink/76">
+              The timebox and participation plan are confirmed with the sponsor
+              before work begins. The aim is not to install a new company-wide
+              platform. It is to make one slipping decision trail easier to
+              find, trust, correct, protect, and hand to the next teammate.
+            </p>
+            <dl className="mt-6 grid gap-px overflow-hidden rounded-md border border-jb-ink/12 bg-jb-ink/12 md:grid-cols-2">
+              {engagementShape.map((item) => (
+                <div className="bg-jb-paper p-5" key={item.label}>
+                  <dt className="font-semibold text-jb-blue">{item.label}</dt>
+                  <dd className="mt-2 text-sm leading-6 text-jb-ink/74">
+                    {item.text}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+            <div className="mt-6 grid gap-5 md:grid-cols-[0.38fr_0.62fr]">
+              <h4 className="text-lg font-semibold text-jb-ink">
+                Deliberately outside this first sprint
+              </h4>
+              <p className="leading-7 text-jb-ink/74">
+                Indiscriminate ingestion, hidden monitoring, a private archive
+                browser, a company-wide rollout, and continuing maintenance
+                without a separate agreement.
+              </p>
+            </div>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <JBButton href={site.emailHref}>
+                Discuss this proposed two-week pilot
+              </JBButton>
+              <JBButton href="/resume" variant="secondary">
+                Review Jamie&apos;s resume
+              </JBButton>
+            </div>
+          </div>
           <div className="mt-8 grid gap-5 md:grid-cols-[0.38fr_0.62fr]">
             <h3 className="text-2xl font-semibold text-jb-ink">
               What makes the pilot worth continuing

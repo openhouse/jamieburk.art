@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Hiring acceptance Wiki gap resolution
 
-**Candidate commit:** `2f47c73b4926887659b899de855ef062e9381470`
-**Public report hash:** `6c524634c1ff636e2505ae2656113e3fb7a367962167ba3b8b2e97f754e43e12`
-**Wiki fingerprint:** `9770f9581cab7c3dc09cf62d517ba9e1b35685e9d45fb092366f0352c41c605c`
+**Candidate commit:** `58646418b40fc0db361c83829a59c6e884d914ed`
+**Public report hash:** `a12d45f97bb2d2e2cec68ce5c4f274c511f82ab59e4eace74fed9fea35e82005`
+**Wiki fingerprint:** `b2f85389ab3e7725be9b2d24acf810252a431365b899b1d8e90fab635830b1a5`
 
 The gap resolver runs after the public-only evaluator. It can identify Wiki evidence, but every public change remains human-reviewed.
 
@@ -34,4 +34,4 @@ The gap resolver runs after the public-only evaluator. It can identify Wiki evid
 - `requirement.uibk.studio3.digital-spatial-methods` - **source-needs-close-reading**; Inventory only exact, inspectable media-installation and spatial-computing evidence before using this language elsewhere.
 - `requirement.uibk.studio3-grants-teaching-administration` - **true-experience-gap**; Keep civic grants, facilitation, and project administration distinct from university grant management and formal academic supervision.
 - `requirement.protected-memory.knowledge-friction` - **role-context-or-evidence-unknown**; Keep the public method legible without exposing the protected lead.
-- `requirement.protected-memory.bounded-sprint` - **role-context-or-evidence-unknown**; Do not imply that a sprint was accepted, funded, or delivered.
+- `requirement.protected-memory.focused-sprint` - **role-context-or-evidence-unknown**; Do not imply that a sprint was accepted, funded, or delivered.

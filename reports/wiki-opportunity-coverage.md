@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity requirement coverage
 
-**Wiki fingerprint:** `9770f9581cab7c3dc09cf62d517ba9e1b35685e9d45fb092366f0352c41c605c`
+**Wiki fingerprint:** `b2f85389ab3e7725be9b2d24acf810252a431365b899b1d8e90fab635830b1a5`
 
 Statuses preserve the difference between visible proof, Wiki-only proof, source work, experience gaps, and hard screens.
 
@@ -133,7 +133,7 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 |---|---|---|---|---|
 | `requirement.protected-memory.knowledge-friction` | critical | visible-qualified | none | Keep the public method legible without exposing the protected lead. |
 | `requirement.protected-memory.human-review` | critical | visible-proven | none | Preserve the explicit human-review boundary. |
-| `requirement.protected-memory.bounded-sprint` | important | visible-qualified | role-context | Do not imply that a sprint was accepted, funded, or delivered. |
+| `requirement.protected-memory.focused-sprint` | important | visible-qualified | role-context | Do not imply that a sprint was accepted, funded, or delivered. |
 
 ## University of Innsbruck ./studio3 - University Assistant (Postdoc), ARCH-15927
 

@@ -15,7 +15,7 @@ Senior product and technical project manager with 14+ years shipping public-faci
 - **Product lifecycle:** Problem framing, discovery, public and user research, requirements, user stories, product briefs, roadmap sequencing, MVP and version-one scoping, prioritization, tradeoffs, rapid prototyping, UAT/QA, public launch, metrics, post-launch learning, and retrospectives.
 - **Cross-functional delivery:** Product ownership, facilitation, stakeholder alignment, designer and engineer coordination, agency and policy translation, senior stakeholder briefings, rollout planning, risk and dependency tracking, adoption, and durable handoffs.
 - **Responsible public technology:** Accessibility-aware implementation, privacy-conscious data practice, public-safety review, source governance, evidence boundaries, and clear documentation of unknowns and decisions.
-- **Web systems architecture:** JavaScript/TypeScript, React/Next.js, Ember.js, Python/Django, SQL, PostgreSQL/PostGIS, Node.js, Git/GitHub, Docker/Dokku, QGIS, APIs, open-data workflows, analytics, and low-cost cloud infrastructure.
+- **Web systems architecture (current and historical experience):** JavaScript/TypeScript, React/Next.js, Ember.js, Python/Django, SQL, PostgreSQL/PostGIS, Node.js, Git/GitHub, Docker/Dokku, QGIS, APIs, open-data workflows, analytics, and low-cost cloud infrastructure. Historical implementation does not by itself establish present proficiency.
 
 ## Professional Experience
 

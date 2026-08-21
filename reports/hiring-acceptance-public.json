@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "runId": "hiring-public-2f47c73b4926",
-  "generatedAt": "2026-08-21T02:07:11-04:00",
-  "candidateSha": "2f47c73b4926887659b899de855ef062e9381470",
-  "candidatePathsClean": true,
-  "portfolioSnapshotHash": "e19d1c504fed9c554f6c7f58e72070274b6294a249b77d2ef360397d665a0703",
-  "roleContextHash": "04acac996780f4c345a1c95163fe00f9a472ef31f54cb750077a36e04ad0bcc1",
+  "runId": "hiring-public-58646418b40f",
+  "generatedAt": "2026-08-21T09:13:40-04:00",
+  "candidateSha": "58646418b40fc0db361c83829a59c6e884d914ed",
+  "candidatePathsClean": false,
+  "portfolioSnapshotHash": "cbe7d20cdc0d9c514e10bcd04f663f06546b7cb5abe0dcb2483c2d178c0821d2",
+  "roleContextHash": "4da3d38bb0b37320d9efcc8d6e9f5e980203f3bb25247206246f60f6dcad1af7",
   "readerContextHash": "e055b82642616d52177ad68ae4d3bbaeb3953ef3c75cfa3e159c65166862e29f",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
   "publicSafety": {
@@ -1021,7 +1021,7 @@
     {
       "id": "opportunity.protected.source-backed-memory-consulting.2026",
       "title": "Protected source-backed team-memory consulting lead",
-      "roleContextHash": "1ca9ad3bd7cfe81cb81b0b402eacd5dccbf1a771aeade41c3b9c9daf93f42f0f",
+      "roleContextHash": "162d51e6f146819a269f7fa95d839ed557e885edb8d9187e9986f347b065f0a9",
       "benchmark": false,
       "live": false,
       "fresh": false,
@@ -1057,7 +1057,7 @@
           ]
         },
         {
-          "requirementId": "requirement.protected-memory.bounded-sprint",
+          "requirementId": "requirement.protected-memory.focused-sprint",
           "importance": "important",
           "observed": false,
           "matchedPublicText": false,

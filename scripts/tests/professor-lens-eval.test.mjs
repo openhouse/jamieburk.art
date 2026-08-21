@@ -57,7 +57,7 @@ test("guard rejects weakening the public analytical limits", () => {
   const result = evaluateProfessorLenses({
     suite,
     aboutText: aboutText.replace(
-      /not peer-reviewed\s+research/,
+      /or peer-reviewed\s+research/,
       "an ongoing research direction"
     ),
     sourceNoteText

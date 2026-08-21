@@ -357,8 +357,13 @@ check(
       "collaborator-led Facebook Page",
       "Do not frame Jamie as the Page publisher"
     ]) &&
+    proofs.includes('"kc-spaces-fund-digital-infrastructure"') &&
     technicalOperations.includes(
-      "Jamie built campaign web infrastructure and supported an available cross-channel identity for a collaborator-led mutual-aid campaign."
+      'import { technicalOperationsProofRows } from "@/data/proofs"'
+    ) &&
+    technicalOperations.includes("technicalOperationsProofRows.map") &&
+    technicalOperations.includes(
+      "{proof.shortWording ?? proof.publicWording}"
     ) &&
     includesAll(normalizedDocs, [
       "not the stakeholder or owner posting on the Facebook Page",

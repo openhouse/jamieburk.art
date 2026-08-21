@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "candidateSha": "2f47c73b4926887659b899de855ef062e9381470",
-  "portfolioSnapshotHash": "e19d1c504fed9c554f6c7f58e72070274b6294a249b77d2ef360397d665a0703",
-  "publicReportHash": "6c524634c1ff636e2505ae2656113e3fb7a367962167ba3b8b2e97f754e43e12",
-  "wikiSourceFingerprint": "9770f9581cab7c3dc09cf62d517ba9e1b35685e9d45fb092366f0352c41c605c",
+  "candidateSha": "58646418b40fc0db361c83829a59c6e884d914ed",
+  "portfolioSnapshotHash": "cbe7d20cdc0d9c514e10bcd04f663f06546b7cb5abe0dcb2483c2d178c0821d2",
+  "publicReportHash": "a12d45f97bb2d2e2cec68ce5c4f274c511f82ab59e4eace74fed9fea35e82005",
+  "wikiSourceFingerprint": "b2f85389ab3e7725be9b2d24acf810252a431365b899b1d8e90fab635830b1a5",
   "findings": [
     {
       "findingId": "finding.requirement.codepath.qa-and-bug-pipeline",
@@ -363,9 +363,9 @@
       "requiresHumanApproval": true
     },
     {
-      "findingId": "finding.requirement.protected-memory.bounded-sprint",
+      "findingId": "finding.requirement.protected-memory.focused-sprint",
       "opportunityId": "opportunity.protected.source-backed-memory-consulting.2026",
-      "requirementId": "requirement.protected-memory.bounded-sprint",
+      "requirementId": "requirement.protected-memory.focused-sprint",
       "classification": "role-context-or-evidence-unknown",
       "wikiRecords": [
         "method.source-backed-team-memory"

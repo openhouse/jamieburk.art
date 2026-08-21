@@ -2,42 +2,40 @@
   "id": "team-memory-proposal-reader-2026-08-21",
   "schemaVersion": 1,
   "status": "complete",
-  "evaluatedAt": "2026-08-21T07:20:46.447Z",
+  "evaluatedAt": "2026-08-21T15:30:46.320Z",
   "publicOrigin": "https://staging-b.jamieburk.art",
   "pagePath": "/lab/source-backed-team-memory",
   "readerId": "reader.protected-team-memory-prospect",
-  "pageSourceSha256": "40fcdb8d3fccd9ed4a13f4bf96b305949c981f7acbb63f8acda77c4cf6cafdf9",
-  "publicPageTextSha256": "7ee5ff004d228227558e07610423a4a0047a57e9aa5c4528c39f689e12c3f2b4",
+  "pageSourceSha256": "32f15da27b356ffb90751d0ed56c130ffb91ee8790e09c2af9a258c8f8746dcc",
+  "publicPageTextSha256": "3bbdfad00fd1f3c362d0814f4f154f3d089aca61862f827b2c78d77830b9bd20",
   "scenarioSha256": "a752e9057fc1dd93e298caa089d3125ea1c27620fc73889ceedabf6cc29c0d10",
-  "promptSha256": "7d7b7a909a6a8599cf0184ccc8052af5952abe18c5d6cc279851819f18832d1a",
+  "promptSha256": "ac53600c9c87a9b793bd11af5c124486fb6fc7191ad6e1cfc293c0401a43aff3",
   "promptVersion": "team-memory-proposal-reader-v2",
   "actualPersonParticipated": false,
   "result": {
     "readerId": "reader.protected-team-memory-prospect",
     "verdict": "pass",
     "decision": "hire-for-focused-pilot",
-    "rationale": "The page presents a credible, bounded proposal for a small paid pilot. It identifies a concrete problem—product rationale, decisions, open questions, and onboarding context disappearing into meetings and private messages—and offers an adoptable first step using a deliberately approved source set. The proposed outputs are practical: a start-here page, decision record, open-question list, source links, access notes, correction paths, and a continue/revise/stop recommendation. Observable handoff tests cover discovery, provenance, correction, protection, and onboarding value. The page also draws honest boundaries around the method’s early maturity and does not imply production deployment or client adoption. The public evidence is stronger for care, governance, and correction discipline than for prior client outcomes, but it is sufficient to justify a tightly scoped discovery or prototype engagement.",
+    "rationale": "The proposal is specific enough to authorize a bounded paid pilot now. It identifies a recognizable problem—lost product rationale and onboarding context—and proposes a two-week engagement using three to five approved sources, named participants, concrete deliverables, a tested handoff, and an explicit continue/revise/stop decision. Privacy, correction, provenance, access, consent, and human review are treated as operating requirements. The page also honestly distinguishes an early method from a proven platform or completed client implementation. The public correction trace supplies limited but relevant evidence that the candidate can trace sources, revise records, and propagate corrections across outputs.",
     "strengths": [
-      "Defines one legible team pressure and resists turning the pilot into a company-wide platform initiative.",
-      "Provides a clear four-step engagement shape: locate friction, use approved material, produce compact operating memory, and test the handoff.",
-      "Names useful deliverables that can fit existing team workflows instead of requiring a parallel bureaucracy.",
-      "Establishes observable success conditions around onboarding, decision traceability, correction, protection, and an explicit continuation decision.",
-      "Treats privacy, consent, access, attribution, retention, and publication permission as operational requirements.",
-      "Shows a concrete public correction trace demonstrating that revised evidence can propagate across affected outputs.",
-      "Clearly distinguishes known, open, and protected material and preserves disagreement without manufacturing certainty.",
-      "States maturity limits candidly: the practice is early, not a finished platform, and has no claimed client adoption."
+      "A concrete first use case centered on one slipping decision trail rather than a company-wide system.",
+      "Deliverables directly support onboarding and decision memory: a start-here page, decision record, open-question list, source notes, access notes, and correction path.",
+      "Adoption is tested through observable teammate tasks: finding, tracing, correcting, and protecting information.",
+      "The source-custody model separates access, evidence, consent, and publication authority.",
+      "Clear exclusions reduce surveillance, indiscriminate-ingestion, and parallel-bureaucracy risks.",
+      "Success conditions and the continue/revise/stop gate make the engagement reversible and accountable.",
+      "Maturity boundaries are candid: this is an emerging practice, not demonstrated SaaS or claimed client adoption."
     ],
     "missingEvidence": [
-      "A representative pilot timeline, staffing expectation, and level of sponsor or teammate participation.",
-      "A worked end-to-end sample showing the actual structure and usability of the complete deliverable bundle.",
-      "Evidence from a prior team handoff demonstrating faster onboarding or reduced context loss.",
-      "Specific integration examples for common product and engineering tools and the ongoing maintenance burden after handoff.",
-      "Indicative pricing or enough effort assumptions to assess budget fit."
+      "A redacted example showing the complete set of pilot deliverables working together in a realistic team workflow.",
+      "Independent evidence from a prior team engagement demonstrating reduced onboarding time or context loss.",
+      "Details about how the method integrates with common repositories, meeting tools, and documentation systems without adding excessive maintenance.",
+      "Indicative pricing, sponsor time requirements, security handling, and post-sprint ownership expectations."
     ],
-    "constructiveCritique": "The page becomes architecture-heavy after already making a strong pilot case. A prospective sponsor would benefit from a compact engagement card near the first proposal that states duration, required participants, source-set limits, deliverables, exclusions, and the decision made at the end. One complete synthetic before-and-after handoff would also make the operating experience easier to judge than the current collection of concepts and partial examples.",
-    "validateNext": "At kickoff, validate whether Jamie can turn one real, permissioned decision trail into a useful operating-memory packet within a fixed timebox, then have an engineer who did not attend the source meeting use it to explain the rationale, identify an open question, trace the evidence, and submit a correction without substantial guidance.",
+    "constructiveCritique": "The page makes the proposed use unusually clear, but its architectural explanation is longer and better evidenced than its delivery record. A compact, redacted pilot packet—with before-and-after workflow, teammate test results, maintenance burden, and sponsor decision—would make the hiring case more concrete. Adding indicative engagement assumptions would also reduce uncertainty between interest and authorization.",
+    "validateNext": "In kickoff, validate the method against one representative approved decision trail: establish a baseline, have a new or less-contextual teammate use the prototype to find the rationale, trace its source, identify open or protected material, and submit a correction, then measure usefulness and maintenance effort before authorizing any expansion.",
     "actualPersonParticipated": false,
-    "boundary": "This is a fictionalized public-page model simulation. The named person did not participate in the evaluation, review the candidate, approve the proposal, endorse Jamie, or make a hiring decision. This result is not the named person's endorsement or budget authorization."
+    "boundary": "This is a fictionalized public-page model simulation. The named person did not participate, review the candidate, or make this decision, and the result is not the named person's endorsement or budget authorization."
   },
   "boundary": "This is an independent model simulation of an explicitly fictionalized public-page reader lens. The named person did not participate or endorse Jamie; a pass is not budget authorization, a contract, or a promise of work."
 }
