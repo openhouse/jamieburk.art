@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-21T04:53:29-04:00",
-  "sourceCommit": "79ce18f4a11cdfd979670bcb0efbe5fd2ae7643e",
-  "sourceFingerprint": "ac7ba64b33eb59ab160a20236dc4dcd7dc22bb7632b5250c6a08707bc8f2e9f2",
+  "generatedAt": "2026-08-21T06:29:29-04:00",
+  "sourceCommit": "f9373051ee90ac4cd7cc470eda0e232f9fa37fd6",
+  "sourceFingerprint": "de30058eb88a77a6e6d51b01c28a73edbeac7d526d33e075a17dd0f6c34387bd",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3362,7 +3362,7 @@
       "sensitivity": "low",
       "summary": "Close reading of the ecosystem's current leading edge as a federation of specialized authorities and governed handoffs rather than one synchronized database.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
+      "lastReviewed": "2026-08-21",
       "reviewBy": "2026-11-13"
     },
     {
@@ -3804,7 +3804,7 @@
       "sensitivity": "low",
       "summary": "A governed workflow for turning scattered records into traceable decisions, bounded claims, open questions, and reusable handoffs.\n",
       "aliases": [],
-      "lastReviewed": "2026-08-10",
+      "lastReviewed": "2026-08-21",
       "reviewBy": "2027-01-18"
     },
     {
@@ -5397,6 +5397,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-09-26"
+    },
+    {
+      "id": "source.knowledge-wiki-graph-practice-review.2026-08-21",
+      "path": "docs/knowledge-bank/sources/knowledge-wiki-graph-practice-review-2026-08-21.md",
+      "title": "Knowledge Wiki Graph practice ecosystem review",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe synthesis of the shared operating architecture across the current Knowledge Wiki Graph repository roles and the earlier Noting.us prototype.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-11-21"
     },
     {
       "id": "source.knowledge-wiki.branch-a.2026-07-19",
@@ -13610,6 +13623,14 @@
     },
     {
       "from": "index.knowledge-wiki.federated-graph-ecosystem",
+      "type": "informed_by",
+      "to": "source.knowledge-wiki-graph-practice-review.2026-08-21",
+      "source": "frontmatter",
+      "href": "../sources/knowledge-wiki-graph-practice-review-2026-08-21.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.federated-graph-ecosystem",
       "type": "related_to",
       "to": "index.knowledge-wiki.commercial-rent-public-support",
       "source": "frontmatter",
@@ -15398,6 +15419,14 @@
       "to": "method.source-backed-team-memory",
       "source": "frontmatter",
       "href": "source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "method.source-backed-team-memory",
+      "type": "informed_by",
+      "to": "source.knowledge-wiki-graph-practice-review.2026-08-21",
+      "source": "frontmatter",
+      "href": "../sources/knowledge-wiki-graph-practice-review-2026-08-21.md",
       "context": null
     },
     {
@@ -18630,6 +18659,22 @@
       "to": "asset.photo.kc-town-hall.stewardship-interior.001",
       "source": "frontmatter",
       "href": "../../assets/photographs/kc-town-hall-stewardship-interior.md",
+      "context": null
+    },
+    {
+      "from": "source.knowledge-wiki-graph-practice-review.2026-08-21",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.federated-graph-ecosystem",
+      "source": "frontmatter",
+      "href": "../indexes/federated-knowledge-graph-ecosystem.md",
+      "context": null
+    },
+    {
+      "from": "source.knowledge-wiki-graph-practice-review.2026-08-21",
+      "type": "related_to",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md",
       "context": null
     },
     {
@@ -22573,7 +22618,7 @@
       "toPath": "docs/knowledge-bank/capabilities/technical-operations.md",
       "to": "capability.technical-operations",
       "fragment": null,
-      "line": 18,
+      "line": 41,
       "kind": "link"
     },
     {

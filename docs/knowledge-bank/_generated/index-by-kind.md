@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `79ce18f4a11cdfd979670bcb0efbe5fd2ae7643e`
-**Generation time:** 2026-08-21T04:53:29-04:00
-**Source fingerprint:** `ac7ba64b33eb59ab160a20236dc4dcd7dc22bb7632b5250c6a08707bc8f2e9f2`
+**Source commit:** `f9373051ee90ac4cd7cc470eda0e232f9fa37fd6`
+**Generation time:** 2026-08-21T06:29:29-04:00
+**Source fingerprint:** `de30058eb88a77a6e6d51b01c28a73edbeac7d526d33e075a17dd0f6c34387bd`
 
 ## application
 
@@ -474,6 +474,7 @@
 - [KC Town Hall restored public site](../sources/kc-town-hall-live-site-2026-08-14.md) - `source.kc-town-hall.live-site.2026-08-14`
 - [KC Town Hall local digital archive review, July 2026](../sources/archives/kc-town-hall-local-digital-archive-2026-07.md) - `source.kc-town-hall.local-digital-archive.2026-07`
 - [KC Town Hall photographic oral histories, July 2026](../sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md) - `source.kc-town-hall.photographic-oral-histories.2026-07`
+- [Knowledge Wiki Graph practice ecosystem review](../sources/knowledge-wiki-graph-practice-review-2026-08-21.md) - `source.knowledge-wiki-graph-practice-review.2026-08-21`
 - [Frozen Knowledge Wiki branch A](../sources/knowledge-wiki-branch-a-2026-07-19.md) - `source.knowledge-wiki.branch-a.2026-07-19`
 - [Frozen Knowledge Wiki branch B](../sources/knowledge-wiki-branch-b-2026-07-19.md) - `source.knowledge-wiki.branch-b.2026-07-19`
 - [Frozen Knowledge Wiki branch C](../sources/knowledge-wiki-branch-c-2026-07-19.md) - `source.knowledge-wiki.branch-c.2026-07-19`

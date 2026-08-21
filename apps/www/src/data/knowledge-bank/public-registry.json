@@ -1919,6 +1919,56 @@
       ]
     },
     {
+      "id": "CLM-KNOWLEDGE-WIKI-GRAPH-PRACTICE-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "I am developing and applying a three-graph Knowledge Wiki practice: sources, evidence, and meaning remain distinct, while each audience-facing output is a deliberate, human-reviewed projection.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/lab/source-backed-team-memory"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "This portfolio is one audience-specific projection of Jamie's Knowledge Wiki Graph practice: a source-backed system that keeps the source graph, evidence graph, and semantic graph distinct, then composes reviewed knowledge for a particular reader and purpose.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/colophon"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Describe a developing practice and operating architecture, not a finished SaaS product or automatic truth system.",
+        "Do not expose protected repository identities, locators, source bodies, or account state.",
+        "Projection remains a human editorial decision rather than an automatic consequence of graph membership."
+      ]
+    },
+    {
+      "id": "CLM-NOTING-US-KNOWLEDGE-WIKI-LINEAGE-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The practice extends research first prototyped in Noting.us: source artifact to stable segment to Markdown bundle to evals to human review to export. The Knowledge Wiki Graph carries that trust loop into a federated, project-by-project system.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/lab/source-backed-team-memory"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Present lineage and architectural continuity, not production adoption, a completed client implementation, or a claim that the two systems are identical.",
+        "Keep protected repository and project context outside the public surface."
+      ]
+    },
+    {
       "id": "CLM-KC-TOWN-HALL-JAMIE-SECURED-CCED-AWARD",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -3380,6 +3430,16 @@
           "projection": "case-study"
         },
         {
+          "id": "knowledge-wiki-graph-practice",
+          "claimId": "CLM-KNOWLEDGE-WIKI-GRAPH-PRACTICE-2026",
+          "projection": "case-study"
+        },
+        {
+          "id": "noting-us-knowledge-wiki-lineage",
+          "claimId": "CLM-NOTING-US-KNOWLEDGE-WIKI-LINEAGE-2026",
+          "projection": "case-study"
+        },
+        {
           "id": "ai-evals-course-completion",
           "claimId": "CLM-AI-EVALS-COURSE-COMPLETION-2026",
           "projection": "case-study",
@@ -3396,6 +3456,18 @@
             "SRC-CALLNYC-POLITICO-2016-03-14",
             "SRC-CALLNYC-GITHUB-REPOSITORY"
           ]
+        }
+      ]
+    },
+    {
+      "id": "colophon",
+      "surface": "/colophon",
+      "sourceOrder": [],
+      "occurrences": [
+        {
+          "id": "knowledge-wiki-graph-practice",
+          "claimId": "CLM-KNOWLEDGE-WIKI-GRAPH-PRACTICE-2026",
+          "projection": "archive-note"
         }
       ]
     }

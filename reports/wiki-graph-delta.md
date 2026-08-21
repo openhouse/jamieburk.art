@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `79ce18f4a11cdfd979670bcb0efbe5fd2ae7643e`
-**Generation time:** 2026-08-21T04:53:29-04:00
-**Source fingerprint:** `ac7ba64b33eb59ab160a20236dc4dcd7dc22bb7632b5250c6a08707bc8f2e9f2`
+**Source commit:** `f9373051ee90ac4cd7cc470eda0e232f9fa37fd6`
+**Generation time:** 2026-08-21T06:29:29-04:00
+**Source fingerprint:** `de30058eb88a77a6e6d51b01c28a73edbeac7d526d33e075a17dd0f6c34387bd`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 69
+- Nodes added: 70
 - Nodes removed: 38
-- Edges added: 219
+- Edges added: 223
 - Edges removed: 184
 - New type-aware orphans: 1
 - Current rights-review records: 186
@@ -77,6 +77,7 @@ Compared with the graph artifact on `origin/develop`.
 - `source.jobs.nyc-open-data.current`
 - `source.jobs.nyc-oti.product-management-search.2026-08-20`
 - `source.kc-town-hall.live-site.2026-08-14`
+- `source.knowledge-wiki-graph-practice-review.2026-08-21`
 - `source.nycac.flickr.shoestring-facilitation.2017`
 - `source.permission.jamie-nycac-portfolio-album.2026-08`
 - `source.permitflow.leadership.2026-08-15`
