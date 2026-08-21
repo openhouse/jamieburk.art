@@ -3,13 +3,14 @@ import type { Metadata } from "next";
 import SourceBackedMemory from "@/content/lab/source-backed-team-memory.mdx";
 import { Cite, Claim, References } from "@/components/citations";
 import { JBButton } from "@/components/JBButton";
+import { knowledgeWikiPractice } from "@/data/knowledge-wiki-practice";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   title: "Source-Backed Team Memory - Jamie Burkart",
   description:
-    "A lab / proof-of-practice exploring source-backed operating memory, decision lineage, onboarding context, and human-correctable AI workflows.",
+    "A lab / proof-of-practice for Knowledge Wiki Graphs, source-backed operating memory, decision lineage, and human-correctable AI workflows.",
   path: "/lab/source-backed-team-memory"
 });
 
@@ -53,6 +54,77 @@ export default function SourceBackedTeamMemoryPage() {
         <div className="mt-10 space-y-6">
           <SourceBackedMemory />
         </div>
+        <section className="mt-12 border-y border-jb-ink/12 py-10">
+          <p className="text-sm font-semibold uppercase text-jb-blue">
+            Current research
+          </p>
+          <h2 className="mt-3 max-w-3xl text-3xl font-semibold text-jb-ink">
+            A project is a reviewed projection from living knowledge
+          </h2>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-jb-ink/76">
+            <Claim
+              claimId="CLM-KNOWLEDGE-WIKI-GRAPH-PRACTICE-2026"
+              projection="case-study"
+              surface="/lab/source-backed-team-memory"
+            />
+          </p>
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {knowledgeWikiPractice.layers.map((layer, index) => (
+              <article
+                className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5"
+                key={layer.id}
+              >
+                <p className="font-label text-xs uppercase tracking-[0.16em] text-jb-ochre">
+                  Layer {index + 1}
+                </p>
+                <h3 className="mt-3 text-2xl font-semibold text-jb-blue">
+                  {layer.label}
+                </h3>
+                <p className="mt-3 font-semibold leading-6 text-jb-ink">
+                  {layer.question}
+                </p>
+                <p className="mt-3 text-sm leading-6 text-jb-ink/74">
+                  {layer.description}
+                </p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-4 rounded-lg border border-jb-blue/25 bg-jb-blue/[0.06] p-6">
+            <p className="font-label text-xs uppercase tracking-[0.16em] text-jb-blue">
+              Then compose
+            </p>
+            <h3 className="mt-3 text-2xl font-semibold text-jb-ink">
+              {knowledgeWikiPractice.projection.label}
+            </h3>
+            <p className="mt-3 font-semibold leading-6 text-jb-ink">
+              {knowledgeWikiPractice.projection.question}
+            </p>
+            <p className="mt-3 max-w-3xl leading-7 text-jb-ink/74">
+              {knowledgeWikiPractice.projection.description}
+            </p>
+          </div>
+        </section>
+        <section className="mt-12 border-b border-jb-ink/12 pb-10">
+          <p className="text-sm font-semibold uppercase text-jb-blue">
+            Research lineage
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold text-jb-ink">
+            From Noting.us to the Knowledge Wiki Graph
+          </h2>
+          <p className="mt-4 max-w-3xl leading-8 text-jb-ink/76">
+            <Claim
+              claimId="CLM-NOTING-US-KNOWLEDGE-WIKI-LINEAGE-2026"
+              projection="case-study"
+              surface="/lab/source-backed-team-memory"
+            />
+          </p>
+          <p className="mt-4 max-w-3xl leading-8 text-jb-ink/76">
+            Each project can keep its own materials, sources, responsibilities,
+            and review rules. Stable identities and explicit handoffs let
+            knowledge travel without asking one repository to become the
+            universal source of truth.
+          </p>
+        </section>
         <section className="mt-12 border-y border-jb-ink/12 py-10">
           <p className="text-sm font-semibold uppercase text-jb-blue">
             Worked example

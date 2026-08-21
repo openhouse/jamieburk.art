@@ -59,6 +59,33 @@ function loadContext() {
   };
 }
 
+function publicPracticeFixture() {
+  return {
+    schemaVersion: 1,
+    layers: [
+      { id: "source", label: "Source graph" },
+      { id: "evidence", label: "Evidence graph" },
+      { id: "semantic", label: "Semantic graph" }
+    ],
+    transitions: [
+      { from: "source", to: "evidence", automatic: false },
+      { from: "evidence", to: "semantic", automatic: false },
+      { from: "semantic", to: "projection", automatic: false }
+    ],
+    projection: {
+      id: "projection",
+      recipientSpecific: true,
+      humanGates: ["rights", "consent", "credit", "editorial review"]
+    },
+    lineage: {
+      predecessor: "Noting.us",
+      relationship: "prototype-predecessor",
+      productionAdoptionClaimed: false
+    },
+    publicSurfaces: ["/colophon", "/lab/source-backed-team-memory"]
+  };
+}
+
 test("the current federated-ecosystem snapshot satisfies its governance contract", () => {
   const run = spawnSync(process.execPath, [evaluatorPath], {
     cwd: path.resolve(scriptDir, "../.."),
@@ -203,4 +230,69 @@ test("the ecosystem claim retains separate system observations and authority ant
   assert.equal(result.passed, false, "collapsed roles and authority should fail");
   assert.match(result.failures.join("\n"), /requires seven source-distinct observations/);
   assert.match(result.failures.join("\n"), /anti-claims omit synchronization, causation, packet, security, or release boundaries/);
+});
+
+test("the public practice keeps source, evidence, and semantic graphs distinct from projection", () => {
+  const context = loadContext();
+  context.publicPractice = publicPracticeFixture();
+  context.publicPractice.layers = context.publicPractice.layers.filter(
+    (layer) => layer.id !== "evidence"
+  );
+  context.publicPractice.transitions[0].automatic = true;
+  context.publicPractice.projection.recipientSpecific = false;
+
+  const result = evaluateFederatedEcosystem(loadGovernanceSnapshot(), context);
+
+  assert.equal(result.passed, false, "a collapsed public architecture should fail");
+  assert.match(result.failures.join("\n"), /public practice requires source, evidence, and semantic graphs/);
+  assert.match(result.failures.join("\n"), /public practice transitions must remain non-automatic/);
+  assert.match(result.failures.join("\n"), /public projection must remain recipient-specific/);
+});
+
+test("the public practice presents Noting.us as a predecessor and reaches both explanatory surfaces", () => {
+  const context = loadContext();
+  context.publicPractice = publicPracticeFixture();
+  context.publicPractice.lineage.relationship = "production-platform";
+  context.publicPractice.lineage.productionAdoptionClaimed = true;
+  context.publicPractice.publicSurfaces = ["/colophon"];
+
+  const result = evaluateFederatedEcosystem(loadGovernanceSnapshot(), context);
+
+  assert.equal(result.passed, false, "inflated lineage or missing surfaces should fail");
+  assert.match(result.failures.join("\n"), /Noting\.us must remain a prototype predecessor/);
+  assert.match(result.failures.join("\n"), /public practice must reach the colophon and lab page/);
+});
+
+test("the active practice claim remains approved only for the colophon and lab surfaces", () => {
+  const context = loadContext();
+  context.publicPractice = publicPracticeFixture();
+  const claim = context.knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KNOWLEDGE-WIKI-GRAPH-PRACTICE-2026"
+  );
+  claim.projections.find((projection) => projection.key === "archive-note").surfaces = [
+    "/"
+  ];
+
+  const result = evaluateFederatedEcosystem(loadGovernanceSnapshot(), context);
+
+  assert.equal(result.passed, false, "an expanded or missing public surface should fail");
+  assert.match(result.failures.join("\n"), /practice claim must remain active only on the colophon and lab page/);
+});
+
+test("the Noting.us lineage cannot expose its protected source or claim production adoption", () => {
+  const context = loadContext();
+  context.publicPractice = publicPracticeFixture();
+  const source = context.knowledgeBank.sources.find(
+    (item) => item.id === "SRC-NOTING-US-PRACTICE-REVIEW-2026-08-21"
+  );
+  source.canonicalUrl = "https://example.com/protected";
+  const claim = context.knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NOTING-US-KNOWLEDGE-WIKI-LINEAGE-2026"
+  );
+  claim.evidence[0].renderCitation = true;
+
+  const result = evaluateFederatedEcosystem(loadGovernanceSnapshot(), context);
+
+  assert.equal(result.passed, false, "protected lineage disclosure should fail");
+  assert.match(result.failures.join("\n"), /Noting.us lineage support must stay protected and non-citing/);
 });

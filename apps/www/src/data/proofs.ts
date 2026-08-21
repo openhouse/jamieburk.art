@@ -605,12 +605,13 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "moderate",
     evidenceClass: ["public-safe-archive-summary"],
     publicWording:
-      "Developing a focused lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
+      "Developing and applying a three-graph Knowledge Wiki practice for reviewable, human-correctable, source-linked operating memory.",
     shortWording:
-      "Jamie is developing a focused method for source-backed team memory",
+      "Jamie is developing a Knowledge Wiki Graph practice for source-backed team memory",
     detailedPublicWording:
-      "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
-    sourceBasis: "Public-safe lab materials and proposal-derived method summary.",
+      "The practice keeps source, evidence, and semantic graphs distinct, then composes audience-specific projections with deterministic checks and human review.",
+    sourceBasis:
+      "Public-safe lab materials, repository architecture review, and proposal-derived method summary.",
     guardrail:
       "Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.",
     doNotSay: [
@@ -627,7 +628,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "lab"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["source-backed-memory", "documentation-architecture", "human-review"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-08-21"
   },
   {
     id: "technical-operations-operating-backbone",

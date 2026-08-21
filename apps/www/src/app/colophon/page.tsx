@@ -1,4 +1,6 @@
+import Link from "next/link";
 import type { Metadata } from "next";
+import { Claim } from "@/components/citations";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -38,6 +40,34 @@ export default function ColophonPage() {
           rights, and metadata review.
         </p>
       </div>
+      <section className="mt-14 grid gap-8 border-y border-jb-ink/16 py-10 lg:grid-cols-[0.32fr_0.68fr]">
+        <div>
+          <p className="jb-section-label">Knowledge system</p>
+          <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
+            The portfolio is a projection, not the archive
+          </h2>
+        </div>
+        <div>
+          <p className="text-xl leading-8 text-jb-ink/76">
+            <Claim
+              claimId="CLM-KNOWLEDGE-WIKI-GRAPH-PRACTICE-2026"
+              projection="archive-note"
+              surface="/colophon"
+            />
+          </p>
+          <p className="mt-5 leading-7 text-jb-ink/72">
+            Project materials, sources, interpretations, corrections, and evals
+            can keep developing while this site remains selective, readable,
+            and public-safe.
+          </p>
+          <Link
+            className="mt-6 inline-block border-b border-jb-blue font-semibold text-jb-blue hover:border-jb-green hover:text-jb-green"
+            href="/lab/source-backed-team-memory"
+          >
+            See the Knowledge Wiki Graph practice
+          </Link>
+        </div>
+      </section>
       <div className="mt-14 grid gap-8 lg:grid-cols-[0.32fr_0.68fr]">
         <div>
           <p className="jb-section-label">Working system</p>

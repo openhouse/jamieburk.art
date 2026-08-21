@@ -5,7 +5,7 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-13
+last_reviewed: 2026-08-21
 review_by: 2026-11-13
 canonical_path: docs/knowledge-bank/indexes/federated-knowledge-graph-ecosystem.md
 summary: Close reading of the ecosystem's current leading edge as a federation of specialized authorities and governed handoffs rather than one synchronized database.
@@ -25,6 +25,9 @@ relations:
   - type: informed_by
     target: source.federated-knowledge-graph-ecosystem-review.2026-08-13
     href: ../sources/federated-knowledge-graph-ecosystem-review-2026-08-13.md
+  - type: informed_by
+    target: source.knowledge-wiki-graph-practice-review.2026-08-21
+    href: ../sources/knowledge-wiki-graph-practice-review-2026-08-21.md
 ---
 
 # Federated Knowledge Wiki graph ecosystem
@@ -54,6 +57,24 @@ wording, deployment, and indexing at once.
 This page records a time-bound close reading. Its structured claim and any
 outward projection remain held. RFC 0005 remains `exploring`; this evidence
 does not advance its stage or authorize implementation.
+
+## Public representation update — August 21, 2026
+
+A second close reading considered how the architecture should become legible in
+the portfolio itself. The useful public idea is a three-graph Knowledge Wiki
+practice: the source graph, evidence graph, and semantic graph remain
+separate; audience-specific projection follows as a deliberate output.
+
+The colophon can name that system in one paragraph. The Source-Backed Team
+Memory lab page can show the three graphs, their review gates, and the lineage
+from the earlier Noting.us trust-loop prototype. The deeper repository map and
+authority contracts remain here in the Knowledge Wiki rather than burdening a
+rushed hiring reader.
+
+This is a narrower active projection of the method, not activation of the held
+ecosystem-wide claim below. It does not expose protected repository identities
+or imply that the repositories are synchronized, equally mature, or governed
+by one authority.
 
 ## What has changed
 

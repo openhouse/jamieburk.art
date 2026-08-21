@@ -8,6 +8,7 @@ import { hjeChronologyAugust2026 } from "./hje-chronology-2026-08.ts";
 import { kcTownHallCouncilFunding } from "./kc-town-hall-council-funding.ts";
 import { kcTownHallFieldPractice } from "./kctownhall-field-practice.ts";
 import { kcTownHallSocialCorpus } from "./kctownhall-social-corpus.ts";
+import { knowledgeWikiPracticeAugust2026 } from "./knowledge-wiki-practice-2026-08.ts";
 import { kcSpacesFundFacebookPostKnowledge } from "./kcspacesfund-facebook-posts-2026-07.ts";
 import { jamiePersonalFacebookPostKnowledge } from "./jamie-personal-facebook-posts-2026-07.ts";
 import { nycacPressArchive } from "./nycac-press-archive.ts";
@@ -65,6 +66,7 @@ const knowledgeBankInput = {
     ...wowListSocialPracticesAugust2026.intakeItems,
     ...projectCompositionAugust2026.intakeItems,
     ...federatedEcosystemAugust2026.intakeItems,
+    ...knowledgeWikiPracticeAugust2026.intakeItems,
     ...nycacCrsFrontlineAugust2026.intakeItems,
     ...kcTownHallCouncilFunding.intakeItems,
     ...kcTownHallFieldPractice.intakeItems,
@@ -115,6 +117,7 @@ const knowledgeBankInput = {
     ...wowListSocialPracticesAugust2026.observations,
     ...projectCompositionAugust2026.observations,
     ...federatedEcosystemAugust2026.observations,
+    ...knowledgeWikiPracticeAugust2026.observations,
     ...nycacCrsFrontlineAugust2026.observations,
     ...kcTownHallCouncilFunding.observations,
     ...kcTownHallFieldPractice.observations,
@@ -269,6 +272,7 @@ const knowledgeBankInput = {
     ...wowListSocialPracticesAugust2026.sources,
     ...projectCompositionAugust2026.sources,
     ...federatedEcosystemAugust2026.sources,
+    ...knowledgeWikiPracticeAugust2026.sources,
     ...nycacCrsFrontlineAugust2026.sources,
     ...kcTownHallCouncilFunding.sources,
     ...kcTownHallFieldPractice.sources,
@@ -423,6 +427,7 @@ const knowledgeBankInput = {
     ...wowListSocialPracticesAugust2026.claims,
     ...projectCompositionAugust2026.claims,
     ...federatedEcosystemAugust2026.claims,
+    ...knowledgeWikiPracticeAugust2026.claims,
     ...nycacCrsFrontlineAugust2026.claims,
     ...kcTownHallCouncilFunding.claims,
     ...kcTownHallFieldPractice.claims,
@@ -493,6 +498,7 @@ const knowledgeBankInput = {
     ...wowListSocialPracticesAugust2026.researchInquiries,
     ...projectCompositionAugust2026.researchInquiries,
     ...federatedEcosystemAugust2026.researchInquiries,
+    ...knowledgeWikiPracticeAugust2026.researchInquiries,
     ...nycacCrsFrontlineAugust2026.researchInquiries,
     ...kcTownHallCouncilFunding.researchInquiries,
     ...kcTownHallFieldPractice.researchInquiries,
@@ -740,6 +746,8 @@ const knowledgeBankInput = {
     ],
     occurrences: [
       { id: "source-backed-memory-method", claimId: "CLM-SOURCE-BACKED-MEMORY-METHOD-2026", projection: "case-study" },
+      { id: "knowledge-wiki-graph-practice", claimId: "CLM-KNOWLEDGE-WIKI-GRAPH-PRACTICE-2026", projection: "case-study" },
+      { id: "noting-us-knowledge-wiki-lineage", claimId: "CLM-NOTING-US-KNOWLEDGE-WIKI-LINEAGE-2026", projection: "case-study" },
       { id: "ai-evals-course-completion", claimId: "CLM-AI-EVALS-COURSE-COMPLETION-2026", projection: "case-study", sourceIds: ["SRC-AI-EVALS-CERTIFICATE-2026"] },
       {
         id: "callnyc-correction-trace",
@@ -751,6 +759,13 @@ const knowledgeBankInput = {
           "SRC-CALLNYC-GITHUB-REPOSITORY"
         ]
       }
+    ]
+  }, {
+    id: "colophon",
+    surface: "/colophon",
+    sourceOrder: [],
+    occurrences: [
+      { id: "knowledge-wiki-graph-practice", claimId: "CLM-KNOWLEDGE-WIKI-GRAPH-PRACTICE-2026", projection: "archive-note" }
     ]
   }]
 };

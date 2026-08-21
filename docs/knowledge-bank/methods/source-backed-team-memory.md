@@ -5,7 +5,7 @@ kind: method
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-10
+last_reviewed: 2026-08-21
 review_by: 2027-01-18
 canonical_path: docs/knowledge-bank/methods/source-backed-team-memory.md
 summary: >
@@ -24,6 +24,9 @@ relations:
   - type: related_to
     target: opportunity.protected.source-backed-memory-consulting.2026
     href: ../opportunities/source-backed-team-memory.md
+  - type: informed_by
+    target: source.knowledge-wiki-graph-practice-review.2026-08-21
+    href: ../sources/knowledge-wiki-graph-practice-review-2026-08-21.md
 ---
 
 # Source-Backed Team Memory
@@ -31,6 +34,29 @@ relations:
 Source-Backed Team Memory turns scattered records into a system a future reader
 can inspect and continue. The method separates intake, observation, claim,
 evidence, correction, projection, and protected absence.
+
+## Knowledge Wiki Graph practice
+
+The current practice generalizes this work across projects through three
+distinct graphs:
+
+1. **The source graph** records what material exists, where its authority
+   resides, and what may be inspected or retained.
+2. **The evidence graph** records support, complication, contradiction,
+   provenance, correction, and gaps.
+3. **The semantic graph** makes projects, people, decisions, capabilities,
+   claims, and open questions intelligible.
+
+Audience-specific projections follow those layers. A portfolio page, resume,
+research packet, and project site may draw from the same reviewed knowledge,
+but each remains its own editorial composition with its own rights, consent,
+credit, usefulness, and release gates.
+
+The earlier Noting.us prototype established a trust loop from source artifact
+to stable segment, Markdown bundle, evaluations, human review, and export. The
+Knowledge Wiki Graph practice extends that research into a federated,
+project-by-project system without claiming production adoption or automatic
+truth.
 
 ## Operating sequence
 

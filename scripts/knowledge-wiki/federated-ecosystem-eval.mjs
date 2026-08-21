@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import { knowledgeWikiPractice } from "../../apps/www/src/data/knowledge-wiki-practice.ts";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(scriptDir, "../..");
@@ -94,6 +95,7 @@ function includesAll(values, required) {
 export function loadFederatedContext() {
   return {
     knowledgeBank: structuredClone(knowledgeBank),
+    publicPractice: structuredClone(knowledgeWikiPractice),
     indexSource: readFileSync(indexPath, "utf8"),
     sourceNote: readFileSync(sourceNotePath, "utf8")
   };
@@ -294,6 +296,94 @@ export function evaluateFederatedEcosystem(
     "public-safe federation documents expose a protected machine path"
   );
 
+  const practice = context?.publicPractice;
+  const layerIds = (practice?.layers ?? []).map((layer) => layer.id);
+  check(
+    layerIds.length === 3 &&
+      new Set(layerIds).size === 3 &&
+      includesAll(layerIds, ["source", "evidence", "semantic"]) &&
+      !layerIds.includes("projection"),
+    "public practice requires source, evidence, and semantic graphs"
+  );
+  check(
+    Array.isArray(practice?.transitions) &&
+      practice.transitions.length === 3 &&
+      practice.transitions.every((transition) => transition.automatic === false),
+    "public practice transitions must remain non-automatic"
+  );
+  check(
+    practice?.projection?.id === "projection" &&
+      practice?.projection?.recipientSpecific === true &&
+      includesAll(practice?.projection?.humanGates, [
+        "rights",
+        "consent",
+        "credit",
+        "editorial review"
+      ]),
+    "public projection must remain recipient-specific with human gates"
+  );
+  check(
+    practice?.lineage?.predecessor === "Noting.us" &&
+      practice?.lineage?.relationship === "prototype-predecessor" &&
+      practice?.lineage?.productionAdoptionClaimed === false,
+    "Noting.us must remain a prototype predecessor without a production-adoption claim"
+  );
+  check(
+    includesAll(practice?.publicSurfaces, [
+      "/colophon",
+      "/lab/source-backed-team-memory"
+    ]),
+    "public practice must reach the colophon and lab page"
+  );
+  check(
+    !/(?:\/Users\/|\/Volumes\/|\/private\/tmp\/|protectedLocatorId|canonicalUrl)/.test(
+      JSON.stringify(practice ?? {})
+    ),
+    "public practice exposes a protected locator"
+  );
+
+  const practiceClaim = bank?.claims?.find(
+    (item) => item.id === "CLM-KNOWLEDGE-WIKI-GRAPH-PRACTICE-2026"
+  );
+  const practiceCaseStudy = practiceClaim?.projections?.find(
+    (projection) => projection.key === "case-study"
+  );
+  const practiceColophon = practiceClaim?.projections?.find(
+    (projection) => projection.key === "archive-note"
+  );
+  check(
+    practiceClaim?.status === "confirmed-with-boundary" &&
+      practiceClaim.projections.length === 2 &&
+      practiceCaseStudy?.status === "active" &&
+      JSON.stringify(practiceCaseStudy.surfaces) ===
+        JSON.stringify(["/lab/source-backed-team-memory"]) &&
+      practiceColophon?.status === "active" &&
+      JSON.stringify(practiceColophon.surfaces) === JSON.stringify(["/colophon"]),
+    "practice claim must remain active only on the colophon and lab page"
+  );
+
+  const notingSource = bank?.sources?.find(
+    (item) => item.id === "SRC-NOTING-US-PRACTICE-REVIEW-2026-08-21"
+  );
+  const notingClaim = bank?.claims?.find(
+    (item) => item.id === "CLM-NOTING-US-KNOWLEDGE-WIKI-LINEAGE-2026"
+  );
+  check(
+    notingSource?.visibility === "protected" &&
+      !notingSource.canonicalUrl &&
+      !notingSource.archiveUrl &&
+      !notingSource.assetUrl &&
+      notingClaim?.status === "confirmed-with-boundary" &&
+      notingClaim.evidence.every(
+        (evidence) =>
+          evidence.sourceId === notingSource.id &&
+          evidence.relationship === "private-support" &&
+          evidence.renderCitation === false
+      ) &&
+      notingClaim.antiClaims.some((item) => /production|market validation/i.test(item)),
+    "Noting.us lineage support must stay protected and non-citing"
+  );
+
   return {
     passed: failures.length === 0,
     failures,
@@ -302,6 +392,7 @@ export function evaluateFederatedEcosystem(
       handoffs: handoffs.length,
       observations: observations.length,
       protectedSources: protectedSources.length,
+      publicPracticeLayers: layerIds.length,
       projectionStatus: snapshot?.authority?.projection_status ?? "missing"
     }
   };

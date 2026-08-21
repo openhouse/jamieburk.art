@@ -73,12 +73,12 @@ export default async function WorkPage({ searchParams }: WorkPageProps) {
                 <h2 className="jb-section-label">{group}</h2>
                 <div className="mt-5 grid gap-5 border-y border-jb-ink/20 py-6 md:grid-cols-[0.34fr_0.66fr]">
                   <h3 className="text-3xl leading-tight text-jb-ink">
-                    Source-Backed Team Memory / Noting.us
+                    Source-Backed Team Memory / Knowledge Wiki Graph
                   </h3>
                   <div>
                     <p className="leading-7 text-jb-ink/76">
-                      A lab / proof-of-practice exploring source-backed operating
-                      memory, decision lineage, onboarding context, and
+                      A lab / proof-of-practice connecting source-backed operating
+                      memory, decision lineage, project knowledge, and
                       human-correctable AI workflows for knowledge-heavy teams.
                     </p>
                     <p className="mt-3 text-sm font-semibold text-jb-green">
