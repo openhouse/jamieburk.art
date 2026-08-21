@@ -1,5 +1,5 @@
 {
-  "id": "portfolio-photography-layout-v5",
+  "id": "portfolio-photography-layout-v6",
   "title": "Human Index photographic portfolio layout",
   "intent": "Photography changes the portfolio's editorial rhythm while remaining public-safe, accessible, and subordinate to human publication authority.",
   "criteria": [
@@ -31,7 +31,7 @@
     {
       "id": "hiring-argument-project-sequence",
       "blocking": true,
-      "criterion": "The homepage selected-work sequence makes the hiring argument in six moves: current NYC civic delivery, finished campaign implementation, civic-data translation, community-platform operations, long-term business systems stewardship, and built-environment implementation. Sunday Dinner remains available in the complete work index without displacing more role-relevant homepage proof."
+      "criterion": "The homepage quick path and seven-project selected-work sequence make one hiring argument for the current OTI product and operations opportunity set: product judgment, current NYC civic delivery, and sustained accountable operations lead the scan; municipal implementation, civic-data translation, recurring participation infrastructure, and polished campaign delivery complete it. Sunday Dinner remains visible, and the covers alternate digital surfaces with field photographs."
     },
     {
       "id": "truthful-photo-credit",

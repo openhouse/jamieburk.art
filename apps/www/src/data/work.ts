@@ -569,7 +569,7 @@ const workItemsInput = [
     role: "Host, Organizer & Systems Steward",
     years: "2010s-present",
     status: "Short proof page",
-    featured: false,
+    featured: true,
     priority: 7,
     visibility: "summary-only",
     proofBankIds: ["sunday-dinner-196-participation-infrastructure"],
@@ -710,12 +710,13 @@ export type WorkSlug =
   | "wowlist";
 
 export const homepageWorkOrder = [
-  "fair-rent-nyc",
-  "kc-spaces-fund",
-  "callnyc",
   "wowlist",
+  "fair-rent-nyc",
   "harry-j-epstein",
-  "kc-town-hall"
+  "kc-town-hall",
+  "callnyc",
+  "196-sunday-dinner",
+  "kc-spaces-fund"
 ] as const;
 
 export const featuredWork = homepageWorkOrder.map((slug) => {

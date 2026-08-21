@@ -91,11 +91,26 @@ test("every work item retains a governed project-bound cover", () => {
   assert(result.failures.some(({ criterion }) => criterion === "truthful-project-cover-field"));
 });
 
-test("the homepage sequence leads with current civic delivery and finished implementation", () => {
+test("the homepage sequence keeps the three-part rushed-reader opening intact", () => {
   const path = "apps/www/src/data/work.ts";
   const source = readFileSync(path, "utf8").replace(
-    '  "kc-spaces-fund",\n  "callnyc",',
-    '  "callnyc",\n  "kc-spaces-fund",'
+    '  "fair-rent-nyc",\n  "harry-j-epstein",',
+    '  "harry-j-epstein",\n  "fair-rent-nyc",'
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(
+    result.failures.some(
+      ({ criterion }) => criterion === "hiring-argument-project-sequence"
+    )
+  );
+});
+
+test("the homepage sequence keeps Sunday Dinner inside the seven-project hiring argument", () => {
+  const path = "apps/www/src/data/work.ts";
+  const source = readFileSync(path, "utf8").replace(
+    '  "196-sunday-dinner",\n',
+    ""
   );
   const result = evaluateLayout(process.cwd(), { [path]: source });
   assert.equal(result.passed, false);

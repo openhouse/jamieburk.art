@@ -230,20 +230,41 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     ? [...homepageOrderBlock[1].matchAll(/"([^"]+)"/g)].map((match) => match[1])
     : [];
   const expectedHomepageOrder = [
-    "fair-rent-nyc",
-    "kc-spaces-fund",
-    "callnyc",
     "wowlist",
+    "fair-rent-nyc",
     "harry-j-epstein",
-    "kc-town-hall"
+    "kc-town-hall",
+    "callnyc",
+    "196-sunday-dinner",
+    "kc-spaces-fund"
+  ];
+  const sundayDinnerBlock = workData.slice(
+    workData.indexOf('title: "196 Artists Residency / Sunday Dinner"'),
+    workData.indexOf('title: "KC Town Hall LLC"')
+  );
+  const startHereBlock = home.match(
+    /const startHereLinks = \[([\s\S]*?)\];/
+  );
+  const observedStartHereOrder = startHereBlock
+    ? [...startHereBlock[1].matchAll(/href: "([^"]+)"/g)].map((match) => match[1])
+    : [];
+  const expectedStartHereOrder = [
+    "/work/technical-operations",
+    "/work/wowlist",
+    "/work/fair-rent-nyc",
+    "/work/harry-j-epstein",
+    "/work/callnyc",
+    "/resume"
   ];
   if (
     JSON.stringify(observedHomepageOrder) !== JSON.stringify(expectedHomepageOrder) ||
-    !workData.includes("homepageWorkOrder.map")
+    !workData.includes("homepageWorkOrder.map") ||
+    !sundayDinnerBlock.includes("featured: true") ||
+    JSON.stringify(observedStartHereOrder) !== JSON.stringify(expectedStartHereOrder)
   ) {
     fail(
       "hiring-argument-project-sequence",
-      "The homepage project order no longer advances from current civic delivery through finished implementation, product depth, operating longevity, and cross-domain execution."
+      "The homepage no longer opens with product judgment, current civic delivery, and sustained operations before completing the seven-project argument with Sunday Dinner present and the quick path in step."
     );
   }
 

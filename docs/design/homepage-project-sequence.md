@@ -8,44 +8,102 @@ importance. Its job is to make Jamie's immediate usefulness as a Technical
 Project Manager - Product Operations & Implementation lead legible before a
 reader's attention runs out.
 
+## Current hiring-reader frame
+
+Reviewed August 21, 2026 against the four maintained OTI opportunities that
+currently govern the public resume: Product Manager 784450, PIT Crew Senior
+Product Manager 782366, SPEED Operations Manager 789810, and SPEED Senior
+Product Manager 789610.
+
+The opening scan must answer three questions in order:
+
+1. **Can Jamie make product decisions and carry a public-facing system over
+   time?**
+2. **Can Jamie work now across New York City stakeholders, policy, public
+   communications, and shared delivery?**
+3. **Can Jamie sustain accountable business operations beyond a campaign or
+   prototype?**
+
+That is why Harry J. Epstein Company belongs inside the opening three but does
+not lead. Leading with it would frame Jamie first as a historical web
+consultant. Leading with WOW List makes the product practice unmistakable;
+FairRentNYC makes the present civic context unmistakable; Epstein makes the
+duration and operational responsibility unmistakable.
+
 ## Instruction score
 
-Read the six selected projects as one sentence:
+Read the seven selected projects as one sentence:
 
-1. **NYC Artist Coalition / FairRentNYC:** Jamie is doing current, consequential
-   civic delivery across people, policy, public systems, and continuity.
-2. **KC Spaces Fund:** Jamie can turn a fast-moving collective need into a
-   polished public campaign system with clear action routes.
-3. **CallNYC:** Jamie can translate difficult government data into a resident-
+1. **WOWList.org:** Jamie co-built and operated a technically substantive
+   community platform, translating organizer practice into a natural-language
+   product and maintaining it across changing technical and social conditions.
+2. **NYC Artist Coalition / FairRentNYC:** Jamie is doing current,
+   consequential civic delivery across people, policy, public systems,
+   communications, and continuity.
+3. **Harry J. Epstein Company:** Jamie sustained six years of accountable
+   client delivery across e-commerce, analytics, content, marketing, and
+   operational workflows while contributing to measurable business growth.
+4. **KC Town Hall:** Jamie can carry implementation across public funding,
+   municipal process, presentation, compliance, field work, and responsible
+   transition.
+5. **CallNYC:** Jamie can translate difficult government data into a resident-
    facing product and information architecture.
-4. **WOWList:** Jamie has operated a technically substantive community platform
-   whose natural-language model grew from organizer practice.
-5. **Harry J. Epstein Company:** Jamie can steward business systems over years,
-   modernize operations, and contribute to measurable growth.
-6. **KC Town Hall:** Jamie can carry implementation across funding, public
-   presentation, compliance, field work, and responsible transition.
+6. **196 Artists Residency / Sunday Dinner:** Jamie can originate and sustain
+   recurring participation, onboarding, facilitation, hospitality, and
+   continuity practices; the work also supplies a documented origin path into
+   WOW List's community-calendar model.
+7. **KC Spaces Fund:** Jamie can turn a fast-moving collective need into a
+   polished public campaign system with clear action routes.
 
-The visual rhythm should move between people in real settings and finished
-digital surfaces. No promoted project may use a generic image, an unrelated
-project image, a damaged-looking capture, or an artifact that weakens the
-truthful role description.
+The first three are the rushed-reader window: product judgment, current civic
+delivery, and sustained operations. The remaining four widen the proof into
+municipal implementation, civic data, recurring participation, and polished
+campaign delivery.
 
-196 Artists Residency / Sunday Dinner remains part of the complete work index.
-It returns to the homepage only if it strengthens a live hiring argument more
-than one of the six selected projects; personal importance alone is not the
-selection rule.
+The visual rhythm alternates a digital surface with a field photograph across
+all seven projects: screenshot, photograph, screenshot, photograph,
+screenshot, photograph, screenshot. This makes the relationship between
+designed systems and situated work perceptible without treating either as
+decoration.
+
+Sunday Dinner is not an indulgent biographical aside. It supplies evidence of
+repetition, facilitation, onboarding, trust, and continuity that the other six
+projects do not, and it helps a reader understand how a recurring social
+practice became a digital product need. Its public surface remains governed by
+collective credit, participant privacy, and the approved project-courtesy
+photograph.
+
+## Quick path
+
+The homepage quick path uses the same hiring argument in compressed form:
+
+1. Technical Operations & Implementation
+2. WOWList.org
+3. NYC Artist Coalition / FairRentNYC
+4. Harry J. Epstein Company
+5. CallNYC.org
+6. Resume
+
+KC Town Hall, Sunday Dinner, and KC Spaces Fund remain in the selected-work
+sequence immediately below the role-fit and field-system sections; the quick
+path is an attention-saving route, not a second ranking.
 
 ## Change protocol
 
 Before changing the order:
 
-1. Identify the active opportunity set and the likely hiring-reader needs.
+1. Resolve the active opportunity set deterministically from governed
+   opportunity and application status.
 2. State the role-relevant function of every promoted project in one sentence.
-3. Check that the opening three projects establish current relevance, finished
-   implementation, and product judgment.
-4. Inspect desktop and mobile renders for image rhythm, legibility, repetition,
-   and weak captures.
-5. Run deterministic layout and route checks before any modeled hiring-reader
-   evaluation.
-6. Keep the new sequence only when it improves the hiring argument without
-   weakening truth, collective credit, consent, accessibility, or public safety.
+3. Check that the opening three establish product judgment, current relevance,
+   and sustained accountable operations.
+4. Keep Sunday Dinner present unless Jamie explicitly changes this editorial
+   requirement.
+5. Verify the alternating digital-surface / field-photograph rhythm, then
+   inspect desktop and mobile renders for legibility, repetition, and weak
+   captures.
+6. Run deterministic layout, route, accessibility, and public-safety checks
+   before any modeled hiring-reader evaluation.
+7. Keep the new sequence only when it improves the hiring argument without
+   weakening truth, collective credit, consent, accessibility, or public
+   safety.

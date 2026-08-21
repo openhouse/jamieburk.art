@@ -64,19 +64,21 @@
       "grader": "llm_judge",
       "blocking": true,
       "weight": 10,
-      "inputs": ["homepage", "technical operations page", "resume page"],
+      "inputs": ["homepage", "homepage project-sequence score", "active opportunity set", "technical operations page", "resume page"],
       "procedure": [
         "Give three blind judges no context beyond the candidate URLs.",
-        "Allow each judge two minutes of reading.",
-        "Ask each judge to identify Jamie's target role, central value, three proof examples, and the next action they would take."
+        "Allow each judge ninety seconds on the homepage before opening the Technical Operations or resume pages.",
+        "Ask each judge to identify Jamie's target role, central value, the distinct hiring signal supplied by each of the first three selected projects, and the next action they would take.",
+        "Ask whether Sunday Dinner contributes role-relevant evidence or feels like an unexplained biographical aside."
       ],
       "pass_criteria": [
         "At least two of three judges identify Technical Project Manager, Product Operations, or Implementation as the role family.",
         "At least two of three judges describe the central promise as creating operating structure from ambiguous work.",
-        "At least two of three judges name three accurate project proofs without inventing government employment, official authority, or solo policy causality.",
+        "At least two of three judges read the opening three projects as product judgment, current NYC civic delivery, and sustained accountable operations without inventing government employment, official authority, or solo policy causality.",
+        "At least two of three judges understand Sunday Dinner as evidence of recurring participation, onboarding, facilitation, and continuity rather than as unexplained biography.",
         "Median score is 4."
       ],
-      "evidence_required": ["three independent scorecards", "URLs reviewed", "reader summaries"],
+      "evidence_required": ["three independent scorecards", "URLs reviewed", "reader summaries", "deterministic homepage-sequence receipt"],
       "remediation_hint": "Improve first-viewport positioning, proof hierarchy, and application-path links before adding more copy."
     },
     {
