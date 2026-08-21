@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to CallNYC
 
-**Source commit:** `2ce278fa36d3e0941ec059a4044f1697e459fa5b`
-**Generation time:** 2026-08-20T19:05:24-04:00
-**Source fingerprint:** `c2931a006c61da8d8ab169b956ae070fd43f10819e0846768242f49d179ec25b`
+**Source commit:** `66505dcc521ff83dbb738d73b8bc4249e86dc5e2`
+**Generation time:** 2026-08-20T20:41:01-04:00
+**Source fingerprint:** `82252fe5181f1b93139dd8e44ac6ff9c41e45340a447c959999ceda8f62d626d`
 
 - [Digital District participant photograph metadata](../../assets/digital-district-photo.md) - `part_of` (frontmatter)
 - [Jamie with a civic field kit at New York City Council](../../assets/photographs/nyc-council-field-kit-2026.md) - `related_to` (frontmatter)
@@ -38,3 +38,4 @@
 - [New York City Council Constituent Services Data release](../../sources/nycc-constituent-services-data-2016-05-27.md) - `documents` (frontmatter)
 - [NYC Council field-kit photograph oral history, July 2026](../../sources/recollections/nyc-council-field-kit-oral-history-2026-07.md) - `related_to` (frontmatter)
 - [Website provides new information about council members' focus](../../sources/politico-callnyc-2016-03-14.md) - `documents` (frontmatter)
+- [CallNYC launch-era public interface capture](../../sources/photo-metadata/callnyc-launch-interface-2016-05-04.md) - `documents` (frontmatter)

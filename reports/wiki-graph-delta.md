@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `2ce278fa36d3e0941ec059a4044f1697e459fa5b`
-**Generation time:** 2026-08-20T19:05:24-04:00
-**Source fingerprint:** `c2931a006c61da8d8ab169b956ae070fd43f10819e0846768242f49d179ec25b`
+**Source commit:** `66505dcc521ff83dbb738d73b8bc4249e86dc5e2`
+**Generation time:** 2026-08-20T20:41:01-04:00
+**Source fingerprint:** `82252fe5181f1b93139dd8e44ac6ff9c41e45340a447c959999ceda8f62d626d`
 
 `origin/develop` has no Knowledge Wiki graph artifact; the bounded pilot is reported as an addition.
 
-- Nodes added: 454
+- Nodes added: 456
 - Nodes removed: 0
-- Edges added: 1580
+- Edges added: 1584
 - Edges removed: 0
 - New type-aware orphans: 5
 - Current rights-review records: 186
@@ -452,6 +452,8 @@
 - `source.protected.source-backed-memory-opportunity.2026`
 - `source.recollection.jamie-canoe-commuting.2026-07`
 - `source.resume.jamie-burkart.2026-06-11`
+- `source.screenshot.callnyc.launch-interface.2016-05-04`
+- `source.screenshot.kc-spaces-fund.public-site.2026-08-20`
 - `source.screenshot.let-nyc-dance.selected-frame.2026-08`
 - `source.statement.commercial-rent.jimmys-corner-rally.2026-04-10`
 - `source.statement.commercial-rent.state-introduction.2026-02-17`

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-20T19:05:24-04:00",
-  "sourceCommit": "2ce278fa36d3e0941ec059a4044f1697e459fa5b",
-  "sourceFingerprint": "c2931a006c61da8d8ab169b956ae070fd43f10819e0846768242f49d179ec25b",
+  "generatedAt": "2026-08-20T20:41:01-04:00",
+  "sourceCommit": "66505dcc521ff83dbb738d73b8bc4249e86dc5e2",
+  "sourceFingerprint": "82252fe5181f1b93139dd8e44ac6ff9c41e45340a447c959999ceda8f62d626d",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -5699,6 +5699,32 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "source.screenshot.callnyc.launch-interface.2016-05-04",
+      "path": "docs/knowledge-bank/sources/photo-metadata/callnyc-launch-interface-2016-05-04.md",
+      "title": "CallNYC launch-era public interface capture",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Public 1440 by 960 Wayback capture of the May 4, 2016 CallNYC interface selected for the portfolio in place of the weaker restored-site screenshot.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
+    },
+    {
+      "id": "source.screenshot.kc-spaces-fund.public-site.2026-08-20",
+      "path": "docs/knowledge-bank/sources/photo-metadata/kc-spaces-fund-public-site-2026-08-20.md",
+      "title": "KC Spaces Fund public-site portfolio capture",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Public 1440 by 960 browser capture of the restored KC Spaces Fund campaign homepage selected as a portfolio cover for Jamie's documented web-infrastructure contribution.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "source.screenshot.let-nyc-dance.selected-frame.2026-08",
@@ -16217,6 +16243,14 @@
       "context": null
     },
     {
+      "from": "project.callnyc",
+      "type": "uses_source",
+      "to": "source.screenshot.callnyc.launch-interface.2016-05-04",
+      "source": "frontmatter",
+      "href": "../sources/photo-metadata/callnyc-launch-interface-2016-05-04.md",
+      "context": null
+    },
+    {
       "from": "project.fair-rent-nyc",
       "type": "part_of",
       "to": "organization.nyc-artist-coalition",
@@ -16326,6 +16360,14 @@
       "to": "capability.technical-operations",
       "source": "frontmatter",
       "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "project.kc-spaces-fund",
+      "type": "uses_source",
+      "to": "source.screenshot.kc-spaces-fund.public-site.2026-08-20",
+      "source": "frontmatter",
+      "href": "../sources/photo-metadata/kc-spaces-fund-public-site-2026-08-20.md",
       "context": null
     },
     {
@@ -18391,6 +18433,22 @@
       "source": "frontmatter",
       "href": "../../research-inquiries/documented-canoe-bike-journeys.md",
       "context": "The recollection opened a bounded research question."
+    },
+    {
+      "from": "source.screenshot.callnyc.launch-interface.2016-05-04",
+      "type": "documents",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "source.screenshot.kc-spaces-fund.public-site.2026-08-20",
+      "type": "documents",
+      "to": "project.kc-spaces-fund",
+      "source": "frontmatter",
+      "href": "../../projects/kc-spaces-fund-orientation.md",
+      "context": null
     },
     {
       "from": "source.screenshot.let-nyc-dance.selected-frame.2026-08",

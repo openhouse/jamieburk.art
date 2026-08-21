@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `2ce278fa36d3e0941ec059a4044f1697e459fa5b`
-**Generation time:** 2026-08-20T19:05:24-04:00
-**Source fingerprint:** `c2931a006c61da8d8ab169b956ae070fd43f10819e0846768242f49d179ec25b`
+**Source commit:** `66505dcc521ff83dbb738d73b8bc4249e86dc5e2`
+**Generation time:** 2026-08-20T20:41:01-04:00
+**Source fingerprint:** `82252fe5181f1b93139dd8e44ac6ff9c41e45340a447c959999ceda8f62d626d`
 
 ## application
 
@@ -497,6 +497,8 @@
 - [Protected source-backed memory opportunity — metadata boundary](../sources/protected-source-backed-memory-opportunity.md) - `source.protected.source-backed-memory-opportunity.2026`
 - [Jamie Burkart recollection of bicycle-canoe journeys](../sources/recollections/jamie-canoe-commuting-2026-07.md) - `source.recollection.jamie-canoe-commuting.2026-07`
 - [Jamie Burkart public resume, maintained 2026](../sources/jamie-resume-2026-06-11.md) - `source.resume.jamie-burkart.2026-06-11`
+- [CallNYC launch-era public interface capture](../sources/photo-metadata/callnyc-launch-interface-2016-05-04.md) - `source.screenshot.callnyc.launch-interface.2016-05-04`
+- [KC Spaces Fund public-site portfolio capture](../sources/photo-metadata/kc-spaces-fund-public-site-2026-08-20.md) - `source.screenshot.kc-spaces-fund.public-site.2026-08-20`
 - [Let NYC Dance loaded-video selected frame, August 2026](../sources/photo-metadata/let-nyc-dance-selected-frame-2026-08.md) - `source.screenshot.let-nyc-dance.selected-frame.2026-08`
 - [Jimmy's Corner rally: Small Business Rent Stabilization statements](../testimony/commercial-rent-public-support/2026-04-10-jimmys-corner-rally-statements.md) - `source.statement.commercial-rent.jimmys-corner-rally.2026-04-10`
 - [State sponsors and advocates introduce the Small Business Survival Act](../testimony/commercial-rent-public-support/2026-02-17-state-introduction-statements.md) - `source.statement.commercial-rent.state-introduction.2026-02-17`
