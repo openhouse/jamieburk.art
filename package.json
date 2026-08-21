@@ -125,6 +125,8 @@
     "test:team-memory-reader": "node --test scripts/knowledge-wiki/protected-team-memory-reader-eval.test.mjs",
     "evals:anonymized-team-memory-case-study": "node scripts/knowledge-wiki/anonymized-team-memory-case-study-eval.mjs",
     "test:anonymized-team-memory-case-study": "node --test scripts/knowledge-wiki/anonymized-team-memory-case-study-eval.test.mjs",
+    "evals:team-memory-forwarded-hiring": "node scripts/knowledge-wiki/team-memory-forwarded-hiring-eval.mjs",
+    "test:team-memory-forwarded-hiring": "node --test scripts/knowledge-wiki/team-memory-forwarded-hiring-eval.test.mjs",
     "wiki:employment:report": "node scripts/knowledge-wiki/report-employment-context.mjs",
     "wiki:employment:check": "node scripts/knowledge-wiki/report-employment-context.mjs --check",
     "wiki:hillclimb": "npm run wiki:family-closure && npm run wiki:testimony:heteroglossia:check && npm run test:public-hearings && npm run test:commercial-rent-testimony && npm run test:commercial-rent-public-support && npm run test:transcript-photo-constellations && npm run wiki:graph && npm run wiki:report && npm run wiki:employment:report && npm run wiki:check && npm run wiki:employment:check && npm run wiki:test && npm run wiki:eval",

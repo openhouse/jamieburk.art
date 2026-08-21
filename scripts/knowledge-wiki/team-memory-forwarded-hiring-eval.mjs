@@ -1,0 +1,142 @@
+#!/usr/bin/env node
+
+import { readFileSync } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+import { defaultRepoRoot } from "./lib.mjs";
+
+export const contractPath =
+  "evals/knowledge-wiki/team-memory-forwarded-hiring.json";
+
+const expectedInputs = [
+  "case-studies/2026-08-21/source-backed-team-memory/01-technical-leader-perspective.md",
+  "case-studies/2026-08-21/source-backed-team-memory/03-technical-leader-conversational-voice.md"
+];
+
+function hasAll(source, patterns) {
+  return patterns.every((pattern) => pattern.test(source));
+}
+
+export function evaluateForwardedHiringScenario({ contract, pageSource }) {
+  const publicPage = pageSource.replace(/\s+/g, " ");
+  const allowedInputs = contract?.judge?.allowedArtifactInputs ?? [];
+  const prohibitedInputs = contract?.judge?.prohibitedInputs ?? [];
+  const decisionJudge = contract?.judges?.find(
+    (judge) => judge.id === "decision-maker-hire-gate"
+  );
+
+  const checks = {
+    judge_input_boundary_is_exact:
+      JSON.stringify(allowedInputs) === JSON.stringify(expectedInputs) &&
+      contract?.judge?.repositoryAccess === false &&
+      prohibitedInputs.includes("repository source") &&
+      prohibitedInputs.includes("raw or working transcripts") &&
+      prohibitedInputs.includes("Jamie-perspective case-study document"),
+    navigation_begins_at_public_team_memory:
+      contract?.site?.startPath === "/lab/source-backed-team-memory" &&
+      contract?.site?.judgeDelivery === "harness-captured-local-render" &&
+      contract?.judge?.navigation?.mustBeginAtStartPath === true &&
+      contract?.judge?.navigation?.publicRoutesOnly === true &&
+      contract?.judge?.navigation?.judgeReceivesHarnessCapturedRenderings ===
+        true,
+    forwardable_decision_brief: hasAll(publicPage, [
+      /Internal decision brief/i,
+      /When a team grows faster than its context can travel/i,
+      /Continue, revise, or stop/i
+    ]),
+    focused_paid_engagement_is_explicit: hasAll(publicPage, [
+      /One safe source surface/i,
+      /short paid discovery and prototype sprint/i,
+      /1.?.?2 weeks/i
+    ]),
+    team_attention_is_explicit: hasAll(publicPage, [
+      /one team-side owner/i,
+      /one (?:working|review) session/i,
+      /one approved, non-sensitive or representative source/i
+    ]),
+    jamie_responsibility_is_explicit: hasAll(publicPage, [
+      /Jamie(?:'|’|&apos;)s part/i,
+      /map the knowledge friction/i,
+      /build one reviewable source-to-memory loop/i
+    ]),
+    why_jamie_is_explicit: hasAll(publicPage, [
+      /Why Jamie/i,
+      /technical project management/i,
+      /facilitation/i,
+      /documentation architecture/i,
+      /implementation/i,
+      /governance/i
+    ]),
+    success_and_pre_kickoff_are_explicit: hasAll(publicPage, [
+      /Success questions/i,
+      /correct the record/i,
+      /answer agreed questions from linked sources/i,
+      /Before kickoff/i,
+      /fee, confidentiality, ownership, source authority/i,
+      /retention, internal owner, and final success criteria/i
+    ]),
+    generic_summary_is_differentiated: hasAll(publicPage, [
+      /more than an AI summary/i,
+      /linked to sources/i,
+      /human review and correction/i
+    ]),
+    resume_is_one_click_away:
+      /href=\{site\.resumePath\}/.test(pageSource) &&
+      contract?.site?.resumePath ===
+        "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    contact_is_one_click_away: /href=\{site\.emailHref\}/.test(pageSource),
+    binary_hiring_decision_is_strict:
+      JSON.stringify(decisionJudge?.verdicts) ===
+        JSON.stringify(["hire", "pass"]) &&
+      decisionJudge?.allCriteriaMustPass === true &&
+      decisionJudge?.outputOrder?.[0] === "critique",
+    modeled_result_is_advisory:
+      contract?.calibration?.status === "required" &&
+      contract?.calibration?.minimumHumanLabeledHireExamples >= 20 &&
+      contract?.calibration?.minimumHumanLabeledPassExamples >= 20 &&
+      contract?.calibration?.releaseAuthority === "advisory-only" &&
+      contract?.calibration?.realWorldDecisionClaimed === false
+  };
+
+  const failures = Object.entries(checks)
+    .filter(([, passed]) => !passed)
+    .map(([id]) => id);
+
+  return {
+    checks,
+    failures,
+    deterministicVerdict: failures.length === 0 ? "pass" : "fail",
+    judgeStatus:
+      failures.length === 0
+        ? "ready-for-isolated-modeled-review"
+        : "preflight-blocked"
+  };
+}
+
+export function evaluateRepository(repoRoot = defaultRepoRoot) {
+  const contract = JSON.parse(
+    readFileSync(path.join(repoRoot, contractPath), "utf8")
+  );
+  const pageSource = readFileSync(
+    path.join(repoRoot, contract.site.pageSourcePath),
+    "utf8"
+  );
+  return evaluateForwardedHiringScenario({ contract, pageSource });
+}
+
+const isCli =
+  process.argv[1] &&
+  path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+
+if (isCli) {
+  const result = evaluateRepository();
+  if (result.failures.length) {
+    console.error("Forwarded team-memory hiring preflight failed:");
+    for (const failure of result.failures) console.error(`- ${failure}`);
+    process.exit(1);
+  }
+  console.log(
+    "Forwarded team-memory hiring preflight passed; isolated modeled review is ready and remains advisory until calibrated."
+  );
+}

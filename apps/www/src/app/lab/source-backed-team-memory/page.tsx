@@ -49,7 +49,7 @@ export default function SourceBackedTeamMemoryPage() {
         <section className="mt-10 overflow-hidden rounded-lg border border-jb-blue/25 bg-jb-warm">
           <div className="border-b border-jb-blue/15 bg-jb-blue/[0.06] p-6 sm:p-8">
             <p className="text-sm font-semibold uppercase text-jb-blue">
-              When this becomes urgent
+              Internal decision brief
             </p>
             <h2 className="mt-3 max-w-3xl text-3xl font-semibold text-jb-ink">
               When a team grows faster than its context can travel
@@ -109,6 +109,73 @@ export default function SourceBackedTeamMemoryPage() {
               leaves open or unresolved questions explicitly flagged for
               human review and correction.
             </p>
+          </div>
+          <div className="grid gap-px border-t border-jb-blue/15 bg-jb-ink/10 md:grid-cols-2">
+            <div className="bg-jb-paper p-6 sm:px-8">
+              <p className="font-label text-xs uppercase tracking-[0.16em] text-jb-ochre">
+                Your team&apos;s part
+              </p>
+              <h3 className="mt-3 text-xl font-semibold text-jb-blue">
+                A light, explicit commitment
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-jb-ink/74">
+                Name one team-side owner, choose one approved, non-sensitive or
+                representative source, and make time for one working session
+                and one review session.
+              </p>
+            </div>
+            <div className="bg-jb-paper p-6 sm:px-8">
+              <p className="font-label text-xs uppercase tracking-[0.16em] text-jb-ochre">
+                Jamie&apos;s part
+              </p>
+              <h3 className="mt-3 text-xl font-semibold text-jb-blue">
+                Make the practice usable
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-jb-ink/74">
+                I map the knowledge friction, facilitate the working session,
+                build one reviewable source-to-memory loop, document its human
+                correction path, and make the handoff decision legible.
+              </p>
+            </div>
+          </div>
+          <div className="grid gap-px border-t border-jb-blue/15 bg-jb-ink/10 md:grid-cols-3">
+            <div className="bg-jb-warm p-6 sm:px-8">
+              <p className="font-label text-xs uppercase tracking-[0.16em] text-jb-ochre">
+                Why Jamie
+              </p>
+              <p className="mt-3 text-sm leading-6 text-jb-ink/74">
+                I join technical project management, facilitation,
+                documentation architecture, implementation, and governance.
+                This problem is organizational and technical.
+              </p>
+            </div>
+            <div className="bg-jb-warm p-6 sm:px-8">
+              <p className="font-label text-xs uppercase tracking-[0.16em] text-jb-ochre">
+                Success questions
+              </p>
+              <p className="mt-3 text-sm leading-6 text-jb-ink/74">
+                Can the owner correct the record, answer agreed questions from
+                linked sources, see uncertainty, and reduce repeated explanation
+                or onboarding friction?
+              </p>
+            </div>
+            <div className="bg-jb-warm p-6 sm:px-8">
+              <p className="font-label text-xs uppercase tracking-[0.16em] text-jb-ochre">
+                Before kickoff
+              </p>
+              <p className="mt-3 text-sm leading-6 text-jb-ink/74">
+                Agree the fee, confidentiality, ownership, source authority,
+                retention, internal owner, and final success criteria.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-3 border-t border-jb-blue/15 p-6 sm:px-8">
+            <JBButton href={site.resumePath} variant="secondary">
+              Review resume
+            </JBButton>
+            <JBButton href={site.emailHref}>
+              Discuss the first sprint
+            </JBButton>
           </div>
         </section>
         <div className="mt-6 rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">

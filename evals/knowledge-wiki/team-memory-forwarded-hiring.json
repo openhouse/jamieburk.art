@@ -1,0 +1,99 @@
+{
+  "id": "team-memory-forwarded-hiring-scenario-2026-08-21",
+  "version": 1,
+  "purpose": "Test whether a technical leader can forward the public Team Memory page and resume to company decision-makers and make a focused paid engagement easy to authorize.",
+  "scenario": {
+    "advocate": "Protected prospective technical leader",
+    "decisionMakers": "Company leaders with budget and hiring authority",
+    "sequence": [
+      "The advocate shares the Team Memory URL with a short internal text message.",
+      "Decision-makers begin at the Team Memory page and may navigate public routes, including the resume.",
+      "They discuss the proposal against the organization's immediate need.",
+      "They decide hire or pass.",
+      "The advocate relays the decision and actionable communication recommendations to Jamie."
+    ],
+    "realWorldDecisionClaimed": false
+  },
+  "site": {
+    "origin": "http://127.0.0.1:3107",
+    "startPath": "/lab/source-backed-team-memory",
+    "pageSourcePath": "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
+    "resumePath": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "judgeDelivery": "harness-captured-local-render"
+  },
+  "judge": {
+    "kind": "isolated_llm_roleplay",
+    "repositoryAccess": false,
+    "allowedArtifactInputs": [
+      "case-studies/2026-08-21/source-backed-team-memory/01-technical-leader-perspective.md",
+      "case-studies/2026-08-21/source-backed-team-memory/03-technical-leader-conversational-voice.md"
+    ],
+    "prohibitedInputs": [
+      "repository source",
+      "raw or working transcripts",
+      "private communications",
+      "Jamie-perspective case-study document",
+      "protected company identity or commercial details",
+      "prior judge output"
+    ],
+    "navigation": {
+      "publicRoutesOnly": true,
+      "mustBeginAtStartPath": true,
+      "mayInspectResume": true,
+      "mayInspectLinkedPublicPortfolioPages": true,
+      "judgeReceivesHarnessCapturedRenderings": true
+    },
+    "disclaimer": "Fictionalized development simulation. It is not a quotation, endorsement, participation claim, prediction, offer, or actual hiring decision by the real people or company.",
+    "requiredResponseSections": [
+      "Advocate text message",
+      "Decision-maker discussion",
+      "Decision",
+      "Advocate relay to Jamie",
+      "Recommendations"
+    ]
+  },
+  "judges": [
+    {
+      "id": "advocate-forwardability-gate",
+      "criterion": "Can the internal advocate explain the concrete organizational need, Jamie's distinct value, and the small next engagement in one short text message without inventing evidence?",
+      "verdicts": ["pass", "fail"],
+      "allCriteriaMustPass": true,
+      "outputOrder": ["critique", "primaryRisk", "verdict"]
+    },
+    {
+      "id": "decision-maker-hire-gate",
+      "criterion": "Would leaders with budget and hiring authority authorize Jamie for the focused paid discovery sprint described on the public site, subject to ordinary internal approval, because the page and resume make need, fit, scope, attention cost, safeguards, outputs, and the decision at handoff clear?",
+      "verdicts": ["hire", "pass"],
+      "allCriteriaMustPass": true,
+      "outputOrder": ["critique", "primaryRisk", "verdict", "decisionStatement"]
+    },
+    {
+      "id": "advocate-relay-usefulness-gate",
+      "criterion": "Does the advocate's relay give Jamie the decision, its reasons, and the smallest truthful revisions that would make Jamie's value easier for busy company leaders to appreciate?",
+      "verdicts": ["pass", "fail"],
+      "allCriteriaMustPass": true,
+      "outputOrder": ["critique", "primaryRisk", "verdict"]
+    }
+  ],
+  "deterministicGates": [
+    "exact anonymous input allowlist",
+    "repository and transcript access prohibited",
+    "navigation begins at Team Memory page",
+    "public routes only",
+    "forwardable decision brief present",
+    "organizational problem and first engagement explicit",
+    "team attention and Jamie responsibility explicit",
+    "generic summarization differentiated",
+    "resume and contact each reachable in one click",
+    "calibration status explicit"
+  ],
+  "acceptanceGate": "hire",
+  "failureGate": "pass",
+  "calibration": {
+    "status": "required",
+    "minimumHumanLabeledHireExamples": 20,
+    "minimumHumanLabeledPassExamples": 20,
+    "releaseAuthority": "advisory-only",
+    "realWorldDecisionClaimed": false
+  }
+}

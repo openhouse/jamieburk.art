@@ -61,10 +61,18 @@ test("removing the fast-growth knowledge problem blocks modeled review", () => {
 
 test("removing the focused first source blocks modeled review", () => {
   const pageSource = candidatePage.replace(
-    "one approved, non-sensitive or representative source",
+    /one approved,\s*non-sensitive or\s*representative source/gi,
     "all available company systems"
   );
-  const evaluation = evaluateCandidate(pageSource);
+  const supportingCopy = candidateSupportingCopy.replace(
+    /one approved source surface/gi,
+    "all available company systems"
+  );
+  const evaluation = evaluateProtectedTeamMemoryProposal({
+    contract,
+    pageSource,
+    supportingCopy
+  });
 
   assert.equal(evaluation.checks.first_engagement_is_focused, false);
 });

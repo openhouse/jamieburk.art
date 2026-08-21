@@ -26,6 +26,9 @@ relations:
   - type: related_to
     target: evaluation.portfolio.source-backed-team-memory.protected-reader.2026-08-21
     href: protected-team-memory-reader.md
+  - type: related_to
+    target: evaluation.portfolio.source-backed-team-memory.forwarded-hiring.2026-08-21
+    href: team-memory-forwarded-hiring.md
 human_review: governed-open
 ---
 
