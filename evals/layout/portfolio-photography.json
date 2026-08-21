@@ -29,6 +29,11 @@
       "criterion": "Every work item has exactly one project-bound cover. Harry J. Epstein, CallNYC, KC Spaces Fund, and WOW List use their own public surfaces; Fair Rent NYC, Sunday Dinner, and KC Town Hall use governed photographs. Resume, contact, About, and Colophon remain deliberately text-led."
     },
     {
+      "id": "browser-window-presentation",
+      "blocking": true,
+      "criterion": "The CallNYC launch screenshot uses the exact alpha-bearing PNG from the original press kit in every portfolio rendering. Its browser chrome and transparent drop-shadow surround meet the portfolio's white field through one shared, manifest-declared presentation. Transparency-flattening transcodes and synthetic dark wells are prohibited."
+    },
+    {
       "id": "homepage-hiring-sequence",
       "blocking": true,
       "criterion": "The homepage presents exactly six featured proofs in the approved hiring order: long-term Harry J. Epstein commercial systems stewardship, current NYC Artist Coalition civic operations, resident-facing CallNYC product translation, KC Town Hall municipal and field implementation, WOW List platform thinking, then Sunday Dinner participation infrastructure. Sunday Dinner is a required homepage proof. KC Spaces Fund remains available in the complete work index. The quick path mirrors the first three proofs and keeps the resume one action away."

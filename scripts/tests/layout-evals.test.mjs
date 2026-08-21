@@ -128,12 +128,34 @@ test("the KC Spaces Fund cover remains its own public website", () => {
 test("CallNYC retains the original launch screenshot", () => {
   const path = "apps/www/src/data/work-covers.ts";
   const source = readFileSync(path, "utf8").replace(
-    'src: "/artifacts/callnyc/original-launch.webp",',
+    'src: "/artifacts/callnyc/original-launch.png",',
     'src: "/artifacts/callnyc/archived-prototype.png",'
   );
   const result = evaluateLayout(process.cwd(), { [path]: source });
   assert.equal(result.passed, false);
   assert(result.failures.some(({ criterion }) => criterion === "truthful-project-cover-field"));
+});
+
+test("CallNYC cannot lose its alpha-aware browser-window presentation", () => {
+  const path = "apps/www/src/data/work-covers.ts";
+  const source = readFileSync(path, "utf8").replace(
+    '    presentation: "browser-window"\n',
+    ""
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "browser-window-presentation"));
+});
+
+test("CallNYC cannot return to a transparency-flattening WebP transcode", () => {
+  const path = "apps/www/src/data/work-covers.ts";
+  const source = readFileSync(path, "utf8").replace(
+    'src: "/artifacts/callnyc/original-launch.png",',
+    'src: "/artifacts/callnyc/original-launch.webp",'
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "browser-window-presentation"));
 });
 
 test("an authorized project cover cannot be described as still pending", () => {

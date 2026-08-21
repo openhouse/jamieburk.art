@@ -1,4 +1,5 @@
 import { portfolioPhotos } from "@/data/photography";
+import type { WorkCoverPresentation } from "@/components/WorkCoverMedia";
 
 export type WorkCover = {
   src: string;
@@ -10,6 +11,7 @@ export type WorkCover = {
   kind: "photograph" | "screenshot" | "graphic";
   fit?: "cover" | "contain";
   objectPosition?: string;
+  presentation?: WorkCoverPresentation;
 };
 
 const workCovers = {
@@ -34,14 +36,15 @@ const workCovers = {
     objectPosition: "50% 45%"
   },
   callnyc: {
-    src: "/artifacts/callnyc/original-launch.webp",
-    width: 1200,
-    height: 800,
+    src: "/artifacts/callnyc/original-launch.png",
+    width: 1223,
+    height: 1136,
     alt: "Original CallNYC launch interface showing U.S. citizenship guidance, issue navigation, and a Council member service profile.",
     caption:
       "The original interface translated civic data into issue pathways, district context, and resident guidance. CallNYC is now archived and unofficial.",
     credit: "Original CallNYC press-kit screenshot, 2016.",
-    kind: "screenshot"
+    kind: "screenshot",
+    presentation: "browser-window"
   },
   "kc-spaces-fund": {
     src: "/artifacts/kc-spaces-fund/public-site.webp",

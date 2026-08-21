@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { readFileSync, readdirSync, statSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -29,6 +29,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     "metadata-and-locator-safety",
     "editorial-not-decorative",
     "truthful-project-cover-field",
+    "browser-window-presentation",
     "homepage-hiring-sequence",
     "tag-navigation-contract",
     "human-index-material-system",
@@ -158,18 +159,27 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     readText("evals/layout/homepage-hiring-sequence-hillclimb.json")
   );
   const workCard = readText("apps/www/src/components/WorkCard.tsx");
+  const workCoverMediaPath = "apps/www/src/components/WorkCoverMedia.tsx";
+  const workCoverMedia =
+    overrides[workCoverMediaPath] ??
+    (existsSync(path.join(root, workCoverMediaPath))
+      ? readFileSync(path.join(root, workCoverMediaPath), "utf8")
+      : "");
   const caseStudyLayout = readText("apps/www/src/components/CaseStudyLayout.tsx");
+  const caseStudyBlocks = readText("apps/www/src/components/CaseStudyBlocks.tsx");
   const homePage = readText("apps/www/src/app/page.tsx");
   const workIndex = readText("apps/www/src/app/work/page.tsx");
   const tagList = readText("apps/www/src/components/TagList.tsx");
   const capabilityGrid = readText("apps/www/src/components/CapabilityGrid.tsx");
   const coverCount = [...workCovers.matchAll(/^  (?:"[^"]+"|[a-z]+): \{/gm)].length;
   if (coverCount !== 7 ||
-      !workCard.includes('from "next/image"') ||
+      !workCoverMedia.includes('from "next/image"') ||
+      !workCard.includes("WorkCoverMedia") ||
       !workCard.includes("getWorkCover(item.slug)") ||
       !workCard.includes("cover.src") ||
       !workCard.includes("cover.caption") ||
       !workCard.includes("cover.credit") ||
+      !caseStudyLayout.includes("WorkCoverMedia") ||
       !caseStudyLayout.includes("getWorkCover(item.slug)") ||
       !caseStudyLayout.includes("cover.src") ||
       !caseStudyLayout.includes("cover.caption") ||
@@ -179,7 +189,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   for (const [title, requiredCover] of [
     ["Harry J. Epstein Company", '"/artifacts/hje/public-site.png"'],
     ["NYC Artist Coalition / FairRentNYC", "portfolioPhotos.nycacMarketHotelBanner.src"],
-    ["CallNYC.org", '"/artifacts/callnyc/original-launch.webp"'],
+    ["CallNYC.org", '"/artifacts/callnyc/original-launch.png"'],
     ["KC Spaces Fund", '"/artifacts/kc-spaces-fund/public-site.webp"'],
     ["WOWList.org", '"/artifacts/wowlist/public-threshold.webp"'],
     ["196 Artists Residency / Sunday Dinner", "portfolioPhotos.sundayDinnerSharedMap.src"],
@@ -200,6 +210,52 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     if (slugIndex < 0 || !coverBlock.includes(`src: ${requiredCover}`)) {
       fail("truthful-project-cover-field", `Missing project-bound cover for ${title}.`);
     }
+  }
+
+  const callNycCoverStart = workCovers.indexOf("  callnyc: {");
+  const callNycCoverEnd = workCovers.indexOf("\n  },", callNycCoverStart);
+  const callNycCover = workCovers.slice(callNycCoverStart, callNycCoverEnd);
+  const callNycWorkStart = workData.indexOf('    title: "CallNYC.org"');
+  const callNycWorkEnd = workData.indexOf("\n  },", callNycWorkStart);
+  const callNycWork = workData.slice(callNycWorkStart, callNycWorkEnd);
+  const callNycAlphaPath = "apps/www/public/artifacts/callnyc/original-launch.png";
+  const callNycAlphaAbsolutePath = path.join(root, callNycAlphaPath);
+  const callNycAlphaBytes = existsSync(callNycAlphaAbsolutePath)
+    ? readFileSync(callNycAlphaAbsolutePath)
+    : Buffer.alloc(0);
+  const callNycAlphaHash = createHash("sha256").update(callNycAlphaBytes).digest("hex");
+  const hasRgbaPngHeader =
+    callNycAlphaBytes.length > 25 &&
+    callNycAlphaBytes.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10])) &&
+    callNycAlphaBytes[25] === 6;
+  if (
+    !callNycCover.includes('src: "/artifacts/callnyc/original-launch.png"') ||
+    !callNycWork.includes('src: "/artifacts/callnyc/original-launch.png"') ||
+    !callNycCover.includes('presentation: "browser-window"') ||
+    !callNycWork.includes('presentation: "browser-window"') ||
+    !workData.includes('presentation: z.enum(["browser-window"]).optional()') ||
+    !workCoverMedia.includes('presentation === "browser-window"') ||
+    !workCoverMedia.includes("aspect-[7/5]") ||
+    !workCoverMedia.includes("object-cover object-top") ||
+    !workCoverMedia.includes("bg-white") ||
+    !hasRgbaPngHeader ||
+    callNycAlphaHash !== "9f2bd3335338bfd1e75dad7a3861b4d46f3021306510639e086a5b16a7e4f806" ||
+    /bg-black|bg-jb-ink/.test(workCoverMedia) ||
+    !workCard.includes("WorkCoverMedia") ||
+    !caseStudyLayout.includes("WorkCoverMedia") ||
+    !caseStudyBlocks.includes("WorkCoverMedia") ||
+    hiringSequenceHillclimb.callNycBrowserWindowPresentation?.criterion !==
+      "source-faithful-artifact-to-page-continuity" ||
+    hiringSequenceHillclimb.callNycBrowserWindowPresentation?.sourceIntegrity?.sha256 !==
+      "9f2bd3335338bfd1e75dad7a3861b4d46f3021306510639e086a5b16a7e4f806" ||
+    hiringSequenceHillclimb.callNycBrowserWindowPresentation?.browserReview
+      ?.blackTranscodeArtifact !== "absent" ||
+    hiringSequenceHillclimb.callNycBrowserWindowPresentation?.decision !== "keep-change"
+  ) {
+    fail(
+      "browser-window-presentation",
+      "CallNYC must use the exact alpha-bearing press-kit PNG on the shared white-field browser-window presentation in every portfolio rendering."
+    );
   }
 
   const sequenceMatch = workData.match(

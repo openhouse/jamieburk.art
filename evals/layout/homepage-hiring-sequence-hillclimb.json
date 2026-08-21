@@ -98,6 +98,26 @@
     },
     "decision": "keep-change"
   },
+  "callNycBrowserWindowPresentation": {
+    "criterion": "source-faithful-artifact-to-page-continuity",
+    "baseline": "A WebP derivative flattened the original screenshot's transparent surround to black, making the browser window appear sunken inside a sharp dark well.",
+    "diagnosis": "The black field was a transcode artifact, not content in the original CallNYC launch screenshot.",
+    "candidate": "Use the exact RGBA press-kit PNG on the portfolio's white field through one shared browser-window presentation across homepage cards, case-study leads, and artifact galleries.",
+    "sourceIntegrity": {
+      "sourceFilename": "CallNYC.org - Screenshot - U.S. Citizenship.png",
+      "dimensions": "1223x1136",
+      "pngColorType": "RGBA",
+      "sha256": "9f2bd3335338bfd1e75dad7a3861b4d46f3021306510639e086a5b16a7e4f806"
+    },
+    "browserReview": {
+      "mobileHomepage": "pass",
+      "mobileCaseStudyLead": "pass",
+      "mobileArtifactGallery": "pass",
+      "desktopContinuity": "pass",
+      "blackTranscodeArtifact": "absent"
+    },
+    "decision": "keep-change"
+  },
   "decision": "keep-change",
   "boundaries": {
     "truthClaimsChanged": false,

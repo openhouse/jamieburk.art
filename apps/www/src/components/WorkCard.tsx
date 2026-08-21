@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Route } from "next";
 import { StatusBadge } from "@/components/StatusBadge";
 import { TagList } from "@/components/TagList";
+import { WorkCoverMedia } from "@/components/WorkCoverMedia";
 import { getWorkCover } from "@/data/work-covers";
 import type { WorkMeta } from "@/types/work";
 
@@ -19,18 +19,18 @@ export function WorkCard({ item }: WorkCardProps) {
         <figure className="min-w-0">
           <Link
             aria-label={`Read the ${item.title} case study`}
-            className="group block overflow-hidden bg-jb-ink/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-jb-blue"
+            className="group block overflow-hidden bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-jb-blue"
             href={`/work/${item.slug}` as Route}
           >
-            <Image
+            <WorkCoverMedia
               alt={cover.alt}
-              className={`aspect-[3/2] w-full transition-[filter] duration-200 group-hover:brightness-95 motion-reduce:transition-none ${
-                cover.fit === "contain" ? "object-contain" : "object-cover"
-              }`}
+              fit={cover.fit}
               height={cover.height}
+              interactive
+              objectPosition={cover.objectPosition}
+              presentation={cover.presentation}
               sizes="(min-width: 1024px) 42vw, 100vw"
               src={cover.src}
-              style={{ objectPosition: cover.objectPosition }}
               width={cover.width}
             />
           </Link>

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { ReactNode } from "react";
 import {
   AtAGlance,
@@ -11,6 +10,7 @@ import {
 import { JBButton } from "@/components/JBButton";
 import { References } from "@/components/citations";
 import { StatusBadge } from "@/components/StatusBadge";
+import { WorkCoverMedia } from "@/components/WorkCoverMedia";
 import { getWorkCover } from "@/data/work-covers";
 import type { WorkMeta } from "@/types/work";
 
@@ -33,16 +33,15 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
           <p className="mt-3 text-xl font-semibold text-jb-green">{item.subtitle}</p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">{item.summary}</p>
           <figure className="mt-8">
-            <Image
+            <WorkCoverMedia
               alt={cover.alt}
-              className={`aspect-[3/2] w-full bg-jb-ink/5 ${
-                cover.fit === "contain" ? "object-contain" : "object-cover"
-              }`}
+              fit={cover.fit}
               height={cover.height}
+              objectPosition={cover.objectPosition}
               preload
+              presentation={cover.presentation}
               sizes="(min-width: 1024px) 68vw, 100vw"
               src={cover.src}
-              style={{ objectPosition: cover.objectPosition }}
               width={cover.width}
             />
             <figcaption className="mt-3 text-sm leading-6 text-jb-ink/64">

@@ -67,7 +67,8 @@ const workMetaSchema = z.object({
           caption: z.string(),
           href: z.string(),
           sourceLabel: z.string(),
-          fit: z.enum(["cover", "contain"]).optional()
+          fit: z.enum(["cover", "contain"]).optional(),
+          presentation: z.enum(["browser-window"]).optional()
         })
         .optional()
     })
@@ -341,12 +342,13 @@ const workItemsInput = [
           "Public-facing page patterns that moved from constituent issue to relevant office, district context, and possible next step.",
         type: "prototype",
         media: {
-          src: "/artifacts/callnyc/original-launch.webp",
+          src: "/artifacts/callnyc/original-launch.png",
           alt: "Original CallNYC launch interface showing U.S. citizenship guidance, issue navigation, and a Council member service profile.",
           caption:
             "Original CallNYC launch interface, 2016. It documents the historical product; the current public instance remains archived, unofficial, and non-current.",
           href: "https://callnyc.org/",
-          sourceLabel: "Original CallNYC press-kit screenshot"
+          sourceLabel: "Original CallNYC press-kit screenshot",
+          presentation: "browser-window"
         }
       },
       {
