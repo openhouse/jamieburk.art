@@ -467,7 +467,7 @@ const claims: KnowledgeBank["claims"] = [
     status: "confirmed-with-boundary",
     projections: [{
       key: "case-study",
-      text: "A July 2017 production snapshot records 1,846 users, 16,142 posts/events, 23,864 lists/tags, 28,837 list follows, 20,927 saved events, and 35 city-region keys with at least 50 posts. These are historical database counts, not current activity.",
+      text: "A July 2017 production snapshot documents WOW List activity across 35 city ecosystems, supporting local organizers who used the platform to run calendars, websites, and email lists for their scenes.",
       status: "active",
       citationRequired: true,
       surfaces: ["/work/wowlist"]

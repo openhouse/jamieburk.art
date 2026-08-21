@@ -5,12 +5,12 @@ kind: project
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-19
+last_reviewed: 2026-08-14
 review_by: 2026-10-19
 aliases:
   - HJE
 canonical_path: docs/knowledge-bank/projects/harry-j-epstein.md
-summary: Long-running e-commerce, analytics, publishing, and operational modernization for a multigenerational Kansas City industrial supply business.
+summary: A 2009-2015 client engagement centered on e-commerce, analytics, publishing, and operational modernization; when Jamie formalized his practice as Thick Arts LLC in 2012, Harry J. Epstein Company became the LLC's first client.
 relations:
   - type: uses_source
     target: source.hje.research-brief.2026-07
@@ -21,6 +21,9 @@ relations:
   - type: related_to
     target: timeline.jamie-practice.2004-present
     href: ../timelines/practice-2004-present.md
+  - type: uses_source
+    target: source.nys-dos.thick-arts-llc.formation.2012-07-06
+    href: ../sources/nys-dos-thick-arts-llc-formation-2012-07-06.md
   - type: supports
     target: capability.technical-operations
     href: ../capabilities/technical-operations.md
@@ -36,6 +39,15 @@ intelligence lived in paper, phone calls, store practices, photographs, coded
 pricing, and staff memory.
 
 ## Jamie's documented portfolio role
+
+Jamie's work with Harry J. Epstein Company began in 2009. He formalized his
+independent practice as Thick Arts LLC in 2012, with HJE as the LLC's first
+client, and continued the engagement through 2015. The maintained portfolio
+chronology does not present HJE as a current client.
+
+The [New York Department of State entity record](../sources/nys-dos-thick-arts-llc-formation-2012-07-06.md)
+independently establishes July 6, 2012 as Thick Arts LLC's initial filing date.
+It does not establish the client relationship or the practice's 2009 start.
 
 Jamie worked on e-commerce, navigation, search, interface behavior, checkout,
 dealer access, analytics, publishing, database performance, marketing, and

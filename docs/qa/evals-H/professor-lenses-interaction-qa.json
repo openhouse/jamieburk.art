@@ -1,23 +1,23 @@
 {
-  "reportVersion": 1,
-  "checkedAt": "2026-08-12T16:36:46.428Z",
-  "baseUrl": "http://127.0.0.1:3057",
-  "publicSurfaceFingerprint": "eef497de543aab662bdfb7d838c23d18060d76ce456ed1867e6ef14e5878eeda",
+  "reportVersion": 3,
+  "checkedAt": "2026-08-21T18:35:30.642567Z",
+  "baseUrl": "http://127.0.0.1:3217",
+  "publicSurfaceFingerprint": "37130a2ec29260c57fd47543e1ca07afcd00450f9b0144ea07b8aca3e11448a9",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 118,
-  "method": "Playwright keyboard interaction plus bounded DOM and viewport inspection on the built local candidate. This is not a human screen-reader or assistive-technology session.",
+  "publicSurfaceFileCount": 150,
+  "method": "Playwright keyboard interaction plus bounded DOM and viewport inspection on the exact local candidate. This is not a human screen-reader or assistive-technology session.",
   "keyboard": {
     "desktopTabSequence": [
       {
         "tag": "a",
-        "text": "Skiptocontent",
+        "text": "Skip to content",
         "href": "#main",
         "focusVisible": true,
         "id": null
       },
       {
         "tag": "a",
-        "text": "JBJamieBurkart",
+        "text": "JBJamie Burkart",
         "href": "/",
         "focusVisible": true,
         "id": null
@@ -31,7 +31,7 @@
       },
       {
         "tag": "a",
-        "text": "TechnicalOperations",
+        "text": "Technical Operations",
         "href": "/work/technical-operations",
         "focusVisible": true,
         "id": null
@@ -68,7 +68,7 @@
   "mobileNavigation": {
     "menuFocusBeforeOpen": {
       "tag": "summary",
-      "text": "Menu",
+      "text": "MenuClose menu",
       "href": null,
       "focusVisible": true,
       "id": null
@@ -188,7 +188,15 @@
       },
       {
         "level": 3,
-        "text": "Source-backed team memory"
+        "text": "Knowledge Wiki Graphs"
+      },
+      {
+        "level": 3,
+        "text": "Limits of this comparison"
+      },
+      {
+        "level": 2,
+        "text": "Sources and notes"
       },
       {
         "level": 2,

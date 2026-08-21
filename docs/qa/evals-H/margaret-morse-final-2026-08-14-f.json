@@ -1,0 +1,32 @@
+{
+  "evaluator": "Fictionalized Margaret Morse analytical lens only; this is not Margaret Morse, not a quotation, and not an endorsement.",
+  "reviewerId": "morse-f-2026-08-14-7812ae0a",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "7812ae0a29ed91b6a2a9782af5e14b7b112c26305fafd83d13ad722b4dcf6c52",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The homepage makes the artistic-civic-technical-social through-line discoverable within two clicks through About and the project pages.",
+    "Open House is accurately bounded as a 2006 participatory gallery experiment with communal decision-making and distributed documentation, without converting criticism into a testimonial.",
+    "WOW List translates social observation into a usable natural-language community platform and separates its July 2017 scale snapshot from its 2026 public return in progress.",
+    "196 Artists Residency and Sunday Dinner translate hospitality, care, participation, and place into repeatable invitation, onboarding, hosting, documentation, access-handoff, and follow-up systems.",
+    "NYC Artist Coalition and FairRentNYC translate situated cultural-space participation into civic infrastructure while preserving collective policy and campaign credit.",
+    "Source-Backed Team Memory carries attention and documentation into a current technical method through Known, Open, and Protected states, correction traces, source-linked decisions, human review, and explicit handoffs.",
+    "Case pages provide resolvable source notes, source limitations, dated status language, visibility labels, and Known, Open, and Protected boundaries.",
+    "Project roles, collaborators, and evidentiary limits are visible rather than buried."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "Participant privacy passes, with participant-level records explicitly withheld.",
+    "Collective-credit safeguards distinguish initiation, individual implementation, co-building, co-organizing, coalition contribution, and collective outcomes.",
+    "No protected educational records or unapproved testimonials were exposed."
+  ],
+  "recommendation": "PASS. Preserve this composition and its boundaries. The portfolio demonstrates at least five bounded continuities in which experimentation, participation, attention, documentation, care, place, and hospitality become usable systems and transferable handoffs.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "public-web-only independent holdout",
+    "reviewedAt": "2026-08-14",
+    "filesEdited": false
+  }
+}

@@ -6,8 +6,8 @@ projection_type: photo-occurrence
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-14
-review_by: 2027-02-14
+last_reviewed: 2026-08-20
+review_by: 2027-02-20
 canonical_path: docs/knowledge-bank/projections/photography/kc-town-hall-tired-of-tires-before.md
 summary: Exact public occurrence binding the before-collection field frame to the KC Town Hall resident-service sequence.
 projection_status: active
@@ -28,9 +28,9 @@ caption:
   assertions:
     - statement.photo.kc-town-hall.tired-of-tires-before-context.v1
 credit:
-  text: From the KC Town Hall project archive. Photographer not identified in the retained export.
+  text: Photo courtesy of KC Town Hall.
   assertions:
-    - statement.photo.kc-town-hall.tired-of-tires-archive-credit.v1
+    - statement.photo.kc-town-hall.tired-of-tires-before.courtesy-credit.v1
 permission_source: source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14
 approval:
   public_git: approved

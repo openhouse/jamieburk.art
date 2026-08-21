@@ -41,6 +41,7 @@ export const kcTownHallResidentServiceAugust2026 = {
       visibility: "public-safe",
       disposition: "integrated",
       sourceIds: [
+        "SRC-KCTH-TIRED-OF-TIRES-RESIDENT-SERVICE-REVIEW-2026-08-14",
         "SRC-WAYBACK-KCTH-TIRED-OF-TIRES-2020-10-30",
         "SRC-URBANHERM-X-KCTH-TIRES-2019",
         "SRC-URBANHERM-X-JIMMY-TIRES-2022",

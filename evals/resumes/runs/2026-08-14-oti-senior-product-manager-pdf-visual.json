@@ -1,42 +1,40 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.nyc-oti.senior-product-manager.782366.pdf-visual",
-  "inspectedAt": "2026-08-14T15:15:56-04:00",
+  "inspectedAt": "2026-08-21T16:01:57Z",
   "sourceTemplate": {
-    "access": "read-only source; edited only in a new private copy",
-    "revisionUnchangedAfterExport": true
+    "access": "read-only source; edited only in a new private copy for this opportunity",
+    "revisionUnchangedAfterExport": true,
+    "privateLocatorCommitted": false
+  },
+  "markdown": {
+    "path": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
+    "sha256": "194cf14cf3f6bf84e09af8c5b0890d74fa18f9d62165124ccae81f2577a4f786"
   },
   "pdf": {
     "path": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf",
-    "sha256": "10dd60305a53913fc12d98f04d9bd12cd5c31b1d7b65d82087b8942908207526",
-    "bytes": 91337,
+    "sha256": "ce61d8379fddcae73abe0120b35f6b7edb45cdfd23734326882db042c229bcf7",
+    "bytes": 95323,
     "pages": 2,
     "pageSize": "US Letter"
   },
   "inspection": {
-    "method": "Exported from the native Google Docs copy, rendered every page at 150 DPI, and visually inspected at original detail.",
+    "method": "Exported from the private opportunity-specific Google Docs working copy; verified native 9-point list markers against 10-point item text; rasterized every page at 144 DPI; visually inspected both pages; and checked PDF geometry, extracted text, and link annotations.",
+    "allPagesRasterized": true,
     "actualNamedPeopleParticipated": false,
     "pages": [
       {
         "page": 1,
         "pass": true,
-        "notes": "Name, target title, contact links, profile, skills, and the first two experience sections are legible with clear hierarchy and no clipping or overlap."
+        "notes": "Name, target title, contact links, profile, full product lifecycle, responsible public technology, and the single Thick Arts LLC employer container are legible with clear hierarchy and no clipping or overlap. The current-versus-historical technology qualification is readable without crowding, and Harry J. Epstein Company is plain black text with no hyperlink annotation."
       },
       {
         "page": 2,
         "pass": true,
-        "notes": "WOW List, CallNYC, KC Town Hall, additional leadership, education, and work authorization are legible with clear grouping and no clipping or overlap. Politico New York remains typographically consistent and links to the archived article PDF; the KC Town Hall transition ends cleanly without the removed disbursement sentence."
+        "notes": "WOW List, CallNYC, KC Town Hall, additional leadership, education, and work authorization are legible with the approved evidence and public-boundary caveats intact. Politico New York is visibly blue and underlined and links to the archived article PDF."
       }
-    ],
-    "checks": {
-      "noClippingOrOverlap": true,
-      "typographicHierarchyPreserved": true,
-      "twoPageReadingOrderCoherent": true,
-      "contactAndPortfolioLinksPresent": true,
-      "politicoSourceLinkPresent": true,
-      "collectiveCreditAndClaimBoundariesVisible": true
-    }
+    ]
   },
   "overall": "pass",
-  "boundary": "This is an artifact and visual-quality inspection. No named hiring reader participated, and a pass is not an interview, endorsement, eligibility determination, or hiring decision. Private Google document locators are intentionally excluded from the public repository."
+  "boundary": "Artifact and visual-quality inspection only. No named hiring reader participated, and a pass is not an endorsement, interview promise, eligibility determination, or hiring decision."
 }

@@ -23,12 +23,12 @@ const startHereLinks = [
   {
     href: "/work/harry-j-epstein",
     label: "Harry J. Epstein Company",
-    note: "Legacy e-commerce, analytics, content, marketing, and operations modernization."
+    note: "Long-term commercial systems stewardship, implementation, and measurable business contribution."
   },
   {
     href: "/work/fair-rent-nyc",
-    label: "FairRentNYC / Commercial Rent Stabilization",
-    note: "Campaign memory, source maps, public-data framing, and coalition operations."
+    label: "NYC Artist Coalition / FairRentNYC",
+    note: "Current civic operations, coalition systems, and public-facing policy communication."
   },
   {
     href: "/work/callnyc",

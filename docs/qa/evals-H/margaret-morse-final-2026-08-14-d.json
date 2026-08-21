@@ -1,0 +1,35 @@
+{
+  "evaluator": "Margaret Morse — fictionalized analytical lens",
+  "evaluatorDisclaimer": "Independent analytical role-play only. This evaluation does not represent Margaret Morse, quote her, imply her participation, or constitute her endorsement.",
+  "reviewerId": "morse-d-2026-08-14-7812ae0a",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "7812ae0a29ed91b6a2a9782af5e14b7b112c26305fafd83d13ad722b4dcf6c52",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "Within one click, the About page explicitly identifies the practice as artistic, civic, technical, and social; within the second click, linked project pages make those continuities inspectable.",
+    "The About page traces more than three coherent continuities: Open House into WOW List, Sunday Dinner and 196, NYC Artist Coalition and FairRentNYC, and source-backed team memory. It shows observed relationships becoming models, interfaces used with people, learning records, and durable continuation.",
+    "Sunday Dinner and 196 treats hospitality, trust, onboarding, access handoffs, minimal documentation, and follow-up as participation infrastructure while withholding participant-level data.",
+    "WOW List connects community vocabulary and organizer attention to a collaboratively editable natural-language platform, followable keyword communities, publishing workflows, historical instrumentation, and long-term stewardship. Its current surface is accurately labeled as a noindex return threshold rather than a restored calendar.",
+    "FairRentNYC connects lived participation, facilitated rooms, public action surfaces, policy translation, source maps, running minutes, action trackers, and campaign memory while repeatedly distinguishing Jamie's implementation from collective policy outcomes.",
+    "CallNYC shows civic data becoming recognizable resident issue pathways and clearly labels the product an archived, unofficial, non-current prototype.",
+    "The home and Technical Operations pages immediately establish the target role: Technical Project Manager — Product Operations & Implementation, with requirements, delivery rhythms, risk signals, documentation, launch support, onboarding, and handoffs translated into concrete project evidence.",
+    "Citation anchors expose source notes, evidentiary limits, and return paths. Eight representative reachable public sources resolved successfully during review.",
+    "Dates and statuses remain differentiated and visible: HJE 2009–2015; CallNYC 2016 and archived; FairRentNYC 2017–Present; WOW List historical activity separated from its 2026 return-in-progress threshold; Sunday Dinner and 196 marked 2010s–present and summary-only."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "Collective credit is explicit at the appropriate scope.",
+    "The portfolio repeatedly rejects sole-causation readings of coalition and policy outcomes.",
+    "Participant-level community records and protected educational records remain excluded.",
+    "Source notes distinguish evidence from endorsement, attendance, causality, and outcome claims."
+  ],
+  "recommendation": "PASS. The candidate satisfies PR-015 at the full 4/4 threshold. From this lens, no additional revision or Jamie review is required before release.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "public-web-only independent holdout",
+    "reviewedAt": "2026-08-14",
+    "filesEdited": false
+  }
+}

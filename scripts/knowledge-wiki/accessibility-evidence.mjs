@@ -16,6 +16,7 @@ export const canonicalAccessibilityRoutes = Object.freeze([
   "/work/harry-j-epstein",
   "/work/fair-rent-nyc",
   "/work/callnyc",
+  "/work/kc-spaces-fund",
   "/work/wowlist",
   "/work/196-sunday-dinner",
   "/work/kc-town-hall"
@@ -157,7 +158,7 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
     passed:
       report.reportVersion === 1 &&
       report.rows.length === expectedRows &&
-      expectedRows === 56 &&
+      expectedRows === 60 &&
       canonicalCoverage &&
       completeMatrix &&
       rowsPass &&

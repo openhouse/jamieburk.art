@@ -5,8 +5,8 @@ kind: asset
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-14
-review_by: 2027-02-14
+last_reviewed: 2026-08-20
+review_by: 2027-02-20
 canonical_path: docs/knowledge-bank/assets/graphics/kc-town-hall-tired-of-tires-flyer-2019.md
 summary: Public-safe record for a cropped outreach design stating the recurring free residential tire-pickup service model.
 media_type: graphic
@@ -44,7 +44,14 @@ statements:
       - source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14
   - id: statement.design.kc-town-hall.tired-of-tires-archive-custody.v1
     property: archive_custody
-    value: KC Town Hall project archive; component design authorship remains under review.
+    value: KC Town Hall project archive; individual component authorship unresolved.
+    rank: preferred
+    confidence: high
+    references:
+      - source.kc-town-hall.tired-of-tires.design-field-archive.2019-2022
+  - id: statement.design.kc-town-hall.tired-of-tires.courtesy-credit.v1
+    property: display_credit
+    value: Design courtesy of KC Town Hall.
     rank: preferred
     confidence: high
     references:

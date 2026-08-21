@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "evalId": "hje-thick-arts-client-chronology-2026-08-14",
+  "runId": "2026-08-14-hje-hiring-argument-composition-hillclimb",
+  "evaluatedAt": "2026-08-14T20:20:00-04:00",
+  "overall": "pass",
+  "readerGoal": "Make the featured HJE project prove implementation leadership, modernization, maintainability, preserved trust, and business value without making chronology the argument.",
+  "baseline": {
+    "caseStudyChronologyParagraphs": 2,
+    "workCardSummaryLedWithChronology": true,
+    "problem": "Accurate supporting history occupied the most valuable opening position on a featured hiring surface."
+  },
+  "boundedChanges": [
+    "kept the accurate 2009-2015 period in the work card's at-a-glance years attribute",
+    "removed the first-client and LLC-formation paragraphs from the HJE case-study narrative",
+    "rewrote the work-card summary to foreground modernization and preservation of the company's trusted voice",
+    "retained the verified chronology in canonical claims, correction history, source notes, project documentation, timeline, and standard resume chronology",
+    "removed the unselected chronology claims from the HJE public page plan and generated public citation registry"
+  ],
+  "postChange": {
+    "chronologyEval": "pass",
+    "canonicalClaims": 2,
+    "governedChronologySurfaces": 3,
+    "maintainedResumeVariants": 5,
+    "mutationTestsPassing": 7,
+    "workCardYears": "2009-2015",
+    "caseStudyChronologyMentions": 0,
+    "caseStudyValueSignals": [
+      "long-running implementation problem",
+      "one maintainable system",
+      "2x revenue growth"
+    ]
+  },
+  "boundaries": [
+    "Factual maturity does not require compositional prominence.",
+    "The knowledge wiki keeps the chronology retrievable even when the public case study does not select it.",
+    "Standard resume dates remain accurate; this change does not erase professional history.",
+    "No automated score substitutes for Jamie's editorial judgment about the hiring argument."
+  ]
+}

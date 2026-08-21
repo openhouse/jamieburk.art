@@ -1,0 +1,27 @@
+{
+  "evalId": "betanyc-newsletter-opportunity-monitor-v1",
+  "asOf": "2026-08-20",
+  "objective": "Improve recall for strong implementation leadership while reducing credential false positives.",
+  "baseline": {
+    "policyImplementationTitleSignal": false,
+    "mandatoryMastersHardScreen": false,
+    "observedErrors": [
+      "Associate Director of Policy Implementation was underrated by generic title heuristics.",
+      "A project-manager title could proceed despite an explicit mandatory master's degree."
+    ]
+  },
+  "candidate": {
+    "policyImplementationTitleSignal": true,
+    "associateDirectorPenaltyCalibrated": true,
+    "writtenExperienceYearsParsed": true,
+    "mandatoryMastersHardScreen": true,
+    "scoredRowsActuallyRanked": true,
+    "externalOfficialReviewsExpire": true,
+    "regressionTests": [
+      "policy implementation strong-match positive control",
+      "mandatory master's degree negative control"
+    ]
+  },
+  "decision": "keep-candidate",
+  "reason": "The candidate admits the reviewed CFB implementation lead and Polimorphic first-product-hire lead to provisional intake, rejects the reviewed HRA credential mismatch before model evaluation, ranks scored results rather than discovery order, and expires dated external reviews; none of these outcomes changes a canonical opportunity or application."
+}

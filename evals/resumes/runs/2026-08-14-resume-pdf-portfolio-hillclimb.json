@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "evalId": "resume-pdf-portfolio-2026-08-14.hillclimb",
+  "evaluatedAt": "2026-08-14T17:32:00-04:00",
+  "baseline": {
+    "markdownVersions": 5,
+    "markdownPdfSiblingPairs": 1,
+    "visuallyInspectedVersions": 1,
+    "score": 0.2,
+    "lowestCriterion": "Every maintained opportunity needs a same-basename PDF bound to its authoritative Markdown and page-by-page inspection."
+  },
+  "iterations": [
+    {
+      "id": "native-google-docs-rendering",
+      "boundedChange": "Copied the read-only style source into private working documents, imported each opportunity Markdown, preserved the Palatino, Oswald, Karla, US Letter, link, and bullet system, and exported five two-page PDFs.",
+      "result": "Structural coverage reached 5/5; the read-only source revision remained unchanged and no private Google locator entered the repository."
+    },
+    {
+      "id": "remove-defensive-non-event-wording",
+      "boundedChange": "Applied Jamie's prior editorial decision across four remaining variants by ending the KC Town Hall funding bullet with the mission-aligned transition, then re-exported and reinspected the affected PDFs.",
+      "result": "All five variants retain affirmative, documented role evidence without narrating grant non-disbursement."
+    },
+    {
+      "id": "fail-closed-artifact-binding",
+      "boundedChange": "Added deterministic sibling, PDF structure, link, hash, visual-receipt, source-boundary, and mutation gates to the maintained resume command.",
+      "result": "Missing PDFs, Markdown drift, PDF drift, failed pages, and private Google locators fail closed."
+    }
+  ],
+  "final": {
+    "markdownVersions": 5,
+    "markdownPdfSiblingPairs": 5,
+    "visuallyInspectedVersions": 5,
+    "passingVersions": 5,
+    "score": 1,
+    "actualNamedPeopleParticipated": false,
+    "overall": "pass"
+  },
+  "boundary": "This hill climb improves maintained application artifacts. It does not simulate actual participation, endorsement, or a final hiring decision by any named person."
+}

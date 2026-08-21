@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "evalId": "hiring-reader-llm-public-resume-2026-08-20",
+  "evaluatedAt": "2026-08-21T16:11:50.404Z",
+  "acceptanceQuestion": "Under this explicitly fictionalized public-source lens, would this reader advance Jamie from resume review to a structured interview or practical work sample for this opportunity?",
+  "actualPeopleParticipated": false,
+  "model": "gpt-5.6-sol",
+  "results": [
+    {
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "readerPairId": "oti-product-luke-farrell",
+      "resumeMarkdownPath": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.md",
+      "resumeSha256": "194cf14cf3f6bf84e09af8c5b0890d74fa18f9d62165124ccae81f2577a4f786",
+      "contextPaths": [
+        "docs/knowledge-bank/sources/jobs-oti-senior-product-manager-782366.md",
+        "docs/knowledge-bank/sources/nyc-pit-crew-launch-2026.md",
+        "docs/knowledge-bank/sources/luke-farrell-pit-crew-2026.md"
+      ],
+      "contextSha256": "81a472acc77c4ce08003b7e863dae67c77d94191d855a33535dfd8dd9a5756b5",
+      "postingSourceReviewedAt": "2026-08-20",
+      "promptVersion": "hiring-reader-public-resume-v1",
+      "cacheKey": "opportunity.nyc-oti.senior-product-manager.782366|oti-product-luke-farrell|194cf14cf3f6bf84e09af8c5b0890d74fa18f9d62165124ccae81f2577a4f786|81a472acc77c4ce08003b7e863dae67c77d94191d855a33535dfd8dd9a5756b5|2026-08-20|hiring-reader-public-resume-v1",
+      "pairId": "oti-product-luke-farrell",
+      "verdict": "pass",
+      "decision": "advance-to-structured-next-step",
+      "rationale": "The resume presents enough direct, relevant evidence to justify a structured interview or practical work sample. Jamie shows more than five years of end-to-end product leadership, repeated public launches, resident-facing civic work, participatory discovery, cross-functional delivery, agency and policy translation, and hands-on implementation in constrained environments. CallNYC, WOW List, FairRentNYC, and Tired of Tires collectively support credible public-interest technology fit. The screen is not conclusive: several claims lack quantified adoption, service-quality, team-scope, and outcome evidence, and Senior IT Architect minimum qualifications remain unresolved. Those gaps warrant validation at the next stage rather than rejection at resume review.",
+      "strengths": [
+        "Strong lifecycle coverage from problem framing and discovery through prototyping, launch, adoption, measurement, documentation, and retrospectives.",
+        "Direct evidence of resident-facing and public-interest work, especially CallNYC and Tired of Tires.",
+        "Credible experience translating among residents, organizers, government stakeholders, designers, engineers, and operations teams.",
+        "Hands-on technical fluency supports productive leadership of multidisciplinary digital-service teams.",
+        "Demonstrated delivery judgment in legacy, low-cost, resource-constrained, and institutionally complex settings without claiming sole credit for collective outcomes."
+      ],
+      "constructiveCritique": "The resume is persuasive on breadth but less decisive on scale and measurable product outcomes. It should make Jamie's individual decisions clearer within collective work: what research changed the roadmap, which tradeoffs Jamie owned, how MVP or pilot success was defined, what accessibility or compliance requirements were satisfied, and what adoption or service-quality metrics resulted. The consulting and coalition entries also need clearer team size, engineering and design leadership scope, delivery cadence, and examples of managing dependencies across institutions. The prominent 14+ years claim is credible as broad product and project work, but the chronology should distinguish formal product-management responsibility from adjacent founder, advocacy, implementation, and operations experience.",
+      "missingEvidence": [
+        "Documented satisfaction of the Senior IT Architect civil-service minimum qualifications, including the complete education and employment chronology used by City reviewers.",
+        "Specific product metrics such as resident reach, completion rates, adoption, retention, service-time improvement, accessibility results, or learning that changed subsequent releases.",
+        "Team scope: numbers and roles of engineers, designers, researchers, operations staff, vendors, or agency counterparts Jamie led.",
+        "A concrete example of roadmap prioritization, an MVP or pilot decision, and a difficult delivery tradeoff owned by Jamie.",
+        "Direct evidence of production-quality practices for accessibility, security, privacy, compliance, incident handling, and ongoing service reliability."
+      ],
+      "validateNext": "Advance to a structured product case interview or bounded work sample using a resident-facing City service. Validate problem framing, discovery design, policy and agency translation, prioritization, MVP and pilot definition, accessibility and privacy constraints, rollout planning, metrics, and post-launch learning. Separately conduct the formal civil-service eligibility review and verify Jamie's precise authority, team scope, and outcomes in the strongest cited projects.",
+      "actualPersonParticipated": false,
+      "boundary": "This evaluation is an explicitly fictionalized public-source model simulation using Luke Farrell only as a reader lens; it is not participation, review, approval, a hiring decision, or endorsement by Luke Farrell."
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "readerPairId": "oti-product-lisa-gelobter",
+      "resumeMarkdownPath": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.md",
+      "resumeSha256": "194cf14cf3f6bf84e09af8c5b0890d74fa18f9d62165124ccae81f2577a4f786",
+      "contextPaths": [
+        "docs/knowledge-bank/sources/jobs-oti-senior-product-manager-782366.md",
+        "docs/knowledge-bank/sources/nyc-pit-crew-launch-2026.md",
+        "docs/knowledge-bank/sources/nyc-lisa-gelobter-appointment-2026.md"
+      ],
+      "contextSha256": "b13034d6d57e0179572d1bf0f7a21dcd5be08c0052dcb21bab8e6bb7690b2bc8",
+      "postingSourceReviewedAt": "2026-08-20",
+      "promptVersion": "hiring-reader-public-resume-v1",
+      "cacheKey": "opportunity.nyc-oti.senior-product-manager.782366|oti-product-lisa-gelobter|194cf14cf3f6bf84e09af8c5b0890d74fa18f9d62165124ccae81f2577a4f786|b13034d6d57e0179572d1bf0f7a21dcd5be08c0052dcb21bab8e6bb7690b2bc8|2026-08-20|hiring-reader-public-resume-v1",
+      "pairId": "oti-product-lisa-gelobter",
+      "verdict": "pass",
+      "decision": "advance-to-structured-next-step",
+      "rationale": "The resume presents sufficient resume-screen evidence to advance Jamie to a structured interview or practical work sample. It shows more than five years of relevant product leadership, repeated concept-to-public-launch delivery, resident- and community-facing services, hands-on technical fluency, and work across discovery, scoping, implementation, adoption, documentation, and public-interest constraints. CallNYC is particularly direct evidence of translating civic data into resident guidance, while WOW List demonstrates multi-city product operations and KC Town Hall demonstrates service delivery involving intake, field operations, municipal coordination, and public reporting. The coalition work adds institutional navigation, policy translation, facilitation, and collective-accountability judgment. This is strong alignment with the PIT Crew's publicly described model of understanding problems, testing, launching, learning, and improving public delivery. Advancement remains conditional on the separate Senior IT Architect civil-service qualification review.",
+      "strengths": [
+        "Fourteen-plus years of end-to-end product and technical-project leadership in complex, resource-constrained environments.",
+        "Direct evidence of taking public-facing digital products from problem definition through implementation and launch.",
+        "Resident-facing civic-technology example in CallNYC, including constituent-services data, information architecture, and actionable guidance.",
+        "Service-design and implementation evidence from Tired of Tires, spanning eligibility, intake, scheduling, field delivery, City coordination, and public reporting.",
+        "Cross-functional translation among residents, organizers, policy stakeholders, designers, engineers, operations teams, elected officials, and senior decision-makers relevant to multi-agency delivery work beyond a single project type or institution; confidence in transfer to City-scale portfolio work therefore remains limited without further validation."
+      ],
+      "constructiveCritique": "The resume is credible but often describes broad capability more clearly than demonstrated product outcomes. Several bullets read as responsibility inventories rather than evidence of a consequential decision, constraint, action, and measured result. The strongest quantified results—35 city ecosystems, 30-plus pages of coalition memory, 300-plus gatherings, and doubled revenue—do not yet establish resident reach, adoption, accessibility performance, service improvement, delivery speed, or learning-driven iteration. The application would be stronger with one or two concise examples showing how Jamie prioritized competing needs, rejected or narrowed scope, managed a cross-functional product team, responded to user evidence, and changed a production service after launch. The long-running founder and coalition roles are relevant, but the resume should make the intensity, dates, team sizes, decision authority, and concurrent-work structure easier to understand. The disclaimer about historical technical proficiency is appropriately candid but consumes scarce resume space without identifying which technical capabilities are current. None of these gaps defeats advancement, but they should be tested rather than inferred.",
+      "missingEvidence": [
+        "Complete education and employment chronology needed for the Senior IT Architect minimum-qualification review.",
+        "Explicit confirmation that Jamie satisfies the civil-service title's architecture, solutions, infrastructure, or related-experience requirements.",
+        "Named product metrics such as resident reach, completion rates, adoption, reliability, satisfaction, accessibility results, or service-time improvement.",
+        "Concrete examples of roadmap prioritization, MVP or pilot decisions, tradeoffs, and learning-driven iteration.",
+        "Team size, reporting structure, budget authority, delivery cadence, and the scope of Jamie's decision rights on major products or engagements beyond a single project type or institution; confidence in transfer to City-scale portfolio work therefore remains limited without further validation. "
+      ],
+      "validateNext": "Advance to a structured interview or bounded work sample. Validate Jamie's ability to frame an ambiguous resident-service problem, synthesize discovery evidence, define an accessible MVP, prioritize under agency and policy constraints, establish measurable outcomes, manage delivery risks, and design a public rollout with learning loops. Separately require HR to review the complete chronology against the Senior IT Architect minimum qualifications before treating eligibility as resolved.",
+      "actualPersonParticipated": false,
+      "boundary": "This is a fictionalized public-source model simulation and not participation, review, approval, decision-making, or endorsement by Lisa Gelobter."
+    }
+  ]
+}

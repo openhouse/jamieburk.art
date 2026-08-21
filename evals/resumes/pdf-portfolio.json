@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "id": "resume-pdf-portfolio-2026-08-14",
+  "evaluatedAt": "2026-08-20T12:35:00-04:00",
+  "currentRunPath": "evals/resumes/runs/2026-08-20-resume-pdf-portfolio-lifecycle-public.json",
+  "sourceTemplate": {
+    "access": "read-only source; edits occur only in private opportunity-specific copies",
+    "privateLocatorCommitted": false,
+    "styleSignature": {
+      "pageSize": "US Letter",
+      "pageWidthPoints": 612,
+      "pageHeightPoints": 792,
+      "marginsPoints": {
+        "top": 36,
+        "bottom": 36,
+        "left": 43.2,
+        "right": 43.2
+      },
+      "name": "Palatino Linotype 21 pt",
+      "role": "Oswald 11.5 pt",
+      "body": "Karla 10.5 pt",
+      "sectionHeading": "Karla 9 pt bold",
+      "listHierarchy": "list marker exactly 1 pt smaller than its item text",
+      "links": "blue and underlined"
+    }
+  },
+  "artifactStandards": {
+    "expectedArtifacts": 10,
+    "expectedPages": 2,
+    "minimumBytes": 50000,
+    "maximumBytes": 10000000,
+    "expectedMediaBox": [0, 0, 612, 792],
+    "listHierarchy": {
+      "pdfCoordinateScale": 0.75,
+      "markerPointsBelowItem": 1,
+      "tolerancePoints": 0.02
+    },
+    "requiredContactLinks": [
+      "mailto:jamie.burkart@gmail.com",
+      "https://jamieburk.art/",
+      "https://www.linkedin.com/in/jamie-burkart/",
+      "https://github.com/openhouse"
+    ]
+  },
+  "versions": [
+    {
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "markdownPath": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.md",
+      "pdfPath": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.pdf",
+      "visualRunPath": "evals/resumes/runs/2026-08-14-codepath-engineering-project-manager-5160542007-pdf-visual.json"
+    },
+    {
+      "opportunityId": "opportunity.aclu.senior-project-manager.8620968002",
+      "markdownPath": "resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-8620968002.md",
+      "pdfPath": "resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-8620968002.pdf",
+      "visualRunPath": "evals/resumes/runs/2026-08-14-aclu-senior-project-manager-8620968002-pdf-visual.json"
+    },
+    {
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "markdownPath": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.md",
+      "pdfPath": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.pdf",
+      "visualRunPath": "evals/resumes/runs/2026-08-14-benepass-product-operations-manager-7f963a7a-pdf-visual.json"
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "markdownPath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
+      "pdfPath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf",
+      "visualRunPath": "evals/resumes/runs/2026-08-14-oti-senior-product-manager-pdf-visual.json"
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "markdownPath": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.md",
+      "pdfPath": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.pdf",
+      "visualRunPath": "evals/resumes/runs/2026-08-20-oti-speed-operations-manager-789810-pdf-visual.json"
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "markdownPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.md",
+      "pdfPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.pdf",
+      "visualRunPath": "evals/resumes/runs/2026-08-20-oti-product-manager-784450-pdf-visual.json"
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "markdownPath": "resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Jamie-Burkart-Resume-NYC-OTI-SPEED-Senior-Product-Manager-789610.md",
+      "pdfPath": "resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Jamie-Burkart-Resume-NYC-OTI-SPEED-Senior-Product-Manager-789610.pdf",
+      "visualRunPath": "evals/resumes/runs/2026-08-20-oti-speed-senior-product-manager-789610-pdf-visual.json"
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "markdownPath": "resumes/2026-08-20/nyc-oti-pit-senior-product-designer-782373/Jamie-Burkart-Resume-NYC-OTI-PIT-Senior-Product-Designer-782373.md",
+      "pdfPath": "resumes/2026-08-20/nyc-oti-pit-senior-product-designer-782373/Jamie-Burkart-Resume-NYC-OTI-PIT-Senior-Product-Designer-782373.pdf",
+      "visualRunPath": "evals/resumes/runs/2026-08-20-oti-pit-senior-product-designer-782373-pdf-visual.json"
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "markdownPath": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.md",
+      "pdfPath": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.pdf",
+      "visualRunPath": "evals/resumes/runs/2026-08-14-oti-technical-operations-manager-782369-pdf-visual.json"
+    },
+    {
+      "artifactId": "resume.public.lifecycle-selected-opportunities.2026-08-20",
+      "markdownPath": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.md",
+      "pdfPath": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+      "publicInstallPath": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+      "visualRunPath": "evals/resumes/runs/2026-08-20-public-selected-opportunity-resume-pdf-visual.json"
+    }
+  ]
+}

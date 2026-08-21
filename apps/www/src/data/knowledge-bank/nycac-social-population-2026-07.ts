@@ -221,7 +221,7 @@ export const nycacSocialPopulationJuly2026 = {
       canonicalUrl: "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
       preferredPublicUrl: "canonical",
       publicCitation: "NYC Artist Coalition X retrievable-population manifest, July 15, 2026.",
-      publicNote: "A public-safe 3,123-row manifest preserving source-status URLs, source-post dates, author handles, record types, link metadata, mention handles, hashtags, classification digests and first matches, bounded incoming mentions, and dated aggregate counts. Raw post text, credentials, cookies, private account state, and session data are excluded.",
+      publicNote: "A public-safe 3,123-row manifest preserving source-status URLs, source-post dates, author handles, record types, link metadata, mention handles, hashtags, classification digests and first matches, incoming mentions from the defined query window, and dated aggregate counts. Raw post text, credentials, cookies, private account state, and session data are excluded.",
       supportsGenerally: [
         "complete review of the 3,123-record retrievable public union",
         "population reconciliation and record-type taxonomy",

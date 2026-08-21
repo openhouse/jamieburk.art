@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -39,6 +40,26 @@ const textExtensions = new Set([
 const privatePathPattern =
   /(^|\/)(private|archive-private|raw|raw-otter|transcripts-private|client-private|legal-review|support-private|support-materials-private|job-hunt-private|screenshots-private|private-screenshots|resume-private|resumes-private|supporting-materials)(\/|$)/i;
 const fontExtensions = new Set([".eot", ".otf", ".ttf", ".woff", ".woff2"]);
+const approvedPublicFonts = new Map([
+  [
+    "apps/www/public/fonts/libre-baskerville/LibreBaskerville-Regular.ttf",
+    {
+      sha256: "df9fddf43dbd7de435c316b86a52b3d6b3ad2f6fb2ed3f6fd8bdc1835f30eec1",
+      license: "apps/www/public/fonts/libre-baskerville/OFL.txt",
+      licenseSha256:
+        "516bf7fbfdbd0f0e4f50ade6a9127ad83ac7a54370bad6cf70794554569e9c4e"
+    }
+  ],
+  [
+    "apps/www/public/fonts/karla/Karla-Medium.ttf",
+    {
+      sha256: "6f13001c17a8df1081836e9a625f6aca49041b66a1cca5995527ba8672a3a6b3",
+      license: "apps/www/public/fonts/karla/OFL.txt",
+      licenseSha256:
+        "8c83f8038656f2e4084407ae6b8f997e58f9690cf57a64eb7412d2c24c98edb3"
+    }
+  ]
+]);
 
 const isProduction =
   process.env.APP_ENV === "production" ||
@@ -184,7 +205,28 @@ for (const file of allFiles) {
   }
 
   if (fontExtensions.has(ext)) {
-    addFailure(file, "font file must not be committed or served from the repo");
+    const approval = approvedPublicFonts.get(rel);
+    if (!approval) {
+      addFailure(
+        file,
+        "font file is not an exact licensed asset approved for the social-preview renderer"
+      );
+    } else {
+      const observedSha = createHash("sha256")
+        .update(readFileSync(file))
+        .digest("hex");
+      if (observedSha !== approval.sha256) {
+        addFailure(file, "approved social-preview font checksum drifted");
+      }
+
+      const licensePath = path.join(repoRoot, approval.license);
+      const observedLicenseSha = existsSync(licensePath)
+        ? createHash("sha256").update(readFileSync(licensePath)).digest("hex")
+        : null;
+      if (observedLicenseSha !== approval.licenseSha256) {
+        addFailure(file, "approved social-preview font license is missing or changed");
+      }
+    }
   }
 
   if (privatePathPattern.test(rel) || /\.private\./i.test(rel)) {

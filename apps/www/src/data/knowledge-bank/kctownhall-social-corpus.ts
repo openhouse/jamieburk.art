@@ -298,7 +298,7 @@ export const kcTownHallSocialCorpus = {
       canonicalUrl: "https://github.com/openhouse/jamieburk.art/blob/feature/evals-H/docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
       preferredPublicUrl: "canonical",
       publicCitation: "Authenticated read-only review of the public @KCTownHall Posts, Replies, and repost-list surfaces, with a 183-record public-safe ledger, July 14-15, 2026.",
-      publicNote: "The profile displayed 183 posts. Cross-tab reconciliation recovered all 183 surviving items: 142 account posts, 13 account replies, and 28 reposts from 16 public accounts. A fresh July 15 traversal exactly matched all status IDs, and all 40 repost-bearing account statuses were audited. The ledger preserves posted destinations, bounded classifications, and mutable reaction snapshots without reproducing post text, phone numbers, or street addresses.",
+      publicNote: "The profile displayed 183 posts. Cross-tab reconciliation recovered all 183 surviving items: 142 account posts, 13 account replies, and 28 reposts from 16 public accounts. A fresh July 15 traversal exactly matched all status IDs, and all 40 repost-bearing account statuses were audited. The ledger preserves posted destinations, defined classifications, and mutable reaction snapshots without reproducing post text, phone numbers, or street addresses.",
       supportsGenerally: [
         "100 percent item-level recovery of the 183-item surviving profile control",
         "142 account posts, 13 account replies, and 28 reposts from 16 public source accounts",

@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 1,
+  "id": "public-resume-opportunity-selection-2026-08-20",
+  "asOf": "2026-08-20",
+  "evaluatedAt": "2026-08-20T12:00:00-04:00",
+  "currentRunPath": "evals/resumes/runs/2026-08-20-public-resume-selection.json",
+  "selectionPolicy": {
+    "maxOpenVerificationAgeDays": 7,
+    "historicalFallbackFraction": 0.25,
+    "tiers": [
+      {
+        "id": "submitted-active",
+        "description": "Every submitted, interviewing, or offer-stage application whose outcome remains pending. Posting deadlines do not end a live candidacy."
+      },
+      {
+        "id": "open-unapplied",
+        "description": "When no candidacy is active, every considered, open, unapplied opportunity without a failed or unknown hard screen."
+      },
+      {
+        "id": "historical-top-quartile",
+        "description": "When neither prior tier has members, ceil(25%) of eligible historical opportunities by frozen fit score, with opportunity ID as the tie-break."
+      }
+    ]
+  },
+  "modelGate": {
+    "mode": "plan-only-until-deterministic-pass",
+    "currentRunPath": "evals/resumes/runs/2026-08-20-hiring-reader-llm-public-resume.json",
+    "maximumCallsPerRun": 8,
+    "cacheKeyFields": [
+      "opportunityId",
+      "readerPairId",
+      "resumeSha256",
+      "contextSha256",
+      "postingSourceReviewedAt",
+      "promptVersion"
+    ],
+    "promptVersion": "hiring-reader-public-resume-v1",
+    "acceptanceQuestion": "Under this explicitly fictionalized public-source lens, would this reader advance Jamie from resume review to a structured interview or practical work sample for this opportunity?",
+    "passDecision": "advance-to-structured-next-step",
+    "actualPeopleParticipated": false
+  },
+  "currentPublicArtifact": {
+    "markdownPath": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.md",
+    "pdfPath": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "publicInstallPath": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "coveredOpportunityIds": [
+      "opportunity.nyc-oti.senior-product-manager.782366"
+    ],
+    "singleOpportunitySource": {
+      "markdownPath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
+      "pdfPath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf"
+    }
+  },
+  "expectedCurrentSelection": {
+    "tier": "submitted-active",
+    "opportunityIds": [
+      "opportunity.nyc-oti.senior-product-manager.782366"
+    ],
+    "readerPairIds": [
+      "oti-product-luke-farrell",
+      "oti-product-lisa-gelobter"
+    ]
+  },
+  "opportunities": [
+    {
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "title": "NYC OTI PIT Crew Senior Product Manager",
+      "considered": true,
+      "fitScore": 97,
+      "postingState": "open",
+      "closesOn": "2026-10-16",
+      "lastVerifiedAt": "2026-08-20",
+      "applicationState": "submitted",
+      "outcomeState": "pending",
+      "eligibilityState": "review-needed",
+      "officialSource": "https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-44507",
+      "readerPairIds": ["oti-product-luke-farrell", "oti-product-lisa-gelobter"],
+      "modelContextPaths": [
+        "docs/knowledge-bank/sources/jobs-oti-senior-product-manager-782366.md",
+        "docs/knowledge-bank/sources/nyc-pit-crew-launch-2026.md"
+      ],
+      "readerContextPaths": {
+        "oti-product-luke-farrell": ["docs/knowledge-bank/sources/luke-farrell-pit-crew-2026.md"],
+        "oti-product-lisa-gelobter": ["docs/knowledge-bank/sources/nyc-lisa-gelobter-appointment-2026.md"]
+      },
+      "resumeMarkdownPath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
+      "resumePdfPath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf"
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "title": "NYC OTI SPEED Operations Manager",
+      "considered": true,
+      "fitScore": 96,
+      "postingState": "open",
+      "closesOn": "2026-10-04",
+      "lastVerifiedAt": "2026-08-20",
+      "applicationState": "not-applied",
+      "outcomeState": "none",
+      "eligibilityState": "review-needed",
+      "officialSource": "https://cityjobs.nyc.gov/job/operations-manager-in-brooklyn-jid-46143",
+      "readerPairIds": ["oti-speed-operations-role", "oti-speed-operations-lisa-gelobter"],
+      "modelContextPaths": [
+        "docs/knowledge-bank/sources/jobs-oti-speed-operations-manager-789810.md",
+        "docs/knowledge-bank/sources/nyc-speed-report-2026.md"
+      ],
+      "readerContextPaths": {
+        "oti-speed-operations-lisa-gelobter": ["docs/knowledge-bank/sources/nyc-lisa-gelobter-appointment-2026.md"]
+      },
+      "resumeMarkdownPath": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.md",
+      "resumePdfPath": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.pdf"
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "title": "NYC OTI Product Manager",
+      "considered": true,
+      "fitScore": 91,
+      "postingState": "open",
+      "closesOn": "2026-09-04",
+      "lastVerifiedAt": "2026-08-20",
+      "applicationState": "not-applied",
+      "outcomeState": "none",
+      "eligibilityState": "review-needed",
+      "officialSource": "https://cityjobs.nyc.gov/job/product-manager-in-brooklyn-jid-45056",
+      "readerPairIds": ["oti-product-784450-role", "oti-product-784450-lisa-gelobter"],
+      "modelContextPaths": ["docs/knowledge-bank/sources/jobs-oti-product-manager-784450.md"],
+      "readerContextPaths": {
+        "oti-product-784450-lisa-gelobter": ["docs/knowledge-bank/sources/nyc-lisa-gelobter-appointment-2026.md"]
+      },
+      "resumeMarkdownPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.md",
+      "resumePdfPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.pdf"
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "title": "NYC OTI SPEED Senior Product Manager",
+      "considered": true,
+      "fitScore": 92,
+      "postingState": "open",
+      "closesOn": "2026-10-04",
+      "lastVerifiedAt": "2026-08-20",
+      "applicationState": "not-applied",
+      "outcomeState": "none",
+      "eligibilityState": "review-needed",
+      "officialSource": "https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-46148",
+      "readerPairIds": ["oti-speed-spm-789610-role", "oti-speed-spm-789610-lisa-gelobter"],
+      "modelContextPaths": [
+        "docs/knowledge-bank/sources/jobs-oti-speed-senior-product-manager-789610.md",
+        "docs/knowledge-bank/sources/nyc-speed-report-2026.md"
+      ],
+      "readerContextPaths": {
+        "oti-speed-spm-789610-lisa-gelobter": ["docs/knowledge-bank/sources/nyc-lisa-gelobter-appointment-2026.md"]
+      },
+      "resumeMarkdownPath": "resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Jamie-Burkart-Resume-NYC-OTI-SPEED-Senior-Product-Manager-789610.md",
+      "resumePdfPath": "resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Jamie-Burkart-Resume-NYC-OTI-SPEED-Senior-Product-Manager-789610.pdf"
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "title": "NYC OTI PIT Crew Senior Product Designer",
+      "considered": true,
+      "fitScore": 79,
+      "postingState": "open",
+      "closesOn": "2026-10-16",
+      "lastVerifiedAt": "2026-08-20",
+      "applicationState": "not-applied",
+      "outcomeState": "none",
+      "eligibilityState": "review-needed",
+      "officialSource": "https://cityjobs.nyc.gov/job/senior-product-designer-in-brooklyn-jid-44505",
+      "readerPairIds": ["oti-pit-designer-luke-farrell", "oti-pit-designer-lisa-gelobter"],
+      "modelContextPaths": [
+        "docs/knowledge-bank/sources/jobs-oti-pit-senior-product-designer-782373.md",
+        "docs/knowledge-bank/sources/nyc-pit-crew-launch-2026.md"
+      ],
+      "readerContextPaths": {
+        "oti-pit-designer-luke-farrell": ["docs/knowledge-bank/sources/luke-farrell-pit-crew-2026.md"],
+        "oti-pit-designer-lisa-gelobter": ["docs/knowledge-bank/sources/nyc-lisa-gelobter-appointment-2026.md"]
+      },
+      "resumeMarkdownPath": "resumes/2026-08-20/nyc-oti-pit-senior-product-designer-782373/Jamie-Burkart-Resume-NYC-OTI-PIT-Senior-Product-Designer-782373.md",
+      "resumePdfPath": "resumes/2026-08-20/nyc-oti-pit-senior-product-designer-782373/Jamie-Burkart-Resume-NYC-OTI-PIT-Senior-Product-Designer-782373.pdf"
+    },
+    {
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "title": "CodePath Engineering Project Manager",
+      "considered": true,
+      "fitScore": 90,
+      "postingState": "open",
+      "closesOn": null,
+      "lastVerifiedAt": "2026-08-20",
+      "applicationState": "not-applied",
+      "outcomeState": "none",
+      "eligibilityState": "clear",
+      "officialSource": "https://job-boards.greenhouse.io/codepath/jobs/5160542007",
+      "readerPairIds": ["codepath-zack-parker", "codepath-chris-coleman"],
+      "modelContextPaths": [
+        "docs/knowledge-bank/sources/jobs-codepath-engineering-project-manager-5160542007.md",
+        "docs/knowledge-bank/sources/codepath-leadership-2026.md"
+      ],
+      "resumeMarkdownPath": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.md",
+      "resumePdfPath": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.pdf"
+    },
+    {
+      "opportunityId": "opportunity.aclu.senior-project-manager.8620968002",
+      "title": "ACLU Senior Project Manager",
+      "considered": true,
+      "fitScore": 88,
+      "postingState": "open",
+      "closesOn": null,
+      "lastVerifiedAt": "2026-08-20",
+      "applicationState": "not-applied",
+      "outcomeState": "none",
+      "eligibilityState": "clear",
+      "officialSource": "https://job-boards.greenhouse.io/aclu/jobs/8620968002",
+      "readerPairIds": ["aclu-charizma-williams"],
+      "modelContextPaths": [
+        "docs/knowledge-bank/sources/jobs-aclu-senior-project-manager-8620968002.md",
+        "docs/knowledge-bank/sources/aclu-charizma-williams.md"
+      ],
+      "resumeMarkdownPath": "resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-8620968002.md",
+      "resumePdfPath": "resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-8620968002.pdf"
+    },
+    {
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "title": "Benepass Product Operations Manager",
+      "considered": true,
+      "fitScore": 91,
+      "postingState": "open",
+      "closesOn": null,
+      "lastVerifiedAt": "2026-08-20",
+      "applicationState": "not-applied",
+      "outcomeState": "none",
+      "eligibilityState": "clear",
+      "officialSource": "https://jobs.ashbyhq.com/benepass/7f963a7a-aaad-456b-b12b-7f34b35d51cf/",
+      "readerPairIds": ["benepass-aileen-palmer", "benepass-jaclyn-chen"],
+      "modelContextPaths": [
+        "docs/knowledge-bank/sources/jobs-benepass-product-operations.md",
+        "docs/knowledge-bank/sources/benepass-jaclyn-chen.md"
+      ],
+      "resumeMarkdownPath": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.md",
+      "resumePdfPath": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.pdf"
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "title": "NYC OTI Technical Operations Manager benchmark",
+      "considered": true,
+      "fitScore": 95,
+      "postingState": "expired",
+      "closesOn": "2026-08-07",
+      "lastVerifiedAt": "2026-08-20",
+      "applicationState": "not-applied",
+      "outcomeState": "none",
+      "eligibilityState": "review-needed",
+      "officialSource": "https://cityjobs.nyc.gov/job/technical-operations-manager-in-brooklyn-jid-44321",
+      "readerPairIds": ["oti-operations-lisa-gelobter"],
+      "modelContextPaths": [
+        "docs/knowledge-bank/sources/jobs-oti-technical-operations-782369.md",
+        "docs/knowledge-bank/sources/nyc-lisa-gelobter-appointment-2026.md"
+      ],
+      "resumeMarkdownPath": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.md",
+      "resumePdfPath": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.pdf"
+    },
+    {
+      "opportunityId": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "title": "University of Innsbruck Studio3 postdoc ARCH-15927",
+      "considered": true,
+      "fitScore": 82,
+      "postingState": "open",
+      "closesOn": "2026-08-27",
+      "lastVerifiedAt": "2026-08-15",
+      "applicationState": "not-applied",
+      "outcomeState": "none",
+      "eligibilityState": "not-met",
+      "officialSource": "https://lfuonline.uibk.ac.at/public/karriereportal.details?asg_id_in=15927",
+      "readerPairIds": [],
+      "modelContextPaths": ["docs/knowledge-bank/sources/jobs-uibk-studio3-postdoc-arch-15927.md"],
+      "resumeMarkdownPath": null,
+      "resumePdfPath": null
+    }
+  ]
+}

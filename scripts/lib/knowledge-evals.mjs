@@ -59,22 +59,22 @@ export const blindSpotControls = JSON.parse(readFileSync(blindSpotControlsPath, 
 const KCTH_FIELD_PRACTICE_REVIEW_LOCKS = Object.freeze({
   corpusSha256: "20969ea8c506b025cfc6cd0dadb6b4eab4ce7eb93935885c421be5ca33b5563a",
   canonicalRecordsSha256: "aec8ae4d0ca23edeee8043565f2a292e5679959c04685c697c7f2c8428f4868c",
-  governedKnowledgeSha256: "ecfe86b9804ebd2310012a8fbb0b0017ee2ce4b2b4de7d67ede1e5f156a63b5d",
+  governedKnowledgeSha256: "8b787e778be1c9a2a36f93303793bde6bfec1bca2136caa9b58b0fc03ae9d55c",
   proofProjectionSha256: "89e737e2b4620a430933669aabbafcd0924534a2ac55acce8a82a102131aeef3",
-  caseStudyMdxSha256: "21d241eae57f230f4863ded3afeacca25715e5c3335c83c4314764d141d33178",
-  // Re-reviewed 2026-08-03 after adding public-safe HJE and Sunday Dinner/196
-  // handoff specimens to the shared work metadata. Field-practice claims,
-  // evidence, holds, and the KC Town Hall case-study wording did not change.
-  sharedPublicSurfacesSha256: "e0080f82ce2dde8feb83f8d04f761a30b624537056bda41d10a507afd5077f30",
+  caseStudyMdxSha256: "07dea29f0d9880936d6c643c39fcee58eaaec4164cb0e091f5cfa933aded8cfa",
+  // Re-reviewed 2026-08-21 after the public hiring projection was shortened
+  // while the canonical lifecycle, no-receipt/no-expenditure boundary,
+  // collective-credit limits, and field-practice evidence remained intact.
+  sharedPublicSurfacesSha256: "02c67969a3b67c3d2b024c5ebcf9b8b5233b547d17b9124c8c5073fc9d61ba00",
   publicReviewReportSha256: "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696"
 });
-// Re-reviewed 2026-07-21 after removing trailing Markdown line-break spaces for
-// repository diff hygiene. The report wording, evidence, and boundaries did not change.
+// Re-reviewed 2026-08-21 after governed public-safe records gained new linked
+// context. Source population, custody boundaries, and projection guardrails hold.
 const NYCAC_SOCIAL_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "74725b915bee88b6d29fa484a2f9ecb0dd9fe2cdaaca75b4dc7c7e9b54107d46",
   recordsSha256: "71955963e22dc99454615aea10c56cf7749e1bdb3aabc26bcedad885013249a1",
   incomingRecordsSha256: "d190361370c1ce18723fc472d0b2fce6c9f520797c9fca32ae80c3912dc83a09",
-  governedModuleSha256: "727178b4389b1def93fb99ea7a402b9fb70d48412ed05cb04745d6305910c55d",
+  governedModuleSha256: "7b910912d88398b3277dce273445e510bc9314930fa69e7136aa25b2fa005270",
   publicReportSha256: "5424eb93fef4eb1e9b1b8b020a5de19ab61f74025411c998869f5f82bc771bcb"
 });
 const URBANHERM_SOCIAL_REVIEW_LOCKS = Object.freeze({
@@ -87,35 +87,29 @@ const URBANHERM_SOCIAL_REVIEW_LOCKS = Object.freeze({
 const NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "64af7b2f1804b3b319de2f5eef60bfb01371ce5209c8497473f800a334c66555",
   manifestContentSha256: "d0b72b654e76e9149439d1f218c05e248134abbca4a8c3088696e2536fdd52f2",
-  governedModuleSha256: "7f1a642b8ca972ce5bb5c74b9645445cde80d3fd4680e76ecb000b2a98189605",
-  canonicalKnowledgeSha256: "2b5bcf88ac63affa7aa17b25a1c4caaa165075d3d48e68a5262ed2c5911f70a9",
+  governedModuleSha256: "37ff95a31e3c6597d998830b1cb3332f36625dc0a47f5142b6b262e13c42a005",
+  canonicalKnowledgeSha256: "29ff741260694cc37b8e5534632fd852551085ceeb706692e1b988a5963be586",
   reviewConfigurationSha256: "e456b7cdc66033c60d0d526d2794aec91be7470c35834ae776db9cc44b3dea9b",
   articleSourcesSha256: "a9ecb8c4724f7b6cf9b25cc806effe587694071a41fd2a8bb638402be009d7e7",
-  governanceBindingsSha256: "86d04263a36df43b609f7020567703264bb6fda686d7561b4ce938addacd13fa",
+  governanceBindingsSha256: "ab1e3d00c61159adc19e54a5241dea2b932c23f341f4ad8a70950d3ffcfb7114",
   publicReportSha256: "ce9475a9aecda99f2d7c58c099d657a14e5512a557b58b25d3736803996e9769",
-  caseStudyMdxSha256: "7989d07d2256f1a2e4e80153804146d9aea33de69eb225d9683de001a1775e08",
+  caseStudyMdxSha256: "4c0e0e8b20c891e34f5bd87908d79681fd82415762f8b46be302d02ba5dfd727",
   proofSnippetSha256: "39b5ddec3ec83e6e552c33da836551f854a6dc809ea4beaa35e688036a982d9c",
   proofContentSha256: "d59ed44552e96a73477489cdd91363d9f1e764f39720dddafe21b01e10de79ca"
 });
-// Re-reviewed 2026-07-21 after removing trailing Markdown line-break spaces for
-// repository diff hygiene. The report wording, evidence, and boundaries did not change.
+// Re-reviewed 2026-08-21 after the WOW List and Sunday Dinner hiring projections
+// were recomposed. The governed event corpus and collective-credit limits hold.
 const PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "23c7d57699dc30d84d6738f7ece4b47f3497550fa2dd8690ca7c4a86719d70ef",
   manifestContentSha256: "62f09e7e53d5e28397ca25e948a77f7e1ec7e9e8a504b37c8e9343eae1faa090",
   governedModuleSha256: "17756383e3e3fe07dd5691fe6866efe5d7292217a31fb5ab355cd71d8f64e940",
   canonicalKnowledgeSha256: "575a9c54527e5c42e7b38a077ef2438fac2073ab5eafc24656c2c677d43afaac",
   reviewConfigurationSha256: "939b9ccc09b790520450a8c3295f1436193c9c2e9c6505350fc4c0bfb23c86b0",
-  governanceBindingsSha256: "462c571728b828871229a018aaee8503d666943b0bce508eaa92231391baf1e8",
+  governanceBindingsSha256: "c0e9a1f65754e8e7aa6a1def6e16fec105f7f78009dbf3ebd38585282a78cef3",
   publicReportSha256: "0e8dc37b79624e2ac86a026fca40741ee578aeb22bc5002e795775c1df5e650e",
-  wowListMdxSha256: "920a67545ba6bbe346309c79247a12e1e0a3028c09cb5c36e1a85e35f8013df8",
-  // Re-reviewed 2026-08-03 after adding two public-safe handoff specimens.
-  // The governed event corpus, projections, and collective-credit limits did
-  // not change.
-  sundayDinnerMdxSha256: "9a2ad4b667d5ad80ec9f20e9965455219d9d7cd4a833d268b8a8ee3d2be72bef",
-  // Re-reviewed 2026-07-28 after replacing the WOWList adoption estimate with
-  // the exact July 2017 city-region-key threshold. The governed event corpus,
-  // projections, and collective-credit limits did not change.
-  proofContentSha256: "ece31ff79a8dc4bd542469ffb8a8edae8da249627a62ca152a8c5bee7b9a0be7"
+  wowListMdxSha256: "75c0189f30d4d0a793ebb64dbc275bbdf1dc4279c860cb3a34bbe045a27a2e92",
+  sundayDinnerMdxSha256: "098409207d2e3745856a193504916b557476ce2492e12df7c5927a59f84e205d",
+  proofContentSha256: "d5cf5c92c9ed3499fc70194232d96990525afc0a80e766ed395a6845f5e2c1be"
 });
 const WOWLIST_FACEBOOK_POST_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "5755dfbbb6388ca369b90337e210502dd264bb22d554cf8f0294027de08ffc72",
@@ -128,12 +122,12 @@ const WOWLIST_FACEBOOK_POST_REVIEW_LOCKS = Object.freeze({
 const NYCAC_FACEBOOK_POST_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "6c5bbeac3f42dde7a6dc038d2470ec8b1e63cf28d652352c7ad6d4ec447bfa6f",
   manifestContentSha256: "21b4dfdfb9a972fbf16db27247c58b9d8305fd2956a200dea69263726e3883fd",
-  governedModuleSha256: "e6eb628aa6be509e3373e8c49aa051ce3f72343f9c0fd57173d894b35cb6f772",
-  canonicalKnowledgeSha256: "f2e27a428995e8c01567d7bda1dbe84f3f49abd32b7022c6a898a27228872f30",
+  governedModuleSha256: "bfa593b9eb0a8e35a86f1fd9fc223e9491b185e5391368e3ead205de8b72f24d",
+  canonicalKnowledgeSha256: "b8365fde3f6a31d09d43e021bd5a61ab191a191d0963eebadb7515996450dfad",
   reviewConfigurationSha256: "8c188485aa7340c8f33b82d9112cd9238d59db77236033ac13d8426e52feac2e",
   publicReportSha256: "6ad87ec58dec3fbb3b1b73271b6562d3adf86d1adf61c9d28598f2e1736fad04",
   proofProjectionSha256: "7e6d12c463cb77f5c1cb0307dc8c2a79dec0ceb8f7fc1863ccb1b651f6b04e0e",
-  caseStudyMdxSha256: "7989d07d2256f1a2e4e80153804146d9aea33de69eb225d9683de001a1775e08"
+  caseStudyMdxSha256: "4c0e0e8b20c891e34f5bd87908d79681fd82415762f8b46be302d02ba5dfd727"
 });
 const BLIND_SPOT_CONTROL_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "fb76f31059d537dbeca324ae564009e08b20081dcb3af26fae8846bf8d106d42",

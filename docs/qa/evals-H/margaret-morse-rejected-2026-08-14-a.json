@@ -1,0 +1,30 @@
+{
+  "evaluator": "Fictionalized Margaret Morse analytical-lens review; this is not the real Margaret Morse, does not reproduce her views, and implies no endorsement.",
+  "reviewerId": "morse-a-2026-08-14-6366d77c",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "6366d77c6d62a82c03fcf7c0a5f7459af475aee5085f72bc5f7664ad885e9360",
+  "score": 3,
+  "pass": false,
+  "evidence": [
+    "Within two clicks, Home to About explicitly names the practice as artistic, civic, technical, and social, then presents current systems loops for Harry J. Epstein Company, NYC Artist Coalition and FairRentNYC, and Sunday Dinner and 196.",
+    "WOWList, Sunday Dinner and 196, NYC Artist Coalition and FairRentNYC, and KC Town Hall connect participation, hospitality, place, documentation, public communication, and continuity to usable systems.",
+    "The Technical Operations page keeps the target role primary by translating the inhabited practices into requirements, delivery coordination, risk surfacing, operating documentation, launch, adoption, and durable handoffs.",
+    "Collective credit and project-specific privacy boundaries remain visible across the reviewed public surfaces."
+  ],
+  "gaps": [
+    "The About page's Open House origin claim displayed a citation marker whose source note did not resolve on the public reading surface. Because that statement anchors the artistic origin of the inhabited-systems lineage, the candidate fell short of a 4."
+  ],
+  "safety_findings": [
+    "Collective authorship and institutional authority were differentiated from Jamie's individual contribution.",
+    "Participant and resident records remained protected, and archived civic prototypes were distinguished from current official services.",
+    "No protected educational records, private testimonials, or implied endorsements were observed."
+  ],
+  "recommendation": "Resolve or remove the orphaned Open House citation on About, then run fresh public-web-only holdouts against the repaired exact candidate.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "public-web-only independent holdout",
+    "reviewedAt": "2026-08-14",
+    "filesEdited": false
+  }
+}

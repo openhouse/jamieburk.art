@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to WOWList orientation
 
-**Source commit:** `747605e3c34a6426c027a1c85ff82c3a6275ac36`
-**Generation time:** 2026-08-14T11:32:41-04:00
-**Source fingerprint:** `e4fc52c24bbf54e2f4cd03c7f545b8eb1d0af9c4a3ed28af19991b37897fcb60`
+**Source commit:** `594eeb80fd33cee9053f618521f42b76f312cbe6`
+**Generation time:** 2026-08-21T15:02:23-04:00
+**Source fingerprint:** `b2f85389ab3e7725be9b2d24acf810252a431365b899b1d8e90fab635830b1a5`
 
 - [WOW List - Senior Product Manager role-fit brief](../../applications/wowlist-senior-product-manager-oti-782366.md) - `part_of` (frontmatter)
 - [WOW List - Senior Product Manager role-fit brief](../../applications/wowlist-senior-product-manager-oti-782366.md) - `prose_link` (markdown)
@@ -20,6 +20,7 @@
 - [Sunday Dinner, WOW List, and NYC Artist Coalition Synergy](../../methods/sunday-dinner-wowlist-nycac-synergy.md) - `related_to` (frontmatter)
 - [WOW List Relational Curation](../../methods/wowlist-relational-curation.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
+- [Live project-website audit and restored-surface close reading](../../sources/project-website-live-audit-2026-08-14.md) - `related_to` (frontmatter)
 - [Governed WOW List knowledge repository](../../sources/wowlist-knowledge-repository-2026.md) - `related_to` (frontmatter)
 - [WOW List public return threshold, August 2026](../../sources/wowlist-public-threshold-2026-08.md) - `related_to` (frontmatter)
 - [What is WOW List repaired transcript](../../sources/wowlist-repaired-transcript-2026.md) - `documents` (frontmatter)

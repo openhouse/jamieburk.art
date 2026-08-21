@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "id": "homepage-hiring-sequence-hillclimb-2026-08-20",
+  "evaluatedAt": "2026-08-20T17:24:00-04:00",
+  "criterion": "rushed-hiring-reader-legibility",
+  "activeOpportunityBasis": {
+    "submittedPending": [
+      "opportunity.nyc-oti.senior-product-manager.782366"
+    ],
+    "adjacentStrongFits": [
+      "opportunity.nyc-oti.speed-operations-manager.789810",
+      "opportunity.nyc-oti.product-manager.784450",
+      "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "opportunity.codepath.engineering-project-manager.5160542007",
+      "opportunity.aclu.senior-project-manager.8620968002",
+      "opportunity.benepass.product-operations.7f963a7a"
+    ]
+  },
+  "baseline": {
+    "sequence": [
+      "fair-rent-nyc",
+      "callnyc",
+      "kc-spaces-fund",
+      "harry-j-epstein",
+      "wowlist"
+    ],
+    "weaknesses": [
+      "The most conventionally legible long-term client proof arrived fourth.",
+      "KC Town Hall's resident-service, municipal, funding, and field implementation evidence was absent.",
+      "Sunday Dinner's onboarding, facilitation, recurrence, and continuity evidence was absent."
+    ]
+  },
+  "candidate": {
+    "sequence": [
+      "harry-j-epstein",
+      "fair-rent-nyc",
+      "callnyc",
+      "kc-town-hall",
+      "wowlist",
+      "196-sunday-dinner"
+    ],
+    "hiringQuestions": [
+      "Can Jamie deliver for an established organization?",
+      "Is his public-service practice current?",
+      "Can he translate public needs into a usable service?",
+      "Can he manage municipal, physical, and operational implementation?",
+      "Can he originate and operate a product model?",
+      "Can he sustain participation and continuity after launch?"
+    ],
+    "visualRhythm": [
+      "commercial storefront",
+      "current civic field photograph",
+      "resident-facing civic interface",
+      "built-environment field photograph",
+      "community-platform interface",
+      "participation photograph"
+    ],
+    "retainedInCompleteIndex": [
+      "kc-spaces-fund"
+    ]
+  },
+  "capabilityNavigation": {
+    "criterion": "capability-to-project-proof",
+    "baseline": "Six capability rows described the work but offered no direct route to the projects that demonstrate it.",
+    "candidate": "Each complete row is a keyboard-reachable link to the existing visible and clearable work-index filter state.",
+    "destinationPattern": "/work?tag={encoded-tag}#work-index",
+    "mappings": [
+      [
+        "Technical project management",
+        "Technical Operations"
+      ],
+      [
+        "Product operations",
+        "Product Operations"
+      ],
+      [
+        "Knowledge systems & documentation",
+        "Knowledge Systems"
+      ],
+      [
+        "Civic technology & open data",
+        "Civic Technology"
+      ],
+      [
+        "Web systems & public-facing tools",
+        "Web Systems"
+      ],
+      [
+        "Community systems",
+        "Community Systems"
+      ]
+    ],
+    "browserReview": {
+      "desktop": "pass",
+      "mobile": "pass",
+      "filterState": "pass",
+      "consoleErrorsOrWarnings": 0
+    },
+    "decision": "keep-change"
+  },
+  "callNycBrowserWindowPresentation": {
+    "criterion": "source-faithful-artifact-to-page-continuity",
+    "baseline": "A WebP derivative flattened the original screenshot's transparent surround to black, making the browser window appear sunken inside a sharp dark well.",
+    "diagnosis": "The black field was a transcode artifact, not content in the original CallNYC launch screenshot.",
+    "candidate": "Use the exact RGBA press-kit PNG on the portfolio's white field through one shared browser-window presentation across homepage cards, case-study leads, and artifact galleries.",
+    "sourceIntegrity": {
+      "sourceFilename": "CallNYC.org - Screenshot - U.S. Citizenship.png",
+      "dimensions": "1223x1136",
+      "pngColorType": "RGBA",
+      "sha256": "9f2bd3335338bfd1e75dad7a3861b4d46f3021306510639e086a5b16a7e4f806"
+    },
+    "browserReview": {
+      "mobileHomepage": "pass",
+      "mobileCaseStudyLead": "pass",
+      "mobileArtifactGallery": "pass",
+      "desktopContinuity": "pass",
+      "blackTranscodeArtifact": "absent"
+    },
+    "decision": "keep-change"
+  },
+  "decision": "keep-change",
+  "boundaries": {
+    "truthClaimsChanged": false,
+    "rightsOrCreditsChanged": false,
+    "projectsDeleted": false,
+    "humanEditorialReviewRequiredForFutureReorder": true
+  }
+}

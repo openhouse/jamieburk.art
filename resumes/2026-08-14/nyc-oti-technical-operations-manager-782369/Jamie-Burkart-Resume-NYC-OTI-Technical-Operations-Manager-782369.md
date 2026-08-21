@@ -19,15 +19,15 @@ Technical operations and project manager with 14+ years building the operating s
 
 ## Professional Experience
 
-### THICK ARTS — Founder, Technical Operations & Project Manager / Web Systems Lead
+### THICK ARTS LLC — Founder, Technical Operations & Project Manager / Web Systems Lead
 
-New York, NY / Remote | 2012–Present
+New York, NY / Remote | 2009–Present
 
 - Lead independent web strategy, product, design, engineering, and maintenance engagements, converting ambiguous needs into scope, work plans, requirements, risk registers, public releases, adoption materials, operating documentation, and durable handoffs.
 - Coordinate delivery across concurrent projects; surface blockers early; maintain clear status, decision, action, and release records; support UAT/QA; and improve working systems through retrospectives without adding unnecessary ceremony.
-- Led long-running e-commerce, analytics, content, marketing, and operational improvements for Harry J. Epstein Company, contributing to a period of 2x revenue growth while helping an 80+ year-old business adapt its public and internal systems.
+- Led e-commerce, analytics, content, marketing, and operational improvements for [Harry J. Epstein Company](https://www.harryepstein.com/) that contributed to a period of 2x revenue growth while helping an 80+ year-old business adapt its public and internal systems.
 
-### NYC Artist Coalition / FairRentNYC — Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead
+### [NYC Artist Coalition](https://nycartc.com/) / [FairRentNYC](https://fairrentnyc.nycartc.com/) — Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead
 
 New York, NY | 2017–Present
 
@@ -35,26 +35,26 @@ New York, NY | 2017–Present
 - Built and stewarded 30+ pages of shared campaign memory for a 2026 Commercial Rent Stabilization collaboration, connecting running minutes, decisions, action items, risks, legal and policy questions, media assets, and next steps into one maintained operating record.
 - Facilitate challenging meetings and represent collective work in testimony, presentations, and press while keeping private notes, legal review, contact data, and sensitive strategy out of public systems.
 
-### WOWList.org — Co-Founder, Product & Community Systems
+### [WOWList.org](https://wowlist.org/) — Co-Founder, Product & Community Systems
 
 New York, NY / Remote | 2015–2020
 
 - Co-founded, co-built, and operated with Richard Caceres a Python/Django and Ember.js community platform, coordinating technical implementation, product operations, organizer onboarding, support, public communication, distribution, and low-cost hosting.
-- Reached a July 2017 production snapshot of 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts. These counts establish historical scale, not measured resident outcomes.
+- Operated across 35 city ecosystems, supporting local organizers who used WOW List to run community calendars, websites, and email lists for their own scenes.
 
-### CallNYC.org — Civic-Tech Builder & Product Translator
+### [CallNYC.org](https://callnyc.org/) — Civic-Tech Builder & Product Translator
 
 New York, NY | 2016
 
 - Built and launched an independent resident-facing civic prototype that translated CouncilStat constituent-services open data into issue pathways, district context, and next-step guidance; covered by Politico New York in 2016.
 
-### KC Town Hall LLC — Co-Founder & Project Manager
+### [KC Town Hall LLC](https://kctownhall.com/) — Co-Founder & Project Manager
 
 Kansas City, MO | 2015–2024
 
 - Coordinated planning, vendors, field dependencies, public-benefit documentation, municipal reporting, and M/WBE and CREO compliance for an approximately 6,500 sq. ft. adaptive-reuse project.
 - Helped operate Tired of Tires, a recurring free resident service connecting intake, field collection, volunteers, and a City recycling handoff; public records document Jamie's participation in pickup operations.
-- Co-developed a successful $490,539 public funding request, served as the City's named developer/presenter, remained a documented point of contact through compliance progress, and later transitioned the project to a mission-aligned organization. The award was not disbursed; the record does not establish procurement authority.
+- Co-developed a successful $490,539 public funding request, served as the City's named developer/presenter, remained a documented point of contact through compliance progress, and later transitioned the project to a mission-aligned organization.
 
 ### 196 Artists Residency / Sunday Dinner — Founder & Systems Steward
 

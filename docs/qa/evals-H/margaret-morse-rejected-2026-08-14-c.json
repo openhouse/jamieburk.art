@@ -1,0 +1,30 @@
+{
+  "evaluator": "Fictionalized Margaret Morse analytical-lens review; this is not the real Margaret Morse, does not reproduce her views, and implies no endorsement.",
+  "reviewerId": "morse-c-2026-08-14-bc048258",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "bc0482583da3167092772afa5abf4e0e0c529545b2ca8dfe0c4d66818bfe1cae",
+  "score": 3,
+  "pass": false,
+  "evidence": [
+    "Within two clicks, the About page made the artistic, civic, technical, and social through-line legible through Open House, WOW List, Sunday Dinner and 196, NYC Artist Coalition, and source-backed team memory.",
+    "FairRentNYC, Sunday Dinner and 196, and WOW List connected participation, hospitality, place, public interfaces, documentation, and continuity to usable systems.",
+    "The target Technical Project Manager role was clear across the homepage, About page, Technical Operations page, resume page, calls to action, and capability-to-project mappings.",
+    "Citation links, collective-credit language, participant privacy, and protected educational-record boundaries were intact."
+  ],
+  "gaps": [
+    "The About page called Harry J. Epstein Company one of Three current systems loops and marked it Current, while the case study and work index accurately dated the engagement 2009-2015.",
+    "The internal status contradiction prevented an exceptional score and made the three-current-project claim unreliable."
+  ],
+  "safety_findings": [
+    "No participant-level private data, protected educational records, private testimonials, or sole-credit inflation were observed.",
+    "The material integrity concern was limited to the inaccurate current-status label on the ended HJE engagement."
+  ],
+  "recommendation": "Remove the current-status framing without adding explanatory chronology, preserve the accurate HJE dates and value-led case study, and run fresh holdouts against the repaired candidate.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "public-web-only independent holdout",
+    "reviewedAt": "2026-08-14",
+    "filesEdited": false
+  }
+}

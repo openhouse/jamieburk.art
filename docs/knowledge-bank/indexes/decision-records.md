@@ -5,7 +5,7 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-28
+last_reviewed: 2026-08-15
 review_by: 2026-10-19
 canonical_path: docs/knowledge-bank/indexes/decision-records.md
 summary: Index of bounded decision reconstructions preserving actors, constraints, alternatives, artifacts, outcomes, unknowns, and projection holds.
@@ -37,6 +37,9 @@ relations:
   - type: related_to
     target: decision.photo.pre-launch.rights-narrowing.2026-07-28
     href: ../decisions/photography/pre-launch-rights-narrowing-2026-07-28.md
+  - type: related_to
+    target: decision.portfolio.cloudinary-selective-media-delivery.2026-08-15
+    href: ../decisions/cloudinary-selective-media-delivery-2026-08-15.md
 ---
 
 # Decision records
@@ -56,6 +59,7 @@ the archive does not preserve.
 - [Layout C homepage: East River photographic occurrence](../decisions/photography/layout-c-home-east-river-v1.md)
 - [Layout C resume: protected photographic absence](../decisions/photography/layout-c-resume-no-photo-v1.md)
 - [Pre-launch photography: narrow the public field to fully bound occurrences](../decisions/photography/pre-launch-rights-narrowing-2026-07-28.md)
+- [Portfolio delivery: two-asset Cloudinary pilot with local fallback](../decisions/cloudinary-selective-media-delivery-2026-08-15.md)
 
 ## Contract
 

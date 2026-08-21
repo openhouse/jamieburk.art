@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "evaluatorId",
+    "verdict",
+    "decision",
+    "sponsorPitchTexts",
+    "decisionMakerDiscussion",
+    "decisionRationale",
+    "needsMatched",
+    "concerns",
+    "relayToJamie",
+    "recommendations",
+    "actualPeopleParticipated",
+    "actualCompanyDecision",
+    "boundary"
+  ],
+  "properties": {
+    "evaluatorId": {
+      "type": "string",
+      "const": "reader.anonymized-team-memory-internal-champion"
+    },
+    "verdict": { "type": "string", "enum": ["pass", "fail"] },
+    "decision": {
+      "type": "string",
+      "enum": ["hire-for-focused-paid-engagement", "pass-for-now"]
+    },
+    "sponsorPitchTexts": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "type": "string", "minLength": 30 }
+    },
+    "decisionMakerDiscussion": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["speaker", "message"],
+        "properties": {
+          "speaker": {
+            "type": "string",
+            "enum": [
+              "prospective-sponsor-fictionalized",
+              "executive-decision-maker-fictionalized",
+              "product-engineering-decision-maker-fictionalized"
+            ]
+          },
+          "message": { "type": "string", "minLength": 30 }
+        }
+      }
+    },
+    "decisionRationale": { "type": "string", "minLength": 80 },
+    "needsMatched": {
+      "type": "array",
+      "minItems": 3,
+      "items": { "type": "string", "minLength": 20 }
+    },
+    "concerns": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 15 }
+    },
+    "relayToJamie": { "type": "string", "minLength": 80 },
+    "recommendations": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "type": "string", "minLength": 20 }
+    },
+    "actualPeopleParticipated": { "type": "boolean", "const": false },
+    "actualCompanyDecision": { "type": "boolean", "const": false },
+    "boundary": { "type": "string", "minLength": 120 }
+  }
+}

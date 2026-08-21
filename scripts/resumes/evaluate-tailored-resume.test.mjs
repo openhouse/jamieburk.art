@@ -17,6 +17,7 @@ const resumePath = path.join(
 const resume = readFileSync(resumePath, "utf8");
 const politicoArticleUrl =
   "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf";
+const harryJEpsteinUrl = "https://www.harryepstein.com/";
 
 test("the OTI tailored resume passes every deterministic application gate", () => {
   const result = evaluateResume(resume);
@@ -24,10 +25,15 @@ test("the OTI tailored resume passes every deterministic application gate", () =
   assert.equal(result.passedChecks, result.totalChecks);
 });
 
-test("the OTI PDF is current, visually inspected, and installed as the public download", () => {
+test("the OTI application PDF is current and visually inspected independently of the public download", () => {
   const result = evaluateDocumentArtifact();
   assert.equal(result.overall, "pass", JSON.stringify(result.checks, null, 2));
   assert.equal(result.passedChecks, result.totalChecks);
+  assert.equal(
+    result.checks.find((check) => check.id === "public-download-matches-tailored-pdf"),
+    undefined
+  );
+  assert.equal(result.publicPdfPath, undefined);
 });
 
 test("the OTI resume links the Politico article and keeps the KC Town Hall transition concise", () => {
@@ -74,6 +80,36 @@ test("the OTI PDF embeds the Politico article link", () => {
   assert.ok(pdf.includes(politicoArticleUrl));
 });
 
+test("the OTI resume keeps Harry J. Epstein Company as plain text", () => {
+  assert.doesNotMatch(
+    resume,
+    /\[Harry J\. Epstein Company\]\([^)]+\)/,
+    "The employer name should remain plain text in the authoritative Markdown."
+  );
+
+  const result = evaluateResume(resume);
+  assert.equal(
+    result.checks.find((check) => check.id === "hje-name-not-linked")?.pass,
+    true,
+    JSON.stringify(result.checks, null, 2)
+  );
+
+  const artifact = evaluateDocumentArtifact();
+  assert.equal(
+    artifact.checks.find((check) => check.id === "forbidden-link-annotations")?.pass,
+    true,
+    JSON.stringify(artifact.checks, null, 2)
+  );
+
+  const pdf = readFileSync(
+    path.join(
+      repoRoot,
+      "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.pdf"
+    )
+  ).toString("latin1");
+  assert.equal(pdf.includes(harryJEpsteinUrl), false);
+});
+
 test("the evaluator rejects loss of the exact target title", () => {
   const mutation = resume.replaceAll("Senior Product Manager", "Product Lead");
   const result = evaluateResume(mutation, "mutation:no-target-title");
@@ -94,11 +130,12 @@ test("the evaluator rejects ATS-hostile tables", () => {
   assert.equal(result.overall, "fail");
 });
 
-test("the evaluator rejects collective-credit and metric-boundary removal", () => {
+test("the evaluator rejects loss of collective credit or the 35-city organizer ecosystem", () => {
   const mutation = resume
     .replace("with Richard Caceres", "")
     .replace("while preserving collective credit and sensitive boundaries", "")
-    .replace("distinguish these activity counts", "describe these activity counts")
+    .replace("across 35 city ecosystems", "across several places")
+    .replace("community calendars, websites, and email lists", "digital tools")
     .replace("The award was not disbursed", "The award was administered");
   const result = evaluateResume(mutation, "mutation:claim-safety");
   assert.equal(

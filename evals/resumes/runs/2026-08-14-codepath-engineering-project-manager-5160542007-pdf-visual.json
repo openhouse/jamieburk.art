@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "evalId": "resume.codepath.engineering-project-manager.5160542007.pdf-visual",
+  "inspectedAt": "2026-08-21T01:04:31.766Z",
+  "sourceTemplate": {
+    "access": "read-only source; edited only in a new private copy for this opportunity",
+    "revisionUnchangedAfterExport": true,
+    "privateLocatorCommitted": false
+  },
+  "markdown": {
+    "path": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.md",
+    "sha256": "dcf01669ec26fad8448e1b31b5ed7890bdf5c28e1e93d1eb1e147fa5fe4c892a"
+  },
+  "pdf": {
+    "path": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.pdf",
+    "sha256": "7d0b13d241fb29563b58ee5c6f69f0627cba01d9819ef5ee621cf63480f79aa0",
+    "bytes": 84521,
+    "pages": 2,
+    "pageSize": "US Letter"
+  },
+  "inspection": {
+    "method": "Rebuilt from the approved Google Docs export with every list marker normalized to one point below its item text; rasterized every page at 110 DPI, visually inspected all pages, compared final rasters with the pre-rebuild inspection set, and checked PDF geometry, text, and link annotations.",
+    "allPagesRasterized": true,
+    "actualNamedPeopleParticipated": false,
+    "pages": [
+      {
+        "page": 1,
+        "pass": true,
+        "notes": "Name, engineering-project title, contact links, summary, quality system, technical fluency, and the single Thick Arts LLC employer container are legible with no clipping, overlap, or broken hierarchy; HJE remains concise outcome evidence."
+      },
+      {
+        "page": 2,
+        "pass": true,
+        "notes": "CallNYC, coalition operations, KC Town Hall, education, and work authorization remain legible and collectively credited; the removed grant-disbursement sentence leaves a clean close."
+      }
+    ]
+  },
+  "overall": "pass",
+  "boundary": "Artifact and visual-quality inspection only. No named hiring reader participated, and a pass is not an endorsement, interview promise, eligibility determination, or hiring decision."
+}

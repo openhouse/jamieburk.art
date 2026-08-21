@@ -127,7 +127,7 @@ export const participationImagesAugust2026 = {
       researchInquiryIds: [],
       limitations: [
         "The authorization is destination-bound to Jamie's portfolio and does not publish or authorize raw Apple Photos metadata.",
-        "Known photographers still require visible credit, and exact-candidate production publication remains a separate human gate."
+        "Verified photographers still require visible credit; otherwise the public display uses a project courtesy credit. Exact-candidate production publication remains a separate human gate."
       ]
     },
     {
@@ -155,26 +155,24 @@ export const participationImagesAugust2026 = {
       id: "SRC-NYCAC-SHOESTRING-PHOTO-2017",
       title: "Shoestring Press coalition working-session photograph",
       organization: "NYC Artist Coalition archive",
-      author: "Paul Mossine",
       kind: "participant-photograph",
       visibility: "public",
       preservationStatus: "private",
       publishedAt: "2017-07-24",
       accessedAt: reviewedAt,
       publicCitation:
-        "Paul Mossine, photograph of a July 24, 2017 NYC Artist Coalition working session at Shoestring Press; portfolio use authorized by Jamie Burkart.",
+        "NYC Artist Coalition project photograph of a July 24, 2017 working session at Shoestring Press; portfolio use authorized by Jamie Burkart.",
       publicNote:
         "The metadata-stripped portfolio derivative excludes private archive identifiers, People tags, and location coordinates.",
       supportsGenerally: [
         "capture date",
         "Shoestring Press working-session context",
         "Jamie's facilitation with shared visual notes",
-        "Paul Mossine creator credit"
+        "NYC Artist Coalition project courtesy credit"
       ],
       doesNotEstablish: ["exact remarks", "meeting decisions", "endorsement", "policy causation"],
       media: {
         mediaKind: "photograph",
-        photographer: "Paul Mossine",
         rightsStatus: "cleared",
         consentStatus: "cleared",
         publicDisplayStatus: "cleared",
@@ -187,14 +185,13 @@ export const participationImagesAugust2026 = {
       id: "SRC-NYCAC-MARKET-HOTEL-BANNER-PHOTO-2017",
       title: "Market Hotel Save NYC Spaces banner photograph",
       organization: "NYC Artist Coalition archive",
-      author: "Paul Mossine",
       kind: "participant-photograph",
       visibility: "public",
       preservationStatus: "private",
       publishedAt: "2017-10-11",
       accessedAt: reviewedAt,
       publicCitation:
-        "Paul Mossine, photograph of the October 11, 2017 Save NYC Spaces town hall at Market Hotel; portfolio use authorized by Jamie Burkart.",
+        "NYC Artist Coalition project photograph of the October 11, 2017 Save NYC Spaces town hall at Market Hotel; portfolio use authorized by Jamie Burkart.",
       publicNote:
         "The metadata-stripped portfolio derivative excludes private archive identifiers and People tags.",
       supportsGenerally: [
@@ -202,12 +199,11 @@ export const participationImagesAugust2026 = {
         "Market Hotel setting",
         "Save NYC Spaces and NYC Artist Coalition banner",
         "collective public-room context",
-        "Paul Mossine creator credit"
+        "NYC Artist Coalition project courtesy credit"
       ],
       doesNotEstablish: ["attendance count", "every depicted identity", "endorsement", "policy causation"],
       media: {
         mediaKind: "photograph",
-        photographer: "Paul Mossine",
         rightsStatus: "cleared",
         consentStatus: "cleared",
         publicDisplayStatus: "cleared",
@@ -224,7 +220,7 @@ export const participationImagesAugust2026 = {
       preservationStatus: "private",
       capturedAt: reviewedAt,
       publicCitation:
-        "Jamie Burkart first-person account and bounded portfolio publication authorization, August 13, 2026.",
+        "Jamie Burkart first-person account and portfolio-use authorization, August 13, 2026.",
       publicNote:
         "The capsule records Jamie's recollection and authorization boundaries without correspondence, Apple Photos identifiers, People tags, or location coordinates.",
       supportsGenerally: [
