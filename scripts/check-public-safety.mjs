@@ -282,6 +282,15 @@ scanPattern(
   /photographer\s+(?:is\s+)?not\s+identified\s+in\s+(?:the\s+)?retained\s+export/i
 );
 
+const wowListRawScalePattern =
+  /(?:1,?846|1,?800\+)\s+(?:users|accounts)|(?:16,?142|16,?000\+)\s+(?:posts(?:\/events)?|event posts)/i;
+
+scanPattern(
+  publicLanguageFiles,
+  "public-facing WOW List copy exposes raw user or event-post counts instead of ecosystem scale",
+  wowListRawScalePattern
+);
+
 const publicRegistryPath = path.join(
   repoRoot,
   "apps/www/src/data/knowledge-bank/public-registry.json"
@@ -322,6 +331,16 @@ if (existsSync(publicRegistryPath)) {
       sourceIndex >= 0 ? lineForMatch(registrySource, sourceIndex + match.index) : undefined
     );
   }
+  for (const value of renderedRegistryValues) {
+    const match = wowListRawScalePattern.exec(value);
+    if (match?.index === undefined) continue;
+    const sourceIndex = registrySource.indexOf(value);
+    addFailure(
+      publicRegistryPath,
+      "public-facing WOW List copy exposes raw user or event-post counts instead of ecosystem scale",
+      sourceIndex >= 0 ? lineForMatch(registrySource, sourceIndex + match.index) : undefined
+    );
+  }
 }
 
 if (existsSync(resumePath)) {
@@ -340,6 +359,14 @@ if (existsSync(resumePath)) {
       resumePath,
       "public-facing prose uses internal vocabulary 'hinge'",
       lineForMatch(resumeText, hingeMatch.index)
+    );
+  }
+  const wowListRawScaleMatch = wowListRawScalePattern.exec(resumeText);
+  if (wowListRawScaleMatch?.index !== undefined) {
+    addFailure(
+      resumePath,
+      "public-facing WOW List copy exposes raw user or event-post counts instead of ecosystem scale",
+      lineForMatch(resumeText, wowListRawScaleMatch.index)
     );
   }
 }

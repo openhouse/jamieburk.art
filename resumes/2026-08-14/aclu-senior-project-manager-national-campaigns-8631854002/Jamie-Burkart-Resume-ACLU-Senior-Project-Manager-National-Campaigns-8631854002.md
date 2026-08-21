@@ -48,7 +48,7 @@ Kansas City, MO | 2015–2024
 New York, NY / Remote | 2015–2020
 
 - Co-founded, co-built, and operated with Richard Caceres a natural-language community-calendar platform, coordinating organizer onboarding, public communication, technical releases, support, and low-cost operations across a distributed maintainer network.
-- Supported organizer-led publishing and discovery active in 35+ city ecosystems; treat that footprint as a limited geographic activity signal, not official chapters, readership, retention, policy, or causal impact.
+- Supported a platform active in 35+ city ecosystems, helping community organizers publish local calendars and circulate cultural activity through websites and email.
 
 ### [CallNYC.org](https://callnyc.org/) — Civic-Tech Builder & Product Translator
 

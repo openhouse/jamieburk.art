@@ -1,0 +1,933 @@
+{
+  "schemaVersion": 1,
+  "evalId": "resume-hiring-reader-portfolio-2026-08-15",
+  "runId": "2026-08-21-wowlist-scale-hillclimb",
+  "evaluatedAt": "2026-08-21T02:50:00-04:00",
+  "methodologySkills": [
+    "interviewing-evaluating-candidates",
+    "review-resume"
+  ],
+  "actualPeopleParticipated": false,
+  "acceptanceQuestion": "Under this explicitly fictionalized public-source lens, would this reader advance Jamie from resume review to a structured interview or practical work sample for this opportunity?",
+  "decision": "advance-to-structured-next-step",
+  "overall": "pass",
+  "summary": {
+    "requiredOpportunityVersions": 8,
+    "maintainedOpportunityVersions": 8,
+    "passingOpportunityVersions": 8,
+    "requiredReaderOpportunityPairs": 14,
+    "passingReaderOpportunityPairs": 14
+  },
+  "portfolioChecks": [
+    {
+      "id": "named-reader-opportunity-coverage",
+      "pass": true,
+      "detail": "8/8 named-reader opportunity versions configured."
+    },
+    {
+      "id": "named-reader-pair-coverage",
+      "pass": true,
+      "detail": "14/14 named reader/opportunity gates configured."
+    },
+    {
+      "id": "candidate-evaluation-skill-pinned",
+      "pass": true,
+      "detail": "interviewing-evaluating-candidates is repository-pinned with source provenance and an exact SKILL.md digest."
+    },
+    {
+      "id": "resume-review-skill-pinned",
+      "pass": true,
+      "detail": "review-resume is repository-pinned with marketplace provenance and an exact SKILL.md digest."
+    },
+    {
+      "id": "fictionalized-public-context-boundary",
+      "pass": true,
+      "detail": "A modeled pass advances to a structured next step and cannot represent actual participation or a final hire."
+    }
+  ],
+  "publicResume": {
+    "resumePath": "resumes/2026-08-15/technical-project-manager-product-operations-implementation/Jamie-Burkart-Resume-Technical-Project-Manager.md",
+    "sha256": "aa391f3fee9e2a38fb30176aa5d2d28bd014b43acd9eb9dcd81b01bff7ea4ed3",
+    "scope": "One durable site-visitor resume evaluated against every current, truthfully hirable opportunity that has an active fictionalized public-context reader gate.",
+    "activeGateIds": [
+      "gate.oti-product-manager.lisa-gelobter",
+      "gate.oti-product-manager.product-leadership",
+      "gate.oti-senior-product.lisa-gelobter",
+      "gate.oti-senior-product.product-leadership",
+      "gate.oti-speed-operations.julia-kerson",
+      "gate.oti-speed-operations.product-leadership",
+      "gate.oti-speed-product.leila-bozorg",
+      "gate.oti-speed-product.product-leadership"
+    ],
+    "activeOpportunityIds": [
+      "opportunity.nyc-oti.operations-manager-speed.789810",
+      "opportunity.nyc-oti.product-manager.784450",
+      "opportunity.nyc-oti.senior-product-manager-speed.789610",
+      "opportunity.nyc-oti.senior-product-manager.782366"
+    ],
+    "selection": {
+      "id": "public-resume-selection-2026-08-20",
+      "asOf": "2026-08-20T12:00:00-04:00",
+      "selectedTier": "open-opportunities",
+      "selectedOpportunityIds": [
+        "opportunity.nyc-oti.operations-manager-speed.789810",
+        "opportunity.nyc-oti.product-manager.784450",
+        "opportunity.nyc-oti.senior-product-manager-speed.789610",
+        "opportunity.nyc-oti.senior-product-manager.782366"
+      ],
+      "selectedResumePath": "resumes/2026-08-15/technical-project-manager-product-operations-implementation/Jamie-Burkart-Resume-Technical-Project-Manager.md",
+      "selectedScope": "Current OTI product-management and operations opportunity set",
+      "deterministicChecks": {
+        "candidateIdsUnique": true,
+        "historicalRanksComplete": true,
+        "selectedCandidatesValid": true,
+        "resumeSetBound": true
+      },
+      "candidateResults": [
+        {
+          "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+          "opportunityPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
+          "historicalFitRank": 1,
+          "salaryMaximum": 180000,
+          "externalApplicantEligible": true,
+          "readerGateIds": [
+            "gate.oti-senior-product.lisa-gelobter",
+            "gate.oti-senior-product.product-leadership"
+          ],
+          "opportunityIdFound": "opportunity.nyc-oti.senior-product-manager.782366",
+          "opportunityStatus": "live",
+          "applicationStatus": "not-recorded",
+          "postedUntil": "2026-10-16",
+          "reviewBy": "2026-08-27",
+          "checks": {
+            "idPass": true,
+            "reviewFresh": true,
+            "postingOpen": true,
+            "salaryCompatible": true,
+            "eligibilityPass": true
+          },
+          "activeApplication": false,
+          "openOpportunity": true
+        },
+        {
+          "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+          "opportunityPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
+          "historicalFitRank": 2,
+          "salaryMaximum": 180000,
+          "externalApplicantEligible": true,
+          "readerGateIds": [
+            "gate.oti-technical-operations.lisa-gelobter"
+          ],
+          "opportunityIdFound": "opportunity.nyc-oti.technical-operations-manager.782369",
+          "opportunityStatus": "closed",
+          "applicationStatus": "not-recorded",
+          "postedUntil": null,
+          "reviewBy": "2026-11-13",
+          "checks": {
+            "idPass": true,
+            "reviewFresh": true,
+            "postingOpen": false,
+            "salaryCompatible": true,
+            "eligibilityPass": true
+          },
+          "activeApplication": false,
+          "openOpportunity": false
+        },
+        {
+          "opportunityId": "opportunity.nyc-oti.operations-manager-speed.789810",
+          "opportunityPath": "docs/knowledge-bank/opportunities/oti-operations-manager-speed-789810.md",
+          "historicalFitRank": 3,
+          "salaryMaximum": 160000,
+          "externalApplicantEligible": true,
+          "readerGateIds": [
+            "gate.oti-speed-operations.product-leadership",
+            "gate.oti-speed-operations.julia-kerson"
+          ],
+          "opportunityIdFound": "opportunity.nyc-oti.operations-manager-speed.789810",
+          "opportunityStatus": "live",
+          "applicationStatus": "not-recorded",
+          "postedUntil": "2026-10-04",
+          "reviewBy": "2026-08-27",
+          "checks": {
+            "idPass": true,
+            "reviewFresh": true,
+            "postingOpen": true,
+            "salaryCompatible": true,
+            "eligibilityPass": true
+          },
+          "activeApplication": false,
+          "openOpportunity": true
+        },
+        {
+          "opportunityId": "opportunity.asana.ai-implementation.8027437",
+          "opportunityPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
+          "historicalFitRank": 4,
+          "salaryMaximum": null,
+          "externalApplicantEligible": true,
+          "readerGateIds": [
+            "gate.asana-ai-implementation.arnab-bose"
+          ],
+          "opportunityIdFound": "opportunity.asana.ai-implementation.8027437",
+          "opportunityStatus": "live",
+          "applicationStatus": "not-recorded",
+          "postedUntil": null,
+          "reviewBy": "2026-08-18",
+          "checks": {
+            "idPass": true,
+            "reviewFresh": false,
+            "postingOpen": false,
+            "salaryCompatible": false,
+            "eligibilityPass": true
+          },
+          "activeApplication": false,
+          "openOpportunity": false
+        },
+        {
+          "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+          "opportunityPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+          "historicalFitRank": 5,
+          "salaryMaximum": 150000,
+          "externalApplicantEligible": true,
+          "readerGateIds": [
+            "gate.oti-product-manager.product-leadership",
+            "gate.oti-product-manager.lisa-gelobter"
+          ],
+          "opportunityIdFound": "opportunity.nyc-oti.product-manager.784450",
+          "opportunityStatus": "live",
+          "applicationStatus": "not-recorded",
+          "postedUntil": "2026-09-04",
+          "reviewBy": "2026-08-27",
+          "checks": {
+            "idPass": true,
+            "reviewFresh": true,
+            "postingOpen": true,
+            "salaryCompatible": true,
+            "eligibilityPass": true
+          },
+          "activeApplication": false,
+          "openOpportunity": true
+        },
+        {
+          "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+          "opportunityPath": "docs/knowledge-bank/opportunities/aclu-senior-project-manager-national-campaigns.md",
+          "historicalFitRank": 6,
+          "salaryMaximum": null,
+          "externalApplicantEligible": true,
+          "readerGateIds": [
+            "gate.aclu-national-campaigns.deirdre-schifeling"
+          ],
+          "opportunityIdFound": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+          "opportunityStatus": "live",
+          "applicationStatus": "not-recorded",
+          "postedUntil": null,
+          "reviewBy": "2026-08-18",
+          "checks": {
+            "idPass": true,
+            "reviewFresh": false,
+            "postingOpen": false,
+            "salaryCompatible": false,
+            "eligibilityPass": true
+          },
+          "activeApplication": false,
+          "openOpportunity": false
+        },
+        {
+          "opportunityId": "opportunity.codepath.senior-ai-operations-lead.5175813007",
+          "opportunityPath": "docs/knowledge-bank/opportunities/codepath-senior-ai-operations-lead.md",
+          "historicalFitRank": 7,
+          "salaryMaximum": null,
+          "externalApplicantEligible": true,
+          "readerGateIds": [
+            "gate.codepath-ai-operations.quinton-ma",
+            "gate.codepath-ai-operations.brian-madigan"
+          ],
+          "opportunityIdFound": "opportunity.codepath.senior-ai-operations-lead.5175813007",
+          "opportunityStatus": "live",
+          "applicationStatus": "not-recorded",
+          "postedUntil": null,
+          "reviewBy": "2026-08-18",
+          "checks": {
+            "idPass": true,
+            "reviewFresh": false,
+            "postingOpen": false,
+            "salaryCompatible": false,
+            "eligibilityPass": true
+          },
+          "activeApplication": false,
+          "openOpportunity": false
+        },
+        {
+          "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+          "opportunityPath": "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
+          "historicalFitRank": 8,
+          "salaryMaximum": null,
+          "externalApplicantEligible": true,
+          "readerGateIds": [
+            "gate.codepath-engineering.zack-parker",
+            "gate.codepath-engineering.chris-coleman"
+          ],
+          "opportunityIdFound": "opportunity.codepath.engineering-project-manager.5160542007",
+          "opportunityStatus": "live",
+          "applicationStatus": "not-recorded",
+          "postedUntil": null,
+          "reviewBy": "2026-08-18",
+          "checks": {
+            "idPass": true,
+            "reviewFresh": false,
+            "postingOpen": false,
+            "salaryCompatible": false,
+            "eligibilityPass": true
+          },
+          "activeApplication": false,
+          "openOpportunity": false
+        },
+        {
+          "opportunityId": "opportunity.nyc-oti.senior-product-manager-speed.789610",
+          "opportunityPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-speed-789610.md",
+          "historicalFitRank": 9,
+          "salaryMaximum": 180000,
+          "externalApplicantEligible": true,
+          "readerGateIds": [
+            "gate.oti-speed-product.product-leadership",
+            "gate.oti-speed-product.leila-bozorg"
+          ],
+          "opportunityIdFound": "opportunity.nyc-oti.senior-product-manager-speed.789610",
+          "opportunityStatus": "live",
+          "applicationStatus": "not-recorded",
+          "postedUntil": "2026-10-04",
+          "reviewBy": "2026-08-27",
+          "checks": {
+            "idPass": true,
+            "reviewFresh": true,
+            "postingOpen": true,
+            "salaryCompatible": true,
+            "eligibilityPass": true
+          },
+          "activeApplication": false,
+          "openOpportunity": true
+        },
+        {
+          "opportunityId": "opportunity.permitflow.product-operations.8a6e6066",
+          "opportunityPath": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
+          "historicalFitRank": 10,
+          "salaryMaximum": null,
+          "externalApplicantEligible": true,
+          "readerGateIds": [
+            "gate.permitflow-product-operations.francis-thumpasery"
+          ],
+          "opportunityIdFound": "opportunity.permitflow.product-operations.8a6e6066",
+          "opportunityStatus": "live",
+          "applicationStatus": "not-recorded",
+          "postedUntil": null,
+          "reviewBy": "2026-08-18",
+          "checks": {
+            "idPass": true,
+            "reviewFresh": false,
+            "postingOpen": false,
+            "salaryCompatible": false,
+            "eligibilityPass": true
+          },
+          "activeApplication": false,
+          "openOpportunity": false
+        },
+        {
+          "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+          "opportunityPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
+          "historicalFitRank": 11,
+          "salaryMaximum": null,
+          "externalApplicantEligible": true,
+          "readerGateIds": [],
+          "opportunityIdFound": "opportunity.benepass.product-operations.7f963a7a",
+          "opportunityStatus": "closed",
+          "applicationStatus": "not-recorded",
+          "postedUntil": null,
+          "reviewBy": "2026-09-15",
+          "checks": {
+            "idPass": true,
+            "reviewFresh": true,
+            "postingOpen": false,
+            "salaryCompatible": false,
+            "eligibilityPass": true
+          },
+          "activeApplication": false,
+          "openOpportunity": false
+        },
+        {
+          "opportunityId": "opportunity.aclu.product-manager-discovery.8482872002",
+          "opportunityPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
+          "historicalFitRank": 12,
+          "salaryMaximum": null,
+          "externalApplicantEligible": true,
+          "readerGateIds": [],
+          "opportunityIdFound": "opportunity.aclu.product-manager-discovery.8482872002",
+          "opportunityStatus": "closed",
+          "applicationStatus": "not-recorded",
+          "postedUntil": null,
+          "reviewBy": "2026-11-13",
+          "checks": {
+            "idPass": true,
+            "reviewFresh": true,
+            "postingOpen": false,
+            "salaryCompatible": false,
+            "eligibilityPass": true
+          },
+          "activeApplication": false,
+          "openOpportunity": false
+        },
+        {
+          "opportunityId": "opportunity.codepath.claude-corps.5182020007",
+          "opportunityPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
+          "historicalFitRank": 13,
+          "salaryMaximum": null,
+          "externalApplicantEligible": true,
+          "readerGateIds": [],
+          "opportunityIdFound": "opportunity.codepath.claude-corps.5182020007",
+          "opportunityStatus": "closed",
+          "applicationStatus": "not-recorded",
+          "postedUntil": null,
+          "reviewBy": "2026-11-13",
+          "checks": {
+            "idPass": true,
+            "reviewFresh": true,
+            "postingOpen": false,
+            "salaryCompatible": false,
+            "eligibilityPass": true
+          },
+          "activeApplication": false,
+          "openOpportunity": false
+        }
+      ],
+      "llmGate": {
+        "allowed": true,
+        "queue": [
+          {
+            "gateId": "gate.oti-senior-product.lisa-gelobter",
+            "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366"
+          },
+          {
+            "gateId": "gate.oti-senior-product.product-leadership",
+            "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366"
+          },
+          {
+            "gateId": "gate.oti-speed-operations.product-leadership",
+            "opportunityId": "opportunity.nyc-oti.operations-manager-speed.789810"
+          },
+          {
+            "gateId": "gate.oti-speed-operations.julia-kerson",
+            "opportunityId": "opportunity.nyc-oti.operations-manager-speed.789810"
+          },
+          {
+            "gateId": "gate.oti-product-manager.product-leadership",
+            "opportunityId": "opportunity.nyc-oti.product-manager.784450"
+          },
+          {
+            "gateId": "gate.oti-product-manager.lisa-gelobter",
+            "opportunityId": "opportunity.nyc-oti.product-manager.784450"
+          },
+          {
+            "gateId": "gate.oti-speed-product.product-leadership",
+            "opportunityId": "opportunity.nyc-oti.senior-product-manager-speed.789610"
+          },
+          {
+            "gateId": "gate.oti-speed-product.leila-bozorg",
+            "opportunityId": "opportunity.nyc-oti.senior-product-manager-speed.789610"
+          }
+        ],
+        "queuedCalls": 8,
+        "avoidedCalls": 8,
+        "reason": "Only readers bound to the selected, deterministic-eligible opportunity set may run."
+      },
+      "overall": "pass",
+      "boundary": "Selection state is deterministic. Modeled readers may evaluate only the resulting public artifact and cannot establish an actual person's opinion, civil-service qualification, interview, offer, or hire."
+    },
+    "artifactChecks": [
+      {
+        "id": "public-resume-file-exists",
+        "pass": true,
+        "detail": "resumes/2026-08-15/technical-project-manager-product-operations-implementation/Jamie-Burkart-Resume-Technical-Project-Manager.md"
+      },
+      {
+        "id": "public-pdf-source-binding",
+        "pass": true,
+        "detail": "evals/resumes/artifacts/public-technical-project-manager-pdf.json"
+      },
+      {
+        "id": "deterministic-selection-before-roleplay",
+        "pass": true,
+        "detail": "open-opportunities; 8 modeled reader calls released after deterministic checks."
+      },
+      {
+        "id": "fictionalized-next-step-boundary",
+        "pass": true,
+        "detail": "The modeled screen cannot claim participation, endorsement, or a final hiring outcome."
+      }
+    ],
+    "readerResults": [
+      {
+        "gateId": "gate.oti-senior-product.lisa-gelobter",
+        "readerId": "reader.lisa-gelobter",
+        "displayName": "Lisa Gelobter",
+        "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+        "opportunityStatus": "live",
+        "reviewBy": "2026-08-27",
+        "profileBound": true,
+        "statusPass": true,
+        "hardScreenPass": true,
+        "freshnessPass": true,
+        "modeledVerdict": "pass",
+        "decision": "advance-to-structured-next-step",
+        "actualPersonParticipated": false,
+        "matchedSignalGroups": [
+          "public-interest-product",
+          "end-to-end-delivery",
+          "resident-usability",
+          "durable-capacity"
+        ],
+        "missingSignalGroups": [],
+        "constructiveCritique": "The shared resume shows public-interest product delivery, technical fluency, resident-facing interpretation, and durable handoff. The Senior IT Architect minimum and evidence of focused product authority inside a large institution remain real screens.",
+        "validateNext": "Use a structured product case to test discovery, version-one scope, accessibility, launch tradeoffs, metrics, managerability, and City capacity after handoff."
+      },
+      {
+        "gateId": "gate.oti-senior-product.product-leadership",
+        "readerId": "reader.oti-product-management-leadership",
+        "displayName": "OTI Product Management leadership",
+        "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+        "opportunityStatus": "live",
+        "reviewBy": "2026-08-27",
+        "profileBound": true,
+        "statusPass": true,
+        "hardScreenPass": true,
+        "freshnessPass": true,
+        "modeledVerdict": "pass",
+        "decision": "advance-to-structured-next-step",
+        "actualPersonParticipated": false,
+        "matchedSignalGroups": [
+          "product-lifecycle",
+          "cross-functional",
+          "measurement",
+          "production-judgment"
+        ],
+        "missingSignalGroups": [],
+        "constructiveCritique": "The resume carries the full product lifecycle and makes cross-functional delivery concrete. A hiring screen should still distinguish founder-wide responsibility from the prioritization and decision authority of a senior product manager on one accountable product.",
+        "validateNext": "Inspect one product end to end: users, decision rights, roadmap, rejected scope, accessibility, launch readiness, instrumentation, adoption, and what changed after release."
+      },
+      {
+        "gateId": "gate.oti-speed-operations.product-leadership",
+        "readerId": "reader.oti-product-management-leadership",
+        "displayName": "OTI Product Management leadership",
+        "opportunityId": "opportunity.nyc-oti.operations-manager-speed.789810",
+        "opportunityStatus": "live",
+        "reviewBy": "2026-08-27",
+        "profileBound": true,
+        "statusPass": true,
+        "hardScreenPass": true,
+        "freshnessPass": true,
+        "modeledVerdict": "pass",
+        "decision": "advance-to-structured-next-step",
+        "actualPersonParticipated": false,
+        "matchedSignalGroups": [
+          "operating-system",
+          "delivery-control",
+          "vendor-public-process",
+          "team-continuity"
+        ],
+        "missingSignalGroups": [],
+        "constructiveCritique": "The resume makes Jamie's connective operational work visible across technical, civic, vendor, and physical projects. It must not imply formal City procurement, personnel, or budget authority that the record does not establish.",
+        "validateNext": "Use an operations scenario to test portfolio intake, budget and procurement boundaries, staffing, vendor escalation, executive status, team health, and a sustainable operating cadence."
+      },
+      {
+        "gateId": "gate.oti-speed-operations.julia-kerson",
+        "readerId": "reader.julia-kerson",
+        "displayName": "Julia Kerson",
+        "opportunityId": "opportunity.nyc-oti.operations-manager-speed.789810",
+        "opportunityStatus": "live",
+        "reviewBy": "2026-08-27",
+        "profileBound": true,
+        "statusPass": true,
+        "hardScreenPass": true,
+        "freshnessPass": true,
+        "modeledVerdict": "pass",
+        "decision": "advance-to-structured-next-step",
+        "actualPersonParticipated": false,
+        "matchedSignalGroups": [
+          "public-execution",
+          "cross-disciplinary",
+          "accountability",
+          "measured-improvement"
+        ],
+        "missingSignalGroups": [],
+        "constructiveCritique": "Jamie's record shows operational persistence across public processes and mixed stakeholder systems. The next screen is whether that practice can support a City-scale program without overcentralizing responsibility in one person.",
+        "validateNext": "Probe how Jamie would shorten a cross-agency process, define ownership, report blockers, protect controls, measure time saved, and leave a healthier team system after one year."
+      },
+      {
+        "gateId": "gate.oti-product-manager.product-leadership",
+        "readerId": "reader.oti-product-management-leadership",
+        "displayName": "OTI Product Management leadership",
+        "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+        "opportunityStatus": "live",
+        "reviewBy": "2026-08-27",
+        "profileBound": true,
+        "statusPass": true,
+        "hardScreenPass": true,
+        "freshnessPass": true,
+        "modeledVerdict": "pass",
+        "decision": "advance-to-structured-next-step",
+        "actualPersonParticipated": false,
+        "matchedSignalGroups": [
+          "product-definition",
+          "delivery",
+          "outcomes",
+          "agency-users"
+        ],
+        "missingSignalGroups": [],
+        "constructiveCritique": "The shared resume translates long founder and civic-project work into recognizable product functions without changing the actual titles. The important remaining question is depth of product prioritization across a sustained roadmap and team.",
+        "validateNext": "Ask for a roadmap story with user evidence, outcome definition, competing stakeholders, technical constraints, acceptance criteria, launch, and a post-launch decision."
+      },
+      {
+        "gateId": "gate.oti-product-manager.lisa-gelobter",
+        "readerId": "reader.lisa-gelobter",
+        "displayName": "Lisa Gelobter",
+        "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+        "opportunityStatus": "live",
+        "reviewBy": "2026-08-27",
+        "profileBound": true,
+        "statusPass": true,
+        "hardScreenPass": true,
+        "freshnessPass": true,
+        "modeledVerdict": "pass",
+        "decision": "advance-to-structured-next-step",
+        "actualPersonParticipated": false,
+        "matchedSignalGroups": [
+          "usable-services",
+          "technical-capacity",
+          "public-trust",
+          "learning"
+        ],
+        "missingSignalGroups": [],
+        "constructiveCritique": "The resume presents technology as a means to make public and community systems easier to use, with credible governance and maintenance instincts. Formal product-team experience and civil-service qualification remain independent employer screens.",
+        "validateNext": "Probe why City service, how Jamie shares power with users and agencies, what product outcome matters, and how the team—not Jamie alone—retains capability."
+      },
+      {
+        "gateId": "gate.oti-speed-product.product-leadership",
+        "readerId": "reader.oti-product-management-leadership",
+        "displayName": "OTI Product Management leadership",
+        "opportunityId": "opportunity.nyc-oti.senior-product-manager-speed.789610",
+        "opportunityStatus": "live",
+        "reviewBy": "2026-08-27",
+        "profileBound": true,
+        "statusPass": true,
+        "hardScreenPass": true,
+        "freshnessPass": true,
+        "modeledVerdict": "pass",
+        "decision": "advance-to-structured-next-step",
+        "actualPersonParticipated": false,
+        "matchedSignalGroups": [
+          "physical-public-system",
+          "data-technical",
+          "product-delivery",
+          "cross-agency"
+        ],
+        "missingSignalGroups": [],
+        "constructiveCritique": "The resume supplies a rare bridge among physical projects, public process, product delivery, and data fluency. It does not yet prove the enterprise data-governance and architecture depth preferred in the posting.",
+        "validateNext": "Use a permitting-data case to test source systems, users, governance, API constraints, roadmap tradeoffs, interagency ownership, quality measures, and a bounded version one."
+      },
+      {
+        "gateId": "gate.oti-speed-product.leila-bozorg",
+        "readerId": "reader.leila-bozorg",
+        "displayName": "Leila Bozorg",
+        "opportunityId": "opportunity.nyc-oti.senior-product-manager-speed.789610",
+        "opportunityStatus": "live",
+        "reviewBy": "2026-08-27",
+        "profileBound": true,
+        "statusPass": true,
+        "hardScreenPass": true,
+        "freshnessPass": true,
+        "modeledVerdict": "pass",
+        "decision": "advance-to-structured-next-step",
+        "actualPersonParticipated": false,
+        "matchedSignalGroups": [
+          "housing-built-environment",
+          "equitable-public-process",
+          "implementation",
+          "measurable-delivery"
+        ],
+        "missingSignalGroups": [],
+        "constructiveCritique": "Jamie can connect affordable-city mission to the mechanics of a real building project, public benefit, and digital delivery. The hiring screen should test whether that experience transfers to equitable citywide permitting without overstating housing-policy authority.",
+        "validateNext": "Probe one built-environment bottleneck, who bears its cost, what evidence would define a better process, how agencies share decisions, and how speed remains equitable and accountable."
+      }
+    ],
+    "actualPeopleParticipated": false,
+    "decision": "advance-to-structured-next-step",
+    "overall": "pass",
+    "boundary": "This single public resume is tested against current modeled reader contexts only. Closed roles are excluded, and a pass is not an employer endorsement or final hiring decision."
+  },
+  "versions": [
+    {
+      "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "status": "live-priority",
+      "resumePath": "resumes/2026-08-14/aclu-senior-project-manager-national-campaigns-8631854002/Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-National-Campaigns-8631854002.md",
+      "wordCount": 648,
+      "numericSignalCount": 17,
+      "sha256": "34f2d495a633d0d6652e2f6a37fe6bf64cabb9a8c500cda19993c7f3e2d75017",
+      "reviewResumeSkill": "review-resume",
+      "reviewResumeCriteriaPassed": 10,
+      "reviewResumeCriteriaRequired": 10,
+      "overall": "pass",
+      "readerResults": [
+        {
+          "gateId": "gate.aclu-national-campaigns.deirdre-schifeling",
+          "readerId": "reader.deirdre-schifeling",
+          "displayName": "Deirdre Schifeling",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "profileBound": true,
+          "missingSignalGroups": [],
+          "validateNext": "Use a structured campaign scenario to test schedule, metric, budget, confidentiality, contested priorities, affiliate agency, and sustainability judgment."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.codepath.senior-ai-operations-lead.5175813007",
+      "status": "live-priority",
+      "resumePath": "resumes/2026-08-14/codepath-senior-ai-operations-lead-5175813007/Jamie-Burkart-Resume-CodePath-Senior-AI-Operations-Lead-5175813007.md",
+      "wordCount": 618,
+      "numericSignalCount": 14,
+      "sha256": "86f8243e9995edf5295c77cfc88723df3bb594bb1ab3e38f4c5b3092c3dee693",
+      "reviewResumeSkill": "review-resume",
+      "reviewResumeCriteriaPassed": 10,
+      "reviewResumeCriteriaRequired": 10,
+      "overall": "pass",
+      "readerResults": [
+        {
+          "gateId": "gate.codepath-ai-operations.quinton-ma",
+          "readerId": "reader.quinton-ma",
+          "displayName": "Quinton Ma",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "profileBound": true,
+          "missingSignalGroups": [],
+          "validateNext": "Inspect one personally built workflow end to end: users, tools, APIs, review gates, failure modes, adoption, measured change, maintenance, and handoff."
+        },
+        {
+          "gateId": "gate.codepath-ai-operations.brian-madigan",
+          "readerId": "reader.brian-madigan",
+          "displayName": "Brian Madigan",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "profileBound": true,
+          "missingSignalGroups": [],
+          "validateNext": "Probe prioritization across functions, executive reporting, adoption, maintenance cost, security and privacy escalation, and whether teams become less dependent after each engagement."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "status": "live-priority",
+      "resumePath": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.md",
+      "wordCount": 616,
+      "numericSignalCount": 17,
+      "sha256": "134e840fc45186598fdf3201f03b5a072e8a9ca532893f560f1f7b6bb7faacf0",
+      "reviewResumeSkill": "review-resume",
+      "reviewResumeCriteriaPassed": 10,
+      "reviewResumeCriteriaRequired": 10,
+      "overall": "pass",
+      "readerResults": [
+        {
+          "gateId": "gate.codepath-engineering.zack-parker",
+          "readerId": "reader.zack-parker",
+          "displayName": "Zack Parker",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "profileBound": true,
+          "missingSignalGroups": [],
+          "validateNext": "Use a structured work sample to test bug reproduction, prioritization, QA design, status communication, and proportionate process judgment."
+        },
+        {
+          "gateId": "gate.codepath-engineering.chris-coleman",
+          "readerId": "reader.chris-coleman",
+          "displayName": "Chris Coleman",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "profileBound": true,
+          "missingSignalGroups": [],
+          "validateNext": "Probe how Jamie would define success for engineering delivery when quality, learner experience, and a small team's capacity compete."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "status": "live-priority",
+      "resumePath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
+      "wordCount": 771,
+      "numericSignalCount": 20,
+      "sha256": "27de636adb7e3c4c4c2ecf410bee9eb601db2f077ba01bcaa401f87dc2e5f8f4",
+      "reviewResumeSkill": "review-resume",
+      "reviewResumeCriteriaPassed": 10,
+      "reviewResumeCriteriaRequired": 10,
+      "overall": "pass",
+      "readerResults": [
+        {
+          "gateId": "gate.oti-senior-product.lisa-gelobter",
+          "readerId": "reader.lisa-gelobter",
+          "displayName": "Lisa Gelobter",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "profileBound": true,
+          "missingSignalGroups": [],
+          "validateNext": "Probe public-service motivation, power sharing, managerability, outcome measurement, a real product tradeoff, and the ability to build City capacity rather than personal dependency."
+        },
+        {
+          "gateId": "gate.oti-senior-product.product-leadership",
+          "readerId": "reader.oti-product-management-leadership",
+          "displayName": "OTI Product Management leadership",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "profileBound": true,
+          "missingSignalGroups": [],
+          "validateNext": "Inspect one product end to end: users, decision rights, rejected scope, accessibility, launch readiness, instrumentation, adoption, and what changed after release."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.operations-manager-speed.789810",
+      "status": "live-priority",
+      "resumePath": "resumes/2026-08-20/nyc-oti-operations-manager-speed-789810/Jamie-Burkart-Resume-NYC-OTI-Operations-Manager-SPEED-789810.md",
+      "wordCount": 770,
+      "numericSignalCount": 22,
+      "sha256": "bd38ba0e4702d389b6e814f7c75e06395a8532447fc807baf3433d2900c38cf9",
+      "reviewResumeSkill": "review-resume",
+      "reviewResumeCriteriaPassed": 10,
+      "reviewResumeCriteriaRequired": 10,
+      "overall": "pass",
+      "readerResults": [
+        {
+          "gateId": "gate.oti-speed-operations.product-leadership",
+          "readerId": "reader.oti-product-management-leadership",
+          "displayName": "OTI Product Management leadership",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "profileBound": true,
+          "missingSignalGroups": [],
+          "validateNext": "Use an operations case to test intake, budget and procurement boundaries, staffing, vendor escalation, executive status, team health, and a sustainable operating cadence."
+        },
+        {
+          "gateId": "gate.oti-speed-operations.julia-kerson",
+          "readerId": "reader.julia-kerson",
+          "displayName": "Julia Kerson",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "profileBound": true,
+          "missingSignalGroups": [],
+          "validateNext": "Probe how Jamie would shorten a cross-agency process, define ownership, protect controls, report blockers, measure time saved, and leave a healthier team system."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "status": "live-priority",
+      "resumePath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.md",
+      "wordCount": 775,
+      "numericSignalCount": 22,
+      "sha256": "9afd42c8bd27134f102bf7d588b9b57641def6b8e978faa6e6de8389ca0856b0",
+      "reviewResumeSkill": "review-resume",
+      "reviewResumeCriteriaPassed": 10,
+      "reviewResumeCriteriaRequired": 10,
+      "overall": "pass",
+      "readerResults": [
+        {
+          "gateId": "gate.oti-product-manager.product-leadership",
+          "readerId": "reader.oti-product-management-leadership",
+          "displayName": "OTI Product Management leadership",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "profileBound": true,
+          "missingSignalGroups": [],
+          "validateNext": "Ask for a roadmap story with user evidence, outcome definition, competing stakeholders, technical constraints, acceptance criteria, launch, and a post-launch decision."
+        },
+        {
+          "gateId": "gate.oti-product-manager.lisa-gelobter",
+          "readerId": "reader.lisa-gelobter",
+          "displayName": "Lisa Gelobter",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "profileBound": true,
+          "missingSignalGroups": [],
+          "validateNext": "Probe why City service, how Jamie shares power with users and agencies, which outcome matters, and how the team—not Jamie alone—retains capability."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager-speed.789610",
+      "status": "live-priority",
+      "resumePath": "resumes/2026-08-20/nyc-oti-senior-product-manager-speed-789610/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-SPEED-789610.md",
+      "wordCount": 765,
+      "numericSignalCount": 22,
+      "sha256": "90619c674419addbfc869086f1f992da775166f24765002f67b190c921ac824c",
+      "reviewResumeSkill": "review-resume",
+      "reviewResumeCriteriaPassed": 10,
+      "reviewResumeCriteriaRequired": 10,
+      "overall": "pass",
+      "readerResults": [
+        {
+          "gateId": "gate.oti-speed-product.product-leadership",
+          "readerId": "reader.oti-product-management-leadership",
+          "displayName": "OTI Product Management leadership",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "profileBound": true,
+          "missingSignalGroups": [],
+          "validateNext": "Use a permitting-data case to test source systems, users, governance, API constraints, roadmap tradeoffs, interagency ownership, quality measures, and bounded version one."
+        },
+        {
+          "gateId": "gate.oti-speed-product.leila-bozorg",
+          "readerId": "reader.leila-bozorg",
+          "displayName": "Leila Bozorg",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "profileBound": true,
+          "missingSignalGroups": [],
+          "validateNext": "Probe one built-environment bottleneck, who bears its cost, what evidence defines improvement, how agencies share decisions, and how speed remains equitable and accountable."
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "status": "expired-benchmark",
+      "resumePath": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.md",
+      "wordCount": 703,
+      "numericSignalCount": 20,
+      "sha256": "098d50be591687197c85ca4a6b8b34c12003f2fe3b28a6246f36bf0fd4c29bf7",
+      "reviewResumeSkill": "review-resume",
+      "reviewResumeCriteriaPassed": 10,
+      "reviewResumeCriteriaRequired": 10,
+      "overall": "pass",
+      "readerResults": [
+        {
+          "gateId": "gate.oti-technical-operations.lisa-gelobter",
+          "readerId": "reader.lisa-gelobter",
+          "displayName": "Lisa Gelobter",
+          "modeledVerdict": "pass",
+          "decision": "advance-to-structured-next-step",
+          "actualPersonParticipated": false,
+          "profileBound": true,
+          "missingSignalGroups": [],
+          "validateNext": "For a materially similar future opening, test portfolio governance, personnel operations, procurement and budget exposure, escalation judgment, civil-service eligibility, and shift expectations."
+        }
+      ]
+    }
+  ],
+  "boundary": "This is a deterministic, fictionalized public-source resume screen. It is not participation, endorsement, an interview promise, or a final hiring decision by any named person."
+}

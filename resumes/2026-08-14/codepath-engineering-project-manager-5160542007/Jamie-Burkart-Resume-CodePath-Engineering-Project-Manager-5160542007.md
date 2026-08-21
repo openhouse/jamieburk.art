@@ -33,7 +33,7 @@ New York, NY / Remote | 2012–Present
 New York, NY / Remote | 2015–2020
 
 - Co-founded, co-built, and operated with Richard Caceres a Python/Django, PostgreSQL/PostGIS, and Ember.js community-calendar platform, coordinating product definition, implementation, organizer support, public communication, releases, and low-cost production operations.
-- Supported organizer-led publishing and discovery active in 35+ city ecosystems through natural-language event entry, followable keyword communities, weekly digests, profiles, embeds, and calendar connections. This is a limited geographic activity signal, not official chapters, readership, or causal impact.
+- Supported a platform active in 35+ city ecosystems, helping community organizers publish local calendars and circulate cultural activity through websites and email.
 
 ### [CallNYC.org](https://callnyc.org/) — Civic-Tech Builder & Product Translator
 

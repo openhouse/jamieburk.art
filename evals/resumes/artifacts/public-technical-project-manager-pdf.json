@@ -5,10 +5,10 @@
   "organization": "Public portfolio",
   "jobId": null,
   "sourceMarkdownPath": "resumes/2026-08-15/technical-project-manager-product-operations-implementation/Jamie-Burkart-Resume-Technical-Project-Manager.md",
-  "sourceMarkdownSha256": "fcdbce3a62744c32bb6363bccd680807ed40fa8f3097b93946a123bc6cbca818",
+  "sourceMarkdownSha256": "aa391f3fee9e2a38fb30176aa5d2d28bd014b43acd9eb9dcd81b01bff7ea4ed3",
   "pdfPath": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
-  "pdfSha256": "e77f583b69c1b69e7b71e4873cb07e4dc1c987b35a5b55cab13c4689b64cc623",
-  "pdfSizeBytes": 95310,
+  "pdfSha256": "33aa3eacf139300edb8247899e02c8a9b669ff4f36c56cfe9c116df77ad0190f",
+  "pdfSizeBytes": 94808,
   "pageCount": 2,
   "pageSizePoints": [612, 792],
   "documentTitle": "Jamie Burkart ◍ Resume — Technical Project Manager — 2026-08-15",
@@ -70,15 +70,22 @@
     ],
     "prohibitedPhrases": [
       "1,846 users",
+      "1846 users",
+      "1,800+ users",
       "16,142 posts/events",
-      "bounded geographic activity signal"
+      "16142 posts/events",
+      "16,000+ posts/events",
+      "bounded geographic activity signal",
+      "treat that footprint as a limited geographic activity signal",
+      "distinguish these activity counts from",
+      "resident outcomes, or causal impact"
     ]
   },
   "experienceHeadingLinkStyleInspection": {
     "status": "pass",
-    "inspectedAt": "2026-08-20",
+    "inspectedAt": "2026-08-21",
     "method": "Google Docs connector readback, HTML export, pdftohtml 25.11.0 XML extraction, and rendered-page inspection",
-    "pdfSha256": "e77f583b69c1b69e7b71e4873cb07e4dc1c987b35a5b55cab13c4689b64cc623",
+    "pdfSha256": "33aa3eacf139300edb8247899e02c8a9b669ff4f36c56cfe9c116df77ad0190f",
     "requiredLabels": [
       "NYC Artist Coalition / FairRentNYC",
       "WOWList.org",
@@ -99,9 +106,9 @@
   },
   "listMarkerTypographyInspection": {
     "status": "pass",
-    "inspectedAt": "2026-08-20",
+    "inspectedAt": "2026-08-21",
     "method": "Google Docs connector readback, pdftohtml 25.11.0 XML extraction, and rendered-page inspection",
-    "pdfSha256": "e77f583b69c1b69e7b71e4873cb07e4dc1c987b35a5b55cab13c4689b64cc623",
+    "pdfSha256": "33aa3eacf139300edb8247899e02c8a9b669ff4f36c56cfe9c116df77ad0190f",
     "listParagraphCount": 18,
     "itemTextSizePoints": 10,
     "markerSizePoints": 9,
@@ -125,7 +132,7 @@
   ],
   "visualInspection": {
     "status": "pass",
-    "inspectedAt": "2026-08-20",
+    "inspectedAt": "2026-08-21",
     "pagesInspected": [1, 2],
     "criteria": {
       "noClippedOrOverlappingText": true,
@@ -137,9 +144,9 @@
     }
   },
   "hillClimb": {
-    "baseline": "The public PDF's list markers used the same point size as the associated item text, giving punctuation and prose equal typographic weight.",
-    "candidate": "The exact public PDF now uses 9-point markers beside 10-point item text across all 18 list paragraphs while preserving the established two-page layout, links, and copy.",
-    "boundedChange": "Adjusted only native list-marker typography, preserved the Palatino/Oswald/Karla layout and project links, and added an exact-artifact deterministic gate."
+    "baseline": "The WOW List bullet foregrounded raw account and post counts, then devoted substantial space to methodological cautions that displaced the hiring-relevant accomplishment.",
+    "candidate": "The exact public PDF now states that WOW List was active in 35+ city ecosystems and explains that community organizers used it to publish local calendars and circulate cultural activity through websites and email.",
+    "boundedChange": "Revised only the public WOW List scale sentence across active resume projections, preserved the defensible ecosystem claim and established two-page design, and added deterministic exclusions for raw user/post counts and resume-scale defensive tails."
   },
-  "boundary": "This gate verifies the exact public PDF, Markdown binding, generic positioning, chronology, structural safety, required native links, visually continuous experience-heading link styling, the one-point list-marker hierarchy, the public WOWList ecosystem-scale rule, explicitly forbidden links, and recorded all-page visual inspection. It is not an employer endorsement, application submission, or guarantee of interview or hire."
+  "boundary": "This gate verifies the exact public PDF, Markdown binding, generic positioning, chronology, structural safety, required native links, visually continuous experience-heading link styling, the one-point list-marker hierarchy, positive WOW List ecosystem positioning without public account/post counts or disproportionate methodological caveats, explicitly forbidden links, and recorded all-page visual inspection. It is not an employer endorsement, application submission, or guarantee of interview or hire."
 }

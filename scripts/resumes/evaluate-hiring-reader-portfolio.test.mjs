@@ -118,6 +118,36 @@ test("a fabricated named-reader endorsement fails the artifact safety gate", () 
   assert.equal(result.overall, "fail");
 });
 
+test("WOWList user and post counts fail every public resume version", () => {
+  const version = config.versions[0];
+  const original = readFileSync(path.join(repoRoot, version.resumePath), "utf8");
+  const result = evaluateHiringReaderPortfolio({
+    resumeOverrides: {
+      [version.resumePath]: `${original}\n- Reached 1,846 users and 16,142 posts/events.\n`
+    }
+  });
+  const safety = result.versions[0].artifactChecks.find(
+    (check) => check.id === "claim-and-endorsement-safety"
+  );
+  assert.equal(safety.pass, false);
+  assert.equal(result.overall, "fail");
+});
+
+test("a defensive WOWList methodology clause fails the resume-scale confidence gate", () => {
+  const version = config.versions[0];
+  const original = readFileSync(path.join(repoRoot, version.resumePath), "utf8");
+  const result = evaluateHiringReaderPortfolio({
+    resumeOverrides: {
+      [version.resumePath]: `${original}\n- Supported organizer activity; distinguish these activity counts from retention, resident outcomes, or causal impact.\n`
+    }
+  });
+  const safety = result.versions[0].artifactChecks.find(
+    (check) => check.id === "claim-and-endorsement-safety"
+  );
+  assert.equal(safety.pass, false);
+  assert.equal(result.overall, "fail");
+});
+
 test("omitting a named-reader opportunity or pair fails suite coverage", () => {
   const missingOpportunity = structuredClone(config);
   missingOpportunity.versions = missingOpportunity.versions.slice(1);

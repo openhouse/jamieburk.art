@@ -40,7 +40,7 @@ New York, NY | 2017–Present
 New York, NY / Remote | 2015–2020
 
 - Co-founded, co-built, and operated with Richard Caceres a natural-language community-calendar platform spanning product definition, implementation, organizer onboarding, support, public communication, instrumentation, and low-cost operations across distributed maintainers.
-- Supported organizer-led publishing and discovery active in 35+ city ecosystems; treat that footprint as a limited geographic activity signal, not official chapters, adoption quality, retention, changed team behavior, or causal impact.
+- Supported a platform active in 35+ city ecosystems, helping community organizers publish local calendars and circulate cultural activity through websites and email.
 
 ### [Harry J. Epstein Company](https://www.harryepstein.com/) — Product, Web & Operations Partner through THICK ARTS
 

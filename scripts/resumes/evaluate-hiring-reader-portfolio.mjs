@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -503,7 +503,7 @@ export function evaluateHiringReaderPortfolio({
           config.resumeStandards.forbiddenPatterns.every(
             (pattern) => !new RegExp(pattern, "i").test(plainText)
           ),
-        detail: "Avoids guaranteed outcomes, invented named-reader participation, sole-credit claims, and unsupported conformance claims."
+        detail: "Avoids guaranteed outcomes, invented named-reader participation, sole-credit claims, unsupported conformance claims, public WOWList user/post counts, and résumé-scale methodological disclaimers."
       }
     ];
 
@@ -589,7 +589,7 @@ export function evaluateHiringReaderPortfolio({
   return {
     schemaVersion: 1,
     evalId: config.id,
-    runId: "2026-08-15-public-active-opportunity-resume-post-hillclimb",
+    runId: "2026-08-21-wowlist-scale-hillclimb",
     evaluatedAt: config.evaluatedAt,
     methodologySkills: [config.methodology.primarySkill, resumeReviewMethod.name],
     actualPeopleParticipated: false,
@@ -655,7 +655,17 @@ function main() {
   const result = evaluateHiringReaderPortfolio();
   console.log(JSON.stringify(result, null, 2));
 
-  if (!process.argv.includes("--no-current-run-check")) {
+  if (process.argv.includes("--write-current-run")) {
+    writeFileSync(
+      path.join(repoRoot, defaultConfig.currentRunPath),
+      `${JSON.stringify(currentRunSnapshot(result), null, 2)}\n`
+    );
+  }
+
+  if (
+    !process.argv.includes("--no-current-run-check") &&
+    !process.argv.includes("--write-current-run")
+  ) {
     const expected = readJson(defaultConfig.currentRunPath);
     assert.deepEqual(currentRunSnapshot(result), expected, "Committed resume portfolio run is stale");
   }

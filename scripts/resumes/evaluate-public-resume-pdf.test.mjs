@@ -157,6 +157,37 @@ test("the public gate rejects WOWList audience and post counts in favor of ecosy
   );
 });
 
+test("the public gate rejects a methodology-heavy WOWList disclaimer", () => {
+  const defensiveMarkdown = Buffer.from(
+    publicMarkdown
+      .toString("utf8")
+      .replace(
+        "active in 35+ city ecosystems",
+        "active in 35+ city ecosystems; distinguish these activity counts from retention, resident outcomes, or causal impact"
+      )
+  );
+  const result = evaluateResumePdf({
+    spec: {
+      ...exactPublicSpec,
+      contentContract: {
+        ...exactPublicSpec.contentContract,
+        requiredPhrases: ["active in 35+ city ecosystems"],
+        prohibitedPhrases: [
+          "distinguish these activity counts from",
+          "resident outcomes, or causal impact"
+        ]
+      }
+    },
+    markdown: defensiveMarkdown,
+    pdf: publicPdf
+  });
+
+  assert.equal(
+    result.checks.find((check) => check.id === "public-positioning-and-chronology")?.pass,
+    false
+  );
+});
+
 test("the public gate requires exact-candidate evidence that linked experience headings preserve their surrounding style", () => {
   const result = evaluateResumePdf({
     spec: {

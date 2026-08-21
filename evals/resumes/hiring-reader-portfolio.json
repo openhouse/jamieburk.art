@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "id": "resume-hiring-reader-portfolio-2026-08-15",
-  "evaluatedAt": "2026-08-20T12:00:00-04:00",
+  "evaluatedAt": "2026-08-21T02:50:00-04:00",
   "readerSuitePath": "evals/knowledge-wiki/named-hiring-readers.json",
-  "currentRunPath": "evals/resumes/runs/2026-08-15-public-active-opportunity-resume-post-hillclimb.json",
+  "currentRunPath": "evals/resumes/runs/2026-08-21-wowlist-scale-hillclimb.json",
   "methodology": {
     "primarySkill": "interviewing-evaluating-candidates",
     "installedPath": ".agents/skills/interviewing-evaluating-candidates/SKILL.md",
@@ -66,7 +66,10 @@
       "(?:guaranteed|guarantees) (?:an interview|employment|a job|an offer)",
       "(?:Deirdre Schifeling|Quinton Ma|Brian Madigan|Zack Parker|Chris Coleman|Lisa Gelobter|Julia Kerson|Leila Bozorg) (?:reviewed|approved|endorsed|recommended|would hire)",
       "(?:solely created|single-handedly|personally caused)",
-      "(?:WCAG compliant|Section 508 compliant)"
+      "(?:WCAG compliant|Section 508 compliant)",
+      "(?:1,?846|1,?800\\+) (?:users|accounts)",
+      "(?:16,?142|16,?000\\+) (?:posts(?:/events)?|event posts)",
+      "(?:treat that footprint as a limited geographic activity signal|distinguish these activity counts from[^.]{0,180}(?:resident outcomes|causal impact))"
     ]
   },
   "publicResume": {

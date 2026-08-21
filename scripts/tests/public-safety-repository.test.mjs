@@ -245,3 +245,34 @@ test("the public-safety gate rejects archive-process photo-credit prose", () => 
     if (existsSync(mutationPath)) unlinkSync(mutationPath);
   }
 });
+
+test("the public-safety gate rejects raw WOW List user and event-post counts", () => {
+  const mutationPath = path.join(
+    publicAssetDirectory,
+    "__public-wowlist-scale-mutation__.txt"
+  );
+  try {
+    writeFileSync(
+      mutationPath,
+      "WOW List reached 1,846 users and 16,142 posts/events.\n"
+    );
+    assert.throws(
+      () =>
+        execFileSync(
+          process.execPath,
+          [path.join(repoRoot, "scripts/check-public-safety.mjs")],
+          {
+            cwd: repoRoot,
+            encoding: "utf8",
+            stdio: ["ignore", "pipe", "pipe"]
+          }
+        ),
+      (error) =>
+        /public-facing WOW List copy exposes raw user or event-post counts instead of ecosystem scale/.test(
+          error.stderr?.toString() ?? ""
+        )
+    );
+  } finally {
+    if (existsSync(mutationPath)) unlinkSync(mutationPath);
+  }
+});
