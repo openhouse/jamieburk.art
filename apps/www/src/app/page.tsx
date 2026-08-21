@@ -3,6 +3,7 @@ import type { Route } from "next";
 import { CapabilityGrid } from "@/components/CapabilityGrid";
 import { ContactCTA } from "@/components/ContactCTA";
 import { Hero } from "@/components/Hero";
+import { HomeFieldSystemEvidence } from "@/components/HomeFieldSystemEvidence";
 import { ProofStrip } from "@/components/ProofStrip";
 import { WorkCard } from "@/components/WorkCard";
 import { featuredWork } from "@/data/work";
@@ -79,6 +80,7 @@ export default function HomePage() {
       </section>
       <ProofStrip />
       <CapabilityGrid />
+      <HomeFieldSystemEvidence />
       <section className="jb-frame py-16">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="jb-reading">

@@ -134,7 +134,10 @@ export const portfolioPhotos = {
     credit: "Photo courtesy of NYC Artist Coalition.",
     wikiId: "asset.photo.nycac-shoestring-facilitation.2017.001",
     derivativeId: "derivative.photo.nycac-shoestring-facilitation.v1",
-    placementIds: ["projection.photo.fair-rent-nyc.shoestring-facilitation"],
+    placementIds: [
+      "projection.photo.home.screen-room-shoestring",
+      "projection.photo.fair-rent-nyc.shoestring-facilitation"
+    ],
     captionAssertionIds: [
       "statement.photo.nycac-shoestring.place.v1",
       "statement.photo.nycac-shoestring.capture-date.v1",
@@ -144,7 +147,7 @@ export const portfolioPhotos = {
       "statement.photo.nycac-shoestring.courtesy-credit.v1"
     ],
     knowledgeStatus: "bound",
-    placements: ["fair-rent-nyc"],
+    placements: ["home", "fair-rent-nyc"],
     publicationStatus: "jamie-authorized",
     releaseState: {
       publicGit: "approved",

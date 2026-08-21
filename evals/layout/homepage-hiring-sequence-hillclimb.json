@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "homepage-hiring-sequence-hillclimb-2026-08-20",
-  "evaluatedAt": "2026-08-20T17:24:00-04:00",
+  "evaluatedAt": "2026-08-21T17:28:35-04:00",
   "criterion": "rushed-hiring-reader-legibility",
   "activeOpportunityBasis": {
     "submittedPending": [
@@ -115,6 +115,28 @@
       "mobileArtifactGallery": "pass",
       "desktopContinuity": "pass",
       "blackTranscodeArtifact": "absent"
+    },
+    "decision": "keep-change"
+  },
+  "screenRoomBridge": {
+    "criterion": "screen-to-room-hiring-legibility",
+    "selectedBase": "apply/2026-08-21-B",
+    "candidateComparison": {
+      "stagingA": "Strongest experiential thesis and the most memorable connection between public interfaces and lived participation.",
+      "stagingB": "Strongest all-purpose hiring sequence, clearest conventional opening, and most balanced six-project case.",
+      "stagingC": "Tightest public-sector edit and clearest direct role-fit action, with a hero treatment that is less fitting for the selected Human Index composition."
+    },
+    "candidate": "Keep B's exact reviewed hero, quick path, and six-project sequence; add A's screen-and-room thesis as one concise governed pair; place C's direct role-fit action in that bridge.",
+    "visualSequence": [
+      "unchanged exact-reviewed full-bleed East River hero",
+      "quick path and capability index",
+      "Shoestring Press facilitation beside the FairRentNYC public surface",
+      "B's approved six-project hiring sequence"
+    ],
+    "browserReview": {
+      "desktop": "pass",
+      "mobile": "pass",
+      "consoleErrorsOrWarnings": 0
     },
     "decision": "keep-change"
   },

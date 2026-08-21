@@ -18,6 +18,7 @@ public_display_status: cleared
 projection:
   status: active
   surfaces:
+    - /
     - /work/fair-rent-nyc
 public_derivatives:
   - id: derivative.photo.nycac-shoestring-facilitation.v1
@@ -71,6 +72,9 @@ visible_observations:
 interpretation_boundary: The photograph supports the working-session setting and visible facilitation. It does not preserve exact remarks or independently prove agreement, endorsement, later action, or policy causation.
 relations:
   - type: projected_to
+    target: projection.photo.home.screen-room-shoestring
+    href: ../../projections/photography/home-screen-room-shoestring.md
+  - type: projected_to
     target: projection.photo.fair-rent-nyc.shoestring-facilitation
     href: ../../projections/photography/fair-rent-nyc-shoestring-facilitation.md
   - type: uses_source
@@ -87,9 +91,10 @@ relations:
 
 ## Current public use
 
-The metadata-stripped derivative appears in the Fair Rent NYC case study as
-the working-alignment image in a three-part participation sequence. The public
-display credit is "Photo courtesy of NYC Artist Coalition."
+The metadata-stripped derivative appears on the homepage in a field-and-system
+pair and in the Fair Rent NYC case study as the working-alignment image in a
+three-part participation sequence. The public display credit is "Photo courtesy
+of NYC Artist Coalition."
 
 ## Evidence boundary
 

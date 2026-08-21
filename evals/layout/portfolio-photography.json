@@ -1,5 +1,5 @@
 {
-  "id": "portfolio-photography-layout-v3",
+  "id": "portfolio-photography-layout-v4",
   "title": "Human Index photographic portfolio layout",
   "intent": "Photography changes the portfolio's editorial rhythm while remaining public-safe, accessible, and subordinate to human publication authority.",
   "criteria": [
@@ -22,6 +22,11 @@
       "id": "editorial-not-decorative",
       "blocking": true,
       "criterion": "The home photograph remains full-bleed and unchanged; the work index gives all seven projects one truthful visual threshold by composing governed situated-work photographs with project-specific public screenshots; the Fair Rent NYC sequence retains its campaign screenshot, captions, credits, and interpretation boundaries; About and Colophon remain text-led."
+    },
+    {
+      "id": "screen-room-continuity",
+      "blocking": true,
+      "criterion": "Between the homepage capability index and selected projects, one concise field-and-system pair joins the governed Shoestring Press facilitation occurrence to the matching FairRentNYC public surface. The bridge sends a rushed hiring reader directly to role-fit evidence and retains project credit, public links, and limits without changing the reviewed hero, claims, or project order."
     },
     {
       "id": "truthful-project-cover-field",

@@ -1,8 +1,8 @@
 {
   "reportVersion": 5,
-  "checkedAt": "2026-08-21T18:35:30.642567Z",
-  "baseUrl": "http://127.0.0.1:3217",
-  "publicSurfaceFingerprint": "37130a2ec29260c57fd47543e1ca07afcd00450f9b0144ea07b8aca3e11448a9",
+  "checkedAt": "2026-08-21T22:59:52.292Z",
+  "baseUrl": "http://127.0.0.1:3102",
+  "publicSurfaceFingerprint": "bdccd6f12c9f99a7538a34afb18af05d6cc9e44ca78b064e7ac64bcab2fbb174",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 150,
   "captureMethod": "Playwright Chromium viewport screenshots of the exact local candidate; About captures are framed on the systems through-line; no deployment or indexing action.",
@@ -20,7 +20,7 @@
           },
           "pixelWidth": 1280,
           "pixelHeight": 900,
-          "sha256": "ed2ed1cab0fd460c88e17baf0c0df9755dccf7d65d3c61534e5f9c10558c24d0",
+          "sha256": "c7577d3edd56d4bbe829a7b6b5096513ca5888cd4460c85d6b7dd4829bba06ce",
           "file": "candidate-home-desktop.png"
         },
         {
@@ -31,7 +31,7 @@
           },
           "pixelWidth": 375,
           "pixelHeight": 812,
-          "sha256": "7afa0d1b72e771a0c5e0bcbc8dec534043cf9c337a3e54733abaa968d2b5b02e",
+          "sha256": "7c07c4012556125fe1260a30f86aff97a9723e3ec9dbf47fe7a7f9c5f6fddb90",
           "file": "candidate-home-viewport.png"
         }
       ]
@@ -49,7 +49,7 @@
           },
           "pixelWidth": 1280,
           "pixelHeight": 900,
-          "sha256": "5668cf43ce1ea4777b17a5e5a28315d2677bfbe108594cb7224f839fd5c488d7",
+          "sha256": "74724ed4278bab16ea13080ce969dc115054c5f0c8863c159b1623d10a246ac1",
           "file": "professor-lenses-about-desktop.png",
           "framedContent": {
             "systemsPeopleCanInhabitHeadingPresent": true,
@@ -64,7 +64,7 @@
           },
           "pixelWidth": 375,
           "pixelHeight": 1200,
-          "sha256": "8cf8f8a7b8558e16ff03282b50dc7f429885a5b897d60c9413d019d3f32da5e0",
+          "sha256": "413e2f7911f5ee140209fb952eaf64061c00a63970556bc5d782e2ec677f4729",
           "file": "professor-lenses-about-mobile.png",
           "framedContent": {
             "systemsPeopleCanInhabitHeadingPresent": true,

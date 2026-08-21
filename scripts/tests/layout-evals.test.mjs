@@ -92,6 +92,39 @@ test("the homepage hero remains bound to the East River photograph", () => {
   assert(result.failures.some(({ criterion }) => criterion === "editorial-not-decorative"));
 });
 
+test("the homepage keeps the field-and-system bridge after capabilities", () => {
+  const path = "apps/www/src/app/page.tsx";
+  const source = readFileSync(path, "utf8").replace(
+    "      <HomeFieldSystemEvidence />\n",
+    ""
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "screen-room-continuity"));
+});
+
+test("the homepage field-and-system bridge retains its governed facilitation image", () => {
+  const path = "apps/www/src/components/HomeFieldSystemEvidence.tsx";
+  const source = readFileSync(path, "utf8").replace(
+    "portfolioPhotos.nycacShoestringFacilitation",
+    "portfolioPhotos.nycacMarketHotelBanner"
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "screen-room-continuity"));
+});
+
+test("the field-and-system bridge keeps the direct role-fit action", () => {
+  const path = "apps/www/src/components/HomeFieldSystemEvidence.tsx";
+  const source = readFileSync(path, "utf8").replace(
+    'href="/work/technical-operations"',
+    'href="/work"'
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "screen-room-continuity"));
+});
+
 test("every work item retains a truthful cover visual", () => {
   const path = "apps/www/src/data/work-covers.ts";
   const source = readFileSync(path, "utf8").replace(

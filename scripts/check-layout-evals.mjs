@@ -28,6 +28,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     "governed-photographic-field",
     "metadata-and-locator-safety",
     "editorial-not-decorative",
+    "screen-room-continuity",
     "truthful-project-cover-field",
     "browser-window-presentation",
     "homepage-hiring-sequence",
@@ -172,6 +173,9 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   const workIndex = readText("apps/www/src/app/work/page.tsx");
   const tagList = readText("apps/www/src/components/TagList.tsx");
   const capabilityGrid = readText("apps/www/src/components/CapabilityGrid.tsx");
+  const homeFieldSystemEvidence = readText(
+    "apps/www/src/components/HomeFieldSystemEvidence.tsx"
+  );
   const coverCount = [...workCovers.matchAll(/^  (?:"[^"]+"|[a-z]+): \{/gm)].length;
   if (coverCount !== 7 ||
       !workCoverMedia.includes('from "next/image"') ||
@@ -256,6 +260,44 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     fail(
       "browser-window-presentation",
       "CallNYC must use the exact alpha-bearing press-kit PNG on the shared white-field browser-window presentation in every portfolio rendering."
+    );
+  }
+  const capabilityIndex = homePage.indexOf("<CapabilityGrid />");
+  const fieldSystemIndex = homePage.indexOf("<HomeFieldSystemEvidence />");
+  const selectedSystemsIndex = homePage.indexOf("featuredWork.map");
+  if (
+    !hero.includes('href="/work"') ||
+    !hero.includes("View selected work") ||
+    !homePage.includes('from "@/components/HomeFieldSystemEvidence"') ||
+    capabilityIndex < 0 ||
+    fieldSystemIndex <= capabilityIndex ||
+    selectedSystemsIndex <= fieldSystemIndex ||
+    !homeFieldSystemEvidence.includes(
+      "The system lives between the screen and the room"
+    ) ||
+    !homeFieldSystemEvidence.includes(
+      "portfolioPhotos.nycacShoestringFacilitation"
+    ) ||
+    !homeFieldSystemEvidence.includes(
+      'src: "/artifacts/fair-rent-nyc/public-site.png"'
+    ) ||
+    !homeFieldSystemEvidence.includes('href="/work/technical-operations"') ||
+    !homeFieldSystemEvidence.includes("See role-fit evidence") ||
+    !homeFieldSystemEvidence.includes('href="/work/fair-rent-nyc"') ||
+    !manifest.includes('credit: "Photo courtesy of NYC Artist Coalition."') ||
+    hiringSequenceHillclimb.screenRoomBridge?.criterion !==
+      "screen-to-room-hiring-legibility" ||
+    hiringSequenceHillclimb.screenRoomBridge?.selectedBase !==
+      "apply/2026-08-21-B" ||
+    hiringSequenceHillclimb.screenRoomBridge?.browserReview?.desktop !== "pass" ||
+    hiringSequenceHillclimb.screenRoomBridge?.browserReview?.mobile !== "pass" ||
+    hiringSequenceHillclimb.screenRoomBridge?.browserReview?.consoleErrorsOrWarnings !==
+      0 ||
+    hiringSequenceHillclimb.screenRoomBridge?.decision !== "keep-change"
+  ) {
+    fail(
+      "screen-room-continuity",
+      "The approved B-based synthesis must keep its reviewed hero unchanged and retain the direct role-fit action and governed screen-to-room bridge in the reviewed homepage position."
     );
   }
 

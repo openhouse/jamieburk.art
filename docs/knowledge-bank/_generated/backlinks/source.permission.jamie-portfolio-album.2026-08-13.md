@@ -3,7 +3,7 @@
 
 **Source commit:** `594eeb80fd33cee9053f618521f42b76f312cbe6`
 **Generation time:** 2026-08-21T15:02:23-04:00
-**Source fingerprint:** `b2f85389ab3e7725be9b2d24acf810252a431365b899b1d8e90fab635830b1a5`
+**Source fingerprint:** `62de5d9514e8938cca88e06f77cf8edda06d7a3f23b2adb1f8aeaf1bff64ac55`
 
 - [KC Town Hall roof work, 2019](../../assets/photographs/kc-town-hall-roof-work-2019.md) - `uses_source` (frontmatter)
 - [NYC Artist Coalition shared working map, 2017](../../assets/photographs/knowledge-wiki-collective-map-2017.md) - `uses_source` (frontmatter)
@@ -13,6 +13,7 @@
 - [Photography knowledge loop](../../indexes/photography.md) - `prose_link` (markdown)
 - [Fair Rent NYC Market Hotel public-room occurrence](../../projections/photography/fair-rent-nyc-market-hotel-banner.md) - `uses_source` (frontmatter)
 - [Fair Rent NYC Shoestring Press facilitation occurrence](../../projections/photography/fair-rent-nyc-shoestring-facilitation.md) - `uses_source` (frontmatter)
+- [Homepage screen-and-room Shoestring Press occurrence](../../projections/photography/home-screen-room-shoestring.md) - `uses_source` (frontmatter)
 - [KC Town Hall roof-work occurrence](../../projections/photography/kc-town-hall-roof-work.md) - `uses_source` (frontmatter)
 - [Knowledge Wiki Graph collective-map occurrence](../../projections/photography/knowledge-wiki-collective-map.md) - `uses_source` (frontmatter)
 - [East River social-preview occurrence](../../projections/photography/social-preview-east-river.md) - `uses_source` (frontmatter)

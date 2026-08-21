@@ -3,7 +3,7 @@
 
 **Source commit:** `594eeb80fd33cee9053f618521f42b76f312cbe6`
 **Generation time:** 2026-08-21T15:02:23-04:00
-**Source fingerprint:** `b2f85389ab3e7725be9b2d24acf810252a431365b899b1d8e90fab635830b1a5`
+**Source fingerprint:** `62de5d9514e8938cca88e06f77cf8edda06d7a3f23b2adb1f8aeaf1bff64ac55`
 
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `related_to` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [hur5tftl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj.md) - `related_to` (frontmatter)
@@ -44,6 +44,7 @@
 - [NYC Artist Coalition organization map](../../organizations/nyc-artist-coalition.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
 - [Save NYC Spaces](../../projects/save-nyc-spaces.md) - `related_to` (frontmatter)
+- [Homepage screen-and-room Shoestring Press occurrence](../../projections/photography/home-screen-room-shoestring.md) - `related_to` (frontmatter)
 - [Active New York State commercial rent stabilization bills](../../sources/commercial-rent-public-support/active-state-bills-2025-2026.md) - `related_to` (frontmatter)
 - [Late-July 2026 current-workstream review](../../sources/working/current-workstream-2026-07-27.md) - `related_to` (frontmatter)
 - [Jimmy's Corner rally: Small Business Rent Stabilization statements](../../testimony/commercial-rent-public-support/2026-04-10-jimmys-corner-rally-statements.md) - `related_to` (frontmatter)

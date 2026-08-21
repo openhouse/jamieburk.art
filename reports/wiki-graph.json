@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-21T15:02:23-04:00",
   "sourceCommit": "594eeb80fd33cee9053f618521f42b76f312cbe6",
-  "sourceFingerprint": "b2f85389ab3e7725be9b2d24acf810252a431365b899b1d8e90fab635830b1a5",
+  "sourceFingerprint": "62de5d9514e8938cca88e06f77cf8edda06d7a3f23b2adb1f8aeaf1bff64ac55",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -4593,6 +4593,19 @@
       "reviewBy": "2027-02-20"
     },
     {
+      "id": "projection.photo.home.screen-room-shoestring",
+      "path": "docs/knowledge-bank/projections/photography/home-screen-room-shoestring.md",
+      "title": "Homepage screen-and-room Shoestring Press occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact public occurrence pairing the Shoestring Press facilitation derivative with the FairRentNYC public surface on the portfolio homepage.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2027-02-21"
+    },
+    {
       "id": "projection.photo.kc-town-hall.roof-work",
       "path": "docs/knowledge-bank/projections/photography/kc-town-hall-roof-work.md",
       "title": "KC Town Hall roof-work occurrence",
@@ -6824,6 +6837,14 @@
       "to": "projection.photo.fair-rent-nyc.shoestring-facilitation",
       "source": "frontmatter",
       "href": "../../projections/photography/fair-rent-nyc-shoestring-facilitation.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac-shoestring-facilitation.2017.001",
+      "type": "projected_to",
+      "to": "projection.photo.home.screen-room-shoestring",
+      "source": "frontmatter",
+      "href": "../../projections/photography/home-screen-room-shoestring.md",
       "context": null
     },
     {
@@ -14524,6 +14545,14 @@
     {
       "from": "index.knowledge-wiki.photography",
       "type": "related_to",
+      "to": "projection.photo.home.screen-room-shoestring",
+      "source": "frontmatter",
+      "href": "../projections/photography/home-screen-room-shoestring.md",
+      "context": "Exact homepage occurrence pairing the facilitation photograph with the FairRentNYC public surface."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
       "to": "projection.photo.knowledge-wiki.collective-map",
       "source": "frontmatter",
       "href": "../projections/photography/knowledge-wiki-collective-map.md",
@@ -18053,6 +18082,38 @@
     },
     {
       "from": "projection.photo.fair-rent-nyc.shoestring-facilitation",
+      "type": "uses_source",
+      "to": "source.permission.jamie-portfolio-album.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/jamie-portfolio-album-2026-08-13.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.home.screen-room-shoestring",
+      "type": "related_to",
+      "to": "edition.launch.2026-08",
+      "source": "frontmatter",
+      "href": "edition-launch-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.home.screen-room-shoestring",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.home.screen-room-shoestring",
+      "type": "uses_source",
+      "to": "asset.photo.nycac-shoestring-facilitation.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-shoestring-facilitation-2017.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.home.screen-room-shoestring",
       "type": "uses_source",
       "to": "source.permission.jamie-portfolio-album.2026-08-13",
       "source": "frontmatter",
@@ -22592,10 +22653,37 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/photography.md",
       "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/decisions/photography/layout-c-resume-no-photo-v1.md",
+      "to": "decision.photo.layout-c.resume-no-photo.v1",
+      "fragment": null,
+      "line": 100,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/decisions/photography/pre-launch-rights-narrowing-2026-07-28.md",
+      "to": "decision.photo.pre-launch.rights-narrowing.2026-07-28",
+      "fragment": null,
+      "line": 101,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
+      "to": "projection.photo.layout-c.home.east-river",
+      "fragment": null,
+      "line": 102,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
       "toPath": "docs/knowledge-bank/projections/photography/edition-layout-c-2026-07.md",
       "to": "edition.layout-c.2026-07",
       "fragment": null,
-      "line": 100,
+      "line": 103,
       "kind": "link"
     },
     {
@@ -22604,7 +22692,7 @@
       "toPath": "docs/knowledge-bank/corrections/east-river-credit-2026-07.md",
       "to": "correction.photo.east-river-credit.2026-07",
       "fragment": null,
-      "line": 101,
+      "line": 104,
       "kind": "link"
     },
     {
@@ -22613,7 +22701,7 @@
       "toPath": "docs/knowledge-bank/sources/recollections/jamie-canoe-commuting-2026-07.md",
       "to": "source.recollection.jamie-canoe-commuting.2026-07",
       "fragment": null,
-      "line": 102,
+      "line": 105,
       "kind": "link"
     },
     {
@@ -22622,7 +22710,7 @@
       "toPath": "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md",
       "to": "research-inquiry.documented-canoe-bike-journeys",
       "fragment": null,
-      "line": 103,
+      "line": 106,
       "kind": "link"
     },
     {
@@ -22631,7 +22719,7 @@
       "toPath": "docs/knowledge-bank/workflows/photography-east-river-canary.md",
       "to": "method.photography-east-river-canary",
       "fragment": null,
-      "line": 104,
+      "line": 107,
       "kind": "link"
     },
     {
@@ -22640,7 +22728,7 @@
       "toPath": "rfcs/0003-living-photographic-knowledge-loop.md",
       "to": null,
       "fragment": null,
-      "line": 112,
+      "line": 115,
       "kind": "link"
     },
     {
@@ -22649,7 +22737,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-dcla-formation-2017.md",
       "to": "index.photo-set.nycac-dcla-formation.2017",
       "fragment": null,
-      "line": 117,
+      "line": 120,
       "kind": "link"
     },
     {
@@ -22658,7 +22746,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/kc-town-hall-fieldwork.md",
       "to": "index.photo-set.kc-town-hall-fieldwork",
       "fragment": null,
-      "line": 118,
+      "line": 121,
       "kind": "link"
     },
     {
@@ -22667,7 +22755,7 @@
       "toPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-walkshed-2019.md",
       "to": "asset.graphic.kc-town-hall.walkshed.2019.001",
       "fragment": null,
-      "line": 123,
+      "line": 126,
       "kind": "link"
     },
     {
@@ -22676,7 +22764,7 @@
       "toPath": "docs/knowledge-bank/research-runs/photographic-source-return-2026-07-26.md",
       "to": "research.photographic-source-return.2026-07-26",
       "fragment": null,
-      "line": 125,
+      "line": 128,
       "kind": "link"
     },
     {
@@ -22685,7 +22773,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-project-sites-2017-2026.md",
       "to": "index.photo-set.nycac-project-sites.2017-2026",
       "fragment": null,
-      "line": 130,
+      "line": 133,
       "kind": "link"
     },
     {
@@ -22709,10 +22797,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/photography.md",
       "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/projections/photography/home-screen-room-shoestring.md",
+      "to": "projection.photo.home.screen-room-shoestring",
+      "fragment": null,
+      "line": 30,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
       "toPath": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md",
       "to": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2",
       "fragment": null,
-      "line": 30,
+      "line": 33,
       "kind": "link"
     },
     {
@@ -22721,7 +22818,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/edition-launch-2026-08.md",
       "to": "edition.launch.2026-08",
       "fragment": null,
-      "line": 32,
+      "line": 35,
       "kind": "link"
     },
     {
@@ -22730,7 +22827,7 @@
       "toPath": "docs/knowledge-bank/corrections/project-photo-courtesy-credits-2026-08-20.md",
       "to": "correction.photo.project-courtesy-credits.2026-08-20",
       "fragment": null,
-      "line": 37,
+      "line": 40,
       "kind": "link"
     },
     {
@@ -22739,7 +22836,7 @@
       "toPath": "docs/knowledge-bank/assets/photographs/sunday-dinner-shared-map-2013.md",
       "to": "asset.photo.sunday-dinner.shared-map.2013.001",
       "fragment": null,
-      "line": 40,
+      "line": 43,
       "kind": "link"
     },
     {
@@ -22748,7 +22845,7 @@
       "toPath": "docs/knowledge-bank/assets/photographs/kc-town-hall-roof-work-2019.md",
       "to": "asset.photo.kc-town-hall.roof-work.2019.001",
       "fragment": null,
-      "line": 42,
+      "line": 45,
       "kind": "link"
     },
     {
@@ -22757,7 +22854,7 @@
       "toPath": "docs/knowledge-bank/evaluations/curatorial/portfolio-project-covers-2026-08-13.md",
       "to": "evaluation.curatorial.portfolio-project-covers.2026-08-13",
       "fragment": null,
-      "line": 44,
+      "line": 47,
       "kind": "link"
     },
     {
@@ -22766,7 +22863,7 @@
       "toPath": "docs/knowledge-bank/sources/permissions/jamie-portfolio-album-2026-08-13.md",
       "to": "source.permission.jamie-portfolio-album.2026-08-13",
       "fragment": null,
-      "line": 49,
+      "line": 52,
       "kind": "link"
     },
     {
@@ -22775,7 +22872,7 @@
       "toPath": "docs/knowledge-bank/sources/kc-town-hall-tired-of-tires-design-field-archive-2026.md",
       "to": "source.kc-town-hall.tired-of-tires.design-field-archive.2019-2022",
       "fragment": null,
-      "line": 57,
+      "line": 60,
       "kind": "link"
     },
     {
@@ -22784,7 +22881,7 @@
       "toPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-tired-of-tires-flyer-2019.md",
       "to": "asset.design.kc-town-hall.tired-of-tires-flyer.2019.001",
       "fragment": null,
-      "line": 61,
+      "line": 64,
       "kind": "link"
     },
     {
@@ -22793,7 +22890,7 @@
       "toPath": "docs/knowledge-bank/assets/photographs/kc-town-hall-tired-of-tires-before-2022.md",
       "to": "asset.photo.kc-town-hall.tired-of-tires-before.2022.001",
       "fragment": null,
-      "line": 62,
+      "line": 65,
       "kind": "link"
     },
     {
@@ -22802,7 +22899,7 @@
       "toPath": "docs/knowledge-bank/assets/photographs/kc-town-hall-tired-of-tires-after-2022.md",
       "to": "asset.photo.kc-town-hall.tired-of-tires-after.2022.001",
       "fragment": null,
-      "line": 63,
+      "line": 66,
       "kind": "link"
     },
     {
@@ -22811,7 +22908,7 @@
       "toPath": "docs/knowledge-bank/sources/permissions/kc-town-hall-tired-of-tires-portfolio-2026-08-14.md",
       "to": "source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14",
       "fragment": null,
-      "line": 65,
+      "line": 68,
       "kind": "link"
     },
     {
@@ -22820,7 +22917,7 @@
       "toPath": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
       "to": "asset.photo.east-river-manhattan-bridge.2022.001",
       "fragment": null,
-      "line": 90,
+      "line": 93,
       "kind": "link"
     },
     {
@@ -22829,7 +22926,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/east-river-canoe-2022.md",
       "to": "index.photo-set.east-river-canoe.2022",
       "fragment": null,
-      "line": 91,
+      "line": 94,
       "kind": "link"
     },
     {
@@ -22838,7 +22935,7 @@
       "toPath": "docs/knowledge-bank/people/elana-gordon.md",
       "to": "person.elana-gordon",
       "fragment": null,
-      "line": 92,
+      "line": 95,
       "kind": "link"
     },
     {
@@ -22847,7 +22944,7 @@
       "toPath": "docs/knowledge-bank/sources/photo-metadata/east-river-2022-public-safe.md",
       "to": "source.photo-metadata.east-river.2022.public-safe",
       "fragment": null,
-      "line": 93,
+      "line": 96,
       "kind": "link"
     },
     {
@@ -22856,7 +22953,7 @@
       "toPath": "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md",
       "to": "source.permission.elana-gordon.east-river.2026-07",
       "fragment": null,
-      "line": 94,
+      "line": 97,
       "kind": "link"
     },
     {
@@ -22865,7 +22962,7 @@
       "toPath": "docs/knowledge-bank/evaluations/curatorial/layout-c-home-east-river-v1.md",
       "to": "evaluation.curatorial.layout-c.home-east-river.v1",
       "fragment": null,
-      "line": 95,
+      "line": 98,
       "kind": "link"
     },
     {
@@ -22873,33 +22970,6 @@
       "from": "index.knowledge-wiki.photography",
       "toPath": "docs/knowledge-bank/decisions/photography/layout-c-home-east-river-v1.md",
       "to": "decision.photo.layout-c.home-east-river.v1",
-      "fragment": null,
-      "line": 96,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/decisions/photography/layout-c-resume-no-photo-v1.md",
-      "to": "decision.photo.layout-c.resume-no-photo.v1",
-      "fragment": null,
-      "line": 97,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/decisions/photography/pre-launch-rights-narrowing-2026-07-28.md",
-      "to": "decision.photo.pre-launch.rights-narrowing.2026-07-28",
-      "fragment": null,
-      "line": 98,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
-      "to": "projection.photo.layout-c.home.east-river",
       "fragment": null,
       "line": 99,
       "kind": "link"

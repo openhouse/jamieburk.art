@@ -1,11 +1,11 @@
 {
   "reportVersion": 3,
-  "checkedAt": "2026-08-21T18:35:30.642567Z",
-  "baseUrl": "http://127.0.0.1:3217",
-  "publicSurfaceFingerprint": "37130a2ec29260c57fd47543e1ca07afcd00450f9b0144ea07b8aca3e11448a9",
+  "checkedAt": "2026-08-21T22:59:52.292Z",
+  "baseUrl": "http://127.0.0.1:3102",
+  "publicSurfaceFingerprint": "bdccd6f12c9f99a7538a34afb18af05d6cc9e44ca78b064e7ac64bcab2fbb174",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 150,
-  "method": "Playwright keyboard interaction plus bounded DOM and viewport inspection on the exact local candidate. This is not a human screen-reader or assistive-technology session.",
+  "method": "Playwright keyboard interaction plus scoped DOM and viewport inspection on the exact local candidate. This is not a human screen-reader or assistive-technology session.",
   "keyboard": {
     "desktopTabSequence": [
       {
@@ -63,7 +63,7 @@
       "hash": "#main",
       "activeElementId": null
     },
-    "passed": true
+    "passed": false
   },
   "mobileNavigation": {
     "menuFocusBeforeOpen": {

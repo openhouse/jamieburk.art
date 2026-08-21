@@ -3,7 +3,7 @@
 
 **Source commit:** `594eeb80fd33cee9053f618521f42b76f312cbe6`
 **Generation time:** 2026-08-21T15:02:23-04:00
-**Source fingerprint:** `b2f85389ab3e7725be9b2d24acf810252a431365b899b1d8e90fab635830b1a5`
+**Source fingerprint:** `62de5d9514e8938cca88e06f77cf8edda06d7a3f23b2adb1f8aeaf1bff64ac55`
 
 ## application
 
@@ -403,6 +403,7 @@
 - [Technical Operations portfolio projection](../projections/work-technical-operations.md) - `portfolio.work.technical-operations`
 - [Fair Rent NYC Market Hotel public-room occurrence](../projections/photography/fair-rent-nyc-market-hotel-banner.md) - `projection.photo.fair-rent-nyc.market-hotel-banner`
 - [Fair Rent NYC Shoestring Press facilitation occurrence](../projections/photography/fair-rent-nyc-shoestring-facilitation.md) - `projection.photo.fair-rent-nyc.shoestring-facilitation`
+- [Homepage screen-and-room Shoestring Press occurrence](../projections/photography/home-screen-room-shoestring.md) - `projection.photo.home.screen-room-shoestring`
 - [KC Town Hall roof-work occurrence](../projections/photography/kc-town-hall-roof-work.md) - `projection.photo.kc-town-hall.roof-work`
 - [Tired of Tires after-collection occurrence](../projections/photography/kc-town-hall-tired-of-tires-after.md) - `projection.photo.kc-town-hall.tired-of-tires-after`
 - [Tired of Tires before-collection occurrence](../projections/photography/kc-town-hall-tired-of-tires-before.md) - `projection.photo.kc-town-hall.tired-of-tires-before`

@@ -44,10 +44,33 @@ shared human scene. Captions state what each image proves and preserve
 historical or collective-credit context without asking the image to carry
 unsupported claims.
 
+Before the selected-project sequence, one compact bridge pairs the Shoestring
+Press facilitation photograph with the FairRentNYC public surface. It states the
+portfolio's central relationship directly: the field work and the technical
+work are one implementation practice. The bridge uses a different governed
+photograph from the Market Hotel cover below, so the page moves from close
+facilitation to public room rather than repeating an image.
+
+## Cross-candidate synthesis, August 21, 2026
+
+A close reading of the three staging candidates selected B as the foundation:
+it offered the strongest all-purpose hiring sequence and the clearest opening
+for a rushed reader. The revision retains that structure and exact reviewed
+hero, imports A's strongest experiential thesis as the compact screen-and-room
+bridge, and places C's more direct “See role-fit evidence” action in that
+bridge. It does not import C's dark hero panel, reorder B's projects, or add
+unsupported claims.
+
 ## Maintenance mechanism
 
 - `homepageHiringSequence` in `apps/www/src/data/work.ts` is the canonical
   ordered list used to render the homepage.
+- `HomeFieldSystemEvidence` is the canonical screen-and-room bridge. It stays
+  between `CapabilityGrid` and the selected-project sequence and binds its
+  photograph to a homepage-specific Knowledge Bank occurrence.
+- The bridge's primary action leads directly to Technical Operations &
+  Implementation; the hero's reviewed work-index and resume actions remain
+  unchanged.
 - The “Start here” path mirrors Technical Operations, the first three project
   proofs, and the resume.
 - `homepage-hiring-sequence` in the layout eval is a blocking deterministic

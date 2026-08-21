@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "evalId": "public-surface-terminology-hillclimb-2026-08-20",
-  "evaluatedAt": "2026-08-20T20:06:44-04:00",
+  "evaluatedAt": "2026-08-21T17:28:35-04:00",
   "targetCriterion": "visitor-facing-language-clarity",
   "baseline": {
     "prohibitedOccurrences": 30,
@@ -34,7 +34,7 @@
     "internalStateRenamed": false
   },
   "result": {
-    "scannedFiles": 74,
+    "scannedFiles": 75,
     "renderedPages": 15,
     "prohibitedOccurrences": 0,
     "deterministicTestsPassing": 7,

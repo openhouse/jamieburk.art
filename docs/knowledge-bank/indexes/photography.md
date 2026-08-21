@@ -75,6 +75,10 @@ relations:
     target: projection.photo.fair-rent-nyc.shoestring-facilitation
     href: ../projections/photography/fair-rent-nyc-shoestring-facilitation.md
   - type: related_to
+    target: projection.photo.home.screen-room-shoestring
+    href: ../projections/photography/home-screen-room-shoestring.md
+    context: Exact homepage occurrence pairing the facilitation photograph with the FairRentNYC public surface.
+  - type: related_to
     target: projection.photo.fair-rent-nyc.market-hotel-banner
     href: ../projections/photography/fair-rent-nyc-market-hotel-banner.md
   - type: related_to
@@ -148,6 +152,9 @@ sequence with the Let NYC Dance public surface:
 
 - [Shoestring Press facilitation](../assets/photographs/nycac-shoestring-facilitation-2017.md)
   shows the working alignment layer.
+- Its [homepage screen-and-room occurrence](../projections/photography/home-screen-room-shoestring.md)
+  pairs that field context with the matching FairRentNYC public surface without
+  changing the reviewed homepage hero.
 - [Market Hotel banner room](../assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md)
   shows the collective public-room layer.
 - [August 2026 photographic edition](../projections/photography/edition-launch-2026-08.md)
