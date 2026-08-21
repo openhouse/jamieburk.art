@@ -62,10 +62,10 @@ const KCTH_FIELD_PRACTICE_REVIEW_LOCKS = Object.freeze({
   governedKnowledgeSha256: "ecfe86b9804ebd2310012a8fbb0b0017ee2ce4b2b4de7d67ede1e5f156a63b5d",
   proofProjectionSha256: "89e737e2b4620a430933669aabbafcd0924534a2ac55acce8a82a102131aeef3",
   caseStudyMdxSha256: "21d241eae57f230f4863ded3afeacca25715e5c3335c83c4314764d141d33178",
-  // Re-reviewed 2026-07-28 after narrowing the shared public photo field and
-  // adding the current-practice systems loop on About. Field-practice claims,
+  // Re-reviewed 2026-08-03 after adding public-safe HJE and Sunday Dinner/196
+  // handoff specimens to the shared work metadata. Field-practice claims,
   // evidence, holds, and the KC Town Hall case-study wording did not change.
-  sharedPublicSurfacesSha256: "c2cfb2a258fee63f4b6b83e9424c06851eaaf21cb64c8be7a17483ae3bd5ce18",
+  sharedPublicSurfacesSha256: "e0080f82ce2dde8feb83f8d04f761a30b624537056bda41d10a507afd5077f30",
   publicReviewReportSha256: "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696"
 });
 // Re-reviewed 2026-07-21 after removing trailing Markdown line-break spaces for
@@ -108,7 +108,10 @@ const PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   governanceBindingsSha256: "462c571728b828871229a018aaee8503d666943b0bce508eaa92231391baf1e8",
   publicReportSha256: "0e8dc37b79624e2ac86a026fca40741ee578aeb22bc5002e795775c1df5e650e",
   wowListMdxSha256: "920a67545ba6bbe346309c79247a12e1e0a3028c09cb5c36e1a85e35f8013df8",
-  sundayDinnerMdxSha256: "2c9e22237d23a1b99262634f75cb24f7eeca300c0ed59e0dec26b6c3a54dd6be",
+  // Re-reviewed 2026-08-03 after adding two public-safe handoff specimens.
+  // The governed event corpus, projections, and collective-credit limits did
+  // not change.
+  sundayDinnerMdxSha256: "9a2ad4b667d5ad80ec9f20e9965455219d9d7cd4a833d268b8a8ee3d2be72bef",
   // Re-reviewed 2026-07-28 after replacing the WOWList adoption estimate with
   // the exact July 2017 city-region-key threshold. The governed event corpus,
   // projections, and collective-credit limits did not change.

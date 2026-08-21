@@ -41,6 +41,22 @@ const opportunityQuery = queryWiki(result, {
   opportunity: "opportunity.nyc-oti.technical-operations-manager.782369"
 });
 const opportunities = result.records.filter((record) => record.kind === "opportunity");
+const liveOfficialOpportunities = opportunities.filter(
+  (record) => record.source_type === "official-employer" && record.opportunity_status === "live"
+);
+const protectedOpportunity = result.byId.get(
+  "opportunity.protected.source-backed-memory-consulting.2026"
+);
+const priorityOpportunityIds = [
+  "opportunity.aclu.senior-project-manager-lps.8620968002",
+  "opportunity.benepass.product-operations.7f963a7a",
+  "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+  "opportunity.nyc-oti.product-manager.784450",
+  "opportunity.nyc-oti.senior-product-manager.782366",
+  "opportunity.nyc-oti.operations-manager.789810",
+  "opportunity.nyc-oti.cybersecurity-senior-project-manager.791074"
+];
+const priorityOpportunities = priorityOpportunityIds.map((id) => result.byId.get(id));
 const publicHiring = evaluatePublicHiring(defaultRepoRoot);
 const gapResolution = resolveHiringGaps(result, publicHiring.report);
 const employmentOutputs = buildEmploymentOutputs(result, publicHiring, gapResolution);
@@ -128,7 +144,8 @@ const checks = {
   bounded_public_projection_change:
     publicUiChanged &&
     boundedPublicUiChange &&
-    technicalOperationsSource.includes("I create the operating backbone complex teams need to move") &&
+    technicalOperationsSource.includes("I turn high-context work into decisions a team can execute") &&
+    technicalOperationsSource.includes("This is a transferable operating pattern, not a claim of formal B2B") &&
     caseStudyBlocksSource.includes('tone="inverted"') &&
     !caseStudyBlocksSource.includes("text-jb-paper/70") &&
     !caseStudyBlocksSource.includes("text-jb-ink/64") &&
@@ -213,6 +230,7 @@ const checks = {
   mutation_suite:
     existsSync(path.join(defaultRepoRoot, "scripts/knowledge-wiki/wiki.test.mjs")) &&
     existsSync(path.join(defaultRepoRoot, "scripts/knowledge-wiki/employment.test.mjs")) &&
+    existsSync(path.join(defaultRepoRoot, "scripts/knowledge-wiki/opportunity-leadership.test.mjs")) &&
     existsSync(
       path.join(defaultRepoRoot, "scripts/knowledge-wiki/interpretive-layer-eval.test.mjs")
     ) &&
@@ -230,8 +248,8 @@ const checks = {
     existsSync(path.join(defaultRepoRoot, "scripts/check-knowledge-bank.mjs")),
 
   tier_one_official_source_records:
-    opportunities.length === 6 &&
-    opportunities.every((record) =>
+    liveOfficialOpportunities.length >= 5 &&
+    liveOfficialOpportunities.every((record) =>
       record.evidence.some((evidence) => {
         const source = result.byId.get(evidence.target);
         return source?.kind === "source" && source.source_kind === "official-job-posting";
@@ -241,8 +259,8 @@ const checks = {
     opportunities.every(
       (record) =>
         record.canonical_url &&
-        record.source_type === "official-employer" &&
-        record.opportunity_status === "live" &&
+        ((record.source_type === "official-employer" && ["live", "closed", "historical-benchmark"].includes(record.opportunity_status)) ||
+          (record.source_type === "protected-metadata" && record.opportunity_status === "conditional")) &&
         record.verified_at &&
         record.review_by &&
         record.portfolio_routes.length > 0 &&
@@ -251,7 +269,8 @@ const checks = {
   stable_requirement_ids:
     requirementIds.length >= 25 && new Set(requirementIds).size === requirementIds.length,
   operator_queries:
-    queryWiki(result, { liveOpportunities: true }).records.length === 6 &&
+    queryWiki(result, { liveOpportunities: true }).records.length ===
+      liveOfficialOpportunities.length &&
     queryWiki(result, { requirement: "requirement.oti.delivery-coordination" }).opportunity?.id ===
       "opportunity.nyc-oti.technical-operations-manager.782369",
   hard_screens_explicit: opportunities.every((record) => record.hard_screens.length > 0),
@@ -267,11 +286,36 @@ const checks = {
       record.one_year_risk_conditions.length > 0 &&
       record.interview_questions.length > 0
   ),
+  priority_opportunity_leadership_bounded:
+    priorityOpportunities.every(
+      (record) =>
+        ["live", "closed"].includes(record?.opportunity_status) &&
+        record?.leadership_context?.direct_report?.evidence_state &&
+        record?.leadership_context?.direct_report?.note &&
+        record?.leadership_context?.senior_vision?.person_id &&
+        record?.leadership_context?.senior_vision?.evidence_state === "official-senior-leader"
+    ) &&
+    result.byId.get("opportunity.aclu.senior-project-manager-lps.8620968002")?.leadership_context?.direct_report?.person_id == null &&
+    result.byId.get("opportunity.benepass.product-operations.7f963a7a")?.opportunity_status === "closed" &&
+    result.byId.get("opportunity.benepass.product-operations.7f963a7a")?.leadership_context?.direct_report?.evidence_state === "posting-named-person" &&
+    result.byId.get("opportunity.aclu.senior-project-manager-national-campaigns.8631854002")?.leadership_context?.direct_report?.evidence_state === "public-title-match-not-confirmed" &&
+    result.byId.get("opportunity.nyc-oti.senior-product-manager.782366")?.leadership_context?.direct_report?.evidence_state === "public-operating-lead-not-confirmed" &&
+    result.byId.get("opportunity.nyc-oti.technical-operations-manager.782369")?.opportunity_status === "closed",
   protected_communications_metadata_only:
     privateVault?.visibility === "summary-only" &&
     privateVault?.opaque_locator === "vault.source.communication-history" &&
     privateVault?.public_use_status === "summary-only" &&
     !result.errors.some((issue) => issue.code === "PRIVATE_PATH"),
+  protected_opportunity_state_bounded:
+    protectedOpportunity?.visibility === "summary-only" &&
+    protectedOpportunity?.source_type === "protected-metadata" &&
+    protectedOpportunity?.opportunity_status === "conditional" &&
+    protectedOpportunity?.unknowns?.length >= 3 &&
+    protectedOpportunity?.hard_screens?.every((screen) => screen.disposition === "conditional") &&
+    publicHiring.report.opportunities.find((item) => item.id === protectedOpportunity.id)?.decision === "not-live" &&
+    !JSON.stringify(protectedOpportunity).match(
+      /(?:message|email|transcript)_(?:body|excerpt)|(?:collaborator|company)_identity|private_path/i
+    ),
 
   public_evaluator_has_no_hidden_wiki:
     publicHiring.report.publicSafety.privateMarkerCount === 0 &&

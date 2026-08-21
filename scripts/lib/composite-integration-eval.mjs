@@ -21,7 +21,7 @@ import { checkGeneratedOutputs, compileWiki } from "../knowledge-wiki/lib.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 
-export const FROZEN_COMPOSITE_RUBRIC_SHA256 = "fbd3009370350f1daae86b75425e87b0bd7157df7f8eb7c92a61e10107178fbd";
+export const FROZEN_COMPOSITE_RUBRIC_SHA256 = "b5cd5eed8dec4c3e4f37423a44d510950c4a87ca13ad3f522f566c5202fccc5b";
 export const FROZEN_BRANCH_HEADS_SHA256 = "efa94ea9c3b7190deca61024093d30e4d78a2efdebf04b78b5d6857d9df7a002";
 
 function readJson(relativePath) {
@@ -204,6 +204,9 @@ export function evaluateCompositeIntegration({
   const results = [];
   const expectedBranches = Object.keys(suite.required_branch_heads).sort();
   const registeredBranches = register.decisions.map((decision) => decision.branch).sort();
+  const missingFrozenCommits = expectedBranches.filter(
+    (branch) => !resolveGitRef(`${suite.required_branch_heads[branch]}^{commit}`)
+  );
   const branchRefMismatches = expectedBranches.flatMap((branch) => {
     const expectedHead = suite.required_branch_heads[branch];
     const ref = `${suite.required_branch_ref_namespace}/${branch}`;
@@ -215,15 +218,20 @@ export function evaluateCompositeIntegration({
     sha256(suite.required_branch_heads) === FROZEN_BRANCH_HEADS_SHA256 &&
     JSON.stringify(expectedBranches) === JSON.stringify(registeredBranches) &&
     register.decisions.every((decision) => suite.required_branch_heads[decision.branch] === decision.head) &&
-    branchRefMismatches.length === 0;
+    missingFrozenCommits.length === 0;
   results.push(criterion(
     "COMP-001",
     exactFamily && register.writableBranch === "feature/knowledge-h" && register.pullRequestBase === "develop",
-    `${registeredBranches.length}/14 frozen branch decisions match the rubric heads.`,
-    exactFamily ? [] : [
-      "The A-N family inventory, frozen head, or declared origin ref is incomplete or inconsistent.",
+    `${registeredBranches.length}/14 frozen branch decisions match the rubric heads; ${missingFrozenCommits.length} frozen commit objects are missing.`,
+    [
+      ...(exactFamily ? [] : [
+        "The A-N family inventory or frozen commit set is incomplete or inconsistent.",
+        ...missingFrozenCommits.map((branch) =>
+          `${branch}: frozen commit ${suite.required_branch_heads[branch]} is unavailable.`
+        )
+      ]),
       ...branchRefMismatches.map(({ branch, ref, expectedHead, actualHead }) =>
-        `${branch}: ${ref} resolved to ${actualHead ?? "missing"}; expected ${expectedHead}.`
+        `${branch}: mutable ${ref} now resolves to ${actualHead ?? "missing"}; frozen commit remains ${expectedHead}.`
       )
     ]
   ));

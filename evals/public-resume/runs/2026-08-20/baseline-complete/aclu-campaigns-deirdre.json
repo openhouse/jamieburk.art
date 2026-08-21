@@ -1,0 +1,42 @@
+{
+  "file": "aclu-campaigns-deirdre.json",
+  "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+  "personId": "person.deirdre-schifeling",
+  "name": "Deirdre Schifeling",
+  "relationship": "senior-vision",
+  "resumeSha256": "d6cf9e69fb63769d0007338e0e2ed820f96de20c29b754760741538b7f04aa10",
+  "acceptanceQuestion": "I would hire this person for this job.",
+  "decision": "fail",
+  "wouldHire": false,
+  "simulatedPublicFigureLens": true,
+  "nonEndorsementBoundary": "This fictionalized public-context lens is not participation, quotation, endorsement, or a hiring decision by the named person.",
+  "access": {
+    "scope": "public-resume-and-public-job-context-only",
+    "repositoryAccess": false,
+    "privateSourceAccess": false
+  },
+  "strengths": [
+    "Fourteen-plus years coordinating complex, public-facing projects across technical, operational, communications, and leadership stakeholders.",
+    "Direct civic-advocacy experience involving coalition operations, policy research, elected-official engagement, public testimony, press work, campaign systems, and calls to action.",
+    "Strong evidence of documentation discipline, facilitation, risk tracking, executive reporting, launch management, retrospectives, and durable handoffs.",
+    "Demonstrated ability to translate ambiguity into concrete plans and deliver public-interest initiatives."
+  ],
+  "risks": [
+    "The resume does not establish ownership of large-scale national campaigns or projects comparable to the role's likely scope.",
+    "There is little quantified evidence of campaign outcomes, coalition size, geographic reach, budgets managed, staff or vendors coordinated, or concurrent-project complexity.",
+    "Procurement, contracting, invoice processing, and formal budget administration are asserted in the skills section but not substantiated through specific accomplishments.",
+    "Most directly relevant advocacy work appears local and co-founder-led; the resume does not prove effectiveness inside a large, matrixed national organization with layered accountability.",
+    "The resume does not demonstrate sufficient depth in high-stakes national political campaign operations to support an immediate hire decision at the senior level."
+  ],
+  "interviewEvidenceNeeded": [
+    "A detailed example of managing a large, multi-workstream advocacy campaign, including scope, stakeholders, timeline, risks, decisions, and measurable outcomes.",
+    "Evidence of operating successfully within a complex national or federated organization across communications, legal, policy, organizing, operations, and senior leadership.",
+    "Specific ownership of budgets, procurement, contracts, vendors, invoices, and financial controls.",
+    "Scale indicators for coalition and campaign work: participants, jurisdictions, partner organizations, budget, deliverables, deadlines, and results.",
+    "A work sample showing a campaign plan, project dashboard, risk register, executive update, or comparable delivery artifact, appropriately redacted.",
+    "Clear examples of prioritizing competing urgent requests and influencing stakeholders without direct authority."
+  ],
+  "rationale": "The resume shows a credible civic-minded project and implementation leader with relevant coalition, policy-communications, facilitation, and operational strengths. However, the literal gate requires enough resume-only evidence to hire for this exact senior national-campaigns role. The record does not sufficiently demonstrate national campaign scale, measurable advocacy outcomes, complex institutional delivery, or the role's financial and procurement responsibilities. I would advance the candidate for structured evaluation, but I would not make the hire from this resume alone.",
+  "model": "gpt-5.6-sol",
+  "evaluatedAt": "2026-08-20"
+}

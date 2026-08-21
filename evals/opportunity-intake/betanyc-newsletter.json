@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "id": "source.betanyc.weekly-civictech-newsletter",
+    "archiveIndexUrl": "https://www.beta.nyc/newsletter/",
+    "cadence": "weekly-thursday",
+    "refreshCheckCadence": "daily"
+  },
+  "state": {
+    "issueKey": "betanyc-newsletter-2026-08-20",
+    "issueDate": "2026-08-20",
+    "issueUrl": "https://www.beta.nyc/2026/08/20/this-week-in-nycs-civictech-august-20-2026/",
+    "refreshCompletedAt": "2026-08-20T20:30:00.000Z"
+  },
+  "policy": {
+    "salaryFloorAnnual": 100000,
+    "strongMatchThreshold": 84,
+    "minimumFitScore": 78,
+    "minimumSecurabilityScore": 70,
+    "fitWeight": 0.62,
+    "securabilityWeight": 0.38
+  },
+  "knownJobIds": [
+    "792925"
+  ],
+  "evaluationOrder": [
+    "latest distinct public issue comparison",
+    "Jobs & Opportunities section parsing and resend deduplication",
+    "official employer posting resolution",
+    "deadline, compensation, access, and hard-screen checks",
+    "deterministic fit and securability scoring",
+    "named hiring-reader evaluation for verified promoted opportunities"
+  ],
+  "admissionBoundary": "Automatic admission is to a private-action candidate queue only. The individual employer posting must be verified before a lead becomes a canonical opportunity or generates outward-facing material.",
+  "humanGates": [
+    "Jamie controls application submission and any representation made to an employer.",
+    "Jamie approval is required before a candidate queue item becomes a public Knowledge Wiki opportunity.",
+    "Employer hiring authority remains exclusively with the real employer and its authorized staff."
+  ]
+}

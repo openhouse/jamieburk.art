@@ -15,6 +15,14 @@ const publicRegistryPath = path.join(
   repoRoot,
   "apps/www/src/data/knowledge-bank/public-registry.json"
 );
+const hjeContentPath = path.join(
+  repoRoot,
+  "apps/www/src/content/work/harry-j-epstein.mdx"
+);
+const sundayDinnerContentPath = path.join(
+  repoRoot,
+  "apps/www/src/content/work/196-sunday-dinner.mdx"
+);
 
 const professorRubricRelativePaths = [
   ".agents/evals/portfolio-production-readiness.json",
@@ -35,15 +43,11 @@ export const professorCandidateRelativePaths = [
 ].sort();
 
 const finalScorecardRelativePaths = [
-  "docs/qa/evals-H/margaret-morse-final-a.json",
-  "docs/qa/evals-H/margaret-morse-final-b.json",
-  "docs/qa/evals-H/margaret-morse-final-c.json",
-  "docs/qa/evals-H/warren-sack-final-a.json",
-  "docs/qa/evals-H/warren-sack-final-b.json",
-  "docs/qa/evals-H/warren-sack-final-c.json"
+  "docs/qa/evals-H/margaret-morse-current-2026-08-20-a.json"
 ];
 
-const approvedCandidateSha256 = "add0c2de156ae4bc9e1b3ca7d96dd2bf219692f3abbf0dabea6d9a7bd1abd723";
+const approvedCandidateSha256 = "e56d6e95fee3eb4eb22560d23db0873f10772843a534fdd1c326d507b9b71cf3";
+const requiredHoldoutCount = 6;
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },
@@ -81,6 +85,8 @@ export function evaluateProfessorLenses({
   aboutText = readFileSync(aboutPath, "utf8"),
   sourceNoteText = readFileSync(sourceNotePath, "utf8"),
   publicRegistryText = readFileSync(publicRegistryPath, "utf8"),
+  hjeContentText = readFileSync(hjeContentPath, "utf8"),
+  sundayDinnerContentText = readFileSync(sundayDinnerContentPath, "utf8"),
   candidateFiles = loadCandidateFiles(),
   finalScorecards = finalScorecardRelativePaths.map((relativePath) =>
     JSON.parse(readFileSync(path.join(repoRoot, relativePath), "utf8"))
@@ -194,6 +200,21 @@ export function evaluateProfessorLenses({
       "Five public sequence stages checked."
     ),
     criterion(
+      "inspectable-handoff-specimens",
+      "Two current project pages expose bounded workflow specimens without publishing protected source records.",
+      [
+        "From recurring question to maintainable release",
+        "It is not an original company document",
+        "Reusable patterns, ownership, and next actions"
+      ].every((fragment) => hjeContentText.includes(fragment)) &&
+        [
+          "A resident artist can arrive and work independently",
+          "A recurring gathering can continue without exposing its participants",
+          "withholding every participant-level value"
+        ].every((fragment) => sundayDinnerContentText.includes(fragment)),
+      "HJE maintenance and Sunday Dinner / 196 handoff specimens checked."
+    ),
+    criterion(
       "protected-source-boundary",
       "The source note withholds raw educational records, private correspondence, identifiers, paths, and testimonial projection.",
       sourceNoteText.includes("protected educational records") &&
@@ -224,11 +245,14 @@ export function evaluateProfessorLenses({
     criterion(
       "unanimous-holdouts",
       "Three final holdouts per lens score the bound candidate at 4 with no failing judge.",
-      finalScorecards.length === 6 &&
+      finalScorecards.length === requiredHoldoutCount &&
         finalScorecards.every((scorecard) => scorecard.phase === "holdout" &&
           scorecard.score === 4 && scorecard.pass === true &&
           scorecard.candidateSha256 === candidateSha256),
-      `${finalScorecards.filter((scorecard) => scorecard.score === 4 && scorecard.pass === true).length}/6 final scorecards pass at 4.`
+      `${finalScorecards.filter((scorecard) => scorecard.phase === "holdout" &&
+        scorecard.score === 4 && scorecard.pass === true &&
+        scorecard.candidateSha256 === candidateSha256).length}/${requiredHoldoutCount} final scorecards pass at 4; ` +
+        `${finalScorecards.length}/${requiredHoldoutCount} holdout receipts are present; exact-candidate matching is evaluated separately against ${candidateSha256}.`
     )
   ];
 

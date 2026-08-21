@@ -1,0 +1,43 @@
+{
+  "file": "oti-operations-lisa.json",
+  "opportunityId": "opportunity.nyc-oti.operations-manager.789810",
+  "personId": "person.lisa-gelobter",
+  "name": "Lisa Gelobter",
+  "relationship": "senior-vision",
+  "resumeSha256": "d6cf9e69fb63769d0007338e0e2ed820f96de20c29b754760741538b7f04aa10",
+  "acceptanceQuestion": "I would hire this person for this job.",
+  "decision": "fail",
+  "wouldHire": false,
+  "simulatedPublicFigureLens": true,
+  "nonEndorsementBoundary": "This fictionalized public-context lens is not participation, quotation, endorsement, or a hiring decision by the named person.",
+  "access": {
+    "scope": "public-resume-and-public-job-context-only",
+    "repositoryAccess": false,
+    "privateSourceAccess": false
+  },
+  "strengths": [
+    "More than five years of relevant operations, project, and program leadership",
+    "Strong cross-functional coordination across technical, civic, policy, communications, and operational stakeholders",
+    "Evidence of end-to-end digital product delivery, plain-language communication, reporting, documentation, and process improvement",
+    "Some relevant public-sector exposure through municipal compliance, City coordination, civic services, and a $490,539 public-funding proposal",
+    "Clear alignment with dignified resident experience, rapid learning, accountable delivery, and usable government services"
+  ],
+  "risks": [
+    "The resume does not demonstrate direct ownership of substantial expense and capital budgets",
+    "No sufficiently concrete evidence of public-sector procurement, contracting, sourcing, or vendor purchasing processes",
+    "Limited evidence of coordinating legal, cybersecurity, finance, and other enterprise support functions in a formal operating environment",
+    "No clear evidence of workforce planning, personnel allocation, new-hire onboarding, or ongoing team-health management",
+    "Most experience appears entrepreneurial, client-based, or coalition-based; the resume does not establish operation at the organizational scale and administrative complexity implied by OTI"
+  ],
+  "interviewEvidenceNeeded": [
+    "Specific budgets personally managed, including size, forecasting, reconciliation, controls, and outcomes",
+    "Examples of contracts, procurement actions, sourcing processes, and vendor management personally owned",
+    "Evidence of resource-capacity planning across incoming, in-flight, and upcoming portfolios",
+    "Examples of onboarding employees or contractors and measuring team health",
+    "Concrete coordination with legal, cybersecurity, finance, HR, and procurement stakeholders",
+    "Clarification of team sizes, decision authority, concurrent workload, and operational metrics"
+  ],
+  "rationale": "The resume shows a capable civic-technology product and implementation leader with strong communication, delivery, documentation, and stakeholder-management skills. However, this Operations Manager role materially depends on budget administration, procurement, contracts, resource allocation, onboarding, and enterprise support-function coordination. The resume asserts some adjacent capabilities but does not provide enough concrete, attributable evidence of owning those functions at the required scale. Under the literal resume-only gate, I could justify an interview but not the conclusion that I would hire this person for this exact job.",
+  "model": "gpt-5.6-sol",
+  "evaluatedAt": "2026-08-20"
+}

@@ -46,6 +46,14 @@
 @import "../styles/tokens.css";
 @import "../styles/phi-grid.css";
 
+@font-face {
+  font-display: swap;
+  font-family: "TeX Gyre Pagella";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/tex-gyre-pagella/texgyrepagella-regular.otf") format("opentype");
+}
+
 @theme inline {
   --color-jb-blue: var(--jb-broadway-blue);
   --color-jb-paper: var(--jb-oil-white);
@@ -62,6 +70,7 @@
   --font-sans: var(--font-karla), ui-sans-serif, system-ui, sans-serif;
   --font-label: var(--font-oswald), "Arial Narrow", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Baskerville, Georgia, serif;
+  --font-identity: "TeX Gyre Pagella", "Iowan Old Style", "Palatino Linotype", Palatino, Baskerville, Georgia, serif;
 }
 
 html {
@@ -86,12 +95,26 @@ h2 {
   letter-spacing: 0;
 }
 
+.font-identity {
+  font-family: var(--font-identity);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
 ::selection {
   background: color-mix(in srgb, var(--jb-pale-blue) 78%, white);
 }
 
 :focus-visible {
-  outline: 3px solid var(--jb-yellow-ochre);
+  outline: 3px solid var(--jb-broadway-blue);
+  outline-offset: 3px;
+}
+
+.jb-button-inverse:focus-visible {
+  background: var(--jb-broadway-blue);
+  border-color: var(--jb-oil-white);
+  color: var(--jb-oil-white);
+  outline: 3px solid var(--jb-oil-white);
   outline-offset: 3px;
 }
 
@@ -109,14 +132,13 @@ h2 {
 .skip-link {
   position: absolute;
   left: 1rem;
-  top: 1rem;
+  top: -10rem;
   z-index: 50;
-  transform: translateY(-150%);
-  transition: transform 160ms ease;
+  transition: none;
 }
 
-.skip-link:focus {
-  transform: translateY(0);
+.skip-link:focus-visible {
+  top: 1rem;
 }
 
 .jb-rule {
@@ -159,6 +181,12 @@ h2 {
 
 .jb-hero-content > div {
   max-width: 46rem;
+}
+
+.jb-hero-copy {
+  background: rgba(18, 28, 34, 0.9);
+  border-left: 4px solid var(--jb-yellow-ochre);
+  padding: clamp(1.25rem, 3vw, 2rem);
 }
 
 .jb-hero-caption {

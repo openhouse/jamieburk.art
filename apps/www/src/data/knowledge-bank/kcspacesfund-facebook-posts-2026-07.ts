@@ -530,8 +530,15 @@ export const kcSpacesFundFacebookPostClaims: KnowledgeBank["claims"] = [
         surfaces: ["/work/technical-operations"]
       },
       {
+        key: "case-study",
+        text: "Jamie built and maintained KC Spaces Fund's campaign web infrastructure, customized a reusable Ghost theme, implemented public action routes, and supported an available cross-channel identity. Collaborator-led channels used that identity to route applications, donations, resources, and funded-space updates.",
+        status: "active",
+        citationRequired: false,
+        surfaces: ["/work/kc-spaces-fund"]
+      },
+      {
         key: "archive-note",
-        text: "Jamie's bounded role was website, digital-infrastructure, and cross-channel naming support, not Facebook publishing, public organizing, fundraising ownership, or grant decisions.",
+        text: "Jamie's specific role was website, digital-infrastructure, and cross-channel naming support, not Facebook publishing, public organizing, fundraising ownership, or grant decisions.",
         status: "active",
         citationRequired: false,
         surfaces: ["docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts"]
@@ -544,7 +551,7 @@ export const kcSpacesFundFacebookPostClaims: KnowledgeBank["claims"] = [
       { sourceId: sourceIds.census, relationship: "context", supports: ["consistent site, application, fundraising, and spotlight routing"], confidence: "high", renderCitation: false }
     ],
     boundaries: [
-      "Credit Jamie with bounded web infrastructure and cross-channel naming support, not public organizing, fundraising ownership, grant decisions, or campaign voice.",
+      "Credit Jamie with web infrastructure and cross-channel naming support, not public organizing, fundraising ownership, grant decisions, or campaign voice.",
       "The public channels corroborate identity consistency; Jamie's firsthand clarification supplies the naming-support and non-posting account, pending collaborator confirmation of process detail.",
       "Public organizer credit remains with Caitlin Horsmon, Jordan Carr, Kendell Harbin, and Megan Pobywajlo as named by the fundraiser."
     ],

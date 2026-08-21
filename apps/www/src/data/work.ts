@@ -103,14 +103,15 @@ const workItemsInput = [
     series: "Operating Structure",
     subtitle: "E-commerce and operations modernization",
     summary:
-      "Led long-running web, e-commerce, analytics, marketing, content, and operational workflow improvements that helped an 80+ year-old industrial business adapt online.",
+      "The work began in 2009. Jamie formalized the practice as Thick Arts LLC in 2012, with Harry J. Epstein Company as the LLC's first client, and led the engagement through the 2015 storefront transition.",
     role: "Technical Project Manager & Web Systems Lead",
-    years: "2012-Present",
+    years: "2009-2015",
     status: "Full case study",
     featured: true,
-    priority: 1,
+    priority: 3,
     visibility: "public-safe",
     proofBankIds: [
+      "hje-first-client-chronology",
       "hje-modernization-stewardship",
       "hje-revenue-growth-contribution"
     ],
@@ -121,17 +122,17 @@ const workItemsInput = [
     artifactTypes: ["website", "workflow", "analytics summary", "public-safe screenshot"],
     artifacts: [
       {
-        title: "Public e-commerce surface",
+        title: "Successor public website",
         description:
-          "The current storefront brings product discovery, customer language, editorial voice, video, promotions, and ordering into one maintained public system.",
+          "The company's live successor site provides present-day business context after the documented 2009-2015 engagement; it is not presented as Jamie's implementation or current maintenance work.",
         type: "public-safe screenshot",
         media: {
           src: "/artifacts/hje/public-site.png",
           alt: "Harry J. Epstein Company storefront showing navigation, product search, editorial artwork, video, and commerce controls.",
           caption:
-            "Public storefront captured July 2026. It shows the maintained customer-facing system, not private analytics or internal operations.",
+            "Successor website captured July 2026. It provides current business context and is not evidence of Jamie's present stewardship.",
           href: "https://www.harryepstein.com/",
-          sourceLabel: "Harry J. Epstein Company public website"
+          sourceLabel: "Harry J. Epstein Company successor website"
         }
       },
       {
@@ -145,6 +146,12 @@ const workItemsInput = [
         description:
           "Reusable patterns for preserving the company's distinctive public voice across product, marketing, and support surfaces.",
         type: "template"
+      },
+      {
+        title: "Maintenance-to-handoff specimen",
+        description:
+          "A public-safe reconstruction shows how recurring questions became well-scoped requirements, incremental releases, verification, reusable patterns, and owned next actions.",
+        type: "workflow"
       }
     ],
     tags: [
@@ -166,12 +173,13 @@ const workItemsInput = [
     careNote:
       "No private analytics dashboards, revenue details, passwords, customer data, vendor information, or internal operational materials are published.",
     sourceLayer:
-      "Public website, approved public-site screenshot, public-safe summary, resume-backed impact claims, and private materials intentionally omitted.",
+      "Jamie's authorized first-party client chronology, public Archive.org storefront captures, the successor website as business context, public-safe summaries, resume-backed impact claims, and private materials intentionally omitted.",
     credits: ["Jamie Burkart", "Harry J. Epstein Company team"],
     publicSafety: {
       note: "Use only public-safe claims and approved screenshots. Treat metrics as contribution language unless Jamie approves more precise wording."
     },
-    currentStatus: "Public-safe full case study with an approved public-site screenshot.",
+    currentStatus:
+      "Historical 2009-2015 client-engagement case study; the successor website is linked only for current business context.",
     group: "Operating systems for teams",
     roleFit:
       "Technical operations, product operations, implementation, business analysis, documentation, and small-business web systems.",
@@ -201,7 +209,7 @@ const workItemsInput = [
     years: "2017-Present",
     status: "Full case study",
     featured: true,
-    priority: 2,
+    priority: 1,
     visibility: "public-safe",
     proofBankIds: [
       "fair-rent-campaign-memory",
@@ -214,7 +222,14 @@ const workItemsInput = [
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
       "Recurring cultural-space meetings, public event pathways, practical safety and legal sessions, town halls, hearings, campaign actions, running minutes, action trackers, source maps, public campaign websites, and shared campaign memory.",
-    artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
+    artifactTypes: [
+      "website",
+      "photo sequence",
+      "source map",
+      "meeting memory",
+      "decision record",
+      "public handout"
+    ],
     artifacts: [
       {
         title: "Campaign-memory spine",
@@ -273,14 +288,14 @@ const workItemsInput = [
       { label: "Let NYC Dance", url: "https://letnycdance.nycartc.com/" }
     ],
     careNote:
-      "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
+      "Public-safe summary of collective civic and coalition work. The three-part participation sequence uses exact, approved portfolio occurrences; it does not authorize other private notes, legal-review materials, stakeholder lists, raw strategy documents, or internal materials.",
     sourceLayer:
-      "Public sources, approved public campaign screenshot, meeting-memory summaries, private/redacted coalition context, and collaborator review for additional named materials.",
+      "Public sources, approved public campaign captures, two governed photo occurrences from the NYC Artist Coalition project archive, meeting-memory summaries, private/redacted coalition context, and collaborator review for additional named materials.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
     },
-    currentStatus: "Active public-safe summary with an approved public campaign screenshot.",
+    currentStatus: "Active public-safe case study with a governed participation sequence and approved public campaign captures.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic delivery, coalition operations, product operations, documentation architecture, source-backed memory, public guidance, policy communications, and implementation support.",
@@ -307,6 +322,104 @@ const workItemsInput = [
     }
   },
   {
+    title: "KC Spaces Fund",
+    slug: "kc-spaces-fund",
+    series: "Campaign Systems",
+    subtitle: "Rapid mutual-aid website and public action routes",
+    summary:
+      "For a collaborator-led 2020 mutual-aid campaign, Jamie built and maintained the Ghost-based web stack, customized a reusable campaign theme, implemented donation, application, sign-up, and fundraising-display routes, and supported an available cross-channel identity.",
+    role: "Technical Project Manager & Web Systems Lead",
+    years: "2020",
+    status: "Full case study",
+    featured: false,
+    priority: 7,
+    visibility: "public-safe",
+    proofBankIds: ["kc-spaces-fund-digital-infrastructure"],
+    whatWasUnclear:
+      "Grassroots arts and culture spaces needed timely mutual-aid pathways during COVID-19, while a collaborator-led campaign needed one coherent public identity and a maintainable surface for several distinct actions.",
+    whatBecameUsable:
+      "A finished campaign website with donation, coalition sign-up, grant-application, contact, and funded-space update routes, supported by a reusable theme, fundraising display, deployment workflow, and consistent cross-channel identity.",
+    artifactTypes: ["website", "workflow", "public-safe screenshot"],
+    artifacts: [
+      {
+        title: "Restored campaign website",
+        description:
+          "The restored public site preserves the campaign's original mutual-aid framing and the action routes Jamie implemented behind a collaborator-led effort.",
+        type: "public-safe screenshot",
+        media: {
+          src: "/artifacts/kc-spaces-fund/public-site.webp",
+          alt: "KC Spaces Fund website with a blue campaign masthead, Donate action, Support section, and photographs of Kansas City arts and culture spaces.",
+          caption:
+            "Restored KC Spaces Fund campaign surface captured August 20, 2026. The interface demonstrates web implementation and action-path design; campaign organizing, fundraising, and grant decisions remain collective and separately credited.",
+          href: "https://kcspacesfund.com/",
+          sourceLabel: "KC Spaces Fund public website"
+        }
+      },
+      {
+        title: "Reusable campaign theme",
+        description:
+          "A customized Ghost theme and fundraising-display component made the campaign pattern maintainable and reusable without exposing private repositories or configuration.",
+        type: "workflow"
+      },
+      {
+        title: "Cross-channel action routing",
+        description:
+          "A consistent public identity connected the site, application, fundraiser, and collaborator-led social channels without assigning Jamie ownership of those channels or campaign decisions.",
+        type: "website"
+      }
+    ],
+    tags: [
+      "Technical Operations",
+      "Implementation",
+      "Campaign Websites",
+      "Product Operations",
+      "Mutual Aid",
+      "Public-Facing Tools"
+    ],
+    capabilities: [
+      "Rapid Implementation",
+      "Public-Facing Web Systems",
+      "Reusable Components",
+      "Action-Path Design",
+      "Deployment"
+    ],
+    links: [{ label: "Website", url: "https://kcspacesfund.com/" }],
+    careNote:
+      "Public organizer credit remains with the campaign's named organizers. Applicant, grantee, donor, subscriber, payment, and private campaign materials remain offline.",
+    sourceLayer:
+      "The restored public campaign site, public fundraiser and social records, independent contemporary coverage, Jamie's authorized role clarification, and a protected digital-infrastructure review summarized through the public-safe claim layer.",
+    credits: [
+      "Caitlin Horsmon",
+      "Jordan Carr",
+      "Kendell Harbin",
+      "Megan Pobywajlo",
+      "Jamie Burkart",
+      "KC Spaces Fund collaborators"
+    ],
+    publicSafety: {
+      note: "Credit Jamie with web infrastructure and cross-channel naming support, not public organizing, fundraising ownership, Facebook publishing, fiscal sponsorship, applicant review, or grant decisions."
+    },
+    currentStatus:
+      "Historical 2020 mutual-aid campaign with a restored public website and a public-safe technical-implementation case study.",
+    group: "Civic and public-facing systems",
+    roleFit:
+      "Rapid implementation, technical project management, public-facing product delivery, campaign operations, reusable web systems, and cross-channel coordination.",
+    evidence: [
+      "Ghost-based campaign web stack and customized reusable theme",
+      "Donation, application, sign-up, contact, and fundraising-display routes",
+      "Consistent public identity across domain and collaborator-led channels",
+      "Public campaign site, independent contemporary recognition, and protected implementation review"
+    ],
+    knownOpenProtected: {
+      known:
+        "Jamie built and maintained campaign web infrastructure and supported an available cross-channel identity for the collaborator-led KC Spaces Fund effort.",
+      open:
+        "Further collaborator confirmation could add process detail about team decisions, adoption, and the campaign's complete operating chronology.",
+      protected:
+        "Applicant and grantee materials, donor and subscriber data, payment records, credentials, raw communications, private repositories, and sensitive strategy remain offline."
+    }
+  },
+  {
     title: "CallNYC.org",
     slug: "callnyc",
     series: "Civic Prototype",
@@ -320,7 +433,7 @@ const workItemsInput = [
     years: "2016 - archived",
     status: "Full case study",
     featured: true,
-    priority: 3,
+    priority: 2,
     visibility: "public-safe",
     proofBankIds: ["callnyc-civic-data-guidance"],
     whatWasUnclear:
@@ -335,12 +448,12 @@ const workItemsInput = [
           "Public-facing page patterns that moved from constituent issue to relevant office, district context, and possible next step.",
         type: "prototype",
         media: {
-          src: "/artifacts/callnyc/archived-prototype.png",
-          alt: "Archived CallNYC prototype showing issue navigation, resident guidance, and a Council member service profile.",
+          src: "/artifacts/callnyc/original-launch-2016.webp",
+          alt: "Original CallNYC launch interface showing resident issue guidance, ranked Council member service profiles, and topic-based navigation.",
           caption:
-            "Archived CallNYC prototype captured July 2026. The banner marks it as an unofficial, non-current snapshot.",
+            "Original CallNYC public interface captured May 4, 2016, via the Internet Archive. It is shown as historical product evidence, not current constituent-service guidance.",
           href: "https://callnyc.org/",
-          sourceLabel: "CallNYC archived public prototype"
+          sourceLabel: "CallNYC original public launch archive"
         }
       },
       {
@@ -371,6 +484,7 @@ const workItemsInput = [
       "Public Interfaces"
     ],
     links: [
+      { label: "Visit restored CallNYC archive", url: "https://callnyc.org/" },
       {
         label: "Politico New York archived PDF",
         url: "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf"
@@ -380,12 +494,13 @@ const workItemsInput = [
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and approved archived-prototype screenshot.",
+      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and an approved May 4, 2016 Internet Archive capture of the original interface.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
     },
-    currentStatus: "Archived prototype with an approved public-safe screenshot.",
+    currentStatus:
+      "Archived prototype with an approved public-safe screenshot from the original 2016 interface.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
@@ -405,17 +520,17 @@ const workItemsInput = [
       }
   },
   {
-    title: "WOWList.org",
+    title: "WOW List",
     slug: "wowlist",
     series: "Community Platform",
-    subtitle: "Followable keyword communities for arts and music organizers",
+    subtitle: "A community calendar returning through a public invitation to test",
     summary:
-      "Co-built and operated a community-calendar platform for DIY arts and music organizers. A July 2017 production snapshot records 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts.",
+      "Co-built and operated a community-calendar platform across roughly 35 city ecosystems, supporting local organizers who used shared publishing tools to run calendars, websites, and email lists for their scenes.",
     role: "Co-builder & Product Operator",
-    years: "2010s",
+    years: "2010s-2026 relaunch",
     status: "Short proof page",
     featured: true,
-    priority: 4,
+    priority: 5,
     visibility: "public-safe",
     proofBankIds: ["wowlist-community-platform"],
     whatWasUnclear:
@@ -429,6 +544,21 @@ const workItemsInput = [
         description:
           "A lightweight distribution pattern for followable arts, music, and local-interest communities.",
         type: "diagram"
+      },
+      {
+        title: "Public relaunch surface",
+        description:
+          "The live landing and About experience invite testers back into WOW List without presenting the historical platform as fully restored.",
+        type: "public-safe screenshot",
+        media: {
+          src: "/artifacts/wowlist/public-relaunch.jpg",
+          alt: "WOW List landing page with the words being there changes everything, illustrated devices, a tester sign-up form, and a gathering in the background.",
+          caption:
+            "WOW List public landing captured August 13, 2026. The current invitation is live and intentionally noindex while the wider platform remains in development.",
+          href: "https://wowlist.org/",
+          sourceLabel: "WOW List public website",
+          fit: "contain"
+        }
       }
     ],
     tags: ["Community Systems", "Web Systems", "Product Operations", "Public-Facing Tools"],
@@ -440,26 +570,27 @@ const workItemsInput = [
       "Event Workflows"
     ],
     careNote:
-      "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
+      "Historical proof and current relaunch surface. The public landing is an invitation to testers, not evidence that the full historical platform has been restored.",
     sourceLayer:
-      "Public-safe summary, historical project context, and screenshots pending Jamie approval.",
+      "Public-safe historical project records, the current openhouse/wowlist.org main branch, and an approved capture of the live noindex landing page.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
-    currentStatus: "Historical short proof page.",
+    currentStatus: "Public landing and About experience live for tester recruitment; full platform restoration is not claimed.",
     group: "Community and cultural infrastructure",
     roleFit:
       "Community systems, product operations, public-facing platforms, and event distribution workflows.",
+    links: [{ label: "Visit WOW List", url: "https://wowlist.org/" }],
     evidence: [
       "Django / PostgreSQL / PostGIS and Ember platform",
       "Followable keyword communities",
       "Organizer-facing distribution workflows",
-      "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
-      "35 city-region keys with at least 50 posts in the July 2017 snapshot"
+      "Local organizers used shared publishing tools to run calendars, websites, and email lists",
+      "Roughly 35 city ecosystems operated through the platform"
     ],
     knownOpenProtected: {
       known:
-        "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
+        "WOW List was a co-built community-calendar platform organized around followable keyword communities; a public landing and About experience are now live for tester recruitment.",
       open:
-        "Screenshots, archive links, and individual technical-contribution allocation need further review.",
+        "The historical application, archive links, and individual technical-contribution allocation need further review before stronger restoration claims.",
       protected:
         "Private user data, organizer contact lists, and unapproved community records are not published."
     }
@@ -475,7 +606,7 @@ const workItemsInput = [
     years: "2010s-present",
     status: "Short proof page",
     featured: true,
-    priority: 5,
+    priority: 6,
     visibility: "summary-only",
     proofBankIds: ["sunday-dinner-196-participation-infrastructure"],
     whatWasUnclear:
@@ -485,10 +616,16 @@ const workItemsInput = [
     artifactTypes: ["photo sequence", "workflow", "template"],
     artifacts: [
       {
-        title: "Gathering rhythm",
+        title: "Residency onboarding handoff",
         description:
-          "A representative structure for welcoming, hosting, documenting, and continuing recurring cultural work.",
+          "A redacted reconstruction shows proposal review, orientation, space configuration, independent access, and continued support without exposing participant or access details.",
         type: "workflow"
+      },
+      {
+        title: "Recurring gathering operations",
+        description:
+          "A second reconstruction shows invitation, response, hosting, minimal continuity documentation, and follow-up while every participant-level value remains private.",
+        type: "template"
       }
     ],
     tags: ["Community Systems", "Documentation", "Implementation", "Knowledge Systems"],
@@ -521,14 +658,14 @@ const workItemsInput = [
     title: "KC Town Hall LLC",
     slug: "kc-town-hall",
     series: "Built Environment",
-    subtitle: "A $490,539 public funding award, field implementation, and responsible transition",
+    subtitle: "Resident service design, field implementation, a $490,539 public award, and responsible transition",
     summary:
-      "Secured a $490,539 public funding award by co-developing KC Town Hall's successful CCED proposal and serving as the City's named developer/presenter for the exact request, then transitioned the project to a mission-aligned organization.",
-    role: "Co-founder, Project Manager & CCED Developer/Presenter",
+      "Co-led KC Town Hall's planning and resident-facing operations: helped design and operate Tired of Tires, co-developed and presented the successful $490,539 CCED request, and later transitioned the project to a mission-aligned organization.",
+    role: "Co-founder, Project Manager, Service Designer & CCED Developer/Presenter",
     years: "2019-2024 public record",
     status: "Short proof page",
-    featured: false,
-    priority: 6,
+    featured: true,
+    priority: 4,
     visibility: "public-safe",
     proofBankIds: [
       "kc-town-hall-public-benefit-documentation",
@@ -537,9 +674,51 @@ const workItemsInput = [
     whatWasUnclear:
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
     whatBecameUsable:
-      "A successful $490,539 public funding request, planning materials, public-benefit documentation, stakeholder context, a multi-year municipal compliance record, and a mission-aligned transition.",
-    artifactTypes: ["map", "guide", "source map", "template"],
+      "A recurring household service with resident intake, field pickup, a City recycling handoff, project-maintained measurement, a successful $490,539 public funding request, and a mission-aligned transition.",
+    artifactTypes: ["public handout", "workflow", "map", "source map"],
     artifacts: [
+      {
+        title: "Tired of Tires service handbill",
+        description:
+          "A historic 2021 4x6 handbill made the service promise, household eligibility, monthly cadence, and resident action legible at a glance.",
+        type: "public handout",
+        media: {
+          src: "/images/artifacts/kc-town-hall-tired-of-tires-handbill-2021.webp",
+          alt: "Historic Tired of Tires handbill announcing monthly free household curbside tire pickup with KC Town Hall and Oak Park Neighborhood Association, with a list of 2021 dates.",
+          caption:
+            "Historic artifact, not a current service notice. This public-safe crop preserves the resident promise and date rhythm while excluding obsolete phone and email details.",
+          href: "/images/artifacts/kc-town-hall-tired-of-tires-handbill-2021.webp",
+          sourceLabel: "historic service handbill",
+          fit: "contain"
+        }
+      },
+      {
+        title: "Resident service workflow",
+        description:
+          "A plain-language promise connected household requests, recurring field pickup, a municipal recycling handoff, and project-maintained measurement without exposing resident records.",
+        type: "workflow"
+      },
+      {
+        title: "Neighborhood survey handbill",
+        description:
+          "The paired 4x6 survey asked residents to choose desired services near home or write in their own idea, turning field contact into a planning input.",
+        type: "public handout",
+        media: {
+          src: "/images/artifacts/kc-town-hall-neighborhood-survey-handbill-2019.webp",
+          alt: "Historic KC Town Hall survey handbill asking what residents would like at 36th and Indiana, with checkboxes for neighborhood services and blank response fields.",
+          caption:
+            "Public-safe crop from the 2019 proposal. Blank form labels remain visible; obsolete contact details and all resident response data are excluded.",
+          href: "/images/artifacts/kc-town-hall-neighborhood-survey-handbill-2019.webp",
+          sourceLabel: "historic neighborhood survey",
+          fit: "contain"
+        }
+      },
+      {
+        title: "Service-to-planning feedback loop",
+        description:
+          "Tire pickup created a recurring point of contact; the survey carried neighborhood priorities back into program planning. The proposal says survey results shaped what followed.",
+        type: "workflow"
+      },
       {
         title: "Ten-minute-walk proposal map",
         description:
@@ -559,21 +738,30 @@ const workItemsInput = [
         title: "Public-benefit documentation set",
         description:
           "Representative materials for describing intended public value, funding context, and stakeholder needs.",
-        type: "guide"
+        type: "source map"
       }
     ],
     tags: ["Implementation", "Documentation", "Knowledge Systems", "Public-Facing Tools"],
-    capabilities: ["Stakeholder Documentation", "Funding Support", "Historic Preservation Context"],
+    capabilities: ["Resident Service Design", "Field Operations", "Cross-Agency Coordination", "Measurement", "Stakeholder Documentation", "Funding Support", "Historic Preservation Context"],
+    links: [
+      {
+        label: "KC Town Hall historical project site",
+        url: "https://kctownhall.com/"
+      }
+    ],
     careNote:
-      "Securing the award names Jamie's documented proposal-and-presentation role; institutional authority remained with the Board and Council, and appropriation was not payment to Jamie. The transition is an authorized first-party professional account. Private personal, financial, legal, property, and stakeholder details are omitted.",
+      "The service claim says Jamie helped design and operate because the work belonged to residents, KC Town Hall, Oak Park Neighborhood Association, City partners, and other collaborators. The tracker is project-maintained, not City-audited; resident records remain private. Securing the award names Jamie's documented proposal-and-presentation role, while institutional authority remained with the Board and Council.",
     sourceLayer:
-      "Official Kansas City Council and CCED records, a protected public-safe review of the 2019 proposal, the complete public account corpus, Council-role records, approved resume language, and bounded project context.",
-    credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
+      "Official Kansas City Council and CCED records; the archived public service page; a protected aggregate review of the service tracker and launch coordination; exact governed handbill artifacts; the complete public account corpus; and authorized first-party professional context.",
+    credits: ["Jamie Burkart", "Julia Fredenburg", "KC Town Hall LLC collaborators", "Oak Park Neighborhood Association", "participating residents and City partners"],
     currentStatus: "Jamie later transitioned the project to a mission-aligned organization.",
     group: "Operating systems for teams",
     roleFit:
-      "Funding strategy, proposal development, public presentation, long-horizon project management, public-benefit documentation, compliance coordination, and implementation support.",
+      "Resident-facing service design, field operations, cross-agency implementation, measurement, funding strategy, public presentation, long-horizon project management, and responsible handoff.",
     evidence: [
+      "Helped design and operate a recurring free household tire-pickup service",
+      "Contemporaneously identified driver for the May 2019 launch pickup",
+      "Project-maintained tracker records 1,970 tires and estimates $44,890 in avoided disposal fees across monthly entries from May 2019 through September 2022",
       "$490,539 public funding award secured through a successful CCED request",
       "Named City developer/presenter for the exact request",
       "Redevelopment planning",
@@ -585,11 +773,11 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-led the project, served as the City's named developer/presenter for the successful $490,539 request, remained a named developer point of contact through documented compliance progress in 2022-2023, and later transitioned the project to a mission-aligned organization. The complete surviving public-account corpus separately documents a collective resident intake, service-coordination, and reporting workflow.",
+        "Jamie co-led the project; helped design and operate Tired of Tires; is contemporaneously identified as the May 2019 launch driver; served as the City's named developer/presenter for the successful $490,539 request; and later transitioned the project to a mission-aligned organization. A project-maintained tracker records 1,970 tires and an estimated $44,890 in avoided disposal fees across its dated monthly entries.",
       open:
-        "The receiving organization, legal form, timing, and transfer scope are intentionally not asserted. The public transcript of Jamie's recalled City Council testimony remains unrecovered.",
+        "Every-month route responsibility, complete walkshed coverage, the specific survey-to-facility causal path, the receiving organization, legal form, timing, and transfer scope are intentionally not asserted. The public transcript of Jamie's recalled City Council testimony remains unrecovered.",
       protected:
-        "Private personal, correspondence, financial, legal, property, banking, and stakeholder details are omitted."
+        "Resident names, addresses, requests, phone numbers, email addresses, private correspondence, row-level service records, and personal, financial, legal, property, banking, and stakeholder details are omitted."
     }
   }
 ] satisfies WorkMeta[];
@@ -603,6 +791,7 @@ export type WorkSlug =
   | "callnyc"
   | "fair-rent-nyc"
   | "harry-j-epstein"
+  | "kc-spaces-fund"
   | "kc-town-hall"
   | "wowlist";
 

@@ -1,24 +1,30 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `b1d476c810fc6d434b01fdab16c23ad1b961a01f`
-**Generation time:** 2026-07-28T14:28:48-04:00
-**Source fingerprint:** `e5177833940ac1e9395c314bcb04693bdef8e3ec600800598ce57a3002d5c65f`
+**Source commit:** `2bd29f313f73f8844282dbe364b163d62544a401`
+**Generation time:** 2026-08-21T10:19:09-04:00
+**Source fingerprint:** `77a6700ed0da85d2d0ec4dcfd5fed3f8ef2d9c6dc3dd08683dd243cddead9684`
 
 ## application
 
 - [NYC Artist Coalition application brief](../applications/nycac-civic-product-operations.md) - `application.nycac.civic-product-operations`
+- [WOW List - Senior Product Manager role-fit brief](../applications/wowlist-senior-product-manager-oti-782366.md) - `application.wowlist.senior-product-manager-oti-782366`
 
 ## asset
 
 - [KC Town Hall ten-minute-walk proposal map](../assets/graphics/kc-town-hall-walkshed-2019.md) - `asset.graphic.kc-town-hall.walkshed.2019.001`
+- [MIT Interrogative Design Symposium held photo set](../assets/photographs/mit-interrogative-design-symposium-2024-held.md) - `asset.photo-set.mit-interrogative-design.2024`
 - [Digital District participant photograph metadata](../assets/digital-district-photo.md) - `asset.photo.digital-district.001`
 - [East River beneath the Manhattan Bridge, 2022](../assets/photographs/east-river-manhattan-bridge-2022.md) - `asset.photo.east-river-manhattan-bridge.2022.001`
 - [Jamie at the KC Town Hall worksite](../assets/photographs/kc-town-hall-hard-hat-worksite.md) - `asset.photo.kc-town-hall.hard-hat.001`
 - [Kansas City Star aerial view of KC Town Hall](../assets/photographs/kc-town-hall-kc-star-aerial-2021.md) - `asset.photo.kc-town-hall.kc-star-aerial.2021`
+- [KC Town Hall roof work, 2019](../assets/photographs/kc-town-hall-roof-work-2019.md) - `asset.photo.kc-town-hall.roof-work.2019.001`
 - [Jamie and a collaborator inside KC Town Hall](../assets/photographs/kc-town-hall-stewardship-interior.md) - `asset.photo.kc-town-hall.stewardship-interior.001`
 - [Jamie with a civic field kit at New York City Council](../assets/photographs/nyc-council-field-kit-2026.md) - `asset.photo.nyc-council.field-kit.2026.001`
 - [DCLA listening room, January 2017](../assets/photographs/nycac-dcla-listening-room-2017.md) - `asset.photo.nycac-dcla-listening-room.2017.001`
+- [NYC Artist Coalition collective-synthesis field, 2017](../assets/photographs/nycac-collective-synthesis-2017.md) - `asset.photo.nycac.collective-synthesis.2017.001`
+- [Save NYC Spaces town hall at Market Hotel, 2017](../assets/photographs/nycac-market-hotel-town-hall-2017.md) - `asset.photo.nycac.market-hotel-town-hall.2017.001`
+- [Shoestring Press advocacy coordination, 2017](../assets/photographs/nycac-shoestring-facilitation-2017.md) - `asset.photo.nycac.shoestring-facilitation.2017.001`
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb`
 - [FairRentNYC: 2019 03 18 small business rally 1 [hur5tftl]](../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj.md) - `asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj`
 - [FairRentNYC: 2019 03 18 small business rally 1 [wp36j4c2]](../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-wp36j4c2rp.md) - `asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-wp36j4c2rp`
@@ -198,6 +204,9 @@
 - [Talks Not Raids: save nyc spaces group photo nyc artist coalition [a7ura7th]](../assets/photographs/project-sites/talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-a7ura7t.md) - `asset.photo.project-site.talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-a7ura7t`
 - [Talks Not Raids: save nyc spaces group photo nyc artist coalition thumb [fqny62h4]](../assets/photographs/project-sites/talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-thumb-f.md) - `asset.photo.project-site.talks-not-raids-save-nyc-spaces-group-photo-nyc-artist-coalition-thumb-f`
 - [Talks Not Raids: stephenlevin [3lpdubkj]](../assets/photographs/project-sites/talks-not-raids-stephenlevin-3lpdubkj6h.md) - `asset.photo.project-site.talks-not-raids-stephenlevin-3lpdubkj6h`
+- [Sunday Dinner shared map and table, 2013](../assets/photographs/sunday-dinner-shared-map-2013.md) - `asset.photo.sunday-dinner.shared-map.2013.001`
+- [Let NYC Dance loaded hero-video public surface](../assets/graphics/let-nyc-dance-public-surface-2026-08-13.md) - `asset.screenshot.let-nyc-dance.public-surface.2026-08-13`
+- [WOW List public tester invitation](../assets/graphics/wowlist-public-relaunch-2026-08-13.md) - `asset.screenshot.wowlist.public-relaunch.2026-08-13`
 
 ## capability
 
@@ -216,6 +225,7 @@
 
 - [CallNYC chronology correction](../corrections/callnyc-years-2026.md) - `correction.callnyc-years.2026`
 - [Add Elana Gordon's credit to the East River homepage occurrence](../corrections/east-river-credit-2026-07.md) - `correction.photo.east-river-credit.2026-07`
+- [Replace unsupported individual photo credits with project courtesy credits](../corrections/project-photo-credits-2026-08-20.md) - `correction.photo.project-courtesy-credits.2026-08-20`
 
 ## decision
 
@@ -224,6 +234,7 @@
 - [KC Town Hall listening within fieldwork](../decisions/kc-town-hall-listening-fieldwork.md) - `decision.kc-town-hall.listening-fieldwork`
 - [Knowledge Wiki depth with selective public projection](../decisions/knowledge-wiki-selective-projection.md) - `decision.knowledge-wiki.selective-projection`
 - [Open House communal governance inside negotiated boundaries](../decisions/open-house-communal-governance.md) - `decision.open-house.communal-governance`
+- [Compose facilitation, shared surface, and public assembly](../decisions/photography/fair-rent-participation-sequence-2026-08-13.md) - `decision.photo.fair-rent-participation-sequence.2026-08-13`
 - [Select the East River photograph for the Layout C homepage](../decisions/photography/layout-c-home-east-river-v1.md) - `decision.photo.layout-c.home-east-river.v1`
 - [Keep the Layout C resume route photograph-free](../decisions/photography/layout-c-resume-no-photo-v1.md) - `decision.photo.layout-c.resume-no-photo.v1`
 - [Narrow the pre-launch public photo field to fully bound occurrences](../decisions/photography/pre-launch-rights-narrowing-2026-07-28.md) - `decision.photo.pre-launch.rights-narrowing.2026-07-28`
@@ -231,16 +242,22 @@
 ## evaluation
 
 - [Layout C homepage East River curatorial proposal](../evaluations/curatorial/layout-c-home-east-river-v1.md) - `evaluation.curatorial.layout-c.home-east-river.v1`
+- [Portfolio project-cover curatorial record](../evaluations/curatorial/portfolio-project-covers-2026-08-13.md) - `evaluation.curatorial.portfolio-project-covers.2026-08-13`
 - [Employment context coverage baseline - July 18, 2026](../evaluations/employment-context-coverage-2026-07-18.md) - `evaluation.employment-context.coverage.2026-07-18`
+- [Employment opportunity leadership and freshness evaluation - August 13, 2026](../evaluations/employment-opportunity-leadership-2026-08-13.md) - `evaluation.employment-opportunity-leadership.2026-08-13`
+- [Jamie public-record integration evaluation](../evaluations/jamie-public-record-integration-2026-08-03.md) - `evaluation.jamie-public-record-integration.2026-08-03`
 - [Knowledge Wiki retrieval tasks](../evaluations/retrieval-tasks.md) - `evaluation.knowledge-wiki.retrieval-tasks`
 - [NYC Artist Coalition shared-folder production evals](../evaluations/nycac-shared-folder-production-2026-07-19.md) - `evaluation.nycac.shared-folder-production.2026-07-19`
+- [OTI product-manager search - comparative fit review](../evaluations/oti-product-manager-search-ranking-2026-08-20.md) - `evaluation.oti-product-manager-search-ranking.2026-08-20`
 
 ## event
 
+- [Interrogative Design Symposium](../events/interrogative-design-symposium-2024.md) - `event.mit.interrogative-design-symposium.2024`
 - [Commercial Rent Stabilization event at Friends and Lovers](../events/commercial-rent-friends-and-lovers-2026-02-17.md) - `event.nyc.commercial-rent.friends-and-lovers.2026-02-17`
 - [Project X community conversation](../events/commercial-rent-project-x-2026-03-10.md) - `event.nyc.commercial-rent.project-x.2026-03-10`
 - [Commercial Rent Stabilization public event](../events/commercial-rent-public-event-2025-11-13.md) - `event.nyc.commercial-rent.public-event.2025-11-13`
 - [NYC DIY spaces meeting at the Department of Cultural Affairs](../events/nyc-diy-spaces-dcla-2017-01-27.md) - `event.nyc.dcla.diy-spaces-listening.2017-01-27`
+- [Empty Storefronts, High Rents report-release rally](../events/empty-storefronts-high-rents-release-2026-07-29.md) - `event.nyc.sbu.empty-storefronts-high-rents-release.2026-07-29`
 - [New York City Council constituent-services hackathon](../events/nycc-constituent-services-hackathon-2016.md) - `event.nycc.constituent-services-hackathon.2016`
 - [Committee on Consumer Affairs Cabaret Law hearing](../events/cabaret-law-hearing-2017-06-19.md) - `event.nycc.consumer-affairs.cabaret-law-2017-06-19`
 - [Committee on Consumer Affairs Cabaret Law repeal hearing](../events/cabaret-law-repeal-hearing-2017-09-14.md) - `event.nycc.consumer-affairs.cabaret-law-2017-09-14`
@@ -253,6 +270,8 @@
 - [Int. 93 commercial rent stabilization introduction](../events/commercial-rent-int-93-introduction-2022-03-24.md) - `event.nycc.stated-meeting.commercial-rent-int-93-introduction.2022-03-24`
 - [State sponsors introduce S8319 and A5568A](../events/commercial-rent-state-introduction-2026-02-17.md) - `event.nys.commercial-rent.bill-introduction-release.2026-02-17`
 - [Jimmy's Corner rally for Small Business Rent Stabilization](../events/commercial-rent-jimmys-corner-rally-2026-04-10.md) - `event.nys.commercial-rent.jimmys-corner-rally.2026-04-10`
+- [AI Made Me Do It symposium and exhibition](../events/ai-made-me-do-it-symposium-2024.md) - `event.studio3.ai-made-me-do-it.2024`
+- [In Terms of Media symposium](../events/in-terms-of-media-symposium-2024.md) - `event.weibel.in-terms-of-media.2024`
 
 ## index
 
@@ -264,6 +283,9 @@
 - [Decisions, Deliverables, and Operational Outcomes](../indexes/decisions-deliverables-and-operational-outcomes.md) - `index.knowledge-wiki.decisions-deliverables-operational-outcomes`
 - [Employment context and hiring acceptance](../indexes/employment-context.md) - `index.knowledge-wiki.employment-context`
 - [Knowledge Wiki branch-family closure](../indexes/family-closure.md) - `index.knowledge-wiki.family-closure`
+- [Jamie Burkart public-record source edition](../indexes/jamie-public-record-source-edition.md) - `index.knowledge-wiki.jamie-public-record-source-edition`
+- [Jamie Burkart Sourcebook pilot](../indexes/jamie-sourcebook.md) - `index.knowledge-wiki.jamie-sourcebook`
+- [Live Project Websites](../indexes/live-project-websites.md) - `index.knowledge-wiki.live-project-websites`
 - [Living archive and missing-page map](../indexes/living-archive.md) - `index.knowledge-wiki.living-archive`
 - [Outcomes, Adoption, and Afterlives](../indexes/outcomes-adoption-and-afterlives.md) - `index.knowledge-wiki.outcomes-adoption-afterlives`
 - [People, places, and the work between them](../indexes/people-places-and-work-between-them.md) - `index.knowledge-wiki.people-places-work`
@@ -271,6 +293,7 @@
 - [Photography field notebook](../notebooks/photography/README.md) - `index.knowledge-wiki.photography-notebook`
 - [Knowledge Wiki pilot map](../indexes/pilot.md) - `index.knowledge-wiki.pilot`
 - [What the work was up against](../indexes/what-the-work-was-up-against.md) - `index.knowledge-wiki.pressures`
+- [Professional record and reception](../indexes/professional-record-and-reception.md) - `index.knowledge-wiki.professional-record`
 - [Project lineages](../indexes/project-lineages.md) - `index.knowledge-wiki.project-lineages`
 - [Public testimony and hearing voices](../indexes/public-testimony-and-hearing-voices.md) - `index.knowledge-wiki.public-testimony-and-hearing-voices`
 - [Relational Infrastructure Atlas](../indexes/relational-infrastructure-atlas.md) - `index.knowledge-wiki.relational-infrastructure-atlas`
@@ -280,32 +303,47 @@
 - [Visual evidence index](../indexes/visual-evidence.md) - `index.knowledge-wiki.visual-evidence`
 - [East River canoe outing, 2022](../indexes/photo-sets/east-river-canoe-2022.md) - `index.photo-set.east-river-canoe.2022`
 - [KC Town Hall fieldwork and proposal visual set](../indexes/photo-sets/kc-town-hall-fieldwork.md) - `index.photo-set.kc-town-hall-fieldwork`
+- [MIT Interrogative Design Symposium photo set](../indexes/photo-sets/mit-interrogative-design-symposium-2024.md) - `index.photo-set.mit-interrogative-design.2024`
 - [NYC Artist Coalition DCLA formation photo set](../indexes/photo-sets/nycac-dcla-formation-2017.md) - `index.photo-set.nycac-dcla-formation.2017`
 - [NYC Artist Coalition project-site photographs, 2017-2026](../indexes/photo-sets/nycac-project-sites-2017-2026.md) - `index.photo-set.nycac-project-sites.2017-2026`
 - [Jamie Burkart public testimony](../indexes/public-testimony.md) - `index.public-testimony`
 
 ## method
 
+- [BetaNYC opportunity-source loop](../methods/betanyc-opportunity-loop.md) - `method.betanyc-opportunity-loop`
+- [Civic Match opportunity relationship loop](../methods/civic-match-opportunity-loop.md) - `method.civic-match-opportunity-loop`
 - [Collective credit and protected absence](../methods/collective-credit-and-protected-absence.md) - `method.collective-credit-protected-absence`
 - [Identity Systems as Shared Infrastructure](../methods/identity-systems-as-shared-infrastructure.md) - `method.identity-systems-as-shared-infrastructure`
 - [Jamie at Work](../methods/jamie-at-work.md) - `method.jamie-at-work`
 - [Learning Through Making](../methods/learning-through-making.md) - `method.learning-through-making`
 - [Maintenance, handoff, and stewardship](../methods/maintenance-handoff-and-stewardship.md) - `method.maintenance-handoff-stewardship`
+- [NYC Jobs opportunity action loop](../methods/nyc-jobs-opportunity-loop.md) - `method.nyc-jobs-opportunity-loop`
 - [Participation and Relational Infrastructure](../methods/participation-and-relational-infrastructure.md) - `method.participation-and-relational-infrastructure`
 - [East River photographic knowledge-loop tutorial](../workflows/photography-east-river-canary.md) - `method.photography-east-river-canary`
+- [Projects as a Recomposable Civic-Cultural System](../methods/recomposable-civic-cultural-systems.md) - `method.recomposable-civic-cultural-systems`
 - [Situated source rereading](../methods/situated-source-rereading.md) - `method.situated-source-rereading`
-- [Source-Backed Team Memory](../methods/source-backed-team-memory.md) - `method.source-backed-team-memory`
+- [Knowledge Wiki Graph / Source-Backed Team Memory](../methods/source-backed-team-memory.md) - `method.source-backed-team-memory`
 - [Structure grows from the material](../methods/structure-grows-from-the-material.md) - `method.structure-grows-from-material`
+- [Sunday Dinner, WOW List, and NYC Artist Coalition Synergy](../methods/sunday-dinner-wowlist-nycac-synergy.md) - `method.sunday-dinner-wowlist-nycac-synergy`
 - [What Is at Stake for Me](../methods/what-is-at-stake-for-me.md) - `method.what-is-at-stake-for-me`
+- [WOW List Relational Curation](../methods/wowlist-relational-curation.md) - `method.wowlist-relational-curation`
 
 ## opportunity
 
 - [ACLU - Product Manager II, Discovery](../opportunities/aclu-product-discovery.md) - `opportunity.aclu.product-manager-discovery.8482872002`
+- [ACLU - Senior Project Manager, Learning and Project Solutions](../opportunities/aclu-senior-project-manager-lps.md) - `opportunity.aclu.senior-project-manager-lps.8620968002`
+- [ACLU - Senior Project Manager, National Campaigns](../opportunities/aclu-senior-project-manager-national-campaigns.md) - `opportunity.aclu.senior-project-manager-national-campaigns.8631854002`
 - [Asana - AI Implementation Manager, Service Management](../opportunities/asana-ai-implementation.md) - `opportunity.asana.ai-implementation.8027437`
 - [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md) - `opportunity.benepass.product-operations.7f963a7a`
 - [CodePath - Senior Program Manager, Claude Corps](../opportunities/codepath-claude-corps.md) - `opportunity.codepath.claude-corps.5182020007`
+- [NYC Campaign Finance Board - Associate Director of Policy Implementation 792925](../opportunities/cfb-associate-director-policy-implementation-792925.md) - `opportunity.nyc-cfb.associate-director-policy-implementation.792925`
+- [NYC OTI - Cybersecurity Senior Project Manager 791074](../opportunities/oti-cybersecurity-senior-project-manager-791074.md) - `opportunity.nyc-oti.cybersecurity-senior-project-manager.791074`
+- [NYC OTI - Operations Manager 789810](../opportunities/oti-operations-manager-789810.md) - `opportunity.nyc-oti.operations-manager.789810`
+- [NYC OTI - Product Manager 784450](../opportunities/oti-product-manager-784450.md) - `opportunity.nyc-oti.product-manager.784450`
+- [NYC OTI - Senior Product Manager 782366](../opportunities/oti-senior-product-manager.md) - `opportunity.nyc-oti.senior-product-manager.782366`
 - [NYC OTI - Technical Operations Manager 782369](../opportunities/oti-technical-operations.md) - `opportunity.nyc-oti.technical-operations-manager.782369`
 - [PermitFlow - Product Operations Manager](../opportunities/permitflow-product-operations.md) - `opportunity.permitflow.product-operations.8a6e6066`
+- [Protected source-backed team-memory consulting lead](../opportunities/source-backed-team-memory.md) - `opportunity.protected.source-backed-memory-consulting.2026`
 
 ## organization
 
@@ -313,8 +351,24 @@
 
 ## person
 
+- [Aileen Palmer](../people/aileen-palmer.md) - `person.aileen-palmer`
+- [Allie Swatek](../people/allie-swatek.md) - `person.allie-swatek`
+- [Courtney Kishbaugh](../people/courtney-kishbaugh.md) - `person.courtney-kishbaugh`
+- [Deirdre Schifeling](../people/deirdre-schifeling.md) - `person.deirdre-schifeling`
+- [Diya Vij](../people/diya-vij.md) - `person.diya-vij`
 - [Elana Gordon](../people/elana-gordon.md) - `person.elana-gordon`
+- [Jaclyn Chen](../people/jaclyn-chen.md) - `person.jaclyn-chen`
+- [James Williams](../people/james-williams-aclu.md) - `person.james-williams-aclu`
 - [Jamie Burkart](../people/jamie-burkart.md) - `person.jamie-burkart`
+- [Jenn Wei](../people/jenn-wei.md) - `person.jenn-wei`
+- [Josh Gee](../people/josh-gee.md) - `person.josh-gee`
+- [Kelly Moan](../people/kelly-moan.md) - `person.kelly-moan`
+- [Lisa Gelobter](../people/lisa-gelobter.md) - `person.lisa-gelobter`
+- [Luke Farrell](../people/luke-farrell.md) - `person.luke-farrell`
+- [Paul Mossine](../people/paul-mossine.md) - `person.paul-mossine`
+- [Sophie Sharps](../people/sophie-sharps.md) - `person.sophie-sharps`
+- [Terence Dougherty](../people/terence-dougherty.md) - `person.terence-dougherty`
+- [Warren Sack](../people/warren-sack.md) - `person.warren-sack`
 
 ## place
 
@@ -339,11 +393,17 @@
 
 ## projection
 
+- [August 2026 launch-candidate photographic edition](../projections/photography/edition-launch-2026-08.md) - `edition.launch.2026-08`
 - [Layout C photographic portfolio edition](../projections/photography/edition-layout-c-2026-07.md) - `edition.layout-c.2026-07`
 - [Role-fit and referral map](../projections/role-fit-and-referral-map.md) - `portfolio.role-fit-referral-map`
 - [CallNYC portfolio projection](../projections/work-callnyc.md) - `portfolio.work.callnyc`
 - [Technical Operations portfolio projection](../projections/work-technical-operations.md) - `portfolio.work.technical-operations`
+- [Homepage Open Graph East River occurrence](../projections/photography/home-og-east-river.md) - `projection.photo.home-og.east-river`
+- [KC Town Hall roof-work occurrence](../projections/photography/kc-town-hall-roof-work.md) - `projection.photo.kc-town-hall.roof-work`
 - [Layout C homepage East River occurrence](../projections/photography/layout-c-home-east-river.md) - `projection.photo.layout-c.home.east-river`
+- [Sunday Dinner shared-map occurrence](../projections/photography/sunday-dinner-shared-map.md) - `projection.photo.sunday-dinner.shared-map`
+- [Team-knowledge collective-synthesis occurrence](../projections/photography/team-knowledge-collective-synthesis.md) - `projection.photo.team-knowledge.collective-synthesis`
+- [Fair Rent case-study participation sequence](../projections/photography/fair-rent-participation-sequence-2026-08.md) - `projection.visual.fair-rent.participation-sequence.2026-08`
 
 ## research-inquiry
 
@@ -356,15 +416,28 @@
 
 ## research-run
 
+- [Anonymized team-memory case study — Jamie's perspective](../case-studies/anonymized-team-memory-collaboration/02-jamie-perspective.md) - `case-study.anonymized-team-memory.jamie-perspective`
+- [Anonymized team-memory case study — prospective collaborator perspective](../case-studies/anonymized-team-memory-collaboration/01-prospective-collaborator-perspective.md) - `case-study.anonymized-team-memory.prospective-collaborator-perspective`
+- [Anonymized team-memory case study — prospective collaborator writer's-voice hypothesis](../case-studies/anonymized-team-memory-collaboration/03-prospective-collaborator-voice.md) - `case-study.anonymized-team-memory.prospective-collaborator-voice`
+- [Restored project sites close reading, August 14, 2026](../research-runs/restored-project-sites-close-reading-2026-08-14.md) - `research-run.restored-project-sites.2026-08-14`
 - [Foundational Wiki page source return, July 19, 2026](../research-runs/foundational-source-return-2026-07-19.md) - `research.foundational-source-return.2026-07-19`
 - [Interpretive layer source return, July 19, 2026](../research-runs/interpretive-layer-source-return-2026-07-19.md) - `research.interpretive-layer-source-return.2026-07-19`
 - [Knowledge Wiki branch-family closure review](../research-runs/knowledge-wiki-family-closure-2026-07-19.md) - `research.knowledge-wiki-family-closure.2026-07-19`
+- [NYC Artist Coalition and commercial-rent advocacy close reading, August 2026](../research-runs/nycac-crs-30-day-close-reading-2026-08-13.md) - `research.nycac-crs-30-day-close-reading.2026-08-13`
 - [NYC Artist Coalition shared-folder archival production](../research-runs/nycac-shared-folder-2026-07-19.md) - `research.nycac.shared-folder.2026-07-19`
 - [Photographic source return for DCLA, KC Town Hall, and Council fieldwork](../research-runs/photographic-source-return-2026-07-26.md) - `research.photographic-source-return.2026-07-26`
+- [Professional record public-safe promotion review, August 3, 2026](../research-runs/professional-record-promotion-2026-08-03.md) - `research.professional-record-promotion.2026-08-03`
 
 ## source
 
+- [ACLU biography - Deirdre Schifeling](../sources/aclu-deirdre-schifeling-bio.md) - `source.aclu.deirdre-schifeling-bio`
+- [ACLU biography - Terence Dougherty](../sources/aclu-terence-dougherty-bio.md) - `source.aclu.terence-dougherty-bio`
+- [Benepass leadership context - Jaclyn Chen](../sources/benepass-jaclyn-chen-leadership.md) - `source.benepass.jaclyn-chen-leadership.2026`
+- [BetaNYC weekly civic-tech newsletter](../sources/betanyc-civictech-newsletter.md) - `source.betanyc.weekly-civictech-newsletter`
+- [CallNYC restored archived prototype, August 2026](../sources/callnyc-restored-site-2026-08-14.md) - `source.callnyc.restored-site.2026-08-14`
 - [CallNYC public source repository](../sources/callnyc-source-repository.md) - `source.callnyc.source-repository`
+- [Campaign-site repository family, 2020-2022](../sources/campaign-site-repository-family-2020-2022.md) - `source.campaign-site.repository-family.2020-2022`
+- [Civic Match candidate network](../sources/civic-match-candidate-network-2026-08-20.md) - `source.civic-match.candidate-network`
 - [Civic Hall hackathon announcement](../sources/civichall-hackathon-announcement-2016.md) - `source.civichall.hackathon-announcement.2016`
 - [New York City Council Constituent Services Data release](../sources/nycc-constituent-services-data-2016-05-27.md) - `source.councilstat.fuller-release.2016`
 - [Open House at UC Santa Cruz](../sources/good-times-open-house-2006-06-28.md) - `source.good-times.open-house.2006-06-28`
@@ -373,24 +446,44 @@
 - [Cultural Affairs preliminary budget hearing: supportive witness testimony](../testimony/heteroglossia/2018-03-16-cultural-affairs-supportive-witnesses.md) - `source.heteroglossia.cultural-affairs-budget.2018-03-16`
 - [Small Business Job Survival Act hearing: supportive witness testimony](../testimony/heteroglossia/2018-10-22-sbjsa-supportive-witnesses.md) - `source.heteroglossia.sbjsa.2018-10-22`
 - [Harry J. Epstein Company archival research brief, July 2026](../sources/hje-research-brief-2026-07.md) - `source.hje.research-brief.2026-07`
+- [Harry J. Epstein historic storefront Wayback chronology, August 2026](../sources/hje-wayback-chronology-2026-08.md) - `source.hje.wayback-chronology.2026-08`
+- [Jamie Burkart public-record initial manifest](../sources/jamie-public-record-initial-manifest.md) - `source.jamie-public-record-initial-manifest`
 - [Jamie Burkart writer's voice synthesis, July 2026](../sources/writers-voice-synthesis-2026-07.md) - `source.jamie.writers-voice-synthesis.2026-07`
+- [NYC Jobs OTI product-manager search - August 20, 2026](../sources/jobs-nyc-oti-product-manager-search-2026-08-20.md) - `source.jobs-nyc.oti-product-manager-search.2026-08-20`
 - [ACLU - Product Manager II, Discovery 8482872002](../sources/jobs-aclu-product-discovery-8482872002.md) - `source.jobs.aclu.product-discovery.8482872002`
+- [Official posting - ACLU Senior Project Manager, Learning and Project Solutions](../sources/jobs-aclu-senior-project-manager-lps-8620968002.md) - `source.jobs.aclu.senior-project-manager-lps.8620968002`
+- [Official posting - ACLU Senior Project Manager, National Campaigns](../sources/jobs-aclu-senior-project-manager-national-campaigns-8631854002.md) - `source.jobs.aclu.senior-project-manager-national-campaigns.8631854002`
 - [Asana - AI Implementation Manager, Service Management 8027437](../sources/jobs-asana-ai-implementation-8027437.md) - `source.jobs.asana.ai-implementation.8027437`
 - [Official posting - Benepass Product Operations Manager](../sources/jobs-benepass-product-operations.md) - `source.jobs.benepass.product-operations.7f963a7a`
+- [NYC Jobs - Associate Director of Policy Implementation 792925](../sources/jobs-cfb-policy-implementation-792925.md) - `source.jobs.cfb.policy-implementation.792925`
 - [CodePath - Senior Program Manager, Claude Corps 5182020007](../sources/jobs-codepath-claude-corps-5182020007.md) - `source.jobs.codepath.claude-corps.5182020007`
+- [NYC Jobs - Cybersecurity Senior Project Manager 791074](../sources/jobs-oti-cybersecurity-senior-project-manager-791074.md) - `source.jobs.oti.cybersecurity-senior-project-manager.791074`
+- [NYC Jobs - Operations Manager 789810](../sources/jobs-oti-operations-manager-789810.md) - `source.jobs.oti.operations-manager.789810`
+- [NYC Jobs - Product Manager 784450](../sources/jobs-oti-product-manager-784450.md) - `source.jobs.oti.product-manager.784450`
+- [NYC Jobs - Senior Product Manager 782366](../sources/jobs-oti-senior-product-manager-782366.md) - `source.jobs.oti.senior-product-manager.782366`
 - [NYC Jobs - Technical Operations Manager 782369](../sources/jobs-oti-technical-operations-782369.md) - `source.jobs.oti.technical-operations.782369`
 - [Official posting - PermitFlow Product Operations Manager](../sources/jobs-permitflow-product-operations.md) - `source.jobs.permitflow.product-operations.8a6e6066`
 - [The Kansas City Star raft report, November 15, 2007](../sources/kansas-city-star-raft-2007-11-15.md) - `source.kansas-city-star.raft.2007-11-15`
 - [KC Town Hall CCED proposal bundle, 2019](../sources/kc-town-hall-cced-proposal-2019.md) - `source.kc-town-hall.cced-proposal.2019`
 - [KC Town Hall local digital archive review, July 2026](../sources/archives/kc-town-hall-local-digital-archive-2026-07.md) - `source.kc-town-hall.local-digital-archive.2026-07`
 - [KC Town Hall photographic oral histories, July 2026](../sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md) - `source.kc-town-hall.photographic-oral-histories.2026-07`
+- [KC Town Hall restored public site, August 2026](../sources/kctownhall-live-site-2026-08-14.md) - `source.kctownhall.live-site.2026-08-14`
 - [Frozen Knowledge Wiki branch A](../sources/knowledge-wiki-branch-a-2026-07-19.md) - `source.knowledge-wiki.branch-a.2026-07-19`
 - [Frozen Knowledge Wiki branch B](../sources/knowledge-wiki-branch-b-2026-07-19.md) - `source.knowledge-wiki.branch-b.2026-07-19`
 - [Frozen Knowledge Wiki branch C](../sources/knowledge-wiki-branch-c-2026-07-19.md) - `source.knowledge-wiki.branch-c.2026-07-19`
 - [Frozen Knowledge Wiki branch D](../sources/knowledge-wiki-branch-d-2026-07-19.md) - `source.knowledge-wiki.branch-d.2026-07-19`
 - [Frozen Knowledge Wiki branch E](../sources/knowledge-wiki-branch-e-2026-07-19.md) - `source.knowledge-wiki.branch-e.2026-07-19`
+- [Public professional profile - Aileen Palmer at Benepass](../sources/linkedin-aileen-palmer-benepass.md) - `source.linkedin.aileen-palmer-benepass.2026`
+- [Public professional profile - James Williams at ACLU National Campaigns](../sources/linkedin-james-williams-aclu-national-campaigns.md) - `source.linkedin.james-williams-aclu-national-campaigns.2026`
+- [Jenn Wei public profile - Asana Service Management hiring context](../sources/linkedin-jenn-wei-asana-service-management.md) - `source.linkedin.jenn-wei-asana-service-management.2026`
+- [Public professional post - Luke Farrell leading NYC PIT Crew](../sources/linkedin-luke-farrell-pit-crew-leadership.md) - `source.linkedin.luke-farrell-pit-crew-leadership.2026`
+- [MIT Interrogative Design Symposium event page](../sources/mit-interrogative-design-symposium-2024.md) - `source.mit.interrogative-design-symposium.2024`
 - [Archived NTER CHNG project homepage](../sources/nter-chng-archived-homepage-2011.md) - `source.nter-chng.archived-homepage.2011`
 - [NYC Council field-kit photograph oral history, July 2026](../sources/recollections/nyc-council-field-kit-oral-history-2026-07.md) - `source.nyc-council.field-kit-oral-history.2026-07`
+- [NYC Jobs Open Data source pda4-rgn4](../sources/nyc-jobs-open-data-pda4-rgn4.md) - `source.nyc-jobs.open-data.pda4-rgn4`
+- [NYC OTI - Cyber Command leadership](../sources/nyc-oti-cyber-command-kelly-moan.md) - `source.nyc-oti.cyber-command.kelly-moan`
+- [Appointment of Diya Vij as Commissioner of Cultural Affairs](../sources/dcla-diya-vij-appointment-2026.md) - `source.nyc.diya-vij-appointment.2026`
+- [NYC Mayor's Office - Public Interest Technology Crew launch](../sources/nyc-pit-crew-launch-2026.md) - `source.nyc.pit-crew-launch.2026-07-13`
 - [NYC Artist Coalition DCLA formation source return, 2026](../sources/archives/nycac-dcla-formation-source-return-2026-07.md) - `source.nycac.dcla-formation-source-return.2026-07`
 - [NYC nightlife forum corrected working transcript, 2026](../sources/nycac-nightlife-forum-transcript-2026.md) - `source.nycac.nightlife-forum-transcript.2026`
 - [NYC Artist Coalition project-site photograph census](../sources/archives/nycac-project-site-photograph-census-2026-07.md) - `source.nycac.project-site-photograph-census.2026-07-28`
@@ -407,21 +500,43 @@
 - [Committee on Small Business hearing on the Small Business Jobs Survival Act official transcript](../sources/public-hearing-transcripts/small-business-job-survival-hearing-2018-10-22.md) - `source.nycc.small-business.sbjsa-2018-10-22.official-transcript`
 - [November 14, 2019 City Council stated meeting official transcript](../sources/public-hearing-transcripts/commercial-rent-stated-meeting-2019-11-14.md) - `source.nycc.stated-meeting.2019-11-14.official-transcript`
 - [March 24, 2022 City Council stated meeting official transcript](../sources/public-hearing-transcripts/commercial-rent-stated-meeting-2022-03-24.md) - `source.nycc.stated-meeting.2022-03-24.official-transcript`
+- [New York City Campaign Finance Board staff directory](../sources/nyccfb-staff-2026.md) - `source.nyccfb.staff.2026`
 - [Active New York State commercial rent stabilization bills](../sources/commercial-rent-public-support/active-state-bills-2025-2026.md) - `source.nys.commercial-rent.active-bills.2025-2026`
 - [2026 Democratic primary election-night result for Assembly District 56](../sources/commercial-rent-public-support/eon-huntley-2026-primary-result.md) - `source.nysboe.primary.ad56.2026`
 - [Elana Gordon East River portfolio permission summary](../sources/permissions/elana-gordon-east-river-portfolio-2026.md) - `source.permission.elana-gordon.east-river.2026-07`
+- [Jamie Burkart portfolio-album publication authorization](../sources/permissions/jamie-portfolio-album-2026-08-13.md) - `source.permission.jamie-portfolio-album.2026-08-13`
+- [Photo-select source-album portfolio publication authorization](../sources/permissions/photo-select-album-portfolio-2026-08-13.md) - `source.permission.jamie.photo-select-portfolio.2026-08-13`
+- [August 2026 public-site capture publication decisions](../sources/permissions/public-site-captures-2026-08-13.md) - `source.permission.jamie.public-site-captures.2026-08-13`
 - [East River photograph public-safe metadata summary](../sources/photo-metadata/east-river-2022-public-safe.md) - `source.photo-metadata.east-river.2022.public-safe`
+- [NYC Artist Coalition participation-sequence public-safe metadata](../sources/photo-metadata/nycac-participation-sequence-2026-public-safe.md) - `source.photo-metadata.nycac-participation-sequence.2026-08-13`
+- [Public-safe metadata capsule for the August 2026 project-cover images](../sources/photo-metadata/portfolio-cover-images-2026-public-safe.md) - `source.photo-metadata.portfolio-cover-images.2026.public-safe`
+- [Team-knowledge collective-synthesis photograph public-safe metadata](../sources/photo-metadata/team-knowledge-collective-synthesis-2026-public-safe.md) - `source.photo-metadata.team-knowledge-collective-synthesis.2026.public-safe`
 - [Website provides new information about council members' focus](../sources/politico-callnyc-2016-03-14.md) - `source.politico.callnyc.2016-03-14`
+- [Professional record governed photo field](../sources/photo-metadata/professional-record-photo-field-2026-08.md) - `source.professional-record.photo-field.2026-08`
+- [Governed professional-record research comparison, August 2026](../sources/archives/professional-record-research-2026-08.md) - `source.professional-record.research.2026-08`
 - [Late-July 2026 current-workstream review](../sources/working/current-workstream-2026-07-27.md) - `source.protected.current-workstream.2026-07-27`
+- [Protected source-backed memory opportunity — metadata boundary](../sources/protected-source-backed-memory-opportunity.md) - `source.protected.source-backed-memory-opportunity.2026`
 - [Jamie Burkart recollection of bicycle-canoe journeys](../sources/recollections/jamie-canoe-commuting-2026-07.md) - `source.recollection.jamie-canoe-commuting.2026-07`
 - [Jamie Burkart public resume, maintained 2026](../sources/jamie-resume-2026-06-11.md) - `source.resume.jamie-burkart.2026-06-11`
+- [Empty Storefronts, High Rents](../sources/commercial-rent-public-support/empty-storefronts-high-rents-report-2026.md) - `source.sbu.empty-storefronts-high-rents.2026`
+- [Chi Ossé and Emily Gallagher Small Business Rent Stabilization Reel](../sources/commercial-rent-public-support/chiosse-emily-small-business-rent-reel-2026-08-05.md) - `source.social.chiosse-emily.small-business-rent-reel.2026-08-05`
+- [NYC Artist Coalition Cultural Space Rent Stabilization Reel](../sources/commercial-rent-public-support/nycartc-cultural-space-reel-2026-08-16.md) - `source.social.nycartc.cultural-space-reel.2026-08-16`
+- [NYC Artist Coalition Cultural Space Rent Stabilization Story](../sources/commercial-rent-public-support/nycartc-cultural-space-story-2026-08-15.md) - `source.social.nycartc.cultural-space-story.2026-08-15`
 - [Jimmy's Corner rally: Small Business Rent Stabilization statements](../testimony/commercial-rent-public-support/2026-04-10-jimmys-corner-rally-statements.md) - `source.statement.commercial-rent.jimmys-corner-rally.2026-04-10`
 - [State sponsors and advocates introduce the Small Business Survival Act](../testimony/commercial-rent-public-support/2026-02-17-state-introduction-statements.md) - `source.statement.commercial-rent.state-introduction.2026-02-17`
+- [Studio3 AI Made Me Do It event page](../sources/studio3-ai-made-me-do-it-2024.md) - `source.studio3.ai-made-me-do-it.2024`
+- [New York State formation record for THICK ARTS LLC](../sources/thick-arts-nys-dos-formation-2012-07-06.md) - `source.thick-arts.nys-dos-formation.2012-07-06`
 - [Friends and Lovers Commercial Rent Stabilization event: speaker index](../testimony/commercial-rent-public-support/2026-02-17-friends-and-lovers-supportive-remarks.md) - `source.transcript.commercial-rent.friends-and-lovers.2026-02-17`
 - [Project X community event: Eon Huntley speaker index](../testimony/commercial-rent-public-support/2026-03-10-project-x-eon-huntley.md) - `source.transcript.commercial-rent.project-x.2026-03-10`
 - [Commercial Rent Stabilization public event: speaker index](../testimony/commercial-rent-public-support/2025-11-13-commissioner-supportive-remarks.md) - `source.transcript.commercial-rent.public-event.2025-11-13`
 - [UCSC narrative evaluations, 2004-2006](../sources/ucsc-narrative-evaluations-2004-2006.md) - `source.ucsc.narrative-evaluations.2004-2006`
+- [Warren Sack - Film and Digital Media Department](../sources/ucsc-warren-sack-profile-2026.md) - `source.ucsc.warren-sack-profile.2026`
 - [Protected communication history - public-safe metadata boundary](../sources/protected-communication-vault-metadata.md) - `source.vault.communication-history.metadata`
+- [Weibel Institute In Terms of Media event record](../sources/weibel-in-terms-of-media-2024.md) - `source.weibel.in-terms-of-media.2024`
+- [Work for America announcement naming Courtney Kishbaugh as Civic Match director](../sources/work-for-america-courtney-kishbaugh-civic-match.md) - `source.work-for-america.courtney-kishbaugh-civic-match`
+- [Work for America announcement of Josh Gee as Civic Match vice president](../sources/work-for-america-josh-gee-civic-match.md) - `source.work-for-america.josh-gee-civic-match`
+- [Governed WOW List knowledge repository](../sources/wowlist-knowledge-repository-2026.md) - `source.wowlist.knowledge-repository.2026`
+- [WOW List public return threshold, August 2026](../sources/wowlist-public-threshold-2026-08.md) - `source.wowlist.public-threshold.2026-08-13`
 - [What is WOW List repaired transcript](../sources/wowlist-repaired-transcript-2026.md) - `source.wowlist.repaired-transcript.2026`
 - [Jamie Burkart testimony for Cabaret Law repeal](../testimony/2017-09-14-cabaret-law-repeal.md) - `testimony.jamie-burkart.cabaret-law.2017-09-14`
 - [Jamie Burkart testimony on CreateNYC and cultural-affairs funding](../testimony/2018-03-16-cultural-affairs-budget.md) - `testimony.jamie-burkart.cultural-affairs-budget.2018-03-16`

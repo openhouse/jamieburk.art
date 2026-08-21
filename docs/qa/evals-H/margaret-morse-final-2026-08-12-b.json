@@ -1,0 +1,27 @@
+{
+  "evaluator": "Fictionalized Margaret Morse analytical lens; not her participation, quotation, endorsement, or publication approval.",
+  "reviewerId": "morse-b-v4-2026-08-13-40437699",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "404376992695431861412b6d8d130310e9719e0c6904a2b98e5e1ed61966b77b",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The reviewer independently recomputed the 127-file candidate fingerprint and received no prior scorecard.",
+    "The homepage keeps hiring relevance primary while About makes the artistic, civic, technical, and social through-line reachable within one click.",
+    "The public cases demonstrate participation, attention, hospitality, maintenance, documentation, and continuation through differently inhabited systems.",
+    "Open House and collective advocacy work retain explicit anti-solo-authorship boundaries."
+  ],
+  "gaps": ["Several of the strongest learning signals remain qualitative because private participant, customer, and coalition records are properly withheld."],
+  "safety_findings": ["The candidate separates evidence access from consent and does not turn private source custody into public permission."],
+  "recommendation": "Pass at 4; retain the professional hierarchy and let bounded project evidence carry the wider practice lineage.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "bounded independent holdout",
+    "reviewerRole": "practice-lineage-reader-b",
+    "reviewedAt": "2026-08-13",
+    "candidatePathCount": 127,
+    "candidateFingerprintRecomputed": true,
+    "filesEdited": false
+  }
+}

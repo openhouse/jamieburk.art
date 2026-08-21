@@ -5,14 +5,15 @@ kind: opportunity
 status: governed-open
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-08-20
+review_by: 2026-08-23
 canonical_path: docs/knowledge-bank/opportunities/asana-ai-implementation.md
 summary: Public-safe requirement and portfolio-coverage map for Asana's live AI Implementation Manager, Service Management role.
 canonical_url: https://asana.com/jobs/apply/8027437
 source_type: official-employer
 opportunity_status: live
-verified_at: 2026-07-18
+hirability_status: truthfully-hirable
+verified_at: 2026-08-20
 portfolio_routes:
   - /
   - /work/technical-operations
@@ -29,11 +30,24 @@ discovery_terms:
   - time to value
   - reusable playbooks
 confirmed_facts:
-  - Asana's official New York jobs surface listed the role on July 18, 2026.
-  - The supplied official-role review describes a New York hybrid or eligible US-remote context and a $133,000 to $151,000 estimated base range.
-inferences: []
+  - Asana's official application page displayed the role and an Apply control on August 20, 2026.
+  - The role is New York hybrid or eligible US remote and lists a $133,000 to $151,000 estimated base range.
+  - The role combines customer success, implementation consulting, and product strategy for Asana Service Management.
+inferences:
+  - Jenn Wei is the nearest publicly visible senior vision leader because her public profile says she is hiring the team launching Asana Service Management; the posting does not establish a reporting line.
 unknowns:
-  - Exact reporting line and the proportion of travel, configuration, and hands-on customer delivery.
+  - Exact reporting line and the proportion of travel, configuration, migration, and hands-on customer delivery.
+leadership_context:
+  direct_report:
+    title: Unresolved
+    person_id: null
+    evidence_state: posting-person-unresolved
+    note: The posting does not identify the manager.
+  senior_vision:
+    title: Service Management product leader
+    person_id: person.jenn-wei
+    evidence_state: public-operational-proximity-not-confirmed
+    note: Jenn Wei publicly says she is hiring the launch team; a direct reporting line is not established.
 hard_screens:
   - id: screen.asana.customer-implementation-authority
     text: The role requires demonstrated customer-facing implementation and adoption authority.
@@ -102,6 +116,10 @@ relations:
   - type: related_to
     target: capability.technical-operations
     href: ../capabilities/technical-operations.md
+  - type: related_to
+    target: person.jenn-wei
+    href: ../people/jenn-wei.md
+    context: Nearest publicly visible senior vision context; direct reporting remains unresolved.
   - type: uses_method
     target: method.source-backed-team-memory
     href: ../methods/source-backed-team-memory.md
@@ -110,7 +128,12 @@ evidence:
     relationship: context
     confidence: moderate
     supports:
-      - official role listing and supplied role-context facts as rechecked July 18, 2026
+      - official role listing, duties, working model, compensation, and application state as rechecked August 20, 2026
+  - target: source.linkedin.jenn-wei-asana-service-management.2026
+    relationship: context
+    confidence: moderate
+    supports:
+      - nearest publicly visible senior vision context without proving a direct reporting line
 human_review: governed-open
 ---
 

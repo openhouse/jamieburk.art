@@ -1,0 +1,68 @@
+{
+  "suite": "nycartc-cultural-space-story-2026-08-15",
+  "runDate": "2026-08-15",
+  "source": {
+    "repository": "openhouse/commercial-rent-stabilization-public-support",
+    "commit": "ea5497dd910f3402c01e8b560b149d6674f951cc",
+    "mediaSha256": "24808b127cd7af7bf0e804db0e27ec59b82d57d96ebf62a2f1e617ed6845caef"
+  },
+  "candidate": {
+    "sources": 1,
+    "claims": 1,
+    "agencyRelations": 1,
+    "activeCitedProjections": 1,
+    "guardedBoundaries": 4
+  },
+  "hillClimb": {
+    "adversarialTestsPassed": 8,
+    "adversarialTestsTotal": 8,
+    "failureModes": [
+      {
+        "failure": "The expiring Story URL becomes the only source.",
+        "improvement": "Require the immutable canonical archive commit as the preferred source edition."
+      },
+      {
+        "failure": "Media changes without detection.",
+        "improvement": "Bind the projection to the captured media SHA-256."
+      },
+      {
+        "failure": "Coalition publication becomes sole Jamie authorship.",
+        "improvement": "Require a coalition-account publication and individual editorial-authorship boundary."
+      },
+      {
+        "failure": "Tags or sponsor acknowledgements become endorsements.",
+        "improvement": "Require an explicit non-endorsement boundary in the claim."
+      },
+      {
+        "failure": "Archived pixels become automatically displayable.",
+        "improvement": "Keep media metadata-only pending rights, consent, credit, and destination review."
+      },
+      {
+        "failure": "An active portfolio statement loses its citation requirement.",
+        "improvement": "Require the Fair Rent case-study projection to remain active and cited."
+      },
+      {
+        "failure": "A corrected transcript state lacks a content-addressed reviewed-transcript record.",
+        "improvement": "Require the exact-commit reviewed transcript link in the Wiki source record."
+      },
+      {
+        "failure": "Cross-source editorial review is inflated into completed human listening and publication approval.",
+        "improvement": "Keep final human listening/approval as an explicit separate gate."
+      }
+    ]
+  },
+  "checks": {
+    "targetedEvaluator": "passed",
+    "adversarialSuite": "passed",
+    "knowledgeBankSchema": "passed-with-existing-careful-claim-warnings",
+    "wikiGraph": "passed",
+    "commercialRentPublicSupportSuite": "passed"
+  },
+  "humanGates": [
+    "final human listening and transcript approval",
+    "media reproduction rights",
+    "represented-person consent where applicable",
+    "individual editorial authorship attribution",
+    "future publication and placement decisions beyond the cited Fair Rent projection"
+  ]
+}

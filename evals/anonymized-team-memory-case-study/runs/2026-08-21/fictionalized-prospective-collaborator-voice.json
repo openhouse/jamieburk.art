@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "evaluatorId": "fictionalized-prospective-collaborator-voice-accuracy",
+  "candidateDigest": "9ac89ed60d0db4669c914f336d1693d48c42ac8782beced17ea505d8fd165528",
+  "question": "Does the voice profile preserve the participant's conversational reasoning, prosody, interpersonal stance, uncertainty, and product orientation while clearly refusing identity, quotation, or impersonation claims?",
+  "calibrationStatus": "uncalibrated-advisory-simulation",
+  "nonEndorsementBoundary": "This fictionalized review is not participant approval and not endorsement, consent, or an actual decision by the represented person.",
+  "inputScope": {
+    "anonymizedCaseStudyOnly": true,
+    "rawTranscriptAccess": false,
+    "participantIdentityAccess": false,
+    "companyIdentityAccess": false,
+    "sourceAlignedRequirements": true
+  },
+  "critique": "Pass as a cautious conversational-voice hypothesis, not as a verified writer's-voice profile. It captures the participant's sequence of asking for the usable object, restating an idea, moving from example to mechanism, telescoping toward cultural possibility, and returning to adoption or an operating constraint. The synthetic examples demonstrate function without reproducing or attributing private language.",
+  "strengths": [
+    "Conversation and authored prose are explicitly separated.",
+    "Prosody is described through sentence movement and reasoning function rather than catchphrases.",
+    "The anti-impersonation and no-attribution instructions are operationally clear."
+  ],
+  "risks": [
+    "Two calls are too small a corpus for confident claims about writing across genres.",
+    "One source record is automated and the other is a corrected working transcript rather than an audio-certified edition."
+  ],
+  "result": "pass"
+}

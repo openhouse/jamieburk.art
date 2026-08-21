@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 2,
+  "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+  "generatedOn": "2026-08-14",
+  "sourceMarkdown": "Jamie-Burkart-Resume.md",
+  "sourceMarkdownSha256": "ec7377fc26957a7db0ee671c6a311bd8a98e54be4de35f6b3575c1aea9f36590",
+  "opportunitySource": {
+    "file": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
+    "sha256": "cf6825356437a51b45bb3ddf29ed7ae688d4707708a86c6c5a7f86416daa93d4"
+  },
+  "pdf": {
+    "file": "Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.pdf",
+    "mediaType": "application/pdf",
+    "sha256": "d88afc7815c955f6ce3885b429e824a0582ce3e0214ad7eb8f705a944c31209b",
+    "bytes": 78233,
+    "pages": 2,
+    "pageSize": "US Letter",
+    "tagged": true
+  },
+  "layout": {
+    "source": "native-google-doc-copy",
+    "styleReference": "please-read-only resume style source example",
+    "typography": [
+      "Palatino Linotype",
+      "Oswald",
+      "Karla"
+    ],
+    "listMarkerTypography": {
+      "relation": "one-point-smaller-than-list-text",
+      "deltaPoints": 1,
+      "verifiedListItems": 14
+    },
+    "sourceStylesPreserved": true,
+    "intentionalAdaptations": [
+      "The opportunity title occupies the established teal Oswald role line.",
+      "A page break before 196 Artists Residency keeps every experience group and evidence list intact.",
+      "Tagged native-list markers render one point smaller than their associated item text after deterministic post-export normalization."
+    ]
+  },
+  "googleWorkspace": {
+    "sourceWasTreatedReadOnly": true,
+    "sourceUnchangedAfterCopy": true,
+    "nativeCopyCreated": true,
+    "connectorReadbackVerified": true,
+    "sourceLocatorCommitted": false,
+    "copyLocatorCommitted": false
+  },
+  "visualInspection": {
+    "status": "pass",
+    "pagesInspected": [
+      1,
+      2
+    ],
+    "checks": [
+      "No clipped, overlapping, or missing text",
+      "No broken glyphs or visible Markdown markers",
+      "No stranded heading, split experience group, or isolated bullet continuation",
+      "Readable hierarchy, contact links, margins, line spacing, and page balance",
+      "All 14 list markers are visibly subordinate to their associated text by one point"
+    ]
+  }
+}

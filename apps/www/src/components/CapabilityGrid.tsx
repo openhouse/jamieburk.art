@@ -1,26 +1,35 @@
+import Link from "next/link";
+import type { Route } from "next";
+
 const capabilities = [
   {
     title: "Technical project management",
+    tag: "Technical Operations",
     text: "Requirements, workflows, status rhythms, risk notes, implementation plans, quality assurance, user acceptance testing, and handoffs."
   },
   {
     title: "Product operations",
+    tag: "Product Operations",
     text: "Planning systems, decision logs, feedback loops, launch support, adoption materials, and operating memory."
   },
   {
     title: "Knowledge systems & documentation",
+    tag: "Knowledge Systems",
     text: "Source maps, meeting synthesis, public guidance, resource libraries, templates, and reusable reference systems."
   },
   {
     title: "Civic technology & open data",
+    tag: "Civic Technology",
     text: "Public-facing tools, data translation, policy explainers, campaign hubs, and resident/community guidance."
   },
   {
     title: "Web systems & public-facing tools",
+    tag: "Web Systems",
     text: "Maintainable websites, e-commerce workflows, community platforms, and low-cost public infrastructure."
   },
   {
     title: "Community systems",
+    tag: "Community Systems",
     text: "Onboarding, facilitation, hospitality, artist support, recurring gatherings, and continuity systems."
   }
 ];
@@ -35,19 +44,21 @@ export function CapabilityGrid() {
             What becomes usable
           </h2>
         </div>
-        <ol className="border-t border-jb-ink/20">
+        <ol>
           {capabilities.map((capability, index) => (
-            <li
-              className="grid gap-3 border-b border-jb-ink/20 py-5 sm:grid-cols-[3rem_0.8fr_1.2fr]"
-              key={capability.title}
-            >
-              <span className="font-label text-sm text-jb-blue">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <h3 className="text-lg font-semibold leading-6 text-jb-ink">
-                {capability.title}
-              </h3>
-              <p className="leading-7 text-jb-ink/74">{capability.text}</p>
+            <li key={capability.title}>
+              <Link
+                className="jb-index-link group sm:grid-cols-[3rem_0.8fr_1.2fr] sm:items-baseline"
+                href={`/work?tag=${encodeURIComponent(capability.tag)}#work-index` as Route}
+              >
+                <span aria-hidden="true" className="font-label text-sm text-jb-blue">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3 className="text-lg font-semibold leading-6 text-jb-blue group-hover:text-jb-green">
+                  {capability.title}
+                </h3>
+                <p className="leading-7 text-jb-ink/74">{capability.text}</p>
+              </Link>
             </li>
           ))}
         </ol>

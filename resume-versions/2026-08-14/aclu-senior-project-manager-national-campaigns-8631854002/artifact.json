@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 2,
+  "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+  "generatedOn": "2026-08-14",
+  "sourceMarkdown": "Jamie-Burkart-Resume.md",
+  "sourceMarkdownSha256": "ecb198e544a73464edaec243baf90af0fa5c40dde80cce6035c58a60aca71132",
+  "opportunitySource": {
+    "file": "docs/knowledge-bank/opportunities/aclu-senior-project-manager-national-campaigns.md",
+    "sha256": "405ffaa5b12d4873e9a81177de4adc7244dd87596e1cbffd5e8ababb1517c03b"
+  },
+  "pdf": {
+    "file": "Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-National-Campaigns-8631854002.pdf",
+    "mediaType": "application/pdf",
+    "sha256": "08021abe4281447e4131dccf3faacb5193a1bb0d607bb2446fc61ecd0f653c8c",
+    "bytes": 83742,
+    "pages": 2,
+    "pageSize": "US Letter",
+    "tagged": true
+  },
+  "layout": {
+    "source": "native-google-doc-copy",
+    "styleReference": "please-read-only resume style source example",
+    "typography": [
+      "Palatino Linotype",
+      "Oswald",
+      "Karla"
+    ],
+    "listMarkerTypography": {
+      "relation": "one-point-smaller-than-list-text",
+      "deltaPoints": 1,
+      "verifiedListItems": 12
+    },
+    "sourceStylesPreserved": true,
+    "intentionalAdaptations": [
+      "The opportunity title occupies the established teal Oswald role line.",
+      "A page break before 196 Artists Residency keeps every experience group and evidence list intact.",
+      "Politico New York is a visible source-style hyperlink to the canonical archived article PDF without exposing Markdown markers.",
+      "Tagged native-list markers render one point smaller than their associated item text after deterministic post-export normalization."
+    ]
+  },
+  "googleWorkspace": {
+    "sourceWasTreatedReadOnly": true,
+    "sourceUnchangedAfterCopy": true,
+    "nativeCopyCreated": true,
+    "connectorReadbackVerified": true,
+    "sourceLocatorCommitted": false,
+    "copyLocatorCommitted": false
+  },
+  "visualInspection": {
+    "status": "pass",
+    "pagesInspected": [
+      1,
+      2
+    ],
+    "checks": [
+      "No clipped, overlapping, or missing text",
+      "No broken glyphs or visible Markdown markers",
+      "No stranded heading, split experience group, or isolated bullet continuation",
+      "Readable hierarchy, contact links, margins, line spacing, and page balance",
+      "Politico New York is visibly linked in source-consistent blue italic underlined styling",
+      "All 12 list markers are visibly subordinate to their associated text by one point"
+    ]
+  }
+}

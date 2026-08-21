@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { MediaImage } from "@/components/MediaImage";
 import type { PortfolioPhoto } from "@/data/photography";
 
 type FieldPhotoProps = {
@@ -19,7 +19,7 @@ export function FieldPhoto({
   return (
     <figure className={`jb-field-photo ${className}`}>
       <div className="jb-field-photo-frame">
-        <Image
+        <MediaImage
           alt={photo.alt}
           className={`h-full w-full object-cover ${imageClassName}`}
           height={photo.height}

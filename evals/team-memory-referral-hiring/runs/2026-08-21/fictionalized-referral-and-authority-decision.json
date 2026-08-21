@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "candidateDigest": "231b314cbe82b9523045834fab87f5ce9409246c33bfbda17347017fe95e472d",
+  "evaluatedAt": "2026-08-21",
+  "calibrationStatus": "uncalibrated-advisory-simulation",
+  "simulatedRealPersonLens": true,
+  "syntheticSpeechOnly": true,
+  "nonEndorsementBoundary": "This is a fictionalized, anonymized advisory simulation. It is not a quotation, message, participation, endorsement, recommendation, offer, authorization, or hiring decision by the real participant or any real company authority.",
+  "inputScope": {
+    "anonymizedArtifactsOnly": true,
+    "browserVisiblePublicSurfaceOnly": true,
+    "repositoryAccess": false,
+    "rawTranscriptAccess": false,
+    "participantIdentityAccess": false,
+    "companyIdentityAccess": false
+  },
+  "referral": {
+    "label": "synthetic fictionalized referral note",
+    "message": "Worth reviewing: we're losing product reasoning, decisions, open questions, and onboarding context. Jamie proposes a small paid discovery and prototype using one approved source, not a platform rollout. He would map where context is lost, produce one source-linked and correctable memory artifact, and test whether it reduces reconstruction work or helps a newcomer get oriented. Product, engineering, budget, source, and confidentiality owners should review the team-memory page to decide whether the scope, reviewers, responsibilities, ownership, and success signal justify a continue, revise, or stop test.",
+    "evidence": [
+      "The public page directly names lost product reasoning, decisions, open questions, and onboarding context as the need.",
+      "It promises a knowledge-friction map, one source-linked memory artifact, a correction path, and a practical success signal.",
+      "It explicitly limits the proposal to a small paid discovery and prototype using one approved source, followed by a continue, revise, or stop decision.",
+      "The public resume presents Jamie as a technical project manager focused on product operations and implementation, with experience in documentation, decision trails, onboarding, civic systems, source lineage, and AI evaluation.",
+      "The page states that AI drafts, humans review, and no broad company-system access is required for the first test."
+    ],
+    "risks": [
+      "This is a synthetic referral note, not the private participant's words, endorsement, or decision.",
+      "Budget, confidentiality, ownership, source selection, reviewers, responsibilities, and success criteria remain unresolved.",
+      "The public materials demonstrate a method and relevant experience, not a completed client engagement or validated production platform.",
+      "Any engagement still requires authorization from the appropriate company and contextual owners."
+    ]
+  },
+  "authorityDiscussion": [
+    {
+      "role": "Fictionalized product executive with budget authority",
+      "message": "The object is clear enough to fund: use one approved source to map where context is lost, create one source-linked and correctable memory artifact, and test whether it reduces reconstruction work or improves newcomer orientation. I would authorize a small discovery budget, not a platform rollout."
+    },
+    {
+      "role": "Fictionalized operations-or-people authority",
+      "message": "The operating and onboarding need is credible, and the proposed test limits organizational exposure. Before kickoff, we need an accountable source owner, named contextual reviewers, a confidentiality classification, and agreement about who may see and correct the artifact."
+    },
+    {
+      "role": "Fictionalized product executive with budget authority",
+      "message": "Jamie's public resume supports the relevant mix of project operations, documentation, decision trails, source lineage, civic systems, and AI evaluation. It supports paying for the experiment; it does not justify treating the method as already validated in production."
+    },
+    {
+      "role": "Fictionalized operations-or-people authority",
+      "message": "We also need written limits for ownership, retention, responsibilities, and human review. Those questions can be resolved during contracting and scoping because the packet already restricts the work to one source, an existing team surface, and no broad systems access."
+    },
+    {
+      "role": "Fictionalized product executive with budget authority",
+      "message": "The success signal should be chosen with the reviewers, for example whether a newcomer can recover the reason for a decision, identify open questions, find supporting sources, and request a correction with less help from veteran staff."
+    },
+    {
+      "role": "Fictionalized operations-or-people authority",
+      "message": "With those preconditions documented, I support hiring Jamie for the small paid discovery and prototype. The authorization ends at the continue, revise, or stop recommendation; any expansion requires a separate decision."
+    }
+  ],
+  "decision": {
+    "decision": "hire-for-paid-discovery",
+    "wouldHire": true,
+    "rationale": "The restricted packet provides enough evidence to authorize a deliberately limited, compensated learning engagement. The need, first artifact, access limit, review model, and stopping point are sufficiently defined, while the unresolved matters are implementation and governance details that can be settled in scoping before Jamie receives sources or starts work. This synthetic decision does not represent the unidentified participant or any real company.",
+    "conditions": [
+      "Approve a fixed budget, payment terms, schedule, and maximum scope.",
+      "Select one representative source and obtain authorization from its owner and any relevant confidentiality or security authority.",
+      "Name the product and context owners and reviewers empowered to correct or accept the artifact.",
+      "Define confidentiality, permitted access, storage, retention, deletion, and disclosure rules.",
+      "Agree in writing on ownership and permitted reuse of inputs, methods, working materials, and deliverables.",
+      "Assign responsibilities for source preparation, review, corrections, facilitation, and final acceptance.",
+      "Choose a practical success signal and the evidence needed for the continue, revise, or stop recommendation.",
+      "Require a separate authorization for broader access, production integration, rollout, or continued work."
+    ]
+  },
+  "relay": {
+    "label": "synthetic fictionalized relay",
+    "message": "In this fictionalized simulation, the panel would hire you for a small paid discovery and prototype, subject to written agreement on scope and governance. That authorization ends with a continue, revise, or stop recommendation; it is not approval for a rollout, broader access, or ongoing work. The decisive evidence was that you made the need and the first useful object understandable: one approved source, a map of where context is lost, one source-linked and correctable memory artifact, and a practical test of whether it reduces reconstruction work or helps a newcomer orient. Your resume supports the relevant mix of product operations, documentation, source lineage, civic systems, and human-reviewed AI evaluation. The panel did not treat the method as production-validated. Before kickoff, the parties would still need to settle budget and payment, schedule and maximum scope, source authorization, reviewers, confidentiality, access and retention, ownership and reuse, responsibilities, and the success signal. Your strongest self-presentation is the concise engagement near the top of the page. Lead with that purchasable test before explaining the larger graph architecture. On the resume, reduce the long Selected impact list to the few examples most directly proving that you can preserve decisions, support onboarding, manage source lineage, and produce durable handoffs. The next artifact should be a one-page scope that names the source, deliverable, reviewers, responsibilities, success measure, timeline, price, and stopping point.",
+    "recommendations": [
+      "Create a one-page paid-discovery scope with fixed limits, price, schedule, and acceptance process.",
+      "Keep one approved source and one useful test as the primary proposition; move deeper method language below it.",
+      "Tighten Selected impact to four to six role-relevant, consistently written bullets with outcomes and evidence.",
+      "State explicitly that production integration or continued work requires a separate authorization."
+    ]
+  },
+  "judgeResults": [
+    {
+      "id": "fictionalized-referral-readiness",
+      "critique": "The page makes the referral concise and limited: it identifies the operating-memory problem, specifies Jamie's deliverables, proposes a paid first test, and preserves human authority. The resume supports relevant operating, documentation, civic-systems, and evaluation experience without claiming a completed client deployment.",
+      "result": "pass"
+    },
+    {
+      "id": "fictionalized-hiring-authority-decision",
+      "critique": "The restricted packet is sufficient for the narrow decision presented. It establishes a concrete operating-memory problem, a limited paid test, relevant experience, inspectable deliverables, human correction, and a continue, revise, or stop endpoint. It does not establish production readiness or a completed client deployment, but neither is required to authorize discovery. The unresolved commercial and governance questions are ordinary scoping conditions that can be settled before work begins.",
+      "result": "pass"
+    },
+    {
+      "id": "fictionalized-referrer-relay",
+      "critique": "The relay states the narrow simulated decision, identifies the evidence that earned it, separates authorization from unresolved contracting questions, and gives Jamie specific presentation improvements and a concrete next step. It does not imply a real endorsement, full-time offer, completed engagement, or production validation.",
+      "result": "pass"
+    }
+  ]
+}

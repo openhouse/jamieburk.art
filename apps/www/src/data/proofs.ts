@@ -70,6 +70,43 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "hje-first-client-chronology",
+    status: "ready",
+    supportLevel: "moderate",
+    evidenceClass: ["public-source", "jamie-review-confirmation"],
+    publicWording:
+      "Jamie's Harry J. Epstein Company work began in 2009. He formalized the practice as Thick Arts LLC in 2012, with HJE as the LLC's first client, and continued the engagement through the 2015 storefront transition.",
+    shortWording:
+      "HJE work began in 2009 and became Thick Arts LLC's first client relationship when Jamie formed the company in 2012",
+    detailedPublicWording:
+      "Jamie states that his HJE work began in 2009 and that he formalized the practice as Thick Arts LLC during the engagement, with HJE as its first client. New York State records the LLC's initial filing on July 6, 2012. Archive.org first observed the commerce host in January 2010, preserves a functioning storefront through July 2015, and records its redirect to a successor site by August 2015.",
+    sourceBasis:
+      "Jamie's authorized first-party professional account, the official New York State active-corporations record, and three public Archive.org captures that bound the observable storefront chronology.",
+    sourceNote:
+      "The official State record verifies the July 6, 2012 LLC filing. The 2009 work start and first-client relationship are first-party evidence; the public archive supports observation dates rather than contract or billing bookends.",
+    whyItMatters:
+      "Corrects the public chronology while showing an early client relationship and a completed transition rather than implying current stewardship.",
+    guardrail:
+      "Keep the 2009 work start, July 6, 2012 LLC formation, 2009-2015 client engagement, January 2010-July 2015 archive observation bounds, and successor website distinct.",
+    doNotSay: [
+      "2012-Present",
+      "The HJE work began when Thick Arts LLC was formed in 2012",
+      "Archive.org proves the exact contract dates",
+      "Jamie currently maintains the successor website",
+      "Public sources independently prove the first-client relationship"
+    ],
+    protectedBoundaries: [
+      "Contracts",
+      "Invoices and billing records",
+      "Private correspondence",
+      "Private company records beyond the normalized public formation entry"
+    ],
+    surfaces: ["work-card", "case-study"],
+    relatedProjects: ["harry-j-epstein"],
+    relatedCapabilities: ["e-commerce", "implementation", "handoffs"],
+    lastReviewed: "2026-08-14"
+  },
+  {
     id: "hje-modernization-stewardship",
     status: "ready",
     supportLevel: "strong",
@@ -80,8 +117,10 @@ export const proofClaims: ProofClaim[] = [
       "Jamie led long-running e-commerce and operations improvements for a legacy industrial business",
     detailedPublicWording:
       "Jamie maintained and improved the company's web and e-commerce presence, coordinated incremental releases, and translated legacy operating knowledge into searchable content, analytics, marketing, and operational workflows while preserving its public voice.",
-    sourceBasis: "Approved resume language, public website context, and public-safe business summary.",
-    guardrail: "Use stewardship and contribution language.",
+    sourceBasis:
+      "Approved resume language, public Archive.org storefront captures, successor-site business context, and a public-safe business summary.",
+    guardrail:
+      "Use stewardship and contribution language in the historical 2009-2015 engagement; do not imply present maintenance of the successor site.",
     doNotSay: [
       "Jamie fully owned the business",
       "Jamie owned all growth",
@@ -98,7 +137,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["harry-j-epstein"],
     relatedCapabilities: ["e-commerce", "analytics", "workflow-mapping", "handoffs"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-08-14"
   },
   {
     id: "hje-revenue-growth-contribution",
@@ -367,15 +406,15 @@ export const proofClaims: ProofClaim[] = [
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Co-built and operated WOWList.org, a community-calendar platform for DIY arts and music organizers. A July 2017 production snapshot records 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts.",
+      "Co-built and operated WOWList.org across roughly 35 city ecosystems, supporting DIY arts and music organizers with community calendars, websites, and email distribution.",
     shortWording:
       "Jamie co-built and operated WOWList for DIY arts and music organizers",
     detailedPublicWording:
-      "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
+      "WOWList supported local organizers across roughly 35 city ecosystems with followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for community publishing.",
     sourceBasis:
       "Approved resume language, public-safe aggregate historical summary, complete recovered public-account census, and a public 2016 Sunday Dinner event linking directly into WOW List.",
     guardrail:
-      "Use approximate adoption language, do not describe city activity as official chapters, and treat the Sunday Dinner link as one concrete route rather than a complete adoption or traffic census.",
+      "Lead public hiring surfaces with the roughly 35-city-ecosystem scope rather than database row counts; do not describe city activity as official chapters, and treat the Sunday Dinner link as one concrete route rather than a complete adoption or traffic census.",
     doNotSay: [
       "Official chapters in 35 cities",
       "Full ownership of all organizer adoption",
@@ -470,8 +509,8 @@ export const proofClaims: ProofClaim[] = [
       "Private Drive documents",
       "Sensitive strategy, legal, financial, or personal information"
     ],
-    surfaces: ["technical-operations"],
-    relatedProjects: [],
+    surfaces: ["homepage", "work-card", "case-study", "technical-operations"],
+    relatedProjects: ["kc-spaces-fund"],
     relatedCapabilities: [
       "public-facing-web-systems",
       "campaign-infrastructure",
@@ -532,7 +571,7 @@ export const proofClaims: ProofClaim[] = [
       "KC Town Hall used its shared public account as a recurring resident-service surface: 100 of 183 surviving records concern resident tire reports, pickup coordination, result reporting, and program continuity from 2019 through 2022.",
     shortWording: "Built a recurring public intake and follow-through surface",
     detailedPublicWording:
-      "A complete 183-record public-account ledger documents a recurring operating interface and bounded civic traction: seven current public-repost-list appearances by three then-sitting Council-member accounts and two direct responses authored by sitting members.",
+      "A complete 183-record public-account ledger documents a recurring operating interface and specific civic traction: seven current public-repost-list appearances by three then-sitting Council-member accounts and two direct responses authored by sitting members.",
     sourceBasis:
       "Authenticated full-population review of the public KC Town Hall Posts, Replies, and repost-list surfaces; a 183-record public-safe ledger; two public official responses; and official Council-role records.",
     sourceNote:
@@ -564,31 +603,34 @@ export const proofClaims: ProofClaim[] = [
     id: "source-backed-team-memory-method",
     status: "careful",
     supportLevel: "moderate",
-    evidenceClass: ["public-safe-archive-summary"],
+    evidenceClass: ["public-safe-archive-summary", "public-source"],
     publicWording:
-      "Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
+      "Developing the Knowledge Wiki Graph: a working source-backed team-memory method connecting project meaning, supporting evidence, responsible source custody, evaluations, and human review.",
     shortWording:
-      "Jamie is developing a bounded method for source-backed team memory",
+      "Jamie is developing the Knowledge Wiki Graph as a source-backed team-memory practice",
     detailedPublicWording:
-      "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
-    sourceBasis: "Public-safe lab materials and proposal-derived method summary.",
+      "The method keeps semantic meaning, supporting evidence, and responsible source custody distinct; evaluations and human review govern audience-specific projections while Known, Open, and Protected states preserve uncertainty and privacy.",
+    sourceBasis:
+      "Public repository architecture records, public-safe lab materials, and a proposal-derived method summary.",
     guardrail:
-      "Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.",
+      "Working research and operating method inside Jamie's project ecosystem. Not external client adoption, finished SaaS, a chatbot, a private archive browser, or a replacement for human judgment.",
     doNotSay: [
       "Built a production AI memory platform for a client",
       "Automated trust",
-      "Replaces human review"
+      "Replaces human review",
+      "Passing an evaluation authorizes publication"
     ],
     protectedBoundaries: [
       "Private collaborator names",
       "Pricing",
       "Private transcript excerpts",
-      "Private company context"
+      "Private company context",
+      "Private repository topology and protected source locators"
     ],
     surfaces: ["technical-operations", "lab"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["source-backed-memory", "documentation-architecture", "human-review"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-08-20"
   },
   {
     id: "technical-operations-operating-backbone",
@@ -679,9 +721,7 @@ export function selectProofs(surface: ProofSurface): ProofClaim[] {
 export const homepageProofs = [
   "career-operating-structure-14-years",
   "hje-revenue-growth-contribution",
-  "fair-rent-campaign-memory",
-  "wowlist-community-platform",
-  "sunday-dinner-196-participation-infrastructure"
+  "fair-rent-campaign-memory"
 ].map(requireReadyOrCarefulProof);
 
 export const resumeProofHighlights = [

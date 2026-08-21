@@ -308,6 +308,29 @@ export const archiveProductionJuly2026 = {
       ]
     },
     {
+      id: "INTAKE-KNOWLEDGE-WIKI-GRAPH-ARCHITECTURE-2026",
+      kind: "public-url",
+      title: "Knowledge Wiki Graph architecture and federation records",
+      submittedAt: "2026-08-20",
+      submittedBy: "Jamie Burkart and repository architecture review",
+      projectIds: ["source-backed-team-memory"],
+      reason: "Record the public architecture that generalizes Jamie's current three-graph knowledge practice without exposing protected repository topology or source material.",
+      sourceUrl: "https://github.com/openhouse/jamieburk.art",
+      visibility: "public-safe",
+      disposition: "integrated",
+      sourceIds: ["SRC-KNOWLEDGE-WIKI-GRAPH-ARCHITECTURE-2026"],
+      observationIds: [
+        "OBS-KNOWLEDGE-WIKI-THREE-GRAPH-PRACTICE",
+        "OBS-KNOWLEDGE-WIKI-FEDERATED-AUTHORITY"
+      ],
+      researchInquiryIds: ["INQ-SOURCE-BACKED-MEMORY-PILOT-VALIDATION"],
+      boundaries: [
+        "Public architecture records establish a working research and operating method inside Jamie's project ecosystem, not external client adoption or production SaaS.",
+        "Do not expose non-public repository names, host visibility, protected locators, credentials, or source materials.",
+        "Shared identity does not merge ownership, claims, consent, credit, or publication authority."
+      ]
+    },
+    {
       id: "INTAKE-AI-EVALS-CERTIFICATE-2026",
       kind: "public-artifact",
       title: "AI Evals for Engineers and PMs completion certificate",
@@ -792,6 +815,40 @@ export const archiveProductionJuly2026 = {
       ]
     },
     {
+      id: "OBS-KNOWLEDGE-WIKI-THREE-GRAPH-PRACTICE",
+      intakeId: "INTAKE-KNOWLEDGE-WIKI-GRAPH-ARCHITECTURE-2026",
+      sourceId: "SRC-KNOWLEDGE-WIKI-GRAPH-ARCHITECTURE-2026",
+      project: "source-backed-team-memory",
+      kind: "source-fact",
+      text: "The public repository architecture separates a semantic graph, an evidence graph, and a source-custody layer, then treats audience-specific projection as a separate controlled output.",
+      locator: "RFC 0005 and the three-layer runtime architecture note.",
+      status: "verified",
+      publicSafe: true,
+      claimIds: ["CLM-SOURCE-BACKED-MEMORY-METHOD-2026"],
+      researchInquiryIds: ["INQ-SOURCE-BACKED-MEMORY-PILOT-VALIDATION"],
+      limitations: [
+        "The read-only runtime is a research prototype and does not authorize publication or mutate source systems.",
+        "A public portfolio projection is not the underlying knowledge graph or source archive."
+      ]
+    },
+    {
+      id: "OBS-KNOWLEDGE-WIKI-FEDERATED-AUTHORITY",
+      intakeId: "INTAKE-KNOWLEDGE-WIKI-GRAPH-ARCHITECTURE-2026",
+      sourceId: "SRC-KNOWLEDGE-WIKI-GRAPH-ARCHITECTURE-2026",
+      project: "source-backed-team-memory",
+      kind: "source-fact",
+      text: "The public federation proposal uses exact graph revisions and shared stable identities to connect independently usable repository instances while keeping authority, correction, visibility, and publication decisions local to the responsible instance.",
+      locator: "RFC 0006, federation receipt, authority, correction, and visibility sections.",
+      status: "verified",
+      publicSafe: true,
+      claimIds: ["CLM-SOURCE-BACKED-MEMORY-METHOD-2026"],
+      researchInquiryIds: ["INQ-SOURCE-BACKED-MEMORY-PILOT-VALIDATION"],
+      limitations: [
+        "The proposal is an exploring-stage architecture record, not authorization for automatic cross-repository publication.",
+        "Observed hosting visibility must not replace a repository's own declared release authority."
+      ]
+    },
+    {
       id: "OBS-AI-EVALS-COURSE-COMPLETION-2026",
       intakeId: "INTAKE-AI-EVALS-CERTIFICATE-2026",
       sourceId: "SRC-AI-EVALS-CERTIFICATE-2026",
@@ -1205,10 +1262,10 @@ export const archiveProductionJuly2026 = {
       preservationStatus: "private",
       publishedAt: "2026-06-26",
       accessedAt: reviewedAt,
-      publicCitation: "Protected June 2026 proposal for a bounded source-backed team-memory discovery and prototype practice.",
+      publicCitation: "Protected June 2026 proposal for a scoped source-backed team-memory discovery and prototype practice.",
       publicNote: "Recipient, pricing, private correspondence, and company-specific context are intentionally omitted.",
       supportsGenerally: [
-        "bounded source-to-memory loop",
+        "scoped source-to-memory loop",
         "AI drafts and human review",
         "approved non-sensitive or synthetic source boundary",
         "early local-first method status",
@@ -1222,6 +1279,33 @@ export const archiveProductionJuly2026 = {
         "permission to publish private context"
       ],
       protectedLocatorId: "ARCHIVE-JOB-HUNT-SOURCE-MEMORY-PROPOSAL-2026-001"
+    },
+    {
+      id: "SRC-KNOWLEDGE-WIKI-GRAPH-ARCHITECTURE-2026",
+      title: "Knowledge Wiki Graph architecture and federation records",
+      author: "Jamie Burkart and contributors",
+      kind: "project-archive",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2026-08-13",
+      accessedAt: "2026-08-20",
+      canonicalUrl: "https://github.com/openhouse/jamieburk.art",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Jamie Burkart portfolio repository architecture records for the three-layer Knowledge Wiki Graph and governed repository federation.",
+      publicNote: "The records demonstrate a working research method and read-only prototypes inside Jamie's project ecosystem; they do not establish external client adoption or production SaaS.",
+      supportsGenerally: [
+        "semantic, evidence, and source-custody separation",
+        "audience-specific projection as a separate controlled output",
+        "exact-revision federation receipts",
+        "shared stable identities without merged authority",
+        "human review and evaluation gates"
+      ],
+      doesNotEstablish: [
+        "external client adoption",
+        "production SaaS",
+        "automatic truth or publication authority",
+        "permission to expose private repositories or source material"
+      ]
     },
     {
       id: "SRC-AI-EVALS-CERTIFICATE-2026",
@@ -1512,12 +1596,12 @@ export const archiveProductionJuly2026 = {
     {
       id: "CLM-SOURCE-BACKED-MEMORY-METHOD-2026",
       project: "source-backed-team-memory",
-      internalClaim: "Jamie is developing an early, bounded source-backed team-memory method using approved source surfaces, AI drafting, human review, inspectable correction, and explicit protected-material boundaries.",
+      internalClaim: "Jamie is developing the Knowledge Wiki Graph, a working research and operating method that connects semantic meaning, supporting evidence, responsible source custody, evaluations, human review, inspectable correction, and audience-specific projection across independently useful project repositories.",
       status: "confirmed-with-boundary",
       projections: [
         {
           key: "case-study",
-          text: "Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
+          text: "Developing the Knowledge Wiki Graph: a working source-backed team-memory method connecting project meaning, supporting evidence, responsible source custody, evaluations, and human review.",
           status: "active",
           citationRequired: false,
           surfaces: ["/lab/source-backed-team-memory"]
@@ -1528,7 +1612,7 @@ export const archiveProductionJuly2026 = {
           sourceId: "SRC-SOURCE-BACKED-MEMORY-PROPOSAL-2026",
           relationship: "private-support",
           supports: [
-            "bounded source-to-memory loop",
+            "scoped source-to-memory loop",
             "AI drafts and human review",
             "approved non-sensitive or synthetic source boundary",
             "early local-first method status",
@@ -1537,22 +1621,37 @@ export const archiveProductionJuly2026 = {
           locator: "Protected proposal, method, pilot, and boundary sections.",
           confidence: "high",
           renderCitation: false
+        },
+        {
+          sourceId: "SRC-KNOWLEDGE-WIKI-GRAPH-ARCHITECTURE-2026",
+          relationship: "direct-support",
+          supports: [
+            "semantic, evidence, and source-custody separation",
+            "audience-specific projection as a separate controlled output",
+            "shared stable identities without merged authority",
+            "human review and evaluation gates"
+          ],
+          locator: "RFC 0005, RFC 0006, and the three-layer runtime architecture note.",
+          confidence: "high",
+          renderCitation: false
         }
       ],
       boundaries: [
-        "Present this as an early method and consulting practice.",
-        "Do not imply a completed client pilot, production SaaS, or market validation.",
-        "Do not expose proposal recipient, pricing, correspondence, or company context."
+        "Present this as a working research and operating method embodied in Jamie's project ecosystem.",
+        "Do not imply a completed client pilot, external adoption, production SaaS, or market validation.",
+        "Do not expose proposal recipient, pricing, correspondence, private repository topology, or protected source context.",
+        "Passing evaluations does not authorize publication or replace rights, consent, credit, or human review."
       ],
       antiClaims: [
         "Jamie deployed a production team-memory product",
         "a client adopted the method",
         "the method replaces human review",
-        "the method safely ingests any private archive by default"
+        "the method safely ingests any private archive by default",
+        "one graph or repository owns every source, claim, correction, and publication decision"
       ],
       researchInquiryIds: ["INQ-SOURCE-BACKED-MEMORY-PILOT-VALIDATION"],
-      reviewedAt,
-      reviewedBy: ["Jamie Burkart", "Job-hunt archival review"]
+      reviewedAt: "2026-08-20",
+      reviewedBy: ["Jamie Burkart", "Knowledge Wiki Graph ecosystem architecture review"]
     },
     {
       id: "CLM-AI-EVALS-COURSE-COMPLETION-2026",

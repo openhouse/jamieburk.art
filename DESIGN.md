@@ -11,7 +11,9 @@ colors:
   field: "#f3f6f8"
   rule: "#d9e4e9"
   ink: "#1a232b"
+  social-card-charcoal: "#0c161c"
 typography:
+  identity: "TeX Gyre Pagella, Iowan Old Style, Palatino Linotype, Palatino, Baskerville, Georgia, serif"
   display: "Iowan Old Style, Palatino Linotype, Palatino, Baskerville, Georgia, serif"
   body: "Karla, ui-sans-serif, system-ui, sans-serif"
   label: "Oswald, Arial Narrow, ui-sans-serif, system-ui, sans-serif"
@@ -44,12 +46,16 @@ structure, building usable forms with people, and leaving continuity behind.
 - **White, field grey, and blue-grey rules** make long reading calm and precise.
 
 Semantic states retain their daisyUI meanings. Do not turn the full semantic
-palette into decoration. No gradients, colored orbs, bokeh, or simulated paper
-texture.
+palette into decoration. No decorative gradients, colored orbs, bokeh, or
+simulated paper texture. The homepage social card's approved charcoal
+photographic-contrast gradient is the one scoped exception: it integrates copy
+with the full-bleed photograph and becomes fully transparent before the
+portrait.
 
 ## Typography
 
-Display type uses a system serif for identity, page titles, and true editorial
+TeX Gyre Pagella is the identity face for Jamie Burkart's name, including the
+Open Graph card. The system serif stack carries page titles and true editorial
 landmarks. Karla carries prose and controls. Oswald carries compact labels and
 index numbers. Letter spacing is never negative. Large type is reserved for the
 home hero and page titles; panel headings remain compact.
@@ -76,6 +82,15 @@ truth, comparison, or task completion.
 
 - The home hero is full-bleed, photographic, and unframed. Text sits directly
   in the scene with one even contrast wash, never a gradient or a card.
+- The homepage social card carries that same full-bleed photographic grammar,
+  one light even wash, and one cinematic left-to-right charcoal gradient that
+  reaches every edge, supports the role-and-name hierarchy, and becomes fully
+  transparent before the right-side portrait. It uses no rule or floating
+  placard. Its visible copy is limited to the canonical role and name; creator
+  attribution follows the exact governed occurrence and permission rather than
+  becoming generic footer text. Its executable contract and ordered change
+  protocol live in `apps/www/src/data/social-card.ts` and
+  `docs/decisions/home-social-card-rendering.md`.
 - Indexes use rules, numbers, and stable columns instead of repeated floating
   cards.
 - Cards are reserved for discrete artifacts, calls to action, and genuinely

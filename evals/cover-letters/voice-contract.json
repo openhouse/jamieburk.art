@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "id": "jamie-writers-voice-cover-letter-contract-v1",
+  "source": {
+    "title": "My Writer’s Voice",
+    "type": "living-google-doc",
+    "authority": "source-of-truth",
+    "sourceLocatorCommitted": false,
+    "authenticatedReadRequired": true,
+    "lastAuthenticatedReview": "2026-08-20",
+    "revisionTokenSha256": "2a55fb923ff14ca8d8d6b5fcb62a85befe8b1752828ba03dd5fe5a76654515d9",
+    "refreshInstruction": "Read the living source through the authenticated Google Drive surface before writing or materially revising a cover letter; keep its locator and raw contents outside the public repository."
+  },
+  "oneSentenceCompass": "Write warmly enough to invite people in, precisely enough that they can build from the record, and beautifully enough that they remember why the structure matters.",
+  "coverLetterMovement": [
+    "begin with one concrete encounter, object, person, place, or practical problem",
+    "make the human or organizational stake legible",
+    "locate the hidden operating structure beneath the immediate problem",
+    "state one hinge distinction",
+    "end with a durable contribution and an invitation to continue the conversation"
+  ],
+  "voiceConstants": [
+    "warm, precise, civic-lyrical, and operational",
+    "witness-participant rather than omniscient expert",
+    "inside the work while attentive to the limits of personal authority",
+    "specific praise and concrete nouns rather than generic enthusiasm",
+    "care expressed through usable structure, handoff, documentation, and follow-through",
+    "hopeful without hiding uncertainty or institutional constraint"
+  ],
+  "ethicalCommitments": [
+    "distinguish source, observation, memory, inference, offer, agreement, decision, and outcome",
+    "preserve other people's agency and proportionate collective credit",
+    "never convert access into consent or organizational proximity into endorsement",
+    "protect confidential and private material",
+    "name unresolved qualifications and authority boundaries when they materially affect fit"
+  ],
+  "editingProtocol": [
+    "choose one governing question and one governing image",
+    "retain concrete objects, places, names, actions, and supported results",
+    "locate the discovered sentence early",
+    "cut repeated intention, gratitude, and self-justification",
+    "do not make one letter carry the whole archive",
+    "do not repeat the resume; add motive, connective tissue, and one memorable operating insight",
+    "read aloud and remove any phrase that causes the thought to lose its path"
+  ],
+  "applicationConstraints": {
+    "bodyWordRange": [250, 400],
+    "paragraphRange": [3, 5],
+    "mustInclude": [
+      "exact organization and role",
+      "specific knowledge of the role's work",
+      "at least one governed achievement or bounded metric",
+      "a direct connection between Jamie's experience and the employer's need",
+      "a clear invitation to discuss the work"
+    ],
+    "mustAvoid": [
+      "I am writing to apply",
+      "perfect candidate",
+      "generic passion claims",
+      "unsupported scale, authority, causation, or sole authorship",
+      "repetition of the resume's complete chronology",
+      "more than one governing metaphor"
+    ]
+  }
+}

@@ -23,10 +23,11 @@ const suite = JSON.parse(
   readFileSync(path.join(repoRoot, ".agents/evals/portfolio-production-readiness.json"), "utf8")
 );
 
-test("professor lenses pass every bounded criterion", () => {
+test("current professor-lens gate fails closed after the reviewed candidate changes", () => {
   const result = evaluateProfessorLenses({ suite, aboutText, sourceNoteText });
-  assert.equal(result.pass, true);
-  assert.equal(result.passed, result.total);
+  assert.equal(result.pass, false);
+  assert.equal(result.criteria.find((item) => item.id === "candidate-fingerprint")?.pass, false);
+  assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts")?.pass, false);
 });
 
 test("guard rejects erasing collective Open House governance", () => {
@@ -51,6 +52,21 @@ test("guard rejects an incomplete recursive systems sequence", () => {
   });
   assert.equal(result.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "recursive-sequence")?.pass, false);
+});
+
+test("guard rejects removing the public-safe handoff specimens", () => {
+  const result = evaluateProfessorLenses({
+    suite,
+    aboutText,
+    sourceNoteText,
+    hjeContentText: "Public storefront only.",
+    sundayDinnerContentText: "Summary only."
+  });
+  assert.equal(result.pass, false);
+  assert.equal(
+    result.criteria.find((item) => item.id === "inspectable-handoff-specimens")?.pass,
+    false
+  );
 });
 
 test("guard rejects private educational-record identifiers", () => {

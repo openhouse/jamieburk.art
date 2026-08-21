@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "suite_id": "named-hiring-reader-acceptance",
+  "title": "Named public-web hiring reader acceptance",
+  "objective": "Make Jamie's public portfolio sufficient for each governed opportunity reader to truthfully conclude: I would hire this person for this job.",
+  "target": {
+    "url": "https://staging-c.jamieburk.art",
+    "access": "public-web-only",
+    "repository_access": false,
+    "private_source_access": false
+  },
+  "acceptance_question": "I would hire this person for this job.",
+  "pass_policy": "unanimous-named-readers",
+  "isolation": {
+    "separate_chat_per_reader": true,
+    "one_reader_at_a_time": true,
+    "prior_reader_outputs_available": false,
+    "named_person_simulation_only": true,
+    "non_endorsement_disclosure_required": true
+  },
+  "hard_constraints": [
+    "Readers may inspect only public web pages and public assets served by the candidate URL.",
+    "A simulated named-person lens is not the real person's participation, words, judgment, or endorsement.",
+    "Do not strengthen reporting-line certainty beyond the governed public evidence.",
+    "Do not invent launch authority, budget ownership, metrics, adoption, government employment, national scale, sole credit, or causality.",
+    "A pass cannot average away truth, consent, collective credit, accessibility, privacy, availability, or exact-candidate failures."
+  ],
+  "readers": [
+    {
+      "person_id": "person.terence-dougherty",
+      "name": "Terence Dougherty",
+      "opportunity_id": "opportunity.aclu.senior-project-manager-lps.8620968002",
+      "relationship": "senior-vision",
+      "reporting_line_confirmed": false
+    },
+    {
+      "person_id": "person.aileen-palmer",
+      "name": "Aileen Palmer",
+      "opportunity_id": "opportunity.benepass.product-operations.7f963a7a",
+      "relationship": "likely-direct-report",
+      "reporting_line_confirmed": true
+    },
+    {
+      "person_id": "person.jaclyn-chen",
+      "name": "Jaclyn Chen",
+      "opportunity_id": "opportunity.benepass.product-operations.7f963a7a",
+      "relationship": "senior-vision",
+      "reporting_line_confirmed": false
+    },
+    {
+      "person_id": "person.james-williams-aclu",
+      "name": "James Williams",
+      "opportunity_id": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "relationship": "likely-direct-report",
+      "reporting_line_confirmed": false
+    },
+    {
+      "person_id": "person.deirdre-schifeling",
+      "name": "Deirdre Schifeling",
+      "opportunity_id": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "relationship": "senior-vision",
+      "reporting_line_confirmed": false
+    },
+    {
+      "person_id": "person.luke-farrell",
+      "name": "Luke Farrell",
+      "opportunity_id": "opportunity.nyc-oti.senior-product-manager.782366",
+      "relationship": "likely-direct-report",
+      "reporting_line_confirmed": false
+    },
+    {
+      "person_id": "person.lisa-gelobter",
+      "name": "Lisa Gelobter",
+      "opportunity_id": "opportunity.nyc-oti.senior-product-manager.782366",
+      "relationship": "senior-vision",
+      "reporting_line_confirmed": false
+    }
+  ],
+  "required_output": [
+    "visited public routes",
+    "route-bound evidence",
+    "pass or fail",
+    "literal would-hire decision",
+    "strengths",
+    "risks",
+    "constructive critique",
+    "blocking reasons",
+    "Impeccable AI-slop verdict",
+    "Nielsen heuristic scores",
+    "cognitive-load assessment",
+    "emotional journey",
+    "prioritized P0-P3 issues"
+  ],
+  "deterministic_runner": "scripts/evals-hiring-reader-acceptance.mjs",
+  "result_paths": {
+    "baseline": "evals/hiring-readers/baseline-38bc0bdf.json",
+    "current": "evals/hiring-readers/current.json"
+  }
+}

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -39,6 +40,46 @@ const textExtensions = new Set([
 const privatePathPattern =
   /(^|\/)(private|archive-private|raw|raw-otter|transcripts-private|client-private|legal-review|support-private|support-materials-private|job-hunt-private|screenshots-private|private-screenshots|resume-private|resumes-private|supporting-materials)(\/|$)/i;
 const fontExtensions = new Set([".eot", ".otf", ".ttf", ".woff", ".woff2"]);
+const approvedFontFiles = new Map([
+  [
+    "apps/www/public/fonts/tex-gyre-pagella/texgyrepagella-regular.otf",
+    "44e64260716d8f2bbe412baa1ee99b7c995190ac4573177c24def0b9200438c7"
+  ],
+  [
+    "apps/www/public/fonts/karla/Karla-Regular.ttf",
+    "1a4e409e44eb3c3c541cac5e885219bd66d43262214186634f5811449100a090"
+  ],
+  [
+    "apps/www/public/fonts/karla/Karla-Bold.ttf",
+    "aea96b84cfc4265c73b56caa9cb205d63bebfb26cb15ccccf0f237530cf8d231"
+  ]
+]);
+const requiredFontSupportFiles = new Map([
+  [
+    "apps/www/public/fonts/tex-gyre-pagella/GUST-FONT-LICENSE.txt",
+    "2bd69affc3da00715116f713f57eab9707e96daf3562ad0215987b15b9c16f73"
+  ],
+  [
+    "apps/www/public/fonts/tex-gyre-pagella/README-TeX-Gyre-Pagella.txt",
+    "6fc4c72a8754f7e04ffbbec99167a568c0a3d21e231318ed624b58ddfeb1f896"
+  ],
+  [
+    "apps/www/public/fonts/tex-gyre-pagella/MANIFEST-TeX-Gyre-Pagella.txt",
+    "6ac4bc1448a1d71a3a7ad5fd13566f00855b37ca4db5b20451c88806ac3f5242"
+  ],
+  [
+    "apps/www/public/fonts/karla/OFL.txt",
+    "edf2c840acb9570fe02f40721126aa0da4e4011a0030cc6dce30780569f609b6"
+  ],
+  [
+    "apps/www/public/fonts/karla/METADATA.pb",
+    "6bf0bf977bd80e6d6655a302450bd4fc566857b577f056db4d8d054bbc7c67dd"
+  ],
+  [
+    "apps/www/public/fonts/karla/upstream_info.md",
+    "efdf6f9407c52a5c425117ee5d19dfe2400f072e516f9bfc047442b7bf453c57"
+  ]
+]);
 
 const isProduction =
   process.env.APP_ENV === "production" ||
@@ -89,6 +130,10 @@ function readText(file) {
   return readFileSync(file, "utf8");
 }
 
+function sha256(file) {
+  return createHash("sha256").update(readFileSync(file)).digest("hex");
+}
+
 function scanPattern(files, label, pattern, severity = "failure") {
   for (const file of files) {
     const content = readText(file);
@@ -122,6 +167,15 @@ try {
   });
 } catch {
   failures.push("scripts/check-knowledge-bank.mjs - knowledge-bank gate failed");
+}
+
+try {
+  execFileSync(process.execPath, [path.join(repoRoot, "scripts/sourcebook/check.mjs")], {
+    cwd: repoRoot,
+    stdio: "inherit"
+  });
+} catch {
+  failures.push("scripts/sourcebook/check.mjs - Sourcebook public-boundary gate failed");
 }
 
 const allFiles = walk(repoRoot);
@@ -175,7 +229,12 @@ for (const file of allFiles) {
   }
 
   if (fontExtensions.has(ext)) {
-    addFailure(file, "font file must not be committed or served from the repo");
+    const expectedHash = approvedFontFiles.get(rel);
+    if (!expectedHash) {
+      addFailure(file, "font file is not on the approved public-license allowlist");
+    } else if (sha256(file) !== expectedHash) {
+      addFailure(file, "approved font file checksum does not match its reviewed asset");
+    }
   }
 
   if (privatePathPattern.test(rel) || /\.private\./i.test(rel)) {
@@ -195,6 +254,15 @@ for (const file of allFiles) {
 
   if (/\.(key|pem|p12|crt|cer)$/i.test(rel)) {
     addFailure(file, "key or certificate material must not be committed");
+  }
+}
+
+for (const [rel, expectedHash] of requiredFontSupportFiles) {
+  const file = path.join(repoRoot, rel);
+  if (!existsSync(file)) {
+    failures.push(`${rel} - approved font license or provenance file is missing`);
+  } else if (sha256(file) !== expectedHash) {
+    addFailure(file, "approved font license or provenance checksum does not match");
   }
 }
 
@@ -299,11 +367,12 @@ if (!existsSync(resumePath)) {
   }
 
   if (
-    !/CallNYC\.org as an independent follow-on to the New York City\s+Council['’]s first CouncilStat hackathon/i.test(
+    /CallNYC\.org/i.test(resumeText) &&
+    !/independent civic product translating constituent-services data into\s+61 issue pathways/i.test(
       resumeText
     )
   ) {
-    addFailure(resumePath, "resume PDF is missing the approved CallNYC projection");
+    addFailure(resumePath, "resume PDF uses CallNYC without its bounded independent-product projection");
   }
 
   if (

@@ -182,3 +182,5 @@ coalition's collective credit.
 
 Do not identify the protected collaborator, publish pricing, publish private
 transcript context, or imply deployment inside a private company.
+Do not recast a protected conditional consulting lead as a formal job, offer,
+accepted engagement, rejection, client relationship, or completed work.

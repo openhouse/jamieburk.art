@@ -34,6 +34,10 @@ relations:
     target: event.nyc.dcla.diy-spaces-listening.2017-01-27
     href: ../events/nyc-diy-spaces-dcla-2017-01-27.md
     context: Public-safe event record for the agency-hosted meeting and the coalition continuity built around it.
+  - type: projected_to
+    target: projection.visual.fair-rent.participation-sequence.2026-08
+    href: ../projections/photography/fair-rent-participation-sequence-2026-08.md
+    context: Hiring-facing visual sequence connecting facilitated listening, shared campaign infrastructure, and a collective public convening.
 human_review: governed-open
 ---
 
@@ -44,6 +48,10 @@ human_review: governed-open
 **Public projection:** Six bounded claims selected for
 `/work/fair-rent-nyc`; additional mature claims remain held for future
 composition.
+
+The [Fair Rent participation sequence](../projections/photography/fair-rent-participation-sequence-2026-08.md)
+adds a bounded visual path from facilitated listening to shared campaign
+infrastructure to a collective public convening.
 
 ## Shared-folder archival production
 

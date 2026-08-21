@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "surfaceDigest": "98b15c4ebd1268e1d5899ed4933dc4813980f10168371b3f6f97102f7df02565",
+  "evaluatedAt": "2026-08-21",
+  "readerIdentity": "protected-prospective-collaborator",
+  "simulatedPublicFigureLens": true,
+  "nonEndorsementBoundary": "This fictionalized analytical lens is not participation, quotation, endorsement, recommendation, or a hiring decision by the named real person.",
+  "calibrationStatus": "uncalibrated-advisory-simulation",
+  "inputScope": {
+    "route": "/lab/source-backed-team-memory",
+    "publicPageOnly": true,
+    "repositoryAccess": false,
+    "rawTranscriptAccess": false,
+    "privateCompanyContextAccess": false,
+    "scenarioContext": "public-safe requirements only"
+  },
+  "acceptanceQuestion": "Based only on this public page as Jamie's proposal, I would hire Jamie for the small paid discovery / prototype engagement described by the protected June 2026 scenario.",
+  "critique": "Pass. In this fictionalized simulation, the page is sufficiently concrete to justify a small paid discovery and prototype. It defines the problem, Jamie's role, the limited first test, specific outputs, review and correction mechanics, access limits, workflow fit, success criteria, and the final continue, revise, or stop decision. It also demonstrates the method through a synthetic example and a public correction trace without overstating the lab's maturity. AI remains explicitly subordinate to human judgment. Price, duration, chosen source, reviewers, and final artifact format are normal scoping matters rather than reasons to reject the engagement.",
+  "strengths": [
+    "The first engagement names one approved source, a knowledge-friction map, one source-linked memory artifact, a correction path, and a practical success signal.",
+    "The result fits an existing team workflow and stays inspectable, human-reviewed, contestable, and correctable.",
+    "The continue, revise, or stop decision makes the output useful even if the test advises against further implementation."
+  ],
+  "risks": [
+    "The scope still needs a fixed duration, price, named reviewers, selected source surface, and agreed artifact format.",
+    "The parties should define a measurable onboarding or repeated-explanation test, plus retention, deletion, ownership, and confidentiality terms, before work begins."
+  ],
+  "result": "pass",
+  "wouldHire": true
+}

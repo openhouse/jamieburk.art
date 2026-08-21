@@ -1,190 +1,82 @@
 {
   "runVersion": 3,
-  "judgeId": "composite-holdout-hiring-composition-v3-ci-final-2026-07-28",
+  "judgeId": "composite-public-safety-2026-08-13-1b47-b",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
-  "rubricSha256": "fbd3009370350f1daae86b75425e87b0bd7157df7f8eb7c92a61e10107178fbd",
-  "candidateFingerprint": "808e2babf5b1e3b55d571b106ba128b9a8aeab9b8fd9fabab72e8941a7937507",
+  "rubricSha256": "b5cd5eed8dec4c3e4f37423a44d510950c4a87ca13ad3f522f566c5202fccc5b",
+  "candidateFingerprint": "1b47fdd2a10ef2a3a7872e0cc7364a18fc21630971052ad721e7556a7752eec1",
   "verdict": "accepted",
   "scores": [
     {
       "criterionId": "COMP-001",
       "score": 4,
       "pass": true,
-      "evidence": [
-        "The frozen inventory contains exactly feature/evals-A through feature/evals-N with 14 matching origin heads.",
-        "The integration register declares feature/knowledge-h as the writable branch and develop as the pull-request base.",
-        "The deterministic composite evaluation reported PASS COMP-001."
-      ],
-      "rationale": "The complete frozen branch family is represented exactly once, resolves through the required namespace, and remains reference-only."
+      "rationale": "The frozen inventory contains exactly feature/evals-A through feature/evals-N, all fourteen frozen commit objects resolve, the integration branch and develop base are explicit, and mutable remote-ref movement cannot rewrite the recorded heads."
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
-      "evidence": [
-        "All 14 register entries record an allowed decision, substantive rationale, existing destination paths, and criterion-level verification IDs.",
-        "The reviewed integration-register digest is 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d.",
-        "The website decision explicitly retains the selective H-derived composition rather than projecting additional repository material."
-      ],
-      "rationale": "The integration decisions are inspectable, operationally specific, and explicit about both projection and non-projection."
+      "rationale": "All fourteen branches have inspectable allowed decisions with substantive strengths, rationales, existing destination paths, verification criteria, and an explicit selective website-composition decision."
     },
     {
       "criterionId": "COMP-003",
       "score": 4,
       "pass": true,
-      "evidence": [
-        "The deterministic evaluation found all 11 canonical files and zero forbidden parallel lifecycle roots.",
-        "The public registry is restricted to claims, pages, and sources.",
-        "Citation validation confirmed that the public registry is current and redacted and that public projections remain consistent with canonical records."
-      ],
-      "rationale": "The candidate preserves one canonical knowledge architecture and exposes only governed public projections."
+      "rationale": "All eleven canonical knowledge files are present, no forbidden parallel lifecycle architecture exists, and public application surfaces consume redacted projections rather than protected source records."
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
-      "evidence": [
-        "Identical stable-record replay is idempotent.",
-        "A repeated artifact with a new intake ID is retained as a linked duplicate.",
-        "Changed content under an existing stable ID is rejected.",
-        "Lifecycle queries expose held knowledge, unresolved inquiries, corrections, and projection state."
-      ],
-      "rationale": "The standalone lifecycle suite passed all four append, collision, duplicate-preservation, and query tests."
+      "rationale": "Read-only tests and direct evaluator exercise confirm idempotent replay, linked duplicate preservation, rejection of changed-content stable-ID collisions, and queryability of held claims, inquiries, corrections, projection states, and orphan status."
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
-      "evidence": [
-        "Composite validation passed for 286 sources, 102 claims, 34 agency relations, and 4 corrections.",
-        "The Knowledge Wiki check passed with 366 records, 1274 semantic or evidence edges, 395 prose links, no stale generated output, and no orphan failure.",
-        "All 10 citation tests and all 196 knowledge-evaluation mutation tests passed.",
-        "Agency tests preserve Jamie's contribution separately from collective, Board, Council, and other institutional authority.",
-        "Population projections retain capture-date, denominator, recovery-gap, authorship, attendance, reach, and causality boundaries."
-      ],
-      "rationale": "Source, claim, agency, correction, and population integrity are complete and adversarially tested without detected protected leakage or credit inflation."
+      "rationale": "Canonical validation passes across 301 sources, 113 claims, 38 agency relations, and four corrections. Evidence limitations, population boundaries, protected-data exclusions, and individual, shared, collective, and institutional credit scopes remain explicit; generated Wiki and employment outputs are current."
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
-      "evidence": [
-        "The homepage first viewport names Jamie, the Technical Project Manager - Product Operations & Implementation role, the usable-systems promise, implementation actions, and direct work and resume paths.",
-        "The Technical Operations page maps delivery, risks, dependencies, onboarding, documentation, reporting, launch, and handoff claims to named projects and deeper destinations.",
-        "Lead cases distinguish context, Jamie's action, what became usable, outcomes or evidence, primary artifacts, role fit, source scope, and protected limits.",
-        "FairRentNYC identifies Jamie's implementation and stewardship while explicitly keeping campaign and policy outcomes collective.",
-        "CallNYC translates CouncilStat into constituent-services records, issue pathways, district context, and next steps while remaining visibly archived, independent, unofficial, and non-current.",
-        "The About page connects artistic, civic, technical, relational, and social practice and reconstructs relationships, model, interface and use, learning, revision, and continuity across multiple projects.",
-        "The public site projects six composed work narratives and one fully bound photograph while hundreds of source, asset, inquiry, and mature-held records remain outside public routes.",
-        "Professor-lens evaluation passed 14 of 14 criteria; layout evaluation passed all 8 blocking criteria.",
-        "Candidate-bound browser evidence covers 14 routes at 360, 375, 768, and 1280 pixels with 0 axe violations, 0 overflow elements, 0 failed requests, and exact visible homepage caption and credit."
-      ],
-      "rationale": "The composition makes Jamie's agency, decisions, deliverables, usable consequences, evidence, and collective boundaries legible without turning the portfolio into a knowledge mirror. Dense PDF and deeper governance passages create minor friction but no consequential hiring-reader failure."
+      "rationale": "The public site is a selective portfolio composition rather than a Wiki mirror, mature claims remain deliberately held, no public proofs route exists, and all fifteen professor-lens checks support legible agency, collective credit, artistic and relational continuity, and reconstructable observe-model-prototype-use-learn-revise-handoff practice."
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
-      "evidence": [
-        "Human corroboration, collective review, hiring usability, job-funnel learning, and external validity all remain explicitly open.",
-        "Each human-evidence control includes required evidence, pass conditions, anti-gaming rules, a next action, and a public-projection boundary.",
-        "The hiring baseline reports unsupported procurement, facilitation, product-brief, prioritization, migration, and product-data signals instead of manufacturing role-fit evidence.",
-        "The pre-launch audit states that automated and LLM evidence does not establish hiring effectiveness, consent, deployment, indexing, or production approval."
-      ],
-      "rationale": "Blind spots are governed as honest absences with actionable evidence plans; none is synthesized closed or misrepresented as validation."
+      "rationale": "Human corroboration, collective review, hiring usability, job-funnel learning, and external validity remain explicitly open. Each control includes required evidence, anti-gaming constraints, a next action, and a public-projection boundary; instrumented absence is not represented as validation."
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
-      "evidence": [
-        "The recomputed semantic rubric digest exactly matches fbd3009370350f1daae86b75425e87b0bd7157df7f8eb7c92a61e10107178fbd.",
-        "The base-suite, integration-register, blind-spot-control, and frozen branch-head digests match their pinned values.",
-        "The contract forbids optimizer self-grading, not-observed passes, synthesized external validation, and compensation for blocking failures.",
-        "All 15 mutation and negative-control cases in the composite test suite passed.",
-        "The composite test suite's sole failing case was the expected uninstalled exact-candidate stopping receipt, not a rubric-governance mutation failure."
-      ],
-      "rationale": "Frozen governance resists semantic weakening, fabricated heads, decorative decisions, stale derived output, private leakage, synthetic human evidence, and weighted-score compensation."
+      "rationale": "The independently recomputed rubric digest matches both frozen locks. Base-suite, register, blind-spot, branch-head, grader-separation, mutation, derived-currentness, and all-blockers-must-pass controls prevent checksum refreshes, weighted scores, synthesized evidence, or optimizer self-grading from bypassing a failure."
     },
     {
       "criterionId": "COMP-009",
       "score": 4,
       "pass": true,
-      "evidence": [
-        "The candidate fingerprint was independently recomputed after review as 808e2babf5b1e3b55d571b106ba128b9a8aeab9b8fd9fabab72e8941a7937507 over exactly 1309 files.",
-        "The complete Git source tree is bound except exactly the two declared holdout-result files.",
-        "Both existing result files target prior fingerprint 4d3835401e5ffd3c9ba145b44d040b4c159c53ace223de1ed4e52f7fae72dfdb and were excluded from evidence.",
-        "The receipt contract requires run version 3, distinct judge IDs and reviewer labels, provider, review time, complete judgment digest, exact rubric and candidate binding, empty notObserved, and nine passing scores.",
-        "The contract explicitly states that public receipt labels do not authenticate process identity and that separate commissioning is established outside public Git.",
-        "All deterministic substantive criteria pass; the only current stopping failure is the expected pre-install receipt state."
-      ],
-      "rationale": "Under the authorized non-circular protocol, this accepted exact-candidate judgment may score 4 before installation. Final stopping still requires this judgment and a separately commissioned parallel accepted judgment to be installed with valid distinct receipts and verified against the unchanged candidate."
+      "rationale": "The exported source-tree helper independently enumerates 1543 tracked or unignored paths, excludes only the two declared judgment records, includes every canonical and evidence-bundle file, and recomputes the exact expected candidate fingerprint. The receipt contract binds the complete judgment and public-safe provenance while leaving separate commissioning outside public Git and preserving human production approval."
     }
   ],
   "notObserved": [],
   "findings": [
-    {
-      "classification": "expected-pre-install-holdout-state",
-      "candidateBlocking": false,
-      "releaseBlocking": true,
-      "detail": "The two excluded result files contain prior-candidate receipts and provide no evidence here. Install this accepted judgment and the separately commissioned parallel accepted judgment, then rerun the exact-candidate composite checks."
-    },
-    {
-      "classification": "composition-density-nonblocking",
-      "candidateBlocking": false,
-      "releaseBlocking": false,
-      "detail": "The PDF and deeper FairRentNYC and governance passages remain dense, but headings, immediate-context translation, artifact labels, and bounded claims prevent a consequential role, agency, or outcome comprehension failure."
-    },
-    {
-      "classification": "exact-commit-human-approval",
-      "candidateBlocking": false,
-      "releaseBlocking": true,
-      "detail": "Jamie must approve the exact production commit and final public artifact set. Candidate acceptance is not production authorization."
-    },
-    {
-      "classification": "collaborator-correction-and-credit",
-      "candidateBlocking": false,
-      "releaseBlocking": true,
-      "detail": "Represented collaborators must retain correction, qualification, dissent, and credit review. Silence, archival inference, automated checks, and LLM judgments do not establish approval or endorsement."
-    },
-    {
-      "classification": "photo-rights-consent-credit-caption-crop-context-destination",
-      "candidateBlocking": false,
-      "releaseBlocking": true,
-      "detail": "Production use of the East River occurrence still requires human confirmation of rights, consent, dignity, exact Elana Gordon credit, caption, crop, context, destination, usefulness, and revocation handling. Any changed occurrence must fail closed."
-    },
-    {
-      "classification": "deployment-tls-smoke-rollback",
-      "candidateBlocking": false,
-      "releaseBlocking": true,
-      "detail": "Dokku configuration, build-time environment values, domain routing, TLS, production health, canonical-route smoke checks, browser-console review, and a verified rollback target remain deployment gates."
-    },
-    {
-      "classification": "indexing-authority",
-      "candidateBlocking": false,
-      "releaseBlocking": true,
-      "detail": "Production indexing remains an explicit Jamie-controlled opt-in. Candidate acceptance and staging noindex evidence do not authorize indexing."
-    },
-    {
-      "classification": "human-accessibility-and-unfamiliar-hiring-reader-usability",
-      "candidateBlocking": false,
-      "releaseBlocking": true,
-      "detail": "Human screen-reader, keyboard, browser-zoom, comprehension, and unfamiliar hiring-reader usability validation remain open. Automated accessibility and LLM evidence are not substitutes."
-    },
-    {
-      "classification": "public-receipt-authentication-boundary",
-      "candidateBlocking": false,
-      "releaseBlocking": true,
-      "detail": "Public reviewer labels, timestamps, and judgment digests bind content but do not authenticate reviewer process identity. Private orchestration must establish separate commissioning for both installed judgments."
-    }
+    "The frozen rubric independently recomputed to b5cd5eed8dec4c3e4f37423a44d510950c4a87ca13ad3f522f566c5202fccc5b.",
+    "The exported candidate helper independently enumerated 1543 source-tree paths and recomputed fingerprint 1b47fdd2a10ef2a3a7872e0cc7364a18fc21630971052ad721e7556a7752eec1.",
+    "With declared judgment inputs suppressed, the aggregate evaluator passed COMP-001 through COMP-008 and reported COMP-009 awaiting the two newly commissioned receipts; that expected orchestration state was not treated as candidate evidence.",
+    "Citation validation and tests, lifecycle tests, knowledge-eval mutation tests, professor-lens tests, accessibility contrast and candidate-bound accessibility-evidence tests, public-safety checks, route checks, Wiki health checks, and generated employment-currentness checks completed successfully.",
+    "Public composition remains selective, collective outcomes retain collective credit, and unresolved media rights or consent fail closed instead of becoming publication permission.",
+    "Staging, production deployment, domain and TLS verification, rollback execution, publication, and indexing remain outside this judgment."
   ],
-  "recommendation": "Accept this unchanged candidate as the hiring-composition half of the two-reviewer stopping protocol. Install this complete judgment and the separately commissioned parallel accepted judgment with distinct valid public receipts, recompute their judgment digests, and rerun the composite evaluation and tests without changing any candidate file. Preserve every named human production gate after deterministic stopping succeeds.",
+  "recommendation": "Accept this exact source-tree candidate for completion of the two-receipt composite stopping check only. Do not infer authorization for publication or close human corroboration, collaborator review, media-rights, exact-candidate approval, deployment, rollback, or indexing gates.",
   "publicReview": {
     "provider": "independent-codex-review",
-    "reviewerLabel": "hiring-composition-reviewer-b-ci-final",
-    "reviewedAt": "2026-07-28T19:43:00Z",
-    "judgmentSha256": "e45b105aaaeeb2eebe55e406d2633418e7cefde44ae1e346b7563ebd27c735ec",
-    "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted."
+    "reviewerLabel": "public-safety-reviewer-b-2026-08-13",
+    "reviewedAt": "2026-08-13T12:00:00-04:00",
+    "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted.",
+    "judgmentSha256": "c03da64f7c69025f1ee145aefc828c59cfebd0edf3f61a10a94259586fa8aa83"
   }
 }

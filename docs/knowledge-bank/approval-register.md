@@ -16,6 +16,28 @@ The repo is public. Approval here means approved for public-safe repository and 
   approved for public PR review and portfolio projection. Captions must retain
   source, scope, collective-credit, and archived-status boundaries.
 
+## Visual Publication Decisions — August 13, 2026
+
+- [x] The exact Apple Photos content set underlying the August photo-select job
+  is cleared by Jamie for publication on the `jamieburk.art` professional
+  portfolio. Private album identity and membership remain outside public Git.
+- [x] The Shoestring Press facilitation frame and the Save NYC Spaces town-hall
+  frame at Market Hotel are approved as exact portfolio occurrences with their
+  recorded derivatives, captions, creator-credit states, dignity review, and
+  collective-work boundaries.
+- [x] Frame 5 from Let NYC Dance is approved after the live hero video was allowed to
+  load and ten candidates were captured at one-second intervals. The other nine
+  captures remain temporary review material and are not published.
+- [x] The August 13 WOW List landing-page capture is approved as current proof
+  of the live tester invitation. It does not establish restoration of the full
+  historical platform.
+- [x] The existing homepage splash image remains the approved homepage image;
+  this visual sequence belongs inside the Fair Rent case study.
+
+These checks approve the exact assets for public Git, staging, and bounded
+portfolio use. Approval of an exact production commit and the indexing state
+remain separate release gates.
+
 ## Approved With Guardrails
 
 - HJE 2x claim: contribution wording only.

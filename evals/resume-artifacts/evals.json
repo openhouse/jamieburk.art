@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "id": "opportunity-resume-artifact-sync-v1",
+  "title": "Opportunity-tailored Markdown and PDF resume synchronization",
+  "sourceOpportunityManifest": "evals/resume-hiring-readers/current.json",
+  "styleContract": {
+    "source": "native-google-doc-copy",
+    "styleReference": "please-read-only resume style source example",
+    "typography": [
+      "Palatino Linotype",
+      "Oswald",
+      "Karla"
+    ],
+    "listMarkerTypography": {
+      "relation": "one-point-smaller-than-list-text",
+      "deltaPoints": 1,
+      "tolerancePoints": 0.05,
+      "verification": "exported-pdf-content-stream"
+    },
+    "sourceLocatorMayBeCommitted": false,
+    "copyLocatorMayBeCommitted": false
+  },
+  "editorialPreferences": {
+    "forbiddenHiringFacingDispositionPatterns": [
+      "not disbursed",
+      "no funds were disbursed",
+      "non-disbursement"
+    ],
+    "forbiddenResearchDossierPatterns": [
+      "public records document Jamie's participation",
+      "distinguish these activity counts",
+      "the archived site is unofficial and not a current City service"
+    ],
+    "plainTextProjectNames": [
+      {
+        "label": "Harry J. Epstein Company",
+        "forbiddenUrl": "https://www.harryepstein.com/"
+      }
+    ],
+    "politicoLabel": "Politico New York",
+    "politicoArticleUrl": "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf"
+  },
+  "publicResumeProjection": {
+    "selectionManifest": "evals/public-resume/current.json",
+    "artifact": "resume-versions/2026-08-20/active-opportunity-portfolio/artifact.json",
+    "file": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+  },
+  "applicationGuideContract": {
+    "file": "Application-Instructions.md",
+    "statusValues": [
+      "ready-for-jamie-review",
+      "blocked"
+    ],
+    "requiredSections": [
+      "Submission status",
+      "Files",
+      "Exact field instructions",
+      "Final review gate"
+    ],
+    "rules": [
+      "Every opportunity directory contains one guide bound to the exact current Markdown and PDF digests.",
+      "A ready guide gives exact actions for observed fields and names no unresolved blocker.",
+      "A blocked guide names the blocking condition and does not invent fields or answers.",
+      "Protected-category answers remain Jamie's private choice and are never committed.",
+      "Unknown later application pages fail closed for Jamie's review.",
+      "Jamie alone performs final submission."
+    ]
+  },
+  "coverLetterContract": {
+    "file": "Cover-Letter.md",
+    "readerManifest": "evals/cover-letter-hiring-readers/current.json",
+    "voiceContract": "evals/cover-letters/voice-contract.json",
+    "rules": [
+      "Every application-specific resume directory contains one role-specific cover letter.",
+      "The letter is digest-bound to the exact opportunity, resume, and public-safe writer's-voice contract.",
+      "The living Google Doc remains the source of truth; its locator and raw contents are not committed.",
+      "Deterministic checks run before isolated named-reader simulations.",
+      "Jamie approves the exact letter before submission."
+    ]
+  },
+  "criteria": [
+    {
+      "id": "complete-opportunity-coverage",
+      "blocking": true,
+      "criterion": "Every governed hiring-reader opportunity has exactly one dated Markdown resume, one PDF sibling, one artifact manifest, and one application guide; no tailored Markdown resume is orphaned from the opportunity manifest."
+    },
+    {
+      "id": "opportunity-source-current",
+      "blocking": true,
+      "criterion": "Each artifact is bound to the current SHA-256 of its governed opportunity source so a changed role brief forces re-tailoring and review."
+    },
+    {
+      "id": "markdown-current",
+      "blocking": true,
+      "criterion": "The exact Markdown digest matches both the hiring-reader assessment manifest and the PDF artifact manifest."
+    },
+    {
+      "id": "google-docs-lineage",
+      "blocking": true,
+      "criterion": "Each PDF records a native Google Docs copy workflow, preserved source styles, connector readback, and an unchanged read-only style source without committing protected document locators."
+    },
+    {
+      "id": "pdf-structure",
+      "blocking": true,
+      "criterion": "Each PDF is digest-bound, tagged, one or two US Letter pages, and machine-readable."
+    },
+    {
+      "id": "approved-typography",
+      "blocking": true,
+      "criterion": "Each PDF embeds the established Palatino Linotype, Oswald, and Karla typography."
+    },
+    {
+      "id": "list-marker-typography",
+      "blocking": true,
+      "criterion": "Every native-list bullet or numeral in each exported resume PDF renders one point smaller than its associated item text."
+    },
+    {
+      "id": "visual-inspection",
+      "blocking": true,
+      "criterion": "Every exported page has a complete visual-inspection receipt covering clipping, overlap, glyphs, Markdown residue, grouping, hierarchy, links, spacing, and page balance."
+    },
+    {
+      "id": "public-resume-projection",
+      "blocking": true,
+      "criterion": "The public portfolio resume is byte-identical to the independently selected opportunity-set PDF and digest-bound to its selection manifest and artifact so the leading-edge site cannot drift from the current hiring context."
+    },
+    {
+      "id": "resume-editorial-preferences",
+      "blocking": true,
+      "criterion": "Hiring-facing resumes omit nonessential disposition and research-dossier caveats; Harry J. Epstein Company remains plain text; whenever Politico New York appears, its full visible label links to the canonical archived article PDF in both Markdown and the exported PDF."
+    },
+    {
+      "id": "application-guide",
+      "blocking": true,
+      "criterion": "Each opportunity directory includes an exact-resume-bound application guide with the observed field actions, an explicit blocker when needed, fail-closed treatment of unseen questions, and Jamie's final-submit gate."
+    },
+    {
+      "id": "cover-letter",
+      "blocking": true,
+      "criterion": "Each application-specific resume has one role-specific, exact-digest cover-letter sibling bound to the current opportunity, resume, writer's-voice contract, and unanimous named-reader acceptance manifest."
+    },
+    {
+      "id": "public-safety",
+      "blocking": true,
+      "criterion": "Neither resume, artifact metadata, nor application guide commits Google Docs IDs, Drive locators, private filesystem paths, protected-category answers, or other protected workflow identifiers."
+    }
+  ]
+}

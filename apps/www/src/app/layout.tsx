@@ -28,10 +28,19 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html className={`${karla.variable} ${oswald.variable}`} data-theme="human-index" lang="en">
+    <html
+      className={`${karla.variable} ${oswald.variable}`}
+      data-scroll-behavior="smooth"
+      data-theme="human-index"
+      lang="en"
+    >
+      <head>
+        <link href="https://res.cloudinary.com" rel="dns-prefetch" />
+        <link crossOrigin="anonymous" href="https://res.cloudinary.com" rel="preconnect" />
+      </head>
       <body>
         <SiteHeader />
-        <main id="main">{children}</main>
+        <main id="main" tabIndex={-1}>{children}</main>
         <SiteFooter />
       </body>
     </html>

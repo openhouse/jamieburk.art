@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to CallNYC
 
-**Source commit:** `b1d476c810fc6d434b01fdab16c23ad1b961a01f`
-**Generation time:** 2026-07-28T14:28:48-04:00
-**Source fingerprint:** `e5177833940ac1e9395c314bcb04693bdef8e3ec600800598ce57a3002d5c65f`
+**Source commit:** `2bd29f313f73f8844282dbe364b163d62544a401`
+**Generation time:** 2026-08-21T10:19:09-04:00
+**Source fingerprint:** `77a6700ed0da85d2d0ec4dcfd5fed3f8ef2d9c6dc3dd08683dd243cddead9684`
 
 - [Digital District participant photograph metadata](../../assets/digital-district-photo.md) - `part_of` (frontmatter)
 - [Jamie with a civic field kit at New York City Council](../../assets/photographs/nyc-council-field-kit-2026.md) - `related_to` (frontmatter)
@@ -18,6 +18,7 @@
 - [New York City Council constituent-services hackathon](../../events/nycc-constituent-services-hackathon-2016.md) - `resulted_in` (frontmatter)
 - [Knowledge Wiki](../../README.md) - `prose_link` (markdown)
 - [Decisions, Deliverables, and Operational Outcomes](../../indexes/decisions-deliverables-and-operational-outcomes.md) - `related_to` (frontmatter)
+- [Live Project Websites](../../indexes/live-project-websites.md) - `related_to` (frontmatter)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `prose_link` (markdown)
 - [Outcomes, Adoption, and Afterlives](../../indexes/outcomes-adoption-and-afterlives.md) - `related_to` (frontmatter)
 - [Knowledge Wiki pilot map](../../indexes/pilot.md) - `prose_link` (markdown)
@@ -26,12 +27,16 @@
 - [Project lineages](../../indexes/project-lineages.md) - `prose_link` (markdown)
 - [Role, Collective Authorship, and Protected Absence](../../indexes/role-collective-authorship-and-protected-absence.md) - `related_to` (frontmatter)
 - [Identity Systems as Shared Infrastructure](../../methods/identity-systems-as-shared-infrastructure.md) - `related_to` (frontmatter)
-- [Source-Backed Team Memory](../../methods/source-backed-team-memory.md) - `related_to` (frontmatter)
+- [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `related_to` (frontmatter)
+- [Knowledge Wiki Graph / Source-Backed Team Memory](../../methods/source-backed-team-memory.md) - `related_to` (frontmatter)
 - [ACLU - Product Manager II, Discovery](../../opportunities/aclu-product-discovery.md) - `related_to` (frontmatter)
+- [NYC OTI - Product Manager 784450](../../opportunities/oti-product-manager-784450.md) - `related_to` (frontmatter)
+- [NYC OTI - Senior Product Manager 782366](../../opportunities/oti-senior-product-manager.md) - `related_to` (frontmatter)
 - [NYC OTI - Technical Operations Manager 782369](../../opportunities/oti-technical-operations.md) - `related_to` (frontmatter)
 - [PermitFlow - Product Operations Manager](../../opportunities/permitflow-product-operations.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
 - [CallNYC portfolio projection](../../projections/work-callnyc.md) - `related_to` (frontmatter)
+- [CallNYC restored archived prototype, August 2026](../../sources/callnyc-restored-site-2026-08-14.md) - `documents` (frontmatter)
 - [CallNYC public source repository](../../sources/callnyc-source-repository.md) - `documents` (frontmatter)
 - [New York City Council Constituent Services Data release](../../sources/nycc-constituent-services-data-2016-05-27.md) - `documents` (frontmatter)
 - [NYC Council field-kit photograph oral history, July 2026](../../sources/recollections/nyc-council-field-kit-oral-history-2026-07.md) - `related_to` (frontmatter)

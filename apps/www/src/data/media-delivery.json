@@ -1,0 +1,376 @@
+{
+  "schemaVersion": 1,
+  "provider": {
+    "name": "cloudinary",
+    "cloudName": "ofdj6rnm",
+    "deliveryBase": "https://res.cloudinary.com/ofdj6rnm/image/upload",
+    "publicIdRoot": "jamieburk-art/portfolio"
+  },
+  "assets": [
+    {
+      "id": "media.east-river",
+      "source": "/images/field-notes/jamie-east-river.webp",
+      "sourceSha256": "748b6f12e2845dd7dc1ca3fa3f35d61c26a468150b7e3d6d386ae3622d996621",
+      "width": 1280,
+      "height": 960,
+      "bytes": 330654,
+      "kind": "photograph",
+      "quality": "good",
+      "title": "Jamie Burkart at the East River",
+      "caption": "At the East River beneath the Manhattan Bridge, 2022.",
+      "routes": [
+        "/"
+      ],
+      "governanceId": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "publicationStatus": "approved-public-derivative",
+      "cloudinary": {
+        "publicId": "jamieburk-art/portfolio/field-notes/jamie-east-river",
+        "version": 1786825057
+      }
+    },
+    {
+      "id": "media.sunday-dinner-shared-map",
+      "source": "/images/field-notes/sunday-dinner-shared-map.webp",
+      "sourceSha256": "e0d6d674a8a1300e1ca8f53718701af21d1385b4fe13d5be74f1931404f4304c",
+      "width": 1200,
+      "height": 797,
+      "bytes": 122716,
+      "kind": "photograph",
+      "quality": "good",
+      "title": "196 Sunday Dinner shared map",
+      "caption": "A Sunday Dinner gathering with a hand-drawn map and shared table, January 6, 2013.",
+      "routes": [
+        "/work",
+        "/work/196-sunday-dinner"
+      ],
+      "governanceId": "asset.photo.sunday-dinner.shared-map.2013.001",
+      "publicationStatus": "approved-public-derivative",
+      "cloudinary": {
+        "publicId": "jamieburk-art/portfolio/field-notes/sunday-dinner-shared-map",
+        "version": 1786825058
+      }
+    },
+    {
+      "id": "media.kc-town-hall-roof-work",
+      "source": "/images/field-notes/kc-town-hall-roof-work.webp",
+      "sourceSha256": "9bd8d1776648e1000765ac1433e8c05bf114e7029738675ed3a6abb31eeded09",
+      "width": 2400,
+      "height": 1600,
+      "bytes": 212210,
+      "kind": "photograph",
+      "quality": "good",
+      "title": "KC Town Hall roof work",
+      "caption": "Roof work during KC Town Hall field implementation, March 24, 2019.",
+      "routes": [
+        "/work",
+        "/work/kc-town-hall"
+      ],
+      "governanceId": "asset.photo.kc-town-hall.roof-work.2019.001",
+      "publicationStatus": "approved-public-derivative",
+      "cloudinary": {
+        "publicId": "jamieburk-art/portfolio/field-notes/kc-town-hall-roof-work",
+        "version": 1786825058
+      }
+    },
+    {
+      "id": "media.shoestring-facilitation",
+      "source": "/images/participation/shoestring-facilitation.webp",
+      "sourceSha256": "89ae389662f9a1f5365a03455ce32b90e8147d96223de737f35f9f205a514ff8",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 242400,
+      "kind": "photograph",
+      "quality": "good",
+      "title": "Coalition facilitation at Shoestring Press",
+      "caption": "Facilitating an advocacy-group coordination meeting at Shoestring Press, Brooklyn, July 2017.",
+      "routes": [
+        "/work/fair-rent-nyc"
+      ],
+      "governanceId": "asset.photo.nycac.shoestring-facilitation.2017.001",
+      "publicationStatus": "approved-public-derivative",
+      "cloudinary": {
+        "publicId": "jamieburk-art/portfolio/participation/shoestring-facilitation",
+        "version": 1786825059
+      }
+    },
+    {
+      "id": "media.save-nyc-spaces-market-hotel",
+      "source": "/images/participation/save-nyc-spaces-market-hotel.webp",
+      "sourceSha256": "d0cc239bfe4d20c5faa319912c5a8440c0940b8cb525ef390fc2a47ddc3044dc",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 185474,
+      "kind": "photograph",
+      "quality": "good",
+      "title": "Save NYC Spaces town hall at Market Hotel",
+      "caption": "NYC Artist Coalition's Save NYC Spaces town hall at Market Hotel, Brooklyn, October 2017.",
+      "routes": [
+        "/work",
+        "/work/fair-rent-nyc"
+      ],
+      "governanceId": "asset.photo.nycac.market-hotel-town-hall.2017.001",
+      "publicationStatus": "approved-public-derivative",
+      "cloudinary": {
+        "publicId": "jamieburk-art/portfolio/participation/save-nyc-spaces-market-hotel",
+        "version": 1786825060
+      }
+    },
+    {
+      "id": "media.let-nyc-dance-public-surface",
+      "source": "/artifacts/let-nyc-dance/public-surface.jpg",
+      "sourceSha256": "cce00bc7ff1f73352d607ae85b30288d1623c0698f2887816bdbbdc08e83bf30",
+      "width": 1265,
+      "height": 712,
+      "bytes": 78716,
+      "kind": "website-capture",
+      "quality": "best",
+      "title": "Let NYC Dance public campaign surface",
+      "caption": "Let NYC Dance public campaign surface, captured August 13, 2026.",
+      "routes": [
+        "/work/fair-rent-nyc"
+      ],
+      "governanceId": "asset.screenshot.let-nyc-dance.public-surface.2026-08-13",
+      "publicationStatus": "approved-public-derivative",
+      "cloudinary": {
+        "publicId": "jamieburk-art/portfolio/artifacts/let-nyc-dance-public-surface",
+        "version": 1786825060
+      }
+    },
+    {
+      "id": "media.hje-public-site",
+      "source": "/artifacts/hje/public-site.png",
+      "sourceSha256": "a62bae4666f15c69a99e21cbc456ba6342da28282ed45bf68240b20ce68b854c",
+      "width": 1178,
+      "height": 785,
+      "bytes": 134278,
+      "kind": "website-capture",
+      "quality": "best",
+      "title": "Harry J. Epstein Company successor storefront",
+      "caption": "The live successor storefront provides present-day business context.",
+      "routes": [
+        "/work",
+        "/work/harry-j-epstein"
+      ],
+      "governanceId": "project.harry-j-epstein",
+      "publicationStatus": "approved-public-derivative",
+      "cloudinary": {
+        "publicId": "jamieburk-art/portfolio/artifacts/hje-public-site",
+        "version": 1786825061
+      }
+    },
+    {
+      "id": "media.kc-spaces-fund-public-site",
+      "source": "/artifacts/kc-spaces-fund/public-site.webp",
+      "sourceSha256": "c753f89a7306dd6994d8cb0d350141b92ea4a217e3d27373a1b47184aeed1018",
+      "width": 1425,
+      "height": 950,
+      "bytes": 69026,
+      "kind": "website-capture",
+      "quality": "best",
+      "title": "KC Spaces Fund restored public campaign surface",
+      "caption": "The restored campaign surface pairs a clear public identity with donation, coalition, application, contact, and funded-space pathways.",
+      "routes": [
+        "/work",
+        "/work/kc-spaces-fund"
+      ],
+      "governanceId": "project.kc-spaces-fund",
+      "publicationStatus": "approved-public-derivative",
+      "cloudinary": {
+        "publicId": "jamieburk-art/portfolio/artifacts/kc-spaces-fund-public-site",
+        "version": 1787248305
+      }
+    },
+    {
+      "id": "media.callnyc-original-launch-2016",
+      "source": "/artifacts/callnyc/original-launch-2016.webp",
+      "sourceSha256": "9b3933fb65cd4bbef7b198da04e3c41d55c6a52969a18113d6cea4be09441847",
+      "width": 1800,
+      "height": 1200,
+      "bytes": 92726,
+      "kind": "website-capture",
+      "quality": "best",
+      "title": "Original CallNYC public launch interface",
+      "caption": "The original public interface translated civic data into issue pathways, district context, and resident guidance.",
+      "routes": [
+        "/work",
+        "/work/callnyc"
+      ],
+      "governanceId": "project.callnyc",
+      "publicationStatus": "approved-public-derivative",
+      "cloudinary": {
+        "publicId": "jamieburk-art/portfolio/artifacts/callnyc-original-launch-2016",
+        "version": 1787248353
+      }
+    },
+    {
+      "id": "media.fair-rent-nyc-public-site",
+      "source": "/artifacts/fair-rent-nyc/public-site.png",
+      "sourceSha256": "eb0ee39af3ad9243620056f41ebb2e3db8b33007a842aa3c7128523b7d4ff990",
+      "width": 1185,
+      "height": 790,
+      "bytes": 119856,
+      "kind": "website-capture",
+      "quality": "best",
+      "title": "Fair Rent NYC public site",
+      "caption": "The public campaign surface organized resident-facing information and action pathways.",
+      "routes": [
+        "/work/fair-rent-nyc"
+      ],
+      "governanceId": "project.fair-rent-nyc",
+      "publicationStatus": "approved-public-derivative",
+      "cloudinary": {
+        "publicId": "jamieburk-art/portfolio/artifacts/fair-rent-nyc-public-site",
+        "version": 1786825061
+      }
+    },
+    {
+      "id": "media.wowlist-public-threshold",
+      "source": "/artifacts/wowlist/public-threshold.webp",
+      "sourceSha256": "d815e5ba1c3a692335b6119aac111126c550076215953c6ded1ad6db43f02036",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 84688,
+      "kind": "website-capture",
+      "quality": "best",
+      "title": "WOW List public threshold",
+      "caption": "WOW List's current threshold pairs its returning interface with a photographic scene of people gathering.",
+      "routes": [
+        "/work",
+        "/work/wowlist"
+      ],
+      "governanceId": "source.wowlist.public-threshold.2026-08-13",
+      "publicationStatus": "approved-public-derivative",
+      "cloudinary": {
+        "publicId": "jamieburk-art/portfolio/artifacts/wowlist-public-threshold",
+        "version": 1786825062
+      }
+    },
+    {
+      "id": "media.wowlist-public-relaunch",
+      "source": "/artifacts/wowlist/public-relaunch.jpg",
+      "sourceSha256": "021304c2e0e15bb28bb3015b14cfae08f122b87317dd88e4a1124ff959927723",
+      "width": 1265,
+      "height": 712,
+      "bytes": 65503,
+      "kind": "website-capture",
+      "quality": "best",
+      "title": "WOW List public relaunch",
+      "caption": "The restored WOW List public surface reconnects product history with a current threshold.",
+      "routes": [
+        "/work/wowlist"
+      ],
+      "governanceId": "asset.screenshot.wowlist.public-relaunch.2026-08-13",
+      "publicationStatus": "approved-public-derivative",
+      "cloudinary": {
+        "publicId": "jamieburk-art/portfolio/artifacts/wowlist-public-relaunch",
+        "version": 1786825063
+      }
+    },
+    {
+      "id": "media.kc-town-hall-tired-of-tires-handbill",
+      "source": "/images/artifacts/kc-town-hall-tired-of-tires-handbill-2021.webp",
+      "sourceSha256": "1300079e8b15d6d4eb6c684d2291d73c26fed7e3a2d46cf78f08bb0a13e0cff3",
+      "width": 913,
+      "height": 465,
+      "bytes": 99956,
+      "kind": "graphic",
+      "quality": "best",
+      "title": "Tired of Tires resident handbill",
+      "caption": "A resident-facing handbill made the free neighborhood tire pickup schedule legible and portable.",
+      "routes": [
+        "/work/kc-town-hall"
+      ],
+      "governanceId": "SRC-KCTH-TIRES-DESIGN-ARCHIVE-2019-2021",
+      "publicationStatus": "approved-public-derivative",
+      "cloudinary": {
+        "publicId": "jamieburk-art/portfolio/artifacts/kc-town-hall-tired-of-tires-handbill-2021",
+        "version": 1786825063
+      }
+    },
+    {
+      "id": "media.kc-town-hall-neighborhood-survey-handbill",
+      "source": "/images/artifacts/kc-town-hall-neighborhood-survey-handbill-2019.webp",
+      "sourceSha256": "c5f0dd1af6df128df07af5e6a82f2259ad8cdaa2a8e5f305a08bbfb69206beca",
+      "width": 672,
+      "height": 960,
+      "bytes": 50022,
+      "kind": "graphic",
+      "quality": "best",
+      "title": "KC Town Hall neighborhood survey handbill",
+      "caption": "The neighborhood survey translated resident conversations into service and building requirements.",
+      "routes": [
+        "/work/kc-town-hall"
+      ],
+      "governanceId": "SRC-KCTH-TIRES-DESIGN-ARCHIVE-2019-2021",
+      "publicationStatus": "approved-public-derivative",
+      "cloudinary": {
+        "publicId": "jamieburk-art/portfolio/artifacts/kc-town-hall-neighborhood-survey-handbill-2019",
+        "version": 1786825063
+      }
+    },
+    {
+      "id": "media.kc-town-hall-walkshed",
+      "source": "/images/artifacts/kc-town-hall-walkshed.webp",
+      "sourceSha256": "426114d96a438b8e8c7c8a45d6d4e3765b386e3081739ffb30bd3abd9ae4aa26",
+      "width": 977,
+      "height": 1135,
+      "bytes": 183432,
+      "kind": "graphic",
+      "quality": "best",
+      "title": "KC Town Hall ten-minute walkshed",
+      "caption": "The walkshed made the resident-service area explicit at a neighborhood scale.",
+      "routes": [
+        "/work/kc-town-hall"
+      ],
+      "governanceId": "asset.graphic.kc-town-hall.walkshed.2019.001",
+      "publicationStatus": "approved-public-derivative",
+      "cloudinary": {
+        "publicId": "jamieburk-art/portfolio/artifacts/kc-town-hall-walkshed",
+        "version": 1786825064
+      }
+    },
+    {
+      "id": "media.ai-evals-completion-certificate",
+      "source": "/artifacts/ai-evals/completion-certificate.jpg",
+      "sourceSha256": "a8595c4c0d3494e54499c216abbca8f4dd7e31d6b88907bd83f8677f554d8f06",
+      "width": 1024,
+      "height": 600,
+      "bytes": 165832,
+      "kind": "document-image",
+      "quality": "best",
+      "title": "AI Evals for Engineers and PMs completion certificate",
+      "caption": "Public completion certificate documenting professional development.",
+      "routes": [
+        "/lab/source-backed-team-memory"
+      ],
+      "governanceId": "SRC-AI-EVALS-CERTIFICATE-2026",
+      "publicationStatus": "approved-public-derivative",
+      "cloudinary": {
+        "publicId": "jamieburk-art/portfolio/artifacts/ai-evals-completion-certificate",
+        "version": 1786825064
+      }
+    }
+  ],
+  "localOnly": [
+    {
+      "source": "/images/field-notes/team-knowledge-collective-synthesis.webp",
+      "sourceSha256": "d63391c1d0adb84b8d8bc2641b98dd4a12e5be6b73795b2b0eb6df0b252baa48",
+      "bytes": 495638,
+      "governanceId": "asset.photo.nycac.collective-synthesis.2017.001",
+      "deliveryState": "awaiting-signed-cdn-sync",
+      "reason": "The approved metadata-stripped derivative remains first-party until a signed Cloudinary upload returns its immutable version; the repository copy and checksum remain authoritative."
+    },
+    {
+      "source": "/images/social/jamie-east-river-og-source.jpg",
+      "reason": "The Open Graph route uses this bounded source to render the deterministic 1200 by 630 social card; the generated social image remains first-party."
+    },
+    {
+      "pattern": "/resume/*.pdf",
+      "reason": "Canonical application PDFs remain first-party, stable, and independently cacheable."
+    },
+    {
+      "pattern": "fonts, CSS, JavaScript, icons, and raw Apple Photos originals",
+      "reason": "Cloudinary is narrowly scoped to approved public raster derivatives, not the application bundle or private archive."
+    }
+  ]
+}

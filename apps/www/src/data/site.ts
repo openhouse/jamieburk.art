@@ -1,3 +1,4 @@
+import { homeIdentity } from "@/data/home-identity";
 import { SITE_URL } from "@/lib/site-url";
 
 const contactEmail =
@@ -9,11 +10,10 @@ const githubUrl =
   process.env.NEXT_PUBLIC_GITHUB_URL?.trim() ?? "https://github.com/openhouse";
 
 export const site = {
-  name: "Jamie Burkart",
-  role: "Technical Project Manager - Product Operations & Implementation",
+  name: homeIdentity.name,
+  role: homeIdentity.role,
   url: SITE_URL,
-  title:
-    "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
+  title: `${homeIdentity.name} - Technical Project Manager | Product Operations & Implementation`,
   description:
     "Brooklyn-based technical project manager creating operating structure across product operations, implementation, documentation, civic technology, web systems, knowledge systems, and public-facing tools.",
   emailLabel: contactEmail,

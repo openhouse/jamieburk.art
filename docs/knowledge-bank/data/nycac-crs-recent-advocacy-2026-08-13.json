@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "id": "evidence.nycac-crs-recent-advocacy.2026-08-13",
+  "review_window": {
+    "start": "2026-07-15",
+    "end": "2026-08-13",
+    "timezone": "America/New_York"
+  },
+  "scope": "A governed close reading of Jamie Burkart's NYC Artist Coalition, Fair Rent NYC, and commercial-rent-stabilization work across authorized correspondence, attachments, Drive documents, public pages, authenticated social surfaces, and repository records. Raw private payloads and locators are withheld.",
+  "source_census": {
+    "gmail": {
+      "state": "bounded-census-complete-key-threads-close-read",
+      "coverage": [
+        "report drafting and review",
+        "report-release speaking preparation",
+        "elected-office staff coordination",
+        "post-event legislative follow-up"
+      ],
+      "counts_withheld": true
+    },
+    "google_drive": {
+      "state": "three-key-documents-compared",
+      "coverage": [
+        "working report",
+        "Jamie's review document",
+        "legislative provenance redline"
+      ]
+    },
+    "attachments": {
+      "state": "report-and-images-inspected",
+      "coverage": [
+        "twenty-page released report",
+        "six-image campaign carousel",
+        "four historical field-note photographs"
+      ],
+      "pixel_publication_authorized": true,
+      "pixel_publication_scope": "Exact members of the Apple Photos content set underlying the August photo-select job are cleared for jamieburk.art portfolio consideration; each public occurrence still requires selection, caption, credit, derivative, and destination review."
+    },
+    "authenticated_public_surfaces": {
+      "state": "reviewed",
+      "coverage": [
+        "Action Lab event page",
+        "Small Business United report site",
+        "public Instagram campaign post"
+      ]
+    },
+    "repository_ecosystem": {
+      "state": "four-authority-routing-reviewed"
+    }
+  },
+  "findings": {
+    "report_review": {
+      "evidence_state": "public-credit-plus-protected-incorporation-record",
+      "public_fact": "The released report credits Jamie, identified as an NYC Artist Coalition member participating in Fair Rent NYC, for thoughtful and careful draft review.",
+      "protected_finding": "Contemporaneous correspondence says many of Jamie's edits were incorporated.",
+      "bounded_contribution": "Pre-publication review of factual accuracy, source and methods clarity, causal scope, legislative accuracy, attribution, accessibility, citations, and release hygiene.",
+      "does_not_establish": [
+        "authorship or co-authorship",
+        "methods ownership",
+        "independent replication",
+        "legal approval",
+        "an edit-by-edit contribution percentage"
+      ]
+    },
+    "public_speaking": {
+      "evidence_state": "participant-attested-public-delivery-unrecovered",
+      "supported": [
+        "accepted two-minute speaking role",
+        "supplied final cultural-space remarks",
+        "participant-attested in-person event participation"
+      ],
+      "not_recovered": [
+        "named public transcript",
+        "organizer caption identifying Jamie as speaker",
+        "press quotation",
+        "public record of verbatim delivery"
+      ]
+    },
+    "press": {
+      "evidence_state": "quote-supplied-publication-unrecovered",
+      "supported": "Jamie supplied a calibrated press-release quote to organizers.",
+      "not_recovered": "No public release, article, or post using the supplied quote was found in the bounded search."
+    },
+    "elected_office_coordination": {
+      "evidence_state": "direct-staff-coordination",
+      "city": "Jamie coordinated event logistics with Council Member Christopher Marte's staff while preserving his speaker-not-organizer boundary.",
+      "state": "After a direct call, Assemblymember Emily Gallagher's deputy chief of staff proposed recurring coordination with Jamie and an organizing partner and scheduled a first future date.",
+      "future_meeting_state": "scheduled-not-occurred-within-review-window",
+      "does_not_establish": [
+        "elected-official endorsement",
+        "institutional adoption",
+        "delegated authority or decision rights",
+        "bill authorship",
+        "attendance by a scheduled official"
+      ]
+    },
+    "historical_field_material": {
+      "evidence_state": "permission-cleared-editorial-hold",
+      "finding": "Four older storefront field-note photographs show earlier issue-routing practice and fall outside the thirty-day activity window. Items within the exact approved source-album set are cleared for portfolio consideration, but these four remain unselected and held in this recent-advocacy record.",
+      "public_display": "hold"
+    }
+  },
+  "graph_candidate": {
+    "intake_ids": [
+      "INTAKE-NYCAC-RECENT-ADVOCACY-PUBLIC-SOURCES-2026-08",
+      "INTAKE-NYCAC-RECENT-ADVOCACY-PROTECTED-BUNDLE-2026-08"
+    ],
+    "claim_ids": [
+      "CLM-NYCAC-SBU-REPORT-REVIEW-2026",
+      "CLM-NYCAC-PRESS-REMARKS-PREPARATION-2026",
+      "CLM-NYCAC-SBU-RALLY-SPEAKING-2026",
+      "CLM-NYCAC-ELECTED-OFFICE-COORDINATION-2026"
+    ],
+    "claim_projection_state": "hold",
+    "public_site_change_authorized": false
+  },
+  "repository_destinations": [
+    {
+      "repository": "openhouse/commercial-rent-stabilization-public-support",
+      "authority": "canonical public campaign statement and source edition",
+      "next_update": "Add the public report source and event metadata; add a full Jamie statement only if a permission-cleared transcript, organizer statement, or first-person source edition is available."
+    },
+    {
+      "repository": "openhouse/jamie-burkart-public-record",
+      "authority": "Jamie-centered public-safe reference layer",
+      "next_update": "Add a canonical reference after the subject-specific source edition is pinned; do not duplicate protected bodies."
+    },
+    {
+      "repository": "openhouse/archival-research-projects",
+      "authority": "protected research custody and correction provenance",
+      "next_update": "Retain the raw correspondence, Drive revision evidence, complete review/redline, source-return ledger, and rights decisions under restricted access."
+    },
+    {
+      "repository": "openhouse/jamieburk.art",
+      "authority": "semantic graph, agency boundaries, evaluation, and held portfolio projection",
+      "next_update": "Record the bounded claims and source gaps now; keep every projection held until Jamie separately approves public composition."
+    }
+  ],
+  "publication": {
+    "raw_correspondence": "withheld",
+    "private_contact_data": "withheld",
+    "authenticated_locators": "withheld",
+    "tracked_changes": "withheld",
+    "photograph_pixels": "approved-only-through-explicit-asset-occurrences",
+    "portfolio_projection": "hold",
+    "human_approval_required": true
+  }
+}

@@ -1,5 +1,9 @@
 export type PortfolioPhoto = {
-  id: "east-river";
+  id:
+    | "east-river"
+    | "sunday-dinner-shared-map"
+    | "kc-town-hall-roof-work"
+    | "team-knowledge-collective-synthesis";
   src: string;
   width: number;
   height: number;
@@ -12,7 +16,14 @@ export type PortfolioPhoto = {
   captionAssertionIds: readonly string[];
   creditAssertionIds: readonly string[];
   knowledgeStatus: "bound";
-  placements: readonly "home"[];
+  placements: readonly (
+    | "home"
+    | "social-card"
+    | "196-sunday-dinner"
+    | "kc-town-hall"
+    | "team-knowledge-lab"
+    | "work-index"
+  )[];
   publicationStatus: "jamie-authorized";
   releaseState: {
     publicGit: "approved";
@@ -34,7 +45,10 @@ export const portfolioPhotos = {
     credit: "Photograph by Elana Gordon. From Jamie Burkart's photo archive.",
     wikiId: "asset.photo.east-river-manhattan-bridge.2022.001",
     derivativeId: "derivative.photo.east-river.layout-c.v1",
-    placementIds: ["projection.photo.layout-c.home.east-river"],
+    placementIds: [
+      "projection.photo.layout-c.home.east-river",
+      "projection.photo.home-og.east-river"
+    ],
     captionAssertionIds: [
       "statement.photo.east-river.place.v1",
       "statement.photo.east-river.capture-year.v1"
@@ -44,7 +58,7 @@ export const portfolioPhotos = {
       "statement.photo.east-river.custody.v1"
     ],
     knowledgeStatus: "bound",
-    placements: ["home"],
+    placements: ["home", "social-card"],
     publicationStatus: "jamie-authorized",
     releaseState: {
       publicGit: "approved",
@@ -53,7 +67,102 @@ export const portfolioPhotos = {
       indexing: "open"
     },
     publicUseBoundary:
-      "Elana Gordon is credited as photographer. Use is bounded to this approved portfolio occurrence; no broader rights are asserted."
+      "Elana Gordon is credited as photographer on the homepage and remains the recorded creator. Her bounded portfolio permission makes visible credit optional at Jamie's discretion. The Open Graph preview uses a metadata-stripped JPEG source with an approved 1200 by 630 cover treatment and no in-image credit; no broader rights are asserted."
+  },
+  sundayDinnerSharedMap: {
+    id: "sunday-dinner-shared-map",
+    src: "/images/field-notes/sunday-dinner-shared-map.webp",
+    width: 1200,
+    height: 797,
+    alt: "A person stands at a crowded dinner table, raising one hand and holding up a sheet of paper as others laugh beside a hand-drawn map.",
+    caption:
+      "A Sunday Dinner gathering with a hand-drawn map and shared table, January 6, 2013.",
+    credit: "Photo courtesy of Sunday Dinner NYC.",
+    wikiId: "asset.photo.sunday-dinner.shared-map.2013.001",
+    derivativeId: "derivative.photo.sunday-dinner.shared-map.v1",
+    placementIds: ["projection.photo.sunday-dinner.shared-map"],
+    captionAssertionIds: [
+      "statement.photo.sunday-dinner.shared-map.context.v1",
+      "statement.photo.sunday-dinner.shared-map.capture-date.v1"
+    ],
+    creditAssertionIds: [
+      "statement.photo.sunday-dinner.shared-map.project-credit.v1"
+    ],
+    knowledgeStatus: "bound",
+    placements: ["196-sunday-dinner", "work-index"],
+    publicationStatus: "jamie-authorized",
+    releaseState: {
+      publicGit: "approved",
+      staging: "approved",
+      production: "open",
+      indexing: "open"
+    },
+    publicUseBoundary:
+      "Jamie authorized this exact portfolio occurrence from the designated portfolio album. Sunday Dinner NYC receives the public courtesy credit; participant identities, remarks, attendance, and private gathering records remain outside the public bundle."
+  },
+  kcTownHallRoofWork: {
+    id: "kc-town-hall-roof-work",
+    src: "/images/field-notes/kc-town-hall-roof-work.webp",
+    width: 2400,
+    height: 1600,
+    alt: "A person in a yellow hard hat and rain jacket uses a drill on a roof assembly.",
+    caption: "Roof work during KC Town Hall field implementation, March 24, 2019.",
+    credit: "Photo courtesy of KC Town Hall.",
+    wikiId: "asset.photo.kc-town-hall.roof-work.2019.001",
+    derivativeId: "derivative.photo.kc-town-hall.roof-work.v1",
+    placementIds: ["projection.photo.kc-town-hall.roof-work"],
+    captionAssertionIds: [
+      "statement.photo.kc-town-hall.roof-work.context.v1",
+      "statement.photo.kc-town-hall.roof-work.capture-date.v1"
+    ],
+    creditAssertionIds: [
+      "statement.photo.kc-town-hall.roof-work.project-credit.v1",
+      "statement.photo.kc-town-hall.roof-work.custody.v1"
+    ],
+    knowledgeStatus: "bound",
+    placements: ["kc-town-hall", "work-index"],
+    publicationStatus: "jamie-authorized",
+    releaseState: {
+      publicGit: "approved",
+      staging: "approved",
+      production: "open",
+      indexing: "open"
+    },
+    publicUseBoundary:
+      "Jamie authorized this exact portfolio occurrence from the designated portfolio album. KC Town Hall receives the public courtesy credit; the image documents field work but does not establish a trade credential, ownership, completed scope, outcome, or sole authorship."
+  },
+  teamKnowledgeCollectiveSynthesis: {
+    id: "team-knowledge-collective-synthesis",
+    src: "/images/field-notes/team-knowledge-collective-synthesis.webp",
+    width: 2400,
+    height: 1600,
+    alt: "Dozens of multicolored handwritten cards arranged in loose clusters across a wooden floor, with people seated just outside the frame.",
+    caption:
+      "A shared field of handwritten cards from an NYC Artist Coalition steering-group session, February 2017.",
+    credit: "Photo courtesy of NYC Artist Coalition.",
+    wikiId: "asset.photo.nycac.collective-synthesis.2017.001",
+    derivativeId: "derivative.photo.nycac.collective-synthesis.portfolio.v1",
+    placementIds: [
+      "projection.photo.team-knowledge.collective-synthesis"
+    ],
+    captionAssertionIds: [
+      "statement.photo.collective-synthesis.context.v1",
+      "statement.photo.collective-synthesis.capture-date.v1"
+    ],
+    creditAssertionIds: [
+      "statement.photo.collective-synthesis.project-credit.v1"
+    ],
+    knowledgeStatus: "bound",
+    placements: ["team-knowledge-lab"],
+    publicationStatus: "jamie-authorized",
+    releaseState: {
+      publicGit: "approved",
+      staging: "approved",
+      production: "open",
+      indexing: "open"
+    },
+    publicUseBoundary:
+      "Jamie authorized this exact portfolio occurrence from the designated portfolio album. NYC Artist Coalition receives the public courtesy credit. The photograph shows collective language being arranged into a shared working field; it does not establish individual authorship, exact remarks, participant endorsement, project outcomes, or sole causation."
   }
 } as const satisfies Record<string, PortfolioPhoto>;
 

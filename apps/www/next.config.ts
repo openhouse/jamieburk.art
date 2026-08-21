@@ -38,11 +38,24 @@ const nextConfig: NextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   output: "standalone",
   outputFileTracingRoot: path.join(process.cwd(), "../../"),
+  experimental: {
+    cpus: 1,
+    webpackMemoryOptimizations: true
+  },
   reactStrictMode: true,
   poweredByHeader: false,
   typedRoutes: true,
+  typescript: {
+    ignoreBuildErrors: process.env.NEXT_BUILD_SKIP_VERIFIED_TYPECHECK === "1"
+  },
   images: {
-    formats: ["image/avif", "image/webp"]
+    formats: ["image/avif", "image/webp"],
+    // Cloudinary performs responsive transforms away from the single-CPU
+    // Dokku app. MediaImage marks the reviewed local fallback unoptimized.
+    loader: "custom",
+    loaderFile: "./src/lib/cloudinary-image-loader.ts",
+    deviceSizes: [384, 640, 750, 828, 1080, 1200, 1600, 1920],
+    imageSizes: [64, 96, 128, 256]
   },
   async headers() {
     return [

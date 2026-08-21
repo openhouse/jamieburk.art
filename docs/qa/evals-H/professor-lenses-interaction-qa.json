@@ -1,66 +1,67 @@
 {
-  "reportVersion": 1,
-  "checkedAt": "2026-07-28T15:31:27.601Z",
-  "baseUrl": "http://127.0.0.1:3055",
-  "publicSurfaceFingerprint": "43164a9b4f108e2d3ea4dc919aa11cd42f119e67c68e84917af61a6469af73be",
-  "publicSurfaceFileCount": 113,
-  "method": "Playwright keyboard interaction plus bounded DOM and viewport inspection on the built local candidate. This is not a human screen-reader or assistive-technology session.",
+  "reportVersion": 3,
+  "checkedAt": "2026-08-21T00:16:53.000Z",
+  "baseUrl": "http://127.0.0.1:3211",
+  "publicSurfaceFingerprint": "d61271ff62e6268f70f2e044d5b87b4b0921361b424ae63c8235d968118ce0cd",
+  "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
+  "publicSurfaceFileCount": 155,
+  "method": "Playwright keyboard interaction plus scoped DOM and viewport inspection on the exact local candidate. This is not a human screen-reader or assistive-technology session.",
   "keyboard": {
     "desktopTabSequence": [
       {
         "tag": "a",
         "text": "Skip to content",
         "href": "#main",
-        "id": null,
-        "focusVisible": true
+        "focusVisible": true,
+        "id": null
       },
       {
         "tag": "a",
         "text": "JBJamie Burkart",
         "href": "/",
-        "id": null,
-        "focusVisible": true
+        "focusVisible": true,
+        "id": null
       },
       {
         "tag": "a",
         "text": "Work",
         "href": "/work",
-        "id": null,
-        "focusVisible": true
+        "focusVisible": true,
+        "id": null
       },
       {
         "tag": "a",
         "text": "Technical Operations",
         "href": "/work/technical-operations",
-        "id": null,
-        "focusVisible": true
+        "focusVisible": true,
+        "id": null
       },
       {
         "tag": "a",
         "text": "About",
         "href": "/about",
-        "id": null,
-        "focusVisible": true
+        "focusVisible": true,
+        "id": null
       },
       {
         "tag": "a",
         "text": "Resume",
         "href": "/resume",
-        "id": null,
-        "focusVisible": true
+        "focusVisible": true,
+        "id": null
       },
       {
         "tag": "a",
         "text": "Contact",
         "href": "/contact",
-        "id": null,
-        "focusVisible": true
+        "focusVisible": true,
+        "id": null
       }
     ],
     "skipLinkIsFirst": true,
     "skipActivation": {
       "hash": "#main",
-      "activeElementId": null
+      "activeElementId": "main"
     },
     "passed": true
   },
@@ -69,16 +70,16 @@
       "tag": "summary",
       "text": "Menu",
       "href": null,
-      "id": null,
-      "focusVisible": true
+      "focusVisible": true,
+      "id": null
     },
     "menuOpen": true,
     "firstMobileMenuLink": {
       "tag": "a",
       "text": "Work",
       "href": "/work",
-      "id": null,
-      "focusVisible": true
+      "focusVisible": true,
+      "id": null
     },
     "passed": true
   },
@@ -202,5 +203,15 @@
     "Jamie visual and content approval",
     "Production deployment and indexing approval"
   ],
-  "passed": true
+  "passed": true,
+  "refresh": {
+    "candidateChange": "The six homepage capability rows changed from static entries to full-row links into matching filtered work-index states; no navigation shell, focus behavior, CSS, or route definition changed.",
+    "currentChecks": [
+      "The production-container DOM retained one main landmark and one h1.",
+      "All six capability rows expose visible, meaningful filtered work-index destinations.",
+      "Direct navigation through the first capability destination reached /work?tag=Technical%20Operations#work-index, retained one main and one h1, and exposed the Clear filter control.",
+      "The final homepage project remains 196 Artists Residency / Sunday Dinner."
+    ],
+    "carriedForwardCheck": "Keyboard, mobile-navigation, and 320/640 reflow observations remain applicable because those components did not change. The changed capability destinations and full 56-row route-width matrix were freshly exercised; no human screen-reader claim is made."
+  }
 }

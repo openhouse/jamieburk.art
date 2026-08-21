@@ -3,16 +3,23 @@ import { archiveProductionJuly2026 } from "./archive-production-2026-07.ts";
 import { callNycSocialPopulationJuly2026 } from "./callnyc-social-population-2026-07.ts";
 import { googleDriveProductionJuly2026 } from "./google-drive-production-2026-07.ts";
 import { historicalKnowledge } from "./historical-knowledge.ts";
+import { hjeChronologyAugust2026 } from "./hje-chronology-2026-08.ts";
 import { kcTownHallCouncilFunding } from "./kc-town-hall-council-funding.ts";
 import { kcTownHallFieldPractice } from "./kctownhall-field-practice.ts";
 import { kcTownHallSocialCorpus } from "./kctownhall-social-corpus.ts";
+import { kcTownHallTiredOfTiresSourceReturn } from "./kctownhall-tired-of-tires-source-return.ts";
 import { kcSpacesFundFacebookPostKnowledge } from "./kcspacesfund-facebook-posts-2026-07.ts";
 import { jamiePersonalFacebookPostKnowledge } from "./jamie-personal-facebook-posts-2026-07.ts";
 import { nycacPressArchive } from "./nycac-press-archive.ts";
+import { nycacRecentAdvocacyAugust2026 } from "./nycac-recent-advocacy-2026-08.ts";
+import { nycartcCulturalSpaceStoryAugust2026 } from "./nycartc-cultural-space-story-2026-08.ts";
+import { nycartcCulturalSpaceReelAugust2026 } from "./nycartc-cultural-space-reel-2026-08.ts";
+import { chiosseEmilyCommercialRentReelAugust2026 } from "./chiosse-emily-commercial-rent-reel-2026-08.ts";
 import { nycacFacebookEventKnowledge } from "./nycac-facebook-events-2026-07.ts";
 import { nycacFacebookPostKnowledge } from "./nycac-facebook-posts-2026-07.ts";
 import { personalWowListFacebookEventKnowledge } from "./personal-wowlist-facebook-events-2026-07.ts";
 import { participationContinuityKnowledge } from "./participation-continuity-2026-07.ts";
+import { professionalRecordAugust2026 } from "./professional-record-2026-08.ts";
 import { nycacImplementationEvidence } from "./nycac-implementation-evidence.ts";
 import { nycacInstitutionalCapacity } from "./nycac-institutional-capacity.ts";
 import { nycacSharedFolderProduction } from "./nycac-shared-folder-production-2026-07.ts";
@@ -25,6 +32,9 @@ import { socialMediaProductionJuly2026 } from "./social-media-production-2026-07
 import { urbanhermitSocialPopulationJuly2026 } from "./urbanhermit-social-population-2026-07.ts";
 import { wowListFacebookPostKnowledge } from "./wowlist-facebook-posts-2026-07.ts";
 import { wowListSocialPopulationJuly2026 } from "./wowlist-social-population-2026-07.ts";
+import { wowListSocialPracticesAugust2026 } from "./wowlist-social-practices-2026-08.ts";
+import { projectCompositionAugust2026 } from "./project-composition-2026-08.ts";
+import { wowListProductFitAugust2026 } from "./wowlist-product-fit-2026-08.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
@@ -50,12 +60,16 @@ const knowledgeBankInput = {
     ...callNycSocialPopulationJuly2026.intakeItems,
     ...googleDriveProductionJuly2026.intakeItems,
     ...historicalKnowledge.intakeItems,
+    ...hjeChronologyAugust2026.intakeItems,
     ...socialMediaProductionJuly2026.intakeItems,
     ...urbanhermitSocialPopulationJuly2026.intakeItems,
     ...wowListFacebookPostKnowledge.intakeItems,
     ...wowListSocialPopulationJuly2026.intakeItems,
+    ...wowListSocialPracticesAugust2026.intakeItems,
+    ...projectCompositionAugust2026.intakeItems,
     ...kcTownHallCouncilFunding.intakeItems,
     ...kcTownHallFieldPractice.intakeItems,
+    ...kcTownHallTiredOfTiresSourceReturn.intakeItems,
     ...kcTownHallSocialCorpus.intakeItems,
     ...kcSpacesFundFacebookPostKnowledge.intakeItems,
     ...jamiePersonalFacebookPostKnowledge.intakeItems,
@@ -66,10 +80,16 @@ const knowledgeBankInput = {
     ...nycacFacebookPostKnowledge.intakeItems,
     ...personalWowListFacebookEventKnowledge.intakeItems,
     ...participationContinuityKnowledge.intakeItems,
+    ...wowListProductFitAugust2026.intakeItems,
+    ...professionalRecordAugust2026.intakeItems,
     ...nycacSocialPopulationJuly2026.intakeItems,
     ...nycacSourceExpansion.intakeItems,
     ...nycacSourceExpansionII.intakeItems,
-    ...nycacPressArchive.intakeItems
+    ...nycacPressArchive.intakeItems,
+    ...nycacRecentAdvocacyAugust2026.intakeItems,
+    ...nycartcCulturalSpaceStoryAugust2026.intakeItems,
+    ...nycartcCulturalSpaceReelAugust2026.intakeItems,
+    ...chiosseEmilyCommercialRentReelAugust2026.intakeItems
   ],
   observations: [
     {
@@ -93,12 +113,16 @@ const knowledgeBankInput = {
     ...callNycSocialPopulationJuly2026.observations,
     ...googleDriveProductionJuly2026.observations,
     ...historicalKnowledge.observations,
+    ...hjeChronologyAugust2026.observations,
     ...socialMediaProductionJuly2026.observations,
     ...urbanhermitSocialPopulationJuly2026.observations,
     ...wowListFacebookPostKnowledge.observations,
     ...wowListSocialPopulationJuly2026.observations,
+    ...wowListSocialPracticesAugust2026.observations,
+    ...projectCompositionAugust2026.observations,
     ...kcTownHallCouncilFunding.observations,
     ...kcTownHallFieldPractice.observations,
+    ...kcTownHallTiredOfTiresSourceReturn.observations,
     ...kcTownHallSocialCorpus.observations,
     ...kcSpacesFundFacebookPostKnowledge.observations,
     ...jamiePersonalFacebookPostKnowledge.observations,
@@ -109,10 +133,16 @@ const knowledgeBankInput = {
     ...nycacFacebookPostKnowledge.observations,
     ...personalWowListFacebookEventKnowledge.observations,
     ...participationContinuityKnowledge.observations,
+    ...wowListProductFitAugust2026.observations,
+    ...professionalRecordAugust2026.observations,
     ...nycacSocialPopulationJuly2026.observations,
     ...nycacSourceExpansion.observations,
     ...nycacSourceExpansionII.observations,
-    ...nycacPressArchive.observations
+    ...nycacPressArchive.observations,
+    ...nycacRecentAdvocacyAugust2026.observations,
+    ...nycartcCulturalSpaceStoryAugust2026.observations,
+    ...nycartcCulturalSpaceReelAugust2026.observations,
+    ...chiosseEmilyCommercialRentReelAugust2026.observations
   ],
   sources: [
     {
@@ -240,12 +270,16 @@ const knowledgeBankInput = {
     ...callNycSocialPopulationJuly2026.sources,
     ...googleDriveProductionJuly2026.sources,
     ...historicalKnowledge.sources,
+    ...hjeChronologyAugust2026.sources,
     ...socialMediaProductionJuly2026.sources,
     ...urbanhermitSocialPopulationJuly2026.sources,
     ...wowListFacebookPostKnowledge.sources,
     ...wowListSocialPopulationJuly2026.sources,
+    ...wowListSocialPracticesAugust2026.sources,
+    ...projectCompositionAugust2026.sources,
     ...kcTownHallCouncilFunding.sources,
     ...kcTownHallFieldPractice.sources,
+    ...kcTownHallTiredOfTiresSourceReturn.sources,
     ...kcTownHallSocialCorpus.sources,
     ...kcSpacesFundFacebookPostKnowledge.sources,
     ...jamiePersonalFacebookPostKnowledge.sources,
@@ -256,15 +290,36 @@ const knowledgeBankInput = {
     ...nycacFacebookPostKnowledge.sources,
     ...personalWowListFacebookEventKnowledge.sources,
     ...participationContinuityKnowledge.sources,
+    ...wowListProductFitAugust2026.sources,
+    ...professionalRecordAugust2026.sources,
     ...nycacSocialPopulationJuly2026.sources,
     ...nycacSourceExpansion.sources,
     ...nycacSourceExpansionII.sources,
-    ...nycacPressArchive.sources
+    ...nycacPressArchive.sources,
+    ...nycacRecentAdvocacyAugust2026.sources,
+    ...nycartcCulturalSpaceStoryAugust2026.sources,
+    ...nycartcCulturalSpaceReelAugust2026.sources,
+    ...chiosseEmilyCommercialRentReelAugust2026.sources
   ],
-  entities: [...agencyGraph.entities, ...kcTownHallCouncilFunding.entities],
+  entities: [
+    ...agencyGraph.entities,
+    ...hjeChronologyAugust2026.entities,
+    ...kcTownHallCouncilFunding.entities,
+    ...kcTownHallTiredOfTiresSourceReturn.entities,
+    ...nycacRecentAdvocacyAugust2026.entities,
+    ...nycartcCulturalSpaceStoryAugust2026.entities,
+    ...nycartcCulturalSpaceReelAugust2026.entities,
+    ...chiosseEmilyCommercialRentReelAugust2026.entities
+  ],
   agencyRelations: [
     ...agencyGraph.agencyRelations,
-    ...kcTownHallCouncilFunding.agencyRelations
+    ...hjeChronologyAugust2026.agencyRelations,
+    ...kcTownHallCouncilFunding.agencyRelations,
+    ...kcTownHallTiredOfTiresSourceReturn.agencyRelations,
+    ...nycacRecentAdvocacyAugust2026.agencyRelations,
+    ...nycartcCulturalSpaceStoryAugust2026.agencyRelations,
+    ...nycartcCulturalSpaceReelAugust2026.agencyRelations,
+    ...chiosseEmilyCommercialRentReelAugust2026.agencyRelations
   ],
   claims: [
     {
@@ -380,12 +435,16 @@ const knowledgeBankInput = {
     ...callNycSocialPopulationJuly2026.claims,
     ...googleDriveProductionJuly2026.claims,
     ...historicalKnowledge.claims,
+    ...hjeChronologyAugust2026.claims,
     ...socialMediaProductionJuly2026.claims,
     ...urbanhermitSocialPopulationJuly2026.claims,
     ...wowListFacebookPostKnowledge.claims,
     ...wowListSocialPopulationJuly2026.claims,
+    ...wowListSocialPracticesAugust2026.claims,
+    ...projectCompositionAugust2026.claims,
     ...kcTownHallCouncilFunding.claims,
     ...kcTownHallFieldPractice.claims,
+    ...kcTownHallTiredOfTiresSourceReturn.claims,
     ...kcTownHallSocialCorpus.claims,
     ...kcSpacesFundFacebookPostKnowledge.claims,
     ...jamiePersonalFacebookPostKnowledge.claims,
@@ -396,10 +455,16 @@ const knowledgeBankInput = {
     ...nycacFacebookPostKnowledge.claims,
     ...personalWowListFacebookEventKnowledge.claims,
     ...participationContinuityKnowledge.claims,
+    ...wowListProductFitAugust2026.claims,
+    ...professionalRecordAugust2026.claims,
     ...nycacSocialPopulationJuly2026.claims,
     ...nycacSourceExpansion.claims,
     ...nycacSourceExpansionII.claims,
-    ...nycacPressArchive.claims
+    ...nycacPressArchive.claims,
+    ...nycacRecentAdvocacyAugust2026.claims,
+    ...nycartcCulturalSpaceStoryAugust2026.claims,
+    ...nycartcCulturalSpaceReelAugust2026.claims,
+    ...chiosseEmilyCommercialRentReelAugust2026.claims
   ],
   researchInquiries: [
     {
@@ -443,12 +508,16 @@ const knowledgeBankInput = {
     ...callNycSocialPopulationJuly2026.researchInquiries,
     ...googleDriveProductionJuly2026.researchInquiries,
     ...historicalKnowledge.researchInquiries,
+    ...hjeChronologyAugust2026.researchInquiries,
     ...socialMediaProductionJuly2026.researchInquiries,
     ...urbanhermitSocialPopulationJuly2026.researchInquiries,
     ...wowListFacebookPostKnowledge.researchInquiries,
     ...wowListSocialPopulationJuly2026.researchInquiries,
+    ...wowListSocialPracticesAugust2026.researchInquiries,
+    ...projectCompositionAugust2026.researchInquiries,
     ...kcTownHallCouncilFunding.researchInquiries,
     ...kcTownHallFieldPractice.researchInquiries,
+    ...kcTownHallTiredOfTiresSourceReturn.researchInquiries,
     ...kcTownHallSocialCorpus.researchInquiries,
     ...kcSpacesFundFacebookPostKnowledge.researchInquiries,
     ...jamiePersonalFacebookPostKnowledge.researchInquiries,
@@ -458,6 +527,12 @@ const knowledgeBankInput = {
     ...nycacFacebookPostKnowledge.researchInquiries,
     ...personalWowListFacebookEventKnowledge.researchInquiries,
     ...participationContinuityKnowledge.researchInquiries,
+    ...wowListProductFitAugust2026.researchInquiries,
+    ...professionalRecordAugust2026.researchInquiries,
+    ...nycacRecentAdvocacyAugust2026.researchInquiries,
+    ...nycartcCulturalSpaceStoryAugust2026.researchInquiries,
+    ...nycartcCulturalSpaceReelAugust2026.researchInquiries,
+    ...chiosseEmilyCommercialRentReelAugust2026.researchInquiries,
     ...nycacSocialPopulationJuly2026.researchInquiries,
     ...nycacSourceExpansion.researchInquiries,
     ...nycacSourceExpansionII.researchInquiries,
@@ -465,6 +540,7 @@ const knowledgeBankInput = {
   ],
   proofCoverageTargets: [...proofCoverageTargets],
   corrections: [
+    ...hjeChronologyAugust2026.corrections,
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-CHRONOLOGY-CORRECTION-2016", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" },
@@ -482,6 +558,33 @@ const knowledgeBankInput = {
         claimId: "CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY",
         projection: "archive-note",
         sourceIds: ["SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28"]
+      }
+    ]
+  }, {
+    id: "harry-j-epstein",
+    surface: "/work/harry-j-epstein",
+    sourceOrder: [
+      "SRC-THICK-ARTS-NYS-DOS-ACTIVE-CORPORATIONS",
+      "SRC-HJE-WAYBACK-STOREFRONT-2010-01-01",
+      "SRC-HJE-WAYBACK-STOREFRONT-2015-07-03",
+      "SRC-HJE-WAYBACK-STOREFRONT-REDIRECT-2015-08-01"
+    ],
+    occurrences: [
+      {
+        id: "thick-arts-formation",
+        claimId: "CLM-THICK-ARTS-FORMATION-2012-07-06",
+        projection: "case-study",
+        sourceIds: ["SRC-THICK-ARTS-NYS-DOS-ACTIVE-CORPORATIONS"]
+      },
+      {
+        id: "historic-storefront-chronology",
+        claimId: "CLM-HJE-STOREFRONT-CHRONOLOGY-2009-2015",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-HJE-WAYBACK-STOREFRONT-2010-01-01",
+          "SRC-HJE-WAYBACK-STOREFRONT-2015-07-03",
+          "SRC-HJE-WAYBACK-STOREFRONT-REDIRECT-2015-08-01"
+        ]
       }
     ]
   }, {
@@ -506,6 +609,17 @@ const knowledgeBankInput = {
       { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
     ]
   }, {
+    id: "kc-spaces-fund",
+    surface: "/work/kc-spaces-fund",
+    sourceOrder: [],
+    occurrences: [
+      {
+        id: "digital-support",
+        claimId: "CLM-KCSPACES-CROSS-CHANNEL-DIGITAL-SUPPORT",
+        projection: "case-study"
+      }
+    ]
+  }, {
     id: "fair-rent-nyc",
     surface: "/work/fair-rent-nyc",
     sourceOrder: [
@@ -517,6 +631,7 @@ const knowledgeBankInput = {
       "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12",
       "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
       "SRC-NYC-SBJSA-HEARING-2018-10-22",
+      "SRC-SBU-EMPTY-STOREFRONTS-HIGH-RENTS-REPORT-2026",
       "SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE",
       "SRC-FAIRRENTNYC-GITHUB-REPOSITORY",
       "SRC-NYCAC-CREATENYC-SUBMISSION-2017-03-17",
@@ -538,6 +653,7 @@ const knowledgeBankInput = {
       { id: "founder-operating-role", claimId: "CLM-NYCAC-FOUNDER-AND-OPERATING-ROLE", projection: "case-study", sourceIds: ["SRC-NYCAC-NPR-CABARET-2017-09-20", "SRC-NYCAC-BEDFORD-DIY-SPACES-2017-02-07", "SRC-NYCAC-SUPPORTERS-LIST"] },
       { id: "nightlife-town-hall", claimId: "CLM-NYCAC-NIGHTLIFE-TOWN-HALL-2017", projection: "case-study", sourceIds: ["SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12", "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"] },
       { id: "sbjsa-testimony", claimId: "CLM-NYCAC-SBJSA-TESTIMONY-2018", projection: "case-study", sourceIds: ["SRC-NYC-SBJSA-HEARING-2018-10-22"] },
+      { id: "sbu-report-review", claimId: "CLM-NYCAC-SBU-REPORT-REVIEW-2026", projection: "case-study", sourceIds: ["SRC-SBU-EMPTY-STOREFRONTS-HIGH-RENTS-REPORT-2026"] },
       { id: "campaign-web-implementation", claimId: "CLM-NYCAC-CAMPAIGN-WEB-IMPLEMENTATION", projection: "case-study", sourceIds: ["SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE", "SRC-FAIRRENTNYC-GITHUB-REPOSITORY"] },
       { id: "talks-not-raids-policy-arc", claimId: "CLM-NYCAC-TALKS-NOT-RAIDS-POLICY-ARC", projection: "case-study", sourceIds: ["SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE", "SRC-NYCAC-CREATENYC-SUBMISSION-2017-03-17", "SRC-NYC-MARCH-REPORT-Q1-Q2-2020", "SRC-NYC-MARCH-LOCAL-LAW-220-2019", "SRC-NYC-ONL-REPORT-2023-24"] },
       { id: "coalition-social-identity", claimId: "CLM-NYCAC-SOCIAL-IDENTITY-CONTINUITY", projection: "case-study", sourceIds: ["SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15", "SRC-NYCAC-X-PROFILE", "SRC-NYCAC-DOCUMENT-JOURNAL-2018"] },
@@ -559,6 +675,7 @@ const knowledgeBankInput = {
       "SRC-KC-TOWN-HALL-CCED-REPORT-2022-12",
       "SRC-KC-TOWN-HALL-CCED-REPORT-2023",
       "SRC-JAMIE-RESUME-KC-TOWN-HALL-2026",
+      "SRC-KCTH-TIRES-WAYBACK-2021",
       "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
       "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29",
       "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29",
@@ -598,6 +715,17 @@ const knowledgeBankInput = {
         sourceIds: ["SRC-JAMIE-RESUME-KC-TOWN-HALL-2026"]
       },
       {
+        id: "tired-of-tires-service-design",
+        claimId: "CLM-KCTH-TIRED-OF-TIRES-SERVICE-DESIGN",
+        projection: "case-study",
+        sourceIds: ["SRC-KCTH-TIRES-WAYBACK-2021"]
+      },
+      {
+        id: "tired-of-tires-measurement",
+        claimId: "CLM-KCTH-TIRED-OF-TIRES-MEASUREMENT",
+        projection: "case-study"
+      },
+      {
         id: "public-service-interface",
         claimId: "CLM-KCTH-SOCIAL-SERVICE-REPORTING",
         projection: "case-study",
@@ -611,13 +739,40 @@ const knowledgeBankInput = {
       }
     ]
   }, {
-    id: "wowlist",
-    surface: "/work/wowlist",
+    id: "technical-operations",
+    surface: "/work/technical-operations",
     sourceOrder: [
-      "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026",
       "SRC-WOWLIST-X-POPULATION-MANIFEST",
       "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
       "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+      "SRC-SBU-EMPTY-STOREFRONTS-HIGH-RENTS-REPORT-2026"
+    ],
+    occurrences: [
+      {
+        id: "wowlist-senior-product-practice",
+        claimId: "CLM-WOWLIST-SENIOR-PRODUCT-PRACTICE-2026",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-WOWLIST-X-POPULATION-MANIFEST",
+          "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
+          "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016"
+        ]
+      },
+      {
+        id: "sbu-report-review",
+        claimId: "CLM-NYCAC-SBU-REPORT-REVIEW-2026",
+        projection: "case-study",
+        sourceIds: ["SRC-SBU-EMPTY-STOREFRONTS-HIGH-RENTS-REPORT-2026"]
+      }
+    ]
+  }, {
+    id: "wowlist",
+    surface: "/work/wowlist",
+    sourceOrder: [
+      "SRC-WOWLIST-X-POPULATION-MANIFEST",
+      "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
+      "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+      "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026",
       "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
       "SRC-WOWLIST-SBDIY-ADOPTION",
       "SRC-CALLSCRIPT-FACEBOOK-PAGE",
@@ -627,6 +782,7 @@ const knowledgeBankInput = {
       "SRC-FACEBOOK-PERSONAL-WOWLIST-EVENT-CENSUS-2026"
     ],
     occurrences: [
+      { id: "senior-product-practice", claimId: "CLM-WOWLIST-SENIOR-PRODUCT-PRACTICE-2026", projection: "case-study", sourceIds: ["SRC-WOWLIST-X-POPULATION-MANIFEST", "SRC-WOWLIST-SUNDAY-DINNER-POST-2014", "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016"] },
       { id: "production-scale", claimId: "CLM-WOWLIST-PRODUCTION-SCALE-2017", projection: "case-study", sourceIds: ["SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026"] },
       { id: "social-provenance-and-support", claimId: "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT", projection: "case-study", sourceIds: ["SRC-WOWLIST-X-POPULATION-MANIFEST", "SRC-WOWLIST-SUNDAY-DINNER-POST-2014", "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016", "SRC-WOWLIST-SHELBY-TUTORIAL-2015", "SRC-WOWLIST-SBDIY-ADOPTION"] },
       { id: "callscript-participation-continuity", claimId: "CLM-CALLSCRIPT-WOWLIST-NYCAC-CONTINUITY-2017", projection: "case-study", sourceIds: ["SRC-CALLSCRIPT-FACEBOOK-PAGE", "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017-01-27", "SRC-FB-JAMIE-DCLA-DIY-SPACES-EVENT-2017-01-25", "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026"] },

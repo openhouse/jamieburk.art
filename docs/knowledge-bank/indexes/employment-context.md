@@ -5,11 +5,32 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-08-20
+review_by: 2026-08-23
 canonical_path: docs/knowledge-bank/indexes/employment-context.md
 summary: Task-oriented entry point for live opportunity research, role coverage, public-only hiring evaluation, and private-boundary rules.
 relations:
+  - type: related_to
+    target: opportunity.nyc-oti.senior-product-manager.782366
+    href: ../opportunities/oti-senior-product-manager.md
+  - type: related_to
+    target: opportunity.nyc-oti.operations-manager.789810
+    href: ../opportunities/oti-operations-manager-789810.md
+  - type: related_to
+    target: opportunity.nyc-oti.product-manager.784450
+    href: ../opportunities/oti-product-manager-784450.md
+  - type: related_to
+    target: opportunity.nyc-oti.cybersecurity-senior-project-manager.791074
+    href: ../opportunities/oti-cybersecurity-senior-project-manager-791074.md
+  - type: related_to
+    target: opportunity.nyc-cfb.associate-director-policy-implementation.792925
+    href: ../opportunities/cfb-associate-director-policy-implementation-792925.md
+  - type: related_to
+    target: opportunity.aclu.senior-project-manager-lps.8620968002
+    href: ../opportunities/aclu-senior-project-manager-lps.md
+  - type: related_to
+    target: opportunity.aclu.senior-project-manager-national-campaigns.8631854002
+    href: ../opportunities/aclu-senior-project-manager-national-campaigns.md
   - type: related_to
     target: opportunity.nyc-oti.technical-operations-manager.782369
     href: ../opportunities/oti-technical-operations.md
@@ -29,8 +50,32 @@ relations:
     target: opportunity.permitflow.product-operations.8a6e6066
     href: ../opportunities/permitflow-product-operations.md
   - type: related_to
+    target: opportunity.protected.source-backed-memory-consulting.2026
+    href: ../opportunities/source-backed-team-memory.md
+  - type: related_to
     target: evaluation.employment-context.coverage.2026-07-18
     href: ../evaluations/employment-context-coverage-2026-07-18.md
+  - type: related_to
+    target: evaluation.employment-opportunity-leadership.2026-08-13
+    href: ../evaluations/employment-opportunity-leadership-2026-08-13.md
+  - type: related_to
+    target: evaluation.oti-product-manager-search-ranking.2026-08-20
+    href: ../evaluations/oti-product-manager-search-ranking-2026-08-20.md
+  - type: related_to
+    target: person.jenn-wei
+    href: ../people/jenn-wei.md
+  - type: related_to
+    target: method.civic-match-opportunity-loop
+    href: ../methods/civic-match-opportunity-loop.md
+  - type: related_to
+    target: method.betanyc-opportunity-loop
+    href: ../methods/betanyc-opportunity-loop.md
+  - type: related_to
+    target: person.josh-gee
+    href: ../people/josh-gee.md
+  - type: related_to
+    target: person.courtney-kishbaugh
+    href: ../people/courtney-kishbaugh.md
 ---
 
 # Employment context and hiring acceptance
@@ -42,21 +87,64 @@ paths, message bodies, contact details, and real hiring outcomes remain private.
 
 ## Current priority contexts
 
-- [NYC OTI - Technical Operations Manager](../opportunities/oti-technical-operations.md)
-- [ACLU - Product Manager II, Discovery](../opportunities/aclu-product-discovery.md)
-- [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md)
-- [CodePath - Senior Program Manager, Claude Corps](../opportunities/codepath-claude-corps.md)
+- [NYC OTI - Operations Manager](../opportunities/oti-operations-manager-789810.md) — strongest combined fit and securability in the exact August 20 OTI search
+- [NYC OTI - Product Manager](../opportunities/oti-product-manager-784450.md) — strong full-lifecycle product role under the IT Project Specialist title
+- [NYC OTI - Senior Product Manager](../opportunities/oti-senior-product-manager.md) — four reopened PIT Crew positions; official deadline October 16, 2026
+- [NYC OTI - Cybersecurity Senior Project Manager](../opportunities/oti-cybersecurity-senior-project-manager-791074.md) — credible program-delivery fit with explicit cyber, tool, and certification gaps
+- [NYC Campaign Finance Board - Associate Director of Policy Implementation](../opportunities/cfb-associate-director-policy-implementation-792925.md) — strong policy-to-operations fit with formal-supervision and elections-domain questions to address directly
+- [ACLU - Senior Project Manager, Learning and Project Solutions](../opportunities/aclu-senior-project-manager-lps.md)
+- [ACLU - Senior Project Manager, National Campaigns](../opportunities/aclu-senior-project-manager-national-campaigns.md)
+
+## Other live contexts
+
 - [Asana - AI Implementation Manager](../opportunities/asana-ai-implementation.md)
+- [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md)
 - [PermitFlow - Product Operations Manager](../opportunities/permitflow-product-operations.md)
+
+## Opportunity sources
+
+- [NYC Jobs opportunity action loop](../methods/nyc-jobs-opportunity-loop.md) — public bulk discovery, revision detection, and deterministic screening before official-posting verification
+- [Civic Match opportunity relationship loop](../methods/civic-match-opportunity-loop.md) — authenticated profile discovery, invitations, saves, staff matching, events, and external-application tracking
+- [BetaNYC opportunity-source loop](../methods/betanyc-opportunity-loop.md) — weekly cross-sector civic-tech curation, issue-aware refresh, employer verification, and deterministic screening before subjective review
+- [Josh Gee](../people/josh-gee.md) and [Courtney Kishbaugh](../people/courtney-kishbaugh.md) — fictionalized public-context platform and program lenses for the Civic Match profile; not real participation or endorsement
+
+## Historical fit benchmarks
+
+- [NYC OTI - Technical Operations Manager](../opportunities/oti-technical-operations.md) — expired August 7, 2026; retain as a dream-role pattern for analogous openings
+- [ACLU - Product Manager II, Discovery](../opportunities/aclu-product-discovery.md) — closed
+- [CodePath - Senior Program Manager, Claude Corps](../opportunities/codepath-claude-corps.md) — closed
+
+## Public leadership context
+
+- [Aileen Palmer](../people/aileen-palmer.md) and [Jaclyn Chen](../people/jaclyn-chen.md) — Benepass direct-manager and company-vision context
+- [James Williams](../people/james-williams-aclu.md) and [Deirdre Schifeling](../people/deirdre-schifeling.md) — ACLU National Campaigns title-match and departmental-vision context
+- [Terence Dougherty](../people/terence-dougherty.md) — nearest named ACLU senior operational leader; the LPS direct manager remains unresolved
+- [Luke Farrell](../people/luke-farrell.md) and [Lisa Gelobter](../people/lisa-gelobter.md) — NYC PIT Crew operating-lead and commissioner-level vision context
+- [Kelly Moan](../people/kelly-moan.md) — official NYC Cyber Command senior-vision context; the Security Sciences direct manager remains unresolved
+- [Jenn Wei](../people/jenn-wei.md) — public Asana Service Management launch-team vision context; the AI Implementation Manager reporting line remains unresolved
+- [Sophie Sharps](../people/sophie-sharps.md) and [Allie Swatek](../people/allie-swatek.md) — CFB exact-title likely-direct-manager and senior policy-vision context for the Associate Director of Policy Implementation role
+
+These links document public organizational context. They do not establish
+awareness, hiring authority for a particular application, recommendation, or
+endorsement.
+
+## Conditional protected context
+
+- [Protected source-backed team-memory consulting lead](../opportunities/source-backed-team-memory.md)
+
+This node belongs in the opportunity base set but not the live-job count. Its
+metadata is anonymous, its commercial state is conditional, and its protected
+communications never enter the public hiring evaluator.
 
 ## Research a role
 
 1. Recheck the official posting.
 2. Separate confirmed facts, inferences, and unknowns.
-3. Decompose requirements into stable IDs.
-4. Map Wiki evidence, public evidence, real gaps, and one next action.
-5. Preserve hard screens and one-year team questions.
-6. Keep private relationship and application context outside the repo.
+3. Classify reporting lines as posting-confirmed, public title match, public operational proximity, or unresolved.
+4. Decompose requirements into stable IDs.
+5. Map Wiki evidence, public evidence, real gaps, and one next action.
+6. Preserve hard screens and one-year team questions.
+7. Keep private relationship and application context outside the repo.
 
 ## Evaluate the public portfolio
 
@@ -70,6 +158,8 @@ not endorsements, participation, private opinions, or hiring decisions.
 ## Reports
 
 - [Authored employment coverage baseline](../evaluations/employment-context-coverage-2026-07-18.md)
+- [Opportunity leadership and freshness evaluation](../evaluations/employment-opportunity-leadership-2026-08-13.md)
+- [OTI product-manager search comparative ranking](../evaluations/oti-product-manager-search-ranking-2026-08-20.md)
 - [Opportunity coverage](../../../reports/wiki-opportunity-coverage.md)
 - [Career trajectory coverage](../../../reports/wiki-career-trajectory-coverage.md)
 - [Source-channel coverage](../../../reports/wiki-source-channel-coverage.md)

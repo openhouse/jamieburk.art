@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "id": "public-resume-historical-fit-2026-08-20",
+  "fallbackFraction": 0.25,
+  "scoringBoundary": "Curated comparative fit for resume fallback selection only; scores are not predictions of interview, offer, or employer judgment.",
+  "opportunities": [
+    {
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "fitScore": 98
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.operations-manager.789810",
+      "fitScore": 97
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "fitScore": 95
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "fitScore": 94
+    },
+    {
+      "opportunityId": "opportunity.nyc-cfb.associate-director-policy-implementation.792925",
+      "fitScore": 93
+    },
+    {
+      "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "fitScore": 92
+    },
+    {
+      "opportunityId": "opportunity.aclu.senior-project-manager-lps.8620968002",
+      "fitScore": 90
+    },
+    {
+      "opportunityId": "opportunity.aclu.product-manager-discovery.8482872002",
+      "fitScore": 88
+    },
+    {
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "fitScore": 86
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.cybersecurity-senior-project-manager.791074",
+      "fitScore": 84
+    },
+    {
+      "opportunityId": "opportunity.asana.ai-implementation.8027437",
+      "fitScore": 82
+    },
+    {
+      "opportunityId": "opportunity.codepath.claude-corps.5182020007",
+      "fitScore": 80
+    },
+    {
+      "opportunityId": "opportunity.permitflow.product-operations.8a6e6066",
+      "fitScore": 78
+    }
+  ],
+  "humanReviewGates": [
+    "Jamie approves any comparative fit-score change.",
+    "A score does not override a hard screen or evidence gap.",
+    "The fallback activates only when private active-application input is empty and no open truthfully hirable role remains."
+  ]
+}

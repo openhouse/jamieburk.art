@@ -5,8 +5,8 @@ kind: source
 status: governed-open
 visibility: summary-only
 sensitivity: high
-last_reviewed: 2026-07-28
-review_by: 2026-08-28
+last_reviewed: 2026-08-13
+review_by: 2026-10-13
 canonical_path: docs/knowledge-bank/sources/working/current-workstream-2026-07-27.md
 summary: Public-safe metadata for protected job-search, commercial-rent, speech-preparation, and prepublication-review materials reviewed in late July 2026.
 source_kind: protected-current-work-bundle
@@ -33,10 +33,18 @@ relations:
 - The review explicitly separated methodological questions for named methods
   owners from legal-language questions for legislative staff or counsel. It
   did not present Jamie's review as an independent replication or legal review.
+- The report was subsequently released as *Empty Storefronts, High Rents*. Its
+  acknowledgement credits Jamie for thoughtful and careful draft review, and
+  protected correspondence says many of his edits were incorporated. A later
+  artifact-structure census records nineteen comments, forty-two insertion
+  elements, and fifty-three deletion elements; these counts do not measure
+  accepted-edit percentage, authorship, or causal impact.
 - A protected Commercial Rent Stabilization rehearsal connects cultural-space
   continuity, public testimony, open data, and specific institutional actions.
-  It is prepared material, not yet a delivered public statement or coalition
-  position.
+  The protected record now supports a supplied final statement and
+  participant-attested in-person participation at the July 29 release event,
+  while a named public transcript or verbatim-delivery record remains
+  unrecovered.
 - A protected conversation with Chad Berkowitz reinforces a hiring principle
   already encoded by the Chad lens: make Jamie the visible actor, translate
   technical practice into plain-language managerial capability, and select
@@ -47,8 +55,9 @@ relations:
 
 Jamie can perform careful prepublication product and data-quality review across
 research method, public claims, legislation, accessibility, attribution, and
-release operations. This remains held until the report is public or the
-commissioning team approves public attribution.
+release operations. The report is now public and supplies bounded review
+credit. Portfolio composition remains held pending Jamie's separate approval;
+publication of a source does not automatically authorize a website claim.
 
 ## Protected boundary
 

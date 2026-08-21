@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "runId": "hill-climb-1",
+  "evaluatedAt": "2026-08-20",
+  "resumeSha256": "4390f81dcab16bfa5f32c5d6698dd850703d2ef3d82938892c82af2b73ab4fbd",
+  "model": "gpt-5.6-sol",
+  "acceptanceQuestion": "I would hire this person for this job.",
+  "accessScope": "public-resume-and-public-job-context-only",
+  "passPolicy": "unanimous-named-readers-for-every-selected-opportunity",
+  "expectedReaderCount": 9,
+  "attemptedReaderCount": 1,
+  "passingReaderCount": 0,
+  "failingReaderCount": 1,
+  "complete": false,
+  "decision": "fail",
+  "stopReason": "short-circuited-after-first-failure-because-unanimous-pass-was-no-longer-possible",
+  "nonEndorsementBoundary": "These fictionalized public-context lenses are not participation, quotation, endorsement, or hiring decisions by the named people.",
+  "artifacts": [
+    {
+      "path": "evals/public-resume/runs/2026-08-20/hill-climb-1/oti-operations-lisa.json",
+      "name": "Lisa Gelobter",
+      "opportunityId": "opportunity.nyc-oti.operations-manager.789810",
+      "decision": "fail"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "suite": "live-project-websites",
+  "version": 1,
+  "asOf": "2026-08-14",
+  "principle": "A live domain is a typed evidence state, not automatic proof that a project, service, form, contact route, or individual authorship is current.",
+  "expected": {
+    "verifiedLiveProjectHomes": 10,
+    "verifiedMadeOrDirectlyImplemented": 9,
+    "creditOpen": 1,
+    "requiredRestoredSites": [
+      "site.kc-town-hall",
+      "site.wowlist",
+      "site.callnyc"
+    ]
+  },
+  "hardGates": [
+    "counts_are_derived_from_entries",
+    "canonical_project_homes_are_unique",
+    "alias_domains_do_not_inflate_the_count",
+    "credit_open_sites_are_not_counted_as_jamie_made",
+    "historical_and_archive_states_carry_cautions",
+    "portfolio_projects_link_to_their_canonical_home",
+    "restored_sites_have_dated_public_source_records"
+  ]
+}

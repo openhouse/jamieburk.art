@@ -357,9 +357,11 @@ check(
       "collaborator-led Facebook Page",
       "Do not frame Jamie as the Page publisher"
     ]) &&
-    technicalOperations.includes(
-      "Jamie built campaign web infrastructure and supported an available cross-channel identity for a collaborator-led mutual-aid campaign."
-    ) &&
+    includesAll(technicalOperations, [
+      'proofText("kc-spaces-fund-digital-infrastructure", true)',
+      "Build the shared infrastructure behind a collective response",
+      "Visit KC Spaces Fund"
+    ]) &&
     includesAll(normalizedDocs, [
       "not the stakeholder or owner posting on the Facebook Page",
       "Public organizer credit remains with Caitlin Horsmon, Jordan Carr, Kendell Harbin, and Megan Pobywajlo",

@@ -21,6 +21,8 @@ changes public claims.
   collective campaign leadership.
 - [ ] Source-Backed Team Memory does not expose private collaborator, pricing,
   transcript, or company context.
+- [ ] A protected conditional consulting lead is not presented as a formal job,
+  offer, acceptance, rejection, client relationship, or completed work.
 - [ ] Case studies use public-safe Known / Open / Protected boundaries where
   needed.
 - [ ] No raw transcripts, private notes, legal-review materials, stakeholder

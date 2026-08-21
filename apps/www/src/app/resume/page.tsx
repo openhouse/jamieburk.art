@@ -36,7 +36,9 @@ export default function ResumePage() {
             </JBButton>
           </div>
           <p className="mt-4 text-sm text-jb-ink/62">
-            Current public resume PDF. Phone remains inside the approved resume
+            This public resume is maintained for the current set of roles Jamie
+            can truthfully pursue. A specific application may use a more
+            narrowly tailored edition. Phone remains inside the approved resume
             artifact; email is available on the contact page.
           </p>
         </div>

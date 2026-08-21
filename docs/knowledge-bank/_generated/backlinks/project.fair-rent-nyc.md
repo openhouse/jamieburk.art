@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Fair Rent NYC
 
-**Source commit:** `b1d476c810fc6d434b01fdab16c23ad1b961a01f`
-**Generation time:** 2026-07-28T14:28:48-04:00
-**Source fingerprint:** `e5177833940ac1e9395c314bcb04693bdef8e3ec600800598ce57a3002d5c65f`
+**Source commit:** `2bd29f313f73f8844282dbe364b163d62544a401`
+**Generation time:** 2026-08-21T10:19:09-04:00
+**Source fingerprint:** `77a6700ed0da85d2d0ec4dcfd5fed3f8ef2d9c6dc3dd08683dd243cddead9684`
 
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `related_to` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [hur5tftl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj.md) - `related_to` (frontmatter)
@@ -27,6 +27,7 @@
 - [Commercial Rent Stabilization event at Friends and Lovers](../../events/commercial-rent-friends-and-lovers-2026-02-17.md) - `related_to` (frontmatter)
 - [Project X community conversation](../../events/commercial-rent-project-x-2026-03-10.md) - `related_to` (frontmatter)
 - [Commercial Rent Stabilization public event](../../events/commercial-rent-public-event-2025-11-13.md) - `related_to` (frontmatter)
+- [Empty Storefronts, High Rents report-release rally](../../events/empty-storefronts-high-rents-release-2026-07-29.md) - `related_to` (frontmatter)
 - [Commercial rent stabilization hearing](../../events/commercial-rent-stabilization-hearing-2021-09-17.md) - `related_to` (frontmatter)
 - [Committee on Small Business hearing on the Small Business Jobs Survival Act](../../events/small-business-job-survival-hearing-2018-10-22.md) - `related_to` (frontmatter)
 - [Int. 1796 commercial rent stabilization introduction](../../events/commercial-rent-int-1796-introduction-2019-11-14.md) - `related_to` (frontmatter)
@@ -35,6 +36,7 @@
 - [Jimmy's Corner rally for Small Business Rent Stabilization](../../events/commercial-rent-jimmys-corner-rally-2026-04-10.md) - `related_to` (frontmatter)
 - [Commercial Rent Stabilization public support](../../indexes/commercial-rent-public-support.md) - `related_to` (frontmatter)
 - [Commercial rent stabilization testimony](../../indexes/commercial-rent-testimony.md) - `related_to` (frontmatter)
+- [Live Project Websites](../../indexes/live-project-websites.md) - `related_to` (frontmatter)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `prose_link` (markdown)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `related_to` (frontmatter)
 - [Project lineages](../../indexes/project-lineages.md) - `prose_link` (markdown)
@@ -42,8 +44,13 @@
 - [NYC Artist Coalition organization map](../../organizations/nyc-artist-coalition.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
 - [Save NYC Spaces](../../projects/save-nyc-spaces.md) - `related_to` (frontmatter)
+- [NYC Artist Coalition and commercial-rent advocacy close reading, August 2026](../../research-runs/nycac-crs-30-day-close-reading-2026-08-13.md) - `related_to` (frontmatter)
 - [Active New York State commercial rent stabilization bills](../../sources/commercial-rent-public-support/active-state-bills-2025-2026.md) - `related_to` (frontmatter)
 - [Late-July 2026 current-workstream review](../../sources/working/current-workstream-2026-07-27.md) - `related_to` (frontmatter)
+- [Empty Storefronts, High Rents](../../sources/commercial-rent-public-support/empty-storefronts-high-rents-report-2026.md) - `related_to` (frontmatter)
+- [Chi Ossé and Emily Gallagher Small Business Rent Stabilization Reel](../../sources/commercial-rent-public-support/chiosse-emily-small-business-rent-reel-2026-08-05.md) - `related_to` (frontmatter)
+- [NYC Artist Coalition Cultural Space Rent Stabilization Reel](../../sources/commercial-rent-public-support/nycartc-cultural-space-reel-2026-08-16.md) - `related_to` (frontmatter)
+- [NYC Artist Coalition Cultural Space Rent Stabilization Story](../../sources/commercial-rent-public-support/nycartc-cultural-space-story-2026-08-15.md) - `related_to` (frontmatter)
 - [Jimmy's Corner rally: Small Business Rent Stabilization statements](../../testimony/commercial-rent-public-support/2026-04-10-jimmys-corner-rally-statements.md) - `related_to` (frontmatter)
 - [State sponsors and advocates introduce the Small Business Survival Act](../../testimony/commercial-rent-public-support/2026-02-17-state-introduction-statements.md) - `related_to` (frontmatter)
 - [Friends and Lovers Commercial Rent Stabilization event: speaker index](../../testimony/commercial-rent-public-support/2026-02-17-friends-and-lovers-supportive-remarks.md) - `related_to` (frontmatter)

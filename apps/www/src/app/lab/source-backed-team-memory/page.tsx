@@ -1,19 +1,22 @@
-import Image from "next/image";
 import type { Metadata } from "next";
 import SourceBackedMemory from "@/content/lab/source-backed-team-memory.mdx";
 import { Cite, Claim, References } from "@/components/citations";
 import { JBButton } from "@/components/JBButton";
+import { MediaImage } from "@/components/MediaImage";
+import { portfolioPhotos } from "@/data/photography";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
-  title: "Source-Backed Team Memory - Jamie Burkart",
+  title: "Knowledge Wiki Graph - Jamie Burkart",
   description:
-    "A lab / proof-of-practice exploring source-backed operating memory, decision lineage, onboarding context, and human-correctable AI workflows.",
+    "A working research method connecting project meaning, supporting evidence, responsible source custody, evaluations, and human review.",
   path: "/lab/source-backed-team-memory"
 });
 
 export default function SourceBackedTeamMemoryPage() {
+  const collectiveSynthesisPhoto =
+    portfolioPhotos.teamKnowledgeCollectiveSynthesis;
   const workedExample = [
     {
       label: "Known",
@@ -34,7 +37,7 @@ export default function SourceBackedTeamMemoryPage() {
       <div className="jb-reading">
         <p className="text-sm font-semibold uppercase text-jb-blue">Lab / method</p>
         <h1 className="mt-3 text-5xl font-bold text-jb-ink">
-          Source-Backed Team Memory
+          Knowledge Wiki Graph
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
           <Claim
@@ -45,11 +48,78 @@ export default function SourceBackedTeamMemoryPage() {
         </p>
         <div className="mt-6 rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">
           <p className="leading-7 text-jb-ink/76">
-            Early research / method / consulting practice. Not a finished
-            production SaaS, chatbot, surveillance system, AI replacement for
-            judgment, or private archive browser.
+            Working research and operating method within Jamie&apos;s project
+            ecosystem. Not a finished production SaaS, client deployment,
+            chatbot, surveillance system, AI replacement for judgment, or
+            private archive browser.
           </p>
         </div>
+        <section className="mt-10 border-y border-jb-ink/12 py-8">
+          <p className="text-sm font-semibold uppercase text-jb-blue">
+            Proposed first engagement
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold text-jb-ink">
+            One approved source. One useful team-memory test.
+          </h2>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-jb-ink/76">
+            If product reasoning, decisions, open questions, or onboarding
+            context are getting lost, I can help the team test a practical
+            source-backed memory pattern without introducing a new platform or
+            asking for broad system access.
+          </p>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            <div className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
+              <h3 className="text-xl font-semibold text-jb-blue">The need</h3>
+              <p className="mt-3 text-sm leading-6 text-jb-ink/74">
+                Make important context recoverable without flattening the
+                team&apos;s thinking or creating a second bureaucracy.
+              </p>
+            </div>
+            <div className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
+              <h3 className="text-xl font-semibold text-jb-blue">
+                What I will deliver
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-jb-ink/74">
+                A knowledge-friction map, one source-linked memory artifact,
+                a correction path, and a practical success signal.
+              </p>
+            </div>
+            <div className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
+              <h3 className="text-xl font-semibold text-jb-blue">
+                What you can decide
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-jb-ink/74">
+                At the end of a small paid discovery and prototype: continue,
+                revise, or stop with a useful record of what the team learned.
+              </p>
+            </div>
+          </div>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <JBButton href="/resume" variant="secondary">
+              View Jamie&apos;s resume
+            </JBButton>
+            <JBButton href={site.emailHref}>
+              Discuss the first engagement
+            </JBButton>
+          </div>
+        </section>
+        <figure className="mt-10 overflow-hidden rounded-lg border border-jb-ink/12 bg-jb-paper">
+          <MediaImage
+            alt={collectiveSynthesisPhoto.alt}
+            className="aspect-[3/2] h-auto w-full object-cover"
+            height={collectiveSynthesisPhoto.height}
+            priority
+            sizes="(min-width: 1024px) 768px, 100vw"
+            src={collectiveSynthesisPhoto.src}
+            width={collectiveSynthesisPhoto.width}
+          />
+          <figcaption className="border-t border-jb-ink/10 p-4 text-sm leading-6 text-jb-ink/76">
+            {collectiveSynthesisPhoto.caption}{" "}
+            <span className="whitespace-nowrap">
+              {collectiveSynthesisPhoto.credit}
+            </span>
+          </figcaption>
+        </figure>
         <div className="mt-10 space-y-6">
           <SourceBackedMemory />
         </div>
@@ -114,7 +184,7 @@ export default function SourceBackedTeamMemoryPage() {
         </section>
         <section className="mt-12 grid gap-6 border-b border-jb-ink/12 pb-10 lg:grid-cols-[0.58fr_0.42fr] lg:items-center">
           <figure className="overflow-hidden rounded-lg border border-jb-ink/12 bg-jb-paper">
-            <Image
+            <MediaImage
               alt="Certificate of completion for AI Evals for Engineers and PMs, awarded to James Burkart by Hamel Husain and Shreya Shankar through Maven."
               className="h-auto w-full"
               height={584}
@@ -154,7 +224,7 @@ export default function SourceBackedTeamMemoryPage() {
             View selected work
           </JBButton>
           <JBButton href={site.emailHref}>
-            Discuss a bounded source-backed memory sprint
+            Discuss a focused source-backed memory sprint
           </JBButton>
         </div>
       </div>

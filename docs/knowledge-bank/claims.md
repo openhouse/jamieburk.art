@@ -18,20 +18,35 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## hje-first-client-chronology - First client and storefront chronology
+
+**Status:** Ready
+**Support level:** Moderate
+**Evidence class:** Jamie review confirmation / public Archive.org captures
+**Public wording:** Jamie's Harry J. Epstein Company work began in 2009. He formalized the practice as Thick Arts LLC in 2012, with HJE as the LLC's first client, and continued the engagement through the 2015 storefront transition.
+**Detailed public-safe wording:** Jamie states that his HJE work began in 2009 and that he formalized the practice as Thick Arts LLC during the engagement, with HJE as its first client. New York State records the LLC's initial filing on July 6, 2012. Archive.org first observed the commerce host in January 2010, preserves a functioning storefront through July 2015, and records its redirect to a successor site by August 2015.
+**Where to project:** Work card and case study.
+**Why it matters:** Corrects the public chronology while showing an early client relationship and a completed transition rather than implying current stewardship.
+**Guardrail:** Keep the 2009 work start, July 6, 2012 LLC formation, 2009-2015 client engagement, January 2010-July 2015 archive observation bounds, and successor website distinct.
+**Do not say:** 2012-Present; the HJE work began when Thick Arts LLC was formed in 2012; Archive.org proves the exact contract dates; Jamie currently maintains the successor website; public sources independently prove the first-client relationship.
+**Protected boundaries:** Contracts, invoices, billing records, private correspondence, and private company records beyond the normalized public formation entry stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-08-14
+
 ## hje-modernization-stewardship - Legacy e-commerce modernization
 
 **Status:** Ready  
 **Support level:** Strong  
-**Evidence class:** Approved resume / public project artifact / public-safe archive summary  
+**Evidence class:** Approved resume / public Archive.org captures / successor-site business context / public-safe archive summary
 **Public wording:** Led long-running web, e-commerce, analytics, marketing, content, and operational workflow improvements that helped an 80+ year-old industrial business adapt online.
 **Detailed public-safe wording:** Jamie maintained and improved the company's web and e-commerce presence, coordinated incremental releases, and translated legacy operating knowledge into searchable content, analytics, marketing, and operational workflows while preserving its public voice.
 **Where to project:** Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-term implementation, stakeholder translation, and operating-system work in a real business environment.  
-**Guardrail:** Use stewardship and contribution language.  
+**Guardrail:** Use stewardship and contribution language in the historical 2009-2015 engagement; do not imply present maintenance of the successor site.
 **Do not say:** Jamie fully owned the business, owned all growth, or replaced the company's institutional knowledge.  
 **Protected boundaries:** Private dashboards, credentials, customer data, revenue detail, vendor terms, and sensitive operating practices stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-08-14
 
 ## hje-revenue-growth-contribution - Revenue growth contribution
 
@@ -128,15 +143,15 @@ claim beyond the wording and guardrails here.
 **Status:** Careful
 **Support level:** Careful  
 **Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context  
-**Public wording:** Co-built and operated WOWList.org, a community-calendar platform for DIY arts and music organizers. A July 2017 production snapshot records 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts.
-**Detailed public-safe wording:** WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.  
+**Public wording:** Co-built and operated WOWList.org across roughly 35 city ecosystems, supporting DIY arts and music organizers with community calendars, websites, and email distribution.
+**Detailed public-safe wording:** WOWList supported local organizers across roughly 35 city ecosystems with followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for community publishing.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows public-facing platform delivery, community workflows, and product operations for real organizers.  
-**Guardrail:** Use approximate adoption language and do not describe city activity as official chapters.  
+**Guardrail:** Lead public hiring surfaces with the roughly 35-city-ecosystem scope rather than database row counts. Use approximate adoption language and do not describe city activity as official chapters.
 **Do not say:** Official chapters in 35 cities; full ownership of all organizer adoption; current active platform unless confirmed.  
 **Protected boundaries:** Private user data, organizer contact lists, raw records, geolocation rows, and unapproved community artifacts stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-08-20
 
 ## sunday-dinner-196-participation-infrastructure - Participation infrastructure
 
@@ -268,20 +283,20 @@ bundle.
 **Do not say:** Jamie alone created the program; Jamie originated Pastor Lee's vision; the program caused a specific allocation; hundreds of handbills are independently verified.
 **Research inquiry:** `INQ-KCTH-CLEVELAND-UNIFY-TO-BEAUTIFY`
 
-## source-backed-team-memory-method - Source-backed team memory
+## source-backed-team-memory-method - Knowledge Wiki Graph / source-backed team memory
 
 **Status:** Careful  
 **Support level:** Moderate  
-**Evidence class:** Public-safe lab materials / proposal-derived public-safe method summary  
-**Public wording:** Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.  
-**Detailed public-safe wording:** The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.  
+**Evidence class:** Public repository architecture records / public-safe lab materials / proposal-derived public-safe method summary
+**Public wording:** Developing the Knowledge Wiki Graph: a working source-backed team-memory method connecting project meaning, supporting evidence, responsible source custody, evaluations, and human review.
+**Detailed public-safe wording:** The method keeps semantic meaning, supporting evidence, and responsible source custody distinct; evaluations and human review govern audience-specific projections while Known, Open, and Protected states preserve uncertainty and privacy.
 **Where to project:** Lab page, Technical Operations, future consulting materials after approval.  
-**Why it matters:** Shows Jamie's knowledge-systems direction while keeping AI and archive claims bounded.  
-**Guardrail:** Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.  
-**Do not say:** Built a production AI memory platform for a client; automated trust; replaces human review.  
-**Protected boundaries:** Do not name private collaborators, publish pricing, publish private transcript excerpts, or publish private company context.  
+**Why it matters:** Shows Jamie's current knowledge-systems research and operating practice while preserving human authority and source responsibilities.
+**Guardrail:** Working research method inside Jamie's project ecosystem. Not external client adoption, finished SaaS, a chatbot, a private archive browser, or a replacement for human judgment.
+**Do not say:** Built a production AI memory platform for a client; automated trust; replaces human review; passing an evaluation authorizes publication.
+**Protected boundaries:** Do not name private collaborators, publish pricing, publish private transcript excerpts, publish private company context, or expose private repository topology and protected source locators.
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-08-20
 
 ## horse-lords-truthers-video-2016 - Shared video credit
 
@@ -350,7 +365,7 @@ bundle.
 **Evidence class:** Public certificate artifact
 **Public wording:** Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain through Maven.
 **Detailed public-safe wording:** A public certificate records James Burkart's course completion and identifies the course, instructors, and Maven platform.
-**Where to project:** Source-Backed Team Memory lab page.
+**Where to project:** Knowledge Wiki Graph / Source-Backed Team Memory lab page.
 **Why it matters:** Grounds the lab's evaluation practice in relevant completed professional development.
 **Guardrail:** Course completion is not an evaluator license, instructor affiliation, employment, or endorsement.
 **Do not say:** Jamie is certified as an AI evaluator; Jamie teaches the course; the instructors endorse Jamie's method.

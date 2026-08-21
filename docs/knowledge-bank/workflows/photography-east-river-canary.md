@@ -5,7 +5,7 @@ kind: method
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-28
+last_reviewed: 2026-08-15
 review_by: 2027-01-26
 canonical_path: docs/knowledge-bank/workflows/photography-east-river-canary.md
 summary: Teammate tutorial for tracing, validating, correcting, revoking, and safely extending the first complete photo knowledge occurrence without access to private archive details.
@@ -52,9 +52,9 @@ Check that:
 ## 3. Review permission without opening private correspondence
 
 Open the [permission capsule](../sources/permissions/elana-gordon-east-river-portfolio-2026.md).
-The public capsule states destination, context, exact credit, transform scope,
-revocability, and release gates. It must not contain messages, contact details,
-private paths, or protected locators.
+The public capsule states destination, context, the exact credit policy and
+selected placements, transform scope, revocability, and release gates. It must
+not contain messages, contact details, private paths, or protected locators.
 
 An authorized local operator may verify the private binding without printing
 its contents:

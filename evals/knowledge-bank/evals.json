@@ -462,7 +462,7 @@
       "expectedSourceCount": 6,
       "expectedClaimCount": 2,
       "expectedInquiryCount": 4,
-      "approvedContentSha256": "c0f786efb1778b126226029acb18a4c84610ef3194448ad840e32b6de3d5738e",
+      "approvedContentSha256": "f385e4368c1bc0205bc460f35983d7ebbd5096108e0bd8c8655a27edcb918672",
       "intakeIds": [
         "INTAKE-196-RESIDENCY-ACCEPTANCE-WORKFLOW-2023",
         "INTAKE-SUNDAY-DINNER-OPERATIONS-SHEET-2025",
@@ -1071,9 +1071,9 @@
       "proofId": "nyc-artist-coalition-public-web-infrastructure"
     },
     "agencyGraph": {
-      "expectedEntityCount": 32,
-      "expectedRelationCount": 34,
-      "approvedGraphSha256": "5471c699a6f92a46f974dcbe898f89cf101dff44ea646d51d61c6752e8ede829",
+      "expectedEntityCount": 37,
+      "expectedRelationCount": 38,
+      "approvedGraphSha256": "d342f53818fb8e2d269ad044469637db82bfa90e5edbf3a8d77e29920481ef84",
       "relationIds": [
         "REL-WATERWAYS-RAFT-ORIGIN",
         "REL-GREAT-ACCOMMODATIONS-SPEARHEADED",
@@ -1108,7 +1108,11 @@
         "REL-KC-COUNCIL-ACCEPTED-TOWN-HALL-RECOMMENDATION",
         "REL-KC-COUNCIL-APPROPRIATED-TOWN-HALL-FUNDS",
         "REL-KC-TOWN-HALL-WITHDREW-CCED-PROJECT",
-        "REL-KC-COUNCIL-RECLAIMED-TOWN-HALL-APPROPRIATION"
+        "REL-KC-COUNCIL-RECLAIMED-TOWN-HALL-APPROPRIATION",
+        "REL-JAMIE-SBU-REPORT-REVIEW-2026",
+        "REL-JAMIE-SBU-RALLY-SPEAKING-2026",
+        "REL-JAMIE-MARTE-OFFICE-COORDINATION-2026",
+        "REL-JAMIE-GALLAGHER-OFFICE-COORDINATION-2026"
       ],
       "enactedRelationIds": [
         "REL-COUNCIL-OFFICE-ENACTMENT",
@@ -1200,6 +1204,13 @@
       "weight": 0.15,
       "minimumScore": 5,
       "intent": "Contribution records make each actor, action, purpose, result, source, and boundary explicit while separating Jamie's work, shared work, coalition action, and institutional enactment."
+    },
+    {
+      "id": "KB-EVAL-HJE-CLIENT-CHRONOLOGY",
+      "label": "Harry J. Epstein client and storefront chronology",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "The portfolio states that Jamie's HJE work began in 2009, that he formalized it as Thick Arts LLC during the engagement, that New York State independently records the LLC's initial filing on July 6, 2012, that HJE was the LLC's first client, and that the relationship continued through the 2015 storefront transition. It distinguishes official formation evidence, Jamie's first-party relationship account, Archive.org observation bounds, and the successor site."
     },
     {
       "id": "KB-EVAL-PRESS-ARCHIVE",

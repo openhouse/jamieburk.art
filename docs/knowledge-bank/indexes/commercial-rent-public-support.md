@@ -5,8 +5,8 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-28
-review_by: 2026-10-28
+last_reviewed: 2026-08-13
+review_by: 2026-11-13
 canonical_path: docs/knowledge-bank/indexes/commercial-rent-public-support.md
 summary: Public-safe speaker indexes, official state sources, active bill records, and explicit gaps around Commercial Rent Stabilization.
 relations:
@@ -62,6 +62,52 @@ account for every attributed speaker in each official New York State Senate
 release and link the complete official wording. They are not represented as
 rally or floor transcripts.
 
+## July 2026 report and release
+
+Small Business United and partner organizations released
+[*Empty Storefronts, High Rents*](../sources/commercial-rent-public-support/empty-storefronts-high-rents-report-2026.md)
+at a [July 29 rally and press conference](../events/empty-storefronts-high-rents-release-2026-07-29.md).
+The report names its lead author/data analyst and other contributors and credits
+Jamie Burkart for thoughtful and careful draft review. Protected provenance
+records that many of Jamie's detailed edits were incorporated.
+
+The evidence supports bounded pre-publication review, not authorship,
+independent methods validation, legal approval, or sole causation. Protected
+records support a scheduled speaking role, supplied remarks, and
+participant-attested in-person participation. A named public transcript,
+organizer caption, or press quotation of Jamie was not recovered, so the event
+is not added to the formal public-speaker population above.
+
+## August 2026 public videos
+
+On August 5, Council Member Chi Ossé and Assembly Member Emily Gallagher
+published a joint [Small Business Rent Stabilization Act
+Reel](../sources/commercial-rent-public-support/chiosse-emily-small-business-rent-reel-2026-08-05.md).
+The complete campaign archive preserves separate attributable statement records
+and a corrected 32-turn diarized transcript. The Wiki treats this as state-bill
+campaign context, not a Jamie-authored artifact or an active portfolio
+projection.
+
+On August 15, the NYC Artist Coalition published a 31-second
+[Cultural Space Rent Stabilization Story](../sources/commercial-rent-public-support/nycartc-cultural-space-story-2026-08-15.md)
+using an edited excerpt of Jamie Burkart's May 19 Wonderville remarks. It joins
+cultural-space continuity and collective agency to a call for action by both
+Albany and the New York City Council.
+
+On August 16, the coalition published a distinct [Cultural Space Rent
+Stabilization Reel](../sources/commercial-rent-public-support/nycartc-cultural-space-reel-2026-08-16.md)
+using the same decoded audio with a different public caption and visual
+treatment. The caption thanks Fair Rent NYC legislative sponsors and invites
+organizers to an August 18 meetup. Named sponsors remain acknowledgement
+metadata rather than newly recovered statements by each official; the
+invitation does not establish later attendance or endorsement.
+
+Each source edition is pinned to an immutable archive commit and its media
+checksum. Coalition-account publication does not
+establish sole individual editorial authorship, and tagged accounts or sponsor
+acknowledgements are not represented as endorsements. Editorially corrected
+diarized transcripts remain subject to final human listening/approval.
+
 ## Population and gaps
 
 The machine-readable [corpus ledger](../data/commercial-rent-public-support-corpus-2026-07-28.json)
@@ -71,8 +117,9 @@ counted for the named speakers in the bounded formal program, or every
 attributed speaker is indexed from the named official release.
 
 The remaining queue includes future state proceedings, additional public-event
-recordings, and the unclassified remainder of the Project X event. Absence from
-this index is not evidence of opposition or nonparticipation.
+recordings, the unclassified remainder of the Project X event, and public
+corroboration of Jamie's July 29 delivered remarks or supplied press quote.
+Absence from this index is not evidence of opposition or nonparticipation.
 
 ## Editorial boundary
 

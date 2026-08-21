@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import test from "node:test";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { citationNoteId, getClaimProjection, publicCitationRegistry, resolveCitationOccurrence, resolveCitationReferences } from "../../apps/www/src/data/knowledge-bank/public.ts";
@@ -64,13 +64,49 @@ test("Claim resolver returns only active approved projections", () => {
   assert.throws(() => getClaimProjection("CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", "resume-html", "/work"), /not approved/);
 });
 
+test("every public work Claim matches a generated page occurrence and active projection", () => {
+  const publicClaimIds = new Set(publicCitationRegistry.claims.map((claim) => claim.id));
+  const workClaims = readdirSync("apps/www/src/content/work")
+    .filter((name) => name.endsWith(".mdx"))
+    .flatMap((name) =>
+      [...readFileSync(`apps/www/src/content/work/${name}`, "utf8").matchAll(/<Claim\s+([\s\S]*?)\/>/g)]
+        .map((match) => Object.fromEntries(
+          [...match[1].matchAll(/(claimId|projection|surface|pageId|occurrenceId)="([^"]+)"/g)]
+            .map((attribute) => [attribute[1], attribute[2]])
+        ))
+    );
+
+  assert.deepEqual(
+    [...new Set(workClaims.map(({ claimId }) => claimId))].filter((claimId) => !publicClaimIds.has(claimId)),
+    [],
+    "Run npm run generate:citations after registering each work-page claim occurrence."
+  );
+
+  for (const workClaim of workClaims) {
+    if (!workClaim.pageId && !workClaim.occurrenceId) {
+      assert.doesNotThrow(() => getClaimProjection(workClaim.claimId, workClaim.projection, workClaim.surface));
+      continue;
+    }
+    const page = publicCitationRegistry.pages.find((item) => item.id === workClaim.pageId);
+    const occurrence = page?.occurrences.find((item) => item.id === workClaim.occurrenceId);
+    assert.equal(page?.surface, workClaim.surface, `${workClaim.pageId} must govern ${workClaim.surface}`);
+    assert.equal(occurrence?.claimId, workClaim.claimId, `${workClaim.pageId}/${workClaim.occurrenceId} must bind ${workClaim.claimId}`);
+    assert.equal(occurrence?.projection, workClaim.projection, `${workClaim.pageId}/${workClaim.occurrenceId} must bind ${workClaim.projection}`);
+    assert.doesNotThrow(() => getClaimProjection(workClaim.claimId, workClaim.projection, workClaim.surface));
+  }
+});
+
 test("corrections retire old wording from public surfaces", () => {
-  const text = ["apps/www/src/content/work/callnyc.mdx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts", "apps/www/src/app/resume/page.tsx"].map((path) => readFileSync(path, "utf8")).join("\n");
-  assert.doesNotMatch(text, /first civic-data hackathon|2014[-–]2015/i);
-  assert.equal(knowledgeBank.corrections.length, 4);
+  const text = ["apps/www/src/content/work/callnyc.mdx", "apps/www/src/content/work/harry-j-epstein.mdx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts", "apps/www/src/app/resume/page.tsx"].map((path) => readFileSync(path, "utf8")).join("\n");
+  assert.doesNotMatch(text, /first civic-data hackathon|2014[-–]2015|years:\s*["']2012-Present["']/i);
   assert.ok(knowledgeBank.corrections.some((correction) =>
     correction.id === "COR-NYCAC-CABARET-HEARING-DATE-2026" &&
     correction.replacementText === "September 14, 2017"
+  ));
+  assert.ok(knowledgeBank.corrections.some((correction) =>
+    correction.id === "COR-HJE-TIMEFRAME-2026" &&
+    correction.previousText === "2012-Present" &&
+    correction.replacementText === "2009-2015"
   ));
 });
 

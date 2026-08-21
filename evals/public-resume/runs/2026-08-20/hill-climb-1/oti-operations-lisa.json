@@ -1,0 +1,41 @@
+{
+  "file": "oti-operations-lisa.json",
+  "opportunityId": "opportunity.nyc-oti.operations-manager.789810",
+  "personId": "person.lisa-gelobter",
+  "name": "Lisa Gelobter",
+  "relationship": "senior-vision",
+  "resumeSha256": "4390f81dcab16bfa5f32c5d6698dd850703d2ef3d82938892c82af2b73ab4fbd",
+  "acceptanceQuestion": "I would hire this person for this job.",
+  "decision": "fail",
+  "wouldHire": false,
+  "simulatedPublicFigureLens": true,
+  "nonEndorsementBoundary": "This fictionalized public-context lens is not participation, quotation, endorsement, or a hiring decision by the named person.",
+  "access": {
+    "scope": "public-resume-and-public-job-context-only",
+    "repositoryAccess": false,
+    "privateSourceAccess": false
+  },
+  "strengths": [
+    "14+ years of relevant project, product-operations, implementation, and civic-technology experience",
+    "Strong evidence of cross-functional coordination, plain-language communication, documentation, launch operations, and public-facing digital delivery",
+    "Demonstrated NYC civic context and alignment with dignified resident experiences, accountable delivery, and reusable institutional knowledge",
+    "Some budget-adjacent evidence, including securing a $490,539 public award and coordinating vendors and municipal compliance"
+  ],
+  "risks": [
+    "Resume does not establish direct ownership of expense and capital budgets",
+    "Insufficient evidence of government procurement, contracting, sourcing, or legal and cybersecurity coordination",
+    "No clear evidence of workforce planning, personnel procurement, resource allocation across a sizable team, or new-hire onboarding",
+    "Most experience appears founder-led or coalition-based; scope of formal organizational authority, operating cadence, and team accountability is unclear",
+    "Reported outcomes do not sufficiently demonstrate management of the internal support-function portfolio central to this role"
+  ],
+  "interviewEvidenceNeeded": [
+    "Examples showing direct budget ownership, forecasting, reconciliation, and variance management, especially for expense and capital budgets",
+    "Specific responsibility for public-sector contracts, procurement cycles, vendor selection, statements of work, and approvals",
+    "Evidence of coordinating legal, cybersecurity, sourcing, finance, and HR dependencies for multiple concurrent digital projects",
+    "Examples of capacity planning, resource allocation, work-intake governance, hiring support, and employee onboarding",
+    "Operational dashboards or reporting that influenced executive decisions about team health, portfolio status, risks, and staffing"
+  ],
+  "rationale": "The resume provides credible evidence of senior cross-functional product delivery, civic systems work, and disciplined operational documentation. However, the exact role centers internal portfolio operations—particularly budgets, procurement, contracts, staffing, resource allocation, onboarding, and coordination with institutional support functions. The resume offers only partial or adjacent evidence in these areas. Under the required resume-alone gate, that is not enough to conclude that I would hire this person for this job.",
+  "model": "gpt-5.6-sol",
+  "evaluatedAt": "2026-08-20"
+}

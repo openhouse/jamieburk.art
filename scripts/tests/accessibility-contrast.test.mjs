@@ -57,3 +57,33 @@ test("the lowest shared ink opacity remains AA on paper", () => {
   assert.ok(ink && paper);
   assert.ok(contrast(blend(ink, paper, 0.62), paper) >= 4.5);
 });
+
+test("the global focus ring meets non-text contrast on white", () => {
+  const tokens = readFileSync(path.join(repoRoot, "apps/www/src/styles/tokens.css"), "utf8");
+  const styles = readFileSync(path.join(repoRoot, "apps/www/src/app/globals.css"), "utf8");
+  const blue = tokens.match(/--jb-broadway-blue:\s*(#[0-9a-f]{6})/i)?.[1];
+  const paper = tokens.match(/--jb-oil-white:\s*(#[0-9a-f]{6})/i)?.[1];
+  assert.ok(blue && paper);
+  assert.ok(contrast(blue, paper) >= 3);
+  assert.ok(styles.includes("outline: 3px solid var(--jb-broadway-blue)"));
+});
+
+test("the resume action keeps an inverse foreground on its blue panel", () => {
+  const button = readFileSync(path.join(repoRoot, "apps/www/src/components/JBButton.tsx"), "utf8");
+  const resume = readFileSync(path.join(repoRoot, "apps/www/src/components/ResumeCTA.tsx"), "utf8");
+  const styles = readFileSync(path.join(repoRoot, "apps/www/src/app/globals.css"), "utf8");
+
+  assert.match(resume, /variant="inverse"/);
+  assert.match(button, /inverse:[\s\S]*border-jb-paper[\s\S]*text-jb-paper[\s\S]*hover:bg-jb-paper[\s\S]*hover:text-jb-blue/);
+  assert.match(button, /inverse:[\s\S]*jb-button-inverse/);
+  assert.match(styles, /\.jb-button-inverse:focus-visible\s*\{[^}]*background:\s*var\(--jb-broadway-blue\);[^}]*border-color:\s*var\(--jb-oil-white\);[^}]*color:\s*var\(--jb-oil-white\);[^}]*outline:\s*3px solid var\(--jb-oil-white\);[^}]*outline-offset:\s*3px;/s);
+});
+
+test("the skip link is immediately visible on focus and transfers focus to main", () => {
+  const styles = readFileSync(path.join(repoRoot, "apps/www/src/app/globals.css"), "utf8");
+  const layout = readFileSync(path.join(repoRoot, "apps/www/src/app/layout.tsx"), "utf8");
+
+  assert.match(styles, /\.skip-link\s*\{[^}]*top:\s*-10rem;[^}]*transition:\s*none;/s);
+  assert.match(styles, /\.skip-link:focus(?:-visible)?\s*\{[^}]*top:\s*1rem;/s);
+  assert.match(layout, /<main id="main" tabIndex=\{-1\}>/);
+});

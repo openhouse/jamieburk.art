@@ -22,6 +22,7 @@ const transcriptDirectory = path.join(
 );
 const evaluationRunDirectory = path.join(repoRoot, "docs/evals/runs");
 const evaluationQaDirectory = path.join(repoRoot, "docs/qa");
+const publicFontDirectory = path.join(repoRoot, "apps/www/public/fonts");
 
 test("public transcript indexes contain metadata and locators, not raw speech", () => {
   const roots = [
@@ -116,6 +117,32 @@ test("the public-safety gate scans the complete published QA evidence tree", () 
         ),
       (error) =>
         /published evaluation evidence contains a private local filesystem locator/.test(
+          error.stderr?.toString() ?? ""
+        )
+    );
+  } finally {
+    if (existsSync(mutationPath)) unlinkSync(mutationPath);
+  }
+});
+
+test("the public-safety gate rejects a font outside the reviewed public-license allowlist", () => {
+  mkdirSync(publicFontDirectory, { recursive: true });
+  const mutationPath = path.join(publicFontDirectory, "__unapproved__.ttf");
+  try {
+    writeFileSync(mutationPath, "not a reviewed public font");
+    assert.throws(
+      () =>
+        execFileSync(
+          process.execPath,
+          [path.join(repoRoot, "scripts/check-public-safety.mjs")],
+          {
+            cwd: repoRoot,
+            encoding: "utf8",
+            stdio: ["ignore", "pipe", "pipe"]
+          }
+        ),
+      (error) =>
+        /font file is not on the approved public-license allowlist/.test(
           error.stderr?.toString() ?? ""
         )
     );

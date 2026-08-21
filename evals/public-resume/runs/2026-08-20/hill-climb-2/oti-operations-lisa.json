@@ -1,0 +1,44 @@
+{
+  "file": "oti-operations-lisa.json",
+  "opportunityId": "opportunity.nyc-oti.operations-manager.789810",
+  "personId": "person.lisa-gelobter",
+  "name": "Lisa Gelobter",
+  "relationship": "senior-vision",
+  "resumeSha256": "07284cc3242ba15200b7c4fd1e4620b387ffcc6a1641daa6259ff98720689662",
+  "acceptanceQuestion": "I would hire this person for this job.",
+  "decision": "fail",
+  "wouldHire": false,
+  "simulatedPublicFigureLens": true,
+  "nonEndorsementBoundary": "This fictionalized public-context lens is not participation, quotation, endorsement, or a hiring decision by the named person.",
+  "access": {
+    "scope": "public-resume-and-public-job-context-only",
+    "repositoryAccess": false,
+    "privateSourceAccess": false
+  },
+  "strengths": [
+    "14+ years of relevant product, implementation, and operational leadership",
+    "Strong cross-functional coordination across technical, civic, policy, communications, and operations stakeholders",
+    "Evidence of public-interest technology delivery, plain-language communication, process documentation, metrics, and durable handoffs",
+    "Some relevant municipal compliance, vendor coordination, public-funding, resource-tracking, and field-operations experience",
+    "Demonstrated alignment with dignified resident experiences, accountable delivery, and iterative learning"
+  ],
+  "risks": [
+    "Resume does not establish direct ownership of expense and capital budgets at the scale or complexity implied by the role",
+    "Insufficient evidence of hands-on government contracting, procurement workflows, sourcing, or contract administration",
+    "Little explicit evidence of coordinating legal, cybersecurity, budget, procurement, and personnel support functions simultaneously",
+    "Resource allocation, capacity planning, portfolio-level work intake, and team-health reporting are asserted more than demonstrated with scope or outcomes",
+    "No clear evidence of operational responsibility for hiring and onboarding employees",
+    "Founder and coalition experience may transfer, but the resume does not prove readiness to operate within a large municipal technology bureaucracy"
+  ],
+  "interviewEvidenceNeeded": [
+    "Specific budgets personally owned, including amounts, forecasting duties, controls, variances, and expense-versus-capital treatment",
+    "Examples of procurements or contracts managed from requirements and sourcing through approval, execution, invoicing, and renewal",
+    "A concrete portfolio-operations example showing intake, prioritization, staffing allocation, dependency management, and executive reporting",
+    "Experience coordinating legal, cybersecurity, procurement, finance, and HR stakeholders under government or similarly regulated procedures",
+    "Direct examples of employee onboarding, vendor or consultant onboarding, and ongoing personnel operations",
+    "Clarification of team sizes, concurrent project volume, decision authority, and measurable improvements to delivery health"
+  ],
+  "rationale": "The resume shows a credible, mission-aligned product and program operator with substantial civic-technology and cross-functional delivery experience. However, this is specifically an operations-management role centered on budgets, procurement, contracts, resource allocation, onboarding, portfolio tracking, and coordination with institutional support functions. The resume offers adjacent experience but not enough concrete evidence of direct ownership across those core responsibilities to support the literal conclusion, on the resume alone, that I would hire this person for this exact job.",
+  "model": "gpt-5.6-sol",
+  "evaluatedAt": "2026-08-20"
+}

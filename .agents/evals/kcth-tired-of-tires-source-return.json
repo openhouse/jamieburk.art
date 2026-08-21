@@ -1,0 +1,61 @@
+{
+  "name": "KC Town Hall Tired of Tires source-return acceptance",
+  "version": 1,
+  "purpose": "Keep the resident-service case study source-backed, collectively credited, visually grounded, and free of resident data while exact public-safe handbill derivatives remain attached to their governance record.",
+  "required": {
+    "intakeIds": [
+      "INTAKE-KCTH-TIRES-WAYBACK-RETURN-2026",
+      "INTAKE-KCTH-TIRES-DRIVE-RETURN-2026"
+    ],
+    "sourceIds": [
+      "SRC-KCTH-TIRES-WAYBACK-2021",
+      "SRC-KCTH-TIRES-TRACKER-2019-2022",
+      "SRC-KCTH-TIRES-CITY-COORDINATION-2019",
+      "SRC-KCTH-TIRES-DESIGN-AUTHORIZATION-2026",
+      "SRC-KCTH-TIRES-DESIGN-ARCHIVE-2019-2021"
+    ],
+    "claimIds": [
+      "CLM-KCTH-TIRED-OF-TIRES-SERVICE-DESIGN",
+      "CLM-KCTH-TIRED-OF-TIRES-MEASUREMENT"
+    ],
+    "inquiryIds": [
+      "INQ-KCTH-TIRES-ROLE-ROUTE-AND-COVERAGE",
+      "INQ-KCTH-TIRES-SURVEY-TO-FACILITY-REQUIREMENTS"
+    ],
+    "relationIds": [
+      "REL-JAMIE-KCTH-OAK-PARK-TIRED-OF-TIRES",
+      "REL-KCMO-TIRED-OF-TIRES-HANDOFF"
+    ],
+    "artifactPaths": [
+      "apps/www/public/images/artifacts/kc-town-hall-tired-of-tires-handbill-2021.webp",
+      "apps/www/public/images/artifacts/kc-town-hall-neighborhood-survey-handbill-2019.webp"
+    ]
+  },
+  "hardGates": [
+    {
+      "id": "KCTH-TIRES-EVAL-SOURCE-CLOSURE",
+      "description": "Every claim support string closes against a governed source and every intake, observation, claim, inquiry, and relation is canonical."
+    },
+    {
+      "id": "KCTH-TIRES-EVAL-MEASUREMENT-BOUNDARY",
+      "description": "The public result remains project-maintained, dated May 2019 through September 2022, formula-estimated, and never City-audited or converted into unique residents."
+    },
+    {
+      "id": "KCTH-TIRES-EVAL-COLLECTIVE-CREDIT",
+      "description": "Jamie's helped-design-and-operate and launch-driving roles stay visible without sole credit or responsibility for every pickup."
+    },
+    {
+      "id": "KCTH-TIRES-EVAL-RESIDENT-PRIVACY",
+      "description": "No resident name, address, phone, email, request note, protected locator, or raw row reaches the public surface."
+    },
+    {
+      "id": "KCTH-TIRES-EVAL-ARTIFACT-GOVERNANCE",
+      "description": "Both exact 4x6 derivatives exist, are cleared only for public-safe display, exclude obsolete contacts, and are labeled as historical artifacts rather than current service notices."
+    },
+    {
+      "id": "KCTH-TIRES-EVAL-SERVICE-BLUEPRINT",
+      "description": "The case study makes the resident promise, intake, field delivery, municipal handoff, measurement, and feedback loop legible to a hiring reader."
+    }
+  ],
+  "acceptance": "All hard gates pass. A weighted average cannot override a failed privacy, truth, collective-credit, source-closure, artifact, or service-blueprint gate."
+}

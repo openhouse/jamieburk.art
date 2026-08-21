@@ -11,7 +11,21 @@ export const metadata: Metadata = createMetadata({
   path: "/work"
 });
 
-export default function WorkPage() {
+type WorkPageProps = {
+  searchParams: Promise<{ tag?: string | string[] }>;
+};
+
+export default async function WorkPage({ searchParams }: WorkPageProps) {
+  const params = await searchParams;
+  const requestedTag = Array.isArray(params.tag) ? params.tag[0] : params.tag;
+  const availableTags = new Set(workItems.flatMap((item) => item.tags));
+  const selectedTag = requestedTag && availableTags.has(requestedTag)
+    ? requestedTag
+    : null;
+  const firstVisibleWorkSlug = workItems.find(
+    (item) => !selectedTag || item.tags.includes(selectedTag)
+  )?.slug;
+
   return (
     <div className="jb-frame py-14">
       <div className="grid gap-8 lg:grid-cols-[0.32fr_0.68fr]">
@@ -30,28 +44,46 @@ export default function WorkPage() {
               Technical Operations proof page
             </Link>
             <Link className="border-b border-jb-blue text-jb-blue hover:text-jb-green" href="/lab/source-backed-team-memory">
-              Source-backed memory lab
+              Knowledge Wiki Graph lab
             </Link>
           </div>
         </div>
       </div>
-      <div className="mt-16 space-y-16">
+      <div className="mt-16 space-y-16" id="work-index">
+        {selectedTag ? (
+          <div className="flex flex-wrap items-baseline justify-between gap-4 border-y border-jb-ink/20 py-4">
+            <p className="text-lg text-jb-ink">
+              Showing projects tagged <strong>“{selectedTag}”</strong>
+            </p>
+            <Link
+              className="border-b border-jb-blue font-semibold text-jb-blue hover:border-jb-green hover:text-jb-green"
+              href="/work#work-index"
+            >
+              Clear filter
+            </Link>
+          </div>
+        ) : null}
         {workGroups.map((group) => {
-          const groupedItems = workItems.filter((item) => item.group === group);
+          const groupedItems = workItems.filter((item) => {
+            return item.group === group && (!selectedTag || item.tags.includes(selectedTag));
+          });
 
           if (group === "Source-backed memory / AI lab") {
+            if (selectedTag) return null;
+
             return (
               <section key={group}>
                 <h2 className="jb-section-label">{group}</h2>
                 <div className="mt-5 grid gap-5 border-y border-jb-ink/20 py-6 md:grid-cols-[0.34fr_0.66fr]">
                   <h3 className="text-3xl leading-tight text-jb-ink">
-                    Source-Backed Team Memory / Noting.us
+                    Knowledge Wiki Graph / Source-Backed Team Memory
                   </h3>
                   <div>
                     <p className="leading-7 text-jb-ink/76">
-                      A lab / proof-of-practice exploring source-backed operating
-                      memory, decision lineage, onboarding context, and
-                      human-correctable AI workflows for knowledge-heavy teams.
+                      A working research method connecting project meaning,
+                      supporting evidence, responsible source custody,
+                      evaluations, and human review across independently useful
+                      repositories. Noting.us is part of its earlier lineage.
                     </p>
                     <p className="mt-3 text-sm font-semibold text-jb-green">
                       Early research / method / consulting practice. Not a
@@ -76,7 +108,11 @@ export default function WorkPage() {
               <h2 className="jb-section-label">{group}</h2>
               <div className="mt-5">
                 {groupedItems.map((item) => (
-                  <WorkCard item={item} key={item.slug} />
+                  <WorkCard
+                    eager={item.slug === firstVisibleWorkSlug}
+                    item={item}
+                    key={item.slug}
+                  />
                 ))}
               </div>
             </section>

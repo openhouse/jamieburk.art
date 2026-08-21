@@ -1,32 +1,86 @@
 {
-  "id": "portfolio-photography-layout-v1",
+  "id": "portfolio-photography-layout-v11",
   "title": "Human Index photographic portfolio layout",
-  "intent": "Photography changes the portfolio's editorial rhythm while remaining public-safe, accessible, and subordinate to human publication authority.",
+  "intent": "Photography and public interfaces make situated work credible while remaining public-safe, accessible, project-specific, and subordinate to human publication authority.",
+  "hiringArgument": {
+    "opportunitySetSource": "evals/public-resume/current.json",
+    "opportunitySetId": "public-resume-reader-set-2026-08-20",
+    "opportunityIds": [
+      "opportunity.aclu.senior-project-manager-lps.8620968002",
+      "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "opportunity.asana.ai-implementation.8027437",
+      "opportunity.nyc-oti.product-manager.784450",
+      "opportunity.nyc-oti.senior-product-manager.782366",
+      "opportunity.nyc-oti.operations-manager.789810",
+      "opportunity.nyc-oti.cybersecurity-senior-project-manager.791074",
+      "opportunity.nyc-cfb.associate-director-policy-implementation.792925"
+    ],
+    "featuredProjectSequence": [
+      "NYC Artist Coalition / FairRentNYC",
+      "CallNYC.org",
+      "Harry J. Epstein Company",
+      "KC Town Hall LLC",
+      "WOW List",
+      "196 Artists Residency / Sunday Dinner"
+    ],
+    "selectionBasis": "Use the deterministic public-resume opportunity set when no authorized private active-application IDs are supplied. The August 20 review added the CFB policy-implementation role and retained this sequence because its opening projects already make Jamie's strongest current case for civic implementation, public communication, cross-functional coordination, and maintained operating structure. Re-evaluate this sequence before hiring-reader role play whenever that set, a project's proof strength, or a project's truthful cover changes.",
+    "sequenceLogic": "Lead with current civic policy implementation and public communication, then widen the case through sustained client stewardship, field implementation and resource responsibility, platform scale, and human-centered continuity."
+  },
   "criteria": [
     {
       "id": "manifest-bound-publication",
       "blocking": true,
-      "criterion": "Every field photograph is registered once in the public manifest with stable dimensions, alt text, caption, credit, placement, status, and boundary."
+      "criterion": "Every public photograph is registered once with stable dimensions, alt text, caption, credit, placement, status, permission, and interpretation boundary."
     },
     {
-      "id": "minimal-authorized-field",
+      "id": "public-project-credit-policy",
       "blocking": true,
-      "criterion": "The pre-launch layout uses only the fully bound, credited, Jamie-authorized East River derivative; unresolved archival images remain outside the public bundle."
+      "criterion": "A photograph without a confirmed individual creator uses concise project-centered courtesy language; visitor-facing credits never expose archive-processing uncertainty."
+    },
+    {
+      "id": "governed-photographic-field",
+      "blocking": true,
+      "criterion": "The launch candidate uses exactly six reviewed photographs: the unchanged East River hero, the Knowledge Wiki collective-synthesis field image, the Shoestring Press and Market Hotel evidence sequence, the Sunday Dinner cover, and the KC Town Hall cover."
     },
     {
       "id": "metadata-and-locator-safety",
       "blocking": true,
-      "criterion": "Public assets and source code contain no EXIF payload, private archive UUID, original camera filename, or protected filesystem path."
+      "criterion": "Public assets and source code contain no EXIF payload, private archive UUID, original camera filename, People metadata, GPS data, or protected filesystem path."
     },
     {
       "id": "editorial-not-decorative",
       "blocking": true,
-      "criterion": "The home photograph is full-bleed, unframed, credited, and editorially specific; About and Colophon remain text-led until additional images complete creator, credit, rights, caption, crop, and destination review."
+      "criterion": "The homepage photograph remains unchanged; the Fair Rent sequence retains facilitation, shared public infrastructure, and collective public action; About and Colophon remain text-led."
     },
     {
-      "id": "deliberate-absence",
+      "id": "truthful-project-cover-field",
       "blocking": true,
-      "criterion": "Work, resume, and contact do not receive adjacent photographs merely to achieve coverage."
+      "criterion": "Every work item has one project-specific cover: KC Spaces Fund, Harry J. Epstein, CallNYC, and WOW List use their own public surfaces; Fair Rent NYC, Sunday Dinner, and KC Town Hall use governed photographs."
+    },
+    {
+      "id": "hiring-argument-opportunity-set",
+      "blocking": true,
+      "criterion": "The homepage hiring argument identifies the exact deterministic live opportunity set that informed its project selection. If that set changes, the project sequence becomes stale and hiring-reader role play is blocked until the argument is reviewed."
+    },
+    {
+      "id": "hiring-argument-project-sequence",
+      "blocking": true,
+      "criterion": "The homepage presents six projects in a deliberate hiring sequence for the current live opportunity set, including the CFB policy-implementation role: present-day NYC Artist Coalition civic operations; direct resident-facing product and public-information work through CallNYC; long-term Harry J. Epstein client stewardship; KC Town Hall field implementation, resource responsibility, and resident service; WOW List platform scale; then Sunday Dinner and 196 onboarding, facilitation, and continuity. Sunday Dinner remains a required homepage project. Harry J. Epstein does not lead while its cover is explicitly a successor site rather than Jamie's implementation."
+    },
+    {
+      "id": "tag-navigation-contract",
+      "blocking": true,
+      "criterion": "Every tag-shaped control is a keyboard-reachable link to a visible filtered work-index state, with a clear route back to the complete index."
+    },
+    {
+      "id": "capability-navigation-contract",
+      "blocking": true,
+      "criterion": "Every homepage capability row is a full-row keyboard-reachable link to the filtered work index, uses a tag present in project data, and follows the same index interaction grammar as Start here."
+    },
+    {
+      "id": "knowledge-wiki-architecture-contract",
+      "blocking": true,
+      "criterion": "The colophon and lab keep semantic meaning, supporting evidence, source custody, and audience-specific projection distinct; evaluations and human review govern transitions; shared identities do not merge stewardship, claims, permission, credit, or publication authority; and public copy exposes no protected repository topology or source material."
     },
     {
       "id": "human-index-material-system",
@@ -39,9 +93,14 @@
       "criterion": "Images use Next Image, explicit intrinsic dimensions or fill, stable aspect ratios, responsive sizes, and a viewport-bounded hero."
     },
     {
+      "id": "reliable-image-delivery",
+      "blocking": true,
+      "criterion": "Reviewed local image derivatives bypass runtime optimization on the single-CPU Dokku app and remain small enough for direct delivery."
+    },
+    {
       "id": "human-authority-remains-open",
       "blocking": true,
-      "criterion": "The design documentation states that automated scores and staging review do not replace human rights or production approval."
+      "criterion": "Design and Knowledge Wiki records state that automated scores and staging review do not replace rights, dignity, attribution, exact-candidate production approval, or indexing approval."
     }
   ]
 }

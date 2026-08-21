@@ -23,6 +23,10 @@ relations:
     href: indexes/employment-context.md
     context: Present-tense opportunity research and public-only hiring evaluation.
   - type: related_to
+    target: method.civic-match-opportunity-loop
+    href: methods/civic-match-opportunity-loop.md
+    context: Consent-aware candidate discovery, matching, invitations, application tracking, and feedback.
+  - type: related_to
     target: index.knowledge-wiki.living-archive
     href: indexes/living-archive.md
     context: Orientation, missing-page, project, and situated source-return map.
@@ -51,6 +55,10 @@ relations:
     href: indexes/public-testimony.md
     context: Recovered full-text public statements, explicit transcript gaps, and prepared-not-delivered boundaries.
   - type: related_to
+    target: index.knowledge-wiki.jamie-sourcebook
+    href: indexes/jamie-sourcebook.md
+    context: Git-native public Sourcebook pilot with one canonical body per statement and generated browse routes.
+  - type: related_to
     target: index.knowledge-wiki.public-testimony-and-hearing-voices
     href: indexes/public-testimony-and-hearing-voices.md
     context: Complete official-hearing populations, speaker ledgers, positions, and attribution boundaries.
@@ -62,6 +70,14 @@ relations:
     target: index.knowledge-wiki.commercial-rent-public-support
     href: indexes/commercial-rent-public-support.md
     context: Active state bills, public-safe event speaker indexes, official state sources, and explicit source gaps.
+  - type: related_to
+    target: index.knowledge-wiki.professional-record
+    href: indexes/professional-record-and-reception.md
+    context: Public-safe institutional facts, documented encounters, dated reception, and explicit recommendation and endorsement boundaries.
+  - type: related_to
+    target: index.knowledge-wiki.live-project-websites
+    href: indexes/live-project-websites.md
+    context: Dated project-home inventory with current, returning, historical, and credit-open states kept distinct.
   - type: related_to
     target: project.nyc-artist-coalition
     href: projects/nyc-artist-coalition-2017.md
@@ -124,6 +140,10 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Public testimony](indexes/public-testimony.md): recovered full-text
   statements, prepared-but-not-delivered material, and an explicit queue for
   public appearances whose verbatim records have not yet been recovered.
+- [Jamie Burkart Sourcebook pilot](indexes/jamie-sourcebook.md): three
+  already-public, self-authored Council statements joined to a governed
+  perspective registry, generated browse routes, and a fail-closed publication
+  packet.
 - [Public testimony and hearing voices](indexes/public-testimony-and-hearing-voices.md):
   complete official-hearing populations, attribution ledgers, explicit position
   signals, and the distinction between source record and editorial view.
@@ -133,6 +153,14 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Commercial Rent Stabilization public support](indexes/commercial-rent-public-support.md):
   the active state bills, complete bounded public-event remarks, official state
   statement populations, and time-aware speaker roles.
+- [Professional record and reception](indexes/professional-record-and-reception.md):
+  institutional facts, documented encounters, historical evaluation, held
+  photographs, and the boundaries between relationship, recommendation, and
+  endorsement.
+- [Live project websites](indexes/live-project-websites.md): ten meaningful
+  project homes currently reachable, a nine-site evidence-backed Jamie
+  implementation count, alias deduplication, and current-versus-historical
+  link labels.
 - [NYC Artist Coalition](projects/nyc-artist-coalition-2017.md): public-source
   claims, collective-credit boundaries, and the governed shared-folder research
   pass.

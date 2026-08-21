@@ -1,0 +1,43 @@
+{
+  "file": "aclu-lps-terence.json",
+  "opportunityId": "opportunity.aclu.senior-project-manager-lps.8620968002",
+  "personId": "person.terence-dougherty",
+  "name": "Terence Dougherty",
+  "relationship": "senior-vision",
+  "resumeSha256": "d6cf9e69fb63769d0007338e0e2ed820f96de20c29b754760741538b7f04aa10",
+  "acceptanceQuestion": "I would hire this person for this job.",
+  "decision": "fail",
+  "wouldHire": false,
+  "simulatedPublicFigureLens": true,
+  "nonEndorsementBoundary": "This fictionalized public-context lens is not participation, quotation, endorsement, or a hiring decision by the named person.",
+  "access": {
+    "scope": "public-resume-and-public-job-context-only",
+    "repositoryAccess": false,
+    "privateSourceAccess": false
+  },
+  "strengths": [
+    "Strong surface alignment with the role’s core work: requirements, implementation planning, risk management, current- and future-state workflows, communications, launch, closeout, and post-mortems.",
+    "Fourteen-plus years of cross-functional project and product leadership spanning technical delivery, civic systems, coalition operations, and public-facing implementations.",
+    "Concrete evidence of stakeholder facilitation, durable documentation, change support, and translating ambiguous needs into operational systems.",
+    "Relevant mission-adjacent experience in civic technology, advocacy operations, public testimony, policy communications, accessibility-aware delivery, and confidential-boundary management.",
+    "Some quantified evidence of impact and scale, including a $490,539 public-funding request, 2x client revenue growth, a multi-region platform, and ongoing coalition knowledge systems."
+  ],
+  "risks": [
+    "The resume asserts broad senior-level capabilities but provides limited project-level evidence of owning an integrated budget, schedule, staffing plan, risk register, governance structure, and executive escalation process on a complex organizational implementation.",
+    "Most experience appears entrepreneurial, client-based, coalition-based, or co-founder-led; direct evidence of succeeding inside a large, procedurally complex institution with constrained authority is thin.",
+    "The scale and complexity of concurrent projects, teams, vendors, budgets, timelines, and dependencies are usually unspecified.",
+    "There is little explicit evidence of enterprise-wide internal systems or business-process transformation, procurement, vendor management, or formal change-management programs.",
+    "The resume does not establish how outcomes were measured for several recent projects or distinguish individual accountability from shared founder and coalition accomplishments consistently enough to support an immediate hiring decision."
+  ],
+  "interviewEvidenceNeeded": [
+    "A detailed walkthrough of one complex systems or process implementation, including scope, stakeholders, requirements, schedule, budget, risks, governance, communications, launch, closeout, and measurable results.",
+    "Evidence of personally owning budget and resource tracking, including forecasting, variance management, tradeoff decisions, and escalation.",
+    "Examples of influencing resistant stakeholders and delivering through others without founder authority or direct managerial control.",
+    "Clarification of team sizes, project values, implementation durations, concurrent workload, vendor responsibilities, and the candidate’s precise decision rights.",
+    "A concrete example of current-state analysis, future-state design, adoption planning, and post-implementation learning in an internal organizational setting.",
+    "A writing sample demonstrating concise executive communication, structured analysis, and sound judgment with sensitive or contested information."
+  ],
+  "rationale": "The resume is credible enough to warrant a serious interview and shows unusually strong mission, facilitation, documentation, and implementation alignment. It does not, by itself, provide enough specific evidence of senior-level ownership across budget, governance, organizational change, and enterprise implementation scale to justify the literal statement, “I would hire this person for this job.”",
+  "model": "gpt-5.6-sol",
+  "evaluatedAt": "2026-08-20"
+}

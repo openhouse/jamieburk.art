@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to East River beneath the Manhattan Bridge, 2022
 
-**Source commit:** `b1d476c810fc6d434b01fdab16c23ad1b961a01f`
-**Generation time:** 2026-07-28T14:28:48-04:00
-**Source fingerprint:** `e5177833940ac1e9395c314bcb04693bdef8e3ec600800598ce57a3002d5c65f`
+**Source commit:** `2bd29f313f73f8844282dbe364b163d62544a401`
+**Generation time:** 2026-08-21T10:19:09-04:00
+**Source fingerprint:** `77a6700ed0da85d2d0ec4dcfd5fed3f8ef2d9c6dc3dd08683dd243cddead9684`
 
 - [Add Elana Gordon's credit to the East River homepage occurrence](../../corrections/east-river-credit-2026-07.md) - `related_to` (frontmatter)
 - [Layout C homepage East River curatorial proposal](../../evaluations/curatorial/layout-c-home-east-river-v1.md) - `related_to` (frontmatter)
@@ -13,6 +13,7 @@
 - [East River photographic knowledge-loop tutorial](../../workflows/photography-east-river-canary.md) - `prose_link` (markdown)
 - [East River photographic knowledge-loop tutorial](../../workflows/photography-east-river-canary.md) - `related_to` (frontmatter)
 - [Elana Gordon](../../people/elana-gordon.md) - `related_to` (frontmatter)
+- [Homepage Open Graph East River occurrence](../../projections/photography/home-og-east-river.md) - `uses_source` (frontmatter)
 - [Layout C homepage East River occurrence](../../projections/photography/layout-c-home-east-river.md) - `uses_source` (frontmatter)
 - [Elana Gordon East River portfolio permission summary](../../sources/permissions/elana-gordon-east-river-portfolio-2026.md) - `related_to` (frontmatter)
 - [East River photograph public-safe metadata summary](../../sources/photo-metadata/east-river-2022-public-safe.md) - `related_to` (frontmatter)

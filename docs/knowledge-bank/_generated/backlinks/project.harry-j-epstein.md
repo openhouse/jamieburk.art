@@ -1,15 +1,16 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Harry J. Epstein Company digital operations
 
-**Source commit:** `b1d476c810fc6d434b01fdab16c23ad1b961a01f`
-**Generation time:** 2026-07-28T14:28:48-04:00
-**Source fingerprint:** `e5177833940ac1e9395c314bcb04693bdef8e3ec600800598ce57a3002d5c65f`
+**Source commit:** `2bd29f313f73f8844282dbe364b163d62544a401`
+**Generation time:** 2026-08-21T10:19:09-04:00
+**Source fingerprint:** `77a6700ed0da85d2d0ec4dcfd5fed3f8ef2d9c6dc3dd08683dd243cddead9684`
 
 - [Implementation, Adoption, and Handoff](../../capabilities/implementation-adoption-and-handoff.md) - `related_to` (frontmatter)
 - [Implementation and operational stewardship](../../capabilities/implementation-and-operational-stewardship.md) - `prose_link` (markdown)
 - [Implementation and operational stewardship](../../capabilities/implementation-and-operational-stewardship.md) - `related_to` (frontmatter)
 - [Harry J. Epstein continuity-oriented modernization](../../decisions/hje-continuity-modernization.md) - `resulted_in` (frontmatter)
 - [Canonical Story Bank](../../indexes/canonical-story-bank.md) - `related_to` (frontmatter)
+- [Live Project Websites](../../indexes/live-project-websites.md) - `related_to` (frontmatter)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `prose_link` (markdown)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `related_to` (frontmatter)
 - [People, places, and the work between them](../../indexes/people-places-and-work-between-them.md) - `prose_link` (markdown)
@@ -20,3 +21,5 @@
 - [Maintenance, handoff, and stewardship](../../methods/maintenance-handoff-and-stewardship.md) - `prose_link` (markdown)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
 - [Harry J. Epstein Company archival research brief, July 2026](../../sources/hje-research-brief-2026-07.md) - `documents` (frontmatter)
+- [Harry J. Epstein historic storefront Wayback chronology, August 2026](../../sources/hje-wayback-chronology-2026-08.md) - `documents` (frontmatter)
+- [New York State formation record for THICK ARTS LLC](../../sources/thick-arts-nys-dos-formation-2012-07-06.md) - `documents` (frontmatter)

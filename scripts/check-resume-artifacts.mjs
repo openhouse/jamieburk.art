@@ -1,0 +1,469 @@
+import { createHash } from "node:crypto";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { inflateSync } from "node:zlib";
+
+const scriptDir = path.dirname(fileURLToPath(import.meta.url));
+const defaultRoot = path.resolve(scriptDir, "..");
+
+const expectedCriteria = [
+  "complete-opportunity-coverage",
+  "opportunity-source-current",
+  "markdown-current",
+  "google-docs-lineage",
+  "pdf-structure",
+  "approved-typography",
+  "list-marker-typography",
+  "visual-inspection",
+  "public-resume-projection",
+  "resume-editorial-preferences",
+  "application-guide",
+  "cover-letter",
+  "public-safety"
+];
+
+const requiredFonts = ["PalatinoLinotype", "Oswald", "Karla"];
+const protectedLocatorPattern = /docs\.google\.com\/(?:document|drive)\/|drive\.google\.com\/|\/(?:Users|Volumes)\/|\b1(?![A-Fa-f0-9]{63}\b)[A-Za-z0-9_-]{30,}\b/;
+const protectedCategoryAnswerPattern = /\bprotected_category_answer\s*:/i;
+
+function digest(value) {
+  return createHash("sha256").update(value).digest("hex");
+}
+
+function decodedPdfStreams(pdf) {
+  const source = pdf.toString("latin1");
+  const streams = [];
+  let cursor = 0;
+  while (cursor < source.length) {
+    const marker = source.indexOf("stream", cursor);
+    if (marker < 0) break;
+    const lineEnd = source.indexOf("\n", marker + 6);
+    if (lineEnd < 0) break;
+    const dataStart = lineEnd + 1;
+    const dataEnd = source.indexOf("endstream", dataStart);
+    if (dataEnd < 0) break;
+    const dictionary = source.slice(Math.max(0, marker - 1000), marker);
+    const bytes = pdf.subarray(dataStart, dataEnd > dataStart && pdf[dataEnd - 1] === 0x0a
+      ? dataEnd - (dataEnd > dataStart + 1 && pdf[dataEnd - 2] === 0x0d ? 2 : 1)
+      : dataEnd);
+    if (/\/Filter\s*\/FlateDecode\b/.test(dictionary)) {
+      try {
+        streams.push(inflateSync(bytes).toString("latin1"));
+      } catch {
+        // Non-content streams may use additional decode parameters. They are
+        // irrelevant unless they expose tagged list items below.
+      }
+    } else {
+      streams.push(bytes.toString("latin1"));
+    }
+    cursor = dataEnd + 9;
+  }
+  return streams;
+}
+
+function listMarkerMeasurements(pdf) {
+  const number = String.raw`(?:\d+(?:\.\d*)?|\.\d+)`;
+  const transformPattern = new RegExp(
+    `(${number})\\s+0\\s+0\\s+(${number})\\s+(?:[-+]?${number}\\s+){2}cm`,
+    "g"
+  );
+  const fontPattern = new RegExp(`/([A-Za-z0-9]+)\\s+(${number})\\s+Tf`, "g");
+  const measurements = [];
+  for (const stream of decodedPdfStreams(pdf)) {
+    for (const listMatch of stream.matchAll(/\/LI\s*<<\/MCID\s+\d+\s*>>\s*BDC/g)) {
+      const start = listMatch.index ?? 0;
+      const before = stream.slice(Math.max(0, start - 700), start);
+      const transforms = [...before.matchAll(transformPattern)];
+      const scale = Number.parseFloat(transforms.at(-1)?.[2] ?? "1");
+      const window = stream.slice(start, start + 1400);
+      const fonts = [...window.matchAll(fontPattern)].map((match) => ({
+        family: match[1],
+        size: Number.parseFloat(match[2]) * scale
+      }));
+      const marker = fonts[0];
+      const text = marker && fonts.find(({ family }) => family !== marker.family);
+      if (marker && text) measurements.push({ markerPoints: marker.size, textPoints: text.size, deltaPoints: text.size - marker.size });
+    }
+  }
+  return measurements;
+}
+
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function decodePdfLiteral(value) {
+  return value
+    .replace(/\\([0-7]{1,3})/g, (_, octal) => String.fromCodePoint(Number.parseInt(octal, 8)))
+    .replace(/\\n/g, "\n")
+    .replace(/\\r/g, "\r")
+    .replace(/\\t/g, "\t")
+    .replace(/\\b/g, "\b")
+    .replace(/\\f/g, "\f")
+    .replace(/\\([()\\])/g, "$1");
+}
+
+function activePdfLinkUris(pdfText) {
+  const objects = new Map();
+  for (const match of pdfText.matchAll(/(?:^|\n)(\d+)\s+\d+\s+obj\s*([\s\S]*?)\s*endobj/g)) {
+    objects.set(match[1], match[2]);
+  }
+  const annotationIds = new Set();
+  for (const body of objects.values()) {
+    if (!/\/Type\s*\/Page\b/.test(body)) continue;
+    const annotations = /\/Annots\s*\[([^\]]*)\]/.exec(body)?.[1] ?? "";
+    for (const reference of annotations.matchAll(/(\d+)\s+\d+\s+R/g)) annotationIds.add(reference[1]);
+  }
+  const uris = new Set();
+  for (const id of annotationIds) {
+    const body = objects.get(id) ?? "";
+    const encoded = /\/URI\s*\(((?:\\[0-7]{1,3}|\\.|[^\\)])*)\)/.exec(body)?.[1];
+    if (encoded !== undefined) uris.add(decodePdfLiteral(encoded));
+  }
+  return uris;
+}
+
+function datedResumePath(value) {
+  return /^resume-versions\/(\d{4}-\d{2}-\d{2})\/[^/]+\/Jamie-Burkart-Resume\.md$/.exec(value ?? "");
+}
+
+function frontMatterValue(markdown, key) {
+  const block = /^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/.exec(markdown)?.[1];
+  if (!block) return undefined;
+  const escapedKey = key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return new RegExp(`^${escapedKey}:[ \\t]*([^\\r\\n]*)$`, "m").exec(block)?.[1]?.trim();
+}
+
+function allTailoredMarkdown(root) {
+  const base = path.join(root, "resume-versions");
+  if (!existsSync(base)) return [];
+  const found = [];
+  for (const date of readdirSync(base, { withFileTypes: true })) {
+    if (!date.isDirectory() || !/^\d{4}-\d{2}-\d{2}$/.test(date.name)) continue;
+    const dateDir = path.join(base, date.name);
+    for (const opportunity of readdirSync(dateDir, { withFileTypes: true })) {
+      if (!opportunity.isDirectory()) continue;
+      const relative = path.join("resume-versions", date.name, opportunity.name, "Jamie-Burkart-Resume.md");
+      const artifactPath = path.join(dateDir, opportunity.name, "artifact.json");
+      const artifact = existsSync(artifactPath)
+        ? JSON.parse(readFileSync(artifactPath, "utf8"))
+        : undefined;
+      if (artifact?.opportunityId === "active-opportunity-portfolio") continue;
+      if (existsSync(path.join(root, relative))) found.push(relative.split(path.sep).join("/"));
+    }
+  }
+  return found.sort();
+}
+
+export function evaluateResumeArtifacts(root = defaultRoot) {
+  const failures = [];
+  const fail = (criterion, message) => failures.push({ criterion, message });
+  const evalPath = path.join(root, "evals/resume-artifacts/evals.json");
+  const opportunityManifestPath = path.join(root, "evals/resume-hiring-readers/current.json");
+  const coverManifestPath = path.join(root, "evals/cover-letter-hiring-readers/current.json");
+
+  if (!existsSync(evalPath) || !existsSync(opportunityManifestPath) || !existsSync(coverManifestPath)) {
+    return {
+      passed: false,
+      failures: [{ criterion: "complete-opportunity-coverage", message: "Missing resume-artifact, opportunity, or cover-letter manifest." }],
+      metrics: { opportunities: 0, markdownResumes: 0, pdfs: 0, artifacts: 0, applicationGuides: 0, coverLetters: 0 }
+    };
+  }
+
+  const evaluation = JSON.parse(readFileSync(evalPath, "utf8"));
+  const observedCriteria = evaluation.criteria?.map(({ id }) => id) ?? [];
+  if (JSON.stringify(observedCriteria) !== JSON.stringify(expectedCriteria) ||
+      evaluation.criteria?.some(({ blocking }) => blocking !== true)) {
+    fail("complete-opportunity-coverage", "The blocking artifact criteria changed, lost order, or became optional.");
+  }
+
+  const opportunityManifest = JSON.parse(readFileSync(opportunityManifestPath, "utf8"));
+  const coverManifest = JSON.parse(readFileSync(coverManifestPath, "utf8"));
+  const entries = Array.isArray(opportunityManifest.opportunities) ? opportunityManifest.opportunities : [];
+  const coverEntries = Array.isArray(coverManifest.opportunities) ? coverManifest.opportunities : [];
+  const expectedResumePaths = entries.map(({ resumePath }) => resumePath).sort();
+  const discoveredResumePaths = allTailoredMarkdown(root);
+  if (new Set(entries.map(({ opportunityId }) => opportunityId)).size !== entries.length ||
+      JSON.stringify(expectedResumePaths) !== JSON.stringify(discoveredResumePaths)) {
+    fail("complete-opportunity-coverage", "The governed opportunity set and dated Markdown resume tree are not one-to-one.");
+  }
+
+  let pdfs = 0;
+  let artifacts = 0;
+  let applicationGuides = 0;
+  let coverLetters = 0;
+  for (const entry of entries) {
+    const label = entry.opportunityId ?? entry.jobTitle ?? "unknown opportunity";
+    const pathMatch = datedResumePath(entry.resumePath);
+    if (!pathMatch) {
+      fail("complete-opportunity-coverage", `${label}: resume path does not follow the dated directory contract.`);
+      continue;
+    }
+    const generatedOn = pathMatch[1];
+    const resumePath = path.join(root, entry.resumePath);
+    const opportunityPath = path.join(root, entry.opportunityPath ?? "");
+    const directory = path.dirname(resumePath);
+    const artifactPath = path.join(directory, "artifact.json");
+    if (!existsSync(resumePath) || !existsSync(opportunityPath) || !existsSync(artifactPath)) {
+      fail("complete-opportunity-coverage", `${label}: Markdown resume, opportunity source, or artifact.json is missing.`);
+      continue;
+    }
+    artifacts += 1;
+    const resume = readFileSync(resumePath, "utf8");
+    const opportunity = readFileSync(opportunityPath, "utf8");
+    const resumeSha256 = digest(resume);
+    const opportunitySha256 = digest(opportunity);
+    const artifact = JSON.parse(readFileSync(artifactPath, "utf8"));
+    const pdfFiles = readdirSync(directory).filter((name) => name.toLowerCase().endsWith(".pdf"));
+    if (pdfFiles.length !== 1 || artifact?.pdf?.file !== pdfFiles[0]) {
+      fail("complete-opportunity-coverage", `${label}: expected exactly one PDF sibling bound by artifact.json.`);
+      continue;
+    }
+    const pdfPath = path.join(directory, pdfFiles[0]);
+    if (!existsSync(pdfPath)) {
+      fail("complete-opportunity-coverage", `${label}: PDF sibling is missing.`);
+      continue;
+    }
+    pdfs += 1;
+    const coverEntry = coverEntries.find(({ opportunityId }) => opportunityId === entry.opportunityId);
+    const coverLetterPath = path.join(directory, "Cover-Letter.md");
+    const coverLetter = existsSync(coverLetterPath) ? readFileSync(coverLetterPath, "utf8") : undefined;
+    if (!coverLetter || !coverEntry || coverEntry.coverLetterPath !== path.relative(root, coverLetterPath).split(path.sep).join("/") ||
+        coverEntry.coverLetterSha256 !== digest(coverLetter) || coverEntry.resumePath !== entry.resumePath ||
+        coverEntry.resumeSha256 !== resumeSha256 || coverEntry.opportunityPath !== entry.opportunityPath ||
+        coverEntry.opportunitySha256 !== opportunitySha256) {
+      fail("cover-letter", `${label}: Cover-Letter.md is missing or not bound to the current opportunity and resume.`);
+    } else {
+      coverLetters += 1;
+      if (frontMatterValue(coverLetter, "opportunity_id") !== entry.opportunityId ||
+          frontMatterValue(coverLetter, "resume_source") !== path.basename(entry.resumePath) ||
+          frontMatterValue(coverLetter, "writer_voice_contract") !== evaluation?.coverLetterContract?.voiceContract ||
+          frontMatterValue(coverLetter, "writer_voice_locator_committed") !== "false" ||
+          protectedLocatorPattern.test(coverLetter)) {
+        fail("cover-letter", `${label}: cover-letter voice, lineage, or public-safety metadata is incomplete.`);
+      }
+    }
+    const guidePath = path.join(directory, "Application-Instructions.md");
+    const guide = existsSync(guidePath) ? readFileSync(guidePath, "utf8") : undefined;
+    if (!guide) {
+      fail("application-guide", `${label}: Application-Instructions.md is missing beside the resume and PDF.`);
+    } else {
+      applicationGuides += 1;
+      const applicationStatus = frontMatterValue(guide, "application_status");
+      const blocker = frontMatterValue(guide, "blocker");
+      const requiredSections = [
+        "## Submission status",
+        "## Files",
+        "## Exact field instructions",
+        "## Final review gate"
+      ];
+      const exactActionLines = guide.match(/^- \*\*[^*]+:\*\* (?:Enter|Upload|Select|Leave|Choose|Confirm|Do not|Review|Click)/gm) ?? [];
+      if (frontMatterValue(guide, "opportunity_id") !== entry.opportunityId ||
+          frontMatterValue(guide, "verified_on") !== generatedOn ||
+          !["smartrecruiters", "greenhouse", "ashby"].includes(frontMatterValue(guide, "application_system")) ||
+          !["ready-for-jamie-review", "blocked"].includes(applicationStatus) ||
+          !/^https:\/\//.test(frontMatterValue(guide, "canonical_application_url") ?? "") ||
+          frontMatterValue(guide, "resume_markdown") !== path.basename(entry.resumePath) ||
+          frontMatterValue(guide, "resume_markdown_sha256") !== resumeSha256 ||
+          frontMatterValue(guide, "resume_pdf") !== pdfFiles[0] ||
+          frontMatterValue(guide, "resume_pdf_sha256") !== digest(readFileSync(pdfPath)) ||
+          frontMatterValue(guide, "cover_letter") !== "Cover-Letter.md" ||
+          frontMatterValue(guide, "cover_letter_sha256") !== (coverLetter ? digest(coverLetter) : undefined)) {
+        fail("application-guide", `${label}: application guide metadata is incomplete or not bound to the current resume and PDF.`);
+      }
+      if (requiredSections.some((heading) => !guide.includes(heading)) ||
+          !guide.includes("Jamie alone clicks the final Submit button.")) {
+        fail("application-guide", `${label}: application guide is missing required instructions or Jamie's final-submit gate.`);
+      }
+      if (applicationStatus === "ready-for-jamie-review" &&
+          ((!blocker || blocker !== "none") || exactActionLines.length < 6)) {
+        fail("application-guide", `${label}: ready guide lacks exact field actions or declares an unresolved blocker.`);
+      }
+      if (applicationStatus === "blocked" &&
+          (!blocker || blocker === "none" || !guide.includes("## Blocker"))) {
+        fail("application-guide", `${label}: blocked guide does not name its blocker.`);
+      }
+      if (protectedLocatorPattern.test(guide) || protectedCategoryAnswerPattern.test(guide)) {
+        fail("public-safety", `${label}: protected source locator or protected-category answer entered the application guide.`);
+      }
+    }
+
+    if (artifact.schemaVersion !== 2 ||
+        artifact.opportunityId !== entry.opportunityId ||
+        artifact.generatedOn !== generatedOn ||
+        artifact?.opportunitySource?.file !== entry.opportunityPath ||
+        artifact?.opportunitySource?.sha256 !== opportunitySha256) {
+      fail("opportunity-source-current", `${label}: artifact is not bound to the current governed opportunity source and date.`);
+    }
+
+    if (artifact.sourceMarkdown !== path.basename(entry.resumePath) ||
+        artifact.sourceMarkdownSha256 !== resumeSha256 ||
+        entry.resumeSha256 !== resumeSha256) {
+      fail("markdown-current", `${label}: Markdown, hiring-reader, and artifact digests do not match.`);
+    }
+
+    const workspace = artifact.googleWorkspace ?? {};
+    if (artifact?.layout?.source !== evaluation?.styleContract?.source ||
+        artifact?.layout?.styleReference !== evaluation?.styleContract?.styleReference ||
+        artifact?.layout?.sourceStylesPreserved !== true ||
+        workspace.sourceWasTreatedReadOnly !== true ||
+        workspace.sourceUnchangedAfterCopy !== true ||
+        workspace.nativeCopyCreated !== true ||
+        workspace.connectorReadbackVerified !== true ||
+        workspace.sourceLocatorCommitted !== false ||
+        workspace.copyLocatorCommitted !== false) {
+      fail("google-docs-lineage", `${label}: native-copy style lineage or read-only source verification is incomplete.`);
+    }
+
+    const pdf = readFileSync(pdfPath);
+    const pdfText = pdf.toString("latin1");
+    const pdfLinkUris = activePdfLinkUris(pdfText);
+    const pageObjects = pdfText.match(/\/Type\s*\/Page\b/g)?.length ?? 0;
+    const mediaBoxes = pdfText.match(/\/MediaBox\s*\[\s*0\s+0\s+612\s+792\s*\]/g)?.length ?? 0;
+    if (!pdf.subarray(0, 5).equals(Buffer.from("%PDF-")) ||
+        pageObjects < 1 || pageObjects > 2 || mediaBoxes !== pageObjects ||
+        !pdfText.includes(`/Count ${pageObjects}`) ||
+        !pdfText.includes("/Marked true") || !pdfText.includes("/StructTreeRoot") ||
+        artifact?.pdf?.mediaType !== "application/pdf" ||
+        artifact?.pdf?.sha256 !== digest(pdf) ||
+        artifact?.pdf?.bytes !== statSync(pdfPath).size ||
+        artifact?.pdf?.pages !== pageObjects ||
+        artifact?.pdf?.pageSize !== "US Letter" || artifact?.pdf?.tagged !== true) {
+      fail("pdf-structure", `${label}: PDF is stale, malformed, untagged, over two pages, or not US Letter.`);
+    }
+
+    if (JSON.stringify(artifact?.layout?.typography) !== JSON.stringify(evaluation?.styleContract?.typography) ||
+        !requiredFonts.every((fontName) => pdfText.includes(fontName))) {
+      fail("approved-typography", `${label}: approved typography is absent from the manifest or embedded PDF fonts.`);
+    }
+
+    const listContract = evaluation?.styleContract?.listMarkerTypography;
+    const artifactListContract = artifact?.layout?.listMarkerTypography;
+    const listMeasurements = listMarkerMeasurements(pdf);
+    const expectedDelta = listContract?.deltaPoints;
+    const tolerance = listContract?.tolerancePoints;
+    if (listContract?.relation !== "one-point-smaller-than-list-text" ||
+        expectedDelta !== 1 ||
+        listContract?.verification !== "exported-pdf-content-stream" ||
+        typeof expectedDelta !== "number" || typeof tolerance !== "number" ||
+        artifactListContract?.relation !== listContract.relation ||
+        artifactListContract?.deltaPoints !== expectedDelta ||
+        artifactListContract?.verifiedListItems !== listMeasurements.length ||
+        listMeasurements.length < 1 ||
+        listMeasurements.some(({ deltaPoints }) => Math.abs(deltaPoints - expectedDelta) > tolerance)) {
+      fail("list-marker-typography", `${label}: every exported list marker must render one point smaller than its associated item text.`);
+    }
+
+    const pages = Array.from({ length: pageObjects }, (_, index) => index + 1);
+    const checks = artifact?.visualInspection?.checks;
+    if (artifact?.visualInspection?.status !== "pass" ||
+        JSON.stringify(artifact?.visualInspection?.pagesInspected) !== JSON.stringify(pages) ||
+        !Array.isArray(checks) || checks.length < 4) {
+      fail("visual-inspection", `${label}: every exported page needs a complete visual-inspection receipt.`);
+    }
+
+    const preferences = evaluation.editorialPreferences ?? {};
+    const politicoLabel = preferences.politicoLabel;
+    const forbiddenDispositionPatterns = Array.isArray(preferences.forbiddenHiringFacingDispositionPatterns)
+      ? preferences.forbiddenHiringFacingDispositionPatterns
+      : [];
+    const forbiddenResearchDossierPatterns = Array.isArray(preferences.forbiddenResearchDossierPatterns)
+      ? preferences.forbiddenResearchDossierPatterns
+      : [];
+    const plainTextProjectNames = Array.isArray(preferences.plainTextProjectNames)
+      ? preferences.plainTextProjectNames
+      : [];
+    const politicoUrl = preferences.politicoArticleUrl;
+    const markdownPoliticoLinks = [
+      `[${politicoLabel}](${politicoUrl})`,
+      `[*${politicoLabel}*](${politicoUrl})`
+    ];
+    if ([...forbiddenDispositionPatterns, ...forbiddenResearchDossierPatterns].some((pattern) =>
+      typeof pattern === "string" && pattern && resume.toLowerCase().includes(pattern.toLowerCase())
+    )) {
+      fail("resume-editorial-preferences", `${label}: hiring-facing resume includes nonessential evidence-process or disposition language.`);
+    }
+    if (politicoLabel && resume.includes(politicoLabel) &&
+        (!politicoUrl || !markdownPoliticoLinks.some((link) => resume.includes(link)) || !pdfLinkUris.has(politicoUrl))) {
+      fail("resume-editorial-preferences", `${label}: Politico New York must link to the canonical archived article PDF in Markdown and the exported PDF.`);
+    }
+    for (const project of plainTextProjectNames) {
+      const projectLabel = typeof project?.label === "string" ? project.label : "";
+      const forbiddenUrl = typeof project?.forbiddenUrl === "string" ? project.forbiddenUrl : "";
+      if (!projectLabel || !forbiddenUrl) continue;
+      const markdownLink = new RegExp(`\\[(?:\\*|_)?${escapeRegExp(projectLabel)}(?:\\*|_)?\\]\\([^)]*\\)`);
+      if (markdownLink.test(resume) || pdfLinkUris.has(forbiddenUrl)) {
+        fail("resume-editorial-preferences", `${label}: ${projectLabel} must remain plain text in Markdown and PDF.`);
+      }
+    }
+
+    if (protectedLocatorPattern.test(resume) || protectedLocatorPattern.test(JSON.stringify(artifact))) {
+      fail("public-safety", `${label}: protected Google Workspace or local filesystem locator entered the resume artifact.`);
+    }
+  }
+
+  const projection = evaluation.publicResumeProjection;
+  const selectionManifestPath = path.join(root, projection?.selectionManifest ?? "");
+  const portfolioArtifactPath = path.join(root, projection?.artifact ?? "");
+  const publicPdfPath = path.join(root, projection?.file ?? "");
+  if (!projection?.selectionManifest || !existsSync(selectionManifestPath) ||
+      !projection?.artifact || !existsSync(portfolioArtifactPath) ||
+      !projection?.file || !existsSync(publicPdfPath)) {
+    fail("public-resume-projection", "The selected opportunity-set manifest, portfolio artifact, or public PDF is missing.");
+  } else {
+    const selection = JSON.parse(readFileSync(selectionManifestPath, "utf8"));
+    const artifact = JSON.parse(readFileSync(portfolioArtifactPath, "utf8"));
+    const selectedMarkdownPath = path.join(root, selection?.resume?.markdownPath ?? "");
+    const selectedPdfPath = path.join(root, selection?.resume?.pdfPath ?? "");
+    const portfolioPdf = existsSync(selectedPdfPath) ? readFileSync(selectedPdfPath) : undefined;
+    const portfolioMeasurements = portfolioPdf ? listMarkerMeasurements(portfolioPdf) : [];
+    const listContract = evaluation?.styleContract?.listMarkerTypography;
+    const portfolioListContract = artifact?.layout?.listMarkerTypography;
+    if (selection?.resume?.artifactPath !== projection.artifact ||
+        selection?.resume?.publicPdfPath !== projection.file ||
+        artifact?.opportunityId !== "active-opportunity-portfolio" ||
+        !selection?.resume?.markdownPath || !existsSync(selectedMarkdownPath) ||
+        !selection?.resume?.pdfPath || !existsSync(selectedPdfPath) ||
+        artifact?.sourceMarkdownSha256 !== digest(readFileSync(selectedMarkdownPath)) ||
+        selection?.resume?.markdownSha256 !== digest(readFileSync(selectedMarkdownPath)) ||
+        artifact?.pdf?.sha256 !== digest(readFileSync(selectedPdfPath)) ||
+        selection?.resume?.pdfSha256 !== digest(readFileSync(selectedPdfPath)) ||
+        artifact?.publicProjection?.sha256 !== digest(readFileSync(publicPdfPath)) ||
+        digest(readFileSync(publicPdfPath)) !== digest(readFileSync(selectedPdfPath))) {
+      fail("public-resume-projection", "The public resume is not digest-bound and byte-identical to the selected opportunity-set portfolio artifact.");
+    }
+    if (listContract?.relation !== "one-point-smaller-than-list-text" ||
+        listContract?.deltaPoints !== 1 ||
+        portfolioListContract?.relation !== listContract.relation ||
+        portfolioListContract?.deltaPoints !== listContract.deltaPoints ||
+        portfolioListContract?.verifiedListItems !== portfolioMeasurements.length ||
+        portfolioMeasurements.length < 1 ||
+        portfolioMeasurements.some(({ deltaPoints }) => Math.abs(deltaPoints - listContract.deltaPoints) > listContract.tolerancePoints)) {
+      fail("list-marker-typography", "The selected public resume's exported list markers are not one point smaller than their associated item text.");
+    }
+  }
+
+  return {
+    passed: failures.length === 0,
+    failures,
+    metrics: {
+      opportunities: entries.length,
+      markdownResumes: discoveredResumePaths.length,
+      pdfs,
+      artifacts,
+      applicationGuides,
+      coverLetters
+    }
+  };
+}
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  const rootIndex = process.argv.indexOf("--root");
+  const root = rootIndex >= 0 && process.argv[rootIndex + 1]
+    ? path.resolve(process.argv[rootIndex + 1])
+    : defaultRoot;
+  const result = evaluateResumeArtifacts(root);
+  process.stdout.write(`${JSON.stringify(result)}\n`);
+  if (!result.passed) process.exitCode = 1;
+}

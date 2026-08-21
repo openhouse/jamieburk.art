@@ -8,26 +8,31 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 FROM base AS deps
+ENV NODE_OPTIONS=--max-old-space-size=256
 COPY package.json package-lock.json ./
 COPY apps/www/package.json ./apps/www/package.json
 RUN npm ci
 
 FROM base AS builder
+ENV NODE_OPTIONS=--max-old-space-size=512
 ARG APP_ENV=staging
 ARG SITE_ENV=staging
 ARG NEXT_PUBLIC_DEPLOY_ENV=staging
 ARG SITE_URL=https://staging.jamieburk.art
 ARG NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art
 ARG NEXT_PUBLIC_ROBOTS_POLICY=noindex
+ARG NEXT_PUBLIC_MEDIA_DELIVERY=local
 ENV APP_ENV=$APP_ENV
 ENV SITE_ENV=$SITE_ENV
 ENV NEXT_PUBLIC_DEPLOY_ENV=$NEXT_PUBLIC_DEPLOY_ENV
 ENV SITE_URL=$SITE_URL
 ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
 ENV NEXT_PUBLIC_ROBOTS_POLICY=$NEXT_PUBLIC_ROBOTS_POLICY
+ENV NEXT_PUBLIC_MEDIA_DELIVERY=$NEXT_PUBLIC_MEDIA_DELIVERY
 COPY --from=deps /repo/node_modules ./node_modules
 COPY . .
-RUN npm run build -w @jamie-burkart/www
+RUN npm run typecheck -w @jamie-burkart/www \
+  && NEXT_BUILD_SKIP_VERIFIED_TYPECHECK=1 npm run build -w @jamie-burkart/www
 
 FROM node:26-bookworm-slim AS runner
 WORKDIR /app
@@ -37,6 +42,7 @@ ARG NEXT_PUBLIC_DEPLOY_ENV=staging
 ARG SITE_URL=https://staging.jamieburk.art
 ARG NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art
 ARG NEXT_PUBLIC_ROBOTS_POLICY=noindex
+ARG NEXT_PUBLIC_MEDIA_DELIVERY=local
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV PORT=3000
@@ -47,6 +53,7 @@ ENV NEXT_PUBLIC_DEPLOY_ENV=$NEXT_PUBLIC_DEPLOY_ENV
 ENV SITE_URL=$SITE_URL
 ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
 ENV NEXT_PUBLIC_ROBOTS_POLICY=$NEXT_PUBLIC_ROBOTS_POLICY
+ENV NEXT_PUBLIC_MEDIA_DELIVERY=$NEXT_PUBLIC_MEDIA_DELIVERY
 
 RUN groupadd --system --gid 1001 nodejs \
   && useradd --system --uid 1001 --gid nodejs nextjs

@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to NYC Artist Coalition
 
-**Source commit:** `b1d476c810fc6d434b01fdab16c23ad1b961a01f`
-**Generation time:** 2026-07-28T14:28:48-04:00
-**Source fingerprint:** `e5177833940ac1e9395c314bcb04693bdef8e3ec600800598ce57a3002d5c65f`
+**Source commit:** `2bd29f313f73f8844282dbe364b163d62544a401`
+**Generation time:** 2026-08-21T10:19:09-04:00
+**Source fingerprint:** `77a6700ed0da85d2d0ec4dcfd5fed3f8ef2d9c6dc3dd08683dd243cddead9684`
 
 - [NYC Artist Coalition application brief](../../applications/nycac-civic-product-operations.md) - `part_of` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `related_to` (frontmatter)
@@ -194,11 +194,14 @@
 - [Knowledge Wiki](../../README.md) - `prose_link` (markdown)
 - [Knowledge Wiki](../../README.md) - `related_to` (frontmatter)
 - [Decisions, Deliverables, and Operational Outcomes](../../indexes/decisions-deliverables-and-operational-outcomes.md) - `related_to` (frontmatter)
+- [Live Project Websites](../../indexes/live-project-websites.md) - `related_to` (frontmatter)
 - [NYC Artist Coalition DCLA formation photo set](../../indexes/photo-sets/nycac-dcla-formation-2017.md) - `related_to` (frontmatter)
 - [NYC Artist Coalition project-site photographs, 2017-2026](../../indexes/photo-sets/nycac-project-sites-2017-2026.md) - `related_to` (frontmatter)
 - [Jamie Burkart public testimony](../../indexes/public-testimony.md) - `related_to` (frontmatter)
 - [Jamie at Work](../../methods/jamie-at-work.md) - `related_to` (frontmatter)
 - [Participation and Relational Infrastructure](../../methods/participation-and-relational-infrastructure.md) - `related_to` (frontmatter)
+- [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `related_to` (frontmatter)
+- [Sunday Dinner, WOW List, and NYC Artist Coalition Synergy](../../methods/sunday-dinner-wowlist-nycac-synergy.md) - `related_to` (frontmatter)
 - [NYC Artist Coalition organization map](../../organizations/nyc-artist-coalition.md) - `related_to` (frontmatter)
 - [Let NYC Dance](../../projects/let-nyc-dance.md) - `related_to` (frontmatter)
 - [NYC Artist Coalition shared-folder archival production](../../research-runs/nycac-shared-folder-2026-07-19.md) - `documents` (frontmatter)

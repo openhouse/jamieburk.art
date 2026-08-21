@@ -1,0 +1,41 @@
+{
+  "file": "aclu-campaigns-james.json",
+  "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+  "personId": "person.james-williams-aclu",
+  "name": "James Williams",
+  "relationship": "likely-direct-report",
+  "resumeSha256": "d6cf9e69fb63769d0007338e0e2ed820f96de20c29b754760741538b7f04aa10",
+  "acceptanceQuestion": "I would hire this person for this job.",
+  "decision": "fail",
+  "wouldHire": false,
+  "simulatedPublicFigureLens": true,
+  "nonEndorsementBoundary": "This fictionalized public-context lens is not participation, quotation, endorsement, or a hiring decision by the named person.",
+  "access": {
+    "scope": "public-resume-and-public-job-context-only",
+    "repositoryAccess": false,
+    "privateSourceAccess": false
+  },
+  "strengths": [
+    "14+ years of project, product operations, and implementation leadership",
+    "Direct civic advocacy and coalition-operations experience involving policy research, public testimony, elected officials, press work, communications, and campaign systems",
+    "Evidence of cross-functional coordination, planning, risk tracking, executive reporting, facilitation, documentation, and public-facing delivery",
+    "Some quantified outcomes across civic technology, community platforms, revenue growth, public funding, and resident services"
+  ],
+  "risks": [
+    "Resume does not establish experience managing large national advocacy campaigns or comparably complex national programs",
+    "Budget and resource tracking appear in the skills section, but the experience section provides little evidence of direct budget ownership, forecasting, procurement, contracting, or invoice administration",
+    "Most advocacy experience appears local and founder-led, leaving organizational fit within a large, matrixed civil-liberties institution unproven",
+    "The resume provides limited evidence of managing staff, vendors, or multiple campaign workstreams at the seniority and scale implied by the role",
+    "No clear evidence of sustained professional work specifically in civil liberties, political advocacy, or nationwide campaign execution"
+  ],
+  "interviewEvidenceNeeded": [
+    "A concrete example of managing a large, multi-workstream advocacy campaign with scope, schedule, stakeholders, risks, and measurable results",
+    "Specific ownership of budgets, procurement, contracts, vendors, and invoice workflows",
+    "Examples of coordinating national, state, and affiliate stakeholders in a matrixed organization",
+    "Evidence of managing competing priorities and delivery systems across several campaigns simultaneously",
+    "Clarification of decision authority, team size, individual contribution, and accountability for the coalition achievements listed"
+  ],
+  "rationale": "The resume demonstrates credible adjacent strengths in civic technology, local advocacy, coalition coordination, communications, and project delivery. However, it does not by itself provide enough evidence of national campaign scale, institutional complexity, procurement and invoice ownership, or senior program accountability to support the literal conclusion that I would hire this person for this exact role. I would consider an interview, but the resume-alone hiring gate fails.",
+  "model": "gpt-5.6-sol",
+  "evaluatedAt": "2026-08-20"
+}

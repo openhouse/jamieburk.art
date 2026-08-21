@@ -144,6 +144,14 @@ test("a changed crop scope fails exact permission", async () => {
   assert.equal(result.checks.permission_scope_exact_and_fail_closed, false);
 });
 
+test("a changed optional-credit policy fails exact permission", async () => {
+  const model = await baselineModel();
+  model.recordsById[model.canary.permissionSourceId].permission_capsule.credit_policy =
+    "Visible credit required everywhere";
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.permission_scope_exact_and_fail_closed, false);
+});
+
 test("an unsupported caption assertion fails closed", async () => {
   const model = await baselineModel();
   model.recordsById[model.canary.placementId].caption.assertions.push(
@@ -206,12 +214,30 @@ test("a panel without dissent fails artist-led curation", async () => {
   assert.equal(result.criteria.artist_led_curation, false);
 });
 
-test("binding every public photograph defeats selective materialization", async () => {
+test("a bound photograph without a governed asset and occurrence fails selective materialization", async () => {
   const model = await baselineModel();
   const pending = appendPendingPhoto(model);
   pending.knowledgeStatus = "bound";
   pending.wikiId = "asset.photo.auto-generated";
   const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.criteria.selective_projection, false);
+});
+
+test("a bound photograph cannot lose its governed occurrence", async () => {
+  const model = await baselineModel();
+  const sunday = model.publicPhotoManifest.find((item) => item.id === "sunday-dinner-shared-map");
+  delete model.recordsById[sunday.placementIds[0]];
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.manifest_wiki_placement_alignment, false);
+  assert.equal(result.criteria.selective_projection, false);
+});
+
+test("a bound photograph cannot receive automated production approval", async () => {
+  const model = await baselineModel();
+  const sunday = model.publicPhotoManifest.find((item) => item.id === "sunday-dinner-shared-map");
+  model.recordsById[sunday.placementIds[0]].approval.production = "approved";
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.manifest_wiki_placement_alignment, false);
   assert.equal(result.criteria.selective_projection, false);
 });
 
@@ -254,6 +280,15 @@ test("changing Hero source invalidates a carried-forward binding receipt", async
   const model = await baselineModel();
   attachCarriedForwardReceipt(model);
   model.sourceTexts["apps/www/src/components/Hero.tsx"] += "\n// changed placement";
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.exact_candidate_receipt_current, false);
+  assert.equal(result.passed, false);
+});
+
+test("changing the shared home identity invalidates a carried-forward binding receipt", async () => {
+  const model = await baselineModel();
+  attachCarriedForwardReceipt(model);
+  model.sourceTexts["apps/www/src/data/home-identity.ts"] += "\n// changed public identity";
   const result = evaluatePhotoKnowledgeModel(model);
   assert.equal(result.checks.exact_candidate_receipt_current, false);
   assert.equal(result.passed, false);

@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "runId": "hiring-public-4751d74aeae7",
-  "generatedAt": "2026-07-28T13:53:58-04:00",
-  "candidateSha": "4751d74aeae7f713be8f8e974d1fb40e35c4c9aa",
+  "runId": "hiring-public-2bd29f313f73",
+  "generatedAt": "2026-08-21T10:19:09-04:00",
+  "candidateSha": "2bd29f313f73f8844282dbe364b163d62544a401",
   "candidatePathsClean": true,
-  "portfolioSnapshotHash": "bf2bb44f2cc4e05272c37c9733b043e84867230b97afb89f60f5c1c4a23f8d5e",
-  "roleContextHash": "e609dbecd2231409330b4a992e1c2fa0cb8786cf463c1e4c9bfa450e0fcd3d90",
+  "portfolioSnapshotHash": "f15a12f18f203d26ab163288d0742597345607e32a949dcf54a866755eedcf7b",
+  "roleContextHash": "6e959f00d5e3b89e8714483841ab7ace87224f7a66a1c53543442b4bc1c438e6",
   "readerContextHash": "c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
   "publicSafety": {
@@ -137,16 +137,379 @@
   ],
   "opportunities": [
     {
-      "id": "opportunity.nyc-oti.technical-operations-manager.782369",
-      "title": "NYC OTI - Technical Operations Manager 782369",
-      "roleContextHash": "4443fecc128f7e7e13e165e23bc2846a6920495f212337a4b742c5cb14cff65d",
+      "id": "opportunity.nyc-oti.senior-product-manager.782366",
+      "title": "NYC OTI - Senior Product Manager 782366",
+      "roleContextHash": "9ece61b702b9c23603340097d71318ae30616e27037b47a4820a450b38c12d68",
       "live": true,
-      "fresh": false,
+      "fresh": true,
       "hardScreenBlocked": false,
       "decision": "evidence-gap-review",
-      "observed": 5,
-      "requirementTotal": 6,
+      "observed": 3,
+      "requirementTotal": 5,
+      "criticalObserved": 3,
+      "criticalTotal": 5,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.oti-product.end-to-end-public-product",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/callnyc"
+          ],
+          "evidenceNeedles": [
+            "public-facing"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti-product.discovery-and-research",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/technical-operations",
+            "/lab/source-backed-team-memory"
+          ],
+          "evidenceNeedles": [
+            "clarifies requirements",
+            "evidence"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti-product.cross-functional-launch",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.oti-product.metrics-and-learning",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-weak",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.oti-product.accessibility-privacy",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/lab/source-backed-team-memory"
+          ],
+          "evidenceNeedles": [
+            "Protected"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opportunity.nyc-oti.product-manager.784450",
+      "title": "NYC OTI - Product Manager 784450",
+      "roleContextHash": "1e02d8be3aac92dd6e2108a3035e2afc23960494aef94a1469804e0bb0def662",
+      "live": true,
+      "fresh": true,
+      "hardScreenBlocked": false,
+      "decision": "deterministic-ready-for-human-review",
+      "observed": 4,
+      "requirementTotal": 4,
       "criticalObserved": 4,
+      "criticalTotal": 4,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.oti-product-784450.lifecycle",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [
+            "/work/callnyc"
+          ],
+          "evidenceNeedles": [
+            "public-facing"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti-product-784450.research-prioritization",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/lab/source-backed-team-memory",
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "evidence",
+            "requirements"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti-product-784450.requirements",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "requirements"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti-product-784450.analytics",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/harry-j-epstein"
+          ],
+          "evidenceNeedles": [
+            "analytics"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opportunity.nyc-oti.operations-manager.789810",
+      "title": "NYC OTI - Operations Manager 789810",
+      "roleContextHash": "abd2c1ed52c3d4de6f18ad79e1495780125e80efd610ec3642257ca0bfdf26a0",
+      "live": true,
+      "fresh": true,
+      "hardScreenBlocked": false,
+      "decision": "deterministic-ready-for-human-review",
+      "observed": 3,
+      "requirementTotal": 3,
+      "criticalObserved": 3,
+      "criticalTotal": 3,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.oti-operations-789810.operating-system",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "owners"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti-operations-789810.budgets-contracts",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/kc-town-hall"
+          ],
+          "evidenceNeedles": [
+            "vendor"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti-operations-789810.team-health",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/kc-town-hall"
+          ],
+          "evidenceNeedles": [
+            "1,970 tires"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opportunity.nyc-oti.cybersecurity-senior-project-manager.791074",
+      "title": "NYC OTI - Cybersecurity Senior Project Manager 791074",
+      "roleContextHash": "57d4af05ceed74fd3483a52fdb5806c56c37911da9755fd0afeb2ac515ac5bf9",
+      "live": true,
+      "fresh": true,
+      "hardScreenBlocked": false,
+      "decision": "evidence-gap-review",
+      "observed": 2,
+      "requirementTotal": 3,
+      "criticalObserved": 2,
+      "criticalTotal": 3,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.oti-cyber-pm-791074.portfolio",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.oti-cyber-pm-791074.risk-procurement",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/kc-town-hall"
+          ],
+          "evidenceNeedles": [
+            "vendor"
+          ]
+        },
+        {
+          "requirementId": "requirement.oti-cyber-pm-791074.reporting",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [
+            "/lab/source-backed-team-memory",
+            "/work/kc-town-hall"
+          ],
+          "evidenceNeedles": [
+            "evidence",
+            "1,970 tires"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opportunity.aclu.senior-project-manager-lps.8620968002",
+      "title": "ACLU - Senior Project Manager, Learning and Project Solutions",
+      "roleContextHash": "2584bcd37404c42d5a7fb570a27790c2863287809cfb93dc8c935753b21da27e",
+      "live": true,
+      "fresh": true,
+      "hardScreenBlocked": false,
+      "decision": "evidence-gap-review",
+      "observed": 1,
+      "requirementTotal": 4,
+      "criticalObserved": 1,
+      "criticalTotal": 3,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.aclu-lps.systems-implementation",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [
+            "/work/callnyc"
+          ],
+          "evidenceNeedles": [
+            "implementation"
+          ]
+        },
+        {
+          "requirementId": "requirement.aclu-lps.plan-budget-risk",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.aclu-lps.business-analysis",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.aclu-lps.organizational-learning",
+          "importance": "important",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [],
+          "evidenceNeedles": []
+        }
+      ]
+    },
+    {
+      "id": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "title": "ACLU - Senior Project Manager, National Campaigns",
+      "roleContextHash": "3cadfae0474c91ac2e54763fadfa7b945f71cbcf97e5535111bc17136d07f0e4",
+      "live": true,
+      "fresh": true,
+      "hardScreenBlocked": false,
+      "decision": "evidence-gap-review",
+      "observed": 2,
+      "requirementTotal": 4,
+      "criticalObserved": 2,
+      "criticalTotal": 3,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.aclu-campaigns.project-systems",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [
+            "/work/fair-rent-nyc"
+          ],
+          "evidenceNeedles": [
+            "coalition"
+          ]
+        },
+        {
+          "requirementId": "requirement.aclu-campaigns.communications",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.aclu-campaigns.advocacy-context",
+          "importance": "critical",
+          "observed": true,
+          "matchedPublicText": true,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [
+            "/work/callnyc"
+          ],
+          "evidenceNeedles": [
+            "New York City Council"
+          ]
+        },
+        {
+          "requirementId": "requirement.aclu-campaigns.judgment-and-discretion",
+          "importance": "important",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        }
+      ]
+    },
+    {
+      "id": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "title": "NYC OTI - Technical Operations Manager 782369",
+      "roleContextHash": "0c28b5e4076d8b7e135554c26d4ff663d22654894ef207de29c0228c0d096655",
+      "live": false,
+      "fresh": false,
+      "hardScreenBlocked": false,
+      "decision": "not-live",
+      "observed": 1,
+      "requirementTotal": 6,
+      "criticalObserved": 1,
       "criticalTotal": 4,
       "requirementCoverage": [
         {
@@ -159,61 +522,44 @@
             "/work/technical-operations"
           ],
           "evidenceNeedles": [
-            "Coordinate delivery across concurrent projects"
+            "Coordinate the smallest useful release"
           ]
         },
         {
           "requirementId": "requirement.oti.risk-and-dependencies",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-proven",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "Track status, surface risks early",
-            "Coordinate dependencies across product, engineering, security, legal"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.oti.onboarding-and-runbooks",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-proven",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "Onboard collaborators with handbooks, runbooks"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.oti.reporting-and-metrics",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "Report team health, project status, and operational metrics"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.oti.continuous-improvement",
           "importance": "important",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-proven",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "Improve working systems over time without overengineering"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.oti.government-hiring-and-procurement",
@@ -233,11 +579,11 @@
     {
       "id": "opportunity.aclu.product-manager-discovery.8482872002",
       "title": "ACLU - Product Manager II, Discovery",
-      "roleContextHash": "a217336b36261188e093f36243b5efa4ba5541047a31b63a76529bc7a4b44541",
-      "live": true,
+      "roleContextHash": "f0781056f5d21de434f5e28bae6afaaa398479aa59624f3f9fb79e8cb1855167",
+      "live": false,
       "fresh": false,
       "hardScreenBlocked": false,
-      "decision": "evidence-gap-review",
+      "decision": "not-live",
       "observed": 2,
       "requirementTotal": 5,
       "criticalObserved": 2,
@@ -305,56 +651,42 @@
     {
       "id": "opportunity.benepass.product-operations.7f963a7a",
       "title": "Benepass - Product Operations Manager",
-      "roleContextHash": "ca08b3bbab09c784fe9698076f2429dd184df02ab13cf6c41d4211c15cc9c69b",
-      "live": true,
+      "roleContextHash": "de24eec58952ab457e91475be7c00b363f94a7d7c68e5c3edf45c29009d702dc",
+      "live": false,
       "fresh": false,
       "hardScreenBlocked": false,
-      "decision": "evidence-gap-review",
-      "observed": 3,
+      "decision": "not-live",
+      "observed": 0,
       "requirementTotal": 4,
-      "criticalObserved": 3,
+      "criticalObserved": 0,
       "criticalTotal": 4,
       "requirementCoverage": [
         {
           "requirementId": "requirement.benepass.launch-readiness",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "public launch",
-            "surface risks early"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.benepass.product-engineering-translation",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "product, engineering, security, legal"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.benepass.runbooks-and-learning",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-proven",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "handbooks, runbooks",
-            "retrospectives"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.benepass.quantified-prioritization",
@@ -374,68 +706,51 @@
     {
       "id": "opportunity.codepath.claude-corps.5182020007",
       "title": "CodePath - Senior Program Manager, Claude Corps",
-      "roleContextHash": "6941a72320948903c2d926f890378cd0e8b82896cc621764cf6d5ba684ee50dd",
-      "live": true,
+      "roleContextHash": "fed1cf4f45eac105e117be3acc67051faa8da0e568e3dfbd96d8ac986c75c8c9",
+      "live": false,
       "fresh": false,
       "hardScreenBlocked": false,
-      "decision": "evidence-gap-review",
-      "observed": 5,
+      "decision": "not-live",
+      "observed": 1,
       "requirementTotal": 5,
-      "criticalObserved": 4,
+      "criticalObserved": 0,
       "criticalTotal": 4,
       "requirementCoverage": [
         {
           "requirementId": "requirement.codepath.master-program-plan",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-proven",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "delivery rhythms, decision records",
-            "Track status, surface risks early"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.codepath.partner-coordination",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "external stakeholders"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.codepath.executive-reporting",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "Report team health, project status, and operational metrics"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.codepath.ai-first-workflow",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-proven",
-          "routes": [
-            "/lab/source-backed-team-memory"
-          ],
-          "evidenceNeedles": [
-            "human-correctable AI workflows"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.codepath.handoff-ready-systems",
@@ -447,8 +762,7 @@
             "/work/technical-operations"
           ],
           "evidenceNeedles": [
-            "durable handoffs",
-            "without overengineering"
+            "durable handoffs"
           ]
         }
       ]
@@ -456,14 +770,14 @@
     {
       "id": "opportunity.asana.ai-implementation.8027437",
       "title": "Asana - AI Implementation Manager, Service Management",
-      "roleContextHash": "75ad7e8205334925037e3ce1f47fe209d04784345d2116732d948ecc408c9c00",
+      "roleContextHash": "4b656ae294128770ede83929d8f48102426e698f69bb01d28b28752161f07f4d",
       "live": true,
-      "fresh": false,
+      "fresh": true,
       "hardScreenBlocked": false,
       "decision": "evidence-gap-review",
-      "observed": 2,
+      "observed": 0,
       "requirementTotal": 4,
-      "criticalObserved": 1,
+      "criticalObserved": 0,
       "criticalTotal": 3,
       "requirementCoverage": [
         {
@@ -482,55 +796,43 @@
         {
           "requirementId": "requirement.asana.ai-workflow-design",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/lab/source-backed-team-memory"
-          ],
-          "evidenceNeedles": [
-            "human-correctable AI workflows"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.asana.risk-and-change-management",
           "importance": "critical",
           "observed": false,
-          "matchedPublicText": true,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-weak",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "surface risks early"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.asana.reusable-playbooks",
           "importance": "important",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/work/technical-operations"
-          ],
-          "evidenceNeedles": [
-            "handbooks, runbooks"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         }
       ]
     },
     {
       "id": "opportunity.permitflow.product-operations.8a6e6066",
       "title": "PermitFlow - Product Operations Manager",
-      "roleContextHash": "1d9ad0b5b0ab64748850defd6fca850568cb0c90a58f16bc17ef6a6cd54383f3",
+      "roleContextHash": "8224a33916dbb07004c8bdae4dc7dfd614dead9e5e2fa9fce2cc40da1fd2440f",
       "live": true,
-      "fresh": false,
+      "fresh": true,
       "hardScreenBlocked": false,
       "decision": "evidence-gap-review",
-      "observed": 3,
+      "observed": 1,
       "requirementTotal": 4,
-      "criticalObserved": 2,
+      "criticalObserved": 1,
       "criticalTotal": 3,
       "requirementCoverage": [
         {
@@ -564,6 +866,39 @@
         {
           "requirementId": "requirement.permitflow.cross-functional-launch",
           "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.permitflow.ai-automation",
+          "importance": "important",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-proven",
+          "routes": [],
+          "evidenceNeedles": []
+        }
+      ]
+    },
+    {
+      "id": "opportunity.protected.source-backed-memory-consulting.2026",
+      "title": "Protected source-backed team-memory consulting lead",
+      "roleContextHash": "b15538fd5ba342af247133ff26ce6135017d6f5350276aaa06246aa5658f6470",
+      "live": false,
+      "fresh": false,
+      "hardScreenBlocked": false,
+      "decision": "not-live",
+      "observed": 2,
+      "requirementTotal": 5,
+      "criticalObserved": 2,
+      "criticalTotal": 3,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.protected-memory.knowledge-friction",
+          "importance": "critical",
           "observed": true,
           "matchedPublicText": true,
           "declaredPublicStatus": "visible-qualified",
@@ -571,13 +906,12 @@
             "/work/technical-operations"
           ],
           "evidenceNeedles": [
-            "Coordinate dependencies across product, engineering",
-            "public launch"
+            "Knowledge Wiki Graph"
           ]
         },
         {
-          "requirementId": "requirement.permitflow.ai-automation",
-          "importance": "important",
+          "requirementId": "requirement.protected-memory.human-review",
+          "importance": "critical",
           "observed": true,
           "matchedPublicText": true,
           "declaredPublicStatus": "visible-proven",
@@ -585,8 +919,35 @@
             "/lab/source-backed-team-memory"
           ],
           "evidenceNeedles": [
-            "human-correctable AI workflows"
+            "Human review is part of the system"
           ]
+        },
+        {
+          "requirementId": "requirement.protected-memory.focused-sprint",
+          "importance": "important",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.protected-memory.onboarding-context",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.protected-memory.workflow-fit",
+          "importance": "important",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
         }
       ]
     }

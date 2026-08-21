@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Let NYC Dance
 
-**Source commit:** `b1d476c810fc6d434b01fdab16c23ad1b961a01f`
-**Generation time:** 2026-07-28T14:28:48-04:00
-**Source fingerprint:** `e5177833940ac1e9395c314bcb04693bdef8e3ec600800598ce57a3002d5c65f`
+**Source commit:** `2bd29f313f73f8844282dbe364b163d62544a401`
+**Generation time:** 2026-08-21T10:19:09-04:00
+**Source fingerprint:** `77a6700ed0da85d2d0ec4dcfd5fed3f8ef2d9c6dc3dd08683dd243cddead9684`
 
 - [Let NYC Dance: 1926 2017 [xyqgow5w]](../../assets/photographs/project-sites/let-nyc-dance-1926-2017-xyqgow5wnp.md) - `related_to` (frontmatter)
 - [Let NYC Dance: 1926 cabaret law b [s4gqqime]](../../assets/photographs/project-sites/let-nyc-dance-1926-cabaret-law-b-s4gqqimexc.md) - `related_to` (frontmatter)
@@ -36,6 +36,7 @@
 - [Let NYC Dance: vincent gentile [76aeslrn]](../../assets/photographs/project-sites/let-nyc-dance-vincent-gentile-76aeslrnke.md) - `related_to` (frontmatter)
 - [Let NYC Dance: ydanis rodriguez [46gt7e6a]](../../assets/photographs/project-sites/let-nyc-dance-ydanis-rodriguez-46gt7e6az4.md) - `related_to` (frontmatter)
 - [Committee on Consumer Affairs Cabaret Law repeal hearing](../../events/cabaret-law-repeal-hearing-2017-09-14.md) - `related_to` (frontmatter)
+- [Live Project Websites](../../indexes/live-project-websites.md) - `related_to` (frontmatter)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `prose_link` (markdown)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `related_to` (frontmatter)
 - [Project lineages](../../indexes/project-lineages.md) - `prose_link` (markdown)

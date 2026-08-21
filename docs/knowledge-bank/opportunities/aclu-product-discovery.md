@@ -2,17 +2,17 @@
 id: opportunity.aclu.product-manager-discovery.8482872002
 title: ACLU - Product Manager II, Discovery
 kind: opportunity
-status: governed-open
+status: archived
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-08-13
+review_by: 2026-11-13
 canonical_path: docs/knowledge-bank/opportunities/aclu-product-discovery.md
-summary: Public-safe requirement and portfolio-coverage map for ACLU's live term-limited Product Manager II, Discovery role.
+summary: Historical requirement and portfolio-coverage map for the closed ACLU Product Manager II, Discovery role.
 canonical_url: https://job-boards.greenhouse.io/aclu/jobs/8482872002
 source_type: official-employer
-opportunity_status: live
-verified_at: 2026-07-18
+opportunity_status: closed
+verified_at: 2026-08-13
 portfolio_routes:
   - /
   - /work/callnyc
@@ -132,7 +132,10 @@ human_review: governed-open
 
 # ACLU - Product Manager II, Discovery
 
-This role fits Jamie's listening, synthesis, facilitation, source discipline,
+The official job URL redirected to the ACLU openings index and no longer showed
+this role on August 13, 2026. Preserve the record as a historical fit map.
+
+This role fit Jamie's listening, synthesis, facilitation, source discipline,
 and ambiguity work. The decisive unresolved artifact is a concise, redacted
 product brief from a launched product. A retrospective CallNYC brief is a
 promising candidate, not yet an accepted substitute.

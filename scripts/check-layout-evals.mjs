@@ -24,12 +24,19 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   const evaluation = JSON.parse(readText("evals/layout/portfolio-photography.json"));
   const expectedCriteria = [
     "manifest-bound-publication",
-    "minimal-authorized-field",
+    "public-project-credit-policy",
+    "governed-photographic-field",
     "metadata-and-locator-safety",
     "editorial-not-decorative",
-    "deliberate-absence",
+    "truthful-project-cover-field",
+    "hiring-argument-opportunity-set",
+    "hiring-argument-project-sequence",
+    "tag-navigation-contract",
+    "capability-navigation-contract",
+    "knowledge-wiki-architecture-contract",
     "human-index-material-system",
     "responsive-image-contract",
+    "reliable-image-delivery",
     "human-authority-remains-open"
   ];
   const observedCriteria = evaluation.criteria.map(({ id }) => id);
@@ -40,38 +47,75 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     fail("eval-contract", "Every declared layout criterion must remain blocking.");
   }
 
-  const manifestPath = "apps/www/src/data/photography.ts";
-  const manifest = readText(manifestPath);
-  const sources = [...manifest.matchAll(/src: "(\/images\/field-notes\/[^"]+)"/g)].map(
-    (match) => match[1]
-  );
-  const expectedSources = [
-    "/images/field-notes/jamie-east-river.webp"
+  const photographyPath = "apps/www/src/data/photography.ts";
+  const participationPath = "apps/www/src/data/participationMedia.ts";
+  const photography = readText(photographyPath);
+  const participation = readText(participationPath);
+  const photographySurface = [photography, participation].join("\n");
+  const expectedPhotoBindings = [
+    [photography, "eastRiver", "/images/field-notes/jamie-east-river.webp"],
+    [photography, "sundayDinnerSharedMap", "/images/field-notes/sunday-dinner-shared-map.webp"],
+    [photography, "kcTownHallRoofWork", "/images/field-notes/kc-town-hall-roof-work.webp"],
+    [photography, "teamKnowledgeCollectiveSynthesis", "/images/field-notes/team-knowledge-collective-synthesis.webp"],
+    [participation, "shoestringFacilitation", "/images/participation/shoestring-facilitation.webp"],
+    [participation, "marketHotelTownHall", "/images/participation/save-nyc-spaces-market-hotel.webp"]
   ];
-  if (JSON.stringify(sources.sort()) !== JSON.stringify(expectedSources.sort())) {
-    fail("minimal-authorized-field", "The public field must contain exactly the four reviewed derivatives.");
-  }
-
-  for (const field of ["id", "width", "height", "alt", "caption", "credit", "placements", "publicationStatus", "publicUseBoundary"]) {
-    const count = [...manifest.matchAll(new RegExp(`\\b${field}:`, "g"))].length;
-    if (count !== 2) {
-      fail("manifest-bound-publication", `Manifest field ${field} is missing from one or more photos.`);
+  for (const [source, key, asset] of expectedPhotoBindings) {
+    const start = source.indexOf(`${key}: {`);
+    const end = source.indexOf("\n  },", start);
+    const block = source.slice(start, end);
+    if (start < 0 || !block.includes(`src: "${asset}"`) ||
+        !block.includes("width:") || !block.includes("height:") ||
+        !block.includes("alt:") || !block.includes("caption:") ||
+        !block.includes("credit:") || !block.includes('publicationStatus: "jamie-authorized"') ||
+        !block.includes("publicUseBoundary:") && source === photography ||
+        !block.includes("permissionId:") && source === participation) {
+      fail("manifest-bound-publication", `Incomplete governed photo binding for ${key}.`);
     }
   }
-  if ([...manifest.matchAll(/publicationStatus: "jamie-authorized"/g)].length !== 2) {
-    fail("manifest-bound-publication", "Every photo must retain the Jamie-authorized publication status.");
+
+  const expectedPublicCredits = [
+    [photography, "eastRiver", "Photograph by Elana Gordon. From Jamie Burkart's photo archive."],
+    [photography, "sundayDinnerSharedMap", "Photo courtesy of Sunday Dinner NYC."],
+    [photography, "kcTownHallRoofWork", "Photo courtesy of KC Town Hall."],
+    [photography, "teamKnowledgeCollectiveSynthesis", "Photo courtesy of NYC Artist Coalition."],
+    [participation, "shoestringFacilitation", "Photo courtesy of NYC Artist Coalition."],
+    [participation, "marketHotelTownHall", "Photo courtesy of NYC Artist Coalition."]
+  ];
+  for (const [source, key, credit] of expectedPublicCredits) {
+    const start = source.indexOf(`${key}: {`);
+    const end = source.indexOf("\n  },", start);
+    const block = source.slice(start, end);
+    if (start < 0 || !block.includes(`credit: "${credit}"`)) {
+      fail("public-project-credit-policy", `Public photo credit drifted for ${key}.`);
+    }
+  }
+  if (/Paul Mossine|photographer not identified|individual photographer not recorded|retained export/i.test(photographySurface)) {
+    fail(
+      "public-project-credit-policy",
+      "Visitor-facing photo data contains an unsupported individual credit or archive-processing commentary."
+    );
   }
 
-  const publicImageRoot = path.join(root, "apps/www/public/images/field-notes");
-  const publicImages = walkFiles(publicImageRoot).sort();
-  if (publicImages.length !== 1 || publicImages.some((file) => !file.endsWith(".webp"))) {
-    fail("minimal-authorized-field", "The field-notes directory must contain only the fully bound East River WebP derivative.");
-  }
-  for (const relativeImagePath of publicImages) {
-    const bytes = readFileSync(path.join(publicImageRoot, relativeImagePath));
-    const binary = bytes.toString("latin1");
-    if (/EXIF|Exif|GPSLatitude|GPSLongitude|<x:xmpmeta/i.test(binary)) {
-      fail("metadata-and-locator-safety", `${relativeImagePath} contains embedded metadata.`);
+  const governedAssetRoots = [
+    "apps/www/public/images/field-notes",
+    "apps/www/public/images/participation"
+  ];
+  const expectedAssetCounts = new Map([
+    ["apps/www/public/images/field-notes", 4],
+    ["apps/www/public/images/participation", 2]
+  ]);
+  for (const relativeRoot of governedAssetRoots) {
+    const files = walkFiles(path.join(root, relativeRoot)).sort();
+    if (files.length !== expectedAssetCounts.get(relativeRoot) || files.some((file) => !file.endsWith(".webp"))) {
+      fail("governed-photographic-field", `${relativeRoot} does not contain the exact reviewed WebP set.`);
+    }
+    for (const relativeImagePath of files) {
+      const bytes = readFileSync(path.join(root, relativeRoot, relativeImagePath));
+      const binary = bytes.toString("latin1");
+      if (/EXIF|Exif|GPSLatitude|GPSLongitude|<x:xmpmeta/i.test(binary)) {
+        fail("metadata-and-locator-safety", `${relativeImagePath} contains embedded metadata.`);
+      }
     }
   }
 
@@ -79,66 +123,199 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   const appSource = sourceFiles
     .map((relativePath) => readText(path.join("apps/www/src", relativePath)))
     .join("\n");
-  const photographySurface = [
-    manifest,
-    readText("apps/www/src/components/FieldPhoto.tsx"),
-    readText("apps/www/src/components/Hero.tsx"),
-    readText("apps/www/src/app/about/page.tsx"),
-    readText("apps/www/src/app/colophon/page.tsx")
-  ].join("\n");
   if (/[0-9A-F]{8}(?:-[0-9A-F]{4}){3}-[0-9A-F]{12}/i.test(photographySurface)) {
-    fail("metadata-and-locator-safety", "A private archive UUID appears in public application source.");
+    fail("metadata-and-locator-safety", "A private archive UUID appears in public photography data.");
   }
-  if (/\/Volumes\/|\/Users\/|IMG_[0-9]{4}|_L0_001/i.test(appSource)) {
-    fail("metadata-and-locator-safety", "A protected path or original archive filename appears in public application source.");
+  if (/\/Volumes\/|\/Users\/|IMG_[0-9]{4}|_L0_001|People tags|GPSLatitude/i.test(appSource)) {
+    fail("metadata-and-locator-safety", "A protected path, filename, or archive metadata label appears in public source.");
   }
 
   const hero = readText("apps/www/src/components/Hero.tsx");
+  const participationSystem = readText("apps/www/src/components/ParticipationSystem.tsx");
   const about = readText("apps/www/src/app/about/page.tsx");
   const colophon = readText("apps/www/src/app/colophon/page.tsx");
   if (!hero.includes("portfolioPhotos.eastRiver") || !hero.includes("fill") || /rounded|shadow/.test(hero)) {
-    fail("editorial-not-decorative", "The home photograph must remain full-bleed, unframed, and manifest-bound.");
+    fail("editorial-not-decorative", "The homepage photograph must remain full-bleed, unframed, and unchanged.");
+  }
+  if (!participationSystem.includes("participationMedia.shoestringFacilitation") ||
+      !participationSystem.includes("participationMedia.letNycDanceSurface") ||
+      !participationSystem.includes("participationMedia.marketHotelTownHall")) {
+    fail("editorial-not-decorative", "The Fair Rent participation sequence lost one of its three governed evidence roles.");
   }
   if (/FieldPhoto|portfolioPhotos|\/images\/field-notes\//.test(about) ||
       /FieldPhoto|portfolioPhotos|\/images\/field-notes\//.test(colophon)) {
-    fail("editorial-not-decorative", "About and Colophon must remain text-led until additional images complete exact rights and credit review.");
+    fail("editorial-not-decorative", "About and Colophon must remain text-led without a separate editorial decision.");
   }
 
-  for (const route of [
-    "apps/www/src/app/work/page.tsx",
-    "apps/www/src/app/resume/page.tsx",
-    "apps/www/src/app/contact/page.tsx"
-  ]) {
-    if (/FieldPhoto|portfolioPhotos|\/images\/field-notes\//.test(readText(route))) {
-      fail("deliberate-absence", `${route} received a field photograph without a new editorial decision.`);
+  const workCovers = readText("apps/www/src/data/work-covers.ts");
+  const workData = readText("apps/www/src/data/work.ts");
+  const workCard = readText("apps/www/src/components/WorkCard.tsx");
+  const caseStudyLayout = readText("apps/www/src/components/CaseStudyLayout.tsx");
+  const workIndex = readText("apps/www/src/app/work/page.tsx");
+  const tagList = readText("apps/www/src/components/TagList.tsx");
+  const home = readText("apps/www/src/app/page.tsx");
+  const capabilityGrid = readText("apps/www/src/components/CapabilityGrid.tsx");
+  const expectedCovers = [
+    ['"harry-j-epstein"', '"/artifacts/hje/public-site.png"'],
+    ['"fair-rent-nyc"', "participationMedia.marketHotelTownHall.src"],
+    ['"kc-spaces-fund"', '"/artifacts/kc-spaces-fund/public-site.webp"'],
+    ["callnyc", '"/artifacts/callnyc/original-launch-2016.webp"'],
+    ["wowlist", '"/artifacts/wowlist/public-threshold.webp"'],
+    ['"196-sunday-dinner"', "portfolioPhotos.sundayDinnerSharedMap.src"],
+    ['"kc-town-hall"', "portfolioPhotos.kcTownHallRoofWork.src"]
+  ];
+  for (const [slug, source] of expectedCovers) {
+    const start = workCovers.indexOf(`${slug}: {`);
+    const end = workCovers.indexOf("\n  },", start);
+    const block = workCovers.slice(start, end);
+    if (start < 0 || !block.includes(`src: ${source}`)) {
+      fail("truthful-project-cover-field", `Missing project-bound cover for ${slug}.`);
     }
+  }
+  if (!workCard.includes('from "@/components/MediaImage"') || !workCard.includes("getWorkCover(item.slug)") ||
+      !workCard.includes("cover.caption") || !workCard.includes("cover.credit") ||
+      !caseStudyLayout.includes("getWorkCover(item.slug)") ||
+      !caseStudyLayout.includes("cover.caption") || !caseStudyLayout.includes("cover.credit")) {
+    fail("truthful-project-cover-field", "Work cards and case-study openings must render captioned covers from the cover manifest.");
+  }
+
+  const featuredSequence = [...workData.matchAll(
+    /^    title: "([^"]+)",[\s\S]*?^    featured: (true|false),\n    priority: (\d+),/gm
+  )]
+    .map(([, title, featured, priority]) => ({
+      title,
+      featured: featured === "true",
+      priority: Number(priority)
+    }))
+    .filter(({ featured }) => featured)
+    .sort((left, right) => left.priority - right.priority)
+    .map(({ title }) => title);
+  const publicResume = JSON.parse(readText(evaluation.hiringArgument.opportunitySetSource));
+  const observedOpportunityIds = publicResume.opportunities.map(
+    ({ opportunityId }) => opportunityId
+  );
+  if (publicResume.id !== evaluation.hiringArgument.opportunitySetId ||
+      JSON.stringify(observedOpportunityIds) !== JSON.stringify(evaluation.hiringArgument.opportunityIds)) {
+    fail(
+      "hiring-argument-opportunity-set",
+      "The live opportunity set changed; re-evaluate the homepage project selection before commissioning hiring-reader review."
+    );
+  }
+  const expectedFeaturedSequence = evaluation.hiringArgument.featuredProjectSequence;
+  if (JSON.stringify(featuredSequence) !== JSON.stringify(expectedFeaturedSequence)) {
+    fail(
+      "hiring-argument-project-sequence",
+      `Homepage project order drifted: ${featuredSequence.join(" -> ") || "no featured projects"}.`
+    );
+  }
+
+  if (!tagList.includes('from "next/link"') || !tagList.includes("/work?tag=") ||
+      !tagList.includes("encodeURIComponent(tag)") || !workIndex.includes("selectedTag") ||
+      !workIndex.includes("Clear filter") || !workIndex.includes('id="work-index"')) {
+    fail("tag-navigation-contract", "Tag-shaped controls must link to a visible, clearable work-index filter state.");
+  }
+
+  const capabilityTags = [...capabilityGrid.matchAll(/tag: "([^"]+)"/g)]
+    .map(([, tag]) => tag);
+  if (!home.includes("<CapabilityGrid />") ||
+      !capabilityGrid.includes('from "next/link"') ||
+      !capabilityGrid.includes("/work?tag=") ||
+      !capabilityGrid.includes("encodeURIComponent(capability.tag)") ||
+      !capabilityGrid.includes("#work-index") ||
+      !capabilityGrid.includes("jb-index-link group") ||
+      capabilityTags.length !== 6 || new Set(capabilityTags).size !== 6 ||
+      capabilityTags.some((tag) => !workData.includes(`"${tag}"`))) {
+    fail(
+      "capability-navigation-contract",
+      "Every homepage capability row must link to a real, visible, clearable work-index tag filter."
+    );
+  }
+
+  const knowledgeLab = readText(
+    "apps/www/src/content/lab/source-backed-team-memory.mdx"
+  );
+  const knowledgeRecords = readText(
+    "apps/www/src/data/knowledge-bank/archive-production-2026-07.ts"
+  );
+  const publicKnowledgeSurface = [colophon, knowledgeLab, workIndex].join("\n");
+  const requiredKnowledgeTerms = [
+    "Semantic graph",
+    "Evidence graph",
+    "Source custody",
+    "Evaluations and human review"
+  ];
+  const protectedRepositoryNames = [
+    "archival-research-projects",
+    "commercial-rent-stabilization-public-support",
+    "graph-packet",
+    "wowlist-knowledge"
+  ];
+  if (requiredKnowledgeTerms.some((term) =>
+        !colophon.toLowerCase().includes(term.toLowerCase())) ||
+      !knowledgeLab.toLowerCase().includes("without merging") ||
+      !knowledgeRecords.includes("SRC-KNOWLEDGE-WIKI-GRAPH-ARCHITECTURE-2026") ||
+      protectedRepositoryNames.some((name) => publicKnowledgeSurface.includes(name))) {
+    fail(
+      "knowledge-wiki-architecture-contract",
+      "The public Knowledge Wiki explanation must keep the three responsibilities, human projection gate, repository independence, and protected topology in their governed relationship."
+    );
   }
 
   const globalCss = readText("apps/www/src/app/globals.css");
-  if (!globalCss.includes('themes: human-index --default') || !globalCss.includes("--color-primary: #2f6f89")) {
+  if (!globalCss.includes("themes: human-index --default") || !globalCss.includes("--color-primary: #2f6f89")) {
     fail("human-index-material-system", "The Human Index theme is not active with work-jacket blue.");
   }
   if (/linear-gradient|radial-gradient|conic-gradient|\borb\b|bokeh/i.test(globalCss)) {
     fail("human-index-material-system", "A prohibited gradient, orb, or bokeh treatment appears in global CSS.");
   }
-  const fieldPhoto = readText("apps/www/src/components/FieldPhoto.tsx");
-  if (!fieldPhoto.includes('from "next/image"') || !fieldPhoto.includes("sizes={sizes}") || !fieldPhoto.includes("photo.alt")) {
-    fail("responsive-image-contract", "Field photos must retain Next Image, responsive sizes, and manifest alt text.");
+  if (!workCard.includes("sizes=") || !workCard.includes('loading={eager ? "eager" : "lazy"}') ||
+      !caseStudyLayout.includes("sizes=") || !caseStudyLayout.includes('loading="eager"') ||
+      !globalCss.includes("100svh")) {
+    fail("responsive-image-contract", "The responsive cover or viewport-bounded hero contract is incomplete.");
   }
-  if (!globalCss.includes("100svh")) {
-    fail("responsive-image-contract", "The stable viewport-bounded hero contract is incomplete.");
+
+  const nextConfig = readText("apps/www/next.config.ts");
+  const mediaImage = readText("apps/www/src/components/MediaImage.tsx");
+  if (!/images\s*:\s*\{[\s\S]*?loaderFile\s*:\s*"\.\/src\/lib\/cloudinary-image-loader\.ts"[\s\S]*?\}/.test(nextConfig) ||
+      !mediaImage.includes("unoptimized={!useCloudinary}") ||
+      !mediaImage.includes('NEXT_PUBLIC_MEDIA_DELIVERY === "cloudinary"')) {
+    fail(
+      "reliable-image-delivery",
+      "Reviewed local derivatives need direct fallback while Cloudinary handles responsive transforms away from Dokku."
+    );
+  }
+  const directlyDeliveredImages = [
+    "apps/www/public/images",
+    "apps/www/public/artifacts"
+  ].flatMap((relativeRoot) =>
+    walkFiles(path.join(root, relativeRoot)).map((relativePath) =>
+      path.join(relativeRoot, relativePath)
+    )
+  ).filter((relativePath) => /\.(?:avif|jpe?g|png|webp)$/i.test(relativePath));
+  const oversizedImage = directlyDeliveredImages.find(
+    (relativePath) => statSync(path.join(root, relativePath)).size > 512 * 1024
+  );
+  if (oversizedImage) {
+    fail(
+      "reliable-image-delivery",
+      `${oversizedImage} exceeds the 512 KiB direct-delivery budget.`
+    );
   }
 
   const design = readText("DESIGN.md");
-  if (!/automated score[s]? never confer publication permission/i.test(design) || !/staging review does not make production indexable/i.test(design)) {
-    fail("human-authority-remains-open", "Design documentation must preserve human rights and production gates.");
+  const permission = readText("docs/knowledge-bank/sources/permissions/jamie-portfolio-album-2026-08-13.md");
+  if (!/automated score[s]? never confer publication permission/i.test(design) ||
+      !/staging review does not make production indexable/i.test(design) ||
+      !/production publication and indexing await approval/i.test(permission)) {
+    fail("human-authority-remains-open", "Human rights, exact-candidate production, and indexing gates must remain explicit.");
   }
 
   return {
     passed: failures.length === 0,
     failures,
     criteriaCount: evaluation.criteria.length,
-    photoCount: sources.length
+    photoCount: expectedPhotoBindings.length,
+    coverCount: expectedCovers.length
   };
 }
 
@@ -150,5 +327,5 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     }
     process.exit(1);
   }
-  console.log(`Layout evals passed: ${result.criteriaCount} blocking criteria; ${result.photoCount} manifest-bound photographs.`);
+  console.log(`Layout evals passed: ${result.criteriaCount} blocking criteria; ${result.photoCount} photographs; ${result.coverCount} project covers.`);
 }

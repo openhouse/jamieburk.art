@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "id": "opportunity-source-adapter-registry-2026-08-20",
+  "updatedAt": "2026-08-20",
+  "sources": [
+    {
+      "id": "source.nyc-jobs.open-data.pda4-rgn4",
+      "sourceType": "official-bulk-dataset",
+      "accessMode": "public-machine-readable",
+      "authority": "discovery-and-freshness-signal",
+      "affordances": [
+        "machine-readable-revision-detection",
+        "bulk-posting-ingest",
+        "deterministic-salary-and-deadline-screening",
+        "stable-job-id-deduplication"
+      ],
+      "freshnessSignals": [
+        "rowsUpdatedAt"
+      ],
+      "boundaries": [
+        "individual-official-posting-controls",
+        "application-submission-remains-human"
+      ],
+      "methodPath": "docs/knowledge-bank/methods/nyc-jobs-opportunity-loop.md"
+    },
+    {
+      "id": "source.civic-match.candidate-network",
+      "sourceType": "authenticated-talent-network",
+      "accessMode": "authenticated-candidate-interface",
+      "authority": "discovery-matching-and-interest-signals",
+      "affordances": [
+        "candidate-profile-discovery",
+        "employer-profile-discovery",
+        "candidate-invitations",
+        "saved-job-interest-signals",
+        "application-state-tracking",
+        "staff-assisted-matching",
+        "live-events-and-q-and-a"
+      ],
+      "freshnessSignals": [
+        "new-role-alert",
+        "candidate-invitation",
+        "saved-job-state",
+        "applied-job-state",
+        "profile-review-date"
+      ],
+      "boundaries": [
+        "external-employer-application-remains-required",
+        "profile-visibility-requires-jamie-consent",
+        "account-state-and-messages-remain-private",
+        "application-submission-remains-human"
+      ],
+      "methodPath": "docs/knowledge-bank/methods/civic-match-opportunity-loop.md"
+    },
+    {
+      "id": "source.betanyc.weekly-civictech-newsletter",
+      "sourceType": "curated-recurring-email-and-public-archive",
+      "accessMode": "private-email-delivery-with-public-canonical-archive",
+      "authority": "curated-discovery-and-community-context",
+      "affordances": [
+        "weekly-editorial-curation",
+        "cross-sector-opportunity-discovery",
+        "deadline-highlights",
+        "community-context-and-events",
+        "relationship-and-learning-signals",
+        "public-issue-archive"
+      ],
+      "freshnessSignals": [
+        "latest-distinct-public-issue",
+        "weekly-issue-date",
+        "issue-url"
+      ],
+      "boundaries": [
+        "newsletter-is-discovery-not-employer-authority",
+        "individual-official-posting-controls",
+        "private-mailbox-identifiers-are-not-committed",
+        "subscriber-tracking-parameters-are-not-retained",
+        "application-submission-remains-human"
+      ],
+      "methodPath": "docs/knowledge-bank/methods/betanyc-opportunity-loop.md"
+    }
+  ]
+}

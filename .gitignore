@@ -39,4 +39,7 @@ supporting-materials/
 *.otf
 *.woff
 *.woff2
+!apps/www/public/fonts/karla/Karla-Regular.ttf
+!apps/www/public/fonts/karla/Karla-Bold.ttf
+!apps/www/public/fonts/tex-gyre-pagella/texgyrepagella-regular.otf
 reports/generated/

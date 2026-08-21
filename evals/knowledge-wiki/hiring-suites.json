@@ -1,14 +1,21 @@
 {
-  "id": "current-priority-2026-07-18",
-  "version": 1,
+  "id": "current-priority-2026-08-20",
+  "version": 2,
   "principle": "The public evaluator sees public projection files and public role and reader context only; Wiki gap resolution is a separate pass.",
   "opportunityPaths": [
+    "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
+    "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+    "docs/knowledge-bank/opportunities/oti-operations-manager-789810.md",
+    "docs/knowledge-bank/opportunities/oti-cybersecurity-senior-project-manager-791074.md",
+    "docs/knowledge-bank/opportunities/aclu-senior-project-manager-lps.md",
+    "docs/knowledge-bank/opportunities/aclu-senior-project-manager-national-campaigns.md",
     "docs/knowledge-bank/opportunities/oti-technical-operations.md",
     "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
     "docs/knowledge-bank/opportunities/benepass-product-operations.md",
     "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
     "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
-    "docs/knowledge-bank/opportunities/permitflow-product-operations.md"
+    "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
+    "docs/knowledge-bank/opportunities/source-backed-team-memory.md"
   ],
   "readerPaths": [
     "docs/qa/hiring-acceptance/readers/generic-recruiter.md",
@@ -36,18 +43,63 @@
       "id": "query.operating-backbone",
       "terms": ["delivery coordination", "team operating systems", "onboarding documentation", "risk surfacing", "public launch"],
       "expectedTopK": ["opportunity.nyc-oti.technical-operations-manager.782369", "opportunity.codepath.claude-corps.5182020007"],
+      "statuses": ["closed"],
+      "k": 3
+    },
+    {
+      "id": "query.current-project-systems",
+      "terms": ["complex project delivery", "systems implementation", "process improvement", "business analysis", "post-mortem learning"],
+      "expectedTopK": ["opportunity.aclu.senior-project-manager-lps.8620968002"],
+      "k": 3
+    },
+    {
+      "id": "query.current-advocacy-operations",
+      "terms": ["advocacy campaign operations", "internal communications", "research and talking points", "coalition coordination"],
+      "expectedTopK": ["opportunity.aclu.senior-project-manager-national-campaigns.8631854002"],
+      "k": 3
+    },
+    {
+      "id": "query.current-resident-product",
+      "terms": ["resident-facing product delivery", "problem framing and discovery", "cross-functional product leadership", "accessibility and privacy", "post-launch measurement"],
+      "expectedTopK": ["opportunity.nyc-oti.senior-product-manager.782366"],
+      "k": 3
+    },
+    {
+      "id": "query.current-product-lifecycle",
+      "terms": ["full product lifecycle", "qualitative and quantitative research", "roadmap and prioritization", "user stories and acceptance criteria", "KPIs and analytics"],
+      "expectedTopK": ["opportunity.nyc-oti.product-manager.784450"],
+      "k": 3
+    },
+    {
+      "id": "query.current-speed-operations",
+      "terms": ["program operations", "budget and resource management", "contracting and procurement coordination", "team health and operational metrics", "onboarding and cross-functional delivery"],
+      "expectedTopK": ["opportunity.nyc-oti.operations-manager.789810"],
+      "k": 3
+    },
+    {
+      "id": "query.current-cyber-project-portfolio",
+      "terms": ["program portfolio management", "vendor and contract coordination", "risk and cost-benefit analysis", "dashboards reports and metrics", "proof of concept and proof of value"],
+      "expectedTopK": ["opportunity.nyc-oti.cybersecurity-senior-project-manager.791074"],
       "k": 3
     },
     {
       "id": "query.discovery-governance",
       "terms": ["structured discovery", "stakeholder listening", "privacy-aware product judgment", "decision traceability", "low-risk pilots"],
       "expectedTopK": ["opportunity.aclu.product-manager-discovery.8482872002"],
+      "statuses": ["closed"],
       "k": 3
     },
     {
       "id": "query.product-operations-physical-world",
       "terms": ["physical-world workflows", "public process", "product data", "customer insight", "AI automation"],
       "expectedTopK": ["opportunity.permitflow.product-operations.8a6e6066"],
+      "k": 3
+    },
+    {
+      "id": "query.source-backed-memory-consulting",
+      "terms": ["source-backed team memory", "decision lineage", "onboarding context", "human-reviewed AI", "knowledge-friction mapping"],
+      "expectedTopK": ["opportunity.protected.source-backed-memory-consulting.2026"],
+      "statuses": ["conditional"],
       "k": 3
     }
   ],

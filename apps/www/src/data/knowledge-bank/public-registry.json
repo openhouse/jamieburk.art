@@ -225,6 +225,89 @@
       ]
     },
     {
+      "id": "SRC-THICK-ARTS-NYS-DOS-ACTIVE-CORPORATIONS",
+      "title": "New York State active-corporations record for THICK ARTS LLC",
+      "organization": "New York State Department of State",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2012-07-06",
+      "accessedAt": "2026-08-14",
+      "canonicalUrl": "https://data.ny.gov/resource/n9v6-gdp6.json?$select=dos_id,current_entity_name,initial_dos_filing_date,county,jurisdiction,entity_type&$where=upper(current_entity_name)%20=%20%22THICK%20ARTS%20LLC%22",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York State Department of State active-corporations record for THICK ARTS LLC, DOS ID 4267566, initial filing date July 6, 2012.",
+      "publicNote": "The official Open NY record identifies a domestic limited liability company in Kings County. The State describes this dataset as general-public information rather than certified legal documentation.",
+      "doesNotEstablish": [
+        "that Jamie's underlying HJE work began only when the LLC was filed",
+        "Harry J. Epstein Company's first-client status",
+        "the exact first or final invoice, payment, or contract date",
+        "certified legal status for a legal proceeding"
+      ]
+    },
+    {
+      "id": "SRC-HJE-WAYBACK-STOREFRONT-2010-01-01",
+      "title": "Harry J. Epstein Company storefront first observed host capture",
+      "organization": "Harry J. Epstein Company",
+      "kind": "archived-web-capture",
+      "visibility": "public",
+      "preservationStatus": "archived",
+      "publishedAt": "2010-01-01",
+      "accessedAt": "2026-08-14",
+      "canonicalUrl": "http://store.harryepstein.com/",
+      "archiveUrl": "https://web.archive.org/web/20100101090939/http://store.harryepstein.com/",
+      "preferredPublicUrl": "archive",
+      "publicCitation": "Archive.org capture of store.harryepstein.com redirecting into its merchant2 commerce application, January 1, 2010.",
+      "publicNote": "A directly captured storefront homepage appears on March 3, 2010; January 1 is the earliest host observation returned by the reviewed CDX index.",
+      "doesNotEstablish": [
+        "the exact storefront launch date",
+        "a client or contract start date",
+        "who implemented or maintained every component",
+        "continuous availability between captures"
+      ]
+    },
+    {
+      "id": "SRC-HJE-WAYBACK-STOREFRONT-2015-07-03",
+      "title": "Harry J. Epstein Company functioning storefront capture",
+      "organization": "Harry J. Epstein Company",
+      "kind": "archived-web-capture",
+      "visibility": "public",
+      "preservationStatus": "archived",
+      "publishedAt": "2015-07-03",
+      "accessedAt": "2026-08-14",
+      "canonicalUrl": "http://store.harryepstein.com/",
+      "archiveUrl": "https://web.archive.org/web/20150703004948/http://store.harryepstein.com/",
+      "preferredPublicUrl": "archive",
+      "publicCitation": "Archive.org capture of the functioning Harry J. Epstein Company storefront homepage, July 3, 2015.",
+      "publicNote": "The page visibly includes catalog navigation, search, product prices, account and checkout routes, and 2015 publishing.",
+      "doesNotEstablish": [
+        "the exact client or contract end date",
+        "availability of every transaction dependency",
+        "Jamie's responsibility for every component or business outcome",
+        "current maintenance of the successor website"
+      ]
+    },
+    {
+      "id": "SRC-HJE-WAYBACK-STOREFRONT-REDIRECT-2015-08-01",
+      "title": "Harry J. Epstein Company storefront successor-site redirect",
+      "organization": "Harry J. Epstein Company",
+      "kind": "archived-web-capture",
+      "visibility": "public",
+      "preservationStatus": "archived",
+      "publishedAt": "2015-08-01",
+      "accessedAt": "2026-08-14",
+      "canonicalUrl": "http://store.harryepstein.com/",
+      "archiveUrl": "https://web.archive.org/web/20150801160416/http://store.harryepstein.com/",
+      "preferredPublicUrl": "archive",
+      "publicCitation": "Archive.org capture of store.harryepstein.com redirecting to the successor www.harryepstein.com site, August 1, 2015.",
+      "publicNote": "The archived HTTP response redirects the old host to http://www.harryepstein.com/index.php/.",
+      "doesNotEstablish": [
+        "the exact client or contract end date",
+        "who built or maintained the successor website",
+        "the legal or billing terms of the migration",
+        "current client stewardship"
+      ]
+    },
+    {
       "id": "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
       "title": "Portfolio social-media archival production inventory",
       "organization": "Jamie Burkart portfolio knowledge bank",
@@ -235,7 +318,7 @@
       "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/projects/social-media-archive-production.md",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Portfolio social-media archival production inventory, July 15, 2026.",
-      "publicNote": "A bounded, reproducible inventory of recovered public account profiles, posts, repost lists, interaction edges, source articles, and explicit stopping conditions.",
+      "publicNote": "A scoped, reproducible inventory of recovered public account profiles, posts, repost lists, interaction edges, source articles, and explicit stopping conditions.",
       "doesNotEstablish": [
         "a complete lifetime archive",
         "individual authorship of shared-account posts",
@@ -256,7 +339,7 @@
       "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=5b6f62c6-7eae-4d9e-9aec-c8b8fc36438c&ID=38126&M=AO&N=TWludXRlcyBvZiB0aGUgU3RhdGVkIE1lZXRpbmc%3D",
       "preferredPublicUrl": "canonical",
       "publicCitation": "New York City Council, minutes of the stated meeting, September 28, 2016.",
-      "publicNote": "The official roster corroborates that the 19 named people in the bounded CallNYC ledger were serving Council members in 2016.",
+      "publicNote": "The official roster corroborates that the 19 named people in the documented CallNYC ledger were serving Council members in 2016.",
       "doesNotEstablish": [
         "control of social accounts",
         "authorship of every post",
@@ -354,7 +437,7 @@
       "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
       "preferredPublicUrl": "canonical",
       "publicCitation": "WOW List X full-population and engagement manifest, July 15, 2026.",
-      "publicNote": "A public-safe 38-row manifest with resolved URLs, bounded classifications, named public repost identities, and external-adoption examples; raw post bodies and session data are excluded.",
+      "publicNote": "A public-safe 38-row manifest with resolved URLs, defined classifications, named public repost identities, and external-adoption examples; raw post bodies and session data are excluded.",
       "doesNotEstablish": [
         "a complete product archive",
         "a complete lifetime engagement census",
@@ -528,6 +611,28 @@
       ]
     },
     {
+      "id": "SRC-KCTH-TIRES-WAYBACK-2021",
+      "title": "Tired of Tires? Free Tire Pickup",
+      "organization": "KC Town Hall",
+      "author": "Julia and Jamie",
+      "kind": "archived-web-capture",
+      "visibility": "public",
+      "preservationStatus": "archived",
+      "publishedAt": "2019-05-02",
+      "accessedAt": "2026-08-14",
+      "canonicalUrl": "https://kctownhall.com/tires/",
+      "archiveUrl": "https://web.archive.org/web/20210806195823/https://kctownhall.com/tires/",
+      "preferredPublicUrl": "archive",
+      "publicCitation": "KC Town Hall, 'Tired of Tires? Free Tire Pickup,' published May 2, 2019, archived August 6, 2021.",
+      "publicNote": "The capture preserves the resident promise, partners, household eligibility, request and volunteer routes, 2021 dates, and the shared author label without reusing historical contact details.",
+      "doesNotEstablish": [
+        "individual authorship of each page element",
+        "Jamie's responsibility for every pickup",
+        "an audited service total or unique-resident count",
+        "City endorsement of the broader KC Town Hall project"
+      ]
+    },
+    {
       "id": "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
       "title": "Authenticated @KCTownHall full-population recovery and public-post ledger",
       "organization": "KC Town Hall",
@@ -539,7 +644,7 @@
       "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/feature/evals-H/docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Authenticated read-only review of the public @KCTownHall Posts, Replies, and repost-list surfaces, with a 183-record public-safe ledger, July 14-15, 2026.",
-      "publicNote": "The profile displayed 183 posts. Cross-tab reconciliation recovered all 183 surviving items: 142 account posts, 13 account replies, and 28 reposts from 16 public accounts. A fresh July 15 traversal exactly matched all status IDs, and all 40 repost-bearing account statuses were audited. The ledger preserves posted destinations, bounded classifications, and mutable reaction snapshots without reproducing post text, phone numbers, or street addresses.",
+      "publicNote": "The profile displayed 183 posts. Cross-tab reconciliation recovered all 183 surviving items: 142 account posts, 13 account replies, and 28 reposts from 16 public accounts. A fresh July 15 traversal exactly matched all status IDs, and all 40 repost-bearing account statuses were audited. The ledger preserves posted destinations, defined classifications, and mutable reaction snapshots without reproducing post text, phone numbers, or street addresses.",
       "doesNotEstablish": [
         "a platform export, deletion history, or proof that no earlier item was removed",
         "the individual teammate who authored each shared-account record",
@@ -699,7 +804,7 @@
       "assetUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
       "preferredPublicUrl": "asset",
       "publicCitation": "Public-safe census of the full NYC Artist Coalition Facebook Past Events population exposed July 15, 2026.",
-      "publicNote": "Retains 33 event identities, dates, venues, organizer displays, bounded response snapshots, topics, source routes, and public-safety dispositions without raw descriptions or participant and access data.",
+      "publicNote": "Retains 33 event identities, dates, venues, organizer displays, dated response snapshots, topics, source routes, and public-safety dispositions without raw descriptions or participant and access data.",
       "doesNotEstablish": [
         "the unresolved event identity",
         "every historical coalition event",
@@ -720,7 +825,7 @@
       "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json",
       "preferredPublicUrl": "canonical",
       "publicCitation": "NYC Artist Coalition Facebook post full-population public-safe census, July 15, 2026.",
-      "publicNote": "A 445-row ledger of dates, unique one-way reconciliation hashes, source-route keys, bounded mission, stakeholder, and account-reference tags, content hashes, and displayed interaction counts. Raw bodies, underlying reconciliation identities, social-graph identities, authenticated URLs, and sensitive exact routes are excluded.",
+      "publicNote": "A 445-row ledger of dates, unique one-way reconciliation hashes, source-route keys, defined mission, stakeholder, and account-reference tags, content hashes, and displayed interaction counts. Raw bodies, underlying reconciliation identities, social-graph identities, authenticated URLs, and sensitive exact routes are excluded.",
       "doesNotEstablish": [
         "complete lifetime account history",
         "post-level human authorship",
@@ -908,7 +1013,7 @@
       "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
       "preferredPublicUrl": "canonical",
       "publicCitation": "NYC Artist Coalition X retrievable-population manifest, July 15, 2026.",
-      "publicNote": "A public-safe 3,123-row manifest preserving source-status URLs, source-post dates, author handles, record types, link metadata, mention handles, hashtags, classification digests and first matches, bounded incoming mentions, and dated aggregate counts. Raw post text, credentials, cookies, private account state, and session data are excluded.",
+      "publicNote": "A public-safe 3,123-row manifest preserving source-status URLs, source-post dates, author handles, record types, link metadata, mention handles, hashtags, classification digests and first matches, classified incoming mentions, and dated aggregate counts. Raw post text, credentials, cookies, private account state, and session data are excluded.",
       "doesNotEstablish": [
         "the content of 2,001 profile-counted records outside the recovered public union",
         "individual authorship of the shared account",
@@ -1131,6 +1236,27 @@
         "universal implementation",
         "outcomes for every venue",
         "that M.A.R.C.H. ended before December 2023"
+      ]
+    },
+    {
+      "id": "SRC-SBU-EMPTY-STOREFRONTS-HIGH-RENTS-REPORT-2026",
+      "title": "Empty Storefronts, High Rents",
+      "organization": "Small Business United, The Action Lab, Main Street Alliance, and Small Business Majority",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-07-29",
+      "accessedAt": "2026-08-13",
+      "canonicalUrl": "https://smallbizunited.com/reports/260728_SBU_FinalReport.pdf",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Small Business United et al., Empty Storefronts, High Rents: Why New York City Needs Commercial Rent Stabilization, July 2026.",
+      "publicNote": "The report's acknowledgements identify the lead author/data analyst, other contributors, and Jamie's limited draft-review credit.",
+      "doesNotEstablish": [
+        "Jamie as author or co-author",
+        "Jamie as methods owner",
+        "independent replication",
+        "legal approval",
+        "a complete edit-by-edit provenance"
       ]
     }
   ],
@@ -1427,7 +1553,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
+          "text": "Developing the Knowledge Wiki Graph: a working source-backed team-memory method connecting project meaning, supporting evidence, responsible source custody, evaluations, and human review.",
           "status": "active",
           "citationRequired": false,
           "surfaces": [
@@ -1437,9 +1563,10 @@
       ],
       "evidence": [],
       "boundaries": [
-        "Present this as an early method and consulting practice.",
-        "Do not imply a completed client pilot, production SaaS, or market validation.",
-        "Do not expose proposal recipient, pricing, correspondence, or company context."
+        "Present this as a working research and operating method embodied in Jamie's project ecosystem.",
+        "Do not imply a completed client pilot, external adoption, production SaaS, or market validation.",
+        "Do not expose proposal recipient, pricing, correspondence, private repository topology, or protected source context.",
+        "Passing evaluations does not authorize publication or replace rights, consent, credit, or human review."
       ]
     },
     {
@@ -1598,6 +1725,114 @@
       ]
     },
     {
+      "id": "CLM-THICK-ARTS-FORMATION-2012-07-06",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The work began in 2009. Jamie formalized the practice as Thick Arts LLC during the engagement; New York State records the LLC's initial filing on July 6, 2012, and Jamie identifies Harry J. Epstein Company as its first client.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/harry-j-epstein"
+          ]
+        },
+        {
+          "key": "work-card",
+          "text": "Work began in 2009; Jamie formalized it as Thick Arts LLC in 2012, with HJE as the LLC's first client.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-THICK-ARTS-NYS-DOS-ACTIVE-CORPORATIONS",
+          "relationship": "direct-support",
+          "supports": [
+            "THICK ARTS LLC's initial New York DOS filing date is July 6, 2012",
+            "the entity is a New York domestic limited liability company with DOS ID 4267566"
+          ],
+          "publicNote": "Official public record for the formation date; not evidence of the engagement's 2009 start or first-client identity.",
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The HJE work began in 2009; the July 6, 2012 LLC filing formalized an already-running practice.",
+        "The New York State record independently establishes the filing date, not HJE's first-client status.",
+        "The first-client and reason-for-forming relationship remain Jamie's authorized first-party professional account.",
+        "Do not infer exact invoice, contract, payment, or ownership terms."
+      ]
+    },
+    {
+      "id": "CLM-HJE-STOREFRONT-CHRONOLOGY-2009-2015",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The documented engagement ran from 2009 through 2015. Archive.org first observed the commerce host in January 2010, preserves the functioning storefront through July 2015, and records its redirect to a successor site by August 2015.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/harry-j-epstein"
+          ]
+        },
+        {
+          "key": "work-card",
+          "text": "Thick Arts' first client engagement, 2009-2015, with the historic storefront independently observable through July 2015.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-HJE-WAYBACK-STOREFRONT-2010-01-01",
+          "relationship": "corroborating",
+          "supports": [
+            "store.harryepstein.com responded and redirected into its merchant2 commerce application on January 1, 2010",
+            "the host was observable by Archive.org at the start of 2010"
+          ],
+          "publicNote": "Earliest reviewed Archive.org host observation; not an exact launch date.",
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-HJE-WAYBACK-STOREFRONT-2015-07-03",
+          "relationship": "direct-support",
+          "supports": [
+            "a functioning customer-facing storefront remained observable on July 3, 2015",
+            "the public system joined commerce, product information, navigation, customer guidance, and publishing"
+          ],
+          "publicNote": "Latest reviewed successful storefront-homepage capture.",
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-HJE-WAYBACK-STOREFRONT-REDIRECT-2015-08-01",
+          "relationship": "direct-support",
+          "supports": [
+            "the old storefront host redirected to the successor website by August 1, 2015",
+            "July-August 2015 is the observed storefront transition window"
+          ],
+          "publicNote": "First reviewed post-storefront capture redirects to the successor host.",
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Use 2009-2015 for the portfolio engagement, not 2012-Present.",
+        "Describe January 2010 and July-August 2015 as Archive.org observation boundaries rather than exact launch and contract dates.",
+        "Do not present the current successor website as Jamie's currently maintained implementation or as proof of a present client relationship.",
+        "Keep company authority, staff and family knowledge, customer relationships, and later maintenance distinct from Jamie's contribution."
+      ]
+    },
+    {
       "id": "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -1648,7 +1883,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "The coalition's shared public identity carried four campaigns across multiple policy cycles. A bounded review recovered posts by at least six serving Council member accounts that directly mentioned @NYCArtC, while individual coalition-post authorship remains deliberately unattributed.",
+          "text": "The coalition's shared public identity carried four campaigns across multiple policy cycles. A focused review recovered posts by at least six serving Council member accounts that directly mentioned @NYCArtC, while individual coalition-post authorship remains deliberately unattributed.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -1782,7 +2017,7 @@
         },
         {
           "key": "archive-note",
-          "text": "The strongest bounded professional claim is that Jamie secured a $490,539 public funding award by co-developing and presenting KC Town Hall's successful CCED request. Institutional authority remained with the Board and Council, and the award never became an executed agreement or disbursement.",
+          "text": "The strongest supportable professional claim is that Jamie secured a $490,539 public funding award by co-developing and presenting KC Town Hall's successful CCED request. Institutional authority remained with the Board and Council, and the award never became an executed agreement or disbursement.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -1907,7 +2142,7 @@
         },
         {
           "key": "archive-note",
-          "text": "Jamie has authorized a bounded first-party professional claim that he transitioned KC Town Hall project stewardship to a mission-aligned organization; recipient identity and legal mechanics remain outside the public claim.",
+          "text": "Jamie has authorized a narrowly scoped first-party professional claim that he transitioned KC Town Hall project stewardship to a mission-aligned organization; recipient identity and legal mechanics remain outside the public claim.",
           "status": "active",
           "citationRequired": false,
           "surfaces": [
@@ -1953,6 +2188,63 @@
         "This is Jamie's approved first-party professional account, not an independent municipal or collaborator attribution.",
         "Co-leadership does not imply sole ownership of collective project work.",
         "This claim is separate from the municipal decision record; Jamie's award-seeking role is governed by CLM-KC-TOWN-HALL-JAMIE-SECURED-CCED-AWARD."
+      ]
+    },
+    {
+      "id": "CLM-KCTH-TIRED-OF-TIRES-SERVICE-DESIGN",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie helped design and operate Tired of Tires, a recurring free household pickup service built with KC Town Hall, Oak Park Neighborhood Association, residents, and City partners. Contemporaneous records identify him as the driver for the May 2019 launch pickup.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KCTH-TIRES-WAYBACK-2021",
+          "relationship": "direct-support",
+          "supports": [
+            "a recurring free household tire-pickup service offered by KC Town Hall and Oak Park Neighborhood Association",
+            "published service dates and resident request or volunteer routes",
+            "the page-level author label Julia and Jamie"
+          ],
+          "publicNote": "The public page establishes shared service identity and a co-authored surface.",
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The claim says 'helped' because KC Town Hall, Oak Park Neighborhood Association, residents, City staff, and other collaborators each held part of the service.",
+        "The contemporaneous record identifies Jamie as launch driver, not driver for every month.",
+        "First-party design and recurring-operation evidence is not an independent audit or collaborator testimonial.",
+        "Resident requests, addresses, contact details, and row-level logs remain private."
+      ]
+    },
+    {
+      "id": "CLM-KCTH-TIRED-OF-TIRES-MEASUREMENT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A project-maintained tracker records 1,970 tires across monthly entries from May 2019 through September 2022 and estimates $44,890 in avoided disposal fees under its stated assumptions.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Always retain 'project-maintained' and the May 2019-September 2022 recorded date range.",
+        "Always identify $44,890 as a tracker estimate under stated assumptions.",
+        "Do not translate tires into unique residents, households, completed requests, exact walkshed coverage, or City-verified impact.",
+        "The resident-level workbook remains protected."
       ]
     },
     {
@@ -2025,6 +2317,45 @@
         "Public repost lists are a dated lower bound and leave 25 displayed repost identities unresolved.",
         "Council-member repost-list appearance and direct response establish public interaction, not endorsement, partnership, adoption, policy action, or impact.",
         "The social record is separate from the municipal funding lifecycle and does not establish receipt, expenditure, construction, or completion."
+      ]
+    },
+    {
+      "id": "CLM-KCSPACES-CROSS-CHANNEL-DIGITAL-SUPPORT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "technical-operations",
+          "text": "For KC Spaces Fund, Jamie built campaign web infrastructure and supported an available cross-channel identity; collaborator-led channels used it to route applications, donations, and funded-space updates.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        },
+        {
+          "key": "case-study",
+          "text": "Jamie built and maintained KC Spaces Fund's campaign web infrastructure, customized a reusable Ghost theme, implemented public action routes, and supported an available cross-channel identity. Collaborator-led channels used that identity to route applications, donations, resources, and funded-space updates.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/kc-spaces-fund"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "Jamie's specific role was website, digital-infrastructure, and cross-channel naming support, not Facebook publishing, public organizing, fundraising ownership, or grant decisions.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Credit Jamie with web infrastructure and cross-channel naming support, not public organizing, fundraising ownership, grant decisions, or campaign voice.",
+        "The public channels corroborate identity consistency; Jamie's firsthand clarification supplies the naming-support and non-posting account, pending collaborator confirmation of process detail.",
+        "Public organizer credit remains with Caitlin Horsmon, Jordan Carr, Kendell Harbin, and Megan Pobywajlo as named by the fundraiser."
       ]
     },
     {
@@ -2319,7 +2650,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "A July 2017 production snapshot records 1,846 users, 16,142 posts/events, 23,864 lists/tags, 28,837 list follows, 20,927 saved events, and 35 city-region keys with at least 50 posts. These are historical database counts, not current activity.",
+          "text": "WOW List operated across roughly 35 city ecosystems, supporting local organizers with community calendars, websites, and weekly email distribution.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -2342,9 +2673,9 @@
         }
       ],
       "boundaries": [
-        "Use historical language and preserve the exact snapshot date.",
+        "Use historical language and preserve the exact snapshot date in internal evidence.",
         "Keep credit shared with Richard Caceres, participating organizers, users, and other contributors.",
-        "Do not expose raw database rows or describe city keys as official chapters."
+        "Lead public hiring surfaces with the roughly 35-city-ecosystem scope rather than database row counts; do not expose raw database rows or describe city keys as official chapters."
       ]
     },
     {
@@ -2461,6 +2792,67 @@
         "Describe Call Script as one bridge within collective coalition formation, not the sole cause or sole founder.",
         "Attribute the direct role claim to the combined first-person and contemporaneous record.",
         "Treat poll, response, reach, going, reaction, comment, and share displays as bounded platform signals rather than attendance or impact."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-SENIOR-PRODUCT-PRACTICE-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "WOW List provides unusually broad evidence of Jamie's senior product practice: he and Richard Caceres co-built a working community-calendar service, and Jamie's documented work spans product definition, implementation, participatory discovery, adoption, communications, instrumentation, and stewardship.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/technical-operations",
+            "/work/wowlist"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "WOW List provides unusually broad evidence of Jamie's senior product practice: he and Richard Caceres co-built a working community-calendar service, and Jamie's documented work spans product definition, implementation, participatory discovery, adoption, communications, instrumentation, and stewardship.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "docs/knowledge-bank/applications/wowlist-senior-product-manager-oti-782366"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-WOWLIST-X-POPULATION-MANIFEST",
+          "relationship": "direct-support",
+          "supports": [
+            "bounded public operating record and organizer workflows"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
+          "relationship": "direct-support",
+          "supports": [
+            "shared Richard and Jamie credit",
+            "Sunday Dinner provenance"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "join, publishing, profile, and followed-calendar workflows"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "A strong product-practice match does not guarantee an award or substitute for employer evaluation.",
+        "Civil-service eligibility requires a separate human review of Jamie's complete education and employment chronology.",
+        "Accessibility, security, and government-compliance experience must not be inferred from production operation alone.",
+        "Preserve Richard Caceres's co-builder credit and wider collective labor."
       ]
     },
     {
@@ -2707,6 +3099,40 @@
         "The sequence connects Jamie's implementation work, collective advocacy, Council enactment, and later City action without claiming that one caused the next.",
         "Use 'replaced' from the Office report rather than saying Jamie or the coalition disbanded M.A.R.C.H."
       ]
+    },
+    {
+      "id": "CLM-NYCAC-SBU-REPORT-REVIEW-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The published Empty Storefronts, High Rents report names Mahin Rahman Tawrat as lead author and data analyst and credits Jamie Burkart for a thoughtful and careful review of the draft.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/technical-operations",
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-SBU-EMPTY-STOREFRONTS-HIGH-RENTS-REPORT-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "public report credit",
+            "lead-author boundary",
+            "final methods limitations"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Describe the contribution as bounded pre-publication review, not authorship, co-authorship, methods ownership, independent validation, or legal review.",
+        "Do not assign a contribution percentage or claim every proposed edit was adopted.",
+        "Keep the publishers, lead author/data analyst, other contributors, and coalition field visible."
+      ]
     }
   ],
   "pages": [
@@ -2723,6 +3149,36 @@
           "projection": "archive-note",
           "sourceIds": [
             "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harry-j-epstein",
+      "surface": "/work/harry-j-epstein",
+      "sourceOrder": [
+        "SRC-THICK-ARTS-NYS-DOS-ACTIVE-CORPORATIONS",
+        "SRC-HJE-WAYBACK-STOREFRONT-2010-01-01",
+        "SRC-HJE-WAYBACK-STOREFRONT-2015-07-03",
+        "SRC-HJE-WAYBACK-STOREFRONT-REDIRECT-2015-08-01"
+      ],
+      "occurrences": [
+        {
+          "id": "thick-arts-formation",
+          "claimId": "CLM-THICK-ARTS-FORMATION-2012-07-06",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-THICK-ARTS-NYS-DOS-ACTIVE-CORPORATIONS"
+          ]
+        },
+        {
+          "id": "historic-storefront-chronology",
+          "claimId": "CLM-HJE-STOREFRONT-CHRONOLOGY-2009-2015",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-HJE-WAYBACK-STOREFRONT-2010-01-01",
+            "SRC-HJE-WAYBACK-STOREFRONT-2015-07-03",
+            "SRC-HJE-WAYBACK-STOREFRONT-REDIRECT-2015-08-01"
           ]
         }
       ]
@@ -2803,6 +3259,18 @@
       ]
     },
     {
+      "id": "kc-spaces-fund",
+      "surface": "/work/kc-spaces-fund",
+      "sourceOrder": [],
+      "occurrences": [
+        {
+          "id": "digital-support",
+          "claimId": "CLM-KCSPACES-CROSS-CHANNEL-DIGITAL-SUPPORT",
+          "projection": "case-study"
+        }
+      ]
+    },
+    {
       "id": "fair-rent-nyc",
       "surface": "/work/fair-rent-nyc",
       "sourceOrder": [
@@ -2814,6 +3282,7 @@
         "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12",
         "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
         "SRC-NYC-SBJSA-HEARING-2018-10-22",
+        "SRC-SBU-EMPTY-STOREFRONTS-HIGH-RENTS-REPORT-2026",
         "SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE",
         "SRC-FAIRRENTNYC-GITHUB-REPOSITORY",
         "SRC-NYCAC-CREATENYC-SUBMISSION-2017-03-17",
@@ -2865,6 +3334,14 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-NYC-SBJSA-HEARING-2018-10-22"
+          ]
+        },
+        {
+          "id": "sbu-report-review",
+          "claimId": "CLM-NYCAC-SBU-REPORT-REVIEW-2026",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-SBU-EMPTY-STOREFRONTS-HIGH-RENTS-REPORT-2026"
           ]
         },
         {
@@ -2958,6 +3435,7 @@
         "SRC-KC-TOWN-HALL-CCED-REPORT-2022-12",
         "SRC-KC-TOWN-HALL-CCED-REPORT-2023",
         "SRC-JAMIE-RESUME-KC-TOWN-HALL-2026",
+        "SRC-KCTH-TIRES-WAYBACK-2021",
         "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
         "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29",
         "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29",
@@ -2999,6 +3477,19 @@
           ]
         },
         {
+          "id": "tired-of-tires-service-design",
+          "claimId": "CLM-KCTH-TIRED-OF-TIRES-SERVICE-DESIGN",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KCTH-TIRES-WAYBACK-2021"
+          ]
+        },
+        {
+          "id": "tired-of-tires-measurement",
+          "claimId": "CLM-KCTH-TIRED-OF-TIRES-MEASUREMENT",
+          "projection": "case-study"
+        },
+        {
           "id": "public-service-interface",
           "claimId": "CLM-KCTH-SOCIAL-SERVICE-REPORTING",
           "projection": "case-study",
@@ -3013,13 +3504,43 @@
       ]
     },
     {
-      "id": "wowlist",
-      "surface": "/work/wowlist",
+      "id": "technical-operations",
+      "surface": "/work/technical-operations",
       "sourceOrder": [
-        "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026",
         "SRC-WOWLIST-X-POPULATION-MANIFEST",
         "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
         "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+        "SRC-SBU-EMPTY-STOREFRONTS-HIGH-RENTS-REPORT-2026"
+      ],
+      "occurrences": [
+        {
+          "id": "wowlist-senior-product-practice",
+          "claimId": "CLM-WOWLIST-SENIOR-PRODUCT-PRACTICE-2026",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-WOWLIST-X-POPULATION-MANIFEST",
+            "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
+            "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016"
+          ]
+        },
+        {
+          "id": "sbu-report-review",
+          "claimId": "CLM-NYCAC-SBU-REPORT-REVIEW-2026",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-SBU-EMPTY-STOREFRONTS-HIGH-RENTS-REPORT-2026"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wowlist",
+      "surface": "/work/wowlist",
+      "sourceOrder": [
+        "SRC-WOWLIST-X-POPULATION-MANIFEST",
+        "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
+        "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+        "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026",
         "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
         "SRC-WOWLIST-SBDIY-ADOPTION",
         "SRC-CALLSCRIPT-FACEBOOK-PAGE",
@@ -3029,6 +3550,16 @@
         "SRC-FACEBOOK-PERSONAL-WOWLIST-EVENT-CENSUS-2026"
       ],
       "occurrences": [
+        {
+          "id": "senior-product-practice",
+          "claimId": "CLM-WOWLIST-SENIOR-PRODUCT-PRACTICE-2026",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-WOWLIST-X-POPULATION-MANIFEST",
+            "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
+            "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016"
+          ]
+        },
         {
           "id": "production-scale",
           "claimId": "CLM-WOWLIST-PRODUCTION-SCALE-2017",

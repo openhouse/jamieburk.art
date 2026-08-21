@@ -328,7 +328,7 @@ export const nycacFacebookEventKnowledge = {
       assetUrl: "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
       preferredPublicUrl: "asset",
       publicCitation: "Public-safe census of the full NYC Artist Coalition Facebook Past Events population exposed July 15, 2026.",
-      publicNote: "Retains 33 event identities, dates, venues, organizer displays, bounded response snapshots, topics, source routes, and public-safety dispositions without raw descriptions or participant and access data.",
+      publicNote: "Retains 33 event identities, dates, venues, organizer displays, dated response snapshots, topics, source routes, and public-safety dispositions without raw descriptions or participant and access data.",
       supportsGenerally: ["34-of-34 displayed-control disposition", "33 recovered event records", "24 direct organizer cards and nine allied or cohosted cards", "12 recurring-meeting records across ten named physical cultural spaces", "response-threshold arithmetic", "seven posted source-article routes", "13 protected outbound-link occurrences withheld by category"],
       doesNotEstablish: ["the unresolved event identity", "every historical coalition event", "individual event authorship or production", "physical attendance or unique people", "policy causality", "permission to publish attendee identities, comments, contacts, or credentials"]
     },

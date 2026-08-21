@@ -1,0 +1,27 @@
+{
+  "evaluator": "Fictionalized Margaret Morse analytical lens; not her participation, quotation, endorsement, or publication approval.",
+  "reviewerId": "morse-a-v4-2026-08-13-40437699",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "404376992695431861412b6d8d130310e9719e0c6904a2b98e5e1ed61966b77b",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The reviewer independently recomputed the 127-file candidate fingerprint before reviewing the public candidate bundle.",
+    "The About page connects artistic, civic, technical, and social practice through an explicit recursive method without obscuring the professional product-operations frame.",
+    "HJE, NYC Artist Coalition and FairRentNYC, Sunday Dinner and 196, WOW List, and Open House show systems people used rather than a disconnected list of outputs.",
+    "Project-specific boundaries preserve collective credit and withhold protected customer, participant, coalition, educational, analytics, and correspondence records."
+  ],
+  "gaps": ["Publication, participant permissions, production deployment, and indexing remain separate human decisions."],
+  "safety_findings": ["No private archive paths, protected educational records, or solo-causality claims were projected into the reviewed public candidate."],
+  "recommendation": "Pass at 4; preserve the connected practice lineage, concrete use evidence, collective credit, privacy boundaries, and human publication gates.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "bounded independent holdout",
+    "reviewerRole": "practice-lineage-reader-a",
+    "reviewedAt": "2026-08-13",
+    "candidatePathCount": 127,
+    "candidateFingerprintRecomputed": true,
+    "filesEdited": false
+  }
+}

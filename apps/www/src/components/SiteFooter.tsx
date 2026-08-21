@@ -6,7 +6,7 @@ export function SiteFooter() {
     <footer className="mt-20 bg-jb-ink text-white">
       <div className="jb-frame grid gap-8 py-10 md:grid-cols-[1.2fr_0.8fr]">
         <div>
-          <p className="font-display text-2xl">{site.name}</p>
+          <p className="font-identity text-2xl">{site.name}</p>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-white/68">
             Technical Project Manager - Product Operations & Implementation.
             Public-safe portfolio, civic notebook, and future living archive.

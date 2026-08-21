@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "id": "civic-match-candidate-profile-2026-08-20",
+  "sourceId": "source.civic-match.candidate-network",
+  "observedAt": "2026-08-20",
+  "observationMode": "authenticated-read-only-field-map",
+  "guidePath": "opportunity-sources/civic-match/2026-08-20/Civic-Match-Signup-Guide.md",
+  "guideSha256": "084971e5c991603d438a860a6718cd903e90d75fdbf56ee0094c6f858d37b781",
+  "sourceRegistryPath": "evals/opportunity-intake/sources.json",
+  "currentOpportunityManifest": "evals/public-resume/current.json",
+  "expectedHiringReaderAssignments": 11,
+  "voiceContractPath": "evals/cover-letters/voice-contract.json",
+  "resume": {
+    "manifestPath": "evals/public-resume/current.json",
+    "uploadPath": "resume-versions/2026-08-20/active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "publicProjectionPath": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+  },
+  "steps": [
+    {
+      "step": 1,
+      "name": "Background & Eligibility",
+      "fieldIds": [
+        "government-interest",
+        "background",
+        "government-impact",
+        "community-initiative"
+      ]
+    },
+    {
+      "step": 2,
+      "name": "Contact Information",
+      "fieldIds": [
+        "full-name",
+        "email",
+        "cell-phone",
+        "current-city",
+        "current-outside-us",
+        "current-state-derived",
+        "hometown-city",
+        "hometown-outside-us",
+        "hometown-state-derived"
+      ]
+    },
+    {
+      "step": 3,
+      "name": "Professional Experience",
+      "fieldIds": [
+        "current-role-title",
+        "current-employer",
+        "department",
+        "years-experience",
+        "education",
+        "languages",
+        "expertise",
+        "linkedin",
+        "resume-upload",
+        "veteran-status",
+        "attorney-bar",
+        "other-skills"
+      ]
+    },
+    {
+      "step": 4,
+      "name": "Desired Roles and Preferences",
+      "fieldIds": [
+        "job-search-status",
+        "desired-roles",
+        "profile-summary",
+        "relocation",
+        "work-locations",
+        "popular-regions",
+        "referral-source",
+        "media-consent",
+        "profile-visibility"
+      ]
+    },
+    {
+      "step": 5,
+      "name": "Review and Submit",
+      "fieldIds": [
+        "review",
+        "accuracy-terms-consent",
+        "submit"
+      ]
+    }
+  ],
+  "privateNarrativeAnswerIds": [
+    "government-impact",
+    "community-initiative"
+  ],
+  "copyBlockIds": [
+    "government-impact",
+    "community-initiative",
+    "profile-summary"
+  ],
+  "civicMatchHelpers": [
+    {
+      "personId": "person.josh-gee",
+      "name": "Josh Gee",
+      "relationship": "civic-match-platform-lead",
+      "acceptanceQuestion": "I would actively match this candidate to a current opportunity their evidence supports."
+    },
+    {
+      "personId": "person.courtney-kishbaugh",
+      "name": "Courtney Kishbaugh",
+      "relationship": "civic-match-program-lead",
+      "acceptanceQuestion": "I would actively match this candidate to a current opportunity their evidence supports."
+    }
+  ],
+  "evaluationOrder": [
+    "source-registry-and-field-map",
+    "five-step-guide-coverage",
+    "answer-word-limits-and-public-safety",
+    "current-resume-digest-and-opportunity-selection",
+    "named-hiring-reader-and-helper-role-play"
+  ],
+  "readerAssessments": [
+    {
+      "key": "hiring|opportunity.asana.ai-implementation.8027437|person.jenn-wei|senior-vision",
+      "role": "hiring-reader",
+      "opportunityId": "opportunity.asana.ai-implementation.8027437",
+      "personId": "person.jenn-wei",
+      "name": "Jenn Wei",
+      "relationship": "senior-vision",
+      "guideSha256": "084971e5c991603d438a860a6718cd903e90d75fdbf56ee0094c6f858d37b781",
+      "acceptanceQuestion": "I would hire this person for this job.",
+      "decision": "fail",
+      "wouldHire": false,
+      "simulatedPublicFigureLens": true,
+      "nonEndorsementBoundary": "This fictionalized public-context lens is not participation, quotation, endorsement, recommendation, or a hiring decision by the named person.",
+      "access": {
+        "scope": "guide-current-public-resume-and-public-opportunity-context-only",
+        "repositoryAccess": false,
+        "privateSourceAccess": false
+      },
+      "strengths": [
+        "The resume shows 14+ years of end-to-end delivery across discovery, requirements, implementation, launch, measurement, and handoff, including a client engagement associated with 2x revenue growth and a civic service documenting 1,970 tires collected.",
+        "The candidate presents relevant responsible-AI practice: human-reviewed workflows, source governance, decision lineage, deterministic quality controls, and recent formal study of application-focused AI evaluation.",
+        "There is strong evidence of reusable operating discipline through runbooks, onboarding guides, decision records, launch checklists, retrospectives, and source-backed team memory."
+      ],
+      "risks": [
+        "The presentation does not yet demonstrate enough specific, direct authority for customer-facing platform configuration, migration, adoption, and post-launch success—the opportunity's central screen.",
+        "The strongest quantified examples concern revenue, civic delivery, and public funding, but do not establish implementation measures such as time to value, adoption, go-live quality, retention, or customer outcomes for a SaaS deployment.",
+        "The posting's reporting line and the balance among configuration, migration, facilitation, travel, and ongoing customer success remain unresolved."
+      ],
+      "followUpEvidence": [
+        "Walk through one direct customer implementation from discovery to go-live and adoption, naming the customer context, Jamie's decision authority, configuration or migration work, stakeholders, setbacks, change-management actions, and measured results.",
+        "Provide a reusable implementation playbook or runbook and explain how it changed delivery quality across more than one engagement.",
+        "Demonstrate an AI-assisted operating workflow, including failure modes, human review controls, evaluation criteria, and evidence that it worked in a real organizational setting.",
+        "Clarify with Asana how much of the role requires hands-on platform configuration and migration versus facilitation, product feedback, and ongoing success ownership."
+      ],
+      "rationale": "This is a credible adjacent candidate who merits an interview and serious matching consideration, especially for implementation strategy, facilitation, responsible AI, and operational documentation. However, the supplied presentation does not yet support the stronger acceptance statement that I would hire this person for this specific job: direct customer implementation authority and measurable SaaS adoption outcomes are asserted broadly but not demonstrated with a sufficiently concrete case.",
+      "model": "gpt-5.6-sol",
+      "evaluatedAt": "2026-08-20"
+    }
+  ],
+  "humanGates": [
+    "Jamie decides veteran status and every other protected-category answer.",
+    "Jamie decides relocation, media consent, and profile visibility before those choices are transmitted.",
+    "Jamie reviews the completed profile, confirms accuracy and terms, and alone clicks Submit.",
+    "Named-person assessments are fictionalized public-context tests, not participation, quotation, endorsement, recommendation, or hiring decisions by the named people."
+  ],
+  "readerEvaluationState": {
+    "evaluatedAt": "2026-08-20",
+    "status": "stopped-on-first-failure",
+    "expectedAssessments": 13,
+    "completedAssessments": 1,
+    "firstFailureKey": "hiring|opportunity.asana.ai-implementation.8027437|person.jenn-wei|senior-vision",
+    "guideSha256": "084971e5c991603d438a860a6718cd903e90d75fdbf56ee0094c6f858d37b781"
+  }
+}

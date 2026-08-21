@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to KC Town Hall orientation
 
-**Source commit:** `b1d476c810fc6d434b01fdab16c23ad1b961a01f`
-**Generation time:** 2026-07-28T14:28:48-04:00
-**Source fingerprint:** `e5177833940ac1e9395c314bcb04693bdef8e3ec600800598ce57a3002d5c65f`
+**Source commit:** `2bd29f313f73f8844282dbe364b163d62544a401`
+**Generation time:** 2026-08-21T10:19:09-04:00
+**Source fingerprint:** `77a6700ed0da85d2d0ec4dcfd5fed3f8ef2d9c6dc3dd08683dd243cddead9684`
 
 - [KC Town Hall ten-minute-walk proposal map](../../assets/graphics/kc-town-hall-walkshed-2019.md) - `documents` (frontmatter)
 - [Kansas City Star aerial view of KC Town Hall](../../assets/photographs/kc-town-hall-kc-star-aerial-2021.md) - `related_to` (frontmatter)
@@ -13,6 +13,7 @@
 - [KC Town Hall listening within fieldwork](../../decisions/kc-town-hall-listening-fieldwork.md) - `resulted_in` (frontmatter)
 - [Canonical Story Bank](../../indexes/canonical-story-bank.md) - `related_to` (frontmatter)
 - [Decisions, Deliverables, and Operational Outcomes](../../indexes/decisions-deliverables-and-operational-outcomes.md) - `related_to` (frontmatter)
+- [Live Project Websites](../../indexes/live-project-websites.md) - `related_to` (frontmatter)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `prose_link` (markdown)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `related_to` (frontmatter)
 - [Outcomes, Adoption, and Afterlives](../../indexes/outcomes-adoption-and-afterlives.md) - `related_to` (frontmatter)
@@ -26,8 +27,11 @@
 - [Jamie at Work](../../methods/jamie-at-work.md) - `related_to` (frontmatter)
 - [Maintenance, handoff, and stewardship](../../methods/maintenance-handoff-and-stewardship.md) - `prose_link` (markdown)
 - [Participation and Relational Infrastructure](../../methods/participation-and-relational-infrastructure.md) - `related_to` (frontmatter)
+- [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `prose_link` (markdown)
+- [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
 - [Oral history prompt 001: Stewardship afterlife](../../notebooks/photography/oral-history-stewardship-afterlife-001.md) - `related_to` (frontmatter)
 - [KC Town Hall CCED proposal bundle, 2019](../../sources/kc-town-hall-cced-proposal-2019.md) - `documents` (frontmatter)
 - [KC Town Hall local digital archive review, July 2026](../../sources/archives/kc-town-hall-local-digital-archive-2026-07.md) - `documents` (frontmatter)
 - [KC Town Hall photographic oral histories, July 2026](../../sources/recollections/kc-town-hall-photographic-oral-histories-2026-07.md) - `documents` (frontmatter)
+- [KC Town Hall restored public site, August 2026](../../sources/kctownhall-live-site-2026-08-14.md) - `documents` (frontmatter)

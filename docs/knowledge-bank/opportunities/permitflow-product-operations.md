@@ -5,14 +5,15 @@ kind: opportunity
 status: governed-open
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-18
-review_by: 2026-07-21
+last_reviewed: 2026-08-20
+review_by: 2026-08-23
 canonical_path: docs/knowledge-bank/opportunities/permitflow-product-operations.md
 summary: Public-safe requirement and portfolio-coverage map for PermitFlow's live Product Operations Manager role.
 canonical_url: https://jobs.ashbyhq.com/permitflow/8a6e6066-1a9a-4026-aa81-e855741b2922/
 source_type: official-employer
 opportunity_status: live
-verified_at: 2026-07-18
+hirability_status: evidence-gap
+verified_at: 2026-08-20
 portfolio_routes:
   - /
   - /work/technical-operations
@@ -122,7 +123,7 @@ evidence:
     relationship: direct-support
     confidence: high
     supports:
-      - official role facts and requirements as rechecked July 18, 2026
+      - official role title and application route as rechecked August 20, 2026; daily analytics depth remains an evidence gap
 human_review: governed-open
 ---
 
@@ -131,7 +132,8 @@ human_review: governed-open
 This opportunity makes Jamie's physical-world, public-process, product, and AI
 pattern legible in one role. Product analytics is the important screen: the
 system should distinguish adjacent evidence from fluency Jamie can demonstrate
-today.
+today. It remains outside the public-resume acceptance set until Jamie can
+truthfully demonstrate the required product-data and analytics depth.
 
 Recheck the [official source](../sources/jobs-permitflow-product-operations.md)
 before outward use.
