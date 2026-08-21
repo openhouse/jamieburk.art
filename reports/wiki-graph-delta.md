@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `9ff02575bad85850d3c7e99ff1bc06157dab088e`
-**Generation time:** 2026-08-21T12:24:32-04:00
-**Source fingerprint:** `20f51cfdd7890da22ebdfb0d6c318f84b02f88d376f6db1cec852725c2d9e25d`
+**Source commit:** `422576a12465a77bad7e223fb56d8c867e7e7116`
+**Generation time:** 2026-08-21T15:01:28-04:00
+**Source fingerprint:** `28f6434ed720eaa8a59a718647e539511af57ca09929f8a31ec625474fa3561b`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 75
+- Nodes added: 76
 - Nodes removed: 38
-- Edges added: 246
+- Edges added: 254
 - Edges removed: 184
 - New type-aware orphans: 1
 - Current rights-review records: 186
@@ -30,6 +30,7 @@ Compared with the graph artifact on `origin/develop`.
 - `evaluation.jobs.nyc-open-data.strong-match`
 - `evaluation.jobs.nyc-oti.product-management-ranking.2026-08-20`
 - `evaluation.nycac.crs-frontline-source-return.2026-08-13`
+- `evaluation.portfolio.source-backed-team-memory.anonymized-case-study.2026-08-21`
 - `evaluation.portfolio.source-backed-team-memory.protected-reader.2026-08-21`
 - `event.commercial-rent.empty-storefronts-report-launch.2026-07-29`
 - `index.knowledge-wiki.federated-graph-ecosystem`

@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to East River beneath the Manhattan Bridge, 2022
 
-**Source commit:** `9ff02575bad85850d3c7e99ff1bc06157dab088e`
-**Generation time:** 2026-08-21T12:24:32-04:00
-**Source fingerprint:** `20f51cfdd7890da22ebdfb0d6c318f84b02f88d376f6db1cec852725c2d9e25d`
+**Source commit:** `422576a12465a77bad7e223fb56d8c867e7e7116`
+**Generation time:** 2026-08-21T15:01:28-04:00
+**Source fingerprint:** `28f6434ed720eaa8a59a718647e539511af57ca09929f8a31ec625474fa3561b`
 
 - [Add Elana Gordon's credit to the East River homepage occurrence](../../corrections/east-river-credit-2026-07.md) - `related_to` (frontmatter)
 - [Layout C homepage East River curatorial proposal](../../evaluations/curatorial/layout-c-home-east-river-v1.md) - `related_to` (frontmatter)

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-21T12:24:32-04:00",
-  "sourceCommit": "9ff02575bad85850d3c7e99ff1bc06157dab088e",
-  "sourceFingerprint": "20f51cfdd7890da22ebdfb0d6c318f84b02f88d376f6db1cec852725c2d9e25d",
+  "generatedAt": "2026-08-21T15:01:28-04:00",
+  "sourceCommit": "422576a12465a77bad7e223fb56d8c867e7e7116",
+  "sourceFingerprint": "28f6434ed720eaa8a59a718647e539511af57ca09929f8a31ec625474fa3561b",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3007,6 +3007,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-08-19"
+    },
+    {
+      "id": "evaluation.portfolio.source-backed-team-memory.anonymized-case-study.2026-08-21",
+      "path": "docs/knowledge-bank/evaluations/anonymized-team-memory-case-study.md",
+      "title": "Anonymized Source-Backed Team Memory case-study gate",
+      "kind": "evaluation",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Deterministic privacy and completeness prerequisites plus an advisory modeled-reader contract for the three-document anonymous case study.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-09-21"
     },
     {
       "id": "evaluation.portfolio.source-backed-team-memory.protected-reader.2026-08-21",
@@ -12703,6 +12716,46 @@
       "context": null
     },
     {
+      "from": "evaluation.portfolio.source-backed-team-memory.anonymized-case-study.2026-08-21",
+      "type": "related_to",
+      "to": "evaluation.portfolio.source-backed-team-memory.protected-reader.2026-08-21",
+      "source": "frontmatter",
+      "href": "protected-team-memory-reader.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.portfolio.source-backed-team-memory.anonymized-case-study.2026-08-21",
+      "type": "related_to",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.portfolio.source-backed-team-memory.anonymized-case-study.2026-08-21",
+      "type": "related_to",
+      "to": "opportunity.protected.source-backed-memory-consulting.2026",
+      "source": "frontmatter",
+      "href": "../opportunities/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.portfolio.source-backed-team-memory.anonymized-case-study.2026-08-21",
+      "type": "uses_source",
+      "to": "source.protected.source-backed-memory-opportunity.2026",
+      "source": "frontmatter",
+      "href": "../sources/protected-source-backed-memory-opportunity.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.portfolio.source-backed-team-memory.protected-reader.2026-08-21",
+      "type": "related_to",
+      "to": "evaluation.portfolio.source-backed-team-memory.anonymized-case-study.2026-08-21",
+      "source": "frontmatter",
+      "href": "anonymized-team-memory-case-study.md",
+      "context": null
+    },
+    {
       "from": "evaluation.portfolio.source-backed-team-memory.protected-reader.2026-08-21",
       "type": "related_to",
       "to": "method.source-backed-team-memory",
@@ -13500,6 +13553,14 @@
       "to": "evaluation.jobs.nyc-oti.product-management-ranking.2026-08-20",
       "source": "frontmatter",
       "href": "../evaluations/oti-product-management-ranking-2026-08-20.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "evaluation.portfolio.source-backed-team-memory.anonymized-case-study.2026-08-21",
+      "source": "frontmatter",
+      "href": "../evaluations/anonymized-team-memory-case-study.md",
       "context": null
     },
     {
@@ -15633,6 +15694,14 @@
     {
       "from": "method.source-backed-team-memory",
       "type": "related_to",
+      "to": "evaluation.portfolio.source-backed-team-memory.anonymized-case-study.2026-08-21",
+      "source": "frontmatter",
+      "href": "../evaluations/anonymized-team-memory-case-study.md",
+      "context": null
+    },
+    {
+      "from": "method.source-backed-team-memory",
+      "type": "related_to",
       "to": "evaluation.portfolio.source-backed-team-memory.protected-reader.2026-08-21",
       "source": "frontmatter",
       "href": "../evaluations/protected-team-memory-reader.md",
@@ -16628,6 +16697,14 @@
       "to": "capability.technical-operations",
       "source": "frontmatter",
       "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.protected.source-backed-memory-consulting.2026",
+      "type": "related_to",
+      "to": "evaluation.portfolio.source-backed-team-memory.anonymized-case-study.2026-08-21",
+      "source": "frontmatter",
+      "href": "../evaluations/anonymized-team-memory-case-study.md",
       "context": null
     },
     {
@@ -21037,6 +21114,15 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/evaluations/anonymized-team-memory-case-study.md",
+      "to": "evaluation.portfolio.source-backed-team-memory.anonymized-case-study.2026-08-21",
+      "fragment": null,
+      "line": 108,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
       "to": "opportunity.nyc-oti.product-manager.784450",
       "fragment": null,
@@ -21067,7 +21153,7 @@
       "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
       "to": "evaluation.employment-context.coverage.2026-07-18",
       "fragment": null,
-      "line": 135,
+      "line": 136,
       "kind": "link"
     },
     {
@@ -21076,7 +21162,7 @@
       "toPath": "reports/wiki-opportunity-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 136,
+      "line": 137,
       "kind": "link"
     },
     {
@@ -21085,22 +21171,13 @@
       "toPath": "reports/wiki-career-trajectory-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 137,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/wiki-source-channel-coverage.md",
-      "to": null,
-      "fragment": null,
       "line": 138,
       "kind": "link"
     },
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/wiki-opportunity-discovery.md",
+      "toPath": "reports/wiki-source-channel-coverage.md",
       "to": null,
       "fragment": null,
       "line": 139,
@@ -21118,7 +21195,7 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/hiring-acceptance-public.md",
+      "toPath": "reports/wiki-opportunity-discovery.md",
       "to": null,
       "fragment": null,
       "line": 140,
@@ -21127,10 +21204,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/hiring-acceptance-gap-resolution.md",
+      "toPath": "reports/hiring-acceptance-public.md",
       "to": null,
       "fragment": null,
       "line": 141,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/hiring-acceptance-gap-resolution.md",
+      "to": null,
+      "fragment": null,
+      "line": 142,
       "kind": "link"
     },
     {
