@@ -13,16 +13,27 @@ function arg(name) {
   return index >= 0 ? process.argv[index + 1] : undefined;
 }
 
+export function assertPublicSafeModelResult(result, readerName) {
+  if (!readerName) {
+    throw new Error("The protected runtime reader identity is required to audit the model result.");
+  }
+  if (JSON.stringify(result).toLowerCase().includes(readerName.toLowerCase())) {
+    throw new Error("The model result repeats the protected runtime reader identity and cannot be committed.");
+  }
+}
+
 function main() {
   const metadataPath = arg("--metadata");
   const resultPath = arg("--result");
-  if (!metadataPath || !resultPath) {
-    throw new Error("Usage: record-team-memory-reader-run.mjs --metadata <metadata json> --result <model result json>");
+  const readerName = process.env.TEAM_MEMORY_RUNTIME_READER_NAME;
+  if (!metadataPath || !resultPath || !readerName) {
+    throw new Error("Usage: TEAM_MEMORY_RUNTIME_READER_NAME=<protected runtime value> node record-team-memory-reader-run.mjs --metadata <metadata json> --result <model result json>");
   }
 
   const candidate = loadTeamMemoryProposalCandidate(repoRoot);
   const metadata = JSON.parse(readFileSync(metadataPath, "utf8"));
   const result = JSON.parse(readFileSync(resultPath, "utf8"));
+  assertPublicSafeModelResult(result, readerName);
   const run = {
     id: "team-memory-proposal-reader-2026-08-21",
     schemaVersion: 1,

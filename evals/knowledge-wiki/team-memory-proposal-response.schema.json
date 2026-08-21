@@ -15,9 +15,12 @@
     "boundary"
   ],
   "properties": {
-    "readerId": { "const": "reader.protected-team-memory-prospect" },
-    "verdict": { "enum": ["pass", "fail"] },
-    "decision": { "enum": ["hire-for-focused-pilot", "do-not-hire-yet"] },
+    "readerId": { "type": "string", "const": "reader.protected-team-memory-prospect" },
+    "verdict": { "type": "string", "enum": ["pass", "fail"] },
+    "decision": {
+      "type": "string",
+      "enum": ["hire-for-focused-pilot", "do-not-hire-yet"]
+    },
     "rationale": { "type": "string", "minLength": 60 },
     "strengths": {
       "type": "array",
@@ -30,7 +33,7 @@
     },
     "constructiveCritique": { "type": "string", "minLength": 40 },
     "validateNext": { "type": "string", "minLength": 40 },
-    "actualPersonParticipated": { "const": false },
+    "actualPersonParticipated": { "type": "boolean", "const": false },
     "boundary": { "type": "string", "minLength": 80 }
   }
 }

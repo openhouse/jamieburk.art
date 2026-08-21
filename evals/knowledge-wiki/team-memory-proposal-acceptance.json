@@ -54,7 +54,7 @@
     }
   ],
   "modelGate": {
-    "promptVersion": "team-memory-proposal-reader-v1",
+    "promptVersion": "team-memory-proposal-reader-v2",
     "publicOnly": true,
     "actualPersonParticipated": false,
     "privateTranscriptAvailableToModel": false,

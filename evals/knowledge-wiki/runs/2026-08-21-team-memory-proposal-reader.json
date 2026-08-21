@@ -1,17 +1,43 @@
 {
-  "id": "team-memory-proposal-reader-not-run-2026-08-21",
+  "id": "team-memory-proposal-reader-2026-08-21",
   "schemaVersion": 1,
-  "status": "not-run",
-  "evaluatedAt": null,
+  "status": "complete",
+  "evaluatedAt": "2026-08-21T07:20:46.447Z",
   "publicOrigin": "https://staging-b.jamieburk.art",
   "pagePath": "/lab/source-backed-team-memory",
   "readerId": "reader.protected-team-memory-prospect",
+  "pageSourceSha256": "40fcdb8d3fccd9ed4a13f4bf96b305949c981f7acbb63f8acda77c4cf6cafdf9",
+  "publicPageTextSha256": "7ee5ff004d228227558e07610423a4a0047a57e9aa5c4528c39f689e12c3f2b4",
+  "scenarioSha256": "a752e9057fc1dd93e298caa089d3125ea1c27620fc73889ceedabf6cc29c0d10",
+  "promptSha256": "7d7b7a909a6a8599cf0184ccc8052af5952abe18c5d6cc279851819f18832d1a",
+  "promptVersion": "team-memory-proposal-reader-v2",
   "actualPersonParticipated": false,
-  "pageSourceSha256": null,
-  "publicPageTextSha256": null,
-  "scenarioSha256": null,
-  "promptSha256": null,
-  "promptVersion": "team-memory-proposal-reader-v1",
-  "result": null,
-  "boundary": "The public-page model evaluation has not run for this candidate. Deterministic checks cannot substitute for the explicitly fictionalized reader simulation, and no real person has participated or endorsed Jamie."
+  "result": {
+    "readerId": "reader.protected-team-memory-prospect",
+    "verdict": "pass",
+    "decision": "hire-for-focused-pilot",
+    "rationale": "The page presents a credible, bounded proposal for a small paid pilot. It identifies a concrete problem—product rationale, decisions, open questions, and onboarding context disappearing into meetings and private messages—and offers an adoptable first step using a deliberately approved source set. The proposed outputs are practical: a start-here page, decision record, open-question list, source links, access notes, correction paths, and a continue/revise/stop recommendation. Observable handoff tests cover discovery, provenance, correction, protection, and onboarding value. The page also draws honest boundaries around the method’s early maturity and does not imply production deployment or client adoption. The public evidence is stronger for care, governance, and correction discipline than for prior client outcomes, but it is sufficient to justify a tightly scoped discovery or prototype engagement.",
+    "strengths": [
+      "Defines one legible team pressure and resists turning the pilot into a company-wide platform initiative.",
+      "Provides a clear four-step engagement shape: locate friction, use approved material, produce compact operating memory, and test the handoff.",
+      "Names useful deliverables that can fit existing team workflows instead of requiring a parallel bureaucracy.",
+      "Establishes observable success conditions around onboarding, decision traceability, correction, protection, and an explicit continuation decision.",
+      "Treats privacy, consent, access, attribution, retention, and publication permission as operational requirements.",
+      "Shows a concrete public correction trace demonstrating that revised evidence can propagate across affected outputs.",
+      "Clearly distinguishes known, open, and protected material and preserves disagreement without manufacturing certainty.",
+      "States maturity limits candidly: the practice is early, not a finished platform, and has no claimed client adoption."
+    ],
+    "missingEvidence": [
+      "A representative pilot timeline, staffing expectation, and level of sponsor or teammate participation.",
+      "A worked end-to-end sample showing the actual structure and usability of the complete deliverable bundle.",
+      "Evidence from a prior team handoff demonstrating faster onboarding or reduced context loss.",
+      "Specific integration examples for common product and engineering tools and the ongoing maintenance burden after handoff.",
+      "Indicative pricing or enough effort assumptions to assess budget fit."
+    ],
+    "constructiveCritique": "The page becomes architecture-heavy after already making a strong pilot case. A prospective sponsor would benefit from a compact engagement card near the first proposal that states duration, required participants, source-set limits, deliverables, exclusions, and the decision made at the end. One complete synthetic before-and-after handoff would also make the operating experience easier to judge than the current collection of concepts and partial examples.",
+    "validateNext": "At kickoff, validate whether Jamie can turn one real, permissioned decision trail into a useful operating-memory packet within a fixed timebox, then have an engineer who did not attend the source meeting use it to explain the rationale, identify an open question, trace the evidence, and submit a correction without substantial guidance.",
+    "actualPersonParticipated": false,
+    "boundary": "This is a fictionalized public-page model simulation. The named person did not participate in the evaluation, review the candidate, approve the proposal, endorse Jamie, or make a hiring decision. This result is not the named person's endorsement or budget authorization."
+  },
+  "boundary": "This is an independent model simulation of an explicitly fictionalized public-page reader lens. The named person did not participate or endorse Jamie; a pass is not budget authorization, a contract, or a promise of work."
 }
