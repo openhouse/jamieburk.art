@@ -94,8 +94,16 @@ using an edited excerpt of Jamie Burkart's May 19 Wonderville remarks. It joins
 cultural-space continuity and collective agency to a call for action by both
 Albany and the New York City Council.
 
-Both source editions are pinned to the same immutable archive commit and to
-their respective media checksums. Coalition-account publication does not
+On August 16, the coalition published a distinct [Cultural Space Rent
+Stabilization Reel](../sources/commercial-rent-public-support/nycartc-cultural-space-reel-2026-08-16.md)
+using the same decoded audio with a different public caption and visual
+treatment. The caption thanks Fair Rent NYC legislative sponsors and invites
+organizers to an August 18 meetup. Named sponsors remain acknowledgement
+metadata rather than newly recovered statements by each official; the
+invitation does not establish later attendance or endorsement.
+
+Each source edition is pinned to an immutable archive commit and its media
+checksum. Coalition-account publication does not
 establish sole individual editorial authorship, and tagged accounts or sponsor
 acknowledgements are not represented as endorsements. Editorially corrected
 diarized transcripts remain subject to final human listening/approval.

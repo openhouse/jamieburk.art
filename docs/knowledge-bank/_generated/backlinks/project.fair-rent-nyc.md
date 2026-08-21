@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Fair Rent NYC
 
-**Source commit:** `0454ba64a98411716e4ab10bbff6aba24368dff1`
-**Generation time:** 2026-08-20T23:38:22-04:00
-**Source fingerprint:** `3a7fae298c0b199d230d57b4da4975ef0f18be10c92422329c07dbff4daa5e62`
+**Source commit:** `2bd29f313f73f8844282dbe364b163d62544a401`
+**Generation time:** 2026-08-21T10:19:09-04:00
+**Source fingerprint:** `77a6700ed0da85d2d0ec4dcfd5fed3f8ef2d9c6dc3dd08683dd243cddead9684`
 
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `related_to` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [hur5tftl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj.md) - `related_to` (frontmatter)
@@ -49,6 +49,7 @@
 - [Late-July 2026 current-workstream review](../../sources/working/current-workstream-2026-07-27.md) - `related_to` (frontmatter)
 - [Empty Storefronts, High Rents](../../sources/commercial-rent-public-support/empty-storefronts-high-rents-report-2026.md) - `related_to` (frontmatter)
 - [Chi Ossé and Emily Gallagher Small Business Rent Stabilization Reel](../../sources/commercial-rent-public-support/chiosse-emily-small-business-rent-reel-2026-08-05.md) - `related_to` (frontmatter)
+- [NYC Artist Coalition Cultural Space Rent Stabilization Reel](../../sources/commercial-rent-public-support/nycartc-cultural-space-reel-2026-08-16.md) - `related_to` (frontmatter)
 - [NYC Artist Coalition Cultural Space Rent Stabilization Story](../../sources/commercial-rent-public-support/nycartc-cultural-space-story-2026-08-15.md) - `related_to` (frontmatter)
 - [Jimmy's Corner rally: Small Business Rent Stabilization statements](../../testimony/commercial-rent-public-support/2026-04-10-jimmys-corner-rally-statements.md) - `related_to` (frontmatter)
 - [State sponsors and advocates introduce the Small Business Survival Act](../../testimony/commercial-rent-public-support/2026-02-17-state-introduction-statements.md) - `related_to` (frontmatter)

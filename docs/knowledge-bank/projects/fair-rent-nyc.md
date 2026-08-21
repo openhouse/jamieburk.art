@@ -30,6 +30,9 @@ relations:
     target: source.social.nycartc.cultural-space-story.2026-08-15
     href: ../sources/commercial-rent-public-support/nycartc-cultural-space-story-2026-08-15.md
   - type: uses_source
+    target: source.social.nycartc.cultural-space-reel.2026-08-16
+    href: ../sources/commercial-rent-public-support/nycartc-cultural-space-reel-2026-08-16.md
+  - type: uses_source
     target: source.social.chiosse-emily.small-business-rent-reel.2026-08-05
     href: ../sources/commercial-rent-public-support/chiosse-emily-small-business-rent-reel-2026-08-05.md
 ---
@@ -67,6 +70,13 @@ Story](../sources/commercial-rent-public-support/nycartc-cultural-space-story-20
 carried an edited excerpt of Jamie's Wonderville remarks into a public city-and-
 state call to action. The record preserves collective publication credit,
 individual voice attribution, and the difference between tags and endorsements.
+
+On August 16, a distinct [Reel publication](../sources/commercial-rent-public-support/nycartc-cultural-space-reel-2026-08-16.md)
+carried the same decoded audio into a durable caption that thanked Fair Rent NYC
+legislative sponsors and invited organizers to meet. The two public objects are
+related without being collapsed. Sponsor acknowledgement remains coalition
+speech rather than a newly recovered statement by each named official, and an
+invitation remains distinct from attendance, consent, or endorsement.
 
 An August 5 [joint Reel by Chi Ossé and Emily
 Gallagher](../sources/commercial-rent-public-support/chiosse-emily-small-business-rent-reel-2026-08-05.md)

@@ -6,7 +6,7 @@ import {
   loadCandidate
 } from "./nycartc-cultural-space-story-eval.mjs";
 
-test("the governed NYC Artist Coalition Story candidate passes", () => {
+test("the governed NYC Artist Coalition Story/Reel candidate passes", () => {
   const result = evaluateNycartcCulturalSpaceStory(loadCandidate());
   assert.equal(result.passed, true, result.failures.join("\n"));
 });
@@ -20,6 +20,49 @@ function expectFailure(name, mutate, expected) {
     assert.match(result.failures.join("\n"), expected);
   });
 }
+
+expectFailure(
+  "the Reel cannot be collapsed into the Story",
+  (candidate) => {
+    candidate.reelSource.publicNote = candidate.reelSource.publicNote.replace(
+      "distinct publication",
+      "duplicate publication"
+    );
+  },
+  /distinct-publication state/
+);
+
+expectFailure(
+  "the Reel media checksum cannot drift",
+  (candidate) => {
+    candidate.reelSource.publicNote = candidate.reelSource.publicNote.replace(
+      "91ad379f6edabeea1d83f6970e97917480b6aed5fa4a537de136fcea85107636",
+      "0".repeat(64)
+    );
+  },
+  /media and decoded-audio checksums/
+);
+
+expectFailure(
+  "the Reel invitation cannot become attendance proof",
+  (candidate) => {
+    candidate.reelSourceDoc = candidate.reelSourceDoc.replace(
+      "invitation is not attendance",
+      "invitation proves attendance"
+    );
+  },
+  /attribution-safe/
+);
+
+expectFailure(
+  "the shared claim cannot lose Reel evidence",
+  (candidate) => {
+    candidate.claim.evidence = candidate.claim.evidence.filter(
+      (item) => item.sourceId !== "SRC-NYCARTC-CULTURAL-SPACE-REEL-2026-08-16"
+    );
+  },
+  /link both Story and Reel evidence/
+);
 
 expectFailure(
   "a mutable branch cannot replace the pinned archive commit",

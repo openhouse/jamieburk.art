@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `0454ba64a98411716e4ab10bbff6aba24368dff1`
-**Generation time:** 2026-08-20T23:38:22-04:00
-**Source fingerprint:** `3a7fae298c0b199d230d57b4da4975ef0f18be10c92422329c07dbff4daa5e62`
+**Source commit:** `2bd29f313f73f8844282dbe364b163d62544a401`
+**Generation time:** 2026-08-21T10:19:09-04:00
+**Source fingerprint:** `77a6700ed0da85d2d0ec4dcfd5fed3f8ef2d9c6dc3dd08683dd243cddead9684`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 69
+- Nodes added: 70
 - Nodes removed: 34
-- Edges added: 239
+- Edges added: 243
 - Edges removed: 180
 - New type-aware orphans: 0
 - Current rights-review records: 186
@@ -81,6 +81,7 @@ Compared with the graph artifact on `origin/develop`.
 - `source.photo-metadata.team-knowledge-collective-synthesis.2026.public-safe`
 - `source.sbu.empty-storefronts-high-rents.2026`
 - `source.social.chiosse-emily.small-business-rent-reel.2026-08-05`
+- `source.social.nycartc.cultural-space-reel.2026-08-16`
 - `source.social.nycartc.cultural-space-story.2026-08-15`
 - `source.thick-arts.nys-dos-formation.2012-07-06`
 - `source.work-for-america.courtney-kishbaugh-civic-match`

@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `0454ba64a98411716e4ab10bbff6aba24368dff1`
-**Generation time:** 2026-08-20T23:38:22-04:00
-**Source fingerprint:** `3a7fae298c0b199d230d57b4da4975ef0f18be10c92422329c07dbff4daa5e62`
+**Source commit:** `2bd29f313f73f8844282dbe364b163d62544a401`
+**Generation time:** 2026-08-21T10:19:09-04:00
+**Source fingerprint:** `77a6700ed0da85d2d0ec4dcfd5fed3f8ef2d9c6dc3dd08683dd243cddead9684`
 
 ## application
 
@@ -520,6 +520,7 @@
 - [Jamie Burkart public resume, maintained 2026](../sources/jamie-resume-2026-06-11.md) - `source.resume.jamie-burkart.2026-06-11`
 - [Empty Storefronts, High Rents](../sources/commercial-rent-public-support/empty-storefronts-high-rents-report-2026.md) - `source.sbu.empty-storefronts-high-rents.2026`
 - [Chi Ossé and Emily Gallagher Small Business Rent Stabilization Reel](../sources/commercial-rent-public-support/chiosse-emily-small-business-rent-reel-2026-08-05.md) - `source.social.chiosse-emily.small-business-rent-reel.2026-08-05`
+- [NYC Artist Coalition Cultural Space Rent Stabilization Reel](../sources/commercial-rent-public-support/nycartc-cultural-space-reel-2026-08-16.md) - `source.social.nycartc.cultural-space-reel.2026-08-16`
 - [NYC Artist Coalition Cultural Space Rent Stabilization Story](../sources/commercial-rent-public-support/nycartc-cultural-space-story-2026-08-15.md) - `source.social.nycartc.cultural-space-story.2026-08-15`
 - [Jimmy's Corner rally: Small Business Rent Stabilization statements](../testimony/commercial-rent-public-support/2026-04-10-jimmys-corner-rally-statements.md) - `source.statement.commercial-rent.jimmys-corner-rally.2026-04-10`
 - [State sponsors and advocates introduce the Small Business Survival Act](../testimony/commercial-rent-public-support/2026-02-17-state-introduction-statements.md) - `source.statement.commercial-rent.state-introduction.2026-02-17`

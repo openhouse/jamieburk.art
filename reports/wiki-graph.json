@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-20T23:38:22-04:00",
-  "sourceCommit": "0454ba64a98411716e4ab10bbff6aba24368dff1",
-  "sourceFingerprint": "3a7fae298c0b199d230d57b4da4975ef0f18be10c92422329c07dbff4daa5e62",
+  "generatedAt": "2026-08-21T10:19:09-04:00",
+  "sourceCommit": "2bd29f313f73f8844282dbe364b163d62544a401",
+  "sourceFingerprint": "77a6700ed0da85d2d0ec4dcfd5fed3f8ef2d9c6dc3dd08683dd243cddead9684",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -5998,6 +5998,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-15",
       "reviewBy": "2026-11-15"
+    },
+    {
+      "id": "source.social.nycartc.cultural-space-reel.2026-08-16",
+      "path": "docs/knowledge-bank/sources/commercial-rent-public-support/nycartc-cultural-space-reel-2026-08-16.md",
+      "title": "NYC Artist Coalition Cultural Space Rent Stabilization Reel",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Checksum-bound public source record for the coalition Reel using Jamie Burkart's Wonderville remarks to connect cultural-space continuity with city and state commercial-rent action and acknowledge Fair Rent NYC sponsors.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-11-21"
     },
     {
       "id": "source.social.nycartc.cultural-space-story.2026-08-15",
@@ -17023,6 +17036,14 @@
     {
       "from": "project.fair-rent-nyc",
       "type": "uses_source",
+      "to": "source.social.nycartc.cultural-space-reel.2026-08-16",
+      "source": "frontmatter",
+      "href": "../sources/commercial-rent-public-support/nycartc-cultural-space-reel-2026-08-16.md",
+      "context": null
+    },
+    {
+      "from": "project.fair-rent-nyc",
+      "type": "uses_source",
       "to": "source.social.nycartc.cultural-space-story.2026-08-15",
       "source": "frontmatter",
       "href": "../sources/commercial-rent-public-support/nycartc-cultural-space-story-2026-08-15.md",
@@ -19301,6 +19322,30 @@
       "context": null
     },
     {
+      "from": "source.social.nycartc.cultural-space-reel.2026-08-16",
+      "type": "related_to",
+      "to": "index.knowledge-wiki.commercial-rent-public-support",
+      "source": "frontmatter",
+      "href": "../../indexes/commercial-rent-public-support.md",
+      "context": null
+    },
+    {
+      "from": "source.social.nycartc.cultural-space-reel.2026-08-16",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "source.social.nycartc.cultural-space-reel.2026-08-16",
+      "type": "related_to",
+      "to": "source.social.nycartc.cultural-space-story.2026-08-15",
+      "source": "frontmatter",
+      "href": "nycartc-cultural-space-story-2026-08-15.md",
+      "context": null
+    },
+    {
       "from": "source.social.nycartc.cultural-space-story.2026-08-15",
       "type": "related_to",
       "to": "index.knowledge-wiki.commercial-rent-public-support",
@@ -20601,10 +20646,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/commercial-rent-public-support.md",
       "from": "index.knowledge-wiki.commercial-rent-public-support",
+      "toPath": "docs/knowledge-bank/sources/commercial-rent-public-support/nycartc-cultural-space-reel-2026-08-16.md",
+      "to": "source.social.nycartc.cultural-space-reel.2026-08-16",
+      "fragment": null,
+      "line": 78,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/commercial-rent-public-support.md",
+      "from": "index.knowledge-wiki.commercial-rent-public-support",
       "toPath": "docs/knowledge-bank/data/commercial-rent-public-support-corpus-2026-07-28.json",
       "to": null,
       "fragment": null,
-      "line": 86,
+      "line": 94,
       "kind": "link"
     },
     {
@@ -23265,10 +23319,19 @@
     {
       "fromPath": "docs/knowledge-bank/projects/fair-rent-nyc.md",
       "from": "project.fair-rent-nyc",
+      "toPath": "docs/knowledge-bank/sources/commercial-rent-public-support/nycartc-cultural-space-reel-2026-08-16.md",
+      "to": "source.social.nycartc.cultural-space-reel.2026-08-16",
+      "fragment": null,
+      "line": 36,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/fair-rent-nyc.md",
+      "from": "project.fair-rent-nyc",
       "toPath": "docs/knowledge-bank/sources/commercial-rent-public-support/chiosse-emily-small-business-rent-reel-2026-08-05.md",
       "to": "source.social.chiosse-emily.small-business-rent-reel.2026-08-05",
       "fragment": null,
-      "line": 36,
+      "line": 43,
       "kind": "link"
     },
     {
@@ -23899,6 +23962,15 @@
       "to": null,
       "fragment": null,
       "line": 65,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/commercial-rent-public-support/nycartc-cultural-space-reel-2026-08-16.md",
+      "from": "source.social.nycartc.cultural-space-reel.2026-08-16",
+      "toPath": "docs/knowledge-bank/sources/commercial-rent-public-support/nycartc-cultural-space-story-2026-08-15.md",
+      "to": "source.social.nycartc.cultural-space-story.2026-08-15",
+      "fragment": null,
+      "line": 40,
       "kind": "link"
     },
     {

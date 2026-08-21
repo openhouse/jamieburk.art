@@ -97,12 +97,12 @@ export const nycartcCulturalSpaceStoryAugust2026 = {
     {
       id: "CLM-NYCARTC-CULTURAL-SPACE-STORY-2026",
       project: "fair-rent-nyc",
-      internalClaim: "The NYC Artist Coalition's August 15, 2026 Story used an edited excerpt of Jamie's Wonderville remarks to connect cultural-space continuity and collective agency with city- and state-level commercial-rent action.",
+      internalClaim: "The NYC Artist Coalition's August 15 Story and distinct August 16 Reel used an edited excerpt of Jamie's Wonderville remarks to connect cultural-space continuity and collective agency with city- and state-level commercial-rent action.",
       status: "confirmed-with-boundary",
       projections: [
         {
           key: "case-study",
-          text: "In August 2026, the NYC Artist Coalition published a Cultural Space Rent Stabilization Story using an edited excerpt of Jamie's Wonderville remarks to connect neighborhood cultural continuity with city- and state-level action.",
+          text: "In August 2026, the NYC Artist Coalition published a Cultural Space Rent Stabilization Story and Reel using an edited excerpt of Jamie's Wonderville remarks to connect neighborhood cultural continuity with city- and state-level action.",
           status: "active",
           citationRequired: true,
           surfaces: ["/work/fair-rent-nyc"]
@@ -120,11 +120,26 @@ export const nycartcCulturalSpaceStoryAugust2026 = {
           ],
           confidence: "high",
           renderCitation: true
+        },
+        {
+          sourceId: "SRC-NYCARTC-CULTURAL-SPACE-REEL-2026-08-16",
+          relationship: "corroborating",
+          supports: [
+            "distinct coalition-account Reel publication",
+            "Jamie's attributed edited voice",
+            "cultural-space continuity framing",
+            "city-and-state call to action",
+            "coalition sponsor acknowledgement and event invitation"
+          ],
+          confidence: "high",
+          renderCitation: true
         }
       ],
       boundaries: [
         "Describe the publication as a coalition Story using Jamie's attributed voice, not as a solely authored, edited, or published Jamie artifact.",
         "Do not treat tagged accounts or sponsor acknowledgements as endorsements.",
+        "The Story and Reel carry the same decoded audio but remain distinct public objects with different URLs, dates, platform IDs, visual treatments, captions, and media hashes.",
+        "The Reel's event invitation is not attendance, speech, consent, endorsement, or proof of an event outcome.",
         "The corrected diarized transcript has cross-source editorial review; final human listening/approval remains separate.",
         "Keep legislative advocacy distinct from passage, official action, and causation."
       ],
@@ -132,12 +147,14 @@ export const nycartcCulturalSpaceStoryAugust2026 = {
         "Jamie solely authored, edited, and published the Story",
         "Every tagged account endorsed the Story",
         "Every named official endorsed every proposal",
+        "The Reel is merely the Story and has no distinct publication record",
+        "The Reel invitation proves later attendance or endorsement",
         "The Story caused legislative action",
         "The transcript has completed final human listening and publication approval"
       ],
       researchInquiryIds: [],
-      reviewedAt,
-      reviewedBy: ["Jamie Burkart", "Codex authenticated public-source review"]
+      reviewedAt: "2026-08-21",
+      reviewedBy: ["Jamie Burkart", "Codex public-source review"]
     }
   ],
 
@@ -151,21 +168,24 @@ export const nycartcCulturalSpaceStoryAugust2026 = {
       action: "advocated-for",
       objectId: "ENT-COMMERCIAL-RENT-PROTECTIONS",
       purpose: "Connect cultural-space continuity and collective agency to commercial-rent action at both city and state levels.",
-      result: "The coalition account published a checksum-bound 31-second Story using Jamie's attributed edited voice.",
+      result: "The coalition account published a checksum-bound 31-second Story and a distinct Reel using Jamie's attributed edited voice.",
       creditScope: "collective",
       status: "confirmed-with-boundary",
       claimIds: ["CLM-NYCARTC-CULTURAL-SPACE-STORY-2026"],
-      sourceIds: ["SRC-NYCARTC-CULTURAL-SPACE-STORY-2026-08-15"],
+      sourceIds: [
+        "SRC-NYCARTC-CULTURAL-SPACE-STORY-2026-08-15",
+        "SRC-NYCARTC-CULTURAL-SPACE-REEL-2026-08-16"
+      ],
       sourceSupportKeys: [
         "coalition-account publication",
         "Jamie's attributed edited voice",
         "city-and-state commercial-rent call to action"
       ],
       boundaries: [
-        "The publication does not assign sole editorial authorship to Jamie, convert tags into endorsements, or establish legislative effect."
+        "The publications do not assign sole editorial authorship to Jamie, convert tags or sponsor acknowledgements into endorsements, convert an invitation into attendance, or establish legislative effect."
       ],
-      reviewedAt,
-      reviewedBy: ["Jamie Burkart", "Codex authenticated public-source review"]
+      reviewedAt: "2026-08-21",
+      reviewedBy: ["Jamie Burkart", "Codex public-source review"]
     }
   ],
 
