@@ -5,21 +5,22 @@ kind: source
 status: governed-open
 visibility: summary-only
 sensitivity: high
-last_reviewed: 2026-08-10
+last_reviewed: 2026-08-20
 review_by: 2026-11-10
 canonical_path: docs/knowledge-bank/sources/protected-source-backed-memory-opportunity.md
-summary: Metadata-only record for a bounded private review of an exploratory source-backed team-memory consulting lead.
+summary: Metadata-only record for a focused private review of an exploratory source-backed team-memory consulting lead.
 source_kind: protected-communication
 opaque_locator: vault.source.source-backed-memory-opportunity.2026
-coverage_date: 2026-08-10
-access_state: bounded-reviewed
-normalization_state: partial
+coverage_date: 2026-08-20
+access_state: focused-reviewed
+normalization_state: corrected-transcript-proposal-and-prep-reviewed
 identity_resolution_state: human-reviewed-private
 public_use_status: summary-only
 known_gaps:
   - The exact sent proposal email body was not recovered from the connected mailbox.
   - The corrected working transcript was not certified against native audio.
-  - No substantive acceptance, rejection, budget approval, contract, or completed work was recovered in the bounded review.
+  - The reviewed June 26 and June 30 folders contained one corrected call transcript, one proposal, and one follow-up prep packet; no second call transcript was located there.
+  - No substantive acceptance, rejection, budget approval, contract, or completed work was recovered in the focused review.
   - Later or unsearched communication may exist.
 relations:
   - type: supports

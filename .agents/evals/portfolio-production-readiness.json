@@ -349,7 +349,9 @@
         "Verify evaluations and human review govern transitions without granting publication authority.",
         "Verify shared identity connects independently useful repositories without merging stewardship, claims, permission, credit, or publication authority.",
         "Inspect one synthetic or public-safe worked example of the Known, Open, Protected review pattern.",
-        "Verify the course-completion evidence and wording."
+        "Verify the course-completion evidence and wording.",
+        "Before any language-model review, run the deterministic team-memory proposal gate for one approved source, preserved ideas and decisions, onboarding context, human correction, workflow fit, privacy, and a continue, revise, or stop decision.",
+        "Only after those checks pass, give a fictionalized protected-prospect evaluator the public page and the public-safe requirements distilled from the protected June 2026 scenario. Ask whether the evaluator would hire Jamie for the small paid discovery or prototype engagement."
       ],
       "pass_criteria": [
         "A hiring reader can explain how the method turns scattered project materials into reviewable operating knowledge and useful outputs.",
@@ -357,7 +359,9 @@
         "Public copy exposes no private repository topology, source locator, or protected material.",
         "Course completion is visible and accurately attributed as professional development.",
         "The lab includes one inspectable public-safe or synthetic worked example.",
-        "The page does not imply production SaaS, automated trust, external client adoption, automatic publication, or access to private archives."
+        "The page does not imply production SaaS, automated trust, external client adoption, automatic publication, or access to private archives.",
+        "The deterministic proposal checks pass before language-model review is commissioned.",
+        "The fictionalized protected-prospect evaluator passes the exact-page acceptance criterion, with an explicit non-endorsement boundary and uncalibrated-advisory status."
       ],
       "evidence_required": ["colophon architecture statement", "canonical claim and source record", "credential artifact", "worked example", "claim-boundary review"],
       "remediation_hint": "Clarify the three responsibilities and projection gate, then preserve human authority, privacy, and repository independence."

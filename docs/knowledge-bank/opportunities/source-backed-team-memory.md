@@ -5,7 +5,7 @@ kind: opportunity
 status: governed-open
 visibility: summary-only
 sensitivity: high
-last_reviewed: 2026-08-10
+last_reviewed: 2026-08-20
 review_by: 2026-09-10
 canonical_path: docs/knowledge-bank/opportunities/source-backed-team-memory.md
 summary: Public-safe opportunity metadata for a contingent consulting lead without collaborator, company, pricing, or correspondence disclosure.
@@ -25,14 +25,14 @@ discovery_terms:
   - human-reviewed AI
   - knowledge-friction mapping
 confirmed_facts:
-  - A protected June 2026 source family records a contingent paid consulting discussion about team knowledge, decision context, and onboarding.
-  - Jamie prepared a bounded discovery and prototype proposal after the discussion.
+  - A protected June 2026 source family records a contingent paid consulting discussion about preserving useful ideas, decision context, product reasoning, and onboarding knowledge through human-correctable practices.
+  - Jamie prepared a focused discovery and prototype proposal after the discussion.
   - The protected review did not recover acceptance, rejection, budget approval, a contract, or completed work.
 inferences:
   - The discussion is best classified as a genuine but unclosed prospective consulting opportunity.
 unknowns:
   - Current budget authority, organizational priority, and timing.
-  - Whether the proposal received a substantive response outside the bounded source review.
+  - Whether the proposal received a substantive response outside the focused source review.
   - Whether any engagement will be scoped, accepted, contracted, or performed.
 hard_screens:
   - id: screen.protected-memory.budget-authority
@@ -53,7 +53,7 @@ role_requirements:
       - capability.technical-operations
     public_evidence:
       - route: /work/technical-operations
-        needle: Jamie is developing a bounded lab method to preserve decision lineage
+        needle: Knowledge Wiki Graph
     status: visible-qualified
     gap_type: none
     next_action: Keep the public method legible without exposing the protected lead.
@@ -69,18 +69,42 @@ role_requirements:
     status: visible-proven
     gap_type: none
     next_action: Preserve the explicit human-review boundary.
-  - id: requirement.protected-memory.bounded-sprint
+  - id: requirement.protected-memory.focused-sprint
     importance: important
     kind: condition
-    text: Begin with one permissioned source surface and a bounded discovery or prototype engagement.
+    text: Begin with one approved source surface and a focused discovery or prototype engagement.
     wiki_evidence:
       - method.source-backed-team-memory
     public_evidence:
       - route: /lab/source-backed-team-memory
-        needle: Discuss a bounded source-backed memory sprint
+        needle: What a First Engagement Tests
     status: visible-qualified
     gap_type: role-context
     next_action: Do not imply that a sprint was accepted, funded, or delivered.
+  - id: requirement.protected-memory.onboarding-context
+    importance: critical
+    kind: capability
+    text: Help new collaborators recover product reasoning and decision context without repeatedly asking the team to reconstruct the past.
+    wiki_evidence:
+      - method.source-backed-team-memory
+    public_evidence:
+      - route: /lab/source-backed-team-memory
+        needle: new collaborators can get up to speed
+    status: visible-qualified
+    gap_type: role-context
+    next_action: Test this outcome in a separately authorized engagement; do not imply external validation.
+  - id: requirement.protected-memory.workflow-fit
+    importance: important
+    kind: capability
+    text: Fit the first memory artifact to a surface the team already knows how to use.
+    wiki_evidence:
+      - method.source-backed-team-memory
+    public_evidence:
+      - route: /lab/source-backed-team-memory
+        needle: The format should fit the team
+    status: visible-qualified
+    gap_type: role-context
+    next_action: Choose the format only after learning the team's actual workflow.
 one_year_success_conditions:
   - A separately authorized engagement produces one useful, reviewable source-to-memory loop without broad ingestion.
   - Team members can correct the record and preserve decision context without treating AI as the authority.
@@ -88,7 +112,7 @@ one_year_risk_conditions:
   - Exploratory advice becomes unpaid implementation or uncontrolled scope.
   - Protected source access expands before confidentiality, IP, privacy, and compensation are agreed.
 interview_questions:
-  - Is there an authorized budget owner and a current bounded use case?
+  - Is there an authorized budget owner and a current focused use case?
   - What source surface would be safe, permissioned, and useful for a first test?
   - Who reviews and corrects the resulting operating memory?
 relations:
@@ -126,7 +150,7 @@ adoption, deployment, completed work, or market validation.
 
 ## Public-safe core
 
-A bounded lab method for source-backed team memory: reviewable,
+A focused lab method for source-backed team memory: reviewable,
 human-correctable, source-linked operating memory for knowledge-heavy teams.
 
 AI drafts. Humans review. The shared record remains inspectable and correctable.

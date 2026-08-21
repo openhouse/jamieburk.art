@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "id": "team-memory-proposal-protected-prospect-2026-08-20",
+  "target": {
+    "route": "/lab/source-backed-team-memory",
+    "url": "https://staging-c.jamieburk.art/lab/source-backed-team-memory",
+    "files": [
+      "apps/www/src/content/lab/source-backed-team-memory.mdx",
+      "apps/www/src/app/lab/source-backed-team-memory/page.tsx"
+    ]
+  },
+  "sourceBoundary": {
+    "recordPath": "docs/knowledge-bank/sources/protected-source-backed-memory-opportunity.md",
+    "visibility": "summary-only",
+    "privateTranscriptInRepository": false,
+    "namedPrivateReaderInRepository": false,
+    "rule": "The committed evaluator receives only a public-safe requirement summary. Raw call text, private company context, pricing, correspondence, and the named private reader binding remain outside the repository."
+  },
+  "scenarioRequirements": [
+    "Preserve useful ideas rather than flattening them into a generic summary.",
+    "Keep decisions, open questions, onboarding context, and product reasoning recoverable.",
+    "Help new collaborators get up to speed without repeatedly asking the team to reconstruct the past.",
+    "Start with one approved non-sensitive, redacted, synthetic, or otherwise authorized source surface.",
+    "Fit the result to a workflow or surface the team already knows how to use.",
+    "Keep the record source-linked, inspectable, human-reviewed, and correctable.",
+    "Avoid broad system access for the first test and end with a continue, revise, or stop decision."
+  ],
+  "deterministicCriteria": [
+    {
+      "id": "one-approved-source",
+      "needle": "one approved source surface"
+    },
+    {
+      "id": "ideas-and-reasoning",
+      "needle": "useful ideas, decisions, open questions, onboarding context, and product reasoning"
+    },
+    {
+      "id": "onboarding",
+      "needle": "new collaborators can get up to speed"
+    },
+    {
+      "id": "human-correction",
+      "needle": "review and correct the result"
+    },
+    {
+      "id": "workflow-fit",
+      "needle": "The format should fit the team"
+    },
+    {
+      "id": "privacy-minimization",
+      "needle": "No broad access to company systems"
+    },
+    {
+      "id": "decision-output",
+      "needle": "continue, revise, or stop"
+    },
+    {
+      "id": "human-authority",
+      "needle": "AI drafts. Humans review."
+    }
+  ],
+  "forbiddenPublicStrings": [
+    "Jonathan Marmor",
+    "June 18 call",
+    "$2,500",
+    "eleven people",
+    "five to ten software engineers",
+    "overlords"
+  ],
+  "evaluator": {
+    "readerIdentity": "protected-prospective-collaborator",
+    "simulatedPublicFigureLens": true,
+    "nonEndorsementBoundary": "This fictionalized analytical lens is not participation, quotation, endorsement, recommendation, or a hiring decision by the named real person.",
+    "access": {
+      "publicPageOnly": true,
+      "repositoryAccess": false,
+      "rawTranscriptAccess": false,
+      "privateCompanyContextAccess": false,
+      "scenarioContext": "public-safe requirements only"
+    },
+    "resultPath": "evals/team-memory-proposal/runs/2026-08-20/fictionalized-protected-prospect.json"
+  },
+  "policy": {
+    "deterministicChecksBeforeLlm": true,
+    "stopOnDeterministicFailure": true,
+    "calibrationStatus": "uncalibrated-advisory-simulation",
+    "reason": "No human-labeled calibration set exists for predicting this real person's decision; the role play is an advisory acceptance test, not evidence of an actual decision."
+  },
+  "acceptanceQuestion": "Based only on this public page as Jamie's proposal, I would hire Jamie for the small paid discovery / prototype engagement described by the protected June 2026 scenario.",
+  "judgeInstructions": [
+    "Read the public page as a proposal, not as proof that an external client has adopted the method.",
+    "Judge whether the proposal understands the scenario requirements, offers a useful and low-risk first engagement, and makes Jamie's contribution concrete.",
+    "Fail if a material requirement is absent, if the first engagement is too large or vague, if AI becomes the authority, or if private context is exposed.",
+    "Return only the required structured output."
+  ],
+  "judgeOutputSchema": {
+    "critique": "string",
+    "result": "pass | fail"
+  }
+}

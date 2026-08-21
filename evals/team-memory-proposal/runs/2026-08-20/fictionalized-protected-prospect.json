@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "surfaceDigest": "d3f6abcf8fd1fac0c117511937d45b2206e9efe3095d8d044401c89b6f7ace1e",
+  "evaluatedAt": "2026-08-20",
+  "readerIdentity": "protected-prospective-collaborator",
+  "simulatedPublicFigureLens": true,
+  "nonEndorsementBoundary": "This fictionalized analytical lens is not participation, quotation, endorsement, recommendation, or a hiring decision by the named real person.",
+  "calibrationStatus": "uncalibrated-advisory-simulation",
+  "inputScope": {
+    "route": "/lab/source-backed-team-memory",
+    "publicPageOnly": true,
+    "repositoryAccess": false,
+    "rawTranscriptAccess": false,
+    "privateCompanyContextAccess": false,
+    "scenarioContext": "public-safe requirements only"
+  },
+  "acceptanceQuestion": "Based only on this public page as Jamie's proposal, I would hire Jamie for the small paid discovery / prototype engagement described by the protected June 2026 scenario.",
+  "critique": "Pass. The page recognizes that the problem is not simply a shortage of notes: useful ideas, decision rationale, open questions, onboarding context, and product reasoning need to remain recoverable. It proposes a credible low-risk first engagement using one approved source, a team-familiar format, source linkage, human correction, and an explicit continue, revise, or stop decision. Before authorizing the work, I would still want one working session to choose the source, reviewers, success signal, and commercial terms; those are appropriate scoping questions rather than reasons to reject the proposal.",
+  "strengths": [
+    "The first engagement is small enough to learn before committing to a platform or broad ingestion.",
+    "The proposal treats team culture, onboarding, source context, and human correction as product requirements rather than afterthoughts.",
+    "The continue, revise, or stop decision makes the output useful even if the test advises against further implementation."
+  ],
+  "risks": [
+    "The page demonstrates a mature method and a synthetic correction example, but not an externally validated client outcome.",
+    "The exact source surface, reviewers, workflow format, success signal, confidentiality terms, and compensation still require mutual agreement."
+  ],
+  "result": "pass",
+  "wouldHire": true
+}
