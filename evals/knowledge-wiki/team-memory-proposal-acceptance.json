@@ -1,0 +1,74 @@
+{
+  "id": "team-memory-proposal-reader-acceptance-2026-08-21",
+  "schemaVersion": 1,
+  "publicOrigin": "https://staging-b.jamieburk.art",
+  "pagePath": "/lab/source-backed-team-memory",
+  "pageSourcePath": "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
+  "pageCopyPath": "apps/www/src/content/lab/source-backed-team-memory.mdx",
+  "currentRunPath": "evals/knowledge-wiki/runs/2026-08-21-team-memory-proposal-reader.json",
+  "reader": {
+    "id": "reader.protected-team-memory-prospect",
+    "runtimeIdentityRequired": true,
+    "identityMayBeCommitted": false,
+    "actualPersonParticipated": false,
+    "lens": "A publicly named prospective collaborator considering a focused paid team-knowledge discovery or prototype engagement."
+  },
+  "publicSafeScenario": "A small, fast-growing creative and technical product team needs to clarify product rationale, strengthen foundational documentation habits, onboard new engineers quickly, and preserve important thinking across meetings and working documents. Its product depends on user communities and cultural judgment. A potential sponsor is deciding whether Jamie can lead a focused knowledge-practice pilot that improves thought and execution without imposing a heavy parallel bureaucracy.",
+  "acceptanceQuestion": "Based only on the public Knowledge Wiki Graphs page, would this fictionalized reader lens hire Jamie for a focused paid discovery or prototype sprint in this scenario?",
+  "passDecision": "hire-for-focused-pilot",
+  "failDecision": "do-not-hire-yet",
+  "deterministicStages": [
+    "public-surface-availability",
+    "scenario-to-page-coverage",
+    "privacy-and-truth-boundaries",
+    "model-reader-evaluation"
+  ],
+  "requiredPublicSignals": [
+    {
+      "id": "felt-team-pressure",
+      "patterns": ["fast-growing product and engineering team", "one practical question", "new teammate"]
+    },
+    {
+      "id": "focused-start",
+      "patterns": ["focused discovery or prototype sprint", "small source set", "approved"]
+    },
+    {
+      "id": "operating-deliverables",
+      "patterns": ["start-here page", "decision record", "open-question list", "access notes"]
+    },
+    {
+      "id": "onboarding-and-decision-memory",
+      "patterns": ["product rationale", "onboarding context", "what remains open"]
+    },
+    {
+      "id": "human-correction-and-protection",
+      "patterns": ["correct the record", "protected", "human review"]
+    },
+    {
+      "id": "observable-pilot-decision",
+      "patterns": ["find an answer", "trace", "continue, revise, or stop"]
+    },
+    {
+      "id": "maturity-boundary",
+      "patterns": ["not a claim", "client engagement", "not a finished"]
+    }
+  ],
+  "modelGate": {
+    "promptVersion": "team-memory-proposal-reader-v1",
+    "publicOnly": true,
+    "actualPersonParticipated": false,
+    "privateTranscriptAvailableToModel": false,
+    "maximumCallsPerCandidate": 1,
+    "requiredVerdict": "pass",
+    "requiredDecision": "hire-for-focused-pilot",
+    "constructiveCritiqueRequired": true,
+    "calibrationStatus": "uncalibrated-advisory-reader-simulation",
+    "humanMeaning": "A pass is a fictionalized public-page model judgment about whether to begin a focused paid pilot. It is not the named person's view, approval, endorsement, budget authorization, contract, or promise of work."
+  },
+  "protectedTokensForbiddenInCommittedEval": [
+    "private transcript",
+    "private company",
+    "local source path",
+    "runtime reader identity"
+  ]
+}

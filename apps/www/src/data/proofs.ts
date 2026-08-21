@@ -573,7 +573,7 @@ export const proofClaims: ProofClaim[] = [
     shortWording:
       "Jamie is developing a focused method for source-backed team memory",
     detailedPublicWording:
-      "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
+      "The method begins with one concrete knowledge friction and a small approved source set, then separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
     sourceBasis: "Public-safe lab materials and proposal-derived method summary.",
     guardrail:
       "Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.",
@@ -591,7 +591,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "lab"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["source-backed-memory", "documentation-architecture", "human-review"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-08-21"
   },
   {
     id: "technical-operations-operating-backbone",

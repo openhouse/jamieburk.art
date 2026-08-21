@@ -67,3 +67,21 @@ The method helps produce [Technical Operations](../capabilities/technical-operat
 evidence, but an internal pass does not substitute for collaborator review or
 external outcomes. Access to a source is not evidence for every possible claim,
 and evidence is not publication permission.
+
+## Focused pilot pattern
+
+The protected source review sharpened the first use case: help a growing team
+preserve product rationale, decision context, open questions, and onboarding
+knowledge without imposing a heavy parallel documentation system.
+
+1. Select one recurring knowledge friction.
+2. Begin with a small source set the team has explicitly approved.
+3. Return a start-here page, decision record, open questions, provenance, and
+   access notes in forms that fit existing work.
+4. Ask a teammate to find an answer, trace it, correct it, and identify what
+   remains open or protected.
+5. Continue only if the handoff reduces context loss and helps another person
+   understand or continue the work.
+
+These are proposed acceptance conditions for a future pilot. They are not
+evidence of a contract, client adoption, deployment, or outcome.

@@ -47,6 +47,25 @@ export default function SourceBackedTeamMemoryPage() {
     }
   ];
 
+  const pilotSteps = [
+    {
+      label: "Find the knowledge friction",
+      text: "Choose one recurring place where product rationale, decisions, open questions, or onboarding context is being lost."
+    },
+    {
+      label: "Start from approved material",
+      text: "Use a small source set the team has deliberately cleared: for example, one meeting, one product brief, and one onboarding note."
+    },
+    {
+      label: "Return usable operating memory",
+      text: "Produce a start-here page, decision record, open-question list, source links, and access notes that fit the team's existing work."
+    },
+    {
+      label: "Test the handoff",
+      text: "Ask a teammate to find an answer, trace why it is there, correct it, and recognize what remains open or protected."
+    }
+  ];
+
   return (
     <article className="jb-frame py-12">
       <div className="jb-reading">
@@ -68,6 +87,7 @@ export default function SourceBackedTeamMemoryPage() {
             alt={collectiveMapPhoto.alt}
             className="h-auto w-full"
             height={collectiveMapPhoto.height}
+            preload
             sizes="(min-width: 1024px) 768px, 100vw"
             src={collectiveMapPhoto.src}
             width={collectiveMapPhoto.width}
@@ -114,6 +134,50 @@ export default function SourceBackedTeamMemoryPage() {
             The portfolio is a selective projection from those responsibilities,
             composed for a particular audience and released through human review.
           </p>
+        </section>
+        <section className="mt-12 border-b border-jb-ink/12 pb-12">
+          <h2 className="max-w-3xl text-3xl font-semibold leading-tight text-jb-ink">
+            Start with one team pressure people can feel
+          </h2>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-jb-ink/76">
+            For a fast-growing product and engineering team, the first proposal
+            is a focused discovery or prototype sprint—not a company-wide
+            knowledge platform. Begin with one practical question: can a new
+            teammate understand what the team is building, why current choices
+            were made, and what remains open without reconstructing that history
+            from meetings and private messages?
+          </p>
+          <ol className="mt-8 divide-y divide-jb-ink/12 border-y border-jb-ink/12">
+            {pilotSteps.map((item, index) => (
+              <li
+                className="grid gap-3 py-6 md:grid-cols-[3rem_0.38fr_0.62fr] md:items-start md:gap-5"
+                key={item.label}
+              >
+                <span className="font-semibold tabular-nums text-jb-ochre">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3 className="text-lg font-semibold text-jb-blue">{item.label}</h3>
+                <p className="leading-7 text-jb-ink/74">{item.text}</p>
+              </li>
+            ))}
+          </ol>
+          <div className="mt-8 grid gap-5 md:grid-cols-[0.38fr_0.62fr]">
+            <h3 className="text-2xl font-semibold text-jb-ink">
+              What makes the pilot worth continuing
+            </h3>
+            <div>
+              <ul className="list-disc space-y-3 pl-5 text-jb-ink/76 marker:text-jb-ochre">
+                <li>A newcomer can find the current product rationale and open questions.</li>
+                <li>A decision can be traced to its source and reviewed in context.</li>
+                <li>A teammate can correct the record or keep sensitive material protected.</li>
+                <li>The team can make a clear continue, revise, or stop decision.</li>
+              </ul>
+              <p className="mt-5 text-sm leading-6 text-jb-ink/64">
+                These are proposed acceptance conditions, not a claim that a
+                client engagement or company-wide implementation has occurred.
+              </p>
+            </div>
+          </div>
         </section>
         <div className="mt-10 space-y-6">
           <SourceBackedMemory />

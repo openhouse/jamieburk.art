@@ -1,0 +1,17 @@
+{
+  "id": "team-memory-proposal-reader-not-run-2026-08-21",
+  "schemaVersion": 1,
+  "status": "not-run",
+  "evaluatedAt": null,
+  "publicOrigin": "https://staging-b.jamieburk.art",
+  "pagePath": "/lab/source-backed-team-memory",
+  "readerId": "reader.protected-team-memory-prospect",
+  "actualPersonParticipated": false,
+  "pageSourceSha256": null,
+  "publicPageTextSha256": null,
+  "scenarioSha256": null,
+  "promptSha256": null,
+  "promptVersion": "team-memory-proposal-reader-v1",
+  "result": null,
+  "boundary": "The public-page model evaluation has not run for this candidate. Deterministic checks cannot substitute for the explicitly fictionalized reader simulation, and no real person has participated or endorsed Jamie."
+}

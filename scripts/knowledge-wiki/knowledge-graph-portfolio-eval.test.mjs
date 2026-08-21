@@ -110,6 +110,28 @@ expectFailure(
 );
 
 expectFailure(
+  "the proposal cannot lose its concrete team use scene",
+  (candidate) => {
+    candidate.labPage = candidate.labPage.replace(
+      "Start with one team pressure people can feel",
+      "Method details"
+    );
+  },
+  /use scene and focused first engagement/
+);
+
+expectFailure(
+  "the proposed pilot cannot be presented as completed client work",
+  (candidate) => {
+    candidate.labPage = candidate.labPage.replace(
+      "These are proposed acceptance conditions, not a claim that a",
+      "These acceptance conditions prove that a"
+    );
+  },
+  /distinguish proposed acceptance conditions/
+);
+
+expectFailure(
   "private photo locators cannot enter the public-safe records",
   (candidate) => {
     candidate.photoAsset += "\nsource: /Volumes/private/photo.jpg\n";

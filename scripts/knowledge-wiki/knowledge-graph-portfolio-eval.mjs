@@ -186,6 +186,32 @@ export function evaluateKnowledgeGraphPortfolio(candidate) {
       /not a finished platform|Not a finished\s+production/i.test(publicCopy),
     "public copy does not preserve the research-stage boundary"
   );
+  check(
+    candidate.labPage.includes("Start with one team pressure people can feel") &&
+      /fast-growing product and engineering team[\s\S]*focused discovery or prototype sprint/.test(
+        candidate.labPage
+      ) &&
+      /new\s+teammate[\s\S]*why current choices[\s\S]*what remains open/.test(
+        candidate.labPage
+      ),
+    "team-memory proposal does not make the use scene and focused first engagement legible"
+  );
+  check(
+    candidate.labPage.includes("pilotSteps") &&
+      /Find the knowledge friction[\s\S]*Start from approved material[\s\S]*Return usable operating memory[\s\S]*Test the handoff/.test(
+        candidate.labPage
+      ) &&
+      /find an answer[\s\S]*trace[\s\S]*correct[\s\S]*continue, revise, or stop/.test(
+        candidate.labPage
+      ),
+    "team-memory proposal lacks an adoptable source-to-handoff loop or observable continuation decision"
+  );
+  check(
+    /proposed acceptance conditions[\s\S]*not a claim[\s\S]*client engagement/.test(
+      candidate.labPage
+    ),
+    "team-memory proposal does not distinguish proposed acceptance conditions from completed client work"
+  );
 
   check(Boolean(claim), "canonical Knowledge Wiki Graph claim is missing");
   if (claim) {
@@ -223,6 +249,12 @@ export function evaluateKnowledgeGraphPortfolio(candidate) {
       graphResponsibilities: ["Semantic graph", "Evidence graph", "Source-custody graph"]
         .filter((term) => publicCopy.includes(term)).length,
       reviewedSurfaces: claim?.projections?.[0]?.surfaces?.length ?? 0,
+      focusedPilotSignals: [
+        "Find the knowledge friction",
+        "Start from approved material",
+        "Return usable operating memory",
+        "Test the handoff"
+      ].filter((term) => candidate.labPage.includes(term)).length,
       governedCollectiveMap:
         candidate.photoDerivativeSha256 === expectedPhotoSha ? 1 : 0
     }
