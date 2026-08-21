@@ -603,7 +603,7 @@ export const proofClaims: ProofClaim[] = [
     id: "source-backed-team-memory-method",
     status: "careful",
     supportLevel: "moderate",
-    evidenceClass: ["public-safe-archive-summary", "public-repository"],
+    evidenceClass: ["public-safe-archive-summary", "public-source"],
     publicWording:
       "Developing the Knowledge Wiki Graph: a working source-backed team-memory method connecting project meaning, supporting evidence, responsible source custody, evaluations, and human review.",
     shortWording:
