@@ -32,7 +32,11 @@ export function Hero() {
           <p className="mt-6 max-w-2xl text-2xl font-semibold leading-snug text-white sm:text-3xl">
             {site.heroTagline}
           </p>
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-white/84 sm:text-xl">
+          <p className="mt-4 max-w-2xl text-lg leading-7 text-white/84 sm:hidden">
+            I clarify requirements, coordinate implementation, and leave
+            documentation people can use.
+          </p>
+          <p className="mt-5 hidden max-w-2xl text-xl leading-8 text-white/84 sm:block">
             I work with public-facing teams to clarify requirements, build
             workflows and tools, carry context through implementation, and
             leave behind documentation people can use.
@@ -40,9 +44,9 @@ export function Hero() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               className="inline-flex min-h-11 items-center bg-white px-5 py-3 font-semibold text-jb-ink hover:bg-jb-sky"
-              href="/work"
+              href="/work/technical-operations"
             >
-              View selected work
+              See role-fit evidence
             </Link>
             <Link
               className="inline-flex min-h-11 items-center border border-white/70 px-5 py-3 font-semibold text-white hover:bg-white hover:text-jb-ink"

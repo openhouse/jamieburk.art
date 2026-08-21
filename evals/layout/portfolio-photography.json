@@ -1,5 +1,5 @@
 {
-  "id": "portfolio-photography-layout-v7",
+  "id": "portfolio-photography-layout-v8",
   "title": "Human Index photographic portfolio layout",
   "intent": "Photography changes the portfolio's editorial rhythm while remaining public-safe, accessible, and subordinate to human publication authority.",
   "criteria": [
@@ -21,7 +21,7 @@
     {
       "id": "editorial-not-decorative",
       "blocking": true,
-      "criterion": "The East River hero remains unchanged; two restrained field-and-system pairs make implementation legible on the homepage and Fair Rent case study, while About and Colophon remain text-led."
+      "criterion": "The East River hero remains unchanged; two restrained field-and-system pairs make implementation legible on the homepage and Fair Rent case study, while About and Colophon remain text-led. On the homepage, the connective passage follows the selected projects so it synthesizes the work without repeating the opening project image back to back."
     },
     {
       "id": "knowledge-wiki-photographic-metaphor",
@@ -36,7 +36,12 @@
     {
       "id": "hiring-argument-project-sequence",
       "blocking": true,
-      "criterion": "The homepage quick path and seven-project selected-work sequence make one hiring argument for the current OTI product and operations opportunity set: product judgment, current NYC civic delivery, and sustained accountable operations lead the scan; municipal implementation, civic-data translation, recurring participation infrastructure, and polished campaign delivery complete it. Sunday Dinner remains visible, and the covers alternate digital surfaces with field photographs."
+      "criterion": "The six-project homepage sequence makes one hiring argument for the current product, operations, implementation, and civic-technology opportunity set: current NYC civic delivery, sustained accountable operations, and resident-facing product judgment lead the scan; municipal implementation, a community platform operating across 35+ city ecosystems, and recurring participation infrastructure complete it. Sunday Dinner remains visible, while KC Spaces Fund remains available through the complete work index."
+    },
+    {
+      "id": "hiring-reader-attention-budget",
+      "blocking": true,
+      "criterion": "The homepage limits its quick path and proof strip to three high-signal choices each, routes the primary hero action directly to role-fit evidence, retains one field-and-system connective passage, and does not repeat that operating thesis in a second transformation section."
     },
     {
       "id": "truthful-photo-credit",

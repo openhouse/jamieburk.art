@@ -719,9 +719,7 @@ export function selectProofs(surface: ProofSurface): ProofClaim[] {
 export const homepageProofs = [
   "career-operating-structure-14-years",
   "hje-revenue-growth-contribution",
-  "fair-rent-campaign-memory",
-  "wowlist-community-platform",
-  "sunday-dinner-196-participation-infrastructure"
+  "fair-rent-campaign-memory"
 ].map(requireReadyOrCarefulProof);
 
 export const resumeProofHighlights = [
