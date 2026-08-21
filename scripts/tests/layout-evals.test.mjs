@@ -169,3 +169,14 @@ test("tag-shaped controls retain real destinations", () => {
   assert.equal(result.passed, false);
   assert(result.failures.some(({ criterion }) => criterion === "tag-navigation-contract"));
 });
+
+test("homepage capability rows retain portfolio-filter destinations", () => {
+  const path = "apps/www/src/components/CapabilityGrid.tsx";
+  const source = readFileSync(path, "utf8").replace(
+    "/work?tag=${encodeURIComponent(capability.tag)}#work-index",
+    "/work#work-index"
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "tag-navigation-contract"));
+});

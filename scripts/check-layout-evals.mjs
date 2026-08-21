@@ -192,6 +192,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   const caseStudyLayout = readText("apps/www/src/components/CaseStudyLayout.tsx");
   const workIndex = readText("apps/www/src/app/work/page.tsx");
   const tagList = readText("apps/www/src/components/TagList.tsx");
+  const capabilityGrid = readText("apps/www/src/components/CapabilityGrid.tsx");
   const coverCount = [...workCovers.matchAll(/^  (?:"[^"]+"|[a-z]+): \{/gm)].length;
   if (coverCount !== 7 ||
       !workCard.includes('from "@/components/GovernedImage"') ||
@@ -268,13 +269,33 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     );
   }
 
+  const expectedCapabilityTags = [
+    ["Technical project management", "Technical Operations"],
+    ["Product operations", "Product Operations"],
+    ["Knowledge systems & documentation", "Knowledge Systems"],
+    ["Civic technology & open data", "Civic Technology"],
+    ["Web systems & public-facing tools", "Public-Facing Tools"],
+    ["Community systems", "Community Systems"]
+  ];
+  const observedCapabilityTags = [
+    ...capabilityGrid.matchAll(/title: "([^"]+)",\s+tag: "([^"]+)",/g)
+  ].map((match) => [match[1], match[2]]);
+  const availableWorkTags = new Set(
+    [...workData.matchAll(/tags: \[([^\]]+)\]/g)].flatMap((match) =>
+      [...match[1].matchAll(/"([^"]+)"/g)].map((tagMatch) => tagMatch[1])
+    )
+  );
   if (!tagList.includes('from "next/link"') ||
       !tagList.includes("/work?tag=") ||
       !tagList.includes("encodeURIComponent(tag)") ||
       !workIndex.includes("selectedTag") ||
       !workIndex.includes("Clear filter") ||
-      !workIndex.includes('id="work-index"')) {
-    fail("tag-navigation-contract", "Tag-shaped controls must link to a visible, clearable work-index filter state.");
+      !workIndex.includes('id="work-index"') ||
+      !capabilityGrid.includes('from "next/link"') ||
+      !capabilityGrid.includes("/work?tag=${encodeURIComponent(capability.tag)}#work-index") ||
+      JSON.stringify(observedCapabilityTags) !== JSON.stringify(expectedCapabilityTags) ||
+      observedCapabilityTags.some(([, tag]) => !availableWorkTags.has(tag))) {
+    fail("tag-navigation-contract", "Tag-shaped controls and homepage capability rows must link through the canonical tag taxonomy to a visible, clearable work-index filter state.");
   }
 
   for (const route of [
