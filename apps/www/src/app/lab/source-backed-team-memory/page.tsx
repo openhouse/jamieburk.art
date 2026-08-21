@@ -3,6 +3,7 @@ import SourceBackedMemory from "@/content/lab/source-backed-team-memory.mdx";
 import { Cite, Claim, References } from "@/components/citations";
 import { JBButton } from "@/components/JBButton";
 import { MediaImage } from "@/components/MediaImage";
+import { portfolioPhotos } from "@/data/photography";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
@@ -14,6 +15,8 @@ export const metadata: Metadata = createMetadata({
 });
 
 export default function SourceBackedTeamMemoryPage() {
+  const collectiveSynthesisPhoto =
+    portfolioPhotos.teamKnowledgeCollectiveSynthesis;
   const workedExample = [
     {
       label: "Known",
@@ -51,6 +54,23 @@ export default function SourceBackedTeamMemoryPage() {
             private archive browser.
           </p>
         </div>
+        <figure className="mt-10 overflow-hidden rounded-lg border border-jb-ink/12 bg-jb-paper">
+          <MediaImage
+            alt={collectiveSynthesisPhoto.alt}
+            className="aspect-[3/2] h-auto w-full object-cover"
+            height={collectiveSynthesisPhoto.height}
+            priority
+            sizes="(min-width: 1024px) 768px, 100vw"
+            src={collectiveSynthesisPhoto.src}
+            width={collectiveSynthesisPhoto.width}
+          />
+          <figcaption className="border-t border-jb-ink/10 p-4 text-sm leading-6 text-jb-ink/76">
+            {collectiveSynthesisPhoto.caption}{" "}
+            <span className="whitespace-nowrap">
+              {collectiveSynthesisPhoto.credit}
+            </span>
+          </figcaption>
+        </figure>
         <div className="mt-10 space-y-6">
           <SourceBackedMemory />
         </div>

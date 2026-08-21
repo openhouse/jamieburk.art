@@ -133,8 +133,41 @@ export function evaluateMediaDelivery(root = defaultRoot, overrides = {}) {
       .map((match) => match[1])
       .filter((source) => !source.startsWith("/images/social/"))
   );
+  const governedFirstPartySources = new Set();
+  for (const localAsset of manifest.localOnly ?? []) {
+    if (localAsset.deliveryState !== "awaiting-signed-cdn-sync") continue;
+    const sourcePath = path.join(root, "apps/www/public", localAsset.source ?? "");
+    if (
+      protectedPattern.test(JSON.stringify(localAsset)) ||
+      !/^\/(?:images|artifacts)\/[a-z0-9/.-]+$/i.test(localAsset.source ?? "") ||
+      !authorityCorpus.includes(localAsset.governanceId ?? "") ||
+      !/signed Cloudinary upload/i.test(localAsset.reason ?? "") ||
+      !existsSync(sourcePath)
+    ) {
+      fail(
+        "public-safe-upload-boundary",
+        `Invalid first-party delivery binding: ${localAsset.source ?? "unknown"}`
+      );
+      continue;
+    }
+    const bytes = readFileSync(sourcePath);
+    const digest = createHash("sha256").update(bytes).digest("hex");
+    if (
+      digest !== localAsset.sourceSha256 ||
+      bytes.length !== localAsset.bytes ||
+      /EXIF|Exif|GPSLatitude|GPSLongitude|<x:xmpmeta/i.test(
+        bytes.toString("latin1")
+      )
+    ) {
+      fail(
+        "repository-source-authority",
+        `First-party source drift: ${localAsset.source}`
+      );
+    }
+    governedFirstPartySources.add(localAsset.source);
+  }
   for (const source of visibleRasterSources) {
-    if (!sources.has(source)) {
+    if (!sources.has(source) && !governedFirstPartySources.has(source)) {
       fail("repository-source-authority", `Visible raster lacks a delivery binding: ${source}`);
     }
   }

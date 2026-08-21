@@ -6,7 +6,7 @@ source_kind: first-party-publication-authorization
 status: maintained
 visibility: summary-only
 sensitivity: moderate
-last_reviewed: 2026-08-14
+last_reviewed: 2026-08-20
 review_by: 2027-02-14
 canonical_path: docs/knowledge-bank/sources/permissions/jamie-portfolio-album-2026-08-13.md
 summary: Public-safe capsule recording Jamie Burkart's destination-bound authorization to select and publish photographs from the designated Apple Photos portfolio album without exposing album identifiers or private metadata.
@@ -28,6 +28,7 @@ authorization:
     - asset.photo.nycac.market-hotel-town-hall.2017.001
     - asset.photo.sunday-dinner.shared-map.2013.001
     - asset.photo.kc-town-hall.roof-work.2019.001
+    - asset.photo.nycac.collective-synthesis.2017.001
   required_credit: Known photographers are visibly credited; unresolved photographer identity remains explicit.
   excludes:
     - Apple Photos identifiers
@@ -58,6 +59,9 @@ relations:
   - type: related_to
     target: asset.photo.kc-town-hall.roof-work.2019.001
     href: ../../assets/photographs/kc-town-hall-roof-work-2019.md
+  - type: related_to
+    target: asset.photo.nycac.collective-synthesis.2017.001
+    href: ../../assets/photographs/nycac-collective-synthesis-2017.md
 ---
 
 # Jamie Burkart portfolio-album publication authorization
@@ -66,6 +70,7 @@ relations:
 - [x] Jamie authorizes editorial selection, metadata-stripped derivatives, responsive crops, public Git, and staging review for that destination.
 - [x] Jamie specifically asks the portfolio composition to consider the Shoestring Press facilitation frame and the Market Hotel banner frame.
 - [x] Jamie asks every project to receive an excellent, truthful cover visual and authorizes the curated Sunday Dinner and KC Town Hall derivatives for public Git and staging in this portfolio.
+- [x] Jamie authorizes selection of a photograph from the exact source set to represent the Knowledge Wiki Graph project and approves its use on the portfolio site.
 - [x] The existing East River homepage hero remains unchanged.
 - [x] Known photographers remain visibly credited.
 - [x] Album identifiers, People tags, face associations, geolocation, original filenames, and raw metadata remain private.

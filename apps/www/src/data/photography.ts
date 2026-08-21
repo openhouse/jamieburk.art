@@ -2,7 +2,8 @@ export type PortfolioPhoto = {
   id:
     | "east-river"
     | "sunday-dinner-shared-map"
-    | "kc-town-hall-roof-work";
+    | "kc-town-hall-roof-work"
+    | "team-knowledge-collective-synthesis";
   src: string;
   width: number;
   height: number;
@@ -20,6 +21,7 @@ export type PortfolioPhoto = {
     | "social-card"
     | "196-sunday-dinner"
     | "kc-town-hall"
+    | "team-knowledge-lab"
     | "work-index"
   )[];
   publicationStatus: "jamie-authorized";
@@ -128,6 +130,39 @@ export const portfolioPhotos = {
     },
     publicUseBoundary:
       "Jamie authorized this exact portfolio occurrence from the designated portfolio album. KC Town Hall receives the public courtesy credit; the image documents field work but does not establish a trade credential, ownership, completed scope, outcome, or sole authorship."
+  },
+  teamKnowledgeCollectiveSynthesis: {
+    id: "team-knowledge-collective-synthesis",
+    src: "/images/field-notes/team-knowledge-collective-synthesis.webp",
+    width: 2400,
+    height: 1600,
+    alt: "Dozens of multicolored handwritten cards arranged in loose clusters across a wooden floor, with people seated just outside the frame.",
+    caption:
+      "A shared field of handwritten cards from an NYC Artist Coalition steering-group session, February 2017.",
+    credit: "Photo courtesy of NYC Artist Coalition.",
+    wikiId: "asset.photo.nycac.collective-synthesis.2017.001",
+    derivativeId: "derivative.photo.nycac.collective-synthesis.portfolio.v1",
+    placementIds: [
+      "projection.photo.team-knowledge.collective-synthesis"
+    ],
+    captionAssertionIds: [
+      "statement.photo.collective-synthesis.context.v1",
+      "statement.photo.collective-synthesis.capture-date.v1"
+    ],
+    creditAssertionIds: [
+      "statement.photo.collective-synthesis.project-credit.v1"
+    ],
+    knowledgeStatus: "bound",
+    placements: ["team-knowledge-lab"],
+    publicationStatus: "jamie-authorized",
+    releaseState: {
+      publicGit: "approved",
+      staging: "approved",
+      production: "open",
+      indexing: "open"
+    },
+    publicUseBoundary:
+      "Jamie authorized this exact portfolio occurrence from the designated portfolio album. NYC Artist Coalition receives the public courtesy credit. The photograph shows collective language being arranged into a shared working field; it does not establish individual authorship, exact remarks, participant endorsement, project outcomes, or sole causation."
   }
 } as const satisfies Record<string, PortfolioPhoto>;
 

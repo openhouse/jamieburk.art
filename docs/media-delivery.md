@@ -25,6 +25,13 @@ version. `MediaImage` uses that binding only when
 served directly. The global Next.js loader creates responsive CDN URLs without
 the Dokku process performing runtime image work.
 
+An approved derivative may remain first-party while it awaits a signed CDN
+sync only when `localOnly` records its exact source path, SHA-256 digest, byte
+length, governance record, delivery state, and reason. The media-delivery eval
+fails if any of those values drift. Move the derivative into the Cloudinary
+asset list only after the signed upload returns an immutable version; never
+invent that version or treat an unsigned browser upload as synchronization.
+
 Run a signed, deterministic synchronization from the repository root:
 
 ```sh

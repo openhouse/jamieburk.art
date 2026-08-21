@@ -45,6 +45,22 @@ test("a source checksum drift fails the repository-authority gate", async () => 
   assert(result.failures.some(({ criterion }) => criterion === "repository-source-authority"));
 });
 
+test("a first-party raster awaiting signed CDN sync remains checksum governed", async () => {
+  const { evaluateMediaDelivery } = await loadEvaluator();
+  const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
+  const localAsset = manifest.localOnly.find(
+    ({ source }) =>
+      source === "/images/field-notes/team-knowledge-collective-synthesis.webp"
+  );
+  assert.ok(localAsset, "The temporary first-party delivery binding is missing.");
+  localAsset.sourceSha256 = "0".repeat(64);
+  const result = evaluateMediaDelivery(repoRoot, {
+    [manifestPath]: `${JSON.stringify(manifest, null, 2)}\n`
+  });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "repository-source-authority"));
+});
+
 test("an unknown governance identifier fails the repository-authority gate", async () => {
   const { evaluateMediaDelivery } = await loadEvaluator();
   const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));

@@ -24,6 +24,12 @@ relations:
   - type: related_to
     target: opportunity.protected.source-backed-memory-consulting.2026
     href: ../opportunities/source-backed-team-memory.md
+  - type: related_to
+    target: asset.photo.nycac.collective-synthesis.2017.001
+    href: ../assets/photographs/nycac-collective-synthesis-2017.md
+  - type: projected_to
+    target: projection.photo.team-knowledge.collective-synthesis
+    href: ../projections/photography/team-knowledge-collective-synthesis.md
 ---
 
 # Knowledge Wiki Graph / Source-Backed Team Memory
@@ -45,6 +51,11 @@ observation, claim, evidence, correction, projection, and protected absence.
 
 Audience-specific projection is a separate controlled output. A claim can be
 well supported and still remain held from a public surface.
+
+The portfolio's [collective-synthesis photograph occurrence](../projections/photography/team-knowledge-collective-synthesis.md)
+grounds this method in a real team artifact: existing language and relationships
+made visible together, without treating the artifact as the software or the work
+of one person.
 
 ## Repository pattern
 

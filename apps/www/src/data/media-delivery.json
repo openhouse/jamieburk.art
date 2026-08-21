@@ -353,6 +353,14 @@
   ],
   "localOnly": [
     {
+      "source": "/images/field-notes/team-knowledge-collective-synthesis.webp",
+      "sourceSha256": "27122af411317a4ba0464b69f1bc6eab9aa955a0074942527e9cc4c70cfcb9d5",
+      "bytes": 579542,
+      "governanceId": "asset.photo.nycac.collective-synthesis.2017.001",
+      "deliveryState": "awaiting-signed-cdn-sync",
+      "reason": "The approved metadata-stripped derivative remains first-party until a signed Cloudinary upload returns its immutable version; the repository copy and checksum remain authoritative."
+    },
+    {
       "source": "/images/social/jamie-east-river-og-source.jpg",
       "reason": "The Open Graph route uses this bounded source to render the deterministic 1200 by 630 social card; the generated social image remains first-party."
     },

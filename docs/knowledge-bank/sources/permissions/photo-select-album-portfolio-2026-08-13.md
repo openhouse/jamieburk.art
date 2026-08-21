@@ -6,7 +6,7 @@ source_kind: direct-human-permission-summary
 status: maintained
 visibility: summary-only
 sensitivity: moderate
-last_reviewed: 2026-08-13
+last_reviewed: 2026-08-20
 review_by: 2027-02-13
 canonical_path: docs/knowledge-bank/sources/permissions/photo-select-album-portfolio-2026-08-13.md
 summary: Public-safe capsule recording Jamie Burkart's direct authorization to publish members of the exact Apple Photos content set underlying the August 2026 photo-select job on his professional portfolio.
@@ -35,6 +35,9 @@ relations:
   - type: related_to
     target: asset.photo.nycac.market-hotel-town-hall.2017.001
     href: ../../assets/photographs/nycac-market-hotel-town-hall-2017.md
+  - type: related_to
+    target: asset.photo.nycac.collective-synthesis.2017.001
+    href: ../../assets/photographs/nycac-collective-synthesis-2017.md
 ---
 
 # Photo-select source-album portfolio publication authorization
@@ -49,6 +52,7 @@ content set. It does not infer photographer identity, authorize an inaccurate
 caption, make every member an editorial choice, transfer rights to another
 destination, or approve a future production commit automatically.
 
-The first selected occurrences are the Shoestring Press facilitation scene and
-the Save NYC Spaces town-hall scene at Market Hotel. Their exact derivatives,
-captions, credits, and placements are recorded separately.
+Selected occurrences include the Shoestring Press facilitation scene, the Save
+NYC Spaces town-hall scene at Market Hotel, and the collective-synthesis field
+used by the team-memory lab entry. Their exact derivatives, captions, credits,
+and placements are recorded separately.
