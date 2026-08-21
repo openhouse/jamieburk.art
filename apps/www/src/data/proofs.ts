@@ -368,11 +368,11 @@ export const proofClaims: ProofClaim[] = [
       "jamie-review-confirmation"
     ],
     publicWording:
-      "Co-founded, co-built, and operated WOW List, a natural-language community-calendar platform for DIY arts and music organizers. A July 2017 production snapshot records 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts.",
+      "Co-founded, co-built, and operated WOW List, a natural-language community-calendar platform across 35 city ecosystems, supporting local organizers who used it to run calendars, websites, and email lists for their own scenes.",
     shortWording:
       "Jamie co-founded and co-built WOW List as a natural-language community platform",
     detailedPublicWording:
-      "Jamie and Richard Caceres co-built WOW List around a deliberately light product decision: collaboratively editable natural-language event text, followable keyword communities, weekly digest emails, embeddable calendars, and low-cost deployment for local organizers.",
+      "Jamie and Richard Caceres co-built WOW List around a deliberately light product decision: collaboratively editable natural-language event text, followable keyword communities, weekly digest emails, embeddable calendars, and low-cost deployment that local organizers used across 35 city ecosystems.",
     sourceBasis:
       "Approved resume language, Jamie's public-safe first-person product-design account, public-safe aggregate historical summary, complete recovered public-account census, and public organizer-support records.",
     guardrail:

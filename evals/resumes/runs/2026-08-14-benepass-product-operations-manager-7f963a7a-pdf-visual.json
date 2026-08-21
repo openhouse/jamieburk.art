@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.benepass.product-operations-manager.7f963a7a.pdf-visual",
-  "inspectedAt": "2026-08-20T16:19:26-04:00",
+  "inspectedAt": "2026-08-21T01:04:31.766Z",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy for this opportunity",
     "revisionUnchangedAfterExport": true,
@@ -9,12 +9,12 @@
   },
   "markdown": {
     "path": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.md",
-    "sha256": "ee454d653a00c7e88cfaa18639a4dd6ed4146f5c1b83765e430a695a5e338d02"
+    "sha256": "7072b4405d6f470b3f08b6f8c5f796a8d8ed4bd85d8711e4f93f2608094cc1ce"
   },
   "pdf": {
     "path": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.pdf",
-    "sha256": "87229fc9b4526a31f108b2a8c82b4e5bb1b318ede94c98b2d6ecd0c6c488bfbf",
-    "bytes": 85958,
+    "sha256": "f034d4d12d235f0bd332d1aa86e000b5fd4fc7f5b28dcbd40bc1a5ce331a6878",
+    "bytes": 85677,
     "pages": 2,
     "pageSize": "US Letter"
   },

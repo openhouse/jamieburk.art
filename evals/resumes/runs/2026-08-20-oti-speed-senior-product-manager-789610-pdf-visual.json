@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.nyc-oti.speed-senior-product-manager.789610.pdf-visual",
-  "inspectedAt": "2026-08-20T16:19:26-04:00",
+  "inspectedAt": "2026-08-20T20:39:17-04:00",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy for this opportunity",
     "revisionUnchangedAfterExport": true,
@@ -9,12 +9,12 @@
   },
   "markdown": {
     "path": "resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Jamie-Burkart-Resume-NYC-OTI-SPEED-Senior-Product-Manager-789610.md",
-    "sha256": "7662a0085b231ba00f95192537f817330438758fc02af0e3da0d47f12a73d09f"
+    "sha256": "e98fba6217ea7ede5fb587188e6e0b4796ec59a9f3492696c2561dd76c6cfa1d"
   },
   "pdf": {
     "path": "resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Jamie-Burkart-Resume-NYC-OTI-SPEED-Senior-Product-Manager-789610.pdf",
-    "sha256": "d572bc2b9a191b0d0b1ec6046107f171b18953318d0a3b55e3a1a38f8640d80b",
-    "bytes": 94057,
+    "sha256": "4476146f353747e79c798bc598c20db57bd49bac5b9d5f9e341442a9eaf0e86d",
+    "bytes": 94957,
     "pages": 2,
     "pageSize": "US Letter"
   },

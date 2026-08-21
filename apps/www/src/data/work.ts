@@ -504,7 +504,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Natural-language community infrastructure for arts and music organizers",
     summary:
-      "Co-founded, co-built, and operated a natural-language community-calendar platform for DIY arts and music organizers. A July 2017 production snapshot records 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts.",
+      "Co-founded, co-built, and operated a natural-language community-calendar platform across 35 city ecosystems, supporting local organizers who used WOW List to run calendars, websites, and email lists for their own scenes.",
     role: "Co-founder, Product & Community Systems",
     years: "2010s; public return in progress, 2026",
     status: "Short proof page",
@@ -562,8 +562,8 @@ const workItemsInput = [
       "Co-founder product responsibility across implementation, adoption, communication, and stewardship",
       "Django / PostgreSQL / PostGIS and Ember platform",
       "Organizer-facing distribution workflows",
-      "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
-      "35 city-region keys with at least 50 posts in the July 2017 snapshot"
+      "Local organizers used WOW List to run calendars, websites, and email lists",
+      "Activity across 35 city ecosystems in the July 2017 production snapshot"
     ],
     knownOpenProtected: {
       known:

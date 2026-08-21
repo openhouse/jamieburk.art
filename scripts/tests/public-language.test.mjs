@@ -29,7 +29,7 @@ test("the maintained public corpus contains no prohibited standalone terms", asy
   assert.equal(run.result.scannedFiles, result.scannedFiles);
   assert.equal(run.result.prohibitedOccurrences, result.findings.length);
   assert.equal(run.result.renderedPages, 15);
-  assert.equal(run.result.deterministicTestsPassing, 5);
+  assert.equal(run.result.deterministicTestsPassing, 7);
   assert.equal(run.decision, "keep-change");
 });
 
@@ -59,6 +59,44 @@ test("the evaluator rejects hinge metaphors and their common forms", () => {
   );
 });
 
+test("the evaluator keeps WOW List raw scale counts and defensive clauses off public surfaces", () => {
+  const findings = evaluatePublicText({
+    config: {
+      ...config,
+      forbiddenPatterns: [
+        {
+          id: "wowlist-raw-user-count",
+          pattern: "1,846\\s+users"
+        },
+        {
+          id: "wowlist-raw-post-count",
+          pattern: "16,142\\s+posts(?:/events)?"
+        },
+        {
+          id: "wowlist-defensive-activity-clause",
+          pattern: "distinguish\\s+these\\s+activity\\s+counts"
+        },
+        {
+          id: "wowlist-database-key-language",
+          pattern: "city-region\\s+keys"
+        }
+      ]
+    },
+    relativePath: "resumes/2026-08-20/example/Jamie-Burkart-Resume-Example.md",
+    text: "Reached 1,846 users and 16,142 posts/events across 35 city-region keys; distinguish these activity counts from impact."
+  });
+
+  assert.deepEqual(
+    findings.map((finding) => finding.term),
+    [
+      "1,846 users",
+      "16,142 posts/events",
+      "city-region keys",
+      "distinguish these activity counts"
+    ]
+  );
+});
+
 test("the evaluator distinguishes internal state and longer unrelated words", () => {
   const internal = evaluatePublicText({
     config,
@@ -67,6 +105,31 @@ test("the evaluator distinguishes internal state and longer unrelated words", ()
   });
 
   assert.deepEqual(internal, []);
+});
+
+test("the evaluator can inspect public projection files for forbidden patterns without policing internal governance terms", () => {
+  const projectionConfig = {
+    ...config,
+    standaloneTermExemptPaths: [
+      "apps/www/src/data/knowledge-bank/public-registry.json"
+    ],
+    forbiddenPatterns: [
+      {
+        id: "wowlist-raw-user-count",
+        pattern: "1,846\\s+users"
+      }
+    ]
+  };
+  const findings = evaluatePublicText({
+    config: projectionConfig,
+    relativePath: "apps/www/src/data/knowledge-bank/public-registry.json",
+    text: '"guardrail": "bounded evidence",\n"text": "1,846 users"'
+  });
+
+  assert.deepEqual(
+    findings.map((finding) => finding.term),
+    ["1,846 users"]
+  );
 });
 
 test("the rendered gate checks visible copy and metadata but ignores application scripts", () => {

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.public.lifecycle-selected-opportunities.2026-08-20.pdf-visual",
-  "inspectedAt": "2026-08-20T16:19:26-04:00",
+  "inspectedAt": "2026-08-21T01:04:31.766Z",
   "sourceTemplate": {
     "access": "read-only source; the public artifact is an exact copy of the currently selected opportunity-specific resume",
     "revisionUnchangedAfterExport": true,
@@ -9,12 +9,12 @@
   },
   "markdown": {
     "path": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.md",
-    "sha256": "8bcba31995a193add743484e8966734761327a608dcd1a74f7f55ff191822830"
+    "sha256": "49ccbe5ccba8566b6ab397271fecf5cce81f9f595770b13dd1fff5bd16451973"
   },
   "pdf": {
     "path": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
-    "sha256": "01476448408b12433fe2939c3f4065974b5dc527f51b26849105b317c99c1b6b",
-    "bytes": 93778,
+    "sha256": "cd640963820d19578a67992619fd473b4aed3073fdb976d6d6f51bb1b2ff0ae7",
+    "bytes": 93331,
     "pages": 2,
     "pageSize": "US Letter"
   },

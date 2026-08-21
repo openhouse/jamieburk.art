@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.nyc-oti.pit-senior-product-designer.782373.pdf-visual",
-  "inspectedAt": "2026-08-20T16:19:26-04:00",
+  "inspectedAt": "2026-08-21T01:04:31.766Z",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy for this opportunity",
     "revisionUnchangedAfterExport": true,
@@ -9,12 +9,12 @@
   },
   "markdown": {
     "path": "resumes/2026-08-20/nyc-oti-pit-senior-product-designer-782373/Jamie-Burkart-Resume-NYC-OTI-PIT-Senior-Product-Designer-782373.md",
-    "sha256": "61e55159ae54651c371e6766ea3edb35c6586b3450cd34bae78fddd672ab92f6"
+    "sha256": "185d56ffc1e17df80eb69b8d89156e44605cb51c7cd0b6d68dd44b5abd5a6f3a"
   },
   "pdf": {
     "path": "resumes/2026-08-20/nyc-oti-pit-senior-product-designer-782373/Jamie-Burkart-Resume-NYC-OTI-PIT-Senior-Product-Designer-782373.pdf",
-    "sha256": "b7bb07fb392bf01a198796596b361faf157fb902289937742499c61738a46812",
-    "bytes": 94476,
+    "sha256": "78db2c5e75e2c7904cf07eb2aa12f86b46cf7e7c986b1d488c42397c0a1aaa1d",
+    "bytes": 94255,
     "pages": 2,
     "pageSize": "US Letter"
   },

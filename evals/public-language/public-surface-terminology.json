@@ -11,6 +11,28 @@
     "hinges",
     "hinging"
   ],
+  "forbiddenPatterns": [
+    {
+      "id": "wowlist-raw-user-count",
+      "pattern": "1,846\\s+users"
+    },
+    {
+      "id": "wowlist-raw-post-count",
+      "pattern": "16,142\\s+posts(?:/events)?"
+    },
+    {
+      "id": "wowlist-defensive-activity-clause",
+      "pattern": "distinguish\\s+these\\s+activity\\s+counts"
+    },
+    {
+      "id": "wowlist-database-key-language",
+      "pattern": "city-region\\s+keys"
+    }
+  ],
+  "standaloneTermExemptPaths": [
+    "apps/www/src/data/knowledge-bank/public-registry.json",
+    "docs/knowledge-bank/claims.md"
+  ],
   "replacementPrinciple": "Choose the phrase that names the actual idea: well-scoped requirements, focused work, an observed minimum, a specific approved use, a formation point, a decisive test, a consistent principle, or carefully evidenced interaction.",
   "surfaces": [
     {
@@ -36,6 +58,18 @@
     {
       "root": "apps/www/src/data/photography.ts",
       "extensions": [".ts"]
+    },
+    {
+      "root": "apps/www/src/data/knowledge-bank/public-registry.json",
+      "extensions": [".json"]
+    },
+    {
+      "root": "docs/knowledge-bank/claims.md",
+      "extensions": [".md"]
+    },
+    {
+      "root": "docs/knowledge-bank/proofs.md",
+      "extensions": [".md"]
     },
     {
       "root": "resumes",

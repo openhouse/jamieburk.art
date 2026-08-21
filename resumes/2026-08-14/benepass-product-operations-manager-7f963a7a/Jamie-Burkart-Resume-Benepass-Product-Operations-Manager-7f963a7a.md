@@ -32,7 +32,7 @@ New York, NY / Remote | 2009–Present
 New York, NY / Remote | 2015–2020
 
 - Co-founded, co-built, and operated with Richard Caceres a natural-language community-calendar platform, connecting product definition and implementation with organizer onboarding, support, public communication, weekly email, embeds, adoption, and low-cost production operations.
-- Reached a July 2017 production snapshot of 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts. Use these as scale and activity evidence—not retention, revenue, or causal outcome claims.
+- Operated across 35 city ecosystems, supporting local organizers who used WOW List to run community calendars, websites, and email lists for their own scenes.
 - Built repeatable organizer-facing workflows and support materials so distributed maintainers could publish, curate, embed, and circulate local calendars without a centralized editorial bottleneck.
 
 ### [NYC Artist Coalition](https://nycartc.com/) / [FairRentNYC](https://fairrentnyc.nycartc.com/) — Co-Founder, Civic Systems & Coalition Operations Lead

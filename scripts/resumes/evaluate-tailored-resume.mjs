@@ -161,9 +161,12 @@ export function evaluateResume(resumeText, sourcePath = rubric.resumePath) {
         /Richard Caceres/i.test(plainText) &&
         /collective credit/i.test(plainText) &&
         /later transitioned the project to a mission-aligned organization/i.test(plainText) &&
-        /distinguish these activity counts/i.test(plainText) &&
+        /across 35 city ecosystems/i.test(plainText) &&
+        /local organizers/i.test(plainText) &&
+        /community calendars, websites, and email lists/i.test(plainText) &&
+        !/1,846\s+users|16,142\s+posts(?:\/events)?|distinguish these activity counts|city-region keys/i.test(plainText) &&
         !/(?:guaranteed|solely created|single-handedly|caused 2x|WCAG compliant|Section 508 compliant)/i.test(plainText),
-      detail: "Preserves co-builder credit, metric boundaries, the project transition, and anti-overclaim language."
+      detail: "Preserves co-builder credit and the project transition while making the 35-city organizer ecosystem legible without public raw counts or defensive clauses."
     }
   ];
 

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.nyc-oti.product-manager.784450.pdf-visual",
-  "inspectedAt": "2026-08-20T16:19:26-04:00",
+  "inspectedAt": "2026-08-21T01:04:31.766Z",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy for this opportunity",
     "revisionUnchangedAfterExport": true,
@@ -9,12 +9,12 @@
   },
   "markdown": {
     "path": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.md",
-    "sha256": "5672c871c0b71fc44816941cc17f08d81d9af88177c4ce15e81369ca95ffd1ea"
+    "sha256": "e0e52ee0a27b062eb04aa0fb698b323710104e76dac064ec6caeec14fc6f4486"
   },
   "pdf": {
     "path": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.pdf",
-    "sha256": "9690c9a1e20842676f10f057c05fb8bb4e742283012e45c1c38751ba0a7b6e8a",
-    "bytes": 93940,
+    "sha256": "09f78cc051a774b479c67820851a0cfe1df46f900ba5bde89c2adcdfb67efd69",
+    "bytes": 93417,
     "pages": 2,
     "pageSize": "US Letter"
   },

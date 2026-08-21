@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.codepath.engineering-project-manager.5160542007.pdf-visual",
-  "inspectedAt": "2026-08-20T16:19:26-04:00",
+  "inspectedAt": "2026-08-21T01:04:31.766Z",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy for this opportunity",
     "revisionUnchangedAfterExport": true,
@@ -9,12 +9,12 @@
   },
   "markdown": {
     "path": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.md",
-    "sha256": "2ba31a951c8d7563b5f1ab6e847cd6c4a4b9aa1ec91e5bba68cd10e3e4b695cd"
+    "sha256": "dcf01669ec26fad8448e1b31b5ed7890bdf5c28e1e93d1eb1e147fa5fe4c892a"
   },
   "pdf": {
     "path": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.pdf",
-    "sha256": "d535baedac87945daa905f163b9fd9de6cf036871fa81e48ffcc026eea676f17",
-    "bytes": 84849,
+    "sha256": "7d0b13d241fb29563b58ee5c6f69f0627cba01d9819ef5ee621cf63480f79aa0",
+    "bytes": 84521,
     "pages": 2,
     "pageSize": "US Letter"
   },

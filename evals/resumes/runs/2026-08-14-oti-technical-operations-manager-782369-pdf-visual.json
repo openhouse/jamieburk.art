@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.nyc-oti.technical-operations-manager.782369.pdf-visual",
-  "inspectedAt": "2026-08-20T16:19:26-04:00",
+  "inspectedAt": "2026-08-21T01:04:31.766Z",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy for this opportunity",
     "revisionUnchangedAfterExport": true,
@@ -9,12 +9,12 @@
   },
   "markdown": {
     "path": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.md",
-    "sha256": "c5fa91a924d24cc16b7b84c58795ebd55583e13c8a9d3f7575614c23981a1307"
+    "sha256": "aaba8bb6016b285ecd316dfe2efec24773b09243d35c150b55d5879dbbed39a0"
   },
   "pdf": {
     "path": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.pdf",
-    "sha256": "1ecc812fc6c66741c21680ab0141f4959f245f23f20f1923a2a3f511c152bd3b",
-    "bytes": 88510,
+    "sha256": "42ab25241e4f320ce0bc5eff7a7c42ce7c257bde890962866741dcbfa008aa2c",
+    "bytes": 88316,
     "pages": 2,
     "pageSize": "US Letter"
   },

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "evalId": "resume.nyc-oti.speed-operations-manager.789810.pdf-visual",
-  "inspectedAt": "2026-08-20T16:19:26-04:00",
+  "inspectedAt": "2026-08-21T01:04:31.766Z",
   "sourceTemplate": {
     "access": "read-only source; edited only in a new private copy for this opportunity",
     "revisionUnchangedAfterExport": true,
@@ -9,12 +9,12 @@
   },
   "markdown": {
     "path": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.md",
-    "sha256": "714550943bca3204e4364275d0443a386319d493945cc4959d460c2cad8df912"
+    "sha256": "4a36a78629b1ea354ac1bbb6a5539b0da6733f50e3c07a007c25234d5ed11727"
   },
   "pdf": {
     "path": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.pdf",
-    "sha256": "52133b2a3a37328b76d6ac84ddb9d42617545b778ee6c1963f5702155e2f4714",
-    "bytes": 93114,
+    "sha256": "a250aa8d8418dc4d99c7b834699e138a1074ff12b0beb5cb21a0601f04b13604",
+    "bytes": 92664,
     "pages": 2,
     "pageSize": "US Letter"
   },

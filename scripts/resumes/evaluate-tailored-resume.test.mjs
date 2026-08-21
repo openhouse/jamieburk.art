@@ -130,11 +130,12 @@ test("the evaluator rejects ATS-hostile tables", () => {
   assert.equal(result.overall, "fail");
 });
 
-test("the evaluator rejects collective-credit and metric-boundary removal", () => {
+test("the evaluator rejects loss of collective credit or the 35-city organizer ecosystem", () => {
   const mutation = resume
     .replace("with Richard Caceres", "")
     .replace("while preserving collective credit and sensitive boundaries", "")
-    .replace("distinguish these activity counts", "describe these activity counts")
+    .replace("across 35 city ecosystems", "across several places")
+    .replace("community calendars, websites, and email lists", "digital tools")
     .replace("The award was not disbursed", "The award was administered");
   const result = evaluateResume(mutation, "mutation:claim-safety");
   assert.equal(

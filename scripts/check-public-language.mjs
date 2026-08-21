@@ -37,16 +37,40 @@ export function evaluatePublicText({ config, relativePath, text }) {
       .join("|")})\\b`,
     "gi"
   );
+  const scanStandaloneTerms = !(config.standaloneTermExemptPaths ?? []).includes(
+    relativePath
+  );
+
+  const forbiddenPatterns = (config.forbiddenPatterns ?? []).map((entry) => ({
+    ...entry,
+    expression: new RegExp(entry.pattern, "gi")
+  }));
 
   return text.split(/\r?\n/).flatMap((line, index) => {
     if (exemptions.some((pattern) => pattern.test(line))) return [];
-    const matches = [...line.matchAll(termPattern)];
-    return matches.map((match) => ({
-      path: relativePath,
-      line: index + 1,
-      term: match[0],
-      excerpt: line.trim()
-    }));
+    const matches = scanStandaloneTerms
+      ? [...line.matchAll(termPattern)].map((match) => ({
+          match,
+          patternId: null
+        }))
+      : [];
+    for (const entry of forbiddenPatterns) {
+      matches.push(
+        ...[...line.matchAll(entry.expression)].map((match) => ({
+          match,
+          patternId: entry.id
+        }))
+      );
+    }
+    return matches
+      .sort((a, b) => (a.match.index ?? 0) - (b.match.index ?? 0))
+      .map(({ match, patternId }) => ({
+        path: relativePath,
+        line: index + 1,
+        term: match[0],
+        patternId,
+        excerpt: line.trim()
+      }));
   });
 }
 
