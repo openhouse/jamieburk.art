@@ -93,6 +93,10 @@ competing crop, overlay, spacing, or typography constants.
 
 ## Composition
 
+- The selected-work sequence on the homepage follows the executable hiring
+  argument in `docs/design/homepage-project-sequence.md`. Change the order only
+  through that score and its deterministic layout gate so the editorial
+  rationale, data, and rendered page remain synchronized.
 - The home hero is full-bleed, photographic, and unframed. Text sits directly
   in the scene with one even contrast wash, never a gradient or a card.
 - Indexes use rules, numbers, and stable columns instead of repeated floating

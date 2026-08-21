@@ -22,24 +22,24 @@ const startHereLinks = [
     note: "The fastest role-fit proof surface for public-sector technical operations, product operations, implementation, and delivery coordination."
   },
   {
-    href: "/work/wowlist",
-    label: "WOWList.org",
-    note: "A co-built community-calendar with natural-language entry, organizer workflows, email digests, embeds, and historical production instrumentation."
-  },
-  {
-    href: "/work/harry-j-epstein",
-    label: "Harry J. Epstein Company",
-    note: "Legacy e-commerce, analytics, content, marketing, and operations modernization."
-  },
-  {
     href: "/work/fair-rent-nyc",
-    label: "FairRentNYC / Commercial Rent Stabilization",
-    note: "Campaign memory, source maps, public-data framing, and coalition operations."
+    label: "NYC Artist Coalition / FairRentNYC",
+    note: "Current civic delivery across coalition operations, public campaign systems, policy communications, and source-backed continuity."
+  },
+  {
+    href: "/work/kc-spaces-fund",
+    label: "KC Spaces Fund",
+    note: "A finished mutual-aid campaign site connecting donations, applications, participation, contact, and public updates."
   },
   {
     href: "/work/callnyc",
     label: "CallNYC.org",
-    note: "Civic open data translated into resident-facing guidance."
+    note: "A civic-data product translating public records into resident-facing issue pathways and next-step guidance."
+  },
+  {
+    href: "/work/wowlist",
+    label: "WOWList.org",
+    note: "A co-built community platform with natural-language entry, organizer workflows, digests, embeds, and operational depth."
   },
   {
     href: "/resume",

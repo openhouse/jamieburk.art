@@ -29,6 +29,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     "metadata-and-locator-safety",
     "editorial-not-decorative",
     "truthful-project-cover-field",
+    "hiring-argument-project-sequence",
     "truthful-photo-credit",
     "tag-navigation-contract",
     "human-index-material-system",
@@ -186,12 +187,13 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   }
 
   const workCovers = readText("apps/www/src/data/work-covers.ts");
+  const workData = readText("apps/www/src/data/work.ts");
   const workCard = readText("apps/www/src/components/WorkCard.tsx");
   const caseStudyLayout = readText("apps/www/src/components/CaseStudyLayout.tsx");
   const workIndex = readText("apps/www/src/app/work/page.tsx");
   const tagList = readText("apps/www/src/components/TagList.tsx");
   const coverCount = [...workCovers.matchAll(/^  (?:"[^"]+"|[a-z]+): \{/gm)].length;
-  if (coverCount !== 6 ||
+  if (coverCount !== 7 ||
       !workCard.includes('from "@/components/GovernedImage"') ||
       !workCard.includes("getWorkCover(item.slug)") ||
       !workCard.includes("cover.src") ||
@@ -202,12 +204,13 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
       !caseStudyLayout.includes("cover.src") ||
       !caseStudyLayout.includes("cover.caption") ||
       !caseStudyLayout.includes("cover.credit")) {
-    fail("truthful-project-cover-field", "All six work items and case studies must render one captioned and credited cover from the separate cover manifest.");
+    fail("truthful-project-cover-field", "All seven work items and case studies must render one captioned and credited cover from the separate cover manifest.");
   }
   for (const [slug, requiredCover] of [
     ['"harry-j-epstein"', '"/artifacts/hje/public-site.png"'],
     ['"fair-rent-nyc"', "portfolioPhotos.saveNYCSpacesTownHall.src"],
-    ["callnyc", '"/artifacts/callnyc/archived-prototype.png"'],
+    ['"kc-spaces-fund"', '"/artifacts/kc-spaces-fund/public-site.png"'],
+    ["callnyc", '"/artifacts/callnyc/launch-2016.png"'],
     ["wowlist", '"/artifacts/wowlist/public-threshold.webp"'],
     ['"196-sunday-dinner"', "portfolioPhotos.sundayDinnerSharedMap.src"],
     ['"kc-town-hall"', "portfolioPhotos.kcTownHallRoofWork.src"]
@@ -218,6 +221,30 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     if (slugIndex < 0 || !coverBlock.includes(`src: ${requiredCover}`)) {
       fail("truthful-project-cover-field", `Missing governed project-bound cover for ${slug}.`);
     }
+  }
+
+  const homepageOrderBlock = workData.match(
+    /export const homepageWorkOrder = \[([\s\S]*?)\] as const;/
+  );
+  const observedHomepageOrder = homepageOrderBlock
+    ? [...homepageOrderBlock[1].matchAll(/"([^"]+)"/g)].map((match) => match[1])
+    : [];
+  const expectedHomepageOrder = [
+    "fair-rent-nyc",
+    "kc-spaces-fund",
+    "callnyc",
+    "wowlist",
+    "harry-j-epstein",
+    "kc-town-hall"
+  ];
+  if (
+    JSON.stringify(observedHomepageOrder) !== JSON.stringify(expectedHomepageOrder) ||
+    !workData.includes("homepageWorkOrder.map")
+  ) {
+    fail(
+      "hiring-argument-project-sequence",
+      "The homepage project order no longer advances from current civic delivery through finished implementation, product depth, operating longevity, and cross-domain execution."
+    );
   }
 
   if (!tagList.includes('from "next/link"') ||

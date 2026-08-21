@@ -34,6 +34,9 @@ relations:
   - type: uses_source
     target: source.callnyc.live-site.2026-08-14
     href: ../sources/callnyc-live-site-2026-08-14.md
+  - type: uses_source
+    target: source.screenshot.callnyc.launch-interface.2016-05-04
+    href: ../sources/photo-metadata/callnyc-launch-interface-2016-05-04.md
   - type: related_to
     target: decision.callnyc.issue-pathways
     href: ../decisions/callnyc-issue-pathways.md

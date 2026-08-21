@@ -91,6 +91,32 @@ test("every work item retains a governed project-bound cover", () => {
   assert(result.failures.some(({ criterion }) => criterion === "truthful-project-cover-field"));
 });
 
+test("the homepage sequence leads with current civic delivery and finished implementation", () => {
+  const path = "apps/www/src/data/work.ts";
+  const source = readFileSync(path, "utf8").replace(
+    '  "kc-spaces-fund",\n  "callnyc",',
+    '  "callnyc",\n  "kc-spaces-fund",'
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(
+    result.failures.some(
+      ({ criterion }) => criterion === "hiring-argument-project-sequence"
+    )
+  );
+});
+
+test("the CallNYC cover stays on the clean launch-era capture", () => {
+  const path = "apps/www/src/data/work-covers.ts";
+  const source = readFileSync(path, "utf8").replace(
+    'src: "/artifacts/callnyc/launch-2016.png",',
+    'src: "/artifacts/callnyc/archived-prototype.png",'
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "truthful-project-cover-field"));
+});
+
 test("an unsupported named photographer fails the project-credit contract", () => {
   const path = "apps/www/src/data/photography.ts";
   const source = readFileSync(path, "utf8").replace(

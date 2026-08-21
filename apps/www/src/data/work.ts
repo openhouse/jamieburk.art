@@ -108,7 +108,7 @@ const workItemsInput = [
     years: "2009-2015",
     status: "Full case study",
     featured: true,
-    priority: 1,
+    priority: 5,
     visibility: "public-safe",
     proofBankIds: [
       "hje-first-client-chronology",
@@ -209,7 +209,7 @@ const workItemsInput = [
     years: "2017-Present",
     status: "Full case study",
     featured: true,
-    priority: 2,
+    priority: 1,
     visibility: "public-safe",
     proofBankIds: [
       "fair-rent-campaign-memory",
@@ -315,6 +315,91 @@ const workItemsInput = [
     }
   },
   {
+    title: "KC Spaces Fund",
+    slug: "kc-spaces-fund",
+    series: "Campaign Infrastructure",
+    subtitle: "Cross-channel identity and a finished mutual-aid campaign site",
+    summary:
+      "Supported KC Spaces Fund, a collaborator-led 2020 mutual-aid campaign for Kansas City arts and cultural spaces, through campaign web infrastructure and an available cross-channel project identity.",
+    role: "Web Infrastructure & Identity Implementation",
+    years: "2020",
+    status: "Short proof page",
+    featured: true,
+    priority: 2,
+    visibility: "public-safe",
+    proofBankIds: ["kc-spaces-fund-digital-infrastructure"],
+    whatWasUnclear:
+      "A fast-moving mutual-aid campaign needed one coherent public route for donations, applications, coalition participation, contact, and funded-space updates.",
+    whatBecameUsable:
+      "A finished campaign site and consistent cross-channel identity connecting public action routes while keeping organizer and grantmaking authority with the campaign's named leaders.",
+    artifactTypes: ["website", "workflow", "public-safe screenshot"],
+    artifacts: [
+      {
+        title: "Public campaign site",
+        description:
+          "A Ghost-based public surface with a customized campaign theme, donation and application routes, coalition signup, contact guidance, and a fundraising display.",
+        type: "public-safe screenshot",
+        media: {
+          src: "/artifacts/kc-spaces-fund/public-site.png",
+          alt: "KC Spaces Fund campaign homepage with a blue photographic hero, donation action, and a support section for Kansas City cultural spaces.",
+          caption:
+            "KC Spaces Fund public campaign surface captured August 20, 2026. The campaign was collaborator-led; the screenshot demonstrates Jamie's web-infrastructure contribution.",
+          href: "https://kcspacesfund.com/",
+          sourceLabel: "KC Spaces Fund public website"
+        }
+      },
+      {
+        title: "Action-route implementation",
+        description:
+          "Donation, application, signup, contact, and campaign-update paths were brought into one reusable public system.",
+        type: "workflow"
+      }
+    ],
+    tags: [
+      "Technical Operations",
+      "Implementation",
+      "Campaign Infrastructure",
+      "Public-Facing Tools",
+      "Community Systems"
+    ],
+    capabilities: [
+      "Rapid Web Implementation",
+      "Cross-Channel Identity",
+      "Campaign Action Routing",
+      "Ghost Theme Customization",
+      "Technical Operations"
+    ],
+    links: [{ label: "Project site", url: "https://kcspacesfund.com/" }],
+    careNote:
+      "Jamie supported the campaign behind the scenes. Public organizer credit, grant decisions, fundraising authority, and fiscal sponsorship remain with the campaign's named organizers and partners.",
+    sourceLayer:
+      "Public campaign site, public GoFundMe, complete capture-date Facebook Page census, independent contemporary reporting, public-safe technical review, and private source material intentionally omitted.",
+    credits: ["Jamie Burkart", "KC Spaces Fund organizers and collaborators"],
+    publicSafety: {
+      note: "Describe Jamie's technical and identity implementation without presenting him as the campaign organizer, Page publisher, grant decision-maker, fundraiser, fiscal sponsor, or sole naming author."
+    },
+    currentStatus:
+      "Historical collaborator-led campaign with its public website restored as an archival surface.",
+    group: "Civic and public-facing systems",
+    roleFit:
+      "Rapid implementation, product operations, campaign infrastructure, public action routing, cross-channel identity, and technical delivery for a collective public-facing effort.",
+    evidence: [
+      "Ghost-based campaign-site implementation and deployment",
+      "Customized reusable campaign theme and fundraising display",
+      "Donation, application, signup, contact, and update routes",
+      "Consistent public identity across campaign web and social surfaces",
+      "Independent contemporary recognition as an artist-support resource"
+    ],
+    knownOpenProtected: {
+      known:
+        "Jamie built campaign web infrastructure and supported an available cross-channel identity for the collaborator-led KC Spaces Fund effort.",
+      open:
+        "More detailed allocation of theme, widget, and maintenance contributions would require additional collaborator review.",
+      protected:
+        "Applicant, grantee, donor, subscriber, payment, credential, private communication, and sensitive campaign materials remain offline."
+    }
+  },
+  {
     title: "CallNYC.org",
     slug: "callnyc",
     series: "Civic Prototype",
@@ -343,10 +428,10 @@ const workItemsInput = [
           "Public-facing page patterns that moved from constituent issue to relevant office, district context, and possible next step.",
         type: "prototype",
         media: {
-          src: "/artifacts/callnyc/archived-prototype.png",
-          alt: "Archived CallNYC prototype showing issue navigation, resident guidance, and a Council member service profile.",
+          src: "/artifacts/callnyc/launch-2016.png",
+          alt: "Launch-era CallNYC interface showing issue navigation, resident guidance, and a Council member service profile.",
           caption:
-            "Archived CallNYC prototype captured July 2026. The banner marks it as an unofficial, non-current snapshot.",
+            "CallNYC public interface preserved by the Wayback Machine on May 4, 2016. The project is archived, unofficial, and not current guidance.",
           href: "https://callnyc.org/",
           sourceLabel: "CallNYC archived public prototype"
         }
@@ -389,12 +474,12 @@ const workItemsInput = [
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and approved archived-prototype screenshot.",
+      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and approved May 4, 2016 Wayback capture.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
     },
-    currentStatus: "Archived prototype with an approved public-safe screenshot.",
+    currentStatus: "Archived prototype with an approved launch-era public capture.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
@@ -484,8 +569,8 @@ const workItemsInput = [
     role: "Host, Organizer & Systems Steward",
     years: "2010s-present",
     status: "Short proof page",
-    featured: true,
-    priority: 5,
+    featured: false,
+    priority: 7,
     visibility: "summary-only",
     proofBankIds: ["sunday-dinner-196-participation-infrastructure"],
     whatWasUnclear:
@@ -543,7 +628,7 @@ const workItemsInput = [
     role: "Co-founder, Project Manager & CCED Developer/Presenter",
     years: "2019-2024 public record",
     status: "Short proof page",
-    featured: false,
+    featured: true,
     priority: 6,
     visibility: "public-safe",
     proofBankIds: [
@@ -620,10 +705,26 @@ export type WorkSlug =
   | "callnyc"
   | "fair-rent-nyc"
   | "harry-j-epstein"
+  | "kc-spaces-fund"
   | "kc-town-hall"
   | "wowlist";
 
-export const featuredWork = workItems.filter((item) => item.featured);
+export const homepageWorkOrder = [
+  "fair-rent-nyc",
+  "kc-spaces-fund",
+  "callnyc",
+  "wowlist",
+  "harry-j-epstein",
+  "kc-town-hall"
+] as const;
+
+export const featuredWork = homepageWorkOrder.map((slug) => {
+  const item = workItems.find((candidate) => candidate.slug === slug);
+  if (!item || !item.featured) {
+    throw new Error(`Missing featured homepage work item: ${slug}`);
+  }
+  return item;
+});
 
 export const workGroups = [
   "Operating systems for teams",

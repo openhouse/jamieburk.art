@@ -20,6 +20,9 @@ relations:
   - type: supports
     target: capability.technical-operations
     href: ../capabilities/technical-operations.md
+  - type: uses_source
+    target: source.screenshot.kc-spaces-fund.public-site.2026-08-20
+    href: ../sources/photo-metadata/kc-spaces-fund-public-site-2026-08-20.md
 ---
 
 # KC Spaces Fund
