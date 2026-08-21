@@ -102,7 +102,7 @@ test("public hiring evaluator receives no protected Wiki or communications", () 
   assert.equal(report.publicSafety.privateMarkerCount, 0);
   assert.equal(report.publicSafety.protectedWikiReceived, false);
   assert.equal(report.publicSafety.rawCommunicationsReceived, false);
-  assert.equal(report.opportunities.length, 14);
+  assert.equal(report.opportunities.length, 15);
   assert.ok(!JSON.stringify(report).includes("wikiRecords"));
   const protectedOpportunity = report.opportunities.find((item) => item.id.includes("protected.source-backed-memory"));
   assert.equal(protectedOpportunity.live, false);
