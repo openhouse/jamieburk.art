@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "candidateSha": "f7c35ab7f42daffd3af862c55db78d32766a0092",
-  "portfolioSnapshotHash": "870d179502b56a9fee3a5de81ca01b624b04547803fd37c9d21a2e2c87957c5b",
-  "publicReportHash": "cffb95218315905b6ed43e2766d4969ba4a2ea05f75f4ea6b1c5b1e71fa926c4",
-  "wikiSourceFingerprint": "17b016cd09ba656be4b179256b89a63d9c97dcc106c9e539c88217a9ea4d8de6",
+  "candidateSha": "17aae42ff52c8f5aa372d62fe23058198daa9830",
+  "portfolioSnapshotHash": "e19d1c504fed9c554f6c7f58e72070274b6294a249b77d2ef360397d665a0703",
+  "publicReportHash": "6604c79685b9e198926794ccdbf38e8dd9512f2516f91228ce4df6963f19120e",
+  "wikiSourceFingerprint": "9770f9581cab7c3dc09cf62d517ba9e1b35685e9d45fb092366f0352c41c605c",
   "findings": [
     {
       "findingId": "finding.requirement.codepath.qa-and-bug-pipeline",
@@ -29,6 +29,20 @@
       "gapType": "source",
       "smallestResponsibleChange": "Verify current hands-on evidence and prepare a bounded technical demonstration if supportable.",
       "requiresOriginalSourceReview": true,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.codepath.ai-automation",
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "requirementId": "requirement.codepath.ai-automation",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "wording",
+      "smallestResponsibleChange": "Demonstrate one measured automation loop tied to delivery or QA.",
+      "requiresOriginalSourceReview": false,
       "requiresHumanApproval": true
     },
     {

@@ -148,6 +148,7 @@ function candidateFiles(repoRoot) {
     "apps/www/public/images/field-notes/nycac-market-hotel-banner.webp",
     "apps/www/public/images/field-notes/nycac-shoestring-facilitation.webp",
     "apps/www/public/images/field-notes/sunday-dinner-shared-map.webp",
+    "apps/www/public/images/field-notes/knowledge-wiki-collective-map.webp",
     "apps/www/public/images/social/jamie-east-river-og.jpg",
     "apps/www/public/artifacts/wowlist/public-threshold.webp",
     "evals/photo-knowledge/canary.json",
@@ -459,7 +460,8 @@ export function evaluatePhotoKnowledgeModel(model) {
     "kc-town-hall-tired-of-tires-after",
     "nycac-market-hotel-banner",
     "nycac-shoestring-facilitation",
-    "sunday-dinner-shared-map"
+    "sunday-dinner-shared-map",
+    "knowledge-wiki-collective-map"
   ];
   const observedBoundPhotoIds = publicPhotoManifest
     ?.filter((item) => item.knowledgeStatus === "bound")
@@ -521,6 +523,30 @@ export function evaluatePhotoKnowledgeModel(model) {
       ?.unique_compositions_reviewed === 4 &&
     permission?.permission_capsule?.social_preview?.release?.rendered_sha256 ===
       selectedRenderSha;
+  const knowledgeWikiReleaseHumanApproved = (() => {
+    const photo = publicPhotoManifest?.find(
+      (item) => item.id === "knowledge-wiki-collective-map"
+    );
+    const occurrence = record("projection.photo.knowledge-wiki.collective-map");
+    const expectedSha =
+      "a596480d6276fd4fb02fcbc6822ef79e049bdeb27c3081a574892ee5b2c0d036";
+    return (
+      photo?.releaseState?.production === "approved" &&
+      photo?.releaseState?.indexing === "approved" &&
+      photo?.releaseState?.decision?.authority === "Jamie Burkart" &&
+      photo?.releaseState?.decision?.approvedAt === "2026-08-21" &&
+      photo?.releaseState?.decision?.selectedVariant ===
+        "knowledge-wiki-collective-map" &&
+      photo?.releaseState?.decision?.alternativesReviewed === 3 &&
+      photo?.releaseState?.decision?.uniqueCompositionsReviewed === 3 &&
+      photo?.releaseState?.decision?.renderedSha256 === expectedSha &&
+      occurrence?.approval?.production === "approved" &&
+      occurrence?.approval?.indexing === "approved" &&
+      occurrence?.approval?.authority === "Jamie Burkart" &&
+      dateOnly(occurrence?.approval?.approved_at) === "2026-08-21" &&
+      occurrence?.approval?.rendered_sha256 === expectedSha
+    );
+  })();
   const everyBoundOccurrenceAligned = publicPhotoManifest?.every((item) => {
     const photoAsset = record(item.wikiId);
     const photoStatementIds = new Set(
@@ -542,8 +568,10 @@ export function evaluatePhotoKnowledgeModel(model) {
         const releaseAligned =
           item.id === "east-river-social-preview"
             ? socialPreviewReleaseHumanApproved
-            : occurrence?.approval?.production === "open" &&
-              occurrence?.approval?.indexing === "open";
+            : item.id === "knowledge-wiki-collective-map"
+              ? knowledgeWikiReleaseHumanApproved
+              : occurrence?.approval?.production === "open" &&
+                occurrence?.approval?.indexing === "open";
         return (
           occurrence?.asset === item.wikiId &&
           occurrence?.derivative === item.derivativeId &&
@@ -564,8 +592,10 @@ export function evaluatePhotoKnowledgeModel(model) {
     const manifestReleaseAligned =
       item.id === "east-river-social-preview"
         ? socialPreviewReleaseHumanApproved
-        : item.releaseState?.production === "open" &&
-          item.releaseState?.indexing === "open";
+        : item.id === "knowledge-wiki-collective-map"
+          ? knowledgeWikiReleaseHumanApproved
+          : item.releaseState?.production === "open" &&
+            item.releaseState?.indexing === "open";
     return (
       Boolean(photoAsset) &&
       derivativeAligned &&

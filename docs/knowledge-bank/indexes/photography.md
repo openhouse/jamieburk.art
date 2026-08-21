@@ -5,11 +5,15 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-20
+last_reviewed: 2026-08-21
 review_by: 2027-02-20
 canonical_path: docs/knowledge-bank/indexes/photography.md
 summary: Public-safe orientation to the governed relationship among private photo sources, first-class Wiki records, exact portfolio occurrences, recollection, correction, and human publication gates.
 relations:
+  - type: has_asset
+    target: asset.photo.knowledge-wiki.collective-map.2017.001
+    href: ../assets/photographs/knowledge-wiki-collective-map-2017.md
+    context: Cleared shared-working-map occurrence for the Knowledge Wiki Graphs method page.
   - type: has_asset
     target: asset.photo.east-river-manhattan-bridge.2022.001
     href: ../assets/photographs/east-river-manhattan-bridge-2022.md
@@ -74,6 +78,9 @@ relations:
     target: projection.photo.fair-rent-nyc.market-hotel-banner
     href: ../projections/photography/fair-rent-nyc-market-hotel-banner.md
   - type: related_to
+    target: projection.photo.knowledge-wiki.collective-map
+    href: ../projections/photography/knowledge-wiki-collective-map.md
+  - type: related_to
     target: edition.layout-c.2026-07
     href: ../projections/photography/edition-layout-c-2026-07.md
   - type: related_to
@@ -118,6 +125,21 @@ relations:
 This index begins with one complete occurrence rather than attempting to mirror
 Jamie Burkart's private photo archive. The archive remains private and
 additive. The portfolio remains selective and composed.
+
+## August 21 collective knowledge map
+
+The [NYC Artist Coalition shared working map](../assets/photographs/knowledge-wiki-collective-map-2017.md)
+now introduces the Knowledge Wiki Graphs method. Its many handwritten cards
+make the core idea intuitive: the system begins with knowledge already present
+in people, language, artifacts, and relationships, then helps a team make that
+knowledge visible, connected, and usable.
+
+The photograph is an illustrative process artifact, not a transcript or proof
+of consensus. Its exact [portfolio occurrence](../projections/photography/knowledge-wiki-collective-map.md)
+records Jamie's August 21 selection and staging/production direction, the NYC
+Artist Coalition courtesy credit, the public derivative checksum, and the
+rollback path. Private asset identifiers, original filenames, People tags,
+precise location, and raw source metadata remain outside Git.
 
 ## August 13 participation sequence
 

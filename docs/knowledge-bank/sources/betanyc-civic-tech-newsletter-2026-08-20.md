@@ -41,3 +41,7 @@ official City dataset when possible, and sends only verified strong matches to
 provisional intake. External-employer facts use expiring, dated official reviews;
 an expired or unmodeled review returns to explicit verification rather than
 silently retaining an old result.
+
+See the maintained [BetaNYC newsletter opportunity
+loop](../methods/betanyc-opportunity-loop.md) and the dated [August 20
+opportunity review](../research-runs/betanyc-opportunity-review-2026-08-20.md).

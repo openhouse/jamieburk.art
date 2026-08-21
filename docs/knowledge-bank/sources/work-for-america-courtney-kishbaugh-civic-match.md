@@ -13,7 +13,7 @@ source_kind: official-organization-team-page
 url: https://www.workforamerica.org/about
 retrieved_at: 2026-08-20
 relations:
-  - type: documents
+  - type: related_to
     target: person.courtney-kishbaugh
     href: ../people/courtney-kishbaugh.md
 ---

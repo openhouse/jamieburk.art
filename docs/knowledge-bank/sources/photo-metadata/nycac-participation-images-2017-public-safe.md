@@ -6,11 +6,17 @@ source_kind: public-safe-photo-metadata
 status: maintained
 visibility: summary-only
 sensitivity: low
-last_reviewed: 2026-08-20
+last_reviewed: 2026-08-21
 review_by: 2027-02-20
 canonical_path: docs/knowledge-bank/sources/photo-metadata/nycac-participation-images-2017-public-safe.md
-summary: Public-safe metadata capsule for the two selected NYC Artist Coalition portfolio photographs, retaining only creator state, project courtesy credit, date, general place, visible content, derivative identity, and archive custody.
+summary: Public-safe metadata capsule for the three selected NYC Artist Coalition portfolio photographs, retaining only creator state, project courtesy credit, date, general context, visible content, derivative identity, and archive custody.
 records:
+  - asset: asset.photo.knowledge-wiki.collective-map.2017.001
+    creator_state: unresolved
+    display_credit: Photo courtesy of NYC Artist Coalition.
+    capture_date: 2017-02-17
+    public_context_label: NYC Artist Coalition steering-group session
+    public_derivative_checksum: a596480d6276fd4fb02fcbc6822ef79e049bdeb27c3081a574892ee5b2c0d036
   - asset: asset.photo.nycac-shoestring-facilitation.2017.001
     creator_state: unresolved
     display_credit: Photo courtesy of NYC Artist Coalition.
@@ -46,7 +52,7 @@ courtesy credit, derivative verification, and limited portfolio use. Private arc
 People tags, face associations, precise locations, and source-bearing metadata
 are deliberately excluded.
 
-Both committed WebP derivatives were visually inspected against the local
+All three committed WebP derivatives were visually inspected against the local
 photo-select exports and checked for embedded source metadata. Individual
 photographer identity remains unresolved, so the public display credits the
 NYC Artist Coalition project. The capsule does

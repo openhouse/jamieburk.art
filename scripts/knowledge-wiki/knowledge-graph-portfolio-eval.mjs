@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -13,7 +14,18 @@ const paths = {
   colophon: "apps/www/src/app/colophon/page.tsx",
   work: "apps/www/src/app/work/page.tsx",
   about: "apps/www/src/app/about/page.tsx",
-  method: "docs/knowledge-bank/methods/source-backed-team-memory.md"
+  method: "docs/knowledge-bank/methods/source-backed-team-memory.md",
+  photoManifest: "apps/www/src/data/photography.ts",
+  photoAsset:
+    "docs/knowledge-bank/assets/photographs/knowledge-wiki-collective-map-2017.md",
+  photoProjection:
+    "docs/knowledge-bank/projections/photography/knowledge-wiki-collective-map.md",
+  photoPermission:
+    "docs/knowledge-bank/sources/permissions/jamie-portfolio-album-2026-08-13.md",
+  photoMetadata:
+    "docs/knowledge-bank/sources/photo-metadata/nycac-participation-images-2017-public-safe.md",
+  photoDerivative:
+    "apps/www/public/images/field-notes/knowledge-wiki-collective-map.webp"
 };
 
 function readIfExists(root, relative) {
@@ -22,11 +34,18 @@ function readIfExists(root, relative) {
 }
 
 export function loadCandidate(root = repoRoot) {
+  const derivativePath = path.join(root, paths.photoDerivative);
   return {
     ...Object.fromEntries(
-      Object.entries(paths).map(([key, relative]) => [key, readIfExists(root, relative)])
+      Object.entries(paths)
+        .filter(([key]) => key !== "photoDerivative")
+        .map(([key, relative]) => [key, readIfExists(root, relative)])
     ),
-    knowledgeBank: structuredClone(knowledgeBank)
+    knowledgeBank: structuredClone(knowledgeBank),
+    photoDerivativeExists: existsSync(derivativePath),
+    photoDerivativeSha256: existsSync(derivativePath)
+      ? createHash("sha256").update(readFileSync(derivativePath)).digest("hex")
+      : null
   };
 }
 
@@ -45,6 +64,15 @@ export function evaluateKnowledgeGraphPortfolio(candidate) {
   const claim = candidate.knowledgeBank.claims.find(
     (item) => item.id === "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026"
   );
+  const expectedPhotoSha =
+    "a596480d6276fd4fb02fcbc6822ef79e049bdeb27c3081a574892ee5b2c0d036";
+  const governedPhotoText = [
+    candidate.photoManifest,
+    candidate.photoAsset,
+    candidate.photoProjection,
+    candidate.photoPermission,
+    candidate.photoMetadata
+  ].join("\n");
 
   check(candidate.labPage.includes("Knowledge Wiki Graphs"), "lab page lacks the successor title");
   check(candidate.labPage.includes("graphLayers"), "lab page lacks an at-a-glance graph model");
@@ -98,6 +126,58 @@ export function evaluateKnowledgeGraphPortfolio(candidate) {
     "maintained method record does not encode the generalized architecture"
   );
   check(
+    candidate.labPage.includes("portfolioPhotos.knowledgeWikiCollectiveMap") &&
+      candidate.labPage.includes("<ResponsiveMedia") &&
+      /knowledge already present in people[\s\S]*language[\s\S]*artifacts[\s\S]*relationships/.test(
+        candidate.labPage
+      ) &&
+      /visible, connected, and usable without claiming[\s\S]*ownership/.test(
+        candidate.labPage
+      ),
+    "lab page does not make the collective-knowledge principle visible through the governed photo"
+  );
+  check(
+    candidate.photoDerivativeExists &&
+      candidate.photoDerivativeSha256 === expectedPhotoSha,
+    "collective-map derivative is missing or does not match the reviewed pixels"
+  );
+  check(
+    candidate.photoManifest.includes('id: "knowledge-wiki-collective-map"') &&
+      candidate.photoManifest.includes('credit: "Photo courtesy of NYC Artist Coalition."') &&
+      candidate.photoManifest.includes(expectedPhotoSha) &&
+      candidate.photoManifest.includes('selectedVariant: "knowledge-wiki-collective-map"'),
+    "photo manifest loses the reviewed derivative, courtesy credit, or exact human decision"
+  );
+  check(
+    /rights_state: cleared/.test(candidate.photoAsset) &&
+      /represented_person_review: no-identifiable-people/.test(candidate.photoAsset) &&
+      candidate.photoAsset.includes(expectedPhotoSha) &&
+      /does not identify the writers[\s\S]*prove agreement[\s\S]*assign ownership/.test(
+        candidate.photoAsset
+      ),
+    "photo asset does not preserve rights, represented-person, checksum, or interpretation safeguards"
+  );
+  check(
+    /route: \/lab\/source-backed-team-memory/.test(candidate.photoProjection) &&
+      /production: approved/.test(candidate.photoProjection) &&
+      /authority: Jamie Burkart/.test(candidate.photoProjection) &&
+      /Photo courtesy of NYC Artist Coalition\./.test(candidate.photoProjection) &&
+      candidate.photoProjection.includes(expectedPhotoSha),
+    "exact portfolio occurrence loses its route, credit, checksum, or Jamie approval"
+  );
+  check(
+    candidate.photoPermission.includes("asset.photo.knowledge-wiki.collective-map.2017.001") &&
+      candidate.photoPermission.includes("approved_at: 2026-08-21") &&
+      candidate.photoPermission.includes(expectedPhotoSha),
+    "portfolio-album authorization does not record the exact collective-map occurrence"
+  );
+  check(
+    !/(?:\/Users\/|\/Volumes\/|\/private\/tmp\/|[0-9A-F]{8}(?:-[0-9A-F]{4}){3}-[0-9A-F]{12}|20170217T032835)/i.test(
+      governedPhotoText
+    ),
+    "public-safe photo records expose a private locator, identifier, or source filename"
+  );
+  check(
     !/(?:\/Users\/|\/Volumes\/|\/private\/tmp\/)/.test(publicCopy),
     "public surfaces expose a private filesystem or repository locator"
   );
@@ -142,7 +222,9 @@ export function evaluateKnowledgeGraphPortfolio(candidate) {
       publicClaimReferences: references,
       graphResponsibilities: ["Semantic graph", "Evidence graph", "Source-custody graph"]
         .filter((term) => publicCopy.includes(term)).length,
-      reviewedSurfaces: claim?.projections?.[0]?.surfaces?.length ?? 0
+      reviewedSurfaces: claim?.projections?.[0]?.surfaces?.length ?? 0,
+      governedCollectiveMap:
+        candidate.photoDerivativeSha256 === expectedPhotoSha ? 1 : 0
     }
   };
 }

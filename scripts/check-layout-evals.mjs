@@ -55,25 +55,26 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     "/images/field-notes/kc-town-hall-roof-work.webp",
     "/images/field-notes/kc-town-hall-tired-of-tires-after.webp",
     "/images/field-notes/kc-town-hall-tired-of-tires-before.webp",
+    "/images/field-notes/knowledge-wiki-collective-map.webp",
     "/images/field-notes/nycac-market-hotel-banner.webp",
     "/images/field-notes/nycac-shoestring-facilitation.webp",
     "/images/field-notes/sunday-dinner-shared-map.webp"
   ];
   if (JSON.stringify(sources.sort()) !== JSON.stringify(expectedSources.sort())) {
-    fail("governed-photographic-field", "The public field must contain exactly the seven reviewed photographic derivatives.");
+    fail("governed-photographic-field", "The public field must contain exactly the eight reviewed photographic derivatives.");
   }
 
   for (const field of ["id", "width", "height", "alt", "caption", "credit", "placements", "publicationStatus", "publicUseBoundary"]) {
     const count = [...manifest.matchAll(new RegExp(`\\b${field}:`, "g"))].length;
-    if (count !== 10) {
+    if (count !== 11) {
       fail("manifest-bound-publication", `Manifest field ${field} is missing from one or more photos.`);
     }
   }
-  if ([...manifest.matchAll(/publicationStatus: "jamie-authorized"/g)].length !== 10) {
+  if ([...manifest.matchAll(/publicationStatus: "jamie-authorized"/g)].length !== 11) {
     fail("manifest-bound-publication", "Every photo must retain the Jamie-authorized publication status.");
   }
   const expectedProjectCredits = [
-    ["Photo courtesy of NYC Artist Coalition.", 2],
+    ["Photo courtesy of NYC Artist Coalition.", 3],
     ["Photo courtesy of Sunday Dinner NYC.", 1],
     ["Photo courtesy of KC Town Hall.", 3],
     ["Design courtesy of KC Town Hall.", 1]
@@ -96,8 +97,8 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
 
   const publicImageRoot = path.join(root, "apps/www/public/images/field-notes");
   const publicImages = walkFiles(publicImageRoot).sort();
-  if (publicImages.length !== 7 || publicImages.some((file) => !file.endsWith(".webp"))) {
-    fail("governed-photographic-field", "The field-notes directory must contain only the seven fully bound photographic WebP derivatives.");
+  if (publicImages.length !== 8 || publicImages.some((file) => !file.endsWith(".webp"))) {
+    fail("governed-photographic-field", "The field-notes directory must contain only the eight fully governed photographic WebP derivatives.");
   }
   for (const relativeImagePath of publicImages) {
     const bytes = readFileSync(path.join(publicImageRoot, relativeImagePath));

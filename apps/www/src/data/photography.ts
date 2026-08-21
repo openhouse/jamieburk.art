@@ -8,7 +8,8 @@ export type PortfolioPhoto = {
     | "kc-town-hall-roof-work"
     | "kc-town-hall-tired-of-tires-flyer"
     | "kc-town-hall-tired-of-tires-before"
-    | "kc-town-hall-tired-of-tires-after";
+    | "kc-town-hall-tired-of-tires-after"
+    | "knowledge-wiki-collective-map";
   src: string;
   width: number;
   height: number;
@@ -28,6 +29,7 @@ export type PortfolioPhoto = {
     | "kc-town-hall"
     | "work-index"
     | "social-preview"
+    | "knowledge-wiki-graph"
   )[];
   publicationStatus: "jamie-authorized";
   releaseState: {
@@ -37,10 +39,12 @@ export type PortfolioPhoto = {
     indexing: "open" | "approved";
     decision?: {
       authority: "Jamie Burkart";
-      approvedAt: "2026-08-15";
-      selectedVariant: "image-4-editorial-proposition";
-      alternativesReviewed: 6;
-      uniqueCompositionsReviewed: 4;
+      approvedAt: "2026-08-15" | "2026-08-21";
+      selectedVariant:
+        | "image-4-editorial-proposition"
+        | "knowledge-wiki-collective-map";
+      alternativesReviewed: 3 | 6;
+      uniqueCompositionsReviewed: 3 | 4;
       renderedSha256: string;
     };
   };
@@ -335,6 +339,46 @@ export const portfolioPhotos = {
     },
     publicUseBoundary:
       "Jamie explicitly authorized this portfolio occurrence from the project archive. The matched pair documents removal at one curbside site; it does not establish an audited program total, identify a resident, or publish an address."
+  },
+  knowledgeWikiCollectiveMap: {
+    id: "knowledge-wiki-collective-map",
+    src: "/images/field-notes/knowledge-wiki-collective-map.webp",
+    width: 2400,
+    height: 1600,
+    alt: "Handwritten cards in several ink colors form clusters across a wooden floor, surrounded by shoes, a book, a plate, and a small light.",
+    caption:
+      "Handwritten contributions form a shared working map during an NYC Artist Coalition steering-group session, February 2017.",
+    credit: "Photo courtesy of NYC Artist Coalition.",
+    wikiId: "asset.photo.knowledge-wiki.collective-map.2017.001",
+    derivativeId: "derivative.photo.knowledge-wiki.collective-map.v1",
+    placementIds: ["projection.photo.knowledge-wiki.collective-map"],
+    captionAssertionIds: [
+      "statement.photo.knowledge-wiki.collective-map.capture-month.v1",
+      "statement.photo.knowledge-wiki.collective-map.visible-action.v1"
+    ],
+    creditAssertionIds: [
+      "statement.photo.knowledge-wiki.collective-map.courtesy-credit.v1"
+    ],
+    knowledgeStatus: "bound",
+    placements: ["knowledge-wiki-graph"],
+    publicationStatus: "jamie-authorized",
+    releaseState: {
+      publicGit: "approved",
+      staging: "approved",
+      production: "approved",
+      indexing: "approved",
+      decision: {
+        authority: "Jamie Burkart",
+        approvedAt: "2026-08-21",
+        selectedVariant: "knowledge-wiki-collective-map",
+        alternativesReviewed: 3,
+        uniqueCompositionsReviewed: 3,
+        renderedSha256:
+          "a596480d6276fd4fb02fcbc6822ef79e049bdeb27c3081a574892ee5b2c0d036"
+      }
+    },
+    publicUseBoundary:
+      "Credit this occurrence to NYC Artist Coalition. The photograph documents handwritten contributions arranged into a shared working map; it does not identify authors, preserve exact discussion, prove agreement, or assign ownership of the group's knowledge."
   }
 } as const satisfies Record<string, PortfolioPhoto>;
 

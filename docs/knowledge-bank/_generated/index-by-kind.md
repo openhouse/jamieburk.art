@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `afa0bf9876d50b9fcfe6c256b60d71c14bd7bb9d`
-**Generation time:** 2026-08-20T16:43:00-04:00
-**Source fingerprint:** `17b016cd09ba656be4b179256b89a63d9c97dcc106c9e539c88217a9ea4d8de6`
+**Source commit:** `17aae42ff52c8f5aa372d62fe23058198daa9830`
+**Generation time:** 2026-08-21T00:57:22-04:00
+**Source fingerprint:** `9770f9581cab7c3dc09cf62d517ba9e1b35685e9d45fb092366f0352c41c605c`
 
 ## application
 
@@ -24,6 +24,7 @@
 - [Jamie and a collaborator inside KC Town Hall](../assets/photographs/kc-town-hall-stewardship-interior.md) - `asset.photo.kc-town-hall.stewardship-interior.001`
 - [Tired of Tires collection site after removal, 2022](../assets/photographs/kc-town-hall-tired-of-tires-after-2022.md) - `asset.photo.kc-town-hall.tired-of-tires-after.2022.001`
 - [Tired of Tires collection site before removal, 2022](../assets/photographs/kc-town-hall-tired-of-tires-before-2022.md) - `asset.photo.kc-town-hall.tired-of-tires-before.2022.001`
+- [NYC Artist Coalition shared working map, 2017](../assets/photographs/knowledge-wiki-collective-map-2017.md) - `asset.photo.knowledge-wiki.collective-map.2017.001`
 - [Jamie with a civic field kit at New York City Council](../assets/photographs/nyc-council-field-kit-2026.md) - `asset.photo.nyc-council.field-kit.2026.001`
 - [DCLA listening room, January 2017](../assets/photographs/nycac-dcla-listening-room-2017.md) - `asset.photo.nycac-dcla-listening-room.2017.001`
 - [Shoestring Press coalition working session, 2017](../assets/photographs/nycac-shoestring-facilitation-2017.md) - `asset.photo.nycac-shoestring-facilitation.2017.001`
@@ -311,6 +312,8 @@
 
 ## method
 
+- [BetaNYC newsletter opportunity loop](../methods/betanyc-opportunity-loop.md) - `method.betanyc-opportunity-loop`
+- [Civic Match opportunity loop](../methods/civic-match-opportunity-loop.md) - `method.civic-match-opportunity-loop`
 - [Collective credit and protected absence](../methods/collective-credit-and-protected-absence.md) - `method.collective-credit-protected-absence`
 - [Identity Systems as Shared Infrastructure](../methods/identity-systems-as-shared-infrastructure.md) - `method.identity-systems-as-shared-infrastructure`
 - [Jamie at Work](../methods/jamie-at-work.md) - `method.jamie-at-work`
@@ -320,7 +323,7 @@
 - [East River photographic knowledge-loop tutorial](../workflows/photography-east-river-canary.md) - `method.photography-east-river-canary`
 - [Projects as a Recomposable Civic-Cultural System](../methods/recomposable-civic-cultural-systems.md) - `method.recomposable-civic-cultural-systems`
 - [Situated source rereading](../methods/situated-source-rereading.md) - `method.situated-source-rereading`
-- [Source-Backed Team Memory](../methods/source-backed-team-memory.md) - `method.source-backed-team-memory`
+- [Knowledge Wiki Graph / Source-Backed Team Memory](../methods/source-backed-team-memory.md) - `method.source-backed-team-memory`
 - [Structure grows from the material](../methods/structure-grows-from-the-material.md) - `method.structure-grows-from-material`
 - [Sunday Dinner, WOW List, and NYC Artist Coalition Synergy](../methods/sunday-dinner-wowlist-nycac-synergy.md) - `method.sunday-dinner-wowlist-nycac-synergy`
 - [What Is at Stake for Me](../methods/what-is-at-stake-for-me.md) - `method.what-is-at-stake-for-me`
@@ -353,10 +356,12 @@
 - [Aileen Palmer](../people/aileen-palmer.md) - `person.aileen-palmer`
 - [Charizma Williams](../people/charizma-williams.md) - `person.charizma-williams`
 - [Chris Coleman](../people/chris-coleman.md) - `person.chris-coleman`
+- [Courtney Kishbaugh](../people/courtney-kishbaugh.md) - `person.courtney-kishbaugh`
 - [Diya Vij](../people/diya-vij.md) - `person.diya-vij`
 - [Elana Gordon](../people/elana-gordon.md) - `person.elana-gordon`
 - [Jaclyn Chen](../people/jaclyn-chen.md) - `person.jaclyn-chen`
 - [Jamie Burkart](../people/jamie-burkart.md) - `person.jamie-burkart`
+- [Josh Gee](../people/josh-gee.md) - `person.josh-gee`
 - [Kathrin Aste](../people/kathrin-aste.md) - `person.kathrin-aste`
 - [Lisa Gelobter](../people/lisa-gelobter.md) - `person.lisa-gelobter`
 - [Luke Farrell](../people/luke-farrell.md) - `person.luke-farrell`
@@ -400,6 +405,7 @@
 - [KC Town Hall roof-work occurrence](../projections/photography/kc-town-hall-roof-work.md) - `projection.photo.kc-town-hall.roof-work`
 - [Tired of Tires after-collection occurrence](../projections/photography/kc-town-hall-tired-of-tires-after.md) - `projection.photo.kc-town-hall.tired-of-tires-after`
 - [Tired of Tires before-collection occurrence](../projections/photography/kc-town-hall-tired-of-tires-before.md) - `projection.photo.kc-town-hall.tired-of-tires-before`
+- [Knowledge Wiki Graph collective-map occurrence](../projections/photography/knowledge-wiki-collective-map.md) - `projection.photo.knowledge-wiki.collective-map`
 - [Layout C homepage East River occurrence](../projections/photography/layout-c-home-east-river.md) - `projection.photo.layout-c.home.east-river`
 - [East River social-preview occurrence](../projections/photography/social-preview-east-river.md) - `projection.photo.social-preview.east-river`
 - [Sunday Dinner shared-map occurrence](../projections/photography/sunday-dinner-shared-map.md) - `projection.photo.sunday-dinner.shared-map`
@@ -416,6 +422,7 @@
 
 ## research-run
 
+- [BetaNYC opportunity review, August 20, 2026](../research-runs/betanyc-opportunity-review-2026-08-20.md) - `research.betanyc-opportunity-review.2026-08-20`
 - [Foundational Wiki page source return, July 19, 2026](../research-runs/foundational-source-return-2026-07-19.md) - `research.foundational-source-return.2026-07-19`
 - [Interpretive layer source return, July 19, 2026](../research-runs/interpretive-layer-source-return-2026-07-19.md) - `research.interpretive-layer-source-return.2026-07-19`
 - [Knowledge Wiki branch-family closure review](../research-runs/knowledge-wiki-family-closure-2026-07-19.md) - `research.knowledge-wiki-family-closure.2026-07-19`
@@ -430,8 +437,10 @@
 
 - [ACLU official biography - Charizma Williams](../sources/aclu-charizma-williams.md) - `source.aclu.charizma-williams`
 - [Benepass official team page - Jaclyn Chen](../sources/benepass-jaclyn-chen.md) - `source.benepass.jaclyn-chen`
+- [BetaNYC weekly civic-technology newsletter and public archive](../sources/betanyc-civic-tech-newsletter-2026-08-20.md) - `source.betanyc.civic-tech-newsletter`
 - [CallNYC public source repository](../sources/callnyc-source-repository.md) - `source.callnyc.source-repository`
 - [Campaign-site repository family, 2020-2022](../sources/campaign-site-repository-family-2020-2022.md) - `source.campaign-site.repository-family.2020-2022`
+- [Civic Match candidate network and authenticated profile flow](../sources/civic-match-candidate-network-2026-08-20.md) - `source.civic-match.candidate-network`
 - [Civic Hall hackathon announcement](../sources/civichall-hackathon-announcement-2016.md) - `source.civichall.hackathon-announcement.2016`
 - [CodePath official leadership pages - 2026](../sources/codepath-leadership-2026.md) - `source.codepath.leadership.2026`
 - [New York City Council Constituent Services Data release](../sources/nycc-constituent-services-data-2016-05-27.md) - `source.councilstat.fuller-release.2016`
@@ -527,6 +536,8 @@
 - [Official University of Innsbruck and ./studio3 leadership context](../sources/uibk-studio3-leadership-2026.md) - `source.uibk.studio3.leadership.2026`
 - [Protected communication history - public-safe metadata boundary](../sources/protected-communication-vault-metadata.md) - `source.vault.communication-history.metadata`
 - [Weibel Institute In Terms of Media event record](../sources/weibel-in-terms-of-media-2024.md) - `source.weibel.in-terms-of-media.2024`
+- [Work for America team page — Courtney Kishbaugh](../sources/work-for-america-courtney-kishbaugh-civic-match.md) - `source.work-for-america.courtney-kishbaugh-civic-match`
+- [Work for America team page — Josh Gee](../sources/work-for-america-josh-gee-civic-match.md) - `source.work-for-america.josh-gee-civic-match`
 - [Governed WOW List knowledge repository](../sources/wowlist-knowledge-repository-2026.md) - `source.wowlist.knowledge-repository.2026`
 - [WOW List public return threshold, August 2026](../sources/wowlist-public-threshold-2026-08.md) - `source.wowlist.public-threshold.2026-08-13`
 - [What is WOW List repaired transcript](../sources/wowlist-repaired-transcript-2026.md) - `source.wowlist.repaired-transcript.2026`

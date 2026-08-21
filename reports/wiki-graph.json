@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-20T16:43:00-04:00",
-  "sourceCommit": "afa0bf9876d50b9fcfe6c256b60d71c14bd7bb9d",
-  "sourceFingerprint": "17b016cd09ba656be4b179256b89a63d9c97dcc106c9e539c88217a9ea4d8de6",
+  "generatedAt": "2026-08-21T00:57:22-04:00",
+  "sourceCommit": "17aae42ff52c8f5aa372d62fe23058198daa9830",
+  "sourceFingerprint": "9770f9581cab7c3dc09cf62d517ba9e1b35685e9d45fb092366f0352c41c605c",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -186,6 +186,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-20",
       "reviewBy": "2027-02-20"
+    },
+    {
+      "id": "asset.photo.knowledge-wiki.collective-map.2017.001",
+      "path": "docs/knowledge-bank/assets/photographs/knowledge-wiki-collective-map-2017.md",
+      "title": "NYC Artist Coalition shared working map, 2017",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe record for a February 2017 NYC Artist Coalition photograph of handwritten contributions arranged as a shared working map.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2027-02-21"
     },
     {
       "id": "asset.photo.nyc-council.field-kit.2026.001",
@@ -3323,7 +3336,7 @@
       "sensitivity": "low",
       "summary": "Task-oriented entry point for live opportunity research, historical role benchmarks, public-only hiring evaluation, and private-boundary rules.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
+      "lastReviewed": "2026-08-21",
       "reviewBy": "2026-08-27"
     },
     {
@@ -3414,7 +3427,7 @@
       "sensitivity": "low",
       "summary": "Public-safe orientation to the governed relationship among private photo sources, first-class Wiki records, exact portfolio occurrences, recollection, correction, and human publication gates.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
+      "lastReviewed": "2026-08-21",
       "reviewBy": "2027-02-20"
     },
     {
@@ -3639,6 +3652,32 @@
       "reviewBy": "2026-10-28"
     },
     {
+      "id": "method.betanyc-opportunity-loop",
+      "path": "docs/knowledge-bank/methods/betanyc-opportunity-loop.md",
+      "title": "BetaNYC newsletter opportunity loop",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Cost-aware daily review of a curated civic-technology newsletter, with official-posting checks before provisional intake.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-09-20"
+    },
+    {
+      "id": "method.civic-match-opportunity-loop",
+      "path": "docs/knowledge-bank/methods/civic-match-opportunity-loop.md",
+      "title": "Civic Match opportunity loop",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Models Civic Match as an authenticated talent-network source with candidate discovery, invitations, tracking, events, and staff-assisted matching.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-09-20"
+    },
+    {
       "id": "method.collective-credit-protected-absence",
       "path": "docs/knowledge-bank/methods/collective-credit-and-protected-absence.md",
       "title": "Collective credit and protected absence",
@@ -3758,14 +3797,14 @@
     {
       "id": "method.source-backed-team-memory",
       "path": "docs/knowledge-bank/methods/source-backed-team-memory.md",
-      "title": "Source-Backed Team Memory",
+      "title": "Knowledge Wiki Graph / Source-Backed Team Memory",
       "kind": "method",
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "A governed workflow for turning scattered records into traceable decisions, bounded claims, open questions, and reusable handoffs.\n",
+      "summary": "A federated practice that separates semantic meaning, evidentiary support, and source custody before composing human-reviewed outputs.\n",
       "aliases": [],
-      "lastReviewed": "2026-08-10",
+      "lastReviewed": "2026-08-21",
       "reviewBy": "2027-01-18"
     },
     {
@@ -4071,6 +4110,19 @@
       "reviewBy": "2026-11-13"
     },
     {
+      "id": "person.courtney-kishbaugh",
+      "path": "docs/knowledge-bank/people/courtney-kishbaugh.md",
+      "title": "Courtney Kishbaugh",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public candidate-program leadership context for Civic Match, used only as an explicitly fictionalized evaluation lens.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-09-20"
+    },
+    {
       "id": "person.diya-vij",
       "path": "docs/knowledge-bank/people/diya-vij.md",
       "title": "Diya Vij",
@@ -4123,6 +4175,19 @@
       ],
       "lastReviewed": "2026-08-03",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "person.josh-gee",
+      "path": "docs/knowledge-bank/people/josh-gee.md",
+      "title": "Josh Gee",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public strategic leadership context for Civic Match, used only as an explicitly fictionalized evaluation lens.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-09-20"
     },
     {
       "id": "person.kathrin-aste",
@@ -4554,6 +4619,19 @@
       "reviewBy": "2027-02-20"
     },
     {
+      "id": "projection.photo.knowledge-wiki.collective-map",
+      "path": "docs/knowledge-bank/projections/photography/knowledge-wiki-collective-map.md",
+      "title": "Knowledge Wiki Graph collective-map occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact public occurrence connecting a metadata-stripped NYC Artist Coalition working-map photograph to the Knowledge Wiki Graphs method page.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2027-02-21"
+    },
+    {
       "id": "projection.photo.layout-c.home.east-river",
       "path": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
       "title": "Layout C homepage East River occurrence",
@@ -4684,6 +4762,19 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "research.betanyc-opportunity-review.2026-08-20",
+      "path": "docs/knowledge-bank/research-runs/betanyc-opportunity-review-2026-08-20.md",
+      "title": "BetaNYC opportunity review, August 20, 2026",
+      "kind": "research-run",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Review of nineteen newsletter leads that admitted two strong matches to provisional intake after official-source checks.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-29"
+    },
+    {
       "id": "research.foundational-source-return.2026-07-19",
       "path": "docs/knowledge-bank/research-runs/foundational-source-return-2026-07-19.md",
       "title": "Foundational Wiki page source return, July 19, 2026",
@@ -4730,9 +4821,9 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Deterministic full-feed screen and person-specific ranking that admitted six of 1,426 unique City job IDs to provisional review.",
+      "summary": "Deterministic full-feed screen and person-specific ranking that admitted seven of 1,426 unique City job IDs to provisional review.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
+      "lastReviewed": "2026-08-21",
       "reviewBy": "2026-08-27"
     },
     {
@@ -4827,6 +4918,19 @@
       "reviewBy": "2026-11-13"
     },
     {
+      "id": "source.betanyc.civic-tech-newsletter",
+      "path": "docs/knowledge-bank/sources/betanyc-civic-tech-newsletter-2026-08-20.md",
+      "title": "BetaNYC weekly civic-technology newsletter and public archive",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Recurring editorial discovery source for civic-technology jobs, events, public-service developments, community tools, and employer leads.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-29"
+    },
+    {
       "id": "source.callnyc.source-repository",
       "path": "docs/knowledge-bank/sources/callnyc-source-repository.md",
       "title": "CallNYC public source repository",
@@ -4851,6 +4955,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-11",
       "reviewBy": "2026-11-11"
+    },
+    {
+      "id": "source.civic-match.candidate-network",
+      "path": "docs/knowledge-bank/sources/civic-match-candidate-network-2026-08-20.md",
+      "title": "Civic Match candidate network and authenticated profile flow",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public program documentation plus a read-only field map of Jamie's existing five-step candidate profile, preserving account and submission privacy.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
     },
     {
       "id": "source.civichall.hackathon-announcement.2016",
@@ -5746,7 +5863,7 @@
       "sensitivity": "moderate",
       "summary": "Public-safe capsule recording Jamie Burkart's destination-bound authorization to select and publish photographs from the designated Apple Photos portfolio album without exposing album identifiers or private metadata.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
+      "lastReviewed": "2026-08-21",
       "reviewBy": "2027-02-20"
     },
     {
@@ -5783,9 +5900,9 @@
       "status": "maintained",
       "visibility": "summary-only",
       "sensitivity": "low",
-      "summary": "Public-safe metadata capsule for the two selected NYC Artist Coalition portfolio photographs, retaining only creator state, project courtesy credit, date, general place, visible content, derivative identity, and archive custody.",
+      "summary": "Public-safe metadata capsule for the three selected NYC Artist Coalition portfolio photographs, retaining only creator state, project courtesy credit, date, general context, visible content, derivative identity, and archive custody.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
+      "lastReviewed": "2026-08-21",
       "reviewBy": "2027-02-20"
     },
     {
@@ -6089,6 +6206,32 @@
       "aliases": [],
       "lastReviewed": "2026-08-03",
       "reviewBy": "2027-02-03"
+    },
+    {
+      "id": "source.work-for-america.courtney-kishbaugh-civic-match",
+      "path": "docs/knowledge-bank/sources/work-for-america-courtney-kishbaugh-civic-match.md",
+      "title": "Work for America team page — Courtney Kishbaugh",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official team listing identifying Courtney Kishbaugh as Director of Civic Match.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-09-20"
+    },
+    {
+      "id": "source.work-for-america.josh-gee-civic-match",
+      "path": "docs/knowledge-bank/sources/work-for-america-josh-gee-civic-match.md",
+      "title": "Work for America team page — Josh Gee",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official team listing identifying Josh Gee as Vice President, Civic Match.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-09-20"
     },
     {
       "id": "source.wowlist.knowledge-repository.2026",
@@ -6549,6 +6692,30 @@
       "to": "source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14",
       "source": "frontmatter",
       "href": "../../sources/permissions/kc-town-hall-tired-of-tires-portfolio-2026-08-14.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.knowledge-wiki.collective-map.2017.001",
+      "type": "projected_to",
+      "to": "projection.photo.knowledge-wiki.collective-map",
+      "source": "frontmatter",
+      "href": "../../projections/photography/knowledge-wiki-collective-map.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.knowledge-wiki.collective-map.2017.001",
+      "type": "uses_source",
+      "to": "source.permission.jamie-portfolio-album.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/jamie-portfolio-album-2026-08-13.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.knowledge-wiki.collective-map.2017.001",
+      "type": "uses_source",
+      "to": "source.photo-metadata.nycac-participation-images.2017.public-safe",
+      "source": "frontmatter",
+      "href": "../../sources/photo-metadata/nycac-participation-images-2017-public-safe.md",
       "context": null
     },
     {
@@ -13401,6 +13568,22 @@
     {
       "from": "index.knowledge-wiki.employment-context",
       "type": "related_to",
+      "to": "method.betanyc-opportunity-loop",
+      "source": "frontmatter",
+      "href": "../methods/betanyc-opportunity-loop.md",
+      "context": "Daily public-archive review of curated civic-technology leads, with official-posting checks and provisional-only machine intake."
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "method.civic-match-opportunity-loop",
+      "source": "frontmatter",
+      "href": "../methods/civic-match-opportunity-loop.md",
+      "context": "Authenticated candidate-profile discovery, invitations, matching support, and human-controlled external applications."
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
       "to": "opportunity.aclu.product-manager-discovery.8482872002",
       "source": "frontmatter",
       "href": "../opportunities/aclu-product-discovery.md",
@@ -14089,6 +14272,14 @@
     {
       "from": "index.knowledge-wiki.photography",
       "type": "has_asset",
+      "to": "asset.photo.knowledge-wiki.collective-map.2017.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/knowledge-wiki-collective-map-2017.md",
+      "context": "Cleared shared-working-map occurrence for the Knowledge Wiki Graphs method page."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "has_asset",
       "to": "asset.photo.nyc-council.field-kit.2026.001",
       "source": "frontmatter",
       "href": "../assets/photographs/nyc-council-field-kit-2026.md",
@@ -14236,6 +14427,14 @@
       "to": "projection.photo.fair-rent-nyc.shoestring-facilitation",
       "source": "frontmatter",
       "href": "../projections/photography/fair-rent-nyc-shoestring-facilitation.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "projection.photo.knowledge-wiki.collective-map",
+      "source": "frontmatter",
+      "href": "../projections/photography/knowledge-wiki-collective-map.md",
       "context": null
     },
     {
@@ -14972,6 +15171,46 @@
       "to": "source.heteroglossia.sbjsa.2018-10-22",
       "source": "frontmatter",
       "href": "../testimony/heteroglossia/2018-10-22-sbjsa-supportive-witnesses.md",
+      "context": null
+    },
+    {
+      "from": "method.betanyc-opportunity-loop",
+      "type": "related_to",
+      "to": "method.civic-match-opportunity-loop",
+      "source": "frontmatter",
+      "href": "civic-match-opportunity-loop.md",
+      "context": null
+    },
+    {
+      "from": "method.betanyc-opportunity-loop",
+      "type": "related_to",
+      "to": "source.nyc-open-data.jobs.pda4-rgn4",
+      "source": "frontmatter",
+      "href": "../sources/nyc-open-data-jobs-pda4-rgn4.md",
+      "context": null
+    },
+    {
+      "from": "method.betanyc-opportunity-loop",
+      "type": "uses_source",
+      "to": "source.betanyc.civic-tech-newsletter",
+      "source": "frontmatter",
+      "href": "../sources/betanyc-civic-tech-newsletter-2026-08-20.md",
+      "context": null
+    },
+    {
+      "from": "method.civic-match-opportunity-loop",
+      "type": "related_to",
+      "to": "source.nyc-open-data.jobs.pda4-rgn4",
+      "source": "frontmatter",
+      "href": "../sources/nyc-open-data-jobs-pda4-rgn4.md",
+      "context": null
+    },
+    {
+      "from": "method.civic-match-opportunity-loop",
+      "type": "uses_source",
+      "to": "source.civic-match.candidate-network",
+      "source": "frontmatter",
+      "href": "../sources/civic-match-candidate-network-2026-08-20.md",
       "context": null
     },
     {
@@ -16577,6 +16816,22 @@
       "context": null
     },
     {
+      "from": "person.courtney-kishbaugh",
+      "type": "related_to",
+      "to": "method.civic-match-opportunity-loop",
+      "source": "frontmatter",
+      "href": "../methods/civic-match-opportunity-loop.md",
+      "context": null
+    },
+    {
+      "from": "person.courtney-kishbaugh",
+      "type": "uses_source",
+      "to": "source.work-for-america.courtney-kishbaugh-civic-match",
+      "source": "frontmatter",
+      "href": "../sources/work-for-america-courtney-kishbaugh-civic-match.md",
+      "context": null
+    },
+    {
       "from": "person.diya-vij",
       "type": "related_to",
       "to": "organization.nyc-artist-coalition",
@@ -16734,6 +16989,22 @@
       "to": "method.structure-grows-from-material",
       "source": "frontmatter",
       "href": "../methods/structure-grows-from-the-material.md",
+      "context": null
+    },
+    {
+      "from": "person.josh-gee",
+      "type": "related_to",
+      "to": "method.civic-match-opportunity-loop",
+      "source": "frontmatter",
+      "href": "../methods/civic-match-opportunity-loop.md",
+      "context": null
+    },
+    {
+      "from": "person.josh-gee",
+      "type": "uses_source",
+      "to": "source.work-for-america.josh-gee-civic-match",
+      "source": "frontmatter",
+      "href": "../sources/work-for-america-josh-gee-civic-match.md",
       "context": null
     },
     {
@@ -17753,6 +18024,30 @@
       "context": null
     },
     {
+      "from": "projection.photo.knowledge-wiki.collective-map",
+      "type": "related_to",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.knowledge-wiki.collective-map",
+      "type": "uses_source",
+      "to": "asset.photo.knowledge-wiki.collective-map.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/knowledge-wiki-collective-map-2017.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.knowledge-wiki.collective-map",
+      "type": "uses_source",
+      "to": "source.permission.jamie-portfolio-album.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/jamie-portfolio-album-2026-08-13.md",
+      "context": null
+    },
+    {
       "from": "projection.photo.layout-c.home.east-river",
       "type": "related_to",
       "to": "edition.layout-c.2026-07",
@@ -18038,6 +18333,22 @@
       "to": "source.ucsc.narrative-evaluations.2004-2006",
       "source": "frontmatter",
       "href": "../sources/ucsc-narrative-evaluations-2004-2006.md",
+      "context": null
+    },
+    {
+      "from": "research.betanyc-opportunity-review.2026-08-20",
+      "type": "uses_method",
+      "to": "method.betanyc-opportunity-loop",
+      "source": "frontmatter",
+      "href": "../methods/betanyc-opportunity-loop.md",
+      "context": null
+    },
+    {
+      "from": "research.betanyc-opportunity-review.2026-08-20",
+      "type": "uses_source",
+      "to": "source.betanyc.civic-tech-newsletter",
+      "source": "frontmatter",
+      "href": "../sources/betanyc-civic-tech-newsletter-2026-08-20.md",
       "context": null
     },
     {
@@ -18593,6 +18904,22 @@
       "context": "Official current role identity."
     },
     {
+      "from": "source.betanyc.civic-tech-newsletter",
+      "type": "related_to",
+      "to": "method.betanyc-opportunity-loop",
+      "source": "frontmatter",
+      "href": "../methods/betanyc-opportunity-loop.md",
+      "context": null
+    },
+    {
+      "from": "source.betanyc.civic-tech-newsletter",
+      "type": "related_to",
+      "to": "research.betanyc-opportunity-review.2026-08-20",
+      "source": "frontmatter",
+      "href": "../research-runs/betanyc-opportunity-review-2026-08-20.md",
+      "context": null
+    },
+    {
       "from": "source.callnyc.source-repository",
       "type": "documents",
       "to": "project.callnyc",
@@ -18622,6 +18949,30 @@
       "to": "method.recomposable-civic-cultural-systems",
       "source": "frontmatter",
       "href": "../methods/recomposable-civic-cultural-systems.md",
+      "context": null
+    },
+    {
+      "from": "source.civic-match.candidate-network",
+      "type": "related_to",
+      "to": "method.civic-match-opportunity-loop",
+      "source": "frontmatter",
+      "href": "../methods/civic-match-opportunity-loop.md",
+      "context": null
+    },
+    {
+      "from": "source.civic-match.candidate-network",
+      "type": "related_to",
+      "to": "person.courtney-kishbaugh",
+      "source": "frontmatter",
+      "href": "../people/courtney-kishbaugh.md",
+      "context": null
+    },
+    {
+      "from": "source.civic-match.candidate-network",
+      "type": "related_to",
+      "to": "person.josh-gee",
+      "source": "frontmatter",
+      "href": "../people/josh-gee.md",
       "context": null
     },
     {
@@ -19467,6 +19818,14 @@
     {
       "from": "source.permission.jamie-portfolio-album.2026-08-13",
       "type": "related_to",
+      "to": "asset.photo.knowledge-wiki.collective-map.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/knowledge-wiki-collective-map-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.permission.jamie-portfolio-album.2026-08-13",
+      "type": "related_to",
       "to": "asset.photo.nycac-shoestring-facilitation.2017.001",
       "source": "frontmatter",
       "href": "../../assets/photographs/nycac-shoestring-facilitation-2017.md",
@@ -19806,6 +20165,22 @@
       "to": "event.weibel.in-terms-of-media.2024",
       "source": "frontmatter",
       "href": "../events/in-terms-of-media-symposium-2024.md",
+      "context": null
+    },
+    {
+      "from": "source.work-for-america.courtney-kishbaugh-civic-match",
+      "type": "related_to",
+      "to": "person.courtney-kishbaugh",
+      "source": "frontmatter",
+      "href": "../people/courtney-kishbaugh.md",
+      "context": null
+    },
+    {
+      "from": "source.work-for-america.josh-gee-civic-match",
+      "type": "related_to",
+      "to": "person.josh-gee",
+      "source": "frontmatter",
+      "href": "../people/josh-gee.md",
       "context": null
     },
     {
@@ -20587,6 +20962,15 @@
       "kind": "image"
     },
     {
+      "fromPath": "docs/knowledge-bank/assets/photographs/knowledge-wiki-collective-map-2017.md",
+      "from": "asset.photo.knowledge-wiki.collective-map.2017.001",
+      "toPath": "apps/www/public/images/field-notes/knowledge-wiki-collective-map.webp",
+      "to": null,
+      "fragment": null,
+      "line": 4,
+      "kind": "image"
+    },
+    {
       "fromPath": "docs/knowledge-bank/assets/photographs/nycac-shoestring-facilitation-2017.md",
       "from": "asset.photo.nycac-shoestring-facilitation.2017.001",
       "toPath": "apps/www/public/images/field-notes/nycac-shoestring-facilitation.webp",
@@ -21174,10 +21558,28 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
+      "to": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "fragment": null,
+      "line": 104,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/uibk-studio3-postdoc-arch-15927.md",
+      "to": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "fragment": null,
+      "line": 113,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
       "to": "opportunity.aclu.product-manager-discovery.8482872002",
       "fragment": null,
-      "line": 109,
+      "line": 126,
       "kind": "link"
     },
     {
@@ -21186,7 +21588,7 @@
       "toPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
       "to": "opportunity.codepath.claude-corps.5182020007",
       "fragment": null,
-      "line": 110,
+      "line": 127,
       "kind": "link"
     },
     {
@@ -21195,7 +21597,7 @@
       "toPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
       "to": "opportunity.asana.ai-implementation.8027437",
       "fragment": null,
-      "line": 111,
+      "line": 128,
       "kind": "link"
     },
     {
@@ -21204,7 +21606,7 @@
       "toPath": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
       "to": "opportunity.permitflow.product-operations.8a6e6066",
       "fragment": null,
-      "line": 112,
+      "line": 129,
       "kind": "link"
     },
     {
@@ -21213,7 +21615,7 @@
       "toPath": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
       "to": "opportunity.protected.source-backed-memory-consulting.2026",
       "fragment": null,
-      "line": 116,
+      "line": 133,
       "kind": "link"
     },
     {
@@ -21228,78 +21630,6 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
-      "to": "evaluation.employment-context.coverage.2026-07-18",
-      "fragment": null,
-      "line": 142,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/evaluations/employment-leadership-context-2026-08-13.md",
-      "to": "evaluation.employment-leadership-context.2026-08-13",
-      "fragment": null,
-      "line": 143,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/wiki-opportunity-coverage.md",
-      "to": null,
-      "fragment": null,
-      "line": 144,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/wiki-career-trajectory-coverage.md",
-      "to": null,
-      "fragment": null,
-      "line": 145,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/wiki-source-channel-coverage.md",
-      "to": null,
-      "fragment": null,
-      "line": 146,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/wiki-opportunity-discovery.md",
-      "to": null,
-      "fragment": null,
-      "line": 147,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/hiring-acceptance-public.md",
-      "to": null,
-      "fragment": null,
-      "line": 148,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/hiring-acceptance-gap-resolution.md",
-      "to": null,
-      "fragment": null,
-      "line": 149,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/opportunities/aclu-senior-project-manager.md",
       "to": "opportunity.aclu.senior-project-manager.8620968002",
       "fragment": null,
@@ -21309,10 +21639,82 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
+      "to": "evaluation.employment-context.coverage.2026-07-18",
+      "fragment": null,
+      "line": 159,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
       "to": "opportunity.benepass.product-operations.7f963a7a",
       "fragment": null,
       "line": 16,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/evaluations/employment-leadership-context-2026-08-13.md",
+      "to": "evaluation.employment-leadership-context.2026-08-13",
+      "fragment": null,
+      "line": 160,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/wiki-opportunity-coverage.md",
+      "to": null,
+      "fragment": null,
+      "line": 161,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/wiki-career-trajectory-coverage.md",
+      "to": null,
+      "fragment": null,
+      "line": 162,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/wiki-source-channel-coverage.md",
+      "to": null,
+      "fragment": null,
+      "line": 163,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/wiki-opportunity-discovery.md",
+      "to": null,
+      "fragment": null,
+      "line": 164,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/hiring-acceptance-public.md",
+      "to": null,
+      "fragment": null,
+      "line": 165,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/hiring-acceptance-gap-resolution.md",
+      "to": null,
+      "fragment": null,
+      "line": 166,
       "kind": "link"
     },
     {
@@ -21372,10 +21774,28 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/sources/betanyc-civic-tech-newsletter-2026-08-20.md",
+      "to": "source.betanyc.civic-tech-newsletter",
+      "fragment": null,
+      "line": 29,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/research-runs/nyc-jobs-citywide-monitor-2026-08-20.md",
       "to": "research.nyc-jobs.citywide-monitor.2026-08-20",
       "fragment": null,
-      "line": 46,
+      "line": 53,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/methods/civic-match-opportunity-loop.md",
+      "to": "method.civic-match-opportunity-loop",
+      "fragment": null,
+      "line": 62,
       "kind": "link"
     },
     {
@@ -21384,7 +21804,7 @@
       "toPath": "docs/knowledge-bank/applications/nyc-oti-senior-product-manager-782366.md",
       "to": "application.nyc-oti.senior-product-manager.782366",
       "fragment": null,
-      "line": 56,
+      "line": 73,
       "kind": "link"
     },
     {
@@ -21393,25 +21813,7 @@
       "toPath": "docs/knowledge-bank/evaluations/named-public-reader-acceptance-2026-08-13.md",
       "to": "evaluation.named-public-reader-acceptance.2026-08-13",
       "fragment": null,
-      "line": 81,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
-      "to": "opportunity.nyc-oti.technical-operations-manager.782369",
-      "fragment": null,
-      "line": 87,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/uibk-studio3-postdoc-arch-15927.md",
-      "to": "opportunity.uibk.studio3.postdoc.arch-15927",
-      "fragment": null,
-      "line": 96,
+      "line": 98,
       "kind": "link"
     },
     {
@@ -21966,253 +22368,10 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/photography.md",
       "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-dcla-formation-2017.md",
-      "to": "index.photo-set.nycac-dcla-formation.2017",
+      "toPath": "docs/knowledge-bank/assets/photographs/knowledge-wiki-collective-map-2017.md",
+      "to": "asset.photo.knowledge-wiki.collective-map.2017.001",
       "fragment": null,
-      "line": 102,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/indexes/photo-sets/kc-town-hall-fieldwork.md",
-      "to": "index.photo-set.kc-town-hall-fieldwork",
-      "fragment": null,
-      "line": 103,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-walkshed-2019.md",
-      "to": "asset.graphic.kc-town-hall.walkshed.2019.001",
-      "fragment": null,
-      "line": 108,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/research-runs/photographic-source-return-2026-07-26.md",
-      "to": "research.photographic-source-return.2026-07-26",
-      "fragment": null,
-      "line": 110,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-project-sites-2017-2026.md",
-      "to": "index.photo-set.nycac-project-sites.2017-2026",
-      "fragment": null,
-      "line": 115,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/assets/photographs/nycac-shoestring-facilitation-2017.md",
-      "to": "asset.photo.nycac-shoestring-facilitation.2017.001",
-      "fragment": null,
-      "line": 13,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md",
-      "to": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2",
-      "fragment": null,
-      "line": 15,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/projections/photography/edition-launch-2026-08.md",
-      "to": "edition.launch.2026-08",
-      "fragment": null,
-      "line": 17,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/corrections/project-photo-courtesy-credits-2026-08-20.md",
-      "to": "correction.photo.project-courtesy-credits.2026-08-20",
-      "fragment": null,
-      "line": 22,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/assets/photographs/sunday-dinner-shared-map-2013.md",
-      "to": "asset.photo.sunday-dinner.shared-map.2013.001",
-      "fragment": null,
-      "line": 25,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/assets/photographs/kc-town-hall-roof-work-2019.md",
-      "to": "asset.photo.kc-town-hall.roof-work.2019.001",
-      "fragment": null,
-      "line": 27,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/evaluations/curatorial/portfolio-project-covers-2026-08-13.md",
-      "to": "evaluation.curatorial.portfolio-project-covers.2026-08-13",
-      "fragment": null,
-      "line": 29,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/sources/permissions/jamie-portfolio-album-2026-08-13.md",
-      "to": "source.permission.jamie-portfolio-album.2026-08-13",
-      "fragment": null,
-      "line": 34,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/sources/kc-town-hall-tired-of-tires-design-field-archive-2026.md",
-      "to": "source.kc-town-hall.tired-of-tires.design-field-archive.2019-2022",
-      "fragment": null,
-      "line": 42,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-tired-of-tires-flyer-2019.md",
-      "to": "asset.design.kc-town-hall.tired-of-tires-flyer.2019.001",
-      "fragment": null,
-      "line": 46,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/assets/photographs/kc-town-hall-tired-of-tires-before-2022.md",
-      "to": "asset.photo.kc-town-hall.tired-of-tires-before.2022.001",
-      "fragment": null,
-      "line": 47,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/assets/photographs/kc-town-hall-tired-of-tires-after-2022.md",
-      "to": "asset.photo.kc-town-hall.tired-of-tires-after.2022.001",
-      "fragment": null,
-      "line": 48,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/sources/permissions/kc-town-hall-tired-of-tires-portfolio-2026-08-14.md",
-      "to": "source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14",
-      "fragment": null,
-      "line": 50,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
-      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
-      "fragment": null,
-      "line": 75,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/indexes/photo-sets/east-river-canoe-2022.md",
-      "to": "index.photo-set.east-river-canoe.2022",
-      "fragment": null,
-      "line": 76,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/people/elana-gordon.md",
-      "to": "person.elana-gordon",
-      "fragment": null,
-      "line": 77,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/sources/photo-metadata/east-river-2022-public-safe.md",
-      "to": "source.photo-metadata.east-river.2022.public-safe",
-      "fragment": null,
-      "line": 78,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md",
-      "to": "source.permission.elana-gordon.east-river.2026-07",
-      "fragment": null,
-      "line": 79,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/evaluations/curatorial/layout-c-home-east-river-v1.md",
-      "to": "evaluation.curatorial.layout-c.home-east-river.v1",
-      "fragment": null,
-      "line": 80,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/decisions/photography/layout-c-home-east-river-v1.md",
-      "to": "decision.photo.layout-c.home-east-river.v1",
-      "fragment": null,
-      "line": 81,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/decisions/photography/layout-c-resume-no-photo-v1.md",
-      "to": "decision.photo.layout-c.resume-no-photo.v1",
-      "fragment": null,
-      "line": 82,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/decisions/photography/pre-launch-rights-narrowing-2026-07-28.md",
-      "to": "decision.photo.pre-launch.rights-narrowing.2026-07-28",
-      "fragment": null,
-      "line": 83,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
-      "to": "projection.photo.layout-c.home.east-river",
-      "fragment": null,
-      "line": 84,
+      "line": 10,
       "kind": "link"
     },
     {
@@ -22221,7 +22380,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/edition-layout-c-2026-07.md",
       "to": "edition.layout-c.2026-07",
       "fragment": null,
-      "line": 85,
+      "line": 100,
       "kind": "link"
     },
     {
@@ -22230,7 +22389,7 @@
       "toPath": "docs/knowledge-bank/corrections/east-river-credit-2026-07.md",
       "to": "correction.photo.east-river-credit.2026-07",
       "fragment": null,
-      "line": 86,
+      "line": 101,
       "kind": "link"
     },
     {
@@ -22239,7 +22398,7 @@
       "toPath": "docs/knowledge-bank/sources/recollections/jamie-canoe-commuting-2026-07.md",
       "to": "source.recollection.jamie-canoe-commuting.2026-07",
       "fragment": null,
-      "line": 87,
+      "line": 102,
       "kind": "link"
     },
     {
@@ -22248,7 +22407,7 @@
       "toPath": "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md",
       "to": "research-inquiry.documented-canoe-bike-journeys",
       "fragment": null,
-      "line": 88,
+      "line": 103,
       "kind": "link"
     },
     {
@@ -22257,7 +22416,7 @@
       "toPath": "docs/knowledge-bank/workflows/photography-east-river-canary.md",
       "to": "method.photography-east-river-canary",
       "fragment": null,
-      "line": 89,
+      "line": 104,
       "kind": "link"
     },
     {
@@ -22266,7 +22425,268 @@
       "toPath": "rfcs/0003-living-photographic-knowledge-loop.md",
       "to": null,
       "fragment": null,
+      "line": 112,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-dcla-formation-2017.md",
+      "to": "index.photo-set.nycac-dcla-formation.2017",
+      "fragment": null,
+      "line": 117,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/indexes/photo-sets/kc-town-hall-fieldwork.md",
+      "to": "index.photo-set.kc-town-hall-fieldwork",
+      "fragment": null,
+      "line": 118,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-walkshed-2019.md",
+      "to": "asset.graphic.kc-town-hall.walkshed.2019.001",
+      "fragment": null,
+      "line": 123,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/research-runs/photographic-source-return-2026-07-26.md",
+      "to": "research.photographic-source-return.2026-07-26",
+      "fragment": null,
+      "line": 125,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-project-sites-2017-2026.md",
+      "to": "index.photo-set.nycac-project-sites.2017-2026",
+      "fragment": null,
+      "line": 130,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/projections/photography/knowledge-wiki-collective-map.md",
+      "to": "projection.photo.knowledge-wiki.collective-map",
+      "fragment": null,
+      "line": 17,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/photographs/nycac-shoestring-facilitation-2017.md",
+      "to": "asset.photo.nycac-shoestring-facilitation.2017.001",
+      "fragment": null,
+      "line": 28,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md",
+      "to": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2",
+      "fragment": null,
+      "line": 30,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/projections/photography/edition-launch-2026-08.md",
+      "to": "edition.launch.2026-08",
+      "fragment": null,
+      "line": 32,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/corrections/project-photo-courtesy-credits-2026-08-20.md",
+      "to": "correction.photo.project-courtesy-credits.2026-08-20",
+      "fragment": null,
+      "line": 37,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/photographs/sunday-dinner-shared-map-2013.md",
+      "to": "asset.photo.sunday-dinner.shared-map.2013.001",
+      "fragment": null,
+      "line": 40,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/photographs/kc-town-hall-roof-work-2019.md",
+      "to": "asset.photo.kc-town-hall.roof-work.2019.001",
+      "fragment": null,
+      "line": 42,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/evaluations/curatorial/portfolio-project-covers-2026-08-13.md",
+      "to": "evaluation.curatorial.portfolio-project-covers.2026-08-13",
+      "fragment": null,
+      "line": 44,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/sources/permissions/jamie-portfolio-album-2026-08-13.md",
+      "to": "source.permission.jamie-portfolio-album.2026-08-13",
+      "fragment": null,
+      "line": 49,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/sources/kc-town-hall-tired-of-tires-design-field-archive-2026.md",
+      "to": "source.kc-town-hall.tired-of-tires.design-field-archive.2019-2022",
+      "fragment": null,
+      "line": 57,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-tired-of-tires-flyer-2019.md",
+      "to": "asset.design.kc-town-hall.tired-of-tires-flyer.2019.001",
+      "fragment": null,
+      "line": 61,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/photographs/kc-town-hall-tired-of-tires-before-2022.md",
+      "to": "asset.photo.kc-town-hall.tired-of-tires-before.2022.001",
+      "fragment": null,
+      "line": 62,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/photographs/kc-town-hall-tired-of-tires-after-2022.md",
+      "to": "asset.photo.kc-town-hall.tired-of-tires-after.2022.001",
+      "fragment": null,
+      "line": 63,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/sources/permissions/kc-town-hall-tired-of-tires-portfolio-2026-08-14.md",
+      "to": "source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14",
+      "fragment": null,
+      "line": 65,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "fragment": null,
+      "line": 90,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/indexes/photo-sets/east-river-canoe-2022.md",
+      "to": "index.photo-set.east-river-canoe.2022",
+      "fragment": null,
+      "line": 91,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/people/elana-gordon.md",
+      "to": "person.elana-gordon",
+      "fragment": null,
+      "line": 92,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/sources/photo-metadata/east-river-2022-public-safe.md",
+      "to": "source.photo-metadata.east-river.2022.public-safe",
+      "fragment": null,
+      "line": 93,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md",
+      "to": "source.permission.elana-gordon.east-river.2026-07",
+      "fragment": null,
+      "line": 94,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/evaluations/curatorial/layout-c-home-east-river-v1.md",
+      "to": "evaluation.curatorial.layout-c.home-east-river.v1",
+      "fragment": null,
+      "line": 95,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/decisions/photography/layout-c-home-east-river-v1.md",
+      "to": "decision.photo.layout-c.home-east-river.v1",
+      "fragment": null,
+      "line": 96,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/decisions/photography/layout-c-resume-no-photo-v1.md",
+      "to": "decision.photo.layout-c.resume-no-photo.v1",
+      "fragment": null,
       "line": 97,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/decisions/photography/pre-launch-rights-narrowing-2026-07-28.md",
+      "to": "decision.photo.pre-launch.rights-narrowing.2026-07-28",
+      "fragment": null,
+      "line": 98,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
+      "to": "projection.photo.layout-c.home.east-river",
+      "fragment": null,
+      "line": 99,
       "kind": "link"
     },
     {
@@ -22891,6 +23311,24 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/methods/civic-match-opportunity-loop.md",
+      "from": "method.civic-match-opportunity-loop",
+      "toPath": "docs/knowledge-bank/people/josh-gee.md",
+      "to": "person.josh-gee",
+      "fragment": null,
+      "line": 27,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/civic-match-opportunity-loop.md",
+      "from": "method.civic-match-opportunity-loop",
+      "toPath": "docs/knowledge-bank/people/courtney-kishbaugh.md",
+      "to": "person.courtney-kishbaugh",
+      "fragment": null,
+      "line": 28,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/methods/maintenance-handoff-and-stewardship.md",
       "from": "method.maintenance-handoff-stewardship",
       "toPath": "docs/knowledge-bank/projects/harry-j-epstein.md",
@@ -23067,7 +23505,7 @@
       "toPath": "docs/knowledge-bank/capabilities/technical-operations.md",
       "to": "capability.technical-operations",
       "fragment": null,
-      "line": 18,
+      "line": 39,
       "kind": "link"
     },
     {
@@ -24418,6 +24856,24 @@
       "to": null,
       "fragment": null,
       "line": 65,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/betanyc-civic-tech-newsletter-2026-08-20.md",
+      "from": "source.betanyc.civic-tech-newsletter",
+      "toPath": "docs/knowledge-bank/methods/betanyc-opportunity-loop.md",
+      "to": "method.betanyc-opportunity-loop",
+      "fragment": null,
+      "line": 23,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/betanyc-civic-tech-newsletter-2026-08-20.md",
+      "from": "source.betanyc.civic-tech-newsletter",
+      "toPath": "docs/knowledge-bank/research-runs/betanyc-opportunity-review-2026-08-20.md",
+      "to": "research.betanyc-opportunity-review.2026-08-20",
+      "fragment": null,
+      "line": 24,
       "kind": "link"
     },
     {

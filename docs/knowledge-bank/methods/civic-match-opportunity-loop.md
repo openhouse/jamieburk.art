@@ -5,7 +5,7 @@ kind: method
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-20
+last_reviewed: 2026-08-21
 review_by: 2026-09-20
 canonical_path: docs/knowledge-bank/methods/civic-match-opportunity-loop.md
 summary: Models Civic Match as an authenticated talent-network source with candidate discovery, invitations, tracking, events, and staff-assisted matching.
@@ -42,3 +42,9 @@ resume lineage, privacy, and human gates before any model-reader evaluation.
 Only readers tied to the lifecycle-selected opportunity set are eligible for
 model calls. Jamie alone controls protected answers, visibility, consent, and
 final submission.
+
+The named program-leadership lenses for this source are [Josh
+Gee](../people/josh-gee.md) and [Courtney
+Kishbaugh](../people/courtney-kishbaugh.md). Their records support explicitly
+fictionalized, public-source evaluation only—not participation, quotation,
+endorsement, recommendation, or a hiring decision.

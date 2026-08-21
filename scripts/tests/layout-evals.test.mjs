@@ -32,6 +32,17 @@ test("a missing caption fails the manifest contract", () => {
   assert(result.failures.some(({ criterion }) => criterion === "manifest-bound-publication"));
 });
 
+test("the Knowledge Wiki Graphs method retains its governed collective-map photograph", () => {
+  const path = "apps/www/src/data/photography.ts";
+  const source = readFileSync(path, "utf8").replace(
+    'src: "/images/field-notes/knowledge-wiki-collective-map.webp",',
+    ""
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "governed-photographic-field"));
+});
+
 test("a decorative gradient fails the material-system contract", () => {
   const path = "apps/www/src/app/globals.css";
   const source = `${readFileSync(path, "utf8")}\n.test { background: linear-gradient(red, blue); }\n`;

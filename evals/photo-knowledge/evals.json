@@ -42,6 +42,11 @@
       "statementId": "statement.photo.nycac-market-hotel.courtesy-credit.v1"
     },
     {
+      "photoId": "knowledge-wiki-collective-map",
+      "credit": "Photo courtesy of NYC Artist Coalition.",
+      "statementId": "statement.photo.knowledge-wiki.collective-map.courtesy-credit.v1"
+    },
+    {
       "photoId": "sunday-dinner-shared-map",
       "credit": "Photo courtesy of Sunday Dinner NYC.",
       "statementId": "statement.photo.sunday-dinner.shared-map.courtesy-credit.v1"

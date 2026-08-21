@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Hiring acceptance Wiki gap resolution
 
-**Candidate commit:** `f7c35ab7f42daffd3af862c55db78d32766a0092`
-**Public report hash:** `cffb95218315905b6ed43e2766d4969ba4a2ea05f75f4ea6b1c5b1e71fa926c4`
-**Wiki fingerprint:** `17b016cd09ba656be4b179256b89a63d9c97dcc106c9e539c88217a9ea4d8de6`
+**Candidate commit:** `17aae42ff52c8f5aa372d62fe23058198daa9830`
+**Public report hash:** `6604c79685b9e198926794ccdbf38e8dd9512f2516f91228ce4df6963f19120e`
+**Wiki fingerprint:** `9770f9581cab7c3dc09cf62d517ba9e1b35685e9d45fb092366f0352c41c605c`
 
 The gap resolver runs after the public-only evaluator. It can identify Wiki evidence, but every public change remains human-reviewed.
 
@@ -11,6 +11,7 @@ The gap resolver runs after the public-only evaluator. It can identify Wiki evid
 
 - `requirement.codepath.qa-and-bug-pipeline` - **visible-weak-evidence-gap**; Inventory real QA and issue-triage work; do not substitute general project coordination.
 - `requirement.codepath.technical-test-fluency` - **source-needs-close-reading**; Verify current hands-on evidence and prepare a bounded technical demonstration if supportable.
+- `requirement.codepath.ai-automation` - **role-context-or-evidence-unknown**; Demonstrate one measured automation loop tied to delivery or QA.
 - `requirement.aclu.budget-and-resources` - **visible-weak-evidence-gap**; Identify exact budget and resource authority; do not imply procurement or financial authority not held.
 - `requirement.benepass.quantified-prioritization` - **visible-weak-evidence-gap**; Use only supported HJE figures and explain the decision they informed.
 - `requirement.oti-senior-product-manager.discovery-research` - **role-context-or-evidence-unknown**; Use the bounded Tired of Tires service example in the application; distinguish direct field contact, project-level survey evidence, and held component-authorship details.

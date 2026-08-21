@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import SourceBackedMemory from "@/content/lab/source-backed-team-memory.mdx";
 import { Cite, Claim, References } from "@/components/citations";
 import { JBButton } from "@/components/JBButton";
+import { ResponsiveMedia } from "@/components/ResponsiveMedia";
+import { portfolioPhotos } from "@/data/photography";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
@@ -14,6 +16,7 @@ export const metadata: Metadata = createMetadata({
 });
 
 export default function SourceBackedTeamMemoryPage() {
+  const collectiveMapPhoto = portfolioPhotos.knowledgeWikiCollectiveMap;
   const graphLayers = [
     {
       label: "Semantic graph",
@@ -59,6 +62,28 @@ export default function SourceBackedTeamMemoryPage() {
             pageId="source-backed-team-memory"
             occurrenceId="knowledge-wiki-graph-method"
           />
+        </p>
+        <figure className="mt-8 overflow-hidden rounded-lg border border-jb-ink/12 bg-jb-paper">
+          <ResponsiveMedia
+            alt={collectiveMapPhoto.alt}
+            className="h-auto w-full"
+            height={collectiveMapPhoto.height}
+            sizes="(min-width: 1024px) 768px, 100vw"
+            src={collectiveMapPhoto.src}
+            width={collectiveMapPhoto.width}
+          />
+          <figcaption className="border-t border-jb-ink/10 p-4 text-sm leading-6 text-jb-ink/76">
+            {collectiveMapPhoto.caption}
+            <span className="mt-1 block text-jb-ink/60">
+              {collectiveMapPhoto.credit}
+            </span>
+          </figcaption>
+        </figure>
+        <p className="mt-6 max-w-3xl text-lg leading-8 text-jb-ink/76">
+          The practice begins with knowledge already present in people,
+          language, artifacts, and relationships. The system helps a team make
+          that knowledge visible, connected, and usable without claiming
+          ownership of it.
         </p>
         <div className="mt-6 rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">
           <p className="leading-7 text-jb-ink/76">

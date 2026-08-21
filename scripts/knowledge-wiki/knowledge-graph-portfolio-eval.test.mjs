@@ -67,3 +67,52 @@ expectFailure(
   },
   /loses the Source-Backed Team Memory and Noting.us lineage/
 );
+
+expectFailure(
+  "the collective-map photograph cannot disappear from the method",
+  (candidate) => {
+    candidate.labPage = candidate.labPage.replace(
+      "portfolioPhotos.knowledgeWikiCollectiveMap",
+      "portfolioPhotos.eastRiver"
+    );
+  },
+  /collective-knowledge principle/
+);
+
+expectFailure(
+  "the selected pixels cannot drift after Jamie's review",
+  (candidate) => {
+    candidate.photoDerivativeSha256 = "0".repeat(64);
+  },
+  /missing or does not match the reviewed pixels/
+);
+
+expectFailure(
+  "the project courtesy credit cannot silently disappear",
+  (candidate) => {
+    candidate.photoManifest = candidate.photoManifest.replaceAll(
+      "Photo courtesy of NYC Artist Coalition.",
+      ""
+    );
+  },
+  /courtesy credit/
+);
+
+expectFailure(
+  "the exact occurrence must remain in the album authorization",
+  (candidate) => {
+    candidate.photoPermission = candidate.photoPermission.replaceAll(
+      "asset.photo.knowledge-wiki.collective-map.2017.001",
+      "asset.photo.removed"
+    );
+  },
+  /authorization does not record/
+);
+
+expectFailure(
+  "private photo locators cannot enter the public-safe records",
+  (candidate) => {
+    candidate.photoAsset += "\nsource: /Volumes/private/photo.jpg\n";
+  },
+  /private locator/
+);

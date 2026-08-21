@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to CallNYC
 
-**Source commit:** `afa0bf9876d50b9fcfe6c256b60d71c14bd7bb9d`
-**Generation time:** 2026-08-20T16:43:00-04:00
-**Source fingerprint:** `17b016cd09ba656be4b179256b89a63d9c97dcc106c9e539c88217a9ea4d8de6`
+**Source commit:** `17aae42ff52c8f5aa372d62fe23058198daa9830`
+**Generation time:** 2026-08-21T00:57:22-04:00
+**Source fingerprint:** `9770f9581cab7c3dc09cf62d517ba9e1b35685e9d45fb092366f0352c41c605c`
 
 - [Digital District participant photograph metadata](../../assets/digital-district-photo.md) - `part_of` (frontmatter)
 - [Jamie with a civic field kit at New York City Council](../../assets/photographs/nyc-council-field-kit-2026.md) - `related_to` (frontmatter)
@@ -27,7 +27,7 @@
 - [Role, Collective Authorship, and Protected Absence](../../indexes/role-collective-authorship-and-protected-absence.md) - `related_to` (frontmatter)
 - [Identity Systems as Shared Infrastructure](../../methods/identity-systems-as-shared-infrastructure.md) - `related_to` (frontmatter)
 - [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `related_to` (frontmatter)
-- [Source-Backed Team Memory](../../methods/source-backed-team-memory.md) - `related_to` (frontmatter)
+- [Knowledge Wiki Graph / Source-Backed Team Memory](../../methods/source-backed-team-memory.md) - `related_to` (frontmatter)
 - [ACLU - Product Manager II, Discovery](../../opportunities/aclu-product-discovery.md) - `related_to` (frontmatter)
 - [ACLU - Senior Project Manager, Learning and Project Solutions](../../opportunities/aclu-senior-project-manager.md) - `related_to` (frontmatter)
 - [NYC OTI - PIT Crew Senior Product Designer 782373](../../opportunities/oti-pit-senior-product-designer-782373.md) - `related_to` (frontmatter)

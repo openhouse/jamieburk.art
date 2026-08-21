@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `afa0bf9876d50b9fcfe6c256b60d71c14bd7bb9d`
-**Generation time:** 2026-08-20T16:43:00-04:00
-**Source fingerprint:** `17b016cd09ba656be4b179256b89a63d9c97dcc106c9e539c88217a9ea4d8de6`
+**Source commit:** `17aae42ff52c8f5aa372d62fe23058198daa9830`
+**Generation time:** 2026-08-21T00:57:22-04:00
+**Source fingerprint:** `9770f9581cab7c3dc09cf62d517ba9e1b35685e9d45fb092366f0352c41c605c`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 28
+- Nodes added: 39
 - Nodes removed: 0
-- Edges added: 118
+- Edges added: 147
 - Edges removed: 8
 - New type-aware orphans: 0
 - Current rights-review records: 185
@@ -17,20 +17,29 @@ Compared with the graph artifact on `origin/develop`.
 ## Added nodes
 
 - `application.nyc-oti.senior-product-manager.782366`
+- `asset.photo.knowledge-wiki.collective-map.2017.001`
 - `correction.hje-thick-arts-client-chronology.2026`
 - `correction.photo.project-courtesy-credits.2026-08-20`
 - `decision.portfolio.cloudinary-selective-media-delivery.2026-08-15`
+- `method.betanyc-opportunity-loop`
+- `method.civic-match-opportunity-loop`
 - `opportunity.nyc-oti.pit-senior-product-designer.782373`
 - `opportunity.nyc-oti.product-manager.784450`
 - `opportunity.nyc-oti.speed-operations-manager.789810`
 - `opportunity.nyc-oti.speed-senior-product-manager.789610`
 - `opportunity.uibk.studio3.postdoc.arch-15927`
+- `person.courtney-kishbaugh`
+- `person.josh-gee`
 - `person.kathrin-aste`
 - `person.thomas-edlinger`
 - `portfolio.work.kc-spaces-fund`
+- `projection.photo.knowledge-wiki.collective-map`
 - `projection.photo.social-preview.east-river`
+- `research.betanyc-opportunity-review.2026-08-20`
 - `research.nyc-jobs.citywide-monitor.2026-08-20`
 - `research.nyc-oti-product-management-ranking.2026-08-20`
+- `source.betanyc.civic-tech-newsletter`
+- `source.civic-match.candidate-network`
 - `source.jobs.oti.executive-director-product-management.789563`
 - `source.jobs.oti.pit-senior-product-designer.782373`
 - `source.jobs.oti.product-manager.784450`
@@ -44,3 +53,5 @@ Compared with the graph artifact on `origin/develop`.
 - `source.project-websites.live-audit.2026-08-14`
 - `source.uibk.postdoc-profile.2026`
 - `source.uibk.studio3.leadership.2026`
+- `source.work-for-america.courtney-kishbaugh-civic-match`
+- `source.work-for-america.josh-gee-civic-match`

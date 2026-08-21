@@ -6,7 +6,7 @@ source_kind: first-party-publication-authorization
 status: maintained
 visibility: summary-only
 sensitivity: moderate
-last_reviewed: 2026-08-20
+last_reviewed: 2026-08-21
 review_by: 2027-02-20
 canonical_path: docs/knowledge-bank/sources/permissions/jamie-portfolio-album-2026-08-13.md
 summary: Public-safe capsule recording Jamie Burkart's destination-bound authorization to select and publish photographs from the designated Apple Photos portfolio album without exposing album identifiers or private metadata.
@@ -24,12 +24,14 @@ authorization:
     - public Git derivative
     - staging review
     - social-preview composition with placement-specific creator attribution
+    - production publication for explicitly approved exact occurrences
   selected_assets:
     - asset.photo.east-river-manhattan-bridge.2022.001
     - asset.photo.nycac-shoestring-facilitation.2017.001
     - asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2
     - asset.photo.sunday-dinner.shared-map.2013.001
     - asset.photo.kc-town-hall.roof-work.2019.001
+    - asset.photo.knowledge-wiki.collective-map.2017.001
   required_credit: Verified photographers remain attributed according to creator permission and exact placement; otherwise the public display uses the relevant project courtesy credit. The East River homepage credit is visible and its social-preview credit may travel in metadata rather than rendered pixels.
   social_preview_release:
     production: approved
@@ -40,6 +42,14 @@ authorization:
     alternatives_reviewed: 6
     unique_compositions_reviewed: 4
     rendered_sha256: 1f83d66b7e35e8a3a955819cf2104b79a88c9a8bd3953fd6fa691143bdb6da42
+  exact_occurrence_releases:
+    - asset: asset.photo.knowledge-wiki.collective-map.2017.001
+      route: /lab/source-backed-team-memory
+      production: approved
+      indexing: approved
+      authority: Jamie Burkart
+      approved_at: 2026-08-21
+      rendered_sha256: a596480d6276fd4fb02fcbc6822ef79e049bdeb27c3081a574892ee5b2c0d036
   excludes:
     - Apple Photos identifiers
     - original archive filenames
@@ -72,6 +82,9 @@ relations:
   - type: related_to
     target: asset.photo.kc-town-hall.roof-work.2019.001
     href: ../../assets/photographs/kc-town-hall-roof-work-2019.md
+  - type: related_to
+    target: asset.photo.knowledge-wiki.collective-map.2017.001
+    href: ../../assets/photographs/knowledge-wiki-collective-map-2017.md
 ---
 
 # Jamie Burkart portfolio-album publication authorization
@@ -96,6 +109,10 @@ relations:
   Hall.
 - [x] Album identifiers, People tags, face associations, geolocation, original
   filenames, and raw metadata remain private.
+- [x] On August 21, 2026, Jamie asked for an image representing the Knowledge
+  Wiki Graph project, selected the exact metadata-stripped collective-map
+  derivative through this instruction, and directed staging and production
+  deployment of its occurrence on the method page.
 - [x] After close reading of three alternatives, Jamie selected the current
   Image 1 social-preview composition and explicitly instructed production and
   indexing deployment on August 15, 2026.
