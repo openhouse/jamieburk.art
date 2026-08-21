@@ -88,7 +88,7 @@ export default function AboutPage() {
                 className="font-semibold text-jb-blue hover:text-jb-green"
                 href="/lab/source-backed-team-memory"
               >
-                source-backed team memory
+                Knowledge Wiki Graphs
               </Link>
               : how can a structure help people recognize their relationships,
               participate, remember what happened, and continue the work?
@@ -268,14 +268,23 @@ export default function AboutPage() {
                   className="text-jb-blue hover:text-jb-green"
                   href="/lab/source-backed-team-memory"
                 >
-                  Source-backed team memory
+                  Knowledge Wiki Graphs
                 </Link>
               </h3>
               <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
+                <Claim
+                  as="p"
+                  claimId="CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026"
+                  projection="case-study"
+                  surface="/about"
+                  pageId="about"
+                  occurrenceId="knowledge-wiki-graph-method"
+                />
                 <p>
                   <strong className="text-jb-ink">Relationships:</strong>{" "}
-                  sources, claims, decisions, contributors, open questions,
-                  corrections, and the audiences who need to trust the record.
+                  semantic meaning, evidentiary support, source custody,
+                  contributors, open questions, corrections, and the audiences
+                  who need to trust the record.
                 </p>
                 <p>
                   <strong className="text-jb-ink">Interface and use:</strong>{" "}
@@ -287,9 +296,10 @@ export default function AboutPage() {
                   <strong className="text-jb-ink">
                     Learning and continuity:
                   </strong>{" "}
-                  citations, decision records, correction paths, evaluation
-                  receipts, and explicit human gates let another collaborator
-                  inspect what is known and safely continue the work.
+                  locally authoritative repositories, stable identities,
+                  citations, correction paths, evaluation receipts, and
+                  explicit human gates let another collaborator inspect what is
+                  known and safely continue the work.
                 </p>
               </div>
             </article>
@@ -308,9 +318,10 @@ export default function AboutPage() {
               These recurring steps are an analytical pattern, not evidence
               that different projects are structurally equivalent. Missing
               evidence and relationships remain missing; I do not invent them.
-              Source-Backed Team Memory is an early practice, not peer-reviewed
-              research, and historical implementation evidence does not by
-              itself establish present technical proficiency.
+              The Knowledge Wiki Graph is an evolving research practice, not a
+              finished platform, proof of client adoption, or peer-reviewed
+              research; historical implementation evidence does not by itself
+              establish present technical proficiency.
             </p>
           </aside>
         </section>

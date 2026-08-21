@@ -4,6 +4,7 @@ import { callNycSocialPopulationJuly2026 } from "./callnyc-social-population-202
 import { googleDriveProductionJuly2026 } from "./google-drive-production-2026-07.ts";
 import { historicalKnowledge } from "./historical-knowledge.ts";
 import { hjeClientChronologyAugust2026 } from "./hje-client-chronology-2026-08.ts";
+import { knowledgeWikiGraphEcosystemAugust2026 } from "./knowledge-wiki-graph-ecosystem-2026-08.ts";
 import { kcTownHallCouncilFunding } from "./kc-town-hall-council-funding.ts";
 import { kcTownHallFieldPractice } from "./kctownhall-field-practice.ts";
 import { kcTownHallResidentServiceAugust2026 } from "./kctownhall-resident-service-2026-08.ts";
@@ -60,6 +61,7 @@ const knowledgeBankInput = {
     ...googleDriveProductionJuly2026.intakeItems,
     ...historicalKnowledge.intakeItems,
     ...hjeClientChronologyAugust2026.intakeItems,
+    ...knowledgeWikiGraphEcosystemAugust2026.intakeItems,
     ...socialMediaProductionJuly2026.intakeItems,
     ...urbanhermitSocialPopulationJuly2026.intakeItems,
     ...wowListFacebookPostKnowledge.intakeItems,
@@ -112,6 +114,7 @@ const knowledgeBankInput = {
     ...googleDriveProductionJuly2026.observations,
     ...historicalKnowledge.observations,
     ...hjeClientChronologyAugust2026.observations,
+    ...knowledgeWikiGraphEcosystemAugust2026.observations,
     ...socialMediaProductionJuly2026.observations,
     ...urbanhermitSocialPopulationJuly2026.observations,
     ...wowListFacebookPostKnowledge.observations,
@@ -268,6 +271,7 @@ const knowledgeBankInput = {
     ...googleDriveProductionJuly2026.sources,
     ...historicalKnowledge.sources,
     ...hjeClientChronologyAugust2026.sources,
+    ...knowledgeWikiGraphEcosystemAugust2026.sources,
     ...socialMediaProductionJuly2026.sources,
     ...urbanhermitSocialPopulationJuly2026.sources,
     ...wowListFacebookPostKnowledge.sources,
@@ -413,6 +417,7 @@ const knowledgeBankInput = {
       researchInquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     ...archiveProductionJuly2026.claims,
+    ...knowledgeWikiGraphEcosystemAugust2026.claims,
     ...callNycSocialPopulationJuly2026.claims,
     ...googleDriveProductionJuly2026.claims,
     ...historicalKnowledge.claims,
@@ -529,7 +534,9 @@ const knowledgeBankInput = {
     id: "about",
     surface: "/about",
     sourceOrder: [
-      "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28"
+      "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28",
+      "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
+      "SRC-KNOWLEDGE-WIKI-RFC-0006-2026"
     ],
     occurrences: [
       {
@@ -537,6 +544,43 @@ const knowledgeBankInput = {
         claimId: "CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY",
         projection: "archive-note",
         sourceIds: ["SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28"]
+      },
+      {
+        id: "knowledge-wiki-graph-method",
+        claimId: "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
+          "SRC-KNOWLEDGE-WIKI-RFC-0006-2026"
+        ]
+      }
+    ]
+  }, {
+    id: "colophon",
+    surface: "/colophon",
+    sourceOrder: [
+      "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
+      "SRC-KNOWLEDGE-WIKI-RFC-0006-2026"
+    ],
+    occurrences: [
+      {
+        id: "knowledge-wiki-graph-method",
+        claimId: "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026",
+        projection: "case-study"
+      }
+    ]
+  }, {
+    id: "work-index",
+    surface: "/work",
+    sourceOrder: [
+      "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
+      "SRC-KNOWLEDGE-WIKI-RFC-0006-2026"
+    ],
+    occurrences: [
+      {
+        id: "knowledge-wiki-graph-method",
+        claimId: "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026",
+        projection: "case-study"
       }
     ]
   }, {
@@ -712,12 +756,19 @@ const knowledgeBankInput = {
     id: "source-backed-team-memory",
     surface: "/lab/source-backed-team-memory",
     sourceOrder: [
+      "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
+      "SRC-KNOWLEDGE-WIKI-RFC-0006-2026",
       "SRC-AI-EVALS-CERTIFICATE-2026",
       "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       "SRC-CALLNYC-POLITICO-2016-03-14",
       "SRC-CALLNYC-GITHUB-REPOSITORY"
     ],
     occurrences: [
+      {
+        id: "knowledge-wiki-graph-method",
+        claimId: "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026",
+        projection: "case-study"
+      },
       { id: "source-backed-memory-method", claimId: "CLM-SOURCE-BACKED-MEMORY-METHOD-2026", projection: "case-study" },
       { id: "ai-evals-course-completion", claimId: "CLM-AI-EVALS-COURSE-COMPLETION-2026", projection: "case-study", sourceIds: ["SRC-AI-EVALS-CERTIFICATE-2026"] },
       {

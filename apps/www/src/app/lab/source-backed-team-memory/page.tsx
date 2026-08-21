@@ -7,13 +7,28 @@ import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
-  title: "Source-Backed Team Memory - Jamie Burkart",
+  title: "Knowledge Wiki Graphs - Jamie Burkart",
   description:
-    "A lab / proof-of-practice exploring source-backed operating memory, decision lineage, onboarding context, and human-correctable AI workflows.",
+    "An evolving research practice connecting semantic, evidence, and source-custody graphs to human-reviewed portfolio and project outputs.",
   path: "/lab/source-backed-team-memory"
 });
 
 export default function SourceBackedTeamMemoryPage() {
+  const graphLayers = [
+    {
+      label: "Semantic graph",
+      text: "What the work means: projects, people, decisions, capabilities, claims, inquiries, and their relationships."
+    },
+    {
+      label: "Evidence graph",
+      text: "Why a statement can be trusted or remains open: sources, observations, assets, citations, limitations, and provenance."
+    },
+    {
+      label: "Source-custody graph",
+      text: "Where authoritative material is held and under what access, rights, consent, and retention conditions."
+    }
+  ];
+
   const workedExample = [
     {
       label: "Known",
@@ -34,13 +49,15 @@ export default function SourceBackedTeamMemoryPage() {
       <div className="jb-reading">
         <p className="text-sm font-semibold uppercase text-jb-blue">Lab / method</p>
         <h1 className="mt-3 text-5xl font-bold text-jb-ink">
-          Source-Backed Team Memory
+          Knowledge Wiki Graphs
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
           <Claim
-            claimId="CLM-SOURCE-BACKED-MEMORY-METHOD-2026"
+            claimId="CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026"
             projection="case-study"
             surface="/lab/source-backed-team-memory"
+            pageId="source-backed-team-memory"
+            occurrenceId="knowledge-wiki-graph-method"
           />
         </p>
         <div className="mt-6 rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">
@@ -50,9 +67,47 @@ export default function SourceBackedTeamMemoryPage() {
             judgment, or private archive browser.
           </p>
         </div>
+        <section className="mt-10 border-y border-jb-ink/12 py-10">
+          <p className="text-sm font-semibold uppercase text-jb-blue">
+            At a glance
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold text-jb-ink">
+            Three graph responsibilities, one reviewed output
+          </h2>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {graphLayers.map((item) => (
+              <div
+                className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5"
+                key={item.label}
+              >
+                <h3 className="text-xl font-semibold text-jb-blue">{item.label}</h3>
+                <p className="mt-3 text-sm leading-6 text-jb-ink/74">{item.text}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-6 max-w-3xl leading-8 text-jb-ink/76">
+            The portfolio is a selective projection from those responsibilities,
+            composed for a particular audience and released through human review.
+          </p>
+        </section>
         <div className="mt-10 space-y-6">
           <SourceBackedMemory />
         </div>
+        <section className="mt-12 border-b border-jb-ink/12 pb-10">
+          <p className="text-sm font-semibold uppercase text-jb-blue">
+            Earlier method
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold text-jb-ink">
+            Source-Backed Team Memory remains part of the lineage
+          </h2>
+          <p className="mt-4 max-w-3xl leading-8 text-jb-ink/76">
+            <Claim
+              claimId="CLM-SOURCE-BACKED-MEMORY-METHOD-2026"
+              projection="case-study"
+              surface="/lab/source-backed-team-memory"
+            />
+          </p>
+        </section>
         <section className="mt-12 border-y border-jb-ink/12 py-10">
           <p className="text-sm font-semibold uppercase text-jb-blue">
             Worked example
@@ -154,7 +209,7 @@ export default function SourceBackedTeamMemoryPage() {
             View selected work
           </JBButton>
           <JBButton href={site.emailHref}>
-            Discuss a focused source-backed memory sprint
+            Discuss a focused knowledge-system sprint
           </JBButton>
         </div>
       </div>
