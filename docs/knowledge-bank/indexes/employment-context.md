@@ -80,6 +80,9 @@ relations:
     target: evaluation.portfolio.source-backed-team-memory.protected-reader.2026-08-21
     href: ../evaluations/protected-team-memory-reader.md
   - type: related_to
+    target: evaluation.portfolio.source-backed-team-memory.anonymized-case-study.2026-08-21
+    href: ../evaluations/anonymized-team-memory-case-study.md
+  - type: related_to
     target: claim.employment.mobility-and-location.2026-08-15
     href: ../claims/employment-mobility-and-location.md
   - type: related_to
@@ -193,6 +196,7 @@ opportunity discovery.
 
 - [Protected source-backed team-memory consulting lead](../opportunities/source-backed-team-memory.md)
 - [Protected-reader proposal gate](../evaluations/protected-team-memory-reader.md)
+- [Anonymized case-study gate](../evaluations/anonymized-team-memory-case-study.md)
 
 This node belongs in the opportunity base set but not the live-job count. Its
 metadata is anonymous, its commercial state is conditional, and its protected

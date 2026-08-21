@@ -22,6 +22,9 @@ relations:
   - type: uses_source
     target: source.protected.source-backed-memory-opportunity.2026
     href: ../sources/protected-source-backed-memory-opportunity.md
+  - type: related_to
+    target: evaluation.portfolio.source-backed-team-memory.anonymized-case-study.2026-08-21
+    href: anonymized-team-memory-case-study.md
 human_review: governed-open
 ---
 

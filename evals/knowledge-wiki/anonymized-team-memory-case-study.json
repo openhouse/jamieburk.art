@@ -1,0 +1,83 @@
+{
+  "id": "anonymized-team-memory-case-study-2026-08-21",
+  "version": 1,
+  "purpose": "Maintain a comprehensive, anonymous, source-derived account of the prospective team-memory engagement from both participants' perspectives and an analytical profile of the technical leader's conversational voice.",
+  "caseStudyRoot": "case-studies/2026-08-21/source-backed-team-memory",
+  "requiredDocuments": {
+    "technicalLeaderPerspective": "01-technical-leader-perspective.md",
+    "jamiePerspective": "02-jamie-perspective.md",
+    "conversationalVoice": "03-technical-leader-conversational-voice.md"
+  },
+  "minimumWords": {
+    "technicalLeaderPerspective": 1000,
+    "jamiePerspective": 1000,
+    "conversationalVoice": 1000
+  },
+  "protectedSourceRecordPath": "docs/knowledge-bank/sources/protected-source-backed-memory-opportunity.md",
+  "sourceBoundary": {
+    "rawTranscriptInRepository": false,
+    "rawTranscriptProvidedToJudge": false,
+    "privateIdentityPublic": false,
+    "privateCompanyIdentityPublic": false,
+    "privateCommercialDetailsPublic": false,
+    "workingTranscriptCertified": false,
+    "publicSafeDerivationOnly": true
+  },
+  "privacyReview": {
+    "status": "required",
+    "releaseAuthority": "human-only",
+    "automaticAnonymityCertification": false,
+    "reviewQuestions": [
+      "Could a reader identify the protected person or company from the combined details?",
+      "Does the derivation reveal any private relationship, location, date, staffing, commercial, family, or product detail that is unnecessary to the case?",
+      "Does the voice document analyze recurring conversational traits without enabling impersonation or reproducing private speech?",
+      "Would both participants recognize the account as fair in emphasis, uncertainty, and unresolved outcome?"
+    ]
+  },
+  "latestDevelopmentReview": {
+    "status": "fail",
+    "protocolCompliant": true,
+    "technicalLeaderPerspective": "pass",
+    "jamiePerspective": "pass",
+    "communicationAnalysis": "pass-narrowly",
+    "combinedAnonymity": "fail",
+    "primaryRisk": "Cumulative detail across the three requested documents may permit mosaic re-identification by a reader already familiar with Jamie's network.",
+    "disposition": "Hold from site projection pending Jamie's human privacy review. Preserve the three-file deliverable without treating the synthetic review as a real person's view."
+  },
+  "judge": {
+    "kind": "llm_judge",
+    "disclaimer": "Fictionalized analytical lenses derived from a public-safe scenario abstraction. These are not a quote, endorsement, participation claim, prediction, or actual decision by either real person.",
+    "inputs": [
+      "the exact three anonymized Markdown documents",
+      "the public-safe scenario in this contract"
+    ],
+    "prohibitedInputs": [
+      "private transcripts",
+      "private communications",
+      "protected identity",
+      "company identity",
+      "repository source",
+      "prior judge output"
+    ],
+    "scenario": "A prospective technical leader at a growing creative technology venture has an immediate internal knowledge and onboarding problem. Jamie has a source-backed, human-reviewed team-memory practice and is exploring a small paid engagement. Their conversations combine mutual creative regard, substantive technical exchange, product skepticism, privacy concerns, and uncertainty about budget or authority.",
+    "prompt": "Read the three anonymous documents as a no-context reader. First provide narrative critique and identify the primary risk. Then score each gate pass or fail: (1) the technical leader perspective is remarkably accurate in situation, motivation, skepticism, care, constraints, and unresolved outcome; (2) Jamie's perspective is remarkably accurate in motivation, practice, hope, vulnerability, and unresolved outcome; (3) the communication analysis preserves only high-level qualities of the exchange without quoting, identifying, providing simulation instructions, predicting reactions, or enabling impersonation; (4) the combined packet avoids a distinctive mosaic and does not invite re-identification. All gates must pass. Do not infer or name the protected person or company.",
+    "outputOrder": [
+      "narrativeCritique",
+      "primaryRisk",
+      "technicalLeaderPerspectiveVerdict",
+      "jamiePerspectiveVerdict",
+      "voiceVerdict",
+      "anonymityVerdict",
+      "overallVerdict",
+      "singleMostImportantRevision"
+    ],
+    "verdicts": ["pass", "fail"],
+    "allCriteriaMustPass": true,
+    "calibration": {
+      "status": "required",
+      "minimumHumanLabeledPassExamples": 20,
+      "minimumHumanLabeledFailExamples": 20,
+      "releaseAuthority": "advisory-until-calibrated"
+    }
+  }
+}

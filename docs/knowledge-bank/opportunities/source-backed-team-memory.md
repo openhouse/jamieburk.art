@@ -107,6 +107,9 @@ relations:
   - type: related_to
     target: evaluation.portfolio.source-backed-team-memory.protected-reader.2026-08-21
     href: ../evaluations/protected-team-memory-reader.md
+  - type: related_to
+    target: evaluation.portfolio.source-backed-team-memory.anonymized-case-study.2026-08-21
+    href: ../evaluations/anonymized-team-memory-case-study.md
 evidence:
   - target: source.protected.source-backed-memory-opportunity.2026
     relationship: private-support
