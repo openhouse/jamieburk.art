@@ -10,6 +10,12 @@ review_by: 2026-08-27
 canonical_path: docs/knowledge-bank/indexes/employment-context.md
 summary: Task-oriented entry point for live opportunity research, role coverage, public-only hiring evaluation, and private-boundary rules.
 relations:
+  - type: uses_source
+    target: source.jobs.nyc-open-data.current
+    href: ../sources/nyc-jobs-open-data.md
+  - type: related_to
+    target: evaluation.jobs.nyc-open-data.strong-match
+    href: ../evaluations/nyc-jobs-opportunity-feed.md
   - type: related_to
     target: opportunity.aclu.senior-project-manager-national-campaigns.8631854002
     href: ../opportunities/aclu-senior-project-manager-national-campaigns.md
@@ -86,6 +92,33 @@ résumé language cannot repair. Facts about reporting lines distinguish a
 posting-named title, a role-based likely reader, a current official
 title-holder match, and a senior vision owner. A title match is not proof of a
 hiring manager, interview participant, private opinion, or final org chart.
+
+Other maintained live contexts in the current reader and résumé system are:
+
+- [ACLU - Senior Project Manager, National Campaigns](../opportunities/aclu-senior-project-manager-national-campaigns.md)
+- [Asana - AI Implementation Manager, Service Management](../opportunities/asana-ai-implementation.md)
+- [CodePath - Engineering Project Manager](../opportunities/codepath-engineering-project-manager.md)
+- [CodePath - Senior AI Operations Lead](../opportunities/codepath-senior-ai-operations-lead.md)
+- [PermitFlow - Product Operations Manager](../opportunities/permitflow-product-operations.md)
+
+## Automated NYC Jobs discovery
+
+The [official NYC Jobs open-data feed](../sources/nyc-jobs-open-data.md) is a
+machine-readable discovery source and freshness clock. A newer row-data
+timestamp releases a deterministic refresh: the system prefers public external
+rows, removes expired, sub-target, and specialist postings, then scores the
+survivors for Jamie-specific fit and realistic securability. Only roles above
+all three strong-match thresholds become governed intake opportunities.
+See the [current transparent strong-match evaluation](../evaluations/nyc-jobs-opportunity-feed.md)
+for the complete admitted set, scores, compensation ranges, deadlines, and
+review links.
+
+The feed is complementary rather than complete. The daily action digest merges
+newly admitted discoveries with maintained live opportunities because direct
+CityJobs research has found current roles that were absent from the August 18
+feed edition. Every generated record requires a close reading of the official
+posting before role-specific application materials or synthetic hiring-reader
+checks may run. Jamie remains the sole application decision maker.
 
 ## Public-resume active reader set
 

@@ -104,6 +104,7 @@ that an agent, test, or informal participant has human decision authority.
 | [0004](./0004-jamie-burkart-sourcebook-and-knowledge-ecosystem.md) | Jamie Burkart Sourcebook and Federated Knowledge Ecosystem | `implementing` | Jamie Burkart |
 | [0005](./0005-three-layer-knowledge-graph.md) | Three-Layer Knowledge Graph and Governed Source Materialization | `exploring` | Jamie Burkart |
 | [0006](./0006-governed-cloudinary-rendition-delivery.md) | Governed Cloudinary Rendition Delivery | `implementing` | Jamie Burkart |
+| [0007](./0007-nyc-jobs-opportunity-action-loop.md) | NYC Jobs Opportunity and Daily Action Loop | `implementing` | Jamie Burkart |
 
 ## Validation
 

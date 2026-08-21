@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "evaluated_at": "2026-08-20",
+  "scope": "Official NYC Jobs source freshness, deterministic strong-match admission, governed opportunity intake, and daily self-directed action digest",
+  "objective": "Surface a deliberately small set of truthful, actionable opportunities while avoiding unnecessary model work and preserving Jamie's application authority.",
+  "gate_order": [
+    "official source and rowsUpdatedAt agreement",
+    "external, current, compensation, and specialist hard screens",
+    "Jamie-relevant title-family requirement",
+    "fit, securability, and combined strong-match thresholds",
+    "governed opportunity record with human close-reading gate",
+    "role-specific evidence, materials, and synthetic hiring-reader checks",
+    "Jamie application decision"
+  ],
+  "thresholds": {
+    "fit": 75,
+    "securability": 60,
+    "combined": 84
+  },
+  "required_invariants": [
+    "No raw job description is retained in generated reports or opportunity records.",
+    "No recipient address or provider credential is committed.",
+    "Staging and local environments cannot send email.",
+    "The open-data feed does not displace direct official-posting checks.",
+    "No score establishes eligibility, interview, offer, or hire.",
+    "No application is submitted automatically."
+  ],
+  "cost_control": "Deterministic checks precede any role-specific language-model evaluation; excluded and below-threshold rows do not receive hiring-reader calls.",
+  "activation_gate": "Daily email delivery requires the workflow to be merged and the single-recipient Resend secrets to be configured by an authorized operator."
+}

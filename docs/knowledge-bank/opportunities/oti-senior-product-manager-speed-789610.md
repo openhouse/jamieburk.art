@@ -75,7 +75,7 @@ role_requirements:
         needle: product
     status: visible-proven
     gap_type: none
-    next_action: Use WOWList and CallNYC as bounded end-to-end examples.
+    next_action: Use WOWList and CallNYC as carefully scoped end-to-end examples.
   - id: requirement.oti-speed-product.data
     importance: critical
     kind: capability
@@ -89,6 +89,16 @@ role_requirements:
     status: visible-weak
     gap_type: experience
     next_action: Prepare technical evidence for APIs, SQL, Postgres/PostGIS, open data, schemas, source governance, and production handoff without claiming enterprise scale that is not established.
+one_year_success_conditions:
+  - Jamie has helped agencies agree on product outcomes, turn permitting friction into an executable roadmap, and improve a measurable part of the affordable-housing process.
+  - The role offers sustained access to users, data, engineering, policy partners, and decision makers while supporting healthy professional growth.
+one_year_risk_conditions:
+  - The Senior IT Architect classification or enterprise-data expectations require specialization beyond Jamie's truthful experience.
+  - Cross-agency accountability is assigned without the authority, sponsorship, data access, or delivery capacity needed to succeed.
+interview_questions:
+  - What part of the SPEED process would this person own in year one, and how will success be measured?
+  - How is the Senior IT Architect minimum evaluated for candidates whose experience combines product delivery, technical systems, and public implementation?
+  - Which agencies, data systems, engineering teams, and executive sponsors are already committed to the work?
 relations:
   - type: uses_source
     target: source.jobs.nyc-oti.product-management-search.2026-08-20

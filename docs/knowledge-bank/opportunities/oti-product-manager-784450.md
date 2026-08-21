@@ -73,7 +73,7 @@ role_requirements:
         needle: metrics
     status: visible-qualified
     gap_type: public-projection
-    next_action: Keep claims bounded and prepare one metric tree separating activity, adoption, outcome, and learning.
+    next_action: Keep claims precise and prepare one metric tree separating activity, adoption, outcome, and learning.
   - id: requirement.oti-product-manager-784450.translation
     importance: critical
     kind: capability
@@ -87,6 +87,16 @@ role_requirements:
     status: visible-proven
     gap_type: none
     next_action: Use a concrete cross-functional launch story with tradeoffs and decision ownership.
+one_year_success_conditions:
+  - Jamie is trusted to move resident-facing products from discovery through launch and learning while making product choices legible to agency and delivery partners.
+  - The team has enough authority, research access, engineering partnership, and outcome data to improve services rather than merely maintain a backlog.
+one_year_risk_conditions:
+  - The title masks primarily administrative coordination without meaningful product judgment or resident contact.
+  - Civil-service eligibility, decision authority, workload, or team conditions prevent healthy long-term contribution.
+interview_questions:
+  - What would an excellent first year look like for this product manager, and which resident or agency outcomes matter most?
+  - Who owns product priority decisions when agency, engineering, policy, and resident needs conflict?
+  - What user-research, analytics, design, and engineering capacity would this role be able to draw on?
 relations:
   - type: uses_source
     target: source.jobs.nyc-oti.product-management-search.2026-08-20

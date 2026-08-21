@@ -2,21 +2,21 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-20T20:45:27-04:00",
   "sourceCommit": "873b3b2c6ac12eadeab69b21d005dc4bc405db76",
-  "sourceFingerprint": "82252fe5181f1b93139dd8e44ac6ff9c41e45340a447c959999ceda8f62d626d",
+  "sourceFingerprint": "0add9ec373456ae03c9bd1abc456fc603d6c9856ccb393395851280a3929292c",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
     "errors": []
   },
   "diagnostics": {
-    "records": 456,
+    "records": 471,
     "byKind": {
       "project": 14,
       "person": 4,
       "organization": 1,
       "event": 20,
       "place": 1,
-      "source": 104,
+      "source": 105,
       "asset": 192,
       "claim": 4,
       "research-run": 9,
@@ -26,13 +26,13 @@
       "method": 14,
       "timeline": 1,
       "application": 2,
-      "evaluation": 9,
+      "evaluation": 10,
       "index": 33,
       "capability": 5,
-      "opportunity": 14,
+      "opportunity": 27,
       "projection": 11
     },
-    "typedRelations": 1557,
+    "typedRelations": 1586,
     "evidenceRelations": 27,
     "relationTypeCounts": {
       "collaborated_with": 2,
@@ -47,63 +47,27 @@
       "part_of": 11,
       "participated_in": 3,
       "projected_to": 15,
-      "related_to": 981,
+      "related_to": 995,
       "resulted_in": 7,
       "supersedes": 1,
       "supports": 37,
       "uses_method": 33,
-      "uses_source": 353
+      "uses_source": 368
     },
-    "proseLinks": 484,
-    "rootReachable": 219,
-    "orphanCount": 5,
+    "proseLinks": 504,
+    "rootReachable": 239,
+    "orphanCount": 0,
     "deadEndCount": 0,
     "wantedPageCount": 6,
     "stalePageCount": 0,
     "correctionCount": 3,
     "rightsReviewCount": 186,
-    "opportunityCount": 14,
-    "liveOpportunityCount": 9,
-    "criticalRequirementCount": 50,
+    "opportunityCount": 27,
+    "liveOpportunityCount": 22,
+    "criticalRequirementCount": 63,
     "criticalRequirementGapCount": 11,
-    "warningCount": 5,
-    "warnings": [
-      {
-        "code": "ORPHAN",
-        "message": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002 is not reachable from the root",
-        "file": "docs/knowledge-bank/opportunities/aclu-senior-project-manager-national-campaigns.md",
-        "line": 1,
-        "severity": "warning"
-      },
-      {
-        "code": "ORPHAN",
-        "message": "opportunity.asana.ai-implementation.8027437 is not reachable from the root",
-        "file": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
-        "line": 1,
-        "severity": "warning"
-      },
-      {
-        "code": "ORPHAN",
-        "message": "opportunity.codepath.engineering-project-manager.5160542007 is not reachable from the root",
-        "file": "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
-        "line": 1,
-        "severity": "warning"
-      },
-      {
-        "code": "ORPHAN",
-        "message": "opportunity.codepath.senior-ai-operations-lead.5175813007 is not reachable from the root",
-        "file": "docs/knowledge-bank/opportunities/codepath-senior-ai-operations-lead.md",
-        "line": 1,
-        "severity": "warning"
-      },
-      {
-        "code": "ORPHAN",
-        "message": "opportunity.permitflow.product-operations.8a6e6066 is not reachable from the root",
-        "file": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
-        "line": 1,
-        "severity": "warning"
-      }
-    ]
+    "warningCount": 0,
+    "warnings": []
   },
   "humanGates": [
     {
@@ -137,38 +101,7 @@
       "authority": "external readers and employers"
     }
   ],
-  "orphans": [
-    {
-      "id": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
-      "kind": "opportunity",
-      "path": "docs/knowledge-bank/opportunities/aclu-senior-project-manager-national-campaigns.md",
-      "reason": "not reachable from root"
-    },
-    {
-      "id": "opportunity.asana.ai-implementation.8027437",
-      "kind": "opportunity",
-      "path": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
-      "reason": "not reachable from root"
-    },
-    {
-      "id": "opportunity.codepath.engineering-project-manager.5160542007",
-      "kind": "opportunity",
-      "path": "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
-      "reason": "not reachable from root"
-    },
-    {
-      "id": "opportunity.codepath.senior-ai-operations-lead.5175813007",
-      "kind": "opportunity",
-      "path": "docs/knowledge-bank/opportunities/codepath-senior-ai-operations-lead.md",
-      "reason": "not reachable from root"
-    },
-    {
-      "id": "opportunity.permitflow.product-operations.8a6e6066",
-      "kind": "opportunity",
-      "path": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
-      "reason": "not reachable from root"
-    }
-  ],
+  "orphans": [],
   "deadEnds": [],
   "wanted": [
     {

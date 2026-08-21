@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "pda4-rgn4",
+  "landingPage": "https://data.cityofnewyork.us/City-Government/NYC-Jobs/pda4-rgn4/about_data",
+  "metadataEndpoint": "https://data.cityofnewyork.us/api/views/pda4-rgn4",
+  "dataEndpoint": "https://data.cityofnewyork.us/resource/pda4-rgn4.json?$limit=50000",
+  "updateSignal": "rowsUpdatedAt",
+  "updateFrequency": "Weekly",
+  "strongMatchThreshold": {
+    "fit": 75,
+    "securability": 60,
+    "combined": 84
+  },
+  "scoreWeights": {
+    "fit": 0.62,
+    "securability": 0.38
+  },
+  "minimumSalaryTarget": 100000,
+  "lastSeenRowsUpdatedAt": "2026-08-18T19:01:20.000Z",
+  "lastSeenRowCount": 2760,
+  "lastRefreshDate": "2026-08-20",
+  "generatedOpportunityPrefix": "docs/knowledge-bank/opportunities/nyc-jobs-",
+  "trackedOpportunitySuite": "evals/knowledge-wiki/hiring-suites.json",
+  "delivery": {
+    "provider": "resend",
+    "recipientEnv": "OPPORTUNITY_DIGEST_TO",
+    "senderEnv": "OPPORTUNITY_DIGEST_FROM",
+    "apiKeyEnv": "RESEND_API_KEY",
+    "modeEnv": "OPPORTUNITY_DIGEST_DELIVERY",
+    "defaultMode": "dry-run"
+  }
+}

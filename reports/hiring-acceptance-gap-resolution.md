@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Hiring acceptance Wiki gap resolution
 
-**Candidate commit:** `ed610686a9d861b25d050217b1139f2d8fa43a2e`
-**Public report hash:** `1df93ddb1f2383987601f5cea1b9c197a930c75e42f08f5c6670836258261e57`
-**Wiki fingerprint:** `199968ad217f59412016449530ea00363e81d00b11dc6ae641154b5da2bb660d`
+**Candidate commit:** `66505dcc521ff83dbb738d73b8bc4249e86dc5e2`
+**Public report hash:** `c851c9874db9837a00d0c5551d16eb70107db4055d41b7109bdc58dd5f5ecd97`
+**Wiki fingerprint:** `0add9ec373456ae03c9bd1abc456fc603d6c9856ccb393395851280a3929292c`
 
 The gap resolver runs after the public-only evaluator. It can identify Wiki evidence, but every public change remains human-reviewed.
 
@@ -26,3 +26,4 @@ The gap resolver runs after the public-only evaluator. It can identify Wiki evid
 - `requirement.asana.implementation-ownership` - **true-experience-gap**; Distinguish direct client implementation from internal and public-facing delivery.
 - `requirement.asana.risk-and-change-management` - **true-experience-gap**; Do not substitute general risk coordination for migration or configuration experience.
 - `requirement.permitflow.product-data` - **true-experience-gap**; Test present SQL and analytics fluency; do not imply tools Jamie cannot demonstrate.
+- `requirement.protected-memory.bounded-sprint` - **role-context-or-evidence-unknown**; Do not imply that a sprint was accepted, funded, or delivered.

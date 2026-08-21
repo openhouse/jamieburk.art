@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity requirement coverage
 
-**Wiki fingerprint:** `199968ad217f59412016449530ea00363e81d00b11dc6ae641154b5da2bb660d`
+**Wiki fingerprint:** `0add9ec373456ae03c9bd1abc456fc603d6c9856ccb393395851280a3929292c`
 
 Statuses preserve the difference between visible proof, Wiki-only proof, source work, experience gaps, and hard screens.
 
@@ -73,6 +73,84 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 | `requirement.codepath-ai-ops.reusable-assets` | critical | visible-proven | none | Show one reusable asset and the evidence that another person could operate it. |
 | `requirement.codepath-ai-ops.outcome-measurement` | important | visible-qualified | source | Recover one defensible adoption, time, quality, or error-rate baseline for a real workflow. |
 
+## OFFICE OF THE MAYOR - Director of Community Engagement
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.nyc-jobs.779383.delivery` | critical | visible-proven | none | Close-read the official detail page and bind each critical requirement to specific public and Wiki evidence. |
+
+## OFFICE OF THE MAYOR - Co-Governance Project Coordinator
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.nyc-jobs.779597.delivery` | critical | visible-proven | none | Close-read the official detail page and bind each critical requirement to specific public and Wiki evidence. |
+
+## OFFICE OF THE MAYOR - Director of Operations
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.nyc-jobs.779989.delivery` | critical | visible-proven | none | Close-read the official detail page and bind each critical requirement to specific public and Wiki evidence. |
+
+## OFFICE OF THE MAYOR - Outreach and Engagement Manager
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.nyc-jobs.782011.delivery` | critical | visible-proven | none | Close-read the official detail page and bind each critical requirement to specific public and Wiki evidence. |
+
+## OFFICE OF THE MAYOR - Efficiency Program Manager
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.nyc-jobs.782953.delivery` | critical | visible-proven | none | Close-read the official detail page and bind each critical requirement to specific public and Wiki evidence. |
+
+## CONSUMER AND WORKER PROTECTION - Senior Business Analyst/Project Manager
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.nyc-jobs.783903.delivery` | critical | visible-proven | none | Close-read the official detail page and bind each critical requirement to specific public and Wiki evidence. |
+
+## OFFICE OF THE MAYOR - Deputy Chief of Staff
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.nyc-jobs.786357.delivery` | critical | visible-proven | none | Close-read the official detail page and bind each critical requirement to specific public and Wiki evidence. |
+
+## OFFICE OF THE MAYOR - Policy Analyst, Community Services Delivery
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.nyc-jobs.786453.delivery` | critical | visible-proven | none | Close-read the official detail page and bind each critical requirement to specific public and Wiki evidence. |
+
+## CONSUMER AND WORKER PROTECTION - Business Analyst / Project Manager
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.nyc-jobs.786621.delivery` | critical | visible-proven | none | Close-read the official detail page and bind each critical requirement to specific public and Wiki evidence. |
+
+## OFFICE OF CRIMINAL JUSTICE - Technical Project Manager
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.nyc-jobs.787600.delivery` | critical | visible-proven | none | Close-read the official detail page and bind each critical requirement to specific public and Wiki evidence. |
+
+## CAMPAIGN FINANCE BOARD - Senior Project Manager
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.nyc-jobs.788977.delivery` | critical | visible-proven | none | Close-read the official detail page and bind each critical requirement to specific public and Wiki evidence. |
+
+## OFFICE OF THE MAYOR - Policy Analyst for Budget, Finance, and Labor
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.nyc-jobs.792692.delivery` | critical | visible-proven | none | Close-read the official detail page and bind each critical requirement to specific public and Wiki evidence. |
+
+## CAMPAIGN FINANCE BOARD - Associate Director of Policy Implementation
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.nyc-jobs.792925.delivery` | critical | visible-proven | none | Close-read the official detail page and bind each critical requirement to specific public and Wiki evidence. |
+
 ## NYC OTI - Operations Manager, SPEED 789810
 
 | Requirement | Importance | Status | Gap | Next action |
@@ -86,7 +164,7 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 | Requirement | Importance | Status | Gap | Next action |
 |---|---|---|---|---|
 | `requirement.oti-product-manager-784450.lifecycle` | critical | visible-proven | none | Lead with WOWList, CallNYC, and long-term client product stewardship. |
-| `requirement.oti-product-manager-784450.outcomes` | critical | visible-qualified | public-projection | Keep claims bounded and prepare one metric tree separating activity, adoption, outcome, and learning. |
+| `requirement.oti-product-manager-784450.outcomes` | critical | visible-qualified | public-projection | Keep claims precise and prepare one metric tree separating activity, adoption, outcome, and learning. |
 | `requirement.oti-product-manager-784450.translation` | critical | visible-proven | none | Use a concrete cross-functional launch story with tradeoffs and decision ownership. |
 
 ## NYC OTI - Senior Product Manager, SPEED 789610
@@ -94,7 +172,7 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 | Requirement | Importance | Status | Gap | Next action |
 |---|---|---|---|---|
 | `requirement.oti-speed-product.cross-agency` | critical | visible-qualified | role-context | Lead with KC Town Hall's physical/public process and coalition/government coordination, while keeping causation and authority exact. |
-| `requirement.oti-speed-product.lifecycle` | critical | visible-proven | none | Use WOWList and CallNYC as bounded end-to-end examples. |
+| `requirement.oti-speed-product.lifecycle` | critical | visible-proven | none | Use WOWList and CallNYC as carefully scoped end-to-end examples. |
 | `requirement.oti-speed-product.data` | critical | visible-weak | experience | Prepare technical evidence for APIs, SQL, Postgres/PostGIS, open data, schemas, source governance, and production handoff without claiming enterprise scale that is not established. |
 
 ## NYC OTI - Senior Product Manager 782366

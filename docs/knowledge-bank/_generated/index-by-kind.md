@@ -3,7 +3,7 @@
 
 **Source commit:** `873b3b2c6ac12eadeab69b21d005dc4bc405db76`
 **Generation time:** 2026-08-20T20:45:27-04:00
-**Source fingerprint:** `82252fe5181f1b93139dd8e44ac6ff9c41e45340a447c959999ceda8f62d626d`
+**Source fingerprint:** `0add9ec373456ae03c9bd1abc456fc603d6c9856ccb393395851280a3929292c`
 
 ## application
 
@@ -245,6 +245,7 @@
 - [Portfolio project-cover curatorial record](../evaluations/curatorial/portfolio-project-covers-2026-08-13.md) - `evaluation.curatorial.portfolio-project-covers.2026-08-13`
 - [Employment context coverage baseline - July 18, 2026](../evaluations/employment-context-coverage-2026-07-18.md) - `evaluation.employment-context.coverage.2026-07-18`
 - [Jamie public-record integration evaluation](../evaluations/jamie-public-record-integration-2026-08-03.md) - `evaluation.jamie-public-record-integration.2026-08-03`
+- [NYC Jobs deterministic strong-match opportunity feed](../evaluations/nyc-jobs-opportunity-feed.md) - `evaluation.jobs.nyc-open-data.strong-match`
 - [Jamie-specific ranking of the NYC OTI product-manager search corpus](../evaluations/oti-product-management-ranking-2026-08-20.md) - `evaluation.jobs.nyc-oti.product-management-ranking.2026-08-20`
 - [Knowledge Wiki retrieval tasks](../evaluations/retrieval-tasks.md) - `evaluation.knowledge-wiki.retrieval-tasks`
 - [NYCAC and Fair Rent NYC frontline advocacy eval](../evaluations/nycac-crs-frontline-advocacy-2026-08-13.md) - `evaluation.nycac.crs-frontline-source-return.2026-08-13`
@@ -335,6 +336,19 @@
 - [CodePath - Senior Program Manager, Claude Corps](../opportunities/codepath-claude-corps.md) - `opportunity.codepath.claude-corps.5182020007`
 - [CodePath - Engineering Project Manager](../opportunities/codepath-engineering-project-manager.md) - `opportunity.codepath.engineering-project-manager.5160542007`
 - [CodePath - Senior AI Operations Lead](../opportunities/codepath-senior-ai-operations-lead.md) - `opportunity.codepath.senior-ai-operations-lead.5175813007`
+- [OFFICE OF THE MAYOR - Director of Community Engagement](../opportunities/nyc-jobs-779383.md) - `opportunity.nyc-jobs.779383`
+- [OFFICE OF THE MAYOR - Co-Governance Project Coordinator](../opportunities/nyc-jobs-779597.md) - `opportunity.nyc-jobs.779597`
+- [OFFICE OF THE MAYOR - Director of Operations](../opportunities/nyc-jobs-779989.md) - `opportunity.nyc-jobs.779989`
+- [OFFICE OF THE MAYOR - Outreach and Engagement Manager](../opportunities/nyc-jobs-782011.md) - `opportunity.nyc-jobs.782011`
+- [OFFICE OF THE MAYOR - Efficiency Program Manager](../opportunities/nyc-jobs-782953.md) - `opportunity.nyc-jobs.782953`
+- [CONSUMER AND WORKER PROTECTION - Senior Business Analyst/Project Manager](../opportunities/nyc-jobs-783903.md) - `opportunity.nyc-jobs.783903`
+- [OFFICE OF THE MAYOR - Deputy Chief of Staff](../opportunities/nyc-jobs-786357.md) - `opportunity.nyc-jobs.786357`
+- [OFFICE OF THE MAYOR - Policy Analyst, Community Services Delivery](../opportunities/nyc-jobs-786453.md) - `opportunity.nyc-jobs.786453`
+- [CONSUMER AND WORKER PROTECTION - Business Analyst / Project Manager](../opportunities/nyc-jobs-786621.md) - `opportunity.nyc-jobs.786621`
+- [OFFICE OF CRIMINAL JUSTICE - Technical Project Manager](../opportunities/nyc-jobs-787600.md) - `opportunity.nyc-jobs.787600`
+- [CAMPAIGN FINANCE BOARD - Senior Project Manager](../opportunities/nyc-jobs-788977.md) - `opportunity.nyc-jobs.788977`
+- [OFFICE OF THE MAYOR - Policy Analyst for Budget, Finance, and Labor](../opportunities/nyc-jobs-792692.md) - `opportunity.nyc-jobs.792692`
+- [CAMPAIGN FINANCE BOARD - Associate Director of Policy Implementation](../opportunities/nyc-jobs-792925.md) - `opportunity.nyc-jobs.792925`
 - [NYC OTI - Operations Manager, SPEED 789810](../opportunities/oti-operations-manager-speed-789810.md) - `opportunity.nyc-oti.operations-manager-speed.789810`
 - [NYC OTI - Product Manager 784450](../opportunities/oti-product-manager-784450.md) - `opportunity.nyc-oti.product-manager.784450`
 - [NYC OTI - Senior Product Manager, SPEED 789610](../opportunities/oti-senior-product-manager-speed-789610.md) - `opportunity.nyc-oti.senior-product-manager-speed.789610`
@@ -445,6 +459,7 @@
 - [CodePath - Senior Program Manager, Claude Corps 5182020007](../sources/jobs-codepath-claude-corps-5182020007.md) - `source.jobs.codepath.claude-corps.5182020007`
 - [CodePath - Engineering Project Manager 5160542007](../sources/jobs-codepath-engineering-project-manager-5160542007.md) - `source.jobs.codepath.engineering-project-manager.5160542007`
 - [CodePath - Senior AI Operations Lead 5175813007](../sources/jobs-codepath-senior-ai-operations-lead-5175813007.md) - `source.jobs.codepath.senior-ai-operations-lead.5175813007`
+- [NYC Jobs official open-data feed](../sources/nyc-jobs-open-data.md) - `source.jobs.nyc-open-data.current`
 - [NYC OTI product-manager search result corpus, August 20, 2026](../sources/jobs-oti-product-management-search-2026-08-20.md) - `source.jobs.nyc-oti.product-management-search.2026-08-20`
 - [NYC Jobs - Senior Product Manager 782366](../sources/jobs-oti-senior-product-manager-782366.md) - `source.jobs.oti.senior-product-manager.782366`
 - [NYC Jobs - Technical Operations Manager 782369](../sources/jobs-oti-technical-operations-782369.md) - `source.jobs.oti.technical-operations.782369`

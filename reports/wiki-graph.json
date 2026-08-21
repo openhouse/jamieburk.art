@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-20T20:45:27-04:00",
   "sourceCommit": "873b3b2c6ac12eadeab69b21d005dc4bc405db76",
-  "sourceFingerprint": "82252fe5181f1b93139dd8e44ac6ff9c41e45340a447c959999ceda8f62d626d",
+  "sourceFingerprint": "0add9ec373456ae03c9bd1abc456fc603d6c9856ccb393395851280a3929292c",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -2892,6 +2892,19 @@
       "reviewBy": "2026-11-03"
     },
     {
+      "id": "evaluation.jobs.nyc-open-data.strong-match",
+      "path": "docs/knowledge-bank/evaluations/nyc-jobs-opportunity-feed.md",
+      "title": "NYC Jobs deterministic strong-match opportunity feed",
+      "kind": "evaluation",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Cost-conscious deterministic screening and transparent Jamie-specific ranking of the official NYC Jobs open-data feed.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
       "id": "evaluation.jobs.nyc-oti.product-management-ranking.2026-08-20",
       "path": "docs/knowledge-bank/evaluations/oti-product-management-ranking-2026-08-20.md",
       "title": "Jamie-specific ranking of the NYC OTI product-manager search corpus",
@@ -3910,6 +3923,175 @@
       "aliases": [],
       "lastReviewed": "2026-08-15",
       "reviewBy": "2026-08-18"
+    },
+    {
+      "id": "opportunity.nyc-jobs.779383",
+      "path": "docs/knowledge-bank/opportunities/nyc-jobs-779383.md",
+      "title": "OFFICE OF THE MAYOR - Director of Community Engagement",
+      "kind": "opportunity",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Strong-match NYC Jobs discovery candidate: Director of Community Engagement at OFFICE OF THE MAYOR.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "opportunity.nyc-jobs.779597",
+      "path": "docs/knowledge-bank/opportunities/nyc-jobs-779597.md",
+      "title": "OFFICE OF THE MAYOR - Co-Governance Project Coordinator",
+      "kind": "opportunity",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Strong-match NYC Jobs discovery candidate: Co-Governance Project Coordinator at OFFICE OF THE MAYOR.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "opportunity.nyc-jobs.779989",
+      "path": "docs/knowledge-bank/opportunities/nyc-jobs-779989.md",
+      "title": "OFFICE OF THE MAYOR - Director of Operations",
+      "kind": "opportunity",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Strong-match NYC Jobs discovery candidate: Director of Operations at OFFICE OF THE MAYOR.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "opportunity.nyc-jobs.782011",
+      "path": "docs/knowledge-bank/opportunities/nyc-jobs-782011.md",
+      "title": "OFFICE OF THE MAYOR - Outreach and Engagement Manager",
+      "kind": "opportunity",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Strong-match NYC Jobs discovery candidate: Outreach and Engagement Manager at OFFICE OF THE MAYOR.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "opportunity.nyc-jobs.782953",
+      "path": "docs/knowledge-bank/opportunities/nyc-jobs-782953.md",
+      "title": "OFFICE OF THE MAYOR - Efficiency Program Manager",
+      "kind": "opportunity",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Strong-match NYC Jobs discovery candidate: Efficiency Program Manager at OFFICE OF THE MAYOR.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "opportunity.nyc-jobs.783903",
+      "path": "docs/knowledge-bank/opportunities/nyc-jobs-783903.md",
+      "title": "CONSUMER AND WORKER PROTECTION - Senior Business Analyst/Project Manager",
+      "kind": "opportunity",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Strong-match NYC Jobs discovery candidate: Senior Business Analyst/Project Manager at CONSUMER AND WORKER PROTECTION.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "opportunity.nyc-jobs.786357",
+      "path": "docs/knowledge-bank/opportunities/nyc-jobs-786357.md",
+      "title": "OFFICE OF THE MAYOR - Deputy Chief of Staff",
+      "kind": "opportunity",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Strong-match NYC Jobs discovery candidate: Deputy Chief of Staff at OFFICE OF THE MAYOR.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "opportunity.nyc-jobs.786453",
+      "path": "docs/knowledge-bank/opportunities/nyc-jobs-786453.md",
+      "title": "OFFICE OF THE MAYOR - Policy Analyst, Community Services Delivery",
+      "kind": "opportunity",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Strong-match NYC Jobs discovery candidate: Policy Analyst, Community Services Delivery at OFFICE OF THE MAYOR.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "opportunity.nyc-jobs.786621",
+      "path": "docs/knowledge-bank/opportunities/nyc-jobs-786621.md",
+      "title": "CONSUMER AND WORKER PROTECTION - Business Analyst / Project Manager",
+      "kind": "opportunity",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Strong-match NYC Jobs discovery candidate: Business Analyst / Project Manager at CONSUMER AND WORKER PROTECTION.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "opportunity.nyc-jobs.787600",
+      "path": "docs/knowledge-bank/opportunities/nyc-jobs-787600.md",
+      "title": "OFFICE OF CRIMINAL JUSTICE - Technical Project Manager",
+      "kind": "opportunity",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Strong-match NYC Jobs discovery candidate: Technical Project Manager at OFFICE OF CRIMINAL JUSTICE.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "opportunity.nyc-jobs.788977",
+      "path": "docs/knowledge-bank/opportunities/nyc-jobs-788977.md",
+      "title": "CAMPAIGN FINANCE BOARD - Senior Project Manager",
+      "kind": "opportunity",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Strong-match NYC Jobs discovery candidate: Senior Project Manager at CAMPAIGN FINANCE BOARD.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "opportunity.nyc-jobs.792692",
+      "path": "docs/knowledge-bank/opportunities/nyc-jobs-792692.md",
+      "title": "OFFICE OF THE MAYOR - Policy Analyst for Budget, Finance, and Labor",
+      "kind": "opportunity",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Strong-match NYC Jobs discovery candidate: Policy Analyst for Budget, Finance, and Labor at OFFICE OF THE MAYOR.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "opportunity.nyc-jobs.792925",
+      "path": "docs/knowledge-bank/opportunities/nyc-jobs-792925.md",
+      "title": "CAMPAIGN FINANCE BOARD - Associate Director of Policy Implementation",
+      "kind": "opportunity",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Strong-match NYC Jobs discovery candidate: Associate Director of Policy Implementation at CAMPAIGN FINANCE BOARD.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
     },
     {
       "id": "opportunity.nyc-oti.operations-manager-speed.789810",
@@ -5020,6 +5202,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-13",
       "reviewBy": "2026-08-16"
+    },
+    {
+      "id": "source.jobs.nyc-open-data.current",
+      "path": "docs/knowledge-bank/sources/nyc-jobs-open-data.md",
+      "title": "NYC Jobs official open-data feed",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Machine-readable official source for current City job discovery, freshness checks, deterministic screening, and review-gated opportunity intake.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
     },
     {
       "id": "source.jobs.nyc-oti.product-management-search.2026-08-20",
@@ -12189,6 +12384,14 @@
       "context": null
     },
     {
+      "from": "evaluation.jobs.nyc-open-data.strong-match",
+      "type": "uses_source",
+      "to": "source.jobs.nyc-open-data.current",
+      "source": "frontmatter",
+      "href": "../sources/nyc-jobs-open-data.md",
+      "context": null
+    },
+    {
       "from": "evaluation.knowledge-wiki.retrieval-tasks",
       "type": "related_to",
       "to": "index.knowledge-wiki.pilot",
@@ -12975,6 +13178,14 @@
     {
       "from": "index.knowledge-wiki.employment-context",
       "type": "related_to",
+      "to": "evaluation.jobs.nyc-open-data.strong-match",
+      "source": "frontmatter",
+      "href": "../evaluations/nyc-jobs-opportunity-feed.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
       "to": "evaluation.jobs.nyc-oti.product-management-ranking.2026-08-20",
       "source": "frontmatter",
       "href": "../evaluations/oti-product-management-ranking-2026-08-20.md",
@@ -13090,6 +13301,14 @@
       "to": "opportunity.protected.source-backed-memory-consulting.2026",
       "source": "frontmatter",
       "href": "../opportunities/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "uses_source",
+      "to": "source.jobs.nyc-open-data.current",
+      "source": "frontmatter",
+      "href": "../sources/nyc-jobs-open-data.md",
       "context": null
     },
     {
@@ -15496,6 +15715,214 @@
       "to": "source.jobs.codepath.senior-ai-operations-lead.5175813007",
       "source": "frontmatter",
       "href": "../sources/jobs-codepath-senior-ai-operations-lead-5175813007.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.779383",
+      "type": "related_to",
+      "to": "evaluation.jobs.nyc-open-data.strong-match",
+      "source": "frontmatter",
+      "href": "../evaluations/nyc-jobs-opportunity-feed.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.779383",
+      "type": "uses_source",
+      "to": "source.jobs.nyc-open-data.current",
+      "source": "frontmatter",
+      "href": "../sources/nyc-jobs-open-data.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.779597",
+      "type": "related_to",
+      "to": "evaluation.jobs.nyc-open-data.strong-match",
+      "source": "frontmatter",
+      "href": "../evaluations/nyc-jobs-opportunity-feed.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.779597",
+      "type": "uses_source",
+      "to": "source.jobs.nyc-open-data.current",
+      "source": "frontmatter",
+      "href": "../sources/nyc-jobs-open-data.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.779989",
+      "type": "related_to",
+      "to": "evaluation.jobs.nyc-open-data.strong-match",
+      "source": "frontmatter",
+      "href": "../evaluations/nyc-jobs-opportunity-feed.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.779989",
+      "type": "uses_source",
+      "to": "source.jobs.nyc-open-data.current",
+      "source": "frontmatter",
+      "href": "../sources/nyc-jobs-open-data.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.782011",
+      "type": "related_to",
+      "to": "evaluation.jobs.nyc-open-data.strong-match",
+      "source": "frontmatter",
+      "href": "../evaluations/nyc-jobs-opportunity-feed.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.782011",
+      "type": "uses_source",
+      "to": "source.jobs.nyc-open-data.current",
+      "source": "frontmatter",
+      "href": "../sources/nyc-jobs-open-data.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.782953",
+      "type": "related_to",
+      "to": "evaluation.jobs.nyc-open-data.strong-match",
+      "source": "frontmatter",
+      "href": "../evaluations/nyc-jobs-opportunity-feed.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.782953",
+      "type": "uses_source",
+      "to": "source.jobs.nyc-open-data.current",
+      "source": "frontmatter",
+      "href": "../sources/nyc-jobs-open-data.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.783903",
+      "type": "related_to",
+      "to": "evaluation.jobs.nyc-open-data.strong-match",
+      "source": "frontmatter",
+      "href": "../evaluations/nyc-jobs-opportunity-feed.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.783903",
+      "type": "uses_source",
+      "to": "source.jobs.nyc-open-data.current",
+      "source": "frontmatter",
+      "href": "../sources/nyc-jobs-open-data.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.786357",
+      "type": "related_to",
+      "to": "evaluation.jobs.nyc-open-data.strong-match",
+      "source": "frontmatter",
+      "href": "../evaluations/nyc-jobs-opportunity-feed.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.786357",
+      "type": "uses_source",
+      "to": "source.jobs.nyc-open-data.current",
+      "source": "frontmatter",
+      "href": "../sources/nyc-jobs-open-data.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.786453",
+      "type": "related_to",
+      "to": "evaluation.jobs.nyc-open-data.strong-match",
+      "source": "frontmatter",
+      "href": "../evaluations/nyc-jobs-opportunity-feed.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.786453",
+      "type": "uses_source",
+      "to": "source.jobs.nyc-open-data.current",
+      "source": "frontmatter",
+      "href": "../sources/nyc-jobs-open-data.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.786621",
+      "type": "related_to",
+      "to": "evaluation.jobs.nyc-open-data.strong-match",
+      "source": "frontmatter",
+      "href": "../evaluations/nyc-jobs-opportunity-feed.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.786621",
+      "type": "uses_source",
+      "to": "source.jobs.nyc-open-data.current",
+      "source": "frontmatter",
+      "href": "../sources/nyc-jobs-open-data.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.787600",
+      "type": "related_to",
+      "to": "evaluation.jobs.nyc-open-data.strong-match",
+      "source": "frontmatter",
+      "href": "../evaluations/nyc-jobs-opportunity-feed.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.787600",
+      "type": "uses_source",
+      "to": "source.jobs.nyc-open-data.current",
+      "source": "frontmatter",
+      "href": "../sources/nyc-jobs-open-data.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.788977",
+      "type": "related_to",
+      "to": "evaluation.jobs.nyc-open-data.strong-match",
+      "source": "frontmatter",
+      "href": "../evaluations/nyc-jobs-opportunity-feed.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.788977",
+      "type": "uses_source",
+      "to": "source.jobs.nyc-open-data.current",
+      "source": "frontmatter",
+      "href": "../sources/nyc-jobs-open-data.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.792692",
+      "type": "related_to",
+      "to": "evaluation.jobs.nyc-open-data.strong-match",
+      "source": "frontmatter",
+      "href": "../evaluations/nyc-jobs-opportunity-feed.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.792692",
+      "type": "uses_source",
+      "to": "source.jobs.nyc-open-data.current",
+      "source": "frontmatter",
+      "href": "../sources/nyc-jobs-open-data.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.792925",
+      "type": "related_to",
+      "to": "evaluation.jobs.nyc-open-data.strong-match",
+      "source": "frontmatter",
+      "href": "../evaluations/nyc-jobs-opportunity-feed.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-jobs.792925",
+      "type": "uses_source",
+      "to": "source.jobs.nyc-open-data.current",
+      "source": "frontmatter",
+      "href": "../sources/nyc-jobs-open-data.md",
       "context": null
     },
     {
@@ -19448,6 +19875,123 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/evaluations/nyc-jobs-opportunity-feed.md",
+      "from": "evaluation.jobs.nyc-open-data.strong-match",
+      "toPath": "docs/knowledge-bank/opportunities/nyc-jobs-787600.md",
+      "to": "opportunity.nyc-jobs.787600",
+      "fragment": null,
+      "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/evaluations/nyc-jobs-opportunity-feed.md",
+      "from": "evaluation.jobs.nyc-open-data.strong-match",
+      "toPath": "docs/knowledge-bank/opportunities/nyc-jobs-786621.md",
+      "to": "opportunity.nyc-jobs.786621",
+      "fragment": null,
+      "line": 11,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/evaluations/nyc-jobs-opportunity-feed.md",
+      "from": "evaluation.jobs.nyc-open-data.strong-match",
+      "toPath": "docs/knowledge-bank/opportunities/nyc-jobs-782953.md",
+      "to": "opportunity.nyc-jobs.782953",
+      "fragment": null,
+      "line": 12,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/evaluations/nyc-jobs-opportunity-feed.md",
+      "from": "evaluation.jobs.nyc-open-data.strong-match",
+      "toPath": "docs/knowledge-bank/opportunities/nyc-jobs-786453.md",
+      "to": "opportunity.nyc-jobs.786453",
+      "fragment": null,
+      "line": 13,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/evaluations/nyc-jobs-opportunity-feed.md",
+      "from": "evaluation.jobs.nyc-open-data.strong-match",
+      "toPath": "docs/knowledge-bank/opportunities/nyc-jobs-792925.md",
+      "to": "opportunity.nyc-jobs.792925",
+      "fragment": null,
+      "line": 14,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/evaluations/nyc-jobs-opportunity-feed.md",
+      "from": "evaluation.jobs.nyc-open-data.strong-match",
+      "toPath": "docs/knowledge-bank/opportunities/nyc-jobs-779597.md",
+      "to": "opportunity.nyc-jobs.779597",
+      "fragment": null,
+      "line": 15,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/evaluations/nyc-jobs-opportunity-feed.md",
+      "from": "evaluation.jobs.nyc-open-data.strong-match",
+      "toPath": "docs/knowledge-bank/opportunities/nyc-jobs-788977.md",
+      "to": "opportunity.nyc-jobs.788977",
+      "fragment": null,
+      "line": 16,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/evaluations/nyc-jobs-opportunity-feed.md",
+      "from": "evaluation.jobs.nyc-open-data.strong-match",
+      "toPath": "docs/knowledge-bank/opportunities/nyc-jobs-783903.md",
+      "to": "opportunity.nyc-jobs.783903",
+      "fragment": null,
+      "line": 17,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/evaluations/nyc-jobs-opportunity-feed.md",
+      "from": "evaluation.jobs.nyc-open-data.strong-match",
+      "toPath": "docs/knowledge-bank/opportunities/nyc-jobs-792692.md",
+      "to": "opportunity.nyc-jobs.792692",
+      "fragment": null,
+      "line": 18,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/evaluations/nyc-jobs-opportunity-feed.md",
+      "from": "evaluation.jobs.nyc-open-data.strong-match",
+      "toPath": "docs/knowledge-bank/opportunities/nyc-jobs-782011.md",
+      "to": "opportunity.nyc-jobs.782011",
+      "fragment": null,
+      "line": 19,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/evaluations/nyc-jobs-opportunity-feed.md",
+      "from": "evaluation.jobs.nyc-open-data.strong-match",
+      "toPath": "docs/knowledge-bank/opportunities/nyc-jobs-779383.md",
+      "to": "opportunity.nyc-jobs.779383",
+      "fragment": null,
+      "line": 20,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/evaluations/nyc-jobs-opportunity-feed.md",
+      "from": "evaluation.jobs.nyc-open-data.strong-match",
+      "toPath": "docs/knowledge-bank/opportunities/nyc-jobs-779989.md",
+      "to": "opportunity.nyc-jobs.779989",
+      "fragment": null,
+      "line": 21,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/evaluations/nyc-jobs-opportunity-feed.md",
+      "from": "evaluation.jobs.nyc-open-data.strong-match",
+      "toPath": "docs/knowledge-bank/opportunities/nyc-jobs-786357.md",
+      "to": "opportunity.nyc-jobs.786357",
+      "fragment": null,
+      "line": 22,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/evaluations/oti-product-management-ranking-2026-08-20.md",
       "from": "evaluation.jobs.nyc-oti.product-management-ranking.2026-08-20",
       "toPath": "docs/knowledge-bank/sources/jobs-oti-product-management-search-2026-08-20.md",
@@ -19927,10 +20471,73 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
+      "to": "evaluation.employment-context.coverage.2026-07-18",
+      "fragment": null,
+      "line": 118,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/wiki-opportunity-coverage.md",
+      "to": null,
+      "fragment": null,
+      "line": 119,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager.md",
       "to": "opportunity.nyc-oti.senior-product-manager.782366",
       "fragment": null,
       "line": 12,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/wiki-career-trajectory-coverage.md",
+      "to": null,
+      "fragment": null,
+      "line": 120,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/wiki-source-channel-coverage.md",
+      "to": null,
+      "fragment": null,
+      "line": 121,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/wiki-opportunity-discovery.md",
+      "to": null,
+      "fragment": null,
+      "line": 122,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/hiring-acceptance-public.md",
+      "to": null,
+      "fragment": null,
+      "line": 123,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/hiring-acceptance-gap-resolution.md",
+      "to": null,
+      "fragment": null,
+      "line": 124,
       "kind": "link"
     },
     {
@@ -19963,10 +20570,73 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/aclu-senior-project-manager-national-campaigns.md",
+      "to": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "fragment": null,
+      "line": 28,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
+      "to": "opportunity.asana.ai-implementation.8027437",
+      "fragment": null,
+      "line": 29,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
+      "to": "opportunity.codepath.engineering-project-manager.5160542007",
+      "fragment": null,
+      "line": 30,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/codepath-senior-ai-operations-lead.md",
+      "to": "opportunity.codepath.senior-ai-operations-lead.5175813007",
+      "fragment": null,
+      "line": 31,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
+      "to": "opportunity.permitflow.product-operations.8a6e6066",
+      "fragment": null,
+      "line": 32,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/sources/nyc-jobs-open-data.md",
+      "to": "source.jobs.nyc-open-data.current",
+      "fragment": null,
+      "line": 36,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/evaluations/nyc-jobs-opportunity-feed.md",
+      "to": "evaluation.jobs.nyc-open-data.strong-match",
+      "fragment": null,
+      "line": 42,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/claims/employment-mobility-and-location.md",
       "to": "claim.employment.mobility-and-location.2026-08-15",
       "fragment": null,
-      "line": 39,
+      "line": 66,
       "kind": "link"
     },
     {
@@ -19975,7 +20645,7 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
       "to": "opportunity.nyc-oti.technical-operations-manager.782369",
       "fragment": null,
-      "line": 56,
+      "line": 83,
       "kind": "link"
     },
     {
@@ -19984,7 +20654,7 @@
       "toPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
       "to": "opportunity.benepass.product-operations.7f963a7a",
       "fragment": null,
-      "line": 57,
+      "line": 84,
       "kind": "link"
     },
     {
@@ -19993,7 +20663,7 @@
       "toPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
       "to": "opportunity.aclu.product-manager-discovery.8482872002",
       "fragment": null,
-      "line": 58,
+      "line": 85,
       "kind": "link"
     },
     {
@@ -20002,7 +20672,7 @@
       "toPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
       "to": "opportunity.codepath.claude-corps.5182020007",
       "fragment": null,
-      "line": 59,
+      "line": 86,
       "kind": "link"
     },
     {
@@ -20011,70 +20681,7 @@
       "toPath": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
       "to": "opportunity.protected.source-backed-memory-consulting.2026",
       "fragment": null,
-      "line": 63,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
-      "to": "evaluation.employment-context.coverage.2026-07-18",
-      "fragment": null,
-      "line": 91,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/wiki-opportunity-coverage.md",
-      "to": null,
-      "fragment": null,
-      "line": 92,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/wiki-career-trajectory-coverage.md",
-      "to": null,
-      "fragment": null,
-      "line": 93,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/wiki-source-channel-coverage.md",
-      "to": null,
-      "fragment": null,
-      "line": 94,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/wiki-opportunity-discovery.md",
-      "to": null,
-      "fragment": null,
-      "line": 95,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/hiring-acceptance-public.md",
-      "to": null,
-      "fragment": null,
-      "line": 96,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/hiring-acceptance-gap-resolution.md",
-      "to": null,
-      "fragment": null,
-      "line": 97,
+      "line": 90,
       "kind": "link"
     },
     {

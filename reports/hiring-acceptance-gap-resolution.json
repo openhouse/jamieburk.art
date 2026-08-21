@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "candidateSha": "ed610686a9d861b25d050217b1139f2d8fa43a2e",
-  "portfolioSnapshotHash": "68eeb9fe8e11cf82aab6430d8813c323519e1e7ba0c02ef20ddd7e81a8c12160",
-  "publicReportHash": "1df93ddb1f2383987601f5cea1b9c197a930c75e42f08f5c6670836258261e57",
-  "wikiSourceFingerprint": "199968ad217f59412016449530ea00363e81d00b11dc6ae641154b5da2bb660d",
+  "candidateSha": "66505dcc521ff83dbb738d73b8bc4249e86dc5e2",
+  "portfolioSnapshotHash": "8076fcb2eacbd83c0dbf2c568c5dd00752bc77736bb99943a78ee4aaee037393",
+  "publicReportHash": "c851c9874db9837a00d0c5551d16eb70107db4055d41b7109bdc58dd5f5ecd97",
+  "wikiSourceFingerprint": "0add9ec373456ae03c9bd1abc456fc603d6c9856ccb393395851280a3929292c",
   "findings": [
     {
       "findingId": "finding.requirement.aclu-national-campaigns.budget-administration",
@@ -240,6 +240,20 @@
       "gapType": "experience",
       "smallestResponsibleChange": "Test present SQL and analytics fluency; do not imply tools Jamie cannot demonstrate.",
       "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.protected-memory.bounded-sprint",
+      "opportunityId": "opportunity.protected.source-backed-memory-consulting.2026",
+      "requirementId": "requirement.protected-memory.bounded-sprint",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "role-context",
+      "smallestResponsibleChange": "Do not imply that a sprint was accepted, funded, or delivered.",
+      "requiresOriginalSourceReview": true,
       "requiresHumanApproval": true
     }
   ],

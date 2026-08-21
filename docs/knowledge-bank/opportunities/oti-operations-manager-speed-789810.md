@@ -86,6 +86,16 @@ role_requirements:
     status: visible-proven
     gap_type: none
     next_action: Use WOWList, CallNYC, and the portfolio's product-engineering delivery system.
+one_year_success_conditions:
+  - Jamie has made product-team priorities, budgets, vendor work, staffing needs, decisions, and delivery risks easier to see and act on.
+  - The operating system supports a healthier team and faster public delivery without turning operations into invisible roof-holding labor.
+one_year_risk_conditions:
+  - The role carries accountability for procurement, budget, or staffing without adequate authority, support, or formal onboarding.
+  - Compensation, civil-service eligibility, or chronic overload makes the role unsustainable.
+interview_questions:
+  - Which operating problems should this person solve in the first ninety days and by the end of year one?
+  - What budget, procurement, vendor, and staffing authority belongs to this role, and what expert support is available?
+  - How do product leaders and operations leadership share decisions and responsibility when priorities collide?
 relations:
   - type: uses_source
     target: source.jobs.nyc-oti.product-management-search.2026-08-20
