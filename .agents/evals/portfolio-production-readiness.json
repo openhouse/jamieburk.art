@@ -53,7 +53,7 @@
     "Do not strengthen ownership, causality, authority, scale, or current-status claims beyond the knowledge bank.",
     "Preserve collective credit and collaborator-sensitive guardrails.",
     "Do not display Jamie's phone number in website HTML; it may remain in the approved resume PDF.",
-    "Do not represent Source-Backed Team Memory as finished production SaaS or automated trust.",
+    "Do not represent the Knowledge Wiki Graph / Source-Backed Team Memory practice as external client adoption, finished production SaaS, or automated trust.",
     "Do not deploy to production or enable indexing without Jamie's explicit approval of the exact candidate."
   ],
   "evals": [
@@ -338,23 +338,29 @@
     },
     {
       "id": "PR-013",
-      "title": "AI and source-backed memory claims are demonstrated and bounded",
+      "title": "Knowledge Wiki Graph architecture is legible and governed",
       "category": "future_direction",
       "grader": "hybrid",
-      "blocking": false,
+      "blocking": true,
       "weight": 2,
-      "inputs": ["resume page", "AI Evals credential", "Source-Backed Team Memory lab"],
+      "inputs": ["colophon", "Knowledge Wiki Graph lab", "canonical claim record", "AI Evals credential"],
       "procedure": [
-        "Verify the course-completion evidence and wording.",
-        "Inspect one synthetic or public-safe worked example of the Known, Open, Protected method."
+        "Verify the colophon and lab distinguish the semantic graph, evidence graph, source custody, and audience-specific projection.",
+        "Verify evaluations and human review govern transitions without granting publication authority.",
+        "Verify shared identity connects independently useful repositories without merging stewardship, claims, permission, credit, or publication authority.",
+        "Inspect one synthetic or public-safe worked example of the Known, Open, Protected review pattern.",
+        "Verify the course-completion evidence and wording."
       ],
       "pass_criteria": [
+        "A hiring reader can explain how the method turns scattered project materials into reviewable operating knowledge and useful outputs.",
+        "The three graph responsibilities and separate projection step remain distinct.",
+        "Public copy exposes no private repository topology, source locator, or protected material.",
         "Course completion is visible and accurately attributed as professional development.",
         "The lab includes one inspectable public-safe or synthetic worked example.",
-        "The page does not imply production SaaS, automated trust, client delivery, or access to private archives."
+        "The page does not imply production SaaS, automated trust, external client adoption, automatic publication, or access to private archives."
       ],
-      "evidence_required": ["credential artifact", "worked example", "claim-boundary review"],
-      "remediation_hint": "Show a bounded example and preserve the method's human-review and privacy limits."
+      "evidence_required": ["colophon architecture statement", "canonical claim and source record", "credential artifact", "worked example", "claim-boundary review"],
+      "remediation_hint": "Clarify the three responsibilities and projection gate, then preserve human authority, privacy, and repository independence."
     },
     {
       "id": "PR-014",

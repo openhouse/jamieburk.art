@@ -7,9 +7,9 @@ import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
-  title: "Source-Backed Team Memory - Jamie Burkart",
+  title: "Knowledge Wiki Graph - Jamie Burkart",
   description:
-    "A lab / proof-of-practice exploring source-backed operating memory, decision lineage, onboarding context, and human-correctable AI workflows.",
+    "A working research method connecting project meaning, supporting evidence, responsible source custody, evaluations, and human review.",
   path: "/lab/source-backed-team-memory"
 });
 
@@ -34,7 +34,7 @@ export default function SourceBackedTeamMemoryPage() {
       <div className="jb-reading">
         <p className="text-sm font-semibold uppercase text-jb-blue">Lab / method</p>
         <h1 className="mt-3 text-5xl font-bold text-jb-ink">
-          Source-Backed Team Memory
+          Knowledge Wiki Graph
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
           <Claim
@@ -45,9 +45,10 @@ export default function SourceBackedTeamMemoryPage() {
         </p>
         <div className="mt-6 rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">
           <p className="leading-7 text-jb-ink/76">
-            Early research / method / consulting practice. Not a finished
-            production SaaS, chatbot, surveillance system, AI replacement for
-            judgment, or private archive browser.
+            Working research and operating method within Jamie&apos;s project
+            ecosystem. Not a finished production SaaS, client deployment,
+            chatbot, surveillance system, AI replacement for judgment, or
+            private archive browser.
           </p>
         </div>
         <div className="mt-10 space-y-6">

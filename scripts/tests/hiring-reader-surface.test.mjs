@@ -92,6 +92,71 @@ test("the homepage gives hiring readers clear routes into the evidence", () => {
   assert.ok(!homepageProofBlock.includes("wowlist-community-platform"));
 });
 
+test("the colophon explains the capability-to-evidence navigation", () => {
+  const colophon = read("apps/www/src/app/colophon/page.tsx");
+  const capabilities = read("apps/www/src/components/CapabilityGrid.tsx");
+
+  assert.ok(capabilities.includes("/work?tag="));
+  assert.match(
+    colophon,
+    /Capability and project-topic links open a filtered work index/
+  );
+});
+
+test("the public portfolio explains the federated three-graph knowledge practice", () => {
+  const colophon = read("apps/www/src/app/colophon/page.tsx");
+  const lab = read("apps/www/src/content/lab/source-backed-team-memory.mdx");
+  const labPage = read(
+    "apps/www/src/app/lab/source-backed-team-memory/page.tsx"
+  );
+  const work = read("apps/www/src/app/work/page.tsx");
+  const knowledge = read(
+    "apps/www/src/data/knowledge-bank/archive-production-2026-07.ts"
+  );
+  const proofs = read("apps/www/src/data/proofs.ts");
+  const readiness = read(
+    ".agents/evals/portfolio-production-readiness.json"
+  );
+  const publicSurface = [colophon, lab, labPage, work].join("\n");
+
+  for (const layer of ["semantic graph", "evidence graph", "source custody"]) {
+    assert.match(colophon, new RegExp(layer, "i"), `missing ${layer}`);
+  }
+  assert.match(colophon, /evaluations and human review/i);
+  assert.match(lab, /Noting\.us/);
+  assert.match(lab, /shared identity[\s\S]*without merging/i);
+  assert.match(work, /Knowledge Wiki Graph \/ Source-Backed Team Memory/);
+  assert.match(
+    labPage,
+    /CLM-SOURCE-BACKED-MEMORY-METHOD-2026/
+  );
+  assert.match(
+    knowledge,
+    /SRC-KNOWLEDGE-WIKI-GRAPH-ARCHITECTURE-2026[\s\S]*semantic, evidence, and source-custody separation/
+  );
+  assert.match(
+    knowledge,
+    /CLM-SOURCE-BACKED-MEMORY-METHOD-2026[\s\S]*SRC-KNOWLEDGE-WIKI-GRAPH-ARCHITECTURE-2026/
+  );
+  assert.match(proofs, /Developing the Knowledge Wiki Graph/);
+  assert.match(
+    readiness,
+    /Knowledge Wiki Graph architecture is legible and governed/
+  );
+
+  for (const protectedRepositoryName of [
+    "archival-research-projects",
+    "commercial-rent-stabilization-public-support",
+    "graph-packet",
+    "wowlist-knowledge"
+  ]) {
+    assert.ok(
+      !publicSurface.includes(protectedRepositoryName),
+      `public surface exposes protected repository name ${protectedRepositoryName}`
+    );
+  }
+});
+
 test("persistent navigation exposes the current public section", () => {
   const header = read("apps/www/src/components/SiteHeader.tsx");
 

@@ -1553,7 +1553,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "Developing a carefully scoped lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
+          "text": "Developing the Knowledge Wiki Graph: a working source-backed team-memory method connecting project meaning, supporting evidence, responsible source custody, evaluations, and human review.",
           "status": "active",
           "citationRequired": false,
           "surfaces": [
@@ -1563,9 +1563,10 @@
       ],
       "evidence": [],
       "boundaries": [
-        "Present this as an early method and consulting practice.",
-        "Do not imply a completed client pilot, production SaaS, or market validation.",
-        "Do not expose proposal recipient, pricing, correspondence, or company context."
+        "Present this as a working research and operating method embodied in Jamie's project ecosystem.",
+        "Do not imply a completed client pilot, external adoption, production SaaS, or market validation.",
+        "Do not expose proposal recipient, pricing, correspondence, private repository topology, or protected source context.",
+        "Passing evaluations does not authorize publication or replace rights, consent, credit, or human review."
       ]
     },
     {

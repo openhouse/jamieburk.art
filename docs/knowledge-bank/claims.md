@@ -283,20 +283,20 @@ bundle.
 **Do not say:** Jamie alone created the program; Jamie originated Pastor Lee's vision; the program caused a specific allocation; hundreds of handbills are independently verified.
 **Research inquiry:** `INQ-KCTH-CLEVELAND-UNIFY-TO-BEAUTIFY`
 
-## source-backed-team-memory-method - Source-backed team memory
+## source-backed-team-memory-method - Knowledge Wiki Graph / source-backed team memory
 
 **Status:** Careful  
 **Support level:** Moderate  
-**Evidence class:** Public-safe lab materials / proposal-derived public-safe method summary  
-**Public wording:** Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.  
-**Detailed public-safe wording:** The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.  
+**Evidence class:** Public repository architecture records / public-safe lab materials / proposal-derived public-safe method summary
+**Public wording:** Developing the Knowledge Wiki Graph: a working source-backed team-memory method connecting project meaning, supporting evidence, responsible source custody, evaluations, and human review.
+**Detailed public-safe wording:** The method keeps semantic meaning, supporting evidence, and responsible source custody distinct; evaluations and human review govern audience-specific projections while Known, Open, and Protected states preserve uncertainty and privacy.
 **Where to project:** Lab page, Technical Operations, future consulting materials after approval.  
-**Why it matters:** Shows Jamie's knowledge-systems direction while keeping AI and archive claims bounded.  
-**Guardrail:** Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.  
-**Do not say:** Built a production AI memory platform for a client; automated trust; replaces human review.  
-**Protected boundaries:** Do not name private collaborators, publish pricing, publish private transcript excerpts, or publish private company context.  
+**Why it matters:** Shows Jamie's current knowledge-systems research and operating practice while preserving human authority and source responsibilities.
+**Guardrail:** Working research method inside Jamie's project ecosystem. Not external client adoption, finished SaaS, a chatbot, a private archive browser, or a replacement for human judgment.
+**Do not say:** Built a production AI memory platform for a client; automated trust; replaces human review; passing an evaluation authorizes publication.
+**Protected boundaries:** Do not name private collaborators, publish pricing, publish private transcript excerpts, publish private company context, or expose private repository topology and protected source locators.
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-08-20
 
 ## horse-lords-truthers-video-2016 - Shared video credit
 
@@ -365,7 +365,7 @@ bundle.
 **Evidence class:** Public certificate artifact
 **Public wording:** Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain through Maven.
 **Detailed public-safe wording:** A public certificate records James Burkart's course completion and identifies the course, instructors, and Maven platform.
-**Where to project:** Source-Backed Team Memory lab page.
+**Where to project:** Knowledge Wiki Graph / Source-Backed Team Memory lab page.
 **Why it matters:** Grounds the lab's evaluation practice in relevant completed professional development.
 **Guardrail:** Course completion is not an evaluator license, instructor affiliation, employment, or endorsement.
 **Do not say:** Jamie is certified as an AI evaluator; Jamie teaches the course; the instructors endorse Jamie's method.

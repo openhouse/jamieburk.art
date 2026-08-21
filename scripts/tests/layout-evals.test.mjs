@@ -189,6 +189,28 @@ test("homepage capability rows retain real filtered-work destinations", () => {
   );
 });
 
+test("the Knowledge Wiki architecture fails if source custody disappears", () => {
+  const colophonPath = "apps/www/src/app/colophon/page.tsx";
+  const labPath = "apps/www/src/content/lab/source-backed-team-memory.mdx";
+  const colophon = readFileSync(colophonPath, "utf8").replaceAll(
+    "Source custody",
+    "Archive handling"
+  );
+  const lab = readFileSync(labPath, "utf8")
+    .replaceAll("Source custody", "Archive handling")
+    .replaceAll("source custody", "archive handling");
+  const result = evaluateLayout(process.cwd(), {
+    [colophonPath]: colophon,
+    [labPath]: lab
+  });
+  assert.equal(result.passed, false);
+  assert(
+    result.failures.some(
+      ({ criterion }) => criterion === "knowledge-wiki-architecture-contract"
+    )
+  );
+});
+
 test("a decorative gradient fails the material-system contract", () => {
   const path = "apps/www/src/app/globals.css";
   const source = `${readFileSync(path, "utf8")}\n.test { background: linear-gradient(red, blue); }\n`;

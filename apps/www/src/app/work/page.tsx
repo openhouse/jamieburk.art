@@ -44,7 +44,7 @@ export default async function WorkPage({ searchParams }: WorkPageProps) {
               Technical Operations proof page
             </Link>
             <Link className="border-b border-jb-blue text-jb-blue hover:text-jb-green" href="/lab/source-backed-team-memory">
-              Source-backed memory lab
+              Knowledge Wiki Graph lab
             </Link>
           </div>
         </div>
@@ -76,13 +76,14 @@ export default async function WorkPage({ searchParams }: WorkPageProps) {
                 <h2 className="jb-section-label">{group}</h2>
                 <div className="mt-5 grid gap-5 border-y border-jb-ink/20 py-6 md:grid-cols-[0.34fr_0.66fr]">
                   <h3 className="text-3xl leading-tight text-jb-ink">
-                    Source-Backed Team Memory / Noting.us
+                    Knowledge Wiki Graph / Source-Backed Team Memory
                   </h3>
                   <div>
                     <p className="leading-7 text-jb-ink/76">
-                      A lab / proof-of-practice exploring source-backed operating
-                      memory, decision lineage, onboarding context, and
-                      human-correctable AI workflows for knowledge-heavy teams.
+                      A working research method connecting project meaning,
+                      supporting evidence, responsible source custody,
+                      evaluations, and human review across independently useful
+                      repositories. Noting.us is part of its earlier lineage.
                     </p>
                     <p className="mt-3 text-sm font-semibold text-jb-green">
                       Early research / method / consulting practice. Not a

@@ -603,31 +603,34 @@ export const proofClaims: ProofClaim[] = [
     id: "source-backed-team-memory-method",
     status: "careful",
     supportLevel: "moderate",
-    evidenceClass: ["public-safe-archive-summary"],
+    evidenceClass: ["public-safe-archive-summary", "public-repository"],
     publicWording:
-      "Developing a carefully scoped lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
+      "Developing the Knowledge Wiki Graph: a working source-backed team-memory method connecting project meaning, supporting evidence, responsible source custody, evaluations, and human review.",
     shortWording:
-      "Jamie is developing a carefully scoped method for source-backed team memory",
+      "Jamie is developing the Knowledge Wiki Graph as a source-backed team-memory practice",
     detailedPublicWording:
-      "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
-    sourceBasis: "Public-safe lab materials and proposal-derived method summary.",
+      "The method keeps semantic meaning, supporting evidence, and responsible source custody distinct; evaluations and human review govern audience-specific projections while Known, Open, and Protected states preserve uncertainty and privacy.",
+    sourceBasis:
+      "Public repository architecture records, public-safe lab materials, and a proposal-derived method summary.",
     guardrail:
-      "Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.",
+      "Working research and operating method inside Jamie's project ecosystem. Not external client adoption, finished SaaS, a chatbot, a private archive browser, or a replacement for human judgment.",
     doNotSay: [
       "Built a production AI memory platform for a client",
       "Automated trust",
-      "Replaces human review"
+      "Replaces human review",
+      "Passing an evaluation authorizes publication"
     ],
     protectedBoundaries: [
       "Private collaborator names",
       "Pricing",
       "Private transcript excerpts",
-      "Private company context"
+      "Private company context",
+      "Private repository topology and protected source locators"
     ],
     surfaces: ["technical-operations", "lab"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["source-backed-memory", "documentation-architecture", "human-review"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-08-20"
   },
   {
     id: "technical-operations-operating-backbone",

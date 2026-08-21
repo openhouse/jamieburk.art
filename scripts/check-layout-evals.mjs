@@ -33,6 +33,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     "hiring-argument-project-sequence",
     "tag-navigation-contract",
     "capability-navigation-contract",
+    "knowledge-wiki-architecture-contract",
     "human-index-material-system",
     "responsive-image-contract",
     "reliable-image-delivery",
@@ -225,6 +226,36 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     fail(
       "capability-navigation-contract",
       "Every homepage capability row must link to a real, visible, clearable work-index tag filter."
+    );
+  }
+
+  const knowledgeLab = readText(
+    "apps/www/src/content/lab/source-backed-team-memory.mdx"
+  );
+  const knowledgeRecords = readText(
+    "apps/www/src/data/knowledge-bank/archive-production-2026-07.ts"
+  );
+  const publicKnowledgeSurface = [colophon, knowledgeLab, workIndex].join("\n");
+  const requiredKnowledgeTerms = [
+    "Semantic graph",
+    "Evidence graph",
+    "Source custody",
+    "Evaluations and human review"
+  ];
+  const protectedRepositoryNames = [
+    "archival-research-projects",
+    "commercial-rent-stabilization-public-support",
+    "graph-packet",
+    "wowlist-knowledge"
+  ];
+  if (requiredKnowledgeTerms.some((term) =>
+        !colophon.toLowerCase().includes(term.toLowerCase())) ||
+      !knowledgeLab.toLowerCase().includes("without merging") ||
+      !knowledgeRecords.includes("SRC-KNOWLEDGE-WIKI-GRAPH-ARCHITECTURE-2026") ||
+      protectedRepositoryNames.some((name) => publicKnowledgeSurface.includes(name))) {
+    fail(
+      "knowledge-wiki-architecture-contract",
+      "The public Knowledge Wiki explanation must keep the three responsibilities, human projection gate, repository independence, and protected topology in their governed relationship."
     );
   }
 
