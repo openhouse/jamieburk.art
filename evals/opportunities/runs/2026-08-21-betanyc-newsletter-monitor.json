@@ -1,0 +1,26 @@
+{
+  "evalId": "betanyc-newsletter-opportunity-monitor-v1",
+  "asOf": "2026-08-21",
+  "sourceIssuePublishedAt": "2026-08-20T14:39:02Z",
+  "pass": true,
+  "census": {
+    "discoveredLeads": 19,
+    "cityDatasetMatches": 14,
+    "provisionalStrongMatches": 2,
+    "officialVerificationRequired": 0,
+    "notPromoted": 17
+  },
+  "checks": [
+    { "id": "recurring-source-is-modeled-by-its-affordances", "pass": true },
+    { "id": "latest-public-issue-is-current", "pass": true },
+    { "id": "every-lead-has-a-disposition", "pass": true },
+    { "id": "deterministic-gates-precede-model-review", "pass": true },
+    { "id": "verified-strong-matches-clear-every-threshold", "pass": true },
+    { "id": "automatic-promotion-stops-at-provisional-intake", "pass": true },
+    { "id": "private-mailbox-state-is-not-retained", "pass": true },
+    { "id": "daily-read-only-review-is-configured", "pass": true }
+  ],
+  "provisionalStrongMatchJobIds": ["792925", "polimorphic-123173"],
+  "namedReaderState": "required-before-canonical-promotion",
+  "applicationAuthority": "Jamie Burkart"
+}

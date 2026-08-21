@@ -5,7 +5,7 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-20
+last_reviewed: 2026-08-21
 review_by: 2026-08-27
 canonical_path: docs/knowledge-bank/indexes/employment-context.md
 summary: Task-oriented entry point for live opportunity research, historical role benchmarks, public-only hiring evaluation, and private-boundary rules.
@@ -76,6 +76,10 @@ relations:
     target: method.civic-match-opportunity-loop
     href: ../methods/civic-match-opportunity-loop.md
     context: Authenticated candidate-profile discovery, invitations, matching support, and human-controlled external applications.
+  - type: related_to
+    target: method.betanyc-opportunity-loop
+    href: ../methods/betanyc-opportunity-loop.md
+    context: Daily public-archive review of curated civic-technology leads, with official-posting checks and provisional-only machine intake.
 ---
 
 # Employment context and hiring acceptance
@@ -105,6 +109,13 @@ The first three official application surfaces were rechecked as open on August
 The PIT Crew Senior Product Manager candidacy is `submitted-pending`; the other
 four newly admitted OTI opportunities are open and not yet applied to.
 
+[BetaNYC's weekly civic-technology newsletter](../sources/betanyc-civic-tech-newsletter-2026-08-20.md)
+is now a recurring opportunity source alongside NYC Jobs Open Data and Civic
+Match. Its August 20 issue review admitted the Campaign Finance Board Associate
+Director of Policy Implementation role and Polimorphic's first Product Manager
+role to provisional intake; official-posting, qualification, named-reader, and
+Jamie application review remain required.
+
 The downloadable public résumé follows a deterministic lifecycle queue. First,
 it targets every submitted or interviewing application with a pending outcome.
 If none exist, it targets every open, unapplied, truthfully hirable opportunity.
@@ -124,7 +135,7 @@ attached resume artifact.
 
 The [NYC Jobs citywide monitor](../research-runs/nyc-jobs-citywide-monitor-2026-08-20.md)
 uses the official DCAS Open Data feed as a source-update trigger and discovery
-surface. The August 18 source snapshot contained 1,426 unique job IDs. Six
+surface. The August 18 source snapshot contained 1,426 unique job IDs. Seven
 cleared the first strong-match gate and remain provisional research leads.
 Dataset absence cannot close an existing opportunity, and an `External` label
 cannot override explicit current-City-employee restrictions in posting text.

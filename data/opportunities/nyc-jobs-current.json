@@ -5,7 +5,7 @@
     "rowsUpdatedAt": 1787079680,
     "rowsUpdatedAtIso": "2026-08-18T19:01:20.000Z"
   },
-  "evaluatedAt": "2026-08-20T00:00:00.000Z",
+  "evaluatedAt": "2026-08-21T00:00:00.000Z",
   "policy": {
     "salaryTarget": 100000,
     "strongMatchThreshold": {
@@ -18,8 +18,8 @@
   "census": {
     "sourceRows": 2760,
     "uniqueJobIds": 1426,
-    "deterministicallyEligible": 379,
-    "strongMatches": 6
+    "deterministicallyEligible": 325,
+    "strongMatches": 7
   },
   "knownStrongMatches": [],
   "newStrongMatches": [
@@ -37,17 +37,17 @@
       "officialUrl": "https://cityjobs.nyc.gov/jobs?options=&page=1&q=789143"
     },
     {
-      "jobId": "778437",
-      "title": "Project Manager, Bureau of Enterprise Technology Business Solutions",
-      "agency": "DEPT OF HEALTH/MENTAL HYGIENE",
-      "salaryFrom": 77438,
-      "salaryTo": 122300,
-      "deadline": "2026-10-04",
-      "fitScore": 99,
-      "secureScore": 83,
-      "compositeScore": 91.8,
+      "jobId": "792925",
+      "title": "Associate Director of Policy Implementation",
+      "agency": "CAMPAIGN FINANCE BOARD",
+      "salaryFrom": 125000,
+      "salaryTo": 135000,
+      "deadline": "2026-10-13",
+      "fitScore": 100,
+      "secureScore": 87,
+      "compositeScore": 94.15,
       "qualificationReview": "human-review-required",
-      "officialUrl": "https://cityjobs.nyc.gov/jobs?options=&page=1&q=778437"
+      "officialUrl": "https://cityjobs.nyc.gov/jobs?options=&page=1&q=792925"
     },
     {
       "jobId": "788977",
@@ -63,6 +63,32 @@
       "officialUrl": "https://cityjobs.nyc.gov/jobs?options=&page=1&q=788977"
     },
     {
+      "jobId": "778437",
+      "title": "Project Manager, Bureau of Enterprise Technology Business Solutions",
+      "agency": "DEPT OF HEALTH/MENTAL HYGIENE",
+      "salaryFrom": 77438,
+      "salaryTo": 122300,
+      "deadline": "2026-10-04",
+      "fitScore": 99,
+      "secureScore": 78,
+      "compositeScore": 89.55,
+      "qualificationReview": "human-review-required",
+      "officialUrl": "https://cityjobs.nyc.gov/jobs?options=&page=1&q=778437"
+    },
+    {
+      "jobId": "777595",
+      "title": "Associate Director of Product Design",
+      "agency": "CAMPAIGN FINANCE BOARD",
+      "salaryFrom": 130000,
+      "salaryTo": 160000,
+      "deadline": "2026-09-27",
+      "fitScore": 91,
+      "secureScore": 87,
+      "compositeScore": 89.2,
+      "qualificationReview": "human-review-required",
+      "officialUrl": "https://cityjobs.nyc.gov/jobs?options=&page=1&q=777595"
+    },
+    {
       "jobId": "787600",
       "title": "Technical Project Manager",
       "agency": "OFFICE OF CRIMINAL JUSTICE",
@@ -74,19 +100,6 @@
       "compositeScore": 87.85,
       "qualificationReview": "human-review-required",
       "officialUrl": "https://cityjobs.nyc.gov/jobs?options=&page=1&q=787600"
-    },
-    {
-      "jobId": "777595",
-      "title": "Associate Director of Product Design",
-      "agency": "CAMPAIGN FINANCE BOARD",
-      "salaryFrom": 130000,
-      "salaryTo": 160000,
-      "deadline": "2026-09-27",
-      "fitScore": 84,
-      "secureScore": 80,
-      "compositeScore": 82.2,
-      "qualificationReview": "human-review-required",
-      "officialUrl": "https://cityjobs.nyc.gov/jobs?options=&page=1&q=777595"
     },
     {
       "jobId": "783958",

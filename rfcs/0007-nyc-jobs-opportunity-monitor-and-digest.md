@@ -23,9 +23,9 @@ superseded_by: null
 
 > **Proposal boundary**
 >
-> This RFC is `proposed`. The pull request contains a read-only, manually
-> dispatched prototype and offline evals. It does not authorize a daily
-> schedule, repository-writing bot, outbound email provider, canonical
+> This RFC is `proposed`. On August 20, 2026, Jamie authorized the narrow
+> once-daily, read-only source review described below. The pull request does
+> not authorize a repository-writing bot, outbound email provider, canonical
 > opportunity promotion, application submission, merge, or deployment.
 
 ## Summary
@@ -74,8 +74,8 @@ membership and labels therefore need checks rather than trust by default.
 - Automatically publish a provisional role, alter the public resume, generate a
   canonical opportunity record, merge a branch, or deploy a site.
 - Store the complete City job corpus in Git.
-- Activate a schedule, third-party sender, or repository-writing bot without
-  Jamie's explicit approval of that exact capability.
+- Activate a third-party sender or repository-writing bot without Jamie's
+  explicit approval of that exact capability.
 
 ## Terminology
 
@@ -125,14 +125,19 @@ changes the evaluator.
 ### Persistence and scheduling
 
 The repository holds source state, a compact current snapshot, a readable
-ranking report, and a rendered digest. The prototype GitHub Actions job has
-read-only repository permission and is manually dispatched. It performs a fresh
-run and retains the outputs as a 14-day workflow artifact; it does not push,
-open a pull request, or merge.
+ranking report, and a rendered digest. The GitHub Actions job has read-only
+repository permission and may be manually dispatched or run once daily. It
+performs a fresh pass and retains outputs as a 14-day workflow artifact; it does
+not push, open a pull request, merge, email, alter the public site, or submit an
+application. The schedule becomes active only after the workflow reaches the
+configured branch through the normal merge process.
 
-If accepted, a separate change may add a once-daily schedule. Repository-writing
-automation would require another explicit decision because it has a different
-authority and rollback surface.
+Repository-writing automation would require another explicit decision because
+it has a different authority and rollback surface.
+
+The daily review also reads BetaNYC's public newsletter archive. BetaNYC is an
+editorially curated discovery and civic-context source; the official employer
+posting controls availability, qualifications, deadline, and application.
 
 ### Email boundary
 
@@ -166,15 +171,14 @@ portfolio page.
 
 ## Rollout plan
 
-1. Review the source record, current snapshot, evaluator, error-analysis tests,
-   and manually dispatched read-only workflow.
-2. Jamie decides whether to accept this RFC and activate a daily schedule.
-3. Observe at least one later City source update and inspect false positives,
+1. Review the source records, current snapshots, evaluator, error-analysis
+   tests, and read-only workflow.
+2. Observe at least one later City or BetaNYC source update and inspect false positives,
    false negatives, runtime, and workflow artifact usability.
-4. Jamie chooses and approves an email provider and sender identity.
-5. Add the approved delivery step in a separate reviewed change and verify one
+3. Jamie chooses and approves an email provider and sender identity.
+4. Add the approved delivery step in a separate reviewed change and verify one
    test message before scheduling it.
-6. Consider review-branch automation only after specifying branch ownership,
+5. Consider review-branch automation only after specifying branch ownership,
    permissions, rollback, and notification behavior.
 
 Rollback removes or disables the workflow; the maintained opportunity records
@@ -182,12 +186,12 @@ and current public resume continue to function independently.
 
 ## Decision gates
 
-- **Prototype in this pull request:** source integration, deterministic
-  refresh/scoring, compact provisional intake, digest rendering, offline evals,
-  and a manually dispatched read-only workflow.
-- **Awaiting Jamie approval:** RFC acceptance, daily scheduling, Resend or
-  another outbound provider, verified sender, repository secret installation,
-  and scheduled email activation.
+- **Authorized narrow capability:** once-daily, read-only source refresh,
+  deterministic screening, compact provisional intake, report rendering, and
+  workflow-artifact retention after merge.
+- **Awaiting Jamie approval:** RFC acceptance, Resend or another outbound
+  provider, verified sender, repository secret installation, repository-writing
+  automation, and scheduled email activation.
 - **Awaiting observation:** a later dataset update and human review of the next
   generated packet.
 - **Always human:** civil-service qualification judgment, canonical promotion,
@@ -216,7 +220,7 @@ maintenance for schema drift, threshold calibration, and provider operations.
 
 ## Unresolved questions
 
-- Should Jamie accept this RFC and enable the once-daily read-only schedule?
+- Should Jamie accept the broader RFC after observing the read-only schedule?
 - Which approved sender and provider should deliver the daily message?
 - After one real update, which admitted and rejected examples should become the
   first human-labeled calibration set?

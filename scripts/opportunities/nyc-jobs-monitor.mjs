@@ -12,6 +12,7 @@ const TITLE_SIGNALS = [
   [/product operations/i, 32],
   [/product manager/i, 30],
   [/technical project manager/i, 28],
+  [/policy implementation/i, 42],
   [/implementation manager/i, 24],
   [/project manager/i, 24],
   [/program manager/i, 20],
@@ -42,7 +43,8 @@ const TITLE_PENALTIES = [
   [/(attorney|counsel|physician|medical director|clinical director|nurse|accountant|auditor)/i, 40],
   [/(construction|estimator|inspector|civil engineer|mechanical engineer|electrical engineer)/i, 35],
   [/(solutions architect|systems engineer|devops engineer|software engineer|developer)/i, 20],
-  [/\bdirector\b/i, 15]
+  [/\bassociate director\b/i, 8],
+  [/(?<!associate )\bdirector\b/i, 15]
 ];
 
 const CREDENTIAL_HARD_SCREENS = [
@@ -51,7 +53,8 @@ const CREDENTIAL_HARD_SCREENS = [
   /admission to (?:the )?new york state bar/i,
   /registered architect/i,
   /professional engineer(?:ing)?[^.]{0,80}license/i,
-  /clinical laboratory[^.]{0,100}license/i
+  /clinical laboratory[^.]{0,100}license/i,
+  /(?:all candidates|applicants|candidates) must have at least (?:an? )?master['’]s degree/i
 ];
 
 function clamp(value) {
@@ -164,6 +167,23 @@ export function scorePosting(row, { asOf, threshold = { composite: 78, fit: 75, 
   const requestedYears = [...text.matchAll(/(?:minimum|min\.?|at least)?\s*(\d{1,2})\s*(?:\+\s*)?years?/gi)]
     .map((match) => Number(match[1]))
     .filter((value) => value > 0 && value < 40);
+  const writtenYearValues = new Map([
+    ["one", 1],
+    ["two", 2],
+    ["three", 3],
+    ["four", 4],
+    ["five", 5],
+    ["six", 6],
+    ["seven", 7],
+    ["eight", 8],
+    ["nine", 9],
+    ["ten", 10],
+    ["eleven", 11],
+    ["twelve", 12]
+  ]);
+  for (const match of text.matchAll(/\b(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve) years?\b/gi)) {
+    requestedYears.push(writtenYearValues.get(match[1].toLowerCase()));
+  }
   const highestYears = requestedYears.length > 0 ? Math.max(...requestedYears) : null;
   if (highestYears !== null && highestYears <= 6) secure += 10;
   else if (highestYears !== null && highestYears <= 10) secure += 5;
@@ -172,6 +192,7 @@ export function scorePosting(row, { asOf, threshold = { composite: 78, fit: 75, 
     secure += 5;
   }
   if (/(deputy commissioner|executive director|chief of|chief\b)/i.test(title)) secure -= 25;
+  else if (/\bassociate director\b/i.test(title)) secure -= 8;
   else if (/\bdirector\b/i.test(title)) secure -= 15;
   if (TITLE_PENALTIES.slice(1, 4).some(([pattern]) => pattern.test(title))) secure -= 30;
   if (!row.minimum_qual_requirements) secure -= 5;

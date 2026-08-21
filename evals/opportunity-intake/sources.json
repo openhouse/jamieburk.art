@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "opportunity-source-adapter-registry-2026-08-20-B",
-  "updatedAt": "2026-08-20",
+  "updatedAt": "2026-08-21",
   "sources": [
     {
       "id": "source.nyc-open-data.jobs.pda4-rgn4",
@@ -22,6 +22,16 @@
       "freshnessSignals": ["new-role-alert", "candidate-invitation", "saved-job-state", "applied-job-state", "profile-review-date"],
       "boundaries": ["external-employer-application-remains-required", "profile-visibility-requires-jamie-consent", "account-state-and-messages-remain-private", "application-submission-remains-human"],
       "methodPath": "docs/knowledge-bank/methods/civic-match-opportunity-loop.md"
+    },
+    {
+      "id": "source.betanyc.civic-tech-newsletter",
+      "sourceType": "editorially-curated-recurring-newsletter",
+      "accessMode": "public-archive-with-private-delivery-copy",
+      "authority": "discovery-context-and-community-signal",
+      "affordances": ["recurring-public-archive", "editorially-curated-job-leads", "civic-ecosystem-context", "cross-sector-employer-discovery", "events-and-networking-signals"],
+      "freshnessSignals": ["latest-public-issue-date", "public-feed-last-build-date"],
+      "boundaries": ["official-employer-posting-controls", "editorial-inclusion-is-not-qualification", "private-mailbox-state-is-not-retained", "canonical-opportunity-promotion-remains-human", "application-submission-remains-human"],
+      "methodPath": "docs/knowledge-bank/methods/betanyc-opportunity-loop.md"
     }
   ]
 }

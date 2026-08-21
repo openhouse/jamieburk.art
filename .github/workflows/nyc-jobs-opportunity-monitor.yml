@@ -1,13 +1,15 @@
-name: NYC Jobs opportunity monitor
+name: Opportunity source monitor
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "17 13 * * *"
 
 permissions:
   contents: read
 
 concurrency:
-  group: nyc-jobs-opportunity-monitor
+  group: opportunity-source-monitor
   cancel-in-progress: false
 
 jobs:
@@ -23,8 +25,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
-      - name: Refresh, rank, and render the governed digest
+      - name: Refresh, rank, and render the NYC Jobs digest
         run: npm run opportunities:nyc:daily
+      - name: Refresh, rank, and render the BetaNYC newsletter review
+        run: npm run opportunities:betanyc:daily
       - name: Run deterministic opportunity evals
         run: npm run evals:opportunities && npm run test:opportunities
       - name: Retain the review packet
@@ -36,3 +40,5 @@ jobs:
             data/opportunities/nyc-jobs-current.json
             reports/opportunities/nyc-jobs-current.md
             reports/opportunities/nyc-jobs-daily-digest.md
+            data/opportunities/betanyc-newsletter-current.json
+            reports/opportunities/betanyc-newsletter-current.md

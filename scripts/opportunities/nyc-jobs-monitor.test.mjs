@@ -121,6 +121,43 @@ test("scoring admits a strong public-service product role and preserves separate
   assert.equal(result.qualificationReview, "human-review-required");
 });
 
+test("scoring recognizes policy implementation as a product-operations-adjacent leadership signal", () => {
+  const result = scorePosting(
+    {
+      ...strongProductRole,
+      job_id: "792925",
+      agency: "CAMPAIGN FINANCE BOARD",
+      business_title: "Associate Director of Policy Implementation",
+      salary_range_from: "125000",
+      salary_range_to: "135000",
+      job_description:
+        "Own an agency-wide policy implementation process, coordinate cross-divisional stakeholders, document decisions, translate policy into plain-language operating guidance, and manage delivery.",
+      minimum_qual_requirements:
+        "A baccalaureate degree and five years of related experience, including three years supervising staff, or a satisfactory equivalent combination of education and experience.",
+      preferred_skills:
+        "Project management, process improvement, stakeholder coordination, implementation, public service, and clear documentation."
+    },
+    { asOf: "2026-08-20", threshold: { composite: 78, fit: 75, secure: 65 } }
+  );
+
+  assert.equal(result.admitted, true);
+  assert.equal(result.qualificationReview, "human-review-required");
+});
+
+test("screening rejects an explicitly mandatory master's degree before scoring", () => {
+  const screened = screenPosting(
+    {
+      ...strongProductRole,
+      minimum_qual_requirements:
+        "All candidates must have at least a master's degree from an accredited college in sociology, public policy, or a related field."
+    },
+    { asOf: "2026-08-20" }
+  );
+
+  assert.equal(screened.eligible, false);
+  assert.ok(screened.reasons.includes("credential-hard-screen"));
+});
+
 test("snapshot deduplicates job IDs, omits known opportunities from new intake, and ranks deterministically", () => {
   const secondRole = {
     ...strongProductRole,

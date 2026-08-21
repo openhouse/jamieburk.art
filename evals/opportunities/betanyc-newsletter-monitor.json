@@ -1,0 +1,35 @@
+{
+  "id": "betanyc-newsletter-opportunity-monitor-v1",
+  "source": "source.betanyc.civic-tech-newsletter",
+  "asOf": "2026-08-21",
+  "configPath": "data/opportunities/betanyc-newsletter-monitor.json",
+  "snapshotPath": "data/opportunities/betanyc-newsletter-current.json",
+  "runPath": "evals/opportunities/runs/2026-08-21-betanyc-newsletter-monitor.json",
+  "hardGates": [
+    "recurring-source-is-modeled-by-its-affordances",
+    "latest-public-issue-is-current",
+    "every-lead-has-a-disposition",
+    "deterministic-gates-precede-model-review",
+    "verified-strong-matches-clear-every-threshold",
+    "automatic-promotion-stops-at-provisional-intake",
+    "private-mailbox-state-is-not-retained",
+    "daily-read-only-review-is-configured"
+  ],
+  "modelPolicy": {
+    "runOnlyAfter": [
+      "latest-public-issue-is-current",
+      "every-lead-has-a-disposition",
+      "verified-strong-matches-clear-every-threshold"
+    ],
+    "scope": "new-verified-strong-matches-only",
+    "maximumReadersPerNewMatch": 2,
+    "actualPeopleParticipated": false
+  },
+  "humanGates": [
+    "official posting verification",
+    "qualification review",
+    "canonical opportunity promotion",
+    "public resume or portfolio change",
+    "application submission"
+  ]
+}

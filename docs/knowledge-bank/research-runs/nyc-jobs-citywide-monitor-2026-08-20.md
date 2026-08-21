@@ -5,10 +5,10 @@ kind: research-run
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-20
+last_reviewed: 2026-08-21
 review_by: 2026-08-27
 canonical_path: docs/knowledge-bank/research-runs/nyc-jobs-citywide-monitor-2026-08-20.md
-summary: Deterministic full-feed screen and person-specific ranking that admitted six of 1,426 unique City job IDs to provisional review.
+summary: Deterministic full-feed screen and person-specific ranking that admitted seven of 1,426 unique City job IDs to provisional review.
 human_review: governed-open
 relations:
   - type: uses_source
@@ -24,7 +24,7 @@ relations:
 ## Decision
 
 The first full-feed pass evaluated 2,760 rows representing 1,426 unique job
-IDs. After inexpensive eligibility screens, 379 remained. Six roles—0.42% of
+IDs. After inexpensive eligibility screens, 325 remained. Seven roles—0.49% of
 the unique population—cleared the strong-match gate and entered provisional
 intake. None became a canonical opportunity or changed the public resume in
 this pass.
@@ -32,11 +32,12 @@ this pass.
 | Rank | Role / Job ID | Agency | Fit | Secure | Composite | Deadline |
 | ---: | --- | --- | ---: | ---: | ---: | ---: |
 | 1 | Senior Advisor, Digital Strategy 789143 | Office of the Mayor | 100 | 90 | 95.50 | 2026-09-29 |
-| 2 | Project Manager, Enterprise Technology Business Solutions 778437 | Department of Health and Mental Hygiene | 99 | 83 | 91.80 | 2026-10-04 |
+| 2 | Associate Director of Policy Implementation 792925 | Campaign Finance Board | 100 | 87 | 94.15 | 2026-10-13 |
 | 3 | Senior Project Manager 788977 | Campaign Finance Board | 87 | 95 | 90.60 | 2026-09-28 |
-| 4 | Technical Project Manager 787600 | Mayor's Office of Criminal Justice | 100 | 73 | 87.85 | 2026-09-20 |
-| 5 | Associate Director of Product Design 777595 | Campaign Finance Board | 84 | 80 | 82.20 | 2026-09-27 |
-| 6 | Operations Manager 783958 | Office of the Mayor | 77 | 88 | 81.95 | 2026-08-24 |
+| 4 | Project Manager, Enterprise Technology Business Solutions 778437 | Department of Health and Mental Hygiene | 99 | 78 | 89.55 | 2026-10-04 |
+| 5 | Associate Director of Product Design 777595 | Campaign Finance Board | 91 | 87 | 89.20 | 2026-09-27 |
+| 6 | Technical Project Manager 787600 | Mayor's Office of Criminal Justice | 100 | 73 | 87.85 | 2026-09-20 |
+| 7 | Operations Manager 783958 | Office of the Mayor | 77 | 88 | 81.95 | 2026-08-24 |
 
 `Fit` is evidence overlap and `Secure` is a heuristic estimate of screen
 survival, not a predicted probability. The composite is `55% fit + 45%
@@ -51,7 +52,7 @@ exam-list eligibility. The screen now treats explicit current-City-employee
 language as a deterministic exclusion. A regression test preserves that
 correction.
 
-The remaining six are research leads, not equally recommended applications.
+The remaining seven are research leads, not equally recommended applications.
 The Senior Advisor role may emphasize communications more than product
 delivery; the Product Design role may expect a conventional senior design
 portfolio; the Technical Project Manager and Operations Manager salary ranges

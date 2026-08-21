@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "source.betanyc.civic-tech-newsletter",
+  "publicArchiveUrl": "https://www.beta.nyc/category/news/",
+  "publicFeedUrl": "https://www.beta.nyc/feed/",
+  "postsUrl": "https://www.beta.nyc/wp-json/wp/v2/posts?search=This%20week%20in%20NYC&per_page=1&_fields=id,date,link,title,content",
+  "cityRowsUrl": "https://data.cityofnewyork.us/resource/pda4-rgn4.json?$limit=50000",
+  "titlePattern": "^This week in NYC",
+  "maximumAgeDays": 9,
+  "strongMatchThreshold": {
+    "composite": 78,
+    "fit": 75,
+    "secure": 65
+  },
+  "externalReviews": [
+    {
+      "sourceUrl": "https://www.nysenate.gov/newsroom/articles/2026/kristen-gonzalez/were-hiring-policy-director-ny-senate-district-59",
+      "verificationUrl": "https://www.nysenate.gov/newsroom/articles/2026/kristen-gonzalez/were-hiring-policy-director-ny-senate-district-59",
+      "verificationMode": "dated-official-review",
+      "reviewedAt": "2026-08-20",
+      "reviewExpiresAt": "2026-08-27",
+      "salaryFrom": 75000,
+      "salaryTo": 95000,
+      "fitScore": 84,
+      "secureScore": 58,
+      "exclusionReason": "salary-ceiling-below-target"
+    },
+    {
+      "sourceUrl": "https://app.trinethire.com/companies/381666-polimorphic/jobs/123173-product-manager",
+      "verificationUrl": "https://app.trinethire.com/companies/381666-polimorphic/jobs/123173-product-manager",
+      "verificationMode": "dated-official-review",
+      "reviewedAt": "2026-08-20",
+      "reviewExpiresAt": "2026-08-27",
+      "jobId": "polimorphic-123173",
+      "salaryFrom": 165000,
+      "salaryTo": 195000,
+      "fitScore": 92,
+      "secureScore": 70
+    },
+    {
+      "sourceUrl": "https://www.paragonfellowship.org/students",
+      "verificationUrl": "https://www.paragonfellowship.org/students",
+      "verificationMode": "dated-official-review",
+      "reviewedAt": "2026-08-20",
+      "reviewExpiresAt": "2026-08-23",
+      "salaryFrom": 0,
+      "salaryTo": 0,
+      "fitScore": 60,
+      "secureScore": 10,
+      "exclusionReason": "unpaid-and-student-recent-graduate-eligibility"
+    },
+    {
+      "sourceUrl": "https://www.cuny.edu/news/dcas-announces-expansion-of-the-civil-service-pathways-fellowship-connecting-recent-cuny-grads-with-municipal-career-opportunities/",
+      "verificationUrl": "https://www.nyc.gov/site/dcas/employment/internship-and-fellowships-civil-service-pathways-fellowship.page",
+      "verificationMode": "dated-official-review",
+      "reviewedAt": "2026-08-20",
+      "reviewExpiresAt": "2026-08-27",
+      "salaryFrom": 48956,
+      "salaryTo": 53862,
+      "fitScore": 55,
+      "secureScore": 10,
+      "exclusionReason": "salary-ceiling-and-cuny-graduate-eligibility"
+    },
+    {
+      "sourceUrl": "https://publiccitizen.applytojob.com/apply/xJbwjLWghU/Federal-Big-Tech-Accountability-Advocate",
+      "verificationUrl": "https://publiccitizen.applytojob.com/apply/xJbwjLWghU/Federal-Big-Tech-Accountability-Advocate",
+      "verificationMode": "dated-official-review",
+      "reviewedAt": "2026-08-20",
+      "reviewExpiresAt": "2026-08-27",
+      "jobId": "public-citizen-big-tech-accountability-advocate",
+      "salaryFrom": 85383,
+      "salaryTo": 141633,
+      "fitScore": 78,
+      "secureScore": 55
+    }
+  ],
+  "evaluation": {
+    "stages": [
+      "source-identity-and-freshness",
+      "official-url-resolution-and-deduplication",
+      "eligibility-salary-deadline-and-credential-screens",
+      "deterministic-fit-and-secure-score",
+      "named-reader-llm",
+      "human-canonical-and-application-review"
+    ],
+    "llmGate": "new-verified-strong-matches-only",
+    "maximumReadersPerNewMatch": 2
+  },
+  "snapshotPath": "data/opportunities/betanyc-newsletter-current.json",
+  "reportPath": "reports/opportunities/betanyc-newsletter-current.md",
+  "automaticDisposition": "provisional-intake-only",
+  "applicationAuthority": "Jamie Burkart"
+}

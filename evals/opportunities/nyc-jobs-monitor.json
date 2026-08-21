@@ -1,11 +1,11 @@
 {
   "id": "nyc-jobs-opportunity-monitor-v1",
   "source": "source.nyc-open-data.jobs.pda4-rgn4",
-  "asOf": "2026-08-20",
+  "asOf": "2026-08-21",
   "configPath": "data/opportunities/nyc-jobs-monitor.json",
   "snapshotPath": "data/opportunities/nyc-jobs-current.json",
   "lifecyclePath": "evals/resumes/public-resume-selection.json",
-  "runPath": "evals/opportunities/runs/2026-08-20-nyc-jobs-monitor.json",
+  "runPath": "evals/opportunities/runs/2026-08-21-nyc-jobs-monitor.json",
   "hardGates": [
     "source-state-is-current",
     "strong-match-thresholds-hold",
