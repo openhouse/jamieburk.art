@@ -1,12 +1,12 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `6a244460a2c92aafeb3789ad30a315d574aaa2bf`
-**Portfolio snapshot:** `05262e0f52249645a1be27a76a7729455ad77833a6f9b8c0050ddf89d73e0969`
-**Role-context hash:** `a72e9f97830ae45ad1ad1a21550fd71f0e0d7f56c6bf62ec21a6a7ae4b1d853e`
+**Candidate commit:** `30dfa4b7f27db68770875f6f6ddb47bafb669f72`
+**Portfolio snapshot:** `0c74675939dc4226a7bd284a3f8100cbe537b18adbc55e55b3d34b3c268afd7d`
+**Role-context hash:** `6e959f00d5e3b89e8714483841ab7ace87224f7a66a1c53543442b4bc1c438e6`
 **Reader-context hash:** `c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
-**Candidate paths clean:** yes
+**Candidate paths clean:** no
 
 > Deterministic baseline only. This is not an interview prediction, a named person's opinion, or a human reader study.
 
@@ -143,8 +143,8 @@
 ### CodePath - Senior Program Manager, Claude Corps
 
 - Deterministic disposition: `not-live`
-- Critical signals observed: 1/4
-- All signals observed: 2/5
+- Critical signals observed: 0/4
+- All signals observed: 1/5
 - Opportunity status live: no
 - Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
@@ -152,10 +152,24 @@
 - `requirement.codepath.master-program-plan`: **not observed**
 - `requirement.codepath.partner-coordination`: **not observed**
 - `requirement.codepath.executive-reporting`: **not observed**
-- `requirement.codepath.ai-first-workflow`: **observed** on `/lab/source-backed-team-memory`
+- `requirement.codepath.ai-first-workflow`: **not observed**
 - `requirement.codepath.handoff-ready-systems`: **observed** on `/work/technical-operations`
 
 ### Asana - AI Implementation Manager, Service Management
+
+- Deterministic disposition: `evidence-gap-review`
+- Critical signals observed: 0/3
+- All signals observed: 0/4
+- Opportunity status live: yes
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
+
+- `requirement.asana.implementation-ownership`: **not observed** on `/work/technical-operations`
+- `requirement.asana.ai-workflow-design`: **not observed**
+- `requirement.asana.risk-and-change-management`: **not observed**
+- `requirement.asana.reusable-playbooks`: **not observed**
+
+### PermitFlow - Product Operations Manager
 
 - Deterministic disposition: `evidence-gap-review`
 - Critical signals observed: 1/3
@@ -164,37 +178,25 @@
 - Role context current at candidate time: yes
 - Exclusionary hard screen recorded: no
 
-- `requirement.asana.implementation-ownership`: **not observed** on `/work/technical-operations`
-- `requirement.asana.ai-workflow-design`: **observed** on `/lab/source-backed-team-memory`
-- `requirement.asana.risk-and-change-management`: **not observed**
-- `requirement.asana.reusable-playbooks`: **not observed**
-
-### PermitFlow - Product Operations Manager
-
-- Deterministic disposition: `evidence-gap-review`
-- Critical signals observed: 1/3
-- All signals observed: 2/4
-- Opportunity status live: yes
-- Role context current at candidate time: yes
-- Exclusionary hard screen recorded: no
-
 - `requirement.permitflow.physical-public-systems`: **observed** on `/work/kc-town-hall`, `/work/callnyc`
 - `requirement.permitflow.product-data`: **not observed** on `/work/harry-j-epstein`
 - `requirement.permitflow.cross-functional-launch`: **not observed**
-- `requirement.permitflow.ai-automation`: **observed** on `/lab/source-backed-team-memory`
+- `requirement.permitflow.ai-automation`: **not observed**
 
 ### Protected source-backed team-memory consulting lead
 
 - Deterministic disposition: `not-live`
-- Critical signals observed: 1/2
-- All signals observed: 1/3
+- Critical signals observed: 2/3
+- All signals observed: 2/5
 - Opportunity status live: no
 - Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
-- `requirement.protected-memory.knowledge-friction`: **not observed**
+- `requirement.protected-memory.knowledge-friction`: **observed** on `/work/technical-operations`
 - `requirement.protected-memory.human-review`: **observed** on `/lab/source-backed-team-memory`
-- `requirement.protected-memory.bounded-sprint`: **not observed**
+- `requirement.protected-memory.focused-sprint`: **not observed**
+- `requirement.protected-memory.onboarding-context`: **not observed**
+- `requirement.protected-memory.workflow-fit`: **not observed**
 
 ## Open human gates
 

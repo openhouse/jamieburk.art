@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "runId": "hiring-public-6a244460a2c9",
-  "generatedAt": "2026-08-20T18:57:06-04:00",
-  "candidateSha": "6a244460a2c92aafeb3789ad30a315d574aaa2bf",
-  "candidatePathsClean": true,
-  "portfolioSnapshotHash": "05262e0f52249645a1be27a76a7729455ad77833a6f9b8c0050ddf89d73e0969",
-  "roleContextHash": "a72e9f97830ae45ad1ad1a21550fd71f0e0d7f56c6bf62ec21a6a7ae4b1d853e",
+  "runId": "hiring-public-30dfa4b7f27d",
+  "generatedAt": "2026-08-20T23:02:29-04:00",
+  "candidateSha": "30dfa4b7f27db68770875f6f6ddb47bafb669f72",
+  "candidatePathsClean": false,
+  "portfolioSnapshotHash": "0c74675939dc4226a7bd284a3f8100cbe537b18adbc55e55b3d34b3c268afd7d",
+  "roleContextHash": "6e959f00d5e3b89e8714483841ab7ace87224f7a66a1c53543442b4bc1c438e6",
   "readerContextHash": "c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
   "publicSafety": {
@@ -711,9 +711,9 @@
       "fresh": false,
       "hardScreenBlocked": false,
       "decision": "not-live",
-      "observed": 2,
+      "observed": 1,
       "requirementTotal": 5,
-      "criticalObserved": 1,
+      "criticalObserved": 0,
       "criticalTotal": 4,
       "requirementCoverage": [
         {
@@ -746,15 +746,11 @@
         {
           "requirementId": "requirement.codepath.ai-first-workflow",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-proven",
-          "routes": [
-            "/lab/source-backed-team-memory"
-          ],
-          "evidenceNeedles": [
-            "human-correctable AI workflows"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.codepath.handoff-ready-systems",
@@ -779,9 +775,9 @@
       "fresh": true,
       "hardScreenBlocked": false,
       "decision": "evidence-gap-review",
-      "observed": 1,
+      "observed": 0,
       "requirementTotal": 4,
-      "criticalObserved": 1,
+      "criticalObserved": 0,
       "criticalTotal": 3,
       "requirementCoverage": [
         {
@@ -800,15 +796,11 @@
         {
           "requirementId": "requirement.asana.ai-workflow-design",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/lab/source-backed-team-memory"
-          ],
-          "evidenceNeedles": [
-            "human-correctable AI workflows"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.asana.risk-and-change-management",
@@ -838,7 +830,7 @@
       "fresh": true,
       "hardScreenBlocked": false,
       "decision": "evidence-gap-review",
-      "observed": 2,
+      "observed": 1,
       "requirementTotal": 4,
       "criticalObserved": 1,
       "criticalTotal": 3,
@@ -883,39 +875,39 @@
         {
           "requirementId": "requirement.permitflow.ai-automation",
           "importance": "important",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-proven",
-          "routes": [
-            "/lab/source-backed-team-memory"
-          ],
-          "evidenceNeedles": [
-            "human-correctable AI workflows"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         }
       ]
     },
     {
       "id": "opportunity.protected.source-backed-memory-consulting.2026",
       "title": "Protected source-backed team-memory consulting lead",
-      "roleContextHash": "d1c8f26df4f684b263c736f2bdfad53e2b000676bfc707e6ccdb98cbcbe966bb",
+      "roleContextHash": "b15538fd5ba342af247133ff26ce6135017d6f5350276aaa06246aa5658f6470",
       "live": false,
       "fresh": false,
       "hardScreenBlocked": false,
       "decision": "not-live",
-      "observed": 1,
-      "requirementTotal": 3,
-      "criticalObserved": 1,
-      "criticalTotal": 2,
+      "observed": 2,
+      "requirementTotal": 5,
+      "criticalObserved": 2,
+      "criticalTotal": 3,
       "requirementCoverage": [
         {
           "requirementId": "requirement.protected-memory.knowledge-friction",
           "importance": "critical",
-          "observed": false,
-          "matchedPublicText": false,
+          "observed": true,
+          "matchedPublicText": true,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [],
-          "evidenceNeedles": []
+          "routes": [
+            "/work/technical-operations"
+          ],
+          "evidenceNeedles": [
+            "Knowledge Wiki Graph"
+          ]
         },
         {
           "requirementId": "requirement.protected-memory.human-review",
@@ -931,7 +923,25 @@
           ]
         },
         {
-          "requirementId": "requirement.protected-memory.bounded-sprint",
+          "requirementId": "requirement.protected-memory.focused-sprint",
+          "importance": "important",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.protected-memory.onboarding-context",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.protected-memory.workflow-fit",
           "importance": "important",
           "observed": false,
           "matchedPublicText": false,

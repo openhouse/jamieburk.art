@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity requirement coverage
 
-**Wiki fingerprint:** `1b676ee3bee3a4b6e27dbb0ceae1ecb6d0979a8ee14703ccc900e16b0fa6a74e`
+**Wiki fingerprint:** `0867c8d584d79b0ba0a80946176fd676d2e7ecb83bd27af022c04d71d864d99b`
 
 Statuses preserve the difference between visible proof, Wiki-only proof, source work, experience gaps, and hard screens.
 
@@ -130,4 +130,6 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 |---|---|---|---|---|
 | `requirement.protected-memory.knowledge-friction` | critical | visible-qualified | none | Keep the public method legible without exposing the protected lead. |
 | `requirement.protected-memory.human-review` | critical | visible-proven | none | Preserve the explicit human-review boundary. |
-| `requirement.protected-memory.bounded-sprint` | important | visible-qualified | role-context | Do not imply that a sprint was accepted, funded, or delivered. |
+| `requirement.protected-memory.focused-sprint` | important | visible-qualified | role-context | Do not imply that a sprint was accepted, funded, or delivered. |
+| `requirement.protected-memory.onboarding-context` | critical | visible-qualified | role-context | Test this outcome in a separately authorized engagement; do not imply external validation. |
+| `requirement.protected-memory.workflow-fit` | important | visible-qualified | role-context | Choose the format only after learning the team's actual workflow. |

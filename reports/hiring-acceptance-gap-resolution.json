@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "candidateSha": "6a244460a2c92aafeb3789ad30a315d574aaa2bf",
-  "portfolioSnapshotHash": "05262e0f52249645a1be27a76a7729455ad77833a6f9b8c0050ddf89d73e0969",
-  "publicReportHash": "e3381748caf74580ecbb93df972df477f79e7990fb26fe8e1c753c876fd633ee",
-  "wikiSourceFingerprint": "1b676ee3bee3a4b6e27dbb0ceae1ecb6d0979a8ee14703ccc900e16b0fa6a74e",
+  "candidateSha": "30dfa4b7f27db68770875f6f6ddb47bafb669f72",
+  "portfolioSnapshotHash": "0c74675939dc4226a7bd284a3f8100cbe537b18adbc55e55b3d34b3c268afd7d",
+  "publicReportHash": "5fc1f5a02dabff9e5d74c8fd37cfce3f8438b2ff5b524a502a046d0602530609",
+  "wikiSourceFingerprint": "0867c8d584d79b0ba0a80946176fd676d2e7ecb83bd27af022c04d71d864d99b",
   "findings": [
     {
       "findingId": "finding.requirement.oti-product.cross-functional-launch",
@@ -328,6 +328,20 @@
       "requiresHumanApproval": true
     },
     {
+      "findingId": "finding.requirement.codepath.ai-first-workflow",
+      "opportunityId": "opportunity.codepath.claude-corps.5182020007",
+      "requirementId": "requirement.codepath.ai-first-workflow",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "visible-proven",
+      "gapType": "none",
+      "smallestResponsibleChange": "Demonstrate the working Wiki and eval system without centering it over the program.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
       "findingId": "finding.requirement.asana.implementation-ownership",
       "opportunityId": "opportunity.asana.ai-implementation.8027437",
       "requirementId": "requirement.asana.implementation-ownership",
@@ -338,6 +352,20 @@
       "currentStatus": "visible-weak",
       "gapType": "experience",
       "smallestResponsibleChange": "Distinguish direct client implementation from internal and public-facing delivery.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.asana.ai-workflow-design",
+      "opportunityId": "opportunity.asana.ai-implementation.8027437",
+      "requirementId": "requirement.asana.ai-workflow-design",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "none",
+      "smallestResponsibleChange": "Demonstrate a bounded workflow and its human review controls.",
       "requiresOriginalSourceReview": false,
       "requiresHumanApproval": true
     },
@@ -396,24 +424,23 @@
       "requiresHumanApproval": true
     },
     {
-      "findingId": "finding.requirement.protected-memory.knowledge-friction",
-      "opportunityId": "opportunity.protected.source-backed-memory-consulting.2026",
-      "requirementId": "requirement.protected-memory.knowledge-friction",
+      "findingId": "finding.requirement.permitflow.ai-automation",
+      "opportunityId": "opportunity.permitflow.product-operations.8a6e6066",
+      "requirementId": "requirement.permitflow.ai-automation",
       "classification": "role-context-or-evidence-unknown",
       "wikiRecords": [
-        "method.source-backed-team-memory",
-        "capability.technical-operations"
+        "method.source-backed-team-memory"
       ],
-      "currentStatus": "visible-qualified",
+      "currentStatus": "visible-proven",
       "gapType": "none",
-      "smallestResponsibleChange": "Keep the public method legible without exposing the protected lead.",
+      "smallestResponsibleChange": "Demonstrate the bounded workflow, not a generic enthusiasm claim.",
       "requiresOriginalSourceReview": false,
       "requiresHumanApproval": true
     },
     {
-      "findingId": "finding.requirement.protected-memory.bounded-sprint",
+      "findingId": "finding.requirement.protected-memory.focused-sprint",
       "opportunityId": "opportunity.protected.source-backed-memory-consulting.2026",
-      "requirementId": "requirement.protected-memory.bounded-sprint",
+      "requirementId": "requirement.protected-memory.focused-sprint",
       "classification": "role-context-or-evidence-unknown",
       "wikiRecords": [
         "method.source-backed-team-memory"
@@ -421,6 +448,34 @@
       "currentStatus": "visible-qualified",
       "gapType": "role-context",
       "smallestResponsibleChange": "Do not imply that a sprint was accepted, funded, or delivered.",
+      "requiresOriginalSourceReview": true,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.protected-memory.onboarding-context",
+      "opportunityId": "opportunity.protected.source-backed-memory-consulting.2026",
+      "requirementId": "requirement.protected-memory.onboarding-context",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "role-context",
+      "smallestResponsibleChange": "Test this outcome in a separately authorized engagement; do not imply external validation.",
+      "requiresOriginalSourceReview": true,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.protected-memory.workflow-fit",
+      "opportunityId": "opportunity.protected.source-backed-memory-consulting.2026",
+      "requirementId": "requirement.protected-memory.workflow-fit",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "role-context",
+      "smallestResponsibleChange": "Choose the format only after learning the team's actual workflow.",
       "requiresOriginalSourceReview": true,
       "requiresHumanApproval": true
     }

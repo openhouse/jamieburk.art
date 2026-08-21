@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Hiring acceptance Wiki gap resolution
 
-**Candidate commit:** `6a244460a2c92aafeb3789ad30a315d574aaa2bf`
-**Public report hash:** `e3381748caf74580ecbb93df972df477f79e7990fb26fe8e1c753c876fd633ee`
-**Wiki fingerprint:** `1b676ee3bee3a4b6e27dbb0ceae1ecb6d0979a8ee14703ccc900e16b0fa6a74e`
+**Candidate commit:** `30dfa4b7f27db68770875f6f6ddb47bafb669f72`
+**Public report hash:** `5fc1f5a02dabff9e5d74c8fd37cfce3f8438b2ff5b524a502a046d0602530609`
+**Wiki fingerprint:** `0867c8d584d79b0ba0a80946176fd676d2e7ecb83bd27af022c04d71d864d99b`
 
 The gap resolver runs after the public-only evaluator. It can identify Wiki evidence, but every public change remains human-reviewed.
 
@@ -32,10 +32,14 @@ The gap resolver runs after the public-only evaluator. It can identify Wiki evid
 - `requirement.codepath.master-program-plan` - **role-context-or-evidence-unknown**; Prepare a redacted plan-of-record artifact.
 - `requirement.codepath.partner-coordination` - **role-context-or-evidence-unknown**; Name one multi-organization delivery sequence.
 - `requirement.codepath.executive-reporting` - **role-context-or-evidence-unknown**; Prepare one status-report sample for interview.
+- `requirement.codepath.ai-first-workflow` - **role-context-or-evidence-unknown**; Demonstrate the working Wiki and eval system without centering it over the program.
 - `requirement.asana.implementation-ownership` - **true-experience-gap**; Distinguish direct client implementation from internal and public-facing delivery.
+- `requirement.asana.ai-workflow-design` - **role-context-or-evidence-unknown**; Demonstrate a bounded workflow and its human review controls.
 - `requirement.asana.risk-and-change-management` - **true-experience-gap**; Do not substitute general risk coordination for migration or configuration experience.
 - `requirement.asana.reusable-playbooks` - **role-context-or-evidence-unknown**; Prepare one implementation-oriented playbook sample.
 - `requirement.permitflow.product-data` - **true-experience-gap**; Test present SQL and analytics fluency; do not imply tools Jamie cannot demonstrate.
 - `requirement.permitflow.cross-functional-launch` - **role-context-or-evidence-unknown**; Prepare one cross-functional launch sequence with actors and decisions.
-- `requirement.protected-memory.knowledge-friction` - **role-context-or-evidence-unknown**; Keep the public method legible without exposing the protected lead.
-- `requirement.protected-memory.bounded-sprint` - **role-context-or-evidence-unknown**; Do not imply that a sprint was accepted, funded, or delivered.
+- `requirement.permitflow.ai-automation` - **role-context-or-evidence-unknown**; Demonstrate the bounded workflow, not a generic enthusiasm claim.
+- `requirement.protected-memory.focused-sprint` - **role-context-or-evidence-unknown**; Do not imply that a sprint was accepted, funded, or delivered.
+- `requirement.protected-memory.onboarding-context` - **role-context-or-evidence-unknown**; Test this outcome in a separately authorized engagement; do not imply external validation.
+- `requirement.protected-memory.workflow-fit` - **role-context-or-evidence-unknown**; Choose the format only after learning the team's actual workflow.
