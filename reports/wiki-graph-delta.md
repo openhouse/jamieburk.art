@@ -3,15 +3,15 @@
 
 **Source commit:** `61ef408c80fd1027aa6d06733553f2cb618a33e8`
 **Generation time:** 2026-08-21T01:26:38-04:00
-**Source fingerprint:** `18161c3493267e4ea87310569e25043f756706e7fe40092bfdb542ff1bd984da`
+**Source fingerprint:** `ac7ba64b33eb59ab160a20236dc4dcd7dc22bb7632b5250c6a08707bc8f2e9f2`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 66
+- Nodes added: 69
 - Nodes removed: 38
-- Edges added: 204
+- Edges added: 219
 - Edges removed: 184
-- New type-aware orphans: 0
+- New type-aware orphans: 1
 - Current rights-review records: 186
 
 ## Added nodes
@@ -23,6 +23,7 @@ Compared with the graph artifact on `origin/develop`.
 - `correction.photo.portfolio-project-credits.2026-08-20`
 - `decision.photo.launch-2026.field-system-pairs`
 - `evaluation.curatorial.launch-2026.field-system-pairs`
+- `evaluation.jobs.betanyc-newsletter.2026-08-21`
 - `evaluation.jobs.civic-match.profile-and-reader-gates`
 - `evaluation.jobs.nyc-open-data.strong-match`
 - `evaluation.jobs.nyc-oti.product-management-ranking.2026-08-20`
@@ -48,6 +49,7 @@ Compared with the graph artifact on `origin/develop`.
 - `opportunity.nyc-oti.operations-manager-speed.789810`
 - `opportunity.nyc-oti.product-manager.784450`
 - `opportunity.nyc-oti.senior-product-manager-speed.789610`
+- `opportunity.polimorphic.product-manager.123173`
 - `projection.photo.global-social-preview.east-river`
 - `projection.photo.launch-2026.fair-rent.shoestring-facilitation`
 - `projection.photo.launch-2026.home.save-nyc-spaces-town-hall`
@@ -69,6 +71,7 @@ Compared with the graph artifact on `origin/develop`.
 - `source.hje.formation-and-storefront-chronology.2026-08`
 - `source.jamie.employment-mobility-attestation.2026-08-15`
 - `source.jobs.aclu.senior-project-manager-national-campaigns.8631854002`
+- `source.jobs.betanyc-newsletter.current`
 - `source.jobs.civic-match.current`
 - `source.jobs.codepath.senior-ai-operations-lead.5175813007`
 - `source.jobs.nyc-open-data.current`

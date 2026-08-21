@@ -5,8 +5,8 @@ kind: opportunity
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-20
-review_by: 2026-08-27
+last_reviewed: 2026-08-21
+review_by: 2026-08-28
 canonical_path: docs/knowledge-bank/opportunities/nyc-jobs-782953.md
 summary: "Strong-match NYC Jobs discovery candidate: Efficiency Program Manager at OFFICE OF THE MAYOR."
 canonical_url: https://cityjobs.nyc.gov/jobs?options=&page=1&q=782953
@@ -14,7 +14,7 @@ source_type: official-employer
 opportunity_status: live
 application_status: not-recorded
 posted_until: 2026-10-06
-verified_at: 2026-08-20
+verified_at: 2026-08-21
 job_id: "782953"
 salary_minimum: 120000
 salary_maximum: 140000

@@ -31,6 +31,26 @@
   ],
   "opportunityReaders": [
     {
+      "id": "gate.polimorphic-product.kyle-arjun-patel",
+      "readerId": "reader.kyle-arjun-patel",
+      "readerPath": "docs/qa/hiring-acceptance/readers/kyle-arjun-patel.md",
+      "opportunityId": "opportunity.polimorphic.product-manager.123173",
+      "opportunityPath": "docs/knowledge-bank/opportunities/polimorphic-product-manager-123173.md",
+      "relationshipToRole": "posting-named CTO and direct reporting line",
+      "opportunityStatus": "live",
+      "requiredRoutes": ["/", "/work/technical-operations", "/work/wowlist", "/work/callnyc", "/work/harry-j-epstein", "/lab/source-backed-team-memory", "/resume", "/contact"]
+    },
+    {
+      "id": "gate.polimorphic-product.parth-shah",
+      "readerId": "reader.parth-shah",
+      "readerPath": "docs/qa/hiring-acceptance/readers/parth-shah.md",
+      "opportunityId": "opportunity.polimorphic.product-manager.123173",
+      "opportunityPath": "docs/knowledge-bank/opportunities/polimorphic-product-manager-123173.md",
+      "relationshipToRole": "publicly named cofounder and CEO; nearest senior vision leader",
+      "opportunityStatus": "live",
+      "requiredRoutes": ["/", "/work/technical-operations", "/work/wowlist", "/work/callnyc", "/resume", "/contact"]
+    },
+    {
       "id": "gate.aclu-national-campaigns.deirdre-schifeling",
       "readerId": "reader.deirdre-schifeling",
       "readerPath": "docs/qa/hiring-acceptance/readers/deirdre-schifeling.md",

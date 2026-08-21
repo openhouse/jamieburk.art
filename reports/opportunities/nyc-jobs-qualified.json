@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "datasetId": "pda4-rgn4",
   "datasetRowsUpdatedAt": "2026-08-18T19:01:20.000Z",
-  "generatedAt": "2026-08-20T12:00:00.000Z",
+  "generatedAt": "2026-08-21T12:00:00.000Z",
   "threshold": {
     "fit": 75,
     "securability": 60,
@@ -10,14 +10,14 @@
   },
   "rowCount": 2760,
   "uniqueJobCount": 1426,
-  "deterministicExcludedCount": 1088,
+  "deterministicExcludedCount": 1093,
   "exclusionReasons": {
     "compensation-below-target": 881,
     "specialized-hard-screen": 403,
-    "posting-expired": 17,
+    "posting-expired": 32,
     "not-publicly-open": 6
   },
-  "scoredCount": 338,
+  "scoredCount": 333,
   "admittedCount": 13,
   "admitted": [
     {
@@ -658,33 +658,6 @@
       ]
     },
     {
-      "opportunityId": "opportunity.nyc-jobs.783958",
-      "jobId": "783958",
-      "title": "Operations Manager",
-      "organization": "OFFICE OF THE MAYOR",
-      "canonicalUrl": "https://cityjobs.nyc.gov/jobs?options=&page=1&q=783958",
-      "source": "nyc-open-data",
-      "positions": 1,
-      "salaryFrom": 95000,
-      "salaryTo": 105000,
-      "postUntil": "2026-08-24",
-      "titleAlignmentScore": 35,
-      "fitScore": 80,
-      "securabilityScore": 73,
-      "combinedScore": 77.3,
-      "matchedSignals": [
-        "project-implementation",
-        "public-service",
-        "technical-systems",
-        "operations",
-        "facilitation-communications",
-        "leadership-strategy"
-      ],
-      "admissionFailures": [
-        "combined-threshold"
-      ]
-    },
-    {
       "opportunityId": "opportunity.nyc-jobs.790159",
       "jobId": "790159",
       "title": "Director of Operations",
@@ -789,6 +762,33 @@
       ],
       "admissionFailures": [
         "fit-threshold",
+        "combined-threshold"
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-jobs.783958",
+      "jobId": "783958",
+      "title": "Operations Manager",
+      "organization": "OFFICE OF THE MAYOR",
+      "canonicalUrl": "https://cityjobs.nyc.gov/jobs?options=&page=1&q=783958",
+      "source": "nyc-open-data",
+      "positions": 1,
+      "salaryFrom": 95000,
+      "salaryTo": 105000,
+      "postUntil": "2026-08-24",
+      "titleAlignmentScore": 35,
+      "fitScore": 80,
+      "securabilityScore": 68,
+      "combinedScore": 75.4,
+      "matchedSignals": [
+        "project-implementation",
+        "public-service",
+        "technical-systems",
+        "operations",
+        "facilitation-communications",
+        "leadership-strategy"
+      ],
+      "admissionFailures": [
         "combined-threshold"
       ]
     },
@@ -1050,7 +1050,7 @@
       ]
     }
   ],
-  "actionableCount": 21,
+  "actionableCount": 22,
   "actionable": [
     {
       "opportunityId": "opportunity.nyc-jobs.787600",
@@ -1259,6 +1259,22 @@
       "fitScore": 90,
       "securabilityScore": 75,
       "combinedScore": 84.3
+    },
+    {
+      "opportunityId": "opportunity.polimorphic.product-manager.123173",
+      "jobId": "polimorphic-123173",
+      "title": "Polimorphic - Product Manager (First Product Hire)",
+      "organization": "Polimorphic",
+      "canonicalUrl": "https://app.trinethire.com/companies/381666-polimorphic/jobs/123173-product-manager",
+      "source": "knowledge-wiki",
+      "postedUntil": null,
+      "applicationStatus": "not-applied",
+      "salaryFrom": 165000,
+      "salaryTo": 195000,
+      "positions": 1,
+      "fitScore": 96,
+      "securabilityScore": 65,
+      "combinedScore": 84.2
     },
     {
       "opportunityId": "opportunity.nyc-oti.product-manager.784450",

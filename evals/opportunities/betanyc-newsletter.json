@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "evaluatedAt": "2026-08-21",
+  "scope": "BetaNYC recurring newsletter freshness, privacy-safe normalization, official-destination verification, cross-source deduplication, strong-match admission, and modeled-reader cost control",
+  "gateOrder": [
+    "newest authenticated edition and public-archive reconciliation",
+    "recipient tracking and private mailbox data removal",
+    "clean employer destination and live-posting verification",
+    "compensation, eligibility, expiration, and specialist hard screens",
+    "fit, securability, and combined strong-match thresholds",
+    "cross-source deduplication and provenance enrichment",
+    "governed opportunity intake record",
+    "isolated hiring-reader review",
+    "Jamie application decision"
+  ],
+  "thresholds": {
+    "fit": 75,
+    "securability": 60,
+    "combined": 84
+  },
+  "requiredInvariants": [
+    "No raw email, recipient address, mailbox identifier, unsubscribe link, or recipient-specific tracking token is committed.",
+    "The newest mailbox edition may lead the public archive without being falsely described as publicly archived.",
+    "The newsletter is discovery and editorial provenance; the employer posting governs role facts.",
+    "An opportunity already admitted from another source is enriched, not duplicated.",
+    "Excluded and below-threshold leads do not receive modeled-reader calls.",
+    "No score establishes eligibility, interview, offer, or hire.",
+    "No application is submitted automatically."
+  ],
+  "costControl": "Freshness, privacy, destination, eligibility, compensation, expiration, specialist, threshold, and deduplication checks precede modeled-reader work.",
+  "execution": {
+    "status": "queued-not-run",
+    "passStatement": "I would interview this person for this specific role and see a credible path to hiring, subject to ordinary verification.",
+    "authorityBoundary": "A modeled reader is a synthetic public-context lens, not the real person's participation, opinion, endorsement, or hiring decision."
+  }
+}

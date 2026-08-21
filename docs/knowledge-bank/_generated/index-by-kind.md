@@ -3,7 +3,7 @@
 
 **Source commit:** `61ef408c80fd1027aa6d06733553f2cb618a33e8`
 **Generation time:** 2026-08-21T01:26:38-04:00
-**Source fingerprint:** `18161c3493267e4ea87310569e25043f756706e7fe40092bfdb542ff1bd984da`
+**Source fingerprint:** `ac7ba64b33eb59ab160a20236dc4dcd7dc22bb7632b5250c6a08707bc8f2e9f2`
 
 ## application
 
@@ -245,6 +245,7 @@
 - [Portfolio project-cover curatorial record](../evaluations/curatorial/portfolio-project-covers-2026-08-13.md) - `evaluation.curatorial.portfolio-project-covers.2026-08-13`
 - [Employment context coverage baseline - July 18, 2026](../evaluations/employment-context-coverage-2026-07-18.md) - `evaluation.employment-context.coverage.2026-07-18`
 - [Jamie public-record integration evaluation](../evaluations/jamie-public-record-integration-2026-08-03.md) - `evaluation.jamie-public-record-integration.2026-08-03`
+- [BetaNYC newsletter opportunity-source evaluation](../evaluations/betanyc-newsletter-opportunity-source.md) - `evaluation.jobs.betanyc-newsletter.2026-08-21`
 - [Civic Match profile and audience-correct modeled-reader gates](../evaluations/civic-match-opportunity-source.md) - `evaluation.jobs.civic-match.profile-and-reader-gates`
 - [NYC Jobs deterministic strong-match opportunity feed](../evaluations/nyc-jobs-opportunity-feed.md) - `evaluation.jobs.nyc-open-data.strong-match`
 - [Jamie-specific ranking of the NYC OTI product-manager search corpus](../evaluations/oti-product-management-ranking-2026-08-20.md) - `evaluation.jobs.nyc-oti.product-management-ranking.2026-08-20`
@@ -356,6 +357,7 @@
 - [NYC OTI - Senior Product Manager 782366](../opportunities/oti-senior-product-manager.md) - `opportunity.nyc-oti.senior-product-manager.782366`
 - [NYC OTI - Technical Operations Manager 782369](../opportunities/oti-technical-operations.md) - `opportunity.nyc-oti.technical-operations-manager.782369`
 - [PermitFlow - Product Operations Manager](../opportunities/permitflow-product-operations.md) - `opportunity.permitflow.product-operations.8a6e6066`
+- [Polimorphic - Product Manager (First Product Hire)](../opportunities/polimorphic-product-manager-123173.md) - `opportunity.polimorphic.product-manager.123173`
 - [Protected source-backed team-memory consulting lead](../opportunities/source-backed-team-memory.md) - `opportunity.protected.source-backed-memory-consulting.2026`
 
 ## organization
@@ -457,6 +459,7 @@
 - [ACLU - Senior Project Manager, National Campaigns 8631854002](../sources/jobs-aclu-senior-project-manager-national-campaigns-8631854002.md) - `source.jobs.aclu.senior-project-manager-national-campaigns.8631854002`
 - [Asana - AI Implementation Manager, Service Management 8027437](../sources/jobs-asana-ai-implementation-8027437.md) - `source.jobs.asana.ai-implementation.8027437`
 - [Official posting - Benepass Product Operations Manager](../sources/jobs-benepass-product-operations.md) - `source.jobs.benepass.product-operations.7f963a7a`
+- [BetaNYC weekly civic-tech newsletter opportunity source](../sources/betanyc-newsletter.md) - `source.jobs.betanyc-newsletter.current`
 - [Civic Match candidate network and job board](../sources/civic-match.md) - `source.jobs.civic-match.current`
 - [CodePath - Senior Program Manager, Claude Corps 5182020007](../sources/jobs-codepath-claude-corps-5182020007.md) - `source.jobs.codepath.claude-corps.5182020007`
 - [CodePath - Engineering Project Manager 5160542007](../sources/jobs-codepath-engineering-project-manager-5160542007.md) - `source.jobs.codepath.engineering-project-manager.5160542007`

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "betanyc-newsletter",
+  "sourceRecordId": "source.jobs.betanyc-newsletter.current",
+  "canonicalUrl": "https://www.beta.nyc/newsletter/",
+  "publicArchiveUrl": "https://www.beta.nyc/category/newsletter/",
+  "mailboxQuery": "from:noel@beta.nyc subject:(This week in NYC’s #CivicTech) -in:spam -in:trash",
+  "cadence": "weekly",
+  "expectedPublicationDay": "Thursday",
+  "maximumEditionAgeDays": 10,
+  "asOf": "2026-08-21",
+  "latestEditionDate": "2026-08-20",
+  "latestEditionObservedAt": "2026-08-21",
+  "latestEditionSubject": "This week in NYC’s #CivicTech! - 20 August 2026",
+  "latestPublicArchiveEditionDate": "2026-08-13",
+  "snapshotPath": "reports/opportunities/betanyc-newsletter-current.json",
+  "sourcePath": "docs/knowledge-bank/sources/betanyc-newsletter.md",
+  "evaluationPath": "docs/knowledge-bank/evaluations/betanyc-newsletter-opportunity-source.md",
+  "strongMatchThreshold": {
+    "fit": 75,
+    "securability": 60,
+    "combined": 84
+  },
+  "minimumSalaryTarget": 100000,
+  "scoreWeights": {
+    "fit": 0.62,
+    "securability": 0.38
+  },
+  "trackingParameters": [
+    "e",
+    "c",
+    "mc_cid",
+    "mc_eid"
+  ],
+  "modeledReaders": [
+    {
+      "readerId": "reader.kyle-arjun-patel",
+      "readerPath": "docs/qa/hiring-acceptance/readers/kyle-arjun-patel.md",
+      "publicRelationship": "Polimorphic CTO and posting-named direct reporting line"
+    },
+    {
+      "readerId": "reader.parth-shah",
+      "readerPath": "docs/qa/hiring-acceptance/readers/parth-shah.md",
+      "publicRelationship": "Polimorphic cofounder and CEO"
+    }
+  ],
+  "refresh": {
+    "mode": "authenticated-mailbox-review",
+    "checkCommand": "npm run opportunities:refresh:betanyc -- --check",
+    "normalizationWorkflow": "Authenticated connector review followed by a reviewed public-safe snapshot change",
+    "staleAction": "Search the authenticated mailbox for the newest matching edition, read the Jobs & Opportunities section, resolve clean destinations, verify official postings, then ingest only the normalized public-safe edition.",
+    "schedulerActivation": "separate operator authorization required"
+  },
+  "externalActionBoundary": "The adapter may discover, exclude, score, deduplicate, and queue review. Jamie alone decides whether to apply; staging never sends a digest or submits an application."
+}

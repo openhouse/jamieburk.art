@@ -1,8 +1,8 @@
-# Hiring actions for 2026-08-20
+# Hiring actions for 2026-08-21
 
 Dataset row data: 2026-08-18 (NYC Open Data)
 
-## 21 active opportunities
+## 22 active opportunities
 
 ### 1. Technical Project Manager
 
@@ -134,7 +134,17 @@ Dataset row data: 2026-08-18 (NYC Open Data)
 - Official posting: https://cityjobs.nyc.gov/jobs?options=&page=1&q=779989
 - **Next action:** Review the official posting, tailor the application packet, and apply if the hard screens remain clear.
 
-### 14. NYC OTI - Product Manager 784450
+### 14. Polimorphic - Product Manager (First Product Hire)
+
+- Organization: Polimorphic
+- Compensation: $165,000–$195,000
+- Deadline: confirm on official posting
+- Match: fit 96; securability 65; combined 84.2
+- Source: knowledge-wiki
+- Official posting: https://app.trinethire.com/companies/381666-polimorphic/jobs/123173-product-manager
+- **Next action:** Review the official posting, tailor the application packet, and apply if the hard screens remain clear.
+
+### 15. NYC OTI - Product Manager 784450
 
 - Organization: NYC OTI
 - Compensation: not recorded–not recorded
@@ -144,7 +154,7 @@ Dataset row data: 2026-08-18 (NYC Open Data)
 - Official posting: https://cityjobs.nyc.gov/job/product-manager-in-brooklyn-jid-45056
 - **Next action:** Review the official posting, tailor the application packet, and apply if the hard screens remain clear.
 
-### 15. NYC OTI - Senior Product Manager 782366
+### 16. NYC OTI - Senior Product Manager 782366
 
 - Organization: NYC OTI
 - Compensation: not recorded–not recorded
@@ -154,7 +164,7 @@ Dataset row data: 2026-08-18 (NYC Open Data)
 - Official posting: https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-44507
 - **Next action:** Review the official posting, tailor the application packet, and apply if the hard screens remain clear.
 
-### 16. NYC OTI - Operations Manager, SPEED 789810
+### 17. NYC OTI - Operations Manager, SPEED 789810
 
 - Organization: NYC OTI
 - Compensation: not recorded–not recorded
@@ -164,7 +174,7 @@ Dataset row data: 2026-08-18 (NYC Open Data)
 - Official posting: https://cityjobs.nyc.gov/job/operations-manager-in-brooklyn-jid-46143
 - **Next action:** Review the official posting, tailor the application packet, and apply if the hard screens remain clear.
 
-### 17. NYC OTI - Senior Product Manager, SPEED 789610
+### 18. NYC OTI - Senior Product Manager, SPEED 789610
 
 - Organization: NYC OTI
 - Compensation: not recorded–not recorded
@@ -174,7 +184,7 @@ Dataset row data: 2026-08-18 (NYC Open Data)
 - Official posting: https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-46148
 - **Next action:** Review the official posting, tailor the application packet, and apply if the hard screens remain clear.
 
-### 18. ACLU - Senior Project Manager, National Campaigns
+### 19. ACLU - Senior Project Manager, National Campaigns
 
 - Organization: ACLU
 - Compensation: not recorded–not recorded
@@ -184,7 +194,7 @@ Dataset row data: 2026-08-18 (NYC Open Data)
 - Official posting: https://job-boards.greenhouse.io/aclu/jobs/8631854002
 - **Next action:** Review the official posting, tailor the application packet, and apply if the hard screens remain clear.
 
-### 19. Asana - AI Implementation Manager, Service Management
+### 20. Asana - AI Implementation Manager, Service Management
 
 - Organization: Asana
 - Compensation: not recorded–not recorded
@@ -194,7 +204,7 @@ Dataset row data: 2026-08-18 (NYC Open Data)
 - Official posting: https://asana.com/jobs/apply/8027437
 - **Next action:** Review the official posting, tailor the application packet, and apply if the hard screens remain clear.
 
-### 20. CodePath - Engineering Project Manager
+### 21. CodePath - Engineering Project Manager
 
 - Organization: CodePath
 - Compensation: not recorded–not recorded
@@ -204,7 +214,7 @@ Dataset row data: 2026-08-18 (NYC Open Data)
 - Official posting: https://job-boards.greenhouse.io/codepath/jobs/5160542007
 - **Next action:** Review the official posting, tailor the application packet, and apply if the hard screens remain clear.
 
-### 21. CodePath - Senior AI Operations Lead
+### 22. CodePath - Senior AI Operations Lead
 
 - Organization: CodePath
 - Compensation: not recorded–not recorded

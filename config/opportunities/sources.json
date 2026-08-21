@@ -47,6 +47,32 @@
         "submit the profile",
         "decide whether to apply to each opportunity"
       ]
+    },
+    {
+      "id": "betanyc-newsletter",
+      "name": "BetaNYC weekly civic-tech newsletter",
+      "canonicalUrl": "https://www.beta.nyc/newsletter/",
+      "scope": "Editorially curated NYC civic-tech, public-interest-technology, government, nonprofit, and adjacent opportunities",
+      "machineReadable": false,
+      "recruiterDiscovery": false,
+      "profileVisibilityControls": false,
+      "privateIntake": false,
+      "recurringEmail": true,
+      "editorialCuration": true,
+      "crossSourceEnrichment": true,
+      "freshnessClock": "latest authenticated edition publication date, reconciled with the public archive",
+      "primaryAffordances": [
+        "weekly editorial discovery across government and mission-aligned employers",
+        "local civic-tech context and trusted community signal",
+        "cross-source enrichment for official job records",
+        "discovery of non-City and nontraditional opportunities"
+      ],
+      "humanGates": [
+        "review the newest authenticated edition when the source clock is stale",
+        "resolve recipient-specific links to clean employer destinations",
+        "verify each live employer posting and hard screen",
+        "decide whether to apply"
+      ]
     }
   ]
 }

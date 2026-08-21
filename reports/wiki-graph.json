@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-21T01:26:38-04:00",
   "sourceCommit": "61ef408c80fd1027aa6d06733553f2cb618a33e8",
-  "sourceFingerprint": "18161c3493267e4ea87310569e25043f756706e7fe40092bfdb542ff1bd984da",
+  "sourceFingerprint": "ac7ba64b33eb59ab160a20236dc4dcd7dc22bb7632b5250c6a08707bc8f2e9f2",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -2892,6 +2892,19 @@
       "reviewBy": "2026-11-03"
     },
     {
+      "id": "evaluation.jobs.betanyc-newsletter.2026-08-21",
+      "path": "docs/knowledge-bank/evaluations/betanyc-newsletter-opportunity-source.md",
+      "title": "BetaNYC newsletter opportunity-source evaluation",
+      "kind": "evaluation",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Deterministic-first evaluation of newsletter freshness, privacy-safe normalization, official-destination verification, deduplication, scoring, and governed admission.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-30"
+    },
+    {
       "id": "evaluation.jobs.civic-match.profile-and-reader-gates",
       "path": "docs/knowledge-bank/evaluations/civic-match-opportunity-source.md",
       "title": "Civic Match profile and audience-correct modeled-reader gates",
@@ -2914,8 +2927,8 @@
       "sensitivity": "low",
       "summary": "Cost-conscious deterministic screening and transparent Jamie-specific ranking of the official NYC Jobs open-data feed.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
-      "reviewBy": "2026-08-27"
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-28"
     },
     {
       "id": "evaluation.jobs.nyc-oti.product-management-ranking.2026-08-20",
@@ -3323,8 +3336,8 @@
       "sensitivity": "low",
       "summary": "Task-oriented entry point for live opportunity research, role coverage, public-only hiring evaluation, and private-boundary rules.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
-      "reviewBy": "2026-08-27"
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-28"
     },
     {
       "id": "index.knowledge-wiki.family-closure",
@@ -3947,8 +3960,8 @@
       "sensitivity": "low",
       "summary": "Strong-match NYC Jobs discovery candidate: Director of Community Engagement at OFFICE OF THE MAYOR.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
-      "reviewBy": "2026-08-27"
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-28"
     },
     {
       "id": "opportunity.nyc-jobs.779597",
@@ -3960,8 +3973,8 @@
       "sensitivity": "low",
       "summary": "Strong-match NYC Jobs discovery candidate: Co-Governance Project Coordinator at OFFICE OF THE MAYOR.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
-      "reviewBy": "2026-08-27"
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-28"
     },
     {
       "id": "opportunity.nyc-jobs.779989",
@@ -3973,8 +3986,8 @@
       "sensitivity": "low",
       "summary": "Strong-match NYC Jobs discovery candidate: Director of Operations at OFFICE OF THE MAYOR.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
-      "reviewBy": "2026-08-27"
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-28"
     },
     {
       "id": "opportunity.nyc-jobs.782011",
@@ -3986,8 +3999,8 @@
       "sensitivity": "low",
       "summary": "Strong-match NYC Jobs discovery candidate: Outreach and Engagement Manager at OFFICE OF THE MAYOR.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
-      "reviewBy": "2026-08-27"
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-28"
     },
     {
       "id": "opportunity.nyc-jobs.782953",
@@ -3999,8 +4012,8 @@
       "sensitivity": "low",
       "summary": "Strong-match NYC Jobs discovery candidate: Efficiency Program Manager at OFFICE OF THE MAYOR.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
-      "reviewBy": "2026-08-27"
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-28"
     },
     {
       "id": "opportunity.nyc-jobs.783903",
@@ -4012,8 +4025,8 @@
       "sensitivity": "low",
       "summary": "Strong-match NYC Jobs discovery candidate: Senior Business Analyst/Project Manager at CONSUMER AND WORKER PROTECTION.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
-      "reviewBy": "2026-08-27"
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-28"
     },
     {
       "id": "opportunity.nyc-jobs.786357",
@@ -4025,8 +4038,8 @@
       "sensitivity": "low",
       "summary": "Strong-match NYC Jobs discovery candidate: Deputy Chief of Staff at OFFICE OF THE MAYOR.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
-      "reviewBy": "2026-08-27"
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-28"
     },
     {
       "id": "opportunity.nyc-jobs.786453",
@@ -4038,8 +4051,8 @@
       "sensitivity": "low",
       "summary": "Strong-match NYC Jobs discovery candidate: Policy Analyst, Community Services Delivery at OFFICE OF THE MAYOR.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
-      "reviewBy": "2026-08-27"
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-28"
     },
     {
       "id": "opportunity.nyc-jobs.786621",
@@ -4051,8 +4064,8 @@
       "sensitivity": "low",
       "summary": "Strong-match NYC Jobs discovery candidate: Business Analyst / Project Manager at CONSUMER AND WORKER PROTECTION.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
-      "reviewBy": "2026-08-27"
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-28"
     },
     {
       "id": "opportunity.nyc-jobs.787600",
@@ -4064,8 +4077,8 @@
       "sensitivity": "low",
       "summary": "Strong-match NYC Jobs discovery candidate: Technical Project Manager at OFFICE OF CRIMINAL JUSTICE.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
-      "reviewBy": "2026-08-27"
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-28"
     },
     {
       "id": "opportunity.nyc-jobs.788977",
@@ -4077,8 +4090,8 @@
       "sensitivity": "low",
       "summary": "Strong-match NYC Jobs discovery candidate: Senior Project Manager at CAMPAIGN FINANCE BOARD.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
-      "reviewBy": "2026-08-27"
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-28"
     },
     {
       "id": "opportunity.nyc-jobs.792692",
@@ -4090,8 +4103,8 @@
       "sensitivity": "low",
       "summary": "Strong-match NYC Jobs discovery candidate: Policy Analyst for Budget, Finance, and Labor at OFFICE OF THE MAYOR.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
-      "reviewBy": "2026-08-27"
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-28"
     },
     {
       "id": "opportunity.nyc-jobs.792925",
@@ -4103,8 +4116,8 @@
       "sensitivity": "low",
       "summary": "Strong-match NYC Jobs discovery candidate: Associate Director of Policy Implementation at CAMPAIGN FINANCE BOARD.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
-      "reviewBy": "2026-08-27"
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-28"
     },
     {
       "id": "opportunity.nyc-oti.operations-manager-speed.789810",
@@ -4183,6 +4196,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-15",
       "reviewBy": "2026-08-18"
+    },
+    {
+      "id": "opportunity.polimorphic.product-manager.123173",
+      "path": "docs/knowledge-bank/opportunities/polimorphic-product-manager-123173.md",
+      "title": "Polimorphic - Product Manager (First Product Hire)",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Strong-fit first product hire serving local government, admitted from the BetaNYC newsletter after official-posting verification and deterministic gates.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-28"
     },
     {
       "id": "opportunity.protected.source-backed-memory-consulting.2026",
@@ -5178,6 +5204,19 @@
       "reviewBy": "2026-09-15"
     },
     {
+      "id": "source.jobs.betanyc-newsletter.current",
+      "path": "docs/knowledge-bank/sources/betanyc-newsletter.md",
+      "title": "BetaNYC weekly civic-tech newsletter opportunity source",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Weekly civic-tech editorial source whose Jobs and Opportunities section can discover and contextualize roles before official-employer verification.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-30"
+    },
+    {
       "id": "source.jobs.civic-match.current",
       "path": "docs/knowledge-bank/sources/civic-match.md",
       "title": "Civic Match candidate network and job board",
@@ -5239,8 +5278,8 @@
       "sensitivity": "low",
       "summary": "Machine-readable official source for current City job discovery, freshness checks, deterministic screening, and review-gated opportunity intake.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
-      "reviewBy": "2026-08-27"
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-28"
     },
     {
       "id": "source.jobs.nyc-oti.product-management-search.2026-08-20",
@@ -12410,6 +12449,46 @@
       "context": null
     },
     {
+      "from": "evaluation.jobs.betanyc-newsletter.2026-08-21",
+      "type": "related_to",
+      "to": "evaluation.jobs.nyc-open-data.strong-match",
+      "source": "frontmatter",
+      "href": "./nyc-jobs-opportunity-feed.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.jobs.betanyc-newsletter.2026-08-21",
+      "type": "related_to",
+      "to": "opportunity.nyc-jobs.792692",
+      "source": "frontmatter",
+      "href": "../opportunities/nyc-jobs-792692.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.jobs.betanyc-newsletter.2026-08-21",
+      "type": "related_to",
+      "to": "opportunity.nyc-jobs.792925",
+      "source": "frontmatter",
+      "href": "../opportunities/nyc-jobs-792925.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.jobs.betanyc-newsletter.2026-08-21",
+      "type": "related_to",
+      "to": "opportunity.polimorphic.product-manager.123173",
+      "source": "frontmatter",
+      "href": "../opportunities/polimorphic-product-manager-123173.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.jobs.betanyc-newsletter.2026-08-21",
+      "type": "uses_source",
+      "to": "source.jobs.betanyc-newsletter.current",
+      "source": "frontmatter",
+      "href": "../sources/betanyc-newsletter.md",
+      "context": null
+    },
+    {
       "from": "evaluation.jobs.civic-match.profile-and-reader-gates",
       "type": "related_to",
       "to": "evaluation.jobs.nyc-open-data.strong-match",
@@ -13228,6 +13307,14 @@
     {
       "from": "index.knowledge-wiki.employment-context",
       "type": "related_to",
+      "to": "evaluation.jobs.betanyc-newsletter.2026-08-21",
+      "source": "frontmatter",
+      "href": "../evaluations/betanyc-newsletter-opportunity-source.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
       "to": "evaluation.jobs.civic-match.profile-and-reader-gates",
       "source": "frontmatter",
       "href": "../evaluations/civic-match-opportunity-source.md",
@@ -13356,9 +13443,25 @@
     {
       "from": "index.knowledge-wiki.employment-context",
       "type": "related_to",
+      "to": "opportunity.polimorphic.product-manager.123173",
+      "source": "frontmatter",
+      "href": "../opportunities/polimorphic-product-manager-123173.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
       "to": "opportunity.protected.source-backed-memory-consulting.2026",
       "source": "frontmatter",
       "href": "../opportunities/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "uses_source",
+      "to": "source.jobs.betanyc-newsletter.current",
+      "source": "frontmatter",
+      "href": "../sources/betanyc-newsletter.md",
       "context": null
     },
     {
@@ -16244,6 +16347,40 @@
       "context": null
     },
     {
+      "from": "opportunity.polimorphic.product-manager.123173",
+      "type": "evidence:context",
+      "to": "source.jobs.betanyc-newsletter.current",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "inclusion in the August 20 editorial opportunity set"
+      ]
+    },
+    {
+      "from": "opportunity.polimorphic.product-manager.123173",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.polimorphic.product-manager.123173",
+      "type": "related_to",
+      "to": "evaluation.jobs.betanyc-newsletter.2026-08-21",
+      "source": "frontmatter",
+      "href": "../evaluations/betanyc-newsletter-opportunity-source.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.polimorphic.product-manager.123173",
+      "type": "uses_source",
+      "to": "source.jobs.betanyc-newsletter.current",
+      "source": "frontmatter",
+      "href": "../sources/betanyc-newsletter.md",
+      "context": null
+    },
+    {
       "from": "opportunity.protected.source-backed-memory-consulting.2026",
       "type": "evidence:private-support",
       "to": "source.protected.source-backed-memory-opportunity.2026",
@@ -18333,6 +18470,30 @@
       "to": "opportunity.benepass.product-operations.7f963a7a",
       "source": "frontmatter",
       "href": "../opportunities/benepass-product-operations.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.betanyc-newsletter.current",
+      "type": "related_to",
+      "to": "source.jobs.civic-match.current",
+      "source": "frontmatter",
+      "href": "./civic-match.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.betanyc-newsletter.current",
+      "type": "related_to",
+      "to": "source.jobs.nyc-open-data.current",
+      "source": "frontmatter",
+      "href": "./nyc-jobs-open-data.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.betanyc-newsletter.current",
+      "type": "supports",
+      "to": "opportunity.polimorphic.product-manager.123173",
+      "source": "frontmatter",
+      "href": "../opportunities/polimorphic-product-manager-123173.md",
       "context": null
     },
     {
@@ -20528,10 +20689,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
+      "to": "opportunity.benepass.product-operations.7f963a7a",
+      "fragment": null,
+      "line": 100,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
       "to": "opportunity.aclu.product-manager-discovery.8482872002",
       "fragment": null,
-      "line": 100,
+      "line": 101,
       "kind": "link"
     },
     {
@@ -20540,7 +20710,7 @@
       "toPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
       "to": "opportunity.codepath.claude-corps.5182020007",
       "fragment": null,
-      "line": 101,
+      "line": 102,
       "kind": "link"
     },
     {
@@ -20549,7 +20719,7 @@
       "toPath": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
       "to": "opportunity.protected.source-backed-memory-consulting.2026",
       "fragment": null,
-      "line": 105,
+      "line": 106,
       "kind": "link"
     },
     {
@@ -20585,7 +20755,7 @@
       "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
       "to": "evaluation.employment-context.coverage.2026-07-18",
       "fragment": null,
-      "line": 133,
+      "line": 134,
       "kind": "link"
     },
     {
@@ -20594,7 +20764,7 @@
       "toPath": "reports/wiki-opportunity-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 134,
+      "line": 135,
       "kind": "link"
     },
     {
@@ -20603,7 +20773,7 @@
       "toPath": "reports/wiki-career-trajectory-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 135,
+      "line": 136,
       "kind": "link"
     },
     {
@@ -20612,7 +20782,7 @@
       "toPath": "reports/wiki-source-channel-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 136,
+      "line": 137,
       "kind": "link"
     },
     {
@@ -20621,22 +20791,13 @@
       "toPath": "reports/wiki-opportunity-discovery.md",
       "to": null,
       "fragment": null,
-      "line": 137,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/hiring-acceptance-public.md",
-      "to": null,
-      "fragment": null,
       "line": 138,
       "kind": "link"
     },
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/hiring-acceptance-gap-resolution.md",
+      "toPath": "reports/hiring-acceptance-public.md",
       "to": null,
       "fragment": null,
       "line": 139,
@@ -20654,6 +20815,15 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/hiring-acceptance-gap-resolution.md",
+      "to": null,
+      "fragment": null,
+      "line": 140,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/evaluations/oti-product-management-ranking-2026-08-20.md",
       "to": "evaluation.jobs.nyc-oti.product-management-ranking.2026-08-20",
       "fragment": null,
@@ -20663,10 +20833,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/polimorphic-product-manager-123173.md",
+      "to": "opportunity.polimorphic.product-manager.123173",
+      "fragment": null,
+      "line": 28,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/opportunities/aclu-senior-project-manager-national-campaigns.md",
       "to": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
       "fragment": null,
-      "line": 28,
+      "line": 29,
       "kind": "link"
     },
     {
@@ -20675,7 +20854,7 @@
       "toPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
       "to": "opportunity.asana.ai-implementation.8027437",
       "fragment": null,
-      "line": 29,
+      "line": 30,
       "kind": "link"
     },
     {
@@ -20684,7 +20863,7 @@
       "toPath": "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
       "to": "opportunity.codepath.engineering-project-manager.5160542007",
       "fragment": null,
-      "line": 30,
+      "line": 31,
       "kind": "link"
     },
     {
@@ -20693,7 +20872,7 @@
       "toPath": "docs/knowledge-bank/opportunities/codepath-senior-ai-operations-lead.md",
       "to": "opportunity.codepath.senior-ai-operations-lead.5175813007",
       "fragment": null,
-      "line": 31,
+      "line": 32,
       "kind": "link"
     },
     {
@@ -20702,7 +20881,7 @@
       "toPath": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
       "to": "opportunity.permitflow.product-operations.8a6e6066",
       "fragment": null,
-      "line": 32,
+      "line": 33,
       "kind": "link"
     },
     {
@@ -20711,7 +20890,7 @@
       "toPath": "docs/knowledge-bank/sources/nyc-jobs-open-data.md",
       "to": "source.jobs.nyc-open-data.current",
       "fragment": null,
-      "line": 36,
+      "line": 37,
       "kind": "link"
     },
     {
@@ -20720,7 +20899,7 @@
       "toPath": "docs/knowledge-bank/evaluations/nyc-jobs-opportunity-feed.md",
       "to": "evaluation.jobs.nyc-open-data.strong-match",
       "fragment": null,
-      "line": 42,
+      "line": 43,
       "kind": "link"
     },
     {
@@ -20729,7 +20908,7 @@
       "toPath": "docs/knowledge-bank/sources/civic-match.md",
       "to": "source.jobs.civic-match.current",
       "fragment": null,
-      "line": 55,
+      "line": 56,
       "kind": "link"
     },
     {
@@ -20738,7 +20917,7 @@
       "toPath": "docs/knowledge-bank/evaluations/civic-match-opportunity-source.md",
       "to": "evaluation.jobs.civic-match.profile-and-reader-gates",
       "fragment": null,
-      "line": 61,
+      "line": 62,
       "kind": "link"
     },
     {
@@ -20747,7 +20926,7 @@
       "toPath": "docs/knowledge-bank/claims/employment-mobility-and-location.md",
       "to": "claim.employment.mobility-and-location.2026-08-15",
       "fragment": null,
-      "line": 81,
+      "line": 82,
       "kind": "link"
     },
     {
@@ -20755,15 +20934,6 @@
       "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
       "to": "opportunity.nyc-oti.technical-operations-manager.782369",
-      "fragment": null,
-      "line": 98,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
-      "to": "opportunity.benepass.product-operations.7f963a7a",
       "fragment": null,
       "line": 99,
       "kind": "link"

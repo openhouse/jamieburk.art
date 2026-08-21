@@ -5,8 +5,8 @@ kind: source
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-20
-review_by: 2026-08-27
+last_reviewed: 2026-08-21
+review_by: 2026-08-28
 canonical_path: docs/knowledge-bank/sources/nyc-jobs-open-data.md
 canonical_url: https://data.cityofnewyork.us/City-Government/NYC-Jobs/pda4-rgn4/about_data
 source_type: official-public-data
@@ -19,7 +19,7 @@ rows_updated_at: 2026-08-18T19:01:20.000Z
 row_count: 2760
 update_frequency: "Weekly"
 automated_update: true
-verified_at: 2026-08-20
+verified_at: 2026-08-21
 summary: Machine-readable official source for current City job discovery, freshness checks, deterministic screening, and review-gated opportunity intake.
 human_review: governed-open
 ---

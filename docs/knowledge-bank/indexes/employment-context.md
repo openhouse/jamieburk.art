@@ -5,8 +5,8 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-20
-review_by: 2026-08-27
+last_reviewed: 2026-08-21
+review_by: 2026-08-28
 canonical_path: docs/knowledge-bank/indexes/employment-context.md
 summary: Task-oriented entry point for live opportunity research, role coverage, public-only hiring evaluation, and private-boundary rules.
 relations:
@@ -22,6 +22,15 @@ relations:
   - type: related_to
     target: evaluation.jobs.civic-match.profile-and-reader-gates
     href: ../evaluations/civic-match-opportunity-source.md
+  - type: uses_source
+    target: source.jobs.betanyc-newsletter.current
+    href: ../sources/betanyc-newsletter.md
+  - type: related_to
+    target: evaluation.jobs.betanyc-newsletter.2026-08-21
+    href: ../evaluations/betanyc-newsletter-opportunity-source.md
+  - type: related_to
+    target: opportunity.polimorphic.product-manager.123173
+    href: ../opportunities/polimorphic-product-manager-123173.md
   - type: related_to
     target: opportunity.aclu.senior-project-manager-national-campaigns.8631854002
     href: ../opportunities/aclu-senior-project-manager-national-campaigns.md
@@ -101,6 +110,7 @@ hiring manager, interview participant, private opinion, or final org chart.
 
 Other maintained live contexts in the current reader and résumé system are:
 
+- [Polimorphic - Product Manager, First Product Hire](../opportunities/polimorphic-product-manager-123173.md)
 - [ACLU - Senior Project Manager, National Campaigns](../opportunities/aclu-senior-project-manager-national-campaigns.md)
 - [Asana - AI Implementation Manager, Service Management](../opportunities/asana-ai-implementation.md)
 - [CodePath - Engineering Project Manager](../opportunities/codepath-engineering-project-manager.md)

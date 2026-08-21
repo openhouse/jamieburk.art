@@ -3,8 +3,9 @@
 
 **Source commit:** `61ef408c80fd1027aa6d06733553f2cb618a33e8`
 **Generation time:** 2026-08-21T01:26:38-04:00
-**Source fingerprint:** `18161c3493267e4ea87310569e25043f756706e7fe40092bfdb542ff1bd984da`
+**Source fingerprint:** `ac7ba64b33eb59ab160a20236dc4dcd7dc22bb7632b5250c6a08707bc8f2e9f2`
 
 - [Civic Match profile and audience-correct modeled-reader gates](../../evaluations/civic-match-opportunity-source.md) - `uses_source` (frontmatter)
 - [Employment context and hiring acceptance](../../indexes/employment-context.md) - `prose_link` (markdown)
 - [Employment context and hiring acceptance](../../indexes/employment-context.md) - `uses_source` (frontmatter)
+- [BetaNYC weekly civic-tech newsletter opportunity source](../../sources/betanyc-newsletter.md) - `related_to` (frontmatter)

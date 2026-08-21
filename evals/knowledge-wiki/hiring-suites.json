@@ -1,9 +1,10 @@
 {
   "id": "current-priority-2026-08-20",
-  "version": 4,
+  "version": 5,
   "principle": "The public evaluator sees public projection files and public role and reader context only; Wiki gap resolution is a separate pass.",
   "candidateContextPath": "docs/knowledge-bank/claims/employment-mobility-and-location.md",
   "opportunityPaths": [
+    "docs/knowledge-bank/opportunities/polimorphic-product-manager-123173.md",
     "docs/knowledge-bank/opportunities/aclu-senior-project-manager-national-campaigns.md",
     "docs/knowledge-bank/opportunities/codepath-senior-ai-operations-lead.md",
     "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
@@ -21,6 +22,8 @@
   ],
   "readerPaths": [
     "docs/qa/hiring-acceptance/readers/generic-recruiter.md",
+    "docs/qa/hiring-acceptance/readers/kyle-arjun-patel.md",
+    "docs/qa/hiring-acceptance/readers/parth-shah.md",
     "docs/qa/hiring-acceptance/readers/deirdre-schifeling.md",
     "docs/qa/hiring-acceptance/readers/quinton-ma.md",
     "docs/qa/hiring-acceptance/readers/brian-madigan.md",
@@ -57,6 +60,12 @@
     "/contact": ["apps/www/src/app/contact/page.tsx"]
   },
   "discoveryQueries": [
+    {
+      "id": "query.local-government-first-product-hire",
+      "terms": ["local government product", "first product hire", "customer discovery", "product delivery operations", "quality assurance", "technical product judgment"],
+      "expectedTopK": ["opportunity.polimorphic.product-manager.123173"],
+      "k": 3
+    },
     {
       "id": "query.advocacy-campaign-operations",
       "terms": ["advocacy campaign operations", "complex project delivery", "collaboration systems", "internal communications", "legislative coordination"],

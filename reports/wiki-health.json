@@ -2,21 +2,21 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-21T01:26:38-04:00",
   "sourceCommit": "61ef408c80fd1027aa6d06733553f2cb618a33e8",
-  "sourceFingerprint": "18161c3493267e4ea87310569e25043f756706e7fe40092bfdb542ff1bd984da",
+  "sourceFingerprint": "ac7ba64b33eb59ab160a20236dc4dcd7dc22bb7632b5250c6a08707bc8f2e9f2",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
     "errors": []
   },
   "diagnostics": {
-    "records": 473,
+    "records": 476,
     "byKind": {
       "project": 14,
       "person": 4,
       "organization": 1,
       "event": 20,
       "place": 1,
-      "source": 106,
+      "source": 107,
       "asset": 192,
       "claim": 4,
       "research-run": 9,
@@ -26,18 +26,18 @@
       "method": 14,
       "timeline": 1,
       "application": 2,
-      "evaluation": 11,
+      "evaluation": 12,
       "index": 33,
       "capability": 5,
-      "opportunity": 27,
+      "opportunity": 28,
       "projection": 11
     },
-    "typedRelations": 1591,
-    "evidenceRelations": 27,
+    "typedRelations": 1605,
+    "evidenceRelations": 28,
     "relationTypeCounts": {
       "collaborated_with": 2,
       "documents": 47,
-      "evidence:context": 3,
+      "evidence:context": 4,
       "evidence:corroborating": 4,
       "evidence:direct-support": 15,
       "evidence:private-support": 3,
@@ -47,27 +47,35 @@
       "part_of": 11,
       "participated_in": 3,
       "projected_to": 15,
-      "related_to": 997,
+      "related_to": 1007,
       "resulted_in": 7,
       "supersedes": 1,
-      "supports": 37,
+      "supports": 38,
       "uses_method": 33,
-      "uses_source": 371
+      "uses_source": 374
     },
-    "proseLinks": 506,
-    "rootReachable": 241,
-    "orphanCount": 0,
+    "proseLinks": 507,
+    "rootReachable": 242,
+    "orphanCount": 1,
     "deadEndCount": 0,
     "wantedPageCount": 6,
     "stalePageCount": 0,
     "correctionCount": 3,
     "rightsReviewCount": 186,
-    "opportunityCount": 27,
-    "liveOpportunityCount": 22,
-    "criticalRequirementCount": 63,
+    "opportunityCount": 28,
+    "liveOpportunityCount": 23,
+    "criticalRequirementCount": 66,
     "criticalRequirementGapCount": 11,
-    "warningCount": 0,
-    "warnings": []
+    "warningCount": 1,
+    "warnings": [
+      {
+        "code": "ORPHAN",
+        "message": "evaluation.jobs.betanyc-newsletter.2026-08-21 is not reachable from the root",
+        "file": "docs/knowledge-bank/evaluations/betanyc-newsletter-opportunity-source.md",
+        "line": 1,
+        "severity": "warning"
+      }
+    ]
   },
   "humanGates": [
     {
@@ -101,7 +109,14 @@
       "authority": "external readers and employers"
     }
   ],
-  "orphans": [],
+  "orphans": [
+    {
+      "id": "evaluation.jobs.betanyc-newsletter.2026-08-21",
+      "kind": "evaluation",
+      "path": "docs/knowledge-bank/evaluations/betanyc-newsletter-opportunity-source.md",
+      "reason": "not reachable from root"
+    }
+  ],
   "deadEnds": [],
   "wanted": [
     {

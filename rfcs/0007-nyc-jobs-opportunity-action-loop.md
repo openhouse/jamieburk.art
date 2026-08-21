@@ -1,6 +1,6 @@
 ---
 rfc: 7
-title: NYC Jobs Opportunity and Daily Action Loop
+title: Opportunity Sources and Daily Action Loop
 stage: implementing
 start_date: 2026-08-20
 authors:
@@ -13,20 +13,22 @@ review_areas:
   - research-operations
   - privacy-governance
   - deployment
-implementation: feature/launch-2026-08-13-02-A
+implementation: apply/2026-08-20-A
 supersedes: []
 superseded_by: null
 ---
 
-# NYC Jobs Opportunity and Daily Action Loop
+# Opportunity Sources and Daily Action Loop
 
 ## Summary
 
-Add the official NYC Jobs open-data feed as a complementary opportunity source.
-Use its row-data timestamp to detect new editions, run low-cost deterministic
-screens before scoring, materialize only strong matches as governed Wiki intake
-records, and prepare a daily action digest assembled from all maintained live
-opportunities.
+Maintain opportunity sources according to their distinct affordances. The NYC
+Jobs Open Data feed has a machine-readable row clock; Civic Match has a
+candidate-managed profile and recruiter-discovery surface; the BetaNYC weekly
+newsletter has an authenticated edition clock and editorial context. Run
+low-cost deterministic screens before scoring, enrich rather than duplicate
+cross-source matches, materialize only strong matches as governed Wiki intake
+records, and prepare a daily action digest from maintained live opportunities.
 
 ## Motivation
 
@@ -44,6 +46,10 @@ combines dataset discoveries with maintained Wiki opportunities.
 ## Goals
 
 - Detect a new row-data edition without treating metadata-page edits as job changes.
+- Detect when the recorded BetaNYC newsletter edition is stale and require an authenticated refresh.
+- Remove recipient-specific tracking and private message data before retaining newsletter leads.
+- Preserve discovery provenance while binding role facts to official employer postings.
+- Enrich an existing opportunity node rather than creating a duplicate across sources.
 - Remove ineligible or clearly unsuitable postings before any model evaluation.
 - Rank remaining postings by transparent fit and securability evidence.
 - Add only strong matches as review-gated opportunity intake records.
@@ -92,6 +98,15 @@ The digest merges qualified dataset discoveries with maintained live Wiki
 opportunities, removes elapsed deadlines at send time, and assigns one next
 action to every survivor. This allows a fresh daily email without re-fetching or
 rewriting the weekly source snapshot.
+
+The BetaNYC adapter compares the newest normalized edition date with a ten-day
+freshness window. A current edition proceeds to deterministic evaluation. A
+stale edition fails before modeled-reader work and routes to an authenticated
+mailbox review. The reviewed result retains only clean destinations and
+public-safe normalized facts. Because the repository cannot itself exercise an
+authenticated mail connector, activating recurring ingestion remains a separate
+operator decision; the freshness gate makes that missing review visible rather
+than silently treating old data as current.
 
 ## Security and privacy
 

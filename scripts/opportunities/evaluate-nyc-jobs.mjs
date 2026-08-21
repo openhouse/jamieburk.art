@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -20,6 +21,28 @@ function readJson(root, relativePath) {
 
 function check(id, pass, detail) {
   return { id, pass: Boolean(pass), detail };
+}
+
+function daysBetween(from, to) {
+  return Math.floor((Date.parse(`${to}T00:00:00Z`) - Date.parse(`${from}T00:00:00Z`)) / 86_400_000);
+}
+
+function betaPublicProjection(report) {
+  return {
+    publishedAt: report.edition.publishedAt,
+    subject: report.edition.subject,
+    leads: report.leads.map(({ sourceOrder, title, organization, canonicalUrl, deadline }) => ({
+      sourceOrder,
+      title,
+      organization,
+      canonicalUrl,
+      deadline
+    }))
+  };
+}
+
+function sha256(value) {
+  return createHash("sha256").update(JSON.stringify(value)).digest("hex");
 }
 
 function words(value) {
@@ -49,6 +72,12 @@ export function evaluateOpportunitySystem({ root = repoRoot } = {}) {
   const civicHillClimb = civicConfig ? readJson(root, civicConfig.latestHillClimbPath) : null;
   const civicSource = read(root, "docs/knowledge-bank/sources/civic-match.md");
   const civicEvaluation = read(root, "docs/knowledge-bank/evaluations/civic-match-opportunity-source.md");
+  const betaConfig = readJson(root, "config/opportunities/betanyc-newsletter.json");
+  const betaRubric = readJson(root, "evals/opportunities/betanyc-newsletter.json");
+  const betaReport = readJson(root, "reports/opportunities/betanyc-newsletter-current.json");
+  const betaSource = read(root, "docs/knowledge-bank/sources/betanyc-newsletter.md");
+  const betaEvaluation = read(root, "docs/knowledge-bank/evaluations/betanyc-newsletter-opportunity-source.md");
+  const polimorphicOpportunity = read(root, "docs/knowledge-bank/opportunities/polimorphic-product-manager-123173.md");
   const namedReaders = readJson(root, "evals/knowledge-wiki/named-hiring-readers.json");
   const requiredArtifacts = [
     config,
@@ -66,6 +95,12 @@ export function evaluateOpportunitySystem({ root = repoRoot } = {}) {
     civicHillClimb,
     civicSource,
     civicEvaluation,
+    betaConfig,
+    betaRubric,
+    betaReport,
+    betaSource,
+    betaEvaluation,
+    polimorphicOpportunity,
     namedReaders
   ];
   if (!requiredArtifacts.every(Boolean)) {
@@ -175,11 +210,12 @@ export function evaluateOpportunitySystem({ root = repoRoot } = {}) {
   const sourceRegistryChecks = [
     check(
       "source-registry-complete",
-      sourceIds.length === 2 &&
-        new Set(sourceIds).size === 2 &&
+      sourceIds.length === 3 &&
+        new Set(sourceIds).size === 3 &&
         sourceIds.includes("nyc-jobs-open-data") &&
-        sourceIds.includes("civic-match"),
-      "The registry includes exactly the NYC Jobs Open Data and Civic Match sources."
+        sourceIds.includes("civic-match") &&
+        sourceIds.includes("betanyc-newsletter"),
+      "The registry includes exactly the NYC Jobs Open Data, Civic Match, and BetaNYC newsletter sources."
     ),
     check(
       "source-affordances-distinct",
@@ -193,8 +229,16 @@ export function evaluateOpportunitySystem({ root = repoRoot } = {}) {
             item.recruiterDiscovery &&
             item.profileVisibilityControls &&
             item.privateIntake
+        ) &&
+        sourceRegistry.sources.some(
+          (item) =>
+            item.id === "betanyc-newsletter" &&
+            !item.machineReadable &&
+            item.editorialCuration &&
+            item.recurringEmail &&
+            item.crossSourceEnrichment
         ),
-      "Machine-readable feed affordances remain distinct from profile-mediated recruiter discovery."
+      "Machine-readable feeds, profile-mediated discovery, and recurring editorial discovery preserve distinct affordances."
     )
   ];
 
@@ -286,7 +330,7 @@ export function evaluateOpportunitySystem({ root = repoRoot } = {}) {
     check(
       "civic-helper-profiles",
       civicConfig.modeledHelpers.length === 2 && helperReadersExist,
-      "The two current Civic Match leadership-context lenses have bounded public-context profiles."
+      "The two current Civic Match leadership-context lenses have carefully scoped public-context profiles."
     ),
     check(
       "civic-helper-authority-boundary",
@@ -316,9 +360,135 @@ export function evaluateOpportunitySystem({ root = repoRoot } = {}) {
       "Protected answers, visibility, terms, and final submission remain Jamie-controlled."
     )
   ];
+
+  const betaEditionAgeDays = daysBetween(betaReport.edition.publishedAt, betaConfig.asOf);
+  const betaPromoted = betaReport.leads
+    .filter((lead) => lead.disposition.startsWith("promote-"))
+    .sort((a, b) => b.combinedScore - a.combinedScore);
+  const betaNew = betaPromoted.filter((lead) => lead.disposition === "promote-new");
+  const betaExisting = betaPromoted.filter((lead) => lead.disposition === "promote-existing");
+  const nycAdmissions = new Set(report.admitted.map((lead) => `opportunity.nyc-jobs.${lead.jobId}`));
+  const betaDestinationsArePublicSafe = betaReport.leads.every((lead) => {
+    try {
+      const url = new URL(lead.canonicalUrl);
+      return (
+        !url.hostname.endsWith("list-manage.com") &&
+        betaConfig.trackingParameters.every((parameter) => !url.searchParams.has(parameter))
+      );
+    } catch {
+      return false;
+    }
+  });
+  const betaReaders = betaConfig.modeledReaders.map((reader) => ({
+    audience: "opportunity-hiring-reader",
+    readerId: reader.readerId,
+    readerPath: reader.readerPath,
+    relationshipToRole: reader.publicRelationship,
+    opportunityId: betaNew[0]?.opportunityId ?? null,
+    materials: ["public-portfolio", "public-resume", "official-employer-posting"],
+    passStatement: betaRubric.execution.passStatement
+  }));
+  const betaBaseChecks = [
+    check(
+      "betanyc-source-records",
+      betaSource.includes("id: source.jobs.betanyc-newsletter.current") &&
+        betaEvaluation.includes("target: source.jobs.betanyc-newsletter.current") &&
+        betaEvaluation.includes("status: maintained") &&
+        betaConfig.sourcePath === "docs/knowledge-bank/sources/betanyc-newsletter.md" &&
+        betaConfig.evaluationPath === "docs/knowledge-bank/evaluations/betanyc-newsletter-opportunity-source.md",
+      "The maintained source and evaluation records bind the recurring BetaNYC opportunity source."
+    ),
+    check(
+      "betanyc-edition-freshness",
+      betaEditionAgeDays >= 0 &&
+        betaEditionAgeDays <= betaConfig.maximumEditionAgeDays &&
+        betaConfig.latestEditionDate === betaReport.edition.publishedAt &&
+        betaConfig.latestPublicArchiveEditionDate === betaReport.edition.latestPublicArchiveEditionDate,
+      `The newest recorded edition is ${betaEditionAgeDays} day(s) old and its mailbox and public-archive clocks agree across artifacts.`
+    ),
+    check(
+      "betanyc-public-safe-destinations",
+      betaDestinationsArePublicSafe &&
+        !JSON.stringify(betaReport).match(/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/) &&
+        !JSON.stringify(betaReport).includes("f3af910400"),
+      "Every lead uses a clean destination without recipient-specific tracking or committed contact data."
+    ),
+    check(
+      "betanyc-public-safe-fingerprint",
+      betaReport.edition.publicSafeFingerprint === sha256(betaPublicProjection(betaReport)),
+      "The retained public-safe title and destination projection matches its recorded fingerprint."
+    ),
+    check(
+      "betanyc-strong-admission-threshold",
+      betaPromoted.length > 0 &&
+        betaPromoted.every(
+          (lead) =>
+            lead.fitScore >= betaReport.threshold.fit &&
+            lead.securabilityScore >= betaReport.threshold.securability &&
+            lead.combinedScore >= betaReport.threshold.combined
+        ),
+      "Every promoted newsletter lead clears the fit, securability, and combined strong-match thresholds."
+    ),
+    check(
+      "betanyc-cross-source-deduplication",
+      betaExisting.length === betaReport.enrichedExistingCount &&
+        betaExisting.every((lead) => nycAdmissions.has(lead.opportunityId)) &&
+        new Set(betaPromoted.map((lead) => lead.opportunityId)).size === betaPromoted.length,
+      "Existing NYC Jobs admissions receive BetaNYC provenance without duplicate opportunity nodes."
+    ),
+    check(
+      "betanyc-new-opportunity-closure",
+      betaNew.length === 1 &&
+        betaReport.newOpportunityCount === 1 &&
+        polimorphicOpportunity.includes(`id: ${betaNew[0]?.opportunityId}`) &&
+        polimorphicOpportunity.includes("opportunity_status: live") &&
+        polimorphicOpportunity.includes("human_review: requested") &&
+        polimorphicOpportunity.includes("application_materials_gate: required-before-application-material-generation") &&
+        betaEvaluation.includes(`target: ${betaNew[0]?.opportunityId}`),
+      "The one new strong-match lead has a review-gated governed opportunity record and evaluation relationship."
+    ),
+    check(
+      "betanyc-count-closure",
+      betaReport.leadCount === betaReport.leads.length &&
+        betaReport.promotedCount === betaPromoted.length &&
+        betaReport.enrichedExistingCount === betaExisting.length &&
+        betaReport.newOpportunityCount === betaNew.length,
+      "Edition lead, promotion, enrichment, and new-opportunity counts match the normalized records."
+    ),
+    check(
+      "betanyc-reader-profiles",
+      betaReaders.length === 2 &&
+        betaReaders.every(
+          (packet) =>
+            packet.opportunityId === "opportunity.polimorphic.product-manager.123173" &&
+            packet.readerId &&
+            packet.readerPath &&
+            read(root, packet.readerPath)?.includes("fictionalized analytical lens")
+        ),
+      "Two named public-context reader profiles are available for the newly admitted role."
+    ),
+    check(
+      "betanyc-external-action-boundary",
+      betaConfig.externalActionBoundary.includes("Jamie alone") &&
+        betaSource.includes("Jamie alone decides") &&
+        betaRubric.requiredInvariants.includes("No application is submitted automatically."),
+      "Discovery, scoring, and review do not submit an application or claim a hiring outcome."
+    )
+  ];
+  const betaCostControlPass =
+    betaReport.modeledReaderQueueCount === betaReaders.length &&
+    betaReaders.every((packet) => betaNew.some((lead) => lead.opportunityId === packet.opportunityId));
+  const betaCostCheck = check(
+    "betanyc-modeled-reader-cost-control",
+    betaCostControlPass,
+    "Only the new deterministic strong-match opportunity is queued, once per named public-context reader."
+  );
+  const betaChecks = [...betaBaseChecks, betaCostCheck];
+  const betaDeterministicPass = betaChecks.every((item) => item.pass);
+  const betaQueue = betaDeterministicPass ? betaReaders : [];
   const civicDeterministicPass = [...sourceRegistryChecks, ...civicChecks].every((item) => item.pass);
   const civicQueue = civicDeterministicPass ? [...helperPackets, ...selectedReaderPackets] : [];
-  const allChecks = [...checks, ...sourceRegistryChecks, ...civicChecks];
+  const allChecks = [...checks, ...sourceRegistryChecks, ...civicChecks, ...betaChecks];
   return {
     schemaVersion: 1,
     overall: allChecks.every((item) => item.pass) ? "pass" : "fail",
@@ -349,6 +519,25 @@ export function evaluateOpportunitySystem({ root = repoRoot } = {}) {
         reason: civicDeterministicPass
           ? "Deterministic form, privacy, voice, opportunity-selection, and audience gates pass; isolated modeled-reader work may run."
           : "Modeled-reader work is blocked until every deterministic gate passes."
+      }
+    },
+    betaNyc: {
+      sourceId: betaConfig.sourceId,
+      latestEditionDate: betaReport.edition.publishedAt,
+      latestPublicArchiveEditionDate: betaReport.edition.latestPublicArchiveEditionDate,
+      promotedOpportunityIds: betaPromoted.map((lead) => lead.opportunityId),
+      newOpportunityIds: betaNew.map((lead) => lead.opportunityId),
+      enrichedExistingOpportunityIds: betaExisting.map((lead) => lead.opportunityId),
+      deterministicPass: betaDeterministicPass,
+      checks: betaChecks,
+      llmGate: {
+        allowed: betaDeterministicPass,
+        status: betaRubric.execution.status,
+        queue: betaQueue,
+        queuedCalls: betaQueue.length,
+        reason: betaDeterministicPass
+          ? "Freshness, public-safety, official-destination, eligibility, threshold, deduplication, and intake gates pass; two isolated reader tasks may run for the new opportunity."
+          : "Modeled-reader work is blocked until every deterministic BetaNYC gate passes."
       }
     },
     boundary: "Deterministic admission and synthetic review can prioritize action; neither establishes actual eligibility, interview, offer, or hire."

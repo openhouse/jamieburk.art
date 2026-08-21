@@ -5,8 +5,8 @@ kind: evaluation
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-20
-review_by: 2026-08-27
+last_reviewed: 2026-08-21
+review_by: 2026-08-28
 canonical_path: docs/knowledge-bank/evaluations/nyc-jobs-opportunity-feed.md
 summary: Cost-conscious deterministic screening and transparent Jamie-specific ranking of the official NYC Jobs open-data feed.
 relations:
@@ -18,7 +18,7 @@ human_review: governed-open
 
 # NYC Jobs deterministic strong-match opportunity feed
 
-This run evaluated the August 18, 2026 row-data edition. It deduplicated 2,760 source rows into 1,426 jobs, deterministically excluded 1,088 ineligible or specialized rows before scoring, scored 338, and admitted 13 above the strong gate.
+This run evaluated the August 18, 2026 row-data edition. It deduplicated 2,760 source rows into 1,426 jobs, deterministically excluded 1,093 ineligible or specialized rows before scoring, scored 333, and admitted 13 above the strong gate.
 
 Admission requires fit at least 75, securability at least 60, and combined score at least 84. Combined score weights fit at 62% and securability at 38%. The scores are relative evidence scores, not probabilities.
 

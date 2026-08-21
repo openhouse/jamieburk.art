@@ -5,8 +5,8 @@ kind: opportunity
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-20
-review_by: 2026-08-27
+last_reviewed: 2026-08-21
+review_by: 2026-08-28
 canonical_path: docs/knowledge-bank/opportunities/nyc-jobs-792925.md
 summary: "Strong-match NYC Jobs discovery candidate: Associate Director of Policy Implementation at CAMPAIGN FINANCE BOARD."
 canonical_url: https://cityjobs.nyc.gov/jobs?options=&page=1&q=792925
@@ -14,7 +14,7 @@ source_type: official-employer
 opportunity_status: live
 application_status: not-recorded
 posted_until: 2026-10-13
-verified_at: 2026-08-20
+verified_at: 2026-08-21
 job_id: "792925"
 salary_minimum: 125000
 salary_maximum: 135000

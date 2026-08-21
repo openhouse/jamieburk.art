@@ -19,17 +19,22 @@ function fixture() {
     "config/opportunities/nyc-jobs.json",
     "config/opportunities/sources.json",
     "config/opportunities/civic-match.json",
+    "config/opportunities/betanyc-newsletter.json",
     "evals/opportunities/nyc-jobs.json",
     "evals/opportunities/civic-match.json",
+    "evals/opportunities/betanyc-newsletter.json",
     "evals/opportunities/runs/2026-08-21-civic-match-hill-climb.json",
     "evals/resumes/public-resume-selection.json",
     "evals/resumes/artifacts/public-technical-project-manager-pdf.json",
     "evals/knowledge-wiki/named-hiring-readers.json",
     "reports/opportunities/nyc-jobs-qualified.json",
     "reports/opportunities/nyc-jobs-digest.md",
+    "reports/opportunities/betanyc-newsletter-current.json",
     "docs/knowledge-bank/sources/nyc-jobs-open-data.md",
     "docs/knowledge-bank/sources/civic-match.md",
+    "docs/knowledge-bank/sources/betanyc-newsletter.md",
     "docs/knowledge-bank/evaluations/civic-match-opportunity-source.md",
+    "docs/knowledge-bank/evaluations/betanyc-newsletter-opportunity-source.md",
     "docs/knowledge-bank/evaluations/nyc-jobs-opportunity-feed.md",
     "docs/qa/hiring-acceptance/readers",
     "application-guides/2026-08-21/civic-match/Jamie-Burkart-Civic-Match-Signup-Guide.md",
@@ -47,6 +52,7 @@ function fixture() {
     mkdirSync(path.dirname(target), { recursive: true });
     cpSync(path.join(repoRoot, relative), target);
   }
+  copy("docs/knowledge-bank/opportunities/polimorphic-product-manager-123173.md");
   const selection = JSON.parse(
     readFileSync(path.join(repoRoot, "evals/resumes/public-resume-selection.json"), "utf8")
   );
@@ -68,13 +74,76 @@ test("the opportunity system preserves each source's distinct affordances", () =
   const result = evaluateOpportunitySystem({ root: repoRoot });
   const byId = Object.fromEntries(result.sourceRegistry.sources.map((source) => [source.id, source]));
 
-  assert.equal(result.sourceRegistry.sources.length, 2);
+  assert.equal(result.sourceRegistry.sources.length, 3);
   assert.equal(byId["nyc-jobs-open-data"].machineReadable, true);
   assert.equal(byId["nyc-jobs-open-data"].recruiterDiscovery, false);
   assert.equal(byId["civic-match"].machineReadable, false);
   assert.equal(byId["civic-match"].recruiterDiscovery, true);
   assert.equal(byId["civic-match"].profileVisibilityControls, true);
   assert.equal(byId["civic-match"].privateIntake, true);
+  assert.equal(byId["betanyc-newsletter"].machineReadable, false);
+  assert.equal(byId["betanyc-newsletter"].editorialCuration, true);
+  assert.equal(byId["betanyc-newsletter"].recurringEmail, true);
+  assert.equal(byId["betanyc-newsletter"].crossSourceEnrichment, true);
+});
+
+test("the current BetaNYC edition is fresh, public-safe, deduplicated, and strongly gated", () => {
+  const result = evaluateOpportunitySystem({ root: repoRoot });
+
+  assert.equal(result.betaNyc.deterministicPass, true);
+  assert.equal(result.betaNyc.latestEditionDate, "2026-08-20");
+  assert.deepEqual(result.betaNyc.promotedOpportunityIds, [
+    "opportunity.nyc-jobs.792925",
+    "opportunity.nyc-jobs.792692",
+    "opportunity.polimorphic.product-manager.123173"
+  ]);
+  assert.deepEqual(result.betaNyc.newOpportunityIds, [
+    "opportunity.polimorphic.product-manager.123173"
+  ]);
+  assert.equal(result.betaNyc.llmGate.status, "queued-not-run");
+  assert.equal(result.betaNyc.llmGate.queuedCalls, 2);
+});
+
+test("a stale BetaNYC edition fails before modeled-reader work", () => {
+  const root = fixture();
+  const configPath = path.join(root, "config/opportunities/betanyc-newsletter.json");
+  const config = JSON.parse(readFileSync(configPath, "utf8"));
+  config.asOf = "2026-09-15";
+  writeFileSync(configPath, `${JSON.stringify(config, null, 2)}\n`);
+
+  const result = evaluateOpportunitySystem({ root });
+
+  assert.equal(result.overall, "fail");
+  assert.equal(result.checks.find((check) => check.id === "betanyc-edition-freshness").pass, false);
+  assert.equal(result.betaNyc.llmGate.queuedCalls, 0);
+});
+
+test("recipient tracking in a BetaNYC destination fails the public boundary", () => {
+  const root = fixture();
+  const reportPath = path.join(root, "reports/opportunities/betanyc-newsletter-current.json");
+  const report = JSON.parse(readFileSync(reportPath, "utf8"));
+  report.leads[0].canonicalUrl += "?mc_eid=private-recipient-token";
+  writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
+
+  const result = evaluateOpportunitySystem({ root });
+
+  assert.equal(result.overall, "fail");
+  assert.equal(result.checks.find((check) => check.id === "betanyc-public-safe-destinations").pass, false);
+});
+
+test("a below-threshold BetaNYC promotion fails before modeled-reader work", () => {
+  const root = fixture();
+  const reportPath = path.join(root, "reports/opportunities/betanyc-newsletter-current.json");
+  const report = JSON.parse(readFileSync(reportPath, "utf8"));
+  const promoted = report.leads.find((lead) => lead.opportunityId === "opportunity.polimorphic.product-manager.123173");
+  promoted.combinedScore = report.threshold.combined - 0.1;
+  writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
+
+  const result = evaluateOpportunitySystem({ root });
+
+  assert.equal(result.overall, "fail");
+  assert.equal(result.checks.find((check) => check.id === "betanyc-strong-admission-threshold").pass, false);
+  assert.equal(result.betaNyc.llmGate.queuedCalls, 0);
 });
 
 test("Civic Match releases audience-correct modeled-reader packets only after deterministic checks", () => {
