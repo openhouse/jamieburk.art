@@ -1,8 +1,8 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-08-20T20:17:50.000Z",
-  "baseUrl": "http://127.0.0.1:3210",
-  "publicSurfaceFingerprint": "2008b3d92ef39a0d4b0233fa4ab073ae65ebc9ec12962e6efba7f413149edc6f",
+  "checkedAt": "2026-08-21T00:16:53.000Z",
+  "baseUrl": "http://127.0.0.1:3211",
+  "publicSurfaceFingerprint": "d61271ff62e6268f70f2e044d5b87b4b0921361b424ae63c8235d968118ce0cd",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 155,
   "routes": [
@@ -911,10 +911,10 @@
     "pass": true
   },
   "refresh": {
-    "candidateChange": "Homepage work-item feature flags and priority values changed; all route components, CSS, project copy, destinations, and image assets are unchanged.",
-    "currentStructuralInspection": "At 1280 CSS pixels, the exact production container rendered one h1, one main landmark, six ordered project articles, zero horizontal overflow, zero unlabeled images, and zero broken images after scrolling through the page.",
-    "matrixCarryForward": "The 56 route-width axe, overflow, image, landmark, and heading rows carry forward from the immediately preceding candidate because the changed homepage uses the same previously audited WorkCard records and responsive component at new ordinal positions; no HTML structure, CSS, labels, copy, or assets changed.",
-    "visualInspection": "Fresh 1280-pixel captures confirm the first project and the required Sunday Dinner final project; prior above-fold desktop/mobile and About captures remain source-identical.",
-    "browserDiagnostics": "No browser warnings or errors were observed during the current run."
+    "candidateChange": "The six homepage capability rows changed from static entries to full-row links into matching filtered work-index states. The BetaNYC opportunity-source work made no public component, style, copy, route, or asset change.",
+    "currentStructuralInspection": "A fresh exact-candidate production-build run covered all 14 public routes at 360, 375, 768, and 1280 CSS pixels: 56 of 56 rows returned 200, one h1, one main landmark, zero axe 4.12.1 WCAG A/AA violations, zero horizontal overflow, zero unlabeled or broken images, and zero user-facing failed requests.",
+    "matrixCarryForward": "None. All 56 route-width rows were rerun against this exact public-surface fingerprint. Canceled Next.js RSC speculative prefetches were excluded from user-facing request failures; every primary route response and tested destination completed successfully.",
+    "visualInspection": "Fresh desktop and mobile captures of the capability section were inspected. All six rows remain legible and visible; the narrow layout stacks the row content without horizontal overflow.",
+    "browserDiagnostics": "No browser warnings, errors, or user-facing failed requests were observed during the current run."
   }
 }

@@ -146,6 +146,26 @@
           "relationship": "senior-vision"
         }
       ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-cfb.associate-director-policy-implementation.792925",
+      "opportunityPath": "docs/knowledge-bank/opportunities/cfb-associate-director-policy-implementation-792925.md",
+      "requiredTerms": [
+        "implementation",
+        "stakeholder",
+        "policy research",
+        "documentation"
+      ],
+      "namedReaders": [
+        {
+          "personId": "person.sophie-sharps",
+          "relationship": "likely-direct-report"
+        },
+        {
+          "personId": "person.allie-swatek",
+          "relationship": "senior-vision"
+        }
+      ]
     }
   ],
   "readerAssessments": [

@@ -146,6 +146,28 @@ test("direct digital project delivery remains eligible after seniority and domai
   assert.ok(digitalProject.matchedSignals.includes("digital-technical-systems"));
 });
 
+test("policy implementation leadership is treated as delivery-role adjacency", () => {
+  const result = scorePosting(posting({
+    job_id: "792925",
+    agency: "CAMPAIGN FINANCE BOARD",
+    business_title: "Associate Director of Policy Implementation",
+    civil_service_title: "EXECUTIVE PROGRAM MANAGER",
+    salary_range_from: "125000",
+    salary_range_to: "135000",
+    job_description: "Lead policy implementation, governance, documentation, implementation planning, cross-divisional coordination, stakeholder engagement, program evaluation, and continuous improvement for public-facing election services.",
+    minimum_qual_requirements: "A bachelor's degree and one year of experience; or a four-year high school diploma and five years of experience; or an equivalent combination of education and experience.",
+    preferred_skills: "Project management, facilitation, plain language, evidence-based recommendations, and operational change."
+  }), {
+    ...policy,
+    strongMatchThreshold: 84,
+    minimumFitScore: 78,
+    minimumSecurabilityScore: 70
+  }, { now: "2026-08-20" });
+
+  assert.equal(result.admitted, true);
+  assert.ok(result.matchedSignals.includes("title-role-adjacency"));
+});
+
 test("the daily digest includes only verified actionable roles and new strong matches", () => {
   const digest = buildOpportunityDigest({
     generatedAt: "2026-08-20T12:00:00.000Z",

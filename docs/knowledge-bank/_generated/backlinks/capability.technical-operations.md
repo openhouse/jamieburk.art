@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Technical Operations
 
-**Source commit:** `55bbf75f258eba870fbe194bded29905bf4c6005`
-**Generation time:** 2026-08-20T15:52:53-04:00
-**Source fingerprint:** `e839c6993cd4ee734d4a969f64455823e571e0c6c9ce6ff9720eb3ad7b41e402`
+**Source commit:** `c87a028e18150178bd4948a0fde50e17883f4716`
+**Generation time:** 2026-08-20T18:29:18-04:00
+**Source fingerprint:** `1b676ee3bee3a4b6e27dbb0ceae1ecb6d0979a8ee14703ccc900e16b0fa6a74e`
 
 - [NYC Artist Coalition application brief](../../applications/nycac-civic-product-operations.md) - `related_to` (frontmatter)
 - [WOW List - Senior Product Manager role-fit brief](../../applications/wowlist-senior-product-manager-oti-782366.md) - `prose_link` (markdown)
@@ -22,6 +22,7 @@
 - [Asana - AI Implementation Manager, Service Management](../../opportunities/asana-ai-implementation.md) - `related_to` (frontmatter)
 - [Benepass - Product Operations Manager](../../opportunities/benepass-product-operations.md) - `related_to` (frontmatter)
 - [CodePath - Senior Program Manager, Claude Corps](../../opportunities/codepath-claude-corps.md) - `related_to` (frontmatter)
+- [NYC Campaign Finance Board - Associate Director of Policy Implementation 792925](../../opportunities/cfb-associate-director-policy-implementation-792925.md) - `related_to` (frontmatter)
 - [NYC OTI - Cybersecurity Senior Project Manager 791074](../../opportunities/oti-cybersecurity-senior-project-manager-791074.md) - `related_to` (frontmatter)
 - [NYC OTI - Operations Manager 789810](../../opportunities/oti-operations-manager-789810.md) - `related_to` (frontmatter)
 - [NYC OTI - Product Manager 784450](../../opportunities/oti-product-manager-784450.md) - `related_to` (frontmatter)

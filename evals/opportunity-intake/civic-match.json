@@ -8,6 +8,7 @@
   "guideSha256": "084971e5c991603d438a860a6718cd903e90d75fdbf56ee0094c6f858d37b781",
   "sourceRegistryPath": "evals/opportunity-intake/sources.json",
   "currentOpportunityManifest": "evals/public-resume/current.json",
+  "expectedHiringReaderAssignments": 11,
   "voiceContractPath": "evals/cover-letters/voice-contract.json",
   "resume": {
     "manifestPath": "evals/public-resume/current.json",
@@ -162,7 +163,7 @@
   "readerEvaluationState": {
     "evaluatedAt": "2026-08-20",
     "status": "stopped-on-first-failure",
-    "expectedAssessments": 11,
+    "expectedAssessments": 13,
     "completedAssessments": 1,
     "firstFailureKey": "hiring|opportunity.asana.ai-implementation.8027437|person.jenn-wei|senior-vision",
     "guideSha256": "084971e5c991603d438a860a6718cd903e90d75fdbf56ee0094c6f858d37b781"

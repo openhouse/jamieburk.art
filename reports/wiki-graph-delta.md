@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `55bbf75f258eba870fbe194bded29905bf4c6005`
-**Generation time:** 2026-08-20T15:52:53-04:00
-**Source fingerprint:** `e839c6993cd4ee734d4a969f64455823e571e0c6c9ce6ff9720eb3ad7b41e402`
+**Source commit:** `c87a028e18150178bd4948a0fde50e17883f4716`
+**Generation time:** 2026-08-20T18:29:18-04:00
+**Source fingerprint:** `1b676ee3bee3a4b6e27dbb0ceae1ecb6d0979a8ee14703ccc900e16b0fa6a74e`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 56
+- Nodes added: 63
 - Nodes removed: 34
-- Edges added: 194
+- Edges added: 214
 - Edges removed: 180
 - New type-aware orphans: 0
 - Current rights-review records: 186
@@ -26,19 +26,23 @@ Compared with the graph artifact on `origin/develop`.
 - `evaluation.oti-product-manager-search-ranking.2026-08-20`
 - `event.nyc.sbu.empty-storefronts-high-rents-release.2026-07-29`
 - `index.knowledge-wiki.live-project-websites`
+- `method.betanyc-opportunity-loop`
 - `method.civic-match-opportunity-loop`
 - `method.nyc-jobs-opportunity-loop`
 - `opportunity.aclu.senior-project-manager-lps.8620968002`
 - `opportunity.aclu.senior-project-manager-national-campaigns.8631854002`
+- `opportunity.nyc-cfb.associate-director-policy-implementation.792925`
 - `opportunity.nyc-oti.cybersecurity-senior-project-manager.791074`
 - `opportunity.nyc-oti.operations-manager.789810`
 - `opportunity.nyc-oti.product-manager.784450`
+- `person.allie-swatek`
 - `person.courtney-kishbaugh`
 - `person.deirdre-schifeling`
 - `person.james-williams-aclu`
 - `person.jenn-wei`
 - `person.josh-gee`
 - `person.kelly-moan`
+- `person.sophie-sharps`
 - `person.terence-dougherty`
 - `projection.photo.home-og.east-river`
 - `projection.visual.fair-rent.participation-sequence.2026-08`
@@ -47,12 +51,14 @@ Compared with the graph artifact on `origin/develop`.
 - `source.aclu.deirdre-schifeling-bio`
 - `source.aclu.terence-dougherty-bio`
 - `source.benepass.jaclyn-chen-leadership.2026`
+- `source.betanyc.weekly-civictech-newsletter`
 - `source.callnyc.restored-site.2026-08-14`
 - `source.civic-match.candidate-network`
 - `source.hje.wayback-chronology.2026-08`
 - `source.jobs-nyc.oti-product-manager-search.2026-08-20`
 - `source.jobs.aclu.senior-project-manager-lps.8620968002`
 - `source.jobs.aclu.senior-project-manager-national-campaigns.8631854002`
+- `source.jobs.cfb.policy-implementation.792925`
 - `source.jobs.oti.cybersecurity-senior-project-manager.791074`
 - `source.jobs.oti.operations-manager.789810`
 - `source.jobs.oti.product-manager.784450`
@@ -63,6 +69,7 @@ Compared with the graph artifact on `origin/develop`.
 - `source.linkedin.luke-farrell-pit-crew-leadership.2026`
 - `source.nyc-jobs.open-data.pda4-rgn4`
 - `source.nyc-oti.cyber-command.kelly-moan`
+- `source.nyccfb.staff.2026`
 - `source.permission.jamie.photo-select-portfolio.2026-08-13`
 - `source.permission.jamie.public-site-captures.2026-08-13`
 - `source.photo-metadata.nycac-participation-sequence.2026-08-13`

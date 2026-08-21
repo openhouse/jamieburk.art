@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Shared NYC Artist Coalition advocacy operating playbook
 
-**Source commit:** `55bbf75f258eba870fbe194bded29905bf4c6005`
-**Generation time:** 2026-08-20T15:52:53-04:00
-**Source fingerprint:** `e839c6993cd4ee734d4a969f64455823e571e0c6c9ce6ff9720eb3ad7b41e402`
+**Source commit:** `c87a028e18150178bd4948a0fde50e17883f4716`
+**Generation time:** 2026-08-20T18:29:18-04:00
+**Source fingerprint:** `1b676ee3bee3a4b6e27dbb0ceae1ecb6d0979a8ee14703ccc900e16b0fa6a74e`
 
 - [NYC Artist Coalition application brief](../../applications/nycac-civic-product-operations.md) - `related_to` (frontmatter)
 - [NYC Artist Coalition](../../projects/nyc-artist-coalition-2017.md) - `prose_link` (markdown)

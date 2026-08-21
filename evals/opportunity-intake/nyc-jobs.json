@@ -27,7 +27,8 @@
     "782369",
     "784450",
     "789810",
-    "791074"
+    "791074",
+    "792925"
   ],
   "activeOpportunities": [
     {
@@ -61,6 +62,14 @@
       "actionUrl": "https://cityjobs.nyc.gov/job/cybersecurity-senior-project-manager-in-brooklyn-jid-46417",
       "verifiedActionable": true,
       "nextAction": "Confirm application state; submit the tailored packet if not yet filed, otherwise record the next follow-up date."
+    },
+    {
+      "jobId": "792925",
+      "title": "Associate Director of Policy Implementation",
+      "agency": "NYC Campaign Finance Board",
+      "actionUrl": "https://cityjobs.nyc.gov/jobs?q=792925",
+      "verifiedActionable": true,
+      "nextAction": "Prepare the tailored resume and cover letter, resolve the formal-supervision evidence question, and apply before October 13, 2026."
     },
     {
       "jobId": "789810",

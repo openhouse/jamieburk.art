@@ -51,6 +51,33 @@
         "application-submission-remains-human"
       ],
       "methodPath": "docs/knowledge-bank/methods/civic-match-opportunity-loop.md"
+    },
+    {
+      "id": "source.betanyc.weekly-civictech-newsletter",
+      "sourceType": "curated-recurring-email-and-public-archive",
+      "accessMode": "private-email-delivery-with-public-canonical-archive",
+      "authority": "curated-discovery-and-community-context",
+      "affordances": [
+        "weekly-editorial-curation",
+        "cross-sector-opportunity-discovery",
+        "deadline-highlights",
+        "community-context-and-events",
+        "relationship-and-learning-signals",
+        "public-issue-archive"
+      ],
+      "freshnessSignals": [
+        "latest-distinct-public-issue",
+        "weekly-issue-date",
+        "issue-url"
+      ],
+      "boundaries": [
+        "newsletter-is-discovery-not-employer-authority",
+        "individual-official-posting-controls",
+        "private-mailbox-identifiers-are-not-committed",
+        "subscriber-tracking-parameters-are-not-retained",
+        "application-submission-remains-human"
+      ],
+      "methodPath": "docs/knowledge-bank/methods/betanyc-opportunity-loop.md"
     }
   ]
 }

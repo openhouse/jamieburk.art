@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `55bbf75f258eba870fbe194bded29905bf4c6005`
-**Generation time:** 2026-08-20T15:52:53-04:00
-**Source fingerprint:** `e839c6993cd4ee734d4a969f64455823e571e0c6c9ce6ff9720eb3ad7b41e402`
+**Source commit:** `c87a028e18150178bd4948a0fde50e17883f4716`
+**Generation time:** 2026-08-20T18:29:18-04:00
+**Source fingerprint:** `1b676ee3bee3a4b6e27dbb0ceae1ecb6d0979a8ee14703ccc900e16b0fa6a74e`
 
 ## application
 
@@ -309,6 +309,7 @@
 
 ## method
 
+- [BetaNYC opportunity-source loop](../methods/betanyc-opportunity-loop.md) - `method.betanyc-opportunity-loop`
 - [Civic Match opportunity relationship loop](../methods/civic-match-opportunity-loop.md) - `method.civic-match-opportunity-loop`
 - [Collective credit and protected absence](../methods/collective-credit-and-protected-absence.md) - `method.collective-credit-protected-absence`
 - [Identity Systems as Shared Infrastructure](../methods/identity-systems-as-shared-infrastructure.md) - `method.identity-systems-as-shared-infrastructure`
@@ -334,6 +335,7 @@
 - [Asana - AI Implementation Manager, Service Management](../opportunities/asana-ai-implementation.md) - `opportunity.asana.ai-implementation.8027437`
 - [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md) - `opportunity.benepass.product-operations.7f963a7a`
 - [CodePath - Senior Program Manager, Claude Corps](../opportunities/codepath-claude-corps.md) - `opportunity.codepath.claude-corps.5182020007`
+- [NYC Campaign Finance Board - Associate Director of Policy Implementation 792925](../opportunities/cfb-associate-director-policy-implementation-792925.md) - `opportunity.nyc-cfb.associate-director-policy-implementation.792925`
 - [NYC OTI - Cybersecurity Senior Project Manager 791074](../opportunities/oti-cybersecurity-senior-project-manager-791074.md) - `opportunity.nyc-oti.cybersecurity-senior-project-manager.791074`
 - [NYC OTI - Operations Manager 789810](../opportunities/oti-operations-manager-789810.md) - `opportunity.nyc-oti.operations-manager.789810`
 - [NYC OTI - Product Manager 784450](../opportunities/oti-product-manager-784450.md) - `opportunity.nyc-oti.product-manager.784450`
@@ -349,6 +351,7 @@
 ## person
 
 - [Aileen Palmer](../people/aileen-palmer.md) - `person.aileen-palmer`
+- [Allie Swatek](../people/allie-swatek.md) - `person.allie-swatek`
 - [Courtney Kishbaugh](../people/courtney-kishbaugh.md) - `person.courtney-kishbaugh`
 - [Deirdre Schifeling](../people/deirdre-schifeling.md) - `person.deirdre-schifeling`
 - [Diya Vij](../people/diya-vij.md) - `person.diya-vij`
@@ -362,6 +365,7 @@
 - [Lisa Gelobter](../people/lisa-gelobter.md) - `person.lisa-gelobter`
 - [Luke Farrell](../people/luke-farrell.md) - `person.luke-farrell`
 - [Paul Mossine](../people/paul-mossine.md) - `person.paul-mossine`
+- [Sophie Sharps](../people/sophie-sharps.md) - `person.sophie-sharps`
 - [Terence Dougherty](../people/terence-dougherty.md) - `person.terence-dougherty`
 - [Warren Sack](../people/warren-sack.md) - `person.warren-sack`
 
@@ -424,6 +428,7 @@
 - [ACLU biography - Deirdre Schifeling](../sources/aclu-deirdre-schifeling-bio.md) - `source.aclu.deirdre-schifeling-bio`
 - [ACLU biography - Terence Dougherty](../sources/aclu-terence-dougherty-bio.md) - `source.aclu.terence-dougherty-bio`
 - [Benepass leadership context - Jaclyn Chen](../sources/benepass-jaclyn-chen-leadership.md) - `source.benepass.jaclyn-chen-leadership.2026`
+- [BetaNYC weekly civic-tech newsletter](../sources/betanyc-civictech-newsletter.md) - `source.betanyc.weekly-civictech-newsletter`
 - [CallNYC restored archived prototype, August 2026](../sources/callnyc-restored-site-2026-08-14.md) - `source.callnyc.restored-site.2026-08-14`
 - [CallNYC public source repository](../sources/callnyc-source-repository.md) - `source.callnyc.source-repository`
 - [Campaign-site repository family, 2020-2022](../sources/campaign-site-repository-family-2020-2022.md) - `source.campaign-site.repository-family.2020-2022`
@@ -445,6 +450,7 @@
 - [Official posting - ACLU Senior Project Manager, National Campaigns](../sources/jobs-aclu-senior-project-manager-national-campaigns-8631854002.md) - `source.jobs.aclu.senior-project-manager-national-campaigns.8631854002`
 - [Asana - AI Implementation Manager, Service Management 8027437](../sources/jobs-asana-ai-implementation-8027437.md) - `source.jobs.asana.ai-implementation.8027437`
 - [Official posting - Benepass Product Operations Manager](../sources/jobs-benepass-product-operations.md) - `source.jobs.benepass.product-operations.7f963a7a`
+- [NYC Jobs - Associate Director of Policy Implementation 792925](../sources/jobs-cfb-policy-implementation-792925.md) - `source.jobs.cfb.policy-implementation.792925`
 - [CodePath - Senior Program Manager, Claude Corps 5182020007](../sources/jobs-codepath-claude-corps-5182020007.md) - `source.jobs.codepath.claude-corps.5182020007`
 - [NYC Jobs - Cybersecurity Senior Project Manager 791074](../sources/jobs-oti-cybersecurity-senior-project-manager-791074.md) - `source.jobs.oti.cybersecurity-senior-project-manager.791074`
 - [NYC Jobs - Operations Manager 789810](../sources/jobs-oti-operations-manager-789810.md) - `source.jobs.oti.operations-manager.789810`
@@ -489,6 +495,7 @@
 - [Committee on Small Business hearing on the Small Business Jobs Survival Act official transcript](../sources/public-hearing-transcripts/small-business-job-survival-hearing-2018-10-22.md) - `source.nycc.small-business.sbjsa-2018-10-22.official-transcript`
 - [November 14, 2019 City Council stated meeting official transcript](../sources/public-hearing-transcripts/commercial-rent-stated-meeting-2019-11-14.md) - `source.nycc.stated-meeting.2019-11-14.official-transcript`
 - [March 24, 2022 City Council stated meeting official transcript](../sources/public-hearing-transcripts/commercial-rent-stated-meeting-2022-03-24.md) - `source.nycc.stated-meeting.2022-03-24.official-transcript`
+- [New York City Campaign Finance Board staff directory](../sources/nyccfb-staff-2026.md) - `source.nyccfb.staff.2026`
 - [Active New York State commercial rent stabilization bills](../sources/commercial-rent-public-support/active-state-bills-2025-2026.md) - `source.nys.commercial-rent.active-bills.2025-2026`
 - [2026 Democratic primary election-night result for Assembly District 56](../sources/commercial-rent-public-support/eon-huntley-2026-primary-result.md) - `source.nysboe.primary.ad56.2026`
 - [Elana Gordon East River portfolio permission summary](../sources/permissions/elana-gordon-east-river-portfolio-2026.md) - `source.permission.elana-gordon.east-river.2026-07`

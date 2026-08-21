@@ -1,8 +1,8 @@
 {
   "reportVersion": 3,
-  "checkedAt": "2026-08-20T20:17:50.000Z",
-  "baseUrl": "http://127.0.0.1:3210",
-  "publicSurfaceFingerprint": "2008b3d92ef39a0d4b0233fa4ab073ae65ebc9ec12962e6efba7f413149edc6f",
+  "checkedAt": "2026-08-21T00:16:53.000Z",
+  "baseUrl": "http://127.0.0.1:3211",
+  "publicSurfaceFingerprint": "d61271ff62e6268f70f2e044d5b87b4b0921361b424ae63c8235d968118ce0cd",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 155,
   "method": "Playwright keyboard interaction plus scoped DOM and viewport inspection on the exact local candidate. This is not a human screen-reader or assistive-technology session.",
@@ -205,12 +205,13 @@
   ],
   "passed": true,
   "refresh": {
-    "candidateChange": "Homepage work-item selection and order changed without changing interactive components, navigation, focus behavior, CSS, or routes.",
+    "candidateChange": "The six homepage capability rows changed from static entries to full-row links into matching filtered work-index states; no navigation shell, focus behavior, CSS, or route definition changed.",
     "currentChecks": [
       "The production-container DOM retained one main landmark and one h1.",
-      "All six selected-system cards retained real case-study and tag-link destinations.",
-      "The final homepage card is 196 Artists Residency / Sunday Dinner."
+      "All six capability rows expose visible, meaningful filtered work-index destinations.",
+      "Direct navigation through the first capability destination reached /work?tag=Technical%20Operations#work-index, retained one main and one h1, and exposed the Clear filter control.",
+      "The final homepage project remains 196 Artists Residency / Sunday Dinner."
     ],
-    "carriedForwardCheck": "Keyboard, mobile-navigation, and 320/640 reflow observations carry forward from the immediately preceding component-identical candidate; no human screen-reader claim is made."
+    "carriedForwardCheck": "Keyboard, mobile-navigation, and 320/640 reflow observations remain applicable because those components did not change. The changed capability destinations and full 56-row route-width matrix were freshly exercised; no human screen-reader claim is made."
   }
 }

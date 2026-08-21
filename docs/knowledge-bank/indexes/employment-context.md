@@ -23,6 +23,9 @@ relations:
     target: opportunity.nyc-oti.cybersecurity-senior-project-manager.791074
     href: ../opportunities/oti-cybersecurity-senior-project-manager-791074.md
   - type: related_to
+    target: opportunity.nyc-cfb.associate-director-policy-implementation.792925
+    href: ../opportunities/cfb-associate-director-policy-implementation-792925.md
+  - type: related_to
     target: opportunity.aclu.senior-project-manager-lps.8620968002
     href: ../opportunities/aclu-senior-project-manager-lps.md
   - type: related_to
@@ -65,6 +68,9 @@ relations:
     target: method.civic-match-opportunity-loop
     href: ../methods/civic-match-opportunity-loop.md
   - type: related_to
+    target: method.betanyc-opportunity-loop
+    href: ../methods/betanyc-opportunity-loop.md
+  - type: related_to
     target: person.josh-gee
     href: ../people/josh-gee.md
   - type: related_to
@@ -85,6 +91,7 @@ paths, message bodies, contact details, and real hiring outcomes remain private.
 - [NYC OTI - Product Manager](../opportunities/oti-product-manager-784450.md) — strong full-lifecycle product role under the IT Project Specialist title
 - [NYC OTI - Senior Product Manager](../opportunities/oti-senior-product-manager.md) — four reopened PIT Crew positions; official deadline October 16, 2026
 - [NYC OTI - Cybersecurity Senior Project Manager](../opportunities/oti-cybersecurity-senior-project-manager-791074.md) — credible program-delivery fit with explicit cyber, tool, and certification gaps
+- [NYC Campaign Finance Board - Associate Director of Policy Implementation](../opportunities/cfb-associate-director-policy-implementation-792925.md) — strong policy-to-operations fit with formal-supervision and elections-domain questions to address directly
 - [ACLU - Senior Project Manager, Learning and Project Solutions](../opportunities/aclu-senior-project-manager-lps.md)
 - [ACLU - Senior Project Manager, National Campaigns](../opportunities/aclu-senior-project-manager-national-campaigns.md)
 
@@ -98,6 +105,7 @@ paths, message bodies, contact details, and real hiring outcomes remain private.
 
 - [NYC Jobs opportunity action loop](../methods/nyc-jobs-opportunity-loop.md) — public bulk discovery, revision detection, and deterministic screening before official-posting verification
 - [Civic Match opportunity relationship loop](../methods/civic-match-opportunity-loop.md) — authenticated profile discovery, invitations, saves, staff matching, events, and external-application tracking
+- [BetaNYC opportunity-source loop](../methods/betanyc-opportunity-loop.md) — weekly cross-sector civic-tech curation, issue-aware refresh, employer verification, and deterministic screening before subjective review
 - [Josh Gee](../people/josh-gee.md) and [Courtney Kishbaugh](../people/courtney-kishbaugh.md) — fictionalized public-context platform and program lenses for the Civic Match profile; not real participation or endorsement
 
 ## Historical fit benchmarks
@@ -114,6 +122,7 @@ paths, message bodies, contact details, and real hiring outcomes remain private.
 - [Luke Farrell](../people/luke-farrell.md) and [Lisa Gelobter](../people/lisa-gelobter.md) — NYC PIT Crew operating-lead and commissioner-level vision context
 - [Kelly Moan](../people/kelly-moan.md) — official NYC Cyber Command senior-vision context; the Security Sciences direct manager remains unresolved
 - [Jenn Wei](../people/jenn-wei.md) — public Asana Service Management launch-team vision context; the AI Implementation Manager reporting line remains unresolved
+- [Sophie Sharps](../people/sophie-sharps.md) and [Allie Swatek](../people/allie-swatek.md) — CFB exact-title likely-direct-manager and senior policy-vision context for the Associate Director of Policy Implementation role
 
 These links document public organizational context. They do not establish
 awareness, hiring authority for a particular application, recommendation, or

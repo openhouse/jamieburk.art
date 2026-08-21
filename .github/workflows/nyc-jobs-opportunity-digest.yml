@@ -24,7 +24,7 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Run deterministic opportunity evals
-        run: npm run opportunities:nyc:eval
+        run: npm run opportunities:nyc:eval && npm run opportunities:betanyc:eval
       - name: Fetch NYC Jobs revision metadata
         run: |
           mkdir -p .tmp/nyc-jobs
@@ -38,16 +38,16 @@ jobs:
         uses: actions/cache/restore@v4
         with:
           path: .tmp/nyc-jobs/revision-marker
-          key: nyc-jobs-revision-${{ steps.metadata.outputs.revision }}
+          key: nyc-jobs-revision-v2-${{ steps.metadata.outputs.revision }}
       - name: Fetch current postings when the source revision is new
         if: steps.revision-cache.outputs.cache-hit != 'true'
         run: |
           curl --fail --silent --show-error --location \
             'https://data.cityofnewyork.us/resource/pda4-rgn4.json?$limit=50000' \
             --output .tmp/nyc-jobs/postings.json
-      - name: Use an empty feed for the unchanged-revision daily digest
+      - name: Restore the current postings for an unchanged dataset revision
         if: steps.revision-cache.outputs.cache-hit == 'true'
-        run: printf '[]\n' > .tmp/nyc-jobs/postings.json
+        run: cp .tmp/nyc-jobs/revision-marker/postings.json .tmp/nyc-jobs/postings.json
       - name: Build and send the daily action digest
         run: >-
           npm run opportunities:nyc:daily --
@@ -68,18 +68,68 @@ jobs:
         run: |
           mkdir -p .tmp/nyc-jobs/revision-marker
           cp .tmp/nyc-jobs/metadata.json .tmp/nyc-jobs/revision-marker/metadata.json
+          cp .tmp/nyc-jobs/postings.json .tmp/nyc-jobs/revision-marker/postings.json
           cp .tmp/nyc-jobs/output/nyc-jobs-candidate-queue.json .tmp/nyc-jobs/revision-marker/candidate-queue.json
       - name: Save processed-revision marker
         if: steps.revision-cache.outputs.cache-hit != 'true'
         uses: actions/cache/save@v4
         with:
           path: .tmp/nyc-jobs/revision-marker
-          key: nyc-jobs-revision-${{ steps.metadata.outputs.revision }}
+          key: nyc-jobs-revision-v2-${{ steps.metadata.outputs.revision }}
+      - name: Fetch the public BetaNYC newsletter index
+        run: |
+          mkdir -p .tmp/betanyc
+          curl --fail --silent --show-error --location \
+            https://www.beta.nyc/newsletter/ \
+            --output .tmp/betanyc/index.html
+      - name: Resolve the newest distinct BetaNYC issue
+        id: betanyc-issue
+        run: >-
+          node --input-type=module -e
+          'import fs from "node:fs";
+          import {findLatestNewsletterIssue} from "./scripts/opportunities/betanyc-newsletter-source.mjs";
+          const issue=findLatestNewsletterIssue(fs.readFileSync(".tmp/betanyc/index.html","utf8"));
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `issue-key=${issue.issueKey}\n`);'
+      - name: Restore processed BetaNYC issue marker
+        id: betanyc-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: .tmp/betanyc/issue-marker
+          key: betanyc-issue-v1-${{ steps.betanyc-issue.outputs.issue-key }}
+      - name: Review and score the newest BetaNYC issue
+        if: steps.betanyc-cache.outputs.cache-hit != 'true'
+        run: >-
+          npm run opportunities:betanyc:daily --
+          --index-html .tmp/betanyc/index.html
+          --nyc-postings .tmp/nyc-jobs/postings.json
+          --config evals/opportunity-intake/betanyc-newsletter.json
+          --output-dir .tmp/betanyc/output
+          --force-refresh
+          --send
+        env:
+          OPPORTUNITY_DIGEST_SEND_ENABLED: ${{ secrets.OPPORTUNITY_DIGEST_SEND_ENABLED }}
+          OPPORTUNITY_DIGEST_TO: ${{ secrets.OPPORTUNITY_DIGEST_TO }}
+          OPPORTUNITY_DIGEST_FROM: ${{ secrets.OPPORTUNITY_DIGEST_FROM }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+      - name: Mark this BetaNYC issue processed
+        if: steps.betanyc-cache.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p .tmp/betanyc/issue-marker
+          cp .tmp/betanyc/output/betanyc-source-state.json .tmp/betanyc/issue-marker/source-state.json
+          cp .tmp/betanyc/output/betanyc-candidate-queue.json .tmp/betanyc/issue-marker/candidate-queue.json
+      - name: Save processed BetaNYC issue marker
+        if: steps.betanyc-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: .tmp/betanyc/issue-marker
+          key: betanyc-issue-v1-${{ steps.betanyc-issue.outputs.issue-key }}
       - name: Retain the governed action packet
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: nyc-jobs-opportunity-action-packet-${{ github.run_id }}
-          path: .tmp/nyc-jobs/output
+          path: |
+            .tmp/nyc-jobs/output
+            .tmp/betanyc/output
           if-no-files-found: error
           retention-days: 30

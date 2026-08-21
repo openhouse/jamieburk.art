@@ -128,12 +128,12 @@ export function scorePosting(posting, policy, { now = new Date().toISOString().s
   const titleRoleAdjacency = includesAny(normalizedTitle, [
     "product manager", "product operations", "project manager", "program manager",
     "operations manager", "implementation manager", "business analyst", "service designer",
-    "user researcher"
+    "user researcher", "policy implementation"
   ]);
   const fitSignals = [
     { id: "digital-technical-systems", weight: 16, terms: ["digital", "technology", "software", "web application", "data platform", "information system", "computer system", "it project"] },
     { id: "implementation-and-operations", weight: 14, terms: ["implementation", "operations", "operational", "launch", "deployment", "service delivery"] },
-    { id: "cross-functional-coordination", weight: 12, terms: ["cross-functional", "cross agency", "cross-agency", "interagency", "coordinate agency", "multi-disciplinary"] },
+    { id: "cross-functional-coordination", weight: 12, terms: ["cross-functional", "cross-divisional", "cross agency", "cross-agency", "interagency", "coordinate agency", "multi-disciplinary"] },
     { id: "research-requirements-roadmap", weight: 12, terms: ["user research", "qualitative research", "requirements", "roadmap", "service design", "user stories"] },
     { id: "resident-facing-public-service", weight: 10, terms: ["resident", "constituent", "community", "public service", "public-facing", "new yorkers"] },
     { id: "stakeholder-and-vendor-work", weight: 8, terms: ["stakeholder", "vendor", "external partners", "community-based organizations", "coalition"] },

@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "candidateSha": "1d915105bce173a331e76ec8a58e69ccfef536d8",
-  "portfolioSnapshotHash": "196a75fbf4746a0a568e7bf2985f63008fdf52223af2b77a1c6e6da7b57ec959",
-  "publicReportHash": "92780be1e114b2c4381d33c73d10ba5a46b3f1c2d86d43617c55270a6522010c",
-  "wikiSourceFingerprint": "fb9a7508ac59851125b5547ebe9748f58215de7ee3a62a37ec4278080143bb10",
+  "candidateSha": "6a244460a2c92aafeb3789ad30a315d574aaa2bf",
+  "portfolioSnapshotHash": "05262e0f52249645a1be27a76a7729455ad77833a6f9b8c0050ddf89d73e0969",
+  "publicReportHash": "e3381748caf74580ecbb93df972df477f79e7990fb26fe8e1c753c876fd633ee",
+  "wikiSourceFingerprint": "1b676ee3bee3a4b6e27dbb0ceae1ecb6d0979a8ee14703ccc900e16b0fa6a74e",
   "findings": [
     {
       "findingId": "finding.requirement.oti-product.cross-functional-launch",

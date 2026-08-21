@@ -1,5 +1,5 @@
 {
-  "id": "portfolio-photography-layout-v8",
+  "id": "portfolio-photography-layout-v9",
   "title": "Human Index photographic portfolio layout",
   "intent": "Photography and public interfaces make situated work credible while remaining public-safe, accessible, project-specific, and subordinate to human publication authority.",
   "hiringArgument": {
@@ -12,7 +12,8 @@
       "opportunity.nyc-oti.product-manager.784450",
       "opportunity.nyc-oti.senior-product-manager.782366",
       "opportunity.nyc-oti.operations-manager.789810",
-      "opportunity.nyc-oti.cybersecurity-senior-project-manager.791074"
+      "opportunity.nyc-oti.cybersecurity-senior-project-manager.791074",
+      "opportunity.nyc-cfb.associate-director-policy-implementation.792925"
     ],
     "featuredProjectSequence": [
       "NYC Artist Coalition / FairRentNYC",
@@ -22,8 +23,8 @@
       "WOW List",
       "196 Artists Residency / Sunday Dinner"
     ],
-    "selectionBasis": "Use the deterministic public-resume opportunity set when no authorized private active-application IDs are supplied. Re-evaluate this sequence before hiring-reader role play whenever that set, a project's proof strength, or a project's truthful cover changes.",
-    "sequenceLogic": "Lead with current role relevance and direct evidence, then widen the case through sustained client stewardship, field implementation and resource responsibility, platform scale, and human-centered continuity."
+    "selectionBasis": "Use the deterministic public-resume opportunity set when no authorized private active-application IDs are supplied. The August 20 review added the CFB policy-implementation role and retained this sequence because its opening projects already make Jamie's strongest current case for civic implementation, public communication, cross-functional coordination, and maintained operating structure. Re-evaluate this sequence before hiring-reader role play whenever that set, a project's proof strength, or a project's truthful cover changes.",
+    "sequenceLogic": "Lead with current civic policy implementation and public communication, then widen the case through sustained client stewardship, field implementation and resource responsibility, platform scale, and human-centered continuity."
   },
   "criteria": [
     {
@@ -64,7 +65,7 @@
     {
       "id": "hiring-argument-project-sequence",
       "blocking": true,
-      "criterion": "The homepage presents six projects in a deliberate hiring sequence for the current live opportunity set: present-day NYC Artist Coalition civic operations; direct resident-facing product work through CallNYC; long-term Harry J. Epstein client stewardship; KC Town Hall field implementation, resource responsibility, and resident service; WOW List platform scale; then Sunday Dinner and 196 onboarding, facilitation, and continuity. Sunday Dinner remains a required homepage project. Harry J. Epstein does not lead while its cover is explicitly a successor site rather than Jamie's implementation."
+      "criterion": "The homepage presents six projects in a deliberate hiring sequence for the current live opportunity set, including the CFB policy-implementation role: present-day NYC Artist Coalition civic operations; direct resident-facing product and public-information work through CallNYC; long-term Harry J. Epstein client stewardship; KC Town Hall field implementation, resource responsibility, and resident service; WOW List platform scale; then Sunday Dinner and 196 onboarding, facilitation, and continuity. Sunday Dinner remains a required homepage project. Harry J. Epstein does not lead while its cover is explicitly a successor site rather than Jamie's implementation."
     },
     {
       "id": "tag-navigation-contract",

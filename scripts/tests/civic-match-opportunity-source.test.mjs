@@ -35,7 +35,7 @@ test("the deterministic Civic Match gate covers all five steps before commission
   assert.deepEqual(result.phases, { deterministic: "pass", hiringReaders: "not-run" });
   assert.equal(result.metrics.stepsCovered, 5);
   assert.equal(result.metrics.privateNarrativeAnswers, 2);
-  assert.equal(result.metrics.namedHiringReaderAssignments, 9);
+  assert.equal(result.metrics.namedHiringReaderAssignments, 11);
   assert.equal(result.metrics.civicMatchHelperAssignments, 2);
 });
 
@@ -43,12 +43,13 @@ test("the reader audience is derived from the current opportunity manifest plus 
   const config = JSON.parse(readFileSync(path.join(repoRoot, "evals/opportunity-intake/civic-match.json"), "utf8"));
   const audience = deriveExpectedCivicMatchAudience(repoRoot, config);
 
-  assert.equal(audience.hiringReaders.length, 9);
+  assert.equal(audience.hiringReaders.length, config.expectedHiringReaderAssignments);
+  assert.equal(audience.hiringReaders.length, 11);
   assert.deepEqual(
     audience.helpers.map(({ personId }) => personId).sort(),
     ["person.courtney-kishbaugh", "person.josh-gee"]
   );
-  assert.equal(new Set(audience.all.map(({ key }) => key)).size, 11);
+  assert.equal(new Set(audience.all.map(({ key }) => key)).size, 13);
 });
 
 test("both 300-word Civic Match answers fit the observed form limit", () => {

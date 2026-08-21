@@ -38,9 +38,9 @@ test("current exact-resume reader run fails closed after the first rejection", (
   const result = evaluatePublicResume(repoRoot, { now: "2026-08-20" });
   assert.equal(result.pass, false);
   assert.deepEqual(result.metrics, {
-    activeOpportunities: 7,
-    coveredOpportunities: 7,
-    namedReaders: 9,
+    activeOpportunities: 8,
+    coveredOpportunities: 8,
+    namedReaders: 11,
     passingReaders: 0,
     readerAssessmentsEvaluated: 1
   });

@@ -1,11 +1,11 @@
 {
   "reportVersion": 5,
-  "checkedAt": "2026-08-20T20:17:50.000Z",
-  "baseUrl": "http://127.0.0.1:3210",
-  "publicSurfaceFingerprint": "2008b3d92ef39a0d4b0233fa4ab073ae65ebc9ec12962e6efba7f413149edc6f",
+  "checkedAt": "2026-08-21T00:16:53.000Z",
+  "baseUrl": "http://127.0.0.1:3211",
+  "publicSurfaceFingerprint": "d61271ff62e6268f70f2e044d5b87b4b0921361b424ae63c8235d968118ce0cd",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 155,
-  "captureMethod": "Production-container browser inspection at 1280 CSS pixels, with retained viewport captures of the first and final selected-system positions; prior above-fold and mobile captures remain applicable because no component, style, hero, copy, or asset changed.",
+  "captureMethod": "Fresh exact-candidate production-build browser inspection across 14 routes and four responsive widths, plus desktop and mobile captures of the changed homepage capability section. Previously retained homepage and About captures remain applicable to unchanged surfaces.",
   "routes": [
     {
       "path": "/",
@@ -107,10 +107,10 @@
   "passed": true,
   "verification": "The current production container rendered six homepage project articles in the governed order, with one h1, one main landmark, zero horizontal overflow, zero unlabeled images, zero broken images, and no browser console diagnostics at 1280 CSS pixels.",
   "refresh": {
-    "candidateChange": "Homepage work-item feature flags and priorities only: KC Spaces Fund moved to the complete work index, KC Town Hall and Sunday Dinner entered the homepage sequence, and existing cards were reordered. No component, style, hero, project copy, or image asset changed.",
-    "productionBuild": "Dockerfile build completed with npm ci dependencies, TypeScript validation, and a Next.js production build.",
-    "currentRenderedInspection": "The exact production container rendered NYC Artist Coalition / FairRentNYC, CallNYC.org, Harry J. Epstein Company, KC Town Hall LLC, WOW List, and 196 Artists Residency / Sunday Dinner in that order.",
-    "responsiveCarryForward": "The mobile and reflow findings carry forward from the immediately preceding candidate because the same WorkCard component, copy, assets, and responsive CSS were already exercised on the homepage or complete work index; the present change only selects and orders existing records.",
-    "browserDiagnostics": "No browser warnings or errors were observed during the current run."
+    "candidateChange": "The six homepage capability rows are now full-row links to the corresponding filtered work-index state; the BetaNYC opportunity-source work changes only private knowledge, evaluation, and automation surfaces.",
+    "productionBuild": "The Next.js webpack production build completed under Node 26 with TypeScript validation and static generation for all public routes.",
+    "currentRenderedInspection": "All six capability rows are visible at desktop and mobile sizes, preserve the numbered editorial sequence, and use meaningful destinations. The established six-project homepage sequence remains unchanged.",
+    "responsiveCarryForward": "No matrix carry-forward was used. The exact candidate was rerun at 360, 375, 768, and 1280 CSS pixels across all 14 routes.",
+    "browserDiagnostics": "No axe A/AA violations, horizontal overflow, broken or unlabeled images, browser warnings, browser errors, or user-facing failed requests were observed."
   }
 }

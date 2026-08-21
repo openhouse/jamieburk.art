@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity requirement coverage
 
-**Wiki fingerprint:** `fb9a7508ac59851125b5547ebe9748f58215de7ee3a62a37ec4278080143bb10`
+**Wiki fingerprint:** `1b676ee3bee3a4b6e27dbb0ceae1ecb6d0979a8ee14703ccc900e16b0fa6a74e`
 
 Statuses preserve the difference between visible proof, Wiki-only proof, source work, experience gaps, and hard screens.
 
@@ -50,6 +50,14 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 | `requirement.benepass.product-engineering-translation` | critical | visible-qualified | wording | Name the operational consequence, not merely the stakeholder list. |
 | `requirement.benepass.runbooks-and-learning` | critical | visible-proven | none | Prepare one inspectable sample. |
 | `requirement.benepass.quantified-prioritization` | critical | visible-weak | source | Use only supported HJE figures and explain the decision they informed. |
+
+## NYC Campaign Finance Board - Associate Director of Policy Implementation 792925
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.cfb-policy-792925.implementation-system` | critical | visible-proven | none | Lead with a clear example of creating shared operating structure across organizations and disciplines. |
+| `requirement.cfb-policy-792925.cross-divisional-delivery` | critical | visible-proven | none | Pair advocacy evidence with the concrete artifacts and cadences that sustained delivery. |
+| `requirement.cfb-policy-792925.analysis-evaluation` | critical | visible-qualified | wording | Prepare one policy-to-implementation narrative with an honest account of decision authority and collective credit. |
 
 ## CodePath - Senior Program Manager, Claude Corps
 

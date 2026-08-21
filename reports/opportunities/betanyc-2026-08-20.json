@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "source.betanyc.weekly-civictech-newsletter",
+  "issueKey": "betanyc-newsletter-2026-08-20",
+  "issueDate": "2026-08-20",
+  "issueUrl": "https://www.beta.nyc/2026/08/20/this-week-in-nycs-civictech-august-20-2026/",
+  "reviewedAt": "2026-08-20T20:30:00.000Z",
+  "backfillIssueDatesReviewed": [
+    "2026-07-02",
+    "2026-07-09",
+    "2026-07-16",
+    "2026-07-23",
+    "2026-07-30",
+    "2026-08-07",
+    "2026-08-13",
+    "2026-08-20"
+  ],
+  "jobsObserved": 19,
+  "officialNycPostingsVerified": 13,
+  "leadsAwaitingEmployerVerification": 6,
+  "promotedCandidateJobIds": [
+    "792925"
+  ],
+  "promotionSummary": "One role cleared the deterministic compensation, availability, fit, and securability gates and was verified against the official NYC posting before promotion.",
+  "publicSafety": "This snapshot retains source edition and decision counts only. It excludes private delivery metadata, personalized redirects, and raw email content."
+}

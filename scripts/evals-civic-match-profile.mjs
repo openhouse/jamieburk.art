@@ -172,9 +172,9 @@ export function evaluateCivicMatchProfile(root = defaultRoot, { deterministicOnl
     fail("resume selection", "the guide does not identify the governed multi-opportunity resume");
   }
 
-  if (audience.hiringReaders.length !== 9 || audience.helpers.length !== 2 ||
+  if (audience.hiringReaders.length !== config.expectedHiringReaderAssignments || audience.helpers.length !== 2 ||
       new Set(audience.all.map(({ key }) => key)).size !== audience.all.length) {
-    fail("reader audience", `expected 9 hiring-reader assignments and 2 helpers; observed ${audience.hiringReaders.length} and ${audience.helpers.length}`);
+    fail("reader audience", `expected ${config.expectedHiringReaderAssignments} hiring-reader assignments and 2 helpers; observed ${audience.hiringReaders.length} and ${audience.helpers.length}`);
   }
   const helperIds = audience.helpers.map(({ personId }) => personId).sort();
   if (JSON.stringify(helperIds) !== JSON.stringify(["person.courtney-kishbaugh", "person.josh-gee"])) {
