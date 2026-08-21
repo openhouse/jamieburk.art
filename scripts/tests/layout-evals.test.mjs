@@ -155,6 +155,28 @@ test("tag-shaped controls retain real destinations", () => {
   assert(result.failures.some(({ criterion }) => criterion === "tag-navigation-contract"));
 });
 
+test("every homepage capability retains a filtered work-index destination", () => {
+  const path = "apps/www/src/components/CapabilityGrid.tsx";
+  const source = readFileSync(path, "utf8").replace(
+    'tag: "Product Operations"',
+    'tag: "No matching work"'
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "tag-navigation-contract"));
+});
+
+test("the capability-navigation hill climb retains its reviewed filter contract", () => {
+  const path = "evals/layout/homepage-hiring-sequence-hillclimb.json";
+  const source = readFileSync(path, "utf8").replace(
+    '"filterState": "pass"',
+    '"filterState": "not-reviewed"'
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "homepage-hiring-sequence"));
+});
+
 test("metadata remains bound to the shared social-preview contract", () => {
   const path = "apps/www/src/lib/metadata.ts";
   const source = readFileSync(path, "utf8").replace(

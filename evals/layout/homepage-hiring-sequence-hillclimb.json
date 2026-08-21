@@ -59,6 +59,45 @@
       "kc-spaces-fund"
     ]
   },
+  "capabilityNavigation": {
+    "criterion": "capability-to-project-proof",
+    "baseline": "Six capability rows described the work but offered no direct route to the projects that demonstrate it.",
+    "candidate": "Each complete row is a keyboard-reachable link to the existing visible and clearable work-index filter state.",
+    "destinationPattern": "/work?tag={encoded-tag}#work-index",
+    "mappings": [
+      [
+        "Technical project management",
+        "Technical Operations"
+      ],
+      [
+        "Product operations",
+        "Product Operations"
+      ],
+      [
+        "Knowledge systems & documentation",
+        "Knowledge Systems"
+      ],
+      [
+        "Civic technology & open data",
+        "Civic Technology"
+      ],
+      [
+        "Web systems & public-facing tools",
+        "Web Systems"
+      ],
+      [
+        "Community systems",
+        "Community Systems"
+      ]
+    ],
+    "browserReview": {
+      "desktop": "pass",
+      "mobile": "pass",
+      "filterState": "pass",
+      "consoleErrorsOrWarnings": 0
+    },
+    "decision": "keep-change"
+  },
   "decision": "keep-change",
   "boundaries": {
     "truthClaimsChanged": false,

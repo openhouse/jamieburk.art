@@ -162,6 +162,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   const homePage = readText("apps/www/src/app/page.tsx");
   const workIndex = readText("apps/www/src/app/work/page.tsx");
   const tagList = readText("apps/www/src/components/TagList.tsx");
+  const capabilityGrid = readText("apps/www/src/components/CapabilityGrid.tsx");
   const coverCount = [...workCovers.matchAll(/^  (?:"[^"]+"|[a-z]+): \{/gm)].length;
   if (coverCount !== 7 ||
       !workCard.includes('from "next/image"') ||
@@ -238,6 +239,14 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
       JSON.stringify(expectedSequence) ||
     hiringSequenceHillclimb.decision !== "keep-change" ||
     hiringSequenceHillclimb.criterion !== "rushed-hiring-reader-legibility" ||
+    hiringSequenceHillclimb.capabilityNavigation?.decision !== "keep-change" ||
+    hiringSequenceHillclimb.capabilityNavigation?.criterion !==
+      "capability-to-project-proof" ||
+    hiringSequenceHillclimb.capabilityNavigation?.destinationPattern !==
+      "/work?tag={encoded-tag}#work-index" ||
+    hiringSequenceHillclimb.capabilityNavigation?.browserReview?.desktop !== "pass" ||
+    hiringSequenceHillclimb.capabilityNavigation?.browserReview?.mobile !== "pass" ||
+    hiringSequenceHillclimb.capabilityNavigation?.browserReview?.filterState !== "pass" ||
     !hiringSequenceHillclimb.activeOpportunityBasis?.submittedPending?.includes(
       "opportunity.nyc-oti.senior-product-manager.782366"
     ) ||
@@ -266,13 +275,25 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     );
   }
 
+  const expectedCapabilityTags = [
+    "Technical Operations",
+    "Product Operations",
+    "Knowledge Systems",
+    "Civic Technology",
+    "Web Systems",
+    "Community Systems"
+  ];
   if (!tagList.includes('from "next/link"') ||
       !tagList.includes("/work?tag=") ||
       !tagList.includes("encodeURIComponent(tag)") ||
+      !capabilityGrid.includes('from "next/link"') ||
+      !capabilityGrid.includes("encodeURIComponent(capability.tag)") ||
+      !capabilityGrid.includes('id="capabilities"') ||
+      expectedCapabilityTags.some((tag) => !capabilityGrid.includes(`tag: "${tag}"`)) ||
       !workIndex.includes("selectedTag") ||
       !workIndex.includes("Clear filter") ||
       !workIndex.includes('id="work-index"')) {
-    fail("tag-navigation-contract", "Tag-shaped controls must link to a visible, clearable work-index filter state.");
+    fail("tag-navigation-contract", "Tag-shaped controls and homepage capability rows must link to visible, clearable work-index filter states.");
   }
 
   for (const route of [

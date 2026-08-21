@@ -36,7 +36,7 @@
     {
       "id": "tag-navigation-contract",
       "blocking": true,
-      "criterion": "Every tag-shaped control is a keyboard-reachable link to a visible filtered work-index state, and the filtered state has a clear route back to the complete index."
+      "criterion": "Every tag-shaped control and every homepage capability row is a keyboard-reachable link to a visible filtered work-index state, and the filtered state has a clear route back to the complete index."
     },
     {
       "id": "human-index-material-system",
