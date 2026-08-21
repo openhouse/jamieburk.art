@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "id": "civic-match-candidate-source-2026-08-21",
+  "asOf": "2026-08-21T09:00:00-04:00",
+  "sourceId": "civic-match",
+  "officialUrls": {
+    "candidateSignup": "https://app.civicmatch.org/sign-up",
+    "jobSeekers": "https://www.workforamerica.org/job-seekers",
+    "team": "https://www.workforamerica.org/about"
+  },
+  "guidePath": "application-guides/2026-08-21/civic-match/Jamie-Burkart-Civic-Match-Signup-Guide.md",
+  "writerVoiceSource": "docs/knowledge-bank/sources/google-doc-jamie-writers-voice.md",
+  "writerVoiceRevisionSha256": "2a55fb923ff14ca8d8d6b5fcb62a85befe8b1752828ba03dd5fe5a76654515d9",
+  "latestHillClimbPath": "evals/opportunities/runs/2026-08-21-civic-match-hill-climb.json",
+  "profileSteps": [
+    {
+      "step": 1,
+      "name": "Background & Eligibility",
+      "fields": [
+        { "id": "government-interest", "visibility": "work-for-america-intake", "required": true },
+        { "id": "background-categories", "visibility": "work-for-america-intake", "required": false },
+        { "id": "government-impact-essay", "visibility": "work-for-america-only", "required": true, "wordLimit": 300 },
+        { "id": "community-initiative-essay", "visibility": "work-for-america-only", "required": true, "wordLimit": 300 }
+      ]
+    },
+    {
+      "step": 2,
+      "name": "Contact Information",
+      "fields": [
+        { "id": "full-name", "visibility": "employer-visible-profile", "required": true },
+        { "id": "email", "visibility": "protected-contact", "required": true },
+        { "id": "cell-phone", "visibility": "protected-contact", "required": true },
+        { "id": "current-city", "visibility": "employer-visible-profile", "required": true },
+        { "id": "hometown-city", "visibility": "employer-visible-profile", "required": false }
+      ]
+    },
+    {
+      "step": 3,
+      "name": "Professional Experience",
+      "fields": [
+        { "id": "current-role-title", "visibility": "employer-visible-profile", "required": true },
+        { "id": "employer", "visibility": "employer-visible-profile", "required": true },
+        { "id": "department", "visibility": "employer-visible-profile", "required": false },
+        { "id": "years-experience", "visibility": "employer-visible-profile", "required": true },
+        { "id": "education", "visibility": "employer-visible-profile", "required": true },
+        { "id": "languages", "visibility": "employer-visible-profile", "required": false },
+        { "id": "expertise", "visibility": "employer-visible-profile", "required": true, "maximumSelections": 5 },
+        { "id": "linkedin", "visibility": "employer-visible-profile", "required": false },
+        { "id": "resume", "visibility": "employer-visible-profile", "required": false },
+        { "id": "veteran-status", "visibility": "protected-eligibility", "required": true },
+        { "id": "bar-admissions", "visibility": "employer-visible-profile", "required": false },
+        { "id": "other-skills", "visibility": "employer-visible-profile", "required": false }
+      ]
+    },
+    {
+      "step": 4,
+      "name": "Desired Roles and Preferences",
+      "fields": [
+        { "id": "job-search-status", "visibility": "employer-visible-profile", "required": true },
+        { "id": "desired-roles", "visibility": "employer-visible-profile", "required": true },
+        { "id": "profile-summary", "visibility": "employer-visible-profile", "required": true },
+        { "id": "relocation", "visibility": "employer-visible-profile", "required": true },
+        { "id": "locations", "visibility": "employer-visible-profile", "required": true },
+        { "id": "referral-source", "visibility": "work-for-america-intake", "required": true },
+        { "id": "media-consent", "visibility": "work-for-america-intake", "required": true },
+        { "id": "profile-visibility", "visibility": "candidate-controlled-publication", "required": true }
+      ]
+    },
+    {
+      "step": 5,
+      "name": "Review & Submit",
+      "fields": [
+        { "id": "accuracy-confirmation", "visibility": "external-state-action", "required": true },
+        { "id": "terms-and-privacy", "visibility": "external-state-action", "required": true },
+        { "id": "submit", "visibility": "external-state-action", "required": true }
+      ]
+    }
+  ],
+  "modeledHelpers": [
+    {
+      "readerId": "reader.josh-gee",
+      "readerPath": "docs/qa/hiring-acceptance/readers/josh-gee.md",
+      "publicRelationship": "Vice President, Civic Match"
+    },
+    {
+      "readerId": "reader.courtney-kishbaugh",
+      "readerPath": "docs/qa/hiring-acceptance/readers/courtney-kishbaugh.md",
+      "publicRelationship": "Director of Civic Match"
+    }
+  ],
+  "externalActionBoundary": "Jamie alone confirms protected fields, accepts terms, chooses profile visibility, and submits."
+}

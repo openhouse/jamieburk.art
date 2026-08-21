@@ -4,6 +4,8 @@ import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { evaluatePublicResumeSelection } from "../resumes/evaluate-public-resume-selection.mjs";
+
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 
 function read(root, relativePath) {
@@ -20,6 +22,17 @@ function check(id, pass, detail) {
   return { id, pass: Boolean(pass), detail };
 }
 
+function words(value) {
+  return (value.match(/[\p{L}\p{N}]+(?:[’'-][\p{L}\p{N}]+)*/gu) ?? []).length;
+}
+
+function fencedAnswerAfter(markdown, heading) {
+  const headingIndex = markdown.indexOf(heading);
+  if (headingIndex < 0) return null;
+  const remaining = markdown.slice(headingIndex + heading.length);
+  return remaining.match(/```text\n([\s\S]*?)\n```/)?.[1]?.trim() ?? null;
+}
+
 export function evaluateOpportunitySystem({ root = repoRoot } = {}) {
   const config = readJson(root, "config/opportunities/nyc-jobs.json");
   const rubric = readJson(root, "evals/opportunities/nyc-jobs.json");
@@ -29,7 +42,33 @@ export function evaluateOpportunitySystem({ root = repoRoot } = {}) {
   const evaluation = read(root, "docs/knowledge-bank/evaluations/nyc-jobs-opportunity-feed.md");
   const rfc = read(root, "rfcs/0007-nyc-jobs-opportunity-action-loop.md");
   const environmentExample = read(root, ".env.example");
-  if (![config, rubric, report, digest, source, evaluation, rfc, environmentExample].every(Boolean)) {
+  const sourceRegistry = readJson(root, "config/opportunities/sources.json");
+  const civicConfig = readJson(root, "config/opportunities/civic-match.json");
+  const civicRubric = readJson(root, "evals/opportunities/civic-match.json");
+  const civicGuide = civicConfig ? read(root, civicConfig.guidePath) : null;
+  const civicHillClimb = civicConfig ? readJson(root, civicConfig.latestHillClimbPath) : null;
+  const civicSource = read(root, "docs/knowledge-bank/sources/civic-match.md");
+  const civicEvaluation = read(root, "docs/knowledge-bank/evaluations/civic-match-opportunity-source.md");
+  const namedReaders = readJson(root, "evals/knowledge-wiki/named-hiring-readers.json");
+  const requiredArtifacts = [
+    config,
+    rubric,
+    report,
+    digest,
+    source,
+    evaluation,
+    rfc,
+    environmentExample,
+    sourceRegistry,
+    civicConfig,
+    civicRubric,
+    civicGuide,
+    civicHillClimb,
+    civicSource,
+    civicEvaluation,
+    namedReaders
+  ];
+  if (!requiredArtifacts.every(Boolean)) {
     return {
       overall: "fail",
       admittedCount: report?.admittedCount ?? 0,
@@ -131,14 +170,187 @@ export function evaluateOpportunitySystem({ root = repoRoot } = {}) {
       "The source does not displace direct posting review or Jamie's application decision."
     )
   ];
+
+  const sourceIds = sourceRegistry.sources.map((item) => item.id);
+  const sourceRegistryChecks = [
+    check(
+      "source-registry-complete",
+      sourceIds.length === 2 &&
+        new Set(sourceIds).size === 2 &&
+        sourceIds.includes("nyc-jobs-open-data") &&
+        sourceIds.includes("civic-match"),
+      "The registry includes exactly the NYC Jobs Open Data and Civic Match sources."
+    ),
+    check(
+      "source-affordances-distinct",
+      sourceRegistry.sources.some(
+        (item) => item.id === "nyc-jobs-open-data" && item.machineReadable && !item.recruiterDiscovery
+      ) &&
+        sourceRegistry.sources.some(
+          (item) =>
+            item.id === "civic-match" &&
+            !item.machineReadable &&
+            item.recruiterDiscovery &&
+            item.profileVisibilityControls &&
+            item.privateIntake
+        ),
+      "Machine-readable feed affordances remain distinct from profile-mediated recruiter discovery."
+    )
+  ];
+
+  const fieldIds = civicConfig.profileSteps.flatMap((step) => step.fields.map((field) => field.id));
+  const essayOne = fencedAnswerAfter(civicGuide, "### Private answer 1 — government impact");
+  const essayTwo = fencedAnswerAfter(civicGuide, "### Private answer 2 — initiative and impact");
+  const profileSummary = fencedAnswerAfter(civicGuide, "### Profile summary");
+  const helperReadersExist = civicConfig.modeledHelpers.every((reader) => read(root, reader.readerPath));
+  const publicSelection = evaluatePublicResumeSelection({ root });
+  const selectedReaderPackets = publicSelection.llmGate.queue.map((queued) => {
+    const gate = namedReaders.opportunityReaders.find((reader) => reader.id === queued.gateId);
+    return {
+      audience: "opportunity-hiring-reader",
+      gateId: queued.gateId,
+      readerId: gate?.readerId ?? null,
+      readerPath: gate?.readerPath ?? null,
+      opportunityId: queued.opportunityId,
+      materials: civicRubric.audienceContracts["opportunity-hiring-reader"].materials,
+      passStatement: civicRubric.audienceContracts["opportunity-hiring-reader"].passStatement
+    };
+  });
+  const helperPackets = civicConfig.modeledHelpers.map((helper) => ({
+    audience: "civic-match-helper",
+    readerId: helper.readerId,
+    readerPath: helper.readerPath,
+    relationshipToSource: helper.publicRelationship,
+    opportunityIds: publicSelection.selectedOpportunityIds,
+    materials: civicRubric.audienceContracts["civic-match-helper"].materials,
+    passStatement: civicRubric.audienceContracts["civic-match-helper"].passStatement
+  }));
+  const audiencePacketBoundary =
+    helperPackets.every((packet) => packet.materials.includes("private-intake-answers")) &&
+    selectedReaderPackets.every(
+      (packet) =>
+        !packet.materials.includes("private-intake-answers") &&
+        packet.materials.includes("employer-visible-profile") &&
+        packet.readerId &&
+        packet.readerPath &&
+        read(root, packet.readerPath)
+    );
+  const civicChecks = [
+    check(
+      "civic-source-records",
+      civicSource.includes("id: source.jobs.civic-match.current") &&
+        civicEvaluation.includes("target: source.jobs.civic-match.current") &&
+        civicEvaluation.includes("status: maintained"),
+      "The governed source and evaluation records bind Civic Match."
+    ),
+    check(
+      "civic-five-step-topology",
+      civicConfig.profileSteps.length === 5 &&
+        civicConfig.profileSteps.every((step, index) => step.step === index + 1 && step.fields.length > 0) &&
+        new Set(fieldIds).size === fieldIds.length,
+      "The observed five-step candidate form has unique field identifiers and explicit visibility classes."
+    ),
+    check(
+      "civic-private-essay-limits",
+      essayOne !== null && essayTwo !== null && words(essayOne) <= 300 && words(essayTwo) <= 300,
+      `Private essay word counts are ${essayOne ? words(essayOne) : "missing"} and ${essayTwo ? words(essayTwo) : "missing"}.`
+    ),
+    check(
+      "civic-profile-summary-present",
+      profileSummary !== null && words(profileSummary) >= 80 && words(profileSummary) <= 200,
+      `The employer-visible profile summary is ${profileSummary ? words(profileSummary) : "missing"} words.`
+    ),
+    check(
+      "civic-protected-contact-boundary",
+      !/jamie(?:\.burkart)?@(gmail|ohai)\./i.test(civicGuide) &&
+        !/\+?1?[\s.(\-]*\d{3}[\s.)\-]*\d{3}[\s.\-]*\d{4}/.test(civicGuide),
+      "The committed guide contains no literal private email address or telephone number."
+    ),
+    check(
+      "civic-writer-voice-binding",
+      civicGuide.includes(`writer_voice_source: ${civicConfig.writerVoiceSource}`) &&
+        civicGuide.includes(`writer_voice_revision_sha256: ${civicConfig.writerVoiceRevisionSha256}`),
+      "The guide binds the maintained writer's-voice source and current connected-read fingerprint."
+    ),
+    check(
+      "civic-hill-climb-integrity",
+      civicHillClimb.baseline.checks.collectiveCreditBoundary === false &&
+        civicHillClimb.final.checks.collectiveCreditBoundary === true &&
+        civicHillClimb.final.governmentImpactEssayWords === words(essayOne ?? "") &&
+        civicHillClimb.final.communityInitiativeEssayWords === words(essayTwo ?? "") &&
+        civicHillClimb.final.profileSummaryWords === words(profileSummary ?? "") &&
+        civicHillClimb.final.deterministicVerdict === "pass" &&
+        civicHillClimb.final.modeledReaderStatus === "queued-not-run",
+      "The recorded hill climb matches current content metrics and does not claim an unrun modeled-reader result."
+    ),
+    check(
+      "civic-helper-profiles",
+      civicConfig.modeledHelpers.length === 2 && helperReadersExist,
+      "The two current Civic Match leadership-context lenses have bounded public-context profiles."
+    ),
+    check(
+      "civic-helper-authority-boundary",
+      civicRubric.audienceContracts["civic-match-helper"].authorityBoundary.includes(
+        "not the government employer's hiring decision"
+      ) &&
+        civicRubric.audienceContracts["opportunity-hiring-reader"].authorityBoundary.includes(
+          "no Work for America-only essay"
+        ),
+      "Helper recommendations remain distinct from employer hiring authority and private intake remains private."
+    ),
+    check(
+      "civic-current-opportunity-selection",
+      publicSelection.overall === "pass" && publicSelection.selectedOpportunityIds.length > 0,
+      "Only readers for the current deterministic opportunity and resume selection may be queued."
+    ),
+    check(
+      "civic-audience-packet-boundary",
+      audiencePacketBoundary,
+      "Private Work for America intake stays out of opportunity hiring-reader packets."
+    ),
+    check(
+      "civic-external-action-boundary",
+      civicGuide.includes("Jamie alone") &&
+        civicGuide.includes("No signup, profile publication, resume upload, terms acceptance, or submission") &&
+        civicConfig.externalActionBoundary.includes("Jamie alone"),
+      "Protected answers, visibility, terms, and final submission remain Jamie-controlled."
+    )
+  ];
+  const civicDeterministicPass = [...sourceRegistryChecks, ...civicChecks].every((item) => item.pass);
+  const civicQueue = civicDeterministicPass ? [...helperPackets, ...selectedReaderPackets] : [];
+  const allChecks = [...checks, ...sourceRegistryChecks, ...civicChecks];
   return {
     schemaVersion: 1,
-    overall: checks.every((item) => item.pass) ? "pass" : "fail",
+    overall: allChecks.every((item) => item.pass) ? "pass" : "fail",
     datasetId: config.datasetId,
     datasetRowsUpdatedAt: report.datasetRowsUpdatedAt,
     admittedCount: report.admittedCount,
     actionableCount: report.actionableCount,
-    checks,
+    checks: allChecks,
+    sourceRegistry,
+    civicMatch: {
+      sourceId: civicConfig.sourceId,
+      guidePath: civicConfig.guidePath,
+      selectedTier: publicSelection.selectedTier,
+      selectedOpportunityIds: publicSelection.selectedOpportunityIds,
+      selectedResumePath: publicSelection.selectedResumePath,
+      deterministicPass: civicDeterministicPass,
+      checks: civicChecks,
+      contentMetrics: {
+        privateGovernmentImpactWords: essayOne ? words(essayOne) : null,
+        privateCommunityInitiativeWords: essayTwo ? words(essayTwo) : null,
+        employerVisibleProfileSummaryWords: profileSummary ? words(profileSummary) : null
+      },
+      llmGate: {
+        allowed: civicDeterministicPass,
+        status: civicRubric.execution.status,
+        queue: civicQueue,
+        queuedCalls: civicQueue.length,
+        reason: civicDeterministicPass
+          ? "Deterministic form, privacy, voice, opportunity-selection, and audience gates pass; isolated modeled-reader work may run."
+          : "Modeled-reader work is blocked until every deterministic gate passes."
+      }
+    },
     boundary: "Deterministic admission and synthetic review can prioritize action; neither establishes actual eligibility, interview, offer, or hire."
   };
 }

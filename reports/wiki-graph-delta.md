@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `6bef1f53ef501c8ec133afbfbc60440ce60ecbdd`
-**Generation time:** 2026-08-20T22:46:48-04:00
-**Source fingerprint:** `330cafd45abd053b87e564436eeabc9e50f4f06fb43cb44b7fb24dc6fd9f9d9b`
+**Source commit:** `439c47ea619995771c19004e7be30c02f5015d7a`
+**Generation time:** 2026-08-21T00:04:16-04:00
+**Source fingerprint:** `18161c3493267e4ea87310569e25043f756706e7fe40092bfdb542ff1bd984da`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 64
+- Nodes added: 66
 - Nodes removed: 38
-- Edges added: 199
+- Edges added: 204
 - Edges removed: 184
 - New type-aware orphans: 0
 - Current rights-review records: 186
@@ -23,6 +23,7 @@ Compared with the graph artifact on `origin/develop`.
 - `correction.photo.portfolio-project-credits.2026-08-20`
 - `decision.photo.launch-2026.field-system-pairs`
 - `evaluation.curatorial.launch-2026.field-system-pairs`
+- `evaluation.jobs.civic-match.profile-and-reader-gates`
 - `evaluation.jobs.nyc-open-data.strong-match`
 - `evaluation.jobs.nyc-oti.product-management-ranking.2026-08-20`
 - `evaluation.nycac.crs-frontline-source-return.2026-08-13`
@@ -68,6 +69,7 @@ Compared with the graph artifact on `origin/develop`.
 - `source.hje.formation-and-storefront-chronology.2026-08`
 - `source.jamie.employment-mobility-attestation.2026-08-15`
 - `source.jobs.aclu.senior-project-manager-national-campaigns.8631854002`
+- `source.jobs.civic-match.current`
 - `source.jobs.codepath.senior-ai-operations-lead.5175813007`
 - `source.jobs.nyc-open-data.current`
 - `source.jobs.nyc-oti.product-management-search.2026-08-20`

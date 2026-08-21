@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-08-21",
+  "sources": [
+    {
+      "id": "nyc-jobs-open-data",
+      "name": "NYC Jobs Open Data",
+      "canonicalUrl": "https://data.cityofnewyork.us/City-Government/NYC-Jobs/pda4-rgn4/about_data",
+      "scope": "Current jobs published through the City of New York's official jobs data feed",
+      "machineReadable": true,
+      "recruiterDiscovery": false,
+      "profileVisibilityControls": false,
+      "privateIntake": false,
+      "freshnessClock": "rowsUpdatedAt",
+      "primaryAffordances": [
+        "bulk discovery",
+        "deterministic eligibility screening",
+        "transparent scoring",
+        "source-edition freshness detection"
+      ],
+      "humanGates": [
+        "verify the live official posting",
+        "decide whether to apply"
+      ]
+    },
+    {
+      "id": "civic-match",
+      "name": "Civic Match",
+      "canonicalUrl": "https://app.civicmatch.org/",
+      "scope": "National state-and-local-government talent network and candidate-managed job board",
+      "machineReadable": false,
+      "recruiterDiscovery": true,
+      "profileVisibilityControls": true,
+      "privateIntake": true,
+      "freshnessClock": "candidate-profile-review and opportunity-board observation",
+      "primaryAffordances": [
+        "one maintained candidate profile",
+        "government-employer search and invitations",
+        "candidate job search and saved opportunities",
+        "human talent matching",
+        "events and public-service job-search resources"
+      ],
+      "humanGates": [
+        "choose public profile visibility",
+        "confirm every profile response",
+        "accept terms and privacy policy",
+        "submit the profile",
+        "decide whether to apply to each opportunity"
+      ]
+    }
+  ]
+}

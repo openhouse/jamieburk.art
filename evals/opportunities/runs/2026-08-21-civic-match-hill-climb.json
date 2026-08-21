@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "civic-match-hill-climb-2026-08-21",
+  "runDate": "2026-08-21",
+  "target": "application-guides/2026-08-21/civic-match/Jamie-Burkart-Civic-Match-Signup-Guide.md",
+  "baseline": {
+    "source": "candidate draft observed in Jamie's authenticated Civic Match account; not retained in this repository",
+    "checks": {
+      "wordLimits": true,
+      "concreteScenes": true,
+      "writerVoiceSequence": true,
+      "collectiveCreditBoundary": false,
+      "projectMetricQualification": false,
+      "audienceVisibilitySeparation": false
+    },
+    "lowestCriterion": "Collective-work authority and source qualification were less precise than the rest of the narrative."
+  },
+  "change": {
+    "scope": "one profile-guide pass",
+    "edits": [
+      "Changed sole-author language to helped-design-and-operate language while preserving Jamie's concrete actions.",
+      "Removed project-reported numeric outcomes from the short intake essay instead of presenting them as independent audit findings.",
+      "Separated Work for America-only essays from employer-visible profile material.",
+      "Added exact location, visibility, protected-field, and final-submission human gates.",
+      "Linked the guide to the current connected-read writer's-voice fingerprint."
+    ]
+  },
+  "final": {
+    "checks": {
+      "wordLimits": true,
+      "concreteScenes": true,
+      "writerVoiceSequence": true,
+      "collectiveCreditBoundary": true,
+      "projectMetricQualification": true,
+      "audienceVisibilitySeparation": true
+    },
+    "governmentImpactEssayWords": 240,
+    "communityInitiativeEssayWords": 224,
+    "profileSummaryWords": 129,
+    "deterministicVerdict": "pass",
+    "modeledReaderStatus": "queued-not-run"
+  },
+  "boundary": "This run records deterministic and editorial improvement. It does not claim that Josh Gee, Courtney Kishbaugh, or any government hiring reader participated or passed the material."
+}

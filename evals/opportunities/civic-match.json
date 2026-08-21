@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "civic-match-profile-and-reader-gates-2026-08-21",
+  "asOf": "2026-08-21T09:00:00-04:00",
+  "sourceConfigPath": "config/opportunities/civic-match.json",
+  "sourceRegistryPath": "config/opportunities/sources.json",
+  "selectionPolicyPath": "evals/resumes/public-resume-selection.json",
+  "namedReaderRegistryPath": "evals/knowledge-wiki/named-hiring-readers.json",
+  "deterministicGateOrder": [
+    "required artifacts and official-source records exist",
+    "five-step field topology and visibility classes are complete",
+    "private essays are no more than 300 words",
+    "protected contact values are absent from the committed guide",
+    "current opportunity and resume selection passes",
+    "audience packets preserve field visibility",
+    "only then may modeled-reader calls be queued"
+  ],
+  "audienceContracts": {
+    "civic-match-helper": {
+      "materials": ["private-intake-answers", "employer-visible-profile", "selected-resume"],
+      "passStatement": "I would confidently surface this candidate to a government hiring partner for at least one current target role.",
+      "authorityBoundary": "A Civic Match helper may recommend or surface; this is not the government employer's hiring decision."
+    },
+    "opportunity-hiring-reader": {
+      "materials": ["employer-visible-profile", "selected-resume", "public-portfolio"],
+      "passStatement": "I want to interview this candidate for this role and see a credible path to hiring them.",
+      "authorityBoundary": "The reader receives no Work for America-only essay, protected contact field, local file, source code, private evidence, or prior judge output."
+    }
+  },
+  "desiredSignal": "I want to hire this person for one of the current opportunities for which I am responsible.",
+  "passPolicy": {
+    "allSelectedOpportunityReadersMustPass": true,
+    "bothCivicMatchHelpersMustPass": true,
+    "averagingAllowed": false,
+    "potentialAloneMayPass": false,
+    "syntheticResultIsNotActualParticipationOrEndorsement": true
+  },
+  "execution": {
+    "oneSandboxedTaskPerReader": true,
+    "tasksRunSequentially": true,
+    "separateChatPerReader": true,
+    "priorJudgeOutputVisible": false,
+    "deterministicPreflightRequired": true,
+    "status": "queued-not-run"
+  }
+}

@@ -171,5 +171,23 @@
       "requiredRoutes": ["/", "/work/technical-operations", "/work/callnyc", "/work/fair-rent-nyc", "/work/harry-j-epstein", "/lab/source-backed-team-memory", "/resume", "/contact"]
     }
   ],
+  "sourceHelpers": [
+    {
+      "id": "gate.civic-match-helper.josh-gee",
+      "readerId": "reader.josh-gee",
+      "readerPath": "docs/qa/hiring-acceptance/readers/josh-gee.md",
+      "sourceId": "civic-match",
+      "relationshipToSource": "Vice President, Civic Match",
+      "passStatement": "I would confidently surface this candidate to a government hiring partner for at least one current target role."
+    },
+    {
+      "id": "gate.civic-match-helper.courtney-kishbaugh",
+      "readerId": "reader.courtney-kishbaugh",
+      "readerPath": "docs/qa/hiring-acceptance/readers/courtney-kishbaugh.md",
+      "sourceId": "civic-match",
+      "relationshipToSource": "Director of Civic Match",
+      "passStatement": "I would confidently surface this candidate to a government hiring partner for at least one current target role."
+    }
+  ],
   "latestRunPath": "docs/qa/hiring-acceptance/runs/2026-08-20-oti-dynamic-selection/manifest.json"
 }

@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `6bef1f53ef501c8ec133afbfbc60440ce60ecbdd`
-**Generation time:** 2026-08-20T22:46:48-04:00
-**Source fingerprint:** `330cafd45abd053b87e564436eeabc9e50f4f06fb43cb44b7fb24dc6fd9f9d9b`
+**Source commit:** `439c47ea619995771c19004e7be30c02f5015d7a`
+**Generation time:** 2026-08-21T00:04:16-04:00
+**Source fingerprint:** `18161c3493267e4ea87310569e25043f756706e7fe40092bfdb542ff1bd984da`
 
 ## application
 
@@ -245,6 +245,7 @@
 - [Portfolio project-cover curatorial record](../evaluations/curatorial/portfolio-project-covers-2026-08-13.md) - `evaluation.curatorial.portfolio-project-covers.2026-08-13`
 - [Employment context coverage baseline - July 18, 2026](../evaluations/employment-context-coverage-2026-07-18.md) - `evaluation.employment-context.coverage.2026-07-18`
 - [Jamie public-record integration evaluation](../evaluations/jamie-public-record-integration-2026-08-03.md) - `evaluation.jamie-public-record-integration.2026-08-03`
+- [Civic Match profile and audience-correct modeled-reader gates](../evaluations/civic-match-opportunity-source.md) - `evaluation.jobs.civic-match.profile-and-reader-gates`
 - [NYC Jobs deterministic strong-match opportunity feed](../evaluations/nyc-jobs-opportunity-feed.md) - `evaluation.jobs.nyc-open-data.strong-match`
 - [Jamie-specific ranking of the NYC OTI product-manager search corpus](../evaluations/oti-product-management-ranking-2026-08-20.md) - `evaluation.jobs.nyc-oti.product-management-ranking.2026-08-20`
 - [Knowledge Wiki retrieval tasks](../evaluations/retrieval-tasks.md) - `evaluation.knowledge-wiki.retrieval-tasks`
@@ -456,6 +457,7 @@
 - [ACLU - Senior Project Manager, National Campaigns 8631854002](../sources/jobs-aclu-senior-project-manager-national-campaigns-8631854002.md) - `source.jobs.aclu.senior-project-manager-national-campaigns.8631854002`
 - [Asana - AI Implementation Manager, Service Management 8027437](../sources/jobs-asana-ai-implementation-8027437.md) - `source.jobs.asana.ai-implementation.8027437`
 - [Official posting - Benepass Product Operations Manager](../sources/jobs-benepass-product-operations.md) - `source.jobs.benepass.product-operations.7f963a7a`
+- [Civic Match candidate network and job board](../sources/civic-match.md) - `source.jobs.civic-match.current`
 - [CodePath - Senior Program Manager, Claude Corps 5182020007](../sources/jobs-codepath-claude-corps-5182020007.md) - `source.jobs.codepath.claude-corps.5182020007`
 - [CodePath - Engineering Project Manager 5160542007](../sources/jobs-codepath-engineering-project-manager-5160542007.md) - `source.jobs.codepath.engineering-project-manager.5160542007`
 - [CodePath - Senior AI Operations Lead 5175813007](../sources/jobs-codepath-senior-ai-operations-lead-5175813007.md) - `source.jobs.codepath.senior-ai-operations-lead.5175813007`

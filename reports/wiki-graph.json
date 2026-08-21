@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-20T22:46:48-04:00",
-  "sourceCommit": "6bef1f53ef501c8ec133afbfbc60440ce60ecbdd",
-  "sourceFingerprint": "330cafd45abd053b87e564436eeabc9e50f4f06fb43cb44b7fb24dc6fd9f9d9b",
+  "generatedAt": "2026-08-21T00:04:16-04:00",
+  "sourceCommit": "439c47ea619995771c19004e7be30c02f5015d7a",
+  "sourceFingerprint": "18161c3493267e4ea87310569e25043f756706e7fe40092bfdb542ff1bd984da",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -2892,6 +2892,19 @@
       "reviewBy": "2026-11-03"
     },
     {
+      "id": "evaluation.jobs.civic-match.profile-and-reader-gates",
+      "path": "docs/knowledge-bank/evaluations/civic-match-opportunity-source.md",
+      "title": "Civic Match profile and audience-correct modeled-reader gates",
+      "kind": "evaluation",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Deterministic form, privacy, opportunity-selection, and audience gates that precede synthetic Civic Match and hiring-reader review.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-28"
+    },
+    {
       "id": "evaluation.jobs.nyc-open-data.strong-match",
       "path": "docs/knowledge-bank/evaluations/nyc-jobs-opportunity-feed.md",
       "title": "NYC Jobs deterministic strong-match opportunity feed",
@@ -5163,6 +5176,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-15",
       "reviewBy": "2026-09-15"
+    },
+    {
+      "id": "source.jobs.civic-match.current",
+      "path": "docs/knowledge-bank/sources/civic-match.md",
+      "title": "Civic Match candidate network and job board",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Candidate-managed state-and-local-government opportunity source with employer discovery, invitations, human matching, job search, saved roles, events, and public-service resources.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-28"
     },
     {
       "id": "source.jobs.codepath.claude-corps.5182020007",
@@ -12384,6 +12410,30 @@
       "context": null
     },
     {
+      "from": "evaluation.jobs.civic-match.profile-and-reader-gates",
+      "type": "related_to",
+      "to": "evaluation.jobs.nyc-open-data.strong-match",
+      "source": "frontmatter",
+      "href": "nyc-jobs-opportunity-feed.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.jobs.civic-match.profile-and-reader-gates",
+      "type": "uses_source",
+      "to": "source.google-doc.jamie-writers-voice",
+      "source": "frontmatter",
+      "href": "../sources/google-doc-jamie-writers-voice.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.jobs.civic-match.profile-and-reader-gates",
+      "type": "uses_source",
+      "to": "source.jobs.civic-match.current",
+      "source": "frontmatter",
+      "href": "../sources/civic-match.md",
+      "context": null
+    },
+    {
       "from": "evaluation.jobs.nyc-open-data.strong-match",
       "type": "uses_source",
       "to": "source.jobs.nyc-open-data.current",
@@ -13178,6 +13228,14 @@
     {
       "from": "index.knowledge-wiki.employment-context",
       "type": "related_to",
+      "to": "evaluation.jobs.civic-match.profile-and-reader-gates",
+      "source": "frontmatter",
+      "href": "../evaluations/civic-match-opportunity-source.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
       "to": "evaluation.jobs.nyc-open-data.strong-match",
       "source": "frontmatter",
       "href": "../evaluations/nyc-jobs-opportunity-feed.md",
@@ -13301,6 +13359,14 @@
       "to": "opportunity.protected.source-backed-memory-consulting.2026",
       "source": "frontmatter",
       "href": "../opportunities/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "uses_source",
+      "to": "source.jobs.civic-match.current",
+      "source": "frontmatter",
+      "href": "../sources/civic-match.md",
       "context": null
     },
     {
@@ -20462,28 +20528,37 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
+      "to": "opportunity.aclu.product-manager-discovery.8482872002",
+      "fragment": null,
+      "line": 100,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
+      "to": "opportunity.codepath.claude-corps.5182020007",
+      "fragment": null,
+      "line": 101,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
+      "to": "opportunity.protected.source-backed-memory-consulting.2026",
+      "fragment": null,
+      "line": 105,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
       "to": "opportunity.nyc-oti.product-manager.784450",
       "fragment": null,
       "line": 11,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
-      "to": "evaluation.employment-context.coverage.2026-07-18",
-      "fragment": null,
-      "line": 118,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "reports/wiki-opportunity-coverage.md",
-      "to": null,
-      "fragment": null,
-      "line": 119,
       "kind": "link"
     },
     {
@@ -20498,10 +20573,37 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/oti-operations-manager-speed-789810.md",
+      "to": "opportunity.nyc-oti.operations-manager-speed.789810",
+      "fragment": null,
+      "line": 13,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
+      "to": "evaluation.employment-context.coverage.2026-07-18",
+      "fragment": null,
+      "line": 133,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "reports/wiki-opportunity-coverage.md",
+      "to": null,
+      "fragment": null,
+      "line": 134,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "reports/wiki-career-trajectory-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 120,
+      "line": 135,
       "kind": "link"
     },
     {
@@ -20510,7 +20612,7 @@
       "toPath": "reports/wiki-source-channel-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 121,
+      "line": 136,
       "kind": "link"
     },
     {
@@ -20519,7 +20621,7 @@
       "toPath": "reports/wiki-opportunity-discovery.md",
       "to": null,
       "fragment": null,
-      "line": 122,
+      "line": 137,
       "kind": "link"
     },
     {
@@ -20528,7 +20630,7 @@
       "toPath": "reports/hiring-acceptance-public.md",
       "to": null,
       "fragment": null,
-      "line": 123,
+      "line": 138,
       "kind": "link"
     },
     {
@@ -20537,16 +20639,7 @@
       "toPath": "reports/hiring-acceptance-gap-resolution.md",
       "to": null,
       "fragment": null,
-      "line": 124,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/oti-operations-manager-speed-789810.md",
-      "to": "opportunity.nyc-oti.operations-manager-speed.789810",
-      "fragment": null,
-      "line": 13,
+      "line": 139,
       "kind": "link"
     },
     {
@@ -20633,10 +20726,28 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/sources/civic-match.md",
+      "to": "source.jobs.civic-match.current",
+      "fragment": null,
+      "line": 55,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/evaluations/civic-match-opportunity-source.md",
+      "to": "evaluation.jobs.civic-match.profile-and-reader-gates",
+      "fragment": null,
+      "line": 61,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/claims/employment-mobility-and-location.md",
       "to": "claim.employment.mobility-and-location.2026-08-15",
       "fragment": null,
-      "line": 66,
+      "line": 81,
       "kind": "link"
     },
     {
@@ -20645,7 +20756,7 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
       "to": "opportunity.nyc-oti.technical-operations-manager.782369",
       "fragment": null,
-      "line": 83,
+      "line": 98,
       "kind": "link"
     },
     {
@@ -20654,34 +20765,7 @@
       "toPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
       "to": "opportunity.benepass.product-operations.7f963a7a",
       "fragment": null,
-      "line": 84,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
-      "to": "opportunity.aclu.product-manager-discovery.8482872002",
-      "fragment": null,
-      "line": 85,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
-      "to": "opportunity.codepath.claude-corps.5182020007",
-      "fragment": null,
-      "line": 86,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
-      "to": "opportunity.protected.source-backed-memory-consulting.2026",
-      "fragment": null,
-      "line": 90,
+      "line": 99,
       "kind": "link"
     },
     {

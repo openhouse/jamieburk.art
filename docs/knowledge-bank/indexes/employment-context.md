@@ -16,6 +16,12 @@ relations:
   - type: related_to
     target: evaluation.jobs.nyc-open-data.strong-match
     href: ../evaluations/nyc-jobs-opportunity-feed.md
+  - type: uses_source
+    target: source.jobs.civic-match.current
+    href: ../sources/civic-match.md
+  - type: related_to
+    target: evaluation.jobs.civic-match.profile-and-reader-gates
+    href: ../evaluations/civic-match-opportunity-source.md
   - type: related_to
     target: opportunity.aclu.senior-project-manager-national-campaigns.8631854002
     href: ../opportunities/aclu-senior-project-manager-national-campaigns.md
@@ -119,6 +125,21 @@ CityJobs research has found current roles that were absent from the August 18
 feed edition. Every generated record requires a close reading of the official
 posting before role-specific application materials or synthetic hiring-reader
 checks may run. Jamie remains the sole application decision maker.
+
+## Civic Match candidate discovery
+
+[Civic Match](../sources/civic-match.md) complements the open-data feed with a
+candidate-managed talent profile, employer search and invitations, saved
+opportunities, human matching, events, and public-service job-search resources.
+Its profile, opportunity-board, and posting requirements have separate review
+clocks; it is not treated as a machine-readable feed.
+
+The [Civic Match profile evaluation](../evaluations/civic-match-opportunity-source.md)
+checks the five-step form, writer's-voice binding, word limits, protected-data
+exclusions, current opportunity selection, and audience visibility before any
+modeled-reader call. Work for America-only intake answers stay out of government
+hiring-reader packets. Jamie alone controls profile visibility, protected
+answers, terms acceptance, final submission, and each application.
 
 ## Public-resume active reader set
 
