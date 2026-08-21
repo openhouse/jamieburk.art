@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "evaluatorId": "fictionalized-prospective-collaborator-accuracy",
+  "candidateDigest": "9ac89ed60d0db4669c914f336d1693d48c42ac8782beced17ea505d8fd165528",
+  "question": "Does the anonymized prospective-collaborator account preserve the situation, motivation, recognition, reservations, and possible next step so accurately that the represented participant could recognize the story without being identifiable to a no-context reader?",
+  "calibrationStatus": "uncalibrated-advisory-simulation",
+  "nonEndorsementBoundary": "This fictionalized review is not participant approval and not endorsement, consent, or an actual decision by the represented person.",
+  "inputScope": {
+    "anonymizedCaseStudyOnly": true,
+    "rawTranscriptAccess": false,
+    "participantIdentityAccess": false,
+    "companyIdentityAccess": false,
+    "sourceAlignedRequirements": true
+  },
+  "critique": "Pass as a source-aligned fictionalized reconstruction. The account makes the progression legible: an early recognition of Jamie's unusual technical and curatorial practice later meets a concrete organizational problem involving product reasoning, writing, onboarding, and human-correctable memory. It keeps the participant's interest practical and intellectually serious, treats compensation and authority as unresolved operating matters, and stops at a possible paid discovery engagement.",
+  "strengths": [
+    "The organizational problem is understandable without company or product identity.",
+    "The participant's product questions, imaginative curiosity, and fairness around labor remain distinct.",
+    "The possible next step is concrete without being misrepresented as approved work."
+  ],
+  "risks": [
+    "The participant has not reviewed this reconstruction, so recognizable accuracy remains a hypothesis.",
+    "De-identification removes some sector and relationship texture that may matter to the participant's own account."
+  ],
+  "result": "pass"
+}

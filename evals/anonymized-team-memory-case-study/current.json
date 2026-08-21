@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "id": "anonymized-team-memory-case-study-2026-08-21",
+  "target": {
+    "files": [
+      "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/01-prospective-collaborator-perspective.md",
+      "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/02-jamie-perspective.md",
+      "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/03-prospective-collaborator-voice.md"
+    ]
+  },
+  "sourceBoundary": {
+    "recordPath": "docs/knowledge-bank/sources/protected-source-backed-memory-opportunity.md",
+    "visibility": "public-safe-derived-case-study",
+    "privateTranscriptInRepository": false,
+    "directTranscriptQuotesInCaseStudy": false,
+    "participantIdentityInCaseStudy": false,
+    "companyIdentityInCaseStudy": false,
+    "protectedIdentifierCorpusInRepository": false,
+    "protectedIdentifierComparison": {
+      "performedInPrivateWorkspace": true,
+      "persistedIdentifierCorpus": false,
+      "result": "no-known-identifiers-found",
+      "reviewedAt": "2026-08-21"
+    },
+    "rule": "The repository may retain only an anonymized, interpretive synthesis. Raw transcript text, private locators, participant and company identity, personal details, proprietary product detail, pricing, and correspondence remain outside the repository."
+  },
+  "sourceAlignedRequirements": [
+    "The prospective collaborator is an experienced product and engineering leader entering a smaller fast-growing creative-technology organization.",
+    "The organization needs clearer product reasoning, stronger writing habits, faster onboarding, and human-correctable AI-assisted memory.",
+    "The prospective collaborator values both immediately usable practices and unusually creative advice.",
+    "Jamie becomes relevant through a combination of technical systems, documentation, facilitation, permission design, community building, and source-backed civic practice.",
+    "The credible next decision is a small compensated discovery and prototype engagement rather than a platform rollout or full-time hiring claim.",
+    "Budget authority, scope, compensation, confidentiality, source selection, review ownership, adoption, and actual acceptance remain unresolved.",
+    "Jamie's perspective includes professional recognition, economic sustainability, mutual learning, portfolio development, and protection against unpaid or overclaimed work.",
+    "The voice profile must distinguish observed conversation from verified written voice and must use synthetic rather than attributed examples."
+  ],
+  "deterministicCriteria": [
+    {
+      "fileIndex": 0,
+      "needles": [
+        "The situation before the conversations",
+        "What the prospective collaborator needed",
+        "Why Jamie became relevant",
+        "What a credible first engagement would be",
+        "What remained unresolved"
+      ]
+    },
+    {
+      "fileIndex": 1,
+      "needles": [
+        "What Jamie was trying to make legible",
+        "What changed between the conversations",
+        "What Jamie hoped the collaboration could become",
+        "What Jamie needed to protect",
+        "Jamie's own communication challenge"
+      ]
+    },
+    {
+      "fileIndex": 2,
+      "needles": [
+        "Corpus and inference limit",
+        "Conversational signature",
+        "Characteristic reasoning moves",
+        "Sentence movement and prosody",
+        "Synthetic examples",
+        "Do not use this profile to impersonate"
+      ]
+    }
+  ],
+  "forbiddenPatterns": [
+    {
+      "id": "email-address",
+      "pattern": "[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}"
+    },
+    {
+      "id": "north-american-phone-number",
+      "pattern": "(?:\\+?1[ .-]?)?\\(?[0-9]{3}\\)?[ .-][0-9]{3}[ .-][0-9]{4}"
+    },
+    {
+      "id": "private-filesystem-locator",
+      "pattern": "(?:/Users/|/Volumes/|com~apple~CloudDocs|file://)"
+    },
+    {
+      "id": "web-address",
+      "pattern": "(?:https?://|www\\.)"
+    },
+    {
+      "id": "commercial-amount",
+      "pattern": "(?:[$€£][0-9]|[0-9][0-9,]*(?:\\.[0-9]{2})? (?:dollars|euros|pounds))"
+    }
+  ],
+  "evaluators": [
+    {
+      "id": "fictionalized-prospective-collaborator-accuracy",
+      "lens": "protected-prospective-collaborator",
+      "question": "Does the anonymized prospective-collaborator account preserve the situation, motivation, recognition, reservations, and possible next step so accurately that the represented participant could recognize the story without being identifiable to a no-context reader?",
+      "resultPath": "evals/anonymized-team-memory-case-study/runs/2026-08-21/fictionalized-prospective-collaborator.json"
+    },
+    {
+      "id": "fictionalized-jamie-accuracy",
+      "lens": "Jamie Burkart",
+      "question": "Does Jamie's account preserve the career transition, intellectual continuity, emotional importance, professional hope, practical contribution, communication challenge, and protection needs so that Jamie could recognize the story as his own?",
+      "resultPath": "evals/anonymized-team-memory-case-study/runs/2026-08-21/fictionalized-jamie.json"
+    },
+    {
+      "id": "fictionalized-prospective-collaborator-voice-accuracy",
+      "lens": "protected-prospective-collaborator-voice",
+      "question": "Does the voice profile preserve the participant's conversational reasoning, prosody, interpersonal stance, uncertainty, and product orientation while clearly refusing identity, quotation, or impersonation claims?",
+      "resultPath": "evals/anonymized-team-memory-case-study/runs/2026-08-21/fictionalized-prospective-collaborator-voice.json"
+    }
+  ],
+  "policy": {
+    "deterministicChecksBeforeLlm": true,
+    "stopOnDeterministicFailure": true,
+    "calibrationStatus": "uncalibrated-advisory-simulation",
+    "reason": "No participant-approved gold labels exist. Fictionalized reviews may guide revision but cannot establish participant accuracy, consent, endorsement, or publication approval."
+  },
+  "humanValidation": {
+    "prospectiveCollaboratorApproved": false,
+    "jamieApproved": false,
+    "requiredBeforeClaimingParticipantAccuracy": true,
+    "requiredBeforePublicProjection": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "evaluatorId": "fictionalized-jamie-accuracy",
+  "candidateDigest": "9ac89ed60d0db4669c914f336d1693d48c42ac8782beced17ea505d8fd165528",
+  "question": "Does Jamie's account preserve the career transition, intellectual continuity, emotional importance, professional hope, practical contribution, communication challenge, and protection needs so that Jamie could recognize the story as his own?",
+  "calibrationStatus": "uncalibrated-advisory-simulation",
+  "nonEndorsementBoundary": "This fictionalized review is not participant approval and not endorsement, consent, or an actual decision by the represented person.",
+  "inputScope": {
+    "anonymizedCaseStudyOnly": true,
+    "rawTranscriptAccess": false,
+    "participantIdentityAccess": false,
+    "companyIdentityAccess": false,
+    "sourceAlignedRequirements": true
+  },
+  "critique": "Pass as a candidate draft for Jamie's review. The account joins career transition, the search for legibility, intellectual recognition, economic sustainability, and the continuity among software, archives, facilitation, culture, and civic infrastructure. It also names the communication challenge plainly: Jamie's constellation-making is a strength, while a proposal must lead with the smallest useful engagement and its decision path.",
+  "strengths": [
+    "The account preserves both the emotional importance of recognition and the practical need for paid bridge work.",
+    "The proposed contribution is described as operating memory rather than generic note-taking or an AI demonstration.",
+    "The safeguards around labor, confidentiality, collective credit, and overclaiming are treated as part of delivery quality."
+  ],
+  "risks": [
+    "Jamie has not yet approved this as his final first-person account.",
+    "The public-safe summary may understate the warmth and history of the personal relationship."
+  ],
+  "result": "pass"
+}

@@ -3,7 +3,7 @@
 
 **Source commit:** `0454ba64a98411716e4ab10bbff6aba24368dff1`
 **Generation time:** 2026-08-20T23:38:22-04:00
-**Source fingerprint:** `0867c8d584d79b0ba0a80946176fd676d2e7ecb83bd27af022c04d71d864d99b`
+**Source fingerprint:** `3a7fae298c0b199d230d57b4da4975ef0f18be10c92422329c07dbff4daa5e62`
 
 ## application
 
@@ -416,6 +416,9 @@
 
 ## research-run
 
+- [Anonymized team-memory case study — Jamie's perspective](../case-studies/anonymized-team-memory-collaboration/02-jamie-perspective.md) - `case-study.anonymized-team-memory.jamie-perspective`
+- [Anonymized team-memory case study — prospective collaborator perspective](../case-studies/anonymized-team-memory-collaboration/01-prospective-collaborator-perspective.md) - `case-study.anonymized-team-memory.prospective-collaborator-perspective`
+- [Anonymized team-memory case study — prospective collaborator writer's-voice hypothesis](../case-studies/anonymized-team-memory-collaboration/03-prospective-collaborator-voice.md) - `case-study.anonymized-team-memory.prospective-collaborator-voice`
 - [Restored project sites close reading, August 14, 2026](../research-runs/restored-project-sites-close-reading-2026-08-14.md) - `research-run.restored-project-sites.2026-08-14`
 - [Foundational Wiki page source return, July 19, 2026](../research-runs/foundational-source-return-2026-07-19.md) - `research.foundational-source-return.2026-07-19`
 - [Interpretive layer source return, July 19, 2026](../research-runs/interpretive-layer-source-return-2026-07-19.md) - `research.interpretive-layer-source-return.2026-07-19`

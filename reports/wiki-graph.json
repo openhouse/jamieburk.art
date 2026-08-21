@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-20T23:38:22-04:00",
   "sourceCommit": "0454ba64a98411716e4ab10bbff6aba24368dff1",
-  "sourceFingerprint": "0867c8d584d79b0ba0a80946176fd676d2e7ecb83bd27af022c04d71d864d99b",
+  "sourceFingerprint": "3a7fae298c0b199d230d57b4da4975ef0f18be10c92422329c07dbff4daa5e62",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -2630,6 +2630,45 @@
       "aliases": [],
       "lastReviewed": "2026-07-18",
       "reviewBy": "2027-01-18"
+    },
+    {
+      "id": "case-study.anonymized-team-memory.jamie-perspective",
+      "path": "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/02-jamie-perspective.md",
+      "title": "Anonymized team-memory case study — Jamie's perspective",
+      "kind": "research-run",
+      "status": "draft",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "A public-safe reconstruction of Jamie's career transition, recognition, hopes, contribution, and required protections in a prospective team-memory collaboration.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-09-21"
+    },
+    {
+      "id": "case-study.anonymized-team-memory.prospective-collaborator-perspective",
+      "path": "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/01-prospective-collaborator-perspective.md",
+      "title": "Anonymized team-memory case study — prospective collaborator perspective",
+      "kind": "research-run",
+      "status": "draft",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "A public-safe reconstruction of a prospective collaborator's situation, needs, recognition, reservations, and possible first engagement.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-09-21"
+    },
+    {
+      "id": "case-study.anonymized-team-memory.prospective-collaborator-voice",
+      "path": "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/03-prospective-collaborator-voice.md",
+      "title": "Anonymized team-memory case study — prospective collaborator writer's-voice hypothesis",
+      "kind": "research-run",
+      "status": "draft",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "A public-safe, non-impersonating writer's-voice hypothesis derived cautiously from the prospective collaborator's observed conversational voice, reasoning habits, and prose implications.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-09-21"
     },
     {
       "id": "claim.callnyc.independent-follow-on",
@@ -5902,7 +5941,7 @@
       "sensitivity": "high",
       "summary": "Metadata-only record for a focused private review of an exploratory source-backed team-memory consulting lead.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
+      "lastReviewed": "2026-08-21",
       "reviewBy": "2026-11-10"
     },
     {
@@ -11884,6 +11923,54 @@
       "context": null
     },
     {
+      "from": "case-study.anonymized-team-memory.jamie-perspective",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "case-study.anonymized-team-memory.jamie-perspective",
+      "type": "uses_source",
+      "to": "source.protected.source-backed-memory-opportunity.2026",
+      "source": "frontmatter",
+      "href": "../../sources/protected-source-backed-memory-opportunity.md",
+      "context": null
+    },
+    {
+      "from": "case-study.anonymized-team-memory.prospective-collaborator-perspective",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "case-study.anonymized-team-memory.prospective-collaborator-perspective",
+      "type": "uses_source",
+      "to": "source.protected.source-backed-memory-opportunity.2026",
+      "source": "frontmatter",
+      "href": "../../sources/protected-source-backed-memory-opportunity.md",
+      "context": null
+    },
+    {
+      "from": "case-study.anonymized-team-memory.prospective-collaborator-voice",
+      "type": "related_to",
+      "to": "case-study.anonymized-team-memory.prospective-collaborator-perspective",
+      "source": "frontmatter",
+      "href": "01-prospective-collaborator-perspective.md",
+      "context": null
+    },
+    {
+      "from": "case-study.anonymized-team-memory.prospective-collaborator-voice",
+      "type": "uses_source",
+      "to": "source.protected.source-backed-memory-opportunity.2026",
+      "source": "frontmatter",
+      "href": "../../sources/protected-source-backed-memory-opportunity.md",
+      "context": null
+    },
+    {
       "from": "claim.callnyc.independent-follow-on",
       "type": "evidence:direct-support",
       "to": "source.politico.callnyc.2016-03-14",
@@ -15343,6 +15430,14 @@
       "to": "capability.technical-operations",
       "source": "frontmatter",
       "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "method.source-backed-team-memory",
+      "type": "related_to",
+      "to": "case-study.anonymized-team-memory.prospective-collaborator-perspective",
+      "source": "frontmatter",
+      "href": "../case-studies/anonymized-team-memory-collaboration/01-prospective-collaborator-perspective.md",
       "context": null
     },
     {
@@ -19127,6 +19222,30 @@
     },
     {
       "from": "source.protected.source-backed-memory-opportunity.2026",
+      "type": "related_to",
+      "to": "case-study.anonymized-team-memory.jamie-perspective",
+      "source": "frontmatter",
+      "href": "../case-studies/anonymized-team-memory-collaboration/02-jamie-perspective.md",
+      "context": null
+    },
+    {
+      "from": "source.protected.source-backed-memory-opportunity.2026",
+      "type": "related_to",
+      "to": "case-study.anonymized-team-memory.prospective-collaborator-perspective",
+      "source": "frontmatter",
+      "href": "../case-studies/anonymized-team-memory-collaboration/01-prospective-collaborator-perspective.md",
+      "context": null
+    },
+    {
+      "from": "source.protected.source-backed-memory-opportunity.2026",
+      "type": "related_to",
+      "to": "case-study.anonymized-team-memory.prospective-collaborator-voice",
+      "source": "frontmatter",
+      "href": "../case-studies/anonymized-team-memory-collaboration/03-prospective-collaborator-voice.md",
+      "context": null
+    },
+    {
+      "from": "source.protected.source-backed-memory-opportunity.2026",
       "type": "supports",
       "to": "opportunity.protected.source-backed-memory-consulting.2026",
       "source": "frontmatter",
@@ -22601,6 +22720,33 @@
       "to": "capability.technical-operations",
       "fragment": null,
       "line": 71,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
+      "from": "method.source-backed-team-memory",
+      "toPath": "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/01-prospective-collaborator-perspective.md",
+      "to": "case-study.anonymized-team-memory.prospective-collaborator-perspective",
+      "fragment": null,
+      "line": 78,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
+      "from": "method.source-backed-team-memory",
+      "toPath": "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/02-jamie-perspective.md",
+      "to": "case-study.anonymized-team-memory.jamie-perspective",
+      "fragment": null,
+      "line": 80,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
+      "from": "method.source-backed-team-memory",
+      "toPath": "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/03-prospective-collaborator-voice.md",
+      "to": "case-study.anonymized-team-memory.prospective-collaborator-voice",
+      "fragment": null,
+      "line": 81,
       "kind": "link"
     },
     {

@@ -30,6 +30,9 @@ relations:
   - type: projected_to
     target: projection.photo.team-knowledge.collective-synthesis
     href: ../projections/photography/team-knowledge-collective-synthesis.md
+  - type: related_to
+    target: case-study.anonymized-team-memory.prospective-collaborator-perspective
+    href: ../case-studies/anonymized-team-memory-collaboration/01-prospective-collaborator-perspective.md
 ---
 
 # Knowledge Wiki Graph / Source-Backed Team Memory
@@ -104,3 +107,15 @@ engagement or external deployment.
 The method helps produce [Technical Operations](../capabilities/technical-operations.md)
 evidence, but an internal pass does not substitute for collaborator review,
 rights and consent decisions, publication approval, or external outcomes.
+
+## Anonymized case study
+
+The knowledge layer includes three public-safe, review-pending interpretations
+of one prospective collaboration: the [prospective collaborator's
+perspective](../case-studies/anonymized-team-memory-collaboration/01-prospective-collaborator-perspective.md),
+[Jamie's perspective](../case-studies/anonymized-team-memory-collaboration/02-jamie-perspective.md),
+and an [observed conversational-voice
+profile](../case-studies/anonymized-team-memory-collaboration/03-prospective-collaborator-voice.md).
+They preserve the operating problem and relationship dynamics without retaining
+participant or company identity, private quotations, or source locations. They
+remain drafts until the required human reviews occur.
