@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `2f47c73b4926887659b899de855ef062e9381470`
-**Generation time:** 2026-08-21T02:07:11-04:00
-**Source fingerprint:** `9770f9581cab7c3dc09cf62d517ba9e1b35685e9d45fb092366f0352c41c605c`
+**Source commit:** `cc0d0793d769ced0111a642cda370f0f4c2d6470`
+**Generation time:** 2026-08-21T03:24:31-04:00
+**Source fingerprint:** `b2f85389ab3e7725be9b2d24acf810252a431365b899b1d8e90fab635830b1a5`
 
 ## application
 
@@ -278,6 +278,7 @@
 
 ## index
 
+- [Anonymized Team-Knowledge Opportunity Case Study](../case-studies/anonymized-team-knowledge-opportunity/README.md) - `index.anonymized-team-knowledge-opportunity-case-study`
 - [Knowledge Wiki](../README.md) - `index.knowledge-wiki`
 - [Canonical Story Bank](../indexes/canonical-story-bank.md) - `index.knowledge-wiki.canonical-story-bank`
 - [Commercial Rent Stabilization public support](../indexes/commercial-rent-public-support.md) - `index.knowledge-wiki.commercial-rent-public-support`
@@ -422,6 +423,9 @@
 
 ## research-run
 
+- [Jamie's Perspective](../case-studies/anonymized-team-knowledge-opportunity/02-jamie-perspective.md) - `research-run.anonymized-team-knowledge-opportunity.jamie-perspective`
+- [The Prospective Sponsor's Perspective](../case-studies/anonymized-team-knowledge-opportunity/01-prospective-sponsor-perspective.md) - `research-run.anonymized-team-knowledge-opportunity.sponsor-perspective`
+- [The Prospective Sponsor's Voice and Reasoning Profile](../case-studies/anonymized-team-knowledge-opportunity/03-prospective-sponsor-voice.md) - `research-run.anonymized-team-knowledge-opportunity.voice-profile`
 - [BetaNYC opportunity review, August 20, 2026](../research-runs/betanyc-opportunity-review-2026-08-20.md) - `research.betanyc-opportunity-review.2026-08-20`
 - [Foundational Wiki page source return, July 19, 2026](../research-runs/foundational-source-return-2026-07-19.md) - `research.foundational-source-return.2026-07-19`
 - [Interpretive layer source return, July 19, 2026](../research-runs/interpretive-layer-source-return-2026-07-19.md) - `research.interpretive-layer-source-return.2026-07-19`

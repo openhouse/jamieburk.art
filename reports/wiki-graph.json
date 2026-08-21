@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-21T02:07:11-04:00",
-  "sourceCommit": "2f47c73b4926887659b899de855ef062e9381470",
-  "sourceFingerprint": "8f04bb2bbcaa0e48ac3265219d5ca868e91516e153e8cef5a84cc4c37ff194a6",
+  "generatedAt": "2026-08-21T03:24:31-04:00",
+  "sourceCommit": "cc0d0793d769ced0111a642cda370f0f4c2d6470",
+  "sourceFingerprint": "b2f85389ab3e7725be9b2d24acf810252a431365b899b1d8e90fab635830b1a5",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3247,6 +3247,19 @@
       "reviewBy": "2026-11-03"
     },
     {
+      "id": "index.anonymized-team-knowledge-opportunity-case-study",
+      "path": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/README.md",
+      "title": "Anonymized Team-Knowledge Opportunity Case Study",
+      "kind": "index",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "A public-safe, multi-perspective account of a prospective team-knowledge engagement, preserving the situation and conversational texture while withholding participant and company identity.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-09-21"
+    },
+    {
       "id": "index.knowledge-wiki",
       "path": "docs/knowledge-bank/README.md",
       "title": "Knowledge Wiki",
@@ -4760,6 +4773,45 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "research-run.anonymized-team-knowledge-opportunity.jamie-perspective",
+      "path": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/02-jamie-perspective.md",
+      "title": "Jamie's Perspective",
+      "kind": "research-run",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Jamie's anonymized account of how a wide-ranging practice became legible as a focused team-knowledge proposal in response to a real organizational need.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-09-21"
+    },
+    {
+      "id": "research-run.anonymized-team-knowledge-opportunity.sponsor-perspective",
+      "path": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/01-prospective-sponsor-perspective.md",
+      "title": "The Prospective Sponsor's Perspective",
+      "kind": "research-run",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "An anonymized interpretation of why a product and engineering leader recognized a team-knowledge problem, why Jamie's practice seemed relevant, and what remained unresolved.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-09-21"
+    },
+    {
+      "id": "research-run.anonymized-team-knowledge-opportunity.voice-profile",
+      "path": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/03-prospective-sponsor-voice.md",
+      "title": "The Prospective Sponsor's Voice and Reasoning Profile",
+      "kind": "research-run",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "An anonymized analysis of the prospective sponsor's conversational prosody, reasoning habits, ethical concerns, and editorial pressure, with explicit safeguards against impersonation.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-09-21"
     },
     {
       "id": "research.betanyc-opportunity-review.2026-08-20",
@@ -13174,6 +13226,46 @@
       "context": null
     },
     {
+      "from": "index.anonymized-team-knowledge-opportunity-case-study",
+      "type": "related_to",
+      "to": "opportunity.protected.source-backed-memory-consulting.2026",
+      "source": "frontmatter",
+      "href": "../../opportunities/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "index.anonymized-team-knowledge-opportunity-case-study",
+      "type": "related_to",
+      "to": "research-run.anonymized-team-knowledge-opportunity.jamie-perspective",
+      "source": "frontmatter",
+      "href": "02-jamie-perspective.md",
+      "context": null
+    },
+    {
+      "from": "index.anonymized-team-knowledge-opportunity-case-study",
+      "type": "related_to",
+      "to": "research-run.anonymized-team-knowledge-opportunity.sponsor-perspective",
+      "source": "frontmatter",
+      "href": "01-prospective-sponsor-perspective.md",
+      "context": null
+    },
+    {
+      "from": "index.anonymized-team-knowledge-opportunity-case-study",
+      "type": "related_to",
+      "to": "research-run.anonymized-team-knowledge-opportunity.voice-profile",
+      "source": "frontmatter",
+      "href": "03-prospective-sponsor-voice.md",
+      "context": null
+    },
+    {
+      "from": "index.anonymized-team-knowledge-opportunity-case-study",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
       "from": "index.knowledge-wiki",
       "type": "related_to",
       "to": "index.knowledge-wiki.commercial-rent-public-support",
@@ -15624,6 +15716,14 @@
     {
       "from": "method.source-backed-team-memory",
       "type": "related_to",
+      "to": "index.anonymized-team-knowledge-opportunity-case-study",
+      "source": "frontmatter",
+      "href": "../case-studies/anonymized-team-knowledge-opportunity/README.md",
+      "context": null
+    },
+    {
+      "from": "method.source-backed-team-memory",
+      "type": "related_to",
       "to": "opportunity.protected.source-backed-memory-consulting.2026",
       "source": "frontmatter",
       "href": "../opportunities/source-backed-team-memory.md",
@@ -16591,6 +16691,14 @@
       "to": "capability.technical-operations",
       "source": "frontmatter",
       "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.protected.source-backed-memory-consulting.2026",
+      "type": "related_to",
+      "to": "index.anonymized-team-knowledge-opportunity-case-study",
+      "source": "frontmatter",
+      "href": "../case-studies/anonymized-team-knowledge-opportunity/README.md",
       "context": null
     },
     {
@@ -18336,6 +18444,78 @@
       "context": null
     },
     {
+      "from": "research-run.anonymized-team-knowledge-opportunity.jamie-perspective",
+      "type": "related_to",
+      "to": "index.anonymized-team-knowledge-opportunity-case-study",
+      "source": "frontmatter",
+      "href": "README.md",
+      "context": null
+    },
+    {
+      "from": "research-run.anonymized-team-knowledge-opportunity.jamie-perspective",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "research-run.anonymized-team-knowledge-opportunity.jamie-perspective",
+      "type": "uses_source",
+      "to": "source.protected.source-backed-memory-opportunity.2026",
+      "source": "frontmatter",
+      "href": "../../sources/protected-source-backed-memory-opportunity.md",
+      "context": null
+    },
+    {
+      "from": "research-run.anonymized-team-knowledge-opportunity.sponsor-perspective",
+      "type": "related_to",
+      "to": "index.anonymized-team-knowledge-opportunity-case-study",
+      "source": "frontmatter",
+      "href": "README.md",
+      "context": null
+    },
+    {
+      "from": "research-run.anonymized-team-knowledge-opportunity.sponsor-perspective",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "research-run.anonymized-team-knowledge-opportunity.sponsor-perspective",
+      "type": "uses_source",
+      "to": "source.protected.source-backed-memory-opportunity.2026",
+      "source": "frontmatter",
+      "href": "../../sources/protected-source-backed-memory-opportunity.md",
+      "context": null
+    },
+    {
+      "from": "research-run.anonymized-team-knowledge-opportunity.voice-profile",
+      "type": "related_to",
+      "to": "index.anonymized-team-knowledge-opportunity-case-study",
+      "source": "frontmatter",
+      "href": "README.md",
+      "context": null
+    },
+    {
+      "from": "research-run.anonymized-team-knowledge-opportunity.voice-profile",
+      "type": "related_to",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "research-run.anonymized-team-knowledge-opportunity.voice-profile",
+      "type": "uses_source",
+      "to": "source.protected.source-backed-memory-opportunity.2026",
+      "source": "frontmatter",
+      "href": "../../sources/protected-source-backed-memory-opportunity.md",
+      "context": null
+    },
+    {
       "from": "research.betanyc-opportunity-review.2026-08-20",
       "type": "uses_method",
       "to": "method.betanyc-opportunity-loop",
@@ -19961,6 +20141,14 @@
     },
     {
       "from": "source.protected.source-backed-memory-opportunity.2026",
+      "type": "related_to",
+      "to": "index.anonymized-team-knowledge-opportunity-case-study",
+      "source": "frontmatter",
+      "href": "../case-studies/anonymized-team-knowledge-opportunity/README.md",
+      "context": null
+    },
+    {
+      "from": "source.protected.source-backed-memory-opportunity.2026",
       "type": "supports",
       "to": "opportunity.protected.source-backed-memory-consulting.2026",
       "source": "frontmatter",
@@ -21076,6 +21264,33 @@
       "to": "method.source-backed-team-memory",
       "fragment": null,
       "line": 13,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/README.md",
+      "from": "index.anonymized-team-knowledge-opportunity-case-study",
+      "toPath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/01-prospective-sponsor-perspective.md",
+      "to": "research-run.anonymized-team-knowledge-opportunity.sponsor-perspective",
+      "fragment": null,
+      "line": 12,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/README.md",
+      "from": "index.anonymized-team-knowledge-opportunity-case-study",
+      "toPath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/02-jamie-perspective.md",
+      "to": "research-run.anonymized-team-knowledge-opportunity.jamie-perspective",
+      "fragment": null,
+      "line": 13,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/README.md",
+      "from": "index.anonymized-team-knowledge-opportunity-case-study",
+      "toPath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/03-prospective-sponsor-voice.md",
+      "to": "research-run.anonymized-team-knowledge-opportunity.voice-profile",
+      "fragment": null,
+      "line": 14,
       "kind": "link"
     },
     {
@@ -23506,6 +23721,15 @@
       "to": "capability.technical-operations",
       "fragment": null,
       "line": 39,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
+      "from": "method.source-backed-team-memory",
+      "toPath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/README.md",
+      "to": "index.anonymized-team-knowledge-opportunity-case-study",
+      "fragment": null,
+      "line": 64,
       "kind": "link"
     },
     {

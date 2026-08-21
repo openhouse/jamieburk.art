@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `2f47c73b4926887659b899de855ef062e9381470`
-**Generation time:** 2026-08-21T02:07:11-04:00
-**Source fingerprint:** `9770f9581cab7c3dc09cf62d517ba9e1b35685e9d45fb092366f0352c41c605c`
+**Source commit:** `cc0d0793d769ced0111a642cda370f0f4c2d6470`
+**Generation time:** 2026-08-21T03:24:31-04:00
+**Source fingerprint:** `b2f85389ab3e7725be9b2d24acf810252a431365b899b1d8e90fab635830b1a5`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 39
+- Nodes added: 43
 - Nodes removed: 0
-- Edges added: 147
+- Edges added: 164
 - Edges removed: 8
 - New type-aware orphans: 0
 - Current rights-review records: 185
@@ -21,6 +21,7 @@ Compared with the graph artifact on `origin/develop`.
 - `correction.hje-thick-arts-client-chronology.2026`
 - `correction.photo.project-courtesy-credits.2026-08-20`
 - `decision.portfolio.cloudinary-selective-media-delivery.2026-08-15`
+- `index.anonymized-team-knowledge-opportunity-case-study`
 - `method.betanyc-opportunity-loop`
 - `method.civic-match-opportunity-loop`
 - `opportunity.nyc-oti.pit-senior-product-designer.782373`
@@ -35,6 +36,9 @@ Compared with the graph artifact on `origin/develop`.
 - `portfolio.work.kc-spaces-fund`
 - `projection.photo.knowledge-wiki.collective-map`
 - `projection.photo.social-preview.east-river`
+- `research-run.anonymized-team-knowledge-opportunity.jamie-perspective`
+- `research-run.anonymized-team-knowledge-opportunity.sponsor-perspective`
+- `research-run.anonymized-team-knowledge-opportunity.voice-profile`
 - `research.betanyc-opportunity-review.2026-08-20`
 - `research.nyc-jobs.citywide-monitor.2026-08-20`
 - `research.nyc-oti-product-management-ranking.2026-08-20`

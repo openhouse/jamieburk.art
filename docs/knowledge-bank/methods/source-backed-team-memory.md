@@ -24,6 +24,9 @@ relations:
   - type: related_to
     target: opportunity.protected.source-backed-memory-consulting.2026
     href: ../opportunities/source-backed-team-memory.md
+  - type: related_to
+    target: index.anonymized-team-knowledge-opportunity-case-study
+    href: ../case-studies/anonymized-team-knowledge-opportunity/README.md
 ---
 
 # Knowledge Wiki Graph / Source-Backed Team Memory
@@ -85,3 +88,12 @@ knowledge without imposing a heavy parallel documentation system.
 
 These are proposed acceptance conditions for a future pilot. They are not
 evidence of a contract, client adoption, deployment, or outcome.
+
+## Anonymized case-study packet
+
+The [anonymized team-knowledge opportunity case study](../case-studies/anonymized-team-knowledge-opportunity/README.md)
+examines how this method became legible against one real organizational need.
+It preserves the two participants' differing perspectives and the prospective
+sponsor's reasoning style without publishing participant or company identity.
+The packet remains a source-based interpretation, not collaborator approval,
+commercial acceptance, or permission to impersonate the speaker.

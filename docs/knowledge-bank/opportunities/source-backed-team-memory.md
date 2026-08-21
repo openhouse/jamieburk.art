@@ -104,6 +104,9 @@ relations:
   - type: projected_to
     target: portfolio.work.technical-operations
     href: ../projections/work-technical-operations.md
+  - type: related_to
+    target: index.anonymized-team-knowledge-opportunity-case-study
+    href: ../case-studies/anonymized-team-knowledge-opportunity/README.md
 evidence:
   - target: source.protected.source-backed-memory-opportunity.2026
     relationship: private-support
@@ -143,6 +146,9 @@ AI drafts. Humans review. The shared record remains inspectable and correctable.
 ## Boundaries
 
 Do not identify the protected collaborator or company. Do not publish pricing,
-private transcript excerpts, message bodies, contact data, or company context.
+private transcript excerpts, message bodies, contact data, or identifying
+company context. A reviewed anonymized derivative may preserve the problem,
+reasoning, relationship, and conversational character only when it maintains
+the source and commercial limits recorded here.
 Do not imply production SaaS, company-wide deployment, a completed pilot,
 commercial acceptance, or endorsement.

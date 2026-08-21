@@ -25,6 +25,9 @@ relations:
   - type: supports
     target: opportunity.protected.source-backed-memory-consulting.2026
     href: ../opportunities/source-backed-team-memory.md
+  - type: related_to
+    target: index.anonymized-team-knowledge-opportunity-case-study
+    href: ../case-studies/anonymized-team-knowledge-opportunity/README.md
 ---
 
 # Protected source-backed memory opportunity — metadata boundary
@@ -39,3 +42,8 @@ this repository. The source family supports a conditional opportunity
 classification; it does not establish employment, commercial acceptance,
 rejection, client work, deployment, outcome, endorsement, or publication
 permission.
+
+The source family may inform a reviewed anonymized case-study derivative that
+withholds identifying participant and company details, avoids transcript
+quotation, and carries these same evidentiary and commercial limits. That
+derivative does not make the underlying communications public.
