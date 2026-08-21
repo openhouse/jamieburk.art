@@ -4,6 +4,7 @@ import SourceBackedMemory from "@/content/lab/source-backed-team-memory.mdx";
 import { Cite, Claim, References } from "@/components/citations";
 import { JBButton } from "@/components/JBButton";
 import { knowledgeWikiPractice } from "@/data/knowledge-wiki-practice";
+import { portfolioPhotos } from "@/data/photography";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
@@ -15,6 +16,7 @@ export const metadata: Metadata = createMetadata({
 });
 
 export default function SourceBackedTeamMemoryPage() {
+  const photo = portfolioPhotos.knowledgeWikiCollectiveSynthesis;
   const workedExample = [
     {
       label: "Known",
@@ -51,9 +53,6 @@ export default function SourceBackedTeamMemoryPage() {
             judgment, or private archive browser.
           </p>
         </div>
-        <div className="mt-10 space-y-6">
-          <SourceBackedMemory />
-        </div>
         <section className="mt-12 border-y border-jb-ink/12 py-10">
           <p className="text-sm font-semibold uppercase text-jb-blue">
             Current research
@@ -67,6 +66,25 @@ export default function SourceBackedTeamMemoryPage() {
               projection="case-study"
               surface="/lab/source-backed-team-memory"
             />
+          </p>
+          <figure className="mt-8 overflow-hidden rounded-lg border border-jb-ink/12 bg-jb-paper">
+            <GovernedImage
+              alt={photo.alt}
+              className="h-auto w-full"
+              height={photo.height}
+              sizes="(min-width: 1024px) 768px, 100vw"
+              src={photo.src}
+              width={photo.width}
+            />
+            <figcaption className="grid gap-2 border-t border-jb-ink/10 p-4 text-sm leading-6 text-jb-ink/76 sm:grid-cols-[1fr_auto]">
+              <span>{photo.caption}</span>
+              <span>{photo.credit}</span>
+            </figcaption>
+          </figure>
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-jb-ink/76">
+            A shared field of ideas becomes a navigable constellation. The
+            structure does not invent the knowledge; it helps a team see, test,
+            and use what people already know.
           </p>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {knowledgeWikiPractice.layers.map((layer, index) => (
@@ -104,6 +122,9 @@ export default function SourceBackedTeamMemoryPage() {
             </p>
           </div>
         </section>
+        <div className="mt-12 space-y-6">
+          <SourceBackedMemory />
+        </div>
         <section className="mt-12 border-b border-jb-ink/12 pb-10">
           <p className="text-sm font-semibold uppercase text-jb-blue">
             Research lineage

@@ -3,7 +3,7 @@
 
 **Source commit:** `d36db00177f3fb359420f7fd09c829fa5c219ca3`
 **Generation time:** 2026-08-21T06:38:01-04:00
-**Source fingerprint:** `de30058eb88a77a6e6d51b01c28a73edbeac7d526d33e075a17dd0f6c34387bd`
+**Source fingerprint:** `16bbbdf126426b15d51a9ba8bda0d835313a5eb5f7b38b5ceea23757a75a5fdd`
 
 ## application
 
@@ -24,6 +24,7 @@
 - [DCLA listening room, January 2017](../assets/photographs/nycac-dcla-listening-room-2017.md) - `asset.photo.nycac-dcla-listening-room.2017.001`
 - [NYC Artist Coalition Office of Nightlife town hall at Market Hotel, 2017](../assets/photographs/nycac-save-nyc-spaces-town-hall-2017.md) - `asset.photo.nycac.save-nyc-spaces-town-hall.2017.001`
 - [Jamie Burkart facilitating at Shoestring Press, 2017](../assets/photographs/nycac-shoestring-facilitation-2017.md) - `asset.photo.nycac.shoestring-facilitation.2017.001`
+- [NYC Artist Coalition steering-group card field, 2017](../assets/photographs/nycac-steering-group-card-field-2017.md) - `asset.photo.nycac.steering-group-card-field.2017.001`
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb`
 - [FairRentNYC: 2019 03 18 small business rally 1 [hur5tftl]](../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj.md) - `asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj`
 - [FairRentNYC: 2019 03 18 small business rally 1 [wp36j4c2]](../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-wp36j4c2rp.md) - `asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-wp36j4c2rp`
@@ -240,6 +241,7 @@
 
 ## evaluation
 
+- [Knowledge Wiki Graph photographic metaphor review](../evaluations/curatorial/knowledge-wiki-card-field-2026-08-21.md) - `evaluation.curatorial.knowledge-wiki-card-field.2026-08-21`
 - [Launch 2026 field-and-system pair curatorial proposal](../evaluations/curatorial/launch-2026-field-system-pairs.md) - `evaluation.curatorial.launch-2026.field-system-pairs`
 - [Layout C homepage East River curatorial proposal](../evaluations/curatorial/layout-c-home-east-river-v1.md) - `evaluation.curatorial.layout-c.home-east-river.v1`
 - [Portfolio project-cover curatorial record](../evaluations/curatorial/portfolio-project-covers-2026-08-13.md) - `evaluation.curatorial.portfolio-project-covers.2026-08-13`
@@ -404,6 +406,7 @@
 - [Launch 2026 Fair Rent case-study Shoestring field-and-system occurrence](../projections/photography/launch-2026-fair-rent-shoestring-facilitation.md) - `projection.photo.launch-2026.fair-rent.shoestring-facilitation`
 - [Launch 2026 homepage Save NYC Spaces field-and-system occurrence](../projections/photography/launch-2026-home-save-nyc-spaces-town-hall.md) - `projection.photo.launch-2026.home.save-nyc-spaces-town-hall`
 - [Layout C homepage East River occurrence](../projections/photography/layout-c-home-east-river.md) - `projection.photo.layout-c.home.east-river`
+- [Source-Backed Team Memory collective-synthesis photo occurrence](../projections/photography/source-backed-team-memory-card-field.md) - `projection.photo.source-backed-team-memory.card-field`
 - [Sunday Dinner shared-map occurrence](../projections/photography/sunday-dinner-shared-map.md) - `projection.photo.sunday-dinner.shared-map`
 
 ## research-inquiry
@@ -485,6 +488,7 @@
 - [NYC Council field-kit photograph oral history, July 2026](../sources/recollections/nyc-council-field-kit-oral-history-2026-07.md) - `source.nyc-council.field-kit-oral-history.2026-07`
 - [Appointment of Diya Vij as Commissioner of Cultural Affairs](../sources/dcla-diya-vij-appointment-2026.md) - `source.nyc.diya-vij-appointment.2026`
 - [NYC launches the Public Interest Technology Crew - July 2026](../sources/nyc-pit-crew-launch-2026.md) - `source.nyc.pit-crew-launch.2026-07-13`
+- [NYC Artist Coalition steering-group card-field photo metadata capsule](../sources/photo-metadata/nycac-steering-group-card-field-2017.md) - `source.nycac.apple-photos.steering-group-card-field.2017`
 - [NYC Artist Coalition DCLA formation source return, 2026](../sources/archives/nycac-dcla-formation-source-return-2026-07.md) - `source.nycac.dcla-formation-source-return.2026-07`
 - [July Meeting, Shoe String Press BK](../sources/photo-metadata/nycac-shoestring-flickr-2017.md) - `source.nycac.flickr.shoestring-facilitation.2017`
 - [NYC nightlife forum corrected working transcript, 2026](../sources/nycac-nightlife-forum-transcript-2026.md) - `source.nycac.nightlife-forum-transcript.2026`

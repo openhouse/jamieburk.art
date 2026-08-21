@@ -1,5 +1,5 @@
 {
-  "id": "portfolio-photography-layout-v6",
+  "id": "portfolio-photography-layout-v7",
   "title": "Human Index photographic portfolio layout",
   "intent": "Photography changes the portfolio's editorial rhythm while remaining public-safe, accessible, and subordinate to human publication authority.",
   "criteria": [
@@ -11,7 +11,7 @@
     {
       "id": "governed-photographic-field",
       "blocking": true,
-      "criterion": "The launch candidate uses exactly five fully bound, credited, Jamie-authorized field derivatives: the unchanged East River hero, the two destination-reviewed NYC Artist Coalition occurrences, the Sunday Dinner cover, and the KC Town Hall cover; three newly curated cover leads remain private pending exact rights, dignity, and attribution review."
+      "criterion": "The launch candidate uses exactly six fully bound, credited, Jamie-authorized field derivatives: the unchanged East River hero, three destination-reviewed NYC Artist Coalition occurrences, the Sunday Dinner cover, and the KC Town Hall cover; additional curated leads remain private pending exact rights, dignity, and attribution review."
     },
     {
       "id": "metadata-and-locator-safety",
@@ -22,6 +22,11 @@
       "id": "editorial-not-decorative",
       "blocking": true,
       "criterion": "The East River hero remains unchanged; two restrained field-and-system pairs make implementation legible on the homepage and Fair Rent case study, while About and Colophon remain text-led."
+    },
+    {
+      "id": "knowledge-wiki-photographic-metaphor",
+      "blocking": true,
+      "criterion": "The Source-Backed Team Memory lab uses the governed NYC Artist Coalition card-field occurrence to show collective knowledge becoming navigable without implying that the structure created the knowledge, proving later software architecture, or assigning sole authorship."
     },
     {
       "id": "truthful-project-cover-field",

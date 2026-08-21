@@ -4,6 +4,7 @@ export type PortfolioPhoto = {
     | "save-nyc-spaces-town-hall"
     | "coalition-facilitation-shoestring"
     | "sunday-dinner-shared-map"
+    | "knowledge-wiki-collective-synthesis"
     | "kc-town-hall-roof-work";
   src: string;
   width: number;
@@ -23,6 +24,7 @@ export type PortfolioPhoto = {
     | "work-196-sunday-dinner"
     | "work-kc-town-hall"
     | "work-index"
+    | "lab-source-backed-team-memory"
     | "social-preview"
   )[];
   publicationStatus: "jamie-authorized";
@@ -153,6 +155,37 @@ export const portfolioPhotos = {
     },
     publicUseBoundary:
       "Jamie authorized this exact portfolio occurrence from the designated portfolio album. Sunday Dinner NYC is credited as project custodian; participant identities, remarks, attendance, and private gathering records remain outside the public bundle."
+  },
+  knowledgeWikiCollectiveSynthesis: {
+    id: "knowledge-wiki-collective-synthesis",
+    src: "/images/field-notes/knowledge-wiki-collective-synthesis.webp",
+    width: 1600,
+    height: 1067,
+    alt: "Dozens of handwritten idea cards form loose clusters across a wooden floor during an NYC Artist Coalition working session.",
+    caption:
+      "Handwritten project ideas spread across the floor during an NYC Artist Coalition steering-group session, 2017.",
+    credit: "Photo courtesy of NYC Artist Coalition.",
+    wikiId: "asset.photo.nycac.steering-group-card-field.2017.001",
+    derivativeId: "derivative.photo.nycac.steering-group-card-field.v1",
+    placementIds: ["projection.photo.source-backed-team-memory.card-field"],
+    captionAssertionIds: [
+      "statement.photo.nycac.steering-group-card-field.context.v1",
+      "statement.photo.nycac.steering-group-card-field.year.v1"
+    ],
+    creditAssertionIds: [
+      "statement.photo.nycac.steering-group-card-field.custody.v1"
+    ],
+    knowledgeStatus: "bound",
+    placements: ["lab-source-backed-team-memory"],
+    publicationStatus: "jamie-authorized",
+    releaseState: {
+      publicGit: "approved",
+      staging: "approved",
+      production: "open",
+      indexing: "open"
+    },
+    publicUseBoundary:
+      "Jamie authorized portfolio publication from the designated portfolio album. NYC Artist Coalition is credited as project custodian; the photograph makes collective synthesis visible but does not establish individual authorship, exact agreement, later software architecture, outcome, or sole credit."
   },
   kcTownHallRoofWork: {
     id: "kc-town-hall-roof-work",

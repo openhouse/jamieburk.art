@@ -5,7 +5,7 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-07-26
+last_reviewed: 2026-08-21
 review_by: 2027-01-26
 canonical_path: docs/knowledge-bank/indexes/photography.md
 summary: Public-safe orientation to the governed relationship among private photo sources, first-class Wiki records, exact portfolio occurrences, recollection, correction, and human publication gates.
@@ -18,6 +18,16 @@ relations:
     target: asset.photo.kc-town-hall.roof-work.2019.001
     href: ../assets/photographs/kc-town-hall-roof-work-2019.md
     context: Destination-cleared field-implementation photograph for the KC Town Hall work index and case study.
+  - type: has_asset
+    target: asset.photo.nycac.steering-group-card-field.2017.001
+    href: ../assets/photographs/nycac-steering-group-card-field-2017.md
+    context: Destination-cleared collective-synthesis photograph for the Source-Backed Team Memory lab.
+  - type: related_to
+    target: evaluation.curatorial.knowledge-wiki-card-field.2026-08-21
+    href: ../evaluations/curatorial/knowledge-wiki-card-field-2026-08-21.md
+  - type: related_to
+    target: projection.photo.source-backed-team-memory.card-field
+    href: ../projections/photography/source-backed-team-memory-card-field.md
   - type: related_to
     target: evaluation.curatorial.portfolio-project-covers.2026-08-13
     href: ../evaluations/curatorial/portfolio-project-covers-2026-08-13.md
@@ -141,6 +151,17 @@ and the [KC Town Hall roof-work photograph](../assets/photographs/kc-town-hall-r
 Their individual photographers are not confirmed, so the public occurrence
 credits Sunday Dinner NYC and KC Town Hall respectively. Production publication
 and indexing remain separate human decisions.
+
+## Knowledge Wiki Graph occurrence
+
+The [NYC Artist Coalition card-field photograph](../assets/photographs/nycac-steering-group-card-field-2017.md)
+was selected for the Source-Backed Team Memory lab after an exact inventory
+join and close review of the visible cards. The
+[curatorial record](../evaluations/curatorial/knowledge-wiki-card-field-2026-08-21.md)
+and [page occurrence](../projections/photography/source-backed-team-memory-card-field.md)
+keep the metaphor separate from the historical evidence: the photograph makes
+collective synthesis visible but does not prove the later software architecture
+or assign sole authorship.
 
 ## East River canary
 

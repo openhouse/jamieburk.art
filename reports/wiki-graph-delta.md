@@ -3,13 +3,13 @@
 
 **Source commit:** `d36db00177f3fb359420f7fd09c829fa5c219ca3`
 **Generation time:** 2026-08-21T06:38:01-04:00
-**Source fingerprint:** `de30058eb88a77a6e6d51b01c28a73edbeac7d526d33e075a17dd0f6c34387bd`
+**Source fingerprint:** `16bbbdf126426b15d51a9ba8bda0d835313a5eb5f7b38b5ceea23757a75a5fdd`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 70
+- Nodes added: 74
 - Nodes removed: 38
-- Edges added: 223
+- Edges added: 240
 - Edges removed: 184
 - New type-aware orphans: 1
 - Current rights-review records: 186
@@ -18,10 +18,12 @@ Compared with the graph artifact on `origin/develop`.
 
 - `asset.photo.nycac.save-nyc-spaces-town-hall.2017.001`
 - `asset.photo.nycac.shoestring-facilitation.2017.001`
+- `asset.photo.nycac.steering-group-card-field.2017.001`
 - `claim.employment.mobility-and-location.2026-08-15`
 - `claim.nycac.crs-frontline-advocacy.2026-07-08`
 - `correction.photo.portfolio-project-credits.2026-08-20`
 - `decision.photo.launch-2026.field-system-pairs`
+- `evaluation.curatorial.knowledge-wiki-card-field.2026-08-21`
 - `evaluation.curatorial.launch-2026.field-system-pairs`
 - `evaluation.jobs.betanyc-newsletter.2026-08-21`
 - `evaluation.jobs.civic-match.profile-and-reader-gates`
@@ -53,6 +55,7 @@ Compared with the graph artifact on `origin/develop`.
 - `projection.photo.global-social-preview.east-river`
 - `projection.photo.launch-2026.fair-rent.shoestring-facilitation`
 - `projection.photo.launch-2026.home.save-nyc-spaces-town-hall`
+- `projection.photo.source-backed-team-memory.card-field`
 - `research.nycac.crs-frontline-source-return.2026-08-13`
 - `research.portfolio-project-cover-field.2026-08-14`
 - `research.restored-project-sites.close-reading.2026-08-14`
@@ -78,6 +81,7 @@ Compared with the graph artifact on `origin/develop`.
 - `source.jobs.nyc-oti.product-management-search.2026-08-20`
 - `source.kc-town-hall.live-site.2026-08-14`
 - `source.knowledge-wiki-graph-practice-review.2026-08-21`
+- `source.nycac.apple-photos.steering-group-card-field.2017`
 - `source.nycac.flickr.shoestring-facilitation.2017`
 - `source.permission.jamie-nycac-portfolio-album.2026-08`
 - `source.permitflow.leadership.2026-08-15`

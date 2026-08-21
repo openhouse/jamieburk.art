@@ -69,6 +69,48 @@ test("removing the Fair Rent field-and-system pair fails closed", () => {
   assert(result.failures.some(({ criterion }) => criterion === "editorial-not-decorative"));
 });
 
+test("the Knowledge Wiki Graph lab retains its governed collective-synthesis photograph", () => {
+  const path = "apps/www/src/app/lab/source-backed-team-memory/page.tsx";
+  const source = readFileSync(path, "utf8").replace(
+    "portfolioPhotos.knowledgeWikiCollectiveSynthesis",
+    "portfolioPhotos.eastRiver"
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(
+    result.failures.some(
+      ({ criterion }) => criterion === "knowledge-wiki-photographic-metaphor"
+    )
+  );
+});
+
+test("the collective-synthesis photograph introduces the long-form method", () => {
+  const path = "apps/www/src/app/lab/source-backed-team-memory/page.tsx";
+  const source = readFileSync(path, "utf8");
+  const sectionStart = source.indexOf(
+    '        <section className="mt-12 border-y border-jb-ink/12 py-10">'
+  );
+  const closing = "        </section>\n";
+  const sectionEnd = source.indexOf(closing, sectionStart) + closing.length;
+  const section = source.slice(sectionStart, sectionEnd);
+  const withoutSection = source.slice(0, sectionStart) + source.slice(sectionEnd);
+  const methodComponent = withoutSection.indexOf("<SourceBackedMemory />");
+  const methodEnd =
+    withoutSection.indexOf("        </div>\n", methodComponent) +
+    "        </div>\n".length;
+  const sourceWithLatePhoto =
+    withoutSection.slice(0, methodEnd) +
+    section +
+    withoutSection.slice(methodEnd);
+  const result = evaluateLayout(process.cwd(), { [path]: sourceWithLatePhoto });
+  assert.equal(result.passed, false);
+  assert(
+    result.failures.some(
+      ({ criterion }) => criterion === "knowledge-wiki-photographic-metaphor"
+    )
+  );
+});
+
 test("removing mobile-menu close-on-navigation behavior fails closed", () => {
   const path = "apps/www/src/components/SiteHeader.tsx";
   const source = readFileSync(path, "utf8").replace(

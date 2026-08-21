@@ -28,6 +28,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     "governed-photographic-field",
     "metadata-and-locator-safety",
     "editorial-not-decorative",
+    "knowledge-wiki-photographic-metaphor",
     "truthful-project-cover-field",
     "hiring-argument-project-sequence",
     "truthful-photo-credit",
@@ -53,20 +54,21 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     "/images/field-notes/coalition-facilitation-shoestring.webp",
     "/images/field-notes/jamie-east-river.webp",
     "/images/field-notes/kc-town-hall-roof-work.webp",
+    "/images/field-notes/knowledge-wiki-collective-synthesis.webp",
     "/images/field-notes/save-nyc-spaces-town-hall.webp",
     "/images/field-notes/sunday-dinner-shared-map.webp"
   ];
   if (JSON.stringify(sources.sort()) !== JSON.stringify(expectedSources.sort())) {
-    fail("governed-photographic-field", "The public field must contain exactly the five reviewed derivatives.");
+    fail("governed-photographic-field", "The public field must contain exactly the six reviewed derivatives.");
   }
 
   for (const field of ["id", "width", "height", "alt", "caption", "credit", "placements", "publicationStatus", "publicUseBoundary"]) {
     const count = [...manifest.matchAll(new RegExp(`\\b${field}:`, "g"))].length;
-    if (count !== 6) {
+    if (count !== 7) {
       fail("manifest-bound-publication", `Manifest field ${field} is missing from one or more photos.`);
     }
   }
-  if ([...manifest.matchAll(/publicationStatus: "jamie-authorized"/g)].length !== 6) {
+  if ([...manifest.matchAll(/publicationStatus: "jamie-authorized"/g)].length !== 7) {
     fail("manifest-bound-publication", "Every photo must retain the Jamie-authorized publication status.");
   }
   const requiredPhotoCredits = [
@@ -85,7 +87,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   }
   if (
     [...manifest.matchAll(/credit: "Photo courtesy of NYC Artist Coalition\."/g)]
-      .length !== 2 ||
+      .length !== 3 ||
     /Paul Mossine|Photographer not identified in (?:the )?retained export/i.test(
       manifest
     )
@@ -98,8 +100,8 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
 
   const publicImageRoot = path.join(root, "apps/www/public/images/field-notes");
   const publicImages = walkFiles(publicImageRoot).sort();
-  if (publicImages.length !== 5 || publicImages.some((file) => !file.endsWith(".webp"))) {
-    fail("governed-photographic-field", "The field-notes directory must contain only the five fully bound WebP derivatives.");
+  if (publicImages.length !== 6 || publicImages.some((file) => !file.endsWith(".webp"))) {
+    fail("governed-photographic-field", "The field-notes directory must contain only the six fully bound WebP derivatives.");
   }
   for (const relativeImagePath of publicImages) {
     const bytes = readFileSync(path.join(publicImageRoot, relativeImagePath));
@@ -118,7 +120,8 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     readText("apps/www/src/components/FieldPhoto.tsx"),
     readText("apps/www/src/components/Hero.tsx"),
     readText("apps/www/src/app/about/page.tsx"),
-    readText("apps/www/src/app/colophon/page.tsx")
+    readText("apps/www/src/app/colophon/page.tsx"),
+    readText("apps/www/src/app/lab/source-backed-team-memory/page.tsx")
   ].join("\n");
   if (/[0-9A-F]{8}(?:-[0-9A-F]{4}){3}-[0-9A-F]{12}/i.test(photographySurface)) {
     fail("metadata-and-locator-safety", "A private archive UUID appears in public application source.");
@@ -133,8 +136,20 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   const governedImage = readText("apps/www/src/components/GovernedImage.tsx");
   const home = readText("apps/www/src/app/page.tsx");
   const fairRent = readText("apps/www/src/app/work/[slug]/page.tsx");
+  const sourceBackedTeamMemory = readText(
+    "apps/www/src/app/lab/source-backed-team-memory/page.tsx"
+  );
   const albumPermission = readText(
     "docs/knowledge-bank/sources/permissions/jamie-nycac-portfolio-album-clearance-2026-08.md"
+  );
+  const portfolioAlbumPermission = readText(
+    "docs/knowledge-bank/sources/permissions/jamie-portfolio-album-2026-08-13.md"
+  );
+  const knowledgeWikiPhotoAsset = readText(
+    "docs/knowledge-bank/assets/photographs/nycac-steering-group-card-field-2017.md"
+  );
+  const knowledgeWikiPhotoProjection = readText(
+    "docs/knowledge-bank/projections/photography/source-backed-team-memory-card-field.md"
   );
   const letNYCDanceCapture = readText(
     "docs/knowledge-bank/sources/photo-metadata/let-nyc-dance-selected-frame-2026-08.md"
@@ -163,6 +178,46 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     !fairRent.includes('<FieldSystemEvidence variant="fair-rent" />')
   ) {
     fail("editorial-not-decorative", "The two field-and-system pairs moved outside their reviewed editorial sequence.");
+  }
+  const knowledgeWikiPhoto = readFileSync(
+    path.join(
+      root,
+      "apps/www/public/images/field-notes/knowledge-wiki-collective-synthesis.webp"
+    )
+  );
+  const knowledgeWikiPhotoSha = createHash("sha256")
+    .update(knowledgeWikiPhoto)
+    .digest("hex");
+  if (
+    !sourceBackedTeamMemory.includes(
+      "const photo = portfolioPhotos.knowledgeWikiCollectiveSynthesis"
+    ) ||
+    !sourceBackedTeamMemory.includes("alt={photo.alt}") ||
+    !sourceBackedTeamMemory.includes("src={photo.src}") ||
+    !sourceBackedTeamMemory.includes("{photo.caption}") ||
+    !sourceBackedTeamMemory.includes("{photo.credit}") ||
+    sourceBackedTeamMemory.indexOf("alt={photo.alt}") >
+      sourceBackedTeamMemory.indexOf("<SourceBackedMemory />") ||
+    !/The\s+structure does not invent the knowledge/.test(
+      sourceBackedTeamMemory
+    ) ||
+    !portfolioAlbumPermission.includes(
+      "asset.photo.nycac.steering-group-card-field.2017.001"
+    ) ||
+    !knowledgeWikiPhotoAsset.includes(
+      "checksum: 3142209a27765b140ce3b3b64fdae1db57970262a9e6fddf38bf020cf59db50c"
+    ) ||
+    knowledgeWikiPhotoSha !==
+      "3142209a27765b140ce3b3b64fdae1db57970262a9e6fddf38bf020cf59db50c" ||
+    !knowledgeWikiPhotoProjection.includes("interpretation_boundary:") ||
+    !knowledgeWikiPhotoProjection.includes(
+      "It does not imply that the diagram created that knowledge"
+    )
+  ) {
+    fail(
+      "knowledge-wiki-photographic-metaphor",
+      "The Source-Backed Team Memory lab lost its exact governed collective-synthesis occurrence or its interpretation boundary."
+    );
   }
   if (
     !albumPermission.includes("album_scope_publication: approved") ||

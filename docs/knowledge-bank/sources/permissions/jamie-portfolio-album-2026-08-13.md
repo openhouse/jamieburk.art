@@ -6,7 +6,7 @@ source_kind: first-party-publication-authorization
 status: maintained
 visibility: summary-only
 sensitivity: moderate
-last_reviewed: 2026-08-13
+last_reviewed: 2026-08-21
 review_by: 2027-02-13
 canonical_path: docs/knowledge-bank/sources/permissions/jamie-portfolio-album-2026-08-13.md
 summary: Public-safe capsule recording Jamie Burkart's destination-bound authorization to select and publish photographs from the designated Apple Photos portfolio album without exposing album identifiers or private metadata.
@@ -14,6 +14,7 @@ authorization:
   checked: true
   authority: Jamie Burkart
   authorized_at: 2026-08-13
+  reaffirmed_at: 2026-08-21
   source_scope: designated Apple Photos portfolio album
   allowed_destination:
     - jamieburk.art professional portfolio
@@ -28,6 +29,7 @@ authorization:
     - asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2
     - asset.photo.sunday-dinner.shared-map.2013.001
     - asset.photo.kc-town-hall.roof-work.2019.001
+    - asset.photo.nycac.steering-group-card-field.2017.001
   required_credit: Known photographers are visibly credited; otherwise the responsible project receives the courtesy credit.
   excludes:
     - Apple Photos identifiers
@@ -58,6 +60,9 @@ relations:
   - type: related_to
     target: asset.photo.kc-town-hall.roof-work.2019.001
     href: ../../assets/photographs/kc-town-hall-roof-work-2019.md
+  - type: related_to
+    target: asset.photo.nycac.steering-group-card-field.2017.001
+    href: ../../assets/photographs/nycac-steering-group-card-field-2017.md
   - type: uses_source
     target: source.correction.portfolio-project-photo-credits.2026-08-20
     href: ../corrections/portfolio-project-photo-credits-2026-08-20.md
@@ -74,6 +79,9 @@ relations:
 - [x] Jamie asks every project to receive an excellent, truthful cover visual
   and authorizes the curated Sunday Dinner and KC Town Hall derivatives for
   public Git and staging in this portfolio.
+- [x] Jamie authorizes photographs in the designated 2026 portfolio album and
+  selects the NYC Artist Coalition card-field image for the Knowledge Wiki
+  Graph lab occurrence.
 - [x] The existing East River homepage hero remains unchanged.
 - [x] Known photographers remain visibly credited; other public occurrences
   use the responsible project's courtesy credit.

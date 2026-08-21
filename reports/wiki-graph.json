@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-21T06:38:01-04:00",
   "sourceCommit": "d36db00177f3fb359420f7fd09c829fa5c219ca3",
-  "sourceFingerprint": "de30058eb88a77a6e6d51b01c28a73edbeac7d526d33e075a17dd0f6c34387bd",
+  "sourceFingerprint": "16bbbdf126426b15d51a9ba8bda0d835313a5eb5f7b38b5ceea23757a75a5fdd",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -186,6 +186,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-13",
       "reviewBy": "2027-02-13"
+    },
+    {
+      "id": "asset.photo.nycac.steering-group-card-field.2017.001",
+      "path": "docs/knowledge-bank/assets/photographs/nycac-steering-group-card-field-2017.md",
+      "title": "NYC Artist Coalition steering-group card field, 2017",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe record for the selected overhead photograph of handwritten project ideas arranged during an NYC Artist Coalition steering-group session.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2027-02-21"
     },
     {
       "id": "asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb",
@@ -2827,6 +2840,19 @@
       "reviewBy": "2027-01-26"
     },
     {
+      "id": "evaluation.curatorial.knowledge-wiki-card-field.2026-08-21",
+      "path": "docs/knowledge-bank/evaluations/curatorial/knowledge-wiki-card-field-2026-08-21.md",
+      "title": "Knowledge Wiki Graph photographic metaphor review",
+      "kind": "evaluation",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Curatorial review selecting one destination-cleared NYC Artist Coalition card-field photograph for the Source-Backed Team Memory lab after provenance, legibility, privacy, credit, and interpretation checks.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2027-02-21"
+    },
+    {
       "id": "evaluation.curatorial.launch-2026.field-system-pairs",
       "path": "docs/knowledge-bank/evaluations/curatorial/launch-2026-field-system-pairs.md",
       "title": "Launch 2026 field-and-system pair curatorial proposal",
@@ -3440,7 +3466,7 @@
       "sensitivity": "low",
       "summary": "Public-safe orientation to the governed relationship among private photo sources, first-class Wiki records, exact portfolio occurrences, recollection, correction, and human publication gates.",
       "aliases": [],
-      "lastReviewed": "2026-07-26",
+      "lastReviewed": "2026-08-21",
       "reviewBy": "2027-01-26"
     },
     {
@@ -4606,6 +4632,19 @@
       "reviewBy": "2027-01-26"
     },
     {
+      "id": "projection.photo.source-backed-team-memory.card-field",
+      "path": "docs/knowledge-bank/projections/photography/source-backed-team-memory-card-field.md",
+      "title": "Source-Backed Team Memory collective-synthesis photo occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact lab-page occurrence using the NYC Artist Coalition card-field photograph to make collective knowledge becoming navigable intuitively legible.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2027-02-21"
+    },
+    {
       "id": "projection.photo.sunday-dinner.shared-map",
       "path": "docs/knowledge-bank/projections/photography/sunday-dinner-shared-map.md",
       "title": "Sunday Dinner shared-map occurrence",
@@ -5542,6 +5581,19 @@
       "reviewBy": "2026-09-13"
     },
     {
+      "id": "source.nycac.apple-photos.steering-group-card-field.2017",
+      "path": "docs/knowledge-bank/sources/photo-metadata/nycac-steering-group-card-field-2017.md",
+      "title": "NYC Artist Coalition steering-group card-field photo metadata capsule",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public-safe capsule joining the selected photo-select occurrence to its exact existing Apple Photos inventory record without exposing the library identifier, archive filename, private path, or raw metadata.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2027-02-21"
+    },
+    {
       "id": "source.nycac.dcla-formation-source-return.2026-07",
       "path": "docs/knowledge-bank/sources/archives/nycac-dcla-formation-source-return-2026-07.md",
       "title": "NYC Artist Coalition DCLA formation source return, 2026",
@@ -5824,7 +5876,7 @@
       "sensitivity": "moderate",
       "summary": "Public-safe capsule recording Jamie Burkart's destination-bound authorization to select and publish photographs from the designated Apple Photos portfolio album without exposing album identifiers or private metadata.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
+      "lastReviewed": "2026-08-21",
       "reviewBy": "2027-02-13"
     },
     {
@@ -6609,6 +6661,38 @@
       "to": "source.permission.jamie-nycac-portfolio-album.2026-08",
       "source": "frontmatter",
       "href": "../../sources/permissions/jamie-nycac-portfolio-album-clearance-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac.steering-group-card-field.2017.001",
+      "type": "projected_to",
+      "to": "projection.photo.source-backed-team-memory.card-field",
+      "source": "frontmatter",
+      "href": "../../projections/photography/source-backed-team-memory-card-field.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac.steering-group-card-field.2017.001",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac.steering-group-card-field.2017.001",
+      "type": "uses_source",
+      "to": "source.nycac.apple-photos.steering-group-card-field.2017",
+      "source": "frontmatter",
+      "href": "../../sources/photo-metadata/nycac-steering-group-card-field-2017.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac.steering-group-card-field.2017.001",
+      "type": "uses_source",
+      "to": "source.permission.jamie-portfolio-album.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/jamie-portfolio-album-2026-08-13.md",
       "context": null
     },
     {
@@ -12382,6 +12466,38 @@
       "context": null
     },
     {
+      "from": "evaluation.curatorial.knowledge-wiki-card-field.2026-08-21",
+      "type": "related_to",
+      "to": "asset.photo.nycac.steering-group-card-field.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-steering-group-card-field-2017.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.curatorial.knowledge-wiki-card-field.2026-08-21",
+      "type": "related_to",
+      "to": "projection.photo.source-backed-team-memory.card-field",
+      "source": "frontmatter",
+      "href": "../../projections/photography/source-backed-team-memory-card-field.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.curatorial.knowledge-wiki-card-field.2026-08-21",
+      "type": "uses_source",
+      "to": "source.nycac.apple-photos.steering-group-card-field.2017",
+      "source": "frontmatter",
+      "href": "../../sources/photo-metadata/nycac-steering-group-card-field-2017.md",
+      "context": null
+    },
+    {
+      "from": "evaluation.curatorial.knowledge-wiki-card-field.2026-08-21",
+      "type": "uses_source",
+      "to": "source.permission.jamie-portfolio-album.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/jamie-portfolio-album-2026-08-13.md",
+      "context": null
+    },
+    {
       "from": "evaluation.curatorial.launch-2026.field-system-pairs",
       "type": "resulted_in",
       "to": "decision.photo.launch-2026.field-system-pairs",
@@ -14104,6 +14220,14 @@
     {
       "from": "index.knowledge-wiki.photography",
       "type": "has_asset",
+      "to": "asset.photo.nycac.steering-group-card-field.2017.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/nycac-steering-group-card-field-2017.md",
+      "context": "Destination-cleared collective-synthesis photograph for the Source-Backed Team Memory lab."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "has_asset",
       "to": "asset.photo.sunday-dinner.shared-map.2013.001",
       "source": "frontmatter",
       "href": "../assets/photographs/sunday-dinner-shared-map-2013.md",
@@ -14163,6 +14287,14 @@
       "to": "edition.layout-c.2026-07",
       "source": "frontmatter",
       "href": "../projections/photography/edition-layout-c-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "evaluation.curatorial.knowledge-wiki-card-field.2026-08-21",
+      "source": "frontmatter",
+      "href": "../evaluations/curatorial/knowledge-wiki-card-field-2026-08-21.md",
       "context": null
     },
     {
@@ -14251,6 +14383,14 @@
       "to": "projection.photo.layout-c.home.east-river",
       "source": "frontmatter",
       "href": "../projections/photography/layout-c-home-east-river.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "projection.photo.source-backed-team-memory.card-field",
+      "source": "frontmatter",
+      "href": "../projections/photography/source-backed-team-memory-card-field.md",
       "context": null
     },
     {
@@ -17494,6 +17634,30 @@
       "context": null
     },
     {
+      "from": "projection.photo.source-backed-team-memory.card-field",
+      "type": "related_to",
+      "to": "evaluation.curatorial.knowledge-wiki-card-field.2026-08-21",
+      "source": "frontmatter",
+      "href": "../../evaluations/curatorial/knowledge-wiki-card-field-2026-08-21.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.source-backed-team-memory.card-field",
+      "type": "uses_source",
+      "to": "asset.photo.nycac.steering-group-card-field.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-steering-group-card-field-2017.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.source-backed-team-memory.card-field",
+      "type": "uses_source",
+      "to": "source.permission.jamie-portfolio-album.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/jamie-portfolio-album-2026-08-13.md",
+      "context": null
+    },
+    {
       "from": "projection.photo.sunday-dinner.shared-map",
       "type": "related_to",
       "to": "edition.launch.2026-08",
@@ -18782,6 +18946,22 @@
       "context": null
     },
     {
+      "from": "source.nycac.apple-photos.steering-group-card-field.2017",
+      "type": "related_to",
+      "to": "asset.photo.nycac.steering-group-card-field.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-steering-group-card-field-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.nycac.apple-photos.steering-group-card-field.2017",
+      "type": "related_to",
+      "to": "source.permission.jamie-portfolio-album.2026-08-13",
+      "source": "frontmatter",
+      "href": "../permissions/jamie-portfolio-album-2026-08-13.md",
+      "context": null
+    },
+    {
       "from": "source.nycac.dcla-formation-source-return.2026-07",
       "type": "documents",
       "to": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
@@ -19011,6 +19191,14 @@
       "to": "asset.photo.nycac.shoestring-facilitation.2017.001",
       "source": "frontmatter",
       "href": "../../assets/photographs/nycac-shoestring-facilitation-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.permission.jamie-portfolio-album.2026-08-13",
+      "type": "related_to",
+      "to": "asset.photo.nycac.steering-group-card-field.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-steering-group-card-field-2017.md",
       "context": null
     },
     {
@@ -20024,6 +20212,15 @@
       "fromPath": "docs/knowledge-bank/assets/photographs/nycac-shoestring-facilitation-2017.md",
       "from": "asset.photo.nycac.shoestring-facilitation.2017.001",
       "toPath": "apps/www/public/images/field-notes/coalition-facilitation-shoestring.webp",
+      "to": null,
+      "fragment": null,
+      "line": 4,
+      "kind": "image"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/assets/photographs/nycac-steering-group-card-field-2017.md",
+      "from": "asset.photo.nycac.steering-group-card-field.2017.001",
+      "toPath": "apps/www/public/images/field-notes/knowledge-wiki-collective-synthesis.webp",
       "to": null,
       "fragment": null,
       "line": 4,
@@ -21535,6 +21732,33 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/photography.md",
       "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-walkshed-2019.md",
+      "to": "asset.graphic.kc-town-hall.walkshed.2019.001",
+      "fragment": null,
+      "line": 100,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/research-runs/photographic-source-return-2026-07-26.md",
+      "to": "research.photographic-source-return.2026-07-26",
+      "fragment": null,
+      "line": 102,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-project-sites-2017-2026.md",
+      "to": "index.photo-set.nycac-project-sites.2017-2026",
+      "fragment": null,
+      "line": 107,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
       "toPath": "docs/knowledge-bank/evaluations/curatorial/launch-2026-field-system-pairs.md",
       "to": "evaluation.curatorial.launch-2026.field-system-pairs",
       "fragment": null,
@@ -21616,10 +21840,37 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/photography.md",
       "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/photographs/nycac-steering-group-card-field-2017.md",
+      "to": "asset.photo.nycac.steering-group-card-field.2017.001",
+      "fragment": null,
+      "line": 38,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/evaluations/curatorial/knowledge-wiki-card-field-2026-08-21.md",
+      "to": "evaluation.curatorial.knowledge-wiki-card-field.2026-08-21",
+      "fragment": null,
+      "line": 41,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/projections/photography/source-backed-team-memory-card-field.md",
+      "to": "projection.photo.source-backed-team-memory.card-field",
+      "fragment": null,
+      "line": 42,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
       "toPath": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
       "to": "asset.photo.east-river-manhattan-bridge.2022.001",
       "fragment": null,
-      "line": 55,
+      "line": 66,
       "kind": "link"
     },
     {
@@ -21628,7 +21879,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/east-river-canoe-2022.md",
       "to": "index.photo-set.east-river-canoe.2022",
       "fragment": null,
-      "line": 56,
+      "line": 67,
       "kind": "link"
     },
     {
@@ -21637,7 +21888,7 @@
       "toPath": "docs/knowledge-bank/people/elana-gordon.md",
       "to": "person.elana-gordon",
       "fragment": null,
-      "line": 57,
+      "line": 68,
       "kind": "link"
     },
     {
@@ -21646,7 +21897,7 @@
       "toPath": "docs/knowledge-bank/sources/photo-metadata/east-river-2022-public-safe.md",
       "to": "source.photo-metadata.east-river.2022.public-safe",
       "fragment": null,
-      "line": 58,
+      "line": 69,
       "kind": "link"
     },
     {
@@ -21655,7 +21906,7 @@
       "toPath": "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md",
       "to": "source.permission.elana-gordon.east-river.2026-07",
       "fragment": null,
-      "line": 59,
+      "line": 70,
       "kind": "link"
     },
     {
@@ -21664,7 +21915,7 @@
       "toPath": "docs/knowledge-bank/evaluations/curatorial/layout-c-home-east-river-v1.md",
       "to": "evaluation.curatorial.layout-c.home-east-river.v1",
       "fragment": null,
-      "line": 60,
+      "line": 71,
       "kind": "link"
     },
     {
@@ -21673,7 +21924,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/layout-c-home-east-river-v1.md",
       "to": "decision.photo.layout-c.home-east-river.v1",
       "fragment": null,
-      "line": 61,
+      "line": 72,
       "kind": "link"
     },
     {
@@ -21682,7 +21933,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/layout-c-resume-no-photo-v1.md",
       "to": "decision.photo.layout-c.resume-no-photo.v1",
       "fragment": null,
-      "line": 62,
+      "line": 73,
       "kind": "link"
     },
     {
@@ -21691,7 +21942,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/pre-launch-rights-narrowing-2026-07-28.md",
       "to": "decision.photo.pre-launch.rights-narrowing.2026-07-28",
       "fragment": null,
-      "line": 63,
+      "line": 74,
       "kind": "link"
     },
     {
@@ -21700,7 +21951,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
       "to": "projection.photo.layout-c.home.east-river",
       "fragment": null,
-      "line": 64,
+      "line": 75,
       "kind": "link"
     },
     {
@@ -21709,7 +21960,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/global-social-preview-east-river.md",
       "to": "projection.photo.global-social-preview.east-river",
       "fragment": null,
-      "line": 65,
+      "line": 76,
       "kind": "link"
     },
     {
@@ -21718,7 +21969,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/edition-layout-c-2026-07.md",
       "to": "edition.layout-c.2026-07",
       "fragment": null,
-      "line": 66,
+      "line": 77,
       "kind": "link"
     },
     {
@@ -21727,7 +21978,7 @@
       "toPath": "docs/knowledge-bank/corrections/east-river-credit-2026-07.md",
       "to": "correction.photo.east-river-credit.2026-07",
       "fragment": null,
-      "line": 67,
+      "line": 78,
       "kind": "link"
     },
     {
@@ -21736,7 +21987,7 @@
       "toPath": "docs/knowledge-bank/sources/recollections/jamie-canoe-commuting-2026-07.md",
       "to": "source.recollection.jamie-canoe-commuting.2026-07",
       "fragment": null,
-      "line": 68,
+      "line": 79,
       "kind": "link"
     },
     {
@@ -21745,7 +21996,7 @@
       "toPath": "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md",
       "to": "research-inquiry.documented-canoe-bike-journeys",
       "fragment": null,
-      "line": 69,
+      "line": 80,
       "kind": "link"
     },
     {
@@ -21754,7 +22005,7 @@
       "toPath": "docs/knowledge-bank/workflows/photography-east-river-canary.md",
       "to": "method.photography-east-river-canary",
       "fragment": null,
-      "line": 70,
+      "line": 81,
       "kind": "link"
     },
     {
@@ -21763,7 +22014,7 @@
       "toPath": "rfcs/0003-living-photographic-knowledge-loop.md",
       "to": null,
       "fragment": null,
-      "line": 78,
+      "line": 89,
       "kind": "link"
     },
     {
@@ -21772,7 +22023,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-dcla-formation-2017.md",
       "to": "index.photo-set.nycac-dcla-formation.2017",
       "fragment": null,
-      "line": 83,
+      "line": 94,
       "kind": "link"
     },
     {
@@ -21781,34 +22032,7 @@
       "toPath": "docs/knowledge-bank/indexes/photo-sets/kc-town-hall-fieldwork.md",
       "to": "index.photo-set.kc-town-hall-fieldwork",
       "fragment": null,
-      "line": 84,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-walkshed-2019.md",
-      "to": "asset.graphic.kc-town-hall.walkshed.2019.001",
-      "fragment": null,
-      "line": 89,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/research-runs/photographic-source-return-2026-07-26.md",
-      "to": "research.photographic-source-return.2026-07-26",
-      "fragment": null,
-      "line": 91,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-project-sites-2017-2026.md",
-      "to": "index.photo-set.nycac-project-sites.2017-2026",
-      "fragment": null,
-      "line": 96,
+      "line": 95,
       "kind": "link"
     },
     {

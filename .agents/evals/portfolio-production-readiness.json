@@ -326,17 +326,19 @@
       "grader": "hybrid",
       "blocking": false,
       "weight": 2,
-      "inputs": ["resume page", "AI Evals credential", "Source-Backed Team Memory lab"],
+      "inputs": ["resume page", "AI Evals credential", "Source-Backed Team Memory lab", "governed collective-synthesis photo occurrence"],
       "procedure": [
         "Verify the course-completion evidence and wording.",
-        "Inspect one synthetic or public-safe worked example of the Known, Open, Protected method."
+        "Inspect one synthetic or public-safe worked example of the Known, Open, Protected method.",
+        "Verify that the card-field photograph makes people's existing language and collective synthesis intuitive without being used as proof of the later architecture, individual authorship, exact agreement, or sole credit."
       ],
       "pass_criteria": [
         "Course completion is visible and accurately attributed as professional development.",
         "The lab includes one inspectable public-safe or synthetic worked example.",
+        "The lab's photographic metaphor is manifest-bound, captioned, credited to NYC Artist Coalition, destination-cleared, metadata-stripped, and paired with an explicit collective-credit and interpretation boundary.",
         "The page does not imply production SaaS, automated trust, client delivery, or access to private archives."
       ],
-      "evidence_required": ["credential artifact", "worked example", "claim-boundary review"],
+      "evidence_required": ["credential artifact", "worked example", "governed photo occurrence", "claim-boundary review"],
       "remediation_hint": "Show a bounded example and preserve the method's human-review and privacy limits."
     },
     {
