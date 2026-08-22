@@ -2,9 +2,9 @@
   "reportVersion": 1,
   "checkedAt": "2026-08-21T23:02:23.918Z",
   "baseUrl": "http://127.0.0.1:3102",
-  "publicSurfaceFingerprint": "bdccd6f12c9f99a7538a34afb18af05d6cc9e44ca78b064e7ac64bcab2fbb174",
+  "publicSurfaceFingerprint": "fba35e321160b9fa77987f9a0027f2aaa7d6601292947613b84ebabaa422e152",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 150,
+  "publicSurfaceFileCount": 151,
   "requestFailurePolicy": "Exclude canceled speculative Next.js RSC prefetches (net::ERR_ABORTED with an _rsc query); retain every other failed request.",
   "routes": [
     "/",

@@ -38,8 +38,12 @@ no warning or error.
 
 ## Independent holdouts
 
-Six fresh, sequential, public-packet-only holdouts reviewed candidate
-`c4110f7b4a583994e2dc61c545f6891fffb9a83a91112c4b4423f924d292094f`.
+The first local holdout run was bound before the new homepage component became a
+tracked file. GitHub's clean checkout correctly rejected that stale binding.
+Six replacement public-packet-only holdouts were therefore commissioned against
+the committed 153-path candidate fingerprint
+`152879547920be0c0338d95d73bed10a7aa946f7f97a7747c85f146928dd2b73`.
+All six scored 4 / 4 with no gaps.
 Each received only browser-visible public text and links plus the exact public
 resume; no repository, implementation discussion, private record, or prior
 score was supplied.
