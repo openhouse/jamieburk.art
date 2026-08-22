@@ -17,7 +17,7 @@ const signatureSituations = [
     situation:
       "An 80+ year-old industrial business needed to adapt online without losing the knowledge and voice that made it distinctive.",
     responsibility:
-      "I maintained and improved the web and e-commerce presence, coordinated incremental releases, and translated legacy operating knowledge into searchable content, analytics, marketing, and operational workflows.",
+      "I coordinated day-to-day web and e-commerce work: sequencing releases, maintaining analytics and content operations, and translating legacy knowledge into clear requirements.",
     operatingMechanics:
       "Incremental releases connected public content, e-commerce, analytics, marketing, and internal workflows; this was sustained stewardship rather than a one-time launch.",
     resultProofIds: [
@@ -48,7 +48,7 @@ const signatureSituations = [
     situation:
       "Open constituent-services data needed to become resident-facing issue paths and next-step guidance.",
     responsibility:
-      "I built an independent follow-on to the New York City Council's first CouncilStat hackathon and made its archived, unofficial status clear.",
+      "I independently framed the prototype, modeled issue paths and possible next steps from open records, and kept its relationship to the Council and current service status explicit.",
     operatingMechanics:
       "Public records became issue paths, district context, and possible next steps; the lifecycle now ends in an explicit archived, unofficial state rather than a current-service claim.",
     resultProofIds: ["callnyc-civic-data-guidance"],
@@ -111,14 +111,20 @@ const featuredCapabilityDestinations: Record<
     linkLabel: "See decision clarity in FairRentNYC"
   },
   "Operating documentation people use": {
-    href: "/lab/source-backed-team-memory",
-    linkLabel: "See the team-memory method"
+    href: "/work/fair-rent-nyc" as Route,
+    linkLabel: "See working memory in FairRentNYC"
   },
   "Public-facing launch and adoption": {
-    href: "https://kcspacesfund.com/",
-    linkLabel: "See public-facing launch at KC Spaces Fund"
+    href: "/work/callnyc" as Route,
+    linkLabel: "See the resident-facing CallNYC prototype"
   }
 };
+
+function resultWording(proof: ReturnType<typeof requireReadyOrCarefulProof>) {
+  return proof.id === "fair-rent-source-map"
+    ? proof.shortWording
+    : proof.publicWording;
+}
 
 export const metadata: Metadata = createMetadata({
   title: "Technical Operations & Implementation - Jamie Burkart",
@@ -188,7 +194,7 @@ export default function TechnicalOperationsPage() {
                     <ul className="space-y-3 text-jb-ink/76">
                       {item.results.map((proof) => (
                         <li className="leading-7" key={proof.id}>
-                          {proof.publicWording}
+                          {resultWording(proof)}
                         </li>
                       ))}
                     </ul>

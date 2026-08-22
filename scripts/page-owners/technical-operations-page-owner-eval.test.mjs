@@ -129,6 +129,36 @@ test("case-study links retain destination-specific labels", async () => {
   );
 });
 
+test("situation fields retain distinct responsibility and result jobs", async () => {
+  const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
+  const contract = loadContract();
+  const result = evaluateTechnicalOperationsPageOwners({
+    contract,
+    pageSource: loadPageSource(contract).replace(
+      "coordinated day-to-day web and e-commerce work",
+      "maintained the web and e-commerce presence"
+    )
+  });
+
+  assert.ok(
+    result.failures.includes("situation_fields_avoid_repeating_one_claim")
+  );
+});
+
+test("the source-map result retains its plain-language projection", async () => {
+  const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
+  const contract = loadContract();
+  const result = evaluateTechnicalOperationsPageOwners({
+    contract,
+    pageSource: loadPageSource(contract).replace(
+      "proof.shortWording",
+      "proof.publicWording"
+    )
+  });
+
+  assert.ok(result.failures.includes("source_map_uses_plain_language_projection"));
+});
+
 test("the three situation-to-result chains remain explicit", async () => {
   const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
   const contract = loadContract();

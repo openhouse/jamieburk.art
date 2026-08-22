@@ -138,10 +138,19 @@ export function evaluateTechnicalOperationsPageOwners({
       /featuredCapabilityDestinations\[row\.capability\]/.test(pageSource) &&
       /See sustained delivery at Harry J\. Epstein Company/.test(pageSource) &&
       /See decision clarity in FairRentNYC/.test(pageSource) &&
-      /See the team-memory method/.test(pageSource) &&
-      /See public-facing launch at KC Spaces Fund/.test(pageSource) &&
+      /See working memory in FairRentNYC/.test(pageSource) &&
+      /See the resident-facing CallNYC prototype/.test(pageSource) &&
+      !/KC Spaces Fund/.test(pageSource) &&
+      !/team-memory method/.test(pageSource) &&
       !/destinationsFor\(row\.proofIds\)/.test(pageSource) &&
       !/JBCard/.test(pageSource),
+    situation_fields_avoid_repeating_one_claim:
+      /coordinated day-to-day web and e-commerce work/.test(pageSource) &&
+      /independently framed the prototype/.test(pageSource) &&
+      /resultWording\(proof\)/.test(pageSource),
+    source_map_uses_plain_language_projection:
+      /proof\.id === "fair-rent-source-map"/.test(pageSource) &&
+      /proof\.shortWording/.test(pageSource),
     case_study_links_name_their_destinations:
       /Read the Harry J\. Epstein Company case study/.test(pageSource) &&
       /Read the FairRentNYC case study/.test(pageSource) &&
