@@ -49,6 +49,18 @@
         "The comparison states that projects are not equivalent in scale, maturity, authority, adoption, risk, and outcome.",
         "Historical client dates and current-state labels remain accurate."
       ]
+    },
+    {
+      "id": "C21-005",
+      "title": "Exact staging-C release attestation",
+      "blocking": true,
+      "pass_criteria": [
+        "The staging-c Git remote main ref equals the full intended candidate SHA.",
+        "The staging-C health route identifies the staging environment and canonical staging-C origin, reports a healthy non-production service, and reports indexing disabled.",
+        "The homepage and health route send noindex, nofollow and robots.txt disallows the entire staging site.",
+        "All fourteen public hiring-reader routes in the responsive review matrix return HTTP 200."
+      ],
+      "command": "node scripts/check-staging-c-release.mjs --expected-sha <full-candidate-sha>"
     }
   ]
 }
