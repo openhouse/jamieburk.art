@@ -117,10 +117,10 @@ export function evaluateTechnicalOperationsPageOwners({
       /My responsibility/.test(pageSource) &&
       /What became usable/.test(pageSource),
     foregrounded_results_state_evidence_maturity:
-      /Evidence status:/.test(pageSource) &&
-      /Sustained implementation/.test(pageSource) &&
-      /no policy outcome is attributed to the documentation alone/.test(pageSource) &&
-      /current-service adoption and resident outcomes are not claimed/.test(pageSource),
+      /Lifecycle and evidence:/.test(pageSource) &&
+      /growth is contribution framing/.test(pageSource) &&
+      /no policy outcome is attributed to the documentation/.test(pageSource) &&
+      /no current-service adoption or resident outcome claimed/.test(pageSource),
     signature_situations_name_operating_mechanics:
       /Operating mechanics/.test(pageSource) &&
       /Incremental releases connected public content/.test(pageSource) &&
@@ -129,19 +129,16 @@ export function evaluateTechnicalOperationsPageOwners({
         pageSource
       ),
     historical_hje_lifecycle_boundary_is_explicit:
-      /The historical engagement ended in 2015/.test(pageSource) &&
-      /public-safe handoff reconstruction preserves clear requirements, verification practices, reusable patterns, and owned next actions/.test(
-        pageSource
-      ) &&
-      /successor website is current business context—not Jamie's present stewardship/.test(
+      /Historical 2009–2015 engagement/.test(pageSource) &&
+      /growth is contribution framing/.test(pageSource) &&
+      /successor site is context—not my current work/.test(pageSource) &&
+      /public-safe reconstruction preserves the reusable operating pattern/.test(
         pageSource
       ),
     active_fair_rent_lifecycle_boundary_is_explicit:
-      /shared memory documents a current coordination practice/.test(pageSource) &&
-      /maintain decision records and concrete artifacts while action ownership stays explicit/.test(
-        pageSource
-      ) &&
-      /documentation is assigned sole coalition authority/.test(pageSource),
+      /Current coordination practice/.test(pageSource) &&
+      /maintain the record, action ownership stays explicit/.test(pageSource) &&
+      /no policy outcome is attributed to the documentation/.test(pageSource),
     five_part_operating_method:
       /term: "Frame the work"[\s\S]*term: "Make ownership visible"[\s\S]*term: "Create a delivery rhythm"[\s\S]*term: "Prepare for adoption"[\s\S]*term: "Leave a useful handoff"/.test(
         pageSource
@@ -167,6 +164,9 @@ export function evaluateTechnicalOperationsPageOwners({
       !/team-memory method/.test(pageSource) &&
       !/destinationsFor\(row\.proofIds\)/.test(pageSource) &&
       !/JBCard/.test(pageSource),
+    capability_routes_share_the_method_section:
+      /<nav aria-label="Evidence by capability"/.test(pageSource) &&
+      /Four compact routes to the project evidence/.test(pageSource) === false,
     situation_fields_avoid_repeating_one_claim:
       /coordinated day-to-day web and e-commerce work/.test(pageSource) &&
       /independently framed the prototype/.test(pageSource) &&
@@ -180,7 +180,10 @@ export function evaluateTechnicalOperationsPageOwners({
       /Read the CallNYC case study/.test(pageSource) &&
       !/>\s*Read case study\s*</.test(pageSource),
     resume_and_contact_actions_remain_present:
-      /<ResumeCTA \/>/.test(pageSource) && /<ContactCTA \/>/.test(pageSource),
+      /<ResumeCTA compact \/>/.test(pageSource) &&
+      /<ContactCTA showResumeLink=\{false\} \/>/.test(pageSource) &&
+      /Download resume PDF/.test(pageSource) &&
+      /Email Jamie/.test(pageSource),
     protected_paths_stay_out_of_public_page: !protectedPathPattern.test(pageSource),
     uncalibrated_gate_remains_advisory:
       contract?.calibration?.status === "required" &&

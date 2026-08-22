@@ -194,7 +194,7 @@ test("foregrounded results state their evidence maturity", async () => {
   const result = evaluateTechnicalOperationsPageOwners({
     contract,
     pageSource: loadPageSource(contract).replace(
-      "current-service adoption and resident outcomes are not claimed",
+      "no current-service adoption or resident outcome claimed",
       "impact"
     )
   });
@@ -226,8 +226,8 @@ test("the historical Epstein case keeps lifecycle and handoff boundaries explici
   const result = evaluateTechnicalOperationsPageOwners({
     contract,
     pageSource: loadPageSource(contract).replace(
-      "The historical engagement ended in 2015.",
-      "The work continued."
+      "Historical 2009–2015 engagement",
+      "Historical engagement"
     )
   });
 
@@ -242,14 +242,28 @@ test("the active FairRentNYC case keeps lifecycle and authority boundaries expli
   const result = evaluateTechnicalOperationsPageOwners({
     contract,
     pageSource: loadPageSource(contract).replace(
-      "shared memory documents a current coordination practice",
-      "shared memory exists"
+      "Current coordination practice",
+      "Coordination practice"
     )
   });
 
   assert.ok(
     result.failures.includes("active_fair_rent_lifecycle_boundary_is_explicit")
   );
+});
+
+test("capability routes stay inside the method section", async () => {
+  const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
+  const contract = loadContract();
+  const result = evaluateTechnicalOperationsPageOwners({
+    contract,
+    pageSource: loadPageSource(contract).replace(
+      '<nav aria-label="Evidence by capability"',
+      '<div aria-label="Evidence by capability"'
+    )
+  });
+
+  assert.ok(result.failures.includes("capability_routes_share_the_method_section"));
 });
 
 test("the five-part operating method remains intact", async () => {

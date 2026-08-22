@@ -1,7 +1,11 @@
 import { JBButton } from "@/components/JBButton";
 import { site } from "@/data/site";
 
-export function ContactCTA() {
+export function ContactCTA({
+  showResumeLink = true
+}: {
+  showResumeLink?: boolean;
+} = {}) {
   return (
     <section className="border-y border-jb-ink/20 py-7">
       <p className="jb-section-label">Next conversation</p>
@@ -14,9 +18,11 @@ export function ContactCTA() {
         collaboration.
       </p>
       <div className="mt-5 flex flex-wrap gap-3">
-        <JBButton href="/resume" variant="secondary">
-          View resume
-        </JBButton>
+        {showResumeLink ? (
+          <JBButton href="/resume" variant="secondary">
+            View resume
+          </JBButton>
+        ) : null}
         <JBButton href={site.emailHref}>
           Email Jamie
         </JBButton>

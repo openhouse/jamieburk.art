@@ -24,8 +24,8 @@ const signatureSituations = [
       "hje-modernization-stewardship",
       "hje-revenue-growth-contribution"
     ],
-    evidenceStatus:
-      "Sustained implementation; the contribution to business growth is carefully framed. The historical engagement ended in 2015. Its public-safe handoff reconstruction preserves clear requirements, verification practices, reusable patterns, and owned next actions, while the successor website is current business context—not Jamie's present stewardship."
+    lifecycleNote:
+      "Historical 2009–2015 engagement; growth is contribution framing, and the successor site is context—not my current work. The public-safe reconstruction preserves the reusable operating pattern."
   },
   {
     project: "FairRentNYC / Commercial Rent Stabilization",
@@ -38,8 +38,8 @@ const signatureSituations = [
     operatingMechanics:
       "Public sources and publishable summaries stayed distinct from private coalition context; decision records, review questions, and next-step lanes made shared work reviewable.",
     resultProofIds: ["fair-rent-campaign-memory", "fair-rent-source-map"],
-    evidenceStatus:
-      "The shared memory documents a current coordination practice: I maintain decision records and concrete artifacts while action ownership stays explicit and neither I nor the documentation is assigned sole coalition authority. No policy outcome is attributed to the documentation alone."
+    lifecycleNote:
+      "Current coordination practice: I maintain the record, action ownership stays explicit, and no policy outcome is attributed to the documentation."
   },
   {
     project: "CallNYC",
@@ -52,8 +52,8 @@ const signatureSituations = [
     operatingMechanics:
       "Public records became issue paths, district context, and possible next steps.",
     resultProofIds: ["callnyc-civic-data-guidance"],
-    evidenceStatus:
-      "Delivered a resident-facing prototype with verified public coverage. Its lifecycle ends in an explicit archived, unofficial state; current-service adoption and resident outcomes are not claimed."
+    lifecycleNote:
+      "Delivered prototype with verified public coverage; archived and unofficial, with no current-service adoption or resident outcome claimed."
   }
 ].map((item) => ({
   ...item,
@@ -216,7 +216,7 @@ export default function TechnicalOperationsPage() {
                 <span className="font-semibold text-jb-ink/72">
                   Lifecycle and evidence:
                 </span>{" "}
-                {primarySituation.evidenceStatus}
+                {primarySituation.lifecycleNote}
               </p>
               <Link
                 className="mt-6 inline-flex min-h-11 items-center border-b border-jb-blue font-semibold text-jb-blue hover:border-jb-green hover:text-jb-green"
@@ -243,51 +243,28 @@ export default function TechnicalOperationsPage() {
                       {item.project}
                     </Link>
                   </h3>
-                  <dl className="mt-6 space-y-5">
-                    <div>
-                      <dt className="font-label text-xs uppercase tracking-[0.055em] text-jb-blue">
-                        Situation
-                      </dt>
-                      <dd className="mt-1 leading-7 text-jb-ink/76">
-                        {item.situation}
-                      </dd>
-                    </div>
-                    <div>
-                      <dt className="font-label text-xs uppercase tracking-[0.055em] text-jb-blue">
-                        My responsibility
-                      </dt>
-                      <dd className="mt-1 leading-7 text-jb-ink/76">
-                        {item.responsibility}
-                      </dd>
-                    </div>
-                    <div>
-                      <dt className="font-label text-xs uppercase tracking-[0.055em] text-jb-blue">
-                        What became usable
-                      </dt>
-                      <dd className="mt-1">
-                        <ul className="space-y-3 text-jb-ink/76">
-                          {item.results.map((proof) => (
-                            <li className="leading-7" key={proof.id}>
-                              {resultWording(proof)}
-                            </li>
-                          ))}
-                        </ul>
-                      </dd>
-                    </div>
-                    <div>
-                      <dt className="font-label text-xs uppercase tracking-[0.055em] text-jb-blue">
-                        Operating mechanics
-                      </dt>
-                      <dd className="mt-1 leading-7 text-jb-ink/76">
-                        {item.operatingMechanics}
-                      </dd>
-                    </div>
-                  </dl>
-                  <p className="mt-5 border-l-2 border-jb-ink/16 pl-3 text-sm leading-6 text-jb-ink/62">
-                    <span className="font-semibold text-jb-ink/72">
-                      Lifecycle and evidence:
+                  <p className="mt-5 leading-7 text-jb-ink/76">
+                    {item.situation}
+                  </p>
+                  <p className="mt-4 leading-7 text-jb-ink/76">
+                    <span className="font-semibold text-jb-ink">My role:</span>{" "}
+                    {item.responsibility}
+                  </p>
+                  <ul className="mt-4 space-y-3 text-jb-ink/76">
+                    {item.results.map((proof) => (
+                      <li className="leading-7" key={proof.id}>
+                        {resultWording(proof)}
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-4 leading-7 text-jb-ink/76">
+                    <span className="font-semibold text-jb-ink">
+                      How it worked:
                     </span>{" "}
-                    {item.evidenceStatus}
+                    {item.operatingMechanics}
+                  </p>
+                  <p className="mt-5 border-l-2 border-jb-ink/16 pl-3 text-sm leading-6 text-jb-ink/62">
+                    {item.lifecycleNote}
                   </p>
                   <Link
                     className="mt-5 inline-flex min-h-11 items-center border-b border-jb-blue text-sm font-semibold text-jb-blue hover:border-jb-green hover:text-jb-green"
@@ -312,66 +289,63 @@ export default function TechnicalOperationsPage() {
             recognizable.
           </p>
         </div>
-        <ol className="border-t border-jb-ink/16">
-          {operatingMethod.map((item) => (
-            <li
-              className="grid gap-2 border-b border-jb-ink/16 py-5 sm:grid-cols-[12rem_1fr] sm:gap-8"
-              key={item.term}
-            >
-              <span className="font-semibold text-jb-ink">{item.term}</span>
-              <span className="leading-7 text-jb-ink/74">
-                {item.detail}{" "}
-                <Link
-                  className="font-semibold text-jb-blue underline decoration-jb-blue/45 underline-offset-4 hover:text-jb-green"
-                  href={item.href}
-                >
-                  Seen in {item.evidence}.
-                </Link>
-              </span>
-            </li>
-          ))}
-        </ol>
-      </section>
-
-      <section className="grid gap-8 border-b border-jb-ink/16 py-14 lg:grid-cols-[0.32fr_0.68fr]">
         <div>
-          <h2 className="text-4xl leading-tight text-jb-ink">
-            Evidence by capability
-          </h2>
-          <p className="mt-5 max-w-[32ch] leading-7 text-jb-ink/72">
-            Four compact routes to the project evidence behind each
-            capability.
-          </p>
-        </div>
-        <div className="grid border-t border-jb-ink/16 sm:grid-cols-2">
-          {technicalOperationsProofRows.map((row) => {
-            const destination = featuredCapabilityDestinations[row.capability];
-
-            return (
-              <section
-                className="border-b border-jb-ink/16 py-6 sm:odd:pr-6 sm:even:border-l sm:even:border-jb-ink/16 sm:even:pl-6"
-                id={row.capability.toLowerCase().replaceAll(" ", "-")}
-                key={row.capability}
+          <ol className="border-t border-jb-ink/16">
+            {operatingMethod.map((item) => (
+              <li
+                className="grid gap-2 border-b border-jb-ink/16 py-5 sm:grid-cols-[12rem_1fr] sm:gap-8"
+                key={item.term}
               >
-                <h3 className="text-xl font-semibold leading-7 text-jb-ink">
-                  {row.capability}
-                </h3>
-                <p className="mt-2 leading-7 text-jb-ink/72">{row.toward}</p>
-                <Link
-                  className="mt-3 inline-flex min-h-11 items-center border-b border-jb-blue text-sm font-semibold text-jb-blue hover:border-jb-green hover:text-jb-green"
-                  href={destination.href}
-                >
-                  {destination.linkLabel}
-                </Link>
-              </section>
-            );
-          })}
+                <span className="font-semibold text-jb-ink">{item.term}</span>
+                <span className="leading-7 text-jb-ink/74">
+                  {item.detail}{" "}
+                  <Link
+                    className="font-semibold text-jb-blue underline decoration-jb-blue/45 underline-offset-4 hover:text-jb-green"
+                    href={item.href}
+                  >
+                    Seen in {item.evidence}.
+                  </Link>
+                </span>
+              </li>
+            ))}
+          </ol>
+          <nav aria-label="Evidence by capability" className="mt-8">
+            <p className="font-label text-sm uppercase tracking-[0.055em] text-jb-green">
+              Evidence by capability
+            </p>
+            <ul className="mt-3 grid gap-x-6 border-t border-jb-ink/16 sm:grid-cols-2">
+              {technicalOperationsProofRows.map((row) => {
+                const destination =
+                  featuredCapabilityDestinations[row.capability];
+
+                return (
+                  <li
+                    className="border-b border-jb-ink/16 py-4"
+                    id={row.capability.toLowerCase().replaceAll(" ", "-")}
+                    key={row.capability}
+                  >
+                    <Link
+                      className="group block min-h-11 text-jb-blue hover:text-jb-green"
+                      href={destination.href}
+                    >
+                      <span className="block font-semibold">
+                        {row.capability}
+                      </span>
+                      <span className="mt-1 block text-sm leading-6 text-jb-ink/62 group-hover:text-jb-green">
+                        {destination.linkLabel}
+                      </span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
         </div>
       </section>
 
       <div className="grid gap-8 py-14 lg:grid-cols-[0.38fr_0.62fr]">
-        <ResumeCTA />
-        <ContactCTA />
+        <ResumeCTA compact />
+        <ContactCTA showResumeLink={false} />
       </div>
     </article>
   );
