@@ -1,0 +1,42 @@
+{
+  "id": "colophon-page-owner-development-run-2026-08-22",
+  "kind": "fictionalized-development-simulation",
+  "evaluatedAt": "2026-08-22T13:30:27Z",
+  "targetRoute": "/colophon",
+  "candidateSourceSha256": "2a91287077fe55883f2bd2f49a9e185ac87c4dc77deb25d41e06218cdc94e32f",
+  "renderedScreenshots": {
+    "desktopSha256": "6e89590a5191e1cad31e457f2b6617bc981b9b662d08c1ecb6b87e8955085bcd",
+    "narrowSha256": "074c861167a09ce7c3f28c44468ad6215cfd289607b22c54de63705ac28792f3"
+  },
+  "inputBoundary": {
+    "renderedPageOnly": true,
+    "repositoryAccess": false,
+    "priorOwnerOutputVisible": false
+  },
+  "realPeopleParticipated": false,
+  "disclaimer": "Fictionalized analytical lenses informed by public work. These results are not quotations, participation claims, approvals, endorsements, or predictions by the real people named.",
+  "results": [
+    {
+      "ownerId": "deborah-treisman-editorial-shape",
+      "critique": "The central editorial argument is clear on first reading: a deliberately small public portfolio is selected from a deeper, continuously governed archive. The sequence from selective public rendering to the three graphs explains how that relationship works. Supporting production sections remain visibly subordinate and do not erase the story.",
+      "recommendedRevision": "Consider moving additional technology and typeface detail to the linked public source in a future pass.",
+      "result": "pass"
+    },
+    {
+      "ownerId": "maggie-appleton-system-legibility",
+      "critique": "The page makes the knowledge flow legible from source authority through traceable evidence and revisable meaning to audience-specific projection. It keeps automation, modeled critique, and human publication authority distinct.",
+      "recommendedRevision": "No revision needed.",
+      "result": "pass"
+    },
+    {
+      "ownerId": "ellen-lupton-form-and-reading",
+      "critique": "The page visibly differentiates thesis, method, review practice, and production notes. Its typographic hierarchy, measure, contrast, rules, and spacing remain coherent across desktop and narrow viewports.",
+      "recommendedRevision": "No revision needed.",
+      "result": "pass"
+    }
+  ],
+  "verdict": "pass",
+  "releaseAuthority": "advisory-until-calibrated",
+  "modeledPassAuthorizesDeployment": false,
+  "humanPublicationOwner": "Jamie Burkart"
+}
