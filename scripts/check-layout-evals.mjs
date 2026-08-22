@@ -150,8 +150,11 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     fail("editorial-not-decorative", "The governed flyer and matched before-and-after field photographs must remain composed as one resident-service evidence sequence.");
   }
   if (/FieldPhoto|portfolioPhotos|\/images\/field-notes\//.test(about) ||
-      /FieldPhoto|portfolioPhotos|\/images\/field-notes\//.test(colophon)) {
-    fail("editorial-not-decorative", "About and Colophon must remain text-led until additional images complete exact rights and credit review.");
+      !colophon.includes("portfolioPhotos.eastRiver") ||
+      !colophon.includes("src={photograph.src}") ||
+      !colophon.includes("{photograph.caption} {photograph.credit}") ||
+      /FieldPhoto|\/images\/field-notes\//.test(colophon)) {
+    fail("editorial-not-decorative", "About must remain text-led, and Colophon must use only the manifest-bound East River occurrence with its public caption and credit.");
   }
 
   const workCovers = readText("apps/www/src/data/work-covers.ts");

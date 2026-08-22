@@ -1,11 +1,11 @@
 {
-  "reportVersion": 3,
-  "checkedAt": "2026-08-21T22:59:52.292Z",
-  "baseUrl": "http://127.0.0.1:3102",
-  "publicSurfaceFingerprint": "fba35e321160b9fa77987f9a0027f2aaa7d6601292947613b84ebabaa422e152",
+  "reportVersion": 4,
+  "checkedAt": "2026-08-22T21:39:49.953Z",
+  "baseUrl": "http://127.0.0.1:3212",
+  "publicSurfaceFingerprint": "1e598e6f6a7482012f43830dafb79011dbc5da057a3343cd0d8c90c79f0ed103",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 151,
-  "method": "Playwright keyboard interaction plus scoped DOM and viewport inspection on the exact local candidate. This is not a human screen-reader or assistive-technology session.",
+  "publicSurfaceFileCount": 152,
+  "method": "Fresh Playwright keyboard interaction plus DOM and viewport inspection on the exact Node 26 production build. This is not a human screen-reader or assistive-technology session.",
   "keyboard": {
     "desktopTabSequence": [
       {
@@ -61,9 +61,9 @@
     "skipLinkIsFirst": true,
     "skipActivation": {
       "hash": "#main",
-      "activeElementId": null
+      "activeElementId": "main"
     },
-    "passed": false
+    "passed": true
   },
   "mobileNavigation": {
     "menuFocusBeforeOpen": {
@@ -211,5 +211,15 @@
     "Jamie visual and content approval",
     "Production deployment and indexing approval"
   ],
-  "passed": true
+  "passed": true,
+  "refresh": {
+    "candidateChange": "The colophon route and its governed photo, prose, and editorial-accountability disclosure changed; shared navigation, homepage, and About interactions were re-exercised on the exact candidate.",
+    "currentChecks": [
+      "Keyboard order and visible focus were freshly exercised on the exact homepage.",
+      "The mobile menu opened from its summary control and transferred focus to its first link.",
+      "Home and About passed fresh 640-pixel and 320-pixel reflow checks.",
+      "About retained one main landmark, one h1, and a coherent heading sequence."
+    ],
+    "humanBoundary": "No human screen-reader or browser-zoom completion claim is made."
+  }
 }

@@ -1,10 +1,10 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-08-21T23:02:23.918Z",
-  "baseUrl": "http://127.0.0.1:3102",
-  "publicSurfaceFingerprint": "fba35e321160b9fa77987f9a0027f2aaa7d6601292947613b84ebabaa422e152",
+  "checkedAt": "2026-08-22T21:40:19.556Z",
+  "baseUrl": "http://127.0.0.1:3212",
+  "publicSurfaceFingerprint": "1e598e6f6a7482012f43830dafb79011dbc5da057a3343cd0d8c90c79f0ed103",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 151,
+  "publicSurfaceFileCount": 152,
   "requestFailurePolicy": "Exclude canceled speculative Next.js RSC prefetches (net::ERR_ABORTED with an _rsc query); retain every other failed request.",
   "routes": [
     "/",
@@ -881,8 +881,8 @@
     "failedRequests": 0,
     "nonSuccessResponses": 0,
     "invalidHeadingOrLandmarkRows": 0,
-    "lazyImagesObserved": 108,
-    "unloadedImagesBeforeScroll": 79,
+    "lazyImagesObserved": 112,
+    "unloadedImagesBeforeScroll": 76,
     "lazyImageFollowUpPerformed": true,
     "allImagesLoadedAfterScroll": true
   },
@@ -944,7 +944,7 @@
     "passed": true
   },
   "navigationReview": {
-    "checkedAt": "2026-08-21T23:02:23.918Z",
+    "checkedAt": "2026-08-22T21:40:19.556Z",
     "startRoute": "/",
     "destinationRoute": "/about",
     "startHttpStatus": 200,

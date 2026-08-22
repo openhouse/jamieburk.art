@@ -8,7 +8,7 @@ sensitivity: low
 last_reviewed: 2026-07-26
 review_by: 2027-01-26
 canonical_path: docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md
-summary: Public-safe record for a 2022 photograph of Jamie Burkart at the East River, made by Elana Gordon and used as the Layout C homepage hero and jamieburk.art social preview.
+summary: Public-safe record for a 2022 photograph of Jamie Burkart at the East River, made by Elana Gordon and used on the homepage, colophon, and jamieburk.art social preview.
 media_type: photograph
 rights_state: cleared
 consent_state: cleared
@@ -17,6 +17,7 @@ projection:
   status: active
   surfaces:
     - /
+    - /colophon
     - /opengraph-image
 private_source_binding:
   provider: photo-fieldwork
@@ -96,6 +97,10 @@ relations:
     target: projection.photo.social-preview.east-river
     href: ../../projections/photography/social-preview-east-river.md
     context: Full-bleed social-preview occurrence with creator attribution in alt metadata and the governed record.
+  - type: projected_to
+    target: projection.photo.colophon.east-river
+    href: ../../projections/photography/colophon-east-river.md
+    context: Colophon occurrence used to explain the portfolio's editorial path through one public object.
   - type: uses_source
     target: source.photo-metadata.east-river.2022.public-safe
     href: ../../sources/photo-metadata/east-river-2022-public-safe.md
@@ -114,12 +119,12 @@ relations:
 
 ## Current public use
 
-The exact derivatives appear as the Layout C homepage hero and as a full-bleed,
-fixed-ratio jamieburk.art social preview. The homepage visibly credits Elana
-Gordon. The social preview keeps her creator attribution in alt metadata and the
-governed record while omitting it from the rendered pixels under the exact
-permission capsule. Jamie Burkart's photo archive remains the custodian of this
-copy.
+The exact derivatives appear as the Layout C homepage hero, as the colophon's
+worked editorial example, and as a full-bleed, fixed-ratio jamieburk.art social
+preview. The homepage and colophon visibly credit Elana Gordon. The social
+preview keeps her creator attribution in alt metadata and the governed record
+while omitting it from the rendered pixels under the exact permission capsule.
+Jamie Burkart's photo archive remains the custodian of this copy.
 
 ## What is established
 

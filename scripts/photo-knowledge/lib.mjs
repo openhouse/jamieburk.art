@@ -698,7 +698,16 @@ export function evaluatePhotoKnowledgeModel(model) {
       permission?.permission_capsule?.social_preview?.metadata_credit ===
         "Photograph by Elana Gordon." &&
       permission?.permission_capsule?.derivative_scope ===
-        "Layout C homepage crop and exact 1200 by 630 social-preview crop" &&
+        "Complete 4 by 3 derivative on the homepage and colophon, plus the exact 1200 by 630 social-preview crop" &&
+      permission?.permission_capsule?.allowed_destination?.includes(
+        "jamieburk.art portfolio homepage"
+      ) &&
+      permission?.permission_capsule?.allowed_destination?.includes(
+        "jamieburk.art portfolio colophon at /colophon"
+      ) &&
+      permission?.permission_capsule?.allowed_destination?.includes(
+        "jamieburk.art social preview at /opengraph-image"
+      ) &&
       permission?.permission_capsule?.public_git === "approved" &&
       permission?.permission_capsule?.staging === "approved" &&
       permission?.permission_capsule?.production === "open" &&

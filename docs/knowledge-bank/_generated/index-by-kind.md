@@ -3,7 +3,7 @@
 
 **Source commit:** `36e3808ed5a36a543c534ddc7148d31d3e9ee5aa`
 **Generation time:** 2026-08-21T19:20:31-04:00
-**Source fingerprint:** `62de5d9514e8938cca88e06f77cf8edda06d7a3f23b2adb1f8aeaf1bff64ac55`
+**Source fingerprint:** `c132668d80165f50b7c29776eaa8c2405b2618b0ba13f16c6d111dc3a1c1c892`
 
 ## application
 
@@ -401,6 +401,7 @@
 - [CallNYC portfolio projection](../projections/work-callnyc.md) - `portfolio.work.callnyc`
 - [KC Spaces Fund portfolio projection](../projections/work-kc-spaces-fund.md) - `portfolio.work.kc-spaces-fund`
 - [Technical Operations portfolio projection](../projections/work-technical-operations.md) - `portfolio.work.technical-operations`
+- [Colophon East River editorial-path occurrence](../projections/photography/colophon-east-river.md) - `projection.photo.colophon.east-river`
 - [Fair Rent NYC Market Hotel public-room occurrence](../projections/photography/fair-rent-nyc-market-hotel-banner.md) - `projection.photo.fair-rent-nyc.market-hotel-banner`
 - [Fair Rent NYC Shoestring Press facilitation occurrence](../projections/photography/fair-rent-nyc-shoestring-facilitation.md) - `projection.photo.fair-rent-nyc.shoestring-facilitation`
 - [Homepage screen-and-room Shoestring Press occurrence](../projections/photography/home-screen-room-shoestring.md) - `projection.photo.home.screen-room-shoestring`

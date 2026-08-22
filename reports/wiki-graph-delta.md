@@ -3,13 +3,13 @@
 
 **Source commit:** `36e3808ed5a36a543c534ddc7148d31d3e9ee5aa`
 **Generation time:** 2026-08-21T19:20:31-04:00
-**Source fingerprint:** `62de5d9514e8938cca88e06f77cf8edda06d7a3f23b2adb1f8aeaf1bff64ac55`
+**Source fingerprint:** `c132668d80165f50b7c29776eaa8c2405b2618b0ba13f16c6d111dc3a1c1c892`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 44
+- Nodes added: 45
 - Nodes removed: 0
-- Edges added: 170
+- Edges added: 175
 - Edges removed: 8
 - New type-aware orphans: 0
 - Current rights-review records: 185
@@ -34,6 +34,7 @@ Compared with the graph artifact on `origin/develop`.
 - `person.kathrin-aste`
 - `person.thomas-edlinger`
 - `portfolio.work.kc-spaces-fund`
+- `projection.photo.colophon.east-river`
 - `projection.photo.home.screen-room-shoestring`
 - `projection.photo.knowledge-wiki.collective-map`
 - `projection.photo.social-preview.east-river`

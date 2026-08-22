@@ -29,6 +29,7 @@ export type PortfolioPhoto = {
     | "kc-town-hall"
     | "work-index"
     | "social-preview"
+    | "colophon"
     | "knowledge-wiki-graph"
   )[];
   publicationStatus: "jamie-authorized";
@@ -62,7 +63,10 @@ export const portfolioPhotos = {
     credit: "Photograph by Elana Gordon. From Jamie Burkart's photo archive.",
     wikiId: "asset.photo.east-river-manhattan-bridge.2022.001",
     derivativeId: "derivative.photo.east-river.layout-c.v1",
-    placementIds: ["projection.photo.layout-c.home.east-river"],
+    placementIds: [
+      "projection.photo.layout-c.home.east-river",
+      "projection.photo.colophon.east-river"
+    ],
     captionAssertionIds: [
       "statement.photo.east-river.place.v1",
       "statement.photo.east-river.capture-year.v1"
@@ -72,7 +76,7 @@ export const portfolioPhotos = {
       "statement.photo.east-river.custody.v1"
     ],
     knowledgeStatus: "bound",
-    placements: ["home"],
+    placements: ["home", "colophon"],
     publicationStatus: "jamie-authorized",
     releaseState: {
       publicGit: "approved",
@@ -81,7 +85,7 @@ export const portfolioPhotos = {
       indexing: "open"
     },
     publicUseBoundary:
-      "Elana Gordon is credited as photographer. Use is limited to this approved portfolio occurrence; no broader rights are asserted."
+      "Elana Gordon is credited as photographer. Use is limited to the approved home-page and colophon occurrences; no broader rights are asserted."
   },
   eastRiverSocialPreview: {
     id: "east-river-social-preview",

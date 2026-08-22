@@ -9,7 +9,7 @@ sensitivity: low
 last_reviewed: 2026-08-15
 review_by: 2027-02-13
 canonical_path: docs/knowledge-bank/projections/photography/edition-launch-2026-08.md
-summary: Dated launch-candidate edition retaining the East River homepage hero and binding nine governed visual occurrences across the homepage, social preview, work index, and situated-work case studies.
+summary: Dated launch-candidate edition retaining the East River homepage hero and binding ten governed visual occurrences across the homepage, colophon, social preview, work index, and situated-work case studies.
 projection_status: active
 candidate_lineage:
   base_branch: develop
@@ -20,6 +20,7 @@ purpose:
   - participatory-public-systems
 occurrences:
   - projection.photo.layout-c.home.east-river
+  - projection.photo.colophon.east-river
   - projection.photo.social-preview.east-river
   - projection.photo.fair-rent-nyc.shoestring-facilitation
   - projection.photo.fair-rent-nyc.market-hotel-banner
@@ -42,6 +43,9 @@ relations:
   - type: related_to
     target: projection.photo.layout-c.home.east-river
     href: layout-c-home-east-river.md
+  - type: related_to
+    target: projection.photo.colophon.east-river
+    href: colophon-east-river.md
   - type: related_to
     target: projection.photo.social-preview.east-river
     href: social-preview-east-river.md
@@ -74,7 +78,7 @@ relations:
 # August 2026 launch-candidate photographic edition
 
 This edition keeps the existing East River homepage hero unchanged. It binds
-nine governed visual occurrences: the hero, its complete-frame social preview,
+ten governed visual occurrences: the hero, its colophon editorial-path use, its complete-frame social preview,
 two Fair Rent NYC participation images, one Sunday Dinner shared-table image,
 one KC Town Hall field-work image, and the Tired of Tires flyer-to-field
 sequence.
@@ -88,6 +92,7 @@ open until Jamie approves the exact candidate commit.
 ## Bound occurrences
 
 - [East River homepage hero](layout-c-home-east-river.md)
+- [East River colophon editorial path](colophon-east-river.md)
 - [East River social preview](social-preview-east-river.md)
 - [Shoestring Press facilitation](fair-rent-nyc-shoestring-facilitation.md)
 - [Market Hotel public room](fair-rent-nyc-market-hotel-banner.md)

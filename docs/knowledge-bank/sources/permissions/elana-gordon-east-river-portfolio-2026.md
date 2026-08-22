@@ -9,12 +9,13 @@ sensitivity: moderate
 last_reviewed: 2026-08-15
 review_by: 2027-02-15
 canonical_path: docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md
-summary: Public-safe capsule recording creator confirmation, bounded portfolio permission, placement-specific credit choice, private evidence custody, and revocation handling.
+summary: Public-safe capsule recording creator confirmation, portfolio permission, placement-specific credit choice, private evidence custody, and revocation handling.
 permission_capsule:
   creator: person.elana-gordon
   asset: asset.photo.east-river-manhattan-bridge.2022.001
   allowed_destination:
     - jamieburk.art portfolio homepage
+    - jamieburk.art portfolio colophon at /colophon
     - jamieburk.art social preview at /opengraph-image
   allowed_context: Jamie Burkart professional portfolio
   required_credit: Photograph by Elana Gordon.
@@ -30,7 +31,7 @@ permission_capsule:
       alternatives_reviewed: 6
       unique_compositions_reviewed: 4
       rendered_sha256: 1f83d66b7e35e8a3a955819cf2104b79a88c9a8bd3953fd6fa691143bdb6da42
-  derivative_scope: Layout C homepage crop and exact 1200 by 630 social-preview crop
+  derivative_scope: Complete 4 by 3 derivative on the homepage and colophon, plus the exact 1200 by 630 social-preview crop
   public_git: approved
   staging: approved
   production: open

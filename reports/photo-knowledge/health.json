@@ -31,8 +31,8 @@
   "failedHardGates": [],
   "failedCriteria": [],
   "candidate": {
-    "fingerprint": "75545397953fefcd76820b73423ecb9e638bfd7a1cc0003b9ea7d9e9b9cca2a0",
-    "fileCount": 260,
+    "fingerprint": "693c52971e05684c8e7430b312391e208b5607bff86f233e5ea0abbf43037019",
+    "fileCount": 261,
     "files": [
       "apps/www/public/artifacts/wowlist/public-threshold.webp",
       "apps/www/public/images/artifacts/kc-town-hall-tired-of-tires-flyer.webp",
@@ -260,6 +260,7 @@
       "docs/knowledge-bank/indexes/photo-sets/nycac-project-sites-2017-2026.md",
       "docs/knowledge-bank/indexes/photography.md",
       "docs/knowledge-bank/people/elana-gordon.md",
+      "docs/knowledge-bank/projections/photography/colophon-east-river.md",
       "docs/knowledge-bank/projections/photography/edition-launch-2026-08.md",
       "docs/knowledge-bank/projections/photography/edition-layout-c-2026-07.md",
       "docs/knowledge-bank/projections/photography/fair-rent-nyc-market-hotel-banner.md",

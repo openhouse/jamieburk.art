@@ -21,7 +21,7 @@
     {
       "id": "editorial-not-decorative",
       "blocking": true,
-      "criterion": "The home photograph remains full-bleed and unchanged; the work index gives all seven projects one truthful visual threshold by composing governed situated-work photographs with project-specific public screenshots; the Fair Rent NYC sequence retains its campaign screenshot, captions, credits, and interpretation boundaries; About and Colophon remain text-led."
+      "criterion": "The home photograph remains full-bleed and unchanged; the work index gives all seven projects one truthful visual threshold by composing governed situated-work photographs with project-specific public screenshots; the Fair Rent NYC sequence retains its campaign screenshot, captions, credits, and interpretation boundaries; About remains text-led; and the Colophon may reuse only the manifest-bound East River photograph through its separately authorized occurrence."
     },
     {
       "id": "screen-room-continuity",
@@ -31,7 +31,7 @@
     {
       "id": "truthful-project-cover-field",
       "blocking": true,
-      "criterion": "Every work item has exactly one project-bound cover. Harry J. Epstein, CallNYC, KC Spaces Fund, and WOW List use their own public surfaces; Fair Rent NYC, Sunday Dinner, and KC Town Hall use governed photographs. Resume, contact, About, and Colophon remain deliberately text-led."
+      "criterion": "Every work item has exactly one project-bound cover. Harry J. Epstein, CallNYC, KC Spaces Fund, and WOW List use their own public surfaces; Fair Rent NYC, Sunday Dinner, and KC Town Hall use governed photographs. Resume, contact, and About remain deliberately text-led; the Colophon uses one governed photograph as the object of its editorial account."
     },
     {
       "id": "browser-window-presentation",

@@ -153,6 +153,14 @@ const claims: KnowledgeBank["claims"] = [
           "/work",
           "/about"
         ]
+      },
+      {
+        key: "colophon",
+        text:
+          "The Knowledge Wiki Graph connects each public claim to evidence. Jamie decides what appears here and revises it when the record changes.",
+        status: "active",
+        citationRequired: true,
+        surfaces: ["/colophon"]
       }
     ],
     evidence: [

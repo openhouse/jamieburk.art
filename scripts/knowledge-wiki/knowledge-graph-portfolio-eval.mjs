@@ -103,7 +103,7 @@ export function evaluateKnowledgeGraphPortfolio(candidate) {
   );
   check(
     candidate.colophon.includes("knowledge-wiki-graph-method") &&
-      candidate.colophon.includes("Read the evolving method") &&
+      candidate.colophon.includes("See the knowledge method in practice") &&
       candidate.colophon.includes("References pageId=\"colophon\"") ,
     "colophon does not provide a cited doorway into the method"
   );
@@ -216,6 +216,12 @@ export function evaluateKnowledgeGraphPortfolio(candidate) {
   check(Boolean(claim), "canonical Knowledge Wiki Graph claim is missing");
   if (claim) {
     const sourceIds = new Set(claim.evidence.map((item) => item.sourceId));
+    const caseStudyProjection = claim.projections.find(
+      (item) => item.key === "case-study"
+    );
+    const colophonProjection = claim.projections.find(
+      (item) => item.key === "colophon"
+    );
     check(claim.status === "confirmed-with-boundary", "canonical claim lost its boundary status");
     check(
       sourceIds.has("SRC-KNOWLEDGE-WIKI-RFC-0005-2026") &&
@@ -230,10 +236,15 @@ export function evaluateKnowledgeGraphPortfolio(candidate) {
       "canonical anti-claims omit topology, maturity, adoption, or publication safeguards"
     );
     check(
-      claim.projections.length === 1 &&
-        claim.projections[0].status === "active" &&
-        claim.projections[0].surfaces.length === 4,
-      "canonical projection must remain active only on the four reviewed surfaces"
+      claim.projections.length === 2 &&
+        caseStudyProjection?.status === "active" &&
+        caseStudyProjection.surfaces.length === 4 &&
+        colophonProjection?.status === "active" &&
+        JSON.stringify(colophonProjection.surfaces) ===
+          JSON.stringify(["/colophon"]) &&
+        /connects each public claim to evidence/i.test(colophonProjection.text) &&
+        /Jamie decides what appears here/i.test(colophonProjection.text),
+      "canonical projections must retain the four-surface case study and one-surface plain-language colophon wording"
     );
   }
 

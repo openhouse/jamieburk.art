@@ -3,7 +3,7 @@
 
 **Candidate commit:** `36e3808ed5a36a543c534ddc7148d31d3e9ee5aa`
 **Public report hash:** `956fc97f8a45aa5e15f89e94eb324dba0ceff517dec4f0244861375c835f8039`
-**Wiki fingerprint:** `62de5d9514e8938cca88e06f77cf8edda06d7a3f23b2adb1f8aeaf1bff64ac55`
+**Wiki fingerprint:** `c132668d80165f50b7c29776eaa8c2405b2618b0ba13f16c6d111dc3a1c1c892`
 
 The gap resolver runs after the public-only evaluator. It can identify Wiki evidence, but every public change remains human-reviewed.
 

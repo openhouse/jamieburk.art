@@ -24,7 +24,7 @@ function expectFailure(name, mutate, expected) {
 expectFailure(
   "the colophon cannot lose its doorway into the method",
   (candidate) => {
-    candidate.colophon = candidate.colophon.replace("Read the evolving method", "More");
+    candidate.colophon = candidate.colophon.replace("See the knowledge method in practice", "More");
   },
   /colophon does not provide a cited doorway/
 );
@@ -47,6 +47,19 @@ expectFailure(
     claim.antiClaims = claim.antiClaims.filter((item) => !/finished production/i.test(item));
   },
   /maturity/
+);
+
+expectFailure(
+  "the colophon cannot reuse the full case-study projection as its only wording",
+  (candidate) => {
+    const claim = candidate.knowledgeBank.claims.find(
+      (item) => item.id === "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026"
+    );
+    claim.projections = claim.projections.filter(
+      (projection) => projection.key !== "colophon"
+    );
+  },
+  /plain-language colophon wording/
 );
 
 expectFailure(

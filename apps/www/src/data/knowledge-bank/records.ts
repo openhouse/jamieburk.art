@@ -566,7 +566,7 @@ const knowledgeBankInput = {
       {
         id: "knowledge-wiki-graph-method",
         claimId: "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026",
-        projection: "case-study"
+        projection: "colophon"
       }
     ]
   }, {

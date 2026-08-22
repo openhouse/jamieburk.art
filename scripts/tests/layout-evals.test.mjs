@@ -92,6 +92,17 @@ test("the homepage hero remains bound to the East River photograph", () => {
   assert(result.failures.some(({ criterion }) => criterion === "editorial-not-decorative"));
 });
 
+test("the colophon retains its separately governed East River occurrence", () => {
+  const path = "apps/www/src/app/colophon/page.tsx";
+  const source = readFileSync(path, "utf8").replace(
+    "portfolioPhotos.eastRiver",
+    "portfolioPhotos.nycacMarketHotelBanner"
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "editorial-not-decorative"));
+});
+
 test("the homepage keeps the field-and-system bridge after capabilities", () => {
   const path = "apps/www/src/app/page.tsx";
   const source = readFileSync(path, "utf8").replace(
