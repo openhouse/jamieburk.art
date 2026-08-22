@@ -1,5 +1,13 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import {
+  copyFileSync,
+  mkdirSync,
+  mkdtempSync,
+  readFileSync,
+  rmSync,
+  writeFileSync
+} from "node:fs";
+import os from "node:os";
 import path from "node:path";
 import test from "node:test";
 
@@ -17,10 +25,10 @@ test("the team-memory page makes a paid first engagement easy to authorize", () 
 
   for (const phrase of [
     "Proposed first engagement",
-    "One approved source. One useful team-memory test.",
-    "What I will deliver",
-    "What you can decide",
-    "paid discovery and prototype",
+    "A small paid two-week discovery and prototype sprint",
+    "Three to five approved sources around one decision trail",
+    "What I deliver",
+    "End decision",
     'href="/resume"'
   ]) {
     assert.ok(page.includes(phrase), `missing forwardable proposal element: ${phrase}`);
@@ -77,4 +85,47 @@ test("the exact browser packet and fictionalized hiring decision remain in step"
   assert.equal(report.deterministicPassed, true, report.failures.join("\n"));
   assert.equal(report.advisorySimulationPassed, true, report.failures.join("\n"));
   assert.equal(report.passed, true, report.failures.join("\n"));
+});
+
+test("the browser receipt is invalidated when the public resume artifact changes", async () => {
+  const { evaluateTeamMemoryReferralHiring } = await import(
+    "../evals-team-memory-referral-hiring.mjs"
+  );
+  const tempRoot = mkdtempSync(path.join(os.tmpdir(), "team-memory-referral-eval-"));
+  const relativePaths = [
+    "evals/team-memory-referral-hiring/current.json",
+    "evals/team-memory-referral-hiring/runs/2026-08-21/local-public-browser-receipt.json",
+    "evals/team-memory-referral-hiring/runs/2026-08-21/fictionalized-referral-and-authority-decision.json",
+    "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/01-prospective-collaborator-perspective.md",
+    "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/03-prospective-collaborator-voice.md",
+    "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+  ];
+
+  try {
+    for (const relativePath of relativePaths) {
+      const destination = path.join(tempRoot, relativePath);
+      mkdirSync(path.dirname(destination), { recursive: true });
+      copyFileSync(path.join(repoRoot, relativePath), destination);
+    }
+    const publicResumePath = path.join(
+      tempRoot,
+      "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+    );
+    const changedResume = Buffer.concat([
+      readFileSync(publicResumePath),
+      Buffer.from("\nchanged exact public artifact\n")
+    ]);
+    writeFileSync(publicResumePath, changedResume);
+
+    const report = evaluateTeamMemoryReferralHiring(tempRoot);
+    assert.equal(report.deterministicPassed, false);
+    assert.ok(
+      report.failures.includes(
+        "browser receipt resume digest is stale for the current public PDF"
+      ),
+      report.failures.join("\n")
+    );
+  } finally {
+    rmSync(tempRoot, { recursive: true, force: true });
+  }
 });

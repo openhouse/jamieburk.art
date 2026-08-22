@@ -5,6 +5,8 @@ import { fileURLToPath } from "node:url";
 
 const defaultRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const configRelativePath = "evals/team-memory-referral-hiring/current.json";
+const publicResumeRelativePath =
+  "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf";
 
 function read(root, relativePath) {
   return readFileSync(path.join(root, relativePath), "utf8");
@@ -88,6 +90,13 @@ export function evaluateTeamMemoryReferralHiring(root = defaultRoot) {
   check(receipt.resumeArtifact?.route === "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf", "public resume artifact changed");
   check(receipt.resumeArtifact?.status === 200, "public resume artifact did not return 200");
   check(/^[a-f0-9]{64}$/.test(receipt.resumeArtifact?.sha256 ?? ""), "resume artifact digest is invalid");
+  const currentPublicResumeSha256 = createHash("sha256")
+    .update(readFileSync(path.join(root, publicResumeRelativePath)))
+    .digest("hex");
+  check(
+    receipt.resumeArtifact?.sha256 === currentPublicResumeSha256,
+    "browser receipt resume digest is stale for the current public PDF"
+  );
 
   for (const criterion of config.deterministicCriteria) {
     const page = routeRecords.get(criterion.route);

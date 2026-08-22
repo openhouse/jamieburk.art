@@ -235,6 +235,23 @@ test("current hiring surfaces lead with WOW List's 35 city ecosystems without un
   );
 });
 
+test("the public resume separates the current technical working set from historical tools", () => {
+  const resume = readFileSync(
+    path.join(
+      repoRoot,
+      "resume-versions/2026-08-20/active-opportunity-portfolio/Jamie-Burkart-Resume.md"
+    ),
+    "utf8"
+  );
+
+  assert.match(resume, /Technical fluency — current working set/);
+  assert.match(resume, /Historical tools are labeled in their case studies/);
+  assert.doesNotMatch(
+    resume,
+    /Technical fluency[^\n]*(?:Ember\.js|Python\/Django|PostgreSQL\/PostGIS|QGIS)/
+  );
+});
+
 test("underselling WOW List activity counts stop before hiring-reader evaluation", () => {
   const root = fixture();
   try {

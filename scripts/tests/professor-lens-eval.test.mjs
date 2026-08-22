@@ -22,9 +22,27 @@ const publicRegistryText = readFileSync(
 const suite = JSON.parse(
   readFileSync(path.join(repoRoot, ".agents/evals/portfolio-production-readiness.json"), "utf8")
 );
+const approvalRegisterText = readFileSync(
+  path.join(repoRoot, "docs/knowledge-bank/approval-register.md"),
+  "utf8"
+);
 
 test("current professor-lens gate fails closed after the reviewed candidate changes", () => {
-  const result = evaluateProfessorLenses({ suite, aboutText, sourceNoteText });
+  const candidateFiles = Object.fromEntries(professorCandidateRelativePaths.map((relativePath) => [
+    relativePath,
+    readFileSync(path.join(repoRoot, relativePath))
+  ]));
+  candidateFiles["apps/www/src/app/about/page.tsx"] = Buffer.concat([
+    candidateFiles["apps/www/src/app/about/page.tsx"],
+    Buffer.from("\n// unreviewed candidate change\n")
+  ]);
+
+  const result = evaluateProfessorLenses({
+    suite,
+    aboutText: `${aboutText}\n// unreviewed candidate change`,
+    sourceNoteText,
+    candidateFiles
+  });
   assert.equal(result.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "candidate-fingerprint")?.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts")?.pass, false);
@@ -77,6 +95,23 @@ test("guard rejects private educational-record identifiers", () => {
   });
   assert.equal(result.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "no-private-fragments")?.pass, false);
+});
+
+test("guard rejects erasing the exact photo-occurrence publication decision", () => {
+  const result = evaluateProfessorLenses({
+    suite,
+    aboutText,
+    sourceNoteText,
+    approvalRegisterText: approvalRegisterText.replace(
+      "is cleared by Jamie for publication",
+      "awaits publication review"
+    )
+  });
+  assert.equal(result.pass, false);
+  assert.equal(
+    result.criteria.find((item) => item.id === "exact-photo-occurrence-clearance")?.pass,
+    false
+  );
 });
 
 test("guard rejects weakening the Sack anti-overclaim rubric", () => {

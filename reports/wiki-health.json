@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-21T10:19:09-04:00",
-  "sourceCommit": "2bd29f313f73f8844282dbe364b163d62544a401",
-  "sourceFingerprint": "77a6700ed0da85d2d0ec4dcfd5fed3f8ef2d9c6dc3dd08683dd243cddead9684",
+  "generatedAt": "2026-08-21T11:46:22-04:00",
+  "sourceCommit": "f42a9265f6a51db3ae620cb4e83d89287f0857a7",
+  "sourceFingerprint": "c8e52bba9b2ded2a0e379d3dfc2d79e57ed9060ca53e3f5de5f80dba5af238ac",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
@@ -32,7 +32,7 @@
       "opportunity": 14,
       "projection": 11
     },
-    "typedRelations": 1634,
+    "typedRelations": 1635,
     "evidenceRelations": 27,
     "relationTypeCounts": {
       "collaborated_with": 2,
@@ -46,15 +46,15 @@
       "part_of": 11,
       "participated_in": 3,
       "projected_to": 20,
-      "related_to": 1048,
+      "related_to": 1049,
       "resulted_in": 6,
       "supersedes": 1,
       "supports": 29,
       "uses_method": 36,
       "uses_source": 358
     },
-    "proseLinks": 504,
-    "rootReachable": 245,
+    "proseLinks": 505,
+    "rootReachable": 246,
     "orphanCount": 0,
     "deadEndCount": 0,
     "wantedPageCount": 6,

@@ -26,6 +26,29 @@ test("the technical-operations surface gives three hiring contexts a concrete ev
   assert.ok(page.includes("CLM-NYCAC-SBU-REPORT-REVIEW-2026"));
 });
 
+test("the role-fit page leads with three compact decision-to-result traces", () => {
+  const page = read("apps/www/src/app/work/technical-operations/page.tsx");
+
+  for (const label of [
+    "Decisions you can inspect",
+    "Decision and action",
+    "Inspectable artifact",
+    "What became usable",
+    "Harry J. Epstein Company",
+    "FairRentNYC / Commercial Rent Stabilization",
+    "CallNYC"
+  ]) {
+    assert.ok(page.includes(label), `missing compact decision evidence: ${label}`);
+  }
+
+  assert.match(page, /const decisionEvidence = \[[\s\S]*?\] as const;/);
+  assert.equal(
+    (page.match(/project: "/g) ?? []).length,
+    3,
+    "the first-pass decision evidence must remain a focused set of three"
+  );
+});
+
 test("product-team transfer is explicit without inventing SaaS authority", () => {
   const page = read("apps/www/src/app/work/technical-operations/page.tsx");
 
@@ -67,6 +90,71 @@ test("focus and hero text no longer depend on ochre or the image alone for contr
     /:focus-visible\s*\{[^}]*outline: 3px solid var\(--jb-broadway-blue\)/
   );
   assert.ok(hero.includes("jb-hero-copy"));
+});
+
+test("the mobile hero reveals the start of the hiring path without a decorative vertical rule", () => {
+  const globalStyles = read("apps/www/src/app/globals.css");
+  const hero = read("apps/www/src/components/Hero.tsx");
+  const heroCopyRule = globalStyles.match(/\.jb-hero-copy\s*\{[^}]*\}/)?.[0];
+
+  assert.ok(heroCopyRule);
+  assert.ok(!heroCopyRule.includes("border-left"));
+  assert.match(
+    globalStyles,
+    /@media \(max-width: 639px\)[\s\S]*?\.jb-hero,[\s\S]*?\.jb-hero-content \{[\s\S]*?min-height: 0;/
+  );
+  assert.ok(hero.includes("jb-hero-summary-mobile"));
+  assert.ok(hero.includes("jb-hero-summary-wide"));
+});
+
+test("the about page does not present completed client work as current", () => {
+  const about = read("apps/www/src/app/about/page.tsx");
+
+  assert.ok(about.includes("Three systems loops"));
+  assert.match(
+    about,
+    /Harry J\. Epstein Company[\s\S]*?<span className="jb-section-label">2009–2015<\/span>/
+  );
+  assert.doesNotMatch(about, /Three current systems loops/);
+});
+
+test("the about page makes each systems loop reconstructable without implying equivalence", () => {
+  const about = read("apps/www/src/app/about/page.tsx");
+  const normalizedAbout = about.replace(/\s+/g, " ");
+
+  assert.match(
+    normalizedAbout,
+    /not equivalent in scale, maturity, authority, adoption, risk, or outcome/
+  );
+  const featuredLoops = about.match(
+    /Three systems loops[\s\S]*?Additional continuities/
+  )?.[0];
+  assert.ok(featuredLoops);
+  for (const stage of [
+    "Relationships:",
+    "Model:",
+    "Prototype / testable increment:",
+    "Social or collective use:",
+    "Learning and revision:",
+    "Documented handoff:"
+  ]) {
+    assert.equal(
+      featuredLoops.split(stage).length - 1,
+      3,
+      `${stage} should appear once in each featured systems loop`
+    );
+  }
+});
+
+test("the C successor eval preserves first-pass proof and the mobile continuation cue", () => {
+  const readiness = read(".agents/evals/apply-2026-08-21-c.json");
+
+  assert.match(readiness, /exactly three compact decision traces/);
+  assert.match(readiness, /project, question, decision or action, inspectable artifact, governed result, and deeper link/);
+  assert.match(readiness, /390 by 844 pixel viewport/);
+  assert.match(readiness, /start of the next section is visible/);
+  assert.match(readiness, /two-week discovery and prototype sprint/);
+  assert.match(readiness, /not equivalent in scale, maturity, authority, adoption, risk, and outcome/);
 });
 
 test("the homepage gives hiring readers clear routes into the evidence", () => {

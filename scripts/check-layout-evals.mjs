@@ -68,6 +68,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
         !block.includes("width:") || !block.includes("height:") ||
         !block.includes("alt:") || !block.includes("caption:") ||
         !block.includes("credit:") || !block.includes('publicationStatus: "jamie-authorized"') ||
+        !block.includes("clearanceAttestation:") ||
         !block.includes("publicUseBoundary:") && source === photography ||
         !block.includes("permissionId:") && source === participation) {
       fail("manifest-bound-publication", `Incomplete governed photo binding for ${key}.`);

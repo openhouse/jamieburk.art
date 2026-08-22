@@ -15,7 +15,7 @@ Technical project, product operations, and implementation leader with 14+ years 
 - **Product and implementation:** Discovery, customer implementation, workshops, product demonstrations, current- and future-state workflows, user stories, acceptance criteria, system requirements, roadmap sequencing, version-one scope, configuration and migration planning, UAT/QA, deployment risk, time to first value, change management, and reusable playbooks.
 - **Project and campaign operations:** Plans, schedules, budget and resource tracking, risk and issue management, coalition coordination, advocacy campaign operations, research and talking points, internal communications, executive reporting, retrospectives, and process improvement.
 - **Data and responsible technology:** KPIs, analytics, production instrumentation, qualitative and quantitative synthesis, privacy-conscious and accessibility-aware delivery, human-reviewed AI workflows, decision lineage, and source governance.
-- **Technical fluency:** JavaScript/TypeScript, React/Next.js, Ember.js, Python/Django, SQL, PostgreSQL/PostGIS, Node.js, Git/GitHub, Docker/Dokku, APIs, QGIS, open-data workflows, and low-cost cloud infrastructure.
+- **Technical fluency — current working set:** JavaScript/TypeScript, React/Next.js, SQL, Node.js, Git/GitHub, Docker/Dokku, APIs, open-data workflows, and low-cost cloud infrastructure. Historical tools are labeled in their case studies rather than presented as current practice.
 
 ## Professional Experience
 

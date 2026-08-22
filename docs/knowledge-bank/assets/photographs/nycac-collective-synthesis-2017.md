@@ -5,7 +5,7 @@ kind: asset
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-20
+last_reviewed: 2026-08-21
 review_by: 2027-02-20
 canonical_path: docs/knowledge-bank/assets/photographs/nycac-collective-synthesis-2017.md
 summary: Selected portfolio photograph showing handwritten cards arranged into a shared field during an NYC Artist Coalition steering-group session.
@@ -25,7 +25,7 @@ public_derivatives:
     media_type: image/webp
     width: 2400
     height: 1600
-    checksum: 27122af411317a4ba0464b69f1bc6eab9aa955a0074942527e9cc4c70cfcb9d5
+    checksum: d63391c1d0adb84b8d8bc2641b98dd4a12e5be6b73795b2b0eb6df0b252baa48
     metadata_stripped: true
     status: staging-candidate
 statements:

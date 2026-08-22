@@ -31,6 +31,24 @@ export default function SourceBackedTeamMemoryPage() {
       text: "Private transcripts, contact details, and unapproved collaborator context remain outside the public memory."
     }
   ];
+  const engagementShape = [
+    {
+      label: "People",
+      text: "One sponsor, one working lead, and two or three teammates who can test whether the result helps them find and use what the team already knows."
+    },
+    {
+      label: "Source set",
+      text: "Three to five approved sources around one decision trail, such as a product brief, meeting notes, an onboarding document, and the current place where open questions live."
+    },
+    {
+      label: "What I deliver",
+      text: "A knowledge-friction map, one source-linked memory artifact, a correction path, access notes, and a tested handoff."
+    },
+    {
+      label: "End decision",
+      text: "The team decides to continue, revise, or stop—and keeps a useful record of what worked, what remains uncertain, and who owns the next step."
+    }
+  ];
 
   return (
     <article className="jb-frame py-12">
@@ -59,47 +77,36 @@ export default function SourceBackedTeamMemoryPage() {
             Proposed first engagement
           </p>
           <h2 className="mt-3 text-3xl font-semibold text-jb-ink">
-            One approved source. One useful team-memory test.
+            A small paid two-week discovery and prototype sprint the team can
+            authorize
           </h2>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-jb-ink/76">
-            If product reasoning, decisions, open questions, or onboarding
-            context are getting lost, I can help the team test a practical
-            source-backed memory pattern without introducing a new platform or
-            asking for broad system access.
+            Start with one decision trail where product reasoning, open
+            questions, or onboarding context keeps slipping away. We test a
+            practical source-backed memory pattern without introducing a new
+            platform or asking for broad system access.
           </p>
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
-            <div className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
-              <h3 className="text-xl font-semibold text-jb-blue">The need</h3>
-              <p className="mt-3 text-sm leading-6 text-jb-ink/74">
-                Make important context recoverable without flattening the
-                team&apos;s thinking or creating a second bureaucracy.
-              </p>
-            </div>
-            <div className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
-              <h3 className="text-xl font-semibold text-jb-blue">
-                What I will deliver
-              </h3>
-              <p className="mt-3 text-sm leading-6 text-jb-ink/74">
-                A knowledge-friction map, one source-linked memory artifact,
-                a correction path, and a practical success signal.
-              </p>
-            </div>
-            <div className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
-              <h3 className="text-xl font-semibold text-jb-blue">
-                What you can decide
-              </h3>
-              <p className="mt-3 text-sm leading-6 text-jb-ink/74">
-                At the end of a small paid discovery and prototype: continue,
-                revise, or stop with a useful record of what the team learned.
-              </p>
-            </div>
-          </div>
+          <dl className="mt-6 grid gap-px overflow-hidden rounded-md border border-jb-ink/12 bg-jb-ink/12 md:grid-cols-2">
+            {engagementShape.map((item) => (
+              <div className="bg-jb-warm p-5" key={item.label}>
+                <dt className="font-semibold text-jb-blue">{item.label}</dt>
+                <dd className="mt-2 text-sm leading-6 text-jb-ink/74">
+                  {item.text}
+                </dd>
+              </div>
+            ))}
+          </dl>
+          <p className="mt-5 max-w-3xl text-sm leading-6 text-jb-ink/64">
+            The timebox and participation plan are confirmed with the sponsor
+            before work begins. A wider rollout or continuing maintenance
+            requires a separate decision.
+          </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <JBButton href="/resume" variant="secondary">
               View Jamie&apos;s resume
             </JBButton>
             <JBButton href={site.emailHref}>
-              Discuss the first engagement
+              Discuss this proposed two-week pilot
             </JBButton>
           </div>
         </section>

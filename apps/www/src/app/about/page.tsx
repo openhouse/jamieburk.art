@@ -102,11 +102,13 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="mt-8 border-y border-jb-ink/12 py-4">
-            <p className="jb-section-label">Three current systems loops</p>
+            <p className="jb-section-label">Three systems loops</p>
             <p className="mt-2 max-w-3xl leading-7 text-jb-ink/72">
-              Each example follows the same movement from observed relationships
-              to a working model, an interface used with people, and a documented
-              way to learn, revise, and continue.
+              These projects share an operating sequence; they are not
+              equivalent in scale, maturity, authority, adoption, risk, or
+              outcome. The comparison stays with how relationships become a
+              testable interface, what people do with it, what the work teaches,
+              and what another person can carry forward.
             </p>
           </div>
           <div className="mt-8 divide-y divide-jb-ink/12 border-y border-jb-ink/12">
@@ -120,7 +122,7 @@ export default function AboutPage() {
                     Harry J. Epstein Company
                   </Link>
                 </h3>
-                <span className="jb-section-label">Current</span>
+                <span className="jb-section-label">2009–2015</span>
               </div>
               <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
                 <p>
@@ -134,18 +136,33 @@ export default function AboutPage() {
                   as one customer and team system rather than separate tasks.
                 </p>
                 <p>
-                  <strong className="text-jb-ink">Interface and use:</strong>{" "}
-                  a maintained storefront joining product discovery, content,
-                  marketing, ordering, and customer follow-up, released and
-                  refined through real customer and team use.
+                  <strong className="text-jb-ink">
+                    Prototype / testable increment:
+                  </strong>{" "}
+                  small storefront releases connected product discovery,
+                  content, ordering, and customer follow-up before the next
+                  increment.
                 </p>
                 <p>
                   <strong className="text-jb-ink">
-                    Learning and continuity:
+                    Social or collective use:
                   </strong>{" "}
-                  recurring operational questions and carefully scoped analytics guided
-                  incremental releases, reusable content patterns, and clearer
-                  workflows for the team.
+                  customers and the internal team used the maintained storefront
+                  in real purchasing and operating workflows.
+                </p>
+                <p>
+                  <strong className="text-jb-ink">
+                    Learning and revision:
+                  </strong>{" "}
+                  recurring operational questions and carefully scoped analytics
+                  guided the next incremental releases.
+                </p>
+                <p>
+                  <strong className="text-jb-ink">
+                    Documented handoff:
+                  </strong>{" "}
+                  reusable content patterns, ownership, and next actions made
+                  the resulting workflows easier for the team to continue.
                 </p>
               </div>
             </article>
@@ -173,17 +190,32 @@ export default function AboutPage() {
                   and accountable actors held in one recoverable civic record.
                 </p>
                 <p>
-                  <strong className="text-jb-ink">Interface and use:</strong>{" "}
-                  campaign sites, town halls, hearings, practical sessions, and
-                  public action pathways built and used with many collaborators.
+                  <strong className="text-jb-ink">
+                    Prototype / testable increment:
+                  </strong>{" "}
+                  a campaign page, meeting format, or public action pathway made
+                  one question concrete enough for collaborators to test.
                 </p>
                 <p>
                   <strong className="text-jb-ink">
-                    Learning and continuity:
+                    Social or collective use:
                   </strong>{" "}
-                  running minutes, source maps, question logs, and action
-                  trackers let collaborators recover context, review decisions,
-                  and carry the work forward.
+                  many collaborators used campaign sites, town halls, hearings,
+                  practical sessions, and public action pathways together.
+                </p>
+                <p>
+                  <strong className="text-jb-ink">
+                    Learning and revision:
+                  </strong>{" "}
+                  recurring meetings and public response surfaced open questions,
+                  corrected the record, and reshaped next actions.
+                </p>
+                <p>
+                  <strong className="text-jb-ink">
+                    Documented handoff:
+                  </strong>{" "}
+                  running minutes, source maps, question logs, and action trackers
+                  let collaborators recover context and carry the work forward.
                 </p>
               </div>
             </article>
@@ -212,17 +244,33 @@ export default function AboutPage() {
                   system.
                 </p>
                 <p>
-                  <strong className="text-jb-ink">Interface and use:</strong>{" "}
-                  recurring gatherings and artist-residency workflows used with
-                  participants and resident artists over time.
+                  <strong className="text-jb-ink">
+                    Prototype / testable increment:
+                  </strong>{" "}
+                  invitation, onboarding, hosting, and access steps were tried in
+                  recurring gatherings and one residency at a time.
                 </p>
                 <p>
                   <strong className="text-jb-ink">
-                    Learning and continuity:
+                    Social or collective use:
                   </strong>{" "}
-                  repeatable invitation, response, attendance, follow-up, and
-                  residency handoff patterns helped the practice continue while
-                  private participant records remained private.
+                  participants and resident artists used the gathering and
+                  residency workflows together over time.
+                </p>
+                <p>
+                  <strong className="text-jb-ink">
+                    Learning and revision:
+                  </strong>{" "}
+                  responses and repeated practice refined invitations, hosting,
+                  follow-up, onboarding, and access.
+                </p>
+                <p>
+                  <strong className="text-jb-ink">
+                    Documented handoff:
+                  </strong>{" "}
+                  repeatable continuity and residency-handoff patterns helped the
+                  practice continue while private participant records remained
+                  private.
                 </p>
               </div>
             </article>
@@ -297,7 +345,7 @@ export default function AboutPage() {
             </article>
           </div>
         </section>
-        <div className="mt-10 border-l-4 border-jb-blue bg-jb-warm p-5">
+        <div className="mt-10 border-y border-jb-blue/25 bg-jb-warm px-5 py-4">
           <p className="leading-8 text-jb-ink/78">
             I value public benefit, accessibility, source-backed memory, careful
             claims, collective credit, consent, privacy, repair, and

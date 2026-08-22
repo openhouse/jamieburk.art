@@ -25,6 +25,7 @@ export type PortfolioPhoto = {
     | "work-index"
   )[];
   publicationStatus: "jamie-authorized";
+  clearanceAttestation: string;
   releaseState: {
     publicGit: "approved";
     staging: "approved";
@@ -60,6 +61,8 @@ export const portfolioPhotos = {
     knowledgeStatus: "bound",
     placements: ["home", "social-card"],
     publicationStatus: "jamie-authorized",
+    clearanceAttestation:
+      "Jamie confirmed this exact occurrence is cleared for use on the jamieburk.art portfolio. This records the portfolio publication decision only; it does not grant permission for reuse or imply endorsement.",
     releaseState: {
       publicGit: "approved",
       staging: "approved",
@@ -91,6 +94,8 @@ export const portfolioPhotos = {
     knowledgeStatus: "bound",
     placements: ["196-sunday-dinner", "work-index"],
     publicationStatus: "jamie-authorized",
+    clearanceAttestation:
+      "Jamie confirmed this exact album-sourced occurrence is cleared for use on the jamieburk.art portfolio. This records the portfolio publication decision only; it does not grant permission for reuse or imply participant endorsement.",
     releaseState: {
       publicGit: "approved",
       staging: "approved",
@@ -122,6 +127,8 @@ export const portfolioPhotos = {
     knowledgeStatus: "bound",
     placements: ["kc-town-hall", "work-index"],
     publicationStatus: "jamie-authorized",
+    clearanceAttestation:
+      "Jamie confirmed this exact album-sourced occurrence is cleared for use on the jamieburk.art portfolio. This records the portfolio publication decision only; it does not grant permission for reuse or imply endorsement.",
     releaseState: {
       publicGit: "approved",
       staging: "approved",
@@ -155,6 +162,8 @@ export const portfolioPhotos = {
     knowledgeStatus: "bound",
     placements: ["team-knowledge-lab"],
     publicationStatus: "jamie-authorized",
+    clearanceAttestation:
+      "Jamie confirmed this exact album-sourced occurrence is cleared for use on the jamieburk.art portfolio. This records the portfolio publication decision only; it does not grant permission for reuse or imply participant endorsement.",
     releaseState: {
       publicGit: "approved",
       staging: "approved",
