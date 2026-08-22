@@ -69,16 +69,16 @@ test("removing the Fair Rent field-and-system pair fails closed", () => {
   assert(result.failures.some(({ criterion }) => criterion === "editorial-not-decorative"));
 });
 
-test("the homepage field-and-system synthesis follows the selected projects", () => {
+test("the homepage field-and-system synthesis introduces the selected projects", () => {
   const path = "apps/www/src/app/page.tsx";
   const source = readFileSync(path, "utf8");
   const fieldSection = '      <FieldSystemEvidence variant="home" />\n';
   const withoutFieldSection = source.replace(fieldSection, "");
-  const beforeSelectedSystems = withoutFieldSection.replace(
-    '      <section className="jb-frame py-16">\n        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">',
-    `${fieldSection}      <section className="jb-frame py-16">\n        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">`
+  const afterSelectedSystems = withoutFieldSection.replace(
+    '      </section>\n      <section className="jb-frame grid gap-8 py-16 lg:grid-cols-[0.8fr_1.2fr]">',
+    `      </section>\n${fieldSection}      <section className="jb-frame grid gap-8 py-16 lg:grid-cols-[0.8fr_1.2fr]">`
   );
-  const result = evaluateLayout(process.cwd(), { [path]: beforeSelectedSystems });
+  const result = evaluateLayout(process.cwd(), { [path]: afterSelectedSystems });
   assert.equal(result.passed, false);
   assert(
     result.failures.some(({ criterion }) => criterion === "editorial-not-decorative")
@@ -149,11 +149,11 @@ test("every work item retains a governed project-bound cover", () => {
   assert(result.failures.some(({ criterion }) => criterion === "truthful-project-cover-field"));
 });
 
-test("the homepage sequence keeps the three-part rushed-reader opening intact", () => {
+test("the homepage sequence keeps the ranked three-project argument intact", () => {
   const path = "apps/www/src/data/work.ts";
   const source = readFileSync(path, "utf8").replace(
-    '  "fair-rent-nyc",\n  "harry-j-epstein",',
-    '  "harry-j-epstein",\n  "fair-rent-nyc",'
+    '  "harry-j-epstein",\n  "kc-town-hall",',
+    '  "callnyc",\n  "kc-town-hall",'
   );
   const result = evaluateLayout(process.cwd(), { [path]: source });
   assert.equal(result.passed, false);
@@ -164,7 +164,7 @@ test("the homepage sequence keeps the three-part rushed-reader opening intact", 
   );
 });
 
-test("the homepage sequence keeps Sunday Dinner inside the six-project hiring argument", () => {
+test("the homepage sequence keeps Sunday Dinner inside the hiring argument", () => {
   const path = "apps/www/src/data/work.ts";
   const source = readFileSync(path, "utf8").replace(
     '  "196-sunday-dinner"\n',
@@ -209,11 +209,9 @@ test("a fourth homepage proof fails the hiring-reader attention budget", () => {
   );
 });
 
-test("the hero primary action retains the direct role-fit route", () => {
+test("the hero does not regain a competing primary action", () => {
   const path = "apps/www/src/components/Hero.tsx";
-  const source = readFileSync(path, "utf8")
-    .replace('href="/work/technical-operations"', 'href="/work"')
-    .replace("See role-fit evidence", "View selected work");
+  const source = `${readFileSync(path, "utf8")}\n<a href="/work">View selected work</a>\n`;
   const result = evaluateLayout(process.cwd(), { [path]: source });
   assert.equal(result.passed, false);
   assert(

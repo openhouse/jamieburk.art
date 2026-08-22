@@ -175,8 +175,8 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     fail("editorial-not-decorative", "Both field-and-system pairs must remain explicit, manifest-bound, and responsive.");
   }
   if (
-    home.indexOf("Selected systems") > home.indexOf('<FieldSystemEvidence variant="home" />') ||
-    home.indexOf('<FieldSystemEvidence variant="home" />') > home.indexOf("How I work") ||
+    home.indexOf('<FieldSystemEvidence variant="home" />') > home.indexOf("Selected systems") ||
+    home.indexOf("Selected systems") > home.indexOf("How I work") ||
     !fairRent.includes('<FieldSystemEvidence variant="fair-rent" />')
   ) {
     fail("editorial-not-decorative", "The two field-and-system pairs moved outside their reviewed editorial sequence.");
@@ -288,11 +288,8 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     ? [...homepageOrderBlock[1].matchAll(/"([^"]+)"/g)].map((match) => match[1])
     : [];
   const expectedHomepageOrder = [
-    "fair-rent-nyc",
     "harry-j-epstein",
-    "callnyc",
     "kc-town-hall",
-    "wowlist",
     "196-sunday-dinner"
   ];
   const sundayDinnerBlock = workData.slice(
@@ -318,7 +315,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   ) {
     fail(
       "hiring-argument-project-sequence",
-      "The homepage no longer opens with current civic delivery, sustained operations, and resident-facing product judgment before completing the six-project argument with Sunday Dinner present."
+      "The homepage no longer presents the ranked operating, implementation, and participation sequence with Sunday Dinner present."
     );
   }
 
@@ -336,8 +333,8 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   if (
     JSON.stringify(observedStartHereOrder) !== JSON.stringify(expectedStartHereOrder) ||
     JSON.stringify(observedHomepageProofs) !== JSON.stringify(expectedHomepageProofs) ||
-    !hero.includes('href="/work/technical-operations"') ||
-    !hero.includes("See role-fit evidence") ||
+    /href=/.test(hero) ||
+    !home.includes('href: "/work/technical-operations"') ||
     !home.includes('<FieldSystemEvidence variant="home" />') ||
     home.includes("const transformations") ||
     home.includes("Operating motif")

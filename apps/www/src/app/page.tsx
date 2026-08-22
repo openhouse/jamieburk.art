@@ -4,8 +4,8 @@ import { CapabilityGrid } from "@/components/CapabilityGrid";
 import { ContactCTA } from "@/components/ContactCTA";
 import { FieldSystemEvidence } from "@/components/FieldSystemEvidence";
 import { Hero } from "@/components/Hero";
+import { HomeWorkCard } from "@/components/HomeWorkCard";
 import { ProofStrip } from "@/components/ProofStrip";
-import { WorkCard } from "@/components/WorkCard";
 import { featuredWork } from "@/data/work";
 
 const startHereLinks = [
@@ -17,7 +17,7 @@ const startHereLinks = [
   {
     href: "/work",
     label: "Selected work",
-    note: "Six case studies across current civic delivery, sustained operations, public-facing products, implementation, and community systems."
+    note: "Case studies across current civic delivery, sustained operations, public-facing products, implementation, and community systems."
   },
   {
     href: "/resume",
@@ -25,6 +25,15 @@ const startHereLinks = [
     note: "PDF for applications and hiring workflows."
   }
 ];
+
+const featuredProofs = {
+  "harry-j-epstein":
+    "Led web, e-commerce, analytics, content, marketing, and operational improvements that contributed to a period of 2x revenue growth.",
+  "kc-town-hall":
+    "Co-developed a successful $490,539 public funding request and served as the City's named developer and presenter for the exact request.",
+  "196-sunday-dinner":
+    "Created repeatable hosting, onboarding, facilitation, and continuity systems across 300+ gatherings and 20+ resident artists."
+} as const;
 
 export default function HomePage() {
   return (
@@ -63,6 +72,7 @@ export default function HomePage() {
       </section>
       <ProofStrip />
       <CapabilityGrid />
+      <FieldSystemEvidence variant="home" />
       <section className="jb-frame py-16">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="jb-reading">
@@ -71,9 +81,9 @@ export default function HomePage() {
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: emerging, high-context
-              work becoming usable systems, public-facing tools,
-              documentation, decision trails, and durable handoffs.
+              Three different settings, one operating practice: clarify the
+              work, carry it through implementation, and leave people with a
+              system they can continue to use.
             </p>
           </div>
           <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
@@ -82,11 +92,14 @@ export default function HomePage() {
         </div>
         <div className="mt-8">
           {featuredWork.map((item) => (
-            <WorkCard item={item} key={item.slug} />
+            <HomeWorkCard
+              item={item}
+              key={item.slug}
+              proof={featuredProofs[item.slug as keyof typeof featuredProofs]}
+            />
           ))}
         </div>
       </section>
-      <FieldSystemEvidence variant="home" />
       <section className="jb-frame grid gap-8 py-16 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
           <p className="jb-section-label">How I work</p>

@@ -710,11 +710,8 @@ export type WorkSlug =
   | "wowlist";
 
 export const homepageWorkOrder = [
-  "fair-rent-nyc",
   "harry-j-epstein",
-  "callnyc",
   "kc-town-hall",
-  "wowlist",
   "196-sunday-dinner"
 ] as const;
 

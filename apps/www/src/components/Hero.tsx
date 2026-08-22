@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { GovernedImage } from "@/components/GovernedImage";
 import { portfolioPhotos } from "@/data/photography";
 import { site } from "@/data/site";
@@ -41,20 +40,6 @@ export function Hero() {
             workflows and tools, carry context through implementation, and
             leave behind documentation people can use.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              className="inline-flex min-h-11 items-center bg-white px-5 py-3 font-semibold text-jb-ink hover:bg-jb-sky"
-              href="/work/technical-operations"
-            >
-              See role-fit evidence
-            </Link>
-            <Link
-              className="inline-flex min-h-11 items-center border border-white/70 px-5 py-3 font-semibold text-white hover:bg-white hover:text-jb-ink"
-              href="/resume"
-            >
-              View resume
-            </Link>
-          </div>
         </div>
       </div>
       <p className="jb-hero-caption">
