@@ -8,7 +8,7 @@ sensitivity: low
 last_reviewed: 2026-07-26
 review_by: 2027-01-26
 canonical_path: docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md
-summary: Public-safe record for a 2022 photograph of Jamie Burkart at the East River, made by Elana Gordon and used as the Layout C homepage hero.
+summary: Public-safe record for a 2022 photograph of Jamie Burkart at the East River, made by Elana Gordon and used as the Layout C homepage hero and jamieburk.art social preview.
 media_type: photograph
 rights_state: cleared
 consent_state: cleared
@@ -17,6 +17,7 @@ projection:
   status: active
   surfaces:
     - /
+    - /opengraph-image
 private_source_binding:
   provider: photo-fieldwork
   opaque_id: pfwpub_ylAbyl1bHgM5
@@ -28,6 +29,14 @@ public_derivatives:
     width: 1280
     height: 960
     checksum: 748b6f12e2845dd7dc1ca3fa3f35d61c26a468150b7e3d6d386ae3622d996621
+    metadata_stripped: true
+    status: staging-candidate
+  - id: derivative.photo.east-river.social-preview.v1
+    path: apps/www/public/images/social/jamie-east-river-og.jpg
+    media_type: image/jpeg
+    width: 1280
+    height: 960
+    checksum: 612cc2d1a11eeb967cb810512fa2975efe6074e68d3426a97b8f5886c98ada8d
     metadata_stripped: true
     status: staging-candidate
 statements:
@@ -83,6 +92,10 @@ relations:
     target: projection.photo.layout-c.home.east-river
     href: ../../projections/photography/layout-c-home-east-river.md
     context: Homepage hero occurrence in Layout C.
+  - type: projected_to
+    target: projection.photo.social-preview.east-river
+    href: ../../projections/photography/social-preview-east-river.md
+    context: Full-bleed social-preview occurrence with creator attribution in alt metadata and the governed record.
   - type: uses_source
     target: source.photo-metadata.east-river.2022.public-safe
     href: ../../sources/photo-metadata/east-river-2022-public-safe.md
@@ -101,9 +114,12 @@ relations:
 
 ## Current public use
 
-The exact derivative appears as the Layout C homepage hero. The factual caption
-names the public place and year. The credit names Elana Gordon as photographer
-and Jamie Burkart's photo archive as the custodian of this copy.
+The exact derivatives appear as the Layout C homepage hero and as a full-bleed,
+fixed-ratio jamieburk.art social preview. The homepage visibly credits Elana
+Gordon. The social preview keeps her creator attribution in alt metadata and the
+governed record while omitting it from the rendered pixels under the exact
+permission capsule. Jamie Burkart's photo archive remains the custodian of this
+copy.
 
 ## What is established
 
@@ -123,8 +139,10 @@ first-person recollection opened those questions without changing the homepage.
 ## Correction history
 
 Layout C initially named only archive custody. On July 26, 2026, the preferred
-creator statement and visible credit were corrected to name Elana Gordon. The
-former missing-credit state remains legible as deprecated history rather than a
+creator statement and visible homepage credit were corrected to name Elana
+Gordon. The later social-preview decision changes only where that attribution
+travels, not creator identity or the homepage correction. The former
+missing-credit state remains legible as deprecated history rather than a
 competing attribution.
 
 ## Open gates

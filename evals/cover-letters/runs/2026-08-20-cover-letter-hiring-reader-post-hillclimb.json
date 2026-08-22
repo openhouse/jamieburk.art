@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "evalId": "hiring-reader-llm-cover-letters-2026-08-20",
+  "evaluatedAt": "2026-08-20T13:42:01-04:00",
+  "acceptanceQuestion": "Under this explicitly fictionalized public-source lens, would this role-specific cover letter, read with its sibling resume, make Jamie worth advancing to a structured interview or practical work sample for this opportunity?",
+  "actualPeopleParticipated": false,
+  "model": "gpt-5.6-sol",
+  "results": [
+    {
+      "cacheKey": "opportunity.nyc-oti.senior-product-manager.782366|oti-product-luke-farrell|9c2532201a7fb286d34566ff24d14ed890b9f00ca5c7912ef6bedcdd5bcbe8e9|8bcba31995a193add743484e8966734761327a608dcd1a74f7f55ff191822830|81a472acc77c4ce08003b7e863dae67c77d94191d855a33535dfd8dd9a5756b5|4b8b4d67ffc736bafc74176aa0bfeba02bb8c7e938cee9fb6c15c397fc0e4217|2026-08-20|2026-08-20T00:24:54.891Z|hiring-reader-cover-letter-v1",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "readerPairId": "oti-product-luke-farrell",
+      "coverLetterSha256": "9c2532201a7fb286d34566ff24d14ed890b9f00ca5c7912ef6bedcdd5bcbe8e9",
+      "resumeSha256": "8bcba31995a193add743484e8966734761327a608dcd1a74f7f55ff191822830",
+      "contextSha256": "81a472acc77c4ce08003b7e863dae67c77d94191d855a33535dfd8dd9a5756b5",
+      "voiceProfileSha256": "4b8b4d67ffc736bafc74176aa0bfeba02bb8c7e938cee9fb6c15c397fc0e4217",
+      "postingSourceReviewedAt": "2026-08-20",
+      "voiceSourceModifiedAt": "2026-08-20T00:24:54.891Z",
+      "promptVersion": "hiring-reader-cover-letter-v1",
+      "pairId": "oti-product-luke-farrell",
+      "verdict": "pass",
+      "decision": "advance-to-structured-next-step",
+      "rationale": "The exact hash-bound letter and resume clear the narrow advancement bar. The letter presents a memorable resident-facing product problem, demonstrates deliberate version-one judgment, and draws an ethical boundary around CallNYC’s unofficial status. It then connects digital delivery, field operations, collective work, and durable agency capacity directly to PIT Crew’s public mandate. The resume supplies credible lifecycle breadth and technical fluency. Missing outcome evidence, in-agency tradeoff examples, and civil-service qualification proof remain important, but they are appropriate subjects for a structured next step rather than reasons to stop.",
+      "strengths": [
+        "CallNYC provides a concrete, role-specific account spanning problem definition, information architecture, implementation, and public release.",
+        "The distinction between an independent prototype and an official City service demonstrates responsible product judgment without overstating authority.",
+        "Tired of Tires connects intake, field collection, City coordination, volunteers, and public reporting into a tangible resident-service operating system.",
+        "The letter preserves collective credit while making Jamie’s contribution—durable relationships, decisions, and next actions—legible.",
+        "The closing invitation proposes a relevant practical discussion about discovery evidence, MVP boundaries, and outcome-based decisions."
+      ],
+      "constructiveCritique": "The CallNYC story is strong, but the second paragraph turns into a dense competency catalogue—discovery, briefs, engineering coordination, learning, accessibility, privacy, performance, evidence, and maintainability—without showing which practices produced a particular decision or result. The third paragraph adds two more work streams, slightly weakening the single governing entrance. Tighten around one hard product tradeoff and one observable outcome, leaving the resume to carry breadth.",
+      "missingEvidence": [
+        "A documented resident-research or usability finding for CallNYC and the product change it caused.",
+        "A resident-facing outcome metric or post-launch result, beyond activity and production counts, plus the decision it informed.",
+        "A concrete example of resolving a difficult tradeoff among agency, policy, design, engineering, accessibility, compliance, and delivery constraints inside a large institution.",
+        "Complete education and employment chronology sufficient for the employer’s separate Senior IT Architect minimum-qualification review."
+      ],
+      "voiceFidelity": {
+        "verdict": "pass",
+        "rationale": "The letter follows the bounded profile: it opens with a concrete governing image, locates the human stake in a New Yorker’s next action, reveals the constituent-data and operating systems beneath the interface, makes ethical distinctions about official status and collective credit, and ends with durable agency learning rather than self-certification.",
+        "presentSignals": [
+          "Concrete encounter and governing image: a public dataset translated through CallNYC into a resident’s next step.",
+          "Human stake: helping a New Yorker understand an issue and act.",
+          "Hidden system: constituent-services data, district context, intake, coordination, decisions, and handoffs.",
+          "Ethical distinction: independent prototype versus official City service, and individual contribution versus collective outcome.",
+          "Durable possibility: leaving a partner agency stronger and able to learn and carry the work forward."
+        ],
+        "risks": [
+          "At 392 words, the letter is near the configured maximum and carries more archive breadth than its strongest governing situation needs.",
+          "The abstract competency sequence partially paraphrases the resume instead of sustaining Jamie’s first-person attention to one decision.",
+          "Adding Tired of Tires and two coalition efforts after CallNYC slightly dilutes the one-governing-entrance principle."
+        ]
+      },
+      "validateNext": "Use a structured resident-service work sample: ask Jamie to identify discovery evidence, define an MVP boundary, resolve conflicting stakeholder constraints, specify accessibility, privacy, and compliance requirements, choose one outcome measure, and explain post-launch and agency-handoff decisions. Separately verify the Senior IT Architect civil-service minimum qualifications from Jamie’s complete chronology.",
+      "actualPersonParticipated": false,
+      "boundary": "This is an independent fictionalized public-source model simulation associated with a Luke Farrell analytical lens. Luke Farrell did not participate, review, approve, endorse, predict, or make any hiring decision; no statement is attributed to him as a quotation. Public sources identify him only as the nearest operational lead found, not as a confirmed direct manager. A pass advances only to a normal structured interview or practical work sample; civil-service eligibility and final hiring remain separate human determinations."
+    },
+    {
+      "cacheKey": "opportunity.nyc-oti.senior-product-manager.782366|oti-product-lisa-gelobter|9c2532201a7fb286d34566ff24d14ed890b9f00ca5c7912ef6bedcdd5bcbe8e9|8bcba31995a193add743484e8966734761327a608dcd1a74f7f55ff191822830|b13034d6d57e0179572d1bf0f7a21dcd5be08c0052dcb21bab8e6bb7690b2bc8|4b8b4d67ffc736bafc74176aa0bfeba02bb8c7e938cee9fb6c15c397fc0e4217|2026-08-20|2026-08-20T00:24:54.891Z|hiring-reader-cover-letter-v1",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "readerPairId": "oti-product-lisa-gelobter",
+      "coverLetterSha256": "9c2532201a7fb286d34566ff24d14ed890b9f00ca5c7912ef6bedcdd5bcbe8e9",
+      "resumeSha256": "8bcba31995a193add743484e8966734761327a608dcd1a74f7f55ff191822830",
+      "contextSha256": "b13034d6d57e0179572d1bf0f7a21dcd5be08c0052dcb21bab8e6bb7690b2bc8",
+      "voiceProfileSha256": "4b8b4d67ffc736bafc74176aa0bfeba02bb8c7e938cee9fb6c15c397fc0e4217",
+      "postingSourceReviewedAt": "2026-08-20",
+      "voiceSourceModifiedAt": "2026-08-20T00:24:54.891Z",
+      "promptVersion": "hiring-reader-cover-letter-v1",
+      "pairId": "oti-product-lisa-gelobter",
+      "verdict": "pass",
+      "decision": "advance-to-structured-next-step",
+      "rationale": "The combined application presents credible senior product leadership aligned with PIT Crew’s mandate: resident-centered problem framing, bounded MVP decisions, cross-functional implementation, public launch, learning, and durable agency handoffs. The letter adds a memorable governing situation—turning CouncilStat data into a usable next step—rather than merely restating the resume, while carefully distinguishing an independent prototype from an official City service and individual contribution from collective outcomes. Advancement remains subject to the separate civil-service qualification screen.",
+      "strengths": [
+        "CallNYC provides a role-specific example spanning problem definition, information architecture, implementation, and public release.",
+        "The recurring image of giving a resident one clearer next step creates a memorable product principle tied directly to public-service delivery.",
+        "The unofficial-versus-official distinction demonstrates sound judgment about authority, trust, and product boundaries.",
+        "Tired of Tires extends the case beyond interfaces into intake, field operations, agency coordination, and public reporting.",
+        "The letter connects documentation, decision records, and handoffs to organizational capacity rather than treating launch as the endpoint."
+      ],
+      "constructiveCritique": "The application would be stronger with one concise, evidenced example of Jamie using resident research or post-launch signals to change a product decision. The letter names discovery, measurement, and learning, but its governing CallNYC example chiefly proves framing, scoping, and shipping. It should also avoid leaving the reader to infer how Jamie operated with dedicated designers, engineers, and agency owners in a formal product organization.",
+      "missingEvidence": [
+        "Complete education and employment chronology needed for the Senior IT Architect minimum-qualification screen.",
+        "A concrete example of research findings or user feedback changing prioritization, scope, or design.",
+        "A measurable resident or service-delivery outcome beyond activity, release, or participation counts.",
+        "Clear evidence of formal product leadership across dedicated design, engineering, and agency teams."
+      ],
+      "voiceFidelity": {
+        "verdict": "pass",
+        "rationale": "The letter uses Jamie’s first-person attention to move from a public-data problem to a bounded service decision, makes an ethical distinction about unofficial status, preserves collective credit, and ends with the durable possibility of both a clearer resident action and a stronger partner agency. Its governing question and repeated image of the next step give the narrative coherence.",
+        "presentSignals": [
+          "Concrete opening anchored in CouncilStat and CallNYC.",
+          "First-person verbs describe noticing, building, carrying, translating, and helping.",
+          "Explicit distinction between an independent prototype and an official City service.",
+          "Collective efforts and Jamie’s specific contribution are separated.",
+          "One governing question and the recurring image of a resident’s next step organize the letter.",
+          "Documentation, decisions, and handoffs are framed as ways work remains usable by others."
+        ],
+        "risks": [
+          "The opening sentence is a polished thesis rather than a vivid human encounter with a particular resident or service obstacle.",
+          "The middle paragraph compresses many product competencies into a list, briefly weakening the otherwise strong narrative sequence.",
+          "The resident stake is plausible and relevant, but direct resident response to CallNYC is not evidenced in the supplied materials."
+        ]
+      },
+      "validateNext": "Use a structured interview or practical exercise centered on one resident-service problem. Ask Jamie to define the version-one boundary, research plan, cross-functional operating model, accessibility and privacy risks, success measures, learning loop, and agency handoff; separately verify the civil-service minimum qualifications.",
+      "actualPersonParticipated": false,
+      "boundary": "This is a fictionalized public-source model simulation and not participation or endorsement by Lisa Gelobter."
+    }
+  ]
+}

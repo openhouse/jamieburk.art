@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "rubricId": "resume.nyc-oti.senior-product-manager.782366",
   "candidate": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
-  "evaluatedAt": "2026-08-14T13:39:57.638Z",
-  "wordCount": 799,
+  "evaluatedAt": "2026-08-14T21:08:00-04:00",
+  "wordCount": 779,
   "numericSignalCount": 23,
   "passedChecks": 13,
   "totalChecks": 13,
@@ -13,7 +13,7 @@
     "baselineScore": 17,
     "candidateScore": 100,
     "delta": 83,
-    "boundedChange": "Added a source-bounded resident-service example spanning access, intake, field fulfillment, municipal handoff, and public reporting; tightened the summary to keep the application-specific resume within its 800-word ceiling while retaining collective-credit, privacy, evidence, outcome, accessibility, funding, and civil-service boundaries."
+    "boundedChange": "Kept Thick Arts LLC as the single employer container and led the Harry J. Epstein Company bullet with delivered work and outcomes, while retaining resident-service evidence, collective credit, privacy, accessibility, funding, and civil-service boundaries."
   },
   "passingCheckIds": [
     "exact-target-title",

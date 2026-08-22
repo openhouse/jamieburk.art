@@ -6,8 +6,8 @@ projection_type: visual-occurrence
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-14
-review_by: 2027-02-14
+last_reviewed: 2026-08-20
+review_by: 2027-02-20
 canonical_path: docs/knowledge-bank/projections/photography/kc-town-hall-tired-of-tires-flyer.md
 summary: Exact public occurrence binding the cropped service flyer to the KC Town Hall resident-service sequence.
 projection_status: active
@@ -29,9 +29,9 @@ caption:
     - statement.design.kc-town-hall.tired-of-tires-service-model.v1
     - statement.design.kc-town-hall.tired-of-tires-public-crop.v1
 credit:
-  text: From the KC Town Hall project archive. Component design authorship remains under review.
+  text: Design courtesy of KC Town Hall.
   assertions:
-    - statement.design.kc-town-hall.tired-of-tires-archive-custody.v1
+    - statement.design.kc-town-hall.tired-of-tires.courtesy-credit.v1
 permission_source: source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14
 approval:
   public_git: approved

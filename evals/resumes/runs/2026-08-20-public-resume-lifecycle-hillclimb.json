@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "evalId": "public-resume-lifecycle-hillclimb-2026-08-20",
+  "evaluatedAt": "2026-08-20T12:45:00-04:00",
+  "objective": "Keep the stable public resume tailored to the real current hiring situation while preventing deterministically unnecessary model work.",
+  "baseline": {
+    "selectionModel": "static active-truthfully-hirable list",
+    "publicResumeOpportunityCount": 4,
+    "publicResumeReaderCalls": 7,
+    "postingLifecycleCheckedBeforeModel": false,
+    "publicResumeMatchedSubmittedApplicationExactly": false
+  },
+  "candidate": {
+    "selectionModel": "submitted-active, then open-unapplied, then historical-top-quartile",
+    "publicResumeOpportunityCount": 1,
+    "publicResumeReaderCalls": 2,
+    "readerCallsSkippedDeterministically": 14,
+    "postingLifecycleCheckedBeforeModel": true,
+    "publicResumeMatchedSubmittedApplicationExactly": true,
+    "publicResumeMatchesSelectedRoleMarkdownAndPdfByteForByte": true,
+    "readerModelPasses": 2
+  },
+  "result": "keep",
+  "why": "The candidate makes the currently pending OTI PIT Crew application the public hiring context, saves five model calls relative to the prior public-resume reader set and fourteen across the tracked opportunity registry, fails closed on stale dates and hard screens, preserves the exact application resume, and passes both current fictionalized reader lenses without weakening claim scope, rights, collective credit, accessibility, or human hiring gates.",
+  "actualPeopleParticipated": false,
+  "boundary": "The reader passes are model simulations, not participation, endorsement, interview promises, civil-service determinations, or hiring decisions by the named people."
+}

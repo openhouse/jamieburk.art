@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "pda4-rgn4",
+  "datasetPageUrl": "https://data.cityofnewyork.us/City-Government/NYC-Jobs/pda4-rgn4/about_data",
+  "metadataUrl": "https://data.cityofnewyork.us/api/views/pda4-rgn4",
+  "rowsUrl": "https://data.cityofnewyork.us/resource/pda4-rgn4.json?$limit=50000",
+  "rowsUpdatedAt": 1787079680,
+  "rowsUpdatedAtIso": "2026-08-18T19:01:20.000Z",
+  "requiredFields": [
+    "job_id",
+    "agency",
+    "posting_type",
+    "business_title",
+    "salary_range_from",
+    "salary_range_to",
+    "salary_frequency",
+    "job_description",
+    "minimum_qual_requirements",
+    "preferred_skills",
+    "post_until"
+  ],
+  "strongMatchThreshold": {
+    "composite": 78,
+    "fit": 75,
+    "secure": 65
+  },
+  "evaluation": {
+    "stages": [
+      "source-integrity",
+      "eligibility",
+      "deterministic-score",
+      "named-reader-llm",
+      "human-application"
+    ],
+    "llmGate": "new-strong-matches-only",
+    "cacheKeyFields": [
+      "job_id",
+      "rowsUpdatedAt",
+      "postingTextSha256",
+      "careerEvidenceSha256",
+      "readerPromptVersion"
+    ],
+    "maximumReadersPerNewMatch": 2
+  },
+  "reviewedJobIds": [
+    "782364",
+    "782366",
+    "782369",
+    "782373",
+    "784450",
+    "789192",
+    "789563",
+    "789610",
+    "789794",
+    "789810",
+    "789837",
+    "791074"
+  ],
+  "lifecyclePath": "evals/resumes/public-resume-selection.json",
+  "snapshotPath": "data/opportunities/nyc-jobs-current.json",
+  "reportPath": "reports/opportunities/nyc-jobs-current.md",
+  "digestPath": "reports/opportunities/nyc-jobs-daily-digest.md",
+  "delivery": {
+    "provider": "resend",
+    "recipient": "jamie@ohai.us",
+    "credentialEnvironmentVariables": [
+      "RESEND_API_KEY",
+      "JOB_DIGEST_FROM",
+      "JOB_DIGEST_TO"
+    ],
+    "applicationAuthority": "Jamie Burkart"
+  }
+}

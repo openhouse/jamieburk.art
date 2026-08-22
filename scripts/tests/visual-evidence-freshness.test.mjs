@@ -42,7 +42,7 @@ test("current visual screenshots are checksum-bound to the current public surfac
 test("the full responsive matrix is current and complete", () => {
   const result = validateResponsiveAccessibilityEvidence(repoRoot);
   assert.equal(result.passed, true);
-  assert.equal(result.report.rows.length, 56);
+  assert.equal(result.report.rows.length, 60);
 });
 
 test("bounded keyboard, mobile-menu, focus, and reflow evidence is current", () => {

@@ -1,16 +1,20 @@
+import Link from "next/link";
 import type { Metadata } from "next";
+import { Claim, References } from "@/components/citations";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   title: "Colophon - Jamie Burkart",
   description:
-    "Colophon for Jamie Burkart's public-safe portfolio and future living notebook.",
+    "How Jamie Burkart's public-safe portfolio is composed from a federated Knowledge Wiki Graph practice.",
   path: "/colophon"
 });
 
 const details = [
   "Static-first Next.js App Router site with local MDX content",
   "Public-safe artifacts, claim discipline, and visible content-status notes",
+  "Semantic, evidence, and source-custody responsibilities kept distinct across locally authoritative project repositories",
+  "Audience-specific outputs composed through citations, evaluations, correction paths, and human review",
   "Accessibility-minded semantic HTML, keyboard focus states, and readable type",
   "Karla for body text, Oswald for labels, and a system serif for display headings",
   "No private or proprietary font files are committed or served",
@@ -28,15 +32,35 @@ export default function ColophonPage() {
           <p className="jb-section-label">How this is made</p>
           <h1 className="mt-3 text-6xl leading-none text-jb-ink">Colophon</h1>
         </div>
-        <p className="mt-6 text-xl leading-8 text-jb-ink/76">
-          This site is built as a small public proof surface and future living
-          notebook. It uses local MDX content, public-safe artifacts, and
-          intentionally limited tracking. The design joins a work-jacket blue,
-          institutional forms, and a quiet proportional grid with a small
-          selection from Jamie&apos;s photo archive. Staging is reviewable but not
-          indexable, and production should only become indexable after content,
-          rights, and metadata review.
-        </p>
+        <div className="mt-6 space-y-5 text-xl leading-8 text-jb-ink/76">
+          <p>
+            This site is a selective public proof surface, not a mirror of the
+            underlying archives. Public-safe artifacts, source-linked claims,
+            evaluations, correction paths, and human review shape what appears
+            here.
+          </p>
+          <p>
+            <Claim
+              claimId="CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026"
+              projection="case-study"
+              surface="/colophon"
+              pageId="colophon"
+              occurrenceId="knowledge-wiki-graph-method"
+            />{" "}
+            <Link
+              className="font-semibold text-jb-blue hover:text-jb-green"
+              href="/lab/source-backed-team-memory"
+            >
+              Read the evolving method.
+            </Link>
+          </p>
+          <p>
+            The design joins a work-jacket blue, institutional forms, a quiet
+            proportional grid, and a small selection from Jamie&apos;s photo archive.
+            Staging is reviewable but not indexable; production publication still
+            requires content, rights, and metadata review.
+          </p>
+        </div>
       </div>
       <div className="mt-14 grid gap-8 lg:grid-cols-[0.32fr_0.68fr]">
         <div>
@@ -58,6 +82,9 @@ export default function ColophonPage() {
             </li>
           ))}
         </ol>
+      </div>
+      <div className="mt-12 max-w-3xl">
+        <References pageId="colophon" />
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
-import { readFileSync, readdirSync, statSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -27,10 +28,14 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     "governed-photographic-field",
     "metadata-and-locator-safety",
     "editorial-not-decorative",
+    "screen-room-continuity",
     "truthful-project-cover-field",
+    "browser-window-presentation",
+    "homepage-hiring-sequence",
     "tag-navigation-contract",
     "human-index-material-system",
     "responsive-image-contract",
+    "social-preview-contract",
     "human-authority-remains-open"
   ];
   const observedCriteria = evaluation.criteria.map(({ id }) => id);
@@ -51,28 +56,50 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     "/images/field-notes/kc-town-hall-roof-work.webp",
     "/images/field-notes/kc-town-hall-tired-of-tires-after.webp",
     "/images/field-notes/kc-town-hall-tired-of-tires-before.webp",
+    "/images/field-notes/knowledge-wiki-collective-map.webp",
     "/images/field-notes/nycac-market-hotel-banner.webp",
     "/images/field-notes/nycac-shoestring-facilitation.webp",
     "/images/field-notes/sunday-dinner-shared-map.webp"
   ];
   if (JSON.stringify(sources.sort()) !== JSON.stringify(expectedSources.sort())) {
-    fail("governed-photographic-field", "The public field must contain exactly the seven reviewed photographic derivatives.");
+    fail("governed-photographic-field", "The public field must contain exactly the eight reviewed photographic derivatives.");
   }
 
   for (const field of ["id", "width", "height", "alt", "caption", "credit", "placements", "publicationStatus", "publicUseBoundary"]) {
     const count = [...manifest.matchAll(new RegExp(`\\b${field}:`, "g"))].length;
-    if (count !== 9) {
+    if (count !== 11) {
       fail("manifest-bound-publication", `Manifest field ${field} is missing from one or more photos.`);
     }
   }
-  if ([...manifest.matchAll(/publicationStatus: "jamie-authorized"/g)].length !== 9) {
+  if ([...manifest.matchAll(/publicationStatus: "jamie-authorized"/g)].length !== 11) {
     fail("manifest-bound-publication", "Every photo must retain the Jamie-authorized publication status.");
+  }
+  const expectedProjectCredits = [
+    ["Photo courtesy of NYC Artist Coalition.", 3],
+    ["Photo courtesy of Sunday Dinner NYC.", 1],
+    ["Photo courtesy of KC Town Hall.", 3],
+    ["Design courtesy of KC Town Hall.", 1]
+  ];
+  for (const [credit, expectedCount] of expectedProjectCredits) {
+    const observedCount = manifest.split(`credit: "${credit}"`).length - 1;
+    if (observedCount !== expectedCount) {
+      fail(
+        "manifest-bound-publication",
+        `Expected ${expectedCount} exact public occurrence(s) of project credit: ${credit}`
+      );
+    }
+  }
+  if (/Paul Mossine|retained export|photographer not identified|photographer unresolved|authorship remains under review/i.test(manifest)) {
+    fail(
+      "manifest-bound-publication",
+      "Public visual credits must use verified creator attribution or a clean project courtesy line, never an incorrect byline or archive-process note."
+    );
   }
 
   const publicImageRoot = path.join(root, "apps/www/public/images/field-notes");
   const publicImages = walkFiles(publicImageRoot).sort();
-  if (publicImages.length !== 7 || publicImages.some((file) => !file.endsWith(".webp"))) {
-    fail("governed-photographic-field", "The field-notes directory must contain only the seven fully bound photographic WebP derivatives.");
+  if (publicImages.length !== 8 || publicImages.some((file) => !file.endsWith(".webp"))) {
+    fail("governed-photographic-field", "The field-notes directory must contain only the eight fully governed photographic WebP derivatives.");
   }
   for (const relativeImagePath of publicImages) {
     const bytes = readFileSync(path.join(publicImageRoot, relativeImagePath));
@@ -92,6 +119,8 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     readText("apps/www/src/components/Hero.tsx"),
     readText("apps/www/src/components/ParticipationSequence.tsx"),
     readText("apps/www/src/components/ResidentServiceSequence.tsx"),
+    readText("apps/www/src/data/social-preview.ts"),
+    readText("apps/www/src/app/opengraph-image.tsx"),
     readText("apps/www/src/app/about/page.tsx"),
     readText("apps/www/src/app/colophon/page.tsx")
   ].join("\n");
@@ -126,27 +155,47 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   }
 
   const workCovers = readText("apps/www/src/data/work-covers.ts");
+  const workData = readText("apps/www/src/data/work.ts");
+  const hiringSequenceDecision = readText("docs/design/homepage-hiring-sequence.md");
+  const hiringSequenceHillclimb = JSON.parse(
+    readText("evals/layout/homepage-hiring-sequence-hillclimb.json")
+  );
   const workCard = readText("apps/www/src/components/WorkCard.tsx");
+  const workCoverMediaPath = "apps/www/src/components/WorkCoverMedia.tsx";
+  const workCoverMedia =
+    overrides[workCoverMediaPath] ??
+    (existsSync(path.join(root, workCoverMediaPath))
+      ? readFileSync(path.join(root, workCoverMediaPath), "utf8")
+      : "");
   const caseStudyLayout = readText("apps/www/src/components/CaseStudyLayout.tsx");
+  const caseStudyBlocks = readText("apps/www/src/components/CaseStudyBlocks.tsx");
+  const homePage = readText("apps/www/src/app/page.tsx");
   const workIndex = readText("apps/www/src/app/work/page.tsx");
   const tagList = readText("apps/www/src/components/TagList.tsx");
+  const capabilityGrid = readText("apps/www/src/components/CapabilityGrid.tsx");
+  const homeFieldSystemEvidence = readText(
+    "apps/www/src/components/HomeFieldSystemEvidence.tsx"
+  );
   const coverCount = [...workCovers.matchAll(/^  (?:"[^"]+"|[a-z]+): \{/gm)].length;
-  if (coverCount !== 6 ||
-      !workCard.includes('from "next/image"') ||
+  if (coverCount !== 7 ||
+      !workCoverMedia.includes('from "next/image"') ||
+      !workCard.includes("WorkCoverMedia") ||
       !workCard.includes("getWorkCover(item.slug)") ||
       !workCard.includes("cover.src") ||
       !workCard.includes("cover.caption") ||
       !workCard.includes("cover.credit") ||
+      !caseStudyLayout.includes("WorkCoverMedia") ||
       !caseStudyLayout.includes("getWorkCover(item.slug)") ||
       !caseStudyLayout.includes("cover.src") ||
       !caseStudyLayout.includes("cover.caption") ||
       !caseStudyLayout.includes("cover.credit")) {
-    fail("truthful-project-cover-field", "All six work items and case studies must render one captioned and credited cover from the separate cover manifest.");
+    fail("truthful-project-cover-field", "All seven work items and case studies must render one captioned and credited cover from the separate cover manifest.");
   }
   for (const [title, requiredCover] of [
     ["Harry J. Epstein Company", '"/artifacts/hje/public-site.png"'],
     ["NYC Artist Coalition / FairRentNYC", "portfolioPhotos.nycacMarketHotelBanner.src"],
-    ["CallNYC.org", '"/artifacts/callnyc/archived-prototype.png"'],
+    ["CallNYC.org", '"/artifacts/callnyc/original-launch.png"'],
+    ["KC Spaces Fund", '"/artifacts/kc-spaces-fund/public-site.webp"'],
     ["WOWList.org", '"/artifacts/wowlist/public-threshold.webp"'],
     ["196 Artists Residency / Sunday Dinner", "portfolioPhotos.sundayDinnerSharedMap.src"],
     ["KC Town Hall LLC", "portfolioPhotos.kcTownHallRoofWork.src"]
@@ -155,6 +204,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
       "Harry J. Epstein Company": '"harry-j-epstein"',
       "NYC Artist Coalition / FairRentNYC": '"fair-rent-nyc"',
       "CallNYC.org": "callnyc",
+      "KC Spaces Fund": '"kc-spaces-fund"',
       "WOWList.org": "wowlist",
       "196 Artists Residency / Sunday Dinner": '"196-sunday-dinner"',
       "KC Town Hall LLC": '"kc-town-hall"'
@@ -167,13 +217,182 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     }
   }
 
+  const callNycCoverStart = workCovers.indexOf("  callnyc: {");
+  const callNycCoverEnd = workCovers.indexOf("\n  },", callNycCoverStart);
+  const callNycCover = workCovers.slice(callNycCoverStart, callNycCoverEnd);
+  const callNycWorkStart = workData.indexOf('    title: "CallNYC.org"');
+  const callNycWorkEnd = workData.indexOf("\n  },", callNycWorkStart);
+  const callNycWork = workData.slice(callNycWorkStart, callNycWorkEnd);
+  const callNycAlphaPath = "apps/www/public/artifacts/callnyc/original-launch.png";
+  const callNycAlphaAbsolutePath = path.join(root, callNycAlphaPath);
+  const callNycAlphaBytes = existsSync(callNycAlphaAbsolutePath)
+    ? readFileSync(callNycAlphaAbsolutePath)
+    : Buffer.alloc(0);
+  const callNycAlphaHash = createHash("sha256").update(callNycAlphaBytes).digest("hex");
+  const hasRgbaPngHeader =
+    callNycAlphaBytes.length > 25 &&
+    callNycAlphaBytes.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10])) &&
+    callNycAlphaBytes[25] === 6;
+  if (
+    !callNycCover.includes('src: "/artifacts/callnyc/original-launch.png"') ||
+    !callNycWork.includes('src: "/artifacts/callnyc/original-launch.png"') ||
+    !callNycCover.includes('presentation: "browser-window"') ||
+    !callNycWork.includes('presentation: "browser-window"') ||
+    !workData.includes('presentation: z.enum(["browser-window"]).optional()') ||
+    !workCoverMedia.includes('presentation === "browser-window"') ||
+    !workCoverMedia.includes("aspect-[7/5]") ||
+    !workCoverMedia.includes("object-cover object-top") ||
+    !workCoverMedia.includes("bg-white") ||
+    !hasRgbaPngHeader ||
+    callNycAlphaHash !== "9f2bd3335338bfd1e75dad7a3861b4d46f3021306510639e086a5b16a7e4f806" ||
+    /bg-black|bg-jb-ink/.test(workCoverMedia) ||
+    !workCard.includes("WorkCoverMedia") ||
+    !caseStudyLayout.includes("WorkCoverMedia") ||
+    !caseStudyBlocks.includes("WorkCoverMedia") ||
+    hiringSequenceHillclimb.callNycBrowserWindowPresentation?.criterion !==
+      "source-faithful-artifact-to-page-continuity" ||
+    hiringSequenceHillclimb.callNycBrowserWindowPresentation?.sourceIntegrity?.sha256 !==
+      "9f2bd3335338bfd1e75dad7a3861b4d46f3021306510639e086a5b16a7e4f806" ||
+    hiringSequenceHillclimb.callNycBrowserWindowPresentation?.browserReview
+      ?.blackTranscodeArtifact !== "absent" ||
+    hiringSequenceHillclimb.callNycBrowserWindowPresentation?.decision !== "keep-change"
+  ) {
+    fail(
+      "browser-window-presentation",
+      "CallNYC must use the exact alpha-bearing press-kit PNG on the shared white-field browser-window presentation in every portfolio rendering."
+    );
+  }
+  const capabilityIndex = homePage.indexOf("<CapabilityGrid />");
+  const fieldSystemIndex = homePage.indexOf("<HomeFieldSystemEvidence />");
+  const selectedSystemsIndex = homePage.indexOf("featuredWork.map");
+  if (
+    !hero.includes('href="/work"') ||
+    !hero.includes("View selected work") ||
+    !homePage.includes('from "@/components/HomeFieldSystemEvidence"') ||
+    capabilityIndex < 0 ||
+    fieldSystemIndex <= capabilityIndex ||
+    selectedSystemsIndex <= fieldSystemIndex ||
+    !homeFieldSystemEvidence.includes(
+      "The system lives between the screen and the room"
+    ) ||
+    !homeFieldSystemEvidence.includes(
+      "portfolioPhotos.nycacShoestringFacilitation"
+    ) ||
+    !homeFieldSystemEvidence.includes(
+      'src: "/artifacts/fair-rent-nyc/public-site.png"'
+    ) ||
+    !homeFieldSystemEvidence.includes('href="/work/technical-operations"') ||
+    !homeFieldSystemEvidence.includes("See role-fit evidence") ||
+    !homeFieldSystemEvidence.includes('href="/work/fair-rent-nyc"') ||
+    !manifest.includes('credit: "Photo courtesy of NYC Artist Coalition."') ||
+    hiringSequenceHillclimb.screenRoomBridge?.criterion !==
+      "screen-to-room-hiring-legibility" ||
+    hiringSequenceHillclimb.screenRoomBridge?.selectedBase !==
+      "apply/2026-08-21-B" ||
+    hiringSequenceHillclimb.screenRoomBridge?.browserReview?.desktop !== "pass" ||
+    hiringSequenceHillclimb.screenRoomBridge?.browserReview?.mobile !== "pass" ||
+    hiringSequenceHillclimb.screenRoomBridge?.browserReview?.consoleErrorsOrWarnings !==
+      0 ||
+    hiringSequenceHillclimb.screenRoomBridge?.decision !== "keep-change"
+  ) {
+    fail(
+      "screen-room-continuity",
+      "The approved B-based synthesis must keep its reviewed hero unchanged and retain the direct role-fit action and governed screen-to-room bridge in the reviewed homepage position."
+    );
+  }
+
+  const sequenceMatch = workData.match(
+    /export const homepageHiringSequence = \[([\s\S]*?)\]\s+as const satisfies/
+  );
+  const observedSequence = sequenceMatch
+    ? [...sequenceMatch[1].matchAll(/"([^"]+)"/g)].map((match) => match[1])
+    : [];
+  const expectedSequence = [
+    "harry-j-epstein",
+    "fair-rent-nyc",
+    "callnyc",
+    "kc-town-hall",
+    "wowlist",
+    "196-sunday-dinner"
+  ];
+  const quickPath = [
+    'href: "/work/technical-operations"',
+    'href: "/work/harry-j-epstein"',
+    'href: "/work/fair-rent-nyc"',
+    'href: "/work/callnyc"',
+    'href: "/resume"'
+  ];
+  let lastQuickPathIndex = -1;
+  const quickPathInOrder = quickPath.every((needle) => {
+    const index = homePage.indexOf(needle, lastQuickPathIndex + 1);
+    if (index < 0) return false;
+    lastQuickPathIndex = index;
+    return true;
+  });
+  if (
+    JSON.stringify(observedSequence) !== JSON.stringify(expectedSequence) ||
+    !workData.includes("export const featuredWork = homepageHiringSequence.map") ||
+    !homePage.includes("featuredWork.map") ||
+    !quickPathInOrder ||
+    JSON.stringify(hiringSequenceHillclimb.candidate?.sequence) !==
+      JSON.stringify(expectedSequence) ||
+    hiringSequenceHillclimb.decision !== "keep-change" ||
+    hiringSequenceHillclimb.criterion !== "rushed-hiring-reader-legibility" ||
+    hiringSequenceHillclimb.capabilityNavigation?.decision !== "keep-change" ||
+    hiringSequenceHillclimb.capabilityNavigation?.criterion !==
+      "capability-to-project-proof" ||
+    hiringSequenceHillclimb.capabilityNavigation?.destinationPattern !==
+      "/work?tag={encoded-tag}#work-index" ||
+    hiringSequenceHillclimb.capabilityNavigation?.browserReview?.desktop !== "pass" ||
+    hiringSequenceHillclimb.capabilityNavigation?.browserReview?.mobile !== "pass" ||
+    hiringSequenceHillclimb.capabilityNavigation?.browserReview?.filterState !== "pass" ||
+    !hiringSequenceHillclimb.activeOpportunityBasis?.submittedPending?.includes(
+      "opportunity.nyc-oti.senior-product-manager.782366"
+    ) ||
+    !hiringSequenceHillclimb.candidate?.retainedInCompleteIndex?.includes(
+      "kc-spaces-fund"
+    ) ||
+    !/current public instance remains archived, unofficial, and non-current/i.test(workData) ||
+    !workData.includes("Historical, collaborator-led campaign") ||
+    !hiringSequenceDecision.includes("The homepage is an argument, not a chronology") ||
+    !/Can Jamie deliver for an\s+established organization\?/.test(hiringSequenceDecision) ||
+    !hiringSequenceDecision.includes("Sunday Dinner closes") ||
+    !hiringSequenceDecision.includes("KC Spaces Fund remains in the complete work index") ||
+    !hiringSequenceDecision.includes("A later reorder should name the changed hiring question")
+  ) {
+    fail(
+      "homepage-hiring-sequence",
+      "The approved six-project hiring sequence, mirrored quick path, active-opportunity basis, or historical and collective-credit boundary has drifted."
+    );
+  }
+  if (workData.includes("approved public materials pending") ||
+      !workData.includes("one human-reviewed project photograph cleared for this portfolio display with a Sunday Dinner NYC courtesy credit") ||
+      !workData.includes("Additional named participants, photographs, and artifacts require consent and approval.")) {
+    fail(
+      "truthful-project-cover-field",
+      "The Sunday Dinner source boundary must distinguish its authorized cover from additional consent-gated media."
+    );
+  }
+
+  const expectedCapabilityTags = [
+    "Technical Operations",
+    "Product Operations",
+    "Knowledge Systems",
+    "Civic Technology",
+    "Web Systems",
+    "Community Systems"
+  ];
   if (!tagList.includes('from "next/link"') ||
       !tagList.includes("/work?tag=") ||
       !tagList.includes("encodeURIComponent(tag)") ||
+      !capabilityGrid.includes('from "next/link"') ||
+      !capabilityGrid.includes("encodeURIComponent(capability.tag)") ||
+      !capabilityGrid.includes('id="capabilities"') ||
+      expectedCapabilityTags.some((tag) => !capabilityGrid.includes(`tag: "${tag}"`)) ||
       !workIndex.includes("selectedTag") ||
       !workIndex.includes("Clear filter") ||
       !workIndex.includes('id="work-index"')) {
-    fail("tag-navigation-contract", "Tag-shaped controls must link to a visible, clearable work-index filter state.");
+    fail("tag-navigation-contract", "Tag-shaped controls and homepage capability rows must link to visible, clearable work-index filter states.");
   }
 
   for (const route of [
@@ -193,11 +412,144 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     fail("human-index-material-system", "A prohibited gradient, orb, or bokeh treatment appears in global CSS.");
   }
   const fieldPhoto = readText("apps/www/src/components/FieldPhoto.tsx");
-  if (!fieldPhoto.includes('from "next/image"') || !fieldPhoto.includes("sizes={sizes}") || !fieldPhoto.includes("photo.alt")) {
-    fail("responsive-image-contract", "Field photos must retain Next Image, responsive sizes, and manifest alt text.");
+  const responsiveMedia = readText("apps/www/src/components/ResponsiveMedia.tsx");
+  if (!fieldPhoto.includes("ResponsiveMedia") ||
+      !fieldPhoto.includes("sizes={sizes}") ||
+      !fieldPhoto.includes("photo.alt") ||
+      !responsiveMedia.includes('from "next/image"') ||
+      !responsiveMedia.includes("resolveMediaDelivery") ||
+      !responsiveMedia.includes("srcSet={delivery.srcSet}")) {
+    fail("responsive-image-contract", "Field photos must retain the governed local fallback, responsive sizes, manifest alt text, and bounded direct Cloudinary srcset.");
   }
   if (!globalCss.includes("100svh")) {
     fail("responsive-image-contract", "The stable viewport-bounded hero contract is incomplete.");
+  }
+
+  const socialPreview = readText("apps/www/src/data/social-preview.ts");
+  const openGraphImage = readText("apps/www/src/app/opengraph-image.tsx");
+  const appPackage = readText("apps/www/package.json");
+  const repositoryScripts = walkFiles(path.join(root, "scripts"));
+  const metadata = readText("apps/www/src/lib/metadata.ts");
+  const socialPlacement = readText(
+    "docs/knowledge-bank/projections/photography/social-preview-east-river.md"
+  );
+  const socialPermission = readText(
+    "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md"
+  );
+  const socialImagePath = path.join(
+    root,
+    "apps/www/public/images/social/jamie-east-river-og.jpg"
+  );
+  const socialImageBytes = readFileSync(socialImagePath);
+  const socialImageSha = createHash("sha256").update(socialImageBytes).digest("hex");
+  const eastRiverAsset = readText(
+    "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md"
+  );
+  const metadataBindings = [
+    "socialPreview.route",
+    "socialPreview.width",
+    "socialPreview.height",
+    "socialPreview.alt"
+  ];
+  const renderedBindings = [
+    "socialPreview.name",
+    "socialPreview.proposition",
+    "socialPreview.image.src",
+    "socialPreview.image.alt",
+    "socialPreview.siteLabel"
+  ];
+  const compositionInstructions = [
+    "photograph-is-the-field",
+    "name-is-primary",
+    "proposition-is-secondary",
+    "destination-is-quiet",
+    "role-and-credit-are-metadata"
+  ];
+  if (
+    !socialPreview.includes("image: portfolioPhotos.eastRiverSocialPreview") ||
+    !manifest.includes('src: "/images/social/jamie-east-river-og.jpg"') ||
+    !socialPreview.includes('route: "/opengraph-image"') ||
+    !socialPreview.includes("width: 1200") ||
+    !socialPreview.includes("height: 630") ||
+    metadataBindings.some((binding) => !metadata.includes(binding)) ||
+    [...metadata.matchAll(/socialPreview\.route/g)].length !== 2 ||
+    [...metadata.matchAll(/socialPreview\.alt/g)].length !== 2 ||
+    [...metadata.matchAll(/socialPreview\.width/g)].length !== 1 ||
+    [...metadata.matchAll(/socialPreview\.height/g)].length !== 1 ||
+    !socialPreview.includes("Photograph by Elana Gordon.") ||
+    !socialPreview.includes('id: "human-index-editorial-proposition-v1"') ||
+    !socialPreview.includes('selectedVariant: "image-4-editorial-proposition"') ||
+    !socialPreview.includes("alternativesReviewed: 6") ||
+    !socialPreview.includes("uniqueCompositionsReviewed: 4") ||
+    compositionInstructions.some((instruction) => !socialPreview.includes(instruction)) ||
+    !socialPreview.includes('renderedFields: ["name", "proposition", "siteLabel"]') ||
+    !socialPreview.includes('metadataOnlyFields: ["role", "creatorCredit"]') ||
+    !socialPreview.includes('sha256: "1f83d66b7e35e8a3a955819cf2104b79a88c9a8bd3953fd6fa691143bdb6da42"') ||
+    !appPackage.includes('"social-preview:verify"') ||
+    !appPackage.includes("npm run social-preview:verify") ||
+    !repositoryScripts.includes("check-social-preview-render.mjs") ||
+    /\b(?:focus|credit):/.test(socialPreview) ||
+    renderedBindings.some(
+      (binding) => openGraphImage.split(binding).length - 1 !== 1
+    ) ||
+    /socialPreview\.(?:focus|credit)|socialPreview\.image\.caption/.test(
+      openGraphImage
+    ) ||
+    !openGraphImage.includes('export const runtime = "nodejs"') ||
+    !openGraphImage.includes('import { readFile } from "node:fs/promises"') ||
+    !openGraphImage.includes("readSocialPreviewAsset(socialPreview.image.src)") ||
+    !openGraphImage.includes(
+      "readSocialPreviewAsset(composition.typography.displayFont.src)"
+    ) ||
+    !openGraphImage.includes(
+      "readSocialPreviewAsset(composition.typography.bodyFont.src)"
+    ) ||
+    !openGraphImage.includes("src={imageData as unknown as string}") ||
+    !openGraphImage.includes('objectFit: "cover"') ||
+    !socialPreview.includes('image: { objectPosition: "center 46%" }') ||
+    !openGraphImage.includes("composition.layout.image.objectPosition") ||
+    openGraphImage.includes("socialPreview.role") ||
+    !openGraphImage.includes("socialPreview.composition") ||
+    !openGraphImage.includes("readSocialPreviewAsset") ||
+    !openGraphImage.includes("fonts:") ||
+    !openGraphImage.includes("composition.contrast") ||
+    !openGraphImage.includes("composition.typography") ||
+    !openGraphImage.includes("composition.layout") ||
+    /new URL\(socialPreview\.image\.src|SITE_URL/.test(openGraphImage) ||
+    /#0b5f81|#1f5c3e|#eeefec|radial-gradient|conic-gradient/i.test(
+      openGraphImage
+    ) ||
+    !/route: \/opengraph-image/.test(socialPlacement) ||
+    !/asset: asset\.photo\.east-river-manhattan-bridge\.2022\.001/.test(
+      socialPlacement
+    ) ||
+    !/derivative: derivative\.photo\.east-river\.social-preview\.v1/.test(
+      socialPlacement
+    ) ||
+    !/fixed: full-bleed 1200 by 630 cover, centered at 46 percent vertically/.test(
+      socialPlacement
+    ) ||
+    !/rendered_in_image: false/.test(socialPlacement) ||
+    !/carried_in_alt_metadata: true/.test(socialPlacement) ||
+    !/in_image_credit: optional/.test(socialPermission) ||
+    !/metadata_credit: Photograph by Elana Gordon\./.test(socialPermission) ||
+    socialImageBytes[0] !== 0xff ||
+    socialImageBytes[1] !== 0xd8 ||
+    /EXIF|Exif|GPSLatitude|GPSLongitude|<x:xmpmeta|Photoshop 3\.0/i.test(
+      socialImageBytes.toString("latin1")
+    ) ||
+    !eastRiverAsset.includes(socialImageSha) ||
+    !/production: approved/.test(socialPlacement) ||
+    !/indexing: approved/.test(socialPlacement) ||
+    !/authority: Jamie Burkart/.test(socialPlacement) ||
+    !/selected_variant: image-4-editorial-proposition/.test(socialPlacement) ||
+    !/alternatives_reviewed: 6/.test(socialPlacement) ||
+    !/unique_compositions_reviewed: 4/.test(socialPlacement)
+  ) {
+    fail(
+      "social-preview-contract",
+      "Open Graph, Twitter, the distilled full-bleed image, placement-specific creator attribution, and human release gates must remain one shared contract."
+    );
   }
 
   const design = readText("DESIGN.md");

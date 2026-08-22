@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "pairId",
+    "verdict",
+    "decision",
+    "rationale",
+    "strengths",
+    "constructiveCritique",
+    "missingEvidence",
+    "validateNext",
+    "actualPersonParticipated",
+    "boundary"
+  ],
+  "properties": {
+    "pairId": { "type": "string", "minLength": 1 },
+    "verdict": { "type": "string", "enum": ["pass", "fail"] },
+    "decision": {
+      "type": "string",
+      "enum": ["advance-to-structured-next-step", "do-not-advance"]
+    },
+    "rationale": { "type": "string", "minLength": 40 },
+    "strengths": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 5,
+      "items": { "type": "string", "minLength": 12 }
+    },
+    "constructiveCritique": { "type": "string", "minLength": 30 },
+    "missingEvidence": {
+      "type": "array",
+      "maxItems": 5,
+      "items": { "type": "string", "minLength": 8 }
+    },
+    "validateNext": { "type": "string", "minLength": 30 },
+    "actualPersonParticipated": { "type": "boolean", "const": false },
+    "boundary": { "type": "string", "minLength": 40 }
+  }
+}

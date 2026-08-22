@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Hiring acceptance Wiki gap resolution
 
-**Candidate commit:** `747605e3c34a6426c027a1c85ff82c3a6275ac36`
-**Public report hash:** `d93a69916364afd42e273ccdb4ac12ee7c0350b3a126ebec370ca4599f0bc589`
-**Wiki fingerprint:** `e4fc52c24bbf54e2f4cd03c7f545b8eb1d0af9c4a3ed28af19991b37897fcb60`
+**Candidate commit:** `36e3808ed5a36a543c534ddc7148d31d3e9ee5aa`
+**Public report hash:** `956fc97f8a45aa5e15f89e94eb324dba0ceff517dec4f0244861375c835f8039`
+**Wiki fingerprint:** `62de5d9514e8938cca88e06f77cf8edda06d7a3f23b2adb1f8aeaf1bff64ac55`
 
 The gap resolver runs after the public-only evaluator. It can identify Wiki evidence, but every public change remains human-reviewed.
 
@@ -11,9 +11,27 @@ The gap resolver runs after the public-only evaluator. It can identify Wiki evid
 
 - `requirement.codepath.qa-and-bug-pipeline` - **visible-weak-evidence-gap**; Inventory real QA and issue-triage work; do not substitute general project coordination.
 - `requirement.codepath.technical-test-fluency` - **source-needs-close-reading**; Verify current hands-on evidence and prepare a bounded technical demonstration if supportable.
+- `requirement.codepath.ai-automation` - **role-context-or-evidence-unknown**; Demonstrate one measured automation loop tied to delivery or QA.
 - `requirement.aclu.budget-and-resources` - **visible-weak-evidence-gap**; Identify exact budget and resource authority; do not imply procurement or financial authority not held.
 - `requirement.benepass.quantified-prioritization` - **visible-weak-evidence-gap**; Use only supported HJE figures and explain the decision they informed.
 - `requirement.oti-senior-product-manager.discovery-research` - **role-context-or-evidence-unknown**; Use the bounded Tired of Tires service example in the application; distinguish direct field contact, project-level survey evidence, and held component-authorship details.
 - `requirement.oti-senior-product-manager.accessibility-compliance` - **true-experience-gap**; Inventory direct accessibility and compliance practice; site conformance alone is not product-leadership experience.
+- `requirement.oti-speed-operations-789810.operating-backbone` - **role-context-or-evidence-unknown**; Quantify a bounded budget, vendor, or dependency example where evidence permits.
+- `requirement.oti-speed-operations-789810.people-operations` - **role-context-or-evidence-unknown**; Separate collaborator onboarding from formal employee-management claims.
+- `requirement.oti-speed-operations-789810.procurement` - **true-experience-gap**; Research the exact contracts, vendors, funding packets, and sign-off authority that can be stated publicly.
+- `requirement.oti-product-manager-784450.product-lifecycle` - **role-context-or-evidence-unknown**; Use one compact case showing Jamie's decisions across the full lifecycle.
+- `requirement.oti-product-manager-784450.cross-functional` - **role-context-or-evidence-unknown**; Keep Jamie's role and collective credit explicit.
+- `requirement.oti-product-manager-784450.data-and-kpis` - **true-experience-gap**; Prepare one measured product decision and state its limits.
+- `requirement.oti-speed-spm-789610.business-cases` - **role-context-or-evidence-unknown**; Present the chain from resident need through operating and architectural requirements.
+- `requirement.oti-speed-spm-789610.data-systems` - **true-experience-gap**; Distinguish demonstrated data workflows from unproven enterprise data-governance depth.
+- `requirement.oti-speed-spm-789610.influence` - **role-context-or-evidence-unknown**; Use one City-facing decision with outcome and authority boundaries.
+- `requirement.oti-pit-designer-782373.end-to-end-design` - **role-context-or-evidence-unknown**; Curate three cases around design decisions and tested use, not graphic output alone.
+- `requirement.oti-pit-designer-782373.accessibility` - **true-experience-gap**; Inventory direct accessibility decisions without claiming unsupported conformance.
+- `requirement.oti-pit-designer-782373.design-systems` - **true-experience-gap**; Do not infer Figma or formal design-system tenure; produce a bounded work sample if applying.
 - `requirement.oti.government-hiring-and-procurement` - **visible-weak-evidence-gap**; Do not imply procurement authority; clarify adjacent government-process experience in the application.
+- `requirement.uibk.studio3.architecture-degrees` - **hard-screen-gap**; Do not apply to ARCH-15927; search for adjacent roles without these credential screens.
+- `requirement.uibk.studio3.experimental-artistic-research` - **true-experience-gap**; Treat the vocabulary as adjacent-opportunity search context, not proof of architectural research qualification.
+- `requirement.uibk.studio3.digital-spatial-methods` - **source-needs-close-reading**; Inventory only exact, inspectable media-installation and spatial-computing evidence before using this language elsewhere.
+- `requirement.uibk.studio3-grants-teaching-administration` - **true-experience-gap**; Keep civic grants, facilitation, and project administration distinct from university grant management and formal academic supervision.
 - `requirement.protected-memory.knowledge-friction` - **role-context-or-evidence-unknown**; Keep the public method legible without exposing the protected lead.
+- `requirement.protected-memory.focused-sprint` - **role-context-or-evidence-unknown**; Do not imply that a sprint was accepted, funded, or delivered.

@@ -1,0 +1,1157 @@
+{
+  "schemaVersion": 1,
+  "evalId": "cover-letter-hiring-reader-portfolio-2026-08-20",
+  "evaluatedAt": "2026-08-20T12:31:00-04:00",
+  "overall": "pass",
+  "decision": "eligible-for-fictionalized-model-review",
+  "acceptanceQuestion": "Under this explicitly fictionalized public-source lens, would this role-specific cover letter, read with its sibling resume, make Jamie worth advancing to a structured interview or practical work sample for this opportunity?",
+  "actualPeopleParticipated": false,
+  "voiceSource": {
+    "title": "My Writer’s Voice",
+    "canonicalUrl": "https://docs.google.com/document/d/18y6sZKaGGuHPBm7KGv5jENqAQJHlahxG-MPXQ0Kuwrc/edit?usp=sharing",
+    "sourceModifiedAt": "2026-08-20T00:24:54.891Z",
+    "reviewedAt": "2026-08-20T12:05:00-04:00",
+    "rawDocumentCopiedIntoRepository": false,
+    "workingProfileSha256": "4b8b4d67ffc736bafc74176aa0bfeba02bb8c7e938cee9fb6c15c397fc0e4217"
+  },
+  "summary": {
+    "requiredLetters": 9,
+    "maintainedLetters": 9,
+    "passingLetters": 9,
+    "requiredReaderPairs": 16,
+    "passingReaderPreflights": 16
+  },
+  "portfolioChecks": [
+    {
+      "id": "one-letter-per-maintained-resume",
+      "pass": true,
+      "detail": "9/9 maintained resume opportunities have exactly one configured cover letter."
+    },
+    {
+      "id": "same-named-reader-pairs",
+      "pass": true,
+      "detail": "16/16 resume hiring-reader pairs are also cover-letter gates."
+    },
+    {
+      "id": "relevant-skills-pinned",
+      "pass": true,
+      "detail": "cover-letter-generator:present, brand-voice-enforcement:present, interviewing-evaluating-candidates:present"
+    },
+    {
+      "id": "living-voice-source-bound",
+      "pass": true,
+      "detail": "My Writer’s Voice was read after its recorded modification; only a bounded working profile is stored."
+    },
+    {
+      "id": "fictionalized-reader-boundary",
+      "pass": true,
+      "detail": "Named readers are fictionalized public-source lenses, not participants or endorsers."
+    }
+  ],
+  "versions": [
+    {
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "organization": "CodePath",
+      "targetRole": "Engineering Project Manager",
+      "status": "live-priority",
+      "officialSource": "https://job-boards.greenhouse.io/codepath/jobs/5160542007",
+      "coverLetterPath": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Cover-Letter-CodePath-Engineering-Project-Manager-5160542007.md",
+      "resumePath": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.md",
+      "wordCount": 335,
+      "sha256": "8f4a493eb244d53f534c86ed7130dd68c54b58ecb962d4c70b49e3e47be15c0f",
+      "resumeSha256": "dcf01669ec26fad8448e1b31b5ed7890bdf5c28e1e93d1eb1e147fa5fe4c892a",
+      "overall": "pass",
+      "voiceResults": [
+        {
+          "id": "concreteEncounter",
+          "pass": true
+        },
+        {
+          "id": "humanStake",
+          "pass": true
+        },
+        {
+          "id": "hiddenSystem",
+          "pass": true
+        },
+        {
+          "id": "hinge",
+          "pass": true
+        },
+        {
+          "id": "durablePossibility",
+          "pass": true
+        }
+      ],
+      "artifactChecks": [
+        {
+          "id": "cover-letter-exists",
+          "pass": true,
+          "detail": "Required cover letter exists."
+        },
+        {
+          "id": "sibling-of-tailored-resume",
+          "pass": true,
+          "detail": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Cover-Letter-CodePath-Engineering-Project-Manager-5160542007.md is maintained beside resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Resume-CodePath-Engineering-Project-Manager-5160542007.md."
+        },
+        {
+          "id": "target-role-near-top",
+          "pass": true,
+          "detail": "Engineering Project Manager appears in the first third."
+        },
+        {
+          "id": "organization-is-specific",
+          "pass": true,
+          "detail": "CodePath is named."
+        },
+        {
+          "id": "letter-structure",
+          "pass": true,
+          "detail": "The letter has a role line, direct greeting, and warm close."
+        },
+        {
+          "id": "word-count",
+          "pass": true,
+          "detail": "335 words; required 250-400."
+        },
+        {
+          "id": "clean-markdown",
+          "pass": true,
+          "detail": "No images, tables, HTML layout, or code blocks."
+        },
+        {
+          "id": "not-resume-in-prose",
+          "pass": true,
+          "detail": "The cover letter is a distinct narrative artifact, not the resume copied into paragraphs."
+        },
+        {
+          "id": "claim-and-endorsement-safety",
+          "pass": true,
+          "detail": "Avoids boilerplate, guarantees, invented participation, sole credit, and unsupported conformance claims."
+        },
+        {
+          "id": "writer-voice-movement",
+          "pass": true,
+          "detail": "5/5 scene-to-durable-possibility voice movements are present."
+        },
+        {
+          "id": "lifecycle-safety",
+          "pass": true,
+          "detail": "Live or pending letter is not mislabeled as expired."
+        }
+      ],
+      "readerResults": [
+        {
+          "pairId": "codepath-zack-parker",
+          "readerId": "reader.zack-parker",
+          "displayName": "Zack Parker",
+          "relationship": "published-reporting-role-to-person-match",
+          "preflightVerdict": "pass",
+          "decision": "eligible-for-fictionalized-model-review",
+          "matchedSignalGroups": [
+            "engineering-delivery",
+            "quality-ownership",
+            "proportionate-process",
+            "ai-workflow"
+          ],
+          "missingSignalGroups": [],
+          "actualPersonParticipated": false
+        },
+        {
+          "pairId": "codepath-chris-coleman",
+          "readerId": "reader.chris-coleman",
+          "displayName": "Chris Coleman",
+          "relationship": "nearest-public-senior-vision-context",
+          "preflightVerdict": "pass",
+          "decision": "eligible-for-fictionalized-model-review",
+          "matchedSignalGroups": [
+            "product-engineering-bridge",
+            "learning-mission",
+            "durable-collaboration"
+          ],
+          "missingSignalGroups": [],
+          "actualPersonParticipated": false
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.aclu.senior-project-manager.8620968002",
+      "organization": "ACLU",
+      "targetRole": "Senior Project Manager",
+      "status": "live-priority",
+      "officialSource": "https://job-boards.greenhouse.io/aclu/jobs/8620968002",
+      "coverLetterPath": "resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Cover-Letter-ACLU-Senior-Project-Manager-8620968002.md",
+      "resumePath": "resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-8620968002.md",
+      "wordCount": 352,
+      "sha256": "24a07a70be2f1caee9f81969d9c4b37014c4caa14eee115b56439c84d088b16d",
+      "resumeSha256": "965853c719450cad90e428b2fbfb8925aba16a58091ddb989c0a0ba1a15f1c3e",
+      "overall": "pass",
+      "voiceResults": [
+        {
+          "id": "concreteEncounter",
+          "pass": true
+        },
+        {
+          "id": "humanStake",
+          "pass": true
+        },
+        {
+          "id": "hiddenSystem",
+          "pass": true
+        },
+        {
+          "id": "hinge",
+          "pass": true
+        },
+        {
+          "id": "durablePossibility",
+          "pass": true
+        }
+      ],
+      "artifactChecks": [
+        {
+          "id": "cover-letter-exists",
+          "pass": true,
+          "detail": "Required cover letter exists."
+        },
+        {
+          "id": "sibling-of-tailored-resume",
+          "pass": true,
+          "detail": "resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Cover-Letter-ACLU-Senior-Project-Manager-8620968002.md is maintained beside resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-8620968002.md."
+        },
+        {
+          "id": "target-role-near-top",
+          "pass": true,
+          "detail": "Senior Project Manager appears in the first third."
+        },
+        {
+          "id": "organization-is-specific",
+          "pass": true,
+          "detail": "ACLU is named."
+        },
+        {
+          "id": "letter-structure",
+          "pass": true,
+          "detail": "The letter has a role line, direct greeting, and warm close."
+        },
+        {
+          "id": "word-count",
+          "pass": true,
+          "detail": "352 words; required 250-400."
+        },
+        {
+          "id": "clean-markdown",
+          "pass": true,
+          "detail": "No images, tables, HTML layout, or code blocks."
+        },
+        {
+          "id": "not-resume-in-prose",
+          "pass": true,
+          "detail": "The cover letter is a distinct narrative artifact, not the resume copied into paragraphs."
+        },
+        {
+          "id": "claim-and-endorsement-safety",
+          "pass": true,
+          "detail": "Avoids boilerplate, guarantees, invented participation, sole credit, and unsupported conformance claims."
+        },
+        {
+          "id": "writer-voice-movement",
+          "pass": true,
+          "detail": "5/5 scene-to-durable-possibility voice movements are present."
+        },
+        {
+          "id": "lifecycle-safety",
+          "pass": true,
+          "detail": "Live or pending letter is not mislabeled as expired."
+        }
+      ],
+      "readerResults": [
+        {
+          "pairId": "aclu-charizma-williams",
+          "readerId": "reader.charizma-williams",
+          "displayName": "Charizma Williams",
+          "relationship": "nearest-public-senior-vision-context; published direct-manager title is unnamed",
+          "preflightVerdict": "pass",
+          "decision": "eligible-for-fictionalized-model-review",
+          "matchedSignalGroups": [
+            "systems-implementation",
+            "cross-department-delivery",
+            "risk-and-confidentiality",
+            "project-resources"
+          ],
+          "missingSignalGroups": [],
+          "actualPersonParticipated": false
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "organization": "Benepass",
+      "targetRole": "Product Operations Manager",
+      "status": "live-priority",
+      "officialSource": "https://jobs.ashbyhq.com/benepass/7f963a7a-aaad-456b-b12b-7f34b35d51cf/",
+      "coverLetterPath": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Cover-Letter-Benepass-Product-Operations-Manager-7f963a7a.md",
+      "resumePath": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.md",
+      "wordCount": 329,
+      "sha256": "c773cf2e2c9bf3b25975a706ad5022a15c8687d1907472fc2d50c3ffb4bd59eb",
+      "resumeSha256": "7072b4405d6f470b3f08b6f8c5f796a8d8ed4bd85d8711e4f93f2608094cc1ce",
+      "overall": "pass",
+      "voiceResults": [
+        {
+          "id": "concreteEncounter",
+          "pass": true
+        },
+        {
+          "id": "humanStake",
+          "pass": true
+        },
+        {
+          "id": "hiddenSystem",
+          "pass": true
+        },
+        {
+          "id": "hinge",
+          "pass": true
+        },
+        {
+          "id": "durablePossibility",
+          "pass": true
+        }
+      ],
+      "artifactChecks": [
+        {
+          "id": "cover-letter-exists",
+          "pass": true,
+          "detail": "Required cover letter exists."
+        },
+        {
+          "id": "sibling-of-tailored-resume",
+          "pass": true,
+          "detail": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Cover-Letter-Benepass-Product-Operations-Manager-7f963a7a.md is maintained beside resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.md."
+        },
+        {
+          "id": "target-role-near-top",
+          "pass": true,
+          "detail": "Product Operations Manager appears in the first third."
+        },
+        {
+          "id": "organization-is-specific",
+          "pass": true,
+          "detail": "Benepass is named."
+        },
+        {
+          "id": "letter-structure",
+          "pass": true,
+          "detail": "The letter has a role line, direct greeting, and warm close."
+        },
+        {
+          "id": "word-count",
+          "pass": true,
+          "detail": "329 words; required 250-400."
+        },
+        {
+          "id": "clean-markdown",
+          "pass": true,
+          "detail": "No images, tables, HTML layout, or code blocks."
+        },
+        {
+          "id": "not-resume-in-prose",
+          "pass": true,
+          "detail": "The cover letter is a distinct narrative artifact, not the resume copied into paragraphs."
+        },
+        {
+          "id": "claim-and-endorsement-safety",
+          "pass": true,
+          "detail": "Avoids boilerplate, guarantees, invented participation, sole credit, and unsupported conformance claims."
+        },
+        {
+          "id": "writer-voice-movement",
+          "pass": true,
+          "detail": "5/5 scene-to-durable-possibility voice movements are present."
+        },
+        {
+          "id": "lifecycle-safety",
+          "pass": true,
+          "detail": "Live or pending letter is not mislabeled as expired."
+        }
+      ],
+      "readerResults": [
+        {
+          "pairId": "benepass-aileen-palmer",
+          "readerId": "reader.aileen-palmer",
+          "displayName": "Aileen Palmer",
+          "relationship": "person-named-in-posting-as-reporting-context",
+          "preflightVerdict": "pass",
+          "decision": "eligible-for-fictionalized-model-review",
+          "matchedSignalGroups": [
+            "launch-readiness",
+            "product-operations-translation",
+            "customer-care"
+          ],
+          "missingSignalGroups": [],
+          "actualPersonParticipated": false
+        },
+        {
+          "pairId": "benepass-jaclyn-chen",
+          "readerId": "reader.jaclyn-chen",
+          "displayName": "Jaclyn Chen",
+          "relationship": "nearest-public-senior-vision-context",
+          "preflightVerdict": "pass",
+          "decision": "eligible-for-fictionalized-model-review",
+          "matchedSignalGroups": [
+            "commercial-evidence",
+            "operational-leverage",
+            "learning-and-judgment"
+          ],
+          "missingSignalGroups": [],
+          "actualPersonParticipated": false
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "organization": "NYC Office of Technology and Innovation",
+      "targetRole": "Senior Product Manager",
+      "status": "submitted-pending",
+      "officialSource": "https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-44507",
+      "coverLetterPath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Cover-Letter-NYC-OTI-Senior-Product-Manager-782366.md",
+      "resumePath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
+      "wordCount": 392,
+      "sha256": "774552d20cfdbf5703ae45ecc53269d365247270048517ca35d482b1326ebaf9",
+      "resumeSha256": "194cf14cf3f6bf84e09af8c5b0890d74fa18f9d62165124ccae81f2577a4f786",
+      "overall": "pass",
+      "voiceResults": [
+        {
+          "id": "concreteEncounter",
+          "pass": true
+        },
+        {
+          "id": "humanStake",
+          "pass": true
+        },
+        {
+          "id": "hiddenSystem",
+          "pass": true
+        },
+        {
+          "id": "hinge",
+          "pass": true
+        },
+        {
+          "id": "durablePossibility",
+          "pass": true
+        }
+      ],
+      "artifactChecks": [
+        {
+          "id": "cover-letter-exists",
+          "pass": true,
+          "detail": "Required cover letter exists."
+        },
+        {
+          "id": "sibling-of-tailored-resume",
+          "pass": true,
+          "detail": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Cover-Letter-NYC-OTI-Senior-Product-Manager-782366.md is maintained beside resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md."
+        },
+        {
+          "id": "target-role-near-top",
+          "pass": true,
+          "detail": "Senior Product Manager appears in the first third."
+        },
+        {
+          "id": "organization-is-specific",
+          "pass": true,
+          "detail": "NYC Office of Technology and Innovation is named."
+        },
+        {
+          "id": "letter-structure",
+          "pass": true,
+          "detail": "The letter has a role line, direct greeting, and warm close."
+        },
+        {
+          "id": "word-count",
+          "pass": true,
+          "detail": "392 words; required 250-400."
+        },
+        {
+          "id": "clean-markdown",
+          "pass": true,
+          "detail": "No images, tables, HTML layout, or code blocks."
+        },
+        {
+          "id": "not-resume-in-prose",
+          "pass": true,
+          "detail": "The cover letter is a distinct narrative artifact, not the resume copied into paragraphs."
+        },
+        {
+          "id": "claim-and-endorsement-safety",
+          "pass": true,
+          "detail": "Avoids boilerplate, guarantees, invented participation, sole credit, and unsupported conformance claims."
+        },
+        {
+          "id": "writer-voice-movement",
+          "pass": true,
+          "detail": "5/5 scene-to-durable-possibility voice movements are present."
+        },
+        {
+          "id": "lifecycle-safety",
+          "pass": true,
+          "detail": "Live or pending letter is not mislabeled as expired."
+        }
+      ],
+      "readerResults": [
+        {
+          "pairId": "oti-product-luke-farrell",
+          "readerId": "reader.luke-farrell",
+          "displayName": "Luke Farrell",
+          "relationship": "nearest-public-operational-lead; not a confirmed direct manager",
+          "preflightVerdict": "pass",
+          "decision": "eligible-for-fictionalized-model-review",
+          "matchedSignalGroups": [
+            "resident-facing-product",
+            "product-lifecycle",
+            "cross-functional-government",
+            "responsible-delivery"
+          ],
+          "missingSignalGroups": [],
+          "actualPersonParticipated": false
+        },
+        {
+          "pairId": "oti-product-lisa-gelobter",
+          "readerId": "reader.lisa-gelobter",
+          "displayName": "Lisa Gelobter",
+          "relationship": "official initiative vision leader",
+          "preflightVerdict": "pass",
+          "decision": "eligible-for-fictionalized-model-review",
+          "matchedSignalGroups": [
+            "public-interest-technology",
+            "participatory-practice",
+            "resident-service",
+            "institutional-capacity"
+          ],
+          "missingSignalGroups": [],
+          "actualPersonParticipated": false
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "organization": "NYC Office of Technology and Innovation",
+      "targetRole": "Operations Manager",
+      "status": "live-priority",
+      "officialSource": "https://cityjobs.nyc.gov/job/operations-manager-in-brooklyn-jid-46143",
+      "coverLetterPath": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Operations-Manager-789810.md",
+      "resumePath": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.md",
+      "wordCount": 355,
+      "sha256": "e6c17fc986e1173f54f09fda6f77193a25d717b053c76e4cee5ab9af7abeeeca",
+      "resumeSha256": "4a36a78629b1ea354ac1bbb6a5539b0da6733f50e3c07a007c25234d5ed11727",
+      "overall": "pass",
+      "voiceResults": [
+        {
+          "id": "concreteEncounter",
+          "pass": true
+        },
+        {
+          "id": "humanStake",
+          "pass": true
+        },
+        {
+          "id": "hiddenSystem",
+          "pass": true
+        },
+        {
+          "id": "hinge",
+          "pass": true
+        },
+        {
+          "id": "durablePossibility",
+          "pass": true
+        }
+      ],
+      "artifactChecks": [
+        {
+          "id": "cover-letter-exists",
+          "pass": true,
+          "detail": "Required cover letter exists."
+        },
+        {
+          "id": "sibling-of-tailored-resume",
+          "pass": true,
+          "detail": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Operations-Manager-789810.md is maintained beside resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.md."
+        },
+        {
+          "id": "target-role-near-top",
+          "pass": true,
+          "detail": "Operations Manager appears in the first third."
+        },
+        {
+          "id": "organization-is-specific",
+          "pass": true,
+          "detail": "NYC Office of Technology and Innovation is named."
+        },
+        {
+          "id": "letter-structure",
+          "pass": true,
+          "detail": "The letter has a role line, direct greeting, and warm close."
+        },
+        {
+          "id": "word-count",
+          "pass": true,
+          "detail": "355 words; required 250-400."
+        },
+        {
+          "id": "clean-markdown",
+          "pass": true,
+          "detail": "No images, tables, HTML layout, or code blocks."
+        },
+        {
+          "id": "not-resume-in-prose",
+          "pass": true,
+          "detail": "The cover letter is a distinct narrative artifact, not the resume copied into paragraphs."
+        },
+        {
+          "id": "claim-and-endorsement-safety",
+          "pass": true,
+          "detail": "Avoids boilerplate, guarantees, invented participation, sole credit, and unsupported conformance claims."
+        },
+        {
+          "id": "writer-voice-movement",
+          "pass": true,
+          "detail": "5/5 scene-to-durable-possibility voice movements are present."
+        },
+        {
+          "id": "lifecycle-safety",
+          "pass": true,
+          "detail": "Live or pending letter is not mislabeled as expired."
+        }
+      ],
+      "readerResults": [
+        {
+          "pairId": "oti-speed-operations-role",
+          "readerId": "reader.public-role.oti-speed-operations-manager",
+          "displayName": "Published SPEED operations reporting role",
+          "relationship": "role-only public reporting context; person not publicly identified",
+          "preflightVerdict": "pass",
+          "decision": "eligible-for-fictionalized-model-review",
+          "matchedSignalGroups": [
+            "program-operations",
+            "budget-procurement",
+            "dependency-management",
+            "team-reporting",
+            "product-team-context"
+          ],
+          "missingSignalGroups": [],
+          "actualPersonParticipated": false
+        },
+        {
+          "pairId": "oti-speed-operations-lisa-gelobter",
+          "readerId": "reader.lisa-gelobter",
+          "displayName": "Lisa Gelobter",
+          "relationship": "official agency and initiative vision context; not a confirmed direct manager",
+          "preflightVerdict": "pass",
+          "decision": "eligible-for-fictionalized-model-review",
+          "matchedSignalGroups": [
+            "public-service-operations",
+            "institutional-capacity",
+            "cross-functional-government",
+            "technical-fluency"
+          ],
+          "missingSignalGroups": [],
+          "actualPersonParticipated": false
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "organization": "NYC Office of Technology and Innovation",
+      "targetRole": "Product Manager",
+      "status": "live-priority",
+      "officialSource": "https://cityjobs.nyc.gov/job/product-manager-in-brooklyn-jid-45056",
+      "coverLetterPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.md",
+      "resumePath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.md",
+      "wordCount": 355,
+      "sha256": "add7d24a1d9237486f598c0f3a4f955c6483dacf4e3ad6006e5869a972547a1d",
+      "resumeSha256": "e0e52ee0a27b062eb04aa0fb698b323710104e76dac064ec6caeec14fc6f4486",
+      "overall": "pass",
+      "voiceResults": [
+        {
+          "id": "concreteEncounter",
+          "pass": true
+        },
+        {
+          "id": "humanStake",
+          "pass": true
+        },
+        {
+          "id": "hiddenSystem",
+          "pass": true
+        },
+        {
+          "id": "hinge",
+          "pass": true
+        },
+        {
+          "id": "durablePossibility",
+          "pass": true
+        }
+      ],
+      "artifactChecks": [
+        {
+          "id": "cover-letter-exists",
+          "pass": true,
+          "detail": "Required cover letter exists."
+        },
+        {
+          "id": "sibling-of-tailored-resume",
+          "pass": true,
+          "detail": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.md is maintained beside resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.md."
+        },
+        {
+          "id": "target-role-near-top",
+          "pass": true,
+          "detail": "Product Manager appears in the first third."
+        },
+        {
+          "id": "organization-is-specific",
+          "pass": true,
+          "detail": "NYC Office of Technology and Innovation is named."
+        },
+        {
+          "id": "letter-structure",
+          "pass": true,
+          "detail": "The letter has a role line, direct greeting, and warm close."
+        },
+        {
+          "id": "word-count",
+          "pass": true,
+          "detail": "355 words; required 250-400."
+        },
+        {
+          "id": "clean-markdown",
+          "pass": true,
+          "detail": "No images, tables, HTML layout, or code blocks."
+        },
+        {
+          "id": "not-resume-in-prose",
+          "pass": true,
+          "detail": "The cover letter is a distinct narrative artifact, not the resume copied into paragraphs."
+        },
+        {
+          "id": "claim-and-endorsement-safety",
+          "pass": true,
+          "detail": "Avoids boilerplate, guarantees, invented participation, sole credit, and unsupported conformance claims."
+        },
+        {
+          "id": "writer-voice-movement",
+          "pass": true,
+          "detail": "5/5 scene-to-durable-possibility voice movements are present."
+        },
+        {
+          "id": "lifecycle-safety",
+          "pass": true,
+          "detail": "Live or pending letter is not mislabeled as expired."
+        }
+      ],
+      "readerResults": [
+        {
+          "pairId": "oti-product-784450-role",
+          "readerId": "reader.public-role.oti-product-manager-784450",
+          "displayName": "Published Product Manager reporting role",
+          "relationship": "role-only public reporting context; person not publicly identified",
+          "preflightVerdict": "pass",
+          "decision": "eligible-for-fictionalized-model-review",
+          "matchedSignalGroups": [
+            "product-lifecycle",
+            "research-and-analytics",
+            "roadmaps-and-requirements",
+            "outcomes-and-kpis",
+            "plain-language-collaboration"
+          ],
+          "missingSignalGroups": [],
+          "actualPersonParticipated": false
+        },
+        {
+          "pairId": "oti-product-784450-lisa-gelobter",
+          "readerId": "reader.lisa-gelobter",
+          "displayName": "Lisa Gelobter",
+          "relationship": "official agency and product-management vision context; not a confirmed direct manager",
+          "preflightVerdict": "pass",
+          "decision": "eligible-for-fictionalized-model-review",
+          "matchedSignalGroups": [
+            "public-interest-technology",
+            "participatory-practice",
+            "technical-fluency",
+            "institutional-learning"
+          ],
+          "missingSignalGroups": [],
+          "actualPersonParticipated": false
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "organization": "NYC Office of Technology and Innovation",
+      "targetRole": "Senior Product Manager",
+      "status": "live-priority",
+      "officialSource": "https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-46148",
+      "coverLetterPath": "resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Senior-Product-Manager-789610.md",
+      "resumePath": "resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Jamie-Burkart-Resume-NYC-OTI-SPEED-Senior-Product-Manager-789610.md",
+      "wordCount": 368,
+      "sha256": "88d384cf6b68ddb1d7ab781f7212e6a85759c93b2d6cb17131859883b5cb71ef",
+      "resumeSha256": "e98fba6217ea7ede5fb587188e6e0b4796ec59a9f3492696c2561dd76c6cfa1d",
+      "overall": "pass",
+      "voiceResults": [
+        {
+          "id": "concreteEncounter",
+          "pass": true
+        },
+        {
+          "id": "humanStake",
+          "pass": true
+        },
+        {
+          "id": "hiddenSystem",
+          "pass": true
+        },
+        {
+          "id": "hinge",
+          "pass": true
+        },
+        {
+          "id": "durablePossibility",
+          "pass": true
+        }
+      ],
+      "artifactChecks": [
+        {
+          "id": "cover-letter-exists",
+          "pass": true,
+          "detail": "Required cover letter exists."
+        },
+        {
+          "id": "sibling-of-tailored-resume",
+          "pass": true,
+          "detail": "resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Senior-Product-Manager-789610.md is maintained beside resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Jamie-Burkart-Resume-NYC-OTI-SPEED-Senior-Product-Manager-789610.md."
+        },
+        {
+          "id": "target-role-near-top",
+          "pass": true,
+          "detail": "Senior Product Manager appears in the first third."
+        },
+        {
+          "id": "organization-is-specific",
+          "pass": true,
+          "detail": "NYC Office of Technology and Innovation is named."
+        },
+        {
+          "id": "letter-structure",
+          "pass": true,
+          "detail": "The letter has a role line, direct greeting, and warm close."
+        },
+        {
+          "id": "word-count",
+          "pass": true,
+          "detail": "368 words; required 250-400."
+        },
+        {
+          "id": "clean-markdown",
+          "pass": true,
+          "detail": "No images, tables, HTML layout, or code blocks."
+        },
+        {
+          "id": "not-resume-in-prose",
+          "pass": true,
+          "detail": "The cover letter is a distinct narrative artifact, not the resume copied into paragraphs."
+        },
+        {
+          "id": "claim-and-endorsement-safety",
+          "pass": true,
+          "detail": "Avoids boilerplate, guarantees, invented participation, sole credit, and unsupported conformance claims."
+        },
+        {
+          "id": "writer-voice-movement",
+          "pass": true,
+          "detail": "5/5 scene-to-durable-possibility voice movements are present."
+        },
+        {
+          "id": "lifecycle-safety",
+          "pass": true,
+          "detail": "Live or pending letter is not mislabeled as expired."
+        }
+      ],
+      "readerResults": [
+        {
+          "pairId": "oti-speed-spm-789610-role",
+          "readerId": "reader.public-role.oti-speed-senior-product-manager-789610",
+          "displayName": "Published SPEED product reporting role",
+          "relationship": "role-only public reporting context; person not publicly identified",
+          "preflightVerdict": "pass",
+          "decision": "eligible-for-fictionalized-model-review",
+          "matchedSignalGroups": [
+            "business-case-and-root-cause",
+            "roadmap-and-kpis",
+            "systems-and-permitting",
+            "influence-without-authority",
+            "technical-architecture"
+          ],
+          "missingSignalGroups": [],
+          "actualPersonParticipated": false
+        },
+        {
+          "pairId": "oti-speed-spm-789610-lisa-gelobter",
+          "readerId": "reader.lisa-gelobter",
+          "displayName": "Lisa Gelobter",
+          "relationship": "official agency and initiative vision context; not a confirmed direct manager",
+          "preflightVerdict": "pass",
+          "decision": "eligible-for-fictionalized-model-review",
+          "matchedSignalGroups": [
+            "public-service-systems",
+            "participatory-government",
+            "capacity-and-handoffs",
+            "responsible-delivery"
+          ],
+          "missingSignalGroups": [],
+          "actualPersonParticipated": false
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "organization": "NYC Office of Technology and Innovation",
+      "targetRole": "Senior Product Designer",
+      "status": "live-priority",
+      "officialSource": "https://cityjobs.nyc.gov/job/senior-product-designer-in-brooklyn-jid-44505",
+      "coverLetterPath": "resumes/2026-08-20/nyc-oti-pit-senior-product-designer-782373/Jamie-Burkart-Cover-Letter-NYC-OTI-PIT-Senior-Product-Designer-782373.md",
+      "resumePath": "resumes/2026-08-20/nyc-oti-pit-senior-product-designer-782373/Jamie-Burkart-Resume-NYC-OTI-PIT-Senior-Product-Designer-782373.md",
+      "wordCount": 368,
+      "sha256": "7d521307c6e4454efd5ede9ba4c8174623f6259cc39347f6e9ff0d78a3436f20",
+      "resumeSha256": "185d56ffc1e17df80eb69b8d89156e44605cb51c7cd0b6d68dd44b5abd5a6f3a",
+      "overall": "pass",
+      "voiceResults": [
+        {
+          "id": "concreteEncounter",
+          "pass": true
+        },
+        {
+          "id": "humanStake",
+          "pass": true
+        },
+        {
+          "id": "hiddenSystem",
+          "pass": true
+        },
+        {
+          "id": "hinge",
+          "pass": true
+        },
+        {
+          "id": "durablePossibility",
+          "pass": true
+        }
+      ],
+      "artifactChecks": [
+        {
+          "id": "cover-letter-exists",
+          "pass": true,
+          "detail": "Required cover letter exists."
+        },
+        {
+          "id": "sibling-of-tailored-resume",
+          "pass": true,
+          "detail": "resumes/2026-08-20/nyc-oti-pit-senior-product-designer-782373/Jamie-Burkart-Cover-Letter-NYC-OTI-PIT-Senior-Product-Designer-782373.md is maintained beside resumes/2026-08-20/nyc-oti-pit-senior-product-designer-782373/Jamie-Burkart-Resume-NYC-OTI-PIT-Senior-Product-Designer-782373.md."
+        },
+        {
+          "id": "target-role-near-top",
+          "pass": true,
+          "detail": "Senior Product Designer appears in the first third."
+        },
+        {
+          "id": "organization-is-specific",
+          "pass": true,
+          "detail": "NYC Office of Technology and Innovation is named."
+        },
+        {
+          "id": "letter-structure",
+          "pass": true,
+          "detail": "The letter has a role line, direct greeting, and warm close."
+        },
+        {
+          "id": "word-count",
+          "pass": true,
+          "detail": "368 words; required 250-400."
+        },
+        {
+          "id": "clean-markdown",
+          "pass": true,
+          "detail": "No images, tables, HTML layout, or code blocks."
+        },
+        {
+          "id": "not-resume-in-prose",
+          "pass": true,
+          "detail": "The cover letter is a distinct narrative artifact, not the resume copied into paragraphs."
+        },
+        {
+          "id": "claim-and-endorsement-safety",
+          "pass": true,
+          "detail": "Avoids boilerplate, guarantees, invented participation, sole credit, and unsupported conformance claims."
+        },
+        {
+          "id": "writer-voice-movement",
+          "pass": true,
+          "detail": "5/5 scene-to-durable-possibility voice movements are present."
+        },
+        {
+          "id": "lifecycle-safety",
+          "pass": true,
+          "detail": "Live or pending letter is not mislabeled as expired."
+        }
+      ],
+      "readerResults": [
+        {
+          "pairId": "oti-pit-designer-luke-farrell",
+          "readerId": "reader.luke-farrell",
+          "displayName": "Luke Farrell",
+          "relationship": "nearest-public operational lead; not a confirmed direct manager",
+          "preflightVerdict": "pass",
+          "decision": "eligible-for-fictionalized-model-review",
+          "matchedSignalGroups": [
+            "end-to-end-design",
+            "resident-research",
+            "content-interaction-visual",
+            "accessibility-and-plain-language",
+            "engineering-handoff"
+          ],
+          "missingSignalGroups": [],
+          "actualPersonParticipated": false
+        },
+        {
+          "pairId": "oti-pit-designer-lisa-gelobter",
+          "readerId": "reader.lisa-gelobter",
+          "displayName": "Lisa Gelobter",
+          "relationship": "official initiative vision leader; not a confirmed direct manager",
+          "preflightVerdict": "pass",
+          "decision": "eligible-for-fictionalized-model-review",
+          "matchedSignalGroups": [
+            "public-interest-design",
+            "participatory-practice",
+            "technical-fluency",
+            "durable-design-capacity"
+          ],
+          "missingSignalGroups": [],
+          "actualPersonParticipated": false
+        }
+      ]
+    },
+    {
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "organization": "NYC Office of Technology and Innovation",
+      "targetRole": "Technical Operations Manager",
+      "status": "expired-benchmark",
+      "officialSource": "https://cityjobs.nyc.gov/job/technical-operations-manager-in-brooklyn-jid-44321",
+      "coverLetterPath": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Cover-Letter-NYC-OTI-Technical-Operations-Manager-782369.md",
+      "resumePath": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.md",
+      "wordCount": 373,
+      "sha256": "23881de1ce65cad971613e486df3f1fd04def79b9171f9df2d64165ad6bb2614",
+      "resumeSha256": "aaba8bb6016b285ecd316dfe2efec24773b09243d35c150b55d5879dbbed39a0",
+      "overall": "pass",
+      "voiceResults": [
+        {
+          "id": "concreteEncounter",
+          "pass": true
+        },
+        {
+          "id": "humanStake",
+          "pass": true
+        },
+        {
+          "id": "hiddenSystem",
+          "pass": true
+        },
+        {
+          "id": "hinge",
+          "pass": true
+        },
+        {
+          "id": "durablePossibility",
+          "pass": true
+        }
+      ],
+      "artifactChecks": [
+        {
+          "id": "cover-letter-exists",
+          "pass": true,
+          "detail": "Required cover letter exists."
+        },
+        {
+          "id": "sibling-of-tailored-resume",
+          "pass": true,
+          "detail": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Cover-Letter-NYC-OTI-Technical-Operations-Manager-782369.md is maintained beside resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.md."
+        },
+        {
+          "id": "target-role-near-top",
+          "pass": true,
+          "detail": "Technical Operations Manager appears in the first third."
+        },
+        {
+          "id": "organization-is-specific",
+          "pass": true,
+          "detail": "NYC Office of Technology and Innovation is named."
+        },
+        {
+          "id": "letter-structure",
+          "pass": true,
+          "detail": "The letter has a role line, direct greeting, and warm close."
+        },
+        {
+          "id": "word-count",
+          "pass": true,
+          "detail": "373 words; required 250-400."
+        },
+        {
+          "id": "clean-markdown",
+          "pass": true,
+          "detail": "No images, tables, HTML layout, or code blocks."
+        },
+        {
+          "id": "not-resume-in-prose",
+          "pass": true,
+          "detail": "The cover letter is a distinct narrative artifact, not the resume copied into paragraphs."
+        },
+        {
+          "id": "claim-and-endorsement-safety",
+          "pass": true,
+          "detail": "Avoids boilerplate, guarantees, invented participation, sole credit, and unsupported conformance claims."
+        },
+        {
+          "id": "writer-voice-movement",
+          "pass": true,
+          "detail": "5/5 scene-to-durable-possibility voice movements are present."
+        },
+        {
+          "id": "lifecycle-safety",
+          "pass": true,
+          "detail": "Expired benchmark is unmistakably blocked from submission."
+        }
+      ],
+      "readerResults": [
+        {
+          "pairId": "oti-operations-lisa-gelobter",
+          "readerId": "reader.lisa-gelobter",
+          "displayName": "Lisa Gelobter",
+          "relationship": "official agency vision leader for an expired benchmark; direct manager is not publicly named",
+          "preflightVerdict": "pass",
+          "decision": "eligible-for-fictionalized-model-review",
+          "matchedSignalGroups": [
+            "technical-operations",
+            "onboarding-and-runbooks",
+            "continuous-improvement",
+            "public-service-operations"
+          ],
+          "missingSignalGroups": [],
+          "actualPersonParticipated": false
+        }
+      ]
+    }
+  ],
+  "boundary": "This deterministic preflight checks artifacts, lifecycle, voice movement, truth boundaries, and reader-specific evidence before any model call. It is not actual participation, endorsement, an interview promise, or a final hiring decision."
+}

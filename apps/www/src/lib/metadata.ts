@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { socialPreview } from "@/data/social-preview";
 import { site } from "@/data/site";
 import { ROBOTS_INDEXABLE, SITE_URL } from "@/lib/site-url";
 
@@ -38,10 +39,10 @@ export function createMetadata({
       type: "website",
       images: [
         {
-          url: new URL("/opengraph-image", SITE_URL),
-          width: 1200,
-          height: 630,
-          alt: "Jamie Burkart - Technical Project Manager"
+          url: new URL(socialPreview.route, SITE_URL),
+          width: socialPreview.width,
+          height: socialPreview.height,
+          alt: socialPreview.alt
         }
       ]
     },
@@ -49,7 +50,12 @@ export function createMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: [new URL("/opengraph-image", SITE_URL)]
+      images: [
+        {
+          url: new URL(socialPreview.route, SITE_URL),
+          alt: socialPreview.alt
+        }
+      ]
     }
   };
 }

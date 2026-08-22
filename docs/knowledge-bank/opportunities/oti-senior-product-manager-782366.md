@@ -5,14 +5,14 @@ kind: opportunity
 status: governed-open
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-13
-review_by: 2026-08-14
+last_reviewed: 2026-08-20
+review_by: 2026-08-27
 canonical_path: docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md
 summary: Public-safe requirement, qualification, and leadership-context map for four live OTI PIT Crew Senior Product Manager positions.
 canonical_url: https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-44507
 source_type: official-employer
 opportunity_status: live
-verified_at: 2026-08-13
+verified_at: 2026-08-20
 portfolio_routes:
   - /
   - /work/technical-operations
@@ -29,7 +29,7 @@ discovery_terms:
   - outcomes not outputs
   - policy translation
 confirmed_facts:
-  - Job ID 782366 covers four full-time Senior Product Manager positions in OTI's Commissioner's Office and closes August 14, 2026.
+  - Job ID 782366 covers four full-time Senior Product Manager positions in OTI's Commissioner's Office; the current listing shows an August 17 repost date and an October 16, 2026 deadline.
   - The posted salary range is $100,000 to $180,000 and the work location is 15 MetroTech in Brooklyn.
   - The civil-service title is Senior IT Architect and carries a separate architecture and infrastructure minimum-qualification screen.
   - The posting does not name a direct manager.
@@ -193,12 +193,16 @@ relations:
   - type: uses_method
     target: method.source-backed-team-memory
     href: ../methods/source-backed-team-memory.md
+  - type: related_to
+    target: application.nyc-oti.senior-product-manager.782366
+    href: ../applications/nyc-oti-senior-product-manager-782366.md
+    context: Jamie-authorized public-safe submission milestone; employer outcome remains pending.
 evidence:
   - target: source.jobs.oti.senior-product-manager.782366
     relationship: direct-support
     confidence: high
     supports:
-      - official role facts, requirements, civil-service screen, and deadline rechecked August 13, 2026
+      - official role facts, requirements, civil-service screen, and current repost deadline rechecked August 20, 2026
   - target: source.nyc.pit-crew-launch.2026-07-13
     relationship: context
     confidence: high
@@ -227,6 +231,12 @@ It supports application use without assigning Jamie sole program authorship.
 The public record identifies initiative and operational leadership but not a
 direct supervisor. Keep [Luke Farrell](../people/luke-farrell.md) as nearest
 public operational lead and [Lisa Gelobter](../people/lisa-gelobter.md) as
-official initiative leader. Recheck the
-[official posting](../sources/jobs-oti-senior-product-manager-782366.md) before
-the August 14 deadline.
+official initiative leader.
+
+Jamie authorized a [public-safe application milestone](../applications/nyc-oti-senior-product-manager-782366.md)
+after submitting on August 14, 2026. The official page now shows the same Job ID
+as reposted on August 17 with an October 16 deadline; that later page state does
+not rewrite the submission milestone. Submission establishes action, not
+civil-service eligibility, employer review, an interview, an offer, or an
+appointment. The private confirmation and later correspondence remain outside
+the repository.

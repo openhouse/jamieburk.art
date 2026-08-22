@@ -6,8 +6,8 @@ projection_type: photo-occurrence
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-13
-review_by: 2027-02-13
+last_reviewed: 2026-08-20
+review_by: 2027-02-20
 canonical_path: docs/knowledge-bank/projections/photography/fair-rent-nyc-market-hotel-banner.md
 summary: Exact public occurrence binding the Market Hotel banner derivative to the public-room panel in the Fair Rent NYC participation sequence.
 projection_status: active
@@ -35,10 +35,9 @@ caption:
     - statement.photo.nycac-market-hotel.capture-date.v1
     - statement.photo.nycac-market-hotel.collective-event.v1
 credit:
-  text: Photograph by Paul Mossine. From Jamie Burkart's photo archive.
+  text: Photo courtesy of NYC Artist Coalition.
   assertions:
-    - statement.photo.nycac-market-hotel.creator.v1
-    - statement.photo.nycac-market-hotel.custody.v1
+    - statement.photo.nycac-market-hotel.courtesy-credit.v1
 permission_source: source.permission.jamie-portfolio-album.2026-08-13
 approval:
   public_git: approved

@@ -42,6 +42,8 @@ dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_DE
 dokku docker-options:add jamieburk-art-staging build '--build-arg SITE_URL=https://staging.jamieburk.art'
 dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art'
 dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=ofdj6rnm'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_CLOUDINARY_PILOT=enabled'
 ```
 
 Enable TLS after DNS resolves:
@@ -91,6 +93,8 @@ dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_DEPLOY_ENV
 dokku docker-options:add jamieburk-art build '--build-arg SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=index'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=ofdj6rnm'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_CLOUDINARY_PILOT=enabled'
 ```
 
 Enable TLS:
@@ -145,3 +149,46 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+
+## Governed Cloudinary pilot
+
+Cloudinary is an optional delivery projection, not the media source of truth.
+The exact allowlist, asset versions, responsive widths, and quality policies
+live in `apps/www/src/lib/media-delivery.ts`; the public-safe upload receipt is
+`reports/media/cloudinary-pilot-2026-08-15.json`. Only these sources participate:
+
+- `/images/field-notes/nycac-shoestring-facilitation.webp`
+- `/artifacts/fair-rent-nyc/let-nyc-dance-public-surface.webp`
+
+`NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME` is a public delivery identifier.
+`NEXT_PUBLIC_CLOUDINARY_PILOT` must equal `enabled` at build time to activate
+the allowlist. It defaults to `disabled`; a missing cloud name, disabled flag,
+or unlisted source keeps the existing same-origin path. Never put upload
+credentials, account secrets, signed administration URLs, photo masters, or
+private archive metadata in a `NEXT_PUBLIC_*` variable, Git, an eval receipt, or
+the client bundle.
+
+Direct Cloudinary `<img srcset>` delivery intentionally bypasses Next image
+optimization for the two allowlisted assets, avoiding a second transformation
+and cache layer. The Open Graph image, resume PDF, fonts, and every unlisted
+asset remain same-origin. The Docker image continues to package `public/` and
+`.next/static/` so rollback does not depend on Cloudinary.
+
+Run the blocking contract before deployment:
+
+```bash
+npm run evals:media-delivery
+npm run test:media-delivery
+```
+
+Rollback requires a rebuild because the public configuration is compiled into
+the Next bundle:
+
+```bash
+dokku docker-options:remove <app> build '--build-arg NEXT_PUBLIC_CLOUDINARY_PILOT=enabled'
+dokku docker-options:add <app> build '--build-arg NEXT_PUBLIC_CLOUDINARY_PILOT=disabled'
+git push <dokku-remote> HEAD:main
+```
+
+This bounded decision is recorded in the Knowledge Wiki at
+`docs/knowledge-bank/decisions/cloudinary-selective-media-delivery-2026-08-15.md`.

@@ -53,6 +53,38 @@ test("guard rejects an incomplete recursive systems sequence", () => {
   assert.equal(result.criteria.find((item) => item.id === "recursive-sequence")?.pass, false);
 });
 
+test("guard rejects weakening the public analytical limits", () => {
+  const result = evaluateProfessorLenses({
+    suite,
+    aboutText: aboutText.replace(
+      /or peer-reviewed\s+research/,
+      "an ongoing research direction"
+    ),
+    sourceNoteText
+  });
+  assert.equal(result.pass, false);
+  assert.equal(
+    result.criteria.find((item) => item.id === "explicit-analytical-limits")?.pass,
+    false
+  );
+});
+
+test("guard rejects labeling the ended HJE engagement as current", () => {
+  const mutatedAbout = aboutText
+    .replace("Three systems loops", "Three current systems loops")
+    .replace(
+      "Harry J. Epstein Company\n                  </Link>\n                </h3>",
+      "Harry J. Epstein Company\n                  </Link>\n                </h3>\n                <span className=\"jb-section-label\">Current</span>"
+    );
+  const result = evaluateProfessorLenses({
+    suite,
+    aboutText: mutatedAbout,
+    sourceNoteText
+  });
+  assert.equal(result.pass, false);
+  assert.equal(result.criteria.find((item) => item.id === "project-status-integrity")?.pass, false);
+});
+
 test("guard rejects removing the public-safe handoff specimens", () => {
   const result = evaluateProfessorLenses({
     suite,

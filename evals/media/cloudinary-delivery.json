@@ -1,0 +1,37 @@
+{
+  "id": "cloudinary-media-delivery-pilot-v1",
+  "title": "Governed Cloudinary delivery pilot",
+  "intent": "Improve responsive image delivery for two authorized public derivatives without moving governance, originals, social cards, documents, fonts, or private archive material out of the repository boundary.",
+  "criteria": [
+    {
+      "id": "exact-asset-binding",
+      "blocking": true,
+      "criterion": "Exactly two repository derivatives are bound to exact versioned Cloudinary assets with matching dimensions and SHA-256 receipts."
+    },
+    {
+      "id": "bounded-responsive-transforms",
+      "blocking": true,
+      "criterion": "Cloudinary URLs cap width at the source, negotiate format and quality, and expose only the reviewed responsive width sets."
+    },
+    {
+      "id": "local-asset-boundary",
+      "blocking": true,
+      "criterion": "The social preview, resume PDF, fonts, unlisted images, originals, and private archive stay same-origin; local public assets remain packaged for rollback."
+    },
+    {
+      "id": "loading-policy",
+      "blocking": true,
+      "criterion": "The homepage hero is preloaded, pilot evidence images are lazy below the fold, and artifact galleries do not force eager loading."
+    },
+    {
+      "id": "configuration-fails-local",
+      "blocking": true,
+      "criterion": "The pilot defaults off and a missing or invalid Cloudinary configuration falls back to the same-origin repository asset."
+    },
+    {
+      "id": "human-authority-and-secrets",
+      "blocking": true,
+      "criterion": "The upload authorization is recorded as destination-bound, production remains Jamie-authorized, and no Cloudinary API secret is present in public code or receipts."
+    }
+  ]
+}

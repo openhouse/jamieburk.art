@@ -1,10 +1,11 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-08-14T15:31:16.915Z",
-  "baseUrl": "http://127.0.0.1:3061",
-  "publicSurfaceFingerprint": "ed7118d0928d4449c200b94dad16088f4fb49a9eda31232f2190181f894cac3a",
+  "checkedAt": "2026-08-21T23:02:23.918Z",
+  "baseUrl": "http://127.0.0.1:3102",
+  "publicSurfaceFingerprint": "fba35e321160b9fa77987f9a0027f2aaa7d6601292947613b84ebabaa422e152",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 133,
+  "publicSurfaceFileCount": 151,
+  "requestFailurePolicy": "Exclude canceled speculative Next.js RSC prefetches (net::ERR_ABORTED with an _rsc query); retain every other failed request.",
   "routes": [
     "/",
     "/work",
@@ -17,6 +18,7 @@
     "/work/harry-j-epstein",
     "/work/fair-rent-nyc",
     "/work/callnyc",
+    "/work/kc-spaces-fund",
     "/work/wowlist",
     "/work/196-sunday-dinner",
     "/work/kc-town-hall"
@@ -184,6 +186,20 @@
     },
     {
       "viewport": 360,
+      "path": "/work/kc-spaces-fund",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "failedRequests": []
+    },
+    {
+      "viewport": 360,
       "path": "/work/wowlist",
       "httpStatus": 200,
       "axeVersion": "4.12.1",
@@ -380,6 +396,20 @@
     },
     {
       "viewport": 375,
+      "path": "/work/kc-spaces-fund",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "failedRequests": []
+    },
+    {
+      "viewport": 375,
       "path": "/work/wowlist",
       "httpStatus": 200,
       "axeVersion": "4.12.1",
@@ -576,6 +606,20 @@
     },
     {
       "viewport": 768,
+      "path": "/work/kc-spaces-fund",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "failedRequests": []
+    },
+    {
+      "viewport": 768,
       "path": "/work/wowlist",
       "httpStatus": 200,
       "axeVersion": "4.12.1",
@@ -759,6 +803,20 @@
     {
       "viewport": 1280,
       "path": "/work/callnyc",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "failedRequests": []
+    },
+    {
+      "viewport": 1280,
+      "path": "/work/kc-spaces-fund",
       "httpStatus": 200,
       "axeVersion": "4.12.1",
       "violations": [],
@@ -814,7 +872,7 @@
     }
   ],
   "summary": {
-    "rowCount": 56,
+    "rowCount": 60,
     "axeViolations": 0,
     "criticalAxeViolations": 0,
     "overflowElements": 0,
@@ -823,8 +881,8 @@
     "failedRequests": 0,
     "nonSuccessResponses": 0,
     "invalidHeadingOrLandmarkRows": 0,
-    "lazyImagesObserved": 72,
-    "unloadedImagesBeforeScroll": 63,
+    "lazyImagesObserved": 108,
+    "unloadedImagesBeforeScroll": 79,
     "lazyImageFollowUpPerformed": true,
     "allImagesLoadedAfterScroll": true
   },
@@ -843,8 +901,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionOverlapsPrimaryCopy": false,
-        "captionAndCreditSeparated": true
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
       },
       {
         "viewport": 375,
@@ -855,8 +913,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionOverlapsPrimaryCopy": false,
-        "captionAndCreditSeparated": true
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
       },
       {
         "viewport": 768,
@@ -867,8 +925,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionOverlapsPrimaryCopy": false,
-        "captionAndCreditSeparated": true
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
       },
       {
         "viewport": 1280,
@@ -879,14 +937,14 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionOverlapsPrimaryCopy": false,
-        "captionAndCreditSeparated": true
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
       }
     ],
     "passed": true
   },
   "navigationReview": {
-    "checkedAt": "2026-08-14T15:31:16.915Z",
+    "checkedAt": "2026-08-21T23:02:23.918Z",
     "startRoute": "/",
     "destinationRoute": "/about",
     "startHttpStatus": 200,
@@ -901,8 +959,8 @@
       "height": 900
     },
     "renderedScreenshot": {
-      "sha256": "7e10731f445b437bf2e687335ca115872e49632236ebf020fcf67b70feb46f3b",
-      "byteLength": 583885,
+      "sha256": "938773c9f28a3dd5b6e69f86f2251562cb4785740f2cb002eea8d0892d90847d",
+      "byteLength": 663325,
       "width": 1280,
       "fullPage": true,
       "retainedInPublicGit": false,

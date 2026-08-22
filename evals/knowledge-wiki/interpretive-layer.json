@@ -21,6 +21,7 @@
     ["decision.photo.layout-c.home-east-river.v1", "docs/knowledge-bank/decisions/photography/layout-c-home-east-river-v1.md"],
     ["decision.photo.layout-c.resume-no-photo.v1", "docs/knowledge-bank/decisions/photography/layout-c-resume-no-photo-v1.md"],
     ["decision.photo.pre-launch.rights-narrowing.2026-07-28", "docs/knowledge-bank/decisions/photography/pre-launch-rights-narrowing-2026-07-28.md"],
+    ["decision.portfolio.cloudinary-selective-media-delivery.2026-08-15", "docs/knowledge-bank/decisions/cloudinary-selective-media-delivery-2026-08-15.md"],
     ["source.good-times.open-house.2006-06-28", "docs/knowledge-bank/sources/good-times-open-house-2006-06-28.md"],
     ["source.councilstat.fuller-release.2016", "docs/knowledge-bank/sources/nycc-constituent-services-data-2016-05-27.md"],
     ["source.wowlist.repaired-transcript.2026", "docs/knowledge-bank/sources/wowlist-repaired-transcript-2026.md"],
@@ -45,7 +46,8 @@
     "decision.knowledge-wiki.selective-projection",
     "decision.photo.layout-c.home-east-river.v1",
     "decision.photo.layout-c.resume-no-photo.v1",
-    "decision.photo.pre-launch.rights-narrowing.2026-07-28"
+    "decision.photo.pre-launch.rights-narrowing.2026-07-28",
+    "decision.portfolio.cloudinary-selective-media-delivery.2026-08-15"
   ],
   "pressureProjects": [
     "project.callnyc",

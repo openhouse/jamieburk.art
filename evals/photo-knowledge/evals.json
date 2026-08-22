@@ -20,13 +20,64 @@
     "permission_scope_exact_and_fail_closed",
     "caption_assertions_source_bound",
     "manifest_wiki_placement_alignment",
+    "project_courtesy_credit_policy",
     "revocation_and_rollback_available",
     "protected_absence_not_auto_filled",
     "recollection_does_not_auto_project",
     "automated_selection_prohibited",
     "production_and_indexing_human_gated",
+    "social_preview_release_human_approved",
     "rfc_authority_and_scope_current",
     "exact_candidate_receipt_current"
+  ],
+  "projectCourtesyCredits": [
+    {
+      "photoId": "nycac-shoestring-facilitation",
+      "credit": "Photo courtesy of NYC Artist Coalition.",
+      "statementId": "statement.photo.nycac-shoestring.courtesy-credit.v1"
+    },
+    {
+      "photoId": "nycac-market-hotel-banner",
+      "credit": "Photo courtesy of NYC Artist Coalition.",
+      "statementId": "statement.photo.nycac-market-hotel.courtesy-credit.v1"
+    },
+    {
+      "photoId": "knowledge-wiki-collective-map",
+      "credit": "Photo courtesy of NYC Artist Coalition.",
+      "statementId": "statement.photo.knowledge-wiki.collective-map.courtesy-credit.v1"
+    },
+    {
+      "photoId": "sunday-dinner-shared-map",
+      "credit": "Photo courtesy of Sunday Dinner NYC.",
+      "statementId": "statement.photo.sunday-dinner.shared-map.courtesy-credit.v1"
+    },
+    {
+      "photoId": "kc-town-hall-roof-work",
+      "credit": "Photo courtesy of KC Town Hall.",
+      "statementId": "statement.photo.kc-town-hall.roof-work.courtesy-credit.v1"
+    },
+    {
+      "photoId": "kc-town-hall-tired-of-tires-before",
+      "credit": "Photo courtesy of KC Town Hall.",
+      "statementId": "statement.photo.kc-town-hall.tired-of-tires-before.courtesy-credit.v1"
+    },
+    {
+      "photoId": "kc-town-hall-tired-of-tires-after",
+      "credit": "Photo courtesy of KC Town Hall.",
+      "statementId": "statement.photo.kc-town-hall.tired-of-tires-after.courtesy-credit.v1"
+    },
+    {
+      "photoId": "kc-town-hall-tired-of-tires-flyer",
+      "credit": "Design courtesy of KC Town Hall.",
+      "statementId": "statement.design.kc-town-hall.tired-of-tires.courtesy-credit.v1"
+    }
+  ],
+  "forbiddenPublicCreditPatterns": [
+    "Paul Mossine",
+    "retained export",
+    "photographer not identified",
+    "photographer unresolved",
+    "authorship remains under review"
   ],
   "criteria": [
     {

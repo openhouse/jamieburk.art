@@ -1,0 +1,79 @@
+{
+  "id": "team-memory-anonymized-case-study-2026-08-21",
+  "schemaVersion": 1,
+  "folderPath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity",
+  "indexPath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/README.md",
+  "perspectivePaths": {
+    "prospectiveSponsor": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/01-prospective-sponsor-perspective.md",
+    "jamie": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/02-jamie-perspective.md",
+    "voice": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/03-prospective-sponsor-voice.md"
+  },
+  "currentRunPath": "evals/knowledge-wiki/runs/2026-08-21-team-memory-anonymized-case-study-reader.json",
+  "publicSafeScenario": "A product and engineering leader at a small, rapidly growing creative-technology company recognized that weak writing and documentation practices were making product rationale, decisions, open questions, and onboarding context difficult to preserve. Earlier conversations had challenged Jamie to translate wide-ranging knowledge-system research into a concrete user problem. The organizational situation made a focused source-backed team-memory pilot newly legible, but budget authority, scope, and commercial acceptance remained unresolved.",
+  "acceptanceQuestion": "Does the anonymized packet preserve both participants' perspectives and the prospective sponsor's conversational character with remarkable interpretive accuracy, while withholding identifying details and retaining the unresolved commercial state?",
+  "deterministicStages": [
+    "required-file-and-graph-structure",
+    "identity-and-source-safety",
+    "perspective-coverage",
+    "voice-and-impersonation-boundaries",
+    "source-informed-model-reader-evaluation"
+  ],
+  "requiredSignals": {
+    "index": [
+      "public-safe derivative",
+      "not audio-certified",
+      "Only the actual source participant"
+    ],
+    "prospectiveSponsor": [
+      "basic product questions",
+      "small, rapidly growing creative-technology company",
+      "weak for the amount of complexity",
+      "movement librarian",
+      "focused discovery or prototype",
+      "did not want friendship or intellectual generosity",
+      "does not end with a contract"
+    ],
+    "jamie": [
+      "career transition",
+      "editable knowledge environment",
+      "listening tour",
+      "movement librarian and practical help desk",
+      "source is not merely content",
+      "could a new teammate find an answer",
+      "No recovered source establishes"
+    ],
+    "voice": [
+      "not permission to impersonate",
+      "generous attention followed by a clarifying test",
+      "question architecture",
+      "ethical and economic commitments",
+      "protects the commercial line",
+      "Failure modes in representing the voice",
+      "Compact voice fingerprint"
+    ]
+  },
+  "modelGate": {
+    "promptVersion": "team-memory-anonymized-case-study-reader-v1",
+    "privateSourcesAvailableAtRuntime": true,
+    "privateSourcesMayBeCommitted": false,
+    "maximumCallsPerCandidate": 1,
+    "requiredVerdict": "pass",
+    "requiredPerspectiveVerdicts": {
+      "prospectiveSponsorAccuracy": "pass",
+      "jamieAccuracy": "pass",
+      "voiceFidelity": "pass",
+      "anonymizationSafety": "pass"
+    },
+    "allowedReviewMethods": [
+      "authoring-model-source-informed-self-review",
+      "independent-source-informed-model-review"
+    ],
+    "calibrationStatus": "uncalibrated-advisory-source-informed-self-review",
+    "humanMeaning": "A pass is an advisory source-informed model judgment. The actual source participant did not participate, review, approve, or endorse the packet. Remarkable accuracy from that person's perspective remains a human review gate."
+  },
+  "humanGates": {
+    "jamieReview": "pending",
+    "sourceParticipantReview": "pending",
+    "publicationApproval": "pending"
+  }
+}

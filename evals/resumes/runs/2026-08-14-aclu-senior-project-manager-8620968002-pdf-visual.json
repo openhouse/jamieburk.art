@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "evalId": "resume.aclu.senior-project-manager.8620968002.pdf-visual",
+  "inspectedAt": "2026-08-20T16:19:26-04:00",
+  "sourceTemplate": {
+    "access": "read-only source; edited only in a new private copy for this opportunity",
+    "revisionUnchangedAfterExport": true,
+    "privateLocatorCommitted": false
+  },
+  "markdown": {
+    "path": "resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-8620968002.md",
+    "sha256": "965853c719450cad90e428b2fbfb8925aba16a58091ddb989c0a0ba1a15f1c3e"
+  },
+  "pdf": {
+    "path": "resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Resume-ACLU-Senior-Project-Manager-8620968002.pdf",
+    "sha256": "c246c17d1659ff33536b7a0ffd9e13cdce860482d8c780535bd911a1d280c066",
+    "bytes": 86556,
+    "pages": 2,
+    "pageSize": "US Letter"
+  },
+  "inspection": {
+    "method": "Rebuilt from the approved Google Docs export with every list marker normalized to one point below its item text; rasterized every page at 110 DPI, visually inspected all pages, compared final rasters with the pre-rebuild inspection set, and checked PDF geometry, text, and link annotations.",
+    "allPagesRasterized": true,
+    "actualNamedPeopleParticipated": false,
+    "pages": [
+      {
+        "page": 1,
+        "pass": true,
+        "notes": "Mission-aligned systems implementation, business analysis, confidentiality, accessibility, and cross-department delivery are immediately legible; the single Thick Arts LLC container and value-led HJE evidence read cleanly without formation exposition."
+      },
+      {
+        "page": 2,
+        "pass": true,
+        "notes": "KC Town Hall, WOW List, CallNYC, Sunday Dinner, education, and work authorization read cleanly; affirmative role evidence replaces defensive grant-disbursement wording."
+      }
+    ]
+  },
+  "overall": "pass",
+  "boundary": "Artifact and visual-quality inspection only. No named hiring reader participated, and a pass is not an endorsement, interview promise, eligibility determination, or hiring decision."
+}

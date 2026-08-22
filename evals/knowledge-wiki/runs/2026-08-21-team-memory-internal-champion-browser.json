@@ -1,0 +1,863 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-08-21T16:17:36.186Z",
+  "source": "rendered-local-browser",
+  "startPath": "/lab/source-backed-team-memory",
+  "originClass": "localhost-development-server",
+  "navigationSequence": [
+    "team-memory-start",
+    "resume-from-team-memory",
+    "work-from-site-navigation",
+    "technical-operations-from-work",
+    "about-from-site-navigation"
+  ],
+  "routes": [
+    {
+      "routeLabel": "team-memory-start",
+      "url": "http://127.0.0.1:3000/lab/source-backed-team-memory",
+      "title": "Knowledge Wiki Graphs - Jamie Burkart",
+      "h1": "Knowledge Wiki Graphs",
+      "visibleText": "Skip to content\nJamie Burkart\nWork\nTechnical Operations\nAbout\nResume\nContact\n\nLAB / METHOD\n\nKnowledge Wiki Graphs\n\nI am developing a federated Knowledge Wiki Graph practice that keeps meaning, evidence, and source custody distinct, then composes audience-specific outputs through human review.[1][2]\n\nHandwritten contributions form a shared working map during an NYC Artist Coalition steering-group session, February 2017.\nPhoto courtesy of NYC Artist Coalition.\n\nThe practice begins with knowledge already present in people, language, artifacts, and relationships. The system helps a team make that knowledge visible, connected, and usable without claiming ownership of it.\n\nEarly research / method / consulting practice. Not a finished production SaaS, chatbot, surveillance system, AI replacement for judgment, or private archive browser.\n\nAT A GLANCE\n\nThree graph responsibilities, one reviewed output\nSemantic graph\n\nWhat the work means: projects, people, decisions, capabilities, claims, inquiries, and their relationships.\n\nEvidence graph\n\nWhy a statement can be trusted or remains open: sources, observations, assets, citations, limitations, and provenance.\n\nSource-custody graph\n\nWhere authoritative material is held and under what access, rights, consent, and retention conditions.\n\nThe portfolio is a selective projection from those responsibilities, composed for a particular audience and released through human review.\n\nStart with one team pressure people can feel\n\nFor a fast-growing product and engineering team, the first proposal is a focused discovery or prototype sprint—not a company-wide knowledge platform. Begin with one practical question: can a new teammate understand what the team is building, why current choices were made, and what remains open without reconstructing that history from meetings and private messages?\n\n01\nFind the knowledge friction\n\nChoose one recurring place where product rationale, decisions, open questions, or onboarding context is being lost.\n\n02\nStart from approved material\n\nUse a small source set the team has deliberately cleared: for example, one meeting, one product brief, and one onboarding note.\n\n03\nReturn usable operating memory\n\nProduce a start-here page, decision record, open-question list, source links, and access notes that fit the team's existing work.\n\n04\nTest the handoff\n\nAsk a teammate to find an answer, trace why it is there, correct it, and recognize what remains open or protected.\n\nPROPOSED FIRST ENGAGEMENT\n\nA two-week discovery and prototype sprint the team can authorize\n\nThe timebox and participation plan are confirmed with the sponsor before work begins. The aim is not to install a new company-wide platform. It is to make one slipping decision trail easier to find, trust, correct, protect, and hand to the next teammate.\n\nPeople\nOne sponsor, one working lead, and two or three teammates who can test whether the result helps them find and use what the team already knows.\nSource set\nThree to five approved sources around one decision trail, such as a product brief, meeting notes, an onboarding document, and the current place where open questions live.\nJamie returns\nA knowledge-friction map, start-here page, decision record, open-question list, source and access notes, correction path, and a tested handoff.\nEnd decision\nThe team decides to continue, revise, or stop—and leaves with a clear account of what worked, what remains uncertain, who owns the next step, and what would require new authorization.\nDeliberately outside this first sprint\n\nIndiscriminate ingestion, hidden monitoring, a private archive browser, a company-wide rollout, and continuing maintenance without a separate agreement.\n\nDiscuss this proposed two-week pilot\nReview Jamie's resume\nWhat makes the pilot worth continuing\nA newcomer can find the current product rationale and open questions.\nA decision can be traced to its source and reviewed in context.\nA teammate can correct the record or keep sensitive material protected.\nThe team can make a clear continue, revise, or stop decision.\n\nThese are proposed acceptance conditions, not a claim that a client engagement or company-wide implementation has occurred.\n\nWhere This Comes From\n\nSource-Backed Team Memory and Noting.us were earlier forms of a question I keep returning to: how can a team preserve enough context to act well together without flattening disagreement, exposing protected material, or mistaking a record for permission?\n\nThe current successor is a Knowledge Wiki Graph practice. It treats each project as emerging from a changing universe of source material, working knowledge, decisions, open questions, evaluations, and reviewed outputs.\n\nThree Graphs, One Reviewed Output\n\nThe architecture separates three responsibilities:\n\nSemantic graph: projects, people, decisions, capabilities, claims, inquiries, and the relationships that explain what the work means.\nEvidence graph: sources, observations, assets, citations, support, contradiction, limitation, and provenance that explain why a statement can be trusted—or why it remains open.\nSource-custody graph: the authoritative material, its location, access conditions, rights, consent, and retention responsibilities.\n\nThe portfolio is not a fourth source of truth. It is a selective projection: an audience-specific composition made from those graphs through human review.\n\nA Federated Practice\n\nThe ecosystem is distributed across project-specific repositories because different materials need different owners, access rules, release rhythms, and forms of care. Each repository retains local authority. Stable identities and pinned revisions let selected context travel between projects without turning the packet, the receiving repository, or an automated evaluation into canonical truth.\n\nRepository roles do not map one-to-one onto the three graph responsibilities. A public project archive, a private research collection, a photo-curation tool, a local correspondence graph, and this portfolio may each participate in more than one responsibility while preserving distinct publication boundaries.\n\nKnown, Open, Protected\n\nKnown material is public-safe or source-backed. Open material needs review, correction, or more context. Protected material is intentionally withheld because privacy, consent, law, safety, or client trust requires it.\n\nThe working sequence is:\n\nSource custody → evidence and observations → interpretation and claims → semantic relationships → human-reviewed projection.\n\nThere is no shortcut from having access to a source to having evidence for a claim—or from having evidence to having permission to publish.\n\nExample Deliverables\nknowledge-friction and relationship map\nsource, workflow, and authority inventory\ndecision and meeting-memory templates\nonboarding or “how we know what we know” starter page\nevaluation cases, correction paths, and release receipts\nprivacy, access, attribution, consent, and retention notes\na continue / revise / stop recommendation for the next iteration\nA Focused Pilot Decision\n\nThe first useful engagement should address one team pressure, use a small set of approved sources, and return a compact operating memory that fits the team's existing work. It should be possible for a teammate to find an answer, trace its source, correct the record, and recognize what remains open or protected.\n\nThe pilot earns a next iteration only when the handoff helps another person onboard, understand a decision, or continue the work with less context loss. Output volume is not the measure of success.\n\nRole Fit\n\nThe work connects technical project management, product operations, documentation architecture, AI evaluation, human review, and source-backed knowledge systems. It is early research and an operating method in development, not a finished platform or a claim of client adoption.\n\nEARLIER METHOD\n\nSource-Backed Team Memory remains part of the lineage\n\nDeveloping a focused lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.\n\nWORKED EXAMPLE\n\nOne source enters; three review states remain visible\n\nThis synthetic example shows the method without exposing a private archive. The system does not force disagreement into certainty. It preserves what is supported, what needs review, and what should stay outside the public record.\n\nKnown\n\nA public project brief records the launch date, intended audience, and approved owner of a decision.\n\nOpen\n\nTwo meeting summaries describe adoption differently, so the shared record flags the discrepancy for review.\n\nProtected\n\nPrivate transcripts, contact details, and unapproved collaborator context remain outside the public memory.\n\nCONCRETE CORRECTION TRACE\n\nThe public record changed the portfolio\n\nEarlier portfolio copy dated CallNYC to 2014-2015. A recovered Council hackathon announcement, the fuller CouncilStat data-release chronology, and contemporaneous Politico coverage placed the work in 2016.[4][5][6] The correction was applied to the work index, case study, and resume while the prior wording and reason remained visible in the Knowledge Wiki.\n\nBefore\n2014-2015\nAfter\n2016\nHandoff\nOne correction propagated to every public surface that carried the date.\nPublic completion certificate. Professional development, not instructor affiliation or a claim that the lab is production SaaS.\n\nEVALUATION PRACTICE\n\nHuman review is part of the system\n\nCompleted AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain through Maven.[3] The coursework supports this lab's emphasis on error analysis, annotation, traces, retrieval quality, and reviewable failure modes.\n\nSources and notes\n\nThese notes preserve what each source supports and where its limits remain. See something that needs correction? Contact Jamie.\n\nView 6 source notes\nView selected work\nDiscuss a focused knowledge-system sprint\n\nJamie Burkart\n\nTechnical Project Manager - Product Operations & Implementation. Public-safe portfolio, civic notebook, and future living archive.\n\nWork\nTechnical Operations\nResume\nContact\nColophon",
+      "sameOriginLinks": [
+        {
+          "href": "#main",
+          "text": "Skip to content"
+        },
+        {
+          "href": "/",
+          "text": "JBJamie Burkart"
+        },
+        {
+          "href": "/work",
+          "text": "Work"
+        },
+        {
+          "href": "/work/technical-operations",
+          "text": "Technical Operations"
+        },
+        {
+          "href": "/about",
+          "text": "About"
+        },
+        {
+          "href": "/resume",
+          "text": "Resume"
+        },
+        {
+          "href": "/contact",
+          "text": "Contact"
+        },
+        {
+          "href": "/work",
+          "text": "Work"
+        },
+        {
+          "href": "/work/technical-operations",
+          "text": "Technical Operations"
+        },
+        {
+          "href": "/about",
+          "text": "About"
+        },
+        {
+          "href": "/resume",
+          "text": "Resume"
+        },
+        {
+          "href": "/contact",
+          "text": "Contact"
+        },
+        {
+          "href": "#cite-source-backed-team-memory-1",
+          "text": "[1]"
+        },
+        {
+          "href": "#cite-source-backed-team-memory-2",
+          "text": "[2]"
+        },
+        {
+          "href": "/resume",
+          "text": "Review Jamie's resume"
+        },
+        {
+          "href": "#cite-source-backed-team-memory-4",
+          "text": "[4]"
+        },
+        {
+          "href": "#cite-source-backed-team-memory-5",
+          "text": "[5]"
+        },
+        {
+          "href": "#cite-source-backed-team-memory-6",
+          "text": "[6]"
+        },
+        {
+          "href": "#cite-source-backed-team-memory-3",
+          "text": "[3]"
+        },
+        {
+          "href": "/contact",
+          "text": "Contact Jamie"
+        },
+        {
+          "href": "#cite-ref-source-backed-team-memory-knowledge-wiki-graph-method-src-knowledge-wiki-rfc-0005-2026",
+          "text": "Return 1"
+        },
+        {
+          "href": "#cite-ref-source-backed-team-memory-knowledge-wiki-graph-method-src-knowledge-wiki-rfc-0006-2026",
+          "text": "Return 1"
+        },
+        {
+          "href": "#cite-ref-source-backed-team-memory-ai-evals-course-completion-src-ai-evals-certificate-2026",
+          "text": "Return 1"
+        },
+        {
+          "href": "#cite-ref-source-backed-team-memory-callnyc-correction-trace-src-callnyc-civic-hall-post-693124020917522433",
+          "text": "Return 1"
+        },
+        {
+          "href": "#cite-ref-source-backed-team-memory-callnyc-correction-trace-src-callnyc-politico-2016-03-14",
+          "text": "Return 1"
+        },
+        {
+          "href": "#cite-ref-source-backed-team-memory-callnyc-correction-trace-src-callnyc-github-repository",
+          "text": "Return 1"
+        },
+        {
+          "href": "/work",
+          "text": "View selected work"
+        },
+        {
+          "href": "/work",
+          "text": "Work"
+        },
+        {
+          "href": "/work/technical-operations",
+          "text": "Technical Operations"
+        },
+        {
+          "href": "/resume",
+          "text": "Resume"
+        },
+        {
+          "href": "/contact",
+          "text": "Contact"
+        },
+        {
+          "href": "/colophon",
+          "text": "Colophon"
+        }
+      ],
+      "captureMethod": "rendered-browser"
+    },
+    {
+      "routeLabel": "resume-from-team-memory",
+      "url": "http://127.0.0.1:3000/resume",
+      "title": "Resume - Jamie Burkart",
+      "h1": "Resume",
+      "visibleText": "Skip to content\nJamie Burkart\nWork\nTechnical Operations\nAbout\nResume\nContact\nResume\n\nTechnical Project Manager - Product Operations & Implementation\n\nI create operating structure for complex public-facing teams, turning ambiguous work into requirements, workflows, documentation, decision trails, launch support, onboarding materials, and durable handoffs.\n\nDownload resume PDF\nContact Jamie\n\nCurrent public resume PDF. Phone remains inside the approved resume artifact; email is available on the contact page.\n\nSelected impact\n14+ years creating operating structure\nJamie led long-running e-commerce and operations improvements for a legacy industrial business\nJamie's e-commerce and operations improvements contributed to 2x revenue growth\nJamie built and stewarded 30+ pages of campaign memory for shared decisions and next steps\nJamie mapped legislative source lineage so collaborators could review bill changes\nBuilt CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.\nJamie was a founding member and organizer who implemented and maintained campaign websites\nJamie built civic systems and coalition operations for NYC Artist Coalition\nCo-founded and co-built WOW List with Richard Caceres, connecting a natural-language community-calendar product with organizer discovery, adoption, public communication, instrumentation, and long-term stewardship.\nJamie created participation systems supporting 300+ gatherings and 20+ resident artists\nSecured a $490,539 public funding award for KC Town Hall through a successful CCED proposal and presentation, then transitioned the project to a mission-aligned organization.\nJamie completed AI Evals for Engineers & PMs in 2026\n\nJamie Burkart\n\nTechnical Project Manager - Product Operations & Implementation. Public-safe portfolio, civic notebook, and future living archive.\n\nWork\nTechnical Operations\nResume\nContact\nColophon",
+      "sameOriginLinks": [
+        {
+          "href": "#main",
+          "text": "Skip to content"
+        },
+        {
+          "href": "/",
+          "text": "JBJamie Burkart"
+        },
+        {
+          "href": "/work",
+          "text": "Work"
+        },
+        {
+          "href": "/work/technical-operations",
+          "text": "Technical Operations"
+        },
+        {
+          "href": "/about",
+          "text": "About"
+        },
+        {
+          "href": "/resume",
+          "text": "Resume"
+        },
+        {
+          "href": "/contact",
+          "text": "Contact"
+        },
+        {
+          "href": "/work",
+          "text": "Work"
+        },
+        {
+          "href": "/work/technical-operations",
+          "text": "Technical Operations"
+        },
+        {
+          "href": "/about",
+          "text": "About"
+        },
+        {
+          "href": "/resume",
+          "text": "Resume"
+        },
+        {
+          "href": "/contact",
+          "text": "Contact"
+        },
+        {
+          "href": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+          "text": "Download resume PDF"
+        },
+        {
+          "href": "/contact",
+          "text": "Contact Jamie"
+        },
+        {
+          "href": "/work",
+          "text": "Work"
+        },
+        {
+          "href": "/work/technical-operations",
+          "text": "Technical Operations"
+        },
+        {
+          "href": "/resume",
+          "text": "Resume"
+        },
+        {
+          "href": "/contact",
+          "text": "Contact"
+        },
+        {
+          "href": "/colophon",
+          "text": "Colophon"
+        }
+      ],
+      "captureMethod": "rendered-browser"
+    },
+    {
+      "routeLabel": "work-from-site-navigation",
+      "url": "http://127.0.0.1:3000/work",
+      "title": "Selected Work - Jamie Burkart",
+      "h1": "Selected work",
+      "visibleText": "Skip to content\nJamie Burkart\nWork\nTechnical Operations\nAbout\nResume\nContact\n\nPORTFOLIO INDEX\n\nSelected work\n\nThese case studies show a recurring pattern: real needs becoming clearer requirements, usable systems, public-facing tools, documentation, decision trails, and durable handoffs.\n\nTechnical Operations proof page\nKnowledge Wiki Graph lab\nOPERATING SYSTEMS FOR TEAMS\nThe maintained public storefront brings discovery, editorial voice, customer guidance, and ordering into one system. Public website capture, July 2026.\n\nOperating Structure\n\n2009-2015\n\nFULL CASE STUDY\nPUBLIC-SAFE\nHarry J. Epstein Company\n\nE-commerce and operations modernization\n\nLed web, e-commerce, analytics, content, marketing, and operational improvements that helped an 80+ year-old industrial business modernize without losing its trusted voice.\n\nWhat was emerging\nA legacy business had public voice, customer trust, inventory knowledge, and operating habits that did not automatically translate into modern e-commerce workflows.\nWhat became usable\nImproved web, e-commerce, analytics, marketing, content, and operational systems that supported online growth while preserving the company's distinctive institutional voice.\nTechnical Operations\nProduct Operations\nImplementation\nDocumentation\nRead case study\nRoof work during KC Town Hall field implementation, March 24, 2019. Photo courtesy of KC Town Hall.\n\nBuilt Environment\n\n2019-2024 public record\n\nSHORT PROOF PAGE\nPUBLIC-SAFE\nKC Town Hall LLC\n\nA $490,539 public funding award, field implementation, and responsible transition\n\nSecured a $490,539 public funding award by co-developing KC Town Hall's successful CCED proposal and serving as the City's named developer/presenter for the exact request, then transitioned the project to a mission-aligned organization.\n\nWhat was emerging\nA long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.\nWhat became usable\nA successful $490,539 public funding request, planning materials, public-benefit documentation, stakeholder context, a multi-year municipal compliance record, and a mission-aligned transition.\nImplementation\nDocumentation\nKnowledge Systems\nPublic-Facing Tools\nRead case study\nCIVIC AND PUBLIC-FACING SYSTEMS\nA collective Save NYC Spaces town hall at Market Hotel, October 11, 2017. Photo courtesy of NYC Artist Coalition.\n\nCivic Systems\n\n2017-Present\n\nFULL CASE STUDY\nPUBLIC-SAFE\nNYC Artist Coalition / FairRentNYC\n\nCultural-space advocacy, coalition memory, and Commercial Rent Stabilization\n\nAs a founding member and organizer of NYC Artist Coalition, implemented and maintained campaign websites and helped build coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability.\n\nWhat was emerging\nThe work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.\nWhat became usable\nRecurring cultural-space meetings, public event pathways, practical safety and legal sessions, town halls, hearings, campaign actions, running minutes, action trackers, source maps, public campaign websites, and shared campaign memory.\nCivic Technology\nKnowledge Systems\nDocumentation\nProduct Operations\nRead case study\nThe original interface translated civic data into issue pathways, district context, and resident guidance. CallNYC is now archived and unofficial. Original CallNYC press-kit screenshot, 2016.\n\nCivic Prototype\n\n2016 - archived\n\nFULL CASE STUDY\nPUBLIC-SAFE\nCallNYC.org\n\nCivic data to resident-facing guidance\n\nBuilt an independent civic-data follow-on translating CouncilStat constituent-services records into resident-facing issue pathways and next-step guidance.\n\nWhat was emerging\nConstituent-services data existed, but residents needed a clearer public-facing pathway from issue to relevant civic office or next step.\nWhat became usable\nAn archived civic-tech prototype that organized open data into issue pathways, district context, and resident-facing guidance.\nCivic Technology\nOpen Data\nWeb Systems\nImplementation\nRead case study\nCOMMUNITY AND CULTURAL INFRASTRUCTURE\nThe 2020 campaign surface brought its purpose, donation, application, sign-up, contact, and fundraising pathways into one coherent public system. KC Spaces Fund public website capture, August 20, 2026; historical campaign content.\n\nRapid Public Implementation\n\n2020\n\nSHORT PROOF PAGE\nPUBLIC-SAFE\nKC Spaces Fund\n\nA finished campaign site for cultural-space mutual aid\n\nBuilt and maintained the campaign's Ghost-based web stack, customized a reusable theme, and implemented donation, application, sign-up, and contact pathways plus a fundraising progress display for a collaborator-led 2020 mutual-aid campaign.\n\nWhat was emerging\nA fast-moving cultural-space mutual-aid campaign needed a coherent public identity and clear action paths across the website and collaborator-led social channels.\nWhat became usable\nA maintained Ghost site with a reusable campaign theme and visible routes to donate, apply, join, contact, and follow fundraising progress.\nTechnical Operations\nImplementation\nWeb Systems\nCampaign Infrastructure\nRead case study\nWOW List's current threshold pairs its returning interface with a photographic scene of people gathering. Public website capture, August 13, 2026.\n\nCommunity Platform\n\n2010s; public return in progress, 2026\n\nSHORT PROOF PAGE\nPUBLIC-SAFE\nWOWList.org\n\nNatural-language community infrastructure for arts and music organizers\n\nCo-founded, co-built, and operated a natural-language community-calendar platform across 35 city ecosystems, supporting local organizers who used WOW List to run calendars, websites, and email lists for their own scenes.\n\nWhat was emerging\nDIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.\nWhat became usable\nA natural-language, collaboratively editable event system that turned community vocabulary into followable keyword calendars and organizer-facing distribution workflows.\nCommunity Systems\nWeb Systems\nProduct Operations\nPublic-Facing Tools\nRead case study\nA Sunday Dinner gathering with a hand-drawn map and shared table, January 6, 2013. Photo courtesy of Sunday Dinner NYC.\n\nParticipation Infrastructure\n\n2010s-present\n\nSHORT PROOF PAGE\nSUMMARY-ONLY\n196 Artists Residency / Sunday Dinner\n\nHosting, onboarding, facilitation, and continuity systems\n\nCreated repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.\n\nWhat was emerging\nA recurring cultural space needed trust-building routines, invitations, hospitality, artist support, and continuity without turning private community records into public spectacle.\nWhat became usable\nRepeatable participation infrastructure for gatherings, resident artists, onboarding, facilitation, and handoffs.\nCommunity Systems\nDocumentation\nImplementation\nKnowledge Systems\nRead case study\nSOURCE-BACKED MEMORY / AI LAB\nKnowledge Wiki Graph / Source-Backed Team Memory\n\nI am developing a federated Knowledge Wiki Graph practice that keeps meaning, evidence, and source custody distinct, then composes audience-specific outputs through human review.[1][2]\n\nNoting.us and Source-Backed Team Memory are earlier forms of this evolving knowledge-system research.\n\nEarly research / method / consulting practice. Not a finished production SaaS.\n\nRead lab page\nSources and notes\n\nThese notes preserve what each source supports and where its limits remain. See something that needs correction? Contact Jamie.\n\nView 2 source notes\n\nJamie Burkart\n\nTechnical Project Manager - Product Operations & Implementation. Public-safe portfolio, civic notebook, and future living archive.\n\nWork\nTechnical Operations\nResume\nContact\nColophon",
+      "sameOriginLinks": [
+        {
+          "href": "#main",
+          "text": "Skip to content"
+        },
+        {
+          "href": "/",
+          "text": "JBJamie Burkart"
+        },
+        {
+          "href": "/work",
+          "text": "Work"
+        },
+        {
+          "href": "/work/technical-operations",
+          "text": "Technical Operations"
+        },
+        {
+          "href": "/about",
+          "text": "About"
+        },
+        {
+          "href": "/resume",
+          "text": "Resume"
+        },
+        {
+          "href": "/contact",
+          "text": "Contact"
+        },
+        {
+          "href": "/work",
+          "text": "Work"
+        },
+        {
+          "href": "/work/technical-operations",
+          "text": "Technical Operations"
+        },
+        {
+          "href": "/about",
+          "text": "About"
+        },
+        {
+          "href": "/resume",
+          "text": "Resume"
+        },
+        {
+          "href": "/contact",
+          "text": "Contact"
+        },
+        {
+          "href": "/work/technical-operations",
+          "text": "Technical Operations proof page"
+        },
+        {
+          "href": "/lab/source-backed-team-memory",
+          "text": "Knowledge Wiki Graph lab"
+        },
+        {
+          "href": "/work/harry-j-epstein",
+          "text": ""
+        },
+        {
+          "href": "/work/harry-j-epstein",
+          "text": "Harry J. Epstein Company"
+        },
+        {
+          "href": "/work?tag=Technical%20Operations#work-index",
+          "text": "Technical Operations"
+        },
+        {
+          "href": "/work?tag=Product%20Operations#work-index",
+          "text": "Product Operations"
+        },
+        {
+          "href": "/work?tag=Implementation#work-index",
+          "text": "Implementation"
+        },
+        {
+          "href": "/work?tag=Documentation#work-index",
+          "text": "Documentation"
+        },
+        {
+          "href": "/work/harry-j-epstein",
+          "text": "Read case study"
+        },
+        {
+          "href": "/work/kc-town-hall",
+          "text": ""
+        },
+        {
+          "href": "/work/kc-town-hall",
+          "text": "KC Town Hall LLC"
+        },
+        {
+          "href": "/work?tag=Implementation#work-index",
+          "text": "Implementation"
+        },
+        {
+          "href": "/work?tag=Documentation#work-index",
+          "text": "Documentation"
+        },
+        {
+          "href": "/work?tag=Knowledge%20Systems#work-index",
+          "text": "Knowledge Systems"
+        },
+        {
+          "href": "/work?tag=Public-Facing%20Tools#work-index",
+          "text": "Public-Facing Tools"
+        },
+        {
+          "href": "/work/kc-town-hall",
+          "text": "Read case study"
+        },
+        {
+          "href": "/work/fair-rent-nyc",
+          "text": ""
+        },
+        {
+          "href": "/work/fair-rent-nyc",
+          "text": "NYC Artist Coalition / FairRentNYC"
+        },
+        {
+          "href": "/work?tag=Civic%20Technology#work-index",
+          "text": "Civic Technology"
+        },
+        {
+          "href": "/work?tag=Knowledge%20Systems#work-index",
+          "text": "Knowledge Systems"
+        },
+        {
+          "href": "/work?tag=Documentation#work-index",
+          "text": "Documentation"
+        },
+        {
+          "href": "/work?tag=Product%20Operations#work-index",
+          "text": "Product Operations"
+        },
+        {
+          "href": "/work/fair-rent-nyc",
+          "text": "Read case study"
+        },
+        {
+          "href": "/work/callnyc",
+          "text": ""
+        },
+        {
+          "href": "/work/callnyc",
+          "text": "CallNYC.org"
+        },
+        {
+          "href": "/work?tag=Civic%20Technology#work-index",
+          "text": "Civic Technology"
+        },
+        {
+          "href": "/work?tag=Open%20Data#work-index",
+          "text": "Open Data"
+        },
+        {
+          "href": "/work?tag=Web%20Systems#work-index",
+          "text": "Web Systems"
+        },
+        {
+          "href": "/work?tag=Implementation#work-index",
+          "text": "Implementation"
+        },
+        {
+          "href": "/work/callnyc",
+          "text": "Read case study"
+        },
+        {
+          "href": "/work/kc-spaces-fund",
+          "text": ""
+        },
+        {
+          "href": "/work/kc-spaces-fund",
+          "text": "KC Spaces Fund"
+        },
+        {
+          "href": "/work?tag=Technical%20Operations#work-index",
+          "text": "Technical Operations"
+        },
+        {
+          "href": "/work?tag=Implementation#work-index",
+          "text": "Implementation"
+        },
+        {
+          "href": "/work?tag=Web%20Systems#work-index",
+          "text": "Web Systems"
+        },
+        {
+          "href": "/work?tag=Campaign%20Infrastructure#work-index",
+          "text": "Campaign Infrastructure"
+        },
+        {
+          "href": "/work/kc-spaces-fund",
+          "text": "Read case study"
+        },
+        {
+          "href": "/work/wowlist",
+          "text": ""
+        },
+        {
+          "href": "/work/wowlist",
+          "text": "WOWList.org"
+        },
+        {
+          "href": "/work?tag=Community%20Systems#work-index",
+          "text": "Community Systems"
+        },
+        {
+          "href": "/work?tag=Web%20Systems#work-index",
+          "text": "Web Systems"
+        },
+        {
+          "href": "/work?tag=Product%20Operations#work-index",
+          "text": "Product Operations"
+        },
+        {
+          "href": "/work?tag=Public-Facing%20Tools#work-index",
+          "text": "Public-Facing Tools"
+        },
+        {
+          "href": "/work/wowlist",
+          "text": "Read case study"
+        },
+        {
+          "href": "/work/196-sunday-dinner",
+          "text": ""
+        },
+        {
+          "href": "/work/196-sunday-dinner",
+          "text": "196 Artists Residency / Sunday Dinner"
+        },
+        {
+          "href": "/work?tag=Community%20Systems#work-index",
+          "text": "Community Systems"
+        },
+        {
+          "href": "/work?tag=Documentation#work-index",
+          "text": "Documentation"
+        },
+        {
+          "href": "/work?tag=Implementation#work-index",
+          "text": "Implementation"
+        },
+        {
+          "href": "/work?tag=Knowledge%20Systems#work-index",
+          "text": "Knowledge Systems"
+        },
+        {
+          "href": "/work/196-sunday-dinner",
+          "text": "Read case study"
+        },
+        {
+          "href": "#cite-work-index-1",
+          "text": "[1]"
+        },
+        {
+          "href": "#cite-work-index-2",
+          "text": "[2]"
+        },
+        {
+          "href": "/lab/source-backed-team-memory",
+          "text": "Read lab page"
+        },
+        {
+          "href": "/contact",
+          "text": "Contact Jamie"
+        },
+        {
+          "href": "#cite-ref-work-index-knowledge-wiki-graph-method-src-knowledge-wiki-rfc-0005-2026",
+          "text": "Return 1"
+        },
+        {
+          "href": "#cite-ref-work-index-knowledge-wiki-graph-method-src-knowledge-wiki-rfc-0006-2026",
+          "text": "Return 1"
+        },
+        {
+          "href": "/work",
+          "text": "Work"
+        },
+        {
+          "href": "/work/technical-operations",
+          "text": "Technical Operations"
+        },
+        {
+          "href": "/resume",
+          "text": "Resume"
+        },
+        {
+          "href": "/contact",
+          "text": "Contact"
+        },
+        {
+          "href": "/colophon",
+          "text": "Colophon"
+        }
+      ],
+      "captureMethod": "rendered-browser"
+    },
+    {
+      "routeLabel": "technical-operations-from-work",
+      "url": "http://127.0.0.1:3000/work/technical-operations",
+      "title": "Technical Operations & Implementation - Jamie Burkart",
+      "h1": "Technical Operations & Implementation",
+      "visibleText": "Skip to content\nJamie Burkart\nWork\nTechnical Operations\nAbout\nResume\nContact\nTechnical Operations & Implementation\n\nI create the operating backbone complex teams need to move: clear requirements, delivery rhythms, decision records, risk signals, onboarding materials, operating documentation, launch support, and durable handoffs.\n\nStart with the decisions\n\nThese are the clearest public-safe traces of how I frame work, make it executable, verify what changed, and leave it maintainable.\n\nHarry J. Epstein Company\n\nHow does recurring customer and team friction become a maintainable release?\n\nDecision and action\nJamie translated the question into a well-scoped requirement, coordinated an incremental change, inspected the public customer path and available signals, then preserved ownership and next actions.\nInspectable artifact\nMaintenance-to-handoff workflow specimen\nWhat became usable\nRepeatable patterns across product information, marketing, e-commerce operations, and customer follow-up.\nFairRentNYC / Commercial Rent Stabilization\n\nHow can a coalition keep sensitive, shifting work recoverable without overexposing it?\n\nDecision and action\nJamie separated public sources, protected context, open policy questions, decisions, and next actions across 30+ pages of shared campaign memory.\nInspectable artifact\nCampaign-memory spine and source map\nWhat became usable\nCollaborators could recover decision context, review public evidence, and continue work across city and state strategy lanes.\nCallNYC\n\nHow can administrative data become a pathway a resident can recognize and use?\n\nDecision and action\nJamie organized constituent-services records around recognizable issues and possible next steps rather than requiring people to understand the source dataset first.\nInspectable artifact\nIssue-page information architecture and public implementation\nWhat became usable\nA small, complete civic product with source data, issue pathways, public documentation, and explicit limits.\nCapability evidence\n\nFollow a capability to the project and public wording that support it. The links carry the case context, evidence, credits, and limits.\n\nDelivery coordination\n\nTurning unclear public-facing work into launchable plans, releases, and handoffs.\n\nCross-project operating pattern\nJamie coordinates public-facing technical work from ambiguity to launch\nHarry J. Epstein Company\nJamie led long-running e-commerce and operations improvements for a legacy industrial business\nCallNYC\nJamie built an independent CouncilStat follow-on translating civic data into resident guidance\nWOWList\nJamie co-founded and co-built WOW List as a natural-language community platform\nRisk surfacing and decision clarity\n\nMaking open questions, public/private boundaries, and stakeholder next steps visible.\n\nFairRentNYC\nJamie built and stewarded 30+ pages of campaign memory for shared decisions and next steps\nFairRentNYC\nJamie mapped legislative source lineage so collaborators could review bill changes\nKC Town Hall\nSecured a $490,539 public funding award through a successful CCED proposal and presentation, then transitioned the project to a mission-aligned organization\nOperating documentation people use\n\nConverting meetings, source trails, and recurring practices into reusable working memory.\n\nFairRentNYC\nJamie built and stewarded 30+ pages of campaign memory for shared decisions and next steps\n196 / Sunday Dinner\nJamie created participation systems supporting 300+ gatherings and 20+ resident artists\nSource-Backed Team Memory\nJamie is developing a focused method for source-backed team memory\nPublic-facing launch and adoption\n\nShaping websites, prototypes, and community platforms so real audiences can act.\n\nNYC Artist Coalition\nJamie was a founding member and organizer who implemented and maintained campaign websites\nNYC Artist Coalition\nJamie built civic systems and coalition operations for NYC Artist Coalition\nKC Spaces Fund\nCross-channel identity and web infrastructure for KC Spaces Fund\nCallNYC\nJamie built an independent CouncilStat follow-on translating civic data into resident guidance\nWOWList\nJamie co-founded and co-built WOW List as a natural-language community platform\nHarry J. Epstein Company\nJamie's e-commerce and operations improvements contributed to 2x revenue growth\nWhere the public evidence stops\nResume\n\nTechnical project management, product operations, implementation, documentation systems, civic technology, and public-facing tools.\n\nDownload resume PDF\n\nNEXT CONVERSATION\n\nLooking for technical project management, product operations, implementation, or knowledge-systems support?\n\nEmail Jamie about roles, referrals, focused consulting work, or collaboration.\n\nView resume\nEmail Jamie\n\nJamie Burkart\n\nTechnical Project Manager - Product Operations & Implementation. Public-safe portfolio, civic notebook, and future living archive.\n\nWork\nTechnical Operations\nResume\nContact\nColophon",
+      "sameOriginLinks": [
+        {
+          "href": "#main",
+          "text": "Skip to content"
+        },
+        {
+          "href": "/",
+          "text": "JBJamie Burkart"
+        },
+        {
+          "href": "/work",
+          "text": "Work"
+        },
+        {
+          "href": "/work/technical-operations",
+          "text": "Technical Operations"
+        },
+        {
+          "href": "/about",
+          "text": "About"
+        },
+        {
+          "href": "/resume",
+          "text": "Resume"
+        },
+        {
+          "href": "/contact",
+          "text": "Contact"
+        },
+        {
+          "href": "/work",
+          "text": "Work"
+        },
+        {
+          "href": "/work/technical-operations",
+          "text": "Technical Operations"
+        },
+        {
+          "href": "/about",
+          "text": "About"
+        },
+        {
+          "href": "/resume",
+          "text": "Resume"
+        },
+        {
+          "href": "/contact",
+          "text": "Contact"
+        },
+        {
+          "href": "/work/harry-j-epstein",
+          "text": "Harry J. Epstein Company"
+        },
+        {
+          "href": "/work/fair-rent-nyc",
+          "text": "FairRentNYC / Commercial Rent Stabilization"
+        },
+        {
+          "href": "/work/callnyc",
+          "text": "CallNYC"
+        },
+        {
+          "href": "/work",
+          "text": "Cross-project operating pattern"
+        },
+        {
+          "href": "/work/harry-j-epstein",
+          "text": "Harry J. Epstein Company"
+        },
+        {
+          "href": "/work/callnyc",
+          "text": "CallNYC"
+        },
+        {
+          "href": "/work/wowlist",
+          "text": "WOWList"
+        },
+        {
+          "href": "/work/fair-rent-nyc",
+          "text": "FairRentNYC"
+        },
+        {
+          "href": "/work/fair-rent-nyc",
+          "text": "FairRentNYC"
+        },
+        {
+          "href": "/work/kc-town-hall",
+          "text": "KC Town Hall"
+        },
+        {
+          "href": "/work/fair-rent-nyc",
+          "text": "FairRentNYC"
+        },
+        {
+          "href": "/work/196-sunday-dinner",
+          "text": "196 / Sunday Dinner"
+        },
+        {
+          "href": "/lab/source-backed-team-memory",
+          "text": "Source-Backed Team Memory"
+        },
+        {
+          "href": "/work/fair-rent-nyc",
+          "text": "NYC Artist Coalition"
+        },
+        {
+          "href": "/work/fair-rent-nyc",
+          "text": "NYC Artist Coalition"
+        },
+        {
+          "href": "/work/callnyc",
+          "text": "CallNYC"
+        },
+        {
+          "href": "/work/wowlist",
+          "text": "WOWList"
+        },
+        {
+          "href": "/work/harry-j-epstein",
+          "text": "Harry J. Epstein Company"
+        },
+        {
+          "href": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+          "text": "Download resume PDF"
+        },
+        {
+          "href": "/resume",
+          "text": "View resume"
+        },
+        {
+          "href": "/work",
+          "text": "Work"
+        },
+        {
+          "href": "/work/technical-operations",
+          "text": "Technical Operations"
+        },
+        {
+          "href": "/resume",
+          "text": "Resume"
+        },
+        {
+          "href": "/contact",
+          "text": "Contact"
+        },
+        {
+          "href": "/colophon",
+          "text": "Colophon"
+        }
+      ],
+      "captureMethod": "rendered-browser"
+    },
+    {
+      "routeLabel": "about-from-site-navigation",
+      "url": "http://127.0.0.1:3000/about",
+      "title": "About - Jamie Burkart",
+      "h1": "About",
+      "visibleText": "Skip to content\nJamie Burkart\nWork\nTechnical Operations\nAbout\nResume\nContact\n\nPRACTICE AND APPROACH\n\nAbout\n\nI am Jamie Burkart, a technical project manager and implementation lead based in Brooklyn.\n\nMy work sits where the stakes are human and the operating structure is still forming: civic technology, small-business operations, public-facing tools, cultural infrastructure, coalition work, and knowledge systems.\n\nAcross projects, I tend to do the same kind of work: clarify emerging goals, translate between technical and nontechnical stakeholders, map workflows, build documentation, create usable interfaces, coordinate implementation, and leave behind handoffs people can use after the meeting or launch is over.\n\nI am currently focused on technical project management, product operations, implementation, business analysis, civic/govtech delivery, and source-backed knowledge systems.\n\nTHE THROUGH LINE\n\nSystems people can inhabit\n\nI initiated Open House, a ten-day UCSC gallery experiment in communal living and participatory art whose participants used communal decision-making and many-perspective documentation.[1]\n\nThe same question continues through WOWList, Sunday Dinner and 196, NYC Artist Coalition work, and Knowledge Wiki Graphs: how can a structure help people recognize their relationships, participate, remember what happened, and continue the work? Across that lineage, the practice is artistic, civic, technical, and social.\n\nThe practical sequence is recursive: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. Requirements, interfaces, and handoffs matter because people have to inhabit them.\n\nTHREE SYSTEMS LOOPS\n\nEach example follows the same movement from observed relationships to a working model, an interface used with people, and a documented way to learn, revise, and continue.\n\nHarry J. Epstein Company\n\nRelationships: customer language, product judgment, public voice, and internal operating habits.\n\nModel: product, content, marketing, ordering, and follow-up treated as one customer and team system rather than separate tasks.\n\nInterface and use: a maintained storefront joining product discovery, content, marketing, ordering, and customer follow-up, released and refined through real customer and team use.\n\nLearning and continuity: recurring operational questions and carefully scoped analytics guided incremental releases, reusable content patterns, and clearer workflows for the team.\n\nNYC Artist Coalition and FairRentNYC\n\nRelationships: lived experience in cultural spaces, recurring meetings, public sources, open questions, and city and state actors.\n\nModel: testimony, policy lineage, unresolved questions, decisions, and accountable actors held in one recoverable civic record.\n\nInterface and use: campaign sites, town halls, hearings, practical sessions, and public action pathways built and used with many collaborators.\n\nLearning and continuity: running minutes, source maps, question logs, and action trackers let collaborators recover context, review decisions, and carry the work forward.\n\nSunday Dinner and 196\n\nRelationships: hospitality, trust, artist support, shared space, recurring participants, and the rhythms of returning.\n\nModel: invitations, hosting, onboarding, access handoffs, documentation, and follow-up treated as one participation system.\n\nInterface and use: recurring gatherings and artist-residency workflows used with participants and resident artists over time.\n\nLearning and continuity: repeatable invitation, response, attendance, follow-up, and residency handoff patterns helped the practice continue while private participant records remained private.\n\nADDITIONAL CONTINUITIES\n\nHistorical systems and current research remain part of the method without being presented as current production deployments.\n\nWOWList\n\nRelationships: the language organizers already used for scenes, interests, places, and venues.\n\nInterface and use: followable keyword communities, event publishing, digests, and embeddable calendars for distributed organizers.\n\nLearning and continuity: organizer distribution needs became reusable publishing and low-cost deployment patterns rather than one central calendar.\n\nKnowledge Wiki Graphs\n\nI am developing a federated Knowledge Wiki Graph practice that keeps meaning, evidence, and source custody distinct, then composes audience-specific outputs through human review.[2][3]\n\nRelationships: semantic meaning, evidentiary support, source custody, contributors, open questions, corrections, and the audiences who need to trust the record.\n\nInterface and use: this portfolio, its checks, and its review reports form an early working method tested through iterative research and human review, not a completed client pilot.\n\nLearning and continuity: locally authoritative repositories, stable identities, citations, correction paths, evaluation receipts, and explicit human gates let another collaborator inspect what is known and safely continue the work.\n\nLimits of this comparison\n\nThese recurring steps are an analytical pattern, not evidence that different projects are structurally equivalent. Missing evidence and relationships remain missing; I do not invent them. The Knowledge Wiki Graph is an evolving research practice, not a finished platform, proof of client adoption, or peer-reviewed research; historical implementation evidence does not by itself establish present technical proficiency.\n\nI value public benefit, accessibility, source-backed memory, careful claims, collective credit, consent, privacy, repair, and documentation that helps future collaborators safely continue the work.\n\nSources and notes\n\nThese notes preserve what each source supports and where its limits remain. See something that needs correction? Contact Jamie.\n\nView 3 source notes\n\nNEXT CONVERSATION\n\nLooking for technical project management, product operations, implementation, or knowledge-systems support?\n\nEmail Jamie about roles, referrals, focused consulting work, or collaboration.\n\nView resume\nEmail Jamie\n\nJamie Burkart\n\nTechnical Project Manager - Product Operations & Implementation. Public-safe portfolio, civic notebook, and future living archive.\n\nWork\nTechnical Operations\nResume\nContact\nColophon",
+      "sameOriginLinks": [
+        {
+          "href": "#main",
+          "text": "Skip to content"
+        },
+        {
+          "href": "/",
+          "text": "JBJamie Burkart"
+        },
+        {
+          "href": "/work",
+          "text": "Work"
+        },
+        {
+          "href": "/work/technical-operations",
+          "text": "Technical Operations"
+        },
+        {
+          "href": "/about",
+          "text": "About"
+        },
+        {
+          "href": "/resume",
+          "text": "Resume"
+        },
+        {
+          "href": "/contact",
+          "text": "Contact"
+        },
+        {
+          "href": "/work",
+          "text": "Work"
+        },
+        {
+          "href": "/work/technical-operations",
+          "text": "Technical Operations"
+        },
+        {
+          "href": "/about",
+          "text": "About"
+        },
+        {
+          "href": "/resume",
+          "text": "Resume"
+        },
+        {
+          "href": "/contact",
+          "text": "Contact"
+        },
+        {
+          "href": "#cite-about-1",
+          "text": "[1]"
+        },
+        {
+          "href": "/work/wowlist",
+          "text": "WOWList"
+        },
+        {
+          "href": "/work/196-sunday-dinner",
+          "text": "Sunday Dinner and 196"
+        },
+        {
+          "href": "/work/fair-rent-nyc",
+          "text": "NYC Artist Coalition work"
+        },
+        {
+          "href": "/lab/source-backed-team-memory",
+          "text": "Knowledge Wiki Graphs"
+        },
+        {
+          "href": "/work/harry-j-epstein",
+          "text": "Harry J. Epstein Company"
+        },
+        {
+          "href": "/work/fair-rent-nyc",
+          "text": "NYC Artist Coalition and FairRentNYC"
+        },
+        {
+          "href": "/work/196-sunday-dinner",
+          "text": "Sunday Dinner and 196"
+        },
+        {
+          "href": "/work/wowlist",
+          "text": "WOWList"
+        },
+        {
+          "href": "/lab/source-backed-team-memory",
+          "text": "Knowledge Wiki Graphs"
+        },
+        {
+          "href": "#cite-about-2",
+          "text": "[2]"
+        },
+        {
+          "href": "#cite-about-3",
+          "text": "[3]"
+        },
+        {
+          "href": "/contact",
+          "text": "Contact Jamie"
+        },
+        {
+          "href": "#cite-ref-about-open-house-participatory-gallery-src-open-house-good-times-2006-06-28",
+          "text": "Return 1"
+        },
+        {
+          "href": "#cite-ref-about-knowledge-wiki-graph-method-src-knowledge-wiki-rfc-0005-2026",
+          "text": "Return 1"
+        },
+        {
+          "href": "#cite-ref-about-knowledge-wiki-graph-method-src-knowledge-wiki-rfc-0006-2026",
+          "text": "Return 1"
+        },
+        {
+          "href": "/resume",
+          "text": "View resume"
+        },
+        {
+          "href": "/work",
+          "text": "Work"
+        },
+        {
+          "href": "/work/technical-operations",
+          "text": "Technical Operations"
+        },
+        {
+          "href": "/resume",
+          "text": "Resume"
+        },
+        {
+          "href": "/contact",
+          "text": "Contact"
+        },
+        {
+          "href": "/colophon",
+          "text": "Colophon"
+        }
+      ],
+      "captureMethod": "rendered-browser"
+    }
+  ],
+  "browserErrors": [],
+  "publicOnly": true,
+  "visualInspection": {
+    "performed": true,
+    "startPageScreenshotSha256": "7aff456eb44a1477cda60c492ccc79f513da4d3faca9a856c98754db82fe5949",
+    "committedScreenshot": false
+  },
+  "resumeArtifact": {
+    "source": "served-public-pdf",
+    "route": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "sha256": "ce61d8379fddcae73abe0120b35f6b7edb45cdfd23734326882db042c229bcf7",
+    "text": "Jamie Burkart\n\nSenior Product Manager | Civic Technology, Product Operations & Implementation​\nBrooklyn, NY | (816) 728-8685 | jamie.burkart@gmail.com​\nPortfolio | LinkedIn | GitHub\n\nPROFILE\n\nSenior product and technical project manager with 14+ years shipping public-facing products, services, and\noperating systems across civic technology, community platforms, small business, and cultural advocacy.\nLeads from problem framing and participatory discovery through briefs, prioritization, implementation,\nlaunch, adoption, measurement, and retrospectives. Translates among residents, organizers, policy\nstakeholders, designers, engineers, operations teams, and senior decision-makers. Brings hands-on technical\nfluency with privacy-conscious, accessibility-aware delivery in legacy and resource-constrained\nenvironments.\nCORE SKILLS\n●​\n\n●​\n\n●​\n\n●​\n\nProduct lifecycle: Problem framing, discovery, public and user research, requirements, user stories,\nproduct briefs, roadmap sequencing, MVP and version-one scoping, prioritization, tradeoffs, rapid\nprototyping, UAT/QA, public launch, metrics, post-launch learning, and retrospectives.\nCross-functional delivery: Product ownership, facilitation, stakeholder alignment, designer and engineer\ncoordination, agency and policy translation, senior stakeholder briefings, rollout planning, risk and\ndependency tracking, adoption, and durable handoffs.\nResponsible public technology: Accessibility-aware implementation, privacy-conscious data practice,\npublic-safety review, source governance, evidence boundaries, and clear documentation of unknowns and\ndecisions.\nWeb systems architecture (current and historical experience): JavaScript/TypeScript, React/Next.js,\nEmber.js, Python/Django, SQL, PostgreSQL/PostGIS, Node.js, Git/GitHub, Docker/Dokku, QGIS, APIs,\nopen-data workflows, analytics, and low-cost cloud infrastructure. Historical implementation does not by\nitself establish present proficiency.\n\nEXPERIENCE\n\nTHICK ARTS LLC — Founder, Product & Technical Project Manager / Web Systems Lead\nNew York, NY / Remote | 2009–Present\n●​\n\n●​\n\n●​\n\nLead end-to-end web product, design, and engineering engagements, turning ambiguous stakeholder\nneeds into product direction, information architecture, technical scope, sequenced releases, testing,\nlaunch plans, adoption materials, maintenance workflows, and handoff documentation.\nLed e-commerce, analytics, content, marketing, and operations for Harry J. Epstein Company, contributing\nto 2x revenue growth while helping an 80+ year-old industrial business modernize without losing its\ntrusted voice.\nBuild maintainable publishing systems, campaign hubs, resource libraries, data workflows, and web\ninfrastructure; preserve product briefs, decisions, reusable patterns, and post-launch learning so teams\ncan continue the work.\n\nNYC Artist Coalition / FairRentNYC — Co-Founder, Civic Systems, Coalition Operations & Policy\nCommunications Lead\nNew York, NY | 2017–Present\n●​\n\n●​\n\n●​\n\nHelp turn stakeholder listening, public testimony, and coalition priorities into buildable plans, campaign\nwebsites, public forums, policy communications, calls to action, and sustained government-facing\nfollow-through.\nBuilt and stewarded 30+ pages of shared campaign memory for a 2026 Commercial Rent Stabilization\ncollaboration, connecting running minutes, decision records, action items, legal and policy questions,\nmedia assets, public-data framing, and city/state strategy lanes.\nImplement and maintain public-facing campaign systems; facilitate challenging meetings; brief and work\ndirectly with elected officials and staff; and represent the work in public testimony, presentations, and\npress while preserving collective credit and sensitive boundaries.\n\n\fWOWList.org — Co-Founder, Product & Community Systems\nNew York, NY / Remote | 2015–2020\n●​\n\n●​\n\n●​\n\nCo-founded, co-built, and operated with Richard Caceres a natural-language community-calendar and\ndiscovery platform for DIY arts and music organizers, replacing a complex event form with collaboratively\neditable text, followable keyword communities, weekly digests, profiles, embeds, and calendar connections.\nConnected participatory discovery with hands-on implementation, organizer onboarding, support,\nadoption, public communication, instrumentation, and low-cost production operations across a\ndistributed maintainer network.\nOperated across 35 city ecosystems, supporting local organizers who used WOW List to run community\ncalendars, websites, and email lists for their own scenes.\n\nCallNYC.org — Civic-Tech Builder & Product Translator\nNew York, NY | 2016\n●​\n\n●​\n\nBuilt CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon,\ntranslating constituent-services data into resident-facing issue pages and next-step guidance; covered in\nPolitico New York.\nTook the civic prototype from problem definition and information architecture through implementation\nand public release. The archived site is unofficial and not a current City service.\n\nKC Town Hall LLC — Co-Founder & Project Manager, Historic Restoration / Mixed-Use Development\nKansas City, MO | 2015–2024\n●​\n\n●​\n\n●​\n\nCo-led planning, public-benefit documentation, vendor coordination, and municipal compliance for\nadaptive reuse of an approximately 6,500 sq. ft. historic building into four commercial spaces and three\nhomes.\nHelped deliver Tired of Tires, a recurring free resident service connecting household eligibility, form and\nphone intake, scheduled field collection, City recycling coordination, volunteer participation, and public\nresult reporting; public records document Jamie's participation in pickup operations.\nCo-developed the successful CCED proposal and served as the City's named developer/presenter for a\n$490,539 public funding request, remained a documented developer point of contact through compliance\nprogress, and later transitioned the project to a mission-aligned organization.\n\nADDITIONAL LEADERSHIP\n\n196 Artists Residency / Sunday Dinner — Founder & Systems Steward | Brooklyn, NY | 2012–Present\nCreated repeatable invitation, onboarding, facilitation, documentation, and continuity systems across 300+\ngatherings and 20+ resident artists.\nEDUCATION & PROFESSIONAL DEVELOPMENT\n\nUniversity of California, Santa Cruz — B.A., Film & Digital Media, Honors\nAI Evals for Engineers & PMs — Shreya Shankar & Hamel Husain / Maven, 2026; application-centric evals,\nerror analysis, annotation, traces, retrieval quality, and human-in-the-loop evaluation.\nADDITIONAL INFORMATION\n\nValid New York State driver's license. Authorized to work in the United States; no sponsorship required."
+  }
+}

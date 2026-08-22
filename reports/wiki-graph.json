@@ -1,10 +1,23 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-14T11:32:41-04:00",
-  "sourceCommit": "747605e3c34a6426c027a1c85ff82c3a6275ac36",
-  "sourceFingerprint": "e4fc52c24bbf54e2f4cd03c7f545b8eb1d0af9c4a3ed28af19991b37897fcb60",
+  "generatedAt": "2026-08-21T19:20:31-04:00",
+  "sourceCommit": "36e3808ed5a36a543c534ddc7148d31d3e9ee5aa",
+  "sourceFingerprint": "62de5d9514e8938cca88e06f77cf8edda06d7a3f23b2adb1f8aeaf1bff64ac55",
   "rootId": "index.knowledge-wiki",
   "nodes": [
+    {
+      "id": "application.nyc-oti.senior-product-manager.782366",
+      "path": "docs/knowledge-bank/applications/nyc-oti-senior-product-manager-782366.md",
+      "title": "NYC OTI Senior Product Manager 782366 application milestone",
+      "kind": "application",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Jamie-authorized public-safe record of the August 14, 2026 application submission, its governed artifact lineage, retained privacy boundary, and next-stage learning loop.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-08-21"
+    },
     {
       "id": "application.nycac.civic-product-operations",
       "path": "docs/knowledge-bank/applications/nycac-civic-product-operations.md",
@@ -41,8 +54,8 @@
       "sensitivity": "low",
       "summary": "Public-safe record for a cropped outreach design stating the recurring free residential tire-pickup service model.",
       "aliases": [],
-      "lastReviewed": "2026-08-14",
-      "reviewBy": "2027-02-14"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "asset.graphic.kc-town-hall.walkshed.2019.001",
@@ -91,7 +104,7 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Public-safe record for a 2022 photograph of Jamie Burkart at the East River, made by Elana Gordon and used as the Layout C homepage hero.",
+      "summary": "Public-safe record for a 2022 photograph of Jamie Burkart at the East River, made by Elana Gordon and used as the Layout C homepage hero and jamieburk.art social preview.",
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-26"
@@ -130,10 +143,10 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Public-safe record for Paul Mossine's March 24, 2019 photograph of visible roof work during KC Town Hall field implementation.",
+      "summary": "Public-safe record for a March 24, 2019 KC Town Hall photograph of visible roof work during field implementation.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2027-02-13"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "asset.photo.kc-town-hall.stewardship-interior.001",
@@ -158,8 +171,8 @@
       "sensitivity": "low",
       "summary": "Public-safe record for the matched field frame showing the same curbside collection site after tire removal.",
       "aliases": [],
-      "lastReviewed": "2026-08-14",
-      "reviewBy": "2027-02-14"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "asset.photo.kc-town-hall.tired-of-tires-before.2022.001",
@@ -171,8 +184,21 @@
       "sensitivity": "low",
       "summary": "Public-safe record for one matched field frame showing tires at a curbside collection site before removal.",
       "aliases": [],
-      "lastReviewed": "2026-08-14",
-      "reviewBy": "2027-02-14"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
+    },
+    {
+      "id": "asset.photo.knowledge-wiki.collective-map.2017.001",
+      "path": "docs/knowledge-bank/assets/photographs/knowledge-wiki-collective-map-2017.md",
+      "title": "NYC Artist Coalition shared working map, 2017",
+      "kind": "asset",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public-safe record for a February 2017 NYC Artist Coalition photograph of handwritten contributions arranged as a shared working map.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2027-02-21"
     },
     {
       "id": "asset.photo.nyc-council.field-kit.2026.001",
@@ -208,10 +234,10 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Public-safe record for Paul Mossine's July 24, 2017 photograph of Jamie Burkart facilitating a coalition working session at Shoestring Press.",
+      "summary": "Public-safe record for a July 24, 2017 NYC Artist Coalition photograph of Jamie Burkart facilitating a coalition working session at Shoestring Press.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2027-02-13"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb",
@@ -2366,10 +2392,10 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Public-safe record for Paul Mossine's October 11, 2017 photograph of the collective Save NYC Spaces town hall room at Market Hotel.",
+      "summary": "Public-safe record for an October 11, 2017 NYC Artist Coalition photograph of the collective Save NYC Spaces town hall room at Market Hotel.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2027-02-13"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-tnyszfjgnt",
@@ -2550,8 +2576,8 @@
       "sensitivity": "low",
       "summary": "Public-safe record for a January 6, 2013 Sunday Dinner photograph showing a shared table, a hand-drawn map, and visible group interaction.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2027-02-13"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "capability.civic-cultural-technical-translation",
@@ -2671,6 +2697,19 @@
       "reviewBy": "2027-01-18"
     },
     {
+      "id": "correction.hje-thick-arts-client-chronology.2026",
+      "path": "docs/knowledge-bank/corrections/hje-thick-arts-client-chronology-2026.md",
+      "title": "Harry J. Epstein Company and Thick Arts LLC client chronology correction",
+      "kind": "correction",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Records the 2009-2015 HJE engagement, HJE's status as Thick Arts LLC's first client, and the LLC's independently verified July 6, 2012 formation date without backdating the legal entity.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2027-02-14"
+    },
+    {
       "id": "correction.photo.east-river-credit.2026-07",
       "path": "docs/knowledge-bank/corrections/east-river-credit-2026-07.md",
       "title": "Add Elana Gordon's credit to the East River homepage occurrence",
@@ -2682,6 +2721,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2027-01-26"
+    },
+    {
+      "id": "correction.photo.project-courtesy-credits.2026-08-20",
+      "path": "docs/knowledge-bank/corrections/project-photo-courtesy-credits-2026-08-20.md",
+      "title": "Correct project photograph display credits",
+      "kind": "correction",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Attribution correction removing an incorrect named photographer and replacing public archive-process notes with project courtesy credits.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "decision.callnyc.issue-pathways",
@@ -2788,6 +2840,19 @@
       "reviewBy": "2026-08-28"
     },
     {
+      "id": "decision.portfolio.cloudinary-selective-media-delivery.2026-08-15",
+      "path": "docs/knowledge-bank/decisions/cloudinary-selective-media-delivery-2026-08-15.md",
+      "title": "Selective Cloudinary delivery for governed portfolio derivatives",
+      "kind": "decision",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Bounded delivery decision to place two exact, already-public portfolio derivatives behind responsive Cloudinary transforms while retaining repository governance, same-origin fallbacks, and explicit exclusions.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-11-15"
+    },
+    {
       "id": "edition.launch.2026-08",
       "path": "docs/knowledge-bank/projections/photography/edition-launch-2026-08.md",
       "title": "August 2026 launch-candidate photographic edition",
@@ -2795,9 +2860,9 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Dated launch-candidate edition retaining the East River homepage hero and binding eight governed visual occurrences across the homepage, work index, and situated-work case studies.",
+      "summary": "Dated launch-candidate edition retaining the East River homepage hero and binding nine governed visual occurrences across the homepage, social preview, work index, and situated-work case studies.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
+      "lastReviewed": "2026-08-15",
       "reviewBy": "2027-02-13"
     },
     {
@@ -2977,7 +3042,7 @@
       "status": "governed-open",
       "visibility": "public-safe",
       "sensitivity": "moderate",
-      "summary": "Public-safe event record for the January 27, 2017 DCLA meeting that became a principal formation hinge for the continuing NYC Artist Coalition operating system.",
+      "summary": "Public-safe event record for the January 27, 2017 DCLA meeting that became a principal formation point for the continuing NYC Artist Coalition operating system.",
       "aliases": [
         "NYC DIY Spaces post Ghost Ship: Dept of Cultural Affairs Meeting"
       ],
@@ -3182,6 +3247,19 @@
       "reviewBy": "2026-11-03"
     },
     {
+      "id": "index.anonymized-team-knowledge-opportunity-case-study",
+      "path": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/README.md",
+      "title": "Anonymized Team-Knowledge Opportunity Case Study",
+      "kind": "index",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "A public-safe, multi-perspective account of a prospective team-knowledge engagement, preserving the situation and conversational texture while withholding participant and company identity.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-09-21"
+    },
+    {
       "id": "index.knowledge-wiki",
       "path": "docs/knowledge-bank/README.md",
       "title": "Knowledge Wiki",
@@ -3245,7 +3323,7 @@
       "sensitivity": "low",
       "summary": "Index of bounded decision reconstructions preserving actors, constraints, alternatives, artifacts, outcomes, unknowns, and projection holds.",
       "aliases": [],
-      "lastReviewed": "2026-07-28",
+      "lastReviewed": "2026-08-15",
       "reviewBy": "2026-10-19"
     },
     {
@@ -3271,8 +3349,8 @@
       "sensitivity": "low",
       "summary": "Task-oriented entry point for live opportunity research, historical role benchmarks, public-only hiring evaluation, and private-boundary rules.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2026-09-13"
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-27"
     },
     {
       "id": "index.knowledge-wiki.family-closure",
@@ -3362,8 +3440,8 @@
       "sensitivity": "low",
       "summary": "Public-safe orientation to the governed relationship among private photo sources, first-class Wiki records, exact portfolio occurrences, recollection, correction, and human publication gates.",
       "aliases": [],
-      "lastReviewed": "2026-08-14",
-      "reviewBy": "2027-01-26"
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "index.knowledge-wiki.photography-notebook",
@@ -3587,6 +3665,32 @@
       "reviewBy": "2026-10-28"
     },
     {
+      "id": "method.betanyc-opportunity-loop",
+      "path": "docs/knowledge-bank/methods/betanyc-opportunity-loop.md",
+      "title": "BetaNYC newsletter opportunity loop",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Cost-aware daily review of a curated civic-technology newsletter, with official-posting checks before provisional intake.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-09-20"
+    },
+    {
+      "id": "method.civic-match-opportunity-loop",
+      "path": "docs/knowledge-bank/methods/civic-match-opportunity-loop.md",
+      "title": "Civic Match opportunity loop",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Models Civic Match as an authenticated talent-network source with candidate discovery, invitations, tracking, events, and staff-assisted matching.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-09-20"
+    },
+    {
       "id": "method.collective-credit-protected-absence",
       "path": "docs/knowledge-bank/methods/collective-credit-and-protected-absence.md",
       "title": "Collective credit and protected absence",
@@ -3706,14 +3810,14 @@
     {
       "id": "method.source-backed-team-memory",
       "path": "docs/knowledge-bank/methods/source-backed-team-memory.md",
-      "title": "Source-Backed Team Memory",
+      "title": "Knowledge Wiki Graph / Source-Backed Team Memory",
       "kind": "method",
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "A governed workflow for turning scattered records into traceable decisions, bounded claims, open questions, and reusable handoffs.\n",
+      "summary": "A federated practice that separates semantic meaning, evidentiary support, and source custody before composing human-reviewed outputs.\n",
       "aliases": [],
-      "lastReviewed": "2026-08-10",
+      "lastReviewed": "2026-08-21",
       "reviewBy": "2027-01-18"
     },
     {
@@ -3847,6 +3951,32 @@
       "reviewBy": "2026-08-16"
     },
     {
+      "id": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "path": "docs/knowledge-bank/opportunities/oti-pit-senior-product-designer-782373.md",
+      "title": "NYC OTI - PIT Crew Senior Product Designer 782373",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Adjacent but plausible PIT Crew opportunity joining Jamie's shipped web systems, visual practice, participatory research, plain language, and resident-facing delivery.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "opportunity.nyc-oti.product-manager.784450",
+      "path": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+      "title": "NYC OTI - Product Manager 784450",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Strong-fit OTI product opportunity centered on resident-facing discovery, roadmaps, requirements, launch, outcomes, and cross-functional delivery.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
       "id": "opportunity.nyc-oti.senior-product-manager.782366",
       "path": "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
       "title": "NYC OTI - PIT Crew Senior Product Manager 782366",
@@ -3856,8 +3986,34 @@
       "sensitivity": "low",
       "summary": "Public-safe requirement, qualification, and leadership-context map for four live OTI PIT Crew Senior Product Manager positions.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2026-08-14"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "path": "docs/knowledge-bank/opportunities/oti-speed-operations-manager-789810.md",
+      "title": "NYC OTI - SPEED Operations Manager 789810",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exceptional-fit OTI operations role coordinating budget, procurement, people, dependencies, reporting, and product-team delivery for SPEED.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "path": "docs/knowledge-bank/opportunities/oti-speed-senior-product-manager-789610.md",
+      "title": "NYC OTI - SPEED Senior Product Manager 789610",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Strong-fit OTI role leading business cases, roadmaps, evidence, requirements, and digital-product delivery for the SPEED affordable-housing permitting program.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
     },
     {
       "id": "opportunity.nyc-oti.technical-operations-manager.782369",
@@ -3895,8 +4051,21 @@
       "sensitivity": "high",
       "summary": "Public-safe opportunity metadata for a contingent consulting lead without collaborator, company, pricing, or correspondence disclosure.",
       "aliases": [],
-      "lastReviewed": "2026-08-10",
+      "lastReviewed": "2026-08-21",
       "reviewBy": "2026-09-10"
+    },
+    {
+      "id": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "path": "docs/knowledge-bank/opportunities/uibk-studio3-postdoc-arch-15927.md",
+      "title": "University of Innsbruck ./studio3 - University Assistant (Postdoc), ARCH-15927",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "High-affinity experimental-architecture opportunity retained for adjacent-field discovery but excluded from active candidacy and public-resume targeting by mandatory Architecture degree screens.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-08-27"
     },
     {
       "id": "organization.nyc-artist-coalition",
@@ -3954,6 +4123,19 @@
       "reviewBy": "2026-11-13"
     },
     {
+      "id": "person.courtney-kishbaugh",
+      "path": "docs/knowledge-bank/people/courtney-kishbaugh.md",
+      "title": "Courtney Kishbaugh",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public candidate-program leadership context for Civic Match, used only as an explicitly fictionalized evaluation lens.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-09-20"
+    },
+    {
       "id": "person.diya-vij",
       "path": "docs/knowledge-bank/people/diya-vij.md",
       "title": "Diya Vij",
@@ -4008,6 +4190,32 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "person.josh-gee",
+      "path": "docs/knowledge-bank/people/josh-gee.md",
+      "title": "Josh Gee",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public strategic leadership context for Civic Match, used only as an explicitly fictionalized evaluation lens.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-09-20"
+    },
+    {
+      "id": "person.kathrin-aste",
+      "path": "docs/knowledge-bank/people/kathrin-aste.md",
+      "title": "Kathrin Aste",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public institutional context for the head of the University of Innsbruck's Institute of Experimental Architecture and ./studio3 faculty member.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-11-15"
+    },
+    {
       "id": "person.lisa-gelobter",
       "path": "docs/knowledge-bank/people/lisa-gelobter.md",
       "title": "Lisa Gelobter",
@@ -4038,13 +4246,26 @@
       "path": "docs/knowledge-bank/people/paul-mossine.md",
       "title": "Paul Mossine",
       "kind": "person",
+      "status": "superseded",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Superseded attribution record retained to document the correction of an inaccurate photographer credit.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
+    },
+    {
+      "id": "person.thomas-edlinger",
+      "path": "docs/knowledge-bank/people/thomas-edlinger.md",
+      "title": "Thomas Edlinger",
+      "kind": "person",
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Photographer credited in the retained metadata for the selected 2017 Shoestring Press and Market Hotel NYC Artist Coalition photographs.",
+      "summary": "Public institutional context for ./studio3 faculty in artistic discourse.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2027-02-13"
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-11-15"
     },
     {
       "id": "person.warren-sack",
@@ -4108,8 +4329,21 @@
       "sensitivity": "low",
       "summary": "Governed projection record for the public CallNYC case study.",
       "aliases": [],
-      "lastReviewed": "2026-07-18",
+      "lastReviewed": "2026-08-20",
       "reviewBy": "2026-10-18"
+    },
+    {
+      "id": "portfolio.work.kc-spaces-fund",
+      "path": "docs/knowledge-bank/projections/work-kc-spaces-fund.md",
+      "title": "KC Spaces Fund portfolio projection",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Governed projection record for the public KC Spaces Fund case study and homepage card.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-11-20"
     },
     {
       "id": "portfolio.work.technical-operations",
@@ -4137,8 +4371,8 @@
         "Call NYC",
         "CallNYC.org"
       ],
-      "lastReviewed": "2026-07-18",
-      "reviewBy": "2027-01-18"
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-09-14"
     },
     {
       "id": "project.fair-rent-nyc",
@@ -4161,11 +4395,11 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Long-running e-commerce, analytics, publishing, and operational modernization for a multigenerational Kansas City industrial supply business.",
+      "summary": "A 2009-2015 client engagement centered on e-commerce, analytics, publishing, and operational modernization; when Jamie formalized his practice as Thick Arts LLC in 2012, Harry J. Epstein Company became the LLC's first client.",
       "aliases": [
         "HJE"
       ],
-      "lastReviewed": "2026-07-19",
+      "lastReviewed": "2026-08-14",
       "reviewBy": "2026-10-19"
     },
     {
@@ -4176,9 +4410,9 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "moderate",
-      "summary": "Collaborator-led 2020 mutual-aid campaign for Kansas City cultural spaces, supported by Jamie through bounded digital infrastructure and cross-channel identity work.",
+      "summary": "Collaborator-led 2020 mutual-aid campaign for Kansas City cultural spaces, supported by Jamie through scoped digital infrastructure and cross-channel identity work.",
       "aliases": [],
-      "lastReviewed": "2026-07-19",
+      "lastReviewed": "2026-08-20",
       "reviewBy": "2026-10-19"
     },
     {
@@ -4191,8 +4425,8 @@
       "sensitivity": "moderate",
       "summary": "Adaptive-reuse, neighborhood fieldwork, resident-service, and public-benefit documentation project with municipal funding history kept distinct from disbursement and completion.",
       "aliases": [],
-      "lastReviewed": "2026-07-19",
-      "reviewBy": "2026-10-19"
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-09-14"
     },
     {
       "id": "project.kc-town-hall.tired-of-tires",
@@ -4329,8 +4563,8 @@
         "WOW List",
         "wowlist.org"
       ],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2026-11-13"
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-09-14"
     },
     {
       "id": "projection.photo.fair-rent-nyc.market-hotel-banner",
@@ -4342,8 +4576,8 @@
       "sensitivity": "low",
       "summary": "Exact public occurrence binding the Market Hotel banner derivative to the public-room panel in the Fair Rent NYC participation sequence.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2027-02-13"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "projection.photo.fair-rent-nyc.shoestring-facilitation",
@@ -4355,8 +4589,21 @@
       "sensitivity": "low",
       "summary": "Exact public occurrence binding the Shoestring Press derivative to the working-alignment panel in the Fair Rent NYC participation sequence.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2027-02-13"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
+    },
+    {
+      "id": "projection.photo.home.screen-room-shoestring",
+      "path": "docs/knowledge-bank/projections/photography/home-screen-room-shoestring.md",
+      "title": "Homepage screen-and-room Shoestring Press occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact public occurrence pairing the Shoestring Press facilitation derivative with the FairRentNYC public surface on the portfolio homepage.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2027-02-21"
     },
     {
       "id": "projection.photo.kc-town-hall.roof-work",
@@ -4368,8 +4615,8 @@
       "sensitivity": "low",
       "summary": "Exact public occurrence binding the KC Town Hall roof-work derivative to the work index and case study.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2027-02-13"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "projection.photo.kc-town-hall.tired-of-tires-after",
@@ -4381,8 +4628,8 @@
       "sensitivity": "low",
       "summary": "Exact public occurrence binding the after-collection field frame to the KC Town Hall resident-service sequence.",
       "aliases": [],
-      "lastReviewed": "2026-08-14",
-      "reviewBy": "2027-02-14"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "projection.photo.kc-town-hall.tired-of-tires-before",
@@ -4394,8 +4641,21 @@
       "sensitivity": "low",
       "summary": "Exact public occurrence binding the before-collection field frame to the KC Town Hall resident-service sequence.",
       "aliases": [],
-      "lastReviewed": "2026-08-14",
-      "reviewBy": "2027-02-14"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
+    },
+    {
+      "id": "projection.photo.knowledge-wiki.collective-map",
+      "path": "docs/knowledge-bank/projections/photography/knowledge-wiki-collective-map.md",
+      "title": "Knowledge Wiki Graph collective-map occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact public occurrence connecting a metadata-stripped NYC Artist Coalition working-map photograph to the Knowledge Wiki Graphs method page.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2027-02-21"
     },
     {
       "id": "projection.photo.layout-c.home.east-river",
@@ -4411,6 +4671,19 @@
       "reviewBy": "2027-01-26"
     },
     {
+      "id": "projection.photo.social-preview.east-river",
+      "path": "docs/knowledge-bank/projections/photography/social-preview-east-river.md",
+      "title": "East River social-preview occurrence",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Exact social-preview occurrence binding the selected full-bleed East River editorial composition to jamieburk.art Open Graph and Twitter cards, with creator attribution in alt metadata and the governed record and Jamie's dated production decision.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2027-02-15"
+    },
+    {
       "id": "projection.photo.sunday-dinner.shared-map",
       "path": "docs/knowledge-bank/projections/photography/sunday-dinner-shared-map.md",
       "title": "Sunday Dinner shared-map occurrence",
@@ -4420,8 +4693,8 @@
       "sensitivity": "low",
       "summary": "Exact public occurrence binding the Sunday Dinner shared-map derivative to the work index and case study.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2027-02-13"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "projection.visual.kc-town-hall.tired-of-tires-flyer",
@@ -4433,8 +4706,8 @@
       "sensitivity": "low",
       "summary": "Exact public occurrence binding the cropped service flyer to the KC Town Hall resident-service sequence.",
       "aliases": [],
-      "lastReviewed": "2026-08-14",
-      "reviewBy": "2027-02-14"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "research-inquiry.documented-canoe-bike-journeys",
@@ -4515,6 +4788,58 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "research-run.anonymized-team-knowledge-opportunity.jamie-perspective",
+      "path": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/02-jamie-perspective.md",
+      "title": "Jamie's Perspective",
+      "kind": "research-run",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Jamie's anonymized account of how a wide-ranging practice became legible as a focused team-knowledge proposal in response to a real organizational need.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-09-21"
+    },
+    {
+      "id": "research-run.anonymized-team-knowledge-opportunity.sponsor-perspective",
+      "path": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/01-prospective-sponsor-perspective.md",
+      "title": "The Prospective Sponsor's Perspective",
+      "kind": "research-run",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "An anonymized interpretation of why a product and engineering leader recognized a team-knowledge problem, why Jamie's practice seemed relevant, and what remained unresolved.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-09-21"
+    },
+    {
+      "id": "research-run.anonymized-team-knowledge-opportunity.voice-profile",
+      "path": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/03-prospective-sponsor-voice.md",
+      "title": "The Prospective Sponsor's Voice and Reasoning Profile",
+      "kind": "research-run",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "An anonymized analysis of the prospective sponsor's conversational prosody, reasoning habits, ethical concerns, and editorial pressure, with explicit safeguards against impersonation.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-09-21"
+    },
+    {
+      "id": "research.betanyc-opportunity-review.2026-08-20",
+      "path": "docs/knowledge-bank/research-runs/betanyc-opportunity-review-2026-08-20.md",
+      "title": "BetaNYC opportunity review, August 20, 2026",
+      "kind": "research-run",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Review of nineteen newsletter leads that admitted two strong matches to provisional intake after official-source checks.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-29"
+    },
+    {
       "id": "research.foundational-source-return.2026-07-19",
       "path": "docs/knowledge-bank/research-runs/foundational-source-return-2026-07-19.md",
       "title": "Foundational Wiki page source return, July 19, 2026",
@@ -4552,6 +4877,32 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "research.nyc-jobs.citywide-monitor.2026-08-20",
+      "path": "docs/knowledge-bank/research-runs/nyc-jobs-citywide-monitor-2026-08-20.md",
+      "title": "NYC Jobs citywide opportunity monitor, August 20, 2026",
+      "kind": "research-run",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Deterministic full-feed screen and person-specific ranking that admitted seven of 1,426 unique City job IDs to provisional review.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "research.nyc-oti-product-management-ranking.2026-08-20",
+      "path": "docs/knowledge-bank/research-runs/nyc-oti-product-management-ranking-2026-08-20.md",
+      "title": "NYC OTI product-management search ranking, August 20, 2026",
+      "kind": "research-run",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Transparent person-specific ranking of all eleven roles returned by the official OTI product-manager search, with the top five admitted as opportunities.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
     },
     {
       "id": "research.nycac.frontline-advocacy.2026-08-12",
@@ -4632,6 +4983,19 @@
       "reviewBy": "2026-11-13"
     },
     {
+      "id": "source.betanyc.civic-tech-newsletter",
+      "path": "docs/knowledge-bank/sources/betanyc-civic-tech-newsletter-2026-08-20.md",
+      "title": "BetaNYC weekly civic-technology newsletter and public archive",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Recurring editorial discovery source for civic-technology jobs, events, public-service developments, community tools, and employer leads.",
+      "aliases": [],
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2026-08-29"
+    },
+    {
       "id": "source.callnyc.source-repository",
       "path": "docs/knowledge-bank/sources/callnyc-source-repository.md",
       "title": "CallNYC public source repository",
@@ -4656,6 +5020,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-11",
       "reviewBy": "2026-11-11"
+    },
+    {
+      "id": "source.civic-match.candidate-network",
+      "path": "docs/knowledge-bank/sources/civic-match-candidate-network-2026-08-20.md",
+      "title": "Civic Match candidate network and authenticated profile flow",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Public program documentation plus a read-only field map of Jamie's existing five-step candidate profile, preserving account and submission privacy.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
     },
     {
       "id": "source.civichall.hackathon-announcement.2016",
@@ -4879,6 +5256,45 @@
       "reviewBy": "2026-08-16"
     },
     {
+      "id": "source.jobs.oti.executive-director-product-management.789563",
+      "path": "docs/knowledge-bank/sources/jobs-oti-executive-director-product-management-789563.md",
+      "title": "NYC Jobs - Executive Director, Product Management 789563",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official open OTI posting used only as role-level context for the Product Management department; it does not identify a person or prove reporting lines.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "source.jobs.oti.pit-senior-product-designer.782373",
+      "path": "docs/knowledge-bank/sources/jobs-oti-pit-senior-product-designer-782373.md",
+      "title": "NYC Jobs - PIT Crew Senior Product Designer 782373",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official OTI PIT Crew Senior Product Designer posting for end-to-end resident-facing research, interaction, content, and visual design.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "source.jobs.oti.product-manager.784450",
+      "path": "docs/knowledge-bank/sources/jobs-oti-product-manager-784450.md",
+      "title": "NYC Jobs - Product Manager 784450",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official OTI Product Manager posting for resident-facing digital-product delivery in the Product Development team.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
       "id": "source.jobs.oti.senior-product-manager.782366",
       "path": "docs/knowledge-bank/sources/jobs-oti-senior-product-manager-782366.md",
       "title": "NYC Jobs - Senior Product Manager 782366",
@@ -4886,10 +5302,36 @@
       "status": "maintained",
       "visibility": "public",
       "sensitivity": "low",
-      "summary": "Official City of New York posting for four OTI Public Interest Technology Crew Senior Product Manager positions, rechecked August 13, 2026.",
+      "summary": "Official City of New York posting for four OTI Public Interest Technology Crew Senior Product Manager positions, rechecked after an August 17 repost.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2026-08-14"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "source.jobs.oti.speed-operations-manager.789810",
+      "path": "docs/knowledge-bank/sources/jobs-oti-speed-operations-manager-789810.md",
+      "title": "NYC Jobs - SPEED Operations Manager 789810",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official OTI Operations Manager posting for budget, procurement, people, dependency, and delivery operations supporting the SPEED team.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "source.jobs.oti.speed-senior-product-manager.789610",
+      "path": "docs/knowledge-bank/sources/jobs-oti-speed-senior-product-manager-789610.md",
+      "title": "NYC Jobs - SPEED Senior Product Manager 789610",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official OTI Senior Product Manager posting for digital products intended to shorten new-construction permitting through the SPEED program.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
     },
     {
       "id": "source.jobs.oti.technical-operations.782369",
@@ -4916,6 +5358,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-18",
       "reviewBy": "2026-07-21"
+    },
+    {
+      "id": "source.jobs.uibk.studio3.postdoc.arch-15927",
+      "path": "docs/knowledge-bank/sources/jobs-uibk-studio3-postdoc-arch-15927.md",
+      "title": "Official posting - University of Innsbruck ./studio3 postdoc ARCH-15927",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official University of Innsbruck posting for a part-time, four-year University Assistant postdoc in Experimental Architecture's ./studio3 working group.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-08-27"
     },
     {
       "id": "source.kansas-city-star.raft.2007-11-15",
@@ -5113,6 +5568,32 @@
       "reviewBy": "2026-09-26"
     },
     {
+      "id": "source.nyc-jobs.oti-product-search.2026-08-20",
+      "path": "docs/knowledge-bank/sources/nyc-jobs-oti-product-search-2026-08-20.md",
+      "title": "NYC Jobs OTI product-management search, August 20, 2026",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official NYC Jobs search result and posting-level verification for eleven OTI product, operations, design, research, engineering, architecture, and cybersecurity roles.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "source.nyc-open-data.jobs.pda4-rgn4",
+      "path": "docs/knowledge-bank/sources/nyc-open-data-jobs-pda4-rgn4.md",
+      "title": "NYC Open Data — NYC Jobs dataset pda4-rgn4",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official DCAS citywide job-posting feed used as a freshness trigger and discovery source, with posting-level verification retained as a separate gate.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-08-27"
+    },
+    {
       "id": "source.nyc.diya-vij-appointment.2026",
       "path": "docs/knowledge-bank/sources/dcla-diya-vij-appointment-2026.md",
       "title": "Appointment of Diya Vij as Commissioner of Cultural Affairs",
@@ -5150,6 +5631,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-13",
       "reviewBy": "2026-11-13"
+    },
+    {
+      "id": "source.nyc.speed-report.2026-05-13",
+      "path": "docs/knowledge-bank/sources/nyc-speed-report-2026.md",
+      "title": "NYC SPEED report and release, May 2026",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official program context for the interagency Streamlining Procedures to Expedite Equitable Development task force and its affordable-housing delivery reforms.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-11-20"
     },
     {
       "id": "source.nycac.dcla-formation-source-return.2026-07",
@@ -5373,6 +5867,19 @@
       "reviewBy": "2027-01-28"
     },
     {
+      "id": "source.nys-dos.thick-arts-llc.formation.2012-07-06",
+      "path": "docs/knowledge-bank/sources/nys-dos-thick-arts-llc-formation-2012-07-06.md",
+      "title": "New York Department of State record for Thick Arts LLC",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official entity record identifying July 6, 2012 as Thick Arts LLC's initial New York Department of State filing date.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2027-02-14"
+    },
+    {
       "id": "source.nys.commercial-rent.active-bills.2025-2026",
       "path": "docs/knowledge-bank/sources/commercial-rent-public-support/active-state-bills-2025-2026.md",
       "title": "Active New York State commercial rent stabilization bills",
@@ -5403,13 +5910,13 @@
       "path": "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md",
       "title": "Elana Gordon East River portfolio permission summary",
       "kind": "source",
-      "status": "governed-open",
+      "status": "maintained",
       "visibility": "summary-only",
       "sensitivity": "moderate",
-      "summary": "Public-safe capsule recording creator confirmation, bounded portfolio permission, required credit, private evidence custody, and revocation handling.",
+      "summary": "Public-safe capsule recording creator confirmation, bounded portfolio permission, placement-specific credit choice, private evidence custody, and revocation handling.",
       "aliases": [],
-      "lastReviewed": "2026-07-26",
-      "reviewBy": "2027-01-26"
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2027-02-15"
     },
     {
       "id": "source.permission.jamie-portfolio-album.2026-08-13",
@@ -5421,8 +5928,8 @@
       "sensitivity": "moderate",
       "summary": "Public-safe capsule recording Jamie Burkart's destination-bound authorization to select and publish photographs from the designated Apple Photos portfolio album without exposing album identifiers or private metadata.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2027-02-13"
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14",
@@ -5458,10 +5965,10 @@
       "status": "maintained",
       "visibility": "summary-only",
       "sensitivity": "low",
-      "summary": "Public-safe metadata capsule for the two selected NYC Artist Coalition portfolio photographs, retaining only creator, date, general place, visible content, derivative identity, and archive custody.",
+      "summary": "Public-safe metadata capsule for the three selected NYC Artist Coalition portfolio photographs, retaining only creator state, project courtesy credit, date, general context, visible content, derivative identity, and archive custody.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2027-02-13"
+      "lastReviewed": "2026-08-21",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "source.photo-metadata.portfolio-cover-images.2026.public-safe",
@@ -5471,10 +5978,10 @@
       "status": "maintained",
       "visibility": "summary-only",
       "sensitivity": "moderate",
-      "summary": "Public-safe capsule retaining only the capture dates and creator-state information needed to govern the selected Sunday Dinner and KC Town Hall portfolio derivatives.",
+      "summary": "Public-safe capsule retaining only the capture dates, creator state, and project courtesy credits needed to govern the selected Sunday Dinner and KC Town Hall portfolio derivatives.",
       "aliases": [],
-      "lastReviewed": "2026-08-13",
-      "reviewBy": "2027-02-13"
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2027-02-20"
     },
     {
       "id": "source.politico.callnyc.2016-03-14",
@@ -5516,6 +6023,19 @@
       "reviewBy": "2026-10-03"
     },
     {
+      "id": "source.project-websites.live-audit.2026-08-14",
+      "path": "docs/knowledge-bank/sources/project-website-live-audit-2026-08-14.md",
+      "title": "Live project-website audit and restored-surface close reading",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Dated rendered-page and HTTP audit of the three restored sites and the broader tracked project-site inventory, with currentness and implementation credit kept separate.",
+      "aliases": [],
+      "lastReviewed": "2026-08-14",
+      "reviewBy": "2026-09-14"
+    },
+    {
       "id": "source.protected.current-workstream.2026-07-27",
       "path": "docs/knowledge-bank/sources/working/current-workstream-2026-07-27.md",
       "title": "Late-July 2026 current-workstream review",
@@ -5536,9 +6056,9 @@
       "status": "governed-open",
       "visibility": "summary-only",
       "sensitivity": "high",
-      "summary": "Metadata-only record for a bounded private review of an exploratory source-backed team-memory consulting lead.",
+      "summary": "Metadata-only record for a focused private review of an exploratory source-backed team-memory consulting lead.",
       "aliases": [],
-      "lastReviewed": "2026-08-10",
+      "lastReviewed": "2026-08-21",
       "reviewBy": "2026-11-10"
     },
     {
@@ -5701,6 +6221,32 @@
       "reviewBy": "2027-02-03"
     },
     {
+      "id": "source.uibk.postdoc-profile.2026",
+      "path": "docs/knowledge-bank/sources/uibk-postdoc-profile-2026.md",
+      "title": "University of Innsbruck scientific-staff profile - postdocs",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official University profile describing the general task, teaching, compensation, workplace, and fixed-term framework for postdoctoral staff.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2027-02-15"
+    },
+    {
+      "id": "source.uibk.studio3.leadership.2026",
+      "path": "docs/knowledge-bank/sources/uibk-studio3-leadership-2026.md",
+      "title": "Official University of Innsbruck and ./studio3 leadership context",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official public context for the Institute of Experimental Architecture and its ./studio3 artistic-design working group.",
+      "aliases": [],
+      "lastReviewed": "2026-08-15",
+      "reviewBy": "2026-11-15"
+    },
+    {
       "id": "source.vault.communication-history.metadata",
       "path": "docs/knowledge-bank/sources/protected-communication-vault-metadata.md",
       "title": "Protected communication history - public-safe metadata boundary",
@@ -5725,6 +6271,32 @@
       "aliases": [],
       "lastReviewed": "2026-08-03",
       "reviewBy": "2027-02-03"
+    },
+    {
+      "id": "source.work-for-america.courtney-kishbaugh-civic-match",
+      "path": "docs/knowledge-bank/sources/work-for-america-courtney-kishbaugh-civic-match.md",
+      "title": "Work for America team page — Courtney Kishbaugh",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official team listing identifying Courtney Kishbaugh as Director of Civic Match.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-09-20"
+    },
+    {
+      "id": "source.work-for-america.josh-gee-civic-match",
+      "path": "docs/knowledge-bank/sources/work-for-america-josh-gee-civic-match.md",
+      "title": "Work for America team page — Josh Gee",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official team listing identifying Josh Gee as Vice President, Civic Match.",
+      "aliases": [],
+      "lastReviewed": "2026-08-20",
+      "reviewBy": "2026-09-20"
     },
     {
       "id": "source.wowlist.knowledge-repository.2026",
@@ -5819,6 +6391,46 @@
     }
   ],
   "edges": [
+    {
+      "from": "application.nyc-oti.senior-product-manager.782366",
+      "type": "related_to",
+      "to": "application.wowlist.senior-product-manager-oti-782366",
+      "source": "frontmatter",
+      "href": "wowlist-senior-product-manager-oti-782366.md",
+      "context": "Evidence-backed WOW List role-fit argument used in the tailored application package."
+    },
+    {
+      "from": "application.nyc-oti.senior-product-manager.782366",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "application.nyc-oti.senior-product-manager.782366",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-senior-product-manager-782366.md",
+      "context": "Public role context; submission does not resolve the employer's civil-service or hiring review."
+    },
+    {
+      "from": "application.nyc-oti.senior-product-manager.782366",
+      "type": "related_to",
+      "to": "project.kc-town-hall.tired-of-tires",
+      "source": "frontmatter",
+      "href": "../projects/tired-of-tires-resident-service.md",
+      "context": "Bounded resident-service evidence included in the tailored resume."
+    },
+    {
+      "from": "application.nyc-oti.senior-product-manager.782366",
+      "type": "uses_source",
+      "to": "source.jobs.oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../sources/jobs-oti-senior-product-manager-782366.md",
+      "context": null
+    },
     {
       "from": "application.nycac.civic-product-operations",
       "type": "part_of",
@@ -5973,6 +6585,14 @@
     },
     {
       "from": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "type": "projected_to",
+      "to": "projection.photo.social-preview.east-river",
+      "source": "frontmatter",
+      "href": "../../projections/photography/social-preview-east-river.md",
+      "context": "Full-bleed social-preview occurrence with creator attribution in alt metadata and the governed record."
+    },
+    {
+      "from": "asset.photo.east-river-manhattan-bridge.2022.001",
       "type": "related_to",
       "to": "index.photo-set.east-river-canoe.2022",
       "source": "frontmatter",
@@ -6033,14 +6653,6 @@
       "to": "project.kc-town-hall",
       "source": "frontmatter",
       "href": "../../projects/kc-town-hall-orientation.md",
-      "context": null
-    },
-    {
-      "from": "asset.photo.kc-town-hall.roof-work.2019.001",
-      "type": "collaborated_with",
-      "to": "person.paul-mossine",
-      "source": "frontmatter",
-      "href": "../../people/paul-mossine.md",
       "context": null
     },
     {
@@ -6148,6 +6760,30 @@
       "context": null
     },
     {
+      "from": "asset.photo.knowledge-wiki.collective-map.2017.001",
+      "type": "projected_to",
+      "to": "projection.photo.knowledge-wiki.collective-map",
+      "source": "frontmatter",
+      "href": "../../projections/photography/knowledge-wiki-collective-map.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.knowledge-wiki.collective-map.2017.001",
+      "type": "uses_source",
+      "to": "source.permission.jamie-portfolio-album.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/jamie-portfolio-album-2026-08-13.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.knowledge-wiki.collective-map.2017.001",
+      "type": "uses_source",
+      "to": "source.photo-metadata.nycac-participation-images.2017.public-safe",
+      "source": "frontmatter",
+      "href": "../../sources/photo-metadata/nycac-participation-images-2017-public-safe.md",
+      "context": null
+    },
+    {
       "from": "asset.photo.nyc-council.field-kit.2026.001",
       "type": "related_to",
       "to": "capability.participatory-public-systems",
@@ -6197,18 +6833,18 @@
     },
     {
       "from": "asset.photo.nycac-shoestring-facilitation.2017.001",
-      "type": "collaborated_with",
-      "to": "person.paul-mossine",
+      "type": "projected_to",
+      "to": "projection.photo.fair-rent-nyc.shoestring-facilitation",
       "source": "frontmatter",
-      "href": "../../people/paul-mossine.md",
+      "href": "../../projections/photography/fair-rent-nyc-shoestring-facilitation.md",
       "context": null
     },
     {
       "from": "asset.photo.nycac-shoestring-facilitation.2017.001",
       "type": "projected_to",
-      "to": "projection.photo.fair-rent-nyc.shoestring-facilitation",
+      "to": "projection.photo.home.screen-room-shoestring",
       "source": "frontmatter",
-      "href": "../../projections/photography/fair-rent-nyc-shoestring-facilitation.md",
+      "href": "../../projections/photography/home-screen-room-shoestring.md",
       "context": null
     },
     {
@@ -10725,14 +11361,6 @@
     },
     {
       "from": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2",
-      "type": "collaborated_with",
-      "to": "person.paul-mossine",
-      "source": "frontmatter",
-      "href": "../../../people/paul-mossine.md",
-      "context": null
-    },
-    {
-      "from": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2",
       "type": "projected_to",
       "to": "projection.photo.fair-rent-nyc.market-hotel-banner",
       "source": "frontmatter",
@@ -11579,6 +12207,30 @@
       "context": null
     },
     {
+      "from": "correction.hje-thick-arts-client-chronology.2026",
+      "type": "related_to",
+      "to": "project.harry-j-epstein",
+      "source": "frontmatter",
+      "href": "../projects/harry-j-epstein.md",
+      "context": null
+    },
+    {
+      "from": "correction.hje-thick-arts-client-chronology.2026",
+      "type": "related_to",
+      "to": "timeline.jamie-practice.2004-present",
+      "source": "frontmatter",
+      "href": "../timelines/practice-2004-present.md",
+      "context": null
+    },
+    {
+      "from": "correction.hje-thick-arts-client-chronology.2026",
+      "type": "uses_source",
+      "to": "source.nys-dos.thick-arts-llc.formation.2012-07-06",
+      "source": "frontmatter",
+      "href": "../sources/nys-dos-thick-arts-llc-formation-2012-07-06.md",
+      "context": null
+    },
+    {
       "from": "correction.photo.east-river-credit.2026-07",
       "type": "related_to",
       "to": "asset.photo.east-river-manhattan-bridge.2022.001",
@@ -11600,6 +12252,62 @@
       "to": "source.permission.elana-gordon.east-river.2026-07",
       "source": "frontmatter",
       "href": "../sources/permissions/elana-gordon-east-river-portfolio-2026.md",
+      "context": null
+    },
+    {
+      "from": "correction.photo.project-courtesy-credits.2026-08-20",
+      "type": "related_to",
+      "to": "asset.photo.kc-town-hall.roof-work.2019.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/kc-town-hall-roof-work-2019.md",
+      "context": null
+    },
+    {
+      "from": "correction.photo.project-courtesy-credits.2026-08-20",
+      "type": "related_to",
+      "to": "asset.photo.kc-town-hall.tired-of-tires-after.2022.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/kc-town-hall-tired-of-tires-after-2022.md",
+      "context": null
+    },
+    {
+      "from": "correction.photo.project-courtesy-credits.2026-08-20",
+      "type": "related_to",
+      "to": "asset.photo.kc-town-hall.tired-of-tires-before.2022.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/kc-town-hall-tired-of-tires-before-2022.md",
+      "context": null
+    },
+    {
+      "from": "correction.photo.project-courtesy-credits.2026-08-20",
+      "type": "related_to",
+      "to": "asset.photo.nycac-shoestring-facilitation.2017.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/nycac-shoestring-facilitation-2017.md",
+      "context": null
+    },
+    {
+      "from": "correction.photo.project-courtesy-credits.2026-08-20",
+      "type": "related_to",
+      "to": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2",
+      "source": "frontmatter",
+      "href": "../assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md",
+      "context": null
+    },
+    {
+      "from": "correction.photo.project-courtesy-credits.2026-08-20",
+      "type": "related_to",
+      "to": "asset.photo.sunday-dinner.shared-map.2013.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/sunday-dinner-shared-map-2013.md",
+      "context": null
+    },
+    {
+      "from": "correction.photo.project-courtesy-credits.2026-08-20",
+      "type": "related_to",
+      "to": "person.paul-mossine",
+      "source": "frontmatter",
+      "href": "../people/paul-mossine.md",
       "context": null
     },
     {
@@ -11795,6 +12503,30 @@
       "context": null
     },
     {
+      "from": "decision.portfolio.cloudinary-selective-media-delivery.2026-08-15",
+      "type": "related_to",
+      "to": "edition.launch.2026-08",
+      "source": "frontmatter",
+      "href": "../projections/photography/edition-launch-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "decision.portfolio.cloudinary-selective-media-delivery.2026-08-15",
+      "type": "related_to",
+      "to": "projection.photo.fair-rent-nyc.shoestring-facilitation",
+      "source": "frontmatter",
+      "href": "../projections/photography/fair-rent-nyc-shoestring-facilitation.md",
+      "context": null
+    },
+    {
+      "from": "decision.portfolio.cloudinary-selective-media-delivery.2026-08-15",
+      "type": "uses_source",
+      "to": "source.let-nyc-dance.public-surface.2026-08-13",
+      "source": "frontmatter",
+      "href": "../sources/let-nyc-dance-public-surface-2026-08.md",
+      "context": null
+    },
+    {
       "from": "edition.launch.2026-08",
       "type": "related_to",
       "to": "decision.photo.layout-c.resume-no-photo.v1",
@@ -11848,6 +12580,14 @@
       "to": "projection.photo.layout-c.home.east-river",
       "source": "frontmatter",
       "href": "layout-c-home-east-river.md",
+      "context": null
+    },
+    {
+      "from": "edition.launch.2026-08",
+      "type": "related_to",
+      "to": "projection.photo.social-preview.east-river",
+      "source": "frontmatter",
+      "href": "social-preview-east-river.md",
       "context": null
     },
     {
@@ -12224,7 +12964,7 @@
       "to": "project.nyc-artist-coalition",
       "source": "frontmatter",
       "href": "../projects/nyc-artist-coalition-2017.md",
-      "context": "The meeting became a principal formation hinge for the coalition's shared identity and continuing work."
+      "context": "The meeting became a principal formation point for the coalition's shared identity and continuing work."
     },
     {
       "from": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
@@ -12504,6 +13244,46 @@
       "to": "source.weibel.in-terms-of-media.2024",
       "source": "frontmatter",
       "href": "../sources/weibel-in-terms-of-media-2024.md",
+      "context": null
+    },
+    {
+      "from": "index.anonymized-team-knowledge-opportunity-case-study",
+      "type": "related_to",
+      "to": "opportunity.protected.source-backed-memory-consulting.2026",
+      "source": "frontmatter",
+      "href": "../../opportunities/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "index.anonymized-team-knowledge-opportunity-case-study",
+      "type": "related_to",
+      "to": "research-run.anonymized-team-knowledge-opportunity.jamie-perspective",
+      "source": "frontmatter",
+      "href": "02-jamie-perspective.md",
+      "context": null
+    },
+    {
+      "from": "index.anonymized-team-knowledge-opportunity-case-study",
+      "type": "related_to",
+      "to": "research-run.anonymized-team-knowledge-opportunity.sponsor-perspective",
+      "source": "frontmatter",
+      "href": "01-prospective-sponsor-perspective.md",
+      "context": null
+    },
+    {
+      "from": "index.anonymized-team-knowledge-opportunity-case-study",
+      "type": "related_to",
+      "to": "research-run.anonymized-team-knowledge-opportunity.voice-profile",
+      "source": "frontmatter",
+      "href": "03-prospective-sponsor-voice.md",
+      "context": null
+    },
+    {
+      "from": "index.anonymized-team-knowledge-opportunity-case-study",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../../methods/source-backed-team-memory.md",
       "context": null
     },
     {
@@ -12803,6 +13583,14 @@
       "context": null
     },
     {
+      "from": "index.knowledge-wiki.decision-records",
+      "type": "related_to",
+      "to": "decision.portfolio.cloudinary-selective-media-delivery.2026-08-15",
+      "source": "frontmatter",
+      "href": "../decisions/cloudinary-selective-media-delivery-2026-08-15.md",
+      "context": null
+    },
+    {
       "from": "index.knowledge-wiki.decisions-deliverables-operational-outcomes",
       "type": "informed_by",
       "to": "source.knowledge-wiki.branch-d.2026-07-19",
@@ -12861,6 +13649,14 @@
     {
       "from": "index.knowledge-wiki.employment-context",
       "type": "related_to",
+      "to": "application.nyc-oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../applications/nyc-oti-senior-product-manager-782366.md",
+      "context": "Jamie-authorized date-level submission milestone with a pending outcome and protected confirmation evidence."
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
       "to": "evaluation.employment-context.coverage.2026-07-18",
       "source": "frontmatter",
       "href": "../evaluations/employment-context-coverage-2026-07-18.md",
@@ -12881,6 +13677,22 @@
       "source": "frontmatter",
       "href": "../evaluations/named-public-reader-acceptance-2026-08-13.md",
       "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "method.betanyc-opportunity-loop",
+      "source": "frontmatter",
+      "href": "../methods/betanyc-opportunity-loop.md",
+      "context": "Daily public-archive review of curated civic-technology leads, with official-posting checks and provisional-only machine intake."
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "method.civic-match-opportunity-loop",
+      "source": "frontmatter",
+      "href": "../methods/civic-match-opportunity-loop.md",
+      "context": "Authenticated candidate-profile discovery, invitations, matching support, and human-controlled external applications."
     },
     {
       "from": "index.knowledge-wiki.employment-context",
@@ -12933,9 +13745,41 @@
     {
       "from": "index.knowledge-wiki.employment-context",
       "type": "related_to",
+      "to": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-pit-senior-product-designer-782373.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-product-manager-784450.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
       "to": "opportunity.nyc-oti.senior-product-manager.782366",
       "source": "frontmatter",
       "href": "../opportunities/oti-senior-product-manager-782366.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-operations-manager-789810.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-senior-product-manager-789610.md",
       "context": null
     },
     {
@@ -12961,6 +13805,22 @@
       "source": "frontmatter",
       "href": "../opportunities/source-backed-team-memory.md",
       "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "source": "frontmatter",
+      "href": "../opportunities/uibk-studio3-postdoc-arch-15927.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "research.nyc-jobs.citywide-monitor.2026-08-20",
+      "source": "frontmatter",
+      "href": "../research-runs/nyc-jobs-citywide-monitor-2026-08-20.md",
+      "context": "Citywide official-feed freshness, deterministic eligibility, selective scoring, and provisional opportunity intake."
     },
     {
       "from": "index.knowledge-wiki.family-closure",
@@ -13525,6 +14385,14 @@
     {
       "from": "index.knowledge-wiki.photography",
       "type": "has_asset",
+      "to": "asset.photo.knowledge-wiki.collective-map.2017.001",
+      "source": "frontmatter",
+      "href": "../assets/photographs/knowledge-wiki-collective-map-2017.md",
+      "context": "Cleared shared-working-map occurrence for the Knowledge Wiki Graphs method page."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "has_asset",
       "to": "asset.photo.nyc-council.field-kit.2026.001",
       "source": "frontmatter",
       "href": "../assets/photographs/nyc-council-field-kit-2026.md",
@@ -13560,6 +14428,14 @@
       "to": "correction.photo.east-river-credit.2026-07",
       "source": "frontmatter",
       "href": "../corrections/east-river-credit-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "correction.photo.project-courtesy-credits.2026-08-20",
+      "source": "frontmatter",
+      "href": "../corrections/project-photo-courtesy-credits-2026-08-20.md",
       "context": null
     },
     {
@@ -13669,9 +14545,33 @@
     {
       "from": "index.knowledge-wiki.photography",
       "type": "related_to",
+      "to": "projection.photo.home.screen-room-shoestring",
+      "source": "frontmatter",
+      "href": "../projections/photography/home-screen-room-shoestring.md",
+      "context": "Exact homepage occurrence pairing the facilitation photograph with the FairRentNYC public surface."
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "projection.photo.knowledge-wiki.collective-map",
+      "source": "frontmatter",
+      "href": "../projections/photography/knowledge-wiki-collective-map.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
       "to": "projection.photo.layout-c.home.east-river",
       "source": "frontmatter",
       "href": "../projections/photography/layout-c-home-east-river.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.photography",
+      "type": "related_to",
+      "to": "projection.photo.social-preview.east-river",
+      "source": "frontmatter",
+      "href": "../projections/photography/social-preview-east-river.md",
       "context": null
     },
     {
@@ -14395,6 +15295,46 @@
       "context": null
     },
     {
+      "from": "method.betanyc-opportunity-loop",
+      "type": "related_to",
+      "to": "method.civic-match-opportunity-loop",
+      "source": "frontmatter",
+      "href": "civic-match-opportunity-loop.md",
+      "context": null
+    },
+    {
+      "from": "method.betanyc-opportunity-loop",
+      "type": "related_to",
+      "to": "source.nyc-open-data.jobs.pda4-rgn4",
+      "source": "frontmatter",
+      "href": "../sources/nyc-open-data-jobs-pda4-rgn4.md",
+      "context": null
+    },
+    {
+      "from": "method.betanyc-opportunity-loop",
+      "type": "uses_source",
+      "to": "source.betanyc.civic-tech-newsletter",
+      "source": "frontmatter",
+      "href": "../sources/betanyc-civic-tech-newsletter-2026-08-20.md",
+      "context": null
+    },
+    {
+      "from": "method.civic-match-opportunity-loop",
+      "type": "related_to",
+      "to": "source.nyc-open-data.jobs.pda4-rgn4",
+      "source": "frontmatter",
+      "href": "../sources/nyc-open-data-jobs-pda4-rgn4.md",
+      "context": null
+    },
+    {
+      "from": "method.civic-match-opportunity-loop",
+      "type": "uses_source",
+      "to": "source.civic-match.candidate-network",
+      "source": "frontmatter",
+      "href": "../sources/civic-match-candidate-network-2026-08-20.md",
+      "context": null
+    },
+    {
       "from": "method.collective-credit-protected-absence",
       "type": "related_to",
       "to": "method.source-backed-team-memory",
@@ -14800,6 +15740,14 @@
       "to": "capability.technical-operations",
       "source": "frontmatter",
       "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "method.source-backed-team-memory",
+      "type": "related_to",
+      "to": "index.anonymized-team-knowledge-opportunity-case-study",
+      "source": "frontmatter",
+      "href": "../case-studies/anonymized-team-knowledge-opportunity/README.md",
       "context": null
     },
     {
@@ -15269,6 +16217,116 @@
       "context": null
     },
     {
+      "from": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "type": "evidence:direct-support",
+      "to": "source.jobs.oti.pit-senior-product-designer.782373",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official role facts",
+        "responsibilities",
+        "preferred skills",
+        "civil-service title",
+        "salary",
+        "and deadline"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "type": "related_to",
+      "to": "person.lisa-gelobter",
+      "source": "frontmatter",
+      "href": "../people/lisa-gelobter.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "type": "related_to",
+      "to": "person.luke-farrell",
+      "source": "frontmatter",
+      "href": "../people/luke-farrell.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "type": "uses_source",
+      "to": "source.jobs.oti.pit-senior-product-designer.782373",
+      "source": "frontmatter",
+      "href": "../sources/jobs-oti-pit-senior-product-designer-782373.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "type": "uses_source",
+      "to": "source.nyc.pit-crew-launch.2026-07-13",
+      "source": "frontmatter",
+      "href": "../sources/nyc-pit-crew-launch-2026.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "type": "evidence:direct-support",
+      "to": "source.jobs.oti.product-manager.784450",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official role facts",
+        "responsibilities",
+        "preferred skills",
+        "civil-service title",
+        "salary",
+        "and deadline"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "type": "related_to",
+      "to": "person.lisa-gelobter",
+      "source": "frontmatter",
+      "href": "../people/lisa-gelobter.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "type": "uses_source",
+      "to": "source.jobs.oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../sources/jobs-oti-product-manager-784450.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "type": "uses_source",
+      "to": "source.nyc-jobs.oti-product-search.2026-08-20",
+      "source": "frontmatter",
+      "href": "../sources/nyc-jobs-oti-product-search-2026-08-20.md",
+      "context": null
+    },
+    {
       "from": "opportunity.nyc-oti.senior-product-manager.782366",
       "type": "evidence:context",
       "to": "source.nyc.pit-crew-launch.2026-07-13",
@@ -15295,8 +16353,16 @@
       "source": "evidence",
       "confidence": "high",
       "supports": [
-        "official role facts, requirements, civil-service screen, and deadline rechecked August 13, 2026"
+        "official role facts, requirements, civil-service screen, and current repost deadline rechecked August 20, 2026"
       ]
+    },
+    {
+      "from": "opportunity.nyc-oti.senior-product-manager.782366",
+      "type": "related_to",
+      "to": "application.nyc-oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../applications/nyc-oti-senior-product-manager-782366.md",
+      "context": "Jamie-authorized public-safe submission milestone; employer outcome remains pending."
     },
     {
       "from": "opportunity.nyc-oti.senior-product-manager.782366",
@@ -15368,6 +16434,138 @@
       "to": "source.public.luke-farrell-pit-crew.2026-07",
       "source": "frontmatter",
       "href": "../sources/luke-farrell-pit-crew-2026.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "type": "evidence:context",
+      "to": "source.nyc.speed-report.2026-05-13",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "program purpose and interagency delivery context"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "type": "evidence:direct-support",
+      "to": "source.jobs.oti.speed-operations-manager.789810",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official role facts",
+        "responsibilities",
+        "preferred skills",
+        "civil-service title",
+        "salary",
+        "and deadline"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "type": "related_to",
+      "to": "person.lisa-gelobter",
+      "source": "frontmatter",
+      "href": "../people/lisa-gelobter.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "type": "uses_source",
+      "to": "source.jobs.oti.speed-operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../sources/jobs-oti-speed-operations-manager-789810.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "type": "uses_source",
+      "to": "source.nyc.speed-report.2026-05-13",
+      "source": "frontmatter",
+      "href": "../sources/nyc-speed-report-2026.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "type": "evidence:context",
+      "to": "source.nyc.speed-report.2026-05-13",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official SPEED purpose",
+        "stakeholder scale",
+        "and program-level reform goals"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "type": "evidence:direct-support",
+      "to": "source.jobs.oti.speed-senior-product-manager.789610",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official role facts",
+        "responsibilities",
+        "preferred skills",
+        "civil-service screen",
+        "salary",
+        "and deadline"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "type": "related_to",
+      "to": "person.lisa-gelobter",
+      "source": "frontmatter",
+      "href": "../people/lisa-gelobter.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "type": "uses_source",
+      "to": "source.jobs.oti.speed-senior-product-manager.789610",
+      "source": "frontmatter",
+      "href": "../sources/jobs-oti-speed-senior-product-manager-789610.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "type": "uses_source",
+      "to": "source.nyc.speed-report.2026-05-13",
+      "source": "frontmatter",
+      "href": "../sources/nyc-speed-report-2026.md",
       "context": null
     },
     {
@@ -15526,6 +16724,14 @@
     },
     {
       "from": "opportunity.protected.source-backed-memory-consulting.2026",
+      "type": "related_to",
+      "to": "index.anonymized-team-knowledge-opportunity-case-study",
+      "source": "frontmatter",
+      "href": "../case-studies/anonymized-team-knowledge-opportunity/README.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.protected.source-backed-memory-consulting.2026",
       "type": "uses_method",
       "to": "method.source-backed-team-memory",
       "source": "frontmatter",
@@ -15538,6 +16744,84 @@
       "to": "source.protected.source-backed-memory-opportunity.2026",
       "source": "frontmatter",
       "href": "../sources/protected-source-backed-memory-opportunity.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "type": "evidence:context",
+      "to": "source.uibk.studio3.leadership.2026",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "current public unit and working-group leadership context"
+      ]
+    },
+    {
+      "from": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "type": "evidence:direct-support",
+      "to": "source.jobs.uibk.studio3.postdoc.arch-15927",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official dates, hours, duration, compensation, duties, requirements, and degree hard screens"
+      ]
+    },
+    {
+      "from": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "type": "evidence:direct-support",
+      "to": "source.uibk.postdoc-profile.2026",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "general postdoctoral work, teaching, workplace, and fixed-term framework"
+      ]
+    },
+    {
+      "from": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "type": "related_to",
+      "to": "event.studio3.ai-made-me-do-it.2024",
+      "source": "frontmatter",
+      "href": "../events/ai-made-me-do-it-symposium-2024.md",
+      "context": "Prior institutional and thematic context only; no employment relationship or endorsement."
+    },
+    {
+      "from": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "type": "related_to",
+      "to": "person.kathrin-aste",
+      "source": "frontmatter",
+      "href": "../people/kathrin-aste.md",
+      "context": "Nearest public unit-lead and working-group context; not a confirmed direct manager."
+    },
+    {
+      "from": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "type": "related_to",
+      "to": "person.thomas-edlinger",
+      "source": "frontmatter",
+      "href": "../people/thomas-edlinger.md",
+      "context": "Public ./studio3 artistic-discourse context; no supervisory inference."
+    },
+    {
+      "from": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "type": "uses_source",
+      "to": "source.jobs.uibk.studio3.postdoc.arch-15927",
+      "source": "frontmatter",
+      "href": "../sources/jobs-uibk-studio3-postdoc-arch-15927.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "type": "uses_source",
+      "to": "source.uibk.postdoc-profile.2026",
+      "source": "frontmatter",
+      "href": "../sources/uibk-postdoc-profile-2026.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "type": "uses_source",
+      "to": "source.uibk.studio3.leadership.2026",
+      "source": "frontmatter",
+      "href": "../sources/uibk-studio3-leadership-2026.md",
       "context": null
     },
     {
@@ -15666,6 +16950,22 @@
       "to": "source.codepath.leadership.2026",
       "source": "frontmatter",
       "href": "../sources/codepath-leadership-2026.md",
+      "context": null
+    },
+    {
+      "from": "person.courtney-kishbaugh",
+      "type": "related_to",
+      "to": "method.civic-match-opportunity-loop",
+      "source": "frontmatter",
+      "href": "../methods/civic-match-opportunity-loop.md",
+      "context": null
+    },
+    {
+      "from": "person.courtney-kishbaugh",
+      "type": "uses_source",
+      "to": "source.work-for-america.courtney-kishbaugh-civic-match",
+      "source": "frontmatter",
+      "href": "../sources/work-for-america-courtney-kishbaugh-civic-match.md",
       "context": null
     },
     {
@@ -15829,6 +17129,38 @@
       "context": null
     },
     {
+      "from": "person.josh-gee",
+      "type": "related_to",
+      "to": "method.civic-match-opportunity-loop",
+      "source": "frontmatter",
+      "href": "../methods/civic-match-opportunity-loop.md",
+      "context": null
+    },
+    {
+      "from": "person.josh-gee",
+      "type": "uses_source",
+      "to": "source.work-for-america.josh-gee-civic-match",
+      "source": "frontmatter",
+      "href": "../sources/work-for-america-josh-gee-civic-match.md",
+      "context": null
+    },
+    {
+      "from": "person.kathrin-aste",
+      "type": "related_to",
+      "to": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "source": "frontmatter",
+      "href": "../opportunities/uibk-studio3-postdoc-arch-15927.md",
+      "context": null
+    },
+    {
+      "from": "person.kathrin-aste",
+      "type": "uses_source",
+      "to": "source.uibk.studio3.leadership.2026",
+      "source": "frontmatter",
+      "href": "../sources/uibk-studio3-leadership-2026.md",
+      "context": null
+    },
+    {
       "from": "person.lisa-gelobter",
       "type": "related_to",
       "to": "opportunity.nyc-oti.senior-product-manager.782366",
@@ -15887,17 +17219,25 @@
     {
       "from": "person.paul-mossine",
       "type": "related_to",
-      "to": "asset.photo.nycac-shoestring-facilitation.2017.001",
+      "to": "correction.photo.project-courtesy-credits.2026-08-20",
       "source": "frontmatter",
-      "href": "../assets/photographs/nycac-shoestring-facilitation-2017.md",
+      "href": "../corrections/project-photo-courtesy-credits-2026-08-20.md",
       "context": null
     },
     {
-      "from": "person.paul-mossine",
+      "from": "person.thomas-edlinger",
       "type": "related_to",
-      "to": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2",
+      "to": "opportunity.uibk.studio3.postdoc.arch-15927",
       "source": "frontmatter",
-      "href": "../assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md",
+      "href": "../opportunities/uibk-studio3-postdoc-arch-15927.md",
+      "context": null
+    },
+    {
+      "from": "person.thomas-edlinger",
+      "type": "uses_source",
+      "to": "source.uibk.studio3.leadership.2026",
+      "source": "frontmatter",
+      "href": "../sources/uibk-studio3-leadership-2026.md",
       "context": null
     },
     {
@@ -16045,6 +17385,14 @@
       "context": null
     },
     {
+      "from": "portfolio.work.kc-spaces-fund",
+      "type": "related_to",
+      "to": "project.kc-spaces-fund",
+      "source": "frontmatter",
+      "href": "../projects/kc-spaces-fund-orientation.md",
+      "context": null
+    },
+    {
       "from": "portfolio.work.technical-operations",
       "type": "related_to",
       "to": "capability.technical-operations",
@@ -16149,6 +17497,14 @@
       "context": null
     },
     {
+      "from": "project.callnyc",
+      "type": "uses_source",
+      "to": "source.project-websites.live-audit.2026-08-14",
+      "source": "frontmatter",
+      "href": "../sources/project-website-live-audit-2026-08-14.md",
+      "context": "Rechecks the restored archive, sampled routes, accessibility debt, dependency decay, and current-service boundary."
+    },
+    {
       "from": "project.fair-rent-nyc",
       "type": "informed_by",
       "to": "research.nycac.frontline-advocacy.2026-08-12",
@@ -16229,6 +17585,22 @@
       "context": null
     },
     {
+      "from": "project.harry-j-epstein",
+      "type": "uses_source",
+      "to": "source.nys-dos.thick-arts-llc.formation.2012-07-06",
+      "source": "frontmatter",
+      "href": "../sources/nys-dos-thick-arts-llc-formation-2012-07-06.md",
+      "context": null
+    },
+    {
+      "from": "project.kc-spaces-fund",
+      "type": "projected_to",
+      "to": "portfolio.work.kc-spaces-fund",
+      "source": "frontmatter",
+      "href": "../projections/work-kc-spaces-fund.md",
+      "context": null
+    },
+    {
       "from": "project.kc-spaces-fund",
       "type": "related_to",
       "to": "person.jamie-burkart",
@@ -16283,6 +17655,14 @@
       "source": "frontmatter",
       "href": "../capabilities/participatory-public-systems.md",
       "context": null
+    },
+    {
+      "from": "project.kc-town-hall",
+      "type": "uses_source",
+      "to": "source.project-websites.live-audit.2026-08-14",
+      "source": "frontmatter",
+      "href": "../sources/project-website-live-audit-2026-08-14.md",
+      "context": "Records the restored historical public surface, resident-service pathways, technical observations, and currentness boundary."
     },
     {
       "from": "project.kc-town-hall.tired-of-tires",
@@ -16623,6 +18003,14 @@
     {
       "from": "project.wowlist",
       "type": "uses_source",
+      "to": "source.project-websites.live-audit.2026-08-14",
+      "source": "frontmatter",
+      "href": "../sources/project-website-live-audit-2026-08-14.md",
+      "context": "Rechecks the restored public surface, its shared provenance, noindex state, consent language, and launch observations."
+    },
+    {
+      "from": "project.wowlist",
+      "type": "uses_source",
       "to": "source.wowlist.knowledge-repository.2026",
       "source": "frontmatter",
       "href": "../sources/wowlist-knowledge-repository-2026.md",
@@ -16701,7 +18089,7 @@
       "context": null
     },
     {
-      "from": "projection.photo.kc-town-hall.roof-work",
+      "from": "projection.photo.home.screen-room-shoestring",
       "type": "related_to",
       "to": "edition.launch.2026-08",
       "source": "frontmatter",
@@ -16709,11 +18097,35 @@
       "context": null
     },
     {
+      "from": "projection.photo.home.screen-room-shoestring",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.home.screen-room-shoestring",
+      "type": "uses_source",
+      "to": "asset.photo.nycac-shoestring-facilitation.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/nycac-shoestring-facilitation-2017.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.home.screen-room-shoestring",
+      "type": "uses_source",
+      "to": "source.permission.jamie-portfolio-album.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/jamie-portfolio-album-2026-08-13.md",
+      "context": null
+    },
+    {
       "from": "projection.photo.kc-town-hall.roof-work",
       "type": "related_to",
-      "to": "person.paul-mossine",
+      "to": "edition.launch.2026-08",
       "source": "frontmatter",
-      "href": "../../people/paul-mossine.md",
+      "href": "edition-launch-2026-08.md",
       "context": null
     },
     {
@@ -16781,6 +18193,30 @@
       "context": null
     },
     {
+      "from": "projection.photo.knowledge-wiki.collective-map",
+      "type": "related_to",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.knowledge-wiki.collective-map",
+      "type": "uses_source",
+      "to": "asset.photo.knowledge-wiki.collective-map.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/knowledge-wiki-collective-map-2017.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.knowledge-wiki.collective-map",
+      "type": "uses_source",
+      "to": "source.permission.jamie-portfolio-album.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/jamie-portfolio-album-2026-08-13.md",
+      "context": null
+    },
+    {
       "from": "projection.photo.layout-c.home.east-river",
       "type": "related_to",
       "to": "edition.layout-c.2026-07",
@@ -16810,6 +18246,38 @@
       "to": "source.permission.elana-gordon.east-river.2026-07",
       "source": "frontmatter",
       "href": "../../sources/permissions/elana-gordon-east-river-portfolio-2026.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.social-preview.east-river",
+      "type": "related_to",
+      "to": "edition.launch.2026-08",
+      "source": "frontmatter",
+      "href": "edition-launch-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.social-preview.east-river",
+      "type": "uses_source",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/east-river-manhattan-bridge-2022.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.social-preview.east-river",
+      "type": "uses_source",
+      "to": "source.permission.elana-gordon.east-river.2026-07",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/elana-gordon-east-river-portfolio-2026.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.social-preview.east-river",
+      "type": "uses_source",
+      "to": "source.permission.jamie-portfolio-album.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/jamie-portfolio-album-2026-08-13.md",
       "context": null
     },
     {
@@ -17034,6 +18502,94 @@
       "to": "source.ucsc.narrative-evaluations.2004-2006",
       "source": "frontmatter",
       "href": "../sources/ucsc-narrative-evaluations-2004-2006.md",
+      "context": null
+    },
+    {
+      "from": "research-run.anonymized-team-knowledge-opportunity.jamie-perspective",
+      "type": "related_to",
+      "to": "index.anonymized-team-knowledge-opportunity-case-study",
+      "source": "frontmatter",
+      "href": "README.md",
+      "context": null
+    },
+    {
+      "from": "research-run.anonymized-team-knowledge-opportunity.jamie-perspective",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "research-run.anonymized-team-knowledge-opportunity.jamie-perspective",
+      "type": "uses_source",
+      "to": "source.protected.source-backed-memory-opportunity.2026",
+      "source": "frontmatter",
+      "href": "../../sources/protected-source-backed-memory-opportunity.md",
+      "context": null
+    },
+    {
+      "from": "research-run.anonymized-team-knowledge-opportunity.sponsor-perspective",
+      "type": "related_to",
+      "to": "index.anonymized-team-knowledge-opportunity-case-study",
+      "source": "frontmatter",
+      "href": "README.md",
+      "context": null
+    },
+    {
+      "from": "research-run.anonymized-team-knowledge-opportunity.sponsor-perspective",
+      "type": "uses_method",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "research-run.anonymized-team-knowledge-opportunity.sponsor-perspective",
+      "type": "uses_source",
+      "to": "source.protected.source-backed-memory-opportunity.2026",
+      "source": "frontmatter",
+      "href": "../../sources/protected-source-backed-memory-opportunity.md",
+      "context": null
+    },
+    {
+      "from": "research-run.anonymized-team-knowledge-opportunity.voice-profile",
+      "type": "related_to",
+      "to": "index.anonymized-team-knowledge-opportunity-case-study",
+      "source": "frontmatter",
+      "href": "README.md",
+      "context": null
+    },
+    {
+      "from": "research-run.anonymized-team-knowledge-opportunity.voice-profile",
+      "type": "related_to",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
+      "from": "research-run.anonymized-team-knowledge-opportunity.voice-profile",
+      "type": "uses_source",
+      "to": "source.protected.source-backed-memory-opportunity.2026",
+      "source": "frontmatter",
+      "href": "../../sources/protected-source-backed-memory-opportunity.md",
+      "context": null
+    },
+    {
+      "from": "research.betanyc-opportunity-review.2026-08-20",
+      "type": "uses_method",
+      "to": "method.betanyc-opportunity-loop",
+      "source": "frontmatter",
+      "href": "../methods/betanyc-opportunity-loop.md",
+      "context": null
+    },
+    {
+      "from": "research.betanyc-opportunity-review.2026-08-20",
+      "type": "uses_source",
+      "to": "source.betanyc.civic-tech-newsletter",
+      "source": "frontmatter",
+      "href": "../sources/betanyc-civic-tech-newsletter-2026-08-20.md",
       "context": null
     },
     {
@@ -17293,6 +18849,78 @@
       "context": null
     },
     {
+      "from": "research.nyc-jobs.citywide-monitor.2026-08-20",
+      "type": "related_to",
+      "to": "research.nyc-oti-product-management-ranking.2026-08-20",
+      "source": "frontmatter",
+      "href": "nyc-oti-product-management-ranking-2026-08-20.md",
+      "context": null
+    },
+    {
+      "from": "research.nyc-jobs.citywide-monitor.2026-08-20",
+      "type": "uses_source",
+      "to": "source.nyc-open-data.jobs.pda4-rgn4",
+      "source": "frontmatter",
+      "href": "../sources/nyc-open-data-jobs-pda4-rgn4.md",
+      "context": null
+    },
+    {
+      "from": "research.nyc-oti-product-management-ranking.2026-08-20",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-pit-senior-product-designer-782373.md",
+      "context": null
+    },
+    {
+      "from": "research.nyc-oti-product-management-ranking.2026-08-20",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-product-manager-784450.md",
+      "context": null
+    },
+    {
+      "from": "research.nyc-oti-product-management-ranking.2026-08-20",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-senior-product-manager-782366.md",
+      "context": null
+    },
+    {
+      "from": "research.nyc-oti-product-management-ranking.2026-08-20",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-operations-manager-789810.md",
+      "context": null
+    },
+    {
+      "from": "research.nyc-oti-product-management-ranking.2026-08-20",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-senior-product-manager-789610.md",
+      "context": null
+    },
+    {
+      "from": "research.nyc-oti-product-management-ranking.2026-08-20",
+      "type": "uses_source",
+      "to": "source.nyc-jobs.oti-product-search.2026-08-20",
+      "source": "frontmatter",
+      "href": "../sources/nyc-jobs-oti-product-search-2026-08-20.md",
+      "context": null
+    },
+    {
+      "from": "research.nyc-oti-product-management-ranking.2026-08-20",
+      "type": "uses_source",
+      "to": "source.nyc.speed-report.2026-05-13",
+      "source": "frontmatter",
+      "href": "../sources/nyc-speed-report-2026.md",
+      "context": null
+    },
+    {
       "from": "research.nycac.frontline-advocacy.2026-08-12",
       "type": "related_to",
       "to": "claim.nycac.frontline-advocacy.2026-08",
@@ -17517,6 +19145,22 @@
       "context": "Official current role identity."
     },
     {
+      "from": "source.betanyc.civic-tech-newsletter",
+      "type": "related_to",
+      "to": "method.betanyc-opportunity-loop",
+      "source": "frontmatter",
+      "href": "../methods/betanyc-opportunity-loop.md",
+      "context": null
+    },
+    {
+      "from": "source.betanyc.civic-tech-newsletter",
+      "type": "related_to",
+      "to": "research.betanyc-opportunity-review.2026-08-20",
+      "source": "frontmatter",
+      "href": "../research-runs/betanyc-opportunity-review-2026-08-20.md",
+      "context": null
+    },
+    {
       "from": "source.callnyc.source-repository",
       "type": "documents",
       "to": "project.callnyc",
@@ -17546,6 +19190,30 @@
       "to": "method.recomposable-civic-cultural-systems",
       "source": "frontmatter",
       "href": "../methods/recomposable-civic-cultural-systems.md",
+      "context": null
+    },
+    {
+      "from": "source.civic-match.candidate-network",
+      "type": "related_to",
+      "to": "method.civic-match-opportunity-loop",
+      "source": "frontmatter",
+      "href": "../methods/civic-match-opportunity-loop.md",
+      "context": null
+    },
+    {
+      "from": "source.civic-match.candidate-network",
+      "type": "related_to",
+      "to": "person.courtney-kishbaugh",
+      "source": "frontmatter",
+      "href": "../people/courtney-kishbaugh.md",
+      "context": null
+    },
+    {
+      "from": "source.civic-match.candidate-network",
+      "type": "related_to",
+      "to": "person.josh-gee",
+      "source": "frontmatter",
+      "href": "../people/josh-gee.md",
       "context": null
     },
     {
@@ -17741,6 +19409,46 @@
       "context": null
     },
     {
+      "from": "source.jobs.oti.executive-director-product-management.789563",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-product-manager-784450.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.oti.executive-director-product-management.789563",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-operations-manager-789810.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.oti.executive-director-product-management.789563",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-senior-product-manager-789610.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.oti.pit-senior-product-designer.782373",
+      "type": "supports",
+      "to": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-pit-senior-product-designer-782373.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.oti.product-manager.784450",
+      "type": "supports",
+      "to": "opportunity.nyc-oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-product-manager-784450.md",
+      "context": null
+    },
+    {
       "from": "source.jobs.oti.senior-product-manager.782366",
       "type": "related_to",
       "to": "application.wowlist.senior-product-manager-oti-782366",
@@ -17757,6 +19465,22 @@
       "context": null
     },
     {
+      "from": "source.jobs.oti.speed-operations-manager.789810",
+      "type": "supports",
+      "to": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-operations-manager-789810.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.oti.speed-senior-product-manager.789610",
+      "type": "supports",
+      "to": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-senior-product-manager-789610.md",
+      "context": null
+    },
+    {
       "from": "source.jobs.oti.technical-operations.782369",
       "type": "supports",
       "to": "opportunity.nyc-oti.technical-operations-manager.782369",
@@ -17770,6 +19494,22 @@
       "to": "opportunity.permitflow.product-operations.8a6e6066",
       "source": "frontmatter",
       "href": "../opportunities/permitflow-product-operations.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.uibk.studio3.postdoc.arch-15927",
+      "type": "related_to",
+      "to": "source.uibk.postdoc-profile.2026",
+      "source": "frontmatter",
+      "href": "uibk-postdoc-profile-2026.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.uibk.studio3.postdoc.arch-15927",
+      "type": "supports",
+      "to": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "source": "frontmatter",
+      "href": "../opportunities/uibk-studio3-postdoc-arch-15927.md",
       "context": null
     },
     {
@@ -17965,6 +19705,62 @@
       "context": null
     },
     {
+      "from": "source.nyc-jobs.oti-product-search.2026-08-20",
+      "type": "related_to",
+      "to": "research.nyc-oti-product-management-ranking.2026-08-20",
+      "source": "frontmatter",
+      "href": "../research-runs/nyc-oti-product-management-ranking-2026-08-20.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc-jobs.oti-product-search.2026-08-20",
+      "type": "supports",
+      "to": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-pit-senior-product-designer-782373.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc-jobs.oti-product-search.2026-08-20",
+      "type": "supports",
+      "to": "opportunity.nyc-oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-product-manager-784450.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc-jobs.oti-product-search.2026-08-20",
+      "type": "supports",
+      "to": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-operations-manager-789810.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc-jobs.oti-product-search.2026-08-20",
+      "type": "supports",
+      "to": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-senior-product-manager-789610.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc-open-data.jobs.pda4-rgn4",
+      "type": "related_to",
+      "to": "research.nyc-jobs.citywide-monitor.2026-08-20",
+      "source": "frontmatter",
+      "href": "../research-runs/nyc-jobs-citywide-monitor-2026-08-20.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc-open-data.jobs.pda4-rgn4",
+      "type": "related_to",
+      "to": "source.nyc-jobs.oti-product-search.2026-08-20",
+      "source": "frontmatter",
+      "href": "nyc-jobs-oti-product-search-2026-08-20.md",
+      "context": null
+    },
+    {
       "from": "source.nyc.diya-vij-appointment.2026",
       "type": "related_to",
       "to": "person.diya-vij",
@@ -18010,6 +19806,22 @@
       "to": "person.luke-farrell",
       "source": "frontmatter",
       "href": "../people/luke-farrell.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.speed-report.2026-05-13",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-operations-manager-789810.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.speed-report.2026-05-13",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-senior-product-manager-789610.md",
       "context": null
     },
     {
@@ -18181,6 +19993,14 @@
       "context": null
     },
     {
+      "from": "source.nys-dos.thick-arts-llc.formation.2012-07-06",
+      "type": "documents",
+      "to": "project.harry-j-epstein",
+      "source": "frontmatter",
+      "href": "../projects/harry-j-epstein.md",
+      "context": null
+    },
+    {
       "from": "source.nys.commercial-rent.active-bills.2025-2026",
       "type": "related_to",
       "to": "index.knowledge-wiki.commercial-rent-public-support",
@@ -18223,9 +20043,25 @@
     {
       "from": "source.permission.jamie-portfolio-album.2026-08-13",
       "type": "related_to",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/east-river-manhattan-bridge-2022.md",
+      "context": null
+    },
+    {
+      "from": "source.permission.jamie-portfolio-album.2026-08-13",
+      "type": "related_to",
       "to": "asset.photo.kc-town-hall.roof-work.2019.001",
       "source": "frontmatter",
       "href": "../../assets/photographs/kc-town-hall-roof-work-2019.md",
+      "context": null
+    },
+    {
+      "from": "source.permission.jamie-portfolio-album.2026-08-13",
+      "type": "related_to",
+      "to": "asset.photo.knowledge-wiki.collective-map.2017.001",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/knowledge-wiki-collective-map-2017.md",
       "context": null
     },
     {
@@ -18250,14 +20086,6 @@
       "to": "asset.photo.sunday-dinner.shared-map.2013.001",
       "source": "frontmatter",
       "href": "../../assets/photographs/sunday-dinner-shared-map-2013.md",
-      "context": null
-    },
-    {
-      "from": "source.permission.jamie-portfolio-album.2026-08-13",
-      "type": "related_to",
-      "to": "person.paul-mossine",
-      "source": "frontmatter",
-      "href": "../../people/paul-mossine.md",
       "context": null
     },
     {
@@ -18290,14 +20118,6 @@
       "to": "asset.photo.east-river-manhattan-bridge.2022.001",
       "source": "frontmatter",
       "href": "../../assets/photographs/east-river-manhattan-bridge-2022.md",
-      "context": null
-    },
-    {
-      "from": "source.photo-metadata.nycac-participation-images.2017.public-safe",
-      "type": "related_to",
-      "to": "person.paul-mossine",
-      "source": "frontmatter",
-      "href": "../../people/paul-mossine.md",
       "context": null
     },
     {
@@ -18349,11 +20169,43 @@
       "context": null
     },
     {
+      "from": "source.project-websites.live-audit.2026-08-14",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": null
+    },
+    {
+      "from": "source.project-websites.live-audit.2026-08-14",
+      "type": "related_to",
+      "to": "project.kc-town-hall",
+      "source": "frontmatter",
+      "href": "../projects/kc-town-hall-orientation.md",
+      "context": null
+    },
+    {
+      "from": "source.project-websites.live-audit.2026-08-14",
+      "type": "related_to",
+      "to": "project.wowlist",
+      "source": "frontmatter",
+      "href": "../projects/wowlist-orientation.md",
+      "context": null
+    },
+    {
       "from": "source.protected.current-workstream.2026-07-27",
       "type": "related_to",
       "to": "project.fair-rent-nyc",
       "source": "frontmatter",
       "href": "../../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "source.protected.source-backed-memory-opportunity.2026",
+      "type": "related_to",
+      "to": "index.anonymized-team-knowledge-opportunity-case-study",
+      "source": "frontmatter",
+      "href": "../case-studies/anonymized-team-knowledge-opportunity/README.md",
       "context": null
     },
     {
@@ -18509,6 +20361,46 @@
       "context": null
     },
     {
+      "from": "source.uibk.postdoc-profile.2026",
+      "type": "related_to",
+      "to": "source.jobs.uibk.studio3.postdoc.arch-15927",
+      "source": "frontmatter",
+      "href": "jobs-uibk-studio3-postdoc-arch-15927.md",
+      "context": null
+    },
+    {
+      "from": "source.uibk.postdoc-profile.2026",
+      "type": "supports",
+      "to": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "source": "frontmatter",
+      "href": "../opportunities/uibk-studio3-postdoc-arch-15927.md",
+      "context": null
+    },
+    {
+      "from": "source.uibk.studio3.leadership.2026",
+      "type": "related_to",
+      "to": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "source": "frontmatter",
+      "href": "../opportunities/uibk-studio3-postdoc-arch-15927.md",
+      "context": null
+    },
+    {
+      "from": "source.uibk.studio3.leadership.2026",
+      "type": "related_to",
+      "to": "person.kathrin-aste",
+      "source": "frontmatter",
+      "href": "../people/kathrin-aste.md",
+      "context": null
+    },
+    {
+      "from": "source.uibk.studio3.leadership.2026",
+      "type": "related_to",
+      "to": "person.thomas-edlinger",
+      "source": "frontmatter",
+      "href": "../people/thomas-edlinger.md",
+      "context": null
+    },
+    {
       "from": "source.vault.communication-history.metadata",
       "type": "related_to",
       "to": "evaluation.employment-context.coverage.2026-07-18",
@@ -18522,6 +20414,22 @@
       "to": "event.weibel.in-terms-of-media.2024",
       "source": "frontmatter",
       "href": "../events/in-terms-of-media-symposium-2024.md",
+      "context": null
+    },
+    {
+      "from": "source.work-for-america.courtney-kishbaugh-civic-match",
+      "type": "related_to",
+      "to": "person.courtney-kishbaugh",
+      "source": "frontmatter",
+      "href": "../people/courtney-kishbaugh.md",
+      "context": null
+    },
+    {
+      "from": "source.work-for-america.josh-gee-civic-match",
+      "type": "related_to",
+      "to": "person.josh-gee",
+      "source": "frontmatter",
+      "href": "../people/josh-gee.md",
       "context": null
     },
     {
@@ -19195,6 +21103,60 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/applications/nyc-oti-senior-product-manager-782366.md",
+      "from": "application.nyc-oti.senior-product-manager.782366",
+      "toPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
+      "to": "opportunity.nyc-oti.senior-product-manager.782366",
+      "fragment": null,
+      "line": 31,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/applications/nyc-oti-senior-product-manager-782366.md",
+      "from": "application.nyc-oti.senior-product-manager.782366",
+      "toPath": "docs/knowledge-bank/sources/jobs-oti-senior-product-manager-782366.md",
+      "to": "source.jobs.oti.senior-product-manager.782366",
+      "fragment": null,
+      "line": 32,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/applications/nyc-oti-senior-product-manager-782366.md",
+      "from": "application.nyc-oti.senior-product-manager.782366",
+      "toPath": "docs/knowledge-bank/applications/wowlist-senior-product-manager-oti-782366.md",
+      "to": "application.wowlist.senior-product-manager-oti-782366",
+      "fragment": null,
+      "line": 33,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/applications/nyc-oti-senior-product-manager-782366.md",
+      "from": "application.nyc-oti.senior-product-manager.782366",
+      "toPath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
+      "to": null,
+      "fragment": null,
+      "line": 34,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/applications/nyc-oti-senior-product-manager-782366.md",
+      "from": "application.nyc-oti.senior-product-manager.782366",
+      "toPath": "docs/knowledge-bank/capabilities/technical-operations.md",
+      "to": "capability.technical-operations",
+      "fragment": null,
+      "line": 35,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/applications/nyc-oti-senior-product-manager-782366.md",
+      "from": "application.nyc-oti.senior-product-manager.782366",
+      "toPath": "docs/knowledge-bank/projects/tired-of-tires-resident-service.md",
+      "to": "project.kc-town-hall.tired-of-tires",
+      "fragment": null,
+      "line": 36,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/applications/wowlist-senior-product-manager-oti-782366.md",
       "from": "application.wowlist.senior-product-manager-oti-782366",
       "toPath": "docs/knowledge-bank/capabilities/technical-operations.md",
@@ -19243,6 +21205,15 @@
       "fromPath": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
       "from": "asset.photo.east-river-manhattan-bridge.2022.001",
       "toPath": "apps/www/public/images/field-notes/jamie-east-river.webp",
+      "to": null,
+      "fragment": null,
+      "line": 4,
+      "kind": "image"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/assets/photographs/knowledge-wiki-collective-map-2017.md",
+      "from": "asset.photo.knowledge-wiki.collective-map.2017.001",
+      "toPath": "apps/www/public/images/field-notes/knowledge-wiki-collective-map.webp",
       "to": null,
       "fragment": null,
       "line": 4,
@@ -19357,6 +21328,33 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/README.md",
+      "from": "index.anonymized-team-knowledge-opportunity-case-study",
+      "toPath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/01-prospective-sponsor-perspective.md",
+      "to": "research-run.anonymized-team-knowledge-opportunity.sponsor-perspective",
+      "fragment": null,
+      "line": 12,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/README.md",
+      "from": "index.anonymized-team-knowledge-opportunity-case-study",
+      "toPath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/02-jamie-perspective.md",
+      "to": "research-run.anonymized-team-knowledge-opportunity.jamie-perspective",
+      "fragment": null,
+      "line": 13,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/README.md",
+      "from": "index.anonymized-team-knowledge-opportunity-case-study",
+      "toPath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/03-prospective-sponsor-voice.md",
+      "to": "research-run.anonymized-team-knowledge-opportunity.voice-profile",
+      "fragment": null,
+      "line": 14,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/claims/callnyc-independent-follow-on.md",
       "from": "claim.callnyc.independent-follow-on",
       "toPath": "docs/knowledge-bank/sources/politico-callnyc-2016-03-14.md",
@@ -19408,6 +21406,15 @@
       "to": "portfolio.work.callnyc",
       "fragment": null,
       "line": 6,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/corrections/project-photo-courtesy-credits-2026-08-20.md",
+      "from": "correction.photo.project-courtesy-credits.2026-08-20",
+      "toPath": "docs/knowledge-bank/people/paul-mossine.md",
+      "to": "person.paul-mossine",
+      "fragment": null,
+      "line": 12,
       "kind": "link"
     },
     {
@@ -19816,48 +21823,12 @@
       "kind": "link"
     },
     {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
-      "to": "opportunity.codepath.engineering-project-manager.5160542007",
+      "fromPath": "docs/knowledge-bank/indexes/decision-records.md",
+      "from": "index.knowledge-wiki.decision-records",
+      "toPath": "docs/knowledge-bank/decisions/cloudinary-selective-media-delivery-2026-08-15.md",
+      "to": "decision.portfolio.cloudinary-selective-media-delivery.2026-08-15",
       "fragment": null,
-      "line": 11,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/aclu-senior-project-manager.md",
-      "to": "opportunity.aclu.senior-project-manager.8620968002",
-      "fragment": null,
-      "line": 12,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
-      "to": "opportunity.benepass.product-operations.7f963a7a",
-      "fragment": null,
-      "line": 13,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
-      "to": "opportunity.nyc-oti.senior-product-manager.782366",
-      "fragment": null,
-      "line": 14,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/evaluations/named-public-reader-acceptance-2026-08-13.md",
-      "to": "evaluation.named-public-reader-acceptance.2026-08-13",
-      "fragment": null,
-      "line": 35,
+      "line": 19,
       "kind": "link"
     },
     {
@@ -19866,7 +21837,16 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
       "to": "opportunity.nyc-oti.technical-operations-manager.782369",
       "fragment": null,
-      "line": 41,
+      "line": 104,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/uibk-studio3-postdoc-arch-15927.md",
+      "to": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "fragment": null,
+      "line": 113,
       "kind": "link"
     },
     {
@@ -19875,7 +21855,7 @@
       "toPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
       "to": "opportunity.aclu.product-manager-discovery.8482872002",
       "fragment": null,
-      "line": 50,
+      "line": 126,
       "kind": "link"
     },
     {
@@ -19884,7 +21864,7 @@
       "toPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
       "to": "opportunity.codepath.claude-corps.5182020007",
       "fragment": null,
-      "line": 51,
+      "line": 127,
       "kind": "link"
     },
     {
@@ -19893,7 +21873,7 @@
       "toPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
       "to": "opportunity.asana.ai-implementation.8027437",
       "fragment": null,
-      "line": 52,
+      "line": 128,
       "kind": "link"
     },
     {
@@ -19902,7 +21882,7 @@
       "toPath": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
       "to": "opportunity.permitflow.product-operations.8a6e6066",
       "fragment": null,
-      "line": 53,
+      "line": 129,
       "kind": "link"
     },
     {
@@ -19911,7 +21891,25 @@
       "toPath": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
       "to": "opportunity.protected.source-backed-memory-consulting.2026",
       "fragment": null,
-      "line": 57,
+      "line": 133,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
+      "to": "opportunity.codepath.engineering-project-manager.5160542007",
+      "fragment": null,
+      "line": 14,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/aclu-senior-project-manager.md",
+      "to": "opportunity.aclu.senior-project-manager.8620968002",
+      "fragment": null,
+      "line": 15,
       "kind": "link"
     },
     {
@@ -19920,7 +21918,16 @@
       "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
       "to": "evaluation.employment-context.coverage.2026-07-18",
       "fragment": null,
-      "line": 83,
+      "line": 159,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
+      "to": "opportunity.benepass.product-operations.7f963a7a",
+      "fragment": null,
+      "line": 16,
       "kind": "link"
     },
     {
@@ -19929,7 +21936,7 @@
       "toPath": "docs/knowledge-bank/evaluations/employment-leadership-context-2026-08-13.md",
       "to": "evaluation.employment-leadership-context.2026-08-13",
       "fragment": null,
-      "line": 84,
+      "line": 160,
       "kind": "link"
     },
     {
@@ -19938,7 +21945,7 @@
       "toPath": "reports/wiki-opportunity-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 85,
+      "line": 161,
       "kind": "link"
     },
     {
@@ -19947,7 +21954,7 @@
       "toPath": "reports/wiki-career-trajectory-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 86,
+      "line": 162,
       "kind": "link"
     },
     {
@@ -19956,7 +21963,7 @@
       "toPath": "reports/wiki-source-channel-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 87,
+      "line": 163,
       "kind": "link"
     },
     {
@@ -19965,7 +21972,7 @@
       "toPath": "reports/wiki-opportunity-discovery.md",
       "to": null,
       "fragment": null,
-      "line": 88,
+      "line": 164,
       "kind": "link"
     },
     {
@@ -19974,7 +21981,7 @@
       "toPath": "reports/hiring-acceptance-public.md",
       "to": null,
       "fragment": null,
-      "line": 89,
+      "line": 165,
       "kind": "link"
     },
     {
@@ -19983,7 +21990,106 @@
       "toPath": "reports/hiring-acceptance-gap-resolution.md",
       "to": null,
       "fragment": null,
-      "line": 90,
+      "line": 166,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
+      "to": "opportunity.nyc-oti.senior-product-manager.782366",
+      "fragment": null,
+      "line": 17,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/oti-speed-operations-manager-789810.md",
+      "to": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "fragment": null,
+      "line": 18,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+      "to": "opportunity.nyc-oti.product-manager.784450",
+      "fragment": null,
+      "line": 19,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/oti-speed-senior-product-manager-789610.md",
+      "to": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "fragment": null,
+      "line": 20,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/oti-pit-senior-product-designer-782373.md",
+      "to": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "fragment": null,
+      "line": 21,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/research-runs/nyc-oti-product-management-ranking-2026-08-20.md",
+      "to": "research.nyc-oti-product-management-ranking.2026-08-20",
+      "fragment": null,
+      "line": 25,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/sources/betanyc-civic-tech-newsletter-2026-08-20.md",
+      "to": "source.betanyc.civic-tech-newsletter",
+      "fragment": null,
+      "line": 29,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/research-runs/nyc-jobs-citywide-monitor-2026-08-20.md",
+      "to": "research.nyc-jobs.citywide-monitor.2026-08-20",
+      "fragment": null,
+      "line": 53,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/methods/civic-match-opportunity-loop.md",
+      "to": "method.civic-match-opportunity-loop",
+      "fragment": null,
+      "line": 62,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/applications/nyc-oti-senior-product-manager-782366.md",
+      "to": "application.nyc-oti.senior-product-manager.782366",
+      "fragment": null,
+      "line": 73,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/evaluations/named-public-reader-acceptance-2026-08-13.md",
+      "to": "evaluation.named-public-reader-acceptance.2026-08-13",
+      "fragment": null,
+      "line": 98,
       "kind": "link"
     },
     {
@@ -20538,217 +22644,10 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/photography.md",
       "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/indexes/photo-sets/kc-town-hall-fieldwork.md",
-      "to": "index.photo-set.kc-town-hall-fieldwork",
+      "toPath": "docs/knowledge-bank/assets/photographs/knowledge-wiki-collective-map-2017.md",
+      "to": "asset.photo.knowledge-wiki.collective-map.2017.001",
       "fragment": null,
-      "line": 100,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-walkshed-2019.md",
-      "to": "asset.graphic.kc-town-hall.walkshed.2019.001",
-      "fragment": null,
-      "line": 105,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/research-runs/photographic-source-return-2026-07-26.md",
-      "to": "research.photographic-source-return.2026-07-26",
-      "fragment": null,
-      "line": 107,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-project-sites-2017-2026.md",
-      "to": "index.photo-set.nycac-project-sites.2017-2026",
-      "fragment": null,
-      "line": 112,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/assets/photographs/nycac-shoestring-facilitation-2017.md",
-      "to": "asset.photo.nycac-shoestring-facilitation.2017.001",
-      "fragment": null,
-      "line": 13,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md",
-      "to": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2",
-      "fragment": null,
-      "line": 15,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/projections/photography/edition-launch-2026-08.md",
-      "to": "edition.launch.2026-08",
-      "fragment": null,
-      "line": 17,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/people/paul-mossine.md",
-      "to": "person.paul-mossine",
-      "fragment": null,
-      "line": 20,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/assets/photographs/sunday-dinner-shared-map-2013.md",
-      "to": "asset.photo.sunday-dinner.shared-map.2013.001",
-      "fragment": null,
-      "line": 22,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/assets/photographs/kc-town-hall-roof-work-2019.md",
-      "to": "asset.photo.kc-town-hall.roof-work.2019.001",
-      "fragment": null,
-      "line": 24,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/evaluations/curatorial/portfolio-project-covers-2026-08-13.md",
-      "to": "evaluation.curatorial.portfolio-project-covers.2026-08-13",
-      "fragment": null,
-      "line": 26,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/sources/permissions/jamie-portfolio-album-2026-08-13.md",
-      "to": "source.permission.jamie-portfolio-album.2026-08-13",
-      "fragment": null,
-      "line": 31,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/sources/kc-town-hall-tired-of-tires-design-field-archive-2026.md",
-      "to": "source.kc-town-hall.tired-of-tires.design-field-archive.2019-2022",
-      "fragment": null,
-      "line": 39,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-tired-of-tires-flyer-2019.md",
-      "to": "asset.design.kc-town-hall.tired-of-tires-flyer.2019.001",
-      "fragment": null,
-      "line": 43,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/assets/photographs/kc-town-hall-tired-of-tires-before-2022.md",
-      "to": "asset.photo.kc-town-hall.tired-of-tires-before.2022.001",
-      "fragment": null,
-      "line": 44,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/assets/photographs/kc-town-hall-tired-of-tires-after-2022.md",
-      "to": "asset.photo.kc-town-hall.tired-of-tires-after.2022.001",
-      "fragment": null,
-      "line": 45,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/sources/permissions/kc-town-hall-tired-of-tires-portfolio-2026-08-14.md",
-      "to": "source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14",
-      "fragment": null,
-      "line": 47,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
-      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
-      "fragment": null,
-      "line": 72,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/indexes/photo-sets/east-river-canoe-2022.md",
-      "to": "index.photo-set.east-river-canoe.2022",
-      "fragment": null,
-      "line": 73,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/people/elana-gordon.md",
-      "to": "person.elana-gordon",
-      "fragment": null,
-      "line": 74,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/sources/photo-metadata/east-river-2022-public-safe.md",
-      "to": "source.photo-metadata.east-river.2022.public-safe",
-      "fragment": null,
-      "line": 75,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md",
-      "to": "source.permission.elana-gordon.east-river.2026-07",
-      "fragment": null,
-      "line": 76,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/evaluations/curatorial/layout-c-home-east-river-v1.md",
-      "to": "evaluation.curatorial.layout-c.home-east-river.v1",
-      "fragment": null,
-      "line": 77,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/photography.md",
-      "from": "index.knowledge-wiki.photography",
-      "toPath": "docs/knowledge-bank/decisions/photography/layout-c-home-east-river-v1.md",
-      "to": "decision.photo.layout-c.home-east-river.v1",
-      "fragment": null,
-      "line": 78,
+      "line": 10,
       "kind": "link"
     },
     {
@@ -20757,7 +22656,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/layout-c-resume-no-photo-v1.md",
       "to": "decision.photo.layout-c.resume-no-photo.v1",
       "fragment": null,
-      "line": 79,
+      "line": 100,
       "kind": "link"
     },
     {
@@ -20766,7 +22665,7 @@
       "toPath": "docs/knowledge-bank/decisions/photography/pre-launch-rights-narrowing-2026-07-28.md",
       "to": "decision.photo.pre-launch.rights-narrowing.2026-07-28",
       "fragment": null,
-      "line": 80,
+      "line": 101,
       "kind": "link"
     },
     {
@@ -20775,7 +22674,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
       "to": "projection.photo.layout-c.home.east-river",
       "fragment": null,
-      "line": 81,
+      "line": 102,
       "kind": "link"
     },
     {
@@ -20784,7 +22683,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/edition-layout-c-2026-07.md",
       "to": "edition.layout-c.2026-07",
       "fragment": null,
-      "line": 82,
+      "line": 103,
       "kind": "link"
     },
     {
@@ -20793,7 +22692,7 @@
       "toPath": "docs/knowledge-bank/corrections/east-river-credit-2026-07.md",
       "to": "correction.photo.east-river-credit.2026-07",
       "fragment": null,
-      "line": 83,
+      "line": 104,
       "kind": "link"
     },
     {
@@ -20802,7 +22701,7 @@
       "toPath": "docs/knowledge-bank/sources/recollections/jamie-canoe-commuting-2026-07.md",
       "to": "source.recollection.jamie-canoe-commuting.2026-07",
       "fragment": null,
-      "line": 84,
+      "line": 105,
       "kind": "link"
     },
     {
@@ -20811,7 +22710,7 @@
       "toPath": "docs/knowledge-bank/research-inquiries/documented-canoe-bike-journeys.md",
       "to": "research-inquiry.documented-canoe-bike-journeys",
       "fragment": null,
-      "line": 85,
+      "line": 106,
       "kind": "link"
     },
     {
@@ -20820,7 +22719,7 @@
       "toPath": "docs/knowledge-bank/workflows/photography-east-river-canary.md",
       "to": "method.photography-east-river-canary",
       "fragment": null,
-      "line": 86,
+      "line": 107,
       "kind": "link"
     },
     {
@@ -20829,7 +22728,7 @@
       "toPath": "rfcs/0003-living-photographic-knowledge-loop.md",
       "to": null,
       "fragment": null,
-      "line": 94,
+      "line": 115,
       "kind": "link"
     },
     {
@@ -20837,6 +22736,240 @@
       "from": "index.knowledge-wiki.photography",
       "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-dcla-formation-2017.md",
       "to": "index.photo-set.nycac-dcla-formation.2017",
+      "fragment": null,
+      "line": 120,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/indexes/photo-sets/kc-town-hall-fieldwork.md",
+      "to": "index.photo-set.kc-town-hall-fieldwork",
+      "fragment": null,
+      "line": 121,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-walkshed-2019.md",
+      "to": "asset.graphic.kc-town-hall.walkshed.2019.001",
+      "fragment": null,
+      "line": 126,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/research-runs/photographic-source-return-2026-07-26.md",
+      "to": "research.photographic-source-return.2026-07-26",
+      "fragment": null,
+      "line": 128,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/indexes/photo-sets/nycac-project-sites-2017-2026.md",
+      "to": "index.photo-set.nycac-project-sites.2017-2026",
+      "fragment": null,
+      "line": 133,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/projections/photography/knowledge-wiki-collective-map.md",
+      "to": "projection.photo.knowledge-wiki.collective-map",
+      "fragment": null,
+      "line": 17,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/photographs/nycac-shoestring-facilitation-2017.md",
+      "to": "asset.photo.nycac-shoestring-facilitation.2017.001",
+      "fragment": null,
+      "line": 28,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/projections/photography/home-screen-room-shoestring.md",
+      "to": "projection.photo.home.screen-room-shoestring",
+      "fragment": null,
+      "line": 30,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md",
+      "to": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2",
+      "fragment": null,
+      "line": 33,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/projections/photography/edition-launch-2026-08.md",
+      "to": "edition.launch.2026-08",
+      "fragment": null,
+      "line": 35,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/corrections/project-photo-courtesy-credits-2026-08-20.md",
+      "to": "correction.photo.project-courtesy-credits.2026-08-20",
+      "fragment": null,
+      "line": 40,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/photographs/sunday-dinner-shared-map-2013.md",
+      "to": "asset.photo.sunday-dinner.shared-map.2013.001",
+      "fragment": null,
+      "line": 43,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/photographs/kc-town-hall-roof-work-2019.md",
+      "to": "asset.photo.kc-town-hall.roof-work.2019.001",
+      "fragment": null,
+      "line": 45,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/evaluations/curatorial/portfolio-project-covers-2026-08-13.md",
+      "to": "evaluation.curatorial.portfolio-project-covers.2026-08-13",
+      "fragment": null,
+      "line": 47,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/sources/permissions/jamie-portfolio-album-2026-08-13.md",
+      "to": "source.permission.jamie-portfolio-album.2026-08-13",
+      "fragment": null,
+      "line": 52,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/sources/kc-town-hall-tired-of-tires-design-field-archive-2026.md",
+      "to": "source.kc-town-hall.tired-of-tires.design-field-archive.2019-2022",
+      "fragment": null,
+      "line": 60,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/graphics/kc-town-hall-tired-of-tires-flyer-2019.md",
+      "to": "asset.design.kc-town-hall.tired-of-tires-flyer.2019.001",
+      "fragment": null,
+      "line": 64,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/photographs/kc-town-hall-tired-of-tires-before-2022.md",
+      "to": "asset.photo.kc-town-hall.tired-of-tires-before.2022.001",
+      "fragment": null,
+      "line": 65,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/photographs/kc-town-hall-tired-of-tires-after-2022.md",
+      "to": "asset.photo.kc-town-hall.tired-of-tires-after.2022.001",
+      "fragment": null,
+      "line": 66,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/sources/permissions/kc-town-hall-tired-of-tires-portfolio-2026-08-14.md",
+      "to": "source.permission.kc-town-hall.tired-of-tires-portfolio.2026-08-14",
+      "fragment": null,
+      "line": 68,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/assets/photographs/east-river-manhattan-bridge-2022.md",
+      "to": "asset.photo.east-river-manhattan-bridge.2022.001",
+      "fragment": null,
+      "line": 93,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/indexes/photo-sets/east-river-canoe-2022.md",
+      "to": "index.photo-set.east-river-canoe.2022",
+      "fragment": null,
+      "line": 94,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/people/elana-gordon.md",
+      "to": "person.elana-gordon",
+      "fragment": null,
+      "line": 95,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/sources/photo-metadata/east-river-2022-public-safe.md",
+      "to": "source.photo-metadata.east-river.2022.public-safe",
+      "fragment": null,
+      "line": 96,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md",
+      "to": "source.permission.elana-gordon.east-river.2026-07",
+      "fragment": null,
+      "line": 97,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/evaluations/curatorial/layout-c-home-east-river-v1.md",
+      "to": "evaluation.curatorial.layout-c.home-east-river.v1",
+      "fragment": null,
+      "line": 98,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/photography.md",
+      "from": "index.knowledge-wiki.photography",
+      "toPath": "docs/knowledge-bank/decisions/photography/layout-c-home-east-river-v1.md",
+      "to": "decision.photo.layout-c.home-east-river.v1",
       "fragment": null,
       "line": 99,
       "kind": "link"
@@ -21463,6 +23596,24 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/methods/civic-match-opportunity-loop.md",
+      "from": "method.civic-match-opportunity-loop",
+      "toPath": "docs/knowledge-bank/people/josh-gee.md",
+      "to": "person.josh-gee",
+      "fragment": null,
+      "line": 27,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/civic-match-opportunity-loop.md",
+      "from": "method.civic-match-opportunity-loop",
+      "toPath": "docs/knowledge-bank/people/courtney-kishbaugh.md",
+      "to": "person.courtney-kishbaugh",
+      "fragment": null,
+      "line": 28,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/methods/maintenance-handoff-and-stewardship.md",
       "from": "method.maintenance-handoff-stewardship",
       "toPath": "docs/knowledge-bank/projects/harry-j-epstein.md",
@@ -21639,7 +23790,16 @@
       "toPath": "docs/knowledge-bank/capabilities/technical-operations.md",
       "to": "capability.technical-operations",
       "fragment": null,
-      "line": 18,
+      "line": 39,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
+      "from": "method.source-backed-team-memory",
+      "toPath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/README.md",
+      "to": "index.anonymized-team-knowledge-opportunity-case-study",
+      "fragment": null,
+      "line": 64,
       "kind": "link"
     },
     {
@@ -21870,10 +24030,10 @@
     {
       "fromPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
       "from": "opportunity.nyc-oti.senior-product-manager.782366",
-      "toPath": "docs/knowledge-bank/sources/jobs-oti-senior-product-manager-782366.md",
-      "to": "source.jobs.oti.senior-product-manager.782366",
+      "toPath": "docs/knowledge-bank/applications/nyc-oti-senior-product-manager-782366.md",
+      "to": "application.nyc-oti.senior-product-manager.782366",
       "fragment": null,
-      "line": 18,
+      "line": 19,
       "kind": "link"
     },
     {
@@ -21919,6 +24079,24 @@
       "to": "source.jobs.permitflow.product-operations.8a6e6066",
       "fragment": null,
       "line": 9,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/uibk-studio3-postdoc-arch-15927.md",
+      "from": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "toPath": "docs/knowledge-bank/people/kathrin-aste.md",
+      "to": "person.kathrin-aste",
+      "fragment": null,
+      "line": 17,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/uibk-studio3-postdoc-arch-15927.md",
+      "from": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "toPath": "docs/knowledge-bank/people/thomas-edlinger.md",
+      "to": "person.thomas-edlinger",
+      "fragment": null,
+      "line": 19,
       "kind": "link"
     },
     {
@@ -22125,7 +24303,16 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
       "to": "projection.photo.layout-c.home.east-river",
       "fragment": null,
-      "line": 17,
+      "line": 18,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projections/photography/edition-launch-2026-08.md",
+      "from": "edition.launch.2026-08",
+      "toPath": "docs/knowledge-bank/projections/photography/social-preview-east-river.md",
+      "to": "projection.photo.social-preview.east-river",
+      "fragment": null,
+      "line": 19,
       "kind": "link"
     },
     {
@@ -22134,7 +24321,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/fair-rent-nyc-shoestring-facilitation.md",
       "to": "projection.photo.fair-rent-nyc.shoestring-facilitation",
       "fragment": null,
-      "line": 18,
+      "line": 20,
       "kind": "link"
     },
     {
@@ -22143,7 +24330,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/fair-rent-nyc-market-hotel-banner.md",
       "to": "projection.photo.fair-rent-nyc.market-hotel-banner",
       "fragment": null,
-      "line": 19,
+      "line": 21,
       "kind": "link"
     },
     {
@@ -22152,7 +24339,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/sunday-dinner-shared-map.md",
       "to": "projection.photo.sunday-dinner.shared-map",
       "fragment": null,
-      "line": 20,
+      "line": 22,
       "kind": "link"
     },
     {
@@ -22161,7 +24348,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/kc-town-hall-roof-work.md",
       "to": "projection.photo.kc-town-hall.roof-work",
       "fragment": null,
-      "line": 21,
+      "line": 23,
       "kind": "link"
     },
     {
@@ -22170,7 +24357,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/kc-town-hall-tired-of-tires-flyer.md",
       "to": "projection.visual.kc-town-hall.tired-of-tires-flyer",
       "fragment": null,
-      "line": 22,
+      "line": 24,
       "kind": "link"
     },
     {
@@ -22179,7 +24366,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/kc-town-hall-tired-of-tires-before.md",
       "to": "projection.photo.kc-town-hall.tired-of-tires-before",
       "fragment": null,
-      "line": 23,
+      "line": 25,
       "kind": "link"
     },
     {
@@ -22188,7 +24375,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/kc-town-hall-tired-of-tires-after.md",
       "to": "projection.photo.kc-town-hall.tired-of-tires-after",
       "fragment": null,
-      "line": 24,
+      "line": 26,
       "kind": "link"
     },
     {
@@ -22221,6 +24408,15 @@
     {
       "fromPath": "docs/knowledge-bank/projects/callnyc.md",
       "from": "project.callnyc",
+      "toPath": "docs/knowledge-bank/assets/digital-district-photo.md",
+      "to": "asset.photo.digital-district.001",
+      "fragment": "what-it-does-not-establish",
+      "line": 114,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/callnyc.md",
+      "from": "project.callnyc",
       "toPath": "docs/knowledge-bank/events/nycc-constituent-services-hackathon-2016.md",
       "to": "event.nycc.constituent-services-hackathon.2016",
       "fragment": "source-basis",
@@ -22248,10 +24444,10 @@
     {
       "fromPath": "docs/knowledge-bank/projects/callnyc.md",
       "from": "project.callnyc",
-      "toPath": "docs/knowledge-bank/assets/digital-district-photo.md",
-      "to": "asset.photo.digital-district.001",
-      "fragment": "what-it-does-not-establish",
-      "line": 99,
+      "toPath": "docs/knowledge-bank/sources/project-website-live-audit-2026-08-14.md",
+      "to": "source.project-websites.live-audit.2026-08-14",
+      "fragment": "callnyc-close-reading",
+      "line": 45,
       "kind": "link"
     },
     {
@@ -22273,6 +24469,15 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/projects/harry-j-epstein.md",
+      "from": "project.harry-j-epstein",
+      "toPath": "docs/knowledge-bank/sources/nys-dos-thick-arts-llc-formation-2012-07-06.md",
+      "to": "source.nys-dos.thick-arts-llc.formation.2012-07-06",
+      "fragment": null,
+      "line": 18,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/projects/kc-spaces-fund-facebook-posts.md",
       "from": null,
       "toPath": "apps/www/src/data/knowledge-bank/fixtures/kcspacesfund-facebook-posts-full-population.json",
@@ -22291,6 +24496,15 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/projects/kc-spaces-fund-orientation.md",
+      "from": "project.kc-spaces-fund",
+      "toPath": "docs/knowledge-bank/projections/work-kc-spaces-fund.md",
+      "to": "portfolio.work.kc-spaces-fund",
+      "fragment": null,
+      "line": 22,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/projects/kc-town-hall-orientation.md",
       "from": "project.kc-town-hall",
       "toPath": "docs/knowledge-bank/projects/kc-town-hall.md",
@@ -22306,6 +24520,15 @@
       "to": null,
       "fragment": null,
       "line": 12,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/kc-town-hall-orientation.md",
+      "from": "project.kc-town-hall",
+      "toPath": "docs/knowledge-bank/sources/project-website-live-audit-2026-08-14.md",
+      "to": "source.project-websites.live-audit.2026-08-14",
+      "fragment": "kc-town-hall-close-reading",
+      "line": 29,
       "kind": "link"
     },
     {
@@ -22572,10 +24795,19 @@
     {
       "fromPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
       "from": "project.wowlist",
+      "toPath": "docs/knowledge-bank/sources/project-website-live-audit-2026-08-14.md",
+      "to": "source.project-websites.live-audit.2026-08-14",
+      "fragment": "wow-list-close-reading",
+      "line": 19,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/wowlist-orientation.md",
+      "from": "project.wowlist",
       "toPath": "docs/knowledge-bank/methods/wowlist-relational-curation.md",
       "to": "method.wowlist-relational-curation",
       "fragment": null,
-      "line": 20,
+      "line": 28,
       "kind": "link"
     },
     {
@@ -22584,7 +24816,7 @@
       "toPath": "docs/knowledge-bank/methods/sunday-dinner-wowlist-nycac-synergy.md",
       "to": "method.sunday-dinner-wowlist-nycac-synergy",
       "fragment": null,
-      "line": 22,
+      "line": 30,
       "kind": "link"
     },
     {
@@ -22593,7 +24825,7 @@
       "toPath": "docs/knowledge-bank/sources/wowlist-knowledge-repository-2026.md",
       "to": "source.wowlist.knowledge-repository.2026",
       "fragment": null,
-      "line": 25,
+      "line": 33,
       "kind": "link"
     },
     {
@@ -22602,7 +24834,7 @@
       "toPath": "docs/knowledge-bank/applications/wowlist-senior-product-manager-oti-782366.md",
       "to": "application.wowlist.senior-product-manager-oti-782366",
       "fragment": null,
-      "line": 30,
+      "line": 38,
       "kind": "link"
     },
     {
@@ -22921,6 +25153,24 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/sources/betanyc-civic-tech-newsletter-2026-08-20.md",
+      "from": "source.betanyc.civic-tech-newsletter",
+      "toPath": "docs/knowledge-bank/methods/betanyc-opportunity-loop.md",
+      "to": "method.betanyc-opportunity-loop",
+      "fragment": null,
+      "line": 23,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/betanyc-civic-tech-newsletter-2026-08-20.md",
+      "from": "source.betanyc.civic-tech-newsletter",
+      "toPath": "docs/knowledge-bank/research-runs/betanyc-opportunity-review-2026-08-20.md",
+      "to": "research.betanyc-opportunity-review.2026-08-20",
+      "fragment": null,
+      "line": 24,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/sources/jamie-public-record-initial-manifest.md",
       "from": "source.jamie-public-record-initial-manifest",
       "toPath": "docs/knowledge-bank/data/external-source-editions/jamie-burkart-public-record.lock.json",
@@ -22954,6 +25204,15 @@
       "to": null,
       "fragment": null,
       "line": 19,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/project-website-live-audit-2026-08-14.md",
+      "from": "source.project-websites.live-audit.2026-08-14",
+      "toPath": "docs/knowledge-bank/data/project-website-live-inventory-2026-08-14.json",
+      "to": null,
+      "fragment": null,
+      "line": 13,
       "kind": "link"
     },
     {

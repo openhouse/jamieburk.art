@@ -3,6 +3,7 @@ import type { Route } from "next";
 import { CapabilityGrid } from "@/components/CapabilityGrid";
 import { ContactCTA } from "@/components/ContactCTA";
 import { Hero } from "@/components/Hero";
+import { HomeFieldSystemEvidence } from "@/components/HomeFieldSystemEvidence";
 import { ProofStrip } from "@/components/ProofStrip";
 import { WorkCard } from "@/components/WorkCard";
 import { featuredWork } from "@/data/work";
@@ -23,12 +24,12 @@ const startHereLinks = [
   {
     href: "/work/harry-j-epstein",
     label: "Harry J. Epstein Company",
-    note: "Legacy e-commerce, analytics, content, marketing, and operations modernization."
+    note: "Long-term commercial systems stewardship, implementation, and measurable business contribution."
   },
   {
     href: "/work/fair-rent-nyc",
-    label: "FairRentNYC / Commercial Rent Stabilization",
-    note: "Campaign memory, source maps, public-data framing, and coalition operations."
+    label: "NYC Artist Coalition / FairRentNYC",
+    note: "Current civic operations, coalition systems, and public-facing policy communication."
   },
   {
     href: "/work/callnyc",
@@ -79,6 +80,7 @@ export default function HomePage() {
       </section>
       <ProofStrip />
       <CapabilityGrid />
+      <HomeFieldSystemEvidence />
       <section className="jb-frame py-16">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="jb-reading">
