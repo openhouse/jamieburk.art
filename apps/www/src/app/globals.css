@@ -185,7 +185,6 @@ h2 {
 
 .jb-hero-copy {
   background: rgba(18, 28, 34, 0.9);
-  border-left: 4px solid var(--jb-yellow-ochre);
   padding: clamp(1.25rem, 3vw, 2rem);
 }
 
@@ -246,13 +245,13 @@ h2 {
 @media (max-width: 639px) {
   .jb-hero,
   .jb-hero-content {
-    min-height: min(640px, calc(100svh - 4rem));
+    min-height: 0;
   }
 
   .jb-hero-content {
     align-items: center;
-    padding-bottom: 5.5rem;
-    padding-top: 3rem;
+    padding-bottom: 6.5rem;
+    padding-top: 1.5rem;
   }
 
   .jb-hero-caption {
@@ -297,7 +296,7 @@ h2 {
 }
 
 .jb-citation a:focus-visible {
-  border-radius: 0.15rem;
+  border-radius: var(--radius-selector);
   outline: 3px solid var(--jb-yellow-ochre);
   outline-offset: 2px;
 }
@@ -340,8 +339,9 @@ h2 {
 
 .jb-endnotes li:target {
   background: color-mix(in srgb, var(--jb-lemon-yellow) 30%, transparent);
-  border-left: 4px solid var(--jb-yellow-ochre);
   margin-left: -1rem;
+  outline: 2px solid var(--jb-yellow-ochre);
+  outline-offset: -2px;
   padding: 0.75rem 1rem;
 }
 

@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "suite_id": "apply-2026-08-21-c-hiring-path",
+  "title": "Staging C hiring-path refinement",
+  "objective": "Preserve the strongest hiring argument from staging C while adapting the most useful decision structure from B and the editorial warmth and mobile continuity of A.",
+  "base_suite": {
+    "path": ".agents/evals/portfolio-production-readiness.json",
+    "status": "frozen-reference"
+  },
+  "deterministic_first": true,
+  "gates": [
+    {
+      "id": "C21-001",
+      "title": "Complete mobile first impression",
+      "blocking": true,
+      "pass_criteria": [
+        "At a 390 by 844 pixel viewport the hero preserves the role, name, concise promise, role-fit action, and resume action without overlap or clipping.",
+        "The start of the next section is visible in the first mobile viewport.",
+        "The governed East River hero photograph remains the exact approved occurrence."
+      ]
+    },
+    {
+      "id": "C21-002",
+      "title": "Three inspectable decision traces",
+      "blocking": true,
+      "pass_criteria": [
+        "Technical Operations begins its project proof with exactly three compact decision traces.",
+        "Each trace names a project, question, decision or action, inspectable artifact, governed result, and deeper link.",
+        "Results are projected from governed proof records rather than duplicated as free text."
+      ]
+    },
+    {
+      "id": "C21-003",
+      "title": "Authorizable team-memory pilot",
+      "blocking": true,
+      "pass_criteria": [
+        "The proposed first engagement is a two-week discovery and prototype sprint.",
+        "It names one sponsor, one working lead, two to three teammates, and three to five approved sources around one decision trail.",
+        "It names concrete deliverables and ends with a continue, revise, or stop decision.",
+        "The public page keeps protected company and collaborator context out of the proposal."
+      ]
+    },
+    {
+      "id": "C21-004",
+      "title": "Comparable method without false equivalence",
+      "blocking": true,
+      "pass_criteria": [
+        "The About page shows three examples through relationships, model, prototype, social use, learning and revision, and documented handoff.",
+        "The comparison states that projects are not equivalent in scale, maturity, authority, adoption, risk, and outcome.",
+        "Historical client dates and current-state labels remain accurate."
+      ]
+    },
+    {
+      "id": "C21-005",
+      "title": "Exact staging-C release attestation",
+      "blocking": true,
+      "pass_criteria": [
+        "The staging-c Git remote main ref equals the full intended candidate SHA.",
+        "The staging-C health route identifies the staging environment and canonical staging-C origin, reports a healthy non-production service, and reports indexing disabled.",
+        "The homepage and health route send noindex, nofollow and robots.txt disallows the entire staging site.",
+        "All fourteen public hiring-reader routes in the responsive review matrix return HTTP 200."
+      ],
+      "command": "node scripts/check-staging-c-release.mjs --expected-sha <full-candidate-sha>"
+    }
+  ]
+}

@@ -12,6 +12,7 @@ export type ParticipationMedia = {
   permissionId: string;
   projectionId: string;
   publicationStatus: "jamie-authorized";
+  clearanceAttestation: string;
   releaseState: {
     publicGit: "approved";
     staging: "approved";
@@ -41,6 +42,8 @@ export const participationMedia = {
     permissionId: "source.permission.jamie.photo-select-portfolio.2026-08-13",
     projectionId: "projection.photo.fair-rent.shoestring-facilitation",
     publicationStatus: "jamie-authorized",
+    clearanceAttestation:
+      "Jamie confirmed this exact album-sourced occurrence is cleared for use on the jamieburk.art portfolio. This records the portfolio publication decision only; it does not grant permission for reuse or imply participant endorsement.",
     releaseState: {
       publicGit: "approved",
       staging: "approved",
@@ -63,6 +66,8 @@ export const participationMedia = {
     permissionId: "source.permission.jamie.public-site-captures.2026-08-13",
     projectionId: "projection.screenshot.fair-rent.let-nyc-dance",
     publicationStatus: "jamie-authorized",
+    clearanceAttestation:
+      "Jamie approved this exact public-site capture for the jamieburk.art portfolio. This records the portfolio publication decision only; it does not imply campaign endorsement or grant permission for reuse.",
     releaseState: {
       publicGit: "approved",
       staging: "approved",
@@ -91,6 +96,8 @@ export const participationMedia = {
     permissionId: "source.permission.jamie.photo-select-portfolio.2026-08-13",
     projectionId: "projection.photo.fair-rent.market-hotel-town-hall",
     publicationStatus: "jamie-authorized",
+    clearanceAttestation:
+      "Jamie confirmed this exact album-sourced occurrence is cleared for use on the jamieburk.art portfolio following the recorded dignity review. This records the portfolio publication decision only; it does not grant permission for reuse or imply participant endorsement.",
     releaseState: {
       publicGit: "approved",
       staging: "approved",

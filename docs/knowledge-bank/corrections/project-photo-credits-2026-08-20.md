@@ -5,7 +5,7 @@ kind: correction
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-20
+last_reviewed: 2026-08-21
 review_by: 2027-02-20
 canonical_path: docs/knowledge-bank/corrections/project-photo-credits-2026-08-20.md
 summary: Jamie's first-person correction withdraws unsupported individual photo credits from the live portfolio and establishes concise project courtesy credits when the individual creator is not confirmed.
@@ -41,6 +41,9 @@ relations:
   - type: related_to
     target: asset.photo.kc-town-hall.roof-work.2019.001
     href: ../assets/photographs/kc-town-hall-roof-work-2019.md
+  - type: related_to
+    target: person.paul-mossine
+    href: ../people/paul-mossine.md
 ---
 
 # Replace unsupported individual photo credits with project courtesy credits
@@ -49,6 +52,9 @@ The individual creators of these four public portfolio photographs remain
 unresolved. Their visible credits name the projects that steward and give
 context to the work. A project courtesy credit is not an assertion that the
 project, or any particular member of it, made the photograph.
+
+The [retired attribution record](../people/paul-mossine.md) remains linked only
+so the correction history stays inspectable; it is not an active creator credit.
 
 This correction does not affect the East River homepage photograph, whose
 verified creator credit remains Elana Gordon.

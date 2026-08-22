@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "team-memory-proposal-protected-prospect-2026-08-20",
+  "id": "team-memory-proposal-protected-prospect-2026-08-21",
   "target": {
     "route": "/lab/source-backed-team-memory",
     "url": "https://staging-c.jamieburk.art/lab/source-backed-team-memory",
@@ -57,6 +57,22 @@
     {
       "id": "human-authority",
       "needle": "AI drafts. Humans review."
+    },
+    {
+      "id": "two-week-timebox",
+      "needle": "two-week discovery and prototype"
+    },
+    {
+      "id": "small-participant-set",
+      "needle": "One sponsor, one working lead, and two or three teammates"
+    },
+    {
+      "id": "approved-source-set",
+      "needle": "Three to five approved sources"
+    },
+    {
+      "id": "end-decision",
+      "needle": "continue, revise, or stop"
     }
   ],
   "forbiddenPublicStrings": [
@@ -78,7 +94,7 @@
       "privateCompanyContextAccess": false,
       "scenarioContext": "public-safe requirements only"
     },
-    "resultPath": "evals/team-memory-proposal/runs/2026-08-20/fictionalized-protected-prospect.json"
+    "resultPath": "evals/team-memory-proposal/runs/2026-08-21/fictionalized-protected-prospect.json"
   },
   "policy": {
     "deterministicChecksBeforeLlm": true,

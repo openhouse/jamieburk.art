@@ -46,22 +46,22 @@
     {
       "id": "purchaseable-engagement",
       "route": "/lab/source-backed-team-memory",
-      "needle": "small paid discovery and prototype"
+      "needle": "A small paid two-week discovery and prototype sprint"
     },
     {
       "id": "approved-source",
       "route": "/lab/source-backed-team-memory",
-      "needle": "One approved source. One useful team-memory test."
+      "needle": "Three to five approved sources around one decision trail"
     },
     {
       "id": "concrete-delivery",
       "route": "/lab/source-backed-team-memory",
-      "needle": "What I will deliver"
+      "needle": "What I deliver"
     },
     {
       "id": "decision-output",
       "route": "/lab/source-backed-team-memory",
-      "needle": "What you can decide"
+      "needle": "End decision"
     },
     {
       "id": "resume-discoverable",

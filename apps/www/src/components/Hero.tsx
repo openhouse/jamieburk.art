@@ -24,28 +24,32 @@ export function Hero() {
             {homeIdentity.role}
           </p>
           <h1
-            className="mt-5 font-identity text-6xl font-normal leading-[0.96] text-white sm:text-7xl"
+            className="mt-4 font-identity text-5xl font-normal leading-[0.96] text-white sm:mt-5 sm:text-7xl"
             id="home-title"
           >
             {homeIdentity.name}
           </h1>
-          <p className="mt-6 max-w-2xl text-2xl font-semibold leading-snug text-white sm:text-3xl">
+          <p className="mt-4 max-w-2xl text-2xl font-semibold leading-snug text-white sm:mt-6 sm:text-3xl">
             {homeIdentity.tagline}
           </p>
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-white/84 sm:text-xl">
+          <p className="jb-hero-summary-mobile mt-4 max-w-2xl text-lg leading-7 text-white/84 sm:hidden">
+            I clarify requirements, coordinate implementation, and leave
+            documentation people can use.
+          </p>
+          <p className="jb-hero-summary-wide mt-5 hidden max-w-2xl text-xl leading-8 text-white/84 sm:block">
             I work with public-facing teams to clarify requirements, build
             workflows and tools, carry context through implementation, and
             leave behind documentation people can use.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-6 flex flex-wrap gap-3 sm:mt-8">
             <Link
-              className="inline-flex min-h-11 items-center bg-white px-5 py-3 font-semibold text-jb-ink hover:bg-jb-sky"
+              className="inline-flex min-h-11 items-center bg-white px-4 py-3 font-semibold text-jb-ink hover:bg-jb-sky sm:px-5"
               href="/work/technical-operations"
             >
               See role-fit evidence
             </Link>
             <Link
-              className="inline-flex min-h-11 items-center border border-white/70 px-5 py-3 font-semibold text-white hover:bg-white hover:text-jb-ink"
+              className="inline-flex min-h-11 items-center border border-white/70 px-4 py-3 font-semibold text-white hover:bg-white hover:text-jb-ink sm:px-5"
               href="/resume"
             >
               View resume

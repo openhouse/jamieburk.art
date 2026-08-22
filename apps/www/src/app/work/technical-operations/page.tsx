@@ -25,6 +25,36 @@ const roleFitPaths = [
   }
 ] as const;
 
+const decisionEvidence = [
+  {
+    project: "Harry J. Epstein Company",
+    href: "/work/harry-j-epstein",
+    question: "How does recurring customer and team friction become a maintainable release?",
+    decision:
+      "I framed incremental requirements, coordinated changes, inspected the public customer path, and preserved ownership and next actions.",
+    artifact: "Release-to-handoff workflow specimen",
+    resultProofId: "hje-revenue-growth-contribution"
+  },
+  {
+    project: "FairRentNYC / Commercial Rent Stabilization",
+    href: "/work/fair-rent-nyc",
+    question: "How can a coalition keep sensitive, changing work recoverable without overexposing it?",
+    decision:
+      "I separated public sources, protected context, open policy questions, decisions, and next actions so collaborators could keep moving together.",
+    artifact: "Campaign-memory spine and source map",
+    resultProofId: "fair-rent-campaign-memory"
+  },
+  {
+    project: "CallNYC",
+    href: "/work/callnyc",
+    question: "How can administrative data become a pathway a resident can recognize and use?",
+    decision:
+      "I organized constituent-services records around recognizable issues and possible next steps rather than the structure of the source dataset.",
+    artifact: "Issue-pathway information architecture and public implementation",
+    resultProofId: "callnyc-civic-data-guidance"
+  }
+] as const;
+
 const deliverySequence = [
   {
     label: "Frame",
@@ -95,6 +125,59 @@ export default function TechnicalOperationsPage() {
           </Link>
         ))}
       </nav>
+
+      <section aria-labelledby="decision-evidence" className="mt-12">
+        <div className="max-w-3xl">
+          <p className="jb-section-label">Start with the work</p>
+          <h2 className="mt-3 text-3xl font-semibold text-jb-ink" id="decision-evidence">
+            Decisions you can inspect
+          </h2>
+          <p className="mt-4 leading-8 text-jb-ink/76">
+            Three compact traces show how I turn a question into an executable
+            decision, a public-safe artifact, and something other people can use.
+          </p>
+        </div>
+        <div className="mt-7 divide-y divide-jb-ink/14 border-y border-jb-ink/18">
+          {decisionEvidence.map((item) => (
+            <article
+              className="grid gap-5 py-7 lg:grid-cols-[0.3fr_0.7fr]"
+              key={item.project}
+            >
+              <div>
+                <h3 className="text-2xl font-semibold">
+                  <Link
+                    className="text-jb-blue hover:text-jb-green"
+                    href={item.href as Route}
+                  >
+                    {item.project}
+                  </Link>
+                </h3>
+                <p className="mt-3 leading-7 text-jb-ink/72">{item.question}</p>
+              </div>
+              <dl className="grid gap-4 sm:grid-cols-3">
+                <div>
+                  <dt className="font-semibold text-jb-ink">Decision and action</dt>
+                  <dd className="mt-2 text-sm leading-6 text-jb-ink/72">
+                    {item.decision}
+                  </dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-jb-ink">Inspectable artifact</dt>
+                  <dd className="mt-2 text-sm leading-6 text-jb-ink/72">
+                    {item.artifact}
+                  </dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-jb-ink">What became usable</dt>
+                  <dd className="mt-2 text-sm leading-6 text-jb-ink/72">
+                    {proofText(item.resultProofId)}
+                  </dd>
+                </div>
+              </dl>
+            </article>
+          ))}
+        </div>
+      </section>
 
       <section className="border-t-4 border-jb-ink py-12" aria-labelledby="product-team-transfer">
         <div className="grid gap-8 lg:grid-cols-[0.34fr_0.66fr]">
