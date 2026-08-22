@@ -202,6 +202,22 @@ test("signature situations retain concrete operating mechanics", async () => {
   );
 });
 
+test("the historical Epstein case keeps lifecycle and handoff boundaries explicit", async () => {
+  const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
+  const contract = loadContract();
+  const result = evaluateTechnicalOperationsPageOwners({
+    contract,
+    pageSource: loadPageSource(contract).replace(
+      "The historical engagement ended in 2015.",
+      "The work continued."
+    )
+  });
+
+  assert.ok(
+    result.failures.includes("historical_hje_lifecycle_boundary_is_explicit")
+  );
+});
+
 test("the five-part operating method remains intact", async () => {
   const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
   const contract = loadContract();

@@ -19,7 +19,7 @@ const signatureSituations = [
     responsibility:
       "I coordinated day-to-day web and e-commerce work: sequencing releases, maintaining analytics and content operations, and translating legacy knowledge into clear requirements.",
     operatingMechanics:
-      "Incremental releases connected public content, e-commerce, analytics, marketing, and internal workflows; this was sustained stewardship rather than a one-time launch.",
+      "Incremental releases connected public content, e-commerce, analytics, marketing, and internal workflows; this was sustained stewardship rather than a one-time launch. The historical engagement ended in 2015. Its public-safe handoff reconstruction preserves clear requirements, verification practices, reusable patterns, and owned next actions, while the successor website is current business context—not Jamie's present stewardship.",
     resultProofIds: [
       "hje-modernization-stewardship",
       "hje-revenue-growth-contribution"

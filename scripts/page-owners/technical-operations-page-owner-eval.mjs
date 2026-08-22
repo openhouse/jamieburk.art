@@ -120,6 +120,14 @@ export function evaluateTechnicalOperationsPageOwners({
       /Public records became issue paths, district context, and possible next steps/.test(
         pageSource
       ),
+    historical_hje_lifecycle_boundary_is_explicit:
+      /The historical engagement ended in 2015/.test(pageSource) &&
+      /public-safe handoff reconstruction preserves clear requirements, verification practices, reusable patterns, and owned next actions/.test(
+        pageSource
+      ) &&
+      /successor website is current business context—not Jamie's present stewardship/.test(
+        pageSource
+      ),
     five_part_operating_method:
       /term: "Frame the work"[\s\S]*term: "Make ownership visible"[\s\S]*term: "Create a delivery rhythm"[\s\S]*term: "Prepare for adoption"[\s\S]*term: "Leave a useful handoff"/.test(
         pageSource
