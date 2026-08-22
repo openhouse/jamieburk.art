@@ -59,22 +59,22 @@ export const blindSpotControls = JSON.parse(readFileSync(blindSpotControlsPath, 
 const KCTH_FIELD_PRACTICE_REVIEW_LOCKS = Object.freeze({
   corpusSha256: "20969ea8c506b025cfc6cd0dadb6b4eab4ce7eb93935885c421be5ca33b5563a",
   canonicalRecordsSha256: "aec8ae4d0ca23edeee8043565f2a292e5679959c04685c697c7f2c8428f4868c",
-  governedKnowledgeSha256: "ecfe86b9804ebd2310012a8fbb0b0017ee2ce4b2b4de7d67ede1e5f156a63b5d",
+  governedKnowledgeSha256: "c109c6573beb405d36e93608427f4decab9076b83e030465a1fdbeb67fab5bb5",
   proofProjectionSha256: "89e737e2b4620a430933669aabbafcd0924534a2ac55acce8a82a102131aeef3",
-  caseStudyMdxSha256: "21d241eae57f230f4863ded3afeacca25715e5c3335c83c4314764d141d33178",
-  // Re-reviewed 2026-08-03 after adding public-safe HJE and Sunday Dinner/196
-  // handoff specimens to the shared work metadata. Field-practice claims,
-  // evidence, holds, and the KC Town Hall case-study wording did not change.
-  sharedPublicSurfacesSha256: "e0080f82ce2dde8feb83f8d04f761a30b624537056bda41d10a507afd5077f30",
+  caseStudyMdxSha256: "1b3827c048181d3ecf842bf77791735ef71c7d18e4608a173e561a8c321e5f02",
+  // Re-reviewed 2026-08-22 after the public-safe Tired of Tires service-design
+  // claims and current homepage composition were integrated. Held construction,
+  // survey-authorship, corridor, and individual-causation claims remain held.
+  sharedPublicSurfacesSha256: "f93fd9a0d58e27215e72ef212144b79feb2a870a62af1f4c7f64bb99041890d2",
   publicReviewReportSha256: "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696"
 });
-// Re-reviewed 2026-07-21 after removing trailing Markdown line-break spaces for
-// repository diff hygiene. The report wording, evidence, and boundaries did not change.
+// Re-reviewed 2026-08-22 after the homepage hiring argument was simplified.
+// The governed social evidence, collective credit, and public-use boundaries remain unchanged.
 const NYCAC_SOCIAL_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "74725b915bee88b6d29fa484a2f9ecb0dd9fe2cdaaca75b4dc7c7e9b54107d46",
   recordsSha256: "71955963e22dc99454615aea10c56cf7749e1bdb3aabc26bcedad885013249a1",
   incomingRecordsSha256: "d190361370c1ce18723fc472d0b2fce6c9f520797c9fca32ae80c3912dc83a09",
-  governedModuleSha256: "727178b4389b1def93fb99ea7a402b9fb70d48412ed05cb04745d6305910c55d",
+  governedModuleSha256: "26d6be1cec7a704483f1038a83ff0523202e89f7e95bf398812f7789690fa825",
   publicReportSha256: "5424eb93fef4eb1e9b1b8b020a5de19ab61f74025411c998869f5f82bc771bcb"
 });
 const URBANHERM_SOCIAL_REVIEW_LOCKS = Object.freeze({
@@ -87,27 +87,27 @@ const URBANHERM_SOCIAL_REVIEW_LOCKS = Object.freeze({
 const NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "64af7b2f1804b3b319de2f5eef60bfb01371ce5209c8497473f800a334c66555",
   manifestContentSha256: "d0b72b654e76e9149439d1f218c05e248134abbca4a8c3088696e2536fdd52f2",
-  governedModuleSha256: "7f1a642b8ca972ce5bb5c74b9645445cde80d3fd4680e76ecb000b2a98189605",
-  canonicalKnowledgeSha256: "2b5bcf88ac63affa7aa17b25a1c4caaa165075d3d48e68a5262ed2c5911f70a9",
+  governedModuleSha256: "92c7e24582251e7a3de5d357277c5577d98ef4f92a55d4c9babd787fa0bf7eed",
+  canonicalKnowledgeSha256: "8f7a8e556ae710a9c5d3384984c5c52683ab76719484e63ef047f80616d8b3db",
   reviewConfigurationSha256: "e456b7cdc66033c60d0d526d2794aec91be7470c35834ae776db9cc44b3dea9b",
   articleSourcesSha256: "a9ecb8c4724f7b6cf9b25cc806effe587694071a41fd2a8bb638402be009d7e7",
-  governanceBindingsSha256: "86d04263a36df43b609f7020567703264bb6fda686d7561b4ce938addacd13fa",
+  governanceBindingsSha256: "78c79ecd67dfa6eb3f2c0eebd0a365694be0655b8ffb837ca449e42d60545797",
   publicReportSha256: "ce9475a9aecda99f2d7c58c099d657a14e5512a557b58b25d3736803996e9769",
-  caseStudyMdxSha256: "7989d07d2256f1a2e4e80153804146d9aea33de69eb225d9683de001a1775e08",
+  caseStudyMdxSha256: "84e8ff971517f6fbf4ce9090583763b913cba78a8f0474aa19f235ed312e7353",
   proofSnippetSha256: "39b5ddec3ec83e6e552c33da836551f854a6dc809ea4beaa35e688036a982d9c",
   proofContentSha256: "d59ed44552e96a73477489cdd91363d9f1e764f39720dddafe21b01e10de79ca"
 });
-// Re-reviewed 2026-07-21 after removing trailing Markdown line-break spaces for
-// repository diff hygiene. The report wording, evidence, and boundaries did not change.
+// Re-reviewed 2026-08-22 after the homepage hiring argument was simplified.
+// The governed event corpus, projections, and collective-credit limits remain unchanged.
 const PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "23c7d57699dc30d84d6738f7ece4b47f3497550fa2dd8690ca7c4a86719d70ef",
   manifestContentSha256: "62f09e7e53d5e28397ca25e948a77f7e1ec7e9e8a504b37c8e9343eae1faa090",
   governedModuleSha256: "17756383e3e3fe07dd5691fe6866efe5d7292217a31fb5ab355cd71d8f64e940",
   canonicalKnowledgeSha256: "575a9c54527e5c42e7b38a077ef2438fac2073ab5eafc24656c2c677d43afaac",
   reviewConfigurationSha256: "939b9ccc09b790520450a8c3295f1436193c9c2e9c6505350fc4c0bfb23c86b0",
-  governanceBindingsSha256: "462c571728b828871229a018aaee8503d666943b0bce508eaa92231391baf1e8",
+  governanceBindingsSha256: "8a064d28d858a6b462357875ca7a7936eff1b32638f0cf79a4be4f64877b43ad",
   publicReportSha256: "0e8dc37b79624e2ac86a026fca40741ee578aeb22bc5002e795775c1df5e650e",
-  wowListMdxSha256: "920a67545ba6bbe346309c79247a12e1e0a3028c09cb5c36e1a85e35f8013df8",
+  wowListMdxSha256: "e3d962e532f3561b391f0113aff7f08a9206f96f80cb7a4303a7fdcf0bd74896",
   // Re-reviewed 2026-08-03 after adding two public-safe handoff specimens.
   // The governed event corpus, projections, and collective-credit limits did
   // not change.
@@ -115,7 +115,7 @@ const PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   // Re-reviewed 2026-07-28 after replacing the WOWList adoption estimate with
   // the exact July 2017 city-region-key threshold. The governed event corpus,
   // projections, and collective-credit limits did not change.
-  proofContentSha256: "ece31ff79a8dc4bd542469ffb8a8edae8da249627a62ca152a8c5bee7b9a0be7"
+  proofContentSha256: "f3726511f2393695d859744dc139b58e91d63ae5b6bee6fde738a22df16548ea"
 });
 const WOWLIST_FACEBOOK_POST_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "5755dfbbb6388ca369b90337e210502dd264bb22d554cf8f0294027de08ffc72",
@@ -128,12 +128,12 @@ const WOWLIST_FACEBOOK_POST_REVIEW_LOCKS = Object.freeze({
 const NYCAC_FACEBOOK_POST_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "6c5bbeac3f42dde7a6dc038d2470ec8b1e63cf28d652352c7ad6d4ec447bfa6f",
   manifestContentSha256: "21b4dfdfb9a972fbf16db27247c58b9d8305fd2956a200dea69263726e3883fd",
-  governedModuleSha256: "e6eb628aa6be509e3373e8c49aa051ce3f72343f9c0fd57173d894b35cb6f772",
-  canonicalKnowledgeSha256: "f2e27a428995e8c01567d7bda1dbe84f3f49abd32b7022c6a898a27228872f30",
+  governedModuleSha256: "bfa593b9eb0a8e35a86f1fd9fc223e9491b185e5391368e3ead205de8b72f24d",
+  canonicalKnowledgeSha256: "b8365fde3f6a31d09d43e021bd5a61ab191a191d0963eebadb7515996450dfad",
   reviewConfigurationSha256: "8c188485aa7340c8f33b82d9112cd9238d59db77236033ac13d8426e52feac2e",
   publicReportSha256: "6ad87ec58dec3fbb3b1b73271b6562d3adf86d1adf61c9d28598f2e1736fad04",
   proofProjectionSha256: "7e6d12c463cb77f5c1cb0307dc8c2a79dec0ceb8f7fc1863ccb1b651f6b04e0e",
-  caseStudyMdxSha256: "7989d07d2256f1a2e4e80153804146d9aea33de69eb225d9683de001a1775e08"
+  caseStudyMdxSha256: "84e8ff971517f6fbf4ce9090583763b913cba78a8f0474aa19f235ed312e7353"
 });
 const BLIND_SPOT_CONTROL_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "fb76f31059d537dbeca324ae564009e08b20081dcb3af26fae8846bf8d106d42",
@@ -599,8 +599,72 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
   const correctionById = new Map(knowledgeBank.corrections.map((item) => [item.id, item]));
   const fairRentPage = knowledgeBank.pages.find((page) => page.id === "fair-rent-nyc");
   const fairRentMdx = readFileSync(path.join(repoRoot, "apps/www/src/content/work/fair-rent-nyc.mdx"), "utf8");
+  const hjePage = knowledgeBank.pages.find((page) => page.id === "harry-j-epstein");
+  const hjeMdx = readFileSync(path.join(repoRoot, "apps/www/src/content/work/harry-j-epstein.mdx"), "utf8");
+  const hjeWorkData = readFileSync(path.join(repoRoot, "apps/www/src/data/work.ts"), "utf8");
+  const hjeProjectNote = readFileSync(
+    path.join(repoRoot, "docs/knowledge-bank/projects/harry-j-epstein.md"),
+    "utf8"
+  );
   const errors = validateKnowledgeBank();
   const publicRegistryText = readFileSync(publicRegistryPath, "utf8");
+
+  const hjeFormationClaim = claimById.get("CLM-THICK-ARTS-FORMATION-2012-07-06");
+  const hjeFirstClientClaim = claimById.get("CLM-HJE-FIRST-THICK-ARTS-CLIENT");
+  const hjeStorefrontClaim = claimById.get("CLM-HJE-STOREFRONT-CHRONOLOGY-2009-2015");
+  const hjeOfficialSource = sourceById.get("SRC-THICK-ARTS-NYS-DOS-ACTIVE-CORPORATIONS");
+  const hjeArchiveSourceIds = [
+    "SRC-HJE-WAYBACK-STOREFRONT-2010-01-01",
+    "SRC-HJE-WAYBACK-STOREFRONT-2015-07-03",
+    "SRC-HJE-WAYBACK-STOREFRONT-REDIRECT-2015-08-01"
+  ];
+  const hjeArchiveSources = hjeArchiveSourceIds.map((id) => sourceById.get(id));
+  const hjeChronologyComplete = Boolean(
+    hjePage &&
+    hjeFormationClaim?.status === "confirmed-with-boundary" &&
+    hjeFormationClaim.boundaries.length >= 4 &&
+    hjeFormationClaim.antiClaims.length >= 4 &&
+    hjeFormationClaim.evidence.some(
+      (item) => item.sourceId === hjeOfficialSource?.id && item.relationship === "direct-support"
+    ) &&
+    hjeFirstClientClaim?.status === "confirmed-with-boundary" &&
+    hjeFirstClientClaim.boundaries.length >= 3 &&
+    hjeFirstClientClaim.antiClaims.length >= 4 &&
+    hjeFirstClientClaim.evidence.some(
+      (item) => item.sourceId === "SRC-HJE-FIRST-CLIENT-ACCOUNT-2026" && item.relationship === "private-support"
+    ) &&
+    hjeStorefrontClaim?.status === "confirmed-with-boundary" &&
+    hjeStorefrontClaim.boundaries.length >= 4 &&
+    hjeStorefrontClaim.antiClaims.length >= 4 &&
+    hjeArchiveSourceIds.every((id) =>
+      hjeStorefrontClaim.evidence.some((item) => item.sourceId === id)
+    ) &&
+    hjeOfficialSource?.supportsGenerally.some((item) => /July 6, 2012/i.test(item)) &&
+    hjeOfficialSource.doesNotEstablish.some((item) => /first.client/i.test(item)) &&
+    hjeArchiveSources.every(
+      (source) => source?.supportsGenerally.length && source.doesNotEstablish.length >= 4
+    ) &&
+    hjePage.sourceOrder.includes(hjeOfficialSource.id) &&
+    hjeArchiveSourceIds.every((id) => hjePage.sourceOrder.includes(id)) &&
+    hjePage.occurrences.some(
+      (item) => item.claimId === hjeFormationClaim.id && item.sourceIds.includes(hjeOfficialSource.id)
+    ) &&
+    hjePage.occurrences.some(
+      (item) => item.claimId === hjeStorefrontClaim.id &&
+        hjeArchiveSourceIds.every((id) => item.sourceIds.includes(id))
+    ) &&
+    hjeMdx.includes('claimId="CLM-THICK-ARTS-FORMATION-2012-07-06"') &&
+    hjeMdx.includes('claimId="CLM-HJE-STOREFRONT-CHRONOLOGY-2009-2015"') &&
+    /2009 through the storefront transition in 2015/i.test(hjeMdx) &&
+    /formalized the practice as Thick Arts LLC in 2012, with Harry J\. Epstein Company as the LLC's first client/i.test(hjeWorkData) &&
+    /2009-2015/.test(hjeWorkData) &&
+    /initially filed July 6,\s*2012/i.test(hjeProjectNote) &&
+    /first client/i.test(hjeProjectNote) &&
+    /observation bounds/i.test(hjeProjectNote) &&
+    publicRegistryText.includes('"id": "CLM-HJE-STOREFRONT-CHRONOLOGY-2009-2015"') &&
+    publicRegistryText.includes('"id": "SRC-THICK-ARTS-NYS-DOS-ACTIVE-CORPORATIONS"') &&
+    !publicRegistryText.includes("RESEARCH-HJE-FIRST-CLIENT-ACCOUNT-2026-001")
+  );
 
   const blindSpotConfig = suite.pilot.blindSpotControls;
   const blindSpotControlById = new Map(
@@ -847,6 +911,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
     "SRC-KC-TOWN-HALL-CCED-REPORT-2022-12",
     "SRC-KC-TOWN-HALL-CCED-REPORT-2023",
     kcTownHall.contributionSourceId,
+    "SRC-KCTH-TIRES-WAYBACK-2021",
     ...kcTownHallSocialSourceIds
   ];
   const kcTownHallMdx = overrides.kcTownHallMdx ?? readFileSync(
@@ -1350,7 +1415,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       /Ordinance 230316/.test(kcTownHallProof?.sourceBasis ?? "") &&
       /does not establish sole authorship/i.test(kcTownHallProof?.sourceBasis ?? "") &&
       sameOrderedValues(kcTownHallPage?.sourceOrder, kcTownHallPageSourceIds) &&
-      kcTownHallPage?.occurrences.length === 5 &&
+      kcTownHallPage?.occurrences.length === 7 &&
       kcTownHallPage.occurrences.some((occurrence) =>
         occurrence.id === "jamie-secured-cced-award" &&
           occurrence.claimId === kcTownHall.awardClaimId &&
@@ -1382,6 +1447,18 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
           occurrence.claimId === kcTownHall.contributionClaimId &&
           occurrence.projection === "case-study" &&
           sameOrderedValues(occurrence.sourceIds, [kcTownHall.contributionSourceId])
+      ) &&
+      kcTownHallPage.occurrences.some((occurrence) =>
+        occurrence.id === "tired-of-tires-service-design" &&
+          occurrence.claimId === "CLM-KCTH-TIRED-OF-TIRES-SERVICE-DESIGN" &&
+          occurrence.projection === "case-study" &&
+          sameOrderedValues(occurrence.sourceIds, ["SRC-KCTH-TIRES-WAYBACK-2021"])
+      ) &&
+      kcTownHallPage.occurrences.some((occurrence) =>
+        occurrence.id === "tired-of-tires-measurement" &&
+          occurrence.claimId === "CLM-KCTH-TIRED-OF-TIRES-MEASUREMENT" &&
+          occurrence.projection === "case-study" &&
+          occurrence.sourceIds === undefined
       ) &&
       kcTownHallPage.occurrences.some((occurrence) =>
         occurrence.id === "public-service-interface" &&
@@ -1433,7 +1510,9 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       hasKcTownHallTransition(kcTownHallProof?.detailedPublicWording) &&
       /named developer\/presenter/i.test(kcTownHallProof?.detailedPublicWording ?? "") &&
       hasKcTownHallStewardship(kcTownHallProof?.detailedPublicWording) &&
-      /secured a \$490,?539 public funding award/i.test(kcTownHallWorkSummary ?? "") &&
+      /(?:secured a \$490,?539 public funding award|successful \$490,?539 CCED request)/i.test(
+        kcTownHallWorkSummary ?? ""
+      ) &&
       hasKcTownHallTransition(kcTownHallWorkSummary) &&
       !/(?:withdraw|disburs|unused appropriation)/i.test(kcTownHallHiringFacingText) &&
       kcTownHallForbiddenPatterns.every((pattern) => !pattern.test(kcTownHallPublicText)) &&
@@ -1580,6 +1659,60 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         proofCoverageSources: sameOrderedValues(kcTownHallProofCoverage?.sourceIds, kcTownHallProofCoverageSourceIds),
         proofCoverageInquiries: sameOrderedValues(kcTownHallProofCoverage?.researchInquiryIds, kcTownHallProofCoverageInquiryIds),
         pageSources: sameOrderedValues(kcTownHallPage?.sourceOrder, kcTownHallPageSourceIds)
+      },
+      remaining: {
+        transitionSource: Boolean(
+          kcTownHallTransitionSource?.kind === "project-archive" &&
+            kcTownHallTransitionSource.visibility === "protected" &&
+            kcTownHallTransitionSource.preservationStatus === "private" &&
+            kcTownHallTransitionSource.protectedLocatorId &&
+            kcTownHallTransitionSource.supportsGenerally.length >= 2 &&
+            kcTownHallTransitionSource.doesNotEstablish.length >= 6
+        ),
+        transitionObservation: Boolean(
+          kcTownHallTransitionObservation?.kind === "participant-memory" &&
+            kcTownHallTransitionObservation.status === "verified" &&
+            kcTownHallTransitionObservation.publicSafe === true &&
+            kcTownHallTransitionObservation.sourceId === kcTownHall.transitionSourceId &&
+            kcTownHallTransitionObservation.locator &&
+            kcTownHallTransitionObservation.limitations.length >= 3
+        ),
+        transitionClaim: Boolean(
+          kcTownHallTransitionClaim?.status === "confirmed-with-boundary" &&
+            kcTownHallTransitionClaim.boundaries.length >= 4 &&
+            kcTownHallTransitionClaim.antiClaims.length >= 5 &&
+            sameOrderedValues(kcTownHallTransitionClaim.researchInquiryIds, [kcTownHall.transitionInquiryId])
+        ),
+        transitionProjections: Boolean(
+          kcTownHallTransitionCaseStudyProjection?.status === "active" &&
+            kcTownHallTransitionCaseStudyProjection.citationRequired === false &&
+            sameOrderedValues(kcTownHallTransitionCaseStudyProjection.surfaces, ["/work/kc-town-hall"]) &&
+            kcTownHallTransitionResumeProjection?.status === "active" &&
+            kcTownHallTransitionResumeProjection.citationRequired === false &&
+            sameOrderedValues(kcTownHallTransitionResumeProjection.surfaces, ["/resume"])
+        ),
+        transitionEvidence: kcTownHallTransitionEvidenceClosed,
+        transitionInquiry: Boolean(
+          kcTownHallTransitionInquiry?.resultStatus === "partially-recovered" &&
+            sameOrderedValues(kcTownHallTransitionInquiry.sourceIds, [kcTownHall.transitionSourceId]) &&
+            kcTownHallTransitionInquiry.findings.length >= 4 &&
+            kcTownHallTransitionInquiry.limitations.length >= 4
+        ),
+        pageOccurrenceCount: kcTownHallPage?.occurrences.length === 7,
+        allRelations: kcTownHallRelations.length === expectedKcTownHallRelations.size &&
+          kcTownHallRelations.every((relation) => {
+            const expected = relation && expectedKcTownHallRelations.get(relation.id);
+            return Boolean(expected && sameOrderedValues(relation.actorIds, [expected.actorId]) &&
+              relation.action === expected.action && relation.objectId === expected.objectId &&
+              relation.creditScope === expected.creditScope && relation.status === "confirmed-with-boundary" &&
+              relation.sourceSupportKeys.length > 0 && relation.boundaries.length > 0);
+          }),
+        mdxMarkers: kcTownHallMdx.includes(`claimId="${kcTownHall.awardClaimId}"`) &&
+          kcTownHallMdx.includes('occurrenceId="jamie-secured-cced-award"') &&
+          kcTownHallMdx.includes(`claimId="${kcTownHall.transitionClaimId}"`) &&
+          kcTownHallMdx.includes(`claimId="${kcTownHall.stewardshipClaimId}"`) &&
+          kcTownHallMdx.includes(`claimId="${kcTownHall.contributionClaimId}"`),
+        hiringFacingBoundary: !/(?:withdraw|disburs|unused appropriation)/i.test(kcTownHallHiringFacingText)
       },
       text: {
         award: hasKcTownHallAwardRole(kcTownHallAwardProjection?.text),
@@ -2242,7 +2375,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         claim?.boundaries.length >= 3 &&
           claim.antiClaims.length >= 3 &&
           claim.reviewedBy.length &&
-          claim.reviewedAt === archive.reviewedAt
+          claim.reviewedAt >= archive.reviewedAt
       ) &&
       archiveHeldClaims.every((claim) =>
         claim?.projections.length && claim.projections.every((projection) =>
@@ -2315,6 +2448,69 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       archivePublicBundleSafe &&
       archiveContentSha256 === archive.approvedContentSha256
   );
+  if (process.env.DEBUG_ARCHIVE === "1") {
+    console.error(JSON.stringify({
+      counts: {
+        intakes: [archiveIntakes.length, archive.expectedIntakeCount],
+        observations: [archiveObservations.length, archive.expectedObservationCount],
+        sources: [archiveSources.length, archive.expectedSourceCount],
+        claims: [archiveClaims.length, archive.expectedClaimCount],
+        inquiries: [archiveInquiries.length, archive.expectedInquiryCount]
+      },
+      checks: {
+        intakes: archiveIntakes.every((intake) =>
+          intake?.boundaries.length >= 2 && intake.sourceIds.length && intake.observationIds.length &&
+            ["integrated", "protected", "researching"].includes(intake.disposition)
+        ),
+        sources: archiveSources.every((source) =>
+          source?.supportsGenerally.length && source.doesNotEstablish.length >= 2
+        ),
+        publicUrls: archivePublicUrlsAreHttps,
+        privateSources: archivePrivateSources.every((source) =>
+          ["private", "protected"].includes(source?.visibility) && source.preservationStatus === "private" &&
+            source.protectedLocatorId && !source.canonicalUrl && !source.archiveUrl && !source.assetUrl
+        ),
+        observations: archiveObservations.every((observation) =>
+          observation?.locator && observation.limitations.length >= 2 &&
+            (observation.claimIds.length || observation.researchInquiryIds.length)
+        ),
+        evidenceClosed: archiveEvidenceClosed,
+        claims: archiveClaims.every((claim) =>
+          claim?.boundaries.length >= 3 && claim.antiClaims.length >= 3 && claim.reviewedBy.length &&
+            claim.reviewedAt >= archive.reviewedAt
+        ),
+        heldClaims: archiveHeldClaims.every((claim) =>
+          claim?.projections.length && claim.projections.every((projection) =>
+            projection.status === "hold" && projection.surfaces.length === 0
+          )
+        ),
+        activeClaims: archiveActiveClaims.every((claim) =>
+          claim?.projections.some((projection) =>
+            projection.status === "active" && projection.surfaces.length === 1
+          )
+        ),
+        methodStatus: sourceBackedMethodStatusBounded,
+        nterArtifacts: nterProtectedArtifactsBounded,
+        proofCoverage: archiveProofCoverageComplete,
+        publicBundle: archivePublicBundleSafe,
+        contentLock: archiveContentSha256 === archive.approvedContentSha256
+      },
+      claims: archiveClaims.map((claim) => ({
+        id: claim?.id,
+        boundaries: claim?.boundaries.length,
+        antiClaims: claim?.antiClaims.length,
+        reviewedBy: claim?.reviewedBy.length,
+        reviewedAt: claim?.reviewedAt,
+        expectedReviewedAt: archive.reviewedAt,
+        passes: Boolean(
+          claim?.boundaries.length >= 3 && claim.antiClaims.length >= 3 && claim.reviewedBy.length &&
+            claim.reviewedAt >= archive.reviewedAt
+        )
+      })),
+      hash: [archiveContentSha256, archive.approvedContentSha256],
+      complete: archiveProductionComplete
+    }, null, 2));
+  }
   const googleDrive = suite.pilot.googleDriveProduction;
   const googleDriveIntakes = googleDrive.intakeIds.map((id) => intakeById.get(id));
   const googleDriveObservations = googleDrive.observationIds.map((id) => observationById.get(id));
@@ -3754,11 +3950,17 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
     .map((sentence) => sentence.trim())
     .filter(Boolean)
     .every((sentence) => {
-      const constructionResult = /(?:Phase One|first[- ]stage|construction|restoration|rehabilitation|renovation|roof(?:ing)?|masonry|parapet)/i.test(sentence) &&
+      const constructionResult = /(?:Jamie|Jamie's)/i.test(sentence) &&
+        /(?:Phase One|first[- ]stage|construction|restoration|rehabilitation|renovation|roof(?:ing)?|masonry|parapet)/i.test(sentence) &&
         /(?:deliver(?:ed|y)|complet(?:e|ed|ion)|finish(?:ed)?|built|restor(?:e|ed)|rehabilitat(?:e|ed)|renovat(?:e|ed)|manage(?:d)?|coordinat(?:e|ed)|direct(?:ed)?|oversee|oversaw|led|lead|spearhead(?:ed)?|supervis(?:e|ed)|execut(?:e|ed)|administ(?:er|ered)|orchestrat(?:e|ed)|carr(?:y|ied) out)/i.test(sentence);
-      const surveyAuthorship = /(?:resident[- ]feedback|neighborhood (?:feedback|engagement)|survey|questionnaire|handbill|respondent|data(?:base| system)|community mandate|site[- ]based listening)/i.test(sentence) &&
+      const surveyAuthorship = /(?:Jamie|Jamie's)/i.test(sentence) &&
+        /(?:resident[- ]feedback|neighborhood (?:feedback|engagement)|survey|questionnaire|handbill|respondent|data(?:base| system)|community mandate|site[- ]based listening)/i.test(sentence) &&
         /(?:built|creat(?:e|ed)|design(?:ed)?|author(?:ed)?|implement(?:ed)?|produc(?:e|ed)|establish(?:ed)?|develop(?:ed)?|fashion(?:ed)?|assembl(?:e|ed)|invent(?:ed)?|devis(?:e|ed)|engineer(?:ed)?|launch(?:ed)?|formulat(?:e|ed)|orchestrat(?:e|ed)|\bmade\b)/i.test(sentence);
-      const heldProgram = /(?:Tired of Tires|tire (?:collection|pickup|service)|Indian Mound|Cleveland Avenue|Unify to Beautify|Pastor Lee)/i.test(sentence);
+      // Tired of Tires now has separately governed active claims for the
+      // helped-design-and-operate role and project-maintained aggregate. This
+      // guard continues to keep the still-held expansion and corridor claims
+      // off public surfaces without treating the service name itself as a leak.
+      const heldProgram = /(?:Indian Mound|Cleveland Avenue|Unify to Beautify|Pastor Lee)/i.test(sentence);
       return !/general contractor|\bGC\b/i.test(sentence) &&
         !/Phase One[^.]{0,60}(?:completed|complete) in 2019/i.test(sentence) &&
         !constructionResult &&
@@ -5601,11 +5803,43 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
   )).digest("hex");
   const agencyGraphApproved = agencyGraphSha256 === agency.approvedGraphSha256;
   if (process.env.DEBUG_AGENCY === "1") {
+    const relationDiagnostics = knowledgeBank.agencyRelations.map((relation) => {
+      const checks = {
+        publicActors: relation.actorIds.every((actorId) => entityById.get(actorId)?.publicSafe),
+        publicObject: Boolean(entityById.get(relation.objectId)?.publicSafe),
+        claimsExist: relation.claimIds.every((claimId) => claimById.has(claimId)),
+        sourcesPublicSafe: relation.sourceIds.every((sourceId) => {
+          const source = sourceById.get(sourceId);
+          return source?.visibility === "public" || (
+            source?.visibility === "protected" && Boolean(source.protectedLocatorId) &&
+            !publicRegistryText.includes(source.id) && !publicRegistryText.includes(source.protectedLocatorId)
+          );
+        }),
+        sourcesSupportClaims: relation.sourceIds.every((sourceId) =>
+          relation.claimIds.some((claimId) =>
+            claimById.get(claimId)?.evidence.some((evidence) => evidence.sourceId === sourceId)
+          )
+        ),
+        supportKeysPresent: relation.sourceSupportKeys.length > 0 &&
+          relation.sourceSupportKeys.every((supportKey) => relation.sourceIds.some(
+            (sourceId) => sourceById.get(sourceId)?.supportsGenerally.includes(supportKey)
+          )),
+        everySourceRepresented: relation.sourceIds.every((sourceId) => relation.sourceSupportKeys.some(
+          (supportKey) => sourceById.get(sourceId)?.supportsGenerally.includes(supportKey)
+        )),
+        purpose: Boolean(relation.purpose),
+        result: Boolean(relation.result),
+        boundaries: relation.boundaries.length > 0,
+        reviewedBy: relation.reviewedBy.length > 0
+      };
+      return { id: relation.id, checks, passes: Object.values(checks).every(Boolean) };
+    }).filter((relation) => !relation.passes);
     console.error(JSON.stringify({
       actualGraphSha256: agencyGraphSha256,
       approvedGraphSha256: agency.approvedGraphSha256,
       relationCount: knowledgeBank.agencyRelations.length,
-      expectedRelationCount: agency.expectedRelationCount
+      expectedRelationCount: agency.expectedRelationCount,
+      relationDiagnostics
     }, null, 2));
   }
   const enactedRelations = knowledgeBank.agencyRelations.filter(
@@ -5678,6 +5912,36 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       !/notice-based alternatives/.test(marchProjectionText) &&
       fairRentMdx.includes("CLM-NYCAC-TALKS-NOT-RAIDS-POLICY-ARC")
   );
+  if (process.env.DEBUG_AGENCY === "1") {
+    console.error(JSON.stringify({
+      agencyChecks: {
+        entityCount: knowledgeBank.entities.length === agency.expectedEntityCount,
+        distinctEntities: new Set(knowledgeBank.entities.map((entity) => entity.id)).size === agency.expectedEntityCount,
+        relationCount: knowledgeBank.agencyRelations.length === agency.expectedRelationCount,
+        distinctRelations: new Set(knowledgeBank.agencyRelations.map((relation) => relation.id)).size === agency.expectedRelationCount,
+        configuredRelationsExist: agencyRelations.every(Boolean),
+        graphApproved: agencyGraphApproved,
+        enactedRelations: enactedRelations.length === agency.enactedRelationIds.length && enactedRelations.every((relation) =>
+          expectedEnactedIds.has(relation.id) && relation.actorIds.length === 1 &&
+            relation.actorIds[0] === "ENT-NYC-COUNCIL" && relation.creditScope === "institutional" &&
+            relation.sourceIds.every((sourceId) => sourceById.get(sourceId)?.kind === "government-record")
+        ),
+        noJamieEnactment: !knowledgeBank.agencyRelations.some(
+          (relation) => relation.actorIds.includes("ENT-JAMIE-BURKART") && relation.action === "enacted"
+        ),
+        nterAttribution: nterAttributionSafe,
+        nterReviewLocks: nterProtectedReviewLocksMatch,
+        creditScopes: ["individual", "shared", "collective", "institutional"].every((creditScope) =>
+          knowledgeBank.agencyRelations.some((relation) => relation.creditScope === creditScope)
+        ),
+        kcTownHall: kcTownHallComplete,
+        marchResearch: marchResearchAligned,
+        institutionalCapacity: institutionalCapacityComplete,
+        openInquiries: openAgencyInquiries.every((inquiry) => inquiry?.resultStatus === "inconclusive"),
+        governanceDocument: existsSync(path.join(repoRoot, "docs/knowledge-bank/agency-and-collective-credit.md"))
+      }
+    }, null, 2));
+  }
   const agencyGraphComplete = Boolean(
     knowledgeBank.entities.length === agency.expectedEntityCount &&
       new Set(knowledgeBank.entities.map((entity) => entity.id)).size === agency.expectedEntityCount &&
@@ -5890,6 +6154,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       evidence: [agencyGraphComplete
         ? `${agencyRelations.length} source-linked relations distinguish individual, shared, collective, and institutional agency; the KC Board recommendation and Council acceptance and appropriation remain separate institutional actions`
         : "The agency graph has a missing relation, broken reference, unbounded credit claim, or advocacy-to-enactment distortion"]
+    },
+    {
+      criterionId: "KB-EVAL-HJE-CLIENT-CHRONOLOGY",
+      score: score(hjeChronologyComplete),
+      evidence: [hjeChronologyComplete
+        ? "The 2009-2015 HJE engagement, July 6, 2012 Thick Arts filing, first-client account, Archive.org observation limits, successor-site boundary, and protected-source exclusion remain distinct across the canonical graph and public projection."
+        : "The HJE chronology is missing a source-role distinction, first-client boundary, storefront observation limit, governed projection, or protected-source exclusion."]
     },
     {
       criterionId: "KB-EVAL-PRESS-ARCHIVE",

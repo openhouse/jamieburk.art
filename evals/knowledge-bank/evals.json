@@ -154,7 +154,7 @@
       "transcriptAuditPath": "docs/knowledge-bank/data/nycac-finkelpearl-council-transcript-review-2026-07.json",
       "approvedTranscriptAuditSha256": "364a0f7380d9d011a00c5bb0c0ceb9775186e14981379358198c082a9c7d2fee",
       "approvedContentSha256": "810e0b33f01626bca191b83f9d67baf7bd82832eba803d5dff1bc831ad5cbc2a",
-      "approvedRelatedClaimsSha256": "09e2f7b473771a40d23d56cb2ea6b52e7737b756b52fdabff78dd39fb93b77cc",
+      "approvedRelatedClaimsSha256": "c7518d383ff7bd288764ab2f5e5f37546ebbfdf9338307a240f734d41856e235",
       "observationIds": [
         "OBS-NYCAC-DCLA-INSTITUTIONAL-USE",
         "OBS-NYCAC-FINKELPEARL-HEARING-CONTEXT",
@@ -228,8 +228,8 @@
       "stewardshipInquiryId": "INQ-KC-TOWN-HALL-ADMINISTRATIVE-STEWARDSHIP-2026",
       "proofId": "kc-town-hall-public-benefit-documentation",
       "pageId": "kc-town-hall",
-      "approvedMdxSha256": "21d241eae57f230f4863ded3afeacca25715e5c3335c83c4314764d141d33178",
-      "approvedContentSha256": "ecfe86b9804ebd2310012a8fbb0b0017ee2ce4b2b4de7d67ede1e5f156a63b5d",
+      "approvedMdxSha256": "1b3827c048181d3ecf842bf77791735ef71c7d18e4608a173e561a8c321e5f02",
+      "approvedContentSha256": "c109c6573beb405d36e93608427f4decab9076b83e030465a1fdbeb67fab5bb5",
       "contributionSourceId": "SRC-JAMIE-RESUME-KC-TOWN-HALL-2026",
       "transitionSourceId": "SRC-JAMIE-KC-TOWN-HALL-TRANSITION-AUTHORIZATION-2026",
       "contributionObservationId": "OBS-KC-TOWN-HALL-JAMIE-PLANNING-RESUME",
@@ -292,7 +292,7 @@
       "expectedSourceCount": 17,
       "expectedClaimCount": 8,
       "expectedInquiryCount": 4,
-      "approvedContentSha256": "82af297d1efcb88bf291c59486dbe63630bb54a8d56736747cd71a6400a87e38",
+      "approvedContentSha256": "283618079c192ffa4475175a808cf9368371e7f4fa444731800bd14dedd9801d",
       "intakeIds": [
         "INTAKE-HORSE-LORDS-TRUTHERS-NPR-2016",
         "INTAKE-CLAUDETTE-ARORA-2022",
@@ -1071,9 +1071,9 @@
       "proofId": "nyc-artist-coalition-public-web-infrastructure"
     },
     "agencyGraph": {
-      "expectedEntityCount": 37,
-      "expectedRelationCount": 38,
-      "approvedGraphSha256": "d342f53818fb8e2d269ad044469637db82bfa90e5edbf3a8d77e29920481ef84",
+      "expectedEntityCount": 45,
+      "expectedRelationCount": 43,
+      "approvedGraphSha256": "58dbb54f4430c30c1b5b50a95b912457fc6b4225016cafbe91d78575606a82a9",
       "relationIds": [
         "REL-WATERWAYS-RAFT-ORIGIN",
         "REL-GREAT-ACCOMMODATIONS-SPEARHEADED",
@@ -1112,7 +1112,12 @@
         "REL-JAMIE-SBU-REPORT-REVIEW-2026",
         "REL-JAMIE-SBU-RALLY-SPEAKING-2026",
         "REL-JAMIE-MARTE-OFFICE-COORDINATION-2026",
-        "REL-JAMIE-GALLAGHER-OFFICE-COORDINATION-2026"
+        "REL-JAMIE-GALLAGHER-OFFICE-COORDINATION-2026",
+        "REL-THICK-ARTS-HJE-STOREFRONT",
+        "REL-JAMIE-KCTH-OAK-PARK-TIRED-OF-TIRES",
+        "REL-KCMO-TIRED-OF-TIRES-HANDOFF",
+        "REL-NYCARTC-CULTURAL-SPACE-STORY-ADVOCACY-2026",
+        "REL-CHIOSSE-EMILY-ADVOCATED-SBRSA-REEL-2026"
       ],
       "enactedRelationIds": [
         "REL-COUNCIL-OFFICE-ENACTMENT",

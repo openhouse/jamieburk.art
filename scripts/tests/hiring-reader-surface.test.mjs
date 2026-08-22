@@ -103,8 +103,12 @@ test("the mobile hero reveals the start of the hiring path without a decorative 
     globalStyles,
     /@media \(max-width: 639px\)[\s\S]*?\.jb-hero,[\s\S]*?\.jb-hero-content \{[\s\S]*?min-height: 0;/
   );
-  assert.ok(hero.includes("jb-hero-summary-mobile"));
-  assert.ok(hero.includes("jb-hero-summary-wide"));
+  assert.match(
+    hero,
+    /I clarify requirements, build workflows and tools, carry context\s+through implementation, and leave documentation people can use\./
+  );
+  assert.ok(!hero.includes("jb-hero-summary-mobile"));
+  assert.ok(!hero.includes("jb-hero-summary-wide"));
 });
 
 test("the about page does not present completed client work as current", () => {

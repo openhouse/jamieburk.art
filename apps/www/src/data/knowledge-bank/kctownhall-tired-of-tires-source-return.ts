@@ -428,13 +428,6 @@ export const kcTownHallTiredOfTiresSourceReturn = {
   ],
   entities: [
     {
-      id: "ENT-KC-TOWN-HALL-LLC",
-      name: "KC Town Hall LLC",
-      kind: "organization",
-      aliases: ["KC Town Hall"],
-      publicSafe: true
-    },
-    {
       id: "ENT-OAK-PARK-NEIGHBORHOOD-ASSOCIATION",
       name: "Oak Park Neighborhood Association",
       kind: "organization",

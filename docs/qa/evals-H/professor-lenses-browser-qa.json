@@ -1,11 +1,11 @@
 {
-  "reportVersion": 5,
-  "checkedAt": "2026-08-21T00:16:53.000Z",
+  "reportVersion": 6,
+  "checkedAt": "2026-08-22T21:32:06.685Z",
   "baseUrl": "http://127.0.0.1:3211",
-  "publicSurfaceFingerprint": "d61271ff62e6268f70f2e044d5b87b4b0921361b424ae63c8235d968118ce0cd",
+  "publicSurfaceFingerprint": "8957c36e0c43d5650ee2512ad4a07b47aedb1ad9cce028caa2b4c073a3ba636f",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 155,
-  "captureMethod": "Fresh exact-candidate production-build browser inspection across 14 routes and four responsive widths, plus desktop and mobile captures of the changed homepage capability section. Previously retained homepage and About captures remain applicable to unchanged surfaces.",
+  "publicSurfaceFileCount": 157,
+  "captureMethod": "Fresh Playwright Chromium viewport captures of the exact local candidate, paired with the complete 56-row responsive accessibility matrix.",
   "routes": [
     {
       "path": "/",
@@ -13,6 +13,7 @@
       "h1Count": 1,
       "screenshots": [
         {
+          "route": "/",
           "name": "desktop",
           "requestedViewport": {
             "width": 1280,
@@ -20,10 +21,12 @@
           },
           "pixelWidth": 1280,
           "pixelHeight": 900,
-          "sha256": "e42b31b71365406dabc915ee08eccef4976b6db6e29e2a1deda52433e2b97728",
+          "httpStatus": 200,
+          "sha256": "86a2a9f9cc81c3368830a051237392b5988e5cef7f8839ed1a0dd77564b67ae4",
           "file": "candidate-home-desktop.png"
         },
         {
+          "route": "/",
           "name": "mobile",
           "requestedViewport": {
             "width": 375,
@@ -31,18 +34,21 @@
           },
           "pixelWidth": 375,
           "pixelHeight": 812,
-          "sha256": "640af0b11ab4bdd1f8d51a7a878d9a366d51ea2f0c2a90eb7be55849d8dc444e",
+          "httpStatus": 200,
+          "sha256": "e23e511ecd2f55840c7c92e120a6ec03ebb1837809d18bb719d90b3f13514443",
           "file": "candidate-home-viewport.png"
         },
         {
+          "route": "/",
           "name": "project-sequence-lead-desktop",
           "requestedViewport": {
             "width": 1280,
             "height": 720
           },
-          "pixelWidth": 1265,
-          "pixelHeight": 712,
-          "sha256": "a3c4cfb10324f0605724fd93624d43a5a6b1be994756522a6be7ddb15fab376c",
+          "pixelWidth": 1280,
+          "pixelHeight": 720,
+          "httpStatus": 200,
+          "sha256": "b9634afe42c58041a7171dff8b077a1e3cb271c1501c5405696f2b1af338354f",
           "file": "home-project-sequence-lead-desktop.png",
           "framedContent": {
             "selectedSystemsOpeningPresent": true,
@@ -50,14 +56,16 @@
           }
         },
         {
+          "route": "/",
           "name": "project-sequence-sunday-desktop",
           "requestedViewport": {
             "width": 1280,
             "height": 720
           },
-          "pixelWidth": 1265,
-          "pixelHeight": 712,
-          "sha256": "83f94d995f4c3440d32ac56dc4887d403c2090d2debaa5cea0a5cec8da380995",
+          "pixelWidth": 1280,
+          "pixelHeight": 720,
+          "httpStatus": 200,
+          "sha256": "7287504d443d26c67c10d7ba823d0a43a183bd9ed41803d9462ed244bb19e449",
           "file": "home-project-sequence-sunday-desktop.png",
           "framedContent": {
             "precedingProject": "WOW List",
@@ -72,6 +80,7 @@
       "h1Count": 1,
       "screenshots": [
         {
+          "route": "/about",
           "name": "desktop-through-line",
           "requestedViewport": {
             "width": 1280,
@@ -79,7 +88,8 @@
           },
           "pixelWidth": 1280,
           "pixelHeight": 900,
-          "sha256": "395d607542ac724d9671cf1b0aeab38df8b6828c2168975012a4d3be4857c1dc",
+          "httpStatus": 200,
+          "sha256": "78ad26d9e5e42f771e669376c57a09271c6855d228f8f1054fb7ede5aa8e56af",
           "file": "professor-lenses-about-desktop.png",
           "framedContent": {
             "systemsPeopleCanInhabitHeadingPresent": true,
@@ -87,6 +97,7 @@
           }
         },
         {
+          "route": "/about",
           "name": "mobile-through-line",
           "requestedViewport": {
             "width": 375,
@@ -94,7 +105,8 @@
           },
           "pixelWidth": 375,
           "pixelHeight": 1200,
-          "sha256": "bbe992f2c7124c1b4a41827c3a88fc8e4b6736da5937bef07aa75b377a36990a",
+          "httpStatus": 200,
+          "sha256": "d9dd56253c5d7ad2e76682b5e538e951f372a24ee2f54bcd025e300291dbc69e",
           "file": "professor-lenses-about-mobile.png",
           "framedContent": {
             "systemsPeopleCanInhabitHeadingPresent": true,
@@ -105,12 +117,12 @@
     }
   ],
   "passed": true,
-  "verification": "The current production container rendered six homepage project articles in the governed order, with one h1, one main landmark, zero horizontal overflow, zero unlabeled images, zero broken images, and no browser console diagnostics at 1280 CSS pixels.",
+  "verification": "Fresh desktop and mobile captures show the role-led homepage, all six compact project cards including Sunday Dinner, and the public About-page systems lineage without browser warnings or errors.",
   "refresh": {
-    "candidateChange": "The six homepage capability rows are now full-row links to the corresponding filtered work-index state; the BetaNYC opportunity-source work changes only private knowledge, evaluation, and automation surfaces.",
-    "productionBuild": "The Next.js webpack production build completed under Node 26 with TypeScript validation and static generation for all public routes.",
-    "currentRenderedInspection": "All six capability rows are visible at desktop and mobile sizes, preserve the numbered editorial sequence, and use meaningful destinations. The established six-project homepage sequence remains unchanged.",
-    "responsiveCarryForward": "No matrix carry-forward was used. The exact candidate was rerun at 360, 375, 768, and 1280 CSS pixels across all 14 routes.",
-    "browserDiagnostics": "No axe A/AA violations, horizontal overflow, broken or unlabeled images, browser warnings, browser errors, or user-facing failed requests were observed."
+    "candidateChange": "The homepage route language, single support paragraph, project-before-capabilities sequence, and compact case-study cards changed for the four-owner editorial gate.",
+    "productionBuild": "The Next.js production build, TypeScript check, and lint completed on the exact candidate.",
+    "currentRenderedInspection": "The exact desktop and mobile homepage and About captures were visually inspected; all six projects remain present and each homepage card exposes a case-study link.",
+    "responsiveRun": "All 56 route-width combinations were freshly checked at 360, 375, 768, and 1280 CSS pixels.",
+    "browserDiagnostics": "No browser warnings or errors were observed."
   }
 }

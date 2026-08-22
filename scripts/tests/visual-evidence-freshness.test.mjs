@@ -31,7 +31,7 @@ test("current visual screenshots are checksum-bound to the current public surfac
   assert.equal(visualManifest.passed, true);
 
   const captures = visualManifest.routes.flatMap((route) => route.screenshots);
-  assert.equal(captures.length, 4);
+  assert.equal(captures.length, 6);
   for (const capture of captures) {
     const screenshotPath = path.join(evidenceDir, capture.file);
     assert.ok(existsSync(screenshotPath), capture.file);

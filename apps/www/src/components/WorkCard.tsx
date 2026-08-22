@@ -7,11 +7,12 @@ import { getWorkCover } from "@/data/work-covers";
 import type { WorkMeta } from "@/types/work";
 
 type WorkCardProps = {
+  compact?: boolean;
   eager?: boolean;
   item: WorkMeta;
 };
 
-export function WorkCard({ eager = false, item }: WorkCardProps) {
+export function WorkCard({ compact = false, eager = false, item }: WorkCardProps) {
   const cover = getWorkCover(item.slug);
 
   return (
@@ -56,24 +57,28 @@ export function WorkCard({ eager = false, item }: WorkCardProps) {
           </h2>
           <p className="mt-2 font-semibold text-jb-green">{item.subtitle}</p>
           <p className="mt-4 leading-7 text-jb-ink/76">{item.summary}</p>
-          <dl className="mt-5 grid gap-4 border-t border-jb-ink/12 pt-4 text-sm sm:grid-cols-2">
-            <div>
-              <dt className="font-semibold text-jb-ink">What was emerging</dt>
-              <dd className="mt-1 leading-6 text-jb-ink/72">{item.whatWasUnclear}</dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-jb-ink">What became usable</dt>
-              <dd className="mt-1 leading-6 text-jb-ink/72">{item.whatBecameUsable}</dd>
-            </div>
-          </dl>
-          <div className="mt-5">
-            <TagList compact tags={item.tags.slice(0, 4)} />
-          </div>
+          {!compact ? (
+            <>
+              <dl className="mt-5 grid gap-4 border-t border-jb-ink/12 pt-4 text-sm sm:grid-cols-2">
+                <div>
+                  <dt className="font-semibold text-jb-ink">What was emerging</dt>
+                  <dd className="mt-1 leading-6 text-jb-ink/72">{item.whatWasUnclear}</dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-jb-ink">What became usable</dt>
+                  <dd className="mt-1 leading-6 text-jb-ink/72">{item.whatBecameUsable}</dd>
+                </div>
+              </dl>
+              <div className="mt-5">
+                <TagList compact tags={item.tags.slice(0, 4)} />
+              </div>
+            </>
+          ) : null}
           <Link
             className="mt-5 inline-block border-b border-jb-blue font-semibold text-jb-blue hover:border-jb-green hover:text-jb-green"
             href={`/work/${item.slug}` as Route}
           >
-            Read case study
+            {compact ? `Read the ${item.title} case study` : "Read case study"}
           </Link>
         </div>
       </div>
