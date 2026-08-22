@@ -1415,6 +1415,13 @@ export const archiveProductionJuly2026 = {
           status: "active",
           citationRequired: false,
           surfaces: ["/work/fair-rent-nyc"]
+        },
+        {
+          key: "technical-operations",
+          text: "The shared memory documents a current coordination practice: Jamie maintains decision records and concrete artifacts while action ownership stays explicit and neither Jamie nor the documentation is assigned sole coalition authority.",
+          status: "active",
+          citationRequired: false,
+          surfaces: ["/work/technical-operations"]
         }
       ],
       evidence: [
@@ -1423,6 +1430,8 @@ export const archiveProductionJuly2026 = {
           relationship: "private-support",
           supports: [
             "shared campaign-memory purpose",
+            "current coordination practice",
+            "present-tense account of Jamie maintaining shared memory",
             "meeting and decision record structure",
             "action and open-question tracking",
             "city and state strategy lanes",

@@ -213,8 +213,9 @@ export const proofClaims: ProofClaim[] = [
     shortWording:
       "Jamie built and stewarded 30+ pages of campaign memory for shared decisions and next steps",
     detailedPublicWording:
-      "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
-    sourceBasis: "Approved resume language and public-safe collaboration summary.",
+      "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams. A governed 2026 source note supports a current coordination practice in which Jamie maintains shared memory and concrete artifacts while action ownership remains explicit; it does not establish sole coalition authority or policy causality.",
+    sourceBasis:
+      "Approved resume language, public-safe collaboration summary, and governed metadata-only source record for protected 2026 running minutes.",
     sourceNote: "Use collective-work language and omit private coalition context.",
     whyItMatters:
       "Shows documentation as operating infrastructure for sensitive, collective civic work.",
@@ -237,7 +238,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["meeting-synthesis", "decision-records", "source-mapping"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-08-22"
   },
   {
     id: "fair-rent-source-map",

@@ -36,7 +36,7 @@ const signatureSituations = [
     responsibility:
       "I synthesized meetings, decisions, action items, public sources, policy questions, and stakeholder next steps into shared memory and actionable workstreams.",
     operatingMechanics:
-      "Public sources and publishable summaries stayed distinct from private coalition context; decision records, review questions, and next-step lanes made shared work reviewable.",
+      "Public sources and publishable summaries stayed distinct from private coalition context; decision records, review questions, and next-step lanes made shared work reviewable. The shared memory documents a current coordination practice: I maintain decision records and concrete artifacts while action ownership stays explicit and neither I nor the documentation is assigned sole coalition authority.",
     resultProofIds: ["fair-rent-campaign-memory", "fair-rent-source-map"],
     evidenceStatus:
       "Maintained coordination and source-trace resources for shared work; no policy outcome is attributed to the documentation alone."

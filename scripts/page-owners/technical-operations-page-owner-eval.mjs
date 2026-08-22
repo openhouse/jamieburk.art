@@ -128,6 +128,12 @@ export function evaluateTechnicalOperationsPageOwners({
       /successor website is current business context—not Jamie's present stewardship/.test(
         pageSource
       ),
+    active_fair_rent_lifecycle_boundary_is_explicit:
+      /shared memory documents a current coordination practice/.test(pageSource) &&
+      /maintain decision records and concrete artifacts while action ownership stays explicit/.test(
+        pageSource
+      ) &&
+      /documentation is assigned sole coalition authority/.test(pageSource),
     five_part_operating_method:
       /term: "Frame the work"[\s\S]*term: "Make ownership visible"[\s\S]*term: "Create a delivery rhythm"[\s\S]*term: "Prepare for adoption"[\s\S]*term: "Leave a useful handoff"/.test(
         pageSource

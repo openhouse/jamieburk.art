@@ -218,6 +218,22 @@ test("the historical Epstein case keeps lifecycle and handoff boundaries explici
   );
 });
 
+test("the active FairRentNYC case keeps lifecycle and authority boundaries explicit", async () => {
+  const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
+  const contract = loadContract();
+  const result = evaluateTechnicalOperationsPageOwners({
+    contract,
+    pageSource: loadPageSource(contract).replace(
+      "shared memory documents a current coordination practice",
+      "shared memory exists"
+    )
+  });
+
+  assert.ok(
+    result.failures.includes("active_fair_rent_lifecycle_boundary_is_explicit")
+  );
+});
+
 test("the five-part operating method remains intact", async () => {
   const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
   const contract = loadContract();
