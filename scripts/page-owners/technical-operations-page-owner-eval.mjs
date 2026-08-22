@@ -104,6 +104,14 @@ export function evaluateTechnicalOperationsPageOwners({
       /project: "Harry J\. Epstein Company"[\s\S]*project: "FairRentNYC \/ Commercial Rent Stabilization"[\s\S]*project: "CallNYC"/.test(
         pageSource
       ) && /Three situations, one operating practice/.test(pageSource),
+    signature_situations_have_weighted_editorial_hierarchy:
+      /const \[primarySituation, \.\.\.supportingSituations\] = signatureSituations/.test(
+        pageSource
+      ) &&
+      /Sustained implementation/.test(pageSource) &&
+      /Complementary proof/.test(pageSource) &&
+      /text-4xl/.test(pageSource) &&
+      /supportingSituations\.map/.test(pageSource),
     situation_responsibility_result_chain:
       /Situation/.test(pageSource) &&
       /My responsibility/.test(pageSource) &&

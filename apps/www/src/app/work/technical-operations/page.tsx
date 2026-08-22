@@ -19,13 +19,13 @@ const signatureSituations = [
     responsibility:
       "I coordinated day-to-day web and e-commerce work: sequencing releases, maintaining analytics and content operations, and translating legacy knowledge into clear requirements.",
     operatingMechanics:
-      "Incremental releases connected public content, e-commerce, analytics, marketing, and internal workflows; this was sustained stewardship rather than a one-time launch. The historical engagement ended in 2015. Its public-safe handoff reconstruction preserves clear requirements, verification practices, reusable patterns, and owned next actions, while the successor website is current business context—not Jamie's present stewardship.",
+      "Incremental releases connected public content, e-commerce, analytics, marketing, and internal workflows; this was sustained stewardship rather than a one-time launch.",
     resultProofIds: [
       "hje-modernization-stewardship",
       "hje-revenue-growth-contribution"
     ],
     evidenceStatus:
-      "Sustained implementation with a carefully framed contribution to business growth."
+      "Sustained implementation; the contribution to business growth is carefully framed. The historical engagement ended in 2015. Its public-safe handoff reconstruction preserves clear requirements, verification practices, reusable patterns, and owned next actions, while the successor website is current business context—not Jamie's present stewardship."
   },
   {
     project: "FairRentNYC / Commercial Rent Stabilization",
@@ -36,10 +36,10 @@ const signatureSituations = [
     responsibility:
       "I synthesized meetings, decisions, action items, public sources, policy questions, and stakeholder next steps into shared memory and actionable workstreams.",
     operatingMechanics:
-      "Public sources and publishable summaries stayed distinct from private coalition context; decision records, review questions, and next-step lanes made shared work reviewable. The shared memory documents a current coordination practice: I maintain decision records and concrete artifacts while action ownership stays explicit and neither I nor the documentation is assigned sole coalition authority.",
+      "Public sources and publishable summaries stayed distinct from private coalition context; decision records, review questions, and next-step lanes made shared work reviewable.",
     resultProofIds: ["fair-rent-campaign-memory", "fair-rent-source-map"],
     evidenceStatus:
-      "Maintained coordination and source-trace resources for shared work; no policy outcome is attributed to the documentation alone."
+      "The shared memory documents a current coordination practice: I maintain decision records and concrete artifacts while action ownership stays explicit and neither I nor the documentation is assigned sole coalition authority. No policy outcome is attributed to the documentation alone."
   },
   {
     project: "CallNYC",
@@ -50,15 +50,17 @@ const signatureSituations = [
     responsibility:
       "I independently framed the prototype, modeled issue paths and possible next steps from open records, and kept its relationship to the Council and current service status explicit.",
     operatingMechanics:
-      "Public records became issue paths, district context, and possible next steps; the lifecycle now ends in an explicit archived, unofficial state rather than a current-service claim.",
+      "Public records became issue paths, district context, and possible next steps.",
     resultProofIds: ["callnyc-civic-data-guidance"],
     evidenceStatus:
-      "Delivered resident-facing prototype with verified public coverage; current-service adoption and resident outcomes are not claimed."
+      "Delivered a resident-facing prototype with verified public coverage. Its lifecycle ends in an explicit archived, unofficial state; current-service adoption and resident outcomes are not claimed."
   }
 ].map((item) => ({
   ...item,
   results: item.resultProofIds.map(requireReadyOrCarefulProof)
 }));
+
+const [primarySituation, ...supportingSituations] = signatureSituations;
 
 const operatingMethod = [
   {
@@ -165,61 +167,137 @@ export default function TechnicalOperationsPage() {
               conditions.
             </p>
           </div>
-          <div className="divide-y divide-jb-ink/16 border-y border-jb-ink/16">
-            {signatureSituations.map((item) => (
-              <article className="py-8 first:pt-0 last:pb-0" key={item.project}>
-                <h3 className="text-3xl leading-tight text-jb-ink">
+          <div className="border-y border-jb-ink/16">
+            <article className="py-8" key={primarySituation.project}>
+              <p className="font-label text-sm uppercase tracking-[0.055em] text-jb-green">
+                Sustained implementation
+              </p>
+              <h3 className="mt-2 text-4xl leading-tight text-jb-ink">
+                <Link
+                  className="text-jb-blue hover:text-jb-green"
+                  href={primarySituation.href}
+                >
+                  {primarySituation.project}
+                </Link>
+              </h3>
+              <dl className="mt-7 grid gap-x-8 gap-y-5 sm:grid-cols-[9rem_1fr]">
+                <dt className="font-label text-sm uppercase tracking-[0.055em] text-jb-blue">
+                  Situation
+                </dt>
+                <dd className="leading-7 text-jb-ink/76">
+                  {primarySituation.situation}
+                </dd>
+                <dt className="font-label text-sm uppercase tracking-[0.055em] text-jb-blue">
+                  My responsibility
+                </dt>
+                <dd className="leading-7 text-jb-ink/76">
+                  {primarySituation.responsibility}
+                </dd>
+                <dt className="font-label text-sm uppercase tracking-[0.055em] text-jb-blue">
+                  What became usable
+                </dt>
+                <dd>
+                  <ul className="space-y-3 text-jb-ink/76">
+                    {primarySituation.results.map((proof) => (
+                      <li className="leading-7" key={proof.id}>
+                        {resultWording(proof)}
+                      </li>
+                    ))}
+                  </ul>
+                </dd>
+                <dt className="font-label text-sm uppercase tracking-[0.055em] text-jb-blue">
+                  Operating mechanics
+                </dt>
+                <dd className="leading-7 text-jb-ink/76">
+                  {primarySituation.operatingMechanics}
+                </dd>
+              </dl>
+              <p className="mt-6 max-w-[72ch] border-l-2 border-jb-ink/16 pl-4 text-sm leading-6 text-jb-ink/62">
+                <span className="font-semibold text-jb-ink/72">
+                  Lifecycle and evidence:
+                </span>{" "}
+                {primarySituation.evidenceStatus}
+              </p>
+              <Link
+                className="mt-6 inline-flex min-h-11 items-center border-b border-jb-blue font-semibold text-jb-blue hover:border-jb-green hover:text-jb-green"
+                href={primarySituation.href}
+              >
+                {primarySituation.linkLabel}
+              </Link>
+            </article>
+
+            <div className="grid border-t border-jb-ink/16 md:grid-cols-2 md:divide-x md:divide-jb-ink/16">
+              {supportingSituations.map((item, index) => (
+                <article
+                  className={`py-8 ${index === 0 ? "md:pr-8" : "border-t border-jb-ink/16 md:border-t-0 md:pl-8"}`}
+                  key={item.project}
+                >
+                  <p className="font-label text-sm uppercase tracking-[0.055em] text-jb-green">
+                    Complementary proof
+                  </p>
+                  <h3 className="mt-2 text-2xl leading-tight text-jb-ink">
+                    <Link
+                      className="text-jb-blue hover:text-jb-green"
+                      href={item.href}
+                    >
+                      {item.project}
+                    </Link>
+                  </h3>
+                  <dl className="mt-6 space-y-5">
+                    <div>
+                      <dt className="font-label text-xs uppercase tracking-[0.055em] text-jb-blue">
+                        Situation
+                      </dt>
+                      <dd className="mt-1 leading-7 text-jb-ink/76">
+                        {item.situation}
+                      </dd>
+                    </div>
+                    <div>
+                      <dt className="font-label text-xs uppercase tracking-[0.055em] text-jb-blue">
+                        My responsibility
+                      </dt>
+                      <dd className="mt-1 leading-7 text-jb-ink/76">
+                        {item.responsibility}
+                      </dd>
+                    </div>
+                    <div>
+                      <dt className="font-label text-xs uppercase tracking-[0.055em] text-jb-blue">
+                        What became usable
+                      </dt>
+                      <dd className="mt-1">
+                        <ul className="space-y-3 text-jb-ink/76">
+                          {item.results.map((proof) => (
+                            <li className="leading-7" key={proof.id}>
+                              {resultWording(proof)}
+                            </li>
+                          ))}
+                        </ul>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt className="font-label text-xs uppercase tracking-[0.055em] text-jb-blue">
+                        Operating mechanics
+                      </dt>
+                      <dd className="mt-1 leading-7 text-jb-ink/76">
+                        {item.operatingMechanics}
+                      </dd>
+                    </div>
+                  </dl>
+                  <p className="mt-5 border-l-2 border-jb-ink/16 pl-3 text-sm leading-6 text-jb-ink/62">
+                    <span className="font-semibold text-jb-ink/72">
+                      Lifecycle and evidence:
+                    </span>{" "}
+                    {item.evidenceStatus}
+                  </p>
                   <Link
-                    className="text-jb-blue hover:text-jb-green"
+                    className="mt-5 inline-flex min-h-11 items-center border-b border-jb-blue text-sm font-semibold text-jb-blue hover:border-jb-green hover:text-jb-green"
                     href={item.href}
                   >
-                    {item.project}
+                    {item.linkLabel}
                   </Link>
-                </h3>
-                <dl className="mt-6 grid gap-x-8 gap-y-5 sm:grid-cols-[9rem_1fr]">
-                  <dt className="font-label text-sm uppercase tracking-[0.055em] text-jb-blue">
-                    Situation
-                  </dt>
-                  <dd className="leading-7 text-jb-ink/76">{item.situation}</dd>
-                  <dt className="font-label text-sm uppercase tracking-[0.055em] text-jb-blue">
-                    My responsibility
-                  </dt>
-                  <dd className="leading-7 text-jb-ink/76">
-                    {item.responsibility}
-                  </dd>
-                  <dt className="font-label text-sm uppercase tracking-[0.055em] text-jb-blue">
-                    What became usable
-                  </dt>
-                  <dd>
-                    <ul className="space-y-3 text-jb-ink/76">
-                      {item.results.map((proof) => (
-                        <li className="leading-7" key={proof.id}>
-                          {resultWording(proof)}
-                        </li>
-                      ))}
-                    </ul>
-                    <p className="mt-4 text-sm leading-6 text-jb-ink/62">
-                      <span className="font-semibold text-jb-ink/72">
-                        Evidence status:
-                      </span>{" "}
-                      {item.evidenceStatus}
-                    </p>
-                  </dd>
-                  <dt className="font-label text-sm uppercase tracking-[0.055em] text-jb-blue">
-                    Operating mechanics
-                  </dt>
-                  <dd className="leading-7 text-jb-ink/76">
-                    {item.operatingMechanics}
-                  </dd>
-                </dl>
-                <Link
-                  className="mt-6 inline-flex min-h-11 items-center border-b border-jb-blue font-semibold text-jb-blue hover:border-jb-green hover:text-jb-green"
-                  href={item.href}
-                >
-                  {item.linkLabel}
-                </Link>
-              </article>
-            ))}
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -261,32 +339,30 @@ export default function TechnicalOperationsPage() {
             Evidence by capability
           </h2>
           <p className="mt-5 max-w-[32ch] leading-7 text-jb-ink/72">
-            A compact route into the broader portfolio. Each link opens the
-            project evidence behind the capability.
+            Four compact routes to the project evidence behind each
+            capability.
           </p>
         </div>
-        <div className="border-t border-jb-ink/16">
+        <div className="grid border-t border-jb-ink/16 sm:grid-cols-2">
           {technicalOperationsProofRows.map((row) => {
             const destination = featuredCapabilityDestinations[row.capability];
 
             return (
               <section
-                className="grid gap-4 border-b border-jb-ink/16 py-6 sm:grid-cols-[12rem_1fr] sm:gap-8"
+                className="border-b border-jb-ink/16 py-6 sm:odd:pr-6 sm:even:border-l sm:even:border-jb-ink/16 sm:even:pl-6"
                 id={row.capability.toLowerCase().replaceAll(" ", "-")}
                 key={row.capability}
               >
                 <h3 className="text-xl font-semibold leading-7 text-jb-ink">
                   {row.capability}
                 </h3>
-                <div>
-                  <p className="leading-7 text-jb-ink/72">{row.toward}</p>
-                  <Link
-                    className="mt-4 inline-flex min-h-11 items-center border-b border-jb-blue text-sm font-semibold text-jb-blue hover:border-jb-green hover:text-jb-green"
-                    href={destination.href}
-                  >
-                    {destination.linkLabel}
-                  </Link>
-                </div>
+                <p className="mt-2 leading-7 text-jb-ink/72">{row.toward}</p>
+                <Link
+                  className="mt-3 inline-flex min-h-11 items-center border-b border-jb-blue text-sm font-semibold text-jb-blue hover:border-jb-green hover:text-jb-green"
+                  href={destination.href}
+                >
+                  {destination.linkLabel}
+                </Link>
               </section>
             );
           })}

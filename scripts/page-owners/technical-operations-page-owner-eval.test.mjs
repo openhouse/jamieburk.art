@@ -170,6 +170,24 @@ test("the three situation-to-result chains remain explicit", async () => {
   assert.ok(result.failures.includes("situation_responsibility_result_chain"));
 });
 
+test("the strongest situation retains a distinct editorial hierarchy", async () => {
+  const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
+  const contract = loadContract();
+  const result = evaluateTechnicalOperationsPageOwners({
+    contract,
+    pageSource: loadPageSource(contract).replace(
+      "const [primarySituation, ...supportingSituations] = signatureSituations",
+      "const supportingSituations = signatureSituations"
+    )
+  });
+
+  assert.ok(
+    result.failures.includes(
+      "signature_situations_have_weighted_editorial_hierarchy"
+    )
+  );
+});
+
 test("foregrounded results state their evidence maturity", async () => {
   const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
   const contract = loadContract();
