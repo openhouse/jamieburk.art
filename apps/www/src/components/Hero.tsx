@@ -31,15 +31,6 @@ export function Hero() {
           <p className="mt-6 max-w-2xl text-2xl font-semibold leading-snug text-white sm:text-3xl">
             {site.heroTagline}
           </p>
-          <p className="mt-4 max-w-2xl text-lg leading-7 text-white/84 sm:hidden">
-            I clarify requirements, coordinate implementation, and leave
-            documentation people can use.
-          </p>
-          <p className="mt-5 hidden max-w-2xl text-xl leading-8 text-white/84 sm:block">
-            I work with public-facing teams to clarify requirements, build
-            workflows and tools, carry context through implementation, and
-            leave behind documentation people can use.
-          </p>
         </div>
       </div>
       <p className="jb-hero-caption">
