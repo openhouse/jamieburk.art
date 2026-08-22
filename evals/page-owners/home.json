@@ -1,0 +1,148 @@
+{
+  "id": "home-page-owner-pilot-2026-08-22",
+  "version": 1,
+  "status": "pilot",
+  "purpose": "Test whether the homepage makes Jamie an easy, truthful yes for a rushed hiring reader through clear orientation, credible public-service value, visual authority, and decisive editorial selection.",
+  "targetPaths": [
+    "apps/www/src/app/page.tsx",
+    "apps/www/src/components/Hero.tsx",
+    "apps/www/src/components/HomeWorkCard.tsx",
+    "apps/www/src/components/ProofStrip.tsx",
+    "apps/www/src/components/CapabilityGrid.tsx",
+    "apps/www/src/components/FieldSystemEvidence.tsx",
+    "apps/www/src/data/site.ts",
+    "apps/www/src/data/work.ts"
+  ],
+  "latestDevelopmentRunPath": "evals/page-owners/runs/home-2026-08-22.json",
+  "targetRoute": "/",
+  "targetUrl": "https://staging-a.jamieburk.art/",
+  "pageBrief": {
+    "audience": "A rushed hiring reader considering Jamie for technical project management, product operations, implementation, civic technology, or adjacent public-interest work.",
+    "readerJob": "Understand Jamie's role, value, evidence, and strongest next action in ninety seconds, then find deeper proof without decoding insider language.",
+    "requiredIdeas": [
+      "Jamie turns important, loosely defined work into usable operating structure.",
+      "The public-service, operating, implementation, and participation claims are supported by inspectable project evidence.",
+      "The homepage offers one three-route orientation point and a deliberately selected project sequence.",
+      "Collective work remains collectively credited and modeled page-owner review remains distinct from real participation or endorsement."
+    ]
+  },
+  "execution": {
+    "kind": "isolated_llm_roleplay",
+    "oneTaskPerOwner": true,
+    "tasksRunSequentially": true,
+    "renderedPageOnly": true,
+    "repositoryAccess": false,
+    "priorOwnerOutputVisible": false,
+    "realPeopleParticipated": false,
+    "requiredViewports": ["desktop", "mobile"],
+    "allowedInputs": [
+      "the exact rendered public homepage beginning at /",
+      "public pages reached by following homepage links",
+      "the page brief in this contract",
+      "the assigned owner's listed public sources"
+    ],
+    "prohibitedInputs": [
+      "repository source",
+      "private communications",
+      "private archives",
+      "prior owner output",
+      "patch intent"
+    ],
+    "disclaimer": "Fictionalized analytical lenses informed by public work. These are not quotations, participation claims, approvals, endorsements, or predictions by the real people named."
+  },
+  "owners": [
+    {
+      "id": "cyd-harrell-public-service-usefulness",
+      "name": "Cyd Harrell",
+      "responsibility": "Public-service usefulness and hiring clarity",
+      "publicSources": ["https://www.publicgood.tech/about/our-people"],
+      "task": "Evaluate only whether a rushed hiring reader can connect Jamie's stated value to credible public-service and delivery evidence and choose a useful next action.",
+      "criterion": "The first viewport identifies Jamie's role and value plainly; the next visible evidence makes the value credible without overclaiming authority or solo causality; and a hiring reader can reach role-fit proof or a resume within ninety seconds.",
+      "definitions": {
+        "pass": "A first-time reader can explain what Jamie would make more usable, cite at least two credible proofs, and take a relevant next action without decoding the site.",
+        "fail": "The proposition is abstract, evidence is delayed or overclaimed, public-service value is vague, or the next action is unclear."
+      },
+      "developmentExamples": [
+        {"label": "clear-pass", "inputSummary": "Role, value, two bounded proofs, and the role-fit path are legible within ninety seconds.", "expectedResult": "pass"},
+        {"label": "clear-fail", "inputSummary": "The page describes systems thinking but never shows a delivered result or a useful hiring action.", "expectedResult": "fail"},
+        {"label": "borderline-fail", "inputSummary": "Proof exists, but the reader must infer Jamie's role or mistake coalition outcomes for solo causality.", "expectedResult": "fail"}
+      ]
+    },
+    {
+      "id": "abby-covert-information-architecture",
+      "name": "Abby Covert",
+      "responsibility": "Orientation and information architecture",
+      "publicSources": ["https://abbycovert.com/"],
+      "task": "Evaluate only whether the homepage gives a first-time reader a coherent mental model and a small set of distinct, understandable routes.",
+      "criterion": "Identity, capabilities, proof, selected work, and navigation use understandable categories; one three-route orientation point governs the opening; and interactive elements lead somewhere useful without redundant or competing calls to action.",
+      "definitions": {
+        "pass": "A first-time reader can state who Jamie is, what Jamie does, why it matters, and which of three distinct paths to take next.",
+        "fail": "The page uses insider taxonomy, duplicated routing, ambiguous links, or accumulated categories that make the reader construct the information architecture."
+      },
+      "developmentExamples": [
+        {"label": "clear-pass", "inputSummary": "One three-route Quick Path orients the reader and every later link deepens a clearly named category.", "expectedResult": "pass"},
+        {"label": "clear-fail", "inputSummary": "Hero buttons, a route list, menu links, and tags compete as simultaneous primary navigation.", "expectedResult": "fail"},
+        {"label": "borderline-fail", "inputSummary": "All links work, but overlapping labels leave the reader unsure which destination is primary.", "expectedResult": "fail"}
+      ]
+    },
+    {
+      "id": "michael-bierut-visual-authority",
+      "name": "Michael Bierut",
+      "responsibility": "Visual authority and memorable composition",
+      "publicSources": ["https://www.pentagram.com/about/michael-bierut"],
+      "task": "Evaluate only whether the homepage's image, typography, hierarchy, and responsive composition create a distinctive identity that strengthens the professional argument.",
+      "criterion": "The hero remains memorable and readable on desktop and mobile; project imagery has useful variety and proportion; and repeated modules do not flatten distinct accomplishments into an undifferentiated feed.",
+      "definitions": {
+        "pass": "The composition feels authored, preserves legibility across viewports, and makes the strongest project evidence visually memorable.",
+        "fail": "The page feels generic, imagery competes with comprehension, mobile cropping or contrast breaks, or repeated treatments flatten the work."
+      },
+      "developmentExamples": [
+        {"label": "clear-pass", "inputSummary": "A distinctive hero leads to a concise, varied evidence sequence whose hierarchy survives mobile.", "expectedResult": "pass"},
+        {"label": "clear-fail", "inputSummary": "A generic hero and six identical long cards make every project look interchangeable.", "expectedResult": "fail"},
+        {"label": "borderline-fail", "inputSummary": "The desktop hero is strong, but a long uniform mobile feed erases the project hierarchy.", "expectedResult": "fail"}
+      ]
+    },
+    {
+      "id": "deborah-treisman-editorial-sequence",
+      "name": "Deborah Treisman",
+      "responsibility": "Editorial sequence, selection, and proportion",
+      "publicSources": ["https://www.newyorker.com/contributors/deborah-treisman"],
+      "task": "Evaluate only whether the homepage selects and orders its material into a lucid, proportionate hiring narrative.",
+      "criterion": "The page progresses from identity and orientation through proof, capability, representative work, method, and contact; every section adds a consequence; unequal material receives unequal emphasis; and the central thesis is not repeatedly summarized.",
+      "definitions": {
+        "pass": "A first-time reader can follow the argument, remember the strongest evidence, and reach the close without encountering an accumulated or repetitive sequence.",
+        "fail": "The page repeats its thesis, gives equal weight to unequal material, reprises the same project, or makes the reader find the story within accumulated modules."
+      },
+      "developmentExamples": [
+        {"label": "clear-pass", "inputSummary": "Each section advances the story and three ranked projects lead with distinct, memorable consequences.", "expectedResult": "pass"},
+        {"label": "clear-fail", "inputSummary": "Four opening summaries precede six equally weighted cards and a repeated feature of the same project.", "expectedResult": "fail"},
+        {"label": "borderline-fail", "inputSummary": "All material is relevant, but repetition and equal card length bury the strongest evidence.", "expectedResult": "fail"}
+      ]
+    }
+  ],
+  "outputOrder": ["critique", "recommendedRevision", "result"],
+  "outputSchema": {
+    "critique": "A concrete assessment citing visible rendered-page evidence.",
+    "recommendedRevision": "The smallest useful change, or No revision needed.",
+    "result": "pass or fail"
+  },
+  "passPolicy": {
+    "allOwnersMustPass": true,
+    "averagingAllowed": false,
+    "constructiveCritiqueRequired": true,
+    "failedOwnerNamesSingleHighestPriorityRevision": true
+  },
+  "calibration": {
+    "status": "required",
+    "minimumHumanLabeledPassExamplesPerOwner": 20,
+    "minimumHumanLabeledFailExamplesPerOwner": 20,
+    "releaseAuthority": "advisory-until-calibrated",
+    "realWorldApprovalClaimed": false
+  },
+  "humanAuthority": {
+    "publicationOwner": "Jamie Burkart",
+    "rightsConsentCreditRemainSeparate": true,
+    "modeledPassAuthorizesDeployment": false,
+    "modeledPassAuthorizesIndexing": false
+  }
+}
