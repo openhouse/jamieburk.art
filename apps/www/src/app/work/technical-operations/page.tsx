@@ -2,126 +2,148 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import type { Route } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
-import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
-import { technicalOperationsProofRows } from "@/data/proofs";
+import {
+  requireReadyOrCarefulProof,
+  technicalOperationsProofRows
+} from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
-const operationsMap = [
-  "Coordinate delivery across concurrent projects and keep work moving from concept through public launch.",
-  "Track status, surface risks early, and name recurring blockers before they become patterns.",
-  "Build planning cycles, team rituals, decision frameworks, status reporting, and retrospectives.",
-  "Coordinate dependencies across product, engineering, security, legal, communications, contracts, and external stakeholders.",
-  "Onboard collaborators with handbooks, runbooks, operating documentation, source maps, and decision records.",
-  "Report team health, project status, and operational metrics with honesty about what is and is not working.",
-  "Improve working systems over time without overengineering."
-];
-
-const proofMap = [
+const signatureSituations = [
   {
-    project: "HJE",
-    href: "/work/harry-j-epstein",
-    proof:
-      "Jamie led long-running e-commerce and operations improvements that helped a legacy industrial business adapt online while preserving its voice."
+    project: "Harry J. Epstein Company",
+    href: "/work/harry-j-epstein" as Route,
+    situation:
+      "An 80+ year-old industrial business needed to adapt online without losing the knowledge and voice that made it distinctive.",
+    responsibility:
+      "I maintained and improved the web and e-commerce presence, coordinated incremental releases, and translated legacy operating knowledge into searchable content, analytics, marketing, and operational workflows.",
+    resultProofIds: [
+      "hje-modernization-stewardship",
+      "hje-revenue-growth-contribution"
+    ]
   },
   {
     project: "FairRentNYC / Commercial Rent Stabilization",
-    href: "/work/fair-rent-nyc",
-    proof:
-      "Jamie built and stewarded shared campaign memory so collaborators could recover decisions, track next steps, and protect private context."
+    href: "/work/fair-rent-nyc" as Route,
+    situation:
+      "A coalition working across public advocacy, policy research, press, and direct engagement with elected officials needed shared memory without exposing private context.",
+    responsibility:
+      "I synthesized meetings, decisions, action items, public sources, policy questions, and stakeholder next steps into shared memory and actionable workstreams.",
+    resultProofIds: ["fair-rent-campaign-memory", "fair-rent-source-map"]
   },
   {
     project: "CallNYC",
-    href: "/work/callnyc",
-    proof:
-      "Jamie translated constituent-services data into issue pathways and next-step guidance residents could use."
+    href: "/work/callnyc" as Route,
+    situation:
+      "Open constituent-services data needed to become resident-facing issue paths and next-step guidance.",
+    responsibility:
+      "I built an independent follow-on to the New York City Council's first CouncilStat hackathon and made its archived, unofficial status clear.",
+    resultProofIds: ["callnyc-civic-data-guidance"]
+  }
+].map((item) => ({
+  ...item,
+  results: item.resultProofIds.map(requireReadyOrCarefulProof)
+}));
+
+const operatingMethod = [
+  {
+    term: "Frame the work",
+    detail:
+      "Clarify the need, the people involved, the constraints, and what remains unknown."
   },
   {
-    project: "WOWList",
-    href: "/work/wowlist",
-    proof:
-      "Jamie co-built and operated a natural-language community-calendar platform for local arts and music organizers active in 35+ city ecosystems."
+    term: "Make ownership visible",
+    detail:
+      "Map responsibilities, dependencies, decisions, and the paths that require review."
   },
   {
-    project: "196 / Sunday Dinner",
-    href: "/work/196-sunday-dinner",
-    proof:
-      "Jamie created onboarding, hosting, facilitation, and continuity systems supporting 300+ gatherings and 20+ resident artists."
+    term: "Create a delivery rhythm",
+    detail:
+      "Use plans, working sessions, status signals, and documentation to keep parallel work moving."
   },
   {
-    project: "KC Spaces Fund",
-    href: "https://kcspacesfund.com/",
-    proof:
-      "Jamie built campaign web infrastructure and supported an available cross-channel identity for a collaborator-led mutual-aid campaign."
+    term: "Support adoption",
+    detail:
+      "Prepare the interface, guidance, launch support, and feedback loops people need to use the work."
   },
   {
-    project: "KC Town Hall",
-    href: "/work/kc-town-hall",
-    proof:
-      "Jamie co-led redevelopment planning and public-benefit documentation for the proposed adaptive reuse of a long-vacant historic building."
-  },
-  {
-    project: "Source-Backed Team Memory",
-    href: "/lab/source-backed-team-memory",
-    proof:
-      "Jamie is developing a focused lab method to preserve decision lineage, onboarding context, and human-reviewed operating memory."
+    term: "Leave a useful handoff",
+    detail:
+      "Transfer source maps, decision records, runbooks, and open questions so the next person can continue."
   }
 ];
 
-const proofDestinations: Record<string, { project: string; href: Route }> = {
+const proofDestinations: Record<string, { project: string; href: string }> = {
   "technical-operations-operating-backbone": {
     project: "Cross-project operating pattern",
     href: "/work"
   },
   "hje-modernization-stewardship": {
     project: "Harry J. Epstein Company",
-    href: "/work/harry-j-epstein" as Route
+    href: "/work/harry-j-epstein"
   },
   "hje-revenue-growth-contribution": {
     project: "Harry J. Epstein Company",
-    href: "/work/harry-j-epstein" as Route
+    href: "/work/harry-j-epstein"
   },
   "fair-rent-campaign-memory": {
     project: "FairRentNYC",
-    href: "/work/fair-rent-nyc" as Route
+    href: "/work/fair-rent-nyc"
   },
   "fair-rent-source-map": {
     project: "FairRentNYC",
-    href: "/work/fair-rent-nyc" as Route
+    href: "/work/fair-rent-nyc"
   },
   "nyc-artist-coalition-public-web-infrastructure": {
     project: "NYC Artist Coalition",
-    href: "/work/fair-rent-nyc" as Route
+    href: "/work/fair-rent-nyc"
   },
   "nyc-artist-coalition-civic-systems": {
     project: "NYC Artist Coalition",
-    href: "/work/fair-rent-nyc" as Route
+    href: "/work/fair-rent-nyc"
   },
   "callnyc-civic-data-guidance": {
     project: "CallNYC",
-    href: "/work/callnyc" as Route
+    href: "/work/callnyc"
   },
   "wowlist-community-platform": {
     project: "WOWList",
-    href: "/work/wowlist" as Route
+    href: "/work/wowlist"
   },
   "sunday-dinner-196-participation-infrastructure": {
     project: "196 / Sunday Dinner",
-    href: "/work/196-sunday-dinner" as Route
+    href: "/work/196-sunday-dinner"
   },
   "kc-town-hall-public-benefit-documentation": {
     project: "KC Town Hall",
-    href: "/work/kc-town-hall" as Route
+    href: "/work/kc-town-hall"
   },
   "kc-spaces-fund-digital-infrastructure": {
     project: "KC Spaces Fund",
-    href: "https://kcspacesfund.com/" as Route
+    href: "https://kcspacesfund.com/"
   },
   "source-backed-team-memory-method": {
     project: "Source-Backed Team Memory",
     href: "/lab/source-backed-team-memory"
   }
 };
+
+function destinationsFor(proofIds: string[]) {
+  return proofIds.reduce<Array<{ project: string; href: string }>>((items, id) => {
+    const destination = proofDestinations[id];
+
+    if (
+      destination &&
+      !items.some(
+        (item) => item.project === destination.project && item.href === destination.href
+      )
+    ) {
+      items.push(destination);
+    }
+
+    return items;
+  }, []);
+}
 
 export const metadata: Metadata = createMetadata({
   title: "Technical Operations & Implementation - Jamie Burkart",
@@ -132,89 +154,154 @@ export const metadata: Metadata = createMetadata({
 
 export default function TechnicalOperationsPage() {
   return (
-    <div className="jb-frame py-12">
-      <div className="jb-reading">
-        <h1 className="text-4xl font-bold text-jb-ink sm:text-5xl">
-          Technical Operations & Implementation
+    <article className="jb-frame py-14">
+      <header className="grid gap-8 border-b border-jb-ink/16 pb-14 lg:grid-cols-[0.32fr_0.68fr]">
+        <h1 className="max-w-[12ch] text-5xl leading-[0.98] text-jb-ink sm:text-6xl">
+          Technical Operations &amp; Implementation
         </h1>
-        <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          I create the operating backbone complex teams need to move: clear
-          requirements, delivery rhythms, decision records, risk signals,
-          onboarding materials, operating documentation, launch support, and
-          durable handoffs.
-        </p>
-      </div>
-      <section className="mt-10 grid gap-5 lg:grid-cols-[0.42fr_0.58fr]">
-        <JBCard>
-          <h2 className="text-2xl font-semibold text-jb-ink">
-            How this maps to team operations
-          </h2>
-          <ul className="mt-5 space-y-3 text-jb-ink/76">
-            {operationsMap.map((item) => (
-              <li className="flex gap-3" key={item}>
-                <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-green" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </JBCard>
-        <JBCard>
-          <h2 className="text-2xl font-semibold text-jb-ink">Proof map</h2>
-          <dl className="mt-5 space-y-4" id="proof-map">
-            {proofMap.map((item) => (
-              <div key={item.project}>
-                <dt className="font-semibold">
+        <div className="max-w-[68ch] space-y-5 text-xl leading-8 text-jb-ink/78">
+          <p>
+            I create the operating structure complex teams need to move
+            public-facing technical work from ambiguity to launch.
+          </p>
+          <p>
+            I clarify requirements, map workflows, coordinate delivery, surface
+            risk, maintain decision records, prepare onboarding and handoff
+            materials, and improve working systems over time.
+          </p>
+        </div>
+      </header>
+
+      <section className="border-b border-jb-ink/16 py-14">
+        <div className="grid gap-8 lg:grid-cols-[0.32fr_0.68fr]">
+          <div>
+            <h2 className="text-4xl leading-tight text-jb-ink">
+              Three situations, one operating practice
+            </h2>
+            <p className="mt-5 max-w-[32ch] leading-7 text-jb-ink/72">
+              Sustained business operations, coalition memory, and a
+              resident-facing civic prototype show the practice in different
+              conditions.
+            </p>
+          </div>
+          <div className="divide-y divide-jb-ink/16 border-y border-jb-ink/16">
+            {signatureSituations.map((item) => (
+              <article className="py-8 first:pt-0 last:pb-0" key={item.project}>
+                <h3 className="text-3xl leading-tight text-jb-ink">
                   <Link
                     className="text-jb-blue hover:text-jb-green"
-                    href={item.href as Route}
+                    href={item.href}
                   >
                     {item.project}
                   </Link>
-                </dt>
-                <dd className="mt-1 leading-7 text-jb-ink/72">{item.proof}</dd>
-              </div>
+                </h3>
+                <dl className="mt-6 grid gap-x-8 gap-y-5 sm:grid-cols-[9rem_1fr]">
+                  <dt className="font-label text-sm uppercase tracking-[0.055em] text-jb-blue">
+                    Situation
+                  </dt>
+                  <dd className="leading-7 text-jb-ink/76">{item.situation}</dd>
+                  <dt className="font-label text-sm uppercase tracking-[0.055em] text-jb-blue">
+                    My responsibility
+                  </dt>
+                  <dd className="leading-7 text-jb-ink/76">
+                    {item.responsibility}
+                  </dd>
+                  <dt className="font-label text-sm uppercase tracking-[0.055em] text-jb-blue">
+                    What became usable
+                  </dt>
+                  <dd>
+                    <ul className="space-y-3 text-jb-ink/76">
+                      {item.results.map((proof) => (
+                        <li className="leading-7" key={proof.id}>
+                          {proof.publicWording}
+                        </li>
+                      ))}
+                    </ul>
+                  </dd>
+                </dl>
+                <Link
+                  className="mt-6 inline-flex min-h-11 items-center border-b border-jb-blue font-semibold text-jb-blue hover:border-jb-green hover:text-jb-green"
+                  href={item.href}
+                >
+                  Read case study
+                </Link>
+              </article>
             ))}
-          </dl>
-        </JBCard>
+          </div>
+        </div>
       </section>
-      <div className="mt-10 grid gap-5 md:grid-cols-2">
-        {technicalOperationsProofRows.map((row) => (
-          <JBCard id={row.capability.toLowerCase().replaceAll(" ", "-")} key={row.capability}>
-            <h2 className="text-2xl font-semibold text-jb-ink">{row.capability}</h2>
-            <p className="mt-3 text-sm leading-6 text-jb-ink/68">{row.toward}</p>
-            <ul className="mt-5 space-y-3 text-jb-ink/76">
-              {row.proofs.map((proof) => {
-                const destination = proofDestinations[proof.id];
-                return (
-                  <li className="flex gap-3" key={proof.id}>
-                    <span
-                      aria-hidden="true"
-                      className="mt-2 h-2 w-2 rounded-full bg-jb-ochre"
-                    />
-                    <span>
-                      {destination ? (
+
+      <section className="grid gap-8 border-b border-jb-ink/16 py-14 lg:grid-cols-[0.32fr_0.68fr]">
+        <div>
+          <h2 className="text-4xl leading-tight text-jb-ink">
+            How I move the work
+          </h2>
+          <p className="mt-5 max-w-[32ch] leading-7 text-jb-ink/72">
+            The tools change with the team. The operating sequence stays
+            recognizable.
+          </p>
+        </div>
+        <ol className="border-t border-jb-ink/16">
+          {operatingMethod.map((item) => (
+            <li
+              className="grid gap-2 border-b border-jb-ink/16 py-5 sm:grid-cols-[12rem_1fr] sm:gap-8"
+              key={item.term}
+            >
+              <span className="font-semibold text-jb-ink">{item.term}</span>
+              <span className="leading-7 text-jb-ink/74">{item.detail}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section className="grid gap-8 border-b border-jb-ink/16 py-14 lg:grid-cols-[0.32fr_0.68fr]">
+        <div>
+          <h2 className="text-4xl leading-tight text-jb-ink">
+            Evidence by capability
+          </h2>
+          <p className="mt-5 max-w-[32ch] leading-7 text-jb-ink/72">
+            A compact route into the broader portfolio. Each link opens the
+            project evidence behind the capability.
+          </p>
+        </div>
+        <div className="border-t border-jb-ink/16">
+          {technicalOperationsProofRows.map((row) => {
+            const destinations = destinationsFor(row.proofIds);
+
+            return (
+              <section
+                className="grid gap-4 border-b border-jb-ink/16 py-6 sm:grid-cols-[12rem_1fr] sm:gap-8"
+                id={row.capability.toLowerCase().replaceAll(" ", "-")}
+                key={row.capability}
+              >
+                <h3 className="text-xl font-semibold leading-7 text-jb-ink">
+                  {row.capability}
+                </h3>
+                <div>
+                  <p className="leading-7 text-jb-ink/72">{row.toward}</p>
+                  <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-3 text-sm font-semibold">
+                    {destinations.map((destination) => (
+                      <li key={`${destination.project}-${destination.href}`}>
                         <Link
-                          className="font-semibold text-jb-blue hover:text-jb-green"
-                          href={destination.href}
+                          className="inline-flex min-h-11 items-center border-b border-jb-blue text-jb-blue hover:border-jb-green hover:text-jb-green"
+                          href={destination.href as Route}
                         >
                           {destination.project}
                         </Link>
-                      ) : null}
-                      <span className="mt-1 block text-sm leading-6 text-jb-ink/72">
-                        {proof.shortWording ?? proof.publicWording}
-                      </span>
-                    </span>
-                  </li>
-                );
-              })}
-            </ul>
-          </JBCard>
-        ))}
-      </div>
-      <div className="mt-10 grid gap-5 lg:grid-cols-2">
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </section>
+            );
+          })}
+        </div>
+      </section>
+
+      <div className="grid gap-8 py-14 lg:grid-cols-[0.38fr_0.62fr]">
         <ResumeCTA />
         <ContactCTA />
       </div>
-    </div>
+    </article>
   );
 }
