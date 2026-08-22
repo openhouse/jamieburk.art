@@ -113,6 +113,22 @@ test("the page cannot regain competing full-length proof maps", async () => {
   );
 });
 
+test("case-study links retain destination-specific labels", async () => {
+  const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
+  const contract = loadContract();
+  const result = evaluateTechnicalOperationsPageOwners({
+    contract,
+    pageSource: loadPageSource(contract).replace(
+      "Read the CallNYC case study",
+      "Read case study"
+    )
+  });
+
+  assert.ok(
+    result.failures.includes("case_study_links_name_their_destinations")
+  );
+});
+
 test("the three situation-to-result chains remain explicit", async () => {
   const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
   const contract = loadContract();

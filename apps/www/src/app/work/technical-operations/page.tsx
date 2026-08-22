@@ -13,6 +13,7 @@ const signatureSituations = [
   {
     project: "Harry J. Epstein Company",
     href: "/work/harry-j-epstein" as Route,
+    linkLabel: "Read the Harry J. Epstein Company case study",
     situation:
       "An 80+ year-old industrial business needed to adapt online without losing the knowledge and voice that made it distinctive.",
     responsibility:
@@ -29,6 +30,7 @@ const signatureSituations = [
   {
     project: "FairRentNYC / Commercial Rent Stabilization",
     href: "/work/fair-rent-nyc" as Route,
+    linkLabel: "Read the FairRentNYC case study",
     situation:
       "A coalition working across public advocacy, policy research, press, and direct engagement with elected officials needed shared memory without exposing private context.",
     responsibility:
@@ -42,6 +44,7 @@ const signatureSituations = [
   {
     project: "CallNYC",
     href: "/work/callnyc" as Route,
+    linkLabel: "Read the CallNYC case study",
     situation:
       "Open constituent-services data needed to become resident-facing issue paths and next-step guidance.",
     responsibility:
@@ -95,77 +98,27 @@ const operatingMethod = [
   }
 ];
 
-const proofDestinations: Record<string, { project: string; href: string }> = {
-  "technical-operations-operating-backbone": {
-    project: "Cross-project operating pattern",
-    href: "/work"
+const featuredCapabilityDestinations: Record<
+  string,
+  { href: Route | `https://${string}`; linkLabel: string }
+> = {
+  "Delivery coordination": {
+    href: "/work/harry-j-epstein" as Route,
+    linkLabel: "See sustained delivery at Harry J. Epstein Company"
   },
-  "hje-modernization-stewardship": {
-    project: "Harry J. Epstein Company",
-    href: "/work/harry-j-epstein"
+  "Risk surfacing and decision clarity": {
+    href: "/work/fair-rent-nyc" as Route,
+    linkLabel: "See decision clarity in FairRentNYC"
   },
-  "hje-revenue-growth-contribution": {
-    project: "Harry J. Epstein Company",
-    href: "/work/harry-j-epstein"
+  "Operating documentation people use": {
+    href: "/lab/source-backed-team-memory",
+    linkLabel: "See the team-memory method"
   },
-  "fair-rent-campaign-memory": {
-    project: "FairRentNYC",
-    href: "/work/fair-rent-nyc"
-  },
-  "fair-rent-source-map": {
-    project: "FairRentNYC",
-    href: "/work/fair-rent-nyc"
-  },
-  "nyc-artist-coalition-public-web-infrastructure": {
-    project: "NYC Artist Coalition",
-    href: "/work/fair-rent-nyc"
-  },
-  "nyc-artist-coalition-civic-systems": {
-    project: "NYC Artist Coalition",
-    href: "/work/fair-rent-nyc"
-  },
-  "callnyc-civic-data-guidance": {
-    project: "CallNYC",
-    href: "/work/callnyc"
-  },
-  "wowlist-community-platform": {
-    project: "WOWList",
-    href: "/work/wowlist"
-  },
-  "sunday-dinner-196-participation-infrastructure": {
-    project: "196 / Sunday Dinner",
-    href: "/work/196-sunday-dinner"
-  },
-  "kc-town-hall-public-benefit-documentation": {
-    project: "KC Town Hall",
-    href: "/work/kc-town-hall"
-  },
-  "kc-spaces-fund-digital-infrastructure": {
-    project: "KC Spaces Fund",
-    href: "https://kcspacesfund.com/"
-  },
-  "source-backed-team-memory-method": {
-    project: "Source-Backed Team Memory",
-    href: "/lab/source-backed-team-memory"
+  "Public-facing launch and adoption": {
+    href: "https://kcspacesfund.com/",
+    linkLabel: "See public-facing launch at KC Spaces Fund"
   }
 };
-
-function destinationsFor(proofIds: string[]) {
-  return proofIds.reduce<Array<{ project: string; href: string }>>((items, id) => {
-    const destination = proofDestinations[id];
-
-    if (
-      destination &&
-      !items.some(
-        (item) => item.project === destination.project && item.href === destination.href
-      )
-    ) {
-      items.push(destination);
-    }
-
-    return items;
-  }, []);
-}
 
 export const metadata: Metadata = createMetadata({
   title: "Technical Operations & Implementation - Jamie Burkart",
@@ -257,7 +210,7 @@ export default function TechnicalOperationsPage() {
                   className="mt-6 inline-flex min-h-11 items-center border-b border-jb-blue font-semibold text-jb-blue hover:border-jb-green hover:text-jb-green"
                   href={item.href}
                 >
-                  Read case study
+                  {item.linkLabel}
                 </Link>
               </article>
             ))}
@@ -308,7 +261,7 @@ export default function TechnicalOperationsPage() {
         </div>
         <div className="border-t border-jb-ink/16">
           {technicalOperationsProofRows.map((row) => {
-            const destinations = destinationsFor(row.proofIds);
+            const destination = featuredCapabilityDestinations[row.capability];
 
             return (
               <section
@@ -321,18 +274,12 @@ export default function TechnicalOperationsPage() {
                 </h3>
                 <div>
                   <p className="leading-7 text-jb-ink/72">{row.toward}</p>
-                  <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-3 text-sm font-semibold">
-                    {destinations.map((destination) => (
-                      <li key={`${destination.project}-${destination.href}`}>
-                        <Link
-                          className="inline-flex min-h-11 items-center border-b border-jb-blue text-jb-blue hover:border-jb-green hover:text-jb-green"
-                          href={destination.href as Route}
-                        >
-                          {destination.project}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                  <Link
+                    className="mt-4 inline-flex min-h-11 items-center border-b border-jb-blue text-sm font-semibold text-jb-blue hover:border-jb-green hover:text-jb-green"
+                    href={destination.href}
+                  >
+                    {destination.linkLabel}
+                  </Link>
                 </div>
               </section>
             );

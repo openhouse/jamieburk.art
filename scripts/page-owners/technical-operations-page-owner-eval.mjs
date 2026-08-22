@@ -131,8 +131,18 @@ export function evaluateTechnicalOperationsPageOwners({
     compact_capability_index_preserves_deep_routes:
       /Evidence by capability/.test(pageSource) &&
       /technicalOperationsProofRows\.map/.test(pageSource) &&
-      /destinationsFor\(row\.proofIds\)/.test(pageSource) &&
+      /featuredCapabilityDestinations\[row\.capability\]/.test(pageSource) &&
+      /See sustained delivery at Harry J\. Epstein Company/.test(pageSource) &&
+      /See decision clarity in FairRentNYC/.test(pageSource) &&
+      /See the team-memory method/.test(pageSource) &&
+      /See public-facing launch at KC Spaces Fund/.test(pageSource) &&
+      !/destinationsFor\(row\.proofIds\)/.test(pageSource) &&
       !/JBCard/.test(pageSource),
+    case_study_links_name_their_destinations:
+      /Read the Harry J\. Epstein Company case study/.test(pageSource) &&
+      /Read the FairRentNYC case study/.test(pageSource) &&
+      /Read the CallNYC case study/.test(pageSource) &&
+      !/>\s*Read case study\s*</.test(pageSource),
     resume_and_contact_actions_remain_present:
       /<ResumeCTA \/>/.test(pageSource) && /<ContactCTA \/>/.test(pageSource),
     protected_paths_stay_out_of_public_page: !protectedPathPattern.test(pageSource),
