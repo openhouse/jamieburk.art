@@ -31,6 +31,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     "knowledge-wiki-photographic-metaphor",
     "truthful-project-cover-field",
     "hiring-argument-project-sequence",
+    "hiring-reader-attention-budget",
     "truthful-photo-credit",
     "tag-navigation-contract",
     "human-index-material-system",
@@ -135,6 +136,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   const fieldSystemEvidence = readText("apps/www/src/components/FieldSystemEvidence.tsx");
   const governedImage = readText("apps/www/src/components/GovernedImage.tsx");
   const home = readText("apps/www/src/app/page.tsx");
+  const proofsData = readText("apps/www/src/data/proofs.ts");
   const fairRent = readText("apps/www/src/app/work/[slug]/page.tsx");
   const sourceBackedTeamMemory = readText(
     "apps/www/src/app/lab/source-backed-team-memory/page.tsx"
@@ -173,8 +175,8 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     fail("editorial-not-decorative", "Both field-and-system pairs must remain explicit, manifest-bound, and responsive.");
   }
   if (
-    home.indexOf("<CapabilityGrid />") > home.indexOf('<FieldSystemEvidence variant="home" />') ||
     home.indexOf('<FieldSystemEvidence variant="home" />') > home.indexOf("Selected systems") ||
+    home.indexOf("Selected systems") > home.indexOf("How I work") ||
     !fairRent.includes('<FieldSystemEvidence variant="fair-rent" />')
   ) {
     fail("editorial-not-decorative", "The two field-and-system pairs moved outside their reviewed editorial sequence.");
@@ -286,13 +288,9 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     ? [...homepageOrderBlock[1].matchAll(/"([^"]+)"/g)].map((match) => match[1])
     : [];
   const expectedHomepageOrder = [
-    "wowlist",
-    "fair-rent-nyc",
     "harry-j-epstein",
     "kc-town-hall",
-    "callnyc",
-    "196-sunday-dinner",
-    "kc-spaces-fund"
+    "196-sunday-dinner"
   ];
   const sundayDinnerBlock = workData.slice(
     workData.indexOf('title: "196 Artists Residency / Sunday Dinner"'),
@@ -306,10 +304,7 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     : [];
   const expectedStartHereOrder = [
     "/work/technical-operations",
-    "/work/wowlist",
-    "/work/fair-rent-nyc",
-    "/work/harry-j-epstein",
-    "/work/callnyc",
+    "/work",
     "/resume"
   ];
   if (
@@ -320,7 +315,33 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   ) {
     fail(
       "hiring-argument-project-sequence",
-      "The homepage no longer opens with product judgment, current civic delivery, and sustained operations before completing the seven-project argument with Sunday Dinner present and the quick path in step."
+      "The homepage no longer presents the ranked operating, implementation, and participation sequence with Sunday Dinner present."
+    );
+  }
+
+  const homepageProofBlock = proofsData.match(
+    /export const homepageProofs = \[([\s\S]*?)\]\.map\(requireReadyOrCarefulProof\);/
+  );
+  const observedHomepageProofs = homepageProofBlock
+    ? [...homepageProofBlock[1].matchAll(/"([^"]+)"/g)].map((match) => match[1])
+    : [];
+  const expectedHomepageProofs = [
+    "career-operating-structure-14-years",
+    "hje-revenue-growth-contribution",
+    "fair-rent-campaign-memory"
+  ];
+  if (
+    JSON.stringify(observedStartHereOrder) !== JSON.stringify(expectedStartHereOrder) ||
+    JSON.stringify(observedHomepageProofs) !== JSON.stringify(expectedHomepageProofs) ||
+    /href=/.test(hero) ||
+    !home.includes('href: "/work/technical-operations"') ||
+    !home.includes('<FieldSystemEvidence variant="home" />') ||
+    home.includes("const transformations") ||
+    home.includes("Operating motif")
+  ) {
+    fail(
+      "hiring-reader-attention-budget",
+      "The homepage exceeds the three-route, three-proof attention budget, loses its direct role-fit action or field-and-system passage, or repeats the operating thesis."
     );
   }
 

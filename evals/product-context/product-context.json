@@ -1,0 +1,37 @@
+{
+  "id": "portfolio-product-context-v1",
+  "title": "Durable portfolio product context",
+  "intent": "Keep future design, application, and release work grounded in a current product record rather than legacy design-register assumptions or conversational memory.",
+  "criteria": [
+    {
+      "id": "impeccable-schema",
+      "blocking": true,
+      "criterion": "PRODUCT.md uses Impeccable product schema 1, declares the web platform, and contains no deprecated Register section."
+    },
+    {
+      "id": "durable-product-truth",
+      "blocking": true,
+      "criterion": "The record includes users, purpose, positioning, operating context, capabilities and constraints, brand commitments, evidence, product principles, and accessibility and inclusion."
+    },
+    {
+      "id": "hiring-reader-job",
+      "blocking": true,
+      "criterion": "The primary user and success condition remain a time-pressed hiring reader making an evidence-backed decision about Jamie's role fit and next action."
+    },
+    {
+      "id": "knowledge-wiki-mechanism",
+      "blocking": true,
+      "criterion": "The product record identifies the governed Knowledge Wiki Graph as the mechanism that turns project sources and evidence into selective public portfolio and application materials."
+    },
+    {
+      "id": "authority-and-public-safety",
+      "blocking": true,
+      "criterion": "The record separates access, evidence, consent, publication, deployment, and indexing authority; preserves collective credit; and keeps production publication under Jamie's human approval."
+    },
+    {
+      "id": "evidence-without-protected-locators",
+      "blocking": true,
+      "criterion": "Evidence on hand points to public-safe repository surfaces without exposing protected filesystem paths, archive identifiers, credentials, or private-source locators."
+    }
+  ]
+}

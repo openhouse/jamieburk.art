@@ -1,0 +1,51 @@
+{
+  "id": "home-page-owner-development-run-2026-08-22",
+  "kind": "fictionalized-development-simulation",
+  "evaluatedAt": "2026-08-22T15:49:28Z",
+  "targetRoute": "/",
+  "candidateCommit": "dfb33e1b4e8dfca3d14ca3887493a625508328bb",
+  "candidateSourceSha256": "d380c122b927f301f84afcccc4ac35dad123df4abd4e32ab637746bc6331e027",
+  "renderedScreenshots": {
+    "desktopSha256": "3a37850b15ce508baf07a766f0dfe15a20ce40b7bf8c24968ef2a953346f81a3",
+    "narrowSha256": "983f84084c26a4ab39ab3483f621d00a45edf6b5272d987c409ee136c5b9369b",
+    "selectedWorkSha256": "6070aac50587adda86106d68ec5b083976c2b41bf0b0ff32b57303b89b5a22c8",
+    "selectedWorkContinuationSha256": "de2748d950afb7bb8319d49637d635118244c72e95b82ab5c6387da62b3cf621"
+  },
+  "inputBoundary": {
+    "renderedPageOnly": true,
+    "repositoryAccess": false,
+    "priorOwnerOutputVisible": false
+  },
+  "realPeopleParticipated": false,
+  "disclaimer": "Fictionalized analytical lenses informed by public work. These are not quotations, participation claims, approvals, endorsements, or predictions by the real people named.",
+  "results": [
+    {
+      "ownerId": "cyd-harrell-public-service-usefulness",
+      "critique": "The first viewport plainly identifies the role as Technical Project Manager - Product Operations & Implementation and states the value proposition: turning emerging work into usable systems. The selected-work section then supplies credible, calibrated proof: leadership across web, e-commerce, analytics, content, marketing, and operations that contributed to 2x revenue growth, plus co-development of a successful $490,539 public-funding request and service as the City's named developer and presenter. Those formulations avoid claiming solo causality or governmental authority. A rushed hiring reader can cite both outcomes and follow the clearly labeled Read case study links, View all work, or the Technical Operations navigation item as relevant next actions.",
+      "recommendedRevision": "No revision needed.",
+      "result": "pass"
+    },
+    {
+      "ownerId": "abby-covert-information-architecture",
+      "critique": "The hierarchy is understandable and controlled: Jamie Burkart, the role line, and I help emerging work become usable systems establish identity and capability immediately. The header uses familiar destinations - Work, Technical Operations, About, Resume, and Contact. A single START HERE / Quick path through block governs initial orientation before the page moves into clearly subordinate SELECTED SYSTEMS proof. Project rows consistently pair a named system category and date with a concrete project, outcome, scope, and Read case study link. View all work expands the selected-work category, while See how the coalition system worked signals a useful explanatory destination rather than an unexplained action. No visible link or category forces the reader to invent the hierarchy.",
+      "recommendedRevision": "No revision needed.",
+      "result": "pass"
+    },
+    {
+      "ownerId": "michael-bierut-visual-authority",
+      "critique": "The hero has clear visual authority: the East River portrait, bridge geometry, large serif name, condensed role line, and blunt white value statement form an authored, memorable composition rather than a generic portfolio banner. Desktop preserves strong subject-text balance; mobile makes an effective editorial crop, retaining the bridge, face, headline, and caption without a contrast failure. The project imagery also has useful variety: a dense storefront interface contrasts with the documentary field-work photograph, while consistent proportions keep both rows legible. Although the modules repeat, the materially different images, project classifications, evidence-led descriptions, and captions keep the accomplishments from reading as an undifferentiated feed.",
+      "recommendedRevision": "No revision needed.",
+      "result": "pass"
+    },
+    {
+      "ownerId": "deborah-treisman-editorial-sequence",
+      "critique": "The visible sequence is editorially coherent: the hero establishes identity and a concise thesis; START HERE signals orientation; the coalition material supplies civic proof; and SELECTED SYSTEMS opens representative work. Each visible project adds a distinct consequence rather than merely restating the thesis: Harry J. Epstein Company connects operations work to 2x revenue growth, while KC Town Hall LLC connects implementation to a $490,539 public-funding award and responsible transition. Proportion is deliberate: the hero receives dominant space, while representative projects receive substantial image-and-text rows with concrete outcomes. The repeated Harry J. Epstein material across the last two screenshots is viewport overlap, not a repeated homepage module. The central thesis is not repeatedly summarized.",
+      "recommendedRevision": "No revision needed.",
+      "result": "pass"
+    }
+  ],
+  "verdict": "pass",
+  "releaseAuthority": "advisory-until-calibrated",
+  "modeledPassAuthorizesDeployment": false,
+  "humanPublicationOwner": "Jamie Burkart"
+}

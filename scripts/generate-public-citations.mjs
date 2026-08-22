@@ -7,16 +7,54 @@ const outputUrl = new URL(
   import.meta.url
 );
 
+const claimsById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
+const sourcesById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
+
+function publicSourceIdsForOccurrence(occurrence) {
+  const claim = claimsById.get(occurrence.claimId);
+  const renderableSourceIds = new Set(
+    claim?.evidence
+      .filter((item) => item.renderCitation)
+      .map((item) => item.sourceId) ?? []
+  );
+  const requestedSourceIds = occurrence.sourceIds ?? [...renderableSourceIds];
+
+  return requestedSourceIds.filter(
+    (sourceId) =>
+      renderableSourceIds.has(sourceId) &&
+      sourcesById.get(sourceId)?.visibility === "public"
+  );
+}
+
+const publicPages = knowledgeBank.pages.map((page) => {
+  const occurrences = page.occurrences.map((occurrence) => {
+    const sourceIds = publicSourceIdsForOccurrence(occurrence);
+    const { sourceIds: _sourceIds, ...redactedOccurrence } = occurrence;
+
+    return sourceIds.length > 0
+      ? { ...redactedOccurrence, sourceIds }
+      : redactedOccurrence;
+  });
+  const pageSourceIds = new Set(
+    occurrences.flatMap((occurrence) => occurrence.sourceIds ?? [])
+  );
+
+  return {
+    ...page,
+    sourceOrder: page.sourceOrder.filter((sourceId) => pageSourceIds.has(sourceId)),
+    occurrences
+  };
+});
+
 const usedSourceIds = new Set(
-  knowledgeBank.pages.flatMap((page) => page.occurrences.flatMap((occurrence) => {
-    const claim = knowledgeBank.claims.find((item) => item.id === occurrence.claimId);
-    return occurrence.sourceIds ?? claim?.evidence.filter((item) => item.renderCitation).map((item) => item.sourceId) ?? [];
-  }))
+  publicPages.flatMap((page) =>
+    page.occurrences.flatMap((occurrence) => occurrence.sourceIds ?? [])
+  )
 );
 
 const publicRegistry = {
   sources: knowledgeBank.sources
-    .filter((source) => usedSourceIds.has(source.id))
+    .filter((source) => source.visibility === "public" && usedSourceIds.has(source.id))
     .map(({ protectedLocatorId: _protectedLocatorId, media: _media, supportsGenerally: _supportsGenerally, ...source }) => source),
   claims: knowledgeBank.claims
     .filter((claim) => knowledgeBank.pages.some((page) => page.occurrences.some((occurrence) => occurrence.claimId === claim.id)))
@@ -29,7 +67,7 @@ const publicRegistry = {
         .map(({ internalExcerpt: _internalExcerpt, locator: _locator, ...evidence }) => evidence),
       boundaries: claim.boundaries
     })),
-  pages: knowledgeBank.pages
+  pages: publicPages
 };
 
 const output = `${JSON.stringify(publicRegistry, null, 2)}\n`;

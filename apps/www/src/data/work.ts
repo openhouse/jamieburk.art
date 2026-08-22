@@ -710,13 +710,9 @@ export type WorkSlug =
   | "wowlist";
 
 export const homepageWorkOrder = [
-  "wowlist",
-  "fair-rent-nyc",
   "harry-j-epstein",
   "kc-town-hall",
-  "callnyc",
-  "196-sunday-dinner",
-  "kc-spaces-fund"
+  "196-sunday-dinner"
 ] as const;
 
 export const featuredWork = homepageWorkOrder.map((slug) => {

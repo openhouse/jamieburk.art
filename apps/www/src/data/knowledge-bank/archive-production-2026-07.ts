@@ -1415,6 +1415,34 @@ export const archiveProductionJuly2026 = {
           status: "active",
           citationRequired: false,
           surfaces: ["/work/fair-rent-nyc"]
+        },
+        {
+          key: "technical-operations",
+          text: "Active coordination record; Jamie maintains the working records while action ownership remains shared.",
+          status: "active",
+          citationRequired: false,
+          surfaces: ["/work/technical-operations"]
+        },
+        {
+          key: "technical-operations-situation",
+          text: "A coalition working across public advocacy, policy research, press, and direct engagement with elected officials needed a shared way to track decisions and next steps without exposing private context.",
+          status: "active",
+          citationRequired: false,
+          surfaces: ["/work/technical-operations"]
+        },
+        {
+          key: "technical-operations-role",
+          text: "I turned meetings, public sources, policy questions, decisions, and assigned next steps into reviewable working records.",
+          status: "active",
+          citationRequired: false,
+          surfaces: ["/work/technical-operations"]
+        },
+        {
+          key: "technical-operations-result",
+          text: "Created and stewarded 30+ pages of shared, reviewable working records for coordinating Commercial Rent Stabilization decisions and next steps.",
+          status: "active",
+          citationRequired: false,
+          surfaces: ["/work/technical-operations"]
         }
       ],
       evidence: [
@@ -1423,6 +1451,8 @@ export const archiveProductionJuly2026 = {
           relationship: "private-support",
           supports: [
             "shared campaign-memory purpose",
+            "current coordination practice",
+            "present-tense account of Jamie maintaining shared memory",
             "meeting and decision record structure",
             "action and open-question tracking",
             "city and state strategy lanes",
