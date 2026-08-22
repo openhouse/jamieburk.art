@@ -156,7 +156,7 @@ export default function TechnicalOperationsPage() {
   return (
     <article className="jb-frame py-14">
       <header className="grid gap-8 border-b border-jb-ink/16 pb-14 lg:grid-cols-[0.32fr_0.68fr]">
-        <h1 className="max-w-[12ch] text-5xl leading-[0.98] text-jb-ink sm:text-6xl">
+        <h1 className="max-w-[12ch] text-5xl leading-[0.98] text-jb-ink">
           Technical Operations &amp; Implementation
         </h1>
         <div className="max-w-[68ch] space-y-5 text-xl leading-8 text-jb-ink/78">
