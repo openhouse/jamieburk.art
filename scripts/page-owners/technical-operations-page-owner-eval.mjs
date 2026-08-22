@@ -108,6 +108,11 @@ export function evaluateTechnicalOperationsPageOwners({
       /Situation/.test(pageSource) &&
       /My responsibility/.test(pageSource) &&
       /What became usable/.test(pageSource),
+    foregrounded_results_state_evidence_maturity:
+      /Evidence status:/.test(pageSource) &&
+      /Sustained implementation/.test(pageSource) &&
+      /no policy outcome is attributed to the documentation alone/.test(pageSource) &&
+      /current-service adoption and resident outcomes are not claimed/.test(pageSource),
     five_part_operating_method:
       /term: "Frame the work"[\s\S]*term: "Make ownership visible"[\s\S]*term: "Create a delivery rhythm"[\s\S]*term: "Support adoption"[\s\S]*term: "Leave a useful handoff"/.test(
         pageSource

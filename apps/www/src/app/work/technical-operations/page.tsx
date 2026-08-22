@@ -20,7 +20,9 @@ const signatureSituations = [
     resultProofIds: [
       "hje-modernization-stewardship",
       "hje-revenue-growth-contribution"
-    ]
+    ],
+    evidenceStatus:
+      "Sustained implementation with a carefully framed contribution to business growth."
   },
   {
     project: "FairRentNYC / Commercial Rent Stabilization",
@@ -29,7 +31,9 @@ const signatureSituations = [
       "A coalition working across public advocacy, policy research, press, and direct engagement with elected officials needed shared memory without exposing private context.",
     responsibility:
       "I synthesized meetings, decisions, action items, public sources, policy questions, and stakeholder next steps into shared memory and actionable workstreams.",
-    resultProofIds: ["fair-rent-campaign-memory", "fair-rent-source-map"]
+    resultProofIds: ["fair-rent-campaign-memory", "fair-rent-source-map"],
+    evidenceStatus:
+      "Maintained coordination and source-trace resources for shared work; no policy outcome is attributed to the documentation alone."
   },
   {
     project: "CallNYC",
@@ -38,7 +42,9 @@ const signatureSituations = [
       "Open constituent-services data needed to become resident-facing issue paths and next-step guidance.",
     responsibility:
       "I built an independent follow-on to the New York City Council's first CouncilStat hackathon and made its archived, unofficial status clear.",
-    resultProofIds: ["callnyc-civic-data-guidance"]
+    resultProofIds: ["callnyc-civic-data-guidance"],
+    evidenceStatus:
+      "Delivered resident-facing prototype with verified public coverage; current-service adoption and resident outcomes are not claimed."
   }
 ].map((item) => ({
   ...item,
@@ -217,6 +223,12 @@ export default function TechnicalOperationsPage() {
                         </li>
                       ))}
                     </ul>
+                    <p className="mt-4 text-sm leading-6 text-jb-ink/62">
+                      <span className="font-semibold text-jb-ink/72">
+                        Evidence status:
+                      </span>{" "}
+                      {item.evidenceStatus}
+                    </p>
                   </dd>
                 </dl>
                 <Link

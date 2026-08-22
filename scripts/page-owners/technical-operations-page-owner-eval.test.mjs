@@ -124,6 +124,22 @@ test("the three situation-to-result chains remain explicit", async () => {
   assert.ok(result.failures.includes("situation_responsibility_result_chain"));
 });
 
+test("foregrounded results state their evidence maturity", async () => {
+  const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
+  const contract = loadContract();
+  const result = evaluateTechnicalOperationsPageOwners({
+    contract,
+    pageSource: loadPageSource(contract).replace(
+      "current-service adoption and resident outcomes are not claimed",
+      "impact"
+    )
+  });
+
+  assert.ok(
+    result.failures.includes("foregrounded_results_state_evidence_maturity")
+  );
+});
+
 test("the five-part operating method remains intact", async () => {
   const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
   const contract = loadContract();
