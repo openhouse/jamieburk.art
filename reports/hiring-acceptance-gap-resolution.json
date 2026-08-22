@@ -1,10 +1,40 @@
 {
   "schemaVersion": 1,
-  "candidateSha": "506b57f29d7d7ff64f7001d8a5975848632d32b0",
-  "portfolioSnapshotHash": "cd1d27ef7f405d8998690f0152de0149a6b1537f68879394953634435d49f310",
-  "publicReportHash": "e9e11898732fcfac669046b8bab0fd8f19d0881cbbe8e8f027077acc55fcb45c",
-  "wikiSourceFingerprint": "1c923e546cb66e3eac2c22d16194adfbbb465e4019d8d09756aa6b96b93c2a14",
+  "candidateSha": "79d7d23dc1deadc11725d5defc47245ddef30d9a",
+  "portfolioSnapshotHash": "d58bc408a4fe1c7f8035ebde6346ab3659f0decbbc136024c7c21d8503c17c86",
+  "publicReportHash": "312c71e6452715fffdc7114e5c19a31091a757cc96f35862416ceb6a54b0f961",
+  "wikiSourceFingerprint": "a6d850cbec0d172e4d080b1aff28adbafdb0a7ecf7351417563f51ee458c6419",
   "findings": [
+    {
+      "findingId": "finding.requirement.aclu-national-campaigns.complex-project-delivery",
+      "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "requirementId": "requirement.aclu-national-campaigns.complex-project-delivery",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations",
+        "project.fair-rent-nyc"
+      ],
+      "currentStatus": "visible-proven",
+      "gapType": "none",
+      "smallestResponsibleChange": "Lead with one bounded Fair Rent or NYC Artist Coalition delivery sequence and keep collective outcomes collective.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.aclu-national-campaigns.communication-systems",
+      "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
+      "requirementId": "requirement.aclu-national-campaigns.communication-systems",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations",
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "public-projection",
+      "smallestResponsibleChange": "Prepare a redacted weekly status, decision log, or source map as an interview artifact.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
     {
       "findingId": "finding.requirement.aclu-national-campaigns.budget-administration",
       "opportunityId": "opportunity.aclu.senior-project-manager-national-campaigns.8631854002",
@@ -20,6 +50,21 @@
       "requiresHumanApproval": true
     },
     {
+      "findingId": "finding.requirement.codepath-ai-ops.workflow-audit",
+      "opportunityId": "opportunity.codepath.senior-ai-operations-lead.5175813007",
+      "requirementId": "requirement.codepath-ai-ops.workflow-audit",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations",
+        "project.harry-j-epstein"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "none",
+      "smallestResponsibleChange": "Prepare one end-to-end before-and-after workflow with the human work, not the tool, at the center.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
       "findingId": "finding.requirement.codepath-ai-ops.agent-delivery",
       "opportunityId": "opportunity.codepath.senior-ai-operations-lead.5175813007",
       "requirementId": "requirement.codepath-ai-ops.agent-delivery",
@@ -30,6 +75,51 @@
       "currentStatus": "wiki-proven-not-projected",
       "gapType": "experience",
       "smallestResponsibleChange": "Select one genuinely used workflow and document users, tools, review gates, measured change, and production boundary; do not call the lab production SaaS.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.codepath-ai-ops.reusable-assets",
+      "opportunityId": "opportunity.codepath.senior-ai-operations-lead.5175813007",
+      "requirementId": "requirement.codepath-ai-ops.reusable-assets",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "method.source-backed-team-memory",
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-proven",
+      "gapType": "none",
+      "smallestResponsibleChange": "Show one reusable asset and the evidence that another person could operate it.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.codepath-ai-ops.outcome-measurement",
+      "opportunityId": "opportunity.codepath.senior-ai-operations-lead.5175813007",
+      "requirementId": "requirement.codepath-ai-ops.outcome-measurement",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations",
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "source",
+      "smallestResponsibleChange": "Recover one defensible adoption, time, quality, or error-rate baseline for a real workflow.",
+      "requiresOriginalSourceReview": true,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.codepath-engineering-pm.delivery",
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "requirementId": "requirement.codepath-engineering-pm.delivery",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations",
+        "project.harry-j-epstein"
+      ],
+      "currentStatus": "visible-proven",
+      "gapType": "none",
+      "smallestResponsibleChange": "Lead with one engineering-adjacent delivery story that names issue, triage, implementation, verification, and handoff.",
       "requiresOriginalSourceReview": false,
       "requiresHumanApproval": true
     },
@@ -59,6 +149,50 @@
       "gapType": "source",
       "smallestResponsibleChange": "Produce a small truthful repository example or acknowledge the gap; do not infer current test fluency from historical Django work.",
       "requiresOriginalSourceReview": true,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.codepath-engineering-pm.lightweight-process",
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "requirementId": "requirement.codepath-engineering-pm.lightweight-process",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-proven",
+      "gapType": "none",
+      "smallestResponsibleChange": "Describe one time Jamie intentionally reduced, replaced, or declined process.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-product-manager.public-launch",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "requirementId": "requirement.oti-product-manager.public-launch",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations",
+        "project.fair-rent-nyc"
+      ],
+      "currentStatus": "visible-proven",
+      "gapType": "none",
+      "smallestResponsibleChange": "Pair one production launch with one public communications example and state the decision authority accurately.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-product-manager.measurement",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "requirementId": "requirement.oti-product-manager.measurement",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "project.wowlist",
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "public-projection",
+      "smallestResponsibleChange": "Prepare a concise metric tree that separates activity, adoption, resident outcome, and learning.",
+      "requiresOriginalSourceReview": false,
       "requiresHumanApproval": true
     },
     {
@@ -135,6 +269,77 @@
       "requiresHumanApproval": true
     },
     {
+      "findingId": "finding.requirement.oti.delivery-coordination",
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "requirementId": "requirement.oti.delivery-coordination",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-proven",
+      "gapType": "none",
+      "smallestResponsibleChange": "Lead with one concrete delivery example in the application.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti.risk-and-dependencies",
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "requirementId": "requirement.oti.risk-and-dependencies",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations",
+        "project.callnyc"
+      ],
+      "currentStatus": "visible-proven",
+      "gapType": "none",
+      "smallestResponsibleChange": "Keep the public wording concise; add detail in interview.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti.onboarding-and-runbooks",
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "requirementId": "requirement.oti.onboarding-and-runbooks",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "visible-proven",
+      "gapType": "none",
+      "smallestResponsibleChange": "Prepare one inspectable redacted artifact for interview.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti.reporting-and-metrics",
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "requirementId": "requirement.oti.reporting-and-metrics",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "wording",
+      "smallestResponsibleChange": "Prepare a compact example of a weekly status and risk report.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti.continuous-improvement",
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "requirementId": "requirement.oti.continuous-improvement",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-proven",
+      "gapType": "none",
+      "smallestResponsibleChange": "Preserve the current direct phrasing.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
       "findingId": "finding.requirement.oti.government-hiring-and-procurement",
       "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
       "requirementId": "requirement.oti.government-hiring-and-procurement",
@@ -205,6 +410,48 @@
       "requiresHumanApproval": true
     },
     {
+      "findingId": "finding.requirement.benepass.launch-readiness",
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "requirementId": "requirement.benepass.launch-readiness",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "wording",
+      "smallestResponsibleChange": "Prepare a concrete launch-readiness example and decision boundary.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.benepass.product-engineering-translation",
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "requirementId": "requirement.benepass.product-engineering-translation",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "wording",
+      "smallestResponsibleChange": "Name the operational consequence, not merely the stakeholder list.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.benepass.runbooks-and-learning",
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "requirementId": "requirement.benepass.runbooks-and-learning",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "visible-proven",
+      "gapType": "none",
+      "smallestResponsibleChange": "Prepare one inspectable sample.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
       "findingId": "finding.requirement.benepass.quantified-prioritization",
       "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
       "requirementId": "requirement.benepass.quantified-prioritization",
@@ -214,6 +461,62 @@
       "gapType": "source",
       "smallestResponsibleChange": "Use only supported HJE figures and explain the decision they informed.",
       "requiresOriginalSourceReview": true,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.codepath.master-program-plan",
+      "opportunityId": "opportunity.codepath.claude-corps.5182020007",
+      "requirementId": "requirement.codepath.master-program-plan",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-proven",
+      "gapType": "none",
+      "smallestResponsibleChange": "Prepare a redacted plan-of-record artifact.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.codepath.partner-coordination",
+      "opportunityId": "opportunity.codepath.claude-corps.5182020007",
+      "requirementId": "requirement.codepath.partner-coordination",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "project.callnyc"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "wording",
+      "smallestResponsibleChange": "Name one multi-organization delivery sequence.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.codepath.executive-reporting",
+      "opportunityId": "opportunity.codepath.claude-corps.5182020007",
+      "requirementId": "requirement.codepath.executive-reporting",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "public-projection",
+      "smallestResponsibleChange": "Prepare one status-report sample for interview.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.codepath.handoff-ready-systems",
+      "opportunityId": "opportunity.codepath.claude-corps.5182020007",
+      "requirementId": "requirement.codepath.handoff-ready-systems",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "visible-proven",
+      "gapType": "none",
+      "smallestResponsibleChange": "Keep this as a recurring cross-project pattern.",
+      "requiresOriginalSourceReview": false,
       "requiresHumanApproval": true
     },
     {
@@ -245,6 +548,20 @@
       "requiresHumanApproval": true
     },
     {
+      "findingId": "finding.requirement.asana.reusable-playbooks",
+      "opportunityId": "opportunity.asana.ai-implementation.8027437",
+      "requirementId": "requirement.asana.reusable-playbooks",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "wording",
+      "smallestResponsibleChange": "Prepare one implementation-oriented playbook sample.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
       "findingId": "finding.requirement.permitflow.product-data",
       "opportunityId": "opportunity.permitflow.product-operations.8a6e6066",
       "requirementId": "requirement.permitflow.product-data",
@@ -253,6 +570,35 @@
       "currentStatus": "visible-weak",
       "gapType": "experience",
       "smallestResponsibleChange": "Test present SQL and analytics fluency; do not imply tools Jamie cannot demonstrate.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.permitflow.cross-functional-launch",
+      "opportunityId": "opportunity.permitflow.product-operations.8a6e6066",
+      "requirementId": "requirement.permitflow.cross-functional-launch",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "wording",
+      "smallestResponsibleChange": "Prepare one cross-functional launch sequence with actors and decisions.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.protected-memory.knowledge-friction",
+      "opportunityId": "opportunity.protected.source-backed-memory-consulting.2026",
+      "requirementId": "requirement.protected-memory.knowledge-friction",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "method.source-backed-team-memory",
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "none",
+      "smallestResponsibleChange": "Keep the public method legible without exposing the protected lead.",
       "requiresOriginalSourceReview": false,
       "requiresHumanApproval": true
     },
