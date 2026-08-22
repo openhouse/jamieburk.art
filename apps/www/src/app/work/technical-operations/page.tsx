@@ -83,10 +83,10 @@ const operatingMethod = [
     href: "/work/harry-j-epstein" as Route
   },
   {
-    term: "Support adoption",
+    term: "Prepare for adoption",
     detail:
-      "Prepare the interface, guidance, launch support, and feedback loops people need to use the work.",
-    evidence: "CallNYC",
+      "Prepare the interface, guidance, launch support, and a way to collect feedback before broader use is established.",
+    evidence: "the CallNYC prototype",
     href: "/work/callnyc" as Route
   },
   {

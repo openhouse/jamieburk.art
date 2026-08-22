@@ -121,13 +121,17 @@ export function evaluateTechnicalOperationsPageOwners({
         pageSource
       ),
     five_part_operating_method:
-      /term: "Frame the work"[\s\S]*term: "Make ownership visible"[\s\S]*term: "Create a delivery rhythm"[\s\S]*term: "Support adoption"[\s\S]*term: "Leave a useful handoff"/.test(
+      /term: "Frame the work"[\s\S]*term: "Make ownership visible"[\s\S]*term: "Create a delivery rhythm"[\s\S]*term: "Prepare for adoption"[\s\S]*term: "Leave a useful handoff"/.test(
         pageSource
       ),
     operating_method_routes_to_project_evidence:
-      /evidence: "CallNYC"[\s\S]*evidence: "FairRentNYC"[\s\S]*evidence: "Harry J\. Epstein Company"[\s\S]*evidence: "CallNYC"[\s\S]*evidence: "FairRentNYC and CallNYC"/.test(
+      /evidence: "CallNYC"[\s\S]*evidence: "FairRentNYC"[\s\S]*evidence: "Harry J\. Epstein Company"[\s\S]*evidence: "the CallNYC prototype"[\s\S]*evidence: "FairRentNYC and CallNYC"/.test(
         pageSource
       ) && /Seen in \{item\.evidence\}/.test(pageSource),
+    adoption_language_matches_available_evidence:
+      /term: "Prepare for adoption"/.test(pageSource) &&
+      /before broader use is established/.test(pageSource) &&
+      !/term: "Support adoption"/.test(pageSource),
     compact_capability_index_preserves_deep_routes:
       /Evidence by capability/.test(pageSource) &&
       /technicalOperationsProofRows\.map/.test(pageSource) &&

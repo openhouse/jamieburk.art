@@ -183,6 +183,22 @@ test("the five-part operating method remains intact", async () => {
   assert.ok(result.failures.includes("five_part_operating_method"));
 });
 
+test("adoption language cannot outrun the available evidence", async () => {
+  const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
+  const contract = loadContract();
+  const result = evaluateTechnicalOperationsPageOwners({
+    contract,
+    pageSource: loadPageSource(contract).replace(
+      "Prepare for adoption",
+      "Support adoption"
+    )
+  });
+
+  assert.ok(
+    result.failures.includes("adoption_language_matches_available_evidence")
+  );
+});
+
 test("the operating method retains routes to concrete project evidence", async () => {
   const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
   const contract = loadContract();

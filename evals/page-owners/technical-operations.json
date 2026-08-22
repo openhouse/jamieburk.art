@@ -68,13 +68,13 @@
       "responsibility": "Technical operations and implementation credibility",
       "publicSources": ["https://www.bellotti.tech/about"],
       "task": "Evaluate only whether the page shows credible implementation work in real systems through concrete mechanisms, constraints, stewardship, learning, and handoff.",
-      "criterion": "The page names how Jamie frames work, makes ownership and risk visible, coordinates delivery, supports adoption, and leaves maintainable handoffs; the three situations show different operating conditions; and it never treats a document, website, or launch as proof of impact by itself.",
+      "criterion": "The page names how Jamie frames work, makes ownership and risk visible, coordinates delivery, prepares work for adoption without implying measured uptake, and leaves a useful next state; the three situations show different operating conditions; and it never treats a document, website, or launch as proof of impact by itself.",
       "definitions": {
-        "pass": "A technical leader can see a repeatable operating practice grounded in sustained implementation, constraints, public boundaries, and specific project evidence.",
-        "fail": "The page relies on generic project-management language, presents artifacts as outcomes, omits maintenance or handoff, or hides the constraints that make implementation credible."
+        "pass": "A technical leader can see a repeatable operating practice grounded in sustained implementation, constraints, public boundaries, adoption readiness, lifecycle decisions, and specific project evidence.",
+        "fail": "The page relies on generic project-management language, presents artifacts as outcomes, claims adoption without evidence, omits maintenance or next-state clarity, or hides the constraints that make implementation credible."
       },
       "developmentExamples": [
-        {"label": "clear-pass", "inputSummary": "The page connects concrete operating mechanisms to three materially different systems and names adoption and handoff explicitly.", "expectedResult": "pass"},
+        {"label": "clear-pass", "inputSummary": "The page connects concrete operating mechanisms to three materially different systems, distinguishes adoption readiness from measured uptake, and names lifecycle or handoff state explicitly.", "expectedResult": "pass"},
         {"label": "clear-fail", "inputSummary": "The page promises cross-functional leadership but shows no mechanism, constraint, maintained system, or handoff.", "expectedResult": "fail"},
         {"label": "borderline-fail", "inputSummary": "Project artifacts are specific, but the operating sequence and post-launch stewardship remain invisible.", "expectedResult": "fail"}
       ]
