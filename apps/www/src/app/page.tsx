@@ -80,11 +80,6 @@ export default function HomePage() {
             <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
               Proof across operating, civic, and community systems
             </h2>
-            <p className="mt-4 leading-8 text-jb-ink/76">
-              Three different settings, one operating practice: clarify the
-              work, carry it through implementation, and leave people with a
-              system they can continue to use.
-            </p>
           </div>
           <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
             View all work
