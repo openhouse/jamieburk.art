@@ -114,7 +114,7 @@ const featuredCapabilityDestinations: Record<
     href: "/work/fair-rent-nyc" as Route,
     linkLabel: "See working memory in FairRentNYC"
   },
-  "Public-facing launch and adoption": {
+  "Public-facing launch and adoption readiness": {
     href: "/work/callnyc" as Route,
     linkLabel: "See the resident-facing CallNYC prototype"
   }

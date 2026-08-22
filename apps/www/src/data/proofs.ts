@@ -767,7 +767,7 @@ export const technicalOperationsProofRows = [
     ]
   },
   {
-    capability: "Public-facing launch and adoption",
+    capability: "Public-facing launch and adoption readiness",
     toward: "Shaping websites, prototypes, and community platforms so real audiences can act.",
     proofIds: [
       "nyc-artist-coalition-public-web-infrastructure",

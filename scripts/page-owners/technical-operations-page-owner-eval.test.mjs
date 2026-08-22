@@ -229,6 +229,22 @@ test("adoption language cannot outrun the available evidence", async () => {
   );
 });
 
+test("the capability label promises readiness rather than measured adoption", async () => {
+  const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
+  const contract = loadContract();
+  const result = evaluateTechnicalOperationsPageOwners({
+    contract,
+    pageSource: loadPageSource(contract).replace(
+      "Public-facing launch and adoption readiness",
+      "Public-facing launch and adoption"
+    )
+  });
+
+  assert.ok(
+    result.failures.includes("adoption_language_matches_available_evidence")
+  );
+});
+
 test("the operating method retains routes to concrete project evidence", async () => {
   const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
   const contract = loadContract();

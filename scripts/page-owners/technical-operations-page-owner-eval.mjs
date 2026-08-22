@@ -131,6 +131,7 @@ export function evaluateTechnicalOperationsPageOwners({
     adoption_language_matches_available_evidence:
       /term: "Prepare for adoption"/.test(pageSource) &&
       /before broader use is established/.test(pageSource) &&
+      /Public-facing launch and adoption readiness/.test(pageSource) &&
       !/term: "Support adoption"/.test(pageSource),
     compact_capability_index_preserves_deep_routes:
       /Evidence by capability/.test(pageSource) &&
