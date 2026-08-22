@@ -5,13 +5,13 @@ kind: source
 status: governed-open
 visibility: summary-only
 sensitivity: high
-last_reviewed: 2026-08-10
+last_reviewed: 2026-08-22
 review_by: 2026-11-10
 canonical_path: docs/knowledge-bank/sources/protected-source-backed-memory-opportunity.md
-summary: Metadata-only record for a bounded private review of an exploratory source-backed team-memory consulting lead.
+summary: Metadata-only record for limited private reviews of an exploratory source-backed team-memory consulting lead and a later relationship-level response.
 source_kind: protected-communication
 opaque_locator: vault.source.source-backed-memory-opportunity.2026
-coverage_date: 2026-08-10
+coverage_date: 2026-08-22
 access_state: bounded-reviewed
 normalization_state: partial
 identity_resolution_state: human-reviewed-private
@@ -19,7 +19,8 @@ public_use_status: summary-only
 known_gaps:
   - The exact sent proposal email body was not recovered from the connected mailbox.
   - The corrected working transcript was not certified against native audio.
-  - No substantive acceptance, rejection, budget approval, contract, or completed work was recovered in the bounded review.
+  - A later protected response supports warm acknowledgement and an invitation to speak again; it does not establish link opening, page reading, proposal assessment, internal forwarding, present organizational need, budget authority, hiring intent, or commercial authorization.
+  - No acceptance, rejection, budget approval, contract, or completed work was recovered in the limited review.
   - Later or unsearched communication may exist.
 relations:
   - type: supports
@@ -36,6 +37,7 @@ coverage, chronology, claims, and close reading.
 Raw communications, participant identity, company identity, pricing, contact
 information, attachments, transcript text, and private locators remain outside
 this repository. The source family supports a conditional opportunity
-classification; it does not establish employment, commercial acceptance,
-rejection, client work, deployment, outcome, endorsement, or publication
-permission.
+classification and a later invitation to speak again; it does not establish
+that the linked page was opened or read, that the proposal was assessed or
+forwarded, or that employment, commercial acceptance, rejection, client work,
+deployment, outcome, endorsement, or publication permission exists.

@@ -5,11 +5,11 @@ kind: evaluation
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-21
+last_reviewed: 2026-08-22
 review_by: 2026-09-21
 canonical_path: docs/knowledge-bank/evaluations/team-memory-forwarded-hiring.md
-summary: Deterministic prerequisites and an isolated, advisory internal-referral roleplay for the public Team Memory page and resume.
-decision: deterministic-and-development-roleplay-pass
+summary: Deterministic prerequisites, an isolated advisory internal-referral roleplay, and a public-safe real-world response calibration for the Team Memory page and resume.
+decision: deterministic-and-development-roleplay-pass-real-world-conversation-invited
 modeled_reader_status: development-hire-uncalibrated
 calibration_status: required
 relations:
@@ -83,3 +83,23 @@ prospective team is not established and is the question the sprint must test.
 The result is an uncalibrated synthetic development signal. It does not
 represent the protected person's opinion, the company's participation, a real
 authorization, an offer, employment, or a commercial outcome.
+
+## Real-world response calibration — August 22, 2026
+
+A later protected response supplies one new human observation: the relationship
+was warmly reactivated and a future conversation was explicitly invited. The
+response does not establish that the link was opened, that the page or proposal
+was read or assessed, that anything was forwarded internally, that a current
+organizational need or budget exists, or that there is hiring intent,
+commercial authorization, an offer, or an accepted engagement.
+
+The opportunity therefore remains `conditional` and non-live. Its response
+state advances only to `conversation-invited`, with commercial effect `none`.
+The protected response is not added to the modeled hiring judge's inputs and
+does not validate the earlier synthetic `hire` result.
+
+This update closes a concrete evaluator failure mode: warmth can no longer be
+silently promoted into page engagement, proposal comprehension, internal
+forwarding, or hiring authority. Mutation tests now verify that an attempted
+commercial escalation and the retention of private circumstance detail both
+fail before modeled review.

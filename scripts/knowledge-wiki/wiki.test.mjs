@@ -413,6 +413,28 @@ test("opportunity contract preserves requirements, freshness, screens, and offic
   assert.equal(result.health.diagnostics.criticalRequirementGapCount, 0);
 });
 
+test("opportunity response states reject unsupported real-world escalation", () => {
+  const root = fixture();
+  addOpportunity(root);
+  mutate(root, "opportunities/job.md", (value) =>
+    value.replace(
+      "verified_at: 2026-07-18",
+      `verified_at: 2026-07-18
+response_state:
+  stage: warm-reply-means-hired
+  evidence_class: protected-summary
+  observed_signals:
+    - warm-response
+  not_established:
+    - hiring-intent
+  commercial_effect: none
+  modeled_hire_validated: false
+  judge_input_allowed: false`
+    )
+  );
+  assertIssue(compile(root), "SCHEMA");
+});
+
 test("visible-weak critical requirements remain counted as gaps", () => {
   const root = fixture();
   addOpportunity(root);

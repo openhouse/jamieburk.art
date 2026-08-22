@@ -1,6 +1,6 @@
 {
   "id": "team-memory-forwarded-hiring-scenario-2026-08-21",
-  "version": 1,
+  "version": 2,
   "purpose": "Test whether a technical leader can forward the public Team Memory page and resume to company decision-makers and make a focused paid engagement easy to authorize.",
   "scenario": {
     "advocate": "Protected prospective technical leader",
@@ -95,5 +95,29 @@
     "minimumHumanLabeledPassExamples": 20,
     "releaseAuthority": "advisory-only",
     "realWorldDecisionClaimed": false
+  },
+  "realWorldFeedback": {
+    "sourceRecordId": "source.protected.source-backed-memory-opportunity.2026",
+    "opportunityRecordId": "opportunity.protected.source-backed-memory-consulting.2026",
+    "observedStage": "conversation-invited",
+    "observedSignals": [
+      "warm-response",
+      "future-conversation-invited"
+    ],
+    "notEstablished": [
+      "link-opened",
+      "page-read",
+      "proposal-assessed",
+      "internal-forward",
+      "present-organizational-need",
+      "budget-authority",
+      "hiring-intent",
+      "commercial-authorization",
+      "engagement-accepted"
+    ],
+    "commercialEffect": "none",
+    "validatesModeledHire": false,
+    "allowedToFeedModeledJudge": false,
+    "publicUse": "protected-summary-only"
   }
 }
