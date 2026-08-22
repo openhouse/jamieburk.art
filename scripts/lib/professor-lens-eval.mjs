@@ -55,7 +55,7 @@ const finalScorecardRelativePaths = [
   "docs/qa/evals-H/warren-sack-current-2026-08-21-c.json"
 ];
 
-const approvedCandidateSha256 = "a57dfe0ff6103ecb3d271a6827dac66e7160947d1d33199190e808968bc5e198";
+const approvedCandidateSha256 = "2edce556f2bdb4fad418a60d9274a724620c8ac312fc1f68f199b4f962a8025d";
 const requiredHoldoutCount = 6;
 
 const forbiddenPublicPatterns = [

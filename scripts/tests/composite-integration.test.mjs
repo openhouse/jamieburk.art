@@ -15,13 +15,14 @@ const register = JSON.parse(readFileSync("docs/integration/feature-evals-composi
 const portfolioSuite = JSON.parse(readFileSync(".agents/evals/portfolio-production-readiness.json", "utf8"));
 const blindSpots = JSON.parse(readFileSync("docs/knowledge-bank/data/blind-spot-controls-2026-07.json", "utf8"));
 
-test("current composite integration fails closed while preserving the refreshed professor gate", () => {
+test("current composite integration passes the exact-candidate relock", () => {
   const result = evaluateCompositeIntegration();
-  assert.equal(result.accepted, false);
-  assert.equal(result.criteria.find((item) => item.id === "COMP-003")?.pass, false);
+  assert.equal(result.accepted, true);
+  assert.equal(result.criteria.every((item) => item.pass), true);
   assert.equal(result.criteria.find((item) => item.id === "COMP-006")?.pass, true);
-  assert.equal(result.criteria.find((item) => item.id === "COMP-008")?.pass, false);
-  assert.equal(result.criteria.find((item) => item.id === "COMP-009")?.pass, false);
+  assert.equal(result.criteria.find((item) => item.id === "COMP-008")?.pass, true);
+  assert.equal(result.criteria.find((item) => item.id === "COMP-009")?.pass, true);
+  assert.equal(result.openHumanGates.length > 0, true);
   assert.equal(result.criteria.length, 9);
 });
 

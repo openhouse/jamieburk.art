@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "ownerId": "mandy-brown-editorial-practice",
+  "ownerName": "Mandy Brown",
+  "surfaceDigest": "df000b16581464d097f4a3e0bb24e71bb0e30121f6a21b9d61e790822b45243d",
+  "acceptanceQuestion": "Based only on the rendered public colophon, would this fictionalized Mandy Brown editorial lens accept the page for publication?",
+  "simulatedPublicFigureLens": true,
+  "calibrationStatus": "uncalibrated-advisory-simulation",
+  "inputScope": {
+    "publicPageOnly": true,
+    "repositoryAccess": false,
+    "privateSources": false
+  },
+  "nonEndorsementBoundary": "This is a fictionalized public-context editorial lens. It is not participation, quotation, endorsement, approval, or sign-off by Mandy Brown.",
+  "critique": "The colophon begins with a clear account of the publication: what it is, whom its editing serves, what enters the public edition, and what remains private. It then explains revision triggers, human responsibility, maintenance, technical construction, source custody, and collective contribution in a coherent sequence. The page includes a tool inventory and a fairly elaborate knowledge-system explanation, but neither displaces the reader-centered account because both arrive after the publication purpose and review path have been established. The hierarchy remains legible on desktop and mobile, and the language is careful, humane, and explicit about responsibility, permission, credit, and the limits of simulated review.",
+  "strengths": [
+    "The opening immediately defines the site as a living public edition shaped for a particular reader and purpose.",
+    "The review-path section clearly identifies what can change, what prompts revision, and that Jamie retains final publication responsibility.",
+    "The distinction between the public edition and the working archive gives readers a useful boundary without exposing internal material.",
+    "Technical details are subordinated to editorial stewardship and connected to accessibility, privacy, permission, and maintenance.",
+    "The lineage section acknowledges collective work and explains how credit and protected identities are handled.",
+    "The rendered hierarchy remains clear and readable across both supplied viewport sizes."
+  ],
+  "constructiveCriticism": [],
+  "result": "pass",
+  "accepted": true
+}

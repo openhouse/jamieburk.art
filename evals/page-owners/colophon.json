@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "colophon-editorial-page-owners-2026-08-22",
+  "target": {
+    "route": "/colophon",
+    "stagingUrl": "https://staging-c.jamieburk.art/colophon",
+    "files": [
+      "apps/www/src/app/colophon/page.tsx",
+      "apps/www/src/app/layout.tsx",
+      "apps/www/src/app/globals.css",
+      "apps/www/src/components/SiteHeader.tsx",
+      "apps/www/src/components/SiteFooter.tsx"
+    ]
+  },
+  "policy": {
+    "deterministicChecksBeforeLlm": true,
+    "stopOnDeterministicFailure": true,
+    "allOwnersMustAccept": true,
+    "exactSurfaceDigestRequired": true,
+    "calibrationStatus": "uncalibrated-advisory-simulation",
+    "humanPublicationAuthorityRequired": true
+  },
+  "publicPageBoundary": {
+    "publicPageOnly": true,
+    "repositoryAccess": false,
+    "privateSources": false,
+    "namedOwnersVisibleOnPublicPage": false
+  },
+  "nonEndorsementBoundary": "These are fictionalized public-context editorial lenses. They are not participation, quotation, endorsement, approval, or sign-off by the named people.",
+  "owners": [
+    {
+      "id": "mandy-brown-editorial-practice",
+      "name": "Mandy Brown",
+      "publicContextUrls": [
+        "https://aworkinglibrary.com/about/"
+      ],
+      "ownedFailureMode": "The page becomes a tool inventory or institutional explanation before it becomes a clear, reader-centered account of the publication and its maintenance.",
+      "criterion": "The colophon gives a reader-centered editorial account of what the site is for, how it is maintained, what changes, and who is responsible, with a clear hierarchy and humane language.",
+      "acceptanceQuestion": "Based only on the rendered public colophon, would this fictionalized Mandy Brown editorial lens accept the page for publication?",
+      "resultPath": "evals/page-owners/runs/2026-08-22/mandy-brown-colophon.json"
+    },
+    {
+      "id": "mindy-seu-networked-archive",
+      "name": "Mindy Seu",
+      "publicContextUrls": [
+        "https://mindyseu.com/"
+      ],
+      "ownedFailureMode": "The page flattens a networked and collective knowledge practice into lone authorship, vague provenance, or an exposed private archive.",
+      "criterion": "The colophon makes lineage, collective contribution, source relationships, custody, and the public-private boundary legible without flattening the network or exposing protected material.",
+      "acceptanceQuestion": "Based only on the rendered public colophon, would this fictionalized Mindy Seu archival lens accept the page for publication?",
+      "resultPath": "evals/page-owners/runs/2026-08-22/mindy-seu-colophon.json"
+    },
+    {
+      "id": "ethan-marcotte-resilient-web",
+      "name": "Ethan Marcotte",
+      "publicContextUrls": [
+        "https://unstoppablerobotninja.com/about/index.html"
+      ],
+      "ownedFailureMode": "The page describes responsible web practice while the rendered experience is inaccessible, fragile, visually unclear, or technically misleading.",
+      "criterion": "The rendered colophon is resilient, responsive, accessible, and honest about its material and technical system, with semantic structure, legible measures, working links, visible focus, and no horizontal overflow.",
+      "acceptanceQuestion": "Based only on the rendered public colophon, would this fictionalized Ethan Marcotte web-craft lens accept the page for publication?",
+      "resultPath": "evals/page-owners/runs/2026-08-22/ethan-marcotte-colophon.json"
+    }
+  ],
+  "judgeInstructions": [
+    "Inspect only the captured, rendered public colophon supplied in the evaluation packet.",
+    "Judge only the assigned criterion and owned failure mode.",
+    "Write the critique before returning the verdict.",
+    "If the page fails, identify precise evidence and the smallest useful revision.",
+    "Treat the named person as a fictionalized lens derived from public work, never as participation, quotation, endorsement, approval, or actual sign-off."
+  ],
+  "judgeOutputSchema": {
+    "schemaVersion": 1,
+    "ownerId": "string",
+    "ownerName": "string",
+    "surfaceDigest": "sha256",
+    "acceptanceQuestion": "string",
+    "simulatedPublicFigureLens": true,
+    "calibrationStatus": "uncalibrated-advisory-simulation",
+    "inputScope": {
+      "publicPageOnly": true,
+      "repositoryAccess": false,
+      "privateSources": false
+    },
+    "nonEndorsementBoundary": "string",
+    "critique": "string",
+    "strengths": [
+      "string"
+    ],
+    "constructiveCriticism": [
+      "string"
+    ],
+    "result": "pass | fail",
+    "accepted": "boolean"
+  },
+  "forbiddenPublicStrings": [
+    "Mandy Brown",
+    "Mindy Seu",
+    "Ethan Marcotte"
+  ]
+}
