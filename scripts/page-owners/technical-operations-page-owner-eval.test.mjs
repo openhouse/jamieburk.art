@@ -140,6 +140,22 @@ test("foregrounded results state their evidence maturity", async () => {
   );
 });
 
+test("signature situations retain concrete operating mechanics", async () => {
+  const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
+  const contract = loadContract();
+  const result = evaluateTechnicalOperationsPageOwners({
+    contract,
+    pageSource: loadPageSource(contract).replace(
+      "Operating mechanics",
+      "Implementation"
+    )
+  });
+
+  assert.ok(
+    result.failures.includes("signature_situations_name_operating_mechanics")
+  );
+});
+
 test("the five-part operating method remains intact", async () => {
   const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
   const contract = loadContract();
@@ -149,6 +165,19 @@ test("the five-part operating method remains intact", async () => {
   });
 
   assert.ok(result.failures.includes("five_part_operating_method"));
+});
+
+test("the operating method retains routes to concrete project evidence", async () => {
+  const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
+  const contract = loadContract();
+  const result = evaluateTechnicalOperationsPageOwners({
+    contract,
+    pageSource: loadPageSource(contract).replace("Seen in ", "Example: ")
+  });
+
+  assert.ok(
+    result.failures.includes("operating_method_routes_to_project_evidence")
+  );
 });
 
 test("the uncalibrated modeled gate remains advisory", async () => {

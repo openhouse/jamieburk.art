@@ -113,10 +113,21 @@ export function evaluateTechnicalOperationsPageOwners({
       /Sustained implementation/.test(pageSource) &&
       /no policy outcome is attributed to the documentation alone/.test(pageSource) &&
       /current-service adoption and resident outcomes are not claimed/.test(pageSource),
+    signature_situations_name_operating_mechanics:
+      /Operating mechanics/.test(pageSource) &&
+      /Incremental releases connected public content/.test(pageSource) &&
+      /Public sources and publishable summaries stayed distinct/.test(pageSource) &&
+      /Public records became issue paths, district context, and possible next steps/.test(
+        pageSource
+      ),
     five_part_operating_method:
       /term: "Frame the work"[\s\S]*term: "Make ownership visible"[\s\S]*term: "Create a delivery rhythm"[\s\S]*term: "Support adoption"[\s\S]*term: "Leave a useful handoff"/.test(
         pageSource
       ),
+    operating_method_routes_to_project_evidence:
+      /evidence: "CallNYC"[\s\S]*evidence: "FairRentNYC"[\s\S]*evidence: "Harry J\. Epstein Company"[\s\S]*evidence: "CallNYC"[\s\S]*evidence: "FairRentNYC and CallNYC"/.test(
+        pageSource
+      ) && /Seen in \{item\.evidence\}/.test(pageSource),
     compact_capability_index_preserves_deep_routes:
       /Evidence by capability/.test(pageSource) &&
       /technicalOperationsProofRows\.map/.test(pageSource) &&

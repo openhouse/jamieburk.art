@@ -17,6 +17,8 @@ const signatureSituations = [
       "An 80+ year-old industrial business needed to adapt online without losing the knowledge and voice that made it distinctive.",
     responsibility:
       "I maintained and improved the web and e-commerce presence, coordinated incremental releases, and translated legacy operating knowledge into searchable content, analytics, marketing, and operational workflows.",
+    operatingMechanics:
+      "Incremental releases connected public content, e-commerce, analytics, marketing, and internal workflows; this was sustained stewardship rather than a one-time launch.",
     resultProofIds: [
       "hje-modernization-stewardship",
       "hje-revenue-growth-contribution"
@@ -31,6 +33,8 @@ const signatureSituations = [
       "A coalition working across public advocacy, policy research, press, and direct engagement with elected officials needed shared memory without exposing private context.",
     responsibility:
       "I synthesized meetings, decisions, action items, public sources, policy questions, and stakeholder next steps into shared memory and actionable workstreams.",
+    operatingMechanics:
+      "Public sources and publishable summaries stayed distinct from private coalition context; decision records, review questions, and next-step lanes made shared work reviewable.",
     resultProofIds: ["fair-rent-campaign-memory", "fair-rent-source-map"],
     evidenceStatus:
       "Maintained coordination and source-trace resources for shared work; no policy outcome is attributed to the documentation alone."
@@ -42,6 +46,8 @@ const signatureSituations = [
       "Open constituent-services data needed to become resident-facing issue paths and next-step guidance.",
     responsibility:
       "I built an independent follow-on to the New York City Council's first CouncilStat hackathon and made its archived, unofficial status clear.",
+    operatingMechanics:
+      "Public records became issue paths, district context, and possible next steps; the lifecycle now ends in an explicit archived, unofficial state rather than a current-service claim.",
     resultProofIds: ["callnyc-civic-data-guidance"],
     evidenceStatus:
       "Delivered resident-facing prototype with verified public coverage; current-service adoption and resident outcomes are not claimed."
@@ -55,27 +61,37 @@ const operatingMethod = [
   {
     term: "Frame the work",
     detail:
-      "Clarify the need, the people involved, the constraints, and what remains unknown."
+      "Clarify the need, the people involved, the constraints, and what remains unknown.",
+    evidence: "CallNYC",
+    href: "/work/callnyc" as Route
   },
   {
     term: "Make ownership visible",
     detail:
-      "Map responsibilities, dependencies, decisions, and the paths that require review."
+      "Map responsibilities, dependencies, decisions, and the paths that require review.",
+    evidence: "FairRentNYC",
+    href: "/work/fair-rent-nyc" as Route
   },
   {
     term: "Create a delivery rhythm",
     detail:
-      "Use plans, working sessions, status signals, and documentation to keep parallel work moving."
+      "Use plans, working sessions, status signals, and documentation to keep parallel work moving.",
+    evidence: "Harry J. Epstein Company",
+    href: "/work/harry-j-epstein" as Route
   },
   {
     term: "Support adoption",
     detail:
-      "Prepare the interface, guidance, launch support, and feedback loops people need to use the work."
+      "Prepare the interface, guidance, launch support, and feedback loops people need to use the work.",
+    evidence: "CallNYC",
+    href: "/work/callnyc" as Route
   },
   {
     term: "Leave a useful handoff",
     detail:
-      "Transfer source maps, decision records, runbooks, and open questions so the next person can continue."
+      "Transfer source maps, decision records, runbooks, and open questions—or make archival status explicit—so the next person knows what can continue.",
+    evidence: "FairRentNYC and CallNYC",
+    href: "/work/fair-rent-nyc" as Route
   }
 ];
 
@@ -230,6 +246,12 @@ export default function TechnicalOperationsPage() {
                       {item.evidenceStatus}
                     </p>
                   </dd>
+                  <dt className="font-label text-sm uppercase tracking-[0.055em] text-jb-blue">
+                    Operating mechanics
+                  </dt>
+                  <dd className="leading-7 text-jb-ink/76">
+                    {item.operatingMechanics}
+                  </dd>
                 </dl>
                 <Link
                   className="mt-6 inline-flex min-h-11 items-center border-b border-jb-blue font-semibold text-jb-blue hover:border-jb-green hover:text-jb-green"
@@ -260,7 +282,15 @@ export default function TechnicalOperationsPage() {
               key={item.term}
             >
               <span className="font-semibold text-jb-ink">{item.term}</span>
-              <span className="leading-7 text-jb-ink/74">{item.detail}</span>
+              <span className="leading-7 text-jb-ink/74">
+                {item.detail}{" "}
+                <Link
+                  className="font-semibold text-jb-blue underline decoration-jb-blue/45 underline-offset-4 hover:text-jb-green"
+                  href={item.href}
+                >
+                  Seen in {item.evidence}.
+                </Link>
+              </span>
             </li>
           ))}
         </ol>
