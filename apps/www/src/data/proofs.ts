@@ -252,9 +252,9 @@ export const proofClaims: ProofClaim[] = [
     publicWording:
       "Created a legislative source map and provenance redline tracing Commercial Rent Stabilization bill language across public policy lineages and revision paths.",
     shortWording:
-      "Jamie mapped legislative source lineage so collaborators could review bill changes",
+      "Jamie mapped how bill language changed across public legislative records so collaborators could review revisions",
     detailedPublicWording:
-      "Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected.",
+      "Jamie organized the relationships among public sources, public-data framing, policy questions, and review steps so collaborators could see what was known, what needed review, and what remained protected.",
     sourceBasis: "Approved resume language and public-safe source-map summary.",
     guardrail: "Do not imply legal authority or official bill ownership.",
     doNotSay: [

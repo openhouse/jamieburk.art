@@ -24,8 +24,8 @@ claim beyond the wording and guardrails here.
 **Support level:** Moderate
 **Evidence class:** New York Department of State record / Archive.org captures / Jamie review confirmation
 **Public wording:** Jamie began the Harry J. Epstein Company client relationship in 2009, formed Thick Arts LLC on July 6, 2012 with the existing engagement becoming its first client relationship, and continued the work through 2015.
-**Detailed public-safe wording:** New York's official entity record independently verifies Thick Arts LLC's July 6, 2012 formation. Jamie's authorized professional account supports the 2009-2015 client relationship and first-client status. Archive.org separately bounds the historic storefront from January 2010 through its July-August 2015 transition.
-**Where to project:** Work card, HJE case study.
+**Detailed public-safe wording:** New York's official entity record independently verifies Thick Arts LLC's July 6, 2012 formation. Jamie's authorized professional account supports the 2009-2015 client relationship and first-client status. Archive.org separately bounds the historic storefront from January 2010 through its July-August 2015 transition. Jamie's responsibility ended with the engagement; the successor site and its current operations are not presented as his work.
+**Where to project:** Work card, HJE case study, Technical Operations.
 **Why it matters:** Corrects the client chronology and shows how Jamie formalized an existing practice without implying that the LLC existed in 2009 or that the client remains current.
 **Guardrail:** Keep the 2009 client start, July 6, 2012 LLC formation, 2009-2015 engagement, and January 2010-July 2015 archive observation bounds distinct.
 **Do not say:** Harry J. Epstein Company was a Thick Arts LLC client before July 6, 2012; New York's entity record proves first-client status; Archive.org proves contract dates; Jamie currently maintains the successor website.
@@ -40,6 +40,7 @@ claim beyond the wording and guardrails here.
 **Evidence class:** Approved resume / public project artifact / public-safe archive summary  
 **Public wording:** Led long-running web, e-commerce, analytics, marketing, content, and operational workflow improvements that helped an 80+ year-old industrial business adapt online.
 **Detailed public-safe wording:** Jamie maintained and improved the company's web and e-commerce presence, coordinated incremental releases, and translated legacy operating knowledge into searchable content, analytics, marketing, and operational workflows while preserving its public voice.
+**Technical Operations projection:** An established industrial retailer brought decades of product knowledge and a distinctive voice into a changing online sales environment. Jamie coordinated day-to-day web and e-commerce work, including release sequencing, analytics and content operations, and translation of legacy knowledge into requirements.
 **Where to project:** Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-term implementation, stakeholder translation, and operating-system work in a real business environment.  
 **Guardrail:** Use stewardship and contribution language in the historical 2009-2015 engagement; do not imply present maintenance of the successor site.
@@ -69,7 +70,7 @@ claim beyond the wording and guardrails here.
 **Support level:** Strong
 **Evidence class:** Approved resume / public project artifact / public source
 **Public wording:** Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.
-**Detailed public-safe wording:** CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.
+**Detailed public-safe wording:** CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the independent prototype in 2016. For Technical Operations, the project begins with a design question about making raw issue data clearer to residents, then distinguishes Jamie's independent framing and modeling from the prototype's demonstrated capability. Its compact status line identifies it as an archived independent prototype, not current service guidance or evidence of adoption or resident outcomes.
 **Where to project:** Technical Operations, Work card, Case study.
 **Why it matters:** Shows civic-data translation, information architecture, public interface delivery, and public coverage of the prototype.
 **Guardrail:** Always describe it as independent, archived, and unofficial. The narrower first-CouncilStat wording requires citation.
@@ -84,7 +85,7 @@ claim beyond the wording and guardrails here.
 **Support level:** Careful
 **Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context
 **Public wording:** Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.
-**Detailed public-safe wording:** Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams. A governed 2026 source note supports a current coordination practice in which Jamie maintains shared memory and concrete artifacts while action ownership remains explicit; it does not establish sole coalition authority or policy causality.
+**Detailed public-safe wording:** Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams. For Technical Operations, the public projection uses plain language: a coalition needed a shared way to track decisions and next steps without exposing private context; Jamie turned meetings, sources, questions, decisions, and assigned next steps into reviewable working records. The result is 30+ pages of shared, reviewable records for coordinating Commercial Rent Stabilization decisions and next steps. Its compact status line identifies an active record maintained by Jamie while action ownership remains shared; it does not establish sole coalition authority or policy causality.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.
 **Why it matters:** Shows documentation as operating infrastructure for sensitive, collective civic work.
 **Guardrail:** Use collective-work language and do not publish raw or private coalition context.

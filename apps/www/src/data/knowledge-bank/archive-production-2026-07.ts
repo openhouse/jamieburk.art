@@ -1418,7 +1418,28 @@ export const archiveProductionJuly2026 = {
         },
         {
           key: "technical-operations",
-          text: "The shared memory documents a current coordination practice: Jamie maintains decision records and concrete artifacts while action ownership stays explicit and neither Jamie nor the documentation is assigned sole coalition authority.",
+          text: "Active coordination record; Jamie maintains the working records while action ownership remains shared.",
+          status: "active",
+          citationRequired: false,
+          surfaces: ["/work/technical-operations"]
+        },
+        {
+          key: "technical-operations-situation",
+          text: "A coalition working across public advocacy, policy research, press, and direct engagement with elected officials needed a shared way to track decisions and next steps without exposing private context.",
+          status: "active",
+          citationRequired: false,
+          surfaces: ["/work/technical-operations"]
+        },
+        {
+          key: "technical-operations-role",
+          text: "I turned meetings, public sources, policy questions, decisions, and assigned next steps into reviewable working records.",
+          status: "active",
+          citationRequired: false,
+          surfaces: ["/work/technical-operations"]
+        },
+        {
+          key: "technical-operations-result",
+          text: "Created and stewarded 30+ pages of shared, reviewable working records for coordinating Commercial Rent Stabilization decisions and next steps.",
           status: "active",
           citationRequired: false,
           surfaces: ["/work/technical-operations"]

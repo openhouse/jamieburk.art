@@ -7,18 +7,19 @@
     "apps/www/src/app/work/technical-operations/page.tsx",
     "apps/www/src/components/ResumeCTA.tsx",
     "apps/www/src/components/ContactCTA.tsx",
-    "apps/www/src/data/proofs.ts"
+    "apps/www/src/data/proofs.ts",
+    "apps/www/src/data/knowledge-bank/public-registry.json"
   ],
   "latestDevelopmentRunPath": "evals/page-owners/runs/technical-operations-2026-08-22.json",
   "targetRoute": "/work/technical-operations",
   "targetUrl": "https://staging-a.jamieburk.art/work/technical-operations",
   "pageBrief": {
     "audience": "A rushed hiring reader considering Jamie for technical project management, product operations, implementation, civic technology, or adjacent public-interest work.",
-    "readerJob": "Understand Jamie's operating practice, see one dominant and two complementary situation-to-result chains, follow capability routes inside the method, and choose a useful hiring action in ninety seconds.",
+    "readerJob": "Understand Jamie's operating practice, see one dominant and two complementary situation-to-result chains, follow one case link inside each method step, and choose a useful hiring action in ninety seconds.",
     "requiredIdeas": [
       "Jamie creates operating structure that helps complex public-facing technical work move from ambiguity to launch and handoff.",
       "Three foregrounded situations show sustained business implementation, coalition operating memory, and resident-facing civic product work.",
-      "A concise operating method with embedded capability routes makes the practice transferable without repeating every project narrative.",
+      "A concise operating method with one embedded case link per step makes the practice transferable without repeating the project narratives.",
       "Collective work remains collectively credited and modeled page-owner review remains distinct from real participation or endorsement."
     ]
   },
@@ -90,13 +91,13 @@
         "https://abbycovert.com/make-sense/"
       ],
       "task": "Evaluate only whether the page arranges role, situations, method, capability evidence, and next actions into a coherent mental model for a first-time reader.",
-      "criterion": "The opening establishes one transferable operating promise; one sustained-implementation case leads two shorter complementary cases; the five-part method explains how Jamie works and carries a compact capability index; and every link has a distinct, understandable destination.",
+      "criterion": "The opening establishes one transferable operating promise; one sustained-implementation case leads two shorter complementary cases; the five-part method explains how Jamie works and carries one concrete case link per step; and no competing map repeats those routes.",
       "definitions": {
-        "pass": "A first-time reader can explain what Jamie does, identify the lead and supporting situations, restate the operating sequence, and use its capability routes without constructing the hierarchy themselves.",
+        "pass": "A first-time reader can explain what Jamie does, identify the lead and supporting situations, restate the operating sequence, and follow its case links without constructing the hierarchy themselves.",
         "fail": "The page repeats evidence, presents competing maps, uses insider language, gives equal weight to everything, or makes the reader decide how its parts relate."
       },
       "developmentExamples": [
-        {"label": "clear-pass", "inputSummary": "Three stories lead, one five-part method follows, and a compact capability index routes to deeper evidence.", "expectedResult": "pass"},
+        {"label": "clear-pass", "inputSummary": "Three stories lead, one five-part method follows, and each method step links directly to deeper evidence.", "expectedResult": "pass"},
         {"label": "clear-fail", "inputSummary": "Seven promises, eight project summaries, and four proof grids repeat one another without a governing structure.", "expectedResult": "fail"},
         {"label": "borderline-fail", "inputSummary": "All content is relevant, but the capability map repeats the foregrounded stories at full length.", "expectedResult": "fail"}
       ]
@@ -107,7 +108,7 @@
       "responsibility": "Editorial selection, sequence, and proportion",
       "publicSources": ["https://www.newyorker.com/contributors/deborah-treisman"],
       "task": "Evaluate only whether the page selects and orders its material into a compact, memorable hiring argument rather than an exhaustive inventory.",
-      "criterion": "The page progresses from promise to one dominant and two complementary situations, then a method with compact evidence routes and one resume action plus one contact action; every section advances the argument; the strongest material receives the most space; and caveats remain brief and proportionate to the accomplishments.",
+      "criterion": "The page progresses from promise to one dominant and two complementary situations, then a method with direct case links and one resume action plus one contact action; every section advances the argument; the strongest material receives the most space; and caveats remain brief and proportionate to the accomplishments.",
       "definitions": {
         "pass": "A rushed reader can follow and remember the argument because selection, sequence, and proportion distinguish the main story from supporting evidence.",
         "fail": "The page restates its thesis, gives equal weight to unequal material, lets protective language overpower accomplishment, or makes the reader find the story inside an inventory."

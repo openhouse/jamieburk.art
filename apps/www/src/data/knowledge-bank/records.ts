@@ -371,7 +371,10 @@ const knowledgeBankInput = {
       projections: [
         { key: "case-study", text: "After the fuller CouncilStat dataset was released, Jamie developed CallNYC.org as an independent public-facing interpretation of those constituent-services records.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] },
         { key: "work-card", text: "Built an independent civic-data follow-on translating CouncilStat constituent-services records into resident-facing issue pathways and next-step guidance.", status: "active", citationRequired: false, surfaces: ["/work", "/work/callnyc"] },
-        { key: "resume-html", text: "Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.", status: "active", citationRequired: false, surfaces: ["/resume"] }
+        { key: "resume-html", text: "Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.", status: "active", citationRequired: false, surfaces: ["/resume"] },
+        { key: "technical-operations-situation", text: "The prototype began with open constituent-services records and a design question: how could raw issue data become clearer to residents?", status: "active", citationRequired: false, surfaces: ["/work/technical-operations"] },
+        { key: "technical-operations-role", text: "I independently framed the prototype and modeled issue paths and possible next steps from open records.", status: "active", citationRequired: false, surfaces: ["/work/technical-operations"] },
+        { key: "technical-operations-result", text: "Demonstrated how open constituent-services data could become resident-facing issue paths and next-step guidance. Politico New York covered the independent prototype in 2016.", status: "active", citationRequired: false, surfaces: ["/work/technical-operations"] }
       ],
       evidence: [
         { sourceId: "SRC-CALLNYC-POLITICO-2016-03-14", relationship: "direct-support", supports: ["sequence from the January event through the fuller data release", "Jamie's independent development and iteration", "Politico coverage"], confidence: "high", renderCitation: true },
@@ -386,7 +389,10 @@ const knowledgeBankInput = {
       project: "callnyc",
       internalClaim: "CallNYC is an archived independent civic-data prototype, not an official or current New York City Council service.",
       status: "confirmed-with-boundary",
-      projections: [{ key: "case-study", text: "CallNYC is an archived independent prototype, not an official or current New York City Council service.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
+      projections: [
+        { key: "case-study", text: "CallNYC is an archived independent prototype, not an official or current New York City Council service.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] },
+        { key: "technical-operations", text: "Archived independent prototype; not current service guidance or evidence of adoption or resident outcomes.", status: "active", citationRequired: false, surfaces: ["/work/technical-operations"] }
+      ],
       evidence: [
         { sourceId: "SRC-CALLNYC-GITHUB-REPOSITORY", relationship: "direct-support", supports: ["surviving independent implementation"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-CALLNYC-POLITICO-2016-03-14", relationship: "context", supports: ["contemporaneous independent-project framing"], confidence: "high", renderCitation: true }
@@ -609,8 +615,7 @@ const knowledgeBankInput = {
       "SRC-X-HELP-ACCOUNT-ARCHIVE",
       "SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026",
       "SRC-NYCAC-FACEBOOK-POST-CENSUS-2026",
-      "SRC-NYCAC-FACEBOOK-POST-REPORT-2026",
-      "SRC-CRS-RUNNING-MEMORY-2026"
+      "SRC-NYCAC-FACEBOOK-POST-REPORT-2026"
     ],
     occurrences: [
       { id: "cabaret-safety-organizing", claimId: "CLM-NYCAC-CABARET-SAFETY-ORGANIZING", projection: "case-study", sourceIds: ["SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19", "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-09-14"] },
@@ -624,8 +629,7 @@ const knowledgeBankInput = {
       { id: "coalition-participation-system", claimId: "CLM-NYCAC-PARTICIPATION-SYSTEM", projection: "case-study", sourceIds: ["SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026", "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19", "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"] },
       { id: "coalition-event-response-signals", claimId: "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SIGNALS", projection: "case-study", sourceIds: ["SRC-NYCAC-FACEBOOK-EVENT-CENSUS-2026"] },
       { id: "coalition-facebook-public-operating-record", claimId: "CLM-NYCAC-FACEBOOK-PUBLIC-OPERATING-RECORD", projection: "case-study", sourceIds: ["SRC-NYCAC-FACEBOOK-POST-CENSUS-2026", "SRC-NYCAC-FACEBOOK-POST-REPORT-2026"] },
-      { id: "crs-campaign-memory-system", claimId: "CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026", projection: "case-study", sourceIds: ["SRC-CRS-RUNNING-MEMORY-2026"] },
-      { id: "crs-current-coordination-practice", claimId: "CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026", projection: "technical-operations", sourceIds: ["SRC-CRS-RUNNING-MEMORY-2026"] },
+      { id: "crs-campaign-memory-system", claimId: "CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026", projection: "case-study" },
       { id: "crs-provenance-redline", claimId: "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026", projection: "case-study" }
     ]
   }, {

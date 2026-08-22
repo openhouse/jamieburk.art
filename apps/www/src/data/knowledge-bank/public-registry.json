@@ -1393,6 +1393,33 @@
           "surfaces": [
             "/resume"
           ]
+        },
+        {
+          "key": "technical-operations-situation",
+          "text": "The prototype began with open constituent-services records and a design question: how could raw issue data become clearer to residents?",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        },
+        {
+          "key": "technical-operations-role",
+          "text": "I independently framed the prototype and modeled issue paths and possible next steps from open records.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        },
+        {
+          "key": "technical-operations-result",
+          "text": "Demonstrated how open constituent-services data could become resident-facing issue paths and next-step guidance. Politico New York covered the independent prototype in 2016.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
         }
       ],
       "evidence": [
@@ -1433,6 +1460,15 @@
           "surfaces": [
             "/work/callnyc"
           ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Archived independent prototype; not current service guidance or evidence of adoption or resident outcomes.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
         }
       ],
       "evidence": [
@@ -1470,6 +1506,42 @@
           "citationRequired": false,
           "surfaces": [
             "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Active coordination record; Jamie maintains the working records while action ownership remains shared.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        },
+        {
+          "key": "technical-operations-situation",
+          "text": "A coalition working across public advocacy, policy research, press, and direct engagement with elected officials needed a shared way to track decisions and next steps without exposing private context.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        },
+        {
+          "key": "technical-operations-role",
+          "text": "I turned meetings, public sources, policy questions, decisions, and assigned next steps into reviewable working records.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        },
+        {
+          "key": "technical-operations-result",
+          "text": "Created and stewarded 30+ pages of shared, reviewable working records for coordinating Commercial Rent Stabilization decisions and next steps.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
           ]
         }
       ],
@@ -1618,6 +1690,33 @@
           "citationRequired": false,
           "surfaces": [
             "/work"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Historical 2009-2015 engagement: Jamie's responsibility ended with the engagement; the successor site and its current operations are not presented as his work.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        },
+        {
+          "key": "technical-operations-situation",
+          "text": "An established industrial retailer brought decades of product knowledge and a distinctive voice into a changing online sales environment.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        },
+        {
+          "key": "technical-operations-role",
+          "text": "I coordinated day-to-day web and e-commerce work: sequencing releases, maintaining analytics and content operations, and translating legacy knowledge into clear requirements.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
           ]
         }
       ],

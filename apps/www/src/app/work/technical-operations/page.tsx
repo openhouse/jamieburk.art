@@ -3,10 +3,8 @@ import type { Metadata } from "next";
 import type { Route } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { ResumeCTA } from "@/components/ResumeCTA";
-import {
-  requireReadyOrCarefulProof,
-  technicalOperationsProofRows
-} from "@/data/proofs";
+import { getClaimProjection } from "@/data/knowledge-bank";
+import { requireReadyOrCarefulProof } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
 const signatureSituations = [
@@ -14,46 +12,89 @@ const signatureSituations = [
     project: "Harry J. Epstein Company",
     href: "/work/harry-j-epstein" as Route,
     linkLabel: "Read the Harry J. Epstein Company case study",
-    situation:
-      "An 80+ year-old industrial business needed to adapt online without losing the knowledge and voice that made it distinctive.",
-    responsibility:
-      "I coordinated day-to-day web and e-commerce work: sequencing releases, maintaining analytics and content operations, and translating legacy knowledge into clear requirements.",
-    operatingMechanics:
+    situation: getClaimProjection(
+      "CLM-HJE-THICK-ARTS-FORMALIZATION-2009-2015",
+      "technical-operations-situation",
+      "/work/technical-operations"
+    ).text,
+    responsibility: getClaimProjection(
+      "CLM-HJE-THICK-ARTS-FORMALIZATION-2009-2015",
+      "technical-operations-role",
+      "/work/technical-operations"
+    ).text,
+    resultSummary: null,
+    method:
       "Incremental releases connected public content, e-commerce, analytics, marketing, and internal workflows; this was sustained stewardship rather than a one-time launch.",
     resultProofIds: [
       "hje-modernization-stewardship",
       "hje-revenue-growth-contribution"
     ],
     lifecycleNote:
-      "Historical 2009–2015 engagement; growth is contribution framing, and the successor site is context—not my current work. The public-safe reconstruction preserves the reusable operating pattern."
+      getClaimProjection(
+        "CLM-HJE-THICK-ARTS-FORMALIZATION-2009-2015",
+        "technical-operations",
+        "/work/technical-operations"
+      ).text
   },
   {
     project: "FairRentNYC / Commercial Rent Stabilization",
     href: "/work/fair-rent-nyc" as Route,
     linkLabel: "Read the FairRentNYC case study",
-    situation:
-      "A coalition working across public advocacy, policy research, press, and direct engagement with elected officials needed shared memory without exposing private context.",
-    responsibility:
-      "I synthesized meetings, decisions, action items, public sources, policy questions, and stakeholder next steps into shared memory and actionable workstreams.",
-    operatingMechanics:
-      "Public sources and publishable summaries stayed distinct from private coalition context; decision records, review questions, and next-step lanes made shared work reviewable.",
-    resultProofIds: ["fair-rent-campaign-memory", "fair-rent-source-map"],
+    situation: getClaimProjection(
+      "CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026",
+      "technical-operations-situation",
+      "/work/technical-operations"
+    ).text,
+    responsibility: getClaimProjection(
+      "CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026",
+      "technical-operations-role",
+      "/work/technical-operations"
+    ).text,
+    resultSummary:
+      getClaimProjection(
+        "CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026",
+        "technical-operations-result",
+        "/work/technical-operations"
+      ).text,
+    method:
+      "Public sources and publishable summaries stayed distinct from private coalition context; decision records, review questions, and assigned next steps made shared work reviewable.",
+    resultProofIds: [],
     lifecycleNote:
-      "Current coordination practice: I maintain the record, action ownership stays explicit, and no policy outcome is attributed to the documentation."
+      getClaimProjection(
+        "CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026",
+        "technical-operations",
+        "/work/technical-operations"
+      ).text
   },
   {
     project: "CallNYC",
     href: "/work/callnyc" as Route,
     linkLabel: "Read the CallNYC case study",
-    situation:
-      "Open constituent-services data needed to become resident-facing issue paths and next-step guidance.",
-    responsibility:
-      "I independently framed the prototype, modeled issue paths and possible next steps from open records, and kept its relationship to the Council and current service status explicit.",
-    operatingMechanics:
+    situation: getClaimProjection(
+      "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
+      "technical-operations-situation",
+      "/work/technical-operations"
+    ).text,
+    responsibility: getClaimProjection(
+      "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
+      "technical-operations-role",
+      "/work/technical-operations"
+    ).text,
+    resultSummary:
+      getClaimProjection(
+        "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
+        "technical-operations-result",
+        "/work/technical-operations"
+      ).text,
+    method:
       "Public records became issue paths, district context, and possible next steps.",
-    resultProofIds: ["callnyc-civic-data-guidance"],
+    resultProofIds: [],
     lifecycleNote:
-      "Delivered prototype with verified public coverage; archived and unofficial, with no current-service adoption or resident outcome claimed."
+      getClaimProjection(
+        "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
+        "technical-operations",
+        "/work/technical-operations"
+      ).text
   }
 ].map((item) => ({
   ...item,
@@ -95,43 +136,15 @@ const operatingMethod = [
     term: "Leave a useful handoff",
     detail:
       "Transfer source maps, decision records, runbooks, and open questions—or make archival status explicit—so the next person knows what can continue.",
-    evidence: "FairRentNYC and CallNYC",
+    evidence: "FairRentNYC",
     href: "/work/fair-rent-nyc" as Route
   }
 ];
 
-const featuredCapabilityDestinations: Record<
-  string,
-  { href: Route | `https://${string}`; linkLabel: string }
-> = {
-  "Delivery coordination": {
-    href: "/work/harry-j-epstein" as Route,
-    linkLabel: "See sustained delivery at Harry J. Epstein Company"
-  },
-  "Risk surfacing and decision clarity": {
-    href: "/work/fair-rent-nyc" as Route,
-    linkLabel: "See decision clarity in FairRentNYC"
-  },
-  "Operating documentation people use": {
-    href: "/work/fair-rent-nyc" as Route,
-    linkLabel: "See working memory in FairRentNYC"
-  },
-  "Public-facing launch and adoption readiness": {
-    href: "/work/callnyc" as Route,
-    linkLabel: "See the resident-facing CallNYC prototype"
-  }
-};
-
-function resultWording(proof: ReturnType<typeof requireReadyOrCarefulProof>) {
-  return proof.id === "fair-rent-source-map"
-    ? proof.shortWording
-    : proof.publicWording;
-}
-
 export const metadata: Metadata = createMetadata({
   title: "Technical Operations & Implementation - Jamie Burkart",
   description:
-    "Role-specific proof surface for technical operations, implementation, product operations, documentation systems, and durable handoffs.",
+    "How Jamie Burkart turns complex public-facing technical work into coordinated delivery, usable systems, and clear handoffs.",
   path: "/work/technical-operations"
 });
 
@@ -147,11 +160,6 @@ export default function TechnicalOperationsPage() {
             I create the operating structure complex teams need to move
             public-facing technical work from ambiguity to launch.
           </p>
-          <p>
-            I clarify requirements, map workflows, coordinate delivery, surface
-            risk, maintain decision records, prepare onboarding and handoff
-            materials, and improve working systems over time.
-          </p>
         </div>
       </header>
 
@@ -162,7 +170,7 @@ export default function TechnicalOperationsPage() {
               Three situations, one operating practice
             </h2>
             <p className="mt-5 max-w-[32ch] leading-7 text-jb-ink/72">
-              Sustained business operations, coalition memory, and a
+              Sustained business operations, coalition coordination, and a
               resident-facing civic prototype show the practice in different
               conditions.
             </p>
@@ -188,33 +196,33 @@ export default function TechnicalOperationsPage() {
                   {primarySituation.situation}
                 </dd>
                 <dt className="font-label text-sm uppercase tracking-[0.055em] text-jb-blue">
-                  My responsibility
+                  My role
                 </dt>
                 <dd className="leading-7 text-jb-ink/76">
                   {primarySituation.responsibility}
                 </dd>
                 <dt className="font-label text-sm uppercase tracking-[0.055em] text-jb-blue">
-                  What became usable
+                  Result
                 </dt>
                 <dd>
                   <ul className="space-y-3 text-jb-ink/76">
                     {primarySituation.results.map((proof) => (
                       <li className="leading-7" key={proof.id}>
-                        {resultWording(proof)}
+                        {proof.publicWording}
                       </li>
                     ))}
                   </ul>
                 </dd>
                 <dt className="font-label text-sm uppercase tracking-[0.055em] text-jb-blue">
-                  Operating mechanics
+                  Method
                 </dt>
                 <dd className="leading-7 text-jb-ink/76">
-                  {primarySituation.operatingMechanics}
+                  {primarySituation.method}
                 </dd>
               </dl>
               <p className="mt-6 max-w-[72ch] border-l-2 border-jb-ink/16 pl-4 text-sm leading-6 text-jb-ink/62">
                 <span className="font-semibold text-jb-ink/72">
-                  Lifecycle and evidence:
+                  Status:
                 </span>{" "}
                 {primarySituation.lifecycleNote}
               </p>
@@ -244,24 +252,10 @@ export default function TechnicalOperationsPage() {
                     </Link>
                   </h3>
                   <p className="mt-5 leading-7 text-jb-ink/76">
-                    {item.situation}
-                  </p>
-                  <p className="mt-4 leading-7 text-jb-ink/76">
-                    <span className="font-semibold text-jb-ink">My role:</span>{" "}
-                    {item.responsibility}
-                  </p>
-                  <ul className="mt-4 space-y-3 text-jb-ink/76">
-                    {item.results.map((proof) => (
-                      <li className="leading-7" key={proof.id}>
-                        {resultWording(proof)}
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="mt-4 leading-7 text-jb-ink/76">
-                    <span className="font-semibold text-jb-ink">
-                      How it worked:
-                    </span>{" "}
-                    {item.operatingMechanics}
+                    {item.situation} {item.responsibility}{" "}
+                    <span className="font-semibold text-jb-ink/86">
+                      {item.resultSummary}
+                    </span>
                   </p>
                   <p className="mt-5 border-l-2 border-jb-ink/16 pl-3 text-sm leading-6 text-jb-ink/62">
                     {item.lifecycleNote}
@@ -303,43 +297,12 @@ export default function TechnicalOperationsPage() {
                     className="font-semibold text-jb-blue underline decoration-jb-blue/45 underline-offset-4 hover:text-jb-green"
                     href={item.href}
                   >
-                    Seen in {item.evidence}.
+                    Case evidence: {item.evidence}.
                   </Link>
                 </span>
               </li>
             ))}
           </ol>
-          <nav aria-label="Evidence by capability" className="mt-8">
-            <p className="font-label text-sm uppercase tracking-[0.055em] text-jb-green">
-              Evidence by capability
-            </p>
-            <ul className="mt-3 grid gap-x-6 border-t border-jb-ink/16 sm:grid-cols-2">
-              {technicalOperationsProofRows.map((row) => {
-                const destination =
-                  featuredCapabilityDestinations[row.capability];
-
-                return (
-                  <li
-                    className="border-b border-jb-ink/16 py-4"
-                    id={row.capability.toLowerCase().replaceAll(" ", "-")}
-                    key={row.capability}
-                  >
-                    <Link
-                      className="group block min-h-11 text-jb-blue hover:text-jb-green"
-                      href={destination.href}
-                    >
-                      <span className="block font-semibold">
-                        {row.capability}
-                      </span>
-                      <span className="mt-1 block text-sm leading-6 text-jb-ink/62 group-hover:text-jb-green">
-                        {destination.linkLabel}
-                      </span>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
         </div>
       </section>
 

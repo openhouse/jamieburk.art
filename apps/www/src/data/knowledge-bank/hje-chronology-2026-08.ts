@@ -277,6 +277,27 @@ export const hjeChronologyAugust2026 = {
           status: "active",
           citationRequired: false,
           surfaces: ["/work"]
+        },
+        {
+          key: "technical-operations",
+          text: "Historical 2009-2015 engagement: Jamie's responsibility ended with the engagement; the successor site and its current operations are not presented as his work.",
+          status: "active",
+          citationRequired: false,
+          surfaces: ["/work/technical-operations"]
+        },
+        {
+          key: "technical-operations-situation",
+          text: "An established industrial retailer brought decades of product knowledge and a distinctive voice into a changing online sales environment.",
+          status: "active",
+          citationRequired: false,
+          surfaces: ["/work/technical-operations"]
+        },
+        {
+          key: "technical-operations-role",
+          text: "I coordinated day-to-day web and e-commerce work: sequencing releases, maintaining analytics and content operations, and translating legacy knowledge into clear requirements.",
+          status: "active",
+          citationRequired: false,
+          surfaces: ["/work/technical-operations"]
         }
       ],
       evidence: [

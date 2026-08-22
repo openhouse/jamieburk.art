@@ -18,6 +18,20 @@ function clone(value) {
 
 function loadPageSource(contract) {
   return contract.targetPaths
+    .filter((relativePath) => !relativePath.endsWith("public-registry.json"))
+    .map((relativePath) => readFileSync(relativePath, "utf8"))
+    .join("\n");
+}
+
+function loadRouteSource() {
+  return readFileSync(
+    "apps/www/src/app/work/technical-operations/page.tsx",
+    "utf8"
+  );
+}
+
+function loadCandidateSource(contract) {
+  return contract.targetPaths
     .map((relativePath) => readFileSync(relativePath, "utf8"))
     .join("\n");
 }
@@ -40,7 +54,9 @@ test("a page or proof change makes modeled sign-off stale", async () => {
   const contract = loadContract();
   const result = evaluateTechnicalOperationsPageOwners({
     contract,
-    pageSource: `${loadPageSource(contract)}\nchanged candidate`,
+    pageSource: loadPageSource(contract),
+    routeSource: loadRouteSource(),
+    candidateSource: `${loadCandidateSource(contract)}\nchanged candidate`,
     modeledRun: loadModeledRun(contract)
   });
 
@@ -54,7 +70,9 @@ test("a missing owner blocks modeled review", async () => {
   contract.owners.pop();
   const result = evaluateTechnicalOperationsPageOwners({
     contract,
-    pageSource: loadPageSource(contract)
+    pageSource: loadPageSource(contract),
+    routeSource: loadRouteSource(),
+    candidateSource: loadCandidateSource(contract)
   });
 
   assert.ok(
@@ -100,17 +118,15 @@ test("modeled owner names cannot become public endorsements", async () => {
   assert.ok(result.failures.includes("public_page_avoids_false_endorsement"));
 });
 
-test("the page cannot regain competing full-length proof maps", async () => {
+test("the page cannot regain a competing evidence map", async () => {
   const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
   const contract = loadContract();
   const result = evaluateTechnicalOperationsPageOwners({
     contract,
-    pageSource: `${loadPageSource(contract)} JBCard`
+    pageSource: `${loadPageSource(contract)} Evidence by capability`
   });
 
-  assert.ok(
-    result.failures.includes("compact_capability_index_preserves_deep_routes")
-  );
+  assert.ok(result.failures.includes("method_is_the_only_evidence_route"));
 });
 
 test("case-study links retain destination-specific labels", async () => {
@@ -134,7 +150,8 @@ test("situation fields retain distinct responsibility and result jobs", async ()
   const contract = loadContract();
   const result = evaluateTechnicalOperationsPageOwners({
     contract,
-    pageSource: loadPageSource(contract).replace(
+    pageSource: loadPageSource(contract),
+    candidateSource: loadCandidateSource(contract).replace(
       "coordinated day-to-day web and e-commerce work",
       "maintained the web and e-commerce presence"
     )
@@ -145,18 +162,17 @@ test("situation fields retain distinct responsibility and result jobs", async ()
   );
 });
 
-test("the source-map result retains its plain-language projection", async () => {
+test("supporting summaries do not regain a second proof list", async () => {
   const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
   const contract = loadContract();
   const result = evaluateTechnicalOperationsPageOwners({
     contract,
-    pageSource: loadPageSource(contract).replace(
-      "proof.shortWording",
-      "proof.publicWording"
-    )
+    pageSource: `${loadPageSource(contract)} fair-rent-source-map`
   });
 
-  assert.ok(result.failures.includes("source_map_uses_plain_language_projection"));
+  assert.ok(
+    result.failures.includes("supporting_proof_points_are_distinct_and_plain")
+  );
 });
 
 test("the three situation-to-result chains remain explicit", async () => {
@@ -164,10 +180,69 @@ test("the three situation-to-result chains remain explicit", async () => {
   const contract = loadContract();
   const result = evaluateTechnicalOperationsPageOwners({
     contract,
-    pageSource: loadPageSource(contract).replace("What became usable", "Evidence")
+    pageSource: loadPageSource(contract).replace("Result", "Evidence")
   });
 
   assert.ok(result.failures.includes("situation_responsibility_result_chain"));
+});
+
+test("supporting results state coordination value and distinguish prototype capability from adoption", async () => {
+  const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
+  const contract = loadContract();
+  const result = evaluateTechnicalOperationsPageOwners({
+    contract,
+    pageSource: loadPageSource(contract),
+    candidateSource: loadCandidateSource(contract)
+  });
+
+  assert.equal(
+    result.checks.supporting_results_state_non_artifact_value,
+    true
+  );
+});
+
+test("the opening defers to one five-part method instead of previewing a second map", async () => {
+  const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
+  const contract = loadContract();
+  const result = evaluateTechnicalOperationsPageOwners({
+    contract,
+    pageSource: loadPageSource(contract),
+    candidateSource: loadCandidateSource(contract)
+  });
+
+  assert.equal(result.checks.opening_defers_to_one_method_sequence, true);
+});
+
+test("supporting proof points stay distinct, plain, and explicitly linked", async () => {
+  const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
+  const contract = loadContract();
+  const result = evaluateTechnicalOperationsPageOwners({
+    contract,
+    pageSource: loadPageSource(contract),
+    routeSource: loadRouteSource(),
+    candidateSource: loadCandidateSource(contract)
+  });
+
+  assert.equal(
+    result.checks.supporting_proof_points_are_distinct_and_plain,
+    true
+  );
+  assert.equal(result.checks.method_links_are_explicit_case_evidence, true);
+});
+
+test("supporting lifecycle safeguards stay concise and nonduplicative", async () => {
+  const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
+  const contract = loadContract();
+  const result = evaluateTechnicalOperationsPageOwners({
+    contract,
+    pageSource: loadPageSource(contract),
+    candidateSource: loadCandidateSource(contract)
+  });
+
+  assert.equal(
+    result.checks.supporting_status_is_concise_and_nonduplicative,
+    true
+  );
 });
 
 test("the strongest situation retains a distinct editorial hierarchy", async () => {
@@ -188,14 +263,26 @@ test("the strongest situation retains a distinct editorial hierarchy", async () 
   );
 });
 
+test("supporting situations stay compressed into one evidence paragraph", async () => {
+  const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
+  const contract = loadContract();
+  const result = evaluateTechnicalOperationsPageOwners({
+    contract,
+    pageSource: loadPageSource(contract),
+    candidateSource: loadCandidateSource(contract)
+  });
+
+  assert.equal(result.checks.supporting_cases_remain_compressed_evidence, true);
+});
+
 test("foregrounded results state their evidence maturity", async () => {
   const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
   const contract = loadContract();
   const result = evaluateTechnicalOperationsPageOwners({
     contract,
     pageSource: loadPageSource(contract).replace(
-      "no current-service adoption or resident outcome claimed",
-      "impact"
+      "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
+      "CLM-CALLNYC-STATUS"
     )
   });
 
@@ -204,13 +291,13 @@ test("foregrounded results state their evidence maturity", async () => {
   );
 });
 
-test("signature situations retain concrete operating mechanics", async () => {
+test("signature situations retain concrete implementation methods", async () => {
   const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
   const contract = loadContract();
   const result = evaluateTechnicalOperationsPageOwners({
     contract,
-    pageSource: loadPageSource(contract).replace(
-      "Operating mechanics",
+    pageSource: loadPageSource(contract).replaceAll(
+      "Method",
       "Implementation"
     )
   });
@@ -225,9 +312,9 @@ test("the historical Epstein case keeps lifecycle and handoff boundaries explici
   const contract = loadContract();
   const result = evaluateTechnicalOperationsPageOwners({
     contract,
-    pageSource: loadPageSource(contract).replace(
-      "Historical 2009–2015 engagement",
-      "Historical engagement"
+    pageSource: loadPageSource(contract).replaceAll(
+      "CLM-HJE-THICK-ARTS-FORMALIZATION-2009-2015",
+      "CLM-HJE-CHRONOLOGY"
     )
   });
 
@@ -241,9 +328,9 @@ test("the active FairRentNYC case keeps lifecycle and authority boundaries expli
   const contract = loadContract();
   const result = evaluateTechnicalOperationsPageOwners({
     contract,
-    pageSource: loadPageSource(contract).replace(
-      "Current coordination practice",
-      "Coordination practice"
+    pageSource: loadPageSource(contract).replaceAll(
+      "CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026",
+      "CLM-CRS-MEMORY"
     )
   });
 
@@ -252,18 +339,50 @@ test("the active FairRentNYC case keeps lifecycle and authority boundaries expli
   );
 });
 
-test("capability routes stay inside the method section", async () => {
+test("the archived CallNYC case keeps preservation and service boundaries explicit", async () => {
   const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
   const contract = loadContract();
   const result = evaluateTechnicalOperationsPageOwners({
     contract,
     pageSource: loadPageSource(contract).replace(
-      '<nav aria-label="Evidence by capability"',
-      '<div aria-label="Evidence by capability"'
+      "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
+      "CLM-CALLNYC-STATUS"
     )
   });
 
-  assert.ok(result.failures.includes("capability_routes_share_the_method_section"));
+  assert.ok(
+    result.failures.includes(
+      "archived_callnyc_lifecycle_and_preservation_are_explicit"
+    )
+  );
+});
+
+test("public copy stays direct and free of internal labels", async () => {
+  const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
+  const contract = loadContract();
+  const result = evaluateTechnicalOperationsPageOwners({
+    contract,
+    pageSource: `${loadPageSource(contract)} source lineage`
+  });
+
+  assert.ok(
+    result.failures.includes("public_copy_uses_direct_operational_language")
+  );
+});
+
+test("supporting cases avoid shared-memory and workstream shorthand", async () => {
+  const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
+  const contract = loadContract();
+  const result = evaluateTechnicalOperationsPageOwners({
+    contract,
+    pageSource: loadPageSource(contract),
+    candidateSource: loadCandidateSource(contract).replace(
+      "I turned meetings, public sources, policy questions, decisions, and assigned next steps into reviewable working records.",
+      "I synthesized shared memory into actionable workstreams."
+    )
+  });
+
+  assert.equal(result.checks.public_copy_uses_direct_operational_language, false);
 });
 
 test("the five-part operating method remains intact", async () => {
@@ -293,28 +412,12 @@ test("adoption language cannot outrun the available evidence", async () => {
   );
 });
 
-test("the capability label promises readiness rather than measured adoption", async () => {
-  const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
-  const contract = loadContract();
-  const result = evaluateTechnicalOperationsPageOwners({
-    contract,
-    pageSource: loadPageSource(contract).replace(
-      "Public-facing launch and adoption readiness",
-      "Public-facing launch and adoption"
-    )
-  });
-
-  assert.ok(
-    result.failures.includes("adoption_language_matches_available_evidence")
-  );
-});
-
 test("the operating method retains routes to concrete project evidence", async () => {
   const { evaluateTechnicalOperationsPageOwners } = await loadEvaluator();
   const contract = loadContract();
   const result = evaluateTechnicalOperationsPageOwners({
     contract,
-    pageSource: loadPageSource(contract).replace("Seen in ", "Example: ")
+    pageSource: loadPageSource(contract).replace("Case evidence: ", "Example: ")
   });
 
   assert.ok(
