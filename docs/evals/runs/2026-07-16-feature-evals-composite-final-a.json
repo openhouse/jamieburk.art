@@ -1,1 +1,124 @@
-{"runVersion":3,"judgeId":"composite-source-integrity-2026-08-22-af07084e","grader":"independent_llm_judge","independentFromOptimizer":true,"rubricSha256":"40595018fc81072a9f0cb07398e0fe97f1bd3132a131082a560434d7eba09e90","candidateFingerprint":"af07084e9ff472a8711d89f9cdafec01f396627cdcf3e1d206b282c852f1d205","verdict":"accepted","scores":[{"criterionId":"COMP-001","score":4,"pass":true,"evidence":["The deterministic composite evaluator reports 14 of 14 frozen branch decisions, no missing commit objects, and explicit integration and base treatment.","The packet describes branches as governed reference inputs rather than independent lifecycle roots."],"rationale":"All fourteen heads, frozen objects, integration/base context, and reference-only branch treatment are directly supported."},{"criterionId":"COMP-002","score":4,"pass":true,"evidence":["The evaluator reports 14 decisions containing rationale, destination, verification, and explicit composition decisions.","The reported decision framework covers adopt, adapt, already-present, and reject outcomes with deliberate projection handling."],"rationale":"The required per-branch disposition and supporting governance fields are reported complete."},{"criterionId":"COMP-003","score":4,"pass":true,"evidence":["The evaluator found 11 canonical files and no parallel lifecycle roots.","Public app consumers import only redacted projections; protected content, identities, credentials, and private locators are excluded."],"rationale":"A single canonical H-derived architecture and projection-only public consumption are directly supported."},{"criterionId":"COMP-004","score":4,"pass":true,"evidence":["Replay, duplicate linking, stable-ID collision rejection, and lifecycle-query behavior were exercised.","The validated records include claims and corrections, while the lifecycle model preserves held claims, inquiries, projection states, and orphan-source query behavior."],"rationale":"The required idempotency, collision safety, linkage, and lifecycle queryability are reported as exercised and passing."},{"criterionId":"COMP-005","score":4,"pass":true,"evidence":["Canonical validation covered 315 sources, 120 claims, 43 agency relations, and 5 corrections, with derived outputs current.","Mutation and behavior tests preserve source, custody, and projection separation and reject collective-credit inflation.","The health check reports all generated outputs current and zero type-aware orphans."],"rationale":"Validation, evidence-role and limitation retention, distinct credit treatment, population boundaries, and output currency are supported by the reported checks."},{"criterionId":"COMP-006","score":4,"pass":true,"evidence":["All 16 of 16 professor-lens criteria passed.","The team-memory method separates immediate operating repair from durable memory and preserves reasoning and handoff without substituting the system for leadership or decisions.","The portfolio and evaluation results preserve supported agency and reject credit inflation."],"rationale":"The packet supports a purposeful portfolio, non-inflated agency, continuity across the required domains, and a reconstructable observe-to-handoff learning cycle."},{"criterionId":"COMP-007","score":4,"pass":true,"evidence":["Five of five human-evidence controls remain explicitly open.","Human corroboration, collaborator correction and consent, rights, exact-candidate approval, deployment, publication, and indexing remain open.","The opportunity state explicitly distinguishes observed reception from unobserved readership, qualification, authorization, budget, hiring, and completed work.","Protected opportunities cannot become live, and human publication gates remain open under mutation testing."],"rationale":"Governed absence is not treated as validation; gaps remain bounded by evidence requirements, anti-gaming controls, next actions, and projection limits."},{"criterionId":"COMP-008","score":4,"pass":true,"evidence":["The semantic rubric digest matched the separately pinned contract.","The deterministic evaluator reports PASS for COMP-001 through COMP-008 after the base suites and staging contract checks passed.","A total of 245 mutation and behavior tests pass, including escalation, protected-material, credit-inflation, and open-gate protections.","Prior stale-fingerprint receipts were rejected rather than reused."],"rationale":"Digest binding, independent deterministic grading, fail-closed not-observed handling, mutation resistance, and non-compensable blockers are supported."},{"criterionId":"COMP-009","score":4,"pass":true,"evidence":["The helper enumerated 1,848 tracked and unignored files and recomputed the exact candidate fingerprint, excluding exactly the two declared holdout receipts.","The receipt contract requires runVersion 3, provider, distinct public reviewer label, parseable time, exact rubric and candidate bindings, all nine scores, verdict, findings, recommendation, attestation, and a deterministic complete-judgment digest excluding only the digest value.","Private process identifiers and locators are excluded from the public receipt contract.","Human production approval, deployment, publication, and indexing remain open.","This judgment accepts the exact candidate and rubric under the stated receipt schema; aggregate two-receipt confirmation belongs to the repository evaluator."],"rationale":"The exact binding, narrow exclusion, public receipt schema, digest mechanism, open human gates, and this holdout's acceptance are sound. Installation and aggregation of both independently returned receipts are correctly deferred to the repository evaluator."}],"notObserved":[],"findings":["The deterministic evidence supports all nine blocking criteria for this exact candidate and rubric binding.","Observed professional state remains deliberately minimal and does not establish readership, qualification, authorization, budget, engagement, completed work, or hiring.","Human production approval and all deployment, publication, indexing, consent, corroboration, and rights gates remain open.","Two-receipt installation and aggregate confirmation are responsibilities of the repository evaluator after independent judgments return."],"recommendation":"Accept this judgment as one advisory holdout receipt for the exact candidate and rubric. Permit the repository evaluator to validate its deterministic digest and perform two-receipt aggregation; do not treat this acceptance as production, deployment, publication, indexing, or human approval.","publicReview":{"provider":"independent-codex-review","reviewerLabel":"source-integrity-reviewer-a-2026-08-22-af07084e","reviewedAt":"2026-08-23T00:06:31Z","attestation":"Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted.","judgmentSha256":"9da9720b60e4004868a4b930e11f3eb10c7985f9e6ea6318d26f67f7794fb6cd"}}
+{
+  "runVersion": 3,
+  "judgeId": "composite-source-integrity-2026-08-22-c297de11",
+  "grader": "independent_llm_judge",
+  "independentFromOptimizer": true,
+  "rubricSha256": "40595018fc81072a9f0cb07398e0fe97f1bd3132a131082a560434d7eba09e90",
+  "candidateFingerprint": "c297de1148fceea711f0c8ebedfb991ab1b7dbaf4572963292f1b3dd68335ac7",
+  "verdict": "accepted",
+  "scores": [
+    {
+      "criterionId": "COMP-001",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The deterministic composite evaluator reports 14/14 frozen feature/evals-A through N branch decisions, no missing commit objects, and explicit integration/develop composition context.",
+        "Branches are represented as frozen reference-only inputs with each head recorded once."
+      ],
+      "rationale": "The packet supports complete, unique branch-head recording, object availability, explicit integration/base context, and reference-only treatment."
+    },
+    {
+      "criterionId": "COMP-002",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The deterministic evaluator reports 14 explicit composition decisions with no missing branch decisions.",
+        "Those frozen decisions cover the required disposition, rationale, destination, verification, and deliberate public-projection fields."
+      ],
+      "rationale": "All fourteen branches have the required explicit composition and projection decisions."
+    },
+    {
+      "criterionId": "COMP-003",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The evaluator validates 11 canonical files and reports no parallel lifecycle roots.",
+        "Public app consumers use redacted projections only; protected correspondence, identities, circumstances, locators, credentials, and archive paths are excluded."
+      ],
+      "rationale": "The packet supports one canonical lifecycle architecture and projection-only public consumption."
+    },
+    {
+      "criterionId": "COMP-004",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "Lifecycle behavior is exercised by the deterministic evaluator.",
+        "The validated lifecycle covers idempotent replay, duplicate linkage, stable-ID changed-content rejection, and queryability of held claims, inquiries, corrections, projection states, and orphans.",
+        "Current outputs report five corrections and zero type-aware orphans."
+      ],
+      "rationale": "The required intake and lifecycle invariants are deterministically exercised and queryable."
+    },
+    {
+      "criterionId": "COMP-005",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "Validation covers 315 sources, 120 claims, 43 agency relations, and five corrections.",
+        "Mutation and behavior tests preserve source, custody, evidence-role, projection, credit, and population-boundary distinctions and reject credit inflation.",
+        "The rebuilt wiki reports 481 records, 1,662 semantic/evidence edges, 505 prose links, zero type-aware orphans, and current derived outputs."
+      ],
+      "rationale": "Canonical validation preserves limitations, roles, credit distinctions, population boundaries, and currency of derived artifacts."
+    },
+    {
+      "criterionId": "COMP-006",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "All 16/16 professor-lens criteria pass.",
+        "Tests reject agency inflation while the packet explicitly preserves supported agency and durable team-memory practice.",
+        "The method separates immediate operating repair from durable memory work and retains reconstructable observation, modeling, prototyping, use, learning, revision, and handoff continuity."
+      ],
+      "rationale": "The selective portfolio preserves supported agency and multidimensional continuity without inflation or self-erasure."
+    },
+    {
+      "criterionId": "COMP-007",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "All 5/5 human-evidence controls remain open.",
+        "Human corroboration, collaborator correction and consent, media rights, exact-candidate approval, deployment, rollback, publication, and indexing remain open.",
+        "Reader profiles remain labeled simulations, protected opportunities cannot become live, and governed absence is not treated as validation.",
+        "The controlled gaps retain evidence requirements, anti-gaming checks, next actions, and projection boundaries."
+      ],
+      "rationale": "Human, collective, hiring, funnel, and external-validity gaps remain explicitly governed and open."
+    },
+    {
+      "criterionId": "COMP-008",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The frozen rubric digest matches and is separately pinned across the suite, register, controls, and branch namespace.",
+        "The deterministic-first evaluator prevents optimizer self-grading, disallows not-observed states from passing, and applies blocking criteria without compensation.",
+        "The wiki passes 152 blocking criteria and 245 mutation/behavior tests, including mutations targeting false observation and protected-data leakage."
+      ],
+      "rationale": "Digest binding, evaluator independence, blocking semantics, and anti-gaming behavior are supported."
+    },
+    {
+      "criterionId": "COMP-009",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The exact-candidate helper binds 1,848 tracked and unignored files to candidate c297de1148fceea711f0c8ebedfb991ab1b7dbaf4572963292f1b3dd68335ac7, excluding only the two declared receipt paths.",
+        "Each receipt schema binds runVersion 3, provider, distinct public label, parseable time, candidate, rubric, all nine scores, verdict, notObserved, findings, recommendation, attestation, and a complete-judgment digest excluding only its own digest value.",
+        "Prior stale receipts were rejected after generated outputs changed, and none was edited to imply approval.",
+        "This independent judgment accepts the exact candidate/rubric binding; production approval and other human gates remain open."
+      ],
+      "rationale": "The narrow two-receipt exclusion, exact binding, public-safe receipt schema, digest mechanism, deterministic checks, open gates, and this holdout's acceptance satisfy the criterion under the non-circular rule. Installation of both new receipts and aggregate confirmation occur after the independent judgments return."
+    }
+  ],
+  "notObserved": [],
+  "findings": [
+    "All nine blocking criteria are supported by the public-safe packet for the exact rubric and candidate binding.",
+    "The packet preserves restrained professional-state claims: proposal readership, need qualification, engagement authorization, hiring, and budget authority are not promoted beyond observed status.",
+    "Post-return installation of the two independent receipts and aggregate confirmation belong to the repository evaluator and are not prerequisites for this independent acceptance.",
+    "Human production approval remains open."
+  ],
+  "recommendation": "Accept this exact candidate/rubric binding as one independent source-integrity holdout receipt. The repository evaluator should install both independently returned receipts, recompute their complete-judgment digests, verify distinct labels and times, and perform aggregate confirmation while leaving production approval open.",
+  "publicReview": {
+    "provider": "independent-codex-review",
+    "reviewerLabel": "source-integrity-reviewer-a-2026-08-22-c297de11",
+    "reviewedAt": "2026-08-23T00:23:53Z",
+    "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted.",
+    "judgmentSha256": "9ed314d340f9fbb63902898835ebc0fb3177d088fcd9287725de2a3b44d40407"
+  }
+}
