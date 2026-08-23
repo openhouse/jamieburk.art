@@ -1,10 +1,10 @@
 {
   "runVersion": 3,
-  "judgeId": "composite-hiring-composition-2026-08-22-c297de11",
+  "judgeId": "composite-hiring-composition-2026-08-23-67bcaefe",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
   "rubricSha256": "40595018fc81072a9f0cb07398e0fe97f1bd3132a131082a560434d7eba09e90",
-  "candidateFingerprint": "c297de1148fceea711f0c8ebedfb991ab1b7dbaf4572963292f1b3dd68335ac7",
+  "candidateFingerprint": "67bcaefe070dd08352d735f9d26ba195c993c214406767c889081583a65ddda7",
   "verdict": "accepted",
   "scores": [
     {
@@ -12,114 +12,119 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "The deterministic composite run reports COMP-001 PASS and verifies the frozen branch family and explicit integration decisions.",
-        "The packet identifies fourteen lenses and reports 152 blocking criteria passed across them."
+        "The deterministic composite run reports the frozen fourteen-branch family, feature/evals-A through N, as verified.",
+        "The packet states that explicit integration decisions and the develop-base relationship are covered while branches remain reference material."
       ],
-      "rationale": "The packet supports exactly one governed A-through-N branch family, explicit integration handling, available history, and reference-only branch treatment."
+      "rationale": "The supplied deterministic evidence supports exactly one recorded head per branch, available commit objects, explicit integration/develop context, and reference-only branch treatment."
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The deterministic composite run verifies explicit integration decisions for the frozen branch family.",
-        "Public claims and surfaces remain synchronized with the governed hiring system, including deliberate limits on what reaches public projections."
+        "The composite run verifies explicit integration decisions for the complete frozen branch family.",
+        "The governed hiring system keeps public surfaces synchronized with source limits, collective credit, and projection cautions."
       ],
-      "rationale": "The reported deterministic verification supports complete per-branch disposition records, rationales, destinations, verification, and deliberate public-projection decisions."
+      "rationale": "The packet supports complete branch-by-branch disposition records with rationale, destination, verification, and deliberate public-projection treatment."
     },
     {
       "criterionId": "COMP-003",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The deterministic composite run verifies one canonical knowledge architecture.",
-        "Hiring surfaces receive only anonymized interpretation artifacts and public portfolio/resume surfaces.",
-        "The Knowledge Wiki reports 481 records, 1,662 semantic/evidence edges, 505 prose links, and zero type-aware orphans."
+        "The deterministic run verifies one canonical knowledge architecture.",
+        "Hiring surfaces receive only anonymized interpretation artifacts and public portfolio/resume surfaces; protected wording, identities, circumstances, locators, and company context remain outside the repository and advisory packet.",
+        "The Knowledge Wiki reports zero type-aware orphans across its governed records and links."
       ],
-      "rationale": "A single canonical records, registry, and proof architecture is supported, with public surfaces restricted to governed redacted projections and no parallel lifecycle root indicated."
+      "rationale": "The evidence supports a single canonical records, schema, registry, and proof lifecycle without parallel roots, plus redacted-only public projections."
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The deterministic composite run verifies lifecycle behavior.",
-        "Opportunity states are modeled separately, and a mutation that falsely relabels proposal readership as observed is rejected.",
-        "The Knowledge Wiki reports zero type-aware orphans."
+        "The deterministic run reports lifecycle behavior as passing.",
+        "Observed, inferred, conditional, unknown, fictionalized, synthetic, and uncalibrated states are modeled separately.",
+        "Mutations that attempt to convert proposal readership or literal destructive action into observed facts are rejected.",
+        "The Knowledge Wiki reports 481 records and zero type-aware orphans."
       ],
-      "rationale": "The packet supports replay-safe lifecycle handling, collision and false-state rejection, and queryable governed states including orphan detection."
+      "rationale": "The lifecycle evidence supports idempotent replay, duplicate linkage, stable-ID collision rejection, and queryable claims, inquiries, corrections, projection states, and orphan status."
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The deterministic composite run verifies canonical validation and current outputs.",
-        "Public claims retain collective credit, source limits, and proficiency cautions.",
-        "The portfolio preserves commercial, civic, cultural, technical, and participatory context without converting simulations into endorsements."
+        "The deterministic run verifies canonical validation and current derived outputs.",
+        "Public claims retain collective credit, source limitations, and proficiency cautions.",
+        "The later response is retained only as a narrow supported inference, with unobserved organizational, authorization, and hiring claims explicitly bounded.",
+        "The Knowledge Wiki reports 1,662 semantic/evidence edges and 505 prose links."
       ],
-      "rationale": "Canonical validation, evidence roles, source limitations, distinct credit, population boundaries, and currency of derived outputs are supported."
+      "rationale": "Validation, evidence roles, source and population boundaries, distinct credit modes, and current derived projections are supported without collapsing inference into observation."
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The portfolio presents Jamie as a Technical Project Manager in product operations and implementation through concrete requirements, workflows, tools, documentation, launch support, onboarding, and handoffs.",
-        "The paid two-week sprint specifies inputs, roles, testers, deliverables, an acceptance test, exclusions, and a continue/revise/stop decision.",
-        "The offer is expressly framed as an early method and consulting practice, not finished SaaS or proven adoption."
+        "The portfolio presents a coherent Technical Project Manager case spanning commercial, civic, cultural, technical, and participatory work.",
+        "Its recurring pattern connects real needs to requirements, workflows, tools, documentation, decision trails, launch support, onboarding, and durable handoffs.",
+        "The paid two-week sprint specifies inputs, roles, testers, deliverables, acceptance testing, exclusions, and a continue/revise/stop decision.",
+        "The offer is accurately framed as an early method and consulting practice, not finished SaaS or proven adoption."
       ],
-      "rationale": "The composition is selective and usable, shows supported agency without inflation or self-erasure, preserves multidomain continuity, and makes the observe-to-handoff learning cycle reconstructable."
+      "rationale": "The selective portfolio demonstrates supported agency without inflated claims or erased collaborators and makes the observe-to-handoff learning cycle reconstructable through a plausible paid first engagement."
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Human corroboration, collective review, job-funnel evidence, consent/correction, media rights, exact-candidate approval, deployment, rollback, publication, and indexing remain open.",
-        "The real-world response is narrowly calibrated and does not establish readership, qualification, budget authority, authorization, or a hiring decision.",
-        "The deterministic run verifies five open human-evidence controls, while false observed-state relabeling is mutation-rejected and protected opportunity states remain conditional."
+        "Human corroboration, collective review, job-funnel evidence, consent/correction, rights, approval, deployment, rollback, publication, and indexing remain explicitly open.",
+        "The deterministic run verifies five open human-evidence controls.",
+        "The packet separates unknowns such as current need, budget authority, authorization, and hiring from the narrow supported inference.",
+        "Public projection is limited to anonymized interpretation artifacts and governed portfolio/resume surfaces."
       ],
-      "rationale": "Governed absence is not treated as validation. Open gaps retain bounded evidence requirements, anti-gaming controls, next-step boundaries, and restrictions on projection."
+      "rationale": "Governed absence is not treated as validation. The open controls preserve evidence requirements, resist relabeling and simulation-based gaming, identify next actions, and enforce projection boundaries."
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The deterministic composite run verifies the frozen anti-gaming rubric and reports COMP-008 PASS.",
-        "The rubric digest is separately fixed in the exact contract.",
-        "A mutation that promotes unobserved proposal readership is rejected, simulations remain non-endorsements, and all criteria are blocking."
+        "The deterministic run reports the frozen anti-gaming rubric as passing.",
+        "The exact rubric digest is separately supplied and bound to the candidate.",
+        "The packet reports 245 passing tests and 152 blocking criteria across 14 lenses.",
+        "Mutations that promote unsupported observations are rejected, and prior exact-candidate receipts correctly become stale when the candidate changes."
       ],
-      "rationale": "The packet supports digest-bound controls, optimizer-independent grading, rejection of not-observed claims and gaming mutations, and prohibition on compensating for any blocker."
+      "rationale": "The evidence supports separate rubric pinning, digest-bound suites and controls, optimizer-independent grading, blocking treatment of unobserved requirements, mutation resistance, and no compensation across blockers."
     },
     {
       "criterionId": "COMP-009",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The exact contract binds rubric SHA-256 40595018fc81072a9f0cb07398e0fe97f1bd3132a131082a560434d7eba09e90 to candidate fingerprint c297de1148fceea711f0c8ebedfb991ab1b7dbaf4572963292f1b3dd68335ac7.",
-        "The binding covers 1,848 tracked and unignored files except the two narrowly declared holdout receipts.",
-        "The receipt contract requires distinct public labels, times, provider identity, all nine scores, and deterministic complete-judgment digests without private process identifiers or locators.",
-        "This independent judgment accepts the exact candidate/rubric binding with all criteria scored 4; installation and aggregate confirmation remain the repository evaluator's responsibility.",
-        "Human production approval, deployment, publication, and indexing remain open."
+        "This judgment accepts the exact candidate fingerprint 67bcaefe070dd08352d735f9d26ba195c993c214406767c889081583a65ddda7 against rubric 40595018fc81072a9f0cb07398e0fe97f1bd3132a131082a560434d7eba09e90.",
+        "The binding covers 1,849 tracked and unignored source-tree files, excluding only the two declared holdout receipts.",
+        "The receipt contract requires distinct public labels, timestamps, provider attribution, all nine scores, and a deterministic complete-judgment digest without private process identifiers or locators.",
+        "The deterministic composite checks pass, while production approval, deployment, publication, and indexing remain open.",
+        "Installation of the two new receipts is intentionally post-judgment; aggregate confirmation belongs solely to the repository evaluator."
       ],
-      "rationale": "The exact binding, narrow receipt exclusion, public-safe receipt schema, digest mechanism, deterministic checks, and open human gates satisfy this holdout's side of the two-receipt protocol. The absence of already-installed new receipts is not circularly treated as failure."
+      "rationale": "The exact binding, narrow two-receipt exclusion, public receipt schema, digest mechanism, deterministic checks, open human gates, and this independent acceptance satisfy the holdout criterion without circularly requiring pre-installation of the newly commissioned receipts."
     }
   ],
   "notObserved": [],
   "findings": [
-    "The packet makes a coherent hiring case for technical project management centered on translating real needs into usable operating systems, documentation, launch support, and durable handoffs.",
-    "The proposed paid first engagement is plausible and bounded: a two-week discovery/prototype sprint with named roles, controlled sources, concrete deliverables, acceptance testing, exclusions, and an explicit continuation decision.",
-    "Claims are appropriately calibrated: response interest is not promoted into readership, qualification, authorization, adoption, endorsement, or hiring evidence.",
-    "Repository aggregation of the two independent receipts and all human production gates remain outside this receipt."
+    "The candidate makes a coherent and quickly usable hiring case for Technical Project Management in product operations and implementation.",
+    "The bounded two-week discovery/prototype sprint is a plausible paid first engagement with concrete participants, deliverables, acceptance criteria, exclusions, and a continuation decision.",
+    "Claims are carefully calibrated: simulations are not endorsements, inference is not observation, and fictionalized or synthetic advisory material is not represented as real-world validation.",
+    "All human production and external-validity gates remain appropriately open."
   ],
-  "recommendation": "Accept this exact candidate/rubric binding for the independent holdout. Permit the repository evaluator to validate, digest-bind, install, and aggregate both receipts; do not treat this acceptance as deployment, publication, indexing, hiring, or human production approval.",
+  "recommendation": "Accept this exact governed candidate for receipt recording and repository-level aggregation. Preserve the stated projection boundaries and require separate human approval before deployment, publication, indexing, or any real hiring action.",
   "publicReview": {
     "provider": "independent-codex-review",
-    "reviewerLabel": "hiring-composition-reviewer-b-2026-08-22-c297de11",
-    "reviewedAt": "2026-08-23T00:25:36Z",
+    "reviewerLabel": "hiring-composition-reviewer-b-2026-08-23-67bcaefe",
+    "reviewedAt": "2026-08-23T01:14:30Z",
     "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted.",
-    "judgmentSha256": "bf18fca5dd7b1d148fe8fa126fb7a8341f9960cd977b255195cb99ee879c8e71"
+    "judgmentSha256": "ef4342f26f2317f93d2025133469b61357c8bcfa36c04895615660cf993e0476"
   }
 }
