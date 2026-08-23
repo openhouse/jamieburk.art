@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `79d7d23dc1deadc11725d5defc47245ddef30d9a`
-**Portfolio snapshot:** `d58bc408a4fe1c7f8035ebde6346ab3659f0decbbc136024c7c21d8503c17c86`
-**Role-context hash:** `74ca69b3e6d0c410395f4f46e7e23decd7a4df3f9557ee6d5b082780b821ae73`
+**Candidate commit:** `944559974bc35d762b780f7dab4cc708b3d98a27`
+**Portfolio snapshot:** `7a5bc3bb4c8f17cc3ad5cc95e745336d08f2bf6628d0083c097771795adc9c8e`
+**Role-context hash:** `cb80b6940949805bbbda2584e039b704338f80344c7008a27f359ae8b12de037`
 **Reader-context hash:** `37f9fc4598fa3864aef3f19afabbcab9bccb21d54f92b2d16c743db8606331e7`
 **Candidate-context hash:** `6251a2430d0a133ce9e511ad76dc9b415bed1a77e10e8b29e81a73d3ad301523`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
@@ -227,14 +227,14 @@
 
 - Deterministic disposition: `not-live`
 - Critical signals observed: 1/2
-- All signals observed: 1/3
+- All signals observed: 2/3
 - Opportunity status live: no
 - Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
 - `requirement.protected-memory.knowledge-friction`: **not observed**
 - `requirement.protected-memory.human-review`: **observed** on `/lab/source-backed-team-memory`
-- `requirement.protected-memory.bounded-sprint`: **not observed**
+- `requirement.protected-memory.bounded-sprint`: **observed** on `/lab/source-backed-team-memory`
 
 ## Open human gates
 

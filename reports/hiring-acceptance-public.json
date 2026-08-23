@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "runId": "hiring-public-79d7d23dc1de",
-  "generatedAt": "2026-08-22T19:56:42-04:00",
-  "candidateSha": "79d7d23dc1deadc11725d5defc47245ddef30d9a",
+  "runId": "hiring-public-944559974bc3",
+  "generatedAt": "2026-08-22T21:05:28-04:00",
+  "candidateSha": "944559974bc35d762b780f7dab4cc708b3d98a27",
   "candidatePathsClean": true,
-  "portfolioSnapshotHash": "d58bc408a4fe1c7f8035ebde6346ab3659f0decbbc136024c7c21d8503c17c86",
-  "roleContextHash": "74ca69b3e6d0c410395f4f46e7e23decd7a4df3f9557ee6d5b082780b821ae73",
+  "portfolioSnapshotHash": "7a5bc3bb4c8f17cc3ad5cc95e745336d08f2bf6628d0083c097771795adc9c8e",
+  "roleContextHash": "cb80b6940949805bbbda2584e039b704338f80344c7008a27f359ae8b12de037",
   "readerContextHash": "37f9fc4598fa3864aef3f19afabbcab9bccb21d54f92b2d16c743db8606331e7",
   "candidateContextHash": "6251a2430d0a133ce9e511ad76dc9b415bed1a77e10e8b29e81a73d3ad301523",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
@@ -1440,12 +1440,12 @@
       "id": "opportunity.protected.source-backed-memory-consulting.2026",
       "title": "Protected source-backed team-memory consulting lead",
       "reportingContext": null,
-      "roleContextHash": "688eeda0240af54723fbf9b47e49430f60b4d4f006d457013020768cb843c913",
+      "roleContextHash": "e61403b6277131932a4d4542e48dd8254a12f94268f7c184bd99ec5b0b7db870",
       "live": false,
       "fresh": false,
       "hardScreenBlocked": false,
       "decision": "not-live",
-      "observed": 1,
+      "observed": 2,
       "requirementTotal": 3,
       "criticalObserved": 1,
       "criticalTotal": 2,
@@ -1475,11 +1475,15 @@
         {
           "requirementId": "requirement.protected-memory.bounded-sprint",
           "importance": "important",
-          "observed": false,
-          "matchedPublicText": false,
+          "observed": true,
+          "matchedPublicText": true,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [],
-          "evidenceNeedles": []
+          "routes": [
+            "/lab/source-backed-team-memory"
+          ],
+          "evidenceNeedles": [
+            "Discuss a focused operating sprint"
+          ]
         }
       ]
     }

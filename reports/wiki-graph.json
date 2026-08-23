@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-22T19:56:42-04:00",
-  "sourceCommit": "79d7d23dc1deadc11725d5defc47245ddef30d9a",
-  "sourceFingerprint": "a6d850cbec0d172e4d080b1aff28adbafdb0a7ecf7351417563f51ee458c6419",
+  "generatedAt": "2026-08-22T21:05:28-04:00",
+  "sourceCommit": "944559974bc35d762b780f7dab4cc708b3d98a27",
+  "sourceFingerprint": "e1447b5b73142935ab80a7a7b6cacb4fd7b1dd60a964e3be4e0e321a568cf23d",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3042,7 +3042,7 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Deterministic prerequisites and a privacy-preserving modeled-reader contract for testing whether the public lab page makes a focused first engagement easy to authorize.",
+      "summary": "Deterministic prerequisites and a privacy-preserving modeled-reader contract for testing whether the public lab page makes a focused, diagnosis-first engagement easy to authorize.",
       "aliases": [],
       "lastReviewed": "2026-08-21",
       "reviewBy": "2026-09-21"
@@ -3867,7 +3867,7 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "A governed workflow for turning scattered records into traceable decisions, bounded claims, open questions, and reusable handoffs.\n",
+      "summary": "A governed workflow for turning scattered records into traceable decisions, carefully scoped claims, open questions, and reusable handoffs.\n",
       "aliases": [],
       "lastReviewed": "2026-08-21",
       "reviewBy": "2027-01-18"
@@ -23094,7 +23094,7 @@
       "toPath": "docs/knowledge-bank/capabilities/technical-operations.md",
       "to": "capability.technical-operations",
       "fragment": null,
-      "line": 41,
+      "line": 53,
       "kind": "link"
     },
     {

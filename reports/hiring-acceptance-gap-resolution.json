@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "candidateSha": "79d7d23dc1deadc11725d5defc47245ddef30d9a",
-  "portfolioSnapshotHash": "d58bc408a4fe1c7f8035ebde6346ab3659f0decbbc136024c7c21d8503c17c86",
-  "publicReportHash": "312c71e6452715fffdc7114e5c19a31091a757cc96f35862416ceb6a54b0f961",
-  "wikiSourceFingerprint": "a6d850cbec0d172e4d080b1aff28adbafdb0a7ecf7351417563f51ee458c6419",
+  "candidateSha": "944559974bc35d762b780f7dab4cc708b3d98a27",
+  "portfolioSnapshotHash": "7a5bc3bb4c8f17cc3ad5cc95e745336d08f2bf6628d0083c097771795adc9c8e",
+  "publicReportHash": "f4874a9bc356cc4e2a3482e5a733d3010ade380a31d93447ef630f3ae13e1243",
+  "wikiSourceFingerprint": "e1447b5b73142935ab80a7a7b6cacb4fd7b1dd60a964e3be4e0e321a568cf23d",
   "findings": [
     {
       "findingId": "finding.requirement.aclu-national-campaigns.complex-project-delivery",
@@ -600,20 +600,6 @@
       "gapType": "none",
       "smallestResponsibleChange": "Keep the public method legible without exposing the protected lead.",
       "requiresOriginalSourceReview": false,
-      "requiresHumanApproval": true
-    },
-    {
-      "findingId": "finding.requirement.protected-memory.bounded-sprint",
-      "opportunityId": "opportunity.protected.source-backed-memory-consulting.2026",
-      "requirementId": "requirement.protected-memory.bounded-sprint",
-      "classification": "role-context-or-evidence-unknown",
-      "wikiRecords": [
-        "method.source-backed-team-memory"
-      ],
-      "currentStatus": "visible-qualified",
-      "gapType": "role-context",
-      "smallestResponsibleChange": "Do not imply that a sprint was accepted, funded, or delivered.",
-      "requiresOriginalSourceReview": true,
       "requiresHumanApproval": true
     }
   ],
