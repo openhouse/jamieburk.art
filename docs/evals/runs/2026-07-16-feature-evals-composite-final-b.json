@@ -1,82 +1,130 @@
 {
   "runVersion": 3,
-  "judgeId": "composite-public-safety-2026-08-13-1b47-b",
+  "judgeId": "composite-hiring-composition-2026-08-23-67bcaefe",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
-  "rubricSha256": "b5cd5eed8dec4c3e4f37423a44d510950c4a87ca13ad3f522f566c5202fccc5b",
-  "candidateFingerprint": "1b47fdd2a10ef2a3a7872e0cc7364a18fc21630971052ad721e7556a7752eec1",
+  "rubricSha256": "40595018fc81072a9f0cb07398e0fe97f1bd3132a131082a560434d7eba09e90",
+  "candidateFingerprint": "67bcaefe070dd08352d735f9d26ba195c993c214406767c889081583a65ddda7",
   "verdict": "accepted",
   "scores": [
     {
       "criterionId": "COMP-001",
       "score": 4,
       "pass": true,
-      "rationale": "The frozen inventory contains exactly feature/evals-A through feature/evals-N, all fourteen frozen commit objects resolve, the integration branch and develop base are explicit, and mutable remote-ref movement cannot rewrite the recorded heads."
+      "evidence": [
+        "The deterministic composite run reports the frozen fourteen-branch family, feature/evals-A through N, as verified.",
+        "The packet states that explicit integration decisions and the develop-base relationship are covered while branches remain reference material."
+      ],
+      "rationale": "The supplied deterministic evidence supports exactly one recorded head per branch, available commit objects, explicit integration/develop context, and reference-only branch treatment."
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
-      "rationale": "All fourteen branches have inspectable allowed decisions with substantive strengths, rationales, existing destination paths, verification criteria, and an explicit selective website-composition decision."
+      "evidence": [
+        "The composite run verifies explicit integration decisions for the complete frozen branch family.",
+        "The governed hiring system keeps public surfaces synchronized with source limits, collective credit, and projection cautions."
+      ],
+      "rationale": "The packet supports complete branch-by-branch disposition records with rationale, destination, verification, and deliberate public-projection treatment."
     },
     {
       "criterionId": "COMP-003",
       "score": 4,
       "pass": true,
-      "rationale": "All eleven canonical knowledge files are present, no forbidden parallel lifecycle architecture exists, and public application surfaces consume redacted projections rather than protected source records."
+      "evidence": [
+        "The deterministic run verifies one canonical knowledge architecture.",
+        "Hiring surfaces receive only anonymized interpretation artifacts and public portfolio/resume surfaces; protected wording, identities, circumstances, locators, and company context remain outside the repository and advisory packet.",
+        "The Knowledge Wiki reports zero type-aware orphans across its governed records and links."
+      ],
+      "rationale": "The evidence supports a single canonical records, schema, registry, and proof lifecycle without parallel roots, plus redacted-only public projections."
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
-      "rationale": "Read-only tests and direct evaluator exercise confirm idempotent replay, linked duplicate preservation, rejection of changed-content stable-ID collisions, and queryability of held claims, inquiries, corrections, projection states, and orphan status."
+      "evidence": [
+        "The deterministic run reports lifecycle behavior as passing.",
+        "Observed, inferred, conditional, unknown, fictionalized, synthetic, and uncalibrated states are modeled separately.",
+        "Mutations that attempt to convert proposal readership or literal destructive action into observed facts are rejected.",
+        "The Knowledge Wiki reports 481 records and zero type-aware orphans."
+      ],
+      "rationale": "The lifecycle evidence supports idempotent replay, duplicate linkage, stable-ID collision rejection, and queryable claims, inquiries, corrections, projection states, and orphan status."
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
-      "rationale": "Canonical validation passes across 301 sources, 113 claims, 38 agency relations, and four corrections. Evidence limitations, population boundaries, protected-data exclusions, and individual, shared, collective, and institutional credit scopes remain explicit; generated Wiki and employment outputs are current."
+      "evidence": [
+        "The deterministic run verifies canonical validation and current derived outputs.",
+        "Public claims retain collective credit, source limitations, and proficiency cautions.",
+        "The later response is retained only as a narrow supported inference, with unobserved organizational, authorization, and hiring claims explicitly bounded.",
+        "The Knowledge Wiki reports 1,662 semantic/evidence edges and 505 prose links."
+      ],
+      "rationale": "Validation, evidence roles, source and population boundaries, distinct credit modes, and current derived projections are supported without collapsing inference into observation."
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
-      "rationale": "The public site is a selective portfolio composition rather than a Wiki mirror, mature claims remain deliberately held, no public proofs route exists, and all fifteen professor-lens checks support legible agency, collective credit, artistic and relational continuity, and reconstructable observe-model-prototype-use-learn-revise-handoff practice."
+      "evidence": [
+        "The portfolio presents a coherent Technical Project Manager case spanning commercial, civic, cultural, technical, and participatory work.",
+        "Its recurring pattern connects real needs to requirements, workflows, tools, documentation, decision trails, launch support, onboarding, and durable handoffs.",
+        "The paid two-week sprint specifies inputs, roles, testers, deliverables, acceptance testing, exclusions, and a continue/revise/stop decision.",
+        "The offer is accurately framed as an early method and consulting practice, not finished SaaS or proven adoption."
+      ],
+      "rationale": "The selective portfolio demonstrates supported agency without inflated claims or erased collaborators and makes the observe-to-handoff learning cycle reconstructable through a plausible paid first engagement."
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
-      "rationale": "Human corroboration, collective review, hiring usability, job-funnel learning, and external validity remain explicitly open. Each control includes required evidence, anti-gaming constraints, a next action, and a public-projection boundary; instrumented absence is not represented as validation."
+      "evidence": [
+        "Human corroboration, collective review, job-funnel evidence, consent/correction, rights, approval, deployment, rollback, publication, and indexing remain explicitly open.",
+        "The deterministic run verifies five open human-evidence controls.",
+        "The packet separates unknowns such as current need, budget authority, authorization, and hiring from the narrow supported inference.",
+        "Public projection is limited to anonymized interpretation artifacts and governed portfolio/resume surfaces."
+      ],
+      "rationale": "Governed absence is not treated as validation. The open controls preserve evidence requirements, resist relabeling and simulation-based gaming, identify next actions, and enforce projection boundaries."
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
-      "rationale": "The independently recomputed rubric digest matches both frozen locks. Base-suite, register, blind-spot, branch-head, grader-separation, mutation, derived-currentness, and all-blockers-must-pass controls prevent checksum refreshes, weighted scores, synthesized evidence, or optimizer self-grading from bypassing a failure."
+      "evidence": [
+        "The deterministic run reports the frozen anti-gaming rubric as passing.",
+        "The exact rubric digest is separately supplied and bound to the candidate.",
+        "The packet reports 245 passing tests and 152 blocking criteria across 14 lenses.",
+        "Mutations that promote unsupported observations are rejected, and prior exact-candidate receipts correctly become stale when the candidate changes."
+      ],
+      "rationale": "The evidence supports separate rubric pinning, digest-bound suites and controls, optimizer-independent grading, blocking treatment of unobserved requirements, mutation resistance, and no compensation across blockers."
     },
     {
       "criterionId": "COMP-009",
       "score": 4,
       "pass": true,
-      "rationale": "The exported source-tree helper independently enumerates 1543 tracked or unignored paths, excludes only the two declared judgment records, includes every canonical and evidence-bundle file, and recomputes the exact expected candidate fingerprint. The receipt contract binds the complete judgment and public-safe provenance while leaving separate commissioning outside public Git and preserving human production approval."
+      "evidence": [
+        "This judgment accepts the exact candidate fingerprint 67bcaefe070dd08352d735f9d26ba195c993c214406767c889081583a65ddda7 against rubric 40595018fc81072a9f0cb07398e0fe97f1bd3132a131082a560434d7eba09e90.",
+        "The binding covers 1,849 tracked and unignored source-tree files, excluding only the two declared holdout receipts.",
+        "The receipt contract requires distinct public labels, timestamps, provider attribution, all nine scores, and a deterministic complete-judgment digest without private process identifiers or locators.",
+        "The deterministic composite checks pass, while production approval, deployment, publication, and indexing remain open.",
+        "Installation of the two new receipts is intentionally post-judgment; aggregate confirmation belongs solely to the repository evaluator."
+      ],
+      "rationale": "The exact binding, narrow two-receipt exclusion, public receipt schema, digest mechanism, deterministic checks, open human gates, and this independent acceptance satisfy the holdout criterion without circularly requiring pre-installation of the newly commissioned receipts."
     }
   ],
   "notObserved": [],
   "findings": [
-    "The frozen rubric independently recomputed to b5cd5eed8dec4c3e4f37423a44d510950c4a87ca13ad3f522f566c5202fccc5b.",
-    "The exported candidate helper independently enumerated 1543 source-tree paths and recomputed fingerprint 1b47fdd2a10ef2a3a7872e0cc7364a18fc21630971052ad721e7556a7752eec1.",
-    "With declared judgment inputs suppressed, the aggregate evaluator passed COMP-001 through COMP-008 and reported COMP-009 awaiting the two newly commissioned receipts; that expected orchestration state was not treated as candidate evidence.",
-    "Citation validation and tests, lifecycle tests, knowledge-eval mutation tests, professor-lens tests, accessibility contrast and candidate-bound accessibility-evidence tests, public-safety checks, route checks, Wiki health checks, and generated employment-currentness checks completed successfully.",
-    "Public composition remains selective, collective outcomes retain collective credit, and unresolved media rights or consent fail closed instead of becoming publication permission.",
-    "Staging, production deployment, domain and TLS verification, rollback execution, publication, and indexing remain outside this judgment."
+    "The candidate makes a coherent and quickly usable hiring case for Technical Project Management in product operations and implementation.",
+    "The bounded two-week discovery/prototype sprint is a plausible paid first engagement with concrete participants, deliverables, acceptance criteria, exclusions, and a continuation decision.",
+    "Claims are carefully calibrated: simulations are not endorsements, inference is not observation, and fictionalized or synthetic advisory material is not represented as real-world validation.",
+    "All human production and external-validity gates remain appropriately open."
   ],
-  "recommendation": "Accept this exact source-tree candidate for completion of the two-receipt composite stopping check only. Do not infer authorization for publication or close human corroboration, collaborator review, media-rights, exact-candidate approval, deployment, rollback, or indexing gates.",
+  "recommendation": "Accept this exact governed candidate for receipt recording and repository-level aggregation. Preserve the stated projection boundaries and require separate human approval before deployment, publication, indexing, or any real hiring action.",
   "publicReview": {
     "provider": "independent-codex-review",
-    "reviewerLabel": "public-safety-reviewer-b-2026-08-13",
-    "reviewedAt": "2026-08-13T12:00:00-04:00",
+    "reviewerLabel": "hiring-composition-reviewer-b-2026-08-23-67bcaefe",
+    "reviewedAt": "2026-08-23T01:14:30Z",
     "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted.",
-    "judgmentSha256": "c03da64f7c69025f1ee145aefc828c59cfebd0edf3f61a10a94259586fa8aa83"
+    "judgmentSha256": "ef4342f26f2317f93d2025133469b61357c8bcfa36c04895615660cf993e0476"
   }
 }

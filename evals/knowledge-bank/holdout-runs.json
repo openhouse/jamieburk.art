@@ -832,6 +832,24 @@
       "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
       "accepted": true,
       "blockers": []
+    },
+    {
+      "judgeId": "knowledge-bank-public-safe-holdout-hiring-credit-2026-08-22-final-a",
+      "completedAt": "2026-08-22T14:55:00-04:00",
+      "lens": "Fresh read-only fictionalized hiring-reader, public-interest, and collective-credit review of the redacted 33-criterion public packet",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "knowledge-bank-public-safe-holdout-data-integrity-2026-08-22-final-b",
+      "completedAt": "2026-08-22T15:00:51-04:00",
+      "lens": "Fresh read-only fictionalized archival data-integrity, privacy, provenance, and public-projection review of the redacted 33-criterion public packet",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
     }
   ]
 }

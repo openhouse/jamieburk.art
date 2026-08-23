@@ -5,7 +5,7 @@ kind: method
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-20
+last_reviewed: 2026-08-22
 review_by: 2027-01-18
 canonical_path: docs/knowledge-bank/methods/source-backed-team-memory.md
 summary: >
@@ -91,7 +91,14 @@ authority. Every instance must remain testable and useful on its own.
 
 ## Public-safe first engagement
 
-A first engagement tests the practice with one approved source surface. It
+A first engagement begins by determining whether the immediate need is
+operating repair, durable memory, or both. When ownership, priority, decision
+flow, or next actions are unstable, the work first makes those elements usable;
+the memory layer then preserves the reasoning and handoff the team needs to
+sustain them. A knowledge system should not become a substitute for triage,
+leadership, or a decision.
+
+The engagement then tests the practice with one approved source surface. It
 maps what is getting lost, identifies what must remain protected, produces one
 inspectable and correctable source-to-memory loop, and ends with a continue,
 revise, or stop recommendation. The source can be non-sensitive, redacted,

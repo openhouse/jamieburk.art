@@ -21,7 +21,7 @@ import { checkGeneratedOutputs, compileWiki } from "../knowledge-wiki/lib.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 
-export const FROZEN_COMPOSITE_RUBRIC_SHA256 = "b5cd5eed8dec4c3e4f37423a44d510950c4a87ca13ad3f522f566c5202fccc5b";
+export const FROZEN_COMPOSITE_RUBRIC_SHA256 = "40595018fc81072a9f0cb07398e0fe97f1bd3132a131082a560434d7eba09e90";
 export const FROZEN_BRANCH_HEADS_SHA256 = "efa94ea9c3b7190deca61024093d30e4d78a2efdebf04b78b5d6857d9df7a002";
 
 function readJson(relativePath) {

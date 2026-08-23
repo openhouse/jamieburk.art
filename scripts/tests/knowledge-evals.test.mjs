@@ -165,8 +165,8 @@ test("knowledge-bank gate accepts two fresh blind-spot-control holdouts", () => 
   assert.equal(result.holdout.complete, true);
   assert.equal(result.holdout.consecutivePassingRuns, 2);
   assert.deepEqual(result.holdout.judgeIds, [
-    "blind-spot-holdout-hiring-credit-2026-07-15-final-a",
-    "blind-spot-holdout-data-integrity-2026-07-15-final-b"
+    "knowledge-bank-public-safe-holdout-hiring-credit-2026-08-22-final-a",
+    "knowledge-bank-public-safe-holdout-data-integrity-2026-08-22-final-b"
   ]);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.matches, true);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, true);
@@ -175,6 +175,33 @@ test("knowledge-bank gate accepts two fresh blind-spot-control holdouts", () => 
 test("knowledge-bank pilot retains every supplied intake item", () => {
   const result = evaluateKnowledgeBank(suite);
   assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-INTAKE")?.score, 5);
+});
+
+test("Harry J. Epstein chronology is an evaluated knowledge-bank criterion", () => {
+  const result = evaluateKnowledgeBank(suite);
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-HJE-CLIENT-CHRONOLOGY")?.score,
+    5
+  );
+});
+
+test("Harry J. Epstein chronology rejects loss of the first-client boundary", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-HJE-FIRST-THICK-ARTS-CLIENT"
+  );
+  assert.ok(claim);
+  const originalBoundaries = claim.boundaries;
+
+  try {
+    claim.boundaries = [];
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-HJE-CLIENT-CHRONOLOGY")?.score,
+      1
+    );
+  } finally {
+    claim.boundaries = originalBoundaries;
+  }
 });
 
 test("mature but unselected claims remain held off public surfaces", () => {

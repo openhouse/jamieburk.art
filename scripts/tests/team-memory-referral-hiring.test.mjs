@@ -1,5 +1,13 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import {
+  copyFileSync,
+  mkdirSync,
+  mkdtempSync,
+  readFileSync,
+  rmSync,
+  writeFileSync
+} from "node:fs";
+import os from "node:os";
 import path from "node:path";
 import test from "node:test";
 
@@ -17,10 +25,10 @@ test("the team-memory page makes a paid first engagement easy to authorize", () 
 
   for (const phrase of [
     "Proposed first engagement",
-    "One approved source. One useful team-memory test.",
-    "What I will deliver",
-    "What you can decide",
-    "paid discovery and prototype",
+    "A small paid two-week discovery and prototype sprint",
+    "Three to five approved sources around one decision trail",
+    "What I deliver",
+    "End decision",
     'href="/resume"'
   ]) {
     assert.ok(page.includes(phrase), `missing forwardable proposal element: ${phrase}`);
@@ -46,6 +54,35 @@ test("the referral eval exposes only anonymized interpretation and browser-visib
   assert.equal(config.policy.deterministicChecksBeforeLlm, true);
   assert.equal(config.policy.stopOnDeterministicFailure, true);
   assert.equal(config.policy.calibrationStatus, "uncalibrated-advisory-simulation");
+});
+
+test("the real-world response calibrates warmth without inventing readership or hiring", () => {
+  const config = JSON.parse(read("evals/team-memory-referral-hiring/current.json"));
+  const calibration = JSON.parse(
+    read(config.realWorldCalibration.path)
+  );
+
+  assert.equal(config.realWorldCalibration.inputToAdvisoryModel, false);
+  assert.equal(calibration.sourceBoundary.rawMessagePersisted, false);
+  assert.equal(calibration.sourceBoundary.exactWordingPersisted, false);
+  assert.equal(calibration.sourceBoundary.personalCircumstancesPersisted, false);
+  assert.equal(calibration.sourceBoundary.participantIdentityPersisted, false);
+  assert.deepEqual(calibration.observedState, {
+    responseReceived: "observed",
+    positiveReception: "observed",
+    interestInReconnecting: "observed",
+    retrospectiveInterventionMismatch: "observed",
+    historicalOperatingRepairNeed: "supported-inference",
+    literalDestructiveAction: "not-observed",
+    personnelAction: "not-observed",
+    currentOrganizationalState: "unknown",
+    pageOpened: "not-observed",
+    proposalRead: "not-observed",
+    needQualified: "not-observed",
+    budgetAuthority: "unknown",
+    engagementAuthorized: "not-observed",
+    hiringDecision: "not-observed"
+  });
 });
 
 test("the judge prompt separates the referral, authority decision, and relay failure modes", () => {
@@ -77,4 +114,163 @@ test("the exact browser packet and fictionalized hiring decision remain in step"
   assert.equal(report.deterministicPassed, true, report.failures.join("\n"));
   assert.equal(report.advisorySimulationPassed, true, report.failures.join("\n"));
   assert.equal(report.passed, true, report.failures.join("\n"));
+});
+
+test("the browser receipt is invalidated when the public resume artifact changes", async () => {
+  const { evaluateTeamMemoryReferralHiring } = await import(
+    "../evals-team-memory-referral-hiring.mjs"
+  );
+  const tempRoot = mkdtempSync(path.join(os.tmpdir(), "team-memory-referral-eval-"));
+  const relativePaths = [
+    "evals/team-memory-referral-hiring/current.json",
+    "evals/team-memory-referral-hiring/real-world-calibration.json",
+    "evals/team-memory-referral-hiring/runs/2026-08-21/local-public-browser-receipt.json",
+    "evals/team-memory-referral-hiring/runs/2026-08-21/fictionalized-referral-and-authority-decision.json",
+    "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/01-prospective-collaborator-perspective.md",
+    "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/03-prospective-collaborator-voice.md",
+    "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+  ];
+
+  try {
+    for (const relativePath of relativePaths) {
+      const destination = path.join(tempRoot, relativePath);
+      mkdirSync(path.dirname(destination), { recursive: true });
+      copyFileSync(path.join(repoRoot, relativePath), destination);
+    }
+    const publicResumePath = path.join(
+      tempRoot,
+      "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+    );
+    const changedResume = Buffer.concat([
+      readFileSync(publicResumePath),
+      Buffer.from("\nchanged exact public artifact\n")
+    ]);
+    writeFileSync(publicResumePath, changedResume);
+
+    const report = evaluateTeamMemoryReferralHiring(tempRoot);
+    assert.equal(report.deterministicPassed, false);
+    assert.ok(
+      report.failures.includes(
+        "browser receipt resume digest is stale for the current public PDF"
+      ),
+      report.failures.join("\n")
+    );
+  } finally {
+    rmSync(tempRoot, { recursive: true, force: true });
+  }
+});
+
+test("the evaluator rejects escalation of a positive reply into proposal readership", async () => {
+  const { evaluateTeamMemoryReferralHiring } = await import(
+    "../evals-team-memory-referral-hiring.mjs"
+  );
+  const tempRoot = mkdtempSync(path.join(os.tmpdir(), "team-memory-response-calibration-"));
+  const relativePaths = [
+    "evals/team-memory-referral-hiring/current.json",
+    "evals/team-memory-referral-hiring/real-world-calibration.json",
+    "evals/team-memory-referral-hiring/runs/2026-08-21/local-public-browser-receipt.json",
+    "evals/team-memory-referral-hiring/runs/2026-08-21/fictionalized-referral-and-authority-decision.json",
+    "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/01-prospective-collaborator-perspective.md",
+    "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/03-prospective-collaborator-voice.md",
+    "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+  ];
+
+  try {
+    for (const relativePath of relativePaths) {
+      const destination = path.join(tempRoot, relativePath);
+      mkdirSync(path.dirname(destination), { recursive: true });
+      copyFileSync(path.join(repoRoot, relativePath), destination);
+    }
+    const calibrationPath = path.join(
+      tempRoot,
+      "evals/team-memory-referral-hiring/real-world-calibration.json"
+    );
+    const calibration = JSON.parse(readFileSync(calibrationPath, "utf8"));
+    calibration.observedState.proposalRead = "observed";
+    writeFileSync(calibrationPath, `${JSON.stringify(calibration, null, 2)}\n`);
+
+    const report = evaluateTeamMemoryReferralHiring(tempRoot);
+    assert.equal(report.realWorldCalibrationPassed, false);
+    assert.ok(
+      report.failures.includes(
+        "real-world response does not establish proposal readership"
+      ),
+      report.failures.join("\n")
+    );
+  } finally {
+    rmSync(tempRoot, { recursive: true, force: true });
+  }
+});
+
+test("the evaluator rejects a figurative retrospective signal as literal destructive action", async () => {
+  const { evaluateTeamMemoryReferralHiring } = await import(
+    "../evals-team-memory-referral-hiring.mjs"
+  );
+  const tempRoot = mkdtempSync(path.join(os.tmpdir(), "team-memory-intervention-calibration-"));
+  const relativePaths = [
+    "evals/team-memory-referral-hiring/current.json",
+    "evals/team-memory-referral-hiring/real-world-calibration.json",
+    "evals/team-memory-referral-hiring/runs/2026-08-21/local-public-browser-receipt.json",
+    "evals/team-memory-referral-hiring/runs/2026-08-21/fictionalized-referral-and-authority-decision.json",
+    "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/01-prospective-collaborator-perspective.md",
+    "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/03-prospective-collaborator-voice.md",
+    "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+  ];
+
+  try {
+    for (const relativePath of relativePaths) {
+      const destination = path.join(tempRoot, relativePath);
+      mkdirSync(path.dirname(destination), { recursive: true });
+      copyFileSync(path.join(repoRoot, relativePath), destination);
+    }
+    const calibrationPath = path.join(
+      tempRoot,
+      "evals/team-memory-referral-hiring/real-world-calibration.json"
+    );
+    const calibration = JSON.parse(readFileSync(calibrationPath, "utf8"));
+    calibration.observedState.literalDestructiveAction = "observed";
+    writeFileSync(calibrationPath, `${JSON.stringify(calibration, null, 2)}\n`);
+
+    const report = evaluateTeamMemoryReferralHiring(tempRoot);
+    assert.equal(report.realWorldCalibrationPassed, false);
+    assert.ok(
+      report.failures.includes(
+        "figurative retrospective language does not establish literal destructive action"
+      ),
+      report.failures.join("\n")
+    );
+  } finally {
+    rmSync(tempRoot, { recursive: true, force: true });
+  }
+});
+
+test("the protected opportunity record keeps the new response at its actual evidence state", () => {
+  const source = read(
+    "docs/knowledge-bank/sources/protected-source-backed-memory-opportunity.md"
+  );
+  const opportunity = read(
+    "docs/knowledge-bank/opportunities/source-backed-team-memory.md"
+  );
+
+  for (const phrase of [
+    "positive reception and interest in reconnecting",
+    "does not establish that the linked page was opened or read",
+    "retrospective signal that the immediate need at that time was more fundamental operating repair than durable team memory"
+  ]) {
+    assert.ok(source.includes(phrase), `protected source missing calibrated response state: ${phrase}`);
+  }
+  assert.ok(
+    opportunity.includes("Whether the linked public proposal was opened or read."),
+    "opportunity must retain proposal readership as unknown"
+  );
+  assert.ok(
+    opportunity.includes("No offer, acceptance, budget approval, contract, or completed work was established."),
+    "opportunity must not promote a warm reply into commercial progress"
+  );
+  assert.ok(
+    opportunity
+      .replace(/\s+/g, " ")
+      .includes("does not establish literal destructive action, a personnel decision, the organization’s present condition, or a current qualified need"),
+    "opportunity must retain the intervention-mismatch boundary"
+  );
 });

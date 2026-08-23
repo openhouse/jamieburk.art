@@ -14,6 +14,11 @@
     "privateCorrespondenceAccess": false,
     "rule": "The advisory model receives only the two anonymized interpretation artifacts and browser-visible public surfaces reached from the team-memory page. It receives no source tree, raw call, private identity, company identity, correspondence, or protected locator."
   },
+  "realWorldCalibration": {
+    "path": "evals/team-memory-referral-hiring/real-world-calibration.json",
+    "inputToAdvisoryModel": false,
+    "rule": "A later private response calibrates the evidence-state ladder but is not added to the advisory packet. It supports positive reception, interest in reconnecting, and a retrospective intervention-mismatch signal. It does not establish literal destructive action, personnel action, current organizational state, page readership, proposal evaluation, a current qualified need, budget, authorization, or hiring."
+  },
   "browser": {
     "startRoute": "/lab/source-backed-team-memory",
     "allowedRoutes": [
@@ -46,22 +51,22 @@
     {
       "id": "purchaseable-engagement",
       "route": "/lab/source-backed-team-memory",
-      "needle": "small paid discovery and prototype"
+      "needle": "A small paid two-week discovery and prototype sprint"
     },
     {
       "id": "approved-source",
       "route": "/lab/source-backed-team-memory",
-      "needle": "One approved source. One useful team-memory test."
+      "needle": "Three to five approved sources around one decision trail"
     },
     {
       "id": "concrete-delivery",
       "route": "/lab/source-backed-team-memory",
-      "needle": "What I will deliver"
+      "needle": "What I deliver"
     },
     {
       "id": "decision-output",
       "route": "/lab/source-backed-team-memory",
-      "needle": "What you can decide"
+      "needle": "End decision"
     },
     {
       "id": "resume-discoverable",

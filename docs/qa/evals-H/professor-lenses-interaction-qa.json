@@ -1,11 +1,11 @@
 {
-  "reportVersion": 3,
-  "checkedAt": "2026-08-21T00:16:53.000Z",
+  "reportVersion": 4,
+  "checkedAt": "2026-08-22T21:32:06.685Z",
   "baseUrl": "http://127.0.0.1:3211",
-  "publicSurfaceFingerprint": "d61271ff62e6268f70f2e044d5b87b4b0921361b424ae63c8235d968118ce0cd",
+  "publicSurfaceFingerprint": "8957c36e0c43d5650ee2512ad4a07b47aedb1ad9cce028caa2b4c073a3ba636f",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 155,
-  "method": "Playwright keyboard interaction plus scoped DOM and viewport inspection on the exact local candidate. This is not a human screen-reader or assistive-technology session.",
+  "publicSurfaceFileCount": 157,
+  "method": "Fresh Playwright keyboard interaction plus DOM and viewport inspection on the exact local candidate. This is not a human screen-reader or assistive-technology session.",
   "keyboard": {
     "desktopTabSequence": [
       {
@@ -205,13 +205,13 @@
   ],
   "passed": true,
   "refresh": {
-    "candidateChange": "The six homepage capability rows changed from static entries to full-row links into matching filtered work-index states; no navigation shell, focus behavior, CSS, or route definition changed.",
+    "candidateChange": "The homepage route language, sequence, and card density changed for the four-owner editorial gate.",
     "currentChecks": [
-      "The production-container DOM retained one main landmark and one h1.",
-      "All six capability rows expose visible, meaningful filtered work-index destinations.",
-      "Direct navigation through the first capability destination reached /work?tag=Technical%20Operations#work-index, retained one main and one h1, and exposed the Clear filter control.",
-      "The final homepage project remains 196 Artists Residency / Sunday Dinner."
+      "Keyboard order and visible focus were freshly exercised on the exact homepage.",
+      "The mobile menu opened from its summary control and transferred focus to its first link.",
+      "Home and About passed fresh 640-pixel and 320-pixel reflow checks.",
+      "About retained one main landmark, one h1, and a coherent heading sequence."
     ],
-    "carriedForwardCheck": "Keyboard, mobile-navigation, and 320/640 reflow observations remain applicable because those components did not change. The changed capability destinations and full 56-row route-width matrix were freshly exercised; no human screen-reader claim is made."
+    "humanBoundary": "No human screen-reader or browser-zoom completion claim is made."
   }
 }

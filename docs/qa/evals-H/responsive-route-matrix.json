@@ -1,10 +1,11 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-08-21T00:16:53.000Z",
+  "checkedAt": "2026-08-22T20:32:24.362Z",
   "baseUrl": "http://127.0.0.1:3211",
-  "publicSurfaceFingerprint": "d61271ff62e6268f70f2e044d5b87b4b0921361b424ae63c8235d968118ce0cd",
+  "publicSurfaceFingerprint": "8957c36e0c43d5650ee2512ad4a07b47aedb1ad9cce028caa2b4c073a3ba636f",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 155,
+  "publicSurfaceFileCount": 157,
+  "requestFailurePolicy": "Exclude canceled speculative Next.js RSC prefetches (net::ERR_ABORTED with an _rsc query); retain every other failed request.",
   "routes": [
     "/",
     "/work",
@@ -823,8 +824,8 @@
     "failedRequests": 0,
     "nonSuccessResponses": 0,
     "invalidHeadingOrLandmarkRows": 0,
-    "lazyImagesObserved": 84,
-    "unloadedImagesBeforeScroll": 49,
+    "lazyImagesObserved": 88,
+    "unloadedImagesBeforeScroll": 58,
     "lazyImageFollowUpPerformed": true,
     "allImagesLoadedAfterScroll": true
   },
@@ -843,8 +844,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionOverlapsPrimaryCopy": false,
-        "captionAndCreditSeparated": true
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
       },
       {
         "viewport": 375,
@@ -855,8 +856,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionOverlapsPrimaryCopy": false,
-        "captionAndCreditSeparated": true
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
       },
       {
         "viewport": 768,
@@ -867,8 +868,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionOverlapsPrimaryCopy": false,
-        "captionAndCreditSeparated": true
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
       },
       {
         "viewport": 1280,
@@ -879,14 +880,14 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionOverlapsPrimaryCopy": false,
-        "captionAndCreditSeparated": true
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
       }
     ],
     "passed": true
   },
   "navigationReview": {
-    "checkedAt": "2026-08-20T19:48:32.348Z",
+    "checkedAt": "2026-08-22T20:32:24.362Z",
     "startRoute": "/",
     "destinationRoute": "/about",
     "startHttpStatus": 200,
@@ -901,20 +902,13 @@
       "height": 900
     },
     "renderedScreenshot": {
-      "sha256": "a1fc0d53b1114ab2272fe60aefb727950280cc37890063695fa66474d94b7c19",
-      "byteLength": 216413,
+      "sha256": "58de62446018a1a2dde323df3ee5858201dcc1e78ba0209b1b0d6508091e3f26",
+      "byteLength": 673265,
       "width": 1280,
       "fullPage": true,
       "retainedInPublicGit": false,
-      "reviewBoundary": "The temporary rendered screenshot was inspected for this exact public page and is represented in public Git only by its content hash and scoped observations."
+      "reviewBoundary": "The temporary rendered screenshot was inspected for this exact public page and is represented in public Git only by its content hash and bounded observations."
     },
     "pass": true
-  },
-  "refresh": {
-    "candidateChange": "The six homepage capability rows changed from static entries to full-row links into matching filtered work-index states. The BetaNYC opportunity-source work made no public component, style, copy, route, or asset change.",
-    "currentStructuralInspection": "A fresh exact-candidate production-build run covered all 14 public routes at 360, 375, 768, and 1280 CSS pixels: 56 of 56 rows returned 200, one h1, one main landmark, zero axe 4.12.1 WCAG A/AA violations, zero horizontal overflow, zero unlabeled or broken images, and zero user-facing failed requests.",
-    "matrixCarryForward": "None. All 56 route-width rows were rerun against this exact public-surface fingerprint. Canceled Next.js RSC speculative prefetches were excluded from user-facing request failures; every primary route response and tested destination completed successfully.",
-    "visualInspection": "Fresh desktop and mobile captures of the capability section were inspected. All six rows remain legible and visible; the narrow layout stacks the row content without horizontal overflow.",
-    "browserDiagnostics": "No browser warnings, errors, or user-facing failed requests were observed during the current run."
   }
 }

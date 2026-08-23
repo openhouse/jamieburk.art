@@ -197,6 +197,11 @@ export function evaluatePublicResume(root = defaultRoot, {
   if (/distinguish(?:es|ed|ing)?[^.]{0,160}(?:retention|resident outcomes|causal impact)/i.test(markdown)) {
     fail("resume compression", "a defensive WOW List qualification overshadows the accomplishment");
   }
+  if (!/Technical fluency — current working set/i.test(markdown) ||
+      !/Historical tools are labeled in their case studies/i.test(markdown) ||
+      /Technical fluency[^\n]*(?:Ember\.js|Python\/Django|PostgreSQL\/PostGIS|QGIS)/i.test(markdown)) {
+    fail("technical currency", "the public resume must separate the current working set from historical tools");
+  }
   for (const entry of entries) {
     const record = records.find(({ id }) => id === entry.opportunityId);
     if (!record || entry.opportunityPath !== record.relativePath) {

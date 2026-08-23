@@ -10,18 +10,18 @@ import { featuredWork } from "@/data/work";
 const startHereLinks = [
   {
     href: "/work/technical-operations",
-    label: "Technical Operations & Implementation",
-    note: "The fastest role-fit proof surface for public-sector technical operations, product operations, implementation, and delivery coordination."
+    label: "Assess role fit",
+    note: "The fastest route through technical project management, product operations, implementation, and public-sector delivery evidence."
   },
   {
     href: "/work",
-    label: "Selected work",
-    note: "Full case studies across commercial, civic, campaign, and community systems."
+    label: "Inspect the work",
+    note: "Full case studies across commerce, civic data, advocacy, neighborhood service, community publishing, and artist support."
   },
   {
     href: "/resume",
-    label: "Resume",
-    note: "PDF for applications and hiring workflows."
+    label: "Review the current resume",
+    note: "The public resume maintained for current applications and hiring conversations."
   }
 ];
 
@@ -34,12 +34,11 @@ export default function HomePage() {
           <div className="jb-reading">
             <p className="jb-section-label">Start here</p>
             <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
-              Quick path through the portfolio
+              Choose what you need to see
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              New to my work? These pages give the clearest route through the
-              site for hiring managers, referrers, civic-tech peers, and
-              collaborators.
+              Each route answers a different hiring question. If you have only
+              a few minutes, begin with the one that matters now.
             </p>
           </div>
           <div>
@@ -61,18 +60,18 @@ export default function HomePage() {
         </div>
       </section>
       <ProofStrip />
-      <CapabilityGrid />
       <section className="jb-frame py-16">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="jb-reading">
-            <p className="jb-section-label">Selected systems</p>
+            <p className="jb-section-label">Selected work</p>
             <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
-              Proof across operating, civic, and community systems
+              Six projects, one operating practice
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: emerging, high-context
-              work becoming usable systems, public-facing tools,
-              documentation, decision trails, and durable handoffs.
+              The settings differ: coalition advocacy, civic data, commerce,
+              neighborhood service, community publishing, and artist support.
+              Each case study makes my responsibility, the team context, and
+              what became usable easier to inspect.
             </p>
           </div>
           <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
@@ -81,10 +80,11 @@ export default function HomePage() {
         </div>
         <div className="mt-8">
           {featuredWork.map((item) => (
-            <WorkCard item={item} key={item.slug} />
+            <WorkCard compact item={item} key={item.slug} />
           ))}
         </div>
       </section>
+      <CapabilityGrid />
       <section className="jb-frame grid gap-8 py-16 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
           <p className="jb-section-label">How I work</p>
@@ -94,11 +94,11 @@ export default function HomePage() {
         </div>
         <div className="space-y-7">
           <p className="text-xl leading-9 text-jb-ink/78">
-            I usually enter when the work is important but loosely defined. I
-            listen across stakeholders, map what is known and unknown, create
-            the workflows or documentation the team needs, support launch or
-            adoption, and leave behind materials that make the work easier to
-            maintain.
+            The work begins by finding the decision the team needs to make. I
+            make responsibilities, dependencies, open questions, and source
+            context visible; build the smallest useful workflow or tool;
+            support implementation; and document the handoff so the work can
+            continue.
           </p>
           <ContactCTA />
         </div>

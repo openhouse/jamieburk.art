@@ -15,9 +15,9 @@
   },
   "resume": {
     "markdownPath": "resume-versions/2026-08-20/active-opportunity-portfolio/Jamie-Burkart-Resume.md",
-    "markdownSha256": "96748eb1cd946d027ec44a4558f12f269025cb5fed0c276cdb85fccf4be3706f",
+    "markdownSha256": "f558f6296872d3a48532e53e2fd99b0f75d4b2949efbc4a7bbdd3db27156113d",
     "pdfPath": "resume-versions/2026-08-20/active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
-    "pdfSha256": "7ba9ad8fb4df1ecd9995684e1e9bab27f7fe828e68f45aba9f91354bb58251cc",
+    "pdfSha256": "80db69ece0da1c4d8883ce0e38afd4cc9819a67389d2391d6ab2754e6183c9c5",
     "artifactPath": "resume-versions/2026-08-20/active-opportunity-portfolio/artifact.json",
     "publicPdfPath": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
   },

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "surfaceDigest": "149d8b6ae0eeba4d2767f5bb3eb4401c51fb9499ef7c77a2542da11670e72297",
+  "evaluatedAt": "2026-08-21",
+  "readerIdentity": "protected-prospective-collaborator",
+  "simulatedPublicFigureLens": true,
+  "nonEndorsementBoundary": "This fictionalized analytical lens is not participation, quotation, endorsement, recommendation, or a hiring decision by the named real person.",
+  "calibrationStatus": "uncalibrated-advisory-simulation",
+  "inputScope": {
+    "route": "/lab/source-backed-team-memory",
+    "publicPageOnly": true,
+    "repositoryAccess": false,
+    "rawTranscriptAccess": false,
+    "privateCompanyContextAccess": false,
+    "scenarioContext": "public-safe requirements only"
+  },
+  "acceptanceQuestion": "Based only on this public page as Jamie's proposal, I would hire Jamie for the small paid discovery / prototype engagement described by the protected June 2026 scenario.",
+  "critique": "Pass. The proposal directly addresses the requirements with a limited two-week pilot, one decision trail, three to five approved sources, familiar output formats, source-linked records, human correction, and a continue, revise, or stop decision. Jamie's contribution is concrete, and the synthetic example demonstrates the method without exposing private context or making AI authoritative.",
+  "strengths": [
+    "Preserves ideas, decisions, open questions, onboarding context, and product reasoning instead of producing a generic summary.",
+    "Defines a small paid engagement with named participants, limited inputs, concrete deliverables, and a tested handoff.",
+    "Accepts non-sensitive, redacted, synthetic, or otherwise approved sources and requires no broad system access.",
+    "Keeps outputs source-linked, inspectable, human-reviewed, correctable, and governed by access and retention notes.",
+    "Fits outputs to tools the team already uses, including documents, wiki pages, and Markdown.",
+    "Makes Jamie's role tangible through a knowledge-friction map, memory artifact, correction path, and worked correction trace.",
+    "Ends with an explicit continue, revise, or stop decision before wider rollout."
+  ],
+  "risks": [
+    "The sponsor must still confirm the exact decision trail, authorized sources, reviewers, workflow surface, and practical success measures before work begins.",
+    "Ongoing ownership and maintenance beyond the prototype remain intentionally outside the initial engagement and would require a separate decision."
+  ],
+  "result": "pass",
+  "wouldHire": true
+}

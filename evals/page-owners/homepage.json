@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "id": "homepage-editorial-page-owners-2026-08-22",
+  "target": {
+    "route": "/",
+    "stagingUrl": "https://staging-c.jamieburk.art/",
+    "files": [
+      "apps/www/src/app/page.tsx",
+      "apps/www/src/app/globals.css",
+      "apps/www/src/components/CapabilityGrid.tsx",
+      "apps/www/src/components/ContactCTA.tsx",
+      "apps/www/src/components/Hero.tsx",
+      "apps/www/src/components/ProofStrip.tsx",
+      "apps/www/src/components/SiteFooter.tsx",
+      "apps/www/src/components/SiteHeader.tsx",
+      "apps/www/src/components/WorkCard.tsx",
+      "apps/www/src/data/proofs.ts",
+      "apps/www/src/data/work.ts"
+    ]
+  },
+  "captureContract": {
+    "desktopViewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "mobileViewport": {
+      "width": 390,
+      "height": 844
+    },
+    "fullPage": true,
+    "publicTextRequired": true,
+    "repositoryAccessDuringJudging": false
+  },
+  "policy": {
+    "deterministicChecksBeforeLlm": true,
+    "stopOnDeterministicFailure": true,
+    "allOwnersMustAccept": true,
+    "exactSurfaceDigestRequired": true,
+    "calibrationStatus": "uncalibrated-advisory-simulation",
+    "humanPublicationAuthorityRequired": true
+  },
+  "homepageComposition": {
+    "allFeaturedProjectsVisible": true,
+    "selectedWorkBeforeCapabilities": true,
+    "compactHomepageWorkCards": true,
+    "oneHeroSupportParagraph": true,
+    "directCaseStudyLinks": true
+  },
+  "publicPageBoundary": {
+    "publicPageOnly": true,
+    "repositoryAccess": false,
+    "privateSources": false,
+    "namedOwnersVisibleOnPublicPage": false
+  },
+  "nonEndorsementBoundary": "These are fictionalized public-context editorial lenses. They are not participation, quotation, endorsement, approval, or sign-off by the named people.",
+  "owners": [
+    {
+      "id": "abby-covert-information-architecture",
+      "name": "Abby Covert",
+      "publicContextUrls": [
+        "https://abbycovert.com/"
+      ],
+      "ownedFailureMode": "The homepage exposes Jamie's internal taxonomy, repeats equivalent routes, or makes a rushed visitor work to understand where they are and what to do next.",
+      "criterion": "Within thirty seconds, the homepage gives a new visitor a coherent mental model of Jamie's practice and a small set of distinct, accurately labeled paths to role-fit proof, selected work, and the current resume.",
+      "acceptanceQuestion": "Based only on the rendered public homepage, would this fictionalized Abby Covert information-architecture lens accept the page for publication?",
+      "resultPath": "evals/page-owners/runs/2026-08-22/abby-covert-homepage.json"
+    },
+    {
+      "id": "cyd-harrell-civic-usability",
+      "name": "Cyd Harrell",
+      "publicContextUrls": [
+        "https://cydharrell.com/"
+      ],
+      "ownedFailureMode": "The page makes civic and technical work sound impressive without showing what became more usable, for whom, or how a public-service hiring reader should act on the evidence.",
+      "criterion": "The homepage uses plain language, accessible interaction, and public-safe evidence to show how Jamie helps complex public-facing teams deliver usable services and operating systems, while making the next hiring action obvious.",
+      "acceptanceQuestion": "Based only on the rendered public homepage, would this fictionalized Cyd Harrell civic-usability lens accept the page for publication?",
+      "resultPath": "evals/page-owners/runs/2026-08-22/cyd-harrell-homepage.json"
+    },
+    {
+      "id": "jennifer-pahlka-public-delivery",
+      "name": "Jennifer Pahlka",
+      "publicContextUrls": [
+        "https://www.recodingamerica.us/"
+      ],
+      "ownedFailureMode": "The page describes civic values or sophisticated methods but does not establish that Jamie can take responsibility, work across institutions, and make implementation succeed under real constraints.",
+      "criterion": "The homepage makes a credible, source-conscious hiring case that Jamie can turn policy, product, operational, and community complexity into implemented public value, with individual responsibility and collective credit both clear.",
+      "acceptanceQuestion": "Based only on the rendered public homepage, would this fictionalized Jennifer Pahlka public-delivery lens accept the page for publication and advance Jamie to a hiring conversation?",
+      "resultPath": "evals/page-owners/runs/2026-08-22/jennifer-pahlka-homepage.json"
+    },
+    {
+      "id": "deborah-treisman-editorial-sequence",
+      "name": "Deborah Treisman",
+      "publicContextUrls": [
+        "https://www.newyorker.com/contributors/deborah-treisman"
+      ],
+      "ownedFailureMode": "The homepage reads like accumulated portfolio inventory: the central sentence disappears, sections repeat the same claim, or qualifications interrupt the narrative before evidence can gather force.",
+      "criterion": "The homepage has a memorable opening proposition and an inevitable editorial sequence in which photographs, proof, projects, method, and invitation each add new meaning in Jamie's precise, warm voice.",
+      "acceptanceQuestion": "Based only on the rendered public homepage, would this fictionalized Deborah Treisman editorial lens accept the page for publication?",
+      "resultPath": "evals/page-owners/runs/2026-08-22/deborah-treisman-homepage.json"
+    }
+  ],
+  "judgeInstructions": [
+    "Inspect only the supplied desktop and mobile captures and extracted public text for the rendered homepage.",
+    "Do not inspect repository files, private sources, hidden metadata, or prior evaluation results.",
+    "Judge only the assigned criterion and owned failure mode.",
+    "Write the critique before returning the verdict.",
+    "If the page fails, identify precise visible evidence and the smallest useful revision.",
+    "Treat the named person as a fictionalized lens derived from public work, never as participation, quotation, endorsement, approval, or actual sign-off."
+  ],
+  "judgeOutputSchema": {
+    "schemaVersion": 1,
+    "ownerId": "string",
+    "ownerName": "string",
+    "surfaceDigest": "sha256",
+    "acceptanceQuestion": "string",
+    "simulatedPublicFigureLens": true,
+    "calibrationStatus": "uncalibrated-advisory-simulation",
+    "inputScope": {
+      "publicPageOnly": true,
+      "repositoryAccess": false,
+      "privateSources": false
+    },
+    "nonEndorsementBoundary": "string",
+    "critique": "string",
+    "strengths": [
+      "string"
+    ],
+    "constructiveCriticism": [
+      "string"
+    ],
+    "result": "pass | fail",
+    "accepted": "boolean"
+  },
+  "forbiddenPublicStrings": [
+    "Abby Covert",
+    "Cyd Harrell",
+    "Jennifer Pahlka",
+    "Deborah Treisman"
+  ]
+}

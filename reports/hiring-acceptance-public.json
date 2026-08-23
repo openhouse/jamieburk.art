@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "runId": "hiring-public-2bd29f313f73",
-  "generatedAt": "2026-08-21T10:19:09-04:00",
-  "candidateSha": "2bd29f313f73f8844282dbe364b163d62544a401",
+  "runId": "hiring-public-e3a66471f179",
+  "generatedAt": "2026-08-22T21:07:04-04:00",
+  "candidateSha": "e3a66471f179951e52de2fac6d345c2725ac929f",
   "candidatePathsClean": true,
-  "portfolioSnapshotHash": "f15a12f18f203d26ab163288d0742597345607e32a949dcf54a866755eedcf7b",
-  "roleContextHash": "6e959f00d5e3b89e8714483841ab7ace87224f7a66a1c53543442b4bc1c438e6",
+  "portfolioSnapshotHash": "c334adb62cddea591773b5ae4015d8019ac7c65c63d5cd76d9e623902ee84c64",
+  "roleContextHash": "515a605ba2783212dbbd5b12efe516854f0e7cc3c202a7bc70b99c824986317d",
   "readerContextHash": "c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
   "publicSafety": {
@@ -886,7 +886,7 @@
     {
       "id": "opportunity.protected.source-backed-memory-consulting.2026",
       "title": "Protected source-backed team-memory consulting lead",
-      "roleContextHash": "b15538fd5ba342af247133ff26ce6135017d6f5350276aaa06246aa5658f6470",
+      "roleContextHash": "0fe2970b0714e5286b8d7b3900a1ee9a273797d53946627a3b281525e9533043",
       "live": false,
       "fresh": false,
       "hardScreenBlocked": false,

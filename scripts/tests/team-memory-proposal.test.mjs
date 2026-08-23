@@ -10,14 +10,20 @@ function read(relativePath) {
 }
 
 test("the team-memory page is a concrete first-engagement proposal", () => {
-  const page = read("apps/www/src/content/lab/source-backed-team-memory.mdx");
+  const page = [
+    read("apps/www/src/content/lab/source-backed-team-memory.mdx"),
+    read("apps/www/src/app/lab/source-backed-team-memory/page.tsx")
+  ].join("\n");
 
   for (const phrase of [
     "What a First Engagement Tests",
     "one approved source surface",
     "useful ideas, decisions, open questions, onboarding context, and product reasoning",
     "No broad access to company systems",
-    "continue, revise, or stop"
+    "continue, revise, or stop",
+    "two-week discovery and prototype",
+    "One sponsor, one working lead, and two or three teammates",
+    "Three to five approved sources"
   ]) {
     assert.ok(page.includes(phrase), `missing proposal requirement: ${phrase}`);
   }
@@ -58,6 +64,17 @@ test("the simulated prospect gate is public-safe, deterministic-first, and advis
   assert.equal(config.policy.deterministicChecksBeforeLlm, true);
   assert.equal(config.policy.stopOnDeterministicFailure, true);
   assert.equal(config.policy.calibrationStatus, "uncalibrated-advisory-simulation");
+  for (const criterionId of [
+    "two-week-timebox",
+    "small-participant-set",
+    "approved-source-set",
+    "end-decision"
+  ]) {
+    assert.ok(
+      config.deterministicCriteria.some((criterion) => criterion.id === criterionId),
+      `missing deterministic proposal criterion ${criterionId}`
+    );
+  }
   assert.equal(config.acceptanceQuestion, "Based only on this public page as Jamie's proposal, I would hire Jamie for the small paid discovery / prototype engagement described by the protected June 2026 scenario.");
   assert.ok(config.deterministicCriteria.length >= 6);
   assert.deepEqual(config.judgeOutputSchema, {

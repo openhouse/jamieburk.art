@@ -5,7 +5,7 @@
   "route": "/work/fair-rent-nyc",
   "hero": {
     "path": "apps/www/src/components/Hero.tsx",
-    "requiredSha256": "e8c6d92eb37bf1f4b9ba93512882ade309bc58e3c116f3cba2b89c180257159b"
+    "requiredSha256": "c0f69f98bdce368176198a252188489542edc4671f551c69a44b493fb947b87f"
   },
   "assets": [
     {
@@ -58,6 +58,6 @@
     "baselineWeakness": "The Fair Rent case study described an operating system but showed only a single campaign screenshot in its artifact gallery.",
     "boundedChange": "Add one three-part visual sequence from facilitation to shared surface to public assembly, plus the current WOW List proof capture, without changing the homepage hero.",
     "keepWhen": "Deterministic gates pass and fresh desktop and mobile review improves actor-action-purpose-result legibility without weakening truth, consent, collective credit, accessibility, or release discipline.",
-    "heroRecertification": "On 2026-08-20, the current hero was re-fingerprinted only after fresh four-viewport responsive review reported zero overflow, broken controls, or accessibility violations; the participation assets and their sequencing remain unchanged."
+    "heroRecertification": "On 2026-08-22, the current hero was re-fingerprinted only after the four homepage-owner lenses accepted the exact composition and a fresh 56-case, four-viewport responsive review reported zero accessibility violations, overflow, broken images, failed requests, unsuccessful responses, or landmark failures; the participation assets and their sequencing remain unchanged."
   }
 }

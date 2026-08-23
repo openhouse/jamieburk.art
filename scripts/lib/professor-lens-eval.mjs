@@ -23,6 +23,10 @@ const sundayDinnerContentPath = path.join(
   repoRoot,
   "apps/www/src/content/work/196-sunday-dinner.mdx"
 );
+const approvalRegisterPath = path.join(
+  repoRoot,
+  "docs/knowledge-bank/approval-register.md"
+);
 
 const professorRubricRelativePaths = [
   ".agents/evals/portfolio-production-readiness.json",
@@ -43,10 +47,15 @@ export const professorCandidateRelativePaths = [
 ].sort();
 
 const finalScorecardRelativePaths = [
-  "docs/qa/evals-H/margaret-morse-current-2026-08-20-a.json"
+  "docs/qa/evals-H/margaret-morse-current-2026-08-21-a.json",
+  "docs/qa/evals-H/margaret-morse-current-2026-08-21-b.json",
+  "docs/qa/evals-H/margaret-morse-current-2026-08-21-c.json",
+  "docs/qa/evals-H/warren-sack-current-2026-08-21-a.json",
+  "docs/qa/evals-H/warren-sack-current-2026-08-21-b.json",
+  "docs/qa/evals-H/warren-sack-current-2026-08-21-c.json"
 ];
 
-const approvedCandidateSha256 = "e56d6e95fee3eb4eb22560d23db0873f10772843a534fdd1c326d507b9b71cf3";
+const approvedCandidateSha256 = "804f078d94269d5349b230870223dc40eba2a2a5267740a8aebed7b42c5d3833";
 const requiredHoldoutCount = 6;
 
 const forbiddenPublicPatterns = [
@@ -87,6 +96,7 @@ export function evaluateProfessorLenses({
   publicRegistryText = readFileSync(publicRegistryPath, "utf8"),
   hjeContentText = readFileSync(hjeContentPath, "utf8"),
   sundayDinnerContentText = readFileSync(sundayDinnerContentPath, "utf8"),
+  approvalRegisterText = readFileSync(approvalRegisterPath, "utf8"),
   candidateFiles = loadCandidateFiles(),
   finalScorecards = finalScorecardRelativePaths.map((relativePath) =>
     JSON.parse(readFileSync(path.join(repoRoot, relativePath), "utf8"))
@@ -97,11 +107,21 @@ export function evaluateProfessorLenses({
   const morseText = joined(morse);
   const sackText = joined(sack);
   const combinedPublicText = `${aboutText}\n${sourceNoteText}\n${publicRegistryText}`;
+  const normalizedAboutText = aboutText.replace(/\s+/g, " ");
   const totalWeight = suite.evals.reduce((sum, entry) => sum + entry.weight, 0);
   const candidateSha256 = fingerprintProfessorCandidate(candidateFiles);
-  const relationshipRows = aboutText.match(/Relationships:<\/strong>/g)?.length ?? 0;
-  const interfaceRows = aboutText.match(/Interface and use:<\/strong>/g)?.length ?? 0;
-  const learningRows = aboutText.match(/Learning and continuity:/g)?.length ?? 0;
+  const featuredLoopsText = aboutText.match(
+    /Three systems loops[\s\S]*?Additional continuities/
+  )?.[0] ?? "";
+  const countStage = (stage) => featuredLoopsText.split(stage).length - 1;
+  const stageCounts = Object.fromEntries([
+    "Relationships:",
+    "Model:",
+    "Prototype / testable increment:",
+    "Social or collective use:",
+    "Learning and revision:",
+    "Documented handoff:"
+  ].map((stage) => [stage, countStage(stage)]));
 
   const criteria = [
     criterion(
@@ -171,9 +191,11 @@ export function evaluateProfessorLenses({
     ),
     criterion(
       "project-specific-loops",
-      "Four examples distinguish relationship models, actual interfaces and use, and learning and continuity.",
-      relationshipRows >= 4 && interfaceRows >= 4 && learningRows >= 4,
-      `${relationshipRows} relationship rows; ${interfaceRows} interface-and-use rows; ${learningRows} learning-and-continuity rows.`
+      "Three delimited examples expose every recursive stage without implying structural equivalence.",
+      normalizedAboutText.includes(
+        "not equivalent in scale, maturity, authority, adoption, risk, or"
+      ) && Object.values(stageCounts).every((count) => count === 3),
+      `${JSON.stringify(stageCounts)}; explicit non-equivalence boundary checked.`
     ),
     criterion(
       "open-house-boundary",
@@ -223,6 +245,21 @@ export function evaluateProfessorLenses({
         sourceNoteText.includes("private archive paths") &&
         sourceNoteText.includes("related correspondence"),
       "Protected-source exclusions checked."
+    ),
+    criterion(
+      "exact-photo-occurrence-clearance",
+      "A human approval record clears the exact portfolio-album occurrences while keeping broader reuse and release decisions separate.",
+      approvalRegisterText.includes(
+        "is cleared by Jamie for publication on the `jamieburk.art` professional"
+      ) &&
+        approvalRegisterText.includes(
+          "Shoestring Press facilitation frame and the Save NYC Spaces town-hall"
+        ) &&
+        approvalRegisterText.includes("dignity review") &&
+        approvalRegisterText.includes(
+          "Approval of an exact production commit and the indexing state"
+        ),
+      "Exact-occurrence portfolio clearance, dignity review, and separate release gates checked."
     ),
     criterion(
       "no-private-fragments",

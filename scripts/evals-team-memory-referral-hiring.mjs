@@ -5,6 +5,8 @@ import { fileURLToPath } from "node:url";
 
 const defaultRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const configRelativePath = "evals/team-memory-referral-hiring/current.json";
+const publicResumeRelativePath =
+  "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf";
 
 function read(root, relativePath) {
   return readFileSync(path.join(root, relativePath), "utf8");
@@ -37,10 +39,15 @@ export function teamMemoryReferralCandidateDigest(root = defaultRoot, config, re
 
 export function evaluateTeamMemoryReferralHiring(root = defaultRoot) {
   const failures = [];
+  const calibrationFailures = [];
   const check = (condition, message) => {
     if (!condition) failures.push(message);
   };
+  const checkCalibration = (condition, message) => {
+    if (!condition) calibrationFailures.push(message);
+  };
   const config = parse(root, configRelativePath);
+  const calibration = parse(root, config.realWorldCalibration.path);
   const receipt = parse(root, config.inputBoundary.browserReceiptPath);
   const result = parse(root, config.evaluator.resultPath);
   const routeRecords = new Map(receipt.pages.map((page) => [page.route, page]));
@@ -52,6 +59,7 @@ export function evaluateTeamMemoryReferralHiring(root = defaultRoot) {
   check(config.inputBoundary.participantIdentityAccess === false, "participant identity cannot enter the packet");
   check(config.inputBoundary.companyIdentityAccess === false, "company identity cannot enter the packet");
   check(config.inputBoundary.privateCorrespondenceAccess === false, "private correspondence cannot enter the packet");
+  check(config.realWorldCalibration.inputToAdvisoryModel === false, "real-world response cannot enter the advisory packet");
   check(config.browser.startRoute === "/lab/source-backed-team-memory", "browser must begin at the team-memory page");
   check(config.browser.sameOriginPublicNavigationOnly === true, "browser navigation must remain same-origin and public");
   check(config.browser.requireLinkDiscovery === true, "later routes must be discovered through public links");
@@ -60,6 +68,30 @@ export function evaluateTeamMemoryReferralHiring(root = defaultRoot) {
   check(config.policy.stopOnDeterministicFailure === true, "advisory review must stop on deterministic failure");
   check(config.policy.calibrationStatus === "uncalibrated-advisory-simulation", "calibration boundary changed");
   check(config.policy.humanCalibrationPending === true, "human calibration must remain pending");
+
+  checkCalibration(calibration.schemaVersion === 1, "real-world calibration schemaVersion must be 1");
+  checkCalibration(calibration.sourceBoundary?.minimumNecessaryMetadataOnly === true, "real-world calibration must retain minimum-necessary metadata only");
+  checkCalibration(calibration.sourceBoundary?.rawMessagePersisted === false, "raw response cannot be persisted in the calibration artifact");
+  checkCalibration(calibration.sourceBoundary?.exactWordingPersisted === false, "exact private wording cannot be persisted in the calibration artifact");
+  checkCalibration(calibration.sourceBoundary?.personalCircumstancesPersisted === false, "personal circumstances cannot be persisted in the calibration artifact");
+  checkCalibration(calibration.sourceBoundary?.participantIdentityPersisted === false, "participant identity cannot be persisted in the calibration artifact");
+  checkCalibration(calibration.sourceBoundary?.companyIdentityPersisted === false, "company identity cannot be persisted in the calibration artifact");
+  checkCalibration(calibration.sourceBoundary?.inputToAdvisoryModel === false, "real-world response cannot be shown to the advisory model");
+  checkCalibration(calibration.observedState?.responseReceived === "observed", "real-world response receipt must be recorded");
+  checkCalibration(calibration.observedState?.positiveReception === "observed", "positive reception must remain an observed response signal");
+  checkCalibration(calibration.observedState?.interestInReconnecting === "observed", "interest in reconnecting must remain an observed response signal");
+  checkCalibration(calibration.observedState?.retrospectiveInterventionMismatch === "observed", "retrospective intervention mismatch must remain an observed response signal");
+  checkCalibration(calibration.observedState?.historicalOperatingRepairNeed === "supported-inference", "historical operating repair must remain a supported inference");
+  checkCalibration(calibration.observedState?.literalDestructiveAction === "not-observed", "figurative retrospective language does not establish literal destructive action");
+  checkCalibration(calibration.observedState?.personnelAction === "not-observed", "retrospective intervention mismatch does not establish personnel action");
+  checkCalibration(calibration.observedState?.currentOrganizationalState === "unknown", "retrospective intervention mismatch does not establish current organizational state");
+  checkCalibration(calibration.observedState?.pageOpened === "not-observed", "real-world response does not establish page opening");
+  checkCalibration(calibration.observedState?.proposalRead === "not-observed", "real-world response does not establish proposal readership");
+  checkCalibration(calibration.observedState?.needQualified === "not-observed", "real-world response does not establish a qualified organizational need");
+  checkCalibration(calibration.observedState?.budgetAuthority === "unknown", "real-world response does not establish budget authority");
+  checkCalibration(calibration.observedState?.engagementAuthorized === "not-observed", "real-world response does not establish an authorized engagement");
+  checkCalibration(calibration.observedState?.hiringDecision === "not-observed", "real-world response does not establish a hiring decision");
+  failures.push(...calibrationFailures);
 
   check(receipt.schemaVersion === 1, "browser receipt schemaVersion must be 1");
   check(receipt.captureProtocol === "headless-browser-public-render-with-screenshot-v2", "browser capture protocol changed");
@@ -88,6 +120,13 @@ export function evaluateTeamMemoryReferralHiring(root = defaultRoot) {
   check(receipt.resumeArtifact?.route === "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf", "public resume artifact changed");
   check(receipt.resumeArtifact?.status === 200, "public resume artifact did not return 200");
   check(/^[a-f0-9]{64}$/.test(receipt.resumeArtifact?.sha256 ?? ""), "resume artifact digest is invalid");
+  const currentPublicResumeSha256 = createHash("sha256")
+    .update(readFileSync(path.join(root, publicResumeRelativePath)))
+    .digest("hex");
+  check(
+    receipt.resumeArtifact?.sha256 === currentPublicResumeSha256,
+    "browser receipt resume digest is stale for the current public PDF"
+  );
 
   for (const criterion of config.deterministicCriteria) {
     const page = routeRecords.get(criterion.route);
@@ -128,10 +167,12 @@ export function evaluateTeamMemoryReferralHiring(root = defaultRoot) {
   }
 
   const advisorySimulationPassed = deterministicPassed && failures.length === 0;
+  const realWorldCalibrationPassed = calibrationFailures.length === 0;
   return {
-    passed: deterministicPassed && advisorySimulationPassed,
+    passed: deterministicPassed && advisorySimulationPassed && realWorldCalibrationPassed,
     deterministicPassed,
     advisorySimulationPassed,
+    realWorldCalibrationPassed,
     candidateDigest,
     failures
   };

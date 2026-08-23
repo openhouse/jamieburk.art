@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-21T10:19:09-04:00",
-  "sourceCommit": "2bd29f313f73f8844282dbe364b163d62544a401",
-  "sourceFingerprint": "77a6700ed0da85d2d0ec4dcfd5fed3f8ef2d9c6dc3dd08683dd243cddead9684",
+  "generatedAt": "2026-08-22T21:07:04-04:00",
+  "sourceCommit": "e3a66471f179951e52de2fac6d345c2725ac929f",
+  "sourceFingerprint": "4d94fa52575e320448859e636ba990050a46d243cf754796aabae0941816e99d",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -171,7 +171,7 @@
       "sensitivity": "low",
       "summary": "Selected portfolio photograph showing handwritten cards arranged into a shared field during an NYC Artist Coalition steering-group session.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
+      "lastReviewed": "2026-08-21",
       "reviewBy": "2027-02-20"
     },
     {
@@ -2732,7 +2732,7 @@
       "sensitivity": "low",
       "summary": "Jamie's first-person correction withdraws unsupported individual photo credits from the live portfolio and establishes concise project courtesy credits when the individual creator is not confirmed.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
+      "lastReviewed": "2026-08-21",
       "reviewBy": "2027-02-20"
     },
     {
@@ -3830,7 +3830,7 @@
       "sensitivity": "low",
       "summary": "A federated, governed practice for connecting project meaning, evidence, source custody, evaluations, human review, and audience-specific projections.\n",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
+      "lastReviewed": "2026-08-22",
       "reviewBy": "2027-01-18"
     },
     {
@@ -4064,7 +4064,7 @@
       "sensitivity": "high",
       "summary": "Public-safe opportunity metadata for a contingent consulting lead without collaborator, company, pricing, or correspondence disclosure.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
+      "lastReviewed": "2026-08-22",
       "reviewBy": "2026-09-10"
     },
     {
@@ -5941,7 +5941,7 @@
       "sensitivity": "high",
       "summary": "Metadata-only record for a focused private review of an exploratory source-backed team-memory consulting lead.",
       "aliases": [],
-      "lastReviewed": "2026-08-21",
+      "lastReviewed": "2026-08-22",
       "reviewBy": "2026-11-10"
     },
     {
@@ -12123,6 +12123,14 @@
       "to": "asset.photo.sunday-dinner.shared-map.2013.001",
       "source": "frontmatter",
       "href": "../assets/photographs/sunday-dinner-shared-map-2013.md",
+      "context": null
+    },
+    {
+      "from": "correction.photo.project-courtesy-credits.2026-08-20",
+      "type": "related_to",
+      "to": "person.paul-mossine",
+      "source": "frontmatter",
+      "href": "../people/paul-mossine.md",
       "context": null
     },
     {
@@ -20356,6 +20364,15 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/corrections/project-photo-credits-2026-08-20.md",
+      "from": "correction.photo.project-courtesy-credits.2026-08-20",
+      "toPath": "docs/knowledge-bank/people/paul-mossine.md",
+      "to": "person.paul-mossine",
+      "fragment": null,
+      "line": 9,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/evaluations/employment-opportunity-leadership-2026-08-13.md",
       "from": "evaluation.employment-opportunity-leadership.2026-08-13",
       "toPath": "scripts/knowledge-wiki/opportunity-leadership.test.mjs",
@@ -22773,7 +22790,7 @@
       "toPath": "docs/knowledge-bank/capabilities/technical-operations.md",
       "to": "capability.technical-operations",
       "fragment": null,
-      "line": 71,
+      "line": 78,
       "kind": "link"
     },
     {
@@ -22782,7 +22799,7 @@
       "toPath": "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/01-prospective-collaborator-perspective.md",
       "to": "case-study.anonymized-team-memory.prospective-collaborator-perspective",
       "fragment": null,
-      "line": 78,
+      "line": 85,
       "kind": "link"
     },
     {
@@ -22791,7 +22808,7 @@
       "toPath": "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/02-jamie-perspective.md",
       "to": "case-study.anonymized-team-memory.jamie-perspective",
       "fragment": null,
-      "line": 80,
+      "line": 87,
       "kind": "link"
     },
     {
@@ -22800,7 +22817,7 @@
       "toPath": "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/03-prospective-collaborator-voice.md",
       "to": "case-study.anonymized-team-memory.prospective-collaborator-voice",
       "fragment": null,
-      "line": 81,
+      "line": 88,
       "kind": "link"
     },
     {
