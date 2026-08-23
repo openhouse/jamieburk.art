@@ -94,12 +94,12 @@ role_requirements:
   - id: requirement.protected-memory.bounded-sprint
     importance: important
     kind: condition
-    text: Begin with one permissioned source surface and a bounded discovery or prototype engagement.
+    text: Diagnose the operating problem, stabilize one useful loop, and add one permissioned source surface only when it helps.
     wiki_evidence:
       - method.source-backed-team-memory
     public_evidence:
       - route: /lab/source-backed-team-memory
-        needle: Discuss a bounded source-backed memory sprint
+        needle: Discuss a focused operating sprint
     status: visible-qualified
     gap_type: role-context
     next_action: Do not imply that a sprint was accepted, funded, or delivered.
@@ -110,7 +110,7 @@ one_year_risk_conditions:
   - Exploratory advice becomes unpaid implementation or uncontrolled scope.
   - Protected source access expands before confidentiality, IP, privacy, and compensation are agreed.
 interview_questions:
-  - Is there an authorized budget owner and a current bounded use case?
+  - Is there an authorized budget owner and a current, focused use case?
   - What source surface would be safe, permissioned, and useful for a first test?
   - Who reviews and corrects the resulting operating memory?
 relations:
@@ -162,14 +162,17 @@ deployment, completed work, or market validation exists.
 
 ## Public-safe core
 
-A focused lab method for source-backed team memory: reviewable,
-human-correctable, source-linked operating memory for knowledge-heavy teams.
+A focused diagnostic and implementation method: stabilize one useful operating
+loop, then add reviewable, human-correctable, source-linked memory when it helps
+the work continue.
 
 AI drafts. Humans review. The shared record remains inspectable and correctable.
 
 ## Public-safe deliverables
 
-- knowledge-friction map;
+- operating-friction and knowledge-friction maps;
+- priority, ownership, and decision map;
+- focused workflow reset and working agreement;
 - source and workflow inventory;
 - decision-memory and meeting-memory templates;
 - onboarding or "how we know what we know" starter page;

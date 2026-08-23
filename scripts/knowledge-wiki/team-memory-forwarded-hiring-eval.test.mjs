@@ -81,6 +81,20 @@ test("removing the explicit internal decision brief blocks the model call", () =
   assert.equal(result.judgeStatus, "preflight-blocked");
 });
 
+test("a solution-first proposal blocks the model call", () => {
+  const candidate = pageSource.replace(
+    /Start with the operating problem[\s\S]*?Then preserve what must continue/,
+    "Begin with a team-memory prototype"
+  );
+  const result = evaluate(candidate);
+
+  assert.equal(
+    result.checks.diagnosis_and_stabilization_precede_memory,
+    false
+  );
+  assert.equal(result.judgeStatus, "preflight-blocked");
+});
+
 test("removing the team-side owner blocks the model call", () => {
   const candidate = pageSource.replace(
     /one team-side owner/gi,

@@ -1,7 +1,7 @@
 {
   "id": "team-memory-forwarded-hiring-scenario-2026-08-21",
-  "version": 2,
-  "purpose": "Test whether a technical leader can forward the public Team Memory page and resume to company decision-makers and make a focused paid engagement easy to authorize.",
+  "version": 3,
+  "purpose": "Test whether a technical leader can forward the public Team Memory page and resume to company decision-makers and make a focused, diagnosis-first paid engagement easy to authorize.",
   "scenario": {
     "advocate": "Protected prospective technical leader",
     "decisionMakers": "Company leaders with budget and hiring authority",
@@ -62,7 +62,7 @@
     },
     {
       "id": "decision-maker-hire-gate",
-      "criterion": "Would leaders with budget and hiring authority authorize Jamie for the focused paid discovery sprint described on the public site, subject to ordinary internal approval, because the page and resume make need, fit, scope, attention cost, safeguards, outputs, and the decision at handoff clear?",
+      "criterion": "Would leaders with budget and hiring authority authorize Jamie for the focused paid diagnostic and implementation sprint described on the public site, subject to ordinary internal approval, because the page and resume show that Jamie will diagnose the operating problem, stabilize one useful loop, and preserve context only when it helps?",
       "verdicts": ["hire", "pass"],
       "allCriteriaMustPass": true,
       "outputOrder": ["critique", "primaryRisk", "verdict", "decisionStatement"]
@@ -81,7 +81,9 @@
     "navigation begins at Team Memory page",
     "public routes only",
     "forwardable decision brief present",
-    "organizational problem and first engagement explicit",
+    "organizational problem is diagnosed before a tool is selected",
+    "one operating loop is stabilized before memory infrastructure is proposed",
+    "focused first engagement explicit",
     "team attention and Jamie responsibility explicit",
     "generic summarization differentiated",
     "resume and contact each reachable in one click",

@@ -59,11 +59,12 @@ commercial terms, publication, and acceptance.
 
 ## Current development result
 
-The deterministic preflight passes all ten exact-input, public-navigation,
-decision-brief, team-attention, Jamie-responsibility, resume, contact, and
-calibration checks. Mutation tests verify that removing the internal decision
-brief, team-side owner, resume path, why-Jamie statement, pre-kickoff terms, or
-source boundary blocks modeled review.
+The deterministic preflight now requires diagnosis before tool selection,
+stabilization before memory infrastructure, exact-input and public-navigation
+boundaries, a forwardable decision brief, explicit team attention and Jamie
+responsibility, and one-click resume and contact routes. Mutation tests verify
+that solution-first language or removal of these prerequisites blocks modeled
+review.
 
 An isolated development run on August 21, 2026 began with harness-captured
 renderings of the local Team Memory page, public resume, resume landing page,
@@ -73,12 +74,17 @@ analysis. It did not receive repository source, Jamie's perspective document,
 raw transcripts, private communications, company identity, commercial details,
 or prior judge output.
 
-The fictionalized advocate-forwardability and relay-usefulness gates passed.
-The fictionalized company decision-maker gate returned `hire` for the focused
-paid discovery sprint, subject to ordinary budget, contracting,
-confidentiality, ownership, source-authority, retention, and internal approval.
-The modeled readers saw the remaining uncertainty clearly: adoption inside the
-prospective team is not established and is the question the sprint must test.
+In that earlier run, the fictionalized advocate-forwardability and
+relay-usefulness gates passed. The fictionalized company decision-maker gate
+returned `hire` for the earlier focused paid discovery sprint, subject to
+ordinary budget, contracting, confidentiality, ownership, source-authority,
+retention, and internal approval. The modeled readers saw the remaining
+uncertainty clearly: adoption inside the prospective team is not established
+and is the question the sprint must test.
+
+The subsequent diagnosis-first revision has passed deterministic preflight and
+mutation tests. No new modeled hiring conclusion is claimed for the revised
+page until a separate isolated run is completed.
 
 The result is an uncalibrated synthetic development signal. It does not
 represent the protected person's opinion, the company's participation, a real

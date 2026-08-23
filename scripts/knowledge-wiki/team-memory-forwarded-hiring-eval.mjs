@@ -41,6 +41,10 @@ export function evaluateForwardedHiringScenario({
   protectedSource = ""
 }) {
   const publicPage = pageSource.replace(/\s+/g, " ");
+  const diagnosisIndex = publicPage.search(/Start with the operating problem/i);
+  const preservationIndex = publicPage.search(
+    /Then preserve what must continue/i
+  );
   const allowedInputs = contract?.judge?.allowedArtifactInputs ?? [];
   const prohibitedInputs = contract?.judge?.prohibitedInputs ?? [];
   const opportunity = opportunitySource
@@ -76,10 +80,19 @@ export function evaluateForwardedHiringScenario({
       /When a team grows faster than its context can travel/i,
       /Continue, revise, or stop/i
     ]),
+    diagnosis_and_stabilization_precede_memory:
+      diagnosisIndex >= 0 &&
+      preservationIndex > diagnosisIndex &&
+      hasAll(publicPage, [
+        /(?:priorities|priority).{0,100}(?:owner|ownership)|(?:owner|ownership).{0,100}(?:priorities|priority)/i,
+        /(?:blocked|risky).{0,60}(?:decision|handoff)|(?:decision|handoff).{0,60}(?:blocked|risky)/i,
+        /do not assume.{0,80}(?:wiki|knowledge platform)/i,
+        /Make one operating loop usable/i
+      ]),
     focused_paid_engagement_is_explicit: hasAll(publicPage, [
-      /One safe source surface/i,
-      /short paid discovery and prototype sprint/i,
-      /1.?.?2 weeks/i
+      /short paid diagnostic and implementation sprint/i,
+      /one working session/i,
+      /choose one approved, non-sensitive or representative source/i
     ]),
     team_attention_is_explicit: hasAll(publicPage, [
       /one team-side owner/i,

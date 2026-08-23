@@ -64,50 +64,55 @@ export default function SourceBackedTeamMemoryPage() {
           <div className="grid gap-px bg-jb-ink/10 md:grid-cols-3">
             <div className="bg-jb-paper p-6">
               <p className="font-label text-xs uppercase tracking-[0.16em] text-jb-ochre">
-                Start small
+                Diagnose
               </p>
               <h3 className="mt-3 text-xl font-semibold text-jb-blue">
-                One safe source surface
+                Start with the operating problem
               </h3>
               <p className="mt-3 text-sm leading-6 text-jb-ink/74">
-                Choose one approved, non-sensitive or representative source:
-                a meeting, decision thread, onboarding document, or product
-                discussion.
+                Map what matters now, who owns each decision, where work is
+                blocked, which handoffs fail, and what the team should stop. I
+                do not assume a wiki or knowledge platform is the answer.
               </p>
             </div>
             <div className="bg-jb-paper p-6">
               <p className="font-label text-xs uppercase tracking-[0.16em] text-jb-ochre">
-                First engagement
+                Stabilize
               </p>
               <h3 className="mt-3 text-xl font-semibold text-jb-blue">
-                A short paid discovery and prototype sprint
+                Make one operating loop usable
               </h3>
               <p className="mt-3 text-sm leading-6 text-jb-ink/74">
-                In 1–2 weeks, map the knowledge friction, build one reviewable
-                source-to-memory loop, and test it against questions the team
-                actually needs to answer.
+                In a short paid diagnostic and implementation sprint,
+                facilitate one working session, clarify priorities and
+                ownership, and establish a decision and next-action rhythm the
+                team can maintain.
               </p>
             </div>
             <div className="bg-jb-paper p-6">
               <p className="font-label text-xs uppercase tracking-[0.16em] text-jb-ochre">
-                Decision at handoff
+                Preserve
               </p>
               <h3 className="mt-3 text-xl font-semibold text-jb-blue">
-                Continue, revise, or stop
+                Then preserve what must continue
               </h3>
               <p className="mt-3 text-sm leading-6 text-jb-ink/74">
-                Leave with a knowledge-friction map, a small team-memory
-                prototype, practical templates, and a clear recommendation—
-                without committing to a platform.
+                If context loss remains part of the constraint, choose one
+                approved, non-sensitive or representative source and build a
+                small, reviewable source-to-memory loop.
               </p>
             </div>
           </div>
           <div className="border-t border-jb-blue/15 p-6 sm:px-8">
             <p className="max-w-3xl leading-7 text-jb-ink/76">
-              This is more than an AI summary. The structure preserves useful
-              ideas and contributions, keeps decisions linked to sources, and
-              leaves open or unresolved questions explicitly flagged for
-              human review and correction.
+              At handoff, leave with an operating-friction map, a practical
+              working agreement, and—when useful—a small team-memory prototype
+              and templates. Continue, revise, or stop based on what the team
+              can actually use. This is more than an AI summary: any retained
+              context stays linked to sources and open to human review and
+              correction.
+              Useful ideas and contributions remain visible, while open or
+              unresolved questions are flagged for review.
             </p>
           </div>
           <div className="grid gap-px border-t border-jb-blue/15 bg-jb-ink/10 md:grid-cols-2">
@@ -174,7 +179,7 @@ export default function SourceBackedTeamMemoryPage() {
               Review resume
             </JBButton>
             <JBButton href={site.emailHref}>
-              Discuss the first sprint
+              Discuss a focused operating sprint
             </JBButton>
           </div>
         </section>
