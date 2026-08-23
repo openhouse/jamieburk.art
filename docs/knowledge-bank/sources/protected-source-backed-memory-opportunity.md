@@ -21,6 +21,8 @@ known_gaps:
   - The earlier record is a raw automated transcript; the later corrected working transcript was not certified against native audio.
   - The focused review now covers two calls held several months apart, plus one proposal and one follow-up prep packet.
   - A later response supports positive reception and interest in reconnecting; it does not establish that the linked page was opened or read.
+  - The response supplies a retrospective signal that the immediate need at that time was more fundamental operating repair than durable team memory alone; the specific meaning of the figurative language remains unverified.
+  - The signal does not establish literal destructive action, a personnel decision, the organization's present condition, or a current qualified need.
   - No proposal evaluation, need qualification, acceptance, rejection, budget approval, contract, or completed work was recovered in the focused review.
   - Later or unsearched communication may exist.
 relations:
@@ -58,3 +60,11 @@ does not establish that the linked page was opened or read, that the proposal
 was evaluated, that the organizational need was qualified, or that anyone with
 budget or hiring authority authorized work. Personal context in that response
 is neither necessary to this record nor retained here.
+
+The same response contains a retrospective signal that the immediate need at
+that time was more fundamental operating repair than durable team memory alone.
+This supports a diagnostic lesson for the method, not a literal account of what
+happened inside the organization. It does not establish destructive action,
+personnel action, the organization's present condition, or a current qualified
+need. The exact wording remains in protected source custody and is not retained
+in this repository.

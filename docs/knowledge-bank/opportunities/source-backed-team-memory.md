@@ -28,11 +28,15 @@ confirmed_facts:
   - A protected June 2026 source family records a contingent paid consulting discussion about preserving useful ideas, decision context, product reasoning, and onboarding knowledge through human-correctable practices.
   - Jamie prepared a focused discovery and prototype proposal after the discussion.
   - A later public-safe follow-up received a positive response and interest in reconnecting.
+  - "The later response also supplied a retrospective intervention-mismatch signal: the immediate need at that time was more fundamental operating repair than durable team memory alone."
   - No offer, acceptance, budget approval, contract, or completed work was established.
 inferences:
   - The discussion is best classified as a genuine but unclosed prospective consulting opportunity.
+  - The historical signal supports beginning future work with operating diagnosis rather than assuming a knowledge-system intervention is the right first move.
 unknowns:
   - Current budget authority, organizational priority, and timing.
+  - What specific operating changes the retrospective figurative language referred to.
+  - The organization's present condition and current need.
   - Whether the linked public proposal was opened or read.
   - Whether a future conversation will qualify a current organizational need or a compensated engagement.
   - Whether any engagement will be scoped, accepted, contracted, or performed.
@@ -151,6 +155,12 @@ lead whose latest observed state is a warm response and interest in another
 conversation. It does not establish page readership, proposal evaluation, need
 qualification, an offer, acceptance, rejection, contract, client
 adoption, deployment, completed work, or market validation.
+
+The response also offers a restrained retrospective lesson: at that earlier
+moment, a durable-memory intervention alone would not have matched the more
+fundamental operating repair the situation appeared to require. This does not
+establish literal destructive action, a personnel decision, the organization’s
+present condition, or a current qualified need.
 
 ## Public-safe core
 

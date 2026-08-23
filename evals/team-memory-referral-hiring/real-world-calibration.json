@@ -6,6 +6,7 @@
     "governedSourceId": "source.protected.source-backed-memory-opportunity.2026",
     "minimumNecessaryMetadataOnly": true,
     "rawMessagePersisted": false,
+    "exactWordingPersisted": false,
     "personalCircumstancesPersisted": false,
     "participantIdentityPersisted": false,
     "companyIdentityPersisted": false,
@@ -15,6 +16,11 @@
     "responseReceived": "observed",
     "positiveReception": "observed",
     "interestInReconnecting": "observed",
+    "retrospectiveInterventionMismatch": "observed",
+    "historicalOperatingRepairNeed": "supported-inference",
+    "literalDestructiveAction": "not-observed",
+    "personnelAction": "not-observed",
+    "currentOrganizationalState": "unknown",
     "pageOpened": "not-observed",
     "proposalRead": "not-observed",
     "needQualified": "not-observed",
@@ -22,11 +28,11 @@
     "engagementAuthorized": "not-observed",
     "hiringDecision": "not-observed"
   },
-  "interpretation": "The response supports relational warmth, recognition of the team-memory framing, and interest in another conversation. It does not establish portfolio readership, proposal evaluation, a qualified organizational need, budget authority, an authorized engagement, or a hiring decision.",
+  "interpretation": "The response supports relational warmth, recognition of the team-memory framing, and interest in another conversation. It also supplies a retrospective signal that the immediate need at that time called for more fundamental operating repair than durable team memory alone. That is a restrained interpretation of figurative language, not evidence of literal destructive action, a personnel decision, the organization's present condition, a current qualified need, portfolio readership, proposal evaluation, budget authority, an authorized engagement, or a hiring decision.",
   "evalConsequences": [
     "Keep the fictionalized hiring result labeled as an uncalibrated advisory simulation rather than a prediction.",
     "Treat conversation reopened as the next real-world state; do not advance the opportunity to qualified, funded, authorized, or hired.",
-    "Use the operating-pressure signal only to test whether the method begins with diagnosis and stabilization before durable memory work.",
+    "Use the retrospective intervention-mismatch signal only to test whether the method begins with diagnosis and stabilization before durable memory work.",
     "Keep the response body and all personal circumstances outside repository artifacts, public surfaces, and advisory-model packets."
   ]
 }

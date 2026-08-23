@@ -64,12 +64,18 @@ test("the real-world response calibrates warmth without inventing readership or 
 
   assert.equal(config.realWorldCalibration.inputToAdvisoryModel, false);
   assert.equal(calibration.sourceBoundary.rawMessagePersisted, false);
+  assert.equal(calibration.sourceBoundary.exactWordingPersisted, false);
   assert.equal(calibration.sourceBoundary.personalCircumstancesPersisted, false);
   assert.equal(calibration.sourceBoundary.participantIdentityPersisted, false);
   assert.deepEqual(calibration.observedState, {
     responseReceived: "observed",
     positiveReception: "observed",
     interestInReconnecting: "observed",
+    retrospectiveInterventionMismatch: "observed",
+    historicalOperatingRepairNeed: "supported-inference",
+    literalDestructiveAction: "not-observed",
+    personnelAction: "not-observed",
+    currentOrganizationalState: "unknown",
     pageOpened: "not-observed",
     proposalRead: "not-observed",
     needQualified: "not-observed",
@@ -196,6 +202,48 @@ test("the evaluator rejects escalation of a positive reply into proposal readers
   }
 });
 
+test("the evaluator rejects a figurative retrospective signal as literal destructive action", async () => {
+  const { evaluateTeamMemoryReferralHiring } = await import(
+    "../evals-team-memory-referral-hiring.mjs"
+  );
+  const tempRoot = mkdtempSync(path.join(os.tmpdir(), "team-memory-intervention-calibration-"));
+  const relativePaths = [
+    "evals/team-memory-referral-hiring/current.json",
+    "evals/team-memory-referral-hiring/real-world-calibration.json",
+    "evals/team-memory-referral-hiring/runs/2026-08-21/local-public-browser-receipt.json",
+    "evals/team-memory-referral-hiring/runs/2026-08-21/fictionalized-referral-and-authority-decision.json",
+    "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/01-prospective-collaborator-perspective.md",
+    "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/03-prospective-collaborator-voice.md",
+    "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+  ];
+
+  try {
+    for (const relativePath of relativePaths) {
+      const destination = path.join(tempRoot, relativePath);
+      mkdirSync(path.dirname(destination), { recursive: true });
+      copyFileSync(path.join(repoRoot, relativePath), destination);
+    }
+    const calibrationPath = path.join(
+      tempRoot,
+      "evals/team-memory-referral-hiring/real-world-calibration.json"
+    );
+    const calibration = JSON.parse(readFileSync(calibrationPath, "utf8"));
+    calibration.observedState.literalDestructiveAction = "observed";
+    writeFileSync(calibrationPath, `${JSON.stringify(calibration, null, 2)}\n`);
+
+    const report = evaluateTeamMemoryReferralHiring(tempRoot);
+    assert.equal(report.realWorldCalibrationPassed, false);
+    assert.ok(
+      report.failures.includes(
+        "figurative retrospective language does not establish literal destructive action"
+      ),
+      report.failures.join("\n")
+    );
+  } finally {
+    rmSync(tempRoot, { recursive: true, force: true });
+  }
+});
+
 test("the protected opportunity record keeps the new response at its actual evidence state", () => {
   const source = read(
     "docs/knowledge-bank/sources/protected-source-backed-memory-opportunity.md"
@@ -206,7 +254,8 @@ test("the protected opportunity record keeps the new response at its actual evid
 
   for (const phrase of [
     "positive reception and interest in reconnecting",
-    "does not establish that the linked page was opened or read"
+    "does not establish that the linked page was opened or read",
+    "retrospective signal that the immediate need at that time was more fundamental operating repair than durable team memory"
   ]) {
     assert.ok(source.includes(phrase), `protected source missing calibrated response state: ${phrase}`);
   }
@@ -217,5 +266,11 @@ test("the protected opportunity record keeps the new response at its actual evid
   assert.ok(
     opportunity.includes("No offer, acceptance, budget approval, contract, or completed work was established."),
     "opportunity must not promote a warm reply into commercial progress"
+  );
+  assert.ok(
+    opportunity
+      .replace(/\s+/g, " ")
+      .includes("does not establish literal destructive action, a personnel decision, the organization’s present condition, or a current qualified need"),
+    "opportunity must retain the intervention-mismatch boundary"
   );
 });

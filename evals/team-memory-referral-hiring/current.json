@@ -17,7 +17,7 @@
   "realWorldCalibration": {
     "path": "evals/team-memory-referral-hiring/real-world-calibration.json",
     "inputToAdvisoryModel": false,
-    "rule": "A later private response calibrates the evidence-state ladder but is not added to the advisory packet. Positive reception and interest in reconnecting do not establish page readership, proposal evaluation, budget, authorization, or hiring."
+    "rule": "A later private response calibrates the evidence-state ladder but is not added to the advisory packet. It supports positive reception, interest in reconnecting, and a retrospective intervention-mismatch signal. It does not establish literal destructive action, personnel action, current organizational state, page readership, proposal evaluation, a current qualified need, budget, authorization, or hiring."
   },
   "browser": {
     "startRoute": "/lab/source-backed-team-memory",

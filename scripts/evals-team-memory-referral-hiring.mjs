@@ -72,6 +72,7 @@ export function evaluateTeamMemoryReferralHiring(root = defaultRoot) {
   checkCalibration(calibration.schemaVersion === 1, "real-world calibration schemaVersion must be 1");
   checkCalibration(calibration.sourceBoundary?.minimumNecessaryMetadataOnly === true, "real-world calibration must retain minimum-necessary metadata only");
   checkCalibration(calibration.sourceBoundary?.rawMessagePersisted === false, "raw response cannot be persisted in the calibration artifact");
+  checkCalibration(calibration.sourceBoundary?.exactWordingPersisted === false, "exact private wording cannot be persisted in the calibration artifact");
   checkCalibration(calibration.sourceBoundary?.personalCircumstancesPersisted === false, "personal circumstances cannot be persisted in the calibration artifact");
   checkCalibration(calibration.sourceBoundary?.participantIdentityPersisted === false, "participant identity cannot be persisted in the calibration artifact");
   checkCalibration(calibration.sourceBoundary?.companyIdentityPersisted === false, "company identity cannot be persisted in the calibration artifact");
@@ -79,6 +80,11 @@ export function evaluateTeamMemoryReferralHiring(root = defaultRoot) {
   checkCalibration(calibration.observedState?.responseReceived === "observed", "real-world response receipt must be recorded");
   checkCalibration(calibration.observedState?.positiveReception === "observed", "positive reception must remain an observed response signal");
   checkCalibration(calibration.observedState?.interestInReconnecting === "observed", "interest in reconnecting must remain an observed response signal");
+  checkCalibration(calibration.observedState?.retrospectiveInterventionMismatch === "observed", "retrospective intervention mismatch must remain an observed response signal");
+  checkCalibration(calibration.observedState?.historicalOperatingRepairNeed === "supported-inference", "historical operating repair must remain a supported inference");
+  checkCalibration(calibration.observedState?.literalDestructiveAction === "not-observed", "figurative retrospective language does not establish literal destructive action");
+  checkCalibration(calibration.observedState?.personnelAction === "not-observed", "retrospective intervention mismatch does not establish personnel action");
+  checkCalibration(calibration.observedState?.currentOrganizationalState === "unknown", "retrospective intervention mismatch does not establish current organizational state");
   checkCalibration(calibration.observedState?.pageOpened === "not-observed", "real-world response does not establish page opening");
   checkCalibration(calibration.observedState?.proposalRead === "not-observed", "real-world response does not establish proposal readership");
   checkCalibration(calibration.observedState?.needQualified === "not-observed", "real-world response does not establish a qualified organizational need");
