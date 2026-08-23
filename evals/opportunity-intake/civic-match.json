@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "civic-match-candidate-profile-2026-08-20-B",
+  "sourceId": "source.civic-match.candidate-network",
+  "observedAt": "2026-08-20",
+  "observationMode": "authenticated-read-only-field-map",
+  "guidePath": "opportunity-sources/civic-match/2026-08-20/Civic-Match-Signup-Guide.md",
+  "guideSha256": "ad55e860801d8bbba196d15fa190c1695d75147333443bcbfd40de6c8606511b",
+  "sourceRegistryPath": "evals/opportunity-intake/sources.json",
+  "selectionConfigPath": "evals/resumes/public-resume-selection.json",
+  "hiringReaderConfigPath": "evals/resumes/hiring-reader-portfolio.json",
+  "currentRunPath": "evals/civic-match/runs/2026-08-20-current.json",
+  "resume": {
+    "markdownPath": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.md",
+    "uploadPath": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "publicProjectionPath": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+  },
+  "steps": [
+    {"step": 1, "name": "Background & Eligibility", "fieldIds": ["government-interest", "background", "government-impact", "community-initiative"]},
+    {"step": 2, "name": "Contact Information", "fieldIds": ["full-name", "email", "cell-phone", "current-city", "current-outside-us", "current-state-derived", "hometown-city", "hometown-outside-us", "hometown-state-derived"]},
+    {"step": 3, "name": "Professional Experience", "fieldIds": ["current-role-title", "current-employer", "department", "years-experience", "education", "languages", "expertise", "linkedin", "resume-upload", "veteran-status", "attorney-bar", "other-skills"]},
+    {"step": 4, "name": "Desired Roles and Preferences", "fieldIds": ["job-search-status", "desired-roles", "profile-summary", "relocation", "work-locations", "referral-source", "media-consent", "profile-visibility"]},
+    {"step": 5, "name": "Review and Submit", "fieldIds": ["review", "accuracy-terms-consent", "submit"]}
+  ],
+  "copyBlockIds": ["government-impact", "community-initiative", "profile-summary"],
+  "narrativeAnswerIds": ["government-impact", "community-initiative"],
+  "civicMatchHelpers": [
+    {"personId": "person.josh-gee", "name": "Josh Gee", "relationship": "vice-president-civic-match", "acceptanceQuestion": "I would actively match this candidate to a current opportunity their evidence supports."},
+    {"personId": "person.courtney-kishbaugh", "name": "Courtney Kishbaugh", "relationship": "director-civic-match", "acceptanceQuestion": "I would actively match this candidate to a current opportunity their evidence supports."}
+  ],
+  "humanGates": [
+    "Jamie decides protected-category answers.",
+    "Jamie decides relocation, media consent, and profile visibility before transmission.",
+    "Jamie reviews accuracy and terms and alone clicks Submit.",
+    "Named-person assessments are fictionalized public-source lenses, not participation, quotation, endorsement, recommendation, or hiring decisions by those people."
+  ]
+}

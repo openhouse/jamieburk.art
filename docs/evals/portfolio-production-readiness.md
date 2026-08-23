@@ -103,6 +103,8 @@ Every run should identify:
 - candidate commit SHA and deployment URL;
 - `npm run check`, staging preflight, and production preflight output;
 - production Docker build and route-smoke results;
+- governed media-delivery receipt, active Cloudinary response headers, responsive
+  candidate sizes, and same-origin fallback results;
 - response headers, canonical URLs, robots files, sitemap, and health output;
 - desktop and mobile screenshots for every primary route;
 - public-link results and CTA target inventory;

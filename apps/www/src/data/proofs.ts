@@ -368,11 +368,11 @@ export const proofClaims: ProofClaim[] = [
       "jamie-review-confirmation"
     ],
     publicWording:
-      "Co-founded, co-built, and operated WOW List, a natural-language community-calendar platform for DIY arts and music organizers. A July 2017 production snapshot records 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts.",
+      "Co-founded, co-built, and operated WOW List, a natural-language community-calendar platform across 35 city ecosystems, supporting local organizers who used it to run calendars, websites, and email lists for their own scenes.",
     shortWording:
       "Jamie co-founded and co-built WOW List as a natural-language community platform",
     detailedPublicWording:
-      "Jamie and Richard Caceres co-built WOW List around a deliberately light product decision: collaboratively editable natural-language event text, followable keyword communities, weekly digest emails, embeddable calendars, and low-cost deployment for local organizers.",
+      "Jamie and Richard Caceres co-built WOW List around a deliberately light product decision: collaboratively editable natural-language event text, followable keyword communities, weekly digest emails, embeddable calendars, and low-cost deployment that local organizers used across 35 city ecosystems.",
     sourceBasis:
       "Approved resume language, Jamie's public-safe first-person product-design account, public-safe aggregate historical summary, complete recovered public-account census, and public organizer-support records.",
     guardrail:
@@ -473,15 +473,15 @@ export const proofClaims: ProofClaim[] = [
       "Private Drive documents",
       "Sensitive strategy, legal, financial, or personal information"
     ],
-    surfaces: ["technical-operations"],
-    relatedProjects: [],
+    surfaces: ["homepage", "technical-operations", "work-card", "case-study"],
+    relatedProjects: ["kc-spaces-fund"],
     relatedCapabilities: [
       "public-facing-web-systems",
       "campaign-infrastructure",
       "implementation",
       "technical-operations"
     ],
-    lastReviewed: "2026-07-09"
+    lastReviewed: "2026-08-20"
   },
   {
     id: "kc-town-hall-public-benefit-documentation",
@@ -535,7 +535,7 @@ export const proofClaims: ProofClaim[] = [
       "KC Town Hall used its shared public account as a recurring resident-service surface: 100 of 183 surviving records concern resident tire reports, pickup coordination, result reporting, and program continuity from 2019 through 2022.",
     shortWording: "Built a recurring public intake and follow-through surface",
     detailedPublicWording:
-      "A complete 183-record public-account ledger documents a recurring operating interface and bounded civic traction: seven current public-repost-list appearances by three then-sitting Council-member accounts and two direct responses authored by sitting members.",
+      "A complete 183-record public-account ledger documents a recurring operating interface and carefully evidenced civic interaction: seven current public-repost-list appearances by three then-sitting Council-member accounts and two direct responses authored by sitting members.",
     sourceBasis:
       "Authenticated full-population review of the public KC Town Hall Posts, Replies, and repost-list surfaces; a 183-record public-safe ledger; two public official responses; and official Council-role records.",
     sourceNote:
@@ -543,7 +543,7 @@ export const proofClaims: ProofClaim[] = [
     whyItMatters:
       "Shows public communication functioning as operating infrastructure for resident intake, service coordination, accountable follow-through, and civic response.",
     guardrail:
-      "Treat the account as collective, the 100 records as workflow evidence rather than completed-service units, and Council interaction as a dated lower bound rather than endorsement, partnership, or impact.",
+      "Treat the account as collective, the 100 records as workflow evidence rather than completed-service units, and Council interaction as a dated observed minimum rather than endorsement, partnership, or impact.",
     doNotSay: [
       "Jamie authored every KC Town Hall post",
       "Jamie alone performed every pickup",
@@ -569,11 +569,11 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "moderate",
     evidenceClass: ["public-safe-archive-summary"],
     publicWording:
-      "Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
+      "Developing a focused lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
     shortWording:
-      "Jamie is developing a bounded method for source-backed team memory",
+      "Jamie is developing a focused method for source-backed team memory",
     detailedPublicWording:
-      "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
+      "The method begins with one concrete knowledge friction and a small approved source set, then separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
     sourceBasis: "Public-safe lab materials and proposal-derived method summary.",
     guardrail:
       "Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.",
@@ -591,7 +591,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "lab"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["source-backed-memory", "documentation-architecture", "human-review"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-08-21"
   },
   {
     id: "technical-operations-operating-backbone",

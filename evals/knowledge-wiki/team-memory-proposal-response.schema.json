@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "readerId",
+    "verdict",
+    "decision",
+    "rationale",
+    "strengths",
+    "missingEvidence",
+    "constructiveCritique",
+    "validateNext",
+    "actualPersonParticipated",
+    "boundary"
+  ],
+  "properties": {
+    "readerId": { "type": "string", "const": "reader.protected-team-memory-prospect" },
+    "verdict": { "type": "string", "enum": ["pass", "fail"] },
+    "decision": {
+      "type": "string",
+      "enum": ["hire-for-focused-pilot", "do-not-hire-yet"]
+    },
+    "rationale": { "type": "string", "minLength": 60 },
+    "strengths": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "type": "string", "minLength": 20 }
+    },
+    "missingEvidence": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 10 }
+    },
+    "constructiveCritique": { "type": "string", "minLength": 40 },
+    "validateNext": { "type": "string", "minLength": 40 },
+    "actualPersonParticipated": { "type": "boolean", "const": false },
+    "boundary": { "type": "string", "minLength": 80 }
+  }
+}

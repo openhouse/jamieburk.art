@@ -1,13 +1,14 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Harry J. Epstein Company digital operations
 
-**Source commit:** `747605e3c34a6426c027a1c85ff82c3a6275ac36`
-**Generation time:** 2026-08-14T11:32:41-04:00
-**Source fingerprint:** `e4fc52c24bbf54e2f4cd03c7f545b8eb1d0af9c4a3ed28af19991b37897fcb60`
+**Source commit:** `ccddbf75a1e1a3ab293c5dd067e1f30a5b9a6855`
+**Generation time:** 2026-08-22T21:22:19-04:00
+**Source fingerprint:** `c2cf41ec29380d85699d1af93a8f8fe4629fbe0116345afd5e96d2cf0a6f5033`
 
 - [Implementation, Adoption, and Handoff](../../capabilities/implementation-adoption-and-handoff.md) - `related_to` (frontmatter)
 - [Implementation and operational stewardship](../../capabilities/implementation-and-operational-stewardship.md) - `prose_link` (markdown)
 - [Implementation and operational stewardship](../../capabilities/implementation-and-operational-stewardship.md) - `related_to` (frontmatter)
+- [Harry J. Epstein Company and Thick Arts LLC client chronology correction](../../corrections/hje-thick-arts-client-chronology-2026.md) - `related_to` (frontmatter)
 - [Harry J. Epstein continuity-oriented modernization](../../decisions/hje-continuity-modernization.md) - `resulted_in` (frontmatter)
 - [Canonical Story Bank](../../indexes/canonical-story-bank.md) - `related_to` (frontmatter)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `prose_link` (markdown)
@@ -20,3 +21,4 @@
 - [Maintenance, handoff, and stewardship](../../methods/maintenance-handoff-and-stewardship.md) - `prose_link` (markdown)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
 - [Harry J. Epstein Company archival research brief, July 2026](../../sources/hje-research-brief-2026-07.md) - `documents` (frontmatter)
+- [New York Department of State record for Thick Arts LLC](../../sources/nys-dos-thick-arts-llc-formation-2012-07-06.md) - `documents` (frontmatter)

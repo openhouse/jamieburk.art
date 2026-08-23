@@ -5,16 +5,16 @@ kind: asset
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-13
-review_by: 2027-02-13
+last_reviewed: 2026-08-20
+review_by: 2027-02-20
 canonical_path: docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md
-summary: Public-safe record for Paul Mossine's October 11, 2017 photograph of the collective Save NYC Spaces town hall room at Market Hotel.
+summary: Public-safe record for an October 11, 2017 NYC Artist Coalition photograph of the collective Save NYC Spaces town hall room at Market Hotel.
 media_type: photograph
 source_population: archived-project-site-census
 archive_digest: 6Y2GJC2RJWKI4WTV57TXXNPCQVTWWYY7
 family_hint: save-nyc-spaces-group-photo-nyc-artist-coalition
 rights_state: cleared
-creator_state: resolved
+creator_state: unresolved
 consent_state: cleared
 represented_person_review: cleared-for-bounded-portfolio-use
 apple_photos_match_state: reviewed-private
@@ -39,9 +39,9 @@ archived_evidence_urls:
 page_occurrences:
   - state: not-recovered
 statements:
-  - id: statement.photo.nycac-market-hotel.creator.v1
-    property: creator
-    value: person.paul-mossine
+  - id: statement.photo.nycac-market-hotel.courtesy-credit.v1
+    property: display_credit
+    value: Photo courtesy of NYC Artist Coalition.
     rank: preferred
     confidence: high
     references:
@@ -89,9 +89,6 @@ relations:
   - type: uses_source
     target: source.permission.jamie-portfolio-album.2026-08-13
     href: ../../../sources/permissions/jamie-portfolio-album-2026-08-13.md
-  - type: collaborated_with
-    target: person.paul-mossine
-    href: ../../../people/paul-mossine.md
   - type: related_to
     target: index.photo-set.nycac-project-sites.2017-2026
     href: ../../../indexes/photo-sets/nycac-project-sites-2017-2026.md
@@ -107,9 +104,10 @@ relations:
 ## Source return and current use
 
 The archived-project-site census first preserved this image family in a held
-state. Jamie's album-scoped authorization, creator review, exact derivative,
-caption review, and destination review now support one bounded occurrence in
-the Fair Rent NYC case study. Paul Mossine is credited as photographer.
+state. Jamie's album-scoped authorization, credit review, exact derivative,
+caption review, and destination review now support one limited occurrence in
+the Fair Rent NYC case study. The public display credit is "Photo courtesy of
+NYC Artist Coalition."
 
 ## Evidence boundary
 

@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `747605e3c34a6426c027a1c85ff82c3a6275ac36`
-**Portfolio snapshot:** `1b3140ea4b8b9d412845a4e08086576634bade309a79edd25224ed8b1fb377be`
-**Role-context hash:** `01faae768c51d13167a2c1dce914972651bb6b99fafb78975d6fb842419ac22b`
+**Candidate commit:** `ccddbf75a1e1a3ab293c5dd067e1f30a5b9a6855`
+**Portfolio snapshot:** `31fd94f42c5620e143d2c86c730f7145edd2bee2b1d8f1bd2b6452fba2c5e66a`
+**Role-context hash:** `0b490969447130ae7d238e92797f11449be5d54f170985f784738a9d5372cd6c`
 **Reader-context hash:** `e055b82642616d52177ad68ae4d3bbaeb3953ef3c75cfa3e159c65166862e29f`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
 **Candidate paths clean:** yes
@@ -16,10 +16,10 @@
 
 - Deterministic disposition: `evidence-gap-review`
 - Critical signals observed: 2/4
-- All signals observed: 3/5
+- All signals observed: 2/5
 - Opportunity status live: yes
 - Historical benchmark: no
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 - Public reporting context: Vice President, Engineering (role-identity-matched)
 - Public vision context: Chief Product Officer (role-identity-matched)
@@ -28,16 +28,16 @@
 - `requirement.codepath.qa-and-bug-pipeline`: **not observed**
 - `requirement.codepath.technical-test-fluency`: **not observed**
 - `requirement.codepath.proportionate-process`: **observed** on `/work/technical-operations`
-- `requirement.codepath.ai-automation`: **observed** on `/lab/source-backed-team-memory`
+- `requirement.codepath.ai-automation`: **not observed**
 
 ### ACLU - Senior Project Manager, Learning and Project Solutions
 
-- Deterministic disposition: `deterministic-ready-for-human-review`
+- Deterministic disposition: `evidence-gap-review`
 - Critical signals observed: 3/4
 - All signals observed: 4/5
 - Opportunity status live: yes
 - Historical benchmark: no
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 - Public reporting context: Senior Director, Learning and Project Solutions (role-only)
 - Public vision context: Chief Operating Officer (role-identity-matched)
@@ -50,12 +50,12 @@
 
 ### Benepass - Product Operations Manager
 
-- Deterministic disposition: `deterministic-ready-for-human-review`
+- Deterministic disposition: `evidence-gap-review`
 - Critical signals observed: 3/4
 - All signals observed: 3/4
 - Opportunity status live: yes
 - Historical benchmark: no
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 - Public reporting context: Head of Customer Operations (named-in-posting)
 - Public vision context: CEO and co-founder (role-identity-matched)
@@ -85,6 +85,70 @@
 - `requirement.oti-senior-product-manager.metrics-outcomes`: **observed** on `/work/technical-operations`
 - `requirement.oti-senior-product-manager.public-rollout`: **observed** on `/work/fair-rent-nyc`
 
+### NYC OTI - SPEED Operations Manager 789810
+
+- Deterministic disposition: `evidence-gap-review`
+- Critical signals observed: 0/3
+- All signals observed: 0/3
+- Opportunity status live: yes
+- Historical benchmark: no
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
+- Public reporting context: Executive Director, Product Management (role-only)
+- Public vision context: Commissioner and Chief Technology Officer (official-agency-leader)
+
+- `requirement.oti-speed-operations-789810.operating-backbone`: **not observed**
+- `requirement.oti-speed-operations-789810.people-operations`: **not observed**
+- `requirement.oti-speed-operations-789810.procurement`: **not observed**
+
+### NYC OTI - Product Manager 784450
+
+- Deterministic disposition: `evidence-gap-review`
+- Critical signals observed: 0/3
+- All signals observed: 0/3
+- Opportunity status live: yes
+- Historical benchmark: no
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
+- Public reporting context: Executive Director, Product Management (role-only)
+- Public vision context: Commissioner and Chief Technology Officer (official-agency-leader)
+
+- `requirement.oti-product-manager-784450.product-lifecycle`: **not observed**
+- `requirement.oti-product-manager-784450.cross-functional`: **not observed**
+- `requirement.oti-product-manager-784450.data-and-kpis`: **not observed**
+
+### NYC OTI - SPEED Senior Product Manager 789610
+
+- Deterministic disposition: `evidence-gap-review`
+- Critical signals observed: 0/3
+- All signals observed: 0/3
+- Opportunity status live: yes
+- Historical benchmark: no
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
+- Public reporting context: Executive Director, Product Management (role-only)
+- Public vision context: Commissioner and Chief Technology Officer (official-agency-leader)
+
+- `requirement.oti-speed-spm-789610.business-cases`: **not observed**
+- `requirement.oti-speed-spm-789610.data-systems`: **not observed**
+- `requirement.oti-speed-spm-789610.influence`: **not observed**
+
+### NYC OTI - PIT Crew Senior Product Designer 782373
+
+- Deterministic disposition: `evidence-gap-review`
+- Critical signals observed: 0/2
+- All signals observed: 0/3
+- Opportunity status live: yes
+- Historical benchmark: no
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: no
+- Public reporting context: PIT Crew operational lead (nearest-public-operational-lead)
+- Public vision context: Commissioner and Chief Technology Officer (official-initiative-leader)
+
+- `requirement.oti-pit-designer-782373.end-to-end-design`: **not observed**
+- `requirement.oti-pit-designer-782373.accessibility`: **not observed**
+- `requirement.oti-pit-designer-782373.design-systems`: **not observed**
+
 ### NYC OTI - Technical Operations Manager 782369
 
 - Deterministic disposition: `historical-benchmark`
@@ -104,11 +168,28 @@
 - `requirement.oti.continuous-improvement`: **observed** on `/work/technical-operations`
 - `requirement.oti.government-hiring-and-procurement`: **not observed** on `/work/callnyc`
 
+### University of Innsbruck ./studio3 - University Assistant (Postdoc), ARCH-15927
+
+- Deterministic disposition: `hard-screen-exclusion`
+- Critical signals observed: 0/4
+- All signals observed: 0/4
+- Opportunity status live: yes
+- Historical benchmark: no
+- Role context current at candidate time: yes
+- Exclusionary hard screen recorded: yes
+- Public reporting context: Head of the Institute of Experimental Architecture (role-identity-matched)
+- Public vision context: ./studio3 artistic-design working-group faculty (role-identity-matched)
+
+- `requirement.uibk.studio3.architecture-degrees`: **not observed**
+- `requirement.uibk.studio3.experimental-artistic-research`: **not observed**
+- `requirement.uibk.studio3.digital-spatial-methods`: **not observed**
+- `requirement.uibk.studio3-grants-teaching-administration`: **not observed**
+
 ### Protected source-backed team-memory consulting lead
 
 - Deterministic disposition: `not-live`
 - Critical signals observed: 1/2
-- All signals observed: 2/3
+- All signals observed: 1/3
 - Opportunity status live: no
 - Historical benchmark: no
 - Role context current at candidate time: no
@@ -118,7 +199,7 @@
 
 - `requirement.protected-memory.knowledge-friction`: **not observed**
 - `requirement.protected-memory.human-review`: **observed** on `/lab/source-backed-team-memory`
-- `requirement.protected-memory.bounded-sprint`: **observed** on `/lab/source-backed-team-memory`
+- `requirement.protected-memory.focused-sprint`: **not observed**
 
 ## Open human gates
 

@@ -5,8 +5,8 @@ kind: asset
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-13
-review_by: 2027-02-13
+last_reviewed: 2026-08-20
+review_by: 2027-02-20
 canonical_path: docs/knowledge-bank/assets/photographs/sunday-dinner-shared-map-2013.md
 summary: Public-safe record for a January 6, 2013 Sunday Dinner photograph showing a shared table, a hand-drawn map, and visible group interaction.
 media_type: photograph
@@ -47,7 +47,14 @@ statements:
       - source.photo-metadata.portfolio-cover-images.2026.public-safe
   - id: statement.photo.sunday-dinner.shared-map.archive-credit.v1
     property: archive_custody
-    value: Jamie Burkart photo archive; photographer not identified in retained export
+    value: Jamie Burkart photo archive; individual photographer unresolved
+    rank: preferred
+    confidence: high
+    references:
+      - source.photo-metadata.portfolio-cover-images.2026.public-safe
+  - id: statement.photo.sunday-dinner.shared-map.courtesy-credit.v1
+    property: display_credit
+    value: Photo courtesy of Sunday Dinner NYC.
     rank: preferred
     confidence: high
     references:
@@ -76,8 +83,8 @@ relations:
 ## Current public use
 
 The metadata-stripped derivative appears as the Sunday Dinner project cover on
-the work index and as a bounded artifact on the case-study page. The retained
-export does not identify the photographer, and the public credit says so.
+the work index and as a limited artifact on the case-study page. The public
+display credit is "Photo courtesy of Sunday Dinner NYC."
 
 ## Evidence boundary
 

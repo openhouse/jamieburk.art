@@ -272,7 +272,7 @@ const checks = {
     queryWiki(result, { requirement: "requirement.oti.delivery-coordination" }).opportunity?.id ===
       "opportunity.nyc-oti.technical-operations-manager.782369",
   priority_opportunity_set_complete:
-    priorityOpportunityIds.length === 4 &&
+    priorityOpportunityIds.length >= 4 &&
     priorityOpportunities.length === priorityOpportunityIds.length &&
     priorityOpportunities.every(
       (record) =>

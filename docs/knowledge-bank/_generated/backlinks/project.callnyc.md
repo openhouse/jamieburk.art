@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to CallNYC
 
-**Source commit:** `747605e3c34a6426c027a1c85ff82c3a6275ac36`
-**Generation time:** 2026-08-14T11:32:41-04:00
-**Source fingerprint:** `e4fc52c24bbf54e2f4cd03c7f545b8eb1d0af9c4a3ed28af19991b37897fcb60`
+**Source commit:** `ccddbf75a1e1a3ab293c5dd067e1f30a5b9a6855`
+**Generation time:** 2026-08-22T21:22:19-04:00
+**Source fingerprint:** `c2cf41ec29380d85699d1af93a8f8fe4629fbe0116345afd5e96d2cf0a6f5033`
 
 - [Digital District participant photograph metadata](../../assets/digital-district-photo.md) - `part_of` (frontmatter)
 - [Jamie with a civic field kit at New York City Council](../../assets/photographs/nyc-council-field-kit-2026.md) - `related_to` (frontmatter)
@@ -27,10 +27,13 @@
 - [Role, Collective Authorship, and Protected Absence](../../indexes/role-collective-authorship-and-protected-absence.md) - `related_to` (frontmatter)
 - [Identity Systems as Shared Infrastructure](../../methods/identity-systems-as-shared-infrastructure.md) - `related_to` (frontmatter)
 - [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `related_to` (frontmatter)
-- [Source-Backed Team Memory](../../methods/source-backed-team-memory.md) - `related_to` (frontmatter)
+- [Knowledge Wiki Graph / Source-Backed Team Memory](../../methods/source-backed-team-memory.md) - `related_to` (frontmatter)
 - [ACLU - Product Manager II, Discovery](../../opportunities/aclu-product-discovery.md) - `related_to` (frontmatter)
 - [ACLU - Senior Project Manager, Learning and Project Solutions](../../opportunities/aclu-senior-project-manager.md) - `related_to` (frontmatter)
+- [NYC OTI - PIT Crew Senior Product Designer 782373](../../opportunities/oti-pit-senior-product-designer-782373.md) - `related_to` (frontmatter)
+- [NYC OTI - Product Manager 784450](../../opportunities/oti-product-manager-784450.md) - `related_to` (frontmatter)
 - [NYC OTI - PIT Crew Senior Product Manager 782366](../../opportunities/oti-senior-product-manager-782366.md) - `related_to` (frontmatter)
+- [NYC OTI - SPEED Senior Product Manager 789610](../../opportunities/oti-speed-senior-product-manager-789610.md) - `related_to` (frontmatter)
 - [NYC OTI - Technical Operations Manager 782369](../../opportunities/oti-technical-operations.md) - `related_to` (frontmatter)
 - [PermitFlow - Product Operations Manager](../../opportunities/permitflow-product-operations.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
@@ -39,3 +42,4 @@
 - [New York City Council Constituent Services Data release](../../sources/nycc-constituent-services-data-2016-05-27.md) - `documents` (frontmatter)
 - [NYC Council field-kit photograph oral history, July 2026](../../sources/recollections/nyc-council-field-kit-oral-history-2026-07.md) - `related_to` (frontmatter)
 - [Website provides new information about council members' focus](../../sources/politico-callnyc-2016-03-14.md) - `documents` (frontmatter)
+- [Live project-website audit and restored-surface close reading](../../sources/project-website-live-audit-2026-08-14.md) - `related_to` (frontmatter)

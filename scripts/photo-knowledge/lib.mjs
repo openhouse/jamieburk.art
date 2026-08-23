@@ -135,7 +135,10 @@ function candidateFiles(repoRoot) {
     "apps/www/src/components/CaseStudyLayout.tsx",
     "apps/www/src/components/WorkCard.tsx",
     "apps/www/src/components/ResidentServiceSequence.tsx",
+    "apps/www/src/app/opengraph-image.tsx",
+    "apps/www/src/data/knowledge-bank/participation-images-2026-08.ts",
     "apps/www/src/data/photography.ts",
+    "apps/www/src/data/social-preview.ts",
     "apps/www/src/data/work-covers.ts",
     "apps/www/public/images/field-notes/jamie-east-river.webp",
     "apps/www/public/images/field-notes/kc-town-hall-roof-work.webp",
@@ -145,6 +148,8 @@ function candidateFiles(repoRoot) {
     "apps/www/public/images/field-notes/nycac-market-hotel-banner.webp",
     "apps/www/public/images/field-notes/nycac-shoestring-facilitation.webp",
     "apps/www/public/images/field-notes/sunday-dinner-shared-map.webp",
+    "apps/www/public/images/field-notes/knowledge-wiki-collective-map.webp",
+    "apps/www/public/images/social/jamie-east-river-og.jpg",
     "apps/www/public/artifacts/wowlist/public-threshold.webp",
     "evals/photo-knowledge/canary.json",
     "evals/photo-knowledge/evals.json",
@@ -214,9 +219,19 @@ export function computePhotoBindingFingerprintFromModel(model) {
     ["derivative-webp", stableStringify(model.webp)],
     ["manifest-east-river", stableStringify(model.portfolioPhotos?.eastRiver ?? null)],
     [
+      "manifest-east-river-social-preview",
+      stableStringify(model.portfolioPhotos?.eastRiverSocialPreview ?? null)
+    ],
+    [
       "public-manifest-east-river",
       stableStringify(
         model.publicPhotoManifest?.find((item) => item.id === "east-river") ?? null
+      )
+    ],
+    [
+      "public-manifest-east-river-social-preview",
+      stableStringify(
+        model.publicPhotoManifest?.find((item) => item.id === "east-river-social-preview") ?? null
       )
     ],
     [
@@ -226,6 +241,18 @@ export function computePhotoBindingFingerprintFromModel(model) {
     [
       "hero-styles",
       model.sourceTexts["apps/www/src/app/globals.css"] ?? ""
+    ],
+    [
+      "social-preview-source",
+      model.sourceTexts["apps/www/src/data/social-preview.ts"] ?? ""
+    ],
+    [
+      "opengraph-image-source",
+      model.sourceTexts["apps/www/src/app/opengraph-image.tsx"] ?? ""
+    ],
+    [
+      "record:projection.photo.social-preview.east-river",
+      model.sourceById["projection.photo.social-preview.east-river"] ?? ""
     ],
     ...bindingRelevantRecordIds(model.canary).map((id) => [
       `record:${id}`,
@@ -287,7 +314,7 @@ export async function loadPhotoKnowledgeModel(repoRoot = defaultRepoRoot, option
   const scanFiles = candidateFiles(repoRoot).filter((item) => !item.endsWith(canary.candidateReceiptPath));
   const sourceTexts = Object.fromEntries(
     scanFiles
-      .filter((item) => !item.endsWith(".webp"))
+      .filter((item) => !/\.(?:webp|jpe?g|png)$/i.test(item))
       .map((item) => [item, readFileSync(path.join(repoRoot, item), "utf8")])
   );
   const privateBinding = loadPrivateBinding(
@@ -323,6 +350,11 @@ function hasStatement(asset, id) {
 
 function allTrue(object, keys) {
   return keys.every((key) => object[key] === true);
+}
+
+function dateOnly(value) {
+  const date = value instanceof Date ? value : new Date(value);
+  return Number.isNaN(date.getTime()) ? null : date.toISOString().slice(0, 10);
 }
 
 function candidateReceiptState(model, bindingRelevant) {
@@ -375,6 +407,15 @@ export function evaluatePhotoKnowledgeModel(model) {
   const correction = record(canary.correctionId);
   const inquiry = record(canary.inquiryId);
   const photographer = record(canary.photographerId);
+  const socialPreviewPhoto = publicPhotoManifest?.find(
+    (item) => item.id === "east-river-social-preview"
+  );
+  const socialPreviewOccurrence = record(
+    "projection.photo.social-preview.east-river"
+  );
+  const portfolioAuthorization = record(
+    "source.permission.jamie-portfolio-album.2026-08-13"
+  );
   const east = portfolioPhotos?.eastRiver;
   const statementIds = new Set(asset?.statements?.map((item) => item.id) ?? []);
   const bindingRelevant = computePhotoBindingFingerprintFromModel(model);
@@ -412,13 +453,15 @@ export function evaluatePhotoKnowledgeModel(model) {
 
   const expectedBoundPhotoIds = [
     "east-river",
+    "east-river-social-preview",
     "kc-town-hall-roof-work",
     "kc-town-hall-tired-of-tires-flyer",
     "kc-town-hall-tired-of-tires-before",
     "kc-town-hall-tired-of-tires-after",
     "nycac-market-hotel-banner",
     "nycac-shoestring-facilitation",
-    "sunday-dinner-shared-map"
+    "sunday-dinner-shared-map",
+    "knowledge-wiki-collective-map"
   ];
   const observedBoundPhotoIds = publicPhotoManifest
     ?.filter((item) => item.knowledgeStatus === "bound")
@@ -428,6 +471,82 @@ export function evaluatePhotoKnowledgeModel(model) {
     JSON.stringify(observedBoundPhotoIds) ===
       JSON.stringify([...expectedBoundPhotoIds].sort()) &&
     publicPhotoManifest?.length === expectedBoundPhotoIds.length;
+  const selectedRenderSha =
+    "1f83d66b7e35e8a3a955819cf2104b79a88c9a8bd3953fd6fa691143bdb6da42";
+  const selectedVariant = "image-4-editorial-proposition";
+  const socialPreviewReleaseHumanApproved =
+    socialPreviewPhoto?.releaseState?.production === "approved" &&
+    socialPreviewPhoto?.releaseState?.indexing === "approved" &&
+    socialPreviewPhoto?.releaseState?.decision?.authority === "Jamie Burkart" &&
+    socialPreviewPhoto?.releaseState?.decision?.approvedAt === "2026-08-15" &&
+    socialPreviewPhoto?.releaseState?.decision?.selectedVariant === selectedVariant &&
+    socialPreviewPhoto?.releaseState?.decision?.alternativesReviewed === 6 &&
+    socialPreviewPhoto?.releaseState?.decision?.uniqueCompositionsReviewed === 4 &&
+    socialPreviewPhoto?.releaseState?.decision?.renderedSha256 === selectedRenderSha &&
+    socialPreviewOccurrence?.approval?.production === "approved" &&
+    socialPreviewOccurrence?.approval?.indexing === "approved" &&
+    socialPreviewOccurrence?.approval?.authority === "Jamie Burkart" &&
+    dateOnly(socialPreviewOccurrence?.approval?.approved_at) === "2026-08-15" &&
+    socialPreviewOccurrence?.approval?.selected_variant === selectedVariant &&
+    socialPreviewOccurrence?.approval?.alternatives_reviewed === 6 &&
+    socialPreviewOccurrence?.approval?.unique_compositions_reviewed === 4 &&
+    socialPreviewOccurrence?.approval?.rendered_sha256 === selectedRenderSha &&
+    portfolioAuthorization?.authorization?.social_preview_release?.production ===
+      "approved" &&
+    portfolioAuthorization?.authorization?.social_preview_release?.indexing ===
+      "approved" &&
+    portfolioAuthorization?.authorization?.social_preview_release?.authority ===
+      "Jamie Burkart" &&
+    dateOnly(
+      portfolioAuthorization?.authorization?.social_preview_release?.approved_at
+    ) === "2026-08-15" &&
+    portfolioAuthorization?.authorization?.social_preview_release?.selected_variant ===
+      selectedVariant &&
+    portfolioAuthorization?.authorization?.social_preview_release
+      ?.alternatives_reviewed === 6 &&
+    portfolioAuthorization?.authorization?.social_preview_release
+      ?.unique_compositions_reviewed === 4 &&
+    portfolioAuthorization?.authorization?.social_preview_release?.rendered_sha256 ===
+      selectedRenderSha &&
+    permission?.permission_capsule?.social_preview?.release?.production ===
+      "approved" &&
+    permission?.permission_capsule?.social_preview?.release?.indexing ===
+      "approved" &&
+    permission?.permission_capsule?.social_preview?.release?.authority ===
+      "Jamie Burkart" &&
+    dateOnly(permission?.permission_capsule?.social_preview?.release?.approved_at) ===
+      "2026-08-15" &&
+    permission?.permission_capsule?.social_preview?.release?.selected_variant ===
+      selectedVariant &&
+    permission?.permission_capsule?.social_preview?.release?.alternatives_reviewed === 6 &&
+    permission?.permission_capsule?.social_preview?.release
+      ?.unique_compositions_reviewed === 4 &&
+    permission?.permission_capsule?.social_preview?.release?.rendered_sha256 ===
+      selectedRenderSha;
+  const knowledgeWikiReleaseHumanApproved = (() => {
+    const photo = publicPhotoManifest?.find(
+      (item) => item.id === "knowledge-wiki-collective-map"
+    );
+    const occurrence = record("projection.photo.knowledge-wiki.collective-map");
+    const expectedSha =
+      "a596480d6276fd4fb02fcbc6822ef79e049bdeb27c3081a574892ee5b2c0d036";
+    return (
+      photo?.releaseState?.production === "approved" &&
+      photo?.releaseState?.indexing === "approved" &&
+      photo?.releaseState?.decision?.authority === "Jamie Burkart" &&
+      photo?.releaseState?.decision?.approvedAt === "2026-08-21" &&
+      photo?.releaseState?.decision?.selectedVariant ===
+        "knowledge-wiki-collective-map" &&
+      photo?.releaseState?.decision?.alternativesReviewed === 3 &&
+      photo?.releaseState?.decision?.uniqueCompositionsReviewed === 3 &&
+      photo?.releaseState?.decision?.renderedSha256 === expectedSha &&
+      occurrence?.approval?.production === "approved" &&
+      occurrence?.approval?.indexing === "approved" &&
+      occurrence?.approval?.authority === "Jamie Burkart" &&
+      dateOnly(occurrence?.approval?.approved_at) === "2026-08-21" &&
+      occurrence?.approval?.rendered_sha256 === expectedSha
+    );
+  })();
   const everyBoundOccurrenceAligned = publicPhotoManifest?.every((item) => {
     const photoAsset = record(item.wikiId);
     const photoStatementIds = new Set(
@@ -446,6 +565,13 @@ export function evaluatePhotoKnowledgeModel(model) {
       item.placementIds?.length > 0 &&
       item.placementIds.every((placementId) => {
         const occurrence = record(placementId);
+        const releaseAligned =
+          item.id === "east-river-social-preview"
+            ? socialPreviewReleaseHumanApproved
+            : item.id === "knowledge-wiki-collective-map"
+              ? knowledgeWikiReleaseHumanApproved
+              : occurrence?.approval?.production === "open" &&
+                occurrence?.approval?.indexing === "open";
         return (
           occurrence?.asset === item.wikiId &&
           occurrence?.derivative === item.derivativeId &&
@@ -459,11 +585,17 @@ export function evaluatePhotoKnowledgeModel(model) {
           ) &&
           occurrence?.approval?.public_git === "approved" &&
           occurrence?.approval?.staging === "approved" &&
-          occurrence?.approval?.production === "open" &&
-          occurrence?.approval?.indexing === "open" &&
+          releaseAligned &&
           occurrence?.rollback?.preserves_history === true
         );
       });
+    const manifestReleaseAligned =
+      item.id === "east-river-social-preview"
+        ? socialPreviewReleaseHumanApproved
+        : item.id === "knowledge-wiki-collective-map"
+          ? knowledgeWikiReleaseHumanApproved
+          : item.releaseState?.production === "open" &&
+            item.releaseState?.indexing === "open";
     return (
       Boolean(photoAsset) &&
       derivativeAligned &&
@@ -473,10 +605,42 @@ export function evaluatePhotoKnowledgeModel(model) {
       item.publicationStatus === "jamie-authorized" &&
       item.releaseState?.publicGit === "approved" &&
       item.releaseState?.staging === "approved" &&
-      item.releaseState?.production === "open" &&
-      item.releaseState?.indexing === "open"
+      manifestReleaseAligned
     );
   });
+
+  const projectCourtesyCreditPolicy =
+    Array.isArray(evalConfig.projectCourtesyCredits) &&
+    evalConfig.projectCourtesyCredits.length > 0 &&
+    evalConfig.projectCourtesyCredits.every(({ photoId, credit, statementId }) => {
+      const photo = publicPhotoManifest?.find((item) => item.id === photoId);
+      const photoAsset = record(photo?.wikiId);
+      const statement = photoAsset?.statements?.find((item) => item.id === statementId);
+      const placements = photo?.placementIds?.map((id) => record(id)) ?? [];
+      return (
+        photo?.credit === credit &&
+        photo?.creditAssertionIds?.includes(statementId) &&
+        statement?.property === "display_credit" &&
+        statement?.value === credit &&
+        placements.length > 0 &&
+        placements.every(
+          (occurrence) =>
+            occurrence?.credit?.text === credit &&
+            occurrence?.credit?.assertions?.includes(statementId)
+        )
+      );
+    }) &&
+    (evalConfig.forbiddenPublicCreditPatterns ?? []).every((pattern) => {
+      const matcher = new RegExp(pattern, "i");
+      return publicPhotoManifest?.every((item) => !matcher.test(item.credit ?? ""));
+    }) &&
+    recordsById["person.paul-mossine"]?.status === "superseded" &&
+    recordsById["person.paul-mossine"]?.projection?.status === "hold" &&
+    !/Paul Mossine/i.test(
+      model.sourceTexts[
+        "apps/www/src/data/knowledge-bank/participation-images-2026-08.ts"
+      ] ?? ""
+    );
 
   const manifestAligned =
     east?.wikiId === canary.assetId &&
@@ -530,7 +694,20 @@ export function evaluatePhotoKnowledgeModel(model) {
       !/no third-party authorship/.test(east?.publicUseBoundary ?? ""),
     permission_scope_exact_and_fail_closed:
       permission?.permission_capsule?.required_credit === "Photograph by Elana Gordon." &&
-      permission?.permission_capsule?.derivative_scope === "Current Layout C crop and transform" &&
+      permission?.permission_capsule?.social_preview?.in_image_credit === "optional" &&
+      permission?.permission_capsule?.social_preview?.metadata_credit ===
+        "Photograph by Elana Gordon." &&
+      permission?.permission_capsule?.derivative_scope ===
+        "Complete 4 by 3 derivative on the homepage and colophon, plus the exact 1200 by 630 social-preview crop" &&
+      permission?.permission_capsule?.allowed_destination?.includes(
+        "jamieburk.art portfolio homepage"
+      ) &&
+      permission?.permission_capsule?.allowed_destination?.includes(
+        "jamieburk.art portfolio colophon at /colophon"
+      ) &&
+      permission?.permission_capsule?.allowed_destination?.includes(
+        "jamieburk.art social preview at /opengraph-image"
+      ) &&
       permission?.permission_capsule?.public_git === "approved" &&
       permission?.permission_capsule?.staging === "approved" &&
       permission?.permission_capsule?.production === "open" &&
@@ -550,6 +727,7 @@ export function evaluatePhotoKnowledgeModel(model) {
       placement?.route === canary.publicCopy.route &&
       placement?.component === canary.publicCopy.component &&
       edition?.occurrences?.includes(canary.placementId),
+    project_courtesy_credit_policy: projectCourtesyCreditPolicy,
     revocation_and_rollback_available:
       placement?.rollback?.preserves_history === true &&
       /Remove the Hero image occurrence/.test(placement?.rollback?.action ?? "") &&
@@ -577,6 +755,7 @@ export function evaluatePhotoKnowledgeModel(model) {
       edition?.approval?.production === "open" &&
       edition?.approval?.indexing === "open" &&
       edition?.human_gates?.includes("Jamie production approval"),
+    social_preview_release_human_approved: socialPreviewReleaseHumanApproved,
     rfc_authority_and_scope_current:
       /^stage: implementing$/m.test(model.sourceTexts[canary.rfcPath] ?? "") &&
       /authorized implementation of RFC 0003/i.test(
@@ -600,10 +779,12 @@ export function evaluatePhotoKnowledgeModel(model) {
       "derivative_integrity_and_metadata_stripping",
       "creator_credit_and_custody_distinct",
       "permission_scope_exact_and_fail_closed",
-      "caption_assertions_source_bound"
+      "caption_assertions_source_bound",
+      "project_courtesy_credit_policy"
     ]),
     placement_coherence:
       checks.manifest_wiki_placement_alignment &&
+      checks.social_preview_release_human_approved &&
       [
         "Jamie Burkart",
         "Technical Project Manager",
@@ -678,8 +859,21 @@ export async function evaluatePhotoKnowledge(repoRoot = defaultRepoRoot, options
 }
 
 function placementMarkdown(model) {
-  const placement = model.recordsById[model.canary.placementId];
-  return `${generatedWarning}\n\n# Public photo placements\n\n| Asset | Derivative | Route | Component | Caption | Credit | Public Git | Staging | Production | Indexing |\n|---|---|---|---|---|---|---|---|---|---|\n| ${placement.asset} | ${placement.derivative} | \`${placement.route}\` | ${placement.component} | ${placement.caption.text} | ${placement.credit.text} | ${placement.approval.public_git} | ${placement.approval.staging} | ${placement.approval.production} | ${placement.approval.indexing} |\n`;
+  const placementIds = [
+    ...new Set(model.publicPhotoManifest.flatMap((item) => item.placementIds ?? []))
+  ];
+  const rows = placementIds
+    .map((placementId) => model.recordsById[placementId])
+    .filter(Boolean)
+    .map((placement) => {
+      const routes = placement.route
+        ? `\`${placement.route}\``
+        : placement.routes.map((route) => `\`${route}\``).join("<br>");
+      const components = placement.component ?? placement.components.join("<br>");
+      return `| ${placement.asset} | ${placement.derivative} | ${routes} | ${components} | ${placement.caption.text} | ${placement.credit.text} | ${placement.approval.public_git} | ${placement.approval.staging} | ${placement.approval.production} | ${placement.approval.indexing} |`;
+    })
+    .join("\n");
+  return `${generatedWarning}\n\n# Public photo placements\n\n| Asset | Derivative | Route | Component | Caption | Credit | Public Git | Staging | Production | Indexing |\n|---|---|---|---|---|---|---|---|---|---|\n${rows}\n`;
 }
 
 function permissionsMarkdown(model) {

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "evalId": "resume.public.active-opportunity-portfolio.2026-08-15.pdf-visual",
+  "inspectedAt": "2026-08-15T18:44:17-04:00",
+  "sourceTemplate": {
+    "access": "read-only source; edited only in a new private copy for the universal public resume",
+    "revisionUnchangedAfterExport": true,
+    "privateLocatorCommitted": false
+  },
+  "markdown": {
+    "path": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.md",
+    "sha256": "b68938d1e930ebbb9cd10892e58dea51b23d01c337243587f4f51b6cb62a9acc"
+  },
+  "pdf": {
+    "path": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "sha256": "d19a47f9daddc958c5de75266d8a922e798ba9acd67e40861842712346cb0c06",
+    "bytes": 100706,
+    "pages": 2,
+    "pageSize": "US Letter"
+  },
+  "inspection": {
+    "method": "Exported from the native Google Docs working copy, rasterized every page at 144 DPI, visually inspected at original detail, checked through the extracted text layer, and checked for preserved PDF link annotations.",
+    "allPagesRasterized": true,
+    "actualNamedPeopleParticipated": false,
+    "pages": [
+      {
+        "page": 1,
+        "pass": true,
+        "notes": "Name, universal technical-project-management title, contact links, profile, core skills, and the complete Thick Arts LLC employer container are legible with clear hierarchy and no clipping or overlap. The page ends after a complete experience block rather than splitting the next role, and Harry J. Epstein Company remains plain text without a hyperlink."
+      },
+      {
+        "page": 2,
+        "pass": true,
+        "notes": "The page opens with the complete NYC Artist Coalition and FairRentNYC experience, then presents WOW List, CallNYC, KC Town Hall, additional leadership, education, and work authorization without clipping or overlap. The approved CallNYC.org follow-on wording is intact; project names link to their public sites; and Politico New York is visibly blue and underlined and links to the archived article PDF."
+      }
+    ]
+  },
+  "overall": "pass",
+  "boundary": "Artifact and visual-quality inspection only. No named hiring reader participated, and a pass is not an endorsement, interview promise, eligibility determination, or hiring decision."
+}

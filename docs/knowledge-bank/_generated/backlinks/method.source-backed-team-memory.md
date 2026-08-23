@@ -1,14 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
-# Backlinks to Source-Backed Team Memory
+# Backlinks to Knowledge Wiki Graph / Source-Backed Team Memory
 
-**Source commit:** `747605e3c34a6426c027a1c85ff82c3a6275ac36`
-**Generation time:** 2026-08-14T11:32:41-04:00
-**Source fingerprint:** `e4fc52c24bbf54e2f4cd03c7f545b8eb1d0af9c4a3ed28af19991b37897fcb60`
+**Source commit:** `ccddbf75a1e1a3ab293c5dd067e1f30a5b9a6855`
+**Generation time:** 2026-08-22T21:22:19-04:00
+**Source fingerprint:** `c2cf41ec29380d85699d1af93a8f8fe4629fbe0116345afd5e96d2cf0a6f5033`
 
 - [Civic, cultural, and technical translation](../../capabilities/civic-cultural-and-technical-translation.md) - `prose_link` (markdown)
 - [Technical Operations](../../capabilities/technical-operations.md) - `prose_link` (markdown)
 - [Technical Operations](../../capabilities/technical-operations.md) - `related_to` (frontmatter)
 - [Knowledge Wiki depth with selective public projection](../../decisions/knowledge-wiki-selective-projection.md) - `uses_method` (frontmatter)
+- [Anonymized Team-Knowledge Opportunity Case Study](../../case-studies/anonymized-team-knowledge-opportunity/README.md) - `uses_method` (frontmatter)
 - [Canonical Story Bank](../../indexes/canonical-story-bank.md) - `related_to` (frontmatter)
 - [Jamie Burkart public-record source edition](../../indexes/jamie-public-record-source-edition.md) - `uses_method` (frontmatter)
 - [Knowledge Wiki pilot map](../../indexes/pilot.md) - `prose_link` (markdown)
@@ -31,3 +32,7 @@
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
 - [Technical Operations portfolio projection](../../projections/work-technical-operations.md) - `related_to` (frontmatter)
 - [CallNYC](../../projects/callnyc.md) - `uses_method` (frontmatter)
+- [Knowledge Wiki Graph collective-map occurrence](../../projections/photography/knowledge-wiki-collective-map.md) - `related_to` (frontmatter)
+- [Jamie's Perspective](../../case-studies/anonymized-team-knowledge-opportunity/02-jamie-perspective.md) - `uses_method` (frontmatter)
+- [The Prospective Sponsor's Perspective](../../case-studies/anonymized-team-knowledge-opportunity/01-prospective-sponsor-perspective.md) - `uses_method` (frontmatter)
+- [The Prospective Sponsor's Voice and Reasoning Profile](../../case-studies/anonymized-team-knowledge-opportunity/03-prospective-sponsor-voice.md) - `related_to` (frontmatter)

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "evalId": "public-surface-terminology-hillclimb-2026-08-20",
+  "evaluatedAt": "2026-08-21T17:28:35-04:00",
+  "targetCriterion": "visitor-facing-language-clarity",
+  "baseline": {
+    "prohibitedOccurrences": 30,
+    "affectedFiles": 21,
+    "sharedWeakness": "One internal systems term was doing too many kinds of public work: describing scope, evidence, permissions, interactions, pathways, and working methods."
+  },
+  "followUpBaseline": {
+    "termFamily": "hinge",
+    "prohibitedOccurrences": 4,
+    "affectedFiles": 4,
+    "sharedWeakness": "A repeated metaphor obscured whether the sentence meant a principle, a decisive test, a lesson, or a formation point."
+  },
+  "wowListScaleChange": {
+    "sharedWeakness": "Raw database counts and defensive qualification made WOW List feel smaller and harder to parse than the distributed organizer infrastructure evidenced by activity across 35 city ecosystems.",
+    "publicProjection": "Lead with 35 city ecosystems and the calendars, websites, and email lists that local organizers ran; retain the exact database counts only in the internal evidence layer."
+  },
+  "change": {
+    "description": "Replaced each public occurrence with context-specific language and recast WOW List around its 35-city organizer ecosystem while preserving claim scope, consent, collective credit, and internal typed workflow states.",
+    "replacementFamilies": [
+      "well-scoped requirements",
+      "focused work, pathways, and methods",
+      "a dated observed minimum",
+      "carefully evidenced or documented interaction",
+      "a specific approved portfolio use",
+      "a formation point, decisive test, principle, or central lesson",
+      "35 city ecosystems and the local calendars, websites, and email lists organizers ran"
+    ],
+    "claimScopeChanged": false,
+    "newEvidenceIntroduced": false,
+    "internalStateRenamed": false
+  },
+  "result": {
+    "scannedFiles": 75,
+    "renderedPages": 15,
+    "prohibitedOccurrences": 0,
+    "deterministicTestsPassing": 7,
+    "selectedCoverLetterModelCalls": 2,
+    "selectedCoverLetterReaderPasses": 2,
+    "unselectedCoverLetterReaderCallsSkipped": 14
+  },
+  "decision": "keep-change",
+  "stopReason": "The target reached zero prohibited public occurrences, including raw WOW List counts and defensive clauses, without changing internal evidence, permissions, collective credit, or technical state semantics."
+}

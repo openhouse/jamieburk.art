@@ -1,10 +1,10 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-08-14T15:31:16.915Z",
-  "baseUrl": "http://127.0.0.1:3061",
-  "publicSurfaceFingerprint": "ed7118d0928d4449c200b94dad16088f4fb49a9eda31232f2190181f894cac3a",
+  "checkedAt": "2026-08-23T00:06:28.329Z",
+  "baseUrl": "http://127.0.0.1:3013",
+  "publicSurfaceFingerprint": "3c1e38b991daebd8088a479d7636a0240cc9016cbc723c90f57edd230ed301b6",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 133,
+  "publicSurfaceFileCount": 152,
   "routes": [
     "/",
     "/work",
@@ -17,6 +17,7 @@
     "/work/harry-j-epstein",
     "/work/fair-rent-nyc",
     "/work/callnyc",
+    "/work/kc-spaces-fund",
     "/work/wowlist",
     "/work/196-sunday-dinner",
     "/work/kc-town-hall"
@@ -184,6 +185,20 @@
     },
     {
       "viewport": 360,
+      "path": "/work/kc-spaces-fund",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "failedRequests": []
+    },
+    {
+      "viewport": 360,
       "path": "/work/wowlist",
       "httpStatus": 200,
       "axeVersion": "4.12.1",
@@ -380,6 +395,20 @@
     },
     {
       "viewport": 375,
+      "path": "/work/kc-spaces-fund",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "failedRequests": []
+    },
+    {
+      "viewport": 375,
       "path": "/work/wowlist",
       "httpStatus": 200,
       "axeVersion": "4.12.1",
@@ -576,6 +605,20 @@
     },
     {
       "viewport": 768,
+      "path": "/work/kc-spaces-fund",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "failedRequests": []
+    },
+    {
+      "viewport": 768,
       "path": "/work/wowlist",
       "httpStatus": 200,
       "axeVersion": "4.12.1",
@@ -759,6 +802,20 @@
     {
       "viewport": 1280,
       "path": "/work/callnyc",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "failedRequests": []
+    },
+    {
+      "viewport": 1280,
+      "path": "/work/kc-spaces-fund",
       "httpStatus": 200,
       "axeVersion": "4.12.1",
       "violations": [],
@@ -814,7 +871,7 @@
     }
   ],
   "summary": {
-    "rowCount": 56,
+    "rowCount": 60,
     "axeViolations": 0,
     "criticalAxeViolations": 0,
     "overflowElements": 0,
@@ -823,8 +880,8 @@
     "failedRequests": 0,
     "nonSuccessResponses": 0,
     "invalidHeadingOrLandmarkRows": 0,
-    "lazyImagesObserved": 72,
-    "unloadedImagesBeforeScroll": 63,
+    "lazyImagesObserved": 112,
+    "unloadedImagesBeforeScroll": 75,
     "lazyImageFollowUpPerformed": true,
     "allImagesLoadedAfterScroll": true
   },
@@ -886,7 +943,7 @@
     "passed": true
   },
   "navigationReview": {
-    "checkedAt": "2026-08-14T15:31:16.915Z",
+    "checkedAt": "2026-08-23T00:06:28.329Z",
     "startRoute": "/",
     "destinationRoute": "/about",
     "startHttpStatus": 200,
@@ -901,12 +958,12 @@
       "height": 900
     },
     "renderedScreenshot": {
-      "sha256": "7e10731f445b437bf2e687335ca115872e49632236ebf020fcf67b70feb46f3b",
-      "byteLength": 583885,
+      "sha256": "bbd196488b6ce79c187569c797b29762d6713b4cdf5b668d60b80596067cb082",
+      "byteLength": 664120,
       "width": 1280,
       "fullPage": true,
       "retainedInPublicGit": false,
-      "reviewBoundary": "The temporary rendered screenshot was inspected for this exact public page and is represented in public Git only by its content hash and bounded observations."
+      "reviewBoundary": "The temporary rendered screenshot was inspected for this exact public page and is represented in public Git only by its content hash and scoped observations."
     },
     "pass": true
   }

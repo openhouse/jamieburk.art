@@ -1,0 +1,32 @@
+{
+  "evaluator": "Fictionalized Warren Sack analytical lens only. I am not Warren Sack, do not speak for him, and this evaluation is not an endorsement.",
+  "reviewerId": "sack-f-2026-08-14-7812ae0a",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "7812ae0a29ed91b6a2a9782af5e14b7b112c26305fafd83d13ad722b4dcf6c52",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The homepage establishes the recurring operating motif and links directly to About and multiple case studies, allowing the method to be reconstructed within two clicks.",
+    "About explicitly states the recursive sequence and demonstrates it through three accurately bounded systems loops.",
+    "HJE shows customer and team relationships becoming an integrated operating model, maintained storefront, incremental releases, reusable patterns, ownership, and handoff.",
+    "FairRentNYC shows meetings, sources, questions, and public actors becoming a recoverable civic model, shared campaign interfaces, public gatherings, decision records, and continuity practices.",
+    "CallNYC shows administrative data becoming an issue-centered model and resident-facing interface, with its 2016 archived and unofficial status conspicuous.",
+    "WOW List shows community vocabulary and organizer relationships becoming collaboratively editable posts, followable keyword communities, publishing workflows, adoption materials, historical instrumentation, and stewardship.",
+    "Source notes consistently state both what evidence supports and what it does not support."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "No overclaim of sole movement or policy causation was found.",
+    "CallNYC is clearly independent, archived, and non-current.",
+    "The surfaces do not claim peer-reviewed research, production deployment from coursework, structural identity among unlike projects, or current Max/Jitter proficiency.",
+    "Protected coalition, customer, participant, analytics, and archival materials remain offline."
+  ],
+  "recommendation": "PASS. The public site makes Jamie's recurring socio-technical method legible, credible, and transferable across at least three materially different projects while preserving status, evidence limits, individual responsibility, and collective credit.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "public-web-only independent holdout",
+    "reviewedAt": "2026-08-14",
+    "filesEdited": false
+  }
+}

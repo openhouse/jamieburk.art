@@ -3,6 +3,8 @@ import { archiveProductionJuly2026 } from "./archive-production-2026-07.ts";
 import { callNycSocialPopulationJuly2026 } from "./callnyc-social-population-2026-07.ts";
 import { googleDriveProductionJuly2026 } from "./google-drive-production-2026-07.ts";
 import { historicalKnowledge } from "./historical-knowledge.ts";
+import { hjeClientChronologyAugust2026 } from "./hje-client-chronology-2026-08.ts";
+import { knowledgeWikiGraphEcosystemAugust2026 } from "./knowledge-wiki-graph-ecosystem-2026-08.ts";
 import { kcTownHallCouncilFunding } from "./kc-town-hall-council-funding.ts";
 import { kcTownHallFieldPractice } from "./kctownhall-field-practice.ts";
 import { kcTownHallResidentServiceAugust2026 } from "./kctownhall-resident-service-2026-08.ts";
@@ -26,11 +28,13 @@ import { nycacSourceExpansionII } from "./nycac-source-expansion-ii.ts";
 import { proofCoverageTargets } from "./proof-coverage.ts";
 import { knowledgeBankSchema } from "./schema.ts";
 import { socialMediaProductionJuly2026 } from "./social-media-production-2026-07.ts";
+import { teamMemoryResponseAugust2026 } from "./team-memory-response-2026-08.ts";
 import { urbanhermitSocialPopulationJuly2026 } from "./urbanhermit-social-population-2026-07.ts";
 import { wowListFacebookPostKnowledge } from "./wowlist-facebook-posts-2026-07.ts";
 import { wowListSocialPopulationJuly2026 } from "./wowlist-social-population-2026-07.ts";
 import { wowListSocialPracticesAugust2026 } from "./wowlist-social-practices-2026-08.ts";
 import { projectCompositionAugust2026 } from "./project-composition-2026-08.ts";
+import { projectWebsiteKnowledgeAugust2026 } from "./project-websites-2026-08.ts";
 import { wowListProductFitAugust2026 } from "./wowlist-product-fit-2026-08.ts";
 
 const knowledgeBankInput = {
@@ -57,12 +61,16 @@ const knowledgeBankInput = {
     ...callNycSocialPopulationJuly2026.intakeItems,
     ...googleDriveProductionJuly2026.intakeItems,
     ...historicalKnowledge.intakeItems,
+    ...hjeClientChronologyAugust2026.intakeItems,
+    ...knowledgeWikiGraphEcosystemAugust2026.intakeItems,
     ...socialMediaProductionJuly2026.intakeItems,
+    ...teamMemoryResponseAugust2026.intakeItems,
     ...urbanhermitSocialPopulationJuly2026.intakeItems,
     ...wowListFacebookPostKnowledge.intakeItems,
     ...wowListSocialPopulationJuly2026.intakeItems,
     ...wowListSocialPracticesAugust2026.intakeItems,
     ...projectCompositionAugust2026.intakeItems,
+    ...projectWebsiteKnowledgeAugust2026.intakeItems,
     ...kcTownHallCouncilFunding.intakeItems,
     ...kcTownHallFieldPractice.intakeItems,
     ...kcTownHallResidentServiceAugust2026.intakeItems,
@@ -107,12 +115,16 @@ const knowledgeBankInput = {
     ...callNycSocialPopulationJuly2026.observations,
     ...googleDriveProductionJuly2026.observations,
     ...historicalKnowledge.observations,
+    ...hjeClientChronologyAugust2026.observations,
+    ...knowledgeWikiGraphEcosystemAugust2026.observations,
     ...socialMediaProductionJuly2026.observations,
+    ...teamMemoryResponseAugust2026.observations,
     ...urbanhermitSocialPopulationJuly2026.observations,
     ...wowListFacebookPostKnowledge.observations,
     ...wowListSocialPopulationJuly2026.observations,
     ...wowListSocialPracticesAugust2026.observations,
     ...projectCompositionAugust2026.observations,
+    ...projectWebsiteKnowledgeAugust2026.observations,
     ...kcTownHallCouncilFunding.observations,
     ...kcTownHallFieldPractice.observations,
     ...kcTownHallResidentServiceAugust2026.observations,
@@ -261,7 +273,10 @@ const knowledgeBankInput = {
     ...callNycSocialPopulationJuly2026.sources,
     ...googleDriveProductionJuly2026.sources,
     ...historicalKnowledge.sources,
+    ...hjeClientChronologyAugust2026.sources,
+    ...knowledgeWikiGraphEcosystemAugust2026.sources,
     ...socialMediaProductionJuly2026.sources,
+    ...teamMemoryResponseAugust2026.sources,
     ...urbanhermitSocialPopulationJuly2026.sources,
     ...wowListFacebookPostKnowledge.sources,
     ...wowListSocialPopulationJuly2026.sources,
@@ -287,7 +302,8 @@ const knowledgeBankInput = {
     ...nycacSocialPopulationJuly2026.sources,
     ...nycacSourceExpansion.sources,
     ...nycacSourceExpansionII.sources,
-    ...nycacPressArchive.sources
+    ...nycacPressArchive.sources,
+    ...projectWebsiteKnowledgeAugust2026.sources
   ],
   entities: [...agencyGraph.entities, ...kcTownHallCouncilFunding.entities],
   agencyRelations: [
@@ -405,15 +421,19 @@ const knowledgeBankInput = {
       researchInquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     ...archiveProductionJuly2026.claims,
+    ...knowledgeWikiGraphEcosystemAugust2026.claims,
     ...callNycSocialPopulationJuly2026.claims,
     ...googleDriveProductionJuly2026.claims,
     ...historicalKnowledge.claims,
+    ...hjeClientChronologyAugust2026.claims,
     ...socialMediaProductionJuly2026.claims,
+    ...teamMemoryResponseAugust2026.claims,
     ...urbanhermitSocialPopulationJuly2026.claims,
     ...wowListFacebookPostKnowledge.claims,
     ...wowListSocialPopulationJuly2026.claims,
     ...wowListSocialPracticesAugust2026.claims,
     ...projectCompositionAugust2026.claims,
+    ...projectWebsiteKnowledgeAugust2026.claims,
     ...kcTownHallCouncilFunding.claims,
     ...kcTownHallFieldPractice.claims,
     ...kcTownHallResidentServiceAugust2026.claims,
@@ -478,12 +498,15 @@ const knowledgeBankInput = {
     ...callNycSocialPopulationJuly2026.researchInquiries,
     ...googleDriveProductionJuly2026.researchInquiries,
     ...historicalKnowledge.researchInquiries,
+    ...hjeClientChronologyAugust2026.researchInquiries,
     ...socialMediaProductionJuly2026.researchInquiries,
+    ...teamMemoryResponseAugust2026.researchInquiries,
     ...urbanhermitSocialPopulationJuly2026.researchInquiries,
     ...wowListFacebookPostKnowledge.researchInquiries,
     ...wowListSocialPopulationJuly2026.researchInquiries,
     ...wowListSocialPracticesAugust2026.researchInquiries,
     ...projectCompositionAugust2026.researchInquiries,
+    ...projectWebsiteKnowledgeAugust2026.researchInquiries,
     ...kcTownHallCouncilFunding.researchInquiries,
     ...kcTownHallFieldPractice.researchInquiries,
     ...kcTownHallResidentServiceAugust2026.researchInquiries,
@@ -510,13 +533,16 @@ const knowledgeBankInput = {
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-CHRONOLOGY-CORRECTION-2016", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" },
-    { id: "COR-NYCAC-CABARET-HEARING-DATE-2026", claimId: "CLM-NYCAC-CABARET-TESTIMONY-2017", previousText: "June 19, 2017", replacementText: "September 14, 2017", reason: "The official transcript title page identifies the Committee on Consumer Affairs hearing date as September 14, 2017.", decidedAt: "2026-07-14", affectedSurfaces: ["/work/fair-rent-nyc", "knowledge-bank", "public-citation-registry"], status: "active" }
+    { id: "COR-NYCAC-CABARET-HEARING-DATE-2026", claimId: "CLM-NYCAC-CABARET-TESTIMONY-2017", previousText: "June 19, 2017", replacementText: "September 14, 2017", reason: "The official transcript title page identifies the Committee on Consumer Affairs hearing date as September 14, 2017.", decidedAt: "2026-07-14", affectedSurfaces: ["/work/fair-rent-nyc", "knowledge-bank", "public-citation-registry"], status: "active" },
+    { id: "COR-HJE-THICK-ARTS-CHRONOLOGY-2026", claimId: "CLM-HJE-THICK-ARTS-FIRST-CLIENT-2009-2015", previousText: "Harry J. Epstein Company client chronology beginning in 2012", replacementText: "Harry J. Epstein Company was a client from 2009 through 2015 and became Thick Arts LLC's first client when Jamie formalized the practice in 2012.", reason: "Jamie corrected the client period and first-client relationship; the New York Department of State independently establishes July 6, 2012 as the LLC's initial filing date.", decidedAt: "2026-08-14", affectedSurfaces: ["/work", "knowledge-bank"], status: "active" }
   ],
   pages: [{
     id: "about",
     surface: "/about",
     sourceOrder: [
-      "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28"
+      "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28",
+      "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
+      "SRC-KNOWLEDGE-WIKI-RFC-0006-2026"
     ],
     occurrences: [
       {
@@ -524,6 +550,43 @@ const knowledgeBankInput = {
         claimId: "CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY",
         projection: "archive-note",
         sourceIds: ["SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28"]
+      },
+      {
+        id: "knowledge-wiki-graph-method",
+        claimId: "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
+          "SRC-KNOWLEDGE-WIKI-RFC-0006-2026"
+        ]
+      }
+    ]
+  }, {
+    id: "colophon",
+    surface: "/colophon",
+    sourceOrder: [
+      "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
+      "SRC-KNOWLEDGE-WIKI-RFC-0006-2026"
+    ],
+    occurrences: [
+      {
+        id: "knowledge-wiki-graph-method",
+        claimId: "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026",
+        projection: "colophon"
+      }
+    ]
+  }, {
+    id: "work-index",
+    surface: "/work",
+    sourceOrder: [
+      "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
+      "SRC-KNOWLEDGE-WIKI-RFC-0006-2026"
+    ],
+    occurrences: [
+      {
+        id: "knowledge-wiki-graph-method",
+        claimId: "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026",
+        projection: "case-study"
       }
     ]
   }, {
@@ -699,12 +762,19 @@ const knowledgeBankInput = {
     id: "source-backed-team-memory",
     surface: "/lab/source-backed-team-memory",
     sourceOrder: [
+      "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
+      "SRC-KNOWLEDGE-WIKI-RFC-0006-2026",
       "SRC-AI-EVALS-CERTIFICATE-2026",
       "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       "SRC-CALLNYC-POLITICO-2016-03-14",
       "SRC-CALLNYC-GITHUB-REPOSITORY"
     ],
     occurrences: [
+      {
+        id: "knowledge-wiki-graph-method",
+        claimId: "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026",
+        projection: "case-study"
+      },
       { id: "source-backed-memory-method", claimId: "CLM-SOURCE-BACKED-MEMORY-METHOD-2026", projection: "case-study" },
       { id: "ai-evals-course-completion", claimId: "CLM-AI-EVALS-COURSE-COMPLETION-2026", projection: "case-study", sourceIds: ["SRC-AI-EVALS-CERTIFICATE-2026"] },
       {

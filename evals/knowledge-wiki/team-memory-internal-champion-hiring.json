@@ -1,0 +1,63 @@
+{
+  "id": "team-memory-internal-champion-hiring-2026-08-21",
+  "schemaVersion": 1,
+  "pagePath": "/lab/source-backed-team-memory",
+  "sponsorPerspectivePath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/01-prospective-sponsor-perspective.md",
+  "sponsorVoicePath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/03-prospective-sponsor-voice.md",
+  "browserPacketPath": "evals/knowledge-wiki/runs/2026-08-21-team-memory-internal-champion-browser.json",
+  "currentRunPath": "evals/knowledge-wiki/runs/2026-08-21-team-memory-internal-champion-hiring.json",
+  "responseSchemaPath": "evals/knowledge-wiki/team-memory-internal-champion-response.schema.json",
+  "scenario": "A product and engineering leader at a small, rapidly growing creative-technology company shares Jamie's Team Memory page with company decision-makers. The team is losing product rationale, decisions, open questions, and onboarding context across meetings and working documents. The sponsor believes Jamie may be able to lead a focused, paid discovery and prototype engagement that improves how the team thinks and executes without imposing a heavy parallel bureaucracy.",
+  "acceptanceQuestion": "Based only on the anonymized sponsor perspective, anonymized sponsor voice profile, and the rendered public site beginning at the Team Memory page, would the fictionalized sponsor and company decision-makers hire Jamie now for the focused paid engagement their needs support?",
+  "requiredNavigation": [
+    "team-memory-start",
+    "resume-from-team-memory",
+    "work-from-site-navigation",
+    "technical-operations-from-work",
+    "about-from-site-navigation"
+  ],
+  "requiredTeamMemorySignals": [
+    "A two-week discovery and prototype sprint the team can authorize",
+    "One sponsor, one working lead, and two or three teammates",
+    "Three to five approved sources around one decision trail",
+    "A knowledge-friction map, start-here page, decision record, open-question list",
+    "The team decides to continue, revise, or stop",
+    "Deliberately outside this first sprint",
+    "continuing maintenance without a separate agreement"
+  ],
+  "deterministicStages": [
+    "anonymized-artifact-safety",
+    "rendered-browser-provenance",
+    "navigation-and-resume-coverage",
+    "authorizable-engagement-shape",
+    "model-hiring-conversation"
+  ],
+  "transmissionPolicy": {
+    "status": "human-authorized",
+    "appliesToEquivalentIsolatedHiringEvaluations": true,
+    "allowedArtifacts": [
+      "anonymized sponsor-perspective artifact",
+      "anonymized sponsor-voice artifact",
+      "public rendered-site packet",
+      "public resume"
+    ],
+    "prohibitedArtifacts": [
+      "raw transcripts",
+      "real identities",
+      "private archives",
+      "unrelated records",
+      "credentials or private locators"
+    ],
+    "interpretation": "Equivalent evaluations may reuse this public-safe packet pattern. Authorization does not extend to raw source material, protected identities, private archives, unrelated records, credentials, or private locators."
+  },
+  "modelGate": {
+    "promptVersion": "team-memory-internal-champion-v1",
+    "maximumCallsPerCandidate": 1,
+    "requiredVerdict": "pass",
+    "requiredDecision": "hire-for-focused-paid-engagement",
+    "actualPeopleParticipated": false,
+    "actualCompanyDecision": false,
+    "calibrationStatus": "uncalibrated-advisory-hiring-simulation",
+    "humanMeaning": "A pass is an uncalibrated fictionalized model simulation that the public proposal is clear enough to support a focused paid engagement. It is not Jonathan Marmor's view, his employer's view, an endorsement, budget authorization, an offer, a contract, or a promise of work."
+  }
+}

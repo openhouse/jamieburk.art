@@ -1,11 +1,12 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Fair Rent NYC Shoestring Press facilitation occurrence
 
-**Source commit:** `747605e3c34a6426c027a1c85ff82c3a6275ac36`
-**Generation time:** 2026-08-14T11:32:41-04:00
-**Source fingerprint:** `e4fc52c24bbf54e2f4cd03c7f545b8eb1d0af9c4a3ed28af19991b37897fcb60`
+**Source commit:** `ccddbf75a1e1a3ab293c5dd067e1f30a5b9a6855`
+**Generation time:** 2026-08-22T21:22:19-04:00
+**Source fingerprint:** `c2cf41ec29380d85699d1af93a8f8fe4629fbe0116345afd5e96d2cf0a6f5033`
 
 - [Shoestring Press coalition working session, 2017](../../assets/photographs/nycac-shoestring-facilitation-2017.md) - `projected_to` (frontmatter)
+- [Selective Cloudinary delivery for governed portfolio derivatives](../../decisions/cloudinary-selective-media-delivery-2026-08-15.md) - `related_to` (frontmatter)
 - [August 2026 launch-candidate photographic edition](../../projections/photography/edition-launch-2026-08.md) - `prose_link` (markdown)
 - [August 2026 launch-candidate photographic edition](../../projections/photography/edition-launch-2026-08.md) - `related_to` (frontmatter)
 - [Photography knowledge loop](../../indexes/photography.md) - `related_to` (frontmatter)

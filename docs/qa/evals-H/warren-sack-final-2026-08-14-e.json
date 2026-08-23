@@ -1,0 +1,28 @@
+{
+  "evaluator": "Fictionalized Warren Sack analytical lens. This is not Warren Sack, does not speak for him, and is not an endorsement.",
+  "reviewerId": "sack-e-2026-08-14-7812ae0a",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "7812ae0a29ed91b6a2a9782af5e14b7b112c26305fafd83d13ad722b4dcf6c52",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "About is one click from the homepage and explicitly states the recursive method.",
+    "Three complete systems loops are directly legible and each linked case is reachable within a second click.",
+    "HJE is accurately bounded to 2009–2015 and reconstructs listen, frame, implement, verify, and continue.",
+    "FairRentNYC connects stakeholder relationships and public sources to campaign interfaces, public actions, running minutes, source maps, question logs, and handoff infrastructure.",
+    "Sunday Dinner and 196 make two participation workflows inspectable while withholding participant-level records.",
+    "CallNYC is visibly labeled a 2016 archived independent prototype, unofficial and not a current City service.",
+    "Source-Backed Team Memory is early research and method rather than finished SaaS, and coursework is not presented as peer-reviewed research or production deployment.",
+    "Across unlike projects, the site claims a transferable operating pattern rather than structural identity."
+  ],
+  "gaps": [],
+  "safety_findings": [],
+  "recommendation": "PASS. A hiring reader can reconstruct the recurring socio-technical method through at least three accurately bounded projects within two clicks while the site preserves evidence, credit, and anti-overclaim boundaries.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "public-web-only independent holdout",
+    "reviewedAt": "2026-08-14",
+    "filesEdited": false
+  }
+}

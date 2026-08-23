@@ -3,21 +3,35 @@ id: source.permission.elana-gordon.east-river.2026-07
 title: Elana Gordon East River portfolio permission summary
 kind: source
 source_kind: private-permission-summary
-status: governed-open
+status: maintained
 visibility: summary-only
 sensitivity: moderate
-last_reviewed: 2026-07-26
-review_by: 2027-01-26
+last_reviewed: 2026-08-15
+review_by: 2027-02-15
 canonical_path: docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md
-summary: Public-safe capsule recording creator confirmation, bounded portfolio permission, required credit, private evidence custody, and revocation handling.
+summary: Public-safe capsule recording creator confirmation, portfolio permission, placement-specific credit choice, private evidence custody, and revocation handling.
 permission_capsule:
   creator: person.elana-gordon
   asset: asset.photo.east-river-manhattan-bridge.2022.001
   allowed_destination:
     - jamieburk.art portfolio homepage
+    - jamieburk.art portfolio colophon at /colophon
+    - jamieburk.art social preview at /opengraph-image
   allowed_context: Jamie Burkart professional portfolio
   required_credit: Photograph by Elana Gordon.
-  derivative_scope: Current Layout C crop and transform
+  social_preview:
+    in_image_credit: optional
+    metadata_credit: Photograph by Elana Gordon.
+    release:
+      production: approved
+      indexing: approved
+      authority: Jamie Burkart
+      approved_at: 2026-08-15
+      selected_variant: image-4-editorial-proposition
+      alternatives_reviewed: 6
+      unique_compositions_reviewed: 4
+      rendered_sha256: 1f83d66b7e35e8a3a955819cf2104b79a88c9a8bd3953fd6fa691143bdb6da42
+  derivative_scope: Complete 4 by 3 derivative on the homepage and colophon, plus the exact 1200 by 630 social-preview crop
   public_git: approved
   staging: approved
   production: open
@@ -39,13 +53,16 @@ relations:
 # Elana Gordon East River portfolio permission summary
 
 Elana Gordon confirmed creator attribution and granted the portfolio use
-discussed. Jamie chose to credit her. The exact occurrence uses the line
-"Photograph by Elana Gordon." and separately names archive custody.
+discussed. In the protected exchange, she explicitly left credit to Jamie's
+preference. Jamie keeps visible credit on the homepage and preserves creator
+attribution in the asset record and social-image alt metadata; the fixed social
+preview may omit credit from the rendered pixels.
 
 Raw messages, contact details, and the protected evidence locator are not in
-this repository. This capsule does not grant future unrestricted use, a new
-crop, commercial licensing, transfer to another site, or use outside Jamie's
-professional portfolio.
+this repository. This capsule does not grant future unrestricted use, arbitrary
+new crops, commercial licensing, transfer to another site, or use outside
+Jamie's professional portfolio. The 1200 by 630 crop is the exact reviewed
+social-preview composition, not a general transform license.
 
 Production and indexing remain Jamie's decisions. If permission is withdrawn,
 the occurrence is removed or replaced while the historical correction and

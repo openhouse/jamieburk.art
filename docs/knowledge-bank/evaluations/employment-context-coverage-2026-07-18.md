@@ -40,7 +40,7 @@ career_coverage:
       - kc-town-hall-public-benefit-documentation
     status: visible-supported
     gap: Formal procurement and budget authority must remain qualified.
-  - period: 2009-2026
+  - period: 2009-2015
     focus: small-business modernization, e-commerce, analytics, and durable stewardship
     public_routes:
       - /work/harry-j-epstein

@@ -4,7 +4,8 @@ import test from "node:test";
 import {
   computePhotoBindingFingerprintFromModel,
   evaluatePhotoKnowledgeModel,
-  loadPhotoKnowledgeModel
+  loadPhotoKnowledgeModel,
+  renderPhotoReport
 } from "../photo-knowledge/lib.mjs";
 
 let loaded;
@@ -69,6 +70,16 @@ test("East River canary passes every hard gate and criterion", async () => {
   assert.equal(result.passed, true);
   assert.deepEqual(result.failedHardGates, []);
   assert.deepEqual(result.failedCriteria, []);
+});
+
+test("the generated placement inventory includes the social-preview occurrence", async () => {
+  const model = await baselineModel();
+  const report = renderPhotoReport(model, evaluatePhotoKnowledgeModel(model), "placements");
+  assert.match(report, /projection|Public photo placements/);
+  assert.match(report, /`\/opengraph-image`/);
+  assert.match(report, /derivative\.photo\.east-river\.social-preview\.v1/);
+  assert.match(report, /Photo: Elana Gordon|Photograph by Elana Gordon/);
+  assert.doesNotMatch(report, /undefined/);
 });
 
 test("private source locators fail closed", async () => {
@@ -144,6 +155,17 @@ test("a changed crop scope fails exact permission", async () => {
   assert.equal(result.checks.permission_scope_exact_and_fail_closed, false);
 });
 
+test("social-preview in-image credit cannot drift from creator-authorized optional", async () => {
+  const model = await baselineModel();
+  model.recordsById[
+    model.canary.permissionSourceId
+  ].permission_capsule.social_preview = {
+    in_image_credit: "required"
+  };
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.permission_scope_exact_and_fail_closed, false);
+});
+
 test("an unsupported caption assertion fails closed", async () => {
   const model = await baselineModel();
   model.recordsById[model.canary.placementId].caption.assertions.push(
@@ -165,6 +187,30 @@ test("a missing case-study creator credit fails manifest alignment", async () =>
   model.portfolioPhotos.nycacShoestringFacilitation.credit = "";
   const result = evaluatePhotoKnowledgeModel(model);
   assert.equal(result.checks.manifest_wiki_placement_alignment, false);
+  assert.equal(result.passed, false);
+});
+
+test("project photographs use their exact courtesy credits when no creator is verified", async () => {
+  const model = await baselineModel();
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.project_courtesy_credit_policy, true);
+});
+
+test("an incorrect named photographer fails the project courtesy policy", async () => {
+  const model = await baselineModel();
+  model.portfolioPhotos.nycacShoestringFacilitation.credit =
+    "Photograph by Paul Mossine. From Jamie Burkart's photo archive.";
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.project_courtesy_credit_policy, false);
+  assert.equal(result.passed, false);
+});
+
+test("archive-process language fails the public photo credit policy", async () => {
+  const model = await baselineModel();
+  model.portfolioPhotos.sundayDinnerSharedMap.credit =
+    "Photographer not identified in the retained export.";
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.project_courtesy_credit_policy, false);
   assert.equal(result.passed, false);
 });
 
@@ -239,6 +285,29 @@ test("production and indexing approval cannot be automated", async () => {
   model.recordsById[model.canary.placementId].approval.indexing = "approved";
   const result = evaluatePhotoKnowledgeModel(model);
   assert.equal(result.checks.production_and_indexing_human_gated, false);
+});
+
+test("the selected social preview release is bound to Jamie's exact visual decision", async () => {
+  const model = await baselineModel();
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.social_preview_release_human_approved, true);
+});
+
+test("status changes alone cannot approve the social preview release", async () => {
+  const model = await baselineModel();
+  const socialPhoto = model.publicPhotoManifest.find(
+    (item) => item.id === "east-river-social-preview"
+  );
+  const socialOccurrence = model.recordsById[
+    "projection.photo.social-preview.east-river"
+  ];
+  socialPhoto.releaseState.production = "approved";
+  socialPhoto.releaseState.indexing = "approved";
+  delete socialPhoto.releaseState.decision;
+  socialOccurrence.approval.production = "approved";
+  socialOccurrence.approval.indexing = "approved";
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.social_preview_release_human_approved, false);
 });
 
 test("stale candidate evidence fails closed", async () => {

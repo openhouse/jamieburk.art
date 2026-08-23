@@ -1,0 +1,16 @@
+{
+  "name": "Project website inventory and restored-surface gate",
+  "version": 1,
+  "updatedAt": "2026-08-14",
+  "objective": "Keep the live-project count, currentness, implementation credit, direct-link behavior, and restored-site close readings accurate without turning reachability into authorship or current-service claims.",
+  "hardGates": [
+    "The dated inventory contains exactly 10 reachable project sites, 8 direct Jamie implementation relationships, 2 bounded or open attribution relationships, and 1 separately counted portfolio.",
+    "KC Town Hall is restored historical project evidence, not a current Tired of Tires schedule or proof of individual authorship for every page.",
+    "WOW List is a noindex tester threshold and shared co-build, not the restored calendar or a sole-authorship claim.",
+    "CallNYC is visibly archived, unofficial, and non-current; historical contacts are not resident guidance.",
+    "The three restored projects have dated close readings with product, technical, accessibility, currentness, and credit observations.",
+    "Useful project names link to their public sites in the portfolio data and every maintained Markdown resume without removing internal case-study context.",
+    "NTER CHNG remains archive-only after DNS failure and jamieburk.art remains outside the project-site count."
+  ],
+  "hillClimbRule": "Improve the lowest failing gate with one bounded change, rerun the evaluator and mutation tests, and retain the change only if truth, currentness, collective credit, accessibility, and public-safety boundaries remain intact."
+}

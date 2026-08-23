@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "auditedAt": "2026-08-14T21:57:44.805Z",
+  "method": "Rendered Chromium close reading of the three restored sites plus HTTP checks of every tracked public project URL; currentness and individual implementation credit were evaluated separately.",
+  "counts": {
+    "reachableProjectSites": 10,
+    "directJamieImplementationEvidence": 8,
+    "boundedOrOpenImplementationAttribution": 2,
+    "separatePortfolioProperties": 1
+  },
+  "projectSites": [
+    {
+      "projectId": "harry-j-epstein",
+      "name": "Harry J. Epstein Company",
+      "url": "https://www.harryepstein.com/",
+      "httpStatus": 200,
+      "surfaceStatus": "live-current",
+      "jamieImplementationEvidence": "direct",
+      "evidenceIds": ["hje-modernization-stewardship"],
+      "boundary": "A live client site does not assign Jamie sole authorship of every page, design decision, or business outcome."
+    },
+    {
+      "projectId": "nyc-artist-coalition",
+      "name": "NYC Artist Coalition",
+      "url": "https://nycartc.com/",
+      "httpStatus": 200,
+      "surfaceStatus": "live-current",
+      "jamieImplementationEvidence": "direct",
+      "evidenceIds": ["SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE"],
+      "boundary": "Repository-level implementation evidence does not assign Jamie sole authorship of coalition positions, content, participation, or outcomes."
+    },
+    {
+      "projectId": "fair-rent-nyc",
+      "name": "FairRentNYC",
+      "url": "https://fairrentnyc.nycartc.com/",
+      "httpStatus": 200,
+      "surfaceStatus": "live-current",
+      "jamieImplementationEvidence": "direct",
+      "evidenceIds": ["SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE", "SRC-FAIRRENTNYC-GITHUB-REPOSITORY"],
+      "boundary": "Direct web implementation does not establish sole authorship of the campaign or causation of policy outcomes."
+    },
+    {
+      "projectId": "talks-not-raids",
+      "name": "Talks Not Raids",
+      "url": "https://talksnotraids.com/",
+      "httpStatus": 200,
+      "surfaceStatus": "live-historical-campaign",
+      "jamieImplementationEvidence": "direct",
+      "evidenceIds": ["SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE"],
+      "boundary": "A surviving campaign site is a historical public surface, not proof that every described service or policy condition remains current."
+    },
+    {
+      "projectId": "let-nyc-dance",
+      "name": "Let NYC Dance",
+      "url": "https://letnycdance.nycartc.com/",
+      "httpStatus": 200,
+      "surfaceStatus": "live-historical-campaign",
+      "jamieImplementationEvidence": "direct",
+      "evidenceIds": ["SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE"],
+      "boundary": "Direct implementation belongs inside a collective campaign history and does not make Jamie the sole cause of repeal."
+    },
+    {
+      "projectId": "callnyc",
+      "name": "CallNYC",
+      "url": "https://callnyc.org/",
+      "httpStatus": 200,
+      "surfaceStatus": "live-archived-prototype",
+      "jamieImplementationEvidence": "direct",
+      "evidenceIds": ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-LIVE-SURFACE-2026-08-14"],
+      "boundary": "Archived and unofficial: historical officeholders, statistics, categories, and contact information are not current resident guidance."
+    },
+    {
+      "projectId": "wowlist",
+      "name": "WOW List",
+      "url": "https://wowlist.org/",
+      "httpStatus": 200,
+      "surfaceStatus": "live-noindex-tester-threshold",
+      "jamieImplementationEvidence": "direct-shared",
+      "evidenceIds": ["SRC-WOWLIST-PUBLIC-THRESHOLD-2026", "SRC-WOWLIST-LIVE-SURFACE-2026-08-14"],
+      "boundary": "Jamie and Richard Caceres co-built the historical platform; the current public surface is a noindex landing, About page, and tester invitation, not the restored calendar."
+    },
+    {
+      "projectId": "kc-spaces-fund",
+      "name": "KC Spaces Fund",
+      "url": "https://kcspacesfund.com/",
+      "httpStatus": 200,
+      "surfaceStatus": "live-historical-campaign",
+      "jamieImplementationEvidence": "direct-bounded",
+      "evidenceIds": ["SRC-KCSPACES-DIGITAL-INFRASTRUCTURE-ARCHIVE-2026"],
+      "boundary": "The evidence supports Jamie's bounded web-infrastructure contribution, not campaign ownership, publishing authority, grantmaking, or causal fundraising credit."
+    },
+    {
+      "projectId": "kc-town-hall",
+      "name": "KC Town Hall",
+      "url": "https://kctownhall.com/",
+      "httpStatus": 200,
+      "surfaceStatus": "live-restored-historical-project",
+      "jamieImplementationEvidence": "shared-project-context",
+      "evidenceIds": ["SRC-KCTH-GHOST-ARCHIVE-2020", "SRC-KCTH-LIVE-SURFACE-2026-08-14"],
+      "boundary": "Jamie co-founded and worked on the project, but the current record does not assign him individual authorship of every page. Historical pickup dates are not a current service schedule."
+    },
+    {
+      "projectId": "save-nyc-spaces",
+      "name": "Save NYC Spaces",
+      "url": "https://savenycspaces.nycartc.com/",
+      "httpStatus": 200,
+      "surfaceStatus": "live-historical-coalition-campaign",
+      "jamieImplementationEvidence": "open",
+      "evidenceIds": ["SRC-NYCAC-SAVE-NYC-SPACES"],
+      "boundary": "The public campaign and Jamie's coalition role are documented; individual implementation authorship for this specific site remains an open inquiry."
+    }
+  ],
+  "separateProperties": [
+    {
+      "name": "Jamie Burkart portfolio",
+      "url": "https://jamieburk.art/",
+      "httpStatus": 200,
+      "reasonSeparated": "Personal portfolio rather than a client, civic, cultural, or community project site."
+    }
+  ],
+  "unavailableOrArchiveOnly": [
+    {
+      "projectId": "nter-chng",
+      "name": "NTER CHNG",
+      "url": "https://nterchng.com/",
+      "result": "DNS resolution failed",
+      "inventoryStatus": "archive-only"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "readerId",
+    "verdict",
+    "prospectiveSponsorAccuracy",
+    "jamieAccuracy",
+    "voiceFidelity",
+    "anonymizationSafety",
+    "rationale",
+    "strengths",
+    "accuracyRisks",
+    "constructiveCritique",
+    "validateNext",
+    "actualPersonParticipated",
+    "sourceParticipantReviewed",
+    "boundary"
+  ],
+  "properties": {
+    "readerId": {
+      "type": "string",
+      "const": "reader.anonymized-team-knowledge-case-study"
+    },
+    "verdict": { "type": "string", "enum": ["pass", "fail"] },
+    "prospectiveSponsorAccuracy": { "type": "string", "enum": ["pass", "fail"] },
+    "jamieAccuracy": { "type": "string", "enum": ["pass", "fail"] },
+    "voiceFidelity": { "type": "string", "enum": ["pass", "fail"] },
+    "anonymizationSafety": { "type": "string", "enum": ["pass", "fail"] },
+    "rationale": { "type": "string", "minLength": 100 },
+    "strengths": {
+      "type": "array",
+      "minItems": 3,
+      "items": { "type": "string", "minLength": 20 }
+    },
+    "accuracyRisks": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 15 }
+    },
+    "constructiveCritique": { "type": "string", "minLength": 60 },
+    "validateNext": { "type": "string", "minLength": 60 },
+    "actualPersonParticipated": { "type": "boolean", "const": false },
+    "sourceParticipantReviewed": { "type": "boolean", "const": false },
+    "boundary": { "type": "string", "minLength": 100 }
+  }
+}

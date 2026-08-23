@@ -332,9 +332,10 @@
       "pass_criteria": [
         "Course completion is visible and accurately attributed as professional development.",
         "The lab includes one inspectable public-safe or synthetic worked example.",
+        "The lab uses the exact approved metadata-stripped collective working-map photograph with descriptive alt text, an NYC Artist Coalition courtesy credit, and a recorded interpretation limit.",
         "The page does not imply production SaaS, automated trust, client delivery, or access to private archives."
       ],
-      "evidence_required": ["credential artifact", "worked example", "claim-boundary review"],
+      "evidence_required": ["credential artifact", "worked example", "reviewed photograph occurrence", "claim-boundary review"],
       "remediation_hint": "Show a bounded example and preserve the method's human-review and privacy limits."
     },
     {

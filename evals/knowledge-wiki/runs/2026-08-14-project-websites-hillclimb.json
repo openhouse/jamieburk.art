@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "evalId": "project-website-inventory-and-restored-surface-gate",
+  "runId": "2026-08-14-project-websites-post-hillclimb",
+  "evaluatedAt": "2026-08-14T18:32:00-04:00",
+  "objective": "Maintain an accurate live-project inventory and useful project links while keeping reachability, currentness, implementation credit, and collective authorship separate.",
+  "baseline": {
+    "overall": "fail",
+    "failingChecks": 4,
+    "lowestCriterion": "Exact currentness and attribution boundary language",
+    "diagnosis": "The first candidate carried the intended boundaries but did not satisfy four exact lexical contracts used to prevent future current-service and authorship drift."
+  },
+  "boundedChange": {
+    "summary": "Aligned the machine inventory and close-reading source note with the evaluator's exact non-current-service, not-restored-calendar, and non-current-resident-guidance phrases.",
+    "claimsStrengthened": false,
+    "publicSafetyWeakened": false,
+    "collectiveCreditWeakened": false,
+    "accessibilityBoundaryWeakened": false
+  },
+  "postHillclimb": {
+    "overall": "pass",
+    "metrics": {
+      "reachableProjectSites": 10,
+      "directImplementationRelationships": 8,
+      "boundedOrOpenRelationships": 2,
+      "restoredCloseReadings": 3,
+      "linkedResumeVariants": 5
+    },
+    "deterministicEval": "pass",
+    "mutationTests": {
+      "passed": 6,
+      "failed": 0
+    }
+  },
+  "decision": "retain",
+  "boundary": "This is a dated reachability and evidence-state audit. HTTP 200 is not current-service proof, and a public URL is not sole-authorship evidence."
+}

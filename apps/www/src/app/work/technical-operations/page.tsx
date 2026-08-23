@@ -22,7 +22,7 @@ const decisionEvidence = [
     href: "/work/harry-j-epstein",
     question: "How does recurring customer and team friction become a maintainable release?",
     decision:
-      "Jamie translated the question into a bounded requirement, coordinated an incremental change, inspected the public customer path and available signals, then preserved ownership and next actions.",
+      "Jamie translated the question into a well-scoped requirement, coordinated an incremental change, inspected the public customer path and available signals, then preserved ownership and next actions.",
     artifact: "Maintenance-to-handoff workflow specimen",
     result:
       "Repeatable patterns across product information, marketing, e-commerce operations, and customer follow-up."
@@ -212,7 +212,12 @@ export default function TechnicalOperationsPage() {
                         {destination.project}
                       </Link>
                     ) : (
-                      <span className="font-semibold text-jb-ink">KC Spaces Fund</span>
+                      <a
+                        className="font-semibold text-jb-blue hover:text-jb-green"
+                        href="https://kcspacesfund.com/"
+                      >
+                        KC Spaces Fund
+                      </a>
                     )}
                     <span className="mt-1 block text-sm leading-6 text-jb-ink/72">
                       {proof.shortWording ?? proof.publicWording}

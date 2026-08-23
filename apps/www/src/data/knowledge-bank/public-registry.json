@@ -225,6 +225,48 @@
       ]
     },
     {
+      "id": "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
+      "title": "RFC 0005: Three-Layer Knowledge Graph and Governed Source Materialization",
+      "organization": "openhouse / jamieburk.art",
+      "author": "Jamie Burkart and Codex, AI-assisted draft",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-08-10",
+      "accessedAt": "2026-08-21",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/0bb9c74de8d774dd2be85f9b16c5e22e56096bfc/rfcs/0005-three-layer-knowledge-graph.md",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Jamie Burkart and Codex, RFC 0005: Three-Layer Knowledge Graph and Governed Source Materialization, exploring design record, August 10, 2026.",
+      "publicNote": "The RFC documents the three graph responsibilities and projection boundary; its exploring status is part of the evidence.",
+      "doesNotEstablish": [
+        "a completed migration",
+        "a finished product",
+        "client adoption",
+        "permission to access or publish protected material"
+      ]
+    },
+    {
+      "id": "SRC-KNOWLEDGE-WIKI-RFC-0006-2026",
+      "title": "RFC 0006: Federated Knowledge Exchange and Release Receipts",
+      "organization": "openhouse / jamieburk.art",
+      "author": "Jamie Burkart and Codex, AI-assisted draft",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-08-11",
+      "accessedAt": "2026-08-21",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/0bb9c74de8d774dd2be85f9b16c5e22e56096bfc/rfcs/0006-federated-knowledge-exchange-and-release-receipts.md",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Jamie Burkart and Codex, RFC 0006: Federated Knowledge Exchange and Release Receipts, proposed design record, August 11, 2026.",
+      "publicNote": "The RFC documents federation, local repository authority, transport boundaries, and human release control; its proposed status is part of the evidence.",
+      "doesNotEstablish": [
+        "a universal repository topology",
+        "automatic publication authority",
+        "a completed production deployment",
+        "client adoption"
+      ]
+    },
+    {
       "id": "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
       "title": "Portfolio social-media archival production inventory",
       "organization": "Jamie Burkart portfolio knowledge bank",
@@ -235,7 +277,7 @@
       "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/projects/social-media-archive-production.md",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Portfolio social-media archival production inventory, July 15, 2026.",
-      "publicNote": "A bounded, reproducible inventory of recovered public account profiles, posts, repost lists, interaction edges, source articles, and explicit stopping conditions.",
+      "publicNote": "A reproducible inventory of recovered public account profiles, posts, repost lists, interaction edges, source articles, and explicit stopping conditions.",
       "doesNotEstablish": [
         "a complete lifetime archive",
         "individual authorship of shared-account posts",
@@ -256,7 +298,7 @@
       "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=5b6f62c6-7eae-4d9e-9aec-c8b8fc36438c&ID=38126&M=AO&N=TWludXRlcyBvZiB0aGUgU3RhdGVkIE1lZXRpbmc%3D",
       "preferredPublicUrl": "canonical",
       "publicCitation": "New York City Council, minutes of the stated meeting, September 28, 2016.",
-      "publicNote": "The official roster corroborates that the 19 named people in the bounded CallNYC ledger were serving Council members in 2016.",
+      "publicNote": "The official roster corroborates that the 19 named people in the reviewed CallNYC ledger were serving Council members in 2016.",
       "doesNotEstablish": [
         "control of social accounts",
         "authorship of every post",
@@ -354,7 +396,7 @@
       "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/data/wowlist-x-population-2026-07-15.json",
       "preferredPublicUrl": "canonical",
       "publicCitation": "WOW List X full-population and engagement manifest, July 15, 2026.",
-      "publicNote": "A public-safe 38-row manifest with resolved URLs, bounded classifications, named public repost identities, and external-adoption examples; raw post bodies and session data are excluded.",
+      "publicNote": "A public-safe 38-row manifest with resolved URLs, defined classifications, named public repost identities, and external-adoption examples; raw post bodies and session data are excluded.",
       "doesNotEstablish": [
         "a complete product archive",
         "a complete lifetime engagement census",
@@ -539,7 +581,7 @@
       "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/feature/evals-H/docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Authenticated read-only review of the public @KCTownHall Posts, Replies, and repost-list surfaces, with a 183-record public-safe ledger, July 14-15, 2026.",
-      "publicNote": "The profile displayed 183 posts. Cross-tab reconciliation recovered all 183 surviving items: 142 account posts, 13 account replies, and 28 reposts from 16 public accounts. A fresh July 15 traversal exactly matched all status IDs, and all 40 repost-bearing account statuses were audited. The ledger preserves posted destinations, bounded classifications, and mutable reaction snapshots without reproducing post text, phone numbers, or street addresses.",
+      "publicNote": "The profile displayed 183 posts. Cross-tab reconciliation recovered all 183 surviving items: 142 account posts, 13 account replies, and 28 reposts from 16 public accounts. A fresh July 15 traversal exactly matched all status IDs, and all 40 repost-bearing account statuses were audited. The ledger preserves posted destinations, defined classifications, and mutable reaction snapshots without reproducing post text, phone numbers, or street addresses.",
       "doesNotEstablish": [
         "a platform export, deletion history, or proof that no earlier item was removed",
         "the individual teammate who authored each shared-account record",
@@ -699,7 +741,7 @@
       "assetUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
       "preferredPublicUrl": "asset",
       "publicCitation": "Public-safe census of the full NYC Artist Coalition Facebook Past Events population exposed July 15, 2026.",
-      "publicNote": "Retains 33 event identities, dates, venues, organizer displays, bounded response snapshots, topics, source routes, and public-safety dispositions without raw descriptions or participant and access data.",
+      "publicNote": "Retains 33 event identities, dates, venues, organizer displays, time-stamped response snapshots, topics, source routes, and public-safety dispositions without raw descriptions or participant and access data.",
       "doesNotEstablish": [
         "the unresolved event identity",
         "every historical coalition event",
@@ -720,7 +762,7 @@
       "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json",
       "preferredPublicUrl": "canonical",
       "publicCitation": "NYC Artist Coalition Facebook post full-population public-safe census, July 15, 2026.",
-      "publicNote": "A 445-row ledger of dates, unique one-way reconciliation hashes, source-route keys, bounded mission, stakeholder, and account-reference tags, content hashes, and displayed interaction counts. Raw bodies, underlying reconciliation identities, social-graph identities, authenticated URLs, and sensitive exact routes are excluded.",
+      "publicNote": "A 445-row ledger of dates, unique one-way reconciliation hashes, source-route keys, defined mission, stakeholder, and account-reference tags, content hashes, and displayed interaction counts. Raw bodies, underlying reconciliation identities, social-graph identities, authenticated URLs, and sensitive exact routes are excluded.",
       "doesNotEstablish": [
         "complete lifetime account history",
         "post-level human authorship",
@@ -901,13 +943,12 @@
       "id": "SRC-NYCAC-SHOESTRING-PHOTO-2017",
       "title": "Shoestring Press coalition working-session photograph",
       "organization": "NYC Artist Coalition archive",
-      "author": "Paul Mossine",
       "kind": "participant-photograph",
       "visibility": "public",
       "preservationStatus": "private",
       "publishedAt": "2017-07-24",
       "accessedAt": "2026-08-13",
-      "publicCitation": "Paul Mossine, photograph of a July 24, 2017 NYC Artist Coalition working session at Shoestring Press; portfolio use authorized by Jamie Burkart.",
+      "publicCitation": "NYC Artist Coalition project photograph of a July 24, 2017 working session at Shoestring Press; portfolio use authorized by Jamie Burkart.",
       "publicNote": "The metadata-stripped portfolio derivative excludes private archive identifiers, People tags, and location coordinates.",
       "doesNotEstablish": [
         "exact remarks",
@@ -923,7 +964,7 @@
       "visibility": "public",
       "preservationStatus": "private",
       "capturedAt": "2026-08-13",
-      "publicCitation": "Jamie Burkart first-person account and bounded portfolio publication authorization, August 13, 2026.",
+      "publicCitation": "Jamie Burkart first-person account and portfolio-use authorization, August 13, 2026.",
       "publicNote": "The capsule records Jamie's recollection and authorization boundaries without correspondence, Apple Photos identifiers, People tags, or location coordinates.",
       "doesNotEstablish": [
         "independent collaborator corroboration of the meeting agreement",
@@ -962,7 +1003,7 @@
       "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
       "preferredPublicUrl": "canonical",
       "publicCitation": "NYC Artist Coalition X retrievable-population manifest, July 15, 2026.",
-      "publicNote": "A public-safe 3,123-row manifest preserving source-status URLs, source-post dates, author handles, record types, link metadata, mention handles, hashtags, classification digests and first matches, bounded incoming mentions, and dated aggregate counts. Raw post text, credentials, cookies, private account state, and session data are excluded.",
+      "publicNote": "A public-safe 3,123-row manifest preserving source-status URLs, source-post dates, author handles, record types, link metadata, mention handles, hashtags, classification digests and first matches, incoming mentions from the defined query window, and dated aggregate counts. Raw post text, credentials, cookies, private account state, and session data are excluded.",
       "doesNotEstablish": [
         "the content of 2,001 profile-counted records outside the recovered public union",
         "individual authorship of the shared account",
@@ -1481,7 +1522,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
+          "text": "Developing a focused lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
           "status": "active",
           "citationRequired": false,
           "surfaces": [
@@ -1528,6 +1569,63 @@
         "Treat the credential as course completion.",
         "Do not imply an evaluator license, instructor affiliation, employment, or endorsement.",
         "Keep private course and cohort material outside the repository."
+      ]
+    },
+    {
+      "id": "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "I am developing a federated Knowledge Wiki Graph practice that keeps meaning, evidence, and source custody distinct, then composes audience-specific outputs through human review.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/lab/source-backed-team-memory",
+            "/colophon",
+            "/work",
+            "/about"
+          ]
+        },
+        {
+          "key": "colophon",
+          "text": "The Knowledge Wiki Graph connects each public claim to evidence. Jamie decides what appears here and revises it when the record changes.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/colophon"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "three separate graph responsibilities",
+            "projection as a fourth output",
+            "human publication authority"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KNOWLEDGE-WIKI-RFC-0006-2026",
+          "relationship": "corroborating",
+          "supports": [
+            "federated repository authority",
+            "transport distinct from truth",
+            "separate release decision"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Present this as current research and an operating method in development.",
+        "Repository roles do not map one-to-one onto graph responsibilities.",
+        "Do not expose protected repository topology, source locators, or private records.",
+        "Do not imply a completed client deployment, production platform, market validation, or automatic trust."
       ]
     },
     {
@@ -1702,7 +1800,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "The coalition's shared public identity carried four campaigns across multiple policy cycles. A bounded review recovered posts by at least six serving Council member accounts that directly mentioned @NYCArtC, while individual coalition-post authorship remains deliberately unattributed.",
+          "text": "The coalition's shared public identity carried four campaigns across multiple policy cycles. A targeted review recovered posts by at least six serving Council member accounts that directly mentioned @NYCArtC, while individual coalition-post authorship remains deliberately unattributed.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -1716,8 +1814,8 @@
           "relationship": "direct-support",
           "supports": [
             "shared campaign identity",
-            "bounded search method",
-            "six-member lower bound",
+            "defined search method",
+            "six-member observed minimum",
             "collective authorship boundary"
           ],
           "confidence": "high",
@@ -1746,7 +1844,7 @@
       ],
       "boundaries": [
         "Do not assign individual authorship of coalition-account posts without post-level evidence.",
-        "Present six as a lower bound from bounded searches.",
+        "Present six as an observed minimum from targeted searches.",
         "Keep campaign and policy outcomes collective."
       ]
     },
@@ -2373,7 +2471,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "A July 2017 production snapshot records 1,846 users, 16,142 posts/events, 23,864 lists/tags, 28,837 list follows, 20,927 saved events, and 35 city-region keys with at least 50 posts. These are historical database counts, not current activity.",
+          "text": "A July 2017 production snapshot documents WOW List activity across 35 city ecosystems, supporting local organizers who used the platform to run calendars, websites, and email lists for their scenes.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -2975,7 +3073,9 @@
       "id": "about",
       "surface": "/about",
       "sourceOrder": [
-        "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28"
+        "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28",
+        "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
+        "SRC-KNOWLEDGE-WIKI-RFC-0006-2026"
       ],
       "occurrences": [
         {
@@ -2985,6 +3085,45 @@
           "sourceIds": [
             "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28"
           ]
+        },
+        {
+          "id": "knowledge-wiki-graph-method",
+          "claimId": "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
+            "SRC-KNOWLEDGE-WIKI-RFC-0006-2026"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "colophon",
+      "surface": "/colophon",
+      "sourceOrder": [
+        "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
+        "SRC-KNOWLEDGE-WIKI-RFC-0006-2026"
+      ],
+      "occurrences": [
+        {
+          "id": "knowledge-wiki-graph-method",
+          "claimId": "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026",
+          "projection": "colophon"
+        }
+      ]
+    },
+    {
+      "id": "work-index",
+      "surface": "/work",
+      "sourceOrder": [
+        "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
+        "SRC-KNOWLEDGE-WIKI-RFC-0006-2026"
+      ],
+      "occurrences": [
+        {
+          "id": "knowledge-wiki-graph-method",
+          "claimId": "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026",
+          "projection": "case-study"
         }
       ]
     },
@@ -3415,12 +3554,19 @@
       "id": "source-backed-team-memory",
       "surface": "/lab/source-backed-team-memory",
       "sourceOrder": [
+        "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
+        "SRC-KNOWLEDGE-WIKI-RFC-0006-2026",
         "SRC-AI-EVALS-CERTIFICATE-2026",
         "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
         "SRC-CALLNYC-POLITICO-2016-03-14",
         "SRC-CALLNYC-GITHUB-REPOSITORY"
       ],
       "occurrences": [
+        {
+          "id": "knowledge-wiki-graph-method",
+          "claimId": "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026",
+          "projection": "case-study"
+        },
         {
           "id": "source-backed-memory-method",
           "claimId": "CLM-SOURCE-BACKED-MEMORY-METHOD-2026",

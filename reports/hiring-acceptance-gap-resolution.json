@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "candidateSha": "747605e3c34a6426c027a1c85ff82c3a6275ac36",
-  "portfolioSnapshotHash": "1b3140ea4b8b9d412845a4e08086576634bade309a79edd25224ed8b1fb377be",
-  "publicReportHash": "d93a69916364afd42e273ccdb4ac12ee7c0350b3a126ebec370ca4599f0bc589",
-  "wikiSourceFingerprint": "e4fc52c24bbf54e2f4cd03c7f545b8eb1d0af9c4a3ed28af19991b37897fcb60",
+  "candidateSha": "ccddbf75a1e1a3ab293c5dd067e1f30a5b9a6855",
+  "portfolioSnapshotHash": "31fd94f42c5620e143d2c86c730f7145edd2bee2b1d8f1bd2b6452fba2c5e66a",
+  "publicReportHash": "7eb3f6c4421515968a307aeabc96fa4945ec85ec4970c6502db166c4071b0316",
+  "wikiSourceFingerprint": "c2cf41ec29380d85699d1af93a8f8fe4629fbe0116345afd5e96d2cf0a6f5033",
   "findings": [
     {
       "findingId": "finding.requirement.codepath.qa-and-bug-pipeline",
@@ -29,6 +29,20 @@
       "gapType": "source",
       "smallestResponsibleChange": "Verify current hands-on evidence and prepare a bounded technical demonstration if supportable.",
       "requiresOriginalSourceReview": true,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.codepath.ai-automation",
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "requirementId": "requirement.codepath.ai-automation",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "wording",
+      "smallestResponsibleChange": "Demonstrate one measured automation loop tied to delivery or QA.",
+      "requiresOriginalSourceReview": false,
       "requiresHumanApproval": true
     },
     {
@@ -85,6 +99,191 @@
       "requiresHumanApproval": true
     },
     {
+      "findingId": "finding.requirement.oti-speed-operations-789810.operating-backbone",
+      "opportunityId": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "requirementId": "requirement.oti-speed-operations-789810.operating-backbone",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations",
+        "project.kc-town-hall",
+        "project.nyc-artist-coalition"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "public-projection",
+      "smallestResponsibleChange": "Quantify a bounded budget, vendor, or dependency example where evidence permits.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-speed-operations-789810.people-operations",
+      "opportunityId": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "requirementId": "requirement.oti-speed-operations-789810.people-operations",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "project.wowlist",
+        "project.sunday-dinner-196",
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "role-context",
+      "smallestResponsibleChange": "Separate collaborator onboarding from formal employee-management claims.",
+      "requiresOriginalSourceReview": true,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-speed-operations-789810.procurement",
+      "opportunityId": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "requirementId": "requirement.oti-speed-operations-789810.procurement",
+      "classification": "true-experience-gap",
+      "wikiRecords": [
+        "project.kc-town-hall"
+      ],
+      "currentStatus": "visible-weak",
+      "gapType": "experience",
+      "smallestResponsibleChange": "Research the exact contracts, vendors, funding packets, and sign-off authority that can be stated publicly.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-product-manager-784450.product-lifecycle",
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "requirementId": "requirement.oti-product-manager-784450.product-lifecycle",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "project.callnyc",
+        "project.wowlist",
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "public-projection",
+      "smallestResponsibleChange": "Use one compact case showing Jamie's decisions across the full lifecycle.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-product-manager-784450.cross-functional",
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "requirementId": "requirement.oti-product-manager-784450.cross-functional",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "project.callnyc",
+        "project.nyc-artist-coalition",
+        "project.kc-town-hall.tired-of-tires"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "wording",
+      "smallestResponsibleChange": "Keep Jamie's role and collective credit explicit.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-product-manager-784450.data-and-kpis",
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "requirementId": "requirement.oti-product-manager-784450.data-and-kpis",
+      "classification": "true-experience-gap",
+      "wikiRecords": [
+        "project.wowlist",
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-weak",
+      "gapType": "experience",
+      "smallestResponsibleChange": "Prepare one measured product decision and state its limits.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-speed-spm-789610.business-cases",
+      "opportunityId": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "requirementId": "requirement.oti-speed-spm-789610.business-cases",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "project.kc-town-hall",
+        "project.callnyc",
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "public-projection",
+      "smallestResponsibleChange": "Present the chain from resident need through operating and architectural requirements.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-speed-spm-789610.data-systems",
+      "opportunityId": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "requirementId": "requirement.oti-speed-spm-789610.data-systems",
+      "classification": "true-experience-gap",
+      "wikiRecords": [
+        "project.wowlist",
+        "project.callnyc"
+      ],
+      "currentStatus": "visible-weak",
+      "gapType": "experience",
+      "smallestResponsibleChange": "Distinguish demonstrated data workflows from unproven enterprise data-governance depth.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-speed-spm-789610.influence",
+      "opportunityId": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "requirementId": "requirement.oti-speed-spm-789610.influence",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "project.nyc-artist-coalition",
+        "project.kc-town-hall",
+        "capability.technical-operations"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "wording",
+      "smallestResponsibleChange": "Use one City-facing decision with outcome and authority boundaries.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-pit-designer-782373.end-to-end-design",
+      "opportunityId": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "requirementId": "requirement.oti-pit-designer-782373.end-to-end-design",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "project.callnyc",
+        "project.wowlist",
+        "project.kc-town-hall.tired-of-tires"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "public-projection",
+      "smallestResponsibleChange": "Curate three cases around design decisions and tested use, not graphic output alone.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-pit-designer-782373.accessibility",
+      "opportunityId": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "requirementId": "requirement.oti-pit-designer-782373.accessibility",
+      "classification": "true-experience-gap",
+      "wikiRecords": [
+        "capability.technical-operations",
+        "project.callnyc"
+      ],
+      "currentStatus": "visible-weak",
+      "gapType": "experience",
+      "smallestResponsibleChange": "Inventory direct accessibility decisions without claiming unsupported conformance.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.oti-pit-designer-782373.design-systems",
+      "opportunityId": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "requirementId": "requirement.oti-pit-designer-782373.design-systems",
+      "classification": "true-experience-gap",
+      "wikiRecords": [
+        "project.wowlist"
+      ],
+      "currentStatus": "experience-gap",
+      "gapType": "experience",
+      "smallestResponsibleChange": "Do not infer Figma or formal design-system tenure; produce a bounded work sample if applying.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
       "findingId": "finding.requirement.oti.government-hiring-and-procurement",
       "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
       "requirementId": "requirement.oti.government-hiring-and-procurement",
@@ -95,6 +294,56 @@
       "currentStatus": "visible-weak",
       "gapType": "public-projection",
       "smallestResponsibleChange": "Do not imply procurement authority; clarify adjacent government-process experience in the application.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.uibk.studio3.architecture-degrees",
+      "opportunityId": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "requirementId": "requirement.uibk.studio3.architecture-degrees",
+      "classification": "hard-screen-gap",
+      "wikiRecords": [],
+      "currentStatus": "hard-screen",
+      "gapType": "hard-screen",
+      "smallestResponsibleChange": "Do not apply to ARCH-15927; search for adjacent roles without these credential screens.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.uibk.studio3.experimental-artistic-research",
+      "opportunityId": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "requirementId": "requirement.uibk.studio3.experimental-artistic-research",
+      "classification": "true-experience-gap",
+      "wikiRecords": [
+        "event.studio3.ai-made-me-do-it.2024"
+      ],
+      "currentStatus": "experience-gap",
+      "gapType": "experience",
+      "smallestResponsibleChange": "Treat the vocabulary as adjacent-opportunity search context, not proof of architectural research qualification.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.uibk.studio3.digital-spatial-methods",
+      "opportunityId": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "requirementId": "requirement.uibk.studio3.digital-spatial-methods",
+      "classification": "source-needs-close-reading",
+      "wikiRecords": [],
+      "currentStatus": "source-needed",
+      "gapType": "source",
+      "smallestResponsibleChange": "Inventory only exact, inspectable media-installation and spatial-computing evidence before using this language elsewhere.",
+      "requiresOriginalSourceReview": true,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.uibk.studio3-grants-teaching-administration",
+      "opportunityId": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "requirementId": "requirement.uibk.studio3-grants-teaching-administration",
+      "classification": "true-experience-gap",
+      "wikiRecords": [],
+      "currentStatus": "source-needed",
+      "gapType": "experience",
+      "smallestResponsibleChange": "Keep civic grants, facilitation, and project administration distinct from university grant management and formal academic supervision.",
       "requiresOriginalSourceReview": false,
       "requiresHumanApproval": true
     },
@@ -111,6 +360,20 @@
       "gapType": "none",
       "smallestResponsibleChange": "Keep the public method legible without exposing the protected lead.",
       "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.protected-memory.focused-sprint",
+      "opportunityId": "opportunity.protected.source-backed-memory-consulting.2026",
+      "requirementId": "requirement.protected-memory.focused-sprint",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "method.source-backed-team-memory"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "role-context",
+      "smallestResponsibleChange": "Do not imply that a sprint was accepted, funded, or delivered.",
+      "requiresOriginalSourceReview": true,
       "requiresHumanApproval": true
     }
   ],

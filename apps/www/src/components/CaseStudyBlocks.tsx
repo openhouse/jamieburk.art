@@ -1,7 +1,7 @@
-import Image from "next/image";
 import type { ReactNode } from "react";
 import { JBCard } from "@/components/JBCard";
 import { TagList } from "@/components/TagList";
+import { WorkCoverMedia } from "@/components/WorkCoverMedia";
 import type { WorkMeta } from "@/types/work";
 
 export function AtAGlance({
@@ -82,15 +82,12 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
                 key={artifact.title}
               >
                 <a className="block" href={artifact.media.href}>
-                  <Image
+                  <WorkCoverMedia
                     alt={artifact.media.alt}
-                    className={`aspect-[3/2] w-full bg-white ${
-                      artifact.media.fit === "contain"
-                        ? "object-contain"
-                        : "object-cover object-top"
-                    }`}
+                    fit={artifact.media.fit}
                     height={800}
-                    loading="eager"
+                    objectPosition="center top"
+                    presentation={artifact.media.presentation}
                     sizes="(min-width: 768px) 66vw, 100vw"
                     src={artifact.media.src}
                     width={1200}

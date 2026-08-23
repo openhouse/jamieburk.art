@@ -1,10 +1,12 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Technical Operations
 
-**Source commit:** `747605e3c34a6426c027a1c85ff82c3a6275ac36`
-**Generation time:** 2026-08-14T11:32:41-04:00
-**Source fingerprint:** `e4fc52c24bbf54e2f4cd03c7f545b8eb1d0af9c4a3ed28af19991b37897fcb60`
+**Source commit:** `ccddbf75a1e1a3ab293c5dd067e1f30a5b9a6855`
+**Generation time:** 2026-08-22T21:22:19-04:00
+**Source fingerprint:** `c2cf41ec29380d85699d1af93a8f8fe4629fbe0116345afd5e96d2cf0a6f5033`
 
+- [NYC OTI Senior Product Manager 782366 application milestone](../../applications/nyc-oti-senior-product-manager-782366.md) - `prose_link` (markdown)
+- [NYC OTI Senior Product Manager 782366 application milestone](../../applications/nyc-oti-senior-product-manager-782366.md) - `related_to` (frontmatter)
 - [NYC Artist Coalition application brief](../../applications/nycac-civic-product-operations.md) - `related_to` (frontmatter)
 - [WOW List - Senior Product Manager role-fit brief](../../applications/wowlist-senior-product-manager-oti-782366.md) - `prose_link` (markdown)
 - [WOW List - Senior Product Manager role-fit brief](../../applications/wowlist-senior-product-manager-oti-782366.md) - `related_to` (frontmatter)
@@ -15,14 +17,16 @@
 - [Knowledge Wiki pilot map](../../indexes/pilot.md) - `prose_link` (markdown)
 - [Knowledge Wiki pilot map](../../indexes/pilot.md) - `related_to` (frontmatter)
 - [Jamie at Work](../../methods/jamie-at-work.md) - `supports` (frontmatter)
-- [Source-Backed Team Memory](../../methods/source-backed-team-memory.md) - `prose_link` (markdown)
-- [Source-Backed Team Memory](../../methods/source-backed-team-memory.md) - `related_to` (frontmatter)
+- [Knowledge Wiki Graph / Source-Backed Team Memory](../../methods/source-backed-team-memory.md) - `prose_link` (markdown)
+- [Knowledge Wiki Graph / Source-Backed Team Memory](../../methods/source-backed-team-memory.md) - `related_to` (frontmatter)
 - [ACLU - Senior Project Manager, Learning and Project Solutions](../../opportunities/aclu-senior-project-manager.md) - `related_to` (frontmatter)
 - [Asana - AI Implementation Manager, Service Management](../../opportunities/asana-ai-implementation.md) - `related_to` (frontmatter)
 - [Benepass - Product Operations Manager](../../opportunities/benepass-product-operations.md) - `related_to` (frontmatter)
 - [CodePath - Senior Program Manager, Claude Corps](../../opportunities/codepath-claude-corps.md) - `related_to` (frontmatter)
 - [CodePath - Engineering Project Manager](../../opportunities/codepath-engineering-project-manager.md) - `related_to` (frontmatter)
+- [NYC OTI - Product Manager 784450](../../opportunities/oti-product-manager-784450.md) - `related_to` (frontmatter)
 - [NYC OTI - PIT Crew Senior Product Manager 782366](../../opportunities/oti-senior-product-manager-782366.md) - `related_to` (frontmatter)
+- [NYC OTI - SPEED Operations Manager 789810](../../opportunities/oti-speed-operations-manager-789810.md) - `related_to` (frontmatter)
 - [NYC OTI - Technical Operations Manager 782369](../../opportunities/oti-technical-operations.md) - `related_to` (frontmatter)
 - [PermitFlow - Product Operations Manager](../../opportunities/permitflow-product-operations.md) - `related_to` (frontmatter)
 - [Protected source-backed team-memory consulting lead](../../opportunities/source-backed-team-memory.md) - `related_to` (frontmatter)

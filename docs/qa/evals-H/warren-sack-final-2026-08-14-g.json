@@ -1,0 +1,21 @@
+{
+  "evaluator": "Fictionalized Warren Sack analytical lens only. I am not Warren Sack, do not speak for him, and this is not an endorsement.",
+  "reviewerId": "sack-g-2026-08-14-8b816ff6",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "8b816ff698d986d4753c0d9c694edcd8c118bdc2929d136ccbbdd5ccb32651e6",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The homepage states Listen, Map, Build, Document, Transfer and presents five bounded projects with direct case links.",
+    "About states the fuller recursive method and applies it consistently to HJE, FairRentNYC, and Sunday Dinner and 196.",
+    "HJE reconstructs customer friction into bounded requirements, implementation, verification, reusable patterns, ownership, and next actions.",
+    "FairRentNYC traces listening and priority setting into shared models, campaign interfaces, public participation, source maps, action trackers, and follow-through.",
+    "CallNYC traces constituent-service records through information architecture, issue pathways, interface delivery, iteration, documentation, and limitations.",
+    "The site does not claim sole movement causation, official CallNYC status, peer-reviewed research, production deployment from coursework, structural identity, or current Max/Jitter proficiency."
+  ],
+  "gaps": [],
+  "safety_findings": [],
+  "recommendation": "PASS. The recurring socio-technical method is reconstructable across at least three bounded projects within two clicks.",
+  "provenance": {"provider":"independent-codex-review","reviewMode":"public-web-only independent holdout","reviewedAt":"2026-08-14","filesEdited":false}
+}

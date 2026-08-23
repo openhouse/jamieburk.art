@@ -1,9 +1,10 @@
 {
   "version": 1,
   "id": "oti-senior-product-application-readiness",
-  "title": "OTI Senior Product Manager application readiness",
-  "objective": "Make Jamie's accountable product leadership legible to a public-web-only hiring reader without exposing private company records, weakening collective credit, or implying civil-service eligibility.",
+  "title": "OTI Senior Product Manager application lifecycle readiness",
+  "objective": "Make Jamie's accountable product leadership and application-learning lifecycle legible without exposing private confirmation artifacts, weakening collective credit, or implying civil-service eligibility, an interview, or a hiring outcome.",
   "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+  "applicationMilestonePath": "docs/knowledge-bank/applications/nyc-oti-senior-product-manager-782366.md",
   "publicRoutes": [
     "/",
     "/work/wowlist",
@@ -29,9 +30,22 @@
     {
       "id": "qualification-boundary",
       "description": "Product fit does not become a claim of civil-service eligibility, historical accessibility compliance, or guaranteed hiring."
+    },
+    {
+      "id": "submission-milestone-boundary",
+      "description": "The Wiki records Jamie-authorized, date-level submission status while keeping the confirmation capture, form contents, applicant identifiers, and correspondence outside the public repository."
+    },
+    {
+      "id": "pending-outcome-boundary",
+      "description": "Submission remains distinct from civil-service eligibility, employer review, interview, offer, appointment, and success in role."
+    },
+    {
+      "id": "post-submission-learning-loop",
+      "description": "The milestone preserves reusable workflow learning and concrete next actions for confirmation, interview preparation, truthful qualification evidence, follow-up, and later outcome review."
     }
   ],
   "humanAcceptanceQuestion": "Under an explicitly fictionalized public-source lens, would the reader hire Jamie for NYC OTI Senior Product Manager Job ID 782366?",
   "humanGate": "A deterministic pass establishes truthful public evidence coverage only. The named-reader gate remains a separate public-web-only human or independent-model judgment.",
-  "latestRunPath": "evals/knowledge-wiki/runs/2026-08-13-oti-product-application-hillclimb.json"
+  "latestRunPath": "evals/knowledge-wiki/runs/2026-08-13-oti-product-application-hillclimb.json",
+  "latestMilestoneRunPath": "evals/knowledge-wiki/runs/2026-08-14-oti-application-milestone.json"
 }

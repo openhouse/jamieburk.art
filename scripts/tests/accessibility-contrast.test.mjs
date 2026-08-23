@@ -57,3 +57,14 @@ test("the lowest shared ink opacity remains AA on paper", () => {
   assert.ok(ink && paper);
   assert.ok(contrast(blend(ink, paper, 0.62), paper) >= 4.5);
 });
+
+test("the Knowledge Wiki photo credit and numbered method steps remain AA", () => {
+  const lab = readFileSync(
+    path.join(repoRoot, "apps/www/src/app/lab/source-backed-team-memory/page.tsx"),
+    "utf8"
+  );
+  assert.ok(lab.includes('className="mt-1 block text-jb-ink/70"'));
+  assert.ok(lab.includes('className="font-semibold tabular-nums text-jb-blue"'));
+  assert.ok(!lab.includes('className="mt-1 block text-jb-ink/60"'));
+  assert.ok(!lab.includes('className="font-semibold tabular-nums text-jb-ochre"'));
+});

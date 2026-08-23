@@ -1,0 +1,27 @@
+{
+  "evalId": "nyc-jobs-opportunity-monitor-v1",
+  "asOf": "2026-08-20",
+  "sourceRowsUpdatedAt": "2026-08-18T19:01:20.000Z",
+  "pass": true,
+  "census": {
+    "sourceRows": 2760,
+    "uniqueJobIds": 1426,
+    "deterministicallyEligible": 379,
+    "strongMatches": 6
+  },
+  "checks": [
+    { "id": "source-state-is-current", "pass": true },
+    { "id": "strong-match-thresholds-hold", "pass": true },
+    { "id": "automatic-intake-remains-provisional", "pass": true },
+    { "id": "deterministic-gates-precede-model-review", "pass": true },
+    { "id": "feed-absence-cannot-change-lifecycle", "pass": true },
+    { "id": "daily-email-recipient-and-authority-are-governed", "pass": true },
+    { "id": "snapshot-counts-are-coherent", "pass": true }
+  ],
+  "deliveryActivation": {
+    "state": "awaiting-explicit-provider-approval-and-repository-secrets",
+    "recipient": "jamie@ohai.us",
+    "proposedProvider": "resend",
+    "required": ["RESEND_API_KEY", "JOB_DIGEST_FROM"]
+  }
+}

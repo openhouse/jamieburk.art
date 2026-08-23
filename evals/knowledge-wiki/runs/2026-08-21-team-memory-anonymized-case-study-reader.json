@@ -1,0 +1,44 @@
+{
+  "id": "team-memory-anonymized-case-study-reader-2026-08-21",
+  "schemaVersion": 1,
+  "status": "complete",
+  "evaluatedAt": "2026-08-21T13:06:26.000Z",
+  "reviewMethod": "authoring-model-source-informed-self-review",
+  "independentReview": false,
+  "caseStudySha256": "9fa08f528fd2bd68a9b67b9401938fba0ce114a6a5e0ac456dcd8dacac258ecb",
+  "scenarioSha256": "8cc1ffaf58ab648899870fe0e1579d88a33d22b105a83d172bc73ee6236b519f",
+  "promptSha256": "5f30a5e02689104217f730201b1d18b35cb51697e6f0da85986a0c74bc7dcee6",
+  "promptHashBasis": "authoring-model-source-informed-self-review + promptVersion + publicSafeScenario + caseStudySource",
+  "promptVersion": "team-memory-anonymized-case-study-reader-v1",
+  "privateSourceCount": 3,
+  "actualPersonParticipated": false,
+  "sourceParticipantReviewed": false,
+  "result": {
+    "readerId": "reader.anonymized-team-knowledge-case-study",
+    "verdict": "pass",
+    "prospectiveSponsorAccuracy": "pass",
+    "jamieAccuracy": "pass",
+    "voiceFidelity": "pass",
+    "anonymizationSafety": "pass",
+    "rationale": "The packet preserves the central sequence across the source family: practical product questions sharpen Jamie's wide-ranging research; a later organizational need makes that research newly concrete; Jamie's civic and archival operating practice becomes relevant to product rationale, decisions, and onboarding; and mutual interest stops short of authorization or completed work. The two perspectives retain genuinely different stakes. The voice profile captures generous restatement, persistent plain questions, associative ethical reasoning, and a return to practical decisions while explicitly refusing impersonation. Identifying names, employers, products, dates, locations, contacts, exact organizational counts, and private quotations are withheld.",
+    "strengths": [
+      "The prospective-sponsor account preserves both intellectual affinity and product discipline, including the movement from abstract exploration to a focused organizational use case.",
+      "Jamie's account makes civic facilitation, source custody, coalition memory, and a need for sustainable compensated work part of one coherent professional story.",
+      "The voice profile distinguishes short conversational tracking from longer associative reasoning and connects ethical aspiration to product, economic, and compensation choices.",
+      "The packet repeatedly preserves the lack of an offer, budget approval, contract, delivered pilot, adoption, or endorsement.",
+      "The index makes automated-transcript, corrected-working-transcript, interpretation, impersonation, and human-review limits clear before a reader enters the case study."
+    ],
+    "accuracyRisks": [
+      "The corrected working source was not certified against native audio, so cadence and exact emphasis remain less certain than the underlying themes and sequence.",
+      "The prospective-sponsor narrative organizes exploratory conversation into a cleaner arc than spontaneous speech would ordinarily produce.",
+      "Withholding employer, product, and network details necessarily removes some of the source context that made particular ethical concerns concrete.",
+      "A call-based corpus can support a conversational voice and reasoning profile more strongly than a universal account of authored prose."
+    ],
+    "constructiveCritique": "The packet is intentionally comprehensive and therefore better suited to a research and proposal archive than to immediate publication as a portfolio page. If projected publicly later, compose a much shorter case-study rendering from these records rather than trimming away the distinctions among source status, commercial state, and the two participants' motives. The first-person sponsor account should also retain its prominent interpretation notice wherever it travels.",
+    "validateNext": "Ask Jamie to review the Jamie-perspective document for omissions or misplaced emphasis, then invite the actual source participant to review the sponsor-perspective and conversational-voice documents privately. Record corrections without publishing identity, and do not treat modeled agreement as that person's accuracy judgment, approval, endorsement, or publication permission.",
+    "actualPersonParticipated": false,
+    "sourceParticipantReviewed": false,
+    "boundary": "This is a source-informed authoring-model self-review, not an independent evaluation. The actual source participant did not participate, review the packet, approve it, or endorse Jamie. The pass is not that person's accuracy judgment, approval, endorsement, budget authorization, contract, or publication permission."
+  },
+  "boundary": "This is an advisory source-informed authoring-model self-review. The actual source participant did not participate, review, approve, or endorse the packet. Human accuracy and publication review remain pending."
+}

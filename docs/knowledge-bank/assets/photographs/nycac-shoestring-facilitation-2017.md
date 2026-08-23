@@ -5,19 +5,20 @@ kind: asset
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-13
-review_by: 2027-02-13
+last_reviewed: 2026-08-20
+review_by: 2027-02-20
 canonical_path: docs/knowledge-bank/assets/photographs/nycac-shoestring-facilitation-2017.md
-summary: Public-safe record for Paul Mossine's July 24, 2017 photograph of Jamie Burkart facilitating a coalition working session at Shoestring Press.
+summary: Public-safe record for a July 24, 2017 NYC Artist Coalition photograph of Jamie Burkart facilitating a coalition working session at Shoestring Press.
 media_type: photograph
 rights_state: cleared
-creator_state: resolved
+creator_state: unresolved
 consent_state: cleared
 represented_person_review: cleared-for-bounded-portfolio-use
 public_display_status: cleared
 projection:
   status: active
   surfaces:
+    - /
     - /work/fair-rent-nyc
 public_derivatives:
   - id: derivative.photo.nycac-shoestring-facilitation.v1
@@ -29,9 +30,9 @@ public_derivatives:
     metadata_stripped: true
     status: staging-candidate
 statements:
-  - id: statement.photo.nycac-shoestring.creator.v1
-    property: creator
-    value: person.paul-mossine
+  - id: statement.photo.nycac-shoestring.courtesy-credit.v1
+    property: display_credit
+    value: Photo courtesy of NYC Artist Coalition.
     rank: preferred
     confidence: high
     references:
@@ -71,6 +72,9 @@ visible_observations:
 interpretation_boundary: The photograph supports the working-session setting and visible facilitation. It does not preserve exact remarks or independently prove agreement, endorsement, later action, or policy causation.
 relations:
   - type: projected_to
+    target: projection.photo.home.screen-room-shoestring
+    href: ../../projections/photography/home-screen-room-shoestring.md
+  - type: projected_to
     target: projection.photo.fair-rent-nyc.shoestring-facilitation
     href: ../../projections/photography/fair-rent-nyc-shoestring-facilitation.md
   - type: uses_source
@@ -79,9 +83,6 @@ relations:
   - type: uses_source
     target: source.permission.jamie-portfolio-album.2026-08-13
     href: ../../sources/permissions/jamie-portfolio-album-2026-08-13.md
-  - type: collaborated_with
-    target: person.paul-mossine
-    href: ../../people/paul-mossine.md
 ---
 
 # Shoestring Press coalition working session, 2017
@@ -90,9 +91,10 @@ relations:
 
 ## Current public use
 
-The metadata-stripped derivative appears in the Fair Rent NYC case study as
-the working-alignment image in a three-part participation sequence. Paul
-Mossine is credited as photographer.
+The metadata-stripped derivative appears on the homepage in a field-and-system
+pair and in the Fair Rent NYC case study as the working-alignment image in a
+three-part participation sequence. The public display credit is "Photo courtesy
+of NYC Artist Coalition."
 
 ## Evidence boundary
 
