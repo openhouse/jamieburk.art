@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "runId": "hiring-public-f010c9f4a024",
-  "generatedAt": "2026-08-22T20:18:05-04:00",
-  "candidateSha": "f010c9f4a0247b6f6d91d5f252db216b7e1e6d4a",
+  "runId": "hiring-public-e3a66471f179",
+  "generatedAt": "2026-08-22T21:07:04-04:00",
+  "candidateSha": "e3a66471f179951e52de2fac6d345c2725ac929f",
   "candidatePathsClean": true,
   "portfolioSnapshotHash": "c334adb62cddea591773b5ae4015d8019ac7c65c63d5cd76d9e623902ee84c64",
-  "roleContextHash": "04895a48dc0279f4b63ed315f3faa0c5c0a75ac2909429cc8db09343ec961fa2",
+  "roleContextHash": "515a605ba2783212dbbd5b12efe516854f0e7cc3c202a7bc70b99c824986317d",
   "readerContextHash": "c38d39fbc7e5ee90abc8467c726d44efa08026615cfec9ac41c051142e2ac702",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
   "publicSafety": {
@@ -886,7 +886,7 @@
     {
       "id": "opportunity.protected.source-backed-memory-consulting.2026",
       "title": "Protected source-backed team-memory consulting lead",
-      "roleContextHash": "9848e2efa633ed3c3f133399889b97837294605fe8577be24f653e79ec58c85d",
+      "roleContextHash": "0fe2970b0714e5286b8d7b3900a1ee9a273797d53946627a3b281525e9533043",
       "live": false,
       "fresh": false,
       "hardScreenBlocked": false,
