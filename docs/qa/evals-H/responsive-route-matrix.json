@@ -1,11 +1,10 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-08-22T21:40:19.556Z",
-  "baseUrl": "http://127.0.0.1:3212",
-  "publicSurfaceFingerprint": "1e598e6f6a7482012f43830dafb79011dbc5da057a3343cd0d8c90c79f0ed103",
+  "checkedAt": "2026-08-23T00:06:28.329Z",
+  "baseUrl": "http://127.0.0.1:3013",
+  "publicSurfaceFingerprint": "3c1e38b991daebd8088a479d7636a0240cc9016cbc723c90f57edd230ed301b6",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 152,
-  "requestFailurePolicy": "Exclude canceled speculative Next.js RSC prefetches (net::ERR_ABORTED with an _rsc query); retain every other failed request.",
   "routes": [
     "/",
     "/work",
@@ -882,7 +881,7 @@
     "nonSuccessResponses": 0,
     "invalidHeadingOrLandmarkRows": 0,
     "lazyImagesObserved": 112,
-    "unloadedImagesBeforeScroll": 76,
+    "unloadedImagesBeforeScroll": 75,
     "lazyImageFollowUpPerformed": true,
     "allImagesLoadedAfterScroll": true
   },
@@ -901,8 +900,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionAndCreditSeparated": true,
-        "captionOverlapsPrimaryCopy": false
+        "captionOverlapsPrimaryCopy": false,
+        "captionAndCreditSeparated": true
       },
       {
         "viewport": 375,
@@ -913,8 +912,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionAndCreditSeparated": true,
-        "captionOverlapsPrimaryCopy": false
+        "captionOverlapsPrimaryCopy": false,
+        "captionAndCreditSeparated": true
       },
       {
         "viewport": 768,
@@ -925,8 +924,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionAndCreditSeparated": true,
-        "captionOverlapsPrimaryCopy": false
+        "captionOverlapsPrimaryCopy": false,
+        "captionAndCreditSeparated": true
       },
       {
         "viewport": 1280,
@@ -937,14 +936,14 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionAndCreditSeparated": true,
-        "captionOverlapsPrimaryCopy": false
+        "captionOverlapsPrimaryCopy": false,
+        "captionAndCreditSeparated": true
       }
     ],
     "passed": true
   },
   "navigationReview": {
-    "checkedAt": "2026-08-22T21:40:19.556Z",
+    "checkedAt": "2026-08-23T00:06:28.329Z",
     "startRoute": "/",
     "destinationRoute": "/about",
     "startHttpStatus": 200,
@@ -959,12 +958,12 @@
       "height": 900
     },
     "renderedScreenshot": {
-      "sha256": "938773c9f28a3dd5b6e69f86f2251562cb4785740f2cb002eea8d0892d90847d",
-      "byteLength": 663325,
+      "sha256": "bbd196488b6ce79c187569c797b29762d6713b4cdf5b668d60b80596067cb082",
+      "byteLength": 664120,
       "width": 1280,
       "fullPage": true,
       "retainedInPublicGit": false,
-      "reviewBoundary": "The temporary rendered screenshot was inspected for this exact public page and is represented in public Git only by its content hash and bounded observations."
+      "reviewBoundary": "The temporary rendered screenshot was inspected for this exact public page and is represented in public Git only by its content hash and scoped observations."
     },
     "pass": true
   }

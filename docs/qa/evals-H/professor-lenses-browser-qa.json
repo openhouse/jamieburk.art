@@ -1,8 +1,8 @@
 {
   "reportVersion": 6,
-  "checkedAt": "2026-08-22T21:39:49.953Z",
+  "checkedAt": "2026-08-23T01:06:07.215Z",
   "baseUrl": "http://127.0.0.1:3212",
-  "publicSurfaceFingerprint": "1e598e6f6a7482012f43830dafb79011dbc5da057a3343cd0d8c90c79f0ed103",
+  "publicSurfaceFingerprint": "3c1e38b991daebd8088a479d7636a0240cc9016cbc723c90f57edd230ed301b6",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 152,
   "captureMethod": "Fresh Playwright Chromium viewport captures of the exact Node 26 production build, paired with the complete 60-row responsive accessibility matrix.",

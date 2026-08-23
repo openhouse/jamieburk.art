@@ -5,7 +5,7 @@ kind: opportunity
 status: governed-open
 visibility: summary-only
 sensitivity: high
-last_reviewed: 2026-08-21
+last_reviewed: 2026-08-22
 review_by: 2026-09-10
 canonical_path: docs/knowledge-bank/opportunities/source-backed-team-memory.md
 summary: Public-safe opportunity metadata for a contingent consulting lead without collaborator, company, pricing, or correspondence disclosure.
@@ -28,12 +28,14 @@ confirmed_facts:
   - A protected June 2026 source family records a contingent paid consulting discussion about team knowledge, decision context, and onboarding.
   - Jamie prepared a focused discovery and prototype proposal after the discussion.
   - The protected review did not recover acceptance, rejection, budget approval, a contract, or completed work.
+  - A protected August 22 follow-up records warm re-engagement and interest in a future conversation.
 inferences:
   - The discussion is best classified as a genuine but unclosed prospective consulting opportunity.
 unknowns:
   - Current budget authority, organizational priority, and timing.
   - Whether the proposal received a substantive response outside the focused source review.
   - Whether any engagement will be scoped, accepted, contracted, or performed.
+  - Whether either shared link was opened or reviewed, whether the current proposal was understood, and whether professional or hiring interest exists now.
 hard_screens:
   - id: screen.protected-memory.budget-authority
     text: A budget owner must authorize compensated work before any engagement exists.
@@ -127,6 +129,12 @@ protected source review supports a genuine but unclosed prospective consulting
 lead. It does not establish an offer, acceptance, rejection, contract, client
 adoption, deployment, completed work, or market validation.
 
+An August 22 progress update received a warm acknowledgment and an invitation
+to speak again. That is a meaningful relationship signal and nothing more: it
+does not establish that either shared link was opened, that the page or proposal
+was reviewed, or that budget, hiring intent, acceptance, or endorsement exists.
+The appropriate next step is a human conversation when timing permits.
+
 ## Public-safe core
 
 A focused lab method for source-backed team memory: reviewable,
@@ -152,3 +160,5 @@ reasoning, relationship, and conversational character only when it maintains
 the source and commercial limits recorded here.
 Do not imply production SaaS, company-wide deployment, a completed pilot,
 commercial acceptance, or endorsement.
+Do not treat a warm private response as page-owner approval, collaborator
+review, hiring-reader acceptance, or evidence that the public proposal worked.

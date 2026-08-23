@@ -28,6 +28,7 @@ import { nycacSourceExpansionII } from "./nycac-source-expansion-ii.ts";
 import { proofCoverageTargets } from "./proof-coverage.ts";
 import { knowledgeBankSchema } from "./schema.ts";
 import { socialMediaProductionJuly2026 } from "./social-media-production-2026-07.ts";
+import { teamMemoryResponseAugust2026 } from "./team-memory-response-2026-08.ts";
 import { urbanhermitSocialPopulationJuly2026 } from "./urbanhermit-social-population-2026-07.ts";
 import { wowListFacebookPostKnowledge } from "./wowlist-facebook-posts-2026-07.ts";
 import { wowListSocialPopulationJuly2026 } from "./wowlist-social-population-2026-07.ts";
@@ -63,6 +64,7 @@ const knowledgeBankInput = {
     ...hjeClientChronologyAugust2026.intakeItems,
     ...knowledgeWikiGraphEcosystemAugust2026.intakeItems,
     ...socialMediaProductionJuly2026.intakeItems,
+    ...teamMemoryResponseAugust2026.intakeItems,
     ...urbanhermitSocialPopulationJuly2026.intakeItems,
     ...wowListFacebookPostKnowledge.intakeItems,
     ...wowListSocialPopulationJuly2026.intakeItems,
@@ -116,6 +118,7 @@ const knowledgeBankInput = {
     ...hjeClientChronologyAugust2026.observations,
     ...knowledgeWikiGraphEcosystemAugust2026.observations,
     ...socialMediaProductionJuly2026.observations,
+    ...teamMemoryResponseAugust2026.observations,
     ...urbanhermitSocialPopulationJuly2026.observations,
     ...wowListFacebookPostKnowledge.observations,
     ...wowListSocialPopulationJuly2026.observations,
@@ -273,6 +276,7 @@ const knowledgeBankInput = {
     ...hjeClientChronologyAugust2026.sources,
     ...knowledgeWikiGraphEcosystemAugust2026.sources,
     ...socialMediaProductionJuly2026.sources,
+    ...teamMemoryResponseAugust2026.sources,
     ...urbanhermitSocialPopulationJuly2026.sources,
     ...wowListFacebookPostKnowledge.sources,
     ...wowListSocialPopulationJuly2026.sources,
@@ -423,6 +427,7 @@ const knowledgeBankInput = {
     ...historicalKnowledge.claims,
     ...hjeClientChronologyAugust2026.claims,
     ...socialMediaProductionJuly2026.claims,
+    ...teamMemoryResponseAugust2026.claims,
     ...urbanhermitSocialPopulationJuly2026.claims,
     ...wowListFacebookPostKnowledge.claims,
     ...wowListSocialPopulationJuly2026.claims,
@@ -495,6 +500,7 @@ const knowledgeBankInput = {
     ...historicalKnowledge.researchInquiries,
     ...hjeClientChronologyAugust2026.researchInquiries,
     ...socialMediaProductionJuly2026.researchInquiries,
+    ...teamMemoryResponseAugust2026.researchInquiries,
     ...urbanhermitSocialPopulationJuly2026.researchInquiries,
     ...wowListFacebookPostKnowledge.researchInquiries,
     ...wowListSocialPopulationJuly2026.researchInquiries,

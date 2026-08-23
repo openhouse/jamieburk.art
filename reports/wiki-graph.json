@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-22T18:17:26-04:00",
   "sourceCommit": "8708002c18412ddbc04562a2ae42315b38fd2da4",
-  "sourceFingerprint": "c132668d80165f50b7c29776eaa8c2405b2618b0ba13f16c6d111dc3a1c1c892",
+  "sourceFingerprint": "c2cf41ec29380d85699d1af93a8f8fe4629fbe0116345afd5e96d2cf0a6f5033",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -4051,7 +4051,7 @@
       "sensitivity": "high",
       "summary": "Public-safe opportunity metadata for a contingent consulting lead without collaborator, company, pricing, or correspondence disclosure.",
       "aliases": [],
-      "lastReviewed": "2026-08-21",
+      "lastReviewed": "2026-08-22",
       "reviewBy": "2026-09-10"
     },
     {
@@ -6071,7 +6071,7 @@
       "sensitivity": "high",
       "summary": "Metadata-only record for a focused private review of an exploratory source-backed team-memory consulting lead.",
       "aliases": [],
-      "lastReviewed": "2026-08-21",
+      "lastReviewed": "2026-08-22",
       "reviewBy": "2026-11-10"
     },
     {
