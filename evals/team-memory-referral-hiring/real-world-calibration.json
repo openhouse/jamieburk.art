@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "team-memory-referral-response-calibration-2026-08-22",
+  "observedAt": "2026-08-22",
+  "sourceBoundary": {
+    "governedSourceId": "source.protected.source-backed-memory-opportunity.2026",
+    "minimumNecessaryMetadataOnly": true,
+    "rawMessagePersisted": false,
+    "personalCircumstancesPersisted": false,
+    "participantIdentityPersisted": false,
+    "companyIdentityPersisted": false,
+    "inputToAdvisoryModel": false
+  },
+  "observedState": {
+    "responseReceived": "observed",
+    "positiveReception": "observed",
+    "interestInReconnecting": "observed",
+    "pageOpened": "not-observed",
+    "proposalRead": "not-observed",
+    "needQualified": "not-observed",
+    "budgetAuthority": "unknown",
+    "engagementAuthorized": "not-observed",
+    "hiringDecision": "not-observed"
+  },
+  "interpretation": "The response supports relational warmth, recognition of the team-memory framing, and interest in another conversation. It does not establish portfolio readership, proposal evaluation, a qualified organizational need, budget authority, an authorized engagement, or a hiring decision.",
+  "evalConsequences": [
+    "Keep the fictionalized hiring result labeled as an uncalibrated advisory simulation rather than a prediction.",
+    "Treat conversation reopened as the next real-world state; do not advance the opportunity to qualified, funded, authorized, or hired.",
+    "Use the operating-pressure signal only to test whether the method begins with diagnosis and stabilization before durable memory work.",
+    "Keep the response body and all personal circumstances outside repository artifacts, public surfaces, and advisory-model packets."
+  ]
+}

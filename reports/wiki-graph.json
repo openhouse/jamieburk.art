@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-22T10:59:43-04:00",
-  "sourceCommit": "cf640a1b44c8256a731c6984dd48063321ce4e07",
-  "sourceFingerprint": "c8e52bba9b2ded2a0e379d3dfc2d79e57ed9060ca53e3f5de5f80dba5af238ac",
+  "generatedAt": "2026-08-22T17:55:45-04:00",
+  "sourceCommit": "84094a969e63b017bf703592c70aebe929f7351d",
+  "sourceFingerprint": "aad5e8ce7f9fa3fc45b4e6e7e9dd1ffe71b82b50575bba55ff2469048eee6fd8",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3830,7 +3830,7 @@
       "sensitivity": "low",
       "summary": "A federated, governed practice for connecting project meaning, evidence, source custody, evaluations, human review, and audience-specific projections.\n",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
+      "lastReviewed": "2026-08-22",
       "reviewBy": "2027-01-18"
     },
     {
@@ -4064,7 +4064,7 @@
       "sensitivity": "high",
       "summary": "Public-safe opportunity metadata for a contingent consulting lead without collaborator, company, pricing, or correspondence disclosure.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
+      "lastReviewed": "2026-08-22",
       "reviewBy": "2026-09-10"
     },
     {
@@ -5941,7 +5941,7 @@
       "sensitivity": "high",
       "summary": "Metadata-only record for a focused private review of an exploratory source-backed team-memory consulting lead.",
       "aliases": [],
-      "lastReviewed": "2026-08-21",
+      "lastReviewed": "2026-08-22",
       "reviewBy": "2026-11-10"
     },
     {
@@ -22790,7 +22790,7 @@
       "toPath": "docs/knowledge-bank/capabilities/technical-operations.md",
       "to": "capability.technical-operations",
       "fragment": null,
-      "line": 71,
+      "line": 78,
       "kind": "link"
     },
     {
@@ -22799,7 +22799,7 @@
       "toPath": "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/01-prospective-collaborator-perspective.md",
       "to": "case-study.anonymized-team-memory.prospective-collaborator-perspective",
       "fragment": null,
-      "line": 78,
+      "line": 85,
       "kind": "link"
     },
     {
@@ -22808,7 +22808,7 @@
       "toPath": "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/02-jamie-perspective.md",
       "to": "case-study.anonymized-team-memory.jamie-perspective",
       "fragment": null,
-      "line": 80,
+      "line": 87,
       "kind": "link"
     },
     {
@@ -22817,7 +22817,7 @@
       "toPath": "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/03-prospective-collaborator-voice.md",
       "to": "case-study.anonymized-team-memory.prospective-collaborator-voice",
       "fragment": null,
-      "line": 81,
+      "line": 88,
       "kind": "link"
     },
     {

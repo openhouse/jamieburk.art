@@ -14,6 +14,11 @@
     "privateCorrespondenceAccess": false,
     "rule": "The advisory model receives only the two anonymized interpretation artifacts and browser-visible public surfaces reached from the team-memory page. It receives no source tree, raw call, private identity, company identity, correspondence, or protected locator."
   },
+  "realWorldCalibration": {
+    "path": "evals/team-memory-referral-hiring/real-world-calibration.json",
+    "inputToAdvisoryModel": false,
+    "rule": "A later private response calibrates the evidence-state ladder but is not added to the advisory packet. Positive reception and interest in reconnecting do not establish page readership, proposal evaluation, budget, authorization, or hiring."
+  },
   "browser": {
     "startRoute": "/lab/source-backed-team-memory",
     "allowedRoutes": [

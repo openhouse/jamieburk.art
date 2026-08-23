@@ -5,14 +5,14 @@ kind: opportunity
 status: governed-open
 visibility: summary-only
 sensitivity: high
-last_reviewed: 2026-08-20
+last_reviewed: 2026-08-22
 review_by: 2026-09-10
 canonical_path: docs/knowledge-bank/opportunities/source-backed-team-memory.md
 summary: Public-safe opportunity metadata for a contingent consulting lead without collaborator, company, pricing, or correspondence disclosure.
 canonical_url: https://jamieburk.art/lab/source-backed-team-memory
 source_type: protected-metadata
 opportunity_status: conditional
-verified_at: 2026-08-10
+verified_at: 2026-08-22
 portfolio_routes:
   - /work/technical-operations
   - /lab/source-backed-team-memory
@@ -27,12 +27,14 @@ discovery_terms:
 confirmed_facts:
   - A protected June 2026 source family records a contingent paid consulting discussion about preserving useful ideas, decision context, product reasoning, and onboarding knowledge through human-correctable practices.
   - Jamie prepared a focused discovery and prototype proposal after the discussion.
-  - The protected review did not recover acceptance, rejection, budget approval, a contract, or completed work.
+  - A later public-safe follow-up received a positive response and interest in reconnecting.
+  - No offer, acceptance, budget approval, contract, or completed work was established.
 inferences:
   - The discussion is best classified as a genuine but unclosed prospective consulting opportunity.
 unknowns:
   - Current budget authority, organizational priority, and timing.
-  - Whether the proposal received a substantive response outside the focused source review.
+  - Whether the linked public proposal was opened or read.
+  - Whether a future conversation will qualify a current organizational need or a compensated engagement.
   - Whether any engagement will be scoped, accepted, contracted, or performed.
 hard_screens:
   - id: screen.protected-memory.budget-authority
@@ -145,7 +147,9 @@ human_review: governed-open
 
 This is a conditional opportunity record, not a formal job posting. The
 protected source review supports a genuine but unclosed prospective consulting
-lead. It does not establish an offer, acceptance, rejection, contract, client
+lead whose latest observed state is a warm response and interest in another
+conversation. It does not establish page readership, proposal evaluation, need
+qualification, an offer, acceptance, rejection, contract, client
 adoption, deployment, completed work, or market validation.
 
 ## Public-safe core

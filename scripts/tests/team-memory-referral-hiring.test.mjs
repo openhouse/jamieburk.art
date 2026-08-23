@@ -56,6 +56,29 @@ test("the referral eval exposes only anonymized interpretation and browser-visib
   assert.equal(config.policy.calibrationStatus, "uncalibrated-advisory-simulation");
 });
 
+test("the real-world response calibrates warmth without inventing readership or hiring", () => {
+  const config = JSON.parse(read("evals/team-memory-referral-hiring/current.json"));
+  const calibration = JSON.parse(
+    read(config.realWorldCalibration.path)
+  );
+
+  assert.equal(config.realWorldCalibration.inputToAdvisoryModel, false);
+  assert.equal(calibration.sourceBoundary.rawMessagePersisted, false);
+  assert.equal(calibration.sourceBoundary.personalCircumstancesPersisted, false);
+  assert.equal(calibration.sourceBoundary.participantIdentityPersisted, false);
+  assert.deepEqual(calibration.observedState, {
+    responseReceived: "observed",
+    positiveReception: "observed",
+    interestInReconnecting: "observed",
+    pageOpened: "not-observed",
+    proposalRead: "not-observed",
+    needQualified: "not-observed",
+    budgetAuthority: "unknown",
+    engagementAuthorized: "not-observed",
+    hiringDecision: "not-observed"
+  });
+});
+
 test("the judge prompt separates the referral, authority decision, and relay failure modes", () => {
   const config = JSON.parse(read("evals/team-memory-referral-hiring/current.json"));
 
@@ -94,6 +117,7 @@ test("the browser receipt is invalidated when the public resume artifact changes
   const tempRoot = mkdtempSync(path.join(os.tmpdir(), "team-memory-referral-eval-"));
   const relativePaths = [
     "evals/team-memory-referral-hiring/current.json",
+    "evals/team-memory-referral-hiring/real-world-calibration.json",
     "evals/team-memory-referral-hiring/runs/2026-08-21/local-public-browser-receipt.json",
     "evals/team-memory-referral-hiring/runs/2026-08-21/fictionalized-referral-and-authority-decision.json",
     "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/01-prospective-collaborator-perspective.md",
@@ -128,4 +152,70 @@ test("the browser receipt is invalidated when the public resume artifact changes
   } finally {
     rmSync(tempRoot, { recursive: true, force: true });
   }
+});
+
+test("the evaluator rejects escalation of a positive reply into proposal readership", async () => {
+  const { evaluateTeamMemoryReferralHiring } = await import(
+    "../evals-team-memory-referral-hiring.mjs"
+  );
+  const tempRoot = mkdtempSync(path.join(os.tmpdir(), "team-memory-response-calibration-"));
+  const relativePaths = [
+    "evals/team-memory-referral-hiring/current.json",
+    "evals/team-memory-referral-hiring/real-world-calibration.json",
+    "evals/team-memory-referral-hiring/runs/2026-08-21/local-public-browser-receipt.json",
+    "evals/team-memory-referral-hiring/runs/2026-08-21/fictionalized-referral-and-authority-decision.json",
+    "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/01-prospective-collaborator-perspective.md",
+    "docs/knowledge-bank/case-studies/anonymized-team-memory-collaboration/03-prospective-collaborator-voice.md",
+    "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+  ];
+
+  try {
+    for (const relativePath of relativePaths) {
+      const destination = path.join(tempRoot, relativePath);
+      mkdirSync(path.dirname(destination), { recursive: true });
+      copyFileSync(path.join(repoRoot, relativePath), destination);
+    }
+    const calibrationPath = path.join(
+      tempRoot,
+      "evals/team-memory-referral-hiring/real-world-calibration.json"
+    );
+    const calibration = JSON.parse(readFileSync(calibrationPath, "utf8"));
+    calibration.observedState.proposalRead = "observed";
+    writeFileSync(calibrationPath, `${JSON.stringify(calibration, null, 2)}\n`);
+
+    const report = evaluateTeamMemoryReferralHiring(tempRoot);
+    assert.equal(report.realWorldCalibrationPassed, false);
+    assert.ok(
+      report.failures.includes(
+        "real-world response does not establish proposal readership"
+      ),
+      report.failures.join("\n")
+    );
+  } finally {
+    rmSync(tempRoot, { recursive: true, force: true });
+  }
+});
+
+test("the protected opportunity record keeps the new response at its actual evidence state", () => {
+  const source = read(
+    "docs/knowledge-bank/sources/protected-source-backed-memory-opportunity.md"
+  );
+  const opportunity = read(
+    "docs/knowledge-bank/opportunities/source-backed-team-memory.md"
+  );
+
+  for (const phrase of [
+    "positive reception and interest in reconnecting",
+    "does not establish that the linked page was opened or read"
+  ]) {
+    assert.ok(source.includes(phrase), `protected source missing calibrated response state: ${phrase}`);
+  }
+  assert.ok(
+    opportunity.includes("Whether the linked public proposal was opened or read."),
+    "opportunity must retain proposal readership as unknown"
+  );
+  assert.ok(
+    opportunity.includes("No offer, acceptance, budget approval, contract, or completed work was established."),
+    "opportunity must not promote a warm reply into commercial progress"
+  );
 });
