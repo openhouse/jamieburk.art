@@ -1,0 +1,68 @@
+{
+  "id": "wiki-shared-memory-protocol-hillclimb-2026-08-24",
+  "date": "2026-08-24",
+  "branch": "work/2026-08-24-A",
+  "criterion": "Record Jamie's wiki-as-shared-memory research proposition as governed, source-backed work without presenting the proposition as proven, public, endorsed, or authorized for implementation.",
+  "baseline": {
+    "commit": "c6940c077aba316d0f45ae00aa21e33d770c482c",
+    "passed": false,
+    "failureCount": 6,
+    "metrics": {
+      "researchLineages": 0,
+      "sharedMemoryProtocolHeld": 0
+    },
+    "failures": [
+      "The shared-memory proposition had no stable intake, claim, or inquiry records.",
+      "The proposition had no proposed RFC with Jamie as decision owner.",
+      "The Ward Cunningham, Abstract Wikipedia, and Ember RFC lineages were absent.",
+      "No deterministic gate kept the untested proposition off public surfaces.",
+      "No adversarial check rejected implied endorsement or participation.",
+      "No controlled pilot preserved disagreement while testing cross-context retrieval and correction."
+    ]
+  },
+  "candidate": {
+    "passed": true,
+    "failureCount": 0,
+    "metrics": {
+      "researchLineages": 3,
+      "sharedMemoryProtocolHeld": 1,
+      "knowledgeGraphTests": 20,
+      "professorLensCriteria": "17/17",
+      "compositeCriteria": "36/36",
+      "compositeCandidateFingerprint": "39cf59c9acdab21754b36d8092ed4925e4c0fa19fc8ee03dd793d1cc4e02aca6",
+      "compositeRubricSha256": "0ceae17652026856e816bf6472a4d55977145bd2977fc7e8c2fd7b362b0fc23b"
+    }
+  },
+  "change": "Added a held canonical proposition, five atomic observations, three contextual research lineages, an inconclusive controlled-pilot inquiry, proposed RFC 0009, and five adversarial mutation tests that fail when lineage, publication state, non-endorsement, disagreement, or the pilot boundary is weakened.",
+  "holdoutHillClimb": {
+    "preliminaryResult": "One Warren Sack-lens holdout scored 3/4 because the public review packet retained a stale Harry J. Epstein screenshot and lacked a direct FairRentNYC interface artifact.",
+    "packetCorrection": "Removed the stale screenshot from the review packet and added the exact public FairRentNYC artifact; no private source, public page, or candidate claim changed.",
+    "replacementResult": "An independent replacement reviewer scored the corrected exact-candidate packet 4/4. The selected final set contains three Margaret Morse-lens and three Warren Sack-lens holdouts, all at 4/4.",
+    "preservation": "The preliminary 3/4 judgment remains in the repository as learning evidence but is not relabeled or selected as a passing holdout."
+  },
+  "compositeHoldouts": {
+    "result": "Two separately commissioned public-safe holdouts accepted the exact candidate, each scoring every COMP-001 through COMP-009 criterion at 4/4.",
+    "candidateFingerprint": "39cf59c9acdab21754b36d8092ed4925e4c0fa19fc8ee03dd793d1cc4e02aca6",
+    "rubricSha256": "0ceae17652026856e816bf6472a4d55977145bd2977fc7e8c2fd7b362b0fc23b",
+    "publicSafety": "Reviewers received only the public-safe composite packet; the resulting receipts contain no private source paths or private source identifiers."
+  },
+  "guardrails": [
+    "The record confirms Jamie's proposition, not that the protocol works.",
+    "Shared factual holding preserves disagreement and does not require identical context, consensus, or uniform belief.",
+    "Ward Cunningham, Denny Vrandečić, and Yehuda Katz are contextual or fictionalized analytical lenses, not participants or endorsers.",
+    "The projection remains on hold with no public surface until pilot evidence and Jamie's editorial approval exist.",
+    "Model output is not evidence and cannot authorize its own write, publication, merge, deployment, or external action."
+  ],
+  "commands": [
+    "npm run test:knowledge-graph-portfolio",
+    "npm run evals:knowledge-graph-portfolio",
+    "node scripts/check-rfcs.mjs",
+    "npm run knowledge-bank",
+    "npm run public-safety",
+    "npm run evals:professor-lenses",
+    "npm run test:professor-lenses",
+    "npm run evals:composite",
+    "npm run test:composite",
+    "npm run check"
+  ]
+}

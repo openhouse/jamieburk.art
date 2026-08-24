@@ -1,10 +1,10 @@
 {
   "reportVersion": 6,
-  "checkedAt": "2026-08-23T01:06:07.215Z",
+  "checkedAt": "2026-08-24T23:40:11.460Z",
   "baseUrl": "http://127.0.0.1:3212",
-  "publicSurfaceFingerprint": "3c1e38b991daebd8088a479d7636a0240cc9016cbc723c90f57edd230ed301b6",
+  "publicSurfaceFingerprint": "f049d54fa744f60005f3d9cc48a9f47bf2d63b42ccc6a27b742b3be42e663d69",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 152,
+  "publicSurfaceFileCount": 153,
   "captureMethod": "Fresh Playwright Chromium viewport captures of the exact Node 26 production build, paired with the complete 60-row responsive accessibility matrix.",
   "routes": [
     {
@@ -85,7 +85,7 @@
   "passed": true,
   "verification": "Fresh desktop and mobile captures show the role-led homepage and public About-page systems lineage without browser warnings or errors; the complete route matrix separately exercises the colophon route.",
   "refresh": {
-    "candidateChange": "The colophon became an artifact-led editorial page with a governed East River photograph, four-step publishing method, living-publication notes, and fictionalized page-owner accountability.",
+    "candidateChange": "The knowledge graph gained a held, source-backed proposition and proposed RFC for wiki-shaped shared memory; no public portfolio page changed.",
     "productionBuild": "The Next.js production build, TypeScript check, social-preview render contract, and rendered public-language check completed under the declared Node 26 runtime.",
     "currentRenderedInspection": "The exact desktop and mobile homepage and About captures were freshly inspected; the separate page-owner packet retains exact desktop and mobile colophon captures.",
     "responsiveRun": "All 60 route-width combinations, including the colophon, were freshly checked at 360, 375, 768, and 1280 CSS pixels.",

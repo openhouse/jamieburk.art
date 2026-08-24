@@ -1,0 +1,33 @@
+{
+  "evaluator": "Independent Codex reviewer using a fictionalized Warren Sack analytical lens; not Warren Sack, with no endorsement implied.",
+  "reviewerId": "sack-e-2026-08-24-bf776cb9",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "bf776cb939a16f910b93c4321d8f631a26868ef49920d2dddb9a7b4145d32a12",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The About surface plainly states the recurring method: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. It is directly available from the primary navigation, and its linked project loops remain within two clicks.",
+    "Harry J. Epstein connects customer and team relationships to an integrated commerce model, a maintained storefront, real customer and staff use, incremental learning, reusable patterns, ownership, and a documented maintenance-to-handoff sequence.",
+    "NYC Artist Coalition and FairRentNYC connect coalition relationships, testimony, policy lineage, and accountable actors to campaign sites, public action paths, meetings, source maps, decision records, question logs, and follow-up systems. The rendered campaign artifact supplies concrete interface evidence, while the page consistently preserves collective credit.",
+    "Sunday Dinner and 196 connect hospitality, trust, recurring participation, and artist support to invitation, onboarding, access, documentation, and follow-up structures. Two inspectable workflow reconstructions show how participants and resident artists could use and continue those structures while participant-level records remain protected.",
+    "The portfolio expressly rejects structural equivalence, disciplinary invention through missing evidence, peer-reviewed status for the developing method, completed production or client adoption, sole credit for collective outcomes, and present proficiency inferred solely from dated implementation work."
+  ],
+  "gaps": [
+    "Some strongest operational evidence is represented through explicitly labeled public-safe reconstructions rather than original internal artifacts; the packet appropriately identifies that limitation.",
+    "The Harry J. Epstein storefront image referenced by the rendered page is not included as a standalone packet capture, so its interface proof is less independently inspectable here than the supplied FairRentNYC artifact and Sunday Dinner page capture."
+  ],
+  "safety_findings": [
+    "No protected participant rows, customer data, credentials, private coalition strategy, or unapproved quotations are exposed in the inspected packet.",
+    "Collective projects retain collaborator and community credit, and causal claims about policy outcomes, attendance, adoption, and revenue are bounded.",
+    "Historical production, current noindex thresholds, early research, and proposed pilots are clearly distinguished from current production deployment or proven client adoption.",
+    "This passing scorecard is observational holdout evidence only and grants no publication, deployment, indexing, testimonial, or protected-material release authority."
+  ],
+  "recommendation": "Pass PR-016 at score 4. The recurring method is plainly named, navigable within two clicks, and supported across at least three public-safe projects by concrete relationships, models, interfaces, collective use, learning structures, and handoffs. Preserve the existing anti-overclaim and human-authorization boundaries in any future use.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "rendered-public-site-packet independent holdout",
+    "reviewedAt": "2026-08-24",
+    "filesEdited": false
+  }
+}
