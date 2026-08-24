@@ -1,0 +1,32 @@
+{
+  "evaluator": "Fictionalized Margaret Morse analytical lens only. I am not Margaret Morse, do not speak for Margaret Morse, and this is not an endorsement.",
+  "reviewerId": "morse-f-2026-08-24-cdc06970",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "cdc06970f280161f15444f72549965b38b5b88f16b152037a0a5ac1d2644f935",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The About page states the connected threshold directly: Jamie’s lineage across Open House, WOWList, Sunday Dinner/196, NYC Artist Coalition, and Knowledge Wiki Graphs is “artistic, civic, technical, and social,” organized around helping people recognize relationships, participate, remember, and continue.",
+    "Open House is accurately delimited as a ten-day UCSC gallery experiment in communal living and participatory art, with communal decision-making and many-perspective documentation; the page does not inflate this historical example into a current deployment.",
+    "Sunday Dinner/196 visibly joins hospitality, embodiment, care, participation, and documentation: invitations, food, space, welcome, artist support, access handoffs, minimal continuity records, and repeatable hosting supported 300+ gatherings and 20+ resident artists. Its workflow reconstructions explicitly withhold identities, addresses, access details, correspondence, and participant-level records.",
+    "NYC Artist Coalition/FairRentNYC visibly joins civic participation, place, technical implementation, and documentary attention: cultural-space meetings, safety and legal sessions, town halls, hearings, campaign sites, source maps, minutes, action trackers, and decision records connect public rooms to maintained digital surfaces. The case repeatedly limits Jamie’s contribution, preserves collective campaign credit, and disclaims sole causation.",
+    "WOWList visibly connects artistic and social scenes to technical product practice: Jamie and Richard Caceres co-built a natural-language, collaboratively editable community-calendar system across 35 city ecosystems, translating organizers’ own vocabulary into publishing, discovery, digests, embeds, and distribution workflows while crediting organizers and protecting private user data.",
+    "Knowledge Wiki Graphs makes attention and care operational through a recursive sequence—observe relationships, model a system, prototype an interface, test it with people, and document for continuation—while distinguishing known, open, and protected material and requiring human review.",
+    "The rushed-reader path remains role-legible: the homepage identifies Jamie as a Technical Project Manager focused on Product Operations and Implementation; the dedicated Technical Operations page foregrounds requirements, delivery rhythms, risk signals, QA/UAT, launch support, onboarding, documentation, and handoffs; the public resume reinforces this target.",
+    "Rendered captions locate work in specific public and communal settings—including the East River, Shoestring Press, Market Hotel, and Sunday Dinner’s shared table—without implying depicted-person endorsement. The supplied clearance context resolves portfolio-use authorization while the public captions retain courtesy and authorship credits."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "Collective authorship remains intact through co-founder/co-builder naming, collaborator and community credits, explicit shared-account boundaries, and repeated limits on claims of individual policy causation.",
+    "Participant privacy remains intact: private coalition notes, legal-review context, stakeholder lists, guest data, attendance histories, contact details, correspondence, access instructions, and unapproved images are expressly withheld.",
+    "No protected praise, private-record content, depicted-person endorsement, production approval, or indexing approval is inferred from the packet or the image-clearance statement."
+  ],
+  "recommendation": "Pass the PR-015 holdout. The public surface supplies more than three accurately bounded examples and makes their shared artistic, civic, technical, and social threshold visible without sacrificing technical-project-management role clarity, collective credit, dignity, or participant privacy.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "rendered-public-site-packet independent holdout",
+    "reviewedAt": "2026-08-24",
+    "filesEdited": false
+  }
+}

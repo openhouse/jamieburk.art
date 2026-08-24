@@ -151,3 +151,67 @@ expectFailure(
   },
   /private locator/
 );
+
+expectFailure(
+  "the public explanation cannot lose why agentic memory takes a wiki form",
+  (candidate) => {
+    candidate.labPage = candidate.labPage.replace(
+      /shared agentic memory should take a\s+wiki form/gi,
+      "shared memory should use a useful interface"
+    );
+    candidate.labCopy = candidate.labCopy.replace(
+      /shared agentic memory should take a\s+wiki form/gi,
+      "shared memory should use a useful interface"
+    );
+  },
+  /wiki-form proposition/
+);
+
+expectFailure(
+  "wiki form cannot be represented as an automatic consensus mechanism",
+  (candidate) => {
+    const claim = candidate.knowledgeBank.claims.find(
+      (item) => item.id === "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026"
+    );
+    claim.antiClaims = claim.antiClaims.filter(
+      (item) => !/automatically produces truth/i.test(item)
+    );
+  },
+  /consensus/
+);
+
+expectFailure(
+  "a named analytical lens cannot become an actual participant",
+  (candidate) => {
+    const config = JSON.parse(candidate.wikiFormEval);
+    config.lenses[0].actualPersonParticipated = true;
+    candidate.wikiFormEval = JSON.stringify(config);
+  },
+  /three independent fictionalized public-work lenses/
+);
+
+expectFailure(
+  "the model stage cannot run before deterministic wiki-form gates",
+  (candidate) => {
+    const config = JSON.parse(candidate.wikiFormEval);
+    config.deterministicStages = [
+      "independent-model-lens-evaluations",
+      ...config.deterministicStages.slice(0, -1)
+    ];
+    candidate.wikiFormEval = JSON.stringify(config);
+  },
+  /deterministic gates before the model stage/
+);
+
+expectFailure(
+  "the canonical claim cannot lose its wiki-form RFC source",
+  (candidate) => {
+    const claim = candidate.knowledgeBank.claims.find(
+      (item) => item.id === "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026"
+    );
+    claim.evidence = claim.evidence.filter(
+      (item) => item.sourceId !== "SRC-KNOWLEDGE-WIKI-RFC-0009-2026"
+    );
+  },
+  /three architecture and wiki-form RFC sources/
+);

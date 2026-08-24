@@ -1,0 +1,34 @@
+{
+  "evaluator": "Fictionalized Margaret Morse analytical lens only. I am not Margaret Morse, do not speak for Margaret Morse, and this is not an endorsement.",
+  "reviewerId": "morse-e-2026-08-24-cdc06970",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "cdc06970f280161f15444f72549965b38b5b88f16b152037a0a5ac1d2644f935",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The About page states the connected threshold directly: the practice is “artistic, civic, technical, and social,” then gives a legible recurring method—observe relationships, model a system, prototype an interface, test it with people, and document for continuation.",
+    "Open House is accurately delimited as a ten-day gallery experiment in communal living and participatory art, making experimentation, embodiment, collective decision-making, and many-perspective documentation visible without claiming sole authorship.",
+    "Sunday Dinner / 196 shows hospitality, attention, care, participation, and embodied use of place through invitations, food, space, welcome, artist support, recurring gatherings, onboarding, access handoffs, minimal continuity records, and explicit protection of participant-level information.",
+    "NYC Artist Coalition / FairRentNYC connects civic participation to technical and social infrastructure: facilitated rooms, testimony, public sites, source maps, decision records, action paths, and sustained follow-up are presented as interfaces within one collective operating system.",
+    "WOW List shows how community language and organizer behavior became a collaboratively editable technical platform, connecting participatory discovery, public communication, adoption, stewardship, and distributed cultural scenes.",
+    "Knowledge Wiki Graphs extends the same concern into documentation and care: people, language, artifacts, relationships, evidence, custody, correction, consent, and human review remain distinct while producing usable shared memory.",
+    "The target role is immediately legible on the homepage, Technical Operations page, resume route, and PDF as technical project management, product operations, and implementation, with concrete requirements, delivery, QA/UAT, documentation, launch, adoption, and handoff language.",
+    "Collective authorship is preserved through co-founder/co-builder and collaborator credits, explicit limits on sole causation, and careful distinctions between Jamie’s implementation and collective campaign outcomes.",
+    "Participant privacy remains intact: Sunday Dinner publishes aggregate scale and redacted workflow reconstructions while withholding names, contacts, attendance histories, correspondence, access details, proposals, and unapproved images.",
+    "Visible captions provide context and courtesy or photographer credit; the packet’s rendered descriptions do not imply depicted-person endorsement or convert collective gatherings into personal acclaim."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "No protected praise, private records, participant identities, private stakeholder lists, legal-review material, or unapproved quotations need to be inferred to reach the score.",
+    "Claims are bounded by public-safe, summary-only, archived, historical, early-research, and collective-work qualifications.",
+    "The reviewed images retain contextual captions and credits, and nothing visible asserts depicted-person endorsement or broader reuse permission."
+  ],
+  "recommendation": "Pass the PR-015 holdout. Preserve the About-page through-line, the three-system comparison, explicit collective-credit limits, and participant-privacy boundaries in future public revisions.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "rendered-public-site-packet independent holdout",
+    "reviewedAt": "2026-08-24",
+    "filesEdited": false
+  }
+}

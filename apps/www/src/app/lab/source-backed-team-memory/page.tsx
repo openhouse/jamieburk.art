@@ -11,7 +11,7 @@ import { createMetadata } from "@/lib/metadata";
 export const metadata: Metadata = createMetadata({
   title: "Knowledge Wiki Graphs - Jamie Burkart",
   description:
-    "An evolving research practice connecting semantic, evidence, and source-custody graphs to human-reviewed portfolio and project outputs.",
+    "An evolving practice using a human-inspectable, source-backed wiki form to connect semantic, evidence, and source-custody graphs to human-reviewed outputs.",
   path: "/lab/source-backed-team-memory"
 });
 
@@ -124,6 +124,22 @@ export default function SourceBackedTeamMemoryPage() {
           that knowledge visible, connected, and usable without claiming
           ownership of it.
         </p>
+        <section className="mt-10 border-y border-jb-ink/12 py-10">
+          <p className="text-sm font-semibold uppercase text-jb-blue">
+            Why a wiki form
+          </p>
+          <h2 className="mt-3 max-w-3xl text-3xl font-semibold leading-tight text-jb-ink">
+            Shared memory should remain readable, traceable, and revisable
+          </h2>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-jb-ink/76">
+            The working proposition is that shared agentic memory should take a
+            wiki form: a human-inspectable, source-backed place where people and
+            agents with different contexts can develop working memory, trace why
+            something is believed, preserve disagreement, and revise the record.
+            A wiki does not manufacture consensus or replace human judgment. It
+            makes the terms and history of working agreement visible.
+          </p>
+        </section>
         <div className="mt-6 rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">
           <p className="leading-7 text-jb-ink/76">
             Early research / method / consulting practice. Not a finished
@@ -131,7 +147,7 @@ export default function SourceBackedTeamMemoryPage() {
             judgment, or private archive browser.
           </p>
         </div>
-        <section className="mt-10 border-y border-jb-ink/12 py-10">
+        <section className="mt-10 border-b border-jb-ink/12 pb-10">
           <p className="text-sm font-semibold uppercase text-jb-blue">
             At a glance
           </p>

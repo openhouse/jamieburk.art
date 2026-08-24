@@ -1,0 +1,32 @@
+{
+  "evaluator": "Fictionalized Warren Sack analytical lens only. I am not Warren Sack, do not speak for Warren Sack, and this is not an endorsement.",
+  "reviewerId": "sack-f-2026-08-24-cdc06970",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "cdc06970f280161f15444f72549965b38b5b88f16b152037a0a5ac1d2644f935",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The About page states the recurring method verbatim: “observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.”",
+    "The About page immediately reconstructs that method through three accurately delimited systems loops: Harry J. Epstein Company, NYC Artist Coalition/FairRentNYC, and Sunday Dinner/196. Each loop identifies relationships, a system model, an interface used with people, and learning or continuity documentation.",
+    "The three loops distinguish their forms of collective testing: real customer and team use at Harry J. Epstein; campaign sites, town halls, hearings, sessions, and action pathways with collaborators at NYC Artist Coalition/FairRentNYC; and recurring gatherings and residency workflows with participants and resident artists at Sunday Dinner/196.",
+    "Handoffs are concrete rather than generic: reusable workflows and content patterns for the Epstein team; minutes, source maps, question logs, and action trackers for coalition collaborators; and invitation, attendance, follow-up, onboarding, and residency handoff patterns for Sunday Dinner/196.",
+    "Structural-equivalence inflation is explicitly resisted: the About page says the steps are an analytical pattern, not evidence that different projects are structurally equivalent, and that missing evidence and relationships are not invented.",
+    "Production-deployment inflation is explicitly resisted: Knowledge Wiki Graphs is labeled early research and an evolving practice, not a finished platform, production SaaS, client pilot, company-wide implementation, or proof of client adoption; WOW List likewise distinguishes its current threshold from the not-yet-restored calendar.",
+    "Sole-authorship inflation is explicitly resisted through repeated role and credit boundaries: WOW List is “co-founded” and “co-built” with Richard Caceres; coalition outcomes remain collective; Sunday Dinner names co-organizers and community credit; campaign accomplishments are not attributed to Jamie alone.",
+    "Unsupported present proficiency in historical tools is explicitly resisted in both the About page and resume: historical implementation evidence is said not to establish present technical proficiency, and the resume labels its technical inventory “current and historical experience.”",
+    "Rendered image captions identify context, date, and photographer or collective source without implying participant endorsement. The public pages also preserve privacy boundaries, omit participant-level records, and use collective-work language consistent with the supplied clearance context."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "No visible dignity, contextual-integrity, participant-privacy, or implied-endorsement failure is established by the packet.",
+    "Photograph captions and adjacent copy preserve authorship, courtesy, collective-work, and reuse boundaries; production release and indexing remain correctly separate from album-use clearance."
+  ],
+  "recommendation": "Clear PR-016. Preserve the concise method statement, the three parallel systems loops, and all four explicit anti-inflation boundaries in any subsequent public-surface edits.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "rendered-public-site-packet independent holdout",
+    "reviewedAt": "2026-08-24",
+    "filesEdited": false
+  }
+}

@@ -1,11 +1,11 @@
 {
-  "reportVersion": 6,
-  "checkedAt": "2026-08-23T01:06:07.215Z",
-  "baseUrl": "http://127.0.0.1:3212",
-  "publicSurfaceFingerprint": "3c1e38b991daebd8088a479d7636a0240cc9016cbc723c90f57edd230ed301b6",
+  "reportVersion": 5,
+  "checkedAt": "2026-08-24T23:06:45.016Z",
+  "baseUrl": "http://127.0.0.1:3124",
+  "publicSurfaceFingerprint": "1b0a4bbaa7ba0429dcffabd2a1e30b980c2951c376bd86dd42f8c693634f3890",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 152,
-  "captureMethod": "Fresh Playwright Chromium viewport captures of the exact Node 26 production build, paired with the complete 60-row responsive accessibility matrix.",
+  "publicSurfaceFileCount": 153,
+  "captureMethod": "Playwright Chromium viewport screenshots of the exact local candidate; About captures are framed on the systems through-line; no deployment or indexing action.",
   "routes": [
     {
       "path": "/",
@@ -13,7 +13,6 @@
       "h1Count": 1,
       "screenshots": [
         {
-          "route": "/",
           "name": "desktop",
           "requestedViewport": {
             "width": 1280,
@@ -21,12 +20,10 @@
           },
           "pixelWidth": 1280,
           "pixelHeight": 900,
-          "httpStatus": 200,
-          "sha256": "ed2ed1cab0fd460c88e17baf0c0df9755dccf7d65d3c61534e5f9c10558c24d0",
+          "sha256": "7ff02c019578cce0298caf900c7b880e3d9ffc2e0e97dd15c789ad85dbcd8b80",
           "file": "candidate-home-desktop.png"
         },
         {
-          "route": "/",
           "name": "mobile",
           "requestedViewport": {
             "width": 375,
@@ -34,8 +31,7 @@
           },
           "pixelWidth": 375,
           "pixelHeight": 812,
-          "httpStatus": 200,
-          "sha256": "7afa0d1b72e771a0c5e0bcbc8dec534043cf9c337a3e54733abaa968d2b5b02e",
+          "sha256": "a3233b7565d0417ded117b0b2cfd5d504bbee270ae408026853739b8008a3ef1",
           "file": "candidate-home-viewport.png"
         }
       ]
@@ -46,7 +42,6 @@
       "h1Count": 1,
       "screenshots": [
         {
-          "route": "/about",
           "name": "desktop-through-line",
           "requestedViewport": {
             "width": 1280,
@@ -54,8 +49,7 @@
           },
           "pixelWidth": 1280,
           "pixelHeight": 900,
-          "httpStatus": 200,
-          "sha256": "5668cf43ce1ea4777b17a5e5a28315d2677bfbe108594cb7224f839fd5c488d7",
+          "sha256": "74724ed4278bab16ea13080ce969dc115054c5f0c8863c159b1623d10a246ac1",
           "file": "professor-lenses-about-desktop.png",
           "framedContent": {
             "systemsPeopleCanInhabitHeadingPresent": true,
@@ -63,7 +57,6 @@
           }
         },
         {
-          "route": "/about",
           "name": "mobile-through-line",
           "requestedViewport": {
             "width": 375,
@@ -71,8 +64,7 @@
           },
           "pixelWidth": 375,
           "pixelHeight": 1200,
-          "httpStatus": 200,
-          "sha256": "e2bb09e69b8c0eac22119b9995c4b3c2a2a2edba4f26a2b96960e0d0436e24d9",
+          "sha256": "413e2f7911f5ee140209fb952eaf64061c00a63970556bc5d782e2ec677f4729",
           "file": "professor-lenses-about-mobile.png",
           "framedContent": {
             "systemsPeopleCanInhabitHeadingPresent": true,
@@ -83,12 +75,5 @@
     }
   ],
   "passed": true,
-  "verification": "Fresh desktop and mobile captures show the role-led homepage and public About-page systems lineage without browser warnings or errors; the complete route matrix separately exercises the colophon route.",
-  "refresh": {
-    "candidateChange": "The colophon became an artifact-led editorial page with a governed East River photograph, four-step publishing method, living-publication notes, and fictionalized page-owner accountability.",
-    "productionBuild": "The Next.js production build, TypeScript check, social-preview render contract, and rendered public-language check completed under the declared Node 26 runtime.",
-    "currentRenderedInspection": "The exact desktop and mobile homepage and About captures were freshly inspected; the separate page-owner packet retains exact desktop and mobile colophon captures.",
-    "responsiveRun": "All 60 route-width combinations, including the colophon, were freshly checked at 360, 375, 768, and 1280 CSS pixels.",
-    "browserDiagnostics": "No browser warnings or errors were observed."
-  }
+  "verification": "Fresh Playwright viewport captures from the exact local candidate; screenshots retained and content-addressed in this directory."
 }

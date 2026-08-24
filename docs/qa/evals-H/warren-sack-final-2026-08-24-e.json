@@ -1,0 +1,32 @@
+{
+  "evaluator": "Fictionalized Warren Sack analytical lens only. I am not Warren Sack, do not speak for Warren Sack, and this is not an endorsement.",
+  "reviewerId": "sack-e-2026-08-24-cdc06970",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "cdc06970f280161f15444f72549965b38b5b88f16b152037a0a5ac1d2644f935",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The About page explicitly states the recurring sequence: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.",
+    "Three accurately delimited systems loops—Harry J. Epstein Company, NYC Artist Coalition/FairRentNYC, and Sunday Dinner/196—each visibly identify relationships, a system model, an interface used socially or collectively, and learning or continuity documentation.",
+    "The project pages substantiate those loops with distinct public surfaces and handoffs: maintained storefront workflows; coalition sites, meetings, source maps, minutes, question logs, and action trackers; and gathering/residency onboarding, hosting, documentation, and handoff patterns.",
+    "Structural-equivalence inflation is explicitly resisted: the About page calls the sequence an analytical pattern and says it is not evidence that different projects are structurally equivalent.",
+    "Production-deployment inflation is explicitly resisted through labels including archived prototype, public return threshold rather than restored calendar, early research/method rather than production SaaS, and proposed acceptance conditions rather than completed client implementation.",
+    "Sole-authorship inflation is explicitly resisted through co-founded/co-built language, named collaborators, collective credits, and direct statements that campaign and policy outcomes were collective rather than Jamie's sole accomplishment.",
+    "Unsupported present proficiency in historical tools is explicitly resisted in both the About page and resume, which state that historical implementation evidence does not by itself establish present technical proficiency.",
+    "Photograph captions provide context, dates, provenance or courtesy credits, while participant records and unapproved images are expressly withheld; the supplied desktop and mobile visual inspection records pass."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "No public-surface dignity, contextual-integrity, participant-privacy, or implied-endorsement failure is visible in the supplied packet.",
+    "Image clearance is appropriately bounded and does not imply depicted-person endorsement, broader reuse, production approval, or indexing approval.",
+    "Production release and indexing remain separate human decisions and are not inferred from this holdout result."
+  ],
+  "recommendation": "Clear PR-016. The public surface makes the recurring socio-technical method reconstructable across three delimited projects and visibly supplies all four required anti-inflation safeguards; retain the existing collective-credit, historical-tool, deployment-status, and image-boundary language through release review.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "rendered-public-site-packet independent holdout",
+    "reviewedAt": "2026-08-24",
+    "filesEdited": false
+  }
+}

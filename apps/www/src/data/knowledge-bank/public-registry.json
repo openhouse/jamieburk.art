@@ -233,7 +233,7 @@
       "visibility": "public",
       "preservationStatus": "live",
       "publishedAt": "2026-08-10",
-      "accessedAt": "2026-08-21",
+      "accessedAt": "2026-08-24",
       "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/0bb9c74de8d774dd2be85f9b16c5e22e56096bfc/rfcs/0005-three-layer-knowledge-graph.md",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Jamie Burkart and Codex, RFC 0005: Three-Layer Knowledge Graph and Governed Source Materialization, exploring design record, August 10, 2026.",
@@ -254,7 +254,7 @@
       "visibility": "public",
       "preservationStatus": "live",
       "publishedAt": "2026-08-11",
-      "accessedAt": "2026-08-21",
+      "accessedAt": "2026-08-24",
       "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/0bb9c74de8d774dd2be85f9b16c5e22e56096bfc/rfcs/0006-federated-knowledge-exchange-and-release-receipts.md",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Jamie Burkart and Codex, RFC 0006: Federated Knowledge Exchange and Release Receipts, proposed design record, August 11, 2026.",
@@ -264,6 +264,27 @@
         "automatic publication authority",
         "a completed production deployment",
         "client adoption"
+      ]
+    },
+    {
+      "id": "SRC-KNOWLEDGE-WIKI-RFC-0009-2026",
+      "title": "RFC 0009: Wiki Form for Shared Agentic Memory",
+      "organization": "openhouse / jamieburk.art",
+      "author": "Jamie Burkart and Codex, AI-assisted draft",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-08-24",
+      "accessedAt": "2026-08-24",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/work/2026-08-24-C/rfcs/0009-wiki-form-for-shared-agentic-memory.md",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Jamie Burkart and Codex, RFC 0009: Wiki Form for Shared Agentic Memory, exploring design record, August 24, 2026.",
+      "publicNote": "The RFC records the wiki-form proposition, its research status, and its truth, authority, privacy, and named-lens boundaries.",
+      "doesNotEstablish": [
+        "automatic truth or consensus",
+        "production adoption",
+        "named-person participation or endorsement",
+        "agent or model authority to publish or act"
       ]
     },
     {
@@ -1577,7 +1598,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "I am developing a federated Knowledge Wiki Graph practice that keeps meaning, evidence, and source custody distinct, then composes audience-specific outputs through human review.",
+          "text": "I am developing a human-inspectable, source-backed Knowledge Wiki Graph through which people, repositories, and agents can build shared working memory while preserving provenance, plurality, and human authority.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -1619,13 +1640,25 @@
           ],
           "confidence": "high",
           "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KNOWLEDGE-WIKI-RFC-0009-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "wiki form as the social interface for shared working memory",
+            "plural human and agent contexts",
+            "visible provenance, disagreement, revision, and human authority"
+          ],
+          "confidence": "high",
+          "renderCitation": true
         }
       ],
       "boundaries": [
         "Present this as current research and an operating method in development.",
         "Repository roles do not map one-to-one onto graph responsibilities.",
         "Do not expose protected repository topology, source locators, or private records.",
-        "Do not imply a completed client deployment, production platform, market validation, or automatic trust."
+        "Do not imply a completed client deployment, production platform, market validation, or automatic trust.",
+        "Present wiki form as a design proposition that makes working agreement inspectable, not as a mechanism that guarantees truth or consensus."
       ]
     },
     {
@@ -3075,7 +3108,8 @@
       "sourceOrder": [
         "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28",
         "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
-        "SRC-KNOWLEDGE-WIKI-RFC-0006-2026"
+        "SRC-KNOWLEDGE-WIKI-RFC-0006-2026",
+        "SRC-KNOWLEDGE-WIKI-RFC-0009-2026"
       ],
       "occurrences": [
         {
@@ -3092,7 +3126,8 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
-            "SRC-KNOWLEDGE-WIKI-RFC-0006-2026"
+            "SRC-KNOWLEDGE-WIKI-RFC-0006-2026",
+            "SRC-KNOWLEDGE-WIKI-RFC-0009-2026"
           ]
         }
       ]
@@ -3102,7 +3137,8 @@
       "surface": "/colophon",
       "sourceOrder": [
         "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
-        "SRC-KNOWLEDGE-WIKI-RFC-0006-2026"
+        "SRC-KNOWLEDGE-WIKI-RFC-0006-2026",
+        "SRC-KNOWLEDGE-WIKI-RFC-0009-2026"
       ],
       "occurrences": [
         {
@@ -3117,7 +3153,8 @@
       "surface": "/work",
       "sourceOrder": [
         "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
-        "SRC-KNOWLEDGE-WIKI-RFC-0006-2026"
+        "SRC-KNOWLEDGE-WIKI-RFC-0006-2026",
+        "SRC-KNOWLEDGE-WIKI-RFC-0009-2026"
       ],
       "occurrences": [
         {
@@ -3556,6 +3593,7 @@
       "sourceOrder": [
         "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
         "SRC-KNOWLEDGE-WIKI-RFC-0006-2026",
+        "SRC-KNOWLEDGE-WIKI-RFC-0009-2026",
         "SRC-AI-EVALS-CERTIFICATE-2026",
         "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
         "SRC-CALLNYC-POLITICO-2016-03-14",

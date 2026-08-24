@@ -1,0 +1,32 @@
+{
+  "evaluator": "Fictionalized Warren Sack analytical lens only. I am not Warren Sack, do not speak for Warren Sack, and this is not an endorsement.",
+  "reviewerId": "sack-d-2026-08-24-cdc06970",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "cdc06970f280161f15444f72549965b38b5b88f16b152037a0a5ac1d2644f935",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The About page states the recurring sequence explicitly: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.",
+    "Three accurately delimited loops—Harry J. Epstein Company, NYC Artist Coalition/FairRentNYC, and Sunday Dinner/196—each visibly identify relationships, a system model, an interface used by people, learning or revision through use, and continuity or handoff documentation.",
+    "Project-specific pages reinforce the pattern: WOW List connects community vocabulary to a natural-language interface and organizer adoption; FairRentNYC connects stakeholder relationships to campaign interfaces, collective participation, source maps, decision records, and sustained follow-through; Sunday Dinner/196 shows tested hosting and residency workflows with explicit handoff steps.",
+    "Structural-equivalence inflation is explicitly resisted: the About page says the recurring steps are an analytical pattern and not evidence that different projects are structurally equivalent.",
+    "Production-deployment inflation is explicitly resisted: Knowledge Wiki Graphs is labeled early research and not production SaaS or proof of client adoption; WOW List distinguishes its current threshold from a restored calendar; CallNYC is labeled archived and unofficial.",
+    "Sole-authorship inflation is explicitly resisted through co-founder/co-builder attribution, named collaborators, coalition credits, and repeated statements that campaign and policy outcomes remain collective.",
+    "Unsupported present proficiency in historical tools is explicitly resisted in both the About page and resume, which state that historical implementation evidence does not by itself establish present proficiency.",
+    "Photograph captions provide context and credits, collective scenes are described as collective rather than endorsements, and the Sunday Dinner page withholds participant-level records and unapproved images."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "No visible privacy, dignity, contextual-integrity, or implied-endorsement failure is established by the packet.",
+    "Album clearance is appropriately treated as occurrence-specific and does not imply depicted-person endorsement, broader reuse, production release, or indexing approval.",
+    "Collective-work, protected-record, and historical-status boundaries are visible and consistently maintained."
+  ],
+  "recommendation": "Pass PR-016 at score 4. Preserve the explicit three-loop comparison and the four anti-inflation limits in future public-surface revisions.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "rendered-public-site-packet independent holdout",
+    "reviewedAt": "2026-08-24",
+    "filesEdited": false
+  }
+}

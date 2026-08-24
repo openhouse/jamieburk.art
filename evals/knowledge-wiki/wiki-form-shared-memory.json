@@ -1,0 +1,85 @@
+{
+  "id": "wiki-form-shared-agentic-memory-2026-08-24",
+  "schemaVersion": 1,
+  "claimId": "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026",
+  "rfcPath": "rfcs/0009-wiki-form-for-shared-agentic-memory.md",
+  "pagePath": "/lab/source-backed-team-memory",
+  "pageSourcePath": "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
+  "pageCopyPath": "apps/www/src/content/lab/source-backed-team-memory.mdx",
+  "purpose": "Test whether the wiki-form proposition is understandable, governable, and useful across three independent public-work lenses without implying participation, endorsement, or decision authority by the named people.",
+  "proposition": "A human-inspectable, source-backed knowledge medium through which people, repositories, and agents develop shared working memory without erasing provenance, plurality, disagreement, revision history, or human authority.",
+  "publicBoundary": {
+    "researchStage": "exploring",
+    "actualPeopleParticipated": false,
+    "actualEndorsement": false,
+    "modelOutputsAreAdvisory": true,
+    "decisionOwner": "Jamie Burkart",
+    "humanPublicationApprovalRequired": true
+  },
+  "deterministicStages": [
+    "rfc-lifecycle-and-source-coverage",
+    "public-proposition-coverage",
+    "truth-privacy-and-authority-boundaries",
+    "fictionalized-lens-contracts",
+    "independent-model-lens-evaluations"
+  ],
+  "requiredPublicSignals": [
+    {
+      "id": "wiki-form",
+      "patterns": ["shared agentic memory should take a wiki form", "human-inspectable", "source-backed"]
+    },
+    {
+      "id": "plural-contexts",
+      "patterns": ["people and agents with different contexts", "preserve disagreement", "revise the record"]
+    },
+    {
+      "id": "working-agreement",
+      "patterns": ["does not manufacture consensus", "human judgment", "working agreement visible"]
+    },
+    {
+      "id": "three-graph-architecture",
+      "patterns": ["Semantic graph", "Evidence graph", "Source-custody graph"]
+    }
+  ],
+  "modelGate": {
+    "promptVersion": "wiki-form-shared-memory-v1",
+    "publicOnly": true,
+    "repositoryAvailableToModel": false,
+    "privateSourcesAvailableToModel": false,
+    "maximumCallsPerLens": 1,
+    "aggregateRule": "all-lenses-pass",
+    "constructiveCritiqueRequired": true,
+    "calibrationStatus": "uncalibrated-advisory-reader-simulation",
+    "humanFinalApprovalRequired": true,
+    "humanMeaning": "A pass means the exact public packet cleared three fictionalized analytical-lens simulations. It is not any named person's view, participation, review, approval, endorsement, or authorization to publish, deploy, adopt, spend, or act."
+  },
+  "lenses": [
+    {
+      "id": "ward-cunningham-wiki-form",
+      "name": "Ward Cunningham",
+      "kind": "fictionalized-public-work-lens",
+      "publicBasisUrl": "https://c2.com/doc/wikisym/WikiSym2006.pdf",
+      "actualPersonParticipated": false,
+      "acceptanceQuestion": "Does the public proposal make incremental correction, observable revision, plural context, and source-backed working agreement possible without claiming that a wiki automatically creates truth?",
+      "passDefinition": "The reader can understand how the form supports open, revisable shared memory while preserving disagreement and local authority."
+    },
+    {
+      "id": "maggie-appleton-human-readable-memory",
+      "name": "Maggie Appleton",
+      "kind": "fictionalized-public-work-lens",
+      "publicBasisUrl": "https://maggieappleton.com/garden-history",
+      "actualPersonParticipated": false,
+      "acceptanceQuestion": "Does the public proposal make evolving knowledge explorable and legible to people without repository fluency while preserving context, sources, and uncertainty?",
+      "passDefinition": "The reader can understand why wiki form is a humane interface for knowledge that grows, links, changes, and remains independently inspectable."
+    },
+    {
+      "id": "yehuda-katz-governed-lifecycle",
+      "name": "Yehuda Katz",
+      "kind": "fictionalized-public-work-lens",
+      "publicBasisUrl": "https://rfcs.emberjs.com/stages/",
+      "actualPersonParticipated": false,
+      "acceptanceQuestion": "Does the proposal expose a small constitutional core, explicit lifecycle states, extension boundaries, compatibility responsibilities, and human decision ownership?",
+      "passDefinition": "The reader can distinguish exploring, accepted, implemented, and released states and can see that model evaluation never grants action authority."
+    }
+  ]
+}

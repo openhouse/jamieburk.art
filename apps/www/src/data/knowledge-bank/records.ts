@@ -542,7 +542,8 @@ const knowledgeBankInput = {
     sourceOrder: [
       "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28",
       "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
-      "SRC-KNOWLEDGE-WIKI-RFC-0006-2026"
+      "SRC-KNOWLEDGE-WIKI-RFC-0006-2026",
+      "SRC-KNOWLEDGE-WIKI-RFC-0009-2026"
     ],
     occurrences: [
       {
@@ -557,7 +558,8 @@ const knowledgeBankInput = {
         projection: "case-study",
         sourceIds: [
           "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
-          "SRC-KNOWLEDGE-WIKI-RFC-0006-2026"
+          "SRC-KNOWLEDGE-WIKI-RFC-0006-2026",
+          "SRC-KNOWLEDGE-WIKI-RFC-0009-2026"
         ]
       }
     ]
@@ -566,7 +568,8 @@ const knowledgeBankInput = {
     surface: "/colophon",
     sourceOrder: [
       "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
-      "SRC-KNOWLEDGE-WIKI-RFC-0006-2026"
+      "SRC-KNOWLEDGE-WIKI-RFC-0006-2026",
+      "SRC-KNOWLEDGE-WIKI-RFC-0009-2026"
     ],
     occurrences: [
       {
@@ -580,7 +583,8 @@ const knowledgeBankInput = {
     surface: "/work",
     sourceOrder: [
       "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
-      "SRC-KNOWLEDGE-WIKI-RFC-0006-2026"
+      "SRC-KNOWLEDGE-WIKI-RFC-0006-2026",
+      "SRC-KNOWLEDGE-WIKI-RFC-0009-2026"
     ],
     occurrences: [
       {
@@ -764,6 +768,7 @@ const knowledgeBankInput = {
     sourceOrder: [
       "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
       "SRC-KNOWLEDGE-WIKI-RFC-0006-2026",
+      "SRC-KNOWLEDGE-WIKI-RFC-0009-2026",
       "SRC-AI-EVALS-CERTIFICATE-2026",
       "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       "SRC-CALLNYC-POLITICO-2016-03-14",

@@ -106,6 +106,7 @@ that an agent, test, or informal participant has human decision authority.
 | [0006](./0006-federated-knowledge-exchange-and-release-receipts.md) | Federated Knowledge Exchange and Candidate-Bound Release Receipts | `proposed` | Jamie Burkart |
 | [0007](./0007-nyc-jobs-opportunity-monitor-and-digest.md) | NYC Jobs Opportunity Monitor and Hiring Action Digest | `proposed` | Jamie Burkart |
 | [0008](./0008-editorial-page-owner-pilot.md) | Editorial Page-Owner Pilot | `proposed` | Jamie Burkart |
+| [0009](./0009-wiki-form-for-shared-agentic-memory.md) | Wiki Form for Shared Agentic Memory | `exploring` | Jamie Burkart |
 
 ## Validation
 

@@ -24,6 +24,8 @@ const paths = {
     "docs/knowledge-bank/sources/permissions/jamie-portfolio-album-2026-08-13.md",
   photoMetadata:
     "docs/knowledge-bank/sources/photo-metadata/nycac-participation-images-2017-public-safe.md",
+  rfcNine: "rfcs/0009-wiki-form-for-shared-agentic-memory.md",
+  wikiFormEval: "evals/knowledge-wiki/wiki-form-shared-memory.json",
   photoDerivative:
     "apps/www/public/images/field-notes/knowledge-wiki-collective-map.webp"
 };
@@ -73,6 +75,12 @@ export function evaluateKnowledgeGraphPortfolio(candidate) {
     candidate.photoPermission,
     candidate.photoMetadata
   ].join("\n");
+  let wikiFormEval = null;
+  try {
+    wikiFormEval = JSON.parse(candidate.wikiFormEval);
+  } catch {
+    failures.push("wiki-form evaluation contract is missing or invalid JSON");
+  }
 
   check(candidate.labPage.includes("Knowledge Wiki Graphs"), "lab page lacks the successor title");
   check(candidate.labPage.includes("graphLayers"), "lab page lacks an at-a-glance graph model");
@@ -100,6 +108,19 @@ export function evaluateKnowledgeGraphPortfolio(candidate) {
     /access to a source to having evidence/i.test(candidate.labCopy) &&
       /evidence to having permission to publish/i.test(candidate.labCopy),
     "access, evidence, and publication permission are not kept distinct"
+  );
+  check(
+    /shared agentic memory should take a\s+wiki form/i.test(publicCopy) &&
+      /human-inspectable/i.test(publicCopy) &&
+      /source-backed/i.test(publicCopy) &&
+      /people and\s+agents with different contexts/i.test(publicCopy),
+    "public explanation does not make the wiki-form proposition or plural contexts legible"
+  );
+  check(
+    /does not manufacture consensus/i.test(publicCopy) &&
+      /replace human judgment/i.test(publicCopy) &&
+      /terms and history of working agreement visible/i.test(publicCopy),
+    "public explanation does not preserve the truth, judgment, and working-agreement boundary"
   );
   check(
     candidate.colophon.includes("knowledge-wiki-graph-method") &&
@@ -212,6 +233,19 @@ export function evaluateKnowledgeGraphPortfolio(candidate) {
     ),
     "team-memory proposal does not distinguish proposed acceptance conditions from completed client work"
   );
+  check(
+    /^stage: exploring$/m.test(candidate.rfcNine) &&
+      /human-inspectable, source-backed knowledge medium/i.test(candidate.rfcNine) &&
+      /does not mean that a wiki manufactures factual agreement/i.test(candidate.rfcNine) &&
+      /Jamie remains[\s\S]*decision owner/i.test(candidate.rfcNine),
+    "RFC 0009 loses its exploring status, proposition, truth boundary, or Jamie decision ownership"
+  );
+  check(
+    /fictionalized analytical lenses only/i.test(candidate.rfcNine) &&
+      /do not participate in the evaluation/i.test(candidate.rfcNine) &&
+      /no\s+authority in this repository/i.test(candidate.rfcNine),
+    "RFC 0009 does not clearly separate named public-work lenses from participation and authority"
+  );
 
   check(Boolean(claim), "canonical Knowledge Wiki Graph claim is missing");
   if (claim) {
@@ -225,15 +259,19 @@ export function evaluateKnowledgeGraphPortfolio(candidate) {
     check(claim.status === "confirmed-with-boundary", "canonical claim lost its boundary status");
     check(
       sourceIds.has("SRC-KNOWLEDGE-WIKI-RFC-0005-2026") &&
-        sourceIds.has("SRC-KNOWLEDGE-WIKI-RFC-0006-2026"),
-      "canonical claim lacks both architecture RFC sources"
+        sourceIds.has("SRC-KNOWLEDGE-WIKI-RFC-0006-2026") &&
+        sourceIds.has("SRC-KNOWLEDGE-WIKI-RFC-0009-2026"),
+      "canonical claim lacks the three architecture and wiki-form RFC sources"
     );
     check(
       claim.antiClaims.some((item) => /exactly one graph/i.test(item)) &&
         claim.antiClaims.some((item) => /finished production/i.test(item)) &&
         claim.antiClaims.some((item) => /client has adopted/i.test(item)) &&
-        claim.antiClaims.some((item) => /publication permission/i.test(item)),
-      "canonical anti-claims omit topology, maturity, adoption, or publication safeguards"
+        claim.antiClaims.some((item) => /publication permission/i.test(item)) &&
+        claim.antiClaims.some((item) => /automatically produces truth/i.test(item)) &&
+        claim.antiClaims.some((item) => /named analytical lens/i.test(item)) &&
+        claim.antiClaims.some((item) => /Ward Cunningham[\s\S]*Maggie Appleton[\s\S]*Yehuda Katz/i.test(item)),
+      "canonical anti-claims omit topology, maturity, adoption, publication, consensus, authority, or named-lens safeguards"
     );
     check(
       claim.projections.length === 2 &&
@@ -245,6 +283,59 @@ export function evaluateKnowledgeGraphPortfolio(candidate) {
         /connects each public claim to evidence/i.test(colophonProjection.text) &&
         /Jamie decides what appears here/i.test(colophonProjection.text),
       "canonical projections must retain the four-surface case study and one-surface plain-language colophon wording"
+    );
+    check(
+      /human-inspectable, source-backed Knowledge Wiki Graph/i.test(
+        caseStudyProjection?.text ?? ""
+      ) &&
+        /people, repositories, and agents/i.test(caseStudyProjection?.text ?? "") &&
+        /provenance, plurality, and human authority/i.test(
+          caseStudyProjection?.text ?? ""
+        ),
+      "canonical case-study projection loses the concise shared-memory proposition"
+    );
+  }
+
+  if (wikiFormEval) {
+    const lensNames = wikiFormEval.lenses?.map((lens) => lens.name) ?? [];
+    const stages = wikiFormEval.deterministicStages ?? [];
+    const modelStage = stages.indexOf("independent-model-lens-evaluations");
+    check(
+      wikiFormEval.publicBoundary?.researchStage === "exploring" &&
+        wikiFormEval.publicBoundary?.actualPeopleParticipated === false &&
+        wikiFormEval.publicBoundary?.actualEndorsement === false &&
+        wikiFormEval.publicBoundary?.decisionOwner === "Jamie Burkart" &&
+        wikiFormEval.publicBoundary?.humanPublicationApprovalRequired === true,
+      "wiki-form evaluation contract loses its research, nonparticipation, nonendorsement, or human-authority boundary"
+    );
+    check(
+      stages.length === 5 &&
+        modelStage === stages.length - 1 &&
+        stages.slice(0, modelStage).every((stage) => !/model/i.test(stage)),
+      "wiki-form evaluation contract must run deterministic gates before the model stage"
+    );
+    check(
+      JSON.stringify(lensNames) ===
+        JSON.stringify(["Ward Cunningham", "Maggie Appleton", "Yehuda Katz"]) &&
+        wikiFormEval.lenses.every(
+          (lens) =>
+            lens.kind === "fictionalized-public-work-lens" &&
+            lens.actualPersonParticipated === false &&
+            /^https:\/\//.test(lens.publicBasisUrl) &&
+            lens.acceptanceQuestion &&
+            lens.passDefinition
+        ),
+      "wiki-form evaluation contract must retain three independent fictionalized public-work lenses"
+    );
+    check(
+      wikiFormEval.modelGate?.publicOnly === true &&
+        wikiFormEval.modelGate?.repositoryAvailableToModel === false &&
+        wikiFormEval.modelGate?.privateSourcesAvailableToModel === false &&
+        wikiFormEval.modelGate?.maximumCallsPerLens === 1 &&
+        wikiFormEval.modelGate?.aggregateRule === "all-lenses-pass" &&
+        wikiFormEval.modelGate?.humanFinalApprovalRequired === true &&
+        /not any named person's view/i.test(wikiFormEval.modelGate?.humanMeaning ?? ""),
+      "wiki-form model gate loses public-only scope, cost control, all-pass aggregation, or human authority"
     );
   }
 
@@ -267,7 +358,15 @@ export function evaluateKnowledgeGraphPortfolio(candidate) {
         "Test the handoff"
       ].filter((term) => candidate.labPage.includes(term)).length,
       governedCollectiveMap:
-        candidate.photoDerivativeSha256 === expectedPhotoSha ? 1 : 0
+        candidate.photoDerivativeSha256 === expectedPhotoSha ? 1 : 0,
+      wikiFormSignals: [
+        "shared agentic memory should take a wiki form",
+        "human-inspectable",
+        "source-backed",
+        "does not manufacture consensus",
+        "working agreement visible"
+      ].filter((term) => publicCopy.toLowerCase().includes(term.toLowerCase())).length,
+      fictionalizedLenses: wikiFormEval?.lenses?.length ?? 0
     }
   };
 }
@@ -279,6 +378,6 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     process.exit(1);
   }
   console.log(
-    `Knowledge Graph portfolio eval passed: ${result.metrics.graphResponsibilities}/3 graph responsibilities, ${result.metrics.publicClaimReferences} cited renderings, ${result.metrics.reviewedSurfaces} reviewed surfaces.`
+    `Knowledge Graph portfolio eval passed: ${result.metrics.graphResponsibilities}/3 graph responsibilities, ${result.metrics.wikiFormSignals}/5 wiki-form signals, ${result.metrics.fictionalizedLenses}/3 fictionalized lenses, ${result.metrics.publicClaimReferences} cited renderings, ${result.metrics.reviewedSurfaces} reviewed surfaces.`
   );
 }
