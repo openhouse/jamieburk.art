@@ -1,15 +1,15 @@
 {
   "id": "protected-reader-source-backed-team-memory-2026-08-21",
-  "version": 1,
-  "purpose": "Test whether the public Source-Backed Team Memory page makes a focused first engagement easy to authorize for the public-safe scenario derived from a protected call review.",
+  "version": 2,
+  "purpose": "Test whether the public Source-Backed Team Memory page makes a focused diagnostic and implementation engagement easy to authorize without assuming that a knowledge system is the immediate answer.",
   "targetPath": "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
   "supportingPublicCopyPath": "apps/www/src/content/lab/source-backed-team-memory.mdx",
   "targetUrl": "https://staging-a.jamieburk.art/lab/source-backed-team-memory",
   "protectedSourceRecordPath": "docs/knowledge-bank/sources/protected-source-backed-memory-opportunity.md",
   "scenario": {
-    "publicSafeSummary": "A small, fast-growing creative technical team needs product ideas, decision context, and onboarding knowledge to remain usable as new collaborators join.",
-    "desiredFirstEngagement": "One short paid discovery and prototype sprint using one approved, non-sensitive or representative source surface.",
-    "decisionAtEnd": "Continue, revise, or stop based on whether the team can retrieve trustworthy context, preserve unresolved contributions, and reduce repeated explanation.",
+    "publicSafeSummary": "A small, fast-growing creative technical team needs its current operating problem diagnosed before deciding whether it needs workflow stabilization, reusable decision context, or both.",
+    "desiredFirstEngagement": "One short paid diagnostic and implementation sprint that makes one operating loop usable and adds a source-to-memory prototype only when context loss remains part of the constraint.",
+    "decisionAtEnd": "Continue, revise, or stop based on whether the team can sustain the operating loop and, when relevant, retrieve trustworthy context without treating AI as the authority.",
     "actualEngagementClaimed": false
   },
   "sourceBoundary": {
@@ -36,10 +36,12 @@
       "prior judge output"
     ],
     "prompt": "Role-play a fictionalized prospective technical leader with the public-safe team problem in the scenario summary. Use only the exact rendered public page and that summary. Do not infer the protected reader's identity, private facts, actual participation, endorsement, or a real-world decision. First write a concise narrative critique and name the primary risk. Then return pass or fail. Pass only if every rubric item is satisfied and you would say the acceptance statement exactly; otherwise return the failure statement and the single most important revision.",
-    "acceptanceGate": "I would hire Jamie for a focused paid discovery sprint in this scenario, subject to ordinary budget and approval.",
-    "failureGate": "I would not yet hire Jamie for a focused paid discovery sprint in this scenario.",
+    "acceptanceGate": "I would hire Jamie for a focused paid diagnostic and implementation sprint in this scenario, subject to ordinary budget and approval.",
+    "failureGate": "I would not yet hire Jamie for a focused paid diagnostic and implementation sprint in this scenario.",
     "rubric": [
       "The page begins from a specific team problem rather than a universal knowledge-system thesis.",
+      "Jamie diagnoses priorities, ownership, blocked decisions, and handoffs before selecting a tool or proposing a memory system.",
+      "The sequence is explicit: stabilize one operating loop, then preserve context only when that remains useful.",
       "The proposed first engagement is small, permissioned, concrete, and reversible.",
       "The page distinguishes source-backed operating memory from generic AI summarization.",
       "The approach preserves ideas, decisions, unresolved questions, and onboarding context without making AI the authority.",
@@ -57,12 +59,12 @@
     "developmentExamples": [
       {
         "label": "clear-pass-shape",
-        "inputSummary": "The page names the growth and context-loss problem, proposes one short permissioned source-to-memory test, identifies tangible outputs, preserves open questions, and ends with a continue, revise, or stop decision.",
+        "inputSummary": "The page diagnoses the team's operating problem, stabilizes one loop, conditionally proposes one permissioned source-to-memory test, identifies tangible outputs, and ends with a continue, revise, or stop decision.",
         "expectedVerdict": "pass"
       },
       {
         "label": "clear-fail-shape",
-        "inputSummary": "The page presents a universal AI knowledge platform, asks for broad system access, and supplies no first use case, review process, artifacts, or stopping decision.",
+        "inputSummary": "The page presents a universal AI knowledge platform before diagnosing the team's operating problem, asks for broad system access, and supplies no first use case, review process, artifacts, or stopping decision.",
         "expectedVerdict": "fail"
       },
       {

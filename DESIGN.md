@@ -93,7 +93,7 @@ competing crop, overlay, spacing, or typography constants.
 
 ## Composition
 
-- The selected-work sequence on the homepage follows the executable hiring
+- The six-project selected-work sequence on the homepage follows the executable hiring
   argument in `docs/design/homepage-project-sequence.md`. Change the order only
   through that score and its deterministic layout gate so the editorial
   rationale, data, and rendered page remain synchronized.

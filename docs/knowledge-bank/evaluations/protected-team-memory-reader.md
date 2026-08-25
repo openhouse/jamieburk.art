@@ -8,7 +8,7 @@ sensitivity: low
 last_reviewed: 2026-08-21
 review_by: 2026-09-21
 canonical_path: docs/knowledge-bank/evaluations/protected-team-memory-reader.md
-summary: Deterministic prerequisites and a privacy-preserving modeled-reader contract for testing whether the public lab page makes a focused first engagement easy to authorize.
+summary: Deterministic prerequisites and a privacy-preserving modeled-reader contract for testing whether the public lab page makes a focused, diagnosis-first engagement easy to authorize.
 decision: deterministic-and-development-roleplay-pass
 modeled_reader_status: development-pass-uncalibrated
 calibration_status: required
@@ -34,16 +34,19 @@ human_review: governed-open
 # Protected-reader Source-Backed Team Memory proposal gate
 
 The deterministic preflight asks whether the exact public page begins from a
-specific team problem, proposes one small permissioned source-to-memory test,
-preserves useful contributions and unresolved questions, names tangible
-outputs, and ends with a continue, revise, or stop decision. A failure blocks
-modeled-reader work.
+specific team problem, diagnoses priorities, ownership, blocked decisions, and
+handoffs before selecting a tool, stabilizes one operating loop, and proposes a
+small permissioned source-to-memory test only when context loss remains part of
+the constraint. It must also preserve useful contributions and unresolved
+questions, name tangible outputs, and end with a continue, revise, or stop
+decision. A failure blocks modeled-reader work.
 
 After preflight, an isolated fictionalized reader receives only the rendered
 public page and a public-safe scenario abstraction. The reader must supply
 narrative critique before a binary decision and passes only by stating:
 
-> I would hire Jamie for a focused paid discovery sprint in this scenario,
+> I would hire Jamie for a focused paid diagnostic and implementation sprint
+> in this scenario,
 > subject to ordinary budget and approval.
 
 The real person's identity binding, transcript-derived packet, raw
@@ -60,9 +63,8 @@ engagement.
 ## Current development result
 
 An isolated public-surface-only run on August 21, 2026 passed after the page
-was revised to name the team problem, the 1–2 week first engagement, its
-artifacts, and the continue, revise, or stop decision. The run's strongest
-future refinement was to state the team-side owner, success questions,
-retention rule, and stop or handoff procedure before real work begins. The
-result remains an uncalibrated synthetic signal and does not represent the
-protected reader's opinion or a commercial outcome.
+was revised to name the team problem, diagnose the work before choosing an
+artifact, stabilize one operating loop, make memory infrastructure conditional,
+and name a continue, revise, or stop decision. The result remains an
+uncalibrated synthetic signal and does not represent the protected reader's
+opinion or a commercial outcome.

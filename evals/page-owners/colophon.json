@@ -1,0 +1,139 @@
+{
+  "id": "colophon-page-owner-pilot-2026-08-22",
+  "version": 1,
+  "status": "pilot",
+  "purpose": "Test whether the colophon works as an editorially coherent account of how the portfolio is made, reviewed, and maintained.",
+  "targetPath": "apps/www/src/app/colophon/page.tsx",
+  "supportingPublicDataPath": "apps/www/src/data/knowledge-wiki-practice.ts",
+  "latestDevelopmentRunPath": "evals/page-owners/runs/colophon-2026-08-22.json",
+  "targetRoute": "/colophon",
+  "targetUrl": "https://staging-a.jamieburk.art/colophon",
+  "pageBrief": {
+    "audience": "A hiring reader, collaborator, or peer who wants to understand how the portfolio is composed and governed.",
+    "readerJob": "Understand the relationship among Jamie's working knowledge, the selective public portfolio, its visual system, and its editorial safeguards without needing repository context.",
+    "requiredIdeas": [
+      "The portfolio is a selective public rendering of a larger working system.",
+      "The source, evidence, and semantic graphs remain distinct before an audience-specific projection is composed.",
+      "Modeled editorial review produces critique and a binary result without replacing human publication authority.",
+      "The page identifies the site's writing, typography, photography, delivery, privacy, and maintenance choices."
+    ]
+  },
+  "execution": {
+    "kind": "isolated_llm_roleplay",
+    "oneTaskPerOwner": true,
+    "tasksRunSequentially": true,
+    "renderedPageOnly": true,
+    "repositoryAccess": false,
+    "priorOwnerOutputVisible": false,
+    "realPeopleParticipated": false,
+    "allowedInputs": [
+      "the exact rendered colophon beginning at /colophon",
+      "the page brief in this contract",
+      "the assigned owner's listed public sources"
+    ],
+    "prohibitedInputs": [
+      "repository source",
+      "private communications",
+      "private archives",
+      "prior owner output",
+      "patch intent"
+    ],
+    "disclaimer": "Fictionalized analytical lenses informed by public work. These are not quotations, participation claims, approvals, endorsements, or predictions by the real people named."
+  },
+  "owners": [
+    {
+      "id": "deborah-treisman-editorial-shape",
+      "name": "Deborah Treisman",
+      "responsibility": "Narrative selection and editorial proportion",
+      "publicSources": ["https://www.newyorker.com/contributors/deborah-treisman"],
+      "task": "Evaluate only whether the colophon selects and orders its material into a lucid, proportionate narrative for a reader with no prior context.",
+      "criterion": "The page explains what the portfolio is, how its deeper system relates to the public selection, and why its safeguards matter without repetition, throat-clearing, or technical inventory overwhelming the story.",
+      "definitions": {
+        "pass": "A first-time reader can state the page's central idea, follow its sequence, and distinguish essential method from supporting production detail without rereading.",
+        "fail": "The page is diffuse, repetitive, over-defensive, or organized as an inventory whose details obscure its central editorial argument."
+      },
+      "developmentExamples": [
+        {"label": "clear-pass", "inputSummary": "The page opens with its purpose, explains the three-graph-to-publication relationship once, names the review responsibility, and moves concise production details to the end.", "expectedResult": "pass"},
+        {"label": "clear-fail", "inputSummary": "The page begins with a long tool list, repeats the same safety language in every section, and never explains why the system matters to a reader.", "expectedResult": "fail"},
+        {"label": "borderline-fail", "inputSummary": "The ideas are accurate, but every paragraph carries equal weight and the reader cannot tell what to remember.", "expectedResult": "fail"}
+      ],
+      "outputOrder": ["critique", "recommendedRevision", "result"],
+      "outputSchema": {
+        "critique": "A concrete narrative assessment citing visible page evidence.",
+        "recommendedRevision": "The smallest useful editorial change, or no revision needed.",
+        "result": "pass or fail"
+      },
+      "acceptanceStatement": "The colophon passes the narrative selection and editorial proportion gate."
+    },
+    {
+      "id": "maggie-appleton-system-legibility",
+      "name": "Maggie Appleton",
+      "responsibility": "Living knowledge-system legibility",
+      "publicSources": ["https://maggieappleton.com/colophon"],
+      "task": "Evaluate only whether the colophon makes the relationship among working knowledge, graph layers, editorial projection, and ongoing maintenance intuitive and inspectable.",
+      "criterion": "The page makes the source, evidence, and semantic graphs distinct; explains that the portfolio is an audience-specific projection; and shows how the site can evolve without presenting automation as truth or authority.",
+      "definitions": {
+        "pass": "A first-time reader can reconstruct the source-to-evidence-to-meaning-to-projection flow and identify where human review remains responsible.",
+        "fail": "The page presents a vague digital garden, a magical AI pipeline, or a stack description without a comprehensible knowledge flow and correction boundary."
+      },
+      "developmentExamples": [
+        {"label": "clear-pass", "inputSummary": "The page names all three graph roles, distinguishes them from the public projection, and makes review, correction, and maintenance human responsibilities.", "expectedResult": "pass"},
+        {"label": "clear-fail", "inputSummary": "The page says an AI knowledge graph automatically turns every source into a truthful public page.", "expectedResult": "fail"},
+        {"label": "borderline-fail", "inputSummary": "The page names three graphs but leaves their different responsibilities and the transition to publication unexplained.", "expectedResult": "fail"}
+      ],
+      "outputOrder": ["critique", "recommendedRevision", "result"],
+      "outputSchema": {
+        "critique": "A concrete systems-legibility assessment citing visible page evidence.",
+        "recommendedRevision": "The smallest useful systems explanation change, or no revision needed.",
+        "result": "pass or fail"
+      },
+      "acceptanceStatement": "The colophon passes the living knowledge-system legibility gate."
+    },
+    {
+      "id": "ellen-lupton-form-and-reading",
+      "name": "Ellen Lupton",
+      "responsibility": "Typography, hierarchy, and form-content relation",
+      "publicSources": [
+        "https://ellenlupton.com/Thinking-with-Type",
+        "https://ellenlupton.com/White-Space"
+      ],
+      "task": "Evaluate only whether typography, hierarchy, spacing, and sequence make the colophon's editorial argument visible and readable across desktop and mobile.",
+      "criterion": "The visual hierarchy distinguishes thesis, method, review practice, and production notes; maintains readable measure and contrast; and uses the portfolio's material language without turning every section into the same visual unit.",
+      "definitions": {
+        "pass": "A reader can scan the page's hierarchy, settle into comfortable prose, and understand the relationship among sections before reading every sentence.",
+        "fail": "Type, spacing, repetition, contrast, or responsive composition flatten the hierarchy, strain reading, or make the page's visual form contradict its editorial claims."
+      },
+      "developmentExamples": [
+        {"label": "clear-pass", "inputSummary": "The page uses a strong title, a concise lead, varied but coherent section structures, readable line lengths, and restrained rules to guide the eye.", "expectedResult": "pass"},
+        {"label": "clear-fail", "inputSummary": "Every idea appears in an identical card, body lines span the viewport, secondary text lacks contrast, and headings wrap awkwardly on mobile.", "expectedResult": "fail"},
+        {"label": "borderline-fail", "inputSummary": "The typography is attractive, but the page's repeated two-column sections make unlike ideas look editorially equivalent.", "expectedResult": "fail"}
+      ],
+      "outputOrder": ["critique", "recommendedRevision", "result"],
+      "outputSchema": {
+        "critique": "A concrete visual and typographic assessment citing visible page evidence.",
+        "recommendedRevision": "The smallest useful design change, or no revision needed.",
+        "result": "pass or fail"
+      },
+      "acceptanceStatement": "The colophon passes the typography, hierarchy, and form-content gate."
+    }
+  ],
+  "passPolicy": {
+    "allOwnersMustPass": true,
+    "averagingAllowed": false,
+    "constructiveCritiqueRequired": true,
+    "failedOwnerNamesSingleHighestPriorityRevision": true
+  },
+  "calibration": {
+    "status": "required",
+    "minimumHumanLabeledPassExamplesPerOwner": 20,
+    "minimumHumanLabeledFailExamplesPerOwner": 20,
+    "releaseAuthority": "advisory-until-calibrated",
+    "realWorldApprovalClaimed": false
+  },
+  "humanAuthority": {
+    "publicationOwner": "Jamie Burkart",
+    "rightsConsentCreditRemainSeparate": true,
+    "modeledPassAuthorizesDeployment": false,
+    "modeledPassAuthorizesIndexing": false
+  }
+}

@@ -213,8 +213,9 @@ export const proofClaims: ProofClaim[] = [
     shortWording:
       "Jamie built and stewarded 30+ pages of campaign memory for shared decisions and next steps",
     detailedPublicWording:
-      "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
-    sourceBasis: "Approved resume language and public-safe collaboration summary.",
+      "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams. A governed 2026 source note supports a current coordination practice in which Jamie maintains shared memory and concrete artifacts while action ownership remains explicit; it does not establish sole coalition authority or policy causality.",
+    sourceBasis:
+      "Approved resume language, public-safe collaboration summary, and governed metadata-only source record for protected 2026 running minutes.",
     sourceNote: "Use collective-work language and omit private coalition context.",
     whyItMatters:
       "Shows documentation as operating infrastructure for sensitive, collective civic work.",
@@ -237,7 +238,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["meeting-synthesis", "decision-records", "source-mapping"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-08-22"
   },
   {
     id: "fair-rent-source-map",
@@ -251,9 +252,9 @@ export const proofClaims: ProofClaim[] = [
     publicWording:
       "Created a legislative source map and provenance redline tracing Commercial Rent Stabilization bill language across public policy lineages and revision paths.",
     shortWording:
-      "Jamie mapped legislative source lineage so collaborators could review bill changes",
+      "Jamie mapped how bill language changed across public legislative records so collaborators could review revisions",
     detailedPublicWording:
-      "Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected.",
+      "Jamie organized the relationships among public sources, public-data framing, policy questions, and review steps so collaborators could see what was known, what needed review, and what remained protected.",
     sourceBasis: "Approved resume language and public-safe source-map summary.",
     guardrail: "Do not imply legal authority or official bill ownership.",
     doNotSay: [
@@ -719,9 +720,7 @@ export function selectProofs(surface: ProofSurface): ProofClaim[] {
 export const homepageProofs = [
   "career-operating-structure-14-years",
   "hje-revenue-growth-contribution",
-  "fair-rent-campaign-memory",
-  "wowlist-community-platform",
-  "sunday-dinner-196-participation-infrastructure"
+  "fair-rent-campaign-memory"
 ].map(requireReadyOrCarefulProof);
 
 export const resumeProofHighlights = [
@@ -769,7 +768,7 @@ export const technicalOperationsProofRows = [
     ]
   },
   {
-    capability: "Public-facing launch and adoption",
+    capability: "Public-facing launch and adoption readiness",
     toward: "Shaping websites, prototypes, and community platforms so real audiences can act.",
     proofIds: [
       "nyc-artist-coalition-public-web-infrastructure",

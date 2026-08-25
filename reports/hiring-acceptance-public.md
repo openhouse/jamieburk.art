@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `c9c06f4b4bfe53a1b7dd50472ea4a260e3bd3b68`
-**Portfolio snapshot:** `727d831398acfb178574658ec0f8de84bddb209ac3ab62066f8b70d09c6c5e2b`
-**Role-context hash:** `79fda2bae7358619a15aabc7a7a55f670787af216f73963205fdc76bc554b9d8`
+**Candidate commit:** `944559974bc35d762b780f7dab4cc708b3d98a27`
+**Portfolio snapshot:** `7a5bc3bb4c8f17cc3ad5cc95e745336d08f2bf6628d0083c097771795adc9c8e`
+**Role-context hash:** `cb80b6940949805bbbda2584e039b704338f80344c7008a27f359ae8b12de037`
 **Reader-context hash:** `37f9fc4598fa3864aef3f19afabbcab9bccb21d54f92b2d16c743db8606331e7`
 **Candidate-context hash:** `6251a2430d0a133ce9e511ad76dc9b415bed1a77e10e8b29e81a73d3ad301523`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
@@ -38,61 +38,61 @@
 ### ACLU - Senior Project Manager, National Campaigns
 
 - Deterministic disposition: `evidence-gap-review`
-- Critical signals observed: 3/3
-- All signals observed: 4/5
+- Critical signals observed: 1/3
+- All signals observed: 2/5
 - Opportunity status live: yes
 - Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
-- `requirement.aclu-national-campaigns.complex-project-delivery`: **observed** on `/work/technical-operations`
+- `requirement.aclu-national-campaigns.complex-project-delivery`: **not observed**
 - `requirement.aclu-national-campaigns.advocacy-operations`: **observed** on `/work/fair-rent-nyc`
-- `requirement.aclu-national-campaigns.communication-systems`: **observed** on `/work/technical-operations`
+- `requirement.aclu-national-campaigns.communication-systems`: **not observed**
 - `requirement.aclu-national-campaigns.research-and-judgment`: **observed** on `/work/fair-rent-nyc`
 - `requirement.aclu-national-campaigns.budget-administration`: **not observed**
 
 ### CodePath - Senior AI Operations Lead
 
 - Deterministic disposition: `evidence-gap-review`
-- Critical signals observed: 3/4
-- All signals observed: 4/5
+- Critical signals observed: 1/4
+- All signals observed: 1/5
 - Opportunity status live: yes
 - Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
-- `requirement.codepath-ai-ops.workflow-audit`: **observed** on `/work/technical-operations`
+- `requirement.codepath-ai-ops.workflow-audit`: **not observed**
 - `requirement.codepath-ai-ops.agent-delivery`: **not observed** on `/lab/source-backed-team-memory`
 - `requirement.codepath-ai-ops.quality-gates`: **observed** on `/lab/source-backed-team-memory`
-- `requirement.codepath-ai-ops.reusable-assets`: **observed** on `/work/technical-operations`
-- `requirement.codepath-ai-ops.outcome-measurement`: **observed** on `/work/technical-operations`
+- `requirement.codepath-ai-ops.reusable-assets`: **not observed**
+- `requirement.codepath-ai-ops.outcome-measurement`: **not observed**
 
 ### CodePath - Engineering Project Manager
 
 - Deterministic disposition: `evidence-gap-review`
-- Critical signals observed: 2/4
-- All signals observed: 3/5
+- Critical signals observed: 0/4
+- All signals observed: 1/5
 - Opportunity status live: yes
 - Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
-- `requirement.codepath-engineering-pm.delivery`: **observed** on `/work/technical-operations`
+- `requirement.codepath-engineering-pm.delivery`: **not observed**
 - `requirement.codepath-engineering-pm.hands-on-qa`: **not observed**
 - `requirement.codepath-engineering-pm.test-case-writing`: **not observed**
-- `requirement.codepath-engineering-pm.lightweight-process`: **observed** on `/work/technical-operations`
+- `requirement.codepath-engineering-pm.lightweight-process`: **not observed**
 - `requirement.codepath-engineering-pm.ai-automation`: **observed** on `/lab/source-backed-team-memory`
 
 ### NYC OTI - Senior Product Manager 782366
 
-- Deterministic disposition: `deterministic-ready-for-human-review`
-- Critical signals observed: 5/6
-- All signals observed: 5/6
+- Deterministic disposition: `evidence-gap-review`
+- Critical signals observed: 3/6
+- All signals observed: 3/6
 - Opportunity status live: yes
 - Role context current at candidate time: yes
 - Exclusionary hard screen recorded: no
 
 - `requirement.oti-product-manager.end-to-end-product`: **observed** on `/work/callnyc`
 - `requirement.oti-product-manager.discovery`: **observed** on `/work/wowlist`
-- `requirement.oti-product-manager.public-launch`: **observed** on `/work/technical-operations`
-- `requirement.oti-product-manager.measurement`: **observed** on `/work/technical-operations`
+- `requirement.oti-product-manager.public-launch`: **not observed**
+- `requirement.oti-product-manager.measurement`: **not observed**
 - `requirement.oti-product-manager.privacy-and-ethics`: **observed** on `/lab/source-backed-team-memory`
 - `requirement.oti-product-manager.accessibility-conformance`: **not observed**
 
@@ -138,17 +138,17 @@
 ### NYC OTI - Technical Operations Manager 782369
 
 - Deterministic disposition: `not-live`
-- Critical signals observed: 4/4
-- All signals observed: 5/6
+- Critical signals observed: 0/4
+- All signals observed: 0/6
 - Opportunity status live: no
 - Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
-- `requirement.oti.delivery-coordination`: **observed** on `/work/technical-operations`
-- `requirement.oti.risk-and-dependencies`: **observed** on `/work/technical-operations`
-- `requirement.oti.onboarding-and-runbooks`: **observed** on `/work/technical-operations`
-- `requirement.oti.reporting-and-metrics`: **observed** on `/work/technical-operations`
-- `requirement.oti.continuous-improvement`: **observed** on `/work/technical-operations`
+- `requirement.oti.delivery-coordination`: **not observed**
+- `requirement.oti.risk-and-dependencies`: **not observed**
+- `requirement.oti.onboarding-and-runbooks`: **not observed**
+- `requirement.oti.reporting-and-metrics`: **not observed**
+- `requirement.oti.continuous-improvement`: **not observed**
 - `requirement.oti.government-hiring-and-procurement`: **not observed** on `/work/callnyc`
 
 ### ACLU - Product Manager II, Discovery
@@ -169,33 +169,47 @@
 ### Benepass - Product Operations Manager
 
 - Deterministic disposition: `not-live`
-- Critical signals observed: 3/4
-- All signals observed: 3/4
+- Critical signals observed: 0/4
+- All signals observed: 0/4
 - Opportunity status live: no
 - Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
-- `requirement.benepass.launch-readiness`: **observed** on `/work/technical-operations`
-- `requirement.benepass.product-engineering-translation`: **observed** on `/work/technical-operations`
-- `requirement.benepass.runbooks-and-learning`: **observed** on `/work/technical-operations`
+- `requirement.benepass.launch-readiness`: **not observed**
+- `requirement.benepass.product-engineering-translation`: **not observed**
+- `requirement.benepass.runbooks-and-learning`: **not observed**
 - `requirement.benepass.quantified-prioritization`: **not observed** on `/work/harry-j-epstein`
 
 ### CodePath - Senior Program Manager, Claude Corps
 
 - Deterministic disposition: `not-live`
-- Critical signals observed: 4/4
-- All signals observed: 5/5
+- Critical signals observed: 1/4
+- All signals observed: 1/5
 - Opportunity status live: no
 - Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
-- `requirement.codepath.master-program-plan`: **observed** on `/work/technical-operations`
-- `requirement.codepath.partner-coordination`: **observed** on `/work/technical-operations`
-- `requirement.codepath.executive-reporting`: **observed** on `/work/technical-operations`
+- `requirement.codepath.master-program-plan`: **not observed**
+- `requirement.codepath.partner-coordination`: **not observed**
+- `requirement.codepath.executive-reporting`: **not observed**
 - `requirement.codepath.ai-first-workflow`: **observed** on `/lab/source-backed-team-memory`
-- `requirement.codepath.handoff-ready-systems`: **observed** on `/work/technical-operations`
+- `requirement.codepath.handoff-ready-systems`: **not observed**
 
 ### Asana - AI Implementation Manager, Service Management
+
+- Deterministic disposition: `evidence-gap-review`
+- Critical signals observed: 1/3
+- All signals observed: 1/4
+- Opportunity status live: yes
+- Role context current at candidate time: no
+- Exclusionary hard screen recorded: no
+
+- `requirement.asana.implementation-ownership`: **not observed** on `/work/technical-operations`
+- `requirement.asana.ai-workflow-design`: **observed** on `/lab/source-backed-team-memory`
+- `requirement.asana.risk-and-change-management`: **not observed**
+- `requirement.asana.reusable-playbooks`: **not observed**
+
+### PermitFlow - Product Operations Manager
 
 - Deterministic disposition: `evidence-gap-review`
 - Critical signals observed: 1/3
@@ -204,37 +218,23 @@
 - Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
-- `requirement.asana.implementation-ownership`: **not observed** on `/work/technical-operations`
-- `requirement.asana.ai-workflow-design`: **observed** on `/lab/source-backed-team-memory`
-- `requirement.asana.risk-and-change-management`: **not observed** on `/work/technical-operations`
-- `requirement.asana.reusable-playbooks`: **observed** on `/work/technical-operations`
-
-### PermitFlow - Product Operations Manager
-
-- Deterministic disposition: `evidence-gap-review`
-- Critical signals observed: 2/3
-- All signals observed: 3/4
-- Opportunity status live: yes
-- Role context current at candidate time: no
-- Exclusionary hard screen recorded: no
-
 - `requirement.permitflow.physical-public-systems`: **observed** on `/work/kc-town-hall`, `/work/callnyc`
 - `requirement.permitflow.product-data`: **not observed** on `/work/harry-j-epstein`
-- `requirement.permitflow.cross-functional-launch`: **observed** on `/work/technical-operations`
+- `requirement.permitflow.cross-functional-launch`: **not observed**
 - `requirement.permitflow.ai-automation`: **observed** on `/lab/source-backed-team-memory`
 
 ### Protected source-backed team-memory consulting lead
 
 - Deterministic disposition: `not-live`
-- Critical signals observed: 2/2
+- Critical signals observed: 1/2
 - All signals observed: 2/3
 - Opportunity status live: no
 - Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 
-- `requirement.protected-memory.knowledge-friction`: **observed** on `/work/technical-operations`
+- `requirement.protected-memory.knowledge-friction`: **not observed**
 - `requirement.protected-memory.human-review`: **observed** on `/lab/source-backed-team-memory`
-- `requirement.protected-memory.bounded-sprint`: **not observed**
+- `requirement.protected-memory.bounded-sprint`: **observed** on `/lab/source-backed-team-memory`
 
 ## Open human gates
 

@@ -59,9 +59,20 @@ test("removing the fast-growth knowledge problem blocks modeled review", () => {
   assert.equal(evaluation.judgeStatus, "preflight-blocked");
 });
 
+test("removing diagnosis and operating stabilization blocks modeled review", () => {
+  const pageSource = candidatePage.replace(
+    /Start with the operating problem[\s\S]*?Then preserve what must continue/,
+    "Begin with a team-memory prototype"
+  );
+  const evaluation = evaluateCandidate(pageSource);
+
+  assert.equal(evaluation.checks.diagnosis_precedes_memory_system, false);
+  assert.equal(evaluation.judgeStatus, "preflight-blocked");
+});
+
 test("removing the focused first source blocks modeled review", () => {
   const pageSource = candidatePage.replace(
-    /one approved,\s*non-sensitive or\s*representative source/gi,
+    /one\s+approved,\s*non-sensitive or\s*representative source/gi,
     "all available company systems"
   );
   const supportingCopy = candidateSupportingCopy.replace(

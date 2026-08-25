@@ -1,8 +1,8 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to November 14, 2019 City Council stated meeting official transcript
 
-**Source commit:** `038bb822000d7a0ffaa64d490a326688840ac083`
-**Generation time:** 2026-08-21T16:34:50-04:00
-**Source fingerprint:** `1c923e546cb66e3eac2c22d16194adfbbb465e4019d8d09756aa6b96b93c2a14`
+**Source commit:** `944559974bc35d762b780f7dab4cc708b3d98a27`
+**Generation time:** 2026-08-22T21:05:28-04:00
+**Source fingerprint:** `e1447b5b73142935ab80a7a7b6cacb4fd7b1dd60a964e3be4e0e321a568cf23d`
 
 - [Int. 1796 commercial rent stabilization introduction](../../events/commercial-rent-int-1796-introduction-2019-11-14.md) - `uses_source` (frontmatter)

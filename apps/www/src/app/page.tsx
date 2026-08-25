@@ -4,16 +4,9 @@ import { CapabilityGrid } from "@/components/CapabilityGrid";
 import { ContactCTA } from "@/components/ContactCTA";
 import { FieldSystemEvidence } from "@/components/FieldSystemEvidence";
 import { Hero } from "@/components/Hero";
+import { HomeWorkCard } from "@/components/HomeWorkCard";
 import { ProofStrip } from "@/components/ProofStrip";
-import { WorkCard } from "@/components/WorkCard";
 import { featuredWork } from "@/data/work";
-
-const transformations = [
-  ["Emerging stakeholder context", "shared decision records"],
-  ["Public data awaiting translation", "civic guidance and source maps"],
-  ["Long-running operations", "maintainable e-commerce workflows"],
-  ["Recurring community gatherings", "repeatable participation infrastructure"]
-];
 
 const startHereLinks = [
   {
@@ -22,24 +15,9 @@ const startHereLinks = [
     note: "The fastest role-fit proof surface for public-sector technical operations, product operations, implementation, and delivery coordination."
   },
   {
-    href: "/work/wowlist",
-    label: "WOWList.org",
-    note: "A co-built community platform with natural-language entry, organizer workflows, digests, embeds, and operational depth."
-  },
-  {
-    href: "/work/fair-rent-nyc",
-    label: "NYC Artist Coalition / FairRentNYC",
-    note: "Current civic delivery across coalition operations, public campaign systems, policy communications, and source-backed continuity."
-  },
-  {
-    href: "/work/harry-j-epstein",
-    label: "Harry J. Epstein Company",
-    note: "Six years of accountable client delivery across e-commerce, analytics, content, marketing, and operating workflows."
-  },
-  {
-    href: "/work/callnyc",
-    label: "CallNYC.org",
-    note: "A civic-data product translating public records into resident-facing issue pathways and next-step guidance."
+    href: "/work",
+    label: "Selected work",
+    note: "Case studies across current civic delivery, sustained operations, public-facing products, implementation, and community systems."
   },
   {
     href: "/resume",
@@ -47,6 +25,15 @@ const startHereLinks = [
     note: "PDF for applications and hiring workflows."
   }
 ];
+
+const featuredProofs = {
+  "harry-j-epstein":
+    "Led web, e-commerce, analytics, content, marketing, and operational improvements that contributed to a period of 2x revenue growth.",
+  "kc-town-hall":
+    "Co-developed a successful $490,539 public funding request and served as the City's named developer and presenter for the exact request.",
+  "196-sunday-dinner":
+    "Created repeatable hosting, onboarding, facilitation, and continuity systems across 300+ gatherings and 20+ resident artists."
+} as const;
 
 export default function HomePage() {
   return (
@@ -93,11 +80,6 @@ export default function HomePage() {
             <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
               Proof across operating, civic, and community systems
             </h2>
-            <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: emerging, high-context
-              work becoming usable systems, public-facing tools,
-              documentation, decision trails, and durable handoffs.
-            </p>
           </div>
           <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
             View all work
@@ -105,38 +87,12 @@ export default function HomePage() {
         </div>
         <div className="mt-8">
           {featuredWork.map((item) => (
-            <WorkCard item={item} key={item.slug} />
+            <HomeWorkCard
+              item={item}
+              key={item.slug}
+              proof={featuredProofs[item.slug as keyof typeof featuredProofs]}
+            />
           ))}
-        </div>
-      </section>
-      <section className="border-y border-jb-ink/15 bg-jb-warm py-16">
-        <div className="jb-frame grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="jb-reading">
-            <p className="jb-section-label">Operating motif</p>
-            <h2 className="mt-3 text-4xl leading-tight text-jb-ink">
-              Structure grows from the material
-            </h2>
-            <p className="mt-4 leading-8 text-jb-ink/76">
-              The projects differ, but the move is consistent: clarify what is
-              known, protect what should stay private, and leave behind material
-              people can act on.
-            </p>
-          </div>
-          <ol className="border-t border-jb-ink/20">
-            {transformations.map(([from, to], index) => (
-              <li
-                className="grid gap-2 border-b border-jb-ink/20 py-5 sm:grid-cols-[3rem_1fr_auto_1fr] sm:items-baseline"
-                key={from}
-              >
-                <span className="font-label text-sm text-jb-blue">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <p className="font-semibold text-jb-ink">{from}</p>
-                <span className="hidden text-jb-blue sm:block">becomes</span>
-                <p className="font-semibold text-jb-green">{to}</p>
-              </li>
-            ))}
-          </ol>
         </div>
       </section>
       <section className="jb-frame grid gap-8 py-16 lg:grid-cols-[0.8fr_1.2fr]">

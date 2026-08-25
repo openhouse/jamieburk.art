@@ -9,11 +9,26 @@ import {
 
 const contract = JSON.parse(readFileSync(contractPath, "utf8"));
 const pageSource = readFileSync(contract.site.pageSourcePath, "utf8");
+const opportunitySource = readFileSync(
+  "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
+  "utf8"
+);
+const protectedSource = readFileSync(
+  "docs/knowledge-bank/sources/protected-source-backed-memory-opportunity.md",
+  "utf8"
+);
 
-function evaluate(candidate = pageSource, contractOverride = contract) {
+function evaluate(
+  candidate = pageSource,
+  contractOverride = contract,
+  sourceOverrides = {}
+) {
   return evaluateForwardedHiringScenario({
     contract: contractOverride,
-    pageSource: candidate
+    pageSource: candidate,
+    opportunitySource:
+      sourceOverrides.opportunitySource ?? opportunitySource,
+    protectedSource: sourceOverrides.protectedSource ?? protectedSource
   });
 }
 
@@ -66,6 +81,20 @@ test("removing the explicit internal decision brief blocks the model call", () =
   assert.equal(result.judgeStatus, "preflight-blocked");
 });
 
+test("a solution-first proposal blocks the model call", () => {
+  const candidate = pageSource.replace(
+    /Start with the operating problem[\s\S]*?Then preserve what must continue/,
+    "Begin with a team-memory prototype"
+  );
+  const result = evaluate(candidate);
+
+  assert.equal(
+    result.checks.diagnosis_and_stabilization_precede_memory,
+    false
+  );
+  assert.equal(result.judgeStatus, "preflight-blocked");
+});
+
 test("removing the team-side owner blocks the model call", () => {
   const candidate = pageSource.replace(
     /one team-side owner/gi,
@@ -112,4 +141,38 @@ test("an uncalibrated synthetic hire remains advisory", () => {
   assert.equal(contract.calibration.status, "required");
   assert.equal(contract.calibration.releaseAuthority, "advisory-only");
   assert.equal(contract.calibration.realWorldDecisionClaimed, false);
+});
+
+test("a warm real-world reply advances only to conversation invited", () => {
+  const result = evaluate();
+
+  assert.equal(result.checks.real_world_feedback_stage_is_calibrated, true);
+  assert.equal(result.checks.real_world_feedback_preserves_unknowns, true);
+  assert.equal(result.checks.real_world_feedback_does_not_validate_modeled_hire, true);
+  assert.equal(result.realWorldFeedback.stage, "conversation-invited");
+  assert.equal(result.realWorldFeedback.commercialEffect, "none");
+});
+
+test("a warm reply cannot be promoted to hiring authorization", () => {
+  const unsafeContract = structuredClone(contract);
+  unsafeContract.realWorldFeedback = {
+    ...unsafeContract.realWorldFeedback,
+    observedStage: "commercial-authorization",
+    validatesModeledHire: true
+  };
+  const result = evaluate(pageSource, unsafeContract);
+
+  assert.equal(result.checks.real_world_feedback_stage_is_calibrated, false);
+  assert.equal(result.checks.real_world_feedback_does_not_validate_modeled_hire, false);
+  assert.equal(result.judgeStatus, "preflight-blocked");
+});
+
+test("private circumstance detail blocks the public-safe feedback record", () => {
+  const unsafeOpportunity = `${opportunitySource}\nprivate_family_circumstances: retained\n`;
+  const result = evaluate(pageSource, contract, {
+    opportunitySource: unsafeOpportunity
+  });
+
+  assert.equal(result.checks.real_world_feedback_is_summary_only, false);
+  assert.equal(result.judgeStatus, "preflight-blocked");
 });

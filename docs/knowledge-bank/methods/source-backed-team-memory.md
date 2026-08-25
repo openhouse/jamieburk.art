@@ -10,7 +10,7 @@ review_by: 2027-01-18
 canonical_path: docs/knowledge-bank/methods/source-backed-team-memory.md
 summary: >
   A governed workflow for turning scattered records into traceable decisions,
-  bounded claims, open questions, and reusable handoffs.
+  carefully scoped claims, open questions, and reusable handoffs.
 relations:
   - type: related_to
     target: capability.technical-operations
@@ -44,6 +44,18 @@ Source-Backed Team Memory turns scattered records into a system a future reader
 can inspect and continue. The method separates intake, observation, claim,
 evidence, correction, projection, and protected absence.
 
+## Diagnose before choosing the artifact
+
+The first responsibility is to identify the operating problem rather than
+prescribe a wiki. Map priorities, ownership, blocked decisions, failing
+handoffs, repeated explanations, and work that should stop. Stabilize one
+useful operating loop before deciding what knowledge infrastructure, if any,
+would help it continue.
+
+When context loss remains part of the constraint, preserve only the decisions,
+rationale, open questions, and onboarding knowledge people need to carry the
+work. The product is a more capable team, not a repository.
+
 ## Knowledge Wiki Graph practice
 
 The current practice generalizes this work across projects through three
@@ -70,7 +82,7 @@ truth.
 ## Operating sequence
 
 1. Preserve the source's identity and access boundary.
-2. Extract bounded observations without inflating authorship or impact.
+2. Extract carefully scoped observations without inflating authorship or impact.
 3. Associate claims with direct, corroborating, contextual, contradictory, or
    private support.
 4. Record anti-claims, uncertainty, corrections, rights, and consent.

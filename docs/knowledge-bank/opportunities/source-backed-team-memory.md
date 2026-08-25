@@ -5,14 +5,14 @@ kind: opportunity
 status: governed-open
 visibility: summary-only
 sensitivity: high
-last_reviewed: 2026-08-21
+last_reviewed: 2026-08-22
 review_by: 2026-09-10
 canonical_path: docs/knowledge-bank/opportunities/source-backed-team-memory.md
-summary: Public-safe opportunity metadata for a contingent consulting lead without collaborator, company, pricing, or correspondence disclosure.
+summary: Public-safe opportunity metadata for a contingent consulting lead whose relationship has been reactivated while its commercial state remains unresolved.
 canonical_url: https://jamieburk.art/lab/source-backed-team-memory
 source_type: protected-metadata
 opportunity_status: conditional
-verified_at: 2026-08-10
+verified_at: 2026-08-22
 portfolio_routes:
   - /work/technical-operations
   - /lab/source-backed-team-memory
@@ -26,14 +26,36 @@ discovery_terms:
   - knowledge-friction mapping
 confirmed_facts:
   - A protected June 2026 source family records a contingent paid consulting discussion about team knowledge, decision context, and onboarding.
-  - Jamie prepared a bounded discovery and prototype proposal after the discussion.
+  - Jamie prepared a limited discovery and prototype proposal after the discussion.
   - The protected review did not recover acceptance, rejection, budget approval, a contract, or completed work.
+  - A later protected response acknowledged the outreach warmly and explicitly invited a future conversation.
 inferences:
   - The discussion is best classified as a genuine but unclosed prospective consulting opportunity.
+  - The relationship is active enough for a future conversation, but the response does not establish page engagement or commercial intent.
 unknowns:
+  - Whether the linked page was opened or read closely.
+  - Whether the public proposal was assessed, forwarded internally, or connected to a present organizational need.
   - Current budget authority, organizational priority, and timing.
-  - Whether the proposal received a substantive response outside the bounded source review.
   - Whether any engagement will be scoped, accepted, contracted, or performed.
+response_state:
+  stage: conversation-invited
+  evidence_class: protected-summary
+  observed_signals:
+    - warm-response
+    - future-conversation-invited
+  not_established:
+    - link-opened
+    - page-read
+    - proposal-assessed
+    - internal-forward
+    - present-organizational-need
+    - budget-authority
+    - hiring-intent
+    - commercial-authorization
+    - engagement-accepted
+  commercial_effect: none
+  modeled_hire_validated: false
+  judge_input_allowed: false
 hard_screens:
   - id: screen.protected-memory.budget-authority
     text: A budget owner must authorize compensated work before any engagement exists.
@@ -72,12 +94,12 @@ role_requirements:
   - id: requirement.protected-memory.bounded-sprint
     importance: important
     kind: condition
-    text: Begin with one permissioned source surface and a bounded discovery or prototype engagement.
+    text: Diagnose the operating problem, stabilize one useful loop, and add one permissioned source surface only when it helps.
     wiki_evidence:
       - method.source-backed-team-memory
     public_evidence:
       - route: /lab/source-backed-team-memory
-        needle: Discuss a bounded source-backed memory sprint
+        needle: Discuss a focused operating sprint
     status: visible-qualified
     gap_type: role-context
     next_action: Do not imply that a sprint was accepted, funded, or delivered.
@@ -88,7 +110,7 @@ one_year_risk_conditions:
   - Exploratory advice becomes unpaid implementation or uncontrolled scope.
   - Protected source access expands before confidentiality, IP, privacy, and compensation are agreed.
 interview_questions:
-  - Is there an authorized budget owner and a current bounded use case?
+  - Is there an authorized budget owner and a current, focused use case?
   - What source surface would be safe, permissioned, and useful for a first test?
   - Who reviews and corrects the resulting operating memory?
 relations:
@@ -120,6 +142,8 @@ evidence:
     supports:
       - contingent consulting-opportunity classification
       - proposal existence
+      - warm relationship reactivation
+      - future conversation invitation
       - unresolved commercial state
 human_review: governed-open
 ---
@@ -130,19 +154,25 @@ human_review: governed-open
 
 This is a conditional opportunity record, not a formal job posting. The
 protected source review supports a genuine but unclosed prospective consulting
-lead. It does not establish an offer, acceptance, rejection, contract, client
-adoption, deployment, completed work, or market validation.
+lead. A later protected response supports warm relationship reactivation and an
+invitation to speak again. It does not establish that the linked page was
+opened or read, that the proposal was assessed or forwarded, or that a current
+need, budget, hiring intention, offer, acceptance, contract, client adoption,
+deployment, completed work, or market validation exists.
 
 ## Public-safe core
 
-A focused lab method for source-backed team memory: reviewable,
-human-correctable, source-linked operating memory for knowledge-heavy teams.
+A focused diagnostic and implementation method: stabilize one useful operating
+loop, then add reviewable, human-correctable, source-linked memory when it helps
+the work continue.
 
 AI drafts. Humans review. The shared record remains inspectable and correctable.
 
 ## Public-safe deliverables
 
-- knowledge-friction map;
+- operating-friction and knowledge-friction maps;
+- priority, ownership, and decision map;
+- focused workflow reset and working agreement;
 - source and workflow inventory;
 - decision-memory and meeting-memory templates;
 - onboarding or "how we know what we know" starter page;

@@ -69,6 +69,22 @@ test("removing the Fair Rent field-and-system pair fails closed", () => {
   assert(result.failures.some(({ criterion }) => criterion === "editorial-not-decorative"));
 });
 
+test("the homepage field-and-system synthesis introduces the selected projects", () => {
+  const path = "apps/www/src/app/page.tsx";
+  const source = readFileSync(path, "utf8");
+  const fieldSection = '      <FieldSystemEvidence variant="home" />\n';
+  const withoutFieldSection = source.replace(fieldSection, "");
+  const afterSelectedSystems = withoutFieldSection.replace(
+    '      </section>\n      <section className="jb-frame grid gap-8 py-16 lg:grid-cols-[0.8fr_1.2fr]">',
+    `      </section>\n${fieldSection}      <section className="jb-frame grid gap-8 py-16 lg:grid-cols-[0.8fr_1.2fr]">`
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: afterSelectedSystems });
+  assert.equal(result.passed, false);
+  assert(
+    result.failures.some(({ criterion }) => criterion === "editorial-not-decorative")
+  );
+});
+
 test("the Knowledge Wiki Graph lab retains its governed collective-synthesis photograph", () => {
   const path = "apps/www/src/app/lab/source-backed-team-memory/page.tsx";
   const source = readFileSync(path, "utf8").replace(
@@ -133,11 +149,11 @@ test("every work item retains a governed project-bound cover", () => {
   assert(result.failures.some(({ criterion }) => criterion === "truthful-project-cover-field"));
 });
 
-test("the homepage sequence keeps the three-part rushed-reader opening intact", () => {
+test("the homepage sequence keeps the ranked three-project argument intact", () => {
   const path = "apps/www/src/data/work.ts";
   const source = readFileSync(path, "utf8").replace(
-    '  "fair-rent-nyc",\n  "harry-j-epstein",',
-    '  "harry-j-epstein",\n  "fair-rent-nyc",'
+    '  "harry-j-epstein",\n  "kc-town-hall",',
+    '  "callnyc",\n  "kc-town-hall",'
   );
   const result = evaluateLayout(process.cwd(), { [path]: source });
   assert.equal(result.passed, false);
@@ -148,10 +164,10 @@ test("the homepage sequence keeps the three-part rushed-reader opening intact", 
   );
 });
 
-test("the homepage sequence keeps Sunday Dinner inside the seven-project hiring argument", () => {
+test("the homepage sequence keeps Sunday Dinner inside the hiring argument", () => {
   const path = "apps/www/src/data/work.ts";
   const source = readFileSync(path, "utf8").replace(
-    '  "196-sunday-dinner",\n',
+    '  "196-sunday-dinner"\n',
     ""
   );
   const result = evaluateLayout(process.cwd(), { [path]: source });
@@ -159,6 +175,48 @@ test("the homepage sequence keeps Sunday Dinner inside the seven-project hiring 
   assert(
     result.failures.some(
       ({ criterion }) => criterion === "hiring-argument-project-sequence"
+    )
+  );
+});
+
+test("a fourth quick-path route fails the hiring-reader attention budget", () => {
+  const path = "apps/www/src/app/page.tsx";
+  const source = readFileSync(path, "utf8").replace(
+    '  {\n    href: "/resume",',
+    '  {\n    href: "/work/wowlist",\n    label: "WOWList.org",\n    note: "Community platform case study."\n  },\n  {\n    href: "/resume",'
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(
+    result.failures.some(
+      ({ criterion }) => criterion === "hiring-reader-attention-budget"
+    )
+  );
+});
+
+test("a fourth homepage proof fails the hiring-reader attention budget", () => {
+  const path = "apps/www/src/data/proofs.ts";
+  const source = readFileSync(path, "utf8").replace(
+    '  "fair-rent-campaign-memory"\n].map(requireReadyOrCarefulProof);',
+    '  "fair-rent-campaign-memory",\n  "wowlist-community-platform"\n].map(requireReadyOrCarefulProof);'
+  );
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(
+    result.failures.some(
+      ({ criterion }) => criterion === "hiring-reader-attention-budget"
+    )
+  );
+});
+
+test("the hero does not regain a competing primary action", () => {
+  const path = "apps/www/src/components/Hero.tsx";
+  const source = `${readFileSync(path, "utf8")}\n<a href="/work">View selected work</a>\n`;
+  const result = evaluateLayout(process.cwd(), { [path]: source });
+  assert.equal(result.passed, false);
+  assert(
+    result.failures.some(
+      ({ criterion }) => criterion === "hiring-reader-attention-budget"
     )
   );
 });

@@ -1,0 +1,168 @@
+{
+  "id": "sitewide-page-owner-governance-2026-08-25",
+  "version": 1,
+  "status": "adoption",
+  "purpose": "Give every canonical public page an explicit modeled editorial masthead and prevent any page from being called accepted until every assigned owner returns a binary pass with constructive critique.",
+  "latestDevelopmentRunPath": "evals/page-owners/runs/sitewide-2026-08-25.json",
+  "canonicalRouteSources": {
+    "staticRoutesPath": "apps/www/src/app/sitemap.ts",
+    "workItemsPath": "apps/www/src/data/work.ts"
+  },
+  "execution": {
+    "kind": "isolated_llm_roleplay",
+    "oneTaskPerOwnerPerPage": true,
+    "tasksRunSequentially": true,
+    "renderedPageOnly": true,
+    "repositoryAccess": false,
+    "privateSourceAccess": false,
+    "priorOwnerOutputVisible": false,
+    "realPeopleParticipated": false,
+    "requiredViewports": ["desktop", "mobile"],
+    "outputOrder": ["critique", "recommendedRevision", "result"],
+    "outputSchema": {
+      "critique": "A concrete assessment citing visible rendered-page evidence.",
+      "recommendedRevision": "The smallest useful change, or No revision needed.",
+      "result": "pass or fail"
+    },
+    "disclaimer": "Fictionalized analytical lenses informed by public work. These are not quotations, participation claims, approvals, endorsements, or predictions by the real people named."
+  },
+  "passPolicy": {
+    "minimumDistinctOwnersPerPage": 3,
+    "allOwnersMustPass": true,
+    "averagingAllowed": false,
+    "constructiveCritiqueRequired": true,
+    "failedOwnerNamesSingleHighestPriorityRevision": true,
+    "candidateChangeMakesAcceptanceStale": true
+  },
+  "calibration": {
+    "status": "required",
+    "minimumHumanLabeledPassExamplesPerOwner": 20,
+    "minimumHumanLabeledFailExamplesPerOwner": 20,
+    "releaseAuthority": "advisory-until-calibrated",
+    "realWorldApprovalClaimed": false
+  },
+  "humanAuthority": {
+    "publicationOwner": "Jamie Burkart",
+    "rightsConsentCreditRemainSeparate": true,
+    "modeledPassAuthorizesDeployment": false,
+    "modeledPassAuthorizesIndexing": false
+  },
+  "ownerCatalog": {
+    "cyd-harrell-public-service-usefulness": {"contractPath": "evals/page-owners/home.json", "ownerId": "cyd-harrell-public-service-usefulness"},
+    "abby-covert-information-architecture": {"contractPath": "evals/page-owners/home.json", "ownerId": "abby-covert-information-architecture"},
+    "michael-bierut-visual-authority": {"contractPath": "evals/page-owners/home.json", "ownerId": "michael-bierut-visual-authority"},
+    "deborah-treisman-editorial-sequence": {"contractPath": "evals/page-owners/home.json", "ownerId": "deborah-treisman-editorial-sequence"},
+    "jennifer-pahlka-institutional-delivery": {"contractPath": "evals/page-owners/technical-operations.json", "ownerId": "jennifer-pahlka-institutional-delivery"},
+    "marianne-bellotti-implementation-credibility": {"contractPath": "evals/page-owners/technical-operations.json", "ownerId": "marianne-bellotti-implementation-credibility"},
+    "deborah-treisman-editorial-shape": {"contractPath": "evals/page-owners/colophon.json", "ownerId": "deborah-treisman-editorial-shape"},
+    "maggie-appleton-system-legibility": {"contractPath": "evals/page-owners/colophon.json", "ownerId": "maggie-appleton-system-legibility"},
+    "ellen-lupton-form-and-reading": {"contractPath": "evals/page-owners/colophon.json", "ownerId": "ellen-lupton-form-and-reading"}
+  },
+  "pages": [
+    {
+      "route": "/",
+      "title": "Home",
+      "readerJob": "Understand Jamie's role, value, strongest proof, and next action in ninety seconds.",
+      "ownerIds": ["cyd-harrell-public-service-usefulness", "abby-covert-information-architecture", "michael-bierut-visual-authority", "deborah-treisman-editorial-sequence"],
+      "review": {"status": "advisory-pass", "contractPath": "evals/page-owners/home.json", "runPath": "evals/page-owners/runs/home-2026-08-22.json"}
+    },
+    {
+      "route": "/work",
+      "title": "Work index",
+      "readerJob": "Form a coherent map of Jamie's strongest operating, civic, and community systems and choose where to go deeper.",
+      "ownerIds": ["cyd-harrell-public-service-usefulness", "abby-covert-information-architecture", "michael-bierut-visual-authority", "deborah-treisman-editorial-sequence"],
+      "review": {"status": "queued"}
+    },
+    {
+      "route": "/work/technical-operations",
+      "title": "Technical Operations & Implementation",
+      "readerJob": "Decide whether Jamie can create operating structure, coordinate implementation, and leave teams with a useful next state.",
+      "ownerIds": ["jennifer-pahlka-institutional-delivery", "marianne-bellotti-implementation-credibility", "abby-covert-information-architecture", "deborah-treisman-editorial-sequence"],
+      "review": {"status": "advisory-pass", "contractPath": "evals/page-owners/technical-operations.json", "runPath": "evals/page-owners/runs/technical-operations-2026-08-22.json"}
+    },
+    {
+      "route": "/resume",
+      "title": "Resume",
+      "readerJob": "Reach the current public resume quickly and understand why its evidence is relevant to active hiring contexts.",
+      "ownerIds": ["cyd-harrell-public-service-usefulness", "abby-covert-information-architecture", "deborah-treisman-editorial-sequence"],
+      "review": {"status": "queued"}
+    },
+    {
+      "route": "/about",
+      "title": "About",
+      "readerJob": "Understand the through-line connecting Jamie's operating, civic, artistic, and knowledge-system practice without losing the human stakes.",
+      "ownerIds": ["cyd-harrell-public-service-usefulness", "maggie-appleton-system-legibility", "deborah-treisman-editorial-sequence"],
+      "review": {"status": "queued"}
+    },
+    {
+      "route": "/contact",
+      "title": "Contact",
+      "readerJob": "Understand what kinds of conversations Jamie welcomes and take one low-friction, truthful next action.",
+      "ownerIds": ["cyd-harrell-public-service-usefulness", "abby-covert-information-architecture", "deborah-treisman-editorial-sequence"],
+      "review": {"status": "queued"}
+    },
+    {
+      "route": "/colophon",
+      "title": "Colophon",
+      "readerJob": "Understand how the portfolio is composed, governed, corrected, and maintained.",
+      "ownerIds": ["deborah-treisman-editorial-shape", "maggie-appleton-system-legibility", "ellen-lupton-form-and-reading"],
+      "review": {"status": "advisory-pass", "contractPath": "evals/page-owners/colophon.json", "runPath": "evals/page-owners/runs/colophon-2026-08-22.json"}
+    },
+    {
+      "route": "/lab/source-backed-team-memory",
+      "title": "Source-Backed Team Memory",
+      "readerJob": "See how source-backed team knowledge becomes recoverable, revisable operating memory without magical or privacy-erasing claims.",
+      "ownerIds": ["maggie-appleton-system-legibility", "abby-covert-information-architecture", "cyd-harrell-public-service-usefulness", "deborah-treisman-editorial-sequence"],
+      "review": {"status": "queued"}
+    },
+    {
+      "route": "/work/harry-j-epstein",
+      "title": "Harry J. Epstein Company",
+      "readerJob": "See credible sustained implementation and operational stewardship in a legacy business without overstated causality.",
+      "ownerIds": ["jennifer-pahlka-institutional-delivery", "marianne-bellotti-implementation-credibility", "deborah-treisman-editorial-sequence"],
+      "review": {"status": "queued"}
+    },
+    {
+      "route": "/work/fair-rent-nyc",
+      "title": "NYC Artist Coalition / Fair Rent NYC",
+      "readerJob": "Understand Jamie's frontline civic delivery and coalition-memory contribution while retaining collective credit and separate city and state lanes.",
+      "ownerIds": ["jennifer-pahlka-institutional-delivery", "cyd-harrell-public-service-usefulness", "deborah-treisman-editorial-sequence"],
+      "review": {"status": "queued"}
+    },
+    {
+      "route": "/work/callnyc",
+      "title": "CallNYC.org",
+      "readerJob": "Understand the resident problem, Jamie's product translation, the usable prototype, and the limits on adoption and current-service claims.",
+      "ownerIds": ["jennifer-pahlka-institutional-delivery", "marianne-bellotti-implementation-credibility", "cyd-harrell-public-service-usefulness", "deborah-treisman-editorial-sequence"],
+      "review": {"status": "queued"}
+    },
+    {
+      "route": "/work/wowlist",
+      "title": "WOWList.org",
+      "readerJob": "Understand the natural-language community platform, its operation across roughly 35 city ecosystems, and Jamie's collaborative product role without misleading activity counts.",
+      "ownerIds": ["maggie-appleton-system-legibility", "abby-covert-information-architecture", "cyd-harrell-public-service-usefulness", "deborah-treisman-editorial-sequence"],
+      "review": {"status": "queued"}
+    },
+    {
+      "route": "/work/kc-town-hall",
+      "title": "KC Town Hall",
+      "readerJob": "Understand the place-based implementation, public-funding work, shared accomplishment, and responsible transition.",
+      "ownerIds": ["jennifer-pahlka-institutional-delivery", "cyd-harrell-public-service-usefulness", "deborah-treisman-editorial-sequence"],
+      "review": {"status": "queued"}
+    },
+    {
+      "route": "/work/kc-spaces-fund",
+      "title": "KC Spaces Fund",
+      "readerJob": "Understand the finished public-facing funding system, Jamie's implementation responsibility, and the collective and institutional boundaries around the result.",
+      "ownerIds": ["jennifer-pahlka-institutional-delivery", "marianne-bellotti-implementation-credibility", "cyd-harrell-public-service-usefulness", "deborah-treisman-editorial-sequence"],
+      "review": {"status": "queued"}
+    },
+    {
+      "route": "/work/196-sunday-dinner",
+      "title": "196 Artists Residency / Sunday Dinner",
+      "readerJob": "Understand how hospitality, participation, onboarding, and continuity became repeatable community infrastructure without exposing private community records.",
+      "ownerIds": ["cyd-harrell-public-service-usefulness", "abby-covert-information-architecture", "deborah-treisman-editorial-sequence"],
+      "review": {"status": "queued"}
+    }
+  ]
+}

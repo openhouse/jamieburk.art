@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Protected source-backed memory opportunity — metadata boundary
 
-**Source commit:** `038bb822000d7a0ffaa64d490a326688840ac083`
-**Generation time:** 2026-08-21T16:34:50-04:00
-**Source fingerprint:** `1c923e546cb66e3eac2c22d16194adfbbb465e4019d8d09756aa6b96b93c2a14`
+**Source commit:** `944559974bc35d762b780f7dab4cc708b3d98a27`
+**Generation time:** 2026-08-22T21:05:28-04:00
+**Source fingerprint:** `e1447b5b73142935ab80a7a7b6cacb4fd7b1dd60a964e3be4e0e321a568cf23d`
 
 - [Anonymized Source-Backed Team Memory case-study gate](../../evaluations/anonymized-team-memory-case-study.md) - `uses_source` (frontmatter)
 - [Protected-reader Source-Backed Team Memory proposal gate](../../evaluations/protected-team-memory-reader.md) - `uses_source` (frontmatter)

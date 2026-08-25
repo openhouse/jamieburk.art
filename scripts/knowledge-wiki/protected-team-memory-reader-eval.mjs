@@ -20,6 +20,10 @@ function hasAll(source, patterns) {
 
 export function evaluateProtectedTeamMemoryProposal({ contract, pageSource, supportingCopy }) {
   const publicCopy = `${pageSource}\n${supportingCopy}`.replace(/\s+/g, " ");
+  const diagnosisIndex = publicCopy.search(/Start with the operating problem/i);
+  const preservationIndex = publicCopy.search(
+    /Then preserve what must continue/i
+  );
   const checks = {
     simulated_reader_disclaimed:
       /Simulated protected-reader analytical lens/.test(
@@ -38,8 +42,17 @@ export function evaluateProtectedTeamMemoryProposal({ contract, pageSource, supp
       /(?:ideas|decisions).{0,120}(?:context|reasoning)/i,
       /(?:lost|flattened|disappear|re-explained|repeated explanation)/i
     ]),
+    diagnosis_precedes_memory_system:
+      diagnosisIndex >= 0 &&
+      preservationIndex > diagnosisIndex &&
+      hasAll(publicCopy, [
+        /(?:priorities|priority).{0,100}(?:owner|ownership)|(?:owner|ownership).{0,100}(?:priorities|priority)/i,
+        /(?:blocked|risky).{0,60}(?:decision|handoff)|(?:decision|handoff).{0,60}(?:blocked|risky)/i,
+        /do not assume.{0,80}(?:wiki|knowledge platform)/i,
+        /(?:stabilize|operating loop)/i
+      ]),
     first_engagement_is_focused: hasAll(publicCopy, [
-      /(?:one|single).{0,80}(?:approved|permissioned|non-sensitive|representative).{0,80}(?:source|source surface)/i,
+      /(?:choose|use|select).{0,30}(?:one|single).{0,30}(?:approved|permissioned|non-sensitive|representative).{0,60}(?:source|source surface)/i,
       /(?:short|1.?2 week|two-week).{0,80}(?:paid )?(?:discovery|prototype|sprint)/i,
       /(?:working session|knowledge-friction map)/i
     ]),

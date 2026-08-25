@@ -226,6 +226,26 @@ const opportunityRequirementSchema = z.object({
   next_action: z.string().min(1)
 });
 
+const opportunityResponseStateSchema = z.object({
+  stage: z.enum([
+    "delivery-confirmed",
+    "warm-response",
+    "conversation-invited",
+    "substantive-need-discussion",
+    "page-read-confirmed",
+    "internal-forward-confirmed",
+    "hiring-intent-confirmed",
+    "commercial-authorization",
+    "engagement-accepted"
+  ]),
+  evidence_class: z.literal("protected-summary"),
+  observed_signals: z.array(z.string().min(1)).min(1),
+  not_established: z.array(z.string().min(1)).min(1),
+  commercial_effect: z.enum(["none", "conditional", "authorized"]),
+  modeled_hire_validated: z.boolean(),
+  judge_input_allowed: z.boolean()
+});
+
 const opportunityScreenSchema = z.object({
   id: stableIdSchema,
   text: z.string().min(1),
@@ -318,6 +338,7 @@ export const wikiRecordSchema = z
     source_type: z.enum(["official-employer", "official-public-data", "protected-metadata"]).optional(),
     opportunity_status: z.enum(["live", "closed", "historical-benchmark", "conditional"]).optional(),
     verified_at: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
+    response_state: opportunityResponseStateSchema.optional(),
     reporting_context: opportunityReportingContextSchema.optional(),
     role_requirements: z.array(opportunityRequirementSchema).default([]),
     hard_screens: z.array(opportunityScreenSchema).default([]),
