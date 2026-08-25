@@ -1,0 +1,28 @@
+{
+  "id": "sitewide-page-owner-governance-run-2026-08-25",
+  "kind": "deterministic-governance-hill-climb",
+  "evaluatedAt": "2026-08-25",
+  "baseCommit": "781b7238069064f72d35c28e8a25f94ecf67f900",
+  "candidateArtifacts": {
+    "registrySha256": "7b98c732c49ce13fc0e08159d5e0ff5b941fd340e7acb742953bb9db3823982d",
+    "evaluatorSha256": "f447f616c2fce94ef2c406ebc0e76275092057a5df4e9e3baec663366af725c9",
+    "testsSha256": "bf13d748132b2e4c18da54ac7c4703917dcf463532eb7016087d566a69c5a25a",
+    "instructionsSha256": "82e9f512ffba7780e133bf1ac1214ace8e27fc70815859c5a41f92bbdac57e77"
+  },
+  "baseline": {
+    "canonicalPages": 15,
+    "pagesWithExplicitContracts": 3,
+    "pagesWithInspectableModeledAcceptance": 3,
+    "untrackedCanonicalPages": 12
+  },
+  "candidate": {
+    "canonicalPages": 15,
+    "pagesWithExplicitOwnerAssignments": 15,
+    "pagesWithInspectableModeledAcceptance": 3,
+    "pagesQueuedForIsolatedModeledReview": 12,
+    "untrackedCanonicalPages": 0
+  },
+  "retainedChange": "Added one canonical route-derived registry, assigned at least three distinct modeled editorial owners to every public page, reused calibrated-shaped single-criterion owner contracts, and added a strict mode that fails until all assigned owners accept every exact rendered page.",
+  "openGate": "Site-wide modeled acceptance remains incomplete. Twelve pages are assigned but queued; no role-play acceptance was inferred or fabricated.",
+  "humanBoundary": "The modeled gate remains advisory until calibrated. Jamie Burkart retains publication, deployment, and indexing authority; rights, consent, attribution, collective credit, and public use remain separate human decisions."
+}
