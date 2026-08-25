@@ -3,7 +3,7 @@
 
 **Source commit:** `ccddbf75a1e1a3ab293c5dd067e1f30a5b9a6855`
 **Generation time:** 2026-08-22T21:22:19-04:00
-**Source fingerprint:** `c2cf41ec29380d85699d1af93a8f8fe4629fbe0116345afd5e96d2cf0a6f5033`
+**Source fingerprint:** `2003575f9487757dc406ec457e6edb910556b6f53a054ab88c9f8f3a1c86349f`
 
 ## application
 
@@ -358,6 +358,7 @@
 - [Charizma Williams](../people/charizma-williams.md) - `person.charizma-williams`
 - [Chris Coleman](../people/chris-coleman.md) - `person.chris-coleman`
 - [Courtney Kishbaugh](../people/courtney-kishbaugh.md) - `person.courtney-kishbaugh`
+- [Denny Vrandečić](../people/denny-vrandecic.md) - `person.denny-vrandecic`
 - [Diya Vij](../people/diya-vij.md) - `person.diya-vij`
 - [Elana Gordon](../people/elana-gordon.md) - `person.elana-gordon`
 - [Jaclyn Chen](../people/jaclyn-chen.md) - `person.jaclyn-chen`
@@ -368,7 +369,9 @@
 - [Luke Farrell](../people/luke-farrell.md) - `person.luke-farrell`
 - [Paul Mossine](../people/paul-mossine.md) - `person.paul-mossine`
 - [Thomas Edlinger](../people/thomas-edlinger.md) - `person.thomas-edlinger`
+- [Ward Cunningham](../people/ward-cunningham.md) - `person.ward-cunningham`
 - [Warren Sack](../people/warren-sack.md) - `person.warren-sack`
+- [Yehuda Katz](../people/yehuda-katz.md) - `person.yehuda-katz`
 - [Zack Parker](../people/zack-parker.md) - `person.zack-parker`
 
 ## place
@@ -450,6 +453,8 @@
 - [Civic Hall hackathon announcement](../sources/civichall-hackathon-announcement-2016.md) - `source.civichall.hackathon-announcement.2016`
 - [CodePath official leadership pages - 2026](../sources/codepath-leadership-2026.md) - `source.codepath.leadership.2026`
 - [New York City Council Constituent Services Data release](../sources/nycc-constituent-services-data-2016-05-27.md) - `source.councilstat.fuller-release.2016`
+- [Ember Team - Organizing Our Contributors](../sources/ember-organizing-contributors-2018.md) - `source.ember.organizing-contributors.2018`
+- [Ember - The Team Behind Ember](../sources/ember-team-2026.md) - `source.ember.team.2026`
 - [Open House at UC Santa Cruz](../sources/good-times-open-house-2006-06-28.md) - `source.good-times.open-house.2006-06-28`
 - [Cabaret Law repeal hearing: supportive witness testimony](../testimony/heteroglossia/2017-09-14-cabaret-law-supportive-witnesses.md) - `source.heteroglossia.cabaret-law.2017-09-14`
 - [Commercial rent stabilization hearing: supportive testimony and prime-sponsor statements](../testimony/heteroglossia/2021-09-17-commercial-rent-stabilization-supportive-speakers.md) - `source.heteroglossia.commercial-rent-stabilization.2021-09-17`
@@ -541,7 +546,9 @@
 - [University of Innsbruck scientific-staff profile - postdocs](../sources/uibk-postdoc-profile-2026.md) - `source.uibk.postdoc-profile.2026`
 - [Official University of Innsbruck and ./studio3 leadership context](../sources/uibk-studio3-leadership-2026.md) - `source.uibk.studio3.leadership.2026`
 - [Protected communication history - public-safe metadata boundary](../sources/protected-communication-vault-metadata.md) - `source.vault.communication-history.metadata`
+- [Ward Cunningham - Smallest Federated Wiki](../sources/ward-cunningham-smallest-federated-wiki.md) - `source.ward-cunningham.smallest-federated-wiki`
 - [Weibel Institute In Terms of Media event record](../sources/weibel-in-terms-of-media-2024.md) - `source.weibel.in-terms-of-media.2024`
+- [Wikimedia - Abstract Wikipedia team](../sources/wikimedia-abstract-wikipedia-team-2026.md) - `source.wikimedia.abstract-wikipedia-team.2026`
 - [Work for America team page — Courtney Kishbaugh](../sources/work-for-america-courtney-kishbaugh-civic-match.md) - `source.work-for-america.courtney-kishbaugh-civic-match`
 - [Work for America team page — Josh Gee](../sources/work-for-america-josh-gee-civic-match.md) - `source.work-for-america.josh-gee-civic-match`
 - [Governed WOW List knowledge repository](../sources/wowlist-knowledge-repository-2026.md) - `source.wowlist.knowledge-repository.2026`

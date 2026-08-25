@@ -3,13 +3,13 @@
 
 **Source commit:** `ccddbf75a1e1a3ab293c5dd067e1f30a5b9a6855`
 **Generation time:** 2026-08-22T21:22:19-04:00
-**Source fingerprint:** `c2cf41ec29380d85699d1af93a8f8fe4629fbe0116345afd5e96d2cf0a6f5033`
+**Source fingerprint:** `2003575f9487757dc406ec457e6edb910556b6f53a054ab88c9f8f3a1c86349f`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 45
+- Nodes added: 52
 - Nodes removed: 0
-- Edges added: 175
+- Edges added: 190
 - Edges removed: 8
 - New type-aware orphans: 0
 - Current rights-review records: 185
@@ -30,9 +30,12 @@ Compared with the graph artifact on `origin/develop`.
 - `opportunity.nyc-oti.speed-senior-product-manager.789610`
 - `opportunity.uibk.studio3.postdoc.arch-15927`
 - `person.courtney-kishbaugh`
+- `person.denny-vrandecic`
 - `person.josh-gee`
 - `person.kathrin-aste`
 - `person.thomas-edlinger`
+- `person.ward-cunningham`
+- `person.yehuda-katz`
 - `portfolio.work.kc-spaces-fund`
 - `projection.photo.colophon.east-river`
 - `projection.photo.home.screen-room-shoestring`
@@ -46,6 +49,8 @@ Compared with the graph artifact on `origin/develop`.
 - `research.nyc-oti-product-management-ranking.2026-08-20`
 - `source.betanyc.civic-tech-newsletter`
 - `source.civic-match.candidate-network`
+- `source.ember.organizing-contributors.2018`
+- `source.ember.team.2026`
 - `source.jobs.oti.executive-director-product-management.789563`
 - `source.jobs.oti.pit-senior-product-designer.782373`
 - `source.jobs.oti.product-manager.784450`
@@ -59,5 +64,7 @@ Compared with the graph artifact on `origin/develop`.
 - `source.project-websites.live-audit.2026-08-14`
 - `source.uibk.postdoc-profile.2026`
 - `source.uibk.studio3.leadership.2026`
+- `source.ward-cunningham.smallest-federated-wiki`
+- `source.wikimedia.abstract-wikipedia-team.2026`
 - `source.work-for-america.courtney-kishbaugh-civic-match`
 - `source.work-for-america.josh-gee-civic-match`

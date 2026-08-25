@@ -1,10 +1,10 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-08-23T00:06:28.329Z",
-  "baseUrl": "http://127.0.0.1:3013",
-  "publicSurfaceFingerprint": "3c1e38b991daebd8088a479d7636a0240cc9016cbc723c90f57edd230ed301b6",
+  "checkedAt": "2026-08-24T21:56:40.283Z",
+  "baseUrl": "http://127.0.0.1:3024",
+  "publicSurfaceFingerprint": "d87b53f56c05ed94f349521d1647f1c17e6829c109a98d3a7c1e26146053fb16",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 152,
+  "publicSurfaceFileCount": 153,
   "routes": [
     "/",
     "/work",
@@ -943,7 +943,7 @@
     "passed": true
   },
   "navigationReview": {
-    "checkedAt": "2026-08-23T00:06:28.329Z",
+    "checkedAt": "2026-08-24T21:56:40.283Z",
     "startRoute": "/",
     "destinationRoute": "/about",
     "startHttpStatus": 200,
@@ -958,8 +958,8 @@
       "height": 900
     },
     "renderedScreenshot": {
-      "sha256": "bbd196488b6ce79c187569c797b29762d6713b4cdf5b668d60b80596067cb082",
-      "byteLength": 664120,
+      "sha256": "02866d102e3964b600760ebdd24a53cdbd5e997b326e282ebd6a2d58689ac5ca",
+      "byteLength": 661884,
       "width": 1280,
       "fullPage": true,
       "retainedInPublicGit": false,
