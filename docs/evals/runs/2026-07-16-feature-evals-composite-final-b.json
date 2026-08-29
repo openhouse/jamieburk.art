@@ -1,10 +1,10 @@
 {
   "runVersion": 3,
-  "judgeId": "composite-hiring-composition-2026-08-29-79319be4",
+  "judgeId": "composite-hiring-composition-2026-08-29-04c0d718",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
   "rubricSha256": "00d01d1d68c4a84806a2342829cb565baa6b9e8f53b0bc53aa8f3e7fda17e82d",
-  "candidateFingerprint": "79319be4b4e8aa28ac67910eb3c248db1d12e7745a673634400620a73d857a42",
+  "candidateFingerprint": "04c0d718f66834cf873340576c76340cbad7b16f8739e699456e34824d26c1a7",
   "verdict": "accepted",
   "scores": [
     {
@@ -12,117 +12,113 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "Deterministic preflight reports 14 of 14 frozen branch decisions matching and zero missing frozen commit objects.",
-        "The frozen rubric records each evals-A through evals-N head exactly once and explicitly names the integration branch, develop base, remote-reference namespace, and reference-only treatment."
+        "The deterministic preflight reports 14/14 frozen A–N branch decisions matching and zero missing frozen commit objects.",
+        "The frozen register records each branch exactly once, identifies the writable integration branch and develop base, and states that source branches are read-only references."
       ],
-      "rationale": "The complete frozen family inventory and its immutable reference boundaries are fully observed."
+      "rationale": "The supplied register and observed preflight fully establish the frozen family inventory and reference-only integration boundary."
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Deterministic preflight reports rationale, destinations, verification, and a reviewed register digest for all 14 decisions.",
-        "The integration documentation explains selective adoption into the existing architecture, rejection of parallel roots, and deliberate public projection rather than wholesale merging."
+        "All fourteen register entries provide a disposition, substantive strength and rationale, destination files, and verification criteria.",
+        "The register explicitly retains the existing public composition because the internal governance improvements do not justify additional public copy."
       ],
-      "rationale": "The supplied register evidence makes every branch decision inspectable and connects adopted ideas to verification and projection choices."
+      "rationale": "The decisions are inspectable and selective, and the website non-addition decision directly addresses reader burden."
     },
     {
       "criterionId": "COMP-003",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Deterministic preflight reports all 11 canonical architecture files present and zero copied parallel lifecycle roots.",
-        "The public registry is explicitly redacted, while the rendered site exposes bounded public-safe projections rather than private records or a knowledge-bank browser.",
-        "The integration documentation keeps the H-derived knowledge bank canonical and rejects overlapping schemas and duplicate lifecycle roots."
+        "The deterministic preflight reports all 11 canonical architecture files present and no copied parallel lifecycle roots.",
+        "The public registry is limited to redacted claims, pages, and sources, while the governance documentation states that protected source material cannot enter public projections."
       ],
-      "rationale": "A single canonical architecture is preserved, and the public surface consumes selective, governed projections."
+      "rationale": "One canonical architecture is preserved, with an explicit redacted projection boundary for the public application."
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Deterministic preflight reports exercised intake replay, duplicate preservation, stable-ID collision rejection, held claims, inquiries, corrections, projections, and orphan queries.",
-        "The evaluator implementation invokes the canonical append and lifecycle-query operations, and supplied tests cover the composite lifecycle contract."
+        "The deterministic preflight reports successful exercise of idempotent replay, linked duplicate preservation, collision rejection, held claims, inquiries, corrections, projections, and orphan queries.",
+        "The evaluator implementation checks replay status, duplicate linkage, held claims, unresolved inquiries, corrections, and absence of orphan sources; mutation tests cover the associated failure behavior."
       ],
-      "rationale": "All required append-safety behaviors and lifecycle query classes are observed through the supplied deterministic results and implementation evidence."
+      "rationale": "The append-safe lifecycle requirements are both reported as passing and represented by substantive evaluator logic and tests."
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Deterministic preflight reports successful validation of 326 sources, 119 claims, 34 agency relations, five corrections, and current derived outputs.",
-        "Rendered cases distinguish Jamie's contribution from collaborators, coalitions, institutions, and public outcomes; examples include explicit co-founder credit, coalition-wide causation limits, and named co-organizers.",
-        "Population statements retain bounded surfaces and limitations, such as capture dates, recovered populations, historical response labels, and explicit distinctions from attendance, unique reach, or lifetime completeness."
+        "The deterministic preflight validates 326 sources, 119 claims, 34 agency relations, five corrections, and current derived Wiki and employment outputs.",
+        "The intake and citational-care records keep individual, shared, collective, and institutional credit distinct and require source limitations, evidence roles, bounded population denominators, correction paths, and protected-material controls.",
+        "Public case studies consistently distinguish Jamie's contribution from collaborators, coalitions, institutions, and broader outcomes."
       ],
-      "rationale": "Source, claim, correction, population, and agency integrity are coherent in both governance evidence and public composition, with collective credit preserved."
+      "rationale": "The supplied machine results, governance records, and public wording coherently preserve source integrity, population limits, and collective credit."
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The site is selective and task-oriented: the homepage, technical-operations route, resume, compact case pages, and method page each serve a distinct reader purpose instead of exposing the underlying corpus.",
-        "The public work pages lead with role, responsibility, what became usable, inspectable evidence, status, and limits, making supported agency visible without claiming sole causation.",
-        "Artistic, civic, technical, relational, and social continuity is legible across Sunday Dinner and 196, NYC Artist Coalition and FairRentNYC, WOWList, CallNYC, Harry J. Epstein, and the team-memory practice.",
-        "Cases reconstruct observe-to-handoff loops through sections such as what was unclear, decisions, implementation, verification, use, learning, continuity, and explicit handoff sequences.",
-        "The exact-candidate professor-lens refresh reports 18 of 18 controls passing with independent 4,4,4 outcomes for both fictionalized analytical lenses."
+        "The homepage gives hiring readers a short start-here path, prioritized proof points, role-fit links, and a direct resume route instead of exposing the underlying knowledge system.",
+        "The About page connects artistic, civic, technical, relational, and social practice through distinct project loops of relationships, model, use, learning, and continuity.",
+        "Technical Operations leads with three inspectable decisions, then separates demonstrated evidence, weaker proof, and claims not made.",
+        "The professor-lens record reports 18/18 exact-candidate criteria passing, while mature held claims remain off any public proofs route."
       ],
-      "rationale": "The public argument is purposeful, coherent, and appropriately selective. Internal machinery strengthens traceability and boundaries without becoming required reading for a hiring reader."
+      "rationale": "The public composition is purposeful and selective. Its internal machinery strengthens citations, limits, and handoffs without becoming the main reader task; the few denser research sections are clearly labeled and optional."
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The blind-spot controls explicitly state that a passing control governs an absence and does not mean missing evidence was recovered.",
-        "Human corroboration, collective review, fresh-human hiring usability, job-funnel learning, and external-validity gaps remain open rather than being converted into evidence.",
-        "Each inspected control includes a baseline, current evidence, gap, required evidence, pass conditions, anti-gaming rules, next action, and public-projection rule.",
-        "The rendered technical-operations page plainly separates demonstrated capabilities, needs for stronger proof, and claims not made."
+        "The reviewed controls leave human corroboration, collective review, hiring usability, job-funnel learning, and external validity explicitly open.",
+        "Each open human-evidence control specifies required evidence, anti-gaming rules, a next action, and a public-projection boundary.",
+        "The public hiring baseline identifies itself as deterministic rather than a human study or interview prediction, and the site avoids claiming hiring validation, collaborator endorsement, or production approval."
       ],
-      "rationale": "Blind spots are actionable and honestly bounded, while all human and external-validation gates remain open."
+      "rationale": "The packet treats governed absence as an actionable control rather than synthetic validation and preserves every required human gate."
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The rubric digest matches the exact frozen semantic contract reported by deterministic preflight.",
-        "The evaluator contains separately frozen rubric and branch-head digests and binds the base suite, decision register, blind-spot controls, namespace, candidate identity, provenance, and all criteria into the semantic payload.",
-        "Supplied evaluator tests cover semantic drift after checksum refresh, branch omission, fabricated heads, decorative decisions, private leakage, optimizer self-grading, and synthesis of human evidence.",
-        "The rubric explicitly prohibits optimizer self-grading, disallows passage of unobserved requirements, and makes every criterion blocking."
+        "The deterministic preflight reports the frozen semantic rubric digest matching the separately pinned contract.",
+        "Evaluator tests reject omitted branches, checksum-only semantic weakening, fabricated heads, decorative decisions, stale derived outputs, optimizer self-grading, synthesized human evidence, provenance collapse, and compensation for a blocking failure.",
+        "The rubric binds the base suite, register, blind-spot controls, source-tree candidate identity, grader separation, and required human production approval."
       ],
-      "rationale": "The governance is recursively bound and mutation-resistant; checksum refreshes and weighted strengths cannot conceal semantic weakening or a blocking failure."
+      "rationale": "The recursive governance is materially resistant to score gaming, and no weighted strength can compensate for a blocking failure."
     },
     {
       "criterionId": "COMP-009",
       "score": 4,
       "pass": true,
       "evidence": [
-        "This judgment evaluates the exact candidate fingerprint against the exact frozen rubric digest and gives every COMP criterion a score of 4 with no unobserved evidence.",
-        "The packet states that deterministic checks passed through COMP-008 and stopped only for separately commissioned holdout judgments.",
-        "The provenance contract binds each public receipt to a provider, distinct reviewer label, review time, exact candidate, and recorder-computed complete-judgment digest while prohibiting private process identifiers and machine locators.",
-        "The rubric correctly states that public labels do not authenticate process identity and that separate commissioning is established outside public Git.",
-        "Human production approval, deployment, indexing, consent, collaborator review, and external-action gates remain unresolved and explicitly open."
+        "This exact-candidate judgment evaluates all nine frozen criteria, assigns a complete passing score to each, and records no unobserved requirement.",
+        "The candidate fingerprint and rubric digest match the packet contract, and the public review fields preserve a distinct label, review time, provider, and the required limited attestation.",
+        "The response schema omits the recorder-computed judgment digest as required; after schema validation and recorder digesting, this accepted judgment is suitable to satisfy one side of the two-review stopping rule.",
+        "Human production, deployment, indexing, collaborator-review, rights, and hiring-outcome gates remain open."
       ],
-      "rationale": "This exact-candidate judgment is acceptable and, after schema validation and recorder digesting, would satisfy one side of the two-review stopping rule. It does not assert that the combined repository gate or both-receipt requirement has already been satisfied."
+      "rationale": "This individual judgment is acceptable as one independently commissioned side of the stopping rule. It does not assert that the second accepted receipt is present or that public labels authenticate separate commissioning."
     }
   ],
   "notObserved": [],
   "findings": [
-    "The strongest hiring composition is the short path from role framing to three operating examples, deeper case evidence, resume, and contact; the internal evidence machinery supports that path without being imposed on ordinary readers.",
-    "The public resume is dense but coherent: its category, target functions, scope, collective-credit boundaries, and technical limits are quickly identifiable.",
-    "The site repeatedly distinguishes proposals from delivery, response signals from outcomes, historical artifacts from current services, and individual contribution from collective or institutional results.",
-    "Open hiring-usability and role-specific projection work remains correctly governed as future human evidence rather than being claimed as completed validation."
+    "The strongest hiring-composition choice is restraint: substantial new governance and evaluation machinery supports the public claims without adding another public knowledge-bank surface.",
+    "The homepage and Technical Operations page provide a low-burden hiring path; deeper About, method, and case-study material remains available for readers seeking provenance or practice continuity.",
+    "Collective credit is unusually explicit across coalition, platform, gathering, civic, and commercial work, with sole causation and endorsement claims consistently bounded.",
+    "The public resume is denser and broader than the primary site path, but it remains a conventional application artifact and does not undermine the site's selective hierarchy.",
+    "Open human validation, collaborator review, rights, production, indexing, and hiring-outcome gates are preserved rather than implied complete."
   ],
-  "recommendation": "Accept this exact-candidate judgment as one independently commissioned side of the stopping rule, subject to recorder schema validation and judgment digesting. Preserve all stated human approval, consent, deployment, indexing, collaborator-review, and external-validation gates.",
+  "recommendation": "Accept this exact candidate as one side of the composite holdout stopping rule after schema validation and recorder digesting; retain the current selective public composition and all open human gates.",
   "publicReview": {
     "provider": "independent-codex-review",
-    "reviewerLabel": "hiring-composition-reviewer-b-2026-08-29-79319be4",
+    "reviewerLabel": "hiring-composition-reviewer-b-2026-08-29-04c0d718",
     "reviewedAt": "2026-08-29T22:01:00Z",
     "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted.",
-    "judgmentSha256": "eb65ed6ea61a11b576127b2e29119092b066dc3967e593794acc975edb93e0ac"
+    "judgmentSha256": "e089fb20ed30dfd74dab502eda47a2d89bbf2ab0bfe1af5cacb86386c68d8ad4"
   }
 }
