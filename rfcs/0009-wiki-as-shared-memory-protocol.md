@@ -133,6 +133,64 @@ or draft a proposed update, but it cannot turn its own output into evidence or
 approve its own write. Human review controls claim maturity, publication,
 external action, merge, and deployment.
 
+### Governed knowledge-operations profile
+
+A 2026-08-29 close reading of seven exact revisions in the related NYC Artist
+Coalition / Fair Rent NYC Knowledge Operations repository produced an internal
+research-control profile for this repository. The profile does not copy the
+source repository's private or campaign-specific content. It adapts mechanisms:
+
+- three coordinated operational graph responsibilities for evidence and
+  custody, agency and authority, and projection and action;
+- exact-revision ecosystem coverage with explicit invalidation triggers;
+- generated and materialized views that cannot become canonical by accident;
+- deterministic freshness, schema, privacy, rights, consent, and authority
+  gates before subjective model assessment;
+- explicit dispositions for every reviewed source branch, with branch presence
+  kept separate from agreement and new or moved branches reopening review;
+- healthy editorial states for both a source-bounded close reading and a
+  review-complete responsible stop that does not invent missing patterns;
+- governed packet states for every current person or team, with minimum evidence
+  requirements, known gaps, explicit human decision ownership, and separate
+  speaking-authority governance for team language;
+- situated support records whose typed act, exact object, campaign or matter,
+  context, date, role, source, limiting inference, and correction route remain
+  explicit; attention, coverage, authorship, participation, warmth, historical
+  support, endorsement, contact permission, and representation authority do
+  not silently transfer into one another;
+- deterministic, idempotent materialization into distinct public candidates
+  and private human-review views, with reference checks, content-addressed
+  receipts, stable entity/assertion/source back-references, and no automatic
+  publication or outreach;
+- minimum-necessary private-source returns that distinguish configured,
+  snapshot-current, and live-current coverage; preserve direction and original
+  authorship across reaction echoes and mirrored target bodies; require
+  independent identity resolution before merging ambiguous threads; exclude raw
+  bodies, contact details, provider locators, and decoder debris; and never turn
+  warmth or attention into commitment, publication, or external-action authority;
+- a body-free message-state ladder that keeps presence, delivery, reading,
+  reaction, reply, scheduling, role, assignment, completion, endorsement,
+  verified authority, and an explicit open state separate; requires evidence,
+  limiting inference, human authority, and correction at every step; and accepts
+  a source as covered only when its custody, scope, selection method, cutoff,
+  blind spots, next review trigger, and retained human action gate are recorded;
+- situated editorial-voice records that cannot be treated as impersonation,
+  endorsement, sign-off, or human authority; and
+- an accountable public-surface contract for affected people, purpose, current
+  invitation, human action, correction, and return.
+
+The profile is implemented as an internal public-safe evaluator and method
+record. Its implementation is evidence that the research control exists, not
+that the proposed multi-participant pilot has run, been adopted, or produced an
+outcome. This RFC therefore remains `proposed` and its production
+`implementation` field remains null.
+
+The exact source revisions and their public-safe contribution summaries live in
+`evals/knowledge-wiki/ecosystem-operations-profile.json`. The evaluator can
+compare the recorded revisions with the public remote before a fresh close
+reading. Any mismatch invalidates the prior review rather than silently
+carrying its conclusions forward.
+
 Agreement is represented socially rather than metaphysically. The graph can say
 that a group currently accepts one account for a stated purpose, that another
 participant dissents, or that the evidence remains inconclusive. Correction

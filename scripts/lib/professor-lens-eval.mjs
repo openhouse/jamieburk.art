@@ -43,15 +43,15 @@ export const professorCandidateRelativePaths = [
 ].sort();
 
 const finalScorecardRelativePaths = [
-  "docs/qa/evals-H/margaret-morse-final-2026-08-24-a.json",
-  "docs/qa/evals-H/margaret-morse-final-2026-08-24-b.json",
-  "docs/qa/evals-H/margaret-morse-final-2026-08-24-c.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-24-b.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-24-c.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-24-e.json"
+  "docs/qa/evals-H/margaret-morse-final-2026-08-29-x.json",
+  "docs/qa/evals-H/margaret-morse-final-2026-08-29-y.json",
+  "docs/qa/evals-H/margaret-morse-final-2026-08-29-z.json",
+  "docs/qa/evals-H/warren-sack-final-2026-08-29-x.json",
+  "docs/qa/evals-H/warren-sack-final-2026-08-29-y.json",
+  "docs/qa/evals-H/warren-sack-final-2026-08-29-z.json"
 ];
 
-const approvedCandidateSha256 = "bf776cb939a16f910b93c4321d8f631a26868ef49920d2dddb9a7b4145d32a12";
+const approvedCandidateSha256 = "dc13c845472b6b9042d649ef6cce48784724140c4bfb3fa3e81388965f406203";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },
@@ -137,6 +137,15 @@ export function evaluateProfessorLenses({
         "inhabit"
       ].every((fragment) => morseText.includes(fragment)),
       "Seven required practice dimensions checked."
+    ),
+    criterion(
+      "open-house-source-projection",
+      "The Open House article remains evidence behind a public-safe source note rather than a republished review-packet artifact.",
+      morse?.inputs?.includes("public-safe source note for the Open House article") &&
+        !morse?.inputs?.includes("public Open House article") &&
+        morseText.includes("raw third-party article republication") &&
+        morseText.includes("raw open house article is not reproduced"),
+      "Source custody and public projection are kept distinct."
     ),
     criterion(
       "sack-rubric",

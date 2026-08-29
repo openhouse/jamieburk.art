@@ -7,11 +7,11 @@
   "pull_request_base": "develop",
   "starting_commit": "934c1bdff4a478da56fde3a125d905e7e326b6f2",
   "frozen_at": "2026-07-28",
-  "rubric_sha256": "0ceae17652026856e816bf6472a4d55977145bd2977fc7e8c2fd7b362b0fc23b",
+  "rubric_sha256": "00d01d1d68c4a84806a2342829cb565baa6b9e8f53b0bc53aa8f3e7fda17e82d",
   "base_suite": {
     "path": ".agents/evals/portfolio-production-readiness.json",
     "required_version": 3,
-    "sha256": "b1298fd2c13c8f852bdb9a05ff83f910411fcbd52f69d214b345a48c121d551f"
+    "sha256": "09bf36049d6947d5200814ee7afe6ab4810ba7797d98ee573ef7eba1a2bdd8d7"
   },
   "integration_register": "docs/integration/feature-evals-composite.json",
   "integration_register_sha256": "9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d",

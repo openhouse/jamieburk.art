@@ -29,6 +29,24 @@ test("professor lenses pass every bounded criterion", () => {
   assert.equal(result.passed, result.total);
 });
 
+test("guard keeps the raw Open House article out of the public review packet", () => {
+  const mutatedSuite = structuredClone(suite);
+  const morse = mutatedSuite.evals.find((entry) => entry.id === "PR-015");
+  morse.inputs = morse.inputs.map((item) =>
+    item === "public-safe source note for the Open House article"
+      ? "public Open House article"
+      : item
+  );
+
+  const result = evaluateProfessorLenses({
+    suite: mutatedSuite,
+    aboutText,
+    sourceNoteText
+  });
+  assert.equal(result.pass, false);
+  assert.equal(result.criteria.find((item) => item.id === "open-house-source-projection")?.pass, false);
+});
+
 test("guard rejects erasing collective Open House governance", () => {
   const result = evaluateProfessorLenses({
     suite,

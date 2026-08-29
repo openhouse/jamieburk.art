@@ -25,6 +25,7 @@ import { evaluateInterpretiveLayer } from "./interpretive-layer-eval.mjs";
 import { evaluateFamilyClosure } from "./family-closure-eval.mjs";
 import { evaluatePhotographyNotebook } from "./photography-notebook-eval.mjs";
 import { evaluatePhotographicSourceReturn } from "./photographic-source-return-eval.mjs";
+import { evaluateEcosystemOperationsProfile } from "./ecosystem-operations-profile-eval.mjs";
 import { evaluateLayout } from "../check-layout-evals.mjs";
 
 const suite = JSON.parse(
@@ -70,6 +71,7 @@ const disclosedProtectedIdentityDirectives = findDisclosedProtectedIdentityDirec
 const missingPages = evaluateMissingPages({ result });
 const interpretiveLayer = evaluateInterpretiveLayer({ result });
 const familyClosure = evaluateFamilyClosure({ result });
+const ecosystemOperationsProfile = evaluateEcosystemOperationsProfile();
 const photographyNotebook = evaluatePhotographyNotebook({ result });
 const photographicSourceReturn = evaluatePhotographicSourceReturn({ result });
 const layoutEvaluation = evaluateLayout(defaultRepoRoot);
@@ -234,6 +236,9 @@ const checks = {
     ) &&
     existsSync(
       path.join(defaultRepoRoot, "scripts/knowledge-wiki/family-closure-eval.test.mjs")
+    ) &&
+    existsSync(
+      path.join(defaultRepoRoot, "scripts/knowledge-wiki/ecosystem-operations-profile-eval.test.mjs")
     ) &&
     existsSync(
       path.join(
@@ -403,6 +408,7 @@ const checks = {
   ...missingPages.checks,
   ...interpretiveLayer.checks,
   ...familyClosure.checks,
+  ...ecosystemOperationsProfile.checks,
   ...photographyNotebook.checks,
   ...photographicSourceReturn.checks
 };

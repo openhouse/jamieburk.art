@@ -1,0 +1,311 @@
+{
+  "schemaVersion": 1,
+  "profileId": "knowledge-wiki-graph-ecosystem-operations-2026-08-29",
+  "sourceRepository": "openhouse/jamie-burkart-nyc-artist-coalition-fair-rent-nyc-knowledge-operations",
+  "reviewedAt": "2026-08-29",
+  "reviewAuthority": "research-and-proposal-only",
+  "publicationAuthority": "separate-human-review",
+  "branches": [
+    {
+      "branch": "work/2026-08-26-A",
+      "observedRevision": "da2da60c609bb004f749216a4305ab99a257763b",
+      "reviewedRevision": "da2da60c609bb004f749216a4305ab99a257763b",
+      "contribution": "Require an exact-revision branch frontier and source-routed close-reading health record; model support as a dated, source-scoped event; and preserve a governed, body-free message-state ladder in which presence, delivery, reading, reaction, reply, scheduling, role, assignment, completion, endorsement, and authority remain distinct.",
+      "disposition": "adopted-pattern",
+      "publicSafe": true
+    },
+    {
+      "branch": "work/2026-08-26-B",
+      "observedRevision": "a59020cc16e95417096e78a0506b7d24f790d3b8",
+      "reviewedRevision": "a59020cc16e95417096e78a0506b7d24f790d3b8",
+      "contribution": "Bind situated editorial-voice and support research to exact revisions, and keep sponsorship, sign-on, testimony, speech, coverage, amplification, interaction, attendance, and relationship warmth as separately scoped acts.",
+      "disposition": "adopted-pattern",
+      "publicSafe": true
+    },
+    {
+      "branch": "work/2026-08-26-C",
+      "observedRevision": "5802e22f3418fbdf60e77d1c4d2dea6b0439f6b7",
+      "reviewedRevision": "5802e22f3418fbdf60e77d1c4d2dea6b0439f6b7",
+      "contribution": "Treat source-scoped observations as typed, temporal relationships; distinguish current, historical or selective, and gap source routes; and require every covered source to state custody, selection, cutoff, blind spots, consequence, review trigger, and retained human authority.",
+      "disposition": "adopted-pattern",
+      "publicSafe": true
+    },
+    {
+      "branch": "work/2026-08-26-D",
+      "observedRevision": "d48bf3bf321b6b89240a68ce0ab2594eca8b35cf",
+      "reviewedRevision": "d48bf3bf321b6b89240a68ce0ab2594eca8b35cf",
+      "contribution": "Materialize bounded public rosters idempotently and accept only minimum-necessary, body-free private-source returns whose coverage state, decoder hazards, authorship direction, identity resolution, commitment limits, and no-action authority remain explicit.",
+      "disposition": "adopted-pattern",
+      "publicSafe": true
+    },
+    {
+      "branch": "work/2026-08-26-monday-A",
+      "observedRevision": "2b23afea58b8a72c190355abc305c02693211e32",
+      "reviewedRevision": "2b23afea58b8a72c190355abc305c02693211e32",
+      "contribution": "Evaluate a governed campaign-site system proposal with explicit ranked-choice comparison.",
+      "disposition": "adapted-pattern",
+      "publicSafe": true
+    },
+    {
+      "branch": "work/2026-08-26-monday-B",
+      "observedRevision": "8dfc4170e991768c5d1e4dc2c5b3b39e706c0428",
+      "reviewedRevision": "8dfc4170e991768c5d1e4dc2c5b3b39e706c0428",
+      "contribution": "Keep modeled prioritization, RFC state, cases, and receipts distinct from implementation authority.",
+      "disposition": "adopted-pattern",
+      "publicSafe": true
+    },
+    {
+      "branch": "work/2026-08-26-monday-C",
+      "observedRevision": "897be63ffbf8751bbbedada7b78c817649c06c33",
+      "reviewedRevision": "897be63ffbf8751bbbedada7b78c817649c06c33",
+      "contribution": "Compare governed RFC candidates without treating a ranking result as human approval.",
+      "disposition": "adapted-pattern",
+      "publicSafe": true
+    }
+  ],
+  "reviewScope": [
+    "evidence-provenance-custody",
+    "agency-people-teams-authority",
+    "projection-pages-evals-actions"
+  ],
+  "graphResponsibilities": [
+    {
+      "id": "evidence-provenance-custody",
+      "purpose": "Keep sources, observations, evidentiary relationships, custody, rights, consent, and retention conditions explicit."
+    },
+    {
+      "id": "agency-people-teams-authority",
+      "purpose": "Keep actors, collective work, decisions, responsibility, credit, and reserved human authority explicit."
+    },
+    {
+      "id": "projection-pages-evals-actions",
+      "purpose": "Keep audience pages, evaluations, tasks, releases, corrections, and return paths purpose-specific and reviewable."
+    }
+  ],
+  "canonicality": {
+    "governedRecords": "authored-source-of-truth",
+    "materializedViews": "derived-noncanonical",
+    "publicSurfaces": "selective-human-reviewed-projections"
+  },
+  "evaluationOrder": [
+    "source-freshness",
+    "schema-and-reference",
+    "privacy-rights-consent",
+    "authority",
+    "subjective-roleplay"
+  ],
+  "roleplayContract": {
+    "status": "fictionalized-analytical-lens",
+    "mayCritique": true,
+    "mayGrantHumanApproval": false,
+    "mayImpersonateOrClaimEndorsement": false,
+    "mayAuthorizePublicationMergeDeploymentOrExternalAction": false,
+    "outputState": "advisory-proposal-only"
+  },
+  "situatedEditorialVoice": {
+    "purpose": "Model evidenced audience needs and language patterns without impersonating a person or claiming their sign-off.",
+    "requiredInputs": [
+      "purpose",
+      "audience",
+      "source-basis",
+      "uncertainty",
+      "prohibited-inferences"
+    ],
+    "publicClaimBoundary": "No named lens is a quotation, endorsement, participation claim, availability claim, or authority grant."
+  },
+  "branchCoverageContract": {
+    "exactRevisionRequired": true,
+    "everyReviewedBranchReceivesDisposition": true,
+    "branchPresenceIsAgreement": false,
+    "changedHeadReopensReview": true,
+    "newlyListedBranchReopensReview": true
+  },
+  "editorialHealth": {
+    "healthyStates": [
+      "source-bounded-close-reading",
+      "review-complete-responsible-stop"
+    ],
+    "allRegisteredSourceRoutesDispositioned": true,
+    "pageLengthIsEvidence": false,
+    "memberSpeechBecomesTeamVoice": false,
+    "insufficientEvidenceMayStillBeHealthy": true,
+    "inventedPatternsAllowed": false
+  },
+  "governedEntityPacketContract": {
+    "everyCurrentEntityHasGovernedState": true,
+    "allowedStates": [
+      "packet-backed",
+      "insufficient-evidence"
+    ],
+    "legacyStubCountsAsCoverage": false,
+    "minimumHealthRequirements": [
+      "source-basis",
+      "current-reading",
+      "known-gaps",
+      "human-decision-owner"
+    ],
+    "teamVoiceRequiresAuthorityGovernance": true,
+    "rawPacketBodiesMayEnterPublicProjection": false
+  },
+  "situatedRelationshipContract": {
+    "typedRelations": [
+      "legislative-sponsorship",
+      "artifact-signatory",
+      "supportive-testimony",
+      "supportive-public-statement",
+      "editorial-endorsement",
+      "press-coverage",
+      "social-amplification",
+      "social-interaction",
+      "attendance-or-participation",
+      "relationship-warmth"
+    ],
+    "contextRequirements": [
+      "actor",
+      "relation",
+      "exact-object",
+      "campaign-or-matter",
+      "situated-context",
+      "occurrence-date",
+      "observation-date",
+      "role-at-time",
+      "source-basis",
+      "does-not-establish",
+      "correction-route"
+    ],
+    "attentionIsEndorsement": false,
+    "coverageIsEndorsement": false,
+    "historicalSupportIsCurrentSupport": false,
+    "teamSupportGrantsMemberAuthority": false,
+    "supportGrantsRepresentationAuthority": false,
+    "relationshipRecommendationMayAuthorizeContact": false,
+    "publicProjectionDefault": "default-deny-narrower-than-evidence",
+    "completenessRequiresScopedPopulationAndAsOf": true
+  },
+  "projectionRuntimeContract": {
+    "deterministicMaterialization": true,
+    "idempotentMaterialization": true,
+    "referenceIntegrityChecked": true,
+    "contentAddressedReceiptRequired": true,
+    "publicCandidateIsPublished": false,
+    "publicProjectionRequiresVerifiedPublicSource": true,
+    "publicProjectionRequiresExplicitPublishableState": true,
+    "publicBackReferences": [
+      "entity-id",
+      "assertion-id",
+      "source-ids"
+    ],
+    "privateOutreachViewRequiresHumanReview": true,
+    "automatedOutreachAuthorized": false,
+    "privateSourceLocatorsMayEnterPublicProjection": false
+  },
+  "privateSourceReturnContract": {
+    "minimumNecessaryReturn": true,
+    "sourceCoverageStatesExplicit": true,
+    "configuredWithoutBaselineIsCovered": false,
+    "providerExportIsLiveCoverage": false,
+    "rawBodiesMayReturnToGitOrPublicProjection": false,
+    "contactDetailsMayReturnToGitOrPublicProjection": false,
+    "protectedLocatorsMayReturnToGitOrPublicProjection": false,
+    "decoderHazards": [
+      "reaction-echo",
+      "mirrored-target-body",
+      "serialization-debris",
+      "attachment-placeholder"
+    ],
+    "reactionIsAuthoredProse": false,
+    "directionAndOriginalAuthorPreserved": true,
+    "identityMergeRequiresIndependentResolution": true,
+    "warmthOfferOrReactionIsCommitment": false,
+    "automaticCourseChangeAuthorized": false,
+    "externalActionAuthorized": false
+  },
+  "messageSignalStateContract": {
+    "orderedStates": [
+      "MESSAGE_PRESENT",
+      "DELIVERY_REPORTED",
+      "READ_REPORTED",
+      "REACTION_RECORDED",
+      "REPLY_RECORDED",
+      "SCHEDULING_ACCEPTED",
+      "ROLE_ACCEPTED",
+      "ASSIGNMENT_ACCEPTED",
+      "ACTION_COMPLETED",
+      "ENDORSEMENT_EXPLICIT",
+      "AUTHORITY_VERIFIED",
+      "UNKNOWN_OR_OPEN"
+    ],
+    "everyStateRequires": [
+      "evidence-required",
+      "does-not-establish",
+      "human-authority",
+      "correction-route"
+    ],
+    "boundaries": {
+      "messagePresenceProvesDelivery": false,
+      "deliveryProvesReading": false,
+      "readingProvesUnderstandingOrAgreement": false,
+      "reactionProvesEndorsement": false,
+      "replyAcceptsUnstatedProposal": false,
+      "schedulingProvesAttendanceOrRole": false,
+      "roleAcceptanceProvesCompletionOrIndefiniteService": false,
+      "assignmentAcceptanceProvesCompletion": false,
+      "completionProvesAcceptanceImpactOrPublication": false,
+      "endorsementGrantsPermanentAdjacentOrContactAuthority": false,
+      "verifiedAuthorityGrantsConsentEndorsementOrAction": false,
+      "unknownStateMayBeInferredUpward": false
+    },
+    "sourceCoverageReceiptFields": [
+      "account-or-custody-boundary",
+      "authorized-subjects-and-date-range",
+      "query-or-selection-method",
+      "access-time-result-count-pagination-and-cutoff",
+      "attachments-or-media-coverage",
+      "unread-state-policy",
+      "can-and-cannot-establish",
+      "known-blind-spots-and-likely-consequence",
+      "next-review-trigger",
+      "human-authority-before-action"
+    ],
+    "configuredSourceCountsAsCovered": false,
+    "snapshotCurrentMeansLiveCurrent": false,
+    "rawMessageBodiesAllowed": false,
+    "automaticCommitmentInferenceAllowed": false,
+    "automaticExternalActionAuthorized": false
+  },
+  "publicSurfaceContract": [
+    "affected-people",
+    "purpose",
+    "current-invitation",
+    "human-action",
+    "correction-route",
+    "return-path"
+  ],
+  "projectionBoundary": {
+    "profileVisibility": "internal-public-safe-research-control",
+    "automaticPublicProjection": false,
+    "rawPrivateMaterialAllowed": false,
+    "protectedLocatorsAllowed": false,
+    "namedRoleplayApprovalAllowed": false
+  },
+  "invalidationTriggers": [
+    "remote-revision-changed",
+    "new-source-branch-listed",
+    "registered-source-route-changed",
+    "private-source-coverage-changed",
+    "decoder-contract-changed",
+    "message-state-contract-changed",
+    "governed-entity-registry-changed",
+    "implementation-changed",
+    "public-private-boundary-changed",
+    "evaluation-contract-changed"
+  ],
+  "humanDecisionsRemainOpen": [
+    "claim-maturity",
+    "rights-and-consent",
+    "publication",
+    "external-action",
+    "merge",
+    "deployment"
+  ]
+}
