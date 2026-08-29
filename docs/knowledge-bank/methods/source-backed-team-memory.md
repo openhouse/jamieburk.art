@@ -5,7 +5,7 @@ kind: method
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-24
+last_reviewed: 2026-08-29
 review_by: 2027-02-24
 canonical_path: docs/knowledge-bank/methods/source-backed-team-memory.md
 summary: >
@@ -106,6 +106,27 @@ The method helps produce [Technical Operations](../capabilities/technical-operat
 evidence, but an internal pass does not substitute for collaborator review or
 external outcomes. Access to a source is not evidence for every possible claim,
 and evidence is not publication permission.
+
+## Operating control plane
+
+The three graphs become useful through an operating control plane. It keeps
+source coverage and freshness, temporal state, health dimensions, four planning
+horizons, and exact-candidate dependency receipts separate enough to inspect.
+Those mechanisms make it possible to tell whether a source needs review,
+whether an opportunity or relationship actually changed state, and whether a
+previous evaluation still applies after an input changes.
+
+The control plane also records situated voice: every modeled perspective needs
+a source basis, speaker or lens, audience, purpose, and public/private boundary.
+A simulation is an analytical instrument, not participation, endorsement, or
+authority.
+
+Deterministic checks run before subjective review. A stale source, invalid
+state transition, changed dependency, missing required field, or failed hard
+gate returns to repair without spending a model call. Human decisions remain
+human decisions: outreach, applications, publication, merge, deployment,
+spending, endorsement, and political action require the fitting human
+authority even when every automated check is green.
 
 ## Focused pilot pattern
 

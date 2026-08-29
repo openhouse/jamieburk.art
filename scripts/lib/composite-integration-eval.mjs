@@ -197,6 +197,7 @@ export function evaluateCompositeIntegration({
   suite = readJson(".agents/evals/feature-evals-composite.json"),
   register = readJson("docs/integration/feature-evals-composite.json"),
   portfolioSuite = readJson(".agents/evals/portfolio-production-readiness.json"),
+  publicRegistry = readJson("apps/www/src/data/knowledge-bank/public-registry.json"),
   blindSpots = readJson("docs/knowledge-bank/data/blind-spot-controls-2026-07.json"),
   holdouts = loadHoldouts(suite),
   derivedCurrentness = checkCompositeDerivedCurrentness()
@@ -270,19 +271,40 @@ export function evaluateCompositeIntegration({
   const copiedParallel = suite.forbidden_parallel_architectures.filter(
     (relativePath) => existsSync(path.join(repoRoot, relativePath))
   );
-  const publicRegistry = readJson("apps/www/src/data/knowledge-bank/public-registry.json");
+  const forbiddenPublicRegistryKeys = [];
+  const inspectPublicKeys = (value, trail = []) => {
+    if (Array.isArray(value)) {
+      value.forEach((entry, index) => inspectPublicKeys(entry, [...trail, String(index)]));
+      return;
+    }
+    if (!value || typeof value !== "object") return;
+    for (const [key, entry] of Object.entries(value)) {
+      const nextTrail = [...trail, key];
+      if (/^(private|protected|credential|raw)(?:$|[_A-Z-])/i.test(key)) {
+        forbiddenPublicRegistryKeys.push(nextTrail.join("."));
+      }
+      inspectPublicKeys(entry, nextTrail);
+    }
+  };
+  inspectPublicKeys(publicRegistry);
+  const publicRegistrySafe = forbiddenPublicRegistryKeys.length === 0;
   const baseSuiteDigest = computeCanonicalJsonDigest(portfolioSuite);
   const oneArchitecture = missingCanonical.length === 0 &&
     copiedParallel.length === 0 &&
     portfolioSuite.version === suite.base_suite.required_version &&
     baseSuiteDigest === suite.base_suite.sha256 &&
     portfolioSuite.composite_suite?.path === ".agents/evals/feature-evals-composite.json" &&
-    JSON.stringify(Object.keys(publicRegistry).sort()) === JSON.stringify(["claims", "pages", "sources"]);
+    JSON.stringify(Object.keys(publicRegistry).sort()) === JSON.stringify(["claims", "pages", "sources"]) &&
+    publicRegistrySafe;
   results.push(criterion(
     "COMP-003",
     oneArchitecture,
     `${suite.canonical_files.length} canonical files exist; ${copiedParallel.length} parallel lifecycle roots were copied.`,
-    [...missingCanonical.map((item) => `Missing canonical file: ${item}`), ...copiedParallel.map((item) => `Parallel architecture copied: ${item}`)]
+    [
+      ...missingCanonical.map((item) => `Missing canonical file: ${item}`),
+      ...copiedParallel.map((item) => `Parallel architecture copied: ${item}`),
+      ...forbiddenPublicRegistryKeys.map((item) => `Private or protected registry key leaked: ${item}`)
+    ]
   ));
 
   const sample = knowledgeBank.intakeItems.find((item) => item.kind === "public-url");
@@ -291,19 +313,40 @@ export function evaluateCompositeIntegration({
   if (sample) {
     try {
       const replay = appendIntakeItem(knowledgeBank, sample);
+      let collisionRejected = false;
+      try {
+        appendIntakeItem(knowledgeBank, {
+          ...structuredClone(sample),
+          reason: `${sample.reason} Changed-content collision probe.`
+        });
+      } catch (error) {
+        collisionRejected = /Intake ID collision with different content/.test(
+          error instanceof Error ? error.message : String(error)
+        );
+      }
       const duplicate = appendIntakeItem(knowledgeBank, {
         ...structuredClone(sample),
         id: "INTAKE-COMPOSITE-EVAL-DUPLICATE",
         submittedAt: "2026-07-16"
       });
       const report = queryKnowledgeLifecycle(knowledgeBank);
+      const projectionStatesQueryable =
+        JSON.stringify(Object.keys(report.projectionCounts).sort()) ===
+          JSON.stringify(["active", "deprecated", "disallowed", "hold"]) &&
+        Object.values(report.projectionCounts).every(
+          (count) => Number.isInteger(count) && count >= 0
+        );
       lifecycleOperationsPass = replay.status === "already-present" &&
+        collisionRejected &&
         duplicate.status === "duplicate-preserved" &&
         duplicate.intake.duplicateOfIntakeId === sample.id &&
         report.matureHeldClaimIds.length > 0 &&
         report.unresolvedInquiryIds.length > 0 &&
         report.correctionIds.length > 0 &&
+        projectionStatesQueryable &&
         report.orphanSourceIds.length === 0;
+      if (!collisionRejected) lifecycleFindings.push("Changed-content stable-ID collision was not rejected.");
+      if (!projectionStatesQueryable) lifecycleFindings.push("Projection-state counts were not queryable.");
     } catch (error) {
       lifecycleOperationsPass = false;
       lifecycleFindings.push(error instanceof Error ? error.message : String(error));
@@ -312,7 +355,7 @@ export function evaluateCompositeIntegration({
   results.push(criterion(
     "COMP-004",
     lifecycleOperationsPass,
-    "Canonical intake replay, duplicate preservation, held-claim, inquiry, correction, and orphan queries were exercised.",
+    "Canonical intake replay, changed-content stable-ID collision rejection, duplicate preservation, held-claim, inquiry, correction, projection-state, and orphan queries were exercised.",
     lifecycleFindings
   ));
 
@@ -386,6 +429,7 @@ export function evaluateCompositeIntegration({
     suite.grader_separation.instrumented_absence_counts_as_external_validation === false &&
     portfolioSuite.launch_thresholds.all_blocking_evals_must_pass === true &&
     portfolioSuite.launch_thresholds.human_production_approval_required === true &&
+    publicRegistrySafe &&
     derivedCurrentness.pass;
   results.push(criterion(
     "COMP-008",

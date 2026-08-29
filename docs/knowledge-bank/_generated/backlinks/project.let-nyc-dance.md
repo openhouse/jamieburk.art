@@ -3,7 +3,7 @@
 
 **Source commit:** `f3b87b75946b1d4fa3eacb012e0be61233d3f527`
 **Generation time:** 2026-08-24T20:16:42-04:00
-**Source fingerprint:** `2003575f9487757dc406ec457e6edb910556b6f53a054ab88c9f8f3a1c86349f`
+**Source fingerprint:** `fab8a054ff5c7e887da7127e4bf6584fe9620bbba1c3c2cadc075ef33ca109b9`
 
 - [Let NYC Dance: 1926 2017 [xyqgow5w]](../../assets/photographs/project-sites/let-nyc-dance-1926-2017-xyqgow5wnp.md) - `related_to` (frontmatter)
 - [Let NYC Dance: 1926 cabaret law b [s4gqqime]](../../assets/photographs/project-sites/let-nyc-dance-1926-cabaret-law-b-s4gqqimexc.md) - `related_to` (frontmatter)

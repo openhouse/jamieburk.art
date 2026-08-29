@@ -1,11 +1,11 @@
 {
-  "reportVersion": 7,
-  "checkedAt": "2026-08-24T23:17:22.117Z",
+  "reportVersion": 8,
+  "checkedAt": "2026-08-29T20:48:14.717Z",
   "baseUrl": "http://127.0.0.1:3024",
-  "publicSurfaceFingerprint": "d87b53f56c05ed94f349521d1647f1c17e6829c109a98d3a7c1e26146053fb16",
+  "publicSurfaceFingerprint": "cb61ecf25096603e18c5b84b14568494deec570e2dad1c258abcd6e47ca2621d",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 153,
-  "captureMethod": "Fresh Google Chrome 151 viewport captures through the Chrome DevTools Protocol against the exact Node 26 production build, paired with the complete 60-row responsive accessibility matrix.",
+  "captureMethod": "Fresh 152.0.7977.65 viewport captures through Playwright against the exact Node 26 production build, paired with the complete 60-row responsive accessibility matrix.",
   "routes": [
     {
       "path": "/",
@@ -22,7 +22,7 @@
           "pixelWidth": 1280,
           "pixelHeight": 900,
           "httpStatus": 200,
-          "sha256": "065f4ecd1eefcf009ce59f949fb4fc614c5712f610e2070a0e566ee10564ceed",
+          "sha256": "ed2ed1cab0fd460c88e17baf0c0df9755dccf7d65d3c61534e5f9c10558c24d0",
           "file": "candidate-home-desktop.png"
         },
         {
@@ -35,7 +35,7 @@
           "pixelWidth": 375,
           "pixelHeight": 812,
           "httpStatus": 200,
-          "sha256": "f5280a30fe384f7a95e49d33b3cf99e2fd00d28491b2b21e80f4e75a0e28efbe",
+          "sha256": "7afa0d1b72e771a0c5e0bcbc8dec534043cf9c337a3e54733abaa968d2b5b02e",
           "file": "candidate-home-viewport.png"
         }
       ]
@@ -55,7 +55,7 @@
           "pixelWidth": 1280,
           "pixelHeight": 900,
           "httpStatus": 200,
-          "sha256": "73fa8a28aa193fac2a7433ea4308cf328b0e4550bed908eb4e5a7f1cb73c5ea3",
+          "sha256": "5668cf43ce1ea4777b17a5e5a28315d2677bfbe108594cb7224f839fd5c488d7",
           "file": "professor-lenses-about-desktop.png",
           "framedContent": {
             "systemsPeopleCanInhabitHeadingPresent": true,
@@ -72,7 +72,7 @@
           "pixelWidth": 375,
           "pixelHeight": 1200,
           "httpStatus": 200,
-          "sha256": "165125ae8b2ea6dce2803067b3fa4bd34957ddb8afa7a4a21ff9b8507fa8607f",
+          "sha256": "a18b3155cb42b4a16bee9884c98d9717ef5ee24f702771896b5a87a58c3ba754",
           "file": "professor-lenses-about-mobile.png",
           "framedContent": {
             "systemsPeopleCanInhabitHeadingPresent": true,
@@ -85,10 +85,10 @@
   "passed": true,
   "verification": "Fresh desktop and mobile captures show the role-led homepage and public About-page systems lineage without visual failure; the complete route matrix separately exercises every public route.",
   "refresh": {
-    "candidateChange": "The Knowledge Wiki method gained three public-safe comparative design lenses, official-source relationships, and deterministic evals. No public application component changed, but the visible receipts were renewed for the exact source-tree candidate.",
-    "productionBuild": "The Next.js production build, TypeScript check, social-preview render contract, and rendered public-language check completed under the declared Node 26 runtime.",
-    "currentRenderedInspection": "The exact desktop and mobile homepage and About captures were freshly inspected after the source-backed method and graph changed.",
-    "responsiveRun": "All 60 route-width combinations, including the colophon, were freshly checked at 360, 375, 768, and 1280 CSS pixels.",
-    "browserDiagnostics": "Google Chrome completed the capture, keyboard, mobile-navigation, reflow, and semantic-reading-order pass without a browser-process failure."
+    "candidateChange": "The source-backed team-memory page and method now expose the Knowledge Operations control plane, including state machines, health gates, decision receipts, planning horizons, and local authority boundaries.",
+    "productionBuild": "The clean Next.js production build, TypeScript check, social-preview render contract, and rendered public-language check completed under the declared Node 26 runtime.",
+    "currentRenderedInspection": "The exact desktop and mobile homepage and About captures were freshly produced after the control-plane integration.",
+    "responsiveRun": "All 60 route-width combinations were freshly checked at 360, 375, 768, and 1280 CSS pixels.",
+    "browserDiagnostics": "Google Chrome completed capture, keyboard, mobile-navigation, reflow, and semantic-reading-order checks without a browser-process failure."
   }
 }

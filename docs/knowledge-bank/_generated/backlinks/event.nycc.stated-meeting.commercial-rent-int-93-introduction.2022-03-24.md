@@ -3,7 +3,7 @@
 
 **Source commit:** `f3b87b75946b1d4fa3eacb012e0be61233d3f527`
 **Generation time:** 2026-08-24T20:16:42-04:00
-**Source fingerprint:** `2003575f9487757dc406ec457e6edb910556b6f53a054ab88c9f8f3a1c86349f`
+**Source fingerprint:** `fab8a054ff5c7e887da7127e4bf6584fe9620bbba1c3c2cadc075ef33ca109b9`
 
 - [Commercial rent stabilization testimony](../../indexes/commercial-rent-testimony.md) - `prose_link` (markdown)
 - [March 24, 2022 City Council stated meeting official transcript](../../sources/public-hearing-transcripts/commercial-rent-stated-meeting-2022-03-24.md) - `documents` (frontmatter)

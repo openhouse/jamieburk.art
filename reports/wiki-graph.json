@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-24T20:16:42-04:00",
   "sourceCommit": "f3b87b75946b1d4fa3eacb012e0be61233d3f527",
-  "sourceFingerprint": "2003575f9487757dc406ec457e6edb910556b6f53a054ab88c9f8f3a1c86349f",
+  "sourceFingerprint": "fab8a054ff5c7e887da7127e4bf6584fe9620bbba1c3c2cadc075ef33ca109b9",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3817,7 +3817,7 @@
       "sensitivity": "low",
       "summary": "A federated practice that separates semantic meaning, evidentiary support, and source custody before composing human-reviewed outputs.\n",
       "aliases": [],
-      "lastReviewed": "2026-08-24",
+      "lastReviewed": "2026-08-29",
       "reviewBy": "2027-02-24"
     },
     {
@@ -24060,6 +24060,15 @@
     {
       "fromPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
       "from": "method.source-backed-team-memory",
+      "toPath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/README.md",
+      "to": "index.anonymized-team-knowledge-opportunity-case-study",
+      "fragment": null,
+      "line": 109,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
+      "from": "method.source-backed-team-memory",
       "toPath": "docs/knowledge-bank/people/ward-cunningham.md",
       "to": "person.ward-cunningham",
       "fragment": null,
@@ -24091,15 +24100,6 @@
       "to": "capability.technical-operations",
       "fragment": null,
       "line": 63,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
-      "from": "method.source-backed-team-memory",
-      "toPath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/README.md",
-      "to": "index.anonymized-team-knowledge-opportunity-case-study",
-      "fragment": null,
-      "line": 88,
       "kind": "link"
     },
     {
