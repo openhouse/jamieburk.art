@@ -22,6 +22,7 @@ const transcriptDirectory = path.join(
 );
 const evaluationRunDirectory = path.join(repoRoot, "docs/evals/runs");
 const evaluationQaDirectory = path.join(repoRoot, "docs/qa");
+const publicFontsDirectory = path.join(repoRoot, "apps/www/public/fonts");
 
 test("public transcript indexes contain metadata and locators, not raw speech", () => {
   const roots = [
@@ -121,5 +122,60 @@ test("the public-safety gate scans the complete published QA evidence tree", () 
     );
   } finally {
     if (existsSync(mutationPath)) unlinkSync(mutationPath);
+  }
+});
+
+test("the public-safety gate rejects an undeclared public font", () => {
+  mkdirSync(publicFontsDirectory, { recursive: true });
+  const mutationPath = path.join(publicFontsDirectory, "__mutation__.ttf");
+  try {
+    writeFileSync(mutationPath, "not an approved font");
+    assert.throws(
+      () =>
+        execFileSync(
+          process.execPath,
+          [path.join(repoRoot, "scripts/check-public-safety.mjs")],
+          {
+            cwd: repoRoot,
+            encoding: "utf8",
+            stdio: ["ignore", "pipe", "pipe"]
+          }
+        ),
+      (error) =>
+        /font file is not an exact licensed asset approved/.test(
+          error.stderr?.toString() ?? ""
+        )
+    );
+  } finally {
+    if (existsSync(mutationPath)) unlinkSync(mutationPath);
+  }
+});
+
+test("the public-safety gate rejects checksum drift in an approved font", () => {
+  const fontPath = path.join(
+    publicFontsDirectory,
+    "karla/Karla-Medium.ttf"
+  );
+  const original = readFileSync(fontPath);
+  try {
+    writeFileSync(fontPath, Buffer.concat([original, Buffer.from("drift")]));
+    assert.throws(
+      () =>
+        execFileSync(
+          process.execPath,
+          [path.join(repoRoot, "scripts/check-public-safety.mjs")],
+          {
+            cwd: repoRoot,
+            encoding: "utf8",
+            stdio: ["ignore", "pipe", "pipe"]
+          }
+        ),
+      (error) =>
+        /approved social-preview font checksum drifted/.test(
+          error.stderr?.toString() ?? ""
+        )
+    );
+  } finally {
+    writeFileSync(fontPath, original);
   }
 });

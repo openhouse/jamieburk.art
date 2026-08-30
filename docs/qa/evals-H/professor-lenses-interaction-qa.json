@@ -1,23 +1,23 @@
 {
-  "reportVersion": 1,
-  "checkedAt": "2026-08-12T16:36:46.428Z",
-  "baseUrl": "http://127.0.0.1:3057",
-  "publicSurfaceFingerprint": "eef497de543aab662bdfb7d838c23d18060d76ce456ed1867e6ef14e5878eeda",
+  "reportVersion": 6,
+  "checkedAt": "2026-08-30T00:40:41.761Z",
+  "baseUrl": "http://127.0.0.1:3196",
+  "publicSurfaceFingerprint": "5f021eda5a06079aca0d21349f2e912c703698d5b4bc7262f48408a430d6b8f2",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 118,
-  "method": "Playwright keyboard interaction plus bounded DOM and viewport inspection on the built local candidate. This is not a human screen-reader or assistive-technology session.",
+  "publicSurfaceFileCount": 153,
+  "method": "Fresh 152.0.7977.65 keyboard interaction, DOM inspection, and viewport inspection through Playwright on the current local production build. This is not a human screen-reader or assistive-technology session.",
   "keyboard": {
     "desktopTabSequence": [
       {
         "tag": "a",
-        "text": "Skiptocontent",
+        "text": "Skip to content",
         "href": "#main",
         "focusVisible": true,
         "id": null
       },
       {
         "tag": "a",
-        "text": "JBJamieBurkart",
+        "text": "JBJamie Burkart",
         "href": "/",
         "focusVisible": true,
         "id": null
@@ -31,7 +31,7 @@
       },
       {
         "tag": "a",
-        "text": "TechnicalOperations",
+        "text": "Technical Operations",
         "href": "/work/technical-operations",
         "focusVisible": true,
         "id": null
@@ -61,14 +61,14 @@
     "skipLinkIsFirst": true,
     "skipActivation": {
       "hash": "#main",
-      "activeElementId": null
+      "activeElementId": "main"
     },
     "passed": true
   },
   "mobileNavigation": {
     "menuFocusBeforeOpen": {
       "tag": "summary",
-      "text": "Menu",
+      "text": "MenuClose menu",
       "href": null,
       "focusVisible": true,
       "id": null
@@ -188,7 +188,15 @@
       },
       {
         "level": 3,
-        "text": "Source-backed team memory"
+        "text": "Knowledge Wiki Graphs"
+      },
+      {
+        "level": 3,
+        "text": "Limits of this comparison"
+      },
+      {
+        "level": 2,
+        "text": "Sources and notes"
       },
       {
         "level": 2,
@@ -203,5 +211,15 @@
     "Jamie visual and content approval",
     "Production deployment and indexing approval"
   ],
-  "passed": true
+  "passed": true,
+  "refresh": {
+    "candidateChange": "The source-backed team-memory page and method now explain the Knowledge Operations control plane; shared navigation, homepage, and About interactions were re-exercised for the exact candidate.",
+    "currentChecks": [
+      "Keyboard order and visible focus were freshly exercised on the exact homepage.",
+      "The mobile menu opened from its summary control and transferred focus to its first link.",
+      "Home and About passed fresh 640-pixel and 320-pixel reflow checks.",
+      "About retained one main landmark, one h1, and a coherent heading sequence."
+    ],
+    "humanBoundary": "No human screen-reader or browser-zoom completion claim is made."
+  }
 }

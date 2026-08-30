@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "model": "editorial-page-owner-pilot",
+  "publicBoundary": {
+    "actualPeopleParticipated": false,
+    "actualApprovalOrEndorsement": false,
+    "publicationOwner": "Jamie Burkart",
+    "humanFinalApprovalRequired": true,
+    "publicLanguage": "These are fictionalized editorial lenses based on public work, not the participation, consent, approval, or endorsement of the people named. Jamie remains the publication owner and makes the final decision."
+  },
+  "pages": [
+    {
+      "pageId": "colophon",
+      "route": "/colophon",
+      "status": "pilot",
+      "purpose": "Explain how evidence becomes a selective, public-safe portfolio page and how editorial review governs that projection.",
+      "acceptanceRule": "The simulated editorial desk passes only when every page-owner lens returns Pass after deterministic checks succeed.",
+      "owners": [
+        {
+          "id": "laurel-schwulst",
+          "name": "Laurel Schwulst",
+          "publicProfileUrl": "https://www.art.yale.edu/laurel-schwulst",
+          "focus": "Web form",
+          "publicEvidenceState": "expanded-public-interaction",
+          "question": "Does the page feel native to the web, and does its form enact the living, revisable system it describes?",
+          "passDefinition": "Pass only when the page is coherent as a web page, not merely a technical inventory, and its review structure is legible without backstage access."
+        },
+        {
+          "id": "shannon-mattern",
+          "name": "Shannon Mattern",
+          "publicProfileUrl": "https://pricelab.sas.upenn.edu/fellows/mattern-shannon",
+          "focus": "Knowledge infrastructure",
+          "publicEvidenceState": "expanded-public-interaction",
+          "question": "Does the page make provenance, custody, uncertainty, collective credit, and the limits of publication accountable?",
+          "passDefinition": "Pass only when the infrastructure and its refusal path are intelligible, and modeled review is not confused with real consent or authority."
+        },
+        {
+          "id": "deborah-treisman",
+          "name": "Deborah Treisman",
+          "publicProfileUrl": "https://www.newyorker.com/contributors/deborah-treisman",
+          "focus": "Editorial clarity",
+          "publicEvidenceState": "default-public-state",
+          "question": "Does the page tell one concise, compelling story about how this portfolio is made, with every detail earning its place?",
+          "passDefinition": "Pass only when a reader can understand the editorial method quickly, without defensive language or unnecessary production detail obscuring the point."
+        }
+      ]
+    }
+  ]
+}

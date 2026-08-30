@@ -158,15 +158,15 @@ export function evaluatePhotographicSourceReturn(options = {}) {
     knowledge_wiki_naming_is_canonical: (() => {
       const readme = read("README.md");
       const agents = read("AGENTS.md");
-      const packageSource = read("package.json");
+      const packageScripts = JSON.parse(read("package.json")).scripts;
       const citationReportSource = read("scripts/report-citations.mjs");
       return (
         /## Knowledge Wiki/i.test(readme) &&
         /## Knowledge Wiki/i.test(agents) &&
-        /"knowledge-wiki": "node scripts\/check-knowledge-bank\.mjs"/i.test(
-          packageSource
+        packageScripts["knowledge-wiki"]?.split(" && ").includes(
+          "node scripts/check-knowledge-bank.mjs"
         ) &&
-        /"knowledge-bank": "npm run knowledge-wiki"/i.test(packageSource) &&
+        packageScripts["knowledge-bank"] === "npm run knowledge-wiki" &&
         /machine-readable Knowledge Wiki citation registry/i.test(
           citationReportSource
         ) &&

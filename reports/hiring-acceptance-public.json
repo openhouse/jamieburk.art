@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "runId": "hiring-public-747605e3c34a",
-  "generatedAt": "2026-08-14T11:32:41-04:00",
-  "candidateSha": "747605e3c34a6426c027a1c85ff82c3a6275ac36",
+  "runId": "hiring-public-6187b3a1eec5",
+  "generatedAt": "2026-08-24T19:58:38-04:00",
+  "candidateSha": "6187b3a1eec56428685293c0636f90b8f999b620",
   "candidatePathsClean": true,
-  "portfolioSnapshotHash": "1b3140ea4b8b9d412845a4e08086576634bade309a79edd25224ed8b1fb377be",
-  "roleContextHash": "01faae768c51d13167a2c1dce914972651bb6b99fafb78975d6fb842419ac22b",
+  "portfolioSnapshotHash": "7ed4095ec883c2cfd2f5c2e72be61028f20b06f603abf10cac20fd325879807c",
+  "roleContextHash": "0b490969447130ae7d238e92797f11449be5d54f170985f784738a9d5372cd6c",
   "readerContextHash": "e055b82642616d52177ad68ae4d3bbaeb3953ef3c75cfa3e159c65166862e29f",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
   "publicSafety": {
@@ -247,7 +247,7 @@
       "roleContextHash": "82e0583f3f40fa7ee4a5eb0bd8982bad428fa0779699bedcb5971291f1646b7b",
       "benchmark": false,
       "live": true,
-      "fresh": true,
+      "fresh": false,
       "hardScreenBlocked": false,
       "publicReportingContext": {
         "role": "Vice President, Engineering",
@@ -264,7 +264,7 @@
         "boundary": "Official pages identify product-engineering remit, not a complete reporting chain or hiring role."
       },
       "decision": "evidence-gap-review",
-      "observed": 3,
+      "observed": 2,
       "requirementTotal": 5,
       "criticalObserved": 2,
       "criticalTotal": 4,
@@ -317,15 +317,11 @@
         {
           "requirementId": "requirement.codepath.ai-automation",
           "importance": "important",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/lab/source-backed-team-memory"
-          ],
-          "evidenceNeedles": [
-            "human-correctable AI workflows"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         }
       ]
     },
@@ -335,7 +331,7 @@
       "roleContextHash": "69e5968685cb0ea61484facecfd2aa0e2083e7ba381b8a3f88d34574166070a2",
       "benchmark": false,
       "live": true,
-      "fresh": true,
+      "fresh": false,
       "hardScreenBlocked": false,
       "publicReportingContext": {
         "role": "Senior Director, Learning and Project Solutions",
@@ -350,7 +346,7 @@
         "source": "source.aclu.charizma-williams",
         "boundary": "The role sits in the COO's office; this does not make the COO the direct manager or hiring lead."
       },
-      "decision": "deterministic-ready-for-human-review",
+      "decision": "evidence-gap-review",
       "observed": 4,
       "requirementTotal": 5,
       "criticalObserved": 3,
@@ -428,7 +424,7 @@
       "roleContextHash": "4c35e8774b5c80b504d0b84697ee47576af329c3e612dd3f90d473beca940f68",
       "benchmark": false,
       "live": true,
-      "fresh": true,
+      "fresh": false,
       "hardScreenBlocked": false,
       "publicReportingContext": {
         "role": "Head of Customer Operations",
@@ -444,7 +440,7 @@
         "source": "source.benepass.jaclyn-chen",
         "boundary": "The official team page establishes company leadership and vision context, not direct supervision of this role."
       },
-      "decision": "deterministic-ready-for-human-review",
+      "decision": "evidence-gap-review",
       "observed": 3,
       "requirementTotal": 4,
       "criticalObserved": 3,
@@ -509,7 +505,7 @@
     {
       "id": "opportunity.nyc-oti.senior-product-manager.782366",
       "title": "NYC OTI - PIT Crew Senior Product Manager 782366",
-      "roleContextHash": "456cb80791e55c37f0f9060663f1f358688df8316c40032a82ca5c56dfac5021",
+      "roleContextHash": "74f4fb5ed29f03e0fcbc2436696058937c1632fc383045ad2747e8468c438a99",
       "benchmark": false,
       "live": true,
       "fresh": true,
@@ -624,6 +620,231 @@
       ]
     },
     {
+      "id": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "title": "NYC OTI - SPEED Operations Manager 789810",
+      "roleContextHash": "96535ac07b25febf49a5984f205de82d08fada3ac66b5ae6c2accc707cbf93d3",
+      "benchmark": false,
+      "live": true,
+      "fresh": true,
+      "hardScreenBlocked": false,
+      "publicReportingContext": {
+        "role": "Executive Director, Product Management",
+        "identification": "role-only",
+        "source": "source.jobs.oti.executive-director-product-management.789563",
+        "boundary": "The executive role is itself open; no public source names the Operations Manager's supervisor."
+      },
+      "publicVisionContext": {
+        "role": "Commissioner and Chief Technology Officer",
+        "person": "person.lisa-gelobter",
+        "identification": "official-agency-leader",
+        "source": "source.nyc.lisa-gelobter-appointment.2026-02-10",
+        "boundary": "Agency leadership and vision are public; direct supervision is not established."
+      },
+      "decision": "evidence-gap-review",
+      "observed": 0,
+      "requirementTotal": 3,
+      "criticalObserved": 0,
+      "criticalTotal": 3,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.oti-speed-operations-789810.operating-backbone",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.oti-speed-operations-789810.people-operations",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.oti-speed-operations-789810.procurement",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-weak",
+          "routes": [],
+          "evidenceNeedles": []
+        }
+      ]
+    },
+    {
+      "id": "opportunity.nyc-oti.product-manager.784450",
+      "title": "NYC OTI - Product Manager 784450",
+      "roleContextHash": "512665a78d5e593c2d7339ecda1c18de179d2bd482e4ec3c9c56bc0ee27104d1",
+      "benchmark": false,
+      "live": true,
+      "fresh": true,
+      "hardScreenBlocked": false,
+      "publicReportingContext": {
+        "role": "Executive Director, Product Management",
+        "identification": "role-only",
+        "source": "source.jobs.oti.executive-director-product-management.789563",
+        "boundary": "The executive role is itself open; the posting does not name a manager or establish a reporting line."
+      },
+      "publicVisionContext": {
+        "role": "Commissioner and Chief Technology Officer",
+        "person": "person.lisa-gelobter",
+        "identification": "official-agency-leader",
+        "source": "source.nyc.lisa-gelobter-appointment.2026-02-10",
+        "boundary": "Official agency leadership establishes strategic context, not direct supervision."
+      },
+      "decision": "evidence-gap-review",
+      "observed": 0,
+      "requirementTotal": 3,
+      "criticalObserved": 0,
+      "criticalTotal": 3,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.oti-product-manager-784450.product-lifecycle",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.oti-product-manager-784450.cross-functional",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.oti-product-manager-784450.data-and-kpis",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-weak",
+          "routes": [],
+          "evidenceNeedles": []
+        }
+      ]
+    },
+    {
+      "id": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "title": "NYC OTI - SPEED Senior Product Manager 789610",
+      "roleContextHash": "32fcbb88efa0976e040a8c9d1a3fa6db54997ad08a9bcc65d39810e8d4857302",
+      "benchmark": false,
+      "live": true,
+      "fresh": true,
+      "hardScreenBlocked": false,
+      "publicReportingContext": {
+        "role": "Executive Director, Product Management",
+        "identification": "role-only",
+        "source": "source.jobs.oti.executive-director-product-management.789563",
+        "boundary": "The executive role is itself open; no public source names the direct manager."
+      },
+      "publicVisionContext": {
+        "role": "Commissioner and Chief Technology Officer",
+        "person": "person.lisa-gelobter",
+        "identification": "official-agency-leader",
+        "source": "source.nyc.lisa-gelobter-appointment.2026-02-10",
+        "boundary": "Gelobter's public service-access and digital-equity vision provides context, not a reporting-line claim."
+      },
+      "decision": "evidence-gap-review",
+      "observed": 0,
+      "requirementTotal": 3,
+      "criticalObserved": 0,
+      "criticalTotal": 3,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.oti-speed-spm-789610.business-cases",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.oti-speed-spm-789610.data-systems",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-weak",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.oti-speed-spm-789610.influence",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        }
+      ]
+    },
+    {
+      "id": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "title": "NYC OTI - PIT Crew Senior Product Designer 782373",
+      "roleContextHash": "a6730affdfaf5123dded338409422e5eb48af7caa7a92405180b58364eac22ed",
+      "benchmark": false,
+      "live": true,
+      "fresh": true,
+      "hardScreenBlocked": false,
+      "publicReportingContext": {
+        "role": "PIT Crew operational lead",
+        "person": "person.luke-farrell",
+        "identification": "nearest-public-operational-lead",
+        "source": "source.public.luke-farrell-pit-crew.2026-07",
+        "boundary": "Farrell publicly describes leading PIT Crew; the posting does not establish direct supervision."
+      },
+      "publicVisionContext": {
+        "role": "Commissioner and Chief Technology Officer",
+        "person": "person.lisa-gelobter",
+        "identification": "official-initiative-leader",
+        "source": "source.nyc.pit-crew-launch.2026-07-13",
+        "boundary": "Initiative leadership is public; a direct reporting relationship is not."
+      },
+      "decision": "evidence-gap-review",
+      "observed": 0,
+      "requirementTotal": 3,
+      "criticalObserved": 0,
+      "criticalTotal": 2,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.oti-pit-designer-782373.end-to-end-design",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-qualified",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.oti-pit-designer-782373.accessibility",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "visible-weak",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.oti-pit-designer-782373.design-systems",
+          "importance": "important",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "experience-gap",
+          "routes": [],
+          "evidenceNeedles": []
+        }
+      ]
+    },
+    {
       "id": "opportunity.nyc-oti.technical-operations-manager.782369",
       "title": "NYC OTI - Technical Operations Manager 782369",
       "roleContextHash": "9d4c7ae7e858db05d84622631ceb569d1e51c93734bb30bb985977dbebb89147",
@@ -732,9 +953,75 @@
       ]
     },
     {
+      "id": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "title": "University of Innsbruck ./studio3 - University Assistant (Postdoc), ARCH-15927",
+      "roleContextHash": "b950ffd46675bc244cf77f73e703337f62f6c5ec8fee919b71c9ec9051c0f5aa",
+      "benchmark": false,
+      "live": true,
+      "fresh": true,
+      "hardScreenBlocked": true,
+      "publicReportingContext": {
+        "role": "Head of the Institute of Experimental Architecture",
+        "person": "person.kathrin-aste",
+        "identification": "role-identity-matched",
+        "source": "source.uibk.studio3.leadership.2026",
+        "boundary": "Official pages establish unit leadership, not the postdoc's direct manager, selection committee, or hiring authority."
+      },
+      "publicVisionContext": {
+        "role": "./studio3 artistic-design working-group faculty",
+        "person": "person.kathrin-aste",
+        "identification": "role-identity-matched",
+        "source": "source.uibk.studio3.leadership.2026",
+        "boundary": "Official pages establish public institutional and artistic context, not private views or selection participation."
+      },
+      "decision": "hard-screen-exclusion",
+      "observed": 0,
+      "requirementTotal": 4,
+      "criticalObserved": 0,
+      "criticalTotal": 4,
+      "requirementCoverage": [
+        {
+          "requirementId": "requirement.uibk.studio3.architecture-degrees",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "hard-screen",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.uibk.studio3.experimental-artistic-research",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "experience-gap",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.uibk.studio3.digital-spatial-methods",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "source-needed",
+          "routes": [],
+          "evidenceNeedles": []
+        },
+        {
+          "requirementId": "requirement.uibk.studio3-grants-teaching-administration",
+          "importance": "critical",
+          "observed": false,
+          "matchedPublicText": false,
+          "declaredPublicStatus": "source-needed",
+          "routes": [],
+          "evidenceNeedles": []
+        }
+      ]
+    },
+    {
       "id": "opportunity.protected.source-backed-memory-consulting.2026",
       "title": "Protected source-backed team-memory consulting lead",
-      "roleContextHash": "1ca9ad3bd7cfe81cb81b0b402eacd5dccbf1a771aeade41c3b9c9daf93f42f0f",
+      "roleContextHash": "212db69d18eff42839555114c0b71aa3bdd78dd94a01d0b660886290e7ed3e53",
       "benchmark": false,
       "live": false,
       "fresh": false,
@@ -742,7 +1029,7 @@
       "publicReportingContext": null,
       "publicVisionContext": null,
       "decision": "not-live",
-      "observed": 2,
+      "observed": 1,
       "requirementTotal": 3,
       "criticalObserved": 1,
       "criticalTotal": 2,
@@ -770,17 +1057,13 @@
           ]
         },
         {
-          "requirementId": "requirement.protected-memory.bounded-sprint",
+          "requirementId": "requirement.protected-memory.focused-sprint",
           "importance": "important",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/lab/source-backed-team-memory"
-          ],
-          "evidenceNeedles": [
-            "Discuss a bounded source-backed memory sprint"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         }
       ]
     }

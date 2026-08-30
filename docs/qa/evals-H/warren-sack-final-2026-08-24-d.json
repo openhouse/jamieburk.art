@@ -1,0 +1,38 @@
+{
+  "evaluator": "Independent holdout reviewer applying a fictionalized Warren Sack analytical lens; not Warren Sack; no endorsement",
+  "reviewerId": "sack-u-2026-08-29-d1ced329",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "d1ced3296d2cdda9a3c88369b66c4a9e5e6b18a5206fae7266b7753dee0adcc8",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "Home page: home.html and home.png present the operating claim that emerging work becomes usable systems and provide a direct primary-navigation link to About, establishing the first step of a two-click evidence path.",
+    "About page: about.html and about.png state the method plainly and visibly: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. The same section links directly to WOWList, Sunday Dinner and 196, NYC Artist Coalition work, and Knowledge Wiki Graphs.",
+    "About page: the Three systems loops section makes the full sequence reconstructable for Harry J. Epstein Company, NYC Artist Coalition/FairRentNYC, and Sunday Dinner/196 through explicit Relationships, Model, Interface and use, and Learning and continuity fields.",
+    "Technical Operations page: technical-operations.html connects social and information structures to concrete decisions, artifacts, usable outcomes, and handoffs for Harry J. Epstein Company, FairRentNYC, and CallNYC rather than presenting a disconnected tool list.",
+    "WOWList case study: wowlist.html traces organizers' vocabulary and distribution needs into collaboratively editable natural-language event entry, followable keyword communities, a working public platform, organizer adoption across a dated 35-city snapshot, support materials, and reusable publishing workflows. It credits Richard Caceres and the wider organizer and maintainer community.",
+    "CallNYC case study: callnyc.html traces the gap between administrative data and resident needs into issue-based information architecture, an implemented public interface, public use and coverage, a preserved repository, documentation, and explicit archive limitations.",
+    "Knowledge Wiki Graphs lab: team-memory.html begins with knowledge friction and relationships, models three graph responsibilities and an operating control plane, proposes a bounded interface and pilot, tests the handoff through find-trace-correct-protect tasks, and supplies a concrete CallNYC date-correction trace showing learning propagated across public surfaces.",
+    "Source-bounded knowledge bank: public-knowledge-bank.json preserves narrow public support and does-not-establish boundaries for Open House, CallNYC, AI Evals professional development, collaborative authorship, official authority, current status, and endorsement.",
+    "Resume PDF: public-resume.pdf is machine-readable across two pages. Page 1 labels technical experience as current and historical and says historical implementation does not establish present proficiency; page 2 presents the UCSC degree and AI Evals course as education and professional development, without claiming disciplinary invention, peer-reviewed research, instructor authority, current Max/Jitter proficiency, or production deployment."
+  ],
+  "gaps": [
+    "No material PR-016 blocking gap is observed within the allowed packet. Live link resolution, external destinations, and facts outside the packet remain unobserved and were not inferred."
+  ],
+  "safety_findings": [
+    "About explicitly says the recurring steps are an analytical pattern, not proof that different projects are structurally equivalent.",
+    "About and the Knowledge Wiki Graphs lab characterize the graph work as evolving research and an operating method, not a finished platform, completed client pilot, peer-reviewed research project, or production SaaS deployment.",
+    "WOWList distinguishes its small noindex return threshold from a restored calendar, preserves collective credit, and excludes private user data, organizer contact lists, and unapproved community records.",
+    "CallNYC repeatedly identifies itself as an independent archived prototype, not an official or current City Council service, and warns against using historical information as current guidance.",
+    "Knowledge Wiki Graphs separates access, evidence, consent, publication permission, adoption, and action authority; it also excludes indiscriminate ingestion, hidden monitoring, surveillance, and private-archive browsing.",
+    "No claim of sole authorship, named-person endorsement, current Max/Jitter proficiency, disciplinary invention, peer-reviewed research, or completed production deployment was observed."
+  ],
+  "recommendation": "PASS PR-016 at score 4 for this exact candidate. The recursive method is plainly named, reachable within one click from the homepage, demonstrated through more than three bounded project sequences, connected to social use and durable handoffs, and protected by unusually explicit anti-overclaim and privacy boundaries.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "rendered-public-site-packet independent holdout",
+    "reviewedAt": "2026-08-29",
+    "filesEdited": false
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "team-memory-proposal-reader-2026-08-21",
+  "schemaVersion": 1,
+  "status": "complete",
+  "evaluatedAt": "2026-08-24T22:52:31.667Z",
+  "publicOrigin": "https://staging-b.jamieburk.art",
+  "pagePath": "/lab/source-backed-team-memory",
+  "readerId": "reader.protected-team-memory-prospect",
+  "pageSourceSha256": "86651161e1b27cf2d3470bdf384bb611097ab1a8e8603364cd708c4ab6c28494",
+  "publicPageTextSha256": "aae60aeff342be1fbe151ae5e546c7f57174c3d40aecc91eee9fe95cfe575349",
+  "scenarioSha256": "a752e9057fc1dd93e298caa089d3125ea1c27620fc73889ceedabf6cc29c0d10",
+  "promptSha256": "3a1ed7537f0081febab0ff50aab88df93366447618e22a2a079e828fd220aca0",
+  "promptVersion": "team-memory-proposal-reader-v2",
+  "actualPersonParticipated": false,
+  "result": {
+    "readerId": "reader.protected-team-memory-prospect",
+    "verdict": "pass",
+    "decision": "hire-for-focused-pilot",
+    "rationale": "The page makes a credible case for a small paid pilot now. It identifies a concrete team problem—lost product rationale, decision history, open questions, and onboarding context—and proposes a bounded two-week engagement using three to five approved sources. The outputs are practical, fit existing workflows, and culminate in a tested handoff and an explicit continue, revise, or stop decision. Privacy, correction, provenance, disagreement, access, and human authority are treated as operating requirements rather than abstractions. The page also clearly distinguishes an early consulting method from a finished platform or proven client deployment.",
+    "strengths": [
+      "Specific, adoptable first step centered on one slipping decision trail",
+      "Concrete deliverables: friction map, start-here page, decision record, open questions, source and access notes, correction path, and tested handoff",
+      "Observable success conditions tied to onboarding, traceability, correction, protection, and an end-of-pilot decision",
+      "Strong boundaries against indiscriminate ingestion, monitoring, unauthorized publication, and premature company-wide rollout",
+      "Honest maturity claims and a public correction example demonstrating source-backed revision"
+    ],
+    "missingEvidence": [
+      "A representative end-to-end pilot artifact showing the proposed deliverables together in realistic team use",
+      "Evidence from an external team that the method reduced onboarding time or context loss",
+      "Indicative pricing, weekly cadence, tool requirements, maintenance burden, and sponsor time commitment",
+      "More detail on how conflicts over authority, ownership, or retention would be resolved during the sprint"
+    ],
+    "constructiveCritique": "The proposal is unusually clear about method and governance, but it still asks the sponsor to infer what the finished operating memory will look and feel like. A compact sanitized example containing the start-here page, decision record, correction workflow, access notes, and handoff-test result would make procurement easier. Indicative effort, dependencies, and sponsor participation should also be stated without weakening the intentionally bounded scope.",
+    "validateNext": "In a real kickoff, validate that the sponsor can name one consequential decision trail, authorize a genuinely usable three-to-five-source set, identify who may correct or protect each part of the record, and commit two or three teammates to a predefined handoff test. That test should determine whether the pilot improves retrieval and understanding without creating unacceptable maintenance or governance work.",
+    "actualPersonParticipated": false,
+    "boundary": "This is a fictionalized public-page model simulation. The named person did not participate, review the candidate, approve the proposal, endorse Jamie, or make a hiring decision. The result is not the named person's endorsement or budget authorization."
+  },
+  "boundary": "This is an independent model simulation of an explicitly fictionalized public-page reader lens. The named person did not participate or endorse Jamie; a pass is not budget authorization, a contract, or a promise of work."
+}

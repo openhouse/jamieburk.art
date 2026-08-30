@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "evalId": "resume.benepass.product-operations-manager.7f963a7a.pdf-visual",
+  "inspectedAt": "2026-08-21T01:04:31.766Z",
+  "sourceTemplate": {
+    "access": "read-only source; edited only in a new private copy for this opportunity",
+    "revisionUnchangedAfterExport": true,
+    "privateLocatorCommitted": false
+  },
+  "markdown": {
+    "path": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.md",
+    "sha256": "7072b4405d6f470b3f08b6f8c5f796a8d8ed4bd85d8711e4f93f2608094cc1ce"
+  },
+  "pdf": {
+    "path": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Resume-Benepass-Product-Operations-Manager-7f963a7a.pdf",
+    "sha256": "f034d4d12d235f0bd332d1aa86e000b5fd4fc7f5b28dcbd40bc1a5ce331a6878",
+    "bytes": 85677,
+    "pages": 2,
+    "pageSize": "US Letter"
+  },
+  "inspection": {
+    "method": "Rebuilt from the approved Google Docs export with every list marker normalized to one point below its item text; rasterized every page at 110 DPI, visually inspected all pages, compared final rasters with the pre-rebuild inspection set, and checked PDF geometry, text, margins, and link annotations.",
+    "allPagesRasterized": true,
+    "actualNamedPeopleParticipated": false,
+    "pages": [
+      {
+        "page": 1,
+        "pass": true,
+        "notes": "Product operations, launch readiness, downstream impact, go/no-go support, prioritization, and accountable operating systems read clearly; the single Thick Arts LLC container and linked, value-led HJE evidence remain legible."
+      },
+      {
+        "page": 2,
+        "pass": true,
+        "notes": "Coalition delivery, resident-facing CallNYC, KC Town Hall, Sunday Dinner, education, and authorization remain coherent; the closing experience bullet no longer carries defensive disbursement language."
+      }
+    ]
+  },
+  "overall": "pass",
+  "boundary": "Artifact and visual-quality inspection only. No named hiring reader participated, and a pass is not an endorsement, interview promise, eligibility determination, or hiring decision."
+}

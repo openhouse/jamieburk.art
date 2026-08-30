@@ -1,0 +1,40 @@
+{
+  "evaluator": "Fictionalized Warren Sack analytical lens; independent Codex holdout; not Warren Sack and no endorsement",
+  "reviewerId": "sack-v-2026-08-29-d1ced329",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "d1ced3296d2cdda9a3c88369b66c4a9e5e6b18a5206fae7266b7753dee0adcc8",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "Homepage, first viewport (home.png and home.html): the candidate opens with 'I help emerging work become usable systems,' provides an About link in the primary navigation, and later names the public-system relation as 'between the screen and the room.'",
+    "About page, 'Systems people can inhabit' (about.png and about.html): within one click of the homepage it states the method plainly: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue; linked project evidence is one further click away.",
+    "About page, 'Three systems loops': Harry J. Epstein Company traces customer language and operating habits to an integrated commerce model, a maintained storefront used by customers and staff, analytics-informed iteration, reusable patterns, and team continuity.",
+    "About and NYC Artist Coalition / FairRentNYC pages: lived experience, recurring meetings, sources, questions, and civic actors become a recoverable model of testimony, policy lineage, decisions, and accountability; campaign sites, town halls, hearings, and action pathways are tested in collective use; minutes, source maps, question logs, and action trackers preserve the handoff.",
+    "About, WOWList, and 196 Artists Residency / Sunday Dinner pages: organizer vocabulary becomes followable keyword communities and a collaboratively editable calendar used across a dated 35-city-ecosystem snapshot, with support threads and organizer materials supporting continuity; hospitality and trust become invitation, onboarding, hosting, access, documentation, and follow-up workflows used across recurring gatherings and residencies.",
+    "Technical Operations page (technical-operations.png and technical-operations.html): the decision/action/artifact/usable matrix ties the systems method to three concrete proof surfaces—Harry J. Epstein maintenance-to-handoff work, FairRentNYC campaign memory, and CallNYC issue-page information architecture—rather than presenting a detached tool list.",
+    "CallNYC page: CouncilStat records are framed as a resident-pathway problem, modeled as issue and district information architecture, implemented as an independent public prototype, and preserved through a repository, press trail, public documentation, and explicit archived/unofficial limits.",
+    "Knowledge Wiki Graphs page: the candidate distinguishes semantic, evidence, and source-custody relationships; shows a concrete 2014-2015 to 2016 correction propagating across public surfaces; proposes a testable handoff; and repeatedly labels the work early research and an operating method, not a finished SaaS, client pilot, automatic trust system, or production deployment.",
+    "Source-bounded knowledge bank: all 63 included sources are marked public; relevant claims preserve shared credit and boundaries, including CLM-WOWLIST-NATURAL-LANGUAGE-PRODUCT-DECISION-2026, CLM-CALLNYC-INDEPENDENT-FOLLOW-ON, CLM-SOURCE-BACKED-MEMORY-METHOD-2026, CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026, and CLM-AI-EVALS-COURSE-COMPLETION-2026.",
+    "Public resume PDF: both rendered pages are visually intact and machine-readable; the AI Evals item appears under Education & Professional Development, and the technical stack expressly says historical implementation does not by itself establish present proficiency."
+  ],
+  "gaps": [
+    "This is one independent holdout card. The rubric's three-judge median and no-judge-below-3 aggregate remain unobserved until the other independent scorecards are available; this card does not infer them.",
+    "Knowledge Wiki Graphs has a proposed rather than completed client social-use test. The candidate discloses that limit, and the required three-project sequence is independently reconstructable through WOWList, NYC Artist Coalition / FairRentNYC, and 196 Artists Residency / Sunday Dinner."
+  ],
+  "safety_findings": [
+    "No Max/Jitter claim appears in the reviewed rendered pages or PDF.",
+    "Dated coursework is bounded to AI Evals course completion and professional development; the candidate disclaims evaluator licensing, instructor affiliation, employment, and endorsement.",
+    "The sole peer-reviewed-research reference is an explicit denial; the site does not claim disciplinary invention, peer-reviewed research, completed client adoption, or production deployment for Knowledge Wiki Graphs.",
+    "Collective credit is preserved: WOWList names Richard Caceres and community contributors; coalition outcomes remain collective; Sunday Dinner names community and co-organizer context; Open House is described through participant decision-making rather than sole authorship.",
+    "CallNYC is consistently labeled independent, archived, unofficial, and non-current, with no claim of City ownership, formal submission, winner status, or endorsement.",
+    "Protected participant data, private coalition context, legal-review material, credentials, raw transcripts, and private archives are described as withheld; the supplied knowledge bank exposes only sources marked public."
+  ],
+  "recommendation": "PASS this exact candidate at 4 for the individual PR-016 holdout lens. Add this scorecard to the independent three-judge aggregation; do not represent this single card as the rubric-required median, overall launch approval, or endorsement.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "rendered-public-site-packet independent holdout",
+    "reviewedAt": "2026-08-29",
+    "filesEdited": false
+  }
+}

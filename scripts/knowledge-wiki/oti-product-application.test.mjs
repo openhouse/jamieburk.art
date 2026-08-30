@@ -9,6 +9,10 @@ import {
   getClaimProjection,
   resolveCitationOccurrence
 } from "../../apps/www/src/data/knowledge-bank/public.ts";
+import {
+  evaluateOtiApplicationMilestone,
+  evaluateRepository as evaluateApplicationMilestoneRepository
+} from "./oti-application-milestone-eval.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const rubric = JSON.parse(
@@ -125,4 +129,73 @@ test("OTI named-reader receipt stays independent, exact-candidate, and honestly 
   assert.ok(receipt.results.every((result) => result.modeledVerdict === "fail"));
   assert.ok(receipt.results.every((result) => result.interviewRecommendation === true));
   assert.equal(receipt.overall, "fail");
+});
+
+test("OTI application milestone is public-safe, outcome-bounded, and operational", () => {
+  const result = evaluateApplicationMilestoneRepository();
+  assert.equal(result.overall, "pass", JSON.stringify(result.checks, null, 2));
+  assert.equal(result.passedChecks, result.totalChecks);
+});
+
+test("OTI application milestone eval rejects outcome inflation and confirmation leakage", () => {
+  const milestonePath = path.join(repoRoot, rubric.applicationMilestonePath);
+  const milestoneText = readFileSync(milestonePath, "utf8");
+  const opportunityText = readFileSync(
+    path.join(repoRoot, "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md"),
+    "utf8"
+  );
+  const employmentIndexText = readFileSync(
+    path.join(repoRoot, "docs/knowledge-bank/indexes/employment-context.md"),
+    "utf8"
+  );
+  const resumeRubric = JSON.parse(
+    readFileSync(
+      path.join(repoRoot, "evals/resumes/nyc-oti-senior-product-manager-782366.json"),
+      "utf8"
+    )
+  );
+  const baseInput = {
+    opportunityText,
+    employmentIndexText,
+    resumeRubric,
+    rubric
+  };
+
+  const inflated = evaluateOtiApplicationMilestone({
+    ...baseInput,
+    milestoneText: milestoneText.replace("outcome_state: pending", "outcome_state: offer")
+  });
+  const leaked = evaluateOtiApplicationMilestone({
+    ...baseInput,
+    milestoneText: `${milestoneText}\nConfirmation screenshot path: application-submitted.png\n`
+  });
+
+  assert.equal(
+    inflated.checks.find((check) => check.id === "pending-outcome-boundary")?.pass,
+    false
+  );
+  assert.equal(
+    leaked.checks.find((check) => check.id === "private-confirmation-boundary")?.pass,
+    false
+  );
+});
+
+test("OTI application milestone receipt preserves the measured hill climb and human boundary", () => {
+  const receipt = JSON.parse(
+    readFileSync(path.join(repoRoot, rubric.latestMilestoneRunPath), "utf8")
+  );
+
+  assert.match(receipt.candidateCommit, /^[0-9a-f]{40}$/);
+  assert.equal(receipt.candidateBranch, "feature/2026-08-14-B");
+  assert.equal(receipt.actualPeopleParticipated, false);
+  assert.equal(receipt.submissionActionPerformedBy, "Jamie Burkart");
+  assert.equal(receipt.confirmationArtifactCommitted, false);
+  assert.equal(receipt.baseline.passedChecks, 2);
+  assert.deepEqual(
+    receipt.iterations.map((iteration) => iteration.passedChecks),
+    [8, 9]
+  );
+  assert.ok(receipt.mutationControls.every((control) => control.pass));
+  assert.equal(receipt.finalResult.graph.typeAwareOrphans, 0);
+  assert.equal(receipt.overall, "pass");
 });

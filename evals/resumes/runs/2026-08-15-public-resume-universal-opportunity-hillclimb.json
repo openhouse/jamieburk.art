@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-08-15-public-resume-universal-opportunity-hillclimb",
+  "evaluatedAt": "2026-08-15T18:44:17-04:00",
+  "scope": "The resume available to public site visitors and the governed lifecycle of every opportunity on the hiring radar",
+  "readerProblem": "The public resume was an OTI application artifact. It could be strong for one submitted role while making other active hiring readers infer engineering delivery, enterprise project implementation, or product-operations fit, and it did not fail closed when a thematically adjacent role carried an unmet hard screen.",
+  "baseline": {
+    "explicitActiveTruthfullyHirableSet": 0,
+    "universalPublicResumeReaderPairs": 0,
+    "hardScreenedAdjacentRolesExplicitlyExcluded": 0,
+    "publicResumeArtifactPortfolioCoverage": 0,
+    "note": "The baseline records a missing universal-resume governance mechanism, not a retroactive judgment that the OTI application resume was poor."
+  },
+  "iterations": [
+    {
+      "id": "govern-opportunity-lifecycle-before-composition",
+      "boundedChange": "Defined the exact active truthfully-hirable set as CodePath Engineering Project Manager, ACLU Senior Project Manager, Benepass Product Operations Manager, and the submitted-pending OTI Senior Product Manager role; retained the expired OTI Operations role as a benchmark and excluded the open Studio3 postdoc through two unmet Architecture degree screens.",
+      "result": "Affinity, application status, expiration, and formal eligibility are separate states; a hard-screened role remains discoverable without shaping the public resume."
+    },
+    {
+      "id": "one-authoritative-universal-markdown",
+      "boundedChange": "Created one ATS-readable public Markdown resume emphasizing technical project management, product operations, engineering delivery, systems implementation, resident services, responsible delivery, and bounded collective-credit evidence across the four active opportunities.",
+      "result": "The 786-word artifact passes all seven isolated fictionalized public-source reader/opportunity screens while preserving truth, role boundaries, and public safety."
+    },
+    {
+      "id": "native-layout-and-link-preservation",
+      "boundedChange": "Applied the established read-only Google Docs style system in a private copy, preserved all ten required public/contact destinations, exported a two-page tagged US Letter PDF, and made the maintained sibling byte-identical to the public site install.",
+      "result": "The sixth maintained PDF artifact passes structure, link, artifact-binding, read-only-source, and page-by-page visual gates."
+    },
+    {
+      "id": "role-continuity-page-break",
+      "boundedChange": "Replaced an orphaned NYC Artist Coalition bullet at the top of page two with a deliberate role boundary: page one closes after the complete Thick Arts LLC block and page two opens with the complete coalition block.",
+      "result": "Both pages remain legible and unclipped, and every experience story keeps its heading, dates, and evidence together."
+    },
+    {
+      "id": "restore-governed-callnyc-projection",
+      "boundedChange": "Restored the exact approved CallNYC.org follow-on wording in the authoritative Markdown and native-layout PDF after the first universal draft made the project name implicit in the section heading.",
+      "result": "The broader multi-opportunity argument retains the governed civic-product proof, and public-safety, text-layer, link, and visual checks can all evaluate the same two-page artifact."
+    }
+  ],
+  "final": {
+    "activeTruthfullyHirableOpportunities": 4,
+    "universalPublicResumeReaderPairs": 7,
+    "passingUniversalPublicResumeReaderPairs": 7,
+    "hardScreenedAdjacentRolesExplicitlyExcluded": 1,
+    "maintainedMarkdownPdfArtifacts": 6,
+    "passingMarkdownPdfArtifacts": 6,
+    "pdfPagesInspected": 2,
+    "publicInstallByteIdentical": true,
+    "overall": "pass"
+  },
+  "boundary": "These are deterministic, fictionalized public-source resume screens. No named person participated, endorsed Jamie, promised an interview, resolved formal eligibility, or made a hiring decision."
+}

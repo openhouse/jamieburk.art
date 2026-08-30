@@ -1,0 +1,72 @@
+{
+  "id": "cloudinary-pilot-2026-08-15",
+  "cloud_name": "ofdj6rnm",
+  "authorization": {
+    "authority": "Jamie Burkart",
+    "authorized_at": "2026-08-15",
+    "destination": "Cloudinary account ofdj6rnm",
+    "scope": "Two exact public portfolio derivatives only"
+  },
+  "assets": [
+    {
+      "source": "/images/field-notes/nycac-shoestring-facilitation.webp",
+      "public_id": "nycac-shoestring-facilitation",
+      "version": 1786825562,
+      "width": 2400,
+      "height": 1600,
+      "bytes": 444986,
+      "sha256": "237a457fcf875300c79cbb0d3ad893ac4bfc6ebaffbf4bcbc0f47c2dd579eda2",
+      "remote_sha256": "237a457fcf875300c79cbb0d3ad893ac4bfc6ebaffbf4bcbc0f47c2dd579eda2",
+      "delivery_role": "responsive editorial photograph"
+    },
+    {
+      "source": "/artifacts/fair-rent-nyc/let-nyc-dance-public-surface.webp",
+      "public_id": "let-nyc-dance-public-surface",
+      "version": 1786825582,
+      "width": 1440,
+      "height": 900,
+      "bytes": 75144,
+      "sha256": "f0f073436d674bf29d50aeb7d06758811122494a8372ce07fb34e46b55bd8f9e",
+      "remote_sha256": "f0f073436d674bf29d50aeb7d06758811122494a8372ce07fb34e46b55bd8f9e",
+      "delivery_role": "responsive text-bearing public-site screenshot"
+    }
+  ],
+  "excluded": [
+    "Open Graph image",
+    "resume PDF",
+    "fonts",
+    "unlisted public images",
+    "photo masters and private archive metadata"
+  ],
+  "transform_verification": {
+    "verified_at": "2026-08-15T16:34:31-04:00",
+    "request_accept": "image/avif,image/webp,image/*,*/*;q=0.8",
+    "width_750": [
+      {
+        "public_id": "nycac-shoestring-facilitation",
+        "status": 200,
+        "content_type": "image/webp",
+        "width": 750,
+        "height": 500,
+        "bytes": 64466,
+        "source_bytes": 444986,
+        "byte_reduction_percent": 85.5,
+        "cache_max_age_seconds": 2592000,
+        "immutable": true
+      },
+      {
+        "public_id": "let-nyc-dance-public-surface",
+        "status": 200,
+        "content_type": "image/webp",
+        "width": 750,
+        "height": 469,
+        "bytes": 41444,
+        "source_bytes": 75144,
+        "byte_reduction_percent": 44.8,
+        "cache_max_age_seconds": 2592000,
+        "immutable": true
+      }
+    ]
+  },
+  "rollback": "Set NEXT_PUBLIC_CLOUDINARY_PILOT=disabled and rebuild; repository assets remain packaged in the standalone image."
+}

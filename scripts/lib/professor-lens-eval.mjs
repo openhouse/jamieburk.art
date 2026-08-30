@@ -43,15 +43,15 @@ export const professorCandidateRelativePaths = [
 ].sort();
 
 const finalScorecardRelativePaths = [
-  "docs/qa/evals-H/margaret-morse-final-2026-08-12-a.json",
-  "docs/qa/evals-H/margaret-morse-final-2026-08-12-b.json",
-  "docs/qa/evals-H/margaret-morse-final-2026-08-12-c.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-12-a.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-12-b.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-12-c.json"
+  "docs/qa/evals-H/margaret-morse-final-2026-08-24-d.json",
+  "docs/qa/evals-H/margaret-morse-final-2026-08-24-e.json",
+  "docs/qa/evals-H/margaret-morse-final-2026-08-24-f.json",
+  "docs/qa/evals-H/warren-sack-final-2026-08-24-d.json",
+  "docs/qa/evals-H/warren-sack-final-2026-08-24-e.json",
+  "docs/qa/evals-H/warren-sack-final-2026-08-24-f.json"
 ];
 
-const approvedCandidateSha256 = "5a52f34cbe2a40944f75a25d64f3339d4fabe78ad0d189d5468b6fdf5ea7dc42";
+const approvedCandidateSha256 = "d1ced3296d2cdda9a3c88369b66c4a9e5e6b18a5206fae7266b7753dee0adcc8";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },
@@ -101,11 +101,13 @@ export function evaluateProfessorLenses({
   const morseText = joined(morse);
   const sackText = joined(sack);
   const combinedPublicText = `${aboutText}\n${sourceNoteText}\n${publicRegistryText}`;
+  const normalizedAboutText = aboutText.replace(/\s+/g, " ");
   const totalWeight = suite.evals.reduce((sum, entry) => sum + entry.weight, 0);
   const candidateSha256 = fingerprintProfessorCandidate(candidateFiles);
   const relationshipRows = aboutText.match(/Relationships:<\/strong>/g)?.length ?? 0;
   const interfaceRows = aboutText.match(/Interface and use:<\/strong>/g)?.length ?? 0;
   const learningRows = aboutText.match(/Learning and continuity:/g)?.length ?? 0;
+  const hjeLoopText = aboutText.match(/Harry J\. Epstein Company[\s\S]*?<\/article>/)?.[0] ?? "";
 
   const criteria = [
     criterion(
@@ -180,6 +182,13 @@ export function evaluateProfessorLenses({
       `${relationshipRows} relationship rows; ${interfaceRows} interface-and-use rows; ${learningRows} learning-and-continuity rows.`
     ),
     criterion(
+      "project-status-integrity",
+      "The About-page systems loops do not present the ended HJE engagement as current work.",
+      !aboutText.includes("Three current systems loops") &&
+        !/>\s*Current\s*</.test(hjeLoopText),
+      "HJE loop heading and status label checked against the bounded 2009-2015 engagement."
+    ),
+    criterion(
       "open-house-boundary",
       "The public Open House lineage states initiation, ten-day form, and collective governance without solo-production language.",
       aboutText.includes("CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY") &&
@@ -202,6 +211,19 @@ export function evaluateProfessorLenses({
         "document enough for others to continue"
       ].every((fragment) => aboutText.includes(fragment)),
       "Five public sequence stages checked."
+    ),
+    criterion(
+      "explicit-analytical-limits",
+      "The public surface rejects invention, structural-equivalence inflation, peer-review inflation, and present-proficiency inference.",
+      [
+        "an analytical pattern, not evidence",
+        "structurally equivalent",
+        "Missing evidence and relationships remain missing",
+        "I do not invent them",
+        "or peer-reviewed research",
+        "does not by itself establish present technical proficiency"
+      ].every((fragment) => normalizedAboutText.includes(fragment)),
+      "Six public anti-overclaim fragments checked."
     ),
     criterion(
       "inspectable-handoff-specimens",

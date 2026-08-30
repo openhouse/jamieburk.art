@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { FieldPhoto } from "@/components/FieldPhoto";
+import { ResponsiveMedia } from "@/components/ResponsiveMedia";
 import { portfolioPhotos } from "@/data/photography";
 
 const operatingMoves = [
@@ -38,7 +38,7 @@ export function ParticipationSequence() {
       <div className="mt-8 grid gap-7 lg:grid-cols-2 lg:items-start">
         <figure className="border border-jb-ink/15 bg-jb-paper">
           <a className="block" href="https://letnycdance.nycartc.com/">
-            <Image
+            <ResponsiveMedia
               alt="Let NYC Dance campaign homepage announcing the Cabaret Law repeal, naming the grassroots coalition, and playing the mayoral bill-signing video."
               className="aspect-[8/5] w-full object-cover object-top"
               height={900}

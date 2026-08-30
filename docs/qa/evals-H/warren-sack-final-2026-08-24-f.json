@@ -1,0 +1,39 @@
+{
+  "evaluator": "Fictionalized Warren Sack analytical lens; independent analysis without Warren Sack participation or endorsement",
+  "reviewerId": "sack-w-2026-08-29-d1ced329",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "d1ced3296d2cdda9a3c88369b66c4a9e5e6b18a5206fae7266b7753dee0adcc8",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "Home page: the first viewport states that Jamie makes emerging work usable; the primary navigation links directly to About, while the later method section states “Listen. Map. Build. Document. Transfer.”",
+    "About page, “Systems people can inhabit”: the method is stated plainly as a recursive sequence—observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.",
+    "About page, “Three systems loops”: Harry J. Epstein Company, NYC Artist Coalition/FairRentNYC, and Sunday Dinner/196 each receive an explicit relationship, model, interface-and-use, and learning-and-continuity trace, with links to their project pages.",
+    "Harry J. Epstein Company page: customer and team friction becomes a scoped requirement, incremental release, verified customer path, reusable operating pattern, named ownership, and later-maintainer handoff.",
+    "FairRentNYC page: stakeholder relationships, testimony, policy lineage, open questions, and decisions become campaign sites, facilitated civic rooms, action pathways, source maps, running minutes, and follow-up systems used collectively.",
+    "Sunday Dinner/196 page: hospitality and trust become invitation, onboarding, hosting, minimal documentation, independent residency access, continued support, and repeatable handoffs while participant-level records remain protected.",
+    "WOWList page: organizers’ existing community language becomes a natural-language keyword model, a collaboratively editable calendar interface, documented organizer adoption across a dated 35-city snapshot, support materials, and reusable publishing patterns.",
+    "CallNYC page: constituent-services data is observed as insufficient for residents, remodeled around recognizable issues and decisions, implemented as a public interface, exercised through public release and attributable interaction, and preserved through an archived site, repository, documentation, and explicit limits.",
+    "Knowledge Wiki Graphs page: one felt knowledge-friction problem becomes a three-graph model, reviewed wiki-form outputs, a human-tested handoff, correction paths, and a concrete CallNYC chronology correction propagated across public surfaces.",
+    "Technical Operations page, “Start with the decisions”: three concise rows connect an operating question to Jamie’s action, an inspectable artifact, and what became usable, preventing the systems account from collapsing into an abstract tool list.",
+    "Public resume PDF, pages 1–2: the profile and project entries connect participatory discovery, information architecture, implementation, adoption, measurement, documentation, and handoffs; historical technical experience is explicitly separated from present proficiency.",
+    "Public knowledge bank: relevant Open House, WOWList, CallNYC, and Knowledge Wiki claims carry source relationships and boundaries covering collective credit, historical status, unofficial status, protected material, client adoption, production deployment, and automatic trust."
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "No public surface names Warren Sack, attributes this lens to him, or implies his participation, authority, or endorsement.",
+    "No Max/Jitter claim, disciplinary-invention claim, peer-reviewed-research claim, or present-proficiency inference from historical coursework was observed.",
+    "The public resume lists the UCSC degree without exposing protected coursework; Open House is presented as a dated, publicly sourced participatory project and not as proof of a present technical credential.",
+    "The About and Knowledge Wiki Graphs pages explicitly reject structural equivalence, completed client adoption, finished production-platform status, peer-reviewed status, and automatic truth or consensus.",
+    "Collective credit is preserved for Richard Caceres, coalition collaborators, civic-data collaborators, company teams, artists, organizers, and participants.",
+    "Private participant records, correspondence, stakeholder context, legal-review material, raw social content, credentials, customer data, and source-custody details are described as protected or omitted."
+  ],
+  "recommendation": "Pass PR-016 for this exact candidate at 4/4. The recursive method is plainly named within one click of the homepage and demonstrated through more than three bounded project traces connecting relationships, models, interfaces, collective use, learning, and durable handoffs. Preserve the present educational, collective-credit, privacy, and non-deployment boundaries.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "rendered-public-site-packet independent holdout",
+    "reviewedAt": "2026-08-29",
+    "filesEdited": false
+  }
+}

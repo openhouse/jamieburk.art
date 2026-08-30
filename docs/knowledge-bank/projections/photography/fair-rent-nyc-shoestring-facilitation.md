@@ -6,8 +6,8 @@ projection_type: photo-occurrence
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-13
-review_by: 2027-02-13
+last_reviewed: 2026-08-20
+review_by: 2027-02-20
 canonical_path: docs/knowledge-bank/projections/photography/fair-rent-nyc-shoestring-facilitation.md
 summary: Exact public occurrence binding the Shoestring Press derivative to the working-alignment panel in the Fair Rent NYC participation sequence.
 projection_status: active
@@ -35,10 +35,9 @@ caption:
     - statement.photo.nycac-shoestring.capture-date.v1
     - statement.photo.nycac-shoestring.facilitation.v1
 credit:
-  text: Photograph by Paul Mossine. From Jamie Burkart's photo archive.
+  text: Photo courtesy of NYC Artist Coalition.
   assertions:
-    - statement.photo.nycac-shoestring.creator.v1
-    - statement.photo.nycac-shoestring.custody.v1
+    - statement.photo.nycac-shoestring.courtesy-credit.v1
 permission_source: source.permission.jamie-portfolio-album.2026-08-13
 approval:
   public_git: approved

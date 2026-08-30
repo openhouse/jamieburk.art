@@ -1,0 +1,84 @@
+{
+  "id": "team-memory-internal-champion-hiring-2026-08-21",
+  "schemaVersion": 1,
+  "status": "complete",
+  "evaluatedAt": "2026-08-21T16:22:27.732Z",
+  "reviewMethod": "isolated-browser-packet-model-simulation",
+  "promptVersion": "team-memory-internal-champion-v1",
+  "promptSha256": "6878d39415a38074f1437004f23352606c01a788133eb86babef02e2c5d5f83b",
+  "promptInputSha256": "82bbd3cc178cf6d6ff03c20884717261ba1e1162fa66fd7951e8b1ca8edc579b",
+  "sponsorPerspectiveSha256": "15e6db4411d23b174c2aaa5c58a00b0556582f1d75bf034d4025a32d1a5b0163",
+  "sponsorVoiceSha256": "960be6a4450b1a93d50baaddc146ce35d31930ae5548358038328f0bc9f1a8a6",
+  "browserPacketSha256": "cfb40a691e5ada0b8e5b0e3cb011fdefec60f46edf24f56e684bda504107b7c9",
+  "calibrationStatus": "uncalibrated-advisory-hiring-simulation",
+  "actualPeopleParticipated": false,
+  "actualCompanyDecision": false,
+  "result": {
+    "evaluatorId": "reader.anonymized-team-memory-internal-champion",
+    "verdict": "pass",
+    "decision": "hire-for-focused-paid-engagement",
+    "sponsorPitchTexts": [
+      "I think Jamie is worth hiring for one bounded problem. We are losing rationale, decisions, open questions, and onboarding context. The proposal starts there—not with a new platform—and returns a usable decision trail from three to five sources we explicitly approve.",
+      "The practical test is strong: can someone who missed the room find the current answer, trace its source, see what remains uncertain or protected, and correct the record? If not, we stop. If it works without creating another bureaucracy, we decide whether to continue.",
+      "I recommend authorizing a paid two-week discovery and prototype sprint, subject to a short agreement on budget, confidentiality, source access, participant time, ownership, and deliverable formats. I would not ask Jamie for additional unpaid design work before that authorization."
+    ],
+    "decisionMakerDiscussion": [
+      {
+        "speaker": "executive-decision-maker-fictionalized",
+        "message": "Is this a product purchase or consulting? The graph language is dense, and the site explicitly says there has not been a completed client pilot."
+      },
+      {
+        "speaker": "prospective-sponsor-fictionalized",
+        "message": "Consulting: a focused discovery and prototype engagement. Jamie is candid that the method is early. We would be buying a bounded test of one decision trail, not betting on an unfinished platform."
+      },
+      {
+        "speaker": "product-engineering-decision-maker-fictionalized",
+        "message": "The operating shape is unusually clear: one sponsor, one working lead, two or three testers, three to five approved sources, specific outputs, and no indiscriminate ingestion or hidden monitoring. The correction path and protected-material boundary address real engineering and cultural risks."
+      },
+      {
+        "speaker": "executive-decision-maker-fictionalized",
+        "message": "The resume supports delivery judgment—14-plus years, product and technical project management, public launches, operational handoffs, and 30-plus pages of campaign memory—but it does not prove this exact service has succeeded with a company like ours."
+      },
+      {
+        "speaker": "product-engineering-decision-maker-fictionalized",
+        "message": "Agreed. I also want participant-hour estimates, the working tools and artifact formats, confidentiality and retention rules, and a named internal owner. Those are scoping questions, not reasons to reject the test."
+      },
+      {
+        "speaker": "executive-decision-maker-fictionalized",
+        "message": "Authorize the focused paid engagement, contingent on ordinary agreement over budget, scope, confidentiality, access, compensation, ownership, timing, and success conditions. The continue-revise-stop gate limits our exposure."
+      }
+    ],
+    "decisionRationale": "The packet clears the demanding threshold for a bounded paid engagement. It identifies the team problem; positions Jamie as the discovery, product-operations, documentation, and implementation lead; defines a two-week first engagement; names the participating roles and small approved source set; specifies deliverables and exclusions; provides observable handoff tests; and ends with a continue, revise, or stop decision. The resume supplies credible adjacent evidence of sustained delivery, decision-memory stewardship, technical translation, and durable handoffs. The absence of a completed client pilot raises execution risk, but the narrow source boundary, explicit test, and stop option make that risk acceptable for paid discovery—not for a broader rollout.",
+    "needsMatched": [
+      "Recover product rationale, decisions, open questions, and onboarding context.",
+      "Fit the practice into existing work instead of installing a company-wide parallel system.",
+      "Limit access to three to five deliberately approved sources around one decision trail.",
+      "Produce a start-here page, decision record, open-question list, provenance and access notes, correction path, and tested handoff.",
+      "Let a teammate find an answer, trace its basis, recognize uncertainty or protection, and propose a correction.",
+      "Preserve confidentiality, source custody, attribution, consent, access, and retention boundaries.",
+      "Reach an explicit continue, revise, or stop decision after two weeks.",
+      "Provide an experienced lead who can translate ambiguous needs into workflows, documentation, implementation, and handoffs."
+    ],
+    "concerns": [
+      "The method is early research and has no demonstrated completed client pilot or company adoption.",
+      "The page's graph terminology may obscure the immediately purchasable service for a rushed reader.",
+      "Participant roles are named, but expected interview, review, and testing hours are not quantified.",
+      "The exact working tools, artifact formats, integration points, ownership, retention, and post-sprint disposition remain to be agreed.",
+      "Relevant past work supports adjacent capabilities but does not establish demand or outcomes for this exact engagement.",
+      "Budget, compensation, confidentiality, intellectual property, source access, timing, and contractual authority remain unresolved."
+    ],
+    "relayToJamie": "Fictionalized sponsor relay: We decided to hire you for the focused paid two-week engagement, subject to normal commercial and confidentiality terms. The decision came from the specificity of the pilot: one slipping decision trail, a small approved source set, concrete operating-memory deliverables, a low-burden handoff test, explicit exclusions, and a real stop decision. Your resume made the operating and implementation experience credible. Before kickoff, send a concise scope that quantifies participant time, names the artifact formats and internal owner, and states what happens to source material and deliverables when the sprint ends.",
+    "recommendations": [
+      "Lead the page with a plain commercial headline such as “Two-week team-memory discovery and prototype sprint”; move the three-graph architecture below the engagement summary.",
+      "Add a one-screen authorization card covering objective, two-week schedule, participant hours, meetings, approved source count, deliverables, exclusions, acceptance test, and end decision.",
+      "Show a compact synthetic example of the actual start-here page, decision record, open-question list, provenance note, and correction flow.",
+      "Connect the proposal directly to the strongest resume evidence: stewardship of 30-plus pages of campaign memory, cross-functional delivery, technical translation, and durable handoffs—while retaining the no-client-pilot caveat.",
+      "Specify whether deliverables live in the team's existing tools, what formats are returned, who owns them, and what access or retention ends after the sprint.",
+      "Keep the first call-to-action concrete: request a paid scoping conversation with the sponsor and budget owner, not an open-ended discussion of the research."
+    ],
+    "actualPeopleParticipated": false,
+    "actualCompanyDecision": false,
+    "boundary": "This is a fictionalized analytical exercise. The real people did not participate, and this is not an actual company decision, endorsement, budget authorization, offer, contract, or promise of work."
+  },
+  "boundary": "This is an uncalibrated fictionalized model simulation. The real people did not participate, review the result, endorse Jamie, authorize budget, make an offer, or enter a contract."
+}

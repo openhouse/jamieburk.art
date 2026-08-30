@@ -1,0 +1,43 @@
+{
+  "id": "knowledge-wiki-graph-portfolio-hillclimb-2026-08-21",
+  "date": "2026-08-21",
+  "branch": "apply/2026-08-20-B",
+  "criterion": "Explain the Knowledge Wiki Graph ecosystem as a legible, public-safe research practice while preserving its lineage, architectural distinctions, and maturity boundary.",
+  "baseline": {
+    "commit": "0bb9c74de8d774dd2be85f9b16c5e22e56096bfc",
+    "passed": false,
+    "failureCount": 14,
+    "metrics": {
+      "publicClaimReferences": 0,
+      "graphResponsibilities": 0,
+      "reviewedSurfaces": 0
+    }
+  },
+  "candidate": {
+    "passed": true,
+    "failureCount": 0,
+    "metrics": {
+      "publicClaimReferences": 4,
+      "graphResponsibilities": 3,
+      "reviewedSurfaces": 4
+    }
+  },
+  "change": "Added a concise colophon doorway, evolved the Source-Backed Team Memory lab into the Knowledge Wiki Graph successor while retaining Noting.us lineage, added four cited public renderings, and encoded deterministic mutation tests.",
+  "guardrails": [
+    "Repository roles do not map one-to-one onto graph responsibilities.",
+    "The method remains evolving research, not a finished platform or client-adoption claim.",
+    "Access, evidence, interpretation, publication permission, and release remain distinct.",
+    "Protected repository topology and source locators remain absent from public surfaces."
+  ],
+  "commands": [
+    "npm run evals:knowledge-graph-portfolio",
+    "npm run test:knowledge-graph-portfolio",
+    "npm run check:citations",
+    "npm run test:citations",
+    "npm run knowledge-wiki",
+    "npm run public-safety",
+    "npm run typecheck -w @jamie-burkart/www",
+    "npm run lint -w @jamie-burkart/www",
+    "npm run build -w @jamie-burkart/www"
+  ]
+}

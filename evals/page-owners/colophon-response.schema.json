@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Fictionalized colophon page-owner assessment",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "ownerId",
+    "verdict",
+    "critique",
+    "evidence",
+    "revisionRequests",
+    "actualPersonParticipated",
+    "boundary"
+  ],
+  "properties": {
+    "ownerId": { "type": "string" },
+    "verdict": { "type": "string", "enum": ["Pass", "Fail"] },
+    "critique": { "type": "string", "minLength": 40 },
+    "evidence": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "type": "string", "minLength": 20 }
+    },
+    "revisionRequests": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 20 }
+    },
+    "actualPersonParticipated": { "type": "boolean", "const": false },
+    "boundary": { "type": "string", "minLength": 40 }
+  }
+}

@@ -128,8 +128,8 @@ claim beyond the wording and guardrails here.
 **Status:** Careful
 **Support level:** Careful  
 **Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context  
-**Public wording:** Co-built and operated WOWList.org, a community-calendar platform for DIY arts and music organizers. A July 2017 production snapshot records 1,846 users, 16,142 posts/events, and 35 city-region keys with at least 50 posts.
-**Detailed public-safe wording:** WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.  
+**Public wording:** Co-built and operated WOWList.org, a natural-language community-calendar platform across 35 city ecosystems, supporting local organizers who used it to run calendars, websites, and email lists for their own scenes.
+**Detailed public-safe wording:** WOWList supported local organizers across 35 city ecosystems with followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for their own scenes.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows public-facing platform delivery, community workflows, and product operations for real organizers.  
 **Guardrail:** Use approximate adoption language and do not describe city activity as official chapters.  

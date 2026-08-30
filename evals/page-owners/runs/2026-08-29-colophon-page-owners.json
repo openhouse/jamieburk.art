@@ -1,0 +1,83 @@
+{
+  "status": "complete",
+  "promptVersion": "colophon-page-owner-v1",
+  "pageSourceSha256": "08630ec445492183c2540ce06fbceaf7e6aabdf9f4b5d2f1166da89bbd82c88a",
+  "registrySha256": "f2d7bcc3ca31253743817acf8c40d75b086546d4ba5998e41be0fa49475752b4",
+  "publicPageTextSha256": "3346e0380ce989258b344e540954f21dc55bef45d2daf2c12359058ed1f6d53e",
+  "defaultPublicPageTextSha256": "20c2a2bf3f8123924205944efca0db7f847653519f4e9b8b83e6f945d378c37b",
+  "desktopScreenshotSha256": "c83e9cb6d3b52919e83df72391b68f2bcbe6793d633af0b46952ee2ef5a4b4ef",
+  "mobileScreenshotSha256": "23f2a87bc3443e6f7087116aba607ef07b804b3b560bec341aaf9778ff49097d",
+  "publicOnly": true,
+  "repositoryAvailableToModel": false,
+  "actualPeopleParticipated": false,
+  "assessments": [
+    {
+      "ownerId": "laurel-schwulst",
+      "verdict": "Pass",
+      "critique": "The page feels native to the web because it turns its method into a responsive, linked, progressively disclosed reading experience rather than presenting a technical inventory. Its form also enacts revisability: one photograph moves through Select, Observe, Write, and Revise; dated maintenance and a correction route make change visible; and the expanded public notes expose source status, limits, and return paths. Human authority remains unambiguous throughout.",
+      "evidence": [
+        "The desktop composition pairs the photograph with the four-stage editorial sequence, while the mobile design reflows the same material into a clear vertical path rather than merely shrinking the desktop layout.",
+        "The default page uses web-native links, numbered note references, and disclosure controls labeled ‘Editorial responsibility’ and ‘View 4 source notes,’ giving readers optional depth without losing the main narrative.",
+        "The expanded interaction publicly identifies all four sources as exploring or proposed design records and states what each source does not establish, making the review structure legible without backstage access.",
+        "The page names Jamie repeatedly as the decision owner: ‘Automated checks flag issues; Jamie decides what is published,’ and the revision stage says he revises, removes, or keeps material private when requirements are unresolved.",
+        "The public editorial-responsibility text expressly says that tools and modeled reviewers do not supply consent, rights, approval, endorsement, or publication authority.",
+        "‘Last revised 29 August 2026,’ the correction invitation, and the commitment to note accepted changes present the colophon as an actively maintained publication rather than a frozen explanation of infrastructure."
+      ],
+      "revisionRequests": [],
+      "actualPersonParticipated": false,
+      "boundary": "This assessment uses a fictionalized analytical lens derived from Laurel Schwulst’s public work; it is not Laurel Schwulst’s participation, approval, consent, endorsement, statement, or publication authority.",
+      "publicEvidenceState": "expanded-public-interaction"
+    },
+    {
+      "ownerId": "shannon-mattern",
+      "verdict": "Pass",
+      "critique": "The page renders provenance as an inspectable chain rather than a generic transparency claim: a public object moves through selection, observation, writing, and revision; numbered claims lead to source notes; and each note distinguishes what its source supports from what remains unproven. Custody and publication authority are assigned to Jamie, while photographic and document authorship remain separately credited. The refusal path is concrete—the photograph stays private until caption, credit, privacy, and use are resolved, and it is revised or removed if the record changes. Both default and expanded states preserve a human correction route and explicitly deny consent, rights, endorsement, or authority to tools and modeled reviewers.",
+      "evidence": [
+        "The photograph is publicly attributed to Elana Gordon, dated and located, while its custody is separately stated as Jamie Burkart’s photo archive; the Observe step identifies an archive record supplying the date, photographer, and recorded permission.",
+        "The four-step sequence culminates in a specific refusal path: Jamie publishes only after caption, credit, privacy, and use are resolved; otherwise the image stays private, and a changed record prompts revision or removal.",
+        "The Knowledge Wiki Graph is described as connecting public claims to evidence while exposing source coverage, status, correction, and human authority; numbered references provide an intelligible route from the claim to its supporting notes.",
+        "The expanded source notes retain authorship, date, and provisional status—three records are marked exploring and one proposed—and each includes a boundary denying unsupported conclusions such as completed deployment, adoption, automatic truth, or publication authority.",
+        "Collective credit is differentiated rather than collapsed: Elana Gordon receives photographic credit, Jamie Burkart and Codex receive joint RFC credit, and Jamie is identified as the public page’s maker, maintainer, and publication decision-maker.",
+        "The page explicitly states that tools and modeled reviewers do not supply consent, rights, approval, endorsement, or publication authority, preventing modeled review from being mistaken for real-person participation or authority.",
+        "A human correction route appears in both public states through the visible suggest a correction link and the instruction to Contact Jamie; the desktop and mobile screenshots keep the credit, refusal sequence, human-authority statement, source-note control, and correction route legible."
+      ],
+      "revisionRequests": [],
+      "actualPersonParticipated": false,
+      "boundary": "This assessment uses a fictionalized Shannon Mattern lens derived from her public work; it is not Shannon Mattern’s participation, approval, consent, endorsement, statement, or publication authority.",
+      "publicEvidenceState": "expanded-public-interaction"
+    },
+    {
+      "ownerId": "deborah-treisman",
+      "verdict": "Pass",
+      "critique": "The page tells a clear, photograph-led story: one image moves through selection, observation, writing, and revision, turning an abstract editorial method into a concise narrative. The accountability material remains subordinate and does not displace that story.",
+      "evidence": [
+        "Both desktop and mobile views establish the purpose briefly, then place ‘Follow one photograph,’ the image, its credit, and the four numbered editorial steps at the center of the page.",
+        "The Select, Observe, Write, and Revise sequence gives each detail a distinct function: editorial choice, visible fact, precise caption, and publication responsibility.",
+        "The potentially technical ‘Knowledge Wiki Graph’ reference is confined to one later paragraph and immediately explained through evidence, correction, review, and Jamie’s decision-making.",
+        "‘Automated checks flag issues; Jamie decides what is published’ appears after the photograph sequence as a single bold sentence, so it reads as an accountability coda rather than a competing production story.",
+        "Source documentation remains collapsed by default behind ‘View 4 source notes,’ preserving clarity for the general reader while keeping supporting material available."
+      ],
+      "revisionRequests": [],
+      "actualPersonParticipated": false,
+      "boundary": "This assessment uses a fictionalized Deborah Treisman lens derived from public work; it is not Deborah Treisman’s participation, approval, consent, endorsement, statement, or publication authority.",
+      "publicEvidenceState": "default-public-state"
+    }
+  ],
+  "aggregate": {
+    "verdict": "Pass",
+    "rule": "all-pass",
+    "humanFinalApprovalRequired": true
+  },
+  "hillClimb": [
+    {
+      "candidate": "operating-control-plane coda",
+      "result": "The initial exact public-only gate passed Laurel Schwulst’s and Shannon Mattern’s lenses but failed Deborah Treisman’s lens because technical and administrative language competed with the photograph-led story.",
+      "change": "Replaced production terminology with a one-sentence plain-language accountability coda and moved maintenance detail into subordinate metadata."
+    },
+    {
+      "candidate": "plain-language accountability coda",
+      "result": "All three exact-current public-only owner lenses passed.",
+      "change": "Bound the revised page source, registry, default and expanded text, and visually inspected desktop and mobile screenshots to the all-pass receipt."
+    }
+  ]
+}

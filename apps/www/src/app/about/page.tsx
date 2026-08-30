@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Claim } from "@/components/citations/Claim";
+import { References } from "@/components/citations/References";
 import { ContactCTA } from "@/components/ContactCTA";
 import { createMetadata } from "@/lib/metadata";
 
@@ -87,7 +88,7 @@ export default function AboutPage() {
                 className="font-semibold text-jb-blue hover:text-jb-green"
                 href="/lab/source-backed-team-memory"
               >
-                source-backed team memory
+                Knowledge Wiki Graphs
               </Link>
               : how can a structure help people recognize their relationships,
               participate, remember what happened, and continue the work?
@@ -102,7 +103,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="mt-8 border-y border-jb-ink/12 py-4">
-            <p className="jb-section-label">Three current systems loops</p>
+            <p className="jb-section-label">Three systems loops</p>
             <p className="mt-2 max-w-3xl leading-7 text-jb-ink/72">
               Each example follows the same movement from observed relationships
               to a working model, an interface used with people, and a documented
@@ -120,7 +121,6 @@ export default function AboutPage() {
                     Harry J. Epstein Company
                   </Link>
                 </h3>
-                <span className="jb-section-label">Current</span>
               </div>
               <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
                 <p>
@@ -143,7 +143,7 @@ export default function AboutPage() {
                   <strong className="text-jb-ink">
                     Learning and continuity:
                   </strong>{" "}
-                  recurring operational questions and bounded analytics guided
+                  recurring operational questions and carefully scoped analytics guided
                   incremental releases, reusable content patterns, and clearer
                   workflows for the team.
                 </p>
@@ -159,7 +159,6 @@ export default function AboutPage() {
                     NYC Artist Coalition and FairRentNYC
                   </Link>
                 </h3>
-                <span className="jb-section-label">Current</span>
               </div>
               <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
                 <p>
@@ -197,7 +196,6 @@ export default function AboutPage() {
                     Sunday Dinner and 196
                   </Link>
                 </h3>
-                <span className="jb-section-label">Current</span>
               </div>
               <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
                 <p>
@@ -270,14 +268,23 @@ export default function AboutPage() {
                   className="text-jb-blue hover:text-jb-green"
                   href="/lab/source-backed-team-memory"
                 >
-                  Source-backed team memory
+                  Knowledge Wiki Graphs
                 </Link>
               </h3>
               <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
+                <Claim
+                  as="p"
+                  claimId="CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026"
+                  projection="case-study"
+                  surface="/about"
+                  pageId="about"
+                  occurrenceId="knowledge-wiki-graph-method"
+                />
                 <p>
                   <strong className="text-jb-ink">Relationships:</strong>{" "}
-                  sources, claims, decisions, contributors, open questions,
-                  corrections, and the audiences who need to trust the record.
+                  semantic meaning, evidentiary support, source custody,
+                  contributors, open questions, corrections, and the audiences
+                  who need to trust the record.
                 </p>
                 <p>
                   <strong className="text-jb-ink">Interface and use:</strong>{" "}
@@ -289,13 +296,34 @@ export default function AboutPage() {
                   <strong className="text-jb-ink">
                     Learning and continuity:
                   </strong>{" "}
-                  citations, decision records, correction paths, evaluation
-                  receipts, and explicit human gates let another collaborator
-                  inspect what is known and safely continue the work.
+                  locally authoritative repositories, stable identities,
+                  citations, correction paths, evaluation receipts, and
+                  explicit human gates let another collaborator inspect what is
+                  known and safely continue the work.
                 </p>
               </div>
             </article>
           </div>
+          <aside
+            aria-labelledby="systems-comparison-limits"
+            className="mt-8 border-l-4 border-jb-ochre bg-jb-lemon/20 p-5"
+          >
+            <h3
+              className="text-lg font-semibold text-jb-ink"
+              id="systems-comparison-limits"
+            >
+              Limits of this comparison
+            </h3>
+            <p className="mt-3 leading-7 text-jb-ink/76">
+              These recurring steps are an analytical pattern, not evidence
+              that different projects are structurally equivalent. Missing
+              evidence and relationships remain missing; I do not invent them.
+              The Knowledge Wiki Graph is an evolving research practice, not a
+              finished platform, proof of client adoption, or peer-reviewed
+              research; historical implementation evidence does not by itself
+              establish present technical proficiency.
+            </p>
+          </aside>
         </section>
         <div className="mt-10 border-l-4 border-jb-blue bg-jb-warm p-5">
           <p className="leading-8 text-jb-ink/78">
@@ -305,6 +333,9 @@ export default function AboutPage() {
             work.
           </p>
         </div>
+      </div>
+      <div className="mt-12 max-w-3xl">
+        <References pageId="about" />
       </div>
       <div className="mt-12 max-w-3xl">
         <ContactCTA />

@@ -227,6 +227,7 @@ export const claimProjectionSchema = z.object({
     "resume-html",
     "technical-operations",
     "homepage",
+    "colophon",
     "photo-caption",
     "archive-note"
   ]),

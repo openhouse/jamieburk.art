@@ -1,5 +1,5 @@
 {
-  "id": "portfolio-photography-layout-v2",
+  "id": "portfolio-photography-layout-v4",
   "title": "Human Index photographic portfolio layout",
   "intent": "Photography changes the portfolio's editorial rhythm while remaining public-safe, accessible, and subordinate to human publication authority.",
   "criteria": [
@@ -11,7 +11,7 @@
     {
       "id": "governed-photographic-field",
       "blocking": true,
-      "criterion": "The launch-candidate layout uses exactly five fully bound, credited, Jamie-authorized photographs: the unchanged East River hero, the Shoestring Press and Market Hotel sequence, the Sunday Dinner cover, and the KC Town Hall cover; unresolved archive images remain outside the public bundle."
+      "criterion": "The launch-candidate public field uses exactly eight fully governed, credited, Jamie-authorized photographic derivatives: the unchanged East River hero, the Shoestring Press and Market Hotel sequence, the Sunday Dinner cover, the KC Town Hall roof-work cover, the Tired of Tires before-and-after pair, and the collective working-map image on the Knowledge Wiki Graphs method page; unresolved archive images remain outside the public bundle."
     },
     {
       "id": "metadata-and-locator-safety",
@@ -21,27 +21,47 @@
     {
       "id": "editorial-not-decorative",
       "blocking": true,
-      "criterion": "The home photograph remains full-bleed and unchanged; the work index gives all six projects one truthful visual threshold by composing governed situated-work photographs with project-specific public screenshots; the Fair Rent NYC sequence retains its campaign screenshot, captions, credits, and interpretation boundaries; About and Colophon remain text-led."
+      "criterion": "The home photograph remains full-bleed and unchanged; the work index gives all seven projects one truthful visual threshold by composing governed situated-work photographs with project-specific public screenshots; the Fair Rent NYC sequence retains its campaign screenshot, captions, credits, and interpretation boundaries; About remains text-led; and the Colophon may reuse only the manifest-bound East River photograph through its separately authorized occurrence."
+    },
+    {
+      "id": "screen-room-continuity",
+      "blocking": true,
+      "criterion": "Between the homepage capability index and selected projects, one concise field-and-system pair joins the governed Shoestring Press facilitation occurrence to the matching FairRentNYC public surface. The bridge sends a rushed hiring reader directly to role-fit evidence and retains project credit, public links, and limits without changing the reviewed hero, claims, or project order."
     },
     {
       "id": "truthful-project-cover-field",
       "blocking": true,
-      "criterion": "Every work item has exactly one project-bound cover. Harry J. Epstein, CallNYC, and WOW List use their own public surfaces; Fair Rent NYC, Sunday Dinner, and KC Town Hall use governed photographs. Resume, contact, About, and Colophon remain deliberately text-led."
+      "criterion": "Every work item has exactly one project-bound cover. Harry J. Epstein, CallNYC, KC Spaces Fund, and WOW List use their own public surfaces; Fair Rent NYC, Sunday Dinner, and KC Town Hall use governed photographs. Resume, contact, and About remain deliberately text-led; the Colophon uses one governed photograph as the object of its editorial account."
+    },
+    {
+      "id": "browser-window-presentation",
+      "blocking": true,
+      "criterion": "The CallNYC launch screenshot uses the exact alpha-bearing PNG from the original press kit in every portfolio rendering. Its browser chrome and transparent drop-shadow surround meet the portfolio's white field through one shared, manifest-declared presentation. Transparency-flattening transcodes and synthetic dark wells are prohibited."
+    },
+    {
+      "id": "homepage-hiring-sequence",
+      "blocking": true,
+      "criterion": "The homepage presents exactly six featured proofs in the approved hiring order: long-term Harry J. Epstein commercial systems stewardship, current NYC Artist Coalition civic operations, resident-facing CallNYC product translation, KC Town Hall municipal and field implementation, WOW List platform thinking, then Sunday Dinner participation infrastructure. Sunday Dinner is a required homepage proof. KC Spaces Fund remains available in the complete work index. The quick path mirrors the first three proofs and keeps the resume one action away."
     },
     {
       "id": "tag-navigation-contract",
       "blocking": true,
-      "criterion": "Every tag-shaped control is a keyboard-reachable link to a visible filtered work-index state, and the filtered state has a clear route back to the complete index."
+      "criterion": "Every tag-shaped control and every homepage capability row is a keyboard-reachable link to a visible filtered work-index state, and the filtered state has a clear route back to the complete index."
     },
     {
       "id": "human-index-material-system",
       "blocking": true,
-      "criterion": "The Human Index palette is active and gradients, decorative orbs, and bokeh are absent."
+      "criterion": "The Human Index palette is active and decorative gradients, orbs, and bokeh are absent. The social preview may use only its declared functional contrast field for text legibility over the governed photograph."
     },
     {
       "id": "responsive-image-contract",
       "blocking": true,
-      "criterion": "Images use Next Image, explicit intrinsic dimensions or fill, stable aspect ratios, responsive sizes, and a viewport-bounded hero."
+      "criterion": "Images retain a Next Image local fallback, explicit intrinsic dimensions or fill, stable aspect ratios, responsive sizes, and a viewport-sized hero. Only the exact governed Cloudinary pilot assets may bypass Next optimization through a limited responsive srcset."
+    },
+    {
+      "id": "social-preview-contract",
+      "blocking": true,
+      "criterion": "Open Graph and Twitter metadata share one governed preview contract with the rendered 1200 by 630 image. The selected Human Index editorial score carries Jamie's name, proposition, and quiet site label exactly once; role and creator attribution remain metadata-only. The photograph stays full-bleed, the functional contrast field serves legibility without becoming decoration, and production/indexing require a dated exact-render human decision."
     },
     {
       "id": "human-authority-remains-open",

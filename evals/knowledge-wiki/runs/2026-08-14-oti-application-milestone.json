@@ -1,0 +1,69 @@
+{
+  "id": "oti-application-milestone-2026-08-14",
+  "schemaVersion": 1,
+  "candidateCommit": "23f0f6b9f9db6ee60d12c9a09ea916b82b003bae",
+  "candidateBranch": "feature/2026-08-14-B",
+  "baseCommit": "a8fdd57617c3667ac4d9db7d28f57e9022c11a81",
+  "evaluatedAt": "2026-08-14",
+  "actualPeopleParticipated": false,
+  "submissionActionPerformedBy": "Jamie Burkart",
+  "confirmationArtifactCommitted": false,
+  "objective": "Document the submitted OTI application as a governed, public-safe lifecycle milestone with a pending outcome and reusable next-stage operating loop.",
+  "baseline": {
+    "passedChecks": 2,
+    "totalChecks": 9,
+    "overall": "fail",
+    "failureModes": [
+      "No canonical application milestone node existed.",
+      "The opportunity and employment index had no submission-state connection.",
+      "The confirmation privacy boundary and employer-controlled outcome boundary were not encoded.",
+      "No reusable post-submission learning or next-stage operating loop was present."
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "change": "Added the application node, opportunity and index links, privacy and outcome boundaries, resume-eval lifecycle link, and next-stage operating loop.",
+      "passedChecks": 8,
+      "totalChecks": 9,
+      "overall": "fail",
+      "remainingFailure": "The employment-index check did not tolerate ordinary Markdown paragraph wrapping."
+    },
+    {
+      "iteration": 2,
+      "change": "Made the employment-index evaluator whitespace-tolerant without relaxing its confirmation-privacy requirement.",
+      "passedChecks": 9,
+      "totalChecks": 9,
+      "overall": "pass"
+    }
+  ],
+  "finalResult": {
+    "passedChecks": 9,
+    "totalChecks": 9,
+    "overall": "pass",
+    "graph": {
+      "records": 446,
+      "semanticAndEvidenceEdges": 1605,
+      "proseLinks": 503,
+      "typeAwareOrphans": 0
+    }
+  },
+  "mutationControls": [
+    {
+      "id": "reject-outcome-inflation",
+      "mutation": "Replace pending outcome with offer.",
+      "expected": "fail",
+      "observed": "fail",
+      "pass": true
+    },
+    {
+      "id": "reject-confirmation-leakage",
+      "mutation": "Append a confirmation screenshot path.",
+      "expected": "fail",
+      "observed": "fail",
+      "pass": true
+    }
+  ],
+  "overall": "pass",
+  "boundary": "This deterministic pass establishes record structure, privacy controls, and next-action coverage. It is not participation by a named hiring reader and does not establish civil-service eligibility, an interview, an offer, appointment, endorsement, or success in role."
+}

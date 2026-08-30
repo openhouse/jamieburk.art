@@ -49,6 +49,7 @@ export type Artifact = {
     href: string;
     sourceLabel: string;
     fit?: "cover" | "contain";
+    presentation?: "browser-window";
   };
 };
 

@@ -5,8 +5,8 @@ kind: asset
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-14
-review_by: 2027-02-14
+last_reviewed: 2026-08-20
+review_by: 2027-02-20
 canonical_path: docs/knowledge-bank/assets/photographs/kc-town-hall-tired-of-tires-after-2022.md
 summary: Public-safe record for the matched field frame showing the same curbside collection site after tire removal.
 media_type: photograph
@@ -38,7 +38,14 @@ statements:
       - source.kc-town-hall.tired-of-tires.design-field-archive.2019-2022
   - id: statement.photo.kc-town-hall.tired-of-tires-archive-credit.v1
     property: archive_custody
-    value: KC Town Hall project archive; photographer not identified in the retained export.
+    value: KC Town Hall project archive; individual photographer unresolved.
+    rank: preferred
+    confidence: high
+    references:
+      - source.kc-town-hall.tired-of-tires.design-field-archive.2019-2022
+  - id: statement.photo.kc-town-hall.tired-of-tires-after.courtesy-credit.v1
+    property: display_credit
+    value: Photo courtesy of KC Town Hall.
     rank: preferred
     confidence: high
     references:

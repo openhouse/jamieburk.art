@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "evalId": "colophon-page-owner-editorial-acceptance",
+  "pageId": "colophon",
+  "route": "/colophon",
+  "pageSourcePath": "apps/www/src/app/colophon/page.tsx",
+  "publicAssetRecordPath": "apps/www/src/data/photography.ts",
+  "registryPath": "apps/www/src/data/page-owner-registry.json",
+  "currentRunPath": "evals/page-owners/runs/2026-08-29-colophon-page-owners.json",
+  "publicPacket": {
+    "renderedTextPath": "docs/qa/page-owners/colophon-public-page.txt",
+    "defaultRenderedTextPath": "docs/qa/page-owners/colophon-public-page-default.txt",
+    "desktopScreenshotPath": "docs/qa/page-owners/colophon-desktop.jpg",
+    "mobileScreenshotPath": "docs/qa/page-owners/colophon-mobile.jpg"
+  },
+  "ownerEvidenceStates": {
+    "laurel-schwulst": "expanded-public-interaction",
+    "shannon-mattern": "expanded-public-interaction",
+    "deborah-treisman": "default-public-state"
+  },
+  "deterministicStages": [
+    "registry-and-route-contract",
+    "public-boundary-contract",
+    "page-purpose-and-signal-coverage",
+    "public-packet-materialization",
+    "independent-owner-evaluations"
+  ],
+  "modelGate": {
+    "promptVersion": "colophon-page-owner-v1",
+    "publicOnly": true,
+    "repositoryAvailableToModel": false,
+    "actualPeopleParticipated": false,
+    "maximumCallsPerOwner": 1,
+    "requiredVerdict": "Pass",
+    "aggregateRule": "all-pass",
+    "humanMeaning": "A modeled Pass is editorial feedback only. It is not participation, consent, factual certification, endorsement, publication authority, or deployment approval. Jamie Burkart remains the publication owner."
+  },
+  "ownerOrder": [
+    "laurel-schwulst",
+    "shannon-mattern",
+    "deborah-treisman"
+  ],
+  "requiredPublicSignals": [
+    "This portfolio is edited from a growing body of project evidence.",
+    "Its purpose is to make each public claim as clear, useful, and accountable as the evidence allows.",
+    "This East River portrait opens the portfolio because it introduces Jamie and locates him in the city where much of the work took shape.",
+    "The caption makes a precise public claim: where the photograph was made, when, who made it, and where the record is held.",
+    "Jamie publishes only after the caption, credit, privacy, and use are resolved. Otherwise the image stays private; if the record changes, Jamie revises or removes it.",
+    "The Knowledge Wiki Graph connects each public claim to evidence and keeps source coverage, status, correction, and human authority visible enough to review. Jamie decides what appears here and revises it when the record changes.",
+    "Automated checks flag issues; Jamie decides what is published.",
+    "Made and maintained by Jamie Burkart. Last revised 29 August 2026.",
+    "Tools and modeled reviewers may suggest changes, but they do not supply consent, rights, approval, endorsement, or publication authority. Jamie decides what appears here. He checks suggested corrections against the record and notes accepted changes here."
+  ],
+  "requiredAssetSignals": [
+    "projection.photo.colophon.east-river",
+    "placements: [\"home\", \"colophon\"]",
+    "Use is limited to the approved home-page and colophon occurrences"
+  ]
+}

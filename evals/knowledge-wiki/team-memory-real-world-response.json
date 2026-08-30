@@ -1,0 +1,37 @@
+{
+  "id": "team-memory-real-world-response-2026-08-22",
+  "schemaVersion": 1,
+  "responseStatePath": "docs/knowledge-bank/data/team-memory-real-world-response-2026-08-22.json",
+  "sourceRecordId": "SRC-TEAM-MEMORY-REAL-WORLD-RESPONSE-2026-08-22",
+  "evaluationType": "deterministic-state-boundary",
+  "modelCallsAllowed": 0,
+  "acceptanceMeaning": "The real-world response is recorded as warm re-engagement and an invitation to converse, while every unobserved professional, editorial, and commercial signal remains explicitly not established.",
+  "requiredObservedStates": {
+    "outreachDelivered": "observed",
+    "warmAcknowledgment": "observed",
+    "futureConversation": "invited"
+  },
+  "requiredUnknownStates": {
+    "linkOpened": "not-established",
+    "pageReviewed": "not-established",
+    "proposalUnderstood": "not-established",
+    "endorsement": "not-established",
+    "budgetAuthority": "not-established",
+    "hiringInterest": "not-established",
+    "commercialAcceptance": "not-established"
+  },
+  "requiredDisposition": {
+    "publicProjection": "hold",
+    "modelEvalEffect": "none",
+    "recommendedNextAction": "human-conversation",
+    "privateContextRetention": "excluded"
+  },
+  "hardGates": [
+    "protected-source-minimization",
+    "positive-signal-separation",
+    "no-endorsement-inference",
+    "no-hiring-inference",
+    "no-gate-substitution",
+    "human-conversation-next"
+  ]
+}

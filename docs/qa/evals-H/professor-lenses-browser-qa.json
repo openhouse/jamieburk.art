@@ -1,11 +1,11 @@
 {
-  "reportVersion": 3,
-  "checkedAt": "2026-08-12T16:36:46.428Z",
-  "baseUrl": "http://127.0.0.1:3057",
-  "publicSurfaceFingerprint": "eef497de543aab662bdfb7d838c23d18060d76ce456ed1867e6ef14e5878eeda",
+  "reportVersion": 8,
+  "checkedAt": "2026-08-30T00:40:41.761Z",
+  "baseUrl": "http://127.0.0.1:3196",
+  "publicSurfaceFingerprint": "5f021eda5a06079aca0d21349f2e912c703698d5b4bc7262f48408a430d6b8f2",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 118,
-  "captureMethod": "Playwright Chromium screenshots of the current built local candidate; About captures are deliberately framed on the through-line and current systems loops; no deployment or indexing action.",
+  "publicSurfaceFileCount": 153,
+  "captureMethod": "Fresh 152.0.7977.65 viewport captures through Playwright against the current local production build, paired with the complete 60-row responsive accessibility matrix.",
   "routes": [
     {
       "path": "/",
@@ -13,6 +13,7 @@
       "h1Count": 1,
       "screenshots": [
         {
+          "route": "/",
           "name": "desktop",
           "requestedViewport": {
             "width": 1280,
@@ -20,10 +21,12 @@
           },
           "pixelWidth": 1280,
           "pixelHeight": 900,
-          "sha256": "7ff02c019578cce0298caf900c7b880e3d9ffc2e0e97dd15c789ad85dbcd8b80",
+          "httpStatus": 200,
+          "sha256": "ed2ed1cab0fd460c88e17baf0c0df9755dccf7d65d3c61534e5f9c10558c24d0",
           "file": "candidate-home-desktop.png"
         },
         {
+          "route": "/",
           "name": "mobile",
           "requestedViewport": {
             "width": 375,
@@ -31,7 +34,8 @@
           },
           "pixelWidth": 375,
           "pixelHeight": 812,
-          "sha256": "a3233b7565d0417ded117b0b2cfd5d504bbee270ae408026853739b8008a3ef1",
+          "httpStatus": 200,
+          "sha256": "7afa0d1b72e771a0c5e0bcbc8dec534043cf9c337a3e54733abaa968d2b5b02e",
           "file": "candidate-home-viewport.png"
         }
       ]
@@ -42,6 +46,7 @@
       "h1Count": 1,
       "screenshots": [
         {
+          "route": "/about",
           "name": "desktop-through-line",
           "requestedViewport": {
             "width": 1280,
@@ -49,15 +54,16 @@
           },
           "pixelWidth": 1280,
           "pixelHeight": 900,
-          "sha256": "74724ed4278bab16ea13080ce969dc115054c5f0c8863c159b1623d10a246ac1",
+          "httpStatus": 200,
+          "sha256": "5668cf43ce1ea4777b17a5e5a28315d2677bfbe108594cb7224f839fd5c488d7",
           "file": "professor-lenses-about-desktop.png",
           "framedContent": {
-            "throughLineHeadingPresent": true,
-            "currentSystemsLabelPresent": true,
+            "systemsPeopleCanInhabitHeadingPresent": true,
             "currentPracticeDocumented": true
           }
         },
         {
+          "route": "/about",
           "name": "mobile-through-line",
           "requestedViewport": {
             "width": 375,
@@ -65,11 +71,11 @@
           },
           "pixelWidth": 375,
           "pixelHeight": 1200,
-          "sha256": "413e2f7911f5ee140209fb952eaf64061c00a63970556bc5d782e2ec677f4729",
+          "httpStatus": 200,
+          "sha256": "a18b3155cb42b4a16bee9884c98d9717ef5ee24f702771896b5a87a58c3ba754",
           "file": "professor-lenses-about-mobile.png",
           "framedContent": {
-            "throughLineHeadingPresent": true,
-            "currentSystemsLabelPresent": true,
+            "systemsPeopleCanInhabitHeadingPresent": true,
             "currentPracticeDocumented": true
           }
         }
@@ -77,5 +83,12 @@
     }
   ],
   "passed": true,
-  "verification": "Fresh Playwright viewport captures from the exact local production build; screenshots retained and content-addressed in this directory."
+  "verification": "Fresh desktop and mobile captures show the role-led homepage and public About-page systems lineage without visual failure; the complete route matrix separately exercises every public route.",
+  "refresh": {
+    "candidateChange": "The source-backed team-memory page and method now expose the Knowledge Operations control plane, including source coverage, state distinctions, health checks, abstention, and human authority.",
+    "productionBuild": "These viewport captures were taken from the local production server; build and typecheck results are recorded separately.",
+    "currentRenderedInspection": "The exact desktop and mobile homepage and About captures were freshly produced after the control-plane integration.",
+    "responsiveRun": "All 60 route-width combinations were freshly checked at 360, 375, 768, and 1280 CSS pixels.",
+    "browserDiagnostics": "Google Chrome completed capture, keyboard, mobile-navigation, reflow, and semantic-reading-order checks without a browser-process failure."
+  }
 }

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-08-22",
+  "sourceRecordId": "SRC-TEAM-MEMORY-REAL-WORLD-RESPONSE-2026-08-22",
+  "state": {
+    "outreachDelivered": "observed",
+    "warmAcknowledgment": "observed",
+    "futureConversation": "invited",
+    "linkOpened": "not-established",
+    "pageReviewed": "not-established",
+    "proposalUnderstood": "not-established",
+    "endorsement": "not-established",
+    "budgetAuthority": "not-established",
+    "hiringInterest": "not-established",
+    "commercialAcceptance": "not-established"
+  },
+  "disposition": {
+    "publicProjection": "hold",
+    "modelEvalEffect": "none",
+    "recommendedNextAction": "human-conversation",
+    "privateContextRetention": "excluded"
+  },
+  "boundaries": [
+    "The governed record contains no message text, personal circumstances, contact information, screenshot, or identifying private-source metadata.",
+    "A positive relationship signal cannot clear a page-owner, collaborator-review, hiring-reader, commercial-acceptance, or publication gate.",
+    "Future evaluation may change only after a separately observed event supplies the missing evidence."
+  ]
+}

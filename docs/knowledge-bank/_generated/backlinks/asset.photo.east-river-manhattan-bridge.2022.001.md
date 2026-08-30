@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to East River beneath the Manhattan Bridge, 2022
 
-**Source commit:** `747605e3c34a6426c027a1c85ff82c3a6275ac36`
-**Generation time:** 2026-08-14T11:32:41-04:00
-**Source fingerprint:** `e4fc52c24bbf54e2f4cd03c7f545b8eb1d0af9c4a3ed28af19991b37897fcb60`
+**Source commit:** `edf7bddcddc258c46c7bd2e46f44aeab27bb0303`
+**Generation time:** 2026-08-29T21:03:46-04:00
+**Source fingerprint:** `894841552d7d88d4f3263c09ffe3ef539d2e6b5f9a3066da564ec60ecd512bbf`
 
 - [Add Elana Gordon's credit to the East River homepage occurrence](../../corrections/east-river-credit-2026-07.md) - `related_to` (frontmatter)
 - [Layout C homepage East River curatorial proposal](../../evaluations/curatorial/layout-c-home-east-river-v1.md) - `related_to` (frontmatter)
@@ -13,6 +13,9 @@
 - [East River photographic knowledge-loop tutorial](../../workflows/photography-east-river-canary.md) - `prose_link` (markdown)
 - [East River photographic knowledge-loop tutorial](../../workflows/photography-east-river-canary.md) - `related_to` (frontmatter)
 - [Elana Gordon](../../people/elana-gordon.md) - `related_to` (frontmatter)
+- [Colophon East River editorial-path occurrence](../../projections/photography/colophon-east-river.md) - `uses_source` (frontmatter)
 - [Layout C homepage East River occurrence](../../projections/photography/layout-c-home-east-river.md) - `uses_source` (frontmatter)
+- [East River social-preview occurrence](../../projections/photography/social-preview-east-river.md) - `uses_source` (frontmatter)
 - [Elana Gordon East River portfolio permission summary](../../sources/permissions/elana-gordon-east-river-portfolio-2026.md) - `related_to` (frontmatter)
+- [Jamie Burkart portfolio-album publication authorization](../../sources/permissions/jamie-portfolio-album-2026-08-13.md) - `related_to` (frontmatter)
 - [East River photograph public-safe metadata summary](../../sources/photo-metadata/east-river-2022-public-safe.md) - `related_to` (frontmatter)

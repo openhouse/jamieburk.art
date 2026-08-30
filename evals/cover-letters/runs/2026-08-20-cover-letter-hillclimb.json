@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "evalId": "cover-letter-hillclimb-2026-08-20",
+  "evaluatedAt": "2026-08-20T12:32:00-04:00",
+  "targetOpportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+  "targetCriterion": "narrative-specificity-and-durable-ending",
+  "baseline": {
+    "runPath": "evals/cover-letters/runs/2026-08-20-cover-letter-hiring-reader-baseline.json",
+    "coverLetterSha256": "0e4269b0f173f2cda4e6ea0b77665221ea6b4c261a9d836362af5aa03903d6b4",
+    "passingApplicationVerdicts": 2,
+    "passingVoiceVerdicts": 2,
+    "sharedWeakness": "Both reader simulations found that the middle paragraph repeated resume-like lifecycle language, and that the close foregrounded the proposed exercise more strongly than the durable resident possibility."
+  },
+  "boundedChange": {
+    "artifactPath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Cover-Letter-NYC-OTI-Senior-Product-Manager-782366.md",
+    "description": "Replaced broad lifecycle inventory with CallNYC's supported version-one and official-service boundary; added the resident's clearer next step and the partner agency's continued learning as the final durable possibility.",
+    "claimScopeChanged": false,
+    "newEvidenceIntroduced": false
+  },
+  "postHillclimb": {
+    "runPath": "evals/cover-letters/runs/2026-08-20-cover-letter-hiring-reader-post-hillclimb.json",
+    "coverLetterSha256": "9c2532201a7fb286d34566ff24d14ed890b9f00ca5c7912ef6bedcdd5bcbe8e9",
+    "passingApplicationVerdicts": 2,
+    "passingVoiceVerdicts": 2,
+    "observedImprovement": [
+      "The Luke Farrell lens recognized the CallNYC opening as a concrete product decision and the ending as agency learning, improvement, and continued ownership.",
+      "The Lisa Gelobter lens recognized deliberate version-one boundaries as product judgment and called the resident's clearer next step the letter's strongest governing image."
+    ],
+    "hardGatesPreserved": [
+      "truthful scope",
+      "collective credit",
+      "unofficial City-service boundary",
+      "writer-voice fidelity",
+      "expired-opportunity safety",
+      "named-reader fictionalization boundary",
+      "model-call budget"
+    ]
+  },
+  "formatHygieneFollowup": {
+    "reason": "Removed Markdown hard-break trailing spaces to satisfy pull-request diff hygiene.",
+    "previousCoverLetterSha256": "afe9b08b14dfd997f6939b0ee1705049073857b10c8428adf9c18f52fe61f120",
+    "currentCoverLetterSha256": "9c2532201a7fb286d34566ff24d14ed890b9f00ca5c7912ef6bedcdd5bcbe8e9",
+    "proseChanged": false,
+    "reevaluatedAt": "2026-08-20T13:42:01-04:00",
+    "passingApplicationVerdicts": 2,
+    "passingVoiceVerdicts": 2
+  },
+  "publicLanguageFollowup": {
+    "reason": "Replaced the internal-sounding public adjective with a more direct description of deliberate version-one scope.",
+    "previousCoverLetterSha256": "9c2532201a7fb286d34566ff24d14ed890b9f00ca5c7912ef6bedcdd5bcbe8e9",
+    "currentCoverLetterSha256": "774552d20cfdbf5703ae45ecc53269d365247270048517ca35d482b1326ebaf9",
+    "runPath": "evals/cover-letters/runs/2026-08-20-cover-letter-hiring-reader-public-language.json",
+    "proseChanged": true,
+    "claimScopeChanged": false,
+    "newEvidenceIntroduced": false,
+    "reevaluatedAt": "2026-08-20T14:01:25-04:00",
+    "passingApplicationVerdicts": 2,
+    "passingVoiceVerdicts": 2
+  },
+  "decision": "keep-change",
+  "stopReason": "The remaining critiques ask for new evidence about measured outcomes, resident research, institutional team scale, decision authority, and civil-service eligibility. Those are interview and research gaps; adding unsupported prose would weaken the application."
+}

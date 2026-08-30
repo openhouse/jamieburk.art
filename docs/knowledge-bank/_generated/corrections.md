@@ -1,9 +1,11 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Corrections
 
-**Source commit:** `747605e3c34a6426c027a1c85ff82c3a6275ac36`
-**Generation time:** 2026-08-14T11:32:41-04:00
-**Source fingerprint:** `e4fc52c24bbf54e2f4cd03c7f545b8eb1d0af9c4a3ed28af19991b37897fcb60`
+**Source commit:** `edf7bddcddc258c46c7bd2e46f44aeab27bb0303`
+**Generation time:** 2026-08-29T21:03:46-04:00
+**Source fingerprint:** `894841552d7d88d4f3263c09ffe3ef539d2e6b5f9a3066da564ec60ecd512bbf`
 
 - [CallNYC chronology correction](../corrections/callnyc-years-2026.md) - `resolved`
 - [Add Elana Gordon's credit to the East River homepage occurrence](../corrections/east-river-credit-2026-07.md) - `not-requested`
+- [Harry J. Epstein Company and Thick Arts LLC client chronology correction](../corrections/hje-thick-arts-client-chronology-2026.md) - `resolved`
+- [Correct project photograph display credits](../corrections/project-photo-courtesy-credits-2026-08-20.md) - `not-requested`

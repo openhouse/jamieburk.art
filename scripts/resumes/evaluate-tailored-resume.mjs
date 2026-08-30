@@ -11,6 +11,7 @@ const rubricPath = path.join(
 const rubric = JSON.parse(readFileSync(rubricPath, "utf8"));
 const politicoArticleUrl =
   "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf";
+const harryJEpsteinMarkdownLink = /\[Harry J\. Epstein Company\]\([^)]+\)/;
 
 export function evaluateResume(resumeText, sourcePath = rubric.resumePath) {
   const normalized = resumeText.replace(/\r\n/g, "\n");
@@ -150,14 +151,22 @@ export function evaluateResume(resumeText, sourcePath = rubric.resumePath) {
       detail: "Links the contemporaneous Politico article directly and keeps the KC Town Hall transition concise."
     },
     {
+      id: "hje-name-not-linked",
+      pass: !harryJEpsteinMarkdownLink.test(normalized),
+      detail: "Keeps Harry J. Epstein Company as plain resume text rather than a hyperlink."
+    },
+    {
       id: "collective-credit-and-claim-safety",
       pass:
         /Richard Caceres/i.test(plainText) &&
         /collective credit/i.test(plainText) &&
         /later transitioned the project to a mission-aligned organization/i.test(plainText) &&
-        /distinguish these activity counts/i.test(plainText) &&
+        /across 35 city ecosystems/i.test(plainText) &&
+        /local organizers/i.test(plainText) &&
+        /community calendars, websites, and email lists/i.test(plainText) &&
+        !/1,846\s+users|16,142\s+posts(?:\/events)?|distinguish these activity counts|city-region keys/i.test(plainText) &&
         !/(?:guaranteed|solely created|single-handedly|caused 2x|WCAG compliant|Section 508 compliant)/i.test(plainText),
-      detail: "Preserves co-builder credit, metric boundaries, the project transition, and anti-overclaim language."
+      detail: "Preserves co-builder credit and the project transition while making the 35-city organizer ecosystem legible without public raw counts or defensive clauses."
     }
   ];
 
@@ -184,10 +193,8 @@ function sha256(bytes) {
 export function evaluateDocumentArtifact(root = repoRoot) {
   const config = rubric.documentArtifact;
   const pdfPath = path.join(root, config.pdfPath);
-  const publicPdfPath = path.join(root, config.publicPdfPath);
   const inspectionPath = path.join(root, config.visualInspectionRunPath);
   const pdf = existsSync(pdfPath) ? readFileSync(pdfPath) : null;
-  const publicPdf = existsSync(publicPdfPath) ? readFileSync(publicPdfPath) : null;
   const inspection = existsSync(inspectionPath)
     ? JSON.parse(readFileSync(inspectionPath, "utf8"))
     : null;
@@ -223,9 +230,9 @@ export function evaluateDocumentArtifact(root = repoRoot) {
       detail: `${config.requiredLinkTargets.filter((target) => pdfText.includes(target)).length}/${config.requiredLinkTargets.length} required links embedded.`
     },
     {
-      id: "public-download-matches-tailored-pdf",
-      pass: pdf !== null && publicPdf !== null && pdf.equals(publicPdf),
-      detail: "The portfolio download is byte-identical to the application-tailored PDF."
+      id: "forbidden-link-annotations",
+      pass: config.forbiddenLinkTargets.every((target) => !pdfText.includes(target)),
+      detail: `${config.forbiddenLinkTargets.filter((target) => !pdfText.includes(target)).length}/${config.forbiddenLinkTargets.length} excluded links absent.`
     },
     {
       id: "visual-inspection-current",
@@ -257,7 +264,6 @@ export function evaluateDocumentArtifact(root = repoRoot) {
     schemaVersion: 1,
     rubricId: `${rubric.id}.document-artifact`,
     pdfPath: config.pdfPath,
-    publicPdfPath: config.publicPdfPath,
     sha256: pdfHash,
     passedChecks: checks.filter((check) => check.pass).length,
     totalChecks: checks.length,

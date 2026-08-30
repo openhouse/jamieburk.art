@@ -104,6 +104,10 @@ that an agent, test, or informal participant has human decision authority.
 | [0004](./0004-jamie-burkart-sourcebook-and-knowledge-ecosystem.md) | Jamie Burkart Sourcebook and Federated Knowledge Ecosystem | `implementing` | Jamie Burkart |
 | [0005](./0005-three-layer-knowledge-graph.md) | Three-Layer Knowledge Graph and Governed Source Materialization | `exploring` | Jamie Burkart |
 | [0006](./0006-federated-knowledge-exchange-and-release-receipts.md) | Federated Knowledge Exchange and Candidate-Bound Release Receipts | `proposed` | Jamie Burkart |
+| [0007](./0007-nyc-jobs-opportunity-monitor-and-digest.md) | NYC Jobs Opportunity Monitor and Hiring Action Digest | `proposed` | Jamie Burkart |
+| [0008](./0008-editorial-page-owner-pilot.md) | Editorial Page-Owner Pilot | `proposed` | Jamie Burkart |
+| [0009](./0009-wiki-form-for-shared-agentic-memory.md) | Wiki Form for Shared Agentic Memory | `exploring` | Jamie Burkart |
+| [0010](./0010-knowledge-wiki-operating-control-plane.md) | Knowledge Wiki Operating Control Plane | `exploring` | Jamie Burkart |
 
 ## Validation
 
