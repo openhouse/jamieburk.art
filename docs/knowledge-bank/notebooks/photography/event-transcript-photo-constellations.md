@@ -5,8 +5,8 @@ kind: research-inquiry
 status: governed-open
 visibility: public-safe
 sensitivity: moderate
-last_reviewed: 2026-07-28
-review_by: 2026-08-28
+last_reviewed: 2026-08-29
+review_by: 2026-09-29
 canonical_path: docs/knowledge-bank/notebooks/photography/event-transcript-photo-constellations.md
 summary: >
   Private-first method for reconnecting event transcripts, simultaneous
@@ -17,6 +17,10 @@ projection:
   status: hold
   surfaces: []
 relations:
+  - type: related_to
+    target: event.nyc.dcla.brooklyn-listening.2026-08-26
+    href: ../../events/dcla-brooklyn-listening-2026-08-26.md
+    context: Full transcript reading and approved supplied portraits are linked while the exact Apple Photos association remains unverified.
   - type: related_to
     target: index.knowledge-wiki.photography-notebook
     href: README.md
@@ -36,6 +40,16 @@ relations:
 ---
 
 # Event transcript and photograph constellations
+
+## August 2026 application
+
+The [Brooklyn DCLA listening-session reading](../../events/dcla-brooklyn-listening-2026-08-26.md)
+keeps the event, eight atomic observations, approved portrait family, private
+transcript editions, and subsequent body-free correspondence state distinct.
+Permission is already granted for the supplied photograph; an unresolved exact
+library association must not be misreported as either a verified match or a
+missing permission. Comparing two repaired transcripts revealed a meaningful
+difference, demonstrating why repair labels alone cannot certify quotations.
 
 ## The archival clue
 

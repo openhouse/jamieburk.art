@@ -1,12 +1,19 @@
 #!/usr/bin/env node
 
 import { evaluateKnowledgeBank, loadKnowledgeEvalSuite } from "./lib/knowledge-evals.mjs";
+import { evaluateDclaIntake, loadDclaIntake } from "./knowledge-wiki/dcla-listening-session-eval.mjs";
 import {
   evaluate as evaluateProfessionalRecord,
   loadCandidate as loadProfessionalRecordCandidate
 } from "./knowledge-wiki/public-record-source-edition-eval.mjs";
 
 const suite = loadKnowledgeEvalSuite();
+const dclaResult = evaluateDclaIntake(loadDclaIntake());
+if (!dclaResult.passed) {
+  console.error("DCLA intake eval failed:", dclaResult.failures.join(", "));
+  process.exit(1);
+}
+console.log(`DCLA intake eval passed: ${dclaResult.checks.length} deterministic gates; no model calls.`);
 const result = evaluateKnowledgeBank(suite);
 
 if (!result.accepted) {
