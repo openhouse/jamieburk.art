@@ -10,6 +10,10 @@ review_by: 2026-10-19
 canonical_path: docs/knowledge-bank/projects/nyc-artist-coalition-2017.md
 summary: A collectively credited civic participation and campaign system connecting cultural-space listening, public action, technical implementation, and government-facing advocacy.
 relations:
+  - type: related_to
+    target: research.nycac.dcla-listening-session.2026-08-29
+    href: ../sources/dcla-listening-session-2026-08-26.md
+    context: New August 2026 portrait clearance and follow-up intake; full repaired transcript reading remains open.
   - type: informed_by
     target: research.nycac.shared-folder.2026-07-19
     href: ../research-runs/nycac-shared-folder-2026-07-19.md
@@ -265,6 +269,7 @@ improving the current page enough to justify the added reader burden:
 
 ## Open research
 
+- the [August 2026 DCLA listening-session intake](../sources/dcla-listening-session-2026-08-26.md), which records two cleared portrait candidates and follow-up states while keeping the full repaired transcript reading open;
 - collaborator proof for finer policy, copy, data, image, and design
   attribution within the repository-backed campaign implementations;
 - the complete coalition formation and division-of-labor chronology;
