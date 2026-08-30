@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to NYC Artist Coalition
 
-**Source commit:** `851db33bd8a2b3ddd64ff9d3c4319487ef8750c4`
-**Generation time:** 2026-08-29T19:03:16-04:00
-**Source fingerprint:** `f1bac5ff741f8b21c67b418b61b8939194d8dc1c6f712a261492b6769d3f7a66`
+**Source commit:** `ff210bc311283b69fa9e5774548992d58571ebef`
+**Generation time:** 2026-08-29T22:14:14-04:00
+**Source fingerprint:** `b2b514b9abf238fa282f99ecad92685aeb5b5eba46e79d4d0dd6da8beaf69291`
 
 - [NYC Artist Coalition application brief](../../applications/nycac-civic-product-operations.md) - `part_of` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `related_to` (frontmatter)
@@ -202,6 +202,8 @@
 - [Sunday Dinner, WOW List, and NYC Artist Coalition Synergy](../../methods/sunday-dinner-wowlist-nycac-synergy.md) - `related_to` (frontmatter)
 - [NYC Artist Coalition organization map](../../organizations/nyc-artist-coalition.md) - `related_to` (frontmatter)
 - [Let NYC Dance](../../projects/let-nyc-dance.md) - `related_to` (frontmatter)
+- [DCLA listening-session portraits and follow-through intake](../../sources/dcla-listening-session-2026-08-26.md) - `prose_link` (markdown)
+- [DCLA listening-session portraits and follow-through intake](../../sources/dcla-listening-session-2026-08-26.md) - `related_to` (frontmatter)
 - [NYC Artist Coalition shared-folder archival production](../../research-runs/nycac-shared-folder-2026-07-19.md) - `documents` (frontmatter)
 - [NYC Council field-kit photograph oral history, July 2026](../../sources/recollections/nyc-council-field-kit-oral-history-2026-07.md) - `related_to` (frontmatter)
 - [NYC Artist Coalition DCLA formation source return, 2026](../../sources/archives/nycac-dcla-formation-source-return-2026-07.md) - `documents` (frontmatter)

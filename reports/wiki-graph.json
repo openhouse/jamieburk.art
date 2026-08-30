@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-29T19:03:16-04:00",
-  "sourceCommit": "851db33bd8a2b3ddd64ff9d3c4319487ef8750c4",
-  "sourceFingerprint": "f1bac5ff741f8b21c67b418b61b8939194d8dc1c6f712a261492b6769d3f7a66",
+  "generatedAt": "2026-08-29T22:14:14-04:00",
+  "sourceCommit": "ff210bc311283b69fa9e5774548992d58571ebef",
+  "sourceFingerprint": "b2b514b9abf238fa282f99ecad92685aeb5b5eba46e79d4d0dd6da8beaf69291",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -4916,6 +4916,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-20",
       "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "research.nycac.dcla-listening-session.2026-08-29",
+      "path": "docs/knowledge-bank/sources/dcla-listening-session-2026-08-26.md",
+      "title": "DCLA listening-session portraits and follow-through intake",
+      "kind": "research-run",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Cleared portrait candidates and redacted follow-up states, with the full repaired transcript reading still open.",
+      "aliases": [],
+      "lastReviewed": "2026-08-29",
+      "reviewBy": null
     },
     {
       "id": "research.nycac.frontline-advocacy.2026-08-12",
@@ -17847,6 +17860,14 @@
     },
     {
       "from": "project.nyc-artist-coalition",
+      "type": "related_to",
+      "to": "research.nycac.dcla-listening-session.2026-08-29",
+      "source": "frontmatter",
+      "href": "../sources/dcla-listening-session-2026-08-26.md",
+      "context": "New August 2026 portrait clearance and follow-up intake; full repaired transcript reading remains open."
+    },
+    {
+      "from": "project.nyc-artist-coalition",
       "type": "uses_source",
       "to": "source.nycac.shared-folder-census.2026",
       "source": "frontmatter",
@@ -18972,6 +18993,22 @@
       "source": "frontmatter",
       "href": "../sources/nyc-speed-report-2026.md",
       "context": null
+    },
+    {
+      "from": "research.nycac.dcla-listening-session.2026-08-29",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": "Cultural-space advocacy context, without asserting adopted policy or completed future actions."
+    },
+    {
+      "from": "research.nycac.dcla-listening-session.2026-08-29",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": "A distinct August 2026 participation and follow-through research encounter."
     },
     {
       "from": "research.nycac.frontline-advocacy.2026-08-12",
@@ -24659,6 +24696,15 @@
     {
       "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
       "from": "project.nyc-artist-coalition",
+      "toPath": "docs/knowledge-bank/sources/dcla-listening-session-2026-08-26.md",
+      "to": "research.nycac.dcla-listening-session.2026-08-29",
+      "fragment": null,
+      "line": 230,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+      "from": "project.nyc-artist-coalition",
       "toPath": "docs/knowledge-bank/research-runs/nycac-shared-folder-2026-07-19.md",
       "to": "research.nycac.shared-folder.2026-07-19",
       "fragment": null,
@@ -25230,6 +25276,24 @@
       "to": "research.betanyc-opportunity-review.2026-08-20",
       "fragment": null,
       "line": 24,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/dcla-listening-session-2026-08-26.md",
+      "from": "research.nycac.dcla-listening-session.2026-08-29",
+      "toPath": "docs/knowledge-bank/projects/fair-rent-nyc.md",
+      "to": "project.fair-rent-nyc",
+      "fragment": null,
+      "line": 4,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/dcla-listening-session-2026-08-26.md",
+      "from": "research.nycac.dcla-listening-session.2026-08-29",
+      "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+      "to": "project.nyc-artist-coalition",
+      "fragment": null,
+      "line": 4,
       "kind": "link"
     },
     {

@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Tired of Tires portfolio-derivative authorization
 
-**Source commit:** `851db33bd8a2b3ddd64ff9d3c4319487ef8750c4`
-**Generation time:** 2026-08-29T19:03:16-04:00
-**Source fingerprint:** `f1bac5ff741f8b21c67b418b61b8939194d8dc1c6f712a261492b6769d3f7a66`
+**Source commit:** `ff210bc311283b69fa9e5774548992d58571ebef`
+**Generation time:** 2026-08-29T22:14:14-04:00
+**Source fingerprint:** `b2b514b9abf238fa282f99ecad92685aeb5b5eba46e79d4d0dd6da8beaf69291`
 
 - [Tired of Tires resident-service flyer](../../assets/graphics/kc-town-hall-tired-of-tires-flyer-2019.md) - `uses_source` (frontmatter)
 - [Tired of Tires collection site after removal, 2022](../../assets/photographs/kc-town-hall-tired-of-tires-after-2022.md) - `uses_source` (frontmatter)

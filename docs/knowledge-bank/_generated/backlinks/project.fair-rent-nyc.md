@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Fair Rent NYC
 
-**Source commit:** `851db33bd8a2b3ddd64ff9d3c4319487ef8750c4`
-**Generation time:** 2026-08-29T19:03:16-04:00
-**Source fingerprint:** `f1bac5ff741f8b21c67b418b61b8939194d8dc1c6f712a261492b6769d3f7a66`
+**Source commit:** `ff210bc311283b69fa9e5774548992d58571ebef`
+**Generation time:** 2026-08-29T22:14:14-04:00
+**Source fingerprint:** `b2b514b9abf238fa282f99ecad92685aeb5b5eba46e79d4d0dd6da8beaf69291`
 
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `related_to` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [hur5tftl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj.md) - `related_to` (frontmatter)
@@ -45,6 +45,8 @@
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
 - [Save NYC Spaces](../../projects/save-nyc-spaces.md) - `related_to` (frontmatter)
 - [Homepage screen-and-room Shoestring Press occurrence](../../projections/photography/home-screen-room-shoestring.md) - `related_to` (frontmatter)
+- [DCLA listening-session portraits and follow-through intake](../../sources/dcla-listening-session-2026-08-26.md) - `prose_link` (markdown)
+- [DCLA listening-session portraits and follow-through intake](../../sources/dcla-listening-session-2026-08-26.md) - `related_to` (frontmatter)
 - [Active New York State commercial rent stabilization bills](../../sources/commercial-rent-public-support/active-state-bills-2025-2026.md) - `related_to` (frontmatter)
 - [Late-July 2026 current-workstream review](../../sources/working/current-workstream-2026-07-27.md) - `related_to` (frontmatter)
 - [Jimmy's Corner rally: Small Business Rent Stabilization statements](../../testimony/commercial-rent-public-support/2026-04-10-jimmys-corner-rally-statements.md) - `related_to` (frontmatter)

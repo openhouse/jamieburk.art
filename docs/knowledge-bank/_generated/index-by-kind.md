@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `851db33bd8a2b3ddd64ff9d3c4319487ef8750c4`
-**Generation time:** 2026-08-29T19:03:16-04:00
-**Source fingerprint:** `f1bac5ff741f8b21c67b418b61b8939194d8dc1c6f712a261492b6769d3f7a66`
+**Source commit:** `ff210bc311283b69fa9e5774548992d58571ebef`
+**Generation time:** 2026-08-29T22:14:14-04:00
+**Source fingerprint:** `b2b514b9abf238fa282f99ecad92685aeb5b5eba46e79d4d0dd6da8beaf69291`
 
 ## application
 
@@ -434,6 +434,7 @@
 - [Knowledge Wiki branch-family closure review](../research-runs/knowledge-wiki-family-closure-2026-07-19.md) - `research.knowledge-wiki-family-closure.2026-07-19`
 - [NYC Jobs citywide opportunity monitor, August 20, 2026](../research-runs/nyc-jobs-citywide-monitor-2026-08-20.md) - `research.nyc-jobs.citywide-monitor.2026-08-20`
 - [NYC OTI product-management search ranking, August 20, 2026](../research-runs/nyc-oti-product-management-ranking-2026-08-20.md) - `research.nyc-oti-product-management-ranking.2026-08-20`
+- [DCLA listening-session portraits and follow-through intake](../sources/dcla-listening-session-2026-08-26.md) - `research.nycac.dcla-listening-session.2026-08-29`
 - [NYCAC frontline advocacy source return, July 13-August 12, 2026](../research-runs/nycac-frontline-advocacy-2026-08-12.md) - `research.nycac.frontline-advocacy.2026-08-12`
 - [NYC Artist Coalition shared-folder archival production](../research-runs/nycac-shared-folder-2026-07-19.md) - `research.nycac.shared-folder.2026-07-19`
 - [Photographic source return for DCLA, KC Town Hall, and Council fieldwork](../research-runs/photographic-source-return-2026-07-26.md) - `research.photographic-source-return.2026-07-26`

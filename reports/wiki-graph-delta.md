@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `851db33bd8a2b3ddd64ff9d3c4319487ef8750c4`
-**Generation time:** 2026-08-29T19:03:16-04:00
-**Source fingerprint:** `f1bac5ff741f8b21c67b418b61b8939194d8dc1c6f712a261492b6769d3f7a66`
+**Source commit:** `ff210bc311283b69fa9e5774548992d58571ebef`
+**Generation time:** 2026-08-29T22:14:14-04:00
+**Source fingerprint:** `b2b514b9abf238fa282f99ecad92685aeb5b5eba46e79d4d0dd6da8beaf69291`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 45
+- Nodes added: 46
 - Nodes removed: 0
-- Edges added: 175
+- Edges added: 178
 - Edges removed: 8
 - New type-aware orphans: 0
 - Current rights-review records: 185
@@ -44,6 +44,7 @@ Compared with the graph artifact on `origin/develop`.
 - `research.betanyc-opportunity-review.2026-08-20`
 - `research.nyc-jobs.citywide-monitor.2026-08-20`
 - `research.nyc-oti-product-management-ranking.2026-08-20`
+- `research.nycac.dcla-listening-session.2026-08-29`
 - `source.betanyc.civic-tech-newsletter`
 - `source.civic-match.candidate-network`
 - `source.jobs.oti.executive-director-product-management.789563`
