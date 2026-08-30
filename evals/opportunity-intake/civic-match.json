@@ -4,8 +4,10 @@
   "sourceId": "source.civic-match.candidate-network",
   "observedAt": "2026-08-20",
   "observationMode": "authenticated-read-only-field-map",
+  "validationLastObservedAt": "2026-08-30",
+  "validationObservationMode": "user-supplied-form-validation-screenshots",
   "guidePath": "opportunity-sources/civic-match/2026-08-20/Civic-Match-Signup-Guide.md",
-  "guideSha256": "ad55e860801d8bbba196d15fa190c1695d75147333443bcbfd40de6c8606511b",
+  "guideSha256": "b59d91890e5d1eb00d8c05d56d3cd8f7fbdb885e32d3c1ee0df9f32d55847493",
   "sourceRegistryPath": "evals/opportunity-intake/sources.json",
   "selectionConfigPath": "evals/resumes/public-resume-selection.json",
   "hiringReaderConfigPath": "evals/resumes/hiring-reader-portfolio.json",
@@ -24,6 +26,11 @@
   ],
   "copyBlockIds": ["government-impact", "community-initiative", "profile-summary"],
   "narrativeAnswerIds": ["government-impact", "community-initiative"],
+  "copyBlockLimits": {
+    "government-impact": {"maxWords": 150, "basis": "observed-form-validation", "observedAt": "2026-08-30"},
+    "community-initiative": {"maxWords": 150, "basis": "observed-form-validation", "observedAt": "2026-08-30"},
+    "profile-summary": {"maxWords": 250, "basis": "existing-editorial-ceiling-not-reverified-form-limit"}
+  },
   "civicMatchHelpers": [
     {"personId": "person.josh-gee", "name": "Josh Gee", "relationship": "vice-president-civic-match", "acceptanceQuestion": "I would actively match this candidate to a current opportunity their evidence supports."},
     {"personId": "person.courtney-kishbaugh", "name": "Courtney Kishbaugh", "relationship": "director-civic-match", "acceptanceQuestion": "I would actively match this candidate to a current opportunity their evidence supports."}
