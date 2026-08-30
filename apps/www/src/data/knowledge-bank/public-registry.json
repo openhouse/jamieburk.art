@@ -233,7 +233,7 @@
       "visibility": "public",
       "preservationStatus": "live",
       "publishedAt": "2026-08-10",
-      "accessedAt": "2026-08-24",
+      "accessedAt": "2026-08-29",
       "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/0bb9c74de8d774dd2be85f9b16c5e22e56096bfc/rfcs/0005-three-layer-knowledge-graph.md",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Jamie Burkart and Codex, RFC 0005: Three-Layer Knowledge Graph and Governed Source Materialization, exploring design record, August 10, 2026.",
@@ -254,7 +254,7 @@
       "visibility": "public",
       "preservationStatus": "live",
       "publishedAt": "2026-08-11",
-      "accessedAt": "2026-08-24",
+      "accessedAt": "2026-08-29",
       "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/0bb9c74de8d774dd2be85f9b16c5e22e56096bfc/rfcs/0006-federated-knowledge-exchange-and-release-receipts.md",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Jamie Burkart and Codex, RFC 0006: Federated Knowledge Exchange and Release Receipts, proposed design record, August 11, 2026.",
@@ -275,7 +275,7 @@
       "visibility": "public",
       "preservationStatus": "live",
       "publishedAt": "2026-08-24",
-      "accessedAt": "2026-08-24",
+      "accessedAt": "2026-08-29",
       "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/work/2026-08-24-C/rfcs/0009-wiki-form-for-shared-agentic-memory.md",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Jamie Burkart and Codex, RFC 0009: Wiki Form for Shared Agentic Memory, exploring design record, August 24, 2026.",
@@ -285,6 +285,27 @@
         "production adoption",
         "named-person participation or endorsement",
         "agent or model authority to publish or act"
+      ]
+    },
+    {
+      "id": "SRC-KNOWLEDGE-WIKI-RFC-0010-2026",
+      "title": "RFC 0010: Knowledge Wiki Operating Control Plane",
+      "organization": "openhouse / jamieburk.art",
+      "author": "Jamie Burkart and Codex, AI-assisted draft",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-08-29",
+      "accessedAt": "2026-08-29",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/work/2026-08-24-C/rfcs/0010-knowledge-wiki-operating-control-plane.md",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Jamie Burkart and Codex, RFC 0010: Knowledge Wiki Operating Control Plane, exploring design record, August 29, 2026.",
+      "publicNote": "The RFC proposes source coverage, operating-state, perishable-health, abstention, and exact-candidate controls; its exploring status is part of the evidence.",
+      "doesNotEstablish": [
+        "adoption of the control plane",
+        "a permanent green health result",
+        "real-person participation or endorsement",
+        "model authority to publish or act"
       ]
     },
     {
@@ -1598,7 +1619,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "I am developing a human-inspectable, source-backed Knowledge Wiki Graph through which people, repositories, and agents can build shared working memory while preserving provenance, plurality, and human authority.",
+          "text": "I am developing a human-inspectable, source-backed Knowledge Wiki Graph through which people, repositories, and agents can build shared working memory while preserving provenance, plurality, and human authority. A deterministic-first operating control plane keeps source coverage, state, freshness, abstention, and the human decision boundary visible.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -1610,7 +1631,7 @@
         },
         {
           "key": "colophon",
-          "text": "The Knowledge Wiki Graph connects each public claim to evidence. Jamie decides what appears here and revises it when the record changes.",
+          "text": "The Knowledge Wiki Graph connects each public claim to evidence and keeps source coverage, status, correction, and human authority visible enough to review. Jamie decides what appears here and revises it when the record changes.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -1651,6 +1672,17 @@
           ],
           "confidence": "high",
           "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KNOWLEDGE-WIKI-RFC-0010-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "source coverage and operating-state controls",
+            "perishable health and abstention",
+            "deterministic-first exact-candidate evaluation with human decision authority"
+          ],
+          "confidence": "high",
+          "renderCitation": true
         }
       ],
       "boundaries": [
@@ -1658,7 +1690,8 @@
         "Repository roles do not map one-to-one onto graph responsibilities.",
         "Do not expose protected repository topology, source locators, or private records.",
         "Do not imply a completed client deployment, production platform, market validation, or automatic trust.",
-        "Present wiki form as a design proposition that makes working agreement inspectable, not as a mechanism that guarantees truth or consensus."
+        "Present wiki form as a design proposition that makes working agreement inspectable, not as a mechanism that guarantees truth or consensus.",
+        "Present the operating control plane as exploring instrumentation, not adopted organizational infrastructure or proof of outcomes."
       ]
     },
     {
@@ -3109,7 +3142,8 @@
         "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28",
         "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
         "SRC-KNOWLEDGE-WIKI-RFC-0006-2026",
-        "SRC-KNOWLEDGE-WIKI-RFC-0009-2026"
+        "SRC-KNOWLEDGE-WIKI-RFC-0009-2026",
+        "SRC-KNOWLEDGE-WIKI-RFC-0010-2026"
       ],
       "occurrences": [
         {
@@ -3127,7 +3161,8 @@
           "sourceIds": [
             "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
             "SRC-KNOWLEDGE-WIKI-RFC-0006-2026",
-            "SRC-KNOWLEDGE-WIKI-RFC-0009-2026"
+            "SRC-KNOWLEDGE-WIKI-RFC-0009-2026",
+            "SRC-KNOWLEDGE-WIKI-RFC-0010-2026"
           ]
         }
       ]
@@ -3138,7 +3173,8 @@
       "sourceOrder": [
         "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
         "SRC-KNOWLEDGE-WIKI-RFC-0006-2026",
-        "SRC-KNOWLEDGE-WIKI-RFC-0009-2026"
+        "SRC-KNOWLEDGE-WIKI-RFC-0009-2026",
+        "SRC-KNOWLEDGE-WIKI-RFC-0010-2026"
       ],
       "occurrences": [
         {
@@ -3154,7 +3190,8 @@
       "sourceOrder": [
         "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
         "SRC-KNOWLEDGE-WIKI-RFC-0006-2026",
-        "SRC-KNOWLEDGE-WIKI-RFC-0009-2026"
+        "SRC-KNOWLEDGE-WIKI-RFC-0009-2026",
+        "SRC-KNOWLEDGE-WIKI-RFC-0010-2026"
       ],
       "occurrences": [
         {
@@ -3594,6 +3631,7 @@
         "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
         "SRC-KNOWLEDGE-WIKI-RFC-0006-2026",
         "SRC-KNOWLEDGE-WIKI-RFC-0009-2026",
+        "SRC-KNOWLEDGE-WIKI-RFC-0010-2026",
         "SRC-AI-EVALS-CERTIFICATE-2026",
         "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
         "SRC-CALLNYC-POLITICO-2016-03-14",

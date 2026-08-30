@@ -38,82 +38,21 @@ Jamie publishes only after the caption, credit, privacy, and use are resolved. O
 
 A LIVING PUBLICATION
 
-The Knowledge Wiki Graph connects each public claim to evidence. Jamie decides what appears here and revises it when the record changes.[1][2]
+The Knowledge Wiki Graph connects each public claim to evidence and keeps source coverage, status, correction, and human authority visible enough to review. Jamie decides what appears here and revises it when the record changes.[1][2][3][4]
 
-Made and maintained by Jamie Burkart. Last revised 22 August 2026. Jamie checks suggested corrections against the record and notes accepted changes here. See the knowledge method in practice, or suggest a correction.
+Automated checks flag issues; Jamie decides what is published.
 
-Editorial responsibility
-Sources and notes
-
-These notes preserve what each source supports and where its limits remain. See something that needs correction? Contact Jamie.
-
-View 2 source notes
-
-Jamie Burkart
-
-Technical Project Manager - Product Operations & Implementation. Public-safe portfolio, civic notebook, and future living archive.
-
-Work
-Technical Operations
-Resume
-Contact
-Colophon
-
-PUBLIC INTERACTION: SOURCE NOTES EXPANDED
-
-Skip to content
-Jamie Burkart
-Work
-Technical Operations
-About
-Resume
-Contact
-
-HOW THIS IS MADE
-
-Colophon
-
-This portfolio is edited from a growing body of project evidence. Its purpose is to make each public claim as clear, useful, and accountable as the evidence allows.
-
-ONE OBJECT, ONE PATH
-
-Follow one photograph
-At the East River beneath the Manhattan Bridge, 2022. Photograph by Elana Gordon. From Jamie Burkart's photo archive.
-01
-Select
-
-This East River portrait opens the portfolio because it introduces Jamie and locates him in the city where much of the work took shape.
-
-02
-Observe
-
-The frame shows Jamie beneath the Manhattan Bridge. The archive record supplies the date, photographer, and recorded permission for this portfolio use.
-
-03
-Write
-
-The caption makes a precise public claim: where the photograph was made, when, who made it, and where the record is held.
-
-04
-Revise
-
-Jamie publishes only after the caption, credit, privacy, and use are resolved. Otherwise the image stays private; if the record changes, Jamie revises or removes it.
-
-A LIVING PUBLICATION
-
-The Knowledge Wiki Graph connects each public claim to evidence. Jamie decides what appears here and revises it when the record changes.[1][2]
-
-Made and maintained by Jamie Burkart. Last revised 22 August 2026. Jamie checks suggested corrections against the record and notes accepted changes here. See the knowledge method in practice, or suggest a correction.
+Made and maintained by Jamie Burkart. Last revised 29 August 2026. See the knowledge method in practice, or suggest a correction.
 
 Editorial responsibility
 
-Tools and modeled reviewers may suggest changes, but they do not supply consent, rights, approval, endorsement, or publication authority. Jamie decides what appears here.
+Tools and modeled reviewers may suggest changes, but they do not supply consent, rights, approval, endorsement, or publication authority. Jamie decides what appears here. He checks suggested corrections against the record and notes accepted changes here.
 
 Sources and notes
 
 These notes preserve what each source supports and where its limits remain. See something that needs correction? Contact Jamie.
 
-View 2 source notes
+View 4 source notes
 
 [1] Jamie Burkart and Codex, RFC 0005: Three-Layer Knowledge Graph and Governed Source Materialization, exploring design record, August 10, 2026.
 
@@ -128,6 +67,22 @@ Return 1
 The RFC documents federation, local repository authority, transport boundaries, and human release control; its proposed status is part of the evidence.
 
 Boundary: This source does not establish a universal repository topology, automatic publication authority, a completed production deployment, client adoption.
+
+Return 1
+
+[3] Jamie Burkart and Codex, RFC 0009: Wiki Form for Shared Agentic Memory, exploring design record, August 24, 2026.
+
+The RFC records the wiki-form proposition, its research status, and its truth, authority, privacy, and named-lens boundaries.
+
+Boundary: This source does not establish automatic truth or consensus, production adoption, named-person participation or endorsement, agent or model authority to publish or act.
+
+Return 1
+
+[4] Jamie Burkart and Codex, RFC 0010: Knowledge Wiki Operating Control Plane, exploring design record, August 29, 2026.
+
+The RFC proposes source coverage, operating-state, perishable-health, abstention, and exact-candidate controls; its exploring status is part of the evidence.
+
+Boundary: This source does not establish adoption of the control plane, a permanent green health result, real-person participation or endorsement, model authority to publish or act.
 
 Return 1
 

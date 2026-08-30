@@ -1,8 +1,8 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-08-24T22:22:44.475Z",
-  "baseUrl": "http://127.0.0.1:3213",
-  "publicSurfaceFingerprint": "1b0a4bbaa7ba0429dcffabd2a1e30b980c2951c376bd86dd42f8c693634f3890",
+  "checkedAt": "2026-08-30T00:36:23.160Z",
+  "baseUrl": "http://127.0.0.1:3196",
+  "publicSurfaceFingerprint": "5f021eda5a06079aca0d21349f2e912c703698d5b4bc7262f48408a430d6b8f2",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 153,
   "routes": [
@@ -41,7 +41,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 0
     },
     {
       "viewport": 360,
@@ -55,7 +56,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 6
     },
     {
       "viewport": 360,
@@ -69,7 +71,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 0
     },
     {
       "viewport": 360,
@@ -83,7 +86,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 0
     },
     {
       "viewport": 360,
@@ -97,7 +101,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 0
     },
     {
       "viewport": 360,
@@ -111,7 +116,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 2
     },
     {
       "viewport": 360,
@@ -125,7 +131,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 0
     },
     {
       "viewport": 360,
@@ -139,7 +146,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 0
     },
     {
       "viewport": 360,
@@ -153,7 +161,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 6
     },
     {
       "viewport": 360,
@@ -167,7 +176,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 12
     },
     {
       "viewport": 360,
@@ -181,7 +191,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 9
     },
     {
       "viewport": 360,
@@ -195,7 +206,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 0
     },
     {
       "viewport": 360,
@@ -209,7 +221,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 0
     },
     {
       "viewport": 360,
@@ -223,7 +236,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 0
     },
     {
       "viewport": 360,
@@ -237,7 +251,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 3
     },
     {
       "viewport": 375,
@@ -251,7 +266,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 0
     },
     {
       "viewport": 375,
@@ -265,7 +281,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 3
     },
     {
       "viewport": 375,
@@ -279,7 +296,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 0
     },
     {
       "viewport": 375,
@@ -293,7 +311,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 0
     },
     {
       "viewport": 375,
@@ -307,7 +326,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 0
     },
     {
       "viewport": 375,
@@ -321,7 +341,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 1
     },
     {
       "viewport": 375,
@@ -335,7 +356,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 0
     },
     {
       "viewport": 375,
@@ -349,7 +371,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 0
     },
     {
       "viewport": 375,
@@ -363,7 +386,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 0
     },
     {
       "viewport": 375,
@@ -377,7 +401,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 8
     },
     {
       "viewport": 375,
@@ -391,7 +416,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 1
     },
     {
       "viewport": 375,
@@ -405,7 +431,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 0
     },
     {
       "viewport": 375,
@@ -419,7 +446,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 0
     },
     {
       "viewport": 375,
@@ -433,7 +461,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 0
     },
     {
       "viewport": 375,
@@ -447,7 +476,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 8
     },
     {
       "viewport": 768,
@@ -461,7 +491,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 4
     },
     {
       "viewport": 768,
@@ -475,7 +506,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 4
     },
     {
       "viewport": 768,
@@ -489,7 +521,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 1
     },
     {
       "viewport": 768,
@@ -503,7 +536,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 1
     },
     {
       "viewport": 768,
@@ -517,7 +551,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 2
     },
     {
       "viewport": 768,
@@ -531,7 +566,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 1
     },
     {
       "viewport": 768,
@@ -545,7 +581,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 0
     },
     {
       "viewport": 768,
@@ -559,7 +596,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 2
     },
     {
       "viewport": 768,
@@ -573,7 +611,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 1
     },
     {
       "viewport": 768,
@@ -587,7 +626,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 12
     },
     {
       "viewport": 768,
@@ -601,7 +641,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 2
     },
     {
       "viewport": 768,
@@ -615,7 +656,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 1
     },
     {
       "viewport": 768,
@@ -629,7 +671,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 1
     },
     {
       "viewport": 768,
@@ -643,7 +686,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 2
     },
     {
       "viewport": 768,
@@ -657,7 +701,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 10
     },
     {
       "viewport": 1280,
@@ -671,7 +716,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 0
     },
     {
       "viewport": 1280,
@@ -685,7 +731,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 0
     },
     {
       "viewport": 1280,
@@ -699,7 +746,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 1
     },
     {
       "viewport": 1280,
@@ -713,7 +761,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 0
     },
     {
       "viewport": 1280,
@@ -727,7 +776,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 2
     },
     {
       "viewport": 1280,
@@ -741,7 +791,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 1
     },
     {
       "viewport": 1280,
@@ -755,7 +806,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 1
     },
     {
       "viewport": 1280,
@@ -769,7 +821,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 0
     },
     {
       "viewport": 1280,
@@ -783,7 +836,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 6
     },
     {
       "viewport": 1280,
@@ -797,7 +851,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 3
     },
     {
       "viewport": 1280,
@@ -811,7 +866,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 9
     },
     {
       "viewport": 1280,
@@ -825,7 +881,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 12
     },
     {
       "viewport": 1280,
@@ -839,7 +896,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 7
     },
     {
       "viewport": 1280,
@@ -853,7 +911,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 1
     },
     {
       "viewport": 1280,
@@ -867,7 +926,8 @@
       "unlabeledImages": 0,
       "h1Count": 1,
       "mainPresent": true,
-      "failedRequests": []
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 1
     }
   ],
   "summary": {
@@ -878,10 +938,11 @@
     "brokenImagesAfterScroll": 0,
     "unlabeledImages": 0,
     "failedRequests": 0,
+    "abortedPrefetchRequests": 147,
     "nonSuccessResponses": 0,
     "invalidHeadingOrLandmarkRows": 0,
     "lazyImagesObserved": 112,
-    "unloadedImagesBeforeScroll": 73,
+    "unloadedImagesBeforeScroll": 78,
     "lazyImageFollowUpPerformed": true,
     "allImagesLoadedAfterScroll": true
   },
@@ -943,13 +1004,11 @@
     "passed": true
   },
   "navigationReview": {
-    "checkedAt": "2026-08-24T22:22:44.475Z",
     "startRoute": "/",
     "destinationRoute": "/about",
     "startHttpStatus": 200,
     "selector": "a[href=\"/about\"]",
     "linkVisible": true,
-    "linkText": "About",
     "navigationCompleted": true,
     "destinationH1": "About",
     "destinationMainPresent": true,
@@ -958,13 +1017,32 @@
       "height": 900
     },
     "renderedScreenshot": {
-      "sha256": "16ba165b290d583039279adb0f9e708bce2bc0d038828d32098f269abbe6ed97",
-      "byteLength": 664614,
-      "width": 1280,
-      "fullPage": true,
       "retainedInPublicGit": false,
-      "reviewBoundary": "The temporary rendered screenshot was inspected for this exact public page and is represented in public Git only by its content hash and scoped observations."
+      "sha256": "f5e685de7786e1dfaea12f13e5a7cf1250c83eb0f7c705bdafb87e7a8be44369",
+      "byteLength": 678049
     },
     "pass": true
+  },
+  "targetedFollowUp": {
+    "checkedAt": "2026-08-30T00:45:05.620Z",
+    "path": "/",
+    "viewport": 768,
+    "reason": "Initial run left three images incomplete after a 15-second wait. Re-exercised the same candidate with slower scrolling and a 45-second completion window.",
+    "currentCandidateFingerprint": "5f021eda5a06079aca0d21349f2e912c703698d5b4bc7262f48408a430d6b8f2",
+    "observed": {
+      "viewport": 768,
+      "path": "/",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "failedRequests": [],
+      "abortedPrefetchRequestCount": 4
+    }
   }
 }

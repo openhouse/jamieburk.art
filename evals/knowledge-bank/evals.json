@@ -292,7 +292,12 @@
       "expectedSourceCount": 17,
       "expectedClaimCount": 8,
       "expectedInquiryCount": 4,
-      "approvedContentSha256": "d4909f0694a9c5901004f66919420c8bef03f1a14780352b9529e842e224af66",
+      "approvedContentSha256": "e61fdd1f6d693a35761de84610ba58d085672b76e9e6a130158546979c1e9aa9",
+      "contentReview": {
+        "reviewedAt": "2026-08-29",
+        "previousContentSha256": "d4909f0694a9c5901004f66919420c8bef03f1a14780352b9529e842e224af66",
+        "scope": "Re-reviewed the lab page citation order after adding the exploring RFC 0010. Removing only this citation reconstructs the previous archive payload hash. Archive sources, observations, claims, inquiry states, protected custody, collective credit and publication limits are unchanged. This is a projection consistency review, not renewed source verification, independent holdout approval or implementation authorization."
+      },
       "intakeIds": [
         "INTAKE-HORSE-LORDS-TRUTHERS-NPR-2016",
         "INTAKE-CLAUDETTE-ARORA-2022",
@@ -423,6 +428,7 @@
         "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
         "SRC-KNOWLEDGE-WIKI-RFC-0006-2026",
         "SRC-KNOWLEDGE-WIKI-RFC-0009-2026",
+        "SRC-KNOWLEDGE-WIKI-RFC-0010-2026",
         "SRC-AI-EVALS-CERTIFICATE-2026",
         "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
         "SRC-CALLNYC-POLITICO-2016-03-14",

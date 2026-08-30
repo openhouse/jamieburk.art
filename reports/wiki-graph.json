@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-24T19:58:38-04:00",
   "sourceCommit": "6187b3a1eec56428685293c0636f90b8f999b620",
-  "sourceFingerprint": "c2cf41ec29380d85699d1af93a8f8fe4629fbe0116345afd5e96d2cf0a6f5033",
+  "sourceFingerprint": "894841552d7d88d4f3263c09ffe3ef539d2e6b5f9a3066da564ec60ecd512bbf",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3817,7 +3817,7 @@
       "sensitivity": "low",
       "summary": "A federated practice that separates semantic meaning, evidentiary support, and source custody before composing human-reviewed outputs.\n",
       "aliases": [],
-      "lastReviewed": "2026-08-21",
+      "lastReviewed": "2026-08-29",
       "reviewBy": "2027-01-18"
     },
     {
@@ -23852,7 +23852,7 @@
       "toPath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/README.md",
       "to": "index.anonymized-team-knowledge-opportunity-case-study",
       "fragment": null,
-      "line": 64,
+      "line": 94,
       "kind": "link"
     },
     {

@@ -38,16 +38,18 @@ Jamie publishes only after the caption, credit, privacy, and use are resolved. O
 
 A LIVING PUBLICATION
 
-The Knowledge Wiki Graph connects each public claim to evidence. Jamie decides what appears here and revises it when the record changes.[1][2]
+The Knowledge Wiki Graph connects each public claim to evidence and keeps source coverage, status, correction, and human authority visible enough to review. Jamie decides what appears here and revises it when the record changes.[1][2][3][4]
 
-Made and maintained by Jamie Burkart. Last revised 22 August 2026. Jamie checks suggested corrections against the record and notes accepted changes here. See the knowledge method in practice, or suggest a correction.
+Automated checks flag issues; Jamie decides what is published.
+
+Made and maintained by Jamie Burkart. Last revised 29 August 2026. See the knowledge method in practice, or suggest a correction.
 
 Editorial responsibility
 Sources and notes
 
 These notes preserve what each source supports and where its limits remain. See something that needs correction? Contact Jamie.
 
-View 2 source notes
+View 4 source notes
 
 Jamie Burkart
 

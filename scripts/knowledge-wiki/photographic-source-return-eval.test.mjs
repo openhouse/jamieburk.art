@@ -84,6 +84,21 @@ test("Knowledge Bank cannot return as a reader-facing heading", () => {
   assert.equal(evaluation.checks.knowledge_wiki_naming_is_canonical, false);
 });
 
+test("canonical wiki command permits additional checks without dropping the core validator", () => {
+  const manifest = JSON.parse(readFileSync(path.join(defaultRepoRoot, "package.json"), "utf8"));
+  manifest.scripts["knowledge-wiki"] =
+    "node scripts/check-knowledge-bank.mjs && node scripts/knowledge-wiki/operating-control-plane-eval.mjs";
+  const check = () => evaluatePhotographicSourceReturn({
+    result,
+    sourceOverrides: { "package.json": JSON.stringify(manifest) }
+  }).checks.knowledge_wiki_naming_is_canonical;
+  assert.equal(check(), true);
+  manifest.scripts["knowledge-wiki"] = "node scripts/knowledge-wiki/operating-control-plane-eval.mjs";
+  assert.equal(check(), false);
+  manifest.scripts["knowledge-wiki"] = "echo node scripts/check-knowledge-bank.mjs";
+  assert.equal(check(), false);
+});
+
 test("a live Photos failure cannot be promoted to a completed scan", () => {
   const id = "research.photographic-source-return.2026-07-26";
   const mutated = source(id)

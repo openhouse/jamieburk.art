@@ -121,7 +121,8 @@ test("the About page renders endnotes for its Open House and Knowledge Wiki Grap
       "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28",
       "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
       "SRC-KNOWLEDGE-WIKI-RFC-0006-2026",
-      "SRC-KNOWLEDGE-WIKI-RFC-0009-2026"
+      "SRC-KNOWLEDGE-WIKI-RFC-0009-2026",
+      "SRC-KNOWLEDGE-WIKI-RFC-0010-2026"
     ]
   );
   assert.match(aboutPage, /<References pageId="about" \/>/);

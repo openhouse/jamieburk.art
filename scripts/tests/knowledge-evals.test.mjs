@@ -1662,6 +1662,27 @@ test("working-archive production passes every deterministic criterion", () => {
   assert.ok(result.criteria.every((criterion) => criterion.score === 5));
 });
 
+test("archive review refresh is limited to the RFC 0010 lab citation addition", () => {
+  const archive = suite.pilot.archiveProduction;
+  const page = knowledgeBank.pages.find((item) => item.id === archive.labPageId);
+  const originalOrder = page.sourceOrder;
+  assert.equal(archive.contentReview.reviewedAt, "2026-08-29");
+  assert.equal(archive.reviewedAt, "2026-07-15", "Do not redate the underlying source review");
+  assert.ok(archive.labSourceIds.includes("SRC-KNOWLEDGE-WIKI-RFC-0010-2026"));
+  assert.equal(evaluateKnowledgeBank(suite).contentApprovals.archiveProduction.matches, true);
+  try {
+    page.sourceOrder = originalOrder.filter((id) => id !== "SRC-KNOWLEDGE-WIKI-RFC-0010-2026");
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.contentApprovals.archiveProduction.actualSha256,
+      archive.contentReview.previousContentSha256,
+      "Removing only the new citation must reconstruct the previously reviewed archive payload");
+    assert.equal(result.contentApprovals.archiveProduction.matches, false,
+      "A stale citation projection must still invalidate current evidence");
+  } finally {
+    page.sourceOrder = originalOrder;
+  }
+});
+
 test("working-archive private sources cannot acquire public URLs", () => {
   const source = knowledgeBank.sources.find(
     (item) => item.id === suite.pilot.archiveProduction.privateSourceIds[0]

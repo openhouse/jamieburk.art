@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-24T19:58:38-04:00",
   "sourceCommit": "6187b3a1eec56428685293c0636f90b8f999b620",
-  "sourceFingerprint": "c2cf41ec29380d85699d1af93a8f8fe4629fbe0116345afd5e96d2cf0a6f5033",
+  "sourceFingerprint": "894841552d7d88d4f3263c09ffe3ef539d2e6b5f9a3066da564ec60ecd512bbf",
   "hardGates": {
     "passed": true,
     "errorCount": 0,

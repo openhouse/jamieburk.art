@@ -1,0 +1,84 @@
+{
+  "id": "knowledge-wiki-operating-control-plane",
+  "schemaVersion": 1,
+  "status": "instrumented-exploration",
+  "rfcPath": "rfcs/0010-knowledge-wiki-operating-control-plane.md",
+  "pagePath": "apps/www/src/content/lab/source-backed-team-memory.mdx",
+  "methodPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
+  "colophonPath": "apps/www/src/app/colophon/page.tsx",
+  "authority": {
+    "decisionOwner": "Jamie Burkart",
+    "actualAdoptionObserved": false,
+    "humanStageChangeRequired": true
+  },
+  "sourceCoverage": {
+    "registryRequired": true,
+    "accessIsConsent": false,
+    "evidenceIsPublicationPermission": false,
+    "unresolvedRights": "fail-closed",
+    "publicSourceLocatorOnly": true
+  },
+  "operatingStates": [
+    "proposal",
+    "invitation",
+    "attendance",
+    "contribution",
+    "commitment",
+    "authority",
+    "adoption",
+    "outcome",
+    "correction"
+  ],
+  "healthBands": [
+    "candidate",
+    "situational",
+    "strategic"
+  ],
+  "health": {
+    "perishable": true,
+    "invalidationTriggers": [
+      "source revision",
+      "candidate-affecting change",
+      "rights or consent change",
+      "new contradiction",
+      "elapsed review window"
+    ]
+  },
+  "evaluationOrder": [
+    "deterministic-eligibility",
+    "mutation-resistance",
+    "fictionalized-model-review",
+    "human-decision"
+  ],
+  "modelReview": {
+    "allowedVerdicts": [
+      "PASS",
+      "FAIL",
+      "ABSTAIN_INSUFFICIENT_EVIDENCE"
+    ],
+    "insufficientEvidence": "abstain",
+    "actualPeopleParticipated": false,
+    "grantsAuthority": false
+  },
+  "situatedVoice": {
+    "corpusSufficiencyRequired": true,
+    "authorityStates": [
+      "unconfirmed",
+      "self-authored",
+      "team-confirmed"
+    ],
+    "impersonationProhibited": true
+  },
+  "outcomeMeasures": [
+    "capacity",
+    "handoff",
+    "correction-latency",
+    "open-loop-density",
+    "ownership-concentration"
+  ],
+  "exactCandidate": {
+    "bindingRequired": true,
+    "staleReceiptsRejected": true,
+    "candidateAffectingChangesRequireRerun": true
+  }
+}

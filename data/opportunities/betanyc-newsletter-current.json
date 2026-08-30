@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "source": {
     "id": "source.betanyc.civic-tech-newsletter",
-    "publicIssueId": "13135",
-    "title": "This week in NYC’s #CivicTech – August 20, 2026",
-    "publishedAt": "2026-08-20T14:39:02Z",
-    "issueUrl": "https://www.beta.nyc/2026/08/20/this-week-in-nycs-civictech-august-20-2026/"
+    "publicIssueId": "13205",
+    "title": "This week in NYC’s #CivicTech – August 27, 2026",
+    "publishedAt": "2026-08-27T20:16:13Z",
+    "issueUrl": "https://www.beta.nyc/2026/08/27/this-week-in-nycs-civictech-august-27-2026/"
   },
-  "evaluatedAt": "2026-08-21T00:00:00.000Z",
+  "evaluatedAt": "2026-08-30T00:00:00.000Z",
   "policy": {
     "strongMatchThreshold": {
       "composite": 78,
@@ -19,72 +19,75 @@
     "applicationAuthority": "Jamie Burkart"
   },
   "census": {
-    "discoveredLeads": 19,
-    "cityDatasetMatches": 14,
-    "provisionalStrongMatches": 2,
-    "officialVerificationRequired": 0,
-    "notPromoted": 17
+    "discoveredLeads": 18,
+    "cityDatasetMatches": 9,
+    "provisionalStrongMatches": 0,
+    "officialVerificationRequired": 9,
+    "notPromoted": 9
   },
-  "provisionalStrongMatches": [
-    {
-      "jobId": "792925",
-      "title": "Associate Director of Policy Implementation",
-      "organization": "Campaign Finance Board",
-      "officialUrl": "https://cityjobs.nyc.gov/job/792925",
-      "deadline": "2026-10-13",
-      "fitScore": 100,
-      "secureScore": 87,
-      "compositeScore": 94.15,
-      "qualificationReview": "human-review-required",
-      "automaticDisposition": "provisional-intake-only"
-    },
-    {
-      "jobId": "polimorphic-123173",
-      "title": "Product Manager (First Product Hire)",
-      "organization": "Polimorphic",
-      "officialUrl": "https://app.trinethire.com/companies/381666-polimorphic/jobs/123173-product-manager",
-      "deadline": null,
-      "fitScore": 92,
-      "secureScore": 70,
-      "compositeScore": 82.1,
-      "qualificationReview": "human-review-required",
-      "automaticDisposition": "provisional-intake-only"
-    }
-  ],
+  "provisionalStrongMatches": [],
   "leads": [
     {
-      "title": "Webmaster",
-      "organization": "Police Department",
-      "sourceUrl": "https://cityjobs.nyc.gov/job/793316",
-      "deadline": "2026-09-01",
-      "cityJobId": "793316",
-      "jobId": "793316",
-      "officialUrl": "https://cityjobs.nyc.gov/job/793316",
-      "fitScore": 54,
-      "secureScore": 78,
-      "compositeScore": 64.8,
+      "title": "IT Support Staff",
+      "organization": "NYC Housing Authority",
+      "sourceUrl": "https://cityjobs.nyc.gov/job/788994",
+      "deadline": null,
+      "cityJobId": "788994",
+      "jobId": "788994",
+      "officialUrl": "https://cityjobs.nyc.gov/job/788994",
+      "fitScore": 35,
+      "secureScore": 40,
+      "compositeScore": 37.25,
       "qualificationReview": "human-review-required",
       "deterministicScreen": {
-        "eligible": true,
-        "reasons": [],
-        "deadline": "2026-09-01",
-        "salaryFrom": 75000,
-        "salaryTo": 160000
+        "eligible": false,
+        "reasons": [
+          "salary-ceiling-below-target",
+          "deadline-passed"
+        ],
+        "deadline": "2026-08-27",
+        "salaryFrom": 44545,
+        "salaryTo": 65000
       },
       "disposition": "not-promoted",
-      "dispositionReason": "below-strong-match-threshold"
+      "dispositionReason": "salary-ceiling-below-target,deadline-passed"
     },
     {
-      "title": "EEO Program Analyst",
-      "organization": "Equal Employ Practices Comm",
-      "sourceUrl": "https://cityjobs.nyc.gov/job/793163",
-      "deadline": "2026-08-31",
-      "cityJobId": "793163",
-      "jobId": "793163",
-      "officialUrl": "https://cityjobs.nyc.gov/job/793163",
-      "fitScore": 41,
+      "title": "Full Stack Developer",
+      "organization": "Department of Correction",
+      "sourceUrl": "https://cityjobs.nyc.gov/job/793017",
+      "deadline": null,
+      "cityJobId": "793017",
+      "jobId": "793017",
+      "officialUrl": "https://cityjobs.nyc.gov/job/793017",
+      "fitScore": 13,
+      "secureScore": 35,
+      "compositeScore": 22.9,
+      "qualificationReview": "human-review-required",
+      "deterministicScreen": {
+        "eligible": false,
+        "reasons": [
+          "not-external",
+          "deadline-passed"
+        ],
+        "deadline": "2026-08-28",
+        "salaryFrom": 150000,
+        "salaryTo": 155000
+      },
+      "disposition": "not-promoted",
+      "dispositionReason": "not-external,deadline-passed"
+    },
+    {
+      "title": "Public Engagement Innovation and Design Specialist",
+      "organization": "Department of Transportation",
+      "sourceUrl": "https://cityjobs.nyc.gov/job/785747",
+      "deadline": null,
+      "cityJobId": "785747",
+      "jobId": "785747",
+      "officialUrl": "https://cityjobs.nyc.gov/job/785747",
+      "fitScore": 31,
       "secureScore": 55,
-      "compositeScore": 47.3,
+      "compositeScore": 41.8,
       "qualificationReview": "human-review-required",
       "deterministicScreen": {
         "eligible": false,
@@ -99,387 +102,226 @@
       "dispositionReason": "salary-ceiling-below-target"
     },
     {
-      "title": "Assistant Cloud Administrator for the Division of HPD TECH",
-      "organization": "Housing Preservation & Dvlpmnt",
-      "sourceUrl": "https://cityjobs.nyc.gov/job/792231",
-      "deadline": "2026-10-16",
-      "cityJobId": "792231",
-      "jobId": "792231",
-      "officialUrl": "https://cityjobs.nyc.gov/job/792231",
-      "fitScore": 35,
-      "secureScore": 63,
-      "compositeScore": 47.6,
-      "qualificationReview": "human-review-required",
-      "deterministicScreen": {
-        "eligible": true,
-        "reasons": [],
-        "deadline": "2026-10-16",
-        "salaryFrom": 99209,
-        "salaryTo": 114090
-      },
-      "disposition": "not-promoted",
-      "dispositionReason": "below-strong-match-threshold"
-    },
-    {
-      "title": "Wetlands Project Associate",
-      "organization": "Dept of Parks & Recreation",
-      "sourceUrl": "https://cityjobs.nyc.gov/job/792471",
-      "deadline": "2026-10-13",
-      "cityJobId": "792471",
-      "jobId": "792471",
-      "officialUrl": "https://cityjobs.nyc.gov/job/792471",
-      "fitScore": 43,
-      "secureScore": 40,
-      "compositeScore": 41.65,
-      "qualificationReview": "human-review-required",
-      "deterministicScreen": {
-        "eligible": false,
-        "reasons": [
-          "not-annual-salary",
-          "salary-ceiling-below-target"
-        ],
-        "deadline": "2026-10-13",
-        "salaryFrom": 28.04,
-        "salaryTo": 28.04
-      },
-      "disposition": "not-promoted",
-      "dispositionReason": "not-annual-salary,salary-ceiling-below-target"
-    },
-    {
-      "title": "Wetlands Mitigation Coordinator",
-      "organization": "Dept of Parks & Recreation",
-      "sourceUrl": "https://cityjobs.nyc.gov/job/792468",
-      "deadline": "2026-10-13",
-      "cityJobId": "792468",
-      "jobId": "792468",
-      "officialUrl": "https://cityjobs.nyc.gov/job/792468",
-      "fitScore": 33,
-      "secureScore": 55,
-      "compositeScore": 42.9,
-      "qualificationReview": "human-review-required",
-      "deterministicScreen": {
-        "eligible": false,
-        "reasons": [
-          "not-annual-salary",
-          "salary-ceiling-below-target"
-        ],
-        "deadline": "2026-10-13",
-        "salaryFrom": 34.4105,
-        "salaryTo": 34.4105
-      },
-      "disposition": "not-promoted",
-      "dispositionReason": "not-annual-salary,salary-ceiling-below-target"
-    },
-    {
-      "title": "Strategic Performance Analyst",
-      "organization": "Department for the Aging",
-      "sourceUrl": "https://cityjobs.nyc.gov/job/786540",
-      "deadline": "2026-10-13",
-      "cityJobId": "786540",
-      "jobId": "786540",
-      "officialUrl": "https://cityjobs.nyc.gov/job/786540",
-      "fitScore": 53,
-      "secureScore": 48,
-      "compositeScore": 50.75,
-      "qualificationReview": "human-review-required",
-      "deterministicScreen": {
-        "eligible": false,
-        "reasons": [
-          "credential-hard-screen"
-        ],
-        "deadline": "2026-10-13",
-        "salaryFrom": 87743,
-        "salaryTo": 100904
-      },
-      "disposition": "not-promoted",
-      "dispositionReason": "credential-hard-screen"
-    },
-    {
-      "title": "Project Coordinator — Safety Projects / Daylighting",
-      "organization": "Department of Transportation",
-      "sourceUrl": "https://cityjobs.nyc.gov/job/779542",
-      "deadline": "2026-08-28",
-      "cityJobId": "779542",
-      "jobId": "779542",
-      "officialUrl": "https://cityjobs.nyc.gov/job/779542",
-      "fitScore": 51,
-      "secureScore": 55,
-      "compositeScore": 52.8,
-      "qualificationReview": "human-review-required",
-      "deterministicScreen": {
-        "eligible": false,
-        "reasons": [
-          "not-external",
-          "salary-ceiling-below-target"
-        ],
-        "deadline": "2026-08-28",
-        "salaryFrom": 62868,
-        "salaryTo": 87144
-      },
-      "disposition": "not-promoted",
-      "dispositionReason": "not-external,salary-ceiling-below-target"
-    },
-    {
-      "title": "Policy Analyst for Budget, Finance, and Labor",
-      "organization": "Office of the Mayor",
-      "sourceUrl": "https://cityjobs.nyc.gov/job/792692",
-      "deadline": "2026-10-13",
-      "cityJobId": "792692",
-      "jobId": "792692",
-      "officialUrl": "https://cityjobs.nyc.gov/job/792692",
-      "fitScore": 41,
-      "secureScore": 75,
-      "compositeScore": 56.3,
-      "qualificationReview": "human-review-required",
-      "deterministicScreen": {
-        "eligible": true,
-        "reasons": [],
-        "deadline": "2026-10-13",
-        "salaryFrom": 110000,
-        "salaryTo": 110000
-      },
-      "disposition": "not-promoted",
-      "dispositionReason": "below-strong-match-threshold"
-    },
-    {
-      "title": "PROJECT MANAGER",
-      "organization": "Hra/dept of Social Services",
-      "sourceUrl": "https://cityjobs.nyc.gov/job/789819",
-      "deadline": "2026-10-13",
-      "cityJobId": "789819",
-      "jobId": "789819",
-      "officialUrl": "https://cityjobs.nyc.gov/job/789819",
-      "fitScore": 61,
-      "secureScore": 68,
-      "compositeScore": 64.15,
-      "qualificationReview": "human-review-required",
-      "deterministicScreen": {
-        "eligible": false,
-        "reasons": [
-          "credential-hard-screen"
-        ],
-        "deadline": "2026-10-13",
-        "salaryFrom": 87743,
-        "salaryTo": 110120
-      },
-      "disposition": "not-promoted",
-      "dispositionReason": "credential-hard-screen"
-    },
-    {
-      "title": "GIS Lead Specialist",
-      "organization": "Department of Finance",
-      "sourceUrl": "https://cityjobs.nyc.gov/job/788942",
-      "deadline": "2026-08-24",
-      "cityJobId": "788942",
-      "jobId": "788942",
-      "officialUrl": "https://cityjobs.nyc.gov/job/788942",
-      "fitScore": 23,
-      "secureScore": 48,
-      "compositeScore": 34.25,
-      "qualificationReview": "human-review-required",
-      "deterministicScreen": {
-        "eligible": false,
-        "reasons": [
-          "not-external",
-          "credential-hard-screen"
-        ],
-        "deadline": "2026-08-24",
-        "salaryFrom": 98159,
-        "salaryTo": 112883
-      },
-      "disposition": "not-promoted",
-      "dispositionReason": "not-external,credential-hard-screen"
-    },
-    {
-      "title": "Data Analytics Specialist",
-      "organization": "Department of Finance",
-      "sourceUrl": "https://cityjobs.nyc.gov/job/789136",
-      "deadline": "2026-09-13",
-      "cityJobId": "789136",
-      "jobId": "789136",
-      "officialUrl": "https://cityjobs.nyc.gov/job/789136",
-      "fitScore": 35,
-      "secureScore": 63,
-      "compositeScore": 47.6,
-      "qualificationReview": "human-review-required",
-      "deterministicScreen": {
-        "eligible": true,
-        "reasons": [],
-        "deadline": "2026-09-13",
-        "salaryFrom": 93568,
-        "salaryTo": 100904
-      },
-      "disposition": "not-promoted",
-      "dispositionReason": "below-strong-match-threshold"
-    },
-    {
-      "title": "Budget Research Analyst",
-      "organization": "Office of the Comptroller",
-      "sourceUrl": "https://cityjobs.nyc.gov/job/792894",
-      "deadline": "2026-10-13",
-      "cityJobId": "792894",
-      "jobId": "792894",
-      "officialUrl": "https://cityjobs.nyc.gov/job/792894",
-      "fitScore": 39,
-      "secureScore": 55,
-      "compositeScore": 46.2,
-      "qualificationReview": "human-review-required",
-      "deterministicScreen": {
-        "eligible": false,
-        "reasons": [
-          "not-external",
-          "salary-ceiling-below-target"
-        ],
-        "deadline": "2026-10-13",
-        "salaryFrom": 70000,
-        "salaryTo": 80000
-      },
-      "disposition": "not-promoted",
-      "dispositionReason": "not-external,salary-ceiling-below-target"
-    },
-    {
-      "title": "Associate Director of Policy Implementation",
-      "organization": "Campaign Finance Board",
-      "sourceUrl": "https://cityjobs.nyc.gov/job/792925",
-      "deadline": "2026-10-13",
-      "cityJobId": "792925",
-      "jobId": "792925",
-      "officialUrl": "https://cityjobs.nyc.gov/job/792925",
-      "fitScore": 100,
-      "secureScore": 87,
-      "compositeScore": 94.15,
-      "qualificationReview": "human-review-required",
-      "deterministicScreen": {
-        "eligible": true,
-        "reasons": [],
-        "deadline": "2026-10-13",
-        "salaryFrom": 125000,
-        "salaryTo": 135000
-      },
-      "disposition": "provisional-strong-match",
-      "dispositionReason": "clears-deterministic-thresholds",
-      "automaticDisposition": "provisional-intake-only"
-    },
-    {
-      "title": "Community Affairs Advocate",
-      "organization": "Public Advocate",
-      "sourceUrl": "https://cityjobs.nyc.gov/job/community-affairs-advocate-in-nyc-all-boros-jid-43514",
-      "deadline": "2026-09-06",
-      "cityJobId": "780526",
-      "jobId": "780526",
-      "officialUrl": "https://cityjobs.nyc.gov/job/community-affairs-advocate-in-nyc-all-boros-jid-43514",
-      "fitScore": 31,
-      "secureScore": 30,
-      "compositeScore": 30.55,
-      "qualificationReview": "human-review-required",
-      "deterministicScreen": {
-        "eligible": false,
-        "reasons": [
-          "not-external",
-          "salary-ceiling-below-target"
-        ],
-        "deadline": "2026-09-06",
-        "salaryFrom": 58104,
-        "salaryTo": 58104
-      },
-      "disposition": "not-promoted",
-      "dispositionReason": "not-external,salary-ceiling-below-target"
-    },
-    {
-      "title": "Policy Director — NY Senate District 59 (Sen. Kristen Gonzalez) — NY State Senate",
-      "organization": "Office of Sen. Kristen Gonzalez",
-      "sourceUrl": "https://www.nysenate.gov/newsroom/articles/2026/kristen-gonzalez/were-hiring-policy-director-ny-senate-district-59",
+      "title": "Community Planning & Research Accelerator",
+      "organization": "Pratt Center for Community Development",
+      "sourceUrl": "https://prattcenter.net/get_involved/fellowships/cpra",
       "deadline": null,
       "cityJobId": null,
-      "jobId": null,
-      "officialUrl": "https://www.nysenate.gov/newsroom/articles/2026/kristen-gonzalez/were-hiring-policy-director-ny-senate-district-59",
-      "salaryFrom": 75000,
-      "salaryTo": 95000,
-      "fitScore": 84,
-      "secureScore": 58,
-      "compositeScore": 72.3,
+      "disposition": "official-verification-required",
+      "dispositionReason": "external-employer-adapter-required"
+    },
+    {
+      "title": "Data Manager",
+      "organization": "NYC Independent Budget Office",
+      "sourceUrl": "https://jobs.citylimits.org/jobs/584035488-data-manager-at-new-york-city-independent-budget-office",
+      "deadline": null,
+      "cityJobId": null,
+      "disposition": "official-verification-required",
+      "dispositionReason": "external-employer-adapter-required"
+    },
+    {
+      "title": "Assistant EHS Management System (MS) Data Coordinator",
+      "organization": "Department of Environmental Protection",
+      "sourceUrl": "https://cityjobs.nyc.gov/job/777685",
+      "deadline": null,
+      "cityJobId": "777685",
+      "jobId": "777685",
+      "officialUrl": "https://cityjobs.nyc.gov/job/777685",
+      "fitScore": 39,
+      "secureScore": 40,
+      "compositeScore": 39.45,
       "qualificationReview": "human-review-required",
-      "officialPageReviewedAt": "2026-08-20",
-      "officialPageReviewExpiresAt": "2026-08-27",
+      "deterministicScreen": {
+        "eligible": false,
+        "reasons": [
+          "salary-ceiling-below-target",
+          "credential-hard-screen"
+        ],
+        "deadline": "2026-09-23",
+        "salaryFrom": 74536,
+        "salaryTo": 90188
+      },
+      "disposition": "not-promoted",
+      "dispositionReason": "salary-ceiling-below-target,credential-hard-screen"
+    },
+    {
+      "title": "Senior Director of Engineering",
+      "organization": "Campaign Finance Board",
+      "sourceUrl": "https://cityjobs.nyc.gov/job/senior-director-of-engineering-in-manhattan-jid-45942",
+      "deadline": null,
+      "cityJobId": "788973",
+      "jobId": "788973",
+      "officialUrl": "https://cityjobs.nyc.gov/job/senior-director-of-engineering-in-manhattan-jid-45942",
+      "fitScore": 50,
+      "secureScore": 40,
+      "compositeScore": 45.5,
+      "qualificationReview": "human-review-required",
+      "deterministicScreen": {
+        "eligible": true,
+        "reasons": [],
+        "deadline": "2026-09-28",
+        "salaryFrom": 215000,
+        "salaryTo": 235000
+      },
+      "disposition": "not-promoted",
+      "dispositionReason": "below-strong-match-threshold"
+    },
+    {
+      "title": "Public Engagement Content Manager",
+      "organization": "Department of Transportation",
+      "sourceUrl": "https://cityjobs.nyc.gov/job/public-engagement-content-manager-in-manhattan-jid-46714",
+      "deadline": null,
+      "cityJobId": "787787",
+      "jobId": "787787",
+      "officialUrl": "https://cityjobs.nyc.gov/job/public-engagement-content-manager-in-manhattan-jid-46714",
+      "fitScore": 41,
+      "secureScore": 55,
+      "compositeScore": 47.3,
+      "qualificationReview": "human-review-required",
+      "deterministicScreen": {
+        "eligible": false,
+        "reasons": [
+          "salary-ceiling-below-target"
+        ],
+        "deadline": "2026-09-04",
+        "salaryFrom": 62868,
+        "salaryTo": 97593
+      },
       "disposition": "not-promoted",
       "dispositionReason": "salary-ceiling-below-target"
     },
     {
-      "title": "Product Manager (First Product Hire)",
-      "organization": "Polimorphic",
-      "sourceUrl": "https://app.trinethire.com/companies/381666-polimorphic/jobs/123173-product-manager",
+      "title": "Mainframe Systems Manager",
+      "organization": "Financial Information Services Agency",
+      "sourceUrl": "https://cityjobs.nyc.gov/job/794069",
       "deadline": null,
-      "cityJobId": null,
-      "jobId": "polimorphic-123173",
-      "officialUrl": "https://app.trinethire.com/companies/381666-polimorphic/jobs/123173-product-manager",
-      "salaryFrom": 165000,
-      "salaryTo": 195000,
-      "fitScore": 92,
-      "secureScore": 70,
-      "compositeScore": 82.1,
+      "cityJobId": "794069",
+      "jobId": "794069",
+      "officialUrl": "https://cityjobs.nyc.gov/job/794069",
+      "fitScore": 29,
+      "secureScore": 58,
+      "compositeScore": 42.05,
       "qualificationReview": "human-review-required",
-      "officialPageReviewedAt": "2026-08-20",
-      "officialPageReviewExpiresAt": "2026-08-27",
-      "disposition": "provisional-strong-match",
-      "dispositionReason": "clears-reviewed-external-thresholds",
-      "automaticDisposition": "provisional-intake-only"
-    },
-    {
-      "title": "Paragon Policy Fellowship — Fall 2026 Cohort (Fellows & Project Leads)",
-      "organization": "Paragon Policy Fellowship",
-      "sourceUrl": "https://www.paragonfellowship.org/students",
-      "deadline": "2026-08-23",
-      "cityJobId": null,
-      "jobId": null,
-      "officialUrl": "https://www.paragonfellowship.org/students",
-      "salaryFrom": 0,
-      "salaryTo": 0,
-      "fitScore": 60,
-      "secureScore": 10,
-      "compositeScore": 37.5,
-      "qualificationReview": "human-review-required",
-      "officialPageReviewedAt": "2026-08-20",
-      "officialPageReviewExpiresAt": "2026-08-23",
-      "disposition": "not-promoted",
-      "dispositionReason": "unpaid-and-student-recent-graduate-eligibility"
-    },
-    {
-      "title": "Civil Service Pathways Fellowship",
-      "organization": "DCAS",
-      "sourceUrl": "https://www.cuny.edu/news/dcas-announces-expansion-of-the-civil-service-pathways-fellowship-connecting-recent-cuny-grads-with-municipal-career-opportunities/",
-      "deadline": null,
-      "cityJobId": null,
-      "jobId": null,
-      "officialUrl": "https://www.nyc.gov/site/dcas/employment/internship-and-fellowships-civil-service-pathways-fellowship.page",
-      "salaryFrom": 48956,
-      "salaryTo": 53862,
-      "fitScore": 55,
-      "secureScore": 10,
-      "compositeScore": 34.75,
-      "qualificationReview": "human-review-required",
-      "officialPageReviewedAt": "2026-08-20",
-      "officialPageReviewExpiresAt": "2026-08-27",
-      "disposition": "not-promoted",
-      "dispositionReason": "salary-ceiling-and-cuny-graduate-eligibility"
-    },
-    {
-      "title": "Federal Big Tech Accountability Advocate",
-      "organization": "Public Citizen",
-      "sourceUrl": "https://publiccitizen.applytojob.com/apply/xJbwjLWghU/Federal-Big-Tech-Accountability-Advocate",
-      "deadline": null,
-      "cityJobId": null,
-      "jobId": "public-citizen-big-tech-accountability-advocate",
-      "officialUrl": "https://publiccitizen.applytojob.com/apply/xJbwjLWghU/Federal-Big-Tech-Accountability-Advocate",
-      "salaryFrom": 85383,
-      "salaryTo": 141633,
-      "fitScore": 78,
-      "secureScore": 55,
-      "compositeScore": 67.65,
-      "qualificationReview": "human-review-required",
-      "officialPageReviewedAt": "2026-08-20",
-      "officialPageReviewExpiresAt": "2026-08-27",
+      "deterministicScreen": {
+        "eligible": true,
+        "reasons": [],
+        "deadline": "2026-10-19",
+        "salaryFrom": 75000,
+        "salaryTo": 180000
+      },
       "disposition": "not-promoted",
       "dispositionReason": "below-strong-match-threshold"
+    },
+    {
+      "title": "Senior Advisor for Strategy & Special Projects",
+      "organization": "Office of the Mayor",
+      "sourceUrl": "https://cityjobs.nyc.gov/job/794518",
+      "deadline": null,
+      "cityJobId": "794518",
+      "jobId": "794518",
+      "officialUrl": "https://cityjobs.nyc.gov/job/794518",
+      "fitScore": 56,
+      "secureScore": 75,
+      "compositeScore": 64.55,
+      "qualificationReview": "human-review-required",
+      "deterministicScreen": {
+        "eligible": true,
+        "reasons": [],
+        "deadline": "2026-10-20",
+        "salaryFrom": 105000,
+        "salaryTo": 130000
+      },
+      "disposition": "not-promoted",
+      "dispositionReason": "below-strong-match-threshold"
+    },
+    {
+      "title": "College Aide",
+      "organization": "Department of Design & Construction",
+      "sourceUrl": "https://cityjobs.nyc.gov/job/788532",
+      "deadline": null,
+      "cityJobId": "788532",
+      "jobId": "788532",
+      "officialUrl": "https://cityjobs.nyc.gov/job/788532",
+      "fitScore": 33,
+      "secureScore": 40,
+      "compositeScore": 36.15,
+      "qualificationReview": "human-review-required",
+      "deterministicScreen": {
+        "eligible": false,
+        "reasons": [
+          "not-external",
+          "not-annual-salary",
+          "salary-ceiling-below-target"
+        ],
+        "deadline": "2026-10-20",
+        "salaryFrom": 19.14,
+        "salaryTo": 19.14
+      },
+      "disposition": "not-promoted",
+      "dispositionReason": "not-external,not-annual-salary,salary-ceiling-below-target"
+    },
+    {
+      "title": "AI For The People — Fall 2026 Design Competition",
+      "organization": "Comp Sci High",
+      "sourceUrl": "https://dinoah1981.github.io/fall-design-comp26/",
+      "deadline": null,
+      "cityJobId": null,
+      "disposition": "official-verification-required",
+      "dispositionReason": "external-employer-adapter-required"
+    },
+    {
+      "title": "Data Scientist/Engineer",
+      "organization": "The Impact Project",
+      "sourceUrl": "https://theimpactproject.org/data-scientist/",
+      "deadline": null,
+      "cityJobId": null,
+      "disposition": "official-verification-required",
+      "dispositionReason": "external-employer-adapter-required"
+    },
+    {
+      "title": "Senior Data Scientist",
+      "organization": "Port Authority of NY & NJ",
+      "sourceUrl": "https://www.jointheportauthority.com/jobs/18153362-senior-data-scientist",
+      "deadline": null,
+      "cityJobId": null,
+      "disposition": "official-verification-required",
+      "dispositionReason": "external-employer-adapter-required"
+    },
+    {
+      "title": "Website Manager",
+      "organization": "Apollo Theater Foundation",
+      "sourceUrl": "https://apollotheater.applytojob.com/apply/GWpkAbSknW/Website-Manager",
+      "deadline": null,
+      "cityJobId": null,
+      "disposition": "official-verification-required",
+      "dispositionReason": "external-employer-adapter-required"
+    },
+    {
+      "title": "Project Designer",
+      "organization": "it’s electric",
+      "sourceUrl": "https://apply.workable.com/itselectric/j/EB4EA4DC92",
+      "deadline": null,
+      "cityJobId": null,
+      "disposition": "official-verification-required",
+      "dispositionReason": "external-employer-adapter-required"
+    },
+    {
+      "title": "Technical Lead",
+      "organization": "TXI",
+      "sourceUrl": "https://jobs.lever.co/txidigital/6f94f489-976b-4db7-9da2-c4d8bcde9401",
+      "deadline": null,
+      "cityJobId": null,
+      "disposition": "official-verification-required",
+      "dispositionReason": "external-employer-adapter-required"
+    },
+    {
+      "title": "Volunteer for Open House New York Weekend",
+      "organization": "Open House New York",
+      "sourceUrl": "https://ohny.fillout.com/volunteer-26",
+      "deadline": null,
+      "cityJobId": null,
+      "disposition": "official-verification-required",
+      "dispositionReason": "external-employer-adapter-required"
     }
   ]
 }

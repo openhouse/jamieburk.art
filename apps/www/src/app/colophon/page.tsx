@@ -107,10 +107,11 @@ export default function ColophonPage() {
               surface="/colophon"
             />
           </p>
-          <p className="mt-3 text-base leading-7 text-jb-ink/72">
-            Made and maintained by Jamie Burkart. Last revised 22 August 2026.
-            Jamie checks suggested corrections against the record and notes
-            accepted changes here. {" "}
+          <p className="mt-3 text-base font-semibold leading-7 text-jb-ink">
+            Automated checks flag issues; Jamie decides what is published.
+          </p>
+          <p className="mt-2 text-sm leading-6 text-jb-ink/64">
+            Made and maintained by Jamie Burkart. Last revised 29 August 2026. {" "}
             <Link
               className="font-semibold text-jb-blue underline decoration-jb-blue/35 underline-offset-4 hover:text-jb-green"
               href="/lab/source-backed-team-memory"
@@ -133,7 +134,8 @@ export default function ColophonPage() {
             <p className="mt-2">
               Tools and modeled reviewers may suggest changes, but they do not
               supply consent, rights, approval, endorsement, or publication
-              authority. Jamie decides what appears here.
+              authority. Jamie decides what appears here. He checks suggested
+              corrections against the record and notes accepted changes here.
             </p>
           </details>
         </div>

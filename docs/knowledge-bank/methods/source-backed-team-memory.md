@@ -5,7 +5,7 @@ kind: method
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-21
+last_reviewed: 2026-08-29
 review_by: 2027-01-18
 canonical_path: docs/knowledge-bank/methods/source-backed-team-memory.md
 summary: >
@@ -70,6 +70,36 @@ The method helps produce [Technical Operations](../capabilities/technical-operat
 evidence, but an internal pass does not substitute for collaborator review or
 external outcomes. Access to a source is not evidence for every possible claim,
 and evidence is not publication permission.
+
+## Operating control plane
+
+The graphs describe what the system holds. A complementary control plane keeps
+the current operating conditions inspectable without becoming another source
+of truth.
+
+1. A source-of-sources coverage registry marks each eligible family reviewed,
+   excluded with reason, unresolved, unavailable, or protected. Access,
+   consent, evidence, quotation rights, and publication authority remain
+   separate gates.
+2. The operating state ledger distinguishes proposal, invitation, attendance,
+   contribution, commitment, authority, adoption, outcome, and correction.
+   Each state requires its own support.
+3. Candidate, situational, and strategic health are perishable. Source
+   revision, a candidate-affecting change, new contradiction, changed rights or
+   consent, or an elapsed review window invalidates the relevant result.
+4. Deterministic eligibility and mutation resistance run before fictionalized
+   model review. The model may return `PASS`, `FAIL`, or
+   `ABSTAIN_INSUFFICIENT_EVIDENCE`; it cannot supply consent, publication
+   permission, adoption, or action authority. The human decision remains last.
+5. A situated-voice record needs an adequate corpus and an explicit authority
+   state—unconfirmed, self-authored, or team-confirmed—and never permits
+   impersonation.
+6. The method is judged by capacity and handoff: correction latency, open-loop
+   density, ownership concentration, and whether another person can actually
+   continue the work.
+
+Every receipt is linked to the exact candidate. Candidate-affecting changes
+require fresh checks; a stale receipt cannot be relabeled as current.
 
 ## Focused pilot pattern
 
