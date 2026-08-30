@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Rights and consent review
 
-**Source commit:** `ccddbf75a1e1a3ab293c5dd067e1f30a5b9a6855`
-**Generation time:** 2026-08-22T21:22:19-04:00
-**Source fingerprint:** `c2cf41ec29380d85699d1af93a8f8fe4629fbe0116345afd5e96d2cf0a6f5033`
+**Source commit:** `f034c3491a8d9f5bee4d6b50a14838143fd7989e`
+**Generation time:** 2026-08-29T22:34:10-04:00
+**Source fingerprint:** `c6b4d42cf074912eff2ebbfc948782968170e5314b896116ecf207915380f5cf`
 
 - `asset.photo.digital-district.001` - rights `permission-needed`, consent `review-needed`, display `hold`
 - `asset.photo.kc-town-hall.hard-hat.001` - rights `permission-needed`, consent `not-applicable`, display `hold`
@@ -12,6 +12,7 @@
 - `asset.photo-set.mit-interrogative-design.2024` - rights `permission-needed`, consent `review-needed`, display `hold`
 - `asset.photo.nyc-council.field-kit.2026.001` - rights `permission-needed`, consent `not-applicable`, display `hold`
 - `asset.photo.nycac-dcla-listening-room.2017.001` - rights `unknown`, consent `review-needed`, display `hold`
+- `asset.photo.nycac-dcla-portrait.2026-08-26` - rights `cleared`, consent `cleared`, display `metadata-only`
 - `asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb` - rights `permission-needed`, consent `review-needed`, display `hold`
 - `asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj` - rights `permission-needed`, consent `review-needed`, display `hold`
 - `asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-wp36j4c2rp` - rights `permission-needed`, consent `review-needed`, display `hold`

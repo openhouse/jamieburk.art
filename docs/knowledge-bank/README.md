@@ -23,6 +23,10 @@ relations:
     href: indexes/employment-context.md
     context: Present-tense opportunity research and public-only hiring evaluation.
   - type: related_to
+    target: method.source-backed-team-memory
+    href: methods/source-backed-team-memory.md
+    context: Current three-graph operating method and public-work comparative design questions.
+  - type: related_to
     target: index.knowledge-wiki.living-archive
     href: indexes/living-archive.md
     context: Orientation, missing-page, project, and situated source-return map.
@@ -113,6 +117,9 @@ The website should use the clearest subset for a specific audience and purpose.
 - [Employment context](indexes/employment-context.md): live official-source
   opportunities, stable requirement IDs, public-only reader evaluation, and
   private job-search boundaries.
+- [Knowledge Wiki Graph / Source-Backed Team Memory](methods/source-backed-team-memory.md):
+  the current three-graph operating method, its source-custody boundaries, and
+  three explicitly comparative public-work design questions.
 - [Living archive](indexes/living-archive.md): Jamie, the practice throughline,
   the priority project and campaign cohort, ethical methods, visual evidence,
   and a dated return to original source material.

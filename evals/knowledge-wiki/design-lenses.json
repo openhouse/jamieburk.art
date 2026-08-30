@@ -1,0 +1,74 @@
+{
+  "id": "knowledge-wiki-comparative-design-lenses-2026-08-24",
+  "schemaVersion": 1,
+  "evaluationType": "deterministic-first-with-fictionalized-model-review",
+  "methodRecordId": "method.source-backed-team-memory",
+  "methodPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
+  "lenses": [
+    {
+      "id": "ward-cunningham",
+      "personId": "person.ward-cunningham",
+      "personPath": "docs/knowledge-bank/people/ward-cunningham.md",
+      "sourcePaths": [
+        "docs/knowledge-bank/sources/ward-cunningham-smallest-federated-wiki.md"
+      ],
+      "question": "Can a participant copy, revise, reconsider, or disagree without erasing provenance or forcing every context into one centrally controlled account?"
+    },
+    {
+      "id": "denny-vrandecic",
+      "personId": "person.denny-vrandecic",
+      "personPath": "docs/knowledge-bank/people/denny-vrandecic.md",
+      "sourcePaths": [
+        "docs/knowledge-bank/sources/wikimedia-abstract-wikipedia-team-2026.md"
+      ],
+      "question": "Can knowledge retain stable semantic identity and source relationships while different people, agents, languages, and audiences receive different reviewed projections?"
+    },
+    {
+      "id": "yehuda-katz",
+      "personId": "person.yehuda-katz",
+      "personPath": "docs/knowledge-bank/people/yehuda-katz.md",
+      "sourcePaths": [
+        "docs/knowledge-bank/sources/ember-team-2026.md",
+        "docs/knowledge-bank/sources/ember-organizing-contributors-2018.md"
+      ],
+      "question": "Can conventions make the common path legible while a proposal-and-review process lets the system change without discarding accumulated knowledge or breaking existing practice?"
+    }
+  ],
+  "deterministicFirst": true,
+  "modelReview": {
+    "allowedOnlyAfterDeterministicPass": true,
+    "inputScope": "exact-public-safe-records-only",
+    "roleplayStatus": "explicitly-fictionalized-analytical-lens",
+    "acceptanceQuestion": "Does the maintained method respond clearly and truthfully to this lens's design question while preserving evidence, authority, and non-endorsement boundaries?",
+    "labels": [
+      "pass",
+      "revise"
+    ],
+    "requiredResponseFields": [
+      "lensId",
+      "label",
+      "reason",
+      "strongestFeature",
+      "mostImportantRevision",
+      "boundaryCheck"
+    ]
+  },
+  "authorityBoundary": {
+    "namedPeopleParticipated": false,
+    "namedPeopleReviewed": false,
+    "namedPeopleApprovedOrEndorsed": false,
+    "modelReviewIsNamedPersonOpinion": false,
+    "publicationAndDesignDecisionOwner": "Jamie Burkart",
+    "automatedPassAuthorizesPublication": false
+  },
+  "hardGates": [
+    "stable-person-and-source-identities",
+    "official-public-sources",
+    "questions-not-lineage-claims",
+    "no-collaboration-or-endorsement-inference",
+    "sources-held-from-direct-projection",
+    "deterministic-before-model",
+    "exact-public-safe-model-packet",
+    "jamie-retains-human-authority"
+  ]
+}

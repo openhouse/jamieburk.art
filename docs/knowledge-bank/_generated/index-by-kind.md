@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `ccddbf75a1e1a3ab293c5dd067e1f30a5b9a6855`
-**Generation time:** 2026-08-22T21:22:19-04:00
-**Source fingerprint:** `c2cf41ec29380d85699d1af93a8f8fe4629fbe0116345afd5e96d2cf0a6f5033`
+**Source commit:** `f034c3491a8d9f5bee4d6b50a14838143fd7989e`
+**Generation time:** 2026-08-29T22:34:10-04:00
+**Source fingerprint:** `c6b4d42cf074912eff2ebbfc948782968170e5314b896116ecf207915380f5cf`
 
 ## application
 
@@ -27,6 +27,7 @@
 - [NYC Artist Coalition shared working map, 2017](../assets/photographs/knowledge-wiki-collective-map-2017.md) - `asset.photo.knowledge-wiki.collective-map.2017.001`
 - [Jamie with a civic field kit at New York City Council](../assets/photographs/nyc-council-field-kit-2026.md) - `asset.photo.nyc-council.field-kit.2026.001`
 - [DCLA listening room, January 2017](../assets/photographs/nycac-dcla-listening-room-2017.md) - `asset.photo.nycac-dcla-listening-room.2017.001`
+- [Jamie at the Brooklyn artist listening session](../assets/photographs/nycac-dcla-portrait-2026-08-26.md) - `asset.photo.nycac-dcla-portrait.2026-08-26`
 - [Shoestring Press coalition working session, 2017](../assets/photographs/nycac-shoestring-facilitation-2017.md) - `asset.photo.nycac-shoestring-facilitation.2017.001`
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb`
 - [FairRentNYC: 2019 03 18 small business rally 1 [hur5tftl]](../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj.md) - `asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj`
@@ -259,6 +260,7 @@
 - [Commercial Rent Stabilization event at Friends and Lovers](../events/commercial-rent-friends-and-lovers-2026-02-17.md) - `event.nyc.commercial-rent.friends-and-lovers.2026-02-17`
 - [Project X community conversation](../events/commercial-rent-project-x-2026-03-10.md) - `event.nyc.commercial-rent.project-x.2026-03-10`
 - [Commercial Rent Stabilization public event](../events/commercial-rent-public-event-2025-11-13.md) - `event.nyc.commercial-rent.public-event.2025-11-13`
+- [Brooklyn artist listening session at 651 ARTS](../events/dcla-brooklyn-listening-2026-08-26.md) - `event.nyc.dcla.brooklyn-listening.2026-08-26`
 - [NYC DIY spaces meeting at the Department of Cultural Affairs](../events/nyc-diy-spaces-dcla-2017-01-27.md) - `event.nyc.dcla.diy-spaces-listening.2017-01-27`
 - [Empty Storefronts, High Rents public report launch](../events/sbu-report-launch-2026-07-29.md) - `event.nyc.sbu-report-launch.2026-07-29`
 - [New York City Council constituent-services hackathon](../events/nycc-constituent-services-hackathon-2016.md) - `event.nycc.constituent-services-hackathon.2016`
@@ -358,6 +360,7 @@
 - [Charizma Williams](../people/charizma-williams.md) - `person.charizma-williams`
 - [Chris Coleman](../people/chris-coleman.md) - `person.chris-coleman`
 - [Courtney Kishbaugh](../people/courtney-kishbaugh.md) - `person.courtney-kishbaugh`
+- [Denny Vrandečić](../people/denny-vrandecic.md) - `person.denny-vrandecic`
 - [Diya Vij](../people/diya-vij.md) - `person.diya-vij`
 - [Elana Gordon](../people/elana-gordon.md) - `person.elana-gordon`
 - [Jaclyn Chen](../people/jaclyn-chen.md) - `person.jaclyn-chen`
@@ -368,7 +371,9 @@
 - [Luke Farrell](../people/luke-farrell.md) - `person.luke-farrell`
 - [Paul Mossine](../people/paul-mossine.md) - `person.paul-mossine`
 - [Thomas Edlinger](../people/thomas-edlinger.md) - `person.thomas-edlinger`
+- [Ward Cunningham](../people/ward-cunningham.md) - `person.ward-cunningham`
 - [Warren Sack](../people/warren-sack.md) - `person.warren-sack`
+- [Yehuda Katz](../people/yehuda-katz.md) - `person.yehuda-katz`
 - [Zack Parker](../people/zack-parker.md) - `person.zack-parker`
 
 ## place
@@ -450,6 +455,8 @@
 - [Civic Hall hackathon announcement](../sources/civichall-hackathon-announcement-2016.md) - `source.civichall.hackathon-announcement.2016`
 - [CodePath official leadership pages - 2026](../sources/codepath-leadership-2026.md) - `source.codepath.leadership.2026`
 - [New York City Council Constituent Services Data release](../sources/nycc-constituent-services-data-2016-05-27.md) - `source.councilstat.fuller-release.2016`
+- [Ember Team - Organizing Our Contributors](../sources/ember-organizing-contributors-2018.md) - `source.ember.organizing-contributors.2018`
+- [Ember - The Team Behind Ember](../sources/ember-team-2026.md) - `source.ember.team.2026`
 - [Open House at UC Santa Cruz](../sources/good-times-open-house-2006-06-28.md) - `source.good-times.open-house.2006-06-28`
 - [Cabaret Law repeal hearing: supportive witness testimony](../testimony/heteroglossia/2017-09-14-cabaret-law-supportive-witnesses.md) - `source.heteroglossia.cabaret-law.2017-09-14`
 - [Commercial rent stabilization hearing: supportive testimony and prime-sponsor statements](../testimony/heteroglossia/2021-09-17-commercial-rent-stabilization-supportive-speakers.md) - `source.heteroglossia.commercial-rent-stabilization.2021-09-17`
@@ -495,6 +502,7 @@
 - [NYC Mayor's Office - PIT Crew launch announcement](../sources/nyc-pit-crew-launch-2026.md) - `source.nyc.pit-crew-launch.2026-07-13`
 - [NYC SPEED report and release, May 2026](../sources/nyc-speed-report-2026.md) - `source.nyc.speed-report.2026-05-13`
 - [NYC Artist Coalition DCLA formation source return, 2026](../sources/archives/nycac-dcla-formation-source-return-2026-07.md) - `source.nycac.dcla-formation-source-return.2026-07`
+- [DCLA listening-session repaired-edition reading](../sources/archives/dcla-listening-reading-2026-08-26.md) - `source.nycac.dcla-listening-reading.2026-08-26`
 - [Governed NYCAC frontline advocacy source comparison, July 13-August 12, 2026](../sources/archives/nycac-frontline-advocacy-2026-08.md) - `source.nycac.frontline-advocacy.2026-08`
 - [NYC nightlife forum corrected working transcript, 2026](../sources/nycac-nightlife-forum-transcript-2026.md) - `source.nycac.nightlife-forum-transcript.2026`
 - [NYC Artist Coalition project-site photograph census](../sources/archives/nycac-project-site-photograph-census-2026-07.md) - `source.nycac.project-site-photograph-census.2026-07-28`
@@ -541,7 +549,9 @@
 - [University of Innsbruck scientific-staff profile - postdocs](../sources/uibk-postdoc-profile-2026.md) - `source.uibk.postdoc-profile.2026`
 - [Official University of Innsbruck and ./studio3 leadership context](../sources/uibk-studio3-leadership-2026.md) - `source.uibk.studio3.leadership.2026`
 - [Protected communication history - public-safe metadata boundary](../sources/protected-communication-vault-metadata.md) - `source.vault.communication-history.metadata`
+- [Ward Cunningham - Smallest Federated Wiki](../sources/ward-cunningham-smallest-federated-wiki.md) - `source.ward-cunningham.smallest-federated-wiki`
 - [Weibel Institute In Terms of Media event record](../sources/weibel-in-terms-of-media-2024.md) - `source.weibel.in-terms-of-media.2024`
+- [Wikimedia - Abstract Wikipedia team](../sources/wikimedia-abstract-wikipedia-team-2026.md) - `source.wikimedia.abstract-wikipedia-team.2026`
 - [Work for America team page — Courtney Kishbaugh](../sources/work-for-america-courtney-kishbaugh-civic-match.md) - `source.work-for-america.courtney-kishbaugh-civic-match`
 - [Work for America team page — Josh Gee](../sources/work-for-america-josh-gee-civic-match.md) - `source.work-for-america.josh-gee-civic-match`
 - [Governed WOW List knowledge repository](../sources/wowlist-knowledge-repository-2026.md) - `source.wowlist.knowledge-repository.2026`

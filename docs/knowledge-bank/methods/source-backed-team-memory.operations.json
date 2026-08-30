@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "id": "method.source-backed-team-memory.control-plane.v1",
+  "status": "maintained",
+  "last_reviewed": "2026-08-29",
+  "graph_responsibilities": [
+    "semantic",
+    "evidence",
+    "source-custody"
+  ],
+  "source_registry": {
+    "required_fields": [
+      "source_id",
+      "can_establish",
+      "cannot_establish",
+      "last_reviewed",
+      "source_cutoff",
+      "known_gaps",
+      "refresh_trigger",
+      "custody",
+      "allowed_projection"
+    ],
+    "default_projection": "hold",
+    "absence_is_not_negative_evidence": true
+  },
+  "state_models": {
+    "opportunity": {
+      "allowed_states": [
+        "discovered",
+        "qualified",
+        "ready-to-apply",
+        "applied",
+        "in-review",
+        "interviewing",
+        "offered",
+        "accepted",
+        "declined",
+        "rejected",
+        "withdrawn",
+        "expired"
+      ],
+      "transitions": {
+        "discovered": ["qualified", "expired"],
+        "qualified": ["ready-to-apply", "withdrawn", "expired"],
+        "ready-to-apply": ["applied", "withdrawn", "expired"],
+        "applied": ["in-review", "interviewing", "rejected", "withdrawn", "expired"],
+        "in-review": ["interviewing", "offered", "rejected", "withdrawn", "expired"],
+        "interviewing": ["offered", "rejected", "withdrawn", "expired"],
+        "offered": ["accepted", "declined", "withdrawn", "expired"],
+        "accepted": [],
+        "declined": [],
+        "rejected": [],
+        "withdrawn": [],
+        "expired": []
+      },
+      "terminal_states": ["accepted", "declined", "rejected", "withdrawn", "expired"]
+    },
+    "relationship": {
+      "allowed_states": [
+        "known",
+        "contacted",
+        "responded",
+        "scheduled",
+        "met",
+        "follow-up-due",
+        "active-collaboration",
+        "dormant",
+        "closed"
+      ],
+      "required_event_fields": [
+        "event_id",
+        "occurred_at",
+        "actor",
+        "from_state",
+        "to_state",
+        "source_ids"
+      ],
+      "invariants": [
+        "interest-is-not-authority",
+        "plan-is-not-action",
+        "response-is-not-commitment"
+      ]
+    }
+  },
+  "health": {
+    "dimensions": [
+      "source-coverage",
+      "claim-maturity",
+      "projection-freshness",
+      "eval-readiness",
+      "candidate-receipt-freshness",
+      "action-readiness"
+    ],
+    "no_composite_override": true,
+    "report_each_dimension": true
+  },
+  "planning_horizons": [
+    {
+      "id": "next-action",
+      "window": "24-hours",
+      "question": "What is the next truthful action?"
+    },
+    {
+      "id": "active-week",
+      "window": "7-days",
+      "question": "What must move or be refreshed this week?"
+    },
+    {
+      "id": "application-cycle",
+      "window": "30-days",
+      "question": "What evidence, materials, and relationships improve the current cycle?"
+    },
+    {
+      "id": "strategic-learning",
+      "window": "90-days",
+      "question": "What pattern should the system learn from real outcomes?"
+    }
+  ],
+  "dependency_receipts": {
+    "required_candidate_fields": [
+      "commit",
+      "content_fingerprint",
+      "upstream_fingerprint"
+    ],
+    "generated_output_digests_required": true,
+    "stale_after_upstream_change": true,
+    "cross_candidate_reuse": false
+  },
+  "evaluation_pipeline": {
+    "ordered_stages": [
+      "source-freshness",
+      "schema-and-state",
+      "candidate-binding",
+      "deterministic-evals",
+      "subjective-evals",
+      "human-decision"
+    ],
+    "deterministic_before_subjective": true,
+    "objective_checks_may_use_subjective_model": false,
+    "subjective_eval_requires_known_failure_mode": true,
+    "model_decision_authority": "none"
+  },
+  "situated_voice": {
+    "required_fields": [
+      "source_basis",
+      "speaker_or_lens",
+      "audience",
+      "purpose",
+      "public_private_boundary"
+    ],
+    "simulation_is_endorsement": false,
+    "simulation_is_participation": false,
+    "human_confirmation_required_for_attribution": true
+  },
+  "action_contract": {
+    "required_fields": [
+      "action_id",
+      "action",
+      "owner",
+      "authority_state",
+      "due_at",
+      "evidence_ids",
+      "next_state"
+    ],
+    "human_authorization_actions": [
+      "send-outreach",
+      "submit-application",
+      "publish",
+      "merge",
+      "deploy",
+      "spend",
+      "make-public-endorsement",
+      "take-political-action"
+    ]
+  },
+  "authority": {
+    "decision_owner": "Jamie Burkart",
+    "automation_action_authority": "none",
+    "access_is_consent": false,
+    "evidence_is_publication_permission": false
+  },
+  "federation": {
+    "local_authority_retained": true,
+    "forced_schema_merger": false,
+    "exchange_is_authority_transfer": false
+  }
+}

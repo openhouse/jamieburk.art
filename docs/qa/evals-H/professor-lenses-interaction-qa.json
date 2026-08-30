@@ -1,11 +1,11 @@
 {
-  "reportVersion": 4,
-  "checkedAt": "2026-08-23T01:06:07.215Z",
-  "baseUrl": "http://127.0.0.1:3212",
-  "publicSurfaceFingerprint": "3c1e38b991daebd8088a479d7636a0240cc9016cbc723c90f57edd230ed301b6",
+  "reportVersion": 6,
+  "checkedAt": "2026-08-29T20:48:14.717Z",
+  "baseUrl": "http://127.0.0.1:3024",
+  "publicSurfaceFingerprint": "cb61ecf25096603e18c5b84b14568494deec570e2dad1c258abcd6e47ca2621d",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 152,
-  "method": "Fresh Playwright keyboard interaction plus DOM and viewport inspection on the exact Node 26 production build. This is not a human screen-reader or assistive-technology session.",
+  "publicSurfaceFileCount": 153,
+  "method": "Fresh 152.0.7977.65 keyboard interaction, DOM inspection, and viewport inspection through Playwright on the exact Node 26 production build. This is not a human screen-reader or assistive-technology session.",
   "keyboard": {
     "desktopTabSequence": [
       {
@@ -213,7 +213,7 @@
   ],
   "passed": true,
   "refresh": {
-    "candidateChange": "The colophon route and its governed photo, prose, and editorial-accountability disclosure changed; shared navigation, homepage, and About interactions were re-exercised on the exact candidate.",
+    "candidateChange": "The source-backed team-memory page and method now explain the Knowledge Operations control plane; shared navigation, homepage, and About interactions were re-exercised for the exact candidate.",
     "currentChecks": [
       "Keyboard order and visible focus were freshly exercised on the exact homepage.",
       "The mobile menu opened from its summary control and transferred focus to its first link.",

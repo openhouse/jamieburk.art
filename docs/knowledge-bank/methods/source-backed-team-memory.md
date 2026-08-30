@@ -5,8 +5,8 @@ kind: method
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-21
-review_by: 2027-01-18
+last_reviewed: 2026-08-29
+review_by: 2027-02-24
 canonical_path: docs/knowledge-bank/methods/source-backed-team-memory.md
 summary: >
   A federated practice that separates semantic meaning, evidentiary support,
@@ -27,6 +27,18 @@ relations:
   - type: related_to
     target: index.anonymized-team-knowledge-opportunity-case-study
     href: ../case-studies/anonymized-team-knowledge-opportunity/README.md
+  - type: related_to
+    target: person.ward-cunningham
+    href: ../people/ward-cunningham.md
+    context: Public-work design lens; not participation, review, or endorsement.
+  - type: related_to
+    target: person.denny-vrandecic
+    href: ../people/denny-vrandecic.md
+    context: Public-work design lens; not participation, review, or endorsement.
+  - type: related_to
+    target: person.yehuda-katz
+    href: ../people/yehuda-katz.md
+    context: Public-work design lens; not participation, review, or endorsement.
 ---
 
 # Knowledge Wiki Graph / Source-Backed Team Memory
@@ -56,6 +68,30 @@ identities and pinned revisions allow selected context to travel without making
 a context packet, receiving repository, or automated evaluation canonical.
 Repository roles do not map one-to-one onto graph responsibilities.
 
+## Comparative design questions
+
+Jamie selected public work associated with
+[Ward Cunningham](../people/ward-cunningham.md),
+[Denny Vrandečić](../people/denny-vrandecic.md), and
+[Yehuda Katz](../people/yehuda-katz.md) as comparative design lenses. These lenses sharpen questions;
+they do not establish direct intellectual lineage, consultation, participation,
+review, approval, or endorsement.
+
+1. **Correction and plurality:** Can a participant copy, revise, reconsider, or
+   disagree without erasing provenance or forcing every context into one
+   centrally controlled account?
+2. **Stable meaning and varied expression:** Can knowledge retain stable
+   semantic identity and source relationships while different people, agents,
+   languages, and audiences receive different reviewed projections?
+3. **Evolution and continuity:** Can conventions make the common path legible
+   while a proposal-and-review process lets the system change without
+   discarding accumulated knowledge or breaking existing practice?
+
+A model may apply these as explicitly fictionalized analytical lenses after the
+deterministic evidence and authority checks pass. Such a review is an
+evaluation artifact, not any named person's opinion or authority. Jamie remains
+the human publication and design decision owner.
+
 ## Operating sequence
 
 1. Preserve the source's identity and access boundary.
@@ -70,6 +106,27 @@ The method helps produce [Technical Operations](../capabilities/technical-operat
 evidence, but an internal pass does not substitute for collaborator review or
 external outcomes. Access to a source is not evidence for every possible claim,
 and evidence is not publication permission.
+
+## Operating control plane
+
+The three graphs become useful through an operating control plane. It keeps
+source coverage and freshness, temporal state, health dimensions, four planning
+horizons, and exact-candidate dependency receipts separate enough to inspect.
+Those mechanisms make it possible to tell whether a source needs review,
+whether an opportunity or relationship actually changed state, and whether a
+previous evaluation still applies after an input changes.
+
+The control plane also records situated voice: every modeled perspective needs
+a source basis, speaker or lens, audience, purpose, and public/private boundary.
+A simulation is an analytical instrument, not participation, endorsement, or
+authority.
+
+Deterministic checks run before subjective review. A stale source, invalid
+state transition, changed dependency, missing required field, or failed hard
+gate returns to repair without spending a model call. Human decisions remain
+human decisions: outreach, applications, publication, merge, deployment,
+spending, endorsement, and political action require the fitting human
+authority even when every automated check is green.
 
 ## Focused pilot pattern
 

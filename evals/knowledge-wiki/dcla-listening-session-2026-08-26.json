@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "eventDate": "2026-08-26",
+  "reviewedAt": "2026-08-29",
+  "transcript": {
+    "contextual": {
+      "sha256": "8ba28143f382157fe7d1dc774e666932571ce68a17dc3ac6e8d3f595101bd0f1",
+      "bytes": 109627,
+      "lines": 668,
+      "readThroughLine": 668
+    },
+    "machineCompared": {
+      "sha256": "2463c73987b64199b674acc2c5f06584689f0389aa6f8f136bd7676ae5495ea6",
+      "bytes": 130115,
+      "lines": 1288,
+      "reviewScope": "selected-cross-checks"
+    },
+    "humanAudioAudit": "not-performed",
+    "closingRemarksAgreement": "edition-disagreement",
+    "use": "paraphrase-only-held-research",
+    "publication": "not-authorized"
+  },
+  "agency": {
+    "jamieRole": "participant-and-advocate",
+    "governmentEndorsement": "not-established",
+    "policyOutcome": "not-established",
+    "commissionedWork": "not-established"
+  },
+  "photo": {
+    "suppliedVariants": 2,
+    "variantFingerprints": [
+      { "variant": 1, "bytes": 147854, "sha256": "aa7535b14a6e53a42fdfcfe38021e3410c7cafbadcff2fda20516f64aedad346" },
+      { "variant": 2, "bytes": 164808, "sha256": "3be89848957d4cd522d7ebe9c0242380eb4664538d34c98b4f699e4131bf6f3d" }
+    ],
+    "eventFamilies": 1,
+    "rights": "cleared",
+    "consent": "cleared",
+    "authorizationBasis": "Jamie-explicit-portfolio-permission",
+    "libraryPresence": "user-attested",
+    "libraryBinding": "not-verified",
+    "creator": "not-verified",
+    "credit": "Photo courtesy of NYC Artist Coalition.",
+    "placement": "held-editorial-selection"
+  },
+  "followup": {
+    "pastedCopies": 3,
+    "uniqueExchanges": 1,
+    "membership": "interest-expressed",
+    "animation": "planned",
+    "photoSelects": "offered",
+    "endorsement": "not-established"
+  },
+  "projection": "held-no-public-claims"
+}

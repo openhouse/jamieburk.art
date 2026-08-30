@@ -14,6 +14,7 @@ const suite = JSON.parse(readFileSync(".agents/evals/feature-evals-composite.jso
 const register = JSON.parse(readFileSync("docs/integration/feature-evals-composite.json", "utf8"));
 const portfolioSuite = JSON.parse(readFileSync(".agents/evals/portfolio-production-readiness.json", "utf8"));
 const blindSpots = JSON.parse(readFileSync("docs/knowledge-bank/data/blind-spot-controls-2026-07.json", "utf8"));
+const publicRegistry = JSON.parse(readFileSync("apps/www/src/data/knowledge-bank/public-registry.json", "utf8"));
 
 test("composite integration accepts the frozen exact candidate", () => {
   const result = evaluateCompositeIntegration();
@@ -84,6 +85,20 @@ test("base portfolio semantics cannot change outside the frozen composite digest
   const candidate = structuredClone(portfolioSuite);
   candidate.evaluations = [];
   const result = evaluateCompositeIntegration({ suite, register, portfolioSuite: candidate, blindSpots });
+  assert.equal(result.criteria.find((item) => item.id === "COMP-003")?.pass, false);
+  assert.equal(result.criteria.find((item) => item.id === "COMP-008")?.pass, false);
+});
+
+test("private registry leakage is rejected by architecture and frozen governance", () => {
+  const candidate = structuredClone(publicRegistry);
+  candidate.protectedLocator = "/private/source/that-must-not-be-published";
+  const result = evaluateCompositeIntegration({
+    suite,
+    register,
+    portfolioSuite,
+    publicRegistry: candidate,
+    blindSpots
+  });
   assert.equal(result.criteria.find((item) => item.id === "COMP-003")?.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "COMP-008")?.pass, false);
 });

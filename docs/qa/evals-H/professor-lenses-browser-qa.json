@@ -1,11 +1,11 @@
 {
-  "reportVersion": 6,
-  "checkedAt": "2026-08-23T01:06:07.215Z",
-  "baseUrl": "http://127.0.0.1:3212",
-  "publicSurfaceFingerprint": "3c1e38b991daebd8088a479d7636a0240cc9016cbc723c90f57edd230ed301b6",
+  "reportVersion": 8,
+  "checkedAt": "2026-08-29T20:48:14.717Z",
+  "baseUrl": "http://127.0.0.1:3024",
+  "publicSurfaceFingerprint": "cb61ecf25096603e18c5b84b14568494deec570e2dad1c258abcd6e47ca2621d",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 152,
-  "captureMethod": "Fresh Playwright Chromium viewport captures of the exact Node 26 production build, paired with the complete 60-row responsive accessibility matrix.",
+  "publicSurfaceFileCount": 153,
+  "captureMethod": "Fresh 152.0.7977.65 viewport captures through Playwright against the exact Node 26 production build, paired with the complete 60-row responsive accessibility matrix.",
   "routes": [
     {
       "path": "/",
@@ -72,7 +72,7 @@
           "pixelWidth": 375,
           "pixelHeight": 1200,
           "httpStatus": 200,
-          "sha256": "e2bb09e69b8c0eac22119b9995c4b3c2a2a2edba4f26a2b96960e0d0436e24d9",
+          "sha256": "a18b3155cb42b4a16bee9884c98d9717ef5ee24f702771896b5a87a58c3ba754",
           "file": "professor-lenses-about-mobile.png",
           "framedContent": {
             "systemsPeopleCanInhabitHeadingPresent": true,
@@ -83,12 +83,12 @@
     }
   ],
   "passed": true,
-  "verification": "Fresh desktop and mobile captures show the role-led homepage and public About-page systems lineage without browser warnings or errors; the complete route matrix separately exercises the colophon route.",
+  "verification": "Fresh desktop and mobile captures show the role-led homepage and public About-page systems lineage without visual failure; the complete route matrix separately exercises every public route.",
   "refresh": {
-    "candidateChange": "The colophon became an artifact-led editorial page with a governed East River photograph, four-step publishing method, living-publication notes, and fictionalized page-owner accountability.",
-    "productionBuild": "The Next.js production build, TypeScript check, social-preview render contract, and rendered public-language check completed under the declared Node 26 runtime.",
-    "currentRenderedInspection": "The exact desktop and mobile homepage and About captures were freshly inspected; the separate page-owner packet retains exact desktop and mobile colophon captures.",
-    "responsiveRun": "All 60 route-width combinations, including the colophon, were freshly checked at 360, 375, 768, and 1280 CSS pixels.",
-    "browserDiagnostics": "No browser warnings or errors were observed."
+    "candidateChange": "The source-backed team-memory page and method now expose the Knowledge Operations control plane, including state machines, health gates, decision receipts, planning horizons, and local authority boundaries.",
+    "productionBuild": "The clean Next.js production build, TypeScript check, social-preview render contract, and rendered public-language check completed under the declared Node 26 runtime.",
+    "currentRenderedInspection": "The exact desktop and mobile homepage and About captures were freshly produced after the control-plane integration.",
+    "responsiveRun": "All 60 route-width combinations were freshly checked at 360, 375, 768, and 1280 CSS pixels.",
+    "browserDiagnostics": "Google Chrome completed capture, keyboard, mobile-navigation, reflow, and semantic-reading-order checks without a browser-process failure."
   }
 }

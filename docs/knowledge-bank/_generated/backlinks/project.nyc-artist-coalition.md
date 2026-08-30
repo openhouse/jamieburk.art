@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to NYC Artist Coalition
 
-**Source commit:** `ccddbf75a1e1a3ab293c5dd067e1f30a5b9a6855`
-**Generation time:** 2026-08-22T21:22:19-04:00
-**Source fingerprint:** `c2cf41ec29380d85699d1af93a8f8fe4629fbe0116345afd5e96d2cf0a6f5033`
+**Source commit:** `f034c3491a8d9f5bee4d6b50a14838143fd7989e`
+**Generation time:** 2026-08-29T22:34:10-04:00
+**Source fingerprint:** `c6b4d42cf074912eff2ebbfc948782968170e5314b896116ecf207915380f5cf`
 
 - [NYC Artist Coalition application brief](../../applications/nycac-civic-product-operations.md) - `part_of` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `related_to` (frontmatter)
@@ -186,6 +186,7 @@
 - [Talks Not Raids: stephenlevin [3lpdubkj]](../../assets/photographs/project-sites/talks-not-raids-stephenlevin-3lpdubkj6h.md) - `related_to` (frontmatter)
 - [Shared NYC Artist Coalition advocacy operating playbook](../../claims/nycac-advocacy-operating-playbook.md) - `part_of` (frontmatter)
 - [NYC Artist Coalition shared-folder production evals](../../evaluations/nycac-shared-folder-production-2026-07-19.md) - `related_to` (frontmatter)
+- [Brooklyn artist listening session at 651 ARTS](../../events/dcla-brooklyn-listening-2026-08-26.md) - `part_of` (frontmatter)
 - [NYC DIY spaces meeting at the Department of Cultural Affairs](../../events/nyc-diy-spaces-dcla-2017-01-27.md) - `part_of` (frontmatter)
 - [Committee on Consumer Affairs Cabaret Law hearing](../../events/cabaret-law-hearing-2017-06-19.md) - `related_to` (frontmatter)
 - [Committee on Cultural Affairs preliminary budget hearing](../../events/cultural-affairs-budget-hearing-2018-03-16.md) - `related_to` (frontmatter)

@@ -1,15 +1,17 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Knowledge Wiki Graph / Source-Backed Team Memory
 
-**Source commit:** `ccddbf75a1e1a3ab293c5dd067e1f30a5b9a6855`
-**Generation time:** 2026-08-22T21:22:19-04:00
-**Source fingerprint:** `c2cf41ec29380d85699d1af93a8f8fe4629fbe0116345afd5e96d2cf0a6f5033`
+**Source commit:** `f034c3491a8d9f5bee4d6b50a14838143fd7989e`
+**Generation time:** 2026-08-29T22:34:10-04:00
+**Source fingerprint:** `c6b4d42cf074912eff2ebbfc948782968170e5314b896116ecf207915380f5cf`
 
 - [Civic, cultural, and technical translation](../../capabilities/civic-cultural-and-technical-translation.md) - `prose_link` (markdown)
 - [Technical Operations](../../capabilities/technical-operations.md) - `prose_link` (markdown)
 - [Technical Operations](../../capabilities/technical-operations.md) - `related_to` (frontmatter)
 - [Knowledge Wiki depth with selective public projection](../../decisions/knowledge-wiki-selective-projection.md) - `uses_method` (frontmatter)
 - [Anonymized Team-Knowledge Opportunity Case Study](../../case-studies/anonymized-team-knowledge-opportunity/README.md) - `uses_method` (frontmatter)
+- [Knowledge Wiki](../../README.md) - `prose_link` (markdown)
+- [Knowledge Wiki](../../README.md) - `related_to` (frontmatter)
 - [Canonical Story Bank](../../indexes/canonical-story-bank.md) - `related_to` (frontmatter)
 - [Jamie Burkart public-record source edition](../../indexes/jamie-public-record-source-edition.md) - `uses_method` (frontmatter)
 - [Knowledge Wiki pilot map](../../indexes/pilot.md) - `prose_link` (markdown)
@@ -29,7 +31,10 @@
 - [NYC OTI - Technical Operations Manager 782369](../../opportunities/oti-technical-operations.md) - `uses_method` (frontmatter)
 - [PermitFlow - Product Operations Manager](../../opportunities/permitflow-product-operations.md) - `uses_method` (frontmatter)
 - [Protected source-backed team-memory consulting lead](../../opportunities/source-backed-team-memory.md) - `uses_method` (frontmatter)
+- [Denny Vrandečić](../../people/denny-vrandecic.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
+- [Ward Cunningham](../../people/ward-cunningham.md) - `related_to` (frontmatter)
+- [Yehuda Katz](../../people/yehuda-katz.md) - `related_to` (frontmatter)
 - [Technical Operations portfolio projection](../../projections/work-technical-operations.md) - `related_to` (frontmatter)
 - [CallNYC](../../projects/callnyc.md) - `uses_method` (frontmatter)
 - [Knowledge Wiki Graph collective-map occurrence](../../projections/photography/knowledge-wiki-collective-map.md) - `related_to` (frontmatter)
