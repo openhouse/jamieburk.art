@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `e151971d6cc3471a074e0cc5108e9094aeacad5e`
-**Generation time:** 2026-08-29T18:16:25-04:00
-**Source fingerprint:** `fab8a054ff5c7e887da7127e4bf6584fe9620bbba1c3c2cadc075ef33ca109b9`
+**Source commit:** `f034c3491a8d9f5bee4d6b50a14838143fd7989e`
+**Generation time:** 2026-08-29T22:34:10-04:00
+**Source fingerprint:** `c6b4d42cf074912eff2ebbfc948782968170e5314b896116ecf207915380f5cf`
 
 ## application
 
@@ -27,6 +27,7 @@
 - [NYC Artist Coalition shared working map, 2017](../assets/photographs/knowledge-wiki-collective-map-2017.md) - `asset.photo.knowledge-wiki.collective-map.2017.001`
 - [Jamie with a civic field kit at New York City Council](../assets/photographs/nyc-council-field-kit-2026.md) - `asset.photo.nyc-council.field-kit.2026.001`
 - [DCLA listening room, January 2017](../assets/photographs/nycac-dcla-listening-room-2017.md) - `asset.photo.nycac-dcla-listening-room.2017.001`
+- [Jamie at the Brooklyn artist listening session](../assets/photographs/nycac-dcla-portrait-2026-08-26.md) - `asset.photo.nycac-dcla-portrait.2026-08-26`
 - [Shoestring Press coalition working session, 2017](../assets/photographs/nycac-shoestring-facilitation-2017.md) - `asset.photo.nycac-shoestring-facilitation.2017.001`
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb`
 - [FairRentNYC: 2019 03 18 small business rally 1 [hur5tftl]](../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj.md) - `asset.photo.project-site.fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj`
@@ -259,6 +260,7 @@
 - [Commercial Rent Stabilization event at Friends and Lovers](../events/commercial-rent-friends-and-lovers-2026-02-17.md) - `event.nyc.commercial-rent.friends-and-lovers.2026-02-17`
 - [Project X community conversation](../events/commercial-rent-project-x-2026-03-10.md) - `event.nyc.commercial-rent.project-x.2026-03-10`
 - [Commercial Rent Stabilization public event](../events/commercial-rent-public-event-2025-11-13.md) - `event.nyc.commercial-rent.public-event.2025-11-13`
+- [Brooklyn artist listening session at 651 ARTS](../events/dcla-brooklyn-listening-2026-08-26.md) - `event.nyc.dcla.brooklyn-listening.2026-08-26`
 - [NYC DIY spaces meeting at the Department of Cultural Affairs](../events/nyc-diy-spaces-dcla-2017-01-27.md) - `event.nyc.dcla.diy-spaces-listening.2017-01-27`
 - [Empty Storefronts, High Rents public report launch](../events/sbu-report-launch-2026-07-29.md) - `event.nyc.sbu-report-launch.2026-07-29`
 - [New York City Council constituent-services hackathon](../events/nycc-constituent-services-hackathon-2016.md) - `event.nycc.constituent-services-hackathon.2016`
@@ -500,6 +502,7 @@
 - [NYC Mayor's Office - PIT Crew launch announcement](../sources/nyc-pit-crew-launch-2026.md) - `source.nyc.pit-crew-launch.2026-07-13`
 - [NYC SPEED report and release, May 2026](../sources/nyc-speed-report-2026.md) - `source.nyc.speed-report.2026-05-13`
 - [NYC Artist Coalition DCLA formation source return, 2026](../sources/archives/nycac-dcla-formation-source-return-2026-07.md) - `source.nycac.dcla-formation-source-return.2026-07`
+- [DCLA listening-session repaired-edition reading](../sources/archives/dcla-listening-reading-2026-08-26.md) - `source.nycac.dcla-listening-reading.2026-08-26`
 - [Governed NYCAC frontline advocacy source comparison, July 13-August 12, 2026](../sources/archives/nycac-frontline-advocacy-2026-08.md) - `source.nycac.frontline-advocacy.2026-08`
 - [NYC nightlife forum corrected working transcript, 2026](../sources/nycac-nightlife-forum-transcript-2026.md) - `source.nycac.nightlife-forum-transcript.2026`
 - [NYC Artist Coalition project-site photograph census](../sources/archives/nycac-project-site-photograph-census-2026-07.md) - `source.nycac.project-site-photograph-census.2026-07-28`

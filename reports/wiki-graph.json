@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-29T18:16:25-04:00",
-  "sourceCommit": "e151971d6cc3471a074e0cc5108e9094aeacad5e",
-  "sourceFingerprint": "fab8a054ff5c7e887da7127e4bf6584fe9620bbba1c3c2cadc075ef33ca109b9",
+  "generatedAt": "2026-08-29T22:34:10-04:00",
+  "sourceCommit": "f034c3491a8d9f5bee4d6b50a14838143fd7989e",
+  "sourceFingerprint": "c6b4d42cf074912eff2ebbfc948782968170e5314b896116ecf207915380f5cf",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -225,6 +225,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-09-26"
+    },
+    {
+      "id": "asset.photo.nycac-dcla-portrait.2026-08-26",
+      "path": "docs/knowledge-bank/assets/photographs/nycac-dcla-portrait-2026-08-26.md",
+      "title": "Jamie at the Brooklyn artist listening session",
+      "kind": "asset",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Two supplied contemporary portrait variants with explicit portfolio permission, project courtesy credit, and an unresolved exact Apple Photos association.",
+      "aliases": [],
+      "lastReviewed": "2026-08-29",
+      "reviewBy": "2026-09-29"
     },
     {
       "id": "asset.photo.nycac-shoestring-facilitation.2017.001",
@@ -3035,6 +3048,19 @@
       "reviewBy": "2026-10-28"
     },
     {
+      "id": "event.nyc.dcla.brooklyn-listening.2026-08-26",
+      "path": "docs/knowledge-bank/events/dcla-brooklyn-listening-2026-08-26.md",
+      "title": "Brooklyn artist listening session at 651 ARTS",
+      "kind": "event",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Jamie connected artists' shared dependence on cultural space to policy implementation, then pursued practical cultural-data and follow-through questions at the August 26 DCLA listening session.",
+      "aliases": [],
+      "lastReviewed": "2026-08-29",
+      "reviewBy": "2026-09-29"
+    },
+    {
       "id": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
       "path": "docs/knowledge-bank/events/nyc-diy-spaces-dcla-2017-01-27.md",
       "title": "NYC DIY spaces meeting at the Department of Cultural Affairs",
@@ -4797,8 +4823,8 @@
       "sensitivity": "moderate",
       "summary": "Private-first method for reconnecting event transcripts, simultaneous documentary photographs, existing Apple Photos People associations, and Jamie's prior nested photo selects without converting retrieval signals into identity, meaning, quality, rights, or publication claims.\n",
       "aliases": [],
-      "lastReviewed": "2026-07-28",
-      "reviewBy": "2026-08-28"
+      "lastReviewed": "2026-08-29",
+      "reviewBy": "2026-09-29"
     },
     {
       "id": "research-inquiry.photography.field-corpus-001",
@@ -5735,6 +5761,19 @@
       "aliases": [],
       "lastReviewed": "2026-07-26",
       "reviewBy": "2026-09-26"
+    },
+    {
+      "id": "source.nycac.dcla-listening-reading.2026-08-26",
+      "path": "docs/knowledge-bank/sources/archives/dcla-listening-reading-2026-08-26.md",
+      "title": "DCLA listening-session repaired-edition reading",
+      "kind": "source",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Full contextual-transcript reading and selected comparison against a separate machine repair, with redacted provenance and a recorded difference in the closing remarks.",
+      "aliases": [],
+      "lastReviewed": "2026-08-29",
+      "reviewBy": "2026-09-29"
     },
     {
       "id": "source.nycac.frontline-advocacy.2026-08",
@@ -6941,6 +6980,30 @@
       "to": "source.nycac.dcla-formation-source-return.2026-07",
       "source": "frontmatter",
       "href": "../../sources/archives/nycac-dcla-formation-source-return-2026-07.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac-dcla-portrait.2026-08-26",
+      "type": "documents",
+      "to": "event.nyc.dcla.brooklyn-listening.2026-08-26",
+      "source": "frontmatter",
+      "href": "../../events/dcla-brooklyn-listening-2026-08-26.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac-dcla-portrait.2026-08-26",
+      "type": "informed_by",
+      "to": "research-inquiry.photography.event-transcript-constellations",
+      "source": "frontmatter",
+      "href": "../../notebooks/photography/event-transcript-photo-constellations.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.nycac-dcla-portrait.2026-08-26",
+      "type": "uses_source",
+      "to": "source.nycac.dcla-listening-reading.2026-08-26",
+      "source": "frontmatter",
+      "href": "../../sources/archives/dcla-listening-reading-2026-08-26.md",
       "context": null
     },
     {
@@ -13071,6 +13134,46 @@
       "context": null
     },
     {
+      "from": "event.nyc.dcla.brooklyn-listening.2026-08-26",
+      "type": "has_asset",
+      "to": "asset.photo.nycac-dcla-portrait.2026-08-26",
+      "source": "frontmatter",
+      "href": "../assets/photographs/nycac-dcla-portrait-2026-08-26.md",
+      "context": null
+    },
+    {
+      "from": "event.nyc.dcla.brooklyn-listening.2026-08-26",
+      "type": "informed_by",
+      "to": "research-inquiry.photography.event-transcript-constellations",
+      "source": "frontmatter",
+      "href": "../notebooks/photography/event-transcript-photo-constellations.md",
+      "context": null
+    },
+    {
+      "from": "event.nyc.dcla.brooklyn-listening.2026-08-26",
+      "type": "part_of",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "event.nyc.dcla.brooklyn-listening.2026-08-26",
+      "type": "related_to",
+      "to": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
+      "source": "frontmatter",
+      "href": "nyc-diy-spaces-dcla-2017-01-27.md",
+      "context": "A distinct later encounter in the coalition's continuing cultural-space work, not another record of the 2017 meeting."
+    },
+    {
+      "from": "event.nyc.dcla.brooklyn-listening.2026-08-26",
+      "type": "uses_source",
+      "to": "source.nycac.dcla-listening-reading.2026-08-26",
+      "source": "frontmatter",
+      "href": "../sources/archives/dcla-listening-reading-2026-08-26.md",
+      "context": null
+    },
+    {
       "from": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
       "type": "has_asset",
       "to": "asset.photo.nycac-dcla-listening-room.2017.001",
@@ -18619,6 +18722,14 @@
     {
       "from": "research-inquiry.photography.event-transcript-constellations",
       "type": "related_to",
+      "to": "event.nyc.dcla.brooklyn-listening.2026-08-26",
+      "source": "frontmatter",
+      "href": "../../events/dcla-brooklyn-listening-2026-08-26.md",
+      "context": "Full transcript reading and approved supplied portraits are linked while the exact Apple Photos association remains unverified."
+    },
+    {
+      "from": "research-inquiry.photography.event-transcript-constellations",
+      "type": "related_to",
       "to": "index.knowledge-wiki.photography-notebook",
       "source": "frontmatter",
       "href": "README.md",
@@ -20097,6 +20208,14 @@
       "context": null
     },
     {
+      "from": "source.nycac.dcla-listening-reading.2026-08-26",
+      "type": "documents",
+      "to": "event.nyc.dcla.brooklyn-listening.2026-08-26",
+      "source": "frontmatter",
+      "href": "../../events/dcla-brooklyn-listening-2026-08-26.md",
+      "context": null
+    },
+    {
       "from": "source.nycac.frontline-advocacy.2026-08",
       "type": "related_to",
       "to": "research.nycac.frontline-advocacy.2026-08-12",
@@ -21493,6 +21612,15 @@
       "kind": "image"
     },
     {
+      "fromPath": "docs/knowledge-bank/assets/photographs/nycac-dcla-portrait-2026-08-26.md",
+      "from": "asset.photo.nycac-dcla-portrait.2026-08-26",
+      "toPath": "evals/knowledge-wiki/dcla-listening-session-2026-08-26.json",
+      "to": null,
+      "fragment": null,
+      "line": 15,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/assets/photographs/nycac-shoestring-facilitation-2017.md",
       "from": "asset.photo.nycac-shoestring-facilitation.2017.001",
       "toPath": "apps/www/public/images/field-notes/nycac-shoestring-facilitation.webp",
@@ -21796,6 +21924,24 @@
       "to": "source.nycc.cultural-affairs.preliminary-budget-2018-03-16.official-transcript",
       "fragment": null,
       "line": 21,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/events/dcla-brooklyn-listening-2026-08-26.md",
+      "from": "event.nyc.dcla.brooklyn-listening.2026-08-26",
+      "toPath": "docs/knowledge-bank/sources/archives/dcla-listening-reading-2026-08-26.md",
+      "to": "source.nycac.dcla-listening-reading.2026-08-26",
+      "fragment": null,
+      "line": 26,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/events/dcla-brooklyn-listening-2026-08-26.md",
+      "from": "event.nyc.dcla.brooklyn-listening.2026-08-26",
+      "toPath": "docs/knowledge-bank/assets/photographs/nycac-dcla-portrait-2026-08-26.md",
+      "to": "asset.photo.nycac-dcla-portrait.2026-08-26",
+      "fragment": null,
+      "line": 66,
       "kind": "link"
     },
     {
@@ -24193,6 +24339,15 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/notebooks/photography/event-transcript-photo-constellations.md",
+      "from": "research-inquiry.photography.event-transcript-constellations",
+      "toPath": "docs/knowledge-bank/events/dcla-brooklyn-listening-2026-08-26.md",
+      "to": "event.nyc.dcla.brooklyn-listening.2026-08-26",
+      "fragment": null,
+      "line": 6,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/notebooks/photography/field-corpus-001.md",
       "from": "research-inquiry.photography.field-corpus-001",
       "toPath": "docs/knowledge-bank/notebooks/photography/oral-history-stewardship-afterlife-001.md",
@@ -25459,6 +25614,24 @@
       "to": null,
       "fragment": null,
       "line": 65,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/archives/dcla-listening-reading-2026-08-26.md",
+      "from": "source.nycac.dcla-listening-reading.2026-08-26",
+      "toPath": "evals/knowledge-wiki/dcla-listening-session-2026-08-26.json",
+      "to": null,
+      "fragment": null,
+      "line": 15,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/archives/dcla-listening-reading-2026-08-26.md",
+      "from": "source.nycac.dcla-listening-reading.2026-08-26",
+      "toPath": "docs/knowledge-bank/events/dcla-brooklyn-listening-2026-08-26.md",
+      "to": "event.nyc.dcla.brooklyn-listening.2026-08-26",
+      "fragment": null,
+      "line": 36,
       "kind": "link"
     },
     {
