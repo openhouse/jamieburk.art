@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `5547c8d0ff4e97961e1debbe504321402fd2a8d2`
-**Generation time:** 2026-08-31T19:00:42-04:00
-**Source fingerprint:** `31663d28b762e4d75bd2c12264103b700f7f19d51ff22eb5ec19305062bfead9`
+**Source commit:** `5b763875ba66bbe1993203d995e3ce65261217f4`
+**Generation time:** 2026-08-31T19:34:11-04:00
+**Source fingerprint:** `2aa1f4b02e35fdec8a22697eef1e2bec76b37043e2ae53ca690eac3c14659e72`
 
 ## application
 
@@ -325,6 +325,7 @@
 - [Maintenance, handoff, and stewardship](../methods/maintenance-handoff-and-stewardship.md) - `method.maintenance-handoff-stewardship`
 - [Participation and Relational Infrastructure](../methods/participation-and-relational-infrastructure.md) - `method.participation-and-relational-infrastructure`
 - [East River photographic knowledge-loop tutorial](../workflows/photography-east-river-canary.md) - `method.photography-east-river-canary`
+- [Private application status loop](../methods/private-application-status-loop.md) - `method.private-application-status-loop`
 - [Projects as a Recomposable Civic-Cultural System](../methods/recomposable-civic-cultural-systems.md) - `method.recomposable-civic-cultural-systems`
 - [Situated source rereading](../methods/situated-source-rereading.md) - `method.situated-source-rereading`
 - [Knowledge Wiki Graph / Source-Backed Team Memory](../methods/source-backed-team-memory.md) - `method.source-backed-team-memory`
@@ -448,6 +449,7 @@
 - [ACLU official biography - Charizma Williams](../sources/aclu-charizma-williams.md) - `source.aclu.charizma-williams`
 - [NYC OTI application confirmation review - August 31, 2026](../sources/nyc-oti-application-confirmations-2026-08-31.md) - `source.application.nyc-oti.confirmations.2026-08-31`
 - [NYC OTI Product Manager 784450 application-draft review](../sources/nyc-oti-product-manager-784450-application-draft-2026-08-31.md) - `source.application.nyc-oti.product-manager.784450.2026-08-31`
+- [NYC OTI private application status dashboard review - August 31, 2026](../sources/nyc-oti-application-status-dashboard-2026-08-31.md) - `source.application.nyc-oti.status-dashboard.2026-08-31`
 - [Benepass official team page - Jaclyn Chen](../sources/benepass-jaclyn-chen.md) - `source.benepass.jaclyn-chen`
 - [BetaNYC weekly civic-technology newsletter and public archive](../sources/betanyc-civic-tech-newsletter-2026-08-20.md) - `source.betanyc.civic-tech-newsletter`
 - [CallNYC public source repository](../sources/callnyc-source-repository.md) - `source.callnyc.source-repository`

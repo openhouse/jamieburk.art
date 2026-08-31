@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `5547c8d0ff4e97961e1debbe504321402fd2a8d2`
-**Generation time:** 2026-08-31T19:00:42-04:00
-**Source fingerprint:** `31663d28b762e4d75bd2c12264103b700f7f19d51ff22eb5ec19305062bfead9`
+**Source commit:** `5b763875ba66bbe1993203d995e3ce65261217f4`
+**Generation time:** 2026-08-31T19:34:11-04:00
+**Source fingerprint:** `2aa1f4b02e35fdec8a22697eef1e2bec76b37043e2ae53ca690eac3c14659e72`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 51
+- Nodes added: 53
 - Nodes removed: 0
-- Edges added: 202
+- Edges added: 211
 - Edges removed: 8
 - New type-aware orphans: 0
 - Current rights-review records: 185
@@ -27,6 +27,7 @@ Compared with the graph artifact on `origin/develop`.
 - `index.anonymized-team-knowledge-opportunity-case-study`
 - `method.betanyc-opportunity-loop`
 - `method.civic-match-opportunity-loop`
+- `method.private-application-status-loop`
 - `opportunity.nyc-oti.pit-senior-product-designer.782373`
 - `opportunity.nyc-oti.product-manager.784450`
 - `opportunity.nyc-oti.speed-operations-manager.789810`
@@ -50,6 +51,7 @@ Compared with the graph artifact on `origin/develop`.
 - `research.nycac.dcla-listening-session.2026-08-29`
 - `source.application.nyc-oti.confirmations.2026-08-31`
 - `source.application.nyc-oti.product-manager.784450.2026-08-31`
+- `source.application.nyc-oti.status-dashboard.2026-08-31`
 - `source.betanyc.civic-tech-newsletter`
 - `source.civic-match.candidate-network`
 - `source.jobs.oti.executive-director-product-management.789563`
