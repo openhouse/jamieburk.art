@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "application-status-monitor.nyc-oti.2026-08-31",
+  "provider": "City of New York SmartRecruiters applicant dashboard",
+  "providerHost": "jobs.smartrecruiters.com",
+  "accessModel": "shared-authenticated-applicant-dashboard",
+  "locatorStorage": "authenticated-browser-runtime-only",
+  "acquisition": {
+    "channel": "authorized-mailbox-and-browser",
+    "lookup": "provider-plus-role-reference",
+    "authentication": "one-time-passcode",
+    "credentialStorage": "none"
+  },
+  "refresh": {
+    "cadence": "proposed-weekday-heartbeat",
+    "activationState": "explicit-approval-required",
+    "mode": "read-only",
+    "changeRule": "provider-label-change-only",
+    "failureRule": "retain-last-verified-observation"
+  },
+  "applications": [
+    {
+      "applicationId": "application.nyc-oti.product-manager.784450",
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "role": "Product Manager",
+      "reference": "784450",
+      "providerStatus": "New",
+      "normalizedStatus": "received-awaiting-review",
+      "observedOn": "2026-08-31"
+    },
+    {
+      "applicationId": "application.nyc-oti.speed-operations-manager.789810",
+      "opportunityId": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "role": "Operations Manager",
+      "reference": "789810",
+      "providerStatus": "New",
+      "normalizedStatus": "received-awaiting-review",
+      "observedOn": "2026-08-31"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "evalId": "application-status-monitor-v1",
+  "runDate": "2026-08-31",
+  "candidateBranch": "work/2026-08-24-A",
+  "objective": "Connect two submitted OTI opportunity records to refreshable employer status observations without retaining private locators or inflating provider state.",
+  "baseline": {
+    "records": 496,
+    "semanticEvidenceEdges": 1792,
+    "proseLinks": 570,
+    "knownFailure": "The graph recorded receipt but had no governed model for authenticated status reacquisition, shared-dashboard affordances, provider-label normalization, or recurring-access authority."
+  },
+  "red": {
+    "command": "node --test scripts/knowledge-wiki/application-status-monitor-eval.test.mjs",
+    "result": "fail",
+    "reason": "The evaluator implementation and status-monitor contract did not yet exist."
+  },
+  "boundedChange": [
+    "Add one shared authenticated-dashboard source and one private status-loop method.",
+    "Bind Product Manager 784450 and Operations Manager 789810 to literal provider status New, normalized only as received-awaiting-review.",
+    "Add a URL-free runtime reacquisition contract and explicit read-only affordance boundary.",
+    "Keep recurring mailbox access and public pull-request egress inactive pending exact human authorization."
+  ],
+  "green": {
+    "deterministicChecks": {
+      "passed": 10,
+      "total": 10
+    },
+    "adversarialTests": {
+      "passed": 3,
+      "total": 3
+    },
+    "graph": {
+      "records": 498,
+      "semanticEvidenceEdges": 1801,
+      "proseLinks": 571,
+      "typeAwareOrphans": 0
+    },
+    "commands": [
+      "npm run evals:application-status-monitor",
+      "npm run test:application-status-monitor",
+      "npm run check:knowledge-evals",
+      "npm run test:knowledge-evals",
+      "npm run wiki:graph",
+      "npm run wiki:report",
+      "npm run wiki:check",
+      "npm run knowledge-wiki",
+      "npm run public-safety"
+    ]
+  },
+  "remainingGate": "A weekday heartbeat is proposed but not active. Activation requires Jamie's explicit approval for recurring authenticated mailbox and hiring-dashboard access plus bounded future status-derived updates to public pull request 295.",
+  "result": "keep"
+}

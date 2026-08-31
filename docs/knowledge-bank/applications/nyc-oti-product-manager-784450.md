@@ -15,6 +15,10 @@ submitted_on: "2026-08-31"
 authorization_state: human-completed
 outcome_state: pending
 confirmation_evidence_state: reviewed-not-committed
+provider_status: New
+normalized_status: received-awaiting-review
+status_observed_on: "2026-08-31"
+status_locator_state: authenticated-browser-runtime-only
 resume_path: resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.md
 projection:
   status: hold
@@ -29,6 +33,12 @@ relations:
   - type: uses_source
     target: source.application.nyc-oti.confirmations.2026-08-31
     href: ../sources/nyc-oti-application-confirmations-2026-08-31.md
+  - type: uses_source
+    target: source.application.nyc-oti.status-dashboard.2026-08-31
+    href: ../sources/nyc-oti-application-status-dashboard-2026-08-31.md
+  - type: related_to
+    target: method.private-application-status-loop
+    href: ../methods/private-application-status-loop.md
   - type: related_to
     target: application.nyc-oti.product-manager.784450.draft
     href: nyc-oti-product-manager-784450-draft.md
@@ -67,6 +77,12 @@ interview, an offer, an appointment, or selection. The hiring-team review and
 all later outcomes remain pending and employer-controlled. Any Civic Match
 connection request, invitation, or introduction must be recorded separately if
 it later occurs; intent to try a feature is not a completed relationship event.
+
+On August 31, the authenticated applicant dashboard labeled this application
+`New`. The maintained normalization is `received-awaiting-review`: the City has
+the application, while substantive review remains unobserved. The private
+access route is reacquired through Jamie's authorized mailbox and browser at
+runtime and is never stored in this graph.
 
 ## Maintained packet
 

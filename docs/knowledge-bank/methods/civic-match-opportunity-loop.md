@@ -34,7 +34,10 @@ state and local government hiring.
 4. Apply through the employer's official application system.
 5. Record the external submission in Civic Match and in the governed
    opportunity system.
-6. Feed real outcomes, communications, and interview learning back into future
+6. Connect a submitted application to the employer's governed, read-only
+   [private status loop](private-application-status-loop.md) when an authorized
+   tracking surface exists.
+7. Feed real outcomes, communications, and interview learning back into future
    materials without publishing private records.
 
 Deterministic checks validate source identity, field coverage, word limits,
@@ -74,3 +77,11 @@ or when new alerts, invitations, or changed postings arrive. Record coverage
 and uncertainty rather than claiming an unattended authenticated sync exists.
 After the external employer confirms submission, Jamie may update Civic Match
 and the canonical opportunity state; discovery events alone never do that.
+
+Employer tracking is a separate situated source. Its authenticated dashboard
+can add a literal application label and useful account affordances, while the
+mailbox action URL, passcode, applicant data, and correspondence remain outside
+Git. When separately authorized, a status heartbeat can reacquire that surface
+at runtime and write only a verified provider-label change; silence and failed
+access are not lifecycle events. Recurring private access and any public pull-
+request update remain an explicit human activation gate.
