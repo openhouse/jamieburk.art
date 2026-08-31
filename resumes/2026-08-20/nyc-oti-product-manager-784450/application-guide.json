@@ -1,0 +1,37 @@
+{
+  "jobId": "784450",
+  "role": "Product Manager",
+  "reviewedOn": "2026-08-30",
+  "postingUrl": "https://cityjobs.nyc.gov/job/product-manager-in-brooklyn-jid-45056",
+  "deadline": "2026-09-04",
+  "guide": "Application-Guide.md",
+  "expectedExperienceCount": 5,
+  "sources": {
+    "resume": {
+      "path": "Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.md",
+      "sha256": "e0e52ee0a27b062eb04aa0fb698b323710104e76dac064ec6caeec14fc6f4486"
+    },
+    "letter": {
+      "path": "Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.md",
+      "sha256": "add7d24a1d9237486f598c0f3a4f955c6483dacf4e3ad6006e5869a972547a1d"
+    },
+    "pdf": {
+      "path": "Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.pdf",
+      "sha256": "09f78cc051a774b479c67820851a0cfe1df46f900ba5bde89c2adcdfb67efd69"
+    }
+  },
+  "requiredFieldIds": ["first-name", "last-name", "email", "confirm-email", "city", "phone-country", "phone-number", "linkedin", "facebook", "x", "website"],
+  "fields": [
+    { "id": "first-name", "label": "First name *", "value": "Jamie", "matchResume": true },
+    { "id": "last-name", "label": "Last name *", "value": "Burkart", "matchResume": true },
+    { "id": "email", "label": "Email *", "value": null, "instruction": "Copy the email from the contact line of the linked tailored résumé. It is not duplicated in this tracked guide." },
+    { "id": "confirm-email", "label": "Confirm your email *", "value": null, "instruction": "Enter exactly the same email as above." },
+    { "id": "city", "label": "City", "value": "Brooklyn, NY", "matchResume": true },
+    { "id": "phone-country", "label": "Phone number * — country code", "value": "+1", "instruction": "Select United States (+1)." },
+    { "id": "phone-number", "label": "Phone number * — local number", "value": null, "instruction": "Copy the phone number from the contact line of the linked tailored résumé, without repeating the +1 country code." },
+    { "id": "linkedin", "label": "LinkedIn", "value": "https://www.linkedin.com/in/jamie-burkart/", "matchResume": true },
+    { "id": "facebook", "label": "Facebook", "value": null, "instruction": "Leave blank (optional)." },
+    { "id": "x", "label": "X (fka Twitter)", "value": null, "instruction": "Leave blank (optional)." },
+    { "id": "website", "label": "Website", "value": "https://jamieburk.art/", "matchResume": true }
+  ]
+}

@@ -139,3 +139,36 @@ worth advancing to a normal structured hiring step.
 npm run evals:cover-letters
 npm run test:cover-letters
 ```
+
+## Field-by-field application guides
+
+Maintain `Application-Guide.md` beside an opportunity's tailored résumé and
+cover letter. Start with the [OTI Product Manager 784450 guide](./2026-08-20/nyc-oti-product-manager-784450/Application-Guide.md).
+Each enrolled guide has a sibling `application-guide.json`, listed in
+`evals/application-guides/registry.json`. Enrollment is explicit; this registry
+does not yet cover every opportunity.
+
+The guide follows the observed form order and supplies plain-text paste blocks
+from the existing application materials. Keep the exact résumé PDF filename,
+upload instructions, optional fields, source references for contact details,
+date-confirmation requirements, and final human submission step explicit.
+Distinguish screenshots of this opportunity from inherited platform fields and
+unseen later pages. Do not invent dates, consent, credentials, or eligibility.
+
+The deterministic check rejects missing or stale guides, changed résumé/letter/
+PDF hashes, wrong-job files, missing field coverage, omitted experience entries,
+unsupported profile values, and PDFs outside the observed upload constraint.
+It also requires email and phone fields to refer to the existing résumé instead
+of creating another tracked copy of contact data. No model call is needed for
+this mechanical projection; a passing check is not a hiring decision, live-form
+validation, or submission receipt.
+
+After a source changes, review it, update only its verified hash in the sibling
+configuration, regenerate, inspect the guide, and run the checks. Regeneration
+does not silently accept changed source hashes.
+
+```sh
+npm run generate:application-guides
+npm run evals:application-guides
+npm run test:application-guides
+```

@@ -136,3 +136,15 @@ asks for ten or more years of product work.
 
 The salary band begins below Jamie's $100,000 target. Any application should
 confirm that OTI can hire within the target range before a late-stage process.
+
+## Application materials
+
+- [Field-by-field application guide](../../../resumes/2026-08-20/nyc-oti-product-manager-784450/Application-Guide.md)
+- [Role-specific résumé PDF](../../../resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.pdf)
+- [Role-specific cover letter](../../../resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.md)
+
+The guide was checked against the official posting and supplied application
+screenshots on 2026-08-30. It supplies the existing tailored letter as the
+**Message to the Hiring Team** and keeps the résumé PDF separate. It identifies
+dates Jamie must confirm and later screening questions that have not been seen.
+Preparing these materials does not mark the application submitted.
