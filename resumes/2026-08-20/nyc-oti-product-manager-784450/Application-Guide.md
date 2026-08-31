@@ -336,13 +336,72 @@ Warmly,
 Jamie Burkart
 ```
 
-## 9. Next, review, and submit
+## 9. Preliminary questions — answers and human gates
 
-On **Preliminary questions → Cover letter → Additional attachments**, choose **Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.pdf** (10 MB maximum). Confirm the uploaded filename. For **How did you hear about this job?**, choose the truthful source offered by the dropdown. If Civic Match is absent and you found this specific opening there, choose **Other** and enter **Civic Match by Work for America** under **If other, how?** Do not claim a personal referral unless one actually occurred. Preferred first/last name may be **Jamie / Burkart** if still preferred; do not substitute these for any separately requested legal-name fields.
+These fields were observed on the Product Manager 784450 SmartRecruiters export on **2026-08-31**. For another OTI opening, use these answers only when the same field appears; recheck that application instead of assuming identical screening questions.
 
-- Check name, matching email fields, phone, saved experience/education, portfolio link, attached PDF, and hiring-team message. Optional Facebook and X fields may stay blank.
-- Click **Next**. Beyond the preliminary fields above, later screening questions were **not observed** for this application; answer the questions actually shown, from your records. Do not infer a civil-service status, credential, work authorization, or consent answer from a job title.
+### How did you hear about this job? *
+
+Choose **Civic Match** when it appears in the dropdown. If it is absent, choose **Other** and paste:
+
+```text
+Civic Match by Work for America
+```
+
+Choose Civic Match when the dropdown offers it. Otherwise choose Other and paste the fallback text. Do not claim a referral unless one actually occurred.
+
+### Preferred first name
+
+```text
+Jamie
+```
+
+### Preferred last name
+
+```text
+Burkart
+```
+
+### Voluntary demographic and veteran questions
+
+These fields are voluntary. Leave blank for the privacy-preserving answer unless Jamie personally chooses to disclose. Never infer an answer from other records.
+
+Observed voluntary groups: Gender; Hispanic or Latino; Race; Veteran self-identification and protected-veteran classifications; Household military service, relationship, branch, and discharge details.
+
+### Required attestations — Jamie-only
+
+Jamie must personally read and check all 3 required boxes: Accuracy and truth certification; City terms acknowledgement; Privacy notice agreement. Their unchecked state is not an omission the guide may fill. No agent has accepted them, and this guide is not consent.
+
+### Saved draft review for Job ID 784450
+
+The export shows a **prepared-not-submitted** draft. It confirms that résumé and signed cover-letter filenames were selected, but it is not a submission receipt. The experience cards display the year ranges below; **the export does not expose the months**. These are user-entered draft observations, not independent chronology verification.
+
+| Experience | Entered in form | Tailored résumé | Reconciliation |
+
+|---|---:|---:|---|
+
+| KC Town Hall LLC | 2017–2024 | 2015–2024 | conflict |
+
+| CallNYC.org | 2016–2016 | 2016 | year-level-compatible |
+
+| WOWList.org | 2013–Present | 2015–2020 | conflict |
+
+| NYC Artist Coalition / FairRentNYC | 2017–Present | 2017–Present | year-level-compatible |
+
+| THICK ARTS LLC | 2012–Present | 2009–Present | scope-conflict |
+
+**Do not check the accuracy certification yet.** Reconcile the KC Town Hall, WOW List, and Thick Arts scope/date differences first. CallNYC and NYC Artist Coalition / FairRentNYC are compatible only at year precision; their months remain unverified in this export.
+
+The exported hiring-team message shows a scrolled middle portion. Before continuing, confirm that the live field contains the complete intended message from its salutation through its closing, not only the visible excerpt.
+
+## 10. Final review and submit
+
+On **Preliminary questions → Cover letter → Additional attachments**, choose **Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.pdf** (10 MB maximum). Confirm the uploaded filename. Use the source and preferred-name answers above; do not substitute preferred names for any separately requested legal-name fields.
+
+- Check name, matching email fields, phone, saved experience/education, portfolio link, attached PDF, and the full hiring-team message. Optional Facebook and X fields may stay blank.
+- Beyond the preliminary fields documented above, additional screening questions were **not observed** for this application; answer the questions actually shown, from your records. Do not infer a civil-service status, credential, work authorization, protected characteristic, or consent answer.
 - If asked about minimum qualifications, report your actual degree and relevant experience. The employer decides equivalency; this guide is not an eligibility determination.
+- Resolve every chronology conflict before accepting the accuracy statement. Then personally read and check the three required attestations.
 - You review and submit the final application yourself. Save the confirmation and email afterward, then record the application as submitted. Until then its status remains not submitted.
 
 ## Evidence and maintenance

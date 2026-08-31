@@ -352,13 +352,50 @@ Warmly,
 Jamie Burkart
 ```
 
-## 9. Next, review, and submit
+## 9. Preliminary questions — answers and human gates
 
-On **Preliminary questions → Cover letter → Additional attachments**, choose **Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Senior-Product-Manager-789610.pdf** (10 MB maximum). Confirm the uploaded filename. For **How did you hear about this job?**, choose the truthful source offered by the dropdown. If Civic Match is absent and you found this specific opening there, choose **Other** and enter **Civic Match by Work for America** under **If other, how?** Do not claim a personal referral unless one actually occurred. Preferred first/last name may be **Jamie / Burkart** if still preferred; do not substitute these for any separately requested legal-name fields.
+These fields were observed on the Product Manager 784450 SmartRecruiters export on **2026-08-31**. For another OTI opening, use these answers only when the same field appears; recheck that application instead of assuming identical screening questions.
 
-- Check name, matching email fields, phone, saved experience/education, portfolio link, attached PDF, and hiring-team message. Optional Facebook and X fields may stay blank.
-- Click **Next**. Beyond the preliminary fields above, later screening questions were **not observed** for this application; answer the questions actually shown, from your records. Do not infer a civil-service status, credential, work authorization, or consent answer from a job title.
+### How did you hear about this job? *
+
+Choose **Civic Match** when it appears in the dropdown. If it is absent, choose **Other** and paste:
+
+```text
+Civic Match by Work for America
+```
+
+Choose Civic Match when the dropdown offers it. Otherwise choose Other and paste the fallback text. Do not claim a referral unless one actually occurred.
+
+### Preferred first name
+
+```text
+Jamie
+```
+
+### Preferred last name
+
+```text
+Burkart
+```
+
+### Voluntary demographic and veteran questions
+
+These fields are voluntary. Leave blank for the privacy-preserving answer unless Jamie personally chooses to disclose. Never infer an answer from other records.
+
+Observed voluntary groups: Gender; Hispanic or Latino; Race; Veteran self-identification and protected-veteran classifications; Household military service, relationship, branch, and discharge details.
+
+### Required attestations — Jamie-only
+
+Jamie must personally read and check all 3 required boxes: Accuracy and truth certification; City terms acknowledgement; Privacy notice agreement. Their unchecked state is not an omission the guide may fill. No agent has accepted them, and this guide is not consent.
+
+## 10. Final review and submit
+
+On **Preliminary questions → Cover letter → Additional attachments**, choose **Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Senior-Product-Manager-789610.pdf** (10 MB maximum). Confirm the uploaded filename. Use the source and preferred-name answers above; do not substitute preferred names for any separately requested legal-name fields.
+
+- Check name, matching email fields, phone, saved experience/education, portfolio link, attached PDF, and the full hiring-team message. Optional Facebook and X fields may stay blank.
+- Beyond the preliminary fields documented above, additional screening questions were **not observed** for this application; answer the questions actually shown, from your records. Do not infer a civil-service status, credential, work authorization, protected characteristic, or consent answer.
 - If asked about minimum qualifications, report your actual degree and relevant experience. The employer decides equivalency; this guide is not an eligibility determination.
+- Resolve every chronology conflict before accepting the accuracy statement. Then personally read and check the three required attestations.
 - You review and submit the final application yourself. Save the confirmation and email afterward, then record the application as submitted. Until then its status remains not submitted.
 
 ## Evidence and maintenance

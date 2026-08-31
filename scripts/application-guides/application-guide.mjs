@@ -9,6 +9,7 @@ const paste = (value) => `\`\`\`text\n${value.trim()}\n\`\`\``;
 const letterBody = (source) => source.toString().match(/^Dear [\s\S]+/m)?.[0].trim() ?? '';
 const profileIds = new Set(['linkedin', 'facebook', 'x', 'website']);
 const dateEvidence = JSON.parse(readFileSync(new URL('../../evals/application-guides/experience-dates.json', import.meta.url)));
+export const preliminaryAnswers = JSON.parse(readFileSync(new URL('../../evals/application-guides/oti-smartrecruiters-preliminary-answers.json', import.meta.url)));
 const renderFields = (fields) => fields.flatMap((field) => [
   `### ${field.label}`,
   field.value === null ? field.instruction : paste(field.value),
@@ -41,6 +42,56 @@ function renderExperience(entry, index) {
     `- **I currently work here:** ${current ? 'Yes, if still current when you submit.' : 'No.'}`,
     '- Click **Save** before adding the next entry.',
   ].join('\n\n');
+}
+
+function renderPreliminaryQuestions(config) {
+  const source = preliminaryAnswers.sourceAnswer;
+  const observation = preliminaryAnswers.observationsByJobId[config.jobId];
+  const sections = [
+    '## 9. Preliminary questions — answers and human gates',
+    `These fields were observed on the Product Manager 784450 SmartRecruiters export on **${preliminaryAnswers.reviewedOn}**. For another OTI opening, use these answers only when the same field appears; recheck that application instead of assuming identical screening questions.`,
+    `### ${source.label}`,
+    `Choose **${source.preferred}** when it appears in the dropdown. If it is absent, choose **${source.fallbackSelection}** and paste:`,
+    paste(source.fallbackText),
+    source.instruction,
+    ...preliminaryAnswers.preferredNames.flatMap((field) => [`### ${field.label}`, paste(field.answer)]),
+    '### Voluntary demographic and veteran questions',
+    preliminaryAnswers.voluntaryInstruction,
+    `Observed voluntary groups: ${preliminaryAnswers.voluntaryFields.map((field) => field.label).join('; ')}.`,
+    '### Required attestations — Jamie-only',
+    `Jamie must personally read and check all ${preliminaryAnswers.humanGates.length} required boxes: ${preliminaryAnswers.humanGates.map((gate) => gate.label).join('; ')}. Their unchecked state is not an omission the guide may fill. No agent has accepted them, and this guide is not consent.`,
+  ];
+  if (observation) {
+    sections.push(
+      `### Saved draft review for Job ID ${config.jobId}`,
+      `The export shows a **${observation.state}** draft. It confirms that résumé and signed cover-letter filenames were selected, but it is not a submission receipt. The experience cards display the year ranges below; **the export does not expose the months**. These are user-entered draft observations, not independent chronology verification.`,
+      '| Experience | Entered in form | Tailored résumé | Reconciliation |',
+      '|---|---:|---:|---|',
+      ...observation.experienceRanges.map((entry) => `| ${entry.company} | ${entry.enteredRange} | ${entry.tailoredResumeRange} | ${entry.reconciliation} |`),
+      '**Do not check the accuracy certification yet.** Reconcile the KC Town Hall, WOW List, and Thick Arts scope/date differences first. CallNYC and NYC Artist Coalition / FairRentNYC are compatible only at year precision; their months remain unverified in this export.',
+      'The exported hiring-team message shows a scrolled middle portion. Before continuing, confirm that the live field contains the complete intended message from its salutation through its closing, not only the visible excerpt.',
+    );
+  }
+  return sections;
+}
+
+export function evaluatePreliminaryAnswers(contract) {
+  const failures = [];
+  if (contract.sourceAnswer?.preferred !== 'Civic Match') failures.push('source_answer_missing:civic-match');
+  if (contract.sourceAnswer?.fallbackSelection !== 'Other' || contract.sourceAnswer?.fallbackText !== 'Civic Match by Work for America') failures.push('source_fallback_invalid');
+  const names = Object.fromEntries((contract.preferredNames ?? []).map((field) => [field.id, field.answer]));
+  if (names['preferred-first-name'] !== 'Jamie') failures.push('preferred_name_invalid:first');
+  if (names['preferred-last-name'] !== 'Burkart') failures.push('preferred_name_invalid:last');
+  for (const field of contract.voluntaryFields ?? []) if (field.answer !== null) failures.push(`protected_answer:${field.id}`);
+  for (const gate of contract.humanGates ?? []) {
+    if (gate.authority !== 'jamie-only' || gate.answer !== null) failures.push(`human_gate_not_reserved:${gate.id}`);
+  }
+  for (const [jobId, observation] of Object.entries(contract.observationsByJobId ?? {})) {
+    const unresolved = observation.experienceRanges?.some((entry) => entry.reconciliation.includes('conflict'));
+    if (unresolved && observation.accuracyCertification !== 'blocked-pending-reconciliation') failures.push(`accuracy_ready_with_unresolved_chronology:${jobId}`);
+    if (observation.monthVisibility !== 'not-visible-in-export') failures.push(`month_precision_overstated:${jobId}`);
+  }
+  return failures;
 }
 
 // This template models the observed OTI SmartRecruiters flow, not every ATS.
@@ -79,9 +130,10 @@ export function renderGuide(config, sources) {
     '## 8. Message to the Hiring Team — copy and paste',
     'This is the existing tailored cover-letter body, without its contact header. No character or word limit is visible in the supplied screenshots. If the live form reports a limit, stop and shorten against that actual limit; do not assume the earlier Civic Match limit applies.',
     paste(letterBody(sources.letter)),
-    '## 9. Next, review, and submit',
-    `On **Preliminary questions → Cover letter → Additional attachments**, choose **${config.sources.coverPdf.path}** (10 MB maximum). Confirm the uploaded filename. For **How did you hear about this job?**, choose the truthful source offered by the dropdown. If Civic Match is absent and you found this specific opening there, choose **Other** and enter **Civic Match by Work for America** under **If other, how?** Do not claim a personal referral unless one actually occurred. Preferred first/last name may be **Jamie / Burkart** if still preferred; do not substitute these for any separately requested legal-name fields.`,
-    '- Check name, matching email fields, phone, saved experience/education, portfolio link, attached PDF, and hiring-team message. Optional Facebook and X fields may stay blank.\n- Click **Next**. Beyond the preliminary fields above, later screening questions were **not observed** for this application; answer the questions actually shown, from your records. Do not infer a civil-service status, credential, work authorization, or consent answer from a job title.\n- If asked about minimum qualifications, report your actual degree and relevant experience. The employer decides equivalency; this guide is not an eligibility determination.\n- You review and submit the final application yourself. Save the confirmation and email afterward, then record the application as submitted. Until then its status remains not submitted.',
+    ...renderPreliminaryQuestions(config),
+    '## 10. Final review and submit',
+    `On **Preliminary questions → Cover letter → Additional attachments**, choose **${config.sources.coverPdf.path}** (10 MB maximum). Confirm the uploaded filename. Use the source and preferred-name answers above; do not substitute preferred names for any separately requested legal-name fields.`,
+    '- Check name, matching email fields, phone, saved experience/education, portfolio link, attached PDF, and the full hiring-team message. Optional Facebook and X fields may stay blank.\n- Beyond the preliminary fields documented above, additional screening questions were **not observed** for this application; answer the questions actually shown, from your records. Do not infer a civil-service status, credential, work authorization, protected characteristic, or consent answer.\n- If asked about minimum qualifications, report your actual degree and relevant experience. The employer decides equivalency; this guide is not an eligibility determination.\n- Resolve every chronology conflict before accepting the accuracy statement. Then personally read and check the three required attestations.\n- You review and submit the final application yourself. Save the confirmation and email afterward, then record the application as submitted. Until then its status remains not submitted.',
     '## Evidence and maintenance',
     'Field labels and the 10 MB limit come from Jamie-provided SmartRecruiters screenshots, including the later cover-letter upload and source/preferred-name questions. The expanded Experience/Education controls are carried forward from the earlier application on the same platform, not presented as newly inspected controls for every opening. Remaining screening questions were not observed; no successful live submission is claimed.',
     'The sibling `application-guide.json` records the reviewed résumé, PDF, and letter hashes. Descriptions are extracted from the canonical résumé; the hiring message is extracted from the canonical letter. Source changes fail the deterministic guide check until the material is reviewed and this guide is regenerated. No new hiring-reader pass is asserted for this mechanical application guide.',
@@ -90,7 +142,7 @@ export function renderGuide(config, sources) {
 }
 
 export function evaluateGuide(config, sources, guide) {
-  const failures = [];
+  const failures = evaluatePreliminaryAnswers(preliminaryAnswers);
   for (const kind of ['resume', 'letter', 'pdf', 'coverPdf']) {
     if (!sources[kind]) { failures.push(`missing_source:${kind}`); continue; }
     if (hash(sources[kind]) !== config.sources[kind].sha256) failures.push(`source_changed:${kind}`);

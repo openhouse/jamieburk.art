@@ -5,14 +5,14 @@ kind: opportunity
 status: governed-open
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-20
-review_by: 2026-08-27
+last_reviewed: 2026-08-31
+review_by: 2026-09-04
 canonical_path: docs/knowledge-bank/opportunities/oti-product-manager-784450.md
 summary: Strong-fit OTI product opportunity centered on resident-facing discovery, roadmaps, requirements, launch, outcomes, and cross-functional delivery.
 canonical_url: https://cityjobs.nyc.gov/job/product-manager-in-brooklyn-jid-45056
 source_type: official-employer
 opportunity_status: live
-application_state: not-applied
+application_state: prepared-not-submitted
 application_deadline: 2026-09-04
 verified_at: 2026-08-20
 portfolio_routes:
@@ -106,6 +106,9 @@ relations:
   - type: uses_source
     target: source.jobs.oti.product-manager.784450
     href: ../sources/jobs-oti-product-manager-784450.md
+  - type: related_to
+    target: application.nyc-oti.product-manager.784450.draft
+    href: ../applications/nyc-oti-product-manager-784450-draft.md
   - type: uses_source
     target: source.nyc-jobs.oti-product-search.2026-08-20
     href: ../sources/nyc-jobs-oti-product-search-2026-08-20.md
@@ -142,9 +145,13 @@ confirm that OTI can hire within the target range before a late-stage process.
 - [Field-by-field application guide](../../../resumes/2026-08-20/nyc-oti-product-manager-784450/Application-Guide.md)
 - [Role-specific résumé PDF](../../../resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.pdf)
 - [Role-specific cover letter](../../../resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.md)
+- [Signed cover-letter PDF](../../../resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.pdf)
+- [Prepared application state](../applications/nyc-oti-product-manager-784450-draft.md)
 
 The guide was checked against the official posting and supplied application
-screenshots on 2026-08-30. It supplies the existing tailored letter as the
+screenshots and the bounded August 31 full-page exports. It supplies the existing tailored letter as the
 **Message to the Hiring Team** and keeps the résumé PDF separate. It identifies
-dates Jamie must confirm and later screening questions that have not been seen.
+the preliminary-question answers, protected-field boundary, human-only
+attestations, and date conflicts Jamie must resolve. Additional screening
+questions beyond the reviewed page have not been seen.
 Preparing these materials does not mark the application submitted.

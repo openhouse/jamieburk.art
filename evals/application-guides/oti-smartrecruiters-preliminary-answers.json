@@ -1,0 +1,118 @@
+{
+  "reviewedOn": "2026-08-31",
+  "scope": "Shared answer and authority contract for the observed NYC OTI SmartRecruiters preliminary-questions page. It is reusable preparation, not evidence that every field appears for every opening or that any application was submitted.",
+  "sourceAnswer": {
+    "id": "how-heard",
+    "label": "How did you hear about this job? *",
+    "preferred": "Civic Match",
+    "fallbackSelection": "Other",
+    "fallbackText": "Civic Match by Work for America",
+    "instruction": "Choose Civic Match when the dropdown offers it. Otherwise choose Other and paste the fallback text. Do not claim a referral unless one actually occurred."
+  },
+  "preferredNames": [
+    {
+      "id": "preferred-first-name",
+      "label": "Preferred first name",
+      "answer": "Jamie"
+    },
+    {
+      "id": "preferred-last-name",
+      "label": "Preferred last name",
+      "answer": "Burkart"
+    }
+  ],
+  "voluntaryFields": [
+    {
+      "id": "gender",
+      "label": "Gender",
+      "answer": null
+    },
+    {
+      "id": "hispanic-latino",
+      "label": "Hispanic or Latino",
+      "answer": null
+    },
+    {
+      "id": "race",
+      "label": "Race",
+      "answer": null
+    },
+    {
+      "id": "veteran-status",
+      "label": "Veteran self-identification and protected-veteran classifications",
+      "answer": null
+    },
+    {
+      "id": "military-household",
+      "label": "Household military service, relationship, branch, and discharge details",
+      "answer": null
+    }
+  ],
+  "voluntaryInstruction": "These fields are voluntary. Leave blank for the privacy-preserving answer unless Jamie personally chooses to disclose. Never infer an answer from other records.",
+  "humanGates": [
+    {
+      "id": "accuracy-certification",
+      "label": "Accuracy and truth certification",
+      "required": true,
+      "authority": "jamie-only",
+      "answer": null
+    },
+    {
+      "id": "city-terms",
+      "label": "City terms acknowledgement",
+      "required": true,
+      "authority": "jamie-only",
+      "answer": null
+    },
+    {
+      "id": "privacy-notice",
+      "label": "Privacy notice agreement",
+      "required": true,
+      "authority": "jamie-only",
+      "answer": null
+    }
+  ],
+  "observationsByJobId": {
+    "784450": {
+      "observedOn": "2026-08-31",
+      "state": "prepared-not-submitted",
+      "monthVisibility": "not-visible-in-export",
+      "accuracyCertification": "blocked-pending-reconciliation",
+      "resumeAttachment": "visible-selected",
+      "coverLetterAttachment": "visible-selected",
+      "messageReview": "verify-full-body-before-submission",
+      "experienceRanges": [
+        {
+          "company": "KC Town Hall LLC",
+          "enteredRange": "2017–2024",
+          "tailoredResumeRange": "2015–2024",
+          "reconciliation": "conflict"
+        },
+        {
+          "company": "CallNYC.org",
+          "enteredRange": "2016–2016",
+          "tailoredResumeRange": "2016",
+          "reconciliation": "year-level-compatible"
+        },
+        {
+          "company": "WOWList.org",
+          "enteredRange": "2013–Present",
+          "tailoredResumeRange": "2015–2020",
+          "reconciliation": "conflict"
+        },
+        {
+          "company": "NYC Artist Coalition / FairRentNYC",
+          "enteredRange": "2017–Present",
+          "tailoredResumeRange": "2017–Present",
+          "reconciliation": "year-level-compatible"
+        },
+        {
+          "company": "THICK ARTS LLC",
+          "enteredRange": "2012–Present",
+          "tailoredResumeRange": "2009–Present",
+          "reconciliation": "scope-conflict"
+        }
+      ]
+    }
+  }
+}

@@ -1,7 +1,12 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { createHash } from 'node:crypto';
-import { renderGuide, evaluateGuide } from './application-guide.mjs';
+import {
+  renderGuide,
+  evaluateGuide,
+  evaluatePreliminaryAnswers,
+  preliminaryAnswers,
+} from './application-guide.mjs';
 
 const hash = (value) => createHash('sha256').update(value).digest('hex');
 function fixture() {
@@ -114,9 +119,9 @@ test('guide separates resume upload from message and preserves final human revie
   assert.match(guide, /You review and submit/);
 });
 
-test('section order follows the observed form, with profiles after education', () => {
+test('section order follows the observed form, with preliminary questions before final review', () => {
   const { guide } = fixture();
-  const headings = ['Personal information', 'Experience —', 'Education', 'Your Profiles', 'Resume upload', 'Message to the Hiring Team', 'Next, review, and submit'];
+  const headings = ['Personal information', 'Experience —', 'Education', 'Your Profiles', 'Resume upload', 'Message to the Hiring Team', 'Preliminary questions', 'Final review and submit'];
   const positions = headings.map((heading) => guide.search(new RegExp(`^## \\d+\\. ${heading}`, 'm')));
   assert.ok(positions.every((position) => position >= 0));
   assert.deepEqual(positions, [...positions].sort((a, b) => a - b));
@@ -146,4 +151,53 @@ test('corroborated end month is rendered without inventing a start month', () =>
   const guide = renderGuide(f.config, f.sources);
   assert.match(guide, /April 2024/);
   assert.match(guide, /2015 — confirm the actual month/);
+});
+
+test('every enrolled OTI guide carries copy-paste answers for the observed preliminary questions', () => {
+  const { guide } = fixture();
+  assert.match(guide, /How did you hear about this job\?/);
+  assert.match(guide, /Civic Match by Work for America/);
+  assert.match(guide, /Preferred first name[\s\S]*Jamie/);
+  assert.match(guide, /Preferred last name[\s\S]*Burkart/);
+  assert.match(guide, /voluntary[\s\S]*Leave blank/);
+  assert.match(guide, /Jamie must personally read and check/);
+});
+
+test('protected demographic and veteran fields stay unanswered', () => {
+  const mutated = structuredClone(preliminaryAnswers);
+  mutated.voluntaryFields[0].answer = 'inferred value';
+  assert.ok(evaluatePreliminaryAnswers(mutated).includes(`protected_answer:${mutated.voluntaryFields[0].id}`));
+});
+
+test('required attestations remain Jamie-only and unanswered in the guide contract', () => {
+  for (const mutation of [
+    (contract) => { contract.humanGates[0].answer = true; },
+    (contract) => { contract.humanGates[0].authority = 'agent'; },
+  ]) {
+    const mutated = structuredClone(preliminaryAnswers);
+    mutation(mutated);
+    assert.ok(evaluatePreliminaryAnswers(mutated).some((failure) => failure.startsWith('human_gate_not_reserved:')));
+  }
+});
+
+test('an unresolved form-versus-resume chronology blocks the accuracy certification', () => {
+  const observation = preliminaryAnswers.observationsByJobId['784450'];
+  assert.equal(observation.accuracyCertification, 'blocked-pending-reconciliation');
+  assert.ok(observation.experienceRanges.some((entry) => entry.reconciliation === 'conflict'));
+  assert.deepEqual(evaluatePreliminaryAnswers(preliminaryAnswers), []);
+
+  const mutated = structuredClone(preliminaryAnswers);
+  mutated.observationsByJobId['784450'].accuracyCertification = 'ready';
+  assert.ok(evaluatePreliminaryAnswers(mutated).includes('accuracy_ready_with_unresolved_chronology:784450'));
+});
+
+test('the reviewed Product Manager draft records entered years without manufacturing months', () => {
+  const f = fixture();
+  const guide = renderGuide(f.config, f.sources);
+  for (const range of ['2017–2024', '2016–2016', '2013–Present', '2017–Present', '2012–Present']) {
+    assert.match(guide, new RegExp(range));
+  }
+  assert.match(guide, /export does not expose the months/);
+  assert.match(guide, /Do not check the accuracy certification yet/);
+  assert.doesNotMatch(guide, /2017-01|2016-01|2013-01/);
 });
