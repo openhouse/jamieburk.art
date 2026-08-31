@@ -64,6 +64,20 @@ export function evaluateKnowledgeGraphPortfolio(candidate) {
   const claim = candidate.knowledgeBank.claims.find(
     (item) => item.id === "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026"
   );
+  const sharedMemoryClaim = candidate.knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KNOWLEDGE-WIKI-SHARED-MEMORY-PROTOCOL-2026"
+  );
+  const sharedMemoryIntake = candidate.knowledgeBank.intakeItems.find(
+    (item) => item.id === "INTAKE-KNOWLEDGE-WIKI-SHARED-MEMORY-PROTOCOL-2026"
+  );
+  const sharedMemoryInquiry = candidate.knowledgeBank.researchInquiries.find(
+    (item) => item.id === "INQ-KNOWLEDGE-WIKI-SHARED-MEMORY-PILOT"
+  );
+  const sharedMemoryLineageSourceIds = [
+    "SRC-WARD-CUNNINGHAM-FEDERATED-WIKI",
+    "SRC-WIKIMEDIA-ABSTRACT-WIKIPEDIA",
+    "SRC-EMBER-RFC-PROCESS-2022"
+  ];
   const expectedPhotoSha =
     "a596480d6276fd4fb02fcbc6822ef79e049bdeb27c3081a574892ee5b2c0d036";
   const governedPhotoText = [
@@ -248,6 +262,113 @@ export function evaluateKnowledgeGraphPortfolio(candidate) {
     );
   }
 
+  check(Boolean(sharedMemoryClaim), "canonical shared-memory proposition is missing");
+  check(
+    sharedMemoryIntake?.disposition === "researching" &&
+      sharedMemoryIntake.researchInquiryIds.includes(
+        "INQ-KNOWLEDGE-WIKI-SHARED-MEMORY-PILOT"
+      ),
+    "shared-memory proposition is not retained as an active research intake"
+  );
+  if (sharedMemoryClaim) {
+    const sourceIds = new Set(
+      sharedMemoryClaim.evidence.map((item) => item.sourceId)
+    );
+    const heldProjection = sharedMemoryClaim.projections.find(
+      (item) => item.key === "case-study"
+    );
+    check(
+      sharedMemoryClaim.status === "confirmed-with-boundary" &&
+        sharedMemoryLineageSourceIds.every((sourceId) => sourceIds.has(sourceId)) &&
+        sourceIds.has("SRC-KNOWLEDGE-WIKI-RFC-0009-2026"),
+      "canonical shared-memory proposition lacks its RFC or all three scoped design lineages"
+    );
+    check(
+      sharedMemoryLineageSourceIds.every((sourceId) =>
+        sharedMemoryClaim.evidence.some(
+          (item) =>
+            item.sourceId === sourceId &&
+            item.relationship === "context" &&
+            item.renderCitation === false
+        )
+      ),
+      "external design lineages must remain contextual, non-rendered evidence"
+    );
+    check(
+      sharedMemoryClaim.projections.length === 1 &&
+        heldProjection?.status === "hold" &&
+        heldProjection.citationRequired === true &&
+        heldProjection.surfaces.length === 0 &&
+        !/(Ward Cunningham|Denny Vrandecic|Yehuda Katz)/.test(publicCopy),
+      "untested shared-memory proposition must remain held from public projection"
+    );
+    check(
+      sharedMemoryClaim.antiClaims.some((item) =>
+        /Ward Cunningham[\s\S]*Denny Vrandecic[\s\S]*Yehuda Katz[\s\S]*participated in, reviewed, or endorsed/i.test(
+          item
+        )
+      ),
+      "shared-memory proposition lost its participation and endorsement boundary"
+    );
+    check(
+      sharedMemoryClaim.boundaries.some((item) =>
+        /visible disagreement[\s\S]*does not require identical context, consensus, or uniform belief/i.test(
+          item
+        )
+      ) &&
+        sharedMemoryClaim.antiClaims.some((item) =>
+          /identical context[\s\S]*identical beliefs/i.test(item)
+        ),
+      "shared-memory proposition lost its disagreement and context boundary"
+    );
+    check(
+      sharedMemoryClaim.antiClaims.some((item) =>
+        /guarantees truth, consensus, trust, or factual agreement/i.test(item)
+      ) &&
+        sharedMemoryClaim.antiClaims.some((item) =>
+          /implemented, adopted, production-ready, or a completed client system/i.test(
+            item
+          )
+        ) &&
+        sharedMemoryClaim.antiClaims.some((item) =>
+          /evaluation authorizes publication or deployment/i.test(item)
+        ),
+      "shared-memory proposition lost truth, maturity, or human-authority safeguards"
+    );
+  }
+
+  check(
+    Boolean(sharedMemoryInquiry) &&
+      sharedMemoryInquiry?.resultStatus === "inconclusive" &&
+      sharedMemoryInquiry.question.includes("two people and two agents") &&
+      sharedMemoryInquiry.methods.some((item) =>
+        /find an answer[\s\S]*trace[\s\S]*correction[\s\S]*dissent/i.test(item)
+      ) &&
+      sharedMemoryLineageSourceIds.every((sourceId) =>
+        sharedMemoryInquiry.sourceIds.includes(sourceId)
+      ),
+    "shared-memory controlled pilot inquiry is missing, prematurely resolved, or incomplete"
+  );
+
+  const requiredSharedMemoryObservations = [
+    "OBS-KNOWLEDGE-WIKI-SHARED-MEMORY-PROPOSITION",
+    "OBS-KNOWLEDGE-WIKI-FEDERATED-WIKI-LINEAGE",
+    "OBS-KNOWLEDGE-WIKI-ABSTRACT-WIKIPEDIA-LINEAGE",
+    "OBS-KNOWLEDGE-WIKI-EMBER-RFC-LINEAGE",
+    "OBS-KNOWLEDGE-WIKI-YEHUDA-LENS-SCOPE"
+  ];
+  check(
+    requiredSharedMemoryObservations.every((observationId) =>
+      candidate.knowledgeBank.observations.some(
+        (observation) =>
+          observation.id === observationId &&
+          observation.publicSafe === true &&
+          observation.limitations.length > 0
+      )
+    ),
+    "shared-memory proposition lacks its public-safe, limitation-bearing observations"
+  );
+
   const references = [
     ...publicCopy.matchAll(/claimId="CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026"/g)
   ].length;
@@ -267,7 +388,17 @@ export function evaluateKnowledgeGraphPortfolio(candidate) {
         "Test the handoff"
       ].filter((term) => candidate.labPage.includes(term)).length,
       governedCollectiveMap:
-        candidate.photoDerivativeSha256 === expectedPhotoSha ? 1 : 0
+        candidate.photoDerivativeSha256 === expectedPhotoSha ? 1 : 0,
+      researchLineages: sharedMemoryClaim
+        ? sharedMemoryLineageSourceIds.filter((sourceId) =>
+            sharedMemoryClaim.evidence.some((item) => item.sourceId === sourceId)
+          ).length
+        : 0,
+      sharedMemoryProtocolHeld:
+        sharedMemoryClaim?.projections?.[0]?.status === "hold" &&
+        sharedMemoryClaim.projections[0].surfaces.length === 0
+          ? 1
+          : 0
     }
   };
 }
@@ -279,6 +410,6 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     process.exit(1);
   }
   console.log(
-    `Knowledge Graph portfolio eval passed: ${result.metrics.graphResponsibilities}/3 graph responsibilities, ${result.metrics.publicClaimReferences} cited renderings, ${result.metrics.reviewedSurfaces} reviewed surfaces.`
+    `Knowledge Graph portfolio eval passed: ${result.metrics.graphResponsibilities}/3 graph responsibilities, ${result.metrics.publicClaimReferences} cited renderings, ${result.metrics.reviewedSurfaces} reviewed surfaces, ${result.metrics.researchLineages}/3 research lineages, held protocol ${result.metrics.sharedMemoryProtocolHeld}/1.`
   );
 }

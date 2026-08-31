@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "native-google-docs-signed-cover-letter-v1",
+  "specimen": {
+    "reference": "user-authorized-letter-house-style",
+    "accessMode": "read-only",
+    "reviewedOn": "2026-08-31",
+    "inspection": "native-document-objects-and-native-pdf-closing",
+    "privateLocatorCommitted": false,
+    "sourceContentCopiedIntoRepository": false,
+    "signatureImageFound": true
+  },
+  "style": {
+    "nameFont": "Palatino Linotype",
+    "nameSizePt": 21,
+    "accentFont": "Oswald",
+    "accentSizePt": 11.5,
+    "accentColor": "#458e8b",
+    "bodyFont": "Karla",
+    "bodySizePt": 10,
+    "bodyColor": "#111111",
+    "lineSpacingPercent": 105,
+    "paragraphSpaceAfterPt": 8,
+    "headerAndClosingSpaceAfterPt": 2,
+    "pageSizePt": [612, 792],
+    "layoutRule": "Adapt a native specimen copy, retaining its page setup, typography and actual inline signature. Use 8 pt paragraph spacing for letter readability, 2 pt in the header and closing; inspect the native PDF export. Do not rebuild in another renderer.",
+    "signatureRule": "Insert the actual Jamie-authorized signature image between the closing and typed name. Never synthesize handwriting or crop a typed name and call it a signature."
+  },
+  "signature": {
+    "status": "available",
+    "approvedForCoverLetters": true,
+    "imageSha256": "eaab41cfd1e19f03d3dff1970210e5003b55303b110d8a6e10474863c2e645d4"
+  },
+  "readiness": "exact-export-and-visual-review-required",
+  "scope": "Every maintained cover letter derives PDF and review siblings from the canonical cover-letter portfolio, including historical do-not-submit benchmarks.",
+  "limitations": "The approved signature is a visual handwritten image, not a cryptographic digital signature. Readiness is bound to each exact exported PDF and inspection receipt; it does not authorize application submission."
+}

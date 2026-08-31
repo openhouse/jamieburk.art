@@ -1,0 +1,109 @@
+{
+  "jobId": "782373",
+  "role": "Senior Product Designer",
+  "reviewedOn": "2026-08-20",
+  "postingUrl": "https://cityjobs.nyc.gov/job/senior-product-designer-in-brooklyn-jid-44505",
+  "deadline": "2026-10-16",
+  "guide": "Application-Guide.md",
+  "expectedExperienceCount": 5,
+  "sources": {
+    "resume": {
+      "path": "Jamie-Burkart-Resume-NYC-OTI-PIT-Senior-Product-Designer-782373.md",
+      "sha256": "185d56ffc1e17df80eb69b8d89156e44605cb51c7cd0b6d68dd44b5abd5a6f3a"
+    },
+    "letter": {
+      "path": "Jamie-Burkart-Cover-Letter-NYC-OTI-PIT-Senior-Product-Designer-782373.md",
+      "sha256": "7d521307c6e4454efd5ede9ba4c8174623f6259cc39347f6e9ff0d78a3436f20"
+    },
+    "pdf": {
+      "path": "Jamie-Burkart-Resume-NYC-OTI-PIT-Senior-Product-Designer-782373.pdf",
+      "sha256": "78db2c5e75e2c7904cf07eb2aa12f86b46cf7e7c986b1d488c42397c0a1aaa1d"
+    },
+    "coverPdf": {
+      "path": "Jamie-Burkart-Cover-Letter-NYC-OTI-PIT-Senior-Product-Designer-782373.pdf",
+      "sha256": "e88e81d9450f731e9214bebbaadf92ff7df760bae5be09d71f0d6f248e40dc41"
+    }
+  },
+  "requiredFieldIds": [
+    "first-name",
+    "last-name",
+    "email",
+    "confirm-email",
+    "city",
+    "phone-country",
+    "phone-number",
+    "linkedin",
+    "facebook",
+    "x",
+    "website"
+  ],
+  "fields": [
+    {
+      "id": "first-name",
+      "label": "First name *",
+      "value": "Jamie",
+      "matchResume": true
+    },
+    {
+      "id": "last-name",
+      "label": "Last name *",
+      "value": "Burkart",
+      "matchResume": true
+    },
+    {
+      "id": "email",
+      "label": "Email *",
+      "value": null,
+      "instruction": "Copy the email from the contact line of the linked tailored résumé. It is not duplicated in this tracked guide."
+    },
+    {
+      "id": "confirm-email",
+      "label": "Confirm your email *",
+      "value": null,
+      "instruction": "Enter exactly the same email as above."
+    },
+    {
+      "id": "city",
+      "label": "City",
+      "value": "Brooklyn, NY",
+      "matchResume": true
+    },
+    {
+      "id": "phone-country",
+      "label": "Phone number * — country code",
+      "value": "+1",
+      "instruction": "Select United States (+1)."
+    },
+    {
+      "id": "phone-number",
+      "label": "Phone number * — local number",
+      "value": null,
+      "instruction": "Copy the phone number from the contact line of the linked tailored résumé, without repeating the +1 country code."
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "value": "https://www.linkedin.com/in/jamie-burkart/",
+      "matchResume": true
+    },
+    {
+      "id": "facebook",
+      "label": "Facebook",
+      "value": null,
+      "instruction": "Leave blank (optional)."
+    },
+    {
+      "id": "x",
+      "label": "X (fka Twitter)",
+      "value": null,
+      "instruction": "Leave blank (optional)."
+    },
+    {
+      "id": "website",
+      "label": "Website",
+      "value": "https://jamieburk.art/",
+      "matchResume": true
+    }
+  ],
+  "packetReviewedOn": "2026-08-31"
+}

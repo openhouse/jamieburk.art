@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Jamie Burkart
 
-**Source commit:** `ccddbf75a1e1a3ab293c5dd067e1f30a5b9a6855`
-**Generation time:** 2026-08-22T21:22:19-04:00
-**Source fingerprint:** `c2cf41ec29380d85699d1af93a8f8fe4629fbe0116345afd5e96d2cf0a6f5033`
+**Source commit:** `29745b537e57bab69f5ddc6207c3ab6e8fbd8e38`
+**Generation time:** 2026-08-31T19:49:24-04:00
+**Source fingerprint:** `58618688c7258813c8659a6ae82556ff86cc9ce4dfa32b7f274081ec2ba8270c`
 
 - [Interrogative Design Symposium](../../events/interrogative-design-symposium-2024.md) - `related_to` (frontmatter)
 - [AI Made Me Do It symposium and exhibition](../../events/ai-made-me-do-it-symposium-2024.md) - `related_to` (frontmatter)

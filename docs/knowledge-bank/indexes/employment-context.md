@@ -5,8 +5,8 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-21
-review_by: 2026-08-27
+last_reviewed: 2026-08-31
+review_by: 2026-09-14
 canonical_path: docs/knowledge-bank/indexes/employment-context.md
 summary: Task-oriented entry point for live opportunity research, historical role benchmarks, public-only hiring evaluation, and private-boundary rules.
 relations:
@@ -69,6 +69,14 @@ relations:
     href: ../applications/nyc-oti-senior-product-manager-782366.md
     context: Jamie-authorized date-level submission milestone with a pending outcome and protected confirmation evidence.
   - type: related_to
+    target: application.nyc-oti.product-manager.784450
+    href: ../applications/nyc-oti-product-manager-784450.md
+    context: Jamie-authorized August 31 date-level receipt with a pending outcome and protected confirmation evidence.
+  - type: related_to
+    target: application.nyc-oti.speed-operations-manager.789810
+    href: ../applications/nyc-oti-speed-operations-manager-789810.md
+    context: Jamie-authorized August 31 date-level receipt with a pending outcome and protected confirmation evidence.
+  - type: related_to
     target: research.nyc-jobs.citywide-monitor.2026-08-20
     href: ../research-runs/nyc-jobs-citywide-monitor-2026-08-20.md
     context: Citywide official-feed freshness, deterministic eligibility, selective scoring, and provisional opportunity intake.
@@ -106,8 +114,9 @@ remain private, and later outcomes require separate approval.
 The first three official application surfaces were rechecked as open on August
 20, 2026. The five OTI roles are the `ceil(11 × 0.38)` leading group from the
 [complete OTI search ranking](../research-runs/nyc-oti-product-management-ranking-2026-08-20.md).
-The PIT Crew Senior Product Manager candidacy is `submitted-pending`; the other
-four newly admitted OTI opportunities are open and not yet applied to.
+The PIT Crew Senior Product Manager, Product Manager, and SPEED Operations
+Manager candidacies are `submitted-pending`. The other two newly admitted OTI
+opportunities remain open and not yet applied to.
 
 [BetaNYC's weekly civic-technology newsletter](../sources/betanyc-civic-tech-newsletter-2026-08-20.md)
 is now a recurring opportunity source alongside NYC Jobs Open Data and Civic
@@ -116,15 +125,13 @@ Director of Policy Implementation role and Polimorphic's first Product Manager
 role to provisional intake; official-posting, qualification, named-reader, and
 Jamie application review remain required.
 
-The downloadable public résumé follows a deterministic lifecycle queue. First,
-it targets every submitted or interviewing application with a pending outcome.
-If none exist, it targets every open, unapplied, truthfully hirable opportunity.
-If neither group exists, it targets the top quarter of eligible historical
-opportunities by the frozen fit score. Because Job 782366 is the only known
-submitted-pending application, its tailored résumé is the current public
-artifact. Application-specific résumés may be narrower; expired benchmarks,
-conditional leads, hard-screened roles, and unknown date states cannot enter
-the public target set.
+The downloadable public résumé follows a separately governed deterministic
+lifecycle queue. The last frozen selector targeted Job 782366. These two new
+application milestones do not silently replace that public artifact: their
+role-specific résumés remain in the governed packets until the selector and its
+reader evals receive a separate exact-candidate review. Application-specific
+résumés may be narrower; expired benchmarks, conditional leads, hard-screened
+roles, and unknown date states cannot enter the public target set.
 
 Deterministic lifecycle, date, hard-screen, artifact, and reader-coverage checks
 run before any model-based hiring-reader role play. This prevents a model call
@@ -150,14 +157,16 @@ matching. The system may prepare a profile guide and matching packet, but Jamie
 controls profile visibility, protected-category answers, relocation and media
 choices, every external employer application, and final submission.
 
-## Current authorized milestone
+## Current authorized milestones
 
-Jamie authorized the Wiki to record the date-level
-[NYC OTI Senior Product Manager application milestone](../applications/nyc-oti-senior-product-manager-782366.md).
-The record connects the role, official source, tailored resume, role-fit brief,
-privacy boundary, reusable form-workflow learning, and next-stage operating
-loop. It does not publish the confirmation capture or imply an interview,
-offer, appointment, or endorsement.
+Jamie authorized the Wiki to record three date-level OTI application
+milestones: [Senior Product Manager 782366](../applications/nyc-oti-senior-product-manager-782366.md),
+[Product Manager 784450](../applications/nyc-oti-product-manager-784450.md),
+and [SPEED Operations Manager 789810](../applications/nyc-oti-speed-operations-manager-789810.md).
+The records connect each role, official source, governed packet, privacy
+boundary, and next-stage state. They do not publish confirmation captures or
+imply eligibility, completed review, an interview, offer, appointment,
+endorsement, referral, or Civic Match introduction.
 
 ## Reporting and vision context
 

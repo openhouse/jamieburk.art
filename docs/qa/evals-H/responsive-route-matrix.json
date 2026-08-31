@@ -1,10 +1,10 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-08-23T00:06:28.329Z",
-  "baseUrl": "http://127.0.0.1:3013",
-  "publicSurfaceFingerprint": "3c1e38b991daebd8088a479d7636a0240cc9016cbc723c90f57edd230ed301b6",
+  "checkedAt": "2026-08-24T23:17:05.706Z",
+  "baseUrl": "http://127.0.0.1:3000",
+  "publicSurfaceFingerprint": "f049d54fa744f60005f3d9cc48a9f47bf2d63b42ccc6a27b742b3be42e663d69",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 152,
+  "publicSurfaceFileCount": 153,
   "routes": [
     "/",
     "/work",
@@ -881,7 +881,7 @@
     "nonSuccessResponses": 0,
     "invalidHeadingOrLandmarkRows": 0,
     "lazyImagesObserved": 112,
-    "unloadedImagesBeforeScroll": 75,
+    "unloadedImagesBeforeScroll": 41,
     "lazyImageFollowUpPerformed": true,
     "allImagesLoadedAfterScroll": true
   },
@@ -900,8 +900,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionOverlapsPrimaryCopy": false,
-        "captionAndCreditSeparated": true
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
       },
       {
         "viewport": 375,
@@ -912,8 +912,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionOverlapsPrimaryCopy": false,
-        "captionAndCreditSeparated": true
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
       },
       {
         "viewport": 768,
@@ -924,8 +924,8 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionOverlapsPrimaryCopy": false,
-        "captionAndCreditSeparated": true
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
       },
       {
         "viewport": 1280,
@@ -936,14 +936,14 @@
         "computedFontSizePx": 12.48,
         "computedLineHeight": "17.472px",
         "captionWithinViewport": true,
-        "captionOverlapsPrimaryCopy": false,
-        "captionAndCreditSeparated": true
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
       }
     ],
     "passed": true
   },
   "navigationReview": {
-    "checkedAt": "2026-08-23T00:06:28.329Z",
+    "checkedAt": "2026-08-24T23:17:05.706Z",
     "startRoute": "/",
     "destinationRoute": "/about",
     "startHttpStatus": 200,
@@ -958,12 +958,12 @@
       "height": 900
     },
     "renderedScreenshot": {
-      "sha256": "bbd196488b6ce79c187569c797b29762d6713b4cdf5b668d60b80596067cb082",
-      "byteLength": 664120,
+      "sha256": "caf3b6dd82348ae83c282442573e856ae91f4867c5b62ec6f85d883f4aec3dad",
+      "byteLength": 661582,
       "width": 1280,
       "fullPage": true,
       "retainedInPublicGit": false,
-      "reviewBoundary": "The temporary rendered screenshot was inspected for this exact public page and is represented in public Git only by its content hash and scoped observations."
+      "reviewBoundary": "The temporary rendered screenshot was inspected for this exact public page and is represented in public Git only by its content hash and measured observations."
     },
     "pass": true
   }

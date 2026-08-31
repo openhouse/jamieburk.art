@@ -1,6 +1,6 @@
 {
   "suite": "knowledge-wiki-foundation-E",
-  "version": 5,
+  "version": 6,
   "authority": "knowledge-wiki-employment-context-and-hiring-acceptance-team-handoff-2026-07-18.md, with M as the implementation spine",
   "principle": "Markdown is the record. The graph is compiled from the record. The portfolio is a selective projection from the governed system.",
   "scoring": "Every deterministic criterion blocks independently. Human authority gates must remain explicitly open until observed; they are not averaged into a synthetic score.",
@@ -175,6 +175,29 @@
         "rfc_contract_enforced",
         "generated_outputs_locale_independent",
         "diff_hygiene_clean"
+      ]
+    },
+    {
+      "id": "cross-repository-knowledge-operations",
+      "criteria": [
+        "ecosystem_profile_materialized",
+        "branch_review_exact_and_current",
+        "branch_review_scope_complete",
+        "three_graph_responsibilities_explicit",
+        "generated_views_noncanonical",
+        "deterministic_checks_precede_roleplay",
+        "situated_voice_is_not_impersonation",
+        "exact_revision_source_disposition",
+        "responsible_stop_is_healthy",
+        "governed_entity_packets_complete",
+        "situated_relationships_preserve_scope_and_authority",
+        "projection_runtime_preserves_candidate_and_authority_state",
+        "private_source_returns_preserve_coverage_authorship_and_authority",
+        "message_signal_states_preserve_evidence_and_authority",
+        "roleplay_has_no_human_authority",
+        "public_surface_contract_complete",
+        "selective_projection_and_private_boundaries",
+        "change_invalidation_triggers_complete"
       ]
     },
     {

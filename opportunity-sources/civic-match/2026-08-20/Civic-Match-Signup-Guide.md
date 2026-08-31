@@ -1,6 +1,7 @@
 ---
 source_id: source.civic-match.candidate-network
 observed_on: 2026-08-20
+validation_last_observed_on: 2026-08-30
 application_system: civic-match
 profile_status: ready-for-jamie-review
 field_map: authenticated-read-only-five-step-flow
@@ -20,6 +21,10 @@ application still happens through the employer's official process.
 
 This map was read from Jamie's existing account without changing or submitting
 it. Use that account. Do not create a duplicate.
+
+**Updated August 30:** The live form enforces **150 words per Step 1 answer**.
+The two answers below replace the longer versions. Copy only the text inside
+each block. This correction does not establish new limits for other fields.
 
 ## Before you begin
 
@@ -50,35 +55,34 @@ public-service fellowship, MPA/MPP, teacher, public-sector consultant, or
 first-time public-service options unless Jamie's actual status supports that
 choice when he reviews the form.
 
-### Describe a time when you witnessed or experienced the impact state or local government can have. (300 words maximum)
+### Describe a time when you witnessed or experienced the impact state or local government can have. (150 words maximum)
 
 <!-- copy:government-impact:start -->
 ```text
-One evening at Shoestring Press, I crouched in the back garden with oil pastel and large sheets of card stock, trying to make a difficult coalition conversation visible. Venue operators, artists, nightlife advocates, and organizers had spent years living under New York City's 1926 Cabaret Law—a rule that could make ordinary dancing a licensing problem and leave cultural spaces carrying uncertainty that had little to do with safety.
+In the back garden at Shoestring Press, I used oil pastel and large sheets of card stock to make a coalition conversation visible. I helped convene and facilitate a meeting of artists, venue operators, and nightlife advocates working to repeal New York City's Cabaret Law. Groups with different histories agreed to share LetNYCDance.com and one email list, making it easier to exchange information and invite participation.
 
-I helped convene and facilitate that meeting. By the end, groups with different histories agreed to share LetNYCDance.com and one email list. That shared surface did not repeal a law by itself. It gave a coalition a clearer way to exchange information, invite participation, and speak together. Advocates, venues, artists, elected officials, agency staff, and Council members each carried different parts of the work.
+In 2017, the City Council repealed the law after years of organizing by many advocates. I saw how a municipal decision could change everyday cultural life: dancing no longer required that particular license.
 
-When the City Council repealed the Cabaret Law in 2017, I saw what local government can do when public testimony, organizing, policy work, and legislative authority meet. A municipal rule had shaped who could gather, how a room could be used, and whether a venue could plan. Changing it altered the conditions of everyday cultural life.
-
-The experience stays with me because government impact is not abstract. It arrives in a room: people can dance without an obsolete license standing between them and one another. The public task is to make the relationship between policy and lived experience visible early enough that residents can help shape the outcome.
+Government impact is not abstract. It arrives in a room. This experience showed me the value of helping people turn lived experience into a clear, shared request that public officials can act on.
 ```
 <!-- copy:government-impact:end -->
 
-### Describe a time you took initiative to improve a situation in your community, school, or workplace and what impact it had. (300 words maximum)
+### Describe a time you took initiative to improve a situation in your community, school, or workplace and what impact it had. (150 words maximum)
 
 <!-- copy:community-initiative:start -->
 ```text
-In Kansas City's Oak Park neighborhood, a discarded tire was easy to notice and expensive to remove. A resident could face about $20 in disposal costs, while dumped tires accumulated in vacant lots and along sidewalks. The immediate problem was rubber. Underneath it was a service gap: the City could recycle the tires, but residents needed a reliable route from the curb to that public system.
+In Kansas City's Oak Park neighborhood, dumped tires accumulated in vacant lots and along sidewalks. Through KC Town Hall, I designed and operated Tired of Tires with neighborhood associations, residents, volunteers, and City staff.
 
-Through KC Town Hall, working with the Oak Park Neighborhood Association, Historic East Neighborhoods Coalition, residents, volunteers, and City staff, I designed and operated Tired of Tires. I made the four-by-six-inch handbills and web page, established a recurring pickup rhythm, coordinated City recycling, and drove block by block through the ten-minute walk area around KC Town Hall. I helped older neighbors roll tires from backyards, caught tires as young people sent them down a driveway, loaded the trailer, and kept the project tracker.
+I made handbills and a web page, organized monthly pickups, coordinated City recycling, and drove block by block collecting tires. I helped older neighbors roll tires from their backyards and kept the project tracker, which records 1,970 tires collected from May 2019 through September 2022.
 
-The tracker records 1,970 tires across monthly entries from May 2019 through September 2022 and estimates $44,890 in avoided disposal fees using its stated assumptions. The numbers matter, but so did the contact. During pickups I also shared a neighborhood survey asking what services people wanted within walking distance. Conversations about tires opened conversations about food businesses, shared kitchens, storefronts, and what the building at 36th and Indiana might become.
+During pickups, I also shared a survey asking what services residents wanted within walking distance. Conversations about tires opened conversations about food businesses and shared kitchens, informing plans for KC Town Hall.
 
-I learned that a resident-facing service can be small, physical, and deeply systemic. Meet people at the curb, make the handoff reliable, keep the record, and the neighborhood begins to see that its care can take a usable form.
+The work connected a public recycling service to people's doorsteps. It also created a recurring way to listen, build trust, and act together.
 ```
 <!-- copy:community-initiative:end -->
 
-Confirm both fields show no more than 300 words, then click `Continue`.
+Confirm both fields show no more than 150 words and no validation error, then
+click `Continue`. The answers deliberately leave room below the limit.
 
 ## Step 2 of 5 — Contact Information
 

@@ -1,0 +1,76 @@
+{
+  "id": "oti-confirmed-submissions-hillclimb-2026-08-31",
+  "schemaVersion": 1,
+  "candidateCommit": "124828fff0857047cf9bcaa565459ceeb8541dfd",
+  "candidateBranch": "work/2026-08-24-A",
+  "evaluatedAt": "2026-08-31",
+  "actualPeopleParticipated": false,
+  "change": {
+    "lowestScoringCriterion": "Two employer receipts were not yet modeled without collapsing private evidence, pending outcomes, Civic Match discovery, and a possible future introduction.",
+    "boundedIntervention": "Add two date-level application milestones, one summary-only confirmation source, lifecycle edges, and deterministic mutation tests while preserving the Product Manager draft as a historical state.",
+    "publicRuntimeTouched": false
+  },
+  "baseline": {
+    "overall": "fail",
+    "observedFailure": "The new test was introduced first and failed because the confirmed-submission evaluator did not exist.",
+    "failedTestFiles": 1
+  },
+  "postHillclimb": {
+    "confirmedSubmissionChecks": {
+      "passed": 9,
+      "total": 9
+    },
+    "confirmedSubmissionMutationTests": {
+      "passed": 3,
+      "total": 3
+    },
+    "historicalDraftChecks": {
+      "passed": 9,
+      "total": 9
+    },
+    "historicalDraftTests": {
+      "passed": 2,
+      "total": 2
+    },
+    "applicationGuideTests": {
+      "passed": 26,
+      "total": 26
+    },
+    "civicMatchTests": {
+      "passed": 19,
+      "total": 19
+    },
+    "opportunityTests": {
+      "passed": 43,
+      "total": 43
+    },
+    "knowledgeGraph": {
+      "records": 496,
+      "semanticAndEvidenceEdges": 1792,
+      "proseLinks": 570,
+      "typeAwareOrphans": 0,
+      "hardGates": "pass"
+    },
+    "publicSafety": "pass"
+  },
+  "retainedBoundaries": [
+    "A City receipt proves transmission and receipt, not eligibility, completed review, interview, offer, appointment, or selection.",
+    "Civic Match remains the discovery and possible connection source; the City application system remains the formal submission destination.",
+    "A future intention to try an introduction feature is not a completed introduction, referral, or endorsement.",
+    "Raw images, correspondence, access links, contact details, applicant identifiers, delivery times, and message-specific salutations remain outside Git.",
+    "The two confirmation formats are corroborating artifacts from one application system, not independent sources."
+  ],
+  "knownUnrelatedGates": [
+    {
+      "id": "betanyc-latest-public-issue-is-current",
+      "state": "fail",
+      "detail": "The repository snapshot still identifies the August 20 public issue as latest."
+    },
+    {
+      "id": "candidate-bound-accessibility-evidence",
+      "state": "fail",
+      "detail": "The responsive browser receipt was already stale against the branch public-surface fingerprint; this candidate changed no apps/www, package-lock.json, or runtime package projection input."
+    }
+  ],
+  "overall": "pass-with-unrelated-suite-blockers"
+}

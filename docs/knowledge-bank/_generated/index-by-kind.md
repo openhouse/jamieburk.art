@@ -1,13 +1,16 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `ccddbf75a1e1a3ab293c5dd067e1f30a5b9a6855`
-**Generation time:** 2026-08-22T21:22:19-04:00
-**Source fingerprint:** `c2cf41ec29380d85699d1af93a8f8fe4629fbe0116345afd5e96d2cf0a6f5033`
+**Source commit:** `29745b537e57bab69f5ddc6207c3ab6e8fbd8e38`
+**Generation time:** 2026-08-31T19:49:24-04:00
+**Source fingerprint:** `58618688c7258813c8659a6ae82556ff86cc9ce4dfa32b7f274081ec2ba8270c`
 
 ## application
 
+- [NYC OTI Product Manager 784450 application milestone](../applications/nyc-oti-product-manager-784450.md) - `application.nyc-oti.product-manager.784450`
+- [NYC OTI Product Manager 784450 prepared application](../applications/nyc-oti-product-manager-784450-draft.md) - `application.nyc-oti.product-manager.784450.draft`
 - [NYC OTI Senior Product Manager 782366 application milestone](../applications/nyc-oti-senior-product-manager-782366.md) - `application.nyc-oti.senior-product-manager.782366`
+- [NYC OTI SPEED Operations Manager 789810 application milestone](../applications/nyc-oti-speed-operations-manager-789810.md) - `application.nyc-oti.speed-operations-manager.789810`
 - [NYC Artist Coalition application brief](../applications/nycac-civic-product-operations.md) - `application.nycac.civic-product-operations`
 - [WOW List - Senior Product Manager role-fit brief](../applications/wowlist-senior-product-manager-oti-782366.md) - `application.wowlist.senior-product-manager-oti-782366`
 
@@ -322,6 +325,7 @@
 - [Maintenance, handoff, and stewardship](../methods/maintenance-handoff-and-stewardship.md) - `method.maintenance-handoff-stewardship`
 - [Participation and Relational Infrastructure](../methods/participation-and-relational-infrastructure.md) - `method.participation-and-relational-infrastructure`
 - [East River photographic knowledge-loop tutorial](../workflows/photography-east-river-canary.md) - `method.photography-east-river-canary`
+- [Private application status loop](../methods/private-application-status-loop.md) - `method.private-application-status-loop`
 - [Projects as a Recomposable Civic-Cultural System](../methods/recomposable-civic-cultural-systems.md) - `method.recomposable-civic-cultural-systems`
 - [Situated source rereading](../methods/situated-source-rereading.md) - `method.situated-source-rereading`
 - [Knowledge Wiki Graph / Source-Backed Team Memory](../methods/source-backed-team-memory.md) - `method.source-backed-team-memory`
@@ -434,6 +438,7 @@
 - [Knowledge Wiki branch-family closure review](../research-runs/knowledge-wiki-family-closure-2026-07-19.md) - `research.knowledge-wiki-family-closure.2026-07-19`
 - [NYC Jobs citywide opportunity monitor, August 20, 2026](../research-runs/nyc-jobs-citywide-monitor-2026-08-20.md) - `research.nyc-jobs.citywide-monitor.2026-08-20`
 - [NYC OTI product-management search ranking, August 20, 2026](../research-runs/nyc-oti-product-management-ranking-2026-08-20.md) - `research.nyc-oti-product-management-ranking.2026-08-20`
+- [DCLA listening-session portraits and follow-through intake](../sources/dcla-listening-session-2026-08-26.md) - `research.nycac.dcla-listening-session.2026-08-29`
 - [NYCAC frontline advocacy source return, July 13-August 12, 2026](../research-runs/nycac-frontline-advocacy-2026-08-12.md) - `research.nycac.frontline-advocacy.2026-08-12`
 - [NYC Artist Coalition shared-folder archival production](../research-runs/nycac-shared-folder-2026-07-19.md) - `research.nycac.shared-folder.2026-07-19`
 - [Photographic source return for DCLA, KC Town Hall, and Council fieldwork](../research-runs/photographic-source-return-2026-07-26.md) - `research.photographic-source-return.2026-07-26`
@@ -442,6 +447,10 @@
 ## source
 
 - [ACLU official biography - Charizma Williams](../sources/aclu-charizma-williams.md) - `source.aclu.charizma-williams`
+- [NYC OTI application confirmation review - August 31, 2026](../sources/nyc-oti-application-confirmations-2026-08-31.md) - `source.application.nyc-oti.confirmations.2026-08-31`
+- [NYC OTI PIT Crew application-volume update - August 20, 2026](../sources/nyc-oti-pit-crew-volume-update-2026-08-20.md) - `source.application.nyc-oti.pit-crew-volume-update.2026-08-20`
+- [NYC OTI Product Manager 784450 application-draft review](../sources/nyc-oti-product-manager-784450-application-draft-2026-08-31.md) - `source.application.nyc-oti.product-manager.784450.2026-08-31`
+- [NYC OTI private application status dashboard review - August 31, 2026](../sources/nyc-oti-application-status-dashboard-2026-08-31.md) - `source.application.nyc-oti.status-dashboard.2026-08-31`
 - [Benepass official team page - Jaclyn Chen](../sources/benepass-jaclyn-chen.md) - `source.benepass.jaclyn-chen`
 - [BetaNYC weekly civic-technology newsletter and public archive](../sources/betanyc-civic-tech-newsletter-2026-08-20.md) - `source.betanyc.civic-tech-newsletter`
 - [CallNYC public source repository](../sources/callnyc-source-repository.md) - `source.callnyc.source-repository`

@@ -85,11 +85,13 @@ export function evaluateCivicMatch(repoRoot = moduleRoot, options = {}) {
 
   for (const id of config.copyBlockIds) {
     requireGate(extractCopyBlock(guide, id).length > 0, `Copy block ${id} is missing.`);
+    const limit = config.copyBlockLimits?.[id];
+    const validLimit = Number.isInteger(limit?.maxWords) && limit.maxWords > 0;
+    requireGate(validLimit, `${id} is missing a valid word limit; verify the field before reader evaluation.`);
+    if (validLimit) {
+      requireGate(wordCount(extractCopyBlock(guide, id)) <= limit.maxWords, `${id} exceeds its ${limit.maxWords}-word limit.`);
+    }
   }
-  for (const id of config.narrativeAnswerIds) {
-    requireGate(wordCount(extractCopyBlock(guide, id)) <= 300, `${id} exceeds the observed 300-word limit.`);
-  }
-  requireGate(wordCount(extractCopyBlock(guide, "profile-summary")) <= 250, "The profile summary exceeds 250 words.");
   requireGate(!/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/iu.test(guide), "The repo guide must not retain a direct email address.");
   requireGate(!/\b(?:\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]\d{3}[-.\s]\d{4}\b/u.test(guide), "The repo guide must not retain a direct phone number.");
   requireGate(!/\b(?:bound|bounded|hinge)\b/iu.test(guide), "The public-safe guide contains discouraged wording.");
@@ -117,7 +119,8 @@ export function evaluateCivicMatch(repoRoot = moduleRoot, options = {}) {
     profileSummaryWords: wordCount(extractCopyBlock(guide, "profile-summary"))
   };
 
-  if (!options.deterministicOnly && failures.length === 0) {
+  const deterministicPassed = failures.length === 0;
+  if (!options.deterministicOnly && deterministicPassed) {
     const runPath = path.join(repoRoot, config.currentRunPath);
     requireGate(existsSync(runPath), "The named-reader run is missing; deterministic success alone cannot pass the full eval.");
     if (existsSync(runPath)) {
@@ -149,8 +152,8 @@ export function evaluateCivicMatch(repoRoot = moduleRoot, options = {}) {
     failures,
     metrics,
     phases: {
-      deterministic: failures.length === 0 || !failures.some((failure) => !failure.startsWith("The named-reader run")) ? "pass" : "fail",
-      readers: options.deterministicOnly ? "not-run" : failures.some((failure) => /named-reader|assessment|acceptance gate/u.test(failure)) ? "fail" : "pass"
+      deterministic: deterministicPassed ? "pass" : "fail",
+      readers: options.deterministicOnly ? "not-run" : !deterministicPassed ? "blocked" : failures.length > 0 ? "fail" : "pass"
     }
   };
 }

@@ -51,3 +51,32 @@ use, and learning and continuity.
 - Portfolio suite: **16 evals, 13 blocking, weights total 100**
 - Knowledge-bank suite after review-lock repair: **5 / 5 across 32 criteria,
   2 / 2 consecutive independent holdouts**
+
+## Exact-candidate refresh — 2026-08-29
+
+The portfolio candidate changed when the cross-repository Knowledge Wiki
+operations profile was added. Six new independent holdouts therefore replaced
+the earlier scorecards; no earlier result was relabeled as current.
+
+The first replacement review exposed a source-custody problem in the review
+packet: it included the raw Open House article even though the governed source
+note marks the article text and photographs `do-not-publish`. The packet and
+rubric were corrected before the accepted holdouts ran. The raw article is now
+excluded, the bounded public-safe source note is included, and a deterministic
+guard prevents this regression.
+
+| Lens | Independent holdouts | Result |
+| --- | --- | --- |
+| Fictionalized Margaret Morse analytical lens | 4, 4, 4 | **Pass** |
+| Fictionalized Warren Sack analytical lens | 4, 4, 4 | **Pass** |
+
+- Candidate fingerprint:
+  `dc13c845472b6b9042d649ef6cce48784724140c4bfb3fa3e81388965f406203`
+- Professor lens controls: **18 / 18**
+- Professor lens tests: **12 / 12**
+- Review mode: rendered public-site packet, independent holdout
+- Private sources, repository code, optimizer notes, earlier scorecards, and
+  the external network remained outside each reviewer’s allowed surface.
+- These fictionalized analytical lenses are evaluation devices. They are not
+  real-person participation, endorsement, editorial authority, or permission
+  to publish, merge, deploy, contact, or act.

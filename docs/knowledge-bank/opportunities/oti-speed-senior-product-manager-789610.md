@@ -137,3 +137,15 @@ of City-scale enterprise architecture.
 The candidacy is strong enough to pursue. The civil-service screen and the
 posting's specific enterprise-data preferences should be addressed directly
 rather than hidden behind broad product language.
+
+## Source-aware application route — August 30, 2026
+
+Use the [field-by-field application guide](../../../resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Application-Guide.md)
+for this exact employer job ID. The [Civic Match discovery review](../../../opportunity-sources/civic-match/2026-08-30/Opportunity-Discovery-Review.md)
+preserves the separate discovery, potential connection, and formal submission routes.
+The matching Civic Match card is not yet identity-verified: inspect its destination
+before treating it as this job. Its displayed October 3 closing date differs from
+the employer's October 4 deadline; use the earlier date for action planning.
+The enterprise architecture or IT infrastructure experience requirement needs
+explicit eligibility review. This job is distinct from PIT Crew role 782366 and
+Product Manager role 784450. Saving a listing is not submitting an application.

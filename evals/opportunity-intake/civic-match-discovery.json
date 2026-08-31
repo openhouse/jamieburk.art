@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "source.civic-match.candidate-network",
+  "reviewedOn": "2026-08-30",
+  "coverage": {
+    "status": "partial",
+    "claimedComplete": false,
+    "pagesReviewed": 0,
+    "totalListings": null,
+    "listingsReviewed": 0,
+    "hasMore": null,
+    "reason": "Authenticated desktop job board requires sign-in. Two supplied cards were inspected; the whole board and their application destinations were not accessible."
+  },
+  "thresholds": {
+    "salaryFloor": 100000,
+    "fitFloor": 85,
+    "competitivenessFloor": 70
+  },
+  "observations": [
+    {
+      "sourceId": "source.civic-match.candidate-network",
+      "employerId": "nyc-oti",
+      "title": "Operations Manager",
+      "displayedDeadline": "2026-10-03",
+      "candidateJobId": "789810",
+      "identityStatus": "unverified",
+      "observedOn": "2026-08-30",
+      "basis": "User-supplied job card; title, employer, and displayed closing date only."
+    },
+    {
+      "sourceId": "source.civic-match.candidate-network",
+      "employerId": "nyc-oti",
+      "title": "Senior Product Manager",
+      "displayedDeadline": "2026-10-03",
+      "candidateJobId": "789610",
+      "identityStatus": "unverified",
+      "observedOn": "2026-08-30",
+      "basis": "User-supplied job card; title, employer, and displayed closing date only."
+    }
+  ],
+  "candidates": [
+    {
+      "employerId": "nyc-oti",
+      "jobId": "789810",
+      "title": "Operations Manager",
+      "postingUrl": "https://cityjobs.nyc.gov/job/operations-manager-in-brooklyn-jid-46143",
+      "officialSourceId": "source.jobs.oti.speed-operations-manager.789810",
+      "officialReviewedOn": "2026-08-30",
+      "deadline": "2026-10-04",
+      "annualSalary": true,
+      "salaryMin": 75000,
+      "salaryMax": 160000,
+      "locationFit": true,
+      "eligibility": "review-needed",
+      "qualificationIssue": "IT Project Specialist education-and-experience route requires confirmation.",
+      "fitScore": 96,
+      "competitivenessScore": 75,
+      "scoreReviewedOn": "2026-08-20",
+      "scoreBasis": "Existing editorial ranking, not a new assessment or probability of hire.",
+      "guidePath": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Application-Guide.md"
+    },
+    {
+      "employerId": "nyc-oti",
+      "jobId": "789610",
+      "title": "Senior Product Manager",
+      "postingUrl": "https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-46148",
+      "officialSourceId": "source.jobs.oti.speed-senior-product-manager.789610",
+      "officialReviewedOn": "2026-08-30",
+      "deadline": "2026-10-04",
+      "annualSalary": true,
+      "salaryMin": 100000,
+      "salaryMax": 180000,
+      "locationFit": true,
+      "eligibility": "review-needed",
+      "qualificationIssue": "Senior IT Architect architecture/infrastructure experience route requires confirmation.",
+      "fitScore": 92,
+      "competitivenessScore": 64,
+      "scoreReviewedOn": "2026-08-20",
+      "scoreBasis": "Existing editorial ranking, not a new assessment or probability of hire.",
+      "guidePath": "resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Application-Guide.md"
+    }
+  ]
+}

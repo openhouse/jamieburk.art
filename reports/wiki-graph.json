@@ -1,10 +1,36 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-22T21:22:19-04:00",
-  "sourceCommit": "ccddbf75a1e1a3ab293c5dd067e1f30a5b9a6855",
-  "sourceFingerprint": "c2cf41ec29380d85699d1af93a8f8fe4629fbe0116345afd5e96d2cf0a6f5033",
+  "generatedAt": "2026-08-31T19:49:24-04:00",
+  "sourceCommit": "29745b537e57bab69f5ddc6207c3ab6e8fbd8e38",
+  "sourceFingerprint": "58618688c7258813c8659a6ae82556ff86cc9ce4dfa32b7f274081ec2ba8270c",
   "rootId": "index.knowledge-wiki",
   "nodes": [
+    {
+      "id": "application.nyc-oti.product-manager.784450",
+      "path": "docs/knowledge-bank/applications/nyc-oti-product-manager-784450.md",
+      "title": "NYC OTI Product Manager 784450 application milestone",
+      "kind": "application",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Jamie-authorized date-level record of the August 31, 2026 City-received Product Manager application, with protected confirmation evidence and a pending outcome.",
+      "aliases": [],
+      "lastReviewed": "2026-08-31",
+      "reviewBy": "2026-09-14"
+    },
+    {
+      "id": "application.nyc-oti.product-manager.784450.draft",
+      "path": "docs/knowledge-bank/applications/nyc-oti-product-manager-784450-draft.md",
+      "title": "NYC OTI Product Manager 784450 prepared application",
+      "kind": "application",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Prepared, not-submitted Product Manager application with selected packet files, visible year-level chronology, explicit reconciliation work, and Jamie-only submission gates.",
+      "aliases": [],
+      "lastReviewed": "2026-08-31",
+      "reviewBy": "2026-09-04"
+    },
     {
       "id": "application.nyc-oti.senior-product-manager.782366",
       "path": "docs/knowledge-bank/applications/nyc-oti-senior-product-manager-782366.md",
@@ -15,8 +41,21 @@
       "sensitivity": "moderate",
       "summary": "Jamie-authorized public-safe record of the August 14, 2026 application submission, its governed artifact lineage, retained privacy boundary, and next-stage learning loop.",
       "aliases": [],
-      "lastReviewed": "2026-08-14",
-      "reviewBy": "2026-08-21"
+      "lastReviewed": "2026-08-31",
+      "reviewBy": "2026-09-14"
+    },
+    {
+      "id": "application.nyc-oti.speed-operations-manager.789810",
+      "path": "docs/knowledge-bank/applications/nyc-oti-speed-operations-manager-789810.md",
+      "title": "NYC OTI SPEED Operations Manager 789810 application milestone",
+      "kind": "application",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Jamie-authorized date-level record of the August 31, 2026 City-received Operations Manager application, with protected confirmation evidence and a pending outcome.",
+      "aliases": [],
+      "lastReviewed": "2026-08-31",
+      "reviewBy": "2026-09-14"
     },
     {
       "id": "application.nycac.civic-product-operations",
@@ -3349,8 +3388,8 @@
       "sensitivity": "low",
       "summary": "Task-oriented entry point for live opportunity research, historical role benchmarks, public-only hiring evaluation, and private-boundary rules.",
       "aliases": [],
-      "lastReviewed": "2026-08-21",
-      "reviewBy": "2026-08-27"
+      "lastReviewed": "2026-08-31",
+      "reviewBy": "2026-09-14"
     },
     {
       "id": "index.knowledge-wiki.family-closure",
@@ -3687,8 +3726,8 @@
       "sensitivity": "low",
       "summary": "Models Civic Match as an authenticated talent-network source with candidate discovery, invitations, tracking, events, and staff-assisted matching.",
       "aliases": [],
-      "lastReviewed": "2026-08-21",
-      "reviewBy": "2026-09-20"
+      "lastReviewed": "2026-08-30",
+      "reviewBy": "2026-09-06"
     },
     {
       "id": "method.collective-credit-protected-absence",
@@ -3782,6 +3821,19 @@
       "reviewBy": "2027-01-26"
     },
     {
+      "id": "method.private-application-status-loop",
+      "path": "docs/knowledge-bank/methods/private-application-status-loop.md",
+      "title": "Private application status loop",
+      "kind": "method",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Reacquires private employer status surfaces at runtime, records bounded provider labels and normalized states, and keeps credentials and capability-bearing locators outside Git.",
+      "aliases": [],
+      "lastReviewed": "2026-08-31",
+      "reviewBy": "2026-09-14"
+    },
+    {
       "id": "method.recomposable-civic-cultural-systems",
       "path": "docs/knowledge-bank/methods/recomposable-civic-cultural-systems.md",
       "title": "Projects as a Recomposable Civic-Cultural System",
@@ -3817,7 +3869,7 @@
       "sensitivity": "low",
       "summary": "A federated practice that separates semantic meaning, evidentiary support, and source custody before composing human-reviewed outputs.\n",
       "aliases": [],
-      "lastReviewed": "2026-08-21",
+      "lastReviewed": "2026-08-29",
       "reviewBy": "2027-01-18"
     },
     {
@@ -3973,8 +4025,8 @@
       "sensitivity": "low",
       "summary": "Strong-fit OTI product opportunity centered on resident-facing discovery, roadmaps, requirements, launch, outcomes, and cross-functional delivery.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
-      "reviewBy": "2026-08-27"
+      "lastReviewed": "2026-08-31",
+      "reviewBy": "2026-09-04"
     },
     {
       "id": "opportunity.nyc-oti.senior-product-manager.782366",
@@ -3986,8 +4038,8 @@
       "sensitivity": "low",
       "summary": "Public-safe requirement, qualification, and leadership-context map for four live OTI PIT Crew Senior Product Manager positions.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
-      "reviewBy": "2026-08-27"
+      "lastReviewed": "2026-08-31",
+      "reviewBy": "2026-09-14"
     },
     {
       "id": "opportunity.nyc-oti.speed-operations-manager.789810",
@@ -3999,8 +4051,8 @@
       "sensitivity": "low",
       "summary": "Exceptional-fit OTI operations role coordinating budget, procurement, people, dependencies, reporting, and product-team delivery for SPEED.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
-      "reviewBy": "2026-08-27"
+      "lastReviewed": "2026-08-31",
+      "reviewBy": "2026-09-14"
     },
     {
       "id": "opportunity.nyc-oti.speed-senior-product-manager.789610",
@@ -4918,6 +4970,19 @@
       "reviewBy": "2026-08-27"
     },
     {
+      "id": "research.nycac.dcla-listening-session.2026-08-29",
+      "path": "docs/knowledge-bank/sources/dcla-listening-session-2026-08-26.md",
+      "title": "DCLA listening-session portraits and follow-through intake",
+      "kind": "research-run",
+      "status": "governed-open",
+      "visibility": "summary-only",
+      "sensitivity": "moderate",
+      "summary": "Cleared portrait candidates and redacted follow-up states, with the full repaired transcript reading still open.",
+      "aliases": [],
+      "lastReviewed": "2026-08-29",
+      "reviewBy": null
+    },
+    {
       "id": "research.nycac.frontline-advocacy.2026-08-12",
       "path": "docs/knowledge-bank/research-runs/nycac-frontline-advocacy-2026-08-12.md",
       "title": "NYCAC frontline advocacy source return, July 13-August 12, 2026",
@@ -4983,6 +5048,58 @@
       "reviewBy": "2026-11-13"
     },
     {
+      "id": "source.application.nyc-oti.confirmations.2026-08-31",
+      "path": "docs/knowledge-bank/sources/nyc-oti-application-confirmations-2026-08-31.md",
+      "title": "NYC OTI application confirmation review - August 31, 2026",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Bounded date-level review of two City application receipts, excluding correspondence, private links, applicant identifiers, and unsupported hiring or introduction outcomes.",
+      "aliases": [],
+      "lastReviewed": "2026-08-31",
+      "reviewBy": "2026-09-14"
+    },
+    {
+      "id": "source.application.nyc-oti.pit-crew-volume-update.2026-08-20",
+      "path": "docs/knowledge-bank/sources/nyc-oti-pit-crew-volume-update-2026-08-20.md",
+      "title": "NYC OTI PIT Crew application-volume update - August 20, 2026",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Bounded summary of a program-level PIT Crew applicant update about high volume, ongoing review, and response delay, without correspondence text, applicant data, or an individualized outcome.",
+      "aliases": [],
+      "lastReviewed": "2026-08-31",
+      "reviewBy": "2026-09-14"
+    },
+    {
+      "id": "source.application.nyc-oti.product-manager.784450.2026-08-31",
+      "path": "docs/knowledge-bank/sources/nyc-oti-product-manager-784450-application-draft-2026-08-31.md",
+      "title": "NYC OTI Product Manager 784450 application-draft review",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Bounded review of Jamie-provided application exports, retaining draft state, visible year ranges, completion gates, and privacy limits without storing the exports or applicant details.",
+      "aliases": [],
+      "lastReviewed": "2026-08-31",
+      "reviewBy": "2026-09-04"
+    },
+    {
+      "id": "source.application.nyc-oti.status-dashboard.2026-08-31",
+      "path": "docs/knowledge-bank/sources/nyc-oti-application-status-dashboard-2026-08-31.md",
+      "title": "NYC OTI private application status dashboard review - August 31, 2026",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Bounded authenticated-browser observation of three OTI application labels and shared applicant-dashboard affordances, excluding private URLs, passcodes, correspondence, and applicant data.",
+      "aliases": [],
+      "lastReviewed": "2026-08-31",
+      "reviewBy": "2026-09-14"
+    },
+    {
       "id": "source.benepass.jaclyn-chen",
       "path": "docs/knowledge-bank/sources/benepass-jaclyn-chen.md",
       "title": "Benepass official team page - Jaclyn Chen",
@@ -5044,8 +5161,8 @@
       "sensitivity": "moderate",
       "summary": "Public program documentation plus a read-only field map of Jamie's existing five-step candidate profile, preserving account and submission privacy.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
-      "reviewBy": "2026-08-27"
+      "lastReviewed": "2026-08-31",
+      "reviewBy": "2026-09-14"
     },
     {
       "id": "source.civichall.hackathon-announcement.2016",
@@ -5330,8 +5447,8 @@
       "sensitivity": "low",
       "summary": "Official OTI Operations Manager posting for budget, procurement, people, dependency, and delivery operations supporting the SPEED team.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
-      "reviewBy": "2026-08-27"
+      "lastReviewed": "2026-08-30",
+      "reviewBy": "2026-09-06"
     },
     {
       "id": "source.jobs.oti.speed-senior-product-manager.789610",
@@ -5343,8 +5460,8 @@
       "sensitivity": "low",
       "summary": "Official OTI Senior Product Manager posting for digital products intended to shorten new-construction permitting through the SPEED program.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
-      "reviewBy": "2026-08-27"
+      "lastReviewed": "2026-08-30",
+      "reviewBy": "2026-09-06"
     },
     {
       "id": "source.jobs.oti.technical-operations.782369",
@@ -6405,6 +6522,94 @@
   ],
   "edges": [
     {
+      "from": "application.nyc-oti.product-manager.784450",
+      "type": "related_to",
+      "to": "application.nyc-oti.product-manager.784450.draft",
+      "source": "frontmatter",
+      "href": "nyc-oti-product-manager-784450-draft.md",
+      "context": "Historical prepared state retained separately from the later human-completed submission."
+    },
+    {
+      "from": "application.nyc-oti.product-manager.784450",
+      "type": "related_to",
+      "to": "method.private-application-status-loop",
+      "source": "frontmatter",
+      "href": "../methods/private-application-status-loop.md",
+      "context": null
+    },
+    {
+      "from": "application.nyc-oti.product-manager.784450",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-product-manager-784450.md",
+      "context": null
+    },
+    {
+      "from": "application.nyc-oti.product-manager.784450",
+      "type": "related_to",
+      "to": "source.civic-match.candidate-network",
+      "source": "frontmatter",
+      "href": "../sources/civic-match-candidate-network-2026-08-20.md",
+      "context": "Discovery and possible connection context only; not the employer submission destination."
+    },
+    {
+      "from": "application.nyc-oti.product-manager.784450",
+      "type": "uses_source",
+      "to": "source.application.nyc-oti.confirmations.2026-08-31",
+      "source": "frontmatter",
+      "href": "../sources/nyc-oti-application-confirmations-2026-08-31.md",
+      "context": null
+    },
+    {
+      "from": "application.nyc-oti.product-manager.784450",
+      "type": "uses_source",
+      "to": "source.application.nyc-oti.status-dashboard.2026-08-31",
+      "source": "frontmatter",
+      "href": "../sources/nyc-oti-application-status-dashboard-2026-08-31.md",
+      "context": null
+    },
+    {
+      "from": "application.nyc-oti.product-manager.784450",
+      "type": "uses_source",
+      "to": "source.jobs.oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../sources/jobs-oti-product-manager-784450.md",
+      "context": null
+    },
+    {
+      "from": "application.nyc-oti.product-manager.784450.draft",
+      "type": "related_to",
+      "to": "application.nyc-oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "nyc-oti-product-manager-784450.md",
+      "context": "Later human-completed submission milestone; this node remains the historical prepared snapshot."
+    },
+    {
+      "from": "application.nyc-oti.product-manager.784450.draft",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-product-manager-784450.md",
+      "context": null
+    },
+    {
+      "from": "application.nyc-oti.product-manager.784450.draft",
+      "type": "uses_source",
+      "to": "source.application.nyc-oti.product-manager.784450.2026-08-31",
+      "source": "frontmatter",
+      "href": "../sources/nyc-oti-product-manager-784450-application-draft-2026-08-31.md",
+      "context": null
+    },
+    {
+      "from": "application.nyc-oti.product-manager.784450.draft",
+      "type": "uses_source",
+      "to": "source.jobs.oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../sources/jobs-oti-product-manager-784450.md",
+      "context": null
+    },
+    {
       "from": "application.nyc-oti.senior-product-manager.782366",
       "type": "related_to",
       "to": "application.wowlist.senior-product-manager-oti-782366",
@@ -6418,6 +6623,14 @@
       "to": "capability.technical-operations",
       "source": "frontmatter",
       "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "application.nyc-oti.senior-product-manager.782366",
+      "type": "related_to",
+      "to": "method.private-application-status-loop",
+      "source": "frontmatter",
+      "href": "../methods/private-application-status-loop.md",
       "context": null
     },
     {
@@ -6439,9 +6652,73 @@
     {
       "from": "application.nyc-oti.senior-product-manager.782366",
       "type": "uses_source",
+      "to": "source.application.nyc-oti.pit-crew-volume-update.2026-08-20",
+      "source": "frontmatter",
+      "href": "../sources/nyc-oti-pit-crew-volume-update-2026-08-20.md",
+      "context": null
+    },
+    {
+      "from": "application.nyc-oti.senior-product-manager.782366",
+      "type": "uses_source",
+      "to": "source.application.nyc-oti.status-dashboard.2026-08-31",
+      "source": "frontmatter",
+      "href": "../sources/nyc-oti-application-status-dashboard-2026-08-31.md",
+      "context": null
+    },
+    {
+      "from": "application.nyc-oti.senior-product-manager.782366",
+      "type": "uses_source",
       "to": "source.jobs.oti.senior-product-manager.782366",
       "source": "frontmatter",
       "href": "../sources/jobs-oti-senior-product-manager-782366.md",
+      "context": null
+    },
+    {
+      "from": "application.nyc-oti.speed-operations-manager.789810",
+      "type": "related_to",
+      "to": "method.private-application-status-loop",
+      "source": "frontmatter",
+      "href": "../methods/private-application-status-loop.md",
+      "context": null
+    },
+    {
+      "from": "application.nyc-oti.speed-operations-manager.789810",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-speed-operations-manager-789810.md",
+      "context": null
+    },
+    {
+      "from": "application.nyc-oti.speed-operations-manager.789810",
+      "type": "related_to",
+      "to": "source.civic-match.candidate-network",
+      "source": "frontmatter",
+      "href": "../sources/civic-match-candidate-network-2026-08-20.md",
+      "context": "Discovery and possible connection context only; not the employer submission destination."
+    },
+    {
+      "from": "application.nyc-oti.speed-operations-manager.789810",
+      "type": "uses_source",
+      "to": "source.application.nyc-oti.confirmations.2026-08-31",
+      "source": "frontmatter",
+      "href": "../sources/nyc-oti-application-confirmations-2026-08-31.md",
+      "context": null
+    },
+    {
+      "from": "application.nyc-oti.speed-operations-manager.789810",
+      "type": "uses_source",
+      "to": "source.application.nyc-oti.status-dashboard.2026-08-31",
+      "source": "frontmatter",
+      "href": "../sources/nyc-oti-application-status-dashboard-2026-08-31.md",
+      "context": null
+    },
+    {
+      "from": "application.nyc-oti.speed-operations-manager.789810",
+      "type": "uses_source",
+      "to": "source.jobs.oti.speed-operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../sources/jobs-oti-speed-operations-manager-789810.md",
       "context": null
     },
     {
@@ -13678,10 +13955,26 @@
     {
       "from": "index.knowledge-wiki.employment-context",
       "type": "related_to",
+      "to": "application.nyc-oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../applications/nyc-oti-product-manager-784450.md",
+      "context": "Jamie-authorized August 31 date-level receipt with a pending outcome and protected confirmation evidence."
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
       "to": "application.nyc-oti.senior-product-manager.782366",
       "source": "frontmatter",
       "href": "../applications/nyc-oti-senior-product-manager-782366.md",
       "context": "Jamie-authorized date-level submission milestone with a pending outcome and protected confirmation evidence."
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "application.nyc-oti.speed-operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../applications/nyc-oti-speed-operations-manager-789810.md",
+      "context": "Jamie-authorized August 31 date-level receipt with a pending outcome and protected confirmation evidence."
     },
     {
       "from": "index.knowledge-wiki.employment-context",
@@ -15660,6 +15953,22 @@
       "context": null
     },
     {
+      "from": "method.private-application-status-loop",
+      "type": "related_to",
+      "to": "method.civic-match-opportunity-loop",
+      "source": "frontmatter",
+      "href": "civic-match-opportunity-loop.md",
+      "context": null
+    },
+    {
+      "from": "method.private-application-status-loop",
+      "type": "uses_source",
+      "to": "source.application.nyc-oti.status-dashboard.2026-08-31",
+      "source": "frontmatter",
+      "href": "../sources/nyc-oti-application-status-dashboard-2026-08-31.md",
+      "context": null
+    },
+    {
       "from": "method.recomposable-civic-cultural-systems",
       "type": "related_to",
       "to": "project.callnyc",
@@ -16318,6 +16627,22 @@
     {
       "from": "opportunity.nyc-oti.product-manager.784450",
       "type": "related_to",
+      "to": "application.nyc-oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../applications/nyc-oti-product-manager-784450.md",
+      "context": "Human-completed August 31 submission; outcome remains pending."
+    },
+    {
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "type": "related_to",
+      "to": "application.nyc-oti.product-manager.784450.draft",
+      "source": "frontmatter",
+      "href": "../applications/nyc-oti-product-manager-784450-draft.md",
+      "context": "Historical prepared state retained for chronology and form-review provenance."
+    },
+    {
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "type": "related_to",
       "to": "capability.technical-operations",
       "source": "frontmatter",
       "href": "../capabilities/technical-operations.md",
@@ -16489,6 +16814,14 @@
         "salary",
         "and deadline"
       ]
+    },
+    {
+      "from": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "type": "related_to",
+      "to": "application.nyc-oti.speed-operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../applications/nyc-oti-speed-operations-manager-789810.md",
+      "context": "Human-completed August 31 submission; outcome remains pending."
     },
     {
       "from": "opportunity.nyc-oti.speed-operations-manager.789810",
@@ -17847,6 +18180,14 @@
     },
     {
       "from": "project.nyc-artist-coalition",
+      "type": "related_to",
+      "to": "research.nycac.dcla-listening-session.2026-08-29",
+      "source": "frontmatter",
+      "href": "../sources/dcla-listening-session-2026-08-26.md",
+      "context": "New August 2026 portrait clearance and follow-up intake; full repaired transcript reading remains open."
+    },
+    {
+      "from": "project.nyc-artist-coalition",
       "type": "uses_source",
       "to": "source.nycac.shared-folder-census.2026",
       "source": "frontmatter",
@@ -18974,6 +19315,22 @@
       "context": null
     },
     {
+      "from": "research.nycac.dcla-listening-session.2026-08-29",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": "Cultural-space advocacy context, without asserting adopted policy or completed future actions."
+    },
+    {
+      "from": "research.nycac.dcla-listening-session.2026-08-29",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": "A distinct August 2026 participation and follow-through research encounter."
+    },
+    {
       "from": "research.nycac.frontline-advocacy.2026-08-12",
       "type": "related_to",
       "to": "claim.nycac.frontline-advocacy.2026-08",
@@ -19182,6 +19539,102 @@
       "context": "Official current role identity and published remit."
     },
     {
+      "from": "source.application.nyc-oti.confirmations.2026-08-31",
+      "type": "related_to",
+      "to": "application.nyc-oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../applications/nyc-oti-product-manager-784450.md",
+      "context": null
+    },
+    {
+      "from": "source.application.nyc-oti.confirmations.2026-08-31",
+      "type": "related_to",
+      "to": "application.nyc-oti.speed-operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../applications/nyc-oti-speed-operations-manager-789810.md",
+      "context": null
+    },
+    {
+      "from": "source.application.nyc-oti.pit-crew-volume-update.2026-08-20",
+      "type": "related_to",
+      "to": "application.nyc-oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../applications/nyc-oti-senior-product-manager-782366.md",
+      "context": null
+    },
+    {
+      "from": "source.application.nyc-oti.pit-crew-volume-update.2026-08-20",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-senior-product-manager-782366.md",
+      "context": null
+    },
+    {
+      "from": "source.application.nyc-oti.pit-crew-volume-update.2026-08-20",
+      "type": "related_to",
+      "to": "source.application.nyc-oti.status-dashboard.2026-08-31",
+      "source": "frontmatter",
+      "href": "nyc-oti-application-status-dashboard-2026-08-31.md",
+      "context": null
+    },
+    {
+      "from": "source.application.nyc-oti.product-manager.784450.2026-08-31",
+      "type": "related_to",
+      "to": "application.nyc-oti.product-manager.784450.draft",
+      "source": "frontmatter",
+      "href": "../applications/nyc-oti-product-manager-784450-draft.md",
+      "context": null
+    },
+    {
+      "from": "source.application.nyc-oti.product-manager.784450.2026-08-31",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-product-manager-784450.md",
+      "context": null
+    },
+    {
+      "from": "source.application.nyc-oti.status-dashboard.2026-08-31",
+      "type": "related_to",
+      "to": "application.nyc-oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../applications/nyc-oti-product-manager-784450.md",
+      "context": null
+    },
+    {
+      "from": "source.application.nyc-oti.status-dashboard.2026-08-31",
+      "type": "related_to",
+      "to": "application.nyc-oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../applications/nyc-oti-senior-product-manager-782366.md",
+      "context": null
+    },
+    {
+      "from": "source.application.nyc-oti.status-dashboard.2026-08-31",
+      "type": "related_to",
+      "to": "application.nyc-oti.speed-operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../applications/nyc-oti-speed-operations-manager-789810.md",
+      "context": null
+    },
+    {
+      "from": "source.application.nyc-oti.status-dashboard.2026-08-31",
+      "type": "related_to",
+      "to": "method.private-application-status-loop",
+      "source": "frontmatter",
+      "href": "../methods/private-application-status-loop.md",
+      "context": null
+    },
+    {
+      "from": "source.application.nyc-oti.status-dashboard.2026-08-31",
+      "type": "related_to",
+      "to": "source.application.nyc-oti.pit-crew-volume-update.2026-08-20",
+      "source": "frontmatter",
+      "href": "nyc-oti-pit-crew-volume-update-2026-08-20.md",
+      "context": null
+    },
+    {
       "from": "source.benepass.jaclyn-chen",
       "type": "related_to",
       "to": "opportunity.benepass.product-operations.7f963a7a",
@@ -19244,6 +19697,22 @@
       "source": "frontmatter",
       "href": "../methods/recomposable-civic-cultural-systems.md",
       "context": null
+    },
+    {
+      "from": "source.civic-match.candidate-network",
+      "type": "related_to",
+      "to": "application.nyc-oti.product-manager.784450",
+      "source": "frontmatter",
+      "href": "../applications/nyc-oti-product-manager-784450.md",
+      "context": "Civic Match discovery context; the City application system was the formal submission destination."
+    },
+    {
+      "from": "source.civic-match.candidate-network",
+      "type": "related_to",
+      "to": "application.nyc-oti.speed-operations-manager.789810",
+      "source": "frontmatter",
+      "href": "../applications/nyc-oti-speed-operations-manager-789810.md",
+      "context": "Civic Match discovery context; the City application system was the formal submission destination."
     },
     {
       "from": "source.civic-match.candidate-network",
@@ -21156,12 +21625,93 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/applications/nyc-oti-product-manager-784450-draft.md",
+      "from": "application.nyc-oti.product-manager.784450.draft",
+      "toPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Application-Guide.md",
+      "to": null,
+      "fragment": null,
+      "line": 59,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/applications/nyc-oti-product-manager-784450-draft.md",
+      "from": "application.nyc-oti.product-manager.784450.draft",
+      "toPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.pdf",
+      "to": null,
+      "fragment": null,
+      "line": 60,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/applications/nyc-oti-product-manager-784450-draft.md",
+      "from": "application.nyc-oti.product-manager.784450.draft",
+      "toPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.pdf",
+      "to": null,
+      "fragment": null,
+      "line": 61,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/applications/nyc-oti-product-manager-784450-draft.md",
+      "from": "application.nyc-oti.product-manager.784450.draft",
+      "toPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.md",
+      "to": null,
+      "fragment": null,
+      "line": 62,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/applications/nyc-oti-product-manager-784450-draft.md",
+      "from": "application.nyc-oti.product-manager.784450.draft",
+      "toPath": "docs/knowledge-bank/applications/nyc-oti-product-manager-784450.md",
+      "to": "application.nyc-oti.product-manager.784450",
+      "fragment": null,
+      "line": 7,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/applications/nyc-oti-product-manager-784450.md",
+      "from": "application.nyc-oti.product-manager.784450",
+      "toPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Application-Guide.md",
+      "to": null,
+      "fragment": null,
+      "line": 38,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/applications/nyc-oti-product-manager-784450.md",
+      "from": "application.nyc-oti.product-manager.784450",
+      "toPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.pdf",
+      "to": null,
+      "fragment": null,
+      "line": 39,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/applications/nyc-oti-product-manager-784450.md",
+      "from": "application.nyc-oti.product-manager.784450",
+      "toPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.pdf",
+      "to": null,
+      "fragment": null,
+      "line": 40,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/applications/nyc-oti-product-manager-784450.md",
+      "from": "application.nyc-oti.product-manager.784450",
+      "toPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.md",
+      "to": null,
+      "fragment": null,
+      "line": 41,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/applications/nyc-oti-senior-product-manager-782366.md",
       "from": "application.nyc-oti.senior-product-manager.782366",
       "toPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
       "to": "opportunity.nyc-oti.senior-product-manager.782366",
       "fragment": null,
-      "line": 31,
+      "line": 48,
       "kind": "link"
     },
     {
@@ -21170,7 +21720,7 @@
       "toPath": "docs/knowledge-bank/sources/jobs-oti-senior-product-manager-782366.md",
       "to": "source.jobs.oti.senior-product-manager.782366",
       "fragment": null,
-      "line": 32,
+      "line": 49,
       "kind": "link"
     },
     {
@@ -21179,7 +21729,7 @@
       "toPath": "docs/knowledge-bank/applications/wowlist-senior-product-manager-oti-782366.md",
       "to": "application.wowlist.senior-product-manager-oti-782366",
       "fragment": null,
-      "line": 33,
+      "line": 50,
       "kind": "link"
     },
     {
@@ -21188,7 +21738,7 @@
       "toPath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
       "to": null,
       "fragment": null,
-      "line": 34,
+      "line": 51,
       "kind": "link"
     },
     {
@@ -21197,7 +21747,7 @@
       "toPath": "docs/knowledge-bank/capabilities/technical-operations.md",
       "to": "capability.technical-operations",
       "fragment": null,
-      "line": 35,
+      "line": 52,
       "kind": "link"
     },
     {
@@ -21206,7 +21756,43 @@
       "toPath": "docs/knowledge-bank/projects/tired-of-tires-resident-service.md",
       "to": "project.kc-town-hall.tired-of-tires",
       "fragment": null,
+      "line": 53,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/applications/nyc-oti-speed-operations-manager-789810.md",
+      "from": "application.nyc-oti.speed-operations-manager.789810",
+      "toPath": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Application-Guide.md",
+      "to": null,
+      "fragment": null,
       "line": 36,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/applications/nyc-oti-speed-operations-manager-789810.md",
+      "from": "application.nyc-oti.speed-operations-manager.789810",
+      "toPath": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.pdf",
+      "to": null,
+      "fragment": null,
+      "line": 37,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/applications/nyc-oti-speed-operations-manager-789810.md",
+      "from": "application.nyc-oti.speed-operations-manager.789810",
+      "toPath": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Operations-Manager-789810.pdf",
+      "to": null,
+      "fragment": null,
+      "line": 38,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/applications/nyc-oti-speed-operations-manager-789810.md",
+      "from": "application.nyc-oti.speed-operations-manager.789810",
+      "toPath": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Operations-Manager-789810.md",
+      "to": null,
+      "fragment": null,
+      "line": 39,
       "kind": "link"
     },
     {
@@ -21890,7 +22476,7 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
       "to": "opportunity.nyc-oti.technical-operations-manager.782369",
       "fragment": null,
-      "line": 104,
+      "line": 105,
       "kind": "link"
     },
     {
@@ -21899,7 +22485,7 @@
       "toPath": "docs/knowledge-bank/opportunities/uibk-studio3-postdoc-arch-15927.md",
       "to": "opportunity.uibk.studio3.postdoc.arch-15927",
       "fragment": null,
-      "line": 113,
+      "line": 114,
       "kind": "link"
     },
     {
@@ -21908,7 +22494,7 @@
       "toPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
       "to": "opportunity.aclu.product-manager-discovery.8482872002",
       "fragment": null,
-      "line": 126,
+      "line": 127,
       "kind": "link"
     },
     {
@@ -21917,7 +22503,7 @@
       "toPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
       "to": "opportunity.codepath.claude-corps.5182020007",
       "fragment": null,
-      "line": 127,
+      "line": 128,
       "kind": "link"
     },
     {
@@ -21926,7 +22512,7 @@
       "toPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
       "to": "opportunity.asana.ai-implementation.8027437",
       "fragment": null,
-      "line": 128,
+      "line": 129,
       "kind": "link"
     },
     {
@@ -21935,7 +22521,7 @@
       "toPath": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
       "to": "opportunity.permitflow.product-operations.8a6e6066",
       "fragment": null,
-      "line": 129,
+      "line": 130,
       "kind": "link"
     },
     {
@@ -21944,7 +22530,7 @@
       "toPath": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
       "to": "opportunity.protected.source-backed-memory-consulting.2026",
       "fragment": null,
-      "line": 133,
+      "line": 134,
       "kind": "link"
     },
     {
@@ -21968,15 +22554,6 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
-      "to": "evaluation.employment-context.coverage.2026-07-18",
-      "fragment": null,
-      "line": 159,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
       "to": "opportunity.benepass.product-operations.7f963a7a",
       "fragment": null,
@@ -21986,10 +22563,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
+      "to": "evaluation.employment-context.coverage.2026-07-18",
+      "fragment": null,
+      "line": 160,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/evaluations/employment-leadership-context-2026-08-13.md",
       "to": "evaluation.employment-leadership-context.2026-08-13",
       "fragment": null,
-      "line": 160,
+      "line": 161,
       "kind": "link"
     },
     {
@@ -21998,7 +22584,7 @@
       "toPath": "reports/wiki-opportunity-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 161,
+      "line": 162,
       "kind": "link"
     },
     {
@@ -22007,7 +22593,7 @@
       "toPath": "reports/wiki-career-trajectory-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 162,
+      "line": 163,
       "kind": "link"
     },
     {
@@ -22016,7 +22602,7 @@
       "toPath": "reports/wiki-source-channel-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 163,
+      "line": 164,
       "kind": "link"
     },
     {
@@ -22025,7 +22611,7 @@
       "toPath": "reports/wiki-opportunity-discovery.md",
       "to": null,
       "fragment": null,
-      "line": 164,
+      "line": 165,
       "kind": "link"
     },
     {
@@ -22034,7 +22620,7 @@
       "toPath": "reports/hiring-acceptance-public.md",
       "to": null,
       "fragment": null,
-      "line": 165,
+      "line": 166,
       "kind": "link"
     },
     {
@@ -22043,7 +22629,7 @@
       "toPath": "reports/hiring-acceptance-gap-resolution.md",
       "to": null,
       "fragment": null,
-      "line": 166,
+      "line": 167,
       "kind": "link"
     },
     {
@@ -22106,7 +22692,7 @@
       "toPath": "docs/knowledge-bank/sources/betanyc-civic-tech-newsletter-2026-08-20.md",
       "to": "source.betanyc.civic-tech-newsletter",
       "fragment": null,
-      "line": 29,
+      "line": 30,
       "kind": "link"
     },
     {
@@ -22115,7 +22701,7 @@
       "toPath": "docs/knowledge-bank/research-runs/nyc-jobs-citywide-monitor-2026-08-20.md",
       "to": "research.nyc-jobs.citywide-monitor.2026-08-20",
       "fragment": null,
-      "line": 53,
+      "line": 52,
       "kind": "link"
     },
     {
@@ -22124,7 +22710,7 @@
       "toPath": "docs/knowledge-bank/methods/civic-match-opportunity-loop.md",
       "to": "method.civic-match-opportunity-loop",
       "fragment": null,
-      "line": 62,
+      "line": 61,
       "kind": "link"
     },
     {
@@ -22133,7 +22719,25 @@
       "toPath": "docs/knowledge-bank/applications/nyc-oti-senior-product-manager-782366.md",
       "to": "application.nyc-oti.senior-product-manager.782366",
       "fragment": null,
+      "line": 72,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/applications/nyc-oti-product-manager-784450.md",
+      "to": "application.nyc-oti.product-manager.784450",
+      "fragment": null,
       "line": 73,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/applications/nyc-oti-speed-operations-manager-789810.md",
+      "to": "application.nyc-oti.speed-operations-manager.789810",
+      "fragment": null,
+      "line": 74,
       "kind": "link"
     },
     {
@@ -22142,7 +22746,7 @@
       "toPath": "docs/knowledge-bank/evaluations/named-public-reader-acceptance-2026-08-13.md",
       "to": "evaluation.named-public-reader-acceptance.2026-08-13",
       "fragment": null,
-      "line": 98,
+      "line": 99,
       "kind": "link"
     },
     {
@@ -23651,10 +24255,19 @@
     {
       "fromPath": "docs/knowledge-bank/methods/civic-match-opportunity-loop.md",
       "from": "method.civic-match-opportunity-loop",
+      "toPath": "docs/knowledge-bank/methods/private-application-status-loop.md",
+      "to": "method.private-application-status-loop",
+      "fragment": null,
+      "line": 19,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/civic-match-opportunity-loop.md",
+      "from": "method.civic-match-opportunity-loop",
       "toPath": "docs/knowledge-bank/people/josh-gee.md",
       "to": "person.josh-gee",
       "fragment": null,
-      "line": 27,
+      "line": 30,
       "kind": "link"
     },
     {
@@ -23663,7 +24276,16 @@
       "toPath": "docs/knowledge-bank/people/courtney-kishbaugh.md",
       "to": "person.courtney-kishbaugh",
       "fragment": null,
-      "line": 28,
+      "line": 31,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/civic-match-opportunity-loop.md",
+      "from": "method.civic-match-opportunity-loop",
+      "toPath": "opportunity-sources/civic-match/2026-08-30/Opportunity-Discovery-Review.md",
+      "to": null,
+      "fragment": null,
+      "line": 44,
       "kind": "link"
     },
     {
@@ -23843,7 +24465,7 @@
       "toPath": "docs/knowledge-bank/capabilities/technical-operations.md",
       "to": "capability.technical-operations",
       "fragment": null,
-      "line": 39,
+      "line": 153,
       "kind": "link"
     },
     {
@@ -23852,7 +24474,7 @@
       "toPath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/README.md",
       "to": "index.anonymized-team-knowledge-opportunity-case-study",
       "fragment": null,
-      "line": 64,
+      "line": 178,
       "kind": "link"
     },
     {
@@ -24063,6 +24685,60 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "toPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Application-Guide.md",
+      "to": null,
+      "fragment": null,
+      "line": 15,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "toPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.pdf",
+      "to": null,
+      "fragment": null,
+      "line": 16,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "toPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.md",
+      "to": null,
+      "fragment": null,
+      "line": 17,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "toPath": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.pdf",
+      "to": null,
+      "fragment": null,
+      "line": 18,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "toPath": "docs/knowledge-bank/applications/nyc-oti-product-manager-784450-draft.md",
+      "to": "application.nyc-oti.product-manager.784450.draft",
+      "fragment": null,
+      "line": 19,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+      "from": "opportunity.nyc-oti.product-manager.784450",
+      "toPath": "docs/knowledge-bank/applications/nyc-oti-product-manager-784450.md",
+      "to": "application.nyc-oti.product-manager.784450",
+      "fragment": null,
+      "line": 20,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
       "from": "opportunity.nyc-oti.senior-product-manager.782366",
       "toPath": "docs/knowledge-bank/people/luke-farrell.md",
@@ -24096,6 +24772,87 @@
       "to": "project.kc-town-hall.tired-of-tires",
       "fragment": null,
       "line": 9,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-speed-operations-manager-789810.md",
+      "from": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "toPath": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Application-Guide.md",
+      "to": null,
+      "fragment": null,
+      "line": 16,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-speed-operations-manager-789810.md",
+      "from": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "toPath": "opportunity-sources/civic-match/2026-08-30/Opportunity-Discovery-Review.md",
+      "to": null,
+      "fragment": null,
+      "line": 17,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-speed-operations-manager-789810.md",
+      "from": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "toPath": "docs/knowledge-bank/applications/nyc-oti-speed-operations-manager-789810.md",
+      "to": "application.nyc-oti.speed-operations-manager.789810",
+      "fragment": null,
+      "line": 24,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-speed-operations-manager-789810.md",
+      "from": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "toPath": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Application-Guide.md",
+      "to": null,
+      "fragment": null,
+      "line": 30,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-speed-operations-manager-789810.md",
+      "from": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "toPath": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.pdf",
+      "to": null,
+      "fragment": null,
+      "line": 31,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-speed-operations-manager-789810.md",
+      "from": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "toPath": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Operations-Manager-789810.md",
+      "to": null,
+      "fragment": null,
+      "line": 32,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-speed-operations-manager-789810.md",
+      "from": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "toPath": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Operations-Manager-789810.pdf",
+      "to": null,
+      "fragment": null,
+      "line": 33,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-speed-senior-product-manager-789610.md",
+      "from": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "toPath": "resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Application-Guide.md",
+      "to": null,
+      "fragment": null,
+      "line": 16,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-speed-senior-product-manager-789610.md",
+      "from": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "toPath": "opportunity-sources/civic-match/2026-08-30/Opportunity-Discovery-Review.md",
+      "to": null,
+      "fragment": null,
+      "line": 17,
       "kind": "link"
     },
     {
@@ -24654,6 +25411,15 @@
       "to": null,
       "fragment": null,
       "line": 191,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+      "from": "project.nyc-artist-coalition",
+      "toPath": "docs/knowledge-bank/sources/dcla-listening-session-2026-08-26.md",
+      "to": "research.nycac.dcla-listening-session.2026-08-29",
+      "fragment": null,
+      "line": 230,
       "kind": "link"
     },
     {
@@ -25230,6 +25996,24 @@
       "to": "research.betanyc-opportunity-review.2026-08-20",
       "fragment": null,
       "line": 24,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/dcla-listening-session-2026-08-26.md",
+      "from": "research.nycac.dcla-listening-session.2026-08-29",
+      "toPath": "docs/knowledge-bank/projects/fair-rent-nyc.md",
+      "to": "project.fair-rent-nyc",
+      "fragment": null,
+      "line": 4,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/dcla-listening-session-2026-08-26.md",
+      "from": "research.nycac.dcla-listening-session.2026-08-29",
+      "toPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+      "to": "project.nyc-artist-coalition",
+      "fragment": null,
+      "line": 4,
       "kind": "link"
     },
     {

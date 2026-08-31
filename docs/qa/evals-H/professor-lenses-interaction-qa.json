@@ -1,10 +1,10 @@
 {
   "reportVersion": 4,
-  "checkedAt": "2026-08-23T01:06:07.215Z",
+  "checkedAt": "2026-08-24T23:40:11.460Z",
   "baseUrl": "http://127.0.0.1:3212",
-  "publicSurfaceFingerprint": "3c1e38b991daebd8088a479d7636a0240cc9016cbc723c90f57edd230ed301b6",
+  "publicSurfaceFingerprint": "f049d54fa744f60005f3d9cc48a9f47bf2d63b42ccc6a27b742b3be42e663d69",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 152,
+  "publicSurfaceFileCount": 153,
   "method": "Fresh Playwright keyboard interaction plus DOM and viewport inspection on the exact Node 26 production build. This is not a human screen-reader or assistive-technology session.",
   "keyboard": {
     "desktopTabSequence": [
@@ -213,7 +213,7 @@
   ],
   "passed": true,
   "refresh": {
-    "candidateChange": "The colophon route and its governed photo, prose, and editorial-accountability disclosure changed; shared navigation, homepage, and About interactions were re-exercised on the exact candidate.",
+    "candidateChange": "The knowledge graph and internal governance changed without changing the public portfolio; shared navigation, homepage, and About interactions were re-exercised on the exact candidate.",
     "currentChecks": [
       "Keyboard order and visible focus were freshly exercised on the exact homepage.",
       "The mobile menu opened from its summary control and transferred focus to its first link.",

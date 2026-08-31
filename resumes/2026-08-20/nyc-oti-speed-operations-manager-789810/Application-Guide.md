@@ -1,0 +1,403 @@
+# Application guide: NYC OTI Operations Manager — 789810
+
+For Jamie Burkart. Packet reviewed 2026-08-31; posting last checked 2026-08-30. This is a preparation guide, not a submitted application.
+
+## 1. Open the right application
+
+[Official posting and Apply button](https://cityjobs.nyc.gov/job/operations-manager-in-brooklyn-jid-46143). The posting was checked on 2026-08-30 and lists **2026-10-04** as its closing date. Recheck it before submitting. Confirm **Operations Manager**, **OTI**, **Brooklyn**, and **Job ID 789810**; similar titles can refer to different openings.
+
+### Discovery, personal connections, and the formal application
+
+Civic Match adds candidate discovery, invitations, application tracking, and staff-assisted matching to the employer's formal application route. A personal introduction may be possible; membership does not guarantee an OTI referral, interview, or hiring preference.
+
+The Civic Match Operations Manager card is a provisional match to this opening, not a verified duplicate: its destination has not yet been inspected. Open View & Apply and confirm employer and Job ID 789810 before using this packet. Do not match on title alone.
+
+The supplied Civic Match card displays October 3; the employer posting displays October 4, 2026. Retain both observations and plan around October 3 until reconciled; do not assume a time-zone explanation.
+
+Qualification check: the official title is IT Project Specialist. Confirm which education-and-experience route your history satisfies. The advertised $75,000–$160,000 range does not guarantee your $100,000 minimum.
+
+Use the employer's application system, retaining any legitimate Civic Match referral route. Submit once per employer Job ID. Save the employer confirmation before manually marking the role applied in Civic Match. A saved job or profile approval is not an application.
+
+Optional next step, for Jamie to send: ask Civic Match whether staff can advise on this exact Job ID or offer a relevant introduction. Do not wait for an introduction to meet the application deadline. No outreach or application has been sent by this guide.
+
+## 2. Download your application files
+
+- [Tailored résumé PDF](./Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.pdf) — download the file from GitHub; do not upload a screenshot or a GitHub page.
+- [Résumé Markdown](./Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.md)
+- [Signed cover-letter PDF](./Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Operations-Manager-789810.pdf)
+- [Tailored cover-letter Markdown](./Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Operations-Manager-789810.md)
+
+Upload the tailored résumé PDF alone in **Resume**. Do not append the cover letter. The later screenshot shows **Preliminary questions → Cover letter → Additional attachments**: upload the separate signed cover-letter PDF there. A hiring-team message is also available on the first page; the copy-paste body is below.
+
+The **Easy Apply** upload at the top is optional autocomplete, not a separate application requirement. You can skip it and fill the form manually. If you already used it, check every imported entry; do not reset accurate work unnecessarily. Confirm the final **Resume** field actually contains the intended PDF. The displayed upload limit is **10 MB**.
+
+## 3. Personal information
+
+Copy only the contents of each text box below. For contact fields, use the existing résumé rather than a second copy stored here. Confirm those details are still preferred. For autocomplete fields, select the matching option after typing.
+
+### First name *
+
+```text
+Jamie
+```
+
+### Last name *
+
+```text
+Burkart
+```
+
+### Email *
+
+Copy the email from the contact line of the linked tailored résumé. It is not duplicated in this tracked guide.
+
+### Confirm your email *
+
+Enter exactly the same email as above.
+
+### City
+
+```text
+Brooklyn, NY
+```
+
+### Phone number * — country code
+
+```text
++1
+```
+
+Select United States (+1).
+
+### Phone number * — local number
+
+Copy the phone number from the contact line of the linked tailored résumé, without repeating the +1 country code.
+
+## 4. Experience — Add, complete, Save, repeat
+
+The current screenshots show **Experience → Add**. The expanded labels below were observed in the earlier SmartRecruiters application: **Title** (required), **Company**, **Office location**, **Description**, **From** (required), **To** (required unless current), **I currently work here**, **Save**. Reconcile with the form if its labels differ.
+
+**Month-level research is partial:** the notes below distinguish corroborated months, legal-entity formation, year-only evidence, and unresolved conflicts. Do not invent January/December dates or count overlapping projects as additional full-time years. These are founder, project, and community roles; listing them does not assert that each was a separate full-time salaried job or government employment. See the [shared date-evidence ledger](../../../evals/application-guides/experience-dates.json).
+
+### Experience 1: THICK ARTS LLC
+
+**Title** (required)
+
+```text
+Founder, Product & Technical Project Manager / Web Systems Lead
+```
+
+**Company**
+
+```text
+THICK ARTS LLC
+```
+
+**Office location**
+
+```text
+New York, NY / Remote
+```
+
+**Description**
+
+```text
+- Lead end-to-end web product, design, and engineering engagements, turning ambiguous stakeholder needs into owned work, sequenced plans, resource decisions, testing, launch readiness, maintenance workflows, and handoff documentation.
+- Led e-commerce, analytics, content, marketing, and operations for Harry J. Epstein Company, contributing to 2x revenue growth while helping an 80+ year-old industrial business modernize without losing its trusted voice.
+- Build maintainable publishing systems, campaign hubs, resource libraries, data workflows, and web infrastructure; preserve briefs, decisions, reusable patterns, and post-launch learning so teams can continue the work.
+```
+
+- **From:** 2009 — confirm the actual month (and day only if requested) from your records.
+
+- **To:** Leave empty when the current-work checkbox disables it.
+
+**Date research (2026-08-31):** The public filing verifies July 2012 (July 6) as the LLC's formation, not the start month of the earlier independent practice recorded from 2009. If entering the legal entity alone, July 2012 is the supported formation month; confirm how you want the earlier practice represented before submitting. Do not enter a guessed month in 2009.
+
+- **I currently work here:** Yes, if still current when you submit.
+
+- Click **Save** before adding the next entry.
+
+### Experience 2: NYC Artist Coalition / FairRentNYC
+
+**Title** (required)
+
+```text
+Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead
+```
+
+**Company**
+
+```text
+NYC Artist Coalition / FairRentNYC
+```
+
+**Office location**
+
+```text
+New York, NY
+```
+
+**Description**
+
+```text
+- Help turn stakeholder listening, public testimony, and coalition priorities into buildable plans, campaign websites, public forums, policy communications, calls to action, and sustained government-facing follow-through.
+- Built and stewarded 30+ pages of shared campaign memory for a 2026 Commercial Rent Stabilization collaboration, connecting running minutes, decision records, action items, legal and policy questions, media assets, public-data framing, and city/state strategy lanes.
+- Maintain shared status, decisions, owners, risks, and next actions; facilitate challenging meetings; brief elected officials and staff; and represent the work publicly while preserving collective credit and sensitive boundaries.
+```
+
+- **From:** 2017 — confirm the actual month (and day only if requested) from your records.
+
+- **To:** Leave empty when the current-work checkbox disables it.
+
+**Date research (2026-08-31):** The grouped resume range begins in 2017. Earlier CVs separate NYC Artist Coalition (2017) from FairRentNYC (2018), without start months. Confirm the start month for the grouped entry; do not imply both organizations began together.
+
+- **I currently work here:** Yes, if still current when you submit.
+
+- Click **Save** before adding the next entry.
+
+### Experience 3: WOWList.org
+
+**Title** (required)
+
+```text
+Co-Founder, Product & Community Systems
+```
+
+**Company**
+
+```text
+WOWList.org
+```
+
+**Office location**
+
+```text
+New York, NY / Remote
+```
+
+**Description**
+
+```text
+- Co-founded, co-built, and operated with Richard Caceres a natural-language community-calendar and discovery platform for DIY arts and music organizers, replacing a complex event form with collaboratively editable text, followable keyword communities, weekly digests, profiles, embeds, and calendar connections.
+- Connected participatory discovery with hands-on implementation, organizer onboarding, support, adoption, public communication, instrumentation, and low-cost production operations across a distributed maintainer network.
+- Operated across 35 city ecosystems, supporting local organizers who used WOW List to run community calendars, websites, and email lists for their own scenes.
+```
+
+- **From:** 2015 — confirm the actual month (and day only if requested) from your records.
+
+- **To:** 2020 — confirm the actual month (and day only if requested).
+
+**Date research (2026-08-31):** The tailored resume says 2015–2020; earlier Jamie-authored career records say 2014–December 2022. These may describe different phases, but that has not been resolved. Confirm the intended active-role interval and both months; do not silently choose one chronology.
+
+- **I currently work here:** No.
+
+- Click **Save** before adding the next entry.
+
+### Experience 4: CallNYC.org
+
+**Title** (required)
+
+```text
+Civic-Tech Builder & Product Translator
+```
+
+**Company**
+
+```text
+CallNYC.org
+```
+
+**Office location**
+
+```text
+New York, NY
+```
+
+**Description**
+
+```text
+- Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.
+- Took the civic prototype from problem definition and information architecture through implementation and public release. The archived site is unofficial and not a current City service.
+```
+
+- **From:** 2016 — confirm the actual month (and day only if requested) from your records.
+
+- **To:** 2016 — confirm the actual month (and day only if requested).
+
+**Date research (2026-08-31):** The 2016 year is supported. A January hackathon is a project milestone, not proof of the start or end month of this experience entry. Both months remain unconfirmed.
+
+- **I currently work here:** No.
+
+- Click **Save** before adding the next entry.
+
+### Experience 5: KC Town Hall LLC
+
+**Title** (required)
+
+```text
+Co-Founder & Project Manager, Historic Restoration / Mixed-Use Development
+```
+
+**Company**
+
+```text
+KC Town Hall LLC
+```
+
+**Office location**
+
+```text
+Kansas City, MO
+```
+
+**Description**
+
+```text
+- Co-led planning, public-benefit documentation, vendor coordination, and municipal compliance for adaptive reuse of an approximately 6,500 sq. ft. historic building into four commercial spaces and three homes.
+- Helped deliver Tired of Tires, a recurring free resident service connecting household eligibility, form and phone intake, scheduled field collection, City recycling coordination, volunteer participation, and public result reporting; public records document Jamie's participation in pickup operations.
+- Co-developed the successful CCED proposal and served as the City's named developer/presenter for a $490,539 public funding request, remained a documented developer point of contact through compliance progress, and later transitioned the project to a mission-aligned organization.
+```
+
+- **From:** 2015 — confirm the actual month (and day only if requested) from your records.
+
+- **To:** April 2024 — corroborated in earlier first-party CVs; confirm before submission.
+
+**Date research (2026-08-31):** April 2024 is corroborated as the project-role end in multiple Jamie-authored earlier CVs. The 2015 start month remains unconfirmed. The LLC's later formation and the tire project's collection dates do not establish this role's start month.
+
+- **I currently work here:** No.
+
+- Click **Save** before adding the next entry.
+
+## 5. Education
+
+Use **Education → Add**. These expanded labels come from the earlier SmartRecruiters form. Leave optional details empty when you cannot confirm them; do not substitute course attendance for a degree.
+
+**Institution** (required)
+
+```text
+University of California, Santa Cruz
+```
+
+**Major**
+
+```text
+Film & Digital Media
+```
+
+**Degree**
+
+```text
+Bachelor of Arts
+```
+
+**School location**
+
+```text
+Santa Cruz, California, United States
+```
+
+**Description**
+
+```text
+Honors
+```
+
+**From / To:** confirm your actual attendance dates. They are not supplied in the tailored résumé. Leave blank if optional; if required, consult your records. **I currently attend:** No. Click **Save**.
+
+## 6. Your Profiles
+
+### LinkedIn
+
+```text
+https://www.linkedin.com/in/jamie-burkart/
+```
+
+### Facebook
+
+Leave blank (optional).
+
+### X (fka Twitter)
+
+Leave blank (optional).
+
+### Website
+
+```text
+https://jamieburk.art/
+```
+
+## 7. Resume upload
+
+Choose **Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.pdf** in the required **Resume** field. Wait for the filename/upload confirmation. Reopen the selected PDF and verify **Operations Manager — 789810**, rather than relying on a similar filename from another application.
+
+## 8. Message to the Hiring Team — copy and paste
+
+This is the existing tailored cover-letter body, without its contact header. No character or word limit is visible in the supplied screenshots. If the live form reports a limit, stop and shorten against that actual limit; do not assume the earlier Civic Match limit applies.
+
+```text
+Dear NYC Office of Technology and Innovation Hiring Team,
+
+With Tired of Tires, a discarded tire was never only a disposal problem. For a resident, it could be an expense, a hazard, or one more sign that the conditions outside the front door did not matter. The recurring free service connected print and web outreach, form and phone intake, scheduled field collection, volunteer participation, public reporting, and a City recycling handoff. I helped deliver the pickup operations and co-built the structures around them. What made the service usable was not one heroic collection day; it was a dependable chain of people, information, equipment, dates, and next actions.
+
+That is the kind of operating problem I would be glad to take on as SPEED Operations Manager. Across KC Town Hall, Thick Arts, WOW List, NYC Artist Coalition, and FairRentNYC, I have translated ambiguous incoming needs into owned work; coordinated vendors, collaborators, technical systems, public-benefit requirements, and government-facing dependencies; and maintained the status, decisions, risks, and documentation that let other people act. KC Town Hall joined municipal compliance and vendor coordination to a $490,539 public funding request. Thick Arts joined product delivery to the practical operations of an enduring small business. FairRentNYC’s shared campaign memory gives a distributed coalition one place to recover decisions, owners, and unresolved questions.
+
+The decisive point for me is this: operational rigor is not paperwork around the work. It is the means by which budgets, procurement, legal and cyber review, staffing, product dependencies, and team health become legible enough to manage honestly. My role is to establish only the structure the team needs, surface the blocked decision early, and remove process when its cost exceeds its value.
+
+I would welcome a structured conversation about how SPEED receives requests, allocates resources, tracks financial and delivery health, and learns across projects. A strong operating system should leave the team less dependent on any one person and more able to keep its commitments to the New Yorkers waiting on the other side of a permit.
+
+Warmly,
+
+Jamie Burkart
+```
+
+## 9. Preliminary questions — answers and human gates
+
+These fields were observed on the Product Manager 784450 SmartRecruiters export on **2026-08-31**. For another OTI opening, use these answers only when the same field appears; recheck that application instead of assuming identical screening questions.
+
+### How did you hear about this job? *
+
+Choose **Civic Match** when it appears in the dropdown. If it is absent, choose **Other** and paste:
+
+```text
+Civic Match by Work for America
+```
+
+Choose Civic Match when the dropdown offers it. Otherwise choose Other and paste the fallback text. Do not claim a referral unless one actually occurred.
+
+### Preferred first name
+
+```text
+Jamie
+```
+
+### Preferred last name
+
+```text
+Burkart
+```
+
+### Voluntary demographic and veteran questions
+
+These fields are voluntary. Leave blank for the privacy-preserving answer unless Jamie personally chooses to disclose. Never infer an answer from other records.
+
+Observed voluntary groups: Gender; Hispanic or Latino; Race; Veteran self-identification and protected-veteran classifications; Household military service, relationship, branch, and discharge details.
+
+### Required attestations — Jamie-only
+
+Jamie must personally read and check all 3 required boxes: Accuracy and truth certification; City terms acknowledgement; Privacy notice agreement. Their unchecked state is not an omission the guide may fill. No agent has accepted them, and this guide is not consent.
+
+## 10. Final review and submit
+
+On **Preliminary questions → Cover letter → Additional attachments**, choose **Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Operations-Manager-789810.pdf** (10 MB maximum). Confirm the uploaded filename. Use the source and preferred-name answers above; do not substitute preferred names for any separately requested legal-name fields.
+
+- Check name, matching email fields, phone, saved experience/education, portfolio link, attached PDF, and the full hiring-team message. Optional Facebook and X fields may stay blank.
+- Beyond the preliminary fields documented above, additional screening questions were **not observed** for this application; answer the questions actually shown, from your records. Do not infer a civil-service status, credential, work authorization, protected characteristic, or consent answer.
+- If asked about minimum qualifications, report your actual degree and relevant experience. The employer decides equivalency; this guide is not an eligibility determination.
+- Resolve every chronology conflict before accepting the accuracy statement. Then personally read and check the three required attestations.
+- You review and submit the final application yourself. Save the confirmation and email afterward, then record the application as submitted. Until then its status remains not submitted.
+
+## Evidence and maintenance
+
+Field labels and the 10 MB limit come from Jamie-provided SmartRecruiters screenshots, including the later cover-letter upload and source/preferred-name questions. The expanded Experience/Education controls are carried forward from the earlier application on the same platform, not presented as newly inspected controls for every opening. Remaining screening questions were not observed; no successful live submission is claimed.
+
+The sibling `application-guide.json` records the reviewed résumé, PDF, and letter hashes. Descriptions are extracted from the canonical résumé; the hiring message is extracted from the canonical letter. Source changes fail the deterministic guide check until the material is reviewed and this guide is regenerated. No new hiring-reader pass is asserted for this mechanical application guide.

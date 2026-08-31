@@ -1,0 +1,36 @@
+{
+  "reviewedOn": "2026-08-31",
+  "scope": "Application preparation only. No invented months, no new employment claim, no backdated legal entity. Private documents and locators remain outside Git.",
+  "entries": {
+    "THICK ARTS LLC": {
+      "to": null,
+      "applicationDraftObservation": "The 2026-08-31 Product Manager 784450 export displays 2012–Present. That is coherent with the LLC entity's formation year but differs from the tailored resume's 2009–Present independent-practice container; the export does not expose months.",
+      "note": "The public filing verifies July 2012 (July 6) as the LLC's formation, not the start month of the earlier independent practice recorded from 2009. If entering the legal entity alone, July 2012 is the supported formation month; confirm how you want the earlier practice represented before submitting. Do not enter a guessed month in 2009.",
+      "sourceBasis": "CLM-THICK-ARTS-LLC-FORMATION-2012-07-06 and the maintained HJE/Thick Arts chronology correction; legal formation is not employment commencement."
+    },
+    "NYC Artist Coalition / FairRentNYC": {
+      "to": null,
+      "applicationDraftObservation": "The 2026-08-31 Product Manager 784450 export displays 2017–Present, matching the tailored resume at year precision. The export does not expose months and does not resolve the grouped-entry scope issue.",
+      "note": "The grouped resume range begins in 2017. Earlier CVs separate NYC Artist Coalition (2017) from FairRentNYC (2018), without start months. Confirm the start month for the grouped entry; do not imply both organizations began together.",
+      "sourceBasis": "Maintained resume and Jamie-authored earlier CVs; year-level evidence only."
+    },
+    "WOWList.org": {
+      "to": null,
+      "applicationDraftObservation": "The 2026-08-31 Product Manager 784450 export displays 2013–Present. That conflicts with both the tailored resume's 2015–2020 range and the earlier Jamie-authored 2014–December 2022 record; the export does not expose months.",
+      "note": "The tailored resume says 2015–2020; earlier Jamie-authored career records say 2014–December 2022. These may describe different phases, but that has not been resolved. Confirm the intended active-role interval and both months; do not silently choose one chronology.",
+      "sourceBasis": "Current tailored resume compared with earlier Jamie-authored career records; unresolved scope/date conflict."
+    },
+    "CallNYC.org": {
+      "to": null,
+      "applicationDraftObservation": "The 2026-08-31 Product Manager 784450 export displays 2016–2016, compatible with the tailored resume at year precision. The export does not expose either month.",
+      "note": "The 2016 year is supported. A January hackathon is a project milestone, not proof of the start or end month of this experience entry. Both months remain unconfirmed.",
+      "sourceBasis": "Maintained CallNYC project chronology and resume; milestone is not employment chronology."
+    },
+    "KC Town Hall LLC": {
+      "to": "2024-04",
+      "applicationDraftObservation": "The 2026-08-31 Product Manager 784450 export displays 2017–2024. That conflicts with the tailored resume's 2015–2024 range; the export does not expose months. April 2024 remains the separately corroborated first-party end month.",
+      "note": "April 2024 is corroborated as the project-role end in multiple Jamie-authored earlier CVs. The 2015 start month remains unconfirmed. The LLC's later formation and the tire project's collection dates do not establish this role's start month.",
+      "sourceBasis": "Multiple earlier Jamie-authored CV versions agree on 2015–April 2024; first-party corroboration, not an independent employment verification."
+    }
+  }
+}

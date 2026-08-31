@@ -1,22 +1,25 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `ccddbf75a1e1a3ab293c5dd067e1f30a5b9a6855`
-**Generation time:** 2026-08-22T21:22:19-04:00
-**Source fingerprint:** `c2cf41ec29380d85699d1af93a8f8fe4629fbe0116345afd5e96d2cf0a6f5033`
+**Source commit:** `29745b537e57bab69f5ddc6207c3ab6e8fbd8e38`
+**Generation time:** 2026-08-31T19:49:24-04:00
+**Source fingerprint:** `58618688c7258813c8659a6ae82556ff86cc9ce4dfa32b7f274081ec2ba8270c`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 45
+- Nodes added: 54
 - Nodes removed: 0
-- Edges added: 175
+- Edges added: 219
 - Edges removed: 8
 - New type-aware orphans: 0
 - Current rights-review records: 185
 
 ## Added nodes
 
+- `application.nyc-oti.product-manager.784450`
+- `application.nyc-oti.product-manager.784450.draft`
 - `application.nyc-oti.senior-product-manager.782366`
+- `application.nyc-oti.speed-operations-manager.789810`
 - `asset.photo.knowledge-wiki.collective-map.2017.001`
 - `correction.hje-thick-arts-client-chronology.2026`
 - `correction.photo.project-courtesy-credits.2026-08-20`
@@ -24,6 +27,7 @@ Compared with the graph artifact on `origin/develop`.
 - `index.anonymized-team-knowledge-opportunity-case-study`
 - `method.betanyc-opportunity-loop`
 - `method.civic-match-opportunity-loop`
+- `method.private-application-status-loop`
 - `opportunity.nyc-oti.pit-senior-product-designer.782373`
 - `opportunity.nyc-oti.product-manager.784450`
 - `opportunity.nyc-oti.speed-operations-manager.789810`
@@ -44,6 +48,11 @@ Compared with the graph artifact on `origin/develop`.
 - `research.betanyc-opportunity-review.2026-08-20`
 - `research.nyc-jobs.citywide-monitor.2026-08-20`
 - `research.nyc-oti-product-management-ranking.2026-08-20`
+- `research.nycac.dcla-listening-session.2026-08-29`
+- `source.application.nyc-oti.confirmations.2026-08-31`
+- `source.application.nyc-oti.pit-crew-volume-update.2026-08-20`
+- `source.application.nyc-oti.product-manager.784450.2026-08-31`
+- `source.application.nyc-oti.status-dashboard.2026-08-31`
 - `source.betanyc.civic-tech-newsletter`
 - `source.civic-match.candidate-network`
 - `source.jobs.oti.executive-director-product-management.789563`

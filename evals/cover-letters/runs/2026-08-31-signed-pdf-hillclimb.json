@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "signed-cover-letter-native-pdf-hillclimb-2026-08-31",
+  "reviewedOn": "2026-08-31",
+  "scope": "Corrected specimen and signed native PDF siblings; field-by-field OTI packet delivery.",
+  "baseline": {
+    "commit": "1a9fc70ec4ab2510893c6fb29ccc01d68cdce8a2",
+    "signedPdfsReady": 0,
+    "maintainedLetters": 9,
+    "applicationGuides": 3
+  },
+  "candidate": {
+    "signedPdfsReady": 9,
+    "maintainedLetters": 9,
+    "applicationGuides": 4,
+    "letterMarkdownChanged": false,
+    "resumeBytesChanged": false,
+    "allPagesVisuallyInspected": true,
+    "allPdfTextAndLinksMatchMarkdown": true,
+    "allSignatureImageHashesMatch": true,
+    "originalSpecimenUnchanged": true,
+    "workingGoogleCopiesPrivate": true,
+    "standaloneSignatureCommitted": false,
+    "privateSpecimenContentCommitted": false,
+    "fullSuitePass": false
+  },
+  "verification": {
+    "tests": [
+      {
+        "name": "test:cover-letters",
+        "exit": 0,
+        "summary": [
+          "ℹ tests 43",
+          "ℹ pass 43",
+          "ℹ fail 0"
+        ]
+      },
+      {
+        "name": "test:application-guides",
+        "exit": 0,
+        "summary": [
+          "ℹ tests 21",
+          "ℹ pass 21",
+          "ℹ fail 0"
+        ]
+      },
+      {
+        "name": "test:oti-application",
+        "exit": 0,
+        "summary": [
+          "ℹ tests 7",
+          "ℹ pass 7",
+          "ℹ fail 0"
+        ]
+      },
+      {
+        "name": "test:resumes",
+        "exit": 0,
+        "summary": [
+          "ℹ tests 36",
+          "ℹ pass 36",
+          "ℹ fail 0"
+        ]
+      }
+    ],
+    "parserChecksPerPdf": 6,
+    "parserPassedPdfs": 9,
+    "packetIndexLinks": 25,
+    "missingPacketIndexLinks": 0,
+    "wrongSignatureHashRejected": true,
+    "publicSafety": "pass-with-11-existing-claim-guardrail-warnings",
+    "fullCheck": {
+      "status": "blocked-pre-existing",
+      "gate": "professor-lenses",
+      "baselineAndCandidateSha256": "fe5cb20c5bbaad574e5f6d5119822495ca2f8d6c1abd84435c47d69d596e50fa",
+      "failures": [
+        "candidate-fingerprint",
+        "unanimous-holdouts"
+      ]
+    },
+    "newLlmCalls": 0,
+    "existingContentReaderResults": "validated-with-unchanged-Markdown-not-new-model-reviews"
+  },
+  "boundaries": {
+    "submissionAuthorized": false,
+    "actualNamedPeopleParticipated": false,
+    "monthResearch": "partial; unresolved months and conflicting WOW List chronology require Jamie confirmation",
+    "expiredBenchmark": "782369 remains do-not-submit",
+    "submittedRole": "782366 remains already applied; new PDF is not evidence of original upload"
+  },
+  "implementation": [
+    {
+      "path": "scripts/cover-letters/native-letter.mjs",
+      "sha256": "07b38ea271b676ac91bc7433ec24a2df1d075bdd298c1ce6ad42224425c60f63"
+    },
+    {
+      "path": "scripts/cover-letters/evaluate-cover-letter-pdfs.mjs",
+      "sha256": "6aa7928ce09e567ab329a3e21c3fef188e3db6b26e6884a14a3637268ff4176b"
+    },
+    {
+      "path": "scripts/cover-letters/inspect-native-pdf.py",
+      "sha256": "db87397699b08321cc9330ee6be2d7eb2177a7693dd72df1ec91362802ff80d9"
+    },
+    {
+      "path": "scripts/application-guides/application-guide.mjs",
+      "sha256": "ad34a1f9f5188275a0cf86c8d79f2be0a63ea4cacc86222b66253f7e879201dd"
+    },
+    {
+      "path": "evals/application-guides/experience-dates.json",
+      "sha256": "d0e1fcc73841ec1ab60b03d60e5bf756647f3fee60ba607b87f84d3da1667cd8"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "resumes/2026-08-14/codepath-engineering-project-manager-5160542007/Jamie-Burkart-Cover-Letter-CodePath-Engineering-Project-Manager-5160542007.pdf",
+      "opportunityId": "opportunity.codepath.engineering-project-manager.5160542007",
+      "markdownSha256": "8f4a493eb244d53f534c86ed7130dd68c54b58ecb962d4c70b49e3e47be15c0f",
+      "pdfSha256": "fe1e5e33aca2607e813ade1b66bbcde776025caf286418ece96d227f6f464e6a",
+      "styleSha256": "80fa886d021330cfd14a3e1682d2f6d1fd3ddc07c75319b1a1d9a045184ae3b9",
+      "signatureImageSha256": "eaab41cfd1e19f03d3dff1970210e5003b55303b110d8a6e10474863c2e645d4"
+    },
+    {
+      "path": "resumes/2026-08-14/aclu-senior-project-manager-8620968002/Jamie-Burkart-Cover-Letter-ACLU-Senior-Project-Manager-8620968002.pdf",
+      "opportunityId": "opportunity.aclu.senior-project-manager.8620968002",
+      "markdownSha256": "24a07a70be2f1caee9f81969d9c4b37014c4caa14eee115b56439c84d088b16d",
+      "pdfSha256": "78b93b15b567b33080e4d291ec3db67aa60beacfaaa5df870564e722112cc576",
+      "styleSha256": "80fa886d021330cfd14a3e1682d2f6d1fd3ddc07c75319b1a1d9a045184ae3b9",
+      "signatureImageSha256": "eaab41cfd1e19f03d3dff1970210e5003b55303b110d8a6e10474863c2e645d4"
+    },
+    {
+      "path": "resumes/2026-08-14/benepass-product-operations-manager-7f963a7a/Jamie-Burkart-Cover-Letter-Benepass-Product-Operations-Manager-7f963a7a.pdf",
+      "opportunityId": "opportunity.benepass.product-operations.7f963a7a",
+      "markdownSha256": "c773cf2e2c9bf3b25975a706ad5022a15c8687d1907472fc2d50c3ffb4bd59eb",
+      "pdfSha256": "5a08fb77c2b716e08df245e173f881f4263d0841ec38ebd731c1ed9b806d6a29",
+      "styleSha256": "80fa886d021330cfd14a3e1682d2f6d1fd3ddc07c75319b1a1d9a045184ae3b9",
+      "signatureImageSha256": "eaab41cfd1e19f03d3dff1970210e5003b55303b110d8a6e10474863c2e645d4"
+    },
+    {
+      "path": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Cover-Letter-NYC-OTI-Senior-Product-Manager-782366.pdf",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "markdownSha256": "774552d20cfdbf5703ae45ecc53269d365247270048517ca35d482b1326ebaf9",
+      "pdfSha256": "73d4bd951d5bd30186d059dd38857c01c005c82893cc102fb178845e8227d186",
+      "styleSha256": "80fa886d021330cfd14a3e1682d2f6d1fd3ddc07c75319b1a1d9a045184ae3b9",
+      "signatureImageSha256": "eaab41cfd1e19f03d3dff1970210e5003b55303b110d8a6e10474863c2e645d4"
+    },
+    {
+      "path": "resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Operations-Manager-789810.pdf",
+      "opportunityId": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "markdownSha256": "e6c17fc986e1173f54f09fda6f77193a25d717b053c76e4cee5ab9af7abeeeca",
+      "pdfSha256": "7666d6505960f3f87b5a559ac61bb9d1c4694e9da4dc01268f0b29a82213e237",
+      "styleSha256": "80fa886d021330cfd14a3e1682d2f6d1fd3ddc07c75319b1a1d9a045184ae3b9",
+      "signatureImageSha256": "eaab41cfd1e19f03d3dff1970210e5003b55303b110d8a6e10474863c2e645d4"
+    },
+    {
+      "path": "resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.pdf",
+      "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+      "markdownSha256": "add7d24a1d9237486f598c0f3a4f955c6483dacf4e3ad6006e5869a972547a1d",
+      "pdfSha256": "4fc6123a5ec909b64f3eff6f7b5d662a0d5022cc875741a26ae414feb271a73c",
+      "styleSha256": "80fa886d021330cfd14a3e1682d2f6d1fd3ddc07c75319b1a1d9a045184ae3b9",
+      "signatureImageSha256": "eaab41cfd1e19f03d3dff1970210e5003b55303b110d8a6e10474863c2e645d4"
+    },
+    {
+      "path": "resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Senior-Product-Manager-789610.pdf",
+      "opportunityId": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "markdownSha256": "88d384cf6b68ddb1d7ab781f7212e6a85759c93b2d6cb17131859883b5cb71ef",
+      "pdfSha256": "b15a6c01193f6ef43067ad9e944bc8b78f688eb95c9edf1df2b481b26ba1bcf2",
+      "styleSha256": "80fa886d021330cfd14a3e1682d2f6d1fd3ddc07c75319b1a1d9a045184ae3b9",
+      "signatureImageSha256": "eaab41cfd1e19f03d3dff1970210e5003b55303b110d8a6e10474863c2e645d4"
+    },
+    {
+      "path": "resumes/2026-08-20/nyc-oti-pit-senior-product-designer-782373/Jamie-Burkart-Cover-Letter-NYC-OTI-PIT-Senior-Product-Designer-782373.pdf",
+      "opportunityId": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "markdownSha256": "7d521307c6e4454efd5ede9ba4c8174623f6259cc39347f6e9ff0d78a3436f20",
+      "pdfSha256": "e88e81d9450f731e9214bebbaadf92ff7df760bae5be09d71f0d6f248e40dc41",
+      "styleSha256": "80fa886d021330cfd14a3e1682d2f6d1fd3ddc07c75319b1a1d9a045184ae3b9",
+      "signatureImageSha256": "eaab41cfd1e19f03d3dff1970210e5003b55303b110d8a6e10474863c2e645d4"
+    },
+    {
+      "path": "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Cover-Letter-NYC-OTI-Technical-Operations-Manager-782369.pdf",
+      "opportunityId": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "markdownSha256": "23881de1ce65cad971613e486df3f1fd04def79b9171f9df2d64165ad6bb2614",
+      "pdfSha256": "3324d820da5303464cd596e8e1b356c3e8b6178a680c34e0103544f239b1d9b7",
+      "styleSha256": "80fa886d021330cfd14a3e1682d2f6d1fd3ddc07c75319b1a1d9a045184ae3b9",
+      "signatureImageSha256": "eaab41cfd1e19f03d3dff1970210e5003b55303b110d8a6e10474863c2e645d4"
+    }
+  ]
+}
