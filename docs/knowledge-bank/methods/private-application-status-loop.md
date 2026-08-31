@@ -59,11 +59,18 @@ capabilities but remains read-only. Editing an application, changing personal
 data, replacing an attachment, withdrawing, or sending a communication requires
 separate Jamie authorization and must never be triggered by the monitor.
 
-The provider's label remains literal. For the two August 31 observations,
-`New` normalizes only to `received-awaiting-review`: the City has the
-application, but the surface does not establish that substantive review has
-started. The two email access routes converge on one shared authenticated
-applicant dashboard; they are not independent evidence systems.
+The provider's label remains literal. For two August 31 observations, `New`
+normalizes only to `received-awaiting-review`: the City has those applications,
+but the surface does not establish that substantive review has started. The
+older Senior Product Manager application carries the distinct provider label
+`In Review`, which normalizes to `in-review` without implying an interview,
+shortlist, eligibility decision, or outcome. All three email access routes
+converge on one shared authenticated applicant dashboard; they are not
+independent evidence systems.
+
+A general hiring-program message can provide process context without changing a
+job-specific lifecycle state. Volume, delay, or generic review language remains
+separate from the provider label attached to one employer reference.
 
 The refresh contract is ready, but recurring activation remains a separate
 human gate. A weekday heartbeat would repeatedly enter an authenticated mailbox

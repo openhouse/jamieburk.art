@@ -18,26 +18,39 @@ export function evaluateApplicationStatusMonitor({
   monitorConfig,
   method,
   source,
+  programUpdateSource,
   productApplication,
   operationsApplication,
+  seniorProductApplication,
 }) {
   const config = parseConfig(monitorConfig);
-  const allText = [monitorConfig, method, source, productApplication, operationsApplication].join('\n');
+  const allText = [
+    monitorConfig,
+    method,
+    source,
+    programUpdateSource,
+    productApplication,
+    operationsApplication,
+    seniorProductApplication,
+  ].join('\n');
   const privateLocatorPattern = /https?:\/\/[^\s"']*(?:token|tracking|application-status|login)|sendgrid|codex-remote-attachments|(?:passcode|one-time code)[^\n]{0,20}\b\d{6}\b|gmail\.com\/mail\/u\/\d+\/#/i;
   const silenceInferencePattern = /No new email means|silence (?:means|proves|confirms)|absence of (?:new )?mail (?:means|proves|confirms)/i;
   const independentDashboardPattern = /independent application-only status system/i;
+  const programUpdateInflationPattern = /(?:^|\n)(?:Jamie was selected to advance to an interview|This message changed the provider status to In Review)\./im;
   const apps = config?.applications ?? [];
   const byReference = new Map(apps.map((item) => [item.reference, item]));
 
   const checks = [
     check(
-      'two-application-bindings',
-      apps.length === 2 &&
+      'three-application-bindings',
+      apps.length === 3 &&
         byReference.get('784450')?.applicationId === 'application.nyc-oti.product-manager.784450' &&
         byReference.get('784450')?.opportunityId === 'opportunity.nyc-oti.product-manager.784450' &&
         byReference.get('789810')?.applicationId === 'application.nyc-oti.speed-operations-manager.789810' &&
-        byReference.get('789810')?.opportunityId === 'opportunity.nyc-oti.speed-operations-manager.789810',
-      'Both employer references must bind one application node to one canonical opportunity node.'
+        byReference.get('789810')?.opportunityId === 'opportunity.nyc-oti.speed-operations-manager.789810' &&
+        byReference.get('782366')?.applicationId === 'application.nyc-oti.senior-product-manager.782366' &&
+        byReference.get('782366')?.opportunityId === 'opportunity.nyc-oti.senior-product-manager.782366',
+      'All three employer references must bind one application node to one canonical opportunity node.'
     ),
     check(
       'private-locator-boundary',
@@ -50,14 +63,22 @@ export function evaluateApplicationStatusMonitor({
     ),
     check(
       'literal-provider-state',
-      apps.every((item) => item.providerStatus === 'New' && item.normalizedStatus === 'received-awaiting-review') &&
+      byReference.get('784450')?.providerStatus === 'New' &&
+        byReference.get('784450')?.normalizedStatus === 'received-awaiting-review' &&
+        byReference.get('789810')?.providerStatus === 'New' &&
+        byReference.get('789810')?.normalizedStatus === 'received-awaiting-review' &&
+        byReference.get('782366')?.providerStatus === 'In Review' &&
+        byReference.get('782366')?.normalizedStatus === 'in-review' &&
         /provider_status: New/.test(productApplication) &&
         /normalized_status: received-awaiting-review/.test(productApplication) &&
         /provider_status: New/.test(operationsApplication) &&
         /normalized_status: received-awaiting-review/.test(operationsApplication) &&
+        /provider_status: In Review/.test(seniorProductApplication) &&
+        /normalized_status: in-review/.test(seniorProductApplication) &&
         !/normalized_status: in-review/.test(productApplication + operationsApplication) &&
-        /does not establish that substantive\s+review has begun/i.test(source),
-      'The provider label New normalizes to received-awaiting-review, never inferred in-review.'
+        /Senior Product Manager[\s\S]{0,180}literal provider status `In\s+Review`/i.test(source) &&
+        /does not establish[\s\S]{0,80}interview/i.test(source),
+      'New remains received-awaiting-review while the literal In Review label supports only in-review.'
     ),
     check(
       'runtime-reacquisition-contract',
@@ -78,10 +99,20 @@ export function evaluateApplicationStatusMonitor({
     ),
     check(
       'shared-dashboard-model',
-      /both access routes converged on the same shared applicant\s+dashboard/i.test(source) &&
+      /all three access routes converged on the same shared\s+applicant dashboard/i.test(source) &&
         /not independent evidence/i.test(source) &&
         !independentDashboardPattern.test(source),
       'Application-specific email routes converge on one provider dashboard and are not independent sources.'
+    ),
+    check(
+      'program-update-scope',
+      /program-level process update/i.test(programUpdateSource) &&
+        /very large application volume/i.test(programUpdateSource) &&
+        /did not name employer reference\s+782366/i.test(programUpdateSource) &&
+        /did not change the provider status to `In\s+Review`/i.test(programUpdateSource) &&
+        /no later City or SmartRecruiters message tied\s+specifically/i.test(programUpdateSource) &&
+        !programUpdateInflationPattern.test(programUpdateSource),
+      'The volume update remains general process context and cannot become a job-specific advance or status event.'
     ),
     check(
       'no-silence-inference',
@@ -107,12 +138,13 @@ export function evaluateApplicationStatusMonitor({
     ),
     check(
       'graph-status-source-edges',
-      [productApplication, operationsApplication].every(
+      [productApplication, operationsApplication, seniorProductApplication].every(
         (text) =>
           text.includes('target: source.application.nyc-oti.status-dashboard.2026-08-31') &&
           text.includes('target: method.private-application-status-loop') &&
           /status_locator_state: authenticated-browser-runtime-only/.test(text)
-      ),
+      ) &&
+        /target: source\.application\.nyc-oti\.pit-crew-volume-update\.2026-08-20/.test(seniorProductApplication),
       'Each application node must connect to the bounded status observation and refresh method.'
     ),
   ];
@@ -130,8 +162,10 @@ export function evaluateRepository() {
     monitorConfig: read('data/applications/nyc-oti-status-monitor.json'),
     method: read('docs/knowledge-bank/methods/private-application-status-loop.md'),
     source: read('docs/knowledge-bank/sources/nyc-oti-application-status-dashboard-2026-08-31.md'),
+    programUpdateSource: read('docs/knowledge-bank/sources/nyc-oti-pit-crew-volume-update-2026-08-20.md'),
     productApplication: read('docs/knowledge-bank/applications/nyc-oti-product-manager-784450.md'),
     operationsApplication: read('docs/knowledge-bank/applications/nyc-oti-speed-operations-manager-789810.md'),
+    seniorProductApplication: read('docs/knowledge-bank/applications/nyc-oti-senior-product-manager-782366.md'),
   });
 }
 

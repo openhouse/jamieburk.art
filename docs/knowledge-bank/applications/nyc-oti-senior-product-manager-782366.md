@@ -6,8 +6,8 @@ status: maintained
 visibility: summary-only
 sensitivity: moderate
 created: 2026-08-14
-last_reviewed: 2026-08-14
-review_by: 2026-08-21
+last_reviewed: 2026-08-31
+review_by: 2026-09-14
 canonical_path: docs/knowledge-bank/applications/nyc-oti-senior-product-manager-782366.md
 summary: Jamie-authorized public-safe record of the August 14, 2026 application submission, its governed artifact lineage, retained privacy boundary, and next-stage learning loop.
 application_state: submitted
@@ -15,6 +15,10 @@ submitted_on: "2026-08-14"
 authorization_state: human-completed
 outcome_state: pending
 confirmation_evidence_state: reviewed-not-committed
+provider_status: In Review
+normalized_status: in-review
+status_observed_on: "2026-08-31"
+status_locator_state: authenticated-browser-runtime-only
 resume_path: resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md
 projection:
   status: hold
@@ -27,6 +31,15 @@ relations:
   - type: uses_source
     target: source.jobs.oti.senior-product-manager.782366
     href: ../sources/jobs-oti-senior-product-manager-782366.md
+  - type: uses_source
+    target: source.application.nyc-oti.status-dashboard.2026-08-31
+    href: ../sources/nyc-oti-application-status-dashboard-2026-08-31.md
+  - type: uses_source
+    target: source.application.nyc-oti.pit-crew-volume-update.2026-08-20
+    href: ../sources/nyc-oti-pit-crew-volume-update-2026-08-20.md
+  - type: related_to
+    target: method.private-application-status-loop
+    href: ../methods/private-application-status-loop.md
   - type: related_to
     target: application.wowlist.senior-product-manager-oti-782366
     href: wowlist-senior-product-manager-oti-782366.md
@@ -64,9 +77,26 @@ repository. This record retains only the date-level milestone and public-safe
 artifact lineage Jamie explicitly asked the Wiki to document.
 
 The submission establishes that the application was transmitted successfully.
-It does not establish civil-service eligibility, employer review, an interview,
+The submission alone does not establish civil-service eligibility, employer
+review, an interview,
 an offer, an appointment, another person's endorsement, or future performance
 in the role. The outcome remains pending and employer-controlled.
+
+## Current status and later update
+
+On August 31, the authenticated applicant dashboard labeled this application
+`In Review`. Because that is the employer provider's literal application label,
+the maintained normalization is `in-review`. It establishes an active review
+stage, but not the kind, depth, outcome, decision owner, or timing of that
+review—and not an interview, shortlist, eligibility determination, or advance.
+
+A separate August 20 PIT Crew message reported a very large application volume,
+said the team was reviewing and working to respond, and asked candidates for
+patience. It did not name job ID 782366 or communicate an individualized
+decision. A bounded August 31 search found no later City or SmartRecruiters
+message tied specifically to the role or reference. The program update provides
+process context; the dashboard, not that email, supplies the current job-specific
+status.
 
 ## Application-package lineage
 

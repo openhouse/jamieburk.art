@@ -14,15 +14,18 @@ function repositoryInputs() {
     monitorConfig: read('data/applications/nyc-oti-status-monitor.json'),
     method: read('docs/knowledge-bank/methods/private-application-status-loop.md'),
     source: read('docs/knowledge-bank/sources/nyc-oti-application-status-dashboard-2026-08-31.md'),
+    programUpdateSource: read('docs/knowledge-bank/sources/nyc-oti-pit-crew-volume-update-2026-08-20.md'),
     productApplication: read('docs/knowledge-bank/applications/nyc-oti-product-manager-784450.md'),
     operationsApplication: read('docs/knowledge-bank/applications/nyc-oti-speed-operations-manager-789810.md'),
+    seniorProductApplication: read('docs/knowledge-bank/applications/nyc-oti-senior-product-manager-782366.md'),
   };
 }
 
-test('two OTI applications have refreshable, private-bounded status connections', () => {
+test('three OTI applications have refreshable, private-bounded status connections', () => {
   const result = evaluateRepository();
   assert.equal(result.overall, 'pass', JSON.stringify(result.checks, null, 2));
   assert.equal(result.passedChecks, result.totalChecks);
+  assert.equal(result.checks.find((item) => item.id === 'three-application-bindings')?.pass, true);
 });
 
 test('monitor rejects raw locators, inferred review, and a missing application binding', () => {
@@ -43,12 +46,35 @@ test('monitor rejects raw locators, inferred review, and a missing application b
   });
   const missingBinding = evaluateApplicationStatusMonitor({
     ...base,
-    monitorConfig: base.monitorConfig.replace('"reference": "789810"', '"reference": "missing"'),
+    monitorConfig: base.monitorConfig.replace('"reference": "782366"', '"reference": "missing"'),
   });
 
   assert.equal(rawLocator.checks.find((item) => item.id === 'private-locator-boundary')?.pass, false);
   assert.equal(reviewInflation.checks.find((item) => item.id === 'literal-provider-state')?.pass, false);
-  assert.equal(missingBinding.checks.find((item) => item.id === 'two-application-bindings')?.pass, false);
+  assert.equal(missingBinding.checks.find((item) => item.id === 'three-application-bindings')?.pass, false);
+});
+
+test('monitor keeps the PIT Crew volume update separate from the job-specific review state', () => {
+  const base = repositoryInputs();
+  const reviewDowngrade = evaluateApplicationStatusMonitor({
+    ...base,
+    seniorProductApplication: base.seniorProductApplication.replace(
+      'provider_status: In Review',
+      'provider_status: New'
+    ),
+  });
+  const individualizedUpdate = evaluateApplicationStatusMonitor({
+    ...base,
+    programUpdateSource: `${base.programUpdateSource}\nJamie was selected to advance to an interview.\n`,
+  });
+  const updateOverridesDashboard = evaluateApplicationStatusMonitor({
+    ...base,
+    programUpdateSource: `${base.programUpdateSource}\nThis message changed the provider status to In Review.\n`,
+  });
+
+  assert.equal(reviewDowngrade.checks.find((item) => item.id === 'literal-provider-state')?.pass, false);
+  assert.equal(individualizedUpdate.checks.find((item) => item.id === 'program-update-scope')?.pass, false);
+  assert.equal(updateOverridesDashboard.checks.find((item) => item.id === 'program-update-scope')?.pass, false);
 });
 
 test('monitor treats silence, failed login, and shared-dashboard access as non-events', () => {

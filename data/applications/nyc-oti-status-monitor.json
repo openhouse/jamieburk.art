@@ -36,6 +36,15 @@
       "providerStatus": "New",
       "normalizedStatus": "received-awaiting-review",
       "observedOn": "2026-08-31"
+    },
+    {
+      "applicationId": "application.nyc-oti.senior-product-manager.782366",
+      "opportunityId": "opportunity.nyc-oti.senior-product-manager.782366",
+      "role": "Senior Product Manager",
+      "reference": "782366",
+      "providerStatus": "In Review",
+      "normalizedStatus": "in-review",
+      "observedOn": "2026-08-31"
     }
   ]
 }

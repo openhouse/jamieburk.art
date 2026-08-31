@@ -1,0 +1,53 @@
+{
+  "evalId": "application-status-monitor-v1-third-oti-extension",
+  "runDate": "2026-08-31",
+  "candidateBranch": "work/2026-08-24-A",
+  "objective": "Bind the earlier PIT Crew Senior Product Manager application to its current provider status and later process update without conflating program correspondence with a job-specific lifecycle event.",
+  "baseline": {
+    "records": 498,
+    "semanticEvidenceEdges": 1801,
+    "proseLinks": 571,
+    "knownFailure": "The monitor hard-coded two applications and one provider-label normalization, so it could not represent the third application's In Review label or a scope-limited program update."
+  },
+  "red": {
+    "command": "node --test scripts/knowledge-wiki/application-status-monitor-eval.test.mjs",
+    "result": "fail",
+    "passed": 0,
+    "total": 4,
+    "reason": "The third binding, bounded PIT Crew update source, and program-update scope check did not yet exist."
+  },
+  "boundedChange": [
+    "Bind Senior Product Manager 782366 to the shared authenticated applicant dashboard.",
+    "Preserve the provider's literal In Review label and normalize it only to in-review.",
+    "Add a summary-only August 20 PIT Crew volume-update source with no raw correspondence or applicant data.",
+    "Keep the general volume message separate from the job-specific dashboard state and record a bounded no-later-message search result.",
+    "Generalize the monitor from two homogeneous application states to three heterogeneous states."
+  ],
+  "green": {
+    "deterministicChecks": {
+      "passed": 11,
+      "total": 11
+    },
+    "adversarialTests": {
+      "passed": 4,
+      "total": 4
+    },
+    "graph": {
+      "records": 499,
+      "semanticEvidenceEdges": 1809,
+      "proseLinks": 571,
+      "typeAwareOrphans": 0
+    },
+    "commands": [
+      "npm run evals:application-status-monitor",
+      "npm run test:application-status-monitor",
+      "npm run wiki:graph",
+      "npm run wiki:report",
+      "npm run wiki:check",
+      "npm run knowledge-wiki",
+      "npm run public-safety"
+    ]
+  },
+  "remainingGate": "The proposed weekday heartbeat remains inactive pending explicit approval for recurring authenticated mailbox and hiring-dashboard access plus bounded public pull-request egress.",
+  "result": "keep"
+}

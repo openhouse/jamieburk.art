@@ -5,13 +5,14 @@ kind: opportunity
 status: governed-open
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-20
-review_by: 2026-08-27
+last_reviewed: 2026-08-31
+review_by: 2026-09-14
 canonical_path: docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md
 summary: Public-safe requirement, qualification, and leadership-context map for four live OTI PIT Crew Senior Product Manager positions.
 canonical_url: https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-44507
 source_type: official-employer
 opportunity_status: live
+application_state: submitted
 verified_at: 2026-08-20
 portfolio_routes:
   - /
@@ -237,6 +238,8 @@ Jamie authorized a [public-safe application milestone](../applications/nyc-oti-s
 after submitting on August 14, 2026. The official page now shows the same Job ID
 as reposted on August 17 with an October 16 deadline; that later page state does
 not rewrite the submission milestone. Submission establishes action, not
-civil-service eligibility, employer review, an interview, an offer, or an
-appointment. The private confirmation and later correspondence remain outside
-the repository.
+civil-service eligibility, an interview, an offer, or an appointment. The
+authenticated provider dashboard labeled the application `In Review` on August
+31; the application node preserves that bounded later observation without
+turning it into an outcome. Private confirmation and correspondence remain
+outside the repository.
