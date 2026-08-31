@@ -5,13 +5,13 @@ kind: source
 status: maintained
 visibility: public
 sensitivity: low
-last_reviewed: 2026-08-20
-review_by: 2026-08-27
+last_reviewed: 2026-08-30
+review_by: 2026-09-06
 canonical_path: docs/knowledge-bank/sources/jobs-oti-speed-operations-manager-789810.md
 summary: Official OTI Operations Manager posting for budget, procurement, people, dependency, and delivery operations supporting the SPEED team.
 source_kind: official-job-posting
 url: https://cityjobs.nyc.gov/job/operations-manager-in-brooklyn-jid-46143
-retrieved_at: 2026-08-20
+retrieved_at: 2026-08-30
 relations:
   - type: supports
     target: opportunity.nyc-oti.speed-operations-manager.789810

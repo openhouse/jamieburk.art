@@ -141,3 +141,14 @@ The salary band begins below Jamie's target. The application should establish
 the target range early. The resume should lead with Thick Arts and KC Town Hall
 owner responsibility, then show how that responsibility becomes reliable team
 operations rather than founder heroics.
+
+## Source-aware application route — August 30, 2026
+
+Use the [field-by-field application guide](../../../resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Application-Guide.md)
+for this exact employer job ID. The [Civic Match discovery review](../../../opportunity-sources/civic-match/2026-08-30/Opportunity-Discovery-Review.md)
+preserves the separate discovery, potential connection, and formal submission routes.
+The matching Civic Match card is not yet identity-verified: inspect its destination
+before treating it as this job. Its displayed October 3 closing date differs from
+the employer's October 4 deadline; use the earlier date for action planning.
+Formal qualification eligibility and a salary meeting Jamie's $100,000 floor
+remain unresolved. Saving a listing is not submitting an application.

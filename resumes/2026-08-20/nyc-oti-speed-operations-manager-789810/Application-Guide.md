@@ -1,16 +1,30 @@
-# Application guide: NYC OTI Product Manager — 784450
+# Application guide: NYC OTI Operations Manager — 789810
 
 For Jamie Burkart. Reviewed 2026-08-30. This is a preparation guide, not a submitted application.
 
 ## 1. Open the right application
 
-[Official posting and Apply button](https://cityjobs.nyc.gov/job/product-manager-in-brooklyn-jid-45056). The posting was checked on 2026-08-30 and lists **2026-09-04** as its closing date. Recheck it before submitting. Confirm **Product Manager**, **OTI**, **Brooklyn**, and **Job ID 784450**; similar titles can refer to different openings.
+[Official posting and Apply button](https://cityjobs.nyc.gov/job/operations-manager-in-brooklyn-jid-46143). The posting was checked on 2026-08-30 and lists **2026-10-04** as its closing date. Recheck it before submitting. Confirm **Operations Manager**, **OTI**, **Brooklyn**, and **Job ID 789810**; similar titles can refer to different openings.
+
+### Discovery, personal connections, and the formal application
+
+Civic Match adds candidate discovery, invitations, application tracking, and staff-assisted matching to the employer's formal application route. A personal introduction may be possible; membership does not guarantee an OTI referral, interview, or hiring preference.
+
+The Civic Match Operations Manager card is a provisional match to this opening, not a verified duplicate: its destination has not yet been inspected. Open View & Apply and confirm employer and Job ID 789810 before using this packet. Do not match on title alone.
+
+The supplied Civic Match card displays October 3; the employer posting displays October 4, 2026. Retain both observations and plan around October 3 until reconciled; do not assume a time-zone explanation.
+
+Qualification check: the official title is IT Project Specialist. Confirm which education-and-experience route your history satisfies. The advertised $75,000–$160,000 range does not guarantee your $100,000 minimum.
+
+Use the employer's application system, retaining any legitimate Civic Match referral route. Submit once per employer Job ID. Save the employer confirmation before manually marking the role applied in Civic Match. A saved job or profile approval is not an application.
+
+Optional next step, for Jamie to send: ask Civic Match whether staff can advise on this exact Job ID or offer a relevant introduction. Do not wait for an introduction to meet the application deadline. No outreach or application has been sent by this guide.
 
 ## 2. Download your application files
 
-- [Tailored résumé PDF](./Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.pdf) — download the file from GitHub; do not upload a screenshot or a GitHub page.
-- [Résumé Markdown](./Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.md)
-- [Tailored cover letter](./Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.md)
+- [Tailored résumé PDF](./Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.pdf) — download the file from GitHub; do not upload a screenshot or a GitHub page.
+- [Résumé Markdown](./Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.md)
+- [Tailored cover letter](./Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Operations-Manager-789810.md)
 
 Upload the tailored résumé PDF alone in **Resume**. Do not append the cover letter: paste its body into **Message to the Hiring Team** below. No separate cover-letter upload is visible in the supplied screenshots, and the posting does not request a combined document.
 
@@ -87,9 +101,9 @@ New York, NY / Remote
 **Description**
 
 ```text
-- Lead end-to-end web product, design, and engineering engagements, turning ambiguous stakeholder needs into product direction, information architecture, requirements, sequenced releases, acceptance criteria, testing, launch plans, adoption materials, and handoff documentation.
+- Lead end-to-end web product, design, and engineering engagements, turning ambiguous stakeholder needs into owned work, sequenced plans, resource decisions, testing, launch readiness, maintenance workflows, and handoff documentation.
 - Led e-commerce, analytics, content, marketing, and operations for Harry J. Epstein Company, contributing to 2x revenue growth while helping an 80+ year-old industrial business modernize without losing its trusted voice.
-- Build maintainable publishing systems, campaign hubs, resource libraries, data workflows, and web infrastructure; preserve product briefs, decisions, reusable patterns, and post-launch learning so teams can continue the work.
+- Build maintainable publishing systems, campaign hubs, resource libraries, data workflows, and web infrastructure; preserve briefs, decisions, reusable patterns, and post-launch learning so teams can continue the work.
 ```
 
 - **From:** 2009 — confirm the actual month (and day only if requested) from your records.
@@ -125,7 +139,7 @@ New York, NY
 ```text
 - Help turn stakeholder listening, public testimony, and coalition priorities into buildable plans, campaign websites, public forums, policy communications, calls to action, and sustained government-facing follow-through.
 - Built and stewarded 30+ pages of shared campaign memory for a 2026 Commercial Rent Stabilization collaboration, connecting running minutes, decision records, action items, legal and policy questions, media assets, public-data framing, and city/state strategy lanes.
-- Implement and maintain public-facing campaign systems; facilitate challenging meetings; brief and work directly with elected officials and staff; and represent the work in public testimony, presentations, and press while preserving collective credit and sensitive boundaries.
+- Maintain shared status, decisions, owners, risks, and next actions; facilitate challenging meetings; brief elected officials and staff; and represent the work publicly while preserving collective credit and sensitive boundaries.
 ```
 
 - **From:** 2017 — confirm the actual month (and day only if requested) from your records.
@@ -303,7 +317,7 @@ https://jamieburk.art/
 
 ## 7. Resume upload
 
-Choose **Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.pdf** in the required **Resume** field. Wait for the filename/upload confirmation. Reopen the selected PDF and verify **Product Manager — 784450**, rather than relying on a similar filename from another application.
+Choose **Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.pdf** in the required **Resume** field. Wait for the filename/upload confirmation. Reopen the selected PDF and verify **Operations Manager — 789810**, rather than relying on a similar filename from another application.
 
 ## 8. Message to the Hiring Team — copy and paste
 
@@ -312,13 +326,13 @@ This is the existing tailored cover-letter body, without its contact header. No 
 ```text
 Dear NYC Office of Technology and Innovation Hiring Team,
 
-When I built CallNYC, the governing question was small enough to be useful: what would help a New Yorker understand an issue and take one clearer next step? The raw material was constituent-services data. The product work was to decide what belonged on an issue page, how the information should be organized, what uncertainty had to remain visible, and where the first version should stop. I carried the independent civic prototype from problem definition and information architecture through implementation and public release, while making clear that it was not an official City service.
+With Tired of Tires, a discarded tire was never only a disposal problem. For a resident, it could be an expense, a hazard, or one more sign that the conditions outside the front door did not matter. The recurring free service connected print and web outreach, form and phone intake, scheduled field collection, volunteer participation, public reporting, and a City recycling handoff. I helped deliver the pickup operations and co-built the structures around them. What made the service usable was not one heroic collection day; it was a dependable chain of people, information, equipment, dates, and next actions.
 
-That boundary is part of why the Product Manager role interests me. Public products need discovery, roadmaps, requirements, user stories, acceptance criteria, KPIs, and launch plans; they also need judgment about authority, trust, and what evidence can honestly support. Across Thick Arts, WOW List, NYC Artist Coalition, FairRentNYC, and KC Town Hall, I have synthesized stakeholder listening, public data, analytics, operational constraints, and technical realities into sequenced decisions. I work comfortably with designers and engineers because I have also built and maintained the systems, supported users, tested releases, and stayed for what happened after launch.
+That is the kind of operating problem I would be glad to take on as SPEED Operations Manager. Across KC Town Hall, Thick Arts, WOW List, NYC Artist Coalition, and FairRentNYC, I have translated ambiguous incoming needs into owned work; coordinated vendors, collaborators, technical systems, public-benefit requirements, and government-facing dependencies; and maintained the status, decisions, risks, and documentation that let other people act. KC Town Hall joined municipal compliance and vendor coordination to a $490,539 public funding request. Thick Arts joined product delivery to the practical operations of an enduring small business. FairRentNYC’s shared campaign memory gives a distributed coalition one place to recover decisions, owners, and unresolved questions.
 
-My work is digital, but it does not stop at the screen. Tired of Tires connected outreach and intake to scheduled collection and a City recycling handoff. WOW List replaced a complex event form with one collaboratively editable text field, then joined that interface to onboarding, support, instrumentation, and production operations. The principle is the same in each case: a feature is only as useful as the next action it makes possible.
+The decisive point for me is this: operational rigor is not paperwork around the work. It is the means by which budgets, procurement, legal and cyber review, staffing, product dependencies, and team health become legible enough to manage honestly. My role is to establish only the structure the team needs, surface the blocked decision early, and remove process when its cost exceeds its value.
 
-I would welcome a structured product exercise grounded in one resident-facing service: define the user problem, identify what must be learned, set a version-one boundary, write acceptance criteria, choose an outcome measure, and name the evidence that should determine what happens next. The durable result should be not only a launched product, but a program and agency team better able to learn from it and carry it forward.
+I would welcome a structured conversation about how SPEED receives requests, allocates resources, tracks financial and delivery health, and learns across projects. A strong operating system should leave the team less dependent on any one person and more able to keep its commitments to the New Yorkers waiting on the other side of a permit.
 
 Warmly,
 

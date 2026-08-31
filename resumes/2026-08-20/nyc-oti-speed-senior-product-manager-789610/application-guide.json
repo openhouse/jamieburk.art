@@ -1,0 +1,105 @@
+{
+  "jobId": "789610",
+  "role": "Senior Product Manager",
+  "reviewedOn": "2026-08-30",
+  "postingUrl": "https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-46148",
+  "deadline": "2026-10-04",
+  "guide": "Application-Guide.md",
+  "expectedExperienceCount": 5,
+  "sources": {
+    "resume": {
+      "path": "Jamie-Burkart-Resume-NYC-OTI-SPEED-Senior-Product-Manager-789610.md",
+      "sha256": "e98fba6217ea7ede5fb587188e6e0b4796ec59a9f3492696c2561dd76c6cfa1d"
+    },
+    "letter": {
+      "path": "Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Senior-Product-Manager-789610.md",
+      "sha256": "88d384cf6b68ddb1d7ab781f7212e6a85759c93b2d6cb17131859883b5cb71ef"
+    },
+    "pdf": {
+      "path": "Jamie-Burkart-Resume-NYC-OTI-SPEED-Senior-Product-Manager-789610.pdf",
+      "sha256": "4476146f353747e79c798bc598c20db57bd49bac5b9d5f9e341442a9eaf0e86d"
+    }
+  },
+  "requiredFieldIds": [
+    "first-name",
+    "last-name",
+    "email",
+    "confirm-email",
+    "city",
+    "phone-country",
+    "phone-number",
+    "linkedin",
+    "facebook",
+    "x",
+    "website"
+  ],
+  "fields": [
+    {
+      "id": "first-name",
+      "label": "First name *",
+      "value": "Jamie",
+      "matchResume": true
+    },
+    {
+      "id": "last-name",
+      "label": "Last name *",
+      "value": "Burkart",
+      "matchResume": true
+    },
+    {
+      "id": "email",
+      "label": "Email *",
+      "value": null,
+      "instruction": "Copy the email from the contact line of the linked tailored résumé. It is not duplicated in this tracked guide."
+    },
+    {
+      "id": "confirm-email",
+      "label": "Confirm your email *",
+      "value": null,
+      "instruction": "Enter exactly the same email as above."
+    },
+    {
+      "id": "city",
+      "label": "City",
+      "value": "Brooklyn, NY",
+      "matchResume": true
+    },
+    {
+      "id": "phone-country",
+      "label": "Phone number * — country code",
+      "value": "+1",
+      "instruction": "Select United States (+1)."
+    },
+    {
+      "id": "phone-number",
+      "label": "Phone number * — local number",
+      "value": null,
+      "instruction": "Copy the phone number from the contact line of the linked tailored résumé, without repeating the +1 country code."
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "value": "https://www.linkedin.com/in/jamie-burkart/",
+      "matchResume": true
+    },
+    {
+      "id": "facebook",
+      "label": "Facebook",
+      "value": null,
+      "instruction": "Leave blank (optional)."
+    },
+    {
+      "id": "x",
+      "label": "X (fka Twitter)",
+      "value": null,
+      "instruction": "Leave blank (optional)."
+    },
+    {
+      "id": "website",
+      "label": "Website",
+      "value": "https://jamieburk.art/",
+      "matchResume": true
+    }
+  ],
+  "sourceContext": "Civic Match adds candidate discovery, invitations, application tracking, and staff-assisted matching to the employer's formal application route. A personal introduction may be possible; membership does not guarantee an OTI referral, interview, or hiring preference.\n\nThe Civic Match Senior Product Manager card is a provisional match to this opening, not a verified duplicate: its destination has not yet been inspected. Open View & Apply and confirm employer and Job ID 789610 before using this packet. Do not match on title alone.\n\nThe supplied Civic Match card displays October 3; the employer posting displays October 4, 2026. Retain both observations and plan around October 3 until reconciled; do not assume a time-zone explanation.\n\nQualification check: the official title is Senior IT Architect. Its architecture/infrastructure experience requirements need careful comparison with your history; product-management experience alone does not establish eligibility. This is not the earlier PIT Crew application (782366) or Product Manager 784450.\n\nUse the employer's application system, retaining any legitimate Civic Match referral route. Submit once per employer Job ID. Save the employer confirmation before manually marking the role applied in Civic Match. A saved job or profile approval is not an application.\n\nOptional next step, for Jamie to send: ask Civic Match whether staff can advise on this exact Job ID or offer a relevant introduction. Do not wait for an introduction to meet the application deadline. No outreach or application has been sent by this guide."
+}

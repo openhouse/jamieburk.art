@@ -24,6 +24,16 @@ function fixture() {
 }
 const check = ({ config, sources, guide }) => evaluateGuide(config, sources, guide);
 
+test('additional roles render their own title and source-aware route, not the original product-manager identity', () => {
+  const f = fixture();
+  f.config.role = 'Operations Manager';
+  f.config.sourceContext = 'Civic Match is a discovery route. Confirm the employer Job ID before applying.';
+  const guide = renderGuide(f.config, f.sources);
+  assert.match(guide, /Civic Match is a discovery route/);
+  assert.doesNotMatch(guide, /it is the Product Manager version/);
+  assert.match(guide, /verify.*Operations Manager.*784450/);
+});
+
 test('complete exact-source guide passes without LLM calls', () => {
   assert.deepEqual(check(fixture()), []);
 });

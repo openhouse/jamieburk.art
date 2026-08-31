@@ -1,16 +1,30 @@
-# Application guide: NYC OTI Product Manager — 784450
+# Application guide: NYC OTI Senior Product Manager — 789610
 
 For Jamie Burkart. Reviewed 2026-08-30. This is a preparation guide, not a submitted application.
 
 ## 1. Open the right application
 
-[Official posting and Apply button](https://cityjobs.nyc.gov/job/product-manager-in-brooklyn-jid-45056). The posting was checked on 2026-08-30 and lists **2026-09-04** as its closing date. Recheck it before submitting. Confirm **Product Manager**, **OTI**, **Brooklyn**, and **Job ID 784450**; similar titles can refer to different openings.
+[Official posting and Apply button](https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-46148). The posting was checked on 2026-08-30 and lists **2026-10-04** as its closing date. Recheck it before submitting. Confirm **Senior Product Manager**, **OTI**, **Brooklyn**, and **Job ID 789610**; similar titles can refer to different openings.
+
+### Discovery, personal connections, and the formal application
+
+Civic Match adds candidate discovery, invitations, application tracking, and staff-assisted matching to the employer's formal application route. A personal introduction may be possible; membership does not guarantee an OTI referral, interview, or hiring preference.
+
+The Civic Match Senior Product Manager card is a provisional match to this opening, not a verified duplicate: its destination has not yet been inspected. Open View & Apply and confirm employer and Job ID 789610 before using this packet. Do not match on title alone.
+
+The supplied Civic Match card displays October 3; the employer posting displays October 4, 2026. Retain both observations and plan around October 3 until reconciled; do not assume a time-zone explanation.
+
+Qualification check: the official title is Senior IT Architect. Its architecture/infrastructure experience requirements need careful comparison with your history; product-management experience alone does not establish eligibility. This is not the earlier PIT Crew application (782366) or Product Manager 784450.
+
+Use the employer's application system, retaining any legitimate Civic Match referral route. Submit once per employer Job ID. Save the employer confirmation before manually marking the role applied in Civic Match. A saved job or profile approval is not an application.
+
+Optional next step, for Jamie to send: ask Civic Match whether staff can advise on this exact Job ID or offer a relevant introduction. Do not wait for an introduction to meet the application deadline. No outreach or application has been sent by this guide.
 
 ## 2. Download your application files
 
-- [Tailored résumé PDF](./Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.pdf) — download the file from GitHub; do not upload a screenshot or a GitHub page.
-- [Résumé Markdown](./Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.md)
-- [Tailored cover letter](./Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.md)
+- [Tailored résumé PDF](./Jamie-Burkart-Resume-NYC-OTI-SPEED-Senior-Product-Manager-789610.pdf) — download the file from GitHub; do not upload a screenshot or a GitHub page.
+- [Résumé Markdown](./Jamie-Burkart-Resume-NYC-OTI-SPEED-Senior-Product-Manager-789610.md)
+- [Tailored cover letter](./Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Senior-Product-Manager-789610.md)
 
 Upload the tailored résumé PDF alone in **Resume**. Do not append the cover letter: paste its body into **Message to the Hiring Team** below. No separate cover-letter upload is visible in the supplied screenshots, and the posting does not request a combined document.
 
@@ -87,7 +101,7 @@ New York, NY / Remote
 **Description**
 
 ```text
-- Lead end-to-end web product, design, and engineering engagements, turning ambiguous stakeholder needs into product direction, information architecture, requirements, sequenced releases, acceptance criteria, testing, launch plans, adoption materials, and handoff documentation.
+- Lead end-to-end web product, design, and engineering engagements, turning ambiguous stakeholder needs into business cases, product direction, information architecture, technical scope, sequenced releases, testing, launch plans, adoption materials, and handoff documentation.
 - Led e-commerce, analytics, content, marketing, and operations for Harry J. Epstein Company, contributing to 2x revenue growth while helping an 80+ year-old industrial business modernize without losing its trusted voice.
 - Build maintainable publishing systems, campaign hubs, resource libraries, data workflows, and web infrastructure; preserve product briefs, decisions, reusable patterns, and post-launch learning so teams can continue the work.
 ```
@@ -303,7 +317,7 @@ https://jamieburk.art/
 
 ## 7. Resume upload
 
-Choose **Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.pdf** in the required **Resume** field. Wait for the filename/upload confirmation. Reopen the selected PDF and verify **Product Manager — 784450**, rather than relying on a similar filename from another application.
+Choose **Jamie-Burkart-Resume-NYC-OTI-SPEED-Senior-Product-Manager-789610.pdf** in the required **Resume** field. Wait for the filename/upload confirmation. Reopen the selected PDF and verify **Senior Product Manager — 789610**, rather than relying on a similar filename from another application.
 
 ## 8. Message to the Hiring Team — copy and paste
 
@@ -312,13 +326,15 @@ This is the existing tailored cover-letter body, without its contact header. No 
 ```text
 Dear NYC Office of Technology and Innovation Hiring Team,
 
-When I built CallNYC, the governing question was small enough to be useful: what would help a New Yorker understand an issue and take one clearer next step? The raw material was constituent-services data. The product work was to decide what belonged on an issue page, how the information should be organized, what uncertainty had to remain visible, and where the first version should stop. I carried the independent civic prototype from problem definition and information architecture through implementation and public release, while making clear that it was not an official City service.
+At KC Town Hall, a building idea could not remain an image of a possible future. It had to become a sequence that residents, vendors, City reviewers, and future occupants could understand and act on. Co-leading the adaptive reuse meant connecting participatory planning and public-benefit documentation to technical scope, vendor coordination, municipal compliance, and a public funding request. The visible building was held up by a less visible system of requirements, dependencies, decisions, and handoffs.
 
-That boundary is part of why the Product Manager role interests me. Public products need discovery, roadmaps, requirements, user stories, acceptance criteria, KPIs, and launch plans; they also need judgment about authority, trust, and what evidence can honestly support. Across Thick Arts, WOW List, NYC Artist Coalition, FairRentNYC, and KC Town Hall, I have synthesized stakeholder listening, public data, analytics, operational constraints, and technical realities into sequenced decisions. I work comfortably with designers and engineers because I have also built and maintained the systems, supported users, tested releases, and stayed for what happened after launch.
+That is what draws me to the SPEED Senior Product Manager role. Permitting is not only a form or workflow; it is a relationship among people trying to build, public servants protecting shared standards, agencies holding different parts of the truth, and technical systems carrying decisions across time. A useful product roadmap has to diagnose the root constraint, distinguish policy from process and interface, establish a credible business case, and make tradeoffs plain enough to influence people whose authority does not sit in one room.
 
-My work is digital, but it does not stop at the screen. Tired of Tires connected outreach and intake to scheduled collection and a City recycling handoff. WOW List replaced a complex event form with one collaboratively editable text field, then joined that interface to onboarding, support, instrumentation, and production operations. The principle is the same in each case: a feature is only as useful as the next action it makes possible.
+Across Thick Arts, CallNYC, WOW List, NYC Artist Coalition, and FairRentNYC, I have taken ambiguous public-facing work from discovery and systems analysis through information architecture, requirements, prioritization, implementation, launch, and learning. I have built the software, facilitated contested conversations, briefed elected officials and staff, supported users, and maintained shared decision records. I know the difference between participating in a collective outcome and claiming authority for it; that distinction makes product leadership more trustworthy, not less decisive.
 
-I would welcome a structured product exercise grounded in one resident-facing service: define the user problem, identify what must be learned, set a version-one boundary, write acceptance criteria, choose an outcome measure, and name the evidence that should determine what happens next. The durable result should be not only a launched product, but a program and agency team better able to learn from it and carry it forward.
+The central lesson is simple: speed without legibility moves uncertainty downstream. I would want SPEED’s products to shorten the resident and applicant journey by making requirements, status, ownership, and next actions clearer while preserving the reasons public safeguards exist.
+
+I would welcome a structured exercise around one permitting bottleneck: map the actors and systems, test the root cause, define a version-one boundary and KPIs, identify the hardest dependency, and describe how the product team and agency partners would learn after launch. The durable possibility is a City process that becomes easier to navigate and an agency network better able to improve it together.
 
 Warmly,
 

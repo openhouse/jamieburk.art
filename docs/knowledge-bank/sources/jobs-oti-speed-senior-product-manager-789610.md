@@ -5,13 +5,13 @@ kind: source
 status: maintained
 visibility: public
 sensitivity: low
-last_reviewed: 2026-08-20
-review_by: 2026-08-27
+last_reviewed: 2026-08-30
+review_by: 2026-09-06
 canonical_path: docs/knowledge-bank/sources/jobs-oti-speed-senior-product-manager-789610.md
 summary: Official OTI Senior Product Manager posting for digital products intended to shorten new-construction permitting through the SPEED program.
 source_kind: official-job-posting
 url: https://cityjobs.nyc.gov/job/senior-product-manager-in-brooklyn-jid-46148
-retrieved_at: 2026-08-20
+retrieved_at: 2026-08-30
 relations:
   - type: supports
     target: opportunity.nyc-oti.speed-senior-product-manager.789610
