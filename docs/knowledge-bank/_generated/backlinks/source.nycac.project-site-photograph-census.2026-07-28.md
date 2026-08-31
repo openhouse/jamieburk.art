@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to NYC Artist Coalition project-site photograph census
 
-**Source commit:** `ff210bc311283b69fa9e5774548992d58571ebef`
-**Generation time:** 2026-08-29T22:14:14-04:00
-**Source fingerprint:** `b2b514b9abf238fa282f99ecad92685aeb5b5eba46e79d4d0dd6da8beaf69291`
+**Source commit:** `76940404b243ff9127e6aa76d266be539341088a`
+**Generation time:** 2026-08-31T17:39:42-04:00
+**Source fingerprint:** `df3250152a7326eceda4e82fc000df015c2e3bf6209ad5eec2aa49c09a7b3ae9`
 
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `uses_source` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [hur5tftl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj.md) - `uses_source` (frontmatter)
