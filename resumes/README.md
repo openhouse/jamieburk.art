@@ -140,6 +140,82 @@ npm run evals:cover-letters
 npm run test:cover-letters
 ```
 
+## Signed cover-letter PDF siblings
+
+Every letter in `evals/cover-letters/hiring-reader-portfolio.json` also requires
+a same-basename `.pdf` and `.pdf.review.json` beside its Markdown. New maintained
+opportunities inherit this requirement automatically; there is no second list
+of PDF targets to keep synchronized. The Markdown remains the content source
+of truth. The résumé and cover letter remain separate upload files.
+
+The house-style policy is `evals/cover-letters/pdf-policy.json`. It records only
+the typography and public-safe workflow facts from Jamie's read-only letter
+specimen. The specimen's private URL, title, body, and other protected locators
+do not belong in this repository. Its observed type palette is Palatino
+Linotype for the name, Oswald for accents, and Karla for body text. Preserve
+the actual native document formatting, including paragraph overrides, rather
+than reconstructing the layout from those few recorded tokens.
+
+**Current state (2026-08-31): pending signature image.** Inspection of the native
+document objects and exported PDF found a typed closing but no signature image.
+No signed cover-letter PDFs or passing visual receipts have been generated.
+The readiness gate must fail until the actual image and reviewed exports exist.
+This implementation adds the contract and checks; it is not an unattended
+Google Docs exporter. Do not point application guides at missing PDF files.
+
+### Native Google Docs rendering workflow
+
+1. Read the current opportunity-specific Markdown. Reuse its approved wording;
+   a layout operation must not introduce new claims or rewrite the letter.
+2. Use a private native Google Docs copy of the Jamie-authorized specimen.
+   Keep the original read-only and verify it is unchanged after the work.
+   Before sharing or exporting the copy, replace all specimen content and
+   inspect its headers, footers, links, tabs, comments, and embedded objects
+   for anything unrelated to this application. Keep the working copy private.
+3. Apply the native house style to the letter's header, date, exact role,
+   paragraphs, closing, and typed name. Keep a single US Letter page; solve
+   overflow through layout review, not silently truncated or rewritten prose.
+4. Insert Jamie's actual authorized signature image between the closing and
+   typed name. Do not generate handwriting, substitute another signature, or
+   crop the typed closing and describe it as signed. Keep the standalone image
+   in private custody; only the authorized finished letter is a publication
+   artifact. Record its SHA-256 in the policy once the exact image is available.
+5. Export the working copy through Google Docs' native PDF export. Save the
+   PDF beside the Markdown with the same basename, below the 10 MB upload limit.
+   Use the separate cover-letter attachment field when the application offers
+   one. Do not append the letter to the résumé by default.
+6. Rasterize and visually inspect every page. Compare the content with the
+   Markdown, the typography and layout with the specimen, and the rendered
+   signature with the authorized image. Check hyperlinks, clipping, readable
+   spacing, page count, and absence of specimen content. Extract PDF text as a
+   second content/privacy check; extracted text alone is not visual inspection.
+7. Write the strict redacted receipt only after those checks. Bind the exact
+   Markdown bytes, PDF bytes, `JSON.stringify(policy.style)`, and signature
+   image bytes to their SHA-256 hashes. The receipt schema is enforced in
+   `scripts/cover-letters/evaluate-cover-letter-pdfs.mjs`; it allows no free-form
+   private notes, source URLs, document IDs, paths, or embedded image bytes.
+   A new Markdown, PDF, style, or signature invalidates the old receipt.
+8. Run the PDF gate, then the existing content, opportunity-lifecycle, and
+   named-reader checks. Historical benchmarks retain their visible
+   `Historical benchmark — do not submit` warning and are never applications.
+   PDF readiness does not authorize submission or establish a hiring decision.
+
+```sh
+npm run evals:cover-letter-pdfs
+npm run evals:cover-letter-pdfs -- --json
+npm run test:cover-letters
+npm run evals:cover-letters
+```
+
+The normal cover-letter evaluator runs this deterministic PDF gate before the
+model-review gate, and therefore fails while signed siblings are missing.
+The structural PDF preflight is deliberately limited to native exports. Finding
+an image resource does not identify a signature; native-export provenance and
+signature identity require the exact-artifact inspection receipt. The test
+fixtures exercise that contract, not a substitute PDF renderer or a claim that
+an actual candidate has been visually approved. No model call, signature,
+account write, or submission is performed by this evaluator.
+
 ## Field-by-field application guides
 
 Maintain `Application-Guide.md` beside an opportunity's tailored résumé and

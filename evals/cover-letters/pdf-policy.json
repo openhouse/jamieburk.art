@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "native-google-docs-signed-cover-letter-v1",
+  "specimen": {
+    "reference": "user-authorized-letter-house-style",
+    "accessMode": "read-only",
+    "reviewedOn": "2026-08-31",
+    "inspection": "native-document-objects-and-native-pdf-closing",
+    "privateLocatorCommitted": false,
+    "sourceContentCopiedIntoRepository": false,
+    "signatureImageFound": false
+  },
+  "style": {
+    "nameFont": "Palatino Linotype",
+    "nameSizePt": 21,
+    "accentFont": "Oswald",
+    "accentSizePt": 11.5,
+    "accentColor": "#458e8b",
+    "bodyFont": "Karla",
+    "bodySizePt": 10,
+    "bodyColor": "#111111",
+    "lineSpacingPercent": 105,
+    "paragraphSpaceAfterPt": 2,
+    "pageSizePt": [612, 792],
+    "layoutRule": "Preserve the native specimen copy's actual paragraph and page formatting; inspect the exported result. Do not rebuild it in another renderer.",
+    "signatureRule": "Insert the actual Jamie-authorized signature image between the closing and typed name. Never synthesize handwriting or crop a typed name and call it a signature."
+  },
+  "signature": {
+    "status": "missing",
+    "approvedForCoverLetters": false,
+    "imageSha256": null
+  },
+  "readiness": "blocked-awaiting-signature-image",
+  "scope": "Every maintained cover letter derives PDF and review siblings from the canonical cover-letter portfolio, including historical do-not-submit benchmarks.",
+  "limitations": "This policy and deterministic readiness gate do not generate, sign, upload, submit, or certify a PDF. No signed outputs have been accepted yet."
+}
