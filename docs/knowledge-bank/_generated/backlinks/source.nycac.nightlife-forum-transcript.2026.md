@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to NYC nightlife forum corrected working transcript, 2026
 
-**Source commit:** `5b763875ba66bbe1993203d995e3ce65261217f4`
-**Generation time:** 2026-08-31T19:34:11-04:00
-**Source fingerprint:** `2aa1f4b02e35fdec8a22697eef1e2bec76b37043e2ae53ca690eac3c14659e72`
+**Source commit:** `29745b537e57bab69f5ddc6207c3ab6e8fbd8e38`
+**Generation time:** 2026-08-31T19:49:24-04:00
+**Source fingerprint:** `58618688c7258813c8659a6ae82556ff86cc9ce4dfa32b7f274081ec2ba8270c`
 
 - [Office of Nightlife town halls](../../projects/office-of-nightlife-town-halls.md) - `uses_source` (frontmatter)
 - [Foundational Wiki page source return, July 19, 2026](../../research-runs/foundational-source-return-2026-07-19.md) - `prose_link` (markdown)

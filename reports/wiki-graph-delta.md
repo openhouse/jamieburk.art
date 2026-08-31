@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `5b763875ba66bbe1993203d995e3ce65261217f4`
-**Generation time:** 2026-08-31T19:34:11-04:00
-**Source fingerprint:** `2aa1f4b02e35fdec8a22697eef1e2bec76b37043e2ae53ca690eac3c14659e72`
+**Source commit:** `29745b537e57bab69f5ddc6207c3ab6e8fbd8e38`
+**Generation time:** 2026-08-31T19:49:24-04:00
+**Source fingerprint:** `58618688c7258813c8659a6ae82556ff86cc9ce4dfa32b7f274081ec2ba8270c`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 53
+- Nodes added: 54
 - Nodes removed: 0
-- Edges added: 211
+- Edges added: 219
 - Edges removed: 8
 - New type-aware orphans: 0
 - Current rights-review records: 185
@@ -50,6 +50,7 @@ Compared with the graph artifact on `origin/develop`.
 - `research.nyc-oti-product-management-ranking.2026-08-20`
 - `research.nycac.dcla-listening-session.2026-08-29`
 - `source.application.nyc-oti.confirmations.2026-08-31`
+- `source.application.nyc-oti.pit-crew-volume-update.2026-08-20`
 - `source.application.nyc-oti.product-manager.784450.2026-08-31`
 - `source.application.nyc-oti.status-dashboard.2026-08-31`
 - `source.betanyc.civic-tech-newsletter`

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-31T19:34:11-04:00",
-  "sourceCommit": "5b763875ba66bbe1993203d995e3ce65261217f4",
-  "sourceFingerprint": "2aa1f4b02e35fdec8a22697eef1e2bec76b37043e2ae53ca690eac3c14659e72",
+  "generatedAt": "2026-08-31T19:49:24-04:00",
+  "sourceCommit": "29745b537e57bab69f5ddc6207c3ab6e8fbd8e38",
+  "sourceFingerprint": "58618688c7258813c8659a6ae82556ff86cc9ce4dfa32b7f274081ec2ba8270c",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -41,8 +41,8 @@
       "sensitivity": "moderate",
       "summary": "Jamie-authorized public-safe record of the August 14, 2026 application submission, its governed artifact lineage, retained privacy boundary, and next-stage learning loop.",
       "aliases": [],
-      "lastReviewed": "2026-08-14",
-      "reviewBy": "2026-08-21"
+      "lastReviewed": "2026-08-31",
+      "reviewBy": "2026-09-14"
     },
     {
       "id": "application.nyc-oti.speed-operations-manager.789810",
@@ -4038,8 +4038,8 @@
       "sensitivity": "low",
       "summary": "Public-safe requirement, qualification, and leadership-context map for four live OTI PIT Crew Senior Product Manager positions.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
-      "reviewBy": "2026-08-27"
+      "lastReviewed": "2026-08-31",
+      "reviewBy": "2026-09-14"
     },
     {
       "id": "opportunity.nyc-oti.speed-operations-manager.789810",
@@ -5061,6 +5061,19 @@
       "reviewBy": "2026-09-14"
     },
     {
+      "id": "source.application.nyc-oti.pit-crew-volume-update.2026-08-20",
+      "path": "docs/knowledge-bank/sources/nyc-oti-pit-crew-volume-update-2026-08-20.md",
+      "title": "NYC OTI PIT Crew application-volume update - August 20, 2026",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "summary-only",
+      "sensitivity": "high",
+      "summary": "Bounded summary of a program-level PIT Crew applicant update about high volume, ongoing review, and response delay, without correspondence text, applicant data, or an individualized outcome.",
+      "aliases": [],
+      "lastReviewed": "2026-08-31",
+      "reviewBy": "2026-09-14"
+    },
+    {
       "id": "source.application.nyc-oti.product-manager.784450.2026-08-31",
       "path": "docs/knowledge-bank/sources/nyc-oti-product-manager-784450-application-draft-2026-08-31.md",
       "title": "NYC OTI Product Manager 784450 application-draft review",
@@ -5081,7 +5094,7 @@
       "status": "maintained",
       "visibility": "summary-only",
       "sensitivity": "high",
-      "summary": "Bounded authenticated-browser observation of two OTI application labels and shared applicant-dashboard affordances, excluding private URLs, passcodes, correspondence, and applicant data.",
+      "summary": "Bounded authenticated-browser observation of three OTI application labels and shared applicant-dashboard affordances, excluding private URLs, passcodes, correspondence, and applicant data.",
       "aliases": [],
       "lastReviewed": "2026-08-31",
       "reviewBy": "2026-09-14"
@@ -6615,6 +6628,14 @@
     {
       "from": "application.nyc-oti.senior-product-manager.782366",
       "type": "related_to",
+      "to": "method.private-application-status-loop",
+      "source": "frontmatter",
+      "href": "../methods/private-application-status-loop.md",
+      "context": null
+    },
+    {
+      "from": "application.nyc-oti.senior-product-manager.782366",
+      "type": "related_to",
       "to": "opportunity.nyc-oti.senior-product-manager.782366",
       "source": "frontmatter",
       "href": "../opportunities/oti-senior-product-manager-782366.md",
@@ -6627,6 +6648,22 @@
       "source": "frontmatter",
       "href": "../projects/tired-of-tires-resident-service.md",
       "context": "Bounded resident-service evidence included in the tailored resume."
+    },
+    {
+      "from": "application.nyc-oti.senior-product-manager.782366",
+      "type": "uses_source",
+      "to": "source.application.nyc-oti.pit-crew-volume-update.2026-08-20",
+      "source": "frontmatter",
+      "href": "../sources/nyc-oti-pit-crew-volume-update-2026-08-20.md",
+      "context": null
+    },
+    {
+      "from": "application.nyc-oti.senior-product-manager.782366",
+      "type": "uses_source",
+      "to": "source.application.nyc-oti.status-dashboard.2026-08-31",
+      "source": "frontmatter",
+      "href": "../sources/nyc-oti-application-status-dashboard-2026-08-31.md",
+      "context": null
     },
     {
       "from": "application.nyc-oti.senior-product-manager.782366",
@@ -19518,6 +19555,30 @@
       "context": null
     },
     {
+      "from": "source.application.nyc-oti.pit-crew-volume-update.2026-08-20",
+      "type": "related_to",
+      "to": "application.nyc-oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../applications/nyc-oti-senior-product-manager-782366.md",
+      "context": null
+    },
+    {
+      "from": "source.application.nyc-oti.pit-crew-volume-update.2026-08-20",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-senior-product-manager-782366.md",
+      "context": null
+    },
+    {
+      "from": "source.application.nyc-oti.pit-crew-volume-update.2026-08-20",
+      "type": "related_to",
+      "to": "source.application.nyc-oti.status-dashboard.2026-08-31",
+      "source": "frontmatter",
+      "href": "nyc-oti-application-status-dashboard-2026-08-31.md",
+      "context": null
+    },
+    {
       "from": "source.application.nyc-oti.product-manager.784450.2026-08-31",
       "type": "related_to",
       "to": "application.nyc-oti.product-manager.784450.draft",
@@ -19544,6 +19605,14 @@
     {
       "from": "source.application.nyc-oti.status-dashboard.2026-08-31",
       "type": "related_to",
+      "to": "application.nyc-oti.senior-product-manager.782366",
+      "source": "frontmatter",
+      "href": "../applications/nyc-oti-senior-product-manager-782366.md",
+      "context": null
+    },
+    {
+      "from": "source.application.nyc-oti.status-dashboard.2026-08-31",
+      "type": "related_to",
       "to": "application.nyc-oti.speed-operations-manager.789810",
       "source": "frontmatter",
       "href": "../applications/nyc-oti-speed-operations-manager-789810.md",
@@ -19555,6 +19624,14 @@
       "to": "method.private-application-status-loop",
       "source": "frontmatter",
       "href": "../methods/private-application-status-loop.md",
+      "context": null
+    },
+    {
+      "from": "source.application.nyc-oti.status-dashboard.2026-08-31",
+      "type": "related_to",
+      "to": "source.application.nyc-oti.pit-crew-volume-update.2026-08-20",
+      "source": "frontmatter",
+      "href": "nyc-oti-pit-crew-volume-update-2026-08-20.md",
       "context": null
     },
     {
@@ -21634,7 +21711,7 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
       "to": "opportunity.nyc-oti.senior-product-manager.782366",
       "fragment": null,
-      "line": 31,
+      "line": 48,
       "kind": "link"
     },
     {
@@ -21643,7 +21720,7 @@
       "toPath": "docs/knowledge-bank/sources/jobs-oti-senior-product-manager-782366.md",
       "to": "source.jobs.oti.senior-product-manager.782366",
       "fragment": null,
-      "line": 32,
+      "line": 49,
       "kind": "link"
     },
     {
@@ -21652,7 +21729,7 @@
       "toPath": "docs/knowledge-bank/applications/wowlist-senior-product-manager-oti-782366.md",
       "to": "application.wowlist.senior-product-manager-oti-782366",
       "fragment": null,
-      "line": 33,
+      "line": 50,
       "kind": "link"
     },
     {
@@ -21661,7 +21738,7 @@
       "toPath": "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md",
       "to": null,
       "fragment": null,
-      "line": 34,
+      "line": 51,
       "kind": "link"
     },
     {
@@ -21670,7 +21747,7 @@
       "toPath": "docs/knowledge-bank/capabilities/technical-operations.md",
       "to": "capability.technical-operations",
       "fragment": null,
-      "line": 35,
+      "line": 52,
       "kind": "link"
     },
     {
@@ -21679,7 +21756,7 @@
       "toPath": "docs/knowledge-bank/projects/tired-of-tires-resident-service.md",
       "to": "project.kc-town-hall.tired-of-tires",
       "fragment": null,
-      "line": 36,
+      "line": 53,
       "kind": "link"
     },
     {

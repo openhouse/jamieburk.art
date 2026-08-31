@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `5b763875ba66bbe1993203d995e3ce65261217f4`
-**Generation time:** 2026-08-31T19:34:11-04:00
-**Source fingerprint:** `2aa1f4b02e35fdec8a22697eef1e2bec76b37043e2ae53ca690eac3c14659e72`
+**Source commit:** `29745b537e57bab69f5ddc6207c3ab6e8fbd8e38`
+**Generation time:** 2026-08-31T19:49:24-04:00
+**Source fingerprint:** `58618688c7258813c8659a6ae82556ff86cc9ce4dfa32b7f274081ec2ba8270c`
 
 ## application
 
@@ -448,6 +448,7 @@
 
 - [ACLU official biography - Charizma Williams](../sources/aclu-charizma-williams.md) - `source.aclu.charizma-williams`
 - [NYC OTI application confirmation review - August 31, 2026](../sources/nyc-oti-application-confirmations-2026-08-31.md) - `source.application.nyc-oti.confirmations.2026-08-31`
+- [NYC OTI PIT Crew application-volume update - August 20, 2026](../sources/nyc-oti-pit-crew-volume-update-2026-08-20.md) - `source.application.nyc-oti.pit-crew-volume-update.2026-08-20`
 - [NYC OTI Product Manager 784450 application-draft review](../sources/nyc-oti-product-manager-784450-application-draft-2026-08-31.md) - `source.application.nyc-oti.product-manager.784450.2026-08-31`
 - [NYC OTI private application status dashboard review - August 31, 2026](../sources/nyc-oti-application-status-dashboard-2026-08-31.md) - `source.application.nyc-oti.status-dashboard.2026-08-31`
 - [Benepass official team page - Jaclyn Chen](../sources/benepass-jaclyn-chen.md) - `source.benepass.jaclyn-chen`
