@@ -1,12 +1,12 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `ccddbf75a1e1a3ab293c5dd067e1f30a5b9a6855`
+**Candidate commit:** `76940404b243ff9127e6aa76d266be539341088a`
 **Portfolio snapshot:** `31fd94f42c5620e143d2c86c730f7145edd2bee2b1d8f1bd2b6452fba2c5e66a`
-**Role-context hash:** `0b490969447130ae7d238e92797f11449be5d54f170985f784738a9d5372cd6c`
+**Role-context hash:** `e0cdedaea5beef80a49de252d74632f15b19e17f845fcbe1c44de2ff5c93a9ad`
 **Reader-context hash:** `e055b82642616d52177ad68ae4d3bbaeb3953ef3c75cfa3e159c65166862e29f`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
-**Candidate paths clean:** yes
+**Candidate paths clean:** no
 
 > Deterministic baseline only. This is not an interview prediction, a named person's opinion, or a human reader study.
 
@@ -72,7 +72,7 @@
 - All signals observed: 5/7
 - Opportunity status live: yes
 - Historical benchmark: no
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 - Public reporting context: PIT Crew operational lead (nearest-public-operational-lead)
 - Public vision context: Commissioner and Chief Technology Officer (official-initiative-leader)
@@ -124,7 +124,7 @@
 - All signals observed: 0/3
 - Opportunity status live: yes
 - Historical benchmark: no
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 - Public reporting context: Executive Director, Product Management (role-only)
 - Public vision context: Commissioner and Chief Technology Officer (official-agency-leader)
@@ -140,7 +140,7 @@
 - All signals observed: 0/3
 - Opportunity status live: yes
 - Historical benchmark: no
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 - Public reporting context: PIT Crew operational lead (nearest-public-operational-lead)
 - Public vision context: Commissioner and Chief Technology Officer (official-initiative-leader)
@@ -175,7 +175,7 @@
 - All signals observed: 0/4
 - Opportunity status live: yes
 - Historical benchmark: no
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: yes
 - Public reporting context: Head of the Institute of Experimental Architecture (role-identity-matched)
 - Public vision context: ./studio3 artistic-design working-group faculty (role-identity-matched)

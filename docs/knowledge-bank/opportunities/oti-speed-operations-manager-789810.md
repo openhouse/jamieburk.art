@@ -5,14 +5,14 @@ kind: opportunity
 status: governed-open
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-20
-review_by: 2026-08-27
+last_reviewed: 2026-08-31
+review_by: 2026-09-14
 canonical_path: docs/knowledge-bank/opportunities/oti-speed-operations-manager-789810.md
 summary: Exceptional-fit OTI operations role coordinating budget, procurement, people, dependencies, reporting, and product-team delivery for SPEED.
 canonical_url: https://cityjobs.nyc.gov/job/operations-manager-in-brooklyn-jid-46143
 source_type: official-employer
 opportunity_status: live
-application_state: not-applied
+application_state: submitted
 application_deadline: 2026-10-04
 verified_at: 2026-08-20
 portfolio_routes:
@@ -110,6 +110,10 @@ relations:
     target: source.nyc.speed-report.2026-05-13
     href: ../sources/nyc-speed-report-2026.md
   - type: related_to
+    target: application.nyc-oti.speed-operations-manager.789810
+    href: ../applications/nyc-oti-speed-operations-manager-789810.md
+    context: Human-completed August 31 submission; outcome remains pending.
+  - type: related_to
     target: person.lisa-gelobter
     href: ../people/lisa-gelobter.md
   - type: related_to
@@ -151,4 +155,14 @@ The matching Civic Match card is not yet identity-verified: inspect its destinat
 before treating it as this job. Its displayed October 3 closing date differs from
 the employer's October 4 deadline; use the earlier date for action planning.
 Formal qualification eligibility and a salary meeting Jamie's $100,000 floor
-remain unresolved. Saving a listing is not submitting an application.
+remain unresolved. Saving a listing was not submission; the separate
+[application milestone](../applications/nyc-oti-speed-operations-manager-789810.md)
+now records the later August 31 City receipt. Civic Match discovery still does
+not establish a completed introduction, referral, interview, or hiring outcome.
+
+## Application materials
+
+- [Field-by-field application guide](../../../resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Application-Guide.md)
+- [Role-specific résumé PDF](../../../resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.pdf)
+- [Cover-letter Markdown](../../../resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Operations-Manager-789810.md)
+- [Signed cover-letter PDF](../../../resumes/2026-08-20/nyc-oti-speed-operations-manager-789810/Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Operations-Manager-789810.pdf)

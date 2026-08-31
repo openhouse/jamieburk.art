@@ -3,7 +3,7 @@
 
 **Source commit:** `76940404b243ff9127e6aa76d266be539341088a`
 **Generation time:** 2026-08-31T17:39:42-04:00
-**Source fingerprint:** `df3250152a7326eceda4e82fc000df015c2e3bf6209ad5eec2aa49c09a7b3ae9`
+**Source fingerprint:** `c2f2eef117fd8112c84a4015032aa5056980cb6b88721c9a8080a0c5a8ad7303`
 
 - [AI Made Me Do It symposium and exhibition](../../events/ai-made-me-do-it-symposium-2024.md) - `uses_source` (frontmatter)
 - [Professional record public-safe promotion review, August 3, 2026](../../research-runs/professional-record-promotion-2026-08-03.md) - `uses_source` (frontmatter)

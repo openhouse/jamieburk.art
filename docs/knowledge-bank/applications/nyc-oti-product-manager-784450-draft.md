@@ -27,10 +27,21 @@ relations:
   - type: uses_source
     target: source.jobs.oti.product-manager.784450
     href: ../sources/jobs-oti-product-manager-784450.md
+  - type: related_to
+    target: application.nyc-oti.product-manager.784450
+    href: nyc-oti-product-manager-784450.md
+    context: Later human-completed submission milestone; this node remains the historical prepared snapshot.
 human_review: governed-open
 ---
 
 # NYC OTI Product Manager 784450 prepared application
+
+## Historical-state note
+
+This record preserves what was known before submission. A separate
+[application milestone](nyc-oti-product-manager-784450.md) records the later
+August 31 City receipt. The later event does not change the evidentiary status
+of the draft exports or silently resolve their chronology questions.
 
 ## Current state
 

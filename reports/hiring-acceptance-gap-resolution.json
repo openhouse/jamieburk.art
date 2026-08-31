@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "candidateSha": "ccddbf75a1e1a3ab293c5dd067e1f30a5b9a6855",
+  "candidateSha": "76940404b243ff9127e6aa76d266be539341088a",
   "portfolioSnapshotHash": "31fd94f42c5620e143d2c86c730f7145edd2bee2b1d8f1bd2b6452fba2c5e66a",
-  "publicReportHash": "7eb3f6c4421515968a307aeabc96fa4945ec85ec4970c6502db166c4071b0316",
-  "wikiSourceFingerprint": "b2b514b9abf238fa282f99ecad92685aeb5b5eba46e79d4d0dd6da8beaf69291",
+  "publicReportHash": "04616e751283337a9586c44b0a4c80d98b93343eaf9ac11d8e6303ef7308ff6c",
+  "wikiSourceFingerprint": "c2f2eef117fd8112c84a4015032aa5056980cb6b88721c9a8080a0c5a8ad7303",
   "findings": [
     {
       "findingId": "finding.requirement.codepath.qa-and-bug-pipeline",

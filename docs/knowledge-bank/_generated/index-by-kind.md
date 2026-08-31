@@ -3,12 +3,14 @@
 
 **Source commit:** `76940404b243ff9127e6aa76d266be539341088a`
 **Generation time:** 2026-08-31T17:39:42-04:00
-**Source fingerprint:** `df3250152a7326eceda4e82fc000df015c2e3bf6209ad5eec2aa49c09a7b3ae9`
+**Source fingerprint:** `c2f2eef117fd8112c84a4015032aa5056980cb6b88721c9a8080a0c5a8ad7303`
 
 ## application
 
+- [NYC OTI Product Manager 784450 application milestone](../applications/nyc-oti-product-manager-784450.md) - `application.nyc-oti.product-manager.784450`
 - [NYC OTI Product Manager 784450 prepared application](../applications/nyc-oti-product-manager-784450-draft.md) - `application.nyc-oti.product-manager.784450.draft`
 - [NYC OTI Senior Product Manager 782366 application milestone](../applications/nyc-oti-senior-product-manager-782366.md) - `application.nyc-oti.senior-product-manager.782366`
+- [NYC OTI SPEED Operations Manager 789810 application milestone](../applications/nyc-oti-speed-operations-manager-789810.md) - `application.nyc-oti.speed-operations-manager.789810`
 - [NYC Artist Coalition application brief](../applications/nycac-civic-product-operations.md) - `application.nycac.civic-product-operations`
 - [WOW List - Senior Product Manager role-fit brief](../applications/wowlist-senior-product-manager-oti-782366.md) - `application.wowlist.senior-product-manager-oti-782366`
 
@@ -444,6 +446,7 @@
 ## source
 
 - [ACLU official biography - Charizma Williams](../sources/aclu-charizma-williams.md) - `source.aclu.charizma-williams`
+- [NYC OTI application confirmation review - August 31, 2026](../sources/nyc-oti-application-confirmations-2026-08-31.md) - `source.application.nyc-oti.confirmations.2026-08-31`
 - [NYC OTI Product Manager 784450 application-draft review](../sources/nyc-oti-product-manager-784450-application-draft-2026-08-31.md) - `source.application.nyc-oti.product-manager.784450.2026-08-31`
 - [Benepass official team page - Jaclyn Chen](../sources/benepass-jaclyn-chen.md) - `source.benepass.jaclyn-chen`
 - [BetaNYC weekly civic-technology newsletter and public archive](../sources/betanyc-civic-tech-newsletter-2026-08-20.md) - `source.betanyc.civic-tech-newsletter`

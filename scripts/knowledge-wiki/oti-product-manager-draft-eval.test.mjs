@@ -9,7 +9,7 @@ import { evaluateProductManagerDraft, evaluateRepository } from './oti-product-m
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const read = (relativePath) => readFileSync(path.join(repoRoot, relativePath), 'utf8');
 
-test('Product Manager draft is graph-linked, private-source bounded, and not submitted', () => {
+test('Product Manager draft remains historical after the separate submitted milestone', () => {
   const result = evaluateRepository();
   assert.equal(result.overall, 'pass', JSON.stringify(result.checks, null, 2));
   assert.equal(result.passedChecks, result.totalChecks);

@@ -19,7 +19,7 @@ export function evaluateProductManagerDraft({ application, source, opportunity }
     check('accuracy-human-gate', /accuracy_certification: blocked-pending-reconciliation/.test(application) && /Jamie must personally read and check/i.test(appText), 'Accuracy, terms, privacy, and submission remain Jamie-only.'),
     check('protected-fields-unanswered', /leave the voluntary demographic and veteran fields blank/i.test(appText) && /Never infer/i.test(appText), 'No protected answer may be inferred.'),
     check('application-source-edge', /target: source\.application\.nyc-oti\.product-manager\.784450\.2026-08-31/.test(application) && /target: application\.nyc-oti\.product-manager\.784450\.draft/.test(source), 'Application and bounded source must be linked in both directions.'),
-    check('opportunity-edge-and-state', /target: application\.nyc-oti\.product-manager\.784450\.draft/.test(opportunity) && /application_state: prepared-not-submitted/.test(opportunity), 'Opportunity must point to the draft without claiming submission.'),
+    check('historical-draft-and-lifecycle-edge', /target: application\.nyc-oti\.product-manager\.784450\.draft/.test(opportunity) && /target: application\.nyc-oti\.product-manager\.784450\n/.test(opportunity) && /application_state: submitted/.test(opportunity) && /target: application\.nyc-oti\.product-manager\.784450\n/.test(application), 'The draft remains historical while the opportunity and draft point to the separate submitted milestone.'),
   ];
   return {
     checks,

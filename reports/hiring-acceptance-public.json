@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "runId": "hiring-public-ccddbf75a1e1",
-  "generatedAt": "2026-08-22T21:22:19-04:00",
-  "candidateSha": "ccddbf75a1e1a3ab293c5dd067e1f30a5b9a6855",
-  "candidatePathsClean": true,
+  "runId": "hiring-public-76940404b243",
+  "generatedAt": "2026-08-31T17:39:42-04:00",
+  "candidateSha": "76940404b243ff9127e6aa76d266be539341088a",
+  "candidatePathsClean": false,
   "portfolioSnapshotHash": "31fd94f42c5620e143d2c86c730f7145edd2bee2b1d8f1bd2b6452fba2c5e66a",
-  "roleContextHash": "0b490969447130ae7d238e92797f11449be5d54f170985f784738a9d5372cd6c",
+  "roleContextHash": "e0cdedaea5beef80a49de252d74632f15b19e17f845fcbe1c44de2ff5c93a9ad",
   "readerContextHash": "e055b82642616d52177ad68ae4d3bbaeb3953ef3c75cfa3e159c65166862e29f",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
   "publicSafety": {
@@ -508,7 +508,7 @@
       "roleContextHash": "74f4fb5ed29f03e0fcbc2436696058937c1632fc383045ad2747e8468c438a99",
       "benchmark": false,
       "live": true,
-      "fresh": true,
+      "fresh": false,
       "hardScreenBlocked": false,
       "publicReportingContext": {
         "role": "PIT Crew operational lead",
@@ -622,7 +622,7 @@
     {
       "id": "opportunity.nyc-oti.speed-operations-manager.789810",
       "title": "NYC OTI - SPEED Operations Manager 789810",
-      "roleContextHash": "96535ac07b25febf49a5984f205de82d08fada3ac66b5ae6c2accc707cbf93d3",
+      "roleContextHash": "e91a2239cb3b7cb379dc19de571ca1e5c877e23eb3494fa1050d53513de17e58",
       "benchmark": false,
       "live": true,
       "fresh": true,
@@ -678,7 +678,7 @@
     {
       "id": "opportunity.nyc-oti.product-manager.784450",
       "title": "NYC OTI - Product Manager 784450",
-      "roleContextHash": "512665a78d5e593c2d7339ecda1c18de179d2bd482e4ec3c9c56bc0ee27104d1",
+      "roleContextHash": "3bfc5d552974f75288a5238923db232687c298c8beaf8f319a87285868acec77",
       "benchmark": false,
       "live": true,
       "fresh": true,
@@ -737,7 +737,7 @@
       "roleContextHash": "32fcbb88efa0976e040a8c9d1a3fa6db54997ad08a9bcc65d39810e8d4857302",
       "benchmark": false,
       "live": true,
-      "fresh": true,
+      "fresh": false,
       "hardScreenBlocked": false,
       "publicReportingContext": {
         "role": "Executive Director, Product Management",
@@ -793,7 +793,7 @@
       "roleContextHash": "a6730affdfaf5123dded338409422e5eb48af7caa7a92405180b58364eac22ed",
       "benchmark": false,
       "live": true,
-      "fresh": true,
+      "fresh": false,
       "hardScreenBlocked": false,
       "publicReportingContext": {
         "role": "PIT Crew operational lead",
@@ -958,7 +958,7 @@
       "roleContextHash": "b950ffd46675bc244cf77f73e703337f62f6c5ec8fee919b71c9ec9051c0f5aa",
       "benchmark": false,
       "live": true,
-      "fresh": true,
+      "fresh": false,
       "hardScreenBlocked": true,
       "publicReportingContext": {
         "role": "Head of the Institute of Experimental Architecture",

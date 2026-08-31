@@ -3,21 +3,23 @@
 
 **Source commit:** `76940404b243ff9127e6aa76d266be539341088a`
 **Generation time:** 2026-08-31T17:39:42-04:00
-**Source fingerprint:** `df3250152a7326eceda4e82fc000df015c2e3bf6209ad5eec2aa49c09a7b3ae9`
+**Source fingerprint:** `c2f2eef117fd8112c84a4015032aa5056980cb6b88721c9a8080a0c5a8ad7303`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 48
+- Nodes added: 51
 - Nodes removed: 0
-- Edges added: 184
+- Edges added: 202
 - Edges removed: 8
 - New type-aware orphans: 0
 - Current rights-review records: 185
 
 ## Added nodes
 
+- `application.nyc-oti.product-manager.784450`
 - `application.nyc-oti.product-manager.784450.draft`
 - `application.nyc-oti.senior-product-manager.782366`
+- `application.nyc-oti.speed-operations-manager.789810`
 - `asset.photo.knowledge-wiki.collective-map.2017.001`
 - `correction.hje-thick-arts-client-chronology.2026`
 - `correction.photo.project-courtesy-credits.2026-08-20`
@@ -46,6 +48,7 @@ Compared with the graph artifact on `origin/develop`.
 - `research.nyc-jobs.citywide-monitor.2026-08-20`
 - `research.nyc-oti-product-management-ranking.2026-08-20`
 - `research.nycac.dcla-listening-session.2026-08-29`
+- `source.application.nyc-oti.confirmations.2026-08-31`
 - `source.application.nyc-oti.product-manager.784450.2026-08-31`
 - `source.betanyc.civic-tech-newsletter`
 - `source.civic-match.candidate-network`

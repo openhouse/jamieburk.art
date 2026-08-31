@@ -12,7 +12,7 @@ summary: Strong-fit OTI product opportunity centered on resident-facing discover
 canonical_url: https://cityjobs.nyc.gov/job/product-manager-in-brooklyn-jid-45056
 source_type: official-employer
 opportunity_status: live
-application_state: prepared-not-submitted
+application_state: submitted
 application_deadline: 2026-09-04
 verified_at: 2026-08-20
 portfolio_routes:
@@ -109,6 +109,11 @@ relations:
   - type: related_to
     target: application.nyc-oti.product-manager.784450.draft
     href: ../applications/nyc-oti-product-manager-784450-draft.md
+    context: Historical prepared state retained for chronology and form-review provenance.
+  - type: related_to
+    target: application.nyc-oti.product-manager.784450
+    href: ../applications/nyc-oti-product-manager-784450.md
+    context: Human-completed August 31 submission; outcome remains pending.
   - type: uses_source
     target: source.nyc-jobs.oti-product-search.2026-08-20
     href: ../sources/nyc-jobs-oti-product-search-2026-08-20.md
@@ -147,6 +152,7 @@ confirm that OTI can hire within the target range before a late-stage process.
 - [Role-specific cover letter](../../../resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.md)
 - [Signed cover-letter PDF](../../../resumes/2026-08-20/nyc-oti-product-manager-784450/Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.pdf)
 - [Prepared application state](../applications/nyc-oti-product-manager-784450-draft.md)
+- [Submitted application milestone](../applications/nyc-oti-product-manager-784450.md)
 
 The guide was checked against the official posting and supplied application
 screenshots and the bounded August 31 full-page exports. It supplies the existing tailored letter as the
@@ -154,4 +160,6 @@ screenshots and the bounded August 31 full-page exports. It supplies the existin
 the preliminary-question answers, protected-field boundary, human-only
 attestations, and date conflicts Jamie must resolve. Additional screening
 questions beyond the reviewed page have not been seen.
-Preparing these materials does not mark the application submitted.
+The guide and files did not by themselves prove submission. The separate
+application milestone now records the August 31 City receipt while retaining a
+pending outcome and the private-evidence boundary.
