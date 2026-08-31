@@ -9,13 +9,14 @@ function fixture() {
     resume: Buffer.from('# Example Candidate\n\nhttps://example.org/\n\n### Example LLC — Project Manager\n\nBrooklyn, NY | 2009–Present\n\n- Delivered a working service.\n\n## Education\n'),
     letter: Buffer.from('# Cover letter\n\n**Re: Product Manager, Job ID 784450**\n\nDear Hiring Team,\n\nI build useful services.\n\nWarmly,\n\nJamie Burkart\n'),
     pdf: Buffer.from('%PDF-1.7\nfixture'),
+    coverPdf: Buffer.from('%PDF-1.7\nsigned-cover-fixture'),
   };
   const config = {
     jobId: '784450', role: 'Product Manager', reviewedOn: '2026-08-30',
     postingUrl: 'https://cityjobs.nyc.gov/job/product-manager-in-brooklyn-jid-45056',
     deadline: '2026-09-04', guide: 'Application-Guide.md',
     sources: Object.fromEntries(Object.entries(sources).map(([key, value]) => [key, {
-      path: `Jamie-Burkart-${key}-784450.${key === 'pdf' ? 'pdf' : 'md'}`, sha256: hash(value),
+      path: `Jamie-Burkart-${key}-784450.${['pdf', 'coverPdf'].includes(key) ? 'pdf' : 'md'}`, sha256: hash(value),
     }])),
     fields: [{ id: 'website', label: 'Website', value: 'https://example.org/', matchResume: true }],
     requiredFieldIds: ['website'], expectedExperienceCount: 1,
@@ -50,7 +51,7 @@ test('missing observed required field fails even after regeneration', () => {
   assert.ok(check(f).includes('missing_field:website'));
 });
 test('changed resume, letter, or PDF invalidates the reviewed source binding', () => {
-  for (const kind of ['resume', 'letter', 'pdf']) {
+  for (const kind of ['resume', 'letter', 'pdf', 'coverPdf']) {
     const f = fixture(); f.sources[kind] = Buffer.concat([f.sources[kind], Buffer.from('\nchanged')]);
     assert.ok(check(f).includes(`source_changed:${kind}`));
   }
@@ -119,4 +120,30 @@ test('section order follows the observed form, with profiles after education', (
   const positions = headings.map((heading) => guide.search(new RegExp(`^## \\d+\\. ${heading}`, 'm')));
   assert.ok(positions.every((position) => position >= 0));
   assert.deepEqual(positions, [...positions].sort((a, b) => a - b));
+});
+
+test('signed PDF is linked and the observed separate cover-letter upload is explained', () => {
+  const { guide } = fixture();
+  assert.match(guide, /Signed cover-letter PDF.*coverPdf-784450.pdf/);
+  assert.match(guide, /Preliminary questions.*Cover letter.*Additional attachments/);
+  assert.doesNotMatch(guide, /No separate cover-letter upload is visible/);
+});
+test('a missing or oversized signed letter cannot yield a ready guide', () => {
+  const f = fixture(); delete f.sources.coverPdf;
+  assert.ok(check(f).includes('missing_source:coverPdf'));
+  f.sources.coverPdf = Buffer.alloc(10_000_001);
+  assert.ok(check(f).includes('cover_pdf_exceeds_upload_limit'));
+});
+test('date research distinguishes legal formation from the earlier practice', () => {
+  const f = fixture(); f.sources.resume = Buffer.from(f.sources.resume.toString().replace('Example LLC', 'THICK ARTS LLC'));
+  const guide = renderGuide(f.config, f.sources);
+  assert.match(guide, /July 2012/);
+  assert.match(guide, /not the start month of the earlier independent practice/);
+  assert.doesNotMatch(guide, /January 2009/);
+});
+test('corroborated end month is rendered without inventing a start month', () => {
+  const f = fixture(); f.sources.resume = Buffer.from(f.sources.resume.toString().replace('Example LLC', 'KC Town Hall LLC').replace('2009–Present', '2015–2024'));
+  const guide = renderGuide(f.config, f.sources);
+  assert.match(guide, /April 2024/);
+  assert.match(guide, /2015 — confirm the actual month/);
 });

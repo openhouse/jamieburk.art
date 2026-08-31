@@ -1,27 +1,27 @@
 {
-  "jobId": "784450",
-  "role": "Product Manager",
-  "reviewedOn": "2026-08-30",
-  "postingUrl": "https://cityjobs.nyc.gov/job/product-manager-in-brooklyn-jid-45056",
-  "deadline": "2026-09-04",
+  "jobId": "782373",
+  "role": "Senior Product Designer",
+  "reviewedOn": "2026-08-20",
+  "postingUrl": "https://cityjobs.nyc.gov/job/senior-product-designer-in-brooklyn-jid-44505",
+  "deadline": "2026-10-16",
   "guide": "Application-Guide.md",
   "expectedExperienceCount": 5,
   "sources": {
     "resume": {
-      "path": "Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.md",
-      "sha256": "e0e52ee0a27b062eb04aa0fb698b323710104e76dac064ec6caeec14fc6f4486"
+      "path": "Jamie-Burkart-Resume-NYC-OTI-PIT-Senior-Product-Designer-782373.md",
+      "sha256": "185d56ffc1e17df80eb69b8d89156e44605cb51c7cd0b6d68dd44b5abd5a6f3a"
     },
     "letter": {
-      "path": "Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.md",
-      "sha256": "add7d24a1d9237486f598c0f3a4f955c6483dacf4e3ad6006e5869a972547a1d"
+      "path": "Jamie-Burkart-Cover-Letter-NYC-OTI-PIT-Senior-Product-Designer-782373.md",
+      "sha256": "7d521307c6e4454efd5ede9ba4c8174623f6259cc39347f6e9ff0d78a3436f20"
     },
     "pdf": {
-      "path": "Jamie-Burkart-Resume-NYC-OTI-Product-Manager-784450.pdf",
-      "sha256": "09f78cc051a774b479c67820851a0cfe1df46f900ba5bde89c2adcdfb67efd69"
+      "path": "Jamie-Burkart-Resume-NYC-OTI-PIT-Senior-Product-Designer-782373.pdf",
+      "sha256": "78db2c5e75e2c7904cf07eb2aa12f86b46cf7e7c986b1d488c42397c0a1aaa1d"
     },
     "coverPdf": {
-      "path": "Jamie-Burkart-Cover-Letter-NYC-OTI-Product-Manager-784450.pdf",
-      "sha256": "4fc6123a5ec909b64f3eff6f7b5d662a0d5022cc875741a26ae414feb271a73c"
+      "path": "Jamie-Burkart-Cover-Letter-NYC-OTI-PIT-Senior-Product-Designer-782373.pdf",
+      "sha256": "e88e81d9450f731e9214bebbaadf92ff7df760bae5be09d71f0d6f248e40dc41"
     }
   },
   "requiredFieldIds": [

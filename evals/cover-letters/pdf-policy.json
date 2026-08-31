@@ -8,7 +8,7 @@
     "inspection": "native-document-objects-and-native-pdf-closing",
     "privateLocatorCommitted": false,
     "sourceContentCopiedIntoRepository": false,
-    "signatureImageFound": false
+    "signatureImageFound": true
   },
   "style": {
     "nameFont": "Palatino Linotype",
@@ -20,17 +20,18 @@
     "bodySizePt": 10,
     "bodyColor": "#111111",
     "lineSpacingPercent": 105,
-    "paragraphSpaceAfterPt": 2,
+    "paragraphSpaceAfterPt": 8,
+    "headerAndClosingSpaceAfterPt": 2,
     "pageSizePt": [612, 792],
-    "layoutRule": "Preserve the native specimen copy's actual paragraph and page formatting; inspect the exported result. Do not rebuild it in another renderer.",
+    "layoutRule": "Adapt a native specimen copy, retaining its page setup, typography and actual inline signature. Use 8 pt paragraph spacing for letter readability, 2 pt in the header and closing; inspect the native PDF export. Do not rebuild in another renderer.",
     "signatureRule": "Insert the actual Jamie-authorized signature image between the closing and typed name. Never synthesize handwriting or crop a typed name and call it a signature."
   },
   "signature": {
-    "status": "missing",
-    "approvedForCoverLetters": false,
-    "imageSha256": null
+    "status": "available",
+    "approvedForCoverLetters": true,
+    "imageSha256": "eaab41cfd1e19f03d3dff1970210e5003b55303b110d8a6e10474863c2e645d4"
   },
-  "readiness": "blocked-awaiting-signature-image",
+  "readiness": "exact-export-and-visual-review-required",
   "scope": "Every maintained cover letter derives PDF and review siblings from the canonical cover-letter portfolio, including historical do-not-submit benchmarks.",
-  "limitations": "This policy and deterministic readiness gate do not generate, sign, upload, submit, or certify a PDF. No signed outputs have been accepted yet."
+  "limitations": "The approved signature is a visual handwritten image, not a cryptographic digital signature. Readiness is bound to each exact exported PDF and inspection receipt; it does not authorize application submission."
 }

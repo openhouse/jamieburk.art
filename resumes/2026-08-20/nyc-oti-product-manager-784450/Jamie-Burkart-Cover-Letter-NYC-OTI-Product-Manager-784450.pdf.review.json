@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "opportunityId": "opportunity.nyc-oti.product-manager.784450",
+  "markdownSha256": "add7d24a1d9237486f598c0f3a4f955c6483dacf4e3ad6006e5869a972547a1d",
+  "pdfSha256": "4fc6123a5ec909b64f3eff6f7b5d662a0d5022cc875741a26ae414feb271a73c",
+  "styleSha256": "80fa886d021330cfd14a3e1682d2f6d1fd3ddc07c75319b1a1d9a045184ae3b9",
+  "signatureImageSha256": "eaab41cfd1e19f03d3dff1970210e5003b55303b110d8a6e10474863c2e645d4",
+  "export": {
+    "engine": "google-docs-native",
+    "specimenUnchanged": true,
+    "privateLocatorsOmitted": true
+  },
+  "inspection": {
+    "reviewedAt": "2026-08-31T16:56:46Z",
+    "allPagesRasterized": true,
+    "actualNamedPeopleParticipated": false,
+    "textMatchesMarkdown": true,
+    "linksChecked": true,
+    "noSpecimenContent": true,
+    "pages": [
+      {
+        "page": 1,
+        "layout": "pass",
+        "typography": "pass",
+        "signatureMatchesApprovedImage": true
+      }
+    ]
+  }
+}

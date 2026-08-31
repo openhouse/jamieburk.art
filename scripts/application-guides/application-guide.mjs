@@ -8,6 +8,7 @@ const plain = (value) => value.replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/
 const paste = (value) => `\`\`\`text\n${value.trim()}\n\`\`\``;
 const letterBody = (source) => source.toString().match(/^Dear [\s\S]+/m)?.[0].trim() ?? '';
 const profileIds = new Set(['linkedin', 'facebook', 'x', 'website']);
+const dateEvidence = JSON.parse(readFileSync(new URL('../../evals/application-guides/experience-dates.json', import.meta.url)));
 const renderFields = (fields) => fields.flatMap((field) => [
   `### ${field.label}`,
   field.value === null ? field.instruction : paste(field.value),
@@ -27,12 +28,16 @@ export function experienceEntries(source) {
 
 function renderExperience(entry, index) {
   const current = entry.to === 'Present';
+  const evidence = dateEvidence.entries[entry.company];
+  const supportedEnd = evidence?.to && /^\d{4}-(0[1-9]|1[0-2])$/.test(evidence.to) && evidence.to.startsWith(`${entry.to}-`)
+    ? new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${evidence.to}-15T12:00:00Z`)) : null;
   return [
     `### Experience ${index + 1}: ${entry.company}`,
     '**Title** (required)', paste(entry.title), '**Company**', paste(entry.company),
     '**Office location**', paste(entry.location), '**Description**', paste(entry.description),
     `- **From:** ${entry.from} — confirm the actual month (and day only if requested) from your records.`,
-    `- **To:** ${current ? 'Leave empty when the current-work checkbox disables it.' : `${entry.to} — confirm the actual month (and day only if requested).`}`,
+    `- **To:** ${current ? 'Leave empty when the current-work checkbox disables it.' : supportedEnd ? `${supportedEnd} — corroborated in earlier first-party CVs; confirm before submission.` : `${entry.to} — confirm the actual month (and day only if requested).`}`,
+    ...(evidence ? [`**Date research (${dateEvidence.reviewedOn}):** ${evidence.note}`] : []),
     `- **I currently work here:** ${current ? 'Yes, if still current when you submit.' : 'No.'}`,
     '- Click **Save** before adding the next entry.',
   ].join('\n\n');
@@ -42,13 +47,13 @@ function renderExperience(entry, index) {
 export function renderGuide(config, sources) {
   const sections = [
     `# Application guide: NYC OTI ${config.role} — ${config.jobId}`,
-    `For Jamie Burkart. Reviewed ${config.reviewedOn}. This is a preparation guide, not a submitted application.`,
+    `For Jamie Burkart. Packet reviewed ${config.packetReviewedOn ?? config.reviewedOn}; posting last checked ${config.reviewedOn}. This is a preparation guide, not a submitted application.`,
     '## 1. Open the right application',
     `[Official posting and Apply button](${config.postingUrl}). The posting was checked on ${config.reviewedOn} and lists **${config.deadline}** as its closing date. Recheck it before submitting. Confirm **${config.role}**, **OTI**, **Brooklyn**, and **Job ID ${config.jobId}**; similar titles can refer to different openings.`,
     ...(config.sourceContext ? ['### Discovery, personal connections, and the formal application', config.sourceContext] : []),
     '## 2. Download your application files',
-    `- [Tailored résumé PDF](./${config.sources.pdf.path}) — download the file from GitHub; do not upload a screenshot or a GitHub page.\n- [Résumé Markdown](./${config.sources.resume.path})\n- [Tailored cover letter](./${config.sources.letter.path})`,
-    'Upload the tailored résumé PDF alone in **Resume**. Do not append the cover letter: paste its body into **Message to the Hiring Team** below. No separate cover-letter upload is visible in the supplied screenshots, and the posting does not request a combined document.',
+    `- [Tailored résumé PDF](./${config.sources.pdf.path}) — download the file from GitHub; do not upload a screenshot or a GitHub page.\n- [Résumé Markdown](./${config.sources.resume.path})\n- [Signed cover-letter PDF](./${config.sources.coverPdf.path})\n- [Tailored cover-letter Markdown](./${config.sources.letter.path})`,
+    'Upload the tailored résumé PDF alone in **Resume**. Do not append the cover letter. The later screenshot shows **Preliminary questions → Cover letter → Additional attachments**: upload the separate signed cover-letter PDF there. A hiring-team message is also available on the first page; the copy-paste body is below.',
     'The **Easy Apply** upload at the top is optional autocomplete, not a separate application requirement. You can skip it and fill the form manually. If you already used it, check every imported entry; do not reset accurate work unnecessarily. Confirm the final **Resume** field actually contains the intended PDF. The displayed upload limit is **10 MB**.',
     '## 3. Personal information',
     'Copy only the contents of each text box below. For contact fields, use the existing résumé rather than a second copy stored here. Confirm those details are still preferred. For autocomplete fields, select the matching option after typing.',
@@ -57,7 +62,7 @@ export function renderGuide(config, sources) {
   sections.push(
     '## 4. Experience — Add, complete, Save, repeat',
     'The current screenshots show **Experience → Add**. The expanded labels below were observed in the earlier SmartRecruiters application: **Title** (required), **Company**, **Office location**, **Description**, **From** (required), **To** (required unless current), **I currently work here**, **Save**. Reconcile with the form if its labels differ.',
-    '**Dates requiring your confirmation:** the résumé records years, not months or days. Do not invent January/December dates or count overlapping projects as additional full-time years. If the form requires more precision, use your own records. These are founder, project, and community roles; listing them does not assert that each was a separate full-time salaried job or government employment.',
+    '**Month-level research is partial:** the notes below distinguish corroborated months, legal-entity formation, year-only evidence, and unresolved conflicts. Do not invent January/December dates or count overlapping projects as additional full-time years. These are founder, project, and community roles; listing them does not assert that each was a separate full-time salaried job or government employment. See the [shared date-evidence ledger](../../../evals/application-guides/experience-dates.json).',
     ...experienceEntries(sources.resume).map(renderExperience),
     '## 5. Education',
     'Use **Education → Add**. These expanded labels come from the earlier SmartRecruiters form. Leave optional details empty when you cannot confirm them; do not substitute course attendance for a degree.',
@@ -75,9 +80,10 @@ export function renderGuide(config, sources) {
     'This is the existing tailored cover-letter body, without its contact header. No character or word limit is visible in the supplied screenshots. If the live form reports a limit, stop and shorten against that actual limit; do not assume the earlier Civic Match limit applies.',
     paste(letterBody(sources.letter)),
     '## 9. Next, review, and submit',
-    '- Check name, matching email fields, phone, saved experience/education, portfolio link, attached PDF, and hiring-team message. Optional Facebook and X fields may stay blank.\n- Click **Next**. Later screening questions were **not observed** for this application; answer the questions actually shown, from your records. Do not infer a civil-service status, credential, work authorization, or consent answer from a job title.\n- If asked about minimum qualifications, report your actual degree and relevant experience. The employer decides equivalency; this guide is not an eligibility determination.\n- You review and submit the final application yourself. Save the confirmation and email afterward, then record the application as submitted. Until then its status remains not submitted.',
+    `On **Preliminary questions → Cover letter → Additional attachments**, choose **${config.sources.coverPdf.path}** (10 MB maximum). Confirm the uploaded filename. For **How did you hear about this job?**, choose the truthful source offered by the dropdown. If Civic Match is absent and you found this specific opening there, choose **Other** and enter **Civic Match by Work for America** under **If other, how?** Do not claim a personal referral unless one actually occurred. Preferred first/last name may be **Jamie / Burkart** if still preferred; do not substitute these for any separately requested legal-name fields.`,
+    '- Check name, matching email fields, phone, saved experience/education, portfolio link, attached PDF, and hiring-team message. Optional Facebook and X fields may stay blank.\n- Click **Next**. Beyond the preliminary fields above, later screening questions were **not observed** for this application; answer the questions actually shown, from your records. Do not infer a civil-service status, credential, work authorization, or consent answer from a job title.\n- If asked about minimum qualifications, report your actual degree and relevant experience. The employer decides equivalency; this guide is not an eligibility determination.\n- You review and submit the final application yourself. Save the confirmation and email afterward, then record the application as submitted. Until then its status remains not submitted.',
     '## Evidence and maintenance',
-    'Field labels and the 10 MB limit come from Jamie-provided SmartRecruiters screenshots. The expanded Experience/Education controls are carried forward from the earlier application on the same platform, not presented as newly inspected controls for this opening. No later-page coverage or successful live submission is claimed.',
+    'Field labels and the 10 MB limit come from Jamie-provided SmartRecruiters screenshots, including the later cover-letter upload and source/preferred-name questions. The expanded Experience/Education controls are carried forward from the earlier application on the same platform, not presented as newly inspected controls for every opening. Remaining screening questions were not observed; no successful live submission is claimed.',
     'The sibling `application-guide.json` records the reviewed résumé, PDF, and letter hashes. Descriptions are extracted from the canonical résumé; the hiring message is extracted from the canonical letter. Source changes fail the deterministic guide check until the material is reviewed and this guide is regenerated. No new hiring-reader pass is asserted for this mechanical application guide.',
   );
   return `${sections.join('\n\n')}\n`;
@@ -85,7 +91,7 @@ export function renderGuide(config, sources) {
 
 export function evaluateGuide(config, sources, guide) {
   const failures = [];
-  for (const kind of ['resume', 'letter', 'pdf']) {
+  for (const kind of ['resume', 'letter', 'pdf', 'coverPdf']) {
     if (!sources[kind]) { failures.push(`missing_source:${kind}`); continue; }
     if (hash(sources[kind]) !== config.sources[kind].sha256) failures.push(`source_changed:${kind}`);
     if (!config.sources[kind].path.includes(config.jobId)) failures.push(`wrong_job:${kind}`);
@@ -106,6 +112,8 @@ export function evaluateGuide(config, sources, guide) {
   if (experienceCount !== config.expectedExperienceCount) failures.push('experience_count_mismatch');
   if (sources.pdf.subarray(0, 5).toString() !== '%PDF-') failures.push('invalid_pdf');
   if (sources.pdf.length > 10_000_000) failures.push('pdf_exceeds_upload_limit');
+  if (sources.coverPdf.subarray(0, 5).toString() !== '%PDF-') failures.push('invalid_cover_pdf');
+  if (sources.coverPdf.length > 10_000_000) failures.push('cover_pdf_exceeds_upload_limit');
   if (guide !== renderGuide(config, sources)) failures.push('guide_missing_or_stale');
   return failures;
 }
@@ -124,7 +132,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
     const guidePath = resolve(dirname(configPath), config.guide);
     let guide = '';
     try { guide = readFileSync(guidePath, 'utf8'); } catch { /* a missing guide fails */ }
-    if (process.argv.includes('--write') && Object.keys(sources).length === 3) {
+    if (process.argv.includes('--write') && Object.keys(sources).length === 4) {
       const candidate = renderGuide(config, sources);
       const preflight = evaluateGuide(config, sources, candidate);
       if (!preflight.length) { writeFileSync(guidePath, candidate); guide = candidate; }

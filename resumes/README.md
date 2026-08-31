@@ -156,12 +156,20 @@ Linotype for the name, Oswald for accents, and Karla for body text. Preserve
 the actual native document formatting, including paragraph overrides, rather
 than reconstructing the layout from those few recorded tokens.
 
-**Current state (2026-08-31): pending signature image.** Inspection of the native
-document objects and exported PDF found a typed closing but no signature image.
-No signed cover-letter PDFs or passing visual receipts have been generated.
-The readiness gate must fail until the actual image and reviewed exports exist.
-This implementation adds the contract and checks; it is not an unattended
-Google Docs exporter. Do not point application guides at missing PDF files.
+**Current state (2026-08-31): nine signed native PDF exports reviewed.** Jamie
+supplied a corrected specimen containing the actual inline signature. Its image
+hash matches the image in every exported letter; all nine PDFs were rasterized
+and visually inspected. The original specimen is unchanged. No private source
+text, private locator, or standalone signature image is committed. The earlier
+missing-signature observation applied to the superseded specimen, not this one.
+The Markdown wording is unchanged. The expired benchmark remains do-not-submit.
+
+The [OTI packet index](./OTI-Application-Packets.md) links the current files.
+`scripts/cover-letters/native-letter.mjs` composes requests from public Markdown
+and observed image anchors; it neither reads private specimens nor executes
+Google API writes. Native copying, trusted readback, connector writes, export,
+and visual review remain explicit operations. Body paragraph spacing is adapted
+to 8 pt for letter readability; the header and closing retain 2 pt spacing.
 
 ### Native Google Docs rendering workflow
 
@@ -209,6 +217,9 @@ npm run evals:cover-letters
 
 The normal cover-letter evaluator runs this deterministic PDF gate before the
 model-review gate, and therefore fails while signed siblings are missing.
+`inspect-native-pdf.py` adds parser-level checks of exact Markdown text, link
+destinations, the decoded signature-image hash, native renderer, page geometry,
+and upload size. It requires `pypdf` and does not create visual-review receipts.
 The structural PDF preflight is deliberately limited to native exports. Finding
 an image resource does not identify a signature; native-export provenance and
 signature identity require the exact-artifact inspection receipt. The test

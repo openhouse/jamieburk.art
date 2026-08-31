@@ -1,31 +1,17 @@
-# Application guide: NYC OTI Operations Manager — 789810
+# Application guide: NYC OTI Senior Product Designer — 782373
 
-For Jamie Burkart. Packet reviewed 2026-08-31; posting last checked 2026-08-30. This is a preparation guide, not a submitted application.
+For Jamie Burkart. Packet reviewed 2026-08-31; posting last checked 2026-08-20. This is a preparation guide, not a submitted application.
 
 ## 1. Open the right application
 
-[Official posting and Apply button](https://cityjobs.nyc.gov/job/operations-manager-in-brooklyn-jid-46143). The posting was checked on 2026-08-30 and lists **2026-10-04** as its closing date. Recheck it before submitting. Confirm **Operations Manager**, **OTI**, **Brooklyn**, and **Job ID 789810**; similar titles can refer to different openings.
-
-### Discovery, personal connections, and the formal application
-
-Civic Match adds candidate discovery, invitations, application tracking, and staff-assisted matching to the employer's formal application route. A personal introduction may be possible; membership does not guarantee an OTI referral, interview, or hiring preference.
-
-The Civic Match Operations Manager card is a provisional match to this opening, not a verified duplicate: its destination has not yet been inspected. Open View & Apply and confirm employer and Job ID 789810 before using this packet. Do not match on title alone.
-
-The supplied Civic Match card displays October 3; the employer posting displays October 4, 2026. Retain both observations and plan around October 3 until reconciled; do not assume a time-zone explanation.
-
-Qualification check: the official title is IT Project Specialist. Confirm which education-and-experience route your history satisfies. The advertised $75,000–$160,000 range does not guarantee your $100,000 minimum.
-
-Use the employer's application system, retaining any legitimate Civic Match referral route. Submit once per employer Job ID. Save the employer confirmation before manually marking the role applied in Civic Match. A saved job or profile approval is not an application.
-
-Optional next step, for Jamie to send: ask Civic Match whether staff can advise on this exact Job ID or offer a relevant introduction. Do not wait for an introduction to meet the application deadline. No outreach or application has been sent by this guide.
+[Official posting and Apply button](https://cityjobs.nyc.gov/job/senior-product-designer-in-brooklyn-jid-44505). The posting was checked on 2026-08-20 and lists **2026-10-16** as its closing date. Recheck it before submitting. Confirm **Senior Product Designer**, **OTI**, **Brooklyn**, and **Job ID 782373**; similar titles can refer to different openings.
 
 ## 2. Download your application files
 
-- [Tailored résumé PDF](./Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.pdf) — download the file from GitHub; do not upload a screenshot or a GitHub page.
-- [Résumé Markdown](./Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.md)
-- [Signed cover-letter PDF](./Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Operations-Manager-789810.pdf)
-- [Tailored cover-letter Markdown](./Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Operations-Manager-789810.md)
+- [Tailored résumé PDF](./Jamie-Burkart-Resume-NYC-OTI-PIT-Senior-Product-Designer-782373.pdf) — download the file from GitHub; do not upload a screenshot or a GitHub page.
+- [Résumé Markdown](./Jamie-Burkart-Resume-NYC-OTI-PIT-Senior-Product-Designer-782373.md)
+- [Signed cover-letter PDF](./Jamie-Burkart-Cover-Letter-NYC-OTI-PIT-Senior-Product-Designer-782373.pdf)
+- [Tailored cover-letter Markdown](./Jamie-Burkart-Cover-Letter-NYC-OTI-PIT-Senior-Product-Designer-782373.md)
 
 Upload the tailored résumé PDF alone in **Resume**. Do not append the cover letter. The later screenshot shows **Preliminary questions → Cover letter → Additional attachments**: upload the separate signed cover-letter PDF there. A hiring-team message is also available on the first page; the copy-paste body is below.
 
@@ -102,9 +88,9 @@ New York, NY / Remote
 **Description**
 
 ```text
-- Lead end-to-end web product, design, and engineering engagements, turning ambiguous stakeholder needs into owned work, sequenced plans, resource decisions, testing, launch readiness, maintenance workflows, and handoff documentation.
+- Lead end-to-end product, web, and visual-design engagements, turning ambiguous stakeholder needs into research questions, service journeys, information architecture, content structure, prototypes, responsive interfaces, testing, launch plans, and maintainable handoffs.
 - Led e-commerce, analytics, content, marketing, and operations for Harry J. Epstein Company, contributing to 2x revenue growth while helping an 80+ year-old industrial business modernize without losing its trusted voice.
-- Build maintainable publishing systems, campaign hubs, resource libraries, data workflows, and web infrastructure; preserve briefs, decisions, reusable patterns, and post-launch learning so teams can continue the work.
+- Build maintainable publishing systems, campaign hubs, resource libraries, data workflows, and web infrastructure; preserve design decisions, reusable patterns, and post-launch learning so teams can continue the work.
 ```
 
 - **From:** 2009 — confirm the actual month (and day only if requested) from your records.
@@ -140,9 +126,9 @@ New York, NY
 **Description**
 
 ```text
-- Help turn stakeholder listening, public testimony, and coalition priorities into buildable plans, campaign websites, public forums, policy communications, calls to action, and sustained government-facing follow-through.
+- Turn stakeholder listening and public testimony into campaign identities, websites, issue explainers, maps, visual meeting tools, public forums, calls to action, and sustained government-facing communications.
 - Built and stewarded 30+ pages of shared campaign memory for a 2026 Commercial Rent Stabilization collaboration, connecting running minutes, decision records, action items, legal and policy questions, media assets, public-data framing, and city/state strategy lanes.
-- Maintain shared status, decisions, owners, risks, and next actions; facilitate challenging meetings; brief elected officials and staff; and represent the work publicly while preserving collective credit and sensitive boundaries.
+- Implement and maintain public-facing campaign systems; facilitate challenging meetings; brief and work directly with elected officials and staff; and represent the work in public testimony, presentations, and press while preserving collective credit and sensitive boundaries.
 ```
 
 - **From:** 2017 — confirm the actual month (and day only if requested) from your records.
@@ -178,8 +164,8 @@ New York, NY / Remote
 **Description**
 
 ```text
-- Co-founded, co-built, and operated with Richard Caceres a natural-language community-calendar and discovery platform for DIY arts and music organizers, replacing a complex event form with collaboratively editable text, followable keyword communities, weekly digests, profiles, embeds, and calendar connections.
-- Connected participatory discovery with hands-on implementation, organizer onboarding, support, adoption, public communication, instrumentation, and low-cost production operations across a distributed maintainer network.
+- Co-founded, co-designed, built, and operated with Richard Caceres a natural-language community-calendar and discovery platform for DIY arts and music organizers, replacing a complex event form with collaboratively editable text, followable keyword communities, weekly digests, profiles, embeds, and calendar connections.
+- Connected participatory discovery with hands-on prototyping, implementation, organizer onboarding, usability feedback, support, adoption, public communication, instrumentation, and low-cost production operations across a distributed maintainer network.
 - Operated across 35 city ecosystems, supporting local organizers who used WOW List to run community calendars, websites, and email lists for their own scenes.
 ```
 
@@ -217,7 +203,7 @@ New York, NY
 
 ```text
 - Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.
-- Took the civic prototype from problem definition and information architecture through implementation and public release. The archived site is unofficial and not a current City service.
+- Took the civic prototype from problem definition and information architecture through content structure, interface implementation, and public release. The archived site is unofficial and not a current City service.
 ```
 
 - **From:** 2016 — confirm the actual month (and day only if requested) from your records.
@@ -253,8 +239,8 @@ Kansas City, MO
 **Description**
 
 ```text
-- Co-led planning, public-benefit documentation, vendor coordination, and municipal compliance for adaptive reuse of an approximately 6,500 sq. ft. historic building into four commercial spaces and three homes.
-- Helped deliver Tired of Tires, a recurring free resident service connecting household eligibility, form and phone intake, scheduled field collection, City recycling coordination, volunteer participation, and public result reporting; public records document Jamie's participation in pickup operations.
+- Co-led participatory planning, public-benefit and visual documentation, vendor coordination, and municipal compliance for adaptive reuse of an approximately 6,500 sq. ft. historic building into four commercial spaces and three homes.
+- Helped deliver Tired of Tires, a recurring free resident service connecting household eligibility, print and web outreach, form and phone intake, scheduled field collection, City recycling coordination, volunteer participation, and public result reporting; public records document Jamie's participation in pickup operations.
 - Co-developed the successful CCED proposal and served as the City's named developer/presenter for a $490,539 public funding request, remained a documented developer point of contact through compliance progress, and later transitioned the project to a mission-aligned organization.
 ```
 
@@ -328,7 +314,7 @@ https://jamieburk.art/
 
 ## 7. Resume upload
 
-Choose **Jamie-Burkart-Resume-NYC-OTI-SPEED-Operations-Manager-789810.pdf** in the required **Resume** field. Wait for the filename/upload confirmation. Reopen the selected PDF and verify **Operations Manager — 789810**, rather than relying on a similar filename from another application.
+Choose **Jamie-Burkart-Resume-NYC-OTI-PIT-Senior-Product-Designer-782373.pdf** in the required **Resume** field. Wait for the filename/upload confirmation. Reopen the selected PDF and verify **Senior Product Designer — 782373**, rather than relying on a similar filename from another application.
 
 ## 8. Message to the Hiring Team — copy and paste
 
@@ -337,13 +323,13 @@ This is the existing tailored cover-letter body, without its contact header. No 
 ```text
 Dear NYC Office of Technology and Innovation Hiring Team,
 
-With Tired of Tires, a discarded tire was never only a disposal problem. For a resident, it could be an expense, a hazard, or one more sign that the conditions outside the front door did not matter. The recurring free service connected print and web outreach, form and phone intake, scheduled field collection, volunteer participation, public reporting, and a City recycling handoff. I helped deliver the pickup operations and co-built the structures around them. What made the service usable was not one heroic collection day; it was a dependable chain of people, information, equipment, dates, and next actions.
+At a coalition working session at Shoestring Press, I crouched in a garden circle beside shared handwritten notes while participants tried to align around the work ahead. The notes made a difficult conversation visible: names, relationships, unresolved questions, and possible next actions could be pointed to, revised, and shared. That moment has stayed with me because it names what design often does before there is an interface. It gives people a common object through which they can understand one another and decide what happens next.
 
-That is the kind of operating problem I would be glad to take on as SPEED Operations Manager. Across KC Town Hall, Thick Arts, WOW List, NYC Artist Coalition, and FairRentNYC, I have translated ambiguous incoming needs into owned work; coordinated vendors, collaborators, technical systems, public-benefit requirements, and government-facing dependencies; and maintained the status, decisions, risks, and documentation that let other people act. KC Town Hall joined municipal compliance and vendor coordination to a $490,539 public funding request. Thick Arts joined product delivery to the practical operations of an enduring small business. FairRentNYC’s shared campaign memory gives a distributed coalition one place to recover decisions, owners, and unresolved questions.
+I would bring that practice to the PIT Crew Senior Product Designer role. Across Thick Arts, CallNYC, WOW List, Let NYC Dance, NYC Artist Coalition, FairRentNYC, and KC Town Hall, I have moved from resident and stakeholder listening through journey framing, information architecture, content and interaction design, graphic and web design, prototyping, implementation, public launch, support, and iteration. Because I also build front-end and publishing systems, I design with engineering handoff, responsive behavior, maintainability, source boundaries, and real operating constraints in view.
 
-The decisive point for me is this: operational rigor is not paperwork around the work. It is the means by which budgets, procurement, legal and cyber review, staffing, product dependencies, and team health become legible enough to manage honestly. My role is to establish only the structure the team needs, surface the blocked decision early, and remove process when its cost exceeds its value.
+CallNYC translated constituent-services data into issue pages and next-step guidance, while remaining explicit that the independent prototype was not an official City service. WOW List replaced a complex event form with a single collaboratively editable text field. Tired of Tires joined a flyer and web surface to form and phone intake, field collection, City recycling, and public reporting. The decisive test in each case was not visual polish alone. It was whether the designed surface helped a person enter the system, understand what was possible, and act without being asked to know how the whole institution worked.
 
-I would welcome a structured conversation about how SPEED receives requests, allocates resources, tracks financial and delivery health, and learns across projects. A strong operating system should leave the team less dependent on any one person and more able to keep its commitments to the New Yorkers waiting on the other side of a permit.
+I would welcome a structured design exercise around one resident service: listen for the real question, map the journey and hidden handoffs, prototype the smallest useful path in plain language, test it with the people who must use and operate it, and identify what accessibility and trust require before launch. The durable result should be a service residents can navigate and a design system the City can keep learning through after the first release.
 
 Warmly,
 
@@ -352,7 +338,7 @@ Jamie Burkart
 
 ## 9. Next, review, and submit
 
-On **Preliminary questions → Cover letter → Additional attachments**, choose **Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Operations-Manager-789810.pdf** (10 MB maximum). Confirm the uploaded filename. For **How did you hear about this job?**, choose the truthful source offered by the dropdown. If Civic Match is absent and you found this specific opening there, choose **Other** and enter **Civic Match by Work for America** under **If other, how?** Do not claim a personal referral unless one actually occurred. Preferred first/last name may be **Jamie / Burkart** if still preferred; do not substitute these for any separately requested legal-name fields.
+On **Preliminary questions → Cover letter → Additional attachments**, choose **Jamie-Burkart-Cover-Letter-NYC-OTI-PIT-Senior-Product-Designer-782373.pdf** (10 MB maximum). Confirm the uploaded filename. For **How did you hear about this job?**, choose the truthful source offered by the dropdown. If Civic Match is absent and you found this specific opening there, choose **Other** and enter **Civic Match by Work for America** under **If other, how?** Do not claim a personal referral unless one actually occurred. Preferred first/last name may be **Jamie / Burkart** if still preferred; do not substitute these for any separately requested legal-name fields.
 
 - Check name, matching email fields, phone, saved experience/education, portfolio link, attached PDF, and hiring-team message. Optional Facebook and X fields may stay blank.
 - Click **Next**. Beyond the preliminary fields above, later screening questions were **not observed** for this application; answer the questions actually shown, from your records. Do not infer a civil-service status, credential, work authorization, or consent answer from a job title.

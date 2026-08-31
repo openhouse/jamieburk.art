@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "opportunityId": "opportunity.aclu.senior-project-manager.8620968002",
+  "markdownSha256": "24a07a70be2f1caee9f81969d9c4b37014c4caa14eee115b56439c84d088b16d",
+  "pdfSha256": "78b93b15b567b33080e4d291ec3db67aa60beacfaaa5df870564e722112cc576",
+  "styleSha256": "80fa886d021330cfd14a3e1682d2f6d1fd3ddc07c75319b1a1d9a045184ae3b9",
+  "signatureImageSha256": "eaab41cfd1e19f03d3dff1970210e5003b55303b110d8a6e10474863c2e645d4",
+  "export": {
+    "engine": "google-docs-native",
+    "specimenUnchanged": true,
+    "privateLocatorsOmitted": true
+  },
+  "inspection": {
+    "reviewedAt": "2026-08-31T16:56:46Z",
+    "allPagesRasterized": true,
+    "actualNamedPeopleParticipated": false,
+    "textMatchesMarkdown": true,
+    "linksChecked": true,
+    "noSpecimenContent": true,
+    "pages": [
+      {
+        "page": 1,
+        "layout": "pass",
+        "typography": "pass",
+        "signatureMatchesApprovedImage": true
+      }
+    ]
+  }
+}

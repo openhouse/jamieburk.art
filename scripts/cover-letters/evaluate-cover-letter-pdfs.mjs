@@ -76,6 +76,9 @@ export function evaluateCoverLetterPdfs({ portfolio, policy, readArtifact: read 
     const letterPage = /\/MediaBox\s*\[\s*0(?:\.0+)?\s+0(?:\.0+)?\s+612(?:\.0+)?\s+792(?:\.0+)?\s*\]/.test(pdfText);
     const historical = /expired|historical|benchmark/.test(target.status);
     failUnless(policyReady, "invalid-policy");
+    failUnless(policy?.specimen?.signatureImageFound === true && policy.specimen.accessMode === 'read-only' &&
+      policy.specimen.privateLocatorCommitted === false && policy.specimen.sourceContentCopiedIntoRepository === false,
+    'specimen-not-verified');
     failUnless(signatureReady, "signature-not-ready");
     failUnless(md?.length > 0, "markdown-missing");
     failUnless(pdfValid, "pdf-missing-or-invalid");

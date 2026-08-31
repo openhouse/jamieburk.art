@@ -8,6 +8,7 @@ const hash = value => createHash("sha256").update(value).digest("hex");
 const portfolio = { versions: [{ opportunityId: "example.role", status: "live-priority", coverLetterPath: "resumes/example/Letter.md" }] };
 const policy = {
   schemaVersion: 1,
+  specimen: { signatureImageFound: true, accessMode: 'read-only', privateLocatorCommitted: false, sourceContentCopiedIntoRepository: false },
   style: { bodyFont: "Karla", bodySizePt: 10 },
   signature: { status: "available", approvedForCoverLetters: true, imageSha256: "a".repeat(64) },
 };
@@ -49,6 +50,12 @@ test("missing signature fails even with a PDF and a claimed visual pass", () => 
   const result = fixture().run({ policy: { ...policy, signature: { status: "missing", approvedForCoverLetters: false, imageSha256: null } } });
   assert.equal(result.pass, false);
   assert.ok(result.versions[0].failures.includes("signature-not-ready"));
+});
+test("a signature-ready assertion cannot override an unverified or exposed specimen", () => {
+  for (const change of [{ signatureImageFound: false }, { privateLocatorCommitted: true }, { sourceContentCopiedIntoRepository: true }, { accessMode: 'modified' }]) {
+    const result = fixture().run({ policy: { ...policy, specimen: { ...policy.specimen, ...change } } });
+    assert.ok(result.versions[0].failures.includes('specimen-not-verified'));
+  }
 });
 test("missing PDF cannot pass on a receipt alone", () => {
   const f = fixture(); delete f.files["resumes/example/Letter.pdf"];

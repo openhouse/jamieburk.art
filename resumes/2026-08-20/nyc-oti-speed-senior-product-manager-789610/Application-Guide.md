@@ -1,6 +1,6 @@
 # Application guide: NYC OTI Senior Product Manager — 789610
 
-For Jamie Burkart. Reviewed 2026-08-30. This is a preparation guide, not a submitted application.
+For Jamie Burkart. Packet reviewed 2026-08-31; posting last checked 2026-08-30. This is a preparation guide, not a submitted application.
 
 ## 1. Open the right application
 
@@ -24,9 +24,10 @@ Optional next step, for Jamie to send: ask Civic Match whether staff can advise 
 
 - [Tailored résumé PDF](./Jamie-Burkart-Resume-NYC-OTI-SPEED-Senior-Product-Manager-789610.pdf) — download the file from GitHub; do not upload a screenshot or a GitHub page.
 - [Résumé Markdown](./Jamie-Burkart-Resume-NYC-OTI-SPEED-Senior-Product-Manager-789610.md)
-- [Tailored cover letter](./Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Senior-Product-Manager-789610.md)
+- [Signed cover-letter PDF](./Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Senior-Product-Manager-789610.pdf)
+- [Tailored cover-letter Markdown](./Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Senior-Product-Manager-789610.md)
 
-Upload the tailored résumé PDF alone in **Resume**. Do not append the cover letter: paste its body into **Message to the Hiring Team** below. No separate cover-letter upload is visible in the supplied screenshots, and the posting does not request a combined document.
+Upload the tailored résumé PDF alone in **Resume**. Do not append the cover letter. The later screenshot shows **Preliminary questions → Cover letter → Additional attachments**: upload the separate signed cover-letter PDF there. A hiring-team message is also available on the first page; the copy-paste body is below.
 
 The **Easy Apply** upload at the top is optional autocomplete, not a separate application requirement. You can skip it and fill the form manually. If you already used it, check every imported entry; do not reset accurate work unnecessarily. Confirm the final **Resume** field actually contains the intended PDF. The displayed upload limit is **10 MB**.
 
@@ -76,7 +77,7 @@ Copy the phone number from the contact line of the linked tailored résumé, wit
 
 The current screenshots show **Experience → Add**. The expanded labels below were observed in the earlier SmartRecruiters application: **Title** (required), **Company**, **Office location**, **Description**, **From** (required), **To** (required unless current), **I currently work here**, **Save**. Reconcile with the form if its labels differ.
 
-**Dates requiring your confirmation:** the résumé records years, not months or days. Do not invent January/December dates or count overlapping projects as additional full-time years. If the form requires more precision, use your own records. These are founder, project, and community roles; listing them does not assert that each was a separate full-time salaried job or government employment.
+**Month-level research is partial:** the notes below distinguish corroborated months, legal-entity formation, year-only evidence, and unresolved conflicts. Do not invent January/December dates or count overlapping projects as additional full-time years. These are founder, project, and community roles; listing them does not assert that each was a separate full-time salaried job or government employment. See the [shared date-evidence ledger](../../../evals/application-guides/experience-dates.json).
 
 ### Experience 1: THICK ARTS LLC
 
@@ -109,6 +110,8 @@ New York, NY / Remote
 - **From:** 2009 — confirm the actual month (and day only if requested) from your records.
 
 - **To:** Leave empty when the current-work checkbox disables it.
+
+**Date research (2026-08-31):** The public filing verifies July 2012 (July 6) as the LLC's formation, not the start month of the earlier independent practice recorded from 2009. If entering the legal entity alone, July 2012 is the supported formation month; confirm how you want the earlier practice represented before submitting. Do not enter a guessed month in 2009.
 
 - **I currently work here:** Yes, if still current when you submit.
 
@@ -146,6 +149,8 @@ New York, NY
 
 - **To:** Leave empty when the current-work checkbox disables it.
 
+**Date research (2026-08-31):** The grouped resume range begins in 2017. Earlier CVs separate NYC Artist Coalition (2017) from FairRentNYC (2018), without start months. Confirm the start month for the grouped entry; do not imply both organizations began together.
+
 - **I currently work here:** Yes, if still current when you submit.
 
 - Click **Save** before adding the next entry.
@@ -182,6 +187,8 @@ New York, NY / Remote
 
 - **To:** 2020 — confirm the actual month (and day only if requested).
 
+**Date research (2026-08-31):** The tailored resume says 2015–2020; earlier Jamie-authored career records say 2014–December 2022. These may describe different phases, but that has not been resolved. Confirm the intended active-role interval and both months; do not silently choose one chronology.
+
 - **I currently work here:** No.
 
 - Click **Save** before adding the next entry.
@@ -217,6 +224,8 @@ New York, NY
 
 - **To:** 2016 — confirm the actual month (and day only if requested).
 
+**Date research (2026-08-31):** The 2016 year is supported. A January hackathon is a project milestone, not proof of the start or end month of this experience entry. Both months remain unconfirmed.
+
 - **I currently work here:** No.
 
 - Click **Save** before adding the next entry.
@@ -251,7 +260,9 @@ Kansas City, MO
 
 - **From:** 2015 — confirm the actual month (and day only if requested) from your records.
 
-- **To:** 2024 — confirm the actual month (and day only if requested).
+- **To:** April 2024 — corroborated in earlier first-party CVs; confirm before submission.
+
+**Date research (2026-08-31):** April 2024 is corroborated as the project-role end in multiple Jamie-authored earlier CVs. The 2015 start month remains unconfirmed. The LLC's later formation and the tire project's collection dates do not establish this role's start month.
 
 - **I currently work here:** No.
 
@@ -343,13 +354,15 @@ Jamie Burkart
 
 ## 9. Next, review, and submit
 
+On **Preliminary questions → Cover letter → Additional attachments**, choose **Jamie-Burkart-Cover-Letter-NYC-OTI-SPEED-Senior-Product-Manager-789610.pdf** (10 MB maximum). Confirm the uploaded filename. For **How did you hear about this job?**, choose the truthful source offered by the dropdown. If Civic Match is absent and you found this specific opening there, choose **Other** and enter **Civic Match by Work for America** under **If other, how?** Do not claim a personal referral unless one actually occurred. Preferred first/last name may be **Jamie / Burkart** if still preferred; do not substitute these for any separately requested legal-name fields.
+
 - Check name, matching email fields, phone, saved experience/education, portfolio link, attached PDF, and hiring-team message. Optional Facebook and X fields may stay blank.
-- Click **Next**. Later screening questions were **not observed** for this application; answer the questions actually shown, from your records. Do not infer a civil-service status, credential, work authorization, or consent answer from a job title.
+- Click **Next**. Beyond the preliminary fields above, later screening questions were **not observed** for this application; answer the questions actually shown, from your records. Do not infer a civil-service status, credential, work authorization, or consent answer from a job title.
 - If asked about minimum qualifications, report your actual degree and relevant experience. The employer decides equivalency; this guide is not an eligibility determination.
 - You review and submit the final application yourself. Save the confirmation and email afterward, then record the application as submitted. Until then its status remains not submitted.
 
 ## Evidence and maintenance
 
-Field labels and the 10 MB limit come from Jamie-provided SmartRecruiters screenshots. The expanded Experience/Education controls are carried forward from the earlier application on the same platform, not presented as newly inspected controls for this opening. No later-page coverage or successful live submission is claimed.
+Field labels and the 10 MB limit come from Jamie-provided SmartRecruiters screenshots, including the later cover-letter upload and source/preferred-name questions. The expanded Experience/Education controls are carried forward from the earlier application on the same platform, not presented as newly inspected controls for every opening. Remaining screening questions were not observed; no successful live submission is claimed.
 
 The sibling `application-guide.json` records the reviewed résumé, PDF, and letter hashes. Descriptions are extracted from the canonical résumé; the hiring message is extracted from the canonical letter. Source changes fail the deterministic guide check until the material is reviewed and this guide is regenerated. No new hiring-reader pass is asserted for this mechanical application guide.
