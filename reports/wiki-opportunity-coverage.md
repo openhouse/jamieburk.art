@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity requirement coverage
 
-**Wiki fingerprint:** `31663d28b762e4d75bd2c12264103b700f7f19d51ff22eb5ec19305062bfead9`
+**Wiki fingerprint:** `27afac39e74b521c997131bff364951dbf4aad94786db9486c2f911a8d142bd4`
 
 Statuses preserve the difference between visible proof, Wiki-only proof, source work, experience gaps, and hard screens.
 
@@ -126,6 +126,15 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 | `requirement.permitflow.product-data` | critical | visible-weak | experience | Test present SQL and analytics fluency; do not imply tools Jamie cannot demonstrate. |
 | `requirement.permitflow.cross-functional-launch` | critical | visible-qualified | wording | Prepare one cross-functional launch sequence with actors and decisions. |
 | `requirement.permitflow.ai-automation` | important | visible-proven | none | Demonstrate the bounded workflow, not a generic enthusiasm claim. |
+
+## NYC PEU - Chief Strategy Officer 787960
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.peu-chief-strategy-officer-787960.outreach-operations` | critical | visible-qualified | role-context | Lead with one field-service example and one New York organizing example while preserving collective credit. |
+| `requirement.peu-chief-strategy-officer-787960.data-learning-loop` | critical | visible-qualified | public-projection | Prepare one exact, source-backed example of data changing a program goal or operating decision. |
+| `requirement.peu-chief-strategy-officer-787960.interagency-facilitation` | critical | visible-qualified | public-projection | Use a bounded coalition or public-agency interface example that states Jamie's role and institutional authority precisely. |
+| `requirement.peu-chief-strategy-officer-787960.people-management` | critical | unknown | hard-screen | Complete a fact-finding chronology before writing or submitting any management answer. |
 
 ## Protected source-backed team-memory consulting lead
 

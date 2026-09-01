@@ -3,7 +3,7 @@
 
 **Source commit:** `29745b537e57bab69f5ddc6207c3ab6e8fbd8e38`
 **Generation time:** 2026-08-31T19:49:24-04:00
-**Source fingerprint:** `58618688c7258813c8659a6ae82556ff86cc9ce4dfa32b7f274081ec2ba8270c`
+**Source fingerprint:** `27afac39e74b521c997131bff364951dbf4aad94786db9486c2f911a8d142bd4`
 
 - [Scenes and Places of Work](../../indexes/scenes-and-places-of-work.md) - `informed_by` (frontmatter)
 - [Identity Systems as Shared Infrastructure](../../methods/identity-systems-as-shared-infrastructure.md) - `informed_by` (frontmatter)

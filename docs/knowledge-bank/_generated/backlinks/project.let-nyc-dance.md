@@ -3,7 +3,7 @@
 
 **Source commit:** `29745b537e57bab69f5ddc6207c3ab6e8fbd8e38`
 **Generation time:** 2026-08-31T19:49:24-04:00
-**Source fingerprint:** `58618688c7258813c8659a6ae82556ff86cc9ce4dfa32b7f274081ec2ba8270c`
+**Source fingerprint:** `27afac39e74b521c997131bff364951dbf4aad94786db9486c2f911a8d142bd4`
 
 - [Let NYC Dance: 1926 2017 [xyqgow5w]](../../assets/photographs/project-sites/let-nyc-dance-1926-2017-xyqgow5wnp.md) - `related_to` (frontmatter)
 - [Let NYC Dance: 1926 cabaret law b [s4gqqime]](../../assets/photographs/project-sites/let-nyc-dance-1926-cabaret-law-b-s4gqqimexc.md) - `related_to` (frontmatter)
@@ -39,6 +39,7 @@
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `prose_link` (markdown)
 - [Living archive and missing-page map](../../indexes/living-archive.md) - `related_to` (frontmatter)
 - [Project lineages](../../indexes/project-lineages.md) - `prose_link` (markdown)
+- [NYC PEU - Chief Strategy Officer 787960](../../opportunities/peu-chief-strategy-officer-787960.md) - `related_to` (frontmatter)
 - [NYC Artist Coalition organization map](../../organizations/nyc-artist-coalition.md) - `prose_link` (markdown)
 - [NYC Artist Coalition organization map](../../organizations/nyc-artist-coalition.md) - `related_to` (frontmatter)
 - [Small Cultural Spaces Where Culture Is Born](../../places/small-cultural-spaces.md) - `related_to` (frontmatter)

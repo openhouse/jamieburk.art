@@ -22,6 +22,28 @@ test('employer-scoped observed job ID establishes identity and retains the obser
 test('an inspected official destination URL can establish identity without a card job ID', () => {
   assert.equal(reconcileSource({ ...card, destinationUrl: jobs[0].postingUrl }, jobs).status, 'matched');
 });
+test('a verified official posting can reconcile a distinct discovery application route', () => {
+  const observation = {
+    ...card,
+    employerId: 'nyc-peu',
+    title: 'Chief Strategy Officer',
+    discoveryDestinationUrl: 'https://docs.google.com/forms/d/example/viewform',
+    verifiedOfficialPostingUrl: 'https://cityjobs.nyc.gov/job/chief-strategy-officer-in-manhattan-jid-45904',
+    officialContentMatchFields: ['title', 'salary', 'location', 'role-description']
+  };
+  const official = {
+    employerId: 'nyc-peu',
+    jobId: '787960',
+    title: 'Chief Strategy Officer',
+    postingUrl: observation.verifiedOfficialPostingUrl,
+    deadline: '2026-09-27'
+  };
+  const result = reconcileSource(observation, [...jobs, official]);
+  assert.equal(result.status, 'matched');
+  assert.equal(result.canonicalKey, 'nyc-peu:787960');
+  assert.equal(result.observation.discoveryDestinationUrl, observation.discoveryDestinationUrl);
+  assert.equal(result.submissionEvidence, false);
+});
 test('conflicting ID and destination URL cannot silently merge', () => {
   assert.equal(reconcileSource({ ...card, observedJobId: '782366', destinationUrl: jobs[0].postingUrl }, jobs).status, 'conflict');
 });
@@ -90,7 +112,24 @@ test('configured screening thresholds are respected', () => {
   assert.equal(screenCandidate(good, '2026-08-30', { fitFloor: 95 }).state, 'below-threshold');
 });
 test('complete coverage requires reconciled totals and a terminal page', () => {
-  const complete = { coverage: { status: 'complete', claimedComplete: true, pagesReviewed: 1, totalListings: 2, listingsReviewed: 2, hasMore: false }, candidates: [], observations: [] };
+  const complete = {
+    coverage: { status: 'complete', claimedComplete: true, pagesReviewed: 1, totalListings: 2, listingsReviewed: 2, hasMore: false },
+    inventory: [
+      { index: 1, title: 'First', disposition: 'excluded' },
+      { index: 2, title: 'Second', disposition: 'review-ready' }
+    ], candidates: [], observations: []
+  };
   assert.deepEqual(evaluateReview(complete), []);
   assert.ok(evaluateReview({ ...complete, coverage: { ...complete.coverage, hasMore: true } }).includes('incomplete_coverage_claim'));
+});
+test('complete coverage requires one uniquely indexed disposition per reviewed listing', () => {
+  const coverage = { status: 'complete', claimedComplete: true, pagesReviewed: 2, totalListings: 2, listingsReviewed: 2, hasMore: false };
+  const review = {
+    coverage,
+    inventory: [{ index: 1, title: 'First', disposition: 'excluded' }],
+    candidates: [],
+    observations: []
+  };
+  assert.ok(evaluateReview(review).includes('complete_inventory_missing'));
+  assert.deepEqual(evaluateReview({ ...review, inventory: [...review.inventory, { index: 2, title: 'Second', disposition: 'review-ready' }] }), []);
 });

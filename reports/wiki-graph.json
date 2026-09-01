@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-31T19:49:24-04:00",
   "sourceCommit": "29745b537e57bab69f5ddc6207c3ab6e8fbd8e38",
-  "sourceFingerprint": "58618688c7258813c8659a6ae82556ff86cc9ce4dfa32b7f274081ec2ba8270c",
+  "sourceFingerprint": "27afac39e74b521c997131bff364951dbf4aad94786db9486c2f911a8d142bd4",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3388,7 +3388,7 @@
       "sensitivity": "low",
       "summary": "Task-oriented entry point for live opportunity research, historical role benchmarks, public-only hiring evaluation, and private-boundary rules.",
       "aliases": [],
-      "lastReviewed": "2026-08-31",
+      "lastReviewed": "2026-09-01",
       "reviewBy": "2026-09-14"
     },
     {
@@ -3726,8 +3726,8 @@
       "sensitivity": "low",
       "summary": "Models Civic Match as an authenticated talent-network source with candidate discovery, invitations, tracking, events, and staff-assisted matching.",
       "aliases": [],
-      "lastReviewed": "2026-08-30",
-      "reviewBy": "2026-09-06"
+      "lastReviewed": "2026-09-01",
+      "reviewBy": "2026-09-15"
     },
     {
       "id": "method.collective-credit-protected-absence",
@@ -4081,6 +4081,19 @@
       "reviewBy": "2026-11-13"
     },
     {
+      "id": "opportunity.nyc-peu.chief-strategy-officer.787960",
+      "path": "docs/knowledge-bank/opportunities/peu-chief-strategy-officer-787960.md",
+      "title": "NYC PEU - Chief Strategy Officer 787960",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "High-thematic-fit PEU leadership opportunity joining person-to-person outreach operations, outcome learning, interagency coordination, and public-service delivery, with direct-supervision evidence still unresolved.",
+      "aliases": [],
+      "lastReviewed": "2026-09-01",
+      "reviewBy": "2026-09-08"
+    },
+    {
       "id": "opportunity.permitflow.product-operations.8a6e6066",
       "path": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
       "title": "PermitFlow - Product Operations Manager",
@@ -4134,6 +4147,19 @@
       ],
       "lastReviewed": "2026-08-12",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "organization.nyc-public-engagement-unit",
+      "path": "docs/knowledge-bank/organizations/nyc-public-engagement-unit.md",
+      "title": "NYC Public Engagement Unit",
+      "kind": "organization",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "NYC unit using community-organizing practices, proactive outreach, and case management to connect New Yorkers with services and benefits.",
+      "aliases": [],
+      "lastReviewed": "2026-09-01",
+      "reviewBy": "2026-10-01"
     },
     {
       "id": "person.aileen-palmer",
@@ -5159,9 +5185,9 @@
       "status": "maintained",
       "visibility": "summary-only",
       "sensitivity": "moderate",
-      "summary": "Public program documentation plus a read-only field map of Jamie's existing five-step candidate profile, preserving account and submission privacy.",
+      "summary": "Public program documentation plus public-safe read-only reviews of Civic Match's candidate flow and a complete dated New York-area job-board search.",
       "aliases": [],
-      "lastReviewed": "2026-08-31",
+      "lastReviewed": "2026-09-01",
       "reviewBy": "2026-09-14"
     },
     {
@@ -5490,6 +5516,19 @@
       "reviewBy": "2026-07-21"
     },
     {
+      "id": "source.jobs.peu.chief-strategy-officer.787960",
+      "path": "docs/knowledge-bank/sources/jobs-peu-chief-strategy-officer-787960.md",
+      "title": "NYC Jobs - PEU Chief Strategy Officer 787960",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official City Jobs posting for PEU's Chief Strategy Officer, Job ID 787960, leading outreach strategy, learning loops, outcome use, and interagency partnerships.",
+      "aliases": [],
+      "lastReviewed": "2026-09-01",
+      "reviewBy": "2026-09-08"
+    },
+    {
       "id": "source.jobs.uibk.studio3.postdoc.arch-15927",
       "path": "docs/knowledge-bank/sources/jobs-uibk-studio3-postdoc-arch-15927.md",
       "title": "Official posting - University of Innsbruck ./studio3 postdoc ARCH-15927",
@@ -5748,6 +5787,32 @@
       "aliases": [],
       "lastReviewed": "2026-08-13",
       "reviewBy": "2026-11-13"
+    },
+    {
+      "id": "source.nyc.peu.about",
+      "path": "docs/knowledge-bank/sources/nyc-peu-about.md",
+      "title": "NYC Public Engagement Unit - About PEU",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official NYC description of PEU's community-organizing model for proactive outreach, service navigation, and case management.",
+      "aliases": [],
+      "lastReviewed": "2026-09-01",
+      "reviewBy": "2026-10-01"
+    },
+    {
+      "id": "source.nyc.peu.chief-strategy-officer-interest-form.787960",
+      "path": "docs/knowledge-bank/sources/peu-chief-strategy-officer-interest-form-787960.md",
+      "title": "PEU Chief Strategy Officer Interest Form 787960",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Public PEU interest form for the Chief Strategy Officer search, including the direct-supervision screen, work pattern, resume request, and three 200-word narrative prompts.",
+      "aliases": [],
+      "lastReviewed": "2026-09-01",
+      "reviewBy": "2026-09-08"
     },
     {
       "id": "source.nyc.pit-crew-launch.2026-07-13",
@@ -14115,6 +14180,14 @@
     {
       "from": "index.knowledge-wiki.employment-context",
       "type": "related_to",
+      "to": "opportunity.nyc-peu.chief-strategy-officer.787960",
+      "source": "frontmatter",
+      "href": "../opportunities/peu-chief-strategy-officer-787960.md",
+      "context": "Current PEU leadership opportunity discovered through Civic Match and reconciled to its canonical NYC Jobs posting and distinct PEU interest form."
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
       "to": "opportunity.permitflow.product-operations.8a6e6066",
       "source": "frontmatter",
       "href": "../opportunities/permitflow-product-operations.md",
@@ -14135,6 +14208,14 @@
       "source": "frontmatter",
       "href": "../opportunities/uibk-studio3-postdoc-arch-15927.md",
       "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "organization.nyc-public-engagement-unit",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-public-engagement-unit.md",
+      "context": "Official organizational context for the PEU role; thematic relevance does not establish qualification or hiring outcome."
     },
     {
       "from": "index.knowledge-wiki.employment-context",
@@ -17015,6 +17096,146 @@
       "context": null
     },
     {
+      "from": "opportunity.nyc-peu.chief-strategy-officer.787960",
+      "type": "evidence:context",
+      "to": "source.civic-match.candidate-network",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "dated discovery",
+        "displayed closes-when-filled text",
+        "and the separate PEU interest-form route"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-peu.chief-strategy-officer.787960",
+      "type": "evidence:context",
+      "to": "source.nyc.peu.about",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "PEU mission and outreach model"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-peu.chief-strategy-officer.787960",
+      "type": "evidence:direct-support",
+      "to": "source.jobs.peu.chief-strategy-officer.787960",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official identity",
+        "responsibilities",
+        "qualifications",
+        "salary",
+        "civil-service title",
+        "location",
+        "and deadline"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-peu.chief-strategy-officer.787960",
+      "type": "evidence:direct-support",
+      "to": "source.nyc.peu.chief-strategy-officer-interest-form.787960",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "direct-supervision screen",
+        "experience guidance",
+        "hybrid schedule",
+        "requested materials",
+        "and 200-word narrative prompts"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-peu.chief-strategy-officer.787960",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-peu.chief-strategy-officer.787960",
+      "type": "related_to",
+      "to": "organization.nyc-public-engagement-unit",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-public-engagement-unit.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-peu.chief-strategy-officer.787960",
+      "type": "related_to",
+      "to": "project.callnyc",
+      "source": "frontmatter",
+      "href": "../projects/callnyc.md",
+      "context": "Resident-facing translation of constituent-services data; independent prototype, not an official City service."
+    },
+    {
+      "from": "opportunity.nyc-peu.chief-strategy-officer.787960",
+      "type": "related_to",
+      "to": "project.kc-town-hall.tired-of-tires",
+      "source": "frontmatter",
+      "href": "../projects/tired-of-tires-resident-service.md",
+      "context": "Resident-facing field service, recurring operations, City handoff, reporting, and listening evidence; individual ownership remains bounded."
+    },
+    {
+      "from": "opportunity.nyc-peu.chief-strategy-officer.787960",
+      "type": "related_to",
+      "to": "project.let-nyc-dance",
+      "source": "frontmatter",
+      "href": "../projects/let-nyc-dance.md",
+      "context": "Collective issue advocacy and public-information infrastructure, not sole causation of legislative action."
+    },
+    {
+      "from": "opportunity.nyc-peu.chief-strategy-officer.787960",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": "Coalition facilitation, public communication, government-facing follow-through, and stakeholder synthesis evidence."
+    },
+    {
+      "from": "opportunity.nyc-peu.chief-strategy-officer.787960",
+      "type": "uses_method",
+      "to": "method.civic-match-opportunity-loop",
+      "source": "frontmatter",
+      "href": "../methods/civic-match-opportunity-loop.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-peu.chief-strategy-officer.787960",
+      "type": "uses_source",
+      "to": "source.civic-match.candidate-network",
+      "source": "frontmatter",
+      "href": "../sources/civic-match-candidate-network-2026-08-20.md",
+      "context": "Authenticated discovery source and PEU-interest-form route; not submission evidence."
+    },
+    {
+      "from": "opportunity.nyc-peu.chief-strategy-officer.787960",
+      "type": "uses_source",
+      "to": "source.jobs.peu.chief-strategy-officer.787960",
+      "source": "frontmatter",
+      "href": "../sources/jobs-peu-chief-strategy-officer-787960.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-peu.chief-strategy-officer.787960",
+      "type": "uses_source",
+      "to": "source.nyc.peu.about",
+      "source": "frontmatter",
+      "href": "../sources/nyc-peu-about.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-peu.chief-strategy-officer.787960",
+      "type": "uses_source",
+      "to": "source.nyc.peu.chief-strategy-officer-interest-form.787960",
+      "source": "frontmatter",
+      "href": "../sources/peu-chief-strategy-officer-interest-form-787960.md",
+      "context": "Direct source for the supervisory screen, hybrid schedule, resume request, and three 200-word prompts; not submission evidence."
+    },
+    {
       "from": "opportunity.permitflow.product-operations.8a6e6066",
       "type": "evidence:direct-support",
       "to": "source.jobs.permitflow.product-operations.8a6e6066",
@@ -17264,6 +17485,22 @@
       "to": "source.nycac.running-minutes.2026",
       "source": "frontmatter",
       "href": "../sources/nycac-running-minutes-2026.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-public-engagement-unit",
+      "type": "related_to",
+      "to": "opportunity.nyc-peu.chief-strategy-officer.787960",
+      "source": "frontmatter",
+      "href": "../opportunities/peu-chief-strategy-officer-787960.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-public-engagement-unit",
+      "type": "uses_source",
+      "to": "source.nyc.peu.about",
+      "source": "frontmatter",
+      "href": "../sources/nyc-peu-about.md",
       "context": null
     },
     {
@@ -19725,6 +19962,14 @@
     {
       "from": "source.civic-match.candidate-network",
       "type": "related_to",
+      "to": "opportunity.nyc-peu.chief-strategy-officer.787960",
+      "source": "frontmatter",
+      "href": "../opportunities/peu-chief-strategy-officer-787960.md",
+      "context": "Civic Match surfaced the public role and a PEU interest form; City Jobs record 787960 remains the canonical formal application source."
+    },
+    {
+      "from": "source.civic-match.candidate-network",
+      "type": "related_to",
       "to": "person.courtney-kishbaugh",
       "source": "frontmatter",
       "href": "../people/courtney-kishbaugh.md",
@@ -20019,6 +20264,14 @@
       "context": null
     },
     {
+      "from": "source.jobs.peu.chief-strategy-officer.787960",
+      "type": "supports",
+      "to": "opportunity.nyc-peu.chief-strategy-officer.787960",
+      "source": "frontmatter",
+      "href": "../opportunities/peu-chief-strategy-officer-787960.md",
+      "context": null
+    },
+    {
       "from": "source.jobs.uibk.studio3.postdoc.arch-15927",
       "type": "related_to",
       "to": "source.uibk.postdoc-profile.2026",
@@ -20305,6 +20558,14 @@
       "source": "frontmatter",
       "href": "../people/lisa-gelobter.md",
       "context": "Official agency-leadership identity and public vision."
+    },
+    {
+      "from": "source.nyc.peu.chief-strategy-officer-interest-form.787960",
+      "type": "supports",
+      "to": "opportunity.nyc-peu.chief-strategy-officer.787960",
+      "source": "frontmatter",
+      "href": "../opportunities/peu-chief-strategy-officer-787960.md",
+      "context": null
     },
     {
       "from": "source.nyc.pit-crew-launch.2026-07-13",
@@ -22473,10 +22734,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/evaluations/named-public-reader-acceptance-2026-08-13.md",
+      "to": "evaluation.named-public-reader-acceptance.2026-08-13",
+      "fragment": null,
+      "line": 110,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
       "to": "opportunity.nyc-oti.technical-operations-manager.782369",
       "fragment": null,
-      "line": 105,
+      "line": 116,
       "kind": "link"
     },
     {
@@ -22485,7 +22755,7 @@
       "toPath": "docs/knowledge-bank/opportunities/uibk-studio3-postdoc-arch-15927.md",
       "to": "opportunity.uibk.studio3.postdoc.arch-15927",
       "fragment": null,
-      "line": 114,
+      "line": 125,
       "kind": "link"
     },
     {
@@ -22494,7 +22764,7 @@
       "toPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
       "to": "opportunity.aclu.product-manager-discovery.8482872002",
       "fragment": null,
-      "line": 127,
+      "line": 138,
       "kind": "link"
     },
     {
@@ -22503,34 +22773,7 @@
       "toPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
       "to": "opportunity.codepath.claude-corps.5182020007",
       "fragment": null,
-      "line": 128,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
-      "to": "opportunity.asana.ai-implementation.8027437",
-      "fragment": null,
-      "line": 129,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
-      "to": "opportunity.permitflow.product-operations.8a6e6066",
-      "fragment": null,
-      "line": 130,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
-      "to": "opportunity.protected.source-backed-memory-consulting.2026",
-      "fragment": null,
-      "line": 134,
+      "line": 139,
       "kind": "link"
     },
     {
@@ -22540,6 +22783,33 @@
       "to": "opportunity.codepath.engineering-project-manager.5160542007",
       "fragment": null,
       "line": 14,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
+      "to": "opportunity.asana.ai-implementation.8027437",
+      "fragment": null,
+      "line": 140,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
+      "to": "opportunity.permitflow.product-operations.8a6e6066",
+      "fragment": null,
+      "line": 141,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
+      "to": "opportunity.protected.source-backed-memory-consulting.2026",
+      "fragment": null,
+      "line": 145,
       "kind": "link"
     },
     {
@@ -22563,10 +22833,19 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
+      "to": "opportunity.nyc-oti.senior-product-manager.782366",
+      "fragment": null,
+      "line": 17,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
       "to": "evaluation.employment-context.coverage.2026-07-18",
       "fragment": null,
-      "line": 160,
+      "line": 171,
       "kind": "link"
     },
     {
@@ -22575,7 +22854,7 @@
       "toPath": "docs/knowledge-bank/evaluations/employment-leadership-context-2026-08-13.md",
       "to": "evaluation.employment-leadership-context.2026-08-13",
       "fragment": null,
-      "line": 161,
+      "line": 172,
       "kind": "link"
     },
     {
@@ -22584,7 +22863,7 @@
       "toPath": "reports/wiki-opportunity-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 162,
+      "line": 173,
       "kind": "link"
     },
     {
@@ -22593,7 +22872,7 @@
       "toPath": "reports/wiki-career-trajectory-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 163,
+      "line": 174,
       "kind": "link"
     },
     {
@@ -22602,7 +22881,7 @@
       "toPath": "reports/wiki-source-channel-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 164,
+      "line": 175,
       "kind": "link"
     },
     {
@@ -22611,7 +22890,7 @@
       "toPath": "reports/wiki-opportunity-discovery.md",
       "to": null,
       "fragment": null,
-      "line": 165,
+      "line": 176,
       "kind": "link"
     },
     {
@@ -22620,7 +22899,7 @@
       "toPath": "reports/hiring-acceptance-public.md",
       "to": null,
       "fragment": null,
-      "line": 166,
+      "line": 177,
       "kind": "link"
     },
     {
@@ -22629,16 +22908,7 @@
       "toPath": "reports/hiring-acceptance-gap-resolution.md",
       "to": null,
       "fragment": null,
-      "line": 167,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
-      "to": "opportunity.nyc-oti.senior-product-manager.782366",
-      "fragment": null,
-      "line": 17,
+      "line": 178,
       "kind": "link"
     },
     {
@@ -22680,10 +22950,28 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/peu-chief-strategy-officer-787960.md",
+      "to": "opportunity.nyc-peu.chief-strategy-officer.787960",
+      "fragment": null,
+      "line": 22,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/organizations/nyc-public-engagement-unit.md",
+      "to": "organization.nyc-public-engagement-unit",
+      "fragment": null,
+      "line": 23,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
       "toPath": "docs/knowledge-bank/research-runs/nyc-oti-product-management-ranking-2026-08-20.md",
       "to": "research.nyc-oti-product-management-ranking.2026-08-20",
       "fragment": null,
-      "line": 25,
+      "line": 27,
       "kind": "link"
     },
     {
@@ -22692,7 +22980,7 @@
       "toPath": "docs/knowledge-bank/sources/betanyc-civic-tech-newsletter-2026-08-20.md",
       "to": "source.betanyc.civic-tech-newsletter",
       "fragment": null,
-      "line": 30,
+      "line": 41,
       "kind": "link"
     },
     {
@@ -22701,7 +22989,7 @@
       "toPath": "docs/knowledge-bank/research-runs/nyc-jobs-citywide-monitor-2026-08-20.md",
       "to": "research.nyc-jobs.citywide-monitor.2026-08-20",
       "fragment": null,
-      "line": 52,
+      "line": 63,
       "kind": "link"
     },
     {
@@ -22710,7 +22998,7 @@
       "toPath": "docs/knowledge-bank/methods/civic-match-opportunity-loop.md",
       "to": "method.civic-match-opportunity-loop",
       "fragment": null,
-      "line": 61,
+      "line": 72,
       "kind": "link"
     },
     {
@@ -22719,7 +23007,7 @@
       "toPath": "docs/knowledge-bank/applications/nyc-oti-senior-product-manager-782366.md",
       "to": "application.nyc-oti.senior-product-manager.782366",
       "fragment": null,
-      "line": 72,
+      "line": 83,
       "kind": "link"
     },
     {
@@ -22728,7 +23016,7 @@
       "toPath": "docs/knowledge-bank/applications/nyc-oti-product-manager-784450.md",
       "to": "application.nyc-oti.product-manager.784450",
       "fragment": null,
-      "line": 73,
+      "line": 84,
       "kind": "link"
     },
     {
@@ -22737,16 +23025,7 @@
       "toPath": "docs/knowledge-bank/applications/nyc-oti-speed-operations-manager-789810.md",
       "to": "application.nyc-oti.speed-operations-manager.789810",
       "fragment": null,
-      "line": 74,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/evaluations/named-public-reader-acceptance-2026-08-13.md",
-      "to": "evaluation.named-public-reader-acceptance.2026-08-13",
-      "fragment": null,
-      "line": 99,
+      "line": 85,
       "kind": "link"
     },
     {
@@ -24286,6 +24565,15 @@
       "to": null,
       "fragment": null,
       "line": 44,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/civic-match-opportunity-loop.md",
+      "from": "method.civic-match-opportunity-loop",
+      "toPath": "opportunity-sources/civic-match/2026-09-01/Opportunity-Discovery-Review.md",
+      "to": null,
+      "fragment": null,
+      "line": 46,
       "kind": "link"
     },
     {
@@ -25996,6 +26284,15 @@
       "to": "research.betanyc-opportunity-review.2026-08-20",
       "fragment": null,
       "line": 24,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/civic-match-candidate-network-2026-08-20.md",
+      "from": "source.civic-match.candidate-network",
+      "toPath": "docs/knowledge-bank/opportunities/peu-chief-strategy-officer-787960.md",
+      "to": "opportunity.nyc-peu.chief-strategy-officer.787960",
+      "fragment": null,
+      "line": 31,
       "kind": "link"
     },
     {

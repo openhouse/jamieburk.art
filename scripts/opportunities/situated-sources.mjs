@@ -11,17 +11,25 @@ export function reconcileSource(observation, jobs) {
   const candidates = jobs.filter((job) => job.employerId === observation.employerId);
   const byId = observation.observedJobId && candidates.find((job) => job.jobId === observation.observedJobId);
   const byUrl = observation.destinationUrl && candidates.find((job) => job.postingUrl === observation.destinationUrl);
-  const conflict = (byId && byUrl && key(byId) !== key(byUrl))
+  const byVerifiedUrl = observation.verifiedOfficialPostingUrl
+    && candidates.find((job) => job.postingUrl === observation.verifiedOfficialPostingUrl);
+  const verifiedFields = Array.isArray(observation.officialContentMatchFields)
+    ? new Set(observation.officialContentMatchFields.filter(Boolean))
+    : new Set();
+  const verified = byVerifiedUrl && verifiedFields.size >= 4 ? byVerifiedUrl : null;
+  const matchedKeys = new Set([byId, byUrl, verified].filter(Boolean).map(key));
+  const conflict = matchedKeys.size > 1
     || (observation.observedJobId && byUrl && !byId)
-    || (observation.destinationUrl && byId && !byUrl);
-  const matched = conflict ? null : byId || byUrl;
+    || (observation.destinationUrl && byId && !byUrl)
+    || (observation.observedJobId && verified && !byId);
+  const matched = conflict ? null : byId || byUrl || verified;
   if (!matched) return { status: conflict ? 'conflict' : 'unverified', observation, submissionEvidence: false };
   const officialDeadline = date(matched.deadline) ? matched.deadline : null;
   const sourceDeadline = date(observation.displayedDeadline) ? observation.displayedDeadline : null;
   return {
     status: 'matched', canonicalKey: key(matched), observation,
     officialDeadline, deadlineConflict: Boolean(officialDeadline && sourceDeadline && officialDeadline !== sourceDeadline),
-    actionBy: officialDeadline && sourceDeadline ? [officialDeadline, sourceDeadline].sort()[0] : officialDeadline,
+    actionBy: officialDeadline && sourceDeadline ? [officialDeadline, sourceDeadline].sort()[0] : officialDeadline || sourceDeadline,
     submissionEvidence: false,
   };
 }
@@ -57,6 +65,17 @@ export function evaluateReview(review) {
   if ((coverage.claimedComplete || coverage.status === 'complete') && (coverage.status !== 'complete'
       || !coverage.claimedComplete || !(coverage.pagesReviewed > 0) || !Number.isInteger(coverage.totalListings)
       || coverage.totalListings < 0 || coverage.listingsReviewed !== coverage.totalListings || coverage.hasMore !== false)) failures.push('incomplete_coverage_claim');
+  if (coverage.claimedComplete || coverage.status === 'complete') {
+    const inventory = Array.isArray(review.inventory) ? review.inventory : [];
+    const indexes = inventory.map((entry) => entry.index);
+    const expectedIndexes = new Set(Array.from({ length: coverage.totalListings ?? 0 }, (_, index) => index + 1));
+    const inventoryComplete = inventory.length === coverage.totalListings
+      && new Set(indexes).size === inventory.length
+      && indexes.every((index) => Number.isInteger(index) && expectedIndexes.has(index))
+      && inventory.every((entry) => typeof entry.title === 'string' && entry.title.trim().length > 0
+        && typeof entry.disposition === 'string' && entry.disposition.trim().length > 0);
+    if (!inventoryComplete) failures.push('complete_inventory_missing');
+  }
   const jobs = review.candidates ?? [];
   if (new Set(jobs.map(key)).size !== jobs.length) failures.push('duplicate_canonical_opportunity');
   for (const observation of review.observations ?? []) {

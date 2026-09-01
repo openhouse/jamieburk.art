@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "opportunity-source-adapter-registry-2026-08-20-B",
-  "updatedAt": "2026-08-30",
+  "updatedAt": "2026-09-01",
   "sources": [
     {
       "id": "source.nyc-open-data.jobs.pda4-rgn4",
@@ -22,9 +22,9 @@
       "freshnessSignals": ["new-role-alert", "candidate-invitation", "saved-job-state", "applied-job-state", "profile-review-date"],
       "boundaries": ["external-employer-application-remains-required", "profile-visibility-requires-jamie-consent", "account-state-and-messages-remain-private", "application-submission-remains-human"],
       "methodPath": "docs/knowledge-bank/methods/civic-match-opportunity-loop.md",
-      "reviewPath": "opportunity-sources/civic-match/2026-08-30/Opportunity-Discovery-Review.md",
+      "reviewPath": "opportunity-sources/civic-match/2026-09-01/Opportunity-Discovery-Review.md",
       "reviewDataPath": "evals/opportunity-intake/civic-match-discovery.json",
-      "identityRule": "employer-and-observed-job-id-or-inspected-official-destination",
+      "identityRule": "employer-and-observed-job-id-or-inspected-official-destination-or-independently-verified-official-posting-with-four-content-fields",
       "coverageRule": "authenticated-pagination-completion-required-for-complete-inventory",
       "connectionRule": "staff-assisted-matching-is-possible-not-a-guaranteed-referral",
       "submissionRule": "official-employer-confirmation-required-before-recording-applied"

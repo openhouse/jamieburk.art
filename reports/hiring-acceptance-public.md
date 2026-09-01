@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `124828fff0857047cf9bcaa565459ceeb8541dfd`
+**Candidate commit:** `29745b537e57bab69f5ddc6207c3ab6e8fbd8e38`
 **Portfolio snapshot:** `31fd94f42c5620e143d2c86c730f7145edd2bee2b1d8f1bd2b6452fba2c5e66a`
-**Role-context hash:** `e0cdedaea5beef80a49de252d74632f15b19e17f845fcbe1c44de2ff5c93a9ad`
+**Role-context hash:** `eab2214da000932f3182fe6cba1472a3cee379edb8803ff5f24995c1f10a0b2d`
 **Reader-context hash:** `e055b82642616d52177ad68ae4d3bbaeb3953ef3c75cfa3e159c65166862e29f`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
 **Candidate paths clean:** yes
@@ -72,7 +72,7 @@
 - All signals observed: 5/7
 - Opportunity status live: yes
 - Historical benchmark: no
-- Role context current at candidate time: no
+- Role context current at candidate time: yes
 - Exclusionary hard screen recorded: no
 - Public reporting context: PIT Crew operational lead (nearest-public-operational-lead)
 - Public vision context: Commissioner and Chief Technology Officer (official-initiative-leader)

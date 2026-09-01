@@ -1,21 +1,212 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "sourceId": "source.civic-match.candidate-network",
-  "reviewedOn": "2026-08-30",
+  "reviewedOn": "2026-09-01",
   "coverage": {
-    "status": "partial",
-    "claimedComplete": false,
-    "pagesReviewed": 0,
-    "totalListings": null,
-    "listingsReviewed": 0,
-    "hasMore": null,
-    "reason": "Authenticated desktop job board requires sign-in. Two supplied cards were inspected; the whole board and their application destinations were not accessible."
+    "status": "complete",
+    "claimedComplete": true,
+    "pagesReviewed": 2,
+    "totalListings": 27,
+    "listingsReviewed": 27,
+    "hasMore": false,
+    "reason": "Read-only authenticated review completed both pages of the distance-sorted New York, New York search. Completeness is limited to this exact rendered search state on 2026-09-01."
   },
   "thresholds": {
     "salaryFloor": 100000,
     "fitFloor": 85,
     "competitivenessFloor": 70
   },
+  "inventory": [
+    {
+      "index": 1,
+      "title": "Assistant District Attorneys, Intimate Partner & Sexual Violence Bureau (IPSVB)",
+      "employer": "New York County District Attorney's Office",
+      "disposition": "excluded-credential",
+      "reason": "Attorney credential and prosecution experience are outside the target profile."
+    },
+    {
+      "index": 2,
+      "title": "Immigration Affairs Unit, Unit Chief",
+      "employer": "New York County District Attorney's Office",
+      "disposition": "excluded-credential",
+      "reason": "Attorney credential and legal-unit leadership are outside the target profile."
+    },
+    {
+      "index": 3,
+      "title": "Assistant District Attorney, Appeals Division",
+      "employer": "New York County District Attorney's Office",
+      "disposition": "excluded-credential",
+      "reason": "Attorney credential and appellate practice are hard screens."
+    },
+    {
+      "index": 4,
+      "title": "Deputy Bureau Chief, Appeals Division",
+      "employer": "New York County District Attorney's Office",
+      "disposition": "excluded-credential",
+      "reason": "Attorney credential and senior appellate leadership are hard screens."
+    },
+    {
+      "index": 5,
+      "title": "Chief Strategy Officer",
+      "employer": "NYC Public Engagement Unit",
+      "disposition": "promoted-governed-opportunity",
+      "reason": "Strong outreach-operations and learning-loop fit; direct-supervision evidence remains a hard review gate."
+    },
+    {
+      "index": 6,
+      "title": "Attorney: Investigate/Prosecute White-Collar Crimes (3876)",
+      "employer": "Office of the New York State Attorney General",
+      "disposition": "excluded-credential",
+      "reason": "Attorney credential and prosecutorial specialization are hard screens."
+    },
+    {
+      "index": 7,
+      "title": "Advance Associate",
+      "employer": "Office of the Mayor, City of New York",
+      "disposition": "excluded-salary-and-role",
+      "reason": "The $80,000-$90,000 range is below the target and advance work is not the strongest functional match."
+    },
+    {
+      "index": 8,
+      "title": "Attorney: Civil Litigation, Health Care Access/Equity (3895)",
+      "employer": "Office of the New York State Attorney General",
+      "disposition": "excluded-credential",
+      "reason": "Attorney credential and litigation practice are hard screens."
+    },
+    {
+      "index": 9,
+      "title": "Senior Advisor and Director, NYC Workforce Development Board",
+      "employer": "NYC Office of Talent and Workforce Development",
+      "disposition": "excluded-domain",
+      "reason": "The role requires extensive WIOA, board-governance, audit, and workforce-system expertise."
+    },
+    {
+      "index": 10,
+      "title": "Senior Advisor, Programs",
+      "employer": "NYC Office of Talent and Workforce Development",
+      "disposition": "held-review",
+      "reason": "Program-management overlap is real, but extensive workforce-development expertise and three managerial years require evidence."
+    },
+    {
+      "index": 11,
+      "title": "Attorney: Appellate Litigation in State & Federal Courts",
+      "employer": "Office of the New York State Attorney General",
+      "disposition": "excluded-credential",
+      "reason": "Attorney credential and appellate practice are hard screens."
+    },
+    {
+      "index": 12,
+      "title": "Compliance Specialist, Lead Based Paint and Healthy Homes",
+      "employer": "NYC Department of Housing Preservation and Development",
+      "disposition": "excluded-domain",
+      "reason": "Lead-paint and healthy-homes compliance specialization is not supported by the current record."
+    },
+    {
+      "index": 13,
+      "title": "Attorney: Appellate Litigation, OAG's Criminal Prosecutions (3902)",
+      "employer": "Office of the New York State Attorney General",
+      "disposition": "excluded-credential",
+      "reason": "Attorney credential and criminal appellate practice are hard screens."
+    },
+    {
+      "index": 14,
+      "title": "Investigative Analyst: Investigate Police Misconduct (6457)",
+      "employer": "Office of the New York State Attorney General",
+      "disposition": "excluded-salary-and-role",
+      "reason": "The fixed $75,389 salary is below target and the investigative specialization is not the strongest fit."
+    },
+    {
+      "index": 15,
+      "title": "Associate General Counsel for NYS Attorney General (3903)",
+      "employer": "Office of the New York State Attorney General",
+      "disposition": "excluded-credential",
+      "reason": "Attorney credential and counsel experience are hard screens."
+    },
+    {
+      "index": 16,
+      "title": "Chief Deputy Attorney General Social Justice Division (3904)",
+      "employer": "Office of the New York State Attorney General",
+      "disposition": "excluded-credential",
+      "reason": "Attorney credential and division-level legal leadership are hard screens."
+    },
+    {
+      "index": 17,
+      "title": "Operations Manager",
+      "employer": "NYC Office of Technology & Innovation",
+      "disposition": "existing-submitted-application",
+      "reason": "Existing governed OTI opportunity; not a new discovery."
+    },
+    {
+      "index": 18,
+      "title": "Senior Product Manager",
+      "employer": "NYC Office of Technology & Innovation",
+      "disposition": "existing-submitted-application",
+      "reason": "Existing governed OTI opportunity; not a new discovery."
+    },
+    {
+      "index": 19,
+      "title": "Senior Solutions Architect",
+      "employer": "NYC Office of Technology & Innovation",
+      "disposition": "excluded-technical",
+      "reason": "Enterprise data architecture, ETL, cloud, programming, and infrastructure requirements are hard gaps."
+    },
+    {
+      "index": 20,
+      "title": "IT Director",
+      "employer": "NYC Office of Technology & Innovation",
+      "disposition": "excluded-technical",
+      "reason": "The role's IT-infrastructure leadership requirements are outside the strongest supported profile."
+    },
+    {
+      "index": 21,
+      "title": "Attorney: Defensive Environmental Litigation for NYS (3898)",
+      "employer": "Office of the New York State Attorney General",
+      "disposition": "excluded-credential",
+      "reason": "Attorney credential and environmental litigation are hard screens."
+    },
+    {
+      "index": 22,
+      "title": "Special Assistant Attorney General: Civil Enforcement (3906)",
+      "employer": "Office of the New York State Attorney General",
+      "disposition": "excluded-credential",
+      "reason": "Attorney credential and civil-enforcement practice are hard screens."
+    },
+    {
+      "index": 23,
+      "title": "Executive Director of Product Management",
+      "employer": "NYC Office of Technology & Innovation",
+      "disposition": "held-stretch",
+      "reason": "Public-product overlap is strong, but five years of senior executive leadership and product-manager coaching require evidence."
+    },
+    {
+      "index": 24,
+      "title": "Chief Financial Officer / CMFO",
+      "employer": "City of Hoboken / Finance Department",
+      "disposition": "excluded-domain",
+      "reason": "Municipal finance authority and CFO specialization are hard gaps."
+    },
+    {
+      "index": 25,
+      "title": "Detective Investigator Trainee",
+      "employer": "Office of the New York State Attorney General",
+      "disposition": "excluded-domain",
+      "reason": "Law-enforcement investigation is outside the target role family."
+    },
+    {
+      "index": 26,
+      "title": "Detective Investigator",
+      "employer": "Office of the New York State Attorney General",
+      "disposition": "excluded-domain",
+      "reason": "Law-enforcement investigation is outside the target role family."
+    },
+    {
+      "index": 27,
+      "title": "Technology Operations Director (InnovateNJ)",
+      "employer": "New Jersey Innovation Authority",
+      "disposition": "excluded-technical",
+      "reason": "Cloud administration, cybersecurity authority, AWS, DevOps, and distributed-systems operations are hard gaps."
+    }
+  ],
   "observations": [
     {
       "sourceId": "source.civic-match.candidate-network",
@@ -36,6 +227,26 @@
       "identityStatus": "unverified",
       "observedOn": "2026-08-30",
       "basis": "User-supplied job card; title, employer, and displayed closing date only."
+    },
+    {
+      "sourceId": "source.civic-match.candidate-network",
+      "employerId": "nyc-peu",
+      "title": "Chief Strategy Officer",
+      "displayedDeadline": null,
+      "displayedDeadlineText": "Closes when filled",
+      "discoveryDestinationUrl": "https://forms.gle/r3gkBwEUQKD5LsnA6",
+      "verifiedOfficialPostingUrl": "https://cityjobs.nyc.gov/job/chief-strategy-officer-in-manhattan-jid-45904",
+      "officialContentMatchFields": [
+        "business-title",
+        "salary-range",
+        "work-location",
+        "outreach-team-scale",
+        "role-description",
+        "direct-supervision-requirement"
+      ],
+      "identityStatus": "matched",
+      "observedOn": "2026-09-01",
+      "basis": "Authenticated Civic Match card and PEU form reconciled to the live official City Jobs record through exact title, salary, location, distinctive responsibilities, and qualification language."
     }
   ],
   "candidates": [
@@ -78,6 +289,37 @@
       "scoreReviewedOn": "2026-08-20",
       "scoreBasis": "Existing editorial ranking, not a new assessment or probability of hire.",
       "guidePath": "resumes/2026-08-20/nyc-oti-speed-senior-product-manager-789610/Application-Guide.md"
+    },
+    {
+      "employerId": "nyc-peu",
+      "jobId": "787960",
+      "title": "Chief Strategy Officer",
+      "postingUrl": "https://cityjobs.nyc.gov/job/chief-strategy-officer-in-manhattan-jid-45904",
+      "officialApplicationUrl": "https://jobs.smartrecruiters.com/CityOfNewYork/3743990014380346-chief-strategy-officer",
+      "discoveryApplicationUrl": "https://forms.gle/r3gkBwEUQKD5LsnA6",
+      "officialSourceId": "source.jobs.peu.chief-strategy-officer.787960",
+      "discoveryApplicationSourceId": "source.nyc.peu.chief-strategy-officer-interest-form.787960",
+      "officialReviewedOn": "2026-09-01",
+      "deadline": "2026-09-27",
+      "annualSalary": true,
+      "salaryMin": 120000,
+      "salaryMax": 140000,
+      "locationFit": true,
+      "eligibility": "review-needed",
+      "qualificationIssue": "Direct-supervision facts and the Director of Management Planning managerial-experience route require confirmation before drafting.",
+      "fitScore": 75,
+      "competitivenessScore": 60,
+      "scoreReviewedOn": "2026-09-01",
+      "scoreBasis": "Exact-candidate deterministic intake score from the official posting summary. It is a triage heuristic, not a probability of hire.",
+      "applicationState": "not-applied",
+      "nycOpenDataStatus": "not-returned-in-job-id-query",
+      "nycOpenDataCheckedOn": "2026-09-01",
+      "opportunityPath": "docs/knowledge-bank/opportunities/peu-chief-strategy-officer-787960.md",
+      "applicationQuestionLimits": {
+        "whyFitWords": 200,
+        "dataStrategyExampleWords": 200,
+        "managementFactsWords": 200
+      }
     }
   ]
 }
