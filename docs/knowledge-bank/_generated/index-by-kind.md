@@ -3,7 +3,7 @@
 
 **Source commit:** `29745b537e57bab69f5ddc6207c3ab6e8fbd8e38`
 **Generation time:** 2026-08-31T19:49:24-04:00
-**Source fingerprint:** `58618688c7258813c8659a6ae82556ff86cc9ce4dfa32b7f274081ec2ba8270c`
+**Source fingerprint:** `27afac39e74b521c997131bff364951dbf4aad94786db9486c2f911a8d142bd4`
 
 ## application
 
@@ -348,6 +348,7 @@
 - [NYC OTI - SPEED Operations Manager 789810](../opportunities/oti-speed-operations-manager-789810.md) - `opportunity.nyc-oti.speed-operations-manager.789810`
 - [NYC OTI - SPEED Senior Product Manager 789610](../opportunities/oti-speed-senior-product-manager-789610.md) - `opportunity.nyc-oti.speed-senior-product-manager.789610`
 - [NYC OTI - Technical Operations Manager 782369](../opportunities/oti-technical-operations.md) - `opportunity.nyc-oti.technical-operations-manager.782369`
+- [NYC PEU - Chief Strategy Officer 787960](../opportunities/peu-chief-strategy-officer-787960.md) - `opportunity.nyc-peu.chief-strategy-officer.787960`
 - [PermitFlow - Product Operations Manager](../opportunities/permitflow-product-operations.md) - `opportunity.permitflow.product-operations.8a6e6066`
 - [Protected source-backed team-memory consulting lead](../opportunities/source-backed-team-memory.md) - `opportunity.protected.source-backed-memory-consulting.2026`
 - [University of Innsbruck ./studio3 - University Assistant (Postdoc), ARCH-15927](../opportunities/uibk-studio3-postdoc-arch-15927.md) - `opportunity.uibk.studio3.postdoc.arch-15927`
@@ -355,6 +356,7 @@
 ## organization
 
 - [NYC Artist Coalition organization map](../organizations/nyc-artist-coalition.md) - `organization.nyc-artist-coalition`
+- [NYC Public Engagement Unit](../organizations/nyc-public-engagement-unit.md) - `organization.nyc-public-engagement-unit`
 
 ## person
 
@@ -481,6 +483,7 @@
 - [NYC Jobs - SPEED Senior Product Manager 789610](../sources/jobs-oti-speed-senior-product-manager-789610.md) - `source.jobs.oti.speed-senior-product-manager.789610`
 - [NYC Jobs - Technical Operations Manager 782369](../sources/jobs-oti-technical-operations-782369.md) - `source.jobs.oti.technical-operations.782369`
 - [Official posting - PermitFlow Product Operations Manager](../sources/jobs-permitflow-product-operations.md) - `source.jobs.permitflow.product-operations.8a6e6066`
+- [NYC Jobs - PEU Chief Strategy Officer 787960](../sources/jobs-peu-chief-strategy-officer-787960.md) - `source.jobs.peu.chief-strategy-officer.787960`
 - [Official posting - University of Innsbruck ./studio3 postdoc ARCH-15927](../sources/jobs-uibk-studio3-postdoc-arch-15927.md) - `source.jobs.uibk.studio3.postdoc.arch-15927`
 - [The Kansas City Star raft report, November 15, 2007](../sources/kansas-city-star-raft-2007-11-15.md) - `source.kansas-city-star.raft.2007-11-15`
 - [KC Town Hall CCED proposal bundle, 2019](../sources/kc-town-hall-cced-proposal-2019.md) - `source.kc-town-hall.cced-proposal.2019`
@@ -501,6 +504,8 @@
 - [NYC Open Data — NYC Jobs dataset pda4-rgn4](../sources/nyc-open-data-jobs-pda4-rgn4.md) - `source.nyc-open-data.jobs.pda4-rgn4`
 - [Appointment of Diya Vij as Commissioner of Cultural Affairs](../sources/dcla-diya-vij-appointment-2026.md) - `source.nyc.diya-vij-appointment.2026`
 - [NYC Mayor's Office - Lisa Gelobter appointment](../sources/nyc-lisa-gelobter-appointment-2026.md) - `source.nyc.lisa-gelobter-appointment.2026-02-10`
+- [NYC Public Engagement Unit - About PEU](../sources/nyc-peu-about.md) - `source.nyc.peu.about`
+- [PEU Chief Strategy Officer Interest Form 787960](../sources/peu-chief-strategy-officer-interest-form-787960.md) - `source.nyc.peu.chief-strategy-officer-interest-form.787960`
 - [NYC Mayor's Office - PIT Crew launch announcement](../sources/nyc-pit-crew-launch-2026.md) - `source.nyc.pit-crew-launch.2026-07-13`
 - [NYC SPEED report and release, May 2026](../sources/nyc-speed-report-2026.md) - `source.nyc.speed-report.2026-05-13`
 - [NYC Artist Coalition DCLA formation source return, 2026](../sources/archives/nycac-dcla-formation-source-return-2026-07.md) - `source.nycac.dcla-formation-source-return.2026-07`

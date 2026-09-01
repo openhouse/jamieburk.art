@@ -5,8 +5,8 @@ kind: method
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-30
-review_by: 2026-09-06
+last_reviewed: 2026-09-01
+review_by: 2026-09-15
 canonical_path: docs/knowledge-bank/methods/civic-match-opportunity-loop.md
 summary: Models Civic Match as an authenticated talent-network source with candidate discovery, invitations, tracking, events, and staff-assisted matching.
 relations:
@@ -61,10 +61,17 @@ employer remains the application authority. Membership is not a guaranteed
 introduction, preference, interview, or offer.
 
 The [August 30 review](../../../opportunity-sources/civic-match/2026-08-30/Opportunity-Discovery-Review.md)
-records two provisional OTI card matches, an unresolved closing-date
-discrepancy, and role-specific guides alongside existing tailored résumés.
-Its authenticated-board coverage is explicitly partial. Private account state,
-correspondence, and screenshots are not retained.
+is retained as a historical partial pass. The
+[September 1 review](../../../opportunity-sources/civic-match/2026-09-01/Opportunity-Discovery-Review.md)
+completed both pages of one rendered New York-area search, retained 27 indexed
+dispositions, and promoted PEU Chief Strategy Officer 787960 into a governed
+opportunity. Private account state, correspondence, and screenshots are not
+retained.
+
+A discovery source may route to an agency interest form while an independently
+verified official posting routes to the government's formal application. Keep
+both links, make the exact official Job ID canonical, and leave the
+supplement-versus-alternative question open until the employer answers it.
 
 Before further model review, use the deterministic source evaluator to check
 identity, duplicate records, coverage, deadlines, salary, location, and

@@ -12,6 +12,7 @@ const TITLE_SIGNALS = [
   [/product operations/i, 32],
   [/product manager/i, 30],
   [/technical project manager/i, 28],
+  [/chief strategy officer/i, 28],
   [/policy implementation/i, 42],
   [/implementation manager/i, 24],
   [/project manager/i, 24],
@@ -28,9 +29,11 @@ const TITLE_SIGNALS = [
 
 const TEXT_SIGNALS = [
   [/(resident-facing|user-centered|human-centered|needs of (?:new yorkers|residents)|serve(?:s|d)? new yorkers)/i, 12],
-  [/(discovery|roadmap|product lifecycle|user research|user stories|continuous improvement)/i, 12],
-  [/(cross-functional|stakeholder|interagency|agency partners)/i, 10],
+  [/(discovery|roadmap|product lifecycle|user research|user stories|continuous[- ]improvement)/i, 12],
+  [/(cross-functional|stakeholder|interagency|agency (?:partners|stakeholders))/i, 10],
   [/(implementation|delivery|launch|project management|process improvement)/i, 10],
+  [/(person-to-person outreach|outreach campaigns?|outreach strategy|public engagement unit)/i, 16],
+  [/(synthesi[sz]e[^.]{0,80}data|data-informed|outcome data|analy[sz]e data)/i, 10],
   [/(digital service|web|technology|technical|data system|software)/i, 8],
   [/(accessibility|equity|public service|inclusive)/i, 8],
   [/(metrics|kpi|measurement|program evaluation|outcomes)/i, 6],

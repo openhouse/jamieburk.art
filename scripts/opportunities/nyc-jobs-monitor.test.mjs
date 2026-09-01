@@ -49,6 +49,34 @@ const strongProductRole = {
   post_until: "30-SEP-2026"
 };
 
+const chiefStrategyOfficerRole = {
+  job_id: "787960",
+  agency: "HRA/DEPT OF SOCIAL SERVICES",
+  posting_type: "External",
+  business_title: "CHIEF STRATEGY OFFICER",
+  civil_service_title: "DIRECTOR OF MANAGEMENT PLANNIN",
+  salary_range_from: "120000",
+  salary_range_to: "140000",
+  salary_frequency: "Annual",
+  work_location: "253 Broadway New York Ny",
+  division_work_unit: "Mayor's Anti-Displ Init Nm",
+  job_description:
+    "Lead Public Engagement Unit outreach strategy, synthesize staff input with data, create continuous-improvement loops, and manage partnerships across City Hall and agency stakeholders to deliver services to New Yorkers.",
+  minimum_qual_requirements:
+    "A baccalaureate degree and four years of management, methods analysis, operations research, systems analysis, or program or policy research, design, or evaluation experience, including one year in a responsible administrative or managerial capacity; or equivalent education and experience.",
+  preferred_skills:
+    "Ten years in government, community organizing, issue advocacy, or labor; analyze data and outcomes; manage complex operations; communicate clearly; build relationships; and manage staff with varied skill sets.",
+  additional_information: "Full-time public-service role; New York City residency is generally required.",
+  post_until: "27-SEP-2026"
+};
+
+test("Chief Strategy Officer 787960 clears the fit floor without bypassing qualification review", () => {
+  const result = scorePosting(chiefStrategyOfficerRole, { asOf: "2026-09-01" });
+  assert.equal(result.screen.eligible, true, JSON.stringify(result));
+  assert.ok(result.fitScore >= 75);
+  assert.equal(result.qualificationReview, "human-review-required");
+});
+
 test("freshness marks a newer source timestamp stale and an equal timestamp current", () => {
   const config = {
     datasetId: "pda4-rgn4",

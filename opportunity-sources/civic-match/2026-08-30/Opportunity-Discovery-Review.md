@@ -1,5 +1,10 @@
 # Civic Match: discovery, connections, and the application route
 
+This is the preserved historical partial review. The authenticated board was
+subsequently reviewed through terminal pagination on September 1. Use the
+[complete dated review](../2026-09-01/Opportunity-Discovery-Review.md) for the
+current 27-listing inventory and PEU Chief Strategy Officer finding.
+
 Reviewed August 30, 2026. This is a **partial discovery review**, not a complete
 inventory of the authenticated job board or a declaration that either candidate
 meets every qualification. No application, outreach, or account update was made.

@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "runId": "hiring-public-124828fff085",
-  "generatedAt": "2026-08-31T18:59:48-04:00",
-  "candidateSha": "124828fff0857047cf9bcaa565459ceeb8541dfd",
+  "runId": "hiring-public-29745b537e57",
+  "generatedAt": "2026-08-31T19:49:24-04:00",
+  "candidateSha": "29745b537e57bab69f5ddc6207c3ab6e8fbd8e38",
   "candidatePathsClean": true,
   "portfolioSnapshotHash": "31fd94f42c5620e143d2c86c730f7145edd2bee2b1d8f1bd2b6452fba2c5e66a",
-  "roleContextHash": "e0cdedaea5beef80a49de252d74632f15b19e17f845fcbe1c44de2ff5c93a9ad",
+  "roleContextHash": "eab2214da000932f3182fe6cba1472a3cee379edb8803ff5f24995c1f10a0b2d",
   "readerContextHash": "e055b82642616d52177ad68ae4d3bbaeb3953ef3c75cfa3e159c65166862e29f",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
   "publicSafety": {
@@ -505,10 +505,10 @@
     {
       "id": "opportunity.nyc-oti.senior-product-manager.782366",
       "title": "NYC OTI - PIT Crew Senior Product Manager 782366",
-      "roleContextHash": "74f4fb5ed29f03e0fcbc2436696058937c1632fc383045ad2747e8468c438a99",
+      "roleContextHash": "6c94e520783c2df97d0e02614bf932a729e2d37c266b55b90ff6e5284ed1cbcc",
       "benchmark": false,
       "live": true,
-      "fresh": false,
+      "fresh": true,
       "hardScreenBlocked": false,
       "publicReportingContext": {
         "role": "PIT Crew operational lead",

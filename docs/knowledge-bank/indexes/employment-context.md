@@ -5,7 +5,7 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-31
+last_reviewed: 2026-09-01
 review_by: 2026-09-14
 canonical_path: docs/knowledge-bank/indexes/employment-context.md
 summary: Task-oriented entry point for live opportunity research, historical role benchmarks, public-only hiring evaluation, and private-boundary rules.
@@ -31,6 +31,14 @@ relations:
   - type: related_to
     target: opportunity.nyc-oti.pit-senior-product-designer.782373
     href: ../opportunities/oti-pit-senior-product-designer-782373.md
+  - type: related_to
+    target: opportunity.nyc-peu.chief-strategy-officer.787960
+    href: ../opportunities/peu-chief-strategy-officer-787960.md
+    context: Current PEU leadership opportunity discovered through Civic Match and reconciled to its canonical NYC Jobs posting and distinct PEU interest form.
+  - type: related_to
+    target: organization.nyc-public-engagement-unit
+    href: ../organizations/nyc-public-engagement-unit.md
+    context: Official organizational context for the PEU role; thematic relevance does not establish qualification or hiring outcome.
   - type: related_to
     target: opportunity.nyc-oti.technical-operations-manager.782369
     href: ../opportunities/oti-technical-operations.md
@@ -110,6 +118,8 @@ remain private, and later outcomes require separate approval.
 - [NYC OTI - Product Manager](../opportunities/oti-product-manager-784450.md)
 - [NYC OTI - SPEED Senior Product Manager](../opportunities/oti-speed-senior-product-manager-789610.md)
 - [NYC OTI - PIT Crew Senior Product Designer](../opportunities/oti-pit-senior-product-designer-782373.md)
+- [NYC Public Engagement Unit - Chief Strategy Officer](../opportunities/peu-chief-strategy-officer-787960.md)
+- [NYC Public Engagement Unit - organization context](../organizations/nyc-public-engagement-unit.md)
 
 The first three official application surfaces were rechecked as open on August
 20, 2026. The five OTI roles are the `ceil(11 × 0.38)` leading group from the
@@ -117,6 +127,15 @@ The first three official application surfaces were rechecked as open on August
 The PIT Crew Senior Product Manager, Product Manager, and SPEED Operations
 Manager candidacies are `submitted-pending`. The other two newly admitted OTI
 opportunities remain open and not yet applied to.
+
+The PEU Chief Strategy Officer role is a source-reconciliation case. Civic
+Match surfaced the role and links to a PEU interest form, while the ordinary
+NYC Jobs site carries canonical Job ID 787960 and its SmartRecruiters
+application route. The official posting is open through September 27, 2026;
+the Civic Match card's less-specific “closes when filled” label does not replace
+that date. Jamie has not applied. The role has strong mission and operating-fit
+signals, but exact direct-supervision and formal qualification evidence remain
+human-review gates before application drafting.
 
 [BetaNYC's weekly civic-technology newsletter](../sources/betanyc-civic-tech-newsletter-2026-08-20.md)
 is now a recurring opportunity source alongside NYC Jobs Open Data and Civic

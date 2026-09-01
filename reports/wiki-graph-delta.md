@@ -3,13 +3,13 @@
 
 **Source commit:** `29745b537e57bab69f5ddc6207c3ab6e8fbd8e38`
 **Generation time:** 2026-08-31T19:49:24-04:00
-**Source fingerprint:** `58618688c7258813c8659a6ae82556ff86cc9ce4dfa32b7f274081ec2ba8270c`
+**Source fingerprint:** `27afac39e74b521c997131bff364951dbf4aad94786db9486c2f911a8d142bd4`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 54
+- Nodes added: 59
 - Nodes removed: 0
-- Edges added: 219
+- Edges added: 241
 - Edges removed: 8
 - New type-aware orphans: 0
 - Current rights-review records: 185
@@ -32,7 +32,9 @@ Compared with the graph artifact on `origin/develop`.
 - `opportunity.nyc-oti.product-manager.784450`
 - `opportunity.nyc-oti.speed-operations-manager.789810`
 - `opportunity.nyc-oti.speed-senior-product-manager.789610`
+- `opportunity.nyc-peu.chief-strategy-officer.787960`
 - `opportunity.uibk.studio3.postdoc.arch-15927`
+- `organization.nyc-public-engagement-unit`
 - `person.courtney-kishbaugh`
 - `person.josh-gee`
 - `person.kathrin-aste`
@@ -60,9 +62,12 @@ Compared with the graph artifact on `origin/develop`.
 - `source.jobs.oti.product-manager.784450`
 - `source.jobs.oti.speed-operations-manager.789810`
 - `source.jobs.oti.speed-senior-product-manager.789610`
+- `source.jobs.peu.chief-strategy-officer.787960`
 - `source.jobs.uibk.studio3.postdoc.arch-15927`
 - `source.nyc-jobs.oti-product-search.2026-08-20`
 - `source.nyc-open-data.jobs.pda4-rgn4`
+- `source.nyc.peu.about`
+- `source.nyc.peu.chief-strategy-officer-interest-form.787960`
 - `source.nyc.speed-report.2026-05-13`
 - `source.nys-dos.thick-arts-llc.formation.2012-07-06`
 - `source.project-websites.live-audit.2026-08-14`

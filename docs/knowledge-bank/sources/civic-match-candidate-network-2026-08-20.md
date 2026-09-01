@@ -5,13 +5,13 @@ kind: source
 status: maintained
 visibility: summary-only
 sensitivity: moderate
-last_reviewed: 2026-08-31
+last_reviewed: 2026-09-01
 review_by: 2026-09-14
 canonical_path: docs/knowledge-bank/sources/civic-match-candidate-network-2026-08-20.md
-summary: Public program documentation plus a read-only field map of Jamie's existing five-step candidate profile, preserving account and submission privacy.
+summary: Public program documentation plus public-safe read-only reviews of Civic Match's candidate flow and a complete dated New York-area job-board search.
 source_kind: mixed-public-program-and-authenticated-interface
 url: https://www.workforamerica.org/job-seekers
-retrieved_at: 2026-08-20
+retrieved_at: 2026-09-01
 relations:
   - type: related_to
     target: method.civic-match-opportunity-loop
@@ -30,6 +30,10 @@ relations:
     target: application.nyc-oti.speed-operations-manager.789810
     href: ../applications/nyc-oti-speed-operations-manager-789810.md
     context: Civic Match discovery context; the City application system was the formal submission destination.
+  - type: related_to
+    target: opportunity.nyc-peu.chief-strategy-officer.787960
+    href: ../opportunities/peu-chief-strategy-officer-787960.md
+    context: Civic Match surfaced the public role and a PEU interest form; City Jobs record 787960 remains the canonical formal application source.
 ---
 
 # Civic Match candidate network and authenticated profile flow
@@ -57,3 +61,16 @@ date-level City receipt milestones. That observation validates the source-aware
 workflow—discover and preserve connection affordances here, apply through the
 employer—but it does not establish that an introduction or personal referral
 occurred. Connection activity, if any, remains a distinct governed event.
+
+A September 1 read-only search reviewed both pages of the rendered
+distance-sorted New York-area board: 27 public listings with one disposition
+per card. The review promoted
+[PEU Chief Strategy Officer 787960](../opportunities/peu-chief-strategy-officer-787960.md)
+and retained legal, technical, domain, salary, already-submitted, and
+held-review dispositions for the other cards.
+
+The PEU card demonstrates why source affordances must remain separate: Civic
+Match sent Apply Now to an agency Google interest form, while the ordinary City
+Jobs page supplied the canonical Job ID, formal deadline, civil-service title,
+and SmartRecruiters route. Neither read-only observation is submission
+evidence.
