@@ -4,6 +4,7 @@ import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import matter from "gray-matter";
+import { evaluateMinimumViableFederationRFC } from "./rfcs/minimum-viable-federation-eval.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const rfcRoot = path.join(repoRoot, "rfcs");
@@ -122,10 +123,33 @@ for (const name of proposalFiles) {
   }
 }
 
+try {
+  const federationEvaluation = evaluateMinimumViableFederationRFC({ repoRoot });
+  for (const criterion of federationEvaluation.hard_failures) {
+    fail(
+      path.join(rfcRoot, "0010-minimum-viable-federation-canary.md"),
+      `minimum viable federation hard criterion failed: ${criterion}`
+    );
+  }
+  for (const scenario of federationEvaluation.scenarios.results.filter((item) => !item.passed)) {
+    fail(
+      path.join(rfcRoot, "0010-minimum-viable-federation-canary.md"),
+      `minimum viable federation scenario failed: ${scenario.id}`
+    );
+  }
+} catch (error) {
+  fail(
+    path.join(rfcRoot, "0010-minimum-viable-federation-canary.md"),
+    `minimum viable federation evaluation could not run: ${error.message}`
+  );
+}
+
 if (failures.length) {
   console.error("RFC check failed:");
   for (const failure of failures) console.error(`- ${failure}`);
   process.exit(1);
 }
 
-console.log(`RFC check passed: ${proposalFiles.length} numbered proposal(s), all indexed and structurally valid.`);
+console.log(
+  `RFC check passed: ${proposalFiles.length} numbered proposal(s), all indexed, structurally valid, and behaviorally checked.`
+);
