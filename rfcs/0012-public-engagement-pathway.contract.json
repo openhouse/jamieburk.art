@@ -77,13 +77,19 @@
         "commercial-status",
         "interpretation",
         "agreement-draft",
-        "source-pointer"
+        "source-pointer",
+        "participant-restricted-call-record"
       ],
       "allowed_representations": [
         "governed-pointer",
-        "bounded-derived-record"
+        "bounded-derived-record",
+        "bounded-complete-repaired-transcript"
       ],
-      "raw_source_store": false
+      "raw_source_store": false,
+      "complete_call_record_requires_explicit_owner_authorization": true,
+      "complete_call_record_requires_private_access_review": true,
+      "participant_restrictions_control_projection": true,
+      "every_captured_artifact_requires_disposition": true
     },
     "source_vault": {
       "required_content_classes": [

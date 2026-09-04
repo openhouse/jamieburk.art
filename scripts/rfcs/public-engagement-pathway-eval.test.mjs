@@ -143,7 +143,7 @@ test("the repository candidate satisfies every hard gate and the reader-burden t
   assert.deepEqual(result.hard_failures, []);
   assert.equal(result.scenarios.total, 7);
   assert.equal(result.scenarios.failed, 0);
-  assert.equal(result.placement_scenarios.total, 7);
+  assert.equal(result.placement_scenarios.total, 9);
   assert.equal(result.placement_scenarios.failed, 0);
   assert.match(result.candidate_fingerprint, /^[a-f0-9]{64}$/);
   assert.equal(result.implementation_authorized, false);

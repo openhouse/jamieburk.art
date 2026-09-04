@@ -130,6 +130,20 @@ export function evaluateEngagementInformationPlacement(policy, candidate) {
       reasons.push("private-representation-not-governed");
     }
     if (!candidate.source_registered) reasons.push("private-source-registration-required");
+    if (contentClasses.includes("participant-restricted-call-record")) {
+      if (!candidate.owner_preservation_authorized) {
+        reasons.push("private-complete-record-authorization-required");
+      }
+      if (!candidate.sole_private_access_verified) {
+        reasons.push("private-access-review-required");
+      }
+      if (!candidate.participant_restrictions_retained) {
+        reasons.push("participant-restrictions-must-control-projection");
+      }
+      if (!candidate.complete_record_accounted_for) {
+        reasons.push("complete-call-record-accounting-required");
+      }
+    }
     return {
       decision: reasons.length > 0 ? "hold" : "ready-for-private-intake",
       destination: "private-sidecar",
@@ -280,7 +294,7 @@ export function evaluatePublicEngagementPathwayRFC(options = {}) {
     scenario_coverage:
       scenarioResults.length === 7 && scenarioResults.every((scenario) => scenario.passed),
     placement_scenario_coverage:
-      placementScenarioResults.length === 7 &&
+      placementScenarioResults.length === 9 &&
       placementScenarioResults.every((scenario) => scenario.passed),
     reader_burden:
       wordCount(contract.public_copy.body) <= 75 &&

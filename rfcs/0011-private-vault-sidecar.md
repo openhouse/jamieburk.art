@@ -79,6 +79,11 @@ without turning convenience into disclosure or automated publication.
 - Let private records reference stable public IDs without public backlinks or
   private-topology leakage.
 - Keep raw sensitive sources and credentials outside Git by default.
+- Preserve every artifact in an explicitly authorized bounded call record or
+  assign it an explicit custody or gap disposition.
+- Permit a complete repaired call transcript and private interpretation in the
+  sidecar only after explicit preservation authority and private-access review,
+  while retaining every participant disclosure restriction.
 - Fail closed on dirty worktrees, visibility drift, branch mismatch, missing
   paired review, or forbidden public locator fields.
 
@@ -122,6 +127,12 @@ without turning convenience into disclosure or automated publication.
 **Lockstep**
 : Equality of active head branch, base branch, pull-request title, and review
   posture—not equality of commits or content.
+
+**Complete private call record**
+: A bounded, explicitly authorized repaired record retained for Jamie's
+  working understanding. It may include material excluded from an outward
+  projection, but it does not include unrestricted raw source acquisition and
+  creates no disclosure permission.
 
 ## Detailed design
 
@@ -215,6 +226,15 @@ mailboxes, message databases, contact records, financial or health material,
 credentials, and large exports remain vault-only by default. Private Git should
 prefer pointers, bounded derived records, explicit dispositions, and
 minimum-necessary detail.
+
+For an explicitly authorized bounded call, minimum necessary is evaluated by
+audience. The private working audience may require the complete conservative
+repair so that trust, contradictions, uncertainty, and later corrections are
+not destroyed. A participant-facing or public audience may require omission.
+Every captured artifact must still receive a disposition, and every omitted
+shareable passage must remain accounted for in private custody or an explicit
+gap. Participant confidentiality controls disclosure; retention does not
+convert it into a public or attributable statement.
 
 Public CI receives no secret granting private-repository access. Public builds,
 tests, deployment, and rollback succeed with the private repository absent.

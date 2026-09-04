@@ -260,6 +260,44 @@
       }
     },
     {
+      "id": "restricted-call-record-without-authority-holds",
+      "candidate": {
+        "requested_destination": "private-sidecar",
+        "content_classes": ["participant-restricted-call-record"],
+        "representation": "bounded-complete-repaired-transcript",
+        "source_registered": true,
+        "owner_preservation_authorized": false,
+        "sole_private_access_verified": true,
+        "participant_restrictions_retained": true,
+        "complete_record_accounted_for": true
+      },
+      "expected": {
+        "decision": "hold",
+        "destination": "private-sidecar",
+        "publication_authorized": false,
+        "reasons": ["private-complete-record-authorization-required"]
+      }
+    },
+    {
+      "id": "authorized-complete-repair-enters-private-sidecar",
+      "candidate": {
+        "requested_destination": "private-sidecar",
+        "content_classes": ["participant-restricted-call-record"],
+        "representation": "bounded-complete-repaired-transcript",
+        "source_registered": true,
+        "owner_preservation_authorized": true,
+        "sole_private_access_verified": true,
+        "participant_restrictions_retained": true,
+        "complete_record_accounted_for": true
+      },
+      "expected": {
+        "decision": "ready-for-private-intake",
+        "destination": "private-sidecar",
+        "publication_authorized": false,
+        "reasons": []
+      }
+    },
+    {
       "id": "credential-is-denied-from-git",
       "candidate": {
         "requested_destination": "public",

@@ -37,9 +37,14 @@ const policy = {
       "commercial-status",
       "interpretation",
       "agreement-draft",
-      "source-pointer"
+      "source-pointer",
+      "participant-restricted-call-record"
     ],
-    allowed_representations: ["governed-pointer", "bounded-derived-record"]
+    allowed_representations: [
+      "governed-pointer",
+      "bounded-derived-record",
+      "bounded-complete-repaired-transcript"
+    ]
   },
   source_vault: {
     required_content_classes: [
@@ -146,6 +151,46 @@ test("raw transcripts are routed out of private Git to source custody", () => {
     destination: "source-vault",
     publication_authorized: false,
     reasons: ["source-vault-content-cannot-enter-private-git:raw-transcript"]
+  });
+});
+
+test("a participant-restricted call record is held without an explicit complete-record mandate", () => {
+  const actual = evaluator()(policy, {
+    requested_destination: "private-sidecar",
+    content_classes: ["participant-restricted-call-record"],
+    representation: "bounded-complete-repaired-transcript",
+    source_registered: true,
+    owner_preservation_authorized: false,
+    sole_private_access_verified: true,
+    participant_restrictions_retained: true,
+    complete_record_accounted_for: true
+  });
+
+  assert.deepEqual(actual, {
+    decision: "hold",
+    destination: "private-sidecar",
+    publication_authorized: false,
+    reasons: ["private-complete-record-authorization-required"]
+  });
+});
+
+test("an explicitly authorized complete repair may enter the private sidecar without becoming public", () => {
+  const actual = evaluator()(policy, {
+    requested_destination: "private-sidecar",
+    content_classes: ["participant-restricted-call-record"],
+    representation: "bounded-complete-repaired-transcript",
+    source_registered: true,
+    owner_preservation_authorized: true,
+    sole_private_access_verified: true,
+    participant_restrictions_retained: true,
+    complete_record_accounted_for: true
+  });
+
+  assert.deepEqual(actual, {
+    decision: "ready-for-private-intake",
+    destination: "private-sidecar",
+    publication_authorized: false,
+    reasons: []
   });
 });
 

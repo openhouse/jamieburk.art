@@ -179,6 +179,14 @@ than treating the private sidecar as a container for every non-public file.
 | Private sidecar Knowledge Wiki | Named relationship context; governed chronology; commercial and communication state; bounded interpretation; agreement drafts; source dispositions; governed pointers; links from private records to stable public IDs | Credentials, authenticated browser state, full account exports, unrestricted source binaries, raw message databases, or an automatic power to publish |
 | Source vault outside Git | Raw transcripts and correspondence; message databases; full account exports; credentials and session state; sensitive source binaries retained under their own custody rules | Public copy, Git history, or a claim that access establishes consent or publication permission |
 
+For an explicitly authorized bounded call, the private sidecar may retain an
+exact copy of the complete conservative repair after private-access review,
+including participant-restricted passages needed for Jamie's working
+understanding. Raw recorder audio and raw provider exports remain source-vault
+material. A restricted passage may be absent from every outward projection
+while remaining accounted for privately; preservation never supplies
+quotation, attribution, publication, representation, or endorsement authority.
+
 The page-owner names are transparent repository governance, not public-site
 content. Their assessments may use only the exact public candidate and public
 sources. Any deliberation that depends on a named private relationship stays
