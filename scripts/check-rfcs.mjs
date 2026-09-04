@@ -5,6 +5,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import matter from "gray-matter";
 import { evaluateMinimumViableFederationRFC } from "./rfcs/minimum-viable-federation-eval.mjs";
+import { evaluatePublicEngagementPathwayRFC } from "./rfcs/public-engagement-pathway-eval.mjs";
 import { evaluatePrivateVaultSidecarRFC } from "./rfcs/private-vault-sidecar-eval.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -163,6 +164,27 @@ try {
   fail(
     path.join(rfcRoot, "0011-private-vault-sidecar.md"),
     `private vault sidecar evaluation could not run: ${error.message}`
+  );
+}
+
+try {
+  const engagementEvaluation = evaluatePublicEngagementPathwayRFC({ repoRoot });
+  for (const criterion of engagementEvaluation.hard_failures) {
+    fail(
+      path.join(rfcRoot, "0012-public-engagement-pathway.md"),
+      `public engagement pathway hard criterion failed: ${criterion}`
+    );
+  }
+  for (const scenario of engagementEvaluation.scenarios.results.filter((item) => !item.passed)) {
+    fail(
+      path.join(rfcRoot, "0012-public-engagement-pathway.md"),
+      `public engagement pathway scenario failed: ${scenario.id}`
+    );
+  }
+} catch (error) {
+  fail(
+    path.join(rfcRoot, "0012-public-engagement-pathway.md"),
+    `public engagement pathway evaluation could not run: ${error.message}`
   );
 }
 

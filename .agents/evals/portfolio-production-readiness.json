@@ -63,7 +63,7 @@
       "category": "positioning",
       "grader": "llm_judge",
       "blocking": true,
-      "weight": 10,
+      "weight": 9,
       "inputs": ["homepage", "technical operations page", "resume page"],
       "procedure": [
         "Give three blind judges no context beyond the candidate URLs.",
@@ -149,7 +149,7 @@
       "category": "trust",
       "grader": "hybrid",
       "blocking": true,
-      "weight": 11,
+      "weight": 10,
       "inputs": ["public pages", "knowledge bank", "citation registry", "approval register"],
       "procedure": [
         "Run knowledge-bank, citation, and public-safety checks.",
@@ -193,7 +193,7 @@
       "category": "usability",
       "grader": "deterministic",
       "blocking": true,
-      "weight": 4,
+      "weight": 3,
       "inputs": ["all public links and buttons"],
       "procedure": [
         "Inventory CTA labels, hrefs, download attributes, and final destinations.",
@@ -344,7 +344,7 @@
       "category": "hiring_legibility",
       "grader": "llm_judge",
       "blocking": true,
-      "weight": 8,
+      "weight": 6,
       "source_basis": "Public-safe synthesis of Chad Berkowitz's February and June 2026 resume-review guidance. The private review files are not part of the eval bundle or public repository.",
       "inputs": [
         "homepage",
@@ -458,6 +458,49 @@
         "anti-overclaim findings"
       ],
       "remediation_hint": "Name the recurring systems sequence once, then let three bounded project examples show how relationship models become interfaces, collective use, learning, and durable handoffs."
+    },
+    {
+      "id": "PR-017",
+      "title": "Public engagement pathway is legible, bounded, and source-independent",
+      "category": "hiring_legibility",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 5,
+      "source_basis": "Jamie's self-authored public offer and existing approved public portfolio evidence. Any private relationship, correspondence, transcript, negotiation, draft agreement, or expression of interest is excluded from the candidate and cannot establish demand.",
+      "inputs": [
+        "homepage contact call to action",
+        "contact page",
+        "technical operations page",
+        "RFC 0012 contract",
+        "source-bounded knowledge bank"
+      ],
+      "procedure": [
+        "Run the deterministic RFC 0012 evaluator before any rendered or model-based review.",
+        "Give three fresh readers the rendered candidate without its implementation discussion: one role-seeking hiring reader, one public-sector operating leader, and one prospective consulting buyer.",
+        "Ask each reader to distinguish the route for a salaried or embedded role from the route for scoped work, then choose the smallest fitting next step for three supplied needs.",
+        "Ask each reader what clicking the primary call to action will do, what each engagement can produce, what requires a new agreement, and whether the page implies an existing client, demand, endorsement, price, or result.",
+        "Audit every factual and commercial claim for public source support, pricing approval, private-source independence, truthful action labels, collective credit, and explicit human gates."
+      ],
+      "pass_criteria": [
+        "All three readers can distinguish role interest from scoped consulting without concluding that consulting has replaced Jamie's interest in embedded or salaried work.",
+        "All three readers can identify the focused working session, knowledge operations diagnostic, and implementation or fractional operations path and explain the buyer decision and bounded outcome for each.",
+        "Every transition requires a separate agreement on scope, compensation, timing, authority, and outputs; no conversation or earlier rung implies automatic continuation.",
+        "The public offer remains true and supportable after excluding every private relationship, expression of interest, correspondence item, transcript, negotiation, and draft agreement.",
+        "The candidate makes no unsupported claim of client adoption, endorsement, current paid engagement, market demand, or measured client result.",
+        "The primary call to action truthfully reaches the existing contact interaction and does not imply booking, payment, acceptance, or a contract.",
+        "No exact public fee appears without Jamie's approval of the number, currency, unit, effective date, and conditions against the exact candidate.",
+        "The first version adds no top-level navigation item, checkout, payment processing, scheduling integration, client portal, private-document browser, or new runtime dependency.",
+        "The median reader score is 4, no reader scores below 3, and every deterministic hard gate passes."
+      ],
+      "evidence_required": [
+        "RFC 0012 deterministic evaluation receipt",
+        "three independent reader scorecards",
+        "role-versus-scoped-work comprehension results",
+        "CTA inventory and destination result",
+        "public-source dependency audit",
+        "exact-copy and pricing approval record"
+      ],
+      "remediation_hint": "Reduce the path to one canonical Contact surface, lead each option with the buyer's decision and bounded outcome, and remove any wording whose truth depends on a private source or unapproved commercial term."
     }
   ]
 }

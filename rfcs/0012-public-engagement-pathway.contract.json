@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "rfc": 12,
+  "stage": "proposed",
+  "purpose": "Make a public visitor's path from recognizing a need to starting a bounded engagement clear, without projecting private relationship evidence or implying that any engagement already exists.",
+  "policy": {
+    "allowed_routes": ["/contact", "/work/technical-operations"],
+    "canonical_route": "/contact",
+    "primary_cta_destination": "email",
+    "allowed_source_classes": [
+      "existing-public-portfolio-evidence",
+      "self-authored-public-offer"
+    ],
+    "allowed_claims": ["availability-for-conversation"],
+    "new_top_level_navigation_authorized": false,
+    "required_rung_ids": [
+      "focused-working-session",
+      "knowledge-operations-diagnostic",
+      "implementation-or-fractional-operations"
+    ],
+    "forbidden_source_classes": [
+      "named-private-counterparty",
+      "private-correspondence",
+      "raw-transcript",
+      "draft-private-agreement",
+      "private-demand-signal"
+    ],
+    "forbidden_claims": [
+      "client-adoption",
+      "client-endorsement",
+      "current-paid-engagement",
+      "market-demand",
+      "measured-client-result"
+    ],
+    "forbidden_implementation": [
+      "checkout",
+      "payment-processing",
+      "calendar-booking-integration",
+      "new-runtime-dependency",
+      "client-portal",
+      "private-document-browser"
+    ],
+    "pricing": {
+      "public_state": "withheld-pending-Jamie-decision",
+      "private-negotiation_is_public_evidence": false,
+      "exact_price_requires_separate_approval": true
+    },
+    "authority": {
+      "decision_owner": "Jamie Burkart",
+      "implementation_authorized": false,
+      "publication_authorized": false,
+      "deployment_authorized": false,
+      "production_indexing_authorized": false
+    }
+  },
+  "proposal_candidate": {
+    "source_basis": [
+      "existing-public-portfolio-evidence",
+      "self-authored-public-offer"
+    ],
+    "claims": ["availability-for-conversation"],
+    "placement": {
+      "canonical_route": "/contact",
+      "supporting_routes": ["/work/technical-operations"],
+      "add_top_level_navigation": false
+    },
+    "primary_cta": {
+      "label": "Discuss a working session",
+      "destination": "email",
+      "interaction": "email",
+      "checkout_or_payment": false
+    },
+    "supporting_entry_cta": {
+      "label": "See ways to work together",
+      "destination": "/contact"
+    },
+    "employment_path": {
+      "remains_distinct": true,
+      "resume_destination": "/resume",
+      "consulting_does_not_replace_role_interest": true
+    },
+    "engagements": [
+      {
+        "id": "focused-working-session",
+        "public_label": "Focused working session",
+        "buyer_decision": "Is there one important decision, knot, or working artifact that would benefit from an hour of structured attention?",
+        "bounded_outcome": "A clarified question, decision map, or agreed next step appropriate to the session.",
+        "separately_authorized": true,
+        "automatic_continuation": false
+      },
+      {
+        "id": "knowledge-operations-diagnostic",
+        "public_label": "Knowledge operations diagnostic",
+        "buyer_decision": "Does a bounded workflow, evidence base, or team-memory problem need diagnosis before implementation?",
+        "bounded_outcome": "A scoped map of what is known, open, protected, risky, and worth doing next.",
+        "separately_authorized": true,
+        "automatic_continuation": false
+      },
+      {
+        "id": "implementation-or-fractional-operations",
+        "public_label": "Implementation or fractional operations",
+        "buyer_decision": "Is there enough shared understanding to scope delivery, adoption, documentation, and handoff?",
+        "bounded_outcome": "A separately agreed implementation or operating engagement with explicit scope, authority, cadence, and exit conditions.",
+        "separately_authorized": true,
+        "automatic_continuation": false
+      }
+    ],
+    "pricing": {
+      "public_state": "withheld-pending-Jamie-decision"
+    }
+  },
+  "evaluation": {
+    "ordered_phases": ["deterministic", "rendered-reader-review", "human"],
+    "script": "scripts/rfcs/public-engagement-pathway-eval.mjs",
+    "test": "scripts/rfcs/public-engagement-pathway-eval.test.mjs",
+    "suite": "evals/knowledge-bank/public-engagement-pathway-rfc-evals.json",
+    "run_receipt": "evals/knowledge-bank/runs/2026-09-04-public-engagement-pathway-rfc.md",
+    "portfolio_criterion": "PR-017",
+    "passing_does_not_authorize_implementation": true
+  },
+  "human_gates": {
+    "decision_owner": "Jamie Burkart",
+    "required": [
+      "RFC-stage-advancement",
+      "exact-public-copy",
+      "exact-public-pricing",
+      "route-implementation",
+      "publication",
+      "deployment",
+      "production-indexing"
+    ],
+    "automation_may_satisfy": []
+  },
+  "invariants": [
+    "public-offer-does-not-require-private-evidence",
+    "private-interest-is-not-market-demand",
+    "conversation-is-not-engagement",
+    "each-rung-requires-separate-authorization",
+    "passing-evals-do-not-advance-RFC-stage",
+    "proposal-is-not-publication"
+  ]
+}
