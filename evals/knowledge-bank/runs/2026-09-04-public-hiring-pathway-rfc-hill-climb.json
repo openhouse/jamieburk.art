@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "run_id": "public-hiring-pathway-rfc-hill-climb-2026-09-04",
+  "rfc": 12,
+  "candidate_branch": "work/2026-09-03-B",
+  "base_branch": "work/2026-09-03-A",
+  "criterion": "low-burden paid entry pathway with public-private and authority boundaries",
+  "method": {
+    "optimization_order": [
+      "private and authority hard gates",
+      "buyer comprehension",
+      "response burden",
+      "smallest coherent public change"
+    ],
+    "deterministic_before_subjective": true,
+    "rubric_changed_during_run": false,
+    "human_decision_substituted": false
+  },
+  "baseline": {
+    "subject": "current Contact surface on the base branch",
+    "decision": "hold",
+    "score": 1,
+    "score_maximum": 4,
+    "observed_strengths": [
+      "The page offers one direct email path for roles, referrals, consulting conversations, and collaboration.",
+      "The page does not disclose private opportunity provenance or claim a current client relationship."
+    ],
+    "lowest_scoring_gap": "A reader cannot identify a smallest paid starting unit, what it includes, what it costs, or whether it can stand alone.",
+    "evidence": [
+      "apps/www/src/app/contact/page.tsx at the base candidate",
+      "public hiring-pathway evaluator RED run: missing evaluator before implementation"
+    ]
+  },
+  "bounded_change": {
+    "description": "Add one proposed RFC, a machine-readable contract, deterministic scenarios, and mutation tests; do not change the live public surface or unrelated global reader rubrics.",
+    "why_this_change": "It makes the offer reviewable without prematurely publishing a price, contract, availability claim, or private origin story.",
+    "implementation_scope": "proposal-and-evaluation-only"
+  },
+  "candidate": {
+    "subject": "RFC 0012 proposal candidate",
+    "decision": "ready-for-human-review",
+    "deterministic_score": 1,
+    "scenario_failures": 0,
+    "proposed_reader_copy_score": 4,
+    "score_maximum": 4,
+    "improvement": 3,
+    "implementation_authorized": false,
+    "publication_authorized": false,
+    "human_review_still_required": [
+      "exact public copy",
+      "displayed price",
+      "commercial and legal terms",
+      "implementation",
+      "deployment",
+      "production indexing"
+    ]
+  },
+  "regression_guards": [
+    "No private transcript, correspondence, relationship source, negotiation, repository locator, or private graph topology enters the public candidate.",
+    "The proposed unit is a fixed-fee outcome, not an hourly-labor listing.",
+    "The working session can stand alone and any follow-on requires separate scope and authorization.",
+    "The inquiry does not imply booking, present availability, a signed agreement, or publication authority.",
+    "The existing public page remains unchanged until Jamie accepts the RFC and approves exact implementation copy."
+  ],
+  "decision": "keep-change"
+}

@@ -6,6 +6,7 @@ import { fileURLToPath } from "node:url";
 import matter from "gray-matter";
 import { evaluateMinimumViableFederationRFC } from "./rfcs/minimum-viable-federation-eval.mjs";
 import { evaluatePrivateVaultSidecarRFC } from "./rfcs/private-vault-sidecar-eval.mjs";
+import { evaluatePublicHiringPathwayRFC } from "./rfcs/public-hiring-pathway-eval.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const rfcRoot = path.join(repoRoot, "rfcs");
@@ -163,6 +164,27 @@ try {
   fail(
     path.join(rfcRoot, "0011-private-vault-sidecar.md"),
     `private vault sidecar evaluation could not run: ${error.message}`
+  );
+}
+
+try {
+  const hiringPathwayEvaluation = evaluatePublicHiringPathwayRFC({ repoRoot });
+  for (const criterion of hiringPathwayEvaluation.hard_failures) {
+    fail(
+      path.join(rfcRoot, "0012-public-paid-working-session-hiring-pathway.md"),
+      `public hiring pathway hard criterion failed: ${criterion}`
+    );
+  }
+  for (const scenario of hiringPathwayEvaluation.scenarios.results.filter((item) => !item.passed)) {
+    fail(
+      path.join(rfcRoot, "0012-public-paid-working-session-hiring-pathway.md"),
+      `public hiring pathway scenario failed: ${scenario.id}`
+    );
+  }
+} catch (error) {
+  fail(
+    path.join(rfcRoot, "0012-public-paid-working-session-hiring-pathway.md"),
+    `public hiring pathway evaluation could not run: ${error.message}`
   );
 }
 
