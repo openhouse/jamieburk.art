@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "pair_id": "portfolio-public-private-v1",
+  "role": "public",
+  "counterpart_role": "private",
+  "counterpart_locator": "operator-local-only",
+  "branch_name_policy": "exact",
+  "base_branch_name_policy": "exact",
+  "pull_request_title_policy": "exact",
+  "commit_identity": "independent",
+  "public_runtime_dependency": false,
+  "public_to_private_reference": "forbidden",
+  "private_to_public_reference": "public-projection-id",
+  "publication_authority": "named-human-only"
+}

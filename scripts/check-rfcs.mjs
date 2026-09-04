@@ -5,6 +5,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import matter from "gray-matter";
 import { evaluateMinimumViableFederationRFC } from "./rfcs/minimum-viable-federation-eval.mjs";
+import { evaluatePrivateVaultSidecarRFC } from "./rfcs/private-vault-sidecar-eval.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const rfcRoot = path.join(repoRoot, "rfcs");
@@ -141,6 +142,27 @@ try {
   fail(
     path.join(rfcRoot, "0010-minimum-viable-federation-canary.md"),
     `minimum viable federation evaluation could not run: ${error.message}`
+  );
+}
+
+try {
+  const sidecarEvaluation = evaluatePrivateVaultSidecarRFC({ repoRoot });
+  for (const criterion of sidecarEvaluation.hard_failures) {
+    fail(
+      path.join(rfcRoot, "0011-private-vault-sidecar.md"),
+      `private vault sidecar hard criterion failed: ${criterion}`
+    );
+  }
+  for (const scenario of sidecarEvaluation.scenarios.results.filter((item) => !item.passed)) {
+    fail(
+      path.join(rfcRoot, "0011-private-vault-sidecar.md"),
+      `private vault sidecar scenario failed: ${scenario.id}`
+    );
+  }
+} catch (error) {
+  fail(
+    path.join(rfcRoot, "0011-private-vault-sidecar.md"),
+    `private vault sidecar evaluation could not run: ${error.message}`
   );
 }
 

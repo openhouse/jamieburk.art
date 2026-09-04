@@ -108,6 +108,7 @@ that an agent, test, or informal participant has human decision authority.
 | [0008](./0008-editorial-page-owner-pilot.md) | Editorial Page-Owner Pilot | `proposed` | Jamie Burkart |
 | [0009](./0009-wiki-as-shared-memory-protocol.md) | Wiki as Shared Memory Protocol for People and Agents | `proposed` | Jamie Burkart |
 | [0010](./0010-minimum-viable-federation-canary.md) | Minimum Viable Federation Canary for Responsible Knowledge Passage | `proposed` | Jamie Burkart |
+| [0011](./0011-private-vault-sidecar.md) | Paired Public Portfolio and Private Vault Sidecar | `implementing` | Jamie Burkart |
 
 ## Validation
 
