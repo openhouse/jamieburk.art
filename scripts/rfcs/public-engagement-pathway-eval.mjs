@@ -12,12 +12,19 @@ const rfcPath = "rfcs/0012-public-engagement-pathway.md";
 const contractPath = "rfcs/0012-public-engagement-pathway.contract.json";
 const suitePath = "evals/knowledge-bank/public-engagement-pathway-rfc-evals.json";
 const candidatePaths = [
+  "apps/www/src/data/page-owner-registry.json",
+  "evals/page-owners/runs/2026-08-22-colophon-page-owners.json",
   suitePath,
   "package.json",
   "rfcs/README.md",
   rfcPath,
   contractPath,
   "scripts/check-rfcs.mjs",
+  "scripts/page-owners/contact-assignment-eval.mjs",
+  "scripts/page-owners/contact-assignment-eval.test.mjs",
+  "scripts/page-owners/evaluate.mjs",
+  "scripts/page-owners/evaluate.test.mjs",
+  "scripts/rfcs/public-private-boundary-eval.test.mjs",
   "scripts/rfcs/public-engagement-pathway-eval.mjs",
   "scripts/rfcs/public-engagement-pathway-eval.test.mjs"
 ];
@@ -39,6 +46,104 @@ function candidateFingerprint(repoRoot) {
 
 function wordCount(value) {
   return value.trim().split(/\s+/).filter(Boolean).length;
+}
+
+function sortedUnique(values) {
+  return [...new Set(values)].sort((left, right) => left.localeCompare(right, "en"));
+}
+
+export function evaluateEngagementInformationPlacement(policy, candidate) {
+  const contentClasses = sortedUnique(candidate.content_classes ?? []);
+  const sourceVaultClasses = new Set(
+    policy.source_vault?.required_content_classes ?? []
+  );
+  const sourceVaultContent = contentClasses.filter((contentClass) =>
+    sourceVaultClasses.has(contentClass)
+  );
+
+  if (sourceVaultContent.length > 0) {
+    const enteredPrivateGit = candidate.requested_destination === "private-sidecar";
+    return {
+      decision: enteredPrivateGit ? "route-to-source-vault" : "deny",
+      destination: "source-vault",
+      publication_authorized: false,
+      reasons: sourceVaultContent.map(
+        (contentClass) =>
+          `source-vault-content-cannot-enter-${enteredPrivateGit ? "private-git" : "git"}:${contentClass}`
+      )
+    };
+  }
+
+  if (candidate.requested_destination === "public") {
+    const forbiddenPublicClasses = new Set(
+      policy.public?.forbidden_content_classes ?? []
+    );
+    const forbidden = contentClasses.filter((contentClass) =>
+      forbiddenPublicClasses.has(contentClass)
+    );
+    const reasons = forbidden.map(
+      (contentClass) => `public-content-forbidden:${contentClass}`
+    );
+    if (candidate.public_backlink_to_private) {
+      reasons.push("public-private-backlink-forbidden");
+    }
+    if (reasons.length > 0) {
+      return {
+        decision: "deny",
+        destination: "private-sidecar",
+        publication_authorized: false,
+        reasons: sortedUnique(reasons)
+      };
+    }
+
+    const allowedPublicClasses = new Set(
+      policy.public?.allowed_content_classes ?? []
+    );
+    const unclassified = contentClasses.filter(
+      (contentClass) => !allowedPublicClasses.has(contentClass)
+    );
+    const holdReasons = unclassified.map(
+      (contentClass) => `public-content-unclassified:${contentClass}`
+    );
+    if (!candidate.has_separate_publication_packet) {
+      holdReasons.push("separate-publication-packet-required");
+    }
+    return {
+      decision: holdReasons.length > 0 ? "hold" : "ready-for-public-review",
+      destination: "public",
+      publication_authorized: false,
+      reasons: sortedUnique(holdReasons)
+    };
+  }
+
+  if (candidate.requested_destination === "private-sidecar") {
+    const allowedPrivateClasses = new Set(
+      policy.private_sidecar?.allowed_content_classes ?? []
+    );
+    const allowedRepresentations = new Set(
+      policy.private_sidecar?.allowed_representations ?? []
+    );
+    const reasons = contentClasses
+      .filter((contentClass) => !allowedPrivateClasses.has(contentClass))
+      .map((contentClass) => `private-content-unclassified:${contentClass}`);
+    if (!allowedRepresentations.has(candidate.representation)) {
+      reasons.push("private-representation-not-governed");
+    }
+    if (!candidate.source_registered) reasons.push("private-source-registration-required");
+    return {
+      decision: reasons.length > 0 ? "hold" : "ready-for-private-intake",
+      destination: "private-sidecar",
+      publication_authorized: false,
+      reasons: sortedUnique(reasons)
+    };
+  }
+
+  return {
+    decision: "hold",
+    destination: null,
+    publication_authorized: false,
+    reasons: ["destination-unrecognized"]
+  };
 }
 
 export function evaluatePublicEngagementPathway(contract, candidate) {
@@ -114,6 +219,18 @@ export function evaluatePublicEngagementPathwayRFC(options = {}) {
       expected: scenario.expected
     };
   });
+  const placementScenarioResults = (suite.placement_cases ?? []).map((scenario) => {
+    const actual = evaluateEngagementInformationPlacement(
+      contract.information_partition,
+      scenario.candidate
+    );
+    return {
+      id: scenario.id,
+      passed: isDeepStrictEqual(actual, scenario.expected),
+      actual,
+      expected: scenario.expected
+    };
+  });
 
   const checks = {
     proposal_preserves_human_authority:
@@ -146,25 +263,37 @@ export function evaluatePublicEngagementPathwayRFC(options = {}) {
       contract.pricing?.public_price_state === "decision-pending" &&
       contract.pricing?.amount === null &&
       contract.authority?.public_price_authorized === false,
+    three_plane_information_partition:
+      contract.information_partition?.public?.allowed_content_classes?.length >= 6 &&
+      contract.information_partition?.public?.forbidden_content_classes?.includes(
+        "named-relationship"
+      ) &&
+      contract.information_partition?.private_sidecar?.allowed_representations?.includes(
+        "bounded-derived-record"
+      ) &&
+      contract.information_partition?.source_vault?.required_content_classes?.includes(
+        "raw-transcript"
+      ) &&
+      contract.information_partition?.projection?.direction === "private-to-public" &&
+      contract.information_partition?.projection?.public_backlink_to_private === false &&
+      contract.information_partition?.projection?.separate_publication_packet_required === true,
     scenario_coverage:
       scenarioResults.length === 7 && scenarioResults.every((scenario) => scenario.passed),
+    placement_scenario_coverage:
+      placementScenarioResults.length === 7 &&
+      placementScenarioResults.every((scenario) => scenario.passed),
     reader_burden:
       wordCount(contract.public_copy.body) <= 75 &&
       wordCount(contract.public_copy.cta_label) <= 4
   };
 
-  const rubric = {
-    proposal_preserves_human_authority: { weight: 0.1, hard: true },
-    reuses_high_intent_contact_surface: { weight: 0.1, hard: true },
-    bounded_paid_entry_is_explicit: { weight: 0.1, hard: true },
-    outcome_and_takeaway_are_concrete: { weight: 0.1, hard: true },
-    continuation_requires_a_new_choice: { weight: 0.1, hard: true },
-    broader_hiring_position_remains_visible: { weight: 0.1, hard: true },
-    private_origin_and_claims_do_not_project: { weight: 0.1, hard: true },
-    public_pricing_remains_a_human_decision: { weight: 0.1, hard: true },
-    scenario_coverage: { weight: 0.1, hard: true },
-    reader_burden: { weight: 0.1, hard: false }
-  };
+  const criterionWeight = 1 / Object.keys(checks).length;
+  const rubric = Object.fromEntries(
+    Object.keys(checks).map((id) => [
+      id,
+      { weight: criterionWeight, hard: id !== "reader_burden" }
+    ])
+  );
   const score = Object.entries(rubric).reduce(
     (total, [id, criterion]) => total + (checks[id] ? criterion.weight : 0),
     0
@@ -187,6 +316,12 @@ export function evaluatePublicEngagementPathwayRFC(options = {}) {
       passed: scenarioResults.filter((scenario) => scenario.passed).length,
       failed: scenarioResults.filter((scenario) => !scenario.passed).length,
       results: scenarioResults
+    },
+    placement_scenarios: {
+      total: placementScenarioResults.length,
+      passed: placementScenarioResults.filter((scenario) => scenario.passed).length,
+      failed: placementScenarioResults.filter((scenario) => !scenario.passed).length,
+      results: placementScenarioResults
     },
     public_copy_word_count: wordCount(contract.public_copy.body),
     implementation_authorized: contract.authority.implementation_authorized,

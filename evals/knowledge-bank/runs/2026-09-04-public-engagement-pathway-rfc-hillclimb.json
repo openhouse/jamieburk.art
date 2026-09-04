@@ -30,12 +30,77 @@
     "implementation_authorized": false,
     "publication_authorized": false
   },
+  "cycle_2": {
+    "criterion": "three-plane-information-placement-boundary",
+    "scale": "0-4",
+    "before_score": 2,
+    "lowest_observed_problem": "The proposal described a public/private split but did not make raw source custody a separately testable destination, leaving the private Git sidecar vulnerable to becoming an unrestricted archive.",
+    "red_baseline": {
+      "test_count": 7,
+      "test_pass_count": 0,
+      "test_failure_count": 7
+    },
+    "change": "Added an explicit public, private-sidecar, and source-vault placement contract plus adversarial routing tests for identity, quotations, private topology, raw transcripts, and credentials.",
+    "after_score": 4,
+    "test_count": 7,
+    "test_pass_count": 7,
+    "test_failure_count": 0,
+    "kept": true
+  },
+  "cycle_3": {
+    "criterion": "contact-pathway-page-owner-assignment",
+    "scale": "0-4",
+    "before_score": 0,
+    "lowest_observed_problem": "The proposed Contact pathway had no declared editorial owners and no machine-enforced distinction between assignment and acceptance.",
+    "red_baseline": {
+      "test_count": 4,
+      "test_pass_count": 0,
+      "test_failure_count": 4
+    },
+    "change": "Assigned Katie Lane, Adrienne R. Fields, and Blair Enns as three fictionalized, public-source-only page-owner lenses with distinct criteria; kept the candidate explicitly unimplemented and unaccepted.",
+    "after_score": 4,
+    "test_count": 4,
+    "test_pass_count": 4,
+    "test_failure_count": 0,
+    "kept": true
+  },
+  "cycle_4": {
+    "criterion": "page-owner-receipt-scope",
+    "scale": "0-4",
+    "before_score": 2,
+    "lowest_observed_problem": "Adding an unrelated proposed Contact assignment invalidated the Colophon review because its receipt hashed the entire multi-page registry.",
+    "red_baseline": {
+      "test_count": 9,
+      "test_pass_count": 7,
+      "test_failure_count": 2
+    },
+    "change": "Bound the existing Colophon receipt to its own assignment plus the shared public-authority boundary, so unrelated page proposals no longer stale it while changes to Colophon still fail closed.",
+    "after_score": 4,
+    "test_count": 9,
+    "test_pass_count": 9,
+    "test_failure_count": 0,
+    "kept": true
+  },
+  "final_candidate": {
+    "candidate_fingerprint": "62cabfb489f9136ba8f0dcb7d0eb2cb8b7264f22dc59c54bf8cfd3a9917c8a86",
+    "score": 1,
+    "offer_scenarios_passed": 7,
+    "offer_scenarios_total": 7,
+    "placement_scenarios_passed": 7,
+    "placement_scenarios_total": 7,
+    "page_owner_assignment_state": "queued-for-implementation-candidate",
+    "page_owner_count": 3,
+    "colophon_registry_binding": "page-and-public-boundary-v1",
+    "implementation_authorized": false,
+    "publication_authorized": false
+  },
   "decision": "keep",
   "human_gates_remaining": [
     "public-copy approval",
     "public-pricing decision",
     "RFC stage advancement",
-    "implementation",
+    "implementation authorization after informed public-repository exposure decision",
+    "exact-rendered-candidate page-owner review",
     "publication",
     "deployment",
     "production indexing"

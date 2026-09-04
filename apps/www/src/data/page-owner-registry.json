@@ -46,6 +46,43 @@
       ]
     },
     {
+      "pageId": "contact-engagement-pathway",
+      "route": "/contact",
+      "status": "proposed",
+      "candidateState": "not-implemented-no-owner-acceptance",
+      "purpose": "Help a high-intent reader understand one bounded paid way to begin while preserving employment, project, referral, and collaboration pathways.",
+      "acceptanceRule": "After implementation, the exact rendered public candidate passes only when every fictionalized page-owner lens returns Pass and Jamie separately approves publication.",
+      "owners": [
+        {
+          "id": "katie-lane",
+          "name": "Katie Lane",
+          "publicProfileUrl": "https://www.workmadeforhire.net/about/",
+          "focus": "Compensation and negotiation boundary",
+          "publicEvidenceState": "default-public-state",
+          "question": "Does the page make paid work, bounded authorization, and the reader's freedom to choose what happens next clear without turning ordinary contact into an involuntary sales process?",
+          "passDefinition": "Pass only when compensation is explicit, one session creates no continuing obligation, other contact paths remain open, and the invitation does not convert private rapport or exploratory conversation into free labor."
+        },
+        {
+          "id": "adrienne-r-fields",
+          "name": "Adrienne R. Fields",
+          "publicProfileUrl": "https://afnylaw.com/",
+          "focus": "Transactional clarity and protected boundaries",
+          "publicEvidenceState": "default-public-state",
+          "question": "Does the page distinguish a general invitation from an engagement, preserve the unresolved pricing and contracting gates, and avoid implying a client, testimonial, or completed result?",
+          "passDefinition": "Pass only when scope, authorization, continuation, and public claims remain distinct; the page collects no sensitive data; and no private person, negotiation, source, endorsement, or unsupported outcome is exposed."
+        },
+        {
+          "id": "blair-enns",
+          "name": "Blair Enns",
+          "publicProfileUrl": "https://www.winwithoutpitching.com/about/",
+          "focus": "Outcome-led positioning",
+          "publicEvidenceState": "default-public-state",
+          "question": "Does the page present the working session as a useful decision-and-artifact loop rather than a commodity hour, while giving an interested reader a confident and proportionate next step?",
+          "passDefinition": "Pass only when the problem and usable outcome lead the offer, duration controls scope rather than defining value, the call to action is truthful, and the broader practice remains more visible than the transaction."
+        }
+      ]
+    },
+    {
       "pageId": "contact",
       "route": "/contact",
       "status": "implementation-candidate",

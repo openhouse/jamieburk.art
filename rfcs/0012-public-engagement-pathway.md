@@ -166,6 +166,30 @@ that Jamie is available only as an hourly consultant or that every initial
 conversation is billable. Referrals and ordinary collaboration inquiries still
 have a clear route.
 
+### Information placement boundary
+
+Anything committed to this repository is public, even when it is not rendered
+on the website. The pathway therefore uses three information planes rather
+than treating the private sidecar as a container for every non-public file.
+
+| Plane | What belongs there | What does not belong there |
+| --- | --- | --- |
+| Public website | The general paid-session offer; representative problem types and artifacts; the 60-minute and stand-alone boundaries; separate continuation choice; employment, project, referral, and collaboration paths; the public email action | A person's identity, private quotation, relationship or negotiation state, presumed intent, private rate, private source route, testimonial implication, or unsupported outcome |
+| Public repository, not website copy | This RFC; generic adversarial evaluator cases; clearly labeled fictionalized page-owner assignments and their public-source bases | A private repository locator or backlink, protected evidence, or any claim that the modeled owners participated, approved, or endorsed the page |
+| Private sidecar Knowledge Wiki | Named relationship context; governed chronology; commercial and communication state; bounded interpretation; agreement drafts; source dispositions; governed pointers; links from private records to stable public IDs | Credentials, authenticated browser state, full account exports, unrestricted source binaries, raw message databases, or an automatic power to publish |
+| Source vault outside Git | Raw transcripts and correspondence; message databases; full account exports; credentials and session state; sensitive source binaries retained under their own custody rules | Public copy, Git history, or a claim that access establishes consent or publication permission |
+
+The page-owner names are transparent repository governance, not public-site
+content. Their assessments may use only the exact public candidate and public
+sources. Any deliberation that depends on a named private relationship stays
+in the private sidecar and cannot be cited as a public endorsement.
+
+A private record may point to a stable public projection ID. The public graph
+never points back, reveals the private topology, or depends on private access
+to build. Moving an insight outward requires a separate public candidate that
+removes identifying provenance, states evidence and limits, and returns the
+exact wording to Jamie for a publication decision.
+
 ### Pricing
 
 The session is described as paid so compensation is not ambiguous. The amount

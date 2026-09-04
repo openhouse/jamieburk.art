@@ -162,6 +162,134 @@
       }
     }
   ],
+  "placement_cases": [
+    {
+      "id": "generalized-offer-enters-public-review",
+      "candidate": {
+        "requested_destination": "public",
+        "content_classes": [
+          "general-offer",
+          "problem-types",
+          "bounded-process",
+          "artifact-examples",
+          "continuation-boundary",
+          "alternate-contact-pathways"
+        ],
+        "public_backlink_to_private": false,
+        "has_separate_publication_packet": true
+      },
+      "expected": {
+        "decision": "ready-for-public-review",
+        "destination": "public",
+        "publication_authorized": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "relationship-provenance-is-denied-from-public",
+      "candidate": {
+        "requested_destination": "public",
+        "content_classes": [
+          "general-offer",
+          "named-relationship",
+          "direct-quotation"
+        ],
+        "public_backlink_to_private": false,
+        "has_separate_publication_packet": true
+      },
+      "expected": {
+        "decision": "deny",
+        "destination": "private-sidecar",
+        "publication_authorized": false,
+        "reasons": [
+          "public-content-forbidden:direct-quotation",
+          "public-content-forbidden:named-relationship"
+        ]
+      }
+    },
+    {
+      "id": "governed-interpretation-enters-private-sidecar",
+      "candidate": {
+        "requested_destination": "private-sidecar",
+        "content_classes": [
+          "relationship-chronology",
+          "commercial-status",
+          "interpretation"
+        ],
+        "representation": "bounded-derived-record",
+        "source_registered": true
+      },
+      "expected": {
+        "decision": "ready-for-private-intake",
+        "destination": "private-sidecar",
+        "publication_authorized": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "private-pointer-may-point-to-public-id",
+      "candidate": {
+        "requested_destination": "private-sidecar",
+        "content_classes": ["source-pointer"],
+        "representation": "governed-pointer",
+        "source_registered": true,
+        "public_projection_id": "method.source-backed-team-memory"
+      },
+      "expected": {
+        "decision": "ready-for-private-intake",
+        "destination": "private-sidecar",
+        "publication_authorized": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "raw-transcript-routes-to-source-vault",
+      "candidate": {
+        "requested_destination": "private-sidecar",
+        "content_classes": ["raw-transcript"],
+        "representation": "exact-copy",
+        "source_registered": true
+      },
+      "expected": {
+        "decision": "route-to-source-vault",
+        "destination": "source-vault",
+        "publication_authorized": false,
+        "reasons": [
+          "source-vault-content-cannot-enter-private-git:raw-transcript"
+        ]
+      }
+    },
+    {
+      "id": "credential-is-denied-from-git",
+      "candidate": {
+        "requested_destination": "public",
+        "content_classes": ["credential"],
+        "public_backlink_to_private": false,
+        "has_separate_publication_packet": true
+      },
+      "expected": {
+        "decision": "deny",
+        "destination": "source-vault",
+        "publication_authorized": false,
+        "reasons": ["source-vault-content-cannot-enter-git:credential"]
+      }
+    },
+    {
+      "id": "public-backlink-to-private-is-denied",
+      "candidate": {
+        "requested_destination": "public",
+        "content_classes": ["general-offer"],
+        "public_backlink_to_private": true,
+        "has_separate_publication_packet": true
+      },
+      "expected": {
+        "decision": "deny",
+        "destination": "private-sidecar",
+        "publication_authorized": false,
+        "reasons": ["public-private-backlink-forbidden"]
+      }
+    }
+  ],
   "human_gates": [
     "public-copy approval",
     "public-pricing decision",

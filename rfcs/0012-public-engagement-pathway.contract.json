@@ -45,6 +45,65 @@
     "endorsement_implication": false,
     "private_repository_locator": false
   },
+  "information_partition": {
+    "public": {
+      "allowed_content_classes": [
+        "general-offer",
+        "problem-types",
+        "bounded-process",
+        "artifact-examples",
+        "continuation-boundary",
+        "alternate-contact-pathways"
+      ],
+      "forbidden_content_classes": [
+        "named-relationship",
+        "direct-quotation",
+        "relationship-state",
+        "negotiation-state",
+        "private-rate",
+        "presumed-intent",
+        "private-source-locator"
+      ],
+      "repository_only_governance": [
+        "RFC",
+        "generic-adversarial-evals",
+        "fictionalized-page-owner-assignments"
+      ]
+    },
+    "private_sidecar": {
+      "allowed_content_classes": [
+        "named-relationship",
+        "relationship-chronology",
+        "commercial-status",
+        "interpretation",
+        "agreement-draft",
+        "source-pointer"
+      ],
+      "allowed_representations": [
+        "governed-pointer",
+        "bounded-derived-record"
+      ],
+      "raw_source_store": false
+    },
+    "source_vault": {
+      "required_content_classes": [
+        "raw-transcript",
+        "message-database",
+        "account-export",
+        "credential",
+        "authenticated-session",
+        "unrestricted-source-binary"
+      ],
+      "git_repository": false
+    },
+    "projection": {
+      "direction": "private-to-public",
+      "public_backlink_to_private": false,
+      "separate_publication_packet_required": true,
+      "private_origin_must_be_removed": true,
+      "human_decision_owner": "Jamie Burkart"
+    }
+  },
   "public_copy": {
     "heading": "Start with one focused working session",
     "body": "Start with one paid, focused 60-minute working session. Bring a decision, knowledge bottleneck, or implementation problem. We’ll name one useful outcome in advance and turn the hour into a concise artifact—such as a decision brief, system map, or next-step plan. The session stands on its own. Afterward, we can separately decide whether more work would help. You can also contact me about full-time roles, larger projects, referrals, or collaboration.",
