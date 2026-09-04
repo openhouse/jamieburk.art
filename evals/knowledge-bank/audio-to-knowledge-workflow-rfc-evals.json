@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "id": "audio-to-knowledge-workflow-rfc",
+  "objective": "Preserve every artifact in a bounded authorized call family while keeping raw custody, provider transcription, diarization, conservative repair, private interpretation, and public projection as separate fail-closed stages.",
+  "baseline": {
+    "job_id": "call-family-example",
+    "scope": {
+      "bounded": true,
+      "preservation_authorized": true,
+      "source_access_authorized": true
+    },
+    "capture": {
+      "observed_artifact_count": 4,
+      "dispositioned_artifact_count": 4,
+      "originals_immutable": true,
+      "originals_hashed": true,
+      "raw_audio_destination": "source-vault"
+    },
+    "preparation": {
+      "derived_audio_only": true,
+      "source_bytes_modified": false
+    },
+    "context": {
+      "scheduled_event_present": false,
+      "occurrence_corroborated": false,
+      "event_state": "not-asserted"
+    },
+    "transfer": {
+      "external_provider_required": true,
+      "authorized": true,
+      "private_data_confirmed": true
+    },
+    "transcription": {
+      "status": "complete",
+      "provider_export_preserved": true,
+      "provider_and_model_recorded": true,
+      "segment_order_recorded": true
+    },
+    "diarization": {
+      "label_mode": "generic",
+      "named_identity_supported": false,
+      "human_reviewed": false,
+      "uncertainty_marked": true,
+      "known_speaker_reference_used": false,
+      "known_speaker_reference_authorized": false
+    },
+    "repair": {
+      "status": "complete",
+      "compared_with_audio": true,
+      "segment_lineage": true,
+      "uncertainty_marked": true,
+      "provider_export_modified": false,
+      "audio_certification_status": "not-claimed"
+    },
+    "knowledge": {
+      "private_close_reading": "complete",
+      "source_ids_resolve": true,
+      "claim_states_present": true,
+      "destination": "private-sidecar"
+    },
+    "projection": {
+      "requested": false,
+      "human_reviewed": false,
+      "publication_authorized": false,
+      "automatic": false
+    },
+    "receipt": {
+      "candidate_matches": true,
+      "duplicate_artifact_count": 0
+    },
+    "security": {
+      "credentials_present": false
+    }
+  },
+  "cases": [
+    {
+      "id": "complete-private-workflow-is-reviewable",
+      "patch": {},
+      "expected": {
+        "decision": "ready-for-private-knowledge-update",
+        "publication_authorized": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "missing-artifact-disposition-holds",
+      "patch": {"capture": {"dispositioned_artifact_count": 3}},
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": ["captured-artifact-disposition-incomplete"]
+      }
+    },
+    {
+      "id": "missing-private-preservation-authority-holds",
+      "patch": {"scope": {"preservation_authorized": false}},
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": ["private-preservation-authorization-required"]
+      }
+    },
+    {
+      "id": "external-transfer-without-private-data-confirmation-holds",
+      "patch": {"transfer": {"private_data_confirmed": false}},
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": ["external-private-data-transfer-confirmation-required"]
+      }
+    },
+    {
+      "id": "source-byte-mutation-is-denied",
+      "patch": {
+        "capture": {"originals_immutable": false},
+        "preparation": {"source_bytes_modified": true}
+      },
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["source-original-mutation-forbidden"]
+      }
+    },
+    {
+      "id": "pending-provider-transcript-holds",
+      "patch": {"transcription": {"status": "pending"}},
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": ["provider-transcript-incomplete"]
+      }
+    },
+    {
+      "id": "unpreserved-provider-export-holds",
+      "patch": {"transcription": {"provider_export_preserved": false}},
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": ["provider-export-preservation-required"]
+      }
+    },
+    {
+      "id": "unsupported-named-speaker-assignment-is-denied",
+      "patch": {
+        "diarization": {
+          "label_mode": "named",
+          "named_identity_supported": false,
+          "human_reviewed": false
+        }
+      },
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["named-speaker-assignment-unverified"]
+      }
+    },
+    {
+      "id": "unauthorized-known-speaker-reference-is-denied",
+      "patch": {
+        "diarization": {
+          "known_speaker_reference_used": true,
+          "known_speaker_reference_authorized": false
+        }
+      },
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["voice-reference-authorization-required"]
+      }
+    },
+    {
+      "id": "repair-without-evidence-is-denied",
+      "patch": {
+        "repair": {
+          "compared_with_audio": false,
+          "segment_lineage": false,
+          "uncertainty_marked": false
+        }
+      },
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": [
+          "repair-audio-comparison-required",
+          "repair-segment-lineage-required",
+          "repair-uncertainty-marking-required"
+        ]
+      }
+    },
+    {
+      "id": "automated-audio-certification-is-denied",
+      "patch": {"repair": {"audio_certification_status": "automated-certified"}},
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["automated-audio-certification-forbidden"]
+      }
+    },
+    {
+      "id": "unfinished-repair-holds",
+      "patch": {"repair": {"status": "pending"}},
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": ["conservative-repair-incomplete"]
+      }
+    },
+    {
+      "id": "orphan-close-reading-lineage-holds",
+      "patch": {"knowledge": {"source_ids_resolve": false}},
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": ["private-close-reading-lineage-incomplete"]
+      }
+    },
+    {
+      "id": "automatic-publication-is-denied",
+      "patch": {
+        "projection": {
+          "requested": true,
+          "human_reviewed": true,
+          "publication_authorized": true,
+          "automatic": true
+        }
+      },
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["automatic-publication-forbidden"]
+      }
+    },
+    {
+      "id": "stale-candidate-receipt-holds",
+      "patch": {"receipt": {"candidate_matches": false}},
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": ["candidate-receipt-stale"]
+      }
+    },
+    {
+      "id": "non-idempotent-retry-holds",
+      "patch": {"receipt": {"duplicate_artifact_count": 1}},
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": ["non-idempotent-duplicate-artifact"]
+      }
+    },
+    {
+      "id": "raw-audio-in-private-git-is-denied",
+      "patch": {"capture": {"raw_audio_destination": "private-git"}},
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["raw-source-git-destination-forbidden"]
+      }
+    },
+    {
+      "id": "credential-bearing-job-is-denied",
+      "patch": {"security": {"credentials_present": true}},
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["credential-material-forbidden"]
+      }
+    },
+    {
+      "id": "scheduled-context-cannot-establish-occurrence",
+      "patch": {
+        "context": {
+          "scheduled_event_present": true,
+          "occurrence_corroborated": false,
+          "event_state": "occurred"
+        }
+      },
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["scheduled-event-occurrence-unsupported"]
+      }
+    }
+  ]
+}

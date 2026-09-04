@@ -7,6 +7,7 @@ import matter from "gray-matter";
 import { evaluateMinimumViableFederationRFC } from "./rfcs/minimum-viable-federation-eval.mjs";
 import { evaluatePrivateVaultSidecarRFC } from "./rfcs/private-vault-sidecar-eval.mjs";
 import { evaluatePublicEngagementPathwayRFC } from "./rfcs/public-engagement-pathway-eval.mjs";
+import { evaluateAudioKnowledgeWorkflowRFC } from "./rfcs/audio-to-knowledge-workflow-eval.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const rfcRoot = path.join(repoRoot, "rfcs");
@@ -185,6 +186,27 @@ try {
   fail(
     path.join(rfcRoot, "0012-public-engagement-pathway.md"),
     `public engagement pathway evaluation could not run: ${error.message}`
+  );
+}
+
+try {
+  const audioWorkflowEvaluation = evaluateAudioKnowledgeWorkflowRFC({ repoRoot });
+  for (const criterion of audioWorkflowEvaluation.hard_failures) {
+    fail(
+      path.join(rfcRoot, "0013-governed-audio-to-knowledge-workflow.md"),
+      `audio-to-knowledge workflow hard criterion failed: ${criterion}`
+    );
+  }
+  for (const scenario of audioWorkflowEvaluation.scenarios.results.filter((item) => !item.passed)) {
+    fail(
+      path.join(rfcRoot, "0013-governed-audio-to-knowledge-workflow.md"),
+      `audio-to-knowledge workflow scenario failed: ${scenario.id}`
+    );
+  }
+} catch (error) {
+  fail(
+    path.join(rfcRoot, "0013-governed-audio-to-knowledge-workflow.md"),
+    `audio-to-knowledge workflow evaluation could not run: ${error.message}`
   );
 }
 
