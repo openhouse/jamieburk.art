@@ -30,6 +30,21 @@ const contract = {
     downstream_effect: "hold-projection",
     original_preserved: true
   },
+  evidence_boundaries: {
+    outbound_only_postures: ["outbound-only"],
+    outcomes_requiring_response: [
+      "acceptance",
+      "adoption",
+      "delivery",
+      "deployment",
+      "endorsement",
+      "payment"
+    ],
+    unresolved_source_states: ["dataless", "inaccessible", "not-materialized"],
+    unresolved_source_effect: "hold",
+    duplicate_content_fingerprints_do_not_add_support: true,
+    silence_is_approval: false
+  },
   authority: {
     automation_publication_authority: "none",
     transport_is_canonical_authority: false
@@ -116,6 +131,40 @@ test("source, interpretation, and publication authority cannot collapse into one
   assert.deepEqual(evaluateCanaryEvent(contract, event), {
     decision: "deny",
     reasons: ["authority-boundaries-collapsed"]
+  });
+});
+
+test("outbound-only communication cannot establish adoption", () => {
+  const event = recordReference({
+    evidence_posture: "outbound-only",
+    claim_assertion: "adoption"
+  });
+
+  assert.deepEqual(evaluateCanaryEvent(contract, event), {
+    decision: "hold",
+    reasons: ["outbound-only-cannot-establish:adoption"]
+  });
+});
+
+test("a dataless source remains unresolved rather than becoming negative evidence", () => {
+  const event = recordReference({ source_access_state: "dataless" });
+
+  assert.deepEqual(evaluateCanaryEvent(contract, event), {
+    decision: "hold",
+    reasons: ["source-content-unavailable:dataless"]
+  });
+});
+
+test("duplicate exports cannot establish independent corroboration", () => {
+  const event = recordReference({
+    corroboration_required: true,
+    minimum_independent_sources: 2,
+    source_content_fingerprints: ["same-fingerprint", "same-fingerprint"]
+  });
+
+  assert.deepEqual(evaluateCanaryEvent(contract, event), {
+    decision: "hold",
+    reasons: ["duplicate-content-fingerprints-cannot-establish-corroboration"]
   });
 });
 

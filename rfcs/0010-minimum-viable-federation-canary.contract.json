@@ -87,6 +87,21 @@
     "dependent_outputs_require_recheck": true,
     "deletion_guaranteed": false
   },
+  "evidence_boundaries": {
+    "outbound_only_postures": ["outbound-only"],
+    "outcomes_requiring_response": [
+      "acceptance",
+      "adoption",
+      "delivery",
+      "deployment",
+      "endorsement",
+      "payment"
+    ],
+    "unresolved_source_states": ["dataless", "inaccessible", "not-materialized"],
+    "unresolved_source_effect": "hold",
+    "duplicate_content_fingerprints_do_not_add_support": true,
+    "silence_is_approval": false
+  },
   "currentness": {
     "evaluation_as_of_required": true,
     "exact_revision_required": true,
@@ -130,6 +145,9 @@
     "review-is-not-approval",
     "correction-holds-dependent-projections",
     "repository-visibility-is-not-record-sensitivity",
+    "outbound-communication-is-not-outcome-evidence",
+    "unavailable-source-content-is-not-negative-evidence",
+    "duplicate-export-is-not-independent-corroboration",
     "passing-evals-do-not-advance-rfc-stage"
   ]
 }

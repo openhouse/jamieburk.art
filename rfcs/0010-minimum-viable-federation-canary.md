@@ -218,6 +218,28 @@ Public events forbid raw source bodies, protected locators, private identifiers,
 credentials, and private graph topology. Boundary composition remains
 minimum-necessary and most-restrictive.
 
+### Evidence posture and incomplete source access
+
+A protected, body-free research calibration surfaced three failure modes that
+the canary should make executable without importing the private material that
+revealed them:
+
+1. An outbound message or proposal can establish that something was sent. It
+   cannot by itself establish acceptance, adoption, delivery, deployment,
+   endorsement, or payment. Silence never supplies the missing response.
+2. A source that is listed but dataless, inaccessible, or not materialized is
+   unresolved. Its unavailable body cannot be treated as empty content,
+   disconfirming evidence, or permission to infer what it contains.
+3. Byte-identical exports share one content fingerprint. Repeated copies may
+   improve custody resilience, but they do not create independent
+   corroboration.
+
+The public evaluator represents only these generic evidence postures. It does
+not contain identities, correspondence, transcript text, protected locators,
+company context, or claims about a real relationship. These holds can be
+resolved only by newly available qualified evidence and the relevant human
+gates, not by model confidence.
+
 ### Correction and withdrawal behavior
 
 A correction notice must name every known dependent projection. Receipt of a
@@ -264,6 +286,10 @@ The canary is successful only when:
 - no public event contains a forbidden field;
 - an exact source reference reaches only `received-proposal`;
 - a stale reference is denied;
+- outbound-only evidence cannot establish a response-dependent outcome;
+- an unavailable source body remains unresolved rather than becoming negative
+  evidence;
+- duplicate content fingerprints do not count as independent corroboration;
 - a correction holds every identified dependent projection;
 - a missing downstream inventory remains held;
 - a new operator can find the canonical record and decision owner;

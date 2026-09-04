@@ -132,6 +132,54 @@
       "expected": {"decision": "deny", "reasons": ["origin-binding-mismatch:content_fingerprint", "origin-binding-mismatch:revision"]}
     },
     {
+      "id": "outbound-only-cannot-establish-adoption",
+      "event": {
+        "event_id": "event-008b",
+        "kind": "canonical-record-reference",
+        "origin": {"repository": "canonical-subject-edition", "record_id": "statement-001", "revision": "commit-a", "content_fingerprint": "fingerprint-a"},
+        "target": "semantic-evidence-graph",
+        "purpose": "evaluate an adoption claim without a response record",
+        "audience": ["internal-editorial-review"],
+        "authority": {"source": "origin-repository", "interpretation": "receiving-repository", "publication": "named-human-decision-owner"},
+        "evidence_posture": "outbound-only",
+        "claim_assertion": "adoption",
+        "intent": "transport"
+      },
+      "expected": {"decision": "hold", "reasons": ["outbound-only-cannot-establish:adoption"]}
+    },
+    {
+      "id": "dataless-source-remains-unresolved",
+      "event": {
+        "event_id": "event-008c",
+        "kind": "canonical-record-reference",
+        "origin": {"repository": "canonical-subject-edition", "record_id": "statement-001", "revision": "commit-a", "content_fingerprint": "fingerprint-a"},
+        "target": "semantic-evidence-graph",
+        "purpose": "evaluate a listed source whose body is not locally available",
+        "audience": ["internal-editorial-review"],
+        "authority": {"source": "origin-repository", "interpretation": "receiving-repository", "publication": "named-human-decision-owner"},
+        "source_access_state": "dataless",
+        "intent": "transport"
+      },
+      "expected": {"decision": "hold", "reasons": ["source-content-unavailable:dataless"]}
+    },
+    {
+      "id": "duplicate-exports-do-not-corroborate",
+      "event": {
+        "event_id": "event-008d",
+        "kind": "canonical-record-reference",
+        "origin": {"repository": "canonical-subject-edition", "record_id": "statement-001", "revision": "commit-a", "content_fingerprint": "fingerprint-a"},
+        "target": "semantic-evidence-graph",
+        "purpose": "test whether duplicate exports are mistaken for independent sources",
+        "audience": ["internal-editorial-review"],
+        "authority": {"source": "origin-repository", "interpretation": "receiving-repository", "publication": "named-human-decision-owner"},
+        "corroboration_required": true,
+        "minimum_independent_sources": 2,
+        "source_content_fingerprints": ["same-fingerprint", "same-fingerprint"],
+        "intent": "transport"
+      },
+      "expected": {"decision": "hold", "reasons": ["duplicate-content-fingerprints-cannot-establish-corroboration"]}
+    },
+    {
       "id": "correction-holds-dependent-projections",
       "event": {
         "event_id": "event-009",

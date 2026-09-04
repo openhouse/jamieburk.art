@@ -97,6 +97,50 @@ export function evaluateCanaryEvent(contract, event, context = {}) {
     return { decision: "deny", reasons: ["authority-boundaries-collapsed"] };
   }
 
+  const unavailableStates = new Set(
+    contract.evidence_boundaries?.unresolved_source_states ?? []
+  );
+  if (unavailableStates.has(event.source_access_state)) {
+    return {
+      decision: contract.evidence_boundaries?.unresolved_source_effect ?? "hold",
+      reasons: [`source-content-unavailable:${event.source_access_state}`]
+    };
+  }
+
+  const outboundOnlyPostures = new Set(
+    contract.evidence_boundaries?.outbound_only_postures ?? []
+  );
+  const outcomesRequiringResponse = new Set(
+    contract.evidence_boundaries?.outcomes_requiring_response ?? []
+  );
+  if (
+    outboundOnlyPostures.has(event.evidence_posture) &&
+    outcomesRequiringResponse.has(event.claim_assertion)
+  ) {
+    return {
+      decision: "hold",
+      reasons: [`outbound-only-cannot-establish:${event.claim_assertion}`]
+    };
+  }
+
+  if (
+    contract.evidence_boundaries?.duplicate_content_fingerprints_do_not_add_support === true &&
+    event.corroboration_required === true &&
+    Array.isArray(event.source_content_fingerprints)
+  ) {
+    const independentSourceCount = new Set(event.source_content_fingerprints).size;
+    const minimumIndependentSources = event.minimum_independent_sources ?? 2;
+    if (
+      independentSourceCount < minimumIndependentSources &&
+      independentSourceCount < event.source_content_fingerprints.length
+    ) {
+      return {
+        decision: "hold",
+        reasons: ["duplicate-content-fingerprints-cannot-establish-corroboration"]
+      };
+    }
+  }
+
   const bindingFields = contract.exchange?.origin_binding_fields ?? [];
   const mismatchedBindings = bindingFields
     .filter(
@@ -223,7 +267,13 @@ export function evaluateMinimumViableFederationRFC(options = {}) {
         contract.exchange?.forbidden_public_fields?.includes(field)
       ) &&
       contract.correction?.downstream_effect === "hold-projection" &&
-      contract.correction?.original_preserved === true,
+      contract.correction?.original_preserved === true &&
+      contract.evidence_boundaries?.silence_is_approval === false &&
+      contract.evidence_boundaries?.unresolved_source_effect === "hold" &&
+      ["acceptance", "adoption", "delivery", "deployment", "endorsement", "payment"].every(
+        (outcome) => contract.evidence_boundaries?.outcomes_requiring_response?.includes(outcome)
+      ) &&
+      contract.evidence_boundaries?.duplicate_content_fingerprints_do_not_add_support === true,
     currentness_and_local_authority:
       contract.currentness?.evaluation_as_of_required === true &&
       contract.currentness?.exact_revision_required === true &&
