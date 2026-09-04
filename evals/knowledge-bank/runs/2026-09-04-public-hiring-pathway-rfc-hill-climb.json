@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "run_id": "public-hiring-pathway-rfc-hill-climb-2026-09-04",
-  "rfc": 12,
+  "rfc": 13,
   "candidate_branch": "work/2026-09-03-B",
   "base_branch": "work/2026-09-03-A",
   "criterion": "low-burden paid entry pathway with public-private, page-owner, and authority boundaries",
@@ -37,7 +37,7 @@
     "implementation_scope": "review-candidate-only"
   },
   "candidate": {
-    "subject": "RFC 0012 implementation candidate",
+    "subject": "RFC 0013 implementation candidate",
     "decision": "ready-for-human-review",
     "deterministic_score": 1,
     "scenario_failures": 0,

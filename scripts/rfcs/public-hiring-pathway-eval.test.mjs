@@ -212,7 +212,7 @@ test("publishing or linking a contract on the public surface is denied", () => {
 test("the repository RFC candidate passes every hard gate and scenario", () => {
   const result = evaluatePublicHiringPathwayRFC();
 
-  assert.equal(result.rfc, 12);
+  assert.equal(result.rfc, 13);
   assert.equal(result.stage, "implementing");
   assert.equal(result.score, 1);
   assert.deepEqual(result.hard_failures, []);

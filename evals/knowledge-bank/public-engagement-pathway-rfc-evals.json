@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "id": "public-engagement-pathway-rfc",
+  "objective": "Make a low-friction paid working-session pathway legible without exposing private opportunity provenance, inventing client outcomes, hiding other ways to work together, or authorizing publication.",
+  "cases": [
+    {
+      "id": "bounded-public-safe-pathway-enters-review",
+      "candidate": {
+        "surface": "/contact",
+        "introduces_new_route": false,
+        "paid": true,
+        "duration_minutes": 60,
+        "names_problem_types": true,
+        "names_takeaway": true,
+        "continuation_is_separate": true,
+        "other_engagements_remain_visible": true,
+        "public_price": null,
+        "references_specific_private_opportunity": false,
+        "implies_past_client_outcome": false,
+        "implies_endorsement": false
+      },
+      "expected": {
+        "decision": "ready-for-human-review",
+        "publication_authorized": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "private-opportunity-provenance-is-denied",
+      "candidate": {
+        "surface": "/contact",
+        "introduces_new_route": false,
+        "paid": true,
+        "duration_minutes": 60,
+        "names_problem_types": true,
+        "names_takeaway": true,
+        "continuation_is_separate": true,
+        "other_engagements_remain_visible": true,
+        "public_price": null,
+        "references_specific_private_opportunity": true,
+        "implies_past_client_outcome": false,
+        "implies_endorsement": false
+      },
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["specific-private-opportunity-reference-forbidden"]
+      }
+    },
+    {
+      "id": "unsupported-client-outcome-is-denied",
+      "candidate": {
+        "surface": "/contact",
+        "introduces_new_route": false,
+        "paid": true,
+        "duration_minutes": 60,
+        "names_problem_types": true,
+        "names_takeaway": true,
+        "continuation_is_separate": true,
+        "other_engagements_remain_visible": true,
+        "public_price": null,
+        "references_specific_private_opportunity": false,
+        "implies_past_client_outcome": true,
+        "implies_endorsement": false
+      },
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["past-client-outcome-claim-forbidden"]
+      }
+    },
+    {
+      "id": "unpaid-underspecified-session-is-held",
+      "candidate": {
+        "surface": "/contact",
+        "introduces_new_route": false,
+        "paid": false,
+        "duration_minutes": 60,
+        "names_problem_types": true,
+        "names_takeaway": false,
+        "continuation_is_separate": true,
+        "other_engagements_remain_visible": true,
+        "public_price": null,
+        "references_specific_private_opportunity": false,
+        "implies_past_client_outcome": false,
+        "implies_endorsement": false
+      },
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": ["paid-boundary-missing", "takeaway-missing"]
+      }
+    },
+    {
+      "id": "automatic-continuation-is-denied",
+      "candidate": {
+        "surface": "/contact",
+        "introduces_new_route": false,
+        "paid": true,
+        "duration_minutes": 60,
+        "names_problem_types": true,
+        "names_takeaway": true,
+        "continuation_is_separate": false,
+        "other_engagements_remain_visible": true,
+        "public_price": null,
+        "references_specific_private_opportunity": false,
+        "implies_past_client_outcome": false,
+        "implies_endorsement": false
+      },
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["automatic-continuation-forbidden"]
+      }
+    },
+    {
+      "id": "new-route-and-premature-price-are-held",
+      "candidate": {
+        "surface": "/services",
+        "introduces_new_route": true,
+        "paid": true,
+        "duration_minutes": 60,
+        "names_problem_types": true,
+        "names_takeaway": true,
+        "continuation_is_separate": true,
+        "other_engagements_remain_visible": true,
+        "public_price": "published-amount",
+        "references_specific_private_opportunity": false,
+        "implies_past_client_outcome": false,
+        "implies_endorsement": false
+      },
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": [
+          "new-route-not-justified",
+          "public-price-decision-required",
+          "recommended-surface-mismatch"
+        ]
+      }
+    },
+    {
+      "id": "single-pathway-positioning-is-held",
+      "candidate": {
+        "surface": "/contact",
+        "introduces_new_route": false,
+        "paid": true,
+        "duration_minutes": 60,
+        "names_problem_types": true,
+        "names_takeaway": true,
+        "continuation_is_separate": true,
+        "other_engagements_remain_visible": false,
+        "public_price": null,
+        "references_specific_private_opportunity": false,
+        "implies_past_client_outcome": false,
+        "implies_endorsement": false
+      },
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": ["other-engagement-pathways-missing"]
+      }
+    }
+  ],
+  "human_gates": [
+    "public-copy approval",
+    "public-pricing decision",
+    "RFC stage advancement",
+    "implementation",
+    "publication",
+    "deployment",
+    "production indexing"
+  ]
+}

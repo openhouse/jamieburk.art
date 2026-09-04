@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "rfc": 12,
+  "stage": "proposed",
+  "authority": {
+    "decision_owner": "Jamie Burkart",
+    "implementation_authorized": false,
+    "publication_authorized": false,
+    "public_price_authorized": false
+  },
+  "information_architecture": {
+    "primary_surface": "/contact",
+    "supporting_surface": "/about",
+    "introduces_new_route": false,
+    "contact_channel": "email"
+  },
+  "pathways": {
+    "entry_unit": "one-paid-bounded-working-session",
+    "duration_minutes": 60,
+    "other_engagements_remain_visible": true,
+    "continuation_requires_separate_mutual_decision": true,
+    "automatic_continuation": false
+  },
+  "outcome": {
+    "agreed_in_advance": true,
+    "usable_takeaway_required": true,
+    "examples": [
+      "decision brief",
+      "system map",
+      "evaluation frame",
+      "next-step plan"
+    ]
+  },
+  "pricing": {
+    "public_price_state": "decision-pending",
+    "amount": null,
+    "currency": null
+  },
+  "public_boundary": {
+    "specific_private_opportunity_reference": false,
+    "private_person_identity": false,
+    "raw_transcript_or_correspondence": false,
+    "relationship_or_negotiation_state": false,
+    "unsupported_past_client_outcome": false,
+    "endorsement_implication": false,
+    "private_repository_locator": false
+  },
+  "public_copy": {
+    "heading": "Start with one focused working session",
+    "body": "Start with one paid, focused 60-minute working session. Bring a decision, knowledge bottleneck, or implementation problem. We’ll name one useful outcome in advance and turn the hour into a concise artifact—such as a decision brief, system map, or next-step plan. The session stands on its own. Afterward, we can separately decide whether more work would help. You can also contact me about full-time roles, larger projects, referrals, or collaboration.",
+    "cta_label": "Propose a working session",
+    "pricing_display": null
+  },
+  "human_gates": [
+    "public-copy approval",
+    "public-pricing decision",
+    "RFC stage advancement",
+    "implementation",
+    "publication",
+    "deployment",
+    "production indexing"
+  ]
+}

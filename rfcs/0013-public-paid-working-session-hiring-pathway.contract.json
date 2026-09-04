@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "rfc": 12,
+  "rfc": 13,
   "stage": "implementing",
   "purpose": "Offer a public-safe, low-burden path from portfolio evidence to one compensated working engagement without exposing private opportunity provenance or implying availability, agreement, or follow-on authorization.",
   "offer": {

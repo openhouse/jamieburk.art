@@ -7,6 +7,7 @@ import matter from "gray-matter";
 import { evaluateMinimumViableFederationRFC } from "./rfcs/minimum-viable-federation-eval.mjs";
 import { evaluatePrivateVaultSidecarRFC } from "./rfcs/private-vault-sidecar-eval.mjs";
 import { evaluatePublicHiringPathwayRFC } from "./rfcs/public-hiring-pathway-eval.mjs";
+import { evaluatePublicEngagementPathwayRFC } from "./rfcs/public-engagement-pathway-eval.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const rfcRoot = path.join(repoRoot, "rfcs");
@@ -168,22 +169,43 @@ try {
 }
 
 try {
+  const pathwayEvaluation = evaluatePublicEngagementPathwayRFC({ repoRoot });
+  for (const criterion of pathwayEvaluation.hard_failures) {
+    fail(
+      path.join(rfcRoot, "0012-public-engagement-pathway.md"),
+      `public engagement pathway hard criterion failed: ${criterion}`
+    );
+  }
+  for (const scenario of pathwayEvaluation.scenarios.results.filter((item) => !item.passed)) {
+    fail(
+      path.join(rfcRoot, "0012-public-engagement-pathway.md"),
+      `public engagement pathway scenario failed: ${scenario.id}`
+    );
+  }
+} catch (error) {
+  fail(
+    path.join(rfcRoot, "0012-public-engagement-pathway.md"),
+    `public engagement pathway evaluation could not run: ${error.message}`
+  );
+}
+
+try {
   const hiringPathwayEvaluation = evaluatePublicHiringPathwayRFC({ repoRoot });
   for (const criterion of hiringPathwayEvaluation.hard_failures) {
     fail(
-      path.join(rfcRoot, "0012-public-paid-working-session-hiring-pathway.md"),
+      path.join(rfcRoot, "0013-public-paid-working-session-hiring-pathway.md"),
       `public hiring pathway hard criterion failed: ${criterion}`
     );
   }
   for (const scenario of hiringPathwayEvaluation.scenarios.results.filter((item) => !item.passed)) {
     fail(
-      path.join(rfcRoot, "0012-public-paid-working-session-hiring-pathway.md"),
+      path.join(rfcRoot, "0013-public-paid-working-session-hiring-pathway.md"),
       `public hiring pathway scenario failed: ${scenario.id}`
     );
   }
 } catch (error) {
   fail(
-    path.join(rfcRoot, "0012-public-paid-working-session-hiring-pathway.md"),
+    path.join(rfcRoot, "0013-public-paid-working-session-hiring-pathway.md"),
     `public hiring pathway evaluation could not run: ${error.message}`
   );
 }

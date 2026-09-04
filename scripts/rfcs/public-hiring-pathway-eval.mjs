@@ -8,8 +8,8 @@ import { isDeepStrictEqual } from "node:util";
 
 const scriptPath = fileURLToPath(import.meta.url);
 const defaultRepoRoot = path.resolve(path.dirname(scriptPath), "../..");
-const rfcPath = "rfcs/0012-public-paid-working-session-hiring-pathway.md";
-const contractPath = "rfcs/0012-public-paid-working-session-hiring-pathway.contract.json";
+const rfcPath = "rfcs/0013-public-paid-working-session-hiring-pathway.md";
+const contractPath = "rfcs/0013-public-paid-working-session-hiring-pathway.contract.json";
 const suitePath = "evals/knowledge-bank/public-hiring-pathway-rfc-evals.json";
 const hillClimbPath =
   "evals/knowledge-bank/runs/2026-09-04-public-hiring-pathway-rfc-hill-climb.json";
@@ -223,7 +223,7 @@ export function evaluatePublicHiringPathwayRFC(options = {}) {
 
   const checks = {
     implementation_boundary:
-      contract.rfc === 12 &&
+      contract.rfc === 13 &&
       contract.stage === "implementing" &&
       contract.authority?.authorization_source ===
         "direct-user-instruction-2026-09-04" &&
@@ -396,7 +396,7 @@ export function evaluatePublicHiringPathwayRFC(options = {}) {
         `${contactPage}\n${workingSessionComponent}\n${JSON.stringify(workingSession)}`
       ),
     hill_climb_evidence:
-      hillClimb.rfc === 12 &&
+      hillClimb.rfc === 13 &&
       hillClimb.decision === "keep-change" &&
       hillClimb.baseline?.decision === "hold" &&
       hillClimb.candidate?.deterministic_score === 1 &&
@@ -421,7 +421,7 @@ export function evaluatePublicHiringPathwayRFC(options = {}) {
 
   return {
     schema_version: 1,
-    rfc: 12,
+    rfc: 13,
     stage: contract.stage,
     candidate_files: candidatePaths,
     candidate_fingerprint: candidateFingerprint(repoRoot),

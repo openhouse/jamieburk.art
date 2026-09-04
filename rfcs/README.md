@@ -109,7 +109,8 @@ that an agent, test, or informal participant has human decision authority.
 | [0009](./0009-wiki-as-shared-memory-protocol.md) | Wiki as Shared Memory Protocol for People and Agents | `proposed` | Jamie Burkart |
 | [0010](./0010-minimum-viable-federation-canary.md) | Minimum Viable Federation Canary for Responsible Knowledge Passage | `proposed` | Jamie Burkart |
 | [0011](./0011-private-vault-sidecar.md) | Paired Public Portfolio and Private Vault Sidecar | `implementing` | Jamie Burkart |
-| [0012](./0012-public-paid-working-session-hiring-pathway.md) | Public Paid Working Session Hiring Pathway | `proposed` | Jamie Burkart |
+| [0012](./0012-public-engagement-pathway.md) | Public Engagement Pathway for a Bounded Working Session | `proposed` | Jamie Burkart |
+| [0013](./0013-public-paid-working-session-hiring-pathway.md) | Public Paid Working Session Hiring Pathway | `implementing` | Jamie Burkart |
 
 ## Validation
 

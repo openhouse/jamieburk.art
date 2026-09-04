@@ -1,5 +1,5 @@
 ---
-rfc: 12
+rfc: 13
 title: Public Paid Working Session Hiring Pathway
 stage: implementing
 start_date: 2026-09-04
@@ -47,6 +47,15 @@ booking promise, a consulting marketplace, or the service agreement itself.
 The public description must contain no private relationship history,
 correspondence, transcript-derived context, negotiation state, private source
 locator, or private graph topology.
+
+## Relationship to RFC 0012
+
+RFC 0012, added to the base branch after this work branch was created, preserves
+a broader price-pending engagement-pathway proposal. This later RFC records the
+direct 2026-09-04 instruction that authorized an exact $250 implementation
+candidate, Contact placement, and rendered evaluation. Both documents remain
+available for review. This RFC does not automatically close, accept, or
+supersede RFC 0012; Jamie retains that reconciliation decision.
 
 ## Motivation
 
