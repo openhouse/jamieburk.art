@@ -1,7 +1,7 @@
 ---
 rfc: 12
 title: Public Engagement Pathway for Focused Consulting and Implementation
-stage: proposed
+stage: implementing
 start_date: 2026-09-04
 authors:
   - Jamie Burkart
@@ -15,31 +15,34 @@ review_areas:
   - privacy-governance
   - accessibility
   - deployment
-implementation: null
+implementation: apps/www/src/app/contact/page.tsx
 supersedes: []
 superseded_by: null
 ---
 
 # Public Engagement Pathway for Focused Consulting and Implementation
 
-> **Proposal and evidence boundary**
+> **Implementation and evidence boundary**
 >
-> This RFC proposes a public pathway; it does not authorize page changes,
-> pricing, publication, deployment, or indexing. The proposal stands only on
-> Jamie's existing public-safe portfolio evidence and a self-authored statement
-> of availability. Private conversations, relationship records, expressions of
-> interest, transcripts, negotiations, and draft agreements are neither source
-> material nor evidence of demand, adoption, endorsement, or an engagement.
+> Jamie's direct instruction on 4 September 2026 authorizes the bounded page
+> implementation and the three fictionalized page-owner registrations described
+> here. It does not authorize public pricing, merge, publication, deployment, or
+> indexing. The implementation stands only on Jamie's existing public-safe
+> portfolio evidence and a self-authored statement of availability. Private
+> conversations, relationship records, expressions of interest, transcripts,
+> negotiations, and draft agreements are neither source material nor evidence
+> of demand, adoption, endorsement, or an engagement.
 
 ## Summary
 
-Add a concise, public-safe engagement pathway to the existing Contact page so a
+This implementation adds a concise, public-safe engagement pathway to the existing Contact page so a
 visitor can understand how a small working session may, by separate agreement,
 lead to a diagnostic or implementation engagement. Keep interest in salaried
 and embedded roles equally visible and distinct. The first version should reuse
 the current information architecture and email contact path, add no top-level
 navigation item or commerce system, publish no fee without Jamie's separate
-approval, and make every expansion of scope a new mutual decision.
+approval, and make every expansion of scope a new mutual decision. One
+contextual link from Technical Operations supplies the supporting entry point.
 
 ## Motivation
 
@@ -55,10 +58,10 @@ clear. A compact pathway can make the offer legible without recasting the whole
 portfolio as a consultancy or revealing the private circumstances that made the
 design question salient.
 
-The observed public problem is limited: the Contact page names consulting but
-does not explain a path into it. Whether visitors want these engagement forms,
+The observed public problem was limited: the Contact page named consulting but
+did not explain a path into it. Whether visitors want these engagement forms,
 whether fees should appear publicly, and whether the pathway merits a dedicated
-route are assumptions to test after Jamie authorizes an implementation.
+route remain assumptions to test from the exact implemented candidate.
 
 ## Goals
 
@@ -83,7 +86,8 @@ route are assumptions to test after Jamie authorizes an implementation.
   dependency.
 - Do not replace the path for salaried, embedded, public-interest, or long-term
   roles with consulting language.
-- Do not implement, merge, deploy, or index the proposal.
+- Do not merge, publish, deploy, or index the implemented candidate without a
+  separate decision.
 
 ## Terminology
 
@@ -112,8 +116,8 @@ route are assumptions to test after Jamie authorizes an implementation.
 ### Information architecture
 
 Use the existing `/contact` route as the canonical engagement surface. The
-Technical Operations & Implementation page may receive one contextual link to
-that surface if implementation is later authorized. The homepage and primary
+Technical Operations & Implementation page receives one contextual link to
+that surface. The homepage and primary
 navigation should not grow a new Services destination in the first iteration.
 
 The Contact page should make two visitor intentions visibly distinct:
@@ -181,6 +185,27 @@ private or hypothetical clients. Any stronger factual claim must first exist in
 the canonical knowledge bank with its source, support, guardrail, public-use
 boundary, and review date.
 
+### Page-owner desk
+
+The Contact candidate registers three fictionalized analytical page owners in
+the repository's editorial registry:
+
+- **Katie Lane — mutual authorization:** check that inquiry, paid work, and
+  continuation remain separate choices with clear scope and compensation.
+- **Jonathan Stark — buyer decision and value:** check that the page begins
+  with a consequential buyer problem and useful outcome rather than presenting
+  Jamie as undifferentiated time for sale.
+- **Beverly Wenger-Trayner — learning and continuity:** check that each option
+  can stand alone while learning may inform, but never predetermine, a later
+  engagement.
+
+These registrations model editorial perspectives from public work. The named
+people did not participate, consent, approve, certify, or endorse the page.
+Jamie remains the publication owner. Deterministic owner-desk checks are part
+of the implementation gate; exact-candidate modeled assessments and Jamie's
+final publication decision remain pending and cannot be inferred from the
+role-play in this RFC or pull request.
+
 ## Security and privacy
 
 The principal leakage risk is inferential: public copy could paraphrase a
@@ -200,9 +225,10 @@ public candidate. Uncertainty fails closed to `TODO: Jamie approval required.`
 
 ## Publication workflow
 
-1. Jamie decides whether to advance this RFC from `proposed`.
-2. An implementation branch drafts only the bounded Contact-page pathway and,
-   if still useful, one contextual link from Technical Operations.
+1. Jamie's direct 4 September 2026 instruction advances this RFC to
+   `implementing` and authorizes the bounded candidate, not publication.
+2. The implementation branch contains only the bounded Contact-page pathway
+   and one contextual link from Technical Operations.
 3. The candidate uses existing public-safe proof and a separately approved
    self-authored availability statement.
 4. Deterministic checks evaluate routing, CTA truth, private-source exclusion,
@@ -219,11 +245,11 @@ none of the human gates by itself.
 
 ## Rollout plan
 
-1. **Proposal:** Review this RFC, contract, adversarial cases, and new
-   production-readiness criterion. No page changes occur.
-2. **Bounded prototype, after acceptance:** Draft the two-intention Contact
-   layout and three engagement descriptions without changing navigation or
-   adding infrastructure.
+1. **Proposal — complete:** RFC, contract, adversarial cases, and the new
+   production-readiness criterion established the public/private boundary.
+2. **Bounded implementation — complete:** The two-intention Contact layout and
+   three engagement descriptions are implemented without changing navigation
+   or adding infrastructure.
 3. **Reader test:** Give the rendered candidate to role-seeking, public-sector,
    and prospective consulting readers. Measure comprehension, next-action
    clarity, and unintended claims.
@@ -241,11 +267,13 @@ remain available.
 
 ## Decision gates
 
-- Jamie decides whether the consulting pathway belongs on the public site.
-- Jamie decides whether the three engagement labels fit his practice.
+- Jamie has authorized an implementation candidate for the consulting pathway;
+  this is not publication approval.
+- Jamie has authorized testing the three engagement labels in the candidate;
+  this is not approval of final public wording.
 - Jamie approves the exact public copy and availability statement.
 - Jamie decides whether to publish a fee and approves its exact conditions.
-- Jamie approves any implementation and the exact candidate commit.
+- Jamie approves the exact candidate commit before merge or publication.
 - Fresh reader evidence must show that role interest remains legible and that
   the engagement ladder reduces rather than increases decision burden.
 - Public-safety review must establish independence from private sources and no

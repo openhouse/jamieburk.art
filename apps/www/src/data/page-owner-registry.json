@@ -44,6 +44,42 @@
           "passDefinition": "Pass only when a reader can understand the editorial method quickly, without defensive language or unnecessary production detail obscuring the point."
         }
       ]
+    },
+    {
+      "pageId": "contact",
+      "route": "/contact",
+      "status": "candidate",
+      "purpose": "Help visitors distinguish roles from scoped work, recognize the smallest fitting engagement, and understand the mutual authorization required before paid work begins or expands.",
+      "acceptanceRule": "The candidate clears its deterministic owner desk only when all three fictionalized lenses, the public engagement contract, and the exact rendered packet remain aligned; modeled review and Jamie's final publication decision remain separate gates.",
+      "owners": [
+        {
+          "id": "katie-lane",
+          "name": "Katie Lane",
+          "publicProfileUrl": "https://www.workmadeforhire.net/about/",
+          "focus": "Mutual authorization",
+          "publicEvidenceState": "default-public-state",
+          "question": "Does each threshold make scope, compensation, timing, and continuation a legible mutual choice rather than allowing useful work to begin by implication?",
+          "passDefinition": "Pass only when inquiry, paid work, and continuation are distinct decisions, the first session is explicitly compensated, and no conversation silently authorizes labor or expanded scope."
+        },
+        {
+          "id": "jonathan-stark",
+          "name": "Jonathan Stark",
+          "publicProfileUrl": "https://jonathanstark.com/value-pricing-for-software-projects",
+          "focus": "Buyer decision and value",
+          "publicEvidenceState": "default-public-state",
+          "question": "Can a prospective buyer identify the consequential decision and useful outcome at each level without mistaking Jamie's practice for undifferentiated time for sale?",
+          "passDefinition": "Pass only when the page leads with buyer problems and useful outcomes, preserves a bounded first step, and withholds an unapproved rate card without making the next action vague."
+        },
+        {
+          "id": "beverly-wenger-trayner",
+          "name": "Beverly Wenger-Trayner",
+          "publicProfileUrl": "https://www.wenger-trayner.com/bev/",
+          "focus": "Learning and continuity",
+          "publicEvidenceState": "default-public-state",
+          "question": "Does the pathway let people learn what the work requires together while preserving continuity, explicit boundaries, and a safe stopping point at every stage?",
+          "passDefinition": "Pass only when each option can stand alone, learning may inform a later engagement without predetermining it, and implementation names authority, cadence, handoff, and exit."
+        }
+      ]
     }
   ]
 }

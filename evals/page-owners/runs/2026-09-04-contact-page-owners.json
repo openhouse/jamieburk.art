@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "status": "pending-independent-review",
+  "pageId": "contact",
+  "publicOnly": true,
+  "repositoryAvailableToModel": false,
+  "actualPeopleParticipated": false,
+  "assessments": [],
+  "aggregate": {
+    "verdict": "Held",
+    "rule": "all-pass",
+    "humanFinalApprovalRequired": true
+  },
+  "note": "The deterministic owner desk may run on the exact public packet. Independent modeled assessments and Jamie's final publication decision remain pending."
+}

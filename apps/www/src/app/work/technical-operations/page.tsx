@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import type { Route } from "next";
-import { ContactCTA } from "@/components/ContactCTA";
+import { EngagementPathwayCTA } from "@/components/EngagementPathwayCTA";
 import { ResumeCTA } from "@/components/ResumeCTA";
 import { technicalOperationsProofRows } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
@@ -257,7 +257,7 @@ export default function TechnicalOperationsPage() {
       </details>
       <div className="mt-10 grid gap-5 lg:grid-cols-2">
         <ResumeCTA />
-        <ContactCTA />
+        <EngagementPathwayCTA />
       </div>
     </div>
   );

@@ -13,6 +13,8 @@ const contractPath = "rfcs/0012-public-engagement-pathway.contract.json";
 const suitePath = "evals/knowledge-bank/public-engagement-pathway-rfc-evals.json";
 const runReceiptPath = "evals/knowledge-bank/runs/2026-09-04-public-engagement-pathway-rfc.md";
 const productionReadinessPath = ".agents/evals/portfolio-production-readiness.json";
+const engagementPathwayPath = "apps/www/src/data/engagement-pathway.json";
+const pageOwnerRegistryPath = "apps/www/src/data/page-owner-registry.json";
 const candidatePaths = [
   productionReadinessPath,
   runReceiptPath,
@@ -23,7 +25,15 @@ const candidatePaths = [
   contractPath,
   "scripts/check-rfcs.mjs",
   "scripts/rfcs/public-engagement-pathway-eval.mjs",
-  "scripts/rfcs/public-engagement-pathway-eval.test.mjs"
+  "scripts/rfcs/public-engagement-pathway-eval.test.mjs",
+  engagementPathwayPath,
+  pageOwnerRegistryPath,
+  "apps/www/src/app/contact/page.tsx",
+  "apps/www/src/app/work/technical-operations/page.tsx",
+  "apps/www/src/components/EngagementPathwayCTA.tsx",
+  "evals/page-owners/contact.json",
+  "scripts/page-owners/contact-evaluate.mjs",
+  "scripts/page-owners/contact-evaluate.test.mjs"
 ];
 
 function loadJson(repoRoot, relativePath) {
@@ -137,6 +147,10 @@ export function evaluatePublicEngagementPathwayRFC(options = {}) {
   const suite = options.suite ?? loadJson(repoRoot, suitePath);
   const productionReadiness =
     options.productionReadiness ?? loadJson(repoRoot, productionReadinessPath);
+  const engagementPathway =
+    options.engagementPathway ?? loadJson(repoRoot, engagementPathwayPath);
+  const pageOwnerRegistry =
+    options.pageOwnerRegistry ?? loadJson(repoRoot, pageOwnerRegistryPath);
   const rfc = options.rfcSource ?? readFileSync(path.join(repoRoot, rfcPath), "utf8");
 
   const scenarioResults = suite.cases.map((scenario) => {
@@ -154,14 +168,14 @@ export function evaluatePublicEngagementPathwayRFC(options = {}) {
   const proposalCandidate = contract.proposal_candidate;
 
   const checks = {
-    proposal_stage_and_authority:
+    implementation_stage_and_authority:
       contract.rfc === 12 &&
-      contract.stage === "proposed" &&
+      contract.stage === "implementing" &&
       contract.policy.authority?.decision_owner === "Jamie Burkart" &&
-      contract.policy.authority?.implementation_authorized === false &&
+      contract.policy.authority?.implementation_authorized === true &&
       contract.policy.authority?.publication_authorized === false &&
-      /^stage:\s+proposed$/m.test(rfc) &&
-      /^implementation:\s+null$/m.test(rfc),
+      /^stage:\s+implementing$/m.test(rfc) &&
+      /^implementation:\s+apps\/www\/src\/app\/contact\/page\.tsx$/m.test(rfc),
     existing_information_architecture:
       contract.policy.canonical_route === "/contact" &&
       contract.policy.primary_cta_destination === "email" &&
@@ -202,6 +216,26 @@ export function evaluatePublicEngagementPathwayRFC(options = {}) {
       contract.policy.pricing.public_state === "withheld-pending-Jamie-decision" &&
       proposalCandidate.pricing.public_state === contract.policy.pricing.public_state &&
       contract.human_gates.required.includes("exact-public-pricing"),
+    implementation_matches_contract:
+      engagementPathway.route === contract.policy.canonical_route &&
+      engagementPathway.implementation?.stage === "implementing" &&
+      engagementPathway.implementation?.authorizedBy === "Jamie Burkart" &&
+      engagementPathway.employmentPath?.remainsDistinct === true &&
+      engagementPathway.contactAction?.destination === "email" &&
+      engagementPathway.supportingEntryCta?.destination === "/contact" &&
+      engagementPathway.pricing?.publicState ===
+        contract.policy.pricing.public_state &&
+      engagementPathway.pricing?.display === null &&
+      isDeepStrictEqual(
+        engagementPathway.engagements.map((item) => item.id),
+        contract.policy.required_rung_ids
+      ) &&
+      isDeepStrictEqual(
+        pageOwnerRegistry.pages
+          .find((page) => page.pageId === "contact")
+          ?.owners.map((owner) => owner.id),
+        contract.implementation.page_owner_ids
+      ),
     portfolio_eval_integrated:
       productionCriterion?.blocking === true &&
       productionCriterion?.category === "hiring_legibility" &&
@@ -244,6 +278,13 @@ export function evaluatePublicEngagementPathwayRFC(options = {}) {
       passed: scenarioResults.filter((scenario) => scenario.passed).length,
       failed: scenarioResults.filter((scenario) => !scenario.passed).length,
       results: scenarioResults
+    },
+    implementation: {
+      canonical_route: engagementPathway.route,
+      engagement_count: engagementPathway.engagements.length,
+      page_owner_ids: contract.implementation.page_owner_ids,
+      supporting_route: proposalCandidate.placement.supporting_routes[0],
+      public_pricing_present: engagementPathway.pricing.display !== null
     },
     implementation_authorized: contract.policy.authority.implementation_authorized,
     publication_authorized: contract.policy.authority.publication_authorized

@@ -39,7 +39,7 @@ const policy = {
     public_state: "withheld-pending-Jamie-decision"
   },
   authority: {
-    implementation_authorized: false,
+    implementation_authorized: true,
     publication_authorized: false
   }
 };
@@ -81,7 +81,7 @@ test("a public-safe, decision-oriented pathway is ready only for human review", 
   assert.deepEqual(evaluateEngagementPathwayCandidate(policy, candidate()), {
     decision: "ready-for-human-review",
     reasons: [],
-    implementation_authorized: false,
+    implementation_authorized: true,
     publication_authorized: false
   });
 });
@@ -101,7 +101,7 @@ test("private relationship evidence cannot establish a public offer or demand", 
       "forbidden-public-claim:market-demand",
       "forbidden-public-source:private-demand-signal"
     ],
-    implementation_authorized: false,
+    implementation_authorized: true,
     publication_authorized: false
   });
 });
@@ -120,7 +120,7 @@ test("a transcript or private agreement remains excluded even when its wording i
       "forbidden-public-source:draft-private-agreement",
       "forbidden-public-source:raw-transcript"
     ],
-    implementation_authorized: false,
+    implementation_authorized: true,
     publication_authorized: false
   });
 });
@@ -134,7 +134,7 @@ test("an unknown source class fails closed instead of evading the private-source
   assert.deepEqual(result, {
     decision: "deny",
     reasons: ["unapproved-public-source:private-context-summary"],
-    implementation_authorized: false,
+    implementation_authorized: true,
     publication_authorized: false
   });
 });
@@ -167,7 +167,7 @@ test("the first public version cannot add navigation, checkout, or unapproved pr
       "unapproved-canonical-route:/services",
       "untruthful-primary-cta-destination:/checkout"
     ],
-    implementation_authorized: false,
+    implementation_authorized: true,
     publication_authorized: false
   });
 });
@@ -183,7 +183,7 @@ test("every expansion beyond a working session requires a new authorization", ()
       "automatic-continuation:implementation-or-fractional-operations",
       "separate-authorization-missing:knowledge-operations-diagnostic"
     ],
-    implementation_authorized: false,
+    implementation_authorized: true,
     publication_authorized: false
   });
 });
@@ -199,7 +199,7 @@ test("a missing buyer decision or rung is held rather than silently completed", 
       "buyer-decision-missing:focused-working-session",
       "required-rung-missing:implementation-or-fractional-operations"
     ],
-    implementation_authorized: false,
+    implementation_authorized: true,
     publication_authorized: false
   });
 });
@@ -208,12 +208,19 @@ test("the repository RFC candidate passes while preserving Jamie's gates", () =>
   const result = evaluatePublicEngagementPathwayRFC();
 
   assert.equal(result.rfc, 12);
-  assert.equal(result.stage, "proposed");
+  assert.equal(result.stage, "implementing");
   assert.equal(result.score, 1);
   assert.deepEqual(result.hard_failures, []);
   assert.equal(result.scenarios.failed, 0);
   assert.ok(result.scenarios.total >= 6);
   assert.match(result.candidate_fingerprint, /^[a-f0-9]{64}$/);
-  assert.equal(result.implementation_authorized, false);
+  assert.equal(result.implementation_authorized, true);
   assert.equal(result.publication_authorized, false);
+  assert.deepEqual(result.implementation, {
+    canonical_route: "/contact",
+    engagement_count: 3,
+    page_owner_ids: ["katie-lane", "jonathan-stark", "beverly-wenger-trayner"],
+    supporting_route: "/work/technical-operations",
+    public_pricing_present: false
+  });
 });

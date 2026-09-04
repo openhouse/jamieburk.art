@@ -54,6 +54,38 @@ public portfolio evidence and a separately approved self-authored public offer.
 Known private sources retain specific denial reasons; every other source or
 claim class is denied as unapproved.
 
+## Cycle 5: implementation authority and public copy
+
+Jamie's direct 4 September 2026 instruction advanced RFC 0012 from `proposed`
+to `implementing` and authorized the bounded candidate. The Contact page now
+keeps roles and embedded leadership distinct from scoped work, offers three
+decision-oriented engagement levels, and states that the first session is paid.
+Every level requires a separate agreement. Exact pricing, merge, publication,
+deployment, and indexing remain unauthorized.
+
+## Cycle 6: page-owner desk
+
+Katie Lane, Jonathan Stark, and Beverly Wenger-Trayner were added to the
+editorial registry as explicitly fictionalized analytical page owners for the
+Contact candidate. A new deterministic evaluator binds their distinct review
+questions to the RFC contract, implementation data, page source, contextual
+entry point, rendered text, and responsive screenshots. Mutation tests reject
+real-participation implications, lost separate-agreement language, and
+premature public pricing.
+
+The full owner desk remains honestly held at
+`pending-independent-review`. No independent modeled assessment or real-person
+participation is fabricated by this implementation.
+
+## Cycle 7: rendered behavior and vocabulary
+
+The first production build passed compilation but the rendered-language gate
+rejected three uses of “bounded” on the public surface. The public copy now uses
+the more direct “defined,” “specific,” and “focused” while the internal contract
+retains precise bounded-scope language. Headless Chrome then verified the exact
+desktop and mobile Contact layouts, the truthful email destination, and the
+Technical Operations link to `/contact`.
+
 ## Final candidate: GREEN
 
 The fail-fast hill-climb command verifies:
@@ -62,17 +94,24 @@ The fail-fast hill-climb command verifies:
 npm run hillclimb:public-engagement-pathway
 ```
 
-Expected evidence for this candidate:
+Required evidence for this implemented candidate:
 
 - portfolio eval schema: 17 criteria, 14 blocking, weight 100;
 - RFC behavior tests: 8/8 passing;
 - RFC scenarios: 7/7 passing;
-- RFC hard criteria: all passing;
+- RFC hard criteria: 11/11 passing;
+- Contact page-owner behavior tests: 5/5 passing;
+- Contact page-owner deterministic desk: 22/22 checks passing;
+- Contact page-owner full desk: held pending independent exact-candidate review;
+- responsive browser behavior: desktop and mobile packet plus supporting link
+  passing;
+- TypeScript, lint, and production build checks: passing;
 - RFC structure and behavioral checks: 12 numbered RFCs passing;
 - public-safety checks: passing, with existing careful-claim warnings retained;
 - route checks: passing; and
 - paired-workspace tests: 11/11 passing.
 
-These deterministic results do not satisfy fresh rendered-reader review,
-accept RFC 0012, approve exact copy or pricing, authorize implementation, merge,
-publish, deploy, or index anything. Those remain human gates.
+These deterministic results and Jamie's implementation instruction do not
+satisfy independent modeled page-owner review, fresh reader review, exact-copy
+publication approval, exact pricing, merge, publication, deployment, or
+indexing. Those remain separate gates.

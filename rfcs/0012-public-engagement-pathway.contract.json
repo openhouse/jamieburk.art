@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "rfc": 12,
-  "stage": "proposed",
+  "stage": "implementing",
   "purpose": "Make a public visitor's path from recognizing a need to starting a bounded engagement clear, without projecting private relationship evidence or implying that any engagement already exists.",
   "policy": {
     "allowed_routes": ["/contact", "/work/technical-operations"],
@@ -47,7 +47,7 @@
     },
     "authority": {
       "decision_owner": "Jamie Burkart",
-      "implementation_authorized": false,
+      "implementation_authorized": true,
       "publication_authorized": false,
       "deployment_authorized": false,
       "production_indexing_authorized": false
@@ -109,6 +109,20 @@
       "public_state": "withheld-pending-Jamie-decision"
     }
   },
+  "implementation": {
+    "authorized_by": "Jamie Burkart",
+    "authorized_on": "2026-09-04",
+    "canonical_page": "apps/www/src/app/contact/page.tsx",
+    "supporting_page": "apps/www/src/app/work/technical-operations/page.tsx",
+    "public_copy_source": "apps/www/src/data/engagement-pathway.json",
+    "page_owner_registry": "apps/www/src/data/page-owner-registry.json",
+    "page_owner_ids": [
+      "katie-lane",
+      "jonathan-stark",
+      "beverly-wenger-trayner"
+    ],
+    "publication_authorized": false
+  },
   "evaluation": {
     "ordered_phases": ["deterministic", "rendered-reader-review", "human"],
     "script": "scripts/rfcs/public-engagement-pathway-eval.mjs",
@@ -116,15 +130,13 @@
     "suite": "evals/knowledge-bank/public-engagement-pathway-rfc-evals.json",
     "run_receipt": "evals/knowledge-bank/runs/2026-09-04-public-engagement-pathway-rfc.md",
     "portfolio_criterion": "PR-017",
-    "passing_does_not_authorize_implementation": true
+    "passing_does_not_authorize_publication": true
   },
   "human_gates": {
     "decision_owner": "Jamie Burkart",
     "required": [
-      "RFC-stage-advancement",
       "exact-public-copy",
       "exact-public-pricing",
-      "route-implementation",
       "publication",
       "deployment",
       "production-indexing"
@@ -136,7 +148,7 @@
     "private-interest-is-not-market-demand",
     "conversation-is-not-engagement",
     "each-rung-requires-separate-authorization",
-    "passing-evals-do-not-advance-RFC-stage",
-    "proposal-is-not-publication"
+    "passing-evals-do-not-authorize-publication",
+    "implementation-is-not-publication"
   ]
 }
