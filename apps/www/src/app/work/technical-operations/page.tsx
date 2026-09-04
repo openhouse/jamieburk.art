@@ -257,7 +257,7 @@ export default function TechnicalOperationsPage() {
       </details>
       <div className="mt-10 grid gap-5 lg:grid-cols-2">
         <ResumeCTA />
-        <ContactCTA />
+        <ContactCTA showWorkingSession />
       </div>
     </div>
   );

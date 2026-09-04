@@ -1,7 +1,11 @@
 import { JBButton } from "@/components/JBButton";
 import { site } from "@/data/site";
 
-export function ContactCTA() {
+type ContactCTAProps = {
+  showWorkingSession?: boolean;
+};
+
+export function ContactCTA({ showWorkingSession = false }: ContactCTAProps) {
   return (
     <section className="border-y border-jb-ink/20 py-7">
       <p className="jb-section-label">Next conversation</p>
@@ -20,6 +24,11 @@ export function ContactCTA() {
         <JBButton href={site.emailHref}>
           Email Jamie
         </JBButton>
+        {showWorkingSession ? (
+          <JBButton href="/contact#working-session" variant="ghost">
+            See the paid working session
+          </JBButton>
+        ) : null}
       </div>
     </section>
   );

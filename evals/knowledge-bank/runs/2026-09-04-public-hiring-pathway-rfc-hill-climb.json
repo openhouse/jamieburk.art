@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "run_id": "public-hiring-pathway-rfc-hill-climb-2026-09-04",
+  "rfc": 13,
+  "candidate_branch": "work/2026-09-03-B",
+  "base_branch": "work/2026-09-03-A",
+  "criterion": "low-burden paid entry pathway with public-private, page-owner, and authority boundaries",
+  "method": {
+    "optimization_order": [
+      "private and authority hard gates",
+      "buyer comprehension",
+      "response burden",
+      "smallest coherent public change"
+    ],
+    "deterministic_before_subjective": true,
+    "rubric_changed_during_run": false,
+    "human_decision_substituted": false
+  },
+  "baseline": {
+    "subject": "current Contact surface on the base branch",
+    "decision": "hold",
+    "score": 1,
+    "score_maximum": 4,
+    "observed_strengths": [
+      "The page offers one direct email path for roles, referrals, consulting conversations, and collaboration.",
+      "The page does not disclose private opportunity provenance or claim a current client relationship."
+    ],
+    "lowest_scoring_gap": "A reader cannot identify a smallest paid starting unit, what it includes, what it costs, or whether it can stand alone.",
+    "evidence": [
+      "apps/www/src/app/contact/page.tsx at the base candidate",
+      "public hiring-pathway evaluator RED run: missing evaluator before implementation"
+    ]
+  },
+  "bounded_change": {
+    "description": "Implement one Contact-page working-session card, one Technical Operations link, three fictionalized page-owner records, a machine-readable contract, deterministic scenarios, and mutation tests; do not change unrelated global reader rubrics.",
+    "why_this_change": "It makes the paid next step usable without publishing a contract, availability claim, or private origin story.",
+    "implementation_scope": "review-candidate-only"
+  },
+  "candidate": {
+    "subject": "RFC 0013 implementation candidate",
+    "decision": "ready-for-human-review",
+    "deterministic_score": 1,
+    "scenario_failures": 0,
+    "rendered_reader_clarity_score": 4,
+    "score_maximum": 4,
+    "improvement": 3,
+    "production_build_passed": true,
+    "modeled_page_owner_passes": 3,
+    "modeled_page_owner_total": 3,
+    "desktop_horizontal_overflow": false,
+    "mobile_horizontal_overflow": false,
+    "implementation_authorized": true,
+    "publication_authorized": false,
+    "human_review_still_required": [
+      "commercial and legal terms",
+      "deployment",
+      "production indexing"
+    ],
+    "evidence": [
+      "evals/page-owners/runs/2026-09-04-contact-page-owners.json",
+      "docs/qa/page-owners/contact-public-page.txt",
+      "docs/qa/page-owners/contact-desktop.jpg",
+      "docs/qa/page-owners/contact-mobile.jpg",
+      "production build: 19 of 19 routes generated",
+      "focused implementation and page-owner tests: 20 of 20 passing"
+    ]
+  },
+  "regression_guards": [
+    "No private transcript, correspondence, relationship source, negotiation, repository locator, or private graph topology enters the public candidate.",
+    "The proposed unit is a fixed-fee outcome, not an hourly-labor listing.",
+    "The working session can stand alone and any follow-on requires separate scope and authorization.",
+    "The inquiry does not imply booking, present availability, a signed agreement, or publication authority.",
+    "The production site remains unchanged until Jamie approves the exact deployment and indexing state.",
+    "Katie Lane, Danielle Liss, and Jonathan Stark are fictionalized page-owner lenses; they did not participate and hold no approval or publication authority."
+  ],
+  "decision": "keep-change"
+}

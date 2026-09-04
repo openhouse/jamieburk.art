@@ -81,6 +81,42 @@
           "passDefinition": "Pass only when the problem and usable outcome lead the offer, duration controls scope rather than defining value, the call to action is truthful, and the broader practice remains more visible than the transaction."
         }
       ]
+    },
+    {
+      "pageId": "contact",
+      "route": "/contact",
+      "status": "implementation-candidate",
+      "purpose": "Help a prospective employer, referrer, collaborator, or client choose an honest next step, including one clearly scoped paid working session.",
+      "acceptanceRule": "The simulated editorial desk passes only when every page-owner lens returns Pass after deterministic public-safety, scope, action-label, and contract-separation checks succeed.",
+      "owners": [
+        {
+          "id": "katie-lane",
+          "name": "Katie Lane",
+          "publicProfileUrl": "https://www.workmadeforhire.net/about/",
+          "focus": "Scope and fair compensation",
+          "publicEvidenceState": "default-public-state",
+          "question": "Does the page make compensation, included effort, completion, and the stopping point understandable without inviting unpaid diagnosis or automatic follow-on work?",
+          "passDefinition": "Pass only when the fixed fee and total-effort limit are plain, preparation and recap are included, the first session can stand alone, and additional work requires a new written scope and authorization."
+        },
+        {
+          "id": "danielle-liss",
+          "name": "Danielle Liss",
+          "publicProfileUrl": "https://lisslegal.com/small-business-owners/",
+          "focus": "Public description and agreement boundary",
+          "publicEvidenceState": "default-public-state",
+          "question": "Does the page distinguish a public service description and inquiry from mutual fit, a client-specific agreement, signature authority, confidentiality, and authorization to begin?",
+          "passDefinition": "Pass only when the CTA initiates an inquiry rather than a booking, the public page makes no client-specific legal promise, and agreement, authority, payment, confidentiality, and work authorization remain later written gates."
+        },
+        {
+          "id": "jonathan-stark",
+          "name": "Jonathan Stark",
+          "publicProfileUrl": "https://jonathanstark.com/",
+          "focus": "Outcome-oriented offer",
+          "publicEvidenceState": "default-public-state",
+          "question": "Does the working-session offer help a buyer recognize one useful result and a low-risk way to begin without reducing Jamie's practice to an hourly labor listing?",
+          "passDefinition": "Pass only when the reader can identify the useful decision or operating result, understand what the fixed-fee unit includes, and see that the hour limits delivery without becoming the value proposition."
+        }
+      ]
     }
   ]
 }

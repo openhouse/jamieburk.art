@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "status": "implementation-candidate",
+  "model": "fixed-fee-outcome",
+  "publicName": "paid working session",
+  "headline": "Start with one paid working session",
+  "price": {
+    "amount": 250,
+    "currency": "USD",
+    "display": "$250 fixed fee",
+    "approvedForCandidate": true
+  },
+  "effort": {
+    "maximumTotalMinutes": 60,
+    "display": "Up to 60 minutes total"
+  },
+  "intendedOutcome": {
+    "agreedBeforeWork": true,
+    "examples": [
+      "a clearer decision",
+      "an operating map",
+      "an implementation plan",
+      "a documented next step"
+    ]
+  },
+  "components": [
+    {
+      "id": "agree",
+      "number": "01",
+      "label": "Agree",
+      "description": "Name one useful outcome before the work begins."
+    },
+    {
+      "id": "work",
+      "number": "02",
+      "label": "Work",
+      "description": "Use the hour across agreed preparation and a live session or focused analysis."
+    },
+    {
+      "id": "recap",
+      "number": "03",
+      "label": "Recap",
+      "description": "Leave with a short written record of what became clear and what could happen next."
+    }
+  ],
+  "standalone": true,
+  "followOn": "separately-scoped-and-authorized",
+  "cta": {
+    "label": "Propose a working session",
+    "action": "propose-working-session",
+    "subject": "Paid working session inquiry",
+    "prompts": [
+      "Decision or problem:",
+      "Useful outcome:",
+      "Timing:"
+    ],
+    "impliedCurrentAvailability": false
+  },
+  "publicContract": {
+    "published": false,
+    "linked": false,
+    "agreementOccursAfterFitCheck": true
+  },
+  "privacy": {
+    "privateProvenancePublished": false,
+    "clientRelationshipClaimed": false,
+    "privateGraphTopologyPublished": false
+  },
+  "publication": {
+    "implementationAuthorized": true,
+    "deploymentAuthorized": false,
+    "productionIndexingAuthorized": false
+  }
+}

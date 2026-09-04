@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "rfc": 13,
+  "stage": "implementing",
+  "purpose": "Offer a public-safe, low-burden path from portfolio evidence to one compensated working engagement without exposing private opportunity provenance or implying availability, agreement, or follow-on authorization.",
+  "offer": {
+    "public_name": "paid working session",
+    "model": "fixed-fee-outcome",
+    "currency": "USD",
+    "proposed_amount": 250,
+    "maximum_total_effort_minutes": 60,
+    "required_components": [
+      "agreed-preparation",
+      "working-session-or-analysis",
+      "short-written-recap"
+    ],
+    "intended_outcome_agreed_before_work": true,
+    "standalone": true,
+    "follow_on": "separately-scoped-and-authorized",
+    "guaranteed_business_result": false
+  },
+  "surface": {
+    "primary_location": "/contact#working-session",
+    "secondary_location": "/work/technical-operations",
+    "homepage_role": "secondary",
+    "secondary_link_limit": 1,
+    "new_route_required": false,
+    "allowed_cta_actions": [
+      "propose-working-session"
+    ],
+    "booking_claim_allowed": false,
+    "availability_claim_allowed": false,
+    "public_rate_card": false
+  },
+  "inquiry": {
+    "required_reader_prompts": [
+      "decision-or-problem",
+      "useful-outcome",
+      "timing"
+    ],
+    "maximum_reader_prompts": 3,
+    "collection_method": "existing-contact-path",
+    "payment_before-fit-check": false,
+    "calendar_commitment_before-fit-check": false
+  },
+  "public_boundary": {
+    "named_private_opportunity": false,
+    "private_provenance_publication": false,
+    "private_graph_topology_publication": false,
+    "current_client_claim": false,
+    "implied_current_availability": false,
+    "forbidden_fields": [
+      "private_transcript",
+      "private_correspondence",
+      "relationship_source",
+      "client_negotiation",
+      "private_repository_locator",
+      "public_contract_body",
+      "public_contract_url"
+    ]
+  },
+  "contract_boundary": {
+    "public_contract": false,
+    "agreement_occurs_after_fit_check": true,
+    "signature_authority_verified_separately": true,
+    "legal_terms_are_individually_reviewed": true,
+    "inquiry_is_not_acceptance": true,
+    "rfc_is_not_an_offer_capable_of_acceptance": true
+  },
+  "state_model": [
+    "public-description-proposed",
+    "reader-inquiry",
+    "mutual-fit-check",
+    "written-agreement",
+    "authorized-session",
+    "completed-session-and-recap",
+    "standalone-close-or-separately-scoped-follow-on"
+  ],
+  "evaluation": {
+    "ordered_phases": [
+      "deterministic",
+      "editorial-reader",
+      "legal-and-commercial-review",
+      "human-decision"
+    ],
+    "script": "scripts/rfcs/public-hiring-pathway-eval.mjs",
+    "test": "scripts/rfcs/public-hiring-pathway-eval.test.mjs",
+    "suite": "evals/knowledge-bank/public-hiring-pathway-rfc-evals.json",
+    "changed_candidate_invalidates_receipt": true
+  },
+  "authority": {
+    "decision_owner": "Jamie Burkart",
+    "authorization_source": "direct-user-instruction-2026-09-04",
+    "implementation_authorized": true,
+    "exact_public_copy_authorized_for_candidate": true,
+    "displayed_price_authorized_for_candidate": true,
+    "publication_authorized": false,
+    "automatic_acceptance_authority": "none",
+    "completed_human_decisions": [
+      "exact-public-copy",
+      "displayed-price",
+      "implementation"
+    ],
+    "remaining_human_decisions": [
+      "legal-and-commercial-terms",
+      "deployment",
+      "production-indexing"
+    ]
+  },
+  "invariants": [
+    "private-origin-does-not-enter-public-copy",
+    "fixed-fee-offer-is-not-hourly-labor",
+    "one-session-can-stand-alone",
+    "follow-on-work-needs-separate-authorization",
+    "inquiry-does-not-imply-availability-or-booking",
+    "rfc-merge-alone-does-not-authorize-implementation",
+    "public-description-is-not-the-service-agreement"
+  ]
+}

@@ -34,8 +34,8 @@
     "internalStateRenamed": false
   },
   "result": {
-    "scannedFiles": 75,
-    "renderedPages": 15,
+    "scannedFiles": 76,
+    "renderedPages": 16,
     "prohibitedOccurrences": 0,
     "deterministicTestsPassing": 7,
     "selectedCoverLetterModelCalls": 2,
@@ -43,5 +43,5 @@
     "unselectedCoverLetterReaderCallsSkipped": 14
   },
   "decision": "keep-change",
-  "stopReason": "The target reached zero prohibited public occurrences, including raw WOW List counts and defensive clauses, without changing internal evidence, permissions, collective credit, or technical state semantics."
+  "stopReason": "The target reached zero prohibited public occurrences, including raw WOW List counts and defensive clauses, and the 2026-09-04 working-session candidate preserved that result across the expanded corpus without changing internal evidence, permissions, collective credit, or technical state semantics."
 }

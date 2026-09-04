@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "id": "public-hiring-pathway-rfc",
+  "objective": "Make one compensated entry engagement understandable while preserving private provenance, truthful availability, contract separation, and human publication authority.",
+  "cases": [
+    {
+      "id": "proposed-pathway-is-ready-for-human-review",
+      "candidate": {
+        "offer": {
+          "model": "fixed-fee-outcome",
+          "currency": "USD",
+          "amount": 250,
+          "maximum_total_effort_minutes": 60,
+          "components": ["agreed-preparation", "working-session-or-analysis", "short-written-recap"],
+          "intended_outcome_agreed_before_work": true,
+          "standalone": true,
+          "follow_on": "separately-scoped-and-authorized"
+        },
+        "surface": {
+          "primary_location": "/contact#working-session",
+          "homepage_role": "secondary",
+          "new_route_required": false
+        },
+        "cta": {
+          "label": "Propose a working session",
+          "action": "propose-working-session",
+          "implied_current_availability": false
+        },
+        "public_contract": {"published": false, "linked": false}
+      },
+      "expected": {
+        "decision": "ready-for-human-review",
+        "next_state": "implementing",
+        "implementation_authorized": true,
+        "publication_authorized": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "private-provenance-is-denied",
+      "candidate": {
+        "offer": {
+          "model": "fixed-fee-outcome",
+          "currency": "USD",
+          "amount": 250,
+          "maximum_total_effort_minutes": 60,
+          "components": ["agreed-preparation", "working-session-or-analysis", "short-written-recap"],
+          "intended_outcome_agreed_before_work": true,
+          "standalone": true,
+          "follow_on": "separately-scoped-and-authorized"
+        },
+        "surface": {
+          "primary_location": "/contact#working-session",
+          "homepage_role": "secondary",
+          "new_route_required": false
+        },
+        "cta": {
+          "label": "Propose a working session",
+          "action": "propose-working-session",
+          "implied_current_availability": false
+        },
+        "public_contract": {"published": false, "linked": false},
+        "provenance": {"relationship_source": "protected-source-reference"}
+      },
+      "expected": {
+        "decision": "deny",
+        "reasons": ["forbidden-public-field:relationship_source"]
+      }
+    },
+    {
+      "id": "hourly-labor-framing-holds",
+      "candidate": {
+        "offer": {
+          "model": "hourly-labor",
+          "currency": "USD",
+          "amount": 250,
+          "maximum_total_effort_minutes": 60,
+          "components": ["agreed-preparation", "working-session-or-analysis", "short-written-recap"],
+          "intended_outcome_agreed_before_work": true,
+          "standalone": true,
+          "follow_on": "separately-scoped-and-authorized"
+        },
+        "surface": {
+          "primary_location": "/contact#working-session",
+          "homepage_role": "secondary",
+          "new_route_required": false
+        },
+        "cta": {
+          "label": "Propose a working session",
+          "action": "propose-working-session",
+          "implied_current_availability": false
+        },
+        "public_contract": {"published": false, "linked": false}
+      },
+      "expected": {
+        "decision": "hold",
+        "reasons": ["offer-model-not-fixed-fee-outcome"]
+      }
+    },
+    {
+      "id": "free-discovery-call-holds",
+      "candidate": {
+        "offer": {
+          "model": "fixed-fee-outcome",
+          "currency": "USD",
+          "amount": 0,
+          "maximum_total_effort_minutes": 60,
+          "components": ["agreed-preparation", "working-session-or-analysis", "short-written-recap"],
+          "intended_outcome_agreed_before_work": true,
+          "standalone": true,
+          "follow_on": "separately-scoped-and-authorized"
+        },
+        "surface": {
+          "primary_location": "/contact#working-session",
+          "homepage_role": "secondary",
+          "new_route_required": false
+        },
+        "cta": {
+          "label": "Propose a working session",
+          "action": "propose-working-session",
+          "implied_current_availability": false
+        },
+        "public_contract": {"published": false, "linked": false}
+      },
+      "expected": {
+        "decision": "hold",
+        "reasons": ["proposed-fee-mismatch"]
+      }
+    },
+    {
+      "id": "incomplete-working-unit-holds",
+      "candidate": {
+        "offer": {
+          "model": "fixed-fee-outcome",
+          "currency": "USD",
+          "amount": 250,
+          "maximum_total_effort_minutes": 60,
+          "components": ["working-session-or-analysis"],
+          "intended_outcome_agreed_before_work": true,
+          "standalone": false,
+          "follow_on": "separately-scoped-and-authorized"
+        },
+        "surface": {
+          "primary_location": "/contact#working-session",
+          "homepage_role": "secondary",
+          "new_route_required": false
+        },
+        "cta": {
+          "label": "Propose a working session",
+          "action": "propose-working-session",
+          "implied_current_availability": false
+        },
+        "public_contract": {"published": false, "linked": false}
+      },
+      "expected": {
+        "decision": "hold",
+        "reasons": [
+          "offer-component-missing:agreed-preparation",
+          "offer-component-missing:short-written-recap",
+          "standalone-offer-required"
+        ]
+      }
+    },
+    {
+      "id": "automatic-follow-on-is-denied",
+      "candidate": {
+        "offer": {
+          "model": "fixed-fee-outcome",
+          "currency": "USD",
+          "amount": 250,
+          "maximum_total_effort_minutes": 60,
+          "components": ["agreed-preparation", "working-session-or-analysis", "short-written-recap"],
+          "intended_outcome_agreed_before_work": true,
+          "standalone": true,
+          "follow_on": "automatic-renewal"
+        },
+        "surface": {
+          "primary_location": "/contact#working-session",
+          "homepage_role": "secondary",
+          "new_route_required": false
+        },
+        "cta": {
+          "label": "Propose a working session",
+          "action": "propose-working-session",
+          "implied_current_availability": false
+        },
+        "public_contract": {"published": false, "linked": false}
+      },
+      "expected": {
+        "decision": "deny",
+        "reasons": ["follow-on-must-be-separately-scoped-and-authorized"]
+      }
+    },
+    {
+      "id": "book-now-availability-claim-is-denied",
+      "candidate": {
+        "offer": {
+          "model": "fixed-fee-outcome",
+          "currency": "USD",
+          "amount": 250,
+          "maximum_total_effort_minutes": 60,
+          "components": ["agreed-preparation", "working-session-or-analysis", "short-written-recap"],
+          "intended_outcome_agreed_before_work": true,
+          "standalone": true,
+          "follow_on": "separately-scoped-and-authorized"
+        },
+        "surface": {
+          "primary_location": "/contact#working-session",
+          "homepage_role": "secondary",
+          "new_route_required": false
+        },
+        "cta": {
+          "label": "Book now",
+          "action": "book-now",
+          "implied_current_availability": true
+        },
+        "public_contract": {"published": false, "linked": false}
+      },
+      "expected": {
+        "decision": "deny",
+        "reasons": ["cta-action-not-allowed:book-now", "current-availability-not-established"]
+      }
+    },
+    {
+      "id": "new-service-route-or-homepage-hero-holds",
+      "candidate": {
+        "offer": {
+          "model": "fixed-fee-outcome",
+          "currency": "USD",
+          "amount": 250,
+          "maximum_total_effort_minutes": 60,
+          "components": ["agreed-preparation", "working-session-or-analysis", "short-written-recap"],
+          "intended_outcome_agreed_before_work": true,
+          "standalone": true,
+          "follow_on": "separately-scoped-and-authorized"
+        },
+        "surface": {
+          "primary_location": "/services",
+          "homepage_role": "hero",
+          "new_route_required": true
+        },
+        "cta": {
+          "label": "Propose a working session",
+          "action": "propose-working-session",
+          "implied_current_availability": false
+        },
+        "public_contract": {"published": false, "linked": false}
+      },
+      "expected": {
+        "decision": "hold",
+        "reasons": ["homepage-role-mismatch", "new-route-not-authorized", "primary-location-mismatch"]
+      }
+    },
+    {
+      "id": "public-contract-publication-is-denied",
+      "candidate": {
+        "offer": {
+          "model": "fixed-fee-outcome",
+          "currency": "USD",
+          "amount": 250,
+          "maximum_total_effort_minutes": 60,
+          "components": ["agreed-preparation", "working-session-or-analysis", "short-written-recap"],
+          "intended_outcome_agreed_before_work": true,
+          "standalone": true,
+          "follow_on": "separately-scoped-and-authorized"
+        },
+        "surface": {
+          "primary_location": "/contact#working-session",
+          "homepage_role": "secondary",
+          "new_route_required": false
+        },
+        "cta": {
+          "label": "Propose a working session",
+          "action": "propose-working-session",
+          "implied_current_availability": false
+        },
+        "public_contract": {"published": true, "linked": true}
+      },
+      "expected": {
+        "decision": "deny",
+        "reasons": ["public-contract-not-authorized"]
+      }
+    }
+  ],
+  "human_gates": [
+    "exact public copy",
+    "displayed price",
+    "commercial and legal review",
+    "implementation",
+    "deployment",
+    "production indexing"
+  ]
+}
