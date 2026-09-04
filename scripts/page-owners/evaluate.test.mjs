@@ -4,7 +4,8 @@ import test from "node:test";
 
 import {
   evaluateColophonPageOwners,
-  loadColophonCandidate
+  loadColophonCandidate,
+  sha256
 } from "./evaluate.mjs";
 
 test("the colophon clears deterministic checks before owner simulation", () => {
@@ -73,4 +74,45 @@ test("the response schema keeps Pass and Fail explicit", () => {
   );
   assert.deepEqual(schema.properties.verdict.enum, ["Pass", "Fail"]);
   assert.equal(schema.properties.actualPersonParticipated.const, false);
+});
+
+test("Contact is assigned to the three requested fictionalized page-owner lenses", () => {
+  const registry = loadColophonCandidate().registry;
+  const page = registry.pages.find((entry) => entry.pageId === "contact");
+
+  assert.deepEqual(page?.owners.map((owner) => owner.id) ?? [], [
+    "katie-lane",
+    "danielle-liss",
+    "jonathan-stark"
+  ]);
+  assert.equal(page?.route, "/contact");
+  assert.equal(page?.acceptanceRule.includes("every page-owner lens"), true);
+  assert.equal(registry.publicBoundary.actualPeopleParticipated, false);
+  assert.equal(registry.publicBoundary.actualApprovalOrEndorsement, false);
+});
+
+test("an unrelated registered page does not stale the colophon review receipt", () => {
+  const candidate = loadColophonCandidate();
+  const colophon = candidate.registry.pages.find(
+    (entry) => entry.pageId === "colophon"
+  );
+  candidate.run.registryPageSha256 = sha256(
+    JSON.stringify({
+      model: candidate.registry.model,
+      publicBoundary: candidate.registry.publicBoundary,
+      page: colophon
+    })
+  );
+  candidate.registry.pages.push({
+    pageId: "unrelated-fixture",
+    route: "/unrelated-fixture",
+    status: "fixture",
+    purpose: "An unrelated fixture that is not part of the colophon review packet.",
+    acceptanceRule: "Not evaluated by the colophon desk.",
+    owners: []
+  });
+
+  const result = evaluateColophonPageOwners(candidate);
+
+  assert.equal(result.pass, true, result.failures.join("\n"));
 });

@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 
 import {
@@ -212,12 +213,42 @@ test("the repository RFC candidate passes every hard gate and scenario", () => {
   const result = evaluatePublicHiringPathwayRFC();
 
   assert.equal(result.rfc, 12);
-  assert.equal(result.stage, "proposed");
+  assert.equal(result.stage, "implementing");
   assert.equal(result.score, 1);
   assert.deepEqual(result.hard_failures, []);
   assert.equal(result.scenarios.failed, 0);
   assert.ok(result.scenarios.total >= 8);
   assert.match(result.candidate_fingerprint, /^[a-f0-9]{64}$/);
-  assert.equal(result.implementation_authorized, false);
+  assert.equal(result.implementation_authorized, true);
   assert.equal(result.publication_authorized, false);
+});
+
+test("the authorized implementation is wired to Contact and its three modeled page owners", () => {
+  const result = evaluatePublicHiringPathwayRFC();
+
+  assert.equal(result.stage, "implementing");
+  assert.equal(result.implementation_authorized, true);
+  assert.equal(result.publication_authorized, false);
+  assert.equal(result.checks.implemented_contact_surface, true);
+  assert.equal(result.checks.single_secondary_path, true);
+  assert.equal(result.checks.contact_page_owners_registered, true);
+  assert.equal(result.checks.contact_page_owner_run, true);
+});
+
+test("one failed Contact owner invalidates the all-pass receipt", () => {
+  const contactOwnerRun = JSON.parse(
+    readFileSync(
+      new URL(
+        "../../evals/page-owners/runs/2026-09-04-contact-page-owners.json",
+        import.meta.url
+      ),
+      "utf8"
+    )
+  );
+  contactOwnerRun.assessments[0].verdict = "Fail";
+
+  const result = evaluatePublicHiringPathwayRFC({ contactOwnerRun });
+
+  assert.equal(result.checks.contact_page_owner_run, false);
+  assert.equal(result.hard_failures.includes("contact_page_owner_run"), true);
 });

@@ -1,7 +1,7 @@
 ---
 rfc: 12
 title: Public Paid Working Session Hiring Pathway
-stage: proposed
+stage: implementing
 start_date: 2026-09-04
 authors:
   - Jamie Burkart
@@ -15,26 +15,28 @@ review_areas:
   - privacy-governance
   - legal-review
   - accessibility
-implementation: null
+implementation: apps/www/src/app/contact/page.tsx
 supersedes: []
 superseded_by: null
 ---
 
 # Public Paid Working Session Hiring Pathway
 
-> **Proposal boundary**
+> **Implementation and release boundary**
 >
-> This RFC is `proposed`. It recommends a public hiring pathway for review. It
-> does not authorize website implementation, publication of the proposed price,
-> a public contract, deployment, indexing, a claim of present availability, or
-> an RFC stage change. Jamie Burkart remains the decision owner.
+> Jamie Burkart directly authorized implementation of this RFC on 2026-09-04.
+> That authorization covers the website candidate, exact working-session copy,
+> displayed $250 fee, Contact placement, one Technical Operations link, and
+> fictionalized page-owner evaluation. It does not authorize deployment,
+> production indexing, a public contract, a claim of present availability, or a
+> client engagement. Jamie remains the decision owner.
 
 ## Summary
 
-Add, after explicit acceptance and copy approval, one small public entry offer:
+Implement one small public entry offer in the review candidate:
 a paid working session focused on a single useful outcome. The recommended
 surface is a compact section on Contact, reached by at most one secondary link
-elsewhere. The proposed $250 fixed fee covers up to 60 minutes of Jamie's total
+elsewhere. The authorized candidate's $250 fixed fee covers up to 60 minutes of Jamie's total
 effort, including agreed preparation, a working session or focused analysis,
 and a short written recap. The session may stand alone. Any further work must be
 scoped and authorized separately.
@@ -80,7 +82,7 @@ Three public interaction patterns are useful but incomplete precedents:
   named expert, but its booking-centered pattern could falsely imply live
   calendar availability and confirmed fit.
 
-The proposed pathway keeps the useful lesson—make the compensated next step
+The implemented review pathway keeps the useful lesson—make the compensated next step
 plain—while preserving direct fit review, public/private separation, and a
 portfolio-led identity.
 
@@ -103,7 +105,7 @@ portfolio-led identity.
 
 ## Non-goals
 
-- Do not implement or publish the offer while this RFC remains proposed.
+- Do not deploy or index the offer without a separate exact-candidate decision.
 - Do not publish a client-specific contract, legal template, negotiation, or
   private relationship context.
 - Do not create a services catalog, public rate card, calendar integration,
@@ -131,7 +133,7 @@ next-step clarity that both parties agree the session should pursue. It is a
 direction for the work, not a guaranteed external result.
 
 **Total effort:** Jamie's combined preparation, session or analysis, and recap
-time. The proposed unit caps this combined effort at 60 minutes; it does not
+time. The candidate unit caps this combined effort at 60 minutes; it does not
 promise a 60-minute meeting plus unlimited preparation and follow-up.
 
 **Inquiry:** A reader's expression of interest. It is not acceptance, a booking,
@@ -171,7 +173,7 @@ the session is worth buying.
 
 ### Recommended public copy specimen
 
-The following is a review specimen, not approved website copy:
+The following is the user-authorized website-candidate copy:
 
 > **Start with one paid working session**
 >
@@ -191,11 +193,11 @@ still requires mutual fit and does not establish calendar availability.
 
 ### Offer unit
 
-The proposed commercial unit is:
+The candidate commercial unit is:
 
 | Element | Public description | Boundary |
 | --- | --- | --- |
-| Fee | $250 fixed fee | Proposed until Jamie explicitly approves display |
+| Fee | $250 fixed fee | Authorized for this review candidate; deployment and indexing remain separate decisions |
 | Effort | Up to 60 minutes total | Preparation, session or analysis, and recap share the limit |
 | Focus | One agreed useful outcome | No guaranteed external result |
 | Deliverable | Short written recap | Format and depth fit inside the same unit |
@@ -273,13 +275,13 @@ It holds candidates that replace the fixed-fee outcome with hourly-labor
 framing, remove a required component, offer a free starting unit, move the
 offer into a homepage hero or new route, or weaken the standalone boundary.
 
-The baseline Contact surface scores 1 of 4 on commercial next-step clarity: it
+The base Contact surface scored 1 of 4 on commercial next-step clarity: it
 has a direct contact path, but no smallest paid unit, price, contents, or
 completion boundary. This RFC's review specimen scores 4 of 4 against the same
-criterion and passes all deterministic scenarios. That improvement applies to
-the proposal, not the live site. The live surface remains unchanged and cannot
-inherit the proposal's score until implementation is separately authorized and
-reviewed in a rendered candidate.
+criterion and passes all deterministic scenarios. The implemented review
+candidate earned that score again through exact desktop and mobile inspection,
+with all three fictionalized page-owner lenses passing. Production remains
+unchanged until separately authorized.
 
 ## Security and privacy
 
@@ -313,15 +315,15 @@ client-specific terms.
 
 Publication of a live pathway requires, in order:
 
-1. Jamie accepts this RFC or records a revised direction.
-2. Jamie approves the exact public copy and whether the $250 price is displayed.
-3. Commercial and legal review confirms that the public description and private
+1. Jamie has authorized the RFC implementation, exact candidate copy, and $250
+   price display through the direct instruction recorded on 2026-09-04.
+2. Commercial and legal review confirms that the public description and private
    agreement do not conflict.
-4. An implementation pull request shows the rendered Contact section and any
+3. The implementation pull request shows the rendered Contact section and its
    one secondary link at desktop and mobile sizes.
-5. Deterministic, public-language, accessibility, route, and privacy checks pass
+4. Deterministic, public-language, accessibility, route, and privacy checks pass
    against the exact candidate.
-6. Jamie separately approves deployment and production indexing for the exact
+5. Jamie separately approves deployment and production indexing for the exact
    commit.
 
 A merged proposed RFC does not satisfy any later gate. Automation may evaluate,
@@ -330,28 +332,31 @@ agreement, declare fit, deploy, or index the page.
 
 ## Rollout plan
 
-### Phase 0: proposal review
+### Phase 0: proposal review — complete
 
 - Review this RFC, its copy specimen, proposed price, and evaluation evidence.
 - Seek legal and commercial review where appropriate.
 - Record acceptance, revision, or closure through the RFC process.
-- Make no visitor-facing change.
+- Record the 2026-09-04 direct implementation authorization.
 
-### Phase 1: private content prototype
+### Phase 1: implementation candidate — complete
 
-- Draft the exact Contact card and one optional secondary-link placement.
+- Implement the exact Contact card and one Technical Operations link.
 - Test the three-prompt inquiry for comprehension and response burden.
 - Confirm the private agreement's party, scope, payment, cancellation,
   confidentiality, intellectual-property, and authorization mechanics.
 - Do not expose private provenance in the implementation candidate.
 
-### Phase 2: public implementation candidate
+### Phase 2: rendered candidate review — complete
 
-- Implement only the accepted Contact card and approved secondary link.
+- Render only the authorized Contact card and Technical Operations link.
 - Do not add a new route, booking calendar, payment flow, or analytics system.
 - Render and inspect desktop and mobile states, focus order, heading hierarchy,
   link purpose, and mail-client behavior.
 - Run the full affected evaluation suite against the exact commit.
+
+The exact public packet is recorded in `docs/qa/page-owners/`; its three-owner
+all-pass receipt is `evals/page-owners/runs/2026-09-04-contact-page-owners.json`.
 
 ### Phase 3: staging observation
 
@@ -374,18 +379,15 @@ agreements.
 
 ## Decision gates
 
-- **Direction:** Jamie decides whether the site should expose a paid entry unit.
-- **Naming:** Jamie approves “paid working session” or a replacement.
-- **Price:** Jamie approves, changes, or withholds the proposed $250 display.
-- **Scope:** Jamie approves the 60-minute total-effort interpretation and recap.
-- **Placement:** Jamie approves Contact as primary and at most one secondary
-  link elsewhere.
+- **Direction, naming, price, scope, and candidate placement:** Completed by
+  Jamie's direct 2026-09-04 instruction to implement this RFC.
 - **Commercial and legal review:** The public description and private agreement
   are checked for consistency, party identity, authority, payment, cancellation,
   confidentiality, intellectual property, and applicable obligations.
 - **Privacy:** A human reviewer confirms that no private opportunity provenance
   or identifying combination entered the public candidate.
-- **Implementation:** Acceptance of the RFC precedes visitor-facing code.
+- **Implementation:** Authorized for this pull-request candidate; it is not a
+  deployment or indexing decision.
 - **Release:** Jamie separately approves staging, deployment, and production
   indexing for the exact candidate commit.
 
@@ -452,13 +454,12 @@ reasonable fallback if Jamie is not ready to maintain a public fixed fee.
 
 ## Unresolved questions
 
-- Is $250 the right public fixed fee for the target client mix and current
-  administrative burden?
-- Should the 60-minute limit cover total effort, as proposed, or should the
-  offer promise a separate live-session duration with additional included
-  preparation and recap?
-- Which single secondary surface, if any, best reaches qualified readers without
-  competing with the portfolio's primary story?
+- After real inquiries, does $250 remain the right fixed fee for the target
+  client mix and administrative burden?
+- Do readers understand that the 60-minute limit covers total effort rather
+  than a 60-minute meeting plus unlimited preparation and recap?
+- Does the Technical Operations link reach qualified readers without competing
+  with the portfolio's primary story?
 - Should the existing email link use a prefilled subject and three prompts, or
   should the prompts remain visible prose only?
 - What cancellation, rescheduling, payment timing, confidentiality,

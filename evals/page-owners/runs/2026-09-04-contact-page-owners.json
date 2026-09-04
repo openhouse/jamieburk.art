@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "runId": "contact-page-owners-2026-09-04",
+  "status": "complete",
+  "pageId": "contact",
+  "route": "/contact",
+  "branch": "work/2026-09-03-B",
+  "promptVersion": "contact-page-owner-v1",
+  "pageSourceSha256": "ce568f4c59ede815095b8f424ed2fcb7a3e0cf0444d6a0abbcb7169184e74724",
+  "componentSourceSha256": "83cf79f155f38d8c504d55b4f8fb718213486651dccd61ef00acd37de8d57fc8",
+  "offerDataSha256": "49fd6c97f0954cd176457234cee8a4f7394fd35b13cd37a39ebab26ebee029e3",
+  "registryPageSha256": "144af1be77b7d6a5b09125dbcf0d2555e59c5c09f6157a08828adcd81d296450",
+  "publicPageTextSha256": "d3a19874d01c2889dd5bd6fbc1bb65254711940587e0e30b24060feb9b835b71",
+  "desktopScreenshotSha256": "d5f2ad3fa0565778226ee0037ae45fa5aaec103b0c1b495491480fe924c0f402",
+  "mobileScreenshotSha256": "6bf6cb0fdb8d30f1991f76c8ab16c8ffa41bd65482287217994d2a03619a0abf",
+  "publicOnly": true,
+  "repositoryAvailableToModel": false,
+  "actualPeopleParticipated": false,
+  "actualApprovalOrEndorsement": false,
+  "renderedChecks": {
+    "productionBuildPassed": true,
+    "desktopWidth": 1440,
+    "desktopHorizontalOverflow": false,
+    "mobileWidth": 390,
+    "mobileHorizontalOverflow": false,
+    "workingSessionSectionCount": 1,
+    "technicalOperationsSecondaryLinkCount": 1,
+    "homepageSecondaryLinkCount": 0,
+    "aboutSecondaryLinkCount": 0,
+    "inquiryHrefIncludesThreePrompts": true,
+    "actionableConsoleErrors": 0
+  },
+  "assessments": [
+    {
+      "ownerId": "katie-lane",
+      "publicEvidenceState": "default-public-state",
+      "verdict": "Pass",
+      "actualPersonParticipated": false,
+      "critique": "The offer makes compensation and the stopping point unusually concrete without requiring the buyer to decipher a rate sheet. The fixed fee, combined total-effort limit, three included stages, standalone completion, and separately authorized follow-on form one coherent scope boundary.",
+      "evidence": [
+        "The fee and effort ledger reads '$250 fixed fee' and 'Up to 60 minutes total' before the buyer reaches the CTA.",
+        "The Agree, Work, and Recap sequence includes preparation and a written recap, while the closing sentence states that the session can stand alone and later work is scoped separately."
+      ],
+      "revisionRequests": [],
+      "boundary": "This is a fictionalized analytical lens based on public work. Katie Lane did not participate and this record is not her approval or endorsement."
+    },
+    {
+      "ownerId": "danielle-liss",
+      "publicEvidenceState": "default-public-state",
+      "verdict": "Pass",
+      "actualPersonParticipated": false,
+      "critique": "The page describes a service pattern while declining to masquerade as the client agreement. The action label starts a proposal, the helper text expressly calls it an inquiry rather than a booking, and the implementation data retains later fit and written-agreement gates.",
+      "evidence": [
+        "The CTA is 'Propose a working session,' not a calendar, checkout, acceptance, or signature action.",
+        "The rendered helper text says the email is an inquiry and not a confirmed booking; no public contract or client-specific promise appears."
+      ],
+      "revisionRequests": [],
+      "boundary": "This is a fictionalized analytical lens based on public work. Danielle Liss did not participate and this record is not her legal review, approval, or endorsement."
+    },
+    {
+      "ownerId": "jonathan-stark",
+      "publicEvidenceState": "default-public-state",
+      "verdict": "Pass",
+      "actualPersonParticipated": false,
+      "critique": "The useful outcome leads the proposition and the fixed fee makes the buyer's decision legible. Time appears as a delivery constraint shared across preparation, work, and recap rather than as an open meter or the sole claim of value.",
+      "evidence": [
+        "The first explanatory paragraph asks the parties to agree on one useful outcome before work begins.",
+        "The buyer sees one fixed fee and a total-effort ceiling, followed by a short record of what became clear and what could happen next."
+      ],
+      "revisionRequests": [],
+      "boundary": "This is a fictionalized analytical lens based on public work. Jonathan Stark did not participate and this record is not his approval or endorsement."
+    }
+  ],
+  "aggregate": {
+    "rule": "all-pass",
+    "verdict": "Pass",
+    "passedOwners": 3,
+    "totalOwners": 3,
+    "humanFinalApprovalRequired": true,
+    "implementationCandidateAccepted": true,
+    "deploymentAuthorized": false,
+    "productionIndexingAuthorized": false
+  },
+  "hillClimb": {
+    "baselineScore": 1,
+    "candidateScore": 4,
+    "maximumScore": 4,
+    "lowestBaselineCriterion": "commercial-next-step-clarity",
+    "boundedChange": "Add one Contact working-session section and one Technical Operations path while preserving all private, contract, and deployment boundaries.",
+    "decision": "keep-change"
+  }
+}

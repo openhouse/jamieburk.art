@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { WorkingSessionOffer } from "@/components/WorkingSessionOffer";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   title: "Contact - Jamie Burkart",
   description:
-    "Contact Jamie Burkart for roles, referrals, consulting, or collaboration.",
+    "Contact Jamie Burkart for roles, referrals, collaboration, or one paid working session.",
   path: "/contact"
 });
 
@@ -67,6 +68,7 @@ export default function ContactPage() {
             </div>
           </dl>
         </div>
+        <WorkingSessionOffer />
       </div>
     </div>
   );

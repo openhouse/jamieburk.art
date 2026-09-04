@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "rfc": 12,
-  "stage": "proposed",
+  "stage": "implementing",
   "purpose": "Offer a public-safe, low-burden path from portfolio evidence to one compensated working engagement without exposing private opportunity provenance or implying availability, agreement, or follow-on authorization.",
   "offer": {
     "public_name": "paid working session",
@@ -21,6 +21,7 @@
   },
   "surface": {
     "primary_location": "/contact#working-session",
+    "secondary_location": "/work/technical-operations",
     "homepage_role": "secondary",
     "secondary_link_limit": 1,
     "new_route_required": false,
@@ -89,13 +90,18 @@
   },
   "authority": {
     "decision_owner": "Jamie Burkart",
-    "implementation_authorized": false,
+    "authorization_source": "direct-user-instruction-2026-09-04",
+    "implementation_authorized": true,
+    "exact_public_copy_authorized_for_candidate": true,
+    "displayed_price_authorized_for_candidate": true,
     "publication_authorized": false,
     "automatic_acceptance_authority": "none",
-    "human_decisions": [
+    "completed_human_decisions": [
       "exact-public-copy",
       "displayed-price",
-      "implementation",
+      "implementation"
+    ],
+    "remaining_human_decisions": [
       "legal-and-commercial-terms",
       "deployment",
       "production-indexing"
@@ -107,7 +113,7 @@
     "one-session-can-stand-alone",
     "follow-on-work-needs-separate-authorization",
     "inquiry-does-not-imply-availability-or-booking",
-    "rfc-review-does-not-authorize-implementation",
+    "rfc-merge-alone-does-not-authorize-implementation",
     "public-description-is-not-the-service-agreement"
   ]
 }

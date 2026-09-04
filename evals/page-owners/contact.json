@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "pageId": "contact",
+  "route": "/contact",
+  "registryPath": "apps/www/src/data/page-owner-registry.json",
+  "pageSourcePath": "apps/www/src/app/contact/page.tsx",
+  "componentSourcePath": "apps/www/src/components/WorkingSessionOffer.tsx",
+  "offerDataPath": "apps/www/src/data/working-session.json",
+  "currentRunPath": "evals/page-owners/runs/2026-09-04-contact-page-owners.json",
+  "ownerOrder": [
+    "katie-lane",
+    "danielle-liss",
+    "jonathan-stark"
+  ],
+  "publicPacket": {
+    "renderedTextPath": "docs/qa/page-owners/contact-public-page.txt",
+    "desktopScreenshotPath": "docs/qa/page-owners/contact-desktop.jpg",
+    "mobileScreenshotPath": "docs/qa/page-owners/contact-mobile.jpg"
+  },
+  "deterministicStages": [
+    "public-private-boundary",
+    "offer-scope-and-compensation",
+    "inquiry-and-agreement-boundary",
+    "responsive-rendering",
+    "independent-owner-evaluations"
+  ],
+  "modelGate": {
+    "promptVersion": "contact-page-owner-v1",
+    "publicOnly": true,
+    "repositoryAvailableToModel": false,
+    "maximumCallsPerOwner": 1,
+    "requiredVerdict": "Pass",
+    "aggregateRule": "all-pass",
+    "humanMeaning": "Modeled passage is editorial evidence for the implementation candidate, not real participation, endorsement, legal review, deployment approval, or publication authority."
+  }
+}

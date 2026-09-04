@@ -30,8 +30,8 @@
       },
       "expected": {
         "decision": "ready-for-human-review",
-        "next_state": "proposed",
-        "implementation_authorized": false,
+        "next_state": "implementing",
+        "implementation_authorized": true,
         "publication_authorized": false,
         "reasons": []
       }
