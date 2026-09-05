@@ -144,7 +144,43 @@ receipts, no silent loss, and no automatic expansion of authority.
 : An immutable record of one stage's inputs, outputs, tool or provider version,
   hashes, timestamps, status, limits, and unresolved conditions.
 
+**Revisit queue**
+: A body-free, private planning register for historical transcript and recording
+  families that may benefit from the current method. Each discovered candidate
+  has a disposition, dependency state, evidence basis, priority, and next safe
+  action. Priority is sequencing metadata, not processing authority.
+
 ## Detailed design
+
+### Historical discovery and revisit queue
+
+Historical backfill begins with a bounded discovery receipt, not a crawler or
+an implied processing job. The receipt records the searched source classes,
+queries or routing rules, access method, cutoff, materialization limits, and
+known blind spots. It may inventory private candidate families in a private
+sidecar, but the public repository retains only the generic method and its
+evaluation state.
+
+Every observed candidate receives exactly one disposition:
+
+- `queued` when a bounded future revisit is useful;
+- `reference-current` when it is a control demonstrating the latest method;
+- `held-participant-restriction` when a restriction forbids further processing;
+- `out-of-scope` when it is not an audio-recording transcript family; or
+- `unresolved` when source identity or custody cannot yet be responsibly
+  established.
+
+A queue item records source IDs, current transcript and audio state, method
+gaps, dependencies, priority, and one next safe action. It does not contain raw
+dialogue, protected locators, provider IDs, credentials, or public projections.
+An unavailable or dataless source remains a custody state rather than becoming
+an absence claim. A message-thread projection, official third-party transcript,
+or media attachment is not silently promoted into the recorded-call queue.
+
+Current-method controls are not backlog. Participant-restricted holds are not
+actionable. A priority label cannot authorize source access, materialization,
+external transfer, transcription, voice-reference use, preservation, quotation,
+publication, or contact. Those gates remain explicit and per job.
 
 ### One manifest and one state machine
 
@@ -172,6 +208,7 @@ opaque agent action:
 
 ```text
 audio:plan       create or inspect the bounded job manifest
+audio:queue      discover and disposition historical candidates
 audio:inventory  enumerate artifacts and record dispositions
 audio:preserve   hash originals and verify read-only source custody
 audio:prepare    create reproducible processing derivatives
@@ -354,8 +391,9 @@ publishes, deploys, indexes, or merges automatically.
 
 ## Rollout plan
 
-1. **Contract and evals:** preserve this proposed RFC, machine-readable contract,
-   and deterministic scenario suite. Do not process new audio.
+1. **Contract, queue pilot, and evals:** preserve this proposed RFC,
+   machine-readable contract, deterministic scenario suite, and a body-free
+   private revisit queue. Do not process new audio merely because it is queued.
 2. **Local dry-run prototype:** implement manifest parsing, inventory, hashing,
    and receipt validation using synthetic or expressly designated non-sensitive
    fixtures.

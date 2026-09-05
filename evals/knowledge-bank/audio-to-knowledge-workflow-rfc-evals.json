@@ -25,6 +25,13 @@
       "occurrence_corroborated": false,
       "event_state": "not-asserted"
     },
+    "revisit_queue": {
+      "candidate_disposition": "queued",
+      "participant_restriction": false,
+      "current_method_control": false,
+      "public_detail_exposed": false,
+      "processing_authority_claimed": false
+    },
     "transfer": {
       "external_provider_required": true,
       "authorized": true,
@@ -279,6 +286,50 @@
         "decision": "deny",
         "publication_authorized": false,
         "reasons": ["scheduled-event-occurrence-unsupported"]
+      }
+    },
+    {
+      "id": "undispositioned-revisit-candidate-holds",
+      "patch": {"revisit_queue": {"candidate_disposition": "unresolved"}},
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": ["revisit-candidate-disposition-required"]
+      }
+    },
+    {
+      "id": "participant-restricted-candidate-cannot-be-actionable",
+      "patch": {"revisit_queue": {"participant_restriction": true}},
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["participant-restricted-queue-item-actionable"]
+      }
+    },
+    {
+      "id": "current-method-control-cannot-be-requeued",
+      "patch": {"revisit_queue": {"current_method_control": true}},
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["current-method-control-requeued"]
+      }
+    },
+    {
+      "id": "queue-priority-cannot-authorize-processing-or-public-detail",
+      "patch": {
+        "revisit_queue": {
+          "processing_authority_claimed": true,
+          "public_detail_exposed": true
+        }
+      },
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": [
+          "queue-priority-cannot-authorize-processing",
+          "private-queue-detail-exposure-forbidden"
+        ]
       }
     }
   ]

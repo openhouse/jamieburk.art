@@ -20,6 +20,7 @@ const candidatePaths = [
   "scripts/check-rfcs.mjs",
   "scripts/rfcs/audio-to-knowledge-workflow-eval.mjs",
   "scripts/rfcs/audio-to-knowledge-workflow-eval.test.mjs",
+  "scripts/rfcs/audio-to-knowledge-revisit-queue-rfc.test.mjs",
   "scripts/rfcs/audio-to-knowledge-workflow-rfc.test.mjs"
 ];
 
@@ -87,6 +88,24 @@ export function evaluateAudioKnowledgeWorkflow(state) {
   ) {
     denyReasons.push("named-speaker-assignment-unverified");
   }
+  if (
+    state.revisit_queue?.participant_restriction === true &&
+    state.revisit_queue?.candidate_disposition === "queued"
+  ) {
+    denyReasons.push("participant-restricted-queue-item-actionable");
+  }
+  if (
+    state.revisit_queue?.current_method_control === true &&
+    state.revisit_queue?.candidate_disposition === "queued"
+  ) {
+    denyReasons.push("current-method-control-requeued");
+  }
+  if (state.revisit_queue?.processing_authority_claimed === true) {
+    denyReasons.push("queue-priority-cannot-authorize-processing");
+  }
+  if (state.revisit_queue?.public_detail_exposed === true) {
+    denyReasons.push("private-queue-detail-exposure-forbidden");
+  }
   if (state.repair?.status === "complete") {
     if (state.repair?.compared_with_audio !== true) {
       denyReasons.push("repair-audio-comparison-required");
@@ -123,6 +142,12 @@ export function evaluateAudioKnowledgeWorkflow(state) {
   }
   if (state.scope?.preservation_authorized !== true) {
     holdReasons.push("private-preservation-authorization-required");
+  }
+  if (
+    !state.revisit_queue?.candidate_disposition ||
+    state.revisit_queue.candidate_disposition === "unresolved"
+  ) {
+    holdReasons.push("revisit-candidate-disposition-required");
   }
   if (
     !Number.isInteger(state.capture?.observed_artifact_count) ||
@@ -261,6 +286,16 @@ export function evaluateAudioKnowledgeWorkflowRFC(options = {}) {
       contract.context?.scheduled_event_alone_establishes_occurrence === false &&
       contract.context?.search_miss_establishes_absence === false &&
       contract.context?.conflicting_sources_must_be_retained === true,
+    historical_revisit_queue_is_governed:
+      contract.revisit_queue?.body_free === true &&
+      contract.revisit_queue?.private_by_default === true &&
+      contract.revisit_queue?.every_candidate_requires_disposition === true &&
+      contract.revisit_queue?.current_method_controls_are_not_backlog === true &&
+      contract.revisit_queue?.participant_holds_are_not_actionable === true &&
+      contract.revisit_queue?.dataless_is_not_absent === true &&
+      contract.revisit_queue?.priority_is_not_processing_authority === true &&
+      contract.revisit_queue?.private_item_counts_may_be_public === false &&
+      contract.revisit_queue?.allowed_dispositions?.length === 5,
     diarization_preserves_uncertainty:
       contract.diarization?.generic_labels_allowed === true &&
       contract.diarization?.named_labels_require_support === true &&
