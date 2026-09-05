@@ -175,6 +175,31 @@ export function evaluateTranscriptRevisitQueue(queue = {}) {
   if (scope.deduplicated_record_count !== entries.length) {
     holdReasons.push("queue-census-mismatch");
   }
+  const discoverySources = Array.isArray(queue.discovery_sources)
+    ? queue.discovery_sources
+    : [];
+  if (discoverySources.length === 0) {
+    holdReasons.push("queue-discovery-sources-missing");
+  }
+  for (const source of discoverySources) {
+    const sourceId = source.source_id ?? source.id ?? "unknown-source";
+    if (source.bounded !== true) {
+      holdReasons.push(`queue-discovery-boundary-missing:${sourceId}`);
+    }
+    if (!source.search_capability?.trim()) {
+      holdReasons.push(`queue-discovery-search-state-missing:${sourceId}`);
+    }
+    if (!Array.isArray(source.limitations) || source.limitations.length === 0) {
+      holdReasons.push(`queue-discovery-limitations-missing:${sourceId}`);
+    }
+    if (
+      source.search_complete === true &&
+      source.search_capability === "unavailable-requires-device-verification" &&
+      source.device_verification_enabled !== true
+    ) {
+      holdReasons.push(`queue-discovery-completeness-unsupported:${sourceId}`);
+    }
+  }
   for (const entry of entries) {
     if (!entry.next_gate?.trim()) holdReasons.push(`queue-entry-next-gate-missing:${entry.id}`);
     if (!entry.current_state?.trim()) holdReasons.push(`queue-entry-state-missing:${entry.id}`);
@@ -257,7 +282,11 @@ export function evaluateAudioKnowledgeWorkflowRFC(options = {}) {
       contract.migration_queue?.deduplication_required === true &&
       contract.migration_queue?.every_entry_requires_next_gate === true &&
       contract.migration_queue?.priority_does_not_authorize_processing === true &&
-      contract.migration_queue?.protected_locators_in_public_queue === false
+      contract.migration_queue?.protected_locators_in_public_queue === false,
+    bounded_remote_discovery:
+      contract.migration_queue?.remote_discovery_receipt_required === true &&
+      contract.migration_queue?.search_limitations_required === true &&
+      contract.migration_queue?.unenabled_search_cannot_claim_completeness === true
   };
   const hardFailures = Object.entries(hardCriteria)
     .filter(([, passed]) => !passed)

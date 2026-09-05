@@ -75,7 +75,10 @@
     "priority_does_not_authorize_processing": true,
     "automatic_source_access_authorized": false,
     "automatic_external_upload_authorized": false,
-    "protected_locators_in_public_queue": false
+    "protected_locators_in_public_queue": false,
+    "remote_discovery_receipt_required": true,
+    "search_limitations_required": true,
+    "unenabled_search_cannot_claim_completeness": true
   },
   "human_gates": [
     "source-access",

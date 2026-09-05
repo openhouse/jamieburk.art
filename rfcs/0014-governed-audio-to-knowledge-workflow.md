@@ -438,6 +438,25 @@ Building or reprioritizing the queue authorizes no source access, audio review,
 external upload, repair, participant contact, public projection, or deletion.
 Each entry must re-enter the RFC state machine through the earliest unmet gate.
 
+#### Authenticated remote discovery
+
+When local cloud files are online-only, slow to materialize, or incomplete, a
+separately authorized authenticated browser may support a bounded read-only
+inventory. The discovery receipt must name the exact surface inspected, visible
+item count, matching-record count, deduplication result, search capability,
+search-completeness state, and limitations. It must not preserve credentials,
+session data, protected locators, or transcript bodies.
+
+A visible Recents list, favorite folder, or selected directory is a bounded
+surface, not a provider-wide search. If search requires enabling another device,
+new account capability, or a verification flow that was not completed, record
+search as unavailable and incomplete. Do not claim completeness, activate the
+feature, or substitute another browser merely to remove the limitation.
+
+Remote visibility may correct `unavailable` to `visible but not custody
+receipted`. It does not establish a byte-exact local artifact, unchanged service
+export, audio certification, processing authority, or publication permission.
+
 ### Errors, retries, and observability
 
 Receipts should report stage, state, attempt, artifact fingerprint, start and
@@ -461,13 +480,13 @@ The job status view should distinguish:
 
 ### Evaluation and hill climb
 
-The evaluation prototype starts with behavior, not keyword presence. Fifteen
+The evaluation prototype starts with behavior, not keyword presence. Sixteen
 unit cases cover a complete private job and failures involving missing hashes,
 unauthorized upload, incomplete provider processing, changed service output,
 unsupported audio certification, transcript prompt injection, undispositioned
 context, missing public authority, private leakage, and a properly authorized
-public candidate, plus queue deduplication, census, next-gate, and
-non-authorization behavior.
+public candidate, plus queue deduplication, census, next-gate,
+non-authorization, and incomplete authenticated-discovery behavior.
 
 The RFC-level evaluator also checks the machine-readable contract and five
 portable scenario fixtures. Its hard criteria require the state sequence,

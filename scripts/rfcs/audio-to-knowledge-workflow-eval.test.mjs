@@ -86,6 +86,14 @@ function completeQueue() {
       automatic_processing_authorized: false,
       publication_authorized: false
     },
+    discovery_sources: [
+      {
+        source_id: "governed-corpus-a",
+        bounded: true,
+        search_capability: "available",
+        limitations: ["Named corpus only"]
+      }
+    ],
     entries: [
       {
         id: "queue-a",
@@ -295,5 +303,33 @@ test("an entry without a next human or custody gate remains held", () => {
     decision: "hold",
     counts: { total: 3, P0: 1, P1: 1, P2: 1, P3: 0 },
     reasons: ["queue-entry-next-gate-missing:queue-b"]
+  });
+});
+
+test("an authenticated remote discovery surface must retain search limitations", () => {
+  const queue = completeQueue();
+  queue.discovery_sources = [
+    {
+      source_id: "icloud-drive-browser-recents",
+      bounded: true,
+      search_capability: "unavailable-requires-device-verification",
+      limitations: []
+    }
+  ];
+
+  assert.deepEqual(evaluateQueue(queue), {
+    decision: "hold",
+    counts: { total: 3, P0: 1, P1: 1, P2: 1, P3: 0 },
+    reasons: ["queue-discovery-limitations-missing:icloud-drive-browser-recents"]
+  });
+
+  queue.discovery_sources[0].limitations = ["Visible Recents surface only"];
+  queue.discovery_sources[0].search_complete = true;
+  queue.discovery_sources[0].device_verification_enabled = false;
+
+  assert.deepEqual(evaluateQueue(queue), {
+    decision: "hold",
+    counts: { total: 3, P0: 1, P1: 1, P2: 1, P3: 0 },
+    reasons: ["queue-discovery-completeness-unsupported:icloud-drive-browser-recents"]
   });
 });
