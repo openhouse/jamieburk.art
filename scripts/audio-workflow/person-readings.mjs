@@ -144,7 +144,7 @@ export function renderPersonPages(result, { output_dir: outputDir, date }) {
       }
       body += `### Analytical interpretation\n\n${entry.interpretation ? markdown(entry.interpretation) : 'No voice inference is made from unavailable, restricted, or unattributed text. This entry preserves the gap.'}\n\nBoundary: ${markdown(entry.boundary)}\n\n`;
     }
-    pages[file] = body;
+    pages[file] = body.trimEnd() + '\n';
   }
   const indexPath = `${outputDir}/index.md`;
   let index = frontmatter('voice.index', 'Situated writer’s voice — transcript coverage', indexPath, date, result.people.map(p => `private:voice.${p.id}`));
@@ -159,6 +159,6 @@ export function renderPersonPages(result, { output_dir: outputDir, date }) {
     if (!entries.length) index += 'Speaker roster unresolved; no person or voice inferred.\n';
     index += '\n';
   }
-  pages[indexPath] = index;
+  pages[indexPath] = index.trimEnd() + '\n';
   return pages;
 }
