@@ -56,6 +56,21 @@ function candidateFingerprint(repoRoot) {
 export function evaluateAudioKnowledgeWorkflow(state) {
   const denyReasons = [];
 
+  if ((state.cloud_recovery?.cloud_mutation_count ?? 0) > 0) {
+    denyReasons.push("read-only-cloud-mutation-forbidden");
+  }
+  if (
+    state.cloud_recovery?.source_state === "web-listed" &&
+    state.cloud_recovery?.preservation_claimed === true
+  ) {
+    denyReasons.push("web-listing-not-preservation");
+  }
+  if (
+    state.cloud_recovery?.source_state === "recovered" &&
+    state.cloud_recovery?.download_status !== "complete"
+  ) {
+    denyReasons.push("unrecovered-cloud-source-overclaim");
+  }
   if (state.security?.credentials_present === true) {
     denyReasons.push("credential-material-forbidden");
   }
@@ -136,6 +151,13 @@ export function evaluateAudioKnowledgeWorkflow(state) {
   }
 
   const holdReasons = [];
+  if (
+    state.cloud_recovery?.download_status === "complete" &&
+    (state.cloud_recovery?.private_source_custody !== true ||
+      state.cloud_recovery?.sha256_recorded !== true)
+  ) {
+    holdReasons.push("cloud-recovery-receipt-incomplete");
+  }
   if (state.scope?.bounded !== true) holdReasons.push("bounded-call-family-required");
   if (state.scope?.source_access_authorized !== true) {
     holdReasons.push("source-access-authorization-required");
@@ -296,6 +318,15 @@ export function evaluateAudioKnowledgeWorkflowRFC(options = {}) {
       contract.revisit_queue?.priority_is_not_processing_authority === true &&
       contract.revisit_queue?.private_item_counts_may_be_public === false &&
       contract.revisit_queue?.allowed_dispositions?.length === 5,
+    authenticated_cloud_recovery_is_bounded:
+      contract.cloud_recovery?.authenticated_read_only_fallback === true &&
+      contract.cloud_recovery?.web_listing_is_preservation === false &&
+      contract.cloud_recovery?.confirmed_empty_is_materialization_failure === false &&
+      contract.cloud_recovery?.download_requires_private_custody_and_sha256 === true &&
+      contract.cloud_recovery?.download_timeout_may_be_called_recovered === false &&
+      contract.cloud_recovery?.cloud_mutation_allowed === false &&
+      contract.cloud_recovery?.candidate_git_may_contain_recovered_raw_body === false &&
+      contract.cloud_recovery?.state_terms?.length === 4,
     diarization_preserves_uncertainty:
       contract.diarization?.generic_labels_allowed === true &&
       contract.diarization?.named_labels_require_support === true &&

@@ -25,6 +25,14 @@
       "occurrence_corroborated": false,
       "event_state": "not-asserted"
     },
+    "cloud_recovery": {
+      "source_state": "not-required",
+      "download_status": "not-required",
+      "preservation_claimed": false,
+      "private_source_custody": false,
+      "sha256_recorded": false,
+      "cloud_mutation_count": 0
+    },
     "revisit_queue": {
       "candidate_disposition": "queued",
       "participant_restriction": false,
@@ -330,6 +338,61 @@
           "queue-priority-cannot-authorize-processing",
           "private-queue-detail-exposure-forbidden"
         ]
+      }
+    },
+    {
+      "id": "authenticated-cloud-route-must-remain-read-only",
+      "patch": {"cloud_recovery": {"cloud_mutation_count": 1}},
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["read-only-cloud-mutation-forbidden"]
+      }
+    },
+    {
+      "id": "cloud-listing-cannot-be-called-preserved",
+      "patch": {
+        "cloud_recovery": {
+          "source_state": "web-listed",
+          "preservation_claimed": true
+        }
+      },
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["web-listing-not-preservation"]
+      }
+    },
+    {
+      "id": "completed-cloud-download-needs-private-custody-and-hash",
+      "patch": {
+        "cloud_recovery": {
+          "source_state": "recovered",
+          "download_status": "complete",
+          "preservation_claimed": true,
+          "private_source_custody": false,
+          "sha256_recorded": false
+        }
+      },
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": ["cloud-recovery-receipt-incomplete"]
+      }
+    },
+    {
+      "id": "download-timeout-cannot-be-called-recovered",
+      "patch": {
+        "cloud_recovery": {
+          "source_state": "recovered",
+          "download_status": "timeout",
+          "preservation_claimed": true
+        }
+      },
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["unrecovered-cloud-source-overclaim"]
       }
     }
   ]

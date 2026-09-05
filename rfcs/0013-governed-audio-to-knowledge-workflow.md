@@ -182,6 +182,31 @@ actionable. A priority label cannot authorize source access, materialization,
 external transfer, transcription, voice-reference use, preservation, quotation,
 publication, or contact. Those gates remain explicit and per job.
 
+### Authenticated cloud recovery
+
+When local custody exposes a dataless placeholder or unreliable directory, a
+bounded job may use an authenticated browser as a read-only fallback only when
+the active authority permits that account and source family. The receipt records
+the access surface, exact folder route or submitted query, candidate count,
+cutoff, observed file kind and size, download outcome, and every unresolved
+condition. It never stores credentials, session material, protected URLs, or
+unnecessary account identifiers.
+
+A cloud listing is not preservation. The workflow distinguishes
+`cloud-listed`, `confirmed-empty`, `recovered-and-hashed`, and
+`download-timed-out`. A listed object may establish that a local placeholder is
+not negative evidence. A cloud-reported zero-byte object is an empty source,
+not a materialization failure. A download counts as recovered only after its
+exact bytes enter private source custody outside Git and receive a SHA-256
+receipt. A timeout remains unresolved even when the provider shows a file size.
+
+The fallback is read-only: it does not upload, edit, rename, move, delete,
+share, change permissions, or bulk export. Recovered bodies never enter the
+public repository and remain outside private Git by default. The queue may
+retain body-free hashes, sizes, state transitions, and next actions; it may not
+convert web access into content correctness, processing completion, speaker
+identity, consent, or publication authority.
+
 ### One manifest and one state machine
 
 Each authorized run starts with a private job manifest and a stable opaque job
