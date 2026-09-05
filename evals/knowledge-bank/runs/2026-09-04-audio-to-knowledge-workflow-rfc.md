@@ -19,7 +19,7 @@ publication, deployment, merge, contact, or deletion.
   `scripts/rfcs/audio-to-knowledge-workflow-rfc.test.mjs`, and
   `scripts/rfcs/audio-to-knowledge-revisit-queue-rfc.test.mjs`
 - Candidate SHA-256:
-  `b9c59ce09b6db1b8907409bf7a1dfb8558e2e232621e74953753fffc6d2584f4`
+  `64a6c0ecedcec49ee89f23dbca796478927e13cdcc7fa43a54bd743ab10e1dec`
 
 The candidate fingerprint binds the RFC, contract, case suite, evaluator,
 regressions, package commands, RFC checker, and index. Changed candidate bytes
@@ -60,9 +60,11 @@ machine output, conservative repair, private close reading, graph candidates,
 and public projection remain distinct artifact classes. Human review and
 authority gates remain explicit.
 
-The historical revisit queue adds five explicit dispositions and prohibits a
-priority score from authorizing source access, preservation, external transfer,
-transcription, voice-reference use, quotation, contact, or publication.
+The historical revisit queue adds five explicit dispositions, requires a method
+version, evidence basis, dependencies, and a defect-specific revisit trigger,
+and prohibits a priority score from authorizing source access, preservation,
+external transfer, transcription, voice-reference use, quotation, contact, or
+publication.
 
 ## Provisional evaluation
 
@@ -92,7 +94,9 @@ The retained candidate improves the governing model in four bounded ways:
 - separates `hold` from `deny` rather than treating every failure alike;
 - adds provider-neutral collection and exact-export custody;
 - adds historical discovery without turning the queue into processing
-  authority; and
+  authority;
+- replaces brittle remembered totals with candidate-to-summary consistency,
+  the complete RFC disposition vocabulary, and a shared discovery cutoff; and
 - evaluates uncertainty, repair lineage, public/private projection, retries,
   credentials, and human gates together.
 

@@ -171,8 +171,10 @@ Every observed candidate receives exactly one disposition:
   established.
 
 A queue item records source IDs, current transcript and audio state, method
-gaps, dependencies, priority, and one next safe action. It does not contain raw
-dialogue, protected locators, provider IDs, credentials, or public projections.
+version and gaps, dependencies, evidence basis, disposition, priority, a
+defect-specific revisit trigger, and one next safe action. It does not contain
+raw dialogue, protected locators, provider IDs, credentials, or public
+projections.
 An unavailable or dataless source remains a custody state rather than becoming
 an absence claim. A message-thread projection, official third-party transcript,
 or media attachment is not silently promoted into the recorded-call queue.

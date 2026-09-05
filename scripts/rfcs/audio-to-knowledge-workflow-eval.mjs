@@ -295,6 +295,10 @@ export function evaluateAudioKnowledgeWorkflowRFC(options = {}) {
       contract.revisit_queue?.dataless_is_not_absent === true &&
       contract.revisit_queue?.priority_is_not_processing_authority === true &&
       contract.revisit_queue?.private_item_counts_may_be_public === false &&
+      contract.revisit_queue?.required_candidate_fields?.length === 12 &&
+      contract.revisit_queue.required_candidate_fields.includes("dependencies") &&
+      contract.revisit_queue.required_candidate_fields.includes("evidence_basis") &&
+      contract.revisit_queue.required_candidate_fields.includes("revisit_trigger") &&
       contract.revisit_queue?.allowed_dispositions?.length === 5,
     diarization_preserves_uncertainty:
       contract.diarization?.generic_labels_allowed === true &&

@@ -25,6 +25,20 @@ test("RFC 0013 governs historical discovery and queue disposition without exposi
   assert.equal(contract.revisit_queue?.participant_holds_are_not_actionable, true);
   assert.equal(contract.revisit_queue?.priority_is_not_processing_authority, true);
   assert.equal(contract.revisit_queue?.private_item_counts_may_be_public, false);
+  assert.deepEqual(contract.revisit_queue?.required_candidate_fields, [
+    "source_ids",
+    "current_state",
+    "audio_state",
+    "transcript_state",
+    "method_version",
+    "method_gaps",
+    "dependencies",
+    "evidence_basis",
+    "disposition",
+    "priority",
+    "revisit_trigger",
+    "next_safe_action"
+  ]);
   assert.match(rfc, /^### Historical discovery and revisit queue$/m);
   assert.match(rfc, /Priority is sequencing metadata, not processing authority\./);
 });
