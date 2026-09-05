@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-05",
+  "rfc": 13,
+  "scope": "Repair-triggered situated person readings; public implementation and synthetic fixtures only.",
+  "base_commit": "8584f2182b29845e0dcb036e017cf9144b6155d2",
+  "candidate_fingerprint": "7202c31c1aa5367753f6c3531abbc1108212c3dcea14fba38ae08afe51d80282",
+  "fingerprint_source": "scripts/rfcs/audio-to-knowledge-workflow-eval.mjs",
+  "hill_climb": {
+    "baseline_workflow_tests": 25,
+    "initial_new_regressions": { "passed": 0, "failed": 12 },
+    "second_pass": "Malformed reading receipts also bypassed validation on draft-only projections; reproduced before repair.",
+    "final_workflow_tests": { "passed": 41, "failed": 0 },
+    "new_behavioral_tests": 16,
+    "kept": true
+  },
+  "verification": {
+    "npm run hillclimb:situated-voices": { "exit_code": 0 },
+    "workflow_tests": { "passed": 41, "failed": 0 },
+    "rfc_tests": { "passed": 30, "failed": 0 },
+    "rfc_scenarios": { "passed": 28, "failed": 0 },
+    "paired_workspace_tests": { "passed": 11, "failed": 0 },
+    "rfc_structure": { "valid_proposals": 14 },
+    "public_safety": "passed-with-11-existing-careful-claim-warnings",
+    "git diff --check": { "exit_code": 0 },
+    "npm run check": {
+      "exit_code": 1,
+      "stop_gate": "inherited-professor-lens-candidate-fingerprint-and-unanimous-holdouts",
+      "matching_final_scorecards": 0,
+      "required_final_scorecards": 6,
+      "candidate_fingerprint": "bf4c68f4caa41b55ee56c703315824ace8dde6bcd6c2f15e4f3c582712587011"
+    }
+  },
+  "boundaries": {
+    "automatic_refresh": "Explicit local repair/workflow invocation, not background monitoring.",
+    "editorial_quality": "Not certified by deterministic tests; authored candidates and human review remain distinct.",
+    "historical_backfill_complete": false,
+    "publication_authorized": false,
+    "merge_or_deployment_authorized": false,
+    "private_runtime_dependency": false
+  }
+}

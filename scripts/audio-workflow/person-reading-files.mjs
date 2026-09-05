@@ -23,7 +23,7 @@ function discover(root, relative) {
   });
 }
 
-export function runPersonReadings({ root, manifest_path: manifestPath, mode = 'plan', scope_source_ids: scope }) {
+export function runPersonReadings({ root, manifest_path: manifestPath, mode = 'plan', scope_source_ids: scope, expected_source_sha256: expectedHashes }) {
   if (!['plan','write','check'].includes(mode)) throw new Error('known-projection-mode-required');
   root = realpathSync(root);
   let config;
@@ -57,6 +57,16 @@ export function runPersonReadings({ root, manifest_path: manifestPath, mode = 'p
   if (scope !== undefined) {
     if (!Array.isArray(scope) || !scope.length || new Set(scope).size !== scope.length) throw new Error('job-source-scope-required');
     if (scope.some(id=>!result.sources.some(source=>source.id===id))) throw new Error('job-source-unresolved');
+  }
+  // A workflow fingerprint is not proof of which transcript bytes were read.
+  // Check the exact job-scoped repaired artifacts before any projection write.
+  if (expectedHashes !== undefined) {
+    if (!scope || !expectedHashes || typeof expectedHashes !== 'object' || Array.isArray(expectedHashes) ||
+        Object.keys(expectedHashes).length !== scope.length ||
+        scope.some(id => !Object.hasOwn(expectedHashes,id) || !/^[a-f0-9]{64}$/.test(expectedHashes[id]) ||
+          result.sources.find(source=>source.id===id)?.sha256 !== expectedHashes[id])) {
+      throw new Error('repair-source-binding-mismatch');
+    }
   }
   // Newly discovered material receives links and an identity gap; do not quote it
   // until its source restrictions have been recorded by the operator.
@@ -93,5 +103,5 @@ export function runPersonReadings({ root, manifest_path: manifestPath, mode = 'p
   const selectedSources = scope ? result.sources.filter(s=>scope.includes(s.id)) : result.sources;
   const selectedEntries = scope ? result.entries.filter(e=>scope.includes(e.source_id)) : result.entries;
   const complete = selectedSources.length>0 && selectedSources.every(s=>s.status==='available' && s.speaker_count>0) && selectedEntries.length>0 && selectedEntries.every(e=>e.status==='close-reading-candidate' && e.identity_status!=='unresolved-no-simulation');
-  return { method:METHOD, dry_run:mode==='plan', projection_current:mode==='write' || (stale.length===0 && extra.length===0), write_count:mode==='write'?stale.length:0, stale_file_count:stale.length+extra.length, source_count:selectedSources.length, entry_count:selectedEntries.length, close_reading_candidate_count:selectedEntries.filter(e=>e.status==='close-reading-candidate').length, unresolved_identity_count:selectedEntries.filter(e=>e.identity_status==='unresolved-no-simulation').length, held_source_count:selectedSources.filter(s=>s.status!=='available').length, complete, human_review_complete:false, candidate_fingerprint:candidateFingerprint };
+  return { method:METHOD, dry_run:mode==='plan', projection_current:mode==='write' || (stale.length===0 && extra.length===0), write_count:mode==='write'?stale.length:0, stale_file_count:stale.length+extra.length, source_count:selectedSources.length, entry_count:selectedEntries.length, close_reading_candidate_count:selectedEntries.filter(e=>e.status==='close-reading-candidate').length, unresolved_identity_count:selectedEntries.filter(e=>e.identity_status==='unresolved-no-simulation').length, held_source_count:selectedSources.filter(s=>s.status!=='available').length, complete, source_binding_verified:expectedHashes!==undefined, human_review_complete:false, candidate_fingerprint:candidateFingerprint };
 }

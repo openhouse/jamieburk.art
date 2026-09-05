@@ -28,7 +28,8 @@ const candidatePaths = [
   "scripts/audio-workflow/person-readings.mjs",
   "scripts/audio-workflow/person-readings.test.mjs",
   "scripts/audio-workflow/person-reading-files.mjs",
-  "scripts/audio-workflow/person-reading-files.test.mjs"
+  "scripts/audio-workflow/person-reading-files.test.mjs",
+  "scripts/audio-workflow/repair-person-readings.test.mjs"
 ];
 
 function loadJson(repoRoot, relativePath) {

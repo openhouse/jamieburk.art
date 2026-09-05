@@ -8,6 +8,7 @@ import {
   completeStage,
   evaluateQueue,
   holdStage,
+  requireReceipt,
   requireStageAuthority,
   STAGES,
   summarizeJob
@@ -56,19 +57,37 @@ export function run(argv) {
   const stage = COMMAND_TO_STAGE.get(command);
   if (!stage || !STAGES.includes(stage)) throw new Error("known-audio-command-required");
   const holdReasons = valueAfter(args, "--hold");
-  if (command === 'wiki' && !holdReasons) {
-    requireStageAuthority(job,stage);
-    if (job.stages?.repair?.status !== 'complete') throw new Error('prerequisite-stage-incomplete:repair');
+  if ((command === 'repair' || command === 'wiki') && !holdReasons) {
+    requireStageAuthority(job,'close-reading');
     const voiceManifest = valueAfter(args,'--voice-manifest');
     const privateRoot = valueAfter(args,'--private-root');
     if (!voiceManifest || !privateRoot) throw new Error('person-reading-manifest-required');
     const scope = job.private_context?.transcript_source_ids;
     if (!Array.isArray(scope) || !scope.length) throw new Error('job-source-scope-required');
-    const coverage = runPersonReadings({root:privateRoot,manifest_path:voiceManifest,scope_source_ids:scope,mode:write?'write':'check'});
     const stageReceipt = loadJson(valueAfter(args,'--receipt'),'receipt');
-    const updated = coverage.projection_current && coverage.complete
-      ? completeStage(job,stage,{...stageReceipt,person_reading_coverage:{...coverage,repair_fingerprint:job.receipts.repair.output_fingerprint}})
-      : holdStage(job,stage,['person-close-readings-pending']);
+    requireReceipt(stageReceipt);
+    let updated = command==='repair' ? completeStage(job,'repair',stageReceipt) : job;
+    if (updated.stages?.repair?.status !== 'complete') throw new Error('prerequisite-stage-incomplete:repair');
+    const expectedHashes=updated.receipts?.repair?.transcript_source_sha256;
+    if (expectedHashes===undefined) throw new Error('repair-source-binding-required');
+    const options={root:privateRoot,manifest_path:voiceManifest,scope_source_ids:scope,expected_source_sha256:expectedHashes};
+    // Plan and validate the receipt before the filesystem materialization. The
+    // writer rechecks source hashes and protects manual edits at write time.
+    let coverage=runPersonReadings({...options,mode:'plan'});
+    if (command==='wiki') {
+      if (stageReceipt.input_fingerprint !== updated.receipts.repair.output_fingerprint) throw new Error('receipt-input-does-not-match:repair');
+      if (coverage.complete) completeStage(updated,stage,{...stageReceipt,person_reading_coverage:{...coverage,projection_current:true,repair_fingerprint:updated.receipts.repair.output_fingerprint}});
+    }
+    if (write) coverage=runPersonReadings({...options,mode:'write'});
+    const receiptCoverage={...coverage,repair_fingerprint:updated.receipts.repair.output_fingerprint};
+    if (command==='wiki' && coverage.projection_current && coverage.complete) {
+      updated=completeStage(updated,stage,{...stageReceipt,person_reading_coverage:receiptCoverage});
+    } else if (!(command==='repair' && coverage.projection_current && coverage.complete &&
+        updated.stages['close-reading'].status==='complete' &&
+        updated.receipts['close-reading']?.person_reading_coverage?.candidate_fingerprint===coverage.candidate_fingerprint &&
+        updated.receipts['close-reading']?.person_reading_coverage?.source_binding_verified===true)) {
+      updated=holdStage(updated,'close-reading',[coverage.complete?'person-close-reading-receipt-required':'person-close-readings-pending']);
+    }
     if (write) writeFileSync(path.resolve(manifestPath), `${JSON.stringify(updated,null,2)}\n`);
     return {dry_run:!write,command,...summarizeJob(updated)};
   }

@@ -187,10 +187,17 @@ test('close-reading cannot finish without current complete per-person coverage b
   let job = createJobManifest({job_id:'job-voice-001',disposition:'queued',provider:{processing:'local'},authority:{source_access:true,private_preservation:true}});
   for (const stage of ['intake','inventory','preservation','preparation','transcription','diarization','repair']) job=completeStage(job,stage,receipt('same'));
   assert.throws(()=>completeStage(job,'close-reading',receipt('same')),/person-reading-coverage-required/);
-  const covered = {...receipt('same'),person_reading_coverage:{projection_current:true,complete:true,entry_count:2,source_count:1,candidate_fingerprint:'a'.repeat(64),repair_fingerprint:'same'}};
+  const covered = {...receipt('same'),person_reading_coverage:{projection_current:true,complete:true,entry_count:2,source_count:1,candidate_fingerprint:'a'.repeat(64),repair_fingerprint:'same',source_binding_verified:true}};
   assert.equal(completeStage(job,'close-reading',covered).stages['close-reading'].status,'complete');
   covered.person_reading_coverage.repair_fingerprint='other';
   assert.throws(()=>completeStage(job,'close-reading',covered),/person-reading-coverage-required/);
+});
+
+test('a self-consistent coverage receipt without checked source bytes cannot finish close reading', async () => {
+  const {createJobManifest,completeStage}=await loadWorkflow();
+  let job=createJobManifest({job_id:'job-unbound-reading',disposition:'queued',provider:{processing:'local'},authority:{source_access:true,private_preservation:true}});
+  for(const stage of ['intake','inventory','preservation','preparation','transcription','diarization','repair']) job=completeStage(job,stage,receipt('same'));
+  assert.throws(()=>completeStage(job,'close-reading',{...receipt('same'),person_reading_coverage:{projection_current:true,complete:true,entry_count:1,source_count:1,candidate_fingerprint:'a'.repeat(64),repair_fingerprint:'same'}}),/person-reading-coverage-required/);
 });
 
 test('holding a previously complete stage removes its old receipt so it cannot masquerade as current', async () => {

@@ -395,17 +395,50 @@ The command surface is:
 
 ```text
 voices --private-root <authorized-root> --manifest <relative-manifest> [--write|--check]
+repair --manifest <job> --receipt <repair-receipt> --private-root <authorized-root>
+       --voice-manifest <relative-manifest> [--write]
 wiki --manifest <job> --receipt <receipt> --private-root <authorized-root>
      --voice-manifest <relative-manifest> [--write]
 ```
 
 `voices` defaults to a non-writing plan. `--write` is idempotent and refuses to
 overwrite manual changes or silently delete obsolete pages. `--check` fails
-when the exact projection is stale. The `wiki` command automatically runs this
-projection for the job's explicit `private_context.transcript_source_ids` before
-advancing close reading. It holds the stage when any required entry is merely
+when the exact projection is stale. The `repair --write` command automatically
+refreshes this projection for the job's explicit
+`private_context.transcript_source_ids`: a repair cannot be recorded through
+this CLI while silently omitting the person pages. It requires the private
+manifest and source-access/preservation authority. Without `--write`, it plans
+the refresh without changing either pages or the job. A successful refresh is
+not yet a completed close-reading receipt.
+
+The `wiki` command rechecks the projection before advancing close reading.
+Both commands hold close reading when any required entry is merely
 an automatic draft, stale, unattributed, missing, or restricted. The coverage
-receipt binds the projection fingerprint to the repair-stage fingerprint.
+receipt binds the projection fingerprint to the repair-stage fingerprint **and
+checks the actual repaired bytes**. The repair receipt must declare
+`transcript_source_sha256`, an exact map from the job's source IDs to SHA-256s
+of its repaired transcript artifacts. Missing or extra IDs, unavailable bytes,
+and revision mismatches fail before projection writes. Copying an upstream
+fingerprint into a receipt is not source verification. A complete-stage API
+receipt also requires `source_binding_verified: true`; this is an assertion by
+the trusted local runtime, not a cryptographic attestation against a malicious
+operator editing manifests.
+
+All supplied receipts are validated before page writes. An unchanged repair
+retry retains a current close-reading receipt; changed source or projection
+fingerprints invalidate it. An authored candidate without a matching reading
+receipt is held as `person-close-reading-receipt-required`. Automated drafts
+remain `person-close-readings-pending`, not editorial completion. Holds exit 2;
+validation failures exit 1. Manual page edits are preserved and require review.
+
+Legacy repair receipts without the artifact-hash map must be migrated from
+verified local repairs; do not fabricate completion of upstream stages or
+rewrite historical receipts to manufacture a fully complete job. The standalone
+`voices` projection remains available for these legacy artifacts while their
+workflow migration is held. The write sequence is deliberately fail-closed,
+not a cross-file transaction: a crash after page refresh but before the job
+write leaves the job unadvanced, and a retry rechecks both.
+
 Historical gaps outside the bounded job do not block that job, but remain
 visible in the full private index.
 

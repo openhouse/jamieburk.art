@@ -66,7 +66,7 @@ function requireAuthority(job, stage) {
   }
 }
 
-function requireReceipt(receipt) {
+export function requireReceipt(receipt) {
   if (!receipt || receipt.status !== "complete") throw new Error("complete-receipt-required");
   for (const field of ["input_fingerprint", "output_fingerprint"]) {
     if (typeof receipt[field] !== "string" || receipt[field].length < 1) {
@@ -128,6 +128,7 @@ export function completeStage(job, stage, receipt) {
   if (stage === 'close-reading') {
     const coverage = receipt.person_reading_coverage;
     if (coverage?.projection_current !== true || coverage.complete !== true ||
+        coverage.source_binding_verified !== true ||
         !Number.isInteger(coverage.entry_count) || coverage.entry_count < 1 ||
         !Number.isInteger(coverage.source_count) || coverage.source_count < 1 ||
         !/^[a-f0-9]{64}$/.test(coverage.candidate_fingerprint ?? '') ||
