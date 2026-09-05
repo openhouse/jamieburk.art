@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "transcript-person-return-hill-climb-2026-09-05",
+  "rfc": 14,
+  "branch": "work/2026-09-03-B",
+  "objective": "Require a cited, current, speaker-attributed person return before the audio workflow can complete close reading.",
+  "change": "Extend the accepted audio contract with edition/person coverage, reciprocal graph links, source-revision invalidation, explicit missing-source and unresolved-speaker states, and a separate substantive-reading completion gate.",
+  "evaluation": {
+    "unit_tests_passed": 19,
+    "unit_tests_total": 19,
+    "scenarios_passed": 12,
+    "scenarios_total": 12,
+    "hard_criteria_passed": 15,
+    "hard_criteria_total": 15,
+    "rfc_registry_count": 15,
+    "candidate_fingerprint": "8b40dba6afe602c8574b35fd62f8a260bd64dad7ed873f6be61dae7d38e472ac"
+  },
+  "hill_climb": [
+    "Added regression cases for missing person coverage, wrong-speaker citations, stale revisions, missing backlinks, and automated entries mistaken for completed substantive interpretation.",
+    "Corrected plain-label parsing after corpus review exposed prose and metadata misclassified as speakers.",
+    "Bound unresolved identities to source editions, made per-edition gaps visible, and checked source-audit agreement before replacing generated pages.",
+    "Added chronological person entries, citations to the opening and closing turns, and direct transcript-to-entry links."
+  ],
+  "repository_wide_status": {
+    "full_check": "held-at-existing-professor-lens-holdout",
+    "holdout_scorecards_passing": 0,
+    "holdout_scorecards_required": 6,
+    "holdout_candidate_fingerprint": "b977fff8b0a5595b3f6ffebd1ddc2941787ae3f13d27f24f15d5f49dd51d4e49"
+  },
+  "retained": true,
+  "interpretive_quality_measured": false,
+  "participant_approval_inferred": false,
+  "publication_authorized": false
+}

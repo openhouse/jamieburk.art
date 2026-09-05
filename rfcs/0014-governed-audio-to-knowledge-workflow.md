@@ -82,6 +82,50 @@ Acceptance does not collapse the remaining gates. In particular:
 
 ## Motivation
 
+### September 5 extension: automatic returns to each person's voice page
+
+Jamie requested a cited close-reading entry for every transcript and every
+person in that person's situated writer's voice graph page. This extends the
+accepted private workflow; it does not authorize publishing the corpus or
+modeling a participant's voice as if they authored new speech.
+
+The coverage key is **transcript edition plus attributed person**, not a
+meeting-level summary. Normal private audio refresh, build, and render commands
+generate the entries and reciprocal transcript/person links. CI checks coverage
+and staleness; it never fetches private sources from the public repository.
+
+Each observation must locate an attributable passage by artifact ID, source
+checksum, line span, timestamp where present, fragment/section, and segment
+checksum. Repaired and service editions stay distinguishable. Mentioning a
+person does not make that person a speaker. Tentative names, room voices, and
+overlaps get edition-scoped unresolved entries, not guessed identities. Plain
+named labels retain an explicit timestamp gap. Editorial notes containing words
+such as “speaker” or “group” cannot become speaker identities. A known
+participant without attributable speech receives a gap entry; a missing body
+without a roster retains an unresolved census.
+
+The first automatic pass produces **rhetorical reading candidates**: questions,
+qualifications, contrasts, conditions, collective address, examples, sequence,
+repairs, boundaries, and acknowledgements. These observations describe local
+language, not stable personality, health, authority, acceptance, or consent.
+Substantive interpretations may be added as separately cited editorial records.
+Candidate creation alone cannot mark the close-reading stage complete. Existing
+keyword counts are source-audit hints, not a substitute for close reading.
+
+Every candidate compares the opening and closing attributed turns with citations.
+Person pages present entries chronologically and transcript backlinks target the
+individual entry. Unparsed editions retain their own visible gaps even when a
+different edition has been read. Audit/source disagreements stop regeneration
+before replacing pages; editorial corrections update the reading revision.
+
+Source, speaker-map, parser, or reading-method changes invalidate the graph and
+rendered pages. Removed attributions retire the old route rather than leaving
+an active unsupported profile. The private check also binds processing receipts
+to the exact person-graph fingerprint. A machine without source custody can
+verify the committed audit and projection, but cannot claim a live source-byte
+rebuild. Public artifacts contain only this generic contract and synthetic
+tests; private names, passages, graph inventories, and locators remain private.
+
 Important calls can arrive as fragments from Apple Notes, recorders, removable
 media, browsers, conferencing tools, and transcription services. Relevant
 context may live across calendars, messages, prior transcripts, Knowledge Wiki

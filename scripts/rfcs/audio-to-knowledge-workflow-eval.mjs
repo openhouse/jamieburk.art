@@ -19,8 +19,12 @@ export function evaluateAudioKnowledgeJob(job = {}) {
   const transcription = job.transcription ?? {};
   const repair = job.repair ?? {};
   const closeReading = job.close_reading ?? {};
+  const personReturns = closeReading.person_returns ?? {};
   const graphUpdate = job.graph_update ?? {};
   const publicProjection = job.public_projection ?? {};
+  if(personReturns.participant_approval_inferred===true){
+    return result("deny","close-reading",["automatic-reading-cannot-establish-participant-approval"]);
+  }
 
   if (
     request.external_upload_authorized !== true &&
@@ -114,6 +118,9 @@ export function evaluateAudioKnowledgeJob(job = {}) {
   }
   if (closeReading.private_minimum_necessary !== true) {
     closeReadingReasons.push("private-minimum-necessary-boundary-missing");
+  }
+  for(const key of ["census_recorded","all_attributed_speakers_covered","every_observation_cited","speaker_attribution_checked","current_source_revision","reciprocal_graph_links","uncertainties_preserved","substantive_reading_complete"]){
+    if(personReturns[key]!==true)closeReadingReasons.push("person-return-"+key.replaceAll("_","-")+"-missing");
   }
   if (closeReadingReasons.length) return result("hold", "close-reading", closeReadingReasons);
 
@@ -288,7 +295,16 @@ export function evaluateAudioKnowledgeWorkflowRFC(options = {}) {
     bounded_remote_discovery:
       contract.migration_queue?.remote_discovery_receipt_required === true &&
       contract.migration_queue?.search_limitations_required === true &&
-      contract.migration_queue?.unenabled_search_cannot_claim_completeness === true
+      contract.migration_queue?.unenabled_search_cannot_claim_completeness === true,
+    situated_person_returns:
+      contract.person_readings?.coverage_key === "transcript-edition+attributed-person" &&
+      contract.person_readings?.automatic_candidate_creation === true &&
+      contract.person_readings?.source_revision_invalidation === true &&
+      contract.person_readings?.reciprocal_links_required === true &&
+      contract.person_readings?.unresolved_speakers_retained === true &&
+      contract.person_readings?.missing_body_creates_explicit_gap === true &&
+      contract.person_readings?.automatic_candidate_is_completed_close_reading === false &&
+      contract.person_readings?.participant_approval_inferred === false
   };
   const hardFailures = Object.entries(hardCriteria)
     .filter(([, passed]) => !passed)

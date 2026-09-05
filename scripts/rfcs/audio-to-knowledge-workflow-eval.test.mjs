@@ -47,7 +47,8 @@ function completePrivateJob(overrides = {}) {
       source_ids_cited: true,
       fact_report_inference_separated: true,
       contradictions_and_gaps_preserved: true,
-      private_minimum_necessary: true
+      private_minimum_necessary: true,
+      person_returns: {census_recorded:true,all_attributed_speakers_covered:true,every_observation_cited:true,speaker_attribution_checked:true,current_source_revision:true,reciprocal_graph_links:true,uncertainties_preserved:true,substantive_reading_complete:true,participant_approval_inferred:false}
     },
     graph_update: {
       target: "private",
@@ -65,6 +66,21 @@ function completePrivateJob(overrides = {}) {
     ...overrides
   };
 }
+
+test("person-return coverage, source attribution, and freshness each independently hold incomplete jobs", async () => {
+  for(const key of ["census_recorded","all_attributed_speakers_covered","every_observation_cited","speaker_attribution_checked","current_source_revision","reciprocal_graph_links","uncertainties_preserved","substantive_reading_complete"]){
+    const job=completePrivateJob();job.close_reading.person_returns[key]=false;
+    const result=await evaluate(job);
+    assert.equal(result.decision,"hold",key);assert.equal(result.stage,"close-reading",key);
+  }
+});
+
+test("automatic entries cannot imply participant approval or bypass missing person returns", async () => {
+  const job=completePrivateJob();delete job.close_reading.person_returns;
+  assert.equal((await evaluate(job)).decision,"hold");
+  const other=completePrivateJob();other.close_reading.person_returns.participant_approval_inferred=true;
+  assert.equal((await evaluate(other)).decision,"deny");
+});
 
 async function evaluate(job) {
   assert.ok(evaluatorModule, "audio-to-knowledge evaluator module must exist");

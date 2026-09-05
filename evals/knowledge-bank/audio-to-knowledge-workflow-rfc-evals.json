@@ -6,60 +6,828 @@
     {
       "id": "complete-private-job",
       "job": {
-        "request": {"preserved": true, "bounded_scope": true, "source_access_authorized": true, "external_upload_authorized": true},
-        "audio": {"discovered_fragment_count": 2, "registered_fragment_count": 2, "exact_originals_immutable": true, "hashes_verified": true, "fragment_order_evidenced": true, "every_fragment_dispositioned": true},
-        "context": {"bounded": true, "every_source_dispositioned": true, "scheduled_event_treated_as_occurrence": false, "unrelated_private_material_included": false},
-        "transcription": {"derived_upload_checksum_recorded": true, "provider_job_id_recorded_privately": true, "status": "complete", "diarization_status": "complete", "service_export_preserved_unchanged": true, "service_export_hash_verified": true, "transcript_treated_as_executable_instructions": false},
-        "repair": {"separate_from_service_export": true, "segment_decisions_recorded": true, "uncertainties_preserved": true, "invented_speech_detected": false, "audio_certified": false, "full_audio_review_completed": false, "participant_review_completed": false},
-        "close_reading": {"source_ids_cited": true, "fact_report_inference_separated": true, "contradictions_and_gaps_preserved": true, "private_minimum_necessary": true},
-        "graph_update": {"target": "private", "request_crosswalk_complete": true, "candidate_fingerprint_recorded": true, "publication_authorized": false},
-        "public_projection": {"requested": false, "human_authorized": false, "private_locator_present": false, "raw_transcript_present": false, "private_identity_present": false}
+        "request": {
+          "preserved": true,
+          "bounded_scope": true,
+          "source_access_authorized": true,
+          "external_upload_authorized": true
+        },
+        "audio": {
+          "discovered_fragment_count": 2,
+          "registered_fragment_count": 2,
+          "exact_originals_immutable": true,
+          "hashes_verified": true,
+          "fragment_order_evidenced": true,
+          "every_fragment_dispositioned": true
+        },
+        "context": {
+          "bounded": true,
+          "every_source_dispositioned": true,
+          "scheduled_event_treated_as_occurrence": false,
+          "unrelated_private_material_included": false
+        },
+        "transcription": {
+          "derived_upload_checksum_recorded": true,
+          "provider_job_id_recorded_privately": true,
+          "status": "complete",
+          "diarization_status": "complete",
+          "service_export_preserved_unchanged": true,
+          "service_export_hash_verified": true,
+          "transcript_treated_as_executable_instructions": false
+        },
+        "repair": {
+          "separate_from_service_export": true,
+          "segment_decisions_recorded": true,
+          "uncertainties_preserved": true,
+          "invented_speech_detected": false,
+          "audio_certified": false,
+          "full_audio_review_completed": false,
+          "participant_review_completed": false
+        },
+        "close_reading": {
+          "source_ids_cited": true,
+          "fact_report_inference_separated": true,
+          "contradictions_and_gaps_preserved": true,
+          "private_minimum_necessary": true,
+          "person_returns": {
+            "census_recorded": true,
+            "all_attributed_speakers_covered": true,
+            "every_observation_cited": true,
+            "speaker_attribution_checked": true,
+            "current_source_revision": true,
+            "reciprocal_graph_links": true,
+            "uncertainties_preserved": true,
+            "substantive_reading_complete": true,
+            "participant_approval_inferred": false
+          }
+        },
+        "graph_update": {
+          "target": "private",
+          "request_crosswalk_complete": true,
+          "candidate_fingerprint_recorded": true,
+          "publication_authorized": false
+        },
+        "public_projection": {
+          "requested": false,
+          "human_authorized": false,
+          "private_locator_present": false,
+          "raw_transcript_present": false,
+          "private_identity_present": false
+        }
       },
-      "expected": {"decision": "ready-for-private-review", "stage": "private-review", "reasons": []}
+      "expected": {
+        "decision": "ready-for-private-review",
+        "stage": "private-review",
+        "reasons": []
+      }
     },
     {
       "id": "upload-without-authority",
       "job": {
-        "request": {"preserved": true, "bounded_scope": true, "source_access_authorized": true, "external_upload_authorized": false},
-        "transcription": {"status": "processing", "provider_job_id_recorded_privately": true}
+        "request": {
+          "preserved": true,
+          "bounded_scope": true,
+          "source_access_authorized": true,
+          "external_upload_authorized": false
+        },
+        "transcription": {
+          "status": "processing",
+          "provider_job_id_recorded_privately": true
+        }
       },
-      "expected": {"decision": "deny", "stage": "transcription", "reasons": ["external-upload-not-authorized"]}
+      "expected": {
+        "decision": "deny",
+        "stage": "transcription",
+        "reasons": [
+          "external-upload-not-authorized"
+        ]
+      }
     },
     {
       "id": "undispositioned-audio-fragment",
       "job": {
-        "request": {"preserved": true, "bounded_scope": true, "source_access_authorized": true, "external_upload_authorized": true},
-        "audio": {"discovered_fragment_count": 2, "registered_fragment_count": 1, "exact_originals_immutable": true, "hashes_verified": true, "fragment_order_evidenced": true, "every_fragment_dispositioned": false},
-        "transcription": {"status": "not-started", "transcript_treated_as_executable_instructions": false},
-        "repair": {"separate_from_service_export": true, "invented_speech_detected": false, "audio_certified": false}
+        "request": {
+          "preserved": true,
+          "bounded_scope": true,
+          "source_access_authorized": true,
+          "external_upload_authorized": true
+        },
+        "audio": {
+          "discovered_fragment_count": 2,
+          "registered_fragment_count": 1,
+          "exact_originals_immutable": true,
+          "hashes_verified": true,
+          "fragment_order_evidenced": true,
+          "every_fragment_dispositioned": false
+        },
+        "transcription": {
+          "status": "not-started",
+          "transcript_treated_as_executable_instructions": false
+        },
+        "repair": {
+          "separate_from_service_export": true,
+          "invented_speech_detected": false,
+          "audio_certified": false
+        }
       },
-      "expected": {"decision": "hold", "stage": "audio-preservation", "reasons": ["audio-fragment-register-incomplete", "audio-fragment-disposition-missing"]}
+      "expected": {
+        "decision": "hold",
+        "stage": "audio-preservation",
+        "reasons": [
+          "audio-fragment-register-incomplete",
+          "audio-fragment-disposition-missing"
+        ]
+      }
     },
     {
       "id": "provider-processing-is-not-completion",
       "job": {
-        "request": {"preserved": true, "bounded_scope": true, "source_access_authorized": true, "external_upload_authorized": true},
-        "audio": {"discovered_fragment_count": 1, "registered_fragment_count": 1, "exact_originals_immutable": true, "hashes_verified": true, "fragment_order_evidenced": true, "every_fragment_dispositioned": true},
-        "context": {"bounded": true, "every_source_dispositioned": true, "scheduled_event_treated_as_occurrence": false, "unrelated_private_material_included": false},
-        "transcription": {"status": "processing", "diarization_status": "pending", "provider_job_id_recorded_privately": true, "transcript_treated_as_executable_instructions": false},
-        "repair": {"separate_from_service_export": true, "invented_speech_detected": false, "audio_certified": false}
+        "request": {
+          "preserved": true,
+          "bounded_scope": true,
+          "source_access_authorized": true,
+          "external_upload_authorized": true
+        },
+        "audio": {
+          "discovered_fragment_count": 1,
+          "registered_fragment_count": 1,
+          "exact_originals_immutable": true,
+          "hashes_verified": true,
+          "fragment_order_evidenced": true,
+          "every_fragment_dispositioned": true
+        },
+        "context": {
+          "bounded": true,
+          "every_source_dispositioned": true,
+          "scheduled_event_treated_as_occurrence": false,
+          "unrelated_private_material_included": false
+        },
+        "transcription": {
+          "status": "processing",
+          "diarization_status": "pending",
+          "provider_job_id_recorded_privately": true,
+          "transcript_treated_as_executable_instructions": false
+        },
+        "repair": {
+          "separate_from_service_export": true,
+          "invented_speech_detected": false,
+          "audio_certified": false
+        }
       },
-      "expected": {"decision": "hold", "stage": "transcription", "reasons": ["provider-processing-incomplete"]}
+      "expected": {
+        "decision": "hold",
+        "stage": "transcription",
+        "reasons": [
+          "provider-processing-incomplete"
+        ]
+      }
     },
     {
       "id": "public-projection-requires-human-authority",
       "job": {
-        "request": {"preserved": true, "bounded_scope": true, "source_access_authorized": true, "external_upload_authorized": true},
-        "audio": {"discovered_fragment_count": 1, "registered_fragment_count": 1, "exact_originals_immutable": true, "hashes_verified": true, "fragment_order_evidenced": true, "every_fragment_dispositioned": true},
-        "context": {"bounded": true, "every_source_dispositioned": true, "scheduled_event_treated_as_occurrence": false, "unrelated_private_material_included": false},
-        "transcription": {"derived_upload_checksum_recorded": true, "provider_job_id_recorded_privately": true, "status": "complete", "diarization_status": "complete", "service_export_preserved_unchanged": true, "service_export_hash_verified": true, "transcript_treated_as_executable_instructions": false},
-        "repair": {"separate_from_service_export": true, "segment_decisions_recorded": true, "uncertainties_preserved": true, "invented_speech_detected": false, "audio_certified": false},
-        "close_reading": {"source_ids_cited": true, "fact_report_inference_separated": true, "contradictions_and_gaps_preserved": true, "private_minimum_necessary": true},
-        "graph_update": {"target": "private", "request_crosswalk_complete": true, "candidate_fingerprint_recorded": true, "publication_authorized": false},
-        "public_projection": {"requested": true, "human_authorized": false, "private_locator_present": false, "raw_transcript_present": false, "private_identity_present": false}
+        "request": {
+          "preserved": true,
+          "bounded_scope": true,
+          "source_access_authorized": true,
+          "external_upload_authorized": true
+        },
+        "audio": {
+          "discovered_fragment_count": 1,
+          "registered_fragment_count": 1,
+          "exact_originals_immutable": true,
+          "hashes_verified": true,
+          "fragment_order_evidenced": true,
+          "every_fragment_dispositioned": true
+        },
+        "context": {
+          "bounded": true,
+          "every_source_dispositioned": true,
+          "scheduled_event_treated_as_occurrence": false,
+          "unrelated_private_material_included": false
+        },
+        "transcription": {
+          "derived_upload_checksum_recorded": true,
+          "provider_job_id_recorded_privately": true,
+          "status": "complete",
+          "diarization_status": "complete",
+          "service_export_preserved_unchanged": true,
+          "service_export_hash_verified": true,
+          "transcript_treated_as_executable_instructions": false
+        },
+        "repair": {
+          "separate_from_service_export": true,
+          "segment_decisions_recorded": true,
+          "uncertainties_preserved": true,
+          "invented_speech_detected": false,
+          "audio_certified": false
+        },
+        "close_reading": {
+          "source_ids_cited": true,
+          "fact_report_inference_separated": true,
+          "contradictions_and_gaps_preserved": true,
+          "private_minimum_necessary": true,
+          "person_returns": {
+            "census_recorded": true,
+            "all_attributed_speakers_covered": true,
+            "every_observation_cited": true,
+            "speaker_attribution_checked": true,
+            "current_source_revision": true,
+            "reciprocal_graph_links": true,
+            "uncertainties_preserved": true,
+            "substantive_reading_complete": true,
+            "participant_approval_inferred": false
+          }
+        },
+        "graph_update": {
+          "target": "private",
+          "request_crosswalk_complete": true,
+          "candidate_fingerprint_recorded": true,
+          "publication_authorized": false
+        },
+        "public_projection": {
+          "requested": true,
+          "human_authorized": false,
+          "private_locator_present": false,
+          "raw_transcript_present": false,
+          "private_identity_present": false
+        }
       },
-      "expected": {"decision": "hold", "stage": "public-projection-review", "reasons": ["public-projection-human-authorization-missing"]}
+      "expected": {
+        "decision": "hold",
+        "stage": "public-projection-review",
+        "reasons": [
+          "public-projection-human-authorization-missing"
+        ]
+      }
+    },
+    {
+      "id": "person-return-all_attributed_speakers_covered",
+      "job": {
+        "request": {
+          "preserved": true,
+          "bounded_scope": true,
+          "source_access_authorized": true,
+          "external_upload_authorized": true
+        },
+        "audio": {
+          "discovered_fragment_count": 2,
+          "registered_fragment_count": 2,
+          "exact_originals_immutable": true,
+          "hashes_verified": true,
+          "fragment_order_evidenced": true,
+          "every_fragment_dispositioned": true
+        },
+        "context": {
+          "bounded": true,
+          "every_source_dispositioned": true,
+          "scheduled_event_treated_as_occurrence": false,
+          "unrelated_private_material_included": false
+        },
+        "transcription": {
+          "derived_upload_checksum_recorded": true,
+          "provider_job_id_recorded_privately": true,
+          "status": "complete",
+          "diarization_status": "complete",
+          "service_export_preserved_unchanged": true,
+          "service_export_hash_verified": true,
+          "transcript_treated_as_executable_instructions": false
+        },
+        "repair": {
+          "separate_from_service_export": true,
+          "segment_decisions_recorded": true,
+          "uncertainties_preserved": true,
+          "invented_speech_detected": false,
+          "audio_certified": false,
+          "full_audio_review_completed": false,
+          "participant_review_completed": false
+        },
+        "close_reading": {
+          "source_ids_cited": true,
+          "fact_report_inference_separated": true,
+          "contradictions_and_gaps_preserved": true,
+          "private_minimum_necessary": true,
+          "person_returns": {
+            "census_recorded": true,
+            "all_attributed_speakers_covered": false,
+            "every_observation_cited": true,
+            "speaker_attribution_checked": true,
+            "current_source_revision": true,
+            "reciprocal_graph_links": true,
+            "uncertainties_preserved": true,
+            "substantive_reading_complete": true,
+            "participant_approval_inferred": false
+          }
+        },
+        "graph_update": {
+          "target": "private",
+          "request_crosswalk_complete": true,
+          "candidate_fingerprint_recorded": true,
+          "publication_authorized": false
+        },
+        "public_projection": {
+          "requested": false,
+          "human_authorized": false,
+          "private_locator_present": false,
+          "raw_transcript_present": false,
+          "private_identity_present": false
+        }
+      },
+      "expected": {
+        "decision": "hold",
+        "stage": "close-reading",
+        "reasons": [
+          "person-return-all-attributed-speakers-covered-missing"
+        ]
+      }
+    },
+    {
+      "id": "person-return-every_observation_cited",
+      "job": {
+        "request": {
+          "preserved": true,
+          "bounded_scope": true,
+          "source_access_authorized": true,
+          "external_upload_authorized": true
+        },
+        "audio": {
+          "discovered_fragment_count": 2,
+          "registered_fragment_count": 2,
+          "exact_originals_immutable": true,
+          "hashes_verified": true,
+          "fragment_order_evidenced": true,
+          "every_fragment_dispositioned": true
+        },
+        "context": {
+          "bounded": true,
+          "every_source_dispositioned": true,
+          "scheduled_event_treated_as_occurrence": false,
+          "unrelated_private_material_included": false
+        },
+        "transcription": {
+          "derived_upload_checksum_recorded": true,
+          "provider_job_id_recorded_privately": true,
+          "status": "complete",
+          "diarization_status": "complete",
+          "service_export_preserved_unchanged": true,
+          "service_export_hash_verified": true,
+          "transcript_treated_as_executable_instructions": false
+        },
+        "repair": {
+          "separate_from_service_export": true,
+          "segment_decisions_recorded": true,
+          "uncertainties_preserved": true,
+          "invented_speech_detected": false,
+          "audio_certified": false,
+          "full_audio_review_completed": false,
+          "participant_review_completed": false
+        },
+        "close_reading": {
+          "source_ids_cited": true,
+          "fact_report_inference_separated": true,
+          "contradictions_and_gaps_preserved": true,
+          "private_minimum_necessary": true,
+          "person_returns": {
+            "census_recorded": true,
+            "all_attributed_speakers_covered": true,
+            "every_observation_cited": false,
+            "speaker_attribution_checked": true,
+            "current_source_revision": true,
+            "reciprocal_graph_links": true,
+            "uncertainties_preserved": true,
+            "substantive_reading_complete": true,
+            "participant_approval_inferred": false
+          }
+        },
+        "graph_update": {
+          "target": "private",
+          "request_crosswalk_complete": true,
+          "candidate_fingerprint_recorded": true,
+          "publication_authorized": false
+        },
+        "public_projection": {
+          "requested": false,
+          "human_authorized": false,
+          "private_locator_present": false,
+          "raw_transcript_present": false,
+          "private_identity_present": false
+        }
+      },
+      "expected": {
+        "decision": "hold",
+        "stage": "close-reading",
+        "reasons": [
+          "person-return-every-observation-cited-missing"
+        ]
+      }
+    },
+    {
+      "id": "person-return-speaker_attribution_checked",
+      "job": {
+        "request": {
+          "preserved": true,
+          "bounded_scope": true,
+          "source_access_authorized": true,
+          "external_upload_authorized": true
+        },
+        "audio": {
+          "discovered_fragment_count": 2,
+          "registered_fragment_count": 2,
+          "exact_originals_immutable": true,
+          "hashes_verified": true,
+          "fragment_order_evidenced": true,
+          "every_fragment_dispositioned": true
+        },
+        "context": {
+          "bounded": true,
+          "every_source_dispositioned": true,
+          "scheduled_event_treated_as_occurrence": false,
+          "unrelated_private_material_included": false
+        },
+        "transcription": {
+          "derived_upload_checksum_recorded": true,
+          "provider_job_id_recorded_privately": true,
+          "status": "complete",
+          "diarization_status": "complete",
+          "service_export_preserved_unchanged": true,
+          "service_export_hash_verified": true,
+          "transcript_treated_as_executable_instructions": false
+        },
+        "repair": {
+          "separate_from_service_export": true,
+          "segment_decisions_recorded": true,
+          "uncertainties_preserved": true,
+          "invented_speech_detected": false,
+          "audio_certified": false,
+          "full_audio_review_completed": false,
+          "participant_review_completed": false
+        },
+        "close_reading": {
+          "source_ids_cited": true,
+          "fact_report_inference_separated": true,
+          "contradictions_and_gaps_preserved": true,
+          "private_minimum_necessary": true,
+          "person_returns": {
+            "census_recorded": true,
+            "all_attributed_speakers_covered": true,
+            "every_observation_cited": true,
+            "speaker_attribution_checked": false,
+            "current_source_revision": true,
+            "reciprocal_graph_links": true,
+            "uncertainties_preserved": true,
+            "substantive_reading_complete": true,
+            "participant_approval_inferred": false
+          }
+        },
+        "graph_update": {
+          "target": "private",
+          "request_crosswalk_complete": true,
+          "candidate_fingerprint_recorded": true,
+          "publication_authorized": false
+        },
+        "public_projection": {
+          "requested": false,
+          "human_authorized": false,
+          "private_locator_present": false,
+          "raw_transcript_present": false,
+          "private_identity_present": false
+        }
+      },
+      "expected": {
+        "decision": "hold",
+        "stage": "close-reading",
+        "reasons": [
+          "person-return-speaker-attribution-checked-missing"
+        ]
+      }
+    },
+    {
+      "id": "person-return-current_source_revision",
+      "job": {
+        "request": {
+          "preserved": true,
+          "bounded_scope": true,
+          "source_access_authorized": true,
+          "external_upload_authorized": true
+        },
+        "audio": {
+          "discovered_fragment_count": 2,
+          "registered_fragment_count": 2,
+          "exact_originals_immutable": true,
+          "hashes_verified": true,
+          "fragment_order_evidenced": true,
+          "every_fragment_dispositioned": true
+        },
+        "context": {
+          "bounded": true,
+          "every_source_dispositioned": true,
+          "scheduled_event_treated_as_occurrence": false,
+          "unrelated_private_material_included": false
+        },
+        "transcription": {
+          "derived_upload_checksum_recorded": true,
+          "provider_job_id_recorded_privately": true,
+          "status": "complete",
+          "diarization_status": "complete",
+          "service_export_preserved_unchanged": true,
+          "service_export_hash_verified": true,
+          "transcript_treated_as_executable_instructions": false
+        },
+        "repair": {
+          "separate_from_service_export": true,
+          "segment_decisions_recorded": true,
+          "uncertainties_preserved": true,
+          "invented_speech_detected": false,
+          "audio_certified": false,
+          "full_audio_review_completed": false,
+          "participant_review_completed": false
+        },
+        "close_reading": {
+          "source_ids_cited": true,
+          "fact_report_inference_separated": true,
+          "contradictions_and_gaps_preserved": true,
+          "private_minimum_necessary": true,
+          "person_returns": {
+            "census_recorded": true,
+            "all_attributed_speakers_covered": true,
+            "every_observation_cited": true,
+            "speaker_attribution_checked": true,
+            "current_source_revision": false,
+            "reciprocal_graph_links": true,
+            "uncertainties_preserved": true,
+            "substantive_reading_complete": true,
+            "participant_approval_inferred": false
+          }
+        },
+        "graph_update": {
+          "target": "private",
+          "request_crosswalk_complete": true,
+          "candidate_fingerprint_recorded": true,
+          "publication_authorized": false
+        },
+        "public_projection": {
+          "requested": false,
+          "human_authorized": false,
+          "private_locator_present": false,
+          "raw_transcript_present": false,
+          "private_identity_present": false
+        }
+      },
+      "expected": {
+        "decision": "hold",
+        "stage": "close-reading",
+        "reasons": [
+          "person-return-current-source-revision-missing"
+        ]
+      }
+    },
+    {
+      "id": "person-return-reciprocal_graph_links",
+      "job": {
+        "request": {
+          "preserved": true,
+          "bounded_scope": true,
+          "source_access_authorized": true,
+          "external_upload_authorized": true
+        },
+        "audio": {
+          "discovered_fragment_count": 2,
+          "registered_fragment_count": 2,
+          "exact_originals_immutable": true,
+          "hashes_verified": true,
+          "fragment_order_evidenced": true,
+          "every_fragment_dispositioned": true
+        },
+        "context": {
+          "bounded": true,
+          "every_source_dispositioned": true,
+          "scheduled_event_treated_as_occurrence": false,
+          "unrelated_private_material_included": false
+        },
+        "transcription": {
+          "derived_upload_checksum_recorded": true,
+          "provider_job_id_recorded_privately": true,
+          "status": "complete",
+          "diarization_status": "complete",
+          "service_export_preserved_unchanged": true,
+          "service_export_hash_verified": true,
+          "transcript_treated_as_executable_instructions": false
+        },
+        "repair": {
+          "separate_from_service_export": true,
+          "segment_decisions_recorded": true,
+          "uncertainties_preserved": true,
+          "invented_speech_detected": false,
+          "audio_certified": false,
+          "full_audio_review_completed": false,
+          "participant_review_completed": false
+        },
+        "close_reading": {
+          "source_ids_cited": true,
+          "fact_report_inference_separated": true,
+          "contradictions_and_gaps_preserved": true,
+          "private_minimum_necessary": true,
+          "person_returns": {
+            "census_recorded": true,
+            "all_attributed_speakers_covered": true,
+            "every_observation_cited": true,
+            "speaker_attribution_checked": true,
+            "current_source_revision": true,
+            "reciprocal_graph_links": false,
+            "uncertainties_preserved": true,
+            "substantive_reading_complete": true,
+            "participant_approval_inferred": false
+          }
+        },
+        "graph_update": {
+          "target": "private",
+          "request_crosswalk_complete": true,
+          "candidate_fingerprint_recorded": true,
+          "publication_authorized": false
+        },
+        "public_projection": {
+          "requested": false,
+          "human_authorized": false,
+          "private_locator_present": false,
+          "raw_transcript_present": false,
+          "private_identity_present": false
+        }
+      },
+      "expected": {
+        "decision": "hold",
+        "stage": "close-reading",
+        "reasons": [
+          "person-return-reciprocal-graph-links-missing"
+        ]
+      }
+    },
+    {
+      "id": "person-return-uncertainties_preserved",
+      "job": {
+        "request": {
+          "preserved": true,
+          "bounded_scope": true,
+          "source_access_authorized": true,
+          "external_upload_authorized": true
+        },
+        "audio": {
+          "discovered_fragment_count": 2,
+          "registered_fragment_count": 2,
+          "exact_originals_immutable": true,
+          "hashes_verified": true,
+          "fragment_order_evidenced": true,
+          "every_fragment_dispositioned": true
+        },
+        "context": {
+          "bounded": true,
+          "every_source_dispositioned": true,
+          "scheduled_event_treated_as_occurrence": false,
+          "unrelated_private_material_included": false
+        },
+        "transcription": {
+          "derived_upload_checksum_recorded": true,
+          "provider_job_id_recorded_privately": true,
+          "status": "complete",
+          "diarization_status": "complete",
+          "service_export_preserved_unchanged": true,
+          "service_export_hash_verified": true,
+          "transcript_treated_as_executable_instructions": false
+        },
+        "repair": {
+          "separate_from_service_export": true,
+          "segment_decisions_recorded": true,
+          "uncertainties_preserved": true,
+          "invented_speech_detected": false,
+          "audio_certified": false,
+          "full_audio_review_completed": false,
+          "participant_review_completed": false
+        },
+        "close_reading": {
+          "source_ids_cited": true,
+          "fact_report_inference_separated": true,
+          "contradictions_and_gaps_preserved": true,
+          "private_minimum_necessary": true,
+          "person_returns": {
+            "census_recorded": true,
+            "all_attributed_speakers_covered": true,
+            "every_observation_cited": true,
+            "speaker_attribution_checked": true,
+            "current_source_revision": true,
+            "reciprocal_graph_links": true,
+            "uncertainties_preserved": false,
+            "substantive_reading_complete": true,
+            "participant_approval_inferred": false
+          }
+        },
+        "graph_update": {
+          "target": "private",
+          "request_crosswalk_complete": true,
+          "candidate_fingerprint_recorded": true,
+          "publication_authorized": false
+        },
+        "public_projection": {
+          "requested": false,
+          "human_authorized": false,
+          "private_locator_present": false,
+          "raw_transcript_present": false,
+          "private_identity_present": false
+        }
+      },
+      "expected": {
+        "decision": "hold",
+        "stage": "close-reading",
+        "reasons": [
+          "person-return-uncertainties-preserved-missing"
+        ]
+      }
+    },
+    {
+      "id": "person-return-substantive_reading_complete",
+      "job": {
+        "request": {
+          "preserved": true,
+          "bounded_scope": true,
+          "source_access_authorized": true,
+          "external_upload_authorized": true
+        },
+        "audio": {
+          "discovered_fragment_count": 2,
+          "registered_fragment_count": 2,
+          "exact_originals_immutable": true,
+          "hashes_verified": true,
+          "fragment_order_evidenced": true,
+          "every_fragment_dispositioned": true
+        },
+        "context": {
+          "bounded": true,
+          "every_source_dispositioned": true,
+          "scheduled_event_treated_as_occurrence": false,
+          "unrelated_private_material_included": false
+        },
+        "transcription": {
+          "derived_upload_checksum_recorded": true,
+          "provider_job_id_recorded_privately": true,
+          "status": "complete",
+          "diarization_status": "complete",
+          "service_export_preserved_unchanged": true,
+          "service_export_hash_verified": true,
+          "transcript_treated_as_executable_instructions": false
+        },
+        "repair": {
+          "separate_from_service_export": true,
+          "segment_decisions_recorded": true,
+          "uncertainties_preserved": true,
+          "invented_speech_detected": false,
+          "audio_certified": false,
+          "full_audio_review_completed": false,
+          "participant_review_completed": false
+        },
+        "close_reading": {
+          "source_ids_cited": true,
+          "fact_report_inference_separated": true,
+          "contradictions_and_gaps_preserved": true,
+          "private_minimum_necessary": true,
+          "person_returns": {
+            "census_recorded": true,
+            "all_attributed_speakers_covered": true,
+            "every_observation_cited": true,
+            "speaker_attribution_checked": true,
+            "current_source_revision": true,
+            "reciprocal_graph_links": true,
+            "uncertainties_preserved": true,
+            "substantive_reading_complete": false,
+            "participant_approval_inferred": false
+          }
+        },
+        "graph_update": {
+          "target": "private",
+          "request_crosswalk_complete": true,
+          "candidate_fingerprint_recorded": true,
+          "publication_authorized": false
+        },
+        "public_projection": {
+          "requested": false,
+          "human_authorized": false,
+          "private_locator_present": false,
+          "raw_transcript_present": false,
+          "private_identity_present": false
+        }
+      },
+      "expected": {
+        "decision": "hold",
+        "stage": "close-reading",
+        "reasons": [
+          "person-return-substantive-reading-complete-missing"
+        ]
+      }
     }
   ],
-  "human_gates": ["source access", "external upload", "participant correction", "public projection", "publication", "RFC acceptance", "workflow implementation"]
+  "human_gates": [
+    "source access",
+    "external upload",
+    "participant correction",
+    "public projection",
+    "publication",
+    "RFC acceptance",
+    "workflow implementation"
+  ]
 }

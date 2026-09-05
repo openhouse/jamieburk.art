@@ -68,6 +68,17 @@
     "candidate_fingerprint_required": true,
     "public_projection_requires_separate_human_authorization": true
   },
+  "person_readings": {
+    "coverage_key": "transcript-edition+attributed-person",
+    "automatic_candidate_creation": true,
+    "source_revision_invalidation": true,
+    "reciprocal_links_required": true,
+    "unresolved_speakers_retained": true,
+    "missing_body_creates_explicit_gap": true,
+    "citation_fields": ["artifact-id", "source-sha256", "speaker-id", "line-span", "timestamp-or-explicit-gap", "fragment-or-section", "segment-sha256"],
+    "automatic_candidate_is_completed_close_reading": false,
+    "participant_approval_inferred": false
+  },
   "migration_queue": {
     "bounded_discovery_required": true,
     "deduplication_required": true,
