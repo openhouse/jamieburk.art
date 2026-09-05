@@ -8,6 +8,7 @@ import { evaluateMinimumViableFederationRFC } from "./rfcs/minimum-viable-federa
 import { evaluatePublicEngagementPathwayRFC } from "./rfcs/public-engagement-pathway-eval.mjs";
 import { evaluatePrivateVaultSidecarRFC } from "./rfcs/private-vault-sidecar-eval.mjs";
 import { evaluateAudioKnowledgeWorkflowRFC } from "./rfcs/audio-to-knowledge-workflow-eval.mjs";
+import { evaluateFiniteWeeklyReviewRFC } from "./rfcs/finite-weekly-review-eval.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const rfcRoot = path.join(repoRoot, "rfcs");
@@ -207,6 +208,27 @@ try {
   fail(
     path.join(rfcRoot, "0013-governed-audio-to-knowledge-workflow.md"),
     `audio-to-knowledge workflow evaluation could not run: ${error.message}`
+  );
+}
+
+try {
+  const weeklyReviewEvaluation = evaluateFiniteWeeklyReviewRFC({ repoRoot });
+  for (const criterion of weeklyReviewEvaluation.hard_failures) {
+    fail(
+      path.join(rfcRoot, "0014-finite-weekly-review-and-sustainable-commitment-protocol.md"),
+      `finite weekly review hard criterion failed: ${criterion}`
+    );
+  }
+  for (const scenario of weeklyReviewEvaluation.scenarios.results.filter((item) => !item.passed)) {
+    fail(
+      path.join(rfcRoot, "0014-finite-weekly-review-and-sustainable-commitment-protocol.md"),
+      `finite weekly review scenario failed: ${scenario.id}`
+    );
+  }
+} catch (error) {
+  fail(
+    path.join(rfcRoot, "0014-finite-weekly-review-and-sustainable-commitment-protocol.md"),
+    `finite weekly review evaluation could not run: ${error.message}`
   );
 }
 

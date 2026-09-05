@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "finite-weekly-review-rfc-hillclimb-2026-09-05",
+  "date": "2026-09-05",
+  "branch": "work/2026-09-03-C",
+  "base": "work/2026-09-03-A",
+  "rfc": 14,
+  "rfc_stage": "proposed",
+  "candidate_fingerprint": "63d750bae338720efbb4f185253fa9ab60aa4eb872545319805b2ab3e35fb603",
+  "objective": "Create a public-safe, private-by-default weekly review proposal that preserves finite human choice, distinguishes lived outcomes from operating artifacts, legitimizes conscious non-pursuit, and protects sustaining capacity without turning rest into a productivity variable.",
+  "red_green": {
+    "initial_red": {
+      "command": "node --test scripts/rfcs/finite-weekly-review-eval.test.mjs",
+      "result": "0 passed, 8 failed",
+      "reason": "The evaluator and suite did not yet exist. Each behavior test failed on the missing evaluation surface."
+    },
+    "first_green_attempt": {
+      "command": "npm run test:finite-weekly-review",
+      "result": "7 passed, 1 failed",
+      "reason": "The four-commitment fixture violated both the total budget and the one-per-lane budget; the hand-derived expected reasons named only the total-budget failure."
+    },
+    "bounded_correction": "Correct the fixture expectation to retain both violations; do not weaken evaluator behavior.",
+    "final_green": {
+      "command": "npm run test:finite-weekly-review",
+      "result": "8 passed, 0 failed"
+    }
+  },
+  "exact_candidate_verification": {
+    "behavior_tests": {"passed": 8, "total": 8},
+    "adversarial_scenarios": {"passed": 18, "total": 18},
+    "hard_criteria": {"passed": 9, "total": 9},
+    "rfc_validator": {"passed": true, "numbered_proposals": 14},
+    "public_safety": {"passed": true, "existing_careful_claim_warnings": 11},
+    "paired_workspace_tests": {"passed": 11, "total": 11}
+  },
+  "repository_wide_check": {
+    "command": "npm run check",
+    "passed": false,
+    "stopped_at": "evals:professor-lenses",
+    "failure": "0 of 6 final professor-lens scorecards score 4 and match public candidate 8eec6f46e397113e017026ae9599a3e54e83a7a340d9898074c81f3f96105db6.",
+    "classification": "inherited exact-candidate holdout failure; the sequential root check stopped before the new weekly-review commands"
+  },
+  "authority_boundary": "The RFC and its passing evaluations authorize discussion only. They do not authorize implementation, source access, collection, a recurring review, automatic commitment selection, publication, merge, deployment, indexing, or any outward action."
+}

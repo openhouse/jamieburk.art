@@ -1,0 +1,290 @@
+{
+  "schema_version": 1,
+  "id": "finite-weekly-review-rfc",
+  "objective": "Keep weekly reflection private, evidence-bounded, finite, non-extractive, and human-directed while preventing activity, backlog, rest, or modeled advice from becoming false outcome or authority claims.",
+  "baseline": {
+    "review_id": "synthetic-week-example",
+    "record": {
+      "visibility": "private",
+      "custody": "private-sidecar",
+      "contains_real_weekly_detail": false
+    },
+    "window": {
+      "bounded": true,
+      "timezone": "America/New_York"
+    },
+    "evidence": {
+      "source_classes_recorded": true,
+      "source_cutoffs_recorded": true,
+      "uncertainty_marked": true,
+      "outcomes_and_artifacts_separate": true,
+      "operating_artifacts_claimed_as_external_outcomes": false,
+      "unsupported_external_completion_claimed": false
+    },
+    "open_loops": {
+      "every_reviewed_item_dispositioned": true,
+      "dispositions": ["waiting", "consciously-not-pursuing"],
+      "automatic_carryover": false
+    },
+    "next_week": {
+      "commitments": [
+        {
+          "id": "livelihood-example",
+          "lane": "livelihood",
+          "bounded": true,
+          "observable_end": true
+        },
+        {
+          "id": "community-example",
+          "lane": "community",
+          "bounded": true,
+          "observable_end": true
+        },
+        {
+          "id": "sustaining-example",
+          "lane": "sustaining",
+          "bounded": true,
+          "observable_end": true
+        }
+      ],
+      "selected_by_human": true,
+      "unbounded_backlog_as_commitments": false
+    },
+    "sustaining_capacity": {
+      "boundary_present": true,
+      "productivity_optimization_target": false,
+      "health_or_bodily_detail_required": false,
+      "minimum_activity_proof_required": false
+    },
+    "automation": {
+      "computer_history_used": false,
+      "computer_history_human_reviewed": false,
+      "computer_history_treated_as_authoritative": false,
+      "selected_commitments": false
+    },
+    "modeled_review": {
+      "fictionalized": true,
+      "action_authority_claimed": false,
+      "priority_authority_claimed": false
+    },
+    "projection": {
+      "requested": false,
+      "automatic": false,
+      "contains_private_detail": false,
+      "separately_composed": false,
+      "public_safety_reviewed": false,
+      "jamie_approved_exact_candidate": false
+    },
+    "authority": {
+      "decision_owner": "Jamie Burkart"
+    }
+  },
+  "cases": [
+    {
+      "id": "bounded-private-review-is-ready-for-human-review",
+      "patch": {},
+      "expected": {
+        "decision": "ready-for-human-review",
+        "public_projection_authorized": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "zero-commitment-week-is-valid",
+      "patch": {"next_week": {"commitments": []}},
+      "expected": {
+        "decision": "ready-for-human-review",
+        "public_projection_authorized": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fourth-commitment-is-denied",
+      "patch": {
+        "next_week": {
+          "commitments": [
+            {"id": "one", "lane": "livelihood", "bounded": true, "observable_end": true},
+            {"id": "two", "lane": "community", "bounded": true, "observable_end": true},
+            {"id": "three", "lane": "sustaining", "bounded": true, "observable_end": true},
+            {"id": "four", "lane": "livelihood", "bounded": true, "observable_end": true}
+          ]
+        }
+      },
+      "expected": {
+        "decision": "deny",
+        "public_projection_authorized": false,
+        "reasons": ["commitment-budget-exceeded", "commitment-lane-budget-exceeded"]
+      }
+    },
+    {
+      "id": "two-livelihood-commitments-exceed-lane-budget",
+      "patch": {
+        "next_week": {
+          "commitments": [
+            {"id": "one", "lane": "livelihood", "bounded": true, "observable_end": true},
+            {"id": "two", "lane": "livelihood", "bounded": true, "observable_end": true}
+          ]
+        }
+      },
+      "expected": {
+        "decision": "deny",
+        "public_projection_authorized": false,
+        "reasons": ["commitment-lane-budget-exceeded"]
+      }
+    },
+    {
+      "id": "automatic-carryover-is-denied",
+      "patch": {"open_loops": {"automatic_carryover": true}},
+      "expected": {
+        "decision": "deny",
+        "public_projection_authorized": false,
+        "reasons": ["automatic-carryover-forbidden"]
+      }
+    },
+    {
+      "id": "conscious-non-pursuit-is-not-failure",
+      "patch": {
+        "open_loops": {
+          "every_reviewed_item_dispositioned": true,
+          "dispositions": ["consciously-not-pursuing"]
+        },
+        "next_week": {"commitments": []}
+      },
+      "expected": {
+        "decision": "ready-for-human-review",
+        "public_projection_authorized": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "artifact-presented-as-outcome-is-denied",
+      "patch": {"evidence": {"operating_artifacts_claimed_as_external_outcomes": true}},
+      "expected": {
+        "decision": "deny",
+        "public_projection_authorized": false,
+        "reasons": ["operating-artifact-is-not-lived-outcome"]
+      }
+    },
+    {
+      "id": "unsupported-external-completion-is-denied",
+      "patch": {"evidence": {"unsupported_external_completion_claimed": true}},
+      "expected": {
+        "decision": "deny",
+        "public_projection_authorized": false,
+        "reasons": ["external-outcome-evidence-required"]
+      }
+    },
+    {
+      "id": "instrumentalized-rest-is-denied",
+      "patch": {"sustaining_capacity": {"productivity_optimization_target": true}},
+      "expected": {
+        "decision": "deny",
+        "public_projection_authorized": false,
+        "reasons": ["rest-instrumentalization-forbidden"]
+      }
+    },
+    {
+      "id": "required-health-detail-is-denied",
+      "patch": {"sustaining_capacity": {"health_or_bodily_detail_required": true}},
+      "expected": {
+        "decision": "deny",
+        "public_projection_authorized": false,
+        "reasons": ["intimate-capacity-disclosure-forbidden"]
+      }
+    },
+    {
+      "id": "missing-capacity-boundary-holds",
+      "patch": {"sustaining_capacity": {"boundary_present": false}},
+      "expected": {
+        "decision": "hold",
+        "public_projection_authorized": false,
+        "reasons": ["sustaining-capacity-boundary-required"]
+      }
+    },
+    {
+      "id": "unbounded-next-step-holds",
+      "patch": {
+        "next_week": {
+          "commitments": [
+            {"id": "whole-backlog", "lane": "livelihood", "bounded": false, "observable_end": false}
+          ]
+        }
+      },
+      "expected": {
+        "decision": "hold",
+        "public_projection_authorized": false,
+        "reasons": ["bounded-commitment-required"]
+      }
+    },
+    {
+      "id": "undispositioned-open-loop-holds",
+      "patch": {"open_loops": {"every_reviewed_item_dispositioned": false}},
+      "expected": {
+        "decision": "hold",
+        "public_projection_authorized": false,
+        "reasons": ["open-loop-disposition-required"]
+      }
+    },
+    {
+      "id": "computer-activity-cannot-be-unreviewed-authority",
+      "patch": {
+        "automation": {
+          "computer_history_used": true,
+          "computer_history_human_reviewed": false,
+          "computer_history_treated_as_authoritative": true
+        }
+      },
+      "expected": {
+        "decision": "deny",
+        "public_projection_authorized": false,
+        "reasons": ["unreviewed-activity-authority-forbidden"]
+      }
+    },
+    {
+      "id": "automation-cannot-select-commitments",
+      "patch": {"automation": {"selected_commitments": true}},
+      "expected": {
+        "decision": "deny",
+        "public_projection_authorized": false,
+        "reasons": ["automatic-commitment-selection-forbidden"]
+      }
+    },
+    {
+      "id": "modeled-review-cannot-authorize-action",
+      "patch": {"modeled_review": {"action_authority_claimed": true}},
+      "expected": {
+        "decision": "deny",
+        "public_projection_authorized": false,
+        "reasons": ["modeled-review-authority-forbidden"]
+      }
+    },
+    {
+      "id": "private-detail-and-automatic-publication-are-denied",
+      "patch": {"projection": {"automatic": true, "contains_private_detail": true}},
+      "expected": {
+        "decision": "deny",
+        "public_projection_authorized": false,
+        "reasons": [
+          "private-weekly-detail-publication-forbidden",
+          "automatic-publication-forbidden"
+        ]
+      }
+    },
+    {
+      "id": "unapproved-public-projection-holds",
+      "patch": {
+        "projection": {
+          "requested": true,
+          "separately_composed": true,
+          "public_safety_reviewed": true,
+          "jamie_approved_exact_candidate": false
+        }
+      },
+      "expected": {
+        "decision": "hold",
+        "public_projection_authorized": false,
+        "reasons": ["public-projection-human-approval-required"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "rfc": 14,
+  "stage": "proposed",
+  "purpose": "Support a finite private weekly review that distinguishes lived outcomes from operating artifacts, permits conscious non-pursuit, protects sustaining capacity, and leaves every commitment and outward action to Jamie.",
+  "record": {
+    "default_visibility": "private",
+    "allowed_custody": ["operator-local", "private-sidecar"],
+    "public_repository_contains_method_only": true,
+    "public_projection_is_separate_artifact": true,
+    "real_weekly_entries_in_public_git": false
+  },
+  "review_layers": [
+    "window-and-evidence-boundary",
+    "lived-outcomes",
+    "operating-artifacts",
+    "open-loops-and-dispositions",
+    "interpretation",
+    "finite-selection"
+  ],
+  "evidence": {
+    "lived_outcomes_distinct_from_operating_artifacts": true,
+    "activity_is_not_external_outcome": true,
+    "draft_is_not_sent": true,
+    "meeting_is_not_collective_authority": true,
+    "pull_request_is_not_merge_or_deployment": true,
+    "uncertainty_required": true
+  },
+  "dispositions": [
+    "completed",
+    "continuing",
+    "waiting",
+    "held",
+    "consciously-not-pursuing",
+    "superseded"
+  ],
+  "commitment_budget": {
+    "minimum": 0,
+    "maximum": 3,
+    "lanes": ["livelihood", "community", "sustaining"],
+    "maximum_per_lane": 1,
+    "automatic_carryover": false,
+    "human_selection_required": true,
+    "bounded_stopping_point_required": true
+  },
+  "sustaining_capacity": {
+    "boundary_required": true,
+    "rest_has_intrinsic_value": true,
+    "productivity_optimization_forbidden": true,
+    "minimum_activity_proof_required": false,
+    "health_or_bodily_detail_required": false,
+    "public_detail_required": false
+  },
+  "automation": {
+    "source_access_authorized_by_rfc": false,
+    "collection_authorized_by_rfc": false,
+    "computer_history_is_observational_only": true,
+    "absence_of_activity_is_not_absence_of_life": true,
+    "automatic_commitment_selection": false,
+    "automatic_scheduling": false
+  },
+  "modeled_review": {
+    "fictionalized_lenses_are_advisory": true,
+    "quotation_or_endorsement_claimed": false,
+    "action_authority": false,
+    "priority_authority": false
+  },
+  "publication": {
+    "automatic": false,
+    "private_record_redaction_is_sufficient": false,
+    "separate_minimum_necessary_composition_required": true,
+    "public_safety_review_required": true,
+    "exact_candidate_jamie_approval_required": true
+  },
+  "authority": {
+    "decision_owner": "Jamie Burkart",
+    "implementation_authorized": false,
+    "source_access_authorized": false,
+    "publication_authorized": false,
+    "deployment_authorized": false,
+    "action_authorized": false
+  }
+}
