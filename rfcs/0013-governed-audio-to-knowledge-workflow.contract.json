@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "rfc": 13,
-  "stage": "proposed",
+  "stage": "implementing",
   "purpose": "Standardize a resumable, provider-adaptable, evidence-linked path from an authorized call family to a private Knowledge Wiki update without collapsing custody, transcription, diarization, repair, interpretation, or publication.",
   "stages": [
     "intake",
@@ -18,7 +18,7 @@
   "stage_states": ["not-started", "held", "running", "complete", "failed", "superseded"],
   "authority": {
     "decision_owner": "Jamie Burkart",
-    "implementation_authorized": false,
+    "implementation_authorized": true,
     "source_access_authorized_by_rfc": false,
     "private_preservation_authorized_by_rfc": false,
     "external_transfer_authorized_by_rfc": false,
@@ -142,11 +142,27 @@
     "public_may_reveal_private_topology": false
   },
   "automation": {
+    "implementation": "scripts/audio-workflow/cli.mjs",
+    "commands": [
+      "plan",
+      "queue",
+      "inventory",
+      "preserve",
+      "prepare",
+      "transcribe",
+      "diarize",
+      "repair",
+      "wiki",
+      "project",
+      "verify"
+    ],
     "dry_run_required": true,
     "resumable": true,
     "idempotent_by_hash_and_recipe": true,
     "changed_input_invalidates_downstream_receipts": true,
     "nonzero_exit_on_hold_or_deny": true,
+    "hold_exit_code": 2,
+    "deny_exit_code": 1,
     "logs_must_be_body_free_and_secret_free": true,
     "automatic_contact": false,
     "automatic_merge": false,

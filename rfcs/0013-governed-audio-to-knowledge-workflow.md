@@ -1,7 +1,7 @@
 ---
 rfc: 13
 title: Governed Audio-to-Knowledge Workflow
-stage: proposed
+stage: implementing
 start_date: 2026-09-04
 authors:
   - Jamie Burkart
@@ -14,19 +14,20 @@ review_areas:
   - research-operations
   - developer-experience
   - editorial
-implementation: null
+implementation: scripts/audio-workflow/cli.mjs
 supersedes: []
 superseded_by: null
 ---
 
 # Governed Audio-to-Knowledge Workflow
 
-> **Proposal boundary**
+> **Implementation boundary**
 >
-> This RFC standardizes a prospective workflow and its safety contract. It does
-> not authorize implementation, source access, recording acquisition, an
-> external upload, speaker identification, publication, deployment, or any use
-> of a particular call. Every future job requires its own bounded authority.
+> Jamie Burkart accepted this RFC and authorized its implementation on
+> 2026-09-04. Acceptance does not itself authorize source access, recording
+> acquisition, external upload, known-speaker reference use, publication,
+> deployment, or use of an unrelated call. Every processing run still requires
+> bounded job authority.
 
 ## Summary
 
@@ -231,24 +232,27 @@ A stage may be `not-started`, `held`, `running`, `complete`, `failed`, or
 receipts. Re-running a complete stage with unchanged inputs returns its existing
 receipt. Changed inputs invalidate that stage and every dependent receipt.
 
-### Proposed command surface
+### Implemented command surface
 
-An implementation should expose small composable commands rather than one
-opaque agent action:
+The runner exposes small composable subcommands rather than one opaque agent
+action:
 
 ```text
-audio:plan       create or inspect the bounded job manifest
-audio:queue      discover and disposition historical candidates
-audio:inventory  enumerate artifacts and record dispositions
-audio:preserve   hash originals and verify read-only source custody
-audio:prepare    create reproducible processing derivatives
-audio:transcribe submit after the external-transfer gate and collect exports
-audio:repair     produce a conservative, segment-linked repair candidate
-audio:wiki       draft the private close reading and graph updates
-audio:verify     evaluate completeness, lineage, privacy, and exact receipts
+plan       create or inspect the bounded job manifest
+queue      discover and disposition historical candidates
+inventory  enumerate artifacts and record dispositions
+preserve   hash originals and verify read-only source custody
+prepare    create reproducible processing derivatives
+transcribe submit after the external-transfer gate and collect exports
+diarize    map speaker clusters with explicit uncertainty
+repair     produce a conservative, segment-linked repair candidate
+wiki       draft the private close reading and graph updates
+project    prepare a separately governed projection decision
+verify     evaluate completeness, lineage, privacy, and exact receipts
 ```
 
-These names are a proposed interface, not commands implemented by this RFC.
+These subcommands are implemented by `scripts/audio-workflow/cli.mjs`, invoked
+as `node scripts/audio-workflow/cli.mjs <subcommand> ...`.
 Each command supports a dry run, reads one explicit job manifest, writes only to
 the stage's declared destination, and exits nonzero on a hold or denial.
 
@@ -459,6 +463,27 @@ Rollback never deletes or publishes a private call record.
 - Merge, deployment, indexing, contact, and publication remain separate human
   decisions.
 - No deterministic or model-based evaluator may satisfy these human gates.
+
+## Decision history
+
+- **2026-09-04 — accepted:** Jamie Burkart explicitly instructed the project to
+  accept and implement RFC 0013.
+- **2026-09-04 — implementation opened:** the public-safe runner implements the
+  stage machine, per-job authority checks, queue disposition checks, idempotent
+  receipts, downstream invalidation, reason-coded holds, dry-run defaults, and
+  body-free operator summaries. Private source maps, artifacts, job receipts,
+  repairs, and close readings remain in their governed custody layers.
+- **Operational status remains open:** processing a retrospective queue supplies
+  implementation evidence, but `operational` still requires exact receipts for
+  the final candidate and Jamie's later stage decision.
+
+### Implementation hill climb
+
+The first runner pass exposed a contract mismatch: a reason-coded hold appeared
+in the JSON result but did not set a nonzero process status. A failing regression
+test fixed the boundary. Holds now return status `2`, denials and invalid queues
+return `1`, and completed dry runs return `0`. This lets orchestration stop on a
+governed hold without treating it as either success or an unclassified crash.
 
 ## Drawbacks
 

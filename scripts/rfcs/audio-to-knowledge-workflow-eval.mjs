@@ -21,7 +21,10 @@ const candidatePaths = [
   "scripts/rfcs/audio-to-knowledge-workflow-eval.mjs",
   "scripts/rfcs/audio-to-knowledge-workflow-eval.test.mjs",
   "scripts/rfcs/audio-to-knowledge-revisit-queue-rfc.test.mjs",
-  "scripts/rfcs/audio-to-knowledge-workflow-rfc.test.mjs"
+  "scripts/rfcs/audio-to-knowledge-workflow-rfc.test.mjs",
+  "scripts/audio-workflow/core.mjs",
+  "scripts/audio-workflow/cli.mjs",
+  "scripts/audio-workflow/audio-workflow.test.mjs"
 ];
 
 function loadJson(repoRoot, relativePath) {
@@ -259,16 +262,16 @@ export function evaluateAudioKnowledgeWorkflowRFC(options = {}) {
   });
 
   const checks = {
-    proposal_preserves_human_authority:
+    accepted_implementation_preserves_human_authority:
       contract.rfc === 13 &&
-      contract.stage === "proposed" &&
+      contract.stage === "implementing" &&
       contract.authority?.decision_owner === "Jamie Burkart" &&
-      contract.authority?.implementation_authorized === false &&
+      contract.authority?.implementation_authorized === true &&
       contract.authority?.source_access_authorized_by_rfc === false &&
       contract.authority?.external_transfer_authorized_by_rfc === false &&
       contract.authority?.publication_authorized === false &&
-      /^stage:\s+proposed$/m.test(rfc) &&
-      /^implementation:\s+null$/m.test(rfc),
+      /^stage:\s+implementing$/m.test(rfc) &&
+      /^implementation:\s+scripts\/audio-workflow\/cli\.mjs$/m.test(rfc),
     bounded_per_job_authority:
       contract.authority?.job_authority_mode === "explicit-and-bounded-per-job" &&
       contract.authority?.private_preservation_authorized_by_rfc === false &&
@@ -357,11 +360,15 @@ export function evaluateAudioKnowledgeWorkflowRFC(options = {}) {
       contract.knowledge?.automatic_publication === false &&
       contract.knowledge?.public_may_reveal_private_topology === false,
     retry_and_receipt_safety:
+      contract.automation?.implementation === "scripts/audio-workflow/cli.mjs" &&
+      contract.automation?.commands?.length === 11 &&
       contract.automation?.dry_run_required === true &&
       contract.automation?.resumable === true &&
       contract.automation?.idempotent_by_hash_and_recipe === true &&
       contract.automation?.changed_input_invalidates_downstream_receipts === true &&
-      contract.automation?.nonzero_exit_on_hold_or_deny === true,
+      contract.automation?.nonzero_exit_on_hold_or_deny === true &&
+      contract.automation?.hold_exit_code === 2 &&
+      contract.automation?.deny_exit_code === 1,
     logs_and_external_actions_are_bounded:
       contract.automation?.logs_must_be_body_free_and_secret_free === true &&
       contract.automation?.automatic_contact === false &&
