@@ -2,10 +2,12 @@
 
 ## Decision
 
-The exact public-safe RFC 0013 candidate is ready for Jamie Burkart's review.
-It remains `proposed`: the runtime is not implemented, and this RFC does not
-authorize an upload, transcription job, speaker assignment, graph promotion,
-publication, deployment, merge, contact, or deletion.
+Jamie Burkart accepted RFC 0013 and authorized its implementation. The exact
+public-safe candidate is now `implementing`, with a bounded command runner and
+regression suite. This stage does not make the workflow operational by itself
+and does not authorize an upload, source-access job, transcription job, speaker
+assignment, graph promotion, publication, deployment, merge, contact, or
+deletion; those authorities remain per-job or separately human-gated.
 
 ## Exact candidate
 
@@ -17,9 +19,10 @@ publication, deployment, merge, contact, or deletion.
 - Focused regressions:
   `scripts/rfcs/audio-to-knowledge-workflow-eval.test.mjs`,
   `scripts/rfcs/audio-to-knowledge-workflow-rfc.test.mjs`, and
-  `scripts/rfcs/audio-to-knowledge-revisit-queue-rfc.test.mjs`
+  `scripts/rfcs/audio-to-knowledge-revisit-queue-rfc.test.mjs`, plus
+  `scripts/audio-workflow/audio-workflow.test.mjs`
 - Candidate SHA-256:
-  `6d89ac9d80b5a45fe42ccf37d9f13de6c83c3e336ad6ab195a188fc683681dca`
+  `73e4a3ebd65122b51d9363380d682571d33879f8db5d58751fb2ed2e7c0737f2`
 
 The candidate fingerprint binds the RFC, contract, case suite, evaluator,
 regressions, package commands, RFC checker, and index. Changed candidate bytes
@@ -66,7 +69,7 @@ and prohibits a priority score from authorizing source access, preservation,
 external transfer, transcription, voice-reference use, quotation, contact, or
 publication.
 
-## Provisional evaluation
+## Implementation evaluation
 
 The evaluator ran 28 visible development cases:
 
@@ -79,13 +82,14 @@ Observed result:
 - deterministic hard checks: 15 of 15 passed;
 - development scenarios: 28 of 28 passed;
 - focused regressions: 30 of 30 passed;
-- implementation authorization: false;
+- implementation authorization: true;
 - external-transfer authorization from the RFC: false; and
 - publication authorization: false.
 
-These labels were visible during development and are pending Jamie's review.
-There is no independent human holdout, so the result establishes exact-candidate
-contract conformance, not production transcription quality.
+These labels were visible during development. There is no independent human
+holdout, so the result establishes exact-candidate contract conformance and
+runner behavior, not operational reliability or production transcription
+quality.
 
 ## Hill-climb interpretation
 
@@ -110,7 +114,7 @@ questions.
 
 ## Open validation
 
-Before an operational runtime can be called reliable, add independently
+Before the implementing runtime can advance to `operational`, add independently
 reviewed natural holdouts for dropped calls, multiple fragments, crosstalk,
 noise, speaker-count uncertainty, multilingual speech, code-switching, provider
 interruption, partial exports, chunk overlap, later context corrections,
@@ -122,4 +126,6 @@ Run:
 npm run hillclimb:audio-to-knowledge-rfc
 ```
 
-A green run approves only the exact proposal for human RFC review.
+A green run verifies only the exact implementation candidate. It does not
+satisfy any per-job source, transfer, speaker, publication, merge, or deployment
+gate.
