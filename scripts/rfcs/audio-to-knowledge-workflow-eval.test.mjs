@@ -333,3 +333,18 @@ test("an authenticated remote discovery surface must retain search limitations",
     reasons: ["queue-discovery-completeness-unsupported:icloud-drive-browser-recents"]
   });
 });
+
+test("the accepted implementation keeps execution distinct from external upload and publication", () => {
+  assert.equal(
+    typeof evaluatorModule?.evaluateAudioKnowledgeWorkflowRFC,
+    "function",
+    "RFC evaluator must expose the implementation decision"
+  );
+  const result = evaluatorModule.evaluateAudioKnowledgeWorkflowRFC();
+
+  assert.equal(result.stage, "implementing");
+  assert.equal(result.implementation_authorized, true);
+  assert.equal(result.live_external_upload_authorized, false);
+  assert.equal(result.publication_authorized, false);
+  assert.equal(result.hard_criteria.accepted_bounded_private_implementation, true);
+});

@@ -111,7 +111,7 @@ that an agent, test, or informal participant has human decision authority.
 | [0011](./0011-private-vault-sidecar.md) | Paired Public Portfolio and Private Vault Sidecar | `implementing` | Jamie Burkart |
 | [0012](./0012-public-engagement-pathway.md) | Public Engagement Pathway for a Bounded Working Session | `proposed` | Jamie Burkart |
 | [0013](./0013-public-paid-working-session-hiring-pathway.md) | Public Paid Working Session Hiring Pathway | `implementing` | Jamie Burkart |
-| [0014](./0014-governed-audio-to-knowledge-workflow.md) | Governed Audio-to-Knowledge Workflow | `proposed` | Jamie Burkart |
+| [0014](./0014-governed-audio-to-knowledge-workflow.md) | Governed Audio-to-Knowledge Workflow | `implementing` | Jamie Burkart |
 
 ## Validation
 

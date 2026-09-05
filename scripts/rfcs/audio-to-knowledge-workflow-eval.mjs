@@ -232,10 +232,12 @@ export function evaluateAudioKnowledgeWorkflowRFC(options = {}) {
   const suite = readJson(repoRoot, suitePath);
   const rfc = readFileSync(path.join(repoRoot, rfcPath), "utf8");
   const hardCriteria = {
-    proposed_without_implementation_authority:
-      contract.stage === "proposed" &&
-      contract.authority?.implementation_authorized === false &&
+    accepted_bounded_private_implementation:
+      contract.stage === "implementing" &&
+      contract.implementation === "private:audio-workflow.2026-09-04" &&
+      contract.authority?.implementation_authorized === true &&
       contract.authority?.live_external_upload_authorized === false &&
+      contract.authority?.source_system_mutation_authorized === false &&
       contract.authority?.publication_authorized === false,
     exact_state_sequence:
       JSON.stringify(contract.state_machine) ===
@@ -311,6 +313,7 @@ export function evaluateAudioKnowledgeWorkflowRFC(options = {}) {
   return {
     schema_version: 1,
     rfc: 14,
+    stage: contract.stage,
     hard_criteria: hardCriteria,
     hard_failures: hardFailures,
     scenarios: {
@@ -320,8 +323,10 @@ export function evaluateAudioKnowledgeWorkflowRFC(options = {}) {
       results
     },
     candidate_fingerprint: fingerprint.digest("hex"),
-    implementation_authorized: false,
-    publication_authorized: false
+    implementation_authorized: contract.authority?.implementation_authorized ?? false,
+    live_external_upload_authorized:
+      contract.authority?.live_external_upload_authorized ?? false,
+    publication_authorized: contract.authority?.publication_authorized ?? false
   };
 }
 

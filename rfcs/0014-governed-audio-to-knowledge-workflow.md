@@ -1,7 +1,7 @@
 ---
 rfc: 14
 title: Governed Audio-to-Knowledge Workflow
-stage: proposed
+stage: implementing
 start_date: 2026-09-04
 authors:
   - Jamie Burkart
@@ -15,20 +15,20 @@ review_areas:
   - source-custody
   - developer-experience
   - editorial
-implementation: null
+implementation: "private:audio-workflow.2026-09-04"
 supersedes: []
 superseded_by: null
 ---
 
 # Governed Audio-to-Knowledge Workflow
 
-> **Proposal and authority boundary**
+> **Acceptance and authority boundary**
 >
-> This RFC standardizes a proposed workflow and ships an evaluation prototype.
-> It does not authorize live source access, external upload, transcription,
-> private-sidecar materialization, deletion, publication, deployment, or
-> acceptance of the RFC. Each real job needs its own bounded authorization, and
-> Jamie remains the decision owner.
+> Jamie accepted this RFC and authorized bounded private implementation on
+> September 4, 2026. That decision authorizes the named transcript-revisit
+> migration pass and private source custody needed for it. It does not authorize
+> external upload, participant contact, deletion, public projection,
+> publication, or deployment. Those remain separate per-job human gates.
 
 ## Summary
 
@@ -57,8 +57,28 @@ knowledge updates to the private graph, and requires an independent human gate
 before any public candidate exists.
 
 This pull request contains the RFC, a machine-readable contract, deterministic
-state evaluator, and adversarial cases. It does not contain a live provider
-connector or an operational private workflow.
+state evaluator, and adversarial cases. The paired private implementation adds
+an executable preservation, audit, build, status, and verification surface plus
+one stage-by-stage receipt for every bounded queue item. It does not contain or
+authorize a live provider connector.
+
+## Decision record
+
+On September 4, 2026, Jamie, the named decision owner, explicitly requested:
+“Please accept and implement the RFC” and “Work through the entire queue,
+bringing all up to our latest standards.” The implementation therefore advances
+the RFC to `implementing` and authorizes bounded source access and private
+processing for the existing 46-entry queue.
+
+Acceptance does not collapse the remaining gates. In particular:
+
+- no transcript or audio may be uploaded to a third party without a specific
+  action-time authorization for the named source and destination;
+- an inaccessible body remains an explicit held record;
+- a processed queue receipt is not audio certification or participant review;
+- no public projection, publication, deployment, deletion, or participant
+  contact is authorized; and
+- `operational` remains a later decision after human review and observed use.
 
 ## Motivation
 
@@ -117,8 +137,8 @@ or every fact may be published.
 
 ## Non-goals
 
-- Do not authorize or perform a live upload, transcription, source-system
-  mutation, private ingestion, publication, deployment, or deletion.
+- Do not authorize or perform a live external upload, provider transcription,
+  source-system mutation, publication, deployment, or deletion.
 - Do not establish Otter.ai, OpenAI, or another provider as the permanent or
   exclusive transcription service.
 - Do not treat diarization as verified identity, or a repaired transcript as
@@ -371,33 +391,25 @@ The direction of projection is private knowledge to a minimal public candidate.
 The public evaluator or a public page-owner review never gains access to the
 private relationship record merely because the repositories share a branch.
 
-### Proposed operator surface
+### Implemented operator surface
 
-If this RFC is accepted, the first implementation should expose small,
-composable commands rather than one opaque “do everything” action:
+The first private implementation exposes small, composable preservation,
+auditing, receipt-building, status, and verification commands. Provider-specific
+transcription remains held behind its separate adapter and authorization gate:
 
 ```text
-audio-job init
-audio-job inventory
 audio-job preserve
-audio-job context
-audio-job transcribe
-audio-job poll
-audio-job export
-audio-job repair
-audio-job analyze
-audio-job project
+audio-job audit
+audio-job build
 audio-job status
 audio-job verify
 ```
 
-Each command reads and writes the private job manifest, is safe to rerun,
-reports the earliest hold, and supports a dry-run mode. Commands that access a
-source, upload externally, mutate a source system, delete, or publish must show
-the exact authorized target and fail closed without the corresponding gate.
-
-This command surface is a design target, not an implemented interface in this
-RFC.
+Each command is safe to rerun and fails closed when the queue census, authority
+boundary, state sequence, or summary drifts. The provider adapter remains an
+unimplemented extension point: external upload, source mutation, deletion, and
+publication require exact authorization and cannot be inferred from a passing
+private migration run.
 
 ### Transcript revisit queue
 
@@ -436,7 +448,10 @@ an explicit next gate.
 
 Building or reprioritizing the queue authorizes no source access, audio review,
 external upload, repair, participant contact, public projection, or deletion.
-Each entry must re-enter the RFC state machine through the earliest unmet gate.
+The September 4 implementation request is a separate bounded authority receipt
+for source access and private processing of these 46 entries. Each entry
+re-enters the RFC state machine through the earliest unmet gate and retains that
+hold even after its current-method processing receipt is created.
 
 #### Authenticated remote discovery
 
@@ -480,7 +495,7 @@ The job status view should distinguish:
 
 ### Evaluation and hill climb
 
-The evaluation prototype starts with behavior, not keyword presence. Sixteen
+The evaluation prototype starts with behavior, not keyword presence. Seventeen
 unit cases cover a complete private job and failures involving missing hashes,
 unauthorized upload, incomplete provider processing, changed service output,
 unsupported audio certification, transcript prompt injection, undispositioned
@@ -492,8 +507,8 @@ The RFC-level evaluator also checks the machine-readable contract and five
 portable scenario fixtures. Its hard criteria require the state sequence,
 artifact-layer separation, per-job upload authorization, untrusted-transcript
 boundary, private-first graph target, schedule/occurrence separation,
-idempotency, deduplication, uncertainty, human gates, and proposed-stage
-authority limits.
+idempotency, deduplication, uncertainty, human gates, and
+accepted-but-bounded implementation authority.
 
 The red baseline was 0 of 11 public behavior tests because the evaluator did
 not exist. The bounded change adds the contract and evaluator; the change is
