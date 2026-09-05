@@ -112,6 +112,7 @@ that an agent, test, or informal participant has human decision authority.
 | [0012](./0012-public-engagement-pathway.md) | Public Engagement Pathway for a Bounded Working Session | `proposed` | Jamie Burkart |
 | [0013](./0013-governed-audio-to-knowledge-workflow.md) | Governed Audio-to-Knowledge Workflow | `implementing` | Jamie Burkart |
 | [0014](./0014-finite-weekly-review-and-sustainable-commitment-protocol.md) | Finite Weekly Review and Sustainable Commitment Protocol | `proposed` | Jamie Burkart |
+| [0015](./0015-governed-correspondence-readings.md) | Governed Correspondence Readings and Situated Voice Coverage | `proposed` | Jamie Burkart |
 
 ## Validation
 

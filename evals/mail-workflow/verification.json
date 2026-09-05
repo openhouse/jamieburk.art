@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "scope": "source-free correspondence prototype",
+  "baseline_commit": "a8d4b0fed65cf3b30f71c035ad97dffdc262915f",
+  "evaluated_at": "2026-09-05T23:56:27.241Z",
+  "node": "v26.5.0",
+  "candidate_files": {
+    "package.json": "999045651c9628e36e7d36a130ad5a6d6d1fc9b290abe4a2fb0ea0028302c565",
+    "rfcs/0015-governed-correspondence-readings.md": "b1642d4b189996e0180ca81f4f982adaaf04e8fb62b547ad40634f858f4eac0f",
+    "rfcs/README.md": "1b2b126e1ccae5e4d6cbeb8f51b88433dd771e3c23b083467e2b4cffbc0bfb96",
+    "scripts/mail-workflow/cli.mjs": "76c442fd68299ec75cc4b1ebbc04654df931d23628e3e5067bdcfc96b3a2f67b",
+    "scripts/mail-workflow/core.mjs": "cb88e99989a5e3a04aeb3ec7ce233dbefa55f1f2846bf558e192ec1f294a47c7",
+    "scripts/mail-workflow/mail-workflow.test.mjs": "3af692012429b6ebdb104ad9110cabdebff0107a1fc0a8adad26f2002a31415a"
+  },
+  "candidate_fingerprint": "c1fb07ff9e5f0fef1e698f8adb840ef63c2fe0673c4e96e35d3c037e1fc46844",
+  "binding_scope": "Listed changed implementation, test, RFC, index and package files; this receipt is excluded to avoid self-reference.",
+  "results": {
+    "mail_workflow": {
+      "passed": 24,
+      "failed": 0
+    },
+    "audio_workflow": {
+      "passed": 41,
+      "failed": 0
+    },
+    "workspace_pair": {
+      "passed": 11,
+      "failed": 0
+    },
+    "rfc_structure": {
+      "numbered_proposals": 15,
+      "exit_code": 0
+    },
+    "public_safety": {
+      "exit_code": 0,
+      "existing_careful_claim_warnings": 11
+    },
+    "focused_hill_climb": {
+      "exit_code": 0
+    },
+    "full_repository_check": {
+      "exit_code": 1,
+      "gate": "professor-lens exact-candidate holdouts",
+      "matching_final_scorecards": 0,
+      "required": 6
+    }
+  },
+  "iterations": [
+    {
+      "step": "test-first",
+      "passed": 0,
+      "total": 21,
+      "reason": "Missing correspondence workflow"
+    },
+    {
+      "step": "initial implementation",
+      "passed": 21,
+      "total": 21
+    },
+    {
+      "step": "citation anchor regression",
+      "passed": 23,
+      "total": 24
+    },
+    {
+      "step": "anchor repair",
+      "passed": 24,
+      "total": 24
+    },
+    {
+      "step": "public safety",
+      "result": "synthetic long secret-assignment fixture rejected; replaced with boolean without weakening scanner or field guard"
+    },
+    {
+      "step": "final focused run",
+      "result": "pass"
+    }
+  ],
+  "rfc_stage": "proposed",
+  "human_editorial_review_complete": false,
+  "mailbox_acquisition_complete": "not-assessed-by-public-code",
+  "publication_authorized": false
+}
