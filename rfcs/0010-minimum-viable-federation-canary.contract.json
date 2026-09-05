@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "rfc": 10,
+  "stage": "proposed",
+  "purpose": "Test one responsible passage from canonical public source to reviewable portfolio proposal, including correction propagation, without transferring custody or authority.",
+  "capability_lanes": {
+    "intelligibility": {
+      "question": "Can a person identify the authoritative record, understand its meaning, and know the next allowed action?",
+      "authority": "advisory-only"
+    },
+    "legitimacy": {
+      "question": "Can affected people identify who benefits, who bears risk, who may refuse, and who may correct or decide?",
+      "authority": "advisory-only"
+    },
+    "federation": {
+      "question": "Can repositories exchange bounded references and corrections without transferring local authority?",
+      "authority": "advisory-only"
+    }
+  },
+  "maps": {
+    "record": {
+      "answers": "Where do authoritative bytes and canonical records live?",
+      "must_name": ["repository_role", "record_id", "revision", "content_fingerprint"]
+    },
+    "meaning": {
+      "answers": "How do observations, evidence, claims, anti-claims, corrections, and projections relate?",
+      "preferred_relations_are_typed": true
+    },
+    "action": {
+      "answers": "Who may review, correct, withhold, select, publish, deploy, or stop?",
+      "named_human_authority_required": true
+    }
+  },
+  "canary": {
+    "id": "sourcebook-responsible-passage",
+    "source_population": "the three already-public self-authored statements in the bounded Sourcebook pilot",
+    "source_population_size": 3,
+    "correction_fixture_policy": "synthetic-unless-separately-authorized",
+    "real_source_access": false,
+    "public_projection": false,
+    "states": [
+      "canonical-public-source",
+      "received-proposal",
+      "reviewed-interpretation",
+      "projection-proposal",
+      "held-for-human-decision",
+      "held-after-correction"
+    ],
+    "required_outcomes": [
+      "trace-origin",
+      "identify-authority",
+      "preserve-disagreement",
+      "hold-on-correction",
+      "reproduce-from-exact-input",
+      "rollback-derived-output"
+    ]
+  },
+  "exchange": {
+    "allowed_kinds": ["canonical-record-reference", "correction-notice"],
+    "required_fields": [
+      "event_id",
+      "kind",
+      "origin",
+      "target",
+      "purpose",
+      "audience",
+      "authority"
+    ],
+    "origin_requires": ["repository", "record_id", "revision", "content_fingerprint"],
+    "origin_binding_fields": ["record_id", "revision", "content_fingerprint"],
+    "authority_requires": ["source", "interpretation", "publication"],
+    "authority_must_be_distinct": true,
+    "forbidden_public_fields": [
+      "raw_source_body",
+      "protected_locator",
+      "private_identifier",
+      "credential",
+      "private_graph_topology"
+    ],
+    "authority_transferred": false,
+    "minimum_necessary": true
+  },
+  "correction": {
+    "required_fields": ["correction_id", "supersedes_revision", "affected_projection_ids"],
+    "downstream_effect": "hold-projection",
+    "original_preserved": true,
+    "dependent_outputs_require_recheck": true,
+    "deletion_guaranteed": false
+  },
+  "evidence_boundaries": {
+    "outbound_only_postures": ["outbound-only"],
+    "outcomes_requiring_response": [
+      "acceptance",
+      "adoption",
+      "delivery",
+      "deployment",
+      "endorsement",
+      "payment"
+    ],
+    "unresolved_source_states": ["dataless", "inaccessible", "not-materialized"],
+    "unresolved_source_effect": "hold",
+    "duplicate_content_fingerprints_do_not_add_support": true,
+    "silence_is_approval": false
+  },
+  "currentness": {
+    "evaluation_as_of_required": true,
+    "exact_revision_required": true,
+    "changed_input_invalidates_receipt": true,
+    "remote_frontier_discovery_required": true
+  },
+  "evaluation": {
+    "ordered_phases": ["deterministic", "subjective", "human"],
+    "model_may_approve_own_output": false,
+    "script": "scripts/rfcs/minimum-viable-federation-eval.mjs",
+    "test": "scripts/rfcs/minimum-viable-federation-eval.test.mjs",
+    "suite": "evals/knowledge-bank/minimum-viable-federation-rfc-evals.json"
+  },
+  "human_gates": {
+    "required": [
+      "affected-party-review",
+      "rights",
+      "consent",
+      "collective-credit",
+      "editorial-selection",
+      "publication",
+      "deployment",
+      "production-indexing"
+    ],
+    "named_authority_required": true,
+    "refusal_must_remain_available": true,
+    "automation_may_satisfy": []
+  },
+  "authority": {
+    "decision_owner": "Jamie Burkart",
+    "stage_advancement": "human-only",
+    "transport_is_canonical_authority": false,
+    "automation_publication_authority": "none",
+    "implementation_authorized": false,
+    "publication_authorized": false
+  },
+  "invariants": [
+    "access-is-not-consent",
+    "evidence-is-not-publication-permission",
+    "transport-is-not-canonical-authority",
+    "review-is-not-approval",
+    "correction-holds-dependent-projections",
+    "repository-visibility-is-not-record-sensitivity",
+    "outbound-communication-is-not-outcome-evidence",
+    "unavailable-source-content-is-not-negative-evidence",
+    "duplicate-export-is-not-independent-corroboration",
+    "passing-evals-do-not-advance-rfc-stage"
+  ]
+}

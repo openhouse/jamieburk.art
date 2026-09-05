@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "rfc": 11,
+  "stage": "implementing",
+  "pair_id": "portfolio-public-private-v1",
+  "purpose": "Coordinate one public-safe portfolio repository and one private knowledge-vault sidecar as a single development lane without making the public build depend on or disclose the private repository.",
+  "roles": ["public", "private"],
+  "lockstep": {
+    "branch_name": "exact",
+    "base_branch_name": "exact",
+    "pull_request_title": "exact",
+    "pull_request_state": "paired-open-review",
+    "commit_identity": "independent",
+    "merge_authority": "independent-human-decision",
+    "canonical_switch_command": "npm run pair:switch -- <branch>",
+    "raw_git_switch_guarantee": "best-effort-post-checkout-hook",
+    "dirty_worktree_effect": "hold-before-coordinated-switch",
+    "missing_counterpart_branch_effect": "create-from-counterpart-current-branch"
+  },
+  "visibility": {
+    "public": "PUBLIC",
+    "private": "PRIVATE",
+    "private_visibility_must_be_verified_before_content": true
+  },
+  "public_boundary": {
+    "runtime_dependency_on_private": false,
+    "private_locator": "operator-local-only",
+    "public_may_name_private_repository": false,
+    "public_may_link_private_pull_request": false,
+    "public_may_reveal_private_topology": false,
+    "public_may_acknowledge_opaque_sidecar_role": true,
+    "forbidden_fields": [
+      "private_repository",
+      "private_repository_url",
+      "private_pull_request_url",
+      "private_local_path",
+      "protected_locator",
+      "raw_source_body"
+    ],
+    "forbidden_content_classes": [
+      "private-correspondence",
+      "raw-transcript",
+      "client-negotiation",
+      "contact-data",
+      "credential",
+      "private-source-locator"
+    ]
+  },
+  "private_boundary": {
+    "may_reference_public_ids": true,
+    "may_store_public_repository_locator": true,
+    "may_store_private_graph_context": true,
+    "is_not_credential_store": true,
+    "is_not_unrestricted_raw_archive": true,
+    "raw_source_default": "governed-pointer",
+    "public_projection_requires_separate_packet": true,
+    "bounded_complete_call_record_policy": "explicit-authorization-and-access-review",
+    "every_captured_artifact_requires_disposition": true,
+    "participant_restrictions_control_disclosure": true,
+    "restricted_shareable_omission_is_not_private_deletion": true
+  },
+  "reference_model": {
+    "direction": "private-to-public",
+    "shared_join_key": "public_projection_id",
+    "public_private_backlink": false,
+    "public_missing_edge_diagnostic": false,
+    "private_record_discovery": "permissioned-private-search"
+  },
+  "pull_requests": {
+    "head_branch_names_must_match": true,
+    "base_branch_names_must_match": true,
+    "titles_must_match": true,
+    "descriptions_may_differ_by_visibility": true,
+    "public_description_must_not_identify_private_locator": true,
+    "private_description_may_link_public_review": true,
+    "update_both_when_either_candidate_changes": true,
+    "one_merge_does_not_authorize_other": true
+  },
+  "evaluation": {
+    "ordered_phases": ["deterministic", "cross-repository-state", "human"],
+    "script": "scripts/rfcs/private-vault-sidecar-eval.mjs",
+    "test": "scripts/rfcs/private-vault-sidecar-eval.test.mjs",
+    "suite": "evals/knowledge-bank/private-vault-sidecar-rfc-evals.json",
+    "candidate_evidence_is_repository_specific": true,
+    "changed_candidate_invalidates_receipt": true
+  },
+  "authority": {
+    "decision_owner": "Jamie Burkart",
+    "authorization_source": "direct-user-instruction-2026-09-04",
+    "implementation_authorized": true,
+    "private_repository_creation_authorized": true,
+    "private_content_publication_authorized": false,
+    "public_deployment_authorized": false,
+    "automatic_merge_authority": "none"
+  },
+  "human_gates": {
+    "decision_owner": "Jamie Burkart",
+    "required": [
+      "private-access",
+      "record-classification",
+      "rights-and-consent",
+      "public-projection",
+      "public-merge",
+      "private-merge",
+      "deployment",
+      "production-indexing"
+    ],
+    "automation_may_satisfy": []
+  },
+  "invariants": [
+    "same-branch-name-not-same-content",
+    "paired-review-not-shared-commit",
+    "private-merge-not-publication",
+    "public-build-independent-of-private",
+    "public-graph-does-not-reveal-private-topology",
+    "private-repository-not-source-vault",
+    "no-unaccounted-bounded-call-artifact",
+    "private-preservation-not-publication",
+    "access-is-not-consent",
+    "evidence-is-not-publication-permission"
+  ]
+}

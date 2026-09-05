@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "id": "weekly-practice-review-rfc",
+  "objective": "Reduce concurrent commitment load, give gatherings one purpose, distribute agency, protect paid work, and keep private context out of public projections without treating preservation as obligation.",
+  "cases": [
+    {
+      "id": "bounded-review-enters-human-review",
+      "candidate": {
+        "active_commitment_count": 3,
+        "all_commitments_have_required_fields": true,
+        "counts_preservation_as_active": false,
+        "new_commitment_requested": false,
+        "capacity_slot_available": false,
+        "substitution_recorded": false,
+        "gathering_verb_count": 1,
+        "gathering_verb": "decide",
+        "closure_receipt_complete": true,
+        "assigns_other_people_without_opt_in": false,
+        "agency_map_complete": true,
+        "bespoke_work_requested": false,
+        "commercial_state": null,
+        "public_content_classes": ["general-method", "synthetic-eval-case"],
+        "has_publication_packet": true,
+        "automation_actions": ["count-active-commitments"],
+        "person_level_productivity_surveillance": false
+      },
+      "expected": {
+        "decision": "ready-for-human-review",
+        "adoption_authorized": false,
+        "publication_authorized": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fourth-active-commitment-is-held",
+      "patch": {"active_commitment_count": 4},
+      "expected": {"decision": "hold", "adoption_authorized": false, "publication_authorized": false, "reasons": ["default-active-limit-exceeded"]}
+    },
+    {
+      "id": "preservation-cannot-silently-create-obligation",
+      "patch": {"counts_preservation_as_active": true},
+      "expected": {"decision": "hold", "adoption_authorized": false, "publication_authorized": false, "reasons": ["preservation-conflated-with-commitment"]}
+    },
+    {
+      "id": "full-slate-needs-explicit-substitution",
+      "patch": {"new_commitment_requested": true},
+      "expected": {"decision": "hold", "adoption_authorized": false, "publication_authorized": false, "reasons": ["one-in-one-out-substitution-required"]}
+    },
+    {
+      "id": "recorded-substitution-opens-capacity",
+      "patch": {"new_commitment_requested": true, "substitution_recorded": true},
+      "expected": {"decision": "ready-for-human-review", "adoption_authorized": false, "publication_authorized": false, "reasons": []}
+    },
+    {
+      "id": "missing-outcome-owner-or-exit-fields-is-held",
+      "patch": {"all_commitments_have_required_fields": false},
+      "expected": {"decision": "hold", "adoption_authorized": false, "publication_authorized": false, "reasons": ["commitment-fields-incomplete"]}
+    },
+    {
+      "id": "multiple-gathering-purposes-are-held",
+      "patch": {"gathering_verb_count": 2},
+      "expected": {"decision": "hold", "adoption_authorized": false, "publication_authorized": false, "reasons": ["one-governing-verb-required"]}
+    },
+    {
+      "id": "unknown-gathering-purpose-is-held",
+      "patch": {"gathering_verb": "network"},
+      "expected": {"decision": "hold", "adoption_authorized": false, "publication_authorized": false, "reasons": ["governing-verb-not-allowed"]}
+    },
+    {
+      "id": "gathering-without-ending-is-held",
+      "patch": {"closure_receipt_complete": false},
+      "expected": {"decision": "hold", "adoption_authorized": false, "publication_authorized": false, "reasons": ["closure-receipt-incomplete"]}
+    },
+    {
+      "id": "unaccepted-assignment-is-denied",
+      "patch": {"assigns_other_people_without_opt_in": true},
+      "expected": {"decision": "deny", "adoption_authorized": false, "publication_authorized": false, "reasons": ["other-person-assignment-without-opt-in"]}
+    },
+    {
+      "id": "incomplete-agency-map-is-held",
+      "patch": {"agency_map_complete": false},
+      "expected": {"decision": "hold", "adoption_authorized": false, "publication_authorized": false, "reasons": ["agency-map-incomplete"]}
+    },
+    {
+      "id": "unbounded-unpaid-bespoke-work-is-held",
+      "patch": {"bespoke_work_requested": true, "commercial_state": null},
+      "expected": {"decision": "hold", "adoption_authorized": false, "publication_authorized": false, "reasons": ["commercial-boundary-required"]}
+    },
+    {
+      "id": "bounded-donation-is-an-explicit-commercial-state",
+      "patch": {"bespoke_work_requested": true, "commercial_state": "bounded-donation"},
+      "expected": {"decision": "ready-for-human-review", "adoption_authorized": false, "publication_authorized": false, "reasons": []}
+    },
+    {
+      "id": "private-relationship-state-is-denied-from-public",
+      "patch": {"public_content_classes": ["general-method", "relationship-state"]},
+      "expected": {"decision": "deny", "adoption_authorized": false, "publication_authorized": false, "reasons": ["public-content-forbidden:relationship-state"]}
+    },
+    {
+      "id": "public-method-still-requires-publication-packet",
+      "patch": {"has_publication_packet": false},
+      "expected": {"decision": "hold", "adoption_authorized": false, "publication_authorized": false, "reasons": ["separate-publication-packet-required"]}
+    },
+    {
+      "id": "automation-cannot-choose-priorities-or-assign-people",
+      "patch": {"automation_actions": ["choose-priorities", "assign-people"]},
+      "expected": {"decision": "deny", "adoption_authorized": false, "publication_authorized": false, "reasons": ["automation-action-forbidden:assign-people", "automation-action-forbidden:choose-priorities"]}
+    },
+    {
+      "id": "person-level-productivity-surveillance-is-denied",
+      "patch": {"person_level_productivity_surveillance": true},
+      "expected": {"decision": "deny", "adoption_authorized": false, "publication_authorized": false, "reasons": ["person-level-productivity-surveillance-forbidden"]}
+    }
+  ]
+}

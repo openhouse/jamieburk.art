@@ -1,0 +1,10 @@
+#!/bin/sh
+
+repo_root="$(git rev-parse --show-toplevel 2>/dev/null)" || exit 0
+local_config="$repo_root/.workspace-pair.local.json"
+
+if [ ! -f "$local_config" ]; then
+  exit 0
+fi
+
+exec node "$repo_root/scripts/workspace-pair.mjs" sync-from-hook "$1" "$2" "$3"

@@ -107,6 +107,11 @@ that an agent, test, or informal participant has human decision authority.
 | [0007](./0007-nyc-jobs-opportunity-monitor-and-digest.md) | NYC Jobs Opportunity Monitor and Hiring Action Digest | `proposed` | Jamie Burkart |
 | [0008](./0008-editorial-page-owner-pilot.md) | Editorial Page-Owner Pilot | `proposed` | Jamie Burkart |
 | [0009](./0009-wiki-as-shared-memory-protocol.md) | Wiki as Shared Memory Protocol for People and Agents | `proposed` | Jamie Burkart |
+| [0010](./0010-minimum-viable-federation-canary.md) | Minimum Viable Federation Canary for Responsible Knowledge Passage | `proposed` | Jamie Burkart |
+| [0011](./0011-private-vault-sidecar.md) | Paired Public Portfolio and Private Vault Sidecar | `implementing` | Jamie Burkart |
+| [0012](./0012-public-engagement-pathway.md) | Public Engagement Pathway for a Bounded Working Session | `proposed` | Jamie Burkart |
+| [0013](./0013-governed-audio-to-knowledge-workflow.md) | Governed Audio-to-Knowledge Workflow | `implementing` | Jamie Burkart |
+| [0014](./0014-weekly-practice-review-and-commitment-protocol.md) | Weekly Practice Review and Commitment Protocol | `proposed` | Jamie Burkart |
 
 ## Validation
 

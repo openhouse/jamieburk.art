@@ -116,6 +116,24 @@ model, package, repository, or cross-system proposals. Follow
 `exploring` RFC is preserved for review; it is not implementation authorization.
 Agents may draft, critique, prototype, and test an RFC but may not advance a
 decision that the RFC reserves for Jamie or another named human decision owner.
+
+## Paired Private Workspace
+
+When `.workspace-pair.local.json` is present, this checkout participates in the
+paired public/private development protocol defined by RFC 0011.
+
+- Use `npm run pair:switch -- <branch>` instead of a raw branch switch.
+- Run `npm run pair:status` before committing, pushing, or updating a pull
+  request.
+- Keep head branch, base branch, pull-request title, and draft posture aligned.
+- Keep commits, checks, descriptions, approvals, merges, and rollback
+  independent.
+- Never commit the counterpart repository name, URL, pull request, local path,
+  private IDs, source locators, or protected topology here.
+- Never make a public build, test, deployment, or rollback depend on private
+  access.
+- A paired branch or review is coordination evidence, not publication, merge,
+  deployment, consent, rights, or relationship authority.
 ## Scope Rules
 
 Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser,

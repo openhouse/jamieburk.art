@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "rfc": 13,
+  "stage": "implementing",
+  "purpose": "Standardize a resumable, provider-adaptable, evidence-linked path from an authorized call family to a private Knowledge Wiki update without collapsing custody, transcription, diarization, repair, interpretation, or publication.",
+  "stages": [
+    "intake",
+    "inventory",
+    "preservation",
+    "preparation",
+    "transcription",
+    "diarization",
+    "repair",
+    "close-reading",
+    "projection",
+    "verification"
+  ],
+  "stage_states": ["not-started", "held", "running", "complete", "failed", "superseded"],
+  "authority": {
+    "decision_owner": "Jamie Burkart",
+    "implementation_authorized": true,
+    "source_access_authorized_by_rfc": false,
+    "private_preservation_authorized_by_rfc": false,
+    "external_transfer_authorized_by_rfc": false,
+    "known_speaker_reference_authorized_by_rfc": false,
+    "publication_authorized": false,
+    "merge_authorized": false,
+    "deployment_authorized": false,
+    "job_authority_mode": "explicit-and-bounded-per-job"
+  },
+  "custody": {
+    "every_observed_artifact_requires_disposition": true,
+    "source_originals_are_immutable": true,
+    "source_originals_require_sha256": true,
+    "raw_audio_default_destination": "source-vault",
+    "private_git_is_not_raw_source_vault": true,
+    "processing_uses_derived_media": true,
+    "fragment_order_is_explicit": true,
+    "provider_exports_are_immutable": true
+  },
+  "provider_adapter": {
+    "provider_neutral_contract": true,
+    "external_transfer_requires_active_job_confirmation": true,
+    "completion_requires_collected_export": true,
+    "visible_provider_state_is_not_export": true,
+    "required_metadata": [
+      "provider",
+      "model-or-version",
+      "input-formats",
+      "size-or-duration-limits",
+      "chunking-behavior",
+      "response-format",
+      "retry-behavior"
+    ]
+  },
+  "context": {
+    "may_bound_chronology": true,
+    "may_support_term_repair": true,
+    "scheduled_event_alone_establishes_occurrence": false,
+    "search_miss_establishes_absence": false,
+    "conflicting_sources_must_be_retained": true
+  },
+  "revisit_queue": {
+    "body_free": true,
+    "private_by_default": true,
+    "every_candidate_requires_disposition": true,
+    "current_method_controls_are_not_backlog": true,
+    "participant_holds_are_not_actionable": true,
+    "dataless_is_not_absent": true,
+    "priority_is_not_processing_authority": true,
+    "private_item_counts_may_be_public": false,
+    "allowed_dispositions": [
+      "queued",
+      "reference-current",
+      "held-participant-restriction",
+      "out-of-scope",
+      "unresolved"
+    ]
+  },
+  "cloud_recovery": {
+    "authenticated_read_only_fallback": true,
+    "web_listing_is_preservation": false,
+    "confirmed_empty_is_materialization_failure": false,
+    "download_requires_private_custody_and_sha256": true,
+    "download_timeout_may_be_called_recovered": false,
+    "cloud_mutation_allowed": false,
+    "candidate_git_may_contain_recovered_raw_body": false,
+    "state_terms": [
+      "cloud-listed",
+      "confirmed-empty",
+      "recovered-and-hashed",
+      "download-timed-out"
+    ]
+  },
+  "diarization": {
+    "generic_labels_allowed": true,
+    "named_labels_require_support": true,
+    "named_labels_require_human_review": true,
+    "uncertainty_must_be_visible": true,
+    "known_speaker_reference_requires_specific_authority": true,
+    "provider_guess_alone_establishes_identity": false
+  },
+  "repair": {
+    "provider_export_is_never_edited": true,
+    "repair_is_separate_derived_artifact": true,
+    "audio_comparison_required": true,
+    "segment_lineage_required": true,
+    "uncertainty_markers_required": true,
+    "context_may_invent_missing_speech": false,
+    "automation_may_self_certify_audio": false
+  },
+  "knowledge": {
+    "complete_repair_and_close_reading_are_separate": true,
+    "private_is_default_destination": true,
+    "source_ids_required": true,
+    "claim_states": [
+      "direct-record",
+      "attributed-statement",
+      "documented-interpretation",
+      "inference",
+      "contradiction",
+      "open-question"
+    ],
+    "public_projection_requires_separate_packet": true,
+    "automatic_publication": false,
+    "public_may_reveal_private_topology": false
+  },
+  "automation": {
+    "implementation": "scripts/audio-workflow/cli.mjs",
+    "commands": [
+      "plan",
+      "queue",
+      "inventory",
+      "preserve",
+      "prepare",
+      "transcribe",
+      "diarize",
+      "repair",
+      "wiki",
+      "project",
+      "verify"
+    ],
+    "dry_run_required": true,
+    "resumable": true,
+    "idempotent_by_hash_and_recipe": true,
+    "changed_input_invalidates_downstream_receipts": true,
+    "nonzero_exit_on_hold_or_deny": true,
+    "hold_exit_code": 2,
+    "deny_exit_code": 1,
+    "logs_must_be_body_free_and_secret_free": true,
+    "automatic_contact": false,
+    "automatic_merge": false,
+    "automatic_deployment": false
+  },
+  "evaluation": {
+    "ordered_phases": ["deterministic", "bounded-human-review", "public-projection-review"],
+    "script": "scripts/rfcs/audio-to-knowledge-workflow-eval.mjs",
+    "tests": [
+      "scripts/rfcs/audio-to-knowledge-workflow-eval.test.mjs",
+      "scripts/rfcs/audio-to-knowledge-workflow-rfc.test.mjs"
+    ],
+    "suite": "evals/knowledge-bank/audio-to-knowledge-workflow-rfc-evals.json",
+    "candidate_change_invalidates_receipt": true,
+    "deterministic_checks_satisfy_human_gates": false
+  },
+  "human_gates": {
+    "required": [
+      "rfc-acceptance",
+      "job-source-access",
+      "job-private-preservation",
+      "external-private-data-transfer",
+      "known-speaker-reference",
+      "named-speaker-review",
+      "participant-correction",
+      "private-access-change",
+      "public-projection",
+      "quotation-and-attribution",
+      "rights-and-consent",
+      "merge",
+      "deployment",
+      "publication"
+    ],
+    "automation_may_satisfy": []
+  },
+  "invariants": [
+    "no-unaccounted-observed-artifact",
+    "source-original-never-overwritten",
+    "provider-export-never-repaired-in-place",
+    "provider-state-not-completed-export",
+    "diarization-not-speaker-identity",
+    "repair-not-automatic-audio-certification",
+    "private-close-reading-not-transcript",
+    "private-completion-not-publication",
+    "retry-not-duplicate",
+    "access-not-consent",
+    "evidence-not-publication-permission"
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "id": "minimum-viable-federation-rfc",
+  "objective": "Keep one bounded Sourcebook canary intelligible, legitimate, and federated while corrections fail closed and automation retains no publication authority.",
+  "cases": [
+    {
+      "id": "complete-reference-enters-review",
+      "event": {
+        "event_id": "event-001",
+        "kind": "canonical-record-reference",
+        "origin": {"repository": "canonical-subject-edition", "record_id": "statement-001", "revision": "commit-a", "content_fingerprint": "fingerprint-a"},
+        "target": "semantic-evidence-graph",
+        "purpose": "bounded public-safe interpretation",
+        "audience": ["internal-editorial-review"],
+        "authority": {"source": "origin-repository", "interpretation": "receiving-repository", "publication": "named-human-decision-owner"},
+        "intent": "transport"
+      },
+      "expected": {"decision": "accept-as-proposal", "next_state": "received-proposal", "authority_transferred": false, "publication_authorized": false, "reasons": []}
+    },
+    {
+      "id": "missing-revision-holds-reference",
+      "event": {
+        "event_id": "event-002",
+        "kind": "canonical-record-reference",
+        "origin": {"repository": "canonical-subject-edition", "record_id": "statement-001", "content_fingerprint": "fingerprint-a"},
+        "target": "semantic-evidence-graph",
+        "purpose": "bounded public-safe interpretation",
+        "audience": ["internal-editorial-review"],
+        "authority": {"source": "origin-repository", "interpretation": "receiving-repository", "publication": "named-human-decision-owner"},
+        "intent": "transport"
+      },
+      "expected": {"decision": "hold", "reasons": ["origin-field-missing:revision"]}
+    },
+    {
+      "id": "raw-body-is-denied",
+      "event": {
+        "event_id": "event-003",
+        "kind": "canonical-record-reference",
+        "origin": {"repository": "canonical-subject-edition", "record_id": "statement-001", "revision": "commit-a", "content_fingerprint": "fingerprint-a", "raw_source_body": "not allowed"},
+        "target": "semantic-evidence-graph",
+        "purpose": "bounded public-safe interpretation",
+        "audience": ["internal-editorial-review"],
+        "authority": {"source": "origin-repository", "interpretation": "receiving-repository", "publication": "named-human-decision-owner"},
+        "intent": "transport"
+      },
+      "expected": {"decision": "deny", "reasons": ["forbidden-public-field:raw_source_body"]}
+    },
+    {
+      "id": "protected-locator-is-denied",
+      "event": {
+        "event_id": "event-004",
+        "kind": "canonical-record-reference",
+        "origin": {"repository": "canonical-subject-edition", "record_id": "statement-001", "revision": "commit-a", "content_fingerprint": "fingerprint-a"},
+        "target": "semantic-evidence-graph",
+        "purpose": "bounded public-safe interpretation",
+        "audience": ["internal-editorial-review"],
+        "authority": {"source": "origin-repository", "interpretation": "receiving-repository", "publication": "named-human-decision-owner"},
+        "protected_locator": "private://not-allowed",
+        "intent": "transport"
+      },
+      "expected": {"decision": "deny", "reasons": ["forbidden-public-field:protected_locator"]}
+    },
+    {
+      "id": "unknown-kind-is-denied",
+      "event": {
+        "event_id": "event-005",
+        "kind": "release-receipt",
+        "origin": {"repository": "canonical-subject-edition", "record_id": "statement-001", "revision": "commit-a", "content_fingerprint": "fingerprint-a"},
+        "target": "portfolio-projection",
+        "purpose": "release",
+        "audience": ["public"],
+        "authority": {"source": "origin-repository", "interpretation": "receiving-repository", "publication": "named-human-decision-owner"},
+        "intent": "transport"
+      },
+      "expected": {"decision": "deny", "reasons": ["exchange-kind-not-allowed"]}
+    },
+    {
+      "id": "transport-cannot-publish",
+      "event": {
+        "event_id": "event-006",
+        "kind": "canonical-record-reference",
+        "origin": {"repository": "canonical-subject-edition", "record_id": "statement-001", "revision": "commit-a", "content_fingerprint": "fingerprint-a"},
+        "target": "portfolio-projection",
+        "purpose": "public composition",
+        "audience": ["public"],
+        "authority": {"source": "origin-repository", "interpretation": "receiving-repository", "publication": "named-human-decision-owner"},
+        "intent": "publish"
+      },
+      "expected": {"decision": "deny", "reasons": ["automation-publication-authority-forbidden"]}
+    },
+    {
+      "id": "missing-publication-authority-holds",
+      "event": {
+        "event_id": "event-007",
+        "kind": "canonical-record-reference",
+        "origin": {"repository": "canonical-subject-edition", "record_id": "statement-001", "revision": "commit-a", "content_fingerprint": "fingerprint-a"},
+        "target": "semantic-evidence-graph",
+        "purpose": "bounded public-safe interpretation",
+        "audience": ["internal-editorial-review"],
+        "authority": {"source": "origin-repository", "interpretation": "receiving-repository"},
+        "intent": "transport"
+      },
+      "expected": {"decision": "hold", "reasons": ["authority-field-missing:publication"]}
+    },
+    {
+      "id": "collapsed-authority-is-denied",
+      "event": {
+        "event_id": "event-007b",
+        "kind": "canonical-record-reference",
+        "origin": {"repository": "canonical-subject-edition", "record_id": "statement-001", "revision": "commit-a", "content_fingerprint": "fingerprint-a"},
+        "target": "semantic-evidence-graph",
+        "purpose": "bounded public-safe interpretation",
+        "audience": ["internal-editorial-review"],
+        "authority": {"source": "receiving-automation", "interpretation": "receiving-automation", "publication": "receiving-automation"},
+        "intent": "transport"
+      },
+      "expected": {"decision": "deny", "reasons": ["authority-boundaries-collapsed"]}
+    },
+    {
+      "id": "stale-origin-is-denied",
+      "context": {"current_origin": {"record_id": "statement-001", "revision": "commit-b", "content_fingerprint": "fingerprint-b"}},
+      "event": {
+        "event_id": "event-008",
+        "kind": "canonical-record-reference",
+        "origin": {"repository": "canonical-subject-edition", "record_id": "statement-001", "revision": "commit-a", "content_fingerprint": "fingerprint-a"},
+        "target": "semantic-evidence-graph",
+        "purpose": "bounded public-safe interpretation",
+        "audience": ["internal-editorial-review"],
+        "authority": {"source": "origin-repository", "interpretation": "receiving-repository", "publication": "named-human-decision-owner"},
+        "intent": "transport"
+      },
+      "expected": {"decision": "deny", "reasons": ["origin-binding-mismatch:content_fingerprint", "origin-binding-mismatch:revision"]}
+    },
+    {
+      "id": "outbound-only-cannot-establish-adoption",
+      "event": {
+        "event_id": "event-008b",
+        "kind": "canonical-record-reference",
+        "origin": {"repository": "canonical-subject-edition", "record_id": "statement-001", "revision": "commit-a", "content_fingerprint": "fingerprint-a"},
+        "target": "semantic-evidence-graph",
+        "purpose": "evaluate an adoption claim without a response record",
+        "audience": ["internal-editorial-review"],
+        "authority": {"source": "origin-repository", "interpretation": "receiving-repository", "publication": "named-human-decision-owner"},
+        "evidence_posture": "outbound-only",
+        "claim_assertion": "adoption",
+        "intent": "transport"
+      },
+      "expected": {"decision": "hold", "reasons": ["outbound-only-cannot-establish:adoption"]}
+    },
+    {
+      "id": "dataless-source-remains-unresolved",
+      "event": {
+        "event_id": "event-008c",
+        "kind": "canonical-record-reference",
+        "origin": {"repository": "canonical-subject-edition", "record_id": "statement-001", "revision": "commit-a", "content_fingerprint": "fingerprint-a"},
+        "target": "semantic-evidence-graph",
+        "purpose": "evaluate a listed source whose body is not locally available",
+        "audience": ["internal-editorial-review"],
+        "authority": {"source": "origin-repository", "interpretation": "receiving-repository", "publication": "named-human-decision-owner"},
+        "source_access_state": "dataless",
+        "intent": "transport"
+      },
+      "expected": {"decision": "hold", "reasons": ["source-content-unavailable:dataless"]}
+    },
+    {
+      "id": "duplicate-exports-do-not-corroborate",
+      "event": {
+        "event_id": "event-008d",
+        "kind": "canonical-record-reference",
+        "origin": {"repository": "canonical-subject-edition", "record_id": "statement-001", "revision": "commit-a", "content_fingerprint": "fingerprint-a"},
+        "target": "semantic-evidence-graph",
+        "purpose": "test whether duplicate exports are mistaken for independent sources",
+        "audience": ["internal-editorial-review"],
+        "authority": {"source": "origin-repository", "interpretation": "receiving-repository", "publication": "named-human-decision-owner"},
+        "corroboration_required": true,
+        "minimum_independent_sources": 2,
+        "source_content_fingerprints": ["same-fingerprint", "same-fingerprint"],
+        "intent": "transport"
+      },
+      "expected": {"decision": "hold", "reasons": ["duplicate-content-fingerprints-cannot-establish-corroboration"]}
+    },
+    {
+      "id": "correction-holds-dependent-projections",
+      "event": {
+        "event_id": "event-009",
+        "kind": "correction-notice",
+        "origin": {"repository": "canonical-subject-edition", "record_id": "statement-001", "revision": "commit-b", "content_fingerprint": "fingerprint-b"},
+        "target": "semantic-evidence-graph",
+        "purpose": "propagate a synthetic correction exercise",
+        "audience": ["internal-editorial-review"],
+        "authority": {"source": "origin-repository", "interpretation": "receiving-repository", "publication": "named-human-decision-owner"},
+        "correction_id": "correction-001",
+        "supersedes_revision": "commit-a",
+        "affected_projection_ids": ["public-record-summary", "portfolio-case-study"],
+        "intent": "transport"
+      },
+      "expected": {"decision": "hold-projection", "correction_id": "correction-001", "invalidated_projection_ids": ["portfolio-case-study", "public-record-summary"], "original_preserved": true, "authority_transferred": false, "publication_authorized": false, "reasons": []}
+    },
+    {
+      "id": "correction-without-downstream-inventory-holds",
+      "event": {
+        "event_id": "event-010",
+        "kind": "correction-notice",
+        "origin": {"repository": "canonical-subject-edition", "record_id": "statement-001", "revision": "commit-b", "content_fingerprint": "fingerprint-b"},
+        "target": "semantic-evidence-graph",
+        "purpose": "propagate a synthetic correction exercise",
+        "audience": ["internal-editorial-review"],
+        "authority": {"source": "origin-repository", "interpretation": "receiving-repository", "publication": "named-human-decision-owner"},
+        "correction_id": "correction-001",
+        "supersedes_revision": "commit-a",
+        "affected_projection_ids": [],
+        "intent": "transport"
+      },
+      "expected": {"decision": "hold", "reasons": ["correction-field-empty:affected_projection_ids"]}
+    }
+  ],
+  "human_gates": [
+    "affected-party review",
+    "rights and consent",
+    "collective-credit review",
+    "editorial selection",
+    "publication",
+    "deployment",
+    "production indexing",
+    "RFC stage advancement"
+  ]
+}

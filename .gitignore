@@ -40,3 +40,5 @@ supporting-materials/
 *.woff
 *.woff2
 reports/generated/
+.workspace-pair.local.json
+.source-access.local.json
