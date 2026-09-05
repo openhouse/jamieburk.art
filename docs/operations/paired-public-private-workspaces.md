@@ -74,6 +74,20 @@ mailboxes, message databases, unrestricted exports, and sensitive source
 binaries remain outside Git by default. Prefer governed pointers, bounded
 derived records, and explicit source dispositions.
 
+## Retention and omission
+
+Public composition may omit protected call material, but omission is not
+disposal. Every known call-derived artifact must resolve privately to an exact
+authorized artifact, a governed derivative, a governed pointer, or an explicit
+gap. The public repository stores none of the private identity, locator, count,
+hash, or record topology needed to resolve that disposition.
+
+Confidentiality narrows access, reuse, and projection; it does not itself order
+destruction. A request for deletion or no retention is a separate, explicit
+human decision whose exact scope, authority, and recovery consequences must be
+recorded before any destructive action. Until then, an unlocated artifact stays
+an open gap rather than being silently treated as discarded.
+
 ## Build and release boundary
 
 Public builds, tests, deployments, and rollback must work with the private

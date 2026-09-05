@@ -99,6 +99,12 @@ export function evaluatePrivateVaultSidecarRFC(options = {}) {
       contract.private_boundary?.is_not_unrestricted_raw_archive === true &&
       contract.private_boundary?.raw_source_default === "governed-pointer" &&
       contract.private_boundary?.public_projection_requires_separate_packet === true,
+    private_retention_disposition_contract:
+      contract.retention?.private_call_artifact_disposition_required === true &&
+      contract.retention?.public_omission_requires_private_disposition === true &&
+      contract.retention?.unlocated_artifact_state === "explicit-gap-not-discarded" &&
+      contract.retention?.confidentiality_effect === "restrict-projection-not-custody" &&
+      contract.retention?.deletion_authority === "separate-explicit-human-decision",
     one_way_reference_model:
       contract.reference_model?.direction === "private-to-public" &&
       contract.reference_model?.shared_join_key === "public_projection_id" &&
@@ -113,8 +119,9 @@ export function evaluatePrivateVaultSidecarRFC(options = {}) {
       scenarioResults.length >= 7 && scenarioResults.every((scenario) => scenario.passed)
   };
 
+  const criterionWeight = 1 / Object.keys(checks).length;
   const rubric = Object.fromEntries(
-    Object.keys(checks).map((id) => [id, { weight: 0.125, hard: true }])
+    Object.keys(checks).map((id) => [id, { weight: criterionWeight, hard: true }])
   );
   const score = Object.entries(rubric).reduce(
     (total, [id, criterion]) => total + (checks[id] ? criterion.weight : 0),

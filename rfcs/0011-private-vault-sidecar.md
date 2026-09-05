@@ -200,6 +200,18 @@ both reviews to be refreshed.
 
 ## Security and privacy
 
+Private retention is disposition-based, not publication-based. Every known
+call-derived artifact must be represented privately as an exact authorized
+artifact, a governed derivative, a governed pointer, or an explicit open gap.
+A protected artifact may be absent from the public composition while remaining
+accounted for in the private plane; the public repository must not reveal the
+identity, locator, count, hash, or topology of that record.
+
+Confidentiality restricts access and projection, not custody by implication.
+Deletion or no retention requires a separate, explicit human decision with a
+bounded target and recorded recovery consequences. An unlocated artifact
+remains an explicit gap and cannot be silently classified as discarded.
+
 The private repository's GitHub visibility must be read and confirmed as
 `PRIVATE` before protected content enters it. Visibility drift is a hard denial,
 not a warning. Access remains case by case and does not imply consent,

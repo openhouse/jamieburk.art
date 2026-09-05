@@ -55,6 +55,13 @@
     "raw_source_default": "governed-pointer",
     "public_projection_requires_separate_packet": true
   },
+  "retention": {
+    "private_call_artifact_disposition_required": true,
+    "public_omission_requires_private_disposition": true,
+    "unlocated_artifact_state": "explicit-gap-not-discarded",
+    "confidentiality_effect": "restrict-projection-not-custody",
+    "deletion_authority": "separate-explicit-human-decision"
+  },
   "reference_model": {
     "direction": "private-to-public",
     "shared_join_key": "public_projection_id",
@@ -110,6 +117,9 @@
     "public-build-independent-of-private",
     "public-graph-does-not-reveal-private-topology",
     "private-repository-not-source-vault",
+    "public-omission-requires-private-disposition",
+    "confidentiality-restricts-projection-not-custody",
+    "deletion-requires-separate-explicit-human-decision",
     "access-is-not-consent",
     "evidence-is-not-publication-permission"
   ]
