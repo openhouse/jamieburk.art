@@ -119,6 +119,16 @@ decision that the RFC reserves for Jamie or another named human decision owner.
 
 ## Paired Private Workspace
 
+For every permitted transcript ingest or repair, the audio workflow must refresh
+one cited situated writer's voice entry per attributed speaker. Use the
+source-bound `wiki` stage and its explicit private-root/voice-manifest inputs.
+Complete generated reading tasks from permitted source context; do not mark
+pending entries as close readings. Preserve source hashes, fragment/time/line
+citations, attribution uncertainty, and interpretive limits. Never treat a
+person mentioned in a transcript as its speaker, impersonate a participant,
+or publish a private person page. Run `npm run test:audio-runtime` for changes
+to this contract.
+
 When `.workspace-pair.local.json` is present, this checkout participates in the
 paired public/private development protocol defined by RFC 0011.
 

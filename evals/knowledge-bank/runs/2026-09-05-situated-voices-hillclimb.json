@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "run_date": "2026-09-05",
+  "feature": "situated-transcript-voice-readings",
+  "evaluator_kind": "deterministic-behavioral-tests",
+  "fingerprint_method": "SHA-256 of JSON.stringify(inputs), sorted by repository-relative path. Each input binds exact bytes. This receipt is excluded; it is not a Git commit hash.",
+  "human_review_completed": false,
+  "audio_certified": false,
+  "publication_authorized": false,
+  "inputs": [
+    {
+      "path": ".github/workflows/portfolio-readiness.yml",
+      "sha256": "1d1583f56c7dbca7d66a2eb048a07cdbf9afad4d1de6892a4d7e7877f8d75882"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "513a7e49571af3f7d666cb16fe6815f14d2fc8dce283ef2ae3981517a7e4ddb1"
+    },
+    {
+      "path": "evals/knowledge-bank/situated-voices-evals.json",
+      "sha256": "6d044900eb7969f8de255fb95e438336ff71de6c044790a3be383c409f2a5f2d"
+    },
+    {
+      "path": "package.json",
+      "sha256": "34db4ccfa3aad7cafc5ffb0a850bd28ce2b11974822facb657fde77d6feb1e52"
+    },
+    {
+      "path": "rfcs/0013-governed-audio-to-knowledge-workflow.contract.json",
+      "sha256": "b4449d656a6a82bfb075b036f6b608b8dee1d952367a052e8ffd58eb677cac4e"
+    },
+    {
+      "path": "rfcs/0013-governed-audio-to-knowledge-workflow.md",
+      "sha256": "54f0f332c8d7fcdb35c3d6f89cd3aea26a3ce8b73326115ca31552ffd146eb41"
+    },
+    {
+      "path": "scripts/audio-workflow/cli.mjs",
+      "sha256": "7e5ed40327082c070469fba53a1a97e888f26136c1492fdb5641a1e768a0dbdf"
+    },
+    {
+      "path": "scripts/audio-workflow/core.mjs",
+      "sha256": "ecf3023cce274aa8b521af6326e5b45ea2e7b7235430472c363973bc28d1989e"
+    },
+    {
+      "path": "scripts/audio-workflow/situated-voices.mjs",
+      "sha256": "5bf823173eece2f3bc34bf6fa1e1154144bac0307f3733f9a57501335bdd6e00"
+    },
+    {
+      "path": "scripts/audio-workflow/situated-voices.test.mjs",
+      "sha256": "f078d99d185a121cbc4282481b9367a534e855ce6eb22edc4826a39a75a66a11"
+    },
+    {
+      "path": "scripts/rfcs/audio-to-knowledge-workflow-eval.mjs",
+      "sha256": "8ab68537b22ea83e1f65b931f2426578feddfb05c0daf75ae9c24739f711c001"
+    }
+  ],
+  "candidate_fingerprint": "474c5ab0b97bc0b8c377f110244e9a0bb2086d6d123ee68240f61d2d1095b983",
+  "objective": "Require a cited, source-revision-bound entry for each explicitly attributed transcript speaker; keep unknown identity and missing analysis as visible completion holds.",
+  "baseline": "Close-reading could advance on a generic artifact-count receipt with no per-speaker analysis.",
+  "hill_climb": [
+    {
+      "failure": "Unrelated source bundle, stale downstream coverage, same-stage stale completion receipt, and dangling symlink preflight",
+      "focused_red": {
+        "tests": 26,
+        "passed": 22,
+        "failed": 4
+      },
+      "change": "Bind the exact repair corpus and recompute downstream coverage; invalidate same-stage held receipts; reject dangling symlinks before writes.",
+      "kept": true
+    },
+    {
+      "failure": "Generated pages omitted required authority metadata and retained stale graph relations",
+      "change": "Add date, authority and source basis; refresh generated frontmatter while retaining custom keys.",
+      "kept": true
+    },
+    {
+      "failure": "A quoted Markdown image could render remote content",
+      "change": "Render source quotations literally; regression test proves image syntax is escaped.",
+      "kept": true
+    }
+  ],
+  "verification": [
+    {
+      "command": "npm run test:audio-runtime",
+      "exit_code": 0,
+      "tests": 36,
+      "passed": 36,
+      "failed": 0
+    },
+    {
+      "command": "node --test scripts/rfcs/audio-to-knowledge-workflow-eval.test.mjs scripts/rfcs/audio-to-knowledge-workflow-rfc.test.mjs scripts/rfcs/audio-to-knowledge-revisit-queue-rfc.test.mjs",
+      "exit_code": 0,
+      "tests": 29,
+      "passed": 29,
+      "failed": 0
+    },
+    {
+      "command": "node scripts/check-rfcs.mjs",
+      "exit_code": 0,
+      "numbered_rfcs": 14
+    },
+    {
+      "command": "npm run public-safety",
+      "exit_code": 0,
+      "preexisting_careful_language_warnings": 11
+    },
+    {
+      "command": "npm run check",
+      "exit_code": 1,
+      "stopped_at": "evals:professor-lenses",
+      "reason": "Existing exact-candidate human-review scorecards do not match; no gate waived.",
+      "matching_final_scorecards": 0,
+      "required_final_scorecards": 6,
+      "candidate_fingerprint": "c4fbe7abdbdf9738edc7b2a92d6ff2272cb4a2be78ce79276363b94a067a02d6"
+    }
+  ],
+  "coverage_limits": "Synthetic structural and lifecycle fixtures only. No literary-quality score, human-label calibration, speaker certification, or private corpus access is claimed.",
+  "release_ready": false
+}

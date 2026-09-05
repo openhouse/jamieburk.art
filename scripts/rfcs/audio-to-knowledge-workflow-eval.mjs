@@ -24,6 +24,9 @@ const candidatePaths = [
   "scripts/rfcs/audio-to-knowledge-workflow-rfc.test.mjs",
   "scripts/audio-workflow/core.mjs",
   "scripts/audio-workflow/cli.mjs",
+  "scripts/audio-workflow/situated-voices.mjs",
+  "scripts/audio-workflow/situated-voices.test.mjs",
+  "evals/knowledge-bank/situated-voices-evals.json",
   "scripts/audio-workflow/audio-workflow.test.mjs"
 ];
 

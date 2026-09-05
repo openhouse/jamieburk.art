@@ -474,6 +474,59 @@ Rollback never deletes or publishes a private call record.
 
 ### Implementation hill climb
 
+#### Situated writer's voice entries (2026-09-05 implementation extension)
+
+Jamie requested automatic cited close-reading entries for every person in every
+transcript. The unit is the transcript/person pair, not an undated personality
+summary. This extension is implemented within the accepted workflow; it does
+not advance the RFC to operational status or change publication authority.
+
+`scripts/audio-workflow/situated-voices.mjs` discovers explicit timestamped
+speaker turns and projects permissioned Markdown person pages plus a typed,
+bidirectional graph. Every interpretation must quote the speaker's own words
+and bind source ID, SHA-256, fragment, timestamp, and line span. Source metadata,
+attribution basis, draft status, and interpretive limits remain beside the entry.
+Mentioned people are not promoted to participants. Unresolved speakers get
+transcript-scoped entries, not guessed identities or cross-call identity joins.
+
+The private adapter runs after repair and during repository checks. Missing
+analysis creates an explicit cited pending entry and a reading task. A source
+revision withdraws stale generated analysis and blocks completion. Automation
+does not fabricate a substantive interpretation to fill a missing slot. The
+authorized operator or agent completes the task from the permitted source and
+reruns the projection. Human attribution, listening review, consent, and
+publication remain distinct gates.
+
+The `wiki`, `project`, and `verify` commands require `--private-root` and a
+repository-relative `--voices` manifest. The repair receipt must list
+`transcript_sources: [{ transcript_id, sha256 }]`; the voice corpus must match
+that exact set. The close-reading receipt includes a computed coverage digest.
+Later stages re-evaluate the corpus and reject an old digest, even if an earlier
+stage was once complete. Old generic artifact-count receipts cannot satisfy the
+new requirement.
+
+Example, using deliberately generic placeholders:
+
+```sh
+node scripts/audio-workflow/cli.mjs wiki \
+  --manifest /permissioned/job.json --receipt /permissioned/receipt.json \
+  --private-root /permissioned --voices manifests/voices.json
+# Inspect the dry run; add --write only for the authorized private destination.
+```
+
+Managed page sections update idempotently; authored text outside them remains
+untouched. Collisions, traversal, and symlink paths fail closed. Retired generated
+readings are marked superseded without deleting the page or its Git history.
+Public CI uses synthetic fixtures only. It never reads a private corpus, emits
+its identities or topology, or treats deterministic structural checks as a
+validated literary judgment.
+
+The focused hill climb exposed four real regressions: a valid but unrelated
+corpus could satisfy a repair, later stages could trust a stale voice receipt,
+a held stage retained its old completion receipt, and a dangling symlink was
+not rejected at preflight. Executable tests now cover each. An independent CI
+job runs the audio/voice tests even when an unrelated release gate is red.
+
 The first runner pass exposed a contract mismatch: a reason-coded hold appeared
 in the JSON result but did not set a nonzero process status. A failing regression
 test fixed the boundary. Holds now return status `2`, denials and invalid queues

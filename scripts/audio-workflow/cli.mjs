@@ -3,6 +3,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { loadVoiceCorpus, syncVoicePages, voiceSummary } from "./situated-voices.mjs";
 import {
   completeStage,
   evaluateQueue,
@@ -48,14 +49,27 @@ export function run(argv) {
   const stage = COMMAND_TO_STAGE.get(command);
   if (!stage || !STAGES.includes(stage)) throw new Error("known-audio-command-required");
   const holdReasons = valueAfter(args, "--hold");
+  let voiceCorpus;
+  let voices;
+  if (!holdReasons && STAGES.indexOf(stage) >= STAGES.indexOf("close-reading")) {
+    const privateRoot = valueAfter(args, "--private-root");
+    const voiceManifest = valueAfter(args, "--voices");
+    if (!privateRoot || !voiceManifest) throw new Error("private-root-and-voices-required");
+    voiceCorpus = loadVoiceCorpus(privateRoot, voiceManifest);
+    voices = syncVoicePages(voiceCorpus, privateRoot);
+  }
   const updated = holdReasons
     ? holdStage(job, stage, holdReasons.split(",").filter(Boolean))
-    : completeStage(job, stage, loadJson(valueAfter(args, "--receipt"), "receipt"));
+    : voices && !voices.complete
+      ? holdStage(job, stage, ["situated-voice-coverage-incomplete"])
+      : completeStage(job, stage, loadJson(valueAfter(args, "--receipt"), "receipt"), voiceCorpus);
 
+  if (write && voices) syncVoicePages(voiceCorpus, valueAfter(args, "--private-root"), { write: true });
   if (write) writeFileSync(path.resolve(manifestPath), `${JSON.stringify(updated, null, 2)}\n`);
   return {
     dry_run: !write,
     command,
+    ...(voices ? { situated_voices: voiceSummary(voices.graph) } : {}),
     ...summarizeJob(updated)
   };
 }

@@ -110,6 +110,15 @@
     "automation_may_self_certify_audio": false
   },
   "knowledge": {
+    "every_transcript_speaker_requires_situated_voice_entry": true,
+    "entry_identity": ["transcript-id", "person-id-or-transcript-scoped-unresolved-speaker"],
+    "citations_bind_source_sha256_fragment_timestamp_and_lines": true,
+    "speaker_own_words_required_for_voice_observations": true,
+    "missing_or_stale_reading_blocks_completion": true,
+    "unresolved_identity_is_not_named_by_automation": true,
+    "source_change_invalidates_voice_readings": true,
+    "private_person_pages_and_bidirectional_graph_edges": true,
+    "voice_reading_is_not_impersonation_or_endorsement": true,
     "complete_repair_and_close_reading_are_separate": true,
     "private_is_default_destination": true,
     "source_ids_required": true,

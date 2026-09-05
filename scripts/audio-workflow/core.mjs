@@ -1,4 +1,5 @@
 import { isDeepStrictEqual } from "node:util";
+import { buildVoiceGraph, voiceSummary } from "./situated-voices.mjs";
 
 export const STAGES = [
   "intake",
@@ -111,11 +112,25 @@ export function createJobManifest(input) {
   };
 }
 
-export function completeStage(job, stage, receipt) {
+export function completeStage(job, stage, receipt, voiceCorpus) {
   if (!STAGES.includes(stage)) throw new Error("known-stage-required");
   requireQueuedJob(job, stage);
   requireAuthority(job, stage);
   requireReceipt(receipt);
+  if (STAGES.indexOf(stage) >= STAGES.indexOf("close-reading")) {
+    if (!voiceCorpus) throw new Error("situated-voice-corpus-required");
+    const graph = buildVoiceGraph(voiceCorpus);
+    if (!graph.complete) throw new Error("situated-voice-coverage-incomplete");
+    const sources = voiceCorpus.transcripts.map(t => ({ transcript_id: t.id, sha256: t.sha256 }))
+      .sort((a, b) => a.transcript_id.localeCompare(b.transcript_id));
+    const repairSources = [...(job.receipts?.repair?.transcript_sources ?? [])]
+      .sort((a, b) => a.transcript_id.localeCompare(b.transcript_id));
+    if (!isDeepStrictEqual(sources, repairSources)) throw new Error("voice-corpus-repair-binding-mismatch");
+    if (stage === "close-reading") receipt = { ...receipt, voice_coverage: voiceSummary(graph) };
+    else if (job.receipts?.["close-reading"]?.voice_coverage?.candidate_fingerprint !== graph.candidate_fingerprint) {
+      throw new Error("situated-voice-receipt-stale");
+    }
+  }
 
   const stageIndex = STAGES.indexOf(stage);
   if (stageIndex > 0) {
@@ -151,6 +166,7 @@ export function holdStage(job, stage, reasonCodes) {
     status: "held",
     reason_codes: [...new Set(reasonCodes)].sort()
   };
+  delete next.receipts[stage];
   const stageIndex = STAGES.indexOf(stage);
   for (const downstream of STAGES.slice(stageIndex + 1)) {
     next.stages[downstream] = { status: "not-started" };
