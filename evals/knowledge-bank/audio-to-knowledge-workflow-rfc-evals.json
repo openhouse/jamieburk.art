@@ -1,47 +1,336 @@
 {
   "schema_version": 1,
   "id": "audio-to-knowledge-workflow-rfc",
-  "objective": "Keep audio preservation, bounded context, exact provider return, diarization review, transcript repair, close reading, graph projection, and human authority distinct in one resumable workflow.",
-  "review_status": "provisional-pending-Jamie-review",
-  "independent_human_holdout": false,
+  "objective": "Preserve every artifact in a bounded authorized call family while keeping raw custody, provider transcription, diarization, conservative repair, private interpretation, and public projection as separate fail-closed stages.",
+  "baseline": {
+    "job_id": "call-family-example",
+    "scope": {
+      "bounded": true,
+      "preservation_authorized": true,
+      "source_access_authorized": true
+    },
+    "capture": {
+      "observed_artifact_count": 4,
+      "dispositioned_artifact_count": 4,
+      "originals_immutable": true,
+      "originals_hashed": true,
+      "raw_audio_destination": "source-vault"
+    },
+    "preparation": {
+      "derived_audio_only": true,
+      "source_bytes_modified": false
+    },
+    "context": {
+      "scheduled_event_present": false,
+      "occurrence_corroborated": false,
+      "event_state": "not-asserted"
+    },
+    "revisit_queue": {
+      "candidate_disposition": "queued",
+      "participant_restriction": false,
+      "current_method_control": false,
+      "public_detail_exposed": false,
+      "processing_authority_claimed": false
+    },
+    "transfer": {
+      "external_provider_required": true,
+      "authorized": true,
+      "private_data_confirmed": true
+    },
+    "transcription": {
+      "status": "complete",
+      "provider_export_preserved": true,
+      "provider_and_model_recorded": true,
+      "segment_order_recorded": true
+    },
+    "diarization": {
+      "label_mode": "generic",
+      "named_identity_supported": false,
+      "human_reviewed": false,
+      "uncertainty_marked": true,
+      "known_speaker_reference_used": false,
+      "known_speaker_reference_authorized": false
+    },
+    "repair": {
+      "status": "complete",
+      "compared_with_audio": true,
+      "segment_lineage": true,
+      "uncertainty_marked": true,
+      "provider_export_modified": false,
+      "audio_certification_status": "not-claimed"
+    },
+    "knowledge": {
+      "private_close_reading": "complete",
+      "source_ids_resolve": true,
+      "claim_states_present": true,
+      "destination": "private-sidecar"
+    },
+    "projection": {
+      "requested": false,
+      "human_reviewed": false,
+      "publication_authorized": false,
+      "automatic": false
+    },
+    "receipt": {
+      "candidate_matches": true,
+      "duplicate_artifact_count": 0
+    },
+    "security": {
+      "credentials_present": false
+    }
+  },
   "cases": [
-    { "id": "exact-candidate", "expected": "PASS", "critique": "All ten ordered stages and authority boundaries remain present.", "mutations": [] },
-    { "id": "safe-explicit-uncertainty", "expected": "PASS", "critique": "Restating an existing uncertainty requirement is a safe no-op.", "mutations": [{ "target": "candidate", "type": "set", "path": "repair.uncertainty_markers_required", "value": true }] },
-    { "id": "reject-stage-reorder", "expected": "FAIL", "critique": "Provider preparation cannot replace exact source custody.", "mutations": [{ "target": "candidate", "type": "set", "path": "stages.1", "value": "provider-input-preparation" }] },
-    { "id": "reject-skippable-stage-contract", "expected": "FAIL", "critique": "A mandatory transition cannot be optional.", "mutations": [{ "target": "candidate", "type": "set", "path": "stage_contract.non_skippable", "value": false }] },
-    { "id": "reject-missing-receipt", "expected": "FAIL", "critique": "Resume requires a durable stage receipt.", "mutations": [{ "target": "candidate", "type": "set", "path": "stage_contract.receipt_required", "value": false }] },
-    { "id": "reject-stale-downstream", "expected": "FAIL", "critique": "Changed source or judgment inputs must invalidate downstream artifacts.", "mutations": [{ "target": "candidate", "type": "set", "path": "stage_contract.downstream_invalidation_on_input_change", "value": false }] },
-    { "id": "reject-artifact-collapse", "expected": "FAIL", "critique": "Machine output and repair must remain different artifact layers.", "mutations": [{ "target": "candidate", "type": "set", "path": "artifact_layers.3", "value": "corrected-transcript" }] },
-    { "id": "reject-transform-before-preserve", "expected": "FAIL", "critique": "Transformation before exact custody breaks provenance.", "mutations": [{ "target": "candidate", "type": "set", "path": "custody.preservation_before_transformation", "value": false }] },
-    { "id": "reject-source-without-checksum", "expected": "FAIL", "critique": "The source needs an exact checksum before derivatives can be trusted.", "mutations": [{ "target": "candidate", "type": "set", "path": "custody.exact_source_checksum_required", "value": false }] },
-    { "id": "reject-source-deletion", "expected": "FAIL", "critique": "A transcript does not authorize source deletion.", "mutations": [{ "target": "candidate", "type": "set", "path": "custody.source_deletion_authorized", "value": true }] },
-    { "id": "reject-provider-return-loss", "expected": "FAIL", "critique": "Exact machine output must remain available beside repairs.", "mutations": [{ "target": "candidate", "type": "set", "path": "custody.exact_provider_return_preserved", "value": false }] },
-    { "id": "reject-unobserved-provider-completion", "expected": "FAIL", "critique": "Submission or pending state is not an observed completed return.", "mutations": [{ "target": "candidate", "type": "set", "path": "custody.provider_completion_requires_observed_return", "value": false }] },
-    { "id": "reject-mutable-inputs", "expected": "FAIL", "critique": "A resumable lineage cannot depend on silently mutable inputs.", "mutations": [{ "target": "candidate", "type": "set", "path": "state_machine.immutable_inputs", "value": false }] },
-    { "id": "reject-silent-overwrite", "expected": "FAIL", "critique": "Retries must append attempts rather than erase history.", "mutations": [{ "target": "candidate", "type": "set", "path": "state_machine.silent_overwrite_allowed", "value": true }] },
-    { "id": "reject-unbounded-context", "expected": "FAIL", "critique": "Context collection must remain minimum necessary.", "mutations": [{ "target": "candidate", "type": "set", "path": "context.minimum_necessary", "value": false }] },
-    { "id": "reject-context-without-cutoff", "expected": "FAIL", "critique": "A query and cutoff are required to reproduce the evidence packet.", "mutations": [{ "target": "candidate", "type": "set", "path": "context.query_and_cutoff_required", "value": false }] },
-    { "id": "reject-access-as-consent", "expected": "FAIL", "critique": "Readable material does not grant processing or publication consent.", "mutations": [{ "target": "candidate", "type": "set", "path": "context.access_equals_consent", "value": true }] },
-    { "id": "reject-unbound-submitted-bytes", "expected": "FAIL", "critique": "The workflow must record exactly which bytes reached the adapter.", "mutations": [{ "target": "candidate", "type": "set", "path": "provider_adapter.exact_submitted_byte_identity_required", "value": false }] },
-    { "id": "reject-provider-credentials-in-artifacts", "expected": "FAIL", "critique": "Credentials stay in the authentication environment, not workflow records.", "mutations": [{ "target": "candidate", "type": "set", "path": "provider_adapter.credentials_in_artifacts", "value": true }] },
-    { "id": "reject-speaker-label-fact", "expected": "FAIL", "critique": "Machine diarization remains a candidate.", "mutations": [{ "target": "candidate", "type": "set", "path": "diarization.labels_are_candidates", "value": false }] },
-    { "id": "reject-speaker-without-evidence", "expected": "FAIL", "critique": "Identity requires evidence beyond a provider label.", "mutations": [{ "target": "candidate", "type": "set", "path": "diarization.identity_requires_evidence", "value": false }] },
-    { "id": "reject-roster-as-speech-proof", "expected": "FAIL", "critique": "An invitee list does not prove who spoke.", "mutations": [{ "target": "candidate", "type": "set", "path": "diarization.participant_roster_proves_speech", "value": true }] },
-    { "id": "reject-no-speaker-review", "expected": "FAIL", "critique": "Speaker identity and boundaries require human review.", "mutations": [{ "target": "candidate", "type": "set", "path": "diarization.human_review_required", "value": false }] },
-    { "id": "reject-invented-inaudible-speech", "expected": "FAIL", "critique": "Use an uncertainty marker rather than invent missing words.", "mutations": [{ "target": "candidate", "type": "set", "path": "repair.inaudible_reconstruction_allowed", "value": true }] },
-    { "id": "reject-incomplete-private-repair", "expected": "FAIL", "critique": "A bounded projection cannot replace the complete private working record.", "mutations": [{ "target": "candidate", "type": "set", "path": "repair.complete_private_repair_required", "value": false }] },
-    { "id": "reject-lost-uncertainty", "expected": "FAIL", "critique": "Repair must preserve unresolved audio and attribution uncertainty.", "mutations": [{ "target": "candidate", "type": "set", "path": "repair.uncertainty_markers_required", "value": false }] },
-    { "id": "reject-reading-before-accepted-repair", "expected": "FAIL", "critique": "Close reading cannot harden an unaccepted repair into meaning.", "mutations": [{ "target": "candidate", "type": "set", "path": "close_reading.accepted_repair_required", "value": false }] },
-    { "id": "reject-uncited-reading", "expected": "FAIL", "critique": "Interpretation must cite the transcript evidence it depends on.", "mutations": [{ "target": "candidate", "type": "set", "path": "close_reading.transcript_citations_required", "value": false }] },
-    { "id": "reject-machine-action-acceptance", "expected": "FAIL", "critique": "Extraction cannot accept work for a person or group.", "mutations": [{ "target": "candidate", "type": "set", "path": "close_reading.machine_actions_accepted_automatically", "value": true }] },
-    { "id": "reject-graph-auto-promotion", "expected": "FAIL", "critique": "The graph stage produces a review candidate only.", "mutations": [{ "target": "candidate", "type": "set", "path": "projection.automatic_graph_promotion", "value": true }] },
-    { "id": "reject-public-default-projection", "expected": "FAIL", "critique": "Public use belongs to a separate governance workflow.", "mutations": [{ "target": "candidate", "type": "set", "path": "projection.public_projection_in_scope", "value": true }] },
-    { "id": "reject-assignment-inference", "expected": "FAIL", "critique": "Discussed or extracted action does not establish acceptance.", "mutations": [{ "target": "candidate", "type": "set", "path": "projection.accepted_assignment_inferred", "value": true }] },
-    { "id": "reject-raw-audio-in-public-git", "expected": "FAIL", "critique": "The public repository cannot hold private source audio.", "mutations": [{ "target": "candidate", "type": "set", "path": "public_boundary.raw_audio_in_public_git", "value": true }] },
-    { "id": "reject-public-runtime-private-dependency", "expected": "FAIL", "critique": "The public build must remain independent of permissioned infrastructure.", "mutations": [{ "target": "candidate", "type": "set", "path": "public_boundary.private_runtime_dependency", "value": true }] },
-    { "id": "reject-upload-without-artifact-authorization", "expected": "FAIL", "critique": "Authentication alone does not authorize an upload.", "mutations": [{ "target": "candidate", "type": "set", "path": "automation.upload_without_artifact_authorization", "value": true }] },
-    { "id": "reject-automated-publication", "expected": "FAIL", "critique": "Automation cannot publish private-derived material.", "mutations": [{ "target": "candidate", "type": "set", "path": "automation.publish", "value": true }] },
-    { "id": "reject-automated-assignment", "expected": "FAIL", "critique": "Automation cannot assign work or organizational commitments.", "mutations": [{ "target": "candidate", "type": "set", "path": "automation.assign_work", "value": true }] },
-    { "id": "reject-human-gate-loss", "expected": "FAIL", "critique": "Speaker-and-repair acceptance cannot be replaced by automation.", "mutations": [{ "target": "candidate", "type": "set", "path": "human_gates.2", "value": "automated-repair-acceptance" }] }
+    {
+      "id": "complete-private-workflow-is-reviewable",
+      "patch": {},
+      "expected": {
+        "decision": "ready-for-private-knowledge-update",
+        "publication_authorized": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "missing-artifact-disposition-holds",
+      "patch": {"capture": {"dispositioned_artifact_count": 3}},
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": ["captured-artifact-disposition-incomplete"]
+      }
+    },
+    {
+      "id": "missing-private-preservation-authority-holds",
+      "patch": {"scope": {"preservation_authorized": false}},
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": ["private-preservation-authorization-required"]
+      }
+    },
+    {
+      "id": "external-transfer-without-private-data-confirmation-holds",
+      "patch": {"transfer": {"private_data_confirmed": false}},
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": ["external-private-data-transfer-confirmation-required"]
+      }
+    },
+    {
+      "id": "source-byte-mutation-is-denied",
+      "patch": {
+        "capture": {"originals_immutable": false},
+        "preparation": {"source_bytes_modified": true}
+      },
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["source-original-mutation-forbidden"]
+      }
+    },
+    {
+      "id": "pending-provider-transcript-holds",
+      "patch": {"transcription": {"status": "pending"}},
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": ["provider-transcript-incomplete"]
+      }
+    },
+    {
+      "id": "unpreserved-provider-export-holds",
+      "patch": {"transcription": {"provider_export_preserved": false}},
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": ["provider-export-preservation-required"]
+      }
+    },
+    {
+      "id": "unsupported-named-speaker-assignment-is-denied",
+      "patch": {
+        "diarization": {
+          "label_mode": "named",
+          "named_identity_supported": false,
+          "human_reviewed": false
+        }
+      },
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["named-speaker-assignment-unverified"]
+      }
+    },
+    {
+      "id": "unauthorized-known-speaker-reference-is-denied",
+      "patch": {
+        "diarization": {
+          "known_speaker_reference_used": true,
+          "known_speaker_reference_authorized": false
+        }
+      },
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["voice-reference-authorization-required"]
+      }
+    },
+    {
+      "id": "repair-without-evidence-is-denied",
+      "patch": {
+        "repair": {
+          "compared_with_audio": false,
+          "segment_lineage": false,
+          "uncertainty_marked": false
+        }
+      },
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": [
+          "repair-audio-comparison-required",
+          "repair-segment-lineage-required",
+          "repair-uncertainty-marking-required"
+        ]
+      }
+    },
+    {
+      "id": "automated-audio-certification-is-denied",
+      "patch": {"repair": {"audio_certification_status": "automated-certified"}},
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["automated-audio-certification-forbidden"]
+      }
+    },
+    {
+      "id": "unfinished-repair-holds",
+      "patch": {"repair": {"status": "pending"}},
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": ["conservative-repair-incomplete"]
+      }
+    },
+    {
+      "id": "orphan-close-reading-lineage-holds",
+      "patch": {"knowledge": {"source_ids_resolve": false}},
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": ["private-close-reading-lineage-incomplete"]
+      }
+    },
+    {
+      "id": "automatic-publication-is-denied",
+      "patch": {
+        "projection": {
+          "requested": true,
+          "human_reviewed": true,
+          "publication_authorized": true,
+          "automatic": true
+        }
+      },
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["automatic-publication-forbidden"]
+      }
+    },
+    {
+      "id": "stale-candidate-receipt-holds",
+      "patch": {"receipt": {"candidate_matches": false}},
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": ["candidate-receipt-stale"]
+      }
+    },
+    {
+      "id": "non-idempotent-retry-holds",
+      "patch": {"receipt": {"duplicate_artifact_count": 1}},
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": ["non-idempotent-duplicate-artifact"]
+      }
+    },
+    {
+      "id": "raw-audio-in-private-git-is-denied",
+      "patch": {"capture": {"raw_audio_destination": "private-git"}},
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["raw-source-git-destination-forbidden"]
+      }
+    },
+    {
+      "id": "credential-bearing-job-is-denied",
+      "patch": {"security": {"credentials_present": true}},
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["credential-material-forbidden"]
+      }
+    },
+    {
+      "id": "scheduled-context-cannot-establish-occurrence",
+      "patch": {
+        "context": {
+          "scheduled_event_present": true,
+          "occurrence_corroborated": false,
+          "event_state": "occurred"
+        }
+      },
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["scheduled-event-occurrence-unsupported"]
+      }
+    },
+    {
+      "id": "undispositioned-revisit-candidate-holds",
+      "patch": {"revisit_queue": {"candidate_disposition": "unresolved"}},
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": ["revisit-candidate-disposition-required"]
+      }
+    },
+    {
+      "id": "participant-restricted-candidate-cannot-be-actionable",
+      "patch": {"revisit_queue": {"participant_restriction": true}},
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["participant-restricted-queue-item-actionable"]
+      }
+    },
+    {
+      "id": "current-method-control-cannot-be-requeued",
+      "patch": {"revisit_queue": {"current_method_control": true}},
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": ["current-method-control-requeued"]
+      }
+    },
+    {
+      "id": "queue-priority-cannot-authorize-processing-or-public-detail",
+      "patch": {
+        "revisit_queue": {
+          "processing_authority_claimed": true,
+          "public_detail_exposed": true
+        }
+      },
+      "expected": {
+        "decision": "deny",
+        "publication_authorized": false,
+        "reasons": [
+          "queue-priority-cannot-authorize-processing",
+          "private-queue-detail-exposure-forbidden"
+        ]
+      }
+    }
   ]
 }

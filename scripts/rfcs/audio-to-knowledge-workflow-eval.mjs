@@ -4,11 +4,12 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { isDeepStrictEqual } from "node:util";
 
 const scriptPath = fileURLToPath(import.meta.url);
 const defaultRepoRoot = path.resolve(path.dirname(scriptPath), "../..");
-const rfcPath = "rfcs/0013-audio-to-knowledge-workflow.md";
-const contractPath = "rfcs/0013-audio-to-knowledge-workflow.contract.json";
+const rfcPath = "rfcs/0013-governed-audio-to-knowledge-workflow.md";
+const contractPath = "rfcs/0013-governed-audio-to-knowledge-workflow.contract.json";
 const suitePath = "evals/knowledge-bank/audio-to-knowledge-workflow-rfc-evals.json";
 const candidatePaths = [
   "package.json",
@@ -18,69 +19,25 @@ const candidatePaths = [
   suitePath,
   "scripts/check-rfcs.mjs",
   "scripts/rfcs/audio-to-knowledge-workflow-eval.mjs",
-  "scripts/rfcs/audio-to-knowledge-workflow-eval.test.mjs"
-];
-const requiredStages = [
-  "intake-authorization",
-  "exact-source-custody",
-  "bounded-context-collection",
-  "provider-input-preparation",
-  "provider-transcription",
-  "diarization-reconciliation",
-  "source-loyal-repair",
-  "private-close-reading",
-  "graph-projection-candidate",
-  "human-disposition"
-];
-const requiredLayers = [
-  "exact-source",
-  "provider-input",
-  "exact-provider-return",
-  "machine-transcript",
-  "complete-private-repair",
-  "bounded-tracked-projection",
-  "private-close-reading",
-  "graph-projection-candidate"
-];
-const requiredClaimClasses = [
-  "exact-speech",
-  "attributed-report",
-  "documented-interpretation",
-  "inference",
-  "open-question",
-  "proposed-action"
-];
-const requiredHumanGates = [
-  "processing-basis-and-private-destination",
-  "external-upload-per-artifact",
-  "speaker-and-repair-acceptance",
-  "close-reading-acceptance",
-  "private-graph-promotion",
-  "quotation-attribution-and-publication"
+  "scripts/rfcs/audio-to-knowledge-workflow-eval.test.mjs",
+  "scripts/rfcs/audio-to-knowledge-revisit-queue-rfc.test.mjs",
+  "scripts/rfcs/audio-to-knowledge-workflow-rfc.test.mjs"
 ];
 
-function exact(actual, expected) {
-  return JSON.stringify(actual) === JSON.stringify(expected);
+function loadJson(repoRoot, relativePath) {
+  return JSON.parse(readFileSync(path.join(repoRoot, relativePath), "utf8"));
 }
 
-function setAtPath(target, dottedPath, value) {
-  const parts = dottedPath.split(".");
-  let cursor = target;
-  for (const part of parts.slice(0, -1)) {
-    cursor = cursor[Number.isInteger(Number(part)) ? Number(part) : part];
-  }
-  const last = parts.at(-1);
-  cursor[Number.isInteger(Number(last)) ? Number(last) : last] = value;
-}
+function mergeState(base, patch) {
+  if (Array.isArray(base) || Array.isArray(patch)) return patch;
+  if (!base || typeof base !== "object" || !patch || typeof patch !== "object") return patch;
 
-function mutate(candidate, mutations) {
-  const result = structuredClone(candidate);
-  for (const mutation of mutations) {
-    if (mutation.target === "candidate" && mutation.type === "set") {
-      setAtPath(result, mutation.path, mutation.value);
-    } else {
-      throw new Error(`unsupported mutation: ${JSON.stringify(mutation)}`);
-    }
+  const result = { ...base };
+  for (const [key, value] of Object.entries(patch)) {
+    result[key] =
+      value && typeof value === "object" && !Array.isArray(value)
+        ? mergeState(base[key] ?? {}, value)
+        : value;
   }
   return result;
 }
@@ -96,242 +53,331 @@ function candidateFingerprint(repoRoot) {
   return digest.digest("hex");
 }
 
-export function evaluateAudioToKnowledgeCandidate(candidate) {
-  const reasons = [];
-  const deny = (condition, reason) => {
-    if (condition) reasons.push(reason);
-  };
+export function evaluateAudioKnowledgeWorkflow(state) {
+  const denyReasons = [];
 
-  deny(!exact(candidate?.stages, requiredStages), "ordered-stage-contract-invalid");
-  deny(candidate?.stage_contract?.receipt_required !== true ||
-    candidate?.stage_contract?.non_skippable !== true ||
-    candidate?.stage_contract?.downstream_invalidation_on_input_change !== true,
-  "stage-receipt-or-invalidation-contract-invalid");
-  if (candidate?.artifact_layers !== undefined) {
-    deny(!exact(candidate.artifact_layers, requiredLayers), "artifact-layer-contract-invalid");
+  if (state.security?.credentials_present === true) {
+    denyReasons.push("credential-material-forbidden");
+  }
+  if (
+    state.capture?.originals_immutable !== true ||
+    state.preparation?.source_bytes_modified === true
+  ) {
+    denyReasons.push("source-original-mutation-forbidden");
+  }
+  if (state.capture?.raw_audio_destination !== "source-vault") {
+    denyReasons.push("raw-source-git-destination-forbidden");
+  }
+  if (
+    state.context?.scheduled_event_present === true &&
+    state.context?.occurrence_corroborated !== true &&
+    state.context?.event_state === "occurred"
+  ) {
+    denyReasons.push("scheduled-event-occurrence-unsupported");
+  }
+  if (
+    state.diarization?.known_speaker_reference_used === true &&
+    state.diarization?.known_speaker_reference_authorized !== true
+  ) {
+    denyReasons.push("voice-reference-authorization-required");
+  }
+  if (
+    state.diarization?.label_mode === "named" &&
+    (state.diarization?.named_identity_supported !== true ||
+      state.diarization?.human_reviewed !== true)
+  ) {
+    denyReasons.push("named-speaker-assignment-unverified");
+  }
+  if (
+    state.revisit_queue?.participant_restriction === true &&
+    state.revisit_queue?.candidate_disposition === "queued"
+  ) {
+    denyReasons.push("participant-restricted-queue-item-actionable");
+  }
+  if (
+    state.revisit_queue?.current_method_control === true &&
+    state.revisit_queue?.candidate_disposition === "queued"
+  ) {
+    denyReasons.push("current-method-control-requeued");
+  }
+  if (state.revisit_queue?.processing_authority_claimed === true) {
+    denyReasons.push("queue-priority-cannot-authorize-processing");
+  }
+  if (state.revisit_queue?.public_detail_exposed === true) {
+    denyReasons.push("private-queue-detail-exposure-forbidden");
+  }
+  if (state.repair?.status === "complete") {
+    if (state.repair?.compared_with_audio !== true) {
+      denyReasons.push("repair-audio-comparison-required");
+    }
+    if (state.repair?.segment_lineage !== true) {
+      denyReasons.push("repair-segment-lineage-required");
+    }
+    if (state.repair?.uncertainty_marked !== true) {
+      denyReasons.push("repair-uncertainty-marking-required");
+    }
+    if (state.repair?.provider_export_modified === true) {
+      denyReasons.push("provider-export-mutation-forbidden");
+    }
+  }
+  if (state.repair?.audio_certification_status === "automated-certified") {
+    denyReasons.push("automated-audio-certification-forbidden");
+  }
+  if (state.projection?.automatic === true) {
+    denyReasons.push("automatic-publication-forbidden");
   }
 
-  deny(candidate?.custody?.preservation_before_transformation !== true,
-    "preservation-must-precede-transformation");
-  deny(candidate?.custody?.exact_source_checksum_required !== true,
-    "exact-source-checksum-required");
-  deny(candidate?.custody?.source_deletion_authorized !== false,
-    "source-deletion-not-authorized");
-  deny(candidate?.custody?.exact_provider_return_preserved !== true,
-    "exact-provider-return-not-preserved");
-  deny(candidate?.custody?.provider_completion_requires_observed_return !== true,
-    "provider-completion-must-be-observed");
-
-  deny(candidate?.state_machine?.content_addressed_job_identity !== true ||
-    candidate?.state_machine?.immutable_inputs !== true ||
-    candidate?.state_machine?.resumable_from_last_verified_receipt !== true ||
-    candidate?.state_machine?.idempotent_replay !== true ||
-    candidate?.state_machine?.silent_overwrite_allowed !== false ||
-    candidate?.state_machine?.explicit_blocked_states !== true,
-  "resumable-state-machine-contract-invalid");
-
-  deny(candidate?.context?.minimum_necessary !== true ||
-    candidate?.context?.query_and_cutoff_required !== true ||
-    candidate?.context?.blind_spots_required !== true ||
-    candidate?.context?.bodies_in_public_git !== false,
-  "bounded-context-contract-invalid");
-  deny(candidate?.context?.access_equals_consent !== false, "access-cannot-equal-consent");
-
-  if (candidate?.provider_adapter !== undefined) {
-    deny(candidate.provider_adapter.provider_neutral_interface !== true ||
-      candidate.provider_adapter.exact_submitted_byte_identity_required !== true ||
-      candidate.provider_adapter.exact_return_required !== true ||
-      candidate.provider_adapter.credentials_in_artifacts !== false ||
-      candidate.provider_adapter.constraints_reverified_at_implementation !== true,
-    "provider-adapter-contract-invalid");
+  if (denyReasons.length > 0) {
+    return {
+      decision: "deny",
+      publication_authorized: false,
+      reasons: denyReasons
+    };
   }
 
-  deny(candidate?.diarization?.labels_are_candidates !== true,
-    "speaker-labels-must-remain-candidates");
-  deny(candidate?.diarization?.identity_requires_evidence !== true ||
-    candidate?.diarization?.unknown_speaker_allowed !== true ||
-    candidate?.diarization?.participant_roster_proves_speech !== false ||
-    candidate?.diarization?.human_review_required !== true,
-  "speaker-identity-boundary-invalid");
-
-  deny(candidate?.repair?.evidence_bounded !== true ||
-    candidate?.repair?.inaudible_reconstruction_allowed !== false ||
-    candidate?.repair?.uncertainty_markers_required !== true ||
-    candidate?.repair?.complete_private_repair_required !== true ||
-    candidate?.repair?.bounded_projection_separate !== true ||
-    candidate?.repair?.human_acceptance_required !== true,
-  "complete-private-repair-boundary-invalid");
-
-  deny(candidate?.close_reading?.accepted_repair_required !== true ||
-    candidate?.close_reading?.transcript_citations_required !== true ||
-    candidate?.close_reading?.contradictions_preserved !== true ||
-    candidate?.close_reading?.uncertainty_preserved !== true,
-  "close-reading-evidence-contract-invalid");
-  if (candidate?.close_reading?.claim_classes !== undefined) {
-    deny(!exact(candidate.close_reading.claim_classes, requiredClaimClasses),
-      "close-reading-claim-classes-invalid");
+  const holdReasons = [];
+  if (state.scope?.bounded !== true) holdReasons.push("bounded-call-family-required");
+  if (state.scope?.source_access_authorized !== true) {
+    holdReasons.push("source-access-authorization-required");
   }
-  deny(candidate?.close_reading?.machine_actions_accepted_automatically !== false,
-    "machine-actions-cannot-be-accepted");
-
-  deny(candidate?.projection?.graph_candidate_only !== true ||
-    candidate?.projection?.accepted_assignment_inferred !== false ||
-    candidate?.projection?.organizational_position_inferred !== false,
-  "graph-candidate-authority-invalid");
-  deny(candidate?.projection?.automatic_graph_promotion !== false,
-    "graph-promotion-must-remain-human");
-  deny(candidate?.projection?.public_projection_in_scope !== false ||
-    candidate?.projection?.public_projection_requires_separate_decision !== true,
-  "public-projection-requires-separate-workflow");
-
-  if (candidate?.public_boundary !== undefined) {
-    deny(candidate.public_boundary.raw_audio_in_public_git !== false ||
-      candidate.public_boundary.machine_transcript_in_public_git !== false ||
-      candidate.public_boundary.private_context_in_public_git !== false ||
-      candidate.public_boundary.protected_locator_in_public_git !== false ||
-      candidate.public_boundary.private_runtime_dependency !== false ||
-      candidate.public_boundary.opaque_permissioned_companion_allowed !== true,
-    "public-private-boundary-invalid");
+  if (state.scope?.preservation_authorized !== true) {
+    holdReasons.push("private-preservation-authorization-required");
+  }
+  if (
+    !state.revisit_queue?.candidate_disposition ||
+    state.revisit_queue.candidate_disposition === "unresolved"
+  ) {
+    holdReasons.push("revisit-candidate-disposition-required");
+  }
+  if (
+    !Number.isInteger(state.capture?.observed_artifact_count) ||
+    state.capture.observed_artifact_count < 1 ||
+    state.capture?.dispositioned_artifact_count !== state.capture.observed_artifact_count
+  ) {
+    holdReasons.push("captured-artifact-disposition-incomplete");
+  }
+  if (state.capture?.originals_hashed !== true) {
+    holdReasons.push("source-original-hash-required");
+  }
+  if (state.preparation?.derived_audio_only !== true) {
+    holdReasons.push("derived-processing-media-required");
+  }
+  if (state.transfer?.external_provider_required === true) {
+    if (state.transfer?.authorized !== true) {
+      holdReasons.push("external-transfer-authorization-required");
+    }
+    if (state.transfer?.private_data_confirmed !== true) {
+      holdReasons.push("external-private-data-transfer-confirmation-required");
+    }
+  }
+  if (state.transcription?.status !== "complete") {
+    holdReasons.push("provider-transcript-incomplete");
+  } else {
+    if (state.transcription?.provider_export_preserved !== true) {
+      holdReasons.push("provider-export-preservation-required");
+    }
+    if (state.transcription?.provider_and_model_recorded !== true) {
+      holdReasons.push("provider-model-receipt-required");
+    }
+    if (state.transcription?.segment_order_recorded !== true) {
+      holdReasons.push("transcript-segment-order-required");
+    }
+  }
+  if (state.diarization?.uncertainty_marked !== true) {
+    holdReasons.push("diarization-uncertainty-required");
+  }
+  if (state.repair?.status !== "complete") {
+    holdReasons.push("conservative-repair-incomplete");
+  }
+  if (
+    state.knowledge?.private_close_reading !== "complete" ||
+    state.knowledge?.source_ids_resolve !== true ||
+    state.knowledge?.claim_states_present !== true ||
+    state.knowledge?.destination !== "private-sidecar"
+  ) {
+    holdReasons.push("private-close-reading-lineage-incomplete");
+  }
+  if (state.receipt?.candidate_matches !== true) {
+    holdReasons.push("candidate-receipt-stale");
+  }
+  if (state.receipt?.duplicate_artifact_count !== 0) {
+    holdReasons.push("non-idempotent-duplicate-artifact");
   }
 
-  deny(candidate?.automation?.upload_without_artifact_authorization !== false ||
-    candidate?.automation?.infer_consent !== false ||
-    candidate?.automation?.publish !== false ||
-    candidate?.automation?.send !== false ||
-    candidate?.automation?.assign_work !== false ||
-    candidate?.automation?.delete_source !== false ||
-    candidate?.automation?.claim_audio_certified_without_listening !== false,
-  "automation-authority-boundary-invalid");
-  if (candidate?.human_gates !== undefined) {
-    deny(!exact(candidate.human_gates, requiredHumanGates), "human-gate-contract-invalid");
+  if (holdReasons.length > 0) {
+    return {
+      decision: "hold",
+      publication_authorized: false,
+      reasons: holdReasons
+    };
   }
 
-  reasons.sort((left, right) => left.localeCompare(right, "en"));
   return {
-    decision: reasons.length > 0 ? "deny" : "ready-for-human-review",
-    reasons
+    decision: "ready-for-private-knowledge-update",
+    publication_authorized: false,
+    reasons: []
   };
 }
 
-export function evaluateAudioToKnowledgeBaseline(candidate) {
-  return Array.isArray(candidate?.stages) && candidate.stages.length === 10 &&
-    candidate?.custody?.preservation_before_transformation === true &&
-    candidate?.repair?.complete_private_repair_required === true;
-}
-
-export function evaluateAudioToKnowledgeWorkflowRFC(options = {}) {
+export function evaluateAudioKnowledgeWorkflowRFC(options = {}) {
   const repoRoot = options.repoRoot ?? defaultRepoRoot;
-  const contract = options.contract ?? JSON.parse(readFileSync(path.join(repoRoot, contractPath), "utf8"));
-  const suite = options.suite ?? JSON.parse(readFileSync(path.join(repoRoot, suitePath), "utf8"));
+  const contract = options.contract ?? loadJson(repoRoot, contractPath);
+  const suite = options.suite ?? loadJson(repoRoot, suitePath);
   const rfc = options.rfcSource ?? readFileSync(path.join(repoRoot, rfcPath), "utf8");
-  const hardFailures = [];
-  const fail = (condition, id) => {
-    if (condition) hardFailures.push(id);
-  };
-
-  fail(contract.schema_version !== 1 || contract.rfc !== 13 || contract.stage !== "proposed" ||
-    contract.public_projection_id !== "method.audio-to-knowledge-workflow.v1",
-  "rfc-identity-invalid");
-  fail(contract.authority?.decision_owner !== "Jamie Burkart" ||
-    contract.authority?.rfc_drafting_authorized !== true ||
-    contract.authority?.implementation_authorized !== false ||
-    contract.authority?.external_upload_authorized_by_rfc !== false ||
-    contract.authority?.graph_promotion_authorized !== false ||
-    contract.authority?.publication_authorized !== false ||
-    contract.authority?.deployment_authorized !== false ||
-    contract.authority?.automatic_merge_authority !== "none",
-  "authority-contract-invalid");
-  fail(contract.implementation?.runtime_started !== false ||
-    contract.implementation?.provider_adapters_started !== false ||
-    contract.implementation?.external_upload_performed !== false ||
-    contract.implementation?.private_operating_companion_required_for_public_build !== false,
-  "implementation-state-invalid");
-  fail(contract.evaluation?.deterministic_checks_first !== true ||
-    contract.evaluation?.labels !== "provisional-pending-Jamie-review" ||
-    contract.evaluation?.independent_human_holdout_complete !== false ||
-    contract.evaluation?.reports_tpr_and_tnr_separately !== true,
-  "evaluation-claim-invalid");
-
-  const exactResult = evaluateAudioToKnowledgeCandidate(contract.proposal_candidate);
-  fail(exactResult.decision !== "ready-for-human-review", "proposal-candidate-invalid");
-
-  const requiredText = [
-    "# Governed Audio-to-Knowledge Workflow",
-    "Preservation precedes transformation",
-    "Access is not consent",
-    "Provider completion is observed",
-    "Diarization is a hypothesis",
-    "Repair is source-loyal",
-    "Private completeness precedes projection",
-    "Interpretation does not become speech",
-    "Projection is not promotion",
-    "Evaluation is not authority",
-    "Public projection is outside this workflow",
-    "This RFC is a proposal"
-  ];
-  fail(!/^stage:\s+proposed$/mu.test(rfc) || !/^implementation:\s+null$/mu.test(rfc) ||
-    requiredText.some((text) => !rfc.includes(text)),
-  "reader-rfc-contract-incomplete");
-  fail(/(?:workflow runtime|provider adapter) (?:is|are|was|were) (?:now )?implemented|public projection (?:is|was) authorized/iu.test(rfc),
-    "reader-rfc-status-inflation");
-  fail(/\/(?:Users|Volumes)\/|private repository (?:name|url)|private pull request|protected locator:/iu.test(rfc),
-    "reader-rfc-public-safety-invalid");
 
   const scenarioResults = suite.cases.map((scenario) => {
-    const candidate = mutate(contract.proposal_candidate, scenario.mutations);
-    const result = evaluateAudioToKnowledgeCandidate(candidate);
-    const actualPass = result.decision === "ready-for-human-review";
-    const baselinePass = evaluateAudioToKnowledgeBaseline(candidate);
-    const expectedPass = scenario.expected === "PASS";
+    const state = mergeState(suite.baseline, scenario.patch);
+    const actual = evaluateAudioKnowledgeWorkflow(state);
     return {
       id: scenario.id,
-      expected: scenario.expected,
-      actual: actualPass ? "PASS" : "FAIL",
-      baseline_actual: baselinePass ? "PASS" : "FAIL",
-      passed: actualPass === expectedPass,
-      reasons: result.reasons
+      passed: isDeepStrictEqual(actual, scenario.expected),
+      actual,
+      expected: scenario.expected
     };
   });
-  const safe = scenarioResults.filter(({ expected }) => expected === "PASS");
-  const unsafe = scenarioResults.filter(({ expected }) => expected === "FAIL");
-  const safeTpr = safe.filter(({ actual }) => actual === "PASS").length / safe.length;
-  const unsafeTnr = unsafe.filter(({ actual }) => actual === "FAIL").length / unsafe.length;
-  const baselineTpr = safe.filter(({ baseline_actual: actual }) => actual === "PASS").length / safe.length;
-  const baselineTnr = unsafe.filter(({ baseline_actual: actual }) => actual === "FAIL").length / unsafe.length;
-  fail(suite.review_status !== "provisional-pending-Jamie-review" ||
-    suite.independent_human_holdout !== false || safe.length < 2 || unsafe.length < 20 ||
-    safeTpr !== 1 || unsafeTnr !== 1,
-  "scenario-coverage-invalid");
+
+  const checks = {
+    proposal_preserves_human_authority:
+      contract.rfc === 13 &&
+      contract.stage === "proposed" &&
+      contract.authority?.decision_owner === "Jamie Burkart" &&
+      contract.authority?.implementation_authorized === false &&
+      contract.authority?.source_access_authorized_by_rfc === false &&
+      contract.authority?.external_transfer_authorized_by_rfc === false &&
+      contract.authority?.publication_authorized === false &&
+      /^stage:\s+proposed$/m.test(rfc) &&
+      /^implementation:\s+null$/m.test(rfc),
+    bounded_per_job_authority:
+      contract.authority?.job_authority_mode === "explicit-and-bounded-per-job" &&
+      contract.authority?.private_preservation_authorized_by_rfc === false &&
+      contract.authority?.known_speaker_reference_authorized_by_rfc === false,
+    complete_stage_model:
+      isDeepStrictEqual(contract.stages, [
+        "intake",
+        "inventory",
+        "preservation",
+        "preparation",
+        "transcription",
+        "diarization",
+        "repair",
+        "close-reading",
+        "projection",
+        "verification"
+      ]) &&
+      contract.stage_states?.includes("held") &&
+      contract.stage_states?.includes("superseded"),
+    source_custody_and_immutability:
+      contract.custody?.every_observed_artifact_requires_disposition === true &&
+      contract.custody?.source_originals_are_immutable === true &&
+      contract.custody?.source_originals_require_sha256 === true &&
+      contract.custody?.raw_audio_default_destination === "source-vault" &&
+      contract.custody?.private_git_is_not_raw_source_vault === true &&
+      contract.custody?.processing_uses_derived_media === true &&
+      contract.custody?.provider_exports_are_immutable === true,
+    provider_adapter_is_bounded:
+      contract.provider_adapter?.provider_neutral_contract === true &&
+      contract.provider_adapter?.external_transfer_requires_active_job_confirmation === true &&
+      contract.provider_adapter?.completion_requires_collected_export === true &&
+      contract.provider_adapter?.visible_provider_state_is_not_export === true &&
+      contract.provider_adapter?.required_metadata?.length >= 7,
+    context_evidence_boundaries:
+      contract.context?.may_bound_chronology === true &&
+      contract.context?.may_support_term_repair === true &&
+      contract.context?.scheduled_event_alone_establishes_occurrence === false &&
+      contract.context?.search_miss_establishes_absence === false &&
+      contract.context?.conflicting_sources_must_be_retained === true,
+    historical_revisit_queue_is_governed:
+      contract.revisit_queue?.body_free === true &&
+      contract.revisit_queue?.private_by_default === true &&
+      contract.revisit_queue?.every_candidate_requires_disposition === true &&
+      contract.revisit_queue?.current_method_controls_are_not_backlog === true &&
+      contract.revisit_queue?.participant_holds_are_not_actionable === true &&
+      contract.revisit_queue?.dataless_is_not_absent === true &&
+      contract.revisit_queue?.priority_is_not_processing_authority === true &&
+      contract.revisit_queue?.private_item_counts_may_be_public === false &&
+      contract.revisit_queue?.allowed_dispositions?.length === 5,
+    diarization_preserves_uncertainty:
+      contract.diarization?.generic_labels_allowed === true &&
+      contract.diarization?.named_labels_require_support === true &&
+      contract.diarization?.named_labels_require_human_review === true &&
+      contract.diarization?.uncertainty_must_be_visible === true &&
+      contract.diarization?.known_speaker_reference_requires_specific_authority === true &&
+      contract.diarization?.provider_guess_alone_establishes_identity === false,
+    repair_preserves_lineage:
+      contract.repair?.provider_export_is_never_edited === true &&
+      contract.repair?.repair_is_separate_derived_artifact === true &&
+      contract.repair?.audio_comparison_required === true &&
+      contract.repair?.segment_lineage_required === true &&
+      contract.repair?.uncertainty_markers_required === true &&
+      contract.repair?.context_may_invent_missing_speech === false &&
+      contract.repair?.automation_may_self_certify_audio === false,
+    private_knowledge_and_public_projection_are_separate:
+      contract.knowledge?.complete_repair_and_close_reading_are_separate === true &&
+      contract.knowledge?.private_is_default_destination === true &&
+      contract.knowledge?.source_ids_required === true &&
+      contract.knowledge?.claim_states?.length === 6 &&
+      contract.knowledge?.public_projection_requires_separate_packet === true &&
+      contract.knowledge?.automatic_publication === false &&
+      contract.knowledge?.public_may_reveal_private_topology === false,
+    retry_and_receipt_safety:
+      contract.automation?.dry_run_required === true &&
+      contract.automation?.resumable === true &&
+      contract.automation?.idempotent_by_hash_and_recipe === true &&
+      contract.automation?.changed_input_invalidates_downstream_receipts === true &&
+      contract.automation?.nonzero_exit_on_hold_or_deny === true,
+    logs_and_external_actions_are_bounded:
+      contract.automation?.logs_must_be_body_free_and_secret_free === true &&
+      contract.automation?.automatic_contact === false &&
+      contract.automation?.automatic_merge === false &&
+      contract.automation?.automatic_deployment === false,
+    human_gates_remain_human:
+      contract.human_gates?.required?.length >= 12 &&
+      contract.human_gates?.automation_may_satisfy?.length === 0 &&
+      contract.evaluation?.deterministic_checks_satisfy_human_gates === false,
+    scenario_coverage:
+      scenarioResults.length >= 19 && scenarioResults.every((scenario) => scenario.passed)
+  };
+
+  const criterionWeight = 1 / Object.keys(checks).length;
+  const rubric = Object.fromEntries(
+    Object.keys(checks).map((id) => [id, { weight: criterionWeight, hard: true }])
+  );
+  const score = Object.entries(rubric).reduce(
+    (total, [id, criterion]) => total + (checks[id] ? criterion.weight : 0),
+    0
+  );
+  const hardFailures = Object.entries(rubric)
+    .filter(([id, criterion]) => criterion.hard && !checks[id])
+    .map(([id]) => id);
 
   return {
     schema_version: 1,
-    rfc: contract.rfc,
+    rfc: 13,
     stage: contract.stage,
     candidate_files: candidatePaths,
     candidate_fingerprint: candidateFingerprint(repoRoot),
-    hard_failures: [...new Set(hardFailures)].sort((left, right) => left.localeCompare(right, "en")),
+    score: Number(score.toFixed(3)),
+    checks,
+    hard_failures: hardFailures,
     scenarios: {
       total: scenarioResults.length,
-      safe: safe.length,
-      unsafe: unsafe.length,
-      passed: scenarioResults.filter(({ passed }) => passed).length,
-      failed: scenarioResults.filter(({ passed }) => !passed).length,
-      safe_true_positive_rate: safeTpr,
-      unsafe_true_negative_rate: unsafeTnr,
-      baseline_safe_true_positive_rate: baselineTpr,
-      baseline_unsafe_true_negative_rate: baselineTnr,
+      passed: scenarioResults.filter((scenario) => scenario.passed).length,
+      failed: scenarioResults.filter((scenario) => !scenario.passed).length,
       results: scenarioResults
     },
     implementation_authorized: contract.authority.implementation_authorized,
-    external_upload_performed: contract.implementation.external_upload_performed,
-    publication_authorized: contract.authority.publication_authorized
+    publication_authorized: contract.authority.publication_authorized,
+    external_transfer_authorized_by_rfc:
+      contract.authority.external_transfer_authorized_by_rfc
   };
 }
 
 function main() {
-  const evaluation = evaluateAudioToKnowledgeWorkflowRFC();
+  const evaluation = evaluateAudioKnowledgeWorkflowRFC();
   process.stdout.write(`${JSON.stringify(evaluation, null, 2)}\n`);
-  if (evaluation.hard_failures.length > 0 || evaluation.scenarios.failed > 0) process.exitCode = 1;
+  if (evaluation.hard_failures.length > 0 || evaluation.scenarios.failed > 0) {
+    process.exitCode = 1;
+  }
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) main();

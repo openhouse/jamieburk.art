@@ -74,3 +74,28 @@ test("the response schema keeps Pass and Fail explicit", () => {
   assert.deepEqual(schema.properties.verdict.enum, ["Pass", "Fail"]);
   assert.equal(schema.properties.actualPersonParticipated.const, false);
 });
+
+test("an unrelated proposed page assignment does not stale the Colophon run", () => {
+  const candidate = loadColophonCandidate();
+  candidate.registry.pages.push({
+    pageId: "unrelated-proposal",
+    route: "/unrelated",
+    status: "proposed",
+    owners: []
+  });
+
+  const result = evaluateColophonPageOwners(candidate);
+  assert.equal(result.pass, true, result.failures.join("\n"));
+});
+
+test("a change to the governed Colophon assignment does stale its run", () => {
+  const candidate = loadColophonCandidate();
+  const colophon = candidate.registry.pages.find(
+    (page) => page.pageId === "colophon"
+  );
+  colophon.owners[0].focus = "Changed focus";
+
+  const result = evaluateColophonPageOwners(candidate);
+  assert.equal(result.pass, false);
+  assert.match(result.failures.join("\n"), /editorial run is stale/);
+});

@@ -74,6 +74,28 @@ mailboxes, message databases, unrestricted exports, and sensitive source
 binaries remain outside Git by default. Prefer governed pointers, bounded
 derived records, and explicit source dispositions.
 
+## Complete private call records
+
+For a bounded call Jamie explicitly directs the system to preserve, “nothing
+on the cutting-room floor” means disposition completeness: every captured
+artifact is retained in the appropriate custody plane or recorded as an
+explicit gap. Raw audio and provider exports remain in source custody. After a
+private-access review, the sidecar may retain a complete repaired transcript
+and private interpretation, including passages withheld from a shareable
+edition.
+
+A participant restriction controls disclosure and outward projection; it does
+not require the private working record to be silently discarded. The complete
+record remains unavailable to the public and to participant-facing or
+coalition-facing returns unless a new use receives its own authority. Private
+preservation creates no quotation, attribution, publication, representation,
+legal-reliance, or access-grant permission.
+
+This is a bounded-record rule, not authority to bulk-acquire unrelated calls,
+mailboxes, messages, or archives. Inaccessible, missing, corrupt, duplicate,
+or intentionally pointer-only material must be named rather than disappearing
+from the record.
+
 ## Build and release boundary
 
 Public builds, tests, deployments, and rollback must work with the private
