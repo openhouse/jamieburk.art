@@ -320,6 +320,10 @@ export function evaluateAudioKnowledgeWorkflowRFC(options = {}) {
       contract.revisit_queue?.dataless_is_not_absent === true &&
       contract.revisit_queue?.priority_is_not_processing_authority === true &&
       contract.revisit_queue?.private_item_counts_may_be_public === false &&
+      contract.revisit_queue?.required_candidate_fields?.length === 12 &&
+      contract.revisit_queue.required_candidate_fields.includes("dependencies") &&
+      contract.revisit_queue.required_candidate_fields.includes("evidence_basis") &&
+      contract.revisit_queue.required_candidate_fields.includes("revisit_trigger") &&
       contract.revisit_queue?.allowed_dispositions?.length === 5,
     authenticated_cloud_recovery_is_bounded:
       contract.cloud_recovery?.authenticated_read_only_fallback === true &&
@@ -327,9 +331,11 @@ export function evaluateAudioKnowledgeWorkflowRFC(options = {}) {
       contract.cloud_recovery?.confirmed_empty_is_materialization_failure === false &&
       contract.cloud_recovery?.download_requires_private_custody_and_sha256 === true &&
       contract.cloud_recovery?.download_timeout_may_be_called_recovered === false &&
+      contract.cloud_recovery?.technical_media_validation_establishes_transcription_complete === false &&
       contract.cloud_recovery?.cloud_mutation_allowed === false &&
       contract.cloud_recovery?.candidate_git_may_contain_recovered_raw_body === false &&
-      contract.cloud_recovery?.state_terms?.length === 4,
+      contract.cloud_recovery?.state_terms?.length === 5 &&
+      contract.cloud_recovery.state_terms.includes("technically-readable"),
     diarization_preserves_uncertainty:
       contract.diarization?.generic_labels_allowed === true &&
       contract.diarization?.named_labels_require_support === true &&

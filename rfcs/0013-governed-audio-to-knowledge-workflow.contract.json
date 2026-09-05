@@ -69,6 +69,20 @@
     "dataless_is_not_absent": true,
     "priority_is_not_processing_authority": true,
     "private_item_counts_may_be_public": false,
+    "required_candidate_fields": [
+      "source_ids",
+      "current_state",
+      "audio_state",
+      "transcript_state",
+      "method_version",
+      "method_gaps",
+      "dependencies",
+      "evidence_basis",
+      "disposition",
+      "priority",
+      "revisit_trigger",
+      "next_safe_action"
+    ],
     "allowed_dispositions": [
       "queued",
       "reference-current",
@@ -83,12 +97,14 @@
     "confirmed_empty_is_materialization_failure": false,
     "download_requires_private_custody_and_sha256": true,
     "download_timeout_may_be_called_recovered": false,
+    "technical_media_validation_establishes_transcription_complete": false,
     "cloud_mutation_allowed": false,
     "candidate_git_may_contain_recovered_raw_body": false,
     "state_terms": [
       "cloud-listed",
       "confirmed-empty",
       "recovered-and-hashed",
+      "technically-readable",
       "download-timed-out"
     ]
   },

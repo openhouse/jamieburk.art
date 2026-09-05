@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "route": "/contact",
+  "implementation": {
+    "stage": "implementing",
+    "authorizedBy": "Jamie Burkart",
+    "authorizedOn": "2026-09-04"
+  },
+  "sourceBasis": [
+    "existing-public-portfolio-evidence",
+    "self-authored-public-offer"
+  ],
+  "publicClaims": ["availability-for-conversation"],
+  "pricing": {
+    "publicState": "withheld-pending-Jamie-decision",
+    "display": null
+  },
+  "employmentPath": {
+    "heading": "Roles and embedded leadership",
+    "description": "For a staff role, long-term operating need, or referral, start with the resume or email Jamie directly.",
+    "resumeLabel": "View resume",
+    "resumeDestination": "/resume",
+    "emailLabel": "Email Jamie about a role",
+    "remainsDistinct": true
+  },
+  "scopedWork": {
+    "heading": "Scoped work",
+    "description": "Begin at the level that fits the decision in front of you. Each option is separately scoped; none creates an automatic next engagement."
+  },
+  "engagements": [
+    {
+      "id": "focused-working-session",
+      "label": "Focused working session",
+      "buyerQuestion": "Is there one important decision, knot, or working artifact that would benefit from an hour of structured attention?",
+      "outcome": "A clarified question, decision map, or agreed next step appropriate to the session.",
+      "boundary": "This is paid, defined work. A separate agreement is required before the session begins or continues beyond its agreed scope."
+    },
+    {
+      "id": "knowledge-operations-diagnostic",
+      "label": "Knowledge operations diagnostic",
+      "buyerQuestion": "Does a specific workflow, evidence base, or team-memory problem need diagnosis before implementation?",
+      "outcome": "A scoped map of what is known, open, protected, risky, and worth doing next.",
+      "boundary": "The diagnostic is separately scoped. A separate agreement is required for any implementation that follows."
+    },
+    {
+      "id": "implementation-or-fractional-operations",
+      "label": "Implementation or fractional operations",
+      "buyerQuestion": "Is there enough shared understanding to scope delivery, adoption, documentation, and handoff?",
+      "outcome": "A separately agreed engagement with explicit scope, authority, cadence, and exit conditions.",
+      "boundary": "A separate agreement is required for the engagement and for any extension or renewal."
+    }
+  ],
+  "supportingEntryCta": {
+    "eyebrow": "Ways to work together",
+    "heading": "Start with the decision in front of you",
+    "description": "Explore a focused working session, a knowledge operations diagnostic, or a separately scoped implementation engagement.",
+    "label": "See ways to work together",
+    "destination": "/contact"
+  },
+  "contactAction": {
+    "label": "Discuss a working session",
+    "destination": "email",
+    "prompt": "Share the decision, knot, or artifact involved; why it matters now; who needs to use the result; and any real deadline or access constraint."
+  },
+  "termsNote": "A conversation is not an engagement. Scope, timing, fees, and any paid work are confirmed in writing before work begins."
+}

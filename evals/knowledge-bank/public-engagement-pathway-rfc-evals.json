@@ -1,338 +1,130 @@
 {
   "schema_version": 1,
   "id": "public-engagement-pathway-rfc",
-  "objective": "Make a low-friction paid working-session pathway legible without exposing private opportunity provenance, inventing client outcomes, hiding other ways to work together, or authorizing publication.",
+  "objective": "Keep a useful public engagement pathway decision-oriented, minimally routed, independently supported by public evidence, and unable to turn private interest into public proof.",
   "cases": [
     {
-      "id": "bounded-public-safe-pathway-enters-review",
+      "id": "public-safe-pathway-enters-human-review",
       "candidate": {
-        "surface": "/contact",
-        "introduces_new_route": false,
-        "paid": true,
-        "duration_minutes": 60,
-        "names_problem_types": true,
-        "names_takeaway": true,
-        "continuation_is_separate": true,
-        "other_engagements_remain_visible": true,
-        "public_price": null,
-        "references_specific_private_opportunity": false,
-        "implies_past_client_outcome": false,
-        "implies_endorsement": false
-      },
-      "expected": {
-        "decision": "ready-for-human-review",
-        "publication_authorized": false,
-        "reasons": []
-      }
-    },
-    {
-      "id": "private-opportunity-provenance-is-denied",
-      "candidate": {
-        "surface": "/contact",
-        "introduces_new_route": false,
-        "paid": true,
-        "duration_minutes": 60,
-        "names_problem_types": true,
-        "names_takeaway": true,
-        "continuation_is_separate": true,
-        "other_engagements_remain_visible": true,
-        "public_price": null,
-        "references_specific_private_opportunity": true,
-        "implies_past_client_outcome": false,
-        "implies_endorsement": false
-      },
-      "expected": {
-        "decision": "deny",
-        "publication_authorized": false,
-        "reasons": ["specific-private-opportunity-reference-forbidden"]
-      }
-    },
-    {
-      "id": "unsupported-client-outcome-is-denied",
-      "candidate": {
-        "surface": "/contact",
-        "introduces_new_route": false,
-        "paid": true,
-        "duration_minutes": 60,
-        "names_problem_types": true,
-        "names_takeaway": true,
-        "continuation_is_separate": true,
-        "other_engagements_remain_visible": true,
-        "public_price": null,
-        "references_specific_private_opportunity": false,
-        "implies_past_client_outcome": true,
-        "implies_endorsement": false
-      },
-      "expected": {
-        "decision": "deny",
-        "publication_authorized": false,
-        "reasons": ["past-client-outcome-claim-forbidden"]
-      }
-    },
-    {
-      "id": "unpaid-underspecified-session-is-held",
-      "candidate": {
-        "surface": "/contact",
-        "introduces_new_route": false,
-        "paid": false,
-        "duration_minutes": 60,
-        "names_problem_types": true,
-        "names_takeaway": false,
-        "continuation_is_separate": true,
-        "other_engagements_remain_visible": true,
-        "public_price": null,
-        "references_specific_private_opportunity": false,
-        "implies_past_client_outcome": false,
-        "implies_endorsement": false
-      },
-      "expected": {
-        "decision": "hold",
-        "publication_authorized": false,
-        "reasons": ["paid-boundary-missing", "takeaway-missing"]
-      }
-    },
-    {
-      "id": "automatic-continuation-is-denied",
-      "candidate": {
-        "surface": "/contact",
-        "introduces_new_route": false,
-        "paid": true,
-        "duration_minutes": 60,
-        "names_problem_types": true,
-        "names_takeaway": true,
-        "continuation_is_separate": false,
-        "other_engagements_remain_visible": true,
-        "public_price": null,
-        "references_specific_private_opportunity": false,
-        "implies_past_client_outcome": false,
-        "implies_endorsement": false
-      },
-      "expected": {
-        "decision": "deny",
-        "publication_authorized": false,
-        "reasons": ["automatic-continuation-forbidden"]
-      }
-    },
-    {
-      "id": "new-route-and-premature-price-are-held",
-      "candidate": {
-        "surface": "/services",
-        "introduces_new_route": true,
-        "paid": true,
-        "duration_minutes": 60,
-        "names_problem_types": true,
-        "names_takeaway": true,
-        "continuation_is_separate": true,
-        "other_engagements_remain_visible": true,
-        "public_price": "published-amount",
-        "references_specific_private_opportunity": false,
-        "implies_past_client_outcome": false,
-        "implies_endorsement": false
-      },
-      "expected": {
-        "decision": "hold",
-        "publication_authorized": false,
-        "reasons": [
-          "new-route-not-justified",
-          "public-price-decision-required",
-          "recommended-surface-mismatch"
-        ]
-      }
-    },
-    {
-      "id": "single-pathway-positioning-is-held",
-      "candidate": {
-        "surface": "/contact",
-        "introduces_new_route": false,
-        "paid": true,
-        "duration_minutes": 60,
-        "names_problem_types": true,
-        "names_takeaway": true,
-        "continuation_is_separate": true,
-        "other_engagements_remain_visible": false,
-        "public_price": null,
-        "references_specific_private_opportunity": false,
-        "implies_past_client_outcome": false,
-        "implies_endorsement": false
-      },
-      "expected": {
-        "decision": "hold",
-        "publication_authorized": false,
-        "reasons": ["other-engagement-pathways-missing"]
-      }
-    }
-  ],
-  "placement_cases": [
-    {
-      "id": "generalized-offer-enters-public-review",
-      "candidate": {
-        "requested_destination": "public",
-        "content_classes": [
-          "general-offer",
-          "problem-types",
-          "bounded-process",
-          "artifact-examples",
-          "continuation-boundary",
-          "alternate-contact-pathways"
+        "source_basis": ["existing-public-portfolio-evidence", "self-authored-public-offer"],
+        "claims": ["availability-for-conversation"],
+        "placement": {"canonical_route": "/contact", "supporting_routes": ["/work/technical-operations"], "add_top_level_navigation": false},
+        "primary_cta": {"label": "Discuss a working session", "destination": "email", "interaction": "email", "checkout_or_payment": false},
+        "supporting_entry_cta": {"label": "See ways to work together", "destination": "/contact"},
+        "engagements": [
+          {"id": "focused-working-session", "buyer_decision": "Is one bounded session useful?", "bounded_outcome": "A clarified decision or next step.", "separately_authorized": true, "automatic_continuation": false},
+          {"id": "knowledge-operations-diagnostic", "buyer_decision": "Is a diagnostic needed?", "bounded_outcome": "A bounded map and recommendation.", "separately_authorized": true, "automatic_continuation": false},
+          {"id": "implementation-or-fractional-operations", "buyer_decision": "Is implementation ready to scope?", "bounded_outcome": "A separately agreed delivery scope.", "separately_authorized": true, "automatic_continuation": false}
         ],
-        "public_backlink_to_private": false,
-        "has_separate_publication_packet": true
+        "pricing": {"public_state": "withheld-pending-Jamie-decision"}
       },
-      "expected": {
-        "decision": "ready-for-public-review",
-        "destination": "public",
-        "publication_authorized": false,
-        "reasons": []
-      }
+      "expected": {"decision": "ready-for-human-review", "reasons": [], "implementation_authorized": true, "publication_authorized": false}
     },
     {
-      "id": "relationship-provenance-is-denied-from-public",
+      "id": "private-demand-does-not-support-public-offer",
       "candidate": {
-        "requested_destination": "public",
-        "content_classes": [
-          "general-offer",
-          "named-relationship",
-          "direct-quotation"
+        "source_basis": ["private-demand-signal"],
+        "claims": ["market-demand"],
+        "placement": {"canonical_route": "/contact", "supporting_routes": [], "add_top_level_navigation": false},
+        "primary_cta": {"label": "Discuss a working session", "destination": "email", "interaction": "email", "checkout_or_payment": false},
+        "supporting_entry_cta": {"label": "See ways to work together", "destination": "/contact"},
+        "engagements": [
+          {"id": "focused-working-session", "buyer_decision": "One session?", "bounded_outcome": "One outcome.", "separately_authorized": true, "automatic_continuation": false},
+          {"id": "knowledge-operations-diagnostic", "buyer_decision": "A diagnostic?", "bounded_outcome": "One map.", "separately_authorized": true, "automatic_continuation": false},
+          {"id": "implementation-or-fractional-operations", "buyer_decision": "An implementation?", "bounded_outcome": "One scope.", "separately_authorized": true, "automatic_continuation": false}
         ],
-        "public_backlink_to_private": false,
-        "has_separate_publication_packet": true
+        "pricing": {"public_state": "withheld-pending-Jamie-decision"}
       },
-      "expected": {
-        "decision": "deny",
-        "destination": "private-sidecar",
-        "publication_authorized": false,
-        "reasons": [
-          "public-content-forbidden:direct-quotation",
-          "public-content-forbidden:named-relationship"
-        ]
-      }
+      "expected": {"decision": "deny", "reasons": ["forbidden-public-claim:market-demand", "forbidden-public-source:private-demand-signal"], "implementation_authorized": true, "publication_authorized": false}
     },
     {
-      "id": "governed-interpretation-enters-private-sidecar",
+      "id": "private-source-paraphrase-remains-private",
       "candidate": {
-        "requested_destination": "private-sidecar",
-        "content_classes": [
-          "relationship-chronology",
-          "commercial-status",
-          "interpretation"
+        "source_basis": ["raw-transcript", "draft-private-agreement"],
+        "claims": ["availability-for-conversation"],
+        "placement": {"canonical_route": "/contact", "supporting_routes": [], "add_top_level_navigation": false},
+        "primary_cta": {"label": "Discuss a working session", "destination": "email", "interaction": "email", "checkout_or_payment": false},
+        "supporting_entry_cta": {"label": "See ways to work together", "destination": "/contact"},
+        "engagements": [
+          {"id": "focused-working-session", "buyer_decision": "One session?", "bounded_outcome": "One outcome.", "separately_authorized": true, "automatic_continuation": false},
+          {"id": "knowledge-operations-diagnostic", "buyer_decision": "A diagnostic?", "bounded_outcome": "One map.", "separately_authorized": true, "automatic_continuation": false},
+          {"id": "implementation-or-fractional-operations", "buyer_decision": "An implementation?", "bounded_outcome": "One scope.", "separately_authorized": true, "automatic_continuation": false}
         ],
-        "representation": "bounded-derived-record",
-        "source_registered": true
+        "pricing": {"public_state": "withheld-pending-Jamie-decision"}
       },
-      "expected": {
-        "decision": "ready-for-private-intake",
-        "destination": "private-sidecar",
-        "publication_authorized": false,
-        "reasons": []
-      }
+      "expected": {"decision": "deny", "reasons": ["forbidden-public-source:draft-private-agreement", "forbidden-public-source:raw-transcript"], "implementation_authorized": true, "publication_authorized": false}
     },
     {
-      "id": "private-pointer-may-point-to-public-id",
+      "id": "unknown-source-class-fails-closed",
       "candidate": {
-        "requested_destination": "private-sidecar",
-        "content_classes": ["source-pointer"],
-        "representation": "governed-pointer",
-        "source_registered": true,
-        "public_projection_id": "method.source-backed-team-memory"
+        "source_basis": ["private-context-summary"],
+        "claims": ["availability-for-conversation"],
+        "placement": {"canonical_route": "/contact", "supporting_routes": [], "add_top_level_navigation": false},
+        "primary_cta": {"label": "Discuss a working session", "destination": "email", "interaction": "email", "checkout_or_payment": false},
+        "supporting_entry_cta": {"label": "See ways to work together", "destination": "/contact"},
+        "engagements": [
+          {"id": "focused-working-session", "buyer_decision": "One session?", "bounded_outcome": "One outcome.", "separately_authorized": true, "automatic_continuation": false},
+          {"id": "knowledge-operations-diagnostic", "buyer_decision": "A diagnostic?", "bounded_outcome": "One map.", "separately_authorized": true, "automatic_continuation": false},
+          {"id": "implementation-or-fractional-operations", "buyer_decision": "An implementation?", "bounded_outcome": "One scope.", "separately_authorized": true, "automatic_continuation": false}
+        ],
+        "pricing": {"public_state": "withheld-pending-Jamie-decision"}
       },
-      "expected": {
-        "decision": "ready-for-private-intake",
-        "destination": "private-sidecar",
-        "publication_authorized": false,
-        "reasons": []
-      }
+      "expected": {"decision": "deny", "reasons": ["unapproved-public-source:private-context-summary"], "implementation_authorized": true, "publication_authorized": false}
     },
     {
-      "id": "raw-transcript-routes-to-source-vault",
+      "id": "premature-services-commerce-is-denied",
       "candidate": {
-        "requested_destination": "private-sidecar",
-        "content_classes": ["raw-transcript"],
-        "representation": "exact-copy",
-        "source_registered": true
+        "source_basis": ["self-authored-public-offer"],
+        "claims": ["availability-for-conversation"],
+        "placement": {"canonical_route": "/services", "supporting_routes": [], "add_top_level_navigation": true},
+        "primary_cta": {"label": "Buy now", "destination": "/checkout", "interaction": "checkout", "checkout_or_payment": true},
+        "supporting_entry_cta": {"label": "See ways to work together", "destination": "/contact"},
+        "engagements": [
+          {"id": "focused-working-session", "buyer_decision": "One session?", "bounded_outcome": "One outcome.", "separately_authorized": true, "automatic_continuation": false},
+          {"id": "knowledge-operations-diagnostic", "buyer_decision": "A diagnostic?", "bounded_outcome": "One map.", "separately_authorized": true, "automatic_continuation": false},
+          {"id": "implementation-or-fractional-operations", "buyer_decision": "An implementation?", "bounded_outcome": "One scope.", "separately_authorized": true, "automatic_continuation": false}
+        ],
+        "pricing": {"public_state": "published"}
       },
-      "expected": {
-        "decision": "route-to-source-vault",
-        "destination": "source-vault",
-        "publication_authorized": false,
-        "reasons": [
-          "source-vault-content-cannot-enter-private-git:raw-transcript"
-        ]
-      }
+      "expected": {"decision": "deny", "reasons": ["checkout-or-payment-not-authorized", "pricing-publication-not-authorized", "top-level-navigation-not-authorized", "unapproved-canonical-route:/services", "untruthful-primary-cta-destination:/checkout"], "implementation_authorized": true, "publication_authorized": false}
     },
     {
-      "id": "restricted-call-record-without-authority-holds",
+      "id": "automatic-expansion-is-denied",
       "candidate": {
-        "requested_destination": "private-sidecar",
-        "content_classes": ["participant-restricted-call-record"],
-        "representation": "bounded-complete-repaired-transcript",
-        "source_registered": true,
-        "owner_preservation_authorized": false,
-        "sole_private_access_verified": true,
-        "participant_restrictions_retained": true,
-        "complete_record_accounted_for": true
+        "source_basis": ["self-authored-public-offer"],
+        "claims": ["availability-for-conversation"],
+        "placement": {"canonical_route": "/contact", "supporting_routes": [], "add_top_level_navigation": false},
+        "primary_cta": {"label": "Discuss a working session", "destination": "email", "interaction": "email", "checkout_or_payment": false},
+        "supporting_entry_cta": {"label": "See ways to work together", "destination": "/contact"},
+        "engagements": [
+          {"id": "focused-working-session", "buyer_decision": "One session?", "bounded_outcome": "One outcome.", "separately_authorized": true, "automatic_continuation": false},
+          {"id": "knowledge-operations-diagnostic", "buyer_decision": "A diagnostic?", "bounded_outcome": "One map.", "separately_authorized": false, "automatic_continuation": false},
+          {"id": "implementation-or-fractional-operations", "buyer_decision": "An implementation?", "bounded_outcome": "One scope.", "separately_authorized": true, "automatic_continuation": true}
+        ],
+        "pricing": {"public_state": "withheld-pending-Jamie-decision"}
       },
-      "expected": {
-        "decision": "hold",
-        "destination": "private-sidecar",
-        "publication_authorized": false,
-        "reasons": ["private-complete-record-authorization-required"]
-      }
+      "expected": {"decision": "deny", "reasons": ["automatic-continuation:implementation-or-fractional-operations", "separate-authorization-missing:knowledge-operations-diagnostic"], "implementation_authorized": true, "publication_authorized": false}
     },
     {
-      "id": "authorized-complete-repair-enters-private-sidecar",
+      "id": "incomplete-ladder-is-held",
       "candidate": {
-        "requested_destination": "private-sidecar",
-        "content_classes": ["participant-restricted-call-record"],
-        "representation": "bounded-complete-repaired-transcript",
-        "source_registered": true,
-        "owner_preservation_authorized": true,
-        "sole_private_access_verified": true,
-        "participant_restrictions_retained": true,
-        "complete_record_accounted_for": true
+        "source_basis": ["self-authored-public-offer"],
+        "claims": ["availability-for-conversation"],
+        "placement": {"canonical_route": "/contact", "supporting_routes": [], "add_top_level_navigation": false},
+        "primary_cta": {"label": "Discuss a working session", "destination": "email", "interaction": "email", "checkout_or_payment": false},
+        "supporting_entry_cta": {"label": "See ways to work together", "destination": "/contact"},
+        "engagements": [
+          {"id": "focused-working-session", "buyer_decision": "", "bounded_outcome": "One outcome.", "separately_authorized": true, "automatic_continuation": false},
+          {"id": "knowledge-operations-diagnostic", "buyer_decision": "A diagnostic?", "bounded_outcome": "One map.", "separately_authorized": true, "automatic_continuation": false}
+        ],
+        "pricing": {"public_state": "withheld-pending-Jamie-decision"}
       },
-      "expected": {
-        "decision": "ready-for-private-intake",
-        "destination": "private-sidecar",
-        "publication_authorized": false,
-        "reasons": []
-      }
-    },
-    {
-      "id": "credential-is-denied-from-git",
-      "candidate": {
-        "requested_destination": "public",
-        "content_classes": ["credential"],
-        "public_backlink_to_private": false,
-        "has_separate_publication_packet": true
-      },
-      "expected": {
-        "decision": "deny",
-        "destination": "source-vault",
-        "publication_authorized": false,
-        "reasons": ["source-vault-content-cannot-enter-git:credential"]
-      }
-    },
-    {
-      "id": "public-backlink-to-private-is-denied",
-      "candidate": {
-        "requested_destination": "public",
-        "content_classes": ["general-offer"],
-        "public_backlink_to_private": true,
-        "has_separate_publication_packet": true
-      },
-      "expected": {
-        "decision": "deny",
-        "destination": "private-sidecar",
-        "publication_authorized": false,
-        "reasons": ["public-private-backlink-forbidden"]
-      }
+      "expected": {"decision": "hold", "reasons": ["buyer-decision-missing:focused-working-session", "required-rung-missing:implementation-or-fractional-operations"], "implementation_authorized": true, "publication_authorized": false}
     }
   ],
   "human_gates": [
-    "public-copy approval",
-    "public-pricing decision",
-    "RFC stage advancement",
-    "implementation",
+    "exact public copy",
+    "exact public pricing",
     "publication",
     "deployment",
     "production indexing"

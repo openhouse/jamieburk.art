@@ -28,7 +28,7 @@ test("the maintained public corpus contains no prohibited standalone terms", asy
   );
   assert.equal(run.result.scannedFiles, result.scannedFiles);
   assert.equal(run.result.prohibitedOccurrences, result.findings.length);
-  assert.equal(run.result.renderedPages, 15);
+  assert.equal(run.result.renderedPages, 16);
   assert.equal(run.result.deterministicTestsPassing, 7);
   assert.equal(run.decision, "keep-change");
 });

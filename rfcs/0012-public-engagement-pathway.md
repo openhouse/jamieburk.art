@@ -1,372 +1,336 @@
 ---
 rfc: 12
-title: Public Engagement Pathway for a Bounded Working Session
-stage: proposed
+title: Public Engagement Pathway for Focused Consulting and Implementation
+stage: implementing
 start_date: 2026-09-04
 authors:
   - Jamie Burkart
+  - Codex, AI-assisted draft
 champion: Jamie Burkart
 decision_owner: Jamie Burkart
 review_areas:
   - public-portfolio
+  - information-architecture
   - editorial
   - privacy-governance
   - accessibility
-  - knowledge-architecture
-implementation: null
+  - deployment
+implementation: apps/www/src/app/contact/page.tsx
 supersedes: []
 superseded_by: null
 ---
 
-# Public Engagement Pathway for a Bounded Working Session
+# Public Engagement Pathway for Focused Consulting and Implementation
 
-> **Proposal boundary**
+> **Implementation and evidence boundary**
 >
-> This RFC proposes public information architecture and copy for review. It
-> does not authorize implementation, publication, public pricing, deployment,
-> production indexing, or representation of any past or current client
-> engagement.
+> Jamie's direct instruction on 4 September 2026 authorizes the bounded page
+> implementation and the three fictionalized page-owner registrations described
+> here. It does not authorize public pricing, merge, publication, deployment, or
+> indexing. The implementation stands only on Jamie's existing public-safe
+> portfolio evidence and a self-authored statement of availability. Private
+> conversations, relationship records, expressions of interest, transcripts,
+> negotiations, and draft agreements are neither source material nor evidence
+> of demand, adoption, endorsement, or an engagement.
 
 ## Summary
 
-Add one concise, outcome-led engagement pathway to the existing Contact page:
-a paid, 60-minute working session with one outcome agreed in advance and a
-usable takeaway. Preserve full-time roles, larger projects, referrals, and
-collaboration as equally visible ways to contact Jamie. Use the About page only
-as a supporting link into Contact; do not create a new Services route, booking
-system, public price, testimonial, or case study for this proposal.
+This implementation adds a concise, public-safe engagement pathway to the existing Contact page so a
+visitor can understand how a small working session may, by separate agreement,
+lead to a diagnostic or implementation engagement. Keep interest in salaried
+and embedded roles equally visible and distinct. The first version should reuse
+the current information architecture and email contact path, add no top-level
+navigation item or commerce system, publish no fee without Jamie's separate
+approval, and make every expansion of scope a new mutual decision. One
+contextual link from Technical Operations supplies the supporting entry point.
 
 ## Motivation
 
-The current site describes Jamie's practice and invites “consulting
-conversations,” but it leaves a high-intent reader to invent the first useful
-step. That is an observable information-architecture gap: the Contact page
-names categories of interest without explaining what a small, concrete
-engagement would involve or produce.
+The portfolio already explains Jamie's operating practice and invites roles,
+referrals, focused consulting, and collaboration. It does not yet help a
+prospective collaborator recognize the smallest sensible way to begin or
+understand how a conversation differs from paid work, a diagnostic, or an
+implementation engagement.
 
-The working assumption is that some prospective employers, clients, and
-collaborators can recognize Jamie's value more easily through a bounded piece
-of work than through an undefined exploratory call. This proposal tests that
-assumption without converting any private opportunity, conversation, or
-relationship into public content and without presenting an untested offer as a
-proven client outcome.
+That ambiguity increases the visitor's response burden and can encourage useful
+working time to accumulate before scope, compensation, authority, or an exit is
+clear. A compact pathway can make the offer legible without recasting the whole
+portfolio as a consultancy or revealing the private circumstances that made the
+design question salient.
+
+The observed public problem was limited: the Contact page named consulting but
+did not explain a path into it. Whether visitors want these engagement forms,
+whether fees should appear publicly, and whether the pathway merits a dedicated
+route remain assumptions to test from the exact implemented candidate.
 
 ## Goals
 
-- Give a high-intent reader one legible, low-commitment way to begin paid work.
-- Lead with a problem and usable outcome rather than selling undifferentiated
-  time.
-- Make the paid boundary, 60-minute boundary, and separate continuation
-  decision explicit.
-- Preserve employment, project, referral, and collaboration pathways.
-- Reuse the existing Contact page and email channel.
-- Keep the copy public-safe, accessible, and easy to revise or remove.
-- Learn from inquiries without adding tracking, analytics, or private records
-  to the public repository.
+- Let a visitor distinguish interest in a role from interest in scoped work.
+- State one low-burden, paid starting shape without promising free discovery.
+- Show three progressively broader engagement forms in buyer-decision language.
+- Require separate scope and authorization at every transition.
+- Reuse the existing Contact route and truthful email interaction.
+- Keep the public offer fully supportable without private evidence.
+- Provide deterministic and reader-review gates before any publication.
 
 ## Non-goals
 
-- Do not publish the identity, statements, correspondence, transcript,
-  relationship state, negotiating history, or presumed intent of any person or
-  organization that informed private practice development.
-- Do not claim that the proposed session has already produced a client result.
-- Do not imply a testimonial, endorsement, client relationship, retained role,
-  or accepted offer.
-- Do not publish a price until Jamie makes a separate public-pricing decision.
-- Do not create `/services`, a booking widget, a calendar integration, a
-  checkout flow, a contact form, a CRM, analytics, or authentication.
-- Do not make a session the only way to hire or collaborate with Jamie.
-- Do not authorize implementation, publication, deployment, or indexing.
+- Do not publish or allude to a named private relationship, conversation,
+  transcript, negotiation, opportunity, budget, proposal, or agreement.
+- Do not claim an existing client, engagement, endorsement, adoption, measured
+  result, pipeline, demand signal, or market validation.
+- Do not approve a fee, minimum, retainer, package price, cancellation term, or
+  contract language for the public site.
+- Do not create a Services route, top-level navigation item, checkout, payment
+  flow, scheduling integration, intake database, client portal, or new runtime
+  dependency.
+- Do not replace the path for salaried, embedded, public-interest, or long-term
+  roles with consulting language.
+- Do not merge, publish, deploy, or index the implemented candidate without a
+  separate decision.
 
 ## Terminology
 
-**Working session**
-: One paid, 60-minute collaborative session organized around an agreed problem
-  and outcome. It is neither a free discovery call nor an automatically
-  recurring engagement.
+**Public engagement pathway**
+: A short explanation of recognizable ways to begin working with Jamie. It is
+  an invitation to discuss fit, not a binding offer or evidence of prior demand.
 
-**Usable takeaway**
-: A bounded artifact made during or immediately from the session, such as a
-  decision brief, system map, evaluation frame, or next-step plan. Its exact
-  form is agreed in advance and must fit the hour.
+**Focused working session**
+: A separately authorized session organized around one consequential decision,
+  knot, or working artifact and one bounded useful outcome.
 
-**Engagement pathway**
-: A clear public description of how someone may begin working with Jamie. It is
-  an invitation, not evidence that a particular engagement exists.
+**Knowledge operations diagnostic**
+: A separately scoped review of a bounded workflow, evidence base, team-memory
+  problem, or implementation question.
 
-**Continuation decision**
-: A new mutual choice after the session. One session does not authorize or
-  obligate another session, project, retainer, employment relationship, or
-  other work.
+**Implementation or fractional operations**
+: A separately agreed period of delivery, adoption support, documentation, or
+  operating leadership with explicit scope, cadence, authority, and exit terms.
+
+**Separate authorization**
+: A fresh affirmative agreement on scope, compensation, timing, authority, and
+  outputs. A preceding conversation or engagement never supplies it implicitly.
 
 ## Detailed design
 
 ### Information architecture
 
-Use `/contact` as the primary surface because it is already the destination for
-roles, referrals, consulting, and collaboration. Add a compact section below
-the opening paragraph and above the contact details. The existing email link is
-the action; no new collection system is required.
+Use the existing `/contact` route as the canonical engagement surface. The
+Technical Operations & Implementation page receives one contextual link to
+that surface. The homepage and primary
+navigation should not grow a new Services destination in the first iteration.
 
-Use `/about` only as a supporting path. If the RFC is later accepted, one short
-link near the existing Contact call to action may say “Start with a focused
-working session.” The full explanation remains on Contact so the site has one
-canonical place to maintain the offer.
+The Contact page should make two visitor intentions visibly distinct:
 
-A standalone Services page is premature. One proposed entry offer does not yet
-justify a new top-level content category, and a new route would ask readers to
-decide what kind of buyer they are before they understand the work.
+1. **Roles and embedded leadership** — continue to the resume or email Jamie
+   about a role, referral, or longer-term operating need.
+2. **Scoped work** — inspect the three-step engagement pathway and email Jamie
+   to discuss the smallest fitting start.
 
-### Reader sequence
+This keeps one canonical contact location, preserves the portfolio's current
+role positioning, and lets observed use—not speculation—justify any future
+dedicated route.
 
-The section answers five questions in this order:
+### Engagement ladder
 
-1. **What is it?** One paid, focused 60-minute working session.
-2. **What can I bring?** A decision, knowledge bottleneck, implementation
-   problem, or emerging system that needs structure.
-3. **What happens?** Jamie and the participant agree one useful outcome in
-   advance and work on it together.
-4. **What do I leave with?** A concise, fit-to-hour artifact.
-5. **What happens next?** Nothing automatically; both parties decide
-   separately whether further work would help.
+The public surface should describe three options as decisions, not packages:
 
-### Proposed public copy
+| Engagement form | Question for the visitor | Bounded outcome | Continuation |
+|---|---|---|---|
+| Focused working session | Is there one important decision, knot, or working artifact that would benefit from an hour of structured attention? | A clarified question, decision map, or agreed next step appropriate to the session. | None unless separately proposed and authorized. |
+| Knowledge operations diagnostic | Does a bounded workflow, evidence base, or team-memory problem need diagnosis before implementation? | A scoped map of what is known, open, protected, risky, and worth doing next. | Implementation remains a separate decision. |
+| Implementation or fractional operations | Is there enough shared understanding to scope delivery, adoption, documentation, and handoff? | A separately agreed engagement with explicit scope, authority, cadence, and exit conditions. | Extension or renewal requires a new agreement. |
 
-**Start with one focused working session**
+The sequence is available but not mandatory. A visitor may begin at the fitting
+level. Each item should state who the work is for, the decision it helps make,
+the kind of outcome it can produce, and the boundary around continuation. Exact
+deliverables belong in the later agreement, not in broad public copy.
 
-Start with one paid, focused 60-minute working session. Bring a decision, knowledge bottleneck, or implementation problem. We’ll name one useful outcome in advance and turn the hour into a concise artifact—such as a decision brief, system map, or next-step plan. The session stands on its own. Afterward, we can separately decide whether more work would help. You can also contact me about full-time roles, larger projects, referrals, or collaboration.
+### Call to action
 
-**Call to action:** Propose a working session
+Use **See ways to work together** for a supporting link into the existing
+Contact page. On that page, use one primary action: **Discuss a working
+session**. It should open the existing email interaction. Each label must
+describe what the action actually does; neither may say book, buy, reserve, or
+start when no calendar, payment, acceptance, or contract occurs.
 
-The call to action opens the existing public email address. A future
-implementation may prefill only a generic subject. It must not encode a client
-name, private source, relationship identifier, or sensitive query parameter.
+The email prompt may ask for:
 
-### Fit and boundary examples
+- the decision, knot, or artifact involved;
+- why it matters now;
+- who needs to use the result; and
+- any real deadline or access constraint.
 
-Good candidates have a question small enough to improve within an hour and
-important enough that a concrete artifact will reduce uncertainty afterward.
-Examples include clarifying a project decision, mapping a knowledge flow,
-framing an implementation sequence, or designing a bounded evaluation.
+Those prompts are an aid to fit, not a prerequisite for contact and not consent
+to begin work.
 
-The session should not promise a complete strategy, application build, source
-archive, legal conclusion, organizational transformation, or unlimited
-follow-up. If the desired outcome cannot responsibly fit the hour, the response
-should narrow it or propose a separate project discussion.
+### Pricing posture
 
-### Positioning
+Do not publish an exact fee in the first implementation unless Jamie separately
+approves the number, currency, unit, effective date, and conditions against the
+exact candidate. The initial surface may say that scope, timing, and fees are
+confirmed in writing before paid work begins. Private negotiations and draft
+agreements cannot establish public pricing or market validation.
 
-The site should frame the session as an access point to Jamie's broader
-practice, not as a commodity hour. The object being offered is a bounded
-decision-and-artifact loop: clarify, work, leave something usable, then choose.
-The duration controls scope; the outcome explains value.
+### Evidence and claims
 
-Employment and larger engagements remain explicit. The page must not suggest
-that Jamie is available only as an hourly consultant or that every initial
-conversation is billable. Referrals and ordinary collaboration inquiries still
-have a clear route.
+The surface may rely on existing approved public portfolio evidence to explain
+Jamie’s capabilities. It may also state Jamie's current availability to discuss
+work after Jamie approves that exact wording. It may not use private records to
+claim that anyone has hired, retained, requested, endorsed, adopted, paid, or
+measured the work.
 
-### Information placement boundary
+Public examples should link to existing case studies rather than introduce
+private or hypothetical clients. Any stronger factual claim must first exist in
+the canonical knowledge bank with its source, support, guardrail, public-use
+boundary, and review date.
 
-Anything committed to this repository is public, even when it is not rendered
-on the website. The pathway therefore uses three information planes rather
-than treating the private sidecar as a container for every non-public file.
+### Page-owner desk
 
-| Plane | What belongs there | What does not belong there |
-| --- | --- | --- |
-| Public website | The general paid-session offer; representative problem types and artifacts; the 60-minute and stand-alone boundaries; separate continuation choice; employment, project, referral, and collaboration paths; the public email action | A person's identity, private quotation, relationship or negotiation state, presumed intent, private rate, private source route, testimonial implication, or unsupported outcome |
-| Public repository, not website copy | This RFC; generic adversarial evaluator cases; clearly labeled fictionalized page-owner assignments and their public-source bases | A private repository locator or backlink, protected evidence, or any claim that the modeled owners participated, approved, or endorsed the page |
-| Private sidecar Knowledge Wiki | Named relationship context; governed chronology; commercial and communication state; bounded interpretation; agreement drafts; source dispositions; governed pointers; links from private records to stable public IDs | Credentials, authenticated browser state, full account exports, unrestricted source binaries, raw message databases, or an automatic power to publish |
-| Source vault outside Git | Raw transcripts and correspondence; message databases; full account exports; credentials and session state; sensitive source binaries retained under their own custody rules | Public copy, Git history, or a claim that access establishes consent or publication permission |
+The Contact candidate registers three fictionalized analytical page owners in
+the repository's editorial registry:
 
-For an explicitly authorized bounded call, the private sidecar may retain an
-exact copy of the complete conservative repair after private-access review,
-including participant-restricted passages needed for Jamie's working
-understanding. Raw recorder audio and raw provider exports remain source-vault
-material. A restricted passage may be absent from every outward projection
-while remaining accounted for privately; preservation never supplies
-quotation, attribution, publication, representation, or endorsement authority.
+- **Katie Lane — mutual authorization:** check that inquiry, paid work, and
+  continuation remain separate choices with clear scope and compensation.
+- **Jonathan Stark — buyer decision and value:** check that the page begins
+  with a consequential buyer problem and useful outcome rather than presenting
+  Jamie as undifferentiated time for sale.
+- **Beverly Wenger-Trayner — learning and continuity:** check that each option
+  can stand alone while learning may inform, but never predetermine, a later
+  engagement.
 
-The page-owner names are transparent repository governance, not public-site
-content. Their assessments may use only the exact public candidate and public
-sources. Any deliberation that depends on a named private relationship stays
-in the private sidecar and cannot be cited as a public endorsement.
-
-A private record may point to a stable public projection ID. The public graph
-never points back, reveals the private topology, or depends on private access
-to build. Moving an insight outward requires a separate public candidate that
-removes identifying provenance, states evidence and limits, and returns the
-exact wording to Jamie for a publication decision.
-
-### Pricing
-
-The session is described as paid so compensation is not ambiguous. The amount
-is intentionally absent. Before publishing a number, Jamie should decide
-whether a public rate improves qualification enough to justify reduced
-flexibility, and whether the rate, payment timing, cancellation terms, and tax
-handling are ready to be stated consistently.
-
-Pricing shared privately for a particular inquiry does not by itself authorize
-public pricing.
-
-### State model
-
-```text
-public copy draft
-  -> human review
-  -> RFC decision
-  -> bounded implementation candidate
-  -> accessibility and public-safety checks
-  -> Jamie publication approval
-  -> staging observation
-  -> Jamie production/indexing approval
-```
-
-No automated step collapses these states. “Ready for human review” never means
-published, accepted, deployed, or indexed.
+These registrations model editorial perspectives from public work. The named
+people did not participate, consent, approve, certify, or endorse the page.
+Jamie remains the publication owner. Deterministic owner-desk checks are part
+of the implementation gate; exact-candidate modeled assessments and Jamie's
+final publication decision remain pending and cannot be inferred from the
+role-play in this RFC or pull request.
 
 ## Security and privacy
 
-The public offer is a new statement of Jamie's practice. Its existence may be
-informed by private learning, but its public validity cannot depend on revealing
-the private origin. The public surface must not identify a specific prospect,
-company, conversation, transcript, message, relationship state, proposal,
-negotiation, private rate, presumed intention, protected source locator, or
-private repository.
+The principal leakage risk is inferential: public copy could paraphrase a
+private conversation closely enough to identify a person, relationship, budget,
+or live opportunity even without quoting it. Review must therefore assess
+provenance and dependency, not only search for names.
 
-Public copy must not reverse-engineer an identifiable private exchange through
-distinctive quotation or unusually specific chronology. It must not imply that
-someone requested, endorsed, bought, accepted, or benefited from the offer.
-An inquiry received after publication remains private by default and is not a
-testimonial or case study.
+The public offer must pass a deletion test: if every private transcript,
+correspondence record, relationship entry, and draft agreement vanished, the
+public wording would remain true, useful, and supportable. A private expression
+of interest is not public evidence of a client, demand, endorsement, price, or
+result.
 
-The Contact page continues to use a direct `mailto:` link. This proposal adds no
-new storage, cookies, third-party script, behavioral analytics, or sensitive
-form processing. Email custody and deletion remain outside the public
-repository.
+No protected locator, private graph edge, private repository identity, contact
+record, negotiation state, or private-source-derived anecdote may enter the
+public candidate. Uncertainty fails closed to `TODO: Jamie approval required.`
 
 ## Publication workflow
 
-1. Keep this RFC at `proposed` while reviewing positioning, copy, and price
-   posture.
-2. Jamie decides whether to accept the design and whether the public session
-   should remain price-opaque.
-3. A separate implementation change adds only the accepted copy and link to the
-   existing public surfaces.
-4. Run exact-candidate RFC, public-language, accessibility, route, build, and
-   public-safety checks.
-5. Jamie reviews the rendered staging page, including mobile layout and the
-   resulting email action.
-6. Jamie separately authorizes publication, deployment, and production
-   indexing.
-7. Inquiries and outcomes remain private unless a later publication packet has
-   its own factual, rights, consent, attribution, and approval basis.
+1. Jamie's direct 4 September 2026 instruction advances this RFC to
+   `implementing` and authorizes the bounded candidate, not publication.
+2. The implementation branch contains only the bounded Contact-page pathway
+   and one contextual link from Technical Operations.
+3. The candidate uses existing public-safe proof and a separately approved
+   self-authored availability statement.
+4. Deterministic checks evaluate routing, CTA truth, private-source exclusion,
+   pricing posture, separate authorization, and scope boundaries.
+5. Fresh readers test whether they can distinguish roles from scoped work and
+   select a fitting next step without inventing a client history.
+6. Jamie reviews the exact copy, pricing posture, candidate commit, and public
+   contact behavior.
+7. Merge, deployment, and production indexing remain separate decisions.
+
+Rights, consent, attribution, evidence, editorial selection, publication,
+deployment, and indexing remain distinct gates. A passing evaluation satisfies
+none of the human gates by itself.
 
 ## Rollout plan
 
-### Phase 0 — proposal and evaluation
+1. **Proposal — complete:** RFC, contract, adversarial cases, and the new
+   production-readiness criterion established the public/private boundary.
+2. **Bounded implementation — complete:** The two-intention Contact layout and
+   three engagement descriptions are implemented without changing navigation
+   or adding infrastructure.
+3. **Reader test:** Give the rendered candidate to role-seeking, public-sector,
+   and prospective consulting readers. Measure comprehension, next-action
+   clarity, and unintended claims.
+4. **Human review:** Jamie approves or revises the exact copy, pricing posture,
+   and candidate.
+5. **Staging:** Deploy noindex, inspect contact behavior, accessibility, mobile
+   layout, metadata, routes, and private-source independence.
+6. **Production decision:** Publish and index only after separate approval.
+7. **Observation:** Review inquiries after a defined period without storing
+   private inquiry bodies in public analytics or the public repository.
 
-- Review this RFC and its exact public copy.
-- Pressure-test privacy, reader burden, pathway completeness, and authority.
-- Leave the live site unchanged.
-
-### Phase 1 — bounded implementation candidate
-
-After RFC acceptance, add the Contact section and, if still useful, one About
-link. Reuse existing components and styles. Do not add a route or dependency.
-
-### Phase 2 — staging observation
-
-Verify heading order, link purpose, keyboard operation, focus visibility,
-mobile reading order, metadata, and plain-language comprehension. Confirm that
-the pathway remains secondary to the portfolio's broader hiring position.
-
-### Phase 3 — optional production release
-
-Only after Jamie's exact-candidate approval, deploy and decide separately
-whether production indexing is authorized. A simple rollback removes the new
-section and supporting link without affecting the Contact route.
-
-### Phase 4 — learning review
-
-After enough real inquiries to be informative, review whether readers
-understand fit, whether the one-hour boundary is workable, whether the takeaway
-is consistently achievable, and whether a public price or dedicated route is
-actually warranted. No individual inquiry is published by default.
+Rollback removes the bounded Contact-page pathway and contextual link while
+preserving the RFC and review history. The existing email and role pathways
+remain available.
 
 ## Decision gates
 
-- Jamie approves, revises, or rejects the public positioning.
-- Jamie decides whether the session is exactly 60 minutes on the public page.
-- Jamie decides whether public pricing remains absent.
-- Jamie accepts the RFC before implementation begins.
-- Jamie reviews the exact rendered copy before publication.
-- Accessibility, public-language, route, build, and public-safety checks pass
-  for the exact candidate.
-- Jamie separately approves deployment and production indexing.
-- Any future named outcome, quotation, endorsement, or case study receives its
-  own evidence, rights, consent, attribution, affected-person, and publication
-  review.
+- Jamie has authorized an implementation candidate for the consulting pathway;
+  this is not publication approval.
+- Jamie has authorized testing the three engagement labels in the candidate;
+  this is not approval of final public wording.
+- Jamie approves the exact public copy and availability statement.
+- Jamie decides whether to publish a fee and approves its exact conditions.
+- Jamie approves the exact candidate commit before merge or publication.
+- Fresh reader evidence must show that role interest remains legible and that
+  the engagement ladder reduces rather than increases decision burden.
+- Public-safety review must establish independence from private sources and no
+  implied client, demand, endorsement, adoption, payment, or result.
+- Merge, staging deployment, production deployment, and indexing remain
+  separate human decisions.
 
 ## Drawbacks
 
-- A paid first step may deter people who expect an exploratory conversation.
-- Omitting the price preserves flexibility but adds an email round trip.
-- A one-hour frame may encourage overly large requests unless fit language and
-  advance scoping remain clear.
-- An artifact expectation creates preparation and follow-up pressure; the
-  agreement must keep the takeaway proportionate to the hour.
-- Adding another hiring path can dilute Jamie's full-time and implementation
-  leadership positioning if the surrounding copy is not balanced.
-- A direct email channel provides less structured qualification than a form,
-  but avoids new data collection and infrastructure.
+- Consulting language may dilute Jamie's positioning for salaried or embedded
+  roles if it becomes visually dominant.
+- Three options may create choice burden if their distinctions are vague.
+- Withholding price may add an email round trip; publishing price prematurely
+  may constrain an untested offer or disclose a private negotiation posture.
+- An hourly starting point can encourage buyers to focus on time rather than
+  the decision or outcome unless the copy leads with the problem.
+- A minimal Contact-page treatment may be less discoverable than a dedicated
+  route, though it is safer while the pathway is unvalidated.
+- Public language can still reveal private context by implication, so lexical
+  redaction alone is insufficient.
 
 ## Alternatives
 
-### Keep the current generic consulting invitation
+**Do nothing** preserves the current role-first positioning but leaves
+prospective consulting collaborators without a clear, compensated starting
+path.
 
-This has the lowest maintenance cost but leaves the first useful step and its
-value undefined.
+**Create a dedicated Services route now** gives the offer more room but adds
+navigation and content weight before use has shown that the pathway deserves a
+separate destination.
 
-### Publish an hourly rate without an offer structure
+**Publish only a single hourly session** is simple, but hides the meaningful
+path from diagnosis to implementation and may make Jamie appear to sell time
+rather than operating outcomes.
 
-This makes price visible but commoditizes time, provides no outcome model, and
-does not help a reader recognize fit.
+**Publish prices immediately** may reduce inquiry friction, but an exact fee is
+a separate positioning decision and cannot be inferred from private material.
 
-### Create a Services page now
+**Use a booking and checkout product** can automate scheduling and payment, but
+adds integration, accessibility, privacy, cancellation, and operational work
+outside the bounded V1 need.
 
-This offers more room but creates navigation and maintenance weight before the
-practice has enough distinct, tested offers to justify a category.
-
-### Add a booking and payment platform
-
-This lowers scheduling friction only after the offer is already understood. It
-introduces privacy, accessibility, vendor, cancellation, and operational
-questions that are unnecessary for the first test.
-
-### Offer a free discovery call
-
-This is familiar but reproduces ambiguity about whose problem is being worked
-on and when compensated work begins. A brief fit check may still occur by
-email; substantive working time is paid.
-
-### Publish the private origin story as a case study
-
-This would create narrative specificity at the cost of privacy, consent,
-factual posture, and relationship safety. It is not acceptable for this
-proposal.
+**Tell the origin story of the pathway** might make the page feel specific, but
+would turn a private relationship into public marketing evidence. The design
+can retain the learning without publishing its provenance.
 
 ## Unresolved questions
 
-- Should the public copy say “60-minute” or use the more flexible “one focused
-  session” while the agreement carries the duration?
-- Should a private price be supplied in the first reply or only after fit is
-  confirmed?
-- Does the About page need a supporting link, or is Contact discoverable enough
-  without it?
-- What minimum preparation produces a useful hour without turning the inquiry
-  into unpaid consulting?
-- Which artifact examples are most legible to hiring managers as well as
-  prospective consulting clients?
-- What observation period and evidence would justify revisiting a public price
-  or standalone Services route?
+- Should the public label be “Focused working session,” “Decision session,” or
+  another phrase that prospective collaborators understand more quickly?
+- Should the first version name a one-hour duration or describe only a bounded
+  session until the operating pattern has been tested?
+- Should exact pricing remain inquiry-only or become public after the offer has
+  been used and reviewed?
+- What evidence and observation period would justify a dedicated route or a
+  top-level navigation item?
+- Which two existing public case studies best help a visitor recognize the fit
+  without adding proof burden to the Contact page?
+- How should the pathway describe availability if Jamie is simultaneously open
+  to salaried roles, fractional work, and bounded consulting?

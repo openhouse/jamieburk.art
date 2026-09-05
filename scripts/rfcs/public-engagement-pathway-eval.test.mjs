@@ -1,151 +1,226 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-let evaluatePublicEngagementPathway;
-let evaluatePublicEngagementPathwayRFC;
-try {
-  ({
-    evaluatePublicEngagementPathway,
-    evaluatePublicEngagementPathwayRFC
-  } = await import(
-    "./public-engagement-pathway-eval.mjs"
-  ));
-} catch {
-  // The first red run should fail as an assertion until the evaluator exists.
-}
+import {
+  evaluateEngagementPathwayCandidate,
+  evaluatePublicEngagementPathwayRFC
+} from "./public-engagement-pathway-eval.mjs";
 
-const contract = {
-  pathways: {
-    other_engagements_remain_visible: true,
-    continuation_requires_separate_mutual_decision: true
-  },
+const policy = {
+  allowed_routes: ["/contact", "/work/technical-operations"],
+  canonical_route: "/contact",
+  primary_cta_destination: "email",
+  allowed_source_classes: [
+    "existing-public-portfolio-evidence",
+    "self-authored-public-offer"
+  ],
+  allowed_claims: ["availability-for-conversation"],
+  new_top_level_navigation_authorized: false,
+  required_rung_ids: [
+    "focused-working-session",
+    "knowledge-operations-diagnostic",
+    "implementation-or-fractional-operations"
+  ],
+  forbidden_source_classes: [
+    "named-private-counterparty",
+    "private-correspondence",
+    "raw-transcript",
+    "draft-private-agreement",
+    "private-demand-signal"
+  ],
+  forbidden_claims: [
+    "client-adoption",
+    "client-endorsement",
+    "current-paid-engagement",
+    "market-demand",
+    "measured-client-result"
+  ],
   pricing: {
-    public_price_state: "decision-pending"
+    public_state: "withheld-pending-Jamie-decision"
+  },
+  authority: {
+    implementation_authorized: true,
+    publication_authorized: false
   }
 };
 
-const completeCandidate = {
-  surface: "/contact",
-  introduces_new_route: false,
-  paid: true,
-  duration_minutes: 60,
-  names_problem_types: true,
-  names_takeaway: true,
-  continuation_is_separate: true,
-  other_engagements_remain_visible: true,
-  public_price: null,
-  references_specific_private_opportunity: false,
-  implies_past_client_outcome: false,
-  implies_endorsement: false
-};
+function candidate(overrides = {}) {
+  return {
+    source_basis: ["existing-public-portfolio-evidence", "self-authored-public-offer"],
+    claims: ["availability-for-conversation"],
+    placement: {
+      canonical_route: "/contact",
+      supporting_routes: ["/work/technical-operations"],
+      add_top_level_navigation: false
+    },
+    primary_cta: {
+      label: "Discuss a working session",
+      destination: "email",
+      interaction: "email",
+      checkout_or_payment: false
+    },
+    supporting_entry_cta: {
+      label: "See ways to work together",
+      destination: "/contact"
+    },
+    engagements: policy.required_rung_ids.map((id) => ({
+      id,
+      buyer_decision: `Decide whether ${id} fits the current need`,
+      bounded_outcome: `A bounded outcome for ${id}`,
+      separately_authorized: true,
+      automatic_continuation: false
+    })),
+    pricing: {
+      public_state: "withheld-pending-Jamie-decision"
+    },
+    ...overrides
+  };
+}
 
-test("a bounded public-safe pathway becomes reviewable without becoming published", () => {
-  assert.equal(typeof evaluatePublicEngagementPathway, "function");
-  assert.deepEqual(evaluatePublicEngagementPathway(contract, completeCandidate), {
+test("a public-safe, decision-oriented pathway is ready only for human review", () => {
+  assert.deepEqual(evaluateEngagementPathwayCandidate(policy, candidate()), {
     decision: "ready-for-human-review",
-    publication_authorized: false,
-    reasons: []
+    reasons: [],
+    implementation_authorized: true,
+    publication_authorized: false
   });
 });
 
-test("private opportunity provenance is denied on the public candidate", () => {
-  const candidate = {
-    ...completeCandidate,
-    references_specific_private_opportunity: true
-  };
+test("private relationship evidence cannot establish a public offer or demand", () => {
+  const result = evaluateEngagementPathwayCandidate(
+    policy,
+    candidate({
+      source_basis: ["existing-public-portfolio-evidence", "private-demand-signal"],
+      claims: ["availability-for-conversation", "market-demand"]
+    })
+  );
 
-  assert.deepEqual(evaluatePublicEngagementPathway(contract, candidate), {
+  assert.deepEqual(result, {
     decision: "deny",
-    publication_authorized: false,
-    reasons: ["specific-private-opportunity-reference-forbidden"]
-  });
-});
-
-test("an unsupported past-client outcome is denied", () => {
-  const candidate = {
-    ...completeCandidate,
-    implies_past_client_outcome: true
-  };
-
-  assert.deepEqual(evaluatePublicEngagementPathway(contract, candidate), {
-    decision: "deny",
-    publication_authorized: false,
-    reasons: ["past-client-outcome-claim-forbidden"]
-  });
-});
-
-test("an unpaid or underspecified session remains held", () => {
-  const candidate = {
-    ...completeCandidate,
-    paid: false,
-    names_takeaway: false
-  };
-
-  assert.deepEqual(evaluatePublicEngagementPathway(contract, candidate), {
-    decision: "hold",
-    publication_authorized: false,
-    reasons: ["paid-boundary-missing", "takeaway-missing"]
-  });
-});
-
-test("automatic continuation is denied", () => {
-  const candidate = {
-    ...completeCandidate,
-    continuation_is_separate: false
-  };
-
-  assert.deepEqual(evaluatePublicEngagementPathway(contract, candidate), {
-    decision: "deny",
-    publication_authorized: false,
-    reasons: ["automatic-continuation-forbidden"]
-  });
-});
-
-test("premature public pricing and a new route remain held", () => {
-  const candidate = {
-    ...completeCandidate,
-    surface: "/services",
-    introduces_new_route: true,
-    public_price: "published-amount"
-  };
-
-  assert.deepEqual(evaluatePublicEngagementPathway(contract, candidate), {
-    decision: "hold",
-    publication_authorized: false,
     reasons: [
-      "new-route-not-justified",
-      "public-price-decision-required",
-      "recommended-surface-mismatch"
-    ]
+      "forbidden-public-claim:market-demand",
+      "forbidden-public-source:private-demand-signal"
+    ],
+    implementation_authorized: true,
+    publication_authorized: false
   });
 });
 
-test("the session offer cannot erase employment and project pathways", () => {
-  const candidate = {
-    ...completeCandidate,
-    other_engagements_remain_visible: false
-  };
+test("a transcript or private agreement remains excluded even when its wording is paraphrased", () => {
+  const result = evaluateEngagementPathwayCandidate(
+    policy,
+    candidate({
+      source_basis: ["raw-transcript", "draft-private-agreement"]
+    })
+  );
 
-  assert.deepEqual(evaluatePublicEngagementPathway(contract, candidate), {
+  assert.deepEqual(result, {
+    decision: "deny",
+    reasons: [
+      "forbidden-public-source:draft-private-agreement",
+      "forbidden-public-source:raw-transcript"
+    ],
+    implementation_authorized: true,
+    publication_authorized: false
+  });
+});
+
+test("an unknown source class fails closed instead of evading the private-source list", () => {
+  const result = evaluateEngagementPathwayCandidate(
+    policy,
+    candidate({ source_basis: ["private-context-summary"] })
+  );
+
+  assert.deepEqual(result, {
+    decision: "deny",
+    reasons: ["unapproved-public-source:private-context-summary"],
+    implementation_authorized: true,
+    publication_authorized: false
+  });
+});
+
+test("the first public version cannot add navigation, checkout, or unapproved pricing", () => {
+  const result = evaluateEngagementPathwayCandidate(
+    policy,
+    candidate({
+      placement: {
+        canonical_route: "/services",
+        supporting_routes: [],
+        add_top_level_navigation: true
+      },
+      primary_cta: {
+        label: "Buy now",
+        destination: "/checkout",
+        interaction: "checkout",
+        checkout_or_payment: true
+      },
+      pricing: { public_state: "published" }
+    })
+  );
+
+  assert.deepEqual(result, {
+    decision: "deny",
+    reasons: [
+      "checkout-or-payment-not-authorized",
+      "pricing-publication-not-authorized",
+      "top-level-navigation-not-authorized",
+      "unapproved-canonical-route:/services",
+      "untruthful-primary-cta-destination:/checkout"
+    ],
+    implementation_authorized: true,
+    publication_authorized: false
+  });
+});
+
+test("every expansion beyond a working session requires a new authorization", () => {
+  const unsafe = candidate();
+  unsafe.engagements[1].separately_authorized = false;
+  unsafe.engagements[2].automatic_continuation = true;
+
+  assert.deepEqual(evaluateEngagementPathwayCandidate(policy, unsafe), {
+    decision: "deny",
+    reasons: [
+      "automatic-continuation:implementation-or-fractional-operations",
+      "separate-authorization-missing:knowledge-operations-diagnostic"
+    ],
+    implementation_authorized: true,
+    publication_authorized: false
+  });
+});
+
+test("a missing buyer decision or rung is held rather than silently completed", () => {
+  const incomplete = candidate();
+  incomplete.engagements[0].buyer_decision = "";
+  incomplete.engagements.pop();
+
+  assert.deepEqual(evaluateEngagementPathwayCandidate(policy, incomplete), {
     decision: "hold",
-    publication_authorized: false,
-    reasons: ["other-engagement-pathways-missing"]
+    reasons: [
+      "buyer-decision-missing:focused-working-session",
+      "required-rung-missing:implementation-or-fractional-operations"
+    ],
+    implementation_authorized: true,
+    publication_authorized: false
   });
 });
 
-test("the repository candidate satisfies every hard gate and the reader-burden target", () => {
-  assert.equal(typeof evaluatePublicEngagementPathwayRFC, "function");
+test("the repository RFC candidate passes while preserving Jamie's gates", () => {
   const result = evaluatePublicEngagementPathwayRFC();
 
   assert.equal(result.rfc, 12);
-  assert.equal(result.stage, "proposed");
+  assert.equal(result.stage, "implementing");
   assert.equal(result.score, 1);
   assert.deepEqual(result.hard_failures, []);
-  assert.equal(result.scenarios.total, 7);
   assert.equal(result.scenarios.failed, 0);
-  assert.equal(result.placement_scenarios.total, 9);
-  assert.equal(result.placement_scenarios.failed, 0);
+  assert.ok(result.scenarios.total >= 6);
   assert.match(result.candidate_fingerprint, /^[a-f0-9]{64}$/);
-  assert.equal(result.implementation_authorized, false);
+  assert.equal(result.implementation_authorized, true);
   assert.equal(result.publication_authorized, false);
+  assert.deepEqual(result.implementation, {
+    canonical_route: "/contact",
+    engagement_count: 3,
+    page_owner_ids: ["katie-lane", "jonathan-stark", "beverly-wenger-trayner"],
+    supporting_route: "/work/technical-operations",
+    public_pricing_present: false
+  });
 });

@@ -46,39 +46,38 @@
       ]
     },
     {
-      "pageId": "contact-engagement-pathway",
+      "pageId": "contact",
       "route": "/contact",
-      "status": "proposed",
-      "candidateState": "not-implemented-no-owner-acceptance",
-      "purpose": "Help a high-intent reader understand one bounded paid way to begin while preserving employment, project, referral, and collaboration pathways.",
-      "acceptanceRule": "After implementation, the exact rendered public candidate passes only when every fictionalized page-owner lens returns Pass and Jamie separately approves publication.",
+      "status": "candidate",
+      "purpose": "Help visitors distinguish roles from scoped work, recognize the smallest fitting engagement, and understand the mutual authorization required before paid work begins or expands.",
+      "acceptanceRule": "The candidate clears its deterministic owner desk only when all three fictionalized lenses, the public engagement contract, and the exact rendered packet remain aligned; modeled review and Jamie's final publication decision remain separate gates.",
       "owners": [
         {
           "id": "katie-lane",
           "name": "Katie Lane",
           "publicProfileUrl": "https://www.workmadeforhire.net/about/",
-          "focus": "Compensation and negotiation boundary",
+          "focus": "Mutual authorization",
           "publicEvidenceState": "default-public-state",
-          "question": "Does the page make paid work, bounded authorization, and the reader's freedom to choose what happens next clear without turning ordinary contact into an involuntary sales process?",
-          "passDefinition": "Pass only when compensation is explicit, one session creates no continuing obligation, other contact paths remain open, and the invitation does not convert private rapport or exploratory conversation into free labor."
+          "question": "Does each threshold make scope, compensation, timing, and continuation a legible mutual choice rather than allowing useful work to begin by implication?",
+          "passDefinition": "Pass only when inquiry, paid work, and continuation are distinct decisions, the first session is explicitly compensated, and no conversation silently authorizes labor or expanded scope."
         },
         {
-          "id": "adrienne-r-fields",
-          "name": "Adrienne R. Fields",
-          "publicProfileUrl": "https://afnylaw.com/",
-          "focus": "Transactional clarity and protected boundaries",
+          "id": "jonathan-stark",
+          "name": "Jonathan Stark",
+          "publicProfileUrl": "https://jonathanstark.com/value-pricing-for-software-projects",
+          "focus": "Buyer decision and value",
           "publicEvidenceState": "default-public-state",
-          "question": "Does the page distinguish a general invitation from an engagement, preserve the unresolved pricing and contracting gates, and avoid implying a client, testimonial, or completed result?",
-          "passDefinition": "Pass only when scope, authorization, continuation, and public claims remain distinct; the page collects no sensitive data; and no private person, negotiation, source, endorsement, or unsupported outcome is exposed."
+          "question": "Can a prospective buyer identify the consequential decision and useful outcome at each level without mistaking Jamie's practice for undifferentiated time for sale?",
+          "passDefinition": "Pass only when the page leads with buyer problems and useful outcomes, preserves a bounded first step, and withholds an unapproved rate card without making the next action vague."
         },
         {
-          "id": "blair-enns",
-          "name": "Blair Enns",
-          "publicProfileUrl": "https://www.winwithoutpitching.com/about/",
-          "focus": "Outcome-led positioning",
+          "id": "beverly-wenger-trayner",
+          "name": "Beverly Wenger-Trayner",
+          "publicProfileUrl": "https://www.wenger-trayner.com/bev/",
+          "focus": "Learning and continuity",
           "publicEvidenceState": "default-public-state",
-          "question": "Does the page present the working session as a useful decision-and-artifact loop rather than a commodity hour, while giving an interested reader a confident and proportionate next step?",
-          "passDefinition": "Pass only when the problem and usable outcome lead the offer, duration controls scope rather than defining value, the call to action is truthful, and the broader practice remains more visible than the transaction."
+          "question": "Does the pathway let people learn what the work requires together while preserving continuity, explicit boundaries, and a safe stopping point at every stage?",
+          "passDefinition": "Pass only when each option can stand alone, learning may inform a later engagement without predetermining it, and implementation names authority, cadence, handoff, and exit."
         }
       ]
     }

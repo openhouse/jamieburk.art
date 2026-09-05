@@ -5,8 +5,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import matter from "gray-matter";
 import { evaluateMinimumViableFederationRFC } from "./rfcs/minimum-viable-federation-eval.mjs";
-import { evaluatePrivateVaultSidecarRFC } from "./rfcs/private-vault-sidecar-eval.mjs";
 import { evaluatePublicEngagementPathwayRFC } from "./rfcs/public-engagement-pathway-eval.mjs";
+import { evaluatePrivateVaultSidecarRFC } from "./rfcs/private-vault-sidecar-eval.mjs";
 import { evaluateAudioKnowledgeWorkflowRFC } from "./rfcs/audio-to-knowledge-workflow-eval.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -169,14 +169,14 @@ try {
 }
 
 try {
-  const pathwayEvaluation = evaluatePublicEngagementPathwayRFC({ repoRoot });
-  for (const criterion of pathwayEvaluation.hard_failures) {
+  const engagementEvaluation = evaluatePublicEngagementPathwayRFC({ repoRoot });
+  for (const criterion of engagementEvaluation.hard_failures) {
     fail(
       path.join(rfcRoot, "0012-public-engagement-pathway.md"),
       `public engagement pathway hard criterion failed: ${criterion}`
     );
   }
-  for (const scenario of pathwayEvaluation.scenarios.results.filter((item) => !item.passed)) {
+  for (const scenario of engagementEvaluation.scenarios.results.filter((item) => !item.passed)) {
     fail(
       path.join(rfcRoot, "0012-public-engagement-pathway.md"),
       `public engagement pathway scenario failed: ${scenario.id}`

@@ -2,6 +2,8 @@
   "schemaVersion": 1,
   "evalId": "public-surface-terminology-hillclimb-2026-08-20",
   "evaluatedAt": "2026-08-21T17:28:35-04:00",
+  "revalidatedAt": "2026-09-04",
+  "revalidationNote": "The governed public engagement-pathway data file and implemented Contact route increased the maintained corpus and rendered-page counts; all current files and pages retain zero prohibited occurrences.",
   "targetCriterion": "visitor-facing-language-clarity",
   "baseline": {
     "prohibitedOccurrences": 30,
@@ -34,8 +36,8 @@
     "internalStateRenamed": false
   },
   "result": {
-    "scannedFiles": 75,
-    "renderedPages": 15,
+    "scannedFiles": 76,
+    "renderedPages": 16,
     "prohibitedOccurrences": 0,
     "deterministicTestsPassing": 7,
     "selectedCoverLetterModelCalls": 2,
