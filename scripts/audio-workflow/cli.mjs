@@ -3,10 +3,12 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { runPersonReadings } from './person-reading-files.mjs';
 import {
   completeStage,
   evaluateQueue,
   holdStage,
+  requireStageAuthority,
   STAGES,
   summarizeJob
 } from "./core.mjs";
@@ -38,6 +40,12 @@ export function run(argv) {
   const manifestPath = valueAfter(args, "--manifest");
   const write = args.includes("--write");
 
+  if (command === 'voices') {
+    const root = valueAfter(args,'--private-root');
+    if (!root) throw new Error('private-root-required');
+    return runPersonReadings({root,manifest_path:manifestPath,mode:write?'write':args.includes('--check')?'check':'plan'});
+  }
+
   if (command === "queue") {
     return evaluateQueue(loadJson(manifestPath, "manifest"));
   }
@@ -48,6 +56,22 @@ export function run(argv) {
   const stage = COMMAND_TO_STAGE.get(command);
   if (!stage || !STAGES.includes(stage)) throw new Error("known-audio-command-required");
   const holdReasons = valueAfter(args, "--hold");
+  if (command === 'wiki' && !holdReasons) {
+    requireStageAuthority(job,stage);
+    if (job.stages?.repair?.status !== 'complete') throw new Error('prerequisite-stage-incomplete:repair');
+    const voiceManifest = valueAfter(args,'--voice-manifest');
+    const privateRoot = valueAfter(args,'--private-root');
+    if (!voiceManifest || !privateRoot) throw new Error('person-reading-manifest-required');
+    const scope = job.private_context?.transcript_source_ids;
+    if (!Array.isArray(scope) || !scope.length) throw new Error('job-source-scope-required');
+    const coverage = runPersonReadings({root:privateRoot,manifest_path:voiceManifest,scope_source_ids:scope,mode:write?'write':'check'});
+    const stageReceipt = loadJson(valueAfter(args,'--receipt'),'receipt');
+    const updated = coverage.projection_current && coverage.complete
+      ? completeStage(job,stage,{...stageReceipt,person_reading_coverage:{...coverage,repair_fingerprint:job.receipts.repair.output_fingerprint}})
+      : holdStage(job,stage,['person-close-readings-pending']);
+    if (write) writeFileSync(path.resolve(manifestPath), `${JSON.stringify(updated,null,2)}\n`);
+    return {dry_run:!write,command,...summarizeJob(updated)};
+  }
   const updated = holdReasons
     ? holdStage(job, stage, holdReasons.split(",").filter(Boolean))
     : completeStage(job, stage, loadJson(valueAfter(args, "--receipt"), "receipt"));
@@ -61,6 +85,7 @@ export function run(argv) {
 }
 
 export function exitCodeForResult(result) {
+  if (result?.projection_current === false) return 1;
   if (Array.isArray(result?.hard_failures) && result.hard_failures.length > 0) return 1;
   if (
     Object.values(result?.stage_states ?? {}).some(

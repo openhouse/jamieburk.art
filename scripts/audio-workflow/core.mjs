@@ -81,6 +81,15 @@ function requireReceipt(receipt) {
   }
 }
 
+export function requireStageAuthority(job, stage) {
+  requireQueuedJob(job, stage);
+  requireAuthority(job, stage);
+  if (stage === 'close-reading' &&
+      (job.authority?.source_access !== true || job.authority?.private_preservation !== true)) {
+    throw new Error('private-close-reading-authority-required');
+  }
+}
+
 export function createJobManifest(input) {
   requireOpaqueJobId(input?.job_id);
   if (!ALLOWED_DISPOSITIONS.has(input?.disposition)) {
@@ -113,9 +122,19 @@ export function createJobManifest(input) {
 
 export function completeStage(job, stage, receipt) {
   if (!STAGES.includes(stage)) throw new Error("known-stage-required");
-  requireQueuedJob(job, stage);
-  requireAuthority(job, stage);
+  requireStageAuthority(job, stage);
   requireReceipt(receipt);
+
+  if (stage === 'close-reading') {
+    const coverage = receipt.person_reading_coverage;
+    if (coverage?.projection_current !== true || coverage.complete !== true ||
+        !Number.isInteger(coverage.entry_count) || coverage.entry_count < 1 ||
+        !Number.isInteger(coverage.source_count) || coverage.source_count < 1 ||
+        !/^[a-f0-9]{64}$/.test(coverage.candidate_fingerprint ?? '') ||
+        coverage.repair_fingerprint !== receipt.input_fingerprint) {
+      throw new Error('person-reading-coverage-required');
+    }
+  }
 
   const stageIndex = STAGES.indexOf(stage);
   if (stageIndex > 0) {
@@ -151,6 +170,7 @@ export function holdStage(job, stage, reasonCodes) {
     status: "held",
     reason_codes: [...new Set(reasonCodes)].sort()
   };
+  delete next.receipts[stage];
   const stageIndex = STAGES.indexOf(stage);
   for (const downstream of STAGES.slice(stageIndex + 1)) {
     next.stages[downstream] = { status: "not-started" };

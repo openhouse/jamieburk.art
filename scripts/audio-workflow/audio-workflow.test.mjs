@@ -1,5 +1,8 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { mkdtempSync, writeFileSync } from 'node:fs';
+import path from 'node:path';
+import os from 'node:os';
 
 async function loadWorkflow() {
   try {
@@ -177,4 +180,32 @@ test("a reason-coded hold produces a nonzero automation exit policy", async () =
   );
   assert.equal(exitCodeForResult({ hard_failures: ["invalid"] }), 1);
   assert.equal(exitCodeForResult({ hard_failures: [], stage_states: {} }), 0);
+});
+
+test('close-reading cannot finish without current complete per-person coverage bound to the repair', async () => {
+  const { createJobManifest, completeStage } = await loadWorkflow();
+  let job = createJobManifest({job_id:'job-voice-001',disposition:'queued',provider:{processing:'local'},authority:{source_access:true,private_preservation:true}});
+  for (const stage of ['intake','inventory','preservation','preparation','transcription','diarization','repair']) job=completeStage(job,stage,receipt('same'));
+  assert.throws(()=>completeStage(job,'close-reading',receipt('same')),/person-reading-coverage-required/);
+  const covered = {...receipt('same'),person_reading_coverage:{projection_current:true,complete:true,entry_count:2,source_count:1,candidate_fingerprint:'a'.repeat(64),repair_fingerprint:'same'}};
+  assert.equal(completeStage(job,'close-reading',covered).stages['close-reading'].status,'complete');
+  covered.person_reading_coverage.repair_fingerprint='other';
+  assert.throws(()=>completeStage(job,'close-reading',covered),/person-reading-coverage-required/);
+});
+
+test('holding a previously complete stage removes its old receipt so it cannot masquerade as current', async () => {
+  const {createJobManifest,completeStage,holdStage}=await loadWorkflow();
+  let job=createJobManifest({job_id:'job-hold-001',disposition:'queued',provider:{processing:'local'},authority:{source_access:true,private_preservation:true}});
+  job=completeStage(job,'intake',receipt('one'));
+  job=holdStage(job,'intake',['source-revision-review']);
+  assert.equal(job.receipts.intake,undefined);
+  assert.equal(completeStage(job,'intake',receipt('one')).stages.intake.status,'complete');
+});
+
+test('wiki command rejects a participant-held job before opening the private projection', async () => {
+  const {run}=await import('./cli.mjs');
+  const root=mkdtempSync(path.join(os.tmpdir(),'voice-authority-'));
+  const file=path.join(root,'job.json');
+  writeFileSync(file,JSON.stringify({disposition:'held-participant-restriction',stages:{repair:{status:'complete'}},authority:{source_access:true,private_preservation:true}}));
+  assert.throws(()=>run(['wiki','--manifest',file,'--write']),/participant-restricted-candidate-not-actionable/);
 });

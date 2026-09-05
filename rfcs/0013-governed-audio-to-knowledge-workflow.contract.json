@@ -15,7 +15,14 @@
     "projection",
     "verification"
   ],
-  "stage_states": ["not-started", "held", "running", "complete", "failed", "superseded"],
+  "stage_states": [
+    "not-started",
+    "held",
+    "running",
+    "complete",
+    "failed",
+    "superseded"
+  ],
   "authority": {
     "decision_owner": "Jamie Burkart",
     "implementation_authorized": true,
@@ -139,7 +146,23 @@
     ],
     "public_projection_requires_separate_packet": true,
     "automatic_publication": false,
-    "public_may_reveal_private_topology": false
+    "public_may_reveal_private_topology": false,
+    "person_transcript_readings": {
+      "implementation": "scripts/audio-workflow/person-reading-files.mjs",
+      "method": "situated-transcript-person-readings-v1",
+      "every_observed_speaker_requires_entry": true,
+      "source_scoped_unknown_identity": true,
+      "mention_establishes_speaker": false,
+      "citations_require_speaker_fragment_timestamp_quote_and_hash": true,
+      "restriction_review_bound_to_source_hash": true,
+      "source_change_invalidates_readings": true,
+      "automatic_private_draft": true,
+      "automatic_human_acceptance": false,
+      "complete_stage_requires_current_cited_candidates": true,
+      "discovery_scope": "declared-local-transcript-roots",
+      "unavailable_sources_require_disposition": true,
+      "public_runtime_independent": true
+    }
   },
   "automation": {
     "implementation": "scripts/audio-workflow/cli.mjs",
@@ -169,7 +192,11 @@
     "automatic_deployment": false
   },
   "evaluation": {
-    "ordered_phases": ["deterministic", "bounded-human-review", "public-projection-review"],
+    "ordered_phases": [
+      "deterministic",
+      "bounded-human-review",
+      "public-projection-review"
+    ],
     "script": "scripts/rfcs/audio-to-knowledge-workflow-eval.mjs",
     "tests": [
       "scripts/rfcs/audio-to-knowledge-workflow-eval.test.mjs",

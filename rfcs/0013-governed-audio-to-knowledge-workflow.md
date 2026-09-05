@@ -363,6 +363,58 @@ to the extent supported. It records what each source does not establish. A call
 may update existing pages or create a bounded call page, but duplicate entities
 must be resolved through stable IDs rather than name similarity alone.
 
+### Automatic situated person-by-transcript readings
+
+The September 5 extension makes person-level reading coverage part of the
+accepted implementation. Each registered transcript has a disposition; every
+observed speaker and explicitly mapped participant has one entry on a private
+situated writer's voice page. A mentioned person is not thereby a speaker.
+Unmapped or overlapping labels remain source-scoped unresolved identities.
+The pages contain analysis about recorded language, never invented speech in
+someone else's name or a claim of real participation in an analytical role play.
+
+Each entry carries event context, source and person IDs, the source SHA-256,
+speaker-assignment limits, fragment-specific timestamps, line citations, a
+bounded specimen, interpretation, and what the evidence does not establish.
+The engine rejects quotations outside that person's cited turn. It preserves
+restricted-turn dispositions without repeating restricted substance. Both
+restriction review and authored interpretation bind to the exact source bytes.
+Changed bytes hold new extracts until restriction review is refreshed and mark
+the old interpretation stale. Original transcripts are never overwritten.
+
+`scripts/audio-workflow/person-reading-files.mjs` materializes deterministic
+private pages and a transcript-to-person index from a declared manifest. It
+discovers transcript-named Markdown only within explicitly listed local roots;
+unregistered discoveries receive source-review holds, not an inferred identity
+or a completed reading. Queue metadata without source text remains an explicit
+gap. This is not an account crawler, background schedule, or claim of universal
+historical coverage. Synthetic tests exercise the public implementation without
+private access; a permissioned consumer may vendor the source-free engine.
+
+The command surface is:
+
+```text
+voices --private-root <authorized-root> --manifest <relative-manifest> [--write|--check]
+wiki --manifest <job> --receipt <receipt> --private-root <authorized-root>
+     --voice-manifest <relative-manifest> [--write]
+```
+
+`voices` defaults to a non-writing plan. `--write` is idempotent and refuses to
+overwrite manual changes or silently delete obsolete pages. `--check` fails
+when the exact projection is stale. The `wiki` command automatically runs this
+projection for the job's explicit `private_context.transcript_source_ids` before
+advancing close reading. It holds the stage when any required entry is merely
+an automatic draft, stale, unattributed, missing, or restricted. The coverage
+receipt binds the projection fingerprint to the repair-stage fingerprint.
+Historical gaps outside the bounded job do not block that job, but remain
+visible in the full private index.
+
+An automatic extract is not a substantive close reading. An authored,
+source-checked candidate is not human approval, speaker certification, consent,
+or publication authority. These states remain separate. Private checks enforce
+freshness at the workflow boundary; continuous filesystem watching is not part
+of this implementation.
+
 ### Projection and public update
 
 Private completion ends at `ready-for-private-knowledge-update`. It does not

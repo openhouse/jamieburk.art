@@ -24,7 +24,11 @@ const candidatePaths = [
   "scripts/rfcs/audio-to-knowledge-workflow-rfc.test.mjs",
   "scripts/audio-workflow/core.mjs",
   "scripts/audio-workflow/cli.mjs",
-  "scripts/audio-workflow/audio-workflow.test.mjs"
+  "scripts/audio-workflow/audio-workflow.test.mjs",
+  "scripts/audio-workflow/person-readings.mjs",
+  "scripts/audio-workflow/person-readings.test.mjs",
+  "scripts/audio-workflow/person-reading-files.mjs",
+  "scripts/audio-workflow/person-reading-files.test.mjs"
 ];
 
 function loadJson(repoRoot, relativePath) {
