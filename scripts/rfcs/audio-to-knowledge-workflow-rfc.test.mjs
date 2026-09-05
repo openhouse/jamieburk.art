@@ -17,8 +17,8 @@ test("the exact RFC 0013 candidate satisfies every deterministic hard gate", asy
   assert.equal(result.stage, "proposed");
   assert.equal(result.score, 1);
   assert.deepEqual(result.hard_failures, []);
-  assert.equal(result.scenarios.total, 27);
-  assert.equal(result.scenarios.passed, 27);
+  assert.equal(result.scenarios.total, 28);
+  assert.equal(result.scenarios.passed, 28);
   assert.equal(result.scenarios.failed, 0);
   assert.match(result.candidate_fingerprint, /^[a-f0-9]{64}$/);
   assert.equal(result.implementation_authorized, false);

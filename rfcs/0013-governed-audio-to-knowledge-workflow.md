@@ -195,12 +195,15 @@ condition. It never stores credentials, session material, protected URLs, or
 unnecessary account identifiers.
 
 A cloud listing is not preservation. The workflow distinguishes
-`cloud-listed`, `confirmed-empty`, `recovered-and-hashed`, and
-`download-timed-out`. A listed object may establish that a local placeholder is
-not negative evidence. A cloud-reported zero-byte object is an empty source,
-not a materialization failure. A download counts as recovered only after its
-exact bytes enter private source custody outside Git and receive a SHA-256
-receipt. A timeout remains unresolved even when the provider shows a file size.
+`cloud-listed`, `confirmed-empty`, `recovered-and-hashed`,
+`technically-readable`, and `download-timed-out`. A listed object may establish
+that a local placeholder is not negative evidence. A cloud-reported zero-byte
+object is an empty source, not a materialization failure. A download counts as
+recovered only after its exact bytes enter private source custody outside Git
+and receive a SHA-256 receipt. A timeout remains unresolved even when the
+provider shows a file size.
+Technical readability does not establish transcription completion, diarization,
+speaker identity, listening review, or content certification.
 
 The fallback is read-only: it does not upload, edit, rename, move, delete,
 share, change permissions, or bulk export. Recovered bodies never enter the

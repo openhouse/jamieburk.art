@@ -394,6 +394,25 @@
         "publication_authorized": false,
         "reasons": ["unrecovered-cloud-source-overclaim"]
       }
+    },
+    {
+      "id": "technically-readable-audio-is-not-a-complete-transcript",
+      "patch": {
+        "cloud_recovery": {
+          "source_state": "recovered",
+          "download_status": "complete",
+          "preservation_claimed": true,
+          "private_source_custody": true,
+          "sha256_recorded": true,
+          "technical_media_validation": true
+        },
+        "transcription": {"status": "not-started"}
+      },
+      "expected": {
+        "decision": "hold",
+        "publication_authorized": false,
+        "reasons": ["provider-transcript-incomplete"]
+      }
     }
   ]
 }
