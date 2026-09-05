@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "run_id": "human-scale-weekly-review-rfc-hill-climb-2026-09-05",
+  "rfc": 15,
+  "candidate_branch": "work/2026-09-03-B",
+  "base_branch": "work/2026-09-03-A",
+  "criterion": "human-scale weekly review that closes consequential gatherings and limits accepted next-week outcomes without inferring capacity or leaking private context",
+  "method": {
+    "optimization_order": [
+      "privacy and authority hard gates",
+      "evidence and occurrence integrity",
+      "accepted ownership and designed endings",
+      "open-loop clarification and bounded selection",
+      "reader comprehension"
+    ],
+    "deterministic_before_subjective": true,
+    "rubric_changed_during_run": false,
+    "human_decision_substituted": false
+  },
+  "cycle_1": {
+    "criterion": "executable behavioral boundary",
+    "red_baseline": {
+      "test_count": 1,
+      "test_pass_count": 0,
+      "test_failure_count": 1,
+      "observed_failure": "The proposed weekly-review evaluator did not exist."
+    },
+    "bounded_change": "Added the smallest evaluator that could classify a fully bounded private review candidate.",
+    "after": {
+      "test_count": 1,
+      "test_pass_count": 1,
+      "test_failure_count": 0
+    },
+    "kept": true
+  },
+  "cycle_2": {
+    "criterion": "adversarial failure-mode coverage",
+    "red_baseline": {
+      "test_count": 10,
+      "test_pass_count": 1,
+      "test_failure_count": 9,
+      "observed_failure": "The minimal evaluator did not reject vanity activity metrics, inferred capacity, unaccepted ownership, or private projection leakage and did not hold incomplete endings, stale evidence, ambiguous loops, or over-selection."
+    },
+    "bounded_change": "Added explicit deny and hold decisions for the documented failure modes while keeping a passing result advisory and private by default.",
+    "after": {
+      "test_count": 10,
+      "test_pass_count": 10,
+      "test_failure_count": 0
+    },
+    "kept": true
+  },
+  "cycle_3": {
+    "criterion": "proposal-contract-scenario binding",
+    "red_baseline": {
+      "test_count": 11,
+      "test_pass_count": 10,
+      "test_failure_count": 1,
+      "observed_failure": "The behavior tests passed, but no evaluator bound the RFC, machine-readable contract, and scenario suite to one candidate."
+    },
+    "bounded_change": "Added seventeen hard criteria, seven exact-output scenarios, a candidate fingerprint, and integration with the repository RFC validator.",
+    "after": {
+      "test_count": 11,
+      "test_pass_count": 11,
+      "test_failure_count": 0,
+      "hard_criteria_passed": 17,
+      "hard_criteria_total": 17,
+      "scenario_pass_count": 7,
+      "scenario_total": 7,
+      "candidate_fingerprint": "9e1a1932c6e6419b6966255123b79ce4d102b637151898ee6be05a2dcc5d061f"
+    },
+    "kept": true
+  },
+  "eval_audit": {
+    "deterministic_checks_fit": "The current error categories are state, enumeration, privacy, and authority invariants and are appropriately evaluated in code.",
+    "interpretive_judge_status": "not-added",
+    "interpretive_judge_reason": "No human-labeled examples or documented interpretive error analysis yet justify an LLM judge.",
+    "human_validation_required_before_interpretive_judge": true,
+    "known_blind_spot": "Passing structure cannot establish that the source-backed account is complete, that an interpretation is wise, or that Jamie accepts the candidate."
+  },
+  "final_candidate": {
+    "decision": "keep-change",
+    "stage": "proposed",
+    "implementation_authorized": false,
+    "publication_authorized": false,
+    "repository_rfc_count": 15,
+    "repository_rfc_check_passed": true
+  },
+  "human_gates_remaining": [
+    "RFC acceptance",
+    "canonical weekly boundary selection",
+    "private destination and source-access approval",
+    "capacity self-report or decline",
+    "historical manual trials",
+    "candidate correction and adoption",
+    "implementation authorization",
+    "public projection",
+    "publication",
+    "operational use"
+  ]
+}

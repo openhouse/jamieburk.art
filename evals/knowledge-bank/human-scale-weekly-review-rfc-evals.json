@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "id": "human-scale-weekly-review-rfc",
+  "objective": "Reject vanity activity metrics, inferred capacity, unsupported occurrence, unaccepted ownership, private projection leakage, and silent publication authority while holding incomplete closure and over-selection.",
+  "error_categories": [
+    "activity-outcome-collapse",
+    "stale-evidence-window",
+    "meeting-ending-omission",
+    "unaccepted-ownership",
+    "open-loop-ambiguity",
+    "over-selection",
+    "capacity-inference",
+    "private-public-leakage"
+  ],
+  "cases": [
+    {
+      "id": "complete-private-week",
+      "review": {
+        "window": {"timezone": "America/New_York", "start_date": "2026-08-31", "end_date": "2026-09-06", "local_civil_day_count": 7, "current": true},
+        "evidence": {"bounded": true, "source_cutoff_recorded": true, "every_gap_dispositioned": true, "occurrence_claims_source_backed": true},
+        "activity_metrics": {"commit_count_primary_success_metric": false, "line_count_primary_success_metric": false, "artifact_count_primary_success_metric": false},
+        "capacity": {"state": "declined", "inferred_from_workload": false},
+        "meetings": [{"id": "meeting-a", "occurred": true, "purpose_recorded": true, "understanding_recorded": true, "contested_recorded": true, "accepted_actions_dispositioned": true, "reconvene_decision_recorded": true}],
+        "commitments": [{"id": "action-a", "owner": "Jamie Burkart", "accepted": true, "state": "active", "successful_outcome": "One bounded return delivered", "next_action": "Draft the return"}],
+        "open_loops": [{"id": "loop-a", "disposition": "next-action"}, {"id": "loop-b", "disposition": "waiting-for"}],
+        "selection": {"maximum_active_outcomes": 3, "active_outcomes": ["return", "call", "review"]},
+        "public_projection": {"requested": false, "human_authorized": false, "private_detail_present": false},
+        "authority": {"implementation_authorized": false, "publication_authorized": false}
+      },
+      "expected": {"decision": "ready-for-human-review", "stage": "human-review", "reasons": []}
+    },
+    {
+      "id": "vanity-activity-score",
+      "review": {
+        "activity_metrics": {"commit_count_primary_success_metric": true},
+        "capacity": {"state": "unknown", "inferred_from_workload": false},
+        "evidence": {"occurrence_claims_source_backed": true},
+        "authority": {"publication_authorized": false}
+      },
+      "expected": {"decision": "deny", "stage": "evidence", "reasons": ["activity-counts-cannot-establish-success"]}
+    },
+    {
+      "id": "unaccepted-default-ownership",
+      "review": {
+        "activity_metrics": {},
+        "capacity": {"state": "unknown", "inferred_from_workload": false},
+        "commitments": [{"id": "proposed-action", "owner": "Jamie Burkart", "accepted": false, "state": "active", "ownership_defaulted_to_jamie": true}],
+        "authority": {"publication_authorized": false}
+      },
+      "expected": {"decision": "deny", "stage": "commitment-clarification", "reasons": ["ownership-cannot-default-to-jamie:proposed-action", "unaccepted-active-commitment:proposed-action"]}
+    },
+    {
+      "id": "inferred-capacity",
+      "review": {
+        "activity_metrics": {},
+        "capacity": {"state": "inferred-good", "inferred_from_workload": true},
+        "authority": {"publication_authorized": false}
+      },
+      "expected": {"decision": "deny", "stage": "capacity", "reasons": ["capacity-inference-forbidden"]}
+    },
+    {
+      "id": "incomplete-meeting-ending",
+      "review": {
+        "window": {"local_civil_day_count": 7, "current": true},
+        "evidence": {"bounded": true, "source_cutoff_recorded": true, "every_gap_dispositioned": true, "occurrence_claims_source_backed": true},
+        "activity_metrics": {},
+        "capacity": {"state": "unknown", "inferred_from_workload": false},
+        "meetings": [{"id": "meeting-b", "occurred": true, "purpose_recorded": true, "understanding_recorded": true, "contested_recorded": true, "accepted_actions_dispositioned": false, "reconvene_decision_recorded": false}],
+        "commitments": [],
+        "open_loops": [],
+        "selection": {"maximum_active_outcomes": 3, "active_outcomes": []},
+        "public_projection": {"requested": false},
+        "authority": {"publication_authorized": false}
+      },
+      "expected": {"decision": "hold", "stage": "meeting-close", "reasons": ["meeting-ending-incomplete:meeting-b"]}
+    },
+    {
+      "id": "four-active-outcomes",
+      "review": {
+        "window": {"local_civil_day_count": 7, "current": true},
+        "evidence": {"bounded": true, "source_cutoff_recorded": true, "every_gap_dispositioned": true, "occurrence_claims_source_backed": true},
+        "activity_metrics": {},
+        "capacity": {"state": "recorded", "inferred_from_workload": false},
+        "meetings": [],
+        "commitments": [],
+        "open_loops": [],
+        "selection": {"maximum_active_outcomes": 3, "active_outcomes": ["one", "two", "three", "four"]},
+        "public_projection": {"requested": false},
+        "authority": {"publication_authorized": false}
+      },
+      "expected": {"decision": "hold", "stage": "selection", "reasons": ["active-outcome-limit-exceeded"]}
+    },
+    {
+      "id": "private-public-leak",
+      "review": {
+        "activity_metrics": {},
+        "capacity": {"state": "unknown", "inferred_from_workload": false},
+        "commitments": [],
+        "public_projection": {"requested": true, "human_authorized": true, "private_detail_present": true},
+        "authority": {"publication_authorized": false}
+      },
+      "expected": {"decision": "deny", "stage": "public-projection-review", "reasons": ["public-projection-contains-private-week-detail"]}
+    }
+  ],
+  "human_gates": ["RFC acceptance", "source access", "capacity self-report or decline", "candidate correction", "candidate adoption", "public projection", "publication", "implementation", "operational use"]
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "rfc": 15,
+  "stage": "proposed",
+  "implementation": null,
+  "purpose": "Turn bounded evidence about a lived week into a humane private review candidate and no more than three consciously selected outcomes.",
+  "authority": {
+    "implementation_authorized": false,
+    "source_access_authorized": false,
+    "outreach_authorized": false,
+    "publication_authorized": false
+  },
+  "window": {
+    "local_civil_day_count": 7,
+    "timezone_required": true,
+    "source_cutoffs_required": true,
+    "coverage_gaps_require_disposition": true,
+    "canonical_boundary_unresolved": true
+  },
+  "evidence": {
+    "occurrence_requires_source": true,
+    "activity_counts_are_secondary_only": true,
+    "fact_report_interpretation_inference_separated": true,
+    "silence_is_not_state_change": true,
+    "infrastructure_is_not_lived_outcome": true
+  },
+  "meeting_ending": {
+    "required_for_consequential_gatherings": true,
+    "fields": ["understanding", "contestation", "accepted-actions", "reconvening"],
+    "unowned_work_remains_unowned": true,
+    "ownership_cannot_default_to_jamie": true
+  },
+  "open_loops": {
+    "exactly_one_disposition_required": true,
+    "dispositions": ["next-action", "waiting-for", "project", "someday-maybe", "reference", "closed"],
+    "active_commitment_requires_acceptance": true,
+    "active_commitment_requires_successful_outcome": true,
+    "active_commitment_requires_next_action": true
+  },
+  "selection": {
+    "maximum_active_outcomes": 3,
+    "supporting_actions_roll_up_to_outcomes": true,
+    "exception_policy_unresolved": true
+  },
+  "capacity": {
+    "states": ["recorded", "declined", "unknown"],
+    "self_report_only": true,
+    "disclosure_optional": true,
+    "inference_from_activity_forbidden": true,
+    "private_by_default": true
+  },
+  "evaluation": {
+    "deterministic_checks_first": true,
+    "hard_gates_cannot_be_averaged": true,
+    "interpretive_judges_require_error_analysis": true,
+    "interpretive_judges_require_human_validation": true
+  },
+  "projection": {
+    "default_target": "private",
+    "public_projection_optional": true,
+    "public_projection_minimum_necessary": true,
+    "public_projection_requires_separate_human_authorization": true,
+    "private_capacity_detail_forbidden": true,
+    "private_relationship_detail_forbidden": true
+  },
+  "human_gates": [
+    "rfc-acceptance",
+    "source-access",
+    "capacity-self-report-or-decline",
+    "weekly-candidate-correction",
+    "weekly-candidate-adoption",
+    "public-projection",
+    "publication",
+    "implementation",
+    "operational-use"
+  ]
+}

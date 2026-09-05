@@ -9,6 +9,7 @@ import { evaluatePrivateVaultSidecarRFC } from "./rfcs/private-vault-sidecar-eva
 import { evaluatePublicHiringPathwayRFC } from "./rfcs/public-hiring-pathway-eval.mjs";
 import { evaluatePublicEngagementPathwayRFC } from "./rfcs/public-engagement-pathway-eval.mjs";
 import { evaluateAudioKnowledgeWorkflowRFC } from "./rfcs/audio-to-knowledge-workflow-eval.mjs";
+import { evaluateHumanScaleWeeklyReviewRFC } from "./rfcs/human-scale-weekly-review-eval.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const rfcRoot = path.join(repoRoot, "rfcs");
@@ -229,6 +230,38 @@ try {
   fail(
     path.join(rfcRoot, "0014-governed-audio-to-knowledge-workflow.md"),
     `governed audio workflow evaluation could not run: ${error.message}`
+  );
+}
+
+try {
+  const weeklyReviewEvaluation = evaluateHumanScaleWeeklyReviewRFC({ repoRoot });
+  for (const criterion of weeklyReviewEvaluation.hard_failures) {
+    fail(
+      path.join(
+        rfcRoot,
+        "0015-human-scale-weekly-review-and-real-world-commitment-closure.md"
+      ),
+      `human-scale weekly review hard criterion failed: ${criterion}`
+    );
+  }
+  for (const scenario of weeklyReviewEvaluation.scenarios.results.filter(
+    (item) => !item.passed
+  )) {
+    fail(
+      path.join(
+        rfcRoot,
+        "0015-human-scale-weekly-review-and-real-world-commitment-closure.md"
+      ),
+      `human-scale weekly review scenario failed: ${scenario.id}`
+    );
+  }
+} catch (error) {
+  fail(
+    path.join(
+      rfcRoot,
+      "0015-human-scale-weekly-review-and-real-world-commitment-closure.md"
+    ),
+    `human-scale weekly review evaluation could not run: ${error.message}`
   );
 }
 
