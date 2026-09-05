@@ -71,6 +71,68 @@ async function evaluate(job) {
   return evaluatorModule.evaluateAudioKnowledgeJob(job);
 }
 
+function completeQueue() {
+  return {
+    scope: {
+      bounded: true,
+      universal_completeness_claimed: false,
+      source_corpora: 2,
+      discovered_record_count: 3,
+      deduplicated_record_count: 3
+    },
+    authority: {
+      source_access_authorized: false,
+      external_upload_authorized: false,
+      automatic_processing_authorized: false,
+      publication_authorized: false
+    },
+    entries: [
+      {
+        id: "queue-a",
+        source_record_id: "source-a",
+        priority: "P0",
+        current_state: "preserved-layer-audit-required",
+        next_gate: "human-method-audit",
+        exact_audio_state: "known-preserved",
+        service_export_state: "known-preserved",
+        repaired_edition_state: "known-preserved",
+        public_projection_authorized: false
+      },
+      {
+        id: "queue-b",
+        source_record_id: "source-b",
+        priority: "P1",
+        current_state: "repair-required",
+        next_gate: "source-custody-and-processing-authorization",
+        exact_audio_state: "unknown",
+        service_export_state: "unknown",
+        repaired_edition_state: "missing",
+        public_projection_authorized: false
+      },
+      {
+        id: "queue-c",
+        source_record_id: "source-c",
+        priority: "P2",
+        current_state: "legacy-layer-audit-required",
+        next_gate: "human-method-audit",
+        exact_audio_state: "unknown",
+        service_export_state: "unknown",
+        repaired_edition_state: "known-preserved",
+        public_projection_authorized: false
+      }
+    ]
+  };
+}
+
+function evaluateQueue(queue) {
+  assert.equal(
+    typeof evaluatorModule?.evaluateTranscriptRevisitQueue,
+    "function",
+    "transcript revisit queue evaluator must exist"
+  );
+  return evaluatorModule.evaluateTranscriptRevisitQueue(queue);
+}
+
 test("a complete private job becomes ready for private human review", async () => {
   assert.deepEqual(await evaluate(completePrivateJob()), {
     decision: "ready-for-private-review",
@@ -192,5 +254,46 @@ test("a separately authorized redacted projection becomes a public candidate", a
     decision: "eligible-public-candidate",
     stage: "public-candidate-review",
     reasons: []
+  });
+});
+
+test("a bounded fully dispositioned revisit queue becomes ready for private prioritization", () => {
+  assert.deepEqual(evaluateQueue(completeQueue()), {
+    decision: "ready-for-private-prioritization",
+    counts: { total: 3, P0: 1, P1: 1, P2: 1, P3: 0 },
+    reasons: []
+  });
+});
+
+test("duplicate source records are denied rather than counted twice", () => {
+  const queue = completeQueue();
+  queue.entries[2].source_record_id = "source-b";
+
+  assert.deepEqual(evaluateQueue(queue), {
+    decision: "deny",
+    counts: { total: 3, P0: 1, P1: 1, P2: 1, P3: 0 },
+    reasons: ["duplicate-source-record:source-b"]
+  });
+});
+
+test("queue discovery cannot silently authorize processing or publication", () => {
+  const queue = completeQueue();
+  queue.authority.automatic_processing_authorized = true;
+
+  assert.deepEqual(evaluateQueue(queue), {
+    decision: "deny",
+    counts: { total: 3, P0: 1, P1: 1, P2: 1, P3: 0 },
+    reasons: ["queue-cannot-authorize-processing"]
+  });
+});
+
+test("an entry without a next human or custody gate remains held", () => {
+  const queue = completeQueue();
+  queue.entries[1].next_gate = "";
+
+  assert.deepEqual(evaluateQueue(queue), {
+    decision: "hold",
+    counts: { total: 3, P0: 1, P1: 1, P2: 1, P3: 0 },
+    reasons: ["queue-entry-next-gate-missing:queue-b"]
   });
 });

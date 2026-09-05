@@ -399,6 +399,45 @@ the exact authorized target and fail closed without the corresponding gate.
 This command surface is a design target, not an implemented interface in this
 RFC.
 
+### Transcript revisit queue
+
+Adopting the workflow requires a migration queue for transcripts created under
+earlier methods. Discovery is bounded to named corpus manifests, governed
+source records, and explicitly searched repositories. It does not begin by
+copying transcript bodies or walking every personal source system.
+
+Each deduplicated queue entry records:
+
+- stable queue and source-record IDs;
+- discovery corpus, date, and minimum-necessary title;
+- current custody, exact-audio, service-export, diarization, repair,
+  close-reading, and graph states;
+- whether the item is preserved, unavailable, partial, automated-only,
+  superseded, held, or ready for an RFC 0014 layer audit;
+- priority and the reason for that priority;
+- the next human, custody, recovery, repair, or method-audit gate; and
+- false-by-default processing, upload, public-projection, and publication
+  authority.
+
+Priority describes review urgency, not permission or execution order:
+
+- `P0` — recent, active call families with enough custody to audit immediately;
+- `P1` — missing, partial, automated-only, identity-questioned, held, or
+  publicly relied-on transcript records that need a bounded recovery decision;
+- `P2` — preserved legacy editions that need layer-separation and custody
+  audits before being called current-method records; and
+- `P3` — low-urgency records retained for future review.
+
+Duplicate working-tree copies, public-safe source notes, and private corpus
+records must converge on one source record when evidence shows that they refer
+to the same transcript. A duplicate is recorded in the discovery receipt, not
+added as a second obligation. An inaccessible body remains a queue entry with
+an explicit next gate.
+
+Building or reprioritizing the queue authorizes no source access, audio review,
+external upload, repair, participant contact, public projection, or deletion.
+Each entry must re-enter the RFC state machine through the earliest unmet gate.
+
 ### Errors, retries, and observability
 
 Receipts should report stage, state, attempt, artifact fingerprint, start and
@@ -422,12 +461,13 @@ The job status view should distinguish:
 
 ### Evaluation and hill climb
 
-The evaluation prototype starts with behavior, not keyword presence. Eleven
+The evaluation prototype starts with behavior, not keyword presence. Fifteen
 unit cases cover a complete private job and failures involving missing hashes,
 unauthorized upload, incomplete provider processing, changed service output,
 unsupported audio certification, transcript prompt injection, undispositioned
 context, missing public authority, private leakage, and a properly authorized
-public candidate.
+public candidate, plus queue deduplication, census, next-gate, and
+non-authorization behavior.
 
 The RFC-level evaluator also checks the machine-readable contract and five
 portable scenario fixtures. Its hard criteria require the state sequence,

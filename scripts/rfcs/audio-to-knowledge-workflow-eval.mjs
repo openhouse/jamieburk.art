@@ -135,6 +135,61 @@ export function evaluateAudioKnowledgeJob(job = {}) {
   return result("ready-for-private-review", "private-review", []);
 }
 
+export function evaluateTranscriptRevisitQueue(queue = {}) {
+  const entries = Array.isArray(queue.entries) ? queue.entries : [];
+  const counts = { total: entries.length, P0: 0, P1: 0, P2: 0, P3: 0 };
+  for (const entry of entries) {
+    if (Object.hasOwn(counts, entry.priority)) counts[entry.priority] += 1;
+  }
+
+  const denyReasons = [];
+  const authority = queue.authority ?? {};
+  if (authority.automatic_processing_authorized !== false) {
+    denyReasons.push("queue-cannot-authorize-processing");
+  }
+  if (authority.external_upload_authorized !== false) {
+    denyReasons.push("queue-cannot-authorize-external-upload");
+  }
+  if (authority.publication_authorized !== false) {
+    denyReasons.push("queue-cannot-authorize-publication");
+  }
+  const sourceIds = new Set();
+  for (const entry of entries) {
+    if (sourceIds.has(entry.source_record_id)) {
+      denyReasons.push(`duplicate-source-record:${entry.source_record_id}`);
+    }
+    sourceIds.add(entry.source_record_id);
+    if (entry.public_projection_authorized !== false) {
+      denyReasons.push(`queue-entry-public-authority-invalid:${entry.id}`);
+    }
+  }
+  if (denyReasons.length) {
+    return { decision: "deny", counts, reasons: [...new Set(denyReasons)].sort() };
+  }
+
+  const holdReasons = [];
+  const scope = queue.scope ?? {};
+  if (scope.bounded !== true || scope.universal_completeness_claimed !== false) {
+    holdReasons.push("queue-scope-boundary-invalid");
+  }
+  if (scope.deduplicated_record_count !== entries.length) {
+    holdReasons.push("queue-census-mismatch");
+  }
+  for (const entry of entries) {
+    if (!entry.next_gate?.trim()) holdReasons.push(`queue-entry-next-gate-missing:${entry.id}`);
+    if (!entry.current_state?.trim()) holdReasons.push(`queue-entry-state-missing:${entry.id}`);
+    if (!entry.source_record_id?.trim()) holdReasons.push(`queue-entry-source-missing:${entry.id}`);
+    if (!Object.hasOwn(counts, entry.priority)) {
+      holdReasons.push(`queue-entry-priority-invalid:${entry.id}`);
+    }
+  }
+  if (holdReasons.length) {
+    return { decision: "hold", counts, reasons: [...new Set(holdReasons)].sort() };
+  }
+
+  return { decision: "ready-for-private-prioritization", counts, reasons: [] };
+}
+
 function sha256(value) {
   return createHash("sha256").update(value).digest("hex");
 }
@@ -196,7 +251,13 @@ export function evaluateAudioKnowledgeWorkflowRFC(options = {}) {
       ["source-access", "external-upload", "participant-correction", "public-projection", "publication"]
         .every((gate) => contract.human_gates?.includes(gate)),
     public_safe_rfc:
-      !/(?:\/Users\/|\/Volumes\/|provider_job_id\s*[:=]\s*["'][^"']+)/.test(rfc)
+      !/(?:\/Users\/|\/Volumes\/|provider_job_id\s*[:=]\s*["'][^"']+)/.test(rfc),
+    governed_revisit_queue:
+      contract.migration_queue?.bounded_discovery_required === true &&
+      contract.migration_queue?.deduplication_required === true &&
+      contract.migration_queue?.every_entry_requires_next_gate === true &&
+      contract.migration_queue?.priority_does_not_authorize_processing === true &&
+      contract.migration_queue?.protected_locators_in_public_queue === false
   };
   const hardFailures = Object.entries(hardCriteria)
     .filter(([, passed]) => !passed)

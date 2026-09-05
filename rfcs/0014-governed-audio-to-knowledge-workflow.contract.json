@@ -67,6 +67,16 @@
     "candidate_fingerprint_required": true,
     "public_projection_requires_separate_human_authorization": true
   },
+  "migration_queue": {
+    "bounded_discovery_required": true,
+    "deduplication_required": true,
+    "every_entry_requires_next_gate": true,
+    "priority_vocabulary": ["P0", "P1", "P2", "P3"],
+    "priority_does_not_authorize_processing": true,
+    "automatic_source_access_authorized": false,
+    "automatic_external_upload_authorized": false,
+    "protected_locators_in_public_queue": false
+  },
   "human_gates": [
     "source-access",
     "external-upload",
