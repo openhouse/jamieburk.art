@@ -26,6 +26,8 @@
     "check:rfcs": "node scripts/check-rfcs.mjs",
     "evals:public-engagement-pathway": "node scripts/rfcs/public-engagement-pathway-eval.mjs",
     "test:public-engagement-pathway": "node --test scripts/rfcs/public-engagement-pathway-eval.test.mjs scripts/rfcs/public-private-boundary-eval.test.mjs",
+    "evals:weekly-practice-review": "node scripts/rfcs/weekly-practice-review-eval.mjs",
+    "test:weekly-practice-review": "node --test scripts/rfcs/weekly-practice-review-eval.test.mjs",
     "evals:audio-knowledge-workflow": "node scripts/rfcs/audio-to-knowledge-workflow-eval.mjs",
     "test:audio-knowledge-workflow": "node --test scripts/rfcs/audio-to-knowledge-workflow-eval.test.mjs scripts/rfcs/audio-to-knowledge-workflow-rfc.test.mjs",
     "pair:status": "node scripts/workspace-pair.mjs status",

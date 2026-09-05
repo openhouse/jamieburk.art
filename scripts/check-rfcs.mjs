@@ -8,6 +8,7 @@ import { evaluateMinimumViableFederationRFC } from "./rfcs/minimum-viable-federa
 import { evaluatePrivateVaultSidecarRFC } from "./rfcs/private-vault-sidecar-eval.mjs";
 import { evaluatePublicEngagementPathwayRFC } from "./rfcs/public-engagement-pathway-eval.mjs";
 import { evaluateAudioKnowledgeWorkflowRFC } from "./rfcs/audio-to-knowledge-workflow-eval.mjs";
+import { evaluateWeeklyPracticeReviewRFC } from "./rfcs/weekly-practice-review-eval.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const rfcRoot = path.join(repoRoot, "rfcs");
@@ -207,6 +208,27 @@ try {
   fail(
     path.join(rfcRoot, "0013-governed-audio-to-knowledge-workflow.md"),
     `audio-to-knowledge workflow evaluation could not run: ${error.message}`
+  );
+}
+
+try {
+  const weeklyReviewEvaluation = evaluateWeeklyPracticeReviewRFC({ repoRoot });
+  for (const criterion of weeklyReviewEvaluation.hard_failures) {
+    fail(
+      path.join(rfcRoot, "0014-weekly-practice-review-and-commitment-protocol.md"),
+      `weekly practice review hard criterion failed: ${criterion}`
+    );
+  }
+  for (const scenario of weeklyReviewEvaluation.scenarios.results.filter((item) => !item.passed)) {
+    fail(
+      path.join(rfcRoot, "0014-weekly-practice-review-and-commitment-protocol.md"),
+      `weekly practice review scenario failed: ${scenario.id}`
+    );
+  }
+} catch (error) {
+  fail(
+    path.join(rfcRoot, "0014-weekly-practice-review-and-commitment-protocol.md"),
+    `weekly practice review evaluation could not run: ${error.message}`
   );
 }
 
