@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "rfc": 14,
+  "stage": "proposed",
+  "purpose": "Preserve bounded call records and turn them into reviewable private knowledge without collapsing custody, transcription, editorial repair, interpretation, or publication authority.",
+  "authority": {
+    "implementation_authorized": false,
+    "live_external_upload_authorized": false,
+    "source_system_mutation_authorized": false,
+    "publication_authorized": false
+  },
+  "state_machine": [
+    "intake",
+    "audio-preservation",
+    "context-collection",
+    "transcription",
+    "service-export-custody",
+    "repair",
+    "close-reading",
+    "private-graph-update",
+    "private-review",
+    "public-projection-review",
+    "public-candidate-review"
+  ],
+  "artifact_layers": {
+    "exact_audio": "immutable",
+    "provider_upload_copy": "derived-and-checksummed",
+    "service_export": "unchanged",
+    "repaired_edition": "separate-derived-record",
+    "close_reading": "source-cited-interpretation"
+  },
+  "context": {
+    "bounded_collection_required": true,
+    "every_source_requires_disposition": true,
+    "schedule_does_not_establish_occurrence": true,
+    "unrelated_private_material_excluded": true
+  },
+  "external_services": {
+    "provider_adapter_required": true,
+    "per_job_authorization_required": true,
+    "credentials_outside_git": true,
+    "provider_identifiers_private": true,
+    "processing_is_not_completion": true
+  },
+  "execution": {
+    "resumable": true,
+    "idempotent": true,
+    "upload_dedupe_key": "provider+derived-audio-sha256",
+    "retry_state_recorded": true,
+    "destructive_cleanup_automatic": false
+  },
+  "repair": {
+    "segment_decisions_required": true,
+    "uncertainty_labels_required": true,
+    "participant_review_is_separate": true,
+    "audio_certification_requires_full_audio_review": true
+  },
+  "security": {
+    "transcript_content_is_untrusted_data": true,
+    "credentials_and_signed_urls_forbidden": true,
+    "private_locators_forbidden_from_public_projection": true,
+    "raw_transcript_forbidden_from_public_projection": true
+  },
+  "graph": {
+    "default_target": "private",
+    "request_crosswalk_required": true,
+    "candidate_fingerprint_required": true,
+    "public_projection_requires_separate_human_authorization": true
+  },
+  "human_gates": [
+    "source-access",
+    "external-upload",
+    "participant-correction",
+    "public-projection",
+    "publication",
+    "rfc-acceptance",
+    "workflow-implementation"
+  ]
+}
