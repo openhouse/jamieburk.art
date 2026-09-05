@@ -19,7 +19,7 @@ publication, deployment, merge, contact, or deletion.
   `scripts/rfcs/audio-to-knowledge-workflow-rfc.test.mjs`, and
   `scripts/rfcs/audio-to-knowledge-revisit-queue-rfc.test.mjs`
 - Candidate SHA-256:
-  `64a6c0ecedcec49ee89f23dbca796478927e13cdcc7fa43a54bd743ab10e1dec`
+  `4202ed0a6d8d6f5cd0a38a831b39b29691bb04e8881271ea5c80babc07677c07`
 
 The candidate fingerprint binds the RFC, contract, case suite, evaluator,
 regressions, package commands, RFC checker, and index. Changed candidate bytes
@@ -68,17 +68,17 @@ publication.
 
 ## Provisional evaluation
 
-The evaluator ran 23 visible development cases:
+The evaluator ran 27 visible development cases:
 
 - 1 complete private workflow eligible for private Knowledge Wiki review;
-- 10 incomplete or stale states that must hold; and
-- 12 forbidden states that must be denied.
+- 11 incomplete or stale states that must hold; and
+- 15 forbidden states that must be denied.
 
 Observed result:
 
-- deterministic hard checks: 14 of 14 passed;
-- development scenarios: 23 of 23 passed;
-- focused regressions: 25 of 25 passed;
+- deterministic hard checks: 15 of 15 passed;
+- development scenarios: 27 of 27 passed;
+- focused regressions: 29 of 29 passed;
 - implementation authorization: false;
 - external-transfer authorization from the RFC: false; and
 - publication authorization: false.
@@ -89,14 +89,16 @@ contract conformance, not production transcription quality.
 
 ## Hill-climb interpretation
 
-The retained candidate improves the governing model in four bounded ways:
+The retained candidate improves the governing model in six bounded ways:
 
 - separates `hold` from `deny` rather than treating every failure alike;
 - adds provider-neutral collection and exact-export custody;
 - adds historical discovery without turning the queue into processing
   authority;
 - replaces brittle remembered totals with candidate-to-summary consistency,
-  the complete RFC disposition vocabulary, and a shared discovery cutoff; and
+  the complete RFC disposition vocabulary, and a shared discovery cutoff;
+- distinguishes cloud listing, confirmed emptiness, recovered-and-hashed
+  private custody, and download timeout under a read-only fallback; and
 - evaluates uncertainty, repair lineage, public/private projection, retries,
   credentials, and human gates together.
 

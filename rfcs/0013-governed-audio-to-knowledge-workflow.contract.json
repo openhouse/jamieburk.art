@@ -91,6 +91,21 @@
       "unresolved"
     ]
   },
+  "cloud_recovery": {
+    "authenticated_read_only_fallback": true,
+    "web_listing_is_preservation": false,
+    "confirmed_empty_is_materialization_failure": false,
+    "download_requires_private_custody_and_sha256": true,
+    "download_timeout_may_be_called_recovered": false,
+    "cloud_mutation_allowed": false,
+    "candidate_git_may_contain_recovered_raw_body": false,
+    "state_terms": [
+      "cloud-listed",
+      "confirmed-empty",
+      "recovered-and-hashed",
+      "download-timed-out"
+    ]
+  },
   "diarization": {
     "generic_labels_allowed": true,
     "named_labels_require_support": true,
