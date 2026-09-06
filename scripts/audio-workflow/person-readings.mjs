@@ -24,9 +24,10 @@ export function parseTranscript(text) {
     if (/^#|^Transcribed by |^---$/.test(line)) { flush(); continue; }
     const plain = line.match(/^([^\n]+?) {2,}(\d{1,2}:\d{2}(?::\d{2})?)\s*$/);
     const bold = line.match(/^\*\*\[(approximately )?(\d{1,2}:\d{2}(?::\d{2})?)\] (.+?):\*\*\s*(.*)$/);
-    if (plain || bold) {
+    const connector = line.match(/^\[(\d{1,2}:\d{2}(?::\d{2})?)\] ([^:\n]+):\s*(.*)$/);
+    if (plain || bold || connector) {
       flush();
-      current = { label: (plain ? plain[1] : bold[3]).trim(), timestamp: plain ? plain[2] : bold[2], approximate: Boolean(bold?.[1]), fragment, line: index + 1, end_line: index + 1, lines: bold ? [bold[4]] : [] };
+      current = { label: (plain ? plain[1] : bold ? bold[3] : connector[2]).trim(), timestamp: plain ? plain[2] : bold ? bold[2] : connector[1], approximate: Boolean(bold?.[1]), fragment, line: index + 1, end_line: index + 1, lines: bold ? [bold[4]] : connector ? [connector[3]] : [] };
     } else if (current) { current.lines.push(line); current.end_line = index + 1; }
   }
   flush();

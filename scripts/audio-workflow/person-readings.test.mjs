@@ -9,6 +9,35 @@ async function engine() {
 }
 const text = '## Fragment 1\n\nAlex  00:01\nCould we check the scope before committing?\n\nBlair  00:08\nI can review the draft, but cannot promise approval.\n\n## Fragment 2\n\nAlex  00:01\nI mentioned Casey, who is not here.\n';
 const digest = value => createHash('sha256').update(value).digest('hex');
+
+// Catches dropped connector-format turns, including simultaneous brief speech.
+test('connector transcript keeps every timestamped turn and unresolved label', async () => {
+  const { parseTranscript } = await engine();
+  const turns = parseTranscript('[0:00:01] Alex: Please stop the platform assistant.\n[0:00:03] Blair: Done.\n[0:00:03] Speaker 1: Thanks.\n');
+  assert.deepEqual(turns.map(t => [t.label,t.timestamp,t.text,t.line]), [
+    ['Alex','0:00:01','Please stop the platform assistant.',1],
+    ['Blair','0:00:03','Done.',2],
+    ['Speaker 1','0:00:03','Thanks.',3]
+  ]);
+});
+
+test('a held artifact stays unread while a separately registered source receives its own reading', async () => {
+  const { buildPersonReadings } = await engine();
+  const input = fixture();
+  input.sources[0].state = 'held-participant-restriction';
+  input.sources.push({...input.sources[0],id:'SRC-INDEPENDENT',path:'sources/independent.md',state:'available'});
+  const reads = [];
+  const result = buildPersonReadings(input, file => {
+    reads.push(file);
+    return '[0:00:09] Alex: Please hold the software work for now.';
+  });
+  assert.deepEqual(reads, ['sources/independent.md']);
+  const independent = result.entries.find(e=>e.source_id==='SRC-INDEPENDENT' && e.person_id==='alex');
+  assert.equal(independent.citations[0]?.quote,'Please hold the software work for now.');
+  assert.equal(result.sources.find(s=>s.id==='SRC-ONE').status,'held-participant-restriction');
+  assert.equal(result.complete,false);
+});
+
 function fixture() {
   return { visibility: 'private', sources: [{ id: 'SRC-ONE', path: 'sources/one.md', date: '2026-09-05', context: 'A planning conversation.', state: 'available', speakers: { Alex: 'alex', Blair: 'blair' }, excluded_ranges: [] }], people: [{ id: 'alex', name: 'Alex' }, { id: 'blair', name: 'Blair' }], readings: [] };
 }

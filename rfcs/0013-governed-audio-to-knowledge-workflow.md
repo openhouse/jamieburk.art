@@ -185,6 +185,15 @@ actionable. A priority label cannot authorize source access, materialization,
 external transfer, transcription, voice-reference use, preservation, quotation,
 publication, or contact. Those gates remain explicit and per job.
 
+Restrictions must retain their evidence and referent: an entire meeting, a
+particular recording artifact, a platform feature, a passage, and an outward
+use are not interchangeable scopes. When new source-specific evidence corrects
+an earlier family-wide inference, preserve the original decision and register
+the separately identified artifact with its own bounded authority and review.
+Do not inherit a hold blindly across distinct artifacts, or bypass an actual
+restriction by changing an ID. Owner clarification is not participant consent,
+new-upload authority, or public disclosure permission.
+
 ### Authenticated cloud recovery
 
 When local custody exposes a dataless placeholder or unreliable directory, a
@@ -381,6 +390,12 @@ restricted-turn dispositions without repeating restricted substance. Both
 restriction review and authored interpretation bind to the exact source bytes.
 Changed bytes hold new extracts until restriction review is refreshed and mark
 the old interpretation stale. Original transcripts are never overwritten.
+
+The parser accepts speaker-first, bold timestamped, and connector-style
+`[timestamp] Speaker: text` turns. Equal timestamps do not merge speakers;
+short unknown turns remain explicit. A full-return coverage check accounts for
+every source turn and every logged repair, while keeping audio completeness
+and independent speaker review separate from returned-text completeness.
 
 `scripts/audio-workflow/person-reading-files.mjs` materializes deterministic
 private pages and a transcript-to-person index from a declared manifest. It
