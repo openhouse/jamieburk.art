@@ -112,6 +112,18 @@ Substantive interpretations may be added as separately cited editorial records.
 Candidate creation alone cannot mark the close-reading stage complete. Existing
 keyword counts are source-audit hints, not a substitute for close reading.
 
+The automatic return must also expose an editorial queue covering every entry:
+source or attribution needed, substantive reading needed, or a substantive
+candidate awaiting review. An existing paragraph cannot hide an unfinished
+reading. Candidate coverage and substantive coverage are separate measures.
+
+An authorized local refresh may checksum-audit a newly available edition of an
+already registered transcript before returning it to the graph. This is additive
+source registration, not blanket discovery or semantic approval. Missing or
+changed prior editions stop the refresh before derived output is replaced;
+unregistered source bodies are not read by this bounded refresh. Corrections
+require an explicit edition and attribution decision, not automatic replacement.
+
 Every candidate compares the opening and closing attributed turns with citations.
 Person pages present entries chronologically and transcript backlinks target the
 individual entry. Unparsed editions retain their own visible gaps even when a

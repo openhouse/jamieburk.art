@@ -313,6 +313,28 @@ deployment, and indexing authority.
 
 This RFC is currently only a proposal.
 
+### Separately authorized additive changelog
+
+On September 6 Jamie requested a private two-week retrospective and an additive
+IRL changelog for emerging insights. That narrower record is authorized by the
+specific request; it does not accept this RFC's full weekly-review workflow,
+three-outcome selection rule, capacity prompt, schedule, or operational adoption.
+
+The changelog separates event dates from knowledge dates and preserves an
+earlier picture, cited new evidence, revised interpretation, consequence, and
+explicit gaps. Corrections append and link to prior entries rather than rewriting
+them. Source editions remain identifiable; changed or duplicate evidence cannot
+silently become fresh independent corroboration. A recorded conversation is not
+an accepted commitment, and activity counts cannot stand in for lived outcomes.
+
+Checks protect the history prefix, citation revisions, dates, state boundaries,
+and generated reader view. Passing checks do not validate interpretive quality
+or confer human authority. This is a private record, not a scheduled monitor or
+an automatic public build log. No private event, person, source locator, or
+counterpart topology is part of this public RFC extension.
+
+### Full weekly-review proposal
+
 1. **Proposal:** Review the vocabulary, three-outcome limit, meeting-ending
    contract, private capacity states, and relationship to existing planners.
 2. **Exploration:** Apply the contract manually to several historical weeks,

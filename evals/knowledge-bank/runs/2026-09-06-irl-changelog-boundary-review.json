@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "run_date": "2026-09-06",
+  "runtime": "Node 26.5.0",
+  "scope": "RFC 0015 additive-retrospective boundary and RFC 0014 additive registered-source returns with explicit substantive gaps",
+  "rfc_stage": "proposed",
+  "full_weekly_review_implementation_authorized": false,
+  "public_factual_claims_added": false,
+  "private_events_or_topology_included": false,
+  "rfc_candidate_fingerprint": "c83d4cae4572c5be9cc30d6ab2d5920eed4cb0557ed1c9da1f96e79942f19dcf",
+  "verification": {
+    "audio_workflow_tests":{"passed":19,"total":19},
+    "audio_workflow_hard_criteria":{"passed":15,"total":15},
+    "audio_workflow_scenarios":{"passed":12,"total":12},
+    "audio_workflow_candidate_fingerprint":"5adb69fb928a30af4a5e36e03da04558497c8c7cdc13f61f6cbdb1306c8c9b8d",
+    "weekly_review_tests": {
+      "passed": 11,
+      "total": 11
+    },
+    "weekly_review_hard_criteria": {
+      "passed": 17,
+      "total": 17
+    },
+    "weekly_review_scenarios": {
+      "passed": 7,
+      "total": 7
+    },
+    "rfc_structure": {
+      "valid": 15
+    },
+    "public_safety": {
+      "passed": true,
+      "existing_warnings": 11
+    },
+    "full_public_check": {
+      "exit_code": 1,
+      "stopped_at": "evals:professor-lenses",
+      "passing_bound_holdout_scorecards": 0,
+      "total_holdout_scorecards": 6,
+      "candidate_fingerprint": "b977fff8b0a5595b3f6ffebd1ddc2941787ae3f13d27f24f15d5f49dd51d4e49",
+      "interpretation": "Existing release gate remains held; later chained checks were not reached."
+    }
+  },
+  "bounded_change": "Clarifies that explicit authorization for a private additive record does not accept a broader proposed workflow, infer capacity or commitments, create a scheduled monitor, or publish underlying events.",
+  "human_authority": {
+    "interpretations_require_review": true,
+    "publication_authorized": false,
+    "merge_authorized": false,
+    "deployment_authorized": false
+  }
+}
