@@ -2,21 +2,21 @@
   "schema_version": 1,
   "scope": "source-free correspondence prototype",
   "baseline_commit": "a8d4b0fed65cf3b30f71c035ad97dffdc262915f",
-  "evaluated_at": "2026-09-05T23:56:27.241Z",
+  "evaluated_at": "2026-09-06T00:00:53.819Z",
   "node": "v26.5.0",
   "candidate_files": {
     "package.json": "999045651c9628e36e7d36a130ad5a6d6d1fc9b290abe4a2fb0ea0028302c565",
     "rfcs/0015-governed-correspondence-readings.md": "b1642d4b189996e0180ca81f4f982adaaf04e8fb62b547ad40634f858f4eac0f",
     "rfcs/README.md": "1b2b126e1ccae5e4d6cbeb8f51b88433dd771e3c23b083467e2b4cffbc0bfb96",
     "scripts/mail-workflow/cli.mjs": "76c442fd68299ec75cc4b1ebbc04654df931d23628e3e5067bdcfc96b3a2f67b",
-    "scripts/mail-workflow/core.mjs": "cb88e99989a5e3a04aeb3ec7ce233dbefa55f1f2846bf558e192ec1f294a47c7",
-    "scripts/mail-workflow/mail-workflow.test.mjs": "3af692012429b6ebdb104ad9110cabdebff0107a1fc0a8adad26f2002a31415a"
+    "scripts/mail-workflow/core.mjs": "c74107ab69213bada1d237d32ec426c23fd5e9ae802755e6538bea9305980998",
+    "scripts/mail-workflow/mail-workflow.test.mjs": "a994bbd4fdedf4bb73f328da056d22e4a77ba93f083c4420f4360e19b6d8c08d"
   },
-  "candidate_fingerprint": "c1fb07ff9e5f0fef1e698f8adb840ef63c2fe0673c4e96e35d3c037e1fc46844",
+  "candidate_fingerprint": "9192e5ea46f3c9b62656a72c11d11c00a263bf95842487aaa16ee81062977987",
   "binding_scope": "Listed changed implementation, test, RFC, index and package files; this receipt is excluded to avoid self-reference.",
   "results": {
     "mail_workflow": {
-      "passed": 24,
+      "passed": 25,
       "failed": 0
     },
     "audio_workflow": {
@@ -74,6 +74,12 @@
     {
       "step": "final focused run",
       "result": "pass"
+    },
+    {
+      "step": "staged diff hygiene",
+      "result": "extra final newline reproduced by new regression; renderer fixed",
+      "passed": 25,
+      "total": 25
     }
   ],
   "rfc_stage": "proposed",

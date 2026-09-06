@@ -130,3 +130,9 @@ test('an automated notice cannot be attributed to a human', t => {
   f.manifest.entities[0].kind = 'team';
   assert.equal(f.run(['--write']).status, 0);
 });
+
+test('generated Markdown has exactly one final newline for diff-safe commits', t => {
+  const f = fixture(t);
+  assert.equal(f.run(['--write']).status, 0);
+  assert.match(readFileSync(path.join(f.root, 'wiki/mail/person-a.md'), 'utf8'), /\S\n$/);
+});

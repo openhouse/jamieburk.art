@@ -113,7 +113,7 @@ export function renderMailPages(manifest, result) {
       }
       text += '\n';
     }
-    pages[file] = text;
+    pages[file] = text.trimEnd() + '\n';
   }
   const file = `${dir}/index.md`;
   let text = header('mail.voice.index', 'Email reading coverage and graph', file, Object.keys(pages));
@@ -121,6 +121,6 @@ export function renderMailPages(manifest, result) {
   for (const entity of manifest.entities.filter(e => result.entries.some(x => x.entity_id === e.id))) text += `- [${md(entity.name)}](${entity.id}.md) — ${entity.kind}; ${entity.identity}\n`;
   text += '\n## Mailbox queue\n\n';
   for (const m of manifest.inventory.mailboxes) text += `- ${md(m.id)} — ${md(m.status)}; folder census: ${m.folders_complete === true}; message census: ${m.message_census_complete === true}\n`;
-  pages[file] = text;
+  pages[file] = text.trimEnd() + '\n';
   return pages;
 }
