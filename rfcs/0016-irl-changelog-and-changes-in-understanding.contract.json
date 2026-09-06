@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "rfc": 16,
+  "stage": "proposed",
+  "decision_owner": "Jamie Burkart",
+  "implementation_authorized": false,
+  "description": "A synthetic reference contract, not a migration of existing records or a source-access grant.",
+  "authority_fields": [
+    "implementation_authorized",
+    "source_access_authorized",
+    "publication_authorized",
+    "action_authorized"
+  ],
+  "entry_kinds": [
+    "event",
+    "attributed-report",
+    "understanding",
+    "operating-artifact",
+    "correction"
+  ],
+  "before_bases": [
+    "earlier-source-state",
+    "retrospective-comparison",
+    "explicit-unknown"
+  ],
+  "source_kinds": [
+    "correspondence",
+    "transcript",
+    "observed-record",
+    "attributed-report",
+    "operating-artifact"
+  ],
+  "evidence_relations": [
+    "supports",
+    "complicates",
+    "contradicts"
+  ],
+  "support_types": [
+    "occurrence",
+    "reported-status",
+    "interpretation",
+    "artifact"
+  ],
+  "correction_fields": [
+    "now",
+    "before",
+    "event_time",
+    "attribution",
+    "consequence",
+    "limitation"
+  ],
+  "runtime_writes_enabled": false,
+  "human_review_required": true
+}

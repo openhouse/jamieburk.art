@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "rfc": 16,
+  "stage": "proposed",
+  "verified_at": "2026-09-06T13:57:00Z",
+  "baseline_commit": "2a3d36d156cb292b7540ff56787456f938d37c6b",
+  "candidate": {
+    "fingerprint": "cdc8704efe3231ddb86cd309fb3a65cea140d2915d6d433b4d4b277de0dfcc3f",
+    "paths": [
+      "rfcs/0016-irl-changelog-and-changes-in-understanding.md",
+      "rfcs/0016-irl-changelog-and-changes-in-understanding.contract.json",
+      "evals/knowledge-bank/irl-changelog-rfc-evals.json",
+      "scripts/rfcs/irl-changelog-eval.mjs",
+      "scripts/rfcs/irl-changelog-eval.test.mjs",
+      "scripts/check-rfcs.mjs",
+      "rfcs/README.md",
+      "package.json",
+      ".github/workflows/portfolio-readiness.yml"
+    ]
+  },
+  "file_sha256": {
+    "rfcs/0016-irl-changelog-and-changes-in-understanding.md": "d57a8ef895e337df379a605cb1a7b7dd962d9b3ba399c545abdbd09ec4039d90",
+    "rfcs/0016-irl-changelog-and-changes-in-understanding.contract.json": "7ee2a1a4487241c684ebf23ed1ee49d7ae4f6a4e0f7bdc408760ceb2672261fe",
+    "evals/knowledge-bank/irl-changelog-rfc-evals.json": "875245a8dc960b3cb60394256f1441b36b360911e2429202ccfb22e9a121f558",
+    "scripts/rfcs/irl-changelog-eval.mjs": "994b64887bee8b62635b4a0ec922e3b1c5a3e5e5a821b8e650d98d1d39e2213b",
+    "scripts/rfcs/irl-changelog-eval.test.mjs": "503bb590f8f0662660cbe863cd1c744d3fe3ef39e85fa0793f345176ed1bbc2f",
+    "scripts/check-rfcs.mjs": "92ad49e892868738729a92e98cb8006342e8fe005ae34242dc5c706dd267f95a",
+    "rfcs/README.md": "676e492800b37d060b1c7e87eca7eae3161340e2323963c70518aa46901303ef",
+    "package.json": "e75349989872563380b76f2ca71a42366856ab25a452aefe42d905cf0ef7b737",
+    ".github/workflows/portfolio-readiness.yml": "954f21d976b76a750d1acfc388e2e6e9dba00c563d215f2241d116ebc3d64604"
+  },
+  "scope": "Public method, synthetic reference evaluator and CI integration only. No source acquisition, operational migration, or public factual claim change.",
+  "tests": {
+    "focused": {
+      "command": "npm run hillclimb:irl-changelog-rfc",
+      "exit_code": 0,
+      "reference_tests": {
+        "passed": 37,
+        "total": 37
+      },
+      "synthetic_scenarios": {
+        "passed": 24,
+        "total": 24
+      },
+      "pair_tests": {
+        "passed": 11,
+        "total": 11
+      },
+      "rfc_proposals": 16,
+      "public_safety": {
+        "passed": true,
+        "existing_guardrail_warnings": 11
+      }
+    },
+    "broad_rfc": {
+      "command": "node --test scripts/rfcs/*.test.mjs",
+      "exit_code": 1,
+      "passed": 124,
+      "total": 133,
+      "failed": 9,
+      "explanation": "All nine failures are in public-private-boundary-eval.test.mjs, which imports absent evaluateEngagementInformationPlacement. The unchanged baseline test and evaluator reproduced 0/9 passing in an isolated temporary directory. No changes were made to those files."
+    },
+    "full_public": {
+      "command": "npm run check",
+      "exit_code": 1,
+      "stopped_at": "evals:professor-lenses",
+      "matching_final_scorecards": 0,
+      "required_scorecards": 6,
+      "candidate_fingerprint": "2986617fd4c8e4b0bda07db08486d5c109de2527d30d01b030d926454655010b",
+      "explanation": "Existing exact-candidate review gate remains unsatisfied. No gate was weakened; this is not a full-green claim."
+    },
+    "hygiene": {
+      "diff_check": true,
+      "workflow_yaml_valid": true,
+      "local_rfc_links_resolved": 8
+    }
+  },
+  "hill_climb": [
+    {
+      "step": "initial reference behavior",
+      "red": {
+        "passed": 0,
+        "total": 31
+      },
+      "green": {
+        "passed": 31,
+        "total": 31
+      },
+      "reason": "Scaffold returned unimplemented; assertions then exercised actual reference decisions."
+    },
+    {
+      "step": "correction closure and input/date boundaries",
+      "red": {
+        "passed": 31,
+        "total": 34
+      },
+      "green": {
+        "passed": 34,
+        "total": 34
+      },
+      "failures": [
+        "A cross-subject correction could be omitted from a projection with a refreshed fingerprint.",
+        "Malformed nested evidence was held rather than denied as malformed.",
+        "Explicit unknown event time was denied instead of held without fabrication."
+      ]
+    },
+    {
+      "step": "report-versus-occurrence support",
+      "red": {
+        "passed": 36,
+        "total": 37
+      },
+      "green": {
+        "passed": 37,
+        "total": 37
+      },
+      "failure": "An attributed-report source could be relabeled as occurrence evidence.",
+      "positive_controls": [
+        "A source-bounded occurrence remains eligible for human review.",
+        "A cited report with an identified speaker remains eligible as a report."
+      ]
+    }
+  ],
+  "limits": [
+    "Synthetic cases are not real-source truth or transcript certification.",
+    "No calibrated LLM judge or human-labeled corpus evaluation was performed.",
+    "Current-candidate describes projection basis, not accuracy or approval.",
+    "Atomic writes, concurrency control, real graph adapters and migration remain proposed."
+  ],
+  "human_review_complete": false,
+  "implementation_authorized": false,
+  "publication_authorized": false,
+  "receipt_excluded_from_own_fingerprint": true
+}

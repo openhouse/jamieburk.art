@@ -1,0 +1,639 @@
+{
+  "schema_version": 1,
+  "description": "Entirely synthetic pressure tests of RFC 0016 reference decisions, not a labeled real-world corpus.",
+  "baseline": {
+    "schema_version": 1,
+    "scope": "synthetic:ledger-demo",
+    "visibility": "private",
+    "timezone": "UTC",
+    "automatic_collection": false,
+    "authority": {
+      "implementation_authorized": false,
+      "source_access_authorized": false,
+      "publication_authorized": false,
+      "action_authorized": false
+    },
+    "sources": [
+      {
+        "id": "evidence:example",
+        "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "kind": "correspondence",
+        "custody_ref": "custody:example",
+        "eligibility": "permitted"
+      }
+    ],
+    "entities": [
+      {
+        "id": "entity:example-project",
+        "type": "project",
+        "resolution": "resolved"
+      }
+    ],
+    "entries": [
+      {
+        "id": "change:example-a",
+        "kind": "understanding",
+        "event_time": {
+          "start": "2020-01-02",
+          "end": "2020-01-02"
+        },
+        "learned_on": "2020-01-03",
+        "recorded_at": "2020-01-04T12:00:00Z",
+        "before": {
+          "text": "The timing was uncertain.",
+          "basis": "retrospective-comparison"
+        },
+        "now": "The reported timing has become more specific.",
+        "consequence": "Planning assumptions can be revisited.",
+        "limitation": "A report does not establish delivery.",
+        "next_evidence": "A delivery receipt would resolve the remaining question.",
+        "about": [
+          {
+            "id": "entity:example-project",
+            "type": "project"
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "evidence:example",
+            "relation": "supports",
+            "locator": "paragraph 2",
+            "supports": "reported-status",
+            "limitation": "Timing is reported, not independently verified."
+          }
+        ],
+        "corrections": []
+      }
+    ]
+  },
+  "cases": [
+    {
+      "id": "bounded-understanding",
+      "changes": [],
+      "expected": {
+        "decision": "eligible-for-human-review",
+        "reasons": [],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "public-ledger",
+      "changes": [
+        [
+          [
+            "visibility"
+          ],
+          "public"
+        ]
+      ],
+      "expected": {
+        "decision": "deny",
+        "reasons": [
+          "private-ledger-required"
+        ],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "automatic-collection",
+      "changes": [
+        [
+          [
+            "automatic_collection"
+          ],
+          true
+        ]
+      ],
+      "expected": {
+        "decision": "deny",
+        "reasons": [
+          "authority-expansion"
+        ],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "automatic-task",
+      "changes": [
+        [
+          [
+            "authority",
+            "action_authorized"
+          ],
+          true
+        ]
+      ],
+      "expected": {
+        "decision": "deny",
+        "reasons": [
+          "authority-expansion"
+        ],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "publication-by-record",
+      "changes": [
+        [
+          [
+            "authority",
+            "publication_authorized"
+          ],
+          true
+        ]
+      ],
+      "expected": {
+        "decision": "deny",
+        "reasons": [
+          "authority-expansion"
+        ],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "backdated-learning",
+      "changes": [
+        [
+          [
+            "entries",
+            0,
+            "learned_on"
+          ],
+          "2020-01-01"
+        ]
+      ],
+      "expected": {
+        "decision": "deny",
+        "reasons": [
+          "event-after-learning"
+        ],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "impossible-day",
+      "changes": [
+        [
+          [
+            "entries",
+            0,
+            "event_time",
+            "start"
+          ],
+          "2020-02-30"
+        ]
+      ],
+      "expected": {
+        "decision": "deny",
+        "reasons": [
+          "invalid-time"
+        ],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "recorded-before-learning",
+      "changes": [
+        [
+          [
+            "entries",
+            0,
+            "recorded_at"
+          ],
+          "2020-01-02T12:00:00Z"
+        ]
+      ],
+      "expected": {
+        "decision": "deny",
+        "reasons": [
+          "recording-before-learning"
+        ],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "missing-citation",
+      "changes": [
+        [
+          [
+            "entries",
+            0,
+            "evidence"
+          ],
+          []
+        ]
+      ],
+      "expected": {
+        "decision": "hold",
+        "reasons": [
+          "evidence-incomplete"
+        ],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "dangling-source",
+      "changes": [
+        [
+          [
+            "entries",
+            0,
+            "evidence",
+            0,
+            "source_id"
+          ],
+          "evidence:missing"
+        ]
+      ],
+      "expected": {
+        "decision": "hold",
+        "reasons": [
+          "evidence-incomplete"
+        ],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "missing-pinpoint",
+      "changes": [
+        [
+          [
+            "entries",
+            0,
+            "evidence",
+            0,
+            "locator"
+          ],
+          ""
+        ]
+      ],
+      "expected": {
+        "decision": "hold",
+        "reasons": [
+          "evidence-incomplete"
+        ],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "bad-hash",
+      "changes": [
+        [
+          [
+            "sources",
+            0,
+            "sha256"
+          ],
+          "not-a-pin"
+        ]
+      ],
+      "expected": {
+        "decision": "deny",
+        "reasons": [
+          "invalid-source"
+        ],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "revoked-source",
+      "changes": [
+        [
+          [
+            "sources",
+            0,
+            "eligibility"
+          ],
+          "restricted"
+        ]
+      ],
+      "expected": {
+        "decision": "hold",
+        "reasons": [
+          "source-not-eligible"
+        ],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "unresolved-entity",
+      "changes": [
+        [
+          [
+            "entities",
+            0,
+            "resolution"
+          ],
+          "unresolved"
+        ]
+      ],
+      "expected": {
+        "decision": "hold",
+        "reasons": [
+          "entity-unresolved"
+        ],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "dangling-entity",
+      "changes": [
+        [
+          [
+            "entries",
+            0,
+            "about",
+            0,
+            "id"
+          ],
+          "entity:missing"
+        ]
+      ],
+      "expected": {
+        "decision": "hold",
+        "reasons": [
+          "entity-unresolved"
+        ],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "wrong-entity-type",
+      "changes": [
+        [
+          [
+            "entries",
+            0,
+            "about",
+            0,
+            "type"
+          ],
+          "person"
+        ]
+      ],
+      "expected": {
+        "decision": "hold",
+        "reasons": [
+          "entity-unresolved"
+        ],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "missing-limits",
+      "changes": [
+        [
+          [
+            "entries",
+            0,
+            "limitation"
+          ],
+          ""
+        ]
+      ],
+      "expected": {
+        "decision": "hold",
+        "reasons": [
+          "interpretation-incomplete"
+        ],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "artifact-is-not-event",
+      "changes": [
+        [
+          [
+            "entries",
+            0,
+            "kind"
+          ],
+          "event"
+        ],
+        [
+          [
+            "sources",
+            0,
+            "kind"
+          ],
+          "operating-artifact"
+        ],
+        [
+          [
+            "entries",
+            0,
+            "evidence",
+            0,
+            "supports"
+          ],
+          "occurrence"
+        ]
+      ],
+      "expected": {
+        "decision": "deny",
+        "reasons": [
+          "occurrence-evidence-required"
+        ],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "report-is-not-event",
+      "changes": [
+        [
+          [
+            "entries",
+            0,
+            "kind"
+          ],
+          "event"
+        ]
+      ],
+      "expected": {
+        "decision": "deny",
+        "reasons": [
+          "occurrence-evidence-required"
+        ],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "report-needs-speaker",
+      "changes": [
+        [
+          [
+            "entries",
+            0,
+            "kind"
+          ],
+          "attributed-report"
+        ]
+      ],
+      "expected": {
+        "decision": "hold",
+        "reasons": [
+          "attribution-required"
+        ],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "correction-needs-target",
+      "changes": [
+        [
+          [
+            "entries",
+            0,
+            "kind"
+          ],
+          "correction"
+        ]
+      ],
+      "expected": {
+        "decision": "deny",
+        "reasons": [
+          "invalid-correction"
+        ],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "supported-occurrence",
+      "changes": [
+        [
+          [
+            "entries",
+            0,
+            "kind"
+          ],
+          "event"
+        ],
+        [
+          [
+            "entries",
+            0,
+            "evidence",
+            0,
+            "supports"
+          ],
+          "occurrence"
+        ]
+      ],
+      "expected": {
+        "decision": "eligible-for-human-review",
+        "reasons": [],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "bounded-attributed-report",
+      "changes": [
+        [
+          [
+            "entries",
+            0,
+            "kind"
+          ],
+          "attributed-report"
+        ],
+        [
+          [
+            "entities"
+          ],
+          [
+            {
+              "id": "entity:example-project",
+              "type": "project",
+              "resolution": "resolved"
+            },
+            {
+              "id": "entity:example-speaker",
+              "type": "person",
+              "resolution": "resolved"
+            }
+          ]
+        ],
+        [
+          [
+            "entries",
+            0,
+            "attribution"
+          ],
+          {
+            "entity_id": "entity:example-speaker",
+            "source_id": "evidence:example",
+            "locator": "paragraph 2"
+          }
+        ]
+      ],
+      "expected": {
+        "decision": "eligible-for-human-review",
+        "reasons": [],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "source-report-cannot-self-certify-occurrence",
+      "changes": [
+        [
+          [
+            "entries",
+            0,
+            "kind"
+          ],
+          "event"
+        ],
+        [
+          [
+            "sources",
+            0,
+            "kind"
+          ],
+          "attributed-report"
+        ],
+        [
+          [
+            "entries",
+            0,
+            "evidence",
+            0,
+            "supports"
+          ],
+          "occurrence"
+        ]
+      ],
+      "expected": {
+        "decision": "deny",
+        "reasons": [
+          "occurrence-evidence-required"
+        ],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    }
+  ]
+}

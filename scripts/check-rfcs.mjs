@@ -9,6 +9,7 @@ import { evaluatePublicEngagementPathwayRFC } from "./rfcs/public-engagement-pat
 import { evaluatePrivateVaultSidecarRFC } from "./rfcs/private-vault-sidecar-eval.mjs";
 import { evaluateAudioKnowledgeWorkflowRFC } from "./rfcs/audio-to-knowledge-workflow-eval.mjs";
 import { evaluateFiniteWeeklyReviewRFC } from "./rfcs/finite-weekly-review-eval.mjs";
+import { evaluateIRLChangelogRFC } from "./rfcs/irl-changelog-eval.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const rfcRoot = path.join(repoRoot, "rfcs");
@@ -230,6 +231,16 @@ try {
     path.join(rfcRoot, "0014-finite-weekly-review-and-sustainable-commitment-protocol.md"),
     `finite weekly review evaluation could not run: ${error.message}`
   );
+}
+
+try {
+  const result = evaluateIRLChangelogRFC();
+  for (const failure of result.hard_failures) fail(path.join(rfcRoot, "0016-irl-changelog-and-changes-in-understanding.md"), failure);
+  for (const scenario of result.scenarios.results.filter(item => !item.passed)) {
+    fail(path.join(rfcRoot, "0016-irl-changelog-and-changes-in-understanding.md"), `IRL changelog scenario failed: ${scenario.id}`);
+  }
+} catch (error) {
+  fail(path.join(rfcRoot, "0016-irl-changelog-and-changes-in-understanding.md"), `IRL evaluation could not run: ${error.message}`);
 }
 
 if (failures.length) {

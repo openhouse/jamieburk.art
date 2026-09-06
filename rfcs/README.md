@@ -113,6 +113,7 @@ that an agent, test, or informal participant has human decision authority.
 | [0013](./0013-governed-audio-to-knowledge-workflow.md) | Governed Audio-to-Knowledge Workflow | `implementing` | Jamie Burkart |
 | [0014](./0014-finite-weekly-review-and-sustainable-commitment-protocol.md) | Finite Weekly Review and Sustainable Commitment Protocol | `proposed` | Jamie Burkart |
 | [0015](./0015-governed-correspondence-readings.md) | Governed Correspondence Readings and Situated Voice Coverage | `proposed` | Jamie Burkart |
+| [0016](./0016-irl-changelog-and-changes-in-understanding.md) | IRL Changelog and Evidence-Linked Changes in Understanding | `proposed` | Jamie Burkart |
 
 ## Validation
 

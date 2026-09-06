@@ -39,5 +39,7 @@ jobs:
       - name: Check dispatched commit diff hygiene
         if: github.event_name == 'workflow_dispatch'
         run: git diff --check HEAD^...HEAD
+      - name: Check IRL changelog proposal boundaries
+        run: npm run hillclimb:irl-changelog-rfc
       - name: Run portfolio checks
         run: npm run check
