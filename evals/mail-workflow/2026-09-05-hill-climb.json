@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "visibility": "public-safe",
+  "date": "2026-09-05",
+  "scope": "Shared synthetic correspondence protocol; not a real-corpus completion receipt",
+  "candidate_files_sha256": {
+    "scripts/mail-workflow/core.mjs": "278883914ad43e44bd9923cba6e90fa93c731147efc8ab41f1acfb7dc78de2ac",
+    "scripts/mail-workflow/core.test.mjs": "765aec1a1b6bd277d4681502b33d385d2f467e3a40789350a118cafd4ed3c007",
+    "rfcs/0015-source-bound-correspondence.md": "05919ebd0bf305d6f6ebd710c1490006a0151dab711e174eeaa41af8d25102c2",
+    ".github/workflows/portfolio-readiness.yml": "5e5d359c39cf75f40a67796ed99f309a70a55314c37575c1c98db9bb64254e99",
+    "package.json": "07ec25a95c2e8c5bc6f358733d5aa5d2f3048a6ae1f7cd75245418af10db456c",
+    "AGENTS.md": "56335e1d33ee05df7c6beabe3a2f63128788080ec7bd23622fffa10e2f683c01"
+  },
+  "observed_iterations": [
+    {
+      "tests": 21,
+      "passed": 0,
+      "failed": 21,
+      "reason": "Missing correspondence engine baseline"
+    },
+    {
+      "tests": 21,
+      "passed": 21,
+      "failed": 0,
+      "reason": "Initial source and coverage invariants implemented"
+    },
+    {
+      "tests": 26,
+      "passed": 21,
+      "failed": 5,
+      "reason": "Projection, safe paths, draft states and strict verification mutations"
+    },
+    {
+      "tests": 26,
+      "passed": 26,
+      "failed": 0,
+      "reason": "Implemented missing guards and rendering"
+    },
+    {
+      "tests": 30,
+      "passed": 27,
+      "failed": 3,
+      "reason": "Header binding and unknown identity ordering"
+    },
+    {
+      "tests": 31,
+      "passed": 31,
+      "failed": 0,
+      "reason": "Header and parsed credential checks"
+    },
+    {
+      "tests": 32,
+      "passed": 31,
+      "failed": 1,
+      "reason": "Unsafe citation identifier mutation"
+    },
+    {
+      "tests": 32,
+      "passed": 32,
+      "failed": 0,
+      "reason": "Strict segment identifiers"
+    }
+  ],
+  "synthetic_fixture_safety": "Short clearly synthetic values retain the secret-key rejection test without weakening the repository secret scanner.",
+  "verification": {
+    "mail_tests": 32,
+    "audio_regression_tests": 36,
+    "rfc_count": 15,
+    "typecheck": "passed",
+    "lint": "passed",
+    "public_safety": "passed"
+  },
+  "human_gates_waived": false,
+  "publication_authorized": false,
+  "release_ready": false,
+  "full_check": {"exit_code":1,"blocking_gate":"professor-lens exact-candidate human review","matching_final_scorecards":0,"required_final_scorecards":6,"candidate_fingerprint":"18b5e4a8073411bee99bf5ca78cbbbd0acce467dc5d02a6e1caa4f604fc0a16f"},
+  "limits": "Exact-candidate portfolio human-review scorecards remain a separate blocking gate. These deterministic fixtures do not certify access, human interpretation, complete retrieval or release."
+}

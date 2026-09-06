@@ -146,6 +146,16 @@ paired public/private development protocol defined by RFC 0011.
   deployment, consent, rights, or relationship authority.
 ## Scope Rules
 
+Correspondence runtime changes use synthetic fixtures only in this repository.
+Never add private mailbox inventories, coverage counts, source identifiers,
+subjects, people mappings, or excerpts to public code, eval receipts, or PRs.
+The private adapter owns source custody and per-message readings. Run
+`npm run test:mail-runtime` after changing the shared protocol. A recipient is
+not an author; a quoted reply is not a separately recovered outgoing message.
+New or revised sources require cited analysis before their entries are current.
+The runtime projects approved-for-private-analysis inputs; it does not grant
+source access, perform autonomous mailbox collection, or approve publication.
+
 Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser,
 private document browser, full photo archive, heavy animation, or major framework
 change for V1.
