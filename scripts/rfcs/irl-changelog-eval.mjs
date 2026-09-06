@@ -152,7 +152,9 @@ export function evaluateIRLProjection(record,projection,{contextReviews={}}={}) 
 export const candidatePaths=[
   "rfcs/0016-irl-changelog-and-changes-in-understanding.md",contractPath,suitePath,
   "scripts/rfcs/irl-changelog-eval.mjs","scripts/rfcs/irl-changelog-eval.test.mjs",
-  "scripts/check-rfcs.mjs","rfcs/README.md","package.json",".github/workflows/portfolio-readiness.yml"
+  "scripts/check-rfcs.mjs","rfcs/README.md","package.json",".github/workflows/portfolio-readiness.yml",
+  "scripts/irl-changelog/runtime.mjs","scripts/irl-changelog/runtime.test.mjs",
+  "scripts/irl-changelog/cli.mjs","scripts/irl-changelog/README.md"
 ];
 export function evaluateIRLChangelogRFC({repoRoot=root}={}) {
   const suite=JSON.parse(readFileSync(path.join(repoRoot,suitePath),"utf8"));

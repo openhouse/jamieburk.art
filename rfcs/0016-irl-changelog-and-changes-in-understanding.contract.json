@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
   "rfc": 16,
-  "stage": "proposed",
+  "stage": "implementing",
   "decision_owner": "Jamie Burkart",
-  "implementation_authorized": false,
-  "description": "A synthetic reference contract, not a migration of existing records or a source-access grant.",
+  "implementation_authorized": true,
+  "description": "Implementation accepted; operator writes default off. Record fields and evaluators confer no migration, source-access, publication or action authority.",
   "authority_fields": [
     "implementation_authorized",
     "source_access_authorized",

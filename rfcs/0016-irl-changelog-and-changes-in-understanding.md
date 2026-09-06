@@ -1,7 +1,7 @@
 ---
 rfc: 16
 title: IRL Changelog and Evidence-Linked Changes in Understanding
-stage: proposed
+stage: implementing
 start_date: 2026-09-06
 authors:
   - Jamie Burkart
@@ -14,7 +14,7 @@ review_areas:
   - privacy-governance
   - editorial
   - developer-experience
-implementation: null
+implementation: scripts/irl-changelog/README.md
 supersedes: []
 superseded_by: null
 ---
@@ -32,11 +32,13 @@ Ordinary corrections append to history. Current-state pages identify the exact
 history they used and become stale when that basis changes. Recording knowledge
 never authorizes a task, contact, publication, or institutional decision.
 
-This is a proposed component contract, with synthetic reference evaluations.
-Approval to draft this RFC and its outline is not acceptance of the design.
-No existing private record is migrated by this change. The September 6 close-reading
-revision retains this proposal's scope while adding a lighter reading model,
-observer-specific time, dependency-scoped holds, and use-specific privacy review.
+Jamie explicitly requested implementation on September 6, 2026. The design is
+accepted for implementation; the operator-invoked runtime and synthetic pressure
+tests are now in [scripts/irl-changelog](../scripts/irl-changelog/README.md).
+This is not an operational rollout or a migration approval. Existing histories
+remain intact pending the separate corpus, mapping and contextual-use gates.
+Observer-specific time, dependency-scoped holds and use-specific privacy review
+remain hard requirements.
 
 ## Motivation
 
@@ -81,7 +83,7 @@ every conversation turn a new administrative obligation.
 - No automatic task assignment, contact, calendar entry, accepted offer,
   employment transition, public claim promotion, merge, deployment, or indexing.
 - No acceptance of another proposed RFC and no operational migration of the
-  existing changelog from this drafting/evaluation work.
+  existing changelog from implementation authorization alone.
 
 ## Terminology
 
@@ -457,10 +459,12 @@ No human-labeled real-corpus gold set or calibrated LLM judge is claimed here.
 The reference evaluator tests supplied declarations. It does not authenticate
 reviewers, resolve real graph identities, retrieve sources, validate a person's
 memory, or verify consent. In particular, a JSON `permitted` decision with a
-reviewer string is not a real authorization receipt. Production trust would
-require an authorized adapter and independently verifiable review provenance.
-No automatic writer, rendered reading interface, or contextual-review service
-has been implemented by this revision.
+reviewer string is not a real authorization receipt. The implementation adds an operator-pinned adapter, local immutable Git-blob
+verification, independently registered typed identities, and signed current
+contextual-review receipts. It does not enroll real reviewers, establish the
+authority of a signer, or create consent. The bounded writer, CLI and three-depth
+JSON/Markdown readings are implemented; no automatic collector, web interface
+or contextual-review service is introduced.
 
 Improve one reproduced weakness at a time and rerun affected cases plus existing
 guards. Keep the improvement only when it fixes the failure without weakening
@@ -532,10 +536,12 @@ private checkout or authenticated source.
 
 ## Rollout plan
 
-1. **Proposed now:** review this document, reference vocabulary, synthetic
-   decisions, and compatibility limits. Existing operational records stay intact.
-2. **After explicit acceptance:** select a bounded private adapter pilot,
-   checkpoint the old history, and approve field mappings and unknown handling.
+1. **Accepted for implementation:** the September 6 implementation request
+   advances this RFC to implementing. Runtime, CLI and synthetic regression tests
+   are delivered; existing operational records stay intact.
+2. **Separate migration approval:** select a bounded adapter pilot, checkpoint
+   old history independently, and approve field mappings and unknown handling.
+   A read-only migration plan does not satisfy this gate.
 3. **Implementation pilot:** start with one writer and a recoverable generation,
    source/identity resolution, and trustworthy current contextual reviews. Add
    concurrent-writer machinery only if demonstrated use requires it; do not
@@ -555,7 +561,8 @@ reconciliation rather than deleting learning to recover an older schema.
 
 - **Acceptance — Jamie:** approve materiality criteria, correction semantics,
   private scope, contextual-use expectations, and the unresolved questions below.
-  Draft approval is not this gate.
+  Satisfied for implementation by the September 6 explicit implementation request;
+  this does not satisfy the following gates.
 - **Migration — Jamie:** approve a bounded corpus, reversible mapping,
   independently pinned baseline, and unknown-field treatment.
 - **Operational — Jamie with evidence:** require source/identity resolution,

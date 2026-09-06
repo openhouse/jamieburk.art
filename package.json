@@ -24,7 +24,7 @@
     "test:citations": "node --test scripts/tests/citations.test.mjs",
     "report:citations": "node scripts/report-citations.mjs",
     "check:rfcs": "node scripts/check-rfcs.mjs",
-    "test:irl-changelog-rfc": "node --test scripts/rfcs/irl-changelog-eval.test.mjs",
+    "test:irl-changelog-rfc": "node --test scripts/rfcs/irl-changelog-eval.test.mjs scripts/irl-changelog/runtime.test.mjs",
     "evals:irl-changelog-rfc": "node scripts/rfcs/irl-changelog-eval.mjs",
     "hillclimb:irl-changelog-rfc": "npm run test:irl-changelog-rfc && npm run evals:irl-changelog-rfc && npm run check:rfcs && npm run public-safety && npm run test:workspace-pair",
     "evals:public-engagement-pathway": "node scripts/rfcs/public-engagement-pathway-eval.mjs",
