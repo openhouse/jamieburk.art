@@ -25,7 +25,8 @@ export function evaluateIRLRecord(record,{previous}={}) {
   if (!object(record) || !["entries","sources","entities"].every(k=>Array.isArray(record[k]) && record[k].every(object))) {
     return result("deny",["invalid-shape"]);
   }
-  if(record.schema_version!==1 || !text(record.scope)) deny.push("invalid-shape");
+  if(record.schema_version!==policy.record_schema_version || !text(record.scope)) deny.push("invalid-shape");
+  if(!text(record.observer_id)) hold.push("observer-required");
   if(record.visibility!=="private") deny.push("private-ledger-required");
   if(record.automatic_collection!==false || !object(record.authority) ||
     policy.authority_fields.some(k=>record.authority[k]!==false) ||
@@ -38,6 +39,7 @@ export function evaluateIRLRecord(record,{previous}={}) {
     // Current custody eligibility is not immutable historical permission.
     const pins=sources=>sources.map(({eligibility,...pin})=>pin);
     if(!prefix(record.entries,previous.entries) || !prefix(pins(record.sources),pins(previous.sources)) ||
+      record.schema_version!==previous.schema_version || record.observer_id!==previous.observer_id ||
       record.scope!==previous.scope || record.timezone!==previous.timezone) deny.push("history-rewritten");
   }
   const sourceMap=new Map(), entityMap=new Map(), ids=new Set();
@@ -48,6 +50,8 @@ export function evaluateIRLRecord(record,{previous}={}) {
        !/^[a-f0-9]{40}$/.test(source.revision)||!/^[a-f0-9]{64}$/.test(source.sha256)) deny.push("invalid-source");
   }
   for(const entity of record.entities) {
+    if(!text(entity.id) || !policy.entity_types.includes(entity.type) ||
+      !["resolved","unresolved"].includes(entity.resolution)) deny.push("invalid-entity");
     if(entityMap.has(entity.id)) deny.push("duplicate-id");
     entityMap.set(entity.id,entity);
   }
@@ -63,13 +67,15 @@ export function evaluateIRLRecord(record,{previous}={}) {
     const recorded=entry.recorded_at;
     const unknownEvent=event?.start===null && event?.end===null && text(event?.reason);
     if(unknownEvent) hold.push("event-time-unknown");
-    if((!unknownEvent && (!date(event?.start)||!date(event?.end)||event.start>event.end))||!date(entry.learned_on) ||
+    const unknownLearning=entry.learned_on===null && text(entry.learning_time_reason);
+    if(unknownLearning) hold.push("learning-time-unknown");
+    if((!unknownEvent && (!date(event?.start)||!date(event?.end)||event.start>event.end))||(!unknownLearning && !date(entry.learned_on)) ||
       typeof recorded!=="string" || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/.test(recorded) ||
       !Number.isFinite(Date.parse(recorded)) || new Date(recorded).toISOString().replace(".000Z","Z")!==recorded) {
       deny.push("invalid-time");
     } else {
-      if(!unknownEvent && event.end>entry.learned_on) deny.push("event-after-learning");
-      if(formatter && formatter.format(new Date(recorded))<entry.learned_on) deny.push("recording-before-learning");
+      if(!unknownEvent && !unknownLearning && event.end>entry.learned_on) deny.push("event-after-learning");
+      if(!unknownLearning && formatter && formatter.format(new Date(recorded))<entry.learned_on) deny.push("recording-before-learning");
       if(recorded<priorRecorded) deny.push("recording-order-invalid");
       priorRecorded=recorded;
     }
@@ -100,18 +106,44 @@ export function evaluateIRLRecord(record,{previous}={}) {
   return deny.length?result("deny",deny):hold.length?result("hold",hold):result("eligible-for-human-review",[]);
 }
 
-export function evaluateIRLProjection(record,projection) {
+function contextualUseMatches(source,use,review) {
+  const flow=source.flow;
+  return object(flow) && ["context","sender","information_type","transmission_principle"].every(k=>text(flow[k])) &&
+    Array.isArray(flow.subjects) && flow.subjects.length>0 && flow.subjects.every(text) &&
+    object(review) && text(review.receipt_id) && text(review.reviewed_by) && review.decision==="permitted" &&
+    review.source_revision===source.revision && review.source_sha256===source.sha256 &&
+    isDeepStrictEqual(review.source_flow,flow) && isDeepStrictEqual(review.use,use);
+}
+
+export function evaluateIRLProjection(record,projection,{contextReviews={}}={}) {
   const output=status=>({status,publication_authorized:false,action_authorized:false});
-  if(evaluateIRLRecord(record).decision!=="eligible-for-human-review" ||
+  if(evaluateIRLRecord(record).decision==="deny" ||
     !Array.isArray(projection?.entity_ids)||!projection.entity_ids.length||
     projection.entity_ids.some(id=>!record.entities.some(e=>e.id===id && e.resolution==="resolved"))) return output("hold");
-  const relevantSet=new Set();
-  // Corrections point backward: one chronological pass closes over correction chains.
-  for(const entry of record.entries) {
-    if(entry.about.some(edge=>projection.entity_ids.includes(edge.id)) ||
-      entry.corrections.some(c=>relevantSet.has(c.entry_id))) relevantSet.add(entry.id);
+  const relevantSet=new Set(record.entries
+    .filter(e=>e.about.some(edge=>projection.entity_ids.includes(edge.id))).map(e=>e.id));
+  // Preserve both historical targets and later corrections, regardless of subject.
+  let changed=true;
+  while(changed) {
+    const beforeSize=relevantSet.size;
+    for(const entry of record.entries) {
+      if(entry.corrections.some(c=>relevantSet.has(c.entry_id))) relevantSet.add(entry.id);
+      if(relevantSet.has(entry.id)) for(const c of entry.corrections) relevantSet.add(c.entry_id);
+    }
+    changed=relevantSet.size!==beforeSize;
   }
-  const relevant=[...relevantSet];
+  const selected=record.entries.filter(e=>relevantSet.has(e.id));
+  const sourceIds=new Set(selected.flatMap(e=>e.evidence.map(c=>c.source_id)));
+  const scoped={...record,entries:selected,sources:record.sources.filter(s=>sourceIds.has(s.id))};
+  if(!selected.length || evaluateIRLRecord(scoped).decision!=="eligible-for-human-review") return output("hold");
+  const relevant=selected.map(e=>e.id);
+  if(!object(contextReviews) || policy.use_fields.some(k=>!text(projection.use?.[k]))) return output("hold");
+  const usedSourceIds=new Set(record.entries.filter(e=>relevantSet.has(e.id)).flatMap(e=>e.evidence.map(c=>c.source_id)));
+  for(const id of usedSourceIds) {
+    const source=record.sources.find(s=>s.id===id);
+    if(!source || !Object.hasOwn(contextReviews,id) ||
+      !contextualUseMatches(source,projection.use,contextReviews[id])) return output("hold");
+  }
   if(projection.ledger_fingerprint!==ledgerFingerprint(record) ||
     !isDeepStrictEqual(projection.basis_entry_ids,relevant)) return output("stale");
   return output("current-candidate");

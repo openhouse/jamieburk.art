@@ -2,7 +2,7 @@
   "schema_version": 1,
   "description": "Entirely synthetic pressure tests of RFC 0016 reference decisions, not a labeled real-world corpus.",
   "baseline": {
-    "schema_version": 1,
+    "schema_version": 2,
     "scope": "synthetic:ledger-demo",
     "visibility": "private",
     "timezone": "UTC",
@@ -20,7 +20,16 @@
         "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
         "kind": "correspondence",
         "custody_ref": "custody:example",
-        "eligibility": "permitted"
+        "eligibility": "permitted",
+        "flow": {
+          "context": "synthetic:team-work",
+          "sender": "actor:synthetic-sender",
+          "subjects": [
+            "actor:synthetic-subject"
+          ],
+          "information_type": "status-report",
+          "transmission_principle": "entrusted-for-private-work"
+        }
       }
     ],
     "entities": [
@@ -65,7 +74,8 @@
         ],
         "corrections": []
       }
-    ]
+    ],
+    "observer_id": "actor:synthetic-operator"
   },
   "cases": [
     {
@@ -630,6 +640,85 @@
         "decision": "deny",
         "reasons": [
           "occurrence-evidence-required"
+        ],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "unknown-learning-is-not-todays-date",
+      "changes": [
+        [
+          [
+            "entries",
+            0,
+            "learned_on"
+          ],
+          null
+        ],
+        [
+          [
+            "entries",
+            0,
+            "learning_time_reason"
+          ],
+          "The surviving record does not establish when this was learned."
+        ]
+      ],
+      "expected": {
+        "decision": "hold",
+        "reasons": [
+          "learning-time-unknown"
+        ],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "the-knower-cannot-be-anonymous-by-omission",
+      "changes": [
+        [
+          [
+            "observer_id"
+          ],
+          null
+        ]
+      ],
+      "expected": {
+        "decision": "hold",
+        "reasons": [
+          "observer-required"
+        ],
+        "publication_authorized": false,
+        "action_authorized": false
+      }
+    },
+    {
+      "id": "matching-invalid-types-are-not-resolution",
+      "changes": [
+        [
+          [
+            "entities",
+            0,
+            "type"
+          ],
+          "not-an-entity-type"
+        ],
+        [
+          [
+            "entries",
+            0,
+            "about",
+            0,
+            "type"
+          ],
+          "not-an-entity-type"
+        ]
+      ],
+      "expected": {
+        "decision": "deny",
+        "reasons": [
+          "invalid-entity"
         ],
         "publication_authorized": false,
         "action_authorized": false

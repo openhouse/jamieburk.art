@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "rfc": 16,
+  "stage": "proposed",
+  "verified_at": "2026-09-06T14:28:37Z",
+  "baseline_commit": "a888f71aee1c4eb634dc84216681cb22196a4004",
+  "candidate": {
+    "fingerprint": "d6916d5a05b44eb9a8f2ac18f1fd5837cfc9a4fd8189ae04fdccc28a5cd120be",
+    "paths": [
+      "rfcs/0016-irl-changelog-and-changes-in-understanding.md",
+      "rfcs/0016-irl-changelog-and-changes-in-understanding.contract.json",
+      "evals/knowledge-bank/irl-changelog-rfc-evals.json",
+      "scripts/rfcs/irl-changelog-eval.mjs",
+      "scripts/rfcs/irl-changelog-eval.test.mjs",
+      "scripts/check-rfcs.mjs",
+      "rfcs/README.md",
+      "package.json",
+      ".github/workflows/portfolio-readiness.yml"
+    ]
+  },
+  "file_sha256": {
+    "rfcs/0016-irl-changelog-and-changes-in-understanding.md": "8fe58cd19cf2b63fab3a5bd19b9b030a0d14e13694c63197ee49258151d9a49d",
+    "rfcs/0016-irl-changelog-and-changes-in-understanding.contract.json": "127f48ef02638f3d08685b247acd277e67d38b7a51dc3a2d6060a725d6b017a9",
+    "evals/knowledge-bank/irl-changelog-rfc-evals.json": "60867bafd065f6a54de9182e865b295b344395ec72fe33d22eb947c651513e32",
+    "scripts/rfcs/irl-changelog-eval.mjs": "e06778fc9f578578f4b652e7d34fa549670c4da02ecdbed3e1012f706635c24a",
+    "scripts/rfcs/irl-changelog-eval.test.mjs": "fab6cd552e89a9f3cdc8f2da35bdd415be0b4c9d691a3c3e17bdd5663baf80d9",
+    "scripts/check-rfcs.mjs": "92ad49e892868738729a92e98cb8006342e8fe005ae34242dc5c706dd267f95a",
+    "rfcs/README.md": "676e492800b37d060b1c7e87eca7eae3161340e2323963c70518aa46901303ef",
+    "package.json": "e75349989872563380b76f2ca71a42366856ab25a452aefe42d905cf0ef7b737",
+    ".github/workflows/portfolio-readiness.yml": "954f21d976b76a750d1acfc388e2e6e9dba00c563d215f2241d116ebc3d64604"
+  },
+  "scope": "Source-free RFC revision and synthetic reference evaluation only. No operational adapter, source acquisition, migration, publication or actual-person review is claimed.",
+  "review": {
+    "method": "AI-assisted close reading within the previously approved outline",
+    "lenses_added": [
+      "Maggie Appleton",
+      "Martin Fowler",
+      "Helen Nissenbaum"
+    ],
+    "lenses_retained": [
+      "Abby Covert",
+      "Vivian Gornick",
+      "Zora Neale Hurston",
+      "Deborah Treisman"
+    ],
+    "real_participation_or_endorsement": false,
+    "findings": [
+      "The prose rejected busywork while whole-ledger holds blocked unrelated subject views.",
+      "Correction-first subject views could omit historical targets.",
+      "A required learning date could fabricate precision without an identified observer or unknown state.",
+      "A global permitted flag did not bind a recipient, purpose, transformation or source context.",
+      "Matching malformed entity types could masquerade as typed resolution."
+    ],
+    "boundaries": [
+      "Reference schema 2 is not an operational ledger migration.",
+      "Current contextual-review declarations are synthetic inputs, not authenticated authority.",
+      "New prose specifies reading depths; no reader UI was built.",
+      "The three source essays inform design questions, not author agreement."
+    ]
+  },
+  "tests": {
+    "focused": {
+      "command": "npm run hillclimb:irl-changelog-rfc",
+      "exit_code": 0,
+      "reference_tests": {
+        "passed": 50,
+        "total": 50
+      },
+      "synthetic_scenarios": {
+        "passed": 27,
+        "total": 27
+      },
+      "pair_regressions": {
+        "passed": 11,
+        "total": 11
+      },
+      "rfc_proposals": 16,
+      "public_safety": {
+        "passed": true,
+        "existing_guardrail_warnings": 11
+      },
+      "local_rfc_links_resolved": 8,
+      "diff_check": true
+    },
+    "all_rfc": {
+      "command": "node --test scripts/rfcs/*.test.mjs",
+      "exit_code": 1,
+      "passed": 137,
+      "total": 146,
+      "failed": 9,
+      "reason": "Unchanged public-private-boundary-eval.test.mjs imports the absent evaluateEngagementInformationPlacement export. The same nine failures predate this revision."
+    },
+    "full_public": {
+      "command": "npm run check",
+      "exit_code": 1,
+      "stopped_at": "evals:professor-lenses",
+      "matching_final_scorecards": 0,
+      "required_scorecards": 6,
+      "candidate_fingerprint": "2986617fd4c8e4b0bda07db08486d5c109de2527d30d01b030d926454655010b",
+      "gate_weakened": false
+    }
+  },
+  "hill_climb": [
+    {
+      "step": "baseline",
+      "passed": 37,
+      "total": 37
+    },
+    {
+      "step": "new failure cases against baseline behavior",
+      "passed": 38,
+      "total": 50,
+      "failed": 12
+    },
+    {
+      "step": "versioned observer time and identity checks",
+      "passed": 43,
+      "total": 50,
+      "failed": 7
+    },
+    {
+      "step": "per-source contextual-use review matching",
+      "passed": 48,
+      "total": 50,
+      "failed": 2
+    },
+    {
+      "step": "dependency-scoped holds and bidirectional correction closure",
+      "passed": 50,
+      "total": 50,
+      "failed": 0
+    }
+  ],
+  "human_close_reading_approval": false,
+  "calibrated_llm_judge_performed": false,
+  "implementation_authorized": false,
+  "publication_authorized": false,
+  "prior_receipt_preserved": "evals/knowledge-bank/runs/2026-09-06-irl-changelog-rfc-hillclimb.json",
+  "receipt_excluded_from_own_fingerprint": true
+}

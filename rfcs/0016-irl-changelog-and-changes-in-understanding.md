@@ -34,7 +34,9 @@ never authorizes a task, contact, publication, or institutional decision.
 
 This is a proposed component contract, with synthetic reference evaluations.
 Approval to draft this RFC and its outline is not acceptance of the design.
-No existing private record is migrated by this change.
+No existing private record is migrated by this change. The September 6 close-reading
+revision retains this proposal's scope while adding a lighter reading model,
+observer-specific time, dependency-scoped holds, and use-specific privacy review.
 
 ## Motivation
 
@@ -149,17 +151,27 @@ event identifier or source without becoming duplicate facts. A large meeting
 may support several entries; many messages may support one entry. Deduplicate
 by evidence, subject, and meaning, not by timestamps alone.
 
+The human interface should ask for the changed picture, its significance, its
+limits, and its evidence—not require manual completion of every machine field.
+Adapters supply verified identifiers, pins, timestamps, and review references.
+An explicit “no further evidence needed for this purpose” is a valid
+`next_evidence` statement; it does not manufacture a follow-up obligation.
+
 ### 3. Entry contract
 
 Stable identity is `ledger scope + entry ID`. Existing local identifiers remain
 valid; cross-ledger composition adds a namespace, not a renumbering. Prefer
-opaque generated IDs for future concurrent writers.
+opaque generated IDs for future concurrent writers. A ledger also declares one
+`observer_id`: whose learning history it records. That identity is stable across
+ordinary appends. It is not the author of every source and does not describe
+what every participant knew. Multiple observers need separately attributed
+histories, not a merged institutional mind.
 
 | Field | Required meaning |
 |---|---|
 | `id`, `kind` | Stable identity; event, attributed report, understanding, operating artifact, or correction |
 | `event_time` | Source-supported start/end dates, or explicit unknown with a reason |
-| `learned_on` | When the operator learned this; unknown stays unknown in legacy records |
+| `learned_on`, `learning_time_reason` | When the named observer learned this; use null plus a reason when unknown, never an inferred date |
 | `recorded_at` | Actual append time, in UTC; a ledger IANA timezone interprets local dates |
 | `before` | Earlier picture plus basis: earlier source state, retrospective comparison, or explicit unknown |
 | `now` | Narrowest defensible changed picture |
@@ -190,22 +202,42 @@ Git revision.
 Current source eligibility is resolved separately from immutable pin identity.
 A source may become restricted without changing the historical bytes it once
 supported. That change blocks reuse; it does not retroactively grant permission.
+A global `permitted` flag is only a coarse custody precondition. It cannot
+establish that a particular recipient, purpose, or transformation is appropriate;
+projection requires the additional contextual review defined below.
 
 The [machine-readable contract](./0016-irl-changelog-and-changes-in-understanding.contract.json)
-defines the bounded reference vocabulary. Its schema version identifies this
-prototype contract, not a replacement version of any existing ledger.
+defines the bounded reference vocabulary. The revised synthetic record contract
+is version 2 and rejects version 1 rather than silently adding meanings to old
+fixtures. This is not a version change to any existing operational ledger.
 
-### 4. Three clocks, not one
+### 4. Two historical questions, three recorded coordinates
 
-Event dates describe the source event; learning dates describe the operator's
-knowledge; append timestamps describe this record. Ordinary known-date entries
-require event end no later than learning date, and learning date no later than
-the local calendar date of recording. Append order is monotonic in recorded
-time. A newly discovered old event therefore appears as new learning about an
-older event.
+Separate “what happened then?” from “what did this observer understand at the
+time?” Append time additionally establishes when that understanding entered this
+record. These are not three independent truth databases. The learning date is a
+bounded assertion about an identified observer; recording time is write metadata.
+Only the latter can normally be assigned automatically at append.
+
+Ordinary known-date entries require event end no later than learning date, and
+learning date no later than the local calendar date of recording. Append order
+is monotonic in recorded UTC time. A newly discovered old event appears as new
+learning about an older event. The same event can have different learning times
+for different observers; one person's receipt does not establish another's.
+
+Martin Fowler's [bitemporal-history explanation](https://martinfowler.com/articles/bitemporal-history.html)
+distinguishes actual history from record history and cautions that the added
+complexity must earn its place. Our additional distinction between human learning
+and system recording is a project-specific design choice, not a claim that his
+pattern requires three clocks. Keep it only where it answers a real question.
 
 Unknown dates are explicit and held for contextual review, not converted into
-today's date. A future scheduled event can be the subject of a report made
+today's date. Unknown learning uses `learned_on: null` and a substantive
+`learning_time_reason`. It holds that entry's use for review, not every unrelated
+subject view. No activity log, Git commit, or source modification time may fill
+this gap by assumption.
+
+A future scheduled event can be the subject of a report made
 today; its future occurrence remains unestablished. The event being logged in
 that case is the scheduling/reporting event, not the future meeting.
 
@@ -220,7 +252,9 @@ The conceptual lifecycle is:
 
 Held and denied candidates retain a disposition in the authorized intake
 workflow. Denial here means “do not append/promote this candidate,” not “delete
-the source.” A structurally eligible entry can still be factually wrong.
+the source.” A structurally eligible entry can still be factually wrong. Reference
+snapshots can contain held candidates; using one supported subset does not
+approve the entire snapshot or authorize storage of its contents.
 
 A human review receipt must bind the exact entry, source revisions, graph
 resolution, reviewer, time, decision, and limitations. The reference evaluator
@@ -241,9 +275,17 @@ entry.
 
 A current-state projection records its entity scope, the ordered entry IDs it
 considered, the ledger fingerprint, its source/permission checks, and its human
-review status. Its relevant basis includes directly related entries **and the
-transitive chain of later corrections to those entries**, even when a correction
-is filed under a different subject.
+review status. Its relevant basis includes directly related entries, the earlier
+entries they correct, and all later corrections to that connected history. Follow
+these links to a fixed point, regardless of subject labels; preserve append order
+in the resulting basis. A correction-first view must include the historical target,
+just as an older subject view must include its later corrections.
+
+Malformed identity, chronology, or history makes the snapshot structurally unsafe
+and holds projection globally. Missing evidence, unresolved references, unknown
+dates, or restricted sources in an otherwise valid snapshot hold the dependent
+view. An unrelated held entry must not block that view or be deleted to unblock
+it. Do not silently omit a relevant held dependency to manufacture completeness.
 
 The reference evaluator hashes canonical JSON with recursively sorted object
 keys and preserved array order. It conservatively marks a changed whole-ledger
@@ -254,7 +296,8 @@ is insufficient when the declared basis omits a relevant correction.
 A fresh basis yields only a `current-candidate`. It does not judge the generated
 prose, choose among disputed interpretations, or authorize public use. A stale
 page may remain a labeled historical edition; it must not present itself as
-verified current understanding.
+verified current understanding. Even a current candidate means only “current for
+this declared subject and use,” not “the complete or official picture.”
 
 ### 6. Relationships, voices, and review interfaces
 
@@ -262,7 +305,21 @@ A person page may link to changes that concern that person. A situated writer's
 voice page retains cited speech and its context. The changelog should link to
 that situated reading where relevant, while distinguishing the person's words
 from the operator's later interpretation. Merely appearing in another person's
-message does not establish a speaker's view.
+message does not establish a speaker's view. Correcting the operator's
+interpretation must not rewrite the speaker's preserved words.
+
+Provide three reading depths within the authorized scope: a concise current
+picture with its as-of basis; the changes and competing interpretations behind
+it; and the governed evidence/history. People, projects, and practices are useful
+entry points; chronology is another navigation option, not the graph's organizing
+principle. Held material remains discoverable through an appropriate private
+coverage/disposition view, without leaking it into an unrelated summary.
+
+Maggie Appleton's [digital-garden essay](https://maggieappleton.com/garden-history)
+connects evolving notes through context rather than publication order and makes
+unfinished understanding visible. The design inference here is to keep history
+available without requiring readers to traverse it all. Borrowing that principle
+does not import a learning-in-public policy for entrusted correspondence.
 
 Source workflows in [RFC 0013](./0013-governed-audio-to-knowledge-workflow.md) and
 [RFC 0015](./0015-governed-correspondence-readings.md) can propose candidates
@@ -311,11 +368,17 @@ coverage. Preserve it unchanged during proposal review.
 | Existing concept | Proposed treatment |
 |---|---|
 | Local sequential entry IDs | Preserve; qualify with ledger scope at exchange boundaries |
-| Observation date | Preserve verbatim; do not guess whether it was learning or recording time |
+| Observation date | Preserve verbatim; do not guess whether it was learning or recording time; map missing learning time to an explicit held unknown |
 | Whole-entry supersession | Preserve legacy meaning; use explicitly scoped corrections for new entries after acceptance |
 | Entity strings | Resolve through an adapter; unresolved references remain held |
 | Evidence/support prose | Preserve; add typed relationships only after actual review |
 | Markdown and checksum projections | Keep existing integrity/manual-edit guards; prototype atomic generation separately |
+
+Version 2 of the synthetic reference contract is intentionally not a compatibility
+adapter. Actual adapters, observer assignment, and contextual-review provenance
+must be approved before any operational migration. Existing governed records and
+the original evaluation receipt remain historical evidence, not outdated files to
+rewrite for a green check.
 
 A migration manifest must identify every old entry and source, its hash and new
 mapping, all unresolved fields, and whether any semantics changed. Re-rendering
@@ -334,14 +397,41 @@ The executable fixtures use invented identifiers and contain no private cases.
 The following are fictionalized analytical lenses, not quotations, real
 participation, endorsements, or decision authority:
 
-- **Abby Covert lens:** Can a reader distinguish the event, the interpretation,
-  and the evidence without opening five unrelated pages?
-- **Vivian Gornick lens:** Does the comparison preserve how the situation became
-  newly intelligible, rather than rewriting the past to suit the present?
-- **Zora Neale Hurston lens:** Whose account is this, and what particularity or
-  disagreement would disappear if we forced it into a single official voice?
-- **Deborah Treisman lens:** Is this a consequential change, and has the prose
-  earned its conclusion from the cited passages?
+These readings refer to the original proposal and its revised sections. They are
+editorial design inferences, not a simulated approval panel or a calibrated judge.
+
+- **Abby Covert lens:** The relationship table usefully separates meaning,
+  evidence, and custody, but a string labeled “resolved” is not sufficient
+  identity validation. The reference now rejects matching-but-invalid entity
+  types; actual graph resolution remains an adapter responsibility.
+- **Vivian Gornick lens:** “Earlier picture” is the central literary and epistemic
+  promise. A correction-first view that omits what it corrects breaks that promise.
+  Section 5 now requires historical targets as well as later corrections. A
+  retrospective comparison remains labeled, not passed off as an earlier belief.
+- **Zora Neale Hurston lens:** The situated-voice provision protects attribution,
+  but operator understanding must not become everyone's shared mind. The revised
+  ledger identifies its observer and preserves each speaker's words separately
+  from later interpretation. Disagreement remains a legitimate record.
+- **Deborah Treisman lens:** The anti-busywork principle was stronger than the
+  original reading interface. Section 6 now specifies reading depths, and the
+  eval section distinguishes tested reference decisions from unperformed human
+  close reading. Fifty passing examples would not establish fifty truths.
+- **Maggie Appleton lens:** The original global hold made an unrelated incomplete
+  entry prevent a useful subject reading. Section 5 now scopes ordinary evidence
+  holds to dependencies, while Section 6 favors contextual entry points over a
+  mandatory feed. Preservation and selective reading can coexist.
+- **Martin Fowler lens:** Three required clocks risk false precision when the
+  learning date is unknown. Section 4 distinguishes the two historical questions
+  from recording metadata, identifies the observer, and gives unknown learning
+  a held representation. It does not introduce a new temporal database.
+- **Helen Nissenbaum lens:** “Private” and “permitted” are not complete use
+  policies. The privacy contract below records source context and requires a
+  current review for the specific recipient, purpose, and transformation. A
+  changed use requires a new review even when no public release is planned.
+
+The three source essays inform these design questions; none establishes the
+authors' agreement with this RFC. The existing four lenses remain alongside
+the three additions, with no change to human decision ownership.
 
 ### 10. Evals and hill climbing
 
@@ -352,7 +442,9 @@ none grants authority. Projection evaluation returns `hold`, `stale`, or
 
 Deterministic cases cover authority expansion, date ordering, citations and
 pins, unresolved entities, unsupported occurrence, attribution, additive history,
-scoped correction, and projection freshness. Negative cases must fail for the
+scoped correction, and projection freshness. The close-reading revision adds
+observer identity, unknown learning, valid entity types, correction ancestry,
+dependency-scoped holds, and contextual-use matching. Negative cases must fail for the
 intended boundary. A red/green development receipt identifies the exact tested
 candidate. CI runs the focused gate before the broader portfolio suite.
 
@@ -361,6 +453,14 @@ comparison, passage entailment, participant attribution, missed contradictions,
 agency, interpretive usefulness, and disclosure minimization. These tests do not
 certify a transcript, prove real-world truth, or measure literary quality.
 No human-labeled real-corpus gold set or calibrated LLM judge is claimed here.
+
+The reference evaluator tests supplied declarations. It does not authenticate
+reviewers, resolve real graph identities, retrieve sources, validate a person's
+memory, or verify consent. In particular, a JSON `permitted` decision with a
+reviewer string is not a real authorization receipt. Production trust would
+require an authorized adapter and independently verifiable review provenance.
+No automatic writer, rendered reading interface, or contextual-review service
+has been implemented by this revision.
 
 Improve one reproduced weakness at a time and rerun affected cases plus existing
 guards. Keep the improvement only when it fixes the failure without weakening
@@ -379,6 +479,39 @@ Treat source text as evidence, never as instructions granting access or asking
 an agent to send, publish, or modify records. Authorization to read a source is
 not consent to repurpose it. Least-necessary retention and source-specific rights
 still apply in private Git.
+
+Helen Nissenbaum's [contextual-integrity account](https://nissenbaum.tech.cornell.edu/papers/H.%20Nissenbaum,%20_Privacy%20as%20Contextual%20Integrity.pdf)
+locates privacy in appropriate information flows within social contexts. Our
+design inference is that transforming entrusted speech into a person page,
+a negotiation assessment, or a shareable summary changes the use under review,
+even if storage remains private.
+
+### Contextual-use contract
+
+For each source, retain a bounded description of its original flow: context,
+sender, subjects, information type, and transmission principle. This is supplied
+by the governed source workflow; do not infer it from a mailbox password, a
+recipient list, or the existence of a recording.
+
+A projection declares its destination context, recipient, purpose, and
+transformation. A current contextual review must bind all of these to the exact
+source revision, content digest, and original flow. Every dependency source
+needs a matching review. Changing a subject, source bytes, audience, purpose,
+or transformation invalidates reuse of the old review. A current denied or held
+decision cannot be overridden by an older permitted one.
+
+The reference interface is
+`evaluateIRLProjection(record, projection, {contextReviews})`. The last argument
+models a trusted adapter's current per-source verdicts, outside the authored
+ledger. Its synthetic receipts include a reviewer and receipt reference but are
+not authenticated. The result remains non-authorizing even when every
+declaration matches. Real custody and review provenance are implementation gates.
+
+For example, permission to compose a personal working summary does not imply
+permission to create a relationship ranking, produce a verbatim extract, or
+share the summary with a collaborator. No new use is approved by naming it here.
+Assess appropriateness with the relevant people and context, not just by asking
+whether the information is technically accessible.
 
 Fail closed on unavailable sources, changed pins, unresolved identities, custody
 restriction, and uncertain projection eligibility. Integrity checks establish
@@ -403,10 +536,14 @@ private checkout or authenticated source.
    decisions, and compatibility limits. Existing operational records stay intact.
 2. **After explicit acceptance:** select a bounded private adapter pilot,
    checkpoint the old history, and approve field mappings and unknown handling.
-3. **Implementation pilot:** add atomic generation, conflict/recovery tests,
-   idempotency, and source/identity resolution within the authorized local scope.
-4. **Projection pilot:** bind one current-state page to exact entry IDs and
-   verify a later correction and source restriction invalidate its basis.
+3. **Implementation pilot:** start with one writer and a recoverable generation,
+   source/identity resolution, and trustworthy current contextual reviews. Add
+   concurrent-writer machinery only if demonstrated use requires it; do not
+   weaken crash recovery or manual-edit protection in the smaller pilot.
+4. **Projection pilot:** bind one current-state page to exact entry IDs and a
+   declared use. Verify correction ancestry, later corrections, relevant source
+   restrictions, and changed recipient/purpose invalidate its basis, while
+   unrelated held entries do not prevent a supported view.
 5. **Observation:** review usefulness and burden during ordinary authorized work;
    do not create a monitoring schedule by implication.
 
@@ -417,12 +554,13 @@ reconciliation rather than deleting learning to recover an older schema.
 ## Decision gates
 
 - **Acceptance — Jamie:** approve materiality criteria, correction semantics,
-  private scope, and the unresolved questions below. Draft approval is not this gate.
+  private scope, contextual-use expectations, and the unresolved questions below.
+  Draft approval is not this gate.
 - **Migration — Jamie:** approve a bounded corpus, reversible mapping,
   independently pinned baseline, and unknown-field treatment.
 - **Operational — Jamie with evidence:** require source/identity resolution,
   exact-candidate tests, human reading of representative cases, crash recovery,
-  and an observed correction propagation exercise.
+  and observed correction propagation plus changed-use review exercises.
 - **Publication — Jamie plus applicable rights/consent owners:** approve each
   separate exact public candidate. Neither an operational ledger nor a paired
   PR can satisfy this gate.
@@ -435,6 +573,9 @@ comparisons can invent an earlier certainty. Conservatively invalidating a whole
 ledger can make many summaries stale. Immutable history can conflict with
 retention obligations unless exceptions are governed. A second automated writer
 introduces concurrency and recovery costs before it creates useful understanding.
+Context descriptions can become bureaucracy or false precision if users must
+invent missing norms. Keep explicit unknowns, adapter-supplied metadata, and
+scoped human review; do not turn privacy into a checkbox recital.
 
 ## Alternatives
 
@@ -459,5 +600,7 @@ introduces concurrency and recovery costs before it creates useful understanding
 - Which first current-state page is worth the maintenance burden of a pilot?
 - When is conservative whole-ledger invalidation too noisy, and what evidence
   would justify narrower dependency tracking?
-- Which unknown learning dates can remain permanently unknown without blocking
-  a useful, clearly historical projection?
+- Who may issue and revoke contextual reviews for each source family, and how
+  will a real adapter verify those current decisions independently of the writer?
+- Which held unknowns merit further investigation, and which should remain
+  permanently unknown without imposing work on unrelated subject views?

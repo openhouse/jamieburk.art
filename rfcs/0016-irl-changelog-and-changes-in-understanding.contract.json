@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "rfc": 16,
   "stage": "proposed",
   "decision_owner": "Jamie Burkart",
@@ -50,5 +50,21 @@
     "limitation"
   ],
   "runtime_writes_enabled": false,
-  "human_review_required": true
+  "human_review_required": true,
+  "record_schema_version": 2,
+  "entity_types": [
+    "person",
+    "team",
+    "project",
+    "event",
+    "opportunity",
+    "practice",
+    "commitment"
+  ],
+  "use_fields": [
+    "context",
+    "recipient",
+    "purpose",
+    "transformation"
+  ]
 }
